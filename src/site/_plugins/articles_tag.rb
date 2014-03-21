@@ -33,13 +33,16 @@ module Jekyll
       @articles_for_section = @articles.select do |a|
         a.data["article"]["collection"] == @section_name
       end.sort do |a, b|
-        a_up = a.data['article']['updated_on'] || a.data['article']['written_on']
-        b_up = b.data['article']['updated_on'] || b.data['article']['written_on']
-        a_pub = a.data['article']['written_on']
-        b_pub = b.data['article']['written_on']
-
-        "#{a_up}-#{a_pub}" <=> "#{b_up}-#{b_pub}"
-      end.reverse
+        #a_up = a.data['article']['updated_on'] || a.data['article']['written_on']
+        #b_up = b.data['article']['updated_on'] || b.data['article']['written_on']
+        #a_pub = a.data['article']['written_on']
+        #b_pub = b.data['article']['written_on']
+        a_order = a.data['article']['order'] || 0
+        b_order = b.data['article']['order'] || 0
+        
+        #"#{a_up}-#{a_pub}" <=> "#{b_up}-#{b_pub}"
+        a_order <=> b_order
+      end
 
       @articles_for_section.map{|article| render_article(article)}.join("\n")
 
@@ -70,7 +73,7 @@ module Jekyll
     end
 
     def fmt_author_name(article)
-      return 'The Dart Team' unless article.data['rel'] and article.data['rel']['author']
+      return 'The Team' unless article.data['rel'] and article.data['rel']['author']
       [article.data['rel']['author']].flatten.map do |a|
         @authors[a] ? "#{@authors[a]['fname']} #{@authors[a]['lname']}" : 'UNKNOWN'
       end.join(', ')
