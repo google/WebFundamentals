@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Product">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% capture page_title %}{% if page.title %}{{ page.title }} | {%endif%}Some Nice Title{% endcapture %}
+  <title>{{ page_title }}</title>
+  <meta property="twitter:account_id" content="TODO" />
+  <meta itemprop="name" content="{{ page_title }}">
+  {% if page.snippet_img %}
+  <meta itemprop="image" content="{{ page.snippet_img }}">
+  {% else %}
+  <meta itemprop="image" content="/imgs/lono.png">
+  {% endif %}
+  <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Something{% endif %}">
+
+{% bundle %}
+- /css/bootstrap.min.css
+- /css/dart-style.css
+- /css/prettify.css
+- /css/font-awesome.min.css
+{% endbundle %}
+
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400" rel="stylesheet">
+
+  {% if page.header and page.header.css %}{% for css in page.header.css %}<link href="{{ css }}" rel="stylesheet" type="text/css">{% endfor %}{% endif %}
+
+  {% for author in page.rel.author %}<link rel="author" href="/authors/{{ author }}.html">{% endfor %}
+  {% if page.rel.me %}<link rel="me" href="{{ page.rel.me }}">{% endif %}
+
+  <link rel="alternate" type="application/atom+xml" href="http://news.dartlang.org/feeds/posts/default" title="Atom feed">
+  <link href="" rel="publisher">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+  {% include analytics.html %}
+
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="sprite-icon-dart-logo"></i></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+           <li class="dropdown">
+              <a href="/codelabs/darrrt/" title="Learn Dart in this short code lab.">
+                Get Started
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Docs <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+
+                <i class="sprite-icon-dd-tip"></i>
+                <li><a href="/docs/tutorials/">Tutorials</a></li>
+
+                <i class="sprite-icon-dd-tip"></i>
+                <li><a href="/dart-by-example/">Dart by Example</a></li>
+
+                <li class="divider"></li>
+                <li><a href="/docs/">Programmer's Guide</a></li>
+                <li><a href="http://api.dartlang.org">API Reference</a></li>
+                <li><a href="/docs/spec/">Language Specification</a></li>
+
+                <li class="divider"></li>
+                <li><a href="/docs/dart-up-and-running/">Dart: Up and Running</a></li>
+                <li><a href="/books/">More Books</a></li>
+
+                <li class="divider"></li>
+                <li><a href="/articles/">Articles</a></li>
+                <li><a href="/support/faq.html">FAQ</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Tools <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <i class="sprite-icon-dd-tip"></i>
+                <li><a href="/tools/download.html">Get Dart</a></li>
+                <li class="divider"></li>
+                </li><li><a href="/tools/editor/">Dart Editor</a></li>
+                </li><li><a href="/tools/sdk/">SDK</a></li>
+                </li><li><a href="/tools/dartium/">Dartium</a></li>
+                <li class="divider"></li>
+                <li><a href="/tools/">Dart Tools</a></li>
+                <li><a href="/tools/pub/">Pub Package and Asset Manager</a></li>
+                <li><a href="/tools/faq.html">Tools FAQ</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Resources <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <i class="sprite-icon-dd-tip"></i>
+                <li><a href="/samples/">Code Samples</a></li>
+                <li><a href="/docs/synonyms/">Synonyms with other languages</a></li>
+                <li><a href="/performance/">Performance</a></li>
+
+                <li class="divider"></li>
+                <li><a href="/slides/">Presentations</a></li>
+                <li><a href="/dart-tips/">Dart Tips Videos</a></li>
+
+                <li class="divider"></li>
+                <li><a href="/community/who-uses-dart.html">Who Uses Dart</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/support/" title="Community and Support">
+                    Support
+              </a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <form class="navbar-search" action="/search.html" id="cse-search-box">
+                <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+                <input type="hidden" name="ie" value="UTF-8">
+                <input type="hidden" name="hl" value="en">
+                <input type="search" name="q" class="search-query placeholder-position-fix form-control" id="q" autocomplete="off" placeholder="Search">
+              </form>
+            </li>
+            <li><a href="https://twitter.com/dart_lang" class="btn"><i class="sprite-icon-social-twitter"></i></a></li>
+            <li><a href="https://plus.google.com/+dartlang/posts" class="btn"><i class="sprite-icon-social-gplus"></i></a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+

@@ -1,0 +1,82 @@
+<!-- NAVI LINKS -->
+<div id="tutorial-navigation-links-top" class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="/docs/tutorials/"><img src="/docs/tutorials/images/tute-home.png" width="36"></a>
+      </div>
+      <div class="col-md-3">
+        <a href="/docs/tutorials/{{page.prev}}"><i class="glyphicon glyphicon-chevron-left"> </i> {{page.prev-title}}</a>
+      </div>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        <a href="/docs/tutorials/{{page.next}}" class="pull-right">{{page.next-title}} <i class="glyphicon glyphicon-chevron-right"> </i> </a>
+      </div>
+    </div> 
+    <hr>
+  </div> 
+</div> 
+
+<!-- PAGE -->
+<div class="row">
+
+  <!-- LEFT SIDE BAR -->
+  <div class="col-md-3">
+
+    <div id="tutorial-side">
+      <div id="whats-the-point">
+        <h4 id="page-highlights">What's the point?</h4>
+        {{ whats_the_point | markdownify }}
+      </div> <!-- whats-the-point -->
+
+      <div id="code-links">
+        <h4 id="examples">Examples</h4>
+
+        {{ sample_links | markdownify }}
+
+        <a href="https://drone.io/github.com/dart-lang/dart-tutorials-samples/latest">
+           <img src="https://drone.io/github.com/dart-lang/dart-tutorials-samples/status.png"
+                alt="Build Status" style="margin-top:10px;max-width:100%;">
+        </a>
+      </div> <!-- end code-links -->
+
+      <div id="tutorial-toc">
+        <a href="http://code.google.com/p/dart/issues/entry?template=Tutorial%20feedback"
+         target="_blank">
+        <i class="glyphicon glyphicon-comment"> </i>
+        Send feedback
+        </a>
+      </div> <!-- tutorial-toc -->
+      
+    </div> <!-- tutorial-side -->
+
+  </div> <!-- end div col-md-3 -->
+
+  <!-- CONTENT-->
+  <article class="col-md-9 tutorial-content">
+
+    {{ content | markdownify }}
+
+  </article>
+</div>
+
+<!-- NAVI LINKS -->
+<div id="tutorial-navigation-links-bottom" class="row">
+  <div class="col-md-12">
+    <hr>
+    <div class="row">
+      <div class="col-md-3">
+        <a href="/docs/tutorials/"><img src="/docs/tutorials/images/tute-home.png" width="36"></a>
+      </div>
+      <div class="col-md-3">
+        <a href="/docs/tutorials/{{page.prev}}"><i class="glyphicon glyphicon-chevron-left"> </i> {{page.prev-title}}</a>
+      </div>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        <a href="/docs/tutorials/{{page.next}}" class="pull-right">{{page.next-title}} <i class="glyphicon glyphicon-chevron-right"> </i> </a>
+      </div>
+    </div> 
+  </div> 
+</div> 

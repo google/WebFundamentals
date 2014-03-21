@@ -1,0 +1,10 @@
+safe: false
+port: 8081
+source: .
+destination: ../../build/static
+markdown: kramdown
+permalink: /news/:year/:month/:day/:title.html
+pygments: false
+custom:
+kramdown:
+  toc_levels: "2,3,4"

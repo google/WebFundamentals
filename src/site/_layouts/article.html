@@ -1,0 +1,22 @@
+{% include header.html %}
+
+<div class="container-page">
+  <div class="container">
+  	<div class="container sub-page">
+      <div class="row">
+        <article{% if page.has-permalinks %} class="has-permalinks"{% endif %}>{{ content }}
+    	  </div> <!-- End of content from toc.html -->
+        </article>
+	  </div>
+
+	{% if page.article %}
+	<ul class="pager">
+	  <li><a href="/articles/">More articles about Dart <i class="glyphicon glyphicon-chevron-up"></i></a></li>
+	 </ul>
+	 {% endif %}
+
+	</div>
+  </div>
+</div>
+
+{% include footer.html %}

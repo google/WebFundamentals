@@ -1,0 +1,37 @@
+<div class="row">
+
+  <div class="col-md-9 col-lg-offset-3">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  <div class="col-md-3">
+
+    <div id="tutorial-side">
+
+      <div id="tutorial-toc">
+        <h4 id="contents">Back to ...</h4>
+        <ul>
+          <li>
+        {{ back_to | markdownify }}
+          </li>
+        </ul>
+      </div>
+
+      <div id="whats-the-point">
+        <h4 id="page-highlights">What's the point?</h4>
+
+        {{ whats_the_point | markdownify }}
+      </div>
+      
+    </div>
+    <div>&nbsp;</div>
+
+  </div>
+
+  <article class="col-md-9 tutorial-content">
+
+    {{ content | markdownify }}
+
+  </article>
+
+</div>

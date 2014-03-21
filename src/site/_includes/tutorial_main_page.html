@@ -1,0 +1,33 @@
+<div class="row">
+
+
+  <article class="col-md-12 tutorial-content">
+
+    {{ content | markdownify }}
+
+  </article>
+
+  <!-- TUTE NAVI BAR AS FOOTER -->
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <p style="font-size:xx-small">Version: 11 Oct 2013</p>
+          </div>
+          <div class="col-md-4">
+            <a href="https://code.google.com/p/dart/issues/entry?template=Documentation%20issue/feedback"
+               target="_blank">
+            <i class="glyphicon glyphicon-comment"> </i>
+            Send feedback
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="/docs/tutorials/{{page.next}}" class="pull-right">{{page.next-title}} <i class="glyphicon glyphicon-chevron-right"> </i> </a>
+          </div>
+        </div> <!-- row -->
+      <!-- hr -->
+    </div> <!-- col-md-9 -->
+  </div> <!-- row -->
+
+</div>

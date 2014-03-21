@@ -1,0 +1,57 @@
+
+  <footer class="footer container-full">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h3>A new language, with tools and libraries, for SCALABLE web app engineering</h3>
+          <p>Dart is an <a href="https://code.google.com/p/dart/">open-source project</a> with contributors from Google and elsewhere.</p>
+          <p class="sm">Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 3.0 License, and code samples are licensed under the BSD License.</p>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+          <h4>Popular Topics</h4>
+          <ul>
+            <li><a href="/polymer-dart/?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=homepage">Polymer.dart</a></li>
+            <li><a href="/performance/">Performance</a></li>
+            <li><a href="/docs/dart-up-and-running/contents/ch02.html?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=homepage">Language tour</a> &amp;
+            <a href="/docs/dart-up-and-running/contents/ch03.html?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=homepage">library tour</a></li>
+            <li><a href="/samples/?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=homepage">Code samples</a></li>
+            <li><a href="/docs/tutorials/?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=homepage">Tutorials</a> &amp;
+                <a href="/codelabs/darrrt/?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=homepage">code lab</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="http://pub.dartlang.org/">Pub packages</a></li>
+            <li><a href="/docs/synonyms/">Synonyms with other languages</a></li>
+            <li><a href="http://code.google.com/p/dart/issues/list">Dart bugs and feature requests</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="/support/">Mailing lists</a></li>
+            <li><a href="https://plus.google.com/communities/114566943291919232850">G+ community</a></li>
+            <li><a href="https://plus.google.com/+dartlang/posts">G+ announcement group</a></li>
+            <li><a href="http://stackoverflow.com/questions/tagged/dart">Stack Overflow</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer> <!-- End footer -->
+
+{% bundle %}
+- /js/jquery.js
+- /js/bootstrap.min.js
+- /js/prettify.js
+- /js/lang-dart.js
+- /js/lang-yaml.js
+- /js/scripts.js
+{% endbundle %}
+
+{% for js in page.js %}
+<script {% if js.defer %}defer{% endif %} src="{{ js.url }}"></script>
+{% endfor %}
+
+</body>
+</html>
