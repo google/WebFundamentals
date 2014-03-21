@@ -1,9 +1,5 @@
 application: web-central
-version: CHANGEME
-# NOTE: URL is CHANGEME.web-central.appspot.com
-#       To specify a name, change 'CHANGEME' to something
-#       like 'prod-zone-article'.
-#
+version: 1
 
 runtime: python27
 api_version: 1
@@ -16,11 +12,9 @@ pagespeed:
     - RemoveComments
     - InlineJs
   url_blacklist:
-    - http://www.dartlang.org/*/code/out/*
-    - https://www.dartlang.org/*/code/out/*
 
 #default_expiration: "1d"
-
+handlers:
 - url: /(.*\.png)
   static_files: static/\1
   expiration: 1d
@@ -50,4 +44,3 @@ pagespeed:
   static_files: static\1
   upload: static
   secure: always
-
