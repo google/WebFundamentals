@@ -1,3 +1,5 @@
 #!/bin/bash
 
-appcfg.py --oauth2 update ../
+versionStr=${1:-master}
+
+appcfg.py --oauth2 --version=$versionStr update ../
