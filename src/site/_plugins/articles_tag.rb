@@ -33,14 +33,9 @@ module Jekyll
       @articles_for_section = @articles.select do |a|
         a.data["article"]["collection"] == @section_name
       end.sort do |a, b|
-        #a_up = a.data['article']['updated_on'] || a.data['article']['written_on']
-        #b_up = b.data['article']['updated_on'] || b.data['article']['written_on']
-        #a_pub = a.data['article']['written_on']
-        #b_pub = b.data['article']['written_on']
         a_order = a.data['article']['order'] || 0
         b_order = b.data['article']['order'] || 0
         
-        #"#{a_up}-#{a_pub}" <=> "#{b_up}-#{b_pub}"
         a_order <=> b_order
       end
 
