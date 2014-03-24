@@ -45,7 +45,7 @@ handlers:
   upload: ../../build/static/index.html
   secure: always
 
-- url: /(.*)
+- url: /(.*)/
   static_files: ../../build/static/\1/index.html
   upload: ../../build/static/(.*)/index.html
   secure: always
