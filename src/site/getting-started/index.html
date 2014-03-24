@@ -2,6 +2,7 @@
 layout: article
 title: "Getting Started"
 description: ""
+collection: getting-started
 ---
 
 {% comment %}
@@ -9,10 +10,15 @@ NOTE: Within each section, articles should be in chronological order
 (newest on top).
 {% endcomment %}
 
-<h1> Articles </h1>
+<h1>{{page.title}}</h1>
 
 <div class="row">
   <div class="col-md-6">
+    
+    {% for article in page.articles %}
+      {{article.title}} <br />
+    {% endfor %}
+    
     <h2>Build your first site</h2>
     {% articles getting-started %}
   </div>
