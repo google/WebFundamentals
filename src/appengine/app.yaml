@@ -16,31 +16,36 @@ pagespeed:
 #default_expiration: "1d"
 handlers:
 - url: /(.*\.png)
-  static_files: static/\1
+  static_files: ../../build/static/\1
   expiration: 1d
-  upload: static/(.*\.png)
+  upload: ../../build/static/(.*\.png)
 
 - url: /(.*\.ico)
-  static_files: static/\1
+  static_files: ../../build/static/\1
   expiration: 7d
-  upload: static/(.*\.ico)
+  upload: ../../build/static/(.*\.ico)
 
 - url: /(.*\.jpg)
-  static_files: static/\1
+  static_files: ../../build/static/\1
   expiration: 1d
-  upload: static/(.*\.jpg)
+  upload: ../../build/static/(.*\.jpg)
 
 - url: /(.*\.woff)
-  static_files: static/\1
+  static_files: ../../build/static/\1
   expiration: 7d
-  upload: static/(.*\.woff)
+  upload: ../../build/static/(.*\.woff)
 
-- url: (.*)/
-  static_files: static\1/index.html
-  upload: static/index.html
+- url: /index.html
+  static_files: ../../build/static/index.html
+  upload: ../../build/static/index.html
   secure: always
 
-- url: (.*\..*)
-  static_files: static\1
-  upload: static
+- url: /
+  static_files: ../../build/static/index.html
+  upload: ../../build/static/index.html
   secure: always
+  
+- url: /(.*)
+  static_files: ../../build/static/\1
+  expiration: 7d
+  upload: ../../build/static/(.*) 
