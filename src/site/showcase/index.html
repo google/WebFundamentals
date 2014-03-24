@@ -1,21 +1,27 @@
 ---
 layout: default
-title: "Getting Started"
+title: "Showcases"
 description: ""
 ---
-
 {% comment %}
 NOTE: Within each section, articles should be in chronological order
 (newest on top).
 {% endcomment %}
 
-<h1> Showcase </h1>
+<h1>{{page.title}}</h1>
 
 <div class="row">
   <div class="col-md-6">
+    <h2>Showcases</h2>
+    {% for article in page.articles.showcase %}
+      {{article.title}} <br />
+    {% endfor %}
+    
+    
     <h2>Spotlight</h2>
-    {% showcases spotlight %}
-    <h2>Summary</h2>
-    {% articles summary %}
+    {% for article in page.articles.spotlight %}
+      {{article.title}} <br />
+    {% endfor %}
+    
   </div>
 </div>

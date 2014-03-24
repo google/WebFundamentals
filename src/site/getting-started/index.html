@@ -2,7 +2,6 @@
 layout: article
 title: "Getting Started"
 description: ""
-collection: getting-started
 ---
 
 {% comment %}
@@ -15,7 +14,7 @@ NOTE: Within each section, articles should be in defined order
 <div class="row">
   <div class="col-md-6">
     
-    {% for article in page.articles %}
+    {% for article in page.articles.getting-started %}
       {{article.title}} <br />
     {% endfor %}
     
