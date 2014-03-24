@@ -3,19 +3,19 @@ PWD=$(shell pwd)
 XDGOPEN=$(shell type xdg-open 2>/dev/null)
 
 clean:
-	rm -rf ./build
+	rm -rf ./src/appengine/build
 
 build: copy 
     #add_version
 
 copy: clean
-	cd ./src/site && jekyll build && cd ../.. && cp -R ./src/appengine/* build/
+	cd ./src/site && jekyll build
 
 #add_version:
 #	ruby -p -i -e '$$_.gsub!(/CHANGEME/, "$(CURRENT_BRANCH)")' ./build/app.yaml
 
 deploy: build
-	cd ./build && appcfg.py --oauth2 update .
+	cd ./src/appengine/build && appcfg.py --oauth2 update .
 	@echo "Visit http://web-central.appspot.com"
 	#@echo "Visit http://$(CURRENT_BRANCH).web-central.appspot.com"
 

@@ -23,9 +23,6 @@ module Jekyll
         articles[article] = articles[article].sort do |a, b|
           a_order = a.data['article']['order'] || 0
           b_order = b.data['article']['order'] || 0
-          
-          puts "#{article}: #{a_order}, #{b_order}"
-
           a_order <=> b_order
         end
       end
