@@ -3,7 +3,7 @@
 versionStr=${1:-master}
 
 (
-  cd ../../
+  cd ../../../
   make build
 )
 
