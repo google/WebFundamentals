@@ -44,7 +44,12 @@ handlers:
   static_files: ../../build/static/index.html
   upload: ../../build/static/index.html
   secure: always
-  
+
+- url: /(.*)
+  static_files: ../../build/static/\1/index.html
+  upload: ../../build/static/(.*)/index.html
+  secure: always
+
 - url: /(.*)
   static_files: ../../build/static/\1
   expiration: 7d
