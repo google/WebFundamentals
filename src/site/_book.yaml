@@ -26,3 +26,10 @@ toc:
     path: /media/audio
 - title: Performance
   path: /performance
+  section:
+    - title: "Critical Path Rendering"
+      path: /performance/critical-path-rendering
+    - title: "Network Performance"
+      path: /performance/network-performance
+    - title: "Measuring Performance"
+      path: /performance/measuring-performance
