@@ -2,7 +2,12 @@ toc:
 - title: "Create Your First Multi-screen Site"
   path: /getting-started/
 - title: "Multi-device layouts"
-  path: /mulit-device-layouts
+  path: /multi-device-layouts
+  section:
+    - title: "Layout Basics"
+      path: /multi-device-layouts/basics
+    - title: "Layout Patterns"
+      path: /multi-device-layouts/patterns
 - title: "User Input"
   path: /user-input/
   section:
@@ -14,7 +19,7 @@ toc:
   path: /media/
   section:
   - title: "Images"
-    path: /media/imaages
+    path: /media/images
   - title: "Video"
     path: /media/video
   - title: "Audio"
