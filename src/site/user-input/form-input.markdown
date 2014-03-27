@@ -30,15 +30,13 @@ target size: the user can touch either the label or the input in order to place
 focus on the input element.
 
 <!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><label for="myInput">Tell me a secret</label>
-<input type="text" id="myInput">
-<label>
-  <input type="checkbox"> I'm a checkbox
-</label></td>
-</tr>
-</table>
+<pre>
+&lt;label for="myInput"&gt;Tell me a secret&lt;/label&gt;
+&lt;input type="text" id="myInput"&gt;
+&lt;label&gt;
+  &lt;input type="checkbox"&gt; I'm a checkbox
+&lt;/label&gt;
+</pre>
 
 Labels and inputs should be large enough to be easy to press.  In portrait 
 viewports, field labels should be above input elements, and beside them in 
@@ -53,19 +51,12 @@ The placeholder attribute provides a hint to the user about what's expected in
 the input by displaying its value as light text until the element gets focus. 
 
 <!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><label for="frmName">Name</label>
-<input type="text" id="frmName" placeholder="Full name"/></td>
-</tr>
-</table>
+    <label for="frmName">Name</label>
+    <input type="text" id="frmName" placeholder="Full name"/>
+
 
 <!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Remember: placeholders disappear as soon as focus is placed in an element, thus they are not a replacement for labels.  They should be used as an aid to help guide users on the required format and content.</td>
-</tr>
-</table>
+<div><b>Remember:</b> placeholders disappear as soon as focus is placed in an element, thus they are not a replacement for labels.  They should be used as an aid to help guide users on the required format and content.</div>
 
 ### Use metadata to enable auto-complete
 
@@ -75,7 +66,7 @@ helps to reduce potential input errors -- especially on virtual keyboards and
 small devices.
 
 Browsers use many heuristics to determine which fields they can 
-[auto-populate](https://support.google.com/chrome/answer/142893)[ based on 
+[auto-populate](https://support.google.com/chrome/answer/142893)[based on 
 previously specified data by the 
 user](https://support.google.com/chrome/answer/142893), and you can give hints 
 to the browser by providing both the name attribute and the autocomplete 
@@ -107,11 +98,8 @@ attribute on each input element.
 </tr>
 </table>
 
-[http://goo.gl/P0z52w](http://goo.gl/P0z52w)
-
 **Recommended autocomplete value**
 
-<!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
 <td>Personal</td>
@@ -122,7 +110,7 @@ attribute on each input element.
 <td>email</td>
 </tr>
 <tr>
-<td>Address
+<td>Address<br>
 Should be prefixed with either billing or shipping</td>
 <td>street-address, locality (city), region (state/province), postal-code, country</td>
 </tr>
@@ -136,22 +124,13 @@ Should be prefixed with either billing or shipping</td>
 </tr>
 </table>
 
-[http://goo.gl/PqfaJs](http://goo.gl/PqfaJs) 
+
+    <label for="frmName">Name</label>
+    <input type="text" id="frmName" name="name" autocomplete="name">
+
 
 <!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><label for="frmName">Name</label>
-<input type="text" id="frmName" name="name" autocomplete="name"></td>
-</tr>
-</table>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Remember: Auto-complete only works when the form method is post.</td>
-</tr>
-</table>
+<div><b>Remember:</b> Auto-complete only works when the form method is post.</div>
 
 ## The autofocus attribute
 
@@ -162,31 +141,17 @@ annoying when they move focus after you've already started typing. Instead, you
 can use the `autofocus` attribute on an input element to specify that element as 
 the primary form element.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><label for="frmName">Name</label>
-<input type="text" id="frmName" autofocus name="name" autocomplete="name"></td>
-</tr>
-</table>
+    <label for="frmName">Name</label>
+    <input type="text" id="frmName" autofocus name="name" autocomplete="name">
 
 <!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Note: the autofocus attribute only works on desktop browsers.</td>
-</tr>
-</table>
+<div><b>Note:</b> the autofocus attribute only works on desktop browsers.</div>
 
 ## Putting it all together
 
 The form
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Sample code goes here</td>
-</tr>
-</table>
+    Sample code goes here
 
 [Try it](http://jsbin.com/rufuw/1/edit)
 
@@ -247,8 +212,7 @@ type.
 <td>For entering a time (only) with no time zone provided.</td>
 </tr>
 </table>
-
-* For a full list of new input types, see [the input type 
+For a full list of new input types, see [the input type 
 example.](http://google.com)
 
 ## Offer suggestions during input with datalist
@@ -259,13 +223,13 @@ options as the user types. Unlike select elements where users must scan long
 lists to find the value they're looking for, and limiting them only to those 
 lists, `datalist`s provide hints as the user types.
 
-<label for="inpChocType">Chocolates</label>  
-<input type="text" id="inpChocType" list="chocType">  
-<datalist id="chocType">  
-  <option value="white" />  
-  <option value="milk" />  
-  <option value="dark" />  
-</datalist>
+    <label for="inpChocType">Chocolates</label>  
+    <input type="text" id="inpChocType" list="chocType">  
+    <datalist id="chocType">  
+      <option value="white" />  
+      <option value="milk" />  
+      <option value="dark" />  
+    </datalist>
 
 You can also dynamically generate `datalist`s in JavaScript, not just hard coded 
 in the HTML.
@@ -273,7 +237,7 @@ in the HTML.
 <!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
-<td>Remember: the datalist values are provided as suggestions, and users are not restricted to the suggestions provided.</td>
+<td><b>Remember:</b> the datalist values are provided as suggestions, and users are not restricted to the suggestions provided.</td>
 </tr>
 </table>
 
@@ -288,11 +252,12 @@ form has been completed properly.
 <!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
-<td>Remember: Even with client side input validation, it is always important to validate data on the server to ensure consistency and security in your data.</td>
+<td><b>Remember: </b>Even with client side input validation, it is always important to validate data on the server to ensure consistency and security in your data.</td>
 </tr>
 </table>
 
 ## Using attributes to validate input
+
 ### The pattern attribute
 
 The pattern attribute specifies a [regular 
@@ -301,7 +266,7 @@ input field. For example, to validate a US Zip code (5 digits, sometimes
 followed by a dash and an additional 4 digits), we would set the pattern like 
 this:
 
-<input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
+    <input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
 **Common regular expression patterns**
 
@@ -343,8 +308,7 @@ If the required attribute is present, then the field must contain a value before
 the form can be submitted. For example, to make the part number in the previous 
 example required, we'd simply add the required attribute.
 
-<input type="text" required id="zip" name="zip" 
-pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
+    <input type="text" required id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
 ### The min, max and step attributes
 
@@ -352,7 +316,7 @@ For numeric input types like number or range as well as date/time inputs, you
 can specify the minimum and maximum values, as well as how much they should each 
 increment/decrement when adjusted by the slider or spinners.
 
-<input type="number" id="qty" min="0" max="100" step="1" />
+    <input type="number" id="qty" min="0" max="100" step="1" />
 
 ### The maxlength attribute
 
@@ -361,7 +325,7 @@ textbox and is useful when you want to limit the length of information that the
 user can provide. For example, if you want to limit a filename to 12 characters, 
 you can use the following.
 
-<input type="text" id="83filename" maxlength="12" />
+    <input type="text" id="83filename" maxlength="12" />
 
 ### The novalidate attribute
 
@@ -370,18 +334,16 @@ contains invalid input. To do this, add the novalidate attribute to the form
 element. In this case, all pseudo classes and JavaScript APIs will still allow 
 you to check if the form validates.
 
-<form role="form" novalidate>  
-  <label for="inpEmail">Email address</label>  
-  <input type="email" name="email" id="inpEmail" placeholder="Enter email">  
-</form>
+    <form role="form" novalidate>  
+      <label for="inpEmail">Email address</label>  
+      <input type="email" name="email" id="inpEmail" placeholder="Enter email">  
+    </form>
 
 ## Use JavaScript for more complex real-time validation
 
 When the built-in validation plus regular expressions aren't enough, you can use 
 the 
-[C](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation)[onstraints 
-Validation](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation)[ 
-API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation), 
+[Constraints Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation), 
 a powerful tool for handling custom validation.  The API allows you to do things 
 like set a custom error, check whether an element is valid, and determine the 
 reason that an element is invalid.
@@ -410,45 +372,37 @@ reason that an element is invalid.
 </tr>
 </table>
 
+
 One example of where you might use the JavaScript validation APIs is to verify 
 that the user has provided the correct email address on a sign up form where 
 they're asked to enter it twice. In the blur event for the second input, you 
 would call the following check function:
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>var elem = document.getElementById("email_addr_confirm");
-elem.addEventListener("blur", verifyEmail);
-function verifyEmail(input) {
-  input = input.srcElement;
-  if (input.value != document.getElementById('email_addr').value) {
-    // the provided value doesn't match the primary email address
-    input.setCustomValidity('The two email addresses must match.');
-  } else {
-    // input is valid -- reset the error message
-    input.setCustomValidity('');
-  }
-}</td>
-</tr>
-</table>
+
+    var elem = document.getElementById("email_addr_confirm");
+    elem.addEventListener("blur", verifyEmail);
+    function verifyEmail(input) {
+      input = input.srcElement;
+      if (input.value != document.getElementById('email_addr').value) {
+        // the provided value doesn't match the primary email address
+        input.setCustomValidity('The two email addresses must match.');
+      } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+      }
+    }
 
 Because not all browsers will prevent the user from submitting the form if there 
 is invalid data, you should catch the submit event, and use the checkValidity() 
 on the form element to determine if the form is valid.  For example:
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>form.addEventListener("submit", function(evt) {
-  if (form.checkValidity() === false) {
-    evt.preventDefault();
-    alert("Form is invalid");
-    return false;
-  }
-});</td>
-</tr>
-</table>
+    form.addEventListener("submit", function(evt) {
+      if (form.checkValidity() === false) {
+        evt.preventDefault();
+        alert("Form is invalid");
+        return false;
+      }
+    });
 
 ## Show feedback in real-time
 
@@ -466,9 +420,10 @@ understand if they've filled the form out properly before trying to submit it.
 <!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
-<td>Best Practice: You should show the user all of the issues on the form at once, rather than showing them one at a time.</td>
+<td><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</td>
 </tr>
 </table>
+
 
 Validation happens immediately which means that when the page is loaded, fields 
 may be marked as invalid, even though the user hasn't had a chance to fill them 
@@ -476,39 +431,23 @@ in yet.  It also means that as the user types, and it's possible they'll see the
 invalid style while typing. To prevent this, you can combine the CSS with 
 JavaScript to only show invalid styling when the user has visited the field.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><style type="text/css">
-  input.dirty:not(:focus):invalid { outline: 2px solid red; }
-</style>
-<script type="text/javascript">
-  $("input").bind("blur invalid", function(evt) {
-    $(this).addClass('dirty');
-  });
-</script></td>
-</tr>
-</table>
+    <style type="text/css">
+      input.dirty:not(:focus):invalid { outline: 2px solid red; }
+    </style>
+
+    <script type="text/javascript">
+      $("input").bind("blur invalid", function(evt) {
+        $(this).addClass('dirty');
+      });
+    </script>
 
 ## Putting it all together
 
 The form
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>code sample here</td>
-</tr>
-</table>
+    `code sample here`
 
 The JavaScript
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>code sample here</td>
-</tr>
-</table>
+    `code sample here`
 
 [Try it](http://jsbin.com/kehiz/1/edit)
 
@@ -532,7 +471,7 @@ much like other auto-complete fields.
 Ideally you want to show the `requestAutocomplete` dialog instead of loading the 
 page that displays the checkout form. If all goes well, the user shouldn't see 
 the form at all.  
-<img src="image00.png" width="598" height="933" />
+<img src="imgs/rac-flow.png" />
 
 ## Design your form to enable requestAutocomplete
 
@@ -553,28 +492,17 @@ they want to populate it with.
 <!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
-<td>Remember: If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure.</td>
+<td><b>Remember:</b> If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure.</td>
 </tr>
 </table>
 
 ## Putting it all together
 
 The form
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>code sample here</td>
-</tr>
-</table>
+    `code sample here`
 
 The JavaScript
+    `code sample here`
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>code sample here</td>
-</tr>
-</table>
 
 [Try it](http://jsbin.com/migod/edit)
