@@ -5,9 +5,11 @@ toc:
   path: /multi-device-layouts
   section:
     - title: "Layout Basics"
-      path: /multi-device-layouts/basics
+      path: /multi-device-layouts/layout-basics.html
     - title: "Layout Patterns"
-      path: /multi-device-layouts/patterns
+      path: /multi-device-layouts/layout-patterns.html
+    - title: "Components"
+      path: /multi-device-layouts/components.html
 - title: "User Input"
   path: /user-input/
   section:
