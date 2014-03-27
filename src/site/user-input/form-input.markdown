@@ -9,6 +9,8 @@ article:
 collection: user-input
 ---
 
+<h1>Forms</h1>
+
 Filling out forms on the web has never been exactly fun, and it can be downright 
 painful on a mobile device with its on-screen keyboard. Thankfully modern 
 browsers help to make this much easier by providing semantic input types and 
