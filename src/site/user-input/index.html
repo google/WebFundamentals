@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Getting Started"
+title: "User Input"
 description: ""
 ---
 
@@ -14,8 +14,8 @@ NOTE: Within each section, articles should be in chronological order
 <div class="row">
   <div class="col-md-6">
     
-    {% for article in page.articles.multi-device-layouts %}
-      {{article.title}} <br />
+    {% for article in page.articles.user-input %}
+      <a href="{{article.url}}">{{article.title}}</a><br />
     {% endfor %}
 
   </div>
