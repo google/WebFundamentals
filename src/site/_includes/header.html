@@ -71,7 +71,7 @@
                 {% if section.section %}<ul class="dropdown-menu">
                    <i class="sprite-icon-dd-tip"></i>
                   {% for subsection in section.section %}
-                  <li><a href="{{ section.url }}/{{ subsection.url }}">{{ subsection.title }}</a></li>
+                  <li><a href="{{ subsection.path }}">{{ subsection.title }}</a></li>
                   {% endfor %}
                 </ul>
                 {% endif %}
