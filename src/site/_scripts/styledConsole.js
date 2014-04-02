@@ -22,4 +22,5 @@ function styledConsoleLog() {
   console.log.apply( console, argArray );
 }
 
-styledConsoleLog( '<span style="color:#156aeb">G</span><span style="color:#d6412b">o</span><span style="color:#ffb600">o</span><span style="color:#156aeb">g</span><span style="color:#009956">l</span><span style="color:#d6412b">e</span>' );
+// Test message...
+styledConsoleLog( '<span style="color:#156aeb; font-family: Catull, Georgia, serif; font-size: 1.4em;">G</span><span style="color:#d6412b; font-family: Catull, Georgia, serif; font-size: 1.4em;">o</span><span style="color:#ffb600; font-family: Catull, Georgia, serif; font-size: 1.4em;">o</span><span style="color:#156aeb; font-family: Catull, Georgia, serif; font-size: 1.4em;">g</span><span style="color:#009956; font-family: Catull, Georgia, serif; font-size: 1.4em;">l</span><span style="color:#d6412b; font-family: Catull, Georgia, serif; font-size: 1.4em;">e</span>' );

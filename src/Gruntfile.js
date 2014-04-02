@@ -231,8 +231,8 @@ module.exports = function(grunt) {
 				files: [
 					'<%= config.destination %>/**/*.html',	// view files (from jekyll)
 					'<%= config.destination %>/css/*.css',	// css files (from sass)
-					'<%= config.source %>/**/*.css',				// css files (raw)
-					'<%= config.source %>/**/*.js'					// script files
+					'<%= config.source %>/**/*.css',		// css files (raw)
+					'<%= config.source %>/**/*.js'			// script files
 				]
 			}
 		}
