@@ -291,6 +291,7 @@ lists, `datalist`s provide hints as the user types.
 
 <div><b>Remember:</b> the datalist values are provided as suggestions, and users are not restricted to the suggestions provided.
 </div>
+
 # Provide real-time validation
 
 <div>
