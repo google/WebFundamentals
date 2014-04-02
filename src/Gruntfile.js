@@ -102,8 +102,17 @@ module.exports = function(grunt) {
 			options: {
 				csslintrc: '.csslintrc'
 			},
-			destination: {
-				src: '<%= config.destination %>/css/*.css'
+			lax: {
+				src: '<%= config.destination %>/css/*.css',
+				options: {
+					import: false
+				}
+			},
+			strict: {
+				src: '<%= config.destination %>/css/*.css',
+				options: {
+					import: 2
+				}
 			}
 		},
 
@@ -231,7 +240,22 @@ module.exports = function(grunt) {
 	});
 
 	// Test task
-	grunt.registerTask('test', 'Lints all javascript sources.', 'jshint:source');
+	grunt.registerTask('test', 'Lints all javascript and CSS sources.\nOptions: --strict: enable strict linting mode', function(){
+
+		var strict = grunt.option('strict');
+
+		if(strict) {
+			return grunt.task.run([
+				'jshint:source'
+				// 'csslint:strict'
+			]);
+		} else {
+			return grunt.task.run([
+				'jshint:source'
+				// 'csslint:lax'
+			]);
+		}
+	});
 
 	// Build task
 	grunt.registerTask('build', 'Runs the "test" tastk, then builds the website.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
@@ -247,7 +271,7 @@ module.exports = function(grunt) {
 				'useminPrepare',
 				'concat',
 				'usemin',
-				// 'csslint:destination'
+				// 'csslint:lax'
 				'clean:tidyup'
 			]);
 		} else {
@@ -262,7 +286,7 @@ module.exports = function(grunt) {
 				'uglify',
 				'usemin',
 				'htmlmin:all',
-				// 'csslint:destination'
+				// 'csslint:lax'
 				'clean:tidyup'
 			]);
 		}
