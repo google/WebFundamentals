@@ -9,29 +9,18 @@ article:
 collection: introductionToMedia
 ---
 
-Video
-    Coping without plugins: cross platform support
-    Mobile, tablet, and desktop
-    Sources and codecs
-    Accessibility and fallbacks
-    Limited, variable, unreliable connectivity
-    Autoplay, buffering, preload, poster images
-    Responsive video layout
-    Fullscreen
-
-
 The video element is a thing of simple beauty:
 
-> <video src='foo.webm'>  
->     <p>This browser does not support the video element.</p>  
-> </video>
+    <video src='foo.webm'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
 Load, decode and play video in a few lines of code! 
 
 HTML video is [well supported](http://caniuse.com/video): over 85% of browsers 
 on mobile and desktop implement the video element, including all current 
 versions of all browsers (apart from Opera Mini). There are similar numbers for 
-`<audio>`.
+<audio>.
 
 So it's time to move away from plugins. Phone and tablet browsers do not support 
 Flash or other media players, plugins are 
@@ -525,6 +514,7 @@ information, see [A Practical Guide to Building WebRTC
 Apps](https://thenewcircle.com/s/post/1548/a_practical_guide_to_building_webrtc_apps_ben_strong_video).
 
 ## Find out more
+
 ### Digital media overview
 
 * [A Digital Media Primer for Geeks](http://www.xiph.org/video/vid1.shtml)<br/>
