@@ -9,6 +9,33 @@ article:
 collection: user-input
 ---
 
+<style type="text/css">
+  div.takeaways {
+    color: #31708f;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    padding: 15px;
+    margin: 20px 25px 20px 25px;
+    border-radius: 4px;
+  }
+  div.takeaways h2 {
+    color: #31708f;
+    margin-top: 0;
+  }
+  div.takeaways ul {
+    margin: 0;
+  }
+
+  div.notes {
+    border: 1px solid #dddddd;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+</style>
+
 Most of the samples will be based off 
 [https://petelepage.com/scratch/form-ac.html](https://petelepage.com/scratch/form-ac.html) 
 which integrates all of the items discussed in the doc below.
@@ -23,8 +50,8 @@ submitting the form.
 
 # Label and name inputs properly
 
-<div>
-  <h2>Key takeaways:</h2>
+<div class="takeaways">
+  <h2>Key takeaways</h2>
   <ul>
     <li>Always use labels on form inputs, and ensure they're visible when 
       the field is in focus.</li>
@@ -67,7 +94,7 @@ the input by displaying its value as light text until the element gets focus.
     <input type="text" id="frmName" placeholder="Full name"/>
 
 
-<div>
+<div class="notes">
   <b>Remember:</b> placeholders disappear as soon as focus is placed in an
   element, thus they are not a replacement for labels.  They should be used 
   as an aid to help guide users on the required format and content.
@@ -100,9 +127,9 @@ the users name and phone number, you should use:
 <table>
 <tr>
 <td>Content</td>
-<td>name attribute</td>
-<td>autocomplete attribute
-Note: the autocomplete attributes should be prefixed with either shipping or billing, depending on the context.</td>
+<td>`name` attribute</td>
+<td>`autocomplete` attribute
+Note: the `autocomplete` attributes should be prefixed with either shipping or billing, depending on the context.</td>
 </tr>
 <tr>
 <td>Name</td>
@@ -158,7 +185,7 @@ cc-type</td>
 </tr>
 </table>
 
-<div><b>Remember:</b> Auto-complete only works when the form method is post.</div>
+<div class="notes"><b>Remember:</b> Auto-complete only works when the form method is post.</div>
 
 ## The autofocus attribute
 
@@ -186,8 +213,8 @@ The form
 
 # Choose the best input type
 
-<div>
-  <h2>Key takeaways:</h2>
+<div class="takeaways">
+  <h2>Key takeaways</h2>
   <ul>
     <li>Choose the most appropriate input type for your data to simplify input.</li>
     <li>Offer suggestions as the user types with the datalist element.</li>
@@ -289,15 +316,15 @@ lists, `datalist`s provide hints as the user types.
       <option value="dark" />  
     </datalist>
 
-<div><b>Remember:</b> the datalist values are provided as suggestions, and users are not restricted to the suggestions provided.
+<div class="notes"><b>Remember:</b> the `datalist` values are provided as suggestions, and users are not restricted to the suggestions provided.
 </div>
 
 # Provide real-time validation
 
-<div>
-  <h2>Key takeaways:</h2>
+<div class="takeaways">
+  <h2>Key takeaways</h2>
   <ul>
-    <li>Leverage the browser's built-in validation attributes like pattern, required, min man, etc.</li>
+    <li>Leverage the browser's built-in validation attributes like `pattern`, `required`, `min`, `max`, etc.</li>
     <li>Use JavaScript and the Constraints Validation API for more complex validation requirements.</li>
     <li>Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix.</li>
   </ul>
@@ -309,17 +336,17 @@ to help provide real-time data validation and may prevent the user from
 submitting an invalid form.  Visual cues should be used to indicate whether a 
 form has been completed properly.
 
-<div><b>Remember:</b> Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data.
+<div class="notes"><b>Remember:</b> Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data.
 </div>
 
 ## Use these attributes to validate input
 
 ### The pattern attribute
 
-The pattern attribute specifies a [regular 
+The `pattern` attribute specifies a [regular 
 expression](http://en.wikipedia.org/wiki/Regular_expression) used to validate an 
 input field. For example, to validate a US Zip code (5 digits, sometimes 
-followed by a dash and an additional 4 digits), we would set the pattern like 
+followed by a dash and an additional 4 digits), we would set the `pattern` like 
 this:
 
     <input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
@@ -359,13 +386,13 @@ this:
 
 ### The `required` attribute
 
-If the required attribute is present, then the field must contain a value before 
+If the `required` attribute is present, then the field must contain a value before 
 the form can be submitted. For example, to make the zip code required, we'd 
 simply add the required attribute:
 
     <input type="text" required id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
-### The min, max and step attributes
+### The `min`, `max` and `step` attributes
 
 For numeric input types like number or range as well as date/time inputs, you 
 can specify the minimum and maximum values, as well as how much they should each 
@@ -375,19 +402,19 @@ of 0.5
 
     <input type="number" id="frmShoeSize" name="shoeSize" min="1" max="13" step="0.5" />
 
-### The maxlength attribute
+### The `maxlength` attribute
 
-The maxlength attribute can be used to specify the maximum length of an input or 
+The `maxlength` attribute can be used to specify the maximum length of an input or 
 textbox and is useful when you want to limit the length of information that the 
 user can provide. For example, if you want to limit a filename to 12 characters, 
 you can use the following.
 
     <input type="text" id="83filename" maxlength="12" />
 
-### The novalidate attribute
+### The `novalidate` attribute
 
 In some cases, you may want to allow the user to submit the form even if it 
-contains invalid input. To do this, add the novalidate attribute to the form 
+contains invalid input. To do this, add the `novalidate` attribute to the form 
 element, or individual input fields. In this case, all pseudo classes and 
 JavaScript APIs will still allow you to check if the form validates.
 
@@ -412,19 +439,19 @@ reason that an element is invalid:
 <td>Description</td>
 </tr>
 <tr>
-<td>setCustomValidity()</td>
+<td>`setCustomValidity()`</td>
 <td>Sets a custom validation message and the customError property of the ValidityState object to true.</td>
 </tr>
 <tr>
-<td>validationMessage</td>
+<td>`validationMessage`</td>
 <td>Returns a string with the reason the input failed the validation test.</td>
 </tr>
 <tr>
-<td>checkValidity()</td>
+<td>`checkValidity()`</td>
 <td>Returns true if the element satisfies all of it's constraints, and false otherwise.</td>
 </tr>
 <tr>
-<td>validity</td>
+<td>`validity`</td>
 <td>Returns a ValidityState object representing the validity states of the element.</td>
 </tr>
 </table>
@@ -453,7 +480,7 @@ response.  For example:
 ### Prevent form submission on invalid forms
 
 Because not all browsers will prevent the user from submitting the form if there 
-is invalid data, you should catch the submit event, and use the checkValidity() 
+is invalid data, you should catch the submit event, and use the `checkValidity()`
 on the form element to determine if the form is valid.  For example:
 
     form.addEventListener("submit", function(evt) {
@@ -528,7 +555,7 @@ JavaScript to only show invalid styling when the user has visited the field.
       initInputs();
     </script>
 
-<div><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</div>
+<div class="notes"><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</div>
 
 ## Putting it all together
 
@@ -544,8 +571,8 @@ The JavaScript
 
 # Simplify checkout with requestAutocomplete
 
-<div>
-  <h2>Key takeaways:</h2>
+<div class="takeaways">
+  <h2>Key takeaways</h2>
   <ul>
     <li>requestAutocomplete can greatly simplify the checkout process and improve the user experience.</li>
     <li>If requestAutocomplete is available, hide the checkout form and move people directly to the confirmation page.</li>
@@ -583,7 +610,7 @@ must be called via a user gesture like a touch or mouse click. A dialog is then
 displayed asking the user permission to populate the fields and which details 
 they want to populate it with.
 
-<div>
+<div class="notes">
   <b>Remember:</b> If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure.
 </div>
 
