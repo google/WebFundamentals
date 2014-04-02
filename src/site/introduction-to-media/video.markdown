@@ -31,7 +31,7 @@ Load, decode and play video in a few lines of code!
 HTML video is [well supported](http://caniuse.com/video): over 85% of browsers 
 on mobile and desktop implement the video element, including all current 
 versions of all browsers (apart from Opera Mini). There are similar numbers for 
-<audio>.
+`<audio>`.
 
 So it's time to move away from plugins. Phone and tablet browsers do not support 
 Flash or other media players, plugins are 
