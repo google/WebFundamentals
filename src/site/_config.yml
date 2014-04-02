@@ -8,3 +8,5 @@ pygments: false
 custom:
 kramdown:
   toc_levels: "2,3,4"
+include: ['_vendors', '_scripts', '.htaccess']
+exclude: ['config.rb']

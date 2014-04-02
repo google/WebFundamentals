@@ -32,6 +32,16 @@ module.exports = function(grunt) {
 						'!<%= config.destination %>/.git*'
 					]
 				}]
+			},
+			tidyup: {
+				files: [{
+					dot: true,
+					src: [
+						'<%= config.destination %>/_vendors',
+						'<%= config.destination %>/_scripts',
+						'<%= config.destination %>/css/styles.css'
+					]
+				}]
 			}
 		},
 
@@ -236,8 +246,9 @@ module.exports = function(grunt) {
 				'compass:uncompressed',
 				'useminPrepare',
 				'concat',
-				'usemin'
+				'usemin',
 				// 'csslint:destination'
+				'clean:tidyup'
 			]);
 		} else {
 			return grunt.task.run([
@@ -250,8 +261,9 @@ module.exports = function(grunt) {
 				'cssmin',
 				'uglify',
 				'usemin',
-				'htmlmin:all'
+				'htmlmin:all',
 				// 'csslint:destination'
+				'clean:tidyup'
 			]);
 		}
 
@@ -285,6 +297,7 @@ module.exports = function(grunt) {
 		return grunt.task.run([
 			'clean:destination',
 			'jekyll:destination',
+			'clean:tidyup',
 			'compass:uncompressed',
 			'open:index',
 			'connect:destination-source',
