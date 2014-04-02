@@ -9,18 +9,30 @@ article:
 collection: user-input
 ---
 
-<h1>Forms</h1>
+Most of the samples will be based off 
+[https://petelepage.com/scratch/form-ac.html](https://petelepage.com/scratch/form-ac.html) 
+which integrates all of the items discussed in the doc below.
 
-Filling out forms on the web has never been exactly fun, and it can be downright 
-painful on a mobile device with its on-screen keyboard. Thankfully modern 
-browsers help to make this much easier by providing semantic input types and 
-helpful validation tools.
 
-When used properly, these features make it significantly easier for users to 
-provide the information needed, increasing completion rates, and improving 
-accuracy.  But remember, the best form is the one with the fewest inputs.
+
+Forms are hard to fill out on mobile. The best forms are the ones with the 
+fewest inputs. Good forms provide semantic input types. Keys should change to 
+match the user's input type; users pick a date in a calendar. Keep your user 
+informed. Validation tools should tell the user what they need to do before 
+submitting the form.
 
 # Label and name inputs properly
+
+<div>
+  <h2>Key takeaways:</h2>
+  <ul>
+    <li>Always use labels on form inputs, and ensure they're visible when 
+      the field is in focus.</li>
+    <li>Use placeholders to provide guidance about what you expect.</li>
+    <li>To help the browser auto-complete the form, use established name's 
+      for elements and include the autocomplete attribute.</li>
+  </ul>
+</div>
 
 ### The importance of labels
 
@@ -31,34 +43,35 @@ attribute.  Applying labels to form elements also helps to improve the touch
 target size: the user can touch either the label or the input in order to place 
 focus on the input element.
 
-<!-- TODO: Fix formatting of cells -->
-<pre>
-&lt;label for="myInput"&gt;Tell me a secret&lt;/label&gt;
-&lt;input type="text" id="myInput"&gt;
-&lt;label&gt;
-  &lt;input type="checkbox"&gt; I'm a checkbox
-&lt;/label&gt;
-</pre>
+    <label for="myInput">Tell me a secret</label>
+    <input type="text" id="myInput">
+    <label>
+      <input type="checkbox"> I'm a checkbox
+    </label>
+
+### Label sizing and placement
 
 Labels and inputs should be large enough to be easy to press.  In portrait 
 viewports, field labels should be above input elements, and beside them in 
-landscape.  While it may seem obvious at first, ensure field labels and the 
-corresponding input boxes are visible at the same time.  Custom scroll handlers 
-may scroll input elements to the top of the page hiding the label, or labels 
-placed below input elements may be covered by the virtual keyboard.
+landscape.  Ensure field labels and the corresponding input boxes are visible at 
+the same time.  Be careful with custom scroll handlers that may scroll input 
+elements to the top of the page hiding the label, or labels placed below input 
+elements may be covered by the virtual keyboard.
 
 ### Use placeholders
 
 The placeholder attribute provides a hint to the user about what's expected in 
 the input by displaying its value as light text until the element gets focus. 
 
-<!-- TODO: Fix formatting of cells -->
     <label for="frmName">Name</label>
     <input type="text" id="frmName" placeholder="Full name"/>
 
 
-<!-- TODO: Fix formatting of cells -->
-<div><b>Remember:</b> placeholders disappear as soon as focus is placed in an element, thus they are not a replacement for labels.  They should be used as an aid to help guide users on the required format and content.</div>
+<div>
+  <b>Remember:</b> placeholders disappear as soon as focus is placed in an
+  element, thus they are not a replacement for labels.  They should be used 
+  as an aid to help guide users on the required format and content.
+</div>
 
 ### Use metadata to enable auto-complete
 
@@ -68,102 +81,124 @@ helps to reduce potential input errors -- especially on virtual keyboards and
 small devices.
 
 Browsers use many heuristics to determine which fields they can 
-[auto-populate](https://support.google.com/chrome/answer/142893)[based on 
+[auto-populate](https://support.google.com/chrome/answer/142893)[ based on 
 previously specified data by the 
 user](https://support.google.com/chrome/answer/142893), and you can give hints 
 to the browser by providing both the name attribute and the autocomplete 
 attribute on each input element.
 
-**Recommended name value**
+For example, to hint to the browser that it should auto-complete the form with 
+the users name and phone number, you should use:
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Personal</td>
-<td>fname, mname, lname, name, birthday, jobtitle</td>
-</tr>
-<tr>
-<td>Email</td>
-<td>e-mail</td>
-</tr>
-<tr>
-<td>Address</td>
-<td>company, address, city, province, state, region, county, zip, zip2, postal, country</td>
-</tr>
-<tr>
-<td>Phone Number</td>
-<td>phone, mobile, country-code, area-code, exchange, suffix, ext</td>
-</tr>
-<tr>
-<td>Credit Card</td>
-<td>ccname, cardnumber, cvc, ccmonth, ccyear, exp-date, card-type</td>
-</tr>
-</table>
+    <label for="frmName">Name</label>
+    <input type="text" id="frmName" name="name" autocomplete="name">
+    <label for="frmPhone">Phone Number</label>
+    <input type="tel" id="frmPhone" name="phone" autocomplete="shipping tel">
 
-**Recommended autocomplete value**
+### Recommended input name and autocomplete attribute values
 
 <table>
 <tr>
-<td>Personal</td>
+<td>Content</td>
+<td>name attribute</td>
+<td>autocomplete attribute
+Note: the autocomplete attributes should be prefixed with either shipping or billing, depending on the context.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>name
+fname, mname, lname</td>
 <td>name</td>
 </tr>
 <tr>
 <td>Email</td>
 <td>email</td>
+<td>email</td>
 </tr>
 <tr>
-<td>Address<br>
-Should be prefixed with either billing or shipping</td>
-<td>street-address, locality (city), region (state/province), postal-code, country</td>
+<td>Address</td>
+<td>address
+city
+region, province, state
+zip, zip2, postal
+country</td>
+<td>street-address
+locality
+region
+postal-code
+country</td>
 </tr>
 <tr>
-<td>Phone Number</td>
+<td>Phone</td>
+<td>phone
+mobile
+country-code
+area-code
+exchange
+suffix
+ext</td>
 <td>tel</td>
 </tr>
 <tr>
 <td>Credit Card</td>
-<td>cc-name, cc-number, cc-exp-month, cc-exp-year, cc-exp, cc-csc, cc-type</td>
+<td>ccname
+cardnumber
+cvc
+ccmonth
+ccyear
+exp-date
+card-type</td>
+<td>cc-name
+cc-number
+cc-csc
+cc-exp-month
+cc-exp-year
+cc-exp
+cc-type</td>
 </tr>
 </table>
 
-
-    <label for="frmName">Name</label>
-    <input type="text" id="frmName" name="name" autocomplete="name">
-
-
-<!-- TODO: Fix formatting of cells -->
 <div><b>Remember:</b> Auto-complete only works when the form method is post.</div>
 
 ## The autofocus attribute
 
-On some forms, like the Google home page for example, you want the focus to 
-immediately jump to a specific input so that the user can quickly begin using 
-the form. While there are JavaScript helpers to do this, they can sometimes be 
-annoying when they move focus after you've already started typing. Instead, you 
-can use the `autofocus` attribute on an input element to specify that element as 
-the primary form element.
+On some forms, for example the Google home page where the only thing you want 
+the user to do is fill out a particular field, you can add the `autofocus` 
+attribute.  When set, desktop browsers immediately move the focus to the input 
+field, making it easy for users to quickly begin using the form.  Mobile 
+browsers ignore the `autofocus` attribute, to prevent the keyboard from randomly 
+appearing.
+
+Be careful using the autofocus attribute because it will steal keyboard focus 
+and potentially preventing the backspace character from being used for 
+navigation.
 
     <label for="frmName">Name</label>
     <input type="text" id="frmName" autofocus name="name" autocomplete="name">
-
-<!-- TODO: Fix formatting of cells -->
-<div><b>Note:</b> the autofocus attribute only works on desktop browsers.</div>
 
 ## Putting it all together
 
 The form
 
-    Sample code goes here
+    ```sample code
 
 [Try it](http://jsbin.com/rufuw/1/edit)
 
 # Choose the best input type
 
+<div>
+  <h2>Key takeaways:</h2>
+  <ul>
+    <li>Choose the most appropriate input type for your data to simplify input.</li>
+    <li>Offer suggestions as the user types with the datalist element.</li>
+  </ul>
+</div>
+
 Every tap counts. Users appreciate websites that automatically present number 
 pads for entering phone numbers, or automatically advance fields as they entered 
 them. Look for opportunities to eliminate wasted taps in your forms.
 
-## Choose the best input type
+## HTML5 input types
 
 HTML5 introduced a number of new input types. These new input types give hints 
 to the browser about what type of keyboard layout to display for on-screen 
@@ -171,51 +206,72 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input 
 type. 
 
-<!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
 <td>Input type</td>
-<td>Description</td>
+<td>Typical Keyboard</td>
 </tr>
 <tr>
-<td>url</td>
-<td>For entering a URL. It must start with a valid URI scheme, (for example http://, ftp:// or mailto:)</td>
+<td>url
+For entering a URL. It must start with a valid URI scheme, for example http://, ftp:// or mailto:. </td>
+<td></td>
 </tr>
 <tr>
-<td>tel</td>
-<td>For entering phone numbers. It does not enforce a particular syntax for validation, so if you want to ensure a particular format, you can use pattern.</td>
+<td>tel
+For entering phone numbers. It does not enforce a particular syntax for validation, so if you want to ensure a particular format, you can use pattern.</td>
+<td></td>
 </tr>
 <tr>
-<td>email</td>
-<td>For entering email addresses, and hints that the @ should be shown on the keyboard by default. You can add the multiple attribute if more than one email address will be provided.</td>
+<td>email
+For entering email addresses, and hints that the @ should be shown on the keyboard by default. You can add the multiple attribute if more than one email address will be provided.</td>
+<td></td>
 </tr>
 <tr>
-<td>search</td>
-<td>A text input field styled in a way that is consistent with the platform's search field.</td>
+<td>search
+A text input field styled in a way that is consistent with the platform's search field.</td>
+<td></td>
 </tr>
 <tr>
-<td>number</td>
-<td>For numeric input, can be any rational integer or float value.</td>
+<td>number
+For numeric input, can be any rational integer or float value.</td>
+<td></td>
 </tr>
 <tr>
-<td>range</td>
-<td>For number input, but unlike the number input type, the value is less important. It is displayed to the user as a slider control.</td>
+<td>range
+For number input, but unlike the number input type, the value is less important. It is displayed to the user as a slider control.</td>
+<td></td>
 </tr>
 <tr>
-<td>datetime-local</td>
-<td>For entering a date and time value where the time zone provided is the local time zone.</td>
+<td>datetime-local
+For entering a date and time value where the time zone provided is the local time zone.</td>
+<td></td>
 </tr>
 <tr>
-<td>date</td>
-<td>For entering a date (only) with no time zone provided.</td>
+<td>date
+For entering a date (only) with no time zone provided.</td>
+<td></td>
 </tr>
 <tr>
-<td>time</td>
-<td>For entering a time (only) with no time zone provided.</td>
+<td>time
+For entering a time (only) with no time zone provided.</td>
+<td></td>
+</tr>
+<tr>
+<td>week
+For entering a week (only) with no time zone provided.</td>
+<td></td>
+</tr>
+<tr>
+<td>month
+For entering a month (only) with no time zone provided.</td>
+<td></td>
+</tr>
+<tr>
+<td>color
+For picking a color.</td>
+<td></td>
 </tr>
 </table>
-For a full list of new input types, see [the input type 
-example.](http://google.com)
 
 ## Offer suggestions during input with datalist
 
@@ -233,17 +289,18 @@ lists, `datalist`s provide hints as the user types.
       <option value="dark" />  
     </datalist>
 
-You can also dynamically generate `datalist`s in JavaScript, not just hard coded 
-in the HTML.
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><b>Remember:</b> the datalist values are provided as suggestions, and users are not restricted to the suggestions provided.</td>
-</tr>
-</table>
-
+<div><b>Remember:</b> the datalist values are provided as suggestions, and users are not restricted to the suggestions provided.
+</div>
 # Provide real-time validation
+
+<div>
+  <h2>Key takeaways:</h2>
+  <ul>
+    <li>Leverage the browser's built-in validation attributes like pattern, required, min man, etc.</li>
+    <li>Use JavaScript and the Constraints Validation API for more complex validation requirements.</li>
+    <li>Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix.</li>
+  </ul>
+</div>
 
 Real-time data validation doesn't just help to keep your data clean, but it also 
 helps improve the user experience.  Modern browsers have several built-in tools 
@@ -251,14 +308,10 @@ to help provide real-time data validation and may prevent the user from
 submitting an invalid form.  Visual cues should be used to indicate whether a 
 form has been completed properly.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><b>Remember: </b>Even with client side input validation, it is always important to validate data on the server to ensure consistency and security in your data.</td>
-</tr>
-</table>
+<div><b>Remember:</b> Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data.
+</div>
 
-## Using attributes to validate input
+## Use these attributes to validate input
 
 ### The pattern attribute
 
@@ -272,7 +325,6 @@ this:
 
 **Common regular expression patterns**
 
-<!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
 <td>Description</td>
@@ -304,11 +356,11 @@ this:
 </tr>
 </table>
 
-### The required attribute
+### The `required` attribute
 
 If the required attribute is present, then the field must contain a value before 
-the form can be submitted. For example, to make the part number in the previous 
-example required, we'd simply add the required attribute.
+the form can be submitted. For example, to make the zip code required, we'd 
+simply add the required attribute:
 
     <input type="text" required id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
@@ -316,9 +368,11 @@ example required, we'd simply add the required attribute.
 
 For numeric input types like number or range as well as date/time inputs, you 
 can specify the minimum and maximum values, as well as how much they should each 
-increment/decrement when adjusted by the slider or spinners.
+increment/decrement when adjusted by the slider or spinners.  For example, a 
+shoe size input would set a minumum size of 1 and a maximum size 13, with a step 
+of 0.5
 
-    <input type="number" id="qty" min="0" max="100" step="1" />
+    <input type="number" id="frmShoeSize" name="shoeSize" min="1" max="13" step="0.5" />
 
 ### The maxlength attribute
 
@@ -333,8 +387,8 @@ you can use the following.
 
 In some cases, you may want to allow the user to submit the form even if it 
 contains invalid input. To do this, add the novalidate attribute to the form 
-element. In this case, all pseudo classes and JavaScript APIs will still allow 
-you to check if the form validates.
+element, or individual input fields. In this case, all pseudo classes and 
+JavaScript APIs will still allow you to check if the form validates.
 
     <form role="form" novalidate>  
       <label for="inpEmail">Email address</label>  
@@ -345,41 +399,42 @@ you to check if the form validates.
 
 When the built-in validation plus regular expressions aren't enough, you can use 
 the 
-[Constraints Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation), 
+[Constrains Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation), 
 a powerful tool for handling custom validation.  The API allows you to do things 
 like set a custom error, check whether an element is valid, and determine the 
-reason that an element is invalid.
+reason that an element is invalid:
 
 <!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
-<td>willValidate</td>
-<td>Property that returns true or false if the element is a candidate for validation.</td>
+<td>API property</td>
+<td>Description</td>
 </tr>
 <tr>
-<td>validity</td>
-<td>Property that returns a ValidityState object representing the validity states of the element.</td>
+<td>setCustomValidity()</td>
+<td>Sets a custom validation message and the customError property of the ValidityState object to true.</td>
 </tr>
 <tr>
 <td>validationMessage</td>
-<td>Property that returns a string with the reason the object failed the validation test.</td>
+<td>Returns a string with the reason the input failed the validation test.</td>
 </tr>
 <tr>
 <td>checkValidity()</td>
 <td>Returns true if the element satisfies all of it's constraints, and false otherwise.</td>
 </tr>
 <tr>
-<td>setCustomValidity()</td>
-<td>Sets a custom validation message and the customError property of the ValidityState object to true.</td>
+<td>validity</td>
+<td>Returns a ValidityState object representing the validity states of the element.</td>
 </tr>
 </table>
 
+### Set custom validation messages
 
-One example of where you might use the JavaScript validation APIs is to verify 
-that the user has provided the correct email address on a sign up form where 
-they're asked to enter it twice. In the blur event for the second input, you 
-would call the following check function:
-
+If a field fails validation, use `setCustomValidity()` to mark the field invalid 
+and explain why the field didn't validate.  For example, a sign up form might 
+ask the user to confirm their email address by entering it twice.  Use the blur 
+event on the second input to validate the two inputs and set the appropriate 
+response.  For example:
 
     var elem = document.getElementById("email_addr_confirm");
     elem.addEventListener("blur", verifyEmail);
@@ -394,6 +449,8 @@ would call the following check function:
       }
     }
 
+### Prevent form submission on invalid forms
+
 Because not all browsers will prevent the user from submitting the form if there 
 is invalid data, you should catch the submit event, and use the checkValidity() 
 on the form element to determine if the form is valid.  For example:
@@ -401,31 +458,49 @@ on the form element to determine if the form is valid.  For example:
     form.addEventListener("submit", function(evt) {
       if (form.checkValidity() === false) {
         evt.preventDefault();
-        alert("Form is invalid");
+        alert("Form is invalid - do something here");
         return false;
       }
     });
 
 ## Show feedback in real-time
 
+It's helpful to provide a visual indication on each field that indicates whether 
+the user has completed the form properly before they've submitted the form.  
 HTML5 also introduces a number of new pseudo-classes that can be used to style 
-inputs based on their value or attributes, making it easier for users to 
-understand if they've filled the form out properly before trying to submit it.
-
-* `:valid` and `:invalid` - explicitly sets the style for an element when the 
-  input is valid/invalid.
-* `:required` and `:optional` - sets the style for elements that are required or 
-  optional.
-* `:in-range` and `:out-of-range` - styling for elements that support the min 
-  and max attribute
+inputs based on their value or attributes.
 
 <!-- TODO: Fix formatting of cells -->
 <table>
 <tr>
-<td><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</td>
+<td>Pseudo-class</td>
+<td>Use</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>Explicitly sets the style for an input to be used when the value meets all of the validation requirements.</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>Explicitly sets the style for an input to be used when the value does not meet all of the validation requirements.</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>Explicitly sets the style for an input element that has the required attribute set.</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>Explicitly sets the style for an input element that does not have the required attribute set.</td>
+</tr>
+<tr>
+<td>:in-range</td>
+<td>Explicitly sets the style for a number input element where the value is in range.</td>
+</tr>
+<tr>
+<td>:out-of-range</td>
+<td>Explicitly sets the style for a number input element where the value is out of range.</td>
 </tr>
 </table>
-
 
 Validation happens immediately which means that when the page is loaded, fields 
 may be marked as invalid, even though the user hasn't had a chance to fill them 
@@ -434,34 +509,55 @@ invalid style while typing. To prevent this, you can combine the CSS with
 JavaScript to only show invalid styling when the user has visited the field.
 
     <style type="text/css">
-      input.dirty:not(:focus):invalid { outline: 2px solid red; }
+      input.dirty:not(:focus):invalid { background-color: pink; }
     </style>
-
     <script type="text/javascript">
-      $("input").bind("blur invalid", function(evt) {
-        $(this).addClass('dirty');
-      });
+      function initInputs() {
+        var inputs = document.getElementsByTagName("input");
+        var inputs_len = inputs.length;
+        var addDirtyClass = function(evt) {
+          evt.srcElement.classList.toggle("dirty", true);
+        };
+        for (var i = 0; i < inputs_len; i++) {
+          var input = inputs[i];
+          input.addEventListener("blur", addDirtyClass);
+          input.addEventListener("invalid", addDirtyClass);
+        }
+      }
+      initInputs();
     </script>
+
+<div><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</div>
 
 ## Putting it all together
 
 The form
-    `code sample here`
+
+    ```code sample here
 
 The JavaScript
-    `code sample here`
+
+    ```code sample here
 
 [Try it](http://jsbin.com/kehiz/1/edit)
 
 # Simplify checkout with requestAutocomplete
 
+<div>
+  <h2>Key takeaways:</h2>
+  <ul>
+    <li>requestAutocomplete can greatly simplify the checkout process and improve the user experience.</li>
+    <li>If requestAutocomplete is available, hide the checkout form and move people directly to the confirmation page.</li>
+    <li>Ensure input fields include the appropriate autocomplete attribute.</li>
+  </ul>
+</div>
+
 While `requestAutocomplete` was designed to help users fill out any form, today 
 it's most common use is in eCommerce where shopping cart abandonment on the 
 mobile web [can be as high as 
 97%](http://seewhy.com/blog/2012/10/10/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/). 
-Imagine that in the real world. Imagine 97% of people in a supermarket, with a 
-cart brimming full of things that they want, flipping their cart over and 
-walking out.
+Imagine 97% of people in a supermarket, with a cart brimming full of things that 
+they want, flipping their cart over and walking out.
 
 Rather than the site relying on a particular payment provider, 
 `requestAutocomplete` requests payment details (such as name, address and credit 
@@ -472,39 +568,33 @@ much like other auto-complete fields.
 
 Ideally you want to show the `requestAutocomplete` dialog instead of loading the 
 page that displays the checkout form. If all goes well, the user shouldn't see 
-the form at all.  
+the form at all.  You can easily add `requestAutoComplete` to existing forms 
+without having to change any field names.  Simply add the `autocomplete` 
+attribute to each form element with the appropriate value and add the 
+`requestAutocomplete()` function on the form element. The browser will handle 
+the rest.  
+
 <img src="imgs/rac-flow.png" />
-
-## Design your form to enable requestAutocomplete
-
-You can easily add `requestAutoComplete` to existing forms without having to 
-change any field names.  Simply add the 
-[`autocomplete`](#heading=h.c6olq7fah9m)[ attribute](#heading=h.c6olq7fah9m) to 
-each form element with the appropriate value, and the browser will handle the 
-rest.
-
-## The requestAutocomplete function
 
 The `requestAutocomplete` function on the `form` element indicates to the 
 browser that it should populate the form.  As a security feature, the function 
-must be called via a user gesture like a touch or mouse click, a dialog is then 
+must be called via a user gesture like a touch or mouse click. A dialog is then 
 displayed asking the user permission to populate the fields and which details 
 they want to populate it with.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><b>Remember:</b> If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure.</td>
-</tr>
-</table>
+<div>
+  <b>Remember:</b> If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure.
+</div>
 
 ## Putting it all together
 
 The form
-    `code sample here`
+
+    ```code sample
 
 The JavaScript
-    `code sample here`
 
+    ```code sample
 
 [Try it](http://jsbin.com/migod/edit)
+
