@@ -21,11 +21,11 @@ toc:
   path: /media/
   section:
   - title: "Images"
-    path: /media/images
+    path: /introduction-to-media/images.html
   - title: "Video"
-    path: /media/video
+    path: /introduction-to-media/video.html
   - title: "Audio"
-    path: /media/audio
+    path: /introduction-to-media/audio.html
 - title: Performance
   path: /performance
   section:
