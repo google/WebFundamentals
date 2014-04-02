@@ -9,11 +9,33 @@ article:
 collection: multi-device-layouts
 ---
 
-<h1>{{ page.title }}</h1>
+<h1>Layout Basics</h1>
 
-Layout basics (petele)
-   Viewport
-   PPI
-   Media queries
-   Create breakpoints
-   Progressive enhancement
+# A need for responsive pages
+
+TBD.
+
+# What is the viewport?
+
+TBD.
+
+# Media queries
+
+TBD.
+
+# How to choose breakpoints
+
+TBD.
+
+# Progressive enhancement
+
+TBD.
+
+# References:
+
+* [http://alistapart.com/article/responsive-web-design/](http://alistapart.com/article/responsive-web-design/) 
+* [http://en.wikipedia.org/wiki/Responsive_design](http://en.wikipedia.org/wiki/Responsive_design)
+* [http://en.wikipedia.org/wiki/Responsive_web_design](http://en.wikipedia.org/wiki/Responsive_web_design)
+* [http://johnpolacek.github.io/scrolldeck.js/decks/responsive/](http://johnpolacek.github.io/scrolldeck.js/decks/responsive/)
+* [http://smallbiztrends.com/2013/05/what-is-responsive-web-design.html](http://smallbiztrends.com/2013/05/what-is-responsive-web-design.html)
+* [http://designinstruct.com/web-design/what-is-responsive-web-design/](http://designinstruct.com/web-design/what-is-responsive-web-design/)
