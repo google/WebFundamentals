@@ -1,9 +1,9 @@
 safe: false
 port: 8081
-source: .
-destination: ../appengine/build/static
+source: site
+destination: appengine/build/static
 markdown: kramdown
-permalink: /news/:year/:month/:day/:title.html
+permalink: /articles/:title.html
 pygments: false
 custom:
 kramdown:
