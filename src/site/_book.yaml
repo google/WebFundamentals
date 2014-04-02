@@ -30,7 +30,7 @@ toc:
   path: /optimizing-performance
   section:
     - title: "Critical Path Rendering"
-      path: /optimizing-performance/critical-path-rendering
+      path: /optimizing-performance/critical-path-rendering/
     - title: "Network Performance"
       path: /performance/network-performance
     - title: "Measuring Performance"
