@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
 	// App configuration
-	var config = grunt.file.readYAML('site/_config.yml');
+	var config = grunt.file.readYAML('site/_config-grunt.yml');
 
 	// Tasks configuration
 	grunt.initConfig({
@@ -149,7 +149,7 @@ module.exports = function(grunt) {
 
 		jekyll: {
 			destination: {
-				config: 'site/_config.yml'
+				config: 'site/_config-grunt.yml'
 			}
 		},
 
