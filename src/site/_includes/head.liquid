@@ -1,0 +1,32 @@
+<script>
+	document.documentElement.className = document.documentElement.className.replace("no-js","js");
+</script>
+
+<meta charset="utf-8" />
+
+{% capture page_title %}{% if page.title %}{{ page.title }} — {%endif%}Google Web Essentials{% endcapture %}
+<title>{{ page_title }}</title>
+
+<meta name="author" content="" />
+<meta name="description" content="" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta property="twitter:account_id" content="TODO" />
+<meta itemprop="name" content="{{ page_title }}">
+{% if page.snippet_img %}
+<meta itemprop="image" content="{{ page.snippet_img }}">
+{% else %}
+<meta itemprop="image" content="/imgs/lono.png">
+{% endif %}
+<meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Google Web Essentials{% endif %}">
+
+<!-- build:css css/styles.min.css -->
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/_vendors/vendor.css" />
+<!-- endbuild -->
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
