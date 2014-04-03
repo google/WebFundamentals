@@ -1,0 +1,16 @@
+<ul class="navigation">
+{% for section in page.content.toc %}
+ <li>
+    <a {% if section.section %}href="#"{% else %}href="{{ section.path }}{% endif %}" title="{{ section.title }}">
+      {{ section.title }}
+    </a>
+    {% if section.section %}
+    <ul>
+      {% for subsection in section.section %}
+      <li><a href="{{ subsection.path }}">{{ subsection.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+ </li>
+{% endfor %}
+</ul>

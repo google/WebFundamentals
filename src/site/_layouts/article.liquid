@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="http://schema.org/Product">
+    <head>
+        {% include head.liquid %}
+    </head>
+
+    <body class="{{ page.class }}">
+        {% injectdata project _project.yaml %}
+        {% injectdata content _book.yaml %}
+
+        {% include header.liquid %}
+
+        {{ content }}
+
+        {% include footer.liquid %}
+
+        {% include scripts.liquid %}
+    </body>
+</html>

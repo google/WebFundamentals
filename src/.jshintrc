@@ -1,0 +1,82 @@
+{
+
+
+	"bitwise": true,
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"forin": false,
+	"immed": true,
+	"indent": 2,
+	"latedef": true,
+	"newcap": true,
+	"noarg": true,
+	"noempty": true,
+	"nonew": true,
+	"plusplus": false,
+	"quotmark": "single",
+	"undef": true,
+	"unused": true,
+	"strict": true,
+	"trailing": true,
+
+
+
+
+
+
+
+
+
+	"asi": false,
+	"boss": false,
+	"debug": false,
+	"eqnull": false,
+	"esnext": false,
+	"evil": false,
+	"expr": false,
+	"funcscope": false,
+	"globalstrict": false,
+	"iterator": false,
+	"lastsemic": false,
+	"laxbreak": false,
+	"laxcomma": false,
+	"loopfunc": false,
+	"multistr": false,
+	"proto": false,
+	"scripturl": false,
+	"smarttabs": false,
+	"shadow": false,
+	"sub": false,
+	"supernew": false,
+	"validthis": false,
+
+
+
+
+	"nomen": false,
+	"onevar": false,
+	"white": false,
+
+
+
+
+
+	"browser": true,
+	"devel": true,
+	"node": false,
+	"nonstandard": false,
+	"globals": {
+		"angular": false,
+
+		"describe": false,
+		"beforeEach": false,
+		"it": false,
+		"expect": false,
+		"module": false,
+		"inject": false,
+
+		"browser": false,
+		"element": false
+	}
+}

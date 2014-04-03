@@ -1,0 +1,70 @@
+/**
+*
+* utils
+*
+**/
+
+// VARS
+$medium: 480px;
+$large: 960px;
+
+$fontDefault: 'Helvetica Neue', Helvetica, sans-serif;
+
+$colorRed: #971b24;
+$colorHighlight: $colorRed;
+
+$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+
+// MIXINS
+@mixin prefixr($property, $value...){
+  -webkit-#{$property}: $value;
+     -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+          #{$property}: $value;
+}
+
+@mixin media-query($media-query) {
+  @if $media-query == mobile {
+    @media only screen and (max-width:$medium - 1) { @content; }
+  }
+
+  @if $media-query == medium {
+    @media only screen and (min-width:$medium) { @content; }
+  }
+
+  @if $media-query == large {
+    @media only screen and (min-width:$large) { @content; }
+  }
+}
+
+@mixin keyframes($animation-name){
+  @-webkit-keyframes $animation-name{
+    @content;
+  }
+
+  @-moz-keyframes $animation-name{
+    @content;
+  }
+
+  @-ms-keyframes $animation-name{
+    @content;
+  }
+
+  @keyframes $animation-name{
+    @content;
+  }
+}
+
+@mixin container() {
+	padding-left: 5%;
+	padding-right: 5%;
+	max-width: $large;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media-query(large) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

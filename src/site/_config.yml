@@ -1,10 +1,12 @@
 safe: false
 port: 8081
-source: .
-destination: ../appengine/build/static
+source: site
+destination: appengine/build/static
 markdown: kramdown
-permalink: /news/:year/:month/:day/:title.html
+permalink: /articles/:title.html
 pygments: false
 custom:
 kramdown:
   toc_levels: "2,3,4"
+include: ['_vendors', '_scripts', '.htaccess']
+exclude: ['config.rb']
