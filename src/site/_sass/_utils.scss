@@ -4,67 +4,83 @@
 *
 **/
 
-// VARS
-$medium: 480px;
-$large: 960px;
+/*==========  VARIABLES  ==========*/
 
-$fontDefault: 'Helvetica Neue', Helvetica, sans-serif;
+  // Defining breakpoints
+  $medium: 480px;
+  $large: 960px;
 
-$colorRed: #971b24;
-$colorHighlight: $colorRed;
+  // Defining colors
+  $colorRed: #971b24;
+  $colorHighlight: $colorRed;
 
-$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  // Defining font family
+  $fontDefault: "Open Sans", Helvetica, sans-serif;
+  $fontHighlight: Roboto, Helvetica, sans-serif;
+
+  // Defining font sizes
+  $fontSmall: 13px;
+  $fontBase: 16px;
+  $fontMedium: 20px;
+  $fontLarge: 26px;
+  $fontXLarge: 42px;
+  $fontXXLarge: 68px;
+  $fontHuge: 110px;
+
+  // Defining animation easings
+  $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 
-// MIXINS
-@mixin prefixr($property, $value...){
-  -webkit-#{$property}: $value;
-     -moz-#{$property}: $value;
-      -ms-#{$property}: $value;
-          #{$property}: $value;
-}
+/*==========  MIXINS  ==========*/
 
-@mixin media-query($media-query) {
-  @if $media-query == mobile {
-    @media only screen and (max-width:$medium - 1) { @content; }
+  @mixin prefixr($property, $value...){
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+            #{$property}: $value;
   }
 
-  @if $media-query == medium {
-    @media only screen and (min-width:$medium) { @content; }
+  @mixin media-query($media-query) {
+    @if $media-query == mobile {
+      @media only screen and (max-width:$medium - 1) { @content; }
+    }
+
+    @if $media-query == medium {
+      @media only screen and (min-width:$medium) { @content; }
+    }
+
+    @if $media-query == large {
+      @media only screen and (min-width:$large) { @content; }
+    }
   }
 
-  @if $media-query == large {
-    @media only screen and (min-width:$large) { @content; }
+  @mixin keyframes($animation-name){
+    @-webkit-keyframes $animation-name{
+      @content;
+    }
+
+    @-moz-keyframes $animation-name{
+      @content;
+    }
+
+    @-ms-keyframes $animation-name{
+      @content;
+    }
+
+    @keyframes $animation-name{
+      @content;
+    }
   }
-}
 
-@mixin keyframes($animation-name){
-  @-webkit-keyframes $animation-name{
-    @content;
+  @mixin container() {
+  	padding-left: 5%;
+  	padding-right: 5%;
+  	max-width: $large;
+  	margin-left: auto;
+  	margin-right: auto;
+
+  	@include media-query(large) {
+  		padding-left: 0;
+  		padding-right: 0;
+  	}
   }
-
-  @-moz-keyframes $animation-name{
-    @content;
-  }
-
-  @-ms-keyframes $animation-name{
-    @content;
-  }
-
-  @keyframes $animation-name{
-    @content;
-  }
-}
-
-@mixin container() {
-	padding-left: 5%;
-	padding-right: 5%;
-	max-width: $large;
-	margin-left: auto;
-	margin-right: auto;
-
-	@include media-query(large) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
