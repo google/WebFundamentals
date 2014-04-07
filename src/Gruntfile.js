@@ -160,7 +160,7 @@ module.exports = function(grunt) {
 			source: [
 				'Gruntfile.js',
 				'<%= config.source %>/**/*.js',
-				'!<%= config.source %>/vendors/**/*.js'
+				'!<%= config.source %>/_vendors/**/*.js'
 			]
 		},
 
@@ -258,7 +258,7 @@ module.exports = function(grunt) {
 	});
 
 	// Build task
-	grunt.registerTask('build', 'Runs the "test" tastk, then builds the website.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
+	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
 
 		var uncompressed = grunt.option('uncompressed');
 
