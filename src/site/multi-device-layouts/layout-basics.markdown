@@ -52,7 +52,7 @@ collection: multi-device-layouts
 <div class="takeaways">
   <h2>Key Takeaways</h2>
   <ul>
-    <li>Always add a meta viewport tag in the head of every document including width=device-width and initial-scale=1</li>
+    <li>Always add a meta viewport tag in the head of every document including `width=device-width` and `initial-scale=1`</li>
     <li>Ensure your page is accessible by not disabling user scaling.</li>
   </ul>
 </div>
@@ -89,8 +89,8 @@ allows the page to take advantage of the full landscape width.
 
 ## Ensure an accessible viewport
 
-In addition to setting an initial-scale, you can also set the minimum-scale, 
-maximum-scale and user-scalable attributes on the viewport.  When set, these can 
+In addition to setting an `initial-scale`, you can also set the `minimum-scale`, 
+`maximum-scale` and `user-scalable` attributes on the viewport.  When set, these can 
 disable the user's ability to zoom the viewport, potentially causing 
 accessibility issues.
 
@@ -267,7 +267,7 @@ words, a breakpoint should be considered.  Of course, 10 words is subjective and
 can vary depending on language, font and font size ranging anywhere from 22em to 
 as much as 40em.
 
-<img src="imgs/laybas-tmp1.png" />
+<img src="imgs/laybas-tmp1.png" style="width:400px" />
 
 Let's take a deeper look at the above blog post example.  On smaller screens, 
 the Roboto font at 1em works perfectly giving 10 words per line, but larger 
