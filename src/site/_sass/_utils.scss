@@ -1,6 +1,12 @@
 /**
 *
-* utils
+* Utils
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
 *
 **/
 
@@ -27,13 +33,23 @@
   $fontXXLarge: 68px;
   $fontHuge: 110px;
 
+  $fontLeading: 26px;
+
   // Defining animation easings
   $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 
+/*==========  FUNCTIONS  ==========*/
+
+
+  @function leading($size, $context: $fontLeading) {
+    @return  $context / $size + em;
+  }
+
+
 /*==========  MIXINS  ==========*/
 
-  @mixin prefixr($property, $value...){
+  @mixin prefixr($property, $value...) {
     -webkit-#{$property}: $value;
        -moz-#{$property}: $value;
         -ms-#{$property}: $value;

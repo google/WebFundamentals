@@ -1,0 +1,47 @@
+/**
+*
+* Main Navigation
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.small {
+  font-size: $fontSmall;
+  line-height: leading($fontSmall);
+}
+
+.base {
+  font-size: $fontBase;
+  line-height: leading($fontBase);
+}
+
+.medium {
+  font-size: $fontMedium;
+  line-height: leading($fontMedium);
+}
+
+.large {
+  font-size: $fontLarge;
+  line-height: leading($fontLarge);
+}
+
+.xlarge {
+  font-size: $fontXLarge;
+  line-height: leading($fontXLarge);
+}
+
+.xxlarge {
+  font-size: $fontXXLarge;
+  line-height: leading($fontXXLarge);
+}
+
+.huge {
+  font-size: $fontHuge;
+  // line-height: leading($fontHuge);
+  // @include lineHeight($fontHuge, 960);
+}
