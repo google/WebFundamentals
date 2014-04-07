@@ -308,6 +308,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
 
 		return grunt.task.run([
+			'test',
 			'build',
 			'open:index',
 			'connect:destination:keepalive'
