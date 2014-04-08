@@ -32,11 +32,6 @@ body {
   @include gridBaseline();
 }
 
-.main-header {
-  display: none;
-}
-
-
 .half {
   @include medium {
     float: left;
