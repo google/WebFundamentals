@@ -7,10 +7,10 @@
         {{ section.title }}
       </a>
       {% if section.section %}
-      <ul class="main-nav__child-list">
+      <ul class="main-nav__list main-nav__list--child">
         {% for subsection in section.section %}
-        <li class="main-nav__child-item">
-          <a class="main-nav__child-link" href="{{ subsection.path }}">{{ subsection.title }}</a>
+        <li class="main-nav__item main-nav__item--child">
+          <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
         </li>
         {% endfor %}
       </ul>

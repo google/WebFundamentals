@@ -34,7 +34,7 @@
   $fontXXLarge: 68px;
   $fontHuge: 110px;
 
-  $fontLeading: 26px;
+  $lineHeight: 26px;
 
   // Defining animation easings
   $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -50,7 +50,7 @@
 
 /*==========  FUNCTIONS  ==========*/
 
-  @function leading($size, $context: $fontLeading) {
+  @function leading($size, $context: $lineHeight) {
     @return  $context / $size + em;
   }
 

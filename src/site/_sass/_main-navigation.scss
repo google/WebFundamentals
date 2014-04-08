@@ -31,6 +31,9 @@
   background: transparent;
   color: $white;
   outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   @include media-query(large) {
     background: $darkBlue;
@@ -38,26 +41,38 @@
 
 }
 
-.main-nav__list,
-.main-nav__child-list {
+.main-nav__list {
   margin: 0;
-  padding: 5px;
+  padding: 0;
+
+  @include large {
+    margin-top: $lineHeight;
+    margin-left: $lineHeight;
+  }
 }
 
-.main-nav__item,
-.main-nav__child-item {
+.main-nav__item {
   list-style: none;
   text-align: center;
-  margin: 10px;
+  @include type--base;
+  margin-top: 0;
 
   @include media-query(large) {
     text-align: left;
   }
-
 }
 
-.main-nav__link,
-.main-nav__child-link {
+.main-nav__link {
   text-decoration: none;
   color: $white;
+}
+
+
+.main-nav__list--child {
+  margin-top: 0;
+}
+
+.main-nav__item--child {
+  @include type--small;
+  margin-top: 0;
 }
