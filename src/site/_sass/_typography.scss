@@ -9,3 +9,45 @@
 * @author Antoine Grelard
 *
 **/
+
+.small {
+  font-size: $fontSmall;
+  // line-height: leading($fontSmall);
+  line-height: 2.0000em; /* 26px */
+}
+
+.base {
+  font-size: $fontBase;
+  // line-height: leading($fontBase);
+  line-height: 1.6250em; /* 26px */
+}
+
+.medium {
+  font-size: $fontMedium;
+  // line-height: leading($fontMedium);
+  line-height: 1.3000em; /* 26px */
+}
+
+.large {
+  font-size: $fontLarge;
+  // line-height: leading($fontLarge);
+  line-height: 1.0000em; /* 26px */
+}
+
+.xlarge {
+  font-size: $fontXLarge;
+  // line-height: leading($fontXLarge);
+  line-height: 1.2381em; /* 52px */
+}
+
+.xxlarge {
+  font-size: $fontXXLarge;
+  // line-height: leading($fontXXLarge);
+  line-height: 1.1471em; /* 78px */
+}
+
+.huge {
+  font-size: $fontHuge;
+  // line-height: leading($fontHuge);
+  line-height: 1.1818em; /* 130px */
+}

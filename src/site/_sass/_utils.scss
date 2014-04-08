@@ -41,7 +41,6 @@
 
 /*==========  FUNCTIONS  ==========*/
 
-
   @function leading($size, $context: $fontLeading) {
     @return  $context / $size + em;
   }
