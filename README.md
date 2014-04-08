@@ -38,5 +38,9 @@ To parse the _book.yaml include `{% injectdata content _book.yaml %}` in the pag
 Jekyll Special elements
 -----------------------
 
-{{ articles _category_}} a list of articles in divs, ordered by the "order" preamble.
-{{ showcases _category_}} a list of showcases
+Code import:
+
+    {% highlight html %} {% include sample1.js %} {% endhighlight %}
+
+`{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
+`{{ showcases _category_}}` a list of showcases
