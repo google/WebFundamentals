@@ -10,7 +10,7 @@
 *
 **/
 
-nav {
+.main-nav {
 	background: $blue;
 
 	@include media-query(large) {
@@ -23,7 +23,7 @@ nav {
 
 }
 
-nav button {
+.main-nav__toggler {
 	-webkit-appearance: none;
 	border: none;
 	width: 30px;
@@ -38,12 +38,14 @@ nav button {
 
 }
 
-.navigation {
+.main-nav__list,
+.main-nav__child-list {
 	margin: 0;
 	padding: 5px;
 }
 
-.navigation li {
+.main-nav__item,
+.main-nav__child-item {
 	list-style: none;
 	text-align: center;
 	margin: 10px;
@@ -54,7 +56,8 @@ nav button {
 
 }
 
-.navigation li a {
+.main-nav__link,
+.main-nav__child-link {
 	text-decoration: none;
 	color: $white;
 }

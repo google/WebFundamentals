@@ -1,15 +1,17 @@
-<nav>
-	<button>X</button>
-	<ul class="navigation">
+<nav class="main-nav">
+	<button class="main-nav__toggler">X</button>
+	<ul class="main-nav__list">
 	{% for section in page.content.toc %}
-	 <li>
-	    <a {% if section.section %}href="#"{% else %}href="{{ section.path }}{% endif %}" title="{{ section.title }}">
+	 <li class="main-nav__item">
+	    <a class="main-nav__link" {% if section.section %}href="#"{% else %}href="{{ section.path }}{% endif %}" title="{{ section.title }}">
 	      {{ section.title }}
 	    </a>
 	    {% if section.section %}
-	    <ul>
+	    <ul class="main-nav__child-list">
 	      {% for subsection in section.section %}
-	      <li><a href="{{ subsection.path }}">{{ subsection.title }}</a></li>
+	      <li class="main-nav__child-item">
+	      	<a class="main-nav__child-link" href="{{ subsection.path }}">{{ subsection.title }}</a>
+	      </li>
 	      {% endfor %}
 	    </ul>
 	    {% endif %}
