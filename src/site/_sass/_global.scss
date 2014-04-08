@@ -26,13 +26,9 @@ body {
   line-height: 1.6250em; /* 26px */
   // line-height: leading($fontBase);
 
-
+	@include media-query(large) {
+		margin-left: $sidebarWidth;
+	}
 
   @include gridBaseline();
-}
-
-
-
-.main-header {
-  display: none;
 }

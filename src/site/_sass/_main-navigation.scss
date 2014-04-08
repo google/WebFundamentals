@@ -9,3 +9,52 @@
 * @author Antoine Grelard
 *
 **/
+
+nav {
+	background: $blue;
+
+	@include media-query(large) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: $sidebarWidth;
+		height: 100%;
+	}
+
+}
+
+nav button {
+	-webkit-appearance: none;
+	border: none;
+	width: 30px;
+	height: 30px;
+	background: transparent;
+	color: $white;
+	outline: none;
+
+	@include media-query(large) {
+		background: $darkBlue;
+	}
+
+}
+
+.navigation {
+	margin: 0;
+	padding: 5px;
+}
+
+.navigation li {
+	list-style: none;
+	text-align: center;
+	margin: 10px;
+
+	@include media-query(large) {
+		text-align: left;
+	}
+
+}
+
+.navigation li a {
+	text-decoration: none;
+	color: $white;
+}
