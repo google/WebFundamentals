@@ -10,44 +10,57 @@
 *
 **/
 
-.small {
+.small,
+small {
   font-size: $fontSmall;
-  // line-height: leading($fontSmall);
   line-height: 2.0000em; /* 26px */
+  margin-top: 2.0000em;
+  margin-bottom: 0.0000em;
 }
 
-.base {
+.base,
+p {
   font-size: $fontBase;
-  // line-height: leading($fontBase);
   line-height: 1.6250em; /* 26px */
+  margin-top: 1.6250em;
+  margin-bottom: 0.0000em;
 }
 
-.medium {
+.medium,
+h4 {
   font-size: $fontMedium;
-  // line-height: leading($fontMedium);
   line-height: 1.3000em; /* 26px */
+  margin-top: 1.3000em;
+  margin-bottom: 0.0000em;
 }
 
-.large {
+.large,
+h3 {
   font-size: $fontLarge;
-  // line-height: leading($fontLarge);
   line-height: 1.0000em; /* 26px */
+  margin-top: 1.0000em;
+  margin-bottom: 0.0000em;
 }
 
-.xlarge {
+.xlarge,
+h2 {
   font-size: $fontXLarge;
-  // line-height: leading($fontXLarge);
   line-height: 1.2381em; /* 52px */
+  margin-top: 0.6190em;
+  margin-bottom: 0.0000em;
 }
 
-.xxlarge {
+.xxlarge,
+h1 {
   font-size: $fontXXLarge;
-  // line-height: leading($fontXXLarge);
   line-height: 1.1471em; /* 78px */
+  margin-top: 0.3824em;
+  margin-bottom: 0.0000em;
 }
 
 .huge {
   font-size: $fontHuge;
-  // line-height: leading($fontHuge);
-  line-height: 1.1818em; /* 130px */
+  line-height: 1.19em; /* 130px */
+  margin-top: 0.2364em;
+  margin-bottom: 0.0000em;
 }

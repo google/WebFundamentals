@@ -26,5 +26,13 @@ body {
   line-height: 1.6250em; /* 26px */
   // line-height: leading($fontBase);
 
+
+
+  @include gridBaseline();
 }
 
+
+
+.main-header {
+  display: none;
+}
