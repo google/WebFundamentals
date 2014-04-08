@@ -1,0 +1,74 @@
+/**
+*
+* Grid
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+
+$desktopColWidth: 22.2%;
+$desktopGutterWidth: 3.7%;
+
+.clear {
+  overflow: hidden;
+  margin-bottom: $lineHeight;
+}
+
+.col {
+  width: $desktopColWidth;
+  margin-right: $desktopGutterWidth;
+  float: left;
+  background: rgba(blue, .4);
+  height: $lineHeight*4;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.col-2 {
+  width: ($desktopColWidth*2) + $desktopGutterWidth;
+}
+
+.col-3 {
+  width: ($desktopColWidth*3) + ($desktopGutterWidth*2);
+}
+
+.col-4 {
+ width: ($desktopColWidth*4)  + ($desktopGutterWidth*3);
+ margin-right: 0;
+}
+
+// Flush....
+.flush-1 {
+  margin-left: $desktopColWidth + $desktopGutterWidth;
+}
+
+.flush-2 {
+  margin-left: ($desktopColWidth*2) + ($desktopGutterWidth*2);
+}
+
+.flush-3 {
+  margin-left: ($desktopColWidth*3) + ($desktopGutterWidth*3);
+}
+
+
+.article-video {
+  @include medium {
+    // @include grid(1, 2);
+  }
+
+  @include large {
+    // @include grid(2, 4);
+  }
+}
+
+
+
+
+

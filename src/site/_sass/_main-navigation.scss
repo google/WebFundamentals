@@ -13,7 +13,7 @@
 .main-nav {
   background: $blue;
 
-  @include media-query(large) {
+  @include large {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@
   top: 0;
   left: 0;
 
-  @include media-query(large) {
+  @include large {
     background: $darkBlue;
   }
 
@@ -57,7 +57,7 @@
   @include type--base;
   margin-top: 0;
 
-  @include media-query(large) {
+  @include large {
     text-align: left;
   }
 }

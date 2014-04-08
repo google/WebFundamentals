@@ -16,6 +16,7 @@
   $medium: 620px;
   $large: 800px;
   $huge: 1600px;
+  $desktopContainer: 864px;
 
   // Defining colors
   $colorRed: #971b24;
@@ -45,7 +46,7 @@
   $white: #fff;
 
 	// Defining sidebar stuff
-	$sidebarWidth: 320px;
+	$sidebarWidth: 280px;
 
 
 /*==========  FUNCTIONS  ==========*/
@@ -108,16 +109,9 @@
   }
 
   @mixin container() {
-  	padding-left: 5%;
-  	padding-right: 5%;
-  	max-width: $large;
-  	margin-left: auto;
-  	margin-right: auto;
-
-  	@include media-query(large) {
-  		padding-left: 0;
-  		padding-right: 0;
-  	}
+  	margin-left: 5.7%;
+    margin-right: 5.7%;
+  	max-width: $desktopContainer;
   }
 
   // Mixin to show a baseline grid
