@@ -11,53 +11,53 @@
 **/
 
 .main-nav {
-	background: $blue;
+  background: $blue;
 
-	@include media-query(large) {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: $sidebarWidth;
-		height: 100%;
-	}
+  @include media-query(large) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $sidebarWidth;
+    height: 100%;
+  }
 
 }
 
 .main-nav__toggler {
-	-webkit-appearance: none;
-	border: none;
-	width: 30px;
-	height: 30px;
-	background: transparent;
-	color: $white;
-	outline: none;
+  -webkit-appearance: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  color: $white;
+  outline: none;
 
-	@include media-query(large) {
-		background: $darkBlue;
-	}
+  @include media-query(large) {
+    background: $darkBlue;
+  }
 
 }
 
 .main-nav__list,
 .main-nav__child-list {
-	margin: 0;
-	padding: 5px;
+  margin: 0;
+  padding: 5px;
 }
 
 .main-nav__item,
 .main-nav__child-item {
-	list-style: none;
-	text-align: center;
-	margin: 10px;
+  list-style: none;
+  text-align: center;
+  margin: 10px;
 
-	@include media-query(large) {
-		text-align: left;
-	}
+  @include media-query(large) {
+    text-align: left;
+  }
 
 }
 
 .main-nav__link,
 .main-nav__child-link {
-	text-decoration: none;
-	color: $white;
+  text-decoration: none;
+  color: $white;
 }

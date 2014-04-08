@@ -13,8 +13,9 @@
 /*==========  VARIABLES  ==========*/
 
   // Defining breakpoints
-  $medium: 480px;
-  $large: 960px;
+  $medium: 620px;
+  $large: 800px;
+  $huge: 1600px;
 
   // Defining colors
   $colorRed: #971b24;
@@ -64,7 +65,7 @@
   }
 
   @mixin media-query($media-query) {
-    @if $media-query == mobile {
+    @if $media-query == small {
       @media only screen and (max-width:$medium - 1) { @content; }
     }
 
@@ -75,7 +76,18 @@
     @if $media-query == large {
       @media only screen and (min-width:$large) { @content; }
     }
+
+    @if $media-query == huge {
+      @media only screen and (min-width:$huge) { @content; }
+    }
   }
+
+  // Just some helpers...
+  @mixin small { @include media-query(small) { @content }; }
+  @mixin medium { @include media-query(medium) { @content }; }
+  @mixin large { @include media-query(large) { @content }; }
+  @mixin huge { @include media-query(huge) { @content }; }
+
 
   @mixin keyframes($animation-name){
     @-webkit-keyframes $animation-name{
@@ -108,7 +120,11 @@
   	}
   }
 
+  // Mixin to show a baseline grid
+  // only visible when body has 'debug' class
   @mixin gridBaseline() {
+    position: relative;
+
     &:after {
       content: "";
       background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
