@@ -20,7 +20,10 @@ $largeGutterWidth: 3.7%;
 
 
 @mixin rule--col($mediaQuery) {
-  background: rgba(blue, .4);
+  .demo & {
+    background: rgba(blue, .4);
+  }
+
   min-height: $lineHeight*4;
 
   margin-bottom: $lineHeight;
