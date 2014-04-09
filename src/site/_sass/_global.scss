@@ -1,6 +1,12 @@
 /**
 *
-* global
+* Global
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
 *
 **/
 
@@ -14,3 +20,15 @@ html, body {
   font-smoothing: antialiased;
 }
 
+body {
+  font-family: $fontDefault;
+  font-size: $fontBase;
+  line-height: 1.6250em; /* 26px */
+  font-weight: 300; // to thicken it a bit, we need to remove font-smoothing
+
+  @include medium {
+    margin-left: $sidebarWidth;
+  }
+
+  @include gridBaseline();
+}

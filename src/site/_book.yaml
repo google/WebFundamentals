@@ -1,4 +1,6 @@
 toc:
+- title: "Styleguide"
+  path: /styleguide/
 - title: "Create Your First Multi-screen Site"
   path: /getting-started/
 - title: "Multi-device layouts"

@@ -1,0 +1,1098 @@
+/**
+*
+* Main Stylesheet
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
+/**
+*
+* Utils
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/*==========  VARIABLES  ==========*/
+/*==========  FUNCTIONS  ==========*/
+/*==========  MIXINS  ==========*/
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, ../_sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, ../_sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 43, ../_sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, ../_sass/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, ../_sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, ../_sass/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, ../_sass/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, ../_sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, ../_sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, ../_sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, ../_sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 133, ../_sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 144, ../_sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 151, ../_sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 155, ../_sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 166, ../_sass/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 174, ../_sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 185, ../_sass/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 193, ../_sass/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 203, ../_sass/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 214, ../_sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 238, ../_sass/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 248, ../_sass/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 260, ../_sass/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 275, ../_sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 285, ../_sass/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 294, ../_sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 304, ../_sass/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 317, ../_sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 329, ../_sass/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 339, ../_sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 353, ../_sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 362, ../_sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 371, ../_sass/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 380, ../_sass/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 391, ../_sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 397, ../_sass/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/**
+*
+* Typography
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 142, ../_sass/_typography.scss */
+.small,
+small {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  margin-top: 2.0000em;
+  margin-bottom: 0;
+}
+
+/* line 147, ../_sass/_typography.scss */
+.base,
+p {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  margin-top: 1.6250em;
+  margin-bottom: 0;
+}
+
+/* line 152, ../_sass/_typography.scss */
+.medium,
+h4 {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  margin-top: 1.6250em;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 960px) {
+  /* line 152, ../_sass/_typography.scss */
+  .medium,
+  h4 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    margin-top: 1.3000em;
+    margin-bottom: 0;
+  }
+}
+
+/* line 157, ../_sass/_typography.scss */
+.large,
+h3 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  margin-top: 1.3000em;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 960px) {
+  /* line 157, ../_sass/_typography.scss */
+  .large,
+  h3 {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    margin-top: 1.0000em;
+    margin-bottom: 0;
+  }
+}
+
+/* line 161, ../_sass/_typography.scss */
+.xlarge,
+h2 {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.0000em;
+  /* 26px */
+  margin-top: 1.0000em;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 960px) {
+  /* line 161, ../_sass/_typography.scss */
+  .xlarge,
+  h2 {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2381em;
+    /* 52px */
+    margin-top: 0.6190em;
+    margin-bottom: 0;
+  }
+}
+
+/* line 166, ../_sass/_typography.scss */
+.xxlarge,
+h1 {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.2381em;
+  /* 52px */
+  margin-top: 0.6190em;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 960px) {
+  /* line 166, ../_sass/_typography.scss */
+  .xxlarge,
+  h1 {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1.1471em;
+    /* 78px */
+    margin-top: 0.3824em;
+    margin-bottom: 0;
+  }
+}
+
+/* line 170, ../_sass/_typography.scss */
+.huge {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 68px;
+  font-weight: 300;
+  line-height: 1.1471em;
+  /* 78px */
+  margin-top: 0.3824em;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 960px) {
+  /* line 170, ../_sass/_typography.scss */
+  .huge {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1.19em;
+    /* 130px */
+    margin-top: 0.2364em;
+    margin-bottom: 0;
+  }
+}
+
+/**
+*
+* Global
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_global.scss */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 18, ../_sass/_global.scss */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/* line 23, ../_sass/_global.scss */
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  font-weight: 300;
+  position: relative;
+}
+@media only screen and (min-width: 620px) {
+  /* line 23, ../_sass/_global.scss */
+  body {
+    margin-left: 280px;
+  }
+}
+/* line 130, ../_sass/_utils.scss */
+body:after {
+  content: "";
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%);
+  -webkit-background-size: 100% 26px;
+  -moz-background-size: 100% 26px;
+  -ms-background-size: 100% 26px;
+  background-size: 100% 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  display: none;
+}
+/* line 151, ../_sass/_utils.scss */
+body.debug:after {
+  display: block;
+}
+
+/**
+*
+* Grid
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 22, ../_sass/_grid.scss */
+.demo {
+  margin-bottom: 52px;
+}
+
+/* line 46, ../_sass/_grid.scss */
+.demo [class*="g-"] {
+  background-color: #eee;
+  min-height: 26px;
+  background: #eee;
+  position: relative;
+  margin-bottom: 26px;
+}
+/* line 54, ../_sass/_grid.scss */
+.demo [class*="g-"]:before, .demo [class*="g-"]:after {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  margin-top: 2.0000em;
+  margin-bottom: 0;
+  display: block;
+  margin: 0 10px;
+}
+/* line 60, ../_sass/_grid.scss */
+.demo [class*="g-"]:before {
+  content: "HTML classes: ";
+  font-weight: 700;
+}
+/* line 65, ../_sass/_grid.scss */
+.demo [class*="g-"]:after {
+  content: attr(class);
+  word-spacing: 15px;
+}
+
+@media only screen and (min-width: 620px) {
+  /* line 75, ../_sass/_grid.scss */
+  .g-m--1 {
+    float: left;
+    width: 30.3%;
+    margin-right: 4.5%;
+    width: 30.3%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--1 {
+    min-height: 130px;
+  }
+
+  /* line 82, ../_sass/_grid.scss */
+  .g-m--push-1 {
+    margin-left: 34.8%;
+  }
+
+  /* line 75, ../_sass/_grid.scss */
+  .g-m--2 {
+    float: left;
+    width: 30.3%;
+    margin-right: 4.5%;
+    width: 65.1%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--2 {
+    min-height: 130px;
+  }
+
+  /* line 82, ../_sass/_grid.scss */
+  .g-m--push-2 {
+    margin-left: 69.6%;
+  }
+
+  /* line 75, ../_sass/_grid.scss */
+  .g-m--3 {
+    float: left;
+    width: 30.3%;
+    margin-right: 4.5%;
+    width: 99.9%;
+    margin-right: 0;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--3 {
+    min-height: 130px;
+  }
+
+  /* line 88, ../_sass/_grid.scss */
+  .g-m--full {
+    float: left;
+    width: 30.3%;
+    margin-right: 4.5%;
+    margin-right: 0;
+    width: 100%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--full {
+    min-height: 130px;
+  }
+
+  /* line 94, ../_sass/_grid.scss */
+  .g--third {
+    float: left;
+    width: 30.3%;
+    margin-right: 4.5%;
+    width: 30.3%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--third {
+    min-height: 130px;
+  }
+
+  /* line 100, ../_sass/_grid.scss */
+  .g--half,
+  .g-m--half {
+    float: left;
+    width: 30.3%;
+    margin-right: 4.5%;
+    width: 47.75%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--half, .demo
+  .g-m--half {
+    min-height: 130px;
+  }
+
+  /* line 105, ../_sass/_grid.scss */
+  .g-m--last {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--1 {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    width: 22.2%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--1 {
+    min-height: 130px;
+  }
+
+  /* line 119, ../_sass/_grid.scss */
+  .g-w--push-1 {
+    margin-left: 25.9%;
+  }
+
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--2 {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    width: 48.1%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--2 {
+    min-height: 130px;
+  }
+
+  /* line 119, ../_sass/_grid.scss */
+  .g-w--push-2 {
+    margin-left: 51.8%;
+  }
+
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--3 {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    width: 74%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--3 {
+    min-height: 130px;
+  }
+
+  /* line 119, ../_sass/_grid.scss */
+  .g-w--push-3 {
+    margin-left: 77.7%;
+  }
+
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--4 {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    width: 99.9%;
+    margin-right: 0;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--4 {
+    min-height: 130px;
+  }
+
+  /* line 125, ../_sass/_grid.scss */
+  .g-m--last {
+    margin-right: 3.7%;
+  }
+
+  /* line 126, ../_sass/_grid.scss */
+  .g-w--last {
+    margin-right: 0;
+  }
+
+  /* line 128, ../_sass/_grid.scss */
+  .g-w--full {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    margin-right: 0;
+    width: 100%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--full {
+    min-height: 130px;
+  }
+
+  /* line 134, ../_sass/_grid.scss */
+  .g--third {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    width: 30.8%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--third {
+    min-height: 130px;
+  }
+
+  /* line 140, ../_sass/_grid.scss */
+  .g--half,
+  .g-w--half {
+    float: left;
+    width: 22.2%;
+    margin-right: 3.7%;
+    width: 48.15%;
+  }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--half, .demo
+  .g-w--half {
+    min-height: 130px;
+  }
+}
+/* line 153, ../_sass/_grid.scss */
+.g--last {
+  margin-right: 0;
+}
+
+/**
+*
+* Main Navigation
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_main-navigation.scss */
+.main-nav {
+  background: #4f80f2;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_main-navigation.scss */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+  }
+}
+
+/* line 26, ../_sass/_main-navigation.scss */
+.main-nav__toggler {
+  -webkit-appearance: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  color: white;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 26, ../_sass/_main-navigation.scss */
+  .main-nav__toggler {
+    background: #4b67aa;
+  }
+}
+
+/* line 44, ../_sass/_main-navigation.scss */
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 44, ../_sass/_main-navigation.scss */
+  .main-nav__list {
+    margin-left: 26px;
+  }
+}
+
+/* line 54, ../_sass/_main-navigation.scss */
+.main-nav__item {
+  list-style: none;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  margin-top: 1.6250em;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 54, ../_sass/_main-navigation.scss */
+  .main-nav__item {
+    text-align: left;
+  }
+}
+/* line 65, ../_sass/_main-navigation.scss */
+.main-nav__item:first-child ~ .main-nav__item {
+  margin-top: 0;
+}
+
+/* line 70, ../_sass/_main-navigation.scss */
+.main-nav__link {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* line 77, ../_sass/_main-navigation.scss */
+.main-nav__list--child {
+  margin-top: 0;
+}
+
+/* line 81, ../_sass/_main-navigation.scss */
+.main-nav__item--child {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  margin-top: 2.0000em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/**
+*
+* Main Header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 14, ../_sass/_main-header.scss */
+.main-header__title,
+.main-header__slogan {
+  display: none;
+}
+
+/**
+*
+* Main Footer
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/**
+*
+* Helper
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+@media only screen and (min-width: 620px) {
+  /* line 14, ../_sass/_helper.scss */
+  .container {
+    margin-left: 4.8%;
+    margin-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 14, ../_sass/_helper.scss */
+  .container {
+    margin-left: 5.7%;
+    margin-right: 5.7%;
+    max-width: 864px;
+  }
+}
+
+/* line 19, ../_sass/_helper.scss */
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+
+/* line 23, ../_sass/_helper.scss */
+.clear:after {
+  clear: both;
+}
+
+/* line 29, ../_sass/_helper.scss */
+.debug * {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+/* line 30, ../_sass/_helper.scss */
+.debug * * {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+/* line 31, ../_sass/_helper.scss */
+.debug * * * {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+/* line 32, ../_sass/_helper.scss */
+.debug * * * * {
+  background-color: rgba(255, 0, 255, 0.2);
+}
+/* line 33, ../_sass/_helper.scss */
+.debug * * * * * {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+/* line 34, ../_sass/_helper.scss */
+.debug * * * * * * {
+  background-color: rgba(255, 255, 0, 0.2);
+}

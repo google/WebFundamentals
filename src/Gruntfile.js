@@ -36,11 +36,7 @@ module.exports = function(grunt) {
 			tidyup: {
 				files: [{
 					dot: true,
-					src: [
-						'<%= config.destination %>/_vendors',
-						'<%= config.destination %>/_scripts',
-						'<%= config.destination %>/css/styles.css'
-					]
+					src: []
 				}]
 			}
 		},
@@ -49,7 +45,7 @@ module.exports = function(grunt) {
 			options: {
 				sassDir: '<%= config.source %>/_sass',
 				imagesDir: '<%= config.source %>/imgs',
-				cssDir: '<%= config.destination %>/css',
+				cssDir: '<%= config.source %>/css',
 				force: true
 			},
 			uncompressed: {
@@ -96,6 +92,27 @@ module.exports = function(grunt) {
 					}
 				}
 			}
+		},
+
+		copy: {
+			optimisedjs: {
+				src: '*.min.js',
+				dest: '<%= config.source %>/js/',
+				flatten: true,
+				filter: 'isFile',
+				expand:true,
+				nonull: true,
+				cwd: '<%= config.destination %>/js/',
+			},
+			optimisedcss: {
+				src: '*.min.css',
+				dest: '<%= config.source %>/css/',
+				flatten: true,
+				filter: 'isFile',
+				expand:true,
+				nonull: true,
+				cwd: '<%= config.destination %>/css/',
+			},
 		},
 
 		csslint: {
@@ -160,7 +177,8 @@ module.exports = function(grunt) {
 			source: [
 				'Gruntfile.js',
 				'<%= config.source %>/**/*.js',
-				'!<%= config.source %>/vendors/**/*.js'
+				'!<%= config.source %>/**/vendors/**/*.js',
+				'!<%= config.source %>/**/*.min.js'
 			]
 		},
 
@@ -258,36 +276,38 @@ module.exports = function(grunt) {
 	});
 
 	// Build task
-	grunt.registerTask('build', 'Runs the "test" tastk, then builds the website.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
+	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
 
 		var uncompressed = grunt.option('uncompressed');
 
 		if(uncompressed) {
 			return grunt.task.run([
-				'test',
-				'clean:destination',
-				'jekyll:destination',
-				'compass:uncompressed',
-				'useminPrepare',
-				'concat',
-				'usemin',
-				// 'csslint:lax'
-				'clean:tidyup'
+				'test',						// Code quality control
+				'clean:destination',		// Clean out the destination directory
+				'compass:uncompressed',		// Build the CSS using Compass
+				'jekyll:destination',		// Build the site with Jekyll
+				'useminPrepare',			// Prepare for optimised asset substitution
+				'concat',					// Combine JS and CSS assets into single files
+				'usemin',					// Carry out optimised asset substitution
+				// 'clean:tidyup',			// Clean up any stray source files
+				'copy:optimisedjs',			// Copy the optimised JS back to the source directory
+				'copy:optimisedcss'			// Copy the optimised CSS back to the source directory
 			]);
 		} else {
 			return grunt.task.run([
-				'test',
-				'clean:destination',
-				'jekyll:destination',
-				'compass:compressed',
-				'useminPrepare',
-				'concat',
-				'cssmin',
-				'uglify',
-				'usemin',
-				'htmlmin:all',
-				// 'csslint:lax'
-				'clean:tidyup'
+				'test',						// Code quality control
+				'clean:destination',		// Clean out the destination directory
+				'compass:uncompressed',		// Build the CSS using Compass with compression
+				'jekyll:destination',		// Build the site with Jekyll
+				'useminPrepare',			// Prepare for optimised asset substitution
+				'concat',					// Combine JS and CSS assets into single files
+				'cssmin',					// Minify the combined CSS
+				'uglify',					// Minify the combined JS
+				'usemin',					// Carry out optimised asset substitution
+				// 'htmlmin:all',			// Minify the final HTML
+				// 'clean:tidyup',			// Clean up any stray source files
+				'copy:optimisedjs',			// Copy the optimised JS back to the source directory
+				'copy:optimisedcss'			// Copy the optimised CSS back to the source directory
 			]);
 		}
 
@@ -308,6 +328,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
 
 		return grunt.task.run([
+			'test',
 			'build',
 			'open:index',
 			'connect:destination:keepalive'
@@ -321,7 +342,6 @@ module.exports = function(grunt) {
 		return grunt.task.run([
 			'clean:destination',
 			'jekyll:destination',
-			'clean:tidyup',
 			'compass:uncompressed',
 			'open:index',
 			'connect:destination-source',

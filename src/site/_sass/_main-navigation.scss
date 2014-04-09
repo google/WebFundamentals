@@ -1,0 +1,84 @@
+/**
+*
+* Main Navigation
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.main-nav {
+  background: $colorBlue;
+
+  @include medium {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $sidebarWidth;
+    height: 100%;
+  }
+
+}
+
+.main-nav__toggler {
+  -webkit-appearance: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  color: $colorWhite;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include medium {
+    background: $colorDarkBlue;
+  }
+
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  @include medium {
+    margin-left: $lineHeight;
+  }
+}
+
+.main-nav__item {
+  list-style: none;
+  text-align: center;
+  display: block;
+  @include type--base;
+
+  @include medium {
+    text-align: left;
+  }
+
+  // Remove the margin-top apart from first-child
+  &:first-child ~ .main-nav__item {
+    margin-top: 0;
+  }
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: $colorWhite;
+  display: block;
+}
+
+
+.main-nav__list--child {
+  margin-top: 0;
+}
+
+.main-nav__item--child {
+  @include type--small;
+  margin-top: 0;
+}
