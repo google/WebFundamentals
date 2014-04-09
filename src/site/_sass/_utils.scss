@@ -14,9 +14,10 @@
 
   // Defining breakpoints
   $medium: 620px;
-  $large: 800px;
+  $large: 960px;
   $huge: 1600px;
-  $desktopContainer: 864px;
+  $mediumContainer: 688px;
+  $largeContainer: 864px;
 
   // Defining colors
   $colorRed: #971b24;
@@ -109,9 +110,18 @@
   }
 
   @mixin container() {
-  	margin-left: 5.7%;
-    margin-right: 5.7%;
-  	max-width: $desktopContainer;
+
+    @include medium {
+    	margin-left: 4.8%;
+      margin-right: 4.8%;
+      max-width: $mediumContainer;
+    }
+
+    @include large {
+      margin-left: 5.7%;
+      margin-right: 5.7%;
+    	max-width: $largeContainer;
+    }
   }
 
   // Mixin to show a baseline grid

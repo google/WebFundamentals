@@ -13,7 +13,7 @@
 .main-nav {
   background: $blue;
 
-  @include large {
+  @include medium {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@
   top: 0;
   left: 0;
 
-  @include large {
+  @include medium {
     background: $darkBlue;
   }
 
@@ -44,8 +44,9 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 
-  @include large {
+  @include medium {
     margin-left: $lineHeight;
   }
 }
@@ -56,7 +57,7 @@
   display: block;
   @include type--base;
 
-  @include large {
+  @include medium {
     text-align: left;
   }
 

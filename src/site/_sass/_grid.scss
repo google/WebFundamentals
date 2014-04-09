@@ -11,64 +11,62 @@
 **/
 
 $mediumColCount: 3;
-$mediumColWidth: 18%;
-$mediumGutterWidth: 2%;
+$mediumColWidth: 30.3%;
+$mediumGutterWidth: 4.5%;
 
 $largeColCount: 4;
 $largeColWidth: 22.2%;
 $largeGutterWidth: 3.7%;
 
 
-.clear {
-  overflow: hidden;
-  margin-bottom: $lineHeight;
-}
-
-.col {
-  width: $largeColWidth;
-  margin-right: $largeGutterWidth;
-  float: left;
+@mixin rule--col($mediaQuery) {
   background: rgba(blue, .4);
-  height: $lineHeight*4;
+  min-height: $lineHeight*4;
+
+  margin-bottom: $lineHeight;
+
+  @if $mediaQuery == medium {
+    float: left;
+    width: $mediumColWidth;
+    margin-right: $mediumGutterWidth;
+  }
+
+  @if $mediaQuery == large {
+    width: $largeColWidth;
+    margin-right: $largeGutterWidth;
+  }
+
 }
 
-.last {
-  margin-right: 0;
-}
 
-
-// Generating grid classes for medium view
-@for $i from 1 through $mediumColCount {
-  .medium-#{$i} {
-    width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
-    @if $i == $mediumColCount { margin-right: 0; }
+@include medium {
+  // Generating grid classes for medium view
+  @for $i from 1 through $mediumColCount {
+    .medium-#{$i} {
+      @include rule--col(medium);
+      width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
+      @if $i == $mediumColCount { margin-right: 0; }
+    }
+  }
+  .medium-last {
+    margin-right: 0;
   }
 }
 
 
-// Generating grid classes for large view
-@for $i from 1 through $largeColCount {
-  .large-#{$i} {
-    width: ($largeColWidth*$i) + ($largeGutterWidth*($i + -1));
-    @if $i == $largeColCount { margin-right: 0; }
+@include large {
+  // Generating grid classes for large view
+  @for $i from 1 through $largeColCount {
+    .large-#{$i} {
+      @include rule--col(large);
+      width: ($largeColWidth*$i) + ($largeGutterWidth*($i + -1));
+      @if $i == $largeColCount { margin-right: 0; }
+    }
+  }
+  .medium-last {
+    margin-right: $largeGutterWidth;
+  }
+  .large-last {
+    margin-right: 0;
   }
 }
-
-
-// Flush....
-.flush-1 {
-  margin-left: $largeColWidth + $largeGutterWidth;
-}
-
-.flush-2 {
-  margin-left: ($largeColWidth*2) + ($largeGutterWidth*2);
-}
-
-.flush-3 {
-  margin-left: ($largeColWidth*3) + ($largeGutterWidth*3);
-}
-
-
-
-
-

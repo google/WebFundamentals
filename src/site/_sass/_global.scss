@@ -26,7 +26,7 @@ body {
   line-height: 1.6250em; /* 26px */
   font-weight: 300; // to thicken it a bit, we need to remove font-smoothing
 
-  @include media-query(large) {
+  @include medium {
     margin-left: $sidebarWidth;
   }
 
