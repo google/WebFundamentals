@@ -83,7 +83,7 @@
 @mixin type--medium($isFromMixin: false) {
   @if $isFromMixin == false {
     @include type--base(true);
-    @include large {
+    @include wide {
       @include rule--medium;
     }
   }
@@ -95,7 +95,7 @@
 @mixin type--large($isFromMixin: false) {
   @if $isFromMixin == false {
     @include type--medium(true);
-    @include large {
+    @include wide {
       @include rule--large;
     }
   }
@@ -107,7 +107,7 @@
 @mixin type--xlarge($isFromMixin: false) {
   @if $isFromMixin == false {
     @include type--large(true);
-    @include large {
+    @include wide {
       @include rule--xlarge;
     }
   }
@@ -119,7 +119,7 @@
 @mixin type--xxlarge($isFromMixin: false) {
   @if $isFromMixin == false {
     @include type--xlarge(true);
-    @include large {
+    @include wide {
       @include rule--xxlarge;
     }
   }
@@ -131,7 +131,7 @@
 @mixin type--huge($isFromMixin: false) {
   @include type--xxlarge(true);
 
-  @include large {
+  @include wide {
     @include rule--huge;
   }
 }
