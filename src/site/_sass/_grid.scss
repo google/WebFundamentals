@@ -43,10 +43,7 @@ $wideGutterWidth: 3.7%;
 }
 
 .demo {
-  [class*="medium-"],
-  [class*="wide-"],
-  [class*="third"],
-  [class*="half"] {
+  [class*="g-"]{
     background-color: #eee;
     min-height: $lineHeight;
     background: #eee;
@@ -75,72 +72,72 @@ $wideGutterWidth: 3.7%;
 @include medium {
   // Generating grid classes for medium view
   @for $i from 1 through $mediumColCount {
-    .medium-#{$i} {
+    .g-m--#{$i} {
       @include rule--col(medium);
       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
       @if $i == $mediumColCount { margin-right: 0; }
     }
 
     @if $i < $mediumColCount {
-      .medium-push-#{$i} {
+      .g-m--push-#{$i} {
         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
       }
     }
   }
 
-  .medium-full {
+  .g-m--full {
     @include rule--col(medium);
     margin-right: 0;
     width: 100%;
   }
 
-  .third {
+  .g--third {
     @include rule--col(medium);
     width: $mediumColWidth;
   }
 
-  .half,
-  .medium-half {
+  .g--half,
+  .g-m--half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
 
-  .medium-last { margin-right: 0; }
+  .g-m--last { margin-right: 0; }
 }
 
 
 @include wide {
   // Generating grid classes for wide view
   @for $i from 1 through $wideColCount {
-    .wide-#{$i} {
+    .g-w--#{$i} {
       @include rule--col(wide);
       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
       @if $i == $wideColCount { margin-right: 0; }
     }
 
     @if $i < $wideColCount {
-      .wide-push-#{$i} {
+      .g-w--push-#{$i} {
         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
       }
     }
   }
 
-  .medium-last { margin-right: $wideGutterWidth; }
-  .wide-last { margin-right: 0; }
+  .g-m--last { margin-right: $wideGutterWidth; }
+  .g-w--last { margin-right: 0; }
 
-  .wide-full {
+  .g-w--full {
     @include rule--col(wide);
     margin-right: 0;
     width: 100%;
   }
 
-  .third {
+  .g--third {
     @include rule--col(wide);
     width: 30.8%;
   }
 
-  .half,
-  .wide-half {
+  .g--half,
+  .g-w--half {
     @include rule--col(wide);
     width: 50% - $wideGutterWidth/2;
   }
@@ -153,4 +150,4 @@ $wideGutterWidth: 3.7%;
 //  <div class="third"></div>
 //  <div class="third"></div>
 //  <div class="third last"></div>
-.last { margin-right: 0; }
+.g--last { margin-right: 0; }
