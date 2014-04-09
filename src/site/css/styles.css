@@ -656,229 +656,248 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
+/* line 22, ../_sass/_grid.scss */
+.demo {
+  margin-bottom: 52px;
+}
+
+/* line 46, ../_sass/_grid.scss */
+.demo [class*="g-"] {
+  background-color: #eee;
+  min-height: 26px;
+  background: #eee;
+  position: relative;
+  margin-bottom: 26px;
+}
+/* line 54, ../_sass/_grid.scss */
+.demo [class*="g-"]:before, .demo [class*="g-"]:after {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  margin-top: 2.0000em;
+  margin-bottom: 0;
+  display: block;
+  margin: 0 10px;
+}
+/* line 60, ../_sass/_grid.scss */
+.demo [class*="g-"]:before {
+  content: "HTML classes: ";
+  font-weight: 700;
+}
+/* line 65, ../_sass/_grid.scss */
+.demo [class*="g-"]:after {
+  content: attr(class);
+  word-spacing: 15px;
+}
+
 @media only screen and (min-width: 620px) {
-  /* line 44, ../_sass/_grid.scss */
-  .medium-1 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 75, ../_sass/_grid.scss */
+  .g-m--1 {
     float: left;
     width: 30.3%;
     margin-right: 4.5%;
     width: 30.3%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--1 {
+    min-height: 130px;
+  }
 
-  /* line 51, ../_sass/_grid.scss */
-  .medium-push-1 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
-    float: left;
-    width: 30.3%;
-    margin-right: 4.5%;
+  /* line 82, ../_sass/_grid.scss */
+  .g-m--push-1 {
     margin-left: 34.8%;
   }
 
-  /* line 44, ../_sass/_grid.scss */
-  .medium-2 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 75, ../_sass/_grid.scss */
+  .g-m--2 {
     float: left;
     width: 30.3%;
     margin-right: 4.5%;
     width: 65.1%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--2 {
+    min-height: 130px;
+  }
 
-  /* line 51, ../_sass/_grid.scss */
-  .medium-push-2 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
-    float: left;
-    width: 30.3%;
-    margin-right: 4.5%;
+  /* line 82, ../_sass/_grid.scss */
+  .g-m--push-2 {
     margin-left: 69.6%;
   }
 
-  /* line 44, ../_sass/_grid.scss */
-  .medium-3 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 75, ../_sass/_grid.scss */
+  .g-m--3 {
     float: left;
     width: 30.3%;
     margin-right: 4.5%;
     width: 99.9%;
     margin-right: 0;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--3 {
+    min-height: 130px;
+  }
 
-  /* line 58, ../_sass/_grid.scss */
-  .medium-full {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 88, ../_sass/_grid.scss */
+  .g-m--full {
     float: left;
     width: 30.3%;
     margin-right: 4.5%;
     margin-right: 0;
     width: 100%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-m--full {
+    min-height: 130px;
+  }
 
-  /* line 64, ../_sass/_grid.scss */
-  .third {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 94, ../_sass/_grid.scss */
+  .g--third {
     float: left;
     width: 30.3%;
     margin-right: 4.5%;
     width: 30.3%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--third {
+    min-height: 130px;
+  }
 
-  /* line 70, ../_sass/_grid.scss */
-  .half,
-  .medium-half {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 100, ../_sass/_grid.scss */
+  .g--half,
+  .g-m--half {
     float: left;
     width: 30.3%;
     margin-right: 4.5%;
     width: 47.75%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--half, .demo
+  .g-m--half {
+    min-height: 130px;
+  }
 
-  /* line 75, ../_sass/_grid.scss */
-  .medium-last {
+  /* line 105, ../_sass/_grid.scss */
+  .g-m--last {
     margin-right: 0;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 82, ../_sass/_grid.scss */
-  .large-1 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--1 {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     width: 22.2%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--1 {
+    min-height: 130px;
+  }
 
-  /* line 89, ../_sass/_grid.scss */
-  .large-push-1 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
-    float: left;
-    width: 22.2%;
-    margin-right: 3.7%;
+  /* line 119, ../_sass/_grid.scss */
+  .g-w--push-1 {
     margin-left: 25.9%;
   }
 
-  /* line 82, ../_sass/_grid.scss */
-  .large-2 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--2 {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     width: 48.1%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--2 {
+    min-height: 130px;
+  }
 
-  /* line 89, ../_sass/_grid.scss */
-  .large-push-2 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
-    float: left;
-    width: 22.2%;
-    margin-right: 3.7%;
+  /* line 119, ../_sass/_grid.scss */
+  .g-w--push-2 {
     margin-left: 51.8%;
   }
 
-  /* line 82, ../_sass/_grid.scss */
-  .large-3 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--3 {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     width: 74%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--3 {
+    min-height: 130px;
+  }
 
-  /* line 89, ../_sass/_grid.scss */
-  .large-push-3 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
-    float: left;
-    width: 22.2%;
-    margin-right: 3.7%;
+  /* line 119, ../_sass/_grid.scss */
+  .g-w--push-3 {
     margin-left: 77.7%;
   }
 
-  /* line 82, ../_sass/_grid.scss */
-  .large-4 {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 112, ../_sass/_grid.scss */
+  .g-w--4 {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     width: 99.9%;
     margin-right: 0;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--4 {
+    min-height: 130px;
+  }
 
-  /* line 96, ../_sass/_grid.scss */
-  .medium-last {
+  /* line 125, ../_sass/_grid.scss */
+  .g-m--last {
     margin-right: 3.7%;
   }
 
-  /* line 97, ../_sass/_grid.scss */
-  .large-last {
+  /* line 126, ../_sass/_grid.scss */
+  .g-w--last {
     margin-right: 0;
   }
 
-  /* line 99, ../_sass/_grid.scss */
-  .large-full {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 128, ../_sass/_grid.scss */
+  .g-w--full {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     margin-right: 0;
     width: 100%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g-w--full {
+    min-height: 130px;
+  }
 
-  /* line 105, ../_sass/_grid.scss */
-  .third {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 134, ../_sass/_grid.scss */
+  .g--third {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     width: 30.8%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--third {
+    min-height: 130px;
+  }
 
-  /* line 111, ../_sass/_grid.scss */
-  .half,
-  .large-half {
-    background: rgba(0, 0, 255, 0.4);
-    min-height: 104px;
-    margin-bottom: 26px;
+  /* line 140, ../_sass/_grid.scss */
+  .g--half,
+  .g-w--half {
     float: left;
     width: 22.2%;
     margin-right: 3.7%;
     width: 48.15%;
   }
+  /* line 39, ../_sass/_grid.scss */
+  .demo .g--half, .demo
+  .g-w--half {
+    min-height: 130px;
+  }
 }
-/* line 124, ../_sass/_grid.scss */
-.last {
+/* line 153, ../_sass/_grid.scss */
+.g--last {
   margin-right: 0;
 }
 
