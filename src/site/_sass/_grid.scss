@@ -14,10 +14,14 @@ $mediumColCount: 3;
 $mediumColWidth: 30.3%;
 $mediumGutterWidth: 4.5%;
 
-$largeColCount: 4;
-$largeColWidth: 22.2%;
-$largeGutterWidth: 3.7%;
+$wideColCount: 4;
+$wideColWidth: 22.2%;
+$wideGutterWidth: 3.7%;
 
+
+.demo {
+  margin-bottom: $lineHeight*2;
+}
 
 @mixin rule--col($mediaQuery) {
   .demo & {
@@ -34,13 +38,12 @@ $largeGutterWidth: 3.7%;
     margin-right: $mediumGutterWidth;
   }
 
-  @if $mediaQuery == large {
+  @if $mediaQuery == wide {
     float: left;
-    width: $largeColWidth;
-    margin-right: $largeGutterWidth;
+    width: $wideColWidth;
+    margin-right: $wideGutterWidth;
   }
 }
-
 
 @include medium {
   // Generating grid classes for medium view
@@ -50,43 +53,71 @@ $largeGutterWidth: 3.7%;
       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
       @if $i == $mediumColCount { margin-right: 0; }
     }
+
+    @if $i < $mediumColCount {
+      .medium-push-#{$i} {
+        @include rule--col(medium);
+        margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
+      }
+    }
   }
 
-  .medium-last { margin-right: 0; }
+  .medium-full {
+    @include rule--col(medium);
+    margin-right: 0;
+    width: 100%;
+  }
 
   .third {
     @include rule--col(medium);
     width: $mediumColWidth;
   }
 
-  .half {
+  .half,
+  .medium-half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
+
+  .medium-last { margin-right: 0; }
 }
 
 
-@include large {
-  // Generating grid classes for large view
-  @for $i from 1 through $largeColCount {
-    .large-#{$i} {
-      @include rule--col(large);
-      width: ($largeColWidth*$i) + ($largeGutterWidth*($i + -1));
-      @if $i == $largeColCount { margin-right: 0; }
+@include wide {
+  // Generating grid classes for wide view
+  @for $i from 1 through $wideColCount {
+    .wide-#{$i} {
+      @include rule--col(wide);
+      width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
+      @if $i == $wideColCount { margin-right: 0; }
+    }
+
+    @if $i < $wideColCount {
+      .wide-push-#{$i} {
+        @include rule--col(wide);
+        margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
+      }
     }
   }
 
-  .medium-last { margin-right: $largeGutterWidth; }
-  .large-last { margin-right: 0; }
+  .medium-last { margin-right: $wideGutterWidth; }
+  .wide-last { margin-right: 0; }
+
+  .wide-full {
+    @include rule--col(wide);
+    margin-right: 0;
+    width: 100%;
+  }
 
   .third {
-    @include rule--col(large);
+    @include rule--col(wide);
     width: 30.8%;
   }
 
-  .half {
-    @include rule--col(large);
-    width: 50% - $largeGutterWidth/2;
+  .half,
+  .wide-half {
+    @include rule--col(wide);
+    width: 50% - $wideGutterWidth/2;
   }
 }
 

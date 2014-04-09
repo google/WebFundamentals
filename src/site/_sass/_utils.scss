@@ -14,14 +14,17 @@
 
   // Defining breakpoints
   $medium: 620px;
-  $large: 960px;
+  $wide: 960px;
   $huge: 1600px;
   $mediumContainer: 688px;
-  $largeContainer: 864px;
+  $wideContainer: 864px;
 
   // Defining colors
   $colorRed: #971b24;
   $colorHighlight: $colorRed;
+  $colorBlue: #4f80f2;
+  $colorDarkBlue: #4b67aa;
+  $colorWhite: #fff;
 
   // Defining font family
   $fontDefault: "Open Sans", Helvetica, sans-serif;
@@ -40,11 +43,6 @@
 
   // Defining animation easings
   $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-
-  // Defining colors
-  $blue: #4f80f2;
-  $darkBlue: #4b67aa;
-  $white: #fff;
 
 	// Defining sidebar stuff
 	$sidebarWidth: 280px;
@@ -75,8 +73,8 @@
       @media only screen and (min-width:$medium) { @content; }
     }
 
-    @if $media-query == large {
-      @media only screen and (min-width:$large) { @content; }
+    @if $media-query == wide {
+      @media only screen and (min-width:$wide) { @content; }
     }
 
     @if $media-query == huge {
@@ -87,7 +85,7 @@
   // Just some helpers...
   @mixin small { @include media-query(small) { @content }; }
   @mixin medium { @include media-query(medium) { @content }; }
-  @mixin large { @include media-query(large) { @content }; }
+  @mixin wide { @include media-query(wide) { @content }; }
   @mixin huge { @include media-query(huge) { @content }; }
 
 
@@ -117,10 +115,10 @@
       max-width: $mediumContainer;
     }
 
-    @include large {
+    @include wide {
       margin-left: 5.7%;
       margin-right: 5.7%;
-    	max-width: $largeContainer;
+    	max-width: $wideContainer;
     }
   }
 
