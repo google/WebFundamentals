@@ -37,9 +37,20 @@ $wideGutterWidth: 3.7%;
   }
 
   .demo & {
+    min-height: $lineHeight*5;
+  }
+
+}
+
+.demo {
+  [class*="medium-"],
+  [class*="wide-"],
+  [class*="third"],
+  [class*="half"] {
+    background-color: #eee;
+    min-height: $lineHeight;
     background: #eee;
     position: relative;
-    min-height: $lineHeight*5;
     margin-bottom: $lineHeight;
 
     &:before,
@@ -59,7 +70,6 @@ $wideGutterWidth: 3.7%;
       word-spacing: 15px;
     }
   }
-
 }
 
 @include medium {
