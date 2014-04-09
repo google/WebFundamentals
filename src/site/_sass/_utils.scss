@@ -22,6 +22,9 @@
   // Defining colors
   $colorRed: #971b24;
   $colorHighlight: $colorRed;
+  $colorBlue: #4f80f2;
+  $colorDarkBlue: #4b67aa;
+  $colorWhite: #fff;
 
   // Defining font family
   $fontDefault: "Open Sans", Helvetica, sans-serif;
@@ -40,11 +43,6 @@
 
   // Defining animation easings
   $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-
-  // Defining colors
-  $blue: #4f80f2;
-  $darkBlue: #4b67aa;
-  $white: #fff;
 
 	// Defining sidebar stuff
 	$sidebarWidth: 280px;

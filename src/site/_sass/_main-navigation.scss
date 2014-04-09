@@ -11,7 +11,7 @@
 **/
 
 .main-nav {
-  background: $blue;
+  background: $colorBlue;
 
   @include medium {
     position: fixed;
@@ -29,14 +29,14 @@
   width: 30px;
   height: 30px;
   background: transparent;
-  color: $white;
+  color: $colorWhite;
   outline: none;
   position: absolute;
   top: 0;
   left: 0;
 
   @include medium {
-    background: $darkBlue;
+    background: $colorDarkBlue;
   }
 
 }
@@ -69,7 +69,7 @@
 
 .main-nav__link {
   text-decoration: none;
-  color: $white;
+  color: $colorWhite;
   display: block;
 }
 
