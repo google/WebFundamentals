@@ -30,5 +30,5 @@ body {
     margin-left: $sidebarWidth;
   }
 
-  @include gridBaseline();
+  @include baseline-grid();
 }
