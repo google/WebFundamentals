@@ -24,11 +24,8 @@ $wideGutterWidth: 3.7%;
 }
 
 @mixin rule--col($mediaQuery) {
-  .demo & {
-    background: rgba(blue, .4);
-  }
-
-  min-height: $lineHeight*4;
+  position: relative;
+  min-height: $lineHeight*5;
 
   margin-bottom: $lineHeight;
 
@@ -43,6 +40,28 @@ $wideGutterWidth: 3.7%;
     width: $wideColWidth;
     margin-right: $wideGutterWidth;
   }
+
+  .demo & {
+    background: rgba(blue, .4);
+
+    &:before,
+    &:after {
+      @include type--small;
+      display: block;
+      margin: 0 10px;
+    }
+
+    &:before {
+      content: "HTML classes: ";
+      font-weight: 700;
+    }
+
+    &:after {
+      content: attr(class);
+      word-spacing: 15px;
+    }
+  }
+
 }
 
 @include medium {
