@@ -24,11 +24,6 @@ $wideGutterWidth: 3.7%;
 }
 
 @mixin rule--col($mediaQuery) {
-  position: relative;
-  min-height: $lineHeight*5;
-
-  margin-bottom: $lineHeight;
-
   @if $mediaQuery == medium {
     float: left;
     width: $mediumColWidth;
@@ -42,7 +37,10 @@ $wideGutterWidth: 3.7%;
   }
 
   .demo & {
-    background: rgba(blue, .4);
+    background: #eee;
+    position: relative;
+    min-height: $lineHeight*5;
+    margin-bottom: $lineHeight;
 
     &:before,
     &:after {
