@@ -9,32 +9,6 @@ article:
 collection: user-input
 ---
 
-<style type="text/css">
-  div.takeaways {
-    color: #31708f;
-    background-color: #d9edf7;
-    border: 1px solid #bce8f1;
-    padding: 15px;
-    margin: 20px 25px 20px 25px;
-    border-radius: 4px;
-  }
-  div.takeaways h2 {
-    color: #31708f;
-    margin-top: 0;
-  }
-  div.takeaways ul {
-    margin: 0;
-  }
-
-  div.notes {
-    border: 1px solid #dddddd;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    padding: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-</style>
 
 Most of the samples will be based off 
 [https://petelepage.com/scratch/form-ac.html](https://petelepage.com/scratch/form-ac.html) 
