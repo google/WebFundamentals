@@ -109,8 +109,8 @@
     }
   }
 
+  // Mixin to constrain elements
   @mixin container() {
-
     @include medium {
     	margin-left: 4.8%;
       margin-right: 4.8%;

@@ -32,10 +32,10 @@ $largeGutterWidth: 3.7%;
   }
 
   @if $mediaQuery == large {
+    float: left;
     width: $largeColWidth;
     margin-right: $largeGutterWidth;
   }
-
 }
 
 
@@ -48,8 +48,17 @@ $largeGutterWidth: 3.7%;
       @if $i == $mediumColCount { margin-right: 0; }
     }
   }
-  .medium-last {
-    margin-right: 0;
+
+  .medium-last { margin-right: 0; }
+
+  .third {
+    @include rule--col(medium);
+    width: $mediumColWidth;
+  }
+
+  .half {
+    @include rule--col(medium);
+    width: 50% - $mediumGutterWidth/2;
   }
 }
 
@@ -63,10 +72,26 @@ $largeGutterWidth: 3.7%;
       @if $i == $largeColCount { margin-right: 0; }
     }
   }
-  .medium-last {
-    margin-right: $largeGutterWidth;
+
+  .medium-last { margin-right: $largeGutterWidth; }
+  .large-last { margin-right: 0; }
+
+  .third {
+    @include rule--col(large);
+    width: 30.8%;
   }
-  .large-last {
-    margin-right: 0;
+
+  .half {
+    @include rule--col(large);
+    width: 50% - $largeGutterWidth/2;
   }
 }
+
+
+// This is a global 'last' class
+// to be used with global grid classes, such as 'half' or 'third'
+// Example usage:
+//  <div class="third"></div>
+//  <div class="third"></div>
+//  <div class="third last"></div>
+.last { margin-right: 0; }
