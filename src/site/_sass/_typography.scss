@@ -28,6 +28,7 @@
 
 @mixin rule--medium {
   font-size: $fontMedium;
+  font-weight: 300;
   line-height: 1.3000em; /* 26px */
   margin-top: 1.3000em;
   margin-bottom: 0;
@@ -35,27 +36,34 @@
 
 @mixin rule--large {
   font-size: $fontLarge;
+  font-weight: 300;
   line-height: 1.0000em; /* 26px */
   margin-top: 1.0000em;
   margin-bottom: 0;
 }
 
 @mixin rule--xlarge {
+  font-family: $fontHighlight;
   font-size: $fontXLarge;
+  font-weight: 300;
   line-height: 1.2381em; /* 52px */
   margin-top: 0.6190em;
   margin-bottom: 0;
 }
 
 @mixin rule--xxlarge {
+  font-family: $fontHighlight;
   font-size: $fontXXLarge;
+  font-weight: 300;
   line-height: 1.1471em; /* 78px */
   margin-top: 0.3824em;
   margin-bottom: 0;
 }
 
 @mixin rule--huge {
+  font-family: $fontHighlight;
   font-size: $fontHuge;
+  font-weight: 300;
   line-height: 1.19em; /* 130px */
   margin-top: 0.2364em;
   margin-bottom: 0;

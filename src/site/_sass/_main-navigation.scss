@@ -64,10 +64,6 @@
   &:first-child ~ .main-nav__item {
     margin-top: 0;
   }
-
-  &:first-child {
-    @include type--huge;
-  }
 }
 
 .main-nav__link {

@@ -10,9 +10,14 @@
 *
 **/
 
+$mediumColCount: 3;
+$mediumColWidth: 18%;
+$mediumGutterWidth: 2%;
 
-$desktopColWidth: 22.2%;
-$desktopGutterWidth: 3.7%;
+$largeColCount: 4;
+$largeColWidth: 22.2%;
+$largeGutterWidth: 3.7%;
+
 
 .clear {
   overflow: hidden;
@@ -20,8 +25,8 @@ $desktopGutterWidth: 3.7%;
 }
 
 .col {
-  width: $desktopColWidth;
-  margin-right: $desktopGutterWidth;
+  width: $largeColWidth;
+  margin-right: $largeGutterWidth;
   float: left;
   background: rgba(blue, .4);
   height: $lineHeight*4;
@@ -31,41 +36,36 @@ $desktopGutterWidth: 3.7%;
   margin-right: 0;
 }
 
-.col-2 {
-  width: ($desktopColWidth*2) + $desktopGutterWidth;
+
+// Generating grid classes for medium view
+@for $i from 1 through $mediumColCount {
+  .medium-#{$i} {
+    width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
+    @if $i == $mediumColCount { margin-right: 0; }
+  }
 }
 
-.col-3 {
-  width: ($desktopColWidth*3) + ($desktopGutterWidth*2);
+
+// Generating grid classes for large view
+@for $i from 1 through $largeColCount {
+  .large-#{$i} {
+    width: ($largeColWidth*$i) + ($largeGutterWidth*($i + -1));
+    @if $i == $largeColCount { margin-right: 0; }
+  }
 }
 
-.col-4 {
- width: ($desktopColWidth*4)  + ($desktopGutterWidth*3);
- margin-right: 0;
-}
 
 // Flush....
 .flush-1 {
-  margin-left: $desktopColWidth + $desktopGutterWidth;
+  margin-left: $largeColWidth + $largeGutterWidth;
 }
 
 .flush-2 {
-  margin-left: ($desktopColWidth*2) + ($desktopGutterWidth*2);
+  margin-left: ($largeColWidth*2) + ($largeGutterWidth*2);
 }
 
 .flush-3 {
-  margin-left: ($desktopColWidth*3) + ($desktopGutterWidth*3);
-}
-
-
-.article-video {
-  @include medium {
-    // @include grid(1, 2);
-  }
-
-  @include large {
-    // @include grid(2, 4);
-  }
+  margin-left: ($largeColWidth*3) + ($largeGutterWidth*3);
 }
 
 
