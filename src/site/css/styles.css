@@ -1096,28 +1096,3 @@ body.debug .container:before, body.debug:after {
 .clear:after {
   clear: both;
 }
-
-/* line 29, ../_sass/_helper.scss */
-.debug * {
-  background-color: rgba(255, 0, 0, 0.2);
-}
-/* line 30, ../_sass/_helper.scss */
-.debug * * {
-  background-color: rgba(0, 255, 0, 0.2);
-}
-/* line 31, ../_sass/_helper.scss */
-.debug * * * {
-  background-color: rgba(0, 0, 255, 0.2);
-}
-/* line 32, ../_sass/_helper.scss */
-.debug * * * * {
-  background-color: rgba(255, 0, 255, 0.2);
-}
-/* line 33, ../_sass/_helper.scss */
-.debug * * * * * {
-  background-color: rgba(0, 255, 255, 0.2);
-}
-/* line 34, ../_sass/_helper.scss */
-.debug * * * * * * {
-  background-color: rgba(255, 255, 0, 0.2);
-}
