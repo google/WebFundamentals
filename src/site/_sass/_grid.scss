@@ -47,14 +47,13 @@ $largeGutterWidth: 3.7%;
       @if $i == $mediumColCount { margin-right: 0; }
     }
 
-    .medium-push-#{$i} {
-      @include rule--col(medium);
-      margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
+    @if $i < $mediumColCount {
+      .medium-push-#{$i} {
+        @include rule--col(medium);
+        margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
+      }
     }
-
   }
-
-  .medium-last { margin-right: 0; }
 
   .medium-full {
     @include rule--col(medium);
@@ -67,10 +66,13 @@ $largeGutterWidth: 3.7%;
     width: $mediumColWidth;
   }
 
-  .half {
+  .half,
+  .medium-half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
+
+  .medium-last { margin-right: 0; }
 }
 
 
@@ -83,9 +85,11 @@ $largeGutterWidth: 3.7%;
       @if $i == $largeColCount { margin-right: 0; }
     }
 
-    .large-push-#{$i} {
-      @include rule--col(large);
-      margin-left: ($largeColWidth*$i) + ($largeGutterWidth*$i);
+    @if $i < $largeColCount {
+      .large-push-#{$i} {
+        @include rule--col(large);
+        margin-left: ($largeColWidth*$i) + ($largeGutterWidth*$i);
+      }
     }
   }
 
@@ -103,7 +107,8 @@ $largeGutterWidth: 3.7%;
     width: 30.8%;
   }
 
-  .half {
+  .half,
+  .large-half {
     @include rule--col(large);
     width: 50% - $largeGutterWidth/2;
   }
