@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -9,7 +10,6 @@
 * @author Antoine Grelard
 *
 **/
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Utils
@@ -618,9 +618,38 @@ body {
     margin-left: 280px;
   }
 }
-/* line 130, ../_sass/_utils.scss */
-body:after {
+/* line 136, ../_sass/_utils.scss */
+body .container:before, body:after {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  display: none;
+}
+/* line 149, ../_sass/_utils.scss */
+body .container:before {
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
+  background-color: transparent;
+}
+@media only screen and (min-width: 620px) {
+  /* line 149, ../_sass/_utils.scss */
+  body .container:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArAAAAABCAYAAAAmTZ1PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNUY4MUYxMEI4MjgxMUUzOUU0REM0NzlCNUFDMEQ2OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNUY4MUYxMUI4MjgxMUUzOUU0REM0NzlCNUFDMEQ2OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM1RjgxRjBFQjgyODExRTM5RTREQzQ3OUI1QUMwRDY5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM1RjgxRjBGQjgyODExRTM5RTREQzQ3OUI1QUMwRDY5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+xp0UYwAAADBJREFUeNpi/M/A7MswCkbBKCAP/P+zeUDtZ2QZzb+jYBQM1fw7modHwSggGwAEGACJTgdRuG8txgAAAABJRU5ErkJggg==);
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 149, ../_sass/_utils.scss */
+  body .container:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2AAAAABCAYAAAC40s3GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NkQ4NTA3REI4MjUxMUUzOUU0REM0NzlCNUFDMEQ2OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NkQ4NTA3RUI4MjUxMUUzOUU0REM0NzlCNUFDMEQ2OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY2RDg1MDdCQjgyNTExRTM5RTREQzQ3OUI1QUMwRDY5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY2RDg1MDdDQjgyNTExRTM5RTREQzQ3OUI1QUMwRDY5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+v43RBwAAADJJREFUeNrs08ENACAIADGIrue0rmcCY/igXeBelxXrBExV737t5/Yf/vMf+A8GaQEGADxFClGP1H94AAAAAElFTkSuQmCC);
+  }
+}
+/* line 162, ../_sass/_utils.scss */
+body:after {
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
@@ -631,17 +660,9 @@ body:after {
   -moz-background-size: 100% 26px;
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 9;
-  display: none;
 }
-/* line 151, ../_sass/_utils.scss */
-body.debug:after {
+/* line 174, ../_sass/_utils.scss */
+body.debug .container:before, body.debug:after {
   display: block;
 }
 
@@ -1043,6 +1064,10 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
+/* line 14, ../_sass/_helper.scss */
+.container {
+  position: relative;
+}
 @media only screen and (min-width: 620px) {
   /* line 14, ../_sass/_helper.scss */
   .container {
