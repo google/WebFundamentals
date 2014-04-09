@@ -56,7 +56,6 @@ $wideGutterWidth: 3.7%;
 
     @if $i < $mediumColCount {
       .medium-push-#{$i} {
-        @include rule--col(medium);
         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
       }
     }
@@ -94,7 +93,6 @@ $wideGutterWidth: 3.7%;
 
     @if $i < $wideColCount {
       .wide-push-#{$i} {
-        @include rule--col(wide);
         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
       }
     }
