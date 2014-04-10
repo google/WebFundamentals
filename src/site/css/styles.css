@@ -610,16 +610,88 @@ body {
   line-height: 1.6250em;
   /* 26px */
   font-weight: 300;
-  background-image: -webkit-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 172px, transparent 32px), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-image: -moz-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 172px, transparent 32px), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-image: -o-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 172px, transparent 32px), -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-size: 204px 100%, 100% 26px;
-  background-position: 10px 0px;
+  position: relative;
 }
 @media only screen and (min-width: 620px) {
   /* line 23, ../_sass/_global.scss */
   body {
     margin-left: 280px;
+  }
+}
+/* line 143, ../_sass/_utils.scss */
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  display: none;
+}
+/* line 157, ../_sass/_utils.scss */
+body:after {
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%);
+  -webkit-background-size: 100% 26px;
+  -moz-background-size: 100% 26px;
+  -ms-background-size: 100% 26px;
+  background-size: 100% 26px;
+}
+/* line 168, ../_sass/_utils.scss */
+body.debug:after {
+  display: block;
+}
+
+/* line 36, ../_sass/_global.scss */
+.main-container {
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 36, ../_sass/_global.scss */
+  .main-container {
+    margin-left: 4.8%;
+    margin-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 36, ../_sass/_global.scss */
+  .main-container {
+    margin-left: 5.7%;
+    margin-right: 5.7%;
+    max-width: 864px;
+  }
+}
+
+/* line 41, ../_sass/_global.scss */
+.container {
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media only screen and (min-width: 620px) {
+  /* line 41, ../_sass/_global.scss */
+  .container {
+    margin-left: 4.8%;
+    margin-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 41, ../_sass/_global.scss */
+  .container {
+    margin-left: 5.7%;
+    margin-right: 5.7%;
+    max-width: 864px;
   }
 }
 
@@ -668,7 +740,7 @@ body {
   word-spacing: 15px;
 }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 620px) and (max-width: 959px) {
   /* line 75, ../_sass/_grid.scss */
   .g-medium--1 {
     float: left;
@@ -826,16 +898,11 @@ body {
   }
 
   /* line 125, ../_sass/_grid.scss */
-  .g-medium--last {
-    margin-right: 4.5%;
-  }
-
-  /* line 126, ../_sass/_grid.scss */
   .g-wide--last {
     margin-right: 0;
   }
 
-  /* line 128, ../_sass/_grid.scss */
+  /* line 127, ../_sass/_grid.scss */
   .g-wide--full {
     float: left;
     width: 22.2%;
@@ -848,7 +915,7 @@ body {
     min-height: 130px;
   }
 
-  /* line 134, ../_sass/_grid.scss */
+  /* line 133, ../_sass/_grid.scss */
   .g--third {
     float: left;
     width: 22.2%;
@@ -860,7 +927,7 @@ body {
     min-height: 130px;
   }
 
-  /* line 140, ../_sass/_grid.scss */
+  /* line 139, ../_sass/_grid.scss */
   .g--half,
   .g-wide--half {
     float: left;
@@ -874,35 +941,60 @@ body {
     min-height: 130px;
   }
 }
-/* line 153, ../_sass/_grid.scss */
+/* line 152, ../_sass/_grid.scss */
 .g--last {
   margin-right: 0;
 }
 
-/* line 156, ../_sass/_grid.scss */
+/* line 159, ../_sass/_grid.scss */
 .grid-overlay {
+  display: none;
+}
+/* line 164, ../_sass/_grid.scss */
+.debug .grid-overlay {
   position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: block;
 }
 @media only screen and (min-width: 620px) {
-  /* line 156, ../_sass/_grid.scss */
-  .grid-overlay {
+  /* line 164, ../_sass/_grid.scss */
+  .debug .grid-overlay {
     margin-left: 4.8%;
     margin-right: 4.8%;
     max-width: 688px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 156, ../_sass/_grid.scss */
-  .grid-overlay {
+  /* line 164, ../_sass/_grid.scss */
+  .debug .grid-overlay {
     margin-left: 5.7%;
     margin-right: 5.7%;
     max-width: 864px;
   }
 }
-/* line 159, ../_sass/_grid.scss */
-.grid-overlay [class*="g-"] {
-  height: 100px;
-  background-color: red;
+/* line 175, ../_sass/_grid.scss */
+.debug .grid-overlay [class*="g-"] {
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.15);
+}
+@media only screen and (min-width: 620px) and (max-width: 959px) {
+  /* line 181, ../_sass/_grid.scss */
+  .debug .grid-overlay .g-wide--last {
+    display: none;
+  }
+}
+@media only screen and (max-width: 619px) {
+  /* line 164, ../_sass/_grid.scss */
+  .debug .grid-overlay {
+    display: none;
+  }
 }
 
 /**
@@ -1048,34 +1140,13 @@ body {
 *
 **/
 /* line 14, ../_sass/_helper.scss */
-.container {
-  position: relative;
-}
-@media only screen and (min-width: 620px) {
-  /* line 14, ../_sass/_helper.scss */
-  .container {
-    margin-left: 4.8%;
-    margin-right: 4.8%;
-    max-width: 688px;
-  }
-}
-@media only screen and (min-width: 960px) {
-  /* line 14, ../_sass/_helper.scss */
-  .container {
-    margin-left: 5.7%;
-    margin-right: 5.7%;
-    max-width: 864px;
-  }
-}
-
-/* line 19, ../_sass/_helper.scss */
 .clear:before,
 .clear:after {
   content: "";
   display: table;
 }
 
-/* line 23, ../_sass/_helper.scss */
+/* line 18, ../_sass/_helper.scss */
 .clear:after {
   clear: both;
 }

@@ -32,3 +32,14 @@ body {
 
   @include baseline-grid();
 }
+
+.main-container {
+  @include container;
+  overflow: hidden;
+}
+
+.container {
+  @include container;
+}
+
+
