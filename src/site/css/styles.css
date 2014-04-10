@@ -1,3 +1,4 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -9,9 +10,6 @@
 * @author Antoine Grelard
 *
 **/
-
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
-
 /**
 *
 * Utils
