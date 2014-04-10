@@ -9,9 +9,7 @@
 * @author Antoine Grelard
 *
 **/
-
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
-
 /**
 *
 * Utils
@@ -612,17 +610,42 @@ body {
   line-height: 1.6250em;
   /* 26px */
   font-weight: 300;
-  background-image: -webkit-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 172px, transparent 32px), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-image: -moz-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 172px, transparent 32px), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-image: -o-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 172px, transparent 32px), -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-size: 204px 100%, 100% 26px;
-  background-position: 10px 0px;
+  position: relative;
 }
 @media only screen and (min-width: 620px) {
   /* line 23, ../_sass/_global.scss */
   body {
     margin-left: 280px;
   }
+}
+/* line 136, ../_sass/_utils.scss */
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  display: none;
+}
+/* line 150, ../_sass/_utils.scss */
+body:after {
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%);
+  -webkit-background-size: 100% 26px;
+  -moz-background-size: 100% 26px;
+  -ms-background-size: 100% 26px;
+  background-size: 100% 26px;
+}
+/* line 161, ../_sass/_utils.scss */
+body.debug:after {
+  display: block;
 }
 
 /**
