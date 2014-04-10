@@ -78,6 +78,10 @@
 
   @include wide {
     @include type--xxlarge;
+
+    .highlight--large & {
+      @include type--huge;
+    }
   }
 }
 
