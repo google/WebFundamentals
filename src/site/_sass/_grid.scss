@@ -43,7 +43,7 @@ $wideGutterWidth: 3.7%;
 }
 
 .demo {
-  [class*="g-"]{
+  [class*="g-"] {
     background-color: #eee;
     min-height: $lineHeight;
     background: #eee;
@@ -72,20 +72,20 @@ $wideGutterWidth: 3.7%;
 @include medium {
   // Generating grid classes for medium view
   @for $i from 1 through $mediumColCount {
-    .g-m--#{$i} {
+    .g-medium--#{$i} {
       @include rule--col(medium);
       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
       @if $i == $mediumColCount { margin-right: 0; }
     }
 
     @if $i < $mediumColCount {
-      .g-m--push-#{$i} {
+      .g-medium--push-#{$i} {
         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
       }
     }
   }
 
-  .g-m--full {
+  .g-medium--full {
     @include rule--col(medium);
     margin-right: 0;
     width: 100%;
@@ -97,35 +97,35 @@ $wideGutterWidth: 3.7%;
   }
 
   .g--half,
-  .g-m--half {
+  .g-medium--half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
 
-  .g-m--last { margin-right: 0; }
+  .g-medium--last { margin-right: 0; }
 }
 
 
 @include wide {
   // Generating grid classes for wide view
   @for $i from 1 through $wideColCount {
-    .g-w--#{$i} {
+    .g-wide--#{$i} {
       @include rule--col(wide);
       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
       @if $i == $wideColCount { margin-right: 0; }
     }
 
     @if $i < $wideColCount {
-      .g-w--push-#{$i} {
+      .g-wide--push-#{$i} {
         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
       }
     }
   }
 
-  .g-m--last { margin-right: $wideGutterWidth; }
-  .g-w--last { margin-right: 0; }
+  .g-medium--last { margin-right: $mediumGutterWidth; }
+  .g-wide--last { margin-right: 0; }
 
-  .g-w--full {
+  .g-wide--full {
     @include rule--col(wide);
     margin-right: 0;
     width: 100%;
@@ -137,7 +137,7 @@ $wideGutterWidth: 3.7%;
   }
 
   .g--half,
-  .g-w--half {
+  .g-wide--half {
     @include rule--col(wide);
     width: 50% - $wideGutterWidth/2;
   }
@@ -151,3 +151,13 @@ $wideGutterWidth: 3.7%;
 //  <div class="third"></div>
 //  <div class="third last"></div>
 .g--last { margin-right: 0; }
+
+
+.grid-overlay {
+  @include container;
+
+  [class*="g-"] {
+    height: 100px;
+    background-color: red;
+  }
+}
