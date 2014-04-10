@@ -1165,7 +1165,7 @@ body.debug:after {
   }
   /* line 54, ../_sass/_modules/_highlight.scss */
   .highlight--learning .highlight__container:before {
-    bottom: 20px;
+    bottom: 50px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
