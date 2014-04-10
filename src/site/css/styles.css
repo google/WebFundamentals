@@ -1,3 +1,4 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -9,7 +10,6 @@
 * @author Antoine Grelard
 *
 **/
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Utils
@@ -712,7 +712,7 @@ body.debug:after {
 **/
 /* line 22, ../_sass/_grid.scss */
 .demo {
-  margin-bottom: 52px;
+  margin-bottom: 26px;
 }
 
 /* line 46, ../_sass/_grid.scss */
@@ -754,7 +754,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-medium--1 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 82, ../_sass/_grid.scss */
@@ -776,7 +776,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-medium--2 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 82, ../_sass/_grid.scss */
@@ -799,7 +799,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-medium--3 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 91, ../_sass/_grid.scss */
@@ -812,7 +812,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-medium--full {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 97, ../_sass/_grid.scss */
@@ -824,7 +824,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g--third {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 103, ../_sass/_grid.scss */
@@ -838,7 +838,7 @@ body.debug:after {
   /* line 39, ../_sass/_grid.scss */
   .demo .g--half, .demo
   .g-medium--half {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 108, ../_sass/_grid.scss */
@@ -856,7 +856,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-wide--1 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 122, ../_sass/_grid.scss */
@@ -878,7 +878,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-wide--2 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 122, ../_sass/_grid.scss */
@@ -900,7 +900,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-wide--3 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 122, ../_sass/_grid.scss */
@@ -923,7 +923,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-wide--4 {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 131, ../_sass/_grid.scss */
@@ -941,7 +941,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g-wide--full {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 139, ../_sass/_grid.scss */
@@ -953,7 +953,7 @@ body.debug:after {
   }
   /* line 39, ../_sass/_grid.scss */
   .demo .g--third {
-    min-height: 130px;
+    min-height: 156px;
   }
 
   /* line 145, ../_sass/_grid.scss */
@@ -967,7 +967,7 @@ body.debug:after {
   /* line 39, ../_sass/_grid.scss */
   .demo .g--half, .demo
   .g-wide--half {
-    min-height: 130px;
+    min-height: 156px;
   }
 }
 /* line 158, ../_sass/_grid.scss */
