@@ -1,3 +1,4 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -9,7 +10,6 @@
 * @author Antoine Grelard
 *
 **/
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
 /**
 *
 * Utils
@@ -712,18 +712,17 @@ body.debug:after {
 **/
 /* line 22, ../_sass/_grid.scss */
 .demo {
-  margin-bottom: 52px;
-}
-
-/* line 46, ../_sass/_grid.scss */
-.demo [class*="g-"] {
-  background-color: #eee;
-  min-height: 26px;
-  background: #eee;
-  position: relative;
   margin-bottom: 26px;
 }
-/* line 54, ../_sass/_grid.scss */
+
+/* line 40, ../_sass/_grid.scss */
+.demo [class*="g-"] {
+  background-color: #eee;
+  position: relative;
+  margin-bottom: 26px;
+  min-height: 156px;
+}
+/* line 47, ../_sass/_grid.scss */
 .demo [class*="g-"]:before, .demo [class*="g-"]:after {
   font-size: 13px;
   line-height: 2.0000em;
@@ -733,253 +732,186 @@ body.debug:after {
   display: block;
   margin: 0 10px;
 }
-/* line 60, ../_sass/_grid.scss */
+/* line 53, ../_sass/_grid.scss */
 .demo [class*="g-"]:before {
   content: "HTML classes: ";
   font-weight: 700;
 }
-/* line 65, ../_sass/_grid.scss */
+/* line 58, ../_sass/_grid.scss */
 .demo [class*="g-"]:after {
   content: attr(class);
   word-spacing: 15px;
 }
 
 @media only screen and (min-width: 620px) and (max-width: 959px) {
-  /* line 75, ../_sass/_grid.scss */
+  /* line 68, ../_sass/_grid.scss */
   .g-medium--1 {
     float: left;
-    width: 30.3%;
     margin-right: 4.5%;
     width: 30.3%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-medium--1 {
-    min-height: 130px;
-  }
 
-  /* line 82, ../_sass/_grid.scss */
+  /* line 75, ../_sass/_grid.scss */
   .g-medium--push-1 {
     margin-left: 34.8%;
   }
 
-  /* line 85, ../_sass/_grid.scss */
+  /* line 78, ../_sass/_grid.scss */
   .g-medium--pull-1 {
     margin-right: 34.8%;
   }
 
-  /* line 75, ../_sass/_grid.scss */
+  /* line 68, ../_sass/_grid.scss */
   .g-medium--2 {
     float: left;
-    width: 30.3%;
     margin-right: 4.5%;
     width: 65.1%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-medium--2 {
-    min-height: 130px;
-  }
 
-  /* line 82, ../_sass/_grid.scss */
+  /* line 75, ../_sass/_grid.scss */
   .g-medium--push-2 {
     margin-left: 69.6%;
   }
 
-  /* line 85, ../_sass/_grid.scss */
+  /* line 78, ../_sass/_grid.scss */
   .g-medium--pull-2 {
     margin-right: 69.6%;
   }
 
-  /* line 75, ../_sass/_grid.scss */
+  /* line 68, ../_sass/_grid.scss */
   .g-medium--3 {
     float: left;
-    width: 30.3%;
     margin-right: 4.5%;
     width: 99.9%;
     margin-right: 0;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-medium--3 {
-    min-height: 130px;
-  }
 
-  /* line 91, ../_sass/_grid.scss */
+  /* line 84, ../_sass/_grid.scss */
   .g-medium--full {
     float: left;
-    width: 30.3%;
     margin-right: 4.5%;
     margin-right: 0;
     width: 100%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-medium--full {
-    min-height: 130px;
-  }
 
-  /* line 97, ../_sass/_grid.scss */
+  /* line 90, ../_sass/_grid.scss */
   .g--third {
     float: left;
-    width: 30.3%;
     margin-right: 4.5%;
     width: 30.3%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g--third {
-    min-height: 130px;
-  }
 
-  /* line 103, ../_sass/_grid.scss */
+  /* line 96, ../_sass/_grid.scss */
   .g--half,
   .g-medium--half {
     float: left;
-    width: 30.3%;
     margin-right: 4.5%;
     width: 47.75%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g--half, .demo
-  .g-medium--half {
-    min-height: 130px;
-  }
 
-  /* line 108, ../_sass/_grid.scss */
+  /* line 101, ../_sass/_grid.scss */
   .g-medium--last {
     margin-right: 0;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 115, ../_sass/_grid.scss */
+  /* line 108, ../_sass/_grid.scss */
   .g-wide--1 {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     width: 22.2%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-wide--1 {
-    min-height: 130px;
-  }
 
-  /* line 122, ../_sass/_grid.scss */
+  /* line 115, ../_sass/_grid.scss */
   .g-wide--push-1 {
     margin-left: 25.9%;
   }
 
-  /* line 125, ../_sass/_grid.scss */
+  /* line 118, ../_sass/_grid.scss */
   .g-wide--pull-1 {
     margin-right: 25.9%;
   }
 
-  /* line 115, ../_sass/_grid.scss */
+  /* line 108, ../_sass/_grid.scss */
   .g-wide--2 {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     width: 48.1%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-wide--2 {
-    min-height: 130px;
-  }
 
-  /* line 122, ../_sass/_grid.scss */
+  /* line 115, ../_sass/_grid.scss */
   .g-wide--push-2 {
     margin-left: 51.8%;
   }
 
-  /* line 125, ../_sass/_grid.scss */
+  /* line 118, ../_sass/_grid.scss */
   .g-wide--pull-2 {
     margin-right: 51.8%;
   }
 
-  /* line 115, ../_sass/_grid.scss */
+  /* line 108, ../_sass/_grid.scss */
   .g-wide--3 {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     width: 74%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-wide--3 {
-    min-height: 130px;
-  }
 
-  /* line 122, ../_sass/_grid.scss */
+  /* line 115, ../_sass/_grid.scss */
   .g-wide--push-3 {
     margin-left: 77.7%;
   }
 
-  /* line 125, ../_sass/_grid.scss */
+  /* line 118, ../_sass/_grid.scss */
   .g-wide--pull-3 {
     margin-right: 77.7%;
   }
 
-  /* line 115, ../_sass/_grid.scss */
+  /* line 108, ../_sass/_grid.scss */
   .g-wide--4 {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     width: 99.9%;
     margin-right: 0;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-wide--4 {
-    min-height: 130px;
-  }
 
-  /* line 131, ../_sass/_grid.scss */
+  /* line 124, ../_sass/_grid.scss */
   .g-wide--last {
     margin-right: 0;
   }
 
-  /* line 133, ../_sass/_grid.scss */
+  /* line 126, ../_sass/_grid.scss */
   .g-wide--full {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     margin-right: 0;
     width: 100%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g-wide--full {
-    min-height: 130px;
-  }
 
-  /* line 139, ../_sass/_grid.scss */
+  /* line 132, ../_sass/_grid.scss */
   .g--third {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     width: 30.8%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g--third {
-    min-height: 130px;
-  }
 
-  /* line 145, ../_sass/_grid.scss */
+  /* line 138, ../_sass/_grid.scss */
   .g--half,
   .g-wide--half {
     float: left;
-    width: 22.2%;
     margin-right: 3.7%;
     width: 48.15%;
   }
-  /* line 39, ../_sass/_grid.scss */
-  .demo .g--half, .demo
-  .g-wide--half {
-    min-height: 130px;
-  }
 }
-/* line 158, ../_sass/_grid.scss */
+/* line 151, ../_sass/_grid.scss */
 .g--last {
   margin-right: 0;
 }
 
-/* line 165, ../_sass/_grid.scss */
+/* line 158, ../_sass/_grid.scss */
 .grid-overlay {
   display: none;
 }
-/* line 170, ../_sass/_grid.scss */
+/* line 163, ../_sass/_grid.scss */
 .debug .grid-overlay {
   position: relative;
   margin-left: 5%;
@@ -993,7 +925,7 @@ body.debug:after {
   display: block;
 }
 @media only screen and (min-width: 620px) {
-  /* line 170, ../_sass/_grid.scss */
+  /* line 163, ../_sass/_grid.scss */
   .debug .grid-overlay {
     margin-left: 4.8%;
     margin-right: 4.8%;
@@ -1001,26 +933,26 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 170, ../_sass/_grid.scss */
+  /* line 163, ../_sass/_grid.scss */
   .debug .grid-overlay {
     margin-left: 5.7%;
     margin-right: 5.7%;
     max-width: 864px;
   }
 }
-/* line 181, ../_sass/_grid.scss */
+/* line 174, ../_sass/_grid.scss */
 .debug .grid-overlay [class*="g-"] {
   height: 100%;
   background-color: rgba(255, 0, 0, 0.15);
 }
 @media only screen and (min-width: 620px) and (max-width: 959px) {
-  /* line 187, ../_sass/_grid.scss */
+  /* line 180, ../_sass/_grid.scss */
   .debug .grid-overlay .g-wide--last {
     display: none;
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 170, ../_sass/_grid.scss */
+  /* line 163, ../_sass/_grid.scss */
   .debug .grid-overlay {
     display: none;
   }
@@ -1168,26 +1100,26 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
-/* line 53, ../_sass/_modules/_highlight.scss */
+/* line 59, ../_sass/_modules/_highlight.scss */
 .highlight {
   background-color: #e8e8e8;
   overflow: hidden;
   margin-top: 26px;
 }
 
-/* line 59, ../_sass/_modules/_highlight.scss */
+/* line 65, ../_sass/_modules/_highlight.scss */
 .highlight--learning {
   background-color: #94d8e8;
 }
 
-/* line 63, ../_sass/_modules/_highlight.scss */
+/* line 69, ../_sass/_modules/_highlight.scss */
 .highlight__container {
   position: relative;
   margin-left: 5%;
   margin-right: 5%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 63, ../_sass/_modules/_highlight.scss */
+  /* line 69, ../_sass/_modules/_highlight.scss */
   .highlight__container {
     margin-left: 4.8%;
     margin-right: 4.8%;
@@ -1195,7 +1127,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 63, ../_sass/_modules/_highlight.scss */
+  /* line 69, ../_sass/_modules/_highlight.scss */
   .highlight__container {
     margin-left: 5.7%;
     margin-right: 5.7%;
@@ -1203,7 +1135,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 63, ../_sass/_modules/_highlight.scss */
+  /* line 69, ../_sass/_modules/_highlight.scss */
   .highlight__container {
     position: relative;
   }
@@ -1231,6 +1163,10 @@ body.debug:after {
   .highlight--learning .highlight__container:before {
     content: "}";
   }
+  /* line 54, ../_sass/_modules/_highlight.scss */
+  .highlight--learning .highlight__container:before {
+    bottom: 20px;
+  }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
   /* line 17, ../_sass/_modules/_highlight.scss */
@@ -1241,7 +1177,7 @@ body.debug:after {
   }
 }
 
-/* line 75, ../_sass/_modules/_highlight.scss */
+/* line 82, ../_sass/_modules/_highlight.scss */
 .highlight__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1253,7 +1189,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 75, ../_sass/_modules/_highlight.scss */
+  /* line 82, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1265,7 +1201,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 75, ../_sass/_modules/_highlight.scss */
+  /* line 82, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1275,9 +1211,19 @@ body.debug:after {
     padding-top: 0.6190em;
     padding-bottom: 0;
   }
+  /* line 89, ../_sass/_modules/_highlight.scss */
+  .highlight--large .highlight__title {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1.1471em;
+    /* 78px */
+    padding-top: 0.3824em;
+    padding-bottom: 0;
+  }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 75, ../_sass/_modules/_highlight.scss */
+  /* line 82, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1288,13 +1234,25 @@ body.debug:after {
     padding-bottom: 0;
   }
 }
+@media only screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 89, ../_sass/_modules/_highlight.scss */
+  .highlight--large .highlight__title {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1.19em;
+    /* 130px */
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+}
 
-/* line 84, ../_sass/_modules/_highlight.scss */
+/* line 95, ../_sass/_modules/_highlight.scss */
 .highlight__text {
   padding-bottom: 78px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 84, ../_sass/_modules/_highlight.scss */
+  /* line 95, ../_sass/_modules/_highlight.scss */
   .highlight__text {
     padding-bottom: 52px;
   }

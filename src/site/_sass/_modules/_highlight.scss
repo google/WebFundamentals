@@ -11,7 +11,7 @@
 **/
 
 
-@mixin highlight-symbol($symbol, $topOffset: 0, $horizontalOffset: 0, $fontSize: 350px) {
+@mixin highlight-symbol($symbol, $verticalOffset: 0, $horizontalOffset: 0, $fontSize: 350px) {
   position: relative;
 
   &:before {
@@ -19,7 +19,7 @@
     display: block;
 
     position: absolute;
-    bottom: $topOffset;
+    bottom: $verticalOffset;
     right: $horizontalOffset;
 
     font-size: $fontSize;
@@ -50,6 +50,12 @@
   }
 }
 
+@mixin highlight-vertical-offset-override($offset) {
+  &:before {
+    bottom: $offset;
+  }
+}
+
 .highlight {
   background-color: $colorGray;
   overflow: hidden;
@@ -68,6 +74,7 @@
 
     .highlight--learning & {
       @include highlight-symbol-override("}");
+      @include highlight-vertical-offset-override(20px);
     }
   }
 }
@@ -78,6 +85,10 @@
 
   @include wide {
     @include type--xxlarge;
+
+    .highlight--large & {
+      @include type--huge;
+    }
   }
 }
 
