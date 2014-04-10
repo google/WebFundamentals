@@ -26,18 +26,12 @@ $wideGutterWidth: 3.7%;
 @mixin rule--col($mediaQuery) {
   @if $mediaQuery == medium {
     float: left;
-    width: $mediumColWidth;
     margin-right: $mediumGutterWidth;
   }
 
   @if $mediaQuery == wide {
     float: left;
-    width: $wideColWidth;
     margin-right: $wideGutterWidth;
-  }
-
-  .demo & {
-    min-height: $lineHeight*6;
   }
 
 }
@@ -45,10 +39,9 @@ $wideGutterWidth: 3.7%;
 .demo {
   [class*="g-"] {
     background-color: #eee;
-    min-height: $lineHeight;
-    background: #eee;
     position: relative;
     margin-bottom: $lineHeight;
+    min-height: $lineHeight*6;
 
     &:before,
     &:after {
