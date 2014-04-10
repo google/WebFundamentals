@@ -10,36 +10,41 @@
 *
 **/
 
+// Just normalizing text
+// Recommend using padding instead of margin
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
 
 // Mixins simply to store CSS rules
 @mixin rule--small {
   font-size: $fontSmall;
   line-height: 2.0000em; /* 26px */
-  margin-top: 2.0000em;
-  margin-bottom: 0;
+  padding-top: 2.0000em;
+  padding-bottom: 0;
 }
 
 @mixin rule--base {
   font-size: $fontBase;
   line-height: 1.6250em; /* 26px */
-  margin-top: 1.6250em;
-  margin-bottom: 0;
+  padding-top: 1.6250em;
+  padding-bottom: 0;
 }
 
 @mixin rule--medium {
   font-size: $fontMedium;
   font-weight: 300;
   line-height: 1.3000em; /* 26px */
-  margin-top: 1.3000em;
-  margin-bottom: 0;
+  padding-top: 1.3000em;
+  padding-bottom: 0;
 }
 
 @mixin rule--large {
   font-size: $fontLarge;
   font-weight: 300;
   line-height: 1.0000em; /* 26px */
-  margin-top: 1.0000em;
-  margin-bottom: 0;
+  padding-top: 1.0000em;
+  padding-bottom: 0;
 }
 
 @mixin rule--xlarge {
@@ -47,8 +52,8 @@
   font-size: $fontXLarge;
   font-weight: 300;
   line-height: 1.2381em; /* 52px */
-  margin-top: 0.6190em;
-  margin-bottom: 0;
+  padding-top: 0.6190em;
+  padding-bottom: 0;
 }
 
 @mixin rule--xxlarge {
@@ -56,8 +61,8 @@
   font-size: $fontXXLarge;
   font-weight: 300;
   line-height: 1.1471em; /* 78px */
-  margin-top: 0.3824em;
-  margin-bottom: 0;
+  padding-top: 0.3824em;
+  padding-bottom: 0;
 }
 
 @mixin rule--huge {
@@ -65,8 +70,8 @@
   font-size: $fontHuge;
   font-weight: 300;
   line-height: 1.19em; /* 130px */
-  margin-top: 0.2364em;
-  margin-bottom: 0;
+  padding-top: 0.2364em;
+  padding-bottom: 0;
 }
 
 
