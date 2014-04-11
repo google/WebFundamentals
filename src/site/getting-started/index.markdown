@@ -43,10 +43,6 @@ tools that you can use to help you along the way.
 * All pages must include a viewport and make sure it has the recommended 
   configuration.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 {% endclass %}
 
 Even for a basic page you must include a viewport meta tag.  The viewport is the 
@@ -71,10 +67,6 @@ your viewport.  The one we recommend is:
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 This works well across all mobile and tablet devices and orientations as it 
 tells the page to fit.....
 
@@ -85,11 +77,6 @@ tells the page to fit.....
 
 * Set up your environment to be able to easily test
 * Use Chrome Dev Tools
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 {% endclass %}
 
 Testing your page is one of the most important things you can do to ensure you 
@@ -125,11 +112,6 @@ If you have  real device even better, you can ... [todo]
   tables and videos) 
 * Start with the narrow viewport first (in many cases a mobile device) - often 
   this is called Mobile first development
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 {% endclass %}
 
 Especially for sites, we believe that the content is the most important aspect.  
@@ -172,11 +154,6 @@ sure our sites are accessible to all users.
 * Use placeholders to give an indication about the data to enter in the field
 * Use common names to help the user auto fill their forms
 * Use semantic types to help the user enter data quickly
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 {% endclass %}
 
 We are creating a product landing page so it makes sense to be able to let the 
@@ -228,7 +205,8 @@ Link to request AutoComplete
 <table>
 </table>
 
-{% endclass %}  
+{% endclass %}
+
 Sites without images can be a little boring.  There are two types of images:  
 Content images and background images.  Content images are images that are inline 
 in the document and are used to convey extra information about the content.  
@@ -259,11 +237,6 @@ so lets add some in.
 * Use the highest DPI possible for your source
 * Each source image should be made for 2x DPI and 1x DPI
 * Highly compress all your images
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 {% endclass %}
 
 Videos are often used to describe content in a more interactive manner and are 
@@ -284,12 +257,7 @@ Lets add a video to the site.
 * Always start with a narrow viewport first and scale out
 * Base your breakpoints off when you need to adapt the content
 * Create a high-level vision of your layout across major breakpoints
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
-{% class key-takeaway %}
+{% endclass %}
 
 Our page has all the content needed, but on different screen sizes it looks a 
 little bland as we have simply created a linear site for a narrow viewport. 
