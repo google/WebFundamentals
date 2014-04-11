@@ -34,15 +34,15 @@ two columns.
 
 # Set the viewport
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key Takeaways
-Always add a meta viewport tag in the head of every document including width=device-width and initial-scale=1
-Ensure your page is accessible by not disabling user scaling.
-<meta name=viewport content="width=device-width, initial-scale=1"></td>
-</tr>
-</table>
+{% class key-takeaway %}   
+Key Takeaways
+
+* Always add a meta viewport tag in the head of every document including 
+  `width=device-width` and `initial-scale=1`
+* Ensure your page is accessible by not disabling user scaling.
+* <meta name=viewport content="width=device-width, initial-scale=1">
+
+{% endclass %}
 
 In order to attempt to provide the best experience, mobile browsers will render 
 the page at a desktop screen width (usually about 960px), and then try to make 
@@ -72,12 +72,10 @@ mode, and zoom rather than reflow to fill the screen. Adding the attribute
 pixels and device independent pixels regardless of device orientation, and 
 allows the page to take advantage of the full landscape width.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Note: Use a comma to separate attributes to ensure older browsers can properly parse the attributes.</td>
-</tr>
-</table>
+{% class note %}   
+**Note:** Use a comma to separate attributes to ensure older browsers can 
+properly parse the attributes.  
+{% endclass %}
 
 ## Ensure an accessible viewport
 
@@ -88,15 +86,14 @@ accessibility issues.
 
 # Size content to the viewport
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key Takeaways
-Do not use large fixed width elements.
-Content should not rely on a particular viewport width to render well.
-Use CSS media queries to apply different styling for small and large screens.</td>
-</tr>
-</table>
+{% class key-takeaway %}   
+Key Takeaways
+
+* Do not use large fixed width elements.
+* Content should not rely on a particular viewport width to render well.
+* Use CSS media queries to apply different styling for small and large screens.
+
+{% endclass %} 
 
 On both desktop and mobile devices, users are used to scrolling websites 
 vertically but not horizontally, and forcing the user to scroll horizontally or 
@@ -125,15 +122,14 @@ viewport on small screens.
 
 # Use CSS Media Queries For Responsiveness 
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key Takeaways
-Media queries can be used to apply styles based on device characteristics.
-Use min-width over of min-device-width to ensure the broadest experience.
-Use relative sizes for elements to avoid breaking layout.</td>
-</tr>
-</table>
+{% class key-takeaway %}   
+Key Takeaways
+
+* Media queries can be used to apply styles based on device characteristics.
+* Use `min-width` over of `min-device-width` to ensure the broadest experience.
+* Use relative sizes for elements to avoid breaking layout.
+
+{% endclass %}
 
 Media queries are simple filters that can be applied to CSS styles that makes it 
 easy to change styles based on the characteristics of the device rendering the 
@@ -268,15 +264,16 @@ div.fullWidth {
 
 # How to choose breakpoints
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key Takeaways
-Create breakpoints based on content, never on specific devices, products or brands. 
-Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
-Keep lines of text to around 70 or 80 characters.</td>
-</tr>
-</table>
+{% class key-takeaway %}   
+Key Takeaways
+
+* Create breakpoints based on content, never on specific devices, products or 
+  brands. 
+* Design for the smallest mobile device first, then progressively enhance the 
+  experience as more screen real estate becomes available.
+* Keep lines of text to around 70 or 80 characters.
+
+{% endclass %} 
 
 There are many different screen sizes a user may be looking at our content on, 
 and the devices that they're using today won't necessarily be the same devices 
