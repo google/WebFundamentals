@@ -8,6 +8,8 @@ toc:
   section:
     - title: "Layout Basics"
       path: /multi-device-layouts/layout-basics.html
+    - title: "Basics Layouts"
+      path: /multi-device-layouts/basics-layouts.html
     - title: "Layout Patterns"
       path: /multi-device-layouts/layout-patterns.html
     - title: "Components"
