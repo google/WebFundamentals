@@ -11,9 +11,7 @@ collection: introductionToMedia
 
 The video element is a thing of simple beauty:
 
-    <video src='foo.webm'>
-        <p>This browser does not support the video element.</p>
-    </video>
+    {% include_code _code/basic.html simple %}
 
 Load, decode and play video in a few lines of code! 
 
@@ -56,11 +54,7 @@ and use the source element rather than a single _src_. On mobile, users have
 even less patience than on desktop, so make sure media content works right first 
 time:
 
-    <video>
-       <source src="video/chrome.mp4" />
-       <source src="video/chrome.webm" />
-       <p>This browser does not support the video element.</p>
-    </video>
+    {% include_code _code/basic.html sources %}
 
 From the list of sources available, a browser will select the first available 
 format it can play. Using MP4 and WebM will cover  recent versions of all 
@@ -93,11 +87,7 @@ Making use of the source element's _type_ attribute can improve performance even
 further, by enabling the browser to select a media source without having to 
 download and 'sniff' it:
 
-    <video>
-      <source src="video/chrome.mp4" **type="video/mp4"** />
-      <source src="video/chrome.webm" **type="video/webm"** />
-      <p>This browser does not support the video element.</p>
-    </video>
+    {% include_code _code/basic.html sourcetype %}
 
 (To see this in action, use your mobile browser dev tools to compare network 
 activity for [simpl.info/video](http://simpl.info/video) and 
@@ -142,9 +132,7 @@ _[canPlayType()](https://simpl.info/canplaytype/)_.
 We can specify what part of a video we want to play simply by adding a 
 'fragment' to the URL:
 
-    <video src='foo.webm#t=5,10'>
-      <p>This browser does not support the video element.</p>
-    </video>
+    {% include_code _code/basic.html fragment %}
 
 This is called the Media Fragments API – there's an example at 
 [simpl.info/mf](http://simpl.info/mf) – and is well supported on mobile and 
@@ -176,12 +164,7 @@ element](http://www.html5rocks.com/en/tutorials/track/basics/), which now has
 [wide support](http://caniuse.com/track). It's very easy. You simply add a track 
 element as a child of the audio or video element, like this:
 
-    <video>
-      <source src="video/chrome.mp4" type="video/mp4;" />
-      <source src="video/chrome.webm" type="video/webm" />
-      **<track src="tracks/chrome-subtitles-en.vtt" />**
-      <p>This browser does not support the video element.</p>
-    </video>
+    {% include_code _code/basic.html accessibility %}
 
 The track file consists of timed 'cues' in WebVTT format:
 
