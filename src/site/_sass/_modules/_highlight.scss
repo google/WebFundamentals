@@ -56,6 +56,7 @@
   }
 }
 
+
 .highlight {
   background-color: $colorGray;
   overflow: hidden;
@@ -68,13 +69,15 @@
 
 .highlight__container {
   @include container;
+  padding-bottom: $lineHeight * 3;
 
   @include medium {
+    padding-bottom: $lineHeight * 2;
     @include highlight-symbol("!");
 
     .highlight--learning & {
       @include highlight-symbol-override("}");
-      @include highlight-vertical-offset-override(50px);
+      @include highlight-vertical-offset-override($lineHeight*2);
     }
   }
 }
@@ -92,10 +95,6 @@
   }
 }
 
-.highlight__text {
-  padding-bottom: $lineHeight * 3;
-
-  @include medium {
-    padding-bottom: $lineHeight * 2;
-  }
+.highlight__list {
+  padding-left: 0;
 }
