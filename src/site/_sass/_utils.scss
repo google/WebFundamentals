@@ -117,20 +117,23 @@
 
   // Mixin to constrain elements
   @mixin container() {
+    @include prefixr(box-sizing, content-box);
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
 
 
     @include medium {
-      margin-left: 4.8%;
-      margin-right: 4.8%;
+      padding-left: 4.8%;
+      padding-right: 4.8%;
       max-width: $mediumContainer;
     }
 
     @include wide {
-      margin-left: 5.7%;
-      margin-right: 5.7%;
+      padding-left: 0;
+      padding-right: 0;
     	max-width: $wideContainer;
     }
   }

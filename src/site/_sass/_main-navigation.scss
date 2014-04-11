@@ -10,17 +10,12 @@
 *
 **/
 
+.main-nav__list--child {
+  display: none;
+}
+
 .main-nav {
   background: $colorBlue;
-
-  @include medium {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: $sidebarWidth;
-    height: 100%;
-  }
-
 }
 
 .main-nav__toggler {
@@ -54,7 +49,8 @@
 .main-nav__item {
   list-style: none;
   text-align: center;
-  display: block;
+  display: inline-block;
+  margin-bottom: $lineHeight;
   @include type--base;
 
   @include medium {

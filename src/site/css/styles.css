@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?Roboto+Condensed:400,300");
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -599,16 +599,18 @@ h1 {
 /* line 13, ../_sass/_global.scss */
 * {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 18, ../_sass/_global.scss */
+/* line 17, ../_sass/_global.scss */
 html, body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
 
-/* line 23, ../_sass/_global.scss */
+/* line 22, ../_sass/_global.scss */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -617,13 +619,7 @@ body {
   font-weight: 300;
   position: relative;
 }
-@media only screen and (min-width: 620px) {
-  /* line 23, ../_sass/_global.scss */
-  body {
-    margin-left: 280px;
-  }
-}
-/* line 145, ../_sass/_utils.scss */
+/* line 148, ../_sass/_utils.scss */
 body:after {
   content: "";
   position: absolute;
@@ -635,7 +631,7 @@ body:after {
   z-index: 9;
   display: none;
 }
-/* line 159, ../_sass/_utils.scss */
+/* line 162, ../_sass/_utils.scss */
 body:after {
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
@@ -648,53 +644,65 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-/* line 170, ../_sass/_utils.scss */
+/* line 173, ../_sass/_utils.scss */
 body.debug:after {
   display: block;
 }
 
-/* line 36, ../_sass/_global.scss */
+/* line 31, ../_sass/_global.scss */
 .main-container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 36, ../_sass/_global.scss */
+  /* line 31, ../_sass/_global.scss */
   .main-container {
-    margin-left: 4.8%;
-    margin-right: 4.8%;
+    padding-left: 4.8%;
+    padding-right: 4.8%;
     max-width: 688px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 36, ../_sass/_global.scss */
+  /* line 31, ../_sass/_global.scss */
   .main-container {
-    margin-left: 5.7%;
-    margin-right: 5.7%;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 864px;
   }
 }
 
-/* line 40, ../_sass/_global.scss */
+/* line 35, ../_sass/_global.scss */
 .container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 35, ../_sass/_global.scss */
   .container {
-    margin-left: 4.8%;
-    margin-right: 4.8%;
+    padding-left: 4.8%;
+    padding-right: 4.8%;
     max-width: 688px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 35, ../_sass/_global.scss */
   .container {
-    margin-left: 5.7%;
-    margin-right: 5.7%;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 864px;
   }
 }
@@ -913,9 +921,15 @@ body.debug:after {
 }
 /* line 163, ../_sass/_grid.scss */
 .debug .grid-overlay {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -927,16 +941,16 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 163, ../_sass/_grid.scss */
   .debug .grid-overlay {
-    margin-left: 4.8%;
-    margin-right: 4.8%;
+    padding-left: 4.8%;
+    padding-right: 4.8%;
     max-width: 688px;
   }
 }
 @media only screen and (min-width: 960px) {
   /* line 163, ../_sass/_grid.scss */
   .debug .grid-overlay {
-    margin-left: 5.7%;
-    margin-right: 5.7%;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 864px;
   }
 }
@@ -970,21 +984,16 @@ body.debug:after {
 *
 **/
 /* line 13, ../_sass/_main-navigation.scss */
+.main-nav__list--child {
+  display: none;
+}
+
+/* line 17, ../_sass/_main-navigation.scss */
 .main-nav {
   background: #4f80f2;
 }
-@media only screen and (min-width: 620px) {
-  /* line 13, ../_sass/_main-navigation.scss */
-  .main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100%;
-  }
-}
 
-/* line 26, ../_sass/_main-navigation.scss */
+/* line 21, ../_sass/_main-navigation.scss */
 .main-nav__toggler {
   -webkit-appearance: none;
   border: none;
@@ -998,30 +1007,31 @@ body.debug:after {
   left: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 26, ../_sass/_main-navigation.scss */
+  /* line 21, ../_sass/_main-navigation.scss */
   .main-nav__toggler {
     background: #4b67aa;
   }
 }
 
-/* line 44, ../_sass/_main-navigation.scss */
+/* line 39, ../_sass/_main-navigation.scss */
 .main-nav__list {
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 @media only screen and (min-width: 620px) {
-  /* line 44, ../_sass/_main-navigation.scss */
+  /* line 39, ../_sass/_main-navigation.scss */
   .main-nav__list {
     margin-left: 26px;
   }
 }
 
-/* line 54, ../_sass/_main-navigation.scss */
+/* line 49, ../_sass/_main-navigation.scss */
 .main-nav__item {
   list-style: none;
   text-align: center;
-  display: block;
+  display: inline-block;
+  margin-bottom: 26px;
   font-size: 16px;
   line-height: 1.6250em;
   /* 26px */
@@ -1029,29 +1039,29 @@ body.debug:after {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 54, ../_sass/_main-navigation.scss */
+  /* line 49, ../_sass/_main-navigation.scss */
   .main-nav__item {
     text-align: left;
   }
 }
-/* line 65, ../_sass/_main-navigation.scss */
+/* line 61, ../_sass/_main-navigation.scss */
 .main-nav__item:first-child ~ .main-nav__item {
   padding-top: 0;
 }
 
-/* line 70, ../_sass/_main-navigation.scss */
+/* line 66, ../_sass/_main-navigation.scss */
 .main-nav__link {
   text-decoration: none;
   color: white;
   display: block;
 }
 
-/* line 77, ../_sass/_main-navigation.scss */
+/* line 73, ../_sass/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 81, ../_sass/_main-navigation.scss */
+/* line 77, ../_sass/_main-navigation.scss */
 .main-nav__item--child {
   font-size: 13px;
   line-height: 2.0000em;
@@ -1114,23 +1124,29 @@ body.debug:after {
 
 /* line 69, ../_sass/_modules/_highlight.scss */
 .highlight__container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
   /* line 69, ../_sass/_modules/_highlight.scss */
   .highlight__container {
-    margin-left: 4.8%;
-    margin-right: 4.8%;
+    padding-left: 4.8%;
+    padding-right: 4.8%;
     max-width: 688px;
   }
 }
 @media only screen and (min-width: 960px) {
   /* line 69, ../_sass/_modules/_highlight.scss */
   .highlight__container {
-    margin-left: 5.7%;
-    margin-right: 5.7%;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 864px;
   }
 }
