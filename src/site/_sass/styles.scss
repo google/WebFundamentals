@@ -27,5 +27,8 @@
 @import "_components/_typography";
 @import "_components/_button";
 
+// Pages
+@import "_pages/_styleguide";
+
 // Make sure this is last to override anything else :)
 @import "_helper";

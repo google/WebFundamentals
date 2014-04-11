@@ -1,3 +1,4 @@
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -9,7 +10,6 @@
 * @author Antoine Grelard
 *
 **/
-@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
 /**
 *
 * Utils
@@ -1354,6 +1354,26 @@ h1 {
 .styleguide__inverted-block {
   background: #e8e8e8;
   padding: 0 10px;
+}
+
+/**
+*
+* Styleguide
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 15, ../_sass/_pages/_styleguide.scss */
+.page--styleguide h1 {
+  color: #971b24;
+}
+/* line 19, ../_sass/_pages/_styleguide.scss */
+.page--styleguide h2 {
+  color: #4f80f2;
 }
 
 /**
