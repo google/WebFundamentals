@@ -3,6 +3,10 @@ layout: default
 title: "Styleguide"
 description: "Styleguide description"
 class: "page--styleguide"
+learning-list:
+  - Lorem ipsum dolor sit amet
+  - Fugit itaque sapiente earum quo expedita
+  - labore aliquam cupiditate veritatis nihil
 ---
 {% comment %}
 NOTE: This is our styleguide
@@ -144,5 +148,7 @@ NOTE: This is our styleguide
 {% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
 {% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+
+{% include modules/highlight.liquid title="Remember" list=page.learning-list %}
 
 {% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
