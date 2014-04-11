@@ -23,6 +23,8 @@ get the best possible experience on any device.
 
 # Add a video
 
+{% class keytakeaway %}
+
 Key takeaways:
 
 * Use video element to load, code, and play video in your site.
@@ -30,6 +32,8 @@ Key takeaways:
 * Include a poster image so the user sees something meaningful right away.
 * Specify multiple file formats since not all browsers support the same format.
 * Improve network performance: specify each file format's type.
+
+{% endclass%}
 
 ### Add the Video element
 
@@ -145,11 +149,13 @@ Content-Type: video/mp4.
 
 ## Provide alternatives for legacy platforms
 
+{% class key-takeaway %}
 Key takeaways:
 
 * Check which formats are supported.
 * Produce video in multiple formats to cover a range of mobile platforms.
 * Check which format was used.
+{% endclass %}
 
 ### Check which formats are supported
 

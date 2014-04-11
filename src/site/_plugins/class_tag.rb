@@ -1,8 +1,4 @@
-# Copyright (c) 2012, the Dart project authors.  Please see the AUTHORS file
-# for details. All rights reserved. Use of this source code is governed by a
-# BSD-style license that can be found in the LICENSE file.
-
-require 'cgi'
+# Copyright (c) 2012, Google
 
 module AddClass
 
@@ -23,11 +19,13 @@ module AddClass
     end
 
     def render(context)
-      out = '<div'
-      unless @lang.nil?
+      out = '<div markdown="1"' # This markdown=1 is hardly documented anywhere but forces the output to be parsed. http://kramdown.gettalong.org/syntax.html#html-blocks
+      unless @type.nil?
         out += ' class="' + @type + '"'
       end
-      out += '">'
+      out += '>'
+      
+      contents = super
       
       out += contents + "</div>"
     end
@@ -35,4 +33,4 @@ module AddClass
   end
 end
 
-Liquid::Template.register_tag('class', Prettify::Tag)
+Liquid::Template.register_tag('class', AddClass::Tag)
