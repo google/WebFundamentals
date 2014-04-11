@@ -3,6 +3,10 @@ layout: default
 title: "Styleguide"
 description: "Styleguide description"
 class: "page--styleguide"
+learning-list:
+  - Lorem ipsum dolor sit amet
+  - Fugit itaque sapiente earum quo expedita
+  - labore aliquam cupiditate veritatis nihil
 ---
 {% comment %}
 NOTE: This is our styleguide
@@ -11,11 +15,14 @@ NOTE: This is our styleguide
 
 <div class="main-container">
 
+  <h1>Styleguide</h1>
 
-  <section>
+  <h2>Components</h2>
 
-    <h1>Styleguide</h1>
-    <h2>Typography</h2>
+
+  <a name="typography"></a>
+  <section class="styleguide__typography">
+    <h3>Typography</h3>
     <p class="small">Lorem ipsum dolor sit amet.</p>
     <p class="base">Lorem ipsum dolor sit amet.</p>
     <p class="medium">Lorem ipsum dolor sit amet.</p>
@@ -23,105 +30,116 @@ NOTE: This is our styleguide
     <p class="xlarge">Lorem ipsum dolor sit amet.</p>
     <p class="xxlarge">Lorem ipsum dolor sit amet.</p>
     <p class="huge">Lorem ipsum dolor sit amet.</p>
-
-    <div class="demo">
-      <h1>This is a H1 heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, voluptatem laboriosam voluptatum blanditiis nobis rem vitae id! Cum, veritatis at tenetur quam quidem aspernatur dolore. Voluptates officiis quam dolores ullam.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, libero, excepturi, minus, nemo laboriosam tempore nesciunt iure ad voluptates facere voluptas modi beatae omnis dignissimos quas. Necessitatibus, illo a nulla!</p>
-
-      <h2>This is a H2 heading</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, voluptatem laboriosam voluptatum blanditiis nobis rem vitae id! Cum, veritatis at tenetur quam quidem aspernatur dolore. Voluptates officiis quam dolores ullam.</p>
-
-      <h3>This is a H3 heading</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, voluptatem laboriosam voluptatum blanditiis nobis rem vitae id! Cum, veritatis at tenetur quam quidem aspernatur dolore. Voluptates officiis quam dolores ullam.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, voluptatem laboriosam voluptatum blanditiis nobis rem vitae id! Cum, veritatis at tenetur quam quidem aspernatur dolore. Voluptates officiis quam dolores ullam.</p>
-
-      <h4>This is a H4 heading</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ullam, voluptatibus, blanditiis, qui voluptatum veniam reiciendis repudiandae consequuntur voluptas quod perspiciatis nostrum similique quasi quas expedita. Itaque, nobis dolorem possimus.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, reiciendis, sint, asperiores, tempore deleniti aliquid possimus fugit dolore dolor perspiciatis corrupti cumque hic cupiditate quisquam delectus eveniet non architecto magnam.</p>
-
-      <p class="small"><strong>This is small text.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, optio, fuga ipsa consequatur enim omnis quod provident ipsam inventore dolorum similique perferendis in harum molestias magni dolor possimus animi repellendus!</p>
-    </div>
-
   </section>
 
 
-  <section>
-    <h2>Grids</h2>
-    <h3>Demo</h3>
 
-    <section class="clear demo">
+  <a name="buttons"></a>
+  <section class="styleguide__buttons">
+    <h3>Buttons</h3>
+
+    <div>
+      <h4>Primary</h4>
+      <a href="#" class="button--primary">Use our tool</a>
+    </div>
+
+    <div>
+      <h4>Secondary</h4>
+      <div>
+        <a href="#" class="button--secondary">Use our tool</a>
+      </div>
+
+      <div class="styleguide__inverted-block">
+        <a href="#" class="button--secondary-variation">Use our tool</a>
+      </div>
+    </div>
+  </section>
+
+
+  <a name="grid"></a>
+  <section class="styleguide__grid">
+    <h3>Grid</h3>
+
+    <div class="clear demo">
       <div class="g-medium--half g-wide--1"></div>
       <div class="g-medium--half g-medium--last g-wide--1"></div>
       <div class="g-medium--half g-wide--1"></div>
       <div class="g-medium--half g-medium--last g-wide--1 g-wide--last"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-wide--1 g-medium--half"></div>
       <div class="g-wide--3 g-wide--last g-medium--half g--last"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-wide--3 g-medium--half"></div>
       <div class="g-wide--1 g-wide--last g-medium--half g--last"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--full g-wide--full"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--2 g-medium--last g-wide--3"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--1 g-medium--last g-wide--2"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--1 g-medium--last g-wide--1"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--1 g-medium--push-2 g-medium--last g-wide--1 g-wide--push-3 g-wide--last"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--1 g-medium--push-2 g-medium--last g-wide--2 g-wide--push-2 g-wide--last"></div>
-    </section>
+    </div>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g-medium--2 g-medium--push-1 g-medium--last g-wide--3 g-wide--push-1 g-wide--last"></div>
-    </section>
+    </div>
 
     <h4>Consistent grid classes</h4>
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g--third"></div>
       <div class="g--third"></div>
       <div class="g--third g--last"></div>
-    </section>
+    </div>
 
 
-    <section class="clear demo">
+    <div class="clear demo">
       <div class="g--half"></div>
       <div class="g--half g--last"></div>
-    </section>
+    </div>
 
   </section>
 
-  <section>
-    <h2>Modules</h2>
-    <h3>Highlights</h3>
+  <h2>Modules</h2>
 
+  <h3>Highlights</h3>
 
-  </section>
+</div> <!-- // closing main-container -->
 
+<section class="styleguide__highlights">
+
+  {% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+
+  {% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+
+  {% include modules/highlight.liquid title="Remember" list=page.learning-list %}
+
+  {% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+
+</section>
+
+<div class="main-container">
+
+  <h3></h3>
 </div>
-
-{% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
-
-{% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
-
-{% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}

@@ -1,0 +1,62 @@
+/**
+*
+* Button
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.button {
+  display: inline-block;
+  padding: (($lineHeight / 2) - 1) 32px;
+  margin-bottom: $lineHeight / 2;
+  margin-top: $lineHeight / 2;
+  min-height: $lineHeight;
+
+  text-align: center;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    background: #4d4d4d;
+    color: #ffffff;
+    border: 1px solid #4d4d4d;
+  }
+}
+
+// Mixin to create buttons
+@mixin button($color, $textColor, $isInverted: false) {
+
+  background: $color;
+  color: $textColor;
+  border: 1px solid darken($color, 10%);
+
+  @if $isInverted { border-color: transparent;}
+
+}
+
+
+.button--primary {
+  @extend .button;
+  @include button(#cb4437, #ffffff);
+}
+
+.button--secondary {
+  @extend .button;
+  @include button(#fafafa, #cb4437);
+}
+
+.button--secondary-variation {
+  @extend .button;
+  @include button(#fafafa, #cb4437, true);
+}
+
+.styleguide__inverted-block {
+  background: #e8e8e8;
+  padding: 0 13px;
+}

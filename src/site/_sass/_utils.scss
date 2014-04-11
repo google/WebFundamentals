@@ -29,7 +29,7 @@
   $colorGray: #e8e8e8;
 
   // Defining font family
-  $fontDefault: "Open Sans", Helvetica, sans-serif;
+  $fontDefault: Helvetica, Arial, sans-serif;
   $fontHighlight: "Roboto Condensed", Helvetica, sans-serif;
 
   // Defining font sizes
@@ -117,20 +117,23 @@
 
   // Mixin to constrain elements
   @mixin container() {
+    @include prefixr(box-sizing, content-box);
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
 
 
     @include medium {
-      margin-left: 4.8%;
-      margin-right: 4.8%;
+      padding-left: 4.8%;
+      padding-right: 4.8%;
       max-width: $mediumContainer;
     }
 
     @include wide {
-      margin-left: 5.7%;
-      margin-right: 5.7%;
+      padding-left: 0;
+      padding-right: 0;
     	max-width: $wideContainer;
     }
   }
@@ -169,5 +172,130 @@
 
     &.debug:after {
       display: block;
+    }
+  }
+
+  // Mixins simply to store CSS rules
+  @mixin rule--small {
+    font-size: $fontSmall;
+    line-height: 2.0000em; /* 26px */
+    padding-top: 2.0000em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--base {
+    font-size: $fontBase;
+    line-height: 1.6250em; /* 26px */
+    padding-top: 1.6250em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--medium {
+    font-size: $fontMedium;
+    font-weight: 300;
+    line-height: 1.3000em; /* 26px */
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--large {
+    font-size: $fontLarge;
+    font-weight: 300;
+    line-height: 1.0000em; /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--xlarge {
+    font-family: $fontHighlight;
+    font-size: $fontXLarge;
+    font-weight: 300;
+    line-height: 1.2381em; /* 52px */
+    padding-top: 0.6190em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--xxlarge {
+    font-family: $fontHighlight;
+    font-size: $fontXXLarge;
+    font-weight: 300;
+    line-height: 1.1471em; /* 78px */
+    padding-top: 0.3824em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--huge {
+    font-family: $fontHighlight;
+    font-size: $fontHuge;
+    font-weight: 300;
+    line-height: 1.19em; /* 130px */
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+
+
+
+  // Mixins to determine which rule to use at which breakpoint
+  @mixin type--small($isFromMixin: false) {
+    @include rule--small;
+  }
+
+  @mixin type--base($isFromMixin: false) {
+    @include rule--base;
+  }
+
+  @mixin type--medium($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--base(true);
+      @include wide {
+        @include rule--medium;
+      }
+    }
+    @else {
+      @include rule--medium;
+    }
+  }
+
+  @mixin type--large($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--medium(true);
+      @include wide {
+        @include rule--large;
+      }
+    }
+    @else {
+      @include rule--large;
+    }
+  }
+
+  @mixin type--xlarge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--large(true);
+      @include wide {
+        @include rule--xlarge;
+      }
+    }
+    @else {
+      @include rule--xlarge;
+    }
+  }
+
+  @mixin type--xxlarge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--xlarge(true);
+      @include wide {
+        @include rule--xxlarge;
+      }
+    }
+    @else {
+      @include rule--xxlarge;
+    }
+  }
+
+  @mixin type--huge($isFromMixin: false) {
+    @include type--xxlarge(true);
+
+    @include wide {
+      @include rule--huge;
     }
   }
