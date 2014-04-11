@@ -49,7 +49,8 @@
   }
 
   .button--primary {
-    @include button($color, $textColor, $isInverted);
+    // @include button($color, $textColor, $isInverted);
+    @include button(primary);
   }
 
   .button--secondary {
