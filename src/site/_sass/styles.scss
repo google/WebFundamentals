@@ -21,7 +21,11 @@
 @import "_main-header";
 @import "_main-footer";
 
+// Modules
 @import "_modules/_highlight";
+
+// Components
+@import "_components/_button";
 
 // Make sure this is last to override anything else :)
 @import "_helper";
