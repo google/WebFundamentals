@@ -992,78 +992,59 @@ body.debug:after {
 
 /* line 17, ../_sass/_main-navigation.scss */
 .main-nav {
-  background: #4f80f2;
+  background-color: #4f80f2;
 }
 
 /* line 21, ../_sass/_main-navigation.scss */
-.main-nav__toggler {
-  -webkit-appearance: none;
-  border: none;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  color: white;
-  outline: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-@media only screen and (min-width: 620px) {
-  /* line 21, ../_sass/_main-navigation.scss */
-  .main-nav__toggler {
-    background: #4b67aa;
-  }
-}
-
-/* line 39, ../_sass/_main-navigation.scss */
 .main-nav__list {
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-@media only screen and (min-width: 620px) {
-  /* line 39, ../_sass/_main-navigation.scss */
-  .main-nav__list {
-    margin-left: 26px;
-  }
+  text-align: center;
 }
 
-/* line 49, ../_sass/_main-navigation.scss */
+/* line 28, ../_sass/_main-navigation.scss */
 .main-nav__item {
   list-style: none;
-  text-align: center;
-  display: inline-block;
-  margin-bottom: 26px;
+  display: block;
+}
+@media only screen and (min-width: 620px) {
+  /* line 28, ../_sass/_main-navigation.scss */
+  .main-nav__item {
+    display: inline-block;
+  }
+}
+/* line 37, ../_sass/_main-navigation.scss */
+.main-nav__item:first-child ~ .main-nav__item {
+  padding-top: 0;
+}
+
+/* line 42, ../_sass/_main-navigation.scss */
+.main-nav__link {
+  text-decoration: none;
+  color: white;
+  display: block;
   font-size: 16px;
   line-height: 1.6250em;
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 49, ../_sass/_main-navigation.scss */
-  .main-nav__item {
-    text-align: left;
+  /* line 42, ../_sass/_main-navigation.scss */
+  .main-nav__link {
+    padding-bottom: 26px;
   }
 }
-/* line 61, ../_sass/_main-navigation.scss */
-.main-nav__item:first-child ~ .main-nav__item {
-  padding-top: 0;
-}
 
-/* line 66, ../_sass/_main-navigation.scss */
-.main-nav__link {
-  text-decoration: none;
-  color: white;
-  display: block;
-}
-
-/* line 73, ../_sass/_main-navigation.scss */
+/* line 56, ../_sass/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 77, ../_sass/_main-navigation.scss */
+/* line 60, ../_sass/_main-navigation.scss */
 .main-nav__item--child {
   font-size: 13px;
   line-height: 2.0000em;
