@@ -1,6 +1,6 @@
 /**
 *
-* Highlight
+* Button
 *
 * Google Web Essentials
 *
@@ -10,58 +10,53 @@
 *
 **/
 
-  // Mixin to create buttons
-  @mixin button($type: primary) {
-    display: inline-block;
-    padding: ($lineHeight / 2) 32px;
-    margin-bottom: $lineHeight / 2;
-    margin-top: $lineHeight / 2;
-    text-align: center;
+.button {
+  display: inline-block;
+  padding: (($lineHeight / 2) - 1) 32px;
+  margin-bottom: $lineHeight / 2;
+  margin-top: $lineHeight / 2;
+  min-height: $lineHeight;
 
-    font-weight: 600;
-    text-decoration: none;
+  text-align: center;
 
-    background: #cb4437;
-    color: $colorWhite;
-    border: 1px solid #111111;
+  font-weight: 600;
+  text-decoration: none;
 
-    @if $type == secondary {
-      background: #fafafa;
-      color: #cb4437;
-      border: 1px solid #d9d9d9;
-    }
-
-    @if $type == secondaryBis {
-      background: #ffffff;
-      color: #cb4437;
-      border: 1px solid #ffffff;
-    }
-
-    &:hover {
-      background: #4d4d4d;
-      color: $colorWhite;
-      border: 1px solid #4d4d4d;
-    }
+  &:hover {
+    background: #4d4d4d;
+    color: #ffffff;
+    border: 1px solid #4d4d4d;
   }
+}
 
-  .button {
-    @include button;
-  }
+// Mixin to create buttons
+@mixin button($color, $textColor, $isInverted: false) {
 
-  .button--primary {
-    // @include button($color, $textColor, $isInverted);
-    @include button(primary);
-  }
+  background: $color;
+  color: $textColor;
+  border: 1px solid darken($color, 10%);
 
-  .button--secondary {
-    @include button(secondary);
-  }
+  @if $isInverted { border-color: transparent;}
 
-  .button--secondary-variation {
-    @include button(secondaryBis);
-  }
+}
 
-  .styleguide__inverted-block {
-    background: #e8e8e8;
-    padding: 0 10px;
-  }
+
+.button--primary {
+  @extend .button;
+  @include button(#cb4437, #ffffff);
+}
+
+.button--secondary {
+  @extend .button;
+  @include button(#fafafa, #cb4437);
+}
+
+.button--secondary-variation {
+  @extend .button;
+  @include button(#fafafa, #cb4437, true);
+}
+
+.styleguide__inverted-block {
+  background: #e8e8e8;
+  padding: 0 13px;
+}
