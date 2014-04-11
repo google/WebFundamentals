@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto+Condensed:400,300");
+@import url("//fonts.googleapis.com/css?Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -610,7 +610,7 @@ html, body {
 
 /* line 23, ../_sass/_global.scss */
 body {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6250em;
   /* 26px */
