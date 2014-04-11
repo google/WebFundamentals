@@ -8,7 +8,6 @@ article:
   order: 1
 collection: multi-device-layouts
 ---
-
 # A need for responsive pages
 
 The use of mobile devices to surf the web is growing at an astronomical pace, 
@@ -35,14 +34,15 @@ two columns.
 
 # Set the viewport
 
-<div class="takeaways">
-  <h2>Key Takeaways</h2>
-  <ul>
-    <li>Always add a meta viewport tag in the head of every document including `width=device-width` and `initial-scale=1`
-      <br>`<meta name=viewport content="width=device-width, initial-scale=1">`</li>
-    <li>Ensure your page is accessible by not disabling user scaling.</li>
-  </ul>
-</div>
+<!-- TODO: Fix formatting of cells -->
+<table>
+<tr>
+<td>Key Takeaways
+Always add a meta viewport tag in the head of every document including width=device-width and initial-scale=1
+Ensure your page is accessible by not disabling user scaling.
+<meta name=viewport content="width=device-width, initial-scale=1"></td>
+</tr>
+</table>
 
 In order to attempt to provide the best experience, mobile browsers will render 
 the page at a desktop screen width (usually about 960px), and then try to make 
@@ -51,13 +51,13 @@ the screen.  For users, this means that font sizes may appear inconsistently and
 they have double-tap or pinch-zoom in order to be able to see and interact with 
 the content.
 
-**[IMAGE of page without a viewport]**
+[IMAGE of page without a viewport]
 
 Pages optimized for multi-screen experiences must include a meta viewport 
 element in the head of the document.  A meta viewport tag gives the browser 
 instructions on how to control the page's dimensions and scaling.
 
-**[IMAGE of page with a viewport]**
+[IMAGE of page with a viewport]
 
     <meta name=viewport content="width=device-width, initial-scale=1">
 
@@ -72,9 +72,12 @@ mode, and zoom rather than reflow to fill the screen. Adding the attribute
 pixels and device independent pixels regardless of device orientation, and 
 allows the page to take advantage of the full landscape width.
 
-<div class="notes">
-  <b>Note:</b> Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
-</div>
+<!-- TODO: Fix formatting of cells -->
+<table>
+<tr>
+<td>Note: Use a comma to separate attributes to ensure older browsers can properly parse the attributes.</td>
+</tr>
+</table>
 
 ## Ensure an accessible viewport
 
@@ -85,14 +88,15 @@ accessibility issues.
 
 # Size content to the viewport
 
-<div class="takeaways">
-  <h2>Key Takeaways</h2>
-  <ul>
-    <li>Do not use large fixed width elements.</li>
-    <li>Content should not rely on a particular viewport width to render well.</li>
-    <li>Use CSS media queries to apply different styling for small and large screens.</li>
-  </ul>
-</div>
+<!-- TODO: Fix formatting of cells -->
+<table>
+<tr>
+<td>Key Takeaways
+Do not use large fixed width elements.
+Content should not rely on a particular viewport width to render well.
+Use CSS media queries to apply different styling for small and large screens.</td>
+</tr>
+</table>
 
 On both desktop and mobile devices, users are used to scrolling websites 
 vertically but not horizontally, and forcing the user to scroll horizontally or 
@@ -109,8 +113,8 @@ Since screen dimensions and width in CSS pixels vary widely between devices
 (e.g. between phones and tablets, and even between different phones), content 
 should not rely on a particular viewport width to render well.  
 
-**[SxS IMAGE HERE - `div{width:360px;}` on a small device & on a large device]**  
-**[OR video of horizontal scrolling]**
+[SxS IMAGE HERE - `div{width:360px;}` on a small device & on a large device]  
+[OR video of horizontal scrolling]
 
 Setting large absolute CSS widths for page elements (such as the example above), 
 will cause the `div` to be too wide for the viewport on a narrower device (e.g. 
@@ -121,14 +125,15 @@ viewport on small screens.
 
 # Use CSS Media Queries For Responsiveness 
 
-<div class="takeaways">
-  <h2>Key Takeaways</h2>
-  <ul>
-    <li>Media queries can be used to apply styles based on device characteristics.</li>
-    <li>Use min-width over of min-device-width to ensure the broadest experience.</li>
-    <li>Use relative sizes for elements to avoid breaking layout.</li>
-  </ul>
-</div>
+<!-- TODO: Fix formatting of cells -->
+<table>
+<tr>
+<td>Key Takeaways
+Media queries can be used to apply styles based on device characteristics.
+Use min-width over of min-device-width to ensure the broadest experience.
+Use relative sizes for elements to avoid breaking layout.</td>
+</tr>
+</table>
 
 Media queries are simple filters that can be applied to CSS styles that makes it 
 easy to change styles based on the characteristics of the device rendering the 
@@ -249,31 +254,29 @@ page.
 <table>
 <tr>
 <td>NO
-<pre>
 div.fullWidth {
-width: 320px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
-}</pre>
-</td>
+}</td>
 <td>YES
-<pre>div.fullWidth {
+div.fullWidth {
   width: 100%;
-}</pre>
-</td>
+}</td>
 </tr>
 </table>
 
 # How to choose breakpoints
 
-<div class="takeaways">
-  <h2>Key Takeaways</h2>
-  <ul>
-    <li>Create breakpoints based on content, never on specific devices, products or brands. </li>
-    <li>Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.</li>
-    <li>Keep lines of text to around 70 or 80 characters.</li>
-  </ul>
-</div>
+<!-- TODO: Fix formatting of cells -->
+<table>
+<tr>
+<td>Key Takeaways
+Create breakpoints based on content, never on specific devices, products or brands. 
+Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
+Keep lines of text to around 70 or 80 characters.</td>
+</tr>
+</table>
 
 There are many different screen sizes a user may be looking at our content on, 
 and the devices that they're using today won't necessarily be the same devices 
@@ -295,7 +298,7 @@ only load code when necessary, your sites will download faster.
 
 Let's take a look at a specific example - the Chrome Developer Summit website.
 
-<img src="imgs/temp2.png" width="501" height="293" />
+<img src="image00.png" width="501" height="293" />
 
 In the smallest view, the location is a hyperlink that redirects the user to 
 Google Maps with the appropriate location.  In larger screen sizes, the map is 
@@ -319,7 +322,7 @@ Classic readability theory suggests that an ideal column should contain 70 to 80
 characters per line (about  8 to 10 words in English), thus each time the width 
 of a text block grows past about 10 words, a breakpoint should be considered.  
 
-<img src="imgs/temp1.png" width="624" height="340" />
+<img src="image01.png" width="624" height="340" />
 
 Let's take a deeper look at the above blog post example.  On smaller screens, 
 the Roboto font at 1em works perfectly giving 10 words per line, but larger 
@@ -340,4 +343,4 @@ By starting with your design on a small display encourages you to create a
 focused experience that allows users to interact with your site, not matter the 
 display.  Be careful when choosing what content to hide or show depending on 
 screen size.  Avoid completely hiding content on smaller displays that may be 
-helpful.  
+helpful.
