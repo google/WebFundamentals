@@ -1,0 +1,154 @@
+/**
+*
+* Utils
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+/*==========  VARIABLES  ==========*/
+
+  // Defining breakpoints
+  $medium: 620px;
+  $wide: 960px;
+  $huge: 1600px;
+  $mediumContainer: 688px;
+  $wideContainer: 864px;
+
+  // Defining colors
+  $colorRed: #971b24;
+  $colorHighlight: $colorRed;
+  $colorBlue: #4f80f2;
+  $colorDarkBlue: #4b67aa;
+  $colorWhite: #fff;
+
+  // Defining font family
+  $fontDefault: "Open Sans", Helvetica, sans-serif;
+  $fontHighlight: "Roboto Condensed", Helvetica, sans-serif;
+
+  // Defining font sizes
+  $fontSmall: 13px;
+  $fontBase: 16px;
+  $fontMedium: 20px;
+  $fontLarge: 26px;
+  $fontXLarge: 42px;
+  $fontXXLarge: 68px;
+  $fontHuge: 110px;
+
+  $lineHeight: 26px;
+
+  // Defining animation easings
+  $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+	// Defining sidebar stuff
+	$sidebarWidth: 280px;
+
+
+/*==========  FUNCTIONS  ==========*/
+
+  @function leading($size, $context: $lineHeight) {
+    @return  $context / $size + em;
+  }
+
+
+/*==========  MIXINS  ==========*/
+
+  @mixin prefixr($property, $value...) {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+            #{$property}: $value;
+  }
+
+  @mixin media-query($media-query) {
+    @if $media-query == small {
+      @media only screen and (max-width:$medium - 1) { @content; }
+    }
+
+    @if $media-query == medium {
+      @media only screen and (min-width:$medium) { @content; }
+    }
+
+    @if $media-query == wide {
+      @media only screen and (min-width:$wide) { @content; }
+    }
+
+    @if $media-query == huge {
+      @media only screen and (min-width:$huge) { @content; }
+    }
+  }
+
+  // Just some helpers...
+  @mixin small { @include media-query(small) { @content }; }
+  @mixin medium { @include media-query(medium) { @content }; }
+  @mixin wide { @include media-query(wide) { @content }; }
+  @mixin huge { @include media-query(huge) { @content }; }
+
+
+  @mixin keyframes($animation-name){
+    @-webkit-keyframes $animation-name{
+      @content;
+    }
+
+    @-moz-keyframes $animation-name{
+      @content;
+    }
+
+    @-ms-keyframes $animation-name{
+      @content;
+    }
+
+    @keyframes $animation-name{
+      @content;
+    }
+  }
+
+  // Mixin to constrain elements
+  @mixin container() {
+    @include medium {
+    	margin-left: 4.8%;
+      margin-right: 4.8%;
+      max-width: $mediumContainer;
+    }
+
+    @include wide {
+      margin-left: 5.7%;
+      margin-right: 5.7%;
+    	max-width: $wideContainer;
+    }
+  }
+
+  // Mixin to show a baseline grid
+  // only visible when body has 'debug' class
+  @mixin gridBaseline() {
+    position: relative;
+
+    &:after {
+      content: "";
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
+      background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
+      background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
+      background-image: linear-gradient(top, rgba(0,0,0,0.3) 95%,rgba(0,0,0,0.3) 100%);
+
+      @include prefixr(background-size, 100% 26px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      z-index: 9;
+
+      display: none;
+
+    }
+    &.debug:after {
+      display: block;
+    }
+  }

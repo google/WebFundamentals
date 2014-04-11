@@ -11,16 +11,14 @@ collection: introductionToMedia
 
 The video element is a thing of simple beauty:
 
-    <video src='foo.webm'>
-        <p>This browser does not support the video element.</p>
-    </video>
+    {% include_code _code/basic.html simple %}
 
 Load, decode and play video in a few lines of code! 
 
 HTML video is [well supported](http://caniuse.com/video): over 85% of browsers 
 on mobile and desktop implement the video element, including all current 
 versions of all browsers (apart from Opera Mini). There are similar numbers for 
-<audio>.
+`<audio>`.
 
 So it's time to move away from plugins. Phone and tablet browsers do not support 
 Flash or other media players, plugins are 
@@ -33,8 +31,8 @@ The good news is that a range of powerful media technologies are gaining support
 across mobile platforms:
 
 * [poster='foo.jpg'](https://simpl.info/video)
-* [<source>](http://simpl.info/video)
-* [<track>](https://simpl.info/video)
+* [`<source>`](http://simpl.info/video)
+* [`<track>`](https://simpl.info/video)
 * [canPlayType()](https://simpl.info/canplaytype)
 * [MSE](http://simpl.info/mse)
 * [EME](http://www.html5rocks.com/en/tutorials/eme/basics/)
@@ -56,11 +54,7 @@ and use the source element rather than a single _src_. On mobile, users have
 even less patience than on desktop, so make sure media content works right first 
 time:
 
- <video>
-     <source src="video/chrome.mp4" />
-     <source src="video/chrome.webm" />
-     <p>This browser does not support the video element.</p>
- </video>
+    {% include_code _code/basic.html sources %}
 
 From the list of sources available, a browser will select the first available 
 format it can play. Using MP4 and WebM will cover  recent versions of all 
@@ -93,11 +87,7 @@ Making use of the source element's _type_ attribute can improve performance even
 further, by enabling the browser to select a media source without having to 
 download and 'sniff' it:
 
- <video>
-     <source src="video/chrome.mp4" **type="video/mp4"** />
-     <source src="video/chrome.webm" **type="video/webm"** />
-     <p>This browser does not support the video element.</p>
- </video>
+    {% include_code _code/basic.html sourcetype %}
 
 (To see this in action, use your mobile browser dev tools to compare network 
 activity for [simpl.info/video](http://simpl.info/video) and 
@@ -107,11 +97,11 @@ Ensure your server gives the right MIME type, otherwise video source type checks
 won't work. You can check this with curl, for example by running a command like 
 this:
 
- curl -I simpl.info/video/videos/chrome.mp4
+   curl -I simpl.info/video/videos/chrome.mp4
 
 ...which should return a response like this: 
 
- Content-Type: video/mp4
+   Content-Type: video/mp4
 
 All platforms that support <audio> and <video> support the source element: see 
 [longtailvideo.com/](http://www.longtailvideo.com/html5/)[html5](http://www.longtailvideo.com/html5/) 
@@ -142,9 +132,7 @@ _[canPlayType()](https://simpl.info/canplaytype/)_.
 We can specify what part of a video we want to play simply by adding a 
 'fragment' to the URL:
 
- <video src='foo.webm#t=5,10'>
-     <p>This browser does not support the video element.</p>
- </video>
+    {% include_code _code/basic.html fragment %}
 
 This is called the Media Fragments API – there's an example at 
 [simpl.info/mf](http://simpl.info/mf) – and is well supported on mobile and 
@@ -176,12 +164,7 @@ element](http://www.html5rocks.com/en/tutorials/track/basics/), which now has
 [wide support](http://caniuse.com/track). It's very easy. You simply add a track 
 element as a child of the audio or video element, like this:
 
- <video>
-     <source src="video/chrome.mp4" type="video/mp4;" />
-     <source src="video/chrome.webm" type="video/webm" />
- **    ****<track src="tracks/chrome-subtitles-en.vtt" />**
-     <p>This browser does not support the video element.</p>
- </video>
+    {% include_code _code/basic.html accessibility %}
 
 The track file consists of timed 'cues' in WebVTT format:
 
