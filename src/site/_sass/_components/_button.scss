@@ -1,0 +1,66 @@
+/**
+*
+* Highlight
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+  // Mixin to create buttons
+  @mixin button($type: primary) {
+    display: inline-block;
+    padding: ($lineHeight / 2) 32px;
+    margin-bottom: $lineHeight / 2;
+    margin-top: $lineHeight / 2;
+    text-align: center;
+
+    font-weight: 600;
+    text-decoration: none;
+
+    background: #cb4437;
+    color: $colorWhite;
+    border: 1px solid #111111;
+
+    @if $type == secondary {
+      background: #fafafa;
+      color: #cb4437;
+      border: 1px solid #d9d9d9;
+    }
+
+    @if $type == secondaryBis {
+      background: #ffffff;
+      color: #cb4437;
+      border: 1px solid #ffffff;
+    }
+
+    &:hover {
+      background: #4d4d4d;
+      color: $colorWhite;
+      border: 1px solid #4d4d4d;
+    }
+  }
+
+  .button {
+    @include button;
+  }
+
+  .button--primary {
+    @include button($color, $textColor, $isInverted);
+  }
+
+  .button--secondary {
+    @include button(secondary);
+  }
+
+  .button--secondary-variation {
+    @include button(secondaryBis);
+  }
+
+  .styleguide__inverted-block {
+    background: #e8e8e8;
+    padding: 0 10px;
+  }
