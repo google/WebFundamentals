@@ -1322,12 +1322,18 @@ h1 {
 *
 **/
 /* line 15, ../_sass/_pages/_styleguide.scss */
-.page--styleguide h1 {
+.page--styleguide .main-container > h1 {
   color: #971b24;
 }
 /* line 19, ../_sass/_pages/_styleguide.scss */
-.page--styleguide h2 {
+.page--styleguide .main-container > h2 {
   color: #4f80f2;
+}
+/* line 23, ../_sass/_pages/_styleguide.scss */
+.page--styleguide section {
+  margin-bottom: 52px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 77px;
 }
 
 /**

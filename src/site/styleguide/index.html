@@ -39,12 +39,12 @@ NOTE: This is our styleguide
     <h3>Buttons</h3>
 
     <div>
-      <h3>Primary</h3>
+      <h4>Primary</h4>
       <a href="#" class="button--primary">Use our tool</a>
     </div>
 
     <div>
-      <h3>Secondary</h3>
+      <h4>Secondary</h4>
       <div>
         <a href="#" class="button--secondary">Use our tool</a>
       </div>
@@ -121,19 +121,25 @@ NOTE: This is our styleguide
 
   </section>
 
-  <section>
-    <h2>Modules</h2>
+  <h2>Modules</h2>
 
-    <h3>Highlights</h3>
-
-  </section>
+  <h3>Highlights</h3>
 
 </div> <!-- // closing main-container -->
 
-{% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+<section class="styleguide__highlights">
 
-{% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+  {% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-{% include modules/highlight.liquid title="Remember" list=page.learning-list %}
+  {% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
 
-{% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+  {% include modules/highlight.liquid title="Remember" list=page.learning-list %}
+
+  {% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+
+</section>
+
+<div class="main-container">
+
+  <h3></h3>
+</div>

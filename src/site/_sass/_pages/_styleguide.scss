@@ -12,12 +12,19 @@
 
 .page--styleguide {
 
-  h1 {
+  .main-container > h1 {
     color: $colorHighlight;
   }
 
-  h2 {
+  .main-container > h2 {
     color: $colorBlue;
+  }
+
+  section {
+    margin-bottom: $lineHeight*2;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: $lineHeight*3 - 1;
+
   }
 
 }
