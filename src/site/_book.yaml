@@ -1,10 +1,13 @@
 toc:
 - title: "Styleguide"
   path: /styleguide/
-- title: "Create Your First Multi-screen Site"
+- title: "Getting Started"
   path: /getting-started/
+  section:
+    - title: "Create Your First Multi-screen Site"
+      path: /getting-started/mulit-screen/
 - title: "Multi-device layouts"
-  path: /multi-device-layouts
+  path: /multi-device-layouts/
   section:
     - title: "Layout Basics"
       path: /multi-device-layouts/layout-basics.html
@@ -21,7 +24,7 @@ toc:
     path: /user-input/touch
   - title: "Form Input"
     path: /user-input/form-input.html
-- title: Media
+- title: "Images, Video and Audio"
   path: /media/
   section:
   - title: "Images"
