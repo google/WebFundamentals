@@ -1,7 +1,8 @@
 ---
 layout: article
-title: "Forms"
-description: ""
+title: "Create amazing forms"
+description: "Forms are hard to fill out on mobile. The best forms are the ones with the 
+fewest inputs."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
