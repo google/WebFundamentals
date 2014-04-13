@@ -25,7 +25,7 @@ toc:
   - title: "Form Input"
     path: /user-input/form-input.html
 - title: "Images, Video and Audio"
-  path: /media/
+  path: /introduction-to-media/
   section:
   - title: "Images"
     path: /introduction-to-media/images.html
@@ -34,11 +34,9 @@ toc:
   - title: "Audio"
     path: /introduction-to-media/audio.html
 - title: Performance
-  path: /optimizing-performance
+  path: /optimizing-performance/
   section:
     - title: "Critical Path Rendering"
       path: /optimizing-performance/critical-path-rendering/
     - title: "Network Performance"
       path: /optimizing-performance/network-performance/
-    - title: "Measuring Performance"
-      path: /optimizing-performance/measuring-performance/
