@@ -20,7 +20,7 @@ solutions to deliver experiences that work well across all form-factors.
 
 # {{ page.title }}
 
-{% for guide in page.articles.introduction-to-media %}
+{% for guide in page.articles.multi-device-layouts %}
 *  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
 {% endfor %}
 

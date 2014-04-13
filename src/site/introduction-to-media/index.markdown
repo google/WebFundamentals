@@ -1,8 +1,7 @@
 ---
 layout: default
-title: "Getting Started"
+title: "Introduction to media"
 description: ""
-collection: introduction-to-media
 ---
 
 # {{ page.title }}
