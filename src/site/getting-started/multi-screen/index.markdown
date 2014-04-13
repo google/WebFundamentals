@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Build your first multi-screen site"
-description: ""
+description: "The web is accessible on a huge range of devices from small-screen phones 
+through to huge screen televisions. Learn how to build a site that works well across all these devices."
 collection: getting-started
 ---
 The web is accessible on a huge range of devices from small-screen phones 
