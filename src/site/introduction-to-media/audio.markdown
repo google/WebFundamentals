@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Audio"
-description: ""
+description: "Audio is important."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
