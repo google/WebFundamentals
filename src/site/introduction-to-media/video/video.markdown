@@ -6,10 +6,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 2
-collection: introductionToMedia
+collection: introduction-to-media
 ---
-Web Essentials: Video
-
 Users like videos: videos can be fun, informative; users can also consume 
 information on the go easier than having to read small font and scroll down a 
 page on a mobile device.
@@ -22,7 +20,7 @@ happens.
 Read more to find the simplest way to add video to your site and ensure users 
 get the best possible experience on any device.
 
-# Add a video
+## Add a video
 
 {% class key-takeaway %}  
 Key takeaways:

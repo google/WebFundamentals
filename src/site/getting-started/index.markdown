@@ -1,10 +1,13 @@
 ---
 layout: default
-title: "User Input"
+title: "Getting Started"
 description: ""
 ---
+
 # {{ page.title }}
 
-{% for guide in page.articles.user-input %}
+## Guides
+
+{% for guide in page.articles.getting-started %}
 *  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
 {% endfor %}

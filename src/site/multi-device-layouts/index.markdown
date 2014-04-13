@@ -18,6 +18,13 @@ Mobile-first Web Design combines many techniques such as [Responsive Web
 Design](link), [Progressive Enhancement](link) and [Responsive Server](link) 
 solutions to deliver experiences that work well across all form-factors.
 
+# {{ page.title }}
+
+{% for guide in page.articles.introduction-to-media %}
+*  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
+{% endfor %}
+
+
 # Understanding and Managing Constraints
 ## Display
 

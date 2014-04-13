@@ -1,7 +1,8 @@
 ---
 layout: article
-title: "Getting Started"
+title: "Build your first multi-screen site"
 description: ""
+collection: getting-started
 ---
 The web is accessible on a huge range of devices from small-screen phones 
 through to huge screen televisions.  Each device presents its own unique 

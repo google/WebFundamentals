@@ -4,18 +4,10 @@ title: "Getting Started"
 description: ""
 collection: introduction-to-media
 ---
-{% comment %}
-NOTE: Within each section, articles should be in defined order
-(newest on top).
-{% endcomment %}
 
-<h1>{{page.title}}</h1>
+# {{ page.title }}
 
-<div class="row">
-  <div class="col-md-6">
-    
-    {% for article in page.articles.introductionToMedia %}
-      {{article.title}} <br />
-    {% endfor %}
-  </div>
-</div>
+{% for guide in page.articles.introduction-to-media %}
+*  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
+{% endfor %}
+

@@ -6,7 +6,7 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 1
-collection: introductionToMedia
+collection: introduction-to-media
 ---
 
 Images (samdutton)
