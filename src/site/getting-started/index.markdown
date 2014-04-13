@@ -13,5 +13,6 @@ We have created a number of tutorials and guides for you that will help you get 
 ## Guides
 
 {% for guide in page.articles.getting-started %}
-*  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
+### [{{guide.title}}]({{guide.url}}) 
+{{guide.description}}
 {% endfor %}

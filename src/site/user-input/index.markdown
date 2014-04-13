@@ -6,5 +6,6 @@ description: ""
 # {{ page.title }}
 
 {% for guide in page.articles.user-input %}
-*  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
+## [{{guide.title}}]({{guide.url}}) 
+{{guide.description}}
 {% endfor %}

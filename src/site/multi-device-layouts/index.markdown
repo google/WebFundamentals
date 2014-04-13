@@ -3,7 +3,7 @@ layout: default
 title: "Mutli-device layouts"
 description: ""
 ---
-<h1>{{page.title}}</h1>
+# {{page.title}}
 
  What is mobile-first web design
 
@@ -18,10 +18,9 @@ Mobile-first Web Design combines many techniques such as [Responsive Web
 Design](link), [Progressive Enhancement](link) and [Responsive Server](link) 
 solutions to deliver experiences that work well across all form-factors.
 
-# {{ page.title }}
-
 {% for guide in page.articles.multi-device-layouts %}
-*  <a href="{{guide.url}}">{{guide.title}}</a> - {{guide.description}}
+### [{{guide.title}}]({{guide.url}}) 
+{{guide.description}}
 {% endfor %}
 
 
