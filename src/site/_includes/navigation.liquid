@@ -3,7 +3,7 @@
   <ul class="main-nav__list">
   {% for section in page.content.toc %}
    <li class="main-nav__item">
-      <a class="main-nav__link" {% if section.section %}href="#"{% else %}href="{{ section.path }}{% endif %}" title="{{ section.title }}">
+      <a class="main-nav__link" href="{{ section.path }}" title="{{ section.title }}">
         {{ section.title }}
       </a>
       {% if section.section %}
