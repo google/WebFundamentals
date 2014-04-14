@@ -1,6 +1,6 @@
 /**
 *
-* Lisr
+* List
 *
 * Google Web Essentials
 *
@@ -13,19 +13,18 @@
 
 
 @mixin bullet-type($bullet) {
-  position: relative;
   &:before {
     content: $bullet;
-    display: block;
+    display: inline-block;
     font-family: $fontHighlight;
     font-weight: 400;
-    position: absolute;
-    left: -20px;
+    padding-right: 16px;
+    line-height: 0;
   }
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -35,4 +34,8 @@ li {
 
 .list__item {
   @include bullet-type(">");
+}
+
+.main-nav__item:before {
+  display: none;
 }
