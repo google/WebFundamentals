@@ -945,12 +945,12 @@ body.debug:after {
   margin-top: 26px;
 }
 
-/* line 70, ../_sass/_modules/_highlight.scss */
+/* line 66, ../_sass/_modules/_highlight.scss */
 .highlight--learning {
   background-color: #94d8e8;
 }
 
-/* line 74, ../_sass/_modules/_highlight.scss */
+/* line 70, ../_sass/_modules/_highlight.scss */
 .highlight__container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -964,7 +964,7 @@ body.debug:after {
   padding-bottom: 78px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 74, ../_sass/_modules/_highlight.scss */
+  /* line 70, ../_sass/_modules/_highlight.scss */
   .highlight__container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -972,7 +972,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 74, ../_sass/_modules/_highlight.scss */
+  /* line 70, ../_sass/_modules/_highlight.scss */
   .highlight__container {
     padding-left: 0;
     padding-right: 0;
@@ -980,7 +980,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 74, ../_sass/_modules/_highlight.scss */
+  /* line 70, ../_sass/_modules/_highlight.scss */
   .highlight__container {
     padding-bottom: 52px;
     position: relative;
@@ -1023,7 +1023,7 @@ body.debug:after {
   }
 }
 
-/* line 89, ../_sass/_modules/_highlight.scss */
+/* line 85, ../_sass/_modules/_highlight.scss */
 .highlight__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1035,7 +1035,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 89, ../_sass/_modules/_highlight.scss */
+  /* line 85, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1047,7 +1047,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 89, ../_sass/_modules/_highlight.scss */
+  /* line 85, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1057,7 +1057,7 @@ body.debug:after {
     padding-top: 0.6190em;
     padding-bottom: 0;
   }
-  /* line 96, ../_sass/_modules/_highlight.scss */
+  /* line 92, ../_sass/_modules/_highlight.scss */
   .highlight--large .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1069,7 +1069,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 89, ../_sass/_modules/_highlight.scss */
+  /* line 85, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1081,7 +1081,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 96, ../_sass/_modules/_highlight.scss */
+  /* line 92, ../_sass/_modules/_highlight.scss */
   .highlight--large .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1093,14 +1093,13 @@ body.debug:after {
   }
 }
 
-<<<<<<< HEAD
-=======
-/* line 102, ../_sass/_modules/_highlight.scss */
-.highlight__list {
-  padding-left: 0;
+/* line 1, ../_sass/_modules/_editorial-header.scss */
+.editorial-header {
+  background-color: #e8e8e8;
+  padding-bottom: 104px;
+  margin-bottom: 52px;
 }
 
->>>>>>> 30a6ddd138e1868ff42e58c960575143f6738094
 /**
 *
 * Typography
@@ -1418,14 +1417,18 @@ h1 {
 *
 **/
 /* line 15, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .main-container > h1 {
+.page--styleguide .styleguide__title {
   color: #971b24;
 }
 /* line 19, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .main-container > h2 {
+.page--styleguide .container > h2 {
   color: #4f80f2;
 }
 /* line 23, ../_sass/_pages/_styleguide.scss */
+.page--styleguide .styleguide__module-title {
+  margin-bottom: 26px;
+}
+/* line 27, ../_sass/_pages/_styleguide.scss */
 .page--styleguide section {
   margin-bottom: 52px;
   border-bottom: 1px solid #ccc;
