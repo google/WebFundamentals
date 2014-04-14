@@ -1089,7 +1089,6 @@ body.debug:after {
   }
 }
 
-<<<<<<< HEAD
 /**
 *
 * Editorial Header
@@ -1102,13 +1101,36 @@ body.debug:after {
 *
 **/
 /* line 13, ../_sass/_modules/_editorial-header.scss */
-=======
-/* line 1, ../_sass/_modules/_editorial-header.scss */
->>>>>>> a4494422cfa33e462ba41e0471de9e12c6359b3c
 .editorial-header {
   background-color: #e8e8e8;
   padding-bottom: 104px;
   margin-bottom: 52px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 20, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container {
+    position: relative;
+  }
+  /* line 26, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container:before, .editorial-header .container:after {
+    display: block;
+    position: absolute;
+    line-height: 0;
+    top: 50%;
+    font-size: 1400px;
+    color: rgba(0, 0, 0, 0.1);
+  }
+  /* line 35, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container:before {
+    content: ">";
+    right: 90%;
+  }
+  /* line 40, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container:after {
+    content: "<";
+    left: 75%;
+  }
 }
 
 /**

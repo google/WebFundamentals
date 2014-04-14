@@ -14,4 +14,34 @@
   background-color: $colorGray;
   padding-bottom: $lineHeight * 4;
   margin-bottom: $lineHeight * 2;
+  overflow: hidden;
+
+
+  .container {
+    @include medium {
+      position: relative;
+
+      // Pseudo elements to add the background characters
+      &:before,
+      &:after {
+        display: block;
+        position: absolute;
+        line-height: 0;
+        top: 50%;
+        font-size: 1400px;
+        color: rgba(0, 0, 0, .1)
+      }
+
+      &:before {
+        content: ">";
+        right: 90%;
+      }
+
+      &:after {
+        content: "<";
+        left: 75%;
+      }
+    }
+  }
+
 }
