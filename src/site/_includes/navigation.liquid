@@ -11,6 +11,15 @@
         {% for subsection in section.section %}
         <li class="main-nav__item main-nav__item--child">
           <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
+          {% if subsection.section %}
+          <ul class="main-nav__list main-nav__list--child">
+            {% for subsubsection in subsection.section %}
+            <li class="main-nav__item main-nav__item--child">
+              <a class="main-nav__link main-nav__link--child" href="{{ subsubsection.path }}">{{ subsubsection.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
