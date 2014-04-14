@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header] -->
+    <title>The Video Element</title>
+    <style>
+      video { width: 50%; }
+    </style>
+</head>
+<body>   
+      <div id="section1">
+        <!-- // [START simple] -->
+        <video src='foo.webm'>
+          <p>This browser does not support the video element.</p>
+        </video>
+        <!-- // [END simple] -->
+      </div>
+
+      <div id="section2">
+        <!-- // [START sources] -->
+        <video>
+          <source src="video/chrome.mp4" />
+          <source src="video/chrome.webm" />
+          <p>This browser does not support the video element.</p>
+        </video>
+        <!-- // [END sources] -->
+      </div>
+
+      <div id="section3">
+        <div>
+          <!-- // [START sourcetype] -->
+          <video>
+            <source src="video/chrome.mp4" **type="video/mp4"** />
+            <source src="video/chrome.webm" **type="video/webm"** />
+            <p>This browser does not support the video element.</p>
+          </video>
+          <!-- // [END sourcetype] -->
+        </div>
+
+        <div>
+          <!-- // [START fragment] -->
+          <video src='foo.webm#t=5,10'>
+            <p>This browser does not support the video element.</p>
+          </video>
+          <!-- // [END fragment] -->
+        </div>
+
+        <div>
+          <!-- // [START accessibility] -->
+          <video>
+            <source src="video/chrome.mp4" type="video/mp4;" />
+            <source src="video/chrome.webm" type="video/webm" />
+            <track src="tracks/chrome-subtitles-en.vtt" />
+            <p>This browser does not support the video element.</p>
+          </video>
+          <!-- // [END accessibility] -->
+        </div>
+      </div>
+
+      <!-- // [TEMPLATE footer] -->
+</body>
+</html>
