@@ -466,7 +466,7 @@ body {
   font-weight: 300;
   position: relative;
 }
-/* line 148, ../_sass/_utils.scss */
+/* line 149, ../_sass/_utils.scss */
 body:after {
   content: "";
   position: absolute;
@@ -478,7 +478,7 @@ body:after {
   z-index: 9;
   display: none;
 }
-/* line 162, ../_sass/_utils.scss */
+/* line 163, ../_sass/_utils.scss */
 body:after {
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
@@ -491,7 +491,7 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-/* line 173, ../_sass/_utils.scss */
+/* line 174, ../_sass/_utils.scss */
 body.debug:after {
   display: block;
 }
@@ -1093,14 +1093,6 @@ body.debug:after {
   }
 }
 
-<<<<<<< HEAD
-=======
-/* line 102, ../_sass/_modules/_highlight.scss */
-.highlight__list {
-  padding-left: 0;
-}
-
->>>>>>> 30a6ddd138e1868ff42e58c960575143f6738094
 /**
 *
 * Typography
@@ -1283,6 +1275,7 @@ h1 {
   background: #4d4d4d;
   color: #ffffff;
   border: 1px solid #4d4d4d;
+  text-decoration: none;
 }
 
 /* line 44, ../_sass/_components/_button.scss */
@@ -1369,40 +1362,42 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 29, ../_sass/_components/_link.scss */
-.link--primary {
-  color: #cb4437;
+/* line 13, ../_sass/_components/_link.scss */
+a {
+  color: #971b24;
   text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-}
-/* line 23, ../_sass/_components/_link.scss */
-.link--primary:hover {
-  color: #555555;
 }
 
+/* line 18, ../_sass/_components/_link.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 41, ../_sass/_components/_link.scss */
+.cta--primary {
+  color: #cb4437;
+  font-weight: 600;
+  display: inline-block;
+}
+/* line 28, ../_sass/_components/_link.scss */
+.cta--primary:hover {
+  color: #555555;
+}
 /* line 33, ../_sass/_components/_link.scss */
-.link--secondary {
-  color: #cb4437;
-  text-decoration: none;
+.cta--primary:before {
+  content: ">";
   display: inline-block;
-  font-weight: 600;
-}
-/* line 23, ../_sass/_components/_link.scss */
-.link--secondary:hover {
-  color: #555555;
+  padding-right: 16px;
 }
 
-/* line 37, ../_sass/_components/_link.scss */
-.link--inline {
+/* line 45, ../_sass/_components/_link.scss */
+.cta--secondary {
   color: #cb4437;
-  text-decoration: none;
-  display: inline-block;
   font-weight: 600;
-  font-weight: 300;
+  display: inline-block;
 }
-/* line 23, ../_sass/_components/_link.scss */
-.link--inline:hover {
+/* line 28, ../_sass/_components/_link.scss */
+.cta--secondary:hover {
   color: #555555;
 }
 

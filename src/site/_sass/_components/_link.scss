@@ -10,30 +10,38 @@
 *
 **/
 
+a {
+  color: $colorRed;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 // Mixin to create links
-@mixin link($textColor, $isInline: false) {
+@mixin style-cta($textColor, $hasArrow: true) {
   color: $textColor;
-  text-decoration: none;
-  display: inline-block;
   font-weight: 600;
-
-  @if $isInline { font-weight: 300;}
+  display: inline-block;
 
   &:hover {
-    color: #555555;
+    color: $colorGrayDark;
+  }
+
+  @if $hasArrow {
+    &:before {
+      content: ">";
+      display: inline-block;
+      padding-right: 16px;
+    }
   }
 }
 
-
-.link--primary {
-  @include link(#cb4437);
+.cta--primary {
+  @include style-cta(#cb4437, true);
 }
 
-.link--secondary {
-  @include link(#cb4437);
-}
-
-.link--inline {
-  @include link(#cb4437, true);
+.cta--secondary {
+  @include style-cta(#cb4437, false);
 }
