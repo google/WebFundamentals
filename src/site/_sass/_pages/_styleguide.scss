@@ -1,0 +1,34 @@
+/**
+*
+* Styleguide
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.page--styleguide {
+
+  .styleguide__title {
+    color: $colorHighlight;
+  }
+
+  .container > h2 {
+    color: $colorBlue;
+  }
+
+  .styleguide__module-title {
+    margin-bottom: $lineHeight;
+  }
+
+  section {
+    margin-bottom: $lineHeight*2;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: $lineHeight*3 - 1;
+
+  }
+
+}
