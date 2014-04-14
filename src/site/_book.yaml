@@ -1,42 +1,62 @@
 toc:
-- title: "Styleguide"
-  path: /styleguide/
+- title: /
+  path: /
 - title: "Getting Started"
   path: /getting-started/
   section:
     - title: "Create Your First Multi-screen Site"
       path: /getting-started/mulit-screen/
-- title: "Multi-device layouts"
-  path: /multi-device-layouts/
+- title: "The essentials"
+  path: /the-essentials/
   section:
-    - title: "Layout Basics"
-      path: /multi-device-layouts/layout-basics.html
-    - title: "Basics Layouts"
-      path: /multi-device-layouts/basics-layouts.html
-    - title: "Layout Patterns"
-      path: /multi-device-layouts/layout-patterns.html
-    - title: "Components"
-      path: /multi-device-layouts/components.html
-- title: "User Input"
-  path: /user-input/
+    - title: "Multi-device layouts"
+      path: /multi-device-layouts/
+      section:
+        - title: "Layout Basics"
+          path: /the-essentials/multi-device-layouts/layout-basics/
+        - title: "Basics Layouts"
+          path: /the-essentials/multi-device-layouts/basic-layouts/
+        - title: "Layout Patterns"
+          path: /the-essentials/multi-device-layouts/layout-patterns/
+        - title: "UI Elements"
+          path: /the-essentials/multi-device-layouts/ui-elements/
+    - title: "User Input"
+      path: /the-essentials/user-input/
+      section:
+      - title: "Touch Input"
+        path: /the-essentials/user-input/touch-input/
+      - title: "Form Input"
+        path: /the-essentials/user-input/form-input/
+    - title: "Images, Video and Audio"
+      path: /the-essentials/introduction-to-media/
+      section:
+      - title: "Images"
+        path: /the-essentials/introduction-to-media/images/
+      - title: "Video"
+        path: /the-essentials/introduction-to-media/video/
+      - title: "Audio"
+        path: /the-essentials/introduction-to-media/audio/
+    - title: Performance
+      path: /the-essentials/optimizing-performance/
+      section:
+        - title: "Critical Path Rendering"
+          path: /the-essentials/optimizing-performance/critical-path-rendering/
+        - title: "Optimizing content efficiency"
+          path: /the-essentials/optimizing-performance/optimizing-content-efficiency/
+        - title: "Resource cacheing"
+          path: /the-essentials/optimizing-performance/resource-cacheing/
+        - title: "Optimizing networking"
+          path: /the-essentials/optimizing-performance/optimizing-networking/
+        - title: "Optimizing interactivity"
+          path: /the-essentials/optimizing-performance/optimizing-interactivity/
+        - title: "Measuring performance"
+          path: /the-essentials/optimizing-performance/measuring-performance/
+- title: Resources
+  path: /resources/
   section:
-  - title: "Touch Input"
-    path: /user-input/touch
-  - title: "Form Input"
-    path: /user-input/form-input.html
-- title: "Images, Video and Audio"
-  path: /introduction-to-media/
-  section:
-  - title: "Images"
-    path: /introduction-to-media/images.html
-  - title: "Video"
-    path: /introduction-to-media/video/video.html
-  - title: "Audio"
-    path: /introduction-to-media/audio.html
-- title: Performance
-  path: /optimizing-performance/
-  section:
-    - title: "Critical Path Rendering"
-      path: /optimizing-performance/critical-path-rendering/
-    - title: "Network Performance"
-      path: /optimizing-performance/network-performance/
+  - title: "Glossary"
+    path: /resources/glossary/
+  - title: "Styleguide"
+    path: /resources/styleguide/
+- title: Spotlights
+  path: /spotlights/

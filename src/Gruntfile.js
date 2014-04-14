@@ -95,7 +95,7 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			optimisedjs: {
+			optimisedjsToSrc: {
 				src: '*.min.js',
 				dest: '<%= config.source %>/js/',
 				flatten: true,
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
 				nonull: true,
 				cwd: '<%= config.destination %>/js/',
 			},
-			optimisedcss: {
+			optimisedcssToSrc: {
 				src: '*.min.css',
 				dest: '<%= config.source %>/css/',
 				flatten: true,
@@ -112,6 +112,24 @@ module.exports = function(grunt) {
 				expand:true,
 				nonull: true,
 				cwd: '<%= config.destination %>/css/',
+			},
+			jsToDest: {
+				src: '*.js',
+				dest: '<%= config.destination %>/js/',
+				flatten: true,
+				filter: 'isFile',
+				expand:true,
+				nonull: true,
+				cwd: '<%= config.source %>/js/',
+			},
+			cssToDest: {
+				src: '*.css',
+				dest: '<%= config.destination %>/css/',
+				flatten: true,
+				filter: 'isFile',
+				expand:true,
+				nonull: true,
+				cwd: '<%= config.source %>/css/',
 			},
 		},
 
@@ -221,13 +239,13 @@ module.exports = function(grunt) {
 			// When styles change, recompile them
 			styles: {
 				files: ['<%= config.source %>/_sass/**/*.scss'],
-				tasks: ['compass:uncompressed']
+				tasks: ['compass:uncompressed','copy:cssToDest']
 			},
 
 			// when scripts change, lint them and run unit tests
 			scripts: {
 				files: ['<%= config.source %>/**/*.js'],
-				tasks: ['jshint:source']
+				tasks: ['jshint:source','copy:jsToDest']
 			},
 
 			// when jekyll source changes, recompile them
@@ -290,8 +308,8 @@ module.exports = function(grunt) {
 				'concat',					// Combine JS and CSS assets into single files
 				'usemin',					// Carry out optimised asset substitution
 				// 'clean:tidyup',			// Clean up any stray source files
-				'copy:optimisedjs',			// Copy the optimised JS back to the source directory
-				'copy:optimisedcss'			// Copy the optimised CSS back to the source directory
+				'copy:optimisedjsToSrc',			// Copy the optimised JS back to the source directory
+				'copy:optimisedcssToSrc'			// Copy the optimised CSS back to the source directory
 			]);
 		} else {
 			return grunt.task.run([
@@ -306,8 +324,8 @@ module.exports = function(grunt) {
 				'usemin',					// Carry out optimised asset substitution
 				// 'htmlmin:all',			// Minify the final HTML
 				// 'clean:tidyup',			// Clean up any stray source files
-				'copy:optimisedjs',			// Copy the optimised JS back to the source directory
-				'copy:optimisedcss'			// Copy the optimised CSS back to the source directory
+				'copy:optimisedjsToSrc',			// Copy the optimised JS back to the source directory
+				'copy:optimisedcssToSrc'			// Copy the optimised CSS back to the source directory
 			]);
 		}
 
