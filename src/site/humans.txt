@@ -1,7 +1,10 @@
 /* THANKS */
 To the web
 
+Authors: Pete LePage, Paul Kinlan, Sam Dutton, Matt Guan, Meggin Kearny, Katie McCormick
+Developers: ..
+Designers: ..
+
 /* SITE */
 Standards: HTML5, CSS3
-Components: Bootstrap
 Software: Jekyll, optipng
