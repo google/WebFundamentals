@@ -12,12 +12,16 @@
 
 .page--styleguide {
 
-  .main-container > h1 {
+  .styleguide__title {
     color: $colorHighlight;
   }
 
-  .main-container > h2 {
+  .container > h2 {
     color: $colorBlue;
+  }
+
+  .styleguide__module-title {
+    margin-bottom: $lineHeight;
   }
 
   section {
