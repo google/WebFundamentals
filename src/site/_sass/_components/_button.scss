@@ -43,7 +43,7 @@
 
 .button--primary {
   @extend .button;
-  @include button(#cb4437, #ffffff);
+  @include button(#4285f4, #ffffff);
 }
 
 .button--secondary {
