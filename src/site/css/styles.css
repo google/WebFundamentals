@@ -1410,6 +1410,38 @@ a:hover {
 
 /**
 *
+* Breadcrumb
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_breadcrumb.scss */
+.breadcrumbs p {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  padding-top: 2.0000em;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+
+/* line 18, ../_sass/_components/_breadcrumb.scss */
+.breadcrumbs__link {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  padding-top: 2.0000em;
+  padding-bottom: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/**
+*
 * Styleguide
 *
 * Google Web Essentials
