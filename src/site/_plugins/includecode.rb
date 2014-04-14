@@ -14,6 +14,9 @@ module Jekyll
       	path = context.registers[:site].source;
       	contents = File.read(File.join(path, File.dirname(page["path"]), @file))
       	snippet = contents.match(/<!-- \/\/ \[START #{@section}\] -->(.*)<!-- \/\/ \[END #{@section}\] -->/im)[1];
+      	output = ""
+      	snippet.each_line {|s| output += "    " + s}
+      	output
     end
   end
 end

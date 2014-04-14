@@ -40,28 +40,17 @@ tools that you can use to help you along the way.
 # Create first multi-screen page
 
 {% class key-takeaway %}  
-**Key ****Takeaways**
+**Key Takeaways**:
 
 * All pages must include a viewport and make sure it has the recommended 
   configuration.
-
 {% endclass %}
 
 Even for a basic page you must include a viewport meta tag.  The viewport is the 
 most critical[link to viewport doc] component you need for building mobile-first 
 experiences.  Without it, your site will not work well on a mobile device.  
 
-    <!doctype html>
-    <html>
-      <head>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>My first page</title>
-      </head>
-      <body>
-        <h1>My first page</h1>
-        <p>This is easy</p>
-      </body>
-    </html>
+{% include_code _code/helloworld.html helloworld %}
 
 The viewport indicates to the browser that the page needs to be scaled to fit 
 the screen, as such there  are a lot of configurations that you can specify for 
