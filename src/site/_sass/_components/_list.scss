@@ -10,10 +10,7 @@
 *
 **/
 
-.list, .list--links {
-  padding-left: 20px;
-  list-style: none;
-}
+
 
 @mixin bullet-type($bullet) {
   position: relative;
@@ -27,10 +24,15 @@
   }
 }
 
-.list__item {
+ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+li {
   @include bullet-type("#");
 }
 
-.list--links .list__item {
+.list__item {
   @include bullet-type(">");
 }

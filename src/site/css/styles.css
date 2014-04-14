@@ -1324,18 +1324,18 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_components/_list.scss */
-.list, .list--links {
+/* line 27, ../_sass/_components/_list.scss */
+ul {
   padding-left: 20px;
   list-style: none;
 }
 
-/* line 30, ../_sass/_components/_list.scss */
-.list__item {
+/* line 32, ../_sass/_components/_list.scss */
+li {
   position: relative;
 }
-/* line 20, ../_sass/_components/_list.scss */
-.list__item:before {
+/* line 17, ../_sass/_components/_list.scss */
+li:before {
   content: "#";
   display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -1344,12 +1344,12 @@ h1 {
   left: -20px;
 }
 
-/* line 34, ../_sass/_components/_list.scss */
-.list--links .list__item {
+/* line 36, ../_sass/_components/_list.scss */
+.list__item {
   position: relative;
 }
-/* line 20, ../_sass/_components/_list.scss */
-.list--links .list__item:before {
+/* line 17, ../_sass/_components/_list.scss */
+.list__item:before {
   content: ">";
   display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
