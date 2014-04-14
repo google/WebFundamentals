@@ -830,72 +830,120 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_main-navigation.scss */
-.main-nav__list--child {
-  display: none;
-}
-
 /* line 17, ../_sass/_main-navigation.scss */
 .main-nav {
-  background-color: #4f80f2;
+  background: #ffffff;
+}
+@media only screen and (min-width: 620px) {
+  /* line 17, ../_sass/_main-navigation.scss */
+  .main-nav {
+    background-color: #404040;
+  }
 }
 
-/* line 21, ../_sass/_main-navigation.scss */
+/* line 24, ../_sass/_main-navigation.scss */
 .main-nav__list {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  text-align: center;
+}
+@media only screen and (min-width: 620px) {
+  /* line 24, ../_sass/_main-navigation.scss */
+  .main-nav__list {
+    text-align: center;
+  }
 }
 
-/* line 28, ../_sass/_main-navigation.scss */
+/* line 34, ../_sass/_main-navigation.scss */
 .main-nav__item {
   list-style: none;
   display: block;
 }
+@media only screen and (max-width: 619px) {
+  /* line 39, ../_sass/_main-navigation.scss */
+  .main-nav__item:first-child {
+    display: none;
+  }
+}
 @media only screen and (min-width: 620px) {
-  /* line 28, ../_sass/_main-navigation.scss */
+  /* line 34, ../_sass/_main-navigation.scss */
   .main-nav__item {
     display: inline-block;
   }
 }
-/* line 37, ../_sass/_main-navigation.scss */
+/* line 49, ../_sass/_main-navigation.scss */
 .main-nav__item:first-child ~ .main-nav__item {
   padding-top: 0;
 }
 
-/* line 42, ../_sass/_main-navigation.scss */
+/* line 54, ../_sass/_main-navigation.scss */
 .main-nav__link {
-  text-decoration: none;
-  color: white;
   display: block;
-  font-size: 16px;
-  line-height: 1.6250em;
+  color: #404040;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
   /* 26px */
-  padding-top: 1.6250em;
+  padding-top: 1.3000em;
   padding-bottom: 0;
-  padding-left: 16px;
-  padding-right: 16px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+@media only screen and (min-width: 960px) {
+  /* line 54, ../_sass/_main-navigation.scss */
+  .main-nav__link {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
 }
 @media only screen and (min-width: 620px) {
-  /* line 42, ../_sass/_main-navigation.scss */
+  /* line 54, ../_sass/_main-navigation.scss */
+  .main-nav__link {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 54, ../_sass/_main-navigation.scss */
+  .main-nav__link {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 864px;
+  }
+}
+/* line 63, ../_sass/_main-navigation.scss */
+.main-nav__list > li:first-child + li .main-nav__link {
+  background-color: #e8e8e8;
+}
+@media only screen and (min-width: 620px) {
+  /* line 54, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-bottom: 26px;
   }
 }
 
-/* line 55, ../_sass/_main-navigation.scss */
+/* line 72, ../_sass/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 59, ../_sass/_main-navigation.scss */
+/* line 76, ../_sass/_main-navigation.scss */
 .main-nav__item--child {
-  font-size: 13px;
-  line-height: 2.0000em;
-  /* 26px */
-  padding-top: 2.0000em;
-  padding-bottom: 0;
   padding-top: 0;
 }
 
@@ -910,10 +958,57 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
-/* line 14, ../_sass/_main-header.scss */
-.main-header__title,
-.main-header__slogan {
-  display: none;
+/* line 13, ../_sass/_main-header.scss */
+.main-header {
+  background: #404040;
+  color: #ffffff;
+}
+
+/* line 18, ../_sass/_main-header.scss */
+.main-header__title {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 18, ../_sass/_main-header.scss */
+  .main-header__title {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 18, ../_sass/_main-header.scss */
+  .main-header__title {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 864px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 18, ../_sass/_main-header.scss */
+  .main-header__title {
+    display: none;
+  }
+}
+
+/* line 29, ../_sass/_main-header.scss */
+.main-header__logo {
+  color: #ffffff;
 }
 
 /**
@@ -1112,7 +1207,7 @@ body.debug:after {
 *
 **/
 /* line 15, ../_sass/_components/_typography.scss */
-h1, h2, h3, h4, h5, p, ul {
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
@@ -1324,17 +1419,23 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_components/_list.scss */
-.list, .list--links {
+/* line 26, ../_sass/_components/_list.scss */
+ul {
+  margin: 0;
+}
+
+/* line 31, ../_sass/_components/_list.scss */
+.list,
+.list--links {
   padding-left: 20px;
   list-style: none;
 }
 
-/* line 30, ../_sass/_components/_list.scss */
+/* line 36, ../_sass/_components/_list.scss */
 .list__item {
   position: relative;
 }
-/* line 20, ../_sass/_components/_list.scss */
+/* line 16, ../_sass/_components/_list.scss */
 .list__item:before {
   content: "#";
   display: block;
@@ -1344,11 +1445,11 @@ h1 {
   left: -20px;
 }
 
-/* line 34, ../_sass/_components/_list.scss */
+/* line 40, ../_sass/_components/_list.scss */
 .list--links .list__item {
   position: relative;
 }
-/* line 20, ../_sass/_components/_list.scss */
+/* line 16, ../_sass/_components/_list.scss */
 .list--links .list__item:before {
   content: ">";
   display: block;
@@ -1388,7 +1489,7 @@ a:hover {
 }
 /* line 28, ../_sass/_components/_link.scss */
 .cta--primary:hover {
-  color: #555555;
+  color: #404040;
 }
 /* line 33, ../_sass/_components/_link.scss */
 .cta--primary:before {
@@ -1405,7 +1506,7 @@ a:hover {
 }
 /* line 28, ../_sass/_components/_link.scss */
 .cta--secondary:hover {
-  color: #555555;
+  color: #404040;
 }
 
 /**

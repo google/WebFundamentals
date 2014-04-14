@@ -1,30 +1,24 @@
 <nav class="main-nav">
-  <!-- <button class="main-nav__toggler">X</button> -->
+
   <ul class="main-nav__list">
   {% for section in page.content.toc %}
-   <li class="main-nav__item">
+    <li class="main-nav__item">
       <a class="main-nav__link" href="{{ section.path }}" title="{{ section.title }}">
         {{ section.title }}
       </a>
-      {% if section.section %}
-      <ul class="main-nav__list main-nav__list--child">
-        {% for subsection in section.section %}
-        <li class="main-nav__item main-nav__item--child">
-          <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
-          {% if subsection.section %}
-          <ul class="main-nav__list main-nav__list--child">
-            {% for subsubsection in subsection.section %}
+
+      {% if section.title == "The essentials" %}
+        <ul class="main-nav__list--child">
+          {% for subsection in section.section %}
             <li class="main-nav__item main-nav__item--child">
-              <a class="main-nav__link main-nav__link--child" href="{{ subsubsection.path }}">{{ subsubsection.title }}</a>
+              <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
             </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
+          {% endfor %}
+        </ul>
       {% endif %}
-   </li>
+
+    </li>
   {% endfor %}
   </ul>
+
 </nav>

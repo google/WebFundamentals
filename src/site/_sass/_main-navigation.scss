@@ -10,24 +10,36 @@
 *
 **/
 
-.main-nav__list--child {
-  display: none;
-}
+// .main-nav__list--child {
+//   display: none;
+// }
 
 .main-nav {
-  background-color: $colorBlue;
+  background: #ffffff;
+  @include medium {
+    background-color: $colorGrayDark;
+  }
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  text-align: center;
+
+  @include medium {
+    text-align: center;
+  }
 }
 
 .main-nav__item {
   list-style: none;
   display: block;
+
+  @include small-only {
+    &:first-child {
+      display: none;
+    }
+  }
 
   @include medium {
     display: inline-block;
@@ -40,12 +52,17 @@
 }
 
 .main-nav__link {
-  text-decoration: none;
-  color: $colorWhite;
   display: block;
-  @include type--base;
-  padding-left: 16px;
-  padding-right: 16px;
+  color: $colorGrayDark;
+  font-family: $fontHighlight;
+  @include type--large;
+  @include container;
+  padding-top: $lineHeight/2;
+  padding-bottom: $lineHeight/2;
+
+  .main-nav__list > li:first-child + li & {
+    background-color: $colorGray;
+  }
 
   @include medium {
     padding-bottom: $lineHeight;
@@ -57,6 +74,5 @@
 }
 
 .main-nav__item--child {
-  @include type--small;
   padding-top: 0;
 }
