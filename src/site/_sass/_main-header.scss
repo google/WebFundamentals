@@ -16,8 +16,9 @@
 }
 
 .main-header__title {
-  @include type--base;
   @include container;
+
+  @include type--large;
   padding-top: $lineHeight/2;
   padding-bottom: $lineHeight/2;
 

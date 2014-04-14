@@ -830,55 +830,55 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
-/* line 17, ../_sass/_main-navigation.scss */
+/* line 13, ../_sass/_main-navigation.scss */
 .main-nav {
   background: #ffffff;
 }
 @media only screen and (min-width: 620px) {
-  /* line 17, ../_sass/_main-navigation.scss */
+  /* line 13, ../_sass/_main-navigation.scss */
   .main-nav {
     background-color: #404040;
   }
 }
 
-/* line 24, ../_sass/_main-navigation.scss */
+/* line 20, ../_sass/_main-navigation.scss */
 .main-nav__list {
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 @media only screen and (min-width: 620px) {
-  /* line 24, ../_sass/_main-navigation.scss */
+  /* line 20, ../_sass/_main-navigation.scss */
   .main-nav__list {
     text-align: center;
   }
 }
 
-/* line 34, ../_sass/_main-navigation.scss */
+/* line 30, ../_sass/_main-navigation.scss */
 .main-nav__item {
   list-style: none;
   display: block;
+  background-color: #e8e8e8;
 }
 @media only screen and (max-width: 619px) {
-  /* line 39, ../_sass/_main-navigation.scss */
-  .main-nav__item:first-child {
+  /* line 36, ../_sass/_main-navigation.scss */
+  .main-nav__item.main-nav__item--logo {
     display: none;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 34, ../_sass/_main-navigation.scss */
+  /* line 30, ../_sass/_main-navigation.scss */
   .main-nav__item {
     display: inline-block;
   }
 }
-/* line 49, ../_sass/_main-navigation.scss */
+/* line 46, ../_sass/_main-navigation.scss */
 .main-nav__item:first-child ~ .main-nav__item {
   padding-top: 0;
 }
 
-/* line 54, ../_sass/_main-navigation.scss */
+/* line 51, ../_sass/_main-navigation.scss */
 .main-nav__link {
-  display: block;
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 20px;
@@ -887,6 +887,8 @@ body.debug:after {
   /* 26px */
   padding-top: 1.3000em;
   padding-bottom: 0;
+  margin-bottom: 1px;
+  display: block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
@@ -900,7 +902,7 @@ body.debug:after {
   padding-bottom: 13px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 54, ../_sass/_main-navigation.scss */
+  /* line 51, ../_sass/_main-navigation.scss */
   .main-nav__link {
     font-size: 26px;
     font-weight: 300;
@@ -911,7 +913,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 54, ../_sass/_main-navigation.scss */
+  /* line 51, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -919,32 +921,47 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 54, ../_sass/_main-navigation.scss */
+  /* line 51, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-left: 0;
     padding-right: 0;
     max-width: 864px;
   }
 }
-/* line 63, ../_sass/_main-navigation.scss */
-.main-nav__list > li:first-child + li .main-nav__link {
-  background-color: #e8e8e8;
-}
 @media only screen and (min-width: 620px) {
-  /* line 54, ../_sass/_main-navigation.scss */
+  /* line 51, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-bottom: 26px;
   }
 }
 
-/* line 72, ../_sass/_main-navigation.scss */
+/* line 68, ../_sass/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 76, ../_sass/_main-navigation.scss */
+/* line 72, ../_sass/_main-navigation.scss */
 .main-nav__item--child {
   padding-top: 0;
+}
+
+/* line 76, ../_sass/_main-navigation.scss */
+.main-nav__link--child {
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+@media only screen and (min-width: 620px) {
+  /* line 84, ../_sass/_main-navigation.scss */
+  .main-nav__subnav {
+    display: none;
+  }
 }
 
 /**
@@ -966,11 +983,6 @@ body.debug:after {
 
 /* line 18, ../_sass/_main-header.scss */
 .main-header__title {
-  font-size: 16px;
-  line-height: 1.6250em;
-  /* 26px */
-  padding-top: 1.6250em;
-  padding-bottom: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
@@ -980,6 +992,12 @@ body.debug:after {
   padding-right: 5%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
   padding-top: 13px;
   padding-bottom: 13px;
 }
@@ -999,6 +1017,17 @@ body.debug:after {
     max-width: 864px;
   }
 }
+@media only screen and (min-width: 960px) {
+  /* line 18, ../_sass/_main-header.scss */
+  .main-header__title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+}
 @media only screen and (min-width: 620px) {
   /* line 18, ../_sass/_main-header.scss */
   .main-header__title {
@@ -1006,7 +1035,7 @@ body.debug:after {
   }
 }
 
-/* line 29, ../_sass/_main-header.scss */
+/* line 30, ../_sass/_main-header.scss */
 .main-header__logo {
   color: #ffffff;
 }
@@ -1082,7 +1111,7 @@ body.debug:after {
   }
   /* line 17, ../_sass/_modules/_highlight.scss */
   .highlight__container:before {
-    content: "!";
+    content: attr(data-character);
     display: block;
     position: absolute;
     bottom: 0;
@@ -1100,10 +1129,6 @@ body.debug:after {
     right: auto;
     left: 0;
   }
-  /* line 48, ../_sass/_modules/_highlight.scss */
-  .highlight--learning .highlight__container:before {
-    content: "}";
-  }
   /* line 54, ../_sass/_modules/_highlight.scss */
   .highlight--learning .highlight__container:before {
     bottom: 52px;
@@ -1118,7 +1143,7 @@ body.debug:after {
   }
 }
 
-/* line 85, ../_sass/_modules/_highlight.scss */
+/* line 84, ../_sass/_modules/_highlight.scss */
 .highlight__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1130,7 +1155,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 85, ../_sass/_modules/_highlight.scss */
+  /* line 84, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1142,7 +1167,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 85, ../_sass/_modules/_highlight.scss */
+  /* line 84, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1152,7 +1177,7 @@ body.debug:after {
     padding-top: 0.6190em;
     padding-bottom: 0;
   }
-  /* line 92, ../_sass/_modules/_highlight.scss */
+  /* line 91, ../_sass/_modules/_highlight.scss */
   .highlight--large .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1164,7 +1189,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 85, ../_sass/_modules/_highlight.scss */
+  /* line 84, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1176,7 +1201,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 92, ../_sass/_modules/_highlight.scss */
+  /* line 91, ../_sass/_modules/_highlight.scss */
   .highlight--large .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1188,11 +1213,48 @@ body.debug:after {
   }
 }
 
-/* line 1, ../_sass/_modules/_editorial-header.scss */
+/**
+*
+* Editorial Header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_editorial-header.scss */
 .editorial-header {
   background-color: #e8e8e8;
   padding-bottom: 104px;
   margin-bottom: 52px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 20, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container {
+    position: relative;
+  }
+  /* line 26, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container:before, .editorial-header .container:after {
+    display: block;
+    position: absolute;
+    line-height: 0;
+    top: 50%;
+    font-size: 1400px;
+    color: rgba(0, 0, 0, 0.1);
+  }
+  /* line 35, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container:before {
+    content: ">";
+    right: 90%;
+  }
+  /* line 40, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header .container:after {
+    content: "<";
+    left: 75%;
+  }
 }
 
 /**
@@ -1410,7 +1472,7 @@ h1 {
 
 /**
 *
-* Lisr
+* List
 *
 * Google Web Essentials
 *
@@ -1419,44 +1481,35 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 26, ../_sass/_components/_list.scss */
+/* line 24, ../_sass/_components/_list.scss */
 ul {
-  margin: 0;
-}
-
-/* line 31, ../_sass/_components/_list.scss */
-.list,
-.list--links {
-  padding-left: 20px;
+  padding-left: 0;
   list-style: none;
 }
 
-/* line 36, ../_sass/_components/_list.scss */
-.list__item {
-  position: relative;
-}
-/* line 16, ../_sass/_components/_list.scss */
-.list__item:before {
+/* line 14, ../_sass/_components/_list.scss */
+li:before {
   content: "#";
-  display: block;
+  display: inline-block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  position: absolute;
-  left: -20px;
+  padding-right: 16px;
+  line-height: 0;
 }
 
-/* line 40, ../_sass/_components/_list.scss */
-.list--links .list__item {
-  position: relative;
-}
-/* line 16, ../_sass/_components/_list.scss */
-.list--links .list__item:before {
+/* line 14, ../_sass/_components/_list.scss */
+.list__item:before {
   content: ">";
-  display: block;
+  display: inline-block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  position: absolute;
-  left: -20px;
+  padding-right: 16px;
+  line-height: 0;
+}
+
+/* line 37, ../_sass/_components/_list.scss */
+.main-nav__item:before {
+  display: none;
 }
 
 /**
@@ -1527,10 +1580,9 @@ a:hover {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
-  font-weight: 600;
 }
 
-/* line 18, ../_sass/_components/_breadcrumb.scss */
+/* line 17, ../_sass/_components/_breadcrumb.scss */
 .breadcrumbs__link {
   font-size: 13px;
   line-height: 2.0000em;
@@ -1539,6 +1591,32 @@ a:hover {
   padding-bottom: 0;
   color: black;
   font-weight: 600;
+}
+
+/**
+*
+* subsection__title
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_subsection-title.scss */
+.subsection-title {
+  color: #4f80f2;
+}
+
+/* line 17, ../_sass/_components/_subsection-title.scss */
+.subsection-number {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  display: block;
 }
 
 /**

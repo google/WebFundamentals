@@ -2,19 +2,26 @@
 
   <ul class="main-nav__list">
   {% for section in page.content.toc %}
-    <li class="main-nav__item">
+    <li class="main-nav__item {% if section.logo %} main-nav__item--logo {% endif %}">
       <a class="main-nav__link" href="{{ section.path }}" title="{{ section.title }}">
         {{ section.title }}
       </a>
 
       {% if section.title == "The essentials" %}
-        <ul class="main-nav__list--child">
-          {% for subsection in section.section %}
-            <li class="main-nav__item main-nav__item--child">
-              <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+
+        <div class="main-nav__subnav">
+
+          <a href="#" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Essentials</a>
+
+          <ul class="main-nav__list--child">
+            {% for subsection in section.section %}
+              <li class="main-nav__item main-nav__item--child">
+                <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
       {% endif %}
 
     </li>
