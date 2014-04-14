@@ -1,0 +1,20 @@
+/**
+*
+* subsection__title
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.subsection-title {
+  color: $colorBlue;
+}
+
+.subsection-number {
+  @include type--base;
+  display: block;
+}

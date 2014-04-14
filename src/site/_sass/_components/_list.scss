@@ -1,6 +1,6 @@
 /**
 *
-* Lisr
+* List
 *
 * Google Web Essentials
 *
@@ -10,27 +10,32 @@
 *
 **/
 
-.list, .list--links {
-  padding-left: 20px;
-  list-style: none;
-}
+
 
 @mixin bullet-type($bullet) {
-  position: relative;
   &:before {
     content: $bullet;
-    display: block;
+    display: inline-block;
     font-family: $fontHighlight;
     font-weight: 400;
-    position: absolute;
-    left: -20px;
+    padding-right: 16px;
+    line-height: 0;
   }
 }
 
-.list__item {
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
   @include bullet-type("#");
 }
 
-.list--links .list__item {
+.list__item {
   @include bullet-type(">");
+}
+
+.main-nav__item:before {
+  display: none;
 }
