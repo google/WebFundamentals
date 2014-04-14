@@ -56,6 +56,8 @@ The viewport indicates to the browser that the page needs to be scaled to fit
 the screen, as such there  are a lot of configurations that you can specify for 
 your viewport.  The one we recommend is:
 
+{% include_code _code/viewport.html viewport %} 
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 This works well across all mobile and tablet devices and orientations as it 
@@ -118,23 +120,13 @@ absolutely necessity.
 Now that we know the content we will create, lets create our structure for the 
 content.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>TODO: CODE</td>
-</tr>
-</table>
+TODO: CODE
 
 Like every site, we will have a lot of users who require assistive technology 
 such as screen readers to use a site.  It is easy to get started with making 
 sure our sites are accessible to all users.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>TODO: CODE</td>
-</tr>
-</table>
+TODO: CODE
 
 ## Create a great form
 
@@ -192,10 +184,6 @@ Link to request AutoComplete
 * Each source image should be made for 2x DPI and 1x DPI
 * Highly compress all your images
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 {% endclass %}
 
 Sites without images can be a little boring.  There are two types of images:  
@@ -217,8 +205,7 @@ so lets add some in.
       <img src="">
       <img src="">
       <img src="">
-
-</div>
+    </div>
 
 ## Add a video to your site
 
@@ -260,7 +247,7 @@ TV.  At each point where the content doesn't look right we will add a
 breakpoint.
 
 A breakpoint is a point in your design where you alter the layout in CSS to 
-accomodate the screen dimensions.
+accommodate the screen dimensions.
 
 To learn more about Micro-reflows see [link]
 
