@@ -1568,6 +1568,7 @@ h1 {
 ul {
   padding-left: 0;
   list-style: none;
+  margin: 0;
 }
 
 /* line 14, ../_sass/_components/_list.scss */
@@ -1590,7 +1591,7 @@ li:before {
   line-height: 0;
 }
 
-/* line 37, ../_sass/_components/_list.scss */
+/* line 38, ../_sass/_components/_list.scss */
 .main-nav__item:before {
   display: none;
 }
