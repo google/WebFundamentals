@@ -58,5 +58,7 @@ toc:
     path: /resources/glossary/
   - title: "Styleguide"
     path: /resources/styleguide/
+  - title: "Example Article"
+    path: /resources/example-article/
 - title: Spotlights
   path: /spotlights/

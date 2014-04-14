@@ -12,9 +12,11 @@
 
 .subsection-title {
   color: $colorBlue;
+  margin-top: $lineHeight;
 }
 
 .subsection-number {
   @include type--base;
+  padding-top: 0;
   display: block;
 }
