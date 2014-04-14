@@ -19,12 +19,12 @@ structuring your content across screen sizes.
 
 Our goal in this guide is to build an example product landing page for our 
 hypothetical Smiles product.  The end result will be a fully functioning page 
-that covers many of the core prinicples of building experiences that work well 
+that covers many of the core principles of building experiences that work well 
 across all different device types.
 
 # Set up development workspace
 
-Great news.  There is no need to set anything up.  You just need a text editor 
+Great news. There is no need to set anything up. You just need a text editor 
 and 15 minutes to read this guide.
 
 If you don't know what text editor to use here are some that we use:
@@ -57,8 +57,6 @@ the screen, as such there  are a lot of configurations that you can specify for
 your viewport.  The one we recommend is:
 
 {% include_code _code/viewport.html viewport %} 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 This works well across all mobile and tablet devices and orientations as it 
 tells the page to fit.....
@@ -94,7 +92,7 @@ to touch a mobile device.
 Using this flow really helps you in the early stages of your project as you can 
 quickly see how it would look across devices.
 
-If you have  real device even better, you can ... [todo]
+If you have real device even better, you can ... [todo]
 
 # Flesh out the page with content
 
@@ -117,16 +115,32 @@ product "Smiles", a form to collect information about the user.  We also need to
 show users that Smiles are great, so adding images and tables of data is an 
 absolutely necessity.
 
-Now that we know the content we will create, lets create our structure for the 
-content.
+Now that we know the content, lets create our structure for the content.  It will
+be pretty simple.  We need a heading areas, 3 sections of information and a footer.
 
-TODO: CODE
+{% include_code _code/addstructure.html structure %}
 
-Like every site, we will have a lot of users who require assistive technology 
-such as screen readers to use a site.  It is easy to get started with making 
-sure our sites are accessible to all users.
+This is the basic structure now we can add some of the basic content
 
-TODO: CODE
+### Add header
+
+{% include_code _code/addcontent.html headline %}
+
+### Add Section 1
+
+{% include_code _code/addcontent.html section1 %}
+
+### Add Section 2
+
+{% include_code _code/addcontent.html section2 %}
+
+### Add Section 3
+
+{% include_code _code/addcontent.html section3 %}
+
+### Add Footer
+
+{% include_code _code/addcontent.html footer %}
 
 ## Create a great form
 
