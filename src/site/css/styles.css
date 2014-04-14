@@ -1,4 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
 /**
 *
 * Main Stylesheet
@@ -10,6 +9,7 @@
 * @author Antoine Grelard
 *
 **/
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
 /**
 *
 * Utils
@@ -466,7 +466,7 @@ body {
   font-weight: 300;
   position: relative;
 }
-/* line 148, ../_sass/_utils.scss */
+/* line 149, ../_sass/_utils.scss */
 body:after {
   content: "";
   position: absolute;
@@ -478,7 +478,7 @@ body:after {
   z-index: 9;
   display: none;
 }
-/* line 162, ../_sass/_utils.scss */
+/* line 163, ../_sass/_utils.scss */
 body:after {
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
@@ -491,7 +491,7 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-/* line 173, ../_sass/_utils.scss */
+/* line 174, ../_sass/_utils.scss */
 body.debug:after {
   display: block;
 }
@@ -1093,11 +1093,16 @@ body.debug:after {
   }
 }
 
-/* line 98, ../_sass/_modules/_highlight.scss */
-.highlight__list {
-  padding-left: 0;
+<<<<<<< HEAD
+=======
+/* line 1, ../_sass/_modules/_editorial-header.scss */
+.editorial-header {
+  background-color: #e8e8e8;
+  padding-bottom: 104px;
+  margin-bottom: 52px;
 }
 
+>>>>>>> e0db0a91ce522e2d133619fd8774f4dda27dff88
 /**
 *
 * Typography
@@ -1280,13 +1285,14 @@ h1 {
   background: #4d4d4d;
   color: #ffffff;
   border: 1px solid #4d4d4d;
+  text-decoration: none;
 }
 
 /* line 44, ../_sass/_components/_button.scss */
 .button--primary {
-  background: #cb4437;
+  background: #4285f4;
   color: white;
-  border: 1px solid #a4352b;
+  border: 1px solid #1266f1;
 }
 
 /* line 49, ../_sass/_components/_button.scss */
@@ -1312,6 +1318,101 @@ h1 {
 
 /**
 *
+* Lisr
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_list.scss */
+.list, .list--links {
+  padding-left: 20px;
+  list-style: none;
+}
+
+/* line 30, ../_sass/_components/_list.scss */
+.list__item {
+  position: relative;
+}
+/* line 20, ../_sass/_components/_list.scss */
+.list__item:before {
+  content: "#";
+  display: block;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  left: -20px;
+}
+
+/* line 34, ../_sass/_components/_list.scss */
+.list--links .list__item {
+  position: relative;
+}
+/* line 20, ../_sass/_components/_list.scss */
+.list--links .list__item:before {
+  content: ">";
+  display: block;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  left: -20px;
+}
+
+/**
+*
+* Link
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_link.scss */
+a {
+  color: #971b24;
+  text-decoration: none;
+}
+
+/* line 18, ../_sass/_components/_link.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 41, ../_sass/_components/_link.scss */
+.cta--primary {
+  color: #cb4437;
+  font-weight: 600;
+  display: inline-block;
+}
+/* line 28, ../_sass/_components/_link.scss */
+.cta--primary:hover {
+  color: #555555;
+}
+/* line 33, ../_sass/_components/_link.scss */
+.cta--primary:before {
+  content: ">";
+  display: inline-block;
+  padding-right: 16px;
+}
+
+/* line 45, ../_sass/_components/_link.scss */
+.cta--secondary {
+  color: #cb4437;
+  font-weight: 600;
+  display: inline-block;
+}
+/* line 28, ../_sass/_components/_link.scss */
+.cta--secondary:hover {
+  color: #555555;
+}
+
+/**
+*
 * Styleguide
 *
 * Google Web Essentials
@@ -1322,14 +1423,18 @@ h1 {
 *
 **/
 /* line 15, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .main-container > h1 {
+.page--styleguide .styleguide__title {
   color: #971b24;
 }
 /* line 19, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .main-container > h2 {
+.page--styleguide .container > h2 {
   color: #4f80f2;
 }
 /* line 23, ../_sass/_pages/_styleguide.scss */
+.page--styleguide .styleguide__module-title {
+  margin-bottom: 26px;
+}
+/* line 27, ../_sass/_pages/_styleguide.scss */
 .page--styleguide section {
   margin-bottom: 52px;
   border-bottom: 1px solid #ccc;

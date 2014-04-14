@@ -26,34 +26,34 @@
     background: #4d4d4d;
     color: #ffffff;
     border: 1px solid #4d4d4d;
+    text-decoration: none;
   }
 }
 
 // Mixin to create buttons
-@mixin button($color, $textColor, $isInverted: false) {
+@mixin style-button($color, $textColor, $isInverted: false) {
 
   background: $color;
   color: $textColor;
   border: 1px solid darken($color, 10%);
 
   @if $isInverted { border-color: transparent;}
-
 }
 
 
 .button--primary {
   @extend .button;
-  @include button(#cb4437, #ffffff);
+  @include style-button(#4285f4, #ffffff);
 }
 
 .button--secondary {
   @extend .button;
-  @include button(#fafafa, #cb4437);
+  @include style-button(#fafafa, #cb4437);
 }
 
 .button--secondary-variation {
   @extend .button;
-  @include button(#fafafa, #cb4437, true);
+  @include style-button(#fafafa, #cb4437, true);
 }
 
 .styleguide__inverted-block {

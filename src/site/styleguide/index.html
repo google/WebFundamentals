@@ -13,16 +13,16 @@ NOTE: This is our styleguide
 {% endcomment %}
 
 
-<div class="main-container">
+<div class="container">
 
-  <h1>Styleguide</h1>
+  <h1 class="styleguide__title">Styleguide</h1>
 
   <h2>Components</h2>
 
 
   <a name="typography"></a>
   <section class="styleguide__typography">
-    <h3>Typography</h3>
+    <h3 class="styleguide__module-title">Typography</h3>
     <p class="small">Lorem ipsum dolor sit amet.</p>
     <p class="base">Lorem ipsum dolor sit amet.</p>
     <p class="medium">Lorem ipsum dolor sit amet.</p>
@@ -36,7 +36,7 @@ NOTE: This is our styleguide
 
   <a name="buttons"></a>
   <section class="styleguide__buttons">
-    <h3>Buttons</h3>
+    <h3 class="styleguide__module-title">Buttons</h3>
 
     <div>
       <h4>Primary</h4>
@@ -55,10 +55,49 @@ NOTE: This is our styleguide
     </div>
   </section>
 
+  <a name="lists"></a>
+  <section class="styleguide__lists">
+    <h3>Lists</h3>
+    <ul class="list">
+      <li class="list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="list__item">Dicta optio cumque dolore hic ea facilis</li>
+      <li class="list__item">Minus, possimus, veniam, incidunt eligendi</li>
+    </ul>
+
+    <ul class="list--links">
+      <li class="list__item">Lorem ipsum dolor sit amet.</li>
+      <li class="list__item">Dicta optio cumque dolore hic ea facilis</li>
+      <li class="list__item">Minus, possimus, veniam, incidunt eligendi</li>
+    </ul>
+
+  </section>
+
+
+  <a name="links"></a>
+  <section class="styleguide__links">
+    <h3>Links</h3>
+
+    <div>
+      <h4>Primary</h4>
+      <a href="#" class="cta--primary">Use our tool</a>
+    </div>
+
+    <div>
+      <h4>Secondary</h4>
+      <div>
+        <a href="#" class="cta--secondary">Use our tool</a>
+      </div>
+    </div>
+
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="cta">use our tool</a> Fugiat, quam alias voluptatem tempora minus dolor facere cumque necessitatibus placeat velit aliquid ab dolore beatae. Neque ipsam in a illum repellendus?</p>
+    </div>
+
+  </section>
 
   <a name="grid"></a>
   <section class="styleguide__grid">
-    <h3>Grid</h3>
+    <h3 class="styleguide__module-title">Grid</h3>
 
     <div class="clear demo">
       <div class="g-medium--half g-wide--1"></div>
@@ -123,9 +162,9 @@ NOTE: This is our styleguide
 
   <h2>Modules</h2>
 
-  <h3>Highlights</h3>
+  <h3 class="styleguide__module-title">Highlights</h3>
 
-</div> <!-- // closing main-container -->
+</div> <!-- // closing container -->
 
 <section class="styleguide__highlights">
 
@@ -139,7 +178,27 @@ NOTE: This is our styleguide
 
 </section>
 
-<div class="main-container">
-
-  <h3></h3>
+<div class="container">
+  <h3 class="styleguide__module-title">Editorial Header</h3>
 </div>
+
+<section class="styleguide__editorial-header">
+
+  <div class="editorial-header">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <p><a href="#">The Essentials</a></p>
+      </nav>
+
+      <h1 class="editorial-header__title">Layout Basics</h1>
+      <p class="editorial-header__excerpt g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Donec augue diam, scelerisque eget lectus in, posuere aliquet mi. Pellentesque suscipit nisl gravida sem tincidunt, id blandit turpis commodo.</p>
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+
