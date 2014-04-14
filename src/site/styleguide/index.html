@@ -168,13 +168,13 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-  {% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+  {% include modules/highlight.liquid character="}" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
 
-  {% include modules/highlight.liquid title="Remember" list=page.learning-list %}
+  {% include modules/highlight.liquid character="!" title="Remember" list=page.learning-list %}
 
-  {% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
 
 </section>
 

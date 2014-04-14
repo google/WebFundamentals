@@ -987,7 +987,7 @@ body.debug:after {
   }
   /* line 17, ../_sass/_modules/_highlight.scss */
   .highlight__container:before {
-    content: "!";
+    content: attr(data-character);
     display: block;
     position: absolute;
     bottom: 0;
@@ -1005,10 +1005,6 @@ body.debug:after {
     right: auto;
     left: 0;
   }
-  /* line 48, ../_sass/_modules/_highlight.scss */
-  .highlight--learning .highlight__container:before {
-    content: "}";
-  }
   /* line 54, ../_sass/_modules/_highlight.scss */
   .highlight--learning .highlight__container:before {
     bottom: 52px;
@@ -1023,7 +1019,7 @@ body.debug:after {
   }
 }
 
-/* line 85, ../_sass/_modules/_highlight.scss */
+/* line 84, ../_sass/_modules/_highlight.scss */
 .highlight__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1035,7 +1031,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 85, ../_sass/_modules/_highlight.scss */
+  /* line 84, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1047,7 +1043,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 85, ../_sass/_modules/_highlight.scss */
+  /* line 84, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1057,7 +1053,7 @@ body.debug:after {
     padding-top: 0.6190em;
     padding-bottom: 0;
   }
-  /* line 92, ../_sass/_modules/_highlight.scss */
+  /* line 91, ../_sass/_modules/_highlight.scss */
   .highlight--large .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1069,7 +1065,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 85, ../_sass/_modules/_highlight.scss */
+  /* line 84, ../_sass/_modules/_highlight.scss */
   .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1081,7 +1077,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 92, ../_sass/_modules/_highlight.scss */
+  /* line 91, ../_sass/_modules/_highlight.scss */
   .highlight--large .highlight__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1093,7 +1089,18 @@ body.debug:after {
   }
 }
 
-/* line 1, ../_sass/_modules/_editorial-header.scss */
+/**
+*
+* Editorial Header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_editorial-header.scss */
 .editorial-header {
   background-color: #e8e8e8;
   padding-bottom: 104px;

@@ -11,11 +11,11 @@
 **/
 
 
-@mixin highlight-symbol($symbol, $verticalOffset: 0, $horizontalOffset: 0, $fontSize: 350px) {
+@mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 0, $fontSize: 350px) {
   position: relative;
 
   &:before {
-    content: $symbol;
+    content: attr(data-character);
     display: block;
 
     position: absolute;
@@ -73,10 +73,9 @@
 
   @include medium {
     padding-bottom: $lineHeight * 2;
-    @include highlight-symbol("!");
+    @include highlight-symbol();
 
     .highlight--learning & {
-      @include highlight-symbol-override("}");
       @include highlight-vertical-offset-override($lineHeight*2);
     }
   }
