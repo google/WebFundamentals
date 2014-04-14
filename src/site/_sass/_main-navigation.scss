@@ -12,6 +12,7 @@
 
 .main-nav {
   background: #ffffff;
+
   @include medium {
     background-color: $colorGrayDark;
   }
@@ -24,6 +25,8 @@
 
   @include medium {
     text-align: center;
+    @include container;
+    @extend .clear;
   }
 }
 
@@ -39,7 +42,9 @@
   }
 
   @include medium {
-    display: inline-block;
+    float: left;
+    background-color: transparent;
+    width: 20%;
   }
 
   // Remove the margin-top apart from first-child
@@ -55,13 +60,25 @@
   margin-bottom: 1px;
 
   display: block;
-  @include container;
 
   padding-top: $lineHeight/2;
-  padding-bottom: $lineHeight/2;
+  padding-bottom: ($lineHeight/2) - 1;
+
+  @include small-only {
+    @include container;
+  }
 
   @include medium {
+    // padding-bottom: $lineHeight;
+    color: #ffffff;
+  }
+
+  @include wide {
     padding-bottom: $lineHeight;
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -77,7 +94,7 @@
   background: #ffffff;
   @include type--base;
   padding-top: $lineHeight/2;
-  padding-bottom: $lineHeight/2;
+  padding-bottom: ($lineHeight/2) - 1;
 }
 
 
