@@ -10,7 +10,6 @@ collection: performance
 ---
   
 # Critical Rendering Path
-
 Delivering a fast web experience requires a lot of work by the browser. Most of 
 this work is hidden from us as web developers: we write the markup, and a nice 
 looking page comes out on the screen. But how exactly does the browser go from 
@@ -36,37 +35,42 @@ overview of how the browser goes about displaying a simple page.
 
 # Constructing the Object Model
 
+{% class key-takeaway %}  
+Key takeaways:
+
+* Bytes → characters → tokens → nodes → object model
+* HTML markup is transformed into a Document Object Model (DOM)
+* CSS markup is transformed into a CSS Object Model (CSSOM)
+* Both DOM and CSSOM are tree structures that capture the structure of the 
+  markup
+* DOM and CSSOM are independent data structures
+* DevTool Timeline allows us to capture and inspect the construction and 
+  processing costs of DOM and CSSOM
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td>Key takeaways:
-Bytes → characters → tokens → nodes → object model
-HTML markup is transformed into a Document Object Model (DOM)
-CSS markup is transformed into a CSS Object Model (CSSOM)
-Both DOM and CSSOM are tree structures that capture the structure of the markup
-DOM and CSSOM are independent data structures
-DevTool Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM</td>
-</tr>
 </table>
+
+{% endclass %}
 
 ## Document Object Model (DOM)
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-  </body>
-</html></td>
-</tr>
 </table>
 
 Let's start, with the simplest possible case: a plain HTML page with some text 
@@ -134,15 +138,14 @@ stylesheet: style.css. Anticipating that it will need this resource to render
 the page, it immediately dispatches a request for this resource, which comes 
 back with the following content:
 
+      body { font-size: 16px }
+         p { font-weight: bold }
+      span { color: red }
+    p span { display: none }
+       img { float: right }
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td>  body { font-size: 16px }
-     p { font-weight: bold }
-  span { color: red }
-p span { display: none }
-   img { float: right }</td>
-</tr>
 </table>
 
 Of course, we could have declared our styles directly within the HTML markup 
@@ -200,16 +203,21 @@ links the DOM and CSSOM together.
 
 # Render-tree construction, Layout, and Paint
 
+{% class key-takeaway %}  
+Key takeaways
+
+* The DOM and CSSOM trees are combined to form the render tree
+* Render tree contains only the nodes required to render the page
+* Layout is a recursive process which computes the exact position and size of 
+  each node within the renderer
+* Paint is the last step, which takes in the render tree and position and size 
+  of each element and renders the pixels to the screen
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td>Key takeaways
-The DOM and CSSOM trees are combined to form the render tree
-Render tree contains only the nodes required to render the page
-Layout is a recursive process which computes the exact position and size of each node within the renderer
-Paint is the last step, which takes in the render tree and position and size of each element and renders the pixels to the screen</td>
-</tr>
 </table>
+
+{% endclass %}
 
 In the previous section on constructing the object model we built the DOM and 
 the CSSOM trees based on the HTML and CSS input. However, both of these are 
@@ -257,20 +265,20 @@ the page. Layout is a recursive process, which means that it computes the
 geometry of the parent element and then its children. Let's consider a simple 
 hands-on example:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      </head>
+      <body>
+        <div style="width: 50%">
+          <div style="width: 50%">Hello world!</div>
+        </div>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  </head>
-  <body>
-    <div style="width: 50%">
-      <div style="width: 50%">Hello world!</div>
-    </div>
-  </body>
-</html></td>
-</tr>
 </table>
 
 The body of the above page contains two nested div's: the first (parent) div 
@@ -331,15 +339,16 @@ i.e. achieve higher refresh rate for interactive content.
 
 # Render Blocking CSS
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-By default CSS is treated as a render blocking resource
-Media types and media queries allow us to mark some CSS resources as non render blocking
-All CSS resources, regardless of blocking or non-blocking behavior are downloaded by the browser</td>
-</tr>
-</table>
+{% class key-takeaway %}  
+**Key takeaways:**
+
+* By default CSS is treated as a render blocking resource
+* Media types and media queries allow us to mark some CSS resources as non 
+  render blocking
+* All CSS resources, regardless of blocking or non-blocking behavior are 
+  downloaded by the browser
+
+{% endclass %}
 
 In the previous section we saw that the critical rendering path requires that we 
 have both the DOM and the CSSOM to construct the render tree, which creates an 
@@ -376,13 +385,13 @@ resources!
 
 CSS "media types" and "media queries" allow us to address this very use case:
 
+    <link href="style.css" rel="stylesheet">
+    <link href="print.css" rel="stylesheet" media="print">
+
+<link href="other.css" rel="stylesheet" **media="****(min-width: 40em)****"**>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><link href="style.css" rel="stylesheet">
-<link href="print.css" rel="stylesheet" media="print">
-<link href="other.css" rel="stylesheet" media="(min-width: 40em)"></td>
-</tr>
 </table>
 
 A media query consists of a media type and zero or more expressions that check 
@@ -404,14 +413,13 @@ performance impact on the critical rendering path!**
 
 Let's consider some hands-on examples:
 
+    <link href="style.css"    rel="stylesheet">
+    <link href="style.css"    rel="stylesheet" media="screen">
+    <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+    <link href="print.css"    rel="stylesheet" media="print">
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
-<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
-<link href="print.css"    rel="stylesheet" media="print"></td>
-</tr>
 </table>
 
 * First declaration is render blocking and matches in all conditions.
@@ -431,15 +439,18 @@ for non-blocking resources.
 
 # Adding interactivity with JavaScript
 
+{% class key-takeaway %}  
+Key takeaways:
+
+* JavaScript can query and modify DOM and CSSOM
+* JavaScript execution blocks on CSSOM
+* JavaScript blocks DOM construction unless explicitly declared as async
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td>Key takeaways:
-JavaScript can query and modify DOM and CSSOM
-JavaScript execution blocks on CSSOM
-JavaScript blocks DOM construction unless explicitly declared as async</td>
-</tr>
 </table>
+
+{% endclass %}
 
 JavaScript is a dynamic language that runs in the browser and allows us to alter 
 just about every aspect of how the page behaves: we can modify content on the 
@@ -448,32 +459,34 @@ properties of each element, we can handle user input, and much more. To
 illustrate this in action let's augment our previous "Hello World" example with 
 a simple inline script: 
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+
+        <script>
+          var span = document.getElementsByTagName('span')[0];
+          span.innerText = 'interactive'; // change DOM text content
+          span.style.display = 'inline';  // change CSSOM property
+
+          // create a new element, style it, and append it to the DOM
+          var loadTime = document.createElement('div');
+          loadTime.innerText = 'You loaded this page on: ' + new Date();
+          loadTime.style.color = 'blue';
+          document.body.appendChild(loadTime);
+        </script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script>
-      var span = document.getElementsByTagName('span')[0];
-      span.innerText = 'interactive'; // change DOM text content
-      span.style.display = 'inline';  // change CSSOM property
-      // create a new element, style it, and append it to the DOM
-      var loadTime = document.createElement('div');
-      loadTime.innerText = 'You loaded this page on: ' + new Date();
-      loadTime.style.color = 'blue';
-      document.body.appendChild(loadTime);
-    </script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 * JavaScript allows us to reach into the DOM and pull out the reference to the 
@@ -554,39 +567,39 @@ execution.
 What about scripts included via a script tag? Let's take our previous example 
 and extract our code into a separate file: 
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script src="app.js"></script>
+      </body>
+    </html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script src="app.js"></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 **app.js**
 
+    var span = document.getElementsByTagName('span')[0];
+    span.innerText = 'interactive'; // change DOM text content
+    span.style.display = 'inline';  // change CSSOM property
+
+    // create a new element, style it, and append it to the DOM
+    var loadTime = document.createElement('div');
+    loadTime.innerText = 'You loaded this page on: ' + new Date();
+    loadTime.style.color = 'blue';
+
+document.body.appendChild(loadTime);
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td>var span = document.getElementsByTagName('span')[0];
-span.innerText = 'interactive'; // change DOM text content
-span.style.display = 'inline';  // change CSSOM property
-// create a new element, style it, and append it to the DOM
-var loadTime = document.createElement('div');
-loadTime.innerText = 'You loaded this page on: ' + new Date();
-loadTime.style.color = 'blue';
-document.body.appendChild(loadTime);</td>
-</tr>
 </table>
 
 Would you expect the execution order to be any different when we use a <script> 
@@ -609,23 +622,23 @@ once the file has been downloaded from the network.
 So, how do we achieve this trick? It's pretty simple, we can mark our script as 
 **"async"**:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script src="app.js" async></script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script src="app.js" async></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 Adding the **async **keyword to the script tag tells the browser that it should 
@@ -635,15 +648,15 @@ not block the DOM construction while it waits for the script to become available
 Alternatively, you will also often see the following pattern for inserting an 
 "async script":
 
+    <script>
+      var script = document.createElement('script');
+      script.src = "...";
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+</script>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><script>
-  var script = document.createElement('script');
-  script.src = "...";
-  document.getElementsByTagName('head')[0].appendChild(script);
-</script></td>
-</tr>
 </table>
 
 This one is a bit tricky. First, obviously the snippet itself is an inline 
@@ -668,14 +681,18 @@ identical.
 
 # Measuring the Critical Rendering Path with Navigation Timing
 
+{% class key-takeaway %}  
+Key Takeaways:
+
+* Navigation Timing provides high resolution timestamps for measuring CRP.
+* Browser emits series of consumable events which capture various stages of the 
+  CRP.
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td>Key Takeaways:
-Navigation Timing provides high resolution timestamps for measuring CRP.
-Browser emits series of consumable events which capture various stages of the CRP.</td>
-</tr>
 </table>
+
+{% endclass %}
 
 We've now covered all the necessary background to understand the major steps 
 that the browser has to go through to construct the page: converting HTML and 
@@ -726,34 +743,37 @@ path:
        fire immediately after domInteractive.
 1. **domComplete** marks when the page and all of its subresources are ready.
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <script>
+          function measureCRP() {
+            var t = window.performance.timing,
+              interactive = t.domInteractive - t.domLoading,
+              dcl = t.domContentLoadedEventStart - t.domLoading,
+              complete = t.domComplete - t.domLoading;
+
+            var stats = document.createElement('p');
+            stats.innerText = 'interactive: ' + interactive + 'ms, ' +
+                'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms';
+
+            document.body.appendChild(stats);
+          }
+        </script>
+
+      </head>
+      <body onload="measureCRP()">
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <script>
-      function measureCRP() {
-        var t = window.performance.timing,
-          interactive = t.domInteractive - t.domLoading,
-          dcl = t.domContentLoadedEventStart - t.domLoading,
-          complete = t.domComplete - t.domLoading;
-        var stats = document.createElement('p');
-        stats.innerText = 'interactive: ' + interactive + 'ms, ' +
-            'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms';
-        document.body.appendChild(stats);
-      }
-    </script>
-  </head>
-  <body onload="measureCRP()">
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-  </body>
-</html></td>
-</tr>
 </table>
 
 The above example may seem a little daunting on first sight, but in reality it 
@@ -799,21 +819,21 @@ things more realistic) we'll assume the following:
 
 ## The Hello World experience
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-  </body>
-</html></td>
-</tr>
 </table>
 
 We'll start with basic HTML markup and a single image - no CSS or JavaScript - 
@@ -862,23 +882,23 @@ also need more than just the HTML: chances are, we'll have a CSS stylesheet and
 one or more scripts to add some interactivity to our page. Let's add both to the 
 mix and see what happens:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body onload="measureCRP()">
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script src="timing.js"></script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body onload="measureCRP()">
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script src="timing.js"></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 Before adding JavaScript and CSS:  
@@ -932,23 +952,23 @@ scripts we can add the "async" keyword on the script tag or inject them via the
 special JavaScript snippet we saw earlier. Let's undo our inlining and give that 
 a try:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body onload="timing()">
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script async src="timing.js"></script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body onload="timing()">
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script async src="timing.js"></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 _Parser-blocking (external) JavaScript:_  
@@ -963,37 +983,39 @@ blocking scripts the CSSOM construction can also proceed in parallel.
 Alternatively, we could have tried a different approach and inlined both the CSS 
 and JavaScript:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+          p { font-weight: bold }
+          span { color: red }
+          p span { display: none }
+          img { float: right }
+        </style>
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script>
+          var span = document.getElementsByTagName('span')[0];
+          span.innerText = 'interactive'; // change DOM text content
+          span.style.display = 'inline';  // change CSSOM property
+
+          // create a new element, style it, and append it to the DOM
+          var loadTime = document.createElement('div');
+          loadTime.innerText = 'You loaded this page on: ' + new Date();
+          loadTime.style.color = 'blue';
+
+          document.body.appendChild(loadTime);
+        </script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <style>
-      p { font-weight: bold }
-      span { color: red }
-      p span { display: none }
-      img { float: right }
-    </style>
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script>
-      var span = document.getElementsByTagName('span')[0];
-      span.innerText = 'interactive'; // change DOM text content
-      span.style.display = 'inline';  // change CSSOM property
-      // create a new element, style it, and append it to the DOM
-      var loadTime = document.createElement('div');
-      loadTime.innerText = 'You loaded this page on: ' + new Date();
-      loadTime.style.color = 'blue';
-      document.body.appendChild(loadTime);
-    </script>
-  </body>
-</html></td>
-</tr>
 </table>
 
    
@@ -1022,20 +1044,20 @@ JavaScript, or other types of resources. To render this page the browser has to
 initiate the request, wait for the HTML document to arrive, parse it, build the 
 DOM, and then finally render it on the screen:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-  </body>
-</html></td>
-</tr>
 </table>
 
 <!-- No converter for: INLINE_DRAWING -->
@@ -1050,21 +1072,21 @@ rendering path.**
 
 Now, let's consider the same page but with an external CSS file:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-  </body>
-</html></td>
-</tr>
 </table>
 
 <!-- No converter for: INLINE_DRAWING -->
@@ -1106,23 +1128,23 @@ roundtrips; both resources add up to a total of 9KB of critical bytes.
 
 Ok, now let's add an extra JavaScript file into the mix! 
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script src="app.js"></script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script src="app.js"></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 We added app.js, which is an external JavaScript asset on the page, and as we 
@@ -1155,23 +1177,22 @@ other code in there that doesn't need to block the rendering of our page.
 Knowing that we can add the "async" attribute to the script tag to unblock the 
 parser:
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script src="app.js" async></script>
+      </body>
+    </html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script src="app.js" async></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 <!-- No converter for: INLINE_DRAWING -->
@@ -1192,23 +1213,23 @@ of critical bytes.
 Finally, let's say the CSS stylesheet was only needed for print? How would that 
 look?
 
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" media="print">
+      </head>
+      <body>
+        <p>
+          Hello <span>web performance</span> students!
+        </p>
+        <div><img src="awesome-photo.jpg"/></div>
+        <script src="app.js" async></script>
+      </body>
+
+</html>
+
 <!-- TODO: Fix formatting of cells -->
 <table>
-<tr>
-<td><html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" media="print">
-  </head>
-  <body>
-    <p>
-      Hello <span>web performance</span> students!
-    </p>
-    <div><img src="awesome-photo.jpg"/></div>
-    <script src="app.js" async></script>
-  </body>
-</html></td>
-</tr>
 </table>
 
 <!-- No converter for: INLINE_DRAWING -->
@@ -1263,7 +1284,7 @@ still an important optimization -- and vice versa.
 1. Optimize the number of critical bytes to reduce the download time (number of 
    roundtrips).
 
-## PageSpeed Rules and Recommendations
+# PageSpeed Rules and Recommendations
 
 ### Eliminate render-blocking JavaScript and CSS in above-the-fold content
 
@@ -1326,221 +1347,3 @@ into the HTML document, and loading the remainder of the CSS styles in an
 asynchronous fashion. This eliminates additional roundtrips in the critical path 
 and if done correctly can be used to deliver a "one roundtrip" critical path 
 length where only the HTML is a blocking resource.
-
-# <!-- No converter for: PAGE_BREAK -->
-# Udacity Quizzes
-
-**02_Q1: Which cascading tree corresponds to the given code?**
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>body { font-size: 16px }
-footer p { font-size: 14px }
-span { font-weight: bold }
-p span { font-size: 12px; font-weight: normal; } </td>
-</tr>
-</table>
-
-<!-- No converter for: INLINE_DRAWING -->
-
-(The one on the right is correct)
-
-**03_Q1: Fill in the resulting render tree nodes and computed styles based on 
-the given DOM and CSSOM trees.**
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><html>
-  <head>
-    <style>
-       body { width: 100%; font-size: 16px; }
-        div { width: 50%; }
-      div p { width: 50%; font-weight: bold; }
-    </style>
-  </head>
-  <body>
-    <div>
-      <p>Hello world!</p>
-    </div>
-  </body>
-</html></td>
-</tr>
-</table>
-
-_(we don't necessarily have to show the above HTML)_
-
-<!-- No converter for: INLINE_DRAWING -->
-
-We know that the render tree only contains the visible nodes, hence we don't 
-need the head and style nodes from the DOM tree. We kept the body as a reference 
-just to help us compute the CSS, and if we look at the CSSOM tree, the font-size 
-should be 16px. Next, we have the div tag, and that is visible, hence that's our 
-second node. The div tag is a child of body so it inherits its font-size, and 
-similarly its font-weight.. and since we haven't changed it anywhere, it'll just 
-be set to "normal" weight. Finally, our div tag does define its width property 
-to be 50% of its parent, which in this case is the body, which occupies 100%.. 
-as a result, 50% of 100% is 50%.
-
-Finally, we get to the paragraph tag, which inherits its parent font-size (16 
-px), but this time changes its weight to bold. Now here's the tricky part: the 
-paragraph tag also sets its width to be 50%, but that's 50% of its parent, which 
-we know is the div tag that is already occupying 50% of the space. Hence, 50% of 
-50% is 25%. 
-
-    05_q
-
-**QUIZ: We've just painted the page, what do you think will happen if we modify 
-a style, or add new content on the page? **
-
-* The browser does nothing, we've painted the page, we're done!
-* The browser updates the DOM and CSSOM and waits for further instructions.
-* **(correct)** The browser updates the DOM and CSSOM, updates the render tree, 
-  paints new content.
-
-**05_s**  
-That's right, the great thing about displayed content in the browser is that 
-it's dynamic! Anytime the underlying CSSOM or DOM properties change the browser 
-automatically recalculates all of the content and repaints the page -- this is 
-what allows us to build interactive and responsive apps in the browser. We will 
-look at this process in detail when we talk about animations, but before we get 
-there… How exactly do we update the underlying page content anyway?
-
-    06_q/s
-
-More Potential DOM/CSSOM questions:
-
-* **Show students HTML/CSS. Ask students to identify what will and won't be part 
-  of the render tree.**
-    * or ask which render tree the HTML/CSS corresponds to - MC question
-* Ordering the steps of going from bytes to render tree.
-* Ask students to compare and contrast the render times of Parse HTML and 
-  Recalculating Styles for sample web pages. Perhaps use sample pages that look 
-  identical but take wildly different times to render because of poorly written 
-  HTML and CSS.
-
-**Quiz: parser blocking vs render blocking**
-
-    07_q
-
-**QUIZ: Check all properties that are true…**
-
-* (yes) The location of an inline script in the DOM matters
-* (yes) Browser will pause DOM construction and execute inline scripts before 
-  proceeding
-* (yes) JavaScript can modify the DOM and CSSOM
-* (yes) JavaScript can operate on partially constructed DOM
-* (yes) JavaScript execution will block on CSSOM
-
-    07_s
-
-That's right, yes for all of the above! When we talk about "optimizing the 
-Critical Rendering Path," to a large degree we're talking about understanding 
-and optimizing the dependency graph between HTML, CSS, and JavaScript. However, 
-before we dive into that, let's talk about blocking vs. asynchronous JavaScript.
-
-08_q  
-**QUIZ:  Mark all instances where DOM construction will be blocked on 
-app.js...**
-
-1. **(yes)** <script src="app.js"></script>
-1. <script src="app.js" async></script>
-1. <script><br/>
-      var script = document.createElement('script');<br/>
-      script.src = "app.js";<br/>
-      document.getElementsByTagName('head')[0].appendChild(script);<br/>
-   </script>
-
-    08_s
-
-	...
-
-More Potential JS Questions:
-
-* Use a text box to modify JS from blocking to async [we should be able to use 
-  simple text input even if we don't have full programming exercises].
-* How does JS modify a page? With what does it interact?
-* Could we pull DevTools into this? Perhaps ask students to load a page with a 
-  breakpoint and then write async JS in the DevTools to load an element without 
-  blocking the rest of the page load?
-* Use DevTools to compare and contrast rendering times for the same page with 
-  and without blocking JS.
-
-09_q  
-**QUIZ:  Which events correspond to the right state of the document?**
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>(a) domInteractive</td>
-<td>(b) marks when DOM and CSSOM are ready</td>
-</tr>
-<tr>
-<td>(b) domContentLoaded</td>
-<td>(a) marks when DOM is ready</td>
-</tr>
-<tr>
-<td>(c) domComplete</td>
-<td>(d) browser loading spinner has stopped spinning, other application code can be run</td>
-</tr>
-<tr>
-<td>(d) onload</td>
-<td>(c) marks when the page is ready</td>
-</tr>
-</table>
-
-    09_s
-
-`	`...
-
-More Potential CRP Measuring Questions:
-
-* Write code in text editor to determine start of some event
-* To prevent blocking JS, what event could we take advantage of?
-
-**QUIZ: If domContentLoaded fired at 216ms for this particular page, what would 
-you expect domInteractive to report?**
-
-1. domInteractive value should be lower than 216ms
-1. domInteractive value should be higher than 216ms
-1. **(correct)** domInteractive and domContentLoaded should be the same
-
-Recall that domInteractive marks the point when the browser has finished parsing 
-all the HTML, meaning the HTML is ready, and domContentLoaded marks the point 
-when both CSSOM and DOM are ready… For this particular page, there is no CSS, so 
-as soon as the DOM is ready we can immediately paint the page. As a result, both 
-events would fire at the same time!
-
-**QUIZ: What if we replace our external script with an inline script? **
-
-1. This will allow the browser to not block on CSS
-1. (correct) The browser still has to wait for CSS
-
-A trivial question on the surface but actually its very tricky. Turns out, B is 
-the correct answer: even though the script is inlined directly into the page the 
-browser doesn't really know what that script will do until it executes it, and 
-to do that, it will be forced to wait for CSS. 
-
-**QUIZ: Which page would you expect to render faster on the screen?**
-
-_Page with asynchronous resources_  
-<img src="image11.png" width="624" height="100" />
-
-_Page with inlined resources_  
-<img src="image12.png" width="624" height="69" />
-
-* Both pages are about the same: same amount of bytes, same amount of 
-  processing, same DCL.. and likely same time to render.
-* Page with asynchronous resources should render faster.
-* **(correct)** Page with inlined resources should render faster.
-
-Recall that to paint the page on the screen the browser needs to construct the 
-DOM, the CSSOM, and then merge the two into a "render tree". In the example 
-above the DOM construction finishes at about the same time in both cases 
-(domContentLoaded). However, despite the fact that both pages have to parse and 
-execute the same CSS and JavaScript, the page with inlined resources will render 
-faster because the browser doesn't have to block and wait on the network to 
-fetch the CSS - without the CSS we can't construct the CSSOM and hence can't 
-build the render tree or paint the page.
-

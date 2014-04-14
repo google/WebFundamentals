@@ -1,12 +1,12 @@
 ---
 layout: article
-title: "Handling input"
+title: "Basic layouts"
 description: ""
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 6
-collection: getting-started
+  order: 2
+collection: multi-device-layouts
 ---
 
-<h1>{{ page.title }}</h1>
+Page left intentionally blank

@@ -9,7 +9,6 @@ article:
 collection: multi-device-layouts
 ---
 
-
 Layout patterns (mattgaunt)
     The Stack
     Dashboard
