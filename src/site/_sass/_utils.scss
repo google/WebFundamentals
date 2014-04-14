@@ -28,6 +28,8 @@
   $colorWhite: #fff;
   $colorGray: #e8e8e8;
   $colorGrayDark: #404040;
+  $colorMustard: #f4b400;
+  $colorEmeraud: #33b679;
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif;
@@ -200,6 +202,7 @@
   }
 
   @mixin rule--large {
+    font-family: $fontHighlight;
     font-size: $fontLarge;
     font-weight: 300;
     line-height: 1.0000em; /* 26px */

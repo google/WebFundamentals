@@ -60,11 +60,22 @@
 .highlight {
   background-color: $colorGray;
   overflow: hidden;
-  margin-top: $lineHeight;
+  margin-top: $lineHeight * 2;
+  margin-bottom: $lineHeight;
 }
 
 .highlight--learning {
   background-color: $colorAqua;
+}
+
+.highlight--remember {
+  background-color: $colorMustard;
+  color: $colorWhite;
+}
+
+.highlight--related {
+  background-color: $colorEmeraud;
+  color: $colorWhite;
 }
 
 .highlight__container {

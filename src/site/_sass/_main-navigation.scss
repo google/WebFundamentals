@@ -26,7 +26,6 @@
   @include medium {
     text-align: center;
     @include container;
-    @extend .clear;
   }
 }
 
