@@ -1348,7 +1348,7 @@ h1 {
 
 /**
 *
-* Lisr
+* List
 *
 * Google Web Essentials
 *
@@ -1357,38 +1357,35 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 27, ../_sass/_components/_list.scss */
+/* line 26, ../_sass/_components/_list.scss */
 ul {
-  padding-left: 20px;
+  padding-left: 0;
   list-style: none;
 }
 
-/* line 32, ../_sass/_components/_list.scss */
-li {
-  position: relative;
-}
-/* line 17, ../_sass/_components/_list.scss */
+/* line 16, ../_sass/_components/_list.scss */
 li:before {
   content: "#";
-  display: block;
+  display: inline-block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  position: absolute;
-  left: -20px;
+  padding-right: 16px;
+  line-height: 0;
 }
 
-/* line 36, ../_sass/_components/_list.scss */
-.list__item {
-  position: relative;
-}
-/* line 17, ../_sass/_components/_list.scss */
+/* line 16, ../_sass/_components/_list.scss */
 .list__item:before {
   content: ">";
-  display: block;
+  display: inline-block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  position: absolute;
-  left: -20px;
+  padding-right: 16px;
+  line-height: 0;
+}
+
+/* line 39, ../_sass/_components/_list.scss */
+.main-nav__item:before {
+  display: none;
 }
 
 /**
