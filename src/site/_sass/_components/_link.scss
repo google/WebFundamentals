@@ -1,0 +1,39 @@
+/**
+*
+* Link
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+
+// Mixin to create links
+@mixin link($textColor, $isInline: false) {
+  color: $textColor;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+
+  @if $isInline { font-weight: 300;}
+
+  &:hover {
+    color: #555555;
+  }
+}
+
+
+.link--primary {
+  @include link(#cb4437);
+}
+
+.link--secondary {
+  @include link(#cb4437);
+}
+
+.link--inline {
+  @include link(#cb4437, true);
+}
