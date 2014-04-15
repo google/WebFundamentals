@@ -6,6 +6,10 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 2
+key-takeaways:
+  add-states:
+    - All pages must include a viewport and make sure it has the recommended 
+      configuration.
 collection: user-input
 ---
 
@@ -18,6 +22,9 @@ In addition to helping people know that there action has been acknowledged,
 giving touch feedback gives your site a snappy and responsive feel to it.
 
 ## Adding States
+
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-states %}
+
 ### Demo: http://jsbin.com/siramabo/latest/edit
 
 The fastest way to add touch feedback to your UI is to simply support the 
