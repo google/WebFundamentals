@@ -7,6 +7,8 @@ module Jekyll
 
     def initialize(tag_name, markup, tokens)
       super
+      @options = {}
+      @lang = 'html'
       @file, @section = markup.strip.split(' ', 2)
     end
 
@@ -21,12 +23,19 @@ module Jekyll
     end
 
     def render_codehighlighter(context, code, filepath)
+      require 'pygments'
+      @options[:encoding] = 'utf-8'
+      highlighted_code = Pygments.highlight(code, :lexer => @lang, :options => @options)
+      if highlighted_code.nil?
+          Jekyll.logger.error "There was an error highlighting your code."
+      end
       # TODO(ianbarber): Auto indent
       # TODO(ianbarber): Syntax highlighting goes here.
       # TODO(ianbarber): Include sample link base once testing.
+      # snippet.each_line {|s| output += "    " + s}
         <<-HTML
   <div>
-    <pre><code class='html'>#{h(code).strip}</code></pre>
+    <pre><code class='html'>#{highlighted_code.strip}</code></pre>
     <a href="/_samples/#{filepath}">View full sample</a>
   </div>
         HTML
