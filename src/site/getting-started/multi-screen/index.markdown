@@ -3,6 +3,14 @@ layout: article
 title: "Build your first multi-screen site"
 description: "The web is accessible on a huge range of devices from small-screen phones 
 through to huge screen televisions. Learn how to build a site that works well across all these devices."
+include-viewport:
+  - All pages must include a viewport and make sure it has the recommended 
+    configuration.
+flesh-out:
+  - Before you start, understand the content you need to display (text, images, 
+    tables and videos) 
+  - Start with the narrow viewport first (in many cases a mobile device) - often 
+    this is called Mobile first development
 collection: getting-started
 ---
 The web is accessible on a huge range of devices from small-screen phones 
@@ -39,12 +47,7 @@ tools that you can use to help you along the way.
 
 # Create first multi-screen page
 
-{% class key-takeaway %}  
-**Key Takeaways**:
-
-* All pages must include a viewport and make sure it has the recommended 
-  configuration.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.include-viewport %}
 
 Even for a basic page you must include a viewport meta tag.  The viewport is the 
 most critical[link to viewport doc] component you need for building mobile-first 
@@ -96,14 +99,7 @@ If you have real device even better, you can ... [todo]
 
 # Flesh out the page with content
 
-{% class key-takeaway %}  
-**Key Takeaways**
-
-* Before you start, understand the content you need to display (text, images, 
-  tables and videos) 
-* Start with the narrow viewport first (in many cases a mobile device) - often 
-  this is called Mobile first development
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.flesh-out %}
 
 Especially for sites, we believe that the content is the most important aspect.  
 So let's design for the content and not let the design dictate the content.  In 
@@ -121,7 +117,7 @@ Now that we know the content, it is not too hard to create the structure of the
 page with 
 be pretty simple. We need a heading areas, 3 sections of information and a footer.
 
-[TODO: Information Arhitecture]
+[TODO: Information Architecture]
 
 {% include_code _code/addstructure.html structure %}
 
