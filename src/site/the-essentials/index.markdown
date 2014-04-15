@@ -3,8 +3,8 @@ layout: default
 title: "The Essentials"
 description: ""
 ---
-
 # {{ page.title }}
+
 
 
 {% for guide in page.articles.the-essentials %}

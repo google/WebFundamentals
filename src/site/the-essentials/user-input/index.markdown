@@ -1,7 +1,12 @@
 ---
 layout: default
 title: "User Input"
-description: ""
+description: "Use our guides to learn how to create compelling experiences that users will love to use."
+article:
+  written_on: 2014-01-01
+  updated_on: 2014-01-06
+  order: 3
+collection: the-essentials
 ---
 # {{ page.title }}
 
