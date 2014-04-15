@@ -30,7 +30,23 @@ key-takeaways:
     - If requestAutocomplete is available, hide the checkout form and move people
       directly to the confirmation page.
     - Ensure input fields include the appropriate autocomplete attribute.
-  
+remember:
+  use-placeholders:
+    - Placeholders disappear as soon as focus is placed in an
+      element, thus they are not a replacement for labels.  They should be used 
+      as an aid to help guide users on the required format and content.
+  recommend-input:
+    - Auto-complete only works when the form method is post.
+  use-datalist:
+    - The `datalist` values are provided as suggestions, and users are not restricted to
+      the suggestions provided.
+  provide-real-time-validation:
+    - Even with client-side input validation, it is always important to validate data on
+      the server to ensure consistency and security in your data.
+  request-auto-complete-flow:
+    - If you're asking for any kind of personal information or credit card data, 
+      ensure the page is served via SSL.  Otherwise the dialog will warn the user
+      their information may not be secure.
 ---
 
 
@@ -83,11 +99,7 @@ the input by displaying its value as light text until the element gets focus.
     <input type="text" id="frmName" placeholder="Full name"/>
 
 
-<div class="notes">
-  <b>Remember:</b> placeholders disappear as soon as focus is placed in an
-  element, thus they are not a replacement for labels.  They should be used 
-  as an aid to help guide users on the required format and content.
-</div>
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.use-placeholders %}
 
 ### Use metadata to enable auto-complete
 
@@ -174,7 +186,7 @@ cc-type</td>
 </tr>
 </table>
 
-<div class="notes"><b>Remember:</b> Auto-complete only works when the form method is post.</div>
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.recommend-input %}
 
 ## The autofocus attribute
 
@@ -299,8 +311,7 @@ lists, `datalist`s provide hints as the user types.
       <option value="dark" />  
     </datalist>
 
-<div class="notes"><b>Remember:</b> the `datalist` values are provided as suggestions, and users are not restricted to the suggestions provided.
-</div>
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.use-datalist %}
 
 # Provide real-time validation
 
@@ -312,8 +323,7 @@ to help provide real-time data validation and may prevent the user from
 submitting an invalid form.  Visual cues should be used to indicate whether a 
 form has been completed properly.
 
-<div class="notes"><b>Remember:</b> Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data.
-</div>
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.provide-real-time-validation %}
 
 ## Use these attributes to validate input
 
@@ -531,6 +541,8 @@ JavaScript to only show invalid styling when the user has visited the field.
       initInputs();
     </script>
 
+
+
 <div class="notes"><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</div>
 
 ## Putting it all together
@@ -579,9 +591,7 @@ must be called via a user gesture like a touch or mouse click. A dialog is then
 displayed asking the user permission to populate the fields and which details 
 they want to populate it with.
 
-<div class="notes">
-  <b>Remember:</b> If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure.
-</div>
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.request-auto-complete-flow %}
 
 ## Putting it all together
 
