@@ -9,14 +9,16 @@ article:
 collection: user-input
 ---
 
+# Touch Input
+
 Have you ever touched or clicked an element on a web page and questioned whether 
 the site actually detected you?
 
 In addition to helping people know that there action has been acknowledged, 
 giving touch feedback gives your site a snappy and responsive feel to it.
 
-# Adding States
- Demo: http://jsbin.com/siramabo/latest/edit
+## Adding States
+### Demo: http://jsbin.com/siramabo/latest/edit
 
 The fastest way to add touch feedback to your UI is to simply support the 
 various states your element can be in.
