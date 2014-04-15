@@ -3,34 +3,35 @@ layout: article
 title: "Build your first multi-screen site"
 description: "The web is accessible on a huge range of devices from small-screen phones 
 through to huge screen televisions. Learn how to build a site that works well across all these devices."
-include-viewport:
-  - All pages must include a viewport and make sure it has the recommended 
-    configuration.
-test-page:
-  - Set up your environment to be able to easily test
-  - Use Chrome Dev Tools
-flesh-out:
-  - Before you start, understand the content you need to display (text, images, 
-    tables and videos) 
-  - Start with the narrow viewport first (in many cases a mobile device) - often 
-    this is called Mobile first development
-great-form:
-  - Use labels to let the user quickly focus on the field
-  - Use placeholders to give an indication about the data to enter in the field
-  - Use common names to help the user auto fill their forms
-  - Use semantic types to help the user enter data quickly
-add-images:
-  - Use the highest DPI possible for your source
-  - Each source image should be made for 2x DPI and 1x DPI
-  - Highly compress all your images
-add-video:
-  - Use the highest DPI possible for your source
-  - Each source image should be made for 2x DPI and 1x DPI
-  - Highly compress all your images
-make-responsive:
-  - Always start with a narrow viewport first and scale out
-  - Base your breakpoints off when you need to adapt the content
-  - Create a high-level vision of your layout across major breakpoints
+key-takeaways:
+  include-viewport:
+    - All pages must include a viewport and make sure it has the recommended 
+      configuration.
+  test-page:
+    - Set up your environment to be able to easily test
+    - Use Chrome Dev Tools
+  flesh-out:
+    - Before you start, understand the content you need to display (text, images, 
+      tables and videos) 
+    - Start with the narrow viewport first (in many cases a mobile device) - often 
+      this is called Mobile first development
+  great-form:
+    - Use labels to let the user quickly focus on the field
+    - Use placeholders to give an indication about the data to enter in the field
+    - Use common names to help the user auto fill their forms
+    - Use semantic types to help the user enter data quickly
+  add-images:
+    - Use the highest DPI possible for your source
+    - Each source image should be made for 2x DPI and 1x DPI
+    - Highly compress all your images
+  add-video:
+    - Use the highest DPI possible for your source
+    - Each source image should be made for 2x DPI and 1x DPI
+    - Highly compress all your images
+  make-responsive:
+    - Always start with a narrow viewport first and scale out
+    - Base your breakpoints off when you need to adapt the content
+    - Create a high-level vision of your layout across major breakpoints
 collection: getting-started
 ---
 The web is accessible on a huge range of devices from small-screen phones 
@@ -67,7 +68,7 @@ tools that you can use to help you along the way.
 
 # Create first multi-screen page
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.include-viewport %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
 
 Even for a basic page you must include a viewport meta tag.  The viewport is the 
 most critical[link to viewport doc] component you need for building mobile-first 
@@ -86,7 +87,7 @@ tells the page to fit.....
 
 # Test your page
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.test-page %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
 
 Testing your page is one of the most important things you can do to ensure you 
 offer a great experience across all the devices your user will access your 
@@ -114,7 +115,7 @@ If you have real device even better, you can ... [todo]
 
 # Flesh out the page with content
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.flesh-out %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.flesh-out %}
 
 Especially for sites, we believe that the content is the most important aspect.  
 So let's design for the content and not let the design dictate the content.  In 
@@ -176,7 +177,7 @@ complete later.
 
 ## Create a great form
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.great-form %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
 We are creating a product landing page so it makes sense to be able to let the 
 user pass us some of their details.
@@ -216,7 +217,7 @@ Link to request AutoComplete
 
 ## Add images to site
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.add-images %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
 
 Sites without images can be a little boring.  There are two types of images:  
 Content images and background images.  Content images are images that are inline 
@@ -241,7 +242,7 @@ so lets add some in.
 
 ## Add a video to your site
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.add-video %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
 
 Videos are often used to describe content in a more interactive manner and are 
 often used to show a demonstration of a product or a concept.  It can be hard to 
@@ -255,13 +256,7 @@ Lets add a video to the site.
 
 # Make your page responsive
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.make-responsive %}
-
-{% class key-takeaway %}  
-**Key Takeaways**
-
-
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
 Our page has all the content needed, but on different screen sizes it looks a 
 little bland as we have simply created a linear site for a narrow viewport. 
