@@ -1,15 +1,13 @@
 ---
 layout: article
-title: "Touch"
-description: "Touch, tap, click."
+title: "Adding Touch to Your Site"
+description: "Adding touch responses to your site gives a great sense of responsiveness and polish, with minimal amount of effort. Then we have entirely new and custom interactions which you can add using touch events, delighting your users."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 2
 collection: user-input
 ---
- Touch Input
-# Why touch feedback is necessary
 
 Have you ever touched or clicked an element on a web page and questioned whether 
 the site actually detected you?
