@@ -1596,18 +1596,10 @@ a:hover {
 *
 **/
 /* line 15, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .styleguide__title {
-  color: white;
-}
-/* line 19, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .container > h2 {
-  color: #4f80f2;
-}
-/* line 23, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__module-title {
   margin-bottom: 26px;
 }
-/* line 27, ../_sass/_pages/_styleguide.scss */
+/* line 19, ../_sass/_pages/_styleguide.scss */
 .page--styleguide section {
   margin-bottom: 52px;
   border-bottom: 1px solid #ccc;
