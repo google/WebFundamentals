@@ -24,16 +24,34 @@ module Jekyll
 
     def render_codehighlighter(context, code, filepath)
       require 'pygments'
+
+      offset = false
+      snippet = ""
+      # Indenter
+      # TODO(ianbarber): Look for multiples of original offset rather than absolute spaces.
+      code.each_line {|s|
+        initial = s[/\A */].size
+        if initial == s.size 
+          return
+        end
+        if (offset == false)
+          offset = 2 - initial
+        end
+        if (offset == 0)
+          break
+        end
+        #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
+        snippet += (" " * (initial + offset))
+        snippet += s.lstrip.rstrip
+        snippet += "\n"
+      }
+
       @options[:encoding] = 'utf-8'
-      highlighted_code = Pygments.highlight(code, :lexer => @lang, :options => @options)
+      highlighted_code = Pygments.highlight(snippet, :lexer => @lang, :options => @options)
       if highlighted_code.nil?
           Jekyll.logger.error "There was an error highlighting your code."
-      end
-      # TODO(ianbarber): Auto indent
-      # TODO(ianbarber): Syntax highlighting goes here.
-      # TODO(ianbarber): Include sample link base once testing.
-      # snippet.each_line {|s| output += "    " + s}
-        <<-HTML
+      end        
+      <<-HTML
   <div>
     <pre><code class='html'>#{highlighted_code.strip}</code></pre>
     <a href="/_samples/#{filepath}">View full sample</a>
