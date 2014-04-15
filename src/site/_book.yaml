@@ -56,6 +56,8 @@ toc:
   section:
   - title: "Glossary"
     path: /resources/glossary/
+  - title: "Samples"
+    path: /resources/samples/
   - title: "Styleguide"
     path: /resources/styleguide/
 - title: Spotlights
