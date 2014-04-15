@@ -8,10 +8,8 @@ article:
   order: 2
 key-takeaways:
   add-states:
-    - Adding states for :active, :focus and :hover psuedo classes makes your site feel
-    snappy and responsive
-    - Most mobile browsers have a default styling for these states which should only be
-    overriden when you are adding your own styles for them
+    - Adding states for :active, :focus and :hover psuedo classes makes your site feel snappy and responsive
+    - Most mobile browsers have a default styling for these states which should only be overriden when you are adding your own styles for them
     - Make the state changes fit in with your UI
 collection: user-input
 ---
