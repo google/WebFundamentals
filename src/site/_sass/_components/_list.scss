@@ -1,0 +1,36 @@
+/**
+*
+* Lisr
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.list, .list--links {
+  padding-left: 20px;
+  list-style: none;
+}
+
+@mixin bullet-type($bullet) {
+  position: relative;
+  &:before {
+    content: $bullet;
+    display: block;
+    font-family: $fontHighlight;
+    font-weight: 400;
+    position: absolute;
+    left: -20px;
+  }
+}
+
+.list__item {
+  @include bullet-type("#");
+}
+
+.list--links .list__item {
+  @include bullet-type(">");
+}

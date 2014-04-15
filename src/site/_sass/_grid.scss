@@ -20,35 +20,28 @@ $wideGutterWidth: 3.7%;
 
 
 .demo {
-  margin-bottom: $lineHeight*2;
+  margin-bottom: $lineHeight;
 }
 
 @mixin rule--col($mediaQuery) {
   @if $mediaQuery == medium {
     float: left;
-    width: $mediumColWidth;
     margin-right: $mediumGutterWidth;
   }
 
   @if $mediaQuery == wide {
     float: left;
-    width: $wideColWidth;
     margin-right: $wideGutterWidth;
-  }
-
-  .demo & {
-    min-height: $lineHeight*5;
   }
 
 }
 
 .demo {
-  [class*="g-"]{
+  [class*="g-"] {
     background-color: #eee;
-    min-height: $lineHeight;
-    background: #eee;
     position: relative;
     margin-bottom: $lineHeight;
+    min-height: $lineHeight*6;
 
     &:before,
     &:after {
@@ -69,23 +62,26 @@ $wideGutterWidth: 3.7%;
   }
 }
 
-@include medium {
+@include medium-only {
   // Generating grid classes for medium view
   @for $i from 1 through $mediumColCount {
-    .g-m--#{$i} {
+    .g-medium--#{$i} {
       @include rule--col(medium);
       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
       @if $i == $mediumColCount { margin-right: 0; }
     }
 
     @if $i < $mediumColCount {
-      .g-m--push-#{$i} {
+      .g-medium--push-#{$i} {
         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
+      }
+      .g-medium--pull-#{$i} {
+        margin-right: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
       }
     }
   }
 
-  .g-m--full {
+  .g-medium--full {
     @include rule--col(medium);
     margin-right: 0;
     width: 100%;
@@ -97,35 +93,37 @@ $wideGutterWidth: 3.7%;
   }
 
   .g--half,
-  .g-m--half {
+  .g-medium--half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
 
-  .g-m--last { margin-right: 0; }
+  .g-medium--last { margin-right: 0; }
 }
 
 
 @include wide {
   // Generating grid classes for wide view
   @for $i from 1 through $wideColCount {
-    .g-w--#{$i} {
+    .g-wide--#{$i} {
       @include rule--col(wide);
       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
       @if $i == $wideColCount { margin-right: 0; }
     }
 
     @if $i < $wideColCount {
-      .g-w--push-#{$i} {
+      .g-wide--push-#{$i} {
         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
+      }
+      .g-wide--pull-#{$i} {
+        margin-right: ($wideColWidth*$i) + ($wideGutterWidth*$i);
       }
     }
   }
 
-  .g-m--last { margin-right: $wideGutterWidth; }
-  .g-w--last { margin-right: 0; }
+  .g-wide--last { margin-right: 0; }
 
-  .g-w--full {
+  .g-wide--full {
     @include rule--col(wide);
     margin-right: 0;
     width: 100%;
@@ -137,7 +135,7 @@ $wideGutterWidth: 3.7%;
   }
 
   .g--half,
-  .g-w--half {
+  .g-wide--half {
     @include rule--col(wide);
     width: 50% - $wideGutterWidth/2;
   }
@@ -151,3 +149,41 @@ $wideGutterWidth: 3.7%;
 //  <div class="third"></div>
 //  <div class="third last"></div>
 .g--last { margin-right: 0; }
+
+
+
+// This is a grid overlay
+// Its purpose is to show users our grid system
+// It becomes visible when a class 'debug' is added to the body
+.grid-overlay {
+
+  display: none;
+
+  // Only show when parents (body) has debug class
+  .debug & {
+    @include container;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: block;
+
+    [class*="g-"] {
+      height: 100%;
+      background-color: rgba(red, .15);
+    }
+
+    @include medium-only {
+      .g-wide--last {
+        display: none;
+      }
+    }
+
+    @include small-only {
+      display: none;
+    }
+  }
+}
