@@ -8,6 +8,29 @@ article:
   updated_on: 2014-01-06
   order: 1
 collection: user-input
+key-takeaways:
+  label-and-name:
+    - Always use labels on form inputs, and ensure they're visible when 
+      the field is in focus.
+    - Use placeholders to provide guidance about what you expect.
+    - To help the browser auto-complete the form, use established name's 
+      for elements and include the autocomplete attribute.
+  choose-best-input-type:
+    - Choose the most appropriate input type for your data to simplify input.
+    - Offer suggestions as the user types with the datalist element.
+  provide-real-time-validation:
+    - Leverage the browser's built-in validation attributes like `pattern`, `required`, 
+      `min`, `max`, etc.
+    - Use JavaScript and the Constraints Validation API for more complex validation requirements.
+    - Show validation errors in real time, and if the user tries to submit an 
+      invalid form, show all fields they need to fix.
+  use-request-auto-complete:
+    - requestAutocomplete can greatly simplify the checkout process and 
+      improve the user experience.
+    - If requestAutocomplete is available, hide the checkout form and move people
+      directly to the confirmation page.
+    - Ensure input fields include the appropriate autocomplete attribute.
+  
 ---
 
 
@@ -25,16 +48,7 @@ submitting the form.
 
 # Label and name inputs properly
 
-<div class="takeaways">
-  <h2>Key takeaways</h2>
-  <ul>
-    <li>Always use labels on form inputs, and ensure they're visible when 
-      the field is in focus.</li>
-    <li>Use placeholders to provide guidance about what you expect.</li>
-    <li>To help the browser auto-complete the form, use established name's 
-      for elements and include the autocomplete attribute.</li>
-  </ul>
-</div>
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.label-and-name %}
 
 ### The importance of labels
 
@@ -188,13 +202,7 @@ The form
 
 # Choose the best input type
 
-<div class="takeaways">
-  <h2>Key takeaways</h2>
-  <ul>
-    <li>Choose the most appropriate input type for your data to simplify input.</li>
-    <li>Offer suggestions as the user types with the datalist element.</li>
-  </ul>
-</div>
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.choose-best-input-type %}
 
 Every tap counts. Users appreciate websites that automatically present number 
 pads for entering phone numbers, or automatically advance fields as they entered 
@@ -296,14 +304,7 @@ lists, `datalist`s provide hints as the user types.
 
 # Provide real-time validation
 
-<div class="takeaways">
-  <h2>Key takeaways</h2>
-  <ul>
-    <li>Leverage the browser's built-in validation attributes like `pattern`, `required`, `min`, `max`, etc.</li>
-    <li>Use JavaScript and the Constraints Validation API for more complex validation requirements.</li>
-    <li>Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix.</li>
-  </ul>
-</div>
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.provide-real-time-validation %}
 
 Real-time data validation doesn't just help to keep your data clean, but it also 
 helps improve the user experience.  Modern browsers have several built-in tools 
@@ -546,14 +547,7 @@ The JavaScript
 
 # Simplify checkout with requestAutocomplete
 
-<div class="takeaways">
-  <h2>Key takeaways</h2>
-  <ul>
-    <li>requestAutocomplete can greatly simplify the checkout process and improve the user experience.</li>
-    <li>If requestAutocomplete is available, hide the checkout form and move people directly to the confirmation page.</li>
-    <li>Ensure input fields include the appropriate autocomplete attribute.</li>
-  </ul>
-</div>
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.use-request-auto-complete %}
 
 While `requestAutocomplete` was designed to help users fill out any form, today 
 it's most common use is in eCommerce where shopping cart abandonment on the 
