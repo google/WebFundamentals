@@ -25,6 +25,10 @@ module Jekyll
     def render_codehighlighter(context, code, filepath)
       require 'pygments'
 
+      # TODO(ianbarber): This is a bit of a fudge. We should know the definitive sample 
+      # path. I think we may want to have a central shared "code sample" object that is
+      # knows how to get such paths for this and the sample_builder.
+      filepath.sub!("_code/", "")
       offset = false
       snippet = ""
       # Indenter
@@ -54,7 +58,7 @@ module Jekyll
       <<-HTML
   <div>
     <pre><code class='html'>#{highlighted_code.strip}</code></pre>
-    <a href="/_samples/#{filepath}">View full sample</a>
+    <a href="/resources/samples/#{filepath}">View full sample</a>
   </div>
         HTML
       end
