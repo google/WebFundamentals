@@ -5,7 +5,7 @@ description: "Use our guides to learn how to create compelling experiences that 
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 4
+  order: 3
 collection: the-essentials
 ---
 # {{ page.title }}

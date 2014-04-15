@@ -107,40 +107,61 @@ If you have real device even better, you can ... [todo]
 
 Especially for sites, we believe that the content is the most important aspect.  
 So let's design for the content and not let the design dictate the content.  In 
-this lesson we will present a simple linear layout using Micro-reflow[link] 
+this lesson we will present a simple linear layout using [Micro-reflow](link) 
 concepts.
 
-In this site, we have identified the need for a header that describes our 
-product "Smiles", a form to collect information about the user.  We also need to 
-show users that Smiles are great, so adding images and tables of data is an 
-absolutely necessity.
+We have identified we need an area that describes at a 
+high-level our product "Smiles", a form to collect information about the user.
 
-Now that we know the content, lets create our structure for the content.  It will
-be pretty simple.  We need a heading areas, 3 sections of information and a footer.
+*  an in depth description and video, 
+*  images of the product in action,
+*  a data table with information to back the claims up.
+
+Now that we know the content, it is not too hard to create the structure of the 
+page with 
+be pretty simple. We need a heading areas, 3 sections of information and a footer.
+
+[TODO: Information Arhitecture]
 
 {% include_code _code/addstructure.html structure %}
 
-This is the basic structure now we can add some of the basic content
+This is the basic structure now we can add some of the content.
 
-### Add header
+### Add headline
+
+The headline is the first section that a user will see when they land on the page.
+We need to create a concise introduction and a place holder for a form that we will
+complete later.
 
 {% include_code _code/addcontent.html headline %}
+
+[TODO: Add Image]
 
 ### Add Section 1
 
 {% include_code _code/addcontent.html section1 %}
 
+[TODO: Add Image]
+
 ### Add Section 2
 
 {% include_code _code/addcontent.html section2 %}
+
+[TODO: Add Image]
 
 ### Add Section 3
 
 {% include_code _code/addcontent.html section3 %}
 
+[TODO: Add Image]
+
 ### Add Footer
 
 {% include_code _code/addcontent.html footer %}
+
+[TODO: Add Image]
+
+## Styling
 
 ## Create a great form
 

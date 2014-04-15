@@ -5,7 +5,7 @@ description: "Performance Matters (#perfmatters).  It not only matters it is cri
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 3
+  order: 4
 collection: the-essentials
 ---
 # {{ page.title }}

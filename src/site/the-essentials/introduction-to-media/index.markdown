@@ -5,7 +5,7 @@ description: "Images, Video and Audio make the web engaging and compelling.  Use
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 1
+  order: 2
 collection: the-essentials
 ---
 # {{ page.title }}
