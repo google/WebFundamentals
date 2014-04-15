@@ -33,8 +33,13 @@ module SampleBuilder
 
 	class SampleFile < Jekyll::StaticFile
 		def initialize(site, dest, path, file, contents)
-			super (site, dest, path, file)
+			super(site, dest, path, file)
 			@contents = contents
+			@filename = file
+		end
+
+		def filename 
+			@filename
 		end
 
   		def write(dest)
@@ -116,4 +121,25 @@ module SampleBuilder
 		  	site.static_files << Jekyll::StaticFile.new(site, path, "resources/samples/css", "base.css")
 		end
 	end
+
+	class SamplesTag < Liquid::Tag
+	    def initialize(tag_name, markup, tokens)
+	      super
+	    end
+
+	    def render(context)
+		   samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
+		   samples.each{ |sample| render_sample(sample) }.join("\n")
+	    end
+
+	    def render_sample(sample)
+	      <<-END
+	      <p>
+	        #{sample.filename()}
+	      </p>
+	      END
+	    end
+	end
 end
+
+Liquid::Template.register_tag('list_samples', SampleBuilder::SamplesTag)
