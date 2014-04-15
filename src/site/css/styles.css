@@ -1117,7 +1117,7 @@ body.debug:after {
 /* line 13, ../_sass/_modules/_editorial-header.scss */
 .editorial-header {
   background-color: #e8e8e8;
-  padding-bottom: 104px;
+  padding-bottom: 26px;
   margin-bottom: 26px;
   overflow: hidden;
 }
@@ -1145,6 +1145,37 @@ body.debug:after {
     content: "<";
     left: 75%;
   }
+}
+
+/* line 49, ../_sass/_modules/_editorial-header.scss */
+.editorial-header__excerpt {
+  margin-bottom: 52px;
+}
+
+/* line 53, ../_sass/_modules/_editorial-header.scss */
+.columns-list-wrapper {
+  margin-right: 48.2%;
+}
+
+/* line 57, ../_sass/_modules/_editorial-header.scss */
+.columns-list {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-count: 2;
+  -webkit-column-rule: 0 none transparent;
+  -moz-column-rule: 0 none transparent;
+  -ms-column-rule: 0 none transparent;
+  column-rule: 0 none transparent;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  -ms-column-gap: 0;
+  column-gap: 0;
+}
+
+/* line 67, ../_sass/_modules/_editorial-header.scss */
+.columns-list-item:before {
+  display: none;
 }
 
 /**
@@ -1175,16 +1206,16 @@ body.debug:after {
 }
 
 /* line 26, ../_sass/_modules/_summary-header.scss */
-.summary-header__anchors {
+.summary-header__anchor-list {
   margin-top: 52px;
 }
 
 /* line 32, ../_sass/_modules/_summary-header.scss */
-.summary-header__anchors--item a {
+.summary-header__anchors-item a {
   color: white;
 }
 /* line 35, ../_sass/_modules/_summary-header.scss */
-.summary-header__anchors--item:before {
+.summary-header__anchors-item:before {
   display: none;
 }
 

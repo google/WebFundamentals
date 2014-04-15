@@ -23,12 +23,12 @@
 
 }
 
-.summary-header__anchors {
+.summary-header__anchor-list {
   margin-top: $lineHeight * 2;
 }
 
 
-.summary-header__anchors--item {
+.summary-header__anchors-item {
   & a {
     color: $colorWhite;
   }

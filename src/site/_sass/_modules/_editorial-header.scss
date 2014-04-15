@@ -12,7 +12,7 @@
 
 .editorial-header {
   background-color: $colorGray;
-  padding-bottom: $lineHeight * 4;
+  padding-bottom: $lineHeight;
   margin-bottom: $lineHeight;
   overflow: hidden;
 
@@ -44,4 +44,27 @@
     }
   }
 
+}
+
+.editorial-header__excerpt {
+  margin-bottom: $lineHeight * 2;
+}
+
+.columns-list-wrapper {
+  margin-right: 48.2%;
+}
+
+.columns-list {
+  @include prefixr(column-count, 2);
+  @include prefixr(column-rule, 0 none transparent);
+  @include prefixr(column-gap, 0);
+}
+
+.columns-list-item {
+  // display: inline-block;
+  // width: $wideColWidth;
+  // margin-right: $wideGutterWidth;
+  &:before {
+    display: none;
+  }
 }
