@@ -34,6 +34,8 @@
   list-style: none;
   display: block;
   background-color: $colorGray;
+  position: static;
+  padding-left: 0;
 
   &.main-nav__item--logo {
     @include small-only {
@@ -101,6 +103,8 @@
 
 .main-nav__item--child {
   padding-top: 0;
+  position: static;
+  padding-left: 0;
 
   &:before {
     display: none;
