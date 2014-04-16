@@ -3,6 +3,11 @@ layout: article
 title: "Create amazing forms"
 description: "Forms are hard to fill out on mobile. The best forms are the ones with the
 fewest inputs."
+introduction: "Forms are hard to fill out on mobile. The best forms are the ones with the
+fewest inputs. Good forms provide semantic input types. Keys should change to
+match the user's input type; users pick a date in a calendar. Keep your user
+informed. Validation tools should tell the user what they need to do before
+submitting the form."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -49,18 +54,11 @@ remember:
       their information may not be secure.
 ---
 
+{% wrap content%}
 
 Most of the samples will be based off
 [https://petelepage.com/scratch/form-ac.html](https://petelepage.com/scratch/form-ac.html)
 which integrates all of the items discussed in the doc below.
-
-
-
-Forms are hard to fill out on mobile. The best forms are the ones with the
-fewest inputs. Good forms provide semantic input types. Keys should change to
-match the user's input type; users pick a date in a calendar. Keep your user
-informed. Validation tools should tell the user what they need to do before
-submitting the form.
 
 # Label and name inputs properly
 
@@ -605,3 +603,4 @@ The JavaScript
 
 [Try it](http://jsbin.com/migod/edit)
 
+{% endwrap %}
