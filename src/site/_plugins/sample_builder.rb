@@ -48,7 +48,7 @@ module SampleBuilder
 		end
 
 		def url
-			File.join("/resources/samples/", @path, @filename)
+			File.join(@path, @filename)
 		end
 
   		def write(dest)
@@ -137,18 +137,18 @@ module SampleBuilder
 	    end
 
 	    def render(context)
-
-		   samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
-		   links = samples.map{ |sample| render_sample(sample) }
-		   "<ul>" +
-		   links.join("\n") +
-		   "</ul>"
+	    	#TODO(ianbarber): It would be nice to have stable ordering here
+			samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
+		    links = samples.map{ |sample| render_sample(sample) }
+		    "<ul>" +
+		    links.join("\n") +
+		    "</ul>"
 	    end
 
 	    def render_sample(sample)
 	    	url = sample.url
 	    	name = sample.title
-	      "<li><a href='#{url}'>#{name}</a></li>"
+	      "<li><a href='/#{url}'>#{name}</a></li>"
 	    end
 	end
 end
