@@ -50,11 +50,11 @@ module Jekyll
           Jekyll.logger.error "There was an error highlighting your code."
       end
       <<-HTML
-  <div class="highlight highlight--right">
-    <div class="highlight__container" data-character="/">
-      <div class="g-wide--push-1 g-wide--pull-1 g-medium--pull-1">
-        <pre><code class='html'>#{highlighted_code.strip}</code></pre>
-        <a href="/resources/samples/#{filepath}">View full sample</a>
+  <div class="highlight-module highlight-module--code highlight-module--right">
+    <div class="highlight-module__container" data-character="/">
+      <div class="g-wide--pull-1 g-medium--pull-1">
+        <code class='html'>#{highlighted_code.strip}</code>
+        <a class="highlight-module__cta" href="/resources/samples/#{filepath}">View full sample</a>
       </div>
     </div>
   </div>

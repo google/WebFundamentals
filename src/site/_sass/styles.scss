@@ -20,6 +20,9 @@
 @import "_main-header";
 @import "_main-footer";
 
+// Syntax highlihter - Leave it here so can be easily overridden
+@import "/css/syntax.css";
+
 // Modules
 @import "_modules/_highlight";
 @import "_modules/_editorial-header";

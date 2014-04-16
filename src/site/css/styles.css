@@ -30,6 +30,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(/css/syntax.css);
 /* line 9, ../_sass/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -1205,7 +1206,7 @@ body.debug:after {
 *
 **/
 /* line 60, ../_sass/_modules/_highlight.scss */
-.highlight {
+.highlight-module {
   background-color: #e8e8e8;
   overflow: hidden;
   margin-top: 52px;
@@ -1213,24 +1214,24 @@ body.debug:after {
 }
 
 /* line 67, ../_sass/_modules/_highlight.scss */
-.highlight--learning {
+.highlight-module--learning {
   background-color: #94d8e8;
 }
 
 /* line 71, ../_sass/_modules/_highlight.scss */
-.highlight--remember {
+.highlight-module--remember {
   background-color: #f4b400;
   color: white;
 }
 
 /* line 76, ../_sass/_modules/_highlight.scss */
-.highlight--related {
+.highlight-module--related {
   background-color: #33b679;
   color: white;
 }
 
 /* line 81, ../_sass/_modules/_highlight.scss */
-.highlight__container {
+.highlight-module__container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
@@ -1244,7 +1245,7 @@ body.debug:after {
 }
 @media only screen and (min-width: 620px) {
   /* line 81, ../_sass/_modules/_highlight.scss */
-  .highlight__container {
+  .highlight-module__container {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
@@ -1252,7 +1253,7 @@ body.debug:after {
 }
 @media only screen and (min-width: 960px) {
   /* line 81, ../_sass/_modules/_highlight.scss */
-  .highlight__container {
+  .highlight-module__container {
     padding-left: 0;
     padding-right: 0;
     max-width: 864px;
@@ -1260,12 +1261,12 @@ body.debug:after {
 }
 @media only screen and (min-width: 620px) {
   /* line 81, ../_sass/_modules/_highlight.scss */
-  .highlight__container {
+  .highlight-module__container {
     padding-bottom: 52px;
     position: relative;
   }
   /* line 17, ../_sass/_modules/_highlight.scss */
-  .highlight__container:before {
+  .highlight-module__container:before {
     content: attr(data-character);
     display: block;
     position: absolute;
@@ -1280,18 +1281,18 @@ body.debug:after {
     width: 30.3%;
   }
   /* line 34, ../_sass/_modules/_highlight.scss */
-  .highlight--left .highlight__container:before {
+  .highlight-module--left .highlight-module__container:before {
     right: auto;
     left: 0;
   }
   /* line 54, ../_sass/_modules/_highlight.scss */
-  .highlight--learning .highlight__container:before {
+  .highlight-module--learning .highlight-module__container:before {
     bottom: 52px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
   /* line 17, ../_sass/_modules/_highlight.scss */
-  .highlight__container:before {
+  .highlight-module__container:before {
     width: 22.2%;
     font-size: 400px;
     line-height: 400px;
@@ -1299,7 +1300,7 @@ body.debug:after {
 }
 
 /* line 95, ../_sass/_modules/_highlight.scss */
-.highlight__title {
+.highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
   font-weight: 300;
@@ -1311,7 +1312,7 @@ body.debug:after {
 }
 @media only screen and (min-width: 960px) {
   /* line 95, ../_sass/_modules/_highlight.scss */
-  .highlight__title {
+  .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
     font-weight: 300;
@@ -1323,7 +1324,7 @@ body.debug:after {
 }
 @media only screen and (min-width: 960px) {
   /* line 95, ../_sass/_modules/_highlight.scss */
-  .highlight__title {
+  .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
     font-weight: 300;
@@ -1333,7 +1334,7 @@ body.debug:after {
     padding-bottom: 0;
   }
   /* line 102, ../_sass/_modules/_highlight.scss */
-  .highlight--large .highlight__title {
+  .highlight-module--large .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
     font-weight: 300;
@@ -1345,7 +1346,7 @@ body.debug:after {
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
   /* line 95, ../_sass/_modules/_highlight.scss */
-  .highlight__title {
+  .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
     font-weight: 300;
@@ -1357,13 +1358,54 @@ body.debug:after {
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
   /* line 102, ../_sass/_modules/_highlight.scss */
-  .highlight--large .highlight__title {
+  .highlight-module--large .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
     font-weight: 300;
     line-height: 1.19em;
     /* 130px */
     padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+}
+
+/* line 109, ../_sass/_modules/_highlight.scss */
+.highlight-module--code pre {
+  margin: 0;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  margin-left: -26px;
+  font-size: 13px;
+}
+/* line 116, ../_sass/_modules/_highlight.scss */
+.highlight-module--code pre span {
+  margin: 0;
+  padding: 0;
+}
+/* line 122, ../_sass/_modules/_highlight.scss */
+.highlight-module--code code {
+  margin: 0;
+  padding: 0;
+  word-spacing: -2px;
+}
+
+/* line 130, ../_sass/_modules/_highlight.scss */
+.highlight-module__cta {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+}
+@media only screen and (min-width: 960px) {
+  /* line 130, ../_sass/_modules/_highlight.scss */
+  .highlight-module__cta {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    padding-top: 1.3000em;
     padding-bottom: 0;
   }
 }
@@ -1727,7 +1769,7 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 25, ../_sass/_components/_list.scss */
+/* line 26, ../_sass/_components/_list.scss */
 ul,
 ol {
   padding-left: 0;
@@ -1735,27 +1777,34 @@ ol {
   margin: 0;
 }
 
+/* line 32, ../_sass/_components/_list.scss */
+li {
+  position: relative;
+  padding-left: 16px;
+}
 /* line 14, ../_sass/_components/_list.scss */
 li:before {
   content: "#";
-  display: inline-block;
+  display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  padding-right: 16px;
-  line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* line 14, ../_sass/_components/_list.scss */
 .list__item:before {
   content: ">";
-  display: inline-block;
+  display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  padding-right: 16px;
-  line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* line 39, ../_sass/_components/_list.scss */
+/* line 42, ../_sass/_components/_list.scss */
 .main-nav__item:before {
   display: none;
 }
