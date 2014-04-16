@@ -135,7 +135,7 @@
     left: 0;
     right: 0;
     border-bottom: 2px solid $colorGrayDark;
-    padding-bottom: ($lineHeight*2) - 2;
+    padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
 
     display: none;
 
