@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Responsive Design Fundamentals"
+title: "Responsive Web Design Fundamentals"
 description: ""
 article:
   written_on: 2014-01-01
@@ -30,6 +30,7 @@ remember:
     - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
 ---
 {% wrap content %}
+
 <style type="text/css">
   video {
     width: 100%;
@@ -42,8 +43,6 @@ remember:
     max-height: 500px;
   }
 </style>
-
-# Responsive Web Design Fundamentals
 
 The use of mobile devices to surf the web is growing at an astronomical pace, 
 but unfortunately much of the web isn't optimized for those mobile devices. Mobile 
@@ -68,9 +67,9 @@ the size and capabilities of the device.  For example, on a phone, users would
 see content shown in a single column view; a tablet might show the same content 
 in two columns.
 
-# Set the viewport
+## Set the viewport
 
-{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.set-viewport %}
+{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.set-viewport %}
 
 Pages optimized for a variety of devices must include a meta viewport element in 
 the head of the document.  A meta viewport tag gives the browser instructions on 
@@ -98,9 +97,9 @@ mode, and zoom rather than reflow to fill the screen. Adding the attribute
 pixels and device independent pixels regardless of device orientation, and 
 allows the page to take advantage of the full landscape width.
 
-{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.use-commas %}
+{% include modules/highlight.liquid character="!" position="right" title="Remember" type="remember" list=page.remember.use-commas %}
 
-## Ensure an accessible viewport
+### Ensure an accessible viewport
 
 In addition to setting an `initial-scale`, you can also set the `minimum-scale`, 
 `maximum-scale` and `user-scalable` attributes on the viewport.  When set, these 
@@ -109,7 +108,7 @@ accessibility issues.
 
 # Size content to the viewport
 
-{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.size-content-to-vp %} 
+{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.size-content-to-vp %} 
 
 On both desktop and mobile devices, users are used to scrolling websites 
 vertically but not horizontally, and forcing the user to scroll horizontally or 
@@ -135,9 +134,9 @@ viewport on small screens.
 
 <img src="imgs/sxs-vp-fixed.png" class="wide" />
 
-# Use CSS Media Queries For Responsiveness 
+## Use CSS Media Queries For Responsiveness 
 
-{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.media-queries %}
+{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.media-queries %}
 
 Media queries are simple filters that can be applied to CSS styles.  They make 
 it easy to change styles based on the characteristics of the device rendering 
@@ -162,7 +161,7 @@ The logic that applies to media queries is not mutually exclusive and any filter
 that meets that criteria the resulting CSS block will be applied using the 
 standard rules of precedence in CSS.
 
-## Apply media queries based on viewport size
+### Apply media queries based on viewport size
 
 Media queries enable us to create a responsive experience, where specific styles 
 are applied to small screens, large screens and anywhere in between.  The media 
@@ -234,7 +233,7 @@ than its height.
 
 [View full sample](_code/media-queries.html)
 
-## A note on `min-``device-width`
+### A note on `min-``device-width`
 
 In addition to `*-width`, it is also possible to create queries based on 
 `*-device-width`; the difference is subtle but very important.  `min-width` is 
@@ -247,7 +246,7 @@ their windows and will expect the content to adapt naturally.  Therefore, you
 should avoid using `*-device-width`, since the page won't respond when the 
 desktop browser window is resized.
 
-## Use relative units
+### Use relative units
 
 A key concept behind responsive design is fluidity and proportionality as 
 opposed to fixed width layouts.  Using relative units for measurements can help 
@@ -263,26 +262,28 @@ In addition, using relative units allows browsers to render the content based on
 the users zoom level without the need for adding horizontal scroll bars to the 
 page.
 
-<div>
-  <h2>NO</h2>
-  <pre><code>div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}</code></pre>
+<div class="clear">
+  <div class="g--half">
+    <h2>NO</h2>
+    <pre><code>div.fullWidth {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }</code></pre>
+  </div>
+
+  <div class="g--half g--last">
+    <h2>YES</h2>
+    <pre><code>
+  div.fullWidth {
+    width: 100%;
+  }</code></pre>
+  </div>
 </div>
 
-<div>
-  <h2>YES</h2>
-  <pre><code>
-div.fullWidth {
-  width: 100%;
-}</code></pre>
-</div>
+## How to choose breakpoints
 
-# How to choose breakpoints
-
-{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.choose-breakpoints %}
+{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.choose-breakpoints %}
 
 While it may be helpful to think about defining breakpoints based on device 
 classes, use caution.  Defining breakpoints based on specific devices, products, 
@@ -290,7 +291,7 @@ brand names or operating systems, that are in use today will result in a
 maintenance nightmare. Instead, the content itself should determine how the 
 layout adjusts to its container.  
 
-## Pick major breakpoints by starting small, then working up
+### Pick major breakpoints by starting small, then working up
 
 Design the content to fit on a small screen size first, then expand the screen 
 until a breakpoint becomes necessary.  This will allow you to optimize 
@@ -324,7 +325,7 @@ styles are placed in `weather-large.css`.
 
 [View full sample](_code/weather-2.html)
 
-## Pick minor breakpoints when necessary
+### Pick minor breakpoints when necessary
 
 In addition to choosing major breakpoints when layout changes significantly, it 
 is also helpful to adjust for minor changes.  For example between major 
@@ -348,7 +349,7 @@ forecast panel so it doesn't consume the whole screen width.
 
 [View finished sample](_code/weather.html)
 
-## Optimize text for reading
+### Optimize text for reading
 
 Classic readability theory suggests that an ideal column should contain 70 to 80 
 characters per line (about  8 to 10 words in English), thus each time the width 
@@ -363,7 +364,7 @@ than 575px, the ideal content width is 550px.
 
 {% include_code _code/reading.css mqreading %}
 
-## Never completely hide content
+### Never completely hide content
 
 Be careful when choosing what content to hide or show depending on screen size.  
 Don't simply hide content just because you can't fit it on screen.  Screen size 
