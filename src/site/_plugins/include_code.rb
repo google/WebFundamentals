@@ -41,8 +41,10 @@ module Jekyll
       code.each_line {|s|
         
         #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
-        snippet += (" " * 4)
-        snippet += s.slice(initial..s.size).rstrip
+        if s.size >= initial
+          snippet += (" " * 4)
+          snippet += s.slice(initial..s.size).rstrip
+        end
         snippet += "\n"
       }
 
