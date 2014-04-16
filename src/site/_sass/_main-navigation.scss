@@ -12,6 +12,7 @@
 
 .main-nav {
   background: #ffffff;
+  position: relative;
 
   @include medium {
     background-color: $colorGrayDark;
@@ -21,11 +22,11 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 
   @include medium {
     text-align: center;
     @include container;
+    position: static;
   }
 }
 
@@ -68,8 +69,9 @@
   }
 
   @include medium {
-    // padding-bottom: $lineHeight;
+    margin-bottom: 0;
     color: #ffffff;
+    @include type--medium;
   }
 
   @include wide {
@@ -87,6 +89,10 @@
 
 .main-nav__item--child {
   padding-top: 0;
+
+  &:before {
+    display: none;
+  }
 }
 
 .main-nav__link--child {
@@ -94,11 +100,45 @@
   @include type--base;
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
+
+  @include medium {
+    color: $colorText;
+
+    // Only override links inside list
+    .main-nav__list--child & {
+      @include type--large;
+    }
+  }
 }
 
 
-.main-nav__subnav {
+.main-nav__secondary-nav {
   @include medium {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid $colorGrayDark;
+    padding-bottom: ($lineHeight*2) - 2;
+
     display: none;
+
+    li:hover & {
+      display: block;
+    }
   }
+}
+
+
+.main-nav__secondary-content {
+  @include medium {
+    @include container;
+    text-align: left;
+  }
+}
+
+.main-nav__link--explore {
+  // font-size: $fontBase;
+  font-weight: 600;
+  color: $colorHighlight;
 }

@@ -1,0 +1,38 @@
+/**
+*
+* Editorial Header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.summary-header {
+  background-color: $colorBlue;
+  padding-bottom: $lineHeight * 3;
+  color: $colorWhite;
+  margin-bottom: $lineHeight;
+  @include prefixr(box-shadow, inset 0 2px 0 0 white);
+
+  .breadcrumbs__link {
+    color: $colorWhite;
+  }
+
+}
+
+.summary-header__anchors {
+  margin-top: $lineHeight * 2;
+}
+
+
+.summary-header__anchors--item {
+  & a {
+    color: $colorWhite;
+  }
+  &:before {
+    display: none;
+  }
+}

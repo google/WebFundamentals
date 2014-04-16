@@ -21,6 +21,7 @@ $wideGutterWidth: 3.7%;
 
 .demo {
   margin-bottom: $lineHeight;
+  margin-top: $lineHeight;
 }
 
 @mixin rule--col($mediaQuery) {
