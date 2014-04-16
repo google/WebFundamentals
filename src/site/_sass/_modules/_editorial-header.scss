@@ -12,8 +12,7 @@
 
 .editorial-header {
   background-color: $colorGray;
-  padding-bottom: $lineHeight * 4;
-  margin-bottom: $lineHeight;
+  padding-bottom: $lineHeight * 2;
   overflow: hidden;
 
 
@@ -25,16 +24,18 @@
       &:before {
         content: ">";
         display: block;
-
         position: absolute;
+        line-height: 0;
         top: 35%;
         right: 90%;
-
         font-size: 1400px;
-        line-height: 0;
-        color: rgba(0, 0, 0, .1);
+        color: rgba(0, 0, 0, .1)
       }
     }
   }
 
+}
+
+.editorial-header__excerpt {
+  margin-bottom: $lineHeight * 2;
 }
