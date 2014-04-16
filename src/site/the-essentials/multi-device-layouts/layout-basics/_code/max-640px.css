@@ -1,0 +1,19 @@
+h1 {
+  color: red;
+}
+
+.desc:before {
+  content: "This browser window is smaller than 640px wide.";
+}
+
+<!-- // [START atmedia] -->
+@media (min-width: 500px) and (max-width: 600px) {
+  h1 {
+    color: fuchsia;
+  }
+  
+  .desc:after {
+    content:" In fact, it's between 500px and 600px wide.";
+  }
+}
+<!-- // [END atmedia] -->
