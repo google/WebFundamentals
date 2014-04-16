@@ -48,21 +48,74 @@ remember:
   provide-real-time-validation:
     - Even with client-side input validation, it is always important to validate data on
       the server to ensure consistency and security in your data.
+  show-all-errors:
+    - You should show the user all of the issues on the form at once, rather than showing them one at a time.
   request-auto-complete-flow:
     - If you're asking for any kind of personal information or credit card data,
       ensure the page is served via SSL.  Otherwise the dialog will warn the user
       their information may not be secure.
 ---
+{% wrap content %}
 
-{% wrap content%}
+<style type="text/css">
+  video {
+    width: 100%;
+  }
 
+  img.wide {
+    width: 100%;
+  }
+
+  img.tall {
+    max-height: 500px;
+  }
+
+  table {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  thead {
+    font-weight: bold;
+  }
+
+  th, td{
+    text-align: left;
+    padding: 8px;
+  }
+
+  tbody > tr:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .text-danger {
+    color: #a94442;
+  }
+
+  .text-success {
+    color: #3c763d;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+</style>
+
+<!--
 Most of the samples will be based off
 [https://petelepage.com/scratch/form-ac.html](https://petelepage.com/scratch/form-ac.html)
 which integrates all of the items discussed in the doc below.
+-->
 
-# Label and name inputs properly
+## Label and name inputs properly
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.label-and-name %}
+{% include modules/takeaway.liquid character="*" position="left" title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
 
 ### The importance of labels
 
@@ -73,11 +126,7 @@ attribute.  Applying labels to form elements also helps to improve the touch
 target size: the user can touch either the label or the input in order to place
 focus on the input element.
 
-    <label for="myInput">Tell me a secret</label>
-    <input type="text" id="myInput">
-    <label>
-      <input type="checkbox"> I'm a checkbox
-    </label>
+{% include_code _code/order.html labels %}
 
 ### Label sizing and placement
 
@@ -93,9 +142,7 @@ elements may be covered by the virtual keyboard.
 The placeholder attribute provides a hint to the user about what's expected in
 the input by displaying its value as light text until the element gets focus.
 
-    <label for="frmName">Name</label>
-    <input type="text" id="frmName" placeholder="Full name"/>
-
+{% include_code _code/order.html placeholder %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-placeholders %}
 
@@ -114,74 +161,117 @@ to the browser by providing both the name attribute and the autocomplete
 attribute on each input element.
 
 For example, to hint to the browser that it should auto-complete the form with
-the users name and phone number, you should use:
+the users name, email address and phone number, you should use:
 
-    <label for="frmName">Name</label>
-    <input type="text" id="frmName" name="name" autocomplete="name">
-    <label for="frmPhone">Phone Number</label>
-    <input type="tel" id="frmPhone" name="phone" autocomplete="shipping tel">
+{% include_code _code/order.html autocomplete %}
+
 
 ### Recommended input name and autocomplete attribute values
 
-<table>
-<tr>
-<td>Content</td>
-<td>`name` attribute</td>
-<td>`autocomplete` attribute
-Note: the `autocomplete` attributes should be prefixed with either shipping or billing, depending on the context.</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>name
-fname, mname, lname</td>
-<td>name</td>
-</tr>
-<tr>
-<td>Email</td>
-<td>email</td>
-<td>email</td>
-</tr>
-<tr>
-<td>Address</td>
-<td>address
-city
-region, province, state
-zip, zip2, postal
-country</td>
-<td>street-address
-locality
-region
-postal-code
-country</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td>phone
-mobile
-country-code
-area-code
-exchange
-suffix
-ext</td>
-<td>tel</td>
-</tr>
-<tr>
-<td>Credit Card</td>
-<td>ccname
-cardnumber
-cvc
-ccmonth
-ccyear
-exp-date
-card-type</td>
-<td>cc-name
-cc-number
-cc-csc
-cc-exp-month
-cc-exp-year
-cc-exp
-cc-type</td>
-</tr>
+<style type="text/css">
+  table.autocompletes {
+    width: 100%;
+  }
+
+  table.autocompletes th:nth-of-type(1) {
+    width: 20%;
+  }
+
+  table.autocompletes th:nth-of-type(2),
+  table.autocompletes th:nth-of-type(3) {
+    width: 40%;
+  }
+
+  table.autocompletes td {
+    vertical-align: top;
+  }
+
+  table.autocompletes tbody code {
+    display: block;
+  }
+</style>
+
+
+<table class="autocompletes">
+  <thead>
+    <tr>
+      <th>Content type</th>
+      <th><code>name</code> attribute</th>
+      <th><code>autocomplete</code> attribute</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>
+        <code>name</code>
+        <code>fname</code>
+        <code>mname</code>
+        <code>lname</code>
+      </td>
+      <td><code>name</code></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><code>email</code></td>
+      <td><code>email</code></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>
+        <code>address</code>
+        <code>city</code>
+        <code>region</code>
+        <code>province</code>
+        <code>state</code>
+        <code>zip</code>
+        <code>zip2</code>
+        <code>postal</code>
+        <code>country</code>
+      </td>
+      <td>
+        <code>street-address</code>
+        <code>locality</code>
+        <code>region</code>
+        <code>postal-code</code>
+        <code>country</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>
+        <code>phone</code>
+        <code>mobile</code>
+        <code>country-code</code>
+        <code>area-code</code>
+        <code>exchange</code>
+        <code>suffix</code>
+        <code>ext</code>
+      </td>
+      <td><code>tel</code></td>
+    </tr>
+    <tr>
+      <td>Credit Card</td>
+      <td>
+        <code>ccname</code>
+        <code>cardnumber</code>
+        <code>cvc</code>
+        <code>ccmonth</code>
+        <code>ccyear</code>
+        <code>exp-date</code>
+        <code>card-type</code>
+      </td>
+      <td>
+        <code>cc-name</code>
+        <code>cc-number</code>
+        <code>cc-csc</code>
+        <code>cc-exp-month</code>
+        <code>cc-exp-year</code>
+        <code>cc-exp</code>
+        <code>cc-type</code>
+      </td>
+    </tr>
+</tbody>
 </table>
 
 {% include modules/remember.liquid title="Remember" list=page.remember.recommend-input %}
@@ -199,20 +289,11 @@ Be careful using the autofocus attribute because it will steal keyboard focus
 and potentially preventing the backspace character from being used for
 navigation.
 
-    <label for="frmName">Name</label>
     <input type="text" id="frmName" autofocus name="name" autocomplete="name">
 
-## Putting it all together
+## Choose the best input type
 
-The form
-
-    ```sample code
-
-[Try it](http://jsbin.com/rufuw/1/edit)
-
-# Choose the best input type
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.choose-best-input-type %}
+{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.choose-best-input-type %}
 
 Every tap counts. Users appreciate websites that automatically present number
 pads for entering phone numbers, or automatically advance fields as they entered
@@ -226,74 +307,134 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<table>
-<tr>
-<td>Input type</td>
-<td>Typical Keyboard</td>
-</tr>
-<tr>
-<td>url
-For entering a URL. It must start with a valid URI scheme, for example http://, ftp:// or mailto:. </td>
-<td></td>
-</tr>
-<tr>
-<td>tel
-For entering phone numbers. It does not enforce a particular syntax for validation, so if you want to ensure a particular format, you can use pattern.</td>
-<td></td>
-</tr>
-<tr>
-<td>email
-For entering email addresses, and hints that the @ should be shown on the keyboard by default. You can add the multiple attribute if more than one email address will be provided.</td>
-<td></td>
-</tr>
-<tr>
-<td>search
-A text input field styled in a way that is consistent with the platform's search field.</td>
-<td></td>
-</tr>
-<tr>
-<td>number
-For numeric input, can be any rational integer or float value.</td>
-<td></td>
-</tr>
-<tr>
-<td>range
-For number input, but unlike the number input type, the value is less important. It is displayed to the user as a slider control.</td>
-<td></td>
-</tr>
-<tr>
-<td>datetime-local
-For entering a date and time value where the time zone provided is the local time zone.</td>
-<td></td>
-</tr>
-<tr>
-<td>date
-For entering a date (only) with no time zone provided.</td>
-<td></td>
-</tr>
-<tr>
-<td>time
-For entering a time (only) with no time zone provided.</td>
-<td></td>
-</tr>
-<tr>
-<td>week
-For entering a week (only) with no time zone provided.</td>
-<td></td>
-</tr>
-<tr>
-<td>month
-For entering a month (only) with no time zone provided.</td>
-<td></td>
-</tr>
-<tr>
-<td>color
-For picking a color.</td>
-<td></td>
-</tr>
+<style type="text/css">
+  table.inputtypes th {
+    width: 50%;
+  }
+</style>
+
+<table class="inputtypes">
+  <thead>
+    <tr>
+      <th>Input <code>type</code></th>
+      <th>Typical Keyboard</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>url</code><br> For entering a URL. It must start with a valid URI scheme, 
+        for example <code>http://</code>, <code>ftp://</code> or <code>mailto:</code>.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>tel</code><br>For entering phone numbers. It does <b>not</b> 
+        enforce a particular syntax for validation, so if you want to ensure
+        a particular format, you can use pattern.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>email</code><br>For entering email addresses, and hints that 
+        the @ should be shown on the keyboard by default. You can add the 
+        multiple attribute if more than one email address will be provided.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>search</code><br>A text input field styled in a way that is 
+        consistent with the platform's search field.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>number</code><br>For numeric input, can be any rational 
+        integer or float value.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>range</code><br>For number input, but unlike the number input
+        type, the value is less important. It is displayed to the user as a 
+        slider control.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>datetime-local</code><br>For entering a date and time value 
+        where the time zone provided is the local time zone.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>date</code><br>For entering a date (only) with no time zone 
+        provided.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>time</code><br>For entering a time (only) with no time zone 
+        provided.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>week</code><br>For entering a week (only) with no time zone 
+        provided.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>month</code><br>For entering a month (only) with no time zone 
+        provided.
+      </td>
+      <td>
+        <img src="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>color</code><br>For picking a color.
+      </td> 
+      <td>
+        <img src="">
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-## Offer suggestions during input with datalist
+### Offer suggestions during input with datalist
 
 The `datalist` element isn't an input type, but a list of suggested input values
 to associated with a form field. It lets the browser suggest autocomplete
@@ -301,17 +442,11 @@ options as the user types. Unlike select elements where users must scan long
 lists to find the value they're looking for, and limiting them only to those
 lists, `datalist`s provide hints as the user types.
 
-    <label for="inpChocType">Chocolates</label>
-    <input type="text" id="inpChocType" list="chocType">
-    <datalist id="chocType">
-      <option value="white" />
-      <option value="milk" />
-      <option value="dark" />
-    </datalist>
+{% include_code _code/order.html datalist %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-datalist %}
 
-# Provide real-time validation
+## Provide real-time validation
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.provide-real-time-validation %}
 
@@ -337,35 +472,45 @@ this:
 
 **Common regular expression patterns**
 
-<table>
-<tr>
-<td>Description</td>
-<td>Regular Expression</td>
-</tr>
-<tr>
-<td>Postal address</td>
-<td>[a-zA-Z\d\s\-\,\#\.\+]+</td>
-</tr>
-<tr>
-<td>Zip Code (US)</td>
-<td>^\d{5,6}(?:[-\s]\d{4})?$</td>
-</tr>
-<tr>
-<td>IP Address</td>
-<td>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</td>
-</tr>
-<tr>
-<td>Credit Card Number</td>
-<td>^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$</td>
-</tr>
-<tr>
-<td>Social Security Number</td>
-<td>^\d{3}-\d{2}-\d{4}$</td>
-</tr>
-<tr>
-<td>North American Phone Number</td>
-<td>^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$</td>
-</tr>
+<style type="text/css">
+  table.tc-heavyright th:first-of-type {
+    width: 30%;
+  }
+</style>
+
+<table class="tc-heavyright">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Regular Expression</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Postal address</td>
+      <td><code>[a-zA-Z\d\s\-\,\#\.\+]+</code></td>
+    </tr>
+    <tr>
+      <td>Zip Code (US)</td>
+      <td><code>^\d{5,6}(?:[-\s]\d{4})?$</code></td>
+    </tr>
+    <tr>
+      <td>IP Address</td>
+      <td><code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code></td>
+    </tr>
+    <tr>
+      <td>Credit Card Number</td>
+      <td><code>^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$</code></td>
+    </tr>
+    <tr>
+      <td>Social Security Number</td>
+      <td><code>^\d{3}-\d{2}-\d{4}$</code></td>
+    </tr>
+    <tr>
+      <td>North American Phone Number</td>
+      <td><code>^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$</code></td>
+    </tr>
+  </tbody>
 </table>
 
 ### The `required` attribute
@@ -410,34 +555,36 @@ JavaScript APIs will still allow you to check if the form validates.
 ## Use JavaScript for more complex real-time validation
 
 When the built-in validation plus regular expressions aren't enough, you can use
-the
-[Constrains Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+the [Constrains Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
 a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>API property</td>
-<td>Description</td>
-</tr>
-<tr>
-<td>`setCustomValidity()`</td>
-<td>Sets a custom validation message and the customError property of the ValidityState object to true.</td>
-</tr>
-<tr>
-<td>`validationMessage`</td>
-<td>Returns a string with the reason the input failed the validation test.</td>
-</tr>
-<tr>
-<td>`checkValidity()`</td>
-<td>Returns true if the element satisfies all of it's constraints, and false otherwise.</td>
-</tr>
-<tr>
-<td>`validity`</td>
-<td>Returns a ValidityState object representing the validity states of the element.</td>
-</tr>
+<table class="tc-heavyright">
+  <thead>
+    <tr>
+      <th>API</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>setCustomValidity()</code></td>
+      <td>Sets a custom validation message and the <code>customError</code> property of the <code>ValidityState</code> object to <code>true</code>.</td>
+    </tr>
+    <tr>
+      <td><code>validationMessage</code></td>
+      <td>Returns a string with the reason the input failed the validation test.</td>
+    </tr>
+    <tr>
+      <td><code>checkValidity()</code></td>
+      <td>Returns <code>true</code> if the element satisfies all of it's constraints, and <code>false</code> otherwise.</td>
+    </tr>
+    <tr>
+      <td><code>validity</code></td>
+      <td>Returns a <code>ValidityState</code> object representing the validity states of the element.</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Set custom validation messages
@@ -448,18 +595,7 @@ ask the user to confirm their email address by entering it twice.  Use the blur
 event on the second input to validate the two inputs and set the appropriate
 response.  For example:
 
-    var elem = document.getElementById("email_addr_confirm");
-    elem.addEventListener("blur", verifyEmail);
-    function verifyEmail(input) {
-      input = input.srcElement;
-      if (input.value != document.getElementById('email_addr').value) {
-        // the provided value doesn't match the primary email address
-        input.setCustomValidity('The two email addresses must match.');
-      } else {
-        // input is valid -- reset the error message
-        input.setCustomValidity('');
-      }
-    }
+{% include_code _code/order.html customvalidation javascript %}
 
 ### Prevent form submission on invalid forms
 
@@ -467,13 +603,7 @@ Because not all browsers will prevent the user from submitting the form if there
 is invalid data, you should catch the submit event, and use the `checkValidity()`
 on the form element to determine if the form is valid.  For example:
 
-    form.addEventListener("submit", function(evt) {
-      if (form.checkValidity() === false) {
-        evt.preventDefault();
-        alert("Form is invalid - do something here");
-        return false;
-      }
-    });
+{% include_code _code/order.html preventsubmission javascript %}
 
 ## Show feedback in real-time
 
@@ -482,36 +612,39 @@ the user has completed the form properly before they've submitted the form.
 HTML5 also introduces a number of new pseudo-classes that can be used to style
 inputs based on their value or attributes.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Pseudo-class</td>
-<td>Use</td>
-</tr>
-<tr>
-<td>:valid</td>
-<td>Explicitly sets the style for an input to be used when the value meets all of the validation requirements.</td>
-</tr>
-<tr>
-<td>:invalid</td>
-<td>Explicitly sets the style for an input to be used when the value does not meet all of the validation requirements.</td>
-</tr>
-<tr>
-<td>:required</td>
-<td>Explicitly sets the style for an input element that has the required attribute set.</td>
-</tr>
-<tr>
-<td>:optional</td>
-<td>Explicitly sets the style for an input element that does not have the required attribute set.</td>
-</tr>
-<tr>
-<td>:in-range</td>
-<td>Explicitly sets the style for a number input element where the value is in range.</td>
-</tr>
-<tr>
-<td>:out-of-range</td>
-<td>Explicitly sets the style for a number input element where the value is out of range.</td>
-</tr>
+<table class="tc-heavyright">
+  <thead>
+    <tr>
+      <th>Pseudo-class</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>:valid</code></td>
+      <td>Explicitly sets the style for an input to be used when the value meets all of the validation requirements.</td>
+    </tr>
+    <tr>
+      <td><code>:invalid</code></td>
+      <td>Explicitly sets the style for an input to be used when the value does not meet all of the validation requirements.</td>
+    </tr>
+    <tr>
+      <td><code>:required</code></td>
+      <td>Explicitly sets the style for an input element that has the required attribute set.</td>
+    </tr>
+    <tr>
+      <td><code>:optional</code></td>
+      <td>Explicitly sets the style for an input element that does not have the required attribute set.</td>
+    </tr>
+    <tr>
+      <td><code>:in-range</code></td>
+      <td>Explicitly sets the style for a number input element where the value is in range.</td>
+    </tr>
+    <tr>
+      <td><code>:out-of-range</code></td>
+      <td>Explicitly sets the style for a number input element where the value is out of range.</td>
+    </tr>
+  </tbody>
 </table>
 
 Validation happens immediately which means that when the page is loaded, fields
@@ -520,40 +653,12 @@ in yet.  It also means that as the user types, and it's possible they'll see the
 invalid style while typing. To prevent this, you can combine the CSS with
 JavaScript to only show invalid styling when the user has visited the field.
 
-    <style type="text/css">
-      input.dirty:not(:focus):invalid { background-color: pink; }
-    </style>
-    <script type="text/javascript">
-      function initInputs() {
-        var inputs = document.getElementsByTagName("input");
-        var inputs_len = inputs.length;
-        var addDirtyClass = function(evt) {
-          evt.srcElement.classList.toggle("dirty", true);
-        };
-        for (var i = 0; i < inputs_len; i++) {
-          var input = inputs[i];
-          input.addEventListener("blur", addDirtyClass);
-          input.addEventListener("invalid", addDirtyClass);
-        }
-      }
-      initInputs();
-    </script>
+{% include_code _code/order.html invalidstyle css %}
+{% include_code _code/order.html initinputs javascript %}
+
+{% include modules/remember.liquid title="Important" list=page.remember.show-all-errors %}
 
 
-
-<div class="notes"><b>Best Practice:</b> You should show the user all of the issues on the form at once, rather than showing them one at a time.</div>
-
-## Putting it all together
-
-The form
-
-    ```code sample here
-
-The JavaScript
-
-    ```code sample here
-
-[Try it](http://jsbin.com/kehiz/1/edit)
 
 # Simplify checkout with requestAutocomplete
 
@@ -573,7 +678,7 @@ much like other auto-complete fields.
 
 ## requestAutocomplete flow
 
-Ideally you want to show the `requestAutocomplete` dialog instead of loading the
+The ideal experience will show the `requestAutocomplete` dialog instead of loading the
 page that displays the checkout form. If all goes well, the user shouldn't see
 the form at all.  You can easily add `requestAutoComplete` to existing forms
 without having to change any field names.  Simply add the `autocomplete`
@@ -581,7 +686,7 @@ attribute to each form element with the appropriate value and add the
 `requestAutocomplete()` function on the form element. The browser will handle
 the rest.
 
-<img src="imgs/rac-flow.png" />
+<img src="imgs/rac_flow.png"  />
 
 The `requestAutocomplete` function on the `form` element indicates to the
 browser that it should populate the form.  As a security feature, the function
@@ -591,16 +696,6 @@ they want to populate it with.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
 
-## Putting it all together
-
-The form
-
-    ```code sample
-
-The JavaScript
-
-    ```code sample
-
-[Try it](http://jsbin.com/migod/edit)
+<!-- TODO: petele work to complete here -->
 
 {% endwrap %}
