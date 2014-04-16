@@ -151,7 +151,7 @@ Not including a type attribute can affect performance when there are multiple so
 
 ## Provide alternatives for legacy platforms
 
-{% include modules/highlight.liquid title="Key takeaway" type="learning" list=page.key-takeaways.provide-alternatives %}
+{% include modules/highlight.liquid title="Key takeaways" type="learning" list=page.key-takeaways.provide-alternatives %}
 
 ### Check which formats are supported
 
