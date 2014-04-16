@@ -39,6 +39,8 @@ key-takeaways:
 collection: getting-started
 ---
 
+{% wrap content %}
+
 Building for multi-screen experiences is not as hard as it sounds. In this
 guide, we are going to create a simple landing page that shows you the basics of
 how to build using "Mobile First"(link to mobile first) design principles that
@@ -280,3 +282,5 @@ for the screen real-estate.
 
 To make our page responsive we use media queries to allow us to group styles
 based on factors such screen width or viewport width.
+
+{% endwrap %}
