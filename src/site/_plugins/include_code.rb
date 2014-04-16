@@ -10,6 +10,7 @@ module Jekyll
       @options = {}
       @lang = 'html'
       @file, @section = markup.strip.split(' ', 2)
+      @character = '/'
     end
 
     def render(context)
@@ -49,9 +50,14 @@ module Jekyll
       if highlighted_code.nil?
           Jekyll.logger.error "There was an error highlighting your code."
       end
+
+      if @lang == 'css'
+        @character = '}'
+      end
+
       <<-HTML
   <div class="highlight highlight--right">
-    <div class="highlight__container" data-character="/">
+    <div class="highlight__container" data-character="#{@character}">
       <div class="g-wide--push-1 g-wide--pull-1 g-medium--pull-1">
         <pre><code class='html'>#{highlighted_code.strip}</code></pre>
         <a href="/resources/samples/#{filepath}">View full sample</a>
