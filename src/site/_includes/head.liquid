@@ -1,7 +1,3 @@
-<script>
-	document.documentElement.className = document.documentElement.className.replace("no-js","js");
-</script>
-
 <meta charset="utf-8" />
 
 {% capture page_title %}{% if page.title %}{{ page.title }} — {%endif%}Google Web Essentials{% endcapture %}
@@ -24,6 +20,10 @@
 
 <!-- build:css css/styles.min.css -->
 <link rel="stylesheet" media="screen" href="/css/styles.css" />
+<!-- endbuild -->
+
+<!-- build:css css/syntax.min.css -->
+<link rel="stylesheet" media="screen" href="/css/syntax.css" />
 <!-- endbuild -->
 
 <!--[if lt IE 9]>

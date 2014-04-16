@@ -1,7 +1,12 @@
 ---
 layout: article
 title: "Optimizing Performance"
-description: ""
+description: "Performance Matters (#perfmatters).  It not only matters it is critical that you deliver your content as quickly as possible to the user and once they are in your app you make your page's interaction and rendering as smooth as possible."
+article:
+  written_on: 2014-01-01
+  updated_on: 2014-01-06
+  order: 4
+collection: the-essentials
 ---
 # {{ page.title }}
 
