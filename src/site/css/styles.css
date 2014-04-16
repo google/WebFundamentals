@@ -889,7 +889,7 @@ body.debug:after {
   background-color: #e8e8e8;
 }
 @media only screen and (max-width: 619px) {
-  /* line 39, ../_sass/_main-navigation.scss */
+  /* line 38, ../_sass/_main-navigation.scss */
   .main-nav__item.main-nav__item--logo {
     display: none;
   }
@@ -900,14 +900,19 @@ body.debug:after {
     float: left;
     background-color: transparent;
     width: 20%;
+    border-right: 1px solid #272727;
+  }
+  /* line 50, ../_sass/_main-navigation.scss */
+  .main-nav__item:last-child {
+    border-right: none;
   }
 }
-/* line 51, ../_sass/_main-navigation.scss */
+/* line 56, ../_sass/_main-navigation.scss */
 .main-nav__item:first-child ~ .main-nav__item {
   padding-top: 0;
 }
 
-/* line 56, ../_sass/_main-navigation.scss */
+/* line 61, ../_sass/_main-navigation.scss */
 .main-nav__link {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -923,7 +928,7 @@ body.debug:after {
   padding-bottom: 12px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -935,7 +940,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -949,7 +954,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 620px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -957,7 +962,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 960px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-left: 0;
     padding-right: 0;
@@ -965,7 +970,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     margin-bottom: 0;
     color: #ffffff;
@@ -974,10 +979,11 @@ body.debug:after {
     /* 26px */
     padding-top: 1.6250em;
     padding-bottom: 0;
+    padding-bottom: 26px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     font-size: 20px;
     font-weight: 300;
@@ -988,31 +994,37 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 56, ../_sass/_main-navigation.scss */
+  /* line 61, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-bottom: 26px;
   }
 }
-/* line 81, ../_sass/_main-navigation.scss */
+/* line 87, ../_sass/_main-navigation.scss */
 .main-nav__link:hover {
   text-decoration: none;
 }
+/* line 91, ../_sass/_main-navigation.scss */
+.main-nav__item--logo .main-nav__link {
+  font-size: 60px;
+  padding-top: 26px;
+  line-height: 26px;
+}
 
-/* line 86, ../_sass/_main-navigation.scss */
+/* line 98, ../_sass/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 90, ../_sass/_main-navigation.scss */
+/* line 102, ../_sass/_main-navigation.scss */
 .main-nav__item--child {
   padding-top: 0;
 }
-/* line 93, ../_sass/_main-navigation.scss */
+/* line 105, ../_sass/_main-navigation.scss */
 .main-nav__item--child:before {
   display: none;
 }
 
-/* line 98, ../_sass/_main-navigation.scss */
+/* line 110, ../_sass/_main-navigation.scss */
 .main-nav__link--child {
   background: #ffffff;
   font-size: 16px;
@@ -1024,11 +1036,11 @@ body.debug:after {
   padding-bottom: 12px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 98, ../_sass/_main-navigation.scss */
+  /* line 110, ../_sass/_main-navigation.scss */
   .main-nav__link--child {
     color: #4d4d4d;
   }
-  /* line 108, ../_sass/_main-navigation.scss */
+  /* line 120, ../_sass/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     font-size: 20px;
     font-weight: 300;
@@ -1039,7 +1051,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
-  /* line 108, ../_sass/_main-navigation.scss */
+  /* line 120, ../_sass/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1052,7 +1064,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 115, ../_sass/_main-navigation.scss */
+  /* line 127, ../_sass/_main-navigation.scss */
   .main-nav__secondary-nav {
     background-color: #ffffff;
     position: absolute;
@@ -1062,14 +1074,14 @@ body.debug:after {
     padding-bottom: 50px;
     display: none;
   }
-  /* line 126, ../_sass/_main-navigation.scss */
+  /* line 138, ../_sass/_main-navigation.scss */
   li:hover .main-nav__secondary-nav {
     display: block;
   }
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 133, ../_sass/_main-navigation.scss */
+  /* line 145, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -1084,7 +1096,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 133, ../_sass/_main-navigation.scss */
+  /* line 145, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1092,7 +1104,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
-  /* line 133, ../_sass/_main-navigation.scss */
+  /* line 145, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 0;
     padding-right: 0;
@@ -1100,7 +1112,7 @@ body.debug:after {
   }
 }
 
-/* line 140, ../_sass/_main-navigation.scss */
+/* line 152, ../_sass/_main-navigation.scss */
 .main-nav__link--explore {
   font-weight: 600;
   color: #4f80f2;
