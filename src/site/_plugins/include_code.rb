@@ -60,6 +60,8 @@ module Jekyll
       end
 
       <<-HTML
+  </div>
+  </div>
   <div class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container" data-character="#{@character}">
       <div class="g-wide--pull-1 g-medium--pull-1">
@@ -68,6 +70,8 @@ module Jekyll
       </div>
     </div>
   </div>
+  <div class="content">
+    <div class="container" markdown="1">
         HTML
       end
   end
