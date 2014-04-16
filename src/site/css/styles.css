@@ -30,6 +30,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(/css/syntax.css);
 /* line 9, ../_sass/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -455,10 +456,9 @@ th {
 html, body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
-/* line 24, ../_sass/_global.scss */
+/* line 22, ../_sass/_global.scss */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -496,7 +496,7 @@ body.debug:after {
   pointer-events: none;
 }
 
-/* line 34, ../_sass/_global.scss */
+/* line 32, ../_sass/_global.scss */
 .main-container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -509,7 +509,7 @@ body.debug:after {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 34, ../_sass/_global.scss */
+  /* line 32, ../_sass/_global.scss */
   .main-container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -517,7 +517,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 34, ../_sass/_global.scss */
+  /* line 32, ../_sass/_global.scss */
   .main-container {
     padding-left: 0;
     padding-right: 0;
@@ -525,7 +525,7 @@ body.debug:after {
   }
 }
 
-/* line 38, ../_sass/_global.scss */
+/* line 36, ../_sass/_global.scss */
 .container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -538,7 +538,7 @@ body.debug:after {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 38, ../_sass/_global.scss */
+  /* line 36, ../_sass/_global.scss */
   .container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -546,7 +546,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 38, ../_sass/_global.scss */
+  /* line 36, ../_sass/_global.scss */
   .container {
     padding-left: 0;
     padding-right: 0;
@@ -889,7 +889,7 @@ body.debug:after {
   background-color: #e8e8e8;
 }
 @media only screen and (max-width: 619px) {
-  /* line 38, ../_sass/_main-navigation.scss */
+  /* line 39, ../_sass/_main-navigation.scss */
   .main-nav__item.main-nav__item--logo {
     display: none;
   }
@@ -900,19 +900,14 @@ body.debug:after {
     float: left;
     background-color: transparent;
     width: 20%;
-    border-right: 1px solid #272727;
-  }
-  /* line 50, ../_sass/_main-navigation.scss */
-  .main-nav__item:last-child {
-    border-right: none;
   }
 }
-/* line 56, ../_sass/_main-navigation.scss */
+/* line 51, ../_sass/_main-navigation.scss */
 .main-nav__item:first-child ~ .main-nav__item {
   padding-top: 0;
 }
 
-/* line 61, ../_sass/_main-navigation.scss */
+/* line 56, ../_sass/_main-navigation.scss */
 .main-nav__link {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -928,7 +923,7 @@ body.debug:after {
   padding-bottom: 12px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -940,7 +935,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -954,7 +949,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 620px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -962,7 +957,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 960px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-left: 0;
     padding-right: 0;
@@ -970,7 +965,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     margin-bottom: 0;
     color: #ffffff;
@@ -979,11 +974,10 @@ body.debug:after {
     /* 26px */
     padding-top: 1.6250em;
     padding-bottom: 0;
-    padding-bottom: 26px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     font-size: 20px;
     font-weight: 300;
@@ -994,37 +988,31 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 61, ../_sass/_main-navigation.scss */
+  /* line 56, ../_sass/_main-navigation.scss */
   .main-nav__link {
     padding-bottom: 26px;
   }
 }
-/* line 87, ../_sass/_main-navigation.scss */
+/* line 81, ../_sass/_main-navigation.scss */
 .main-nav__link:hover {
   text-decoration: none;
 }
-/* line 91, ../_sass/_main-navigation.scss */
-.main-nav__item--logo .main-nav__link {
-  font-size: 60px;
-  padding-top: 26px;
-  line-height: 26px;
-}
 
-/* line 98, ../_sass/_main-navigation.scss */
+/* line 86, ../_sass/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 102, ../_sass/_main-navigation.scss */
+/* line 90, ../_sass/_main-navigation.scss */
 .main-nav__item--child {
   padding-top: 0;
 }
-/* line 105, ../_sass/_main-navigation.scss */
+/* line 93, ../_sass/_main-navigation.scss */
 .main-nav__item--child:before {
   display: none;
 }
 
-/* line 110, ../_sass/_main-navigation.scss */
+/* line 98, ../_sass/_main-navigation.scss */
 .main-nav__link--child {
   background: #ffffff;
   font-size: 16px;
@@ -1036,11 +1024,11 @@ body.debug:after {
   padding-bottom: 12px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 110, ../_sass/_main-navigation.scss */
+  /* line 98, ../_sass/_main-navigation.scss */
   .main-nav__link--child {
     color: #4d4d4d;
   }
-  /* line 120, ../_sass/_main-navigation.scss */
+  /* line 108, ../_sass/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     font-size: 20px;
     font-weight: 300;
@@ -1051,7 +1039,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
-  /* line 120, ../_sass/_main-navigation.scss */
+  /* line 108, ../_sass/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1064,7 +1052,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 127, ../_sass/_main-navigation.scss */
+  /* line 115, ../_sass/_main-navigation.scss */
   .main-nav__secondary-nav {
     background-color: #ffffff;
     position: absolute;
@@ -1074,14 +1062,14 @@ body.debug:after {
     padding-bottom: 50px;
     display: none;
   }
-  /* line 138, ../_sass/_main-navigation.scss */
+  /* line 126, ../_sass/_main-navigation.scss */
   li:hover .main-nav__secondary-nav {
     display: block;
   }
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 145, ../_sass/_main-navigation.scss */
+  /* line 133, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -1096,7 +1084,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 145, ../_sass/_main-navigation.scss */
+  /* line 133, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1104,7 +1092,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
-  /* line 145, ../_sass/_main-navigation.scss */
+  /* line 133, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 0;
     padding-right: 0;
@@ -1112,7 +1100,7 @@ body.debug:after {
   }
 }
 
-/* line 152, ../_sass/_main-navigation.scss */
+/* line 140, ../_sass/_main-navigation.scss */
 .main-nav__link--explore {
   font-weight: 600;
   color: #4f80f2;
@@ -1133,11 +1121,9 @@ body.debug:after {
 .main-header {
   background: #404040;
   color: #ffffff;
-  position: relative;
-  z-index: 2;
 }
 
-/* line 20, ../_sass/_main-header.scss */
+/* line 18, ../_sass/_main-header.scss */
 .main-header__title {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1158,7 +1144,7 @@ body.debug:after {
   padding-bottom: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_main-header.scss */
+  /* line 18, ../_sass/_main-header.scss */
   .main-header__title {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1166,7 +1152,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 20, ../_sass/_main-header.scss */
+  /* line 18, ../_sass/_main-header.scss */
   .main-header__title {
     padding-left: 0;
     padding-right: 0;
@@ -1174,7 +1160,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 20, ../_sass/_main-header.scss */
+  /* line 18, ../_sass/_main-header.scss */
   .main-header__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1186,13 +1172,13 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_main-header.scss */
+  /* line 18, ../_sass/_main-header.scss */
   .main-header__title {
     display: none;
   }
 }
 
-/* line 32, ../_sass/_main-header.scss */
+/* line 30, ../_sass/_main-header.scss */
 .main-header__logo {
   color: #ffffff;
 }
@@ -1220,39 +1206,32 @@ body.debug:after {
 *
 **/
 /* line 60, ../_sass/_modules/_highlight.scss */
-.highlight {
+.highlight-module {
   background-color: #e8e8e8;
   overflow: hidden;
   margin-top: 52px;
   margin-bottom: 26px;
 }
-@media only screen and (min-width: 620px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
-  .highlight {
-    position: relative;
-    margin: 0 -100%;
-  }
-}
 
-/* line 73, ../_sass/_modules/_highlight.scss */
-.highlight--learning {
+/* line 67, ../_sass/_modules/_highlight.scss */
+.highlight-module--learning {
   background-color: #94d8e8;
 }
 
-/* line 77, ../_sass/_modules/_highlight.scss */
-.highlight--remember {
+/* line 71, ../_sass/_modules/_highlight.scss */
+.highlight-module--remember {
   background-color: #f4b400;
   color: white;
 }
 
-/* line 82, ../_sass/_modules/_highlight.scss */
-.highlight--related {
+/* line 76, ../_sass/_modules/_highlight.scss */
+.highlight-module--related {
   background-color: #33b679;
   color: white;
 }
 
-/* line 87, ../_sass/_modules/_highlight.scss */
-.highlight__container {
+/* line 81, ../_sass/_modules/_highlight.scss */
+.highlight-module__container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
@@ -1265,29 +1244,29 @@ body.debug:after {
   padding-bottom: 78px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 87, ../_sass/_modules/_highlight.scss */
-  .highlight__container {
+  /* line 81, ../_sass/_modules/_highlight.scss */
+  .highlight-module__container {
     padding-left: 4.8%;
     padding-right: 4.8%;
     max-width: 688px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 87, ../_sass/_modules/_highlight.scss */
-  .highlight__container {
+  /* line 81, ../_sass/_modules/_highlight.scss */
+  .highlight-module__container {
     padding-left: 0;
     padding-right: 0;
     max-width: 864px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 87, ../_sass/_modules/_highlight.scss */
-  .highlight__container {
+  /* line 81, ../_sass/_modules/_highlight.scss */
+  .highlight-module__container {
     padding-bottom: 52px;
     position: relative;
   }
   /* line 17, ../_sass/_modules/_highlight.scss */
-  .highlight__container:before {
+  .highlight-module__container:before {
     content: attr(data-character);
     display: block;
     position: absolute;
@@ -1302,26 +1281,26 @@ body.debug:after {
     width: 30.3%;
   }
   /* line 34, ../_sass/_modules/_highlight.scss */
-  .highlight--left .highlight__container:before {
+  .highlight-module--left .highlight-module__container:before {
     right: auto;
     left: 0;
   }
   /* line 54, ../_sass/_modules/_highlight.scss */
-  .highlight--learning .highlight__container:before {
+  .highlight-module--learning .highlight-module__container:before {
     bottom: 52px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 960px) {
   /* line 17, ../_sass/_modules/_highlight.scss */
-  .highlight__container:before {
+  .highlight-module__container:before {
     width: 22.2%;
     font-size: 400px;
     line-height: 400px;
   }
 }
 
-/* line 101, ../_sass/_modules/_highlight.scss */
-.highlight__title {
+/* line 95, ../_sass/_modules/_highlight.scss */
+.highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
   font-weight: 300;
@@ -1332,8 +1311,8 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 101, ../_sass/_modules/_highlight.scss */
-  .highlight__title {
+  /* line 95, ../_sass/_modules/_highlight.scss */
+  .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
     font-weight: 300;
@@ -1344,8 +1323,8 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 101, ../_sass/_modules/_highlight.scss */
-  .highlight__title {
+  /* line 95, ../_sass/_modules/_highlight.scss */
+  .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
     font-weight: 300;
@@ -1354,8 +1333,8 @@ body.debug:after {
     padding-top: 0.6190em;
     padding-bottom: 0;
   }
-  /* line 108, ../_sass/_modules/_highlight.scss */
-  .highlight--large .highlight__title {
+  /* line 102, ../_sass/_modules/_highlight.scss */
+  .highlight-module--large .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
     font-weight: 300;
@@ -1366,8 +1345,8 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 101, ../_sass/_modules/_highlight.scss */
-  .highlight__title {
+  /* line 95, ../_sass/_modules/_highlight.scss */
+  .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
     font-weight: 300;
@@ -1378,14 +1357,55 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 108, ../_sass/_modules/_highlight.scss */
-  .highlight--large .highlight__title {
+  /* line 102, ../_sass/_modules/_highlight.scss */
+  .highlight-module--large .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
     font-weight: 300;
     line-height: 1.19em;
     /* 130px */
     padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+}
+
+/* line 109, ../_sass/_modules/_highlight.scss */
+.highlight-module--code pre {
+  margin: 0;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  margin-left: -26px;
+  font-size: 13px;
+}
+/* line 116, ../_sass/_modules/_highlight.scss */
+.highlight-module--code pre span {
+  margin: 0;
+  padding: 0;
+}
+/* line 122, ../_sass/_modules/_highlight.scss */
+.highlight-module--code code {
+  margin: 0;
+  padding: 0;
+  word-spacing: -2px;
+}
+
+/* line 130, ../_sass/_modules/_highlight.scss */
+.highlight-module__cta {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+}
+@media only screen and (min-width: 960px) {
+  /* line 130, ../_sass/_modules/_highlight.scss */
+  .highlight-module__cta {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    padding-top: 1.3000em;
     padding-bottom: 0;
   }
 }
@@ -1749,7 +1769,7 @@ h1 {
 * @author Antoine Grelard
 *
 **/
-/* line 25, ../_sass/_components/_list.scss */
+/* line 26, ../_sass/_components/_list.scss */
 ul,
 ol {
   padding-left: 0;
@@ -1757,27 +1777,34 @@ ol {
   margin: 0;
 }
 
+/* line 32, ../_sass/_components/_list.scss */
+li {
+  position: relative;
+  padding-left: 16px;
+}
 /* line 14, ../_sass/_components/_list.scss */
 li:before {
   content: "#";
-  display: inline-block;
+  display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  padding-right: 16px;
-  line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* line 14, ../_sass/_components/_list.scss */
 .list__item:before {
   content: ">";
-  display: inline-block;
+  display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
-  padding-right: 16px;
-  line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* line 39, ../_sass/_components/_list.scss */
+/* line 42, ../_sass/_components/_list.scss */
 .main-nav__item:before {
   display: none;
 }
