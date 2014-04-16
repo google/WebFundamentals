@@ -17,7 +17,7 @@ But videos take bandwidth, they don't always work the same across every platform
 
 Read more to find the simplest way to add video to your site and ensure users get the best possible experience on any device.
 
-# Add a video
+## Add a video
 
 {% class takeaways %}
 * Use the video element to load, code, and play video in your site.

@@ -10,7 +10,25 @@
 
     {% include header.liquid %}
 
-    {{ content }}
+    <div class="editorial-header">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <p>
+          {% for p in page.ancestors %}
+            <a href="{{ p.url }}">{{ p.title }}</a>
+            /
+          {% endfor %}
+        </p>
+        </nav>
+
+        <h1 class="editorial-header__title">{{page.title}}</h1>
+        <p class="editorial-header__excerpt g-wide--pull-1">{{page.introduction}}</p>
+      </div>
+    </div>
+
+    {% wrap content%}
+        {{ content }}
+    {% endwrap %}
 
     {% include footer.liquid %}
 

@@ -25,19 +25,19 @@ module Jekyll
     def render_codehighlighter(context, code, filepath)
       require 'pygments'
 
-      # TODO(ianbarber): This is a bit of a fudge. We should know the definitive sample 
+      # TODO(ianbarber): This is a bit of a fudge. We should know the definitive sample
       # path. I think we may want to have a central shared "code sample" object that is
       # knows how to get such paths for this and the sample_builder.
       filepath.sub!("_code/", "")
       offset = false
       snippet = ""
       initial = code.lines.first[/\A */].size
-      
+
       # Indenter
       # TODO(ianbarber): Look for multiples of original offset rather than absolute spaces.
       # paulk edit: updated logic.  gets first line, works out indent. then uses that as initial offset
       code.each_line {|s|
-        
+
         #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
         snippet += (" " * 4)
         snippet += s.slice(initial..s.size).rstrip
@@ -48,11 +48,15 @@ module Jekyll
       highlighted_code = Pygments.highlight(snippet, :lexer => @lang, :options => @options)
       if highlighted_code.nil?
           Jekyll.logger.error "There was an error highlighting your code."
-      end        
+      end
       <<-HTML
-  <div>
-    <pre><code class='html'>#{highlighted_code.strip}</code></pre>
-    <a href="/resources/samples/#{filepath}">View full sample</a>
+  <div class="highlight highlight--right">
+    <div class="highlight__container" data-character="/">
+      <div class="g-wide--push-1 g-wide--pull-1 g-medium--pull-1">
+        <pre><code class='html'>#{highlighted_code.strip}</code></pre>
+        <a href="/resources/samples/#{filepath}">View full sample</a>
+      </div>
+    </div>
   </div>
         HTML
       end
