@@ -21,15 +21,16 @@
 
   // Defining colors
   $colorRed: #971b24;
-  $colorHighlight: $colorRed;
   $colorBlue: #4f80f2;
   $colorDarkBlue: #4b67aa;
   $colorAqua: #94d8e8;
   $colorWhite: #fff;
   $colorGray: #e8e8e8;
   $colorGrayDark: #404040;
+  $colorText: #4d4d4d;
   $colorMustard: #f4b400;
   $colorEmeraud: #33b679;
+  $colorHighlight: $colorBlue;
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif;
@@ -159,10 +160,6 @@
       z-index: 9;
 
       display: none;
-    }
-
-
-    &:after {
       background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
       background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
@@ -175,6 +172,7 @@
 
     &.debug:after {
       display: block;
+      pointer-events: none;
     }
   }
 

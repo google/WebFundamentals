@@ -254,6 +254,7 @@ module.exports = function(grunt) {
 					'<%= config.source %>/**/*.html',
 					'<%= config.source %>/**/*.liquid',
 					'<%= config.source %>/**/*.markdown',
+					'<%= config.source %>/**/*.rb',
 					'<%= config.source %>/**/*.md'
 				],
 				tasks: ['jekyll:destination', 'compass:uncompressed']
