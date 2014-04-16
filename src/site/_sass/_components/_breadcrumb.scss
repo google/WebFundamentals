@@ -10,6 +10,11 @@
 *
 **/
 
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+}
+
 .breadcrumbs p {
   @include type--small;
 }

@@ -12,8 +12,7 @@
 
 .editorial-header {
   background-color: $colorGray;
-  padding-bottom: $lineHeight * 4;
-  margin-bottom: $lineHeight;
+  padding-bottom: $lineHeight * 2;
   overflow: hidden;
 
 
@@ -22,26 +21,21 @@
       position: relative;
 
       // Pseudo elements to add the background characters
-      &:before,
-      &:after {
+      &:before {
+        content: ">";
         display: block;
         position: absolute;
         line-height: 0;
-        top: 50%;
+        top: 35%;
+        right: 90%;
         font-size: 1400px;
         color: rgba(0, 0, 0, .1)
-      }
-
-      &:before {
-        content: ">";
-        right: 90%;
-      }
-
-      &:after {
-        content: "<";
-        left: 75%;
       }
     }
   }
 
+}
+
+.editorial-header__excerpt {
+  margin-bottom: $lineHeight * 2;
 }

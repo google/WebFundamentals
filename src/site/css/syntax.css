@@ -1,0 +1,60 @@
+code .highlight  { background: transparent; }
+code .highlight .c { color: #999988; font-style: italic } /* Comment */
+code .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+code .highlight .k { font-weight: bold } /* Keyword */
+code .highlight .o { font-weight: bold } /* Operator */
+code .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+code .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+code .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+code .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+code .highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+code .highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+code .highlight .ge { font-style: italic } /* Generic.Emph */
+code .highlight .gr { color: #aa0000 } /* Generic.Error */
+code .highlight .gh { color: #999999 } /* Generic.Heading */
+code .highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+code .highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+code .highlight .go { color: #888888 } /* Generic.Output */
+code .highlight .gp { color: #555555 } /* Generic.Prompt */
+code .highlight .gs { font-weight: bold } /* Generic.Strong */
+code .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+code .highlight .gt { color: #aa0000 } /* Generic.Traceback */
+code .highlight .kc { font-weight: bold } /* Keyword.Constant */
+code .highlight .kd { font-weight: bold } /* Keyword.Declaration */
+code .highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+code .highlight .kr { font-weight: bold } /* Keyword.Reserved */
+code .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+code .highlight .m { color: #009999 } /* Literal.Number */
+code .highlight .s { color: #d14 } /* Literal.String */
+code .highlight .na { color: #008080 } /* Name.Attribute */
+code .highlight .nb { color: #0086B3 } /* Name.Builtin */
+code .highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+code .highlight .no { color: #008080 } /* Name.Constant */
+code .highlight .ni { color: #800080 } /* Name.Entity */
+code .highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+code .highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+code .highlight .nn { color: #555555 } /* Name.Namespace */
+code .highlight .nt { color: #000080 } /* Name.Tag */
+code .highlight .nv { color: #008080 } /* Name.Variable */
+code .highlight .ow { font-weight: bold } /* Operator.Word */
+code .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+code .highlight .mf { color: #009999 } /* Literal.Number.Float */
+code .highlight .mh { color: #009999 } /* Literal.Number.Hex */
+code .highlight .mi { color: #009999 } /* Literal.Number.Integer */
+code .highlight .mo { color: #009999 } /* Literal.Number.Oct */
+code .highlight .sb { color: #d14 } /* Literal.String.Backtick */
+code .highlight .sc { color: #d14 } /* Literal.String.Char */
+code .highlight .sd { color: #d14 } /* Literal.String.Doc */
+code .highlight .s2 { color: #d14 } /* Literal.String.Double */
+code .highlight .se { color: #d14 } /* Literal.String.Escape */
+code .highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+code .highlight .si { color: #d14 } /* Literal.String.Interpol */
+code .highlight .sx { color: #d14 } /* Literal.String.Other */
+code .highlight .sr { color: #009926 } /* Literal.String.Regex */
+code .highlight .s1 { color: #d14 } /* Literal.String.Single */
+code .highlight .ss { color: #990073 } /* Literal.String.Symbol */
+code .highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+code .highlight .vc { color: #008080 } /* Name.Variable.Class */
+code .highlight .vg { color: #008080 } /* Name.Variable.Global */
+code .highlight .vi { color: #008080 } /* Name.Variable.Instance */
+code .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */

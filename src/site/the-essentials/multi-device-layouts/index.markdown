@@ -1,7 +1,13 @@
 ---
 layout: default
 title: "Mutli-device layouts"
-description: ""
+description: "Mobile-first web design is a goal for a development team to create sites, apps
+and experiences that scale well across all devices from mobile upwards"
+article:
+  written_on: 2014-01-01
+  updated_on: 2014-01-06
+  order: 1
+collection: the-essentials
 ---
 # {{page.title}}
 
