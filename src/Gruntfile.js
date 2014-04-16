@@ -238,7 +238,10 @@ module.exports = function(grunt) {
 		watch: {
 			// When styles change, recompile them
 			styles: {
-				files: ['<%= config.source %>/_sass/**/*.scss'],
+				files: [
+          '<%= config.source %>/_sass/**/*.scss',
+          '<%= config.source %>/css/**/*.css'
+        ],
 				tasks: ['compass:uncompressed','copy:cssToDest']
 			},
 
@@ -254,6 +257,7 @@ module.exports = function(grunt) {
 					'<%= config.source %>/**/*.html',
 					'<%= config.source %>/**/*.liquid',
 					'<%= config.source %>/**/*.markdown',
+					'<%= config.source %>/**/*.rb',
 					'<%= config.source %>/**/*.md'
 				],
 				tasks: ['jekyll:destination', 'compass:uncompressed']

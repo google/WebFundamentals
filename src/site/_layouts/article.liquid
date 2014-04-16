@@ -10,6 +10,16 @@
 
     {% include header.liquid %}
 
+    <div class="editorial-header">
+      <div class="container">
+
+        {% include modules/breadcrumbs.liquid %}
+
+        <h1 class="editorial-header__title">{{page.title}}</h1>
+        <p class="editorial-header__excerpt g-wide--pull-1">{{page.introduction}}</p>
+      </div>
+    </div>
+
     {{ content }}
 
     {% include footer.liquid %}

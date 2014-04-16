@@ -9,3 +9,8 @@ article:
 collection: multi-device-layouts
 ---
 
+{% wrap content%}
+
+Page currently blank
+
+{% endwrap %}
