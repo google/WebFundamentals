@@ -29,33 +29,26 @@ remember:
   use-commas:
     - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
 ---
-
 {% wrap content %}
 <style type="text/css">
   video {
     width: 100%;
-    max-width: 750px;
   }
-
   img.wide {
     width: 100%;
-    max-width: 750px;
   }
 
   img.tall {
-    width: 100%;
-    max-width: 450px;
+    max-height: 500px;
   }
 </style>
-
-
 
 # Responsive Web Design Fundamentals
 
 The use of mobile devices to surf the web is growing at an astronomical pace, 
-but unfortunately much of the web isn't optimized for those mobile devices.  
-Mobile devices are often constrained by display size and require a different 
-approach to how content is laid out on screen.
+but unfortunately much of the web isn't optimized for those mobile devices. Mobile 
+devices are often constrained by display size and require a different approach 
+to how content is laid out on screen.
 
 There is a multitude of different screen sizes across phones, "phablets", 
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always 
@@ -379,4 +372,4 @@ eliminating the pollen count from the weather forecast could be a serious issue
 for spring time allergy sufferers who need the information to determine if they 
 can go outside or not.
 
-{% endwrap  %}
+{% endwrap %}
