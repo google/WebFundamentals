@@ -71,15 +71,15 @@ Read more to find the simplest way to add video to your site and ensure users ge
 
 # Add a video
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-a-video %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.add-a-video %}
 
 ### Add the video element
 
 Load, decode, and play video:
 
-    &lt;video src='foo.webm'&gt;
-             &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm'>
+             <p>This browser does not support the video element.</p>
+    </video>
 
 ### Specify a start and end time
 
@@ -87,17 +87,17 @@ Save bandwidth and make your site feel more responsive: use the Media Fragments 
 
 {% include_code _code/fragment.html fragments %}
  
-    &lt;video src='foo.webm#**t=5,10**'&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#**t=5,10**'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
 {% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.specify-a-start-time %}
 
 You can also use the Media Fragments API to deliver multiple views on the same video -- like cue points in a DVD -- without having to encode and serve multiple files:
 
-    &lt;video src='foo.webm#t=5,10'&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#t=5,10'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
 {% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.range-request %}
   
@@ -109,9 +109,9 @@ To check for Range Request support, your browser tools for `Accept-Ranges: bytes
 
 Add a poster attribute to the video element so that your users have an idea of the content as soon as the element loads, without needing to download video or start playback:
 
-    &lt;video src='foo.webm#t=5,10' poster='foo.jpg'&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#t=5,10' poster='foo.jpg'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
 A poster can also be a fallback if the video `src` is broken or none of the video formats supplied are supported. The only downside to poster images is an additional file request, which consumes some bandwidth and requires rendering. For more information see [Image optimization](https://docs.google.com/a/google.com/document/d/1EdBtvM_OIdmZlPhtOq_oLuQ4nGEq1dycOsN8A-KtExY/edit#heading=h.satr4xiyp2fp).
 
@@ -125,11 +125,11 @@ Not all browsers support the same video formats.
 
 Use the source element to enable browsers to choose from multiple available formats. MP4 and WebM cover all modern browsers, including all mobile browsers:
 
-    &lt;video src='foo.webm#t=5,10' poster='foo.jpg'&gt;
-         &lt;source src="video/foo.mp4" /&gt;
-         &lt;source src="video/foo.webm" /&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#t=5,10' poster='foo.jpg'>
+         <source src="video/foo.mp4" />
+         <source src="video/foo.webm" />
+        <p>This browser does not support the video element.</p>
+    </video>
 
 The user's browser selects the first available format it can play. This approach has several advantages over serving different HTML or server-side scripting, especially on mobile:
 
@@ -143,7 +143,7 @@ All of these points are especially potent in mobile contexts, where bandwidth an
 
 ### Specify each source's type
 
-Adding a type attribute to a source element enables the browser to select a video source without having to download part of the video to 'sniff' the format. Instead of: `&lt;source src="video/chrome.webm" /&gt;`, use `&lt;source src="video/chrome.webm" type="video/webm" /&gt;`. You can specify codecs as well as a mime type. For example: `&lt;source src="video/chrome.webm" type="video/webm; codecs="vp8, vorbis" /&gt;`.
+Adding a type attribute to a source element enables the browser to select a video source without having to download part of the video to 'sniff' the format. Instead of: `<source src="video/chrome.webm" />`, use `<source src="video/chrome.webm" type="video/webm" />`. You can specify codecs as well as a mime type. For example: `<source src="video/chrome.webm" type="video/webm; codecs="vp8, vorbis" />`.
 
 Not including a type attribute can affect performance when there are multiple sources with unsupported types: using your mobile browser developer tools, compare network activity for [simpl.info/video](http://simpl.info/video/) and [simpl.info/video/notype](http://simpl.info/video/notype/).
 
@@ -151,13 +151,13 @@ Not including a type attribute can affect performance when there are multiple so
 
 ## Provide alternatives for legacy platforms
 
-{% include modules/highlight.liquid title="Key takeaway" type="takeaway" list=page.key-takeaways.provide-alternatives %}
+{% include modules/highlight.liquid title="Key takeaways" type="learning" list=page.key-takeaways.provide-alternatives %}
 
 ### Check which formats are supported
 
 Use [canPlayType()](https://simpl.info/canplaytype/) to find out which formats are supported. The method takes a string argument consistent of a mime type and optional codecs and returns one of the following values:
 
-* [empty string]: the container and/or codec isn't supported.
+* _empty string_: the container and/or codec isn't supported.
 * `**"maybe"**`: the container and codec(s) might be supported, but the browser will need to download some video to check.
 * `**"probably"**`: the format appears to be supported.
 
@@ -193,7 +193,7 @@ Given the source example above, Chrome and Firefox choose `chrome.webm` (because
 
 ## Size videos correctly
 
-{% include modules/highlight.liquid title="Key Takeaway" type="takeaway" list=page.key-takeaways.size-videos-correctly %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.size-videos-correctly %}
 
 ### Size matters
 
@@ -262,9 +262,9 @@ For media content in iframes (such as YouTube videos), try a responsive approach
 
 **HTML:**
 
-    &lt;div class="video-container"&gt;
-        &lt;iframe src="http://www.youtube.com/embed/l-BA9Ee2XuM" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
+    <div class="video-container">
+        <iframe src="http://www.youtube.com/embed/l-BA9Ee2XuM" frameborder="0" width="560" height="315"></iframe>
+    </div>
 
 {% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.compare-formats %}
 
@@ -326,7 +326,7 @@ To see this in action, check out the [simpl.info/fullscreen/video](http://simpl.
 
 ### Include captions to improve accessibility
 
-{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.improve-accessibility %}
+{% include modules/highlight.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.improve-accessibility %}
 
 ### Accessibility matters
 
@@ -344,12 +344,12 @@ Using the track element, captions appear like this:
 
 It's very easy to add captions to your video -- simply add a [track element](http://www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
 
-    &lt;video&gt;
-        &lt;source src="video/chrome.mp4" type="video/mp4;" /&gt;
-        &lt;source src="video/chrome.webm" type="video/webm" /&gt;
-        &lt;track src="tracks/chrome-subtitles-en.vtt" /&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video>
+        <source src="video/chrome.mp4" type="video/mp4;" />
+        <source src="video/chrome.webm" type="video/webm" />
+        <track src="tracks/chrome-subtitles-en.vtt" />
+        <p>This browser does not support the video element.</p>
+    </video>
 
 The track element `src` attribute gives the location of the track file.
 
@@ -357,11 +357,11 @@ The track element `src` attribute gives the location of the track file.
 
 A track file consists of timed 'cues' in WebVTT format:
 
-WEBVTT FILE
+    WEBVTT FILE
 
-1 00:00:00.500 --&gt; 00:00:02.000 The Web is always changing
+    1 00:00:00.500 --> 00:00:02.000 The Web is always changing
 
-2 00:00:02.500 --&gt; 00:00:04.300 and the way we access it is changing
+    2 00:00:02.500 --> 00:00:04.300 and the way we access it is changing
 
 ## Handle poor connectivity with adaptive streaming
 
@@ -403,7 +403,7 @@ DASH is already in use by sites such as YouTube; you can see DASH in action with
 
 ## Reference ###
 
-** Video element attributes
+** Video element attributes **
 
 For the complete list of video element attributes and their definitions, see: [http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element](http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 

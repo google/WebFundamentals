@@ -35,11 +35,20 @@ module SampleBuilder
 		def initialize(site, dest, path, file, contents)
 			super(site, dest, path, file)
 			@contents = contents
+			@path = path
 			@filename = file
 		end
 
-		def filename 
-			@filename
+		def title
+			if @contents =~ /\<title\>([^\<]+)\</m
+				$1
+			else
+				@filename
+			end
+		end
+
+		def url
+			File.join("/resources/samples/", @path, @filename)
 		end
 
   		def write(dest)
@@ -128,16 +137,18 @@ module SampleBuilder
 	    end
 
 	    def render(context)
+
 		   samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
-		   samples.each{ |sample| render_sample(sample) }.join("\n")
+		   links = samples.map{ |sample| render_sample(sample) }
+		   "<ul>" +
+		   links.join("\n") +
+		   "</ul>"
 	    end
 
 	    def render_sample(sample)
-	      <<-END
-	      <p>
-	        #{sample.filename()}
-	      </p>
-	      END
+	    	url = sample.url
+	    	name = sample.title
+	      "<li><a href='#{url}'>#{name}</a></li>"
 	    end
 	end
 end

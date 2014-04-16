@@ -28,7 +28,7 @@ giving touch feedback gives your site a snappy and responsive feel to it.
 Demo: http://jsbin.com/siramabo/latest/edit
 -->
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-states %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.add-states %}
 
 The fastest way to support touch in your UI is to simply support the 
 various states your elements can be in, giving a response to the users interactions.
