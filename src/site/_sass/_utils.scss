@@ -14,6 +14,7 @@
 
   // Defining breakpoints
   $medium: 620px;
+  // $wide: 928px;
   $wide: 800px;
   $huge: 1600px;
   $mediumContainer: 688px;
@@ -136,8 +137,8 @@
     }
 
     @include wide {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 4.4%;
+      padding-right: 4.4%;
     	max-width: $wideContainer;
     }
   }

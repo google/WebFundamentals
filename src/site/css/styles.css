@@ -468,7 +468,7 @@ body {
   color: #4d4d4d;
   position: relative;
 }
-/* line 152, ../_sass/_utils.scss */
+/* line 153, ../_sass/_utils.scss */
 body:after {
   content: "";
   position: absolute;
@@ -490,7 +490,7 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-/* line 173, ../_sass/_utils.scss */
+/* line 174, ../_sass/_utils.scss */
 body.debug:after {
   display: block;
   pointer-events: none;
@@ -519,8 +519,8 @@ body.debug:after {
 @media only screen and (min-width: 800px) {
   /* line 32, ../_sass/_global.scss */
   .main-container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -548,8 +548,8 @@ body.debug:after {
 @media only screen and (min-width: 800px) {
   /* line 36, ../_sass/_global.scss */
   .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -798,8 +798,8 @@ body.debug:after {
 @media only screen and (min-width: 800px) {
   /* line 165, ../_sass/_grid.scss */
   .debug .grid-overlay {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -876,8 +876,8 @@ body.debug:after {
 @media only screen and (min-width: 620px) and (min-width: 800px) {
   /* line 22, ../_sass/_main-navigation.scss */
   .main-nav__list {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -966,8 +966,8 @@ body.debug:after {
 @media only screen and (max-width: 619px) and (min-width: 800px) {
   /* line 63, ../_sass/_main-navigation.scss */
   .main-nav__link {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -1110,8 +1110,8 @@ body.debug:after {
 @media only screen and (min-width: 620px) and (min-width: 800px) {
   /* line 149, ../_sass/_main-navigation.scss */
   .main-nav__secondary-content {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -1172,8 +1172,8 @@ body.debug:after {
 @media only screen and (min-width: 800px) {
   /* line 20, ../_sass/_main-header.scss */
   .main-header__title {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
@@ -1272,8 +1272,8 @@ body.debug:after {
 @media only screen and (min-width: 800px) {
   /* line 81, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4.4%;
+    padding-right: 4.4%;
     max-width: 864px;
   }
 }
