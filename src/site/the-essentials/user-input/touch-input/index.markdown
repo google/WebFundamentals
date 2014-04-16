@@ -60,44 +60,11 @@ Demo: http://jsbin.com/kugenoza/1/edit
 To change our UI for an element we need to apply styles to the following 
 pseudo classes :hover, :focus and :active as shown below.
 
-{% include_code _code/states-example.html btnstates %}
-
-<!--
-    .btn {
-      display: inline-block;
-      
-      width: 100%;
-      
-      padding: 16px;
-      box-sizing: border-box;
-      
-      background-color: #c0392b;
-      
-      border-radius: 6px;
-      
-      text-align:center;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #B32C1E;
-    }
-
-    .btn:focus {
-      /*
-      The outline parameter surpresses the border color / outline when focused
-      */
-      outline: 0;
-      background-color: #8D0600;
-    }
-
-    .btn:active {
-      background-color: #9A1305;
-    }
--->
+{% include_code _code/states-example.html btnstates css %}
 
 <img src="image00.jpg" width="381" height="297" />  
-[Image from: http://jsbin.com/siramabo/26/edit]
+
+<!-- [Image from: http://jsbin.com/siramabo/26/edit] -->
 
 Without the outline rule, most user agents will display a colored edge to your 
 focusable elements.
