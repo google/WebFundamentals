@@ -1,7 +1,10 @@
 ---
 layout: article
 title: "Responsive Web Design Fundamentals"
-description: ""
+introduction: "The use of mobile devices to surf the web is growing at an astronomical pace, 
+              but unfortunately much of the web isn't optimized for those mobile devices. Mobile 
+              devices are often constrained by display size and require a different approach 
+              to how content is laid out on screen."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -35,6 +38,7 @@ remember:
   video {
     width: 100%;
   }
+
   img.wide {
     width: 100%;
   }
@@ -42,23 +46,52 @@ remember:
   img.tall {
     max-height: 500px;
   }
-</style>
 
-The use of mobile devices to surf the web is growing at an astronomical pace, 
-but unfortunately much of the web isn't optimized for those mobile devices. Mobile 
-devices are often constrained by display size and require a different approach 
-to how content is laid out on screen.
+  table {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  thead {
+    font-weight: bold;
+  }
+
+  th, td{
+    text-align: left;
+    padding: 8px;
+  }
+
+  tbody > tr:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .text-danger {
+    color: #a94442;
+  }
+
+  .text-success {
+    color: #3c763d;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+</style>
 
 There is a multitude of different screen sizes across phones, "phablets", 
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always 
 be changing, so it's important that your site can adapt to any screen size, 
 today or in the future.
 
-
 <video autoplay loop controls>
   <source src="videos/resize.mp4">
 </video>
-
 
 Responsive web design, originally defined by [Ethan Marcotte in A List 
 Apart](http://alistapart.com/article/responsive-web-design/) responds to the 
@@ -75,7 +108,7 @@ Pages optimized for a variety of devices must include a meta viewport element in
 the head of the document.  A meta viewport tag gives the browser instructions on 
 how to control the page's dimensions and scaling.
 
-{% include_code _code/vp.html metaviewport %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 In order to attempt to provide the best experience, mobile browsers will render 
 the page at a desktop screen width (usually about 960px), and then try to make 
@@ -89,7 +122,13 @@ the screen's width in device independent pixels. This allows the page to reflow
 content to match different screen sizes, whether rendered on a small mobile 
 phone or a large desktop monitor.
 
-<img src="imgs/sxs-vp.png" class="wide" />
+<figure>
+  <img src="imgs/sxs-vp.png" class="wide" alt="Side by side view of a page without a viewport set and one with the viewport set." />
+</figure>
+
+[View page without a viewport](vp-no.html)
+
+[View page with a viewport](vp.html)
 
 Some browsers will keep the page's width constant when rotating to landscape 
 mode, and zoom rather than reflow to fill the screen. Adding the attribute 
@@ -132,7 +171,9 @@ using relative width values, such as `width: 100%`.  Similarly, beware of using
 large absolute positioning values that may cause the element to fall outside the 
 viewport on small screens.
 
-<img src="imgs/sxs-vp-fixed.png" class="wide" />
+<figure>
+  <img src="imgs/sxs-vp-fixed.png" class="wide" alt="Side by side view of a page with a fixed with element and an element at 100% width." />
+</figure>
 
 ## Use CSS Media Queries For Responsiveness 
 
@@ -178,60 +219,54 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
 
 
 <table>
-<tr>
-<td><code>min-width</code></td>
-<td>Rules applied for any browser width over the value defined in the query.</td>
-</tr>
-<tr>
-<td><code>max-width</code></td>
-<td>Rules applied for any browser width under the value defined in the query.</td>
-</tr>
-<tr>
-<td><code>min-height</code></td>
-<td>Rules applied for any browser height over the value defined in the query.</td>
-</tr>
-<tr>
-<td><code>max-height</code></td>
-<td>Rules applied for any browser height under the value defined in the query.</td>
-</tr>
-<tr>
-<td><code>orientation=portrait</code></td>
-<td>Rules applied for any browser where the height is greater than or equal to the width.</td>
-</tr>
-<tr>
-<td><code>orientation=landscape</code></td>
-<td>Rules for any browser where the width is greater than the height.</td>
-</tr>
+  <thead>
+    <tr>
+      <th>attribute</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td><code>min-width</code></td>
+    <td>Rules applied for any browser width over the value defined in the query.</td>
+    </tr>
+    <tr>
+    <td><code>max-width</code></td>
+    <td>Rules applied for any browser width under the value defined in the query.</td>
+    </tr>
+    <tr>
+    <td><code>min-height</code></td>
+    <td>Rules applied for any browser height over the value defined in the query.</td>
+    </tr>
+    <tr>
+    <td><code>max-height</code></td>
+    <td>Rules applied for any browser height under the value defined in the query.</td>
+    </tr>
+    <tr>
+    <td><code>orientation=portrait</code></td>
+    <td>Rules applied for any browser where the height is greater than or equal to the width.</td>
+    </tr>
+    <tr>
+    <td><code>orientation=landscape</code></td>
+    <td>Rules for any browser where the width is greater than the height.</td>
+    </tr>
+  </tbody>
 </table>
 
 Let's take a look an example:
 
-{% include_code _code/media-queries.html mqmaxwidth %}
+<figure>
+  <img src="imgs/mq.png" class="wide" alt="Preview of a page using media queries to change properties as it is resized.">
+</figure>
 
-Styles from `max-640px.css` will be applied when the browser width is between 
-0px and 640px.
+{% include_code _code/media-queries.html mqueries %}
 
-{% include_code _code/media-queries.html mqminwidth %}
+* When the browser is between <b>0px</b> and <b>640px</b> wide, `max-640px.css` will be applied.
+* When the browser is between <b>500px</b> and <b>600px</b> wide, styles within the `@media` will be applied.
+* When the browser is <b>640px or wider</b>, `min-640px.css` will be applied.
+* When the browser <b>width is greater than the height</b>, `landscape.css` will be applied.
+* When the browser <b>height is greater than the width</b>, `portrait.css` will be applied.
 
-Styles from `min-640px.css` will be applied when the browser width is 640px or 
-wider.
-
-{% include_code _code/max-640px.css atmedia %}
-
-Styles within the brackets will be applied when the browser width is between 
-500px and 600px.
-
-{% include_code _code/media-queries.html mqportrait %}
-
-Styles from `portrait.css` will be applied when the browsers height is greater 
-or equal to its viewport width.
-
-{% include_code _code/media-queries.html mqlandscape %}
-
-Styles from `landscape.css` will be applied when the browsers width is greater 
-than its height.
-
-[View full sample](_code/media-queries.html)
 
 ### A note on `min-``device-width`
 
@@ -264,20 +299,19 @@ page.
 
 <div class="clear">
   <div class="g--half">
-    <h2>NO</h2>
+    <h2 class="text-danger text-center">NO</h2>
     <pre><code>div.fullWidth {
-    width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-  }</code></pre>
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}</code></pre>
   </div>
 
   <div class="g--half g--last">
-    <h2>YES</h2>
-    <pre><code>
-  div.fullWidth {
-    width: 100%;
-  }</code></pre>
+    <h2 class="text-success text-center">YES</h2>
+    <pre><code>div.fullWidth {
+  width: 100%;
+}</code></pre>
   </div>
 </div>
 
@@ -301,15 +335,19 @@ possible.
 Let's work through the example we saw at the beginning, the weather forecast.  
 The first step is to make the forecast look good on a small screen.
 
-<img src="imgs/weather-1.png" class="tall" />
+<figure>
+  <img src="imgs/weather-1.png" class="tall" alt="Preview of the weather forecast displayed on a small screen." />
+</figure>
 
-[View full sample](_code/weather-1.html)
+[View full sample](weather-1.html)
 
 Next, resize the browser until there is too much white space between the 
 elements and the forecast simply doesn't look as good.  The decision is somewhat 
 subjective, but above 600px is certainly too wide.
 
-<img src="imgs/weather-2.png" class="wide" />
+<figure>
+  <img src="imgs/weather-2.png" class="wide" alt="Preview of the weather forecast as the page gets wider." />
+</figure>
 
 To insert a breakpoint at 600px, create two new stylesheets, one to use when the 
 browser is 600px and below, and one for when it is wider than 600px.
@@ -321,9 +359,11 @@ as fonts, icons, basic positioning, colors in `weather.css`.  Specific layouts
 for the small screen are then placed in `weather-small.css` and large screen 
 styles are placed in `weather-large.css`.
 
-<img src="imgs/weather-3.png" class="wide" />
+<figure>
+  <img src="imgs/weather-3.png" class="wide" alt="Preview of the weather forecast designed for a wider screen." />
+</figure>
 
-[View full sample](_code/weather-2.html)
+[View full sample](weather-2.html)
 
 ### Pick minor breakpoints when necessary
 
@@ -340,14 +380,16 @@ icons a bit larger.
 
 {% include_code _code/weather-small.css mqsmallbpsm %}
 
-<img src="imgs/weather-4.png" class="wide" />
+<figure>
+  <img src="imgs/weather-4.png" class="wide" alt="Before and after view of the page after minor breaks were added for small screens." />
+</figure>
 
 Similarly, for the large screens, it's best to limit to maximum width of the 
 forecast panel so it doesn't consume the whole screen width.
 
 {% include_code _code/weather-large.css mqsmallbplg %}
 
-[View finished sample](_code/weather.html)
+[View finished sample](weather.html)
 
 ### Optimize text for reading
 
@@ -355,7 +397,9 @@ Classic readability theory suggests that an ideal column should contain 70 to 80
 characters per line (about  8 to 10 words in English), thus each time the width 
 of a text block grows past about 10 words, a breakpoint should be considered.  
 
-<img src="imgs/reading.png" class="wide" />
+<figure>
+  <img src="imgs/reading.png" class="wide" alt="Preview of a page designed for optimum reading experiences." />
+</figure>
 
 Let's take a deeper look at the above blog post example.  On smaller screens, 
 the Roboto font at 1em works perfectly giving 10 words per line, but larger 
