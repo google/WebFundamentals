@@ -627,7 +627,7 @@ their respective optimization options and knobs.
 
 ### Lossless vs. lossy compression
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.lossy-vs-lossless %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.lossless-vs-lossy %}
 
 For certain types of data, such as source code for a page, or an executable 
 file, it is critical that a compressor does not alter or lose any of the 
