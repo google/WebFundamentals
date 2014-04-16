@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Essential: States Example</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <style>
+  	body {
+	  background-color: #e74c3c;
+	  
+	  margin: 32px;
+	  
+	  font-family: 'Roboto', sans-serif;
+	  color: #ecf0f1;
+	}
+
+	a {
+	  color: #ecf0f1;
+	}
+
+	button {
+	  display: block;
+	  
+	  width: 100%;
+	  max-width: 400px;
+
+	  padding: 16px;
+	  margin: 0 auto 16px auto;
+	  
+	  box-sizing: border-box;
+
+	  border-style: none;
+	  border-radius: 6px;
+
+	  color: inherit;
+	  font-family: inherit;
+	  font-size: inherit;
+	  text-align:center;
+	  text-decoration: none;
+	}
+
+	<!-- // [START btnstates] -->
+	.btn {
+	  /*
+	  background-image: none; used to surpress changes in style on FF OS
+	  */
+	  background-image: none;
+	  background-color: #c0392b;
+	}
+
+	
+	.btn::-moz-focus-inner {
+	  border: 0;
+	}
+
+	.btn:hover {
+	  background-color: #B32C1E;
+	}
+
+	.btn:focus {
+	  /*
+	  The outline parameter surpresses the border color / outline when focused
+	  */
+	  outline: 0;
+	  background-color: #8D0600;
+	}
+
+	.btn:active {
+	  background-color: #9A1305;
+	}
+	<!-- // [END btnstates] -->
+  </style>
+</head>
+<body>
+  <button class="btn" tabindex="1">Button 1</button>
+  
+  <button class="btn hover" tabindex="2">Button 2</button>
+  
+  <button class="btn active" tabindex="3">Button 3</button>
+  
+  <button class="btn focus" tabindex="4">Button 4</button>
+</body>
+</html>
