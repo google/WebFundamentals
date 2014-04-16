@@ -9,4 +9,8 @@ article:
 collection: multi-device-layouts
 ---
 
+{% wrap content%}
+
 Page left intentionally blank
+
+{% endwrap %}

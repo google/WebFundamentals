@@ -1,5 +1,6 @@
 toc:
 - title: /
+  logo: true
   path: /
 - title: "Getting Started"
   path: /getting-started/
@@ -60,5 +61,7 @@ toc:
     path: /resources/samples/
   - title: "Styleguide"
     path: /resources/styleguide/
+  - title: "Example Article"
+    path: /resources/example-article/
 - title: Spotlights
   path: /spotlights/

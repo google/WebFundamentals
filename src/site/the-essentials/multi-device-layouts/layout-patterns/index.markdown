@@ -9,6 +9,8 @@ article:
 collection: multi-device-layouts
 ---
 
+{% wrap content%}
+
 Layout patterns (mattgaunt)
     The Stack
     Dashboard
@@ -18,3 +20,5 @@ Layout patterns (mattgaunt)
     App Bar
     Bottom Bar
     Contextual Actions
+
+{% endwrap %}

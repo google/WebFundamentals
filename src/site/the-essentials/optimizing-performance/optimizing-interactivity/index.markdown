@@ -9,3 +9,8 @@ article:
 collection: performance
 ---
 
+{% wrap content%}
+
+Page currently blank
+
+{% endwrap %}
