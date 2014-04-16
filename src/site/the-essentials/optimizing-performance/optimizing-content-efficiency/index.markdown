@@ -7,10 +7,63 @@ article:
   updated_on: 2014-01-05
   order: 1
 collection: performance
+key-takeaways:
+  eliminate-downloads:
+    - Inventory all your own and third party assets on your pages
+    - Measure the performance of each asset: its value and its technical performance
+    - Determine if the resources are providing sufficient value
+  compression-101:
+    - Compression is the process of removing redundant and unnecessary data
+    - Eliminating unnecessary data always yields the best results
+    - There are many different compression techniques and algorithms
+    - You will need a variety of techniques to achieve the best compression
+  minification:
+    - Content-specific optimizations can significantly reduce the size of delivered resources.
+    - Content-specific optimizations apply to every content-type: text, images, video, etc.
+    - Content-specific optimizations are best applied as part of your build/release cycle.
+  text-compression:
+    - GZIP performs best on text-based assets: CSS, JavaScript, HTML.
+    - All modern browsers support GZIP compression and will automatically request it.
+    - Your server needs to configured to enable GZIP compression.
+    - Some CDNs require special care to ensure that GZIP is enabled.
+  image-compression-101:
+    - An image is a grid of pixels
+    - Each pixel encodes color and transparency information (RGB/RGBA)
+    - Image compressors use variety of techniques to reduce the number of required bits per pixel to reduce file size of the image
+  lossless-vs-lossy:
+    - Lossless compression reconstructs an exact replica of the input file
+    - Lossy compression reconstructs an approximation of the input file
+    - Unlike most other data types, images are great candidates for lossy compression
+    - There is no single best "quality" setting for all images: each combination of particular compressor and image contents produces a unique output
+  select-right-image:
+    - There is no single best image format for every use case
+    - New image formats (WebP / JPEG XR) provide improved functionality and compression but are not (yet) universally supported by all browsers
+    - Selecting the "right" image format for a particular asset requires understanding of the required features (e.g. transparency) and capabilities of the various formats (e.g. lossy support)
+  optimize-hidpi-images:
+    - High resolution screens have multiple device pixels per CSS pixel
+    - High resolution images require significantly higher number of pixels and bytes
+    - Image optimization techniques are the same regardless of resolution
+  delivering-scaled-images:
+    - Delivering scaled assets is one of the simplest and most effective optimizations
+    - Reduce the number of unnecessary pixels by scaling your images to their display size
+    - Pay close attention to large assets as they result in high overhead
+  replace-raster-with-vector:
+    - Vector formats are ideally suited for high-resolution screens
+    - Audit your image assets and replace them with vector formats where possible
+  validate-etags:
+    - Validation token is communicated by the server via the ETag HTTP header
+    - Validation token enables efficient resource update checks: no data transfer if the resource has not changed.
+  cache-contel:
+    - Each resource can define its caching policy via Cache-Control HTTP header
+    - Cache-Control directives control who can cache the resource, under which conditions, and for how long
+  invalidate-cache:
+    - Locally cached resources are used until the resource "expires"
+    - Embedding a file content fingerprint in the URL enables us to force the client to update to a new version of the resource
+    - Each application needs to define its own cache hierarchy for optimal performance 
+
 ---
 
 {% wrap content%}
-
 
 Our web applications continue to grow in their scope, ambition, and 
 functionality - that's a good thing. However, the relentless march towards a 
@@ -101,15 +154,7 @@ eliminate redundant downloads.
 
 # Eliminating unnecessary downloads
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Inventory all your own and third party assets on your pages
-Measure the performance of each asset: its value and its technical performance
-Determine if the resources are providing sufficient value</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.eliminate-downloads %}
 
 The fastest and best optimized resource is a resource not sent. Of course, this 
 may seem like an obvious statement, but in practice it is all too often 
@@ -168,16 +213,8 @@ techniques.
 
 ## Data compression 101
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Compression is the process of removing redundant and unnecessary data
-Eliminating unnecessary data always yields the best results
-There are many different compression techniques and algorithms
-You will need a variety of techniques to achieve the best compression</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.compression-101 %}
+
 
 The process of reducing the size of data is known as "data compression", and it 
 is a deep field of study on its own: many people have spent their entire careers 
@@ -251,15 +288,8 @@ algorithms for different content.
 
 ## Minification: preprocessing & context-specific optimizations
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Content-specific optimizations can significantly reduce the size of delivered resources.
-Content-specific optimizations apply to every content-type: text, images, video, etc.
-Content-specific optimizations are best applied as part of your build/release cycle.</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.minification %}
+
 
 The best way to compress redundant or unnecessary data is to eliminate it 
 altogether. Of   
@@ -268,29 +298,24 @@ have content-specific knowledge of the data format and its properties, it is
 often possible to significantly reduce the size of the payload without affecting 
 its actual meaning. 
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><html>
-  <head>
-  <style>
-     /* awesome-container is only used on the landing page */
-     .awesome-container { font-size: 120% }
-     .awesome-container { width: 50% }
-  </style>
- </head>
- 
- <body>
-   <!-- awesome container content: START -->
-     <div>…</div>
-   <!-- awesome container content: END -->
-   <script>
-     awesomeAnalytics(); // beacon conversion metrics
-   </script>
- </body>
-</html></td>
-</tr>
-</table>
+    <html>
+      <head>
+      <style>
+         /* awesome-container is only used on the landing page */
+         .awesome-container { font-size: 120% }
+         .awesome-container { width: 50% }
+      </style>
+     </head>
+     
+     <body>
+       <!-- awesome container content: START -->
+         <div>…</div>
+       <!-- awesome container content: END -->
+       <script>
+         awesomeAnalytics(); // beacon conversion metrics
+       </script>
+     </body>
+    </html>
 
 Consider the simple HTML page above and the three different content types that 
 it contains: HTML markup, CSS styles, and JavaScript. Each of these content 
@@ -308,12 +333,7 @@ we reduce the size of this page?
 * Whitespace (spaces and tabs) is a developer convenience in HTML, CSS, and 
   JavaScript. An additional compressor could strip out all the tabs and spaces.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><html><head><style>.awesome-container{font-size:120%;width: 50%}</style></head><body><div>…</div><script>awesomeAnalytics();</script></body></html></td>
-</tr>
-</table>
+    <html><head><style>.awesome-container{font-size:120%;width: 50%}</style></head><body><div>…</div><script>awesomeAnalytics();</script></body></html>
 
 After applying the above steps our page goes from 406 to 150 characters - 63% 
 compression savings! Granted, it's not very readable, but it also doesn't have 
@@ -353,16 +373,7 @@ Tools to help you optimize your resources:
 
 ## Text compression with GZIP
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-GZIP performs best on text-based assets: CSS, JavaScript, HTML.
-All modern browsers support GZIP compression and will automatically request it.
-Your server needs to configured to enable GZIP compression.
-Some CDNs require special care to ensure that GZIP is enabled.</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.text-compression %}
 
 All modern browsers support and automatically negotiate [GZIP 
 compression](http://en.wikipedia.org/wiki/Gzip) for all HTTP requests: our job 
@@ -490,15 +501,7 @@ the browser can download and display all the assets.
 
 ### Image compression 101
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-An image is a grid of pixels
-Each pixel encodes color and transparency information (RGB/RGBA)
-Image compressors use variety of techniques to reduce the number of required bits per pixel to reduce file size of the image</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.image-compression-101 %}
 
 Image compression is both an art and science: an art because there is no one 
 definitive answer for how to best compress an individual image, and a science 
@@ -622,16 +625,7 @@ their respective optimization options and knobs.
 
 ### Lossless vs. lossy compression
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Lossless compression reconstructs an exact replica of the input file
-Lossy compression reconstructs an approximation of the input file
-Unlike most other data types, images are great candidates for lossy compression
-There is no single best "quality" setting for all images: each combination of particular compressor and image contents produces a unique output</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.lossy-vs-lossless %}
 
 For certain types of data, such as source code for a page, or an executable 
 file, it is critical that a compressor does not alter or lose any of the 
@@ -669,10 +663,6 @@ compression to communicate some intricate detail contained in the image, and in
 others the filesize may be a far more important constraint. This is where your 
 own judgement and context needs to come into play.
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 When using a lossy format such as JPEG the compressor will typically expose a 
 customizable "quality" setting, which is typically a number between 1 and 100 
 that controls the inner workings of the specific collection of algorithms - e.g. 
@@ -691,15 +681,8 @@ high-resolution product photos vs. other assets.
 
 ### Selecting the right image format
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-There is no single best image format for every use case
-New image formats (WebP / JPEG XR) provide improved functionality and compression but are not (yet) universally supported by all browsers
-Selecting the "right" image format for a particular asset requires understanding of the required features (e.g. transparency) and capabilities of the various formats (e.g. lossy support)</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.select-right-image %}
+
 
 <!-- TODO: Fix formatting of cells -->
 <table>
@@ -845,15 +828,7 @@ out best settings?
 
 ### Optimizing HiDPI raster images
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-High resolution screens have multiple device pixels per CSS pixel
-High resolution images require significantly higher number of pixels and bytes
-Image optimization techniques are the same regardless of resolution</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.optimize-hidpi-images %}
 
 <img src="image03.png" width="469" height="204" />  
 When we talk about pixels, we need to distinguish between different kinds of 
@@ -911,15 +886,7 @@ pixel, and minimizing the total number of pixels:
 
 ### Delivering scaled images
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Delivering scaled assets is one of the simplest and most effective optimizations
-Reduce the number of unnecessary pixels by scaling your images to their display size
-Pay close attention to large assets as they result in high overhead</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.delivering-scaled-images %}
 
 Image optimization boils down to two criteria: optimizing the number of bytes 
 used to encode each image pixel, and optimizing the total number of pixels: the 
@@ -981,14 +948,7 @@ particular are delivered as close as ****possible to their display size**.
 
 ### Replacing raster images with vector-based formats
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Vector formats are ideally suited for high-resolution screens
-Audit your image assets and replace them with vector formats where possible</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.replace-raser-with-vector %}
 
 Images are often the [single largest 
 contributor](https://docs.google.com/a/google.com/document/d/1EdBtvM_OIdmZlPhtOq_oLuQ4nGEq1dycOsN8A-KtExY/edit#) 
@@ -1090,14 +1050,8 @@ check if the resource has been modified.
 
 ## Validating cached resource with ETag's
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Validation token is communicated by the server via the ETag HTTP header
-Validation token enables efficient resource update checks: no data transfer if the resource has not changed.</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.validate-etags %}
+
 
 Let's assume 120 seconds have passed since our initial fetch and the browser has 
 initiated a new request for the same resource. First, the browser checks the 
@@ -1139,14 +1093,7 @@ check your server documentation for necessary configuration flags. **
 
 ## Cache-Control 
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Each resource can define its caching policy via Cache-Control HTTP header
-Cache-Control directives control who can cache the resource, under which conditions, and for how long</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.cache-contel %}
 
 The best resource request is a request that does not need to communicate with 
 the server: a local copy of the resource allows us to eliminate all network 
@@ -1237,15 +1184,8 @@ server is returning appropriate Cache-Control and ETag headers.**
 
 ## Invalidating and updating cached resources
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Locally cached resources are used until the resource "expires"
-Embedding a file content fingerprint in the URL enables us to force the client to update to a new version of the resource
-Each application needs to define its own cache hierarchy for optimal performance </td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.invalidate-cache %}
+
 
 All HTTP requests made by the browser are first routed to the browser cache to 
 check if there is a valid cached response that can be used to fulfill the 
