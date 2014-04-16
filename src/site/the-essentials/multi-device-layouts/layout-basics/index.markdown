@@ -378,7 +378,7 @@ enough space, we can separate the high and low temperature so they're on the
 same line, instead of on top of each other.  And let's also make the weather 
 icons a bit larger.
 
-{% include_code _code/weather-small.css mqsmallbpsm %}
+{% include_code _code/weather-small.css mqsmallbpsm css %}
 
 <figure>
   <img src="imgs/weather-4.png" class="wide" alt="Before and after view of the page after minor breaks were added for small screens." />
@@ -387,7 +387,7 @@ icons a bit larger.
 Similarly, for the large screens, it's best to limit to maximum width of the 
 forecast panel so it doesn't consume the whole screen width.
 
-{% include_code _code/weather-large.css mqsmallbplg %}
+{% include_code _code/weather-large.css mqsmallbplg css %}
 
 [View finished sample](weather.html)
 
@@ -406,7 +406,7 @@ the Roboto font at 1em works perfectly giving 10 words per line, but larger
 screens will require a breakpoint. In this case, if the browser width is greater 
 than 575px, the ideal content width is 550px.
 
-{% include_code _code/reading.css mqreading %}
+{% include_code _code/reading.css mqreading css %}
 
 ### Never completely hide content
 

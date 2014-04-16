@@ -7,7 +7,7 @@ h1 {
   color: #333;
 }
 
-<!-- // [START mqreading] -->
+/* // [START mqreading] */
 @media (min-width: 575px) {
   article {
     width: 550px;
@@ -15,4 +15,4 @@ h1 {
     margin-right: auto;
   }
 }
-<!-- // [END mqreading] -->
+/* // [END mqreading] */
