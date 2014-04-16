@@ -24,66 +24,47 @@ giving touch feedback gives your site a snappy and responsive feel to it.
 
 ## Adding States
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-states %}
+<!--
+Demo: http://jsbin.com/siramabo/latest/edit
+-->
 
-### Demo: http://jsbin.com/siramabo/latest/edit
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.add-states %}
 
-The fastest way to add touch feedback to your UI is to simply support the 
-various states your element can be in.
+The fastest way to support touch in your UI is to simply support the 
+various states your elements can be in, giving a response to the users interactions.
 
 The states to handle are:
 
 * Focus
-    * If you interact with a webpage using just a keyboard by hitting the tab 
-      key and on an unstyled page you'll see some indication of which item you 
+    * If you interact with a webpage using a keyboard by hitting the tab 
+      key, you'll see some indication of which items you 
       are focusing on
+
+      // TODO Insert Image Of Button Focus
+
 * Active
-    * This is the state when an element is being selected, for example: on mouse 
-      click down, on touch down or on keyboard down
+    * This is the state when an element is being selected, for example a user clicking or touching
+    an element
+
+      // Insert Pressed Button State
+
 * Hover
     * This applies to scenarios where you have some form of cursor placed over 
-      an element. This is helpful to encourage a user that they can interact 
-      with the elements.
+      an element. This is helpful to encourage users to interact 
+      with elements.
 
-  Demo: http://jsbin.com/kugenoza/1/edit
+<!--
+Demo: http://jsbin.com/kugenoza/1/edit
+-->
 
-To change our UI for this elements we need to apply styles to the following 
+To change our UI for an element we need to apply styles to the following 
 pseudo classes :hover, :focus and :active as shown below.
 
-    .btn {
-      display: inline-block;
-      
-      width: 100%;
-      
-      padding: 16px;
-      box-sizing: border-box;
-      
-      background-color: #c0392b;
-      
-      border-radius: 6px;
-      
-      text-align:center;
-      text-decoration: none;
-    }
+{% include_code _code/states-example.html btnstates css %}
 
-    .btn:hover {
-      background-color: #B32C1E;
-    }
+![button-states.png](images/button-states.png)
 
-    .btn:focus {
-      /*
-      The outline parameter surpresses the border color / outline when focused
-      */
-      outline: 0;
-      background-color: #8D0600;
-    }
-
-    .btn:active {
-      background-color: #9A1305;
-    }
-
-<img src="image00.jpg" width="381" height="297" />  
-[Image from: http://jsbin.com/siramabo/26/edit]
+<!-- [Image from: http://jsbin.com/siramabo/26/edit]-->
 
 Without the outline rule, most user agents will display a colored edge to your 
 focusable elements.
@@ -97,6 +78,8 @@ some of your devices.
 
 Safari and Chrome browsers add a tap highlight color which can be prevented 
 with:
+
+{% include_code _code/states-example.html webkitspecific css %}
 
     .btn {
     -webkit-tap-highlight-color: transparent;

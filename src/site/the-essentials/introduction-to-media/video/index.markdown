@@ -10,6 +10,58 @@ article:
   updated_on: 2014-01-06
   order: 2
 collection: introduction-to-media
+key-takeaways:
+  add-a-video:
+    - Use the video element to load, code, and play video in your site.
+    - "Don't load the whole video if unnecessary: specify a start and end time."
+    - Include a poster image so the user sees something meaningful right away.
+    - Specify multiple file formats since not all browsers support the same format.
+    - "Improve network performance: specify each file source's type."
+  provide-alternatives:
+    - Check which formats are supported.
+    - Produce video in multiple formats to cover a range of mobile platforms.
+    - Check which format was used.
+  size-videos-correctly:
+    - Avoid serving video that is too long, too large in frame size, or unnecessarily high in quality.
+    - "Check video size: frame size may be different from element size."
+    - Ensure videos don't overflow their containers.
+  customize:
+    - Mobile solutions need to consider device orientation.
+    - Different platforms display video different.
+    - Use Fullscreen API to control fullscreening of content.
+  improve-accessibility:
+    - Focus on the user: accessibility matters.
+    - Add track element as a child of the video element.
+    - Define captions in track file.
+  handle-poor-connectivity:
+    - Enable adaptive streaming to cope with variable network conditions.
+    - Use the Media Source Extensions API to construct video streams.
+    - Use DASH to enable high quality streaming on the web.
+remember:
+  specify-a-start-time: 
+    - The Media Fragments API is supported on most platforms, but not on iOS.
+  range-request: 
+    - Make sure Range Requests are supported by your server. Range Requests are enabled by 
+      default on most servers, but some hosting services may turn them off. 
+  multiple-formats:
+    - MP4 and WebM are http://en.wikipedia.org/wiki/Container_format_(digital) formats 
+      MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus. 
+      Check out http://www.xiph.org/video/vid1.shtml 
+      to find out more about how video and audio work on the web.
+  dont-overflow:
+    - Don't force element sizing that results in an aspect ratio different from the original 
+      video. Squashed or stretched looks bad.
+  compare-formats:
+    - "Compare the responsive sample: http://simpl/yt to the unresponsive sample: http://simple/unyt"
+  accessibility-matters:
+    - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers 
+      on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills 
+      available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or 
+      [Captionator](http://captionatorjs.com/).
+  construct-video-streams:
+    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and 
+      Chrome for desktop, with 
+      [support planned for Firefox](https://wiki.mozilla.org/Platform/MediaSourceExtensions).
 ---
 People like videos: videos can be fun, informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device.
 
@@ -19,45 +71,37 @@ Read more to find the simplest way to add video to your site and ensure users ge
 
 ## Add a video
 
-{% class takeaways %}
-* Use the video element to load, code, and play video in your site.
-* Don't load the whole video if unnecessary: specify a start and end time.
-* Include a poster image so the user sees something meaningful right away.
-* Specify multiple file formats since not all browsers support the same format.
-* Improve network performance: specify each file source's type.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.add-a-video %}
 
 ### Add the video element
 
 Load, decode, and play video:
 
-    &lt;video src='foo.webm'&gt;
-             &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm'>
+             <p>This browser does not support the video element.</p>
+    </video>
 
 ### Specify a start and end time
 
 Save bandwidth and make your site feel more responsive: use the Media Fragments API to add a start and end time to the video element (full sample: [simpl.info/mf](http://simpl.info/mediafragments/)):
 
-    &lt;video src='foo.webm#**t=5,10**'&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+{% include_code _code/fragment.html fragments %}
+ 
+    <video src='foo.webm#**t=5,10**'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
-{% class note %}
-**Availability:** The Media Fragments API is supported on most platforms, but not on iOS.
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.specify-a-start-time %}
 
 You can also use the Media Fragments API to deliver multiple views on the same video -- like cue points in a DVD -- without having to encode and serve multiple files:
 
-    &lt;video src='foo.webm#t=5,10'&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#t=5,10'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
-    {% class remember %}
-    **Remember:** Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.
-    {% endclass %}
-
-    To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.range-request %}
+  
+To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
 
 [ADD SCREENSHOT]
 
@@ -65,9 +109,9 @@ You can also use the Media Fragments API to deliver multiple views on the same v
 
 Add a poster attribute to the video element so that your users have an idea of the content as soon as the element loads, without needing to download video or start playback:
 
-    &lt;video src='foo.webm#t=5,10' poster='foo.jpg'&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#t=5,10' poster='foo.jpg'>
+        <p>This browser does not support the video element.</p>
+    </video>
 
 A poster can also be a fallback if the video `src` is broken or none of the video formats supplied are supported. The only downside to poster images is an additional file request, which consumes some bandwidth and requires rendering. For more information see [Image optimization](https://docs.google.com/a/google.com/document/d/1EdBtvM_OIdmZlPhtOq_oLuQ4nGEq1dycOsN8A-KtExY/edit#heading=h.satr4xiyp2fp).
 
@@ -81,11 +125,11 @@ Not all browsers support the same video formats.
 
 Use the source element to enable browsers to choose from multiple available formats. MP4 and WebM cover all modern browsers, including all mobile browsers:
 
-    &lt;video src='foo.webm#t=5,10' poster='foo.jpg'&gt;
-         &lt;source src="video/foo.mp4" /&gt;
-         &lt;source src="video/foo.webm" /&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video src='foo.webm#t=5,10' poster='foo.jpg'>
+         <source src="video/foo.mp4" />
+         <source src="video/foo.webm" />
+        <p>This browser does not support the video element.</p>
+    </video>
 
 The user's browser selects the first available format it can play. This approach has several advantages over serving different HTML or server-side scripting, especially on mobile:
 
@@ -95,13 +139,11 @@ The user's browser selects the first available format it can play. This approach
 
 All of these points are especially potent in mobile contexts, where bandwidth and latency are at a premium, and the user's patience is likely to be limited.
 
-{% class note %}
-**More information:** MP4 and WebM are [container](http://en.wikipedia.org/wiki/Container_format_(digital)) formats: MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus. Check out [Montgomery's Digital Primer for Geeks](http://www.xiph.org/video/vid1.shtml) to find out more about how video and audio work on the web.
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.multiple-formats %}
 
 ### Specify each source's type
 
-Adding a type attribute to a source element enables the browser to select a video source without having to download part of the video to 'sniff' the format. Instead of: `&lt;source src="video/chrome.webm" /&gt;`, use `&lt;source src="video/chrome.webm" type="video/webm" /&gt;`. You can specify codecs as well as a mime type. For example: `&lt;source src="video/chrome.webm" type="video/webm; codecs="vp8, vorbis" /&gt;`.
+Adding a type attribute to a source element enables the browser to select a video source without having to download part of the video to 'sniff' the format. Instead of: `<source src="video/chrome.webm" />`, use `<source src="video/chrome.webm" type="video/webm" />`. You can specify codecs as well as a mime type. For example: `<source src="video/chrome.webm" type="video/webm; codecs="vp8, vorbis" />`.
 
 Not including a type attribute can affect performance when there are multiple sources with unsupported types: using your mobile browser developer tools, compare network activity for [simpl.info/video](http://simpl.info/video/) and [simpl.info/video/notype](http://simpl.info/video/notype/).
 
@@ -109,17 +151,13 @@ Not including a type attribute can affect performance when there are multiple so
 
 ## Provide alternatives for legacy platforms
 
-{% class takeaways %}
-* Check which formats are supported.
-* Produce video in multiple formats to cover a range of mobile platforms.
-* Check which format was used.
-{% endclass %}
+{% include modules/highlight.liquid title="Key takeaway" type="learning" list=page.key-takeaways.provide-alternatives %}
 
 ### Check which formats are supported
 
 Use [canPlayType()](https://simpl.info/canplaytype/) to find out which formats are supported. The method takes a string argument consistent of a mime type and optional codecs and returns one of the following values:
 
-* [empty string]: the container and/or codec isn't supported.
+* _empty string_: the container and/or codec isn't supported.
 * `**"maybe"**`: the container and codec(s) might be supported, but the browser will need to download some video to check.
 * `**"probably"**`: the format appears to be supported.
 
@@ -155,11 +193,7 @@ Given the source example above, Chrome and Firefox choose `chrome.webm` (because
 
 ## Size videos correctly
 
-{% class takeaways %}
-* Avoid serving video that is too long, too large in frame size, or   unnecessarily high in quality.
-* Check video size: frame size may be different from element size.
-* Ensure videos don't overflow their containers.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.size-videos-correctly %}
 
 ### Size matters
 
@@ -202,10 +236,7 @@ Use [CSS media queries](https://docs.google.com/a/google.com/document/d/1sI9PrGi
         }
     }
 
-
-{% class remember %}
-**Remember:** Don't force element sizing that results in an aspect ratio different from the original video. Squashed or stretched looks bad.
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.key-takeaways.dont-overflow %}
 
 For media content in iframes (such as YouTube videos), try a responsive approach (like the one [proposed by John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)):
 
@@ -231,21 +262,15 @@ For media content in iframes (such as YouTube videos), try a responsive approach
 
 **HTML:**
 
-    &lt;div class="video-container"&gt;
-        &lt;iframe src="http://www.youtube.com/embed/l-BA9Ee2XuM" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
+    <div class="video-container">
+        <iframe src="http://www.youtube.com/embed/l-BA9Ee2XuM" frameborder="0" width="560" height="315"></iframe>
+    </div>
 
-{% class remember %}
-**Sample: **Compare the responsive sample: [simpl/yt](http://simpl/yt) to the unresponsive sample: [simple/unyt](http://simple/unyt).
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.compare-formats %}
 
 ## Customize the video player
 
-{% class takeaways %}
-* Mobile solutions need to consider device orientation.
-* Different platforms display video different.
-* Use Fullscreen API to control fullscreening of content.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.customize %}
 
 ### How device orientation works across devices
 
@@ -301,11 +326,7 @@ To see this in action, check out the [simpl.info/fullscreen/video](http://simpl.
 
 ### Include captions to improve accessibility
 
-{% class takeaways %}
-* Focus on the user: accessibility matters.
-* Add track element as a child of the video element.
-* Define captions in track file.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.improve-accessibility %}
 
 ### Accessibility matters
 
@@ -313,9 +334,7 @@ Accessibility isn't a feature. Users who can't hear or see won't be able to expe
 
 To make media more accessible on mobile, include captions or descriptions using the track element.
 
-{% class note %}
-**Availability:** The track element is [supported on Chrome for Android, iOS Safari, and all current browsers on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or [Captionator](http://captionatorjs.com/).
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.accessibility-matters %}
 
 Using the track element, captions appear like this:
 
@@ -325,12 +344,12 @@ Using the track element, captions appear like this:
 
 It's very easy to add captions to your video -- simply add a [track element](http://www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
 
-    &lt;video&gt;
-        &lt;source src="video/chrome.mp4" type="video/mp4;" /&gt;
-        &lt;source src="video/chrome.webm" type="video/webm" /&gt;
-        &lt;track src="tracks/chrome-subtitles-en.vtt" /&gt;
-        &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
-    &lt;/video&gt;
+    <video>
+        <source src="video/chrome.mp4" type="video/mp4;" />
+        <source src="video/chrome.webm" type="video/webm" />
+        <track src="tracks/chrome-subtitles-en.vtt" />
+        <p>This browser does not support the video element.</p>
+    </video>
 
 The track element `src` attribute gives the location of the track file.
 
@@ -338,19 +357,15 @@ The track element `src` attribute gives the location of the track file.
 
 A track file consists of timed 'cues' in WebVTT format:
 
-WEBVTT FILE
+    WEBVTT FILE
 
-1 00:00:00.500 --&gt; 00:00:02.000 The Web is always changing
+    1 00:00:00.500 --> 00:00:02.000 The Web is always changing
 
-2 00:00:02.500 --&gt; 00:00:04.300 and the way we access it is changing
+    2 00:00:02.500 --> 00:00:04.300 and the way we access it is changing
 
 ## Handle poor connectivity with adaptive streaming
 
-{% class takeaways %}
-* Enable adaptive streaming to cope with variable network conditions.
-* Use the Media Source Extensions API to construct video streams.
-* Use DASH to enable high quality streaming on the web.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.handle-poor-connectivity %}
 
 ### What is adaptive streaming?
 
@@ -370,9 +385,7 @@ The [Media Source Extensions](http://updates.html5rocks.com/2011/11/Stream-video
 
 There's a simple example of MSE at [simpl.info/mse](http://simpl.info/mse).
 
-{% class note %}
-**Availability:** MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with [support planned for Firefox](https://wiki.mozilla.org/Platform/MediaSourceExtensions).
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.construct-video-streams %}
 
 ### Enable high quality streaming on the web
 
@@ -390,7 +403,7 @@ DASH is already in use by sites such as YouTube; you can see DASH in action with
 
 ## Reference ###
 
-** Video element attributes
+** Video element attributes **
 
 For the complete list of video element attributes and their definitions, see: [http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element](http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 

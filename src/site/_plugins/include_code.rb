@@ -8,8 +8,10 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       super
       @options = {}
-      @lang = 'html'
-      @file, @section = markup.strip.split(' ', 2)
+      @file, @section, @lang = markup.strip.split(' ', 3)
+      if @lang.nil?
+        @lang = "html"
+      end
       @character = '/'
     end
 
@@ -40,8 +42,10 @@ module Jekyll
       code.each_line {|s|
 
         #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
-        snippet += (" " * 4)
-        snippet += s.slice(initial..s.size).rstrip
+        if s.size >= initial
+          snippet += (" " * 4)
+          snippet += s.slice(initial..s.size).rstrip
+        end
         snippet += "\n"
       }
 
