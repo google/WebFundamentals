@@ -29,6 +29,8 @@ remember:
   use-commas:
     - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
 ---
+
+{% wrap content %}
 <style type="text/css">
   video {
     width: 100%;
@@ -376,3 +378,5 @@ is not a definitive indication of what a user may want.  For example,
 eliminating the pollen count from the weather forecast could be a serious issue 
 for spring time allergy sufferers who need the information to determine if they 
 can go outside or not.
+
+{% endwrap  %}
