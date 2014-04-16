@@ -1125,14 +1125,25 @@ body.debug:after {
     position: relative;
   }
   /* line 25, ../_sass/_modules/_editorial-header.scss */
+<<<<<<< HEAD
   .editorial-header .container:before, .editorial-header .container:after {
     display: block;
     position: absolute;
     line-height: 0;
     top: 20%;
+=======
+  .editorial-header .container:before {
+    content: ">";
+    display: block;
+    position: absolute;
+    top: 35%;
+    right: 90%;
+>>>>>>> 28d67bf78d2c1176c79db190a928a31563a2af6d
     font-size: 1400px;
+    line-height: 0;
     color: rgba(0, 0, 0, 0.1);
   }
+<<<<<<< HEAD
   /* line 34, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container:before {
     content: ">";
@@ -1143,6 +1154,8 @@ body.debug:after {
 /* line 43, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__excerpt {
   margin-bottom: 52px;
+=======
+>>>>>>> 28d67bf78d2c1176c79db190a928a31563a2af6d
 }
 
 /**

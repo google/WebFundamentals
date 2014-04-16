@@ -21,19 +21,15 @@
       position: relative;
 
       // Pseudo elements to add the background characters
-      &:before,
-      &:after {
+      &:before {
+        content: ">";
         display: block;
         position: absolute;
         line-height: 0;
-        top: 20%;
+        top: 35%;
+        right: 90%;
         font-size: 1400px;
         color: rgba(0, 0, 0, .1)
-      }
-
-      &:before {
-        content: ">";
-        right: 90%;
       }
     }
   }
