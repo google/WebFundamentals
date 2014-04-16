@@ -1,0 +1,24 @@
+/**
+*
+* In this guide
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.in-this-guide {
+  margin-top: - $lineHeight * 3;
+}
+
+.in-this-guide__title {
+  text-align: center;
+  @include medium {
+    text-align: left;
+  }
+  @include type--medium;
+  margin-bottom: $lineHeight;
+}

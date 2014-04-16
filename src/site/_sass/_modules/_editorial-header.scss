@@ -12,8 +12,7 @@
 
 .editorial-header {
   background-color: $colorGray;
-  padding-bottom: $lineHeight;
-  margin-bottom: $lineHeight;
+  padding-bottom: $lineHeight * 2;
   overflow: hidden;
 
 
@@ -27,7 +26,7 @@
         display: block;
         position: absolute;
         line-height: 0;
-        top: 50%;
+        top: 20%;
         font-size: 1400px;
         color: rgba(0, 0, 0, .1)
       }
@@ -36,11 +35,6 @@
         content: ">";
         right: 90%;
       }
-
-      &:after {
-        content: "<";
-        left: 75%;
-      }
     }
   }
 
@@ -48,23 +42,4 @@
 
 .editorial-header__excerpt {
   margin-bottom: $lineHeight * 2;
-}
-
-.columns-list-wrapper {
-  margin-right: 48.2%;
-}
-
-.columns-list {
-  @include prefixr(column-count, 2);
-  @include prefixr(column-rule, 0 none transparent);
-  @include prefixr(column-gap, 0);
-}
-
-.columns-list-item {
-  // display: inline-block;
-  // width: $wideColWidth;
-  // margin-right: $wideGutterWidth;
-  &:before {
-    display: none;
-  }
 }

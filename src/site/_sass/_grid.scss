@@ -159,6 +159,7 @@ $wideGutterWidth: 3.7%;
 .grid-overlay {
 
   display: none;
+  pointer-events: none;
 
   // Only show when parents (body) has debug class
   .debug & {

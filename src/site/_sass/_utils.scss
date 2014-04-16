@@ -159,10 +159,6 @@
       z-index: 9;
 
       display: none;
-    }
-
-
-    &:after {
       background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
       background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
@@ -175,6 +171,7 @@
 
     &.debug:after {
       display: block;
+      pointer-events: none;
     }
   }
 
