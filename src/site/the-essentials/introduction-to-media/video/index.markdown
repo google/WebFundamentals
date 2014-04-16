@@ -17,6 +17,26 @@ key-takeaways:
     - Include a poster image so the user sees something meaningful right away.
     - Specify multiple file formats since not all browsers support the same format.
     - "Improve network performance: specify each file source's type."
+  provide-alternatives:
+    - Check which formats are supported.
+    - Produce video in multiple formats to cover a range of mobile platforms.
+    - Check which format was used.
+  size-videos-correctly:
+    - Avoid serving video that is too long, too large in frame size, or unnecessarily high in quality.
+    - "Check video size: frame size may be different from element size."
+    - Ensure videos don't overflow their containers.
+  customize:
+    - Mobile solutions need to consider device orientation.
+    - Different platforms display video different.
+    - Use Fullscreen API to control fullscreening of content.
+  improve-accessibility:
+    - Focus on the user: accessibility matters.
+    - Add track element as a child of the video element.
+    - Define captions in track file.
+  handle-poor-connectivity:
+    - Enable adaptive streaming to cope with variable network conditions.
+    - Use the Media Source Extensions API to construct video streams.
+    - Use DASH to enable high quality streaming on the web.
 remember:
   specify-a-start-time: 
     - The Media Fragments API is supported on most platforms, but not on iOS.
@@ -28,6 +48,20 @@ remember:
       MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus. 
       Check out http://www.xiph.org/video/vid1.shtml 
       to find out more about how video and audio work on the web.
+  dont-overflow:
+    - Don't force element sizing that results in an aspect ratio different from the original 
+      video. Squashed or stretched looks bad.
+  compare-formats:
+    - "Compare the responsive sample: http://simpl/yt to the unresponsive sample: http://simple/unyt"
+  accessibility-matters:
+    - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers 
+      on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills 
+      available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or 
+      [Captionator](http://captionatorjs.com/).
+  construct-video-streams:
+    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and 
+      Chrome for desktop, with 
+      [support planned for Firefox](https://wiki.mozilla.org/Platform/MediaSourceExtensions).
 ---
 People like videos: videos can be fun, informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device.
 
@@ -117,11 +151,7 @@ Not including a type attribute can affect performance when there are multiple so
 
 ## Provide alternatives for legacy platforms
 
-{% class takeaways %}
-* Check which formats are supported.
-* Produce video in multiple formats to cover a range of mobile platforms.
-* Check which format was used.
-{% endclass %}
+{% include modules/highlight.liquid title="Key takeaway" type="takeaway" list=page.key-takeaways.provide-alternatives %}
 
 ### Check which formats are supported
 
@@ -163,11 +193,7 @@ Given the source example above, Chrome and Firefox choose `chrome.webm` (because
 
 ## Size videos correctly
 
-{% class takeaways %}
-* Avoid serving video that is too long, too large in frame size, or   unnecessarily high in quality.
-* Check video size: frame size may be different from element size.
-* Ensure videos don't overflow their containers.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" type="takeaway" list=page.key-takeaways.size-videos-correctly %}
 
 ### Size matters
 
@@ -210,10 +236,7 @@ Use [CSS media queries](https://docs.google.com/a/google.com/document/d/1sI9PrGi
         }
     }
 
-
-{% class remember %}
-**Remember:** Don't force element sizing that results in an aspect ratio different from the original video. Squashed or stretched looks bad.
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.key-takeaways.dont-overflow %}
 
 For media content in iframes (such as YouTube videos), try a responsive approach (like the one [proposed by John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)):
 
@@ -243,17 +266,11 @@ For media content in iframes (such as YouTube videos), try a responsive approach
         &lt;iframe src="http://www.youtube.com/embed/l-BA9Ee2XuM" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-{% class remember %}
-**Sample: **Compare the responsive sample: [simpl/yt](http://simpl/yt) to the unresponsive sample: [simple/unyt](http://simple/unyt).
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.compare-formats %}
 
 ## Customize the video player
 
-{% class takeaways %}
-* Mobile solutions need to consider device orientation.
-* Different platforms display video different.
-* Use Fullscreen API to control fullscreening of content.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.customize %}
 
 ### How device orientation works across devices
 
@@ -309,11 +326,7 @@ To see this in action, check out the [simpl.info/fullscreen/video](http://simpl.
 
 ### Include captions to improve accessibility
 
-{% class takeaways %}
-* Focus on the user: accessibility matters.
-* Add track element as a child of the video element.
-* Define captions in track file.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.improve-accessibility %}
 
 ### Accessibility matters
 
@@ -321,9 +334,7 @@ Accessibility isn't a feature. Users who can't hear or see won't be able to expe
 
 To make media more accessible on mobile, include captions or descriptions using the track element.
 
-{% class note %}
-**Availability:** The track element is [supported on Chrome for Android, iOS Safari, and all current browsers on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or [Captionator](http://captionatorjs.com/).
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.accessibility-matters %}
 
 Using the track element, captions appear like this:
 
@@ -354,11 +365,7 @@ WEBVTT FILE
 
 ## Handle poor connectivity with adaptive streaming
 
-{% class takeaways %}
-* Enable adaptive streaming to cope with variable network conditions.
-* Use the Media Source Extensions API to construct video streams.
-* Use DASH to enable high quality streaming on the web.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.handle-poor-connectivity %}
 
 ### What is adaptive streaming?
 
@@ -378,9 +385,7 @@ The [Media Source Extensions](http://updates.html5rocks.com/2011/11/Stream-video
 
 There's a simple example of MSE at [simpl.info/mse](http://simpl.info/mse).
 
-{% class note %}
-**Availability:** MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with [support planned for Firefox](https://wiki.mozilla.org/Platform/MediaSourceExtensions).
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.construct-video-streams %}
 
 ### Enable high quality streaming on the web
 
