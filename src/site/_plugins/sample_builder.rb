@@ -58,7 +58,7 @@ module SampleBuilder
 			file = File.new(dest_path, "w")
 			file.write(@contents)
 			file.close
-			Jekyll.logger.info dest_path
+			#Jekyll.logger.info dest_path
   			true
   		end
   	end
