@@ -13,11 +13,12 @@
 @mixin bullet-type($bullet) {
   &:before {
     content: $bullet;
-    display: inline-block;
+    display: block;
     font-family: $fontHighlight;
     font-weight: 400;
-    padding-right: 16px;
-    line-height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -29,6 +30,8 @@ ol {
 }
 
 li {
+  position: relative;
+  padding-left: 16px;
   @include bullet-type("#");
 }
 

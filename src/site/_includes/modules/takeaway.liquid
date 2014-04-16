@@ -1,20 +1,5 @@
-<div class="highlight highlight--left highlight--learning highlight--large">
-  <div class="highlight__container" data-character="*">
-    <div class="g-wide--push-1 g-wide--pull-1 g-medium--push-1">
-      <h1 class="highlight__title"> {{ include.title }}</h1>
+{% comment %}
+  Handy alias for the highlight module with pre-populated values for Key Takaways / learnings
+{% endcomment %}
 
-      {% if include.text %}
-        <p class="highlight__text"> {{ include.text }} </p>
-      {% endif %}
-
-      {% if include.list %}
-        <ul class="highlight__list">
-        {% for item in include.list %}
-          <li>{{ item }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-
-    </div>
-  </div>
-</div>
+{% include modules/highlight.liquid title=include.title list=include.list position="left" type="learning" priority="large" character="*" %}

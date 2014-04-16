@@ -8,8 +8,11 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       super
       @options = {}
-      @lang = 'html'
-      @file, @section = markup.strip.split(' ', 2)
+      @file, @section, @lang = markup.strip.split(' ', 3)
+      if @lang.nil?
+        @lang = "html"
+      end
+      @character = '/'
     end
 
     def render(context)
@@ -39,8 +42,10 @@ module Jekyll
       code.each_line {|s|
 
         #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
-        snippet += (" " * 4)
-        snippet += s.slice(initial..s.size).rstrip
+        if s.size >= initial
+          snippet += (" " * 4)
+          snippet += s.slice(initial..s.size).rstrip
+        end
         snippet += "\n"
       }
 
@@ -49,12 +54,17 @@ module Jekyll
       if highlighted_code.nil?
           Jekyll.logger.error "There was an error highlighting your code."
       end
+
+      if @lang == 'css'
+        @character = '}'
+      end
+
       <<-HTML
-  <div class="highlight highlight--right">
-    <div class="highlight__container" data-character="/">
-      <div class="g-wide--push-1 g-wide--pull-1 g-medium--pull-1">
-        <pre><code class='html'>#{highlighted_code.strip}</code></pre>
-        <a href="/resources/samples/#{filepath}">View full sample</a>
+  <div class="highlight-module highlight-module--code highlight-module--right">
+    <div class="highlight-module__container" data-character="#{@character}">
+      <div class="g-wide--pull-1 g-medium--pull-1">
+        <code class='html'>#{highlighted_code.strip}</code>
+        <a class="highlight-module__cta" href="/resources/samples/#{filepath}">View full sample</a>
       </div>
     </div>
   </div>
