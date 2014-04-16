@@ -1391,7 +1391,7 @@ body.debug:after {
 .highlight-module--code pre {
   margin: 0;
   padding-top: 52px;
-  padding-bottom: 52px;
+  padding-bottom: 26px;
   margin-left: -26px;
   font-size: 13px;
 }
@@ -1399,16 +1399,18 @@ body.debug:after {
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
+  display: inline-block;
 }
-/* line 122, ../_sass/_modules/_highlight.scss */
+/* line 123, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
 }
 
-/* line 130, ../_sass/_modules/_highlight.scss */
+/* line 131, ../_sass/_modules/_highlight.scss */
 .highlight-module__cta {
+  display: block;
   font-size: 16px;
   line-height: 1.6250em;
   /* 26px */
@@ -1417,7 +1419,7 @@ body.debug:after {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 @media only screen and (min-width: 800px) {
-  /* line 130, ../_sass/_modules/_highlight.scss */
+  /* line 131, ../_sass/_modules/_highlight.scss */
   .highlight-module__cta {
     font-size: 20px;
     font-weight: 300;
@@ -1522,7 +1524,7 @@ body.debug:after {
 **/
 /* line 13, ../_sass/_modules/_related-items.scss */
 .related-items {
-  background-color: #33b679;
+  background-color: #404040;
   color: white;
   padding-bottom: 52px;
   margin-top: 52px;
@@ -1531,6 +1533,7 @@ body.debug:after {
 /* line 20, ../_sass/_modules/_related-items.scss */
 .list--links a {
   color: white;
+  font-weight: 600;
 }
 
 /**
@@ -1999,11 +2002,15 @@ a:hover {
   }
 }
 
-/* line 39, ../_sass/_components/_column-list.scss */
+/* line 38, ../_sass/_components/_column-list.scss */
+.columns-list-item {
+  padding-left: 0;
+}
+/* line 40, ../_sass/_components/_column-list.scss */
 .columns-list-item:before {
   display: none;
 }
-/* line 43, ../_sass/_components/_column-list.scss */
+/* line 44, ../_sass/_components/_column-list.scss */
 .columns-list-item a {
   display: block;
   font-size: 13px;
@@ -2013,7 +2020,7 @@ a:hover {
   padding-bottom: 0;
   padding: 0;
 }
-/* line 47, ../_sass/_components/_column-list.scss */
+/* line 48, ../_sass/_components/_column-list.scss */
 .columns-list-item a:before {
   counter-increment: list;
   content: "#0" counter(list);

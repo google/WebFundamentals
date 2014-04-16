@@ -11,7 +11,7 @@
 **/
 
 .related-items {
-  background-color: $colorEmeraud;
+  background-color: $colorGrayDark;
   color: $colorWhite;
   padding-bottom: $lineHeight * 2;
   margin-top: $lineHeight * 2;
@@ -19,4 +19,5 @@
 
 .list--links a {
   color: $colorWhite;
+  font-weight: 600;
 }
