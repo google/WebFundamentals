@@ -62,9 +62,9 @@ pseudo classes :hover, :focus and :active as shown below.
 
 {% include_code _code/states-example.html btnstates css %}
 
-<img src="image00.jpg" width="381" height="297" />  
+![button-states.png](images/button-states.png)
 
-<!-- [Image from: http://jsbin.com/siramabo/26/edit] -->
+<!-- [Image from: http://jsbin.com/siramabo/26/edit]-->
 
 Without the outline rule, most user agents will display a colored edge to your 
 focusable elements.
@@ -78,6 +78,8 @@ some of your devices.
 
 Safari and Chrome browsers add a tap highlight color which can be prevented 
 with:
+
+{% include_code _code/states-example.html webkitspecific css %}
 
     .btn {
     -webkit-tap-highlight-color: transparent;
