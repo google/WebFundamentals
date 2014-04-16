@@ -105,17 +105,43 @@ remember:
     text-align: center;
   }
 
+    table.autocompletes {
+    width: 100%;
+  }
+
+  table.autocompletes th:nth-of-type(1) {
+    width: 20%;
+  }
+
+  table.autocompletes th:nth-of-type(2),
+  table.autocompletes th:nth-of-type(3) {
+    width: 40%;
+  }
+
+  table.autocompletes td {
+    vertical-align: top;
+  }
+
+  table.autocompletes tbody code {
+    display: block;
+  }
+
+  table.inputtypes th {
+    width: 50%;
+  }
+
+  table.tc-heavyright th:first-of-type {
+    width: 30%;
+  }
+
 </style>
 
-<!--
-Most of the samples will be based off
-[https://petelepage.com/scratch/form-ac.html](https://petelepage.com/scratch/form-ac.html)
-which integrates all of the items discussed in the doc below.
--->
+<!-- TODO: petele fix heading levels -->
+<!-- TODO: petele fix takeaway lists -->
 
 ## Label and name inputs properly
 
-{% include modules/takeaway.liquid character="*" position="left" title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
+{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
 
 ### The importance of labels
 
@@ -167,30 +193,6 @@ the users name, email address and phone number, you should use:
 
 
 ### Recommended input name and autocomplete attribute values
-
-<style type="text/css">
-  table.autocompletes {
-    width: 100%;
-  }
-
-  table.autocompletes th:nth-of-type(1) {
-    width: 20%;
-  }
-
-  table.autocompletes th:nth-of-type(2),
-  table.autocompletes th:nth-of-type(3) {
-    width: 40%;
-  }
-
-  table.autocompletes td {
-    vertical-align: top;
-  }
-
-  table.autocompletes tbody code {
-    display: block;
-  }
-</style>
-
 
 <table class="autocompletes">
   <thead>
@@ -307,12 +309,6 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<style type="text/css">
-  table.inputtypes th {
-    width: 50%;
-  }
-</style>
-
 <table class="inputtypes">
   <thead>
     <tr>
@@ -327,6 +323,7 @@ type.
         for example <code>http://</code>, <code>ftp://</code> or <code>mailto:</code>.
       </td>
       <td>
+        <!-- TODO: petele capture screenshots -->
         <img src="">
       </td>
     </tr>
@@ -471,12 +468,6 @@ this:
     <input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
 **Common regular expression patterns**
-
-<style type="text/css">
-  table.tc-heavyright th:first-of-type {
-    width: 30%;
-  }
-</style>
 
 <table class="tc-heavyright">
   <thead>
