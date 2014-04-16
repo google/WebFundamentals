@@ -98,7 +98,7 @@ mode, and zoom rather than reflow to fill the screen. Adding the attribute
 pixels and device independent pixels regardless of device orientation, and 
 allows the page to take advantage of the full landscape width.
 
-{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.use-commas %}
+{% include modules/remember.liquid title="Remember" type="remember" list=page.remember.use-commas %}
 
 ## Ensure an accessible viewport
 
