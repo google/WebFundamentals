@@ -15,10 +15,7 @@
 }
 
 .in-this-guide__title {
-  text-align: center;
-  @include medium {
-    text-align: left;
-  }
-  @include type--medium;
+  @include type--medium(true);
+  font-family: $fontHighlight;
   margin-bottom: $lineHeight;
 }

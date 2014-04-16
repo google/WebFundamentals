@@ -21,10 +21,8 @@
 
 .list--columns {
   border-bottom: 1px solid #ccc;
-  padding-bottom: 7px;
-  text-align: center;
+  padding-bottom: $lineHeight - 1;
   @include medium {
-    text-align: left;
     @include prefixr(column-count, 2);
     @include prefixr(column-rule, 0 none transparent);
     @include prefixr(column-gap, 0);
@@ -43,6 +41,7 @@
   }
 
   a {
+    display: block;
     @include type--small;
     padding: 0;
     &:before {
