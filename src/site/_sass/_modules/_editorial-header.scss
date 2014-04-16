@@ -22,24 +22,17 @@
       position: relative;
 
       // Pseudo elements to add the background characters
-      &:before,
-      &:after {
-        display: block;
-        position: absolute;
-        line-height: 0;
-        top: 50%;
-        font-size: 1400px;
-        color: rgba(0, 0, 0, .1)
-      }
-
       &:before {
         content: ">";
-        right: 90%;
-      }
+        display: block;
 
-      &:after {
-        content: "<";
-        left: 75%;
+        position: absolute;
+        top: 35%;
+        right: 90%;
+
+        font-size: 1400px;
+        line-height: 0;
+        color: rgba(0, 0, 0, .1);
       }
     }
   }

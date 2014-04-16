@@ -1126,24 +1126,16 @@ body.debug:after {
   .editorial-header .container {
     position: relative;
   }
-  /* line 26, ../_sass/_modules/_editorial-header.scss */
-  .editorial-header .container:before, .editorial-header .container:after {
-    display: block;
-    position: absolute;
-    line-height: 0;
-    top: 50%;
-    font-size: 1400px;
-    color: rgba(0, 0, 0, 0.1);
-  }
-  /* line 35, ../_sass/_modules/_editorial-header.scss */
+  /* line 25, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container:before {
     content: ">";
+    display: block;
+    position: absolute;
+    top: 35%;
     right: 90%;
-  }
-  /* line 40, ../_sass/_modules/_editorial-header.scss */
-  .editorial-header .container:after {
-    content: "<";
-    left: 75%;
+    font-size: 1400px;
+    line-height: 0;
+    color: rgba(0, 0, 0, 0.1);
   }
 }
 
