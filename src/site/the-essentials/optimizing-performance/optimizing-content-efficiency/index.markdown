@@ -1,7 +1,14 @@
 ---
 layout: article
 title: "Optimizing content efficiency"
-description: ""
+description: "Our web applications continue to grow in their scope, ambition, and 
+              functionality - that's a good thing. However, the relentless march towards a 
+              richer web is driving another trend: the amount of data downloaded by each 
+              application continues to increase at a steady pace. "
+introduction: "Our web applications continue to grow in their scope, ambition, and 
+               functionality - that's a good thing. However, the relentless march towards a 
+               richer web is driving another trend: the amount of data downloaded by each 
+               application continues to increase at a steady pace. "
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-05
@@ -64,11 +71,6 @@ key-takeaways:
 ---
 
 {% wrap content%}
-
-Our web applications continue to grow in their scope, ambition, and 
-functionality - that's a good thing. However, the relentless march towards a 
-richer web is driving another trend: the amount of data downloaded by each 
-application continues to increase at a steady pace. 
 
 What does a modern web application look like? [HTTP 
 Archive](http://httparchive.org/) can help us answer this question. The project 

@@ -1,7 +1,10 @@
 ---
 layout: article
 title: "Critical Path Rendering"
-description: ""
+description: "Delivering a fast web experience requires a lot of work by the browser. 
+  Most of this work is hidden from us as web developers: we write the markup, and a nice 
+  looking page comes out on the screen. But how exactly does the browser go from 
+  consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?"
 introduction: "Delivering a fast web experience requires a lot of work by the browser. 
   Most of this work is hidden from us as web developers: we write the markup, and a nice 
   looking page comes out on the screen. But how exactly does the browser go from 
