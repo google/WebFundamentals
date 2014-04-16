@@ -173,9 +173,9 @@ complete later.
 
 [TODO: Add Image]
 
-## Styling
+# Styling
 
-## Create a great form
+# Create a great form
 
 {% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
@@ -215,7 +215,7 @@ We have a more detailed guide to creating amazing forms in our forms tutorial.
 
 Link to request AutoComplete
 
-## Add images to site
+# Add images to site
 
 {% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
 
@@ -225,11 +225,11 @@ in the document and are used to convey extra information about the content.
 Stylistic images are often used to make the site look better, often these are 
 background images, patterns and gradients.
 
-### Adding Stylistic images
+## Adding Stylistic images
 
 [TODO]
 
-### Adding Content Images
+## Adding Content Images
 
 so lets add some in.
 
@@ -240,7 +240,7 @@ so lets add some in.
       <img src="">
     </div>
 
-## Add a video to your site
+# Add a video to your site
 
 {% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
 

@@ -18,31 +18,29 @@ module Jekyll
         String filepath = File.join(File.dirname(page["path"]), @file)
         String file = File.join(path, filepath)
         contents = File.read(file)
-        snippet = contents.match(/<!-- \/\/ \[START #{@section}\] -->(.*)<!-- \/\/ \[END #{@section}\] -->/im)[1];
+        snippet = contents.match(/<!-- \/\/ \[START #{@section}\] -->\n(.*)<!-- \/\/ \[END #{@section}\] -->/im)[1];
         render_codehighlighter(context, snippet, filepath)
     end
 
     def render_codehighlighter(context, code, filepath)
       require 'pygments'
 
+      # TODO(ianbarber): This is a bit of a fudge. We should know the definitive sample 
+      # path. I think we may want to have a central shared "code sample" object that is
+      # knows how to get such paths for this and the sample_builder.
+      filepath.sub!("_code/", "")
       offset = false
       snippet = ""
+      initial = code.lines.first[/\A */].size
+      
       # Indenter
       # TODO(ianbarber): Look for multiples of original offset rather than absolute spaces.
+      # paulk edit: updated logic.  gets first line, works out indent. then uses that as initial offset
       code.each_line {|s|
-        initial = s[/\A */].size
-        if initial == s.size 
-          return
-        end
-        if (offset == false)
-          offset = 2 - initial
-        end
-        if (offset == 0)
-          break
-        end
+        
         #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
-        snippet += (" " * (initial + offset))
-        snippet += s.lstrip.rstrip
+        snippet += (" " * 4)
+        snippet += s.slice(initial..s.size).rstrip
         snippet += "\n"
       }
 
@@ -54,7 +52,7 @@ module Jekyll
       <<-HTML
   <div>
     <pre><code class='html'>#{highlighted_code.strip}</code></pre>
-    <a href="/_samples/#{filepath}">View full sample</a>
+    <a href="/resources/samples/#{filepath}">View full sample</a>
   </div>
         HTML
       end
