@@ -35,8 +35,8 @@
   display: block;
   background-color: $colorGray;
 
-  @include small-only {
-    &.main-nav__item--logo {
+  &.main-nav__item--logo {
+    @include small-only {
       display: none;
     }
   }
@@ -45,6 +45,11 @@
     float: left;
     background-color: transparent;
     width: 20%;
+    border-right: 1px solid darken($colorGrayDark, 10%);
+
+    &:last-child {
+      border-right: none;
+    }
   }
 
   // Remove the margin-top apart from first-child
@@ -72,6 +77,7 @@
     margin-bottom: 0;
     color: #ffffff;
     @include type--medium;
+    padding-bottom: $lineHeight;
   }
 
   @include wide {
@@ -80,6 +86,12 @@
 
   &:hover {
     text-decoration: none;
+  }
+
+  .main-nav__item--logo & {
+    font-size: 60px;
+    padding-top: $lineHeight;
+    line-height: $lineHeight;
   }
 }
 
