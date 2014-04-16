@@ -64,7 +64,7 @@ submitting the form.
 
 # Label and name inputs properly
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.label-and-name %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.label-and-name %}
 
 ### The importance of labels
 
@@ -214,7 +214,7 @@ The form
 
 # Choose the best input type
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.choose-best-input-type %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.choose-best-input-type %}
 
 Every tap counts. Users appreciate websites that automatically present number 
 pads for entering phone numbers, or automatically advance fields as they entered 
@@ -315,7 +315,7 @@ lists, `datalist`s provide hints as the user types.
 
 # Provide real-time validation
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.provide-real-time-validation %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.provide-real-time-validation %}
 
 Real-time data validation doesn't just help to keep your data clean, but it also 
 helps improve the user experience.  Modern browsers have several built-in tools 
@@ -559,7 +559,7 @@ The JavaScript
 
 # Simplify checkout with requestAutocomplete
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.use-request-auto-complete %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.use-request-auto-complete %}
 
 While `requestAutocomplete` was designed to help users fill out any form, today 
 it's most common use is in eCommerce where shopping cart abandonment on the 

@@ -71,7 +71,7 @@ Read more to find the simplest way to add video to your site and ensure users ge
 
 # Add a video
 
-{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-a-video %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.add-a-video %}
 
 ### Add the video element
 
@@ -151,7 +151,7 @@ Not including a type attribute can affect performance when there are multiple so
 
 ## Provide alternatives for legacy platforms
 
-{% include modules/highlight.liquid title="Key takeaway" type="takeaway" list=page.key-takeaways.provide-alternatives %}
+{% include modules/highlight.liquid title="Key takeaway" type="learning" list=page.key-takeaways.provide-alternatives %}
 
 ### Check which formats are supported
 
@@ -193,7 +193,7 @@ Given the source example above, Chrome and Firefox choose `chrome.webm` (because
 
 ## Size videos correctly
 
-{% include modules/highlight.liquid title="Key Takeaway" type="takeaway" list=page.key-takeaways.size-videos-correctly %}
+{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.size-videos-correctly %}
 
 ### Size matters
 
@@ -326,7 +326,7 @@ To see this in action, check out the [simpl.info/fullscreen/video](http://simpl.
 
 ### Include captions to improve accessibility
 
-{% include modules/highlight.liquid title="Key Takeaways" type="takeaway" list=page.key-takeaways.improve-accessibility %}
+{% include modules/highlight.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.improve-accessibility %}
 
 ### Accessibility matters
 
