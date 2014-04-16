@@ -634,8 +634,8 @@ work in a [few older browsers](http://caniuse.com/script-async), whereas the
 JavaScript snippet works across all browsers - other than that they are 
 identical. 
 
-> **_Note: all modern mobile browsers support the "async" keyword, so unless you 
-> have to target older desktop browsers, you can use "async". _**
+> _Note: all modern mobile browsers support the "async" keyword, so unless you 
+> have to target older desktop browsers, you can use "async". _
 
 # Measuring the Critical Rendering Path with Navigation Timing
 
@@ -697,6 +697,7 @@ path:
        fire immediately after domInteractive.
 1. **domComplete** marks when the page and all of its subresources are ready.
 
+As follows:
 
     <html>
       <head>
