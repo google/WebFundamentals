@@ -23,6 +23,11 @@ remember:
   range-request: 
     - Make sure Range Requests are supported by your server. Range Requests are enabled by 
       default on most servers, but some hosting services may turn them off. 
+  multiple-formats:
+    - MP4 and WebM are http://en.wikipedia.org/wiki/Container_format_(digital) formats 
+      MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus. 
+      Check out http://www.xiph.org/video/vid1.shtml 
+      to find out more about how video and audio work on the web.
 ---
 People like videos: videos can be fun, informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device.
 
@@ -60,7 +65,7 @@ You can also use the Media Fragments API to deliver multiple views on the same v
         &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
     &lt;/video&gt;
 
-    {% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.range-request %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.range-request %}
   
 To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
 
@@ -100,9 +105,7 @@ The user's browser selects the first available format it can play. This approach
 
 All of these points are especially potent in mobile contexts, where bandwidth and latency are at a premium, and the user's patience is likely to be limited.
 
-{% class note %}
-**More information:** MP4 and WebM are [container](http://en.wikipedia.org/wiki/Container_format_(digital)) formats: MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus. Check out [Montgomery's Digital Primer for Geeks](http://www.xiph.org/video/vid1.shtml) to find out more about how video and audio work on the web.
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.multiple-formats %}
 
 ### Specify each source's type
 

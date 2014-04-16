@@ -8,8 +8,10 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       super
       @options = {}
-      @lang = 'html'
-      @file, @section = markup.strip.split(' ', 2)
+      @file, @section, @lang = markup.strip.split(' ', 3)
+      if @lang.nil?
+        @lang = "html"
+      end
     end
 
     def render(context)
