@@ -62,7 +62,7 @@ pseudo classes :hover, :focus and :active as shown below.
 
 {% include_code _code/states-example.html btnstates css %}
 
-![button-states.png](images/button-states.png)
+![Image illustrating the different colors for button states](images/button-states.png)
 
 <!-- [Image from: http://jsbin.com/siramabo/26/edit]-->
 
@@ -79,78 +79,112 @@ some of your devices.
 Safari and Chrome browsers add a tap highlight color which can be prevented 
 with:
 
-{% include_code _code/states-example.html webkitspecific css %}
-
-    .btn {
-    -webkit-tap-highlight-color: transparent;
-    }
+{% include_code _code/states-example.html webkit-specific css %}
 
 Windows Phone has the same behaviour, but you need to surpress it via a meta 
 tag:
 
-    <meta name="msapplication-tap-highlight" content="no"/>
+{% include_code _code/states-example.html ms-specific html %}
+
 
 For Firefox OS you need to remove a gradient added by their default styles and 
 if you are setting a focus style, you may wish to remove the black border which 
 can appear around text:
 
-    .btn {
-    background-image: none;
-    }
-
-    button::-moz-focus-inner {
-      border: 0;
-    }
+{% include_code _code/states-example.html ff-specific css %}
 
 ## User Select
 
 If you have elements which the user is interacting with you might want to 
 prevent the user for accidentally selecting the text.
 
-    user-select: none;
+{% include_code _code/user-select-example.html user-select css %}
 
 You should be cautious not to disable user selection if there are scenarios 
 where the user might want to copy the text. An example would be a button to 
 display a phone, if the user clicks on it, you could open the devices dialer, 
 but the user may wish to copy and paste to a different app.
 
-<a href="tel:+44123456789">+44 (0) 123456789</a>
+
 
 # Touch events
- Demo: http://jsbin.com/sozujute/latest/edit
+<!-- Demo: http://jsbin.com/sozujute/latest/edit -->
 
 If you have an idea for a new interaction pattern that you'd like to include 
 touch support, how do you do it?
 
 ## Receiving Touch Events
 
+For full browser support there are two kinds of events you need to cater for:
+
+- Touch Events
+  - These consist of touchstart, touchmove, touchend and touchcancel
+- Pointer Events
+  - This is a new feature which merges Mouse and Touch events into the same 
+  set of events. This is currently only supported in IE10+ with the events: 
+  MSPointerDown, MSPointerMove and MSPointerUp
+
 The building blocks for adding touch to your application is these events:
 
-* touchstart
+* touchstart, MSPointerDown
     * When a finger starts to touch an element
-* touchmove
+* touchmove, MSPointerMove
     * When a finger moves across the screen
-* touchend
+* touchend, MSPointerUp
     * When the user lifts their finger off of the screen
 * touchcancel
-    * The browser cancels the touch gestures (i.e. TODO)
+    * The browser cancels the touch gestures (for example the page scrolls and
+    browser no longer allows you to intercept touch events)
 
-The way you would use these listeners are:
+You hook these events up through the **addEventListener()** method of a DOM element
+ like so.
 
-    addEventListener('touchstart', function(evt) { … }, true);
-    addEventListener('touchmove', function(evt) { … }, true);
-    addEventListener('touchend', function(evt) { … }, true);
-    addEventListener('touchcancel', function(evt) { … }, true);
+{% include_code _code/touch-demo-1.html addlisteners js %}
 
-The boolean value is used to determine whether you should catch the touch event 
+This code first checks if we should use Pointer Events or you touch and mouse events.
+We then add the event listener with the appropriate name, the callback we want called,
+in this case **this.handleGestureStart**.
+
+The third boolean value is used to determine whether you should catch the touch event 
 before or after other elements have the opportunity to catch and interpret the 
 events.
 
-For performance reasons the best practice for touch and mouse interaction is to 
-bind the touchmove, touchend and touchcancel events as late as possible and 
-remove them once the user finished their gesutre.
+### Common Practices
 
-What this means is you'll be doing  the following
+Depending on what you want to do with touch, you're likely to fall into one of two camps
+
+- I want the user to interact with one of my elements at a time
+- I want the user to interact with multiple elements at the same time
+
+There are trade offs to be had with both.
+
+If you only have one element to be interactive with at one time, then you might want 
+any gesture which started on that element, to be used to control that gesture.
+
+For example, moving a finger off the swipable element still controls the element.
+
+![Example GIF of touch on document](images/touch-document-level.gif)
+
+If however you expect people to interact with multiple elements at the same time, 
+you would want to restrict the touch to the specific element.
+
+![Example GIF of touch on element](images/touch-element-level.gif)
+
+Let's look at the first interaction with expecting the user to only interact with just one 
+element.
+
+The steps to achieve this is:
+
+1. Add the start events to the element the user will interact with
+2. Inside your touch start method, you bind the move and end elements to the document
+3. Handle the move events
+4. On end event remove the move and end listeners on the docment
+
+The reason to follow this approach is it's the most performant approach.
+
+What this means is you'll be doing the following:
+
+{% include_code _code/touch-demo-1.html handle-start-gesture js %}
 
     element.addEventListener('touchstart', handleGestureStart, true);
 

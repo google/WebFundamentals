@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- // [START ms-specific] -->
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <!-- // [END ms-specific] -->
     <title>Web Essential: States Example</title>
     
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -40,33 +44,43 @@
         font-size: inherit;
         text-align:center;
         text-decoration: none;
+
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
 
       <!-- // [START btnstates] -->
       .btn {
         background-color: #c0392b;
       }
+
       .btn:hover {
         background-color: #B32C1E;
       }
+
       .btn:focus {
         background-color: #8D0600;
+        
         /* The outline parameter surpresses the border color / outline when focused */
         outline: 0;
       }
+
       .btn:active {
         background-color: #9A1305;
       }
       <!-- // [END btnstates] -->
 
-      <!-- // [START webkitspecific] -->
-      /* Webkit / Chrome Specific CSS */
+      <!-- // [START webkit-specific] -->
+      /* Webkit / Chrome Specific CSS to remove tap highlight color */
       .btn {
         -webkit-tap-highlight-color: transparent;
       }
-      <!-- // [END webkitspecific] -->
+      <!-- // [END webkit-specific] -->
 
-      /* Firefox Specific CSS */
+      <!-- // [START ff-specific] -->
+      /* Firefox Specific CSS to remove button differences and focus ring */
       .btn {
         background-image: none;
       }
@@ -74,6 +88,7 @@
       .btn::-moz-focus-inner {
         border: 0;
       }
+      <!-- // [END ff-specific] -->
     </style>
   </head>
 
