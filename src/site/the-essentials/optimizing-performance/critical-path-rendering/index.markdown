@@ -11,6 +11,31 @@ article:
   updated_on: 2014-01-05
   order: 1
 collection: performance
+key-takeaways:
+  construct-object-model: 
+    - Bytes → characters → tokens → nodes → object model
+    - HTML markup is transformed into a Document Object Model (DOM)
+    - CSS markup is transformed into a CSS Object Model (CSSOM)
+    - Both DOM and CSSOM are tree structures that capture the structure of the markup
+    - DOM and CSSOM are independent data structures
+    - DevTool Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM
+  render-tree-construction:
+    - The DOM and CSSOM trees are combined to form the render tree
+    - Render tree contains only the nodes required to render the page
+    - Layout is a recursive process which computes the exact position and size of each node within the renderer
+    - Paint is the last step, which takes in the render tree and position and size of each element and renders the    pixels to the screen
+  render-blocking-css:
+    - By default CSS is treated as a render blocking resource
+    - Media types and media queries allow us to mark some CSS resources as non render blocking
+    - All CSS resources, regardless of blocking or non-blocking behavior are downloaded by the browser
+  adding-interactivity:
+    - JavaScript can query and modify DOM and CSSOM
+    - JavaScript execution blocks on CSSOM
+    - JavaScript blocks DOM construction unless explicitly declared as async</td>
+  measure-crp:
+    - Navigation Timing provides high resolution timestamps for measuring CRP.
+    - Browser emits series of consumable events which capture various stages of the CRP.
+
 ---
 {% wrap content%}
 
@@ -39,18 +64,7 @@ overview of how the browser goes about displaying a simple page.
 
 # Constructing the Object Model
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-Bytes → characters → tokens → nodes → object model
-HTML markup is transformed into a Document Object Model (DOM)
-CSS markup is transformed into a CSS Object Model (CSSOM)
-Both DOM and CSSOM are tree structures that capture the structure of the markup
-DOM and CSSOM are independent data structures
-DevTool Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.construct-object-model %}
 
 ## Document Object Model (DOM)
 
@@ -198,16 +212,7 @@ links the DOM and CSSOM together.
 
 # Render-tree construction, Layout, and Paint
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways
-The DOM and CSSOM trees are combined to form the render tree
-Render tree contains only the nodes required to render the page
-Layout is a recursive process which computes the exact position and size of each node within the renderer
-Paint is the last step, which takes in the render tree and position and size of each element and renders the pixels to the screen</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.render-tree-construction %}
 
 In the previous section on constructing the object model we built the DOM and 
 the CSSOM trees based on the HTML and CSS input. However, both of these are 
@@ -330,15 +335,8 @@ i.e. achieve higher refresh rate for interactive content.
 
 # Render Blocking CSS
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-By default CSS is treated as a render blocking resource
-Media types and media queries allow us to mark some CSS resources as non render blocking
-All CSS resources, regardless of blocking or non-blocking behavior are downloaded by the browser</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.render-blocking-css %}
+
 
 In the previous section we saw that the critical rendering path requires that we 
 have both the DOM and the CSSOM to construct the render tree, which creates an 
@@ -422,15 +420,7 @@ for non-blocking resources.
 
 # Adding interactivity with JavaScript
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key takeaways:
-JavaScript can query and modify DOM and CSSOM
-JavaScript execution blocks on CSSOM
-JavaScript blocks DOM construction unless explicitly declared as async</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.adding-interactivity %}
 
 JavaScript is a dynamic language that runs in the browser and allows us to alter 
 just about every aspect of how the page behaves: we can modify content on the 
@@ -639,14 +629,7 @@ identical.
 
 # Measuring the Critical Rendering Path with Navigation Timing
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Key Takeaways:
-Navigation Timing provides high resolution timestamps for measuring CRP.
-Browser emits series of consumable events which capture various stages of the CRP.</td>
-</tr>
-</table>
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.measure-crp %}
 
 We've now covered all the necessary background to understand the major steps 
 that the browser has to go through to construct the page: converting HTML and 
