@@ -10,8 +10,6 @@
 *
 **/
 
-
-
 @mixin bullet-type($bullet) {
   &:before {
     content: $bullet;
@@ -27,6 +25,7 @@ ul,
 ol {
   padding-left: 0;
   list-style: none;
+  margin: 0;
 }
 
 li {
