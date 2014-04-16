@@ -1,7 +1,10 @@
 ---
 layout: article
 title: "Responsive Design Fundamentals"
-description: ""
+introduction: "The use of mobile devices to surf the web is growing at an astronomical pace, 
+              but unfortunately much of the web isn't optimized for those mobile devices. Mobile 
+              devices are often constrained by display size and require a different approach 
+              to how content is laid out on screen."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -42,13 +45,6 @@ remember:
     max-height: 500px;
   }
 </style>
-
-# Responsive Web Design Fundamentals
-
-The use of mobile devices to surf the web is growing at an astronomical pace, 
-but unfortunately much of the web isn't optimized for those mobile devices. Mobile 
-devices are often constrained by display size and require a different approach 
-to how content is laid out on screen.
 
 There is a multitude of different screen sizes across phones, "phablets", 
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always 
