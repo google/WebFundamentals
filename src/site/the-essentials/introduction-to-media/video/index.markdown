@@ -10,6 +10,19 @@ article:
   updated_on: 2014-01-06
   order: 2
 collection: introduction-to-media
+key-takeaways:
+  add-a-video:
+    - Use the video element to load, code, and play video in your site.
+    - "Don't load the whole video if unnecessary: specify a start and end time."
+    - Include a poster image so the user sees something meaningful right away.
+    - Specify multiple file formats since not all browsers support the same format.
+    - "Improve network performance: specify each file source's type."
+remember:
+  specify-a-start-time: 
+    - The Media Fragments API is supported on most platforms, but not on iOS.
+  range-request: 
+    - Make sure Range Requests are supported by your server. Range Requests are enabled by 
+      default on most servers, but some hosting services may turn them off. 
 ---
 People like videos: videos can be fun, informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device.
 
@@ -19,13 +32,7 @@ Read more to find the simplest way to add video to your site and ensure users ge
 
 # Add a video
 
-{% class takeaways %}
-* Use the video element to load, code, and play video in your site.
-* Don't load the whole video if unnecessary: specify a start and end time.
-* Include a poster image so the user sees something meaningful right away.
-* Specify multiple file formats since not all browsers support the same format.
-* Improve network performance: specify each file source's type.
-{% endclass %}
+{% include modules/highlight.liquid title="Key Takeaway" list=page.key-takeaways.add-a-video %}
 
 ### Add the video element
 
@@ -39,13 +46,13 @@ Load, decode, and play video:
 
 Save bandwidth and make your site feel more responsive: use the Media Fragments API to add a start and end time to the video element (full sample: [simpl.info/mf](http://simpl.info/mediafragments/)):
 
+{% include_code _code/fragment.html fragments %}
+ 
     &lt;video src='foo.webm#**t=5,10**'&gt;
         &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
     &lt;/video&gt;
 
-{% class note %}
-**Availability:** The Media Fragments API is supported on most platforms, but not on iOS.
-{% endclass %}
+{% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.specify-a-start-time %}
 
 You can also use the Media Fragments API to deliver multiple views on the same video -- like cue points in a DVD -- without having to encode and serve multiple files:
 
@@ -53,11 +60,9 @@ You can also use the Media Fragments API to deliver multiple views on the same v
         &lt;p&gt;This browser does not support the video element.&lt;/p&gt;
     &lt;/video&gt;
 
-    {% class remember %}
-    **Remember:** Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.
-    {% endclass %}
-
-    To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
+    {% include modules/highlight.liquid title="Remember" type="remember" list=page.remember.range-request %}
+  
+To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
 
 [ADD SCREENSHOT]
 
