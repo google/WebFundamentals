@@ -13,6 +13,8 @@
 .main-header {
   background: $colorGrayDark;
   color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
 .main-header__title {

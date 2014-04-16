@@ -1120,9 +1120,11 @@ body.debug:after {
 .main-header {
   background: #404040;
   color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
-/* line 18, ../_sass/_main-header.scss */
+/* line 20, ../_sass/_main-header.scss */
 .main-header__title {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1143,7 +1145,7 @@ body.debug:after {
   padding-bottom: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 18, ../_sass/_main-header.scss */
+  /* line 20, ../_sass/_main-header.scss */
   .main-header__title {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1151,7 +1153,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 18, ../_sass/_main-header.scss */
+  /* line 20, ../_sass/_main-header.scss */
   .main-header__title {
     padding-left: 0;
     padding-right: 0;
@@ -1159,7 +1161,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 18, ../_sass/_main-header.scss */
+  /* line 20, ../_sass/_main-header.scss */
   .main-header__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1171,13 +1173,13 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 18, ../_sass/_main-header.scss */
+  /* line 20, ../_sass/_main-header.scss */
   .main-header__title {
     display: none;
   }
 }
 
-/* line 30, ../_sass/_main-header.scss */
+/* line 32, ../_sass/_main-header.scss */
 .main-header__logo {
   color: #ffffff;
 }
