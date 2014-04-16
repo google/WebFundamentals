@@ -40,10 +40,10 @@ body {
   height: 64px;
 }
 
-<!-- // [START mqsmallbplg] -->
+/* // [START mqsmallbplg] */
 @media (min-width: 700px) {
   .weather-forecast {
     width: 700px;
   }
 }
-<!-- // [END mqsmallbplg] -->
+/* // [END mqsmallbplg] */

@@ -5,18 +5,23 @@
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="mq.css">
-    <!-- // [START mqmaxwidth] -->
+    <!-- // [START mqueries] -->
     <link rel="stylesheet" media="(max-width: 640px)" href="max-640px.css" />
-    <!-- // [END mqmaxwidth] -->
-    <!-- // [START mqminwidth] -->
     <link rel="stylesheet" media="(min-width: 640px)" href="min-640px.css" />
-    <!-- // [END mqminwidth] -->
-    <!-- // [START mqportrait] -->
     <link rel="stylesheet" media="(orientation: portrait)" href="portrait.css" />
-    <!-- // [END mqportrait] -->
-    <!-- // [START mqlandscape] -->
     <link rel="stylesheet" media="(orientation: landscape)" href="landscape.css" />
-    <!-- // [END mqlandscape] -->
+    <style type="text/css">
+      @media (min-width: 500px) and (max-width: 600px) {
+        h1 {
+          color: fuchsia;
+        }
+        
+        .desc:after {
+          content:" In fact, it's between 500px and 600px wide.";
+        }
+      }
+    </style>
+    <!-- // [END mqueries] -->
     <title>Media Queries</title>
   </head>
   <body>
