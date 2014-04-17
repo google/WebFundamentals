@@ -15,6 +15,9 @@ collection: resources
 key-takeaways:
   use-keytakeaway:
     - It is pretty simple to add in a key takeaway
+remember:
+  use-remember:
+    - It is pretty simple to add in a remember
 ---
 {% comment %}
 NOTE: This is our styleguide
@@ -78,5 +81,20 @@ In your Article YAML Preamble
 	    - It is pretty simple to add in a key takeaway
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.use-keytakeaway %}
+
+### Remember
+
+    {{ "{% include modules/remember.liquid" }}
+    	title='Remember' 
+    	list=page.remember.use-remember %}
+
+In your Article YAML Preamble
+
+    remember:
+	  use-remember:
+	    - It is pretty simple to add in a remember
+
+{% include modules/remember.liquid title="Remember" list=page.remember.use-remember %}
+
 
 {% endwrap %}
