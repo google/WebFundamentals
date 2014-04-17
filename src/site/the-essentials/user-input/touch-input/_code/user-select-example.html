@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- // [TEMPLATE header_full] -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- // [START ms-specific] -->
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no"/>
-    <!-- // [END ms-specific] -->
 
     <title>Web Essential: States Example</title>
     
@@ -22,11 +21,7 @@
         color: #ecf0f1;
       }
 
-      a {
-        color: #ecf0f1;
-      }
-
-      button {
+      button, a {
         display: block;
         
         width: 100%;
@@ -45,62 +40,56 @@
         font-size: inherit;
         text-align:center;
         text-decoration: none;
+      }
 
+      .btn {
+        background-color: #c0392b;
+
+        /* // [START user-select] */
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        /* // [END user-select] */
+
+        /* Webkit / Chrome Specific CSS to remove tap highlight color */
+        -webkit-tap-highlight-color: transparent;
+
+        /* Firefox Specific CSS to remove button differences  */
+        background-image: none;
       }
-      /* // [START btnstates] */
-      .btn {
-        background-color: #c0392b;
+
+      .btn.user-selectable {
+        -moz-user-select: auto;
+        -webkit-user-select: auto;
+        -ms-user-select: auto;
+        user-select: auto;
       }
 
       .btn:hover {
         background-color: #B32C1E;
       }
-
+      
       .btn:focus {
         background-color: #8D0600;
-        
         /* The outline parameter surpresses the border color / outline when focused */
         outline: 0;
       }
-
+      
       .btn:active {
         background-color: #9A1305;
       }
-      /* // [END btnstates] */
 
-      /* // [START webkit-specific] */
-      /* Webkit / Chrome Specific CSS to remove tap highlight color */
-      .btn {
-        -webkit-tap-highlight-color: transparent;
-      }
-      /* // [END webkit-specific] */
-
-      /* // [START ff-specific] */
-      /* Firefox Specific CSS to remove button differences and focus ring */
-      .btn {
-        background-image: none;
-      }
-
+      /* Firefox Specific CSS to remove focus ring */
       .btn::-moz-focus-inner {
         border: 0;
       }
-      /* // [END ff-specific] */
     </style>
   </head>
 
   <body>
-    <button class="btn" tabindex="1">Button 1</button>
+    <a class="btn" tabindex="1" href="#">None Selectable Text</a>
     
-    <button class="btn hover" tabindex="2">Button 2</button>
-    
-    <button class="btn active" tabindex="3">Button 3</button>
-    
-    <button class="btn focus" tabindex="4">Button 4</button>
-
-    <!-- // [TEMPLATE footer] -->
+    <a class="btn user-selectable" tabindex="2" href="tel:+44 (0) 123456789">+44 (0) 123456789</a>
   </body>
 </html>

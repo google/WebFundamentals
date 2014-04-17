@@ -225,8 +225,6 @@ TODO: Link to request AutoComplete
 
 ## Add images to site
 
-
-
 Sites without images can be a little boring.  There are two types of images:
 Content images and background images.  Content images are images that are inline
 in the document and are used to convey extra information about the content.
