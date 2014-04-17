@@ -169,7 +169,7 @@ listeners for touch and mouse events.
 The **addEventListener()** method takes an event name (In our case one of _MSPointerDown_, _touchstart_ or _mousedown_), a callback function to call when the event happens and a boolean which determines whether you should catch the event before or after other elements have had the opportunity to catch and interpret the 
 events (true means we want it before other elements).
 
-### Common Practices
+#### Common Practices
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.common-practices %}
 
@@ -195,7 +195,7 @@ If however you expect people to interact with multiple elements at the same time
 Let's look at the first interaction, expecting the user to only touch one 
 element.
 
-#### Single Element Interaction
+##### Single Element Interaction
 
 The steps to achieve this is are:
 
@@ -226,7 +226,7 @@ move event to the document allows us to overcome this.
 // TODO: Maybe add in video of DevTools with Scroll bottlenecks moving from 
 element to body
 
-#### Multiple Element Interaction
+##### Multiple Element Interaction
 
 If you expect your users to use multiple elements at once, you can 
 add the move and end events listeners directly to the elements
@@ -245,7 +245,7 @@ the mouse event listeners to the document, otherwise we carry on as normal.
 
 {% include_code _code/touch-demo-2.html handle-gestures javascript %}
 
-## How to Get the Touch Events Coordinates
+### How to Get the Touch Events Coordinates
 
 For any of the start and move events you can easily extract x and y
 from an event with the following code:
@@ -272,7 +272,7 @@ targetTouches will cater for most use cases.
 
 Once you have the coordinates, the question is how do you use them?
 
-## How to Use the Touch Events
+### How to Use the Touch Events
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.touch-events %}
 
