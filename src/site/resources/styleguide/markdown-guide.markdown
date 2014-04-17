@@ -66,7 +66,7 @@ Styles for Headings
 
 ### Link to sample
 
-  {{ "&#123;% link_sample _code/test.css %&#125;See sample&#123;% endlink_sample %&#125;" }}  
+  {{ "&#123;% link_sample _code/test.html %&#125;See sample&#123;% endlink_sample %&#125;" }}  
 
 {% link_sample _code/test.html %}See sample{% endlink_sample %}
 
