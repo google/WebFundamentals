@@ -468,7 +468,7 @@ body {
   color: #4d4d4d;
   position: relative;
 }
-/* line 153, ../_sass/_utils.scss */
+/* line 154, ../_sass/_utils.scss */
 body:after {
   content: "";
   position: absolute;
@@ -490,7 +490,7 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-/* line 174, ../_sass/_utils.scss */
+/* line 175, ../_sass/_utils.scss */
 body.debug:after {
   display: block;
   pointer-events: none;
@@ -1223,7 +1223,7 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
-/* line 60, ../_sass/_modules/_highlight.scss */
+/* line 64, ../_sass/_modules/_highlight.scss */
 .highlight-module {
   background-color: #e8e8e8;
   overflow: hidden;
@@ -1231,20 +1231,15 @@ body.debug:after {
   margin-bottom: 26px;
 }
 
-/* line 67, ../_sass/_modules/_highlight.scss */
-.highlight-module--learning {
-  background-color: #94d8e8;
-}
-
 /* line 71, ../_sass/_modules/_highlight.scss */
-.highlight-module--remember {
-  background-color: #f4b400;
+.highlight-module--learning {
+  background-color: #da2e75;
   color: white;
 }
 
 /* line 76, ../_sass/_modules/_highlight.scss */
-.highlight-module--related {
-  background-color: #33b679;
+.highlight-module--remember {
+  background-color: #09829a;
   color: white;
 }
 
@@ -1303,7 +1298,7 @@ body.debug:after {
     right: auto;
     left: 0;
   }
-  /* line 54, ../_sass/_modules/_highlight.scss */
+  /* line 58, ../_sass/_modules/_highlight.scss */
   .highlight-module--learning .highlight-module__container:before {
     bottom: 52px;
   }
@@ -1314,6 +1309,10 @@ body.debug:after {
     width: 22.2%;
     font-size: 400px;
     line-height: 400px;
+  }
+  /* line 44, ../_sass/_modules/_highlight.scss */
+  .highlight-module--large .highlight-module__container:before {
+    font-size: 650px;
   }
 }
 
@@ -1533,7 +1532,8 @@ body.debug:after {
 /* line 20, ../_sass/_modules/_related-items.scss */
 .list--links a {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
 /**

@@ -40,6 +40,10 @@
       width: $wideColWidth;
       font-size: $fontSize + 50;
       line-height: $fontSize + 50;
+
+      .highlight-module--large & {
+        font-size: $fontSize + 300;
+      }
     }
   }
 }
@@ -65,16 +69,12 @@
 }
 
 .highlight-module--learning {
-  background-color: $colorAqua;
-}
-
-.highlight-module--remember {
-  background-color: $colorMustard;
+  background-color: $colorPink;
   color: $colorWhite;
 }
 
-.highlight-module--related {
-  background-color: $colorEmeraud;
+.highlight-module--remember {
+  background-color: $colorAqua;
   color: $colorWhite;
 }
 
