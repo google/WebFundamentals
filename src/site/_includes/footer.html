@@ -27,14 +27,6 @@
     </div>
   </footer> <!-- End footer -->
 
-{% bundle %}
-- /js/jquery.js
-- /js/bootstrap.min.js
-- /js/prettify.js
-- /js/lang-dart.js
-- /js/lang-yaml.js
-- /js/scripts.js
-{% endbundle %}
 
 {% for js in page.js %}
 <script {% if js.defer %}defer{% endif %} src="{{ js.url }}"></script>

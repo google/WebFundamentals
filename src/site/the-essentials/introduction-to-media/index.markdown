@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: default
 title: "Introduction to media"
 description: "Images, Video and Audio make the web engaging and compelling.  Use our guides to get complete mastery and deliver amazing experiences to your users."
 article:
@@ -8,6 +8,8 @@ article:
   order: 2
 collection: the-essentials
 ---
+{% wrap content%}
+
 # {{ page.title }}
 
 Images, Video and Audio make the web engaging and compelling.  Use our guides to get complete mastery and deliver amazing experiences to your users.
@@ -19,3 +21,4 @@ Images, Video and Audio make the web engaging and compelling.  Use our guides to
 {% endclass %}
 {% endfor %}
 
+{% endwrap %}

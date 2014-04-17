@@ -3,7 +3,12 @@ module Jekyll
     include Liquid::StandardFilters
 
     # This is the base domain we will link to for samples.
-    sample_link_base = "https://google-developers.appspot.com/"
+    @@sample_link_base = "https://google-developers.appspot.com/"
+    @@comment_formats = { 
+      "html" => ["<!--", "-->"],
+      "css" => ["\\\/\\\*", "\\\*\\\/"],
+      "javascript" => ["\\\/\\\*", "\\\*\\\/"],
+    }
 
     def initialize(tag_name, markup, tokens)
       super
@@ -21,7 +26,8 @@ module Jekyll
         String filepath = File.join(File.dirname(page["path"]), @file)
         String file = File.join(path, filepath)
         contents = File.read(file)
-        snippet = contents.match(/<!-- \/\/ \[START #{@section}\] -->\n(.*)<!-- \/\/ \[END #{@section}\] -->/im)[1];
+        startc, endc = @@comment_formats[@lang]
+        snippet = contents.match(/#{startc} \/\/ \[START #{@section}\] #{endc}\n(.*)#{startc} \/\/ \[END #{@section}\] #{endc}/im)[1];
         render_codehighlighter(context, snippet, filepath)
     end
 
