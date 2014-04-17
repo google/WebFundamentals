@@ -338,7 +338,9 @@ we reduce the size of this page?
 * Whitespace (spaces and tabs) is a developer convenience in HTML, CSS, and 
   JavaScript. An additional compressor could strip out all the tabs and spaces.
 
-    <html><head><style>.awesome-container{font-size:120%;width: 50%}</style></head><body><div>…</div><script>awesomeAnalytics();</script></body></html>
+  
+`<html><head><style>.awesome-container{font-size:120%;width: 50%}</style></head><body><div>…</div><script>awesomeAnalytics();</script></body></html>`
+  
 
 After applying the above steps our page goes from 406 to 150 characters - 63% 
 compression savings! Granted, it's not very readable, but it also doesn't have 
