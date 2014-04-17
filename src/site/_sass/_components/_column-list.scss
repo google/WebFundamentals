@@ -36,6 +36,7 @@
 
 // Override default list bullet points
 .columns-list-item {
+  padding-left: 0;
   &:before {
     display: none;
   }

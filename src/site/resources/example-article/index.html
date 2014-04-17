@@ -52,7 +52,11 @@ collection: resources
   </div>
 </div>
 
-{% include modules/highlight.liquid character="*" position="left" title="Key Learnings" list=page.learning-list priority="large" type="learning" %}
+<div class="content">
+  <div class="container">
+    {% include modules/highlight.liquid character="*" position="left" title="Key Learnings" list=page.learning-list priority="large" type="learning" %}
+  </div>
+</div>
 
 <div class="content">
   <div class="container">
@@ -68,7 +72,11 @@ collection: resources
   </div>
 </div>
 
-{% include modules/highlight.liquid character="{" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+<div class="content">
+  <div class="container">
+    {% include modules/highlight.liquid character="{" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+  </div>
+</div>
 
 <div class="content">
   <div class="container">
@@ -78,7 +86,11 @@ collection: resources
   </div>
 </div>
 
-{% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusantium, quo, corporis nemo possimus iste impedit numquam reiciendis eaque similique perspiciatis nam illo error consequuntur beatae fuga blanditiis asperiores iusto?" type="remember" %}
+<div class="content">
+  <div class="container">
+    {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusantium, quo, corporis nemo possimus iste impedit numquam reiciendis eaque similique perspiciatis nam illo error consequuntur beatae fuga blanditiis asperiores iusto?" type="remember" %}
+  </div>
+</div>
 
 <div class="content">
   <div class="container">
@@ -89,7 +101,7 @@ collection: resources
 <div class="related-items">
   <div class="container">
     <div class="g-wide--push-1 g-medium--push-1">
-      <h3 class="related-items--title">Related items</h3>
+      <h2 class="related-items--title">Related items</h2>
       <ul class="list--links">
         <li class="list__item"><a href="#">Modern developer workflow</a></li>
         <li class="list__item"><a href="#">Creating forms</a></li>
