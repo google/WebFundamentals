@@ -656,7 +656,7 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 
 
-## Simplify checkout with requestAutocomplete
+## Simplify checkout with `requestAutocomplete`
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.use-request-auto-complete %}
 
@@ -672,7 +672,7 @@ Rather than the site relying on a particular payment provider,
 card information) from the browser, which are optionally stored by the browser
 much like other auto-complete fields.
 
-### requestAutocomplete flow
+### `requestAutocomplete` flow
 
 The ideal experience will show the `requestAutocomplete` dialog instead of loading the
 page that displays the checkout form. If all goes well, the user shouldn't see
@@ -684,14 +684,22 @@ the rest.
 
 <img src="imgs/rac_flow.png"  />
 
+{% include_code _code/rac.html rac javascript %}
+
 The `requestAutocomplete` function on the `form` element indicates to the
 browser that it should populate the form.  As a security feature, the function
 must be called via a user gesture like a touch or mouse click. A dialog is then
 displayed asking the user permission to populate the fields and which details
 they want to populate it with.
 
-{% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
+{% include_code _code/rac.html handlerac javascript %}
 
-<!-- TODO: petele work to complete here -->
+Upon completion of `requestAutocomplete`, the function will either fire the
+`autocomplete` event if it finished successfully, or `autocompleteerror` if
+it was unable to complete the form.  If it completed successfully and the form
+validates to your needs, simply submit the form and proceed to the final 
+confirmation.
+
+{% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
 
 {% endwrap %}
