@@ -11,21 +11,24 @@ module SampleBuilder
 		# TODO(ianbarber): Avoid having 3 identical functions maybe.
 		def self.header(site) 
 			if @@header.nil?
-				@@header = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
+				content = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
+				@@header = Liquid::Template.parse(content).render({"site" => site})
 			end
 			@@header
 		end
 
 		def self.header_full(site) 
 			if @@header_full.nil?
-				@@header_full = File.read(File.join(site.source, "_includes/sample_header_full.html"))
+				content = File.read(File.join(site.source, "_includes/sample_header_full.html"))
+				@@header_full = Liquid::Template.parse(content).render({"site" => site})
 			end
 			@@header_full
 		end
 
 		def self.footer(site) 
 			if @@footer.nil?
-				@@footer = File.read(File.join(site.source, "_includes/sample_footer.html"))
+				content = File.read(File.join(site.source, "_includes/sample_footer.html"))
+				@@footer = Liquid::Template.parse(content).render({"site" => site})
 			end
 			@@footer
 		end
