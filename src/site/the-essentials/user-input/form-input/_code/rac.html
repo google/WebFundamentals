@@ -28,7 +28,7 @@
         <p id="racMessage"></p>
         <button id="doRAC" type="button">Check Out with requestAutocomplete</button>
       </div>
-      <form method="post" action="/confirm" id="usrForm" class="hidden">
+      <form method="post" id="usrForm" class="hidden">
         <fieldset>
           <legend>Contact Info</legend>
           <label for="frmNameA">Name</label>
@@ -134,6 +134,7 @@
         racSubject = document.getElementById("racSubject");
         racMessage = document.getElementById("racMessage");
         
+        /* // [START rac] */
         var doRAC = document.getElementById("doRAC");
         doRAC.addEventListener("click", doRequestAutocomplete);
 
@@ -141,12 +142,12 @@
         form.addEventListener("autocompleteerror", requestAutocompleteError);
         form.addEventListener("autocomplete", requestAutocompleteCompleted);
  
-        //updateUI(form.requestAutocomplete);
         if (form.requestAutocomplete) {
           isRACSupported(true, "");
         } else {
           isRACSupported(false, "Please complete the form manually.");
         }
+        /* // [END rac] */
       }
 
       function isRACSupported(supported, message) {
@@ -162,47 +163,24 @@
         racMessage.innerText = message;
       }
 
-      /*
-      function updateUI(mode) {
-        console.log("updateUI", mode, mode==true)
-        
-        if (mode === undefined) {
-          racSubject.innerText = "Sorry, requestAutocomplete isn't supported.";
-          racMessage.innerText = "Please complete the form manually.";
-          form.classList.toggle("hidden", false);
-        } else if (mode === "error") {
-          racSubject.innerText = "Sorry, an error occured.";
-          racMessage.innerText = "Please complete the form manually.";
-          doRAC.classList.toggle("hidden", true);
-          form.classList.toggle("hidden", false);
-        } else if (mode === "completed") {
-          racSubject.innerText = "requestAutocomplete Completed!";
-          racMessage.innerText = "The form has been completed by requestAutoComplete.";
-          doRAC.classList.toggle("hidden", true);
-          form.classList.toggle("hidden", false);
-        } else if (mode == true) {
-          racSubject.innerText = "requestAutocomplete is Supported";
-          racMessage.innerText = "Click the button below to complete the form.";
-          doRAC.classList.toggle("hidden", false);
-          form.classList.toggle("hidden", true);
-        }
-      }
-      */
+
 
       function doRequestAutocomplete(evt) {
         console.log("doRequestAutocomplete", evt);
         form.requestAutocomplete();
       }
 
-      function requestAutocompleteError(evt) {
-        console.log("requestAutocomplete Error", evt);
-        isRACSupported(false, "An error occured attempting to autocomplete the form.");
-      }
-
+      /* // [START handlerac] */
       function requestAutocompleteCompleted(evt) {
         console.log("requestAutocomplete Completed", evt);
         form.classList.toggle("hidden", false);
       }
+
+      function requestAutocompleteError(evt) {
+        console.log("requestAutocomplete Error", evt);
+        isRACSupported(false, "An error occured attempting to autocomplete the form.");
+      }
+      /* // [END handlerac] */
 
       initForm();
 
