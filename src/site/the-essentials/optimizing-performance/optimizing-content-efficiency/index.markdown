@@ -314,7 +314,7 @@ its actual meaning.
      
      <body>
        <!-- awesome container content: START -->
-         <div>…</div>
+        <div>…</div>
        <!-- awesome container content: END -->
        <script>
          awesomeAnalytics(); // beacon conversion metrics

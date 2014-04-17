@@ -602,11 +602,11 @@ not block the DOM construction while it waits for the script to become available
 Alternatively, you will also often see the following pattern for inserting an 
 "async script":
 
-  <script>
-    var script = document.createElement('script');
-    script.src = "...";
-    document.getElementsByTagName('head')[0].appendChild(script);
-  </script>
+    <script>
+      var script = document.createElement('script');
+      script.src = "...";
+      document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
 
 This one is a bit tricky. First, obviously the snippet itself is an inline 
 script, and we know that it will block DOM construction while it is being 
