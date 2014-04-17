@@ -1,4 +1,20 @@
 module Jekyll
+  class LinkSampleBlock < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+      @file = markup
+    end
+
+    def render(context)
+        page = context.environments.first["page"]
+        path = context.registers[:site].source;
+        String filepath = File.join(File.dirname(page["path"]), @file).sub("/_code", "")
+        url = File.join(context.registers[:site].baseurl, "/resources/samples", filepath).strip
+        out = super(context)
+        "<a href=\"#{url}\">#{out}</a>"
+    end
+  end
+
   class IncludeCodeTag < Liquid::Tag
     include Liquid::StandardFilters
 
@@ -98,3 +114,4 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('include_code', Jekyll::IncludeCodeTag)
+Liquid::Template.register_tag('link_sample', Jekyll::LinkSampleBlock)
