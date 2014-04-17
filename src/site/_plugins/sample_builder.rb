@@ -77,7 +77,6 @@ module SampleBuilder
 			file = File.new(dest_path.sub('.html', '.jshtml'), "w")
 			file.write(@contents)
 			file.close
-			#Jekyll.logger.info dest_path
   			true
   		end
   	end
@@ -145,7 +144,7 @@ module SampleBuilder
 							site.source, 
 							File.dirname(File.join(codepath, relative_path)),
 							File.basename(sourcepath), 
-							File.dirname(File.join(dirPaths[dir], relative_path)))
+							File.dirname(File.join(gen_dir, dirPaths[dir], relative_path)))
 					end
 				end
 			end
