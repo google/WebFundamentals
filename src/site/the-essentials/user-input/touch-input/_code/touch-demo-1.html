@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- // [TEMPLATE header_full] -->
 
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no"/>
 
     <title>Web Essential: Touch Example 1</title>
     
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
     <style>
       html, body {
         width: 100%;
@@ -175,7 +172,7 @@
         }
 
         /* // [START handle-start-gesture] */
-        // Handle the start gestures
+        // Handle the start of gestures
         this.handleGestureStart = function(evt) {
           evt.preventDefault();
 
@@ -247,11 +244,11 @@
             document.removeEventListener('mouseup', this.handleGestureEnd, true);
           }
           
-          updateState();
+          updateSwipeRestPosition();
         }.bind(this);
         /* // [END handle-end-gesture] */
         
-        function updateState() {
+        function updateSwipeRestPosition() {
           var differenceInX = initialTouchPos.x - lastTouchPos.x;
           currentXPosition = currentXPosition - differenceInX;
         
@@ -367,5 +364,6 @@
         }
       };
     </script>
+    <!-- // [TEMPLATE footer] -->
   </body>
 </html>
