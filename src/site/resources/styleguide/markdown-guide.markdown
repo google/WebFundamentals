@@ -46,21 +46,21 @@ Styles for Headings
 
 ### Include Javascript
 
-  {{ "{% include_code _code/test.js testjs javascript " }} %}
+  {{ "&#123;% include_code _code/test.js testjs javascript %&#125;" }} 
 
 {% include_code _code/test.js somejs javascript %}
 
 
 ### Include HTML
 
-  {{ "{% include_code _code/test.html testhtml html " }} %}
+  {{ "&#123;% include_code _code/test.html testhtml html %&#125;" }}
 
 {% include_code _code/test.html somehtml html %}
 
 
 ### Include CSS
 
-  {{ "{% include_code _code/test.css testcss css " }} %}
+  {{ "&#123;% include_code _code/test.css testcss css %&#125;" }}
 
 {% include_code _code/test.css somecss css %}
 
