@@ -4,6 +4,8 @@ title: Home
 class: home
 ---
 
+{% wrap content%}
+
 # Search Results
 
 <script>
@@ -20,3 +22,5 @@ class: home
  </script>
 
 <gcse:search enableHistory="true" autoCompleteMaxCompletions="5" autoCompleteMatchType="any"></gcse:search>
+
+{% endwrap %}
