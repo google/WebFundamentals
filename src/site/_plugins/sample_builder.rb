@@ -12,7 +12,7 @@ module SampleBuilder
 		def self.header(site) 
 			if @@header.nil?
 				content = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
-				@@header = Liquid::Template.parse(content).render({"site" => site})
+				@@header = Liquid::Template.parse(content).render({"baseurl" => site.baseurl})
 			end
 			@@header
 		end
@@ -20,7 +20,7 @@ module SampleBuilder
 		def self.header_full(site) 
 			if @@header_full.nil?
 				content = File.read(File.join(site.source, "_includes/sample_header_full.html"))
-				@@header_full = Liquid::Template.parse(content).render({"site" => site})
+				@@header_full = Liquid::Template.parse(content).render({"baseurl" => site.baseurl})
 			end
 			@@header_full
 		end
@@ -28,7 +28,7 @@ module SampleBuilder
 		def self.footer(site) 
 			if @@footer.nil?
 				content = File.read(File.join(site.source, "_includes/sample_footer.html"))
-				@@footer = Liquid::Template.parse(content).render({"site" => site})
+				@@footer = Liquid::Template.parse(content).render({"baseurl" => site.baseurl})
 			end
 			@@footer
 		end
