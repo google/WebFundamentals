@@ -11,7 +11,7 @@
 **/
 
 a {
-  color: $colorRed;
+  color: $colorBlue;
   text-decoration: none;
 }
 
@@ -39,9 +39,9 @@ a:hover {
 }
 
 .cta--primary {
-  @include style-cta(#cb4437, true);
+  @include style-cta($colorBlue, true);
 }
 
 .cta--secondary {
-  @include style-cta(#cb4437, false);
+  @include style-cta($colorBlue, false);
 }

@@ -10,13 +10,16 @@
 *
 **/
 
-.clear:before,
-.clear:after {
-  content:"";
-  display:table;
-}
-.clear:after {
-  clear:both;
+
+.clear {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
 }
 
 

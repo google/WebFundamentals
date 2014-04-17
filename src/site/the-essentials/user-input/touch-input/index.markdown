@@ -14,12 +14,17 @@ key-takeaways:
 collection: user-input
 ---
 
+{% wrap content%}
+
+* Table of Contents
+{:toc}
+
 # Touch Input
 
-Have you ever touched or clicked an element on a web page and questioned whether 
+Have you ever touched or clicked an element on a web page and questioned whether
 the site actually detected you?
 
-In addition to helping people know that there action has been acknowledged, 
+In addition to helping people know that there action has been acknowledged,
 giving touch feedback gives your site a snappy and responsive feel to it.
 
 ## Adding States
@@ -28,16 +33,16 @@ giving touch feedback gives your site a snappy and responsive feel to it.
 Demo: http://jsbin.com/siramabo/latest/edit
 -->
 
-{% include modules/highlight.liquid title="Key Takeaway" type="learning" list=page.key-takeaways.add-states %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-states %}
 
-The fastest way to support touch in your UI is to simply support the 
+The fastest way to support touch in your UI is to simply support the
 various states your elements can be in, giving a response to the users interactions.
 
 The states to handle are:
 
 * Focus
-    * If you interact with a webpage using a keyboard by hitting the tab 
-      key, you'll see some indication of which items you 
+    * If you interact with a webpage using a keyboard by hitting the tab
+      key, you'll see some indication of which items you
       are focusing on
 
       // TODO Insert Image Of Button Focus
@@ -49,15 +54,15 @@ The states to handle are:
       // Insert Pressed Button State
 
 * Hover
-    * This applies to scenarios where you have some form of cursor placed over 
-      an element. This is helpful to encourage users to interact 
+    * This applies to scenarios where you have some form of cursor placed over
+      an element. This is helpful to encourage users to interact
       with elements.
 
 <!--
 Demo: http://jsbin.com/kugenoza/1/edit
 -->
 
-To change our UI for an element we need to apply styles to the following 
+To change our UI for an element we need to apply styles to the following
 pseudo classes :hover, :focus and :active as shown below.
 
 {% include_code _code/states-example.html btnstates css %}
@@ -66,43 +71,43 @@ pseudo classes :hover, :focus and :active as shown below.
 
 <!-- [Image from: http://jsbin.com/siramabo/26/edit]-->
 
-Without the outline rule, most user agents will display a colored edge to your 
+Without the outline rule, most user agents will display a colored edge to your
 focusable elements.
 
 ## Cross Browser Tips
 
-Since a number of sites didn't include the active state when the devices where 
-first released, the browsers including user-agent styles which added color or 
-set of styles to elements the user would interact with which you may notice on 
+Since a number of sites didn't include the active state when the devices where
+first released, the browsers including user-agent styles which added color or
+set of styles to elements the user would interact with which you may notice on
 some of your devices.
 
-Safari and Chrome browsers add a tap highlight color which can be prevented 
+Safari and Chrome browsers add a tap highlight color which can be prevented
 with:
 
 {% include_code _code/states-example.html webkit-specific css %}
 
-Windows Phone has the same behaviour, but you need to surpress it via a meta 
+Windows Phone has the same behaviour, but you need to surpress it via a meta
 tag:
 
 {% include_code _code/states-example.html ms-specific html %}
 
 
-For Firefox OS you need to remove a gradient added by their default styles and 
-if you are setting a focus style, you may wish to remove the black border which 
+For Firefox OS you need to remove a gradient added by their default styles and
+if you are setting a focus style, you may wish to remove the black border which
 can appear around text:
 
 {% include_code _code/states-example.html ff-specific css %}
 
 ## User Select
 
-If you have elements which the user is interacting with you might want to 
+If you have elements which the user is interacting with you might want to
 prevent the user for accidentally selecting the text.
 
 {% include_code _code/user-select-example.html user-select css %}
 
-You should be cautious not to disable user selection if there are scenarios 
-where the user might want to copy the text. An example would be a button to 
-display a phone, if the user clicks on it, you could open the devices dialer, 
+You should be cautious not to disable user selection if there are scenarios
+where the user might want to copy the text. An example would be a button to
+display a phone, if the user clicks on it, you could open the devices dialer,
 but the user may wish to copy and paste to a different app.
 
 
@@ -110,7 +115,7 @@ but the user may wish to copy and paste to a different app.
 # Touch events
 <!-- Demo: http://jsbin.com/sozujute/latest/edit -->
 
-If you have an idea for a new interaction pattern that you'd like to include 
+If you have an idea for a new interaction pattern that you'd like to include
 touch support, how do you do it?
 
 ## Receiving Touch Events
@@ -139,7 +144,7 @@ The building blocks for adding touch to your application is these events:
 You hook these events up through the **addEventListener()** method of a DOM element
  like so.
 
-{% include_code _code/touch-demo-1.html addlisteners js %}
+{% include_code _code/touch-demo-1.html addlisteners javascript %}
 
 This code first checks if we should use Pointer Events or you touch and mouse events.
 We then add the event listener with the appropriate name, the callback we want called,
@@ -184,11 +189,11 @@ The reason to follow this approach is it's the most performant approach.
 
 In our example, handleGestureStart adds our events to the document:
 
-{% include_code _code/touch-demo-1.html handle-start-gesture js %}
+{% include_code _code/touch-demo-1.html handle-start-gesture javascript %}
 
 and handleGestureEnd removes them:
 
-{% include_code _code/touch-demo-1.html handle-end-gesture js %}
+{% include_code _code/touch-demo-1.html handle-end-gesture javascript %}
 
 You'll notice the mouse events are being applied in this fashion as well,
 the reason is that it's easy for a user to quickly move the mouse outside of
@@ -205,7 +210,7 @@ you should continue to apply them to documents.
 
 ## Using Touch Events
 
-In your `handleGestureMove` and `handleGestureEnd` methods you can find out 
+In your `handleGestureMove` and `handleGestureEnd` methods you can find out
 where the touch and mouse events with:
 
     function handleGestureMove(evt) {
@@ -220,9 +225,9 @@ where the touch and mouse events with:
         }
     }
 
-Since the event callbacks are fired on the main thread, we want to run as little 
-code as possible in the callback. Apart from pulling out what we need from the 
-event, the only other thing we should do is start a requestAnimationFrame to 
+Since the event callbacks are fired on the main thread, we want to run as little
+code as possible in the callback. Apart from pulling out what we need from the
+event, the only other thing we should do is start a requestAnimationFrame to
 then do something with these x and y values.
 
     window.requestAnimFrame = (function(){
@@ -242,15 +247,15 @@ then do something with these x and y values.
 
       function handleTouchMove(evt) {
         evt.preventDefault();
-        
+
         lastTouchPos = getGesturePointFromEvent(evt);
-        
+
         if(isAnimating) {
           return;
         }
-        
+
         isAnimating = true;
-        
+
         window.requestAnimFrame(onAnimFrame);
       }
 
@@ -258,112 +263,112 @@ then do something with these x and y values.
         if(!isAnimating) {
           return;
         }
-        
+
         var differenceInX = initialTouchPos.x - lastTouchPos.x;
-        
+
         var newXTransform = (currentXPosition - differenceInX)+'px';
         var transformStyle = 'translateX('+newXTransform+')';
         swipeFront.style['-webkit-transform'] = transformStyle;
         swipeFront.style['-moz-transform'] = transformStyle;
         swipeFront.style.transform = transformStyle;
-        
+
         isAnimating = false;
       }
 
-What this does is store the current touch in **lastTouchPost** and then we call 
-the  **requestAnimFrame** method with the callback **onAnimFrame**. In 
-**onAnimFrame** we can calculate where the DOM element should be  and apply a 
+What this does is store the current touch in **lastTouchPost** and then we call
+the  **requestAnimFrame** method with the callback **onAnimFrame**. In
+**onAnimFrame** we can calculate where the DOM element should be  and apply a
 transform style.
 
 ## Multi-Touch
  Demo: http://jsbin.com/gayuqege/quiet
 
-There are a few scenarios where you may care about more than one finger on a 
+There are a few scenarios where you may care about more than one finger on a
 screen:
 
 1. The page has multiple touch-enabled elements the user can interact with.
-1. You want to implement a multi-touch gesture like multi-finger swipe to 
+1. You want to implement a multi-touch gesture like multi-finger swipe to
    perform a certain actions.
 
-By binding the touch events to the element, you can use event.**targetTouches** 
+By binding the touch events to the element, you can use event.**targetTouches**
 to get the details for the touch event specific to that element.
 
-In the scenario where the user has two fingers on the screen, one on each 
+In the scenario where the user has two fingers on the screen, one on each
 slider, in your handleGestureMove method, you'll have the following:
 
-event**.touches**  
+event**.touches**
 Length: 2
 
-Touch 0 (clientX, clientY): (264,213)  
+Touch 0 (clientX, clientY): (264,213)
 Touch 1 (clientX, clientY): (110,117)
 
-event**.targetTouches**  
+event**.targetTouches**
 Length: 1
 
 Touch 1 (clientX, clientY): (110,117)
 
-The event contains all of the touches currently on the screen in event.touches, 
-but if we only care about touches on a specific element, we can use 
+The event contains all of the touches currently on the screen in event.touches,
+but if we only care about touches on a specific element, we can use
 targetTouches.
 
 var **sliderElement** = document.querySelector('.v-slider');
 
-// Add Touch Listeners  
-**sliderElement**.addEventListener('touchstart', handleGestureStart.bind(this), 
-true);  
-**sliderElement**.addEventListener('touchmove', handlers.touchmove, true);  
-**sliderElement**.addEventListener('touchend', handlers.touchfinish, true);  
+// Add Touch Listeners
+**sliderElement**.addEventListener('touchstart', handleGestureStart.bind(this),
+true);
+**sliderElement**.addEventListener('touchmove', handlers.touchmove, true);
+**sliderElement**.addEventListener('touchend', handlers.touchfinish, true);
 **sliderElement**.addEventListener('touchcancel', handlers.touchfinish, true);
 
-function handleGestureMove(evt) {  
-  evt.preventDefault();  
-    
-  // Let's assume this is a mouse event first  
+function handleGestureMove(evt) {
+  evt.preventDefault();
+
+  // Let's assume this is a mouse event first
   var y = evt.screenY;
 
-  // Prefer touch events if we have them.  
-  if (evt.**targetTouches** && evt.**targetTouches**.length > 0) {  
-    y = evt.**targetTouches**[0].clientY;  
-  }  
-    
-  lastYPos = y;  
-    
-    if(isAnimating) {  
-      return;  
-    }  
-      
-    isAnimating = true;  
-      
-    window.requestAnimFrame(onAnimFrame);  
+  // Prefer touch events if we have them.
+  if (evt.**targetTouches** && evt.**targetTouches**.length > 0) {
+    y = evt.**targetTouches**[0].clientY;
+  }
+
+  lastYPos = y;
+
+    if(isAnimating) {
+      return;
+    }
+
+    isAnimating = true;
+
+    window.requestAnimFrame(onAnimFrame);
 }
 
 ## Pointer Events
  Demo: <See Previous Sections???>
 
-Windows Phone does not support touch events, but uses Pointer Events to handle 
-any interaction on the screen (i.e. mouse and touch are treated as the same 
+Windows Phone does not support touch events, but uses Pointer Events to handle
+any interaction on the screen (i.e. mouse and touch are treated as the same
 point events).
 
-To start with, we need to tell the browser whether we are handling the touch 
+To start with, we need to tell the browser whether we are handling the touch
 interaction or not:
 
-  // Pass all touches to javascript  
-  touch-action: none;  
+  // Pass all touches to javascript
+  touch-action: none;
   -ms-touch-action: none;
 
 Next is to determine whether we are going to use pointer events or touch events:
 
-if (window.navigator.msPointerEnabled) {  
-    // Use Pointer Events  
-    …..  
-  } else {  
-    // Add Touch Listener  
-    …..  
-    // Add Mouse Listener  
-    ….  
+if (window.navigator.msPointerEnabled) {
+    // Use Pointer Events
+    …..
+  } else {
+    // Add Touch Listener
+    …..
+    // Add Mouse Listener
+    ….
   }
 
-From this we start to follow the same behaviour as before but using different 
+From this we start to follow the same behaviour as before but using different
 pointer names:
 
 <!-- TODO: Fix formatting of cells -->
@@ -386,53 +391,55 @@ pointer names:
 </tr>
 </table>
 
-Note that the mouse event and touch events are merged into a single pointer 
-event, this is one of the goals of Pointer Events, to make it easier to support 
+Note that the mouse event and touch events are merged into a single pointer
+event, this is one of the goals of Pointer Events, to make it easier to support
 input devices without have to worry about what the input is.
 
 This can be matched up to original logic for your touch logic:
 
-if (window.navigator.msPointerEnabled) {  
-    // Pointer events are supported.  
-    element.addEventListener('MSPointerDown', handleGestureStart, true);  
-  } else {  
-    // Add Touch Listener  
-    element.addEventListener('touchstart', handleGestureStart, true);  
-      
-    // Add Mouse Listener  
-    element.addEventListener('mousedown', handleGestureStart, true);  
+if (window.navigator.msPointerEnabled) {
+    // Pointer events are supported.
+    element.addEventListener('MSPointerDown', handleGestureStart, true);
+  } else {
+    // Add Touch Listener
+    element.addEventListener('touchstart', handleGestureStart, true);
+
+    // Add Mouse Listener
+    element.addEventListener('mousedown', handleGestureStart, true);
   }
 
-Then the final piece to change is extracting the x and y values from the touch 
-event. Pointer Events will have the properties clientX and clientY, which are 
+Then the final piece to change is extracting the x and y values from the touch
+event. Pointer Events will have the properties clientX and clientY, which are
 equivalent to targetTouches[0].clientX and targetTouches[1].clientY.
 
-// Let's assume this is a mouse event first  
+// Let's assume this is a mouse event first
   var y = evt.screenY;
 
-  // Prefer touch events if we have them.  
-  if (window.navigator.msPointerEnabled) {  
-    y = evt.clientY;  
-  } else if (evt.targetTouches && evt.targetTouches.length > 0) {  
-    y = evt.targetTouches[0].clientY;  
+  // Prefer touch events if we have them.
+  if (window.navigator.msPointerEnabled) {
+    y = evt.clientY;
+  } else if (evt.targetTouches && evt.targetTouches.length > 0) {
+    y = evt.targetTouches[0].clientY;
   }
 
 This means Pointer Events are up and running with touch events.
 
 **Touch-Action**
 
-Touch-action allows you to determine the behaviour an element has without 
+Touch-action allows you to determine the behaviour an element has without
 needing to implement touch events.
 
-An example is a long scrolling page designed to fit on mobile, but has an image 
-expanding off the screen, this would normally mean the user can scroll 
-horizontally off screen, to guard against this, you can use touch-action: pan-y 
+An example is a long scrolling page designed to fit on mobile, but has an image
+expanding off the screen, this would normally mean the user can scroll
+horizontally off screen, to guard against this, you can use touch-action: pan-y
 as a last resort to prevent this.
 
 See: http://jsbin.com/cekibuzo/1/edit
 
-pan-x means you ca scroll vertically, auto allows the browser to determine the 
-behaviour and finally touch-action none means the browser will no intercept the 
+pan-x means you ca scroll vertically, auto allows the browser to determine the
+behaviour and finally touch-action none means the browser will no intercept the
 touches, allowing you to consume all the events in javascript.
 
 auto | none | [pan-x || pan-y]
+
+{% endwrap %}
