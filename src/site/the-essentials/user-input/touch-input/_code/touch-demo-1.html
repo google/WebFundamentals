@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <title>Web Essential: Touch Example 1</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        
+        background-color: #e74c3c;
+        
+        font-family: 'Roboto', sans-serif;
+        color: #ecf0f1;
+      }
+
+      .content {
+        padding: 32px;
+        box-sizing: border-box;
+        
+        overflow: hidden;
+      }
+
+      .swipe-element {
+        position: relative;
+        
+        width: 100%;
+        height: 60px;
+      }
+
+      .swipe-front {
+        position: absolute;
+        
+        width: 100%;
+        height: 60px;
+        
+        left: 0;
+        top: 0;
+        
+        margin: 0;
+        padding: 8px;
+        box-sizing: border-box;
+        
+        text-align: center;
+        
+        color: #e74c3c;
+        line-height: 44px;
+        vertical-align: center;
+        
+        background-color: #fefefe;
+        
+        z-index: 2;
+        
+        // Pass all touches to javascript
+        touch-action: none;
+        -ms-touch-action: none;
+      }
+
+      .swipe-back {
+        position: absolute;
+        display: flex;
+        display: -ms-flexbox;
+        
+        width: 100%;
+        height: 60px;
+        
+        left: 0;
+        top: 0;
+        
+        flex-direction: row;
+        -ms-flex-direction: row;
+        
+        justify-content: space-around;
+        -ms-flex-pack: justify;
+        
+        align-items: center;
+        -ms-flex-align: center;
+        
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+      .swipe-back button {
+        display: inline-block;
+        
+        width: 40px;
+        height: 40px;
+        
+        background-color: #fefefe;
+        
+        border-radius: 100%;
+        border-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="content">
+      <div class="swipe-element">
+        <div class="swipe-back">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <p class="swipe-front">Title Element</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="swipe-element">
+        <div class="swipe-back">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <p class="swipe-front">Title Element</p>
+      </div>
+    </section>
+
+    <script>
+      // Shim for requestAnimationFrame from Paul Irishpaul ir
+      // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/ 
+      window.requestAnimFrame = (function(){
+        return  window.requestAnimationFrame       ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame    ||
+                function( callback ){
+                  window.setTimeout(callback, 1000 / 60);
+                };
+      })();
+
+      function SwipeRevealItem(element) {
+        // Gloabl state variables
+        var STATE_DEFAULT = 1;
+        var STATE_LEFT_SIDE = 2;
+        var STATE_RIGHT_SIDE = 3;
+        
+        var swipeFront = element.querySelector('.swipe-front');
+        var swipeBack = element.querySelector('.swipe-back');
+        var isAnimating = false;
+        var initialTouchPos = null;
+        var lastTouchPos = null;
+        var currentXPosition = 0;
+        var currentState = STATE_DEFAULT;
+        var handleSize = 10;
+        
+        // Perform client width here as this can be expensive and doens't 
+        // change until window.onresize
+        var itemWidth = swipeFront.clientWidth;
+        var slopValue = itemWidth * (1/4);
+
+        // On resize, change the slop value
+        this.resize = function() {
+          itemWidth = swipeFront.clientWidth;
+          slopValue = itemWidth * (1/4);
+        }
+
+        /* // [START handle-start-gesture] */
+        // Handle the start gestures
+        this.handleGestureStart = function(evt) {
+          evt.preventDefault();
+
+          if(evt.touches && evt.touches.length > 1) {
+            return;
+          }
+
+          // Add the move and end listeners
+          if (window.navigator.msPointerEnabled) {
+            // Pointer events are supported.
+            document.addEventListener('MSPointerMove', this.handleGestureMove, true);
+            document.addEventListener('MSPointerUp', this.handleGestureEnd, true);
+          } else {
+            // Add Touch Listeners
+            document.addEventListener('touchmove', this.handleGestureMove, true);
+            document.addEventListener('touchend', this.handleGestureEnd, true);
+            document.addEventListener('touchcancel', this.handleGestureEnd, true);
+          
+            // Add Mouse Listeners
+            document.addEventListener('mousemove', this.handleGestureMove, true);
+            document.addEventListener('mouseup', this.handleGestureEnd, true);
+          }
+          
+          initialTouchPos = getGesturePointFromEvent(evt);
+          
+          swipeFront.style.transition = 'none';
+        }.bind(this);
+        /* // [END handle-start-gesture] */
+
+        // Handle move gestures
+        this.handleGestureMove = function (evt) {
+          evt.preventDefault();
+
+          lastTouchPos = getGesturePointFromEvent(evt);
+          
+          if(isAnimating) {
+            return;
+          }
+          
+          isAnimating = true;
+          
+          window.requestAnimFrame(onAnimFrame);
+        }.bind(this);
+
+        /* // [START handle-end-gesture] */
+        // Handle end gestures
+        this.handleGestureEnd = function(evt) {
+          evt.preventDefault();
+
+          if(evt.touches && evt.touches.length > 0) {
+            return;
+          }
+
+          isAnimating = false;
+          
+          // Remove Event Listeners
+          if (window.navigator.msPointerEnabled) {
+            // Remove Pointer Event Listeners
+            document.removeEventListener('MSPointerMove', this.handleGestureMove, true);
+            document.removeEventListener('MSPointerUp', this.handleGestureEnd, true);
+          } else {
+            // Remove Touch Listeners
+            document.removeEventListener('touchmove', this.handleGestureMove, true);
+            document.removeEventListener('touchend', this.handleGestureEnd, true);
+            document.removeEventListener('touchcancel', this.handleGestureEnd, true);
+          
+            // Remove Mouse Listeners
+            document.removeEventListener('mousemove', this.handleGestureMove, true);
+            document.removeEventListener('mouseup', this.handleGestureEnd, true);
+          }
+          
+          updateState();
+        }.bind(this);
+        /* // [END handle-end-gesture] */
+        
+        function updateState() {
+          var differenceInX = initialTouchPos.x - lastTouchPos.x;
+          currentXPosition = currentXPosition - differenceInX;
+        
+          // Go to the default state and change
+          var newState = STATE_DEFAULT;
+
+          // Check if we need to change state to left or right based on slop value
+          if(Math.abs(differenceInX) > slopValue) {
+            if(currentState == STATE_DEFAULT) {
+              if(differenceInX > 0) {
+                newState = STATE_LEFT_SIDE;
+              } else {
+                newState = STATE_RIGHT_SIDE;
+              }
+            } else {
+              if(currentState == STATE_LEFT_SIDE && differenceInX > 0) {
+                newState = STATE_DEFAULT;
+              } else if(currentState == STATE_RIGHT_SIDE && differenceInX < 0) {
+                newState = STATE_DEFAULT;
+              }
+            }
+          } else {
+            newState = currentState;
+          }
+          
+          changeState(newState);
+          
+          swipeFront.style.transition = 'all 150ms ease-out';
+        }
+
+        function changeState(newState) {
+          var transformStyle;
+          switch(newState) {
+            case STATE_DEFAULT:
+              currentXPosition = 0;
+              break;
+            case STATE_LEFT_SIDE:
+              currentXPosition = -(itemWidth - handleSize);
+              break;
+            case STATE_RIGHT_SIDE:
+              currentXPosition = itemWidth - handleSize;
+              break;
+          }
+          
+          transformStyle = 'translateX('+currentXPosition+'px)';
+          swipeFront.style['-webkit-transform'] = transformStyle;
+          swipeFront.style['-moz-transform'] = transformStyle;
+          swipeFront.style.transform = transformStyle;
+          
+          currentState = newState;
+        }
+        
+        function getGesturePointFromEvent(evt) {
+          var point = {
+            x: evt.screenX,
+            y: evt.screenY
+          };
+          
+          // Prefer touch events if we have them.
+          if (window.navigator.msPointerEnabled) {
+            point.x = evt.clientX;
+            point.y = evt.clientY;
+          } else if (evt.targetTouches && evt.targetTouches.length > 0) {
+            point.x = evt.targetTouches[0].clientX;
+            point.y = evt.targetTouches[0].clientY;
+          }
+          
+          return point;
+        }
+        
+        function onAnimFrame() {
+          if(!isAnimating) {
+            return;
+          }
+          
+          var differenceInX = initialTouchPos.x - lastTouchPos.x;
+          
+          var newXTransform = (currentXPosition - differenceInX)+'px';
+          var transformStyle = 'translateX('+newXTransform+')';
+          swipeFront.style['-webkit-transform'] = transformStyle;
+          swipeFront.style['-moz-transform'] = transformStyle;
+          swipeFront.style.transform = transformStyle;
+          
+          isAnimating = false;
+        }
+
+        /* // [START addlisteners] */
+        if (window.navigator.msPointerEnabled) {
+          // Pointer events are supported.
+          swipeFront.addEventListener('MSPointerDown', this.handleGestureStart, true);
+        } else {
+          // Add Touch Listener
+          swipeFront.addEventListener('touchstart', this.handleGestureStart, true);
+          
+          // Add Mouse Listener
+          swipeFront.addEventListener('mousedown', this.handleGestureStart, true);
+        }
+        /* // [END addlisteners] */
+      }
+
+      var swipeRevealItems = [];
+
+      window.onload = function () {
+        var swipeRevealItemElements = document.querySelectorAll('.swipe-element');
+        for(var i = 0; i < swipeRevealItemElements.length; i++) {
+          swipeRevealItems.push(new SwipeRevealItem(swipeRevealItemElements[i]));
+        }
+      };
+
+      window.onresize = function () {
+        for(var i = 0; i < swipeRevealItems.length; i++) {
+          swipeRevealItems[i].resize();
+        }
+      };
+    </script>
+  </body>
+</html>
