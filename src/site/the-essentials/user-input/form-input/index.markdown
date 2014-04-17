@@ -15,45 +15,47 @@ article:
 collection: user-input
 key-takeaways:
   label-and-name:
-    - Always use labels on form inputs, and ensure they're visible when
+    - Always use <code>label</code>s on form inputs, and ensure they're visible when
       the field is in focus.
-    - Use placeholders to provide guidance about what you expect.
-    - To help the browser auto-complete the form, use established name's
-      for elements and include the autocomplete attribute.
+    - Use <code>placeholder</code>s to provide guidance about what you expect.
+    - To help the browser auto-complete the form, use established <code>name</code>'s
+      for elements and include the <code>autocomplete</code> attribute.
   choose-best-input-type:
     - Choose the most appropriate input type for your data to simplify input.
-    - Offer suggestions as the user types with the datalist element.
+    - Offer suggestions as the user types with the <code>datalist</code> element.
   provide-real-time-validation:
-    - Leverage the browser's built-in validation attributes like `pattern`, `required`,
-      `min`, `max`, etc.
-    - Use JavaScript and the Constraints Validation API for more complex validation requirements.
+    - Leverage the browser's built-in validation attributes like 
+      <code>pattern</code>, <code>required</code>, <code>min</code>, 
+      <code>max</code>, etc.
+    - Use JavaScript and the Constraints Validation API for more complex 
+      validation requirements.
     - Show validation errors in real time, and if the user tries to submit an
       invalid form, show all fields they need to fix.
   use-request-auto-complete:
-    - requestAutocomplete can greatly simplify the checkout process and
+    - <code>requestAutocomplete</code> can greatly simplify the checkout process and
       improve the user experience.
-    - If requestAutocomplete is available, hide the checkout form and move people
+    - If <code>requestAutocomplete</code> is available, hide the checkout form and move people
       directly to the confirmation page.
     - Ensure input fields include the appropriate autocomplete attribute.
 remember:
   use-placeholders:
-    - Placeholders disappear as soon as focus is placed in an
-      element, thus they are not a replacement for labels.  They should be used
-      as an aid to help guide users on the required format and content.
+    - Placeholders disappear as soon as focus is placed in an element, thus
+      they are not a replacement for labels.  They should be used as an aid 
+      to help guide users on the required format and content.
   recommend-input:
     - Auto-complete only works when the form method is post.
   use-datalist:
-    - The `datalist` values are provided as suggestions, and users are not restricted to
-      the suggestions provided.
+    - The <code>datalist</code> values are provided as suggestions, and users
+      are not restricted to the suggestions provided.
   provide-real-time-validation:
-    - Even with client-side input validation, it is always important to validate data on
-      the server to ensure consistency and security in your data.
+    - Even with client-side input validation, it is always important to 
+      validate data on the server to ensure consistency and security in your data.
   show-all-errors:
     - You should show the user all of the issues on the form at once, rather than showing them one at a time.
   request-auto-complete-flow:
-    - If you're asking for any kind of personal information or credit card data,
-      ensure the page is served via SSL.  Otherwise the dialog will warn the user
-      their information may not be secure.
+    - If you're asking for any kind of personal information or credit card
+      data, ensure the page is served via SSL.  Otherwise the dialog will 
+      warn the user their information may not be secure.
 ---
 {% wrap content %}
 
@@ -68,6 +70,10 @@ remember:
 
   img.tall {
     max-height: 500px;
+  }
+
+  img.keybimg {
+    max-width: 225px;
   }
 
   table {
@@ -136,9 +142,6 @@ remember:
 
 </style>
 
-<!-- TODO: petele fix heading levels -->
-<!-- TODO: petele fix takeaway lists -->
-
 ## Label and name inputs properly
 
 {% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
@@ -180,7 +183,7 @@ helps to reduce potential input errors -- especially on virtual keyboards and
 small devices.
 
 Browsers use many heuristics to determine which fields they can
-[auto-populate](https://support.google.com/chrome/answer/142893)[ based on
+[auto-populate](https://support.google.com/chrome/answer/142893) [based on
 previously specified data by the
 user](https://support.google.com/chrome/answer/142893), and you can give hints
 to the browser by providing both the name attribute and the autocomplete
@@ -192,7 +195,7 @@ the users name, email address and phone number, you should use:
 {% include_code _code/order.html autocomplete %}
 
 
-### Recommended input name and autocomplete attribute values
+### Recommended input `name` and `autocomplete` attribute values
 
 <table class="autocompletes">
   <thead>
@@ -276,9 +279,12 @@ the users name, email address and phone number, you should use:
 </tbody>
 </table>
 
+The `autocomplete` attributes should be prefixed with either `shipping` or `billing`, depending on the context.
+
+
 {% include modules/remember.liquid title="Remember" list=page.remember.recommend-input %}
 
-## The autofocus attribute
+### The `autofocus` attribute
 
 On some forms, for example the Google home page where the only thing you want
 the user to do is fill out a particular field, you can add the `autofocus`
@@ -301,7 +307,7 @@ Every tap counts. Users appreciate websites that automatically present number
 pads for entering phone numbers, or automatically advance fields as they entered
 them. Look for opportunities to eliminate wasted taps in your forms.
 
-## HTML5 input types
+### HTML5 input types
 
 HTML5 introduced a number of new input types. These new input types give hints
 to the browser about what type of keyboard layout to display for on-screen
@@ -323,8 +329,7 @@ type.
         for example <code>http://</code>, <code>ftp://</code> or <code>mailto:</code>.
       </td>
       <td>
-        <!-- TODO: petele capture screenshots -->
-        <img src="">
+        <img src="imgs/url-ios.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -334,7 +339,7 @@ type.
         a particular format, you can use pattern.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/tel-android.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -344,7 +349,7 @@ type.
         multiple attribute if more than one email address will be provided.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/email-android.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -353,7 +358,7 @@ type.
         consistent with the platform's search field.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/plain-ios.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -362,7 +367,7 @@ type.
         integer or float value.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/number-android.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -372,7 +377,7 @@ type.
         slider control.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/range-ios.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -381,7 +386,7 @@ type.
         where the time zone provided is the local time zone.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/datetime-local-ios.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -390,7 +395,7 @@ type.
         provided.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/date-android.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -399,7 +404,7 @@ type.
         provided.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/time-ios.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -408,7 +413,7 @@ type.
         provided.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/week-android.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -417,7 +422,7 @@ type.
         provided.
       </td>
       <td>
-        <img src="">
+        <img src="imgs/month-ios.png" class="keybimg">
       </td>
     </tr>
     <tr>
@@ -425,7 +430,7 @@ type.
         <code>color</code><br>For picking a color.
       </td> 
       <td>
-        <img src="">
+        <img src="imgs/color-android.png" class="keybimg">
       </td>
     </tr>
   </tbody>
@@ -455,9 +460,9 @@ form has been completed properly.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.provide-real-time-validation %}
 
-## Use these attributes to validate input
+### Use these attributes to validate input
 
-### The pattern attribute
+#### The `pattern` attribute
 
 The `pattern` attribute specifies a [regular
 expression](http://en.wikipedia.org/wiki/Regular_expression) used to validate an
@@ -467,7 +472,7 @@ this:
 
     <input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
-**Common regular expression patterns**
+##### Common regular expression patterns
 
 <table class="tc-heavyright">
   <thead>
@@ -504,7 +509,7 @@ this:
   </tbody>
 </table>
 
-### The `required` attribute
+#### The `required` attribute
 
 If the `required` attribute is present, then the field must contain a value before
 the form can be submitted. For example, to make the zip code required, we'd
@@ -512,7 +517,7 @@ simply add the required attribute:
 
     <input type="text" required id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
 
-### The `min`, `max` and `step` attributes
+#### The `min`, `max` and `step` attributes
 
 For numeric input types like number or range as well as date/time inputs, you
 can specify the minimum and maximum values, as well as how much they should each
@@ -522,7 +527,7 @@ of 0.5
 
     <input type="number" id="frmShoeSize" name="shoeSize" min="1" max="13" step="0.5" />
 
-### The `maxlength` attribute
+#### The `maxlength` attribute
 
 The `maxlength` attribute can be used to specify the maximum length of an input or
 textbox and is useful when you want to limit the length of information that the
@@ -531,7 +536,7 @@ you can use the following.
 
     <input type="text" id="83filename" maxlength="12" />
 
-### The `novalidate` attribute
+#### The `novalidate` attribute
 
 In some cases, you may want to allow the user to submit the form even if it
 contains invalid input. To do this, add the `novalidate` attribute to the form
@@ -543,7 +548,7 @@ JavaScript APIs will still allow you to check if the form validates.
       <input type="email" name="email" id="inpEmail" placeholder="Enter email">
     </form>
 
-## Use JavaScript for more complex real-time validation
+### Use JavaScript for more complex real-time validation
 
 When the built-in validation plus regular expressions aren't enough, you can use
 the [Constrains Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
@@ -578,7 +583,7 @@ reason that an element is invalid:
   </tbody>
 </table>
 
-### Set custom validation messages
+#### Set custom validation messages
 
 If a field fails validation, use `setCustomValidity()` to mark the field invalid
 and explain why the field didn't validate.  For example, a sign up form might
@@ -588,7 +593,7 @@ response.  For example:
 
 {% include_code _code/order.html customvalidation javascript %}
 
-### Prevent form submission on invalid forms
+#### Prevent form submission on invalid forms
 
 Because not all browsers will prevent the user from submitting the form if there
 is invalid data, you should catch the submit event, and use the `checkValidity()`
@@ -596,7 +601,7 @@ on the form element to determine if the form is valid.  For example:
 
 {% include_code _code/order.html preventsubmission javascript %}
 
-## Show feedback in real-time
+### Show feedback in real-time
 
 It's helpful to provide a visual indication on each field that indicates whether
 the user has completed the form properly before they've submitted the form.
@@ -651,7 +656,7 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 
 
-# Simplify checkout with requestAutocomplete
+## Simplify checkout with `requestAutocomplete`
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.use-request-auto-complete %}
 
@@ -667,7 +672,7 @@ Rather than the site relying on a particular payment provider,
 card information) from the browser, which are optionally stored by the browser
 much like other auto-complete fields.
 
-## requestAutocomplete flow
+### `requestAutocomplete` flow
 
 The ideal experience will show the `requestAutocomplete` dialog instead of loading the
 page that displays the checkout form. If all goes well, the user shouldn't see
@@ -679,14 +684,22 @@ the rest.
 
 <img src="imgs/rac_flow.png"  />
 
+{% include_code _code/rac.html rac javascript %}
+
 The `requestAutocomplete` function on the `form` element indicates to the
 browser that it should populate the form.  As a security feature, the function
 must be called via a user gesture like a touch or mouse click. A dialog is then
 displayed asking the user permission to populate the fields and which details
 they want to populate it with.
 
-{% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
+{% include_code _code/rac.html handlerac javascript %}
 
-<!-- TODO: petele work to complete here -->
+Upon completion of `requestAutocomplete`, the function will either fire the
+`autocomplete` event if it finished successfully, or `autocompleteerror` if
+it was unable to complete the form.  If it completed successfully and the form
+validates to your needs, simply submit the form and proceed to the final 
+confirmation.
+
+{% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
 
 {% endwrap %}

@@ -13,8 +13,8 @@ collection: multi-device-layouts
 key-takeaways:
   set-viewport:
     - Use meta viewport tag to control the width and scaling of the browsers viewport.
-    - Include `width=device-width` to match the screen's width in device independent pixels.
-    - Include `initial-scale=1` to establish a 1:1 relationship between CSS pixels and device independent pixels.
+    - Include <code>width=device-width</code> to match the screen's width in device independent pixels.
+    - Include <code>initial-scale=1</code> to establish a 1:1 relationship between CSS pixels and device independent pixels.
     - Ensure your page is accessible by not disabling user scaling.
   size-content-to-vp:
     - Do not use large fixed width elements.
@@ -22,7 +22,7 @@ key-takeaways:
     - Use CSS media queries to apply different styling for small and large screens.
   media-queries:
     - Media queries can be used to apply styles based on device characteristics.
-    - Use `min-width` over `min-device-width` to ensure the broadest experience.
+    - Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience.
     - Use relative sizes for elements to avoid breaking layout.
   choose-breakpoints:
     - Create breakpoints based on content, never on specific devices, products or brands.
@@ -102,7 +102,7 @@ in two columns.
 
 ## Set the viewport
 
-{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.set-viewport %}
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.set-viewport %}
 
 Pages optimized for a variety of devices must include a meta viewport element in 
 the head of the document.  A meta viewport tag gives the browser instructions on 
@@ -147,7 +147,7 @@ accessibility issues.
 
 # Size content to the viewport
 
-{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.size-content-to-vp %} 
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %} 
 
 On both desktop and mobile devices, users are used to scrolling websites 
 vertically but not horizontally, and forcing the user to scroll horizontally or 
@@ -177,7 +177,7 @@ viewport on small screens.
 
 ## Use CSS Media Queries For Responsiveness 
 
-{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.media-queries %}
+{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.media-queries %}
 
 Media queries are simple filters that can be applied to CSS styles.  They make 
 it easy to change styles based on the characteristics of the device rendering 
@@ -317,7 +317,7 @@ page.
 
 ## How to choose breakpoints
 
-{% include modules/highlight.liquid character="*" position="left" title="Key Takeaway" type="learning" list=page.key-takeaways.choose-breakpoints %}
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.choose-breakpoints %}
 
 While it may be helpful to think about defining breakpoints based on device 
 classes, use caution.  Defining breakpoints based on specific devices, products, 
