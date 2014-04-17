@@ -19,8 +19,6 @@ collection: user-input
 * Table of Contents
 {:toc}
 
-# Touch Input
-
 Have you ever touched or clicked an element on a web page and questioned whether
 the site actually detected you?
 
@@ -108,7 +106,8 @@ prevent the user for accidentally selecting the text.
 You should be cautious not to disable user selection if there are scenarios
 where the user might want to copy the text. An example would be a button to
 display a phone, if the user clicks on it, you could open the devices dialer,
-but the user may wish to copy and paste to a different app.
+but the user may wish to copy and paste to a different app, an example of
+this is shown in the full example **MAKE FULL SAMPLE A  LINK TO CODE SAMPLE**.
 
 
 
@@ -207,6 +206,43 @@ The alternative approach to support multiple touch elements on
 the page are simply applying the touchmove and touchend events on the elements
 themselve, but remember that this applies to touch only, so for mouse interactions
 you should continue to apply them to documents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+---
+
+# EVERYTHING BEYOND THIS IS NEEDS REMOVING OR INCLUDING
+
 
 ## Using Touch Events
 
