@@ -9,12 +9,12 @@ description: ""
 
 ## Showcases
 {% for article in page.articles.showcase %}
-*  [{{article.title}}]({{article.url}})
+*  [{{article.title}}]({{site.baseurl}}/{{article.url}})
 {% endfor %}
 
 
 ## Spotlight
 {% for article in page.articles.spotlight %}
-*  [{{article.title}}]({{article.url}})
+*  [{{article.title}}]({{site.baseurl}}/{{article.url}})
 {% endfor %}
 {% endwrap %}

@@ -15,7 +15,7 @@ Research shows that users' flow is interrupted if pages take longer than one sec
 
 {% for guide in page.articles.performance %}
 {% class %}
-### [{{guide.title}}]({{guide.url}})
+### [{{guide.title}}]({{site.baseurl}}/{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}

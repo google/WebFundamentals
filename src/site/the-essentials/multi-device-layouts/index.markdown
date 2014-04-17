@@ -28,7 +28,7 @@ solutions to deliver experiences that work well across all form-factors.
 
 {% for guide in page.articles.multi-device-layouts %}
 {% class %}
-### [{{guide.title}}]({{guide.url}})
+### [{{guide.title}}]({{site.baseurl}}/{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}

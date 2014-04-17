@@ -18,7 +18,7 @@ Use our guides to learn how to create compelling experiences that users will lov
 
 {% for guide in page.articles.user-input %}
 {% class %}
-### [{{guide.title}}]({{guide.url}})
+### [{{guide.title}}]({{site.baseurl}}/{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}
