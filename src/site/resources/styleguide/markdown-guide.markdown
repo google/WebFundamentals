@@ -24,4 +24,24 @@ NOTE: This is our styleguide
 ## ##h2 heading
 
 ### ###h3 heading
+
+#### ####h4 heading
+
+##### #####h5 heading
+
+Include Javascript
+
+
+Include HTML
+
+Inclide CSS
+
+	{{ "{% include_code _code/test.css testcss css " }} %}
+
+{% include_code _code/test.css somecss css %}
+
+
+
+
+
 {% endwrap %}
