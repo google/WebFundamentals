@@ -56,7 +56,7 @@ hypothetical Smiles product.  The end result will be a fully functioning page
 that covers many of the core principles of building experiences that work well
 across all different device types.
 
-# Set up development workspace
+## Set up development workspace
 
 Great news. There is no need to set anything up. You just need a text editor
 and 15 minutes to read this guide.
@@ -71,9 +71,7 @@ We recommend that you have a device available to hand to be able to test your
 experiences on, however if you haven't got one this is not a problem there are
 tools that you can use to help you along the way.
 
-# Create first multi-screen page
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
+## Create first multi-screen page
 
 Even for a basic page you must include a viewport meta tag.  The viewport is the
 most critical[link to viewport doc] component you need for building mobile-first
@@ -90,9 +88,9 @@ your viewport.  The one we recommend is:
 This works well across all mobile and tablet devices and orientations as it
 tells the page to fit.....
 
-# Test your page
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
+## Test your page
 
 Testing your page is one of the most important things you can do to ensure you
 offer a great experience across all the devices your user will access your
@@ -118,9 +116,9 @@ quickly see how it would look across devices.
 
 If you have real device even better, you can ... [todo]
 
-# Flesh out the page with content
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.flesh-out %}
+## Flesh out the page with content
 
 Especially for sites, we believe that the content is the most important aspect.
 So let's design for the content and not let the design dictate the content.  In
@@ -143,6 +141,8 @@ be pretty simple. We need a heading areas, 3 sections of information and a foote
 {% include_code _code/addstructure.html structure %}
 
 This is the basic structure now we can add some of the content.
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.flesh-out %}
 
 ### Add headline
 
@@ -181,11 +181,9 @@ and will also contain a v
 
 [TODO: Add Image]
 
-# Styling
+## Styling
 
-# Create a great form
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
+## Create a great form
 
 We are creating a product landing page so it makes sense to be able to let the
 user pass us some of their details.
@@ -221,17 +219,21 @@ the user should just see a dial pad.
 
 We have a more detailed guide to creating amazing forms in our forms tutorial.
 
-Link to request AutoComplete
+TODO: Link to request AutoComplete
 
-# Add images to site
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
+## Add images to site
+
+
 
 Sites without images can be a little boring.  There are two types of images:
 Content images and background images.  Content images are images that are inline
 in the document and are used to convey extra information about the content.
 Stylistic images are often used to make the site look better, often these are
 background images, patterns and gradients.
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
 
 ## Adding Stylistic images
 
@@ -248,9 +250,8 @@ so lets add some in.
       <img src="">
     </div>
 
-# Add a video to your site
+## Add a video to your site
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
 
 Videos are often used to describe content in a more interactive manner and are
 often used to show a demonstration of a product or a concept.  It can be hard to
@@ -262,9 +263,10 @@ Lets add a video to the site.
        <video src=""></video>
     </div>
 
-# Make your page responsive
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
+
+## Make your page responsive
 
 Our page has all the content needed, but on different screen sizes it looks a
 little bland as we have simply created a linear site for a narrow viewport.
@@ -288,5 +290,7 @@ for the screen real-estate.
 
 To make our page responsive we use media queries to allow us to group styles
 based on factors such screen width or viewport width.
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
 {% endwrap %}
