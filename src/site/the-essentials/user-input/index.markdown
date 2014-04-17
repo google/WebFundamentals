@@ -8,6 +8,8 @@ article:
   order: 3
 collection: the-essentials
 ---
+{% wrap content%}
+
 # {{ page.title }}
 
 How a user interacts with your site or app can often be make or break for the success of your project.  For example if a user is on a touch device and can't interact with it then they will not use your experience.
@@ -20,3 +22,5 @@ Use our guides to learn how to create compelling experiences that users will lov
 {{guide.description}}
 {% endclass %}
 {% endfor %}
+
+{% endwrap %}

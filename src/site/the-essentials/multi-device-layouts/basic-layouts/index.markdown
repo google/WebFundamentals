@@ -9,4 +9,11 @@ article:
 collection: multi-device-layouts
 ---
 
+{% wrap content%}
+
+* Table of Contents
+{:toc}
+
 Page left intentionally blank
+
+{% endwrap %}

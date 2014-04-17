@@ -1,19 +1,49 @@
 ---
 layout: article
 title: "Critical Path Rendering"
-description: ""
+description: "Delivering a fast web experience requires a lot of work by the browser. 
+  Most of this work is hidden from us as web developers: we write the markup, and a nice 
+  looking page comes out on the screen. But how exactly does the browser go from 
+  consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?"
+introduction: "Delivering a fast web experience requires a lot of work by the browser. 
+  Most of this work is hidden from us as web developers: we write the markup, and a nice 
+  looking page comes out on the screen. But how exactly does the browser go from 
+  consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-05
   order: 1
 collection: performance
+key-takeaways:
+  construct-object-model: 
+    - Bytes → characters → tokens → nodes → object model
+    - HTML markup is transformed into a Document Object Model (DOM)
+    - CSS markup is transformed into a CSS Object Model (CSSOM)
+    - Both DOM and CSSOM are tree structures that capture the structure of the markup
+    - DOM and CSSOM are independent data structures
+    - DevTool Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM
+  render-tree-construction:
+    - The DOM and CSSOM trees are combined to form the render tree
+    - Render tree contains only the nodes required to render the page
+    - Layout is a recursive process which computes the exact position and size of each node within the renderer
+    - Paint is the last step, which takes in the render tree and position and size of each element and renders the    pixels to the screen
+  render-blocking-css:
+    - By default CSS is treated as a render blocking resource
+    - Media types and media queries allow us to mark some CSS resources as non render blocking
+    - All CSS resources, regardless of blocking or non-blocking behavior are downloaded by the browser
+  adding-interactivity:
+    - JavaScript can query and modify DOM and CSSOM
+    - JavaScript execution blocks on CSSOM
+    - JavaScript blocks DOM construction unless explicitly declared as async</td>
+  measure-crp:
+    - Navigation Timing provides high resolution timestamps for measuring CRP.
+    - Browser emits series of consumable events which capture various stages of the CRP.
+
 ---
-  
-# Critical Rendering Path
-Delivering a fast web experience requires a lot of work by the browser. Most of 
-this work is hidden from us as web developers: we write the markup, and a nice 
-looking page comes out on the screen. But how exactly does the browser go from 
-consuming our HTML, CSS, and JavaScript to rendered pixels on the screen? 
+{% wrap content%}
+
+* Table of Contents
+{:toc}
 
 Optimizing for performance is all about understanding what happens in these 
 intermediate steps between receiving the HTML, CSS, and JavaScript bytes and the 
@@ -21,10 +51,15 @@ required processing to turn them into rendered pixels - that's the **critical
 rendering path**.
 
 Optimizing the critical rendering path is critical for improving performance of 
-our pages: our goal is to display useful information to the visitor as soon as 
-possible. Note that the time to first render is not necessarily the same as the 
-"load time" of our page: some resources may still be loading (e.g. images) but 
-we should still be able to display partial content. 
+our pages: our goal is to prioritize and display the content that relates to the 
+primary action the user wants to take on a page. Note that the time to first 
+render is not necessarily the same as the "load time" of our page: some 
+resources may still be loading (e.g. images) but we should still be able to 
+display partial content.   
+
+<!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 Understanding the critical rendering path will also serve as a foundation for 
 all of our future discussions on optimizing the performance of interactive 
@@ -35,23 +70,7 @@ overview of how the browser goes about displaying a simple page.
 
 # Constructing the Object Model
 
-{% class key-takeaway %}  
-Key takeaways:
-
-* Bytes → characters → tokens → nodes → object model
-* HTML markup is transformed into a Document Object Model (DOM)
-* CSS markup is transformed into a CSS Object Model (CSSOM)
-* Both DOM and CSSOM are tree structures that capture the structure of the 
-  markup
-* DOM and CSSOM are independent data structures
-* DevTool Timeline allows us to capture and inspect the construction and 
-  processing costs of DOM and CSSOM
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
-{% endclass %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.construct-object-model %}
 
 ## Document Object Model (DOM)
 
@@ -66,18 +85,15 @@ Key takeaways:
         </p>
         <div><img src="awesome-photo.jpg"/></div>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 Let's start, with the simplest possible case: a plain HTML page with some text 
 and a single image. What does the browser need to do to process this simple 
 page?
 
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 1. **Conversion:** the browser reads the raw bytes of the HTML off the disk or 
    network and translates them to individual characters based on specified 
@@ -97,6 +113,8 @@ page?
 
 <!-- No converter for: INLINE_DRAWING -->
 
+[TODO Add inline drawing]
+
 **The final output of this entire process is the Document Object Model, or the 
 "DOM" of our simple page, which the browser uses for all further processing of 
 the page****.**** **
@@ -106,7 +124,7 @@ the steps above: convert bytes to characters, identify tokens, convert tokens to
 nodes, and build the DOM tree. This entire process can take some time, 
 especially if we have a large amount of HTML to process.
 
-<img src="image00.png" width="624" height="114" />
+<img src="image00.png" width="624" height="146" />
 
 > _Note: for the purposes of this course we'll assume that you have basic 
 > familiarity with Chrome DevTools - i.e. you know how to capture a network 
@@ -118,8 +136,8 @@ especially if we have a large amount of HTML to process.
 
 If you open up Chrome DevTools and record a timeline while the page is loaded, 
 you can see the actual time taken to perform this step -- in example above, it 
-took us ~1.5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if 
-the page was larger, as most pages are, this process might take significantly 
+took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the 
+page was larger, as most pages are, this process might take significantly 
 longer. You will see in our future sections on creating smooth animations that 
 this can easily become your bottleneck if the browser has to process large 
 amounts of HTML. That said, let's not get ahead of ourselves…
@@ -144,29 +162,26 @@ back with the following content:
     p span { display: none }
        img { float: right }
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 Of course, we could have declared our styles directly within the HTML markup 
 (inline), but keeping our CSS independent of HTML allows us to treat content and 
 design as separate concerns: the designers can work on CSS, developers can focus 
 on HTML, and so on. 
 
-That said, in either case, just as with HTML, we need to convert the received 
-CSS rules into something that the browser can understand and work with. Hence, 
-once again, we repeat a very similar process as we did with HTML:  
+Just as with HTML, we need to convert the received CSS rules into something that 
+the browser can understand and work with. Hence, once again, we repeat a very 
+similar process as we did with HTML:
+
 <!-- No converter for: INLINE_DRAWING -->
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+[TODO Add inline drawing]
 
 The CSS bytes are converted into characters, then to tokens and nodes, and 
 finally are linked into a tree structure known as the "CSS Object Model", or 
 CSSOM for short:
 
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 Why does the CSSOM have a tree structure? When computing the final set of styles 
 for any object on the page the browser starts with the most general rule 
@@ -193,9 +208,9 @@ show a separate "Parse CSS" entry, and instead captures parsing and CSSOM tree
 construction, plus the recursive calculation of computed styles under this one 
 event.
 
-<img src="image01.png" width="624" height="108" />
+<img src="image01.png" width="624" height="146" />
 
-Our trivial stylesheet takes ~0.5ms to process and affects 8 elements on the 
+Our trivial stylesheet takes ~0.6ms to process and affects 8 elements on the 
 page -- not much, but once again, not free. However, where did the 8 elements 
 come from? The CSSOM and DOM and are independent data structures! Turns out, the 
 browser is hiding an important step. Next, lets talk about the render tree that 
@@ -203,21 +218,7 @@ links the DOM and CSSOM together.
 
 # Render-tree construction, Layout, and Paint
 
-{% class key-takeaway %}  
-Key takeaways
-
-* The DOM and CSSOM trees are combined to form the render tree
-* Render tree contains only the nodes required to render the page
-* Layout is a recursive process which computes the exact position and size of 
-  each node within the renderer
-* Paint is the last step, which takes in the render tree and position and size 
-  of each element and renders the pixels to the screen
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
-{% endclass %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.render-tree-construction %}
 
 In the previous section on constructing the object model we built the DOM and 
 the CSSOM trees based on the HTML and CSS input. However, both of these are 
@@ -231,6 +232,8 @@ tree" that captures all the visible DOM content on the page, plus all the CSSOM
 style information for each node. 
 
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 To construct the render tree, the browser roughly does the following:
 
@@ -274,18 +277,16 @@ hands-on example:
           <div style="width: 50%">Hello world!</div>
         </div>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 The body of the above page contains two nested div's: the first (parent) div 
 sets the display size of the node to 50% of the viewport width, and the second 
 div contained by the parent sets its width to be 50% of its parent - i.e. 25% of 
-the viewport width!   
+the viewport width! 
+
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 The output of the layout process is a "box model" which precisely captures the 
 exact position and size of each element within the viewport: all of the relative 
@@ -301,7 +302,7 @@ work by the browser, which also means that it can often take quite a bit of
 time. Thankfully, Chrome DevTools can help us get some insight into all three of 
 the stages we've described above:
 
-<img src="image02.png" width="624" height="162" />
+<img src="image02.png" width="624" height="146" />
 
 * The render tree construction and position and size calculation are captured 
   with the "Layout" event in the Timeline. 
@@ -315,8 +316,9 @@ have to do; the more complicated the styles are the more time will be consumed
 for painting also (e.g. a white pixel is "cheap" to paint, and a drop shadow is 
 much more "expensive" to compute and render).
 
-Once all is said and done, our page is finally visible in the viewport - woohoo!  
-<img src="image03.png" width="624" height="330" />
+Once all is said and done, our page is finally visible in the viewport - woohoo!
+
+<img src="image03.png" width="624" height="322" />
 
 Let's do a quick recap of all the steps the browser went through:
 
@@ -339,16 +341,8 @@ i.e. achieve higher refresh rate for interactive content.
 
 # Render Blocking CSS
 
-{% class key-takeaway %}  
-**Key takeaways:**
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.render-blocking-css %}
 
-* By default CSS is treated as a render blocking resource
-* Media types and media queries allow us to mark some CSS resources as non 
-  render blocking
-* All CSS resources, regardless of blocking or non-blocking behavior are 
-  downloaded by the browser
-
-{% endclass %}
 
 In the previous section we saw that the critical rendering path requires that we 
 have both the DOM and the CSSOM to construct the render tree, which creates an 
@@ -387,12 +381,8 @@ CSS "media types" and "media queries" allow us to address this very use case:
 
     <link href="style.css" rel="stylesheet">
     <link href="print.css" rel="stylesheet" media="print">
+    <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
 
-<link href="other.css" rel="stylesheet" **media="****(min-width: 40em)****"**>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
 
 A media query consists of a media type and zero or more expressions that check 
 for the conditions of particular media features. For example, our first 
@@ -416,11 +406,8 @@ Let's consider some hands-on examples:
     <link href="style.css"    rel="stylesheet">
     <link href="style.css"    rel="stylesheet" media="screen">
     <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
-    <link href="print.css"    rel="stylesheet" media="print">
+    <link href="print.css"    rel="stylesheet" media="print"></td>
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
 
 * First declaration is render blocking and matches in all conditions.
 * Second declaration is also render blocking: "screen" is the default type and 
@@ -439,18 +426,7 @@ for non-blocking resources.
 
 # Adding interactivity with JavaScript
 
-{% class key-takeaway %}  
-Key takeaways:
-
-* JavaScript can query and modify DOM and CSSOM
-* JavaScript execution blocks on CSSOM
-* JavaScript blocks DOM construction unless explicitly declared as async
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
-{% endclass %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.adding-interactivity %}
 
 JavaScript is a dynamic language that runs in the browser and allows us to alter 
 just about every aspect of how the page behaves: we can modify content on the 
@@ -469,12 +445,10 @@ a simple inline script:
           Hello <span>web performance</span> students!
         </p>
         <div><img src="awesome-photo.jpg"/></div>
-
         <script>
           var span = document.getElementsByTagName('span')[0];
           span.innerText = 'interactive'; // change DOM text content
           span.style.display = 'inline';  // change CSSOM property
-
           // create a new element, style it, and append it to the DOM
           var loadTime = document.createElement('div');
           loadTime.innerText = 'You loaded this page on: ' + new Date();
@@ -482,12 +456,7 @@ a simple inline script:
           document.body.appendChild(loadTime);
         </script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 * JavaScript allows us to reach into the DOM and pull out the reference to the 
   hidden span node - the node may not be visible in the render tree, but it's 
@@ -503,7 +472,7 @@ a simple inline script:
   in the second part of our JavaScript function we create a new "div" element, 
   set its text content, style it, and append it to the body.
 
-<img src="image04.png" width="609" height="390" />
+<img src="image04.png" width="624" height="322" />
 
 With that, we've modified the content and the CSS style of an existing DOM node, 
 and added an entirely new node to the document. Our page won't win any design 
@@ -581,26 +550,16 @@ and extract our code into a separate file:
       </body>
     </html>
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 **app.js**
 
     var span = document.getElementsByTagName('span')[0];
     span.innerText = 'interactive'; // change DOM text content
     span.style.display = 'inline';  // change CSSOM property
-
     // create a new element, style it, and append it to the DOM
     var loadTime = document.createElement('div');
     loadTime.innerText = 'You loaded this page on: ' + new Date();
     loadTime.style.color = 'blue';
-
-document.body.appendChild(loadTime);
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    document.body.appendChild(loadTime);
 
 Would you expect the execution order to be any different when we use a <script> 
 tag instead of using an inline JavaScript snippet? Of course, the answer is "no" 
@@ -634,12 +593,7 @@ So, how do we achieve this trick? It's pretty simple, we can mark our script as
         <div><img src="awesome-photo.jpg"/></div>
         <script src="app.js" async></script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 Adding the **async **keyword to the script tag tells the browser that it should 
 not block the DOM construction while it waits for the script to become available 
@@ -648,15 +602,15 @@ not block the DOM construction while it waits for the script to become available
 Alternatively, you will also often see the following pattern for inserting an 
 "async script":
 
-    <script>
-      var script = document.createElement('script');
-      script.src = "...";
-      document.getElementsByTagName('head')[0].appendChild(script);
-
-</script>
-
 <!-- TODO: Fix formatting of cells -->
 <table>
+<tr>
+<td><script>
+  var script = document.createElement('script');
+  script.src = "...";
+  document.getElementsByTagName('head')[0].appendChild(script);
+</script></td>
+</tr>
 </table>
 
 This one is a bit tricky. First, obviously the snippet itself is an inline 
@@ -676,23 +630,12 @@ work in a [few older browsers](http://caniuse.com/script-async), whereas the
 JavaScript snippet works across all browsers - other than that they are 
 identical. 
 
-> **_Note: all modern mobile browsers support the "async" keyword, so unless you 
-> have to target older desktop browsers, you can use "async". _**
+> _Note: all modern mobile browsers support the "async" keyword, so unless you 
+> have to target older desktop browsers, you can use "async". _
 
 # Measuring the Critical Rendering Path with Navigation Timing
 
-{% class key-takeaway %}  
-Key Takeaways:
-
-* Navigation Timing provides high resolution timestamps for measuring CRP.
-* Browser emits series of consumable events which capture various stages of the 
-  CRP.
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
-{% endclass %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.measure-crp %}
 
 We've now covered all the necessary background to understand the major steps 
 that the browser has to go through to construct the page: converting HTML and 
@@ -743,6 +686,8 @@ path:
        fire immediately after domInteractive.
 1. **domComplete** marks when the page and all of its subresources are ready.
 
+As follows:
+
     <html>
       <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -753,15 +698,12 @@ path:
               interactive = t.domInteractive - t.domLoading,
               dcl = t.domContentLoadedEventStart - t.domLoading,
               complete = t.domComplete - t.domLoading;
-
             var stats = document.createElement('p');
             stats.innerText = 'interactive: ' + interactive + 'ms, ' +
                 'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms';
-
             document.body.appendChild(stats);
           }
         </script>
-
       </head>
       <body onload="measureCRP()">
         <p>
@@ -769,12 +711,7 @@ path:
         </p>
         <div><img src="awesome-photo.jpg"/></div>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 The above example may seem a little daunting on first sight, but in reality it 
 is actually pretty simple. The Navigation Timing API captures all the relevant 
@@ -782,7 +719,7 @@ timestamps and our code simply waits for the "onload" event to fire -- recall
 that onload event fires after domInteractive, domContentLoaded and domComplete 
 -- and computes the difference between the various timestamps. 
 
-<img src="image05.png" width="530" height="392" />
+<img src="image05.png" width="624" height="322" />
 
 All said and done, we now have some specific milestones to track and a simple 
 function to output these measurements. Note that instead of printing these 
@@ -829,12 +766,7 @@ things more realistic) we'll assume the following:
         </p>
         <div><img src="awesome-photo.jpg"/></div>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 We'll start with basic HTML markup and a single image - no CSS or JavaScript - 
 which is about as simple as it gets. Now let's open up our Network timeline in 
@@ -894,12 +826,7 @@ mix and see what happens:
         <div><img src="awesome-photo.jpg"/></div>
         <script src="timing.js"></script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 Before adding JavaScript and CSS:  
 <img src="image06.png" width="624" height="64" />
@@ -964,12 +891,7 @@ a try:
         <div><img src="awesome-photo.jpg"/></div>
         <script async src="timing.js"></script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 _Parser-blocking (external) JavaScript:_  
 <img src="image07.png" width="624" height="92" />  
@@ -1002,21 +924,14 @@ and JavaScript:
           var span = document.getElementsByTagName('span')[0];
           span.innerText = 'interactive'; // change DOM text content
           span.style.display = 'inline';  // change CSSOM property
-
           // create a new element, style it, and append it to the DOM
           var loadTime = document.createElement('div');
           loadTime.innerText = 'You loaded this page on: ' + new Date();
           loadTime.style.color = 'blue';
-
           document.body.appendChild(loadTime);
         </script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
    
 <img src="image10.png" width="624" height="62" />
@@ -1053,14 +968,11 @@ DOM, and then finally render it on the screen:
           Hello <span>web performance</span> students!
         </p>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 **The time between T****0**** and T****1 ****captures the network and server 
 processing times.** In the best case (if the HTML file is small), all we will 
@@ -1082,14 +994,10 @@ Now, let's consider the same page but with an external CSS file:
           Hello <span>web performance</span> students!
         </p>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 <!-- No converter for: INLINE_DRAWING -->
+[todo: add image]
 
 Once again, we incur a network roundtrip to fetch the HTML document and then the 
 retrieved markup tells us that we will also need the CSS file: this means that 
@@ -1117,6 +1025,8 @@ Now let's compare that to the critical path characteristics of the HTML + CSS
 example above:  
 <!-- No converter for: INLINE_DRAWING -->
 
+[TODO Add inline drawing]
+
 * [   **2**   ] critical resources
 * [   **2**   ] or more roundtrips for the minimum critical path length
 * [   **9**   ] KB of critical bytes
@@ -1140,12 +1050,7 @@ Ok, now let's add an extra JavaScript file into the mix!
         <div><img src="awesome-photo.jpg"/></div>
         <script src="app.js"></script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 We added app.js, which is an external JavaScript asset on the page, and as we 
 know by now, it is a parser blocking (i.e. critical) resource. Worse, in order 
@@ -1153,6 +1058,8 @@ to execute the JavaScript file we will also have to block and wait for CSSOM -
 recall that JavaScript can query the CSSOM and hence the browser will pause 
 until "style.css" is downloaded and CSSOM is constructed.  
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 That said, in practice if we look at the "network waterfall" of this page you'll 
 notice that both the CSS and JavaScript requests will be initiated at about the 
@@ -1191,11 +1098,9 @@ parser:
       </body>
     </html>
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
-
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 Making the script asynchronous has several advantages: 
 
@@ -1225,14 +1130,11 @@ look?
         <div><img src="awesome-photo.jpg"/></div>
         <script src="app.js" async></script>
       </body>
-
-</html>
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-</table>
+    </html>
 
 <!-- No converter for: INLINE_DRAWING -->
+
+[TODO Add inline drawing]
 
 Because the style.css resource is only used for print, the browser does not need 
 to block on it to render the page. Hence, as soon as DOM construction is 
@@ -1347,3 +1249,5 @@ into the HTML document, and loading the remainder of the CSS styles in an
 asynchronous fashion. This eliminates additional roundtrips in the critical path 
 and if done correctly can be used to deliver a "one roundtrip" critical path 
 length where only the HTML is a blocking resource.
+
+{% endwrap%}

@@ -117,6 +117,10 @@
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
 
+  @include small-only {
+    padding-left: 10%;
+  }
+
   @include medium {
     color: $colorText;
 
@@ -136,6 +140,7 @@
     right: 0;
     border-bottom: 2px solid $colorGrayDark;
     padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
+    color: $colorText;
 
     display: none;
 
@@ -154,7 +159,23 @@
 }
 
 .main-nav__link--explore {
-  // font-size: $fontBase;
-  font-weight: 600;
-  color: $colorHighlight;
+  display: block;
+  width: 100%;
+
+  @include medium {
+    border-bottom: 1px solid $colorGray;
+  }
+}
+
+
+.main-nav__featured {
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+}
+
+.main-nav__featured-text {
+  padding-top: 0;
 }
