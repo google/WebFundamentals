@@ -12,12 +12,22 @@ article:
   updated_on: 2014-01-06
   order: 3
 collection: resources
+key-takeaway:
+  use-keytakeaway:
+    - It is pretty simple to add in a key takeaway
 ---
 {% comment %}
 NOTE: This is our styleguide
 {% endcomment %}
 
 {% wrap content %}
+
+* Table of contents
+{:toc}
+
+## Headings
+
+Styles for Headings
 
 # #h1 heading
 
@@ -29,17 +39,45 @@ NOTE: This is our styleguide
 
 ##### #####h5 heading
 
-Include Javascript
+## Code
+
+### Include Javascript
+
+  {{ "{% include_code _code/test.js testjs javascript " }} %}
+
+{% include_code _code/test.js somejs javascript %}
 
 
-Include HTML
+### Include HTML
 
-Inclide CSS
+  {{ "{% include_code _code/test.html testhtml html " }} %}
 
-	{{ "{% include_code _code/test.css testcss css " }} %}
+{% include_code _code/test.html somehtml html %}
+
+
+### Include CSS
+
+  {{ "{% include_code _code/test.css testcss css " }} %}
 
 {% include_code _code/test.css somecss css %}
 
+## Callouts
+
+Using Callouts in your doc is easy.
+
+### Key takeaway
+
+    {{ "{% include modules/takeaway.liquid" }}
+    	title='Key Takeaway' 
+    	list=page.key-takeaways.provide-real-time-validation %}
+
+In your Article YAML Preamble
+
+    key-takeaway:
+	  use-keytakeaway:
+	    - It is pretty simple to add in a key takeaway
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.provide-real-time-validation %}
 
 
 
