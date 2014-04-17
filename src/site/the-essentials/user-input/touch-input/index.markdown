@@ -11,6 +11,11 @@ key-takeaways:
     - Adding states for :active, :focus and :hover pseudo classes makes your site feel snappy and responsive
     - Most mobile browsers have a default styling for these states which should only be overridden when you are adding your own styles for them
     - Make the state changes fit in with your UI
+important:
+  touch-events-main-thread:
+    - All touch events fire on the main thread
+    - Be as quick as possible inside your callback
+    - Use requestAnimationFrame to keep your site feeling fast
 collection: user-input
 ---
 
@@ -207,28 +212,68 @@ the page are simply applying the touchmove and touchend events on the elements
 themselve, but remember that this applies to touch only, so for mouse interactions
 you should continue to apply them to documents.
 
+For this we can add the touch event listeners on the element straight away:
 
+{% include_code _code/touch-demo-2.html addlisteners javascript %}
 
+Then in the handleGestureStart and handleGestureEnd we add the mouse event
+listeners to the document, otherwise we carry on as normal.
 
+{% include_code _code/touch-demo-2.html handle-gestures javascript %}
 
+## How to Use the Touch Events
 
+For any of the start and move events you can easily extract x and y
+from an event with the following code:
 
+{%include_code _code/touch-demo-2.html extract-xy javascript %}
 
+Once you have the coordinates, the question is how do you use them?
 
+{% include modules/remember.liquid title="Important" list=page.important.touch-events-main-thread %}
 
+Since the event callbacks are fired on the main thread, we want to run 
+as little code as possible in the callback. The best practice is to use requestAnimationFrame to change the UI when you need to.
 
+The common practice is to use the x and y coordinates in the start and
+move gestures and start the requestionAnimationFrame in the move method.
 
+Inside of **handleGestureStart** we note the initial touch position:
 
+{%include_code _code/touch-demo-2.html stash-start javascript %}
 
+When **handleGestureMove** we store the Y value and start a requestAnimationFrame
+if we need to, passing in our **onAnimFrame** function:
 
+{%include_code _code/touch-demo-2.html handle-move javascript %}
 
+It's in the **onAnimFrame** function that we change our UI to move the
+elements around.
 
+We firstly check if the gesture is still going on and we should still animate,
+if so we use our initial and last Y positions to figure out the new Y transform.
+Once we've set the transform, we set the isAnimating variable to false so on
+the next touch event, a new requestAnimationFrame will be fired.
 
+{%include_code _code/touch-demo-2.html on-anim-frame javascript %}
 
+**Touch-Action
 
+Touch-action allows you to determine the behaviour an element has without
+needing to implement touch events.
 
+An example is a long scrolling page designed to fit on mobile, but has an image
+expanding off the screen, this would normally mean the user can scroll
+horizontally off screen, to guard against this, you can use touch-action: pan-y
+as a last resort to prevent this.
 
+See: http://jsbin.com/cekibuzo/1/edit
 
+pan-x means you ca scroll vertically, auto allows the browser to determine the
+behaviour and finally touch-action none means the browser will no intercept the
+touches, allowing you to consume all the events in javascript.
+
+auto | none | [pan-x || pan-y]
 
 <br />
 <br />
@@ -242,141 +287,6 @@ you should continue to apply them to documents.
 ---
 
 # EVERYTHING BEYOND THIS IS NEEDS REMOVING OR INCLUDING
-
-
-## Using Touch Events
-
-In your `handleGestureMove` and `handleGestureEnd` methods you can find out
-where the touch and mouse events with:
-
-    function handleGestureMove(evt) {
-        // Let's assume this is a mouse event first
-        var x = evt.screenX;
-        var y = evt.screenY;
-
-        // Prefer touch events if we have them.
-        if (evt.touches && evt.touches.length > 0) {
-          x = evt.touches[0].clientX;
-          y = evt.touches[0].clientY;
-        }
-    }
-
-Since the event callbacks are fired on the main thread, we want to run as little
-code as possible in the callback. Apart from pulling out what we need from the
-event, the only other thing we should do is start a requestAnimationFrame to
-then do something with these x and y values.
-
-    window.requestAnimFrame = (function(){
-      return  window.requestAnimationFrame       ||
-              window.webkitRequestAnimationFrame ||
-              window.mozRequestAnimationFrame    ||
-              function( callback ){
-                window.setTimeout(callback, 1000 / 60);
-              };
-    })();
-
-      var isAnimating = false;
-      var lastTouchPos = null;
-      var swipeFront = document.querySelector('.swipe-front');
-
-      ……….
-
-      function handleTouchMove(evt) {
-        evt.preventDefault();
-
-        lastTouchPos = getGesturePointFromEvent(evt);
-
-        if(isAnimating) {
-          return;
-        }
-
-        isAnimating = true;
-
-        window.requestAnimFrame(onAnimFrame);
-      }
-
-      function onAnimFrame() {
-        if(!isAnimating) {
-          return;
-        }
-
-        var differenceInX = initialTouchPos.x - lastTouchPos.x;
-
-        var newXTransform = (currentXPosition - differenceInX)+'px';
-        var transformStyle = 'translateX('+newXTransform+')';
-        swipeFront.style['-webkit-transform'] = transformStyle;
-        swipeFront.style['-moz-transform'] = transformStyle;
-        swipeFront.style.transform = transformStyle;
-
-        isAnimating = false;
-      }
-
-What this does is store the current touch in **lastTouchPost** and then we call
-the  **requestAnimFrame** method with the callback **onAnimFrame**. In
-**onAnimFrame** we can calculate where the DOM element should be  and apply a
-transform style.
-
-## Multi-Touch
- Demo: http://jsbin.com/gayuqege/quiet
-
-There are a few scenarios where you may care about more than one finger on a
-screen:
-
-1. The page has multiple touch-enabled elements the user can interact with.
-1. You want to implement a multi-touch gesture like multi-finger swipe to
-   perform a certain actions.
-
-By binding the touch events to the element, you can use event.**targetTouches**
-to get the details for the touch event specific to that element.
-
-In the scenario where the user has two fingers on the screen, one on each
-slider, in your handleGestureMove method, you'll have the following:
-
-event**.touches**
-Length: 2
-
-Touch 0 (clientX, clientY): (264,213)
-Touch 1 (clientX, clientY): (110,117)
-
-event**.targetTouches**
-Length: 1
-
-Touch 1 (clientX, clientY): (110,117)
-
-The event contains all of the touches currently on the screen in event.touches,
-but if we only care about touches on a specific element, we can use
-targetTouches.
-
-var **sliderElement** = document.querySelector('.v-slider');
-
-// Add Touch Listeners
-**sliderElement**.addEventListener('touchstart', handleGestureStart.bind(this),
-true);
-**sliderElement**.addEventListener('touchmove', handlers.touchmove, true);
-**sliderElement**.addEventListener('touchend', handlers.touchfinish, true);
-**sliderElement**.addEventListener('touchcancel', handlers.touchfinish, true);
-
-function handleGestureMove(evt) {
-  evt.preventDefault();
-
-  // Let's assume this is a mouse event first
-  var y = evt.screenY;
-
-  // Prefer touch events if we have them.
-  if (evt.**targetTouches** && evt.**targetTouches**.length > 0) {
-    y = evt.**targetTouches**[0].clientY;
-  }
-
-  lastYPos = y;
-
-    if(isAnimating) {
-      return;
-    }
-
-    isAnimating = true;
-
-    window.requestAnimFrame(onAnimFrame);
-}
 
 ## Pointer Events
  Demo: <See Previous Sections???>
@@ -460,22 +370,6 @@ equivalent to targetTouches[0].clientX and targetTouches[1].clientY.
 
 This means Pointer Events are up and running with touch events.
 
-**Touch-Action**
 
-Touch-action allows you to determine the behaviour an element has without
-needing to implement touch events.
-
-An example is a long scrolling page designed to fit on mobile, but has an image
-expanding off the screen, this would normally mean the user can scroll
-horizontally off screen, to guard against this, you can use touch-action: pan-y
-as a last resort to prevent this.
-
-See: http://jsbin.com/cekibuzo/1/edit
-
-pan-x means you ca scroll vertically, auto allows the browser to determine the
-behaviour and finally touch-action none means the browser will no intercept the
-touches, allowing you to consume all the events in javascript.
-
-auto | none | [pan-x || pan-y]
 
 {% endwrap %}
