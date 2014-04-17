@@ -20,14 +20,28 @@ module Jekyll
       @character = '/'
     end
 
+    def getmatcher_tag(lang, section, tag)
+      startc, endc = @@comment_formats[lang]
+      "#{startc} \\/\\/ \\[#{tag} #{section}\\] #{endc}\n?"
+    end 
+
+    def getmatch(contents, lang, section)
+      start = getmatcher_tag(lang, section, "START")
+      endt = getmatcher_tag(lang, section, "END")
+      contents.match(/#{start}(.*)#{endt}/im)[1]
+    end
+
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
         String filepath = File.join(File.dirname(page["path"]), @file)
         String file = File.join(path, filepath)
         contents = File.read(file)
-        startc, endc = @@comment_formats[@lang]
-        snippet = contents.match(/#{startc} \/\/ \[START #{@section}\] #{endc}\n(.*)#{startc} \/\/ \[END #{@section}\] #{endc}/im)[1];
+        snippet = getmatch(contents, @lang, @section)
+        @@comment_formats.each do |lang, parms|
+            match = getmatcher_tag(lang, "[^\\]]+", "\\w+")
+            snippet.gsub!(/#{match}/mi, "")
+        end
         render_codehighlighter(context, snippet, filepath)
     end
 
