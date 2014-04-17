@@ -182,65 +182,26 @@ The steps to achieve this is:
 
 The reason to follow this approach is it's the most performant approach.
 
-What this means is you'll be doing the following:
+In our example, handleGestureStart adds our events to the document:
 
 {% include_code _code/touch-demo-1.html handle-start-gesture js %}
 
-    element.addEventListener('touchstart', handleGestureStart, true);
+and handleGestureEnd removes them:
 
-    function handleGestureStart(evt) {
-    evt.preventDefault();
-      document.addEventListener('touchmove', handleGestureMove, true);
-      document.addEventListener('touchend', handleGestureEnd, true);
-      document.addEventListener('touchcancel', handleGestureEnd, true);
-    }
+{% include_code _code/touch-demo-1.html handle-end-gesture js %}
 
-    function handleGestureEnd(evt) {
-      evt.preventDefault();
-      document.removeEventListener('touchmove', handleGestureMove, true);
-      document.removeEventListener('touchend', handleGestureEnd, true);
-      document.removeEventListener('touchcancel', handleGestureEnd, true);
-    }
+You'll notice the mouse events are being applied in this fashion as well,
+the reason is that it's easy for a user to quickly move the mouse outside of
+the element which results in the move events no longer firing, so setting
+the events on to the document gets around this.
 
-You may have noticed that in the handleGestureStart and handleGestureEnd the 
-listeners are added and removed from the document element rather than the 
-element you want the user to interact with, the reason for this is to keep it 
-simple should you wish to add support for mouse interaction as well.
+// TODO: Maybe add in video of DevTools with Scroll bottlenecks moving from 
+element to body
 
-    element.addEventListener('touchstart', handleGestureStart, true);
-    element.addEventListener('mousedown', handleGestureStart, true);
-
-    function handleGestureStart(evt) {
-    evt.preventDefault();
-
-    // Add Touch Listeners
-      document.addEventListener('touchmove', handleGestureMove, true);
-      document.addEventListener('touchend', handleGestureEnd, true);
-      document.addEventListener('touchcancel', handleGestureEnd, true);
-
-      // Add Mouse Listeners
-    document.addEventListener('mousemove', handleGestureMove, true);
-      document.addEventListener('mouseup', handleGestureEnd, true);
-    }
-
-    function handleGestureEnd(evt) {
-      evt.preventDefault();
-
-      // Remove Touch Listeners
-      document.removeEventListener('touchmove', handleGestureMove);
-      document.removeEventListener('touchend', handleGestureEnd);
-      document.removeEventListener('touchcancel', handleGestureEnd);
-
-      // Remove Mouse Listeners
-    document.removeEventListener('mousemove', handleGestureMove);
-      document.removeEventListener('mouseup', handleGestureEnd);
-    }
-
-_// TODO: May add in video of DevTools with Scroll bottlenecks moving from 
-element to body_
-
-This is the foundation of our touch interaction, time for adding in our new 
-behaviour with `handleGestureMove` and `handleGestureEnd`.
+The alternative approach to support multiple touch elements on 
+the page are simply applying the touchmove and touchend events on the elements
+themselve, but remember that this applies to touch only, so for mouse interactions
+you should continue to apply them to documents.
 
 ## Using Touch Events
 
