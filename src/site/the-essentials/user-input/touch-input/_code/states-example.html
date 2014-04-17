@@ -1,84 +1,109 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Essential: States Example</title>
-  
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
 
-  <style>
-  	body {
-	  background-color: #e74c3c;
-	  
-	  margin: 32px;
-	  
-	  font-family: 'Roboto', sans-serif;
-	  color: #ecf0f1;
-	}
+    <!-- // [START ms-specific] -->
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- // [END ms-specific] -->
 
-	a {
-	  color: #ecf0f1;
-	}
+    <title>Web Essential: States Example</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
-	button {
-	  display: block;
-	  
-	  width: 100%;
-	  max-width: 400px;
+    <style>
+      body {
+        background-color: #e74c3c;
+        
+        margin: 32px;
+        
+        font-family: 'Roboto', sans-serif;
+        color: #ecf0f1;
+      }
 
-	  padding: 16px;
-	  margin: 0 auto 16px auto;
-	  
-	  box-sizing: border-box;
+      a {
+        color: #ecf0f1;
+      }
 
-	  border-style: none;
-	  border-radius: 6px;
+      button {
+        display: block;
+        
+        width: 100%;
+        max-width: 400px;
 
-	  color: inherit;
-	  font-family: inherit;
-	  font-size: inherit;
-	  text-align:center;
-	  text-decoration: none;
-	}
+        padding: 16px;
+        margin: 0 auto 16px auto;
+        
+        box-sizing: border-box;
 
-	<!-- // [START btnstates] -->
-	.btn {
-	  background-color: #c0392b;
+        border-style: none;
+        border-radius: 6px;
 
-	  /* background-image: none; used to surpress changes in style on FF OS */
-	  background-image: none;
-	}
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        text-align:center;
+        text-decoration: none;
 
-	
-	.btn::-moz-focus-inner {
-	  border: 0;
-	}
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      /* // [START btnstates] */
+      .btn {
+        background-color: #c0392b;
+      }
 
-	.btn:hover {
-	  background-color: #B32C1E;
-	}
+      .btn:hover {
+        background-color: #B32C1E;
+      }
 
-	.btn:focus {
-	  background-color: #8D0600;
+      .btn:focus {
+        background-color: #8D0600;
+        
+        /* The outline parameter surpresses the border 
+        color / outline when focused */
+        outline: 0;
+      }
 
-	  /* The outline parameter surpresses the border color / outline when focused */
-	  outline: 0;
-	}
+      .btn:active {
+        background-color: #9A1305;
+      }
+      /* // [END btnstates] */
 
-	.btn:active {
-	  background-color: #9A1305;
-	}
-	<!-- // [END btnstates] -->
-  </style>
-</head>
-<body>
-  <button class="btn" tabindex="1">Button 1</button>
-  
-  <button class="btn hover" tabindex="2">Button 2</button>
-  
-  <button class="btn active" tabindex="3">Button 3</button>
-  
-  <button class="btn focus" tabindex="4">Button 4</button>
-</body>
+      /* // [START webkit-specific] */
+      /* Webkit / Chrome Specific CSS to remove tap 
+      highlight color */
+      .btn {
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* // [END webkit-specific] */
+
+      /* // [START ff-specific] */
+      /* Firefox Specific CSS to remove button 
+      differences and focus ring */
+      .btn {
+        background-image: none;
+      }
+
+      .btn::-moz-focus-inner {
+        border: 0;
+      }
+      /* // [END ff-specific] */
+    </style>
+  </head>
+
+  <body>
+    <button class="btn" tabindex="1">Button 1</button>
+    
+    <button class="btn hover" tabindex="2">Button 2</button>
+    
+    <button class="btn active" tabindex="3">Button 3</button>
+    
+    <button class="btn focus" tabindex="4">Button 4</button>
+
+    <!-- // [TEMPLATE footer] -->
+  </body>
 </html>

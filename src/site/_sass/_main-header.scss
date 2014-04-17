@@ -10,7 +10,25 @@
 *
 **/
 
-.main-header__title,
-.main-header__slogan {
-  display: none;
+.main-header {
+  background: $colorGrayDark;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.main-header__title {
+  @include container;
+
+  @include type--large;
+  padding-top: $lineHeight/2;
+  padding-bottom: $lineHeight/2;
+
+  @include medium {
+    display: none;
+  }
+}
+
+.main-header__logo {
+  color: #ffffff;
 }

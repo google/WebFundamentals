@@ -1,0 +1,26 @@
+/**
+*
+* Breadcrumb
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumbs p {
+  @include type--small;
+}
+
+.breadcrumbs__link {
+  @include type--small;
+  color: black;
+  font-weight: 600;
+}

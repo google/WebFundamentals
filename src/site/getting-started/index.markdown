@@ -3,6 +3,7 @@ layout: default
 title: "Getting Started"
 description: ""
 ---
+{% wrap content%}
 
 # {{ page.title }}
 
@@ -14,7 +15,8 @@ We have created a number of tutorials and guides for you that will help you get 
 
 {% for guide in page.articles.getting-started %}
 {% class %}
-### [{{guide.title}}]({{guide.url}}) 
+### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}
+{% endwrap %}

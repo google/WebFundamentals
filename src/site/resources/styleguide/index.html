@@ -7,23 +7,40 @@ learning-list:
   - Lorem ipsum dolor sit amet
   - Fugit itaque sapiente earum quo expedita
   - labore aliquam cupiditate veritatis nihil
+article:
+  written_on: 2014-01-01
+  updated_on: 2014-01-06
+  order: 2
 collection: resources
 ---
 {% comment %}
 NOTE: This is our styleguide
 {% endcomment %}
 
+<div class="summary-header">
+  <div class="container">
+    <nav class="breadcrumbs">
+      <p>/<a href="#" class="breadcrumbs__link"> Resources</a></p>
+    </nav>
+    <h1 class="summary-header__title">Styleguide</h1>
+    <ul class="summary-header__anchor-list">
+      <li class="summary-header__anchors-item"><a href="#typography"><strong>#01</strong> Typography</a></li>
+      <li class="summary-header__anchors-item"><a href="#buttons"><strong>#02</strong> Buttons</a></li>
+      <li class="summary-header__anchors-item"><a href="#lists"><strong>#03</strong> Lists</a></li>
+      <li class="summary-header__anchors-item"><a href="#links"><strong>#04</strong> Links</a></li>
+      <li class="summary-header__anchors-item"><a href="#breadcrumbs"><strong>#05</strong> Breadcrumbs</a></li>
+      <li class="summary-header__anchors-item"><a href="#subsection-title"><strong>#06</strong> Subsection title</a></li>
+      <li class="summary-header__anchors-item"><a href="#grid"><strong>#07</strong> Grid</a></li>
+      <li class="summary-header__anchors-item"><a href="#modules"><strong>#08</strong> Modules</a></li>
+    </ul>
+  </div>
+</div>
 
 <div class="container">
 
-  <h1 class="styleguide__title">Styleguide</h1>
-
-  <h2>Components</h2>
-
-
   <a name="typography"></a>
   <section class="styleguide__typography">
-    <h3 class="styleguide__module-title">Typography</h3>
+    <h2 class="subsection-title"><strong class="subsection-number">#01</strong> Typography</h2>
     <p class="small">Lorem ipsum dolor sit amet.</p>
     <p class="base">Lorem ipsum dolor sit amet.</p>
     <p class="medium">Lorem ipsum dolor sit amet.</p>
@@ -37,7 +54,7 @@ NOTE: This is our styleguide
 
   <a name="buttons"></a>
   <section class="styleguide__buttons">
-    <h3 class="styleguide__module-title">Buttons</h3>
+    <h2 class="subsection-title"><strong class="subsection-number">#02</strong> Buttons</h2>
 
     <div>
       <h4>Primary</h4>
@@ -58,11 +75,11 @@ NOTE: This is our styleguide
 
   <a name="lists"></a>
   <section class="styleguide__lists">
-    <h3>Lists</h3>
-    <ul class="list">
-      <li class="list__item">Lorem ipsum dolor sit amet.</li>
-      <li class="list__item">Dicta optio cumque dolore hic ea facilis</li>
-      <li class="list__item">Minus, possimus, veniam, incidunt eligendi</li>
+    <h2 class="subsection-title"><strong class="subsection-number">#03</strong> Lists</h2>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Dicta optio cumque dolore hic ea facilis</li>
+      <li>Minus, possimus, veniam, incidunt eligendi</li>
     </ul>
 
     <ul class="list--links">
@@ -76,7 +93,7 @@ NOTE: This is our styleguide
 
   <a name="links"></a>
   <section class="styleguide__links">
-    <h3>Links</h3>
+    <h2 class="subsection-title"><strong class="subsection-number">#04</strong> Links</h2>
 
     <div>
       <h4>Primary</h4>
@@ -96,9 +113,29 @@ NOTE: This is our styleguide
 
   </section>
 
+  <a name="breadcrumbs"></a>
+  <section class="styleguide__breadcrumb">
+    <h2 class="subsection-title"><strong class="subsection-number">#05</strong> Breadcrumbs</h2>
+
+    <nav class="breadcrumbs">
+      <p><a href="#" class="breadcrumbs__link">Link 1</a> > <a href="#" class="breadcrumbs__link">Link 2</a> > <a href="#" class="breadcrumbs__link">Link 3</a> > <a href="#" class="breadcrumbs__link">Link 4</a> </p>
+    </nav>
+
+  </section>
+
+  <a name="subsection-title"></a>
+  <section class="styleguide__subsection-title">
+    <h2 class="subsection-title"><strong class="subsection-number">#06</strong> Subsection title</h2>
+
+    <div class="styleguide__inverted-block">
+      <h2 class="subsection-title"><strong class="subsection-number">#01</strong> Set the viewport</h2>
+    </div>
+
+  </section>
+
   <a name="grid"></a>
   <section class="styleguide__grid">
-    <h3 class="styleguide__module-title">Grid</h3>
+    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Grid</h2>
 
     <div class="clear demo">
       <div class="g-medium--half g-wide--1"></div>
@@ -161,7 +198,8 @@ NOTE: This is our styleguide
 
   </section>
 
-  <h2>Modules</h2>
+  <a name="modules"></a>
+  <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Modules</h2>
 
   <h3 class="styleguide__module-title">Highlights</h3>
 
@@ -169,13 +207,13 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-  {% include modules/highlight.liquid position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+  {% include modules/highlight.liquid character="}" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
 
-  {% include modules/highlight.liquid title="Remember" list=page.learning-list %}
+  {% include modules/highlight.liquid character="?" title="Remember" list=page.learning-list %}
 
-  {% include modules/highlight.liquid position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
 
 </section>
 
@@ -188,7 +226,7 @@ NOTE: This is our styleguide
   <div class="editorial-header">
     <div class="container">
       <nav class="breadcrumbs">
-        <p><a href="#">The Essentials</a></p>
+        <p><a href="#" class="breadcrumbs__link">The Essentials</a></p>
       </nav>
 
       <h1 class="editorial-header__title">Layout Basics</h1>

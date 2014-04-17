@@ -11,45 +11,70 @@ module SampleBuilder
 		# TODO(ianbarber): Avoid having 3 identical functions maybe.
 		def self.header(site) 
 			if @@header.nil?
-				@@header = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
+				content = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
+				@@header = Liquid::Template.parse(content).render({"site" => site})
 			end
 			@@header
 		end
 
 		def self.header_full(site) 
 			if @@header_full.nil?
-				@@header_full = File.read(File.join(site.source, "_includes/sample_header_full.html"))
+				content = File.read(File.join(site.source, "_includes/sample_header_full.html"))
+				@@header_full = Liquid::Template.parse(content).render({"site" => site})
 			end
 			@@header_full
 		end
 
 		def self.footer(site) 
 			if @@footer.nil?
-				@@footer = File.read(File.join(site.source, "_includes/sample_footer.html"))
+				content = File.read(File.join(site.source, "_includes/sample_footer.html"))
+				@@footer = Liquid::Template.parse(content).render({"site" => site})
 			end
 			@@footer
 		end
+	end
+
+	class SampleAssetFile < Jekyll::StaticFile
+		def initialize(site, dest, path, file, newpath)
+			super(site, dest, path, file)
+			@newpath = newpath
+			@file = file
+		end
+
+		def destination(dest)
+			#Jekyll.logger.info "here #{@file}"
+     		File.join(dest, @newpath, @file)
+   		end
 	end
 
 	class SampleFile < Jekyll::StaticFile
 		def initialize(site, dest, path, file, contents)
 			super(site, dest, path, file)
 			@contents = contents
+			@path = path
 			@filename = file
 		end
 
-		def filename 
-			@filename
+		def title
+			if @contents =~ /\<title\>([^\<]+)\</m
+				$1
+			else
+				@filename
+			end
+		end
+
+		def url
+			File.join(@path, @filename)
 		end
 
   		def write(dest)
   			dest_path = destination(dest)
   			dirname = File.dirname(dest_path)
       		FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
-			file = File.new(dest_path, "w")
+			file = File.new(dest_path.sub('.html', '.jshtml'), "w")
 			file.write(@contents)
 			file.close
-			Jekyll.logger.info dest_path
+			#Jekyll.logger.info dest_path
   			true
   		end
   	end
@@ -104,9 +129,21 @@ module SampleBuilder
 			end
 			
 			dirs.each do |dir|
-				Dir.glob(dir + "/*.html").each do |sourcepath| 
-					# TODO(ianbarber): This will need to maintain structure!
-				  	pages << Sample.new(site, sourcepath, dirPaths[dir])
+				Dir.glob(dir + "/*").each do |sourcepath|
+					#Jekyll.logger.info sourcepath
+					if sourcepath =~ /\.html/
+						pages << Sample.new(site, sourcepath, dirPaths[dir])
+					else
+						codepath = File.join(dirPaths[dir], "/_code")
+						prefix, relative_path = sourcepath.split(codepath)
+
+						site.static_files << SampleAssetFile.new(
+							site, 
+							site.source, 
+							File.dirname(File.join(codepath, relative_path)),
+							File.basename(sourcepath), 
+							File.dirname(File.join(dirPaths[dir], relative_path)))
+					end
 				end
 			end
 
@@ -116,9 +153,6 @@ module SampleBuilder
 				location = File.join(gen_dir, filename)
 				site.static_files << SampleFile.new(site, site.dest, File.dirname(location), File.basename(filename), page.contents)
 		  	end
-
-		  	# Copy static template files.
-		  	site.static_files << Jekyll::StaticFile.new(site, path, "resources/samples/css", "base.css")
 		end
 	end
 
@@ -128,16 +162,18 @@ module SampleBuilder
 	    end
 
 	    def render(context)
-		   samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
-		   samples.each{ |sample| render_sample(sample) }.join("\n")
+	    	#TODO(ianbarber): It would be nice to have stable ordering here
+			samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
+		    links = samples.map{ |sample| render_sample(sample) }
+		    "<ul>" +
+		    links.join("\n") +
+		    "</ul>"
 	    end
 
 	    def render_sample(sample)
-	      <<-END
-	      <p>
-	        #{sample.filename()}
-	      </p>
-	      END
+	    	url = sample.url
+	    	name = sample.title
+	      "<li><a href='/#{url}'>#{name}</a></li>"
 	    end
 	end
 end
