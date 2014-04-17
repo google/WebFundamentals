@@ -1135,18 +1135,18 @@ body.debug:after {
   }
 }
 
-/* line 171, ../_sass/_main-navigation.scss */
+/* line 170, ../_sass/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 171, ../_sass/_main-navigation.scss */
+  /* line 170, ../_sass/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 179, ../_sass/_main-navigation.scss */
+/* line 178, ../_sass/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }

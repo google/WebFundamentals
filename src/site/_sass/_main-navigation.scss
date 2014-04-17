@@ -54,7 +54,7 @@
     }
   }
 
-  // Remove the margin-top apart from first-child
+  // Remove the padding-top apart from first-child
   &:first-child ~ .main-nav__item {
     padding-top: 0;
   }
@@ -166,7 +166,6 @@
     border-bottom: 1px solid $colorGray;
   }
 }
-
 
 .main-nav__featured {
   display: none;
