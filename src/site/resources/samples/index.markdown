@@ -1,11 +1,19 @@
 ---
 layout: default
 title: "Samples"
-description: ""
+description: "A list of all the samples created"
+article:
+  written_on: 2014-01-01
+  updated_on: 2014-01-06
+  order: 1
+collection: resources
 ---
+{% wrap content%}
 
 # {{ page.title }}
 
-This page lists all of the code samples used for the snippets throughout these pages. 
+This page lists all of the code samples used for the snippets throughout these pages.
 
 {% list_samples %}
+
+{% endwrap %}

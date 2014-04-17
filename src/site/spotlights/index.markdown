@@ -3,6 +3,8 @@ layout: default
 title: "Showcases"
 description: ""
 ---
+{% wrap content%}
+
 # {{page.title}}
 
 ## Showcases
@@ -15,3 +17,4 @@ description: ""
 {% for article in page.articles.spotlight %}
 *  [{{article.title}}]({{article.url}})
 {% endfor %}
+{% endwrap %}
