@@ -3,24 +3,27 @@ layout: default
 title: Home
 class: home
 ---
+
+{% wrap content%}
+
 <!-- This will be automatically generated based off Jekyll configuration -->
 <section class="section">
   <h1 class="section__title">Web Essentials</h1>
   <p>Some introduction</p>
 
-  <!-- SPOT LIGHT 
+  <!-- SPOT LIGHT
    <div>
     <h2>Spotlight</h2>
     <div>Something Jazzy here</div>
   </div>
   -->
-  
+
   <form action="results.html" method="GET">
 	<label for="q">Search</label>
 	<input type="search" name="q" id="q" placeholder="Search">
 	<input type="submit" value="Search">
   </form>
-  
+
   <div>
     <h2><a href="/getting-started/">Getting Started</a></h2>
     <p>Use our 15 minute getting started guide to <a href="/getting-started/multi-screen/">build your first multi-screen page</a>.
@@ -64,3 +67,4 @@ class: home
 
 </section>
  -->
+{% endwrap %}

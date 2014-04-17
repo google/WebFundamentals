@@ -11,6 +11,9 @@ collection: multi-device-layouts
 
 {% wrap content%}
 
+* Table of Contents
+{:toc}
+
 Layout patterns (mattgaunt)
     The Stack
     Dashboard

@@ -9,6 +9,8 @@ article:
   order: 1
 collection: the-essentials
 ---
+{% wrap content%}
+
 # {{page.title}}
 
  What is mobile-first web design
@@ -106,3 +108,5 @@ Can you make an assumption that a smartphone is on a high-latency 3g network?
 No.
 
 [Links to illyas section]
+
+{% endwrap %}
