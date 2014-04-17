@@ -285,30 +285,34 @@ In most cases targetTouches will do everything you need.
 
 Once you have the coordinates, what do you do with them?
 
-### How to Use the Touch Events
+### How to Efficiently Use Touch Events
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.touch-events %}
 
 Since the event callbacks are fired on the main thread, we want to run 
-as little code as possible in the callback. The best practice is to use requestAnimationFrame to change the UI which you can call in the move events.
+as little code as possible in the callback to keep our frame rate high, 
+preventing jank. The best practice is to make use of requestAnimationFrame's when 
+altering the UI.
 
-The common practice is to use the x and y coordinates in the start and
-move gestures and start the requestionAnimationFrame in the move method.
+A typical implementation is to save the x and y coordinates from the start and
+move events and request an animation frame in the move event callback.
 
-Inside of **handleGestureStart** we store the initial touch position in our
-object:
+In our demo we store the initial touch position in **handleGestureStart**.
 
 {%include_code _code/touch-demo-2.html stash-start javascript %}
 
-The **handleGestureMove** method stores the Y value and we start a requestAnimationFrame if we need to, passing in our **onAnimFrame** function.
+The **handleGestureMove** method stores the Y position before requesting an
+animation frame if we need to, passing in our **onAnimFrame** function as 
+the callback.
 
 {%include_code _code/touch-demo-2.html handle-move javascript %}
 
 It's in the **onAnimFrame** function that we change our UI to move the
 elements around.
 
-We firstly check if the gesture is still on-going to determine whether should still animate, if so we use our initial and last Y positions to figure out the new 
-transform for out element.
+Initially we check to see if the gesture is still on-going to determine whether 
+we should still animate or not, if so we use our initial and last Y positions 
+to calculate the new transform for our element.
 
 Once we've set the transform, we set the isAnimating variable to false so the
 next touch event will request a new animation frame.
@@ -343,7 +347,7 @@ element:
 
 {%include_code _code/touch-demo-1.html touch-action-example css %}
 
-Pan-X and Pan-Y are great for being explicit in your intention for what you
-expect the interaction's to be like.
+Pan-X and Pan-Y are great for being explicit in your intention that a user
+should only ever scroll vertically or horizontally on an element.
 
 {% endwrap %}
