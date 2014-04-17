@@ -64,6 +64,12 @@ Styles for Headings
 
 {% include_code _code/test.css somecss css %}
 
+### Link to sample
+
+  {{ "&#123;% link_sample _code/test.html %&#125;See sample&#123;% endlink_sample %&#125;" }}  
+
+{% link_sample _code/test.html %}See sample{% endlink_sample %}
+
 ## Callouts
 
 Using Callouts in your doc is easy.
