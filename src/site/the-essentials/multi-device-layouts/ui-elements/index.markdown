@@ -11,8 +11,7 @@ description: ""
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Page currently blank
 

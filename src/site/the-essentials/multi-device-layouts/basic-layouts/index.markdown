@@ -11,8 +11,7 @@ collection: multi-device-layouts
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Page left intentionally blank
 

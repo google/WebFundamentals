@@ -21,8 +21,7 @@ collection: user-input
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Have you ever touched or clicked an element on a web page and questioned whether
 the site actually detected you?
