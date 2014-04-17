@@ -15,7 +15,7 @@ We have created a number of tutorials and guides for you that will help you get 
 
 {% for guide in page.articles.getting-started %}
 {% class %}
-### [{{guide.title}}]({{site.baseurl}}/{{guide.url}})
+### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}
