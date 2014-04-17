@@ -22,6 +22,9 @@ deploy: build
 server:
 	cd ./src/site && jekyll serve -w --port=8081 --trace $(param1)
 
+devsite:
+	cd ./src/site && jekyll build $(param1)	--config _config-devsite.yml
+
 optimize:
 	@find . -iname *.png | xargs -L 1 optipng -o7
 

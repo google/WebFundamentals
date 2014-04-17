@@ -1,0 +1,14 @@
+safe: false
+port: 8081
+source: .
+destination: ../appengine/build/static
+markdown: kramdown
+permalink: /articles/:title.html
+baseurl: /web/rarararar
+url: /web/rararar
+pygments: false
+custom:
+kramdown:
+  toc_levels: "2,3,4"
+include: ['.htaccess']
+exclude: ['config.rb']
