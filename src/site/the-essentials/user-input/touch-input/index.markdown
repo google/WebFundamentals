@@ -257,119 +257,33 @@ the next touch event, a new requestAnimationFrame will be fired.
 
 {%include_code _code/touch-demo-2.html on-anim-frame javascript %}
 
-**Touch-Action
+## Touch-Action
+<!-- demo http://jsbin.com/cekibuzo/1/edit -->
 
-Touch-action allows you to determine the behaviour an element has without
-needing to implement touch events.
+Touch-action allows you to define how an element reacts to touch in a general
+sense, without need to implement touch.
 
-An example is a long scrolling page designed to fit on mobile, but has an image
-expanding off the screen, this would normally mean the user can scroll
-horizontally off screen, to guard against this, you can use touch-action: pan-y
-as a last resort to prevent this.
+The properties you can use are:
 
-See: http://jsbin.com/cekibuzo/1/edit
+touch-action: [auto | none | pan-x | pan-y]
 
-pan-x means you ca scroll vertically, auto allows the browser to determine the
-behaviour and finally touch-action none means the browser will no intercept the
-touches, allowing you to consume all the events in javascript.
+Setting these properties will have the following affect:
 
-auto | none | [pan-x || pan-y]
+- touch-action: auto
+  - Will work as normal, touching will allow scroll horizontally and vertically
+- touch-action: none
+  - No scrolling will be allowed on touch
+- touch-action: pan-x
+  - This will allow the horizontal scrolling, but disable verical scrolling
+- touch-action: pan-y
+  - This will perform the opposite of the pan-x and allow vertical scrolling only
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+In both of our examples, we use touch-action to filter all touch events down on to
+the element:
 
----
+{%include_code _code/touch-demo-1.html touch-action-example css %}
 
-# EVERYTHING BEYOND THIS IS NEEDS REMOVING OR INCLUDING
-
-## Pointer Events
- Demo: <See Previous Sections???>
-
-Windows Phone does not support touch events, but uses Pointer Events to handle
-any interaction on the screen (i.e. mouse and touch are treated as the same
-point events).
-
-To start with, we need to tell the browser whether we are handling the touch
-interaction or not:
-
-  // Pass all touches to javascript
-  touch-action: none;
-  -ms-touch-action: none;
-
-Next is to determine whether we are going to use pointer events or touch events:
-
-if (window.navigator.msPointerEnabled) {
-    // Use Pointer Events
-    …..
-  } else {
-    // Add Touch Listener
-    …..
-    // Add Mouse Listener
-    ….
-  }
-
-From this we start to follow the same behaviour as before but using different
-pointer names:
-
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Touch / Mouse Event Name</td>
-<td>Point Event Name</td>
-</tr>
-<tr>
-<td>touchstart / mousedown</td>
-<td>MSPointerDown</td>
-</tr>
-<tr>
-<td>touchmove / mousemove</td>
-<td>MSPointerMove</td>
-</tr>
-<tr>
-<td>touchend / touchcancel / mouseup</td>
-<td>MSPointerUp</td>
-</tr>
-</table>
-
-Note that the mouse event and touch events are merged into a single pointer
-event, this is one of the goals of Pointer Events, to make it easier to support
-input devices without have to worry about what the input is.
-
-This can be matched up to original logic for your touch logic:
-
-if (window.navigator.msPointerEnabled) {
-    // Pointer events are supported.
-    element.addEventListener('MSPointerDown', handleGestureStart, true);
-  } else {
-    // Add Touch Listener
-    element.addEventListener('touchstart', handleGestureStart, true);
-
-    // Add Mouse Listener
-    element.addEventListener('mousedown', handleGestureStart, true);
-  }
-
-Then the final piece to change is extracting the x and y values from the touch
-event. Pointer Events will have the properties clientX and clientY, which are
-equivalent to targetTouches[0].clientX and targetTouches[1].clientY.
-
-// Let's assume this is a mouse event first
-  var y = evt.screenY;
-
-  // Prefer touch events if we have them.
-  if (window.navigator.msPointerEnabled) {
-    y = evt.clientY;
-  } else if (evt.targetTouches && evt.targetTouches.length > 0) {
-    y = evt.targetTouches[0].clientY;
-  }
-
-This means Pointer Events are up and running with touch events.
-
-
+Pan-X and Pan-Y are great for being explicit in your intention for what you
+expect the interaction's to be like.
 
 {% endwrap %}
