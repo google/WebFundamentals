@@ -7,6 +7,6 @@ permalink: /articles/:title.html
 pygments: false
 custom:
 kramdown:
-  toc_levels: "2,3,4"
+  toc_levels: "2"
 include: ['.htaccess']
 exclude: ['config.rb']
