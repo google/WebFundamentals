@@ -409,7 +409,7 @@ the Roboto font at 1em works perfectly giving 10 words per line, but larger
 screens will require a breakpoint. In this case, if the browser width is greater 
 than 575px, the ideal content width is 550px.
 
-{% include_code _code/reading.css mqreading css %}
+{% include_code _code/reading.html mqreading css %}
 
 ### Never completely hide content
 
