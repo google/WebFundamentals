@@ -84,6 +84,9 @@ remember:
 
 </style>
 
+* Table of Contents
+{:toc}
+
 There is a multitude of different screen sizes across phones, "phablets", 
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always 
 be changing, so it's important that your site can adapt to any screen size, 

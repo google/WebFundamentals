@@ -72,6 +72,9 @@ key-takeaways:
 
 {% wrap content%}
 
+* Table of Contents
+{:toc}
+
 What does a modern web application look like? [HTTP 
 Archive](http://httparchive.org/) can help us answer this question. The project 
 tracks how the web is built by periodically crawling the most popular sites 

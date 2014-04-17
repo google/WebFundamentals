@@ -142,6 +142,9 @@ remember:
 
 </style>
 
+* Table of Contents
+{:toc}
+
 ## Label and name inputs properly
 
 {% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}

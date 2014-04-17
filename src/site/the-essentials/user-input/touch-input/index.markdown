@@ -16,6 +16,9 @@ collection: user-input
 
 {% wrap content%}
 
+* Table of Contents
+{:toc}
+
 # Touch Input
 
 Have you ever touched or clicked an element on a web page and questioned whether

@@ -42,6 +42,9 @@ key-takeaways:
 ---
 {% wrap content%}
 
+* Table of Contents
+{:toc}
+
 Optimizing for performance is all about understanding what happens in these 
 intermediate steps between receiving the HTML, CSS, and JavaScript bytes and the 
 required processing to turn them into rendered pixels - that's the **critical 
