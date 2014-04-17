@@ -128,9 +128,12 @@
 
 
     <script type="text/javascript">
-      var form;
+      var form, racSubject, racMessage;
       
       function initForm() {
+        racSubject = document.getElementById("racSubject");
+        racMessage = document.getElementById("racMessage");
+        
         var doRAC = document.getElementById("doRAC");
         doRAC.addEventListener("click", doRequestAutocomplete);
 
@@ -138,13 +141,31 @@
         form.addEventListener("autocompleteerror", requestAutocompleteError);
         form.addEventListener("autocomplete", requestAutocompleteCompleted);
  
-        updateUI(form.requestAutocomplete);
+        //updateUI(form.requestAutocomplete);
+        if (form.requestAutocomplete) {
+          isRACSupported(true, "");
+        } else {
+          isRACSupported(false, "Please complete the form manually.");
+        }
       }
 
+      function isRACSupported(supported, message) {
+        if (supported === true) {
+          racSubject.innerText = "requestAutocomplete is supported!";
+          form.classList.toggle("hidden", true);
+          doRAC.classList.toggle("hidden", false);
+        } else {
+          racSubject.innerText = "Sorry, requestAutocomplete isn't supported.";
+          form.classList.toggle("hidden", false);
+          doRAC.classList.toggle("hidden", true);
+        }
+        racMessage.innerText = message;
+      }
+
+      /*
       function updateUI(mode) {
         console.log("updateUI", mode, mode==true)
-        var racSubject = document.getElementById("racSubject");
-        var racMessage = document.getElementById("racMessage");
+        
         if (mode === undefined) {
           racSubject.innerText = "Sorry, requestAutocomplete isn't supported.";
           racMessage.innerText = "Please complete the form manually.";
@@ -166,6 +187,7 @@
           form.classList.toggle("hidden", true);
         }
       }
+      */
 
       function doRequestAutocomplete(evt) {
         console.log("doRequestAutocomplete", evt);
@@ -174,12 +196,12 @@
 
       function requestAutocompleteError(evt) {
         console.log("requestAutocomplete Error", evt);
-        updateUI("error");
+        isRACSupported(false, "An error occured attempting to autocomplete the form.");
       }
 
       function requestAutocompleteCompleted(evt) {
         console.log("requestAutocomplete Completed", evt);
-        updateUI("completed");
+        form.classList.toggle("hidden", false);
       }
 
       initForm();

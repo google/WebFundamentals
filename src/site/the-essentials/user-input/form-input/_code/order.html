@@ -21,13 +21,11 @@
       <form method="post" action="/confirm" id="usrForm">
         <fieldset>
           <legend>Contact Info</legend>
-          <!-- // [START labels] -->
           <!-- // [START autocomplete] -->
           <label for="frmNameA">Name</label>
           <input type="text" name="name" id="frmName" 
           placeholder="Full name" required autocomplete="name" />
-          <!-- // [END labels] -->
-           
+
           <label for="frmEmailA">E-mail</label>
           <input type="email" name="e-mail" id="frmEmailA" 
             placeholder="name@example.com" required autocomplete="email" />
@@ -59,10 +57,11 @@
 
         <fieldset>
           <legend>Shipping</legend>
-        
+          <!-- // [START labels] -->
           <label for="frmAddressS">Address</label>
           <input type="text" name="ship-address" required id="frmAddressS" 
             placeholder="123 Any Street" autocomplete="shipping street-address" />
+          <!-- // [END labels] -->
            
           <label for="frmCityS">City</label>
           <input type="text" name="ship-city" required id="frmCityS" 
