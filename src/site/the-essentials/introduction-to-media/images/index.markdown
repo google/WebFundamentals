@@ -863,7 +863,7 @@ automation and templating..
   alternatives.
 * Use lazy loading where appropriate.
 
-{% end %}
+{% endclass %}
 
 ### Choosing alternative images with JavaScript and server-side scripting
 
