@@ -7,18 +7,21 @@
     <link rel="stylesheet" type="text/css" href="simple.css">
     <style type="text/css">
 
-      body {
-        font-family: Roboto, Arial;
-      }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
 
       .hidden {
         display: none;
       }
 
 
-body {
-  font-family: Roboto, sans-serif;
-}
+
 
 input,
 optgroup,
@@ -184,7 +187,7 @@ fieldset[disabled] .checkbox-inline {
 }
 
 
-@media (max-width: 400) {
+@media (min-width: 400) {
   fieldset {
     width: 100%;
   }
