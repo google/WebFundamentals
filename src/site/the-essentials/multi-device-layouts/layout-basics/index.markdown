@@ -9,6 +9,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 1
+rel:
+  gplusauthor: https://plus.google.com/+PeteLePage
 collection: multi-device-layouts
 key-takeaways:
   set-viewport:
@@ -33,6 +35,11 @@ remember:
     - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
 ---
 {% wrap content %}
+
+<!-- TODO[PETELE] add related items -->
+<!-- TODO[PETELE] add what's next -->
+<!-- TODO[PETELE] remove temp styles -->
+<!-- TODO[PETELE] change sxs images to grids -->
 
 <style type="text/css">
   video {
@@ -105,8 +112,6 @@ in two columns.
 
 ## Set the viewport
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.set-viewport %}
-
 Pages optimized for a variety of devices must include a meta viewport element in 
 the head of the document.  A meta viewport tag gives the browser instructions on 
 how to control the page's dimensions and scaling.
@@ -148,9 +153,9 @@ In addition to setting an `initial-scale`, you can also set the `minimum-scale`,
 can disable the user's ability to zoom the viewport, potentially causing 
 accessibility issues.
 
-# Size content to the viewport
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.set-viewport %}
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %} 
+## Size content to the viewport
 
 On both desktop and mobile devices, users are used to scrolling websites 
 vertically but not horizontally, and forcing the user to scroll horizontally or 
@@ -178,9 +183,9 @@ viewport on small screens.
   <img src="imgs/sxs-vp-fixed.png" class="wide" alt="Side by side view of a page with a fixed with element and an element at 100% width." />
 </figure>
 
-## Use CSS Media Queries For Responsiveness 
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %} 
 
-{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.media-queries %}
+## Use CSS Media Queries For Responsiveness 
 
 Media queries are simple filters that can be applied to CSS styles.  They make 
 it easy to change styles based on the characteristics of the device rendering 
@@ -318,9 +323,10 @@ page.
   </div>
 </div>
 
-## How to choose breakpoints
+{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.media-queries %}
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.choose-breakpoints %}
+
+## How to choose breakpoints
 
 While it may be helpful to think about defining breakpoints based on device 
 classes, use caution.  Defining breakpoints based on specific devices, products, 
@@ -419,5 +425,7 @@ is not a definitive indication of what a user may want.  For example,
 eliminating the pollen count from the weather forecast could be a serious issue 
 for spring time allergy sufferers who need the information to determine if they 
 can go outside or not.
+
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.choose-breakpoints %}
 
 {% endwrap %}
