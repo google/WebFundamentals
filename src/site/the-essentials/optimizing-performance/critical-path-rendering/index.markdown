@@ -561,7 +561,7 @@ and extract our code into a separate file:
     loadTime.style.color = 'blue';
     document.body.appendChild(loadTime);
 
-Would you expect the execution order to be any different when we use a <script> 
+Would you expect the execution order to be any different when we use a `<script>` 
 tag instead of using an inline JavaScript snippet? Of course, the answer is "no" 
 as they are identical and should behave in the same way. In both cases the 
 browser will have to pause and execute the script before it can process the 
@@ -602,16 +602,11 @@ not block the DOM construction while it waits for the script to become available
 Alternatively, you will also often see the following pattern for inserting an 
 "async script":
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td><script>
-  var script = document.createElement('script');
-  script.src = "...";
-  document.getElementsByTagName('head')[0].appendChild(script);
-</script></td>
-</tr>
-</table>
+  <script>
+    var script = document.createElement('script');
+    script.src = "...";
+    document.getElementsByTagName('head')[0].appendChild(script);
+  </script>
 
 This one is a bit tricky. First, obviously the snippet itself is an inline 
 script, and we know that it will block DOM construction while it is being 

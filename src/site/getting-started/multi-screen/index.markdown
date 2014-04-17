@@ -157,7 +157,7 @@ complete later.
 ### Add Section 1
 
 The first section of content will contain a bulleted list of features of our products
-and will also contain a v
+and will also contain a video.
 
 {% include_code _code/addcontent.html section1 %}
 
@@ -165,11 +165,15 @@ and will also contain a v
 
 ### Add Section 2
 
+The next section is a collection of images that we will use that demonstrate our project.
+
 {% include_code _code/addcontent.html section2 %}
 
 [TODO: Add Image]
 
 ### Add Section 3
+
+The final section is a simple table that is used to show specific product stats about the project.
 
 {% include_code _code/addcontent.html section3 %}
 
@@ -177,11 +181,18 @@ and will also contain a v
 
 ### Add Footer
 
+Most sites universally need a footer.
+
 {% include_code _code/addcontent.html footer %}
 
 [TODO: Add Image]
 
 ## Styling
+
+We have assumed a set of styles
+
+{% include_code _code/content-with-styles.html style %}
+
 
 ## Create a great form
 
