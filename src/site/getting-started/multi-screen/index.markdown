@@ -153,6 +153,9 @@ complete later.
 
 ### Add Section 1
 
+The first section of content will contain a bulleted list of features of our products
+and will also contain a v
+
 {% include_code _code/addcontent.html section1 %}
 
 [TODO: Add Image]
