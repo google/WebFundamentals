@@ -12,7 +12,7 @@ article:
   updated_on: 2014-01-06
   order: 3
 collection: resources
-key-takeaway:
+key-takeaways:
   use-keytakeaway:
     - It is pretty simple to add in a key takeaway
 ---
@@ -69,17 +69,14 @@ Using Callouts in your doc is easy.
 
     {{ "{% include modules/takeaway.liquid" }}
     	title='Key Takeaway' 
-    	list=page.key-takeaways.provide-real-time-validation %}
+    	list=page.key-takeaways.use-keytakeaway %}
 
 In your Article YAML Preamble
 
-    key-takeaway:
+    key-takeaways:
 	  use-keytakeaway:
 	    - It is pretty simple to add in a key takeaway
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.provide-real-time-validation %}
-
-
-
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.use-keytakeaway %}
 
 {% endwrap %}
