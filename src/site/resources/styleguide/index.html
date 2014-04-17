@@ -26,8 +26,9 @@ NOTE: This is our styleguide
       <li class="summary-header__anchors-item"><a href="#links"><strong>#04</strong> Links</a></li>
       <li class="summary-header__anchors-item"><a href="#breadcrumbs"><strong>#05</strong> Breadcrumbs</a></li>
       <li class="summary-header__anchors-item"><a href="#subsection-title"><strong>#06</strong> Subsection title</a></li>
-      <li class="summary-header__anchors-item"><a href="#grid"><strong>#07</strong> Grid</a></li>
-      <li class="summary-header__anchors-item"><a href="#modules"><strong>#08</strong> Modules</a></li>
+      <li class="summary-header__anchors-item"><a href="#table"><strong>#07</strong> Table</a></li>
+      <li class="summary-header__anchors-item"><a href="#grid"><strong>#08</strong> Grid</a></li>
+      <li class="summary-header__anchors-item"><a href="#modules"><strong>#09</strong> Modules</a></li>
     </ul>
   </div>
 </div>
@@ -129,9 +130,72 @@ NOTE: This is our styleguide
 
   </section>
 
+  <a name="table"></a>
+  <section class="styleguide__table">
+    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Table</h2>
+
+    <table class="table table--3">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`preload`</td>
+          <td data-th="availability">All mobile browsers ignore preload.</td>
+          <td data-th="description">Hints to the browser that loading part of a video in advance of playback is worthwhile. Options are none, metadata, or auto (see Preload section for details). </td>
+        </tr>
+        <tr>
+          <td data-th="element">`autoplay`</td>
+          <td data-th="availability">Not supported on iPhone or Chrome for Android; supported on all desktop browsers, iPad, Firefox and Opera for Android.</td>
+          <td data-th="description">Tells the browser to immediately start downloading the video and play it as soon as it can (see Autoplay). </td>
+        </tr>
+        <tr>
+          <td data-th="element">`loop`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Tells the browser to automatically loop the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`controls`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Shows the default video controls (play, pause, etc.)</td>
+        </tr>
+        <tr>
+          <td data-th="element">`width`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Returns the width of the video in pixels.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`height`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Returns the height of the video in pixels.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
   <a name="grid"></a>
   <section class="styleguide__grid">
-    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Grid</h2>
+    <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Grid</h2>
 
     <div class="clear demo">
       <div class="g-medium--half g-wide--1"></div>
@@ -195,7 +259,7 @@ NOTE: This is our styleguide
   </section>
 
   <a name="modules"></a>
-  <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Modules</h2>
+  <h2 class="subsection-title"><strong class="subsection-number">#09</strong> Modules</h2>
 
   <h3 class="styleguide__module-title">Highlights</h3>
 
@@ -203,13 +267,13 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="remember" %}
 
   {% include modules/highlight.liquid character="}" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
 
-  {% include modules/highlight.liquid character="?" title="Remember" list=page.learning-list %}
+  {% include modules/highlight.liquid character="?" title="Remember" list=page.learning-list type="remember" %}
 
-  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" type="remember" %}
 
 </section>
 
