@@ -3,7 +3,7 @@
   <ul class="main-nav__list clear">
   {% for section in page.content.toc %}
     <li class="main-nav__item {% if section.logo %} main-nav__item--logo {% endif %}">
-      <a class="main-nav__link" href="{{site.baseurl}}/{{ section.path }}" title="{{ section.title }}">
+      <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="{{ section.title }}">
         {{ section.title }}
       </a>
 
@@ -17,7 +17,7 @@
             <ul class="main-nav__list--child">
               {% for subsection in section.section %}
                 <li class="main-nav__item--child">
-                  <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}/{{ subsection.path }}">{{ subsection.title }}</a>
+                  <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">{{ subsection.title }}</a>
                 </li>
               {% endfor %}
             </ul>
