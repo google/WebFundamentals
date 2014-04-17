@@ -71,6 +71,9 @@ module SampleBuilder
   			dest_path = destination(dest)
   			dirname = File.dirname(dest_path)
       		FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
+      		file = File.new(dest_path, "w")
+			file.write(@contents)
+			file.close
 			file = File.new(dest_path.sub('.html', '.jshtml'), "w")
 			file.write(@contents)
 			file.close
@@ -164,16 +167,16 @@ module SampleBuilder
 	    def render(context)
 	    	#TODO(ianbarber): It would be nice to have stable ordering here
 			samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
-		    links = samples.map{ |sample| render_sample(sample) }
+		    links = samples.map{ |sample| render_sample(sample, context.registers[:site]) }
 		    "<ul>" +
 		    links.join("\n") +
 		    "</ul>"
 	    end
 
-	    def render_sample(sample)
-	    	url = sample.url
+	    def render_sample(sample, site)
+	    	url = File.join(site.baseurl, sample.url)
 	    	name = sample.title
-	      "<li><a href='/#{url}'>#{name}</a></li>"
+	      "<li><a href='#{url}'>#{name}</a></li>"
 	    end
 	end
 end
