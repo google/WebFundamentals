@@ -115,48 +115,55 @@ Finally, some mobile browsers will select text if the user long presses on the s
 
 {% include modules/remember.liquid title="Important" list=page.important.user-select %}
 
-# Touch events
+## Touch events
 <!-- Demo: http://jsbin.com/sozujute/latest/edit -->
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.touch-events %}
 
-If you have an idea for a new interaction pattern that you'd like to include
-touch support, how do you do it?
-
-## Receiving Touch Events
+### Receiving Touch Events
 
 For full browser support there are two kinds of events you need to cater for:
 
 - Touch Events
-  - These consist of touchstart, touchmove, touchend and touchcancel
+  - Consist of **touchstart**, **touchmove**, **touchend** and **touchcancel**
+- Mouse Events
+  - If it makes sense you can add mouse support with **mousedown**, 
+  **mousemove** and **mouseup**
 - Pointer Events
-  - This is a new feature which merges Mouse and Touch events into the same 
+  - A new set of events which merges mouse and touch events into one 
   set of events. This is currently only supported in IE10+ with the events: 
-  MSPointerDown, MSPointerMove and MSPointerUp
+  **MSPointerDown**, **MSPointerMove** and **MSPointerUp**
 
-The building blocks for adding touch to your application is these events:
+These events are the building blocks for adding new gestures into your application, below is a description of when they are called.
 
-* touchstart, MSPointerDown
-    * When a finger starts to touch an element
-* touchmove, MSPointerMove
-    * When a finger moves across the screen
-* touchend, MSPointerUp
-    * When the user lifts their finger off of the screen
-* touchcancel
-    * The browser cancels the touch gestures (for example the page scrolls and
-    browser no longer allows you to intercept touch events)
+#### touchstart, MSPointerDown, mousedown
+
+When a finger first touches an element or when the user clicks down on the mouse
+
+#### touchmove, MSPointerMove, mouse move
+
+The user moves their finger across the screen or drags with the mouse
+
+#### touchend, MSPointerUp, mouseup
+
+When the user lifts their finger off of the screen or releases the mouse button
+
+#### touchcancel
+
+The browser cancels the touch gestures (for example the page scrolls and
+browser no longer allows you to intercept the touch events)
+
+### Using Touch Events
 
 You hook these events up through the **addEventListener()** method of a DOM element
- like so.
+like so:
 
 {% include_code _code/touch-demo-1.html addlisteners javascript %}
 
-This code first checks if we should use Pointer Events or you touch and mouse events.
-We then add the event listener with the appropriate name, the callback we want called,
-in this case **this.handleGestureStart**.
+This code first checks if we should use **Pointer Events** by testing for _window.navigator.msPointerEnabled_ and if Pointer Events aren't supported, we add
+listeners for touch and mouse events.
 
-The third boolean value is used to determine whether you should catch the touch event 
-before or after other elements have the opportunity to catch and interpret the 
+The **addEventListener()** method takes the event name (_MSPointerDown_, _touchstart_ or _mousedown_ in this case), a callback function to call when the event happens and a boolean which determines whether you should catch the event before or after other elements have the opportunity to catch and interpret the 
 events.
 
 ### Common Practices
