@@ -1,0 +1,19 @@
+
+
+.container div {
+  margin: 0;
+  min-height: 150px;
+  min-width: 150px;
+}
+
+.c1 {
+  background-color: #003476;
+}
+
+.c2 {
+  background-color: #0062d2;
+}
+
+.c3 {
+  background-color: #b4d2f7;
+}
