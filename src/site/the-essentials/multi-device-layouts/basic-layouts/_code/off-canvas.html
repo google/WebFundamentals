@@ -6,29 +6,110 @@
     <style type="text/css">
 
       .container {
-        margin: 0;
-        padding: 0;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+      }
+
+      .c2 {
         width: 100%;
       }
 
+      .c1, .c3 {
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        
+        /*
+          This is a trick to improve performance on newer versions of Chrome
+          #perfmatters
+        */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden; 
+
+        -webkit-transition: -webkit-transform 0.4s ease-out;
+        transition: transform 0.4s ease-out;
+        
+        z-index:1;
+      }
+
       .c1 {
-        width: 250px;
+        /*
+        Using translate3d as a trick to improve performance on older versions of Chrome
+        See: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
+        #perfmatters
+        */
+        -webkit-transform: translate(-250px,0);
+        transform: translate(-250px,0);
       }
 
-      .c3 {
-        width: 250px;
+      .c1.open {
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
       }
 
+      .c3.open {
+        -webkit-transform: translate(-250px,0);
+        transform: translate(-250px,0);
+      }
+      
+      @media (min-width: 500px) {
+        .c1 {
+          position: relative;
+          -webkit-transition: none 0s ease-out;
+          transition: none 0s ease-out;
+          -webkit-transform: translate(0,0);
+          transform: translate(0,0);
+        }
+      }
 
+      @media (min-width: 800px) {
+        .c3, .c3.open {
+          position: relative;
+          -webkit-transition: none 0s ease-out;
+          transition: none 0s ease-out;
+          -webkit-transform: translate(0,0);
+          transform: translate(0,0);
+        }
+      }
+      
 
     </style>
     <title></title>
   </head>
   <body>
     <div class="container">
-      <div class="c1"></div>
-      <div class="c2"></div>
-      <div class="c3"></div>
+      <div class="c1" id="leftDrawer">
+      </div>
+      <div class="c2" id="mainPanel">
+        
+      </div>
+      <div class="c3" id="rightDrawer">
+      </div>
     </div>
+
+    <script type="text/javascript">
+      var position = 0;
+      var leftDrawer = document.getElementById("leftDrawer");
+      var rightDrawer = document.getElementById("rightDrawer");
+
+      function toggle(evt) {
+        position++;
+        if (position % 3 == 0) {
+          leftDrawer.classList.toggle("open", false);
+          rightDrawer.classList.toggle("open", false);
+        } else if (position % 3 == 1) {
+          leftDrawer.classList.toggle("open", true);
+          rightDrawer.classList.toggle("open", false);
+        } else {
+          leftDrawer.classList.toggle("open", false);
+          rightDrawer.classList.toggle("open", true);
+        }  
+      }
+
+      document.addEventListener("click", toggle);
+      
+    </script>
   </body>
 </html>
