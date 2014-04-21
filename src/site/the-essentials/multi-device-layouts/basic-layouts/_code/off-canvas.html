@@ -83,7 +83,6 @@
       <div class="c1" id="leftDrawer">
       </div>
       <div class="c2" id="mainPanel">
-        
       </div>
       <div class="c3" id="rightDrawer">
       </div>
@@ -91,24 +90,27 @@
 
     <script type="text/javascript">
       var position = 0;
+      var mainPanel = document.getElementById("mainPanel");
       var leftDrawer = document.getElementById("leftDrawer");
       var rightDrawer = document.getElementById("rightDrawer");
 
       function toggle(evt) {
         position++;
         if (position % 3 == 0) {
-          leftDrawer.classList.toggle("open", false);
-          rightDrawer.classList.toggle("open", false);
+          leftDrawer.classList.remove("open");
+          rightDrawer.classList.remove("open");
         } else if (position % 3 == 1) {
-          leftDrawer.classList.toggle("open", true);
-          rightDrawer.classList.toggle("open", false);
+          leftDrawer.classList.add("open");
+          rightDrawer.classList.remove("open");
         } else {
-          leftDrawer.classList.toggle("open", false);
-          rightDrawer.classList.toggle("open", true);
+          leftDrawer.classList.remove("open");
+          rightDrawer.classList.add("open");
         }  
       }
 
-      document.addEventListener("click", toggle);
+      mainPanel.addEventListener("click", toggle);
+      leftDrawer.addEventListener("click", toggle);
+      rightDrawer.addEventListener("click", toggle);
       
     </script>
   </body>
