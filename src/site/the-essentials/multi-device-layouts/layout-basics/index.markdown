@@ -39,12 +39,14 @@ remember:
 <!-- TODO[PETELE] add related items -->
 <!-- TODO[PETELE] add what's next -->
 <!-- TODO[PETELE] remove temp styles -->
-<!-- TODO[PETELE] change sxs images to grids -->
+<!-- TODO[PETELE] fixed broken links to some samples -->
 
 <style type="text/css">
+
   video {
     width: 100%;
   }
+
 
   img.wide {
     width: 100%;
@@ -54,39 +56,8 @@ remember:
     max-height: 500px;
   }
 
-  table {
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  thead {
-    font-weight: bold;
-  }
-
-  th, td{
-    text-align: left;
-    padding: 8px;
-  }
-
-  tbody > tr:nth-child(odd) {
-    background-color: #f5f5f5;
-  }
-
-  tr {
-    border-bottom: 1px solid #ddd;
-  }
-
-  .text-danger {
-    color: #a94442;
-  }
-
-  .text-success {
-    color: #3c763d;
-  }
-
-  .text-center {
-    text-align: center;
+  img.sxs {
+    width: 100%;
   }
 
 </style>
@@ -130,13 +101,15 @@ the screen's width in device independent pixels. This allows the page to reflow
 content to match different screen sizes, whether rendered on a small mobile 
 phone or a large desktop monitor.
 
-<figure>
-  <img src="imgs/sxs-vp.png" class="wide" alt="Side by side view of a page without a viewport set and one with the viewport set." />
-</figure>
+<div class="clear">
+  <div class="g--half">
+    <img src="imgs/no-vp.png" class="sxs" alt="Page without a viewport set">
+  </div>
 
-[View page without a viewport](vp-no.html)
-
-[View page with a viewport](vp.html)
+  <div class="g--half g--last">
+    <img src="imgs/vp.png" class="sxs" alt="Page with a viewport set">
+  </div>
+</div>
 
 Some browsers will keep the page's width constant when rotating to landscape 
 mode, and zoom rather than reflow to fill the screen. Adding the attribute 
@@ -179,9 +152,15 @@ using relative width values, such as `width: 100%`.  Similarly, beware of using
 large absolute positioning values that may cause the element to fall outside the 
 viewport on small screens.
 
-<figure>
-  <img src="imgs/sxs-vp-fixed.png" class="wide" alt="Side by side view of a page with a fixed with element and an element at 100% width." />
-</figure>
+<div class="clear">
+  <div class="g--half">
+    <img src="imgs/vp-fixed-iph.png" class="sxs" alt="Page with a 344px fixed width element on an iPhone.">
+  </div>
+
+  <div class="g--half g--last">
+    <img src="imgs/vp-fixed-n5.png" class="sxs" alt="Page with a 344px fixed width element on a Nexus 5.">
+  </div>
+</div>
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %} 
 
@@ -389,9 +368,15 @@ icons a bit larger.
 
 {% include_code _code/weather-small.css mqsmallbpsm css %}
 
-<figure>
-  <img src="imgs/weather-4.png" class="wide" alt="Before and after view of the page after minor breaks were added for small screens." />
-</figure>
+<div class="clear">
+  <div class="g--half">
+    <img src="imgs/weather-4-l.png" class="sxs" alt="Before adding minor breakpoints.">
+  </div>
+
+  <div class="g--half g--last">
+    <img src="imgs/weather-4-r.png" class="sxs" alt="After adding minor breakpoints.">
+  </div>
+</div>
 
 Similarly, for the large screens, it's best to limit to maximum width of the 
 forecast panel so it doesn't consume the whole screen width.
@@ -406,9 +391,15 @@ Classic readability theory suggests that an ideal column should contain 70 to 80
 characters per line (about  8 to 10 words in English), thus each time the width 
 of a text block grows past about 10 words, a breakpoint should be considered.  
 
-<figure>
-  <img src="imgs/reading.png" class="wide" alt="Preview of a page designed for optimum reading experiences." />
-</figure>
+<div class="clear">
+  <div class="g-wide--1 g-medium--half">
+    <img src="imgs/reading-ph.png" class="sxs"  alt="Before adding minor breakpoints.">
+  </div>
+
+  <div class="g-wide--3 g-wide--last g-medium--half g--last">
+    <img src="imgs/reading-de.png" class="sxs" alt="After adding minor breakpoints.">
+  </div>
+</div>
 
 Let's take a deeper look at the above blog post example.  On smaller screens, 
 the Roboto font at 1em works perfectly giving 10 words per line, but larger 

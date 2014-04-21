@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Responsive Design Patterns"
+title: "Responsive Web Design Patterns"
 introduction: "Responsive web design patterns are quickly evolving, but there
               are a handful of established patterns that work well across the 
               desktop and mobile devices."
