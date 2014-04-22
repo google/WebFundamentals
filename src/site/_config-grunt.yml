@@ -12,3 +12,4 @@ kramdown:
   toc_levels: "2"
 include: ['.htaccess']
 exclude: ['config.rb']
+include_open_html: true

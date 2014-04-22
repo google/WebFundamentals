@@ -1362,181 +1362,6 @@ body.debug:after {
 
 /**
 *
-* Table
-*
-* Google Web Essentials
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
-**/
-/* line 13, ../_sass/_modules/_table.scss */
-.table {
-  margin-top: 26px;
-  width: 100%;
-}
-/* line 17, ../_sass/_modules/_table.scss */
-.table thead {
-  background: #297ea9;
-  color: white;
-}
-/* line 22, ../_sass/_modules/_table.scss */
-.table th {
-  text-align: center;
-  display: none;
-  font-family: "Roboto Condensed", Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6250em;
-  /* 26px */
-  padding-top: 1.6250em;
-  padding-bottom: 0;
-}
-@media only screen and (min-width: 800px) {
-  /* line 22, ../_sass/_modules/_table.scss */
-  .table th {
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.3000em;
-    /* 26px */
-    padding-top: 1.3000em;
-    padding-bottom: 0;
-  }
-}
-@media only screen and (min-width: 620px) {
-  /* line 29, ../_sass/_modules/_table.scss */
-  .table tr {
-    border-bottom: 1px solid white;
-  }
-}
-/* line 36, ../_sass/_modules/_table.scss */
-.table tbody {
-  background: #f0f0f0;
-}
-/* line 40, ../_sass/_modules/_table.scss */
-.table td {
-  display: block;
-  padding-top: 13px;
-  padding-bottom: 13px;
-}
-/* line 45, ../_sass/_modules/_table.scss */
-.table td:before {
-  content: attr(data-th) " :";
-  display: inline-block;
-  color: white;
-  background: #297ea9;
-  border-right: 2px solid white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100px;
-  max-height: 100%;
-  font-family: "Roboto Condensed", Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  padding-left: 13px;
-  padding-top: 13px;
-}
-@media only screen and (min-width: 620px) {
-  /* line 45, ../_sass/_modules/_table.scss */
-  .table td:before {
-    display: none;
-  }
-}
-/* line 71, ../_sass/_modules/_table.scss */
-.table th,
-.table td {
-  position: relative;
-  padding-left: 140px;
-}
-@media only screen and (min-width: 620px) {
-  /* line 71, ../_sass/_modules/_table.scss */
-  .table th,
-  .table td {
-    display: table-cell;
-    padding: 26px;
-    padding-bottom: 25px;
-  }
-}
-
-/* line 83, ../_sass/_modules/_table.scss */
-td:last-child:after {
-  content: "";
-  display: block;
-  background: white;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-@media only screen and (min-width: 620px) {
-  /* line 83, ../_sass/_modules/_table.scss */
-  td:last-child:after {
-    display: none;
-  }
-}
-
-/* line 98, ../_sass/_modules/_table.scss */
-.table--2 col {
-  width: 344px;
-}
-@media only screen and (min-width: 800px) {
-  /* line 98, ../_sass/_modules/_table.scss */
-  .table--2 col {
-    width: 432px;
-  }
-}
-@media only screen and (min-width: 620px) {
-  /* line 108, ../_sass/_modules/_table.scss */
-  .table--2 th:first-child,
-  .table--2 td:first-child {
-    border-right: 2px solid white;
-  }
-}
-
-/* line 116, ../_sass/_modules/_table.scss */
-.table--3 col {
-  width: 229.33333px;
-}
-@media only screen and (min-width: 800px) {
-  /* line 116, ../_sass/_modules/_table.scss */
-  .table--3 col {
-    width: 288px;
-  }
-}
-@media only screen and (min-width: 620px) {
-  /* line 126, ../_sass/_modules/_table.scss */
-  .table--3 th:nth-child(2),
-  .table--3 td:nth-child(2) {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-  }
-}
-
-/* line 135, ../_sass/_modules/_table.scss */
-.table--4 col {
-  width: 172px;
-}
-@media only screen and (min-width: 800px) {
-  /* line 135, ../_sass/_modules/_table.scss */
-  .table--4 col {
-    width: 216px;
-  }
-}
-@media only screen and (min-width: 620px) {
-  /* line 146, ../_sass/_modules/_table.scss */
-  .table--4 th:nth-child(2), .table--4 th:nth-child(3),
-  .table--4 td:nth-child(2),
-  .table--4 td:nth-child(3) {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-  }
-}
-
-/**
-*
 * Articles section
 *
 * Google Web Essentials
@@ -2268,6 +2093,181 @@ a:hover {
 
 /**
 *
+* Table
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_table.scss */
+.table {
+  margin-top: 26px;
+  width: 100%;
+}
+/* line 17, ../_sass/_components/_table.scss */
+.table thead {
+  background: #297ea9;
+  color: white;
+}
+/* line 22, ../_sass/_components/_table.scss */
+.table th {
+  text-align: center;
+  display: none;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 800px) {
+  /* line 22, ../_sass/_components/_table.scss */
+  .table th {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 29, ../_sass/_components/_table.scss */
+  .table tr {
+    border-bottom: 1px solid white;
+  }
+}
+/* line 36, ../_sass/_components/_table.scss */
+.table tbody {
+  background: #f0f0f0;
+}
+/* line 40, ../_sass/_components/_table.scss */
+.table td {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+/* line 45, ../_sass/_components/_table.scss */
+.table td:before {
+  content: attr(data-th) " :";
+  display: inline-block;
+  color: white;
+  background: #297ea9;
+  border-right: 2px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  max-height: 100%;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 13px;
+  padding-top: 13px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 45, ../_sass/_components/_table.scss */
+  .table td:before {
+    display: none;
+  }
+}
+/* line 71, ../_sass/_components/_table.scss */
+.table th,
+.table td {
+  position: relative;
+  padding-left: 140px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 71, ../_sass/_components/_table.scss */
+  .table th,
+  .table td {
+    display: table-cell;
+    padding: 26px;
+    padding-bottom: 25px;
+  }
+}
+
+/* line 83, ../_sass/_components/_table.scss */
+td:last-child:after {
+  content: "";
+  display: block;
+  background: white;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 620px) {
+  /* line 83, ../_sass/_components/_table.scss */
+  td:last-child:after {
+    display: none;
+  }
+}
+
+/* line 98, ../_sass/_components/_table.scss */
+.table--2 col {
+  width: 344px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 98, ../_sass/_components/_table.scss */
+  .table--2 col {
+    width: 432px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 108, ../_sass/_components/_table.scss */
+  .table--2 th:first-child,
+  .table--2 td:first-child {
+    border-right: 2px solid white;
+  }
+}
+
+/* line 116, ../_sass/_components/_table.scss */
+.table--3 col {
+  width: 229.33333px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 116, ../_sass/_components/_table.scss */
+  .table--3 col {
+    width: 288px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 126, ../_sass/_components/_table.scss */
+  .table--3 th:nth-child(2),
+  .table--3 td:nth-child(2) {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+}
+
+/* line 135, ../_sass/_components/_table.scss */
+.table--4 col {
+  width: 172px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 135, ../_sass/_components/_table.scss */
+  .table--4 col {
+    width: 216px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 146, ../_sass/_components/_table.scss */
+  .table--4 th:nth-child(2), .table--4 th:nth-child(3),
+  .table--4 td:nth-child(2),
+  .table--4 td:nth-child(3) {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+}
+
+/**
+*
 * Breadcrumb
 *
 * Google Web Essentials
@@ -2472,14 +2472,6 @@ a:hover {
 .guides-list {
   overflow: hidden;
 }
-@media only screen and (min-width: 620px) {
-  /* line 14, ../_sass/_components/_guides-list.scss */
-  .guides-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
 
 /* line 24, ../_sass/_components/_guides-list.scss */
 .guides-list__item {
@@ -2487,14 +2479,6 @@ a:hover {
   background: #ffffff;
   margin-top: 26px;
   margin-bottom: 0;
-}
-@media only screen and (min-width: 620px) {
-  /* line 24, ../_sass/_components/_guides-list.scss */
-  .guides-list__item {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }
 /* line 36, ../_sass/_components/_guides-list.scss */
 .guides-list__item h3 {
@@ -2514,7 +2498,6 @@ a:hover {
   /* line 44, ../_sass/_components/_guides-list.scss */
   .guides-list__item ol {
     width: 100%;
-    align-self: flex-end;
   }
 }
 /* line 55, ../_sass/_components/_guides-list.scss */

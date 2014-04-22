@@ -15,9 +15,9 @@
   overflow: hidden;
 
   @include medium {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
   }
 }
 
@@ -28,9 +28,9 @@
   margin-bottom: 0;
 
   @include medium {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
   }
 
   h3 {
@@ -48,7 +48,7 @@
 
     @include medium {
       width: 100%; // needed due to parent being flex
-      align-self: flex-end;
+      // align-self: flex-end;
     }
   }
 
