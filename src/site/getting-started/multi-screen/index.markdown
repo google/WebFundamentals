@@ -44,15 +44,17 @@ collection: getting-started
 
 Building for multi-screen experiences is not as hard as it sounds. In this
 guide, we are going to create a simple landing page that shows you the basics of
-how to build using "Mobile First"(link to mobile first) design principles that
+how to build using "[Mobile First](link to mobile first)" design principles that
 will enable you to easily scale your experiences up from a mobile device through
-to a TV.  We will show you best practices for interacting with touch and mice,
-structuring your content across screen sizes.
+to a Desktop and beyond.  We will show you best practices for interacting with touch 
+and mice, structuring your content across screen sizes.
 
 Our goal in this guide is to build an example product landing page for our
 hypothetical Smiles product.  The end result will be a fully functioning page
 that covers many of the core principles of building experiences that work well
 across all different device types.
+
+# Getting Ready
 
 ## Set up development workspace
 
@@ -135,8 +137,7 @@ high-level our product "Smiles", a form to collect information about the user.
 *  a data table with information to back the claims up.
 
 Now that we know the content, it is not too hard to create the structure of the
-page with
-be pretty simple. We need a heading areas, 3 sections of information and a footer.
+page with be pretty simple. We need a heading areas, 3 sections of information and a footer.
 
 [TODO: Information Architecture]
 
@@ -183,7 +184,8 @@ The final section is a simple table that is used to show specific product stats 
 
 ### Add Footer
 
-Most sites universally need a footer.
+Most sites need a footer to display content such as Terms and Conditions, disclaimers and other content that is 
+not meant to be in the main navigation.
 
 {% include_code _code/addcontent.html footer %}
 
