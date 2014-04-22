@@ -138,6 +138,37 @@ NOTE: This is our styleguide
   <section class="styleguide__table">
     <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Table</h2>
 
+    <table class="table table--4">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+          <th>Description</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+        </tr>
+      </tbody>
+    </table>
+
     <table class="table table--3">
       <colgroup>
          <col span="1">
@@ -162,35 +193,28 @@ NOTE: This is our styleguide
           <td data-th="availability">All browsers</td>
           <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
         </tr>
+      </tbody>
+    </table>
+
+    <table class="table table--2">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
         <tr>
-          <td data-th="element">`preload`</td>
-          <td data-th="availability">All mobile browsers ignore preload.</td>
-          <td data-th="description">Hints to the browser that loading part of a video in advance of playback is worthwhile. Options are none, metadata, or auto (see Preload section for details). </td>
+          <th>Element</th>
+          <th>Availability</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
-          <td data-th="element">`autoplay`</td>
-          <td data-th="availability">Not supported on iPhone or Chrome for Android; supported on all desktop browsers, iPad, Firefox and Opera for Android.</td>
-          <td data-th="description">Tells the browser to immediately start downloading the video and play it as soon as it can (see Autoplay). </td>
-        </tr>
-        <tr>
-          <td data-th="element">`loop`</td>
+          <td data-th="element">`src`</td>
           <td data-th="availability">All browsers</td>
-          <td data-th="description">Tells the browser to automatically loop the video.</td>
         </tr>
         <tr>
-          <td data-th="element">`controls`</td>
+          <td data-th="element">`poster`</td>
           <td data-th="availability">All browsers</td>
-          <td data-th="description">Shows the default video controls (play, pause, etc.)</td>
-        </tr>
-        <tr>
-          <td data-th="element">`width`</td>
-          <td data-th="availability">All browsers</td>
-          <td data-th="description">Returns the width of the video in pixels.</td>
-        </tr>
-        <tr>
-          <td data-th="element">`height`</td>
-          <td data-th="availability">All browsers</td>
-          <td data-th="description">Returns the height of the video in pixels.</td>
         </tr>
       </tbody>
     </table>
