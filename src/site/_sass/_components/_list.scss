@@ -10,18 +10,6 @@
 *
 **/
 
-@mixin bullet-type($bullet) {
-  &:before {
-    content: $bullet;
-    display: block;
-    font-family: $fontHighlight;
-    font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
 ul,
 ol {
   padding-left: 0;
@@ -41,4 +29,58 @@ li {
 
 .main-nav__item:before {
   display: none;
+}
+
+/*==========  LIST LINKS  ==========*/
+
+.list--links {
+  a {
+    font-weight: 400;
+    font-family: $fontHighlight;
+    line-height: 1; // fixes baseline grid alignment
+  }
+}
+
+/*==========  GUIDES LIST  ==========*/
+.guides-list {
+  overflow: hidden;
+
+  @include medium {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: $lineHeight;
+  margin-bottom: $lineHeight;
+  padding: 0 16px $lineHeight*2;
+
+  @include medium {
+    padding-bottom: $lineHeight*3;
+  }
+
+  p {
+    margin-top: $lineHeight;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+
+/*==========  LIST RESET  ==========*/
+
+.list--reset {
+  li {
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
 }
