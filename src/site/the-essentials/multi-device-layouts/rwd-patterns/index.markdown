@@ -19,15 +19,15 @@ collection: multi-device-layouts
 {:toc}
 
 Most layouts used by responsive web pages can be categorized into one of five 
-patterns, mostly fluid, column drop, layout shifter, tiny tweaks and off canvas. 
+patterns: mostly fluid, column drop, layout shifter, tiny tweaks and off canvas. 
 In some cases, a page may use a combination of patterns, for example column drop 
-+ off canvas.  These patterns, originally identified by [Luke 
+and off canvas.  These patterns, originally identified by [Luke 
 Wroblewski](http://www.lukew.com/ff/entry.asp?1514), provide a solid starting 
 point for any responsive page.
 
 ### The patterns
 
-To create simple, easy to understand samples, each sample was built using 
+To create simple, easy-to-understand samples, each sample was built using 
 [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes), 
 typically with three content `div`'s contained within a primary container `div`. 
  Each sample was written starting with the smallest view first and breakpoints 
@@ -68,7 +68,7 @@ Sites using this pattern include:
 For full-width multi-column layouts, column drop simply stacks the columns 
 vertically as the window width becomes too narrow for the content.  Eventually 
 this results in all of the columns being stacked vertically.  Choosing 
-breakpoints for this layout pattern is dependant on the content and will change 
+breakpoints for this layout pattern is dependent on the content and will change 
 for each design.
 
 {% link_sample _code/column-drop.html %}
@@ -78,7 +78,7 @@ for each design.
 
 Like the mostly fluid sample, content is stacked vertically in the smallest 
 view, but as the screen expands beyond 600px, the primary and secondary content 
-`div`'s take the full width of the screen.  The order of the div's is set using 
+`div`'s take the full width of the screen.  The order of the `div`'s is set using 
 the order CSS property.  At 800px all three content `div`'s are shown, using the 
 full screen width.  
 
@@ -152,12 +152,12 @@ is only a click away.
 {% endlink_sample %}
 
 Rather than stacking content vertically, this sample hides two of the content 
-divs off screen by using a transform: translate(-250px, 0).  JavaScript is used 
+`div`s off screen by using a `transform: translate(-250px, 0)`.  JavaScript is used 
 to show the divs by adding an open class to the element to make visible.  As the 
 screen gets wider, the off-screen positioning is removed from the elements and 
 they're shown within the visible viewport.
 
-Note in this sample, Safari for iOS6 and Android Browser do not support the 
+Note in this sample, Safari for iOS 6 and Android Browser do not support the 
 `flex-flow: row nowrap` feature of `flexbox`, so we’ve had to fallback to 
 absolute positioning.
 
