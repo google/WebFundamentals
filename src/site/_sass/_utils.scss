@@ -14,11 +14,18 @@
 
   // Defining breakpoints
   $medium: 620px;
-  // $wide: 928px;
   $wide: 800px;
   $huge: 1600px;
   $mediumContainer: 688px;
   $wideContainer: 864px;
+
+  // Defining grid sizes
+  $mediumColCount: 3;
+  $mediumColWidth: 30.3%;
+  $mediumGutterWidth: 4.5%;
+  $wideColCount: 4;
+  $wideColWidth: 22.2%;
+  $wideGutterWidth: 3.7%;
 
   // Defining colors
   $colorRed: #971b24;
@@ -333,6 +340,69 @@
         display: inline-block;
         padding-right: 16px;
       }
+    }
+  }
+
+  // Mixin to create highlight modules
+  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 0, $fontSize: 350px) {
+    position: relative;
+
+    &:before {
+      content: attr(data-character);
+      display: block;
+
+      position: absolute;
+      bottom: $verticalOffset;
+      right: $horizontalOffset;
+
+      font-size: $fontSize;
+      line-height: $fontSize;
+      color: $colorWhite;
+      font-weight: 900;
+      text-align: center;
+      font-family: $fontHighlight;
+
+      width: $mediumColWidth;
+
+      .highlight-module--left & {
+        right: auto;
+        left: $horizontalOffset;
+      }
+
+      @include wide {
+        width: $wideColWidth;
+        font-size: $fontSize + 50;
+        line-height: $fontSize + 50;
+
+        .highlight-module--large & {
+          font-size: $fontSize + 300;
+        }
+      }
+    }
+  }
+
+  @mixin highlight-symbol-override($symbol) {
+    &:before {
+      content: $symbol;
+    }
+  }
+
+  @mixin highlight-vertical-offset-override($offset) {
+    &:before {
+      bottom: $offset;
+    }
+  }
+
+  // Grid CSS rules
+  @mixin rule--col($mediaQuery) {
+    @if $mediaQuery == medium {
+      float: left;
+      margin-right: $mediumGutterWidth;
+    }
+
+    @if $mediaQuery == wide {
+      float: left;
+      margin-right: $wideGutterWidth;
     }
   }
 

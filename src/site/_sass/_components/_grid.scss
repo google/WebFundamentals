@@ -10,31 +10,9 @@
 *
 **/
 
-$mediumColCount: 3;
-$mediumColWidth: 30.3%;
-$mediumGutterWidth: 4.5%;
-
-$wideColCount: 4;
-$wideColWidth: 22.2%;
-$wideGutterWidth: 3.7%;
-
-
 .demo {
   margin-bottom: $lineHeight;
   margin-top: $lineHeight;
-}
-
-@mixin rule--col($mediaQuery) {
-  @if $mediaQuery == medium {
-    float: left;
-    margin-right: $mediumGutterWidth;
-  }
-
-  @if $mediaQuery == wide {
-    float: left;
-    margin-right: $wideGutterWidth;
-  }
-
 }
 
 .demo {

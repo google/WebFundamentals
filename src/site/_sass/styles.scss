@@ -15,15 +15,14 @@
 @import "_utils";
 @import "_normalize";
 @import "_global";
-@import "_grid";
-@import "_main-navigation";
-@import "_main-header";
-@import "_main-footer";
 
 // Syntax highlihter - Leave it here so can be easily overridden
 @import "../css/syntax.css";
 
 // Modules
+@import "_modules/_main-navigation";
+@import "_modules/_main-header";
+@import "_modules/_main-footer";
 @import "_modules/_highlight";
 @import "_modules/_editorial-header";
 @import "_modules/_summary-header";
@@ -34,6 +33,7 @@
 
 
 // Components
+@import "_components/_grid";
 @import "_components/_typography";
 @import "_components/_button";
 @import "_components/_list";
