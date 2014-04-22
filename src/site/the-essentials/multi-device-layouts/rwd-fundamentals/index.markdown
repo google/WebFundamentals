@@ -47,7 +47,6 @@ remember:
     width: 100%;
   }
 
-
   img.wide {
     width: 100%;
   }
