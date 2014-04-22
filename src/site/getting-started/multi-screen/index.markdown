@@ -250,7 +250,7 @@ Think of it as images that are used in newspaper articles.
 
 [TODO: Add Image]
 
-
+{% include_code _code/addimages.html images html %}
 
 The images in this case our set to scale to 100% of the width of the screen.  This works well on 
 mobile devices, but less well on desktop.  We will manage this in the responisve design section.
@@ -268,38 +268,76 @@ get them correct unless you know the best practices.
 We will follow the best practices:
 
 *  Add a `controls` attribute to make it easy for people to play the video
-*  Add a poster image to give people a preview of the content
-*  Add mutliple sources based on supported video formats.
+*  Add a `poster` image to give people a preview of the content
+*  Add mutliple `<source>` elements based on supported video formats.
 *  Add fallback text to let people download the video if they can't play it in the window.
 
 {% include_code _code/addvideo.html video html %}
 
-
 ## Make your page responsive
 
-Our page has all the content needed, but on different screen sizes it looks a
-little bland as we have simply created a linear site for a narrow viewport.
+Our page has all the content needed, but on different screen sizes it doesn't look good
+ as we have simply created a linear site for a narrow viewport.
+
+[TODO: Image of widening the viewport.] 
+
+We are using the principles of Mobile First web development.  We start
+with a narrow viewport &mdash; similar to a mobile phone &mdash; and build for that 
+experience and then we make our viewport wider like you would start to expect to see on a 
+tablet, desktop and TV.  At each point where the content doesn't look right we will add a
+breakpoint.  We call this technique "Micro-reflow".
+
+Choose breakpoints (where the content and styles change) based on your content.
+Using devices or basing it on traffic to existing sites can get very messy.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
-We are using the principles of Mobile First web development, that is we start
-with a narrow viewport and build for that experience and then we make our
-viewport wider like you would start to expect to see on a tablet, desktop and
-TV.  At each point where the content doesn't look right we will add a
-breakpoint.
+To apply the correct styling at these break-points we will use 
+[Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+to let us adapt the style of the content to the width of the screen.
 
-A breakpoint is a point in your design where you alter the layout in CSS to
-accommodate the screen dimensions.
+### Adding your first breakpoint
 
-To learn more about Micro-reflows see [link]
+[TODO: GIF of it starting to look bad].
 
-Choose breakpoints (where the content and styles change) based on your content.
-Using devices or basing it on traffic to existing sites can get very messy
+The design starts to look bad at about 600px wide.  This is a good place to create our first break point as it 
+will give us scope to reposition elements to make them fit the screen better. 
 
-Instead choose your breakpoints based on when the content needs flow to cater
-for the screen real-estate.
+In particular it looks like we need to:
 
-To make our page responsive we use media queries to allow us to group styles
-based on factors such screen width or viewport width.
+*  Constrain the maximum width of the design
+*  Alter the padding of elements and reduce the text size
+*  Move the form to float inline with the heading content
+*  Make the video float around the content
+*  Reduce the size of the images and have them appear in a nicer grid
+
+{% include_code _code/firstbreakpoint.html first css %}
+
+#### Constrain the maximum width of the design
+
+We have chosen to constrain the maximum width of the screen to be 800px.
+
+Add auto margin.
+
+We need to edit our structure slightly to do this.
+
+{% include_code _code/fixingfirstbreakpoint.html container css %}
+
+#### Alter the padding of elements and reduce the text size
+
+*  We have altered the padding
+*  We have adjusted the 
+
+{% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+[TODO: GIF of it starting to look better with altered].
+
+#### Floating the form element
+
+To make use of the screen space more effectively 
+
+{% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+
 
 {% endwrap %}
