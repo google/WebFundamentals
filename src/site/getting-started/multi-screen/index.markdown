@@ -34,6 +34,10 @@ key-takeaways:
     - Always start with a narrow viewport first and scale out
     - Base your breakpoints off when you need to adapt the content
     - Create a high-level vision of your layout across major breakpoints
+notes:
+  styling: 
+    - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
+
 collection: getting-started
 ---
 
@@ -44,7 +48,7 @@ collection: getting-started
 
 Building for multi-screen experiences is not as hard as it sounds. In this
 guide, we are going to create a simple landing page that shows you the basics of
-how to build using "[Mobile First](link to mobile first)" design principles that
+how to build a web site using "[Mobile First](link to mobile first)" design principles that
 will enable you to easily scale your experiences up from a mobile device through
 to a Desktop and beyond.  We will show you best practices for interacting with touch 
 and mice, structuring your content across screen sizes.
@@ -80,12 +84,12 @@ experiences.  Without it, your site will not work well on a mobile device.
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
 
 The viewport indicates to the browser that the page needs to be scaled to fit
-the screen, as such there  are a lot of configurations that you can specify for
-your viewport.  We recommend:
+the screen.  There are a lot of different configurations that you can specify for
+your viewport to control the display of the page.  We recommend:
 
 {% include_code _code/viewport.html viewport %}
 
-The viewport lives in the head of the document and only needs to be declared once.  
+The viewport lives in the head of the document and only needs to be declared once.
 
 <div class="related-items">
 <div class="related-items">
@@ -101,8 +105,6 @@ The viewport lives in the head of the document and only needs to be declared onc
 </div>
 </div>
 </div>
-
-
 
 ## Test your page
 
@@ -124,25 +126,30 @@ to touch a mobile device.
 
 1. Open your page
 2. Open the inspector
-3. Goto emulation
+3. Goto 'emulation'
 4. Pick your device and refresh the page.
 
-Using this flow really helps you in the early stages of your project as you can
-quickly see how it would look across devices.
+By using the Mobile inspector throughout your project you can quickly see how this will
+look across many different device classes.
 
 If you have real device even better, you can hook up the Chrome Devtools to ensure
 that you are always testing how it works in the real world.
 
+[TODO: Add link to setting up remote devtools.]
+
 
 # Adding Structure
 
+Once you are have your environment set up it is time to get started.  We are now going
+to cover structuring your page with content such as text, video and images for a narrow viewport
+(mobile) experience and before we then move on to work out how we make it responsive across
+larger screens.
 
-## Flesh out the page with content
+## Create the page structure
 
 We believe that the content is the most important aspect.
 So let's design for the content and not let the design dictate the content.  In
-this lesson we will present a simple linear layout using [Micro-reflow](link)
-concepts.
+this lesson we will present a simple linear layout.
 
 We have identified we need:
 
@@ -155,15 +162,24 @@ We have identified we need:
 Now that there is content, it is not too hard to create the structure of the
 page. Based on the content we know we need a heading area, 3 sections of information and a footer.
 
-[TODO: Show a rough sketch of the IA]
+We have also come up with a rough Information Architecture and layout for both the narrow
+and wide viewports.
+
+[TODO: Show a rough sketch of the IA for narrow viewport]
+[TODO: Show a rough sketch of the IA for wide viewport]
+
+This can be converted easily in to the rough sections of a skeleton page.
 
 {% include_code _code/addstructure.html structure %}
 
-This is the basic structure now we can add some of the content.
+## Add Content
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.flesh-out %}
+The basic structure of the site is complete.  We know roughly what sections we need, what content
+we will display and where it will be positioned in the overall information architecture.
 
-### Add Headline
+{% include modules/remember.liquid title="Note" list=page.notes.styling %}
+
+### Add the Headline
 
 The headline is the first section that a user will see when they land on the page.
 We need to create a concise introduction and a place holder for a form that we will
@@ -173,25 +189,26 @@ complete later.
 
 [TODO: Add Image]
 
-### Add Section 1
+### Add the Video and Information section
 
-The first section of content will contain a little more depth with a bulleted list of features of our products
-and will also contain a video that shows our product working for the user.
+The Video and Information section of content will contain a little more depth.  It will 
+have a bulleted list of features of our products and will also contain a video placeholder 
+that will show our product working for the user.
 
 {% include_code _code/addcontent.html section1 %}
 
 [TODO: Add Image]
 
-### Add Section 2
+### Add the Images Section
 
-The next section is a collection of images that we will use that demonstrate our product and how they are used
-in different situations.
+The Images section is a collection of images that we will use that demonstrate four different
+scenarios where our product can be used.
 
 {% include_code _code/addcontent.html section2 %}
 
 [TODO: Add Image]
 
-### Add Section 3
+### Add the Tabulated Data Section
 
 The final section is a simple table that is used to show specific product stats about the product.
 
@@ -205,12 +222,6 @@ Most sites need a footer to display content such as Terms and Conditions, discla
 not meant to be in the main navigation.
 
 {% include_code _code/addcontent.html footer %}
-
-[TODO: Add Image]
-
-### Styling
-
-We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
 
 [TODO: Add Image]
 
@@ -256,22 +267,16 @@ the user should just see a dial pad.
 </div>
 </div>
 
-## Add Images to Site
+## Add Images to the Site
 
 Sites without images can be a little boring.  There are two types of images:
 
-*  Content images and,
-*  Stylistic images. 
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
-
-Content images are images that are in-line in the document and are used to convey 
+*  Content images &mdash; Images that are in-line in the document and are used to convey 
 extra information about the content.
-Stylistic images are often used to make the site look better, often these are
+*  Stylistic images &mdash; images are often used to make the site look better, often these are
 background images, patterns and gradients.
 
-
-## Add Stylistic images
+### Add Stylistic images
 
 Stylistic images are images that are not needed as part of the core content.
 
@@ -284,7 +289,7 @@ A good example of this is a headline image for the 'above the fold' content.
 We have chosen a simple background image that is blurred so it doesn't take away from the content
 and we have set it to `cover` the entire element.
 
-## Add Content Images
+### Add Content Images
 
 Content images are images that are critical to conveying the meaning of the page.
 Think of it as images that are used in newspaper articles.
@@ -295,7 +300,6 @@ Think of it as images that are used in newspaper articles.
 
 The images in this case our set to scale to 100% of the width of the screen.  This works well on 
 mobile devices, but less well on desktop.  We will manage this in the responsive design section.
-
 
 <div class="related-items">
 <div class="related-items">
@@ -313,15 +317,12 @@ mobile devices, but less well on desktop.  We will manage this in the responsive
 </div>
 </div>
 
-## Add a video to your site
+## Add a video to the site
 
 Videos are often used to describe content in a more interactive manner and are
-often used to show a demonstration of a product or a concept.  It can be hard to
-get them correct unless you know the best practices.
+frequently used to show a demonstration of a product or a concept.  
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
-
-We will follow the best practices:
+By following the best practices you can easily integrate video in to your site:
 
 *  Add a `controls` attribute to make it easy for people to play the video
 *  Add a `poster` image to give people a preview of the content
@@ -347,19 +348,23 @@ We will follow the best practices:
 
 # Make your page responsive
 
-Our page has all the content needed, but on different screen sizes it doesn't look good
- because we have simply created a linear site for a narrow viewport.
+The page has all the content needed to display on a narrow viewport, but on different screen sizes it doesn't
+ look good because we have simply created a linear site.
 
 [TODO: Image of widening the viewport.] 
 
-We are using the principles of Mobile First web development.  We start
-with a narrow viewport &mdash; similar to a mobile phone &mdash; and build for that 
-experience and then we make our viewport wider like you would start to expect to see on a 
-tablet, desktop and TV.  At each point where the content doesn't look right we will add a
-breakpoint.  We call this technique "Micro-reflow".
+We are using the principles of Mobile First web development.  We started
+with a narrow viewport &mdash; similar to a mobile phone &mdash; and built for that 
+experience first.  
 
-Choose breakpoints (where the content and styles change) based on your content.
-Using devices or basing it on traffic to existing sites can get very messy.
+We now need to make our viewport wider like you would start to expect to see on a 
+tablet, desktop and TV and make it work on these. At each point where the content doesn't 
+look right we will add a major breakpoint.
+
+Earlier on we created a couple of different high-level designs for how our content should be displayed and
+now we need to choose our breakpoints &mdash; where the content and styles change &mdash; based on your content.
+
+[TODO: Add Images]
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
@@ -375,6 +380,8 @@ to let us adapt the style of the content to the width of the screen.
 {: .related-items--title}
 
 *  [Using Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+*  [Major Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+*  [Minor Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
 
 </div>
 </div>
