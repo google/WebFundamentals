@@ -468,7 +468,11 @@ body {
   color: #4d4d4d;
   position: relative;
 }
+<<<<<<< HEAD
 /* line 160, ../_sass/_utils.scss */
+=======
+/* line 154, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 body:after {
   content: "";
   position: absolute;
@@ -490,7 +494,11 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
+<<<<<<< HEAD
 /* line 181, ../_sass/_utils.scss */
+=======
+/* line 175, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 body.debug:after {
   display: block;
   pointer-events: none;
@@ -894,7 +902,11 @@ body.debug:after {
   display: inline-block;
   display: block;
 }
+<<<<<<< HEAD
 /* line 333, ../_sass/_utils.scss */
+=======
+/* line 327, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 .main-nav__link--explore:hover {
   color: #404040;
 }
@@ -1535,6 +1547,30 @@ td:last-child:after {
   }
 }
 
+/**
+*
+* Articles section
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_articles-section.scss */
+.articles-section {
+  background: #f0f0f0;
+  text-align: center;
+}
+
+/* line 18, ../_sass/_modules/_articles-section.scss */
+.articles-count {
+  color: #297ea9;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  padding-top: 52px;
+}
+
 /* line 1, ../_sass/_modules/_guides-section.scss */
 .guides-section {
   background: #e8e8e8;
@@ -2053,7 +2089,11 @@ li {
   position: relative;
   padding-left: 16px;
 }
+<<<<<<< HEAD
 /* line 316, ../_sass/_utils.scss */
+=======
+/* line 310, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 li:before {
   content: "#";
   display: block;
@@ -2064,7 +2104,11 @@ li:before {
   left: 0;
 }
 
+<<<<<<< HEAD
 /* line 316, ../_sass/_utils.scss */
+=======
+/* line 310, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 .list__item:before {
   content: ">";
   display: block;
@@ -2163,11 +2207,19 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
+<<<<<<< HEAD
 /* line 333, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
 /* line 338, ../_sass/_utils.scss */
+=======
+/* line 327, ../_sass/_utils.scss */
+.cta--primary:hover {
+  color: #404040;
+}
+/* line 332, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 .cta--primary:before {
   content: ">";
   display: inline-block;
@@ -2180,7 +2232,11 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
+<<<<<<< HEAD
 /* line 333, ../_sass/_utils.scss */
+=======
+/* line 327, ../_sass/_utils.scss */
+>>>>>>> e2e4964c794f030c722437c9ba89fa42cc7e367c
 .cta--secondary:hover {
   color: #404040;
 }
@@ -2333,6 +2389,57 @@ a:hover {
   font-weight: 600;
   display: inline-block;
   margin-right: 16px;
+}
+
+/**
+*
+* Articles list
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_articles-list.scss */
+.articles-list__item {
+  padding-top: 26px;
+  padding-bottom: 52px;
+  padding-left: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_components/_articles-list.scss */
+  .articles-list__item {
+    padding-top: 52px;
+  }
+}
+/* line 23, ../_sass/_components/_articles-list.scss */
+.articles-list__item:before {
+  content: "";
+  width: 70%;
+  height: 1px;
+  left: 15%;
+  box-shadow: inset 0 1px 0 0 #e0e0e0;
+}
+/* line 31, ../_sass/_components/_articles-list.scss */
+.articles-list__item p {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+/* line 36, ../_sass/_components/_articles-list.scss */
+.articles-list__item:first-child {
+  padding-top: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 36, ../_sass/_components/_articles-list.scss */
+  .articles-list__item:first-child {
+    padding-top: 26px;
+  }
+}
+/* line 43, ../_sass/_components/_articles-list.scss */
+.articles-list__item:first-child:before {
+  display: none;
 }
 
 /**
