@@ -59,7 +59,7 @@ across all different device types.
 ## Set up development workspace
 
 Great news. There is no need to set anything up. You just need a text editor
-and 15 minutes to read this guide.
+and 30 minutes to read this guide.
 
 If you don't know what text editor to use here are some that we use:
 
@@ -67,7 +67,7 @@ If you don't know what text editor to use here are some that we use:
 * Sublime text
 * Vim
 
-We recommend that you have a device available to hand to be able to test your
+We also recommend that you have a device to hand to be able to test your
 experiences on, however if you haven't got one this is not a problem there are
 tools that you can use to help you along the way.
 
@@ -77,18 +77,32 @@ Even for a basic page you must include a viewport meta tag.  The viewport is the
 most critical[link to viewport doc] component you need for building mobile-first
 experiences.  Without it, your site will not work well on a mobile device.
 
-{% include_code _code/helloworld.html helloworld %}
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
 
 The viewport indicates to the browser that the page needs to be scaled to fit
 the screen, as such there  are a lot of configurations that you can specify for
-your viewport.  The one we recommend is:
+your viewport.  We recommend:
 
 {% include_code _code/viewport.html viewport %}
 
-This works well across all mobile and tablet devices and orientations as it
-tells the page to fit.....
+The viewport lives in the head of the document and only needs to be declared once.  
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
+
+* [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+{: .list--links}
+
+</div>
+</div>
+</div>
+</div>
+
+
 
 ## Test your page
 
@@ -98,6 +112,8 @@ content on. There are a number of tools that you can use in each browser that
 can help you.  Firefox has its inspector [link], IE has it's DevTools and Chrome
 has Developer tools.
 
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
+
 We are going to concentrate on using Chrome Developer tools in this guide.  The
 Chrome Devtools let you inspect any aspect of a web-page in real-time and also
 make changes on the fly.  It also has mobile emulation built in so that you can
@@ -106,10 +122,10 @@ to touch a mobile device.
 
 [todo: insert animated gif of screen fitting]
 
-1. Find your page
-1. Open the inspector
-1. Goto emulation
-1. Pick your device and refresh the page.
+1. Open your page
+2. Open the inspector
+3. Goto emulation
+4. Pick your device and refresh the page.
 
 Using this flow really helps you in the early stages of your project as you can
 quickly see how it would look across devices.
@@ -117,7 +133,6 @@ quickly see how it would look across devices.
 If you have real device even better, you can hook up the Chrome Devtools to ensure
 that you are always testing how it works in the real world.
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
 
 # Adding Structure
 
@@ -129,17 +144,18 @@ So let's design for the content and not let the design dictate the content.  In
 this lesson we will present a simple linear layout using [Micro-reflow](link)
 concepts.
 
-We have identified we need an area that describes at a
-high-level our product "Smiles", a form to collect information about the user.
+We have identified we need:
 
+*  an area that describes at a high-level our product "Smiles", 
+*  a form to collect information from users who are interested in our product
 *  an in depth description and video,
 *  images of the product in action,
 *  a data table with information to back the claims up.
 
-Now that we know the content, it is not too hard to create the structure of the
-page with be pretty simple. We need a heading areas, 3 sections of information and a footer.
+Now that there is content, it is not too hard to create the structure of the
+page. Based on the content we know we need a heading area, 3 sections of information and a footer.
 
-[TODO: Information Architecture]
+[TODO: Show a rough sketch of the IA]
 
 {% include_code _code/addstructure.html structure %}
 
@@ -159,8 +175,8 @@ complete later.
 
 ### Add Section 1
 
-The first section of content will contain a bulleted list of features of our products
-and will also contain a video.
+The first section of content will contain a little more depth with a bulleted list of features of our products
+and will also contain a video that shows our product working for the user.
 
 {% include_code _code/addcontent.html section1 %}
 
@@ -168,7 +184,8 @@ and will also contain a video.
 
 ### Add Section 2
 
-The next section is a collection of images that we will use that demonstrate our project.
+The next section is a collection of images that we will use that demonstrate our product and how they are used
+in different situations.
 
 {% include_code _code/addcontent.html section2 %}
 
@@ -176,7 +193,7 @@ The next section is a collection of images that we will use that demonstrate our
 
 ### Add Section 3
 
-The final section is a simple table that is used to show specific product stats about the project.
+The final section is a simple table that is used to show specific product stats about the product.
 
 {% include_code _code/addcontent.html section3 %}
 
@@ -193,7 +210,7 @@ not meant to be in the main navigation.
 
 ### Styling
 
-We have assumed a set of styles that include color, padding and font styling. 
+We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
 
 [TODO: Add Image]
 
@@ -204,11 +221,13 @@ We have assumed a set of styles that include color, padding and font styling.
 We are creating a product landing page so it makes sense to be able to let the
 user pass us some of their details so that they can register interest.
 
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
+
 In the heading area we will create a section for the form.  It will be a simple
 form that collects the users names, their phone number and a good time to call
 them back.
 
-We will add labels and placeholders to make it easy for users to focus elements,
+All forms should have labels and placeholders to make it easy for users to focus elements,
 understand what is supposed to go in them and to also help accessibility tools
 understand the structure of the form.  The name attribute not only sends the
 form value to the server it is also used to give important hints to the browser
@@ -222,9 +241,20 @@ the user should just see a dial pad.
 
 {% include_code _code/withform.html form %}
 
-Read our more detailed guide to [creating amazing forms](/web/essentials/the-essentials/user-input/form-input/index.html) in our forms tutorial.
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
+* [Create amazing forms]({{site.baseurl}}/the-essentials/user-input/form-input/index.html)
+{: .list--links}
+
+</div>
+</div>
+</div>
+</div>
 
 ## Add Images to Site
 
@@ -233,12 +263,13 @@ Sites without images can be a little boring.  There are two types of images:
 *  Content images and,
 *  Stylistic images. 
 
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
+
 Content images are images that are in-line in the document and are used to convey 
 extra information about the content.
 Stylistic images are often used to make the site look better, often these are
 background images, patterns and gradients.
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
 
 ## Add Stylistic images
 
@@ -265,7 +296,22 @@ Think of it as images that are used in newspaper articles.
 The images in this case our set to scale to 100% of the width of the screen.  This works well on 
 mobile devices, but less well on desktop.  We will manage this in the responsive design section.
 
-[TODO Link to Sam's Images Article and Ilya's optimizing images.]
+
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
+
+* [Using images effectively]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html)
+* [Optimizing images 101]({{site.baseurl}}/the-essentials/optimizing-performance/optimizing-content-efficiency/index.html#image-compression-101)
+{: .list--links}
+
+</div>
+</div>
+</div>
+</div>
 
 ## Add a video to your site
 
@@ -283,6 +329,21 @@ We will follow the best practices:
 *  Add fall-back text to let people download the video if they can't play it in the window.
 
 {% include_code _code/addvideo.html video html %}
+
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
+
+* [Using video effectively]({{site.baseurl}}/the-essentials/introduction-to-media/video/index.html)
+{: .list--links}
+
+</div>
+</div>
+</div>
+</div>
 
 # Make your page responsive
 
@@ -305,6 +366,20 @@ Using devices or basing it on traffic to existing sites can get very messy.
 To apply the correct styling at these break-points we will use 
 [Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
 to let us adapt the style of the content to the width of the screen.
+
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
+
+*  [Using Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+
+</div>
+</div>
+</div>
+</div>
 
 ### Adding your first breakpoint
 
@@ -397,14 +472,19 @@ form-factors and screen sizes.
 *  Once you have your mobile experience, increase the width of the display until it doesn't look right and set your breakpoint
 
 
-<div markdown='1' class="related-items">
-### Related Items
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
 
-* [Using Media Queries]()
-* [Responsive Design]()
-* [Images]()
-* [Video]()
+* Todo: list the major topics to explore
+{: .list--links}
 
+</div>
+</div>
+</div>
 </div>
 
 
