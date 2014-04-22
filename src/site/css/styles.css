@@ -1600,9 +1600,12 @@ td:last-child:after {
 .page-header__excerpt {
   position: relative;
   margin-top: 52px;
+}
+/* line 35, ../_sass/_modules/_page-header.scss */
+.page-header__excerpt:last-child {
   padding-bottom: 78px;
 }
-/* line 36, ../_sass/_modules/_page-header.scss */
+/* line 39, ../_sass/_modules/_page-header.scss */
 .page-header__excerpt:before {
   content: "";
   position: absolute;

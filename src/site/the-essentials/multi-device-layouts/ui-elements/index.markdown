@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "UI Elements"
-description: ""
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 #article:
 #  written_on: 2014-01-01
 #  updated_on: 2014-01-06

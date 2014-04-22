@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Responsive Web Design Fundamentals"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, legend eu tincidunt et, sagittis et mi."
 introduction: "The use of mobile devices to surf the web is growing at an astronomical pace,
               but unfortunately much of the web isn't optimized for those mobile devices. Mobile
               devices are often constrained by display size and require a different approach
