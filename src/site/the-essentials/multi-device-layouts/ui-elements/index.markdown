@@ -11,8 +11,7 @@ description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Page currently blank
 

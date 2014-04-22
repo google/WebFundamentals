@@ -34,8 +34,7 @@ collection: user-input
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 ## Adding States
 

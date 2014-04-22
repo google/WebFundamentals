@@ -23,6 +23,7 @@
 		"grunt-contrib-watch": "~0.6.1",
 		"grunt-jekyll": "~0.3.9",
 		"grunt-open": "~0.2.2",
+		"grunt-replace": "~0.7.6",
 		"grunt-shell": "~0.3.1",
 		"grunt-usemin": "~0.1.12",
 		"matchdep": "~0.1.2",

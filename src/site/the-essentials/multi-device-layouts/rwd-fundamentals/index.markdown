@@ -62,8 +62,7 @@ remember:
 
 </style>
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 There is a multitude of different screen sizes across phones, "phablets",
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
