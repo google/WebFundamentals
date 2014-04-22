@@ -8,6 +8,7 @@ baseurl: /web/essentials
 url: /web/essentials
 pygments: true
 include_open_html: false
+generate_sample_jshtml: true
 custom:
 kramdown:
   toc_levels: "2,3,4"
