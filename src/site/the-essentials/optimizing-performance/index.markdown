@@ -7,6 +7,7 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 4
+id: performance
 collection: the-essentials
 ---
 {% wrap content%}

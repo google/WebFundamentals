@@ -136,14 +136,21 @@
 
 
     <script type="text/javascript">
+      var form;
       
       function initForm() {
-        var form = document.getElementById("usrForm")
+        form = document.getElementById("usrForm")
         /* // [START preventsubmission] */
         form.addEventListener("submit", function(evt) {
           if (form.checkValidity() === false) {
             evt.preventDefault();
             alert("Form is invalid - submission prevented!");
+            return false;
+          } else {
+            // To prevent data from being sent, we've prevented submission
+            // here, but normally this code block would not exist.
+            evt.preventDefault();
+            alert("Form is valid - submission prevented to protect privacy.");
             return false;
           }
         });
@@ -184,9 +191,19 @@
         /* // [END initinputs] */
       }
 
+      function initNoSubmit() {
+        form.addEventListener("submit", function(evt) {
+          evt.preventDefault();
+          alert("Submission of this form is prevented.");
+        });
+      }
+
       initForm();
       initInputs();
       initConfirmEmail();
+      //initNoSubmit();
+
+
       
 
     </script>

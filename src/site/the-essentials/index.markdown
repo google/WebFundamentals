@@ -3,6 +3,7 @@ layout: landing
 title: "The Essentials"
 description: ""
 introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+id: the-essentials
 ---
 
 <div class="guides-section">
@@ -19,9 +20,9 @@ introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
       <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
       <p>{{guide.description}}</p>
       <ol class="list--links list--reset">
-        <li><a href="#">Layout basics</a></li>
-        <li><a href="#">Basics layouts</a></li>
-        <li><a href="#">Layout patterns</a></li>
+      {% for article in page.articles[guide.id] %}
+        <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
+      {% endfor %}
       </ol>
     </li>
 
@@ -29,3 +30,4 @@ introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 
   </ul>
 </div>
+
