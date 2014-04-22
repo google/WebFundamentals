@@ -19,25 +19,6 @@ a:hover {
   text-decoration: underline;
 }
 
-// Mixin to create links
-@mixin style-cta($textColor, $hasArrow: true) {
-  color: $textColor;
-  font-weight: 600;
-  display: inline-block;
-
-  &:hover {
-    color: $colorGrayDark;
-  }
-
-  @if $hasArrow {
-    &:before {
-      content: ">";
-      display: inline-block;
-      padding-right: 16px;
-    }
-  }
-}
-
 .cta--primary {
   @include style-cta($colorBlue, true);
 }

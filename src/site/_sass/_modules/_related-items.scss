@@ -15,11 +15,12 @@
   color: $colorWhite;
   padding-bottom: $lineHeight * 2;
   margin-top: $lineHeight * 2;
+
+  .list--links {
+    a {
+      color: $colorWhite;
+    }
+  }
+
 }
 
-.list--links a {
-  display: block;
-  color: $colorWhite;
-  font-weight: 400;
-  font-family: $fontHighlight;
-}

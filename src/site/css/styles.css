@@ -554,6 +554,37 @@ body.debug:after {
   }
 }
 
+@media only screen and (min-width: 620px) {
+  /* line 40, ../_sass/_global.scss */
+  .container-medium {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 620px) and (min-width: 620px) {
+  /* line 40, ../_sass/_global.scss */
+  .container-medium {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (min-width: 620px) and (min-width: 800px) {
+  /* line 40, ../_sass/_global.scss */
+  .container-medium {
+    padding-left: 4.4%;
+    padding-right: 4.4%;
+    max-width: 864px;
+  }
+}
+
 /**
 *
 * Grid
@@ -1125,8 +1156,14 @@ body.debug:after {
 
 /* line 161, ../_sass/_main-navigation.scss */
 .main-nav__link--explore {
+  color: #297ea9;
+  font-weight: 600;
+  display: inline-block;
   display: block;
-  width: 100%;
+}
+/* line 327, ../_sass/_utils.scss */
+.main-nav__link--explore:hover {
+  color: #404040;
 }
 @media only screen and (min-width: 620px) {
   /* line 161, ../_sass/_main-navigation.scss */
@@ -1557,13 +1594,9 @@ body.debug:after {
   padding-bottom: 52px;
   margin-top: 52px;
 }
-
 /* line 20, ../_sass/_modules/_related-items.scss */
-.list--links a {
-  display: block;
+.related-items .list--links a {
   color: white;
-  font-weight: 400;
-  font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
 /**
@@ -1791,6 +1824,13 @@ td:last-child:after {
   color: #297ea9;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   padding-top: 52px;
+}
+
+/* line 1, ../_sass/_modules/_guides-section.scss */
+.guides-section {
+  background: #e8e8e8;
+  text-align: center;
+  padding: 26px 0 52px;
 }
 
 /**
@@ -2024,7 +2064,7 @@ li > p {
 * @author Antoine Grelard
 *
 **/
-/* line 26, ../_sass/_components/_list.scss */
+/* line 14, ../_sass/_components/_list.scss */
 ul,
 ol {
   padding-left: 0;
@@ -2032,12 +2072,12 @@ ol {
   margin: 0;
 }
 
-/* line 32, ../_sass/_components/_list.scss */
+/* line 20, ../_sass/_components/_list.scss */
 li {
   position: relative;
   padding-left: 16px;
 }
-/* line 14, ../_sass/_components/_list.scss */
+/* line 310, ../_sass/_utils.scss */
 li:before {
   content: "#";
   display: block;
@@ -2048,7 +2088,7 @@ li:before {
   left: 0;
 }
 
-/* line 14, ../_sass/_components/_list.scss */
+/* line 310, ../_sass/_utils.scss */
 .list__item:before {
   content: ">";
   display: block;
@@ -2059,8 +2099,63 @@ li:before {
   left: 0;
 }
 
-/* line 42, ../_sass/_components/_list.scss */
+/* line 30, ../_sass/_components/_list.scss */
 .main-nav__item:before {
+  display: none;
+}
+
+/*==========  LIST LINKS  ==========*/
+/* line 37, ../_sass/_components/_list.scss */
+.list--links a {
+  font-weight: 400;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  line-height: 1;
+}
+
+/*==========  GUIDES LIST  ==========*/
+/* line 45, ../_sass/_components/_list.scss */
+.guides-list {
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 45, ../_sass/_components/_list.scss */
+  .guides-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+/* line 55, ../_sass/_components/_list.scss */
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  padding: 0 16px 52px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 55, ../_sass/_components/_list.scss */
+  .guides-list__item {
+    padding-bottom: 78px;
+  }
+}
+/* line 66, ../_sass/_components/_list.scss */
+.guides-list__item p {
+  margin-top: 26px;
+}
+/* line 70, ../_sass/_components/_list.scss */
+.guides-list__item:before {
+  display: none;
+}
+
+/*==========  LIST RESET  ==========*/
+/* line 79, ../_sass/_components/_list.scss */
+.list--reset li {
+  padding-left: 0;
+}
+/* line 82, ../_sass/_components/_list.scss */
+.list--reset li:before {
   display: none;
 }
 
@@ -2086,30 +2181,30 @@ a:hover {
   text-decoration: underline;
 }
 
-/* line 41, ../_sass/_components/_link.scss */
+/* line 22, ../_sass/_components/_link.scss */
 .cta--primary {
   color: #297ea9;
   font-weight: 600;
   display: inline-block;
 }
-/* line 28, ../_sass/_components/_link.scss */
+/* line 327, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
-/* line 33, ../_sass/_components/_link.scss */
+/* line 332, ../_sass/_utils.scss */
 .cta--primary:before {
   content: ">";
   display: inline-block;
   padding-right: 16px;
 }
 
-/* line 45, ../_sass/_components/_link.scss */
+/* line 26, ../_sass/_components/_link.scss */
 .cta--secondary {
   color: #297ea9;
   font-weight: 600;
   display: inline-block;
 }
-/* line 28, ../_sass/_components/_link.scss */
+/* line 327, ../_sass/_utils.scss */
 .cta--secondary:hover {
   color: #404040;
 }
