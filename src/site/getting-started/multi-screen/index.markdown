@@ -186,17 +186,16 @@ Most sites universally need a footer.
 
 [TODO: Add Image]
 
-## Styling
+### Styling
 
-We have assumed a set of styles
+We have assumed a set of styles that include color, padding and font styling. 
 
 {% include_code _code/content-with-styles.html style %}
-
 
 ## Create a great form
 
 We are creating a product landing page so it makes sense to be able to let the
-user pass us some of their details.
+user pass us some of their details so that they can register interest.
 
 In the heading area we will create a section for the form.  It will be a simple
 form that collects the users names, their phone number and a good time to call
@@ -208,28 +207,15 @@ understand the structure of the form.  The name attribute not only sends the
 form value to the server it is also used to give important hints to the browser
 about how to automatically fill the form for the user.
 
-[You can learn more]
-
 We will add semantic types to make it quick and simple for users to be able to
 enter content on a mobile device.  For example when entering a telephone number
 the user should just see a dial pad.
 
-    <form method="post" id="register">
-         <h2>Sign up for more smiles</h2>
-         <label for="name">Name</label>
-         <input type="text" name="name" id="name" placeholder="Thomas A Anderson" required />
-         <label for="email">Email address</label>
-         <input type="email" name="email" id="email" placeholder="neo@example.com" required />
-         <label for="tel">Telephone</label>
-         <input type="tel" name="tel" id="tel" placeholder="(555) 555 5555" required />
-         <label for="time">Best time to contact</label>
-         <input type="time" name="time" id="time" placeholder="4pm" required />
-         <input type="submit" value="Sign up">
-    </form>
+[todo add screen shot]
 
-We have a more detailed guide to creating amazing forms in our forms tutorial.
+{% include_code _code/withform.html form %}
 
-TODO: Link to request AutoComplete
+Read our more detailed guide to creating amazing forms in our forms tutorial.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
@@ -243,11 +229,11 @@ background images, patterns and gradients.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-images %}
 
-## Adding Stylistic images
+## Add Stylistic images
 
-[TODO]
+Stylistic images are images that are not needed as part of the core content.
 
-## Adding Content Images
+## Add Content Images
 
 so lets add some in.
 
@@ -258,8 +244,9 @@ so lets add some in.
       <img src="">
     </div>
 
-## Add a video to your site
+[TODO Link to Sam's Images Article and Ilya's optimising images.]
 
+## Add a video to your site
 
 Videos are often used to describe content in a more interactive manner and are
 often used to show a demonstration of a product or a concept.  It can be hard to

@@ -2,32 +2,34 @@
 layout: article
 title: "Adding Touch to Your Site"
 description: "Adding touch responses to your site gives a great sense of responsiveness and polish, with minimal amount of effort. Then we have entirely new and custom interactions which you can add using touch events, delighting your users."
+introduction: "Touchscreens are available on more and more devices, ranging from phones up to desktop screens. To when the user chooses to interact with your UI, your app should respond to their touch, in simple and beautiful ways"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 2
 key-takeaways:
   add-states:
-    - Adding states for :active, :focus and :hover pseudo classes makes your site feel snappy and responsive
-    - Most mobile browsers have a default styling for these states which should only be overridden when you are adding your own styles for them
-    - Make the state changes fit in with your UI
+    - Use :active to make your site feel snappy and responsive.
+    - :focus allows users to navigate your UI easily with keyboard input.
+    - You can encourage users to interact with an element by using :hover to add changes.
+    - Only override stateful styling when you add your own styles.
+  touch-events:
+    - Ensure you handle mouse, touch and pointer events for full device support
+    - Don't do any long running tasks inside an event callback
+    - Use requestAnimationFrame's to change the UI in response to an event
 important:
   touch-events-main-thread:
     - All touch events fire on the main thread
     - Be as quick as possible inside your callback
     - Use requestAnimationFrame to keep your site feeling fast
+  user-select:
+    - You should be cautious not to disable user selection if the information on the element may be useful to the user (i.e. phone number, e-mail address etc.)
 collection: user-input
 ---
 
 {% wrap content%}
 
 {% include modules/toc.liquid %}
-
-Have you ever touched or clicked an element on a web page and questioned whether
-the site actually detected you?
-
-In addition to helping people know that there action has been acknowledged,
-giving touch feedback gives your site a snappy and responsive feel to it.
 
 ## Adding States
 
@@ -37,28 +39,34 @@ Demo: http://jsbin.com/siramabo/latest/edit
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-states %}
 
-The fastest way to support touch in your UI is to simply support the
-various states your elements can be in, giving a response to the users interactions.
+### Respond to a Users Touch
 
-The states to handle are:
+Have you ever touched or clicked an element on a web page and questioned whether
+the site actually detected you?
+
+A simple color change not only helps people know that there action has been acknowledged, it makes your site feel snappy and responsive.
+
+The fastest way to support touch in your UI is to simply support the
+various states a DOM element can be in.
+
+The states to handle are focus, active and hover, each of which are described below.
 
 * Focus
-    * If you interact with a webpage using a keyboard by hitting the tab
-      key, you'll see some indication of which items you
-      are focusing on
+  * If you interact with a webpage using a keyboard by hitting the tab key,
+  you'll see some indication of which item you are focusing on.
 
-      // TODO Insert Image Of Button Focus
+  ![Button with Focus State](images/btn-focus-state.png)
 
 * Active
-    * This is the state when an element is being selected, for example a user clicking or touching
-    an element
+  * This is the state when an element is being selected, for example a 
+  user clicking or touching an element.
 
-      // Insert Pressed Button State
+  ![Button in Pressed State](images/btn-pressed-state.png)
 
 * Hover
     * This applies to scenarios where you have some form of cursor placed over
-      an element. This is helpful to encourage users to interact
-      with elements.
+      an element. On hover changes are helpful to hint and encourage users to 
+      interact with elements.
 
 <!--
 Demo: http://jsbin.com/kugenoza/1/edit
@@ -73,15 +81,14 @@ pseudo classes :hover, :focus and :active as shown below.
 
 <!-- [Image from: http://jsbin.com/siramabo/26/edit]-->
 
-Without the outline rule, most user agents will display a colored edge to your
+Without the outline rule, most user agents will display a colored border around your
 focusable elements.
 
-## Cross Browser Tips
+### Cross Browser Tips
 
-Since a number of sites didn't include the active state when the devices where
-first released, the browsers including user-agent styles which added color or
-set of styles to elements the user would interact with which you may notice on
-some of your devices.
+When mobile devices first launched a number of sites didn't change styling for
+the active state. As a result many browsers add a highlight color or style change
+on elements when a user touches them.
 
 Safari and Chrome browsers add a tap highlight color which can be prevented
 with:
@@ -93,68 +100,69 @@ tag:
 
 {% include_code _code/states-example.html ms-specific html %}
 
-
-For Firefox OS you need to remove a gradient added by their default styles and
-if you are setting a focus style, you may wish to remove the black border which
-can appear around text:
+For Firefox OS we needed to override a -moz-focus-inner class to remove an
+outline on our element and since we used a button we also set 
+background-image to none to remove a gradient added by their default styles.
 
 {% include_code _code/states-example.html ff-specific css %}
 
-## User Select
+### User Select
 
-If you have elements which the user is interacting with you might want to
-prevent the user for accidentally selecting the text.
+Finally, some mobile browsers will select text if the user long presses on the screen, however this can result in a bad user experience if they accidentally press a button for too long. You can prevent this from happening using the user-select property.
 
 {% include_code _code/user-select-example.html user-select css %}
 
-You should be cautious not to disable user selection if there are scenarios
-where the user might want to copy the text. An example would be a button to
-display a phone, if the user clicks on it, you could open the devices dialer,
-but the user may wish to copy and paste to a different app, an example of
-this is shown in the full example **MAKE FULL SAMPLE A  LINK TO CODE SAMPLE**.
+{% include modules/remember.liquid title="Important" list=page.important.user-select %}
 
-
-
-# Touch events
+## Touch events
 <!-- Demo: http://jsbin.com/sozujute/latest/edit -->
 
-If you have an idea for a new interaction pattern that you'd like to include
-touch support, how do you do it?
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.touch-events %}
 
-## Receiving Touch Events
+### Receiving Touch Events
 
 For full browser support there are two kinds of events you need to cater for:
 
 - Touch Events
-  - These consist of touchstart, touchmove, touchend and touchcancel
+  - Consist of **touchstart**, **touchmove**, **touchend** and **touchcancel**
+- Mouse Events
+  - If it makes sense you can add mouse support with **mousedown**, 
+  **mousemove** and **mouseup**
 - Pointer Events
-  - This is a new feature which merges Mouse and Touch events into the same 
+  - A new set of events which merges mouse and touch events into one 
   set of events. This is currently only supported in IE10+ with the events: 
-  MSPointerDown, MSPointerMove and MSPointerUp
+  **MSPointerDown**, **MSPointerMove** and **MSPointerUp**
 
-The building blocks for adding touch to your application is these events:
+These events are the building blocks for adding new gestures into your application, below is a description of when they are called.
 
-* touchstart, MSPointerDown
-    * When a finger starts to touch an element
-* touchmove, MSPointerMove
-    * When a finger moves across the screen
-* touchend, MSPointerUp
-    * When the user lifts their finger off of the screen
-* touchcancel
-    * The browser cancels the touch gestures (for example the page scrolls and
-    browser no longer allows you to intercept touch events)
+#### touchstart, MSPointerDown, mousedown
+
+When a finger first touches an element or when the user clicks down on the mouse
+
+#### touchmove, MSPointerMove, mouse move
+
+The user moves their finger across the screen or drags with the mouse
+
+#### touchend, MSPointerUp, mouseup
+
+When the user lifts their finger off of the screen or releases the mouse button
+
+#### touchcancel
+
+The browser cancels the touch gestures (for example the page scrolls and
+browser no longer allows you to intercept the touch events)
+
+### Using Touch Events
 
 You hook these events up through the **addEventListener()** method of a DOM element
- like so.
+like so:
 
 {% include_code _code/touch-demo-1.html addlisteners javascript %}
 
-This code first checks if we should use Pointer Events or you touch and mouse events.
-We then add the event listener with the appropriate name, the callback we want called,
-in this case **this.handleGestureStart**.
+This code first checks if we should use **Pointer Events** by testing for _window.navigator.msPointerEnabled_ and if Pointer Events aren't supported, we add
+listeners for touch and mouse events.
 
-The third boolean value is used to determine whether you should catch the touch event 
-before or after other elements have the opportunity to catch and interpret the 
+The **addEventListener()** method takes the event name (_MSPointerDown_, _touchstart_ or _mousedown_ in this case), a callback function to call when the event happens and a boolean which determines whether you should catch the event before or after other elements have the opportunity to catch and interpret the 
 events.
 
 ### Common Practices

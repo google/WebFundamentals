@@ -9,7 +9,7 @@ build: copy
     #add_version
 
 copy: clean
-	cd ./src/site && jekyll build
+	cd ./src/site && jekyll build $(param1)
 
 #add_version:
 #	ruby -p -i -e '$$_.gsub!(/CHANGEME/, "$(CURRENT_BRANCH)")' ./build/app.yaml
@@ -20,7 +20,7 @@ deploy: build
 	#@echo "Visit http://$(CURRENT_BRANCH).web-central.appspot.com"
 
 server:
-	cd ./src/site && jekyll serve -w --port=8081 --trace
+	cd ./src/site && jekyll serve -w --port=8081 --trace $(param1)
 
 optimize:
 	@find . -iname *.png | xargs -L 1 optipng -o7

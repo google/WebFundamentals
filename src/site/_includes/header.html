@@ -23,11 +23,11 @@
 - /css/font-awesome.min.css
 {% endbundle %}
 
-  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400" rel="stylesheet">
+  <link href="{{site.baseurl}}//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400" rel="stylesheet">
 
   {% if page.header and page.header.css %}{% for css in page.header.css %}<link href="{{ css }}" rel="stylesheet" type="text/css">{% endfor %}{% endif %}
 
-  {% for author in page.rel.author %}<link rel="author" href="/authors/{{ author }}.html">{% endfor %}
+  {% for author in page.rel.author %}<link rel="author" href="{{site.baseurl}}/authors/{{ author }}.html">{% endfor %}
   {% if page.rel.me %}<link rel="me" href="{{ page.rel.me }}">{% endif %}
 
   <link rel="alternate" type="application/atom+xml" href="http://news.dartlang.org/feeds/posts/default" title="Atom feed">
@@ -58,7 +58,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><i class="sprite-icon-logo"></i></a>
+          <a class="navbar-brand" href="{{site.baseurl}}/"><i class="sprite-icon-logo"></i></a>
         </div>
 
         <div class="collapse navbar-collapse">

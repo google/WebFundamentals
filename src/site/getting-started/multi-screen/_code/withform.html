@@ -166,7 +166,6 @@
       <!-- // [END style] -->
   </head>
   <body>   
-    <!-- // [START headline] -->
     <div id="headline">
       <h1>Smiles Inc.</h1>
       <h2>Best when shared</h2>
@@ -179,11 +178,22 @@
           <li>and the good-ol' British in the thick of it smile.
         </ul>
       </div>
-      <form method="post" id="register"> 
+      <!-- // [START form] -->
+      <form method="post" id="register">
+         <h2>Sign up for more smiles</h2>
+         <label for="name">Name</label>
+         <input type="text" name="name" id="name" placeholder="Thomas A Anderson" required />
+         <label for="email">Email address</label>
+         <input type="email" name="email" id="email" placeholder="neo@example.com" required />
+         <label for="tel">Telephone</label>
+         <input type="tel" name="tel" id="tel" placeholder="(555) 555 5555" required />
+         <label for="time">Best time to contact</label>
+         <input type="time" name="time" id="time" placeholder="4pm" required />
+         <input type="submit" value="Sign up">
       </form>
+       <!-- // [END form] -->
       </div>
     </div>
-    <!-- // [END headline] -->
 
     <!-- // [START section1] -->
     <div id="section1">
