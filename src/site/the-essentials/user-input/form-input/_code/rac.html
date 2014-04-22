@@ -145,6 +145,14 @@
           isRACSupported(false, "Please complete the form manually.");
         }
         /* // [END rac] */
+
+        // To prevent data from being sent, we've prevented submission
+        // here, but normally this code block would not exist.
+        form.addEventListener("submit", function(evt) {
+          evt.preventDefault();
+          alert("Submission prevented to protect privacy.");
+          return false;
+        });
       }
 
       function isRACSupported(supported, message) {
