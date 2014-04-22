@@ -6,6 +6,7 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 2
+id: introduction-to-media
 collection: the-essentials
 ---
 {% wrap content%}
