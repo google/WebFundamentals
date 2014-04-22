@@ -29,9 +29,7 @@ key-takeaways:
     - Each source image should be made for 2x DPI and 1x DPI
     - Highly compress all your images
   add-video:
-    - Use the highest DPI possible for your source
-    - Each source image should be made for 2x DPI and 1x DPI
-    - Highly compress all your images
+    - TODO
   make-responsive:
     - Always start with a narrow viewport first and scale out
     - Base your breakpoints off when you need to adapt the content
@@ -267,9 +265,14 @@ get them correct unless you know the best practices.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
 
-Lets add a video to the site.
+We will follow the best practices:
 
- {% include_code _code/addvideo.html video html %}
+*  Add a `controls` attribute to make it easy for people to play the video
+*  Add a poster image to give people a preview of the content
+*  Add mutliple sources based on supported video formats.
+*  Add fallback text to let people download the video if they can't play it in the window.
+
+{% include_code _code/addvideo.html video html %}
 
 
 ## Make your page responsive
