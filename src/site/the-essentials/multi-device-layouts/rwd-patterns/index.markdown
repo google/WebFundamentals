@@ -44,7 +44,10 @@ while columns are stacked vertically.  One major advantage of this pattern is
 that it usually only requires one breakpoint between small screens and large 
 screens.
 
-<img src="imgs/mostly-fluid.svg" />
+{% link_sample _code/mostly-fluid.html %}
+  <img src="imgs/mostly-fluid.svg" />
+  Try it
+{% endlink_sample %}
 
 In the smallest view, each content `div` is stacked vertically.  Once the screen 
 width hits 600px, the primary content `div` remains at `width: 100%`, while the 
@@ -68,7 +71,10 @@ this results in all of the columns being stacked vertically.  Choosing
 breakpoints for this layout pattern is dependant on the content and will change 
 for each design.
 
-<img src="imgs/column-drop.svg" />
+{% link_sample _code/column-drop.html %}
+  <img src="imgs/column-drop.svg" />
+  Try it
+{% endlink_sample %}
 
 Like the mostly fluid sample, content is stacked vertically in the smallest 
 view, but as the screen expands beyond 600px, the primary and secondary content 
@@ -92,7 +98,10 @@ significant differences between each major breakpoint, it is more complex to
 maintain and likely involves changes within elements, not just overall content 
 layout.
 
-<img src="imgs/layout-shifter.svg" />
+{% link_sample _code/layout-shifter.html %}
+  <img src="imgs/layout-shifter.svg" />
+  Try it
+{% endlink_sample %}
 
 This simplified example shows the layout shifter pattern, on smaller screens 
 content is stacked vertically, but changes significantly as the screen becomes 
@@ -114,7 +123,10 @@ size, resizing images or moving content around in very minor ways.  It works
 well on single column layouts such as one page linear websites, text heavy 
 articles.
 
-<img src="imgs/tiny-tweaks.svg" />
+{% link_sample _code/tiny-tweaks.html %}
+  <img src="imgs/tiny-tweaks.svg" />
+  Try it
+{% endlink_sample %}
 
 As its name implies, little changes with this sample as the screen size changes. 
  As the screen width gets larger, so do the font size and padding.
@@ -134,7 +146,10 @@ frequently used content, perhaps navigation or app menus off screen, only
 showing it when the screen size is large enough, and on smaller screens, content 
 is only a click away.   
 
-<img src="imgs/off-canvas.svg" />
+{% link_sample _code/off-canvas.html %}
+  <img src="imgs/off-canvas.svg" />
+  Try it
+{% endlink_sample %}
 
 Rather than stacking content vertically, this sample hides two of the content 
 divs off screen by using a transform: translate(-250px, 0).  JavaScript is used 
