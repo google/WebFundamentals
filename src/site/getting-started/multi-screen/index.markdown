@@ -350,7 +350,7 @@ by increase the font size and weight.
 
 [TODO: GIF of it starting to look better with altered].
 
-#### Float the form element
+#### Float the Form Element
 
 To make use of the screen space more effectively we need to remove the linear flow
 of the header and instead move the form and the list next to each other.
@@ -359,14 +359,32 @@ of the header and instead move the form and the list next to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
+#### Tile the Images
+
+{% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+
+#### Make the Table Responsive
+
+{% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+
 
 # Summary
 
 We have created a simple product landing page that works across a huge range of devices,
 form-factors and screen sizes.
 
-# References
 
+<div markdown='1' class="related-items">
+### Related Items
+
+* [Using Media Queries]()
+* [Responsive Design]()
+* [Images]()
+* [Video]()
+
+</div>
 
 
 {% endwrap %}

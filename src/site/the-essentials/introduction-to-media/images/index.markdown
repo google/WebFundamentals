@@ -9,13 +9,7 @@ article:
 collection: introduction-to-media
 ---
 
-# Web Essentials: Images
-
-    Create a product, don't re-imagine one for small screens. Great mobile
-    products are created, never ported.
-
-    — [Brian Fling](http://shop.oreilly.com/product/9780596155452.do), quoted by
-    Jason Grigsby
+{% wrap content %}
 
 The web started life as a text-only medium, but [the ability to embed
 images](http://www.internethistorypodcast.com/2014/04/on-the-20th-anniversary-an-oral-history-of-netscapes-founding/)
@@ -224,7 +218,7 @@ huge range of subjects. You may be able to use these instead of images.
 It's possible to build a font family made of images rather than letters. Here's
 a small sample from [Font Awesome](http://fortawesome.github.io/Font-Awesome/):
 
-<img src="image00.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+<img src="images/image00.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
 
 The 'characters' in icon fonts behave just like letters in other fonts, so you
 can resize and colour just like you would otherwise.
@@ -274,7 +268,7 @@ like the following:
 
 The Data URI for an image like this:
 
-<img src="image01.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+<img src="images/image01.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
 
 ...looks like this:
 
@@ -337,7 +331,7 @@ Take a look at this example of a sprite sheet [from
 google.com](https://www.google.com/images/nav_logo193.png), which includes
 multiple icons and logos:
 
-<img src="image02.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+<img src="images/image02.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
 
 Spriting has the advantage of reducing the number of downloads and total
 download size required to get multiple images, while still enabling cacheing.
@@ -482,7 +476,7 @@ other images.
 
 Here's a canvas element with a line, a circle, text and an image:
 
-<img src="image03.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+<img src="images/image03.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
 
 ...and here's the code:
 
@@ -591,7 +585,7 @@ You can obtain the 'actual' dimensions of an image with the `naturalWidth` and
 `naturalHeight` properties. You can also check this by hovering over an image
 with the Chrome Dev Tools:
 
-<img src="image04.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+<img src="images/image04.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
 
 Below we look at some techniques for sizing images with CSS.
 
@@ -781,8 +775,8 @@ Here's an example from the [picture
     <picture>
         <source media="(min-width: 45em)" srcset="large.jpg">
         <source media="(min-width: 18em)" srcset="med.jpg">
-        <img src="small.jpg" alt="The president giving an award.">
-        </picture>
+        <img src="images/small.jpg" alt="The president giving an award.">
+    </picture>
 
 (See this example in action here.)
 
@@ -804,8 +798,8 @@ pixel density – in this example provding alternative images for devices with 
     <picture>
         <source media="(min-width: 45em)" srcset="large.jpg 1x, large-hd.jpg 2x">
         <source media="(min-width: 18em)" srcset="med.jpg, med-hd.jpg 2x">
-        <img src="small.jpg" alt="The president giving an award.">
-        </picture>
+        <img src="images/small.jpg" alt="The president giving an award.">
+    </picture>
 
 (Example here.)
 
@@ -827,8 +821,8 @@ alternatives:
      type="image/webp">
         <source media="(min-width: 18em)" srcset="med.webp, med-hd.webp 2x"
         type="image/webp">
-        <img src="small.jpg" alt="The president giving an award.">
-        </picture>
+        <img src="images/small.jpg" alt="The president giving an award.">
+    </picture>
 
 (Example here: try this on a browser such as Chrome that supports WebP, and a
 browser that doesn't, such as Safari.)
@@ -1011,3 +1005,5 @@ mimics the picture element, from developer Scott Jehl
 Multi-device accessibility:
 [video](https://www.youtube.com/watch?v=E0ojKLzXoZ4), [slide
 deck](https://docs.google.com/presentation/d/1xKlQZRHyLPXvrTdGkGIumc24bT4_kxRmdqIC_b7fngo/pub?start=false&loop=false&delayms=3000#slide=id.g17271919f_36)
+
+{% endwrap %}
