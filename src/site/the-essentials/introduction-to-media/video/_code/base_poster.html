@@ -2,21 +2,18 @@
 <html>
 <head>
 	<!-- // [TEMPLATE header_full] -->
-	<title>Video element fragments</title>
+	<title>The video element</title>
 </head>
 <body>
 <div id="container">
 
-  <h1>Video Element Fragments</h1>
+  <h1>The Video Element</h1>
 
-  <!-- // [START sourcetypes] -->
-  <video autoplay controls poster="images/poster.jpg" preload="metadata">
-    <source src="/resources/samples/assets/chrome.webm#t=10,15" type="video/webm" />
-    <source src="/resources/samples/assets/chrome.mp4#t=10,15" type="video/mp4" />
-
+  <!-- // [START basic] -->
+  <video src='chrome.webmt=5,10' poster="images/poster.jpg">
     <p>This browser does not support the video element.</p>
   </video>
-  <!-- // [END sourcetypes] -->
+  <!-- // [END basic] -->
 
   <p id="videoSrc"></p>
 

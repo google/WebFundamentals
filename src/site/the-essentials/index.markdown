@@ -1,21 +1,10 @@
 ---
-layout: default
+layout: landing
 title: "The Essentials"
 description: ""
+introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+id: the-essentials
 ---
-
-
-<div class="page-header">
-  <div class="container">
-    <nav class="breadcrumbs">
-      <p> / <a href="#" class="breadcrumbs__link"> The Essentials</a></p>
-    </nav>
-    <h3 class="xxlarge">{{ page.title }}</h3>
-    <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, optio, ad, voluptates repudiandae at excepturi error delectus explicabo nulla eum provident quibusdam ipsum sapiente culpa sequi quia unde fuga id.</p>
-  </div>
-</div>
-
-
 
 <div class="guides-section">
   <header class="container">
@@ -26,13 +15,14 @@ description: ""
   <ul class="guides-list container-medium">
 
     {% for guide in page.articles.the-essentials %}
+
     <li class="guides-list__item g--half {% cycle '', 'g--last' %}">
       <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
       <p>{{guide.description}}</p>
       <ol class="list--links list--reset">
-        <li><a href="#">Layout basics</a></li>
-        <li><a href="#">Basics layouts</a></li>
-        <li><a href="#">Layout patterns</a></li>
+      {% for article in page.articles[guide.id] %}
+        <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
+      {% endfor %}
       </ol>
     </li>
 
@@ -40,3 +30,4 @@ description: ""
 
   </ul>
 </div>
+

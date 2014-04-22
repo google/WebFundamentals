@@ -13,7 +13,7 @@
           padding: 0.8em;
           color: white;
           font-family: Roboto, sans-serif;
-          background-image: url(http://25.media.tumblr.com/e61b131395e7d670643764e861a22aac/tumblr_mwhddkiwxJ1st5lhmo1_1280.jpg);
+          background-image: url(backgroundimage.jpg);
           background-size: cover;
         }
 
@@ -176,6 +176,7 @@
           }
           /* // [END padding] */
 
+          /* // [START formfloat] */
           #headline #blurb {
             float: left; 
             font-weight: 200;
@@ -185,16 +186,17 @@
             padding-right: 10px;
           }
 
-          #headline br {
-            clear: both;
-          }
-
           #headline #register {
             float:right;
             padding: 20px;
             width: 50%;
             box-sizing: border-box;=
             font-weight: 300;
+          }
+          /* // [END formfloat] */
+
+          #headline br {
+            clear: both;
           }
           
           #section1 #section2, #section3 {
@@ -231,88 +233,112 @@
   </head>
   <body> 
     <div id="headline">
-      <h1>Smiles Inc.</h1>
-      <h2>Best when shared</h2>
-      <div id="blurb">
-        <p>Who doesn't love a good smile? After kittens a smile is the bestest thing in the world, with many available for all occasions:</p>
-        <ul>
-          <li>The 'sup bro smile;
-          <li>The love you son smile; 
-          <li>The condescending smile for when you didn't win the Oscar,
-          <li>and the good-ol' British in the thick of it smile.
-        </ul>
-      </div>
-      <form method="post" id="register"> 
-      </form>
+      <div class="container">
+        <h1>Smiles Inc.</h1>
+        <h2>Best when shared</h2>
+        <div id="blurb">
+          <p>Who doesn't love a good smile? After kittens a smile is the bestest thing in the world, with many available for all occasions:</p>
+          <ul>
+            <li>The 'sup bro smile;
+            <li>The love you son smile; 
+            <li>The condescending smile for when you didn't win the Oscar,
+            <li>and the good-ol' British in the thick of it smile.
+          </ul>
+        </div>
+        <form method="post" id="register"> 
+          <h2>Sign up for more smiles</h2>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Thomas A Anderson" required />
+          <label for="email">Email address</label>
+          <input type="text" name="email" id="email" placeholder="neo@example.com" required />
+          <label for="tel">Telephone</label>
+          <input type="tel" name="tel" id="tel" placeholder="(555) 555 5555" required />
+          <label for="time">Best time to contact</label>
+          <input type="time" name="time" id="time" placeholder="4pm" required />
+          <input type="submit" value="Sign up">
+        </form>
+        <br>
       </div>
     </div>
     
+    <!-- // [START containerhtml] -->
     <div id="section1">
-      <h2>Smiles. Delivered.</h2>
-      <p>Anytime.  Anyplace.  When you need it, you got it.</p>
-      <ul>
-        <li>We aim to be the best</li>
-        <li>Never undersold</li>
-        <li>Never bettered</li>
-      </ul>
-      <video controls poster="smiles.png">
-        <source src="smiles.webm" type="video/webm"></source>
-        <source src="smiles.mov" type="video/mov"></source>
-        <p>Sorry your browser doesn't support vide. 
-           <a href="smiles.mov">Download the video</a>.
-        </p>
-      </video>
+      <div class="container">
+        <h2>Smiles. Delivered.</h2>
+        <p>Anytime.  Anyplace.  When you need it, you got it.</p>
+        <ul>
+          <li>We aim to be the best</li>
+          <li>Never undersold</li>
+          <li>Never bettered</li>
+        </ul>
+        <video controls poster="smiles.png">
+          <source src="smiles.webm" type="video/webm"></source>
+          <source src="smiles.mov" type="video/mov"></source>
+          <p>Sorry your browser doesn't support vide. 
+             <a href="smiles.mov">Download the video</a>.
+          </p>
+        </video>
+        <br>
+      </div>
     </div>
-
+    <!-- // [END containerhtml] -->
    
     <div id="section2">
-      <h2>Pictures of happy people smiling</h2>
-      <p>Everyone loves happy people</p>
-      
-      <div id="images">
-        <img src="paulkinlan.png">
-        <img src="samdutton.png">
-        <img src="mattgaunt.jpg">
-        <img src="ianbarber.jpg">
+      <div class="container">
+        <h2>Pictures of happy people smiling</h2>
+        <p>Everyone loves happy people</p>
+        
+        <div id="images">
+          <img src="paulkinlan.png">
+          <img src="samdutton.png">
+          <img src="mattgaunt.jpg">
+          <img src="ianbarber.jpg">
+        </div>
+        <br>
       </div>
     </div>
     
     <div id="section3">
-      <h2>Proof smiles are great</h2>
-      <p>Some pithy comment about why we are amazeballs</p>
-      <figure>
-        <table>
-          <thead>
-             <tr>
-               <td>Age Index</td>
-               <td>Receptive Quotient</td>
-               <td>Happiness</td>
-             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>1</td>
-              <td>4</td>
-            </tr>
-          </tbody>
-        </table>
-        <figcaption>Hugs == more happiness</figcaption>
-      </figure>
+      <div class="container">
+        <h2>Proof smiles are great</h2>
+        <p>Some pithy comment about why we are amazeballs</p>
+        <figure>
+          <table>
+            <thead>
+               <tr>
+                 <td>Age Index</td>
+                 <td>Receptive Quotient</td>
+                 <td>Happiness</td>
+               </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption>Hugs == more happiness</figcaption>
+        </figure>
+        <br>
+      </div>
     </div>
 
     <div id="footer">
-      <p>We always need a footer.</p>
+      <div class="container">
+        <p>We always need a footer.</p>
+      </div>
     </div>
   </body>
 </html>

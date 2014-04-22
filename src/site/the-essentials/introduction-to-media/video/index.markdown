@@ -79,27 +79,17 @@ Read more to find the simplest way to add video to your site and ensure users ge
 
 Load, decode, and play video:
 
-    <video src='foo.webm'>
-             <p>This browser does not support the video element.</p>
-    </video>
+{% include_code _code/basic.html basic %}
 
 ### Specify a start and end time
 
-Save bandwidth and make your site feel more responsive: use the Media Fragments API to add a start and end time to the video element (full sample: [simpl.info/mf](http://simpl.info/mediafragments/)):
+Save bandwidth and make your site feel more responsive: use the Media Fragments API to add a start and end time to the video element:
 
-{% include_code _code/fragment.html fragments %}
-
-    <video src='foo.webm#**t=5,10**'>
-        <p>This browser does not support the video element.</p>
-    </video>
+{% include_code _code/base_fragment.html basic %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.specify-a-start-time %}
 
 You can also use the Media Fragments API to deliver multiple views on the same video -- like cue points in a DVD -- without having to encode and serve multiple files:
-
-    <video src='foo.webm#t=5,10'>
-        <p>This browser does not support the video element.</p>
-    </video>
 
 {% include modules/remember.liquid title="Remember" list=page.remember.range-request %}
 
@@ -111,9 +101,7 @@ To check for Range Request support, your browser tools for `Accept-Ranges: bytes
 
 Add a poster attribute to the video element so that your users have an idea of the content as soon as the element loads, without needing to download video or start playback:
 
-    <video src='foo.webm#t=5,10' poster='foo.jpg'>
-        <p>This browser does not support the video element.</p>
-    </video>
+{% include_code _code/base_poster.html basic %}
 
 A poster can also be a fallback if the video `src` is broken or none of the video formats supplied are supported. The only downside to poster images is an additional file request, which consumes some bandwidth and requires rendering. For more information see [Image optimization](https://docs.google.com/a/google.com/document/d/1EdBtvM_OIdmZlPhtOq_oLuQ4nGEq1dycOsN8A-KtExY/edit#heading=h.satr4xiyp2fp).
 
@@ -127,11 +115,7 @@ Not all browsers support the same video formats.
 
 Use the source element to enable browsers to choose from multiple available formats. MP4 and WebM cover all modern browsers, including all mobile browsers:
 
-    <video src='foo.webm#t=5,10' poster='foo.jpg'>
-         <source src="video/foo.mp4" />
-         <source src="video/foo.webm" />
-        <p>This browser does not support the video element.</p>
-    </video>
+{% include_code _code/fragment.html sourcetypes %}
 
 The user's browser selects the first available format it can play. This approach has several advantages over serving different HTML or server-side scripting, especially on mobile:
 
@@ -186,10 +170,7 @@ Want to know which video format was actually chosen by the browser?
 
 In JavaScript, use the video's `currentSrc` property to return the source used:
 
-    document.querySelector('video').onloadedmetadata = function(){
-        var fileName = this.currentSrc.replace(/^.*[\\\/]/, '');
-        document.querySelector("#videoSrc").textContent = 'Playing video: ' + fileName;
-    };
+{% include_code _code/basic.html currentsrc javascript %}
 
 Given the source example above, Chrome and Firefox choose `chrome.webm` (because that's the first in the list of potential sources these browsers support) whereas Safari chooses `chrome.mp4`.
 
@@ -227,16 +208,7 @@ You can control video dimensions using JavaScript or CSS. JavaScript libraries s
 
 Use [CSS media queries](https://docs.google.com/a/google.com/document/d/1sI9PrGi082PUPXe9ACcAdvxPdinGyWAINWSjfUpYJ2Q/edit#heading=h.rhwcxf4xgfg9) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend:
 
-    video#foo {
-        width: 600px;
-    }
-
-    @media screen and (max-width: 1000px) {
-        video#foo {
-            max-width: 100%;
-            width: auto;
-        }
-    }
+{% include_code _code/basic.html styling css %}
 
 {% include modules/remember.liquid title="Remember" list=page.key-takeaways.dont-overflow %}
 
@@ -244,29 +216,11 @@ For media content in iframes (such as YouTube videos), try a responsive approach
 
 **CSS:**
 
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .video-container iframe,
-    .video-container object,
-    .video-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+{% include_code _code/responsive_embed.html styling css %}
 
 **HTML:**
 
-    <div class="video-container">
-        <iframe src="http://www.youtube.com/embed/l-BA9Ee2XuM" frameborder="0" width="560" height="315"></iframe>
-    </div>
+{% include_code _code/responsive_embed.html markup html %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.compare-formats %}
 
@@ -346,12 +300,7 @@ Using the track element, captions appear like this:
 
 It's very easy to add captions to your video -- simply add a [track element](http://www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
 
-    <video>
-        <source src="video/chrome.mp4" type="video/mp4;" />
-        <source src="video/chrome.webm" type="video/webm" />
-        <track src="tracks/chrome-subtitles-en.vtt" />
-        <p>This browser does not support the video element.</p>
-    </video>
+{% include_code _code/track.html basic %}
 
 The track element `src` attribute gives the location of the track file.
 
