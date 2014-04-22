@@ -1409,11 +1409,11 @@ body.debug:after {
     border-bottom: 1px solid white;
   }
 }
-/* line 36, ../_sass/_modules/_table.scss */
+/* line 35, ../_sass/_modules/_table.scss */
 .table tbody {
   background: #f0f0f0;
 }
-/* line 40, ../_sass/_modules/_table.scss */
+/* line 39, ../_sass/_modules/_table.scss */
 .table td {
   display: block;
   padding-top: 13px;
@@ -1444,14 +1444,14 @@ body.debug:after {
     display: none;
   }
 }
-/* line 71, ../_sass/_modules/_table.scss */
+/* line 70, ../_sass/_modules/_table.scss */
 .table th,
 .table td {
   position: relative;
   padding-left: 140px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 71, ../_sass/_modules/_table.scss */
+  /* line 70, ../_sass/_modules/_table.scss */
   .table th,
   .table td {
     display: table-cell;
@@ -1460,7 +1460,7 @@ body.debug:after {
   }
 }
 
-/* line 83, ../_sass/_modules/_table.scss */
+/* line 82, ../_sass/_modules/_table.scss */
 td:last-child:after {
   content: "";
   display: block;
@@ -1472,42 +1472,42 @@ td:last-child:after {
   width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 83, ../_sass/_modules/_table.scss */
+  /* line 82, ../_sass/_modules/_table.scss */
   td:last-child:after {
     display: none;
   }
 }
 
-/* line 98, ../_sass/_modules/_table.scss */
+/* line 97, ../_sass/_modules/_table.scss */
 .table--2 col {
   width: 344px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 98, ../_sass/_modules/_table.scss */
+  /* line 97, ../_sass/_modules/_table.scss */
   .table--2 col {
     width: 432px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 108, ../_sass/_modules/_table.scss */
+  /* line 107, ../_sass/_modules/_table.scss */
   .table--2 th:first-child,
   .table--2 td:first-child {
     border-right: 2px solid white;
   }
 }
 
-/* line 116, ../_sass/_modules/_table.scss */
+/* line 115, ../_sass/_modules/_table.scss */
 .table--3 col {
   width: 229.33333px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 116, ../_sass/_modules/_table.scss */
+  /* line 115, ../_sass/_modules/_table.scss */
   .table--3 col {
     width: 288px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 126, ../_sass/_modules/_table.scss */
+  /* line 125, ../_sass/_modules/_table.scss */
   .table--3 th:nth-child(2),
   .table--3 td:nth-child(2) {
     border-left: 2px solid white;
@@ -1515,18 +1515,18 @@ td:last-child:after {
   }
 }
 
-/* line 135, ../_sass/_modules/_table.scss */
+/* line 134, ../_sass/_modules/_table.scss */
 .table--4 col {
   width: 172px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 135, ../_sass/_modules/_table.scss */
+  /* line 134, ../_sass/_modules/_table.scss */
   .table--4 col {
     width: 216px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 146, ../_sass/_modules/_table.scss */
+  /* line 145, ../_sass/_modules/_table.scss */
   .table--4 th:nth-child(2), .table--4 th:nth-child(3),
   .table--4 td:nth-child(2),
   .table--4 td:nth-child(3) {
