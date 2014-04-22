@@ -92,8 +92,6 @@ A nice advantage using tabs is that it gives the user a consistent place for nav
 
 ### Tabs vs Navigation Drawer
 
-<img class="g-wide--full" src="images/tabs.png">
-
 Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.tabs %}
