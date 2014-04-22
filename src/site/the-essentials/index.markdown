@@ -6,28 +6,6 @@ introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 id: the-essentials
 ---
 
-<div class="guides-section">
-  <header class="container">
-      <h2 class="xlarge">Guides Section</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor.</p>
-  </header>
-
-  <ul class="guides-list container-medium">
-
-    {% for guide in page.articles.the-essentials %}
-
-    <li class="guides-list__item g--half {% cycle '', 'g--last' %}">
-      <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
-      <p>{{guide.description}}</p>
-      <ol class="list--links list--reset">
-      {% for article in page.articles[guide.id] %}
-        <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
-      {% endfor %}
-      </ol>
-    </li>
-
-    {% endfor %}
-
-  </ul>
-</div>
-
+{% comment %}
+Guide list content will be output by the landing layout pased on the article collection matching page.id
+{% endcomment %}
