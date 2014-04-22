@@ -145,6 +145,12 @@
           isRACSupported(false, "Please complete the form manually.");
         }
         /* // [END rac] */
+
+        form.addEventListener("submit", function(evt) {
+          evt.preventDefault();
+          alert("Submission prevented to protect privacy.");
+          return false;
+        });
       }
 
       function isRACSupported(supported, message) {
