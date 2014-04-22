@@ -4,11 +4,12 @@ source: .
 destination: ../appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
-baseurl: /web/rarararar
-url: /web/rararar
-pygments: false
+baseurl: /web/essentials
+url: /web/essentials
+pygments: true
+include_open_html: false
 custom:
 kramdown:
   toc_levels: "2,3,4"
-include: ['.htaccess']
+include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['config.rb']
