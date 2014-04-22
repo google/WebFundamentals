@@ -166,6 +166,7 @@ We have also come up with a rough Information Architecture and layout for both t
 and wide viewports.
 
 [TODO: Show a rough sketch of the IA for narrow viewport]
+
 [TODO: Show a rough sketch of the IA for wide viewport]
 
 This can be converted easily in to the rough sections of a skeleton page.
@@ -174,8 +175,9 @@ This can be converted easily in to the rough sections of a skeleton page.
 
 ## Add Content
 
-The basic structure of the site is complete.  We know roughly what sections we need, what content
-we will display and where it will be positioned in the overall information architecture.
+The basic structure of the site is complete and we know what sections we need, what content
+we will display and where it will be positioned in the overall information architecture we can now
+start to build out the site.
 
 {% include modules/remember.liquid title="Note" list=page.notes.styling %}
 
@@ -357,12 +359,11 @@ We are using the principles of Mobile First web development.  We started
 with a narrow viewport &mdash; similar to a mobile phone &mdash; and built for that 
 experience first.  
 
-We now need to make our viewport wider like you would start to expect to see on a 
-tablet, desktop and TV and make it work on these. At each point where the content doesn't 
-look right we will add a major breakpoint.
+Earlier we created a couple of different high-level designs for how our content should be displayed and
+now we need to choose our breakpoints &mdash; a point where the layout and styles change &mdash; based on how the
+contents fits the screen-size.
 
-Earlier on we created a couple of different high-level designs for how our content should be displayed and
-now we need to choose our breakpoints &mdash; where the content and styles change &mdash; based on your content.
+We can do this by making our viewport wider and making a judgement call on whether the design and layout look right.
 
 [TODO: Add Images]
 
@@ -370,7 +371,7 @@ now we need to choose our breakpoints &mdash; where the content and styles chang
 
 To apply the correct styling at these break-points we will use 
 [Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-to let us adapt the style of the content to the width of the screen.
+to let us adapt the style and layout of the content to the width of the screen.
 
 <div class="related-items">
 <div class="related-items">
@@ -381,8 +382,7 @@ to let us adapt the style of the content to the width of the screen.
 
 *  [Using Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
 *  [Major Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Minor Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-
+*  [Minor Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness)
 </div>
 </div>
 </div>
@@ -392,10 +392,13 @@ to let us adapt the style of the content to the width of the screen.
 
 [TODO: GIF of it starting to look bad].
 
-The design starts to look bad at about 600px wide.  This is a good place to create our first break point as it 
-will give us scope to reposition elements to make them fit the screen better. 
+The design starts to look bad at about 600px wide.  This is a good place to create our first breakpoint as it 
+will give us scope to reposition elements to make them fit the screen better.  We can do this as follows:
 
-In particular it looks like we need to:
+{% include_code _code/firstbreakpoint.html first css %}
+
+There is more space on a larger screen so there is more flexibility with how
+content can be displayed.  In the context of this page it looks like we will need to:
 
 *  Constrain the maximum width of the design
 *  Alter the padding of elements and reduce the text size
@@ -403,11 +406,13 @@ In particular it looks like we need to:
 *  Make the video float around the content
 *  Reduce the size of the images and have them appear in a nicer grid
 
-{% include_code _code/firstbreakpoint.html first css %}
 
 #### Constrain the maximum width of the design
 
-We have chosen to constrain the maximum width of the screen to be 800px.
+We have chosen to have only two major design: a narrow viewport and a wide viewport. 
+
+This means we should constrain the maximum width of the screen to be 800px so that the 
+content doesn't stretch out too far on large screens.
 
 We need to create a container around each major section to make a system
 that has an auto margin.  This will allow the screen to grow but the content
@@ -423,12 +428,12 @@ And then create a style that ensures that the content is padded and centered.
 
 #### Alter the padding of elements and reduce the text size
 
-We have more space on a larger screen so we get to be a bit more flexible with how
-it is displayed.   
+On the narrow viewport we normally have a lot less space to display content so 
+the size and weight of the typography is often drastically reduced to fit the screen.
 
-We can alter the padding altered the padding so there is a little more space between
-the elements.  We can also increase the readability of the content on a large screen 
-by increase the font size and weight.
+With the larger viewport we need to consider that the user is more likely further away
+from the screen so to increase the readability of the content we can increase the size and
+weight of the typography and we can alter the padding to make distinct areas stand out more.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
@@ -436,8 +441,11 @@ by increase the font size and weight.
 
 #### Float the Form Element
 
-To make use of the screen space more effectively we need to remove the linear flow
-of the header and instead move the form and the list next to each other.
+The narrow viewport means that we have a lot less horizontal space available for us
+to comfortably position elements on the screen.
+
+To make more effective use of the horizontal screen space we need to break out of the
+ the linear flow of the header and move the form and the list to be next to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
 
@@ -446,8 +454,8 @@ of the header and instead move the form and the list next to each other.
 
 #### Float the Video Element
 
-To make use of the screen space more effectively we need to remove the linear flow
-of the header and instead move the form and the list next to each other.
+The video element can also be moved out of the vertical flow of the narrow viewport and 
+can be display side by side with the bulleted list of content.
 
 [TODO: Animated GIF]
 
@@ -457,12 +465,12 @@ of the header and instead move the form and the list next to each other.
 
 The images in the narrow viewport (mobile devices mostly) interface are set to be 
 the full width of the screen.  This doesn't scale well on a screen with a 
-wider viewport.
+wide viewport.
 
 [TODO: Animated GIF]
 
-To make it scale well the images are scaled to 50% of the container width.  This
-means that we will get a nice grid of images and the images will not scale too large.
+To make the images look correct on the screen they are scaled to 50% of the container width.  This
+means that we will get a nice grid of images and the images will inflate to large.
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
