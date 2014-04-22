@@ -28,7 +28,6 @@
 @import "_modules/_summary-header";
 @import "_modules/_related-items";
 @import "_modules/_in-this-guide";
-@import "_modules/_table";
 @import "_modules/_articles-section";
 @import "_modules/_guides-section";
 @import "_modules/_page-header";
@@ -39,10 +38,12 @@
 @import "_components/_button";
 @import "_components/_list";
 @import "_components/_link";
+@import "_components/_table";
 @import "_components/_breadcrumb";
 @import "_components/_subsection-title";
 @import "_components/_column-list";
 @import "_components/_articles-list";
+@import "_components/_guides-list";
 
 // Pages
 @import "_pages/_styleguide";
