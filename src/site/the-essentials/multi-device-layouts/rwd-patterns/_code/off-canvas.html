@@ -6,19 +6,16 @@
     <style type="text/css">
 
       /* // [START ocanvas] */
-      .container {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row nowrap;
-        flex-flow: row nowrap;
+      body {
+        overflow-x: hidden;
       }
-
-      .c2 {
-        width: 100%;
+      
+      .container {
+        display: block;
       }
 
       .c1, .c3 {
-        position: fixed;
+        position: absolute;
         width: 250px;
         height: 100%;
         
@@ -32,9 +29,9 @@
         -webkit-transition: -webkit-transform 0.4s ease-out;
         transition: transform 0.4s ease-out;
         
-        z-index:1;
+        z-index: 1;
       }
-
+  
       .c1 {
         /*
         Using translate3d as a trick to improve performance on older versions of Chrome
@@ -43,6 +40,15 @@
         */
         -webkit-transform: translate(-250px,0);
         transform: translate(-250px,0);
+      }
+
+      .c2 {
+        width: 100%;
+        position: absolute;
+      }
+      
+      .c3 {
+        left: 100%;
       }
 
       .c1.open {
@@ -56,6 +62,13 @@
       }
       
       @media (min-width: 500px) {
+        /* If the screen is wider then 500px, use Flexbox */
+        .container {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
         .c1 {
           position: relative;
           -webkit-transition: none 0s ease-out;
@@ -63,11 +76,18 @@
           -webkit-transform: translate(0,0);
           transform: translate(0,0);
         }
+        .c2 {
+          position: static;
+        }
       }
 
       @media (min-width: 800px) {
-        .c3, .c3.open {
+        body {
+          overflow-x: auto;
+        }
+        .c3 {
           position: relative;
+          left: auto;
           -webkit-transition: none 0s ease-out;
           transition: none 0s ease-out;
           -webkit-transform: translate(0,0);
