@@ -11,6 +11,11 @@
 **/
 
 .breadcrumbs {
+  display: none;
+  @include medium {
+    display: block;
+  }
+
   position: relative;
   z-index: 1;
 }
