@@ -117,6 +117,9 @@ that you are always testing how it works in the real world.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
 
+# Adding Structure
+
+
 ## Flesh out the page with content
 
 We believe that the content is the most important aspect.
@@ -143,7 +146,7 @@ This is the basic structure now we can add some of the content.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.flesh-out %}
 
-### Add headline
+### Add Headline
 
 The headline is the first section that a user will see when they land on the page.
 We need to create a concise introduction and a place holder for a form that we will
@@ -221,7 +224,7 @@ Read our more detailed guide to [creating amazing forms](/web/essentials/the-ess
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
-## Add images to site
+## Add Images to Site
 
 Sites without images can be a little boring.  There are two types of images:
 
@@ -279,7 +282,7 @@ We will follow the best practices:
 
 {% include_code _code/addvideo.html video html %}
 
-## Make your page responsive
+# Make your page responsive
 
 Our page has all the content needed, but on different screen sizes it doesn't look good
  because we have simply created a linear site for a narrow viewport.
@@ -354,13 +357,15 @@ of the header and instead move the form and the list next to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
 
-
-
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
 
-## Summary
+# Summary
 
+We have created a simple product landing page that works across a huge range of devices,
+form-factors and screen sizes.
+
+# References
 
 
 
