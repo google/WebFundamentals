@@ -372,13 +372,17 @@ of the header and instead move the form and the list next to each other.
 #### Tile the Images
 
 The images in the narrow viewport (mobile devices mostly) interface are set to be 
-the full width of the screen.  This doesn't scale well at all on a screen with a 
+the full width of the screen.  This doesn't scale well on a screen with a 
 wider viewport.
 
 [TODO: Animated GIF]
 
+To make it scale well the images are scaled to 50% of the container width.  This
+means that we will get a nice grid of images and the images will not scale too large.
+
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
+[TODO:  Make the images reposnive to DPI.]
 
 # Summary
 
