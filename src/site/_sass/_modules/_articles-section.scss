@@ -1,0 +1,22 @@
+/**
+*
+* Articles section
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.articles-section {
+  background: $colorGrayB;
+  text-align: center;
+}
+
+.articles-count {
+  color: $colorBlue;
+  font-family: $fontHighlight;
+  padding-top: $lineHeight * 2;
+}

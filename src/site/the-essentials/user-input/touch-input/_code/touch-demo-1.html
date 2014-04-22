@@ -66,8 +66,8 @@
         
         /* // [START touch-action-example] */
         // Pass all touches to javascript
-        touch-action: none;
         -ms-touch-action: none;
+        touch-action: none;
         /* // [END touch-action-example] */
       }
 
@@ -338,8 +338,9 @@
         }
 
         /* // [START addlisteners] */
+        // Check if pointer events are supported.
         if (window.navigator.msPointerEnabled) {
-          // Pointer events are supported.
+          // Add Pointer Event Listener
           swipeFront.addEventListener('MSPointerDown', this.handleGestureStart, true);
         } else {
           // Add Touch Listener

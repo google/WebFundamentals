@@ -29,9 +29,7 @@ key-takeaways:
     - Each source image should be made for 2x DPI and 1x DPI
     - Highly compress all your images
   add-video:
-    - Use the highest DPI possible for your source
-    - Each source image should be made for 2x DPI and 1x DPI
-    - Highly compress all your images
+    - TODO
   make-responsive:
     - Always start with a narrow viewport first and scale out
     - Base your breakpoints off when you need to adapt the content
@@ -190,7 +188,9 @@ Most sites universally need a footer.
 
 We have assumed a set of styles that include color, padding and font styling. 
 
-{% include_code _code/content-with-styles.html style %}
+[TODO: Add Image]
+
+{% link_sample _code/content-with-styles.html %} See example {% endlink_sample %}
 
 ## Create a great form
 
@@ -215,7 +215,7 @@ the user should just see a dial pad.
 
 {% include_code _code/withform.html form %}
 
-Read our more detailed guide to creating amazing forms in our forms tutorial.
+Read our more detailed guide to [creating amazing forms](/web/essentials/the-essentials/user-input/form-input/index.html) in our forms tutorial.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
@@ -233,16 +233,26 @@ background images, patterns and gradients.
 
 Stylistic images are images that are not needed as part of the core content.
 
+A good example of this is a headline image for the 'above the fold' content.
+
+[TODO: Add Image]
+
+{% include_code _code/addimages.html styles css %}
+
+We have chosen a simple background image that is blurred so it doesn't take away from the content
+and we have set it to `cover` the entire element.
+
 ## Add Content Images
 
-so lets add some in.
+Content images are images that are critical to conveying the meaning of the page.
+Think of it as images that are used in newspaper articles.
 
-    <div id="images">
-      <img src="">
-      <img src="">
-      <img src="">
-      <img src="">
-    </div>
+[TODO: Add Image]
+
+{% include_code _code/addimages.html images html %}
+
+The images in this case our set to scale to 100% of the width of the screen.  This works well on 
+mobile devices, but less well on desktop.  We will manage this in the responisve design section.
 
 [TODO Link to Sam's Images Article and Ilya's optimising images.]
 
@@ -252,40 +262,81 @@ Videos are often used to describe content in a more interactive manner and are
 often used to show a demonstration of a product or a concept.  It can be hard to
 get them correct unless you know the best practices.
 
-Lets add a video to the site.
-
-    <div id="producttour">
-       <video src=""></video>
-    </div>
-
-
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
+
+We will follow the best practices:
+
+*  Add a `controls` attribute to make it easy for people to play the video
+*  Add a `poster` image to give people a preview of the content
+*  Add mutliple `<source>` elements based on supported video formats.
+*  Add fallback text to let people download the video if they can't play it in the window.
+
+{% include_code _code/addvideo.html video html %}
 
 ## Make your page responsive
 
-Our page has all the content needed, but on different screen sizes it looks a
-little bland as we have simply created a linear site for a narrow viewport.
+Our page has all the content needed, but on different screen sizes it doesn't look good
+ as we have simply created a linear site for a narrow viewport.
 
-We are using the principles of Mobile First web development, that is we start
-with a narrow viewport and build for that experience and then we make our
-viewport wider like you would start to expect to see on a tablet, desktop and
-TV.  At each point where the content doesn't look right we will add a
-breakpoint.
+[TODO: Image of widening the viewport.] 
 
-A breakpoint is a point in your design where you alter the layout in CSS to
-accommodate the screen dimensions.
-
-To learn more about Micro-reflows see [link]
+We are using the principles of Mobile First web development.  We start
+with a narrow viewport &mdash; similar to a mobile phone &mdash; and build for that 
+experience and then we make our viewport wider like you would start to expect to see on a 
+tablet, desktop and TV.  At each point where the content doesn't look right we will add a
+breakpoint.  We call this technique "Micro-reflow".
 
 Choose breakpoints (where the content and styles change) based on your content.
-Using devices or basing it on traffic to existing sites can get very messy
-
-Instead choose your breakpoints based on when the content needs flow to cater
-for the screen real-estate.
-
-To make our page responsive we use media queries to allow us to group styles
-based on factors such screen width or viewport width.
+Using devices or basing it on traffic to existing sites can get very messy.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
+
+To apply the correct styling at these break-points we will use 
+[Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+to let us adapt the style of the content to the width of the screen.
+
+### Adding your first breakpoint
+
+[TODO: GIF of it starting to look bad].
+
+The design starts to look bad at about 600px wide.  This is a good place to create our first break point as it 
+will give us scope to reposition elements to make them fit the screen better. 
+
+In particular it looks like we need to:
+
+*  Constrain the maximum width of the design
+*  Alter the padding of elements and reduce the text size
+*  Move the form to float inline with the heading content
+*  Make the video float around the content
+*  Reduce the size of the images and have them appear in a nicer grid
+
+{% include_code _code/firstbreakpoint.html first css %}
+
+#### Constrain the maximum width of the design
+
+We have chosen to constrain the maximum width of the screen to be 800px.
+
+Add auto margin.
+
+We need to edit our structure slightly to do this.
+
+{% include_code _code/fixingfirstbreakpoint.html container css %}
+
+#### Alter the padding of elements and reduce the text size
+
+*  We have altered the padding
+*  We have adjusted the 
+
+{% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+[TODO: GIF of it starting to look better with altered].
+
+#### Floating the form element
+
+To make use of the screen space more effectively 
+
+{% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+
 
 {% endwrap %}

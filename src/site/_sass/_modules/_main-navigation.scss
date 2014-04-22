@@ -1,0 +1,185 @@
+/**
+*
+* Main Navigation
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.main-nav {
+  background: #ffffff;
+  position: relative;
+
+  @include medium {
+    background-color: $colorGrayDark;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  @include medium {
+    text-align: center;
+    @include container;
+    position: static;
+  }
+}
+
+.main-nav__item {
+  list-style: none;
+  display: block;
+  background-color: $colorGray;
+  position: static;
+  padding-left: 0;
+
+  &.main-nav__item--logo {
+    @include small-only {
+      display: none;
+    }
+  }
+
+  @include medium {
+    float: left;
+    background-color: transparent;
+    width: 20%;
+    border-right: 1px solid darken($colorGrayDark, 10%);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  // Remove the padding-top apart from first-child
+  &:first-child ~ .main-nav__item {
+    padding-top: 0;
+  }
+
+  // Remove list styles
+  &:before {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  color: $colorGrayDark;
+  font-family: $fontHighlight;
+  @include type--large;
+  margin-bottom: 1px;
+
+  display: block;
+
+  padding-top: $lineHeight/2;
+  padding-bottom: ($lineHeight/2) - 1;
+
+  @include small-only {
+    @include container;
+  }
+
+  @include medium {
+    margin-bottom: 0;
+    color: #ffffff;
+    @include type--medium;
+    padding-bottom: $lineHeight;
+  }
+
+  @include wide {
+    padding-bottom: $lineHeight;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .main-nav__item--logo & {
+    font-size: 60px;
+    padding-top: $lineHeight;
+    line-height: $lineHeight;
+  }
+}
+
+.main-nav__list--child {
+  padding-top: 0;
+}
+
+.main-nav__item--child {
+  padding-top: 0;
+  position: static;
+  padding-left: 0;
+
+  &:before {
+    display: none;
+  }
+}
+
+.main-nav__link--child {
+  background: #ffffff;
+  @include type--base;
+  padding-top: $lineHeight/2;
+  padding-bottom: ($lineHeight/2) - 1;
+
+  @include small-only {
+    padding-left: 10%;
+  }
+
+  @include medium {
+    color: $colorText;
+
+    // Only override links inside list
+    .main-nav__list--child & {
+      @include type--large;
+    }
+  }
+}
+
+
+.main-nav__secondary-nav {
+  @include medium {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid $colorGrayDark;
+    padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
+    color: $colorText;
+
+    display: none;
+
+    li:hover & {
+      display: block;
+    }
+  }
+}
+
+
+.main-nav__secondary-content {
+  @include medium {
+    @include container;
+    text-align: left;
+  }
+}
+
+.main-nav__link--explore {
+  @include style-cta($colorBlue, false);
+  display: block;
+
+  @include medium {
+    border-bottom: 1px solid $colorGray;
+  }
+}
+
+.main-nav__featured {
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+}
+
+.main-nav__featured-text {
+  padding-top: 0;
+}

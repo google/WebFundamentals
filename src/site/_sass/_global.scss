@@ -37,4 +37,8 @@ body {
   @include container;
 }
 
-
+.container-medium {
+  @include medium {
+    @include container;
+  }
+}

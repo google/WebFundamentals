@@ -7,6 +7,7 @@ permalink: /articles/:title.html
 baseurl: /web/essentials
 url: /web/essentials
 pygments: false
+include_open_html: true
 custom:
 kramdown:
   toc_levels: "2"

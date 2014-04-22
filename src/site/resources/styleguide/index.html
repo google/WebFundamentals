@@ -23,16 +23,17 @@ NOTE: This is our styleguide
       <p>/<a href="#" class="breadcrumbs__link"> Resources</a></p>
     </nav>
     <h1 class="summary-header__title">Styleguide</h1>
-    <ul class="summary-header__anchor-list">
-      <li class="summary-header__anchors-item"><a href="#typography"><strong>#01</strong> Typography</a></li>
-      <li class="summary-header__anchors-item"><a href="#buttons"><strong>#02</strong> Buttons</a></li>
-      <li class="summary-header__anchors-item"><a href="#lists"><strong>#03</strong> Lists</a></li>
-      <li class="summary-header__anchors-item"><a href="#links"><strong>#04</strong> Links</a></li>
-      <li class="summary-header__anchors-item"><a href="#breadcrumbs"><strong>#05</strong> Breadcrumbs</a></li>
-      <li class="summary-header__anchors-item"><a href="#subsection-title"><strong>#06</strong> Subsection title</a></li>
-      <li class="summary-header__anchors-item"><a href="#grid"><strong>#07</strong> Grid</a></li>
-      <li class="summary-header__anchors-item"><a href="#modules"><strong>#08</strong> Modules</a></li>
-    </ul>
+    <ol class="summary-header__anchor-list  list--links">
+      <li class="summary-header__anchors-item"><a href="#typography">Typography</a></li>
+      <li class="summary-header__anchors-item"><a href="#buttons">Buttons</a></li>
+      <li class="summary-header__anchors-item"><a href="#lists">Lists</a></li>
+      <li class="summary-header__anchors-item"><a href="#links">Links</a></li>
+      <li class="summary-header__anchors-item"><a href="#breadcrumbs">Breadcrumbs</a></li>
+      <li class="summary-header__anchors-item"><a href="#subsection-title">Subsection title</a></li>
+      <li class="summary-header__anchors-item"><a href="#table">Table</a></li>
+      <li class="summary-header__anchors-item"><a href="#grid">Grid</a></li>
+      <li class="summary-header__anchors-item"><a href="#modules">Modules</a></li>
+    </ol>
   </div>
 </div>
 
@@ -83,10 +84,33 @@ NOTE: This is our styleguide
     </ul>
 
     <ul class="list--links">
-      <li class="list__item">Lorem ipsum dolor sit amet.</li>
-      <li class="list__item">Dicta optio cumque dolore hic ea facilis</li>
-      <li class="list__item">Minus, possimus, veniam, incidunt eligendi</li>
+      <li class="list__item"><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li class="list__item"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li class="list__item"><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
     </ul>
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Dicta optio cumque dolore hic ea facilis</li>
+      <li>Minus, possimus, veniam, incidunt eligendi</li>
+    </ol>
+
+    <ol class="list--links">
+      <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    </ol>
+
+    <div class="columns-list-wrapper">
+      <ol class="list--columns list--links">
+        <li class="columns-list-item"><a href="#">Lorem ipsum</a></li>
+        <li class="columns-list-item"><a href="#">Dicta optio</a></li>
+        <li class="columns-list-item"><a href="#">Minus, possimus</a></li>
+        <li class="columns-list-item"><a href="#">Lorem ipsum</a></li>
+        <li class="columns-list-item"><a href="#">Dicta optio</a></li>
+        <li class="columns-list-item"><a href="#">Minus, possimus</a></li>
+      </ol>
+    </div>
 
   </section>
 
@@ -133,9 +157,96 @@ NOTE: This is our styleguide
 
   </section>
 
+  <a name="table"></a>
+  <section class="styleguide__table">
+    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Table</h2>
+
+    <table class="table table--4">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+          <th>Description</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table--3">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table--2">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
   <a name="grid"></a>
   <section class="styleguide__grid">
-    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Grid</h2>
+    <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Grid</h2>
 
     <div class="clear demo">
       <div class="g-medium--half g-wide--1"></div>
@@ -199,7 +310,7 @@ NOTE: This is our styleguide
   </section>
 
   <a name="modules"></a>
-  <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Modules</h2>
+  <h2 class="subsection-title"><strong class="subsection-number">#09</strong> Modules</h2>
 
   <h3 class="styleguide__module-title">Highlights</h3>
 
@@ -207,13 +318,13 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="remember" %}
 
   {% include modules/highlight.liquid character="}" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
 
-  {% include modules/highlight.liquid character="?" title="Remember" list=page.learning-list %}
+  {% include modules/highlight.liquid character="?" title="Remember" list=page.learning-list type="remember" %}
 
-  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" type="remember" %}
 
 </section>
 
@@ -238,6 +349,90 @@ NOTE: This is our styleguide
 
 </section>
 
+<div class="container">
+  <h3 class="styleguide__module-title">Articles section</h3>
+</div>
 
+<section class="styleguide__articles-section">
+  <div class="articles-section">
+    <div class="container">
+      <div class="articles-section__container g-wide--push-1 g-wide--pull-1">
+        <p class="articles-count">4 guides</p>
+        <ol class="articles-list">
+          <li class="articles-list__item">
+            <h3 class="xxlarge"><a href="#">Layout basics</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+            <a href="#" class="cta--primary">See all lessons</a>
+          </li>
+          <li class="articles-list__item">
+            <h3 class="xxlarge"><a href="#">Basic layouts</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+            <a href="#" class="cta--primary">See all lessons</a>
+          </li>
+          <li class="articles-list__item">
+            <h3 class="xxlarge"><a href="#">Layout patterns</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+            <a href="#" class="cta--primary">See all lessons</a>
+          </li>
+          <li class="articles-list__item">
+            <h3 class="xxlarge"><a href="#">UI Elements</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+            <a href="#" class="cta--primary">See all lessons</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
 
+<div class="container">
+  <h3 class="styleguide__module-title">Guides section</h3>
+</div>
 
+<section class="styleguide__guides-section">
+  <div class="guides-section">
+    <header class="container">
+        <h2 class="xlarge">Guides Section</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor.</p>
+    </header>
+
+    <ul class="guides-list container-medium">
+      <li class="guides-list__item g--half">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+      <li class="guides-list__item g--half g--last">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+      <li class="guides-list__item g--half">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+      <li class="guides-list__item g--half g--last">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</section>

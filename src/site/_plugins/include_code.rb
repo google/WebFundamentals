@@ -1,4 +1,20 @@
 module Jekyll
+  class LinkSampleBlock < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+      @file = markup
+    end
+
+    def render(context)
+        page = context.environments.first["page"]
+        path = context.registers[:site].source;
+        String filepath = File.join(File.dirname(page["path"]), @file).sub("/_code", "")
+        url = File.join(context.registers[:site].baseurl, "/resources/samples", filepath).strip
+        out = super(context)
+        "<a href=\"#{url}\">#{out}</a>"
+    end
+  end
+
   class IncludeCodeTag < Liquid::Tag
     include Liquid::StandardFilters
 
@@ -20,14 +36,28 @@ module Jekyll
       @character = '/'
     end
 
+    def getmatcher_tag(lang, section, tag)
+      startc, endc = @@comment_formats[lang]
+      "#{startc} \\/\\/ \\[#{tag} #{section}\\] #{endc}\n?"
+    end 
+
+    def getmatch(contents, lang, section)
+      start = getmatcher_tag(lang, section, "START")
+      endt = getmatcher_tag(lang, section, "END")
+      contents.match(/#{start}(.*)#{endt}/im)[1]
+    end
+
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
         String filepath = File.join(File.dirname(page["path"]), @file)
         String file = File.join(path, filepath)
         contents = File.read(file)
-        startc, endc = @@comment_formats[@lang]
-        snippet = contents.match(/#{startc} \/\/ \[START #{@section}\] #{endc}\n(.*)#{startc} \/\/ \[END #{@section}\] #{endc}/im)[1];
+        snippet = getmatch(contents, @lang, @section)
+        @@comment_formats.each do |lang, parms|
+            match = getmatcher_tag(lang, "[^\\]]+", "\\w+")
+            snippet.gsub!(/#{match}/mi, "")
+        end
         render_codehighlighter(context, snippet, filepath)
     end
 
@@ -72,7 +102,7 @@ module Jekyll
     <div class="highlight-module__container" data-character="#{@character}">
       <div class="g-wide--pull-1 g-medium--pull-1">
         <code class='html'>#{highlighted_code.strip}</code>
-        <a class="highlight-module__cta" href="/resources/samples/#{filepath}">View full sample</a>
+        <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/resources/samples/#{filepath}">View full sample</a>
       </div>
     </div>
   </div>
@@ -84,3 +114,4 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('include_code', Jekyll::IncludeCodeTag)
+Liquid::Template.register_tag('link_sample', Jekyll::LinkSampleBlock)
