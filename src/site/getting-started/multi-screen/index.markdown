@@ -340,7 +340,10 @@ By following the best practices you can easily integrate video in to your site:
 ### Related information
 {: .related-items--title}
 
-* [Using video effectively]({{site.baseurl}}/the-essentials/introduction-to-media/video/index.html)
+*  [Using video effectively]({{site.baseurl}}/the-essentials/introduction-to-media/video/index.html)
+*  Another link once we have the article finalised
+*  Another link once we have the article finalised
+*  Another link once we have the article finalised
 {: .list--links}
 
 </div>
@@ -478,7 +481,7 @@ means that we will get a nice grid of images and the images will inflate to larg
 
 # Summary
 
-We have created a simple product landing page that works across a huge range of devices,
+We have created a simple product landing page that works across a large range of devices,
 form-factors and screen sizes.
 
 *  Always set a viewport
