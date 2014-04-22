@@ -95,9 +95,9 @@ module SampleBuilder
     		contents.gsub!(/<!-- \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] -->\s*\n?/m, "\n")
     		contents.gsub(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches| 
     			tag = $1.downcase
-    			if (tag == "header_full") 
+    			if (tag == "header") 
     				Template.header(@site)
-    			elsif (tag == "header")
+    			elsif (tag == "header_full")
     				Template.header(@site) + Template.header_full(@site)
     			elsif (tag == "footer")
     				Template.footer(@site)
@@ -167,6 +167,7 @@ module SampleBuilder
 	    def render(context)
 	    	#TODO(ianbarber): It would be nice to have stable ordering here
 			samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
+			samples.sort!{ |a,b| a.title.casecmp b.title}
 		    links = samples.map{ |sample| render_sample(sample, context.registers[:site]) }
 		    "<ul>" +
 		    links.join("\n") +
