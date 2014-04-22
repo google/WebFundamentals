@@ -78,10 +78,6 @@ remember:
     max-height: 500px;
   }
 
-  img.keybimg {
-    max-width: 225px;
-  }
-
   table {
     max-width: 100%;
     margin-top: 20px;
@@ -117,7 +113,7 @@ remember:
     text-align: center;
   }
 
-    table.autocompletes {
+  table.autocompletes {
     width: 100%;
   }
 
