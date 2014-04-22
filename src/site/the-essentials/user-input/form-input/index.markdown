@@ -137,7 +137,11 @@ elements may be covered by the virtual keyboard.
 The placeholder attribute provides a hint to the user about what's expected in
 the input by displaying its value as light text until the element gets focus.
 
-{% include_code _code/order.html placeholder %}
+<input type="text" placeholder="MM-YYYY" />
+
+{% highlight html%}
+<input type="text" placeholder="MM-YYYY" ... />
+{% endhighlight %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-placeholders %}
 
@@ -263,7 +267,9 @@ Be careful using the autofocus attribute because it will steal keyboard focus
 and potentially preventing the backspace character from being used for
 navigation.
 
-    <input type="text" id="frmName" autofocus name="name" autocomplete="name">
+{% highlight html %}
+<input type="text" autofocus ... />
+{% endhighlight %}
 
 {% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
 
@@ -437,7 +443,9 @@ input field. For example, to validate a US Zip code (5 digits, sometimes
 followed by a dash and an additional 4 digits), we would set the `pattern` like
 this:
 
-    <input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
+{% highlight html %}
+<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ... />
+{% endhighlight %}
 
 ##### Common regular expression patterns
 
@@ -482,7 +490,9 @@ If the `required` attribute is present, then the field must contain a value befo
 the form can be submitted. For example, to make the zip code required, we'd
 simply add the required attribute:
 
-    <input type="text" required id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
+{% highlight html %}
+<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ... />
+{% endhighlight %}
 
 #### The `min`, `max` and `step` attributes
 
@@ -492,7 +502,9 @@ increment/decrement when adjusted by the slider or spinners.  For example, a
 shoe size input would set a minumum size of 1 and a maximum size 13, with a step
 of 0.5
 
-    <input type="number" id="frmShoeSize" name="shoeSize" min="1" max="13" step="0.5" />
+{% highlight html %}
+<input type="number" min="1" max="13" step="0.5" ... />
+{% endhighlight %}
 
 #### The `maxlength` attribute
 
@@ -501,7 +513,9 @@ textbox and is useful when you want to limit the length of information that the
 user can provide. For example, if you want to limit a filename to 12 characters,
 you can use the following.
 
-    <input type="text" id="83filename" maxlength="12" />
+{% highlight html %}
+<input type="text" id="83filename" maxlength="12" ... />
+{% endhighlight %}
 
 #### The `novalidate` attribute
 
@@ -510,10 +524,12 @@ contains invalid input. To do this, add the `novalidate` attribute to the form
 element, or individual input fields. In this case, all pseudo classes and
 JavaScript APIs will still allow you to check if the form validates.
 
-    <form role="form" novalidate>
-      <label for="inpEmail">Email address</label>
-      <input type="email" name="email" id="inpEmail" placeholder="Enter email">
-    </form>
+{% highlight html %}
+<form role="form" novalidate>
+  <label for="inpEmail">Email address</label>
+  <input type="email" ... />
+</form>
+{% endhighlight %}
 
 ### Use JavaScript for more complex real-time validation
 
