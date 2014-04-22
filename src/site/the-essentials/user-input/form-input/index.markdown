@@ -66,10 +66,6 @@ remember:
 <!-- TODO[PETELE] remove temp styles -->
 
 <style type="text/css">
-  video {
-    width: 100%;
-  }
-
   img.wide {
     width: 100%;
   }
@@ -78,40 +74,6 @@ remember:
     max-height: 500px;
   }
 
-  table {
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  thead {
-    font-weight: bold;
-  }
-
-  th, td{
-    text-align: left;
-    padding: 8px;
-  }
-
-  tbody > tr:nth-child(odd) {
-    background-color: #f5f5f5;
-  }
-
-  tr {
-    border-bottom: 1px solid #ddd;
-  }
-
-  .text-danger {
-    color: #a94442;
-  }
-
-  .text-success {
-    color: #3c763d;
-  }
-
-  .text-center {
-    text-align: center;
-  }
 
   table.autocompletes {
     width: 100%;
@@ -201,7 +163,7 @@ the users name, email address and phone number, you should use:
 
 ### Recommended input `name` and `autocomplete` attribute values
 
-<table class="autocompletes">
+<table class="table autocompletes">
   <thead>
     <tr>
       <th>Content type</th>
@@ -320,7 +282,7 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<table class="inputtypes">
+<table class="table inputtypes">
   <thead>
     <tr>
       <th>Input <code>type</code></th>
@@ -479,7 +441,7 @@ this:
 
 ##### Common regular expression patterns
 
-<table class="tc-heavyright">
+<table class="table tc-heavyright">
   <thead>
     <tr>
       <th>Description</th>
@@ -561,7 +523,7 @@ a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:
 
-<table class="tc-heavyright">
+<table class="table tc-heavyright">
   <thead>
     <tr>
       <th>API</th>
@@ -613,7 +575,7 @@ the user has completed the form properly before they've submitted the form.
 HTML5 also introduces a number of new pseudo-classes that can be used to style
 inputs based on their value or attributes.
 
-<table class="tc-heavyright">
+<table class="table tc-heavyright">
   <thead>
     <tr>
       <th>Pseudo-class</th>
