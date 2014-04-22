@@ -50,6 +50,7 @@ module SampleBuilder
 	class SampleFile < Jekyll::StaticFile
 		def initialize(site, dest, path, file, contents)
 			super(site, dest, path, file)
+			@use_jshtml = site.config['generate_sample_jshtml']
 			@contents = contents
 			@path = path
 			@filename = file
@@ -71,10 +72,10 @@ module SampleBuilder
   			dest_path = destination(dest)
   			dirname = File.dirname(dest_path)
       		FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
-      		file = File.new(dest_path, "w")
-			file.write(@contents)
-			file.close
-			file = File.new(dest_path.sub('.html', '.jshtml'), "w")
+      		if @use_jshtml
+      			dest_path.sub!('.html', '.jshtml')
+      		end
+			file = File.new(dest_path, "w")
 			file.write(@contents)
 			file.close
   			true

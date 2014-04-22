@@ -1,6 +1,5 @@
 toc:
-- title: /
-  logo: true
+- title: "/"
   path: /
 - title: "Getting Started"
   path: /getting-started/
