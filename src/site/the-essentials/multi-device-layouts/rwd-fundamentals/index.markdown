@@ -91,7 +91,9 @@ Pages optimized for a variety of devices must include a meta viewport element in
 the head of the document.  A meta viewport tag gives the browser instructions on 
 how to control the page's dimensions and scaling.
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% highlight html %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endhighlight %}
 
 In order to attempt to provide the best experience, mobile browsers will render 
 the page at a desktop screen width (usually about 960px), and then try to make 
@@ -188,18 +190,23 @@ the content, including the display type, width, height, orientation and even
 resolution.  For example, you could place all styles necessary for printing 
 inside a print media query:
 
-    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+{% highlight html %}
+<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+{% endhighlight %}
 
 In addition to using the `media` attribute in the stylesheet link, there are two 
 other ways to apply media queries that can be embedded in a CSS file: `@media` 
 and `@import`.  For performance reasons, either of the first two methods are 
 recommended over the `@import` syntax.
 
-    @media print {
-      // print style sheets go here
-    }
+{% highlight css %}
+@media print {
+  /* print style sheets go here */
+}
 
-    @import url(print.css) print;
+@import url(print.css) print;
+{% endhighlight %}
+
 
 The logic that applies to media queries is not mutually exclusive and any filter 
 that meets that criteria the resulting CSS block will be applied using the 
@@ -212,9 +219,11 @@ are applied to small screens, large screens and anywhere in between.  The media
 query syntax allows for the creation of rules that can be applied depending on 
 device characteristics.
 
-    @media (query) {
-      /* CSS Rules used when query matches */
-    }
+{% highlight css %}
+@media (query) {
+  /* CSS Rules used when query matches */
+}
+{% endhighlight %}
 
 While there are several different items we can query on, the ones used most 
 often for responsive web design are `min-width`, `max-width`, `min-height` and 
@@ -306,18 +315,18 @@ page.
 <div class="clear">
   <div class="g--half">
     <h2 class="text-danger text-center">NO</h2>
-    <pre><code>div.fullWidth {
+{% highlight css %}div.fullWidth {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
-}</code></pre>
+}{% endhighlight %}
   </div>
 
   <div class="g--half g--last">
     <h2 class="text-success text-center">YES</h2>
-    <pre><code>div.fullWidth {
+{% highlight css %}div.fullWidth {
   width: 100%;
-}</code></pre>
+}{% endhighlight %}
   </div>
 </div>
 
