@@ -359,21 +359,36 @@ of the header and instead move the form and the list next to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
+
+#### Float the Video Element
+
+To make use of the screen space more effectively we need to remove the linear flow
+of the header and instead move the form and the list next to each other.
+
+[TODO: Animated GIF]
+
+{% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
+
 #### Tile the Images
 
-{% include_code _code/fixingfirstbreakpoint.html padding css %}
+The images in the narrow viewport (mobile devices mostly) interface are set to be 
+the full width of the screen.  This doesn't scale well at all on a screen with a 
+wider viewport.
 
+[TODO: Animated GIF]
 
-#### Make the Table Responsive
-
-{% include_code _code/fixingfirstbreakpoint.html padding css %}
-
+{% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
 
 # Summary
 
 We have created a simple product landing page that works across a huge range of devices,
 form-factors and screen sizes.
+
+*  Always set a viewport
+*  Create your base experience around mobile first
+*  Understand the content you want to display
+*  Once you have your mobile experience, increase the width of the display until it doesn't look right and set your breakpoint
 
 
 <div markdown='1' class="related-items">
