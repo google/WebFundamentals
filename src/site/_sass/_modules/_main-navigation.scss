@@ -58,6 +58,11 @@
   &:first-child ~ .main-nav__item {
     padding-top: 0;
   }
+
+  // Remove list styles
+  &:before {
+    display: none;
+  }
 }
 
 .main-nav__link {
