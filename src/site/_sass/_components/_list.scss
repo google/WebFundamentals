@@ -63,7 +63,15 @@ ol.list--links {
 }
 
 
+/*==========  NAMELESS LIST  ==========*/
 
+.horizontal-list {
+  text-align: center;
+
+  h3 {
+    color: $colorBlue;
+  }
+}
 
 /*==========  LIST RESET  ==========*/
 
