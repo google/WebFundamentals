@@ -317,11 +317,19 @@ In particular it looks like we need to:
 
 We have chosen to constrain the maximum width of the screen to be 800px.
 
-Add auto margin.
+We need to create a container around each major section to make a system
+that has an auto margin.  This will allow the screen to grow but the content
+centered and at a maximum size of 800px.
 
-We need to edit our structure slightly to do this.
+To achieve this effect we need to edit our structure slightly to do this.
+
+{% include_code _code/fixingfirstbreakpoint.html containerhtml html %}
+
+And then create a style that ensures that the content is padded and centered.
 
 {% include_code _code/fixingfirstbreakpoint.html container css %}
+
+It does require some changes to the html
 
 #### Alter the padding of elements and reduce the text size
 
