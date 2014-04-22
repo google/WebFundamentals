@@ -102,7 +102,7 @@ make changes on the fly.  It also has mobile emulation built in so that you can
 rapidly test your layouts across a huge number of screen sizes without the need
 to touch a mobile device.
 
-[todo: insert animated fit]
+[todo: insert animated gif of screen fitting]
 
 1. Find your page
 1. Open the inspector
@@ -112,13 +112,14 @@ to touch a mobile device.
 Using this flow really helps you in the early stages of your project as you can
 quickly see how it would look across devices.
 
-If you have real device even better, you can ... [todo]
+If you have real device even better, you can hook up the Chrome Devtools to ensure
+that you are always testing how it works in the real world.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
 
 ## Flesh out the page with content
 
-Especially for sites, we believe that the content is the most important aspect.
+We believe that the content is the most important aspect.
 So let's design for the content and not let the design dictate the content.  In
 this lesson we will present a simple linear layout using [Micro-reflow](link)
 concepts.
@@ -223,8 +224,12 @@ Read our more detailed guide to [creating amazing forms](/web/essentials/the-ess
 ## Add images to site
 
 Sites without images can be a little boring.  There are two types of images:
-Content images and background images.  Content images are images that are inline
-in the document and are used to convey extra information about the content.
+
+*  Content images and,
+*  Stylistic images. 
+
+Content images are images that are in-line in the document and are used to convey 
+extra information about the content.
 Stylistic images are often used to make the site look better, often these are
 background images, patterns and gradients.
 
@@ -253,9 +258,9 @@ Think of it as images that are used in newspaper articles.
 {% include_code _code/addimages.html images html %}
 
 The images in this case our set to scale to 100% of the width of the screen.  This works well on 
-mobile devices, but less well on desktop.  We will manage this in the responisve design section.
+mobile devices, but less well on desktop.  We will manage this in the responsive design section.
 
-[TODO Link to Sam's Images Article and Ilya's optimising images.]
+[TODO Link to Sam's Images Article and Ilya's optimizing images.]
 
 ## Add a video to your site
 
@@ -269,15 +274,15 @@ We will follow the best practices:
 
 *  Add a `controls` attribute to make it easy for people to play the video
 *  Add a `poster` image to give people a preview of the content
-*  Add mutliple `<source>` elements based on supported video formats.
-*  Add fallback text to let people download the video if they can't play it in the window.
+*  Add multiple `<source>` elements based on supported video formats.
+*  Add fall-back text to let people download the video if they can't play it in the window.
 
 {% include_code _code/addvideo.html video html %}
 
 ## Make your page responsive
 
 Our page has all the content needed, but on different screen sizes it doesn't look good
- as we have simply created a linear site for a narrow viewport.
+ because we have simply created a linear site for a narrow viewport.
 
 [TODO: Image of widening the viewport.] 
 
@@ -329,22 +334,33 @@ And then create a style that ensures that the content is padded and centered.
 
 {% include_code _code/fixingfirstbreakpoint.html container css %}
 
-It does require some changes to the html
-
 #### Alter the padding of elements and reduce the text size
 
-*  We have altered the padding
-*  We have adjusted the 
+We have more space on a larger screen so we get to be a bit more flexible with how
+it is displayed.   
+
+We can alter the padding altered the padding so there is a little more space between
+the elements.  We can also increase the readability of the content on a large screen 
+by increase the font size and weight.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
 [TODO: GIF of it starting to look better with altered].
 
-#### Floating the form element
+#### Float the form element
 
-To make use of the screen space more effectively 
+To make use of the screen space more effectively we need to remove the linear flow
+of the header and instead move the form and the list next to each other.
+
+{% include_code _code/fixingfirstbreakpoint.html formfloat css %}
+
+
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+
+## Summary
+
 
 
 
