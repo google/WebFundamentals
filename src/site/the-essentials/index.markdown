@@ -9,7 +9,7 @@ description: ""
 
 {% for guide in page.articles.the-essentials %}
 {% class %}
-### [{{guide.title}}]({{guide.url}})
+### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}

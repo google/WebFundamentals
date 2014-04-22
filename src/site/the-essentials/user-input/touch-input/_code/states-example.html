@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- // [TEMPLATE header_full] -->
+
     <!-- // [START ms-specific] -->
     <!-- IE Specific to remove tap highlight -->
-    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="msapplication-tap-highlight" content="no" />
     <!-- // [END ms-specific] -->
+
     <title>Web Essential: States Example</title>
     
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -62,7 +63,8 @@
       .btn:focus {
         background-color: #8D0600;
         
-        /* The outline parameter surpresses the border color / outline when focused */
+        /* The outline parameter surpresses the border 
+        color / outline when focused */
         outline: 0;
       }
 
@@ -72,14 +74,16 @@
       /* // [END btnstates] */
 
       /* // [START webkit-specific] */
-      /* Webkit / Chrome Specific CSS to remove tap highlight color */
+      /* Webkit / Chrome Specific CSS to remove tap 
+      highlight color */
       .btn {
         -webkit-tap-highlight-color: transparent;
       }
       /* // [END webkit-specific] */
 
       /* // [START ff-specific] */
-      /* Firefox Specific CSS to remove button differences and focus ring */
+      /* Firefox Specific CSS to remove button 
+      differences and focus ring */
       .btn {
         background-image: none;
       }
@@ -99,5 +103,7 @@
     <button class="btn active" tabindex="3">Button 3</button>
     
     <button class="btn focus" tabindex="4">Button 4</button>
+
+    <!-- // [TEMPLATE footer] -->
   </body>
 </html>

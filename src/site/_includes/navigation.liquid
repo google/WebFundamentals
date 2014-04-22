@@ -3,7 +3,7 @@
   <ul class="main-nav__list clear">
   {% for section in page.content.toc %}
     <li class="main-nav__item {% if section.logo %} main-nav__item--logo {% endif %}">
-      <a class="main-nav__link" href="{{ section.path }}" title="{{ section.title }}">
+      <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="{{ section.title }}">
         {{ section.title }}
       </a>
 
@@ -29,6 +29,7 @@
                 <a href="#" class="cta--secondary main-nav__featured-cta">View</a>
               </div>
             </div>
+
           </div>
         </div>
 

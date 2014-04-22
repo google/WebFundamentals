@@ -1,6 +1,5 @@
 toc:
-- title: /
-  logo: true
+- title: "/"
   path: /
 - title: "Getting Started"
   path: /getting-started/
@@ -13,10 +12,10 @@ toc:
     - title: "Multi-device layouts"
       path: /the-essentials/multi-device-layouts/
       section:
-        - title: "Layout Basics"
-          path: /the-essentials/multi-device-layouts/layout-basics/
-        - title: "Basics Layouts"
-          path: /the-essentials/multi-device-layouts/basic-layouts/
+        - title: "Responsive Web Design Fundamentals"
+          path: /the-essentials/multi-device-layouts/rwd-fundamentals/
+        - title: "Responsive Web Design Patterns"
+          path: /the-essentials/multi-device-layouts/rwd-patterns/
         - title: "Layout Patterns"
           path: /the-essentials/multi-device-layouts/layout-patterns/
         - title: "UI Elements"
