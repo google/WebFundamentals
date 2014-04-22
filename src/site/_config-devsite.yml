@@ -6,6 +6,7 @@ markdown: kramdown
 permalink: /articles/:title.html
 baseurl: /web/essentials
 url: /web/essentials
+highlighter: pygments
 pygments: true
 include_open_html: false
 generate_sample_jshtml: true
