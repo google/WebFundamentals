@@ -159,8 +159,8 @@
 }
 
 .main-nav__link--explore {
+  @include style-cta($colorBlue, false);
   display: block;
-  width: 100%;
 
   @include medium {
     border-bottom: 1px solid $colorGray;
