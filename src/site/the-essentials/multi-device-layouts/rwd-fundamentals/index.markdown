@@ -71,7 +71,8 @@ be changing, so it's important that your site can adapt to any screen size,
 today or in the future.
 
 <video autoplay loop controls>
-  <source src="videos/resize.mp4">
+  <source src="videos/resize.webm" type="video/webm" />
+  <source src="videos/resize.mp4" type="video/mp4" />
 </video>
 
 Responsive web design, originally defined by [Ethan Marcotte in A List 

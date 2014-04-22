@@ -142,6 +142,10 @@ to show the divs by adding an open class to the element to make visible.  As the
 screen gets wider, the off-screen positioning is removed from the elements and 
 they're shown within the visible viewport.
 
+Note in this sample, Safari for iOS6 and Android Browser do not support the 
+`flex-flow: row nowrap` feature of `flexbox`, so we’ve had to fallback to 
+absolute positioning.
+
 Sites using this pattern include:
 
  * [HTML5Rocks 
