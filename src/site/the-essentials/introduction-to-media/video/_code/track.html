@@ -35,12 +35,10 @@
   <p id="videoSrc"></p>
 
   <script>
-    /* // [START currentsrc] */
     document.querySelector('video').onloadedmetadata = function(){
         var fileName = this.currentSrc.replace(/^.*[\\\/]/, '');
         document.querySelector("#videoSrc").textContent = 'Playing video: ' + fileName;
     };
-    /* // [END currentsrc] */
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->
