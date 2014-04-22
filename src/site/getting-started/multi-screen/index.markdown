@@ -191,7 +191,9 @@ Most sites universally need a footer.
 
 We have assumed a set of styles that include color, padding and font styling. 
 
-{% include_code _code/content-with-styles.html style %}
+[TODO: Add Image]
+
+{% link_sample _code/content-with-styles.html %} See example {% endlink_sample %}
 
 ## Create a great form
 
@@ -216,7 +218,7 @@ the user should just see a dial pad.
 
 {% include_code _code/withform.html form %}
 
-Read our more detailed guide to creating amazing forms in our forms tutorial.
+Read our more detailed guide to [creating amazing forms](/web/essentials/the-essentials/user-input/form-input/index.html) in our forms tutorial.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
 
@@ -234,16 +236,26 @@ background images, patterns and gradients.
 
 Stylistic images are images that are not needed as part of the core content.
 
+A good example of this is a headline image for the 'above the fold' content.
+
+[TODO: Add Image]
+
+{% include_code _code/addimages.html styles css %}
+
+We have chosen a simple background image that is blurred so it doesn't take away from the content
+and we have set it to `cover` the entire element.
+
 ## Add Content Images
 
-so lets add some in.
+Content images are images that are critical to conveying the meaning of the page.
+Think of it as images that are used in newspaper articles.
 
-    <div id="images">
-      <img src="">
-      <img src="">
-      <img src="">
-      <img src="">
-    </div>
+[TODO: Add Image]
+
+
+
+The images in this case our set to scale to 100% of the width of the screen.  This works well on 
+mobile devices, but less well on desktop.  We will manage this in the responisve design section.
 
 [TODO Link to Sam's Images Article and Ilya's optimising images.]
 
@@ -253,19 +265,19 @@ Videos are often used to describe content in a more interactive manner and are
 often used to show a demonstration of a product or a concept.  It can be hard to
 get them correct unless you know the best practices.
 
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
+
 Lets add a video to the site.
 
-    <div id="producttour">
-       <video src=""></video>
-    </div>
+ {% include_code _code/addvideo.html video html %}
 
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.add-video %}
 
 ## Make your page responsive
 
 Our page has all the content needed, but on different screen sizes it looks a
 little bland as we have simply created a linear site for a narrow viewport.
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
 We are using the principles of Mobile First web development, that is we start
 with a narrow viewport and build for that experience and then we make our
@@ -286,7 +298,5 @@ for the screen real-estate.
 
 To make our page responsive we use media queries to allow us to group styles
 based on factors such screen width or viewport width.
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
 {% endwrap %}
