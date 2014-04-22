@@ -206,6 +206,42 @@ module.exports = function(grunt) {
 			}
 		},
 
+		replace: {
+			files: [
+				{expand: true, flatten: true, src: ['<%=config.destination>/**/*.html'], dest: '<%=config.destination>/'}
+			],
+			develop: {
+				options: {
+					patterns: [
+						{
+							match: 'http://localhost:8081',
+							replacement: '/'
+						}
+					]
+				}
+			},
+			stage: {
+				options: {
+					patterns: [
+						{
+							match: 'http://localhost:8081',
+							replacement: '/'
+						}
+					]
+				}
+			},
+			production: {
+				options: {
+					patterns: [
+						{
+							match: 'http://localhost:8081',
+							replacement: '/web/essentials'
+						}
+					]
+				}
+			}
+		},
+
 		shell: {
 			options: {
 				failOnError: true,
@@ -369,6 +405,26 @@ module.exports = function(grunt) {
 			'connect:destination-source',
 			'watch'
 		]);
+
+	});
+
+	// Develop task
+	grunt.registerTask('deploy', 'Runs the "test" task, then builds the website and carries out string replacement on specific URLs.\nOptions:\n  --production: carries out path replacement for production environment', function() {
+
+		var production = grunt.option('production');
+
+		if(production) {
+			return grunt.task.run([
+				'build --uncompressed',
+				'replace:production'
+			]);
+		} else {
+			return grunt.task.run([
+				'build',
+				'replace:develop'
+			]);
+
+		}
 
 	});
 

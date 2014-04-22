@@ -10,6 +10,6 @@ pygments: false
 include_open_html: true
 custom:
 kramdown:
-  toc_levels: "2,3,4"
+  toc_levels: "2"
 include: ['.htaccess']
 exclude: ['config.rb']

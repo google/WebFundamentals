@@ -31,7 +31,10 @@
 .page-header__excerpt {
   position: relative;
   margin-top: $lineHeight * 2;
-  padding-bottom: $lineHeight * 3;
+
+  &:last-child {
+    padding-bottom: $lineHeight * 3;
+  }
 
   &:before {
     content: "";
