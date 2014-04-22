@@ -10,6 +10,8 @@
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
 
 <meta property="twitter:account_id" content="@chromium_dev" />
+{% if page.rel.gplusauthor %}<link rel="publisher" href="{{ page.rel.gplusauthor }}">{% endif %}
+
 <meta itemprop="name" content="{{ page_title }}">
 {% if page.snippet_img %}
 <meta itemprop="image" content="{{ page.snippet_img }}">
@@ -19,5 +21,5 @@
 <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Google Web Essentials{% endif %}">
 
 <!-- build:css css/styles.min.css -->
-<link rel="stylesheet" media="screen" href="/css/styles.css" />
+<link rel="stylesheet" media="screen" href="{{ site.url }}/css/styles.css" />
 <!-- endbuild -->

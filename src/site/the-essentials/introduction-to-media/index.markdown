@@ -16,7 +16,7 @@ Images, Video and Audio make the web engaging and compelling.  Use our guides to
 
 {% for guide in page.articles.introduction-to-media %}
 {% class %}
-### [{{guide.title}}]({{guide.url}})
+### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
 {{guide.description}}
 {% endclass %}
 {% endfor %}

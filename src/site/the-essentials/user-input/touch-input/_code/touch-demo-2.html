@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- // [TEMPLATE header_full] -->
 
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no"/>
@@ -37,8 +36,8 @@
         margin: 23px 0;
         
         // Pass all touches to javascript
-        touch-action: none;
         -ms-touch-action: none;
+        touch-action: none;
       }
 
       .v-slider > .track {
@@ -104,53 +103,62 @@
       function Slider(element) {
         var isAnimating = false;
         var lastYPos = 0;
-        var initialSliderPos = 0;
+        var initialYPos = 0;
         var lastHolderPos = 0; 
         var elementHold = element.querySelector('.hold');
-        
+      
+      /* // [START handle-gestures] */
+      // Handle the start of gestures 
       this.handleGestureStart = function(evt) {
         evt.preventDefault();
 
+        /* // [START stash-start] */
         var point = getGesturePointFromEvent(evt);
-        initialSliderPos = point.y;
+        initialYPos = point.y;
+        /* // [END stash-start] */
 
+        if (!window.navigator.msPointerEnabled) {
           // Add Mouse Listeners
           document.addEventListener('mousemove', this.handleGestureMove, true);
           document.addEventListener('mouseup', this.handleGestureEnd, true);
+        }
       }.bind(this);
 
       this.handleGestureEnd = function(evt) {
         evt.preventDefault();
           
-          if(evt.targetTouches && evt.targetTouches.length > 0) {
-            return;
-          }
+        if(evt.targetTouches && evt.targetTouches.length > 0) {
+          return;
+        }
         
-        isAnimating = false;
-        
-        lastHolderPos = lastHolderPos + -(initialSliderPos - lastYPos);
-          
+        if (!window.navigator.msPointerEnabled) {  
           // Remove Mouse Listeners
           document.removeEventListener('mousemove', this.handleGestureMove, true);
           document.removeEventListener('mouseup', this.handleGestureEnd, true);
+        }
+
+        isAnimating = false;
+        lastHolderPos = lastHolderPos + -(initialYPos - lastYPos);
       }.bind(this);
+      /* // [END handle-gestures] */
 
       this.handleGestureMove = function(evt) {
         evt.preventDefault();
         
+        /* // [START handle-move] */
         var point = getGesturePointFromEvent(evt);
-
         lastYPos = point.y;
         
           if(isAnimating) {
             return;
           }
-          
+
           isAnimating = true;
-          
           window.requestAnimFrame(onAnimFrame);
+          /* // [END handle-move] */
       }.bind(this);
 
+      /* // [START extract-xy] */
       function getGesturePointFromEvent(evt) {
           var point = {
             x: evt.screenX,
@@ -168,43 +176,54 @@
           
           return point;
       }
+      /* // [END extract-xy] */
 
+      /* // [START on-anim-frame] */
       function onAnimFrame() {
           if(!isAnimating) {
             return;
           }
           
-          var differenceInY = lastHolderPos + -(initialSliderPos - lastYPos);
-        
-          if(Math.abs(differenceInY) > element.clientHeight) {
-            differenceInY = element.clientHeight;
-          } else if(differenceInY < 0) {
-            differenceInY = 0;
-          }
-        
-          var newYTransform = (differenceInY)+'px';
-          var transformStyle = 'translateY('+newYTransform+')';
+          var newYTransform = lastHolderPos + -(initialYPos - lastYPos);
+          
+          newYTransform = limitValueToSlider(newYTransform);
+          
+          var transformStyle = 'translateY('+newYTransform+'px)';
           elementHold.style['-webkit-transform'] = transformStyle;
           elementHold.style['-moz-transform'] = transformStyle;
           elementHold.style.transform = transformStyle;
           
           isAnimating = false;
         }
+        /* // [END on-anim-frame] */
 
+        function limitValueToSlider(value) {
+          if(Math.abs(value) > element.clientHeight) {
+            value = element.clientHeight;
+          } else if(differenceInY < 0) {
+            value = 0;
+          }
+          return value;
+        }
+
+        /* // [START addlisteners] */
+        // Check if pointer events are supported.
         if (window.navigator.msPointerEnabled) {
-          // Pointer events are supported.
+          // Add Pointer Event Listener
           elementHold.addEventListener('MSPointerDown', this.handleGestureStart, true);
           elementHold.addEventListener('MSPointerMove', this.handleGestureMove, true);
           elementHold.addEventListener('MSPointerUp', this.handleGestureEnd, true);
         } else {
-          elementHold.addEventListener('mousedown', this.handleGestureStart, true);
-
           // Add Touch Listeners
           elementHold.addEventListener('touchstart', this.handleGestureStart, true);
           elementHold.addEventListener('touchmove', this.handleGestureMove, true);
           elementHold.addEventListener('touchend', this.handleGestureEnd, true);
           elementHold.addEventListener('touchcancel', this.handleGestureEnd, true);
+
+          // Add Mouse Listeners
+          elementHold.addEventListener('mousedown', this.handleGestureStart, true);
         }
+        /* // [END addlisteners] */
       }
 
       window.onload = function () {
@@ -214,5 +233,6 @@
         }
       };
     </script>
+    <!-- // [TEMPLATE footer] -->
   </body>
 </html>

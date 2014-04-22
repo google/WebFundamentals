@@ -12,6 +12,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 1
+rel:
+  gplusauthor: https://plus.google.com/+PeteLePage
 collection: user-input
 key-takeaways:
   label-and-name:
@@ -58,6 +60,10 @@ remember:
       warn the user their information may not be secure.
 ---
 {% wrap content %}
+
+<!-- TODO[PETELE] add related items -->
+<!-- TODO[PETELE] add what's next -->
+<!-- TODO[PETELE] remove temp styles -->
 
 <style type="text/css">
   video {
@@ -147,7 +153,6 @@ remember:
 
 ## Label and name inputs properly
 
-{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
 
 ### The importance of labels
 
@@ -302,9 +307,10 @@ navigation.
 
     <input type="text" id="frmName" autofocus name="name" autocomplete="name">
 
+{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
+
 ## Choose the best input type
 
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.choose-best-input-type %}
 
 Every tap counts. Users appreciate websites that automatically present number
 pads for entering phone numbers, or automatically advance fields as they entered
@@ -451,9 +457,9 @@ lists, `datalist`s provide hints as the user types.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-datalist %}
 
-## Provide real-time validation
+{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.choose-best-input-type %}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.provide-real-time-validation %}
+## Provide real-time validation
 
 Real-time data validation doesn't just help to keep your data clean, but it also
 helps improve the user experience.  Modern browsers have several built-in tools
@@ -657,11 +663,9 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 {% include modules/remember.liquid title="Important" list=page.remember.show-all-errors %}
 
-
+{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.provide-real-time-validation %}
 
 ## Simplify checkout with `requestAutocomplete`
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.use-request-auto-complete %}
 
 While `requestAutocomplete` was designed to help users fill out any form, today
 it's most common use is in eCommerce where shopping cart abandonment on the
@@ -704,5 +708,8 @@ validates to your needs, simply submit the form and proceed to the final
 confirmation.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
+
+{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.use-request-auto-complete %}
+
 
 {% endwrap %}
