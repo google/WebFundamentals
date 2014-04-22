@@ -17,27 +17,48 @@ ol {
   margin: 0;
 }
 
-li {
+ul li {
   position: relative;
   padding-left: 16px;
   @include bullet-type("#");
+}
+
+ol {
+  counter-reset: list;
+  li {
+    @include numbered-list;
+  }
 }
 
 .list__item {
   @include bullet-type(">");
 }
 
-.main-nav__item:before {
-  display: none;
-}
 
 /*==========  LIST LINKS  ==========*/
 
-.list--links {
+ul.list--links {
+  li:before {
+    display: none;
+  }
   a {
+    @include bullet-type(">");
     font-weight: 400;
     font-family: $fontHighlight;
     line-height: 1; // fixes baseline grid alignment
+  }
+}
+
+ol.list--links {
+  li {
+    &:before {
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+      @include numbered-list;
+    }
   }
 }
 

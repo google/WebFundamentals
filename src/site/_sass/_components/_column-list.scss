@@ -14,6 +14,7 @@
   @include medium {
     margin-right: $mediumColWidth;
   }
+
   @include wide {
     margin-right: $wideColWidth;
   }
@@ -22,6 +23,7 @@
 .list--columns {
   border-bottom: 1px solid #ccc;
   padding-bottom: $lineHeight - 1;
+
   @include medium {
     @include prefixr(column-count, 2);
     @include prefixr(column-rule, 0 none transparent);
@@ -31,27 +33,10 @@
   @include wide {
     @include prefixr(column-count, 3);
   }
-  counter-reset: list;
 }
 
-// Override default list bullet points
 .columns-list-item {
-  padding-left: 0;
-  &:before {
-    display: none;
-  }
-
-  a {
-    display: block;
-    @include type--small;
-    padding: 0;
-    &:before {
-      counter-increment: list;
-      content: "#0" counter(list);
-      color: $colorBlue;
-      font-weight: 600;
-      display: inline-block;
-      margin-right: 16px;
-    }
-  }
+  @include type--small;
+  padding: 0;
 }
+
