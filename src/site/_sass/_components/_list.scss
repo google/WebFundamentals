@@ -62,36 +62,7 @@ ol.list--links {
   }
 }
 
-/*==========  GUIDES LIST  ==========*/
-.guides-list {
-  overflow: hidden;
 
-  @include medium {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-.guides-list__item {
-  padding: 0;
-  background: #ffffff;
-  margin-top: $lineHeight;
-  margin-bottom: $lineHeight;
-  padding: 0 16px $lineHeight*2;
-
-  @include medium {
-    padding-bottom: $lineHeight*3;
-  }
-
-  p {
-    margin-top: $lineHeight;
-  }
-
-  &:before {
-    display: none;
-  }
-}
 
 
 /*==========  LIST RESET  ==========*/
@@ -100,8 +71,9 @@ ol.list--links {
   li {
     padding-left: 0;
 
+    & a:before,
     &:before {
-      display: none;
+      display: none !important; // Fine to use !important when we are forcing an override
     }
   }
 }

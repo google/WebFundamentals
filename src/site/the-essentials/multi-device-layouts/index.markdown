@@ -26,7 +26,7 @@ collection: the-essentials
 
       {% for guide in page.articles.multi-device-layouts %}
       <li class="articles-list__item">
-        <h3 class="xxlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
         <p class="g-wide--push-1 g-wide--pull-1">{{guide.description}}</p>
         <a href="#" class="cta--primary">See all lessons</a>
       </li>

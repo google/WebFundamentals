@@ -2206,51 +2206,14 @@ ol.list--links li a:before {
   margin-right: 16px;
 }
 
-/*==========  GUIDES LIST  ==========*/
-/* line 66, ../_sass/_components/_list.scss */
-.guides-list {
-  overflow: hidden;
-}
-@media only screen and (min-width: 620px) {
-  /* line 66, ../_sass/_components/_list.scss */
-  .guides-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-/* line 76, ../_sass/_components/_list.scss */
-.guides-list__item {
-  padding: 0;
-  background: #ffffff;
-  margin-top: 26px;
-  margin-bottom: 26px;
-  padding: 0 16px 52px;
-}
-@media only screen and (min-width: 620px) {
-  /* line 76, ../_sass/_components/_list.scss */
-  .guides-list__item {
-    padding-bottom: 78px;
-  }
-}
-/* line 87, ../_sass/_components/_list.scss */
-.guides-list__item p {
-  margin-top: 26px;
-}
-/* line 91, ../_sass/_components/_list.scss */
-.guides-list__item:before {
-  display: none;
-}
-
 /*==========  LIST RESET  ==========*/
-/* line 100, ../_sass/_components/_list.scss */
+/* line 71, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 103, ../_sass/_components/_list.scss */
-.list--reset li:before {
-  display: none;
+/* line 75, ../_sass/_components/_list.scss */
+.list--reset li a:before, .list--reset li:before {
+  display: none !important;
 }
 
 /**
@@ -2491,6 +2454,71 @@ a:hover {
 }
 /* line 45, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child:before {
+  display: none;
+}
+
+/**
+*
+* Guides List
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 14, ../_sass/_components/_guides-list.scss */
+.guides-list {
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 14, ../_sass/_components/_guides-list.scss */
+  .guides-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+/* line 24, ../_sass/_components/_guides-list.scss */
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 24, ../_sass/_components/_guides-list.scss */
+  .guides-list__item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+/* line 36, ../_sass/_components/_guides-list.scss */
+.guides-list__item h3 {
+  margin: 0 32px;
+}
+/* line 40, ../_sass/_components/_guides-list.scss */
+.guides-list__item p {
+  margin: 26px 32px 0;
+}
+/* line 44, ../_sass/_components/_guides-list.scss */
+.guides-list__item ol {
+  margin: 26px 0 0;
+  padding: 52px 0 52px;
+  background: whitesmoke;
+}
+@media only screen and (min-width: 620px) {
+  /* line 44, ../_sass/_components/_guides-list.scss */
+  .guides-list__item ol {
+    width: 100%;
+    align-self: flex-end;
+  }
+}
+/* line 55, ../_sass/_components/_guides-list.scss */
+.guides-list__item:before {
   display: none;
 }
 

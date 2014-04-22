@@ -1,0 +1,58 @@
+/**
+*
+* Guides List
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+
+.guides-list {
+  overflow: hidden;
+
+  @include medium {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: $lineHeight;
+  margin-bottom: 0;
+
+  @include medium {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    margin: 0 32px;
+  }
+
+  p {
+    margin: $lineHeight 32px 0;
+  }
+
+  ol {
+    margin: $lineHeight 0 0;
+    padding: $lineHeight*2 0 $lineHeight*2;
+    background: lighten($colorGray, 5%);
+
+    @include medium {
+      width: 100%; // needed due to parent being flex
+      align-self: flex-end;
+    }
+  }
+
+  &:before {
+    display: none;
+  }
+}
