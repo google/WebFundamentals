@@ -898,7 +898,11 @@ body.debug:after {
   display: inline-block;
   display: block;
 }
+<<<<<<< HEAD
+/* line 334, ../_sass/_utils.scss */
+=======
 /* line 346, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
 .main-nav__link--explore:hover {
   color: #404040;
 }
@@ -1081,7 +1085,11 @@ body.debug:after {
     padding-bottom: 52px;
     position: relative;
   }
+<<<<<<< HEAD
+  /* line 351, ../_sass/_utils.scss */
+=======
   /* line 363, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
   .highlight-module__container:before {
     content: attr(data-character);
     display: block;
@@ -1096,24 +1104,40 @@ body.debug:after {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     width: 30.3%;
   }
+<<<<<<< HEAD
+  /* line 368, ../_sass/_utils.scss */
+=======
   /* line 380, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
   .highlight-module--left .highlight-module__container:before {
     right: auto;
     left: 0;
   }
+<<<<<<< HEAD
+  /* line 392, ../_sass/_utils.scss */
+=======
   /* line 404, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
   .highlight-module--learning .highlight-module__container:before {
     bottom: 52px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
+<<<<<<< HEAD
+  /* line 351, ../_sass/_utils.scss */
+=======
   /* line 363, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
   .highlight-module__container:before {
     width: 22.2%;
     font-size: 400px;
     line-height: 400px;
   }
+<<<<<<< HEAD
+  /* line 378, ../_sass/_utils.scss */
+=======
   /* line 390, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
   .highlight-module--large .highlight-module__container:before {
     font-size: 650px;
   }
@@ -1564,6 +1588,53 @@ td:last-child:after {
   background: #e8e8e8;
   text-align: center;
   padding: 26px 0 52px;
+}
+
+/**
+*
+* Page header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_page-header.scss */
+.page-header {
+  text-align: center;
+}
+/* line 16, ../_sass/_modules/_page-header.scss */
+.page-header .breadcrumbs {
+  text-align: left;
+  color: #297ea9;
+}
+/* line 20, ../_sass/_modules/_page-header.scss */
+.page-header .breadcrumbs a {
+  color: #297ea9;
+}
+/* line 25, ../_sass/_modules/_page-header.scss */
+.page-header h3 {
+  color: #297ea9;
+  padding-top: 52px;
+}
+
+/* line 31, ../_sass/_modules/_page-header.scss */
+.page-header__excerpt {
+  position: relative;
+  margin-top: 52px;
+  padding-bottom: 78px;
+}
+/* line 36, ../_sass/_modules/_page-header.scss */
+.page-header__excerpt:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  left: 15%;
+  box-shadow: inset 0 1px 0 0 #e0e0e0;
+  top: -13px;
 }
 
 /**
@@ -2078,7 +2149,11 @@ ul li {
   padding-left: 16px;
 }
 /* line 317, ../_sass/_utils.scss */
+<<<<<<< HEAD
+li:before {
+=======
 ul li:before {
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
   content: "#";
   display: block;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2231,11 +2306,19 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
+<<<<<<< HEAD
+/* line 334, ../_sass/_utils.scss */
+.cta--primary:hover {
+  color: #404040;
+}
+/* line 339, ../_sass/_utils.scss */
+=======
 /* line 346, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
 /* line 351, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
 .cta--primary:before {
   content: ">";
   display: inline-block;
@@ -2248,7 +2331,11 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
+<<<<<<< HEAD
+/* line 334, ../_sass/_utils.scss */
+=======
 /* line 346, ../_sass/_utils.scss */
+>>>>>>> 4fd0e304d6390f38e0aa372118c2e3f7291eb2b2
 .cta--secondary:hover {
   color: #404040;
 }
@@ -2266,11 +2353,18 @@ a:hover {
 **/
 /* line 13, ../_sass/_components/_breadcrumb.scss */
 .breadcrumbs {
+  display: none;
   position: relative;
   z-index: 1;
 }
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_components/_breadcrumb.scss */
+  .breadcrumbs {
+    display: block;
+  }
+}
 
-/* line 18, ../_sass/_components/_breadcrumb.scss */
+/* line 23, ../_sass/_components/_breadcrumb.scss */
 .breadcrumbs p {
   font-size: 13px;
   line-height: 2.0000em;
@@ -2279,7 +2373,7 @@ a:hover {
   padding-bottom: 0;
 }
 
-/* line 22, ../_sass/_components/_breadcrumb.scss */
+/* line 27, ../_sass/_components/_breadcrumb.scss */
 .breadcrumbs__link {
   font-size: 13px;
   line-height: 2.0000em;
