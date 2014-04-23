@@ -31,7 +31,7 @@ key-takeaways:
     - Different platforms display video different.
     - Use Fullscreen API to control fullscreening of content.
   improve-accessibility:
-    - Focus on the user: accessibility matters.
+    - "Focus on the user: accessibility matters."
     - Add track element as a child of the video element.
     - Define captions in track file.
   handle-poor-connectivity:
@@ -51,7 +51,7 @@ remember:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
   compare-formats:
-    - Compare the responsive sample: [simpl/yt](http://simpl/yt) to the unresponsive sample: [simpl/unyt](http://simpl/unyt).
+    - "Compare the responsive sample: [simpl/yt](http://simpl/yt) to the unresponsive sample: [simpl/unyt](http://simpl/unyt)."
   accessibility-matters:
     - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or [Captionator](http://captionatorjs.com/).
   construct-video-streams:
