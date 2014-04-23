@@ -1077,13 +1077,6 @@ body.debug:after {
   right: 0;
   left: 0;
 }
-@media only screen and (min-width: 800px) {
-  /* line 19, ../_sass/_modules/_highlight.scss */
-  .highlight-module:after {
-    width: 80%;
-    right: 20%;
-  }
-}
 
 /* line 38, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning {
@@ -1101,14 +1094,6 @@ body.debug:after {
 /* line 49, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember:after {
   background-color: #09829a;
-  right: 0;
-  left: 0;
-}
-@media only screen and (min-width: 800px) {
-  /* line 49, ../_sass/_modules/_highlight.scss */
-  .highlight-module--remember:after {
-    left: 20%;
-  }
 }
 
 /* line 60, ../_sass/_modules/_highlight.scss */
@@ -1238,11 +1223,6 @@ body.debug:after {
   }
 }
 
-/* line 91, ../_sass/_modules/_highlight.scss */
-.highlight-module--code:after {
-  left: 0;
-  width: 100%;
-}
 /* line 96, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
@@ -1283,6 +1263,29 @@ body.debug:after {
     /* 26px */
     padding-top: 1.3000em;
     padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  /* line 125, ../_sass/_modules/_highlight.scss */
+  .highlight-module--left:after {
+    width: 80%;
+    right: 20%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  /* line 134, ../_sass/_modules/_highlight.scss */
+  .highlight-module--right:after {
+    width: 80%;
+    left: 20%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 142, ../_sass/_modules/_highlight.scss */
+  .highlight-module--right.highlight-module--code:after {
+    width: 100%;
+    left: 0;
   }
 }
 
