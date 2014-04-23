@@ -49,30 +49,17 @@ collection: multi-screen
 * Table of Contents
 {:toc}
 
-Building multi-screen experiences is not as hard as it sounds. In this
-guide, we are going to create a simple landing page that shows you the basics of
-building a web site using "[Mobile First](link to mobile first)" design principles that
-enable you to easily scale your experiences up from a mobile device through
-to desktops and beyond.  We will show you best practices for interacting with both touch 
-and mice as well as structuring your content across screen sizes.
-
-Our goal in this guide is to build an example product landing page for our
-hypothetical Smiles product.  The end result will be a fully functioning page
-that covers many of the core principles of building experiences that work well
-across all different device types.
-
-# Adding Structure
-
-Once you are have your environment set up it is time to get started.  We are now going
-to cover structuring your page with content such as text, video and images for a narrow viewport
-(mobile) experience and before we then move on to work out how we make it responsive across
-larger screens.
-
-## Create the page structure
+In this tutorial we are going to cover how to structure your page with content such as text,
+video and images for a narrow viewport (mobile) experience and before we then move on to 
+work out how we make it responsive across larger screens.
 
 We believe that the content is the most important aspect.
 So let's design for the content and not let the design dictate the content.  In
 this lesson we will present a simple linear layout.
+
+## Create the page structure
+
+
 
 We have identified we need:
 
