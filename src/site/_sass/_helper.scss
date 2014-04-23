@@ -23,6 +23,8 @@
 }
 
 
+/*==========  COLORS  ==========*/
+
 .color--blue { color: $colorBlue; }
 .color--red { color: $colorRed; }
 .color--green { color: $colorGreen; }
@@ -57,6 +59,7 @@
 
 
 
+/*==========  TEXT DIVIDER  ==========*/
 
 .text-divider {
   position: relative;
@@ -96,4 +99,10 @@
       bottom: -($lineHeight*3)/2;
     }
   }
+}
+
+
+/*==========  GENERIC  ==========*/
+.centered {
+  text-align: center;
 }
