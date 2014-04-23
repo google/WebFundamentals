@@ -44,7 +44,7 @@
   ol {
     margin: $lineHeight 0 0;
     padding: $lineHeight*2 0 $lineHeight*2;
-    background: lighten($colorGray, 5%);
+    background: $colorGrayKeyline;
 
     @include medium {
       width: 100%; // needed due to parent being flex
