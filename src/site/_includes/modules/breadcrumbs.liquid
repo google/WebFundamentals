@@ -1,7 +1,7 @@
 <nav class="breadcrumbs">
   <p>
   {% for p in page.ancestors %}
-    <a href="{{ p.url }}">{{ p.title }}</a>
+    <a href="{{site.baseurl}}{{ p.url }}">{{ p.title }}</a>
     /
   {% endfor %}
   </p>
