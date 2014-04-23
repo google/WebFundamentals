@@ -194,7 +194,7 @@ module.exports = function(grunt) {
 			},
 			source: [
 				'Gruntfile.js',
-				'<%= config.source %>/**/*.js',
+				'<%= config.source %>/**/js/**/*.js',
 				'!<%= config.source %>/**/vendors/**/*.js',
 				'!<%= config.source %>/**/*.min.js'
 			]
