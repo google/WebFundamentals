@@ -38,9 +38,11 @@ key-takeaways:
 * Table of Contents
 {:toc}
 
-- Intro to the article
+# Navigation Patterns
 
-# App Bar
+// TODO: Intro to the article
+
+## App Bar
 
 <img class="g-wide--full" src="images/appbar.png">
 
@@ -62,7 +64,7 @@ A simple example is adding a plus button to the App Bar of a To-Do List, a searc
 
 If you have a menu, use the hamburger icon (three vertical lines) and place this on the same position of the App Bar (far left or far right), meaning the user only needs to learn where it is once.
 
-## Left vs Right Menu Button
+### Left vs Right Menu Button
 
 If you have a slide in menu, you have the choice of putting the menu on the left or right hand side.
 
@@ -72,7 +74,7 @@ The top left corner is where you should put the most important elements of your 
 
 <div style="clear: both;"></div>
 
-## Guidelines
+### Guidelines
 
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
@@ -82,12 +84,11 @@ The App Bar is a set of principals that you should apply to give your users a pr
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.app-bar %}
 
-# Navigation Patterns
-
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.nav-patterns %}
-
 ## Tabs
+
+<img class="g-wide--full" src="images/tabbar.png">
+
+<div style="clear: both;"></div>
 
 The tab bar can be used to quickly switch between a small set of sections of your site.
 
@@ -106,6 +107,8 @@ Some developers find they get higher rates of interaction when using tabs over n
 ## Navigation Drawer
 
 <img class="g-wide--full" src="images/navdrawer.png">
+
+<div style="clear: both;"></div>
 
 The navigation drawer is a simple slide in panel which is primarily used for displaying the application's navigation, but can be used for displaying global state, i.e. user login.
 
@@ -127,5 +130,7 @@ A user accesses the drawer using a menu button at the top of the screen in the A
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.item-actions %}
 
 - Describe the pattern
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.nav-patterns %}
 
 {% endwrap %}
