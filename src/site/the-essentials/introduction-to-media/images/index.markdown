@@ -101,15 +101,15 @@ Try it
 
 ...and [rounded corners](http://caniuse.com/border-radius), aka border-radius:
 
-{% include_code _code/borderRadius.html circle %}
+{% include_code _code/borderRadius.html circle css%}
 
 ![CSS border radius example: circle shape](images/borderRadiusCircle.png)
 
-{% include_code _code/borderRadius.html ellipse %}
+{% include_code _code/borderRadius.html ellipse css %}
 
 ![CSS border radius example: ellipse shape](images/borderRadiusEllipse.png)
 
-{% include_code _code/borderRadius.html lozenge %}
+{% include_code _code/borderRadius.html lozenge css %}
 
 ![CSS border radius example: lozenge shape](images/borderRadiusLozenge.png)
 
