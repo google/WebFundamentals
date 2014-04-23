@@ -2,14 +2,18 @@
 layout: article
 title: "Images"
 description: "Images were the first media types used on the web and are an integral part of every single page yet they need to be created and managed correctly to ensure that you are not driving users away."
+rel: gplusauthor: https://plus.google.com/+SamDutton
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
-  order: 1
+  written_on: 2014-04-17
+  updated_on: 2014-04-23
+  order: 2
 collection: introduction-to-media
 ---
 
-{% wrap content %}
+{% wrap content%}
+
+* Table of Contents
+{:toc}
 
 The web started life as a text-only medium, but [the ability to embed
 images](http://www.internethistorypodcast.com/2014/04/on-the-20th-anniversary-an-oral-history-of-netscapes-founding/)
@@ -27,9 +31,9 @@ the face of variable connectivity.
 
 {% class key-takeaway %}
 
-* Consider <img> alternatives: background images, sprites, Unicode symbols, icon
+* Consider &lt;img&gt; alternatives: background images, sprites, Unicode symbols, icon
   fonts, data URIs, the canvas element or inline SVGs.
-* If possible avoid effects such as rounded corners, shadows and gradients – or
+* If possible avoid effects such as rounded corners, shadows and gradients &ndash; or
   use CSS, not images.
 * To improve accessibility, add an alt attribute to every img elements.
 
@@ -38,9 +42,9 @@ the face of variable connectivity.
 There are many ways to embed images in a web page, each with advantages and
 disadvantages.
 
-### Making the most of <img>
+### Making the most of &lt;img&gt;
 
-The img element is powerful – it downloads, decodes and renders content – and
+The img element is powerful &ndash; it downloads, decodes and renders content &ndash; and
 modern browsers support a range of image formats.
 
 Two golden rules:
@@ -54,18 +58,16 @@ Two golden rules:
   article](http://www.sitepoint.com/the-hidden-nuggets-of-wcag2-when-not-to-use-alt-attributes/)
   has more information.
 
-It's straightforward to create images and tweak their properties in JavaScript:
+It's straightforward to create images and set their properties in JavaScript:
 
-    var foo = new Image();
-    foo.src = foo.png';
-    foo.alt = 'foo';
-    document.body.appendChild(foo);
+{% include_code _code/imageJavaScript.html code javascript %}
+{% link_sample _code/imageJavaScript.html %}Try it{% endlink_sample %}
 
 However, always consider the [critical rendering
 path](https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.p19):
-do not let scripting get in the way of fast loading. Plain old `<img
-src='foo.jpg' />` doesn't in itself respond to context in terms of size and
-content, but throughout this article we describe some ways to get around that.
+do not let dynamic page building get in the way of fast loading. Plain old `&lt;img
+src='foo.jpg' /&gt;` doesn't in itself respond to context in terms of size and
+content, but throughout this article we describe ways to get around that without resorting to JavaScript.
 
 {% class note %}
 Beware that the `src` for an image element will be downloaded even if the image
@@ -74,35 +76,45 @@ CSS `display` property is set to `none`, or `visibility` is set to `hidden`.
 
 ### Use CSS instead of images for shadows, gradients and rounded corners
 
-[CSS gradients](http://css-tricks.com/examples/CSS3Gradient/) are supported by
+[CSS gradients](http://css-tricks.com/examples/CSS3Gradient) are supported by
 [all modern browsers](http://caniuse.com/css-gradients):
 
-[Examples]
+{% include_code _code/gradient.html code css %}
+{% link_sample _code/gradient.html %}
+
+![CSS gradient example](images/gradient.jpg)
+
+Try it
+{% endlink_sample %}
 
 [Likewise](http://caniuse.com/css-boxshadow) for [box
 shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow):
 
-[Examples]
+{% include_code _code/boxShadow.html code css %}
+
+![CSS box shadow example](images/boxShadow.jpg)
+
+{% link_sample _code/boxShadow.html %}
+Try it
+{% endlink_sample %}
 
 ...and [rounded corners](http://caniuse.com/border-radius), aka border-radius:
 
-    .lozenge {
-    border-radius: 5em 1em;
-    }
+{% include_code _code/borderRadius.html circle %}
 
-[Example]
+![CSS border radius example: circle shape](images/borderRadiusCircle.png)
 
-    .circle {
-    border-radius: 50%;
-    }
+{% include_code _code/borderRadius.html ellipse %}
 
-[Example]
+![CSS border radius example: ellipse shape](images/borderRadiusEllipse.png)
 
-    .ellipse {
-    border-radius: 50%;
-    }
+{% include_code _code/borderRadius.html lozenge %}
 
-[Example]
+![CSS border radius example: lozenge shape](images/borderRadiusLozenge.png)
+
+{% link_sample _code/borderRadius.html %}
+Try it
+{% endlink_sample %}
 
 However, all these techniques incur [a processing and rendering penalty
 ](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/),
@@ -120,85 +132,56 @@ CSS background images have a number of properties that make them useful as a
 low-bandwidth technique for creating background patterns and other visual
 effects:
 
-    .texture {
-    background: url(images/texture.png),
-    linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-    }
+{% include_code _code/backgroundGradient.html code css %}
 
-[Example]
+![CSS box shadow example](images/backgroundGradient.jpg)
+
+{% link_sample _code/backgroundGradient.html %}
+Try it
+{% endlink_sample %}
 
 Background images repeat horizontally and vertically by default, but you can
 adjust that with the `repeat-x` and `repeat-y` properties. It's even possible to
 have multiple background images:
 
-    .multi {
-    background: url(images/apple.png), url(images/pear.png);
-    }
+{% include_code _code/backgroundMultiple.html code css %}
 
-[Example]
+![CSS box shadow example](images/backgroundMultiple.png)
 
-Background images can also be used for conditional loading of images.
+{% link_sample _code/backgroundMultiple.html %}
+Try it
+{% endlink_sample %}
+
+
+Media queries can also be used with background images.
 
 The following example shows how to display alternative images depending on the
 viewport size:
 
-    HTML
-    < div id = "foo" > < /div>
+{% include_code _code/imageAlternative.html code css %}
 
-    CSS
-    #foo {
-        background-image: url(images/fooSmall.jpg);
-        }
-    @media screen and (min-width: 500px) {
-        #foo {
-              background-image: url(images/fooLarge.jpg);
-        }
-        }
+{% link_sample _code/imageAlternative.html %}
+Try it
+{% endlink_sample %}
 
 Background images can also be used for conditional display of images:
 
-    HTML
-    <div id='foo'></div >
+{% include_code _code/imageConditional.html code css %}
 
-    CSS
-    @media(max-width: 399px) {
-        #foo {
-              display: none;
-        }
-        }
-    @media(min-width: 400px) {
-        #foo {
-              background-image: url(foo.jpg);
-        }
-        }
+{% link_sample _code/imageConditional.html %}
+Try it
+{% endlink_sample %}
 
-This technique has the advantage that the image is not downloaded if the
-viewport width is less then 400px.
+Open the example with your browser window, with the browsers dev tools open, with width less than 500px. Notice that the image is not downloaded.
 
-Images can also be added by using the CSS `:before` and `:after` pseudo-classes
-– a [handy technique](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
-for decorating elements. Here's a simple example:
+Images can also be added by using the CSS `:before` and `:after` pseudo-classes &ndash; a [handy technique](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) for decorating elements.
 
-    CSS
-    h1 {
-        font-family: Georgia;
-        text-align: center;
-        }
-    h1:before, h1:after {
-        color: gray;
-        margin: 10px;
-        }
-    h1:before {
-        content: "»";
-        }
-    h1:after {
-        content: "«";
-        }
+{% include_code _code/cssBeforeAfter.html code css %}
 
-    HTML
-    <h1>This is a h1</h1>
+{% link_sample _code/cssBeforeAfter.html %}
+Try it
+{% endlink_sample %}
 
-[Example]
 
 CSS can also be used for stylish [drop cap
 effects](http://line25.com/tutorials/how-to-create-a-stylish-drop-cap-effect-with-css3)
@@ -209,16 +192,21 @@ without using images.
 Many fonts have good support for the myriad Unicode glyphs. Consider whether you
 could use these instead of images. [Unicode character
 sets](http://unicode-table.com/en/sets/) include symbols and icons that cover a
-huge range of subjects. You may be able to use these instead of images.
+huge range of subjects. You may be able to use these instead of images:
 
-[Live example]
+<div style="color: #36dce7; font-size: 48px;"> ❤ ♫ ☯ ✂</div>
+
+{% link_sample _code/unicode.html %}
+Try it
+{% endlink_sample %}
+
 
 ### Icon fonts
 
 It's possible to build a font family made of images rather than letters. Here's
 a small sample from [Font Awesome](http://fortawesome.github.io/Font-Awesome/):
 
-<img src="images/image00.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+&lt;img src="images/image00.png" alt="alt text"/&gt; &lt;!-- TODO: Fix alt text and URL --&gt;
 
 The 'characters' in icon fonts behave just like letters in other fonts, so you
 can resize and colour just like you would otherwise.
@@ -227,7 +215,7 @@ There are [many techniques](http://css-tricks.com/examples/PseudoIconTest/) for
 using icon fonts. The following example is done with screenreaders in mind:
 
     HTML
-    <div data-icon="r">RSS</div>
+    &lt;div data-icon="r"&gt;RSS&lt;/div&gt;
 
     CSS
     [data-icon]:before {
@@ -257,7 +245,7 @@ Data URIs provide a way to include a file such as an image inline as a [Base64
 encoded](https://en.wikipedia.org/wiki/Base64) string using the following
 format:
 
-    data:[<mediatype>][;base64],<data>
+    data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
 
 Drag 'n' drop tool such as
 [jpillora.com/base64-encoder](http://jpillora.com/base64-encoder) are available
@@ -268,7 +256,7 @@ like the following:
 
 The Data URI for an image like this:
 
-<img src="images/image01.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+&lt;img src="images/image01.png" alt="alt text"/&gt; &lt;!-- TODO: Fix alt text and URL --&gt;
 
 ...looks like this:
 
@@ -279,7 +267,7 @@ The Data URI for an image like this:
 
 That Data URI string can then be used as an img src like this
 
-    <img src='data:image/png;base64,iVBOR...' alt='Chrome logo'>
+    &lt;img src='data:image/png;base64,iVBOR...' alt='Chrome logo'&gt;
 
 ….or with CSS as a background image:
 
@@ -288,7 +276,7 @@ That Data URI string can then be used as an img src like this
 Data URIs are [well supported](http://caniuse.com/datauri) on mobile and desktop
 browsers.
 
-Using Data URIs for images make sense in some scenarios – for example, on a site
+Using Data URIs for images make sense in some scenarios &ndash; for example, on a site
 homepage with no other dependencies, where it's more important to reduce the
 number of requests than the total download size. [google.com](http://google.com)
 makes extensive use of them: take a look at the Network panel in your browser
@@ -315,10 +303,10 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part:
 
     HTML
-    <ul>
-    <li class='sprite forward aria-label='Forward'></li>
-    <li class='sprite back' aria-label='Back'></li>
-    </ul>
+    &lt;ul&gt;
+    &lt;li class='sprite forward aria-label='Forward'&gt;&lt;/li&gt;
+    &lt;li class='sprite back' aria-label='Back'&gt;&lt;/li&gt;
+    &lt;/ul&gt;
 
     CSS
     .sprite {background-image:url('images/spriteSheet.png')}
@@ -331,7 +319,7 @@ Take a look at this example of a sprite sheet [from
 google.com](https://www.google.com/images/nav_logo193.png), which includes
 multiple icons and logos:
 
-<img src="images/image02.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+&lt;img src="images/image02.png" alt="alt text"/&gt; &lt;!-- TODO: Fix alt text and URL --&gt;
 
 Spriting has the advantage of reducing the number of downloads and total
 download size required to get multiple images, while still enabling cacheing.
@@ -405,12 +393,12 @@ As a general rule:
 
 ### Use vector formats instead of raster images
 
-A vector graphic is defined as a set of curves, lines and fills – rather than
+A vector graphic is defined as a set of curves, lines and fills &ndash; rather than
 the colour of each pixel being specified individually.
 
 Vector graphics have two main advantages over raster formats:
 
-* Images can be scaled without loss of quality – great for high-DPI displays (8k
+* Images can be scaled without loss of quality &ndash; great for high-DPI displays (8k
   TV anyone?) and when working across multiple viewport sizes.
 * File size is the same, no matter what the display size.
 
@@ -424,20 +412,20 @@ Graphics) is a  vector image format [widely
 supported](http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2Fsvg&sa=D&sntz=1&usg=AFQjCNH8eBrd5JzwQ20BwzYOX6Z_whgVOA)
 by web browsers.
 
-An SVG image can be an external file used as the `src` of an <img> like
+An SVG image can be an external file used as the `src` of an &lt;img&gt; like
 [this](http://simpl.info/svg/) or used in code form inline like this:
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"
         viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"
         style="width:100%; height:100%; position:absolute; top:0; left:0;
-        z-index:-1;">
-        <linearGradient id="gradient">
-            <stop class="begin" offset="0%"/>
-            <stop class="end" offset="100%"/>
-        </linearGradient>
-        <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-        <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
-        </svg>
+        z-index:-1;"&gt;
+        &lt;linearGradient id="gradient"&gt;
+            &lt;stop class="begin" offset="0%"/&gt;
+            &lt;stop class="end" offset="100%"/&gt;
+        &lt;/linearGradient&gt;
+        &lt;rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" /&gt;
+        &lt;circle cx="50" cy="50" r="30" style="fill:url(#gradient)" /&gt;
+        &lt;/svg&gt;
 
 This code (from [Mozilla Developer
 Network](https://developer.mozilla.org/en/docs/SVG_In_HTML_Introduction))
@@ -453,9 +441,9 @@ saved in low quality is around 14kB in size:
 SVG fallbacks using HTML, CSS and JavaScript:
 [css-tricks.com/svg-fallbacks](http://css-tricks.com/svg-fallbacks)
 
- <svg width="96" height="96">
-   <image xlink:href="svg.svg" src="svg.png" width="96" height="96"/>
- </svg>
+ &lt;svg width="96" height="96"&gt;
+   &lt;image xlink:href="svg.svg" src="svg.png" width="96" height="96"/&gt;
+ &lt;/svg&gt;
 
 One of the cool things about SVG is that you can [controls components of an
 image with CSS](http://css-tricks.com/using-svg/). SVGs can be shrunk with tools
@@ -476,7 +464,7 @@ other images.
 
 Here's a canvas element with a line, a circle, text and an image:
 
-<img src="images/image03.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+&lt;img src="images/image03.png" alt="alt text"/&gt; &lt;!-- TODO: Fix alt text and URL --&gt;
 
 ...and here's the code:
 
@@ -523,7 +511,7 @@ Canvas can be a simple way to build images without external dependencies.
 Image file size can be considerably reduced by 'post-processing' them after
 saving.
 
-There are a number of tools for image compression – lossy and lossless, online,
+There are a number of tools for image compression &ndash; lossy and lossless, online,
 GUI, command line. Many of these tools can be incorporated in your workflow.
 
 Addy Osmani has compiled a great list of [tools for image
@@ -585,7 +573,7 @@ You can obtain the 'actual' dimensions of an image with the `naturalWidth` and
 `naturalHeight` properties. You can also check this by hovering over an image
 with the Chrome Dev Tools:
 
-<img src="images/image04.png" alt="alt text"/> <!-- TODO: Fix alt text and URL -->
+&lt;img src="images/image04.png" alt="alt text"/&gt; &lt;!-- TODO: Fix alt text and URL --&gt;
 
 Below we look at some techniques for sizing images with CSS.
 
@@ -603,8 +591,8 @@ CSS dimensions can be expressed in two ways:
 
 * Absolute units such as `px`, `pt`, `cm` and `in`
 
-Absolute units can be useful – and it's good to define the size of elements to
-speed up rendering – but beware of overflowing the viewport. Instead, make use
+Absolute units can be useful &ndash; and it's good to define the size of elements to
+speed up rendering &ndash; but beware of overflowing the viewport. Instead, make use
 of relative units whenever possible.
 
 The following image has `width: 500px`defined in CSS. Try viewing it on a phone
@@ -620,7 +608,7 @@ Here's the same image using `width: 100%`:
 In CSS, `width: 100%` means 100% of the width of the containing element, not the
 viewport.
 
-Don't forget that browsers add CSS margins to web pages by default – and default
+Don't forget that browsers add CSS margins to web pages by default &ndash; and default
 CSS stylesheets vary between
 [Chrome](http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css),
 [Firefox](http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css)
@@ -642,7 +630,7 @@ the html element:
 (Example here.)
 {% endclass %}
 
-A nice technique is to combine `width` and `max-width` – that way an image can
+A nice technique is to combine `width` and `max-width` &ndash; that way an image can
 be given a preferred size but will never overflow its containing element: try
 resizing this example, which uses the following code:
 
@@ -723,7 +711,7 @@ make sure to use the correct repeat settings:
 
 {% endclass %}
 
-Different viewport sizes demand different image sizes – or possibly different
+Different viewport sizes demand different image sizes &ndash; or possibly different
 'crops' of the same image, or even different images.
 
 {% class note %}
@@ -754,7 +742,7 @@ on the viewport size:
 
 [TBD]
 
-## <picture>, srcset… WTF?
+## &lt;picture&gt;, srcset… WTF?
 
 {% class key-takeaway %}
 
@@ -772,11 +760,11 @@ appropriate image.
 Here's an example from the [picture
 ](http://picture.responsiveimages.org/)[spec](http://picture.responsiveimages.org/):
 
-    <picture>
-        <source media="(min-width: 45em)" srcset="large.jpg">
-        <source media="(min-width: 18em)" srcset="med.jpg">
-        <img src="images/small.jpg" alt="The president giving an award.">
-    </picture>
+    &lt;picture&gt;
+        &lt;source media="(min-width: 45em)" srcset="large.jpg"&gt;
+        &lt;source media="(min-width: 18em)" srcset="med.jpg"&gt;
+        &lt;img src="images/small.jpg" alt="The president giving an award."&gt;
+    &lt;/picture&gt;
 
 (See this example in action here.)
 
@@ -792,37 +780,37 @@ attribute.
 
 In the example above the srcset only provides a single image source. The srcset
 attribute really comes into its own when used to respond to conditions such as
-pixel density – in this example provding alternative images for devices with a
+pixel density &ndash; in this example provding alternative images for devices with a
 1:1 device:CSS pixel ratio and a 2:1 ratio (such as Retina displays):
 
-    <picture>
-        <source media="(min-width: 45em)" srcset="large.jpg 1x, large-hd.jpg 2x">
-        <source media="(min-width: 18em)" srcset="med.jpg, med-hd.jpg 2x">
-        <img src="images/small.jpg" alt="The president giving an award.">
-    </picture>
+    &lt;picture&gt;
+        &lt;source media="(min-width: 45em)" srcset="large.jpg 1x, large-hd.jpg 2x"&gt;
+        &lt;source media="(min-width: 18em)" srcset="med.jpg, med-hd.jpg 2x"&gt;
+        &lt;img src="images/small.jpg" alt="The president giving an award."&gt;
+    &lt;/picture&gt;
 
 (Example here.)
 
 Using the picture element in conjunction with srcset allows the browser to
-respond to varying pixel densities, and additionally enables art direction – the
+respond to varying pixel densities, and additionally enables art direction &ndash; the
 ability to select a different image, based on media queries.
 
 It's also possible to add a type attribute to each source element, to enable
 developers to take advantage of up and coming codecs, and provide preferred
 alternatives:
 
-    <picture>
-        <source media="(min-width: 45em)" srcset="large.jpg 1x, large-hd.jpg 2x"
-     type="image/jpeg">
-        <source media="(min-width: 18em)" srcset="med.jpg, med-hd.jpg 2x"
-        type="image/jpeg">
-         <source media="(min-width: 45em)" srcset="large.webp 1x, large-hd.webp
+    &lt;picture&gt;
+        &lt;source media="(min-width: 45em)" srcset="large.jpg 1x, large-hd.jpg 2x"
+     type="image/jpeg"&gt;
+        &lt;source media="(min-width: 18em)" srcset="med.jpg, med-hd.jpg 2x"
+        type="image/jpeg"&gt;
+         &lt;source media="(min-width: 45em)" srcset="large.webp 1x, large-hd.webp
          2x"
-     type="image/webp">
-        <source media="(min-width: 18em)" srcset="med.webp, med-hd.webp 2x"
-        type="image/webp">
-        <img src="images/small.jpg" alt="The president giving an award.">
-    </picture>
+     type="image/webp"&gt;
+        &lt;source media="(min-width: 18em)" srcset="med.webp, med-hd.webp 2x"
+        type="image/webp"&gt;
+        &lt;img src="images/small.jpg" alt="The president giving an award."&gt;
+    &lt;/picture&gt;
 
 (Example here: try this on a browser such as Chrome that supports WebP, and a
 browser that doesn't, such as Safari.)
@@ -846,7 +834,7 @@ Why use the picture element instead of other responsive image techniques?
 
 Clearly, the picture element and srcset combination can become quite verbose. It
 may also be hard to manually adjust breakpoints for multiple picture elements in
-the same document – but both these problems can be reduced via workflow
+the same document &ndash; but both these problems can be reduced via workflow
 automation and templating..
 
 ## Using JavaScript for image handling
@@ -862,7 +850,7 @@ automation and templating..
 ### Choosing alternative images with JavaScript and server-side scripting
 
 There are a number of JavaScript techniques for ascertaining the viewport size
-and requesting images accordingly – possibly in combination with server-side
+and requesting images accordingly &ndash; possibly in combination with server-side
 scripting. As well as adding complexity, these techniques can preclude browser
 optimisations such as image prefetching.
 
@@ -882,7 +870,7 @@ sites such as Tumblr) and can significantly speed up loading on long pages that
 include numerous images. (Be aware however that infinite scrolling pages need to
 be made [search
 friendly](http://googlewebmastercentral.blogspot.com/2014/02/infinite-scroll-search-friendly.html)
-and have other disadvantages – not least, that the page has no 'bottom'.)
+and have other disadvantages &ndash; not least, that the page has no 'bottom'.)
 
 ## Accessibility
 
@@ -990,7 +978,7 @@ web to outgrow its origins in the printed page.'
 design](http://www.alistapart.com/articles/)
 [Fluid Images](http://unstoppablerobotninja.com/entry/fluid-images)
 [responsiveimages.org](http://responsiveimages.org/)
-[Real World RWD Performance – Take
+[Real World RWD Performance &ndash; Take
 2](http://www.guypo.com/uncategorized/real-world-rwd-performance-take-2/):
 almost all responsive sites download all content
 
