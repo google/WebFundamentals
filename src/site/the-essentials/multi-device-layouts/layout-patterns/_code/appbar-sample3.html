@@ -8,19 +8,27 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <!-- // [END ms-specific] -->
 
-    <title>App Bar Sample 1</title>
+    <title>App Bar Sample 3</title>
     
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+
+      padding: 0;
+      margin: 0;
+    }
+
       body {
-  padding: 0;
-  margin: 0;
-  
-  background-color: #C9DAF8;
-  
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+
+  background-image: url('https://s3.amazonaws.com/ooomf-com-files/TIDqBLgQw6IUt5ZHKS0f_11891558035_eafdf53bf0_o.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .app-bar {
@@ -35,8 +43,6 @@
   left: 0;
 
   flex-direction: row;
-  
-  background-color: #3C78D8;
 }
 
 .app-bar .logo {
@@ -60,20 +66,46 @@
 }
 
 .app-bar button {
-  width: 60px;
-  height: 60px;
+  width: 44px;
+  height: 44px;
   
   background-image: none;
   background-color: transparent;
   
-  border: none;
+  border-style: solid;
+  border-radius: 100%;
+  border-color: rgb(254, 254, 254);
 
-  padding: 0;
+  padding: 8px;
+  margin: 8px;
+
+  -webkit-transition: border 300ms ease-in,background 300ms ease-in;
+transition: border 300ms ease-in,background 300ms ease-in
+}
+
+.app-bar button:hover {
+  border-color: transparent;
+  background-color: rgba(254, 254, 254, 0.4);
+}
+
+.app-bar button:active {
+  border-color: transparent;
+  background-color: rgba(254, 254, 254, 0.6);
+}
+
+.app-bar button:focus {
+  border-color: transparent;
+  outline: 0;
+  background-color: rgba(254, 254, 254, 0.4);
+}
+
+.app-bar button:active:focus {
+  background-color: rgba(254, 254, 254, 0.6);
 }
 
 .app-bar button img {
-  width: 60px;
-  height: 60px;
+  width: 28px;
+  height: 28px;
 }
 
 .app-bar-actions  {
