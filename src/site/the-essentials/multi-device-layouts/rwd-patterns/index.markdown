@@ -27,7 +27,8 @@ point for any responsive page.
 
 ### The patterns
 
-To create simple, easy-to-understand samples, each sample was built using 
+To create simple, easy-to-understand samples, each the samples
+below were created with real markup using 
 [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes), 
 typically with three content `div`'s contained within a primary container `div`. 
  Each sample was written starting with the smallest view first and breakpoints 
@@ -35,7 +36,7 @@ were added when necessary.  The [flexbox layout mode is well
 supported](http://caniuse.com/#search=flexbox) for modern browsers, though may 
 still require vendor prefixing for optimal support. 
 
-## Mostly fluid
+## Mostly Fluid
 
 The mostly fluid pattern consists primarily of a fluid grid.  On large or medium 
 screens, it usually remains the same size, simply adjusting the margins on wider 
