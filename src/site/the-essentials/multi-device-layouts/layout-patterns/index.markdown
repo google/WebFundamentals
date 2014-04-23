@@ -44,9 +44,11 @@ key-takeaways:
 
 <img class="g-wide--full" src="images/appbar.png">
 
-Users expect to find yours site's logo at the top of every page and when they click it, they'll expect to be take to your home page.
+<div style="clear: both;"></div>
 
-Traditionally the web has used page headers for this, on the mobile web you should use the App Bar.
+One expectation users have is that yours site's logo will be at the top of every page and when they click it, it'll take them to your home page.
+
+Traditionally the web has used page headers for this. On mobile devices you should use the App Bar.
 
 The app bar consists of three elements.
 
@@ -68,11 +70,15 @@ The top left corner is where you should put the most important elements of your 
 
 <img class="g-wide--full" src="images/appbar-menu.png">
 
+<div style="clear: both;"></div>
+
 ## Guidelines
 
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
 <img class="g-wide--full" src="images/appbar-alt.png">
+
+<div style="clear: both;"></div>
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.app-bar %}
 
