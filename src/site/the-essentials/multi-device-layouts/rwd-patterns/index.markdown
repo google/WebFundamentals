@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Responsive Web Design Patterns"
-description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi."
 introduction: "Responsive web design patterns are quickly evolving, but there
               are a handful of established patterns that work well across the
               desktop and mobile devices."

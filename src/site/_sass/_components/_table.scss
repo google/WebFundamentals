@@ -16,7 +16,7 @@
 
   thead {
     background: $colorBlue;
-    color: $colorWhite;
+    color: #ffffff;
   }
 
   th {
@@ -28,13 +28,12 @@
 
   tr {
     @include medium {
-      border-bottom: 1px solid $colorWhite;
+      border-bottom: 1px solid #ffffff;
     }
   }
 
-
   tbody {
-    background: $colorGrayB;
+    background: $colorGrayBackground;
   }
 
   td {
@@ -42,12 +41,13 @@
     padding-top: $lineHeight/2;
     padding-bottom: $lineHeight/2;
 
+    // This is to re-plicate the table-headers for mobile
     &:before {
       content: attr(data-th) " :";
       display: inline-block;
-      color: $colorWhite;
+      color: #ffffff;
       background: $colorBlue;
-      border-right: 2px solid $colorWhite;
+      border-right: 2px solid #ffffff;
       position: absolute;
       top: 0;
       left: 0;
@@ -59,7 +59,6 @@
       font-weight: 400;
       padding-left: $lineHeight/2;
       padding-top: $lineHeight/2;
-      // end options
 
       @include medium {
         display: none;
@@ -83,7 +82,7 @@
 td:last-child:after {
   content: "";
   display: block;
-  background: $colorWhite;
+  background: #ffffff;
   height: 1px;
   left: 0;
   position: absolute;
@@ -106,7 +105,7 @@ td:last-child:after {
   td {
     @include medium {
       &:first-child {
-        border-right: 2px solid $colorWhite;
+        border-right: 2px solid #ffffff;
       }
     }
   }
@@ -124,8 +123,8 @@ td:last-child:after {
   td {
     @include medium {
       &:nth-child(2) {
-        border-left: 2px solid $colorWhite;
-        border-right: 2px solid $colorWhite;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
       }
     }
   }
@@ -144,8 +143,8 @@ td:last-child:after {
     @include medium {
       &:nth-child(2),
       &:nth-child(3) {
-        border-left: 2px solid $colorWhite;
-        border-right: 2px solid $colorWhite;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
       }
     }
   }

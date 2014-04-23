@@ -11,12 +11,12 @@
 **/
 
 .articles-section {
-  background: $colorGrayB;
+  background: $colorGrayBackground;
   text-align: center;
 }
 
 .articles-count {
   color: $colorBlue;
   font-family: $fontHighlight;
-  padding-top: $lineHeight * 2;
+  padding-top: $lineHeight * 2 + 1;
 }
