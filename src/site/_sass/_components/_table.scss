@@ -32,7 +32,6 @@
     }
   }
 
-
   tbody {
     background: $colorGrayBackground;
   }
@@ -42,6 +41,7 @@
     padding-top: $lineHeight/2;
     padding-bottom: $lineHeight/2;
 
+    // This is to re-plicate the table-headers for mobile
     &:before {
       content: attr(data-th) " :";
       display: inline-block;
@@ -59,7 +59,6 @@
       font-weight: 400;
       padding-left: $lineHeight/2;
       padding-top: $lineHeight/2;
-      // end options
 
       @include medium {
         display: none;

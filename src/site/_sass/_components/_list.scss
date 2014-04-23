@@ -63,7 +63,85 @@ ol.list--links {
 }
 
 
+/*==========  NAMELESS LIST  ==========*/
 
+.horizontal-list {
+  text-align: center;
+
+  h3 {
+    color: $colorBlue;
+    padding-bottom: $lineHeight;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 40%;
+      height: 1px;
+      box-shadow: 0 1px 0 0 $colorGrayC;
+      left: 30%;
+      bottom: $lineHeight / 2;
+    }
+  }
+}
+
+/*==========  FEATURED LIST  ==========*/
+
+.featured-list {
+  padding-top: $lineHeight * 3;
+  padding-bottom: $lineHeight * 3;
+}
+
+.featured-list__item {
+  background: #ffffff;
+  padding-left: 0;
+  min-height: $lineHeight * 13;
+  padding: $lineHeight * 2 32px;
+  margin-top: $lineHeight;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: $lineHeight;
+  }
+}
+
+.featured-list__img-wrapper {
+  position: relative;
+  padding-top: $lineHeight*2;
+
+  @include medium {
+    padding-top: 0;
+  }
+}
+
+.featured-list__img {
+  @include medium {
+    padding-top: 60.8%;
+    padding-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+
+    @include medium {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
 
 /*==========  LIST RESET  ==========*/
 
