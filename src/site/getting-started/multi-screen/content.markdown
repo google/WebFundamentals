@@ -53,13 +53,11 @@ In this tutorial we are going to cover how to structure your page with content s
 video and images for a narrow viewport (mobile) experience and before we then move on to 
 work out how we make it responsive across larger screens.
 
-We believe that the content is the most important aspect.
+We believe that the content is the most important aspect of any site.
 So let's design for the content and not let the design dictate the content.  In
-this lesson we will present a simple linear layout.
+this lesson we will present a simple linear layout that will work well on narrow viewports.
 
 ## Create the page structure
-
-
 
 We have identified we need:
 
