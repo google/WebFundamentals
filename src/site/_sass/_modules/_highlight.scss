@@ -28,10 +28,10 @@
     right: 0;
     left: 0;
 
-    @include wide {
-      width: 80%;
-      right: 20%;
-    }
+    // @include wide {
+    //   width: 80%;
+    //   right: 20%;
+    // }
   }
 }
 
@@ -48,12 +48,12 @@
 
   &:after {
     background-color: $colorRemember;
-    right: 0;
-    left: 0;
+    // right: 0;
+    // left: 0;
 
-    @include wide {
-      left: 20%;
-    }
+    // @include wide {
+    //   left: 20%;
+    // }
   }
 }
 
@@ -88,10 +88,10 @@
 }
 
 .highlight-module--code {
-  &:after {
-    left: 0;
-    width: 100%;
-  }
+  // &:after {
+  //   left: 0;
+  //   width: 100%;
+  // }
 
   pre {
     margin: 0;
@@ -119,4 +119,31 @@
   display: block;
   @include type--medium;
   font-family: $fontHighlight;
+}
+
+.highlight-module--left {
+  &:after {
+    @include wide {
+      width: 80%;
+      right: 20%;
+    }
+  }
+}
+
+.highlight-module--right {
+  &:after {
+    @include wide {
+      width: 80%;
+      left: 20%;
+    }
+  }
+
+  &.highlight-module--code {
+    &:after {
+      @include wide {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
 }
