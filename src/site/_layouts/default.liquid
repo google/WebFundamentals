@@ -3,19 +3,21 @@
 <html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
   <head>
 {% endif %}
-		{% include head.liquid %}
-	</head>
+    {% include head.liquid %}
+  </head>
 
-	<body class="{{ page.class }}">
-      {% injectdata project _project.yaml %}
-      {% injectdata content _book.yaml %}
+  <body class="{{ page.class }}">
+    {% injectdata project _project.yaml %}
+    {% injectdata content _book.yaml %}
 
-		{% include header.liquid %}
+    {% include google_header.html %}
 
-		{{ content }}
+    {% include header.liquid %}
 
-		{% include footer.liquid %}
+    {{ content }}
 
-		{% include scripts.liquid %}
-	</body>
+    {% include footer.liquid %}
+
+    {% include scripts.liquid %}
+  </body>
 </html>
