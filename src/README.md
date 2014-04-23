@@ -1,6 +1,3 @@
-google-web-essentials
-=====================
-
 # Google Web Essentials
 
 

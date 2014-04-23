@@ -44,6 +44,28 @@ Styles for Headings
 
 ## Code
 
+Styles for how to include code into the documents.
+
+### Inline code with no sample
+
+  {{ "&#123;% highlight html %&#125;" }}
+   
+    <html>
+        <head>
+          <title>Hello World</title>
+        </head>
+    </html>
+  
+  {{ "&#123;% endhighlight %&#125;" }}
+
+{% highlight html %}
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+</html>
+{% endhighlight %}
+
 ### Include Javascript
 
   {{ "&#123;% include_code _code/test.js testjs javascript %&#125;" }} 

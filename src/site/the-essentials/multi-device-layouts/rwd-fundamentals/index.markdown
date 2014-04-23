@@ -70,9 +70,13 @@ tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
 be changing, so it's important that your site can adapt to any screen size, 
 today or in the future.
 
-<video autoplay loop controls>
-  <source src="videos/resize.mp4">
-</video>
+{% link_sample _code/weather.html %}
+  <video autoplay loop controls>
+    <source src="videos/resize.webm" type="video/webm" />
+    <source src="videos/resize.mp4" type="video/mp4" />
+  </video>
+{% endlink_sample %}
+
 
 Responsive web design, originally defined by [Ethan Marcotte in A List 
 Apart](http://alistapart.com/article/responsive-web-design/) responds to the 
@@ -87,7 +91,9 @@ Pages optimized for a variety of devices must include a meta viewport element in
 the head of the document.  A meta viewport tag gives the browser instructions on 
 how to control the page's dimensions and scaling.
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% highlight html %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endhighlight %}
 
 In order to attempt to provide the best experience, mobile browsers will render 
 the page at a desktop screen width (usually about 960px), and then try to make 
@@ -103,11 +109,17 @@ phone or a large desktop monitor.
 
 <div class="clear">
   <div class="g--half">
-    <img src="imgs/no-vp.png" class="sxs" alt="Page without a viewport set">
+    {% link_sample _code/vp-no.html %} 
+      <img src="imgs/no-vp.png" class="sxs" alt="Page without a viewport set">
+      See example 
+    {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
-    <img src="imgs/vp.png" class="sxs" alt="Page with a viewport set">
+    {% link_sample _code/vp.html %}
+      <img src="imgs/vp.png" class="sxs" alt="Page with a viewport set">
+      See example 
+    {% endlink_sample %}
   </div>
 </div>
 
@@ -154,11 +166,17 @@ viewport on small screens.
 
 <div class="clear">
   <div class="g--half">
-    <img src="imgs/vp-fixed-iph.png" class="sxs" alt="Page with a 344px fixed width element on an iPhone.">
+    {% link_sample _code/vp-fixed.html %}
+      <img src="imgs/vp-fixed-iph.png" class="sxs" alt="Page with a 344px fixed width element on an iPhone.">
+      See example
+    {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
-    <img src="imgs/vp-fixed-n5.png" class="sxs" alt="Page with a 344px fixed width element on a Nexus 5.">
+    {% link_sample _code/vp-fixed.html %}
+      <img src="imgs/vp-fixed-n5.png" class="sxs" alt="Page with a 344px fixed width element on a Nexus 5.">
+      See example
+    {% endlink_sample %}
   </div>
 </div>
 
@@ -172,18 +190,23 @@ the content, including the display type, width, height, orientation and even
 resolution.  For example, you could place all styles necessary for printing 
 inside a print media query:
 
-    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+{% highlight html %}
+<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+{% endhighlight %}
 
 In addition to using the `media` attribute in the stylesheet link, there are two 
 other ways to apply media queries that can be embedded in a CSS file: `@media` 
 and `@import`.  For performance reasons, either of the first two methods are 
 recommended over the `@import` syntax.
 
-    @media print {
-      // print style sheets go here
-    }
+{% highlight css %}
+@media print {
+  /* print style sheets go here */
+}
 
-    @import url(print.css) print;
+@import url(print.css) print;
+{% endhighlight %}
+
 
 The logic that applies to media queries is not mutually exclusive and any filter 
 that meets that criteria the resulting CSS block will be applied using the 
@@ -196,16 +219,18 @@ are applied to small screens, large screens and anywhere in between.  The media
 query syntax allows for the creation of rules that can be applied depending on 
 device characteristics.
 
-    @media (query) {
-      /* CSS Rules used when query matches */
-    }
+{% highlight css %}
+@media (query) {
+  /* CSS Rules used when query matches */
+}
+{% endhighlight %}
 
 While there are several different items we can query on, the ones used most 
 often for responsive web design are `min-width`, `max-width`, `min-height` and 
 `max-height`.
 
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>attribute</th>
@@ -243,7 +268,10 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
 Let's take a look an example:
 
 <figure>
-  <img src="imgs/mq.png" class="wide" alt="Preview of a page using media queries to change properties as it is resized.">
+  {% link_sample _code/media-queries.html %}
+    <img src="imgs/mq.png" class="wide" alt="Preview of a page using media queries to change properties as it is resized.">
+    See example
+  {% endlink_sample %}
 </figure>
 
 {% include_code _code/media-queries.html mqueries %}
@@ -287,18 +315,18 @@ page.
 <div class="clear">
   <div class="g--half">
     <h2 class="text-danger text-center">NO</h2>
-    <pre><code>div.fullWidth {
+{% highlight css %}div.fullWidth {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
-}</code></pre>
+}{% endhighlight %}
   </div>
 
   <div class="g--half g--last">
     <h2 class="text-success text-center">YES</h2>
-    <pre><code>div.fullWidth {
+{% highlight css %}div.fullWidth {
   width: 100%;
-}</code></pre>
+}{% endhighlight %}
   </div>
 </div>
 
@@ -324,17 +352,21 @@ Let's work through the example we saw at the beginning, the weather forecast.
 The first step is to make the forecast look good on a small screen.
 
 <figure>
-  <img src="imgs/weather-1.png" class="tall" alt="Preview of the weather forecast displayed on a small screen." />
+  {% link_sample _code/weather-1.html %}
+    <img src="imgs/weather-1.png" class="tall" alt="Preview of the weather forecast displayed on a small screen." />
+    <br>See example
+  {% endlink_sample %}
 </figure>
-
-[View full sample](weather-1.html)
 
 Next, resize the browser until there is too much white space between the 
 elements and the forecast simply doesn't look as good.  The decision is somewhat 
 subjective, but above 600px is certainly too wide.
 
 <figure>
-  <img src="imgs/weather-2.png" class="wide" alt="Preview of the weather forecast as the page gets wider." />
+  {% link_sample _code/weather-1.html %}
+    <img src="imgs/weather-2.png" class="wide" alt="Preview of the weather forecast as the page gets wider." />
+    <br>See example
+  {% endlink_sample %}
 </figure>
 
 To insert a breakpoint at 600px, create two new stylesheets, one to use when the 
@@ -348,10 +380,11 @@ for the small screen are then placed in `weather-small.css` and large screen
 styles are placed in `weather-large.css`.
 
 <figure>
-  <img src="imgs/weather-3.png" class="wide" alt="Preview of the weather forecast designed for a wider screen." />
+  {% link_sample _code/weather-2.html %}
+    <img src="imgs/weather-3.png" class="wide" alt="Preview of the weather forecast designed for a wider screen." />
+    See example
+  {% endlink_sample %}
 </figure>
-
-[View full sample](weather-2.html)
 
 ### Pick minor breakpoints when necessary
 
@@ -381,9 +414,9 @@ icons a bit larger.
 Similarly, for the large screens, it's best to limit to maximum width of the 
 forecast panel so it doesn't consume the whole screen width.
 
-{% include_code _code/weather-large.css mqsmallbplg css %}
+{% link_sample _code/weather.html %}View finished sample{% endlink_sample %}
 
-[View finished sample](weather.html)
+{% include_code _code/weather-large.css mqsmallbplg css %}
 
 ### Optimize text for reading
 
@@ -405,6 +438,8 @@ Let's take a deeper look at the above blog post example.  On smaller screens,
 the Roboto font at 1em works perfectly giving 10 words per line, but larger 
 screens will require a breakpoint. In this case, if the browser width is greater 
 than 575px, the ideal content width is 550px.
+
+{% link_sample _code/reading.html %}View finished sample{% endlink_sample %}
 
 {% include_code _code/reading.html mqreading css %}
 
