@@ -92,7 +92,7 @@ Sites using this pattern include:
 
 ## Layout Shifter
 
-The Layout shifter pattern is the most responsive to with multiple breakpoints 
+The layout shifter pattern is the most responsive to with multiple breakpoints 
 across several screen widths.  Key to this layout is the way content moves 
 about, instead of reflowing and dropping below other columns.  Due to the 
 significant differences between each major breakpoint, it is more complex to 
@@ -130,7 +130,7 @@ articles.
 {% endlink_sample %}
 
 As its name implies, little changes with this sample as the screen size changes. 
- As the screen width gets larger, so do the font size and padding.
+As the screen width gets larger, so do the font size and padding.
 
 Sites using this pattern include:
 
