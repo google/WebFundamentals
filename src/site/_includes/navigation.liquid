@@ -18,7 +18,7 @@
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
                   <li class="main-nav__item--child">
-                    <a class="main-nav__link main-nav__link--child" href="{{ subsection.path }}">{{ subsection.title }}</a>
+                    <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">{{ subsection.title }}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -26,7 +26,7 @@
               <div class="main-nav__featured g-medium--1 g-medium--last g-wide--2 g-wide--last">
                 <p class="main-nav__featured-title medium">Feature case study</p>
                 <p class="main-nav__featured-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consectetur adipiscing elit.</p>
-                <a href="#" class="cta--secondary main-nav__featured-cta">View</a>
+                <a href="{{site.baseurl}}#" class="cta--secondary main-nav__featured-cta">View</a>
               </div>
             </div>
 

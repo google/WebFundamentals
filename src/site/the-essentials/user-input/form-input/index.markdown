@@ -66,10 +66,6 @@ remember:
 <!-- TODO[PETELE] remove temp styles -->
 
 <style type="text/css">
-  video {
-    width: 100%;
-  }
-
   img.wide {
     width: 100%;
   }
@@ -78,46 +74,8 @@ remember:
     max-height: 500px;
   }
 
-  img.keybimg {
-    max-width: 225px;
-  }
 
-  table {
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  thead {
-    font-weight: bold;
-  }
-
-  th, td{
-    text-align: left;
-    padding: 8px;
-  }
-
-  tbody > tr:nth-child(odd) {
-    background-color: #f5f5f5;
-  }
-
-  tr {
-    border-bottom: 1px solid #ddd;
-  }
-
-  .text-danger {
-    color: #a94442;
-  }
-
-  .text-success {
-    color: #3c763d;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-    table.autocompletes {
+  table.autocompletes {
     width: 100%;
   }
 
@@ -178,7 +136,11 @@ elements may be covered by the virtual keyboard.
 The placeholder attribute provides a hint to the user about what's expected in
 the input by displaying its value as light text until the element gets focus.
 
-{% include_code _code/order.html placeholder %}
+<input type="text" placeholder="MM-YYYY" />
+
+{% highlight html%}
+<input type="text" placeholder="MM-YYYY" ... />
+{% endhighlight %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-placeholders %}
 
@@ -204,7 +166,7 @@ the users name, email address and phone number, you should use:
 
 ### Recommended input `name` and `autocomplete` attribute values
 
-<table class="autocompletes">
+<table class="table autocompletes">
   <thead>
     <tr>
       <th>Content type</th>
@@ -304,7 +266,9 @@ Be careful using the autofocus attribute because it will steal keyboard focus
 and potentially preventing the backspace character from being used for
 navigation.
 
-    <input type="text" id="frmName" autofocus name="name" autocomplete="name">
+{% highlight html %}
+<input type="text" autofocus ... />
+{% endhighlight %}
 
 {% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
 
@@ -323,7 +287,7 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<table class="inputtypes">
+<table class="table inputtypes">
   <thead>
     <tr>
       <th>Input <code>type</code></th>
@@ -478,11 +442,13 @@ input field. For example, to validate a US Zip code (5 digits, sometimes
 followed by a dash and an additional 4 digits), we would set the `pattern` like
 this:
 
-    <input type="text" id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
+{% highlight html %}
+<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ... />
+{% endhighlight %}
 
 ##### Common regular expression patterns
 
-<table class="tc-heavyright">
+<table class="table tc-heavyright">
   <thead>
     <tr>
       <th>Description</th>
@@ -523,7 +489,9 @@ If the `required` attribute is present, then the field must contain a value befo
 the form can be submitted. For example, to make the zip code required, we'd
 simply add the required attribute:
 
-    <input type="text" required id="zip" name="zip" pattern="^\d{5,6}(?:[-\s]\d{4})?$" />
+{% highlight html %}
+<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ... />
+{% endhighlight %}
 
 #### The `min`, `max` and `step` attributes
 
@@ -533,7 +501,9 @@ increment/decrement when adjusted by the slider or spinners.  For example, a
 shoe size input would set a minumum size of 1 and a maximum size 13, with a step
 of 0.5
 
-    <input type="number" id="frmShoeSize" name="shoeSize" min="1" max="13" step="0.5" />
+{% highlight html %}
+<input type="number" min="1" max="13" step="0.5" ... />
+{% endhighlight %}
 
 #### The `maxlength` attribute
 
@@ -542,7 +512,9 @@ textbox and is useful when you want to limit the length of information that the
 user can provide. For example, if you want to limit a filename to 12 characters,
 you can use the following.
 
-    <input type="text" id="83filename" maxlength="12" />
+{% highlight html %}
+<input type="text" id="83filename" maxlength="12" ... />
+{% endhighlight %}
 
 #### The `novalidate` attribute
 
@@ -551,10 +523,12 @@ contains invalid input. To do this, add the `novalidate` attribute to the form
 element, or individual input fields. In this case, all pseudo classes and
 JavaScript APIs will still allow you to check if the form validates.
 
-    <form role="form" novalidate>
-      <label for="inpEmail">Email address</label>
-      <input type="email" name="email" id="inpEmail" placeholder="Enter email">
-    </form>
+{% highlight html %}
+<form role="form" novalidate>
+  <label for="inpEmail">Email address</label>
+  <input type="email" ... />
+</form>
+{% endhighlight %}
 
 ### Use JavaScript for more complex real-time validation
 
@@ -564,7 +538,7 @@ a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:
 
-<table class="tc-heavyright">
+<table class="table tc-heavyright">
   <thead>
     <tr>
       <th>API</th>
@@ -616,7 +590,7 @@ the user has completed the form properly before they've submitted the form.
 HTML5 also introduces a number of new pseudo-classes that can be used to style
 inputs based on their value or attributes.
 
-<table class="tc-heavyright">
+<table class="table tc-heavyright">
   <thead>
     <tr>
       <th>Pseudo-class</th>
