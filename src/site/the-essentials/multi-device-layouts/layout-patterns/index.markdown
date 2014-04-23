@@ -18,7 +18,8 @@ key-takeaways:
     - Change the UI to make it clear to the user which section is current selected
   app-bar:
     - Your logo should be placed at the top of each screen and take the user back to the homepage.
-    - Key actions for your page should be kept in the App Bar
+    - If you have a menu button, place it on the far left or far right of the App Bar and keep it in the same place.
+    - Key actions for your page should be kept in the App Bar.
   navigation-drawer:
     - Your navigation drawer should *always* be accessible by the user
     - If the number of sections is too large, consider grouping the items and expanding / contracting the groups. Avoid overwhelming your users.
@@ -67,11 +68,11 @@ The top left corner is where you should put the most important elements of your 
 
 <img class="g-wide--full" src="images/appbar-menu.png">
 
-### TODO
+## Guidelines
 
-- Make demo title a link
-- Include a demo with Image and Text link for actions
+The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
+<img class="g-wide--full" src="images/appbar-alt.png">
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.app-bar %}
 
