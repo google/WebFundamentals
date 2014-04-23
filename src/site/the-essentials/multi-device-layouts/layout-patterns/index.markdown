@@ -18,7 +18,8 @@ key-takeaways:
     - Change the UI to make it clear to the user which section is current selected
   app-bar:
     - Your logo should be placed at the top of each screen and take the user back to the homepage.
-    - Key actions for your page should be kept in the App Bar
+    - If you have a menu button, place it on the far left or far right of the App Bar and keep it in the same place.
+    - Key actions for your page should be kept in the App Bar.
   navigation-drawer:
     - Your navigation drawer should *always* be accessible by the user
     - If the number of sections is too large, consider grouping the items and expanding / contracting the groups. Avoid overwhelming your users.
@@ -37,15 +38,19 @@ key-takeaways:
 * Table of Contents
 {:toc}
 
-- Intro to the article
+# Navigation Patterns
 
-# App Bar
+// TODO: Intro to the article
+
+## App Bar
 
 <img class="g-wide--full" src="images/appbar.png">
 
-Users expect to find yours site's logo at the top of every page and when they click it, they'll expect to be take to your home page.
+<div style="clear: both;"></div>
 
-Traditionally the web has used page headers for this, on the mobile web you should use the App Bar.
+One expectation users have is that yours site's logo will be at the top of every page and when they click it, it'll take them to your home page.
+
+Traditionally the web has used page headers for this. On mobile devices you should use the App Bar.
 
 The app bar consists of three elements.
 
@@ -59,28 +64,31 @@ A simple example is adding a plus button to the App Bar of a To-Do List, a searc
 
 If you have a menu, use the hamburger icon (three vertical lines) and place this on the same position of the App Bar (far left or far right), meaning the user only needs to learn where it is once.
 
-## Left vs Right Menu Button
+### Left vs Right Menu Button
 
 If you have a slide in menu, you have the choice of putting the menu on the left or right hand side.
 
 The top left corner is where you should put the most important elements of your UI, however it's also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
 
-// Add left vs right sided menu images
+<img class="g-wide--full" src="images/appbar-menu.png">
 
-### TODO
+<div style="clear: both;"></div>
 
-- Make demo title a link
-- Include a demo with Image and Text link for actions
+### Guidelines
 
+The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
+
+<img class="g-wide--full" src="images/appbar-alt.png">
+
+<div style="clear: both;"></div>
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.app-bar %}
 
-# Navigation Patterns
-
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.nav-patterns %}
-
 ## Tabs
+
+<img class="g-wide--full" src="images/tabbar.png">
+
+<div style="clear: both;"></div>
 
 The tab bar can be used to quickly switch between a small set of sections of your site.
 
@@ -99,6 +107,8 @@ Some developers find they get higher rates of interaction when using tabs over n
 ## Navigation Drawer
 
 <img class="g-wide--full" src="images/navdrawer.png">
+
+<div style="clear: both;"></div>
 
 The navigation drawer is a simple slide in panel which is primarily used for displaying the application's navigation, but can be used for displaying global state, i.e. user login.
 
@@ -120,5 +130,7 @@ A user accesses the drawer using a menu button at the top of the screen in the A
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.item-actions %}
 
 - Describe the pattern
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.nav-patterns %}
 
 {% endwrap %}
