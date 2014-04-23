@@ -1,14 +1,14 @@
 ---
 layout: article
 title: "Video"
-description: "Users like videos: videos can be fun, informative; users can also consume
-information on the go easier than having to read small font and scroll down a
+description: "People like videos: videos can be fun and informative; users can also consume
+information on the go easier than having to read small fonts and scroll down a
 page on a mobile device. Read more to find the simplest way to add video to your site and ensure users
 get the best possible experience on any device."
-introduction: "People like videos: videos can be fun, informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device."
+introduction: "People like videos: videos can be fun and informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device."
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-04-16
+  updated_on: 2014-04-23
   order: 2
 collection: introduction-to-media
 key-takeaways:
@@ -45,24 +45,17 @@ remember:
     - Make sure Range Requests are supported by your server. Range Requests are enabled by
       default on most servers, but some hosting services may turn them off.
   multiple-formats:
-    - MP4 and WebM are http://en.wikipedia.org/wiki/Container_format_(digital) formats
-      MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
-      Check out http://www.xiph.org/video/vid1.shtml
-      to find out more about how video and audio work on the web.
+    - MP4 and WebM are [container formats](https://en.wikipedia.org/wiki/Container_formats). MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
+      Check out [http://www.xiph.org/video/vid1.shtml](A Digital Media Primer for Geeks) to find out more about how video and audio work on the web.
   dont-overflow:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
   compare-formats:
-    - "Compare the responsive sample: http://simpl/yt to the unresponsive sample: http://simple/unyt"
+    - Compare the responsive sample: [simpl/yt](http://simpl/yt) to the unresponsive sample: [simpl/unyt](http://simpl/unyt).
   accessibility-matters:
-    - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers
-      on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills
-      available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or
-      [Captionator](http://captionatorjs.com/).
+    - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers on desktop (except Firefox)](http://caniuse.com/track). There are several polyfills available too. We recommend [Playr](http://www.delphiki.com/html5/playr/) or [Captionator](http://captionatorjs.com/).
   construct-video-streams:
-    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and
-      Chrome for desktop, with
-      [support planned for Firefox](https://wiki.mozilla.org/Platform/MediaSourceExtensions).
+    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with [support planned for Firefox](https://wiki.mozilla.org/Platform/MediaSourceExtensions).
 ---
 
 {% wrap content%}
@@ -95,7 +88,7 @@ You can also use the Media Fragments API to deliver multiple views on the same v
 
 To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
 
-[ADD SCREENSHOT]
+![Chrome Dev Tools screenshot: Accept-Ranges: bytes](images/Accept-Ranges-Chrome-Dev-Tools.png)
 
 ### Include a poster image
 
@@ -129,11 +122,29 @@ All of these points are especially potent in mobile contexts, where bandwidth an
 
 ### Specify each source's type
 
-Adding a type attribute to a source element enables the browser to select a video source without having to download part of the video to 'sniff' the format. Instead of: `<source src="video/chrome.webm" />`, use `<source src="video/chrome.webm" type="video/webm" />`. You can specify codecs as well as a mime type. For example: `<source src="video/chrome.webm" type="video/webm; codecs="vp8, vorbis" />`.
+Adding a type attribute to a source element enables the browser to select a video source without having to download part of the video to 'sniff' the format.
+
+Instead of this:
+
+    `<source src="video/chrome.webm" />`
+
+Use this:
+
+    `<source src="video/chrome.webm" type="video/webm" />`
+
+You can specify codecs as well as a mime type. For example:
+
+    `<source src="video/chrome.webm" type="video/webm; codecs="vp8, vorbis" />`.
 
 Not including a type attribute can affect performance when there are multiple sources with unsupported types: using your mobile browser developer tools, compare network activity for [simpl.info/video](http://simpl.info/video/) and [simpl.info/video/notype](http://simpl.info/video/notype/).
 
-**Remember:** [Ensure your server reports the right MIME type](https://developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. Check this with curl: `curl -I simpl.info/video/videos/chrome.mp4` should return a response like `Content-Type: video/mp4`.
+**Remember:** [Ensure your server reports the right MIME type](https://developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check with [cURL](https://en.wikipedia.org/wiki/CURL):
+
+    `curl -I simpl.info/video/video/chrome.mp4`
+
+This should return a response that includes a header like this:
+
+    `Content-Type: video/mp4`
 
 ## Provide alternatives for legacy platforms
 
@@ -141,20 +152,20 @@ Not including a type attribute can affect performance when there are multiple so
 
 ### Check which formats are supported
 
-Use [canPlayType()](https://simpl.info/canplaytype/) to find out which formats are supported. The method takes a string argument consistent of a mime type and optional codecs and returns one of the following values:
+Use [canPlayType()](https://simpl.info/canplaytype/) to find out which video formats are supported. The method takes a string argument consistent of a mime type and optional codecs and returns one of the following values:
 
-* _empty string_: the container and/or codec isn't supported.
-* `**"maybe"**`: the container and codec(s) might be supported, but the browser will need to download some video to check.
-* `**"probably"**`: the format appears to be supported.
+* *empty string*: the container and/or codec isn't supported.
+* *"maybe"*: the container and codec(s) might be supported, but the browser will need to download some video to check.
+* *"probably"*: the format appears to be supported.
 
 Here are some examples of `canPlayType()` arguments and return values when run in Chrome:
 
-    **video/xyz:** ""
-    **video/xyz; codecs="avc1.42E01E, mp4a.40.2":** ""
-    **video/xyz; codecs="nonsense, noise":** ""
-    **video/mp4; codecs="avc1.42E01E, mp4a.40.2":** "probably"
-    **video/webm:** "maybe"
-    **video/webm; codecs="vp8, vorbis":** "probably"
+**video/xyz:** ""
+**video/xyz; codecs="avc1.42E01E, mp4a.40.2":** ""
+**video/xyz; codecs="nonsense, noise":** ""
+**video/mp4; codecs="avc1.42E01E, mp4a.40.2":** "probably"
+**video/webm:** "maybe"
+**video/webm; codecs="vp8, vorbis":** "probably"
 
 ### Produce video in multiple formats
 
@@ -192,15 +203,15 @@ Try this example on your mobile browser and see what happens: [simpl.info/longvi
 
 The actual video frame size as encoded may be different from the video element dimensions (just as an image may not be displayed using its actual dimensions). For example, resizing the page [simpl.info/video](http://simpl.info/video) changes the size of the video element but the video's frame size is always 480x270px.
 
-To check the encoded size of a video, use the video element `videoWidth` and `videoHeight` properties.
-
-`width` and `height` return the dimensions of the video element, which may have been sized using CSS or inline width and height attributes.
+To check the encoded size of a video, use the video element `videoWidth` and `videoHeight` properties. `width` and `height` return the dimensions of the video element, which may have been sized using CSS or inline width and height attributes.
 
 ### Ensure videos don't overflow containers
 
 Here's what a plain video element with no element sizing or CSS looks like in Chrome on Android (portrait and landscape):
 
-[SCREENSHOT]
+![Android Chrome screenshot, portrait: unstyled video element overflows viewport](images/Chrome-Android-portrait-video-unstyled.png)
+
+![Android Chrome screenshot, landscape: unstyled video element overflows viewport](images/Chrome-Android-landscape-video-unstyled.png)
 
 The video elements are too big for the viewport; the user can't even see the video controls properly. It's super important to size video elements to fit their containers.
 
@@ -234,11 +245,13 @@ Device orientation isn't an issue for desktop monitors or laptops, but is hugely
 
 Safari on iPhone does a good job of switching between portrait and landscape orientation:
 
-[SCREENSHOT]
+![Screenshot of video playing in Safari on iPhone, portrait](images/iPhone-video-playing-portrait-3x5.png)
+
+![Screenshot of video playing in Safari on iPhone, landscape](images/iPhone-video-playing-landscape-5x3.png)
 
 Device orientation on an iPad and Chrome on Android can be problematic. For example, without any customization a video playing on an iPad in landscape orientation looks like this:
 
-[SCREENSHOT]
+![Screenshot of video playing in Safari on iPad Retina, landscape](images/iPad-Retina-landscape-video-playing-5x3.png)
 
 Setting the video `width:100%` with CSS should resolve many device orientation layout problems. You may also want to consider fullscreen alternatives.
 
@@ -246,15 +259,15 @@ Setting the video `width:100%` with CSS should resolve many device orientation l
 
 Different platforms display video differently. Safari on an iPhone displays a video element inline on a web page, but plays video back in fullscreen mode:
 
-[SCREENSHOT]
+![Screenshot of video element on iPhone, portrait](images/iPhone-video-with-poster-3x5.png)
 
 On Android, users can request request fullscreen mode by clicking the fullscreen icon. But the default is to play video inline:
 
-[SCREENSHOT]
+![Screenshot of video playing in Chrome on Android, portrait](images/Chrome-Android-video-playing-portrait-3x5.png)
 
 Safari on an iPad plays video inline:
 
-[SCREENSHOT]
+![Screenshot of video playing in Safari on iPad Retina, landscape](images/iPad-Retina-landscape-video-playing-5x3.png)
 
 ### Control fullscreening of content
 
@@ -276,7 +289,7 @@ You can also use the CSS `:fullscreen` pseudo-class to change the way elements a
 
 On devices that support the Fullscreen API, consider using thumbnail images as placeholders for video (demo on Chrome for Android):
 
-[SCREENSHOT]
+![Screenshot of two videos in desktop Chrome, showing thumbnails](images/Chrome-desktop-video-thumbnails.jpg)
 
 To see this in action, check out the [simpl.info/fullscreen/video](http://simpl.info/fullscreen/video) demo. When you tap or click on a thumbnail, the thumbnail is replaced by a fullscreen video element.
 
@@ -294,7 +307,7 @@ To make media more accessible on mobile, include captions or descriptions using 
 
 Using the track element, captions appear like this:
 
-[SCREENSHOT]
+![Screenshot showing captions displayed using the track element in Chrome on Android](images/Chrome-Android-track-landscape-5x3.jpg)
 
 ### Add track element
 
@@ -313,6 +326,8 @@ A track file consists of timed 'cues' in WebVTT format:
     1 00:00:00.500 --> 00:00:02.000 The Web is always changing
 
     2 00:00:02.500 --> 00:00:04.300 and the way we access it is changing
+
+    ...
 
 ## Handle poor connectivity with adaptive streaming
 
@@ -348,15 +363,15 @@ With DASH:
 2. The different bitrate files are segmented and made available from an HTTP server.
 3. A client web app chooses which bitrate to retrieve and play.
 
-DASH can be done using the Media Source Extensions API. As part of the video segmentation process, an XML manifest known as a Media Presentation Description (MPD) is built programmatically. This describes the individual video components and how they fit together.
+DASH can be implemented using the Media Source Extensions API. As part of the video segmentation process, an XML manifest known as a Media Presentation Description (MPD) is built programmatically. This describes the individual video components and how they fit together.
 
 DASH is already in use by sites such as YouTube; you can see DASH in action with the [YouTube DASH demo ](http://dash-mse-test.appspot.com/dash-player.html?url=http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd)[player](http://dash-mse-test.appspot.com/dash-player.html?url=http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd).
 
 ## Reference ###
 
-** Video element attributes **
+**Video element attributes**
 
-For the complete list of video element attributes and their definitions, see: [http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element](http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
+For the complete list of video element attributes and their definitions, see [the video element spec](http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
 <table>
 <tr>
@@ -426,7 +441,7 @@ To be clear: `preload` is just a hint to browsers about how to download and play
 * `**metadata**` hints to the browser that metadata (duration,   dimensions, text tracks) should be preloaded, but with minimal video.
 * `**auto**`hints to the browser that downloading the entire video right away is   considered desirable.
 
-The `preload` element has different effects on different platforms. For example, Chrome buffers 25 seconds of video on desktop, none on iOS or Android. This means that on mobile, there may be playback startup delays that don't happen on desktop. See [stevesouders.com/tests/mediaevents.php](http://stevesouders.com/tests/mediaevents.php) for full details.
+The `preload` element has different effects on different platforms. For example, Chrome buffers 25 seconds of video on desktop, none on iOS or Android. This means that on mobile, there may be playback startup delays that don't happen on desktop. See [Steve Souders' test page](http://stevesouders.com/tests/mediaevents.php) for full details.
 
 ### JavaScript
 
