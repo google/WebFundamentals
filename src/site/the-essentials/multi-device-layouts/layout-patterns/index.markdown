@@ -98,6 +98,10 @@ Position your tabs above or below your main content.
 
 A nice advantage using tabs is that it gives the user a consistent place for navigation where it's easy to glance where they are within your site.
 
+<img class="g-wide--full" src="images/tabbar-alt.png">
+
+<div style="clear: both;"></div>
+
 ### Tabs vs Navigation Drawer
 
 Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
