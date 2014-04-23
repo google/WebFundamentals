@@ -2,4 +2,14 @@
   Handy alias for the highlight module with pre-populated values for Key Takaways / learnings
 {% endcomment %}
 
-{% include modules/highlight.liquid title=include.title list=include.list position="left" type="learning" character="*" %}
+{% assign type = "learning" %}
+{% assign character = "*" %}
+
+{% if include.type %}
+{% assign type = include.type %}
+{% endif %}
+{% if include.character %}
+{% assign character = include.character %}
+{% endif %}
+
+{% include modules/highlight.liquid title=include.title list=include.list position="left" type=type priority="large" character=character %}
