@@ -2039,14 +2039,15 @@ ol.list--links li a:before {
 /* line 71, ../_sass/_components/_list.scss */
 .horizontal-list h3 {
   color: #297ea9;
+  padding-bottom: 26px;
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 79, ../_sass/_components/_list.scss */
+/* line 80, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 83, ../_sass/_components/_list.scss */
+/* line 84, ../_sass/_components/_list.scss */
 .list--reset li a:before, .list--reset li:before {
   display: none !important;
 }
