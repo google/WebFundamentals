@@ -78,6 +78,8 @@
   }
 
   .g-medium--last { margin-right: 0; }
+
+  .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
 }
 
 
@@ -118,6 +120,8 @@
     @include rule--col(wide);
     width: 50% - $wideGutterWidth/2;
   }
+
+  .g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
 }
 
 
