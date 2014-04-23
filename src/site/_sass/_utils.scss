@@ -387,12 +387,14 @@
       top: $verticalOffset;
       right: $horizontalOffset;
 
-      font-size: $fontSize;
-      line-height: $fontSize;
-      color: #ffffff;
-      font-weight: 900;
-      text-align: center;
       font-family: $fontHighlight;
+      font-size: $fontSize;
+      font-weight: 900;
+      line-height: 100%;
+      height: 100%;
+      color: #ffffff;
+      text-align: center;
+
 
       width: $mediumColWidth;
 
@@ -404,7 +406,6 @@
       @include wide {
         width: $wideColWidth;
         font-size: $fontSize + 50;
-        line-height: $fontSize + 50;
 
         .highlight-module--large & {
           font-size: $fontSize + 300;
@@ -421,7 +422,7 @@
 
   @mixin highlight-vertical-offset-override($offset) {
     &:before {
-      bottom: $offset;
+      top: $offset;
     }
   }
 

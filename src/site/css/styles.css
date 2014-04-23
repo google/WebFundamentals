@@ -1122,24 +1122,29 @@ body.debug:after {
     content: attr(data-character);
     display: block;
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: -65px;
-    font-size: 350px;
-    line-height: 350px;
-    color: #ffffff;
-    font-weight: 900;
-    text-align: center;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 350px;
+    font-weight: 900;
+    line-height: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-align: center;
     width: 30.3%;
   }
-  /* line 399, ../_sass/_utils.scss */
+  /* line 401, ../_sass/_utils.scss */
   .highlight-module--left .highlight-module__container:before {
     right: auto;
     left: -65px;
   }
-  /* line 423, ../_sass/_utils.scss */
+  /* line 424, ../_sass/_utils.scss */
   .highlight-module--learning .highlight-module__container:before {
-    bottom: 52px;
+    top: -30px;
+  }
+  /* line 424, ../_sass/_utils.scss */
+  .highlight-module--remember .highlight-module__container:before {
+    top: -30px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
@@ -1147,15 +1152,14 @@ body.debug:after {
   .highlight-module__container:before {
     width: 22.2%;
     font-size: 400px;
-    line-height: 400px;
   }
-  /* line 409, ../_sass/_utils.scss */
+  /* line 410, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 650px;
   }
 }
 
-/* line 77, ../_sass/_modules/_highlight.scss */
+/* line 81, ../_sass/_modules/_highlight.scss */
 .highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1167,7 +1171,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 77, ../_sass/_modules/_highlight.scss */
+  /* line 81, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1179,18 +1183,8 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 77, ../_sass/_modules/_highlight.scss */
+  /* line 81, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
-    font-family: "Roboto Condensed", Helvetica, sans-serif;
-    font-size: 42px;
-    font-weight: 300;
-    line-height: 1.2381em;
-    /* 52px */
-    padding-top: 0.6190em;
-    padding-bottom: 0;
-  }
-  /* line 84, ../_sass/_modules/_highlight.scss */
-  .highlight-module--large .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
     font-weight: 300;
@@ -1201,20 +1195,8 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 77, ../_sass/_modules/_highlight.scss */
+  /* line 81, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
-    font-family: "Roboto Condensed", Helvetica, sans-serif;
-    font-size: 68px;
-    font-weight: 300;
-    line-height: 1.1471em;
-    /* 78px */
-    padding-top: 0.3824em;
-    padding-bottom: 0;
-  }
-}
-@media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 84, ../_sass/_modules/_highlight.scss */
-  .highlight-module--large .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
     font-weight: 300;

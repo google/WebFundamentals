@@ -69,7 +69,11 @@
     @include highlight-symbol();
 
     .highlight-module--learning & {
-      @include highlight-vertical-offset-override($lineHeight*2);
+      @include highlight-vertical-offset-override(-30px);
+    }
+
+    .highlight-module--remember & {
+      @include highlight-vertical-offset-override(-30px);
     }
   }
 }
