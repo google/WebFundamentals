@@ -1028,7 +1028,7 @@ body.debug:after {
 **/
 /* line 13, ../_sass/_modules/_highlight.scss */
 .highlight-module {
-  background-color: #737373;
+  background: #f0f0f0;
   overflow: hidden;
   margin-top: 52px;
   margin-bottom: 26px;
@@ -2496,18 +2496,8 @@ td:last-child:after {
     column-gap: 0;
   }
 }
-@media only screen and (min-width: 800px) {
-  /* line 23, ../_sass/_components/_column-list.scss */
-  .list--columns {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    -ms-column-count: 3;
-    column-count: 3;
-  }
-}
-
-/* line 38, ../_sass/_components/_column-list.scss */
-.columns-list-item {
+/* line 34, ../_sass/_components/_column-list.scss */
+.list--columns li, .list--columns .columns-list-item {
   font-size: 13px;
   line-height: 2.0000em;
   /* 26px */
@@ -2655,11 +2645,11 @@ td:last-child:after {
   border-bottom: 1px solid #ccc;
   padding-bottom: 77px;
 }
-/* line 28, ../_sass/_pages/_styleguide.scss */
+/* line 26, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__color-list {
   text-align: center;
 }
-/* line 31, ../_sass/_pages/_styleguide.scss */
+/* line 29, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__color-list li {
   border-bottom: 52px solid;
   margin-bottom: 26px;

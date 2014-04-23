@@ -30,13 +30,11 @@
     @include prefixr(column-gap, 0);
   }
 
-  @include wide {
-    @include prefixr(column-count, 3);
+  & li,
+  & .columns-list-item {
+    @include type--small;
+    padding: 0;
   }
-}
 
-.columns-list-item {
-  @include type--small;
-  padding: 0;
 }
 

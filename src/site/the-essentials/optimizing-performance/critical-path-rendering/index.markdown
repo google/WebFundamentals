@@ -73,18 +73,7 @@ overview of how the browser goes about displaying a simple page.
 
 ## Document Object Model (DOM)
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-      </body>
-    </html>
+{% include_code _code/basic_dom.html full %}
 
 Let's start, with the simplest possible case: a plain HTML page with some text
 and a single image. What does the browser need to do to process this simple
@@ -155,11 +144,7 @@ stylesheet: style.css. Anticipating that it will need this resource to render
 the page, it immediately dispatches a request for this resource, which comes
 back with the following content:
 
-      body { font-size: 16px }
-         p { font-weight: bold }
-      span { color: red }
-    p span { display: none }
-       img { float: right }
+{% include_code _code/style.css full css %}
 
 Of course, we could have declared our styles directly within the HTML markup
 (inline), but keeping our CSS independent of HTML allows us to treat content and
@@ -267,16 +252,7 @@ the page. Layout is a recursive process, which means that it computes the
 geometry of the parent element and then its children. Let's consider a simple
 hands-on example:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-      </head>
-      <body>
-        <div style="width: 50%">
-          <div style="width: 50%">Hello world!</div>
-        </div>
-      </body>
-    </html>
+{% include_code _code/nested.html full %}
 
 The body of the above page contains two nested div's: the first (parent) div
 sets the display size of the node to 50% of the viewport width, and the second
@@ -434,28 +410,7 @@ properties of each element, we can handle user input, and much more. To
 illustrate this in action let's augment our previous "Hello World" example with
 a simple inline script:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script>
-          var span = document.getElementsByTagName('span')[0];
-          span.innerText = 'interactive'; // change DOM text content
-          span.style.display = 'inline';  // change CSSOM property
-          // create a new element, style it, and append it to the DOM
-          var loadTime = document.createElement('div');
-          loadTime.innerText = 'You loaded this page on: ' + new Date();
-          loadTime.style.color = 'blue';
-          document.body.appendChild(loadTime);
-        </script>
-      </body>
-    </html>
+{% include_code _code/script.html full %}
 
 * JavaScript allows us to reach into the DOM and pull out the reference to the
   hidden span node - the node may not be visible in the render tree, but it's
@@ -535,30 +490,11 @@ execution.
 What about scripts included via a script tag? Let's take our previous example
 and extract our code into a separate file:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script src="app.js"></script>
-      </body>
-    </html>
+{% include_code _code/split_script.html full %}
 
 **app.js**
 
-    var span = document.getElementsByTagName('span')[0];
-    span.innerText = 'interactive'; // change DOM text content
-    span.style.display = 'inline';  // change CSSOM property
-    // create a new element, style it, and append it to the DOM
-    var loadTime = document.createElement('div');
-    loadTime.innerText = 'You loaded this page on: ' + new Date();
-    loadTime.style.color = 'blue';
-    document.body.appendChild(loadTime);
+{% include_code _code/app.js full javascript %}
 
 Would you expect the execution order to be any different when we use a `<script>`
 tag instead of using an inline JavaScript snippet? Of course, the answer is "no"
@@ -580,19 +516,7 @@ once the file has been downloaded from the network.
 So, how do we achieve this trick? It's pretty simple, we can mark our script as
 **"async"**:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script src="app.js" async></script>
-      </body>
-    </html>
+{% include_code _code/split_script_async.html full %}
 
 Adding the **async **keyword to the script tag tells the browser that it should
 not block the DOM construction while it waits for the script to become available
@@ -682,30 +606,7 @@ path:
 
 As follows:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-        <script>
-          function measureCRP() {
-            var t = window.performance.timing,
-              interactive = t.domInteractive - t.domLoading,
-              dcl = t.domContentLoadedEventStart - t.domLoading,
-              complete = t.domComplete - t.domLoading;
-            var stats = document.createElement('p');
-            stats.innerText = 'interactive: ' + interactive + 'ms, ' +
-                'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms';
-            document.body.appendChild(stats);
-          }
-        </script>
-      </head>
-      <body onload="measureCRP()">
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-      </body>
-    </html>
+{% include_code _code/app.js full javascript %}
 
 The above example may seem a little daunting on first sight, but in reality it
 is actually pretty simple. The Navigation Timing API captures all the relevant
@@ -750,17 +651,7 @@ things more realistic) we'll assume the following:
 
 ## The Hello World experience
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-      </body>
-    </html>
+{% include_code _code/basic_dom.html full %}
 
 We'll start with basic HTML markup and a single image - no CSS or JavaScript -
 which is about as simple as it gets. Now let's open up our Network timeline in
@@ -808,19 +699,7 @@ also need more than just the HTML: chances are, we'll have a CSS stylesheet and
 one or more scripts to add some interactivity to our page. Let's add both to the
 mix and see what happens:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body onload="measureCRP()">
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script src="timing.js"></script>
-      </body>
-    </html>
+{% include_code _code/measure_crp_timing.html full %}
 
 Before adding JavaScript and CSS:
 <img src="image06.png" width="624" height="64" />
@@ -873,19 +752,7 @@ scripts we can add the "async" keyword on the script tag or inject them via the
 special JavaScript snippet we saw earlier. Let's undo our inlining and give that
 a try:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body onload="timing()">
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script async src="timing.js"></script>
-      </body>
-    </html>
+{% include_code _code/measure_crp_async.html full %}
 
 _Parser-blocking (external) JavaScript:_
 <img src="image07.png" width="624" height="92" />
@@ -899,35 +766,8 @@ blocking scripts the CSSOM construction can also proceed in parallel.
 Alternatively, we could have tried a different approach and inlined both the CSS
 and JavaScript:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <style>
-          p { font-weight: bold }
-          span { color: red }
-          p span { display: none }
-          img { float: right }
-        </style>
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script>
-          var span = document.getElementsByTagName('span')[0];
-          span.innerText = 'interactive'; // change DOM text content
-          span.style.display = 'inline';  // change CSSOM property
-          // create a new element, style it, and append it to the DOM
-          var loadTime = document.createElement('div');
-          loadTime.innerText = 'You loaded this page on: ' + new Date();
-          loadTime.style.color = 'blue';
-          document.body.appendChild(loadTime);
-        </script>
-      </body>
-    </html>
-
-
+{% include_code _code/measure_crp_inlined.html full %}
+   
 <img src="image10.png" width="624" height="62" />
 
 Notice that the _domContentLoaded_ time is effectively the same as in the
@@ -953,16 +793,7 @@ JavaScript, or other types of resources. To render this page the browser has to
 initiate the request, wait for the HTML document to arrive, parse it, build the
 DOM, and then finally render it on the screen:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-      </body>
-    </html>
+{% include_code _code/basic_dom_nostyle.html full %}
 
 <!-- No converter for: INLINE_DRAWING -->
 
@@ -978,17 +809,7 @@ rendering path.**
 
 Now, let's consider the same page but with an external CSS file:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-      </body>
-    </html>
+{% include_code _code/basic_dom.html full %}
 
 <!-- No converter for: INLINE_DRAWING -->
 [todo: add image]
@@ -1032,19 +853,7 @@ roundtrips; both resources add up to a total of 9KB of critical bytes.
 
 Ok, now let's add an extra JavaScript file into the mix!
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script src="app.js"></script>
-      </body>
-    </html>
+{% include_code _code/split_script.html full %}
 
 We added app.js, which is an external JavaScript asset on the page, and as we
 know by now, it is a parser blocking (i.e. critical) resource. Worse, in order
@@ -1078,19 +887,7 @@ other code in there that doesn't need to block the rendering of our page.
 Knowing that we can add the "async" attribute to the script tag to unblock the
 parser:
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script src="app.js" async></script>
-      </body>
-    </html>
+{% include_code _code/split_script_async.html full %}
 
 <!-- No converter for: INLINE_DRAWING -->
 
@@ -1112,19 +909,7 @@ of critical bytes.
 Finally, let's say the CSS stylesheet was only needed for print? How would that
 look?
 
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" media="print">
-      </head>
-      <body>
-        <p>
-          Hello <span>web performance</span> students!
-        </p>
-        <div><img src="awesome-photo.jpg"/></div>
-        <script src="app.js" async></script>
-      </body>
-    </html>
+{% include_code _code/split_script_print.html full %}
 
 <!-- No converter for: INLINE_DRAWING -->
 
