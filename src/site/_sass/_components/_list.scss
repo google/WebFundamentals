@@ -70,24 +70,10 @@ ol.list--links {
 
   h3 {
     color: $colorBlue;
-    padding-bottom: $lineHeight;
-    position: relative;
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 30%;
-      height: 1px;
-      box-shadow: 0 1px 0 0 $colorGrayKeyline;
-      left: 35%;
-      bottom: $lineHeight / 2;
-    }
   }
 
   p {
     padding-bottom: $lineHeight;
-
     @include medium { padding-bottom: 0;}
   }
 
