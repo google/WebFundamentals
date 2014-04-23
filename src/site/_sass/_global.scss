@@ -42,3 +42,9 @@ body {
     @include container;
   }
 }
+
+.container-small {
+  @include small-only {
+    @include container;
+  }
+}

@@ -63,9 +63,9 @@ ol.list--links {
 }
 
 
-/*==========  NAMELESS LIST  ==========*/
+/*==========  CENTERED LIST  ==========*/
 
-.horizontal-list {
+.centered-list {
   text-align: center;
 
   h3 {
@@ -77,12 +77,18 @@ ol.list--links {
       content: "";
       display: block;
       position: absolute;
-      width: 40%;
+      width: 30%;
       height: 1px;
       box-shadow: 0 1px 0 0 $colorGrayKeyline;
-      left: 30%;
+      left: 35%;
       bottom: $lineHeight / 2;
     }
+  }
+
+  p {
+    padding-bottom: $lineHeight;
+
+    @include medium { padding-bottom: 0;}
   }
 }
 
@@ -97,10 +103,13 @@ ol.list--links {
   background: #ffffff;
   padding-left: 0;
   min-height: $lineHeight * 13;
-  padding: $lineHeight 16px;
+  padding-top: $lineHeight;
+  padding-bottom: $lineHeight;
+
   @include medium {
     padding: $lineHeight * 2 32px;
   }
+
   margin-top: $lineHeight;
 
   &:first-child {
@@ -115,7 +124,7 @@ ol.list--links {
 .featured-list__img-wrapper {
   position: relative;
   padding-top: $lineHeight;
-  margin: 0 -16px;
+  margin: 0 -5%;
 
   @include medium {
     padding-top: 0;

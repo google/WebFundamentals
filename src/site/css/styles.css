@@ -585,6 +585,37 @@ body.debug:after {
   }
 }
 
+@media only screen and (max-width: 619px) {
+  /* line 46, ../_sass/_global.scss */
+  .container-small {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 619px) and (min-width: 620px) {
+  /* line 46, ../_sass/_global.scss */
+  .container-small {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
+    max-width: 688px;
+  }
+}
+@media only screen and (max-width: 619px) and (min-width: 800px) {
+  /* line 46, ../_sass/_global.scss */
+  .container-small {
+    padding-left: 4.4%;
+    padding-right: 4.4%;
+    max-width: 864px;
+  }
+}
+
 /**
 *
 * Main Navigation
@@ -1459,6 +1490,77 @@ body.debug:after {
 
 /**
 *
+* Editorial Header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight {
+  background: #404040;
+  color: #ffffff;
+  overflow: hidden;
+  padding-bottom: 78px;
+}
+/* line 19, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight p {
+  padding-bottom: 26px;
+}
+/* line 23, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight .cta--primary {
+  color: #ffffff;
+}
+/* line 26, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight .cta--primary:hover {
+  color: #ffffff;
+}
+
+/* line 32, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight__container {
+  position: relative;
+}
+
+@media only screen and (max-width: 619px) {
+  /* line 36, ../_sass/_modules/_featured-spotlight.scss */
+  .featured-spotlight__img {
+    padding-top: 60.8%;
+    padding-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+}
+/* line 46, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight__img img {
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 46, ../_sass/_modules/_featured-spotlight.scss */
+  .featured-spotlight__img img {
+    width: auto;
+    left: 109%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 46, ../_sass/_modules/_featured-spotlight.scss */
+  .featured-spotlight__img img {
+    left: 107.4%;
+  }
+}
+
+/**
+*
 * Grid
 *
 * Google Web Essentials
@@ -1572,60 +1674,65 @@ body.debug:after {
   .g-medium--last {
     margin-right: 0;
   }
+
+  /* line 82, ../_sass/_components/_grid.scss */
+  .g--pull-half {
+    margin-right: 52.25%;
+  }
 }
 @media only screen and (min-width: 800px) {
-  /* line 87, ../_sass/_components/_grid.scss */
+  /* line 89, ../_sass/_components/_grid.scss */
   .g-wide--1 {
     float: left;
     margin-right: 3.7%;
     width: 22.2%;
   }
 
-  /* line 94, ../_sass/_components/_grid.scss */
+  /* line 96, ../_sass/_components/_grid.scss */
   .g-wide--push-1 {
     margin-left: 25.9%;
   }
 
-  /* line 97, ../_sass/_components/_grid.scss */
+  /* line 99, ../_sass/_components/_grid.scss */
   .g-wide--pull-1 {
     margin-right: 25.9%;
   }
 
-  /* line 87, ../_sass/_components/_grid.scss */
+  /* line 89, ../_sass/_components/_grid.scss */
   .g-wide--2 {
     float: left;
     margin-right: 3.7%;
     width: 48.1%;
   }
 
-  /* line 94, ../_sass/_components/_grid.scss */
+  /* line 96, ../_sass/_components/_grid.scss */
   .g-wide--push-2 {
     margin-left: 51.8%;
   }
 
-  /* line 97, ../_sass/_components/_grid.scss */
+  /* line 99, ../_sass/_components/_grid.scss */
   .g-wide--pull-2 {
     margin-right: 51.8%;
   }
 
-  /* line 87, ../_sass/_components/_grid.scss */
+  /* line 89, ../_sass/_components/_grid.scss */
   .g-wide--3 {
     float: left;
     margin-right: 3.7%;
     width: 74%;
   }
 
-  /* line 94, ../_sass/_components/_grid.scss */
+  /* line 96, ../_sass/_components/_grid.scss */
   .g-wide--push-3 {
     margin-left: 77.7%;
   }
 
-  /* line 97, ../_sass/_components/_grid.scss */
+  /* line 99, ../_sass/_components/_grid.scss */
   .g-wide--pull-3 {
     margin-right: 77.7%;
   }
 
-  /* line 87, ../_sass/_components/_grid.scss */
+  /* line 89, ../_sass/_components/_grid.scss */
   .g-wide--4 {
     float: left;
     margin-right: 3.7%;
@@ -1633,12 +1740,12 @@ body.debug:after {
     margin-right: 0;
   }
 
-  /* line 103, ../_sass/_components/_grid.scss */
+  /* line 105, ../_sass/_components/_grid.scss */
   .g-wide--last {
     margin-right: 0;
   }
 
-  /* line 105, ../_sass/_components/_grid.scss */
+  /* line 107, ../_sass/_components/_grid.scss */
   .g-wide--full {
     float: left;
     margin-right: 3.7%;
@@ -1646,32 +1753,37 @@ body.debug:after {
     width: 100%;
   }
 
-  /* line 111, ../_sass/_components/_grid.scss */
+  /* line 113, ../_sass/_components/_grid.scss */
   .g--third {
     float: left;
     margin-right: 3.7%;
     width: 30.8%;
   }
 
-  /* line 117, ../_sass/_components/_grid.scss */
+  /* line 119, ../_sass/_components/_grid.scss */
   .g--half,
   .g-wide--half {
     float: left;
     margin-right: 3.7%;
     width: 48.15%;
   }
+
+  /* line 124, ../_sass/_components/_grid.scss */
+  .g--pull-half {
+    margin-right: 51.85%;
+  }
 }
-/* line 130, ../_sass/_components/_grid.scss */
+/* line 134, ../_sass/_components/_grid.scss */
 .g--last {
   margin-right: 0;
 }
 
-/* line 137, ../_sass/_components/_grid.scss */
+/* line 141, ../_sass/_components/_grid.scss */
 .grid-overlay {
   display: none;
   pointer-events: none;
 }
-/* line 143, ../_sass/_components/_grid.scss */
+/* line 147, ../_sass/_components/_grid.scss */
 .debug .grid-overlay {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1691,7 +1803,7 @@ body.debug:after {
   display: block;
 }
 @media only screen and (min-width: 620px) {
-  /* line 143, ../_sass/_components/_grid.scss */
+  /* line 147, ../_sass/_components/_grid.scss */
   .debug .grid-overlay {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1699,26 +1811,26 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 143, ../_sass/_components/_grid.scss */
+  /* line 147, ../_sass/_components/_grid.scss */
   .debug .grid-overlay {
     padding-left: 4.4%;
     padding-right: 4.4%;
     max-width: 864px;
   }
 }
-/* line 154, ../_sass/_components/_grid.scss */
+/* line 158, ../_sass/_components/_grid.scss */
 .debug .grid-overlay [class*="g-"] {
   height: 100%;
   background-color: rgba(255, 0, 0, 0.15);
 }
 @media only screen and (min-width: 620px) and (max-width: 799px) {
-  /* line 160, ../_sass/_components/_grid.scss */
+  /* line 164, ../_sass/_components/_grid.scss */
   .debug .grid-overlay .g-wide--last {
     display: none;
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 143, ../_sass/_components/_grid.scss */
+  /* line 147, ../_sass/_components/_grid.scss */
   .debug .grid-overlay {
     display: none;
   }
@@ -2047,67 +2159,78 @@ ol.list--links li a:before {
   margin-right: 16px;
 }
 
-/*==========  NAMELESS LIST  ==========*/
+/*==========  CENTERED LIST  ==========*/
 /* line 68, ../_sass/_components/_list.scss */
-.horizontal-list {
+.centered-list {
   text-align: center;
 }
 /* line 71, ../_sass/_components/_list.scss */
-.horizontal-list h3 {
+.centered-list h3 {
   color: #4285f4;
   padding-bottom: 26px;
   position: relative;
 }
 /* line 76, ../_sass/_components/_list.scss */
-.horizontal-list h3:after {
+.centered-list h3:after {
   content: "";
   display: block;
   position: absolute;
-  width: 40%;
+  width: 30%;
   height: 1px;
   box-shadow: 0 1px 0 0 #e0e0e0;
-  left: 30%;
+  left: 35%;
   bottom: 13px;
+}
+/* line 88, ../_sass/_components/_list.scss */
+.centered-list p {
+  padding-bottom: 26px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 88, ../_sass/_components/_list.scss */
+  .centered-list p {
+    padding-bottom: 0;
+  }
 }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 91, ../_sass/_components/_list.scss */
+/* line 97, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-/* line 96, ../_sass/_components/_list.scss */
+/* line 102, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
   min-height: 338px;
-  padding: 26px 16px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 96, ../_sass/_components/_list.scss */
+  /* line 102, ../_sass/_components/_list.scss */
   .featured-list__item {
     padding: 52px 32px;
   }
 }
-/* line 106, ../_sass/_components/_list.scss */
+/* line 115, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
-/* line 110, ../_sass/_components/_list.scss */
+/* line 119, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 115, ../_sass/_components/_list.scss */
+/* line 124, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   position: relative;
   padding-top: 26px;
-  margin: 0 -16px;
+  margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 115, ../_sass/_components/_list.scss */
+  /* line 124, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     padding-top: 0;
     margin: 0;
@@ -2115,7 +2238,7 @@ ol.list--links li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 126, ../_sass/_components/_list.scss */
+  /* line 135, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2125,14 +2248,14 @@ ol.list--links li a:before {
     width: 100%;
   }
 }
-/* line 137, ../_sass/_components/_list.scss */
+/* line 146, ../_sass/_components/_list.scss */
 .featured-list__img img {
   margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 137, ../_sass/_components/_list.scss */
+  /* line 146, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2144,11 +2267,11 @@ ol.list--links li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 156, ../_sass/_components/_list.scss */
+/* line 165, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 160, ../_sass/_components/_list.scss */
+/* line 169, ../_sass/_components/_list.scss */
 .list--reset li a:before, .list--reset li:before {
   display: none !important;
 }

@@ -1,0 +1,63 @@
+/**
+*
+* Editorial Header
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.featured-spotlight {
+  background: $colorGrayDark;
+  color: #ffffff;
+  overflow: hidden;
+  padding-bottom: $lineHeight*3;
+
+  p {
+    padding-bottom: $lineHeight;
+  }
+
+  .cta--primary {
+    color: #ffffff;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.featured-spotlight__container {
+  position: relative;
+}
+
+.featured-spotlight__img {
+  @include small-only {
+    padding-top: 60.8%;
+    padding-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+
+    @include medium {
+      width: auto;
+      left: 100% + $mediumGutterWidth*2;
+    }
+
+    @include wide { left: 100% + $wideGutterWidth*2; }
+  }
+}
