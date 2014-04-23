@@ -2082,32 +2082,40 @@ ol.list--links li a:before {
   background: #ffffff;
   padding-left: 0;
   min-height: 338px;
-  padding: 52px 32px;
+  padding: 26px 16px;
   margin-top: 26px;
 }
-/* line 103, ../_sass/_components/_list.scss */
+@media only screen and (min-width: 620px) {
+  /* line 96, ../_sass/_components/_list.scss */
+  .featured-list__item {
+    padding: 52px 32px;
+  }
+}
+/* line 106, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
-/* line 107, ../_sass/_components/_list.scss */
+/* line 110, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 112, ../_sass/_components/_list.scss */
+/* line 115, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   position: relative;
-  padding-top: 52px;
+  padding-top: 26px;
+  margin: 0 -16px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 112, ../_sass/_components/_list.scss */
+  /* line 115, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     padding-top: 0;
+    margin: 0;
   }
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 121, ../_sass/_components/_list.scss */
+  /* line 126, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2117,14 +2125,16 @@ ol.list--links li a:before {
     width: 100%;
   }
 }
-/* line 132, ../_sass/_components/_list.scss */
+/* line 137, ../_sass/_components/_list.scss */
 .featured-list__img img {
+  margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 132, ../_sass/_components/_list.scss */
+  /* line 137, ../_sass/_components/_list.scss */
   .featured-list__img img {
+    margin: 0;
     position: absolute;
     top: 0;
     height: 100%;
@@ -2134,11 +2144,11 @@ ol.list--links li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 149, ../_sass/_components/_list.scss */
+/* line 156, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 153, ../_sass/_components/_list.scss */
+/* line 160, ../_sass/_components/_list.scss */
 .list--reset li a:before, .list--reset li:before {
   display: none !important;
 }
