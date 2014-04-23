@@ -11,32 +11,69 @@
 **/
 
 .highlight-module {
-  background: $colorGrayBackground;
   overflow: hidden;
-  margin-top: $lineHeight * 2;
+  margin-top: $lineHeight*2;
   margin-bottom: $lineHeight;
+  position: relative;
+
+  &:after {
+    background: $colorGrayBackground;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+
+    @include wide {
+      width: 80%;
+      right: 20%;
+    }
+  }
 }
 
 .highlight-module--learning {
-  background-color: $colorLearning;
   color: #ffffff;
+
+  &:after {
+    background-color: $colorLearning;
+  }
 }
 
 .highlight-module--remember {
-  background-color: $colorRemember;
   color: #ffffff;
+
+  &:after {
+    background-color: $colorRemember;
+    right: 0;
+    left: 0;
+
+    @include wide {
+      left: 20%;
+    }
+  }
 }
 
 .highlight-module__container {
   @include container;
-  padding-bottom: $lineHeight * 3;
+  padding-bottom: $lineHeight*3;
+  position: relative;
+  z-index: 1;
+
 
   @include medium {
-    padding-bottom: $lineHeight * 2;
+    padding-bottom: $lineHeight*2;
     @include highlight-symbol();
 
     .highlight-module--learning & {
-      @include highlight-vertical-offset-override($lineHeight*2);
+      @include highlight-vertical-offset-override(-30px);
+    }
+
+    .highlight-module--remember & {
+      @include highlight-vertical-offset-override(-30px);
     }
   }
 }
@@ -47,17 +84,18 @@
 
   @include wide {
     @include type--xxlarge;
-
-    .highlight-module--large & {
-      @include type--huge;
-    }
   }
 }
 
 .highlight-module--code {
+  &:after {
+    left: 0;
+    width: 100%;
+  }
+
   pre {
     margin: 0;
-    padding-top: $lineHeight * 2;
+    padding-top: $lineHeight*2;
     padding-bottom: $lineHeight;
     margin-left: - $lineHeight;
     font-size: $fontSmall;
