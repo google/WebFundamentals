@@ -41,6 +41,16 @@
   $colorText: #4d4d4d;
   $colorHighlight: $colorBlue;
 
+  // Theme Colors
+  $colorLayouts: #297ea9;
+  $colorLayoutsSecondary: lighten($colorLayouts, 40%);
+  $colorUser: #2c8566;
+  $colorUserSecondary: lighten($colorUser, 40%);
+  $colorMedia: #cf423a;
+  $colorMediaSecondary: lighten($colorMedia, 40%);
+  $colorPerformance: #7b5294;
+  $colorPerformanceSecondary: lighten($colorPerformance, 40%);
+
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif;
   $fontHighlight: "Roboto Condensed", Helvetica, sans-serif;

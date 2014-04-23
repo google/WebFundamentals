@@ -23,4 +23,45 @@
 
   }
 
+  .styleguide__color-layouts {
+    color: $colorLayouts;
+
+    &:hover {
+      color: $colorLayoutsSecondary;
+    }
+  }
+
+  .styleguide__color-user {
+    color: $colorUser;
+
+    &:hover {
+      color: $colorUserSecondary;
+    }
+  }
+
+  .styleguide__color-media {
+    color: $colorMedia;
+
+    &:hover {
+      color: $colorMediaSecondary;
+    }
+  }
+
+  .styleguide__color-performance {
+    color: $colorPerformance;
+
+    &:hover {
+      color: $colorPerformanceSecondary;
+    }
+  }
+
+  .styleguide__color-list {
+    text-align: center;
+
+    li {
+      border-bottom: $lineHeight*2 solid;
+      margin-bottom: $lineHeight;
+    }
+  }
+
 }
