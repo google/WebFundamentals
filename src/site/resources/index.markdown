@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: section
 title: "Resources"
 description: "Helpful resources about the site"
+introduction: ""
+id: resources
 ---
-{% wrap content%}
 
-#{{page.title}}
-
-{% for article in page.articles.resources %}
-* [{{article.title}}]({{site.baseurl}}{{article.url}}) - {{article.description}}
-{% endfor %}
-{% endwrap %}
+{% comment %}
+Page content will be output by the section layout pased on the article collection matching page.id
+{% endcomment %}
