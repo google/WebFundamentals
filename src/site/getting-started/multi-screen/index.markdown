@@ -2,9 +2,9 @@
 layout: article
 title: "Build your first multi-screen site"
 description: "The web is accessible on a huge range of devices from small-screen phones
-through to huge screen televisions. Learn how to build a site that works well across all these devices."
+to huge-screen televisions. Learn how to build a site that works well across all these devices."
 introduction: "The web is accessible on a huge range of devices from small-screen phones
-through to huge screen televisions.  Each device presents its own unique
+through to huge-screen televisions.  Each device presents its own unique
 benefits and also constraints and as a web developer you are expected to support
 all ranges of devices."
 key-takeaways:
@@ -46,12 +46,12 @@ collection: getting-started
 * Table of Contents
 {:toc}
 
-Building for multi-screen experiences is not as hard as it sounds. In this
+Building multi-screen experiences is not as hard as it sounds. In this
 guide, we are going to create a simple landing page that shows you the basics of
-how to build a web site using "[Mobile First](link to mobile first)" design principles that
-will enable you to easily scale your experiences up from a mobile device through
-to a Desktop and beyond.  We will show you best practices for interacting with touch 
-and mice, structuring your content across screen sizes.
+building a web site using "[Mobile First](link to mobile first)" design principles that
+enable you to easily scale your experiences up from a mobile device through
+to desktops and beyond.  We will show you best practices for interacting with both touch 
+and mice as well as structuring your content across screen sizes.
 
 Our goal in this guide is to build an example product landing page for our
 hypothetical Smiles product.  The end result will be a fully functioning page
@@ -71,7 +71,7 @@ If you don't know what text editor to use here are some that we use:
 * Sublime text
 * Vim
 
-We also recommend that you have a device to hand to be able to test your
+We also recommend that you have a mobile device to hand to be able to test your
 experiences on, however if you haven't got one this is not a problem there are
 tools that you can use to help you along the way.
 
@@ -84,8 +84,8 @@ experiences.  Without it, your site will not work well on a mobile device.
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
 
 The viewport indicates to the browser that the page needs to be scaled to fit
-the screen.  There are a lot of different configurations that you can specify for
-your viewport to control the display of the page.  We recommend:
+the screen.  There are many different configurations that you can specify for
+your viewport to control the display of the page.  As a default, we recommend:
 
 {% include_code _code/viewport.html viewport %}
 
@@ -116,8 +116,8 @@ has Developer tools.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
 
-We are going to concentrate on using Chrome Developer tools in this guide.  The
-Chrome Devtools let you inspect any aspect of a web-page in real-time and also
+We are going to concentrate on using Chrome Developer Tools in this guide.  The
+Chrome DevTools let you inspect any aspect of a web-page in real-time and
 make changes on the fly.  It also has mobile emulation built in so that you can
 rapidly test your layouts across a huge number of screen sizes without the need
 to touch a mobile device.
@@ -126,14 +126,14 @@ to touch a mobile device.
 
 1. Open your page
 2. Open the inspector
-3. Goto 'emulation'
-4. Pick your device and refresh the page.
+3. Go to 'Emulation'
+4. Pick your device and refresh the page
 
-By using the Mobile inspector throughout your project you can quickly see how this will
+By using the mobile inspector throughout your project you can quickly see how this will
 look across many different device classes.
 
-If you have real device even better, you can hook up the Chrome Devtools to ensure
-that you are always testing how it works in the real world.
+If you have real device even better, you can hook up the Chrome DevTools to ensure
+that you are always testing how it works for your users.
 
 [TODO: Add link to setting up remote devtools.]
 
@@ -153,16 +153,16 @@ this lesson we will present a simple linear layout.
 
 We have identified we need:
 
-*  an area that describes at a high-level our product "Smiles", 
-*  a form to collect information from users who are interested in our product
-*  an in depth description and video,
-*  images of the product in action,
-*  a data table with information to back the claims up.
+*  An area that describes at a high-level our product "Smiles"
+*  A form to collect information from users who are interested in our product
+*  An in depth description and video
+*  Images of the product in action
+*  A data table with information to back the claims up
 
 Now that there is content, it is not too hard to create the structure of the
 page. Based on the content we know we need a heading area, 3 sections of information and a footer.
 
-We have also come up with a rough Information Architecture and layout for both the narrow
+We have also come up with a rough information architecture and layout for both the narrow
 and wide viewports.
 
 [TODO: Show a rough sketch of the IA for narrow viewport]
