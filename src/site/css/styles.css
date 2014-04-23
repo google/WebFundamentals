@@ -1,78 +1,3 @@
-<<<<<<< HEAD
-/*
-Syntax error: Undefined variable: "$colorGrayB".
-        on line 14 of /Users/pedrod/Sites/Google/WebDocs/src/site/_sass/_modules/_featured-section.scss
-        from line 34 of /Users/pedrod/Sites/Google/WebDocs/src/site/_sass/styles.scss
-
-Backtrace:
-/Users/pedrod/Sites/Google/WebDocs/src/site/_sass/_modules/_featured-section.scss:14
-/Users/pedrod/Sites/Google/WebDocs/src/site/_sass/styles.scss:34
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/script/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/script/node.rb:40:in `perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:298:in `visit_prop'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:227:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.19/lib/sass/../sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:139:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:138:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/logger.rb:45:in `red'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:137:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:118:in `compile_if_required'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:103:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:101:in `each'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:101:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/compiler.rb:100:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/commands/update_project.rb:45:in `perform'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/bin/compass:30
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/bin/compass:44:in `call'
-/Library/Ruby/Gems/1.8/gems/compass-0.12.5/bin/compass:44
-/usr/bin/compass:23:in `load'
-/usr/bin/compass:23
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$colorGrayB\".\A         on line 14 of /Users/pedrod/Sites/Google/WebDocs/src/site/_sass/_modules/_featured-section.scss\A         from line 34 of /Users/pedrod/Sites/Google/WebDocs/src/site/_sass/styles.scss"; }
-=======
 /**
 *
 * Main Stylesheet
@@ -1103,7 +1028,7 @@ body.debug:after {
 **/
 /* line 13, ../_sass/_modules/_highlight.scss */
 .highlight-module {
-  background-color: #737373;
+  background: #f0f0f0;
   overflow: hidden;
   margin-top: 52px;
   margin-bottom: 26px;
@@ -2561,18 +2486,8 @@ td:last-child:after {
     column-gap: 0;
   }
 }
-@media only screen and (min-width: 800px) {
-  /* line 23, ../_sass/_components/_column-list.scss */
-  .list--columns {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    -ms-column-count: 3;
-    column-count: 3;
-  }
-}
-
-/* line 38, ../_sass/_components/_column-list.scss */
-.columns-list-item {
+/* line 34, ../_sass/_components/_column-list.scss */
+.list--columns li, .list--columns .columns-list-item {
   font-size: 13px;
   line-height: 2.0000em;
   /* 26px */
@@ -2720,11 +2635,11 @@ td:last-child:after {
   border-bottom: 1px solid #ccc;
   padding-bottom: 77px;
 }
-/* line 28, ../_sass/_pages/_styleguide.scss */
+/* line 26, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__color-list {
   text-align: center;
 }
-/* line 31, ../_sass/_pages/_styleguide.scss */
+/* line 29, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__color-list li {
   border-bottom: 52px solid;
   margin-bottom: 26px;
@@ -2886,4 +2801,3 @@ td:last-child:after {
 .color--performance-secondary {
   color: #c4add2;
 }
->>>>>>> 9c7f02726a60d6c7c79ec08fe610ca965dcb95ad
