@@ -44,7 +44,7 @@ key-takeaways:
 
 ## App Bar
 
-<img class="g-wide--full" src="images/appbar.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g-wide--full" src="images/appbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -70,7 +70,8 @@ If you have a slide in menu, you have the choice of putting the menu on the left
 
 The top left corner is where you should put the most important elements of your UI, however it's also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
 
-<img class="g-wide--full" src="images/appbar-menu.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g--half" src="images/appbar-menu-left.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample2.html"><img class="g--half g--last" src="images/appbar-menu-right.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -78,7 +79,8 @@ The top left corner is where you should put the most important elements of your 
 
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
-<img class="g-wide--full" src="images/appbar-alt.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample3.html"><img class="g--half" src="images/appbar-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample4.html"><img class="g--half g--last" src="images/appbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -86,7 +88,7 @@ The App Bar is a set of principals that you should apply to give your users a pr
 
 ## Tabs
 
-<img class="g-wide--full" src="images/tabbar.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample1.html"><img class="g-wide--full" src="images/tabbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -98,19 +100,16 @@ Position your tabs above or below your main content.
 
 A nice advantage using tabs is that it gives the user a consistent place for navigation where it's easy to glance where they are within your site.
 
-<img class="g-wide--full" src="images/tabbar-alt.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample2.html"><img class="g--half" src="images/tabbar-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample3.html"><img class="g--half g--last" src="images/tabbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
-
-### Tabs vs Navigation Drawer
-
-Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.tabs %}
 
 ## Navigation Drawer
 
-<img class="g-wide--full" src="images/navdrawer.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample1.html"><img class="g-wide--full" src="images/navdrawer.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -120,6 +119,10 @@ A user accesses the drawer using a menu button at the top of the screen in the A
 
 - Include demo
   - Left, Right and Drop Down
+
+### Tabs vs Navigation Drawer
+
+Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.navigation-drawer %}
 
