@@ -41,7 +41,7 @@ article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
   order: 0
-collection: getting-started
+collection: multi-screen
 ---
 
 {% wrap content %}

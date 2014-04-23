@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Create your content"
+title: "Create your content and structure"
 description: "The web is accessible on a huge range of devices from small-screen phones
 to huge-screen televisions. Learn how to build a site that works well across all these devices."
 introduction: "The web is accessible on a huge range of devices from small-screen phones
@@ -41,7 +41,7 @@ article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
   order: 1
-collection: getting-started
+collection: multi-screen
 ---
 
 {% wrap content %}
