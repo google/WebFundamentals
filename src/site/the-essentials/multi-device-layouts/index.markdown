@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Mutli-device layouts"
+title: "Multi-device layouts"
 description: "Mobile-first web design is a goal for a development team to create sites, apps
 and experiences that scale well across all devices from mobile upwards"
 article:
