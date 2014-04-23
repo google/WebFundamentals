@@ -65,7 +65,7 @@ If you have a slide in menu, you have the choice of putting the menu on the left
 
 The top left corner is where you should put the most important elements of your UI, however it's also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
 
-// Add left vs right sided menu images
+<img class="g-wide--full" src="images/appbar-menu.png">
 
 ### TODO
 
