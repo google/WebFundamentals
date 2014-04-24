@@ -4,9 +4,17 @@ module Jekyll
 
 
   class FeaturedShowcaseTag < Liquid::Tag
-    def initialize(tag_name, section_name, tokens)
+    def initialize(tag_name, markup, tokens)
       super
+
+      section_name, item_count = markup.strip.split(' ', 2)
       @section_name = section_name.strip
+      if item_count == nil
+        @item_count = 1
+      else
+        @item_count = item_count.to_i
+      end
+      
     end
 
     def render(context)
@@ -22,11 +30,15 @@ module Jekyll
         b_pub = b.data['showcase']['written_on']
 
         "#{a_up}-#{a_pub}" <=> "#{b_up}-#{b_pub}"
-      end.reverse.first
+      end.reverse.first(@item_count)
+
+      output = ""
 
       if featured != nil
-        render_article(featured)
+        featured.each { |f| output += render_article(f) }
       end
+
+      output
     end
 
     def render_article(showcase)

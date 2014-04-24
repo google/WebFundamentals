@@ -26,10 +26,19 @@ class: home
 
     -->
 
-  {% featured_showcase spotlight %}
+<h2> Spotlight test </h2>
 
+<p>First item</p>
 
-  {% featured_showcase showcase %}
+{% featured_showcase spotlight %}
+
+<p>First two items</p>
+{% featured_showcase spotlight 2 %}
+
+<h2>Showcase test</h2>
+
+<p>First item</p>
+{% featured_showcase showcase %}
 
   <div>
     <h2><a href="{{site.baseurl}}/getting-started/">Getting Started</a></h2>
