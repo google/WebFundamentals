@@ -1,0 +1,59 @@
+/**
+*
+* Quote
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.quote__content {
+  position: relative;
+  font-family: $fontHighlight;
+  padding-top: $lineHeight * 3;
+
+  @include medium {
+    padding-top: $lineHeight * 2;
+  }
+
+  p {
+    @include type--medium;
+    padding-left: $lineHeight;
+
+    @include medium {
+      padding-left: 0;
+    }
+  }
+
+  span {
+    display: block;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .text-divider:after {
+    width: 100%;
+    left: 0;
+  }
+
+  &:before {
+    content: open-quote;
+    display: block;
+    position: absolute;
+    font-family: $fontHighlight;
+    font-weight: 700;
+    color: $colorGrayBackground;
+    top: 90px;
+    left: $lineHeight;
+    font-size: 260px;
+
+    @include medium {
+      top: 225px;
+      left: -210px;
+      font-size: 540px;
+    }
+  }
+}
