@@ -5,7 +5,7 @@ module Jekyll
   class CollectionGenerator < Generator
     def generate(site)
       # Find all the collection pages
-      collections = site.pages.select { |page| page.data.has_key?('collection') }
+      collections = site.pages.select { |page| page.data.has_key?('collection') && page.data.has_key?('article') }
       
       # aggregate all the article into categories
       
