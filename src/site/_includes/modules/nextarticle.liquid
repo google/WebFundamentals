@@ -1,0 +1,8 @@
+<div class="styleguide__inverted-block">
+  {% if page.article.previous %}
+  <a href="#" class="button--secondary-variation" href="{{site.baseurl}}{{ page.article.previous.url }}">Previous '{{ page.article.previous.title }}'</a>
+  {% endif %}
+  {% if page.article.next %}
+  <a href="#" class="button--primary" href="{{site.baseurl}}{{ page.article.next.url }}" style="float: right;">&gt;&nbsp; Next '{{ page.article.next.title }}'</a>
+  {% endif %}
+</div>

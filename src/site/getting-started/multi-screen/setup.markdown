@@ -140,4 +140,6 @@ that you are always testing how it works for your users.
 
 [TODO: Add link to setting up remote devtools.]
 
+{% include modules/nextarticle.liquid %}
+
 {% endwrap %}

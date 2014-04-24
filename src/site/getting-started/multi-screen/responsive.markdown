@@ -215,5 +215,6 @@ form-factors and screen sizes.
 </div>
 </div>
 
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
