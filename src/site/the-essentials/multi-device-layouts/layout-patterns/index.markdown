@@ -139,8 +139,6 @@ An alternative approach is to place actions in a bar along the bottom, providing
 
 The advantage of this is that you have more space for actions, but you should limit yourself to five actions at most, avoiding the buttons becoming to small and difficult to tap.
 
-// TODO Add a sample
-
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.bottom-bar %}
 
 ## Item Actions
@@ -149,11 +147,14 @@ So far we have considered actions relevant to the screen the user is currently v
 
 There are occasions where a contextual action can help users perform tasks faster. An example of a contextual action is view a list of items, emails, to-do's or a product basket for example, where each list item have actions tied to them, so deleting, starring, marking as read etc.
 
+Long press is the most common interaction to display a contextual menu or pop up.
 
+The main negatives to consider are:
+
+- Can be difficult for the user to discover, so any hints you can give to the user to long press or gesture will help with discoverability
+- Ensure that you still allow users to perform actions outside of the gesture, for example, enable deleting of a to-do in the details page when the user clicks through to more details.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.item-actions %}
-
-- Describe the pattern
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.nav-patterns %}
 
