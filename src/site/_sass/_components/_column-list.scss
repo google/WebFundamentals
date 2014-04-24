@@ -11,18 +11,16 @@
 **/
 
 .columns-list-wrapper {
-  @include medium {
+  @include wide {
     margin-right: $mediumColWidth;
   }
 
-  @include wide {
-    margin-right: $wideColWidth;
-  }
 }
 
 .list--columns {
   border-bottom: 1px solid #ccc;
   padding-bottom: $lineHeight - 1;
+  margin-bottom: 1px;
 
   @include medium {
     @include prefixr(column-count, 2);
@@ -34,6 +32,14 @@
   & .columns-list-item {
     @include type--small;
     padding: 0;
+  }
+
+  & a {
+    display:  block;
+
+    &:before {
+      line-height: 26px;
+    }
   }
 
 }

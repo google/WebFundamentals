@@ -10,7 +10,7 @@
 *
 **/
 
-.table {
+table {
   margin-top: $lineHeight;
   width: 100%;
 
@@ -73,6 +73,19 @@
 
     @include medium {
       display: table-cell;
+    }
+  }
+
+  th {
+    @include medium {
+      padding: $lineHeight;
+      padding-top: 13px;
+      padding-bottom: $lineHeight/2 - 1;
+    }
+  }
+
+  td {
+    @include medium {
       padding: $lineHeight;
       padding-bottom: $lineHeight - 1;
     }

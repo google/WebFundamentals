@@ -433,6 +433,13 @@ th {
   padding: 0;
 }
 
+/* Blockquote
+   ========================================================================== */
+/* line 404, ../_sass/_normalize.scss */
+blockquote {
+  margin: 0;
+}
+
 /**
 *
 * Global
@@ -479,12 +486,12 @@ body:after {
   width: 100%;
   z-index: 9;
   display: none;
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%);
   -webkit-background-size: 100% 26px;
   -moz-background-size: 100% 26px;
   -ms-background-size: 100% 26px;
@@ -1078,25 +1085,25 @@ body.debug:after {
   left: 0;
 }
 
-/* line 38, ../_sass/_modules/_highlight.scss */
+/* line 33, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning {
   color: #ffffff;
 }
-/* line 41, ../_sass/_modules/_highlight.scss */
+/* line 36, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning:after {
   background-color: #da2e75;
 }
 
-/* line 46, ../_sass/_modules/_highlight.scss */
+/* line 41, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember {
   color: #ffffff;
 }
-/* line 49, ../_sass/_modules/_highlight.scss */
+/* line 44, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember:after {
   background-color: #09829a;
 }
 
-/* line 60, ../_sass/_modules/_highlight.scss */
+/* line 49, ../_sass/_modules/_highlight.scss */
 .highlight-module__container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1112,7 +1119,7 @@ body.debug:after {
   z-index: 1;
 }
 @media only screen and (min-width: 620px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
+  /* line 49, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1120,7 +1127,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
+  /* line 49, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -1128,7 +1135,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
+  /* line 49, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
     padding-bottom: 52px;
     position: relative;
@@ -1156,11 +1163,15 @@ body.debug:after {
   }
   /* line 424, ../_sass/_utils.scss */
   .highlight-module--learning .highlight-module__container:before {
-    top: -30px;
+    top: -80px;
   }
   /* line 424, ../_sass/_utils.scss */
   .highlight-module--remember .highlight-module__container:before {
-    top: -30px;
+    top: -170px;
+  }
+  /* line 424, ../_sass/_utils.scss */
+  .highlight-module--code .highlight-module__container:before {
+    top: -160px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
@@ -1175,7 +1186,7 @@ body.debug:after {
   }
 }
 
-/* line 81, ../_sass/_modules/_highlight.scss */
+/* line 74, ../_sass/_modules/_highlight.scss */
 .highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1187,7 +1198,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 81, ../_sass/_modules/_highlight.scss */
+  /* line 74, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1199,7 +1210,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 81, ../_sass/_modules/_highlight.scss */
+  /* line 74, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1211,7 +1222,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 81, ../_sass/_modules/_highlight.scss */
+  /* line 74, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1223,7 +1234,7 @@ body.debug:after {
   }
 }
 
-/* line 96, ../_sass/_modules/_highlight.scss */
+/* line 85, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
   padding-top: 52px;
@@ -1231,20 +1242,20 @@ body.debug:after {
   margin-left: -26px;
   font-size: 13px;
 }
-/* line 103, ../_sass/_modules/_highlight.scss */
+/* line 92, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 110, ../_sass/_modules/_highlight.scss */
+/* line 99, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
 }
 
-/* line 118, ../_sass/_modules/_highlight.scss */
+/* line 107, ../_sass/_modules/_highlight.scss */
 .highlight-module__cta {
   display: block;
   font-size: 16px;
@@ -1255,7 +1266,7 @@ body.debug:after {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 @media only screen and (min-width: 800px) {
-  /* line 118, ../_sass/_modules/_highlight.scss */
+  /* line 107, ../_sass/_modules/_highlight.scss */
   .highlight-module__cta {
     font-size: 20px;
     font-weight: 300;
@@ -1267,7 +1278,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 125, ../_sass/_modules/_highlight.scss */
+  /* line 114, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1275,14 +1286,14 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 134, ../_sass/_modules/_highlight.scss */
+  /* line 123, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 142, ../_sass/_modules/_highlight.scss */
+  /* line 131, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
@@ -1578,6 +1589,76 @@ body.debug:after {
 
 /**
 *
+* Quote
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_quote.scss */
+.quote__content {
+  position: relative;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  padding-top: 104px;
+  padding-left: 26px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 13, ../_sass/_modules/_quote.scss */
+  .quote__content {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_quote.scss */
+  .quote__content {
+    padding-top: 52px;
+    padding-left: 0;
+  }
+}
+/* line 25, ../_sass/_modules/_quote.scss */
+.quote__content p {
+  border-top: 1px solid #e0e0e0;
+  text-align: right;
+  font-weight: 500;
+  margin-top: 13px;
+  padding-top: 13px;
+}
+/* line 33, ../_sass/_modules/_quote.scss */
+.quote__content:before {
+  content: open-quote;
+  display: block;
+  position: absolute;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #f0f0f0;
+  top: 90px;
+  left: 26px;
+  font-size: 260px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 33, ../_sass/_modules/_quote.scss */
+  .quote__content:before {
+    top: 225px;
+    left: -210px;
+    font-size: 540px;
+  }
+}
+
+/**
+*
 * Grid
 *
 * Google Web Essentials
@@ -1838,7 +1919,7 @@ body.debug:after {
 /* line 158, ../_sass/_components/_grid.scss */
 .debug .grid-overlay [class*="g-"] {
   height: 100%;
-  background-color: rgba(255, 0, 0, 0.1);
+  background-color: rgba(235, 242, 254, 0.4);
 }
 @media only screen and (min-width: 620px) and (max-width: 799px) {
   /* line 164, ../_sass/_components/_grid.scss */
@@ -2342,17 +2423,17 @@ a:hover {
 *
 **/
 /* line 13, ../_sass/_components/_table.scss */
-.table {
+table {
   margin-top: 26px;
   width: 100%;
 }
 /* line 17, ../_sass/_components/_table.scss */
-.table thead {
+table thead {
   background: #4285f4;
   color: #ffffff;
 }
 /* line 22, ../_sass/_components/_table.scss */
-.table th {
+table th {
   text-align: center;
   display: none;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2364,7 +2445,7 @@ a:hover {
 }
 @media only screen and (min-width: 800px) {
   /* line 22, ../_sass/_components/_table.scss */
-  .table th {
+  table th {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.3000em;
@@ -2375,22 +2456,22 @@ a:hover {
 }
 @media only screen and (min-width: 620px) {
   /* line 29, ../_sass/_components/_table.scss */
-  .table tr {
+  table tr {
     border-bottom: 1px solid #ffffff;
   }
 }
 /* line 35, ../_sass/_components/_table.scss */
-.table tbody {
+table tbody {
   background: #f0f0f0;
 }
 /* line 39, ../_sass/_components/_table.scss */
-.table td {
+table td {
   display: block;
   padding-top: 13px;
   padding-bottom: 13px;
 }
 /* line 45, ../_sass/_components/_table.scss */
-.table td:before {
+table td:before {
   content: attr(data-th) " :";
   display: inline-block;
   color: #ffffff;
@@ -2410,27 +2491,40 @@ a:hover {
 }
 @media only screen and (min-width: 620px) {
   /* line 45, ../_sass/_components/_table.scss */
-  .table td:before {
+  table td:before {
     display: none;
   }
 }
 /* line 70, ../_sass/_components/_table.scss */
-.table th,
-.table td {
+table th,
+table td {
   position: relative;
   padding-left: 140px;
 }
 @media only screen and (min-width: 620px) {
   /* line 70, ../_sass/_components/_table.scss */
-  .table th,
-  .table td {
+  table th,
+  table td {
     display: table-cell;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 79, ../_sass/_components/_table.scss */
+  table th {
+    padding: 26px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 87, ../_sass/_components/_table.scss */
+  table td {
     padding: 26px;
     padding-bottom: 25px;
   }
 }
 
-/* line 82, ../_sass/_components/_table.scss */
+/* line 95, ../_sass/_components/_table.scss */
 td:last-child:after {
   content: "";
   display: block;
@@ -2442,42 +2536,42 @@ td:last-child:after {
   width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 82, ../_sass/_components/_table.scss */
+  /* line 95, ../_sass/_components/_table.scss */
   td:last-child:after {
     display: none;
   }
 }
 
-/* line 97, ../_sass/_components/_table.scss */
+/* line 110, ../_sass/_components/_table.scss */
 .table--2 col {
   width: 344px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 97, ../_sass/_components/_table.scss */
+  /* line 110, ../_sass/_components/_table.scss */
   .table--2 col {
     width: 432px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 107, ../_sass/_components/_table.scss */
+  /* line 120, ../_sass/_components/_table.scss */
   .table--2 th:first-child,
   .table--2 td:first-child {
     border-right: 2px solid #ffffff;
   }
 }
 
-/* line 115, ../_sass/_components/_table.scss */
+/* line 128, ../_sass/_components/_table.scss */
 .table--3 col {
   width: 229.33333px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 115, ../_sass/_components/_table.scss */
+  /* line 128, ../_sass/_components/_table.scss */
   .table--3 col {
     width: 288px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 125, ../_sass/_components/_table.scss */
+  /* line 138, ../_sass/_components/_table.scss */
   .table--3 th:nth-child(2),
   .table--3 td:nth-child(2) {
     border-left: 2px solid #ffffff;
@@ -2485,18 +2579,18 @@ td:last-child:after {
   }
 }
 
-/* line 134, ../_sass/_components/_table.scss */
+/* line 147, ../_sass/_components/_table.scss */
 .table--4 col {
   width: 172px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 134, ../_sass/_components/_table.scss */
+  /* line 147, ../_sass/_components/_table.scss */
   .table--4 col {
     width: 216px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 145, ../_sass/_components/_table.scss */
+  /* line 158, ../_sass/_components/_table.scss */
   .table--4 th:nth-child(2), .table--4 th:nth-child(3),
   .table--4 td:nth-child(2),
   .table--4 td:nth-child(3) {
@@ -2588,26 +2682,21 @@ td:last-child:after {
 * @author Antoine Grelard
 *
 **/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 800px) {
   /* line 13, ../_sass/_components/_column-list.scss */
   .columns-list-wrapper {
     margin-right: 30.3%;
   }
 }
-@media only screen and (min-width: 800px) {
-  /* line 13, ../_sass/_components/_column-list.scss */
-  .columns-list-wrapper {
-    margin-right: 22.2%;
-  }
-}
 
-/* line 23, ../_sass/_components/_column-list.scss */
+/* line 20, ../_sass/_components/_column-list.scss */
 .list--columns {
   border-bottom: 1px solid #ccc;
   padding-bottom: 25px;
+  margin-bottom: 1px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 23, ../_sass/_components/_column-list.scss */
+  /* line 20, ../_sass/_components/_column-list.scss */
   .list--columns {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -2623,7 +2712,7 @@ td:last-child:after {
     column-gap: 0;
   }
 }
-/* line 34, ../_sass/_components/_column-list.scss */
+/* line 32, ../_sass/_components/_column-list.scss */
 .list--columns li, .list--columns .columns-list-item {
   font-size: 13px;
   line-height: 2.0000em;
@@ -2631,6 +2720,14 @@ td:last-child:after {
   padding-top: 2.0000em;
   padding-bottom: 0;
   padding: 0;
+}
+/* line 37, ../_sass/_components/_column-list.scss */
+.list--columns a {
+  display: block;
+}
+/* line 40, ../_sass/_components/_column-list.scss */
+.list--columns a:before {
+  line-height: 26px;
 }
 
 /**
@@ -2704,6 +2801,10 @@ td:last-child:after {
 @media only screen and (min-width: 620px) {
   /* line 14, ../_sass/_components/_guides-list.scss */
   .guides-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
