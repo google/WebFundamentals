@@ -479,12 +479,12 @@ body:after {
   width: 100%;
   z-index: 9;
   display: none;
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%);
   -webkit-background-size: 100% 26px;
   -moz-background-size: 100% 26px;
   -ms-background-size: 100% 26px;
@@ -1842,7 +1842,7 @@ body.debug:after {
 /* line 158, ../_sass/_components/_grid.scss */
 .debug .grid-overlay [class*="g-"] {
   height: 100%;
-  background-color: rgba(255, 0, 0, 0.1);
+  background-color: rgba(235, 242, 254, 0.4);
 }
 @media only screen and (min-width: 620px) and (max-width: 799px) {
   /* line 164, ../_sass/_components/_grid.scss */
@@ -2605,26 +2605,21 @@ td:last-child:after {
 * @author Antoine Grelard
 *
 **/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 800px) {
   /* line 13, ../_sass/_components/_column-list.scss */
   .columns-list-wrapper {
     margin-right: 30.3%;
   }
 }
-@media only screen and (min-width: 800px) {
-  /* line 13, ../_sass/_components/_column-list.scss */
-  .columns-list-wrapper {
-    margin-right: 22.2%;
-  }
-}
 
-/* line 23, ../_sass/_components/_column-list.scss */
+/* line 20, ../_sass/_components/_column-list.scss */
 .list--columns {
   border-bottom: 1px solid #ccc;
   padding-bottom: 25px;
+  margin-bottom: 1px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 23, ../_sass/_components/_column-list.scss */
+  /* line 20, ../_sass/_components/_column-list.scss */
   .list--columns {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -2640,7 +2635,7 @@ td:last-child:after {
     column-gap: 0;
   }
 }
-/* line 34, ../_sass/_components/_column-list.scss */
+/* line 32, ../_sass/_components/_column-list.scss */
 .list--columns li, .list--columns .columns-list-item {
   font-size: 13px;
   line-height: 2.0000em;
@@ -2648,6 +2643,14 @@ td:last-child:after {
   padding-top: 2.0000em;
   padding-bottom: 0;
   padding: 0;
+}
+/* line 37, ../_sass/_components/_column-list.scss */
+.list--columns a {
+  display: block;
+}
+/* line 40, ../_sass/_components/_column-list.scss */
+.list--columns a:before {
+  line-height: 26px;
 }
 
 /**

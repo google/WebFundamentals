@@ -157,7 +157,7 @@
 
     [class*="g-"] {
       height: 100%;
-      background-color: rgba(red, .1);
+      background-color: rgba(lighten($colorBlue, 35%), .4);
     }
 
     @include medium-only {
