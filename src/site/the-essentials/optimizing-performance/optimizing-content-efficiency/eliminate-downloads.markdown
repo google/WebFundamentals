@@ -71,4 +71,7 @@ thinking and measurement to make the call. In fact, for best results you should
 periodically inventory and revisit these questions for each and every asset on 
 your pages. 
 
+
+{% include modules/nextarticle.liquid %}
+
 {% endwrap %}

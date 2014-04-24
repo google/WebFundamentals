@@ -383,4 +383,7 @@ deferring async scripts.
     * serveresourcesfromaconsistenturl
     * specifyacachevalidator
 
+
+{% include modules/nextarticle.liquid %}
+
 {% endwrap %}

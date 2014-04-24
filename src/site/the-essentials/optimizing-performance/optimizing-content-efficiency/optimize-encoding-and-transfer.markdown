@@ -892,4 +892,7 @@ Some tips and techniques to keep in mind as you work on optimizing your images:
   ideally suited for high-resolution screens and often deliver significant byte 
   savings.
 
+  
+{% include modules/nextarticle.liquid %}
+
 {% endwrap %}
