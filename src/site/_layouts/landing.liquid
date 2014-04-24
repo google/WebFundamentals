@@ -3,14 +3,16 @@
 <html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
   <head>
 {% endif %}
-		{% include head.liquid %}
-	</head>
+    {% include head.liquid %}
+  </head>
 
-	<body class="{{ page.class }}">
+  <body class="{{ page.class }}">
     {% injectdata project _project.yaml %}
     {% injectdata content _book.yaml %}
 
-		{% include header.liquid %}
+    {% include google_header.html %}
+
+    {% include header.liquid %}
 
     <div class="page-header">
       <div class="container">
@@ -22,7 +24,7 @@
       </div>
     </div>
 
-		{{ content }}
+    {{ content }}
 
     <div class="guides-section">
       <header class="container">
@@ -49,8 +51,8 @@
       </ul>
     </div>
 
-		{% include footer.liquid %}
+    {% include footer.liquid %}
 
-		{% include scripts.liquid %}
-	</body>
+    {% include scripts.liquid %}
+  </body>
 </html>

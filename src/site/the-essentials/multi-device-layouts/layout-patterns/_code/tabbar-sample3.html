@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+
+    <!-- // [START ms-specific] -->
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- // [END ms-specific] -->
+
+    <title>Tab Bar Sample 3</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        background-color: #21212b;
+      }
+
+      .tab-bar-container {
+        position: fixed;
+
+        width: 100%;
+
+        padding: 0 8px 0 8px;
+
+        box-sizing: border-box;
+
+        bottom: 0;
+      }
+
+      .tab-bar {
+        display: flex;
+        
+        width: 100%;
+        
+        flex-direction: row;
+
+        background-color: #e65050;
+        background-image: -o-linear-gradient(bottom, #e25d5e 0%, #d44040 100%);
+        background-image: -moz-linear-gradient(bottom, #e25d5e 0%, #d44040 100%);
+        background-image: -webkit-linear-gradient(bottom, #e25d5e 0%, #d44040 100%);
+        background-image: -ms-linear-gradient(bottom, #e25d5e 0%, #d44040 100%);
+        background-image: linear-gradient(to bottom, #e25d5e 0%, #d44040 100%);
+
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+      }
+
+      .tab-bar button {
+
+        flex: 1;
+
+        padding: 4px;
+        
+        border: none;
+
+        background-color: transparent;
+        
+        color: #fdf1f1;
+
+        -webkit-transition: background-color 0.4s ease-out;
+        transition: background-color 0.4s ease-out;
+
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .tab-bar button.selected {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .tab-bar button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .tab-bar button:focus {
+        background-color: rgba(255, 255, 255, 0.2);
+        outline: 0;
+      }
+
+      .tab-bar button:focus:active {
+        background-color: rgba(255, 255, 255, 0.3);
+        outline: 0;
+      }
+
+      .tab-bar button:first-child {
+        border-top-left-radius: 20px;
+      }
+
+      .tab-bar button:last-child {
+        border-top-right-radius: 20px;
+      }
+
+      .tab-bar button img {
+        width: 32px;
+        height: auto;
+      }
+
+      .tab-bar button span {
+        line-height: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="tab-bar-container">
+      <nav class="tab-bar">
+        <button class="tab-btn tab-1" data-tabsection="info-tab-content">
+          <img src="about-icon-light.png" /><br />
+          <span>About</span>
+        </button>
+        <button class="tab-btn tab-2" data-tabsection="blog-tab-content">
+          <img src="blog-icon-light.png" /><br />
+          <span>Blog</span>
+        </button>
+        <button class="tab-btn tab-3" data-tabsection="photo-tab-content">
+          <img src="photo-icon-light.png" /><br />
+          <span>Photos</span>
+        </button>
+        <button class="tab-btn tab-4" data-tabsection="contact-tab-content">
+          <img src="contact-icon-light.png" /><br />
+          <span>Contact</span>
+        </button>
+      </nav>
+    </div>
+
+    <script>
+      var currentSelectedTab = 0;
+      var tabBtns = document.querySelectorAll('.tab-bar > .tab-btn');
+
+      for(var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', onTabClick(i, tabBtns[i]), true);
+      }
+
+      function onTabClick(index, btn) {
+        return function(e) {
+          currentSelectedTab = index;  
+          selectTab(btn); 
+        };
+      }
+
+      function selectTab(btn) {
+        console.log('onTabClick '+' btn = ', btn);
+        var currentTab = document.querySelector('.tab-bar > .tab-btn.selected');
+        if(currentTab) {
+          currentTab.classList.remove('selected');
+        }
+        btn.classList.add('selected');
+      }
+
+      selectTab(tabBtns[currentSelectedTab]);
+    </script>
+
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>

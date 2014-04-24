@@ -47,53 +47,53 @@
 
 </head>
 <body>
-    {% injectdata project _project.yaml %}
-    {% injectdata content _book.yaml %}
-    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
+  {% injectdata project _project.yaml %}
+  {% injectdata content _book.yaml %}
+  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{site.baseurl}}/"><i class="sprite-icon-logo"></i></a>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{site.baseurl}}/"><i class="sprite-icon-logo"></i></a>
+      </div>
 
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-          {% for section in page.content.toc %}
-             <li class="dropdown">
-                <a {% if section.section %}href="#" class="dropdown-toggle" data-toggle="dropdown"{% else %}href="{{ section.path }}{% endif %}" title="Learn Mobile-firt in this short code lab.">
-                  {{ section.title }} {% if section.section %}<span class="caret"></span>{% endif %}
-                </a>
-                {% if section.section %}<ul class="dropdown-menu">
-                   <i class="sprite-icon-dd-tip"></i>
-                  {% for subsection in section.section %}
-                  <li><a href="{{ subsection.path }}">{{ subsection.title }}</a></li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-             </li>
-          {% endfor %}
-          </ul>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        {% for section in page.content.toc %}
+           <li class="dropdown">
+              <a {% if section.section %}href="#" class="dropdown-toggle" data-toggle="dropdown"{% else %}href="{{ section.path }}{% endif %}" title="Learn Mobile-firt in this short code lab.">
+                {{ section.title }} {% if section.section %}<span class="caret"></span>{% endif %}
+              </a>
+              {% if section.section %}<ul class="dropdown-menu">
+                 <i class="sprite-icon-dd-tip"></i>
+                {% for subsection in section.section %}
+                <li><a href="{{ subsection.path }}">{{ subsection.title }}</a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+           </li>
+        {% endfor %}
+        </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <form class="navbar-search" action="/search.html" id="cse-search-box">
-                <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
-                <input type="hidden" name="ie" value="UTF-8">
-                <input type="hidden" name="hl" value="en">
-                <input type="search" name="q" class="search-query placeholder-position-fix form-control" id="q" autocomplete="off" placeholder="Search">
-              </form>
-            </li>
-            <li><a href="https://twitter.com/chromiumdev" class="btn"><i class="sprite-icon-social-twitter"></i></a></li>
-            <li><a href="https://plus.google.com/+Google Chrome Developer/posts" class="btn"><i class="sprite-icon-social-gplus"></i></a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-search" action="/search.html" id="cse-search-box">
+              <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="hidden" name="hl" value="en">
+              <input type="search" name="q" class="search-query placeholder-position-fix form-control" id="q" autocomplete="off" placeholder="Search">
+            </form>
+          </li>
+          <li><a href="https://twitter.com/chromiumdev" class="btn"><i class="sprite-icon-social-twitter"></i></a></li>
+          <li><a href="https://plus.google.com/+Google Chrome Developer/posts" class="btn"><i class="sprite-icon-social-gplus"></i></a></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
 
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
+    </div><!-- /.container -->
+  </div><!-- /.navbar -->
 
 

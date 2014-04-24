@@ -7,8 +7,10 @@
   </head>
 
   <body class="{{ page.class }}">
-      {% injectdata project _project.yaml %}
-      {% injectdata content _book.yaml %}
+    {% injectdata project _project.yaml %}
+    {% injectdata content _book.yaml %}
+
+    {% include google_header.html %}
 
     {% include header.liquid %}
 
@@ -18,4 +20,6 @@
 
     {% include scripts.liquid %}
   </body>
+{% if site.include_open_html %}
 </html>
+{% endif %}
