@@ -16,8 +16,12 @@
 
     {{ content }}
 
+
     {% include footer.liquid %}
 
-    {% include scripts.liquid %}
-  </body>
+		{% include scripts.liquid %}
+	</body>
+
+{% if site.include_open_html %}
 </html>
+{% endif %}
