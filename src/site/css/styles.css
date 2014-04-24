@@ -2801,6 +2801,10 @@ td:last-child:after {
 @media only screen and (min-width: 620px) {
   /* line 14, ../_sass/_components/_guides-list.scss */
   .guides-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
