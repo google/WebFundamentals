@@ -27,7 +27,7 @@ Parent: {{ page.parent.parent.title }} - {{page.parent.parent.id}}
 
   {% for guide in page.articles[page.collection] %}
 {% class %}
-##### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
+##### [{{guide.title}}]({{site.baseurl}}{{guide.url}}) {% if guide.url == page.url %}CURRENT ARTICLE{% endif %}
 {% endclass %}
   {% endfor %}
 {% endif %} 
