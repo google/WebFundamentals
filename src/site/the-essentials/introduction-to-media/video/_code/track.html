@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- // [TEMPLATE header_full] -->
-	<title>Accessible video element</title>
+	<title>Video Element: Tracks</title>
   <style>
     /* // [START styling] */
     video#myvideo {
@@ -19,15 +19,16 @@
     </style>
 </head>
 <body>
-<div id="container">
+<div id="container" role="main">
 
-  <h1>The Video Element</h1>
+  <h1>Video Element: Tracks</h1>
 
   <!-- // [START basic] -->
-  <video>
+  <video controls>
     <source src="chrome.mp4" type="video/mp4;" />
     <source src="chrome.webm" type="video/webm" />
-    <track src="chrome-subtitles-en.vtt" />
+    <track src="chrome-subtitles-en.vtt" label="English captions" 
+         kind="captions" srclang="en" default />
     <p>This browser does not support the video element.</p>
   </video>
   <!-- // [END basic] -->
