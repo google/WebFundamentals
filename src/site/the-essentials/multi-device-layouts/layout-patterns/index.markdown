@@ -124,6 +124,12 @@ A user accesses the drawer using a menu button at the top of the screen in the A
 
 Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
 
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample2.html"><img class="g--third" src="images/navdrawer-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample3.html"><img class="g--third" src="images/navdrawer-alt-2.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample4.html"><img class="g--third g--last" src="images/navdrawer-alt-3.png"></a>
+
+<div style="clear: both;"></div>
+
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.navigation-drawer %}
 
 ## Bottom Bar
