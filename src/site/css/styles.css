@@ -433,6 +433,13 @@ th {
   padding: 0;
 }
 
+/* Blockquote
+   ========================================================================== */
+/* line 404, ../_sass/_normalize.scss */
+blockquote {
+  margin: 0;
+}
+
 /**
 *
 * Global
@@ -1595,26 +1602,17 @@ body.debug:after {
 .quote__content {
   position: relative;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
-  padding-top: 78px;
-}
-@media only screen and (min-width: 620px) {
-  /* line 13, ../_sass/_modules/_quote.scss */
-  .quote__content {
-    padding-top: 52px;
-  }
-}
-/* line 22, ../_sass/_modules/_quote.scss */
-.quote__content p {
   font-size: 16px;
   line-height: 1.6250em;
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  padding-top: 104px;
   padding-left: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 22, ../_sass/_modules/_quote.scss */
-  .quote__content p {
+  /* line 13, ../_sass/_modules/_quote.scss */
+  .quote__content {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.3000em;
@@ -1624,23 +1622,21 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 22, ../_sass/_modules/_quote.scss */
-  .quote__content p {
+  /* line 13, ../_sass/_modules/_quote.scss */
+  .quote__content {
+    padding-top: 52px;
     padding-left: 0;
   }
 }
-/* line 31, ../_sass/_modules/_quote.scss */
-.quote__content span {
-  display: block;
+/* line 25, ../_sass/_modules/_quote.scss */
+.quote__content p {
+  border-top: 1px solid #e0e0e0;
   text-align: right;
   font-weight: 500;
+  margin-top: 13px;
+  padding-top: 13px;
 }
-/* line 37, ../_sass/_modules/_quote.scss */
-.quote__content .text-divider:after {
-  width: 100%;
-  left: 0;
-}
-/* line 42, ../_sass/_modules/_quote.scss */
+/* line 33, ../_sass/_modules/_quote.scss */
 .quote__content:before {
   content: open-quote;
   display: block;
@@ -1653,7 +1649,7 @@ body.debug:after {
   font-size: 260px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 42, ../_sass/_modules/_quote.scss */
+  /* line 33, ../_sass/_modules/_quote.scss */
   .quote__content:before {
     top: 225px;
     left: -210px;
