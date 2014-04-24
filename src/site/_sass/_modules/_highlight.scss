@@ -27,11 +27,6 @@
     width: 100%;
     right: 0;
     left: 0;
-
-    // @include wide {
-    //   width: 80%;
-    //   right: 20%;
-    // }
   }
 }
 
@@ -48,12 +43,6 @@
 
   &:after {
     background-color: $colorRemember;
-    // right: 0;
-    // left: 0;
-
-    // @include wide {
-    //   left: 20%;
-    // }
   }
 }
 
@@ -69,11 +58,15 @@
     @include highlight-symbol();
 
     .highlight-module--learning & {
-      @include highlight-vertical-offset-override(-30px);
+      @include highlight-vertical-offset-override(-80px);
     }
 
     .highlight-module--remember & {
-      @include highlight-vertical-offset-override(-30px);
+      @include highlight-vertical-offset-override(-170px);
+    }
+
+    .highlight-module--code & {
+      @include highlight-vertical-offset-override(-160px);
     }
   }
 }
@@ -88,10 +81,6 @@
 }
 
 .highlight-module--code {
-  // &:after {
-  //   left: 0;
-  //   width: 100%;
-  // }
 
   pre {
     margin: 0;

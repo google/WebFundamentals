@@ -1078,25 +1078,25 @@ body.debug:after {
   left: 0;
 }
 
-/* line 38, ../_sass/_modules/_highlight.scss */
+/* line 33, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning {
   color: #ffffff;
 }
-/* line 41, ../_sass/_modules/_highlight.scss */
+/* line 36, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning:after {
   background-color: #da2e75;
 }
 
-/* line 46, ../_sass/_modules/_highlight.scss */
+/* line 41, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember {
   color: #ffffff;
 }
-/* line 49, ../_sass/_modules/_highlight.scss */
+/* line 44, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember:after {
   background-color: #09829a;
 }
 
-/* line 60, ../_sass/_modules/_highlight.scss */
+/* line 49, ../_sass/_modules/_highlight.scss */
 .highlight-module__container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1112,7 +1112,7 @@ body.debug:after {
   z-index: 1;
 }
 @media only screen and (min-width: 620px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
+  /* line 49, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1120,7 +1120,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
+  /* line 49, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -1128,7 +1128,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 60, ../_sass/_modules/_highlight.scss */
+  /* line 49, ../_sass/_modules/_highlight.scss */
   .highlight-module__container {
     padding-bottom: 52px;
     position: relative;
@@ -1156,11 +1156,15 @@ body.debug:after {
   }
   /* line 424, ../_sass/_utils.scss */
   .highlight-module--learning .highlight-module__container:before {
-    top: -30px;
+    top: -80px;
   }
   /* line 424, ../_sass/_utils.scss */
   .highlight-module--remember .highlight-module__container:before {
-    top: -30px;
+    top: -170px;
+  }
+  /* line 424, ../_sass/_utils.scss */
+  .highlight-module--code .highlight-module__container:before {
+    top: -160px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
@@ -1175,7 +1179,7 @@ body.debug:after {
   }
 }
 
-/* line 81, ../_sass/_modules/_highlight.scss */
+/* line 74, ../_sass/_modules/_highlight.scss */
 .highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1187,7 +1191,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 81, ../_sass/_modules/_highlight.scss */
+  /* line 74, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1199,7 +1203,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 81, ../_sass/_modules/_highlight.scss */
+  /* line 74, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1211,7 +1215,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 81, ../_sass/_modules/_highlight.scss */
+  /* line 74, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1223,7 +1227,7 @@ body.debug:after {
   }
 }
 
-/* line 96, ../_sass/_modules/_highlight.scss */
+/* line 85, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
   padding-top: 52px;
@@ -1231,20 +1235,20 @@ body.debug:after {
   margin-left: -26px;
   font-size: 13px;
 }
-/* line 103, ../_sass/_modules/_highlight.scss */
+/* line 92, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 110, ../_sass/_modules/_highlight.scss */
+/* line 99, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
 }
 
-/* line 118, ../_sass/_modules/_highlight.scss */
+/* line 107, ../_sass/_modules/_highlight.scss */
 .highlight-module__cta {
   display: block;
   font-size: 16px;
@@ -1255,7 +1259,7 @@ body.debug:after {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 @media only screen and (min-width: 800px) {
-  /* line 118, ../_sass/_modules/_highlight.scss */
+  /* line 107, ../_sass/_modules/_highlight.scss */
   .highlight-module__cta {
     font-size: 20px;
     font-weight: 300;
@@ -1267,7 +1271,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 125, ../_sass/_modules/_highlight.scss */
+  /* line 114, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1275,14 +1279,14 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 134, ../_sass/_modules/_highlight.scss */
+  /* line 123, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 142, ../_sass/_modules/_highlight.scss */
+  /* line 131, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
@@ -2342,17 +2346,17 @@ a:hover {
 *
 **/
 /* line 13, ../_sass/_components/_table.scss */
-.table {
+table {
   margin-top: 26px;
   width: 100%;
 }
 /* line 17, ../_sass/_components/_table.scss */
-.table thead {
+table thead {
   background: #4285f4;
   color: #ffffff;
 }
 /* line 22, ../_sass/_components/_table.scss */
-.table th {
+table th {
   text-align: center;
   display: none;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2364,7 +2368,7 @@ a:hover {
 }
 @media only screen and (min-width: 800px) {
   /* line 22, ../_sass/_components/_table.scss */
-  .table th {
+  table th {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.3000em;
@@ -2375,22 +2379,22 @@ a:hover {
 }
 @media only screen and (min-width: 620px) {
   /* line 29, ../_sass/_components/_table.scss */
-  .table tr {
+  table tr {
     border-bottom: 1px solid #ffffff;
   }
 }
 /* line 35, ../_sass/_components/_table.scss */
-.table tbody {
+table tbody {
   background: #f0f0f0;
 }
 /* line 39, ../_sass/_components/_table.scss */
-.table td {
+table td {
   display: block;
   padding-top: 13px;
   padding-bottom: 13px;
 }
 /* line 45, ../_sass/_components/_table.scss */
-.table td:before {
+table td:before {
   content: attr(data-th) " :";
   display: inline-block;
   color: #ffffff;
@@ -2410,27 +2414,40 @@ a:hover {
 }
 @media only screen and (min-width: 620px) {
   /* line 45, ../_sass/_components/_table.scss */
-  .table td:before {
+  table td:before {
     display: none;
   }
 }
 /* line 70, ../_sass/_components/_table.scss */
-.table th,
-.table td {
+table th,
+table td {
   position: relative;
   padding-left: 140px;
 }
 @media only screen and (min-width: 620px) {
   /* line 70, ../_sass/_components/_table.scss */
-  .table th,
-  .table td {
+  table th,
+  table td {
     display: table-cell;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 79, ../_sass/_components/_table.scss */
+  table th {
+    padding: 26px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 87, ../_sass/_components/_table.scss */
+  table td {
     padding: 26px;
     padding-bottom: 25px;
   }
 }
 
-/* line 82, ../_sass/_components/_table.scss */
+/* line 95, ../_sass/_components/_table.scss */
 td:last-child:after {
   content: "";
   display: block;
@@ -2442,42 +2459,42 @@ td:last-child:after {
   width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 82, ../_sass/_components/_table.scss */
+  /* line 95, ../_sass/_components/_table.scss */
   td:last-child:after {
     display: none;
   }
 }
 
-/* line 97, ../_sass/_components/_table.scss */
+/* line 110, ../_sass/_components/_table.scss */
 .table--2 col {
   width: 344px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 97, ../_sass/_components/_table.scss */
+  /* line 110, ../_sass/_components/_table.scss */
   .table--2 col {
     width: 432px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 107, ../_sass/_components/_table.scss */
+  /* line 120, ../_sass/_components/_table.scss */
   .table--2 th:first-child,
   .table--2 td:first-child {
     border-right: 2px solid #ffffff;
   }
 }
 
-/* line 115, ../_sass/_components/_table.scss */
+/* line 128, ../_sass/_components/_table.scss */
 .table--3 col {
   width: 229.33333px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 115, ../_sass/_components/_table.scss */
+  /* line 128, ../_sass/_components/_table.scss */
   .table--3 col {
     width: 288px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 125, ../_sass/_components/_table.scss */
+  /* line 138, ../_sass/_components/_table.scss */
   .table--3 th:nth-child(2),
   .table--3 td:nth-child(2) {
     border-left: 2px solid #ffffff;
@@ -2485,18 +2502,18 @@ td:last-child:after {
   }
 }
 
-/* line 134, ../_sass/_components/_table.scss */
+/* line 147, ../_sass/_components/_table.scss */
 .table--4 col {
   width: 172px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 134, ../_sass/_components/_table.scss */
+  /* line 147, ../_sass/_components/_table.scss */
   .table--4 col {
     width: 216px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 145, ../_sass/_components/_table.scss */
+  /* line 158, ../_sass/_components/_table.scss */
   .table--4 th:nth-child(2), .table--4 th:nth-child(3),
   .table--4 td:nth-child(2),
   .table--4 td:nth-child(3) {
