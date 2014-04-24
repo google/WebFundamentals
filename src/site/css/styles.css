@@ -2605,26 +2605,20 @@ td:last-child:after {
 * @author Antoine Grelard
 *
 **/
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 800px) {
   /* line 13, ../_sass/_components/_column-list.scss */
   .columns-list-wrapper {
     margin-right: 30.3%;
   }
 }
-@media only screen and (min-width: 800px) {
-  /* line 13, ../_sass/_components/_column-list.scss */
-  .columns-list-wrapper {
-    margin-right: 22.2%;
-  }
-}
 
-/* line 23, ../_sass/_components/_column-list.scss */
+/* line 20, ../_sass/_components/_column-list.scss */
 .list--columns {
   border-bottom: 1px solid #ccc;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 23, ../_sass/_components/_column-list.scss */
+  /* line 20, ../_sass/_components/_column-list.scss */
   .list--columns {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -2640,7 +2634,7 @@ td:last-child:after {
     column-gap: 0;
   }
 }
-/* line 34, ../_sass/_components/_column-list.scss */
+/* line 31, ../_sass/_components/_column-list.scss */
 .list--columns li, .list--columns .columns-list-item {
   font-size: 13px;
   line-height: 2.0000em;
@@ -2648,6 +2642,10 @@ td:last-child:after {
   padding-top: 2.0000em;
   padding-bottom: 0;
   padding: 0;
+}
+/* line 36, ../_sass/_components/_column-list.scss */
+.list--columns a:before {
+  line-height: 26px;
 }
 
 /**
