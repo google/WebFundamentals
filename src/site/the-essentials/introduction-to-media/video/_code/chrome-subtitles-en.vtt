@@ -1,0 +1,12 @@
+WEBVTT
+
+NOTE
+This is just an example file to demonstrate adding a track.
+It is used as a captions track so is visible in the sample, 
+but is really a description track.
+
+00:00.000 --> 00:04.000
+Man sitting on tree branch, using a laptop.
+
+00:05.000 --> 00:08.000
+The branch breaks, and he starts to fall.
