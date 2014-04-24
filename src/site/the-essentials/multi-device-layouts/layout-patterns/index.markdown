@@ -23,7 +23,7 @@ key-takeaways:
   navigation-drawer:
     - Your navigation drawer should *always* be accessible by the user
     - If the number of sections is too large, consider grouping the items and expanding / contracting the groups. Avoid overwhelming your users.
-    - Don't hide key actions inside the drawer (i.e. search should be prominently on the home page, not hidden in the drawer).
+    - Don't hide key actions inside the drawer. Actions like search should be prominently on the home page, not hidden in the drawer.
   bottom-bar:
     - Only use this if you aren't using a tab bar
     - Stick to 5 items at most
@@ -44,7 +44,7 @@ key-takeaways:
 
 ## App Bar
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g-wide--full" src="images/appbar.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/appbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -88,7 +88,7 @@ The App Bar is a set of principals that you should apply to give your users a pr
 
 ## Tabs
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample1.html"><img class="g-wide--full" src="images/tabbar.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -109,7 +109,7 @@ A nice advantage using tabs is that it gives the user a consistent place for nav
 
 ## Navigation Drawer
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample1.html"><img class="g-wide--full" src="images/navdrawer.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample1.html"><img class="g-medium--full g-wide--full" src="images/navdrawer.png"></a>
 
 <div style="clear: both;"></div>
 
