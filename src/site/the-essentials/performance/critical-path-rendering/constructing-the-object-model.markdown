@@ -25,6 +25,9 @@ key-takeaways:
 ---
 {% wrap content%}
 
+* Table of Contents
+{:toc}
+
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.construct-object-model %}
 
 ## Document Object Model (DOM)
