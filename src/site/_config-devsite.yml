@@ -1,11 +1,11 @@
 safe: false
 port: 8081
 source: .
-destination: ../appengine/build/static
+destination: ../appengine/build/devsite
 markdown: kramdown
 permalink: /articles/:title.html
-baseurl: /web/essentials
-url: /web/essentials
+baseurl: /web/fundamentals
+url: /web/fundamentals
 highlighter: pygments
 pygments: true
 include_open_html: false

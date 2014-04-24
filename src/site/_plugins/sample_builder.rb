@@ -93,6 +93,7 @@ module SampleBuilder
     	def contents() 
     		contents = File.read(@sourcepath)
     		contents.gsub!(/<!-- \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] -->\s*\n?/m, "\n")
+    		contents.gsub!(/\/\* \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] \*\/\s*\n?/m, "\n")
     		contents.gsub(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches| 
     			tag = $1.downcase
     			if (tag == "header") 
@@ -154,7 +155,12 @@ module SampleBuilder
 				filename = page.filename
 				dirname = File.dirname(File.join(target_dir, filename))
 				location = File.join(gen_dir, filename)
-				site.static_files << SampleFile.new(site, site.dest, File.dirname(location), File.basename(filename), page.contents)
+				site.static_files << SampleFile.new(
+						site, 
+						site.dest, 
+						File.dirname(location), 
+						File.basename(filename), 
+						page.contents)
 		  	end
 		end
 	end
