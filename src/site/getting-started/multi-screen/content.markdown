@@ -41,7 +41,7 @@ We have identified we need:
 We have also come up with a rough information architecture and layout for both the narrow and wide viewports.
 
 <div class="demo">
-  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA">
+  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA" style="width: 100%;"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA" style="width: 100%;">
 </div>
 
 This can be converted easily in to the rough sections of a skeleton page that 
