@@ -271,19 +271,15 @@ Safari on an iPad plays video inline:
 
 ### Control fullscreening of content
 
-For platforms that do not force fullscreen video playback, the Fullscreen API is [widely supported](http://caniuse.com/fullscreen). Use this API to control fullscreening of content, including video (code snippets from [simpl.info/fs](http://simpl.info/fs)):
+For platforms that do not force fullscreen video playback, the Fullscreen API is [widely supported](http://caniuse.com/fullscreen). Use this API to control fullscreening of content, including video:
 
-    // Fullscreen a video element
-    videoElement.requestFullScreen()
+{% include_code _code/fullscreen.html elementfs js %}
 
-    // Fullscreen the whole page
-    document.body.requestFullScreen();
+{% include_code _code/fullscreen.html pagefs js %}
 
-    // Listen for fullscreen state change
-    videoElement.onfullscreenchange = function(){console.log('You fullscreened me!');}
+{% include_code _code/fullscreen.html listener js %}
 
-    // Check if element is fullscreened
-    console.log(videoElement.displayingFullscreen)
+{% include_code _code/fullscreen.html check js %}
 
 You can also use the CSS `:fullscreen` pseudo-class to change the way elements are displayed in fullscreen mode.
 
@@ -291,7 +287,7 @@ On devices that support the Fullscreen API, consider using thumbnail images as p
 
 ![Screenshot of two videos in desktop Chrome, showing thumbnails](images/Chrome-desktop-video-thumbnails.jpg)
 
-To see this in action, check out the [simpl.info/fullscreen/video](http://simpl.info/fullscreen/video) demo. When you tap or click on a thumbnail, the thumbnail is replaced by a fullscreen video element.
+To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap or click on a thumbnail, the thumbnail is replaced by a fullscreen video element.
 
 ### Include captions to improve accessibility
 
