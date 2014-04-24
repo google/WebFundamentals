@@ -3,27 +3,6 @@ layout: article
 title: "Create your content and structure"
 description: "Content is the most important aspect of any site."
 introduction: "Content is the most important aspect of any site."
-key-takeaways:
-  flesh-out:
-    - Before you start, understand the content you need to display (text, images,
-      tables and videos)
-    - Start with the narrow viewport first (in many cases a mobile device) - often
-      this is called Mobile first development
-  great-form:
-    - Use labels to let the user quickly focus on the field
-    - Use placeholders to give an indication about the data to enter in the field
-    - Use common names to help the user auto fill their forms
-    - Use semantic types to help the user enter data quickly
-  add-images:
-    - Use the highest DPI possible for your source
-    - Each source image should be made for 2x DPI and 1x DPI
-    - Highly compress all your images
-  add-video:
-    - TODO
-  make-responsive:
-    - Always start with a narrow viewport first and scale out
-    - Base your breakpoints off when you need to adapt the content
-    - Create a high-level vision of your layout across major breakpoints
 notes:
   styling: 
     - Styling will come later
@@ -65,11 +44,12 @@ We have also come up with a rough information architecture and layout for both t
   <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA">
 </div>
 
-This can be converted easily in to the rough sections of a skeleton page.
+This can be converted easily in to the rough sections of a skeleton page that 
+we will use for the rest of this project.
 
 {% include_code _code/addstructure.html structure %}
 
-## Add Content
+## Add content to the page
 
 The basic structure of the site is complete and we know what sections we need,
 what content we will display and where it will be positioned in the overall
@@ -79,20 +59,15 @@ information architecture we can now start to build out the site.
 
 ### Create the headline and form
 
-The headline is the first section that a user will see when they land on the
-page. We need to create a concise introduction and a place holder for a form
-that we will complete later.
+The headline is the first section and the request a demonstration form our the 
+critical components of our page that we have identifed that must be presetned to the user immediately.
+
+Adding the header is just a simple set of list items.
 
 {% include_code _code/addcontent.html headline %}
 
-We are creating a product landing page so it makes sense to be able to let the
-user pass us some of their details so that they can register interest.
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.great-form %}
-
-In the heading area we will create a section for the form.  It will be a simple
-form that collects the users names, their phone number and a good time to call
-them back.
+We need to also fill out the form.  It will be a simple form that collects the
+ users' names, their phone number and a good time to call them back.
 
 All forms should have labels and placeholders to make it easy for users to focus
 elements, understand what is supposed to go in them and to also help
@@ -103,8 +78,6 @@ hints to the browser about how to automatically fill the form for the user.
 We will add semantic types to make it quick and simple for users to be able to
 enter content on a mobile device.  For example when entering a telephone number
 the user should just see a dial pad.
-
-[todo add screen shot]
 
 {% include_code _code/withform.html form %}
 
@@ -160,8 +133,6 @@ By following the best practices you can easily integrate video in to your site:
 </div>
 </div>
 
-[TODO: Add Image]
-
 ### Create the Images Section
 
 Sites without images can be a little boring.  There are two types of images:
@@ -179,8 +150,6 @@ demonstrate four different scenarios where our product can be used.
 
 Content images are images that are critical to conveying the meaning of the
 page. Think of it as images that are used in newspaper articles.
-
-[TODO: Add Image]
 
 {% include_code _code/addimages.html images html %}
 
@@ -204,28 +173,35 @@ this in the responsive design section.
 </div>
 </div>
 
-
-[TODO: Add Image]
-
 ### Add the Tabulated Data Section
 
 The final section is a simple table that is used to show specific product stats
 about the product.
 
-{% include_code _code/addcontent.html section3 %}
+Tables should only be used for tabular data, i.e, matrixes of information.
 
-[TODO: Add Image]
+{% include_code _code/addcontent.html section3 %}
 
 ### Add a Footer
 
 Most sites need a footer to display content such as Terms and Conditions,
-disclaimers and other content that is  not meant to be in the main navigation.
+disclaimers and other content that is not meant to be in the main navigation nor in the main conentent area of the page.  
+
+In our site we will just link to Terms and Conditions, a Contact page and 
+our social media profiles.
 
 {% include_code _code/addcontent.html footer %}
 
-[TODO: Add Image]
+## Summary
 
-{% link_sample _code/content-with-styles.html %} See example {% endlink_sample %}
+We have created the outline of the site and we have identified all the main 
+structural elements.  We have also made sure that we have all the relevant 
+content ready and in-place to satisfy our business needs.  
+
+You will notice that the page looks terrible right now. That is intentional. Content is the most important aspect of any site and we needed to make sure we have a good solid information architecture and density.  This guide has given 
+us an excellent base to build upon.
+
+[todo Key takeaway]
 
 {% include modules/nextarticle.liquid %}
 
