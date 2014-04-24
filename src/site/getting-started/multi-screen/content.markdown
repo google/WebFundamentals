@@ -4,12 +4,6 @@ title: "Create your content and structure"
 description: "Content is the most important aspect of any site."
 introduction: "Content is the most important aspect of any site."
 key-takeaways:
-  include-viewport:
-    - All pages must include a viewport and make sure it has the recommended
-      configuration.
-  test-page:
-    - Set up your environment to be able to easily test
-    - Use Chrome Dev Tools
   flesh-out:
     - Before you start, understand the content you need to display (text, images,
       tables and videos)
@@ -32,7 +26,7 @@ key-takeaways:
     - Create a high-level vision of your layout across major breakpoints
 notes:
   styling: 
-    - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
+    - Styling will come later
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
@@ -57,21 +51,17 @@ this lesson we will present a simple linear layout that will work well on narrow
 
 We have identified we need:
 
-*  An area that describes at a high-level our product "Smiles"
-*  A form to collect information from users who are interested in our product
-*  An in depth description and video
-*  Images of the product in action
-*  A data table with information to back the claims up
+1.  An area that describes at a high-level our product "Smiles"
+2.  A form to collect information from users who are interested in our product
+3.  An in depth description and video
+4.  Images of the product in action
+5.  A data table with information to back the claims up
 
-Now that there is content, it is not too hard to create the structure of the
-page. Based on the content we know we need a heading area, 3 sections of information and a footer.
+We have also come up with a rough information architecture and layout for both the narrow and wide viewports.
 
-We have also come up with a rough information architecture and layout for both the narrow
-and wide viewports.
-
-[TODO: Show a rough sketch of the IA for narrow viewport]
-
-[TODO: Show a rough sketch of the IA for wide viewport]
+<div class="demo">
+  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA">
+</div>
 
 This can be converted easily in to the rough sections of a skeleton page.
 
@@ -79,9 +69,9 @@ This can be converted easily in to the rough sections of a skeleton page.
 
 ## Add Content
 
-The basic structure of the site is complete and we know what sections we need, what content
-we will display and where it will be positioned in the overall information architecture we can now
-start to build out the site.
+The basic structure of the site is complete and we know what sections we need, what content we will display and where it 
+will be positioned in the overall information architecture
+we can now start to build out the site.
 
 {% include modules/remember.liquid title="Note" list=page.notes.styling %}
 
