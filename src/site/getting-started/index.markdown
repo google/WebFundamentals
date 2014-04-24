@@ -2,6 +2,7 @@
 layout: default
 title: "Getting Started"
 description: ""
+id: getting-started
 ---
 {% wrap content%}
 

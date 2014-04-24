@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <link rel="stylesheet" type="text/css" href="layouts-common.css">
+    <style type="text/css">
+    /* // [START code] */
+    @media(max-width: 499px) {
+        #foo {
+              display: none;
+        }
+    }
+    @media(min-width: 500px) {
+        #foo {
+              background-image: url(../images/fooLarge.jpg);
+              height: 500px;
+              width: 500px;
+        }
+    }
+    /* // [END code] */
+    </style>
+    <title>Web Essentials: conditional image display</title>
+  </head>
+  <body>
+    <div class="container" role="main">
+
+    <div class="image" id="foo" title="Salt flats near San Francisco Airport"></div>
+
+    </div>
+  </body>
+</html>
+
+

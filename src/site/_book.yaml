@@ -1,12 +1,12 @@
 toc:
-- title: "/"
+- title: "Web Fundamentals"
   path: /
 - title: "Getting Started"
   path: /getting-started/
   section:
     - title: "Create Your First Multi-screen Site"
       path: /getting-started/mulit-screen/
-- title: "The essentials"
+- title: "Documentation"
   path: /the-essentials/
   section:
     - title: "Multi-device layouts"

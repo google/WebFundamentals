@@ -2,20 +2,20 @@
 <html>
 <head>
 	<!-- // [TEMPLATE header_full] -->
-	<title>Video Element: Autoplay</title>
+	<title>Video element fragments</title>
 </head>
 <body>
-<div id="container" role="main">
+<div id="container">
 
-  <h1>Video Element: Autoplay</h1>
+  <h1>Video Element Fragments</h1>
 
-  <!-- // [START sourcetypes] -->
-  <video autoplay controls poster="poster.jpg" preload="metadata">
-    <source src="chrome.webm#t=10,15" type="video/webm" />
-    <source src="chrome.mp4#t=10,15" type="video/mp4" />
+  <!-- // [START fragments] -->
+  <video autoplay controls poster="images/poster.jpg" preload="metadata">
+    <source src="video/chrome.webm#t=10,15" type="video/webm" />
+    <source src="video/chrome.mp4#t=10,15" type="video/mp4" />
     <p>This browser does not support the video element.</p>
   </video>
-  <!-- // [END sourcetypes] -->
+  <!-- // [END fragments] -->
 
   <p id="videoSrc"></p>
 
