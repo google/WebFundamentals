@@ -40,8 +40,6 @@ key-takeaways:
 
 # Navigation Patterns
 
-// TODO: Intro to the article
-
 ## App Bar
 
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/appbar.png"></a>
