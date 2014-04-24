@@ -1,5 +1,7 @@
 module Jekyll
   
+  #  Creates an ordered group of articles built around a collection.
+
   class CollectionGenerator < Generator
     def generate(site)
       # Find all the collection pages
@@ -24,6 +26,19 @@ module Jekyll
           a_order = a.data['article']['order'] || 0
           b_order = b.data['article']['order'] || 0
           a_order <=> b_order
+        end
+
+        previous = nil
+
+        articles[article].each do |a|
+          if previous != nil
+            a.data['article']['previous'] = previous
+            previous.data['article']['next']  = a
+          else
+            a.data['article']['previous'] = nil
+          end
+
+          previous = a
         end
       end
       

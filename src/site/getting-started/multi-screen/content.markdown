@@ -1,12 +1,8 @@
 ---
 layout: article
 title: "Create your content and structure"
-description: "The web is accessible on a huge range of devices from small-screen phones
-to huge-screen televisions. Learn how to build a site that works well across all these devices."
-introduction: "The web is accessible on a huge range of devices from small-screen phones
-through to huge-screen televisions.  Each device presents its own unique
-benefits and also constraints and as a web developer you are expected to support
-all ranges of devices."
+description: "Content is the most important aspect of any site."
+introduction: "Content is the most important aspect of any site."
 key-takeaways:
   include-viewport:
     - All pages must include a viewport and make sure it has the recommended
@@ -258,5 +254,7 @@ By following the best practices you can easily integrate video in to your site:
 </div>
 </div>
 </div>
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
