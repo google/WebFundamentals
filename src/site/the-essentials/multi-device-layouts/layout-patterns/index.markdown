@@ -117,16 +117,15 @@ The navigation drawer is a simple slide in panel which is primarily used for dis
 
 A user accesses the drawer using a menu button at the top of the screen in the App Bar.
 
-- Include demo
-  - Left, Right and Drop Down
-
-### Tabs vs Navigation Drawer
-
-Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
-
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample2.html"><img class="g--third" src="images/navdrawer-alt-1.png"></a>
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample3.html"><img class="g--third" src="images/navdrawer-alt-2.png"></a>
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample4.html"><img class="g--third g--last" src="images/navdrawer-alt-3.png"></a>
+
+<div style="clear: both;"></div>
+
+### Tabs vs Navigation Drawer
+
+Some developers find they get higher rates of interaction when using tabs over a navigation drawer. So if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
 
 <div style="clear: both;"></div>
 
@@ -134,11 +133,23 @@ Some developers find they get higher rates of interaction when using tabs over n
 
 ## Bottom Bar
 
+We've seen that the App Bar can be used for placing actions the user can perform in your web app.
+
+An alternative approach is to place actions in a bar along the bottom, providing you aren't using tabs for your navigation.
+
+The advantage of this is that you have more space for actions, but you should limit yourself to five actions at most, avoiding the buttons becoming to small and difficult to tap.
+
+// TODO Add a sample
+
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.bottom-bar %}
 
-- Describe the pattern
-
 ## Item Actions
+
+So far we have considered actions relevant to the screen the user is currently viewing (perform a search or filter, share the current blog post, add a new element etc).
+
+There are occasions where a contextual action can help users perform tasks faster. An example of a contextual action is view a list of items, emails, to-do's or a product basket for example, where each list item have actions tied to them, so deleting, starring, marking as read etc.
+
+
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.item-actions %}
 
