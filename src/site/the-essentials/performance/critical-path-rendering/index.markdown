@@ -15,35 +15,8 @@ article:
   order: 1
 id: critical-path-rendering
 collection: performance
-key-takeaways:
-  construct-object-model: 
-    - Bytes → characters → tokens → nodes → object model
-    - HTML markup is transformed into a Document Object Model (DOM)
-    - CSS markup is transformed into a CSS Object Model (CSSOM)
-    - Both DOM and CSSOM are tree structures that capture the structure of the markup
-    - DOM and CSSOM are independent data structures
-    - DevTool Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM
-  render-tree-construction:
-    - The DOM and CSSOM trees are combined to form the render tree
-    - Render tree contains only the nodes required to render the page
-    - Layout is a recursive process which computes the exact position and size of each node within the renderer
-    - Paint is the last step, which takes in the render tree and position and size of each element and renders the    pixels to the screen
-  render-blocking-css:
-    - By default CSS is treated as a render blocking resource
-    - Media types and media queries allow us to mark some CSS resources as non render blocking
-    - All CSS resources, regardless of blocking or non-blocking behavior are downloaded by the browser
-  adding-interactivity:
-    - JavaScript can query and modify DOM and CSSOM
-    - JavaScript execution blocks on CSSOM
-    - JavaScript blocks DOM construction unless explicitly declared as async</td>
-  measure-crp:
-    - Navigation Timing provides high resolution timestamps for measuring CRP.
-    - Browser emits series of consumable events which capture various stages of the CRP.
 ---
 {% wrap content%}
-
-* Table of Contents
-{:toc}
 
 Optimizing for performance is all about understanding what happens in these 
 intermediate steps between receiving the HTML, CSS, and JavaScript bytes and the 
