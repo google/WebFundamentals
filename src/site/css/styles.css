@@ -2164,7 +2164,7 @@ ol.list--links li:before {
 }
 /* line 58, ../_sass/_components/_list.scss */
 ol.list--links li a {
-  display: inline-block;
+  line-height: 1;
 }
 /* line 349, ../_sass/_utils.scss */
 ol.list--links li a:before {

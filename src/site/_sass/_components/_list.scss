@@ -56,8 +56,8 @@ ol.list--links {
     }
 
     a {
-      display: inline-block;
       @include numbered-list;
+      line-height: 1; // fixes baseline grid alignment
     }
   }
 }
