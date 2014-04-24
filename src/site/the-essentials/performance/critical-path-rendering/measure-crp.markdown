@@ -12,6 +12,7 @@ introduction: "Delivering a fast web experience requires a lot of work by the br
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-05
+  featured: true
   order: 5
 collection: critical-path-rendering
 key-takeaways:
