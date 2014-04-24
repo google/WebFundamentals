@@ -61,6 +61,24 @@ hypothetical Smiles product.  The end result will be a fully functioning page
 that covers many of the core principles of building experiences that work well
 across all different device types.
 
+
+## TODO: Styling and images..
+
+[sratch]: 
+
+### Add Stylistic images
+
+Stylistic images are images that are not needed as part of the core content.
+
+A good example of this is a headline image for the 'above the fold' content.
+
+[TODO: Add Image]
+
+{% include_code _code/addimages.html styles css %}
+
+We have chosen a simple background image that is blurred so it doesn't take away from the content
+and we have set it to `cover` the entire element.
+
 # Make your page responsive
 
 The page has all the content needed to display on a narrow viewport, but on different screen sizes it doesn't
