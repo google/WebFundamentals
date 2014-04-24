@@ -27,7 +27,6 @@ key-takeaways:
 * Table of Contents
 {:toc}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.eliminate-downloads %}
 
 The fastest and best optimized resource is a resource not sent. Of course, this 
 may seem like an obvious statement, but in practice it is all too often 
@@ -47,6 +46,8 @@ implicit and explicit assumptions with your team. A few examples:
   and the user experience of our pages?
 * Does this resource need or have an SLA? Does this resource follow performance 
   best practices: compression, caching, and so on?
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.eliminate-downloads %}
 
 All too frequently our pages contain resources which are unnecessary, or worse, 
 hinder their performance without delivering much value to the visitor or the 
