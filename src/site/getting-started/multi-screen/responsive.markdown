@@ -214,8 +214,13 @@ to each other.
 
 ### Float the Video element
 
-The video element can also be moved out of the vertical flow of the narrow
-viewport and  can be display side by side with the bulleted list of content.
+The video in the narrow viewport interface is designed  be  the full width of
+the screen and positioned after the list of key features.  On a wide viewport
+the  video will scale up to be too large and not look correct when placed next
+to our list of features.
+
+The video element needs to be moved out of the vertical flow of the narrow
+viewport and should be display side by side with the bulleted list of content.
 
 [TODO: Animated GIF]
 
@@ -224,8 +229,8 @@ viewport and  can be display side by side with the bulleted list of content.
 ### Tile the Images
 
 The images in the narrow viewport (mobile devices mostly) interface are set to
-be  the full width of the screen.  This doesn't scale well on a screen with a
-wide viewport.
+be  the full width of the screen and stacked vertically.  This doesn't scale
+well on a wide viewport.
 
 [TODO: Animated GIF]
 
@@ -235,18 +240,28 @@ images will inflate to large.
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
-[TODO:  Make the images reposnive to DPI.]
+Tiling images is a good idea because it allows you to display content more 
+effectively depending on the size of the viewport.
 
-## Wrapping up
+### Make images responsive to DPI
 
-We have created a simple product landing page that works across a large range of
-devices, form-factors and screen sizes.
+When using images a web developer now also needs to take not only the size of
+the viewport in to consideration but the density of the display.
 
-*  Always set a viewport
-*  Create your base experience around mobile first
-*  Understand the content you want to display
-*  Once you have your mobile experience, increase the width of the display until it doesn't look right and set your breakpoint
+The web was built for 96dpi screens.  With the introduction of mobile devices
+we have seen a huge increase in the pixel density of screens not to mention
+Retina class displays on laptops.  As such, images that are encoded to 96dpi
+often look terrible on a hi-dpi device.
 
+We have a solution that is not widely adopted yet but for browsers that
+support it let you display a high density image on a high density display.
+
+[todo: src-set]
+
+### Tables
+
+Tables are very hard to get right on devices that have a narrow viewport and need
+special consideration.
 
 <div class="related-items">
 <div class="related-items">
@@ -255,13 +270,29 @@ devices, form-factors and screen sizes.
 ### Related information
 {: .related-items--title}
 
-* Todo: list the major topics to explore
-{: .list--links}
+*  Link to images
+*  Link to responsive images.
+*  Link to videos
+</div>
+</div>
+</div>
+</div>
 
-</div>
-</div>
-</div>
-</div>
+
+## Wrapping up
+
+**CONGRATULATIONS.** By the time you read this you will have created your
+first simple product landing page that works across a large range of devices,
+form-factors and screen sizes.
+
+If you follow these guidelines you will be off to a good start:
+
+*  Create a basic IA and understand your content before you code.
+*  Always set a viewport
+*  Create your base experience around mobile-first approach
+*  Once you have your mobile experience, increase the width of the display 
+   until it doesn't look right and set your breakpoint there.
+*  Keep iterating.
 
 {% include modules/nextarticle.liquid %}
 
