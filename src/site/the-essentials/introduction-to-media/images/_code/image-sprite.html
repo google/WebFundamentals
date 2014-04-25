@@ -3,13 +3,30 @@
   <head>
     <!-- // [TEMPLATE header_full] -->
     <title>TODO</title>
+    <style type="text/css">
+      /* // [START sprite] */
+      .sprite-sheet {
+        background-image: url(sprite-sheet.png);
+        width: 20px;
+        height: 20px;
+      }
+
+      .gray-airplane {
+        background-position: -100px -190px;
+      }
+
+      .red-airplane {
+        background-position: -120px -190px; 
+      }
+      /* // [END sprite] */
+
+    </style>
   </head>
   <body>
-    <!-- // [START todohtml] -->
     <div role="main">
-      <h1>TO DO!</h1>
+      <div class="sprite-sheet gray-airplane"></div>
+      <div class="sprite-sheet red-airplane"></div>
     </div>
-    <!-- // [END todohtml] -->
     <!-- // [TEMPLATE footer] -->
   </body>
 </html>
