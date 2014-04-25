@@ -64,12 +64,15 @@ module SampleBuilder
 	end
 
 	class SampleFile < Jekyll::StaticFile
-		def initialize(site, dest, path, file, contents)
+		attr_accessor :section
+
+		def initialize(site, dest, path, file, contents, section)
 			super(site, dest, path, file)
 			@use_jshtml = site.config['generate_sample_jshtml']
 			@contents = contents
 			@path = path
 			@filename = file
+			@section = section
 		end
 
 		def title
@@ -98,12 +101,14 @@ module SampleBuilder
   		end
   	end
 
-  	# TODO(ianbarber): This shouldn't really be a Page I think.
-	class Sample < Jekyll::Page
-    	def initialize(site, sourcepath, dir)
+  	class Sample
+  		attr_accessor :section
+
+    	def initialize(site, sourcepath, dir, section)
       		@site = site
       		@sourcepath = sourcepath
       		@dir = dir
+      		@section = section
     	end
 
     	def contents() 
@@ -136,6 +141,7 @@ module SampleBuilder
 			pages = []
 			dirs = Set.new
 			dirPaths = {}
+			dirTitles = {}
 			path = site.source
 			target_dir = File.join(site.dest, gen_dir)
 
@@ -145,6 +151,7 @@ module SampleBuilder
 				if File.exist?(dir)
 					dirs.add(dir) 
 					dirPaths[dir] = File.dirname(page.path)
+					dirTitles[dir] = page.dir
 				end
 			end
 			
@@ -152,7 +159,7 @@ module SampleBuilder
 				Dir.glob(dir + "/*").each do |sourcepath|
 					#Jekyll.logger.info sourcepath
 					if sourcepath =~ /\.html/
-						pages << Sample.new(site, sourcepath, dirPaths[dir])
+						pages << Sample.new(site, sourcepath, dirPaths[dir], dirTitles[dir])
 					else
 						codepath = File.join(dirPaths[dir], "/_code")
 						prefix, relative_path = sourcepath.split(codepath)
@@ -176,30 +183,47 @@ module SampleBuilder
 						site.dest, 
 						File.dirname(location), 
 						File.basename(filename), 
-						page.contents)
+						page.contents,
+						page.section)
 		  	end
 		end
 	end
 
 	class SamplesTag < Liquid::Tag
+		@last_section = nil
 	    def initialize(tag_name, markup, tokens)
 	      super
 	    end
 
 	    def render(context)
-	    	#TODO(ianbarber): It would be nice to have stable ordering here
 			samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
-			samples.sort!{ |a,b| a.title.casecmp b.title}
-		    links = samples.map{ |sample| render_sample(sample, context.registers[:site]) }
+			samples.sort!{ 
+				|a,b| 
+				cmp = a.section <=> b.section; 
+				if cmp == 0 
+					cmp = a.title.casecmp b.title 
+				end
+				cmp 
+			}	
+			links = samples.map{ |sample| render_sample(sample, context.registers[:site]) }
 		    "<ul>" +
 		    links.join("\n") +
-		    "</ul>"
+		    "</ul></li></ul>"
 	    end
 
 	    def render_sample(sample, site)
 	    	url = File.join(site.baseurl, sample.url)
 	    	name = sample.title
-	      "<li><a href='#{url}'>#{name}</a></li>"
+	    	section = sample.section
+	    	output = ""
+	    	if @last_section != section
+	    		if @last_section != nil
+	    			output += "</ul></li>"
+	    		end
+	    		output += "<li>#{section}<ul>"
+	    		@last_section = section
+	    	end
+			output += "<li><a href='#{url}'>#{name}</a></li>"
 	    end
 	end
 end
