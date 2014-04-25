@@ -273,13 +273,13 @@ Safari on an iPad plays video inline:
 
 For platforms that do not force fullscreen video playback, the Fullscreen API is [widely supported](http://caniuse.com/fullscreen). Use this API to control fullscreening of content, including video:
 
-{% include_code _code/fullscreen.html elementfs js %}
+{% include_code _code/fullscreen.html elementfs javascript %}
 
-{% include_code _code/fullscreen.html pagefs js %}
+{% include_code _code/fullscreen.html pagefs javascript %}
 
-{% include_code _code/fullscreen.html listener js %}
+{% include_code _code/fullscreen.html listener javascript %}
 
-{% include_code _code/fullscreen.html check js %}
+{% include_code _code/fullscreen.html check javascript %}
 
 You can also use the CSS `:fullscreen` pseudo-class to change the way elements are displayed in fullscreen mode.
 
