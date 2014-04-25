@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+
+    <!-- // [START ms-specific] -->
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- // [END ms-specific] -->
+
+    <title>Nav Drawer Sample 4</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+          html, body {
+        width: 100%;
+  height: 100%;
+  
+  margin: 0;
+  padding: 0;
+
+  background-color: #fff;
+      }
+
+      body {
+position: relative;
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  
+  box-sizing: border-box;
+
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+
+  overflow: hidden;
+
+    background-image: url('http://37.media.tumblr.com/d794bfd843e9a04489d17865a58ac700/tumblr_n3ttuxlKFr1st5lhmo1_1280.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.app-bar {
+  display: flex;
+  
+  position: fixed;
+
+  width: 100%;
+  height: 60px;
+  
+  top: 0;
+  left: 0;
+
+  flex-direction: row;
+
+  z-index: 2;
+}
+
+.app-bar .logo {
+  flex: 1;
+  
+  font-size: 20px;
+  line-height: 60px;
+  
+  margin: 0 16px;
+  
+  color: rgba(254, 254, 254, 0.8);
+
+  float: none;
+  max-width: none;
+}
+
+.app-bar .logo a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+.app-bar button {
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+  
+  flex-direction: row;
+
+  background-image: none;
+  background-color: transparent;
+  
+  border: none;
+
+  padding: 4px;
+  margin: 8px 8px 8px 0px;
+
+  box-sizing: border-box;
+
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(254, 254, 254);
+
+  border-style: none;
+  border-radius: 4px;
+
+  -webkit-transition: border 300ms ease-in,background 300ms ease-in;
+  transition: border 300ms ease-in,background 300ms ease-in
+}
+
+.app-bar button.menu {
+  position: relative;
+}
+
+.app-bar button.menu img {
+  position: absolute;
+
+  top: 6px;
+  left: 6px;
+}
+
+body.open .app-bar button .menu-icon {
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+
+body.open .app-bar button .close-icon {
+  -webkit-transition: opacity 300ms ease-in 300ms;
+  transition: opacity 300ms ease-in 300ms;
+}
+
+.app-bar button .menu-icon {
+  -webkit-transition: opacity 300ms ease-in 300ms;
+  transition: opacity 300ms ease-in 300ms;
+}
+
+.app-bar button .close-icon {
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+
+.app-bar button:hover {
+  border-color: transparent;
+  background-color: rgba(254, 254, 254, 0.2);
+}
+
+.app-bar button:active {
+  border-color: transparent;
+  background-color: rgba(254, 254, 254, 0.4);
+}
+
+.app-bar button:focus {
+  border-color: transparent;
+  outline: 0;
+  background-color: rgba(254, 254, 254, 0.2);
+}
+
+.app-bar button:active:focus {
+  background-color: rgba(254, 254, 254, 0.4);
+}
+
+.app-bar button img {
+  width: 32px;
+  height: 32px;
+}
+
+.app-bar-actions  {
+  display: flex;
+  
+  flex-direction: row;
+}
+
+.search {
+  display: none;
+  
+  width: 400px;
+  height: 60px;
+  
+  padding: 16px;
+  margin: 0;
+  
+  box-sizing: border-box;
+  
+  border: none;
+  
+}
+
+body .menu-icon {
+  opacity: 1.0;
+}
+
+body .close-icon {
+  opacity: 0.0;
+}
+
+@media all and (min-width: 1200px) {
+  
+  body {
+    padding: 16px;
+  }
+  
+  .app-bar {
+    display: block;
+    
+    height: 130px;
+    
+    padding: 0 16px;
+    margin-bottom: 16px;
+    
+    box-sizing: border-box;
+    
+    background-color: transparent;
+  }
+  
+  .app-bar .logo {
+    float: left;
+    
+    margin: 0;
+    
+    font-size: 100px;  
+    line-height: 130px;
+  }
+
+  .app-bar-actions {
+    float: right;
+    
+    margin: 35px 0;
+  }
+  
+  .app-bar:after {
+    content: ' ';
+    
+    display:block;
+    height: 0;
+  overflow: hidden;
+    
+    clear: both;
+  }
+  
+  .search {
+    display: block;
+    
+    padding-left: 16px;
+  }
+  
+  button.menu {
+    display: none;
+  }
+  
+  nav {
+    display: block;
+
+    margin-top: 130px;
+  }
+}
+
+.navdrawer-container {
+  position: fixed;
+  
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+  
+  /* Padding Left to stash the ul */
+  padding-right: 250px;
+
+  color: white;
+  
+box-sizing: content-box;
+
+  /*
+  This is a trick to improve performance on newer versions of Chrome
+  #perfmatters
+  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /*
+  Using translate3d as a trick to improve performance on older versions of Chrome
+  See: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
+  #perfmatters
+  */
+  -webkit-transform: translate(250px,0);
+  transform: translate(250px,0);
+  
+  z-index:1;
+  
+  -webkit-transition: box-shadow 0.4s ease-out, background-color 0.4s ease-out;
+  transition: box-shadow 0.4s ease-out, background-color 0.4s ease-out;
+}
+
+body.open {
+  -webkit-transform: translate(-250px,0);
+  transform: translate(-250px,0);
+}
+
+body.open .menu-icon {
+  opacity: 0.0;
+}
+
+body.open .close-icon {
+  opacity: 1.0;
+}
+
+.navdrawer-container.open {
+  -moz-box-shadow:    -1px 0px 10px 0px #000;
+  -webkit-box-shadow: -1px 0px 10px 0px #000;
+  box-shadow:         -1px 0px 10px 0px #000;
+}
+
+.navdrawer-container.open {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.navdrawer-container ul {
+  position:absolute;
+
+  width: 250px;
+  height: 100%;
+
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+
+  background-color: #000000;
+
+  z-index: 2;
+}
+
+.navdrawer-container ul li a {
+  display: block;
+  
+  height: 60px;
+  
+  padding: 0 20px;
+  
+  line-height: 60px;
+  
+  text-decoration: none;
+  color: white;
+}
+
+.navdrawer-container ul li {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.navdrawer-container ul li a:hover, .navdrawer-container ul li a:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navdrawer-container ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 0;
+}
+
+@media all and (min-width: 1200px) {
+  .navdrawer-container {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+    
+    -webkit-transform: none;
+    tranform: none;
+    
+    margin-top: 130px;
+  }
+  .navdrawer-container ul {
+    display: flex;
+    
+    flex-direction: row;
+  }
+  
+  .navdrawer-container ul li {
+    border: none;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <header class="app-bar">
+      <h1 class="logo"><a href="#">Logo</a></h1>
+      <section class="app-bar-actions">
+        
+      </section>
+      <button class="menu">
+        <img class="menu-icon" src="./hamburger-icon-light.png" />
+        <img class="close-icon" src="./close-icon-light.png" />
+      </button>
+    </header>
+  
+    <nav class="navdrawer-container">
+      <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      var navdrawerContainer = document.querySelector('.navdrawer-container');
+
+      var menuBtn = document.querySelector('.menu');
+      menuBtn.addEventListener('click', function() {
+        var isOpen = document.body.classList.contains('open');
+        if(isOpen) {
+          document.body.classList.remove('open');
+          navdrawerContainer.classList.remove('open');
+        } else {
+          document.body.classList.add('open');
+          navdrawerContainer.classList.add('open');
+        }
+      }, true);
+    </script>
+
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>
