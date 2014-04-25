@@ -11,17 +11,35 @@ article:
 collection: introduction-to-media
 key-takeaways:
   use-right-image:
-    - Use the best image for the characteristics of the display, consider screen size, device resolution and page layout.
-    - Change background images in CSS for high DPI displays using media queries with min-resolution and -webkit-min-device-pixel-ratio.
-    - Use srcset to provide high resolution images in addition to the 1x image in markup.
-    - Consider the performance costs when using JavaScript image replacement techniques or when serving highly compressed high resolution images to lower resolution devices.
+    - Use the best image for the characteristics of the display, consider 
+      screen size, device resolution and page layout.
+    - Change the <code>background-image</code> property in CSS for high DPI 
+      displays using media queries with <code>min-resolution</code> and 
+      <code>-webkit-min-device-pixel-ratio</code>.
+    - Use srcset to provide high resolution images in addition to the 1x 
+      image in markup.
+    - Consider the performance costs when using JavaScript image replacement 
+      techniques or when serving highly compressed high resolution images to 
+      lower resolution devices.
   avoid-images:
-    - Avoid images whenever possible, instead, leverage browser capabilities, use unicode characters in place of images, and replace complex icons with icon fonts.
+    - Avoid images whenever possible, instead, leverage browser capabilities, 
+      use unicode characters in place of images, and replace complex icons 
+      with icon fonts.
   optimize-images:
-    - Don't just randomly choose an image format, understand the different formats available, and use the format best suited.
-    - Include image optimization and compression tools into your workflow to reduce file sizes.
-    - Reduce the number of http requests by placing frequently used images into image sprites.
-    - Consider loading images only after they’ve scrolled into view to improve the initial page load time and reduce the initial page weight.
+    - Don't just randomly choose an image format, understand the different 
+      formats available, and use the format best suited.
+    - Include image optimization and compression tools into your workflow to 
+      reduce file sizes.
+    - Reduce the number of http requests by placing frequently used images 
+      into image sprites.
+    - Consider loading images only after they’ve scrolled into view to 
+      improve the initial page load time and reduce the initial page weight.
+remember:
+  compressive:
+    - Use caution with the compressive technique because of the increased 
+      memory and decoding costs it requires.  Resizing large images to fit on 
+      smaller screens is expensive and can be particularly painful on low-end
+      devices where both memory and processing is limited.
 ---
 
 {% wrap content%}
@@ -29,33 +47,52 @@ key-takeaways:
 * Table of Contents
 {:toc}
 
+### Responsive images
+
 Responsive web design means that not only can our layouts change based on device 
 characteristics, but content as well.  For example, on high resolution (2x) 
 displays, high resolution graphics are needed to ensure sharpness.  An image 
 that  is 50% width may work just fine when the browser is 800px wide, but will 
 use too much real estate on a narrow phone.
 
-![Art direction example](img/todo.png)
+### Art direction
+
+![Art direction example](img/art-direction.jpg)
 
 Other times the image may need to be changed more drastically: changing the 
 proportions, cropping and even replacing the entire image.  In this case, 
-changing the image is usually referred to as art direction.
+changing the image is usually referred to as art direction.  See
+[responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more 
+examples.
 
 ## Images in CSS
 
-The CSS background property is a powerful tool for adding complex images to 
+The CSS `background` property is a powerful tool for adding complex images to 
 elements, making it easy to add multiple images, cause them to repeat, and more. 
-Using media queries, images can be changed not only based on the browser width, 
-but also on screen resolution, making it much easier to provide 2x images only 
-to the devices where it's useful.
+ When combined with media queries, the background property becomes even more 
+powerful, enabling conditional image loading based on screen resolution, 
+viewport size and more.
+
+### Use media queries for conditional image loading or art direction
+
+Media queries not only affect the page layout, but can also be used to 
+conditionally load images or to provide art direction depending on the viewport 
+width.
+
+For example in the sample below, on smaller screens, only `small.png` is 
+downloaded and applied to the content `div`, while on larger screens, 
+`background-image: url(body.png)` is applied to the body and `background-image: 
+url(large.png)` is applied to the content `div`.  
+
+{% include_code _code/conditional-mq.html conditional css %}
 
 ### Use image-set to provide high res images
 
 The `image-set()` function in CSS enhances the behavior `background` property, 
-making it easy to provide multiple image files for different characteristics. 
-This allows the browser to choose the best image depending on the 
-characteristics of the device, for example using a 2x image on a 2x display, or 
-a 1x image on a 2x device when on a limited bandwidth network. 
+making it easy to provide multiple image files for different device 
+characteristics.  This allows the browser to choose the best image depending on 
+the characteristics of the device, for example using a 2x image on a 2x display, 
+or a 1x image on a 2x device when on a limited bandwidth network. 
 
 {% highlight css %}  
 background-image: image-set(  
@@ -65,7 +102,7 @@ background-image: image-set(
 {% endhighlight %}
 
 In addition to loading the correct image, the browser will also scale it 
-accordingly. In other words, the browser assumes that 2 images are twice as 
+accordingly. In other words, the browser assumes that 2x images are twice as 
 large as 1x images, and so will scale the 2x image down by a factor of 2, so 
 that the image appears to be the same size on the page.
 
@@ -73,17 +110,7 @@ Support for `image-set()` is still new and is only supported in Chrome and
 Safari with the `-webkit` vendor prefix.  Care must also be taken to include a 
 fallback image for when `image-set()` is not supported, for example:
 
-{% highlight css %}  
-background-image: url(icon1x.jpg);  
-background-image: -webkit-image-set(  
-  url(icon1x.jpg) 1x,  
-  url(icon2x.jpg) 2x  
-);  
-background-image: image-set(  
-  url(icon1x.jpg) 1x,  
-  url(icon2x.jpg) 2x  
-);  
-{% endhighlight %}
+{% include_code _code/image-set.html imageset css %}
 
 The above will load the appropriate asset in browsers that support image-set, 
 and fall back to the 1x asset otherwise. The obvious caveat is that while 
@@ -96,9 +123,9 @@ ratio](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), making it possible
 to specify different images for 2x vs 1x displays.  
 
 {% highlight css %}  
-@media
-(min-resolution: 2dppx),  
-(-webkit-min-device-pixel-ratio: 2) {  
+@media (min-resolution: 2dppx),  
+(-webkit-min-device-pixel-ratio: 2)   
+{  
   /* High dpi styles & resources here */  
 }  
 {% endhighlight %}
@@ -111,11 +138,11 @@ also provides the benefit of ensuring something will be rendered if the browser
 doesn't support resolution specific media queries.
 
 ![TODO](img/TODO.png)  
-{% include_code _code/todo.html todohtml html %}
+{% include_code _code/media-query-dppx.html todohtml html %}
 
-Of course, you can also use the min-width syntax to display alternative images 
-depending on the viewport size.  This technique has the advantage that the image 
-is not downloaded if media query doesn't match.  For example, `bg.png` is only 
+You can also use the min-width syntax to display alternative images depending on 
+the viewport size.  This technique has the advantage that the image is not 
+downloaded if media query doesn't match.  For example, `bg.png` is only 
 downloaded and applied to the `body` if the browser width is 500px or greater:
 
 {% highlight css %}  
@@ -149,16 +176,17 @@ img, embed, object, video {
 {% endhighlight %} 
 
 Be sure to provide meaningful descriptions via the `alt` attribute on `img` 
-elements, these help make your site more accessible by providing context to 
+elements; these help make your site more accessible by providing context to 
 screen readers and other assistive technologies.
 
 ### Enhance `img`'s with `srcset` for high DPI devices
 
 The `srcset` attribute enhances the behavior of the `img` element, making it 
-easy to provide multiple image files for different characteristics.  This allows 
-the browser to choose the best image depending on the characteristics of the 
-device, for example using a 2x image on a 2x display, or a 1x image on a 2x 
-device when on a limited bandwidth network. 
+easy to provide multiple image files for different device characteristics.  In 
+the same way that the [`image-set` CSS function](#use-image-set-to-provide-high-res-images) 
+works, `srcset` allows the browser to choose the best image depending on the 
+characteristics of the device, for example using a 2x image on a 2x display, 
+or a 1x image on a 2x device when on a limited bandwidth network. 
 
 {% highlight html %}  
 <img src="photo.png" srcset="photo@2x.png 2x" ... />  
@@ -192,7 +220,7 @@ significantly.
     {% link_sample _code/todo.html %}   
       <img src="imgs/compressive-1x.png" alt="Page with a 1x image saved at 
 quality Z">  
-      <br>See example   
+      See example   
     {% endlink_sample %}  
     1x image @ quality X  
      File size YkB  
@@ -203,7 +231,7 @@ quality Z">
     {% link_sample _code/todo.html %}   
       <img src="imgs/compressive-2x.png" alt="Page with a 2x image saved at 
 quality Z">  
-      <br>See example   
+      See example   
     {% endlink_sample %}  
     2x image @ quality X  
      File size YkB  
@@ -211,15 +239,12 @@ quality Z">
   </div>  
 </div>
 
-Use caution with this technique because of the increased memory and decoding 
-costs it requires.  Resizing large images to fit on smaller screens is expensive 
-and can be particularly painful on low-end devices where both memory and 
-processing is limited.
+{% include modules/highlight.liquid character="!" position="right" title="Important" type="remember" list=page.remember.compressive %}
 
 #### JavaScript image replacement
 
-JavaScript image replacement lets check the capabilities of the device and then 
-"do the right thing". You can determine device pixel ratio via 
+JavaScript image replacement checks the capabilities of the device and "does the 
+right thing". You can determine device pixel ratio via 
 `window.devicePixelRatio`, get screen width and height, and even potentially do 
 some network connection sniffing via `navigator.connection` or issuing a fake 
 request. Once you've collected all of this information, you can decide which 
@@ -228,19 +253,28 @@ image to load.
 One big drawback to this approach is that using JavaScript means that you will 
 delay image loading until at least the look-ahead parser has finished. This 
 means that images won't even start downloading until after the `pageload` event 
-fires and the potential need to download the same image twice, once at 1x and 
-again a second time at 2x.
+fires. In addition, the browser will most likely download both the 1x and 2x 
+images, resulting in increased page weight.
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.use-right-image %}
 
 ## Avoid images completely
 
-Sometimes, the best image isn't actually an image at all, but to use the native 
-capabilities of the browser to provide the same or similar functionality.  
-Browsers generate visuals that would have previously required images.   This 
-means that browsers no longer need to download separate image files and prevents 
-awkwardly scaled images.  Icons can be rendered using unicode or special icon 
-fonts.
+Sometimes, the best image isn't actually an image at all. Whenever possible, use 
+the native capabilities of the browser to provide the same or similar 
+functionality.  Browsers generate visuals that would have previously required 
+images.   This means that browsers no longer need to download separate image 
+files and prevents awkwardly scaled images.  Icons can be rendered using unicode 
+or special icon fonts.
+
+### Place text in markup, instead of embedded in images
+
+Wherever possible, text should be text, and not embedded into images, for 
+example using images for headlines, or placing contact information like phone 
+numbers or addresses directly into images.  This prevents people from being able 
+to copy and paste the information, makes it inaccessible for screen readers, and 
+isn't responsive.  Instead, place the text in your markup and if necessary use 
+webfonts to achieve the style you need.  
 
 ### Use CSS to replace images
 
@@ -274,7 +308,7 @@ corners can be added with the `border-radius` property.
 {% endhighlight %}
 
 Keep in mind that using these techniques does require rendering cycles, which 
-can be significant on mobile.  If over used, you'll lose any benefit you may 
+can be significant on mobile.  If over-used, you'll lose any benefit you may 
 have gained and may hinder performance.
 
 ### Replace simple icons with unicode
@@ -283,30 +317,33 @@ Many fonts include support for the myriad of unicode glyphs, which can be used
 instead of images.  Unlike images, unicode fonts scale well, and look good no 
 matter matter how small or large they appear on screen.
 
-Beyond normal the normal character set, unicode may include symbols for number 
-forms (&#8528;), arrows (&#8592;), math operators (&#8730;), geometric shapes 
+Beyond the normal character set, unicode may include symbols for number forms 
+(&#8528;), arrows (&#8592;), math operators (&#8730;), geometric shapes 
 (&#9733;), control pictures (&#9654;), braille patterns (&#10255;), music 
 notation (&#9836;), Greek letters (&#937;), even chess pieces (&#9822;).  
 
 Including a unicode character is done in the same way named entities are: 
 `&#XXXX`, where `XXXX` represents the unicode character number.  For example:
 
-You're a super &#9733;
-
 {% highlight html %}  
 You're a super &#9733;  
 {% endhighlight %}
 
+You're a super &#9733;
+
 ### Replace complex icons with icon fonts
 
 For more complex icon requirements, icon fonts are generally lightweight, easy 
-to use and can be served in a single HTTP request.  Icon fonts have a number of 
-advantages to images: they're vector graphics that can be infinitely scaled; CSS 
-effects such as color, shadowing, transparency and animations are 
-straightforward; and an entire set of icons can be downloaded in one font. 
+to use and can be served in a single HTTP request. Icon fonts have a number of 
+advantages to images:
+
+* They're vector graphics that can be infinitely scaled.
+* CSS effects such as color, shadowing, transparency and animations are 
+  straightforward.
+* An entire set of icons can be downloaded in one font. 
 
 ![Example of page that uses Font Awesome](img/TODO.png)  
-{% include_code _code/todo.html todohtml html %}
+{% include_code _code/icon-font.html todohtml html %}
 
 There are hundreds of free and paid icon fonts available including [Font 
 Awesome](http://fortawesome.github.io/Font-Awesome/), 
@@ -320,12 +357,12 @@ may be better to use an image or an image sprite.
 
 ## Optimize images for performance
 
-Images often account for most of the downloaded 
-bytes and also often occupy a significant amount of the visual space on the page. As a 
-result, optimizing images can often yield some of the largest byte savings and 
-performance improvements for your website: the fewer bytes the browser has to 
-download, the less competition there is for client's bandwidth and the faster 
-the browser can download and display all the assets. 
+Images often account for most of the downloaded bytes and also often occupy a 
+significant amount of the visual space on the page. As a result, optimizing 
+images can often yield some of the largest byte savings and performance 
+improvements for your website: the fewer bytes the browser has to download, the 
+less competition there is for client's bandwidth and the faster the browser can 
+download and display all the assets. 
 
 For a more in-depth look, check out the [Image Optimization](//TODO) section in 
 [Optimizing Performance](//TODO).
@@ -335,7 +372,7 @@ For a more in-depth look, check out the [Image Optimization](//TODO) section in
 There are two types of images to consider: [vector 
 images](http://en.wikipedia.org/wiki/Vector_graphics) and [raster 
 images](http://en.wikipedia.org/wiki/Raster_graphics). For raster images, you 
-also need to choose the right compression format, for example: GIF, PNG, JPG. 
+also need to choose the right compression format, for example: `GIF`, `PNG`, `JPG`. 
 
 **Raster images**, like photographs and other images which are represented as a 
 grid of individual dots or pixels. Raster images typically come from a camera or 
@@ -346,9 +383,10 @@ to fill in the missing pixels.
 
 **Vector images**, such as logos and line art are be defined by a set of curves, 
 lines, shapes and fill colors. Vector images are created with programs like 
-Adobe Illustrator or Inkscape and saved to a vector format like `SVG`.  Because 
-vector images are built on simple primitives, they can be scaled without any 
-loss in quality without a change in file size. 
+Adobe Illustrator or Inkscape and saved to a vector format like 
+[`SVG`](http://css-tricks.com/using-svg/).  Because vector images are built on 
+simple primitives, they can be scaled without any loss in quality without a 
+change in file size. 
 
 When choosing the right format, it is important to consider both the origin of 
 the image (raster or vector), and the content (colors, animation, text, etc). 
@@ -357,12 +395,13 @@ weaknesses.
 
 Start with these guidelines when choosing the right format:
 
-* Use JPG for photographic images.
-* Use SVG for vector art and solid color graphics such as logos and line art. 
-* If vector art is unavailable, try WebP or PNG.
-* Use PNG rather than GIF as it allows for more colors and offers better 
+* Use `JPG` for photographic images.
+* Use `SVG` for vector art and solid color graphics such as logos and line art. 
+  If vector art is unavailable, try WebP or PNG.
+* Use `PNG` rather than `GIF` as it allows for more colors and offers better 
   compression ratios.
-* Consider videos for animations instead of GIFs.
+* For longer animations, consider using `<video>` which provide better image 
+  quality and gives the user control over playback.
 
 ### Reduce the file size
 
@@ -371,7 +410,13 @@ saving. There are a number of tools for image compression – lossy and lossless
 online, GUI, command line.  Where possible, it's best to try automating image 
 optimization so that it's a first-class citizen in your workflow.
 
-[TODO: Include steps for optimizing images here]
+Several tools are available that perform further, lossless compression on `JPG` 
+and `PNG` files, with no effect on image quality. For `JPG`, try 
+[jpegtran](http://jpegclub.org/) or 
+[jpegoptim](http://freshmeat.net/projects/jpegoptim/) (available on Linux only; 
+run with the --strip-all option). For `PNG`, try 
+[OptiPNG](http://optipng.sourceforge.net/) or 
+[PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ### Use image sprites
 
@@ -381,7 +426,7 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
 ![Image sprite used by our sample](img/TODO.png)  
-{% include_code _code/todo.html todohtml html %}
+{% include_code _code/image-sprite.html todohtml html %}
 
 Spriting has the advantage of reducing the number of downloads required to get 
 multiple images, while still enabling caching.
@@ -394,7 +439,7 @@ content has finished loading and rendering.  In addition to performance
 improvements, using lazy loading can create infinite scrolling experiences.
 
 ![Example of a page that uses lazy-loading for images](img/TODO.png)  
-{% include_code _code/todo.html todohtml html %}
+{% include_code _code/lazy-load.html todohtml html %}
 
 Be careful when creating infinite scrolling pages, because content is loaded as 
 it becomes visible, search engines may never see that content.  In addition, 
@@ -402,5 +447,6 @@ users who are looking for information they expect to see in the footer will
 never see the footer because new content is always loaded.
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
+
 
 {% endwrap %}

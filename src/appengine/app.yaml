@@ -53,4 +53,7 @@ handlers:
 - url: /web/essentials/(.*)
   static_files: build/static/\1
   expiration: 7d
-  upload: build/static/(.+) 
+  upload: build/static/(.+)
+
+skip_files:
+- ^(.*/)?.*\.psd$

@@ -17,12 +17,11 @@ rel:
   gplusauthor: https://plus.google.com/+MattGaunt
 key-takeaways:
   add-states:
-    - Make your site feel snappy and responsive&colon; change the UI for each touch
-      state.
-    - Don’t override a browser’s default responses to touch unless you are
+    - Make your site feel snappy and responsive&colon; change the UI for each state.
+    - Don’t override a browser’s default responses to touch and focus unless you are
       implementing your own UI changes.
     - Disable text selection on elements user’s will touch, unless there’s
-      a good reason why users might need that text.
+      a good reason why users might need to copy / select the text.
   touch-events:
     - For full device support, handle touch, mouse and MS Pointer Events.
     - Always bind start event listeners to the element itself.
@@ -50,26 +49,15 @@ collection: user-input
 
 <!-- TODO[MATTGAUNT] add related items -->
 <!-- TODO[MATTGAUNT] add what's next -->
-<!-- TODO[MATTGAUNT] update necessary images -->
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 ## Add touch states
-
-<!--
-Demo: http://jsbin.com/siramabo/latest/edit
--->
-<!--
-Demo: http://jsbin.com/kugenoza/1/edit
--->
-<!-- [Image from: http://jsbin.com/siramabo/26/edit]-->
-
 
 ### Use pseudo classes to change UI for each touch state
 
 Have you ever touched or clicked an element on a web page and questioned
-whether the site actually detected you?
+whether the site actually detected it?
 
 The fastest way to support touch is to change the UI in response to a DOM
 element’s change in state.  For example, a simple color change not only
@@ -123,7 +111,7 @@ via a meta tag:
 
 #### Override border color style in focus state
 
-Suppress border color when focused using `outline: 0`:
+Suppress the border color when an element is focused using `outline: 0`:
 
 {% highlight css %}
 .btn:focus {
@@ -134,7 +122,7 @@ Suppress border color when focused using `outline: 0`:
 ### Disable user-select on UI that responds to touch state
 
 Some mobile browsers will select text if the user long presses on the screen.
-This can result in a bad user experience if the user accidentally press down
+This can result in a bad user experience if the user accidentally presses down
 on a button for too long. You can prevent this from happening using the
 `user-select` CSS property:
 
@@ -239,10 +227,12 @@ accidentally move the mouse outside of the element, which results in the move
 events no longer firing. By adding the move event to the document, we
 overcome this and continue to get mouse move events.
 
-You can use the Show potential scroll bottlenecks feature in Chrome DevTools
+You can use the `"Show potential scroll bottlenecks"` feature in Chrome DevTools
 to show how the touch events behave:
 
-[TODO: IMAGE SHOWING THIS - Dev Tools + Device]
+<img class="g-medium--1 g-medium--last g-wide--3" src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools" />
+
+<div style="clear: both;"></div>
 
 ### Handle multi-element interaction
 
@@ -330,8 +320,6 @@ use `touch-action: none` to disable scrolling on touch:
 
 {%include_code _code/touch-demo-1.html touch-action-example css %}
 
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.touch-events %}
-
 ## Reference
 
 The definitive touch events reference can be found here:
@@ -372,7 +360,7 @@ The definitive touch events reference can be found here:
     </tr>
     <tr>
       <td><code>:hover</code></td>
-      <td>TODO:NEED IMAGE</td>
+      <td><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
       <td>
         This state is entered when a is cursor placed over an element.
         Changes in UI on hover are helpful to encourage users to interact
