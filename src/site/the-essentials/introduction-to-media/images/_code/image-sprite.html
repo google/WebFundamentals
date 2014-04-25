@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <!-- // [TEMPLATE header_full] -->
-    <title>TODO</title>
+    <title>Sprite Sheet Sample</title>
     <style type="text/css">
+      span.sprite-sheet {
+        display: inline-block;
+      }
       /* // [START sprite] */
       .sprite-sheet {
         background-image: url(sprite-sheet.png);
@@ -24,8 +27,16 @@
   </head>
   <body>
     <div role="main">
-      <div class="sprite-sheet gray-airplane"></div>
-      <div class="sprite-sheet red-airplane"></div>
+      <h1>Sprite Sheet Sample</h1>
+      <p>
+        <img src="sprite-sheet.png">
+      </p>
+      <p>
+        Look, a gray airplane! <span class="sprite-sheet gray-airplane"></span>
+      </p>
+      <p>
+        And this is a red airplane! <span class="sprite-sheet red-airplane"></span>
+      </p>
     </div>
     <!-- // [TEMPLATE footer] -->
   </body>
