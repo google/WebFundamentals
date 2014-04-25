@@ -48,12 +48,12 @@
 
 .button--secondary {
   @extend .button;
-  @include style-button(#fafafa, #cb4437);
+  @include style-button(#fafafa, $colorBlue);
 }
 
 .button--secondary-variation {
   @extend .button;
-  @include style-button(#fafafa, #cb4437, true);
+  @include style-button(#ffffff, $colorBlue, true);
 }
 
 .styleguide__inverted-block {

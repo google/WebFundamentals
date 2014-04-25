@@ -1146,7 +1146,7 @@ body.debug:after {
     display: block;
     position: absolute;
     top: 0;
-    right: -65px;
+    right: 45px;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 350px;
     font-weight: 900;
@@ -1159,7 +1159,7 @@ body.debug:after {
   /* line 401, ../_sass/_utils.scss */
   .highlight-module--left .highlight-module__container:before {
     right: auto;
-    left: -65px;
+    left: 45px;
   }
   /* line 424, ../_sass/_utils.scss */
   .highlight-module--learning .highlight-module__container:before {
@@ -2136,15 +2136,15 @@ li > p {
 /* line 49, ../_sass/_components/_button.scss */
 .button--secondary {
   background: #fafafa;
-  color: #cb4437;
+  color: #4285f4;
   border: 1px solid #e1e1e1;
 }
 
 /* line 54, ../_sass/_components/_button.scss */
 .button--secondary-variation {
-  background: #fafafa;
-  color: #cb4437;
-  border: 1px solid #e1e1e1;
+  background: white;
+  color: #4285f4;
+  border: 1px solid #e6e6e6;
   border-color: transparent;
 }
 
