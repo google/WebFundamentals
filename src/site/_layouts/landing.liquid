@@ -36,8 +36,8 @@
 
         {% for guide in page.articles.[page.id] %}
 
-        <li class="guides-list__item g--half {% cycle '', 'g--last' %}">
-          <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+        <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
+          <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
           <p>{{guide.description}}</p>
           <ol class="list--links list--reset">
           {% for article in page.articles[guide.id] %}

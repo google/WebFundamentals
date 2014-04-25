@@ -2263,28 +2263,24 @@ ol.list--links li a:before {
   text-align: center;
 }
 /* line 71, ../_sass/_components/_list.scss */
-.centered-list h3 {
-  color: #4285f4;
-}
-/* line 75, ../_sass/_components/_list.scss */
 .centered-list p {
   padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 75, ../_sass/_components/_list.scss */
+  /* line 71, ../_sass/_components/_list.scss */
   .centered-list p {
     padding-bottom: 0;
   }
 }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 84, ../_sass/_components/_list.scss */
+/* line 80, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-/* line 89, ../_sass/_components/_list.scss */
+/* line 85, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2294,28 +2290,28 @@ ol.list--links li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 89, ../_sass/_components/_list.scss */
+  /* line 85, ../_sass/_components/_list.scss */
   .featured-list__item {
     padding: 52px 32px;
   }
 }
-/* line 102, ../_sass/_components/_list.scss */
+/* line 98, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
-/* line 106, ../_sass/_components/_list.scss */
+/* line 102, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 111, ../_sass/_components/_list.scss */
+/* line 107, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   position: relative;
   padding-top: 26px;
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 111, ../_sass/_components/_list.scss */
+  /* line 107, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     padding-top: 0;
     margin: 0;
@@ -2323,7 +2319,7 @@ ol.list--links li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 122, ../_sass/_components/_list.scss */
+  /* line 118, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2333,14 +2329,14 @@ ol.list--links li a:before {
     width: 100%;
   }
 }
-/* line 133, ../_sass/_components/_list.scss */
+/* line 129, ../_sass/_components/_list.scss */
 .featured-list__img img {
   margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 133, ../_sass/_components/_list.scss */
+  /* line 129, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2352,11 +2348,11 @@ ol.list--links li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 152, ../_sass/_components/_list.scss */
+/* line 148, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 156, ../_sass/_components/_list.scss */
+/* line 152, ../_sass/_components/_list.scss */
 .list--reset li a:before, .list--reset li:before {
   display: none !important;
 }
@@ -2850,6 +2846,55 @@ td:last-child:after {
 /* line 55, ../_sass/_components/_guides-list.scss */
 .guides-list__item:before {
   display: none;
+}
+
+/**
+*
+* Themed styles
+*
+* Google Web Essentials
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 15, ../_sass/_themed.scss */
+.theme--multi-device-layouts .themed {
+  color: #297ea9;
+}
+/* line 17, ../_sass/_themed.scss */
+.theme--introduction-to-media .themed {
+  color: #cf423a;
+}
+/* line 19, ../_sass/_themed.scss */
+.theme--user-input .themed {
+  color: #2c8566;
+}
+/* line 21, ../_sass/_themed.scss */
+.theme--performance .themed {
+  color: #7b5294;
+}
+
+/* line 28, ../_sass/_themed.scss */
+.article--multi-device-layouts .article-container h1, .article--multi-device-layouts
+.article-container h2 {
+  color: #297ea9;
+}
+/* line 30, ../_sass/_themed.scss */
+.article--introduction-to-media .article-container h1, .article--introduction-to-media
+.article-container h2 {
+  color: #cf423a;
+}
+/* line 32, ../_sass/_themed.scss */
+.article--user-input .article-container h1, .article--user-input
+.article-container h2 {
+  color: #2c8566;
+}
+/* line 34, ../_sass/_themed.scss */
+.article--performance .article-container h1, .article--performance
+.article-container h2 {
+  color: #7b5294;
 }
 
 /**
