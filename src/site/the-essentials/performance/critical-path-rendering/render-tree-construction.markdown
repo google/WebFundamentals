@@ -34,8 +34,7 @@ key-takeaways:
 ---
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 # Render-tree construction, Layout, and Paint
 

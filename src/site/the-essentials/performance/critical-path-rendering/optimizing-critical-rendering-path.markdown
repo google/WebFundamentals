@@ -17,8 +17,7 @@ collection: critical-path-rendering
 ---
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 In order to deliver the fastest possible time to first render, we need to 
 optimize three variables:

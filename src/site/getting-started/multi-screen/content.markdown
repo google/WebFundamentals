@@ -17,8 +17,7 @@ collection: multi-screen
 
 {% wrap content %}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 In this tutorial we are going to cover how to structure your page with content
 such as text, video and images for a narrow viewport (mobile) experience and

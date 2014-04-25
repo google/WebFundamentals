@@ -25,8 +25,7 @@ NOTE: This is our styleguide
 
 {% wrap content %}
 
-* Table of contents
-{:toc}
+{% include modules/toc.liquid %}
 
 ## Headings
 
