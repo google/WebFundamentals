@@ -13,6 +13,11 @@ article:
   updated_on: 2014-04-23
   order: 1
 collection: multi-screen
+key-takeaways:
+  content-critical:
+    - Understand the content you need first
+    - Sketch out IA for narrow and wide viewports
+    - Create a skeleton view of the page with content but without styling
 ---
 
 {% wrap content %}
@@ -23,6 +28,8 @@ In this tutorial we are going to cover how to structure your page with content
 such as text, video and images for a narrow viewport (mobile) experience and
 before we then move on to  work out how we make it responsive across larger
 screens.
+
+{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.content-critical %}
 
 We believe that the content is the most important aspect of any site. So let's
 design for the content and not let the design dictate the content.  In this
@@ -201,8 +208,6 @@ content ready and in-place to satisfy our business needs.
 
 You will notice that the page looks terrible right now. That is intentional. Content is the most important aspect of any site and we needed to make sure we have a good solid information architecture and density.  This guide has given 
 us an excellent base to build upon.
-
-[todo Key takeaway]
 
 {% include modules/nextarticle.liquid %}
 

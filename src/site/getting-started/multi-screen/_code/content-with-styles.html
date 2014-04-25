@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
   <head>
-    <!-- // [TEMPLATE header] -->
     <title>Smiles</title>
       <!-- // [start style] -->
       <style>
@@ -14,6 +13,7 @@
           padding: 0.8em;
           color: white;
           font-family: Roboto, sans-serif;
+          background-image: url(backgroundimage.jpg);
           background-size: cover;
         }
 
@@ -160,6 +160,65 @@
         tbody {
           text-align: center;
         }
+
+        @media (min-width: 600px) {
+            #headline {
+              padding: 20px 5%;
+            }
+            
+            .container {
+              margin: auto;
+              max-width: 800px;
+            }
+
+            #headline #blurb {
+              float: left; 
+              font-weight: 200;
+              width: 50%;
+              font-size: 18px;
+              box-sizing: border-box;
+              padding-right: 10px;
+            }
+
+            #headline br {
+              clear: both;
+            }
+
+            #headline #register {
+              float:right;
+              padding: 20px;
+              width: 50%;
+              box-sizing: border-box;=
+              font-weight: 300;
+            }
+            
+            #section1 #section2, #section3 {
+               padding: 10px 20% 80px 20%;
+            }
+            
+            #section1 h2, #section2 h2, #section3 h2  {
+              margin-top: 0;
+              font-size: 60px
+            }
+            
+            #section1 ul {
+              float: left;
+            }
+            
+            #section1 br {
+              clear: both;
+            }
+            
+            #section1 video {
+              width: 50%;
+              float: right;
+            }
+            
+            #section2 div img{
+              width: 48%;
+              box-sizing: border-box;
+            }
+          }
       </style>
       <!-- // [END style] -->
   </head>
@@ -177,7 +236,21 @@
           <li>and the good-ol' British in the thick of it smile.
         </ul>
       </div>
-      <form method="post" id="register"> 
+      <form method="post" id="register">
+         <h2>Sign up for more smiles</h2>
+         <label for="name">Name</label>
+         <input type="text" name="name" id="name" 
+            placeholder="Thomas A Anderson" required />
+         <label for="email">Email address</label>
+         <input type="email" name="email" id="email" 
+            placeholder="neo@example.com" required />
+         <label for="tel">Telephone</label>
+         <input type="tel" name="tel" id="tel" 
+            placeholder="(555) 555 5555" required />
+         <label for="time">Best time to contact</label>
+         <input type="time" name="time" id="time" 
+            placeholder="4pm" required />
+         <input type="submit" value="Sign up">
       </form>
       <br>
     </div>
@@ -192,7 +265,13 @@
         <li>Never undersold</li>
         <li>Never bettered</li>
       </ul>
-      <video></video>
+      <video controls poster="smiles.png">
+        <source src="smiles.webm" type="video/webm"></source>
+        <source src="smiles.mov" type="video/mov"></source>
+        <p>Sorry your browser doesn't support video. 
+           <a href="smiles.mov">Download the video</a>.
+        </p>
+      </video>
       <br>
     </div>
     <!-- // [END section1] -->
@@ -202,10 +281,10 @@
       <h2>Pictures of happy people smiling</h2>
       <p>Everyone loves happy people</p>
       <div id="images">
-        <img>
-        <img>
-        <img>
-        <img>
+        <img src="paulkinlan.png">
+        <img src="samdutton.png">
+        <img src="mattgaunt.jpg">
+        <img src="ianbarber.jpg">
       </div>
       <br>
     </div>

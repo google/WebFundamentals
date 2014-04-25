@@ -44,31 +44,33 @@ collection: multi-screen
 
 {% include modules/toc.liquid %}
 
-We are building a site that works across in the [previous article]({{site.baseurl}}{{page.article.previous.url}}) we designed the Infomration Architecture of the page and created a basic structure that we will now use to
-make work across all of our target screens and form-factors.
+We are building a site that works across in the [previous
+article]({{site.baseurl}}{{page.article.previous.url}}) we designed the
+Infomration Architecture of the page and created a basic structure that we
+will now use to make work across all of our target screens and form-factors.
 
 We are going to take our content and structure from this:
 
-[show the result of the previous article]
+<div class="demo">
+  <img src="images/narrowviewport.jpg" alt="Page with only the content" style="width: 100%;">
+</div>
 
 to this:
 
-[insert image of final design]
+<div class="demo">
+  <img src="images/narrowviewport.jpg" alt="Page with all the final styling" style="width: 100%;">
+</div>
 
 {% link_sample _code/content-with-styles.html %} See the final result in action. {% endlink_sample %}
 
-## TODO: Styling and images..
-
-## Make your page responsive
-
 The page has all the content needed to display on a narrow viewport, but on
-different screen sizes it doesn't  look good because we have simply created a
+different screen sizes it doesn't look good because we have simply created a
 linear site.
 
 [TODO: Image of widening the viewport.] 
 
-We are using the principles of Mobile First web development.  We started with a
-narrow viewport &mdash; similar to a mobile phone &mdash; and built for that
+We are using the principles of Mobile First web development.  We start with a
+narrow viewport &mdash; similar to a mobile phone &mdash; and build for that
 experience first.
 
 Earlier we created a couple of different high-level designs for how our content
@@ -76,7 +78,8 @@ should be displayed and now we need to choose our breakpoints &mdash; a point
 where the layout and styles change &mdash; based on how the contents fits the
 screen-size.
 
-We can do this by making our viewport wider and making a judgement call on whether the design and layout look right.
+We can do this by making our viewport wider and making a judgement call on
+whether the design and layout look right.
 
 [TODO: Add Images]
 
@@ -120,7 +123,6 @@ need to:
 *  Move the form to float inline with the heading content
 *  Make the video float around the content
 *  Reduce the size of the images and have them appear in a nicer grid
-
 
 #### Constrain the maximum width of the design
 
