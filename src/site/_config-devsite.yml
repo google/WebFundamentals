@@ -10,6 +10,7 @@ highlighter: pygments
 pygments: true
 include_open_html: false
 generate_sample_jshtml: true
+spotlights: false
 custom:
 kramdown:
   toc_levels: "2,3,4"

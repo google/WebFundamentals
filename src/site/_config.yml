@@ -8,6 +8,7 @@ baseurl: /web/essentials
 url: /web/essentials
 highlighter: pygments
 pygments: true
+spotlights: false
 include_open_html: true
 custom:
 kramdown:
