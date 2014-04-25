@@ -138,7 +138,7 @@ also provides the benefit of ensuring something will be rendered if the browser
 doesn't support resolution specific media queries.
 
 ![TODO](img/TODO.png)  
-{% include_code _code/media-query-dppx.html todohtml html %}
+{% include_code _code/media-query-dppx.html mqdppx css %}
 
 You can also use the min-width syntax to display alternative images depending on 
 the viewport size.  This technique has the advantage that the image is not 
@@ -215,29 +215,9 @@ capabilities of the device.  Depending on the type of image and level of
 compression, image quality may not appear to change, but the file size drops 
 significantly.
 
-<div class="clear">  
-  <div class="g--half">  
-    {% link_sample _code/todo.html %}   
-      <img src="imgs/compressive-1x.png" alt="Page with a 1x image saved at 
-quality Z">  
-      See example   
-    {% endlink_sample %}  
-    1x image @ quality X  
-     File size YkB  
-     TODO  
-  </div>
-
-  <div class="g--half g--last">  
-    {% link_sample _code/todo.html %}   
-      <img src="imgs/compressive-2x.png" alt="Page with a 2x image saved at 
-quality Z">  
-      See example   
-    {% endlink_sample %}  
-    2x image @ quality X  
-     File size YkB  
-     TODO   
-  </div>  
-</div>
+{% link_sample _code/compressive.html %}
+See example
+{% endlink_sample %}
 
 {% include modules/highlight.liquid character="!" position="right" title="Important" type="remember" list=page.remember.compressive %}
 
@@ -426,7 +406,7 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
 ![Image sprite used by our sample](img/TODO.png)  
-{% include_code _code/image-sprite.html todohtml html %}
+{% include_code _code/image-sprite.html sprite css %}
 
 Spriting has the advantage of reducing the number of downloads required to get 
 multiple images, while still enabling caching.
