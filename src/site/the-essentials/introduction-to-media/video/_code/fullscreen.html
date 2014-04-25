@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- // [TEMPLATE header_full] -->
+	<title>Video Element: Full Screen</title>
+</head>
+<body>
+<div id="container" role="main">
+
+  <h1>Video Element: Full Screen</h1>
+
+  <div id="videocontainer">
+    <video src='chrome.webm'>
+      <p>This browser does not support the video element.</p>
+    </video>
+  </div>
+  
+  <button id="fullscreen">Make Page Full Screen</button>
+
+  <script>
+  var container = document.getElementById('videocontainer');
+  container.onclick = function () {
+    var videoElement = this.querySelector('video');
+    // Handle older browser versions where method is prefixed.
+    videoElement.requestFullScreen = 
+        videoElement.requestFullScreen || 
+        videoElement.webkitRequestFullScreen || 
+        videoElement.mozRequestFullScreen;
+
+    /* // [START listener] */
+    // Listen for fullscreen state change
+    videoElement.onfullscreenchange = function(){console.log('You fullscreened me!');}
+    /* // [END listener] */
+
+    /* // [START elementfs] */
+    // Fullscreen a video element
+    videoElement.requestFullScreen();
+    /* // [END elementfs] */
+
+    /* // [START check] */
+    // Check if element is fullscreened
+    console.log(videoElement.displayingFullscreen)
+    /* // [END check] */
+  }
+
+  document.getElementById('fullscreen').onclick = function() {
+    // Handle older browser versions where method is prefixed.
+    document.body.requestFullScreen = 
+        document.body.requestFullScreen || 
+        document.body.webkitRequestFullScreen || 
+        document.body.mozRequestFullScreen;
+
+    /* // [START pagefs] */
+    // Fullscreen the whole page
+    document.body.requestFullScreen();    
+    /* // [END pagefs] */
+  }
+  </script>
+</div>
+<!-- // [TEMPLATE footer] -->
+</body>
+</html>

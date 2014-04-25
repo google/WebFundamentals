@@ -41,7 +41,7 @@ article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
   order: 0
-collection: multi-screen
+#collection: multi-screen
 ---
 
 {% wrap content %}
@@ -139,5 +139,7 @@ If you have real device even better, you can hook up the Chrome DevTools to ensu
 that you are always testing how it works for your users.
 
 [TODO: Add link to setting up remote devtools.]
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}

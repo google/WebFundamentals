@@ -49,32 +49,54 @@ collection: multi-screen
 * Table of Contents
 {:toc}
 
-Building multi-screen experiences is not as hard as it sounds. In this
-guide, we are going to create a simple landing page that shows you the basics of
-building a web site using "[Mobile First](link to mobile first)" design principles that
-enable you to easily scale your experiences up from a mobile device through
-to desktops and beyond.  We will show you best practices for interacting with both touch 
-and mice as well as structuring your content across screen sizes.
+Building multi-screen experiences is not as hard as it sounds. In this guide, we
+are going to create a simple landing page that shows you the basics of building
+a web site using "[Mobile First](link to mobile first)" design principles that
+enable you to easily scale your experiences up from a mobile device through to
+desktops and beyond.  We will show you best practices for interacting with both
+touch  and mice as well as structuring your content across screen sizes.
 
 Our goal in this guide is to build an example product landing page for our
 hypothetical Smiles product.  The end result will be a fully functioning page
 that covers many of the core principles of building experiences that work well
 across all different device types.
 
+
+{% link_sample _code/content-with-styles.html %} See example {% endlink_sample %}
+
+## TODO: Styling and images..
+
+[sratch]: 
+
+### Add Stylistic images
+
+Stylistic images are images that are not needed as part of the core content.
+
+A good example of this is a headline image for the 'above the fold' content.
+
+[TODO: Add Image]
+
+{% include_code _code/addimages.html styles css %}
+
+We have chosen a simple background image that is blurred so it doesn't take away
+from the content and we have set it to `cover` the entire element.
+
 # Make your page responsive
 
-The page has all the content needed to display on a narrow viewport, but on different screen sizes it doesn't
- look good because we have simply created a linear site.
+The page has all the content needed to display on a narrow viewport, but on
+different screen sizes it doesn't  look good because we have simply created a
+linear site.
 
 [TODO: Image of widening the viewport.] 
 
-We are using the principles of Mobile First web development.  We started
-with a narrow viewport &mdash; similar to a mobile phone &mdash; and built for that 
-experience first.  
+We are using the principles of Mobile First web development.  We started with a
+narrow viewport &mdash; similar to a mobile phone &mdash; and built for that
+experience first.
 
-Earlier we created a couple of different high-level designs for how our content should be displayed and
-now we need to choose our breakpoints &mdash; a point where the layout and styles change &mdash; based on how the
-contents fits the screen-size.
+Earlier we created a couple of different high-level designs for how our content
+should be displayed and now we need to choose our breakpoints &mdash; a point
+where the layout and styles change &mdash; based on how the contents fits the
+screen-size.
 
 We can do this by making our viewport wider and making a judgement call on whether the design and layout look right.
 
@@ -105,13 +127,15 @@ to let us adapt the style and layout of the content to the width of the screen.
 
 [TODO: GIF of it starting to look bad].
 
-The design starts to look bad at about 600px wide.  This is a good place to create our first breakpoint as it 
-will give us scope to reposition elements to make them fit the screen better.  We can do this as follows:
+The design starts to look bad at about 600px wide.  This is a good place to
+create our first breakpoint as it  will give us scope to reposition elements to
+make them fit the screen better.  We can do this as follows:
 
 {% include_code _code/firstbreakpoint.html first css %}
 
 There is more space on a larger screen so there is more flexibility with how
-content can be displayed.  In the context of this page it looks like we will need to:
+content can be displayed.  In the context of this page it looks like we will
+need to:
 
 *  Constrain the maximum width of the design
 *  Alter the padding of elements and reduce the text size
@@ -122,10 +146,11 @@ content can be displayed.  In the context of this page it looks like we will nee
 
 #### Constrain the maximum width of the design
 
-We have chosen to have only two major design: a narrow viewport and a wide viewport. 
+We have chosen to have only two major design: a narrow viewport and a wide
+viewport.
 
-This means we should constrain the maximum width of the screen to be 800px so that the 
-content doesn't stretch out too far on large screens.
+This means we should constrain the maximum width of the screen to be 800px so
+that the  content doesn't stretch out too far on large screens.
 
 We need to create a container around each major section to make a system
 that has an auto margin.  This will allow the screen to grow but the content
@@ -141,12 +166,14 @@ And then create a style that ensures that the content is padded and centered.
 
 #### Alter the padding of elements and reduce the text size
 
-On the narrow viewport we normally have a lot less space to display content so 
-the size and weight of the typography is often drastically reduced to fit the screen.
+On the narrow viewport we normally have a lot less space to display content so
+the size and weight of the typography is often drastically reduced to fit the
+screen.
 
-With the larger viewport we need to consider that the user is more likely further away
-from the screen so to increase the readability of the content we can increase the size and
-weight of the typography and we can alter the padding to make distinct areas stand out more.
+With the larger viewport we need to consider that the user is more likely
+further away from the screen so to increase the readability of the content we
+can increase the size and weight of the typography and we can alter the padding
+to make distinct areas stand out more.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
@@ -154,11 +181,12 @@ weight of the typography and we can alter the padding to make distinct areas sta
 
 #### Float the Form Element
 
-The narrow viewport means that we have a lot less horizontal space available for us
-to comfortably position elements on the screen.
+The narrow viewport means that we have a lot less horizontal space available for
+us to comfortably position elements on the screen.
 
-To make more effective use of the horizontal screen space we need to break out of the
- the linear flow of the header and move the form and the list to be next to each other.
+To make more effective use of the horizontal screen space we need to break out
+of the  the linear flow of the header and move the form and the list to be next
+to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
 
@@ -167,8 +195,8 @@ To make more effective use of the horizontal screen space we need to break out o
 
 #### Float the Video Element
 
-The video element can also be moved out of the vertical flow of the narrow viewport and 
-can be display side by side with the bulleted list of content.
+The video element can also be moved out of the vertical flow of the narrow
+viewport and  can be display side by side with the bulleted list of content.
 
 [TODO: Animated GIF]
 
@@ -176,14 +204,15 @@ can be display side by side with the bulleted list of content.
 
 #### Tile the Images
 
-The images in the narrow viewport (mobile devices mostly) interface are set to be 
-the full width of the screen.  This doesn't scale well on a screen with a 
+The images in the narrow viewport (mobile devices mostly) interface are set to
+be  the full width of the screen.  This doesn't scale well on a screen with a
 wide viewport.
 
 [TODO: Animated GIF]
 
-To make the images look correct on the screen they are scaled to 50% of the container width.  This
-means that we will get a nice grid of images and the images will inflate to large.
+To make the images look correct on the screen they are scaled to 50% of the
+container width.  This means that we will get a nice grid of images and the
+images will inflate to large.
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
@@ -191,8 +220,8 @@ means that we will get a nice grid of images and the images will inflate to larg
 
 # Summary
 
-We have created a simple product landing page that works across a large range of devices,
-form-factors and screen sizes.
+We have created a simple product landing page that works across a large range of
+devices, form-factors and screen sizes.
 
 *  Always set a viewport
 *  Create your base experience around mobile first
@@ -215,5 +244,6 @@ form-factors and screen sizes.
 </div>
 </div>
 
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}

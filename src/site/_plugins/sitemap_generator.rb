@@ -40,7 +40,7 @@ require 'rexml/document'
 module Jekyll
 
   # Change MY_URL to reflect the site you are using
-  MY_URL = "http://www.dartlang.org"
+  MY_URL = "http://developers.google.com/web/fundamentals/"
 
   # Change SITEMAP_FILE_NAME if you would like your sitemap file
   # to be called something else
