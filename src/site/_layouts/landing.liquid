@@ -1,0 +1,58 @@
+{% if site.include_open_html %}
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
+  <head>
+{% endif %}
+    {% include head.liquid %}
+  </head>
+
+  <body class="{{ page.class }}">
+    {% injectdata project _project.yaml %}
+    {% injectdata content _book.yaml %}
+
+    {% include google_header.html %}
+
+    {% include header.liquid %}
+
+    <div class="page-header">
+      <div class="container">
+
+        {% include modules/breadcrumbs.liquid %}
+
+        <h3 class="xxlarge text-divider">{{ page.title }}</h3>
+        <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
+      </div>
+    </div>
+
+    {{ content }}
+
+    <div class="guides-section">
+      <header class="container">
+          <h2 class="xlarge">Guides Section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor.</p>
+      </header>
+
+      <ul class="guides-list container-medium">
+
+        {% for guide in page.articles.[page.id] %}
+
+        <li class="guides-list__item g--half {% cycle '', 'g--last' %}">
+          <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+          <p>{{guide.description}}</p>
+          <ol class="list--links list--reset">
+          {% for article in page.articles[guide.id] %}
+            <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
+          {% endfor %}
+          </ol>
+        </li>
+
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    {% include footer.liquid %}
+
+    {% include scripts.liquid %}
+  </body>
+</html>

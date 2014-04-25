@@ -23,4 +23,14 @@
 
   }
 
+  .styleguide__color-list {
+    text-align: center;
+
+    li {
+      border-bottom: $lineHeight*2 solid;
+      margin-bottom: $lineHeight;
+      position: relative;
+    }
+  }
+
 }

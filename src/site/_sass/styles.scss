@@ -10,34 +10,44 @@
 *
 **/
 
-@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Open+Sans:400");
+// We are using Open Sans for the Google Developers footer
 
 @import "_utils";
 @import "_normalize";
 @import "_global";
-@import "_grid";
-@import "_main-navigation";
-@import "_main-header";
-@import "_main-footer";
 
 // Syntax highlihter - Leave it here so can be easily overridden
 @import "../css/syntax.css";
 
 // Modules
+@import "_modules/_main-navigation";
+@import "_modules/_main-header";
+@import "_modules/_main-footer";
 @import "_modules/_highlight";
 @import "_modules/_editorial-header";
 @import "_modules/_summary-header";
 @import "_modules/_related-items";
 @import "_modules/_in-this-guide";
+@import "_modules/_articles-section";
+@import "_modules/_guides-section";
+@import "_modules/_page-header";
+@import "_modules/_featured-section";
+@import "_modules/_featured-spotlight";
+@import "_modules/_quote";
 
 // Components
+@import "_components/_grid";
 @import "_components/_typography";
 @import "_components/_button";
 @import "_components/_list";
 @import "_components/_link";
+@import "_components/_table";
 @import "_components/_breadcrumb";
 @import "_components/_subsection-title";
 @import "_components/_column-list";
+@import "_components/_articles-list";
+@import "_components/_guides-list";
 
 // Pages
 @import "_pages/_styleguide";

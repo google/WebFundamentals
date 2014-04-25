@@ -12,13 +12,16 @@ collection: getting-started
 ---
 {% wrap content%}
 
+{% include modules/toc.liquid %}
+
 # {{ page.title }}
+
 
 Building multi-screen experiences is not as hard as it sounds. In this
 guide, we are going to create a simple landing page that shows you the basics of
 building a web site using "[Mobile First](link to mobile first)" design principles that
 enable you to easily scale your sites up from a mobile device through
-to desktops and beyond.  We will show you best practices for interacting with both touch 
+to desktops and beyond.  We will show you best practices for interacting with both touch
 and mice as well as structuring your content across screen sizes.
 
 Our goal in this guide is to build an example product landing page for our

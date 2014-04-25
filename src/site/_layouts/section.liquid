@@ -1,0 +1,50 @@
+{% if site.include_open_html %}
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
+  <head>
+{% endif %}
+    {% include head.liquid %}
+  </head>
+
+  <body class="{{ page.class }}">
+    {% injectdata project _project.yaml %}
+    {% injectdata content _book.yaml %}
+
+    {% include google_header.html %}
+
+    {% include header.liquid %}
+
+    <div class="page-header">
+      <div class="container">
+
+        {% include modules/breadcrumbs.liquid %}
+
+        <h3 class="xxlarge text-divider">{{ page.title }}</h3>
+        <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
+      </div>
+    </div>
+
+    {{ content }}
+
+    <div class="articles-section">
+      <div class="container">
+        <p class="articles-count">{{page.articles.[page.id].size}} guides</p>
+        <ol class="articles-list">
+
+          {% for guide in page.articles.[page.id] %}
+          <li class="articles-list__item">
+            <h3 class="xxlarge"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+            <p class="g-wide--push-1 g-wide--pull-1">{{guide.description}}</p>
+            <a href="#" class="cta--primary">See all lessons</a>
+          </li>
+          {% endfor %}
+
+        </ol>
+      </div>
+    </div>
+
+    {% include footer.liquid %}
+
+    {% include scripts.liquid %}
+  </body>
+</html>

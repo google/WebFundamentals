@@ -1,22 +1,11 @@
 ---
-layout: default
+layout: landing
 title: "The Essentials"
 description: ""
+introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 id: the-essentials
 ---
-{% wrap content%}
 
-# {{ page.title }}
-
-{% for guide in page.articles.the-essentials %}
-{% class %}
-### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
-{{guide.description}}
-
-{% for article in page.articles[guide.id] %}
-* [{{article.title}}]({{site.baseurl}}{{article.url}})
-{% endfor %}
-
-{% endclass %}
-{% endfor %}
-{% endwrap %}
+{% comment %}
+Guide list content will be output by the landing layout pased on the article collection matching page.id
+{% endcomment %}

@@ -10,18 +10,6 @@
 *
 **/
 
-@mixin bullet-type($bullet) {
-  &:before {
-    content: $bullet;
-    display: block;
-    font-family: $fontHighlight;
-    font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
 ul,
 ol {
   padding-left: 0;
@@ -29,16 +17,144 @@ ol {
   margin: 0;
 }
 
-li {
+ul li {
   position: relative;
   padding-left: 16px;
   @include bullet-type("#");
+}
+
+ol {
+  counter-reset: list;
+  li {
+    @include numbered-list;
+  }
 }
 
 .list__item {
   @include bullet-type(">");
 }
 
-.main-nav__item:before {
-  display: none;
+
+/*==========  LIST LINKS  ==========*/
+
+ul.list--links {
+  li:before {
+    display: none;
+  }
+  a {
+    @include bullet-type(">");
+    font-weight: 400;
+    font-family: $fontHighlight;
+    line-height: 1; // fixes baseline grid alignment
+  }
+}
+
+ol.list--links {
+  li {
+    &:before {
+      display: none;
+    }
+
+    a {
+      @include numbered-list;
+      line-height: 1; // fixes baseline grid alignment
+    }
+  }
+}
+
+
+/*==========  CENTERED LIST  ==========*/
+
+.centered-list {
+  text-align: center;
+
+  h3 {
+    color: $colorBlue;
+  }
+
+  p {
+    padding-bottom: $lineHeight;
+    @include medium { padding-bottom: 0;}
+  }
+
+}
+
+/*==========  FEATURED LIST  ==========*/
+
+.featured-list {
+  padding-top: $lineHeight * 3;
+  padding-bottom: $lineHeight * 3;
+}
+
+.featured-list__item {
+  background: #ffffff;
+  padding-left: 0;
+  min-height: $lineHeight * 13;
+  padding-top: $lineHeight;
+  padding-bottom: $lineHeight;
+
+  @include medium {
+    padding: $lineHeight * 2 32px;
+  }
+
+  margin-top: $lineHeight;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: $lineHeight;
+  }
+}
+
+.featured-list__img-wrapper {
+  position: relative;
+  padding-top: $lineHeight;
+  margin: 0 -5%;
+
+  @include medium {
+    padding-top: 0;
+    margin: 0;
+  }
+}
+
+.featured-list__img {
+  @include medium {
+    padding-top: 60.8%;
+    padding-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+
+    @include medium {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+/*==========  LIST RESET  ==========*/
+
+.list--reset {
+  li {
+    padding-left: 0;
+
+    & a:before,
+    &:before {
+      display: none !important; // Fine to use !important when we are forcing an override
+    }
+  }
 }

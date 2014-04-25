@@ -26,10 +26,10 @@ key-takeaways:
     - Choose the most appropriate input type for your data to simplify input.
     - Offer suggestions as the user types with the <code>datalist</code> element.
   provide-real-time-validation:
-    - Leverage the browser's built-in validation attributes like 
-      <code>pattern</code>, <code>required</code>, <code>min</code>, 
+    - Leverage the browser's built-in validation attributes like
+      <code>pattern</code>, <code>required</code>, <code>min</code>,
       <code>max</code>, etc.
-    - Use JavaScript and the Constraints Validation API for more complex 
+    - Use JavaScript and the Constraints Validation API for more complex
       validation requirements.
     - Show validation errors in real time, and if the user tries to submit an
       invalid form, show all fields they need to fix.
@@ -42,7 +42,7 @@ key-takeaways:
 remember:
   use-placeholders:
     - Placeholders disappear as soon as focus is placed in an element, thus
-      they are not a replacement for labels.  They should be used as an aid 
+      they are not a replacement for labels.  They should be used as an aid
       to help guide users on the required format and content.
   recommend-input:
     - Auto-complete only works when the form method is post.
@@ -50,13 +50,13 @@ remember:
     - The <code>datalist</code> values are provided as suggestions, and users
       are not restricted to the suggestions provided.
   provide-real-time-validation:
-    - Even with client-side input validation, it is always important to 
+    - Even with client-side input validation, it is always important to
       validate data on the server to ensure consistency and security in your data.
   show-all-errors:
     - You should show the user all of the issues on the form at once, rather than showing them one at a time.
   request-auto-complete-flow:
     - If you're asking for any kind of personal information or credit card
-      data, ensure the page is served via SSL.  Otherwise the dialog will 
+      data, ensure the page is served via SSL.  Otherwise the dialog will
       warn the user their information may not be secure.
 ---
 {% wrap content %}
@@ -106,8 +106,7 @@ remember:
 
 </style>
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 ## Label and name inputs properly
 
@@ -298,7 +297,7 @@ type.
   <tbody>
     <tr>
       <td>
-        <code>url</code><br> For entering a URL. It must start with a valid URI scheme, 
+        <code>url</code><br> For entering a URL. It must start with a valid URI scheme,
         for example <code>http://</code>, <code>ftp://</code> or <code>mailto:</code>.
       </td>
       <td>
@@ -307,7 +306,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>tel</code><br>For entering phone numbers. It does <b>not</b> 
+        <code>tel</code><br>For entering phone numbers. It does <b>not</b>
         enforce a particular syntax for validation, so if you want to ensure
         a particular format, you can use pattern.
       </td>
@@ -317,8 +316,8 @@ type.
     </tr>
     <tr>
       <td>
-        <code>email</code><br>For entering email addresses, and hints that 
-        the @ should be shown on the keyboard by default. You can add the 
+        <code>email</code><br>For entering email addresses, and hints that
+        the @ should be shown on the keyboard by default. You can add the
         multiple attribute if more than one email address will be provided.
       </td>
       <td>
@@ -327,7 +326,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>search</code><br>A text input field styled in a way that is 
+        <code>search</code><br>A text input field styled in a way that is
         consistent with the platform's search field.
       </td>
       <td>
@@ -336,7 +335,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>number</code><br>For numeric input, can be any rational 
+        <code>number</code><br>For numeric input, can be any rational
         integer or float value.
       </td>
       <td>
@@ -346,7 +345,7 @@ type.
     <tr>
       <td>
         <code>range</code><br>For number input, but unlike the number input
-        type, the value is less important. It is displayed to the user as a 
+        type, the value is less important. It is displayed to the user as a
         slider control.
       </td>
       <td>
@@ -355,7 +354,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>datetime-local</code><br>For entering a date and time value 
+        <code>datetime-local</code><br>For entering a date and time value
         where the time zone provided is the local time zone.
       </td>
       <td>
@@ -364,7 +363,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>date</code><br>For entering a date (only) with no time zone 
+        <code>date</code><br>For entering a date (only) with no time zone
         provided.
       </td>
       <td>
@@ -373,7 +372,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>time</code><br>For entering a time (only) with no time zone 
+        <code>time</code><br>For entering a time (only) with no time zone
         provided.
       </td>
       <td>
@@ -382,7 +381,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>week</code><br>For entering a week (only) with no time zone 
+        <code>week</code><br>For entering a week (only) with no time zone
         provided.
       </td>
       <td>
@@ -391,7 +390,7 @@ type.
     </tr>
     <tr>
       <td>
-        <code>month</code><br>For entering a month (only) with no time zone 
+        <code>month</code><br>For entering a month (only) with no time zone
         provided.
       </td>
       <td>
@@ -401,7 +400,7 @@ type.
     <tr>
       <td>
         <code>color</code><br>For picking a color.
-      </td> 
+      </td>
       <td>
         <img src="imgs/color-android.png" class="keybimg">
       </td>
@@ -678,7 +677,7 @@ they want to populate it with.
 Upon completion of `requestAutocomplete`, the function will either fire the
 `autocomplete` event if it finished successfully, or `autocompleteerror` if
 it was unable to complete the form.  If it completed successfully and the form
-validates to your needs, simply submit the form and proceed to the final 
+validates to your needs, simply submit the form and proceed to the final
 confirmation.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}

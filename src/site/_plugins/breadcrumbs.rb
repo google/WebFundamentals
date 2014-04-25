@@ -1,3 +1,5 @@
+# http://biosphere.cc/software-engineering/jekyll-breadcrumbs-navigation-plugin/
+
 module Jekyll
 
   ##
@@ -34,6 +36,7 @@ module Jekyll
     def to_liquid
       h = orig_to_liquid
       h['ancestors'] = self.ancestors
+      h['parent'] = self.ancestors.last
       return h
     end
 

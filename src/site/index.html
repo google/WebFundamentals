@@ -6,67 +6,70 @@ class: home
 
 {% wrap content%}
 
-<!-- This will be automatically generated based off Jekyll configuration -->
-<section class="section">
-  <h1 class="section__title">Web Essentials</h1>
-  <p>Some introduction</p>
-
-  <!-- SPOT LIGHT
-   <div>
-    <h2>Spotlight</h2>
-    <div>Something Jazzy here</div>
+  <div class="centered">
+    <h3 class="xlarge">Web Essentials</h3>
+    <p class="g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus perspiciatis deleniti.</p>
   </div>
 
+  <ul class="centered-list list--reset clear">
+    {% for guide in page.articles.the-essentials %}
+    <li class="g-medium--half g-wide--1 {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
+      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a href="#" class="cta--secondary">Get started</a>
+    </li>
+    {% endfor %}
+  </ul>
 
-  <form action="results.html" method="GET">
-	<label for="q">Search</label>
-	<input type="search" name="q" id="q" placeholder="Search">
-	<input type="submit" value="Search">
-  </form>
-
-    -->
-
-  <div>
-    <h2><a href="{{site.baseurl}}/getting-started/">Getting Started</a></h2>
-    <p>Use our 15 minute getting started guide to <a href="{{site.baseurl}}/getting-started/multi-screen/">build your first multi-screen page</a>.
-  </div>
-
-  <div>
-    <h2><a href="{{site.baseurl}}/the-essentials/multi-device-layouts/">Multi-screen Layouts</a></h2>
-    <p>Understand the <a href="{{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/">fundamentals of building great multi-device layouts</a> and how to <a href="{{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/">create layouts that work everywhere</a>.  Once mastered learn how to <a href="{{site.baseurl}}/the-essentials/multi-device-layouts/layout-patterns/">create compelling interactions</a> with <a href="{{site.baseurl}}/the-essentials/multi-device-layouts/ui-elements/">great UI elements</a>.</p>
-  </div>
-
-  <div>
-    <h2><a href="{{site.baseurl}}/the-essentials/user-input/">Manage input across devices</a></h2>
-    <p><a href="{{site.baseurl}}/the-essentials/user-input/form-input/">Create amazing forms</a> and understand <a href="{{site.baseurl}}/the-essentials/user-input/index.html">how to effectively use touch</a> across all types of devices.</p>
-  </div>
-
-  <div>
-    <h2><a href="{{site.baseurl}}/the-essentials/introduction-to-media/">Using Images, Video and Audio</a></h2>
-    <p>Effectively <a href="{{site.baseurl}}/the-essentials/introduction-to-media/images/">use images across mobile, tablet and desktop</a> and discover the most <a href="{{site.baseurl}}/the-essentials/introduction-to-media/images/">effective ways to use video on your site</a></p>
-  </div>
-
-  <div>
-    <h2>Increase Performance</h2>
-    <p><a href="{{site.baseurl}}/the-essentials/optimizing-performance/optimize-content/">Optimitze your content for efficient delivery</a> and study the <a href="{{site.baseurl}}/the-essentials/optimizing-performance/critical-path-rendering/">Critical Rendering Path</a> to ....</p>
-  </div>
-</section>
-
-<!--
-<section>
-
-  <h3>Modules...</h3>
-
-  <section>
-    <h2>including module 1 from index.html</h2>
-    {% include modules/module1.liquid  hello="content coming from index.html to module 1 via param" %}
-  </section>
-
-  <section>
-    <h2>including module 2 from index.html</h2>
-    {% include modules/module2.liquid %}
-  </section>
-
-</section>
- -->
 {% endwrap %}
+
+<div class="featured-spotlight">
+  <div class="container-medium">
+    <div class="featured-spotlight__container g--pull-half">
+      <div class="featured-spotlight__img">
+        <img src="../../imgs/placeholder--wide.png" alt="image exemple">
+      </div>
+
+      <div class="container-small">
+        <h3 class="xxlarge">Featured spotlight</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed vitae varius augue, eu varius dolor.</p>
+        <a href="#" class="cta--primary">View Google</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="featured-section">
+  <div class="container-medium">
+    <ul class="featured-list">
+      <li class="featured-list__item clear">
+        <div class="container-small">
+          <div class="featured-list__content g--half">
+            <h3>Case study</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+            <a href="#" class="cta--primary">View Google</a>
+          </div>
+          <div class="featured-list__img-wrapper g--half g--last">
+            <div class="featured-list__img">
+              <img src="../../imgs/placeholder--small.png" alt="image exemple">
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="featured-list__item clear">
+        <div class="container-small">
+          <div class="featured-list__content g--half">
+            <h3>Case study</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+            <a href="#" class="cta--primary">View Google</a>
+          </div>
+          <div class="featured-list__img-wrapper g--half g--last">
+            <div class="featured-list__img">
+              <img src="../../imgs/placeholder--small.png" alt="image exemple">
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

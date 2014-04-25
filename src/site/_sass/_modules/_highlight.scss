@@ -10,84 +10,63 @@
 *
 **/
 
-
-@mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 0, $fontSize: 350px) {
+.highlight-module {
+  overflow: hidden;
+  margin-top: $lineHeight*2;
+  margin-bottom: $lineHeight;
   position: relative;
 
-  &:before {
-    content: attr(data-character);
-    display: block;
-
+  &:after {
+    background: $colorGrayBackground;
+    content: "";
+    height: 100%;
     position: absolute;
-    bottom: $verticalOffset;
-    right: $horizontalOffset;
-
-    font-size: $fontSize;
-    line-height: $fontSize;
-    color: $colorWhite;
-    font-weight: 900;
-    text-align: center;
-    font-family: $fontHighlight;
-
-    width: $mediumColWidth;
-
-    .highlight-module--left & {
-      right: auto;
-      left: $horizontalOffset;
-    }
-
-    @include wide {
-      width: $wideColWidth;
-      font-size: $fontSize + 50;
-      line-height: $fontSize + 50;
-    }
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
   }
-}
-
-@mixin highlight-symbol-override($symbol) {
-  &:before {
-    content: $symbol;
-  }
-}
-
-@mixin highlight-vertical-offset-override($offset) {
-  &:before {
-    bottom: $offset;
-  }
-}
-
-
-.highlight-module {
-  background-color: $colorGray;
-  overflow: hidden;
-  margin-top: $lineHeight * 2;
-  margin-bottom: $lineHeight;
 }
 
 .highlight-module--learning {
-  background-color: $colorAqua;
+  color: #ffffff;
+
+  &:after {
+    background-color: $colorLearning;
+  }
 }
 
 .highlight-module--remember {
-  background-color: $colorMustard;
-  color: $colorWhite;
-}
+  color: #ffffff;
 
-.highlight-module--related {
-  background-color: $colorEmeraud;
-  color: $colorWhite;
+  &:after {
+    background-color: $colorRemember;
+  }
 }
 
 .highlight-module__container {
   @include container;
-  padding-bottom: $lineHeight * 3;
+  padding-bottom: $lineHeight*3;
+  position: relative;
+  z-index: 1;
+
 
   @include medium {
-    padding-bottom: $lineHeight * 2;
+    padding-bottom: $lineHeight*2;
     @include highlight-symbol();
 
     .highlight-module--learning & {
-      @include highlight-vertical-offset-override($lineHeight*2);
+      @include highlight-vertical-offset-override(-80px);
+    }
+
+    .highlight-module--remember & {
+      @include highlight-vertical-offset-override(-170px);
+    }
+
+    .highlight-module--code & {
+      @include highlight-vertical-offset-override(-160px);
     }
   }
 }
@@ -98,24 +77,22 @@
 
   @include wide {
     @include type--xxlarge;
-
-    .highlight-module--large & {
-      @include type--huge;
-    }
   }
 }
 
 .highlight-module--code {
+
   pre {
     margin: 0;
-    padding-top: $lineHeight * 2;
-    padding-bottom: $lineHeight * 2;
+    padding-top: $lineHeight*2;
+    padding-bottom: $lineHeight;
     margin-left: - $lineHeight;
     font-size: $fontSmall;
 
     span {
       margin: 0;
       padding: 0;
+      display: inline-block;
     }
   }
 
@@ -128,6 +105,34 @@
 }
 
 .highlight-module__cta {
+  display: block;
   @include type--medium;
   font-family: $fontHighlight;
+}
+
+.highlight-module--left {
+  &:after {
+    @include wide {
+      width: 80%;
+      right: 20%;
+    }
+  }
+}
+
+.highlight-module--right {
+  &:after {
+    @include wide {
+      width: 80%;
+      left: 20%;
+    }
+  }
+
+  &.highlight-module--code {
+    &:after {
+      @include wide {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
 }

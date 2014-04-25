@@ -23,16 +23,19 @@ NOTE: This is our styleguide
       <p>/<a href="#" class="breadcrumbs__link"> Resources</a></p>
     </nav>
     <h1 class="summary-header__title">Styleguide</h1>
-    <ul class="summary-header__anchor-list">
-      <li class="summary-header__anchors-item"><a href="#typography"><strong>#01</strong> Typography</a></li>
-      <li class="summary-header__anchors-item"><a href="#buttons"><strong>#02</strong> Buttons</a></li>
-      <li class="summary-header__anchors-item"><a href="#lists"><strong>#03</strong> Lists</a></li>
-      <li class="summary-header__anchors-item"><a href="#links"><strong>#04</strong> Links</a></li>
-      <li class="summary-header__anchors-item"><a href="#breadcrumbs"><strong>#05</strong> Breadcrumbs</a></li>
-      <li class="summary-header__anchors-item"><a href="#subsection-title"><strong>#06</strong> Subsection title</a></li>
-      <li class="summary-header__anchors-item"><a href="#grid"><strong>#07</strong> Grid</a></li>
-      <li class="summary-header__anchors-item"><a href="#modules"><strong>#08</strong> Modules</a></li>
-    </ul>
+    <ol class="summary-header__anchor-list  list--links">
+      <li class="summary-header__anchors-item"><a href="#typography">Typography</a></li>
+      <li class="summary-header__anchors-item"><a href="#buttons">Buttons</a></li>
+      <li class="summary-header__anchors-item"><a href="#lists">Lists</a></li>
+      <li class="summary-header__anchors-item"><a href="#links">Links</a></li>
+      <li class="summary-header__anchors-item"><a href="#breadcrumbs">Breadcrumbs</a></li>
+      <li class="summary-header__anchors-item"><a href="#subsection-title">Subsection title</a></li>
+      <li class="summary-header__anchors-item"><a href="#table">Table</a></li>
+      <li class="summary-header__anchors-item"><a href="#quote">Quote</a></li>
+      <li class="summary-header__anchors-item"><a href="#grid">Grid</a></li>
+      <li class="summary-header__anchors-item"><a href="#colors">Colors</a></li>
+      <li class="summary-header__anchors-item"><a href="#modules">Modules</a></li>
+    </ol>
   </div>
 </div>
 
@@ -83,10 +86,33 @@ NOTE: This is our styleguide
     </ul>
 
     <ul class="list--links">
-      <li class="list__item">Lorem ipsum dolor sit amet.</li>
-      <li class="list__item">Dicta optio cumque dolore hic ea facilis</li>
-      <li class="list__item">Minus, possimus, veniam, incidunt eligendi</li>
+      <li class="list__item"><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li class="list__item"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li class="list__item"><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
     </ul>
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Dicta optio cumque dolore hic ea facilis</li>
+      <li>Minus, possimus, veniam, incidunt eligendi</li>
+    </ol>
+
+    <ol class="list--links">
+      <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    </ol>
+
+    <div class="columns-list-wrapper">
+      <ol class="list--columns list--links">
+        <li class="columns-list-item"><a href="#">Lorem ipsum</a></li>
+        <li class="columns-list-item"><a href="#">Dicta optio</a></li>
+        <li class="columns-list-item"><a href="#">Minus, possimus</a></li>
+        <li class="columns-list-item"><a href="#">Lorem ipsum</a></li>
+        <li class="columns-list-item"><a href="#">Dicta optio</a></li>
+        <li class="columns-list-item"><a href="#">Minus, possimus</a></li>
+      </ol>
+    </div>
 
   </section>
 
@@ -133,9 +159,109 @@ NOTE: This is our styleguide
 
   </section>
 
+  <a name="table"></a>
+  <section class="styleguide__table">
+    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Table</h2>
+
+    <table class="table--4">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+          <th>Description</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table--3">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of the video.</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+          <td data-th="description">Gives the address (URL) of an image file that the browser can show as soon as the video element loads, before playback begins.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table--2">
+      <colgroup>
+         <col span="1">
+         <col span="1">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="element">`src`</td>
+          <td data-th="availability">All browsers</td>
+        </tr>
+        <tr>
+          <td data-th="element">`poster`</td>
+          <td data-th="availability">All browsers</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <a name="quote"></a>
+  <section class="styleguide__quote">
+    <h3 class="styleguide__module-title">Quote</h3>
+    <div class="quote">
+      <div class="container">
+        <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, illum, at quis vero nam minus incidunt consequatur reprehenderit aliquid blanditiis fugiat nihil dolor tempora distinctio ipsum quisquam debitis excepturi magni.
+        <p>Name / Details</p>
+        </blockquote>
+      </div>
+    </div>
+
+  </section>
+
   <a name="grid"></a>
   <section class="styleguide__grid">
-    <h2 class="subsection-title"><strong class="subsection-number">#07</strong> Grid</h2>
+    <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Grid</h2>
 
     <div class="clear demo">
       <div class="g-medium--half g-wide--1"></div>
@@ -198,8 +324,56 @@ NOTE: This is our styleguide
 
   </section>
 
+  <a name="colors"></a>
+  <section class="styleguide__colors">
+    <h2 class="subsection-title"><strong class="subsection-number">#09</strong> Colours</h2>
+
+    <h3>Blacks</h3>
+    <ul class="styleguide__color-list list--reset clear">
+      <li class="color--gray-background g--half">gray-background</li>
+      <li class="color--gray-keyline g--half g--last">gray-keyline</li>
+      <li class="color--gray g--half">gray</li>
+      <li class="color--gray-dark g--half g--last">gray-dark</li>
+    </ul>
+
+    <h3>Themes</h3>
+    <ul class="styleguide__color-list list--reset clear">
+      <li class="color--layouts g--half">layouts</li>
+      <li class="color--layouts-secondary g--half g--last">layouts secondary</li>
+      <li class="color--user g--half">user</li>
+      <li class="color--user-secondary g--half g--last">user secondary</li>
+      <li class="color--media g--half">media</li>
+      <li class="color--media-secondary g--half g--last">media secondary</li>
+      <li class="color--performance g--half">performance</li>
+      <li class="color--performance-secondary g--half g--last">performance secondary</li>
+    </ul>
+
+    <h3>Google</h3>
+    <ul class="styleguide__color-list list--reset clear">
+      <li class="color--blue g--half">blue</li>
+      <li class="color--blue-secondary g--half g--last">blue secondary</li>
+      <li class="color--green g--half">green</li>
+      <li class="color--green-secondary g--half g--last">green secondary</li>
+      <li class="color--red g--half">red</li>
+      <li class="color--red-secondary g--half g--last">red secondary</li>
+      <li class="color--yellow g--half">yellow</li>
+      <li class="color--yellow-secondary g--half g--last">yellow secondary</li>
+    </ul>
+
+    <h3>Helpers</h3>
+    <ul class="styleguide__color-list list--reset clear">
+      <li class="color--text g--half">text</li>
+      <li class="color--highlight g--half g--last">highlight</li>
+      <li class="color--warning g--half">warning</li>
+      <li class="color--danger g--half g--last">danger</li>
+      <li class="color--muted g--half">muted</li>
+      <li class="color--remember g--half g--last">remember</li>
+      <li class="color--learning g--half">learning</li>
+    </ul>
+  </section>
+
   <a name="modules"></a>
-  <h2 class="subsection-title"><strong class="subsection-number">#08</strong> Modules</h2>
+  <h2 class="subsection-title"><strong class="subsection-number">#10</strong> Modules</h2>
 
   <h3 class="styleguide__module-title">Highlights</h3>
 
@@ -207,13 +381,15 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+  {% include modules/highlight.liquid character="!" position="right" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="remember" %}
 
-  {% include modules/highlight.liquid character="}" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+  {% include modules/highlight.liquid character="*" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
 
-  {% include modules/highlight.liquid character="?" title="Remember" list=page.learning-list %}
+  {% include modules/highlight.liquid character="!" position="right" title="Remember" list=page.learning-list type="remember" %}
 
-  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
+  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" type="remember" %}
+
+  {% include_code ../../getting-started/multi-screen/_code/viewport.html viewport %}
 
 </section>
 
@@ -238,6 +414,215 @@ NOTE: This is our styleguide
 
 </section>
 
+<div class="container">
+  <h3 class="styleguide__module-title">Articles section</h3>
+</div>
+
+<section class="styleguide__articles-section">
+  <div class="articles-section">
+    <div class="container">
+      <p class="articles-count">4 guides</p>
+      <ol class="articles-list">
+        <li class="articles-list__item">
+          <h3 class="xxlarge"><a href="#">Layout basics</a></h3>
+          <p class="g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+          <a href="#" class="cta--primary">See all lessons</a>
+        </li>
+        <li class="articles-list__item">
+          <h3 class="xxlarge"><a href="#">Basic layouts</a></h3>
+          <p class="g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+          <a href="#" class="cta--primary">See all lessons</a>
+        </li>
+        <li class="articles-list__item">
+          <h3 class="xxlarge"><a href="#">Layout patterns</a></h3>
+          <p class="g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+          <a href="#" class="cta--primary">See all lessons</a>
+        </li>
+        <li class="articles-list__item">
+          <h3 class="xxlarge"><a href="#">UI Elements</a></h3>
+          <p class="g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, distinctio blanditiis quos porro harum nemo.</p>
+          <a href="#" class="cta--primary">See all lessons</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <h3 class="styleguide__module-title">Guides section</h3>
+</div>
+
+<section class="styleguide__guides-section">
+  <div class="guides-section">
+    <header class="container">
+        <h2 class="xlarge">Guides Section</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor.</p>
+    </header>
+
+    <ul class="guides-list container-medium">
+      <li class="guides-list__item g--half">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+      <li class="guides-list__item g--half g--last">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+      <li class="guides-list__item g--half">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+      <li class="guides-list__item g--half g--last">
+        <h3 class="xlarge">Multi screen layouts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
+        <ol class="list--links list--reset">
+          <li><a href="#">Layout basics</a></li>
+          <li><a href="#">Basics layouts</a></li>
+          <li><a href="#">Layout patterns</a></li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="container">
+  <h3 class="styleguide__module-title">Page header</h3>
+</div>
+
+<section class="styleguide__page-header">
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <p> / <a href="#" class="breadcrumbs__link"> The Essentials</a></p>
+      </nav>
+      <h3 class="xxlarge">Multi-screen layouts</h3>
+      <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, optio, ad, voluptates repudiandae at excepturi error delectus explicabo nulla eum provident quibusdam ipsum sapiente culpa sequi quia unde fuga id.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <h3 class="styleguide__module-title">Centered list</h3>
+</div>
+
+<section class="styleguide__centered-list">
+  <div class="centered-list">
+    <div class="container">
+      <ul class="centered-list list--reset clear">
+        <li class="g-medium--half g-wide--1">
+          <h3 class="large text-divider">Guide Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#">Get started</a>
+        </li>
+        <li class="g-medium--half g-medium--last g-wide--1">
+          <h3 class="large text-divider">Guide Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#">Get started</a>
+        </li>
+        <li class="g-medium--half g-wide--1">
+          <h3 class="large text-divider">Guide Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#">Get started</a>
+        </li>
+        <li class="g-medium--half g-medium--last g-wide--1 g-wide--last">
+          <h3 class="large text-divider">Guide Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#">Get started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <h3 class="styleguide__module-title">Featured spotlight</h3>
+</div>
 
 
 
+
+<a name="feature-spotlight"></a>
+<section class="styleguide__feature-spotlight">
+
+
+  <div class="featured-spotlight">
+
+    <div class="container-medium">
+
+      <div class="featured-spotlight__container g--pull-half">
+        <div class="featured-spotlight__img">
+          <img src="../../imgs/placeholder--wide.png" alt="image exemple">
+        </div>
+
+        <div class="container-small">
+          <h3 class="xxlarge">Featured spotlight</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed vitae varius augue, eu varius dolor.</p>
+          <a href="#" class="cta--primary">View Google</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+
+<div class="container">
+  <h3 class="styleguide__module-title">Featured list</h3>
+</div>
+
+<section class="styleguide__featured-section">
+  <div class="featured-section">
+    <div class="container-medium">
+      <ul class="featured-list">
+        <li class="featured-list__item clear">
+          <div class="container-small">
+            <div class="featured-list__content g--half">
+              <h3>Case study</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+              <a href="#" class="cta--primary">View Google</a>
+            </div>
+            <div class="featured-list__img-wrapper g--half g--last">
+              <div class="featured-list__img">
+                <img src="../../imgs/placeholder--small.png" alt="image exemple">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="featured-list__item clear">
+          <div class="container-small">
+            <div class="featured-list__content g--half">
+              <h3>Case study</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+              <a href="#" class="cta--primary">View Google</a>
+            </div>
+            <div class="featured-list__img-wrapper g--half g--last">
+              <div class="featured-list__img">
+                <img src="../../imgs/placeholder--small.png" alt="image exemple">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

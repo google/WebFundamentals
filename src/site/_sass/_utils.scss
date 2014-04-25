@@ -14,23 +14,51 @@
 
   // Defining breakpoints
   $medium: 620px;
-  $wide: 960px;
+  $wide: 800px;
   $huge: 1600px;
   $mediumContainer: 688px;
   $wideContainer: 864px;
 
+  // Defining grid sizes
+  $mediumColCount: 3;
+  $mediumColWidth: 30.3%;
+  $mediumGutterWidth: 4.5%;
+  $wideColCount: 4;
+  $wideColWidth: 22.2%;
+  $wideGutterWidth: 3.7%;
+
   // Defining colors
-  $colorRed: #971b24;
-  $colorBlue: #4f80f2;
-  $colorDarkBlue: #4b67aa;
-  $colorAqua: #94d8e8;
-  $colorWhite: #fff;
-  $colorGray: #e8e8e8;
+  $colorBlue: #4285f4;
+  $colorBlueSecondary: lighten($colorBlue, 30%);
+  $colorGreen: #0f9d58;
+  $colorGreenSecondary: lighten($colorGreen, 30%);
+  $colorRed: #cb4437;
+  $colorRedSecondary: lighten($colorRed, 30%);
+  $colorYellow: #f4b400;
+  $colorYellowSecondary: lighten($colorYellow, 30%);
+
+  $colorRemember: #09829a;
+  $colorLearning: #da2e75;
+
+  $colorGrayBackground: #f0f0f0;
+  $colorGrayKeyline: #e0e0e0;
+  $colorGray: #737373;
   $colorGrayDark: #404040;
-  $colorText: #4d4d4d;
-  $colorMustard: #f4b400;
-  $colorEmeraud: #33b679;
+
+  $colorText: $colorGrayDark;
   $colorHighlight: $colorBlue;
+  $colorWarning: $colorYellow;
+  $colorMuted: $colorGray;
+  $colorDanger: $colorRed;
+
+  $colorLayouts: #297ea9;
+  $colorLayoutsSecondary: lighten($colorLayouts, 30%);
+  $colorUser: #2c8566;
+  $colorUserSecondary: lighten($colorUser, 30%);
+  $colorMedia: #cf423a;
+  $colorMediaSecondary: lighten($colorMedia, 30%);
+  $colorPerformance: #7b5294;
+  $colorPerformanceSecondary: lighten($colorPerformance, 30%);
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif;
@@ -136,8 +164,8 @@
     }
 
     @include wide {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 4.4%;
+      padding-right: 4.4%;
     	max-width: $wideContainer;
     }
   }
@@ -160,12 +188,12 @@
       z-index: 9;
 
       display: none;
-      background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
-      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
-      background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
-      background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
-      background-image: linear-gradient(top, rgba(0,0,0,0.3) 95%,rgba(0,0,0,0.3) 100%);
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15)));
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.15) 100%);
+      background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+      background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.15) 100%);
+      background-image: linear-gradient(top, rgba(0,0,0,0.15) 95%,rgba(0,0,0,0.15) 100%);
 
       @include prefixr(background-size, 100% 26px);
     }
@@ -300,4 +328,122 @@
     @include wide {
       @include rule--huge;
     }
+  }
+
+
+  // LISTS
+  @mixin bullet-type($bullet) {
+    &:before {
+      content: $bullet;
+      display: block;
+      font-family: $fontHighlight;
+      font-weight: 400;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: $lineHeight;
+    }
+  }
+
+  @mixin numbered-list() {
+    &:before {
+      counter-increment: list;
+      content: "#0" counter(list);
+      color: inherit;
+      font-weight: 600;
+      display: inline-block;
+      margin-right: 16px;
+    }
+  }
+
+  // Mixin to create links
+  @mixin style-cta($textColor, $hasArrow: true) {
+    color: $textColor;
+    font-weight: 600;
+    display: inline-block;
+
+    &:hover {
+      color: $colorGrayDark;
+    }
+
+    @if $hasArrow {
+      &:before {
+        content: ">";
+        display: inline-block;
+        padding-right: 16px;
+      }
+    }
+  }
+
+  // Mixin to create highlight modules
+  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: -65px, $fontSize: 350px) {
+    position: relative;
+
+    &:before {
+      content: attr(data-character);
+      display: block;
+
+      position: absolute;
+      top: $verticalOffset;
+      right: $horizontalOffset;
+
+      font-family: $fontHighlight;
+      font-size: $fontSize;
+      font-weight: 900;
+      line-height: 100%;
+      height: 100%;
+      color: #ffffff;
+      text-align: center;
+
+
+      width: $mediumColWidth;
+
+      .highlight-module--left & {
+        right: auto;
+        left: $horizontalOffset;
+      }
+
+      @include wide {
+        width: $wideColWidth;
+        font-size: $fontSize + 50;
+
+        .highlight-module--large & {
+          font-size: $fontSize + 300;
+        }
+      }
+    }
+  }
+
+  @mixin highlight-symbol-override($symbol) {
+    &:before {
+      content: $symbol;
+    }
+  }
+
+  @mixin highlight-vertical-offset-override($offset) {
+    &:before {
+      top: $offset;
+    }
+  }
+
+  // Grid CSS rules
+  @mixin rule--col($mediaQuery) {
+    @if $mediaQuery == medium {
+      float: left;
+      margin-right: $mediumGutterWidth;
+    }
+
+    @if $mediaQuery == wide {
+      float: left;
+      margin-right: $wideGutterWidth;
+    }
+  }
+
+  // Mixin for flexbox
+  @mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   }

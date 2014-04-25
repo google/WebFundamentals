@@ -37,4 +37,14 @@ body {
   @include container;
 }
 
+.container-medium {
+  @include medium {
+    @include container;
+  }
+}
 
+.container-small {
+  @include small-only {
+    @include container;
+  }
+}
