@@ -1657,6 +1657,34 @@ body.debug:after {
   }
 }
 
+/* line 1, ../_sass/_modules/_article-nav.scss */
+.article-nav {
+  overflow: hidden;
+}
+
+/* line 5, ../_sass/_modules/_article-nav.scss */
+.article-nav-link {
+  background: #f0f0f0;
+  padding: 26px 24px;
+  float: left;
+  width: 50%;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* line 16, ../_sass/_modules/_article-nav.scss */
+.article-nav-link--prev {
+  text-align: right;
+  border-right-width: 1px;
+}
+
+/* line 21, ../_sass/_modules/_article-nav.scss */
+.article-nav-link--next {
+  border-left-width: 1px;
+  background-color: #e0e0e0;
+}
+
 /**
 *
 * Grid
@@ -1919,7 +1947,7 @@ body.debug:after {
 /* line 158, ../_sass/_components/_grid.scss */
 .debug .grid-overlay [class*="g-"] {
   height: 100%;
-  background-color: rgba(235, 242, 254, 0.4);
+  background-color: rgba(89, 89, 89, 0.2);
 }
 @media only screen and (min-width: 620px) and (max-width: 799px) {
   /* line 164, ../_sass/_components/_grid.scss */
