@@ -2838,7 +2838,7 @@ td:last-child:after {
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 0 52px;
-  background: #e0e0e0;
+  background: #ebebeb;
 }
 @media only screen and (min-width: 620px) {
   /* line 44, ../_sass/_components/_guides-list.scss */
