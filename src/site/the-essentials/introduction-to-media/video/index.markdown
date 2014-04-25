@@ -88,7 +88,7 @@ You can also use the Media Fragments API to deliver multiple views on the same v
 
 To check for Range Request support, your browser tools for `Accept-Ranges: bytes` in the response headers:
 
-<img alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" class="g-medium--full g-wide--full" />
+<img alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 ### Include a poster image
 
@@ -173,7 +173,7 @@ There are lots of tools to help save the same video in different formats:
 
 * Desktop tools: [FFmpeg](http://ffmpeg.org/)
 * GUI applications: [Miro](http://www.mirovideoconverter.com/), [HandBrake](http://handbrake.fr/), [VLC](http://www.videolan.org/)
-* Online encoding/transcoding services: [Zencoder](http://en.wikipedia.org/wiki/Zencoder), [Amazon Elastic Encoder](http://aws.amazon.com/elastictranscoder/" class="g-medium--full g-wide--full" />
+* Online encoding/transcoding services: [Zencoder](http://en.wikipedia.org/wiki/Zencoder), [Amazon Elastic Encoder](http://aws.amazon.com/elastictranscoder/" class="g-medium--1 g-medium--last g-wide--1" />
 
 ### Check which format was used
 
@@ -209,9 +209,9 @@ To check the encoded size of a video, use the video element `videoWidth` and `vi
 
 Here's what a plain video element with no element sizing or CSS looks like in Chrome on Android (portrait and landscape):
 
-<img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" class="g-medium--full g-wide--full" />
+<img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" class="g-medium--1 g-medium--last g-wide--1" />
 
-<img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" class="g-medium--full g-wide--full" />
+<img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 The video elements are too big for the viewport; the user can't even see the video controls properly. It's super important to size video elements to fit their containers.
 
@@ -245,13 +245,13 @@ Device orientation isn't an issue for desktop monitors or laptops, but is hugely
 
 Safari on iPhone does a good job of switching between portrait and landscape orientation:
 
-<img alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait-3x5.png" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait-3x5.png" class="g-medium--1 g-medium--last g-wide--1" />
 
-<img alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape-5x3.png" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape-5x3.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 Device orientation on an iPad and Chrome on Android can be problematic. For example, without any customization a video playing on an iPad in landscape orientation looks like this:
 
-<img alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 Setting the video `width:100%` with CSS should resolve many device orientation layout problems. You may also want to consider fullscreen alternatives.
 
@@ -259,15 +259,15 @@ Setting the video `width:100%` with CSS should resolve many device orientation l
 
 Different platforms display video differently. Safari on an iPhone displays a video element inline on a web page, but plays video back in fullscreen mode:
 
-<img alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster-3x5.png" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster-3x5.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 On Android, users can request request fullscreen mode by clicking the fullscreen icon. But the default is to play video inline:
 
-<img alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 Safari on an iPad plays video inline:
 
-<img alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" class="g-medium--1 g-medium--last g-wide--1" />
 
 ### Control fullscreening of content
 
@@ -285,7 +285,7 @@ You can also use the CSS `:fullscreen` pseudo-class to change the way elements a
 
 On devices that support the Fullscreen API, consider using thumbnail images as placeholders for video (demo on Chrome for Android):
 
-<img alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" class="g-medium--full g-wide--full" />
+<img alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" class="g-medium--1 g-medium--last g-wide--1" />
 
 To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap or click on a thumbnail, the thumbnail is replaced by a fullscreen video element.
 
@@ -303,7 +303,7 @@ To make media more accessible on mobile, include captions or descriptions using 
 
 Using the track element, captions appear like this:
 
-<img alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg" class="g-medium--full g-wide--full" />
+<img alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg" class="g-medium--1 g-medium--last g-wide--1" />
 
 ### Add track element
 
