@@ -1,12 +1,8 @@
 ---
 layout: article
 title: "Make it responsive"
-description: "The web is accessible on a huge range of devices from small-screen phones
-to huge-screen televisions. Learn how to build a site that works well across all these devices."
-introduction: "The web is accessible on a huge range of devices from small-screen phones
-through to huge-screen televisions.  Each device presents its own unique
-benefits and also constraints and as a web developer you are expected to support
-all ranges of devices."
+description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
+introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions.  Each device presents its own unique benefits and also constraints and as a web developer you are expected to support all ranges of devices."
 key-takeaways:
   include-viewport:
     - All pages must include a viewport and make sure it has the recommended
@@ -49,39 +45,22 @@ collection: multi-screen
 * Table of Contents
 {:toc}
 
-Building multi-screen experiences is not as hard as it sounds. In this guide, we
-are going to create a simple landing page that shows you the basics of building
-a web site using "[Mobile First](link to mobile first)" design principles that
-enable you to easily scale your experiences up from a mobile device through to
-desktops and beyond.  We will show you best practices for interacting with both
-touch  and mice as well as structuring your content across screen sizes.
+We are building a site that works across in the [previous article]({{site.baseurl}}{{page.article.previous.url}}) we designed the Infomration Architecture of the page and created a basic structure that we will now use to
+make work across all of our target screens and form-factors.
 
-Our goal in this guide is to build an example product landing page for our
-hypothetical Smiles product.  The end result will be a fully functioning page
-that covers many of the core principles of building experiences that work well
-across all different device types.
+We are going to take our content and structure from this:
 
+[show the result of the previous article]
 
-{% link_sample _code/content-with-styles.html %} See example {% endlink_sample %}
+to this:
+
+[insert image of final design]
+
+{% link_sample _code/content-with-styles.html %} See the final result in action. {% endlink_sample %}
 
 ## TODO: Styling and images..
 
-[sratch]: 
-
-### Add Stylistic images
-
-Stylistic images are images that are not needed as part of the core content.
-
-A good example of this is a headline image for the 'above the fold' content.
-
-[TODO: Add Image]
-
-{% include_code _code/addimages.html styles css %}
-
-We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element.
-
-# Make your page responsive
+## Make your page responsive
 
 The page has all the content needed to display on a narrow viewport, but on
 different screen sizes it doesn't  look good because we have simply created a
@@ -191,6 +170,21 @@ to each other.
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
+
+[sratch]: 
+
+### Add Stylistic images
+
+Stylistic images are images that are not needed as part of the core content.
+
+A good example of this is a headline image for the 'above the fold' content.
+
+[TODO: Add Image]
+
+{% include_code _code/addimages.html styles css %}
+
+We have chosen a simple background image that is blurred so it doesn't take away
+from the content and we have set it to `cover` the entire element.
 
 
 #### Float the Video Element
