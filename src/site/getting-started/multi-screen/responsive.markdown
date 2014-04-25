@@ -12,6 +12,8 @@ key-takeaways:
 notes:
   styling: 
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
+  not-all-at-once:
+    - You don't have to move all the elements at once, you can make smaller adjustments if needed
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
@@ -74,11 +76,57 @@ The viewport lives in the head of the document and only needs to be declared onc
 </div>
 </div>
 
-[TODO: Add Images]
+## Apply simple styling
 
-To apply the correct styling at these break-points we will use 
-[Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-to let us adapt the style and layout of the content to the width of the screen.
+Our product and company already has a very specific branding.
+
+[TODO add colour tiles.]
+
+### Add stylistic images
+
+In the previous guide we added images called "content images".  These were
+images that were important to the narrative of our product.  Stylistic images
+are images that are not needed as part of the core content but add visual flare
+or help guide the readers attention to a specific piece of content.
+
+A good example of this is a headline image for the 'above the fold' content.  It
+is often used to entice the user in to reading more about the prodcut.
+
+[TODO: Add Image]
+
+They can be very simple to include, in our case it will be the background to the 
+header and we will apply it via some simple CSS.
+
+{% include_code _code/addimages.html styles css %}
+
+We have chosen a simple background image that is blurred so it doesn't take away
+from the content and we have set it to `cover` the entire element that way it 
+always stretches whilst maintaining the correct aspect ratio.
+
+## Set your first breakpoint
+
+[TODO: GIF of it starting to look bad].
+
+The design starts to look bad at about 600px wide.  This is a good place to
+create our first breakpoint as it will give us scope to reposition elements to
+make them fit the screen better.  We can do this using a technology called
+[Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness).
+
+{% include_code _code/firstbreakpoint.html first css %}
+
+There is more space on a larger screen so there is more flexibility with how
+content can be displayed.  
+
+{% include modules/remember.liquid title="Note" list=page.notes.not-all-at-once %}
+
+In the context of our product page it looks like we will
+need to:
+
+*  Constrain the maximum width of the design
+*  Alter the padding of elements and reduce the text size
+*  Move the form to float inline with the heading content
+*  Make the video float around the content
+*  Reduce the size of the images and have them appear in a nicer grid
 
 <div class="related-items">
 <div class="related-items">
@@ -95,60 +143,61 @@ to let us adapt the style and layout of the content to the width of the screen.
 </div>
 </div>
 
-## Set your first breakpoint
-
-[TODO: GIF of it starting to look bad].
-
-The design starts to look bad at about 600px wide.  This is a good place to
-create our first breakpoint as it  will give us scope to reposition elements to
-make them fit the screen better.  We can do this as follows:
-
-{% include_code _code/firstbreakpoint.html first css %}
-
-There is more space on a larger screen so there is more flexibility with how
-content can be displayed.  In the context of this page it looks like we will
-need to:
-
-*  Constrain the maximum width of the design
-*  Alter the padding of elements and reduce the text size
-*  Move the form to float inline with the heading content
-*  Make the video float around the content
-*  Reduce the size of the images and have them appear in a nicer grid
-
 ## Constrain the maximum width of the design
 
-We have chosen to have only two major design: a narrow viewport and a wide
-viewport.
+We have chosen to have only two major layouts: a narrow viewport and a wide
+viewport which greatly simplifies our build process.
 
-This means we should constrain the maximum width of the screen to be 800px so
-that the  content doesn't stretch out too far on large screens.
+We have also decided to create fullbleed sections on the narrow viewport that
+stay fullbleed on the wide viewport.  This means we should constrain the
+maximum width of the screen so that the text and paragrahpsh don't extend in to one
+long single line on ultra wide screens.  We have chosen this point to be 
+about 800px.
 
-We need to create a container around each major section to make a system
-that has an auto margin.  This will allow the screen to grow but the content
-centered and at a maximum size of 800px.
+To achieve this we need to constrain the width and center the elements.  We
+need  to create a container around each major section and apply a `margin:
+auto`.   This will allow the screen to grow but the content remain centered
+and at a maximum size of 800px.
 
-To achieve this effect we need to edit our structure slightly to do this.
+The container will be a simple `div` in the following form:
+
+    {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 {% include_code _code/fixingfirstbreakpoint.html containerhtml html %}
 
-And then create a style that ensures that the content is padded and centered.
-
 {% include_code _code/fixingfirstbreakpoint.html container css %}
 
-#### Alter the padding of elements and reduce the text size
+## Alter the padding and reduce text size
 
-On the narrow viewport we normally have a lot less space to display content so
+On the narrow viewport we don't have a lot of space to display content so
 the size and weight of the typography is often drastically reduced to fit the
 screen.
 
-With the larger viewport we need to consider that the user is more likely
-further away from the screen so to increase the readability of the content we
-can increase the size and weight of the typography and we can alter the padding
-to make distinct areas stand out more.
+With a larger viewport we need to consider that the user is more likely to be
+on a larger screen but further away.  To increase the readability of the
+content we can increase the size and weight of the typography and we can also
+alter the padding to make distinct areas stand out more.
+
+In our product page we will increase the padding of the section elements by 
+setting it to remain at 5% of the width.  We will also increase the size of
+the headers for each of the sections.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
 [TODO: GIF of it starting to look better with altered].
+
+## Adapt elements to wide viewport
+
+Our narrow viewport was a stacked linear display.  Each major section and the content
+inside them was displayed in order from top to bottom.
+
+A wide viewport gives us extra space to use to display the content in an optimal way
+for that screen.  For our product page this means that acorrding to our IA we can:
+
+*  move the form around the header information
+*  position the video to the right of the key points
+*  tile the images
+*  expand the table.
 
 ### Float the Form element
 
@@ -163,23 +212,7 @@ to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
-[sratch]: 
-
-## Add stylistic images
-
-Stylistic images are images that are not needed as part of the core content.
-
-A good example of this is a headline image for the 'above the fold' content.
-
-[TODO: Add Image]
-
-{% include_code _code/addimages.html styles css %}
-
-We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element.
-
-
-## Float the Video element
+### Float the Video element
 
 The video element can also be moved out of the vertical flow of the narrow
 viewport and  can be display side by side with the bulleted list of content.
@@ -188,7 +221,7 @@ viewport and  can be display side by side with the bulleted list of content.
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
-## Tile the Images
+### Tile the Images
 
 The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen.  This doesn't scale well on a screen with a
