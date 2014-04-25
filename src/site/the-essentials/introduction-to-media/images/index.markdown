@@ -56,7 +56,7 @@ use too much real estate on a narrow phone.
 
 ### Art direction
 
-![Art direction example](img/art-direction.jpg)
+![Art direction example](img/art-direction.png)
 
 Other times the image may need to be changed more drastically: changing the 
 proportions, cropping and even replacing the entire image.  In this case, 
@@ -416,9 +416,6 @@ Lazy loading can significantly speed up loading on long pages that include many
 images below the fold by loading them either as needed or once the primary 
 content has finished loading and rendering.  In addition to performance 
 improvements, using lazy loading can create infinite scrolling experiences.
-
-![Example of a page that uses lazy-loading for images](img/TODO.png)  
-{% include_code _code/lazy-load.html todohtml html %}
 
 Be careful when creating infinite scrolling pages, because content is loaded as 
 it becomes visible, search engines may never see that content.  In addition, 
