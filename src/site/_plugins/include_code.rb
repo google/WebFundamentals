@@ -35,7 +35,7 @@ module Jekyll
 
     # This is the base domain we will link to for samples.
     @@sample_link_base = "https://google-developers.appspot.com/"
-    @@comment_formats = { 
+    @@comment_formats = {
       "html" => ["<!--", "-->"],
       "css" => ["\\\/\\\*", "\\\*\\\/"],
       "javascript" => ["\\\/\\\*", "\\\*\\\/"],
@@ -57,7 +57,7 @@ module Jekyll
     def getmatcher_tag(lang, section, tag)
       startc, endc = @@comment_formats[lang]
       "#{startc} \\/\\/ \\[#{tag} #{section}\\] #{endc}\n?"
-    end 
+    end
 
     def getmatch(contents, lang, section)
       start = getmatcher_tag(lang, section, "START")
