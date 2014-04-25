@@ -3,6 +3,7 @@ layout: section
 title: "Introduction to media"
 description: "Images, Video and Audio make the web engaging and compelling.  Use our guides to get complete mastery and deliver amazing experiences to your users."
 introduction: "Images, Video and Audio make the web engaging and compelling.  Use our guides to get complete mastery and deliver amazing experiences to your users."
+snippet: "Master images, audio and video"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
