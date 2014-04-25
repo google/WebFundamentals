@@ -376,7 +376,7 @@
   }
 
   // Mixin to create highlight modules
-  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: -65px, $fontSize: 350px) {
+  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 45px, $fontSize: 350px) {
     position: relative;
 
     &:before {
