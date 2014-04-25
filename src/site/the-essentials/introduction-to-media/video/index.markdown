@@ -375,11 +375,11 @@ DASH is already in use by sites such as YouTube; you can see DASH in action with
 For the complete list of video element attributes and their definitions, see [the video element spec](http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
 <table class="table--3">
-<tr>
+<th>
     <td>Element</td>
     <td>Availability</td>
     <td>Description</td>
-</tr>
+</th>
 <tr>
     <td>`src`</td>
     <td>All browsers</td>
@@ -451,10 +451,10 @@ The `preload` element has different effects on different platforms. For example,
 #### Properties
 
 <table class="table--3">
-<tr>
+<th>
     <td>Property</td>
     <td>Description</td>
-</tr>
+</th>
 <tr>
     <td>`currentTime`</td>
     <td>Get or set playback position in seconds.</td>
@@ -486,10 +486,10 @@ Neither playbackRate (demo at [simpl.info/rate](http://simpl.info/rate)) nor vol
 #### Methods
 
 <table class="table--3">
-<tr>
+<th>
     <td>Method</td>
     <td>Description</td>
-</tr>
+</th>
 <tr>
     <td>`load()`</td>
     <td>Load or reload a video source without initiating playback: for example, when the video `src` is changed using JavaScript.</td>
@@ -515,10 +515,10 @@ Note that playback scripting is not supported on mobile.
 These are only a subset of the media events that may be fired. Refer to the [Media events](https://developer.mozilla.org/docs/Web/Guide/Events/Media_events) page on the Mozilla Developer Network for a complete listing.
 
 <table class="table--3">
-<tr>
+<th>
     <td>Event</td>
     <td>Description</td>
-</tr>
+</th>
 <tr>
     <td>`canplaythrough`</td>
     <td>Fired when enough data is available that browser believes it can play the video completely without interruption.</td>
