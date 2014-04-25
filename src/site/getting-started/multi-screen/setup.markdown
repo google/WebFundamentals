@@ -77,37 +77,6 @@ We also recommend that you have a mobile device to hand to be able to test your
 experiences on, however if you haven't got one this is not a problem there are
 tools that you can use to help you along the way.
 
-## Create first multi-screen page
-
-Even for a basic page you must include a viewport meta tag.  The viewport is the
-most critical[link to viewport doc] component you need for building mobile-first
-experiences.  Without it, your site will not work well on a mobile device.
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.include-viewport %}
-
-The viewport indicates to the browser that the page needs to be scaled to fit
-the screen.  There are many different configurations that you can specify for
-your viewport to control the display of the page.  As a default, we recommend:
-
-{% include_code _code/viewport.html viewport %}
-
-The viewport lives in the head of the document and only needs to be declared once.
-
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-* [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
-{: .list--links}
-
-</div>
-</div>
-</div>
-</div>
-
 ## Test your page
 
 Testing your page is one of the most important things you can do to ensure you

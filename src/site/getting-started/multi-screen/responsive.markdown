@@ -4,29 +4,8 @@ title: "Make it responsive"
 description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
 introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions.  Each device presents its own unique benefits and also constraints and as a web developer you are expected to support all ranges of devices."
 key-takeaways:
-  include-viewport:
-    - All pages must include a viewport and make sure it has the recommended
-      configuration.
-  test-page:
-    - Set up your environment to be able to easily test
-    - Use Chrome Dev Tools
-  flesh-out:
-    - Before you start, understand the content you need to display (text, images,
-      tables and videos)
-    - Start with the narrow viewport first (in many cases a mobile device) - often
-      this is called Mobile first development
-  great-form:
-    - Use labels to let the user quickly focus on the field
-    - Use placeholders to give an indication about the data to enter in the field
-    - Use common names to help the user auto fill their forms
-    - Use semantic types to help the user enter data quickly
-  add-images:
-    - Use the highest DPI possible for your source
-    - Each source image should be made for 2x DPI and 1x DPI
-    - Highly compress all your images
-  add-video:
-    - TODO
   make-responsive:
+    - Always use a viewport 
     - Always start with a narrow viewport first and scale out
     - Base your breakpoints off when you need to adapt the content
     - Create a high-level vision of your layout across major breakpoints
@@ -44,46 +23,58 @@ collection: multi-screen
 
 {% include modules/toc.liquid %}
 
-We are building a site that works across in the [previous
-article]({{site.baseurl}}{{page.article.previous.url}}) we designed the
+We are building a site that works across in multiple screen sizes and device
+types. In the [previous
+article]({{site.baseurl}}{{page.article.previous.url}}) we crafted the
 Infomration Architecture of the page and created a basic structure that we
 will now use to make work across all of our target screens and form-factors.
 
-We are going to take our content and structure from this:
-
-<div class="demo">
-  <img src="images/narrowviewport.jpg" alt="Page with only the content" style="width: 100%;">
-</div>
-
-to this:
-
-<div class="demo">
-  <img src="images/narrowviewport.jpg" alt="Page with all the final styling" style="width: 100%;">
-</div>
-
-{% link_sample _code/content-with-styles.html %} See the final result in action. {% endlink_sample %}
-
-The page has all the content needed to display on a narrow viewport, but on
-different screen sizes it doesn't look good because we have simply created a
-linear site.
-
-[TODO: Image of widening the viewport.] 
-
 We are using the principles of Mobile First web development.  We start with a
 narrow viewport &mdash; similar to a mobile phone &mdash; and build for that
-experience first.
+experience first and start to scale up to larger device classes.  We can do 
+this by making our viewport wider and making a judgement call on whether the
+design and layout look right.
 
 Earlier we created a couple of different high-level designs for how our content
-should be displayed and now we need to choose our breakpoints &mdash; a point
+should be displayed and now we need make our page adapt to those different layouts.
+We do this by making a decision on where to place our breakpoints &mdash; a point
 where the layout and styles change &mdash; based on how the contents fits the
 screen-size.
 
-We can do this by making our viewport wider and making a judgement call on
-whether the design and layout look right.
+{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.make-responsive %}
+
+We are going to  {% link_sample _code/content-without-styles.html %} take our content and structure {% endlink_sample %} and create our {% link_sample _code/content-with-styles.html %} final result. {% endlink_sample %}
+
+## Add a viewport
+
+Even for a basic page you **must** always include a viewport meta tag.  The viewport
+is the most critical component you need for building mobile-first experiences.
+Without it, your site will not work well on a mobile device.
+
+The viewport indicates to the browser that the page needs to be scaled to fit
+the screen.  There are many different configurations that you can specify for
+your viewport to control the display of the page.  As a default, we recommend:
+
+{% include_code _code/viewport.html viewport %}
+
+The viewport lives in the head of the document and only needs to be declared once.
+
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
+
+* [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+{: .list--links}
+
+</div>
+</div>
+</div>
+</div>
 
 [TODO: Add Images]
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.make-responsive %}
 
 To apply the correct styling at these break-points we will use 
 [Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
@@ -104,7 +95,7 @@ to let us adapt the style and layout of the content to the width of the screen.
 </div>
 </div>
 
-### Adding your first breakpoint
+## Set your first breakpoint
 
 [TODO: GIF of it starting to look bad].
 
@@ -124,7 +115,7 @@ need to:
 *  Make the video float around the content
 *  Reduce the size of the images and have them appear in a nicer grid
 
-#### Constrain the maximum width of the design
+## Constrain the maximum width of the design
 
 We have chosen to have only two major design: a narrow viewport and a wide
 viewport.
@@ -159,7 +150,7 @@ to make distinct areas stand out more.
 
 [TODO: GIF of it starting to look better with altered].
 
-#### Float the Form Element
+### Float the Form element
 
 The narrow viewport means that we have a lot less horizontal space available for
 us to comfortably position elements on the screen.
@@ -174,7 +165,7 @@ to each other.
 
 [sratch]: 
 
-### Add Stylistic images
+## Add stylistic images
 
 Stylistic images are images that are not needed as part of the core content.
 
@@ -188,7 +179,7 @@ We have chosen a simple background image that is blurred so it doesn't take away
 from the content and we have set it to `cover` the entire element.
 
 
-#### Float the Video Element
+## Float the Video element
 
 The video element can also be moved out of the vertical flow of the narrow
 viewport and  can be display side by side with the bulleted list of content.
@@ -197,7 +188,7 @@ viewport and  can be display side by side with the bulleted list of content.
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
-#### Tile the Images
+## Tile the Images
 
 The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen.  This doesn't scale well on a screen with a
@@ -213,7 +204,7 @@ images will inflate to large.
 
 [TODO:  Make the images reposnive to DPI.]
 
-# Summary
+## Wrapping up
 
 We have created a simple product landing page that works across a large range of
 devices, form-factors and screen sizes.
