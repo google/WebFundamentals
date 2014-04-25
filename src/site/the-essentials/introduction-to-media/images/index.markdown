@@ -136,7 +136,6 @@ matches the media query, and you must specify styles for the base case.  This
 also provides the benefit of ensuring something will be rendered if the browser 
 doesn't support resolution specific media queries.
 
-![TODO](img/TODO.png)  
 {% include_code _code/media-query-dppx.html mqdppx css %}
 
 You can also use the min-width syntax to display alternative images depending on 
@@ -321,7 +320,9 @@ advantages to images:
   straightforward.
 * An entire set of icons can be downloaded in one font. 
 
-![Example of page that uses Font Awesome](img/TODO.png)  
+{% link_sample _code/icon-font.html %}
+![Example of page that uses Font Awesome](img/icon-fonts.png)  
+{% endlink_sample %}
 {% include_code _code/icon-font.html todohtml html %}
 
 There are hundreds of free and paid icon fonts available including [Font 
@@ -343,8 +344,8 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can 
 download and display all the assets. 
 
-For a more in-depth look, check out the [Image Optimization](//TODO) section in 
-[Optimizing Performance](//TODO).
+For a more in-depth look, check out the [Image Optimization](../../performance/optimizing-content-efficiency/#todo) section in 
+[Optimizing Performance](../../performance/optimizing-content-efficiency/).
 
 ### Choose the right format
 
@@ -404,7 +405,9 @@ CSS spriting is a technique whereby a number of images are combined in a single
 background image for an element (the sprite sheet) plus an offset to display the 
 correct part.
 
-![Image sprite used by our sample](img/TODO.png)  
+{% link_sample _code/image-sprite.html %}
+![Image sprite used by our sample](img/sprite-sheet.png) 
+{% endlink_sample %}
 {% include_code _code/image-sprite.html sprite css %}
 
 Spriting has the advantage of reducing the number of downloads required to get 
