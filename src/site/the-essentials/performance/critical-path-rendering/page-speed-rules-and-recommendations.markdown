@@ -17,8 +17,7 @@ collection: critical-path-rendering
 ---
 {% wrap content %}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 ## Eliminate render-blocking JavaScript and CSS in above-the-fold content
 

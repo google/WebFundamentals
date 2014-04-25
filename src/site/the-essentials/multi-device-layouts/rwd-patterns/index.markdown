@@ -16,8 +16,7 @@ collection: multi-device-layouts
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Most layouts used by responsive web pages can be categorized into one of five
 patterns: mostly fluid, column drop, layout shifter, tiny tweaks and off canvas.

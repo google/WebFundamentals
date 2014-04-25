@@ -68,8 +68,7 @@ key-takeaways:
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Once we've eliminated any unnecessary resources, the next step is to minimize
 the total size of the remaining resources the browser has to download - i.e.

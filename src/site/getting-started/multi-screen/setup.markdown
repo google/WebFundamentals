@@ -46,8 +46,7 @@ article:
 
 {% wrap content %}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Building multi-screen experiences is not as hard as it sounds. In this
 guide, we are going to create a simple landing page that shows you the basics of

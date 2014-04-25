@@ -42,8 +42,7 @@ collection: multi-screen
 
 {% wrap content %}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 We are building a site that works across in the [previous article]({{site.baseurl}}{{page.article.previous.url}}) we designed the Infomration Architecture of the page and created a basic structure that we will now use to
 make work across all of our target screens and form-factors.

@@ -18,8 +18,7 @@ collection: optimizing-content-efficiency
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 **TODO****: do we need this content?**
 
