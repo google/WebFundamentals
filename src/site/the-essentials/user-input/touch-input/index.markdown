@@ -49,7 +49,6 @@ collection: user-input
 
 <!-- TODO[MATTGAUNT] add related items -->
 <!-- TODO[MATTGAUNT] add what's next -->
-<!-- TODO[MATTGAUNT] update necessary images -->
 
 {% include modules/toc.liquid %}
 
@@ -228,10 +227,12 @@ accidentally move the mouse outside of the element, which results in the move
 events no longer firing. By adding the move event to the document, we
 overcome this and continue to get mouse move events.
 
-You can use the Show potential scroll bottlenecks feature in Chrome DevTools
+You can use the `"Show potential scroll bottlenecks"` feature in Chrome DevTools
 to show how the touch events behave:
 
-[TODO: IMAGE SHOWING THIS - Dev Tools + Device]
+<img class="g-medium--1 g-medium--last g-wide--3" src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools" />
+
+<div style="clear: both;"></div>
 
 ### Handle multi-element interaction
 
@@ -319,8 +320,6 @@ use `touch-action: none` to disable scrolling on touch:
 
 {%include_code _code/touch-demo-1.html touch-action-example css %}
 
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.touch-events %}
-
 ## Reference
 
 The definitive touch events reference can be found here:
@@ -361,7 +360,7 @@ The definitive touch events reference can be found here:
     </tr>
     <tr>
       <td><code>:hover</code></td>
-      <td>TODO:NEED IMAGE</td>
+      <td><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
       <td>
         This state is entered when a is cursor placed over an element.
         Changes in UI on hover are helpful to encourage users to interact

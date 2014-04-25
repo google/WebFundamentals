@@ -6,11 +6,23 @@
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no"/>
 
-    <title>Web Essential: Touch Example 2</title>
+    <title>Touch Example 2</title>
     
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <style>
+      body {
+        width: 100%;
+        height: 100%;
+        
+        background-color: #d3e2fc;
+        
+        font-family: 'Roboto', sans-serif;
+        color: #ecf0f1;
+
+        padding: 16px;
+      }
+
       .container {
         display: flex;
         display: -ms-flexbox;
@@ -52,7 +64,7 @@
         
         border-radius: 6px;
         
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0,0,0,0.2);
       }
 
       .v-slider > .hold {
@@ -69,7 +81,7 @@
         margin-top: -23px;
         margin-left: -23px;
         
-        background-color: rgb(60,60,60);
+        background-color: #4285f4;
       }
     </style>
   </head>
@@ -200,7 +212,7 @@
         function limitValueToSlider(value) {
           if(Math.abs(value) > element.clientHeight) {
             value = element.clientHeight;
-          } else if(differenceInY < 0) {
+          } else if(value < 0) {
             value = 0;
           }
           return value;
