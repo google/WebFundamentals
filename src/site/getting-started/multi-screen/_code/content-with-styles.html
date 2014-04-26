@@ -51,6 +51,7 @@
 
       #headline #register label {
         font-size: 1.2em;
+        font-weight: 200;
         padding-top: 12px;
         display: block;
       }
@@ -58,6 +59,7 @@
       #headline #register input {
         width: 100%;
         font-size: 18px;
+        font-weight: 200;
         padding: 10px;
         box-sizing: border-box;
       }
@@ -73,6 +75,7 @@
       }
 
       #section1, #section2, #section3 {
+        box-sizing: border-box;
         padding: 20px;
       }
 
@@ -122,7 +125,7 @@
       #section2 div {
       }
 
-      #section2 div img{
+      #section2 div img {
         width: 100%
       }
 
@@ -161,7 +164,7 @@
         text-align: center;
       }
 
-      @media (min-width: 600px) {
+      @media screen and (min-width: 700px) {
           #headline {
             padding: 20px 5%;
           }
@@ -188,12 +191,13 @@
             float:right;
             padding: 20px;
             width: 50%;
-            box-sizing: border-box;=
+            box-sizing: border-box;
             font-weight: 300;
           }
           
           #section1 #section2, #section3 {
-             padding: 10px 20% 80px 20%;
+            box-sizing: border-box;
+            padding: 10px 20% 80px 20%;
           }
           
           #section1 h2, #section2 h2, #section3 h2  {
@@ -202,16 +206,20 @@
           }
           
           #section1 ul {
+            box-sizing: border-box;
             float: left;
-          }
-          
-          #section1 br {
-            clear: both;
+            width: 50%;
+            padding-right: 1em;
           }
           
           #section1 video {
+            box-sizing: border-box;
             width: 50%;
             float: right;
+          }
+
+          #section1 br {
+            clear: both;
           }
           
           #section2 div img{
@@ -249,9 +257,6 @@
            <label for="tel">Telephone</label>
            <input type="tel" name="tel" id="tel" 
               placeholder="(555) 555 5555" required />
-           <label for="time">Best time to contact</label>
-           <input type="time" name="time" id="time" 
-              placeholder="4pm" required />
            <input type="submit" value="Sign up">
         </form>
         <br>
