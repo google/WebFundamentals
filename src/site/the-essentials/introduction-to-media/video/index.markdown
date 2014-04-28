@@ -59,6 +59,19 @@ remember:
 
 {% wrap content%}
 
+<style type="text/css">
+  img, video, object {
+    max-width: 100%;
+  }
+
+  img.center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+</style>
+
 But videos take bandwidth, they don't always work the same across every 
 platform, so any value the user might get from watching video diminishes when 
 the user has to wait for the video to load, or the user presses play and 
@@ -97,7 +110,6 @@ To check for Range Request support, your browser tools for
 
 <img  alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" />
 
-
 ### Include a poster image
 
 Add a poster attribute to the video element so that your users have an idea 
@@ -117,11 +129,11 @@ Here's a side-by-side comparison of videos without and with a poster image
 
 <div class="clear">
   <div class="g--half">
-    <img alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png" />
+    <img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png" />
   </div>
 
   <div class="g--half g--last">
-    <img width="30%" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png" />
+    <img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png" />
   </div>
 </div>
 
@@ -325,7 +337,7 @@ in Chrome on Android (portrait and landscape):
 
 <div class="clear">
   <div class="g--half">
-    <img  alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
+    <img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
   </div>
 
   <div class="g--half g--last">
