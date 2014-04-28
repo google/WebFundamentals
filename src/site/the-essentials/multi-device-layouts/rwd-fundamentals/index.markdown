@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Responsive Web Design Fundamentals"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, legend eu tincidunt et, sagittis et mi."
+description: "Much of the web isn't optimized for those multi-screen experinences. Learn the
+             fundamentals get your sites everywhere from a Mobile device to a TV."
 introduction: "The use of mobile devices to surf the web is growing at an astronomical pace,
               but unfortunately much of the web isn't optimized for those mobile devices. Mobile
               devices are often constrained by display size and require a different approach
