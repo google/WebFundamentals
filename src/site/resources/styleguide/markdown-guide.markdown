@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Markdown Guide"
-description: "Markdown guide for the Styleguide description"
+description: "Markdown guide and syntax used for this site."
 class: "page--styleguide"
 learning-list:
   - Lorem ipsum dolor sit amet
