@@ -1506,16 +1506,22 @@ body.debug:after {
 * @author Antoine Grelard
 *
 **/
-/* line 14, ../_sass/_modules/_related-guides.scss */
+/* line 13, ../_sass/_modules/_related-guides.scss */
+.related-guides {
+  margin-top: 52px;
+  padding-bottom: 52px;
+}
+
+/* line 19, ../_sass/_modules/_related-guides.scss */
 .related-guides__list .list--links {
   padding-top: 0;
 }
-/* line 18, ../_sass/_modules/_related-guides.scss */
+/* line 23, ../_sass/_modules/_related-guides.scss */
 .related-guides__list a {
   display: block;
 }
 
-/* line 23, ../_sass/_modules/_related-guides.scss */
+/* line 28, ../_sass/_modules/_related-guides.scss */
 .related-guides__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 26px;
@@ -1527,7 +1533,7 @@ body.debug:after {
   padding-top: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 23, ../_sass/_modules/_related-guides.scss */
+  /* line 28, ../_sass/_modules/_related-guides.scss */
   .related-guides__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1539,17 +1545,17 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 23, ../_sass/_modules/_related-guides.scss */
+  /* line 28, ../_sass/_modules/_related-guides.scss */
   .related-guides__title {
     padding-top: 0;
   }
 }
 
-/* line 29, ../_sass/_modules/_related-guides.scss */
+/* line 34, ../_sass/_modules/_related-guides.scss */
 .related-guides__main-link {
   text-transform: uppercase;
 }
-/* line 32, ../_sass/_modules/_related-guides.scss */
+/* line 37, ../_sass/_modules/_related-guides.scss */
 .related-guides__main-link:before {
   content: "#";
   display: inline-block;
@@ -1711,7 +1717,7 @@ body.debug:after {
 @media only screen and (max-width: 619px) {
   /* line 37, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__img {
-    padding-top: 63.2%;
+    padding-top: 59.1%;
     padding-bottom: 0;
     height: 0;
     overflow: hidden;
@@ -1813,54 +1819,86 @@ body.debug:after {
   }
 }
 
-/* line 1, ../_sass/_modules/_article-nav.scss */
+/**
+*
+* Article nav
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_article-nav.scss */
 .article-nav {
   overflow: hidden;
+  position: relative;
+}
+/* line 17, ../_sass/_modules/_article-nav.scss */
+.article-nav:before {
+  content: "";
+  border-left: 2px solid #e0e0e0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
 }
 
-/* line 5, ../_sass/_modules/_article-nav.scss */
+/* line 27, ../_sass/_modules/_article-nav.scss */
 .article-nav-link {
-  background: #f0f0f0;
   padding: 26px 32px;
   float: left;
   width: 50%;
-  border-color: #ffffff;
-  border-style: solid;
-  border-width: 0;
   position: relative;
 }
-/* line 16, ../_sass/_modules/_article-nav.scss */
+/* line 37, ../_sass/_modules/_article-nav.scss */
 .article-nav-link:before {
   position: absolute;
-  top: 31px;
+  top: 21px;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
-  font-size: 68px;
+  font-size: 42px;
   font-weight: 400;
 }
+@media only screen and (min-width: 620px) {
+  /* line 37, ../_sass/_modules/_article-nav.scss */
+  .article-nav-link:before {
+    top: 39px;
+    font-size: 68px;
+  }
+}
 
-/* line 25, ../_sass/_modules/_article-nav.scss */
+/* line 51, ../_sass/_modules/_article-nav.scss */
+.article-nav p {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 56, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev {
   text-align: right;
-  border-right-width: 1px;
 }
-/* line 29, ../_sass/_modules/_article-nav.scss */
+/* line 60, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev:before {
   content: "<";
   left: 32px;
 }
-
-/* line 35, ../_sass/_modules/_article-nav.scss */
-.article-nav-link--next {
-  border-left-width: 1px;
-  background-color: #e0e0e0;
+/* line 65, ../_sass/_modules/_article-nav.scss */
+.article-nav-link--prev p {
+  padding-left: 32px;
 }
-/* line 39, ../_sass/_modules/_article-nav.scss */
+
+/* line 73, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--next:before {
   content: ">";
   right: 32px;
 }
+/* line 78, ../_sass/_modules/_article-nav.scss */
+.article-nav-link--next p {
+  padding-right: 32px;
+}
 
-/* line 45, ../_sass/_modules/_article-nav.scss */
+/* line 83, ../_sass/_modules/_article-nav.scss */
 .article-nav-count {
   font-size: 20px;
   font-weight: 300;
@@ -1871,7 +1909,7 @@ body.debug:after {
   font-weight: 700;
 }
 @media only screen and (min-width: 800px) {
-  /* line 45, ../_sass/_modules/_article-nav.scss */
+  /* line 83, ../_sass/_modules/_article-nav.scss */
   .article-nav-count {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1883,16 +1921,119 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 45, ../_sass/_modules/_article-nav.scss */
+  /* line 83, ../_sass/_modules/_article-nav.scss */
   .article-nav-count {
     font-weight: 400;
   }
 }
 
-/* line 51, ../_sass/_modules/_article-nav.scss */
-.article-nav p {
-  padding: 0;
-  margin: 0;
+/**
+*
+* Home header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_home-header.scss */
+.home-header {
+  background: #4285f4;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 78px;
+  margin-bottom: 78px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_home-header.scss */
+  .home-header {
+    padding-bottom: 104px;
+  }
+}
+/* line 21, ../_sass/_modules/_home-header.scss */
+.home-header:after {
+  content: "*";
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 130px;
+  bottom: -25px;
+  font-weight: 700;
+  color: #78cfa9;
+}
+@media only screen and (min-width: 620px) {
+  /* line 21, ../_sass/_modules/_home-header.scss */
+  .home-header:after {
+    font-size: 300px;
+    bottom: -35px;
+  }
+}
+
+/* line 40, ../_sass/_modules/_home-header.scss */
+.home-header h1 {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 68px;
+  font-weight: 300;
+  line-height: 1.1471em;
+  /* 78px */
+  padding-top: 0.3824em;
+  padding-bottom: 0;
+  padding-top: 52px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 40, ../_sass/_modules/_home-header.scss */
+  .home-header h1 {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1.19em;
+    /* 130px */
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 40, ../_sass/_modules/_home-header.scss */
+  .home-header h1 {
+    padding-top: 130px;
+  }
+}
+
+/* line 46, ../_sass/_modules/_home-header.scss */
+.home-header p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 800px) {
+  /* line 46, ../_sass/_modules/_home-header.scss */
+  .home-header p {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 46, ../_sass/_modules/_home-header.scss */
+  .home-header p {
+    padding-top: 0;
+  }
+}
+
+/* line 51, ../_sass/_modules/_home-header.scss */
+.home-header a {
+  margin-top: 65px;
 }
 
 /**
