@@ -148,6 +148,7 @@
         border-right-style: solid;
         border-width: 1px;
         border-color: rgba(255, 255, 255, 0.3);
+        border-radius: 0;
 
         background-color: transparent;
         
@@ -159,9 +160,6 @@
         -webkit-tap-highlight-color: transparent;
       }
 
-      .tab-bar button.selected {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
       .tab-bar button:hover {
         background-color: rgba(255, 255, 255, 0.1);
       }
@@ -172,14 +170,18 @@
       }
 
       .tab-bar button:active {
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.4);
         outline: 0;
+      }
+
+      .tab-bar button.selected {
+        background-color: rgba(255, 255, 255, 0.4);
       }
 
       .tab-bar button:last-child {
         border-right-style: none;
       }
-
+      
       .tab-bar button img {
         width: 32px;
         height: auto;
