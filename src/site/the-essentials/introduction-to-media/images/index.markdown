@@ -344,7 +344,7 @@ advantages to images:
 
 {% link_sample _code/icon-font.html %}
 <img src="img/icon-fonts.png" class="center"
-srcset="img/icon-fonts.png 1x, img-icon-fonts2x.png 2x" width="320px"
+srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" width="320px"
 alt="Example of a page that uses FontAwesome for it's font icons.">
 {% endlink_sample %}
 {% include_code _code/icon-font.html iconfont html %}
