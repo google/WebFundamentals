@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Constructing the Object Model"
-description: "Before the browser can render the page it needs to construct the DOM and CSSOM trees. Let's peek under the hood to see how this works."
+description: "Before the browser can render the page it needs to construct the DOM and CSSOM trees."
 introduction: "Before the browser can render the page it needs to construct the DOM and CSSOM trees. Let's peek under the hood to see how this works."
 article:
   written_on: 2014-04-01
@@ -11,17 +11,18 @@ collection: critical-rendering-path
 key-takeaways:
   construct-object-model:
     - Bytes → characters → tokens → nodes → object model
-    - HTML markup is transformed into a Document Object Model (DOM)
-    - CSS markup is transformed into a CSS Object Model (CSSOM)
-    - Both DOM and CSSOM are tree structures that capture the structure of the markup
+    - HTML markup is transformed into a Document Object Model (DOM), CSS markup is transformed into a CSS Object Model (CSSOM)
     - DOM and CSSOM are independent data structures
-    - DevTool Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM
+    - Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM
+notes:
+  devtools:
+    - We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools documentation</a>, or if you're new to DevTools, I recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> course.
 ---
 {% wrap content%}
 
 {% include modules/toc.liquid %}
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.construct-object-model %}
+{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.construct-object-model %}
 
 ## Document Object Model (DOM)
 
@@ -29,17 +30,12 @@ key-takeaways:
 
 Let’s start, with the simplest possible case: a plain HTML page with some text and a single image. What does the browser need to do to process this simple page?
 
-<!-- No converter for: INLINE_DRAWING -->
-
 [TODO Add inline drawing]
-
 
 1. **Conversion:** the browser reads the raw bytes of the HTML off the disk or network and translates them to individual characters based on specified encoding of the file (e.g. UTF-8).
 1. **Tokenizing:** the browser converts strings of characters into distinct tokens specified by the [W3C HTML5 standard](http://www.w3.org/TR/html5/) - e.g. "<html>", "<body>" and other strings within the "angle brackets". Each token has a special meaning and a set of rules.
 1. **Lexing:** the emitted tokens are converted into “objects” which define their properties and rules.
 1. **DOM construction:** Finally, because the HTML markup defines relationships between different tags (some tags are contained within tags) the created objects are linked in a tree data structure that also captures the parent-child relationships defined in the original markup: _HTML_ object is a parent of the _body_ object, the _body_ is a parent of the _paragraph_ object, and so on.
-
-<!-- No converter for: INLINE_DRAWING -->
 
 [TODO Add inline drawing]
 
@@ -49,7 +45,10 @@ Every time the browser has to process HTML markup it has to step through all of 
 
 <img src="images/image00.png" width="624" height="146" />
 
-> _Note: for the purposes of this course we'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the [Chrome Developer Tools documentation](https://developers.google.com/chrome-developer-tools/), or if you're new to DevTools, I recommend taking the Codeschool [Discover DevTools](http://discover-devtools.codeschool.com/) course._
+<!-- {% include modules/remember.liquid title="Note" list=page.notes.devtools %} -->
+
+{% include modules/highlight.liquid character="{" position="left" title="Note" list=page.notes.devtools %}
+
 
 If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step -- in example above, it took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the page was larger, as most pages are, this process might take significantly longer. You will see in our future sections on creating smooth animations that this can easily become your bottleneck if the browser has to process large amounts of HTML. That said, let’s not get ahead of ourselves…
 
