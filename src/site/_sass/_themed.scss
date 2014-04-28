@@ -52,3 +52,14 @@
   .nav-theme--performance & { color: $colorPerformance; }
 
 }
+
+.icon-circle,
+.icon-circle--large {
+  &.theme--multi-device-layouts { background-color: $colorLayouts; }
+
+  &.theme--introduction-to-media { background-color: $colorMedia; }
+
+  &.theme--user-input { background-color: $colorUser; }
+
+  &.theme--performance { background-color: $colorPerformance; }
+}

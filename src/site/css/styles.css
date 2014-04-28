@@ -3395,6 +3395,27 @@ td:last-child:after {
   color: #7b5294;
 }
 
+/* line 58, ../_sass/_themed.scss */
+.icon-circle.theme--multi-device-layouts,
+.icon-circle--large.theme--multi-device-layouts {
+  background-color: #297ea9;
+}
+/* line 60, ../_sass/_themed.scss */
+.icon-circle.theme--introduction-to-media,
+.icon-circle--large.theme--introduction-to-media {
+  background-color: #cf423a;
+}
+/* line 62, ../_sass/_themed.scss */
+.icon-circle.theme--user-input,
+.icon-circle--large.theme--user-input {
+  background-color: #2c8566;
+}
+/* line 64, ../_sass/_themed.scss */
+.icon-circle.theme--performance,
+.icon-circle--large.theme--performance {
+  background-color: #7b5294;
+}
+
 /**
 *
 * Styleguide
@@ -3653,4 +3674,34 @@ td:last-child:after {
 .tag:before {
   content: "# ";
   display: inline-block;
+}
+
+/* line 127, ../_sass/_helper.scss */
+.icon-circle,
+.icon-circle--large {
+  height: 0;
+  width: 0;
+  padding: 26px;
+  background: #737373;
+  display: block;
+  position: relative;
+  border-radius: 100%;
+  font-size: 26px;
+}
+/* line 137, ../_sass/_helper.scss */
+.icon-circle i,
+.icon-circle--large i {
+  position: absolute;
+  line-height: 1px;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* line 148, ../_sass/_helper.scss */
+.icon-circle--large {
+  padding: 39px;
+  font-size: 42px;
 }
