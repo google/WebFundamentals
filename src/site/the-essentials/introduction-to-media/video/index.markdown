@@ -13,24 +13,24 @@ collection: introduction-to-media
 key-takeaways:
   add-a-video:
     - Use the video element to load, code, and play video in your site.
-    - Don't load the whole video if unnecessary: specify a start and end time.
+    - Don't load the whole video if unnecessary -- specify a start and end time.
     - Include a poster image so the user sees something meaningful right away.
     - Specify multiple file formats since not all browsers support the same format.
-    - Improve network performance: specify each file source's type.
+    - Improve network performance -- specify each file source's type.
   provide-alternatives:
     - Check which formats are supported.
     - Produce video in multiple formats to cover a range of mobile platforms.
     - Check which format was used.
   size-videos-correctly:
     - Avoid serving video that is too long, too large in frame size, or unnecessarily high in quality.
-    - Check video size: frame size may be different from element size.
+    - Check video size -- frame size may be different from element size.
     - Ensure videos don't overflow their containers.
   customize:
     - Mobile solutions need to consider device orientation.
     - Different platforms display video different.
     - Use Fullscreen API to control fullscreening of content.
   improve-accessibility:
-    - Focus on the user: accessibility matters.
+    - Focus on the user -- accessibility matters.
     - Add track element as a child of the video element.
     - Define captions in track file.
   handle-poor-connectivity:
@@ -50,7 +50,7 @@ remember:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
   compare-formats:
-    - Compare the responsive sample at <a href='//simpl.info/yt' title='Demo of YouTube video with responsive sizing'>simpl.info/yt</a> to the unresponsive version: <a href='//simpl.info/unyt' title='Demo of YouTube video without responsive sizing'>simpl.info/unyt</a>.
+    - Compare the responsive sample at <a href='//simpl.info/yt' title='Demo of YouTube video with responsive sizing'>simpl.info/yt</a> to the unresponsive version at <a href='//simpl.info/unyt' title='Demo of YouTube video without responsive sizing'>simpl.info/unyt</a>.
   accessibility-matters:
     - The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href="//caniuse.com/track" title="Track element support status">caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
