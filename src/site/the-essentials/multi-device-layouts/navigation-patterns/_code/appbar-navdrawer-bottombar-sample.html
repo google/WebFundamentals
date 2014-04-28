@@ -211,6 +211,8 @@
         .app-bar {
           display: block;
           
+          position: relative;
+
           height: 130px;
           
           padding: 0 16px;
@@ -219,6 +221,17 @@
           box-sizing: border-box;
           
           background-color: transparent;
+
+          -webkit-transform: translate(0,0);
+          transform: translate(0,0);
+
+          -webkit-transition: none;
+          transition: none;
+        }
+
+        .app-bar.open {
+          -webkit-transform: translate(0,0);
+          transform: translate(0,0);
         }
         
         .app-bar .logo {
@@ -258,8 +271,6 @@
         
         nav {
           display: block;
-
-          margin-top: 130px;
         }
 
         .bottom-bar {
@@ -287,43 +298,26 @@
       .navdrawer-container {
         position: fixed;
         
-        width: 100%;
-        height: 100%;
-        
-        color: white;
-        
-        z-index:1;
-        
-        -webkit-transition: box-shadow 0.4s ease-out, background-color 0.4s ease-out;
-        transition: box-shadow 0.4s ease-out, background-color 0.4s ease-out;
-
-        /* Only allow touch when the drawer is open */
-        pointer-events: none;
-      }
-
-      .navdrawer-container.open {
-        pointer-events: auto;
-      }
-
-      .navdrawer-container ul {
-        position: absolute;
-
         width: 250px;
         height: 100%;
-
-        left: 0;
-
-        padding: 0;
-        margin: 0;
-
-        list-style-type: none;
-
+        
         background-color: #0095b7;
-
-        z-index: 2;
+        
+        color: #fefefe;
 
         -webkit-transform: translate(-250px,0);
         transform: translate(-250px,0);
+
+        z-index: 2;
+      }
+
+      .navdrawer-container.open {
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+      }
+
+      .navdrawer-container ul {
+        list-style-type: none;
       }
 
       .navdrawer-bg {
@@ -331,23 +325,25 @@
         width: 100%;
         height: 100%;
 
+        left: 0;
+        top: 0;
+
         background-color: black;
 
         /** Unfortunately this is the best way
         to get no paints in Chrome **/
         opacity: 0.0000001;
+
+        z-index: 1;
+
+        pointer-events: none;
       }
 
       .navdrawer-bg.open {
         opacity: 0.5;
       }
 
-      .navdrawer-container.open ul {
-        -webkit-transform: translate(0,0);
-        transform: translate(0,0);
-      }
-
-      .app-bar, .navdrawer-container ul {
+      .app-bar, .navdrawer-container {
         -webkit-transition: -webkit-transform 0.3s ease-out;
         transition: transform 0.3s ease-out;
       }
@@ -390,33 +386,33 @@
           width: 100%;
           height: auto;
           
-          margin-top: 130px;
+          -webkit-transform: translate(0,0);
+          transform: translate(0,0);
+          
+          -webkit-transition: none;
+          transition: none;
 
           pointer-events: auto;
         }
+
         .navdrawer-container ul {
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
           
-          width: 100%;
-          height: auto;
-
           -ms-flex-direction: row;
           -webkit-flex-direction: row;
           flex-direction: row;
-
-          position: relative;
-
-          -webkit-transform: none;
-          tranform: none;
-
-          -webkit-transition: none;
-          transition: none;
         }
         
         .navdrawer-container ul li {
           border: none;
+        }
+
+        .navdrawer-bg, .navdrawer-bg.open {
+          opacity: 0;
+
+          pointer-events: none;
         }
       }
 
