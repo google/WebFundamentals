@@ -18,6 +18,10 @@ key-takeaways:
 remember:
   use-remember:
     - It is pretty simple to add in a remember
+related:
+  related-content:
+    - <a href="index.html">Style Guide</a>
+    - <a href="../example-article/index.html">Example Article</a>
 ---
 {% comment %}
 NOTE: This is our styleguide
@@ -123,5 +127,21 @@ In your Article YAML Preamble
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-remember %}
 
+
+### Related Content
+
+    {{ "{% include modules/related.liquid" }}
+      list=page.related.related-content %}
+
+In your Article YAML Preamble
+
+{% highlight yaml %}
+related:
+  related-content:
+    - <a href="index.html">Style Guide</a>
+    - <a href="../example-article/index.html">Example Article</a>
+{% endhighlight %}
+
+{% include modules/related.liquid list=page.related.related-content %}
 
 {% endwrap %}
