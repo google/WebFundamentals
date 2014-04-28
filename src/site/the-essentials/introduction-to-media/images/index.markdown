@@ -69,8 +69,7 @@ use too much real estate on a narrow phone.
 ### Art direction
 
 <img class="center" src="img/art-direction.png" alt="Art direction example" 
-srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x" 
-width="600px" height="328px">
+srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Other times the image may need to be changed more drastically: changing the 
 proportions, cropping and even replacing the entire image.  In this case, 
@@ -231,7 +230,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include modules/highlight.liquid character="!" position="right" title="Important" type="remember" list=page.remember.compressive %}
+{% include modules/highlight.liquid title="Important" type="remember" list=page.remember.compressive %}
 
 #### JavaScript image replacement
 
@@ -344,7 +343,7 @@ advantages to images:
 
 {% link_sample _code/icon-font.html %}
 <img src="img/icon-fonts.png" class="center"
-srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" width="320px"
+srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Example of a page that uses FontAwesome for it's font icons.">
 {% endlink_sample %}
 {% include_code _code/icon-font.html iconfont html %}
@@ -430,7 +429,7 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
 {% link_sample _code/image-sprite.html %}
-<img src="img/sprite-sheet.png" class="center" width="190px" alt="Image sprite sheet used in example"> 
+<img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example"> 
 {% endlink_sample %}
 {% include_code _code/image-sprite.html sprite css %}
 
