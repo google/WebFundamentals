@@ -107,16 +107,16 @@ phone or a large desktop monitor.
 
 <div class="clear">
   <div class="g--half">
-    {% link_sample _code/vp-no.html %} 
+    {% link_sample _code/vp-no.html %}
       <img src="imgs/no-vp.png" class="sxs" alt="Page without a viewport set">
-      See example 
+      See example
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp.html %}
       <img src="imgs/vp.png" class="sxs" alt="Page with a viewport set">
-      See example 
+      See example
     {% endlink_sample %}
   </div>
 </div>

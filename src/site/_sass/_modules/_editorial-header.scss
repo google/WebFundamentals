@@ -11,10 +11,15 @@
 **/
 
 .editorial-header {
-  background: $colorGrayBackground;
-  padding-bottom: $lineHeight * 2;
   overflow: hidden;
 
+  .breadcrumbs {
+    color: $colorBlue;
+
+    a {
+      color: $colorBlue;
+    }
+  }
 
   .container {
     @include medium {
@@ -37,5 +42,55 @@
 }
 
 .editorial-header__excerpt {
-  margin-bottom: $lineHeight * 2;
+  @include type--medium(true);
+  font-family: $fontHighlight;
+}
+
+.editorial-header__title {
+  @include type--small;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-top: $lineHeight*2;
+
+  &:before {
+    content: "#";
+    display: inline-block;
+    top: 0;
+    left: 0;
+    padding-right: 2px;
+  }
+}
+
+.editorial-header__subtitle {
+  @include type--xxlarge;
+  padding-top: 0;
+  @include medium {
+    padding-top: 0;
+    padding-bottom: $lineHeight;
+  }
+  color: $colorBlue;
+}
+
+.editorial-header__toc {
+  margin-top: $lineHeight;
+
+  ol {
+    padding-top: 0;
+    @include medium {padding-top: 0}
+  }
+}
+
+.editorial-header__toc-title {
+  font-family: $fontHighlight;
+  border-bottom: 1px solid $colorGrayKeyline;
+  margin-bottom: 13px;
+  padding-bottom: 13px !important;
+  color: $colorBlue;
+
+  &:before {
+    content:"☰";
+    display: inline-block;
+    padding-right: 10px;
+    color: $colorBlue;
+  }
 }
