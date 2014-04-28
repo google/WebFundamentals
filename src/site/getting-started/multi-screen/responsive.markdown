@@ -124,7 +124,13 @@ always stretches whilst maintaining the correct aspect ratio.
 
 ## Set your first breakpoint
 
-[TODO: GIF of it starting to look bad].
+<video controls poster="images/firstbreakpoint.png" style="width: 100%;">
+  <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
+  <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
+  <p>Sorry your browser doesn't support video. 
+     <a href="videos/smiles.mov">Download the video</a>.
+  </p>
+</video>
 
 The design starts to look bad at about 600px wide.  This is a good place to
 create our first breakpoint as it will give us scope to reposition elements to
