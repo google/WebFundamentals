@@ -21,7 +21,7 @@ key-takeaways:
 
 <div style="clear: both;"></div>
 
-The tab bar can be used to quickly switch between the sections of your site.
+The Tab Bar can be used to quickly switch between the sections of your site.
 
 It's only appropriate for sites with a relatively small structure, but users find it easy to glance at where they are and where they can within your site.
 

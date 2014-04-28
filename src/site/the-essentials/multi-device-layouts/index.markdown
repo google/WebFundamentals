@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Multi-device layouts"
-description: "This section includes a concise doc on responsive design basics, a more detailed set of samples for layout patterns, and a first draft on responsive navigation."
+description: "Start here to learn the fundamentals of responsive design. We've taken a show-and-code approach: showing how design principles look to your users and how to code them."
 introduction: 'Mobile-first web design is a goal for a development team to create sites, apps and experiences that scale well across all devices from mobile upwards. Mobile-first is not: "My users will predominantly use mobile", instead Mobile-first is "Mobile is my base experience".'
 snippet: "Create flexible, not fixed, layouts."
 article:
