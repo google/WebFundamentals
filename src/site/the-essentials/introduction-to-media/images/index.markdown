@@ -82,6 +82,8 @@ changing the image is usually referred to as art direction.  See
 [responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more 
 examples.
 
+{% include modules/takeaway.liquid list=page.key-takeaways.use-right-image %}
+
 ## Images in CSS
 
 The CSS `background` property is a powerful tool for adding complex images to 
@@ -252,7 +254,6 @@ means that images won't even start downloading until after the `pageload` event
 fires. In addition, the browser will most likely download both the 1x and 2x 
 images, resulting in increased page weight.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.use-right-image %}
 
 ## Avoid images completely
 
@@ -262,6 +263,8 @@ functionality.  Browsers generate visuals that would have previously required
 images.   This means that browsers no longer need to download separate image 
 files and prevents awkwardly scaled images.  Icons can be rendered using unicode 
 or special icon fonts.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.avoid-images %}
 
 ### Place text in markup, instead of embedded in images
 
@@ -273,13 +276,6 @@ isn't responsive.  Instead, place the text in your markup and if necessary use
 webfonts to achieve the style you need.  
 
 ### Use CSS to replace images
-
-<!--
-Modern browsers can use CSS features to create styles that would previously 
-required images.  For examples, complex gradients can be created using the 
-`background` property, shadows can be created using `box-shadow` and rounded 
-corners can be added with the `border-radius` property.
---> 
 
 <style type="text/css">  
   p#noImage {  
@@ -361,8 +357,6 @@ Be sure to balance the weight of the additional HTTP request and file size with
 the need for the icons.  For example, if you only need a handful of icons, it 
 may be better to use an image or an image sprite.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.avoid-images %}
-
 ## Optimize images for performance
 
 Images often account for most of the downloaded bytes and also often occupy a 
@@ -372,7 +366,7 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can 
 download and display all the assets. 
 
-{% include modules/related.liquid list=page.related.optimize %}
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
 
 ### Choose the right format
 
@@ -452,7 +446,7 @@ it becomes visible, search engines may never see that content.  In addition,
 users who are looking for information they expect to see in the footer will 
 never see the footer because new content is always loaded.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
+{% include modules/related.liquid list=page.related.optimize %}
 
 {% include modules/nextarticle.liquid %}
 
