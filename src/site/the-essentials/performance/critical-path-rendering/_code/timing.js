@@ -1,4 +1,4 @@
-measureCRP = function() {
+var measureCRP = function() {
 	var span = document.getElementsByTagName('span')[0];
 	span.innerText = 'interactive'; // change DOM text content
 	span.style.display = 'inline';  // change CSSOM property

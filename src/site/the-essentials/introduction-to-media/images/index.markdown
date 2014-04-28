@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Images"
-description: "Images were the first media types used on the web and are an integral part of every single page yet they need to be created and managed correctly to ensure that you are not driving users away."
+description: "A picture is worth 1000 words, and images play an integrate part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
+introduction: "A picture is worth 1000 words, and images play an integrate part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
 rel: 
   gplusauthor: https://plus.google.com/+SamDutton
 article:
@@ -69,8 +70,7 @@ use too much real estate on a narrow phone.
 ### Art direction
 
 <img class="center" src="img/art-direction.png" alt="Art direction example" 
-srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x" 
-width="600px" height="328px">
+srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Other times the image may need to be changed more drastically: changing the 
 proportions, cropping and even replacing the entire image.  In this case, 
@@ -231,7 +231,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include modules/highlight.liquid character="!" position="right" title="Important" type="remember" list=page.remember.compressive %}
+{% include modules/highlight.liquid title="Important" type="remember" list=page.remember.compressive %}
 
 #### JavaScript image replacement
 
@@ -344,7 +344,7 @@ advantages to images:
 
 {% link_sample _code/icon-font.html %}
 <img src="img/icon-fonts.png" class="center"
-srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" width="320px"
+srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Example of a page that uses FontAwesome for it's font icons.">
 {% endlink_sample %}
 {% include_code _code/icon-font.html iconfont html %}
@@ -368,8 +368,8 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can 
 download and display all the assets. 
 
-For a more in-depth look, check out the [Image Optimization](../../performance/optimizing-content-efficiency/#todo) section in 
-[Optimizing Performance](../../performance/optimizing-content-efficiency/).
+For a more in-depth look, check out the [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization) section in 
+[Optimizing content efficiency](../../performance/optimizing-content-efficiency/).
 
 ### Choose the right format
 
@@ -430,7 +430,7 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
 {% link_sample _code/image-sprite.html %}
-<img src="img/sprite-sheet.png" class="center" width="190px" alt="Image sprite sheet used in example"> 
+<img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example"> 
 {% endlink_sample %}
 {% include_code _code/image-sprite.html sprite css %}
 
@@ -451,5 +451,6 @@ never see the footer because new content is always loaded.
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
 
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
