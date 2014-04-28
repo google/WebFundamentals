@@ -138,6 +138,8 @@
 
 
 .main-nav__secondary-nav {
+  display: none;
+
   @include medium {
     background-color: #ffffff;
     position: absolute;
@@ -147,11 +149,12 @@
     padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
     color: $colorText;
 
-    display: none;
 
-    li:hover & {
-      display: block;
-    }
+  }
+
+  li:hover &,
+  .is-opened & {
+    display: block;
   }
 }
 
