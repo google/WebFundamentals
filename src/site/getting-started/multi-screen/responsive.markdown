@@ -31,6 +31,11 @@ article]({{site.baseurl}}{{page.article.previous.url}}) we crafted the
 Infomration Architecture of the page and created a basic structure that we
 will now use to make work across all of our target screens and form-factors.
 
+<div class="clear">
+  <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
+  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
+</div>
+
 We are using the principles of Mobile First web development.  We start with a
 narrow viewport &mdash; similar to a mobile phone &mdash; and build for that
 experience first and start to scale up to larger device classes.  We can do 
