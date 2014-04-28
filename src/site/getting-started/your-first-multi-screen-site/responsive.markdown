@@ -41,7 +41,7 @@ a beautiful page that is responsive across a large number of screen sizes.
   </figure>
   <figure class="g-wide--2 g-wide--last g-medium--half g--last">
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
-    <figcaption>{% link_sample _code/content-wit-styles.html %} Final site {% endlink_sample %} </figcaption>
+    <figcaption>{% link_sample _code/content-with-styles.html %} Final site {% endlink_sample %} </figcaption>
   </figure>
 </div>
 

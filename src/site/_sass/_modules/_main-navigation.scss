@@ -43,6 +43,10 @@
     }
   }
 
+  &.main-nav__itme--web-fundamentals {
+    font-weight: bold;
+  }
+
   @include medium {
     float: left;
     background-color: transparent;
