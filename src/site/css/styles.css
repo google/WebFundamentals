@@ -693,9 +693,13 @@ body.debug:after {
   padding-left: 0;
 }
 @media only screen and (max-width: 619px) {
-  /* line 40, ../_sass/_modules/_main-navigation.scss */
+  /* line 42, ../_sass/_modules/_main-navigation.scss */
   .main-nav__item.main-nav__item--logo {
     display: none;
+  }
+  /* line 47, ../_sass/_modules/_main-navigation.scss */
+  .main-nav__item.is-opened, .no-touch .main-nav__item:hover {
+    background: #ffffff;
   }
 }
 @media only screen and (min-width: 620px) {
@@ -706,21 +710,21 @@ body.debug:after {
     width: 20%;
     border-right: 1px solid #272727;
   }
-  /* line 52, ../_sass/_modules/_main-navigation.scss */
+  /* line 58, ../_sass/_modules/_main-navigation.scss */
   .main-nav__item:last-child {
     border-right: none;
   }
 }
-/* line 58, ../_sass/_modules/_main-navigation.scss */
+/* line 64, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item:first-child ~ .main-nav__item {
   padding-top: 0;
 }
-/* line 63, ../_sass/_modules/_main-navigation.scss */
+/* line 69, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item:before {
   display: none;
 }
 
-/* line 68, ../_sass/_modules/_main-navigation.scss */
+/* line 74, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -736,7 +740,7 @@ body.debug:after {
   padding-bottom: 12px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -748,7 +752,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -762,7 +766,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 620px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -770,7 +774,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 800px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -778,7 +782,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     margin-bottom: 0;
     color: #ffffff;
@@ -791,7 +795,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     font-size: 20px;
     font-weight: 300;
@@ -802,39 +806,39 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 68, ../_sass/_modules/_main-navigation.scss */
+  /* line 74, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link {
     padding-bottom: 26px;
   }
 }
-/* line 94, ../_sass/_modules/_main-navigation.scss */
+/* line 100, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link:hover {
   text-decoration: none;
 }
-/* line 98, ../_sass/_modules/_main-navigation.scss */
+/* line 104, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item--logo .main-nav__link {
   font-size: 60px;
   padding-top: 26px;
   line-height: 26px;
 }
 
-/* line 105, ../_sass/_modules/_main-navigation.scss */
+/* line 111, ../_sass/_modules/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
 }
 
-/* line 109, ../_sass/_modules/_main-navigation.scss */
+/* line 115, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item--child {
   padding-top: 0;
   position: static;
   padding-left: 0;
 }
-/* line 114, ../_sass/_modules/_main-navigation.scss */
+/* line 120, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item--child:before {
   display: none;
 }
 
-/* line 119, ../_sass/_modules/_main-navigation.scss */
+/* line 125, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link--child {
   background: #ffffff;
   font-size: 16px;
@@ -846,17 +850,17 @@ body.debug:after {
   padding-bottom: 12px;
 }
 @media only screen and (max-width: 619px) {
-  /* line 119, ../_sass/_modules/_main-navigation.scss */
+  /* line 125, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--child {
     padding-left: 10%;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 119, ../_sass/_modules/_main-navigation.scss */
+  /* line 125, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--child {
     color: #404040;
   }
-  /* line 133, ../_sass/_modules/_main-navigation.scss */
+  /* line 139, ../_sass/_modules/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     font-size: 20px;
     font-weight: 300;
@@ -867,7 +871,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 133, ../_sass/_modules/_main-navigation.scss */
+  /* line 139, ../_sass/_modules/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -879,12 +883,12 @@ body.debug:after {
   }
 }
 
-/* line 140, ../_sass/_modules/_main-navigation.scss */
+/* line 146, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 140, ../_sass/_modules/_main-navigation.scss */
+  /* line 146, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-nav {
     background-color: #ffffff;
     position: absolute;
@@ -895,13 +899,13 @@ body.debug:after {
     color: #404040;
   }
 }
-/* line 156, ../_sass/_modules/_main-navigation.scss */
-li:hover .main-nav__secondary-nav, .is-opened .main-nav__secondary-nav {
+/* line 162, ../_sass/_modules/_main-navigation.scss */
+.no-touch li:hover .main-nav__secondary-nav, .is-opened .main-nav__secondary-nav {
   display: block;
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 162, ../_sass/_modules/_main-navigation.scss */
+  /* line 168, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -916,7 +920,7 @@ li:hover .main-nav__secondary-nav, .is-opened .main-nav__secondary-nav {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 162, ../_sass/_modules/_main-navigation.scss */
+  /* line 168, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -924,7 +928,7 @@ li:hover .main-nav__secondary-nav, .is-opened .main-nav__secondary-nav {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 162, ../_sass/_modules/_main-navigation.scss */
+  /* line 168, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -932,7 +936,7 @@ li:hover .main-nav__secondary-nav, .is-opened .main-nav__secondary-nav {
   }
 }
 
-/* line 169, ../_sass/_modules/_main-navigation.scss */
+/* line 175, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link--explore {
   color: #4285f4;
   font-weight: 600;
@@ -944,24 +948,24 @@ li:hover .main-nav__secondary-nav, .is-opened .main-nav__secondary-nav {
   color: #404040;
 }
 @media only screen and (min-width: 620px) {
-  /* line 169, ../_sass/_modules/_main-navigation.scss */
+  /* line 175, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     border-bottom: 1px solid #737373;
   }
 }
 
-/* line 178, ../_sass/_modules/_main-navigation.scss */
+/* line 184, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 178, ../_sass/_modules/_main-navigation.scss */
+  /* line 184, ../_sass/_modules/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 186, ../_sass/_modules/_main-navigation.scss */
+/* line 192, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }

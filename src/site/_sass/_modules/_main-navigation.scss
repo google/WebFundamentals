@@ -37,9 +37,15 @@
   position: static;
   padding-left: 0;
 
-  &.main-nav__item--logo {
-    @include small-only {
+
+  @include small-only {
+    &.main-nav__item--logo {
       display: none;
+    }
+
+    &.is-opened,
+    .no-touch &:hover {
+      background: #ffffff;
     }
   }
 
@@ -152,7 +158,7 @@
 
   }
 
-  li:hover &,
+  .no-touch li:hover &,
   .is-opened & {
     display: block;
   }
