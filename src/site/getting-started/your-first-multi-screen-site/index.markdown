@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Your first multi-screen site"
+title: "Your First Multi-screen Site"
 description: "The web is accessible on a huge range of devices from small-screen phones
 to huge-screen televisions. Learn how to build a site that works well across all these devices."
 article:
