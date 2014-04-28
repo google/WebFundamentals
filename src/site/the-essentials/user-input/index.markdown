@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "User Input"
-description: "Use our guides to learn how to create compelling experiences that users will love to use."
+description: "Learn how to create compelling experiences that users will love to use. Create forms users can fill-out on any device. Create content your users will want to touch."
 introduction: "How a user interacts with your site or app can often be make or break for the success of your project. Use our guides to learn how to create compelling experiences that users will love to use."
 snippet: "<a href='http://en.wikipedia.org/wiki/KISS_principle'>KISS</a>. Touch, tap, click, and submit."
 article:
