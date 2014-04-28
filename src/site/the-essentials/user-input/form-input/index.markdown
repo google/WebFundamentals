@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Create amazing forms"
+title: "Create Amazing Forms"
 description: "Forms are hard to fill out on mobile. The best forms are the ones with the
 fewest inputs."
 introduction: "Forms are hard to fill out on mobile. The best forms are the ones with the
