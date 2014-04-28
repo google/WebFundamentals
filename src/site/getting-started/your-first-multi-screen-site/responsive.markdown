@@ -333,9 +333,9 @@ often look terrible on a hi-dpi device.
 We have a solution that is not widely adopted yet but for browsers that
 support it let you display a high density image on a high density display.
 
-{% hightlight html %}
+{% highlight html %}
 <img src="photo.png" srcset="photo@2x.png 2x" />  
-{% endhightlight %}
+{% endhighlight %}
 
 <div class="related-items">
 <div class="related-items">
