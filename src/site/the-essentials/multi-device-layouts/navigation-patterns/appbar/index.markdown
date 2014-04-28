@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "App Bar"
-description: "<img class=\"g-medium--full g-wide--full\" src=\"appbar/images/appbar.png\">Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
+description: "<img class='g-medium--full g-wide--full' src='appbar/images/appbar.png\'>Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06

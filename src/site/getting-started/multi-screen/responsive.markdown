@@ -29,11 +29,20 @@ We are building a site that works across in multiple screen sizes and device
 types. In the [previous
 article]({{site.baseurl}}{{page.article.previous.url}}) we crafted the
 Infomration Architecture of the page and created a basic structure that we
-will now use to make work across all of our target screens and form-factors.
+will now use to make work across all of our target screens and form-factors. 
+
+In this guide we will take our basic structure with content and turn it in to
+a beautiful page that is responsive across a large number of screen sizes.
 
 <div class="clear">
-  <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
-  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
+  <figure class="g-wide--2 g-medium--half">
+    <img  src="images/content.png" alt="Content" style="max-width: 100%;">
+    <figcaption>{% link_sample _code/content-without-styles.html %} Content and structure {% endlink_sample %} </figcaption>
+  </figure>
+  <figure class="g-wide--2 g-wide--last g-medium--half g--last">
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>{% link_sample _code/content-wit-styles.html %} Final site {% endlink_sample %} </figcaption>
+  </figure>
 </div>
 
 We are using the principles of Mobile First web development.  We start with a
@@ -49,8 +58,6 @@ where the layout and styles change &mdash; based on how the contents fits the
 screen-size.
 
 {% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.make-responsive %}
-
-We are going to  {% link_sample _code/content-without-styles.html %} take our content and structure {% endlink_sample %} and create our {% link_sample _code/content-with-styles.html %} final result. {% endlink_sample %}
 
 ## Add a viewport
 
@@ -116,18 +123,34 @@ or help guide the readers attention to a specific piece of content.
 A good example of this is a headline image for the 'above the fold' content.  It
 is often used to entice the user in to reading more about the prodcut.
 
-[TODO: Add Image]
+<div class="g-wide--2 g-wide--last g-medium--half g--last">
+  <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+</div>
 
 They can be very simple to include, in our case it will be the background to the 
 header and we will apply it via some simple CSS.
 
-{% include_code _code/addimages.html styles css %}
+{% highlight css %}  
+#headline {
+  padding: 0.8em;
+  color: white;
+  font-family: Roboto, sans-serif;
+  background-image: url(backgroundimage.jpg);
+  background-size: cover;
+}
+{% endhighlight %}
 
 We have chosen a simple background image that is blurred so it doesn't take away
 from the content and we have set it to `cover` the entire element that way it 
 always stretches whilst maintaining the correct aspect ratio.
 
+<br style="clear: both;">
+
 ## Set your first breakpoint
+
+The design starts to look bad at about 600px wide.  In our case the length of
+the line is going above 10 words (the optimal reading length) and that is
+where we want to change it.
 
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
@@ -137,13 +160,17 @@ always stretches whilst maintaining the correct aspect ratio.
   </p>
 </video>
 
-The design starts to look bad at about 600px wide.  In our case the length of the line
-is going above 10 words (the optimal reading length). This is a good place to
-create our first breakpoint as it will give us scope to reposition elements to
-make them fit the screen better.  We can do this using a technology called
-[Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness).
+600px appears to be a good place to create our first breakpoint as it will give us scope
+to reposition elements to make them fit the screen better.  We can do this
+using a technology called [Media Queries](/web/essentials/the-essentials
+/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-
+responsiveness).
 
-{% include_code _code/firstbreakpoint.html first css %}
+{% highlight css %}
+@media (min-width: 600px) {
+    
+}
+{% endhighlight %}
 
 There is more space on a larger screen so there is more flexibility with how
 content can be displayed.
