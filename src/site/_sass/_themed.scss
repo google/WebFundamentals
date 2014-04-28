@@ -22,14 +22,33 @@
 
 }
 
+
+// Wrapped content in .article-container so we can
+// encapsulate what needs to be themed without overriding
+// anything outside of this container.
 .article-container h1,
 .article-container h2 {
 
-  .article--multi-device-layouts  & { color: $colorLayouts; }
+  .article--multi-device-layouts & { color: $colorLayouts; }
 
-  .article--introduction-to-media  & { color: $colorMedia; }
+  .article--introduction-to-media & { color: $colorMedia; }
 
-  .article--user-input  & { color: $colorUser; }
+  .article--user-input & { color: $colorUser; }
 
-  .article--performance  & { color: $colorPerformance; }
+  .article--performance & { color: $colorPerformance; }
+}
+
+
+// Let's make sure this is at the end so we can override
+// previous rules. Specicifity rules.
+.themed {
+
+  .nav-theme--multi-device-layouts & { color: $colorLayouts; }
+
+  .nav-theme--introduction-to-media & { color: $colorMedia; }
+
+  .nav-theme--user-input & { color: $colorUser; }
+
+  .nav-theme--performance & { color: $colorPerformance; }
+
 }
