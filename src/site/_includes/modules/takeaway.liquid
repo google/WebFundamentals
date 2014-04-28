@@ -4,7 +4,11 @@
 
 {% assign type = "learning" %}
 {% assign character = "*" %}
+{% assign title = "Key Takeaways" %}
 
+{% if include.title %}
+{% assign title = include.title %}
+{% endif %}
 {% if include.type %}
 {% assign type = include.type %}
 {% endif %}
@@ -12,4 +16,5 @@
 {% assign character = include.character %}
 {% endif %}
 
-{% include modules/highlight.liquid title=include.title list=include.list position="left" type=type priority="large" character=character %}
+
+{% include modules/highlight.liquid title=title list=include.list position="left" type=type priority="large" character=character %}
