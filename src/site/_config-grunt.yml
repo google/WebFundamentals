@@ -8,6 +8,9 @@ baseurl: http://localhost:8081
 url: http://localhost:8081
 pygments: false
 spotlights: false
+github:
+  root: https://github.com/PaulKinlan/WebDocs
+  content: tree/master/src/site
 custom:
 kramdown:
   toc_levels: "2"

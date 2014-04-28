@@ -3,7 +3,7 @@
   <head>
     <!-- // [TEMPLATE header_full] -->
 
-    <title>App Bar &amp; Nav Drawer Sample 2</title>
+    <title>App Bar &amp; Nav Drawer Sample</title>
 
     <!-- // [START ms-specific] -->
     <!-- IE Specific to remove tap highlight -->
@@ -28,7 +28,7 @@
         font-weight: 300;
         
         background-color: #C9DAF8;
-        
+
         box-sizing: border-box;
 
         overflow: hidden;
@@ -55,8 +55,8 @@
       }
 
       .app-bar.open {
-        -webkit-transform: translate(-250px,0);
-        transform: translate(-250px,0);
+        -webkit-transform: translate(250px,0);
+        transform: translate(250px,0);
       }
 
       .app-bar .logo {
@@ -141,7 +141,11 @@
 
       .promote-layer {
         /*
-        This is a trick to improve performance on newer versions of Chrome
+        This may promote the layer to a composited
+        layer.
+
+        Replace with will-change when available
+
         #perfmatters
         */
         -webkit-backface-visibility: hidden;
@@ -215,14 +219,12 @@
         width: 250px;
         height: 100%;
         
-        right: 0;
-
         background-color: #3C78D8;
         
         color: #fefefe;
 
-        -webkit-transform: translate(250px,0);
-        transform: translate(250px,0);
+        -webkit-transform: translate(-250px,0);
+        transform: translate(-250px,0);
       }
 
       .navdrawer-container.open {
@@ -293,6 +295,7 @@
           -webkit-transition: none;
           transition: none;
         }
+        
         .navdrawer-container ul {
           display: -ms-flexbox;
           display: -webkit-flex;
@@ -312,13 +315,14 @@
 
   <body>
     <header class="app-bar promote-layer">
+      <button class="menu"><img src="./hamburger.png" /></button>
+
       <h1 class="logo">Logo</h1>
       
       <section class="app-bar-actions">
         <input class="search" placeholder="Search" />
         <button><img src="./search.png" /></button>
       </section>
-      <button class="menu"><img src="./hamburger.png" /></button>
     </header>
   
     <nav class="navdrawer-container promote-layer">
