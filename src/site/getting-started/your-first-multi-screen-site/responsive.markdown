@@ -242,8 +242,6 @@ the headers for each of the sections.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
-[TODO: GIF of it starting to look better with altered].
-
 ## Adapt elements to wide viewport
 
 Our narrow viewport was a stacked linear display.  Each major section and the content
@@ -305,8 +303,6 @@ The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen and stacked vertically.  This doesn't scale
 well on a wide viewport.
 
-[TODO: Animated GIF]
-
 To make the images look correct on the screen they are scaled to 50% of the
 container width.  This means that we will get a nice grid of images and the
 images will inflate to large.
@@ -337,7 +333,26 @@ often look terrible on a hi-dpi device.
 We have a solution that is not widely adopted yet but for browsers that
 support it let you display a high density image on a high density display.
 
-[todo: src-set]
+{% hightlight html %}
+<img src="photo.png" srcset="photo@2x.png 2x" />  
+{% endhightlight %}
+
+<div class="related-items">
+<div class="related-items">
+<div class="container">
+<div markdown='1' class="g-wide--push-1 g-medium--push-1">
+### Related information
+{: .related-items--title}
+
+* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [Use media queries to provide high res images or art direction]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction]
+
+{: .list--links}
+
+</div>
+</div>
+</div>
+</div>
 
 ### Tables
 
