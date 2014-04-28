@@ -62,5 +62,18 @@
       </div>
     </div>
     <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 500px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-TinyTweaks");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>
