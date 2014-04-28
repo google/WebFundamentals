@@ -380,14 +380,27 @@ NOTE: This is our styleguide
   <div class="editorial-header">
     <div class="container">
       <nav class="breadcrumbs">
-        <p><a href="#" class="breadcrumbs__link">The Essentials</a></p>
+        <p> / <a href="#" class="breadcrumbs__link">The Essentials</a> / <a href="#" class="breadcrumbs__link"> Multi-screen layouts</a></p>
       </nav>
 
-      <h1 class="editorial-header__title">Layout Basics</h1>
-      <p class="editorial-header__excerpt g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Donec augue diam, scelerisque eget lectus in, posuere aliquet mi. Pellentesque suscipit nisl gravida sem tincidunt, id blandit turpis commodo.</p>
+      <h1 class="tag editorial-header__title">Layout Basics</h1>
+      <h2 class="editorial-header__subtitle">What is the viewport?</h2>
+      <p class="editorial-header__excerpt g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Sed vitae varius augue, eu varius dolor. </p>
+      <p class="g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Donec augue diam, scelerisque eget lectus in, posuere aliquet mi. Pellentesque suscipit nisl gravida sem tincidunt, id blandit turpis commodo.</p>
+
+      <div class="editorial-header__toc">
+        <p class="medium editorial-header__toc-title">More lessons in Layout Basics</p>
+        <ol class="list--links list--variant">
+          <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+          <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+          <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+          <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+          <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+          <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+        </ol>
+      </div>
+
     </div>
-
-
   </div>
 
 </section>
@@ -605,8 +618,48 @@ NOTE: This is our styleguide
 <section class="styleguide__article-nav">
   <div class="container-medium">
     <nav class="article-nav">
-      <a href="#" class="article-nav-link article-nav-link--prev">Previous</a>
-      <a href="#" class="article-nav-link article-nav-link--next">Next</a>
+      <a href="#" class="article-nav-link article-nav-link--prev">
+        <p class="article-nav-count">02</p>
+        <p>A need for responsive pages</p>
+      </a>
+      <a href="#" class="article-nav-link article-nav-link--next">
+        <p class="article-nav-count">04</p>
+        <p>Create images for multiple resolutions</p>
+      </a>
     </nav>
+  </div>
+</section>
+
+<div class="container">
+  <h3 class="styleguide__module-title">Related guides</h3>
+</div>
+
+<section class="styleguide__related-guides">
+  <div class="container">
+
+
+    <div class="related-guides clear">
+      <h3 class="related-guides__title g-wide--1 g-medium--full">Related guides</h3>
+      <div class="related-guides__section clear">
+
+        <ul class="related-guides-list list--reset">
+          <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
+            <p><a class="tag themed" href="#" title="Layout basics">Layout basics</a></p>
+            <p class="medium"><a href="#">Guides title which goes over two lines</a></p>
+          </li>
+          <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
+            <p><a class="tag themed" href="#" title="Media">Media</a></p>
+            <p class="medium"><a href="#">Guides completely device agnostic site created for the this website</a></p>
+          </li>
+          <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
+            <p><a class="tag themed" href="#" title="Performance">Performance</a></p>
+            <p class="medium"><a href="#">Guides new, completely device agnostic site created for the this website</a></p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
   </div>
 </section>

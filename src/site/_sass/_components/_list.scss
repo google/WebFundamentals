@@ -115,11 +115,11 @@ ol.list--variant {
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
-  min-height: $lineHeight * 13;
   padding-top: $lineHeight;
   padding-bottom: $lineHeight;
 
   @include medium {
+    min-height: $lineHeight * 13;
     padding: $lineHeight * 2 32px;
   }
 
@@ -135,11 +135,13 @@ ol.list--variant {
 }
 
 .featured-list__img-wrapper {
+  display: none;
   position: relative;
   padding-top: $lineHeight;
   margin: 0 -5%;
 
   @include medium {
+    display: block;
     padding-top: 0;
     margin: 0;
   }
@@ -157,8 +159,8 @@ ol.list--variant {
   }
 
   img {
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
     max-width: 100%;
 
     @include medium {
@@ -172,16 +174,43 @@ ol.list--variant {
   }
 }
 
-/*==========  LIST RESET  ==========*/
+/*==========  RELATED GUIDES LIST  ==========*/
+.related-guides-list {
+  font-family: $fontHighlight;
+  padding-top: 0;
 
-.list--reset {
-  li,
-  ol {
-    padding-left: 0;
+  p {
+    padding-top: 0;
+  }
 
-    & a:before,
-    &:before {
-      display: none !important; // Fine to use !important when we are forcing an override
+  .tag {
+    padding-top: 0;
+  }
+
+  li {
+    padding-top: $lineHeight;
+    padding-bottom: $lineHeight - 1;
+
+    @include medium {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }
+
+/*==========  LIST RESET  ==========*/
+
+.list--reset {
+  li {
+    padding-left: 0;
+  }
+
+  &.list--links a:before,
+  & li:before {
+    display: none !important; // Fine to use !important when we are forcing an override
+  }
+}
+
+
+
+
