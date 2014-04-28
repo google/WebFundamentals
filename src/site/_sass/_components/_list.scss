@@ -25,10 +25,21 @@ ul li {
 
 ol {
   counter-reset: list;
-  li {
+  > li {
     @include numbered-list;
+    position: relative;
+    padding-left: 39px;
   }
 }
+
+ul ol {
+  padding-top: 0;
+}
+
+ol ul {
+  padding-top: 0;
+}
+
 
 .list__item {
   @include bullet-type(">");
@@ -56,8 +67,9 @@ ol.list--links {
     }
 
     a {
+      display: block;
       @include numbered-list;
-      line-height: 1; // fixes baseline grid alignment
+      // line-height: 1; // fixes baseline grid alignment
     }
   }
 }

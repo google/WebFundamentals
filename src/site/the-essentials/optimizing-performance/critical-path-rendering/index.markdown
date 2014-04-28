@@ -767,7 +767,7 @@ Alternatively, we could have tried a different approach and inlined both the CSS
 and JavaScript:
 
 {% include_code _code/measure_crp_inlined.html full %}
-   
+
 <img src="image10.png" width="624" height="62" />
 
 Notice that the _domContentLoaded_ time is effectively the same as in the

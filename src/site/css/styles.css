@@ -9,7 +9,7 @@
 * @author Antoine Grelard
 *
 **/
-@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Open+Sans:400");
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,900|Open+Sans:400");
 /**
 *
 * Utils
@@ -936,7 +936,7 @@ body.debug:after {
   display: inline-block;
   display: block;
 }
-/* line 365, ../_sass/_utils.scss */
+/* line 367, ../_sass/_utils.scss */
 .main-nav__link--explore:hover {
   color: #404040;
 }
@@ -1140,7 +1140,7 @@ body.debug:after {
     padding-bottom: 52px;
     position: relative;
   }
-  /* line 382, ../_sass/_utils.scss */
+  /* line 384, ../_sass/_utils.scss */
   .highlight-module__container:before {
     content: attr(data-character);
     display: block;
@@ -1156,31 +1156,31 @@ body.debug:after {
     text-align: center;
     width: 30.3%;
   }
-  /* line 401, ../_sass/_utils.scss */
+  /* line 403, ../_sass/_utils.scss */
   .highlight-module--left .highlight-module__container:before {
     right: auto;
     left: 45px;
   }
-  /* line 424, ../_sass/_utils.scss */
+  /* line 426, ../_sass/_utils.scss */
   .highlight-module--learning .highlight-module__container:before {
     top: -80px;
   }
-  /* line 424, ../_sass/_utils.scss */
+  /* line 426, ../_sass/_utils.scss */
   .highlight-module--remember .highlight-module__container:before {
     top: -170px;
   }
-  /* line 424, ../_sass/_utils.scss */
+  /* line 426, ../_sass/_utils.scss */
   .highlight-module--code .highlight-module__container:before {
     top: -160px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 382, ../_sass/_utils.scss */
+  /* line 384, ../_sass/_utils.scss */
   .highlight-module__container:before {
     width: 22.2%;
     font-size: 400px;
   }
-  /* line 410, ../_sass/_utils.scss */
+  /* line 412, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 650px;
   }
@@ -2194,14 +2194,31 @@ ul li:before {
 ol {
   counter-reset: list;
 }
+/* line 28, ../_sass/_components/_list.scss */
+ol > li {
+  position: relative;
+  padding-left: 39px;
+}
 /* line 349, ../_sass/_utils.scss */
-ol li:before {
+ol > li:before {
   counter-increment: list;
   content: "#0" counter(list);
   color: inherit;
   font-weight: 600;
   display: inline-block;
-  margin-right: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 35, ../_sass/_components/_list.scss */
+ul ol {
+  padding-top: 0;
+}
+
+/* line 39, ../_sass/_components/_list.scss */
+ol ul {
+  padding-top: 0;
 }
 
 /* line 336, ../_sass/_utils.scss */
@@ -2217,11 +2234,11 @@ ol li:before {
 }
 
 /*==========  LIST LINKS  ==========*/
-/* line 41, ../_sass/_components/_list.scss */
+/* line 52, ../_sass/_components/_list.scss */
 ul.list--links li:before {
   display: none;
 }
-/* line 44, ../_sass/_components/_list.scss */
+/* line 55, ../_sass/_components/_list.scss */
 ul.list--links a {
   font-weight: 400;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2239,13 +2256,13 @@ ul.list--links a:before {
   line-height: 26px;
 }
 
-/* line 54, ../_sass/_components/_list.scss */
+/* line 65, ../_sass/_components/_list.scss */
 ol.list--links li:before {
   display: none;
 }
-/* line 58, ../_sass/_components/_list.scss */
+/* line 69, ../_sass/_components/_list.scss */
 ol.list--links li a {
-  line-height: 1;
+  display: block;
 }
 /* line 349, ../_sass/_utils.scss */
 ol.list--links li a:before {
@@ -2254,37 +2271,39 @@ ol.list--links li a:before {
   color: inherit;
   font-weight: 600;
   display: inline-block;
-  margin-right: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*==========  CENTERED LIST  ==========*/
-/* line 68, ../_sass/_components/_list.scss */
+/* line 80, ../_sass/_components/_list.scss */
 .centered-list {
   text-align: center;
 }
-/* line 71, ../_sass/_components/_list.scss */
+/* line 83, ../_sass/_components/_list.scss */
 .centered-list h3 {
   color: #4285f4;
 }
-/* line 75, ../_sass/_components/_list.scss */
+/* line 87, ../_sass/_components/_list.scss */
 .centered-list p {
   padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 75, ../_sass/_components/_list.scss */
+  /* line 87, ../_sass/_components/_list.scss */
   .centered-list p {
     padding-bottom: 0;
   }
 }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 84, ../_sass/_components/_list.scss */
+/* line 96, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-/* line 89, ../_sass/_components/_list.scss */
+/* line 101, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2294,28 +2313,28 @@ ol.list--links li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 89, ../_sass/_components/_list.scss */
+  /* line 101, ../_sass/_components/_list.scss */
   .featured-list__item {
     padding: 52px 32px;
   }
 }
-/* line 102, ../_sass/_components/_list.scss */
+/* line 114, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
-/* line 106, ../_sass/_components/_list.scss */
+/* line 118, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 111, ../_sass/_components/_list.scss */
+/* line 123, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   position: relative;
   padding-top: 26px;
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 111, ../_sass/_components/_list.scss */
+  /* line 123, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     padding-top: 0;
     margin: 0;
@@ -2323,7 +2342,7 @@ ol.list--links li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 122, ../_sass/_components/_list.scss */
+  /* line 134, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2333,14 +2352,14 @@ ol.list--links li a:before {
     width: 100%;
   }
 }
-/* line 133, ../_sass/_components/_list.scss */
+/* line 145, ../_sass/_components/_list.scss */
 .featured-list__img img {
   margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 133, ../_sass/_components/_list.scss */
+  /* line 145, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2352,11 +2371,11 @@ ol.list--links li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 152, ../_sass/_components/_list.scss */
+/* line 164, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 156, ../_sass/_components/_list.scss */
+/* line 168, ../_sass/_components/_list.scss */
 .list--reset li a:before, .list--reset li:before {
   display: none !important;
 }
@@ -2389,11 +2408,11 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
-/* line 365, ../_sass/_utils.scss */
+/* line 367, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
-/* line 370, ../_sass/_utils.scss */
+/* line 372, ../_sass/_utils.scss */
 .cta--primary:before {
   content: ">";
   display: inline-block;
@@ -2406,7 +2425,7 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
-/* line 365, ../_sass/_utils.scss */
+/* line 367, ../_sass/_utils.scss */
 .cta--secondary:hover {
   color: #404040;
 }
@@ -2724,8 +2743,10 @@ td:last-child:after {
 /* line 37, ../_sass/_components/_column-list.scss */
 .list--columns a {
   display: block;
+  position: relative;
+  padding-left: 39px;
 }
-/* line 40, ../_sass/_components/_column-list.scss */
+/* line 42, ../_sass/_components/_column-list.scss */
 .list--columns a:before {
   line-height: 26px;
 }
@@ -2806,12 +2827,14 @@ td:last-child:after {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
 
-/* line 24, ../_sass/_components/_guides-list.scss */
+/* line 26, ../_sass/_components/_guides-list.scss */
 .guides-list__item {
   padding: 0;
   background: #ffffff;
@@ -2819,35 +2842,38 @@ td:last-child:after {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 24, ../_sass/_components/_guides-list.scss */
+  /* line 26, ../_sass/_components/_guides-list.scss */
   .guides-list__item {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
-/* line 36, ../_sass/_components/_guides-list.scss */
+/* line 40, ../_sass/_components/_guides-list.scss */
 .guides-list__item h3 {
   margin: 0 32px;
 }
-/* line 40, ../_sass/_components/_guides-list.scss */
+/* line 44, ../_sass/_components/_guides-list.scss */
 .guides-list__item p {
   margin: 26px 32px 0;
 }
-/* line 44, ../_sass/_components/_guides-list.scss */
+/* line 48, ../_sass/_components/_guides-list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 0 52px;
   background: #e0e0e0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 44, ../_sass/_components/_guides-list.scss */
+  /* line 48, ../_sass/_components/_guides-list.scss */
   .guides-list__item ol {
     width: 100%;
+    -webkit-align-self: flex-end;
     align-self: flex-end;
   }
 }
-/* line 55, ../_sass/_components/_guides-list.scss */
+/* line 60, ../_sass/_components/_guides-list.scss */
 .guides-list__item:before {
   display: none;
 }
@@ -2882,6 +2908,10 @@ td:last-child:after {
   border-bottom: 52px solid;
   margin-bottom: 26px;
   position: relative;
+}
+/* line 36, ../_sass/_pages/_styleguide.scss */
+.page--styleguide .styleguide__breadcrumb .breadcrumbs {
+  display: block;
 }
 
 /**
