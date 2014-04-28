@@ -333,16 +333,24 @@
 
 
   // LISTS
-  @mixin bullet-type($bullet) {
+  @mixin bullet-type($bullet, $icon: false) {
     &:before {
-      content: $bullet;
+      @if $icon {
+        font-family: $fontIcon;
+        @extend .#{$icon}:before;
+      }
+      @else {
+        content: $bullet;
+        font-family: $fontHighlight;
+      }
+
       display: block;
-      font-family: $fontHighlight;
       font-weight: 400;
       position: absolute;
       top: 0;
       left: 0;
       line-height: $lineHeight;
+
     }
   }
 
@@ -360,7 +368,7 @@
   }
 
   // Mixin to create links
-  @mixin style-cta($textColor, $hasArrow: true) {
+  @mixin style-cta($textColor, $icon: false) {
     color: $textColor;
     font-weight: 600;
     display: inline-block;
@@ -369,11 +377,12 @@
       color: $colorGrayDark;
     }
 
-    @if $hasArrow {
+    @if $icon {
       &:before {
-        content: ">";
         display: inline-block;
         padding-right: 16px;
+        font-family: $fontIcon;
+        @extend .#{$icon}:before;
       }
     }
   }
