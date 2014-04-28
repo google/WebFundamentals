@@ -8,7 +8,7 @@ rel:
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
-  order: 2
+  order: 1
 collection: introduction-to-media
 key-takeaways:
   use-right-image:
@@ -41,6 +41,10 @@ remember:
       memory and decoding costs it requires.  Resizing large images to fit on 
       smaller screens is expensive and can be particularly painful on low-end
       devices where both memory and processing is limited.
+related:
+  optimize:
+    - <a href="../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization">Image optimization</a>
+    - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
 ---
 
 {% wrap content%}
@@ -368,8 +372,7 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can 
 download and display all the assets. 
 
-For a more in-depth look, check out the [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization) section in 
-[Optimizing content efficiency](../../performance/optimizing-content-efficiency/).
+{% include modules/related.liquid list=page.related.optimize %}
 
 ### Choose the right format
 
