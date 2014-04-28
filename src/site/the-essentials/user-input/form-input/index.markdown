@@ -85,6 +85,7 @@ remember:
 
 ## Label and name inputs properly
 
+{% include modules/takeaway.liquid list=page.key-takeaways.label-and-name %}
 
 ### The importance of labels
 
@@ -247,14 +248,13 @@ navigation.
 <input type="text" autofocus ... />
 {% endhighlight %}
 
-{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.label-and-name %}
-
 ## Choose the best input type
-
 
 Every tap counts. Users appreciate websites that automatically present number
 pads for entering phone numbers, or automatically advance fields as they entered
 them. Look for opportunities to eliminate wasted taps in your forms.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.choose-best-input-type %}
 
 ### HTML5 input types
 
@@ -397,8 +397,6 @@ lists, `datalist`s provide hints as the user types.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-datalist %}
 
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.choose-best-input-type %}
-
 ## Provide real-time validation
 
 Real-time data validation doesn't just help to keep your data clean, but it also
@@ -407,7 +405,7 @@ to help provide real-time data validation and may prevent the user from
 submitting an invalid form.  Visual cues should be used to indicate whether a
 form has been completed properly.
 
-{% include modules/remember.liquid title="Remember" list=page.remember.provide-real-time-validation %}
+{% include modules/takeaway.liquid list=page.key-takeaways.provide-real-time-validation %}
 
 ### Use these attributes to validate input
 
@@ -506,6 +504,8 @@ JavaScript APIs will still allow you to check if the form validates.
   <input type="email" ... />
 </form>
 {% endhighlight %}
+
+{% include modules/remember.liquid title="Remember" list=page.remember.provide-real-time-validation %}
 
 ### Use JavaScript for more complex real-time validation
 
@@ -613,8 +613,6 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 {% include modules/remember.liquid title="Important" list=page.remember.show-all-errors %}
 
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.provide-real-time-validation %}
-
 ## Simplify checkout with `requestAutocomplete`
 
 While `requestAutocomplete` was designed to help users fill out any form, today
@@ -623,6 +621,8 @@ mobile web [can be as high as
 97%](http://seewhy.com/blog/2012/10/10/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/).
 Imagine 97% of people in a supermarket, with a cart brimming full of things that
 they want, flipping their cart over and walking out.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.use-request-auto-complete %}
 
 Rather than the site relying on a particular payment provider,
 `requestAutocomplete` requests payment details (such as name, address and credit
@@ -658,8 +658,6 @@ validates to your needs, simply submit the form and proceed to the final
 confirmation.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
-
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.use-request-auto-complete %}
 
 {% include modules/nextarticle.liquid %}
 
