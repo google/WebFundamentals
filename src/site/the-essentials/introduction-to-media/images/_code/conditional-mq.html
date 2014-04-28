@@ -37,6 +37,18 @@
       a checkboard background.
     </div>
     <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 500px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("Images-Conditional");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>
 
