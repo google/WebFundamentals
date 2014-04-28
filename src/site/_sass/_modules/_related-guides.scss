@@ -10,6 +10,11 @@
 *
 **/
 
+.related-guides {
+  margin-top: $lineHeight*2;
+  padding-bottom: $lineHeight*2;
+}
+
 .related-guides__list {
   .list--links {
     padding-top: 0;
