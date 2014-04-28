@@ -78,9 +78,28 @@ The viewport lives in the head of the document and only needs to be declared onc
 
 ## Apply simple styling
 
-Our product and company already has a very specific branding.
+Our product and company already has a very specific branding and font guide-lines supplied 
+in a style guide.
 
-[TODO add colour tiles.]
+### Styleguide
+
+A styleguide is a useful way to get a high-level understanding of the visual represntation 
+of the page and it helps you ensure that you are consistent through out the design.
+
+#### Colours
+
+<div class="styles" style="font-family: monospace;">
+  <div style="background-color: #39b1a4">#39b1a4</div>
+  <div style="background-color: white">#ffffff</div>
+  <div style="background-color: #f5f5f5">#f5f5f5</div>
+
+  <div style="background-color: #e9e9e9">#e9e9e9</div>
+  <div style="background-color: #dc4d38">#dc4d38</div>
+</div>
+
+#### Typography
+
+
 
 ### Add stylistic images
 
