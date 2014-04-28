@@ -181,7 +181,7 @@
       .tab-bar button:last-child {
         border-right-style: none;
       }
-      
+
       .tab-bar button img {
         width: 32px;
         height: auto;
@@ -247,6 +247,17 @@
       }
 
       selectTab(tabBtns[currentSelectedTab]);
+    </script>
+
+    <script>
+      var tabBtns = document.querySelectorAll('.tab-bar > button');
+      for(var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', tabBarBtnClick, true);
+      }
+
+      function tabBarBtnClick() {
+        sampleCompleted('tabbar-sample3.html-tabbtnclick');
+      }
     </script>
 
     <!-- // [TEMPLATE footer] -->

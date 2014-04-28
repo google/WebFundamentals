@@ -24,14 +24,23 @@
       }
 
       .bottom-bar {
-        position: fixed;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         
         width: 100%;
         
+        position: fixed;
+
+        left: 0;
         bottom: 0;
         
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
         flex-direction: row;
+
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
 
         background-color: rgba(255, 255, 255, 0.4);
@@ -41,26 +50,30 @@
         width: 40px;
         height:40px;
         
-        margin: 8px 0;
+        margin: 8px;
         
         border: none;
         
-        background-color: rgba(60, 120, 216, 0.7);
+        background-color: rgba(60, 120, 216, 0.4);
         
         border-radius: 100%;
         
-        -webkit-transition: background-color 0.2s ease-out;
-        transition: background-color 0.2s ease-out;
+        -webkit-transition: background-color 0.1s ease-out;
+        transition: background-color 0.1s ease-out;
 
         -webkit-tap-highlight-color: transparent;
       }
 
-      .bottom-bar button:hover, .bottom-bar button:focus {
+      .bottom-bar button:hover {
+        background-color: rgba(60, 120, 216, 0.8);
+      }
+
+      .bottom-bar button:focus {
         background-color: rgba(60, 120, 216, 0.8);
         outline: 0;
       }
 
-      .bottom-bar button:active, .bottom-bar button:focus:active {
+      .bottom-bar button:active {
         background-color: rgba(60, 120, 216, 1.0);
       }
     </style>
@@ -76,6 +89,15 @@
     </nav>
 
     <script>
+      var bottomBtns = document.querySelectorAll('.bottom-bar > button');
+
+      for(var i = 0; i < bottomBtns.length; i++) {
+        bottomBtns[i].addEventListener('click', bottomBarBtnClick, true);
+      }
+
+      function bottomBarBtnClick() {
+        sampleCompleted('appbar-navdrawer-bottombar-sample.html-bottombarbtnclick');
+      }
     </script>
 
     <!-- // [TEMPLATE footer] -->
