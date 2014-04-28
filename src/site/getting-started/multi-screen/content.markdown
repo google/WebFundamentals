@@ -202,17 +202,20 @@ our social media profiles.
 
 ## Summary
 
+We have created the outline of the site and we have identified all the main 
+structural elements.  We have also made sure that we have all the relevant 
+content ready and in-place to satisfy our business needs.  
+
 <div class="clear">
   <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
 </div>
 
-We have created the outline of the site and we have identified all the main 
-structural elements.  We have also made sure that we have all the relevant 
-content ready and in-place to satisfy our business needs.  
-
-You will notice that the page looks terrible right now. That is intentional. Content is the most important aspect of any site and we needed to make sure we have a good solid information architecture and density.  This guide has given 
-us an excellent base to build upon.
+You will notice that the page looks terrible right now. That is intentional.
+Content is the most important aspect of any site and we needed to make sure we
+have a good solid information architecture and density.  This guide has given
+us an excellent base to build upon, but we will get to a good position quickly
+in our next guide.
 
 {% include modules/nextarticle.liquid %}
 
