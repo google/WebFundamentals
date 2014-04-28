@@ -12,4 +12,6 @@ article:
 collection: introduction-to-media
 ---
 
-This page is intentiontally blank.
+{% wrap content%}
+  Content under development.
+{% endwrap %}
