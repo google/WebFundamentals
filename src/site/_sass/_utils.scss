@@ -388,21 +388,20 @@
   }
 
   // Mixin to create highlight modules
-  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 45px, $fontSize: 150px) {
+  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 45px, $fontSize: 130px) {
     position: relative;
 
     &:before {
-      // content: attr(data-character);
       display: block;
 
       position: absolute;
-      top: $verticalOffset;
+      top: 50%;
       right: $horizontalOffset;
 
       font-family: $fontIcon;
       font-size: $fontSize;
       font-weight: 900;
-      line-height: 100%;
+      line-height: 1px;
       height: 100%;
       color: #ffffff;
       text-align: center;
@@ -423,18 +422,6 @@
           font-size: $fontSize + 300;
         }
       }
-    }
-  }
-
-  @mixin highlight-symbol-override($symbol) {
-    &:before {
-      content: $symbol;
-    }
-  }
-
-  @mixin highlight-vertical-offset-override($offset) {
-    &:before {
-      top: $offset;
     }
   }
 

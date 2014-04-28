@@ -56,18 +56,6 @@
   @include medium {
     padding-bottom: $lineHeight*2;
     @include highlight-symbol();
-
-    .highlight-module--learning & {
-      @include highlight-vertical-offset-override(-80px);
-    }
-
-    .highlight-module--remember & {
-      @include highlight-vertical-offset-override(-170px);
-    }
-
-    .highlight-module--code & {
-      @include highlight-vertical-offset-override(-160px);
-    }
   }
 }
 
