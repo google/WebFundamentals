@@ -13,8 +13,8 @@ class: home
 
   <ul class="centered-list list--reset clear">
     {% for guide in page.articles.the-essentials %}
-    <li class="g-medium--half g-wide--1 {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
-      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+    <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
+      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       <a href="#" class="cta--secondary">Get started</a>
     </li>
@@ -24,9 +24,7 @@ class: home
 {% endwrap %}
 
 <div class="featured-spotlight">
-
   <div class="container-medium">
-
     <div class="featured-spotlight__container g--pull-half">
       <div class="featured-spotlight__img">
         <img src="../../imgs/placeholder--wide.png" alt="image exemple">
@@ -38,9 +36,7 @@ class: home
         <a href="#" class="cta--primary">View Google</a>
       </div>
     </div>
-
   </div>
-
 </div>
 
 <div class="featured-section">

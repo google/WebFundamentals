@@ -25,7 +25,7 @@ key-takeaways:
   navigation-drawer:
     - Your navigation drawer should *always* be accessible by the user
     - If the number of sections is too large, consider grouping the items and expanding / contracting the groups. Avoid overwhelming your users.
-    - Don't hide key actions inside the drawer (i.e. search should be prominently on the home page, not hidden in the drawer).
+    - Don't hide key actions inside the drawer. Actions like search should be prominently on the home page, not hidden in the drawer.
   bottom-bar:
     - Only use this if you aren't using a tab bar
     - Stick to 5 items at most
@@ -41,11 +41,9 @@ key-takeaways:
 
 # Navigation Patterns
 
-// TODO: Intro to the article
-
 ## App Bar
 
-<img class="g-wide--full" src="images/appbar.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/appbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -71,7 +69,8 @@ If you have a slide in menu, you have the choice of putting the menu on the left
 
 The top left corner is where you should put the most important elements of your UI, however it's also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
 
-<img class="g-wide--full" src="images/appbar-menu.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample1.html"><img class="g--half" src="images/appbar-menu-left.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample2.html"><img class="g--half g--last" src="images/appbar-menu-right.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -79,7 +78,8 @@ The top left corner is where you should put the most important elements of your 
 
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
-<img class="g-wide--full" src="images/appbar-alt.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample3.html"><img class="g--half" src="images/appbar-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/appbar-sample4.html"><img class="g--half g--last" src="images/appbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -87,7 +87,7 @@ The App Bar is a set of principals that you should apply to give your users a pr
 
 ## Tabs
 
-<img class="g-wide--full" src="images/tabbar.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -99,19 +99,16 @@ Position your tabs above or below your main content.
 
 A nice advantage using tabs is that it gives the user a consistent place for navigation where it's easy to glance where they are within your site.
 
-<img class="g-wide--full" src="images/tabbar-alt.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample2.html"><img class="g--half" src="images/tabbar-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/tabbar-sample3.html"><img class="g--half g--last" src="images/tabbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
-
-### Tabs vs Navigation Drawer
-
-Some developers find they get higher rates of interaction when using tabs over navigation drawer, so if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.tabs %}
 
 ## Navigation Drawer
 
-<img class="g-wide--full" src="images/navdrawer.png">
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample1.html"><img class="g-medium--full g-wide--full" src="images/navdrawer.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -119,22 +116,44 @@ The navigation drawer is a simple slide in panel which is primarily used for dis
 
 A user accesses the drawer using a menu button at the top of the screen in the App Bar.
 
-- Include demo
-  - Left, Right and Drop Down
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample2.html"><img class="g--third" src="images/navdrawer-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample3.html"><img class="g--third" src="images/navdrawer-alt-2.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/layout-patterns/navdrawer-sample4.html"><img class="g--third g--last" src="images/navdrawer-alt-3.png"></a>
+
+<div style="clear: both;"></div>
+
+### Tabs vs Navigation Drawer
+
+Some developers find they get higher rates of interaction when using tabs over a navigation drawer. So if you can reduce your application's navigation to 5 key sections then this may be a preferable option over the Navigation Drawer.
+
+<div style="clear: both;"></div>
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.navigation-drawer %}
 
 ## Bottom Bar
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.bottom-bar %}
+We've seen that the App Bar can be used for placing actions the user can perform in your web app.
 
-- Describe the pattern
+An alternative approach is to place actions in a bar along the bottom, providing you aren't using tabs for your navigation.
+
+The advantage of this is that you have more space for actions, but you should limit yourself to five actions at most, avoiding the buttons becoming to small and difficult to tap.
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.bottom-bar %}
 
 ## Item Actions
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.item-actions %}
+So far we have considered actions relevant to the screen the user is currently viewing (perform a search or filter, share the current blog post, add a new element etc).
 
-- Describe the pattern
+There are occasions where a contextual action can help users perform tasks faster. An example of a contextual action is view a list of items, emails, to-do's or a product basket for example, where each list item have actions tied to them, so deleting, starring, marking as read etc.
+
+Long press is the most common interaction to display a contextual menu or pop up.
+
+The main negatives to consider are:
+
+- Can be difficult for the user to discover, so any hints you can give to the user to long press or gesture will help with discoverability
+- Ensure that you still allow users to perform actions outside of the gesture, for example, enable deleting of a to-do in the details page when the user clicks through to more details.
+
+{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.item-actions %}
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.nav-patterns %}
 

@@ -17,8 +17,8 @@
             <div class="clear">
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
-                  <li class="main-nav__item--child">
-                    <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">{{ subsection.title }}</a>
+                  <li class="main-nav__item--child theme--{{subsection.id}}">
+                    <a class="main-nav__link main-nav__link--child themed" href="{{site.baseurl}}{{ subsection.path }}">{{ subsection.title }}</a>
                   </li>
                 {% endfor %}
               </ul>

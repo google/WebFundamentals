@@ -80,10 +80,6 @@ ol.list--links {
 .centered-list {
   text-align: center;
 
-  h3 {
-    color: $colorBlue;
-  }
-
   p {
     padding-bottom: $lineHeight;
     @include medium { padding-bottom: 0;}

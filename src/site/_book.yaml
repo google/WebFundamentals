@@ -11,6 +11,7 @@ toc:
   section:
     - title: "Multi-device layouts"
       path: /the-essentials/multi-device-layouts/
+      id: "multi-device-layouts"
       section:
         - title: "Responsive Web Design Fundamentals"
           path: /the-essentials/multi-device-layouts/rwd-fundamentals/
@@ -22,6 +23,7 @@ toc:
           path: /the-essentials/multi-device-layouts/ui-elements/
     - title: "User Input"
       path: /the-essentials/user-input/
+      id: user-input
       section:
       - title: "Touch Input"
         path: /the-essentials/user-input/touch-input/
@@ -29,6 +31,7 @@ toc:
         path: /the-essentials/user-input/form-input/
     - title: "Images, Video and Audio"
       path: /the-essentials/introduction-to-media/
+      id: introduction-to-media
       section:
       - title: "Images"
         path: /the-essentials/introduction-to-media/images/
@@ -37,20 +40,21 @@ toc:
       - title: "Audio"
         path: /the-essentials/introduction-to-media/audio/
     - title: Performance
-      path: /the-essentials/optimizing-performance/
+      path: /the-essentials/performance/
+      id: performance
       section:
         - title: "Critical Path Rendering"
-          path: /the-essentials/optimizing-performance/critical-path-rendering/
+          path: /the-essentials/performance/critical-path-rendering/
         - title: "Optimizing content efficiency"
-          path: /the-essentials/optimizing-performance/optimizing-content-efficiency/
+          path: /the-essentials/performance/optimizing-content-efficiency/
         - title: "Resource cacheing"
-          path: /the-essentials/optimizing-performance/resource-cacheing/
+          path: /the-essentials/performance/resource-cacheing/
         - title: "Optimizing networking"
-          path: /the-essentials/optimizing-performance/optimizing-networking/
+          path: /the-essentials/performance/optimizing-networking/
         - title: "Optimizing interactivity"
-          path: /the-essentials/optimizing-performance/optimizing-interactivity/
+          path: /the-essentials/performance/optimizing-interactivity/
         - title: "Measuring performance"
-          path: /the-essentials/optimizing-performance/measuring-performance/
+          path: /the-essentials/performance/measuring-performance/
 - title: Resources
   path: /resources/
   section:
