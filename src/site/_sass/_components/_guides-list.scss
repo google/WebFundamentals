@@ -16,7 +16,9 @@
 
   @include medium {
     @include flexbox;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
@@ -29,7 +31,9 @@
 
   @include medium {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -48,6 +52,7 @@
 
     @include medium {
       width: 100%; // needed due to parent being flex
+      -webkit-align-self: flex-end;
       align-self: flex-end;
     }
   }
