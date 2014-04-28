@@ -2975,21 +2975,40 @@ td:last-child:after {
   }
 }
 /* line 34, ../_sass/_components/_articles-list.scss */
+<<<<<<< HEAD
+=======
+.articles-list__item h3 a:hover {
+  text-decoration: none;
+}
+/* line 39, ../_sass/_components/_articles-list.scss */
+>>>>>>> 1f761eaa931791553d4384f3cb9c98f38b3e1a2a
 .articles-list__item p {
   margin-top: 26px;
   margin-bottom: 26px;
 }
+<<<<<<< HEAD
 /* line 39, ../_sass/_components/_articles-list.scss */
+=======
+/* line 44, ../_sass/_components/_articles-list.scss */
+>>>>>>> 1f761eaa931791553d4384f3cb9c98f38b3e1a2a
 .articles-list__item:first-child {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
+<<<<<<< HEAD
   /* line 39, ../_sass/_components/_articles-list.scss */
+=======
+  /* line 44, ../_sass/_components/_articles-list.scss */
+>>>>>>> 1f761eaa931791553d4384f3cb9c98f38b3e1a2a
   .articles-list__item:first-child {
     padding-top: 26px;
   }
 }
+<<<<<<< HEAD
 /* line 46, ../_sass/_components/_articles-list.scss */
+=======
+/* line 51, ../_sass/_components/_articles-list.scss */
+>>>>>>> 1f761eaa931791553d4384f3cb9c98f38b3e1a2a
 .articles-list__item:first-child:before {
   display: none;
 }
