@@ -44,6 +44,18 @@ remember:
 
 {% wrap content%}
 
+<style type="text/css">
+  img, video, object {
+    max-width: 100%;
+  }
+
+  img.center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
 {% include modules/toc.liquid %}
 
 ### Responsive images
@@ -56,7 +68,9 @@ use too much real estate on a narrow phone.
 
 ### Art direction
 
-![Art direction example](img/art-direction.png)
+<img class="center" src="img/art-direction.png" alt="Art direction example" 
+srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x" 
+width="600px" height="328px">
 
 Other times the image may need to be changed more drastically: changing the 
 proportions, cropping and even replacing the entire image.  In this case, 
@@ -256,31 +270,39 @@ webfonts to achieve the style you need.
 
 ### Use CSS to replace images
 
+<!--
 Modern browsers can use CSS features to create styles that would previously 
 required images.  For examples, complex gradients can be created using the 
 `background` property, shadows can be created using `box-shadow` and rounded 
-corners can be added with the `border-radius` property. 
+corners can be added with the `border-radius` property.
+--> 
 
 <style type="text/css">  
-  div#noImage {  
-    height: 100px;  
-    width: 100%;  
+  p#noImage {  
+    margin-top: 2em;
+    padding: 1em;
+    padding-bottom: 2em;
+    color: white;
     border-radius: 5px;  
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);  
-    color: white;  
-    background: linear-gradient(#4f80f2, #8EAAEC);  
+    box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);   
+    background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
   }   
 </style>  
-<div id="noImage">  
-  Lorem Ipsum!  
-</div>
+<p id="noImage">  
+  Modern browsers can use CSS features to create styles that would previously 
+  required images.  For examples, complex gradients can be created using the 
+  <code>background</code> property, shadows can be created using 
+  <code>box-shadow</code> and rounded corners can be added with the 
+  <code>border-radius</code> property.  
+</p>
 
 {% highlight html %}  
 <style type="text/css">  
-  div#noImage {  
+  div#noImage { 
+    color: white;
     border-radius: 5px;  
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);  
-    background: linear-gradient(#4f80f2, #8EAAEC);  
+    box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);  
+    background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));  
   }   
 </style>  
 {% endhighlight %}
@@ -321,9 +343,11 @@ advantages to images:
 * An entire set of icons can be downloaded in one font. 
 
 {% link_sample _code/icon-font.html %}
-![Example of page that uses Font Awesome](img/icon-fonts.png)  
+<img src="img/icon-fonts.png" class="center"
+srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" width="320px"
+alt="Example of a page that uses FontAwesome for it's font icons.">
 {% endlink_sample %}
-{% include_code _code/icon-font.html todohtml html %}
+{% include_code _code/icon-font.html iconfont html %}
 
 There are hundreds of free and paid icon fonts available including [Font 
 Awesome](http://fortawesome.github.io/Font-Awesome/), 
@@ -406,7 +430,7 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
 {% link_sample _code/image-sprite.html %}
-![Image sprite used by our sample](img/sprite-sheet.png) 
+<img src="img/sprite-sheet.png" class="center" width="190px" alt="Image sprite sheet used in example"> 
 {% endlink_sample %}
 {% include_code _code/image-sprite.html sprite css %}
 
