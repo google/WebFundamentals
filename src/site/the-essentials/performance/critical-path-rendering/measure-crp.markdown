@@ -22,8 +22,7 @@ key-takeaways:
 ---
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.measure-crp %}
 

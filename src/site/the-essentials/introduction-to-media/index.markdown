@@ -1,8 +1,9 @@
 ---
 layout: section
 title: "Introduction to media"
-description: "Images, Video and Audio make the web engaging and compelling.  Use our guides to get complete mastery and deliver amazing experiences to your users."
+description: "This section shows how to use media responsibly. Images, video, and audio engage users, but they also drive users away when they don't fit, don't load, or the page renders slowly."
 introduction: "Images, Video and Audio make the web engaging and compelling.  Use our guides to get complete mastery and deliver amazing experiences to your users."
+snippet: "Only use media that loads fast and scales."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
