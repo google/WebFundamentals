@@ -17,7 +17,7 @@ collection: resources
 
 ## Capitalization and naming
 
-### Articles & sections
+### Article & website section titles
 
   * Camel case capitalization
   * Should start with "ing" verb
@@ -25,11 +25,14 @@ collection: resources
   * Bad: "Input handling"
 
 ### Headlines within articles
-  * Sentence case for headlines in articles: "Use placeholders
+  * Sentence case for headlines in articles: "Use placeholders"
 
 ## Linking to external articles
   * Related reading to our articles: Add them in 
   * Related reading to external: Use only when necessary.
+
+## "Mobile" vs. "multi-device" vs "multi-screen" vs "mobile-only" vs "mobile-first"
+  * Use "multi-device" for consistency expect when a different term is needed for precision.
 
 ## Article length
   * _need content here_
