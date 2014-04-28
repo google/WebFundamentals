@@ -157,7 +157,8 @@ ol.list--links {
 /*==========  LIST RESET  ==========*/
 
 .list--reset {
-  li {
+  li,
+  ol {
     padding-left: 0;
 
     & a:before,

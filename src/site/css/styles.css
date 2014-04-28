@@ -2309,45 +2309,25 @@ ol.list--links li a:before {
 .centered-list {
   text-align: center;
 }
-<<<<<<< HEAD
 /* line 83, ../_sass/_components/_list.scss */
-.centered-list h3 {
-  color: #4285f4;
-}
-/* line 87, ../_sass/_components/_list.scss */
-=======
-/* line 71, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
 .centered-list p {
   padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 87, ../_sass/_components/_list.scss */
-=======
-  /* line 71, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+  /* line 83, ../_sass/_components/_list.scss */
   .centered-list p {
     padding-bottom: 0;
   }
 }
 
 /*==========  FEATURED LIST  ==========*/
-<<<<<<< HEAD
-/* line 96, ../_sass/_components/_list.scss */
-=======
-/* line 80, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+/* line 92, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-<<<<<<< HEAD
-/* line 101, ../_sass/_components/_list.scss */
-=======
-/* line 85, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+/* line 97, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2357,48 +2337,28 @@ ol.list--links li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 101, ../_sass/_components/_list.scss */
-=======
-  /* line 85, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+  /* line 97, ../_sass/_components/_list.scss */
   .featured-list__item {
     padding: 52px 32px;
   }
 }
-<<<<<<< HEAD
+/* line 110, ../_sass/_components/_list.scss */
+.featured-list__item:first-child {
+  margin-top: 0;
+}
 /* line 114, ../_sass/_components/_list.scss */
-.featured-list__item:first-child {
-  margin-top: 0;
-}
-/* line 118, ../_sass/_components/_list.scss */
-=======
-/* line 98, ../_sass/_components/_list.scss */
-.featured-list__item:first-child {
-  margin-top: 0;
-}
-/* line 102, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-<<<<<<< HEAD
-/* line 123, ../_sass/_components/_list.scss */
-=======
-/* line 107, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+/* line 119, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   position: relative;
   padding-top: 26px;
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 123, ../_sass/_components/_list.scss */
-=======
-  /* line 107, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+  /* line 119, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     padding-top: 0;
     margin: 0;
@@ -2406,11 +2366,7 @@ ol.list--links li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 134, ../_sass/_components/_list.scss */
-=======
-  /* line 118, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+  /* line 130, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2420,22 +2376,14 @@ ol.list--links li a:before {
     width: 100%;
   }
 }
-<<<<<<< HEAD
-/* line 145, ../_sass/_components/_list.scss */
-=======
-/* line 129, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+/* line 141, ../_sass/_components/_list.scss */
 .featured-list__img img {
   margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 145, ../_sass/_components/_list.scss */
-=======
-  /* line 129, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
+  /* line 141, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2447,20 +2395,15 @@ ol.list--links li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-<<<<<<< HEAD
-/* line 164, ../_sass/_components/_list.scss */
-.list--reset li {
+/* line 161, ../_sass/_components/_list.scss */
+.list--reset li,
+.list--reset ol {
   padding-left: 0;
 }
-/* line 168, ../_sass/_components/_list.scss */
-=======
-/* line 148, ../_sass/_components/_list.scss */
-.list--reset li {
-  padding-left: 0;
-}
-/* line 152, ../_sass/_components/_list.scss */
->>>>>>> 31afb6c6335187ec3fea7ad4e590d1033d278804
-.list--reset li a:before, .list--reset li:before {
+/* line 165, ../_sass/_components/_list.scss */
+.list--reset li a:before, .list--reset li:before,
+.list--reset ol a:before,
+.list--reset ol:before {
   display: none !important;
 }
 
