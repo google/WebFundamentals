@@ -79,8 +79,10 @@ The viewport lives in the head of the document and only needs to be declared onc
 <div markdown='1' class="g-wide--push-1 g-medium--push-1">
 ### Related information
 {: .related-items--title}
+Learn more about the best practices of using the viewport:
 
-* [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+*  [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+*  [Size content to the viewport]({{site.baseurl}}the-essentials/multi-device-layouts/rwd-fundamentals/index.html#size-content-to-the-viewport)
 {: .list--links}
 
 </div>
@@ -193,9 +195,12 @@ need to:
 ### Related information
 {: .related-items--title}
 
-*  [Using Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Major Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Minor Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness)
+Learn more about how and where to use Media Queries:
+
+*  [Using Media Queries]({{site.baseurl}}//web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+*  [Layout patterns]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/index.html) 
+*  [Mostly Fluid layout]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/index.html#mostly-fluid)
+{: .list--links}
 </div>
 </div>
 </div>
@@ -344,9 +349,10 @@ support it let you display a high density image on a high density display.
 ### Related information
 {: .related-items--title}
 
-* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
-* [Use media queries to provide high res images or art direction]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction]
+Learn how to effecticely use images for varying screen densities:
 
+* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [Use media queries to provide high res images or art direction]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction)
 {: .list--links}
 
 </div>
@@ -383,12 +389,12 @@ form-factors and screen sizes.
 
 If you follow these guidelines you will be off to a good start:
 
-*  Create a basic IA and understand your content before you code.
-*  Always set a viewport
-*  Create your base experience around mobile-first approach
-*  Once you have your mobile experience, increase the width of the display 
+1.  Create a basic IA and understand your content before you code.
+2.  Always set a viewport
+3.  Create your base experience around mobile-first approach
+4.  Once you have your mobile experience, increase the width of the display 
    until it doesn't look right and set your breakpoint there.
-*  Keep iterating.
+5.  Keep iterating.
 
 {% include modules/nextarticle.liquid %}
 
