@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Images"
-description: "Images were the first media types used on the web and are an integral part of every single page yet they need to be created and managed correctly to ensure that you are not driving users away."
+description: "A picture is worth 1000 words, and images play an integrate part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
+introduction: "A picture is worth 1000 words, and images play an integrate part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
 rel: 
   gplusauthor: https://plus.google.com/+SamDutton
 article:
@@ -367,8 +368,8 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can 
 download and display all the assets. 
 
-For a more in-depth look, check out the [Image Optimization](../../performance/optimizing-content-efficiency/#todo) section in 
-[Optimizing Performance](../../performance/optimizing-content-efficiency/).
+For a more in-depth look, check out the [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization) section in 
+[Optimizing content efficiency](../../performance/optimizing-content-efficiency/).
 
 ### Choose the right format
 
@@ -450,5 +451,6 @@ never see the footer because new content is always loaded.
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
 
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
