@@ -124,9 +124,16 @@ always stretches whilst maintaining the correct aspect ratio.
 
 ## Set your first breakpoint
 
-[TODO: GIF of it starting to look bad].
+<video controls poster="images/firstbreakpoint.png" style="width: 100%;">
+  <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
+  <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
+  <p>Sorry your browser doesn't support video. 
+     <a href="videos/smiles.mov">Download the video</a>.
+  </p>
+</video>
 
-The design starts to look bad at about 600px wide.  This is a good place to
+The design starts to look bad at about 600px wide.  In our case the length of the line
+is going above 10 words (the optimal reading length). This is a good place to
 create our first breakpoint as it will give us scope to reposition elements to
 make them fit the screen better.  We can do this using a technology called
 [Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness).
@@ -134,7 +141,7 @@ make them fit the screen better.  We can do this using a technology called
 {% include_code _code/firstbreakpoint.html first css %}
 
 There is more space on a larger screen so there is more flexibility with how
-content can be displayed.  
+content can be displayed.
 
 {% include modules/remember.liquid title="Note" list=page.notes.not-all-at-once %}
 
@@ -231,6 +238,14 @@ to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
+<video controls poster="images/floatingform.png" style="width: 100%;">
+  <source src="videos/floatingform.mov" type="video/mov"></source>
+  <source src="videos/floatingform.webm" type="video/webm"></source>
+  <p>Sorry your browser doesn't support video. 
+     <a href="videos/floatingform.mov">Download the video</a>.
+  </p>
+</video>
+
 ### Float the Video element
 
 The video in the narrow viewport interface is designed  be  the full width of
@@ -241,9 +256,16 @@ to our list of features.
 The video element needs to be moved out of the vertical flow of the narrow
 viewport and should be display side by side with the bulleted list of content.
 
-[TODO: Animated GIF]
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
+
+<video controls poster="images/floatingvideo.png" style="width: 100%;">
+  <source src="videos/floatingvideo.mov" type="video/mov"></source>
+  <source src="videos/floatingvideo.webm" type="video/webm"></source>
+  <p>Sorry your browser doesn't support video. 
+     <a href="videos/floatingvideo.mov">Download the video</a>.
+  </p>
+</video>
 
 ### Tile the Images
 
@@ -261,6 +283,14 @@ images will inflate to large.
 
 Tiling images is a good idea because it allows you to display content more 
 effectively depending on the size of the viewport.
+
+<video controls poster="images/tileimages.png" style="width: 100%;">
+  <source src="videos/tileimages.mov" type="video/mov"></source>
+  <source src="videos/tileimages.webm" type="video/webm"></source>
+  <p>Sorry your browser doesn't support video. 
+     <a href="videos/tileimages.mov">Download the video</a>.
+  </p>
+</video>
 
 ### Make images responsive to DPI
 
