@@ -43,10 +43,6 @@
     }
   }
 
-  &.main-nav__itme--web-fundamentals {
-    font-weight: bold;
-  }
-
   @include medium {
     float: left;
     background-color: transparent;
@@ -61,6 +57,10 @@
   // Remove the padding-top apart from first-child
   &:first-child ~ .main-nav__item {
     padding-top: 0;
+  }
+
+  &:first-child a {
+    font-weight: 400;
   }
 
   // Remove list styles
