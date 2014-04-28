@@ -108,7 +108,7 @@ serve multiple files:
 To check for Range Request support, your browser tools for 
 `Accept-Ranges: bytes` in the response headers:
 
-<img  alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" />
+<img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" />
 
 ### Include a poster image
 
@@ -337,11 +337,11 @@ in Chrome on Android (portrait and landscape):
 
 <div class="clear">
   <div class="g--half">
-    <img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
+    <img class="center" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
   </div>
 
-  <div class="g--half g--last">
-    <img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
+  <div class="center" class="g--half g--last">
+    <img class="center" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
   </div>
 </div>
 
@@ -388,11 +388,11 @@ orientation:
 
 <div class="clear">
   <div class="g--half">
-    <img alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait-3x5.png" />
+    <img class="center" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait-3x5.png" />
   </div>
 
-  <div class="g--half g--last">
-    <img alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape-5x3.png" />
+  <div class="center" class="g--half g--last">
+    <img class="center" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape-5x3.png" />
   </div>
 </div>
 
@@ -400,7 +400,7 @@ Device orientation on an iPad and Chrome on Android can be problematic.
 For example, without any customization a video playing on an iPad in landscape 
 orientation looks like this:
 
-<img alt="Screenshot of video playing in Safari on iPad Retina, landscape" 
+<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" 
 src="images/iPad-Retina-landscape-video-playing-5x3.png" />
 
 Setting the video `width: 100%` or `max-width: 100%` with CSS can resolve 
@@ -412,16 +412,16 @@ fullscreen alternatives.
 Different platforms display video differently. Safari on an iPhone displays a 
 video element inline on a web page, but plays video back in fullscreen mode:
 
-<img alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster-3x5.png" />
+<img class="center" alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster-3x5.png" />
 
 On Android, users can request request fullscreen mode by clicking the 
 fullscreen icon. But the default is to play video inline:
 
-<img width="35%" alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png" />
+<img class="center" alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png" />
 
 Safari on an iPad plays video inline:
 
-<img width="100%" alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" />
+<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" />
 
 ### Control fullscreening of content
 
@@ -443,7 +443,7 @@ elements are displayed in fullscreen mode.
 On devices that support the Fullscreen API, consider using thumbnail 
 images as placeholders for video (demo on Chrome for Android):
 
-<img alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" />
+<img class="center" alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" />
 
 To see this in action, check out the 
 {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap
@@ -468,7 +468,7 @@ using the track element.
 
 Using the track element, captions appear like this:
 
-<img alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg" />
+ <img class="center" alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg" />
 
 ### Add track element
 
@@ -533,9 +533,9 @@ also provide adaptive-bitrate streaming via HTTP, but are not open source.
 
 With DASH:
 
-1. Media is encoded at different bitrates.
-2. The different bitrate files are segmented and made available from an HTTP server.
-3. A client web app chooses which bitrate to retrieve and play.
+* Media is encoded at different bitrates.
+* The different bitrate files are segmented and made available from an HTTP server.
+* A client web app chooses which bitrate to retrieve and play.
 
 DASH can be implemented using the Media Source Extensions API. As part of
 the video segmentation process, an XML manifest known as a Media Presentation
