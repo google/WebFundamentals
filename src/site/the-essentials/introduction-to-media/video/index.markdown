@@ -1,11 +1,10 @@
 ---
 layout: article
 title: "Video"
-description: "People like videos: videos can be fun and informative; users can also consume
-information on the go easier than having to read small fonts and scroll down a
-page on a mobile device. Read more to find the simplest way to add video to your site and ensure users
-get the best possible experience on any device."
-introduction: "People like videos: videos can be fun and informative; users can also consume information on the go easier than having to read small fonts and scroll down a page on a mobile device."
+description: "Learn about the simplest ways to add video to your site and ensure users
+              get the best possible experience on any device."
+introduction: "People like videos: videos can be fun and informative; users can also consume information
+               on the go easier than having to read small fonts and scroll down a page on a mobile device."
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-23
