@@ -14,6 +14,12 @@
   background: #ffffff;
   position: relative;
 
+  @include small-only {
+    .js & {
+      display: none;
+    }
+  }
+
   @include medium {
     background-color: $colorGrayDark;
   }
@@ -39,7 +45,7 @@
 
 
   @include small-only {
-    &.main-nav__item--logo {
+    &.main-nav__item--home {
       display: none;
     }
 
@@ -99,12 +105,6 @@
 
   &:hover {
     text-decoration: none;
-  }
-
-  .main-nav__item--logo & {
-    font-size: 60px;
-    padding-top: $lineHeight;
-    line-height: $lineHeight;
   }
 }
 
