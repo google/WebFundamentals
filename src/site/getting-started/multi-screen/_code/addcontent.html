@@ -1,94 +1,124 @@
 <!doctype html>
 <html>
   <head>
-     <title>Smiles</title>
+     <title>Mobile Web CS256</title>
   </head>
   <body>   
-    <!-- // [START headline] -->
+<!-- // [START headline] -->
     <div id="headline">
-      <h1>Smiles Inc.</h1>
-      <h2>Best when shared</h2>
-      <div id="blurb">
-        <p>Who doesn't love a good smile? After kittens a smile is the bestest 
-           thing in the world, with many available for all occasions:</p>
-        <ul>
-          <li>The 'sup bro smile;
-          <li>The love you son smile; 
-          <li>The condescending smile for when you didn't win the Oscar,
-          <li>and the good-ol' British in the thick of it smile.
-        </ul>
-      </div>
-      <form method="post" id="register"> 
-      </form>
+      <div class="container">
+        <h1>Mobile Web Development</h1>
+        <h2>Building Mobile Web Experiences</h2>
+        <div id="blurb">
+          <p>So you've heard mobile is kind of a big deal, and you're not sure how to transform your traditional desktop-focused web apps into fast, effective multi-screen experiences.</p>
+          <p>This course is designed to teach web developers what they need to know to create great cross-device web experiences.</p>
+          <p>This course will focus on building mobile-first web apps, which will work across multiple platforms including:</p>
+          <ul>
+            <li>Android, 
+            <li>iOS,
+            <li>and others.
+          </ul>
+        </div>
+        <form method="post" id="register">
+           <h2>Register for the launch</h2>
+           <label for="name">Name</label>
+           <input type="text" name="name" id="name" 
+              placeholder="Thomas A Anderson" required />
+           <label for="email">Email address</label>
+           <input type="email" name="email" id="email" 
+              placeholder="neo@example.com" required />
+           <label for="tel">Telephone</label>
+           <input type="tel" name="tel" id="tel" 
+              placeholder="(555) 555 5555" required />
+           <input type="submit" value="Sign up">
+        </form>
+        <br>
       </div>
     </div>
     <!-- // [END headline] -->
 
     <!-- // [START section1] -->
     <div id="section1">
-      <h2>Smiles. Delivered.</h2>
-      <p>Anytime.  Anyplace.  When you need it, you got it.</p>
-      <ul>
-        <li>We aim to be the best</li>
-        <li>Never undersold</li>
-        <li>Never bettered</li>
-      </ul>
-      <video></video>
+      <div class="container">
+        <h2>What will I Learn?</h2>
+        <p>After completing this class, you'll have built a web application with a first-class mobile experience.</p>
+        <p>You'll understand what it takes to:</p>
+        <ul>
+          <li>build great web experiences on mobile devices</li>
+          <li>use the tools you need to test performance</li>
+          <li>apply your knowledge to your own projects in the future</li>
+        </ul>
+        <video controls poster="smiles.png">
+          <source src="smiles.webm" type="video/webm"></source>
+          <source src="smiles.mov" type="video/mov"></source>
+          <p>Sorry your browser doesn't support video. 
+             <a href="smiles.mov">Download the video</a>.
+          </p>
+        </video>
+        <br>
+      </div>
     </div>
     <!-- // [END section1] -->
 
     <!-- // [START section2] -->
     <div id="section2">
-      <h2>Pictures of happy people smiling</h2>
-      <p>Everyone loves happy people</p>
-      <div id="images">
-        <img>
-        <img>
-        <img>
-        <img>
+      <div class="container">
+        <h2>Who will teach me?</h2>
+        <p>The worlds leading mobile web developers.</p>
+        <div id="images">
+          <img src="chriswilson.png" alt="Chris Wilson Course Instructor">
+          <img src="peterlubbers.png" alt="Peter Lubbers Course Instructor">
+          <img src="seanbennett.jpg" alt="Sean Bennet Course Developer">
+        </div>
+        <br>
       </div>
     </div>
     <!-- // [END section2] -->
 
     <!-- // [START section3] -->
     <div id="section3">
-      <h2>Proof smiles are great</h2>
-      <p>Some pithy comment about why we are amazeballs</p>
-      <figure>
-        <table>
-          <thead>
-             <tr>
-               <td>Age Index</td>
-               <td>Receptive Quotient</td>
-               <td>Happiness</td>
-             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>1</td>
-              <td>4</td>
-            </tr>
-          </tbody>
-        </table>
-        <figcaption>Smiles == more happiness</figcaption>
-      </figure>
+      <div class="container">
+        <h2>Mobile. Why should I care?</h2>
+        <p></p>
+        <figure>
+          <table>
+            <thead>
+               <tr>
+                 <td>Age Index</td>
+                 <td>Receptive Quotient</td>
+                 <td>Happiness</td>
+               </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption></figcaption>
+        </figure>
+        <br>
+      </div>
     </div>
     <!-- // [END section3] -->
  
     <!-- // [START footer] -->
     <div id="footer">
-      <p>We always need a footer.</p>
+      <div class="container">
+        <p>We always need a footer.</p>
+      </div>
     </div>
     <!-- // [END footer] -->
   </body>
