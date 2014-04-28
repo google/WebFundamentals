@@ -24,7 +24,7 @@ Understanding the critical rendering path will also serve as a foundation for al
 
 ## Guides
 
-{% for guide in page.articles.critical-path-rendering %}
+{% for guide in page.articles.critical-rendering-path %}
 {% class %}
 ### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
 {{guide.description}}

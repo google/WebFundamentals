@@ -14,7 +14,7 @@ article:
   updated_on: 2014-01-05
   featured: true
   order: 5
-collection: critical-path-rendering
+collection: critical-rendering-path
 key-takeaways:
   measure-crp:
     - Navigation Timing provides high resolution timestamps for measuring CRP.

@@ -13,7 +13,7 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-05
   order: 4
-collection: critical-path-rendering
+collection: critical-rendering-path
 key-takeaways:
   adding-interactivity:
     - JavaScript can query and modify DOM and CSSOM
