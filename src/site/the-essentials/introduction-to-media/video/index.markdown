@@ -13,24 +13,24 @@ collection: introduction-to-media
 key-takeaways:
   add-a-video:
     - Use the video element to load, code, and play video in your site.
-    - Don't load the whole video if unnecessary -- specify a start and end time.
+    - Don't load the whole video if unnecessary &ndash; specify a start and end time.
     - Include a poster image so the user sees something meaningful right away.
     - Specify multiple file formats since not all browsers support the same format.
-    - Improve network performance -- specify each file source's type.
+    - Improve network performance &ndash; specify each file source's type.
   provide-alternatives:
     - Check which formats are supported.
     - Produce video in multiple formats to cover a range of mobile platforms.
     - Check which format was used.
   size-videos-correctly:
     - Avoid serving video that is too long, too large in frame size, or unnecessarily high in quality.
-    - Check video size -- frame size may be different from element size.
+    - Check video size &ndash; frame size may be different from element size.
     - Ensure videos don't overflow their containers.
   customize:
     - Mobile solutions need to consider device orientation.
     - Different platforms display video different.
     - Use Fullscreen API to control fullscreening of content.
   improve-accessibility:
-    - Focus on the user -- accessibility matters.
+    - Focus on the user &ndash; accessibility matters.
     - Add track element as a child of the video element.
     - Define captions in track file.
   handle-poor-connectivity:
@@ -81,7 +81,7 @@ Save bandwidth and make your site feel more responsive: use the Media Fragments 
 
 {% include modules/remember.liquid title="Remember" list=page.remember.specify-a-start-time %}
 
-You can also use the Media Fragments API to deliver multiple views on the same video -- like cue points in a DVD -- without having to encode and serve multiple files:
+You can also use the Media Fragments API to deliver multiple views on the same video &ndash; like cue points in a DVD &ndash; without having to encode and serve multiple files:
 
 {% include modules/remember.liquid title="Remember" list=page.remember.range-request %}
 
@@ -97,7 +97,7 @@ Add a poster attribute to the video element so that your users have an idea of t
 
 A poster can also be a fallback if the video `src` is broken or none of the video formats supplied are supported. The only downside to poster images is an additional file request, which consumes some bandwidth and requires rendering. For more information see [Image optimization](//docs.google.com/a/google.com/document/d/1EdBtvM_OIdmZlPhtOq_oLuQ4nGEq1dycOsN8A-KtExY/edit#heading=h.satr4xiyp2fp).
 
-Here's a side-by-side comparison of videos without and with a poster image -- we've made the poster image grayscale to prove it's not the video!
+Here's a side-by-side comparison of videos without and with a poster image &ndash; we've made the poster image grayscale to prove it's not the video!
 
 <p><img width="30%" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png" /></p>
 
@@ -309,7 +309,7 @@ Using the track element, captions appear like this:
 
 ### Add track element
 
-It's very easy to add captions to your video -- simply add a [track element](//www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
+It's very easy to add captions to your video &ndash; simply add a [track element](//www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
 
 {% include_code _code/track.html basic %}
 
@@ -425,7 +425,7 @@ Autoplay behavior is configurable in the Android WebView via the [WebSettings AP
 
 The `preload` attribute provides a hint to the browser as to how much information or content should be preloaded.
 
-* **none**: the user may not even watch the video -- don't preload anything
+* **none**: the user may not even watch the video &ndash; don't preload anything
 * **metadata**: metadata (duration, dimensions, text tracks) should be preloaded, but with minimal video.
 * **auto**: downloading the entire video right away is considered desirable.
 
