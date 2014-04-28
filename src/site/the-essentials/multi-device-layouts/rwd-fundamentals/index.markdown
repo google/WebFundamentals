@@ -40,28 +40,23 @@ remember:
 
 <!-- TODO[PETELE] add related items -->
 <!-- TODO[PETELE] add what's next -->
-<!-- TODO[PETELE] remove temp styles -->
-<!-- TODO[PETELE] fixed broken links to some samples -->
 
 <style type="text/css">
+  img, video, object {
+    max-width: 100%;
+  }
 
-  video {
+  img.center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  video.responsiveVideo {
     width: 100%;
   }
-
-  img.wide {
-    width: 100%;
-  }
-
-  img.tall {
-    max-height: 500px;
-  }
-
-  img.sxs {
-    width: 100%;
-  }
-
 </style>
+
 
 {% include modules/toc.liquid %}
 
@@ -71,7 +66,7 @@ be changing, so it's important that your site can adapt to any screen size,
 today or in the future.
 
 {% link_sample _code/weather.html %}
-  <video autoplay loop controls>
+  <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm" />
     <source src="videos/resize.mp4" type="video/mp4" />
   </video>
@@ -109,14 +104,14 @@ phone or a large desktop monitor.
 <div class="clear">
   <div class="g--half">
     {% link_sample _code/vp-no.html %} 
-      <img src="imgs/no-vp.png" class="sxs" alt="Page without a viewport set">
+      <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
       See example 
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp.html %}
-      <img src="imgs/vp.png" class="sxs" alt="Page with a viewport set">
+      <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
       See example 
     {% endlink_sample %}
   </div>
@@ -166,14 +161,14 @@ viewport on small screens.
 <div class="clear">
   <div class="g--half">
     {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-iph.png" class="sxs" alt="Page with a 344px fixed width element on an iPhone.">
+      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
       See example
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-n5.png" class="sxs" alt="Page with a 344px fixed width element on a Nexus 5.">
+      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
       See example
     {% endlink_sample %}
   </div>
@@ -267,8 +262,7 @@ Let's take a look an example:
 
 <figure>
   {% link_sample _code/media-queries.html %}
-    <img src="imgs/mq.png" class="wide" alt="Preview of a page using media queries to change properties as it is resized.">
-    See example
+    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
   {% endlink_sample %}
 </figure>
 
@@ -351,12 +345,9 @@ The first step is to make the forecast look good on a small screen.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-1.png" class="tall" alt="Preview of the weather forecast displayed on a small screen." />
-    <br>See example
+    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen." />
   {% endlink_sample %}
 </figure>
-
-[View full sample](weather-1.html)
 
 Next, resize the browser until there is too much white space between the
 elements and the forecast simply doesn't look as good.  The decision is somewhat
@@ -364,8 +355,7 @@ subjective, but above 600px is certainly too wide.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" class="wide" alt="Preview of the weather forecast as the page gets wider." />
-    <br>See example
+    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider." />
   {% endlink_sample %}
 </figure>
 
@@ -381,8 +371,7 @@ styles are placed in `weather-large.css`.
 
 <figure>
   {% link_sample _code/weather-2.html %}
-    <img src="imgs/weather-3.png" class="wide" alt="Preview of the weather forecast designed for a wider screen." />
-    See example
+    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen." />
   {% endlink_sample %}
 </figure>
 
@@ -403,11 +392,11 @@ icons a bit larger.
 
 <div class="clear">
   <div class="g--half">
-    <img src="imgs/weather-4-l.png" class="sxs" alt="Before adding minor breakpoints.">
+    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
   </div>
 
   <div class="g--half g--last">
-    <img src="imgs/weather-4-r.png" class="sxs" alt="After adding minor breakpoints.">
+    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
   </div>
 </div>
 
@@ -426,11 +415,11 @@ of a text block grows past about 10 words, a breakpoint should be considered.
 
 <div class="clear">
   <div class="g-wide--1 g-medium--half">
-    <img src="imgs/reading-ph.png" class="sxs"  alt="Before adding minor breakpoints.">
+    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Before adding minor breakpoints.">
   </div>
 
   <div class="g-wide--3 g-wide--last g-medium--half g--last">
-    <img src="imgs/reading-de.png" class="sxs" alt="After adding minor breakpoints.">
+    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="After adding minor breakpoints.">
   </div>
 </div>
 
@@ -438,8 +427,6 @@ Let's take a deeper look at the above blog post example.  On smaller screens,
 the Roboto font at 1em works perfectly giving 10 words per line, but larger
 screens will require a breakpoint. In this case, if the browser width is greater
 than 575px, the ideal content width is 550px.
-
-{% link_sample _code/reading.html %}View finished sample{% endlink_sample %}
 
 {% include_code _code/reading.html mqreading css %}
 
