@@ -17,7 +17,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/navdrawer-sample1.html"><img class="g-medium--full g-wide--full" src="images/navdrawer.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample1"><img class="g-medium--full g-wide--full" src="images/navdrawer.png"></a>
 
 <div style="clear: both;"></div>
 
