@@ -97,12 +97,6 @@ ol.list--variant {
 
 .centered-list {
   text-align: center;
-
-  p {
-    padding-bottom: $lineHeight;
-    @include medium { padding-bottom: 0;}
-  }
-
 }
 
 /*==========  FEATURED LIST  ==========*/
