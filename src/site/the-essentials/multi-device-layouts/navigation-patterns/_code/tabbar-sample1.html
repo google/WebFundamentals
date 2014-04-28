@@ -110,6 +110,17 @@
       }
     </script>
 
+    <script>
+      var tabBtns = document.querySelectorAll('.tab-bar > button');
+      for(var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', tabBarBtnClick, true);
+      }
+
+      function tabBarBtnClick() {
+        sampleCompleted('tabbar-sample1.html-tabbtnclick');
+      }
+    </script>
+
     <!-- // [TEMPLATE footer] -->
   </body>
 </html>

@@ -89,6 +89,15 @@
     </nav>
 
     <script>
+      var bottomBtns = document.querySelectorAll('.bottom-bar > button');
+
+      for(var i = 0; i < bottomBtns.length; i++) {
+        bottomBtns[i].addEventListener('click', bottomBarBtnClick, true);
+      }
+
+      function bottomBarBtnClick() {
+        sampleCompleted('appbar-navdrawer-bottombar-sample.html-bottombarbtnclick');
+      }
     </script>
 
     <!-- // [TEMPLATE footer] -->
