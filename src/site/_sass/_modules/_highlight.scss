@@ -65,9 +65,6 @@
       @include highlight-vertical-offset-override(-170px);
     }
 
-    .highlight-module--code & {
-      @include highlight-vertical-offset-override(-160px);
-    }
   }
 }
 

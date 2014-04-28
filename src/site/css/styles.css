@@ -1194,22 +1194,18 @@ body.debug:after {
     text-align: center;
     width: 30.3%;
   }
-  /* line 404, ../_sass/_utils.scss */
+  /* line 403, ../_sass/_utils.scss */
   .highlight-module--left .highlight-module__container:before {
     right: auto;
     left: 45px;
   }
-  /* line 427, ../_sass/_utils.scss */
+  /* line 426, ../_sass/_utils.scss */
   .highlight-module--learning .highlight-module__container:before {
     top: -80px;
   }
-  /* line 427, ../_sass/_utils.scss */
+  /* line 426, ../_sass/_utils.scss */
   .highlight-module--remember .highlight-module__container:before {
     top: -170px;
-  }
-  /* line 427, ../_sass/_utils.scss */
-  .highlight-module--code .highlight-module__container:before {
-    top: -160px;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
@@ -1218,13 +1214,13 @@ body.debug:after {
     width: 22.2%;
     font-size: 200px;
   }
-  /* line 413, ../_sass/_utils.scss */
+  /* line 412, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 450px;
   }
 }
 
-/* line 74, ../_sass/_modules/_highlight.scss */
+/* line 71, ../_sass/_modules/_highlight.scss */
 .highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1236,7 +1232,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 74, ../_sass/_modules/_highlight.scss */
+  /* line 71, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1248,7 +1244,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 74, ../_sass/_modules/_highlight.scss */
+  /* line 71, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1260,7 +1256,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 74, ../_sass/_modules/_highlight.scss */
+  /* line 71, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1272,7 +1268,7 @@ body.debug:after {
   }
 }
 
-/* line 85, ../_sass/_modules/_highlight.scss */
+/* line 82, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
   padding-top: 52px;
@@ -1280,20 +1276,20 @@ body.debug:after {
   margin-left: -26px;
   font-size: 13px;
 }
-/* line 92, ../_sass/_modules/_highlight.scss */
+/* line 89, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 99, ../_sass/_modules/_highlight.scss */
+/* line 96, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
 }
 
-/* line 107, ../_sass/_modules/_highlight.scss */
+/* line 104, ../_sass/_modules/_highlight.scss */
 .highlight-module__cta {
   display: block;
   font-size: 16px;
@@ -1304,7 +1300,7 @@ body.debug:after {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 @media only screen and (min-width: 800px) {
-  /* line 107, ../_sass/_modules/_highlight.scss */
+  /* line 104, ../_sass/_modules/_highlight.scss */
   .highlight-module__cta {
     font-size: 20px;
     font-weight: 300;
@@ -1316,7 +1312,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 114, ../_sass/_modules/_highlight.scss */
+  /* line 111, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1324,14 +1320,14 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 123, ../_sass/_modules/_highlight.scss */
+  /* line 120, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 131, ../_sass/_modules/_highlight.scss */
+  /* line 128, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
