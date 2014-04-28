@@ -76,15 +76,14 @@ the size and capabilities of the device.  For example, on a phone, users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
 
+
 ## Set the viewport
 
 Pages optimized for a variety of devices must include a meta viewport element in
 the head of the document.  A meta viewport tag gives the browser instructions on
 how to control the page's dimensions and scaling.
 
-{% highlight html %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% endhighlight %}
+{% include modules/takeaway.liquid list=page.key-takeaways.set-viewport %}
 
 In order to attempt to provide the best experience, mobile browsers will render
 the page at a desktop screen width (usually about 960px), and then try to make
@@ -92,6 +91,11 @@ the content look better by increasing font sizes and scaling the content to fit
 the screen.  For users, this means that font sizes may appear inconsistently and
 they have to double-tap or pinch-zoom in order to be able to see and interact
 with the content.
+
+{% highlight html %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endhighlight %}
+
 
 Using the meta viewport value `width=device-width` instructs the page to match
 the screen's width in device independent pixels. This allows the page to reflow
@@ -129,13 +133,13 @@ In addition to setting an `initial-scale`, you can also set the `minimum-scale`,
 can disable the user's ability to zoom the viewport, potentially causing
 accessibility issues.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.set-viewport %}
-
 ## Size content to the viewport
 
 On both desktop and mobile devices, users are used to scrolling websites
 vertically but not horizontally, and forcing the user to scroll horizontally or
 to zoom out in order to see the whole page results in a poor user experience.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.size-content-to-vp %}
 
 When developing a mobile site with a `meta viewport` tag, it's easy to
 accidentally create page content that doesn't quite fit within the specified
@@ -171,14 +175,17 @@ viewport on small screens.
   </div>
 </div>
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %}
-
 ## Use CSS media queries for responsiveness
 
 Media queries are simple filters that can be applied to CSS styles.  They make
 it easy to change styles based on the characteristics of the device rendering
 the content, including the display type, width, height, orientation and even
-resolution.  For example, you could place all styles necessary for printing
+resolution.  
+
+{% include modules/takeaway.liquid list=page.key-takeaways.media-queries %}
+
+
+For example, you could place all styles necessary for printing
 inside a print media query:
 
 {% highlight html %}
@@ -319,9 +326,6 @@ page.
   </div>
 </div>
 
-{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.media-queries %}
-
-
 ## How to choose breakpoints
 
 While it may be helpful to think about defining breakpoints based on device
@@ -329,6 +333,8 @@ classes, use caution.  Defining breakpoints based on specific devices, products,
 brand names or operating systems, that are in use today will result in a
 maintenance nightmare. Instead, the content itself should determine how the
 layout adjusts to its container.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.choose-breakpoints %}
 
 ### Pick major breakpoints by starting small, then working up
 
@@ -434,7 +440,6 @@ eliminating the pollen count from the weather forecast could be a serious issue
 for spring time allergy sufferers who need the information to determine if they
 can go outside or not.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.choose-breakpoints %}
 
 {% include modules/nextarticle.liquid %}
 
