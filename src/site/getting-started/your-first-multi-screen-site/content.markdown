@@ -177,6 +177,8 @@ this in the responsive design section.
 ### Related information
 {: .related-items--title}
 
+Discover the best practices for using images in your content
+
 *  [Using images effectively]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html)
 *  [Correct use of images in markup]({site.baseurl}}/the-essentials/introduction-to-media/images/index.html#images-in-markup)
 *  [Optimizing images 101]({{site.baseurl}}/the-essentials/optimizing-performance/optimizing-content-efficiency/index.html#image-compression-101)
