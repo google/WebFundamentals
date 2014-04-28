@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
 		connect: {
 			options: {
-				hostname: '',
+				hostname: 'localhost',
 				port: config.port
 			},
 			'destination-source': {

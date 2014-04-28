@@ -21,8 +21,13 @@
 
           {% include modules/breadcrumbs.liquid %}
 
-          <h1 class="editorial-header__title">{{page.title}}</h1>
+          <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
+          <h2 class="editorial-header__subtitle">{{page.title}}</h2>
+
           <p class="editorial-header__excerpt g-wide--pull-1">{{page.introduction}}</p>
+
+          {% include modules/lessons_toc.liquid %}
+
         </div>
       </div>
 

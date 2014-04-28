@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
 *
 * Main Stylesheet
@@ -1313,16 +1314,22 @@ body.debug:after {
 **/
 /* line 13, ../_sass/_modules/_editorial-header.scss */
 .editorial-header {
-  background: #f0f0f0;
-  padding-bottom: 52px;
   overflow: hidden;
 }
+/* line 16, ../_sass/_modules/_editorial-header.scss */
+.editorial-header .breadcrumbs {
+  color: #4285f4;
+}
+/* line 19, ../_sass/_modules/_editorial-header.scss */
+.editorial-header .breadcrumbs a {
+  color: #4285f4;
+}
 @media only screen and (min-width: 620px) {
-  /* line 19, ../_sass/_modules/_editorial-header.scss */
+  /* line 24, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container {
     position: relative;
   }
-  /* line 24, ../_sass/_modules/_editorial-header.scss */
+  /* line 29, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container:before {
     content: ">";
     display: block;
@@ -1335,9 +1342,83 @@ body.debug:after {
   }
 }
 
-/* line 39, ../_sass/_modules/_editorial-header.scss */
+/* line 44, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__excerpt {
-  margin-bottom: 52px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+}
+
+/* line 49, ../_sass/_modules/_editorial-header.scss */
+.editorial-header .tag {
+  padding-top: 52px;
+}
+
+/* line 53, ../_sass/_modules/_editorial-header.scss */
+.editorial-header__subtitle {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.2381em;
+  /* 52px */
+  padding-top: 0.6190em;
+  padding-bottom: 0;
+  padding-top: 0;
+  color: #4285f4;
+}
+@media only screen and (min-width: 800px) {
+  /* line 53, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header__subtitle {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1.1471em;
+    /* 78px */
+    padding-top: 0.3824em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 53, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header__subtitle {
+    padding-top: 0;
+    padding-bottom: 26px;
+  }
+}
+
+/* line 63, ../_sass/_modules/_editorial-header.scss */
+.editorial-header__toc {
+  margin-top: 26px;
+}
+/* line 66, ../_sass/_modules/_editorial-header.scss */
+.editorial-header__toc ol {
+  padding-top: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 66, ../_sass/_modules/_editorial-header.scss */
+  .editorial-header__toc ol {
+    padding-top: 0;
+  }
+}
+
+/* line 72, ../_sass/_modules/_editorial-header.scss */
+.editorial-header__toc-title {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 13px;
+  padding-bottom: 13px !important;
+  color: #4285f4;
+}
+/* line 79, ../_sass/_modules/_editorial-header.scss */
+.editorial-header__toc-title:before {
+  content: "☰";
+  display: inline-block;
+  padding-right: 10px;
+  color: #4285f4;
 }
 
 /**
@@ -1381,23 +1462,61 @@ body.debug:after {
 *
 * Related items
 *
-* Google Web Fundamentals
+* Google Web Essentials
 *
 * R/GA 2014
 * @author Pedro Duarte
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_modules/_related-items.scss */
-.related-items {
-  background-color: #404040;
-  color: #ffffff;
-  padding-bottom: 52px;
-  margin-top: 52px;
+/* line 14, ../_sass/_modules/_related-guides.scss */
+.related-guides__list .list--links {
+  padding-top: 0;
 }
-/* line 20, ../_sass/_modules/_related-items.scss */
-.related-items .list--links a {
-  color: #ffffff;
+/* line 18, ../_sass/_modules/_related-guides.scss */
+.related-guides__list a {
+  display: block;
+}
+
+/* line 23, ../_sass/_modules/_related-guides.scss */
+.related-guides__title {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.0000em;
+  /* 26px */
+  padding-top: 1.0000em;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+@media only screen and (min-width: 800px) {
+  /* line 23, ../_sass/_modules/_related-guides.scss */
+  .related-guides__title {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2381em;
+    /* 52px */
+    padding-top: 0.6190em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 23, ../_sass/_modules/_related-guides.scss */
+  .related-guides__title {
+    padding-top: 0;
+  }
+}
+
+/* line 29, ../_sass/_modules/_related-guides.scss */
+.related-guides__main-link {
+  text-transform: uppercase;
+}
+/* line 32, ../_sass/_modules/_related-guides.scss */
+.related-guides__main-link:before {
+  content: "#";
+  display: inline-block;
+  padding-right: 2px;
 }
 
 /**
@@ -1555,7 +1674,7 @@ body.debug:after {
 @media only screen and (max-width: 619px) {
   /* line 37, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__img {
-    padding-top: 60.8%;
+    padding-top: 63.2%;
     padding-bottom: 0;
     height: 0;
     overflow: hidden;
@@ -1665,24 +1784,78 @@ body.debug:after {
 /* line 5, ../_sass/_modules/_article-nav.scss */
 .article-nav-link {
   background: #f0f0f0;
-  padding: 26px 24px;
+  padding: 26px 32px;
   float: left;
   width: 50%;
   border-color: #ffffff;
   border-style: solid;
   border-width: 0;
+  position: relative;
+}
+/* line 16, ../_sass/_modules/_article-nav.scss */
+.article-nav-link:before {
+  position: absolute;
+  top: 31px;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 68px;
+  font-weight: 400;
 }
 
-/* line 16, ../_sass/_modules/_article-nav.scss */
+/* line 25, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev {
   text-align: right;
   border-right-width: 1px;
 }
+/* line 29, ../_sass/_modules/_article-nav.scss */
+.article-nav-link--prev:before {
+  content: "<";
+  left: 32px;
+}
 
-/* line 21, ../_sass/_modules/_article-nav.scss */
+/* line 35, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--next {
   border-left-width: 1px;
   background-color: #e0e0e0;
+}
+/* line 39, ../_sass/_modules/_article-nav.scss */
+.article-nav-link--next:before {
+  content: ">";
+  right: 32px;
+}
+
+/* line 45, ../_sass/_modules/_article-nav.scss */
+.article-nav-count {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
+  font-weight: 700;
+}
+@media only screen and (min-width: 800px) {
+  /* line 45, ../_sass/_modules/_article-nav.scss */
+  .article-nav-count {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 45, ../_sass/_modules/_article-nav.scss */
+  .article-nav-count {
+    font-weight: 400;
+  }
+}
+
+/* line 51, ../_sass/_modules/_article-nav.scss */
+.article-nav p {
+  padding: 0;
+  margin: 0;
 }
 
 /**
@@ -2200,8 +2373,25 @@ ol {
   list-style: none;
   margin: 0;
 }
+/* line 19, ../_sass/_components/_list.scss */
+ul li.current,
+ol li.current {
+  color: #737373;
+  pointer-events: none;
+  cursor: default;
+}
+/* line 23, ../_sass/_components/_list.scss */
+ul li.current a,
+ol li.current a {
+  color: #737373;
+}
+/* line 25, ../_sass/_components/_list.scss */
+ul li.current a:before,
+ol li.current a:before {
+  content: "# 0" counter(list) !important;
+}
 
-/* line 20, ../_sass/_components/_list.scss */
+/* line 32, ../_sass/_components/_list.scss */
 ul li {
   position: relative;
   padding-left: 16px;
@@ -2218,11 +2408,11 @@ ul li:before {
   line-height: 26px;
 }
 
-/* line 26, ../_sass/_components/_list.scss */
+/* line 38, ../_sass/_components/_list.scss */
 ol {
   counter-reset: list;
 }
-/* line 28, ../_sass/_components/_list.scss */
+/* line 40, ../_sass/_components/_list.scss */
 ol > li {
   position: relative;
   padding-left: 39px;
@@ -2239,12 +2429,12 @@ ol > li:before {
   left: 0;
 }
 
-/* line 35, ../_sass/_components/_list.scss */
+/* line 47, ../_sass/_components/_list.scss */
 ul ol {
   padding-top: 0;
 }
 
-/* line 39, ../_sass/_components/_list.scss */
+/* line 51, ../_sass/_components/_list.scss */
 ol ul {
   padding-top: 0;
 }
@@ -2262,11 +2452,11 @@ ol ul {
 }
 
 /*==========  LIST LINKS  ==========*/
-/* line 52, ../_sass/_components/_list.scss */
+/* line 63, ../_sass/_components/_list.scss */
 ul.list--links li:before {
   display: none;
 }
-/* line 55, ../_sass/_components/_list.scss */
+/* line 66, ../_sass/_components/_list.scss */
 ul.list--links a {
   font-weight: 400;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2284,11 +2474,11 @@ ul.list--links a:before {
   line-height: 26px;
 }
 
-/* line 65, ../_sass/_components/_list.scss */
+/* line 76, ../_sass/_components/_list.scss */
 ol.list--links li:before {
   display: none;
 }
-/* line 69, ../_sass/_components/_list.scss */
+/* line 80, ../_sass/_components/_list.scss */
 ol.list--links li a {
   display: block;
 }
@@ -2304,69 +2494,76 @@ ol.list--links li a:before {
   left: 0;
 }
 
+/* line 90, ../_sass/_components/_list.scss */
+ol.list--variant li a:before {
+  content: "> 0" counter(list);
+}
+
 /*==========  CENTERED LIST  ==========*/
-/* line 80, ../_sass/_components/_list.scss */
+/* line 98, ../_sass/_components/_list.scss */
 .centered-list {
   text-align: center;
 }
-/* line 83, ../_sass/_components/_list.scss */
+/* line 101, ../_sass/_components/_list.scss */
 .centered-list p {
   padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 83, ../_sass/_components/_list.scss */
+  /* line 101, ../_sass/_components/_list.scss */
   .centered-list p {
     padding-bottom: 0;
   }
 }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 92, ../_sass/_components/_list.scss */
+/* line 110, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-/* line 97, ../_sass/_components/_list.scss */
+/* line 115, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
-  min-height: 338px;
   padding-top: 26px;
   padding-bottom: 26px;
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 97, ../_sass/_components/_list.scss */
+  /* line 115, ../_sass/_components/_list.scss */
   .featured-list__item {
+    min-height: 338px;
     padding: 52px 32px;
   }
 }
-/* line 110, ../_sass/_components/_list.scss */
+/* line 128, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
-/* line 114, ../_sass/_components/_list.scss */
+/* line 132, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 119, ../_sass/_components/_list.scss */
+/* line 137, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
+  display: none;
   position: relative;
   padding-top: 26px;
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 119, ../_sass/_components/_list.scss */
+  /* line 137, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
+    display: block;
     padding-top: 0;
     margin: 0;
   }
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 130, ../_sass/_components/_list.scss */
+  /* line 150, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2376,14 +2573,14 @@ ol.list--links li a:before {
     width: 100%;
   }
 }
-/* line 141, ../_sass/_components/_list.scss */
+/* line 161, ../_sass/_components/_list.scss */
 .featured-list__img img {
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 141, ../_sass/_components/_list.scss */
+  /* line 161, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2394,13 +2591,40 @@ ol.list--links li a:before {
   }
 }
 
+/*==========  RELATED GUIDES LIST  ==========*/
+/* line 178, ../_sass/_components/_list.scss */
+.related-guides-list {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  padding-top: 0;
+}
+/* line 182, ../_sass/_components/_list.scss */
+.related-guides-list p {
+  padding-top: 0;
+}
+/* line 186, ../_sass/_components/_list.scss */
+.related-guides-list .tag {
+  padding-top: 0;
+}
+/* line 190, ../_sass/_components/_list.scss */
+.related-guides-list li {
+  padding-top: 26px;
+  padding-bottom: 25px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 190, ../_sass/_components/_list.scss */
+  .related-guides-list li {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 /*==========  LIST RESET  ==========*/
-/* line 160, ../_sass/_components/_list.scss */
+/* line 204, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 164, ../_sass/_components/_list.scss */
-.list--reset li a:before, .list--reset li:before {
+/* line 209, ../_sass/_components/_list.scss */
+.list--reset.list--links a:before, .list--reset li:before {
   display: none !important;
 }
 
@@ -2683,7 +2907,7 @@ td:last-child:after {
   padding-top: 2.0000em;
   padding-bottom: 0;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /**
@@ -2716,67 +2940,6 @@ td:last-child:after {
 
 /**
 *
-* Column list
-*
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
-**/
-@media only screen and (min-width: 800px) {
-  /* line 13, ../_sass/_components/_column-list.scss */
-  .columns-list-wrapper {
-    margin-right: 30.3%;
-  }
-}
-
-/* line 20, ../_sass/_components/_column-list.scss */
-.list--columns {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 25px;
-  margin-bottom: 1px;
-}
-@media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_components/_column-list.scss */
-  .list--columns {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
-    column-count: 2;
-    -webkit-column-rule: 0 none transparent;
-    -moz-column-rule: 0 none transparent;
-    -ms-column-rule: 0 none transparent;
-    column-rule: 0 none transparent;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    -ms-column-gap: 0;
-    column-gap: 0;
-  }
-}
-/* line 32, ../_sass/_components/_column-list.scss */
-.list--columns li, .list--columns .columns-list-item {
-  font-size: 13px;
-  line-height: 2.0000em;
-  /* 26px */
-  padding-top: 2.0000em;
-  padding-bottom: 0;
-  padding: 0;
-}
-/* line 37, ../_sass/_components/_column-list.scss */
-.list--columns a {
-  display: block;
-  position: relative;
-  padding-left: 39px;
-}
-/* line 42, ../_sass/_components/_column-list.scss */
-.list--columns a:before {
-  line-height: 26px;
-}
-
-/**
-*
 * Articles list
 *
 * Google Web Fundamentals
@@ -2788,10 +2951,14 @@ td:last-child:after {
 **/
 /* line 13, ../_sass/_components/_articles-list.scss */
 .articles-list__item {
-  padding-bottom: 51px;
+  padding-bottom: 52px;
   padding-left: 0;
 }
-/* line 18, ../_sass/_components/_articles-list.scss */
+/* line 16, ../_sass/_components/_articles-list.scss */
+.articles-list__item:last-child {
+  padding-bottom: 51px;
+}
+/* line 19, ../_sass/_components/_articles-list.scss */
 .articles-list__item:before {
   content: "";
   display: block;
@@ -2803,27 +2970,31 @@ td:last-child:after {
   padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 18, ../_sass/_components/_articles-list.scss */
+  /* line 19, ../_sass/_components/_articles-list.scss */
   .articles-list__item:before {
     padding-top: 26px;
   }
 }
-/* line 33, ../_sass/_components/_articles-list.scss */
+/* line 35, ../_sass/_components/_articles-list.scss */
+.articles-list__item h3 a:hover {
+  text-decoration: none;
+}
+/* line 40, ../_sass/_components/_articles-list.scss */
 .articles-list__item p {
   margin-top: 26px;
   margin-bottom: 26px;
 }
-/* line 38, ../_sass/_components/_articles-list.scss */
+/* line 45, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 38, ../_sass/_components/_articles-list.scss */
+  /* line 45, ../_sass/_components/_articles-list.scss */
   .articles-list__item:first-child {
     padding-top: 26px;
   }
 }
-/* line 45, ../_sass/_components/_articles-list.scss */
+/* line 52, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child:before {
   display: none;
 }
@@ -3207,4 +3378,23 @@ td:last-child:after {
 /* line 106, ../_sass/_helper.scss */
 .centered {
   text-align: center;
+}
+
+/*==========  TAG  ==========*/
+/* line 112, ../_sass/_helper.scss */
+.tag {
+  font-size: 13px;
+  line-height: 2.0000em;
+  /* 26px */
+  padding-top: 2.0000em;
+  padding-bottom: 0;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+}
+/* line 119, ../_sass/_helper.scss */
+.tag:before {
+  content: "# ";
+  display: inline-block;
 }

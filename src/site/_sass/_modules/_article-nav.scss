@@ -4,21 +4,51 @@
 
 .article-nav-link {
   background: $colorGrayBackground;
-  padding: $lineHeight $lineHeight - 2;
+  padding: $lineHeight 32px;
   // color: #ffffff;
   float: left;
   width: 50%;
   border-color: #ffffff;
   border-style: solid;
   border-width: 0;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    top: 31px;
+    font-family: $fontHighlight;
+    font-size: $fontXXLarge;
+    font-weight: 400;
+  }
 }
 
 .article-nav-link--prev {
   text-align: right;
   border-right-width: 1px;
+
+  &:before {
+    content: "<";
+    left: 32px;
+  }
 }
 
 .article-nav-link--next {
   border-left-width: 1px;
   background-color: $colorGrayKeyline;
+
+  &:before {
+    content: ">";
+    right: 32px;
+  }
+}
+
+.article-nav-count {
+  @include type--large;
+  font-weight: 700;
+  @include medium {font-weight: 400;}
+}
+
+.article-nav p {
+  padding: 0;
+  margin: 0;
 }
