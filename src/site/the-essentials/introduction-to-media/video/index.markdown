@@ -44,17 +44,17 @@ remember:
     - Make sure Range Requests are supported by your server. Range Requests are enabled by
       default on most servers, but some hosting services may turn them off.
   multiple-formats:
-    - MP4 and WebM are <a href="//en.wikipedia.org/wiki/Container_formats" title="Wikipedia article about media file container formats">container formats</a>. MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
-      Check out <a href="//www.xiph.org/video/vid1.shtml" title="Monty Montgomery's highly entertaining and informative video guide to digital media">A Digital Media Primer for Geeks</a> to find out more about how video and audio work on the web.
+    - MP4 and WebM are <a href='//en.wikipedia.org/wiki/Container_formats' title='Wikipedia article about media file container formats'>container formats</a>. MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
+      Check out <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital media'>A Digital Media Primer for Geeks</a> to find out more about how video and audio work on the web.
   dont-overflow:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
   compare-formats:
-    - "Compare the responsive sample: <a href="//simpl.info/yt" title="Demo of YouTube video with responsive sizing">simpl.info/yt</a> to the unresponsive sample: <a href="//simpl.info/unyt" title="Demo of YouTube video without responsive sizing">simpl.info/unyt</a>."
+    - "Compare the responsive sample at <a href='//simpl.info/yt' title='Demo of YouTube video with responsive sizing'>simpl.info/yt</a> to the unresponsive version: <a href='//simpl.info/unyt' title='Demo of YouTube video without responsive sizing'>simpl.info/unyt</a>."
   accessibility-matters:
-    - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers on desktop (except Firefox)](//caniuse.com/track). There are several polyfills available too. We recommend <a href="//www.delphiki.com/html5/playr/" title="Playr track element polyfill">Playr</a> or <a href="//captionatorjs.com/" title="Captionator track">Captionator</a>.
+    - The track element is [supported on Chrome for Android, iOS Safari, and all current browsers on desktop (except Firefox)](//caniuse.com/track). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
-    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with support planned for <a href="//wiki.mozilla.org/Platform/MediaSourceExtensions" title="Firefox Media Source Extensions implementation timeline">Firefox</a>.
+    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with support planned for <a href='//wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
 ---
 
 {% wrap content%}
