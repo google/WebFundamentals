@@ -25,6 +25,8 @@ One expectation users will make when they land on your site is that your site's 
 
 Traditionally the web has used page headers for this. On mobile devices use the App Bar.
 
+{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.app-bar %}
+
 The App Bar consists of three elements.
 
 - Your sites logo
@@ -51,11 +53,9 @@ The top left corner is perceived by the user as where the most important element
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html"><img class="g--half" src="images/appbar-alt-1.png"></a>
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-sample4.html"><img class="g--half g--last" src="images/appbar-alt-2.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample.html"><img class="g--half g--last" src="images/appbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.app-bar %}
 
 {% include modules/nextarticle.liquid %}
 
