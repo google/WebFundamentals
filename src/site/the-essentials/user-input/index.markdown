@@ -2,7 +2,7 @@
 layout: section
 title: "User Input"
 description: "Use our guides to learn how to create compelling experiences that users will love to use."
-introduction: "How a user interacts with your site or app can often be make or break for the success of your project.  For example if a user is on a touch device and can't interact with it then they will not use your experience. Use our guides to learn how to create compelling experiences that users will love to use."
+introduction: "How a user interacts with your site or app can often be make or break for the success of your project. Use our guides to learn how to create compelling experiences that users will love to use."
 snippet: "<a href='http://en.wikipedia.org/wiki/KISS_principle'>KISS</a>. Touch, tap, click, and submit."
 article:
   written_on: 2014-01-01
