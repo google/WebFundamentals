@@ -3243,8 +3243,8 @@ td:last-child:after {
 
 @font-face {
   font-family: "icons";
-  src: url("../icons/icons-310d22c39010cf86dab25774d69db1c8.eot");
-  src: url("../icons/icons-310d22c39010cf86dab25774d69db1c8.eot?#iefix") format("embedded-opentype"), url("../icons/icons-310d22c39010cf86dab25774d69db1c8.woff") format("woff"), url("../icons/icons-310d22c39010cf86dab25774d69db1c8.ttf") format("truetype"), url("../icons/icons-310d22c39010cf86dab25774d69db1c8.svg?#icons") format("svg");
+  src: url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.eot");
+  src: url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.eot?#iefix") format("embedded-opentype"), url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.woff") format("woff"), url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.ttf") format("truetype"), url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3286,23 +3286,43 @@ td:last-child:after {
 }
 
 /* line 53, ../_sass/_components/_icons.scss */
-.icon-minus:before {
+.icon-media:before {
   content: "\e005";
 }
 
 /* line 58, ../_sass/_components/_icons.scss */
-.icon-navigation-cheveron:before {
+.icon-minus:before {
   content: "\e006";
 }
 
 /* line 63, ../_sass/_components/_icons.scss */
-.icon-plus:before {
+.icon-multi-screen-layout:before {
   content: "\e007";
 }
 
 /* line 68, ../_sass/_components/_icons.scss */
-.icon-star:before {
+.icon-navigation-cheveron:before {
   content: "\e008";
+}
+
+/* line 73, ../_sass/_components/_icons.scss */
+.icon-performance:before {
+  content: "\e009";
+}
+
+/* line 78, ../_sass/_components/_icons.scss */
+.icon-plus:before {
+  content: "\e00a";
+}
+
+/* line 83, ../_sass/_components/_icons.scss */
+.icon-star:before {
+  content: "\e00b";
+}
+
+/* line 88, ../_sass/_components/_icons.scss */
+.icon-user-input:before {
+  content: "\e00c";
 }
 
 /**
