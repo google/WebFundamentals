@@ -98,5 +98,17 @@
       </div>
     </div>
     <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDFundamentals-Weather2");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>
