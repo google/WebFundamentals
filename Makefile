@@ -25,6 +25,10 @@ server:
 devsite:
 	cd ./src/site && jekyll build $(param1)	--config _config-devsite.yml
 
+#Image squisher task.
+imsq:
+	cd ./src/site && find . -iname *.png | xargs -L 1 /home/build/static/projects/webgroup/imsq
+
 optimize:
 	@find . -iname *.png | xargs -L 1 optipng -o7
 
