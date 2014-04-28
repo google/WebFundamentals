@@ -141,7 +141,11 @@
 
       .promote-layer {
         /*
-        This is a trick to improve performance on newer versions of Chrome
+        This may promote the layer to a composited
+        layer.
+
+        Replace with will-change when available
+
         #perfmatters
         */
         -webkit-backface-visibility: hidden;

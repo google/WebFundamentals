@@ -112,6 +112,8 @@
 
         -webkit-transition: border 300ms ease-in,background 300ms ease-in;
         transition: border 300ms ease-in,background 300ms ease-in;
+
+        -webkit-tap-highlight-color: transparent;
       }
 
       .app-bar button img {
@@ -259,6 +261,27 @@
 
           margin-top: 130px;
         }
+
+        .bottom-bar {
+          display: -ms-inline-flexbox;
+          display: -webkit-inline-flex;
+          display: inline-flex;
+          
+          width: auto;
+          height: auto;
+
+          -ms-flex-direction: column;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+
+          position: relative;
+
+          float: left;
+
+          margin-top: 16px;
+
+          background-color: rgba(0,0,0,0.6);
+        }
       }
 
       .navdrawer-container {
@@ -279,8 +302,6 @@
       }
 
       .navdrawer-container.open {
-        background-color: rgba(0,0,0,0.5);
-
         pointer-events: auto;
       }
 
@@ -305,6 +326,22 @@
         transform: translate(-250px,0);
       }
 
+      .navdrawer-bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+
+        background-color: black;
+
+        /** Unfortunately this is the best way
+        to get no paints in Chrome **/
+        opacity: 0.0000001;
+      }
+
+      .navdrawer-bg.open {
+        opacity: 0.5;
+      }
+
       .navdrawer-container.open ul {
         -webkit-transform: translate(0,0);
         transform: translate(0,0);
@@ -313,6 +350,11 @@
       .app-bar, .navdrawer-container ul {
         -webkit-transition: -webkit-transform 0.3s ease-out;
         transition: transform 0.3s ease-out;
+      }
+
+      .navdrawer-bg {
+        -webkit-transition: opacity 0.3s ease-out;
+        transition: opacity 0.3s ease-out;
       }
 
       .navdrawer-container ul li a {
@@ -350,31 +392,51 @@
           
           margin-top: 130px;
 
-          -webkit-transform: none;
-          tranform: none;
-
-          -webkit-transition: none;
-          transition: none;
+          pointer-events: auto;
         }
         .navdrawer-container ul {
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
           
+          width: 100%;
+          height: auto;
+
           -ms-flex-direction: row;
           -webkit-flex-direction: row;
           flex-direction: row;
+
+          position: relative;
+
+          -webkit-transform: none;
+          tranform: none;
+
+          -webkit-transition: none;
+          transition: none;
         }
         
         .navdrawer-container ul li {
           border: none;
         }
       }
+
+      .promote-layer {
+        /*
+        This may promote the layer to a composited
+        layer.
+
+        Replace with will-change when available
+
+        #perfmatters
+        */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
     </style>
   </head>
 
   <body>
-    <header class="app-bar">
+    <header class="app-bar promote-layer">
       <button class="menu">
         <img class="menu-icon" src="./hamburger.png" />
         <img class="close-icon" src="./close-icon-light.png" />
@@ -387,7 +449,7 @@
     </header>
   
     <nav class="navdrawer-container">
-      <ul>
+      <ul class="promote-layer">
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
         <li><a href="#">Item 3</a></li>
@@ -395,6 +457,8 @@
       </ul>
     </nav>
     
+    <div class="navdrawer-bg promote-layer"></div>
+
     <section class="main-content">
     </section>
 
@@ -406,6 +470,7 @@
     <script>
       var navdrawerContainer = document.querySelector('.navdrawer-container');
       var appbarElement = document.querySelector('.app-bar');
+      var darkbgElement = document.querySelector('.navdrawer-bg');
 
       var menuBtn = document.querySelector('.menu');
       menuBtn.addEventListener('click', function() {
@@ -413,9 +478,11 @@
         if(isOpen) {
           appbarElement.classList.remove('open');
           navdrawerContainer.classList.remove('open');
+          darkbgElement.classList.remove('open');
         } else {
           appbarElement.classList.add('open');
           navdrawerContainer.classList.add('open');
+          darkbgElement.classList.add('open');
         }
       }, true);
     </script>
