@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Navigation Drawer"
-description: "For sites with a larger number of sections and subsections the Navigation Drawer is a much better fit. It can be a scrollable off-canvas element to your site as well as be a common place for global state."
+description: "<img class=\"g-medium--full g-wide--full\" src=\"navigationdrawer/images/navdrawer.png\">For sites with a larger number of sections and subsections the Navigation Drawer is a much better fit. It can be a scrollable off-canvas element to your site as well as be a common place for global state."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
