@@ -460,7 +460,7 @@ The `preload` attribute has different effects on different platforms. For exampl
 </tr>
 <tr>
     <td>buffered</td>
-    <td>Information about how much of the video has been buffered and is ready to play (see [demo](//people.mozilla.org/~cpearce/buffered-demo.html)).</td>
+    <td>Information about how much of the video has been buffered and is ready to play (see <a href="//people.mozilla.org/~cpearce/buffered-demo.html" title="Demo displaying amount of buffered video in a canvas element">demo</a>).</td>
 </tr>
 <tr>
     <td>currentSrc</td>
