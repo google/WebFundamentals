@@ -1,8 +1,9 @@
 toc:
 - title: "Web Fundamentals"
   path: /
+  home: true
 - title: "Getting Started"
-  path: /getting-started/
+  path: /getting-started/multi-screen/index.html
   section:
     - title: "Create Your First Multi-screen Site"
       path: /getting-started/mulit-screen/

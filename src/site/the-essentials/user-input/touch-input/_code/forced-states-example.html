@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Essential: Forced States Example</title>
+  <title>Forced Button States</title>
   
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
   <style>
   	body {
-	  background-color: #e74c3c;
+	  background-color: #d3e2fc;
 	  
 	  margin: 32px;
 	  
@@ -41,7 +41,7 @@
 	  text-align:center;
 	  text-decoration: none;
 
-	  background-color: #c0392b;
+	  background-color: #4285f4;
 
 	  /* background-image: none; used to surpress changes in style on FF OS */
 	  background-image: none;
@@ -52,18 +52,18 @@
 	}
 
 	button.hover {
-	  background-color: #B32C1E;
+	  background-color: #296CDB;
 	}
 
 	button.focus {
-	  background-color: #8D0600;
+	  background-color: #0F52C1;
 
 	  /* The outline parameter surpresses the border color / outline when focused */
 	  outline: 0;
 	}
 
 	button.active {
-	  background-color: #9A1305;
+	  background-color: #0039A8;
 	}
   </style>
 </head>
@@ -72,8 +72,8 @@
   
   <button class="hover" tabindex="2">Hover State</button>
   
-  <button class="active" tabindex="3">Active State</button>
-  
   <button class="focus" tabindex="4">Focus State</button>
+
+  <button class="active" tabindex="3">Active State</button>
 </body>
 </html>

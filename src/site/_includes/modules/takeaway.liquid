@@ -12,5 +12,8 @@
 {% if include.character %}
 {% assign character = include.character %}
 {% endif %}
+{% if include.position %}
+{% assign position = include.position %}
+{% endif %}
 
 {% include modules/highlight.liquid title=include.title list=include.list position=position type=type priority="large" character=character %}

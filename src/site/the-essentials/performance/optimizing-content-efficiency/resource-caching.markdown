@@ -72,8 +72,7 @@ key-takeaways:
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
+{% include modules/toc.liquid %}
 
 Fetching a resource over the network is both slow and expensive: large resources 
 require many roundtrips between the client and server, which delays when the 

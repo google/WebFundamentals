@@ -48,6 +48,9 @@ module Jekyll
       if @lang.nil?
         @lang = "html"
       end
+      if @@comment_formats[@lang].nil?
+        Jekyll.logger.warn "Include_code doesn't know #{@lang}"
+      end
       @character = '/'
     end
 

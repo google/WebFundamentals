@@ -179,11 +179,11 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * Address margin not present in IE 8/9 and Safari.
+ * Remove margin
  */
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 /**

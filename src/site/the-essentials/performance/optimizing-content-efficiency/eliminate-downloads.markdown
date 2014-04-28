@@ -24,9 +24,7 @@ key-takeaways:
 
 {% wrap content%}
 
-* Table of Contents
-{:toc}
-
+{% include modules/toc.liquid %}
 
 The fastest and best optimized resource is a resource not sent. Of course, this 
 may seem like an obvious statement, but in practice it is all too often 

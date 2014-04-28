@@ -8,8 +8,8 @@ baseurl: http://localhost:8081
 url: http://localhost:8081
 highlighter: pygments
 pygments: false
+spotlights: false
 include_open_html: true
-generate_sample_jshtml: true
 custom:
 kramdown:
   toc_levels: "2"

@@ -2,7 +2,7 @@
 *
 * Main Navigation
 *
-* Google Web Essentials
+* Google Web Fundamentals
 *
 * R/GA 2014
 * @author Pedro Duarte
@@ -23,6 +23,16 @@
   margin: 0;
   padding: 0;
 
+  @include small-only {
+    .js & {
+      display: none;
+    }
+
+    .js &.nav-is-opened {
+      display: block;
+    }
+  }
+
   @include medium {
     text-align: center;
     @include container;
@@ -37,9 +47,15 @@
   position: static;
   padding-left: 0;
 
-  &.main-nav__item--logo {
-    @include small-only {
+
+  @include small-only {
+    &.main-nav__item--home {
       display: none;
+    }
+
+    &.subnav-is-opened,
+    .no-touch &:hover {
+      background: #ffffff;
     }
   }
 
@@ -94,12 +110,6 @@
   &:hover {
     text-decoration: none;
   }
-
-  .main-nav__item--logo & {
-    font-size: 60px;
-    padding-top: $lineHeight;
-    line-height: $lineHeight;
-  }
 }
 
 .main-nav__list--child {
@@ -138,6 +148,8 @@
 
 
 .main-nav__secondary-nav {
+  display: none;
+
   @include medium {
     background-color: #ffffff;
     position: absolute;
@@ -147,11 +159,12 @@
     padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
     color: $colorText;
 
-    display: none;
 
-    li:hover & {
-      display: block;
-    }
+  }
+
+  .no-touch li:hover &,
+  .subnav-is-opened & {
+    display: block;
   }
 }
 
@@ -182,4 +195,22 @@
 
 .main-nav__featured-text {
   padding-top: 0;
+}
+
+
+.main-nav__btn {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-top: -($lineHeight + $lineHeight/2);
+
+  background: transparent;
+  color: #ffffff;
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+
+  @include medium {
+    display: none;
+  }
 }
