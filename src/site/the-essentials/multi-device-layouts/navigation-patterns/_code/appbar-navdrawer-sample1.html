@@ -28,7 +28,7 @@
         font-weight: 300;
         
         background-color: #C9DAF8;
-        
+
         box-sizing: border-box;
 
         overflow: hidden;
@@ -141,7 +141,11 @@
 
       .promote-layer {
         /*
-        This is a trick to improve performance on newer versions of Chrome
+        This may promote the layer to a composited
+        layer.
+
+        Replace with will-change when available
+
         #perfmatters
         */
         -webkit-backface-visibility: hidden;
@@ -291,6 +295,7 @@
           -webkit-transition: none;
           transition: none;
         }
+        
         .navdrawer-container ul {
           display: -ms-flexbox;
           display: -webkit-flex;
