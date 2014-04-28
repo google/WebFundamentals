@@ -6,7 +6,7 @@
     {% include head.liquid %}
   </head>
 
-  <body class="{{ page.class }} theme--{{page.id}}">
+  <body class="{{ page.class }} page--section theme--{{page.id}}">
     {% injectdata project _project.yaml %}
     {% injectdata content _book.yaml %}
 
@@ -14,34 +14,38 @@
 
     {% include header.liquid %}
 
-    <div class="page-header">
-      <div class="container">
+    <div class="article-container">
 
-        {% include modules/breadcrumbs.liquid %}
+      <div class="page-header">
+        <div class="container">
 
-        <h3 class="xxlarge text-divider themed">{{ page.title }}</h3>
-        <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
+          {% include modules/breadcrumbs.liquid %}
+
+          <h3 class="xxlarge text-divider themed">{{ page.title }}</h3>
+          <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
+        </div>
       </div>
-    </div>
 
-    {{ content }}
+      {{ content }}
 
-    <div class="articles-section">
-      <div class="container">
-        <p class="articles-count">{{page.articles.[page.id].size}} guides</p>
-        <ol class="articles-list">
+      <div class="articles-section">
+        <div class="container">
+          <p class="articles-count">{{page.articles.[page.id].size}} guides</p>
+          <ol class="articles-list">
 
-          {% for guide in page.articles.[page.id] %}
-          <li class="articles-list__item">
-            <h3 class="xxlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
-            <p class="g-wide--push-1 g-wide--pull-1">{{guide.description}}</p>
-            <a href="#" class="cta--primary">See all lessons</a>
-          </li>
-          {% endfor %}
+            {% for guide in page.articles.[page.id] %}
+            <li class="articles-list__item">
+              <h3 class="xxlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
+              <p class="g-wide--push-1 g-wide--pull-1">{{guide.description}}</p>
+              <a href="#" class="cta--primary">See all lessons</a>
+            </li>
+            {% endfor %}
 
-        </ol>
+          </ol>
+        </div>
       </div>
-    </div>
+
+    </div> <!-- /.article-container -->
 
     {% include footer.liquid %}
 

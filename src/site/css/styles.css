@@ -2904,24 +2904,41 @@ td:last-child:after {
   color: #7b5294;
 }
 
-/* line 28, ../_sass/_themed.scss */
+/* line 32, ../_sass/_themed.scss */
 .article--multi-device-layouts .article-container h1, .article--multi-device-layouts
 .article-container h2 {
   color: #297ea9;
 }
-/* line 30, ../_sass/_themed.scss */
+/* line 34, ../_sass/_themed.scss */
 .article--introduction-to-media .article-container h1, .article--introduction-to-media
 .article-container h2 {
   color: #cf423a;
 }
-/* line 32, ../_sass/_themed.scss */
+/* line 36, ../_sass/_themed.scss */
 .article--user-input .article-container h1, .article--user-input
 .article-container h2 {
   color: #2c8566;
 }
-/* line 34, ../_sass/_themed.scss */
+/* line 38, ../_sass/_themed.scss */
 .article--performance .article-container h1, .article--performance
 .article-container h2 {
+  color: #7b5294;
+}
+
+/* line 46, ../_sass/_themed.scss */
+.nav-theme--multi-device-layouts .themed {
+  color: #297ea9;
+}
+/* line 48, ../_sass/_themed.scss */
+.nav-theme--introduction-to-media .themed {
+  color: #cf423a;
+}
+/* line 50, ../_sass/_themed.scss */
+.nav-theme--user-input .themed {
+  color: #2c8566;
+}
+/* line 52, ../_sass/_themed.scss */
+.nav-theme--performance .themed {
   color: #7b5294;
 }
 
