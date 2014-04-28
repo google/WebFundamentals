@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Optimizing Performance"
-description: "Performance Matters (#perfmatters). Deliver your content as quickly as possible to the user. Once they're in your app, you make your page's interaction and rendering as smooth as possible."
+description: "Performance Matters (#perfmatters). Deliver your content to users as quickly as possible. Once they're in your app, you make page interaction and rendering as smooth as possible."
 introduction: "Research shows that users' flow is interrupted if pages take longer than one second to load. To deliver the best experience and keep the visitor engaged, focus on rendering some content, known as the above-the-fold content, to users in one second (or less) while the rest of the page continues to load and render in the background."
 snippet: "Show content in 1 second or less. #perfmatters"
 article:
