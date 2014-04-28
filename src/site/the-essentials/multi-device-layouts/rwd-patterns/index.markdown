@@ -10,8 +10,8 @@ introduction: "Responsive web design patterns are quickly evolving, but there
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-04-30
+  updated_on: 2014-04-30
   order: 2
 collection: multi-device-layouts
 ---
