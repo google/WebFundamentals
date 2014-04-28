@@ -23,6 +23,10 @@ key-takeaways:
 
 The tab bar can be used to quickly switch between the sections of your site.
 
+It's only appropriate for sites with a relatively small structure, but users find it easy to glance at where they are and where they can within your site.
+
+{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.tabs %}
+
 Limit the total number of tabs to five or less, otherwise each icon and tap target becomes too small and users will struggle to hit the right tab.
 
 Position your tabs above or below your main content, this is a trade off between what feels best to use and best suites your design.
@@ -33,8 +37,6 @@ One advantage to using tabs is that it gives the user a consistent place to go f
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/tabbar-sample3.html"><img class="g--half g--last" src="images/tabbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.tabs %}
 
 {% include modules/nextarticle.liquid %}
 
