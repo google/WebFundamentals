@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
 *
 * Main Stylesheet
@@ -1812,12 +1811,23 @@ body.debug:after {
   }
 }
 
-/* line 1, ../_sass/_modules/_article-nav.scss */
+/**
+*
+* Article nav
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_article-nav.scss */
 .article-nav {
   overflow: hidden;
   position: relative;
 }
-/* line 5, ../_sass/_modules/_article-nav.scss */
+/* line 17, ../_sass/_modules/_article-nav.scss */
 .article-nav:before {
   content: "";
   border-left: 2px solid #e0e0e0;
@@ -1827,14 +1837,14 @@ body.debug:after {
   left: 50%;
 }
 
-/* line 15, ../_sass/_modules/_article-nav.scss */
+/* line 27, ../_sass/_modules/_article-nav.scss */
 .article-nav-link {
   padding: 26px 32px;
   float: left;
   width: 50%;
   position: relative;
 }
-/* line 25, ../_sass/_modules/_article-nav.scss */
+/* line 37, ../_sass/_modules/_article-nav.scss */
 .article-nav-link:before {
   position: absolute;
   top: 21px;
@@ -1843,44 +1853,44 @@ body.debug:after {
   font-weight: 400;
 }
 @media only screen and (min-width: 620px) {
-  /* line 25, ../_sass/_modules/_article-nav.scss */
+  /* line 37, ../_sass/_modules/_article-nav.scss */
   .article-nav-link:before {
     top: 39px;
     font-size: 68px;
   }
 }
 
-/* line 39, ../_sass/_modules/_article-nav.scss */
+/* line 51, ../_sass/_modules/_article-nav.scss */
 .article-nav p {
   padding: 0;
   margin: 0;
 }
 
-/* line 44, ../_sass/_modules/_article-nav.scss */
+/* line 56, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev {
   text-align: right;
 }
-/* line 48, ../_sass/_modules/_article-nav.scss */
+/* line 60, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev:before {
   content: "<";
   left: 32px;
 }
-/* line 53, ../_sass/_modules/_article-nav.scss */
+/* line 65, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev p {
   padding-left: 32px;
 }
 
-/* line 61, ../_sass/_modules/_article-nav.scss */
+/* line 73, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--next:before {
   content: ">";
   right: 32px;
 }
-/* line 66, ../_sass/_modules/_article-nav.scss */
+/* line 78, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--next p {
   padding-right: 32px;
 }
 
-/* line 71, ../_sass/_modules/_article-nav.scss */
+/* line 83, ../_sass/_modules/_article-nav.scss */
 .article-nav-count {
   font-size: 20px;
   font-weight: 300;
@@ -1891,7 +1901,7 @@ body.debug:after {
   font-weight: 700;
 }
 @media only screen and (min-width: 800px) {
-  /* line 71, ../_sass/_modules/_article-nav.scss */
+  /* line 83, ../_sass/_modules/_article-nav.scss */
   .article-nav-count {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1903,10 +1913,119 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 71, ../_sass/_modules/_article-nav.scss */
+  /* line 83, ../_sass/_modules/_article-nav.scss */
   .article-nav-count {
     font-weight: 400;
   }
+}
+
+/**
+*
+* Home header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_home-header.scss */
+.home-header {
+  background: #4285f4;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 78px;
+  margin-bottom: 78px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_home-header.scss */
+  .home-header {
+    padding-bottom: 104px;
+  }
+}
+/* line 21, ../_sass/_modules/_home-header.scss */
+.home-header:after {
+  content: "*";
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 130px;
+  bottom: -25px;
+  font-weight: 700;
+  color: #78cfa9;
+}
+@media only screen and (min-width: 620px) {
+  /* line 21, ../_sass/_modules/_home-header.scss */
+  .home-header:after {
+    font-size: 300px;
+    bottom: -35px;
+  }
+}
+
+/* line 40, ../_sass/_modules/_home-header.scss */
+.home-header h1 {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 68px;
+  font-weight: 300;
+  line-height: 1.1471em;
+  /* 78px */
+  padding-top: 0.3824em;
+  padding-bottom: 0;
+  padding-top: 52px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 40, ../_sass/_modules/_home-header.scss */
+  .home-header h1 {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1.19em;
+    /* 130px */
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 40, ../_sass/_modules/_home-header.scss */
+  .home-header h1 {
+    padding-top: 130px;
+  }
+}
+
+/* line 46, ../_sass/_modules/_home-header.scss */
+.home-header p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 800px) {
+  /* line 46, ../_sass/_modules/_home-header.scss */
+  .home-header p {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 46, ../_sass/_modules/_home-header.scss */
+  .home-header p {
+    padding-top: 0;
+  }
+}
+
+/* line 51, ../_sass/_modules/_home-header.scss */
+.home-header a {
+  margin-top: 65px;
 }
 
 /**
@@ -2555,41 +2674,25 @@ ol.list--variant li a:before {
 .centered-list {
   text-align: center;
 }
-<<<<<<< HEAD
 /* line 101, ../_sass/_components/_list.scss */
-=======
-/* line 83, ../_sass/_components/_list.scss */
->>>>>>> feature/js
 .centered-list p {
   padding-bottom: 26px;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
   /* line 101, ../_sass/_components/_list.scss */
-=======
-  /* line 83, ../_sass/_components/_list.scss */
->>>>>>> feature/js
   .centered-list p {
     padding-bottom: 0;
   }
 }
 
 /*==========  FEATURED LIST  ==========*/
-<<<<<<< HEAD
 /* line 110, ../_sass/_components/_list.scss */
-=======
-/* line 92, ../_sass/_components/_list.scss */
->>>>>>> feature/js
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-<<<<<<< HEAD
 /* line 115, ../_sass/_components/_list.scss */
-=======
-/* line 97, ../_sass/_components/_list.scss */
->>>>>>> feature/js
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2598,38 +2701,22 @@ ol.list--variant li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
   /* line 115, ../_sass/_components/_list.scss */
-=======
-  /* line 97, ../_sass/_components/_list.scss */
->>>>>>> feature/js
   .featured-list__item {
     min-height: 338px;
     padding: 52px 32px;
   }
 }
-<<<<<<< HEAD
 /* line 128, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
 /* line 132, ../_sass/_components/_list.scss */
-=======
-/* line 110, ../_sass/_components/_list.scss */
-.featured-list__item:first-child {
-  margin-top: 0;
-}
-/* line 114, ../_sass/_components/_list.scss */
->>>>>>> feature/js
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-<<<<<<< HEAD
 /* line 137, ../_sass/_components/_list.scss */
-=======
-/* line 119, ../_sass/_components/_list.scss */
->>>>>>> feature/js
 .featured-list__img-wrapper {
   display: none;
   position: relative;
@@ -2637,11 +2724,7 @@ ol.list--variant li a:before {
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
   /* line 137, ../_sass/_components/_list.scss */
-=======
-  /* line 119, ../_sass/_components/_list.scss */
->>>>>>> feature/js
   .featured-list__img-wrapper {
     display: block;
     padding-top: 0;
@@ -2650,11 +2733,7 @@ ol.list--variant li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
   /* line 150, ../_sass/_components/_list.scss */
-=======
-  /* line 130, ../_sass/_components/_list.scss */
->>>>>>> feature/js
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2664,22 +2743,14 @@ ol.list--variant li a:before {
     width: 100%;
   }
 }
-<<<<<<< HEAD
 /* line 161, ../_sass/_components/_list.scss */
-=======
-/* line 141, ../_sass/_components/_list.scss */
->>>>>>> feature/js
 .featured-list__img img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
   /* line 161, ../_sass/_components/_list.scss */
-=======
-  /* line 141, ../_sass/_components/_list.scss */
->>>>>>> feature/js
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -2690,7 +2761,6 @@ ol.list--variant li a:before {
   }
 }
 
-<<<<<<< HEAD
 /*==========  RELATED GUIDES LIST  ==========*/
 /* line 178, ../_sass/_components/_list.scss */
 .related-guides-list {
@@ -2725,15 +2795,6 @@ ol.list--variant li a:before {
 }
 /* line 209, ../_sass/_components/_list.scss */
 .list--reset.list--links a:before, .list--reset li:before {
-=======
-/*==========  LIST RESET  ==========*/
-/* line 160, ../_sass/_components/_list.scss */
-.list--reset li {
-  padding-left: 0;
-}
-/* line 164, ../_sass/_components/_list.scss */
-.list--reset li a:before, .list--reset li:before {
->>>>>>> feature/js
   display: none !important;
 }
 
