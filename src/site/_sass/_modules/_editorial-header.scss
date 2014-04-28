@@ -46,19 +46,8 @@
   font-family: $fontHighlight;
 }
 
-.editorial-header__title {
-  @include type--small;
-  text-transform: uppercase;
-  font-weight: 500;
+.editorial-header .tag{
   padding-top: $lineHeight*2;
-
-  &:before {
-    content: "#";
-    display: inline-block;
-    top: 0;
-    left: 0;
-    padding-right: 2px;
-  }
 }
 
 .editorial-header__subtitle {
