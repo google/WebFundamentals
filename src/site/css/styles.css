@@ -1183,12 +1183,12 @@ body.debug:after {
   .highlight-module__container:before {
     display: block;
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 45px;
     font-family: "icons";
-    font-size: 150px;
+    font-size: 130px;
     font-weight: 900;
-    line-height: 100%;
+    line-height: 1px;
     height: 100%;
     color: #ffffff;
     text-align: center;
@@ -1199,28 +1199,20 @@ body.debug:after {
     right: auto;
     left: 45px;
   }
-  /* line 426, ../_sass/_utils.scss */
-  .highlight-module--learning .highlight-module__container:before {
-    top: -80px;
-  }
-  /* line 426, ../_sass/_utils.scss */
-  .highlight-module--remember .highlight-module__container:before {
-    top: -170px;
-  }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
   /* line 385, ../_sass/_utils.scss */
   .highlight-module__container:before {
     width: 22.2%;
-    font-size: 200px;
+    font-size: 180px;
   }
   /* line 412, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
-    font-size: 450px;
+    font-size: 430px;
   }
 }
 
-/* line 71, ../_sass/_modules/_highlight.scss */
+/* line 62, ../_sass/_modules/_highlight.scss */
 .highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1232,7 +1224,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 71, ../_sass/_modules/_highlight.scss */
+  /* line 62, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1244,7 +1236,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 71, ../_sass/_modules/_highlight.scss */
+  /* line 62, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1256,7 +1248,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 71, ../_sass/_modules/_highlight.scss */
+  /* line 62, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1268,7 +1260,7 @@ body.debug:after {
   }
 }
 
-/* line 82, ../_sass/_modules/_highlight.scss */
+/* line 73, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
   padding-top: 52px;
@@ -1276,20 +1268,20 @@ body.debug:after {
   margin-left: -26px;
   font-size: 13px;
 }
-/* line 89, ../_sass/_modules/_highlight.scss */
+/* line 80, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 96, ../_sass/_modules/_highlight.scss */
+/* line 87, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
 }
 
-/* line 104, ../_sass/_modules/_highlight.scss */
+/* line 95, ../_sass/_modules/_highlight.scss */
 .highlight-module__cta {
   display: block;
   font-size: 16px;
@@ -1300,7 +1292,7 @@ body.debug:after {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 @media only screen and (min-width: 800px) {
-  /* line 104, ../_sass/_modules/_highlight.scss */
+  /* line 95, ../_sass/_modules/_highlight.scss */
   .highlight-module__cta {
     font-size: 20px;
     font-weight: 300;
@@ -1312,7 +1304,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 111, ../_sass/_modules/_highlight.scss */
+  /* line 102, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1320,14 +1312,14 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 120, ../_sass/_modules/_highlight.scss */
+  /* line 111, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 128, ../_sass/_modules/_highlight.scss */
+  /* line 119, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
@@ -3239,8 +3231,8 @@ td:last-child:after {
 
 @font-face {
   font-family: "icons";
-  src: url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.eot");
-  src: url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.eot?#iefix") format("embedded-opentype"), url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.woff") format("woff"), url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.ttf") format("truetype"), url("../icons/icons-52fd13b1d4fe755c5f19138eb6d772f3.svg?#icons") format("svg");
+  src: url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.eot");
+  src: url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.eot?#iefix") format("embedded-opentype"), url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.woff") format("woff"), url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.ttf") format("truetype"), url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3262,63 +3254,68 @@ td:last-child:after {
 }
 
 /* line 33, ../_sass/_components/_icons.scss */
-.icon-cheveron-right:before {
+.icon-cheveron-left:before {
   content: "\e001";
 }
 
 /* line 38, ../_sass/_components/_icons.scss */
-.icon-forward-slash:before {
+.icon-cheveron-right:before {
   content: "\e002";
 }
 
 /* line 43, ../_sass/_components/_icons.scss */
-.icon-google-dev:before {
+.icon-forward-slash:before {
   content: "\e003";
 }
 
 /* line 48, ../_sass/_components/_icons.scss */
-.icon-lessons:before {
+.icon-google-dev:before {
   content: "\e004";
 }
 
 /* line 53, ../_sass/_components/_icons.scss */
-.icon-media:before {
+.icon-lessons:before {
   content: "\e005";
 }
 
 /* line 58, ../_sass/_components/_icons.scss */
-.icon-minus:before {
+.icon-media:before {
   content: "\e006";
 }
 
 /* line 63, ../_sass/_components/_icons.scss */
-.icon-multi-screen-layout:before {
+.icon-minus:before {
   content: "\e007";
 }
 
 /* line 68, ../_sass/_components/_icons.scss */
-.icon-navigation-cheveron:before {
+.icon-multi-screen-layout:before {
   content: "\e008";
 }
 
 /* line 73, ../_sass/_components/_icons.scss */
-.icon-performance:before {
+.icon-navigation-cheveron:before {
   content: "\e009";
 }
 
 /* line 78, ../_sass/_components/_icons.scss */
-.icon-plus:before {
+.icon-performance:before {
   content: "\e00a";
 }
 
 /* line 83, ../_sass/_components/_icons.scss */
-.icon-star:before {
+.icon-plus:before {
   content: "\e00b";
 }
 
 /* line 88, ../_sass/_components/_icons.scss */
-.icon-user-input:before {
+.icon-star:before {
   content: "\e00c";
+}
+
+/* line 93, ../_sass/_components/_icons.scss */
+.icon-user-input:before {
+  content: "\e00d";
 }
 
 /**

@@ -2,7 +2,7 @@
 </div>
 
 <div class="highlight-module {% if include.position %} highlight-module--{{ include.position }} {% endif %} {% if include.type %} highlight-module--{{ include.type }} {% endif %}">
-  <div class="highlight-module__container icon-star">
+  <div class="highlight-module__container {% if include.type == 'learning' %} icon-star {% else %} icon-forward-slash {% endif %}">
     <div class="g-wide--push-1 g-wide--pull-1 {% if include.position == 'left' %} g-medium--push-1 {% else %} g-medium--pull-1 {% endif %}">
       <p class="highlight-module__title"> {{ include.title }}</p>
 
