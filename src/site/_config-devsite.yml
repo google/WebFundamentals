@@ -8,6 +8,9 @@ baseurl: /web/fundamentals
 url: /web/fundamentals
 highlighter: pygments
 pygments: true
+github:
+  root: https://github.com/PaulKinlan/WebDocs
+  content: tree/master/src/site
 include_open_html: false
 generate_sample_jshtml: true
 spotlights: false
