@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Navigation and Action Patterns"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi."
+description: "Learn how to integration navigation patterns into your site and get users to complete the actions you want them to."
 introduction: "In the previous design sections we've looked at the nuts and bolts which make up a responsive layout as well as some of the common techniques to have responsive content. This article will cover how we apply this to navigation."
 article:
   written_on: 2014-01-01
