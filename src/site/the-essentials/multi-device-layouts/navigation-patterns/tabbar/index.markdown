@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Tab Bar"
-description: "<img class=\"g-medium--full g-wide--full\" src=\"tabbar/images/tabbar.png\">A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
+description: "<img class='g-medium--full g-wide--full' src='tabbar/images/tabbar.png'>A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06

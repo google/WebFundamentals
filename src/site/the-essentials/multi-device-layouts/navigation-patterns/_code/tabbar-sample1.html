@@ -24,16 +24,25 @@
       }
 
       .tab-bar {
-        position: fixed;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         
         width: 100%;
         
+        position: fixed;
+
+        left: 0;
         bottom: 0;
         
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
         flex-direction: row;
+
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
-        
+
         background: #3C78D8;
       }
 
@@ -41,7 +50,7 @@
         width: 40px;
         height:40px;
         
-        margin: 8px 0;
+        margin: 8px;
         
         border: none;
         
@@ -55,13 +64,17 @@
         -webkit-tap-highlight-color: transparent;
       }
 
-      .tab-bar button:hover, .tab-container button:active {
-        background-color: rgba(255, 255, 255, 0.7);
+      .tab-bar button:hover{
+        background-color: rgba(255, 255, 255, 0.5);
       }
 
       .tab-bar button:focus {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.7);
         outline: 0;
+      }
+
+      .tab-bar button:active {
+        background-color: rgba(255, 255, 255, 0.9);
       }
 
       .tab-bar button.selected {
