@@ -13,6 +13,7 @@
 -->
 
 <script type="text/javascript">
+
   var html = document.querySelector('html');
   removeClass(html, 'no-js');
   addClass(html, 'js');
@@ -40,7 +41,7 @@
   }
 
   function isTouch() {
-    return ('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0);
+    return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
   };
 
   function addClass(element, className) {
