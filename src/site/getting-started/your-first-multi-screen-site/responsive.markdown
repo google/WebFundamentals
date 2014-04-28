@@ -48,7 +48,7 @@ a beautiful page that is responsive across a large number of screen sizes.
 We are using the principles of Mobile First web development.  We start with a
 narrow viewport &mdash; similar to a mobile phone &mdash; and build for that
 experience first and start to scale up to larger device classes.  We can do 
-this by making our viewport wider and making a judgement call on whether the
+this by making our viewport wider and making a judgment call on whether the
 design and layout look right.
 
 Earlier we created a couple of different high-level designs for how our content
@@ -79,8 +79,10 @@ The viewport lives in the head of the document and only needs to be declared onc
 <div markdown='1' class="g-wide--push-1 g-medium--push-1">
 ### Related information
 {: .related-items--title}
+Learn more about the best practices of using the viewport:
 
-* [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+*  [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+*  [Size content to the viewport]({{site.baseurl}}the-essentials/multi-device-layouts/rwd-fundamentals/index.html#size-content-to-the-viewport)
 {: .list--links}
 
 </div>
@@ -93,12 +95,12 @@ The viewport lives in the head of the document and only needs to be declared onc
 Our product and company already has a very specific branding and font guide-lines supplied 
 in a style guide.
 
-### Styleguide
+### Style guide
 
-A styleguide is a useful way to get a high-level understanding of the visual represntation 
+A style guide is a useful way to get a high-level understanding of the visual representation 
 of the page and it helps you ensure that you are consistent through out the design.
 
-#### Colours
+#### Colors
 
 <div class="styles" style="font-family: monospace;">
   <div style="background-color: #39b1a4">#39b1a4</div>
@@ -113,6 +115,8 @@ of the page and it helps you ensure that you are consistent through out the desi
 
 
 
+
+
 ### Add stylistic images
 
 In the previous guide we added images called "content images".  These were
@@ -121,7 +125,7 @@ are images that are not needed as part of the core content but add visual flare
 or help guide the readers attention to a specific piece of content.
 
 A good example of this is a headline image for the 'above the fold' content.  It
-is often used to entice the user in to reading more about the prodcut.
+is often used to entice the user in to reading more about the product.
 
 <div class="g-wide--2 g-wide--last g-medium--half g--last">
   <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
@@ -182,7 +186,7 @@ need to:
 
 *  Constrain the maximum width of the design
 *  Alter the padding of elements and reduce the text size
-*  Move the form to float inline with the heading content
+*  Move the form to float in-line with the heading content
 *  Make the video float around the content
 *  Reduce the size of the images and have them appear in a nicer grid
 
@@ -193,9 +197,12 @@ need to:
 ### Related information
 {: .related-items--title}
 
-*  [Using Media Queries](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Major Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Minor Breakpoints](/web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness)
+Learn more about how and where to use Media Queries:
+
+*  [Using Media Queries]({{site.baseurl}}//web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+*  [Layout patterns]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/index.html) 
+*  [Mostly Fluid layout]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/index.html#mostly-fluid)
+{: .list--links}
 </div>
 </div>
 </div>
@@ -206,9 +213,9 @@ need to:
 We have chosen to have only two major layouts: a narrow viewport and a wide
 viewport which greatly simplifies our build process.
 
-We have also decided to create fullbleed sections on the narrow viewport that
-stay fullbleed on the wide viewport.  This means we should constrain the
-maximum width of the screen so that the text and paragrahpsh don't extend in to one
+We have also decided to create full-bleed sections on the narrow viewport that
+stay full-bleed on the wide viewport.  This means we should constrain the
+maximum width of the screen so that the text and paragraphs don't extend in to one
 long single line on ultra wide screens.  We have chosen this point to be 
 about 800px.
 
@@ -248,7 +255,7 @@ Our narrow viewport was a stacked linear display.  Each major section and the co
 inside them was displayed in order from top to bottom.
 
 A wide viewport gives us extra space to use to display the content in an optimal way
-for that screen.  For our product page this means that acorrding to our IA we can:
+for that screen.  For our product page this means that according to our IA we can:
 
 *  move the form around the header information
 *  position the video to the right of the key points
@@ -344,9 +351,10 @@ support it let you display a high density image on a high density display.
 ### Related information
 {: .related-items--title}
 
-* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
-* [Use media queries to provide high res images or art direction]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction]
+Learn how to effectively use images for varying screen densities:
 
+* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [Use media queries to provide high res images or art direction]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction)
 {: .list--links}
 
 </div>
@@ -383,12 +391,12 @@ form-factors and screen sizes.
 
 If you follow these guidelines you will be off to a good start:
 
-*  Create a basic IA and understand your content before you code.
-*  Always set a viewport
-*  Create your base experience around mobile-first approach
-*  Once you have your mobile experience, increase the width of the display 
+1.  Create a basic IA and understand your content before you code.
+2.  Always set a viewport
+3.  Create your base experience around mobile-first approach
+4.  Once you have your mobile experience, increase the width of the display 
    until it doesn't look right and set your breakpoint there.
-*  Keep iterating.
+5.  Keep iterating.
 
 {% include modules/nextarticle.liquid %}
 

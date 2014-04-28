@@ -194,14 +194,14 @@ Discover the best practices for using images in your content
 The final section is a simple table that is used to show specific product stats
 about the product.
 
-Tables should only be used for tabular data, i.e, matrixes of information.
+Tables should only be used for tabular data, i.e, matrices of information.
 
 {% include_code _code/addcontent.html section3 %}
 
 ### Add a Footer
 
 Most sites need a footer to display content such as Terms and Conditions,
-disclaimers and other content that is not meant to be in the main navigation nor in the main conentent area of the page.  
+disclaimers and other content that is not meant to be in the main navigation nor in the main content area of the page.  
 
 In our site we will just link to Terms and Conditions, a Contact page and 
 our social media profiles.
