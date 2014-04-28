@@ -23,7 +23,7 @@
         background-color: #C9DAF8;
       }
 
-      .tab-bar {
+      .bottom-bar {
         position: fixed;
         display: flex;
         
@@ -37,7 +37,7 @@
         background-color: rgba(255, 255, 255, 0.4);
       }
 
-      .tab-bar button {
+      .bottom-bar button {
         width: 40px;
         height:40px;
         
@@ -55,12 +55,12 @@
         -webkit-tap-highlight-color: transparent;
       }
 
-      .tab-bar button:hover, .tab-bar button:focus {
+      .bottom-bar button:hover, .bottom-bar button:focus {
         background-color: rgba(60, 120, 216, 0.8);
         outline: 0;
       }
 
-      .tab-bar button:active, .tab-bar button:focus:active {
+      .bottom-bar button:active, .bottom-bar button:focus:active {
         background-color: rgba(60, 120, 216, 1.0);
       }
     </style>
@@ -68,27 +68,14 @@
 
   <body>
     
-    <nav class="tab-bar">
-      <button class="tab-btn tab-1"></button>
-      <button class="tab-btn tab-2"></button>
-      <button class="tab-btn tab-3"></button>
-      <button class="tab-btn tab-4"></button>
+    <nav class="bottom-bar">
+      <button class="bottom-btn"></button>
+      <button class="bottom-btn"></button>
+      <button class="bottom-btn"></button>
+      <button class="bottom-btn"></button>
     </nav>
 
     <script>
-      var tabBtns = document.querySelectorAll('.tab-bar > .tab-btn');
-
-      for(var i = 0; i < tabBtns.length; i++) {   tabBtns[i].addEventListener('click', onTabClick, true);
-      }
-
-      function onTabClick(e) {
-        var currentTab = document.querySelector('.tab-bar > .tab-btn.selected');
-        if(currentTab) {
-          currentTab.classList.remove('selected');
-        }
-        var btn = e.target;
-        btn.classList.add('selected');
-      }
     </script>
 
     <!-- // [TEMPLATE footer] -->
