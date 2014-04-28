@@ -38,9 +38,6 @@ remember:
 ---
 {% wrap content %}
 
-<!-- TODO[PETELE] add related items -->
-<!-- TODO[PETELE] add what's next -->
-
 <style type="text/css">
   img, video, object {
     max-width: 100%;
@@ -176,7 +173,7 @@ viewport on small screens.
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %}
 
-## Use CSS Media Queries For Responsiveness
+## Use CSS media queries for responsiveness
 
 Media queries are simple filters that can be applied to CSS styles.  They make
 it easy to change styles based on the characteristics of the device rendering
@@ -403,8 +400,6 @@ icons a bit larger.
 Similarly, for the large screens, it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
 
-{% link_sample _code/weather.html %}View finished sample{% endlink_sample %}
-
 {% include_code _code/weather-large.css mqsmallbplg css %}
 
 ### Optimize text for reading
@@ -440,5 +435,7 @@ for spring time allergy sufferers who need the information to determine if they
 can go outside or not.
 
 {% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.choose-breakpoints %}
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
