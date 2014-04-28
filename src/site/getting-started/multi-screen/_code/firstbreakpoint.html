@@ -1,280 +1,293 @@
 <!doctype html>
 <html>
   <head>
-    <title>Smiles</title>
+    <title>Mobile Web CS256</title>
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet">
+    <!-- // [start style] -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #headline {
+        padding: 0.8em;
+        color: white;
+        font-family: Roboto, helvetica, arial, sans-serif;
+        background-color: black;
+        background-image: url(background-blur.png);
+        background-size: cover;
+      }
+
+      #headline h1 {
+        font-weight: 200;
+        font-size: 60px;
+        line-height: 1em;
+        margin-bottom: 0;
+      }
+        
+      #headline h2 {
+        font-weight: 200;
+        font-size: 30px;
+        margin-top: 5px;
+      }
+
+      #headline #blurb {
+        font-weight: 200;
+        font-size: 18px;
+      }
+
+      #headline #register {
+        background-color: #39b1a4;
+        background-color: rgba(57,177, 164, 0.7);
+        padding: 1em;
+      }
+
+      #headline #register h2 {
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+
+      #headline #register label {
+        font-size: 1.2em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+      }
+
+      #headline #register input {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 200;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      #headline #register input[type=submit] {
+        background-color: hsl(8, 70%, 54%);
+        color: white;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+      #section1, #section2, #section3 {
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      #section1 h2, #section2 h2, #section3 h2  {
+        margin-top: 0;
+        font-size: 24px
+      }
+
+      #section1 {
+        background-color: white;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+      }
+
+      #section1 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section1 h2 + p {
+      }
+
+      #section1 video {
+        width: 100%;
+      }
+
+      #section2 {
+        background-color: #e9e9e9;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+      }
+
+      #section2 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section2 h2 + p {
+      }
+
+      #section2 div {
+      }
+
+      #section2 div img {
+        width: 100%
+      }
+
+      #section3 {
+        background-color: #f5f5f5;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+      }
+
+      #section3 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section3 h2 + p {
+        text-align: center;
+      }
+
+      #footer {
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        text-align: center;
+        background-color: hsl(8, 70%, 54%);
+        color: white;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+
+      thead {
+        font-weight: bold;
+      }
+
+      tbody {
+        text-align: center;
+      }
+
+      /* // [START first] */
+      @media (min-width: 600px) {
       
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-        }
-
-        /* // [START styles] */
-        #headline {
-          padding: 0.8em;
-          color: white;
-          font-family: Roboto, sans-serif;
-          background-image: url(backgroundimage.jpg);
-          background-size: cover;
-        }
-        /* // [END styles] */
-
-        #headline h1 {
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          font-size: 60px;
-          line-height: 1em;
-          margin-bottom: 0;
-        }
-          
-        #headline h2 {
-          font-weight: 200;
-          font-size: 30px;
-          margin-top: 5px;
-        }
-
-        #headline #blurb {
-          font-weight: 200;
-          font-size: 18px;
-        }
-
-        #headline #register {
-          background-color: #39b1a4;
-          padding: 1em;
-        }
-
-        #headline #register h2 {
-          padding: 0;
-          margin: 0;
-        }
-
-        #headline #register label {
-          font-size: 1.2em;
-          padding-top: 12px;
-          display: block;
-        }
-
-        #headline #register input {
-          width: 100%;
-          font-size: 18px;
-          padding: 10px;
-          box-sizing: border-box;
-        }
-
-        #headline #register input[type=submit] {
-          background-color: hsl(8, 70%, 54%);
-          color: white;
-          margin-top: 20px;
-          padding: 10px;
-          border: none;
-          box-sizing: border-box;
-          font-size: 18px;
-        }
-
-        #section1, #section2, #section3 {
-          padding: 20px;
-        }
-
-        #section1 h2, #section2 h2, #section3 h2  {
-          margin-top: 0;
-          font-size: 24px
-        }
-
-        #section1 {
-          background-color: white;
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          font-size: 18px;
-        }
-
-        #section1 h2 {
-          font-weight: 300;
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 20px;
-        }
-
-        #section1 h2 + p {
-          text-align: center;
-        }
-
-        #section1 video {
-          width: 100%;
-        }
-
-        #section2 {
-          background-color: #e9e9e9;
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          font-size: 18px;
-        }
-
-        #section2 h2 {
-          font-weight: 300;
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 20px;
-        }
-
-        #section2 h2 + p {
-          text-align: center;
-        }
-
-        #section2 div {
-          text-align: center;
-        }
-
-        #section2 div img{
-          width: 100%
-        }
-
-        #section3 {
-          background-color: #f5f5f5;
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-        }
-
-        #section3 h2 {
-          font-weight: 300;
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 20px;
-        }
-
-        #section3 h2 + p {
-          text-align: center;
-        }
-
-        #footer {
-          font-family: Roboto, sans-serif;
-          font-weight: 300;
-          text-align: center;
-          background-color: hsl(8, 70%, 54%);
-          color: white;
-          padding-bottom: 20px;
-          padding-top: 20px;
-        }
-
-        thead {
-          font-weight: bold;
-        }
-
-        tbody {
-          text-align: center;
-        }
-        
-        /* // [START first] */
-        @media (min-width: 600px) {
-        
-        }
-        /* // [END first] */
-  
-
-      </style>
+      }
+      /* // [END first] */
+    </style>
+    <!-- // [END style] -->
   </head>
   <body>   
     <!-- // [START headline] -->
     <div id="headline">
-      <h1>Smiles Inc.</h1>
-      <h2>Best when shared</h2>
-      <div id="blurb">
-        <p>Who doesn't love a good smile? After kittens a smile is the bestest thing in the world, with many available for all occasions:</p>
-        <ul>
-          <li>The 'sup bro smile;
-          <li>The love you son smile; 
-          <li>The condescending smile for when you didn't win the Oscar,
-          <li>and the good-ol' British in the thick of it smile.
-        </ul>
-      </div>
-      <form method="post" id="register"> 
-         <h2>Sign up for more smiles</h2>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Thomas A Anderson" required />
-          <label for="email">Email address</label>
-          <input type="text" name="email" id="email" placeholder="neo@example.com" required />
-          <label for="tel">Telephone</label>
-          <input type="tel" name="tel" id="tel" placeholder="(555) 555 5555" required />
-          <label for="time">Best time to contact</label>
-          <input type="time" name="time" id="time" placeholder="4pm" required />
-          <input type="submit" value="Sign up">
+      <div class="container">
+        <h1>Mobile Web Development</h1>
+        <h2>Building Mobile Web Experiences</h2>
+        <div id="blurb">
+          <p>So you've heard mobile is kind of a big deal, and you're not sure how to transform your traditional desktop-focused web apps into fast, effective multi-screen experiences.</p>
+          <p>This course is designed to teach web developers what they need to know to create great cross-device web experiences.</p>
+          <p>This course will focus on building mobile-first web apps, which will work across multiple platforms including:</p>
+          <ul>
+            <li>Android, 
+            <li>iOS,
+            <li>and others.
+          </ul>
+        </div>
+        <form method="post" id="register">
+           <h2>Register for the launch</h2>
+           <label for="name">Name</label>
+           <input type="text" name="name" id="name" 
+              placeholder="Thomas A Anderson" required />
+           <label for="email">Email address</label>
+           <input type="email" name="email" id="email" 
+              placeholder="neo@example.com" required />
+           <label for="tel">Telephone</label>
+           <input type="tel" name="tel" id="tel" 
+              placeholder="(555) 555 5555" required />
+           <input type="submit" value="Sign up">
         </form>
+        <br>
       </div>
-      <br>
     </div>
-    
+    <!-- // [END headline] -->
+
+    <!-- // [START section1] -->
     <div id="section1">
-      <h2>Smiles. Delivered.</h2>
-      <p>Anytime.  Anyplace.  When you need it, you got it.</p>
-      <ul>
-        <li>We aim to be the best</li>
-        <li>Never undersold</li>
-        <li>Never bettered</li>
-      </ul>
-      <!-- // [START video] -->
-      <video controls poster="smiles.png">
-        <source src="smiles.webm" type="video/webm"></source>
-        <source src="smiles.mov" type="video/mov"></source>
-        <p>Sorry your browser doesn't support video. 
-           <a href="smiles.mov">Download the video</a>.
-        </p>
-      </video>
-      <!-- // [END video] -->
-      <br>
-    </div>
-
-   
-    <div id="section2">
-      <h2>Pictures of happy people smiling</h2>
-      <p>Everyone loves happy people</p>
-      
-      <div id="images">
-        <img src="paulkinlan.png">
-        <img src="samdutton.png">
-        <img src="mattgaunt.jpg">
-        <img src="ianbarber.jpg">
+      <div class="container">
+        <h2>What will I Learn?</h2>
+        <p>After completing this class, you'll have built a web application with a first-class mobile experience.</p>
+        <p>You'll understand what it takes to:</p>
+        <ul>
+          <li>build great web experiences on mobile devices</li>
+          <li>use the tools you need to test performance</li>
+          <li>apply your knowledge to your own projects in the future</li>
+        </ul>
+        <video controls poster="smiles.png">
+          <source src="smiles.webm" type="video/webm"></source>
+          <source src="smiles.mov" type="video/mov"></source>
+          <p>Sorry your browser doesn't support video. 
+             <a href="smiles.mov">Download the video</a>.
+          </p>
+        </video>
+        <br>
       </div>
-      <br>
     </div>
-    
+    <!-- // [END section1] -->
 
-   
+    <!-- // [START section2] -->
+    <div id="section2">
+      <div class="container">
+        <h2>Who will teach me?</h2>
+        <p>The worlds leading mobile web developers.</p>
+        <div id="images">
+          <img src="chriswilson.png" alt="Chris Wilson Course Instructor">
+          <img src="peterlubbers.png" alt="Peter Lubbers Course Instructor">
+          <img src="seanbennett.jpg" alt="Sean Bennet Course Developer">
+        </div>
+        <br>
+      </div>
+    </div>
+    <!-- // [END section2] -->
+
+    <!-- // [START section3] -->
     <div id="section3">
-      <h2>Proof smiles are great</h2>
-      <p>Some pithy comment about why we are amazeballs</p>
-      <figure>
-        <table>
-          <thead>
-             <tr>
-               <td>Age Index</td>
-               <td>Receptive Quotient</td>
-               <td>Happiness</td>
-             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>1</td>
-              <td>4</td>
-            </tr>
-          </tbody>
-        </table>
-        <figcaption>Smiles == more happiness</figcaption>
-      </figure>
-      <br>
+      <div class="container">
+        <h2>Mobile. Why should I care?</h2>
+        <p></p>
+        <figure>
+          <table>
+            <thead>
+               <tr>
+                 <td>Age Index</td>
+                 <td>Receptive Quotient</td>
+                 <td>Happiness</td>
+               </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption></figcaption>
+        </figure>
+        <br>
+      </div>
     </div>
-
+    <!-- // [END section3] -->
+ 
+    <!-- // [START footer] -->
     <div id="footer">
-      <p>We always need a footer.</p>
+      <div class="container">
+        <p>We always need a footer.</p>
+      </div>
     </div>
     <!-- // [END footer] -->
   </body>
