@@ -27,7 +27,7 @@ devsite:
 
 #Image squisher task.
 imsq:
-	cd ./src/site && find . -iname *.png | xargs -L 1 /home/build/static/projects/webgroup/imsq
+	find ./src/site -iname *.png | xargs /home/build/static/projects/webgroup/imsq
 
 optimize:
 	@find . -iname *.png | xargs -L 1 optipng -o7
