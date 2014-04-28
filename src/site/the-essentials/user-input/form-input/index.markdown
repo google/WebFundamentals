@@ -661,5 +661,6 @@ confirmation.
 
 {% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.use-request-auto-complete %}
 
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
