@@ -8,8 +8,8 @@ introduction: "The use of mobile devices to surf the web is growing at an astron
               devices are often constrained by display size and require a different approach
               to how content is laid out on screen."
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-04-30
+  updated_on: 2014-04-30
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage

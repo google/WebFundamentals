@@ -59,6 +59,10 @@
     padding-top: 0;
   }
 
+  &:first-child a {
+    font-weight: 400;
+  }
+
   // Remove list styles
   &:before {
     display: none;

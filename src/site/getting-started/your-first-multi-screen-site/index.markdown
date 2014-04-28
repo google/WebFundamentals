@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Your first multi-screen site"
+title: "Your First Multi-screen Site"
 description: "The web is accessible on a huge range of devices from small-screen phones
 to huge-screen televisions. Learn how to build a site that works well across all these devices."
 article:
@@ -22,8 +22,7 @@ that covers many of the core principles of building experiences that work well
 across all different device types.
 
 <div class="clear">
-  <img class="g-wide--1 g-medium--half" src="images/narrowsite.png" alt="Narrow Viewport final look" style="max-width: 100%;">
-  <img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/widesite.png" alt="Narrow Viewport final look" style="max-width: 100%;">
+  <img class="g-wide--1 g-medium--half" src="images/narrowsite.png" alt="Narrow Viewport final look" style="max-width: 100%;"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/widesite.png" alt="Narrow Viewport final look" style="max-width: 100%;">
 </div>
 
 

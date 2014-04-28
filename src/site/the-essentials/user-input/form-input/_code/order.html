@@ -161,6 +161,7 @@
         elem.addEventListener("blur", verifyEmail);
         function verifyEmail(input) {
           input = input.srcElement;
+          sampleCompleted("Forms-orderConfirm");
           var primaryEmail = document.getElementById('frmEmailA').value
           /* // [START customvalidation] */
           if (input.value != primaryEmail) {
@@ -180,6 +181,7 @@
         var inputs = document.getElementsByTagName("input");
         var inputs_len = inputs.length;
         var addDirtyClass = function(evt) {
+          sampleCompleted("Forms-order-dirty");
           evt.srcElement.classList.toggle("dirty", true);
         };
         for (var i = 0; i < inputs_len; i++) {
@@ -200,10 +202,7 @@
       initForm();
       initInputs();
       initConfirmEmail();
-      //initNoSubmit();
-
-
-      
+     
 
     </script>
     <!-- // [TEMPLATE footer] -->

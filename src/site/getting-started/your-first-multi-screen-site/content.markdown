@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Create your content and structure"
+title: "Create your Content and Structure"
 description: "Content is the most important aspect of any site. In this guide 
   we will show you can quickly plan to build your first multi-screen site."
 introduction: "Content is the most important aspect of any site. In this guide 
@@ -49,7 +49,7 @@ We have identified we need:
 We have also come up with a rough information architecture and layout for both the narrow and wide viewports.
 
 <div class="demo">
-  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA" style="width: 100%;"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA" style="width: 100%;">
+  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA">
 </div>
 
 This can be converted easily in to the rough sections of a skeleton page that 
@@ -96,9 +96,13 @@ the user should just see a dial pad.
 ### Related information
 {: .related-items--title}
 
-* [Create amazing forms]({{site.baseurl}}/the-essentials/user-input/form-input/index.html)
-{: .list--links}
+Learn more about how to create amazing forms:
 
+*  [Create amazing forms]({{site.baseurl}}/the-essentials/user-input/form-input/index.html)
+*  [Label and name inputs correctly]({{site.baseurl}}/the-essentials/user-input/form-input/index.html#label-and-name-inputs-properly)
+*  [Choose the best input type]({{site.baseurl}}/the-essentials/user-input/form-input/index.html#choose-the-best-input-type)
+*  [Provide real-time validation]({{site.baseurl}}}the-essentials/user-input/form-input/index.html#provide-real-time-validation)
+{: .list--links}
 </div>
 </div>
 </div>
@@ -131,10 +135,11 @@ By following the best practices you can easily integrate video in to your site:
 ### Related information
 {: .related-items--title}
 
+Learn more about the best ways to use video on your site.
+
 *  [Using video effectively]({{site.baseurl}}/the-essentials/introduction-to-media/video/index.html)
-*  Another link once we have the article finalised
-*  Another link once we have the article finalised
-*  Another link once we have the article finalised
+*  [Change the starting position]({{site.baseurl}}/the-essentials/introduction-to-media/video/index.html)
+*  [Include a poster image]({{site.baseurl}}/the-essentials/introduction-to-media/video/index.html)
 {: .list--links}
 </div>
 </div>
@@ -172,8 +177,11 @@ this in the responsive design section.
 ### Related information
 {: .related-items--title}
 
-* [Using images effectively]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html)
-* [Optimizing images 101]({{site.baseurl}}/the-essentials/optimizing-performance/optimizing-content-efficiency/index.html#image-compression-101)
+Discover the best practices for using images in your content
+
+*  [Using images effectively]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html)
+*  [Correct use of images in markup]({site.baseurl}}/the-essentials/introduction-to-media/images/index.html#images-in-markup)
+*  [Optimizing images 101]({{site.baseurl}}/the-essentials/optimizing-performance/optimizing-content-efficiency/index.html#image-compression-101)
 {: .list--links}
 
 </div>
@@ -186,14 +194,14 @@ this in the responsive design section.
 The final section is a simple table that is used to show specific product stats
 about the product.
 
-Tables should only be used for tabular data, i.e, matrixes of information.
+Tables should only be used for tabular data, i.e, matrices of information.
 
 {% include_code _code/addcontent.html section3 %}
 
 ### Add a Footer
 
 Most sites need a footer to display content such as Terms and Conditions,
-disclaimers and other content that is not meant to be in the main navigation nor in the main conentent area of the page.  
+disclaimers and other content that is not meant to be in the main navigation nor in the main content area of the page.  
 
 In our site we will just link to Terms and Conditions, a Contact page and 
 our social media profiles.

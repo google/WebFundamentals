@@ -9,8 +9,8 @@ match the user's input type; users pick a date in a calendar. Keep your user
 informed. Validation tools should tell the user what they need to do before
 submitting the form."
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-04-30
+  updated_on: 2014-04-30
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
