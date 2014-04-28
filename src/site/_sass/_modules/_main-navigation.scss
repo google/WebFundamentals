@@ -14,12 +14,6 @@
   background: #ffffff;
   position: relative;
 
-  @include small-only {
-    .js & {
-      display: none;
-    }
-  }
-
   @include medium {
     background-color: $colorGrayDark;
   }
@@ -28,6 +22,16 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+
+  @include small-only {
+    .js & {
+      display: none;
+    }
+
+    .js &.nav-is-opened {
+      display: block;
+    }
+  }
 
   @include medium {
     text-align: center;
@@ -49,7 +53,7 @@
       display: none;
     }
 
-    &.is-opened,
+    &.subnav-is-opened,
     .no-touch &:hover {
       background: #ffffff;
     }
@@ -159,7 +163,7 @@
   }
 
   .no-touch li:hover &,
-  .is-opened & {
+  .subnav-is-opened & {
     display: block;
   }
 }
@@ -191,4 +195,22 @@
 
 .main-nav__featured-text {
   padding-top: 0;
+}
+
+
+.main-nav__btn {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-top: -($lineHeight + $lineHeight/2);
+
+  background: transparent;
+  color: #ffffff;
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+
+  @include medium {
+    display: none;
+  }
 }
