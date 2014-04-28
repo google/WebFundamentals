@@ -17,25 +17,28 @@
   removeClass(html, 'no-js');
   addClass(html, 'js');
 
-  toggleDocumentationMenu();
-
   if (isTouch()) {
-    toggleMainNav();
+    removeClass(html, 'no-touch');
+    addClass(html, 'is-touch');
   }
+
+  toggleDocumentationMenu();
+  toggleMainNav();
 
   function toggleDocumentationMenu() {
     var navBtn = document.querySelector('.main-nav__btn');
     var navList = document.querySelector('.main-nav__list');
+    var navIsOpenedClass = 'nav-is-opened';
     var navListIsOpened = false;
 
     navBtn.addEventListener('click', function (event) {
       event.preventDefault();
 
       if (!navListIsOpened) {
-        addClass(navList, 'nav-is-opened');
+        addClass(navList, navIsOpenedClass);
         navListIsOpened = true;
       } else {
-        removeClass(navList, 'nav-is-opened');
+        removeClass(navList, navIsOpenedClass);
         navListIsOpened = false;
       }
     });
@@ -44,20 +47,18 @@
   function toggleMainNav() {
     var documentationItem = document.querySelector('.main-nav__item--documentation');
     var documentationLink = document.querySelector('.main-nav__item--documentation > .main-nav__link');
+    var documentationIsOpenedClass = 'subnav-is-opened';
     var documentationIsOpened = false;
-
-    removeClass(html, 'no-touch');
-    addClass(html, 'is-touch');
 
     documentationLink.addEventListener('click', function (event) {
       event.preventDefault();
 
       if (!documentationIsOpened) {
         documentationIsOpened = true;
-        addClass(documentationItem, 'subnav-is-opened');
+        addClass(documentationItem, documentationIsOpenedClass);
       } else {
         documentationIsOpened = false;
-        removeClass(documentationItem, 'subnav-is-opened');
+        removeClass(documentationItem, documentationIsOpenedClass);
       }
 
     });

@@ -271,6 +271,22 @@ module.exports = function(grunt) {
 			}
 		},
 
+    webfont: {
+      icons: {
+        src: '<%= config.source %>/icons/*.svg',
+        dest: '<%= config.source %>/icons',
+        destCss: '<%= config.source %>/_sass/_components',
+        options: {
+          stylesheet: 'scss',
+          relativeFontPath: '../icons',
+          htmlDemo: false,
+          templateOptions: {
+            classPrefix: 'icon-'
+          }
+        }
+      }
+    },
+
 		watch: {
 			// When styles change, recompile them
 			styles: {
@@ -400,6 +416,7 @@ module.exports = function(grunt) {
 		return grunt.task.run([
 			'clean:destination',
 			'jekyll:destination',
+      'webfont:icons',
 			'compass:uncompressed',
 			'open:index',
 			'connect:destination-source',
