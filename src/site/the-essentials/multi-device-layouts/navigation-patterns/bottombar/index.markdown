@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Bottom Bar"
-description: "<img class=\"g-medium--full g-wide--full\" src=\"bottombar/images/bottombar.png\">If you are developing a web app and find that the number of actions a user can perform is more than the App Bar can handle, the best option is to overflow into a Bottom Bar."
+description: "<img class='g-medium--full g-wide--full' src='bottombar/images/bottombar.png'>If you are developing a web app and find that the number of actions a user can perform is more than the App Bar can handle, the best option is to overflow into a Bottom Bar."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
