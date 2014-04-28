@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Constructing the Object Model"
-description: "Before the browser can render content to the screen it needs to construct the DOM and CSSOM trees."
-introduction: "Before the browser can render the page it needs to construct the DOM and CSSOM trees. Let's peek under the hood to see how this works and how we can measure and optimize this part of the process."
+description: "Before the browser can render content to the screen it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as fast as possible."
+introduction: "Before the browser can render the page it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as fast as possible."
 article:
   written_on: 2014-04-01
   updated_on: 2014-04-28
