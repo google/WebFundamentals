@@ -326,12 +326,12 @@ module.exports = function(grunt) {
 
 		if(strict) {
 			return grunt.task.run([
-				//'jshint:source'
+				'jshint:source'
 				// 'csslint:strict'
 			]);
 		} else {
 			return grunt.task.run([
-				//'jshint:source'
+				'jshint:source'
 				// 'csslint:lax'
 			]);
 		}
