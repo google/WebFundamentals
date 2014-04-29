@@ -57,7 +57,7 @@ We do this by making a decision on where to place our breakpoints &mdash; a poin
 where the layout and styles change &mdash; based on how the contents fits the
 screen-size.
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.make-responsive %}
+{% include modules/takeaway.liquid list=page.key-takeaways.make-responsive %}
 
 ## Add a viewport
 

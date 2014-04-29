@@ -85,7 +85,7 @@ content on. There are a number of tools that you can use in each browser that
 can help you.  Firefox has its inspector [link], IE has it's DevTools and Chrome
 has Developer tools.
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.test-page %}
+{% include modules/takeaway.liquid list=page.key-takeaways.test-page %}
 
 We are going to concentrate on using Chrome Developer Tools in this guide.  The
 Chrome DevTools let you inspect any aspect of a web-page in real-time and

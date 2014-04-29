@@ -27,7 +27,7 @@ The Navigation Drawer is a slide in panel which is primarily used for displaying
 
 A user accesses the drawer using a menu button at the top of the screen in the App Bar.
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.navigation-drawer %}
+{% include modules/takeaway.liquid list=page.key-takeaways.navigation-drawer %}
 
 The key advantages of this approach is that the content can grow inside a scrolling element, allowing for larger site structures and it takes up a very small amount of screen real estate.
 

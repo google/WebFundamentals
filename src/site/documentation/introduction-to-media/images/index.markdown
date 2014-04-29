@@ -366,7 +366,7 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can
 download and display all the assets.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
+{% include modules/takeaway.liquid list=page.key-takeaways.optimize-images %}
 
 ### Choose the right format
 
