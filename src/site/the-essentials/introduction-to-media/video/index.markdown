@@ -93,6 +93,12 @@ users get the best possible experience on any device.
 
 Load, decode, and play video:
 
+<video controls>
+     <source src="video/chrome.webm" type="video/webm" />
+     <source src="video/chrome.mp4" type="video/mp4" />
+     <p>This browser does not support the video element.</p>
+</video>
+
 {% include_code _code/basic.html basic %}
 
 ### Specify a start and end time
