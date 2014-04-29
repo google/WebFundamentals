@@ -2,18 +2,18 @@
 layout: article
 title: "Make It Responsive"
 description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
-introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions.  Each device presents its own unique benefits and also constraints and as a web developer you are expected to support all ranges of devices."
+introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions. Each device presents its own unique benefits and also constraints. As a web developer, you are expected to support all ranges of devices."
 key-takeaways:
   make-responsive:
-    - Always use a viewport 
-    - Always start with a narrow viewport first and scale out
-    - Base your breakpoints off when you need to adapt the content
-    - Create a high-level vision of your layout across major breakpoints
+    - Always use a viewport. 
+    - Always start with a narrow viewport first and scale out.
+    - Base your breakpoints off when you need to adapt the content.
+    - Create a high-level vision of your layout across major breakpoints.
 notes:
   styling: 
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
   not-all-at-once:
-    - You don't have to move all the elements at once, you can make smaller adjustments if needed
+    - You don't have to move all the elements at once, you can make smaller adjustments if needed.
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
@@ -25,12 +25,10 @@ collection: multi-screen
 
 {% include modules/toc.liquid %}
 
-We are building a site that works across in multiple screen sizes and device
+We are building a site that works across multiple screen sizes and device
 types. In the [previous
-article]({{site.baseurl}}{{page.article.previous.url}}) we crafted the
-Infomration Architecture of the page and created a basic structure that we
-will now use to make work across all of our target screens and form-factors. 
-
+article]({{site.baseurl}}{{page.article.previous.url}}), we crafted the
+Information Architecture of the page and created a basic structure.
 In this guide, we will take our basic structure with content and turn it in to
 a beautiful page that is responsive across a large number of screen sizes.
 
@@ -45,14 +43,15 @@ a beautiful page that is responsive across a large number of screen sizes.
   </figure>
 </div>
 
-We are using the principles of Mobile First web development.  We start with a
-narrow viewport &mdash; similar to a mobile phone &mdash; and build for that
-experience first and start to scale up to larger device classes.  We can do 
-this by making our viewport wider and making a judgment call on whether the
-design and layout look right.
+Following the principles of Mobile First web development,
+we start with a narrow viewport &mdash; similar to a mobile phone &mdash;
+and build for that experience first.
+Then we scale up to larger device classes.
+We can do this by making our viewport wider and
+making a judgment call on whether the design and layout look right.
 
 Earlier we created a couple of different high-level designs for how our content
-should be displayed and now we need make our page adapt to those different layouts.
+should be displayed. Now we need make our page adapt to those different layouts.
 We do this by making a decision on where to place our breakpoints &mdash; a point
 where the layout and styles change &mdash; based on how the contents fits the
 screen-size.
@@ -61,8 +60,8 @@ screen-size.
 
 ## Add a viewport
 
-Even for a basic page you **must** always include a viewport meta tag.  The viewport
-is the most critical component you need for building mobile-first experiences.
+Even for a basic page, you **must** always include a viewport meta tag.
+The viewport is the most critical component you need for building multi-device experiences.
 Without it, your site will not work well on a mobile device.
 
 The viewport indicates to the browser that the page needs to be scaled to fit
@@ -111,27 +110,21 @@ of the page and it helps you ensure that you are consistent through out the desi
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
 
-#### Typography
-
-
-
-
-
 ### Add stylistic images
 
-In the previous guide we added images called "content images".  These were
+In the previous guide, we added images called "content images".  These were
 images that were important to the narrative of our product.  Stylistic images
 are images that are not needed as part of the core content but add visual flare
-or help guide the readers attention to a specific piece of content.
+or help guide the user's attention to a specific piece of content.
 
 A good example of this is a headline image for the 'above the fold' content.  It
-is often used to entice the user in to reading more about the product.
+is often used to entice the user to read more about the product.
 
 <div class="g-wide--2 g-wide--last g-medium--half g--last">
   <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
 </div>
 
-They can be very simple to include, in our case it will be the background to the 
+They can be very simple to include. In our case, it will be the background to the 
 header and we will apply it via some simple CSS.
 
 {% highlight css %}  
@@ -152,7 +145,7 @@ always stretches whilst maintaining the correct aspect ratio.
 
 ## Set your first breakpoint
 
-The design starts to look bad at about 600px wide.  In our case the length of
+The design starts to look bad at about 600px wide.  In our case, the length of
 the line is going above 10 words (the optimal reading length) and that is
 where we want to change it.
 
@@ -181,14 +174,14 @@ content can be displayed.
 
 {% include modules/remember.liquid title="Note" list=page.notes.not-all-at-once %}
 
-In the context of our product page it looks like we will
+In the context of our product page, it looks like we will
 need to:
 
-*  Constrain the maximum width of the design
-*  Alter the padding of elements and reduce the text size
-*  Move the form to float in-line with the heading content
-*  Make the video float around the content
-*  Reduce the size of the images and have them appear in a nicer grid
+*  Constrain the maximum width of the design.
+*  Alter the padding of elements and reduce the text size.
+*  Move the form to float in-line with the heading content.
+*  Make the video float around the content.
+*  Reduce the size of the images and have them appear in a nicer grid.
 
 <div class="related-items">
 <div class="related-items">
@@ -211,7 +204,7 @@ Learn more about how and where to use Media Queries:
 ## Constrain the maximum width of the design
 
 We have chosen to have only two major layouts: a narrow viewport and a wide
-viewport which greatly simplifies our build process.
+viewport, which greatly simplifies our build process.
 
 We have also decided to create full-bleed sections on the narrow viewport that
 stay full-bleed on the wide viewport.  This means we should constrain the
@@ -219,9 +212,9 @@ maximum width of the screen so that the text and paragraphs don't extend in to o
 long single line on ultra wide screens.  We have chosen this point to be 
 about 800px.
 
-To achieve this we need to constrain the width and center the elements.  We
+To achieve this, we need to constrain the width and center the elements.  We
 need  to create a container around each major section and apply a `margin:
-auto`.   This will allow the screen to grow but the content remain centered
+auto`.  This will allow the screen to grow but the content remain centered
 and at a maximum size of 800px.
 
 The container will be a simple `div` in the following form:
@@ -234,16 +227,16 @@ The container will be a simple `div` in the following form:
 
 ## Alter the padding and reduce text size
 
-On the narrow viewport we don't have a lot of space to display content so
+On the narrow viewport, we don't have a lot of space to display content so
 the size and weight of the typography is often drastically reduced to fit the
 screen.
 
-With a larger viewport we need to consider that the user is more likely to be
+With a larger viewport, we need to consider that the user is more likely to be
 on a larger screen but further away.  To increase the readability of the
-content we can increase the size and weight of the typography and we can also
+content, we can increase the size and weight of the typography and we can also
 alter the padding to make distinct areas stand out more.
 
-In our product page we will increase the padding of the section elements by 
+In our product page, we will increase the padding of the section elements by 
 setting it to remain at 5% of the width.  We will also increase the size of
 the headers for each of the sections.
 
@@ -255,20 +248,20 @@ Our narrow viewport was a stacked linear display.  Each major section and the co
 inside them was displayed in order from top to bottom.
 
 A wide viewport gives us extra space to use to display the content in an optimal way
-for that screen.  For our product page this means that according to our IA we can:
+for that screen.  For our product page, this means that according to our IA we can:
 
-*  move the form around the header information
-*  position the video to the right of the key points
-*  tile the images
-*  expand the table.
+*  Move the form around the header information.
+*  Position the video to the right of the key points.
+*  Tile the images.
+*  Expand the table.
 
 ### Float the Form element
 
 The narrow viewport means that we have a lot less horizontal space available for
 us to comfortably position elements on the screen.
 
-To make more effective use of the horizontal screen space we need to break out
-of the  the linear flow of the header and move the form and the list to be next
+To make more effective use of the horizontal screen space, we need to break out
+of the  the linear flow of the header and move the form and list to be next
 to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
@@ -285,15 +278,18 @@ to each other.
 
 ### Float the Video element
 
-The video in the narrow viewport interface is designed  be  the full width of
-the screen and positioned after the list of key features.  On a wide viewport
-the  video will scale up to be too large and not look correct when placed next
+The video in the narrow viewport interface is designed  to be the full width of
+the screen and positioned after the list of key features. On a wide viewport,
+the video will scale up to be too large and look incorrect when placed next
 to our list of features.
 
 The video element needs to be moved out of the vertical flow of the narrow
-viewport and should be display side by side with the bulleted list of content.
+viewport and should be displayed side-by-side with the bulleted list of content.
+
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
+
+[TODO: waiting on final video]
 
 ### Tile the Images
 
@@ -301,7 +297,7 @@ The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen and stacked vertically.  This doesn't scale
 well on a wide viewport.
 
-To make the images look correct on the a wide viewport they are scaled to 30%
+To make the images look correct on the a wide viewport, they are scaled to 30%
 of the container width and laid out horizontally (rather than vertically in
 the narrow view). We will also add some border radius and box-shadow to make
 the images look more appealing.
@@ -312,16 +308,16 @@ the images look more appealing.
 
 ### Make images responsive to DPI
 
-When using images a web developer now also needs to take not only the size of
-the viewport in to consideration but the density of the display.
+When using images, a web developer needs to take the size of
+the viewport and the density of the display into consideration.
 
-The web was built for 96dpi screens.  With the introduction of mobile devices
+The web was built for 96dpi screens.  With the introduction of mobile devices,
 we have seen a huge increase in the pixel density of screens not to mention
 Retina class displays on laptops.  As such, images that are encoded to 96dpi
 often look terrible on a hi-dpi device.
 
 We have a solution that is not widely adopted yet but for browsers that
-support it let you display a high density image on a high density display.
+support it, you can display a high density image on a high density display.
 
 {% highlight html %}
 <img src="photo.png" srcset="photo@2x.png 2x" />  
@@ -336,7 +332,7 @@ support it let you display a high density image on a high density display.
 
 Learn how to effectively use images for varying screen densities:
 
-* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [Enhance imgs with srcset for high DPI devices]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
 * [Use media queries to provide high res images or art direction]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction)
 {: .list--links}
 
@@ -361,7 +357,7 @@ and transposing the cells in a row to make the columnar.
   </p>
 </video>
 
-In our site we have had to create an extra breakpoint just for the table
+In our site, we have had to create an extra breakpoint just for the table
 content.  We have done this to isolate because we built for a mobile device
 first it is harder to undo applied styles, so we must section off the narrow
 viewport table CSS from the wide viewport css.  This gives us a clear and
