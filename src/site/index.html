@@ -20,7 +20,8 @@ class: home
     {% for guide in page.articles.the-essentials %}
     <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
       <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
-      <a href="#" class="cta--secondary">Get started</a>
+      <p>{{guide.snippet}}</p>
+      <a href="{{site.baseurl}}{{guide.url}}" class="cta--secondary">Get started</a>
     </li>
     {% endfor %}
   </ul>

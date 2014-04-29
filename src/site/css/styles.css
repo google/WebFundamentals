@@ -2769,15 +2769,35 @@ ol.list--variant li a:before {
 .centered-list {
   text-align: center;
 }
+<<<<<<< HEAD
 
 /*==========  FEATURED LIST  ==========*/
 /* line 104, ../_sass/_components/_list.scss */
+=======
+/* line 101, ../_sass/_components/_list.scss */
+.centered-list p {
+  padding-bottom: 26px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 101, ../_sass/_components/_list.scss */
+  .centered-list p {
+    padding-bottom: 0;
+  }
+}
+
+/*==========  FEATURED LIST  ==========*/
+/* line 110, ../_sass/_components/_list.scss */
+>>>>>>> develop
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
+<<<<<<< HEAD
 /* line 109, ../_sass/_components/_list.scss */
+=======
+/* line 115, ../_sass/_components/_list.scss */
+>>>>>>> develop
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2786,22 +2806,38 @@ ol.list--variant li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
+<<<<<<< HEAD
   /* line 109, ../_sass/_components/_list.scss */
+=======
+  /* line 115, ../_sass/_components/_list.scss */
+>>>>>>> develop
   .featured-list__item {
     min-height: 338px;
     padding: 52px 32px;
   }
 }
+<<<<<<< HEAD
 /* line 122, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
 /* line 126, ../_sass/_components/_list.scss */
+=======
+/* line 128, ../_sass/_components/_list.scss */
+.featured-list__item:first-child {
+  margin-top: 0;
+}
+/* line 132, ../_sass/_components/_list.scss */
+>>>>>>> develop
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
+<<<<<<< HEAD
 /* line 131, ../_sass/_components/_list.scss */
+=======
+/* line 137, ../_sass/_components/_list.scss */
+>>>>>>> develop
 .featured-list__img-wrapper {
   display: none;
   position: relative;
@@ -2809,7 +2845,11 @@ ol.list--variant li a:before {
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
+<<<<<<< HEAD
   /* line 131, ../_sass/_components/_list.scss */
+=======
+  /* line 137, ../_sass/_components/_list.scss */
+>>>>>>> develop
   .featured-list__img-wrapper {
     display: block;
     padding-top: 0;
@@ -2818,7 +2858,11 @@ ol.list--variant li a:before {
 }
 
 @media only screen and (min-width: 620px) {
+<<<<<<< HEAD
   /* line 144, ../_sass/_components/_list.scss */
+=======
+  /* line 150, ../_sass/_components/_list.scss */
+>>>>>>> develop
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -2828,14 +2872,22 @@ ol.list--variant li a:before {
     width: 100%;
   }
 }
+<<<<<<< HEAD
 /* line 155, ../_sass/_components/_list.scss */
+=======
+/* line 161, ../_sass/_components/_list.scss */
+>>>>>>> develop
 .featured-list__img img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
+<<<<<<< HEAD
   /* line 155, ../_sass/_components/_list.scss */
+=======
+  /* line 161, ../_sass/_components/_list.scss */
+>>>>>>> develop
   .featured-list__img img {
     margin: 0;
     position: absolute;
