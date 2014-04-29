@@ -144,33 +144,33 @@ the users name, email address and phone number, you should use:
 
 ### Recommended input `name` and `autocomplete` attribute values
 
-<table class="table autocompletes">
+<table class="table--3 autocompletes">
   <thead>
     <tr>
-      <th>Content type</th>
-      <th><code>name</code> attribute</th>
-      <th><code>autocomplete</code> attribute</th>
+      <th data-th="Content type">Content type</th>
+      <th data-th="name attribute"><code>name</code> attribute</th>
+      <th data-th="autocomplete attribute"><code>autocomplete</code> attribute</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Name</td>
-      <td>
+      <td data-th="Content type">Name</td>
+      <td data-th="name attribute">
         <code>name</code>
         <code>fname</code>
         <code>mname</code>
         <code>lname</code>
       </td>
-      <td><code>name</code></td>
+      <td data-th="autocomplete attribute"><code>name</code></td>
     </tr>
     <tr>
-      <td>Email</td>
-      <td><code>email</code></td>
-      <td><code>email</code></td>
+      <td data-th="Content type">Email</td>
+      <td data-th="name attribute"><code>email</code></td>
+      <td data-th="autocomplete attribute"><code>email</code></td>
     </tr>
     <tr>
-      <td>Address</td>
-      <td>
+      <td data-th="Content type">Address</td>
+      <td data-th="name attribute">
         <code>address</code>
         <code>city</code>
         <code>region</code>
@@ -181,7 +181,7 @@ the users name, email address and phone number, you should use:
         <code>postal</code>
         <code>country</code>
       </td>
-      <td>
+      <td data-th="autocomplete attribute">
         <code>street-address</code>
         <code>locality</code>
         <code>region</code>
@@ -190,8 +190,8 @@ the users name, email address and phone number, you should use:
       </td>
     </tr>
     <tr>
-      <td>Phone</td>
-      <td>
+      <td data-th="Content type">Phone</td>
+      <td data-th="name attribute">
         <code>phone</code>
         <code>mobile</code>
         <code>country-code</code>
@@ -200,11 +200,11 @@ the users name, email address and phone number, you should use:
         <code>suffix</code>
         <code>ext</code>
       </td>
-      <td><code>tel</code></td>
+      <td data-th="autocomplete attribute"><code>tel</code></td>
     </tr>
     <tr>
-      <td>Credit Card</td>
-      <td>
+      <td data-th="Content type">Credit Card</td>
+      <td data-th="name attribute">
         <code>ccname</code>
         <code>cardnumber</code>
         <code>cvc</code>
@@ -213,7 +213,7 @@ the users name, email address and phone number, you should use:
         <code>exp-date</code>
         <code>card-type</code>
       </td>
-      <td>
+      <td data-th="autocomplete attribute">
         <code>cc-name</code>
         <code>cc-number</code>
         <code>cc-csc</code>
@@ -223,7 +223,7 @@ the users name, email address and phone number, you should use:
         <code>cc-type</code>
       </td>
     </tr>
-</tbody>
+  </tbody>
 </table>
 
 The `autocomplete` attributes should be prefixed with either `shipping` or `billing`, depending on the context.
@@ -264,121 +264,121 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<table class="table inputtypes">
+<table class="table--2 inputtypes">
   <thead>
     <tr>
-      <th>Input <code>type</code></th>
-      <th>Typical Keyboard</th>
+      <th data-th="Input type">Input <code>type</code></th>
+      <th data-th="Typical keyboard">Typical Keyboard</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>url</code><br> For entering a URL. It must start with a valid URI scheme,
         for example <code>http://</code>, <code>ftp://</code> or <code>mailto:</code>.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/url-ios.png" srcset="imgs/url-ios.png 1x, imgs/url-ios-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>tel</code><br>For entering phone numbers. It does <b>not</b>
         enforce a particular syntax for validation, so if you want to ensure
         a particular format, you can use pattern.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/tel-android.png" srcset="imgs/tel-android.png 1x, imgs/tel-android-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>email</code><br>For entering email addresses, and hints that
         the @ should be shown on the keyboard by default. You can add the
         multiple attribute if more than one email address will be provided.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/email-android.png" srcset="imgs/email-android.png 1x, imgs/email-android-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>search</code><br>A text input field styled in a way that is
         consistent with the platform's search field.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/plain-ios.png" srcset="imgs/plain-ios.png 1x, imgs/plain-ios-2x.png 2x" class="keybimg">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>number</code><br>For numeric input, can be any rational
         integer or float value.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/number-android.png" srcset="imgs/number-android.png 1x, imgs/number-android-2x.png 2x" class="keybimg">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>range</code><br>For number input, but unlike the number input
         type, the value is less important. It is displayed to the user as a
         slider control.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/range-ios.png">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>datetime-local</code><br>For entering a date and time value
         where the time zone provided is the local time zone.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/datetime-local-ios.png" srcset="imgs/datetime-local-ios.png 1x, imgs/datetime-local-ios-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>date</code><br>For entering a date (only) with no time zone
         provided.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/date-android.png" srcset="imgs/date-android.png 1x, imgs/date-android-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>time</code><br>For entering a time (only) with no time zone
         provided.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/time-ios.png" srcset="imgs/time-ios.png 1x, imgs/time-ios-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>week</code><br>For entering a week (only) with no time zone
         provided.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/week-android.png" srcset="imgs/week-android.png 1x, imgs/week-android-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>month</code><br>For entering a month (only) with no time zone
         provided.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/month-ios.png" srcset="imgs/month-ios.png 1x, imgs/month-ios-2x.png 2x">
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Input type">
         <code>color</code><br>For picking a color.
       </td>
-      <td>
+      <td data-th="Typical keyboard">
         <img src="imgs/color-android.png" srcset="imgs/color-android.png 1x, imgs/color-android-2x.png 2x">
       </td>
     </tr>
@@ -423,37 +423,37 @@ this:
 
 ##### Common regular expression patterns
 
-<table class="table tc-heavyright">
+<table class="table--2 tc-heavyright">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Regular Expression</th>
+      <th data-th="Description">Description</th>
+      <th data-th="Regular expression">Regular expression</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Postal address</td>
-      <td><code>[a-zA-Z\d\s\-\,\#\.\+]+</code></td>
+      <td data-th="Description">Postal address</td>
+      <td data-th="Regular expression"><code>[a-zA-Z\d\s\-\,\#\.\+]+</code></td>
     </tr>
     <tr>
-      <td>Zip Code (US)</td>
-      <td><code>^\d{5,6}(?:[-\s]\d{4})?$</code></td>
+      <td data-th="Description">Zip Code (US)</td>
+      <td data-th="Regular expression"><code>^\d{5,6}(?:[-\s]\d{4})?$</code></td>
     </tr>
     <tr>
-      <td>IP Address</td>
-      <td><code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code></td>
+      <td data-th="Description">IP Address</td>
+      <td data-th="Regular expression"><code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code></td>
     </tr>
     <tr>
-      <td>Credit Card Number</td>
-      <td><code>^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$</code></td>
+      <td data-th="Description">Credit Card Number</td>
+      <td data-th="Regular expression"><code>^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$</code></td>
     </tr>
     <tr>
-      <td>Social Security Number</td>
-      <td><code>^\d{3}-\d{2}-\d{4}$</code></td>
+      <td data-th="Description">Social Security Number</td>
+      <td data-th="Regular expression"><code>^\d{3}-\d{2}-\d{4}$</code></td>
     </tr>
     <tr>
-      <td>North American Phone Number</td>
-      <td><code>^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$</code></td>
+      <td data-th="Description">North American Phone Number</td>
+      <td data-th="Regular expression"><code>^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$</code></td>
     </tr>
   </tbody>
 </table>
@@ -515,29 +515,29 @@ a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:
 
-<table class="table tc-heavyright">
+<table class="table--2 tc-heavyright">
   <thead>
     <tr>
-      <th>API</th>
-      <th>Description</th>
+      <th data-th="API">API</th>
+      <th data-th="Description">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>setCustomValidity()</code></td>
-      <td>Sets a custom validation message and the <code>customError</code> property of the <code>ValidityState</code> object to <code>true</code>.</td>
+      <td data-th="API"><code>setCustomValidity()</code></td>
+      <td data-th="Description">Sets a custom validation message and the <code>customError</code> property of the <code>ValidityState</code> object to <code>true</code>.</td>
     </tr>
     <tr>
-      <td><code>validationMessage</code></td>
-      <td>Returns a string with the reason the input failed the validation test.</td>
+      <td data-th="API"><code>validationMessage</code></td>
+      <td data-th="Description">Returns a string with the reason the input failed the validation test.</td>
     </tr>
     <tr>
-      <td><code>checkValidity()</code></td>
-      <td>Returns <code>true</code> if the element satisfies all of it's constraints, and <code>false</code> otherwise.</td>
+      <td data-th="API"><code>checkValidity()</code></td>
+      <td data-th="Description">Returns <code>true</code> if the element satisfies all of it's constraints, and <code>false</code> otherwise.</td>
     </tr>
     <tr>
-      <td><code>validity</code></td>
-      <td>Returns a <code>ValidityState</code> object representing the validity states of the element.</td>
+      <td data-th="API"><code>validity</code></td>
+      <td data-th="Description">Returns a <code>ValidityState</code> object representing the validity states of the element.</td>
     </tr>
   </tbody>
 </table>
@@ -567,37 +567,37 @@ the user has completed the form properly before they've submitted the form.
 HTML5 also introduces a number of new pseudo-classes that can be used to style
 inputs based on their value or attributes.
 
-<table class="table tc-heavyright">
+<table class="table--2 tc-heavyright">
   <thead>
     <tr>
-      <th>Pseudo-class</th>
-      <th>Use</th>
+      <th data-th="Pseudo-class">Pseudo-class</th>
+      <th data-th="Use">Use</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>:valid</code></td>
-      <td>Explicitly sets the style for an input to be used when the value meets all of the validation requirements.</td>
+      <td data-th="Pseudo-class"><code>:valid</code></td>
+      <td data-th="Use">Explicitly sets the style for an input to be used when the value meets all of the validation requirements.</td>
     </tr>
     <tr>
-      <td><code>:invalid</code></td>
-      <td>Explicitly sets the style for an input to be used when the value does not meet all of the validation requirements.</td>
+      <td data-th="Pseudo-class"><code>:invalid</code></td>
+      <td data-th="Use">Explicitly sets the style for an input to be used when the value does not meet all of the validation requirements.</td>
     </tr>
     <tr>
-      <td><code>:required</code></td>
-      <td>Explicitly sets the style for an input element that has the required attribute set.</td>
+      <td data-th="Pseudo-class"><code>:required</code></td>
+      <td data-th="Use">Explicitly sets the style for an input element that has the required attribute set.</td>
     </tr>
     <tr>
-      <td><code>:optional</code></td>
-      <td>Explicitly sets the style for an input element that does not have the required attribute set.</td>
+      <td data-th="Pseudo-class"><code>:optional</code></td>
+      <td data-th="Use">Explicitly sets the style for an input element that does not have the required attribute set.</td>
     </tr>
     <tr>
-      <td><code>:in-range</code></td>
-      <td>Explicitly sets the style for a number input element where the value is in range.</td>
+      <td data-th="Pseudo-class"><code>:in-range</code></td>
+      <td data-th="Use">Explicitly sets the style for a number input element where the value is in range.</td>
     </tr>
     <tr>
-      <td><code>:out-of-range</code></td>
-      <td>Explicitly sets the style for a number input element where the value is out of range.</td>
+      <td data-th="Pseudo-class"><code>:out-of-range</code></td>
+      <td data-th="Use">Explicitly sets the style for a number input element where the value is out of range.</td>
     </tr>
   </tbody>
 </table>

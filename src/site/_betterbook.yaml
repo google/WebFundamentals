@@ -1,0 +1,67 @@
+toc:
+- title: "Web Fundamentals"
+  path: /
+  home: true
+- title: "Getting Started"
+  path: /getting-started/your-first-multi-screen-site/index.html
+  section:
+    - title: "Create Your First Multi-screen Site"
+      path: /getting-started/your-first-multi-screen-site/
+- title: "Documentation"
+  path: /documentation/
+  section:
+    - title: "Multi-device layouts"
+      path: /documentation/multi-device-layouts/
+      id: "multi-device-layouts"
+      section:
+        - title: "Responsive Web Design Fundamentals"
+          path: /documentation/multi-device-layouts/rwd-fundamentals/
+        - title: "Responsive Web Design Patterns"
+          path: /documentation/multi-device-layouts/rwd-patterns/
+        - title: "Layout Patterns"
+          path: /documentation/multi-device-layouts/layout-patterns/
+        - title: "UI Elements"
+          path: /documentation/multi-device-layouts/ui-elements/
+    - title: "Forms and User Input"
+      path: /documentation/user-input/
+      id: user-input
+      section:
+      - title: "Touch Input"
+        path: /documentation/user-input/touch-input/
+      - title: "Form Input"
+        path: /documentation/user-input/form-input/
+    - title: "Images, Video and Audio"
+      path: /documentation/introduction-to-media/
+      id: introduction-to-media
+      section:
+      - title: "Images"
+        path: /documentation/introduction-to-media/images/
+      - title: "Video"
+        path: /documentation/introduction-to-media/video/
+      - title: "Audio"
+        path: /documentation/introduction-to-media/audio/
+    - title: Performance
+      path: /documentation/performance/
+      id: performance
+      section:
+        - title: "Critical Path Rendering"
+          path: /documentation/performance/critical-path-rendering/
+        - title: "Optimizing Content Efficiency"
+          path: /documentation/performance/optimizing-content-efficiency/
+        - title: "Optimizing Networking"
+          path: /documentation/performance/optimizing-networking/
+        - title: "Optimizing Interactivity"
+          path: /documentation/performance/optimizing-interactivity/
+        - title: "Measuring Performance"
+          path: /documentation/performance/measuring-performance/
+- title: Resources
+  path: /resources/
+  section:
+  - title: "Glossary"
+    path: /resources/glossary/
+  - title: "Samples"
+    path: /resources/samples/
+  - title: "Styleguide"
+    path: /resources/styleguide/
+  - title: "Example Article"
+    path: /resources/example-article/

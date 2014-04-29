@@ -106,3 +106,18 @@
 .centered {
   text-align: center;
 }
+
+
+/*==========  TAG  ==========*/
+.tag {
+  @include type--small;
+  font-family: $fontHighlight;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+
+  &:before {
+    content: "# ";
+    display: inline-block;
+  }
+}

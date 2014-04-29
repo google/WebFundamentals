@@ -36,6 +36,8 @@
 
   & a {
     display:  block;
+    position: relative;
+    padding-left: 39px;
 
     &:before {
       line-height: 26px;

@@ -57,7 +57,7 @@ element.
 
 ![Example GIF of touch on element](images/touch-element-level.gif)
 
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.touch-events %}
+{% include modules/takeaway.liquid list=page.key-takeaways.touch-events %}
 
 ### Add Event Listeners
 
@@ -342,7 +342,7 @@ Each touch event includes three list attributes:
       </td>
     </tr>
     <tr>
-      <td data-th="Attribute">changedTouches</td>
+      <td data-th="Attribute"><code>changedTouches</code></td>
       <td data-th="Description">
         List of touches which changed resulting in the event being fired:
         <ul>

@@ -1,6 +1,6 @@
 {% if site.include_open_html %}
 <!DOCTYPE html>
-<html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
+<html lang="en" class="no-js no-touch" itemscope itemtype="http://schema.org/Article">
   <head>
 {% endif %}
     {% include head.liquid %}
@@ -8,7 +8,7 @@
 
   <body class="{{ page.class }}">
     {% injectdata project _project.yaml %}
-    {% injectdata content _book.yaml %}
+    {% injectdata content _betterbook.yaml %}
 
     {% include google_header.html %}
 
@@ -20,9 +20,6 @@
     {% include footer.liquid %}
 
 		{% include scripts.liquid %}
-
-	</body>
-
 
 {% if site.include_open_html %}
   </body>

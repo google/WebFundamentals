@@ -12,7 +12,8 @@
 
 .articles-list__item {
 
-  padding-bottom: $lineHeight * 2 - 1;
+  padding-bottom: $lineHeight * 2;
+  &:last-child {padding-bottom: $lineHeight * 2 - 1}
   padding-left: 0;
 
   &:before {
@@ -27,6 +28,12 @@
 
     @include medium {
       padding-top: $lineHeight;
+    }
+  }
+
+  h3 {
+    a:hover {
+      text-decoration: none;
     }
   }
 

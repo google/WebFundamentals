@@ -19,7 +19,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="/web/essentials/resources/samples/documentation/ulti-device-layouts/navigation-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
+<a href="/web/essentials/resources/samples/documentation/multi-device-layouts/navigation-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -27,7 +27,7 @@ The Tab Bar can be used to quickly switch between the sections of your site.
 
 It's only appropriate for sites with a relatively small structure, but users find it easy to glance at where they are and where they can within your site.
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.tabs %}
+{% include modules/takeaway.liquid list=page.key-takeaways.tabs %}
 
 Limit the total number of tabs to five or less, otherwise each icon and tap target becomes too small and users will struggle to hit the right tab.
 

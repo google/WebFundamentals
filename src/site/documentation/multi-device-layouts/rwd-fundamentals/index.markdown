@@ -227,37 +227,37 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
 `max-height`.
 
 
-<table class="table">
+<table class="table--2">
   <thead>
     <tr>
-      <th>attribute</th>
-      <th>Result</th>
+      <th data-th="attribute">attribute</th>
+      <th data-th="Result">Result</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-    <td><code>min-width</code></td>
-    <td>Rules applied for any browser width over the value defined in the query.</td>
+      <td data-th="attribute"><code>min-width</code></td>
+      <td data-th="Result">Rules applied for any browser width over the value defined in the query.</td>
     </tr>
     <tr>
-    <td><code>max-width</code></td>
-    <td>Rules applied for any browser width under the value defined in the query.</td>
+      <td data-th="attribute"><code>max-width</code></td>
+      <td data-th="Result">Rules applied for any browser width under the value defined in the query.</td>
     </tr>
     <tr>
-    <td><code>min-height</code></td>
-    <td>Rules applied for any browser height over the value defined in the query.</td>
+      <td data-th="attribute"><code>min-height</code></td>
+      <td data-th="Result">Rules applied for any browser height over the value defined in the query.</td>
     </tr>
     <tr>
-    <td><code>max-height</code></td>
-    <td>Rules applied for any browser height under the value defined in the query.</td>
+      <td data-th="attribute"><code>max-height</code></td>
+      <td data-th="Result">Rules applied for any browser height under the value defined in the query.</td>
     </tr>
     <tr>
-    <td><code>orientation=portrait</code></td>
-    <td>Rules applied for any browser where the height is greater than or equal to the width.</td>
+      <td data-th="attribute"><code>orientation=portrait</code></td>
+      <td data-th="Result">Rules applied for any browser where the height is greater than or equal to the width.</td>
     </tr>
     <tr>
-    <td><code>orientation=landscape</code></td>
-    <td>Rules for any browser where the width is greater than the height.</td>
+      <td data-th="attribute"><code>orientation=landscape</code></td>
+      <td data-th="Result">Rules for any browser where the width is greater than the height.</td>
     </tr>
   </tbody>
 </table>

@@ -34,7 +34,7 @@ notes:
 
 <!-- {% include modules/toc.liquid %} -->
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.construct-object-model %}
+{% include modules/takeaway.liquid list=page.key-takeaways.construct-object-model %}
 
 ## Document Object Model (DOM)
 

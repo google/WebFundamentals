@@ -16,7 +16,9 @@
 
   @include medium {
     @include flexbox;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
@@ -29,7 +31,9 @@
 
   @include medium {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -41,15 +45,29 @@
     margin: $lineHeight 32px 0;
   }
 
-  ol {
-    margin: $lineHeight 0 0;
-    padding: $lineHeight*2 0 $lineHeight*2;
+  .secondary-content {
+    position: relative;
     background: darken($colorGrayBackground, 2%);
+    margin-top: $lineHeight*2;
 
     @include medium {
       width: 100%; // needed due to parent being flex
+      -webkit-align-self: flex-end;
       align-self: flex-end;
     }
+
+    .icon-circle {
+      position: absolute;
+      top: -$lineHeight;
+      left: 50%;
+      margin-left: -22px;
+    }
+  }
+
+  ol {
+    margin: $lineHeight 0 0;
+    padding: $lineHeight*2 0 $lineHeight*2;
+    margin-top: 0;
   }
 
   &:before {
