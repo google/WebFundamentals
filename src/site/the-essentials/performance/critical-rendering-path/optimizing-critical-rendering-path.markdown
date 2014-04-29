@@ -6,7 +6,7 @@ introduction: ""
 article:
   written_on: 2014-04-01
   updated_on: 2014-04-28
-  order: 6
+  order: 7
 collection: critical-rendering-path
 ---
 {% wrap content%}

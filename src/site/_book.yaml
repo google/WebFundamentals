@@ -45,15 +45,13 @@ toc:
       section:
         - title: "Critical Path Rendering"
           path: /the-essentials/performance/critical-path-rendering/
-        - title: "Optimizing content efficiency"
+        - title: "Optimizing Content Efficiency"
           path: /the-essentials/performance/optimizing-content-efficiency/
-        - title: "Resource cacheing"
-          path: /the-essentials/performance/resource-cacheing/
-        - title: "Optimizing networking"
+        - title: "Optimizing Networking"
           path: /the-essentials/performance/optimizing-networking/
-        - title: "Optimizing interactivity"
+        - title: "Optimizing Interactivity"
           path: /the-essentials/performance/optimizing-interactivity/
-        - title: "Measuring performance"
+        - title: "Measuring Performance"
           path: /the-essentials/performance/measuring-performance/
 - title: Resources
   path: /resources/
