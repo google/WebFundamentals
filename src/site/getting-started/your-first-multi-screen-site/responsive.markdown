@@ -159,9 +159,7 @@ where we want to change it.
 
 600px appears to be a good place to create our first breakpoint as it will give us scope
 to reposition elements to make them fit the screen better.  We can do this
-using a technology called [Media Queries](/web/essentials/the-essentials
-/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-
-responsiveness).
+using a technology called [Media Queries]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness).
 
 {% highlight css %}
 @media (min-width: 600px) {
