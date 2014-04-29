@@ -318,7 +318,7 @@ support) whereas Safari chooses `chrome.mp4`.
 
 ## Size videos correctly
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.size-videos-correctly %}
+{% include modules/takeaway.liquid list=page.key-takeaways.size-videos-correctly %}
 
 ### Size matters
 

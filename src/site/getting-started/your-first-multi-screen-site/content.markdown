@@ -29,7 +29,7 @@ such as text, video and images for a narrow viewport (mobile) experience and
 before we then move on to  work out how we make it responsive across larger
 screens.
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.content-critical %}
+{% include modules/takeaway.liquid list=page.key-takeaways.content-critical %}
 
 We believe that the content is the most important aspect of any site. So let's
 design for the content and not let the design dictate the content.  In this

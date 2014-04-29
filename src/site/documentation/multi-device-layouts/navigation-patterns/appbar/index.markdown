@@ -27,7 +27,7 @@ One expectation users will make when they land on your site is that your site's 
 
 Traditionally the web has used page headers for this. On mobile devices use the App Bar.
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.app-bar %}
+{% include modules/takeaway.liquid list=page.key-takeaways.app-bar %}
 
 The App Bar consists of three elements.
 
