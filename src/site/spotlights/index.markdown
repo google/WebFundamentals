@@ -19,7 +19,7 @@ description: ""
 {% endfor %}
 
 {% else %}
-# Comming Soon
+# Coming Soon
 
 Thanks for visiting.  We currently don't have any content here.
 
