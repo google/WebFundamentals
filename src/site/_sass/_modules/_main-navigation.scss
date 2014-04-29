@@ -157,6 +157,7 @@
   @include medium {
     color: $colorText;
     border-bottom-color: transparent;
+    padding-left: 0;
 
     // Only override links inside list
     .main-nav__list--child & {
@@ -235,3 +236,45 @@
     display: none;
   }
 }
+
+
+/*==========  ICONS  ==========*/
+.main-nav__icon {
+  float: right;
+  font-size: $fontBase;
+  line-height: $lineHeight;
+  vertical-align: middle;
+
+  @include medium {
+    display: none;
+    font-size: $fontSmall;
+  }
+}
+
+.icon-custom {
+  &:before {
+    @extend .icon-plus:before;
+
+    @include medium {
+      content:"\e001"; // Took this from _icons.scss - not great, I know.
+    }
+  }
+
+  @include medium {
+    float: none;
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .subnav-is-opened & {
+    &:before {
+      @extend .icon-minus:before;
+
+      @include medium {
+        content:"\e004"; // Same as above
+      }
+    }
+  }
+}
+

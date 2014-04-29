@@ -14,12 +14,13 @@
 .icon-circle--large {
   height: 0;
   width: 0;
-  padding: 22px; // Breaks baseline grid - need a solution
+  padding: 22px; // Breaks baseline grid
+  margin: 4px auto; // Adds margin top/bottom to fix baseline grid ;)
   background: $colorGray;
   display: block;
   position: relative;
   border-radius: 100%;
-  font-size: $fontLarge;
+  font-size: 0;
 
   i {
     position: absolute;
@@ -29,10 +30,16 @@
     left: 0;
     text-align: center;
     color: #ffffff;
+    font-size: $fontLarge;
   }
 }
 
 .icon-circle--large {
   padding: $lineHeight + $lineHeight/2;
-  font-size: $fontXLarge;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  i {
+    font-size: $fontXLarge;
+  }
 }

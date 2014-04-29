@@ -40,7 +40,16 @@ ol {
   > li {
     @include numbered-list;
     position: relative;
-    padding-left: 39px;
+    padding-left: 32px;
+
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
+    &:nth-child(10n) ~ li:before,
+    &:nth-child(10n):before {
+      content: counter(list);
+    }
+
   }
 }
 
@@ -78,17 +87,25 @@ ol.list--links {
     }
 
     a {
-      display: block;
+      display: inline-block;
       @include numbered-list;
-      // line-height: 1; // fixes baseline grid alignment
+    }
+
+    &:nth-child(10n) ~ li a:before,
+    &:nth-child(10n) a:before {
+      content: counter(list);
     }
   }
 }
 
 ol.list--variant {
+  @include type--small;
+  padding-top: 0;
   li {
     a:before {
-      content: "> 0" counter(list);
+      content: "\e002  0" counter(list);
+      font-family: $fontIcon;
+      font-size: 13px;
     }
   }
 }
@@ -171,8 +188,9 @@ ol.list--variant {
 /*==========  RELATED GUIDES LIST  ==========*/
 .related-guides-list {
   font-family: $fontHighlight;
-  padding-top: $lineHeight;
-  @include medium {padding-top: 0}
+  padding-top: 0;
+  @include medium {padding-top: $lineHeight}
+  @include wide {padding-top: 0}
 
   p {
     padding-top: 0;
