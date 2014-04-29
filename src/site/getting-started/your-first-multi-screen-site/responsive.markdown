@@ -286,10 +286,7 @@ to our list of features.
 The video element needs to be moved out of the vertical flow of the narrow
 viewport and should be displayed side-by-side with the bulleted list of content.
 
-
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
-
-[TODO: waiting on final video]
 
 ### Tile the Images
 
