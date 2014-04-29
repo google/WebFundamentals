@@ -360,19 +360,21 @@
       counter-increment: list;
       content: "0" counter(list);
       color: inherit;
-      font-weight: 600;
+      font-family: $fontHighlight;
+      font-weight: 700;
       display: inline-block;
       position: absolute;
-      top: 0;
       left: 0;
     }
   }
 
   // Mixin to create links
   @mixin style-cta($textColor, $icon: false) {
+    font-family: $fontHighlight;
     color: $textColor;
-    font-weight: 600;
+    font-weight: 400;
     display: inline-block;
+    line-height: 1;
 
     &:hover {
       color: $colorGrayDark;
@@ -384,7 +386,6 @@
         padding-right: 10px;
         font-family: $fontIcon;
         line-height: $lineHeight;
-        vertical-align: top;
         font-size: $fontSmall;
         @extend .#{$icon}:before;
       }

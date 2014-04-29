@@ -89,6 +89,8 @@ ol.list--links {
     a {
       display: inline-block;
       @include numbered-list;
+      font-family: $fontHighlight;
+      font-weight: 300;
       line-height: 1; // reset to baseline from inline-block
     }
 
@@ -99,7 +101,7 @@ ol.list--links {
   }
 }
 
-ol.list--variant {
+ol.list--variation {
   @include type--small;
   padding-top: 0;
   li {
