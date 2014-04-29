@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- // [TEMPLATE header_full] -->
+	<title>Video Element: scripted playback</title>
+  <style>
+    /* // [START styling] */
+    button {
+        display: block;
+    }
+    video {
+        margin: 0 0 20px 0;
+    }
+    video {
+        width: 600px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        video {
+            max-width: 100%;
+            width: auto;
+        }
+    }
+    /* // [END styling] */
+    </style>
+</head>
+<body>
+<div id="container" role="main">
+
+  <h1>Video Element: scripted playback</h1>
+
+  <video controls>
+    <source src="chrome.mp4" type="video/mp4;" />
+    <source src="chrome.webm" type="video/webm" />
+    <p>This browser does not support the video element.</p>
+  </video>
+
+  <button>Play</button>
+
+  <script>
+  var button = document.querySelector('button');
+  var video = document.querySelector('video');
+
+  button.onclick = function(){
+    if (video.paused) {
+      video.play();
+      button.textContent = 'Pause';
+    } else {
+      video.pause();
+      button.textContent = 'Play'
+    }
+  }
+
+  video.onplay = function(){
+    button.textContent = 'Pause';
+  }
+
+  </script>
+
+
+</div>
+<!-- // [TEMPLATE footer] -->
+</body>
+</html>
