@@ -23,16 +23,17 @@ collection: resources
   * Should start with "ing" verb
   * Good: "Handling User Input Across Devices"
   * Bad: "Input handling"
+  * For hyphenated words, capitalize as if the hyphens weren't there, e.g. "Multi-Device" and "Peer-to-Peer"
 
 ### Headlines within articles
   * Sentence case for headlines in articles: "Use placeholders"
 
 ## Linking to external articles
   * Related reading to our articles: Add them in 
-  * Related reading to external: Use only when necessary.
+  * Related reading to external: Use only when necessary
 
 ## "Mobile" vs. "multi-device" vs "multi-screen" vs "mobile-only" vs "mobile-first"
-  * Use "multi-device" for consistency expect when a different term is needed for precision.
+  * Use "multi-device" for consistency expect when a different term is needed for precision
 
 ## Article length
   * _need content here_
