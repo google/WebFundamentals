@@ -7,7 +7,7 @@ introduction: "People like videos: videos can be fun and informative; users can 
                on the go easier than having to read small fonts and scroll down a page on a mobile device."
 article:
   written_on: 2014-04-16
-  updated_on: 2014-04-23
+  updated_on: 2014-04-29
   order: 2
 collection: introduction-to-media
 key-takeaways:
@@ -55,6 +55,9 @@ remember:
     - The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href="//caniuse.com/track" title="Track element support status">caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
     - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with support planned for <a href='//wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
+  optimize:
+    - <a href="../images/">Images</a>
+    - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
 ---
 
 {% wrap content%}
@@ -64,7 +67,7 @@ remember:
     max-width: 100%;
   }
 
-  img.center { 
+  img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -72,12 +75,12 @@ remember:
 
 </style>
 
-But videos take bandwidth, they don't always work the same across every 
-platform, so any value the user might get from watching video diminishes when 
-the user has to wait for the video to load, or the user presses play and 
+But videos take bandwidth, they don't always work the same across every
+platform, so any value the user might get from watching video diminishes when
+the user has to wait for the video to load, or the user presses play and
 nothing happens.
 
-Read more to find the simplest way to add video to your site and ensure 
+Read more to find the simplest way to add video to your site and ensure
 users get the best possible experience on any device.
 
 ## Add a video
@@ -92,36 +95,36 @@ Load, decode, and play video:
 
 ### Specify a start and end time
 
-Save bandwidth and make your site feel more responsive: use the Media 
+Save bandwidth and make your site feel more responsive: use the Media
 Fragments API to add a start and end time to the video element:
 
 {% include_code _code/base_fragment.html basic %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.specify-a-start-time %}
 
-You can also use the Media Fragments API to deliver multiple views on the same 
-video &ndash; like cue points in a DVD &ndash; without having to encode and 
+You can also use the Media Fragments API to deliver multiple views on the same
+video &ndash; like cue points in a DVD &ndash; without having to encode and
 serve multiple files:
 
 {% include modules/remember.liquid title="Remember" list=page.remember.range-request %}
 
-To check for Range Request support, your browser tools for 
+To check for Range Request support, your browser tools for
 `Accept-Ranges: bytes` in the response headers:
 
 <img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" />
 
 ### Include a poster image
 
-Add a poster attribute to the video element so that your users have an idea 
-of the content as soon as the element loads, without needing to download 
+Add a poster attribute to the video element so that your users have an idea
+of the content as soon as the element loads, without needing to download
 video or start playback:
 
 {% include_code _code/base_poster.html basic %}
 
-A poster can also be a fallback if the video `src` is broken or none of the 
-video formats supplied are supported. The only downside to poster images is 
-an additional file request, which consumes some bandwidth and requires 
-rendering. For more information see 
+A poster can also be a fallback if the video `src` is broken or none of the
+video formats supplied are supported. The only downside to poster images is
+an additional file request, which consumes some bandwidth and requires
+rendering. For more information see
 [Image optimization](#TODO).
 
 Here's a side-by-side comparison of videos without and with a poster image
@@ -141,19 +144,19 @@ Here's a side-by-side comparison of videos without and with a poster image
 
 Not all browsers support the same video formats.
 
-Use the source element to enable browsers to choose from multiple available 
+Use the source element to enable browsers to choose from multiple available
 formats. MP4 and WebM cover all modern browsers, including all mobile browsers:
 
 {% include_code _code/fragment.html sourcetypes %}
 
-The user's browser selects the first available format it can play. This 
-approach has several advantages over serving different HTML or server-side 
+The user's browser selects the first available format it can play. This
+approach has several advantages over serving different HTML or server-side
 scripting, especially on mobile:
 
 * Developers can list formats in order of preference.
-* Native client-side switching reduces latency: only one request is made to 
+* Native client-side switching reduces latency: only one request is made to
   get content.
-* Letting the browser choose a format is simpler, quicker and potentially 
+* Letting the browser choose a format is simpler, quicker and potentially
   more reliable than using a server-side support database with user-agent detection.
 
 All of these points are especially potent in mobile contexts, where bandwidth
@@ -184,10 +187,10 @@ You can specify codecs as well as a mime type. For example:
 <source src="video/chrome.webm" type="video/webm; codecs='vp8, vorbis'" />.
 {% endhighlight %}
 
-Not including a type attribute can affect performance when there are 
-multiple sources with unsupported types: using your mobile browser 
-developer tools, compare network activity for 
-[simpl.info/video](//simpl.info/video/) and 
+Not including a type attribute can affect performance when there are
+multiple sources with unsupported types: using your mobile browser
+developer tools, compare network activity for
+[simpl.info/video](//simpl.info/video/) and
 [simpl.info/video/notype](//simpl.info/video/notype/).
 
 **Remember:** [Ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check with [cURL](//en.wikipedia.org/wiki/CURL):
@@ -207,7 +210,7 @@ This should return a response that includes a header like this:
 ### Check which formats are supported
 
 Use `canPlayType()` to find out which video formats are supported. The method
-takes a string argument consistent of a mime type and optional codecs and 
+takes a string argument consistent of a mime type and optional codecs and
 returns one of the following values:
 
 <table class="table">
@@ -225,7 +228,7 @@ returns one of the following values:
     <tr>
       <td><code>maybe</code></td>
       <td>
-        The container and codec(s) might be supported, but the browser 
+        The container and codec(s) might be supported, but the browser
         will need to download some video to check.
       </td>
     </tr>
@@ -282,10 +285,10 @@ run in Chrome:
 There are lots of tools to help save the same video in different formats:
 
 * Desktop tools: [FFmpeg](//ffmpeg.org/)
-* GUI applications: [Miro](//www.mirovideoconverter.com/), 
+* GUI applications: [Miro](//www.mirovideoconverter.com/),
   [HandBrake](//handbrake.fr/), [VLC](//www.videolan.org/)
 * Online encoding/transcoding services:
-  [Zencoder](//en.wikipedia.org/wiki/Zencoder), 
+  [Zencoder](//en.wikipedia.org/wiki/Zencoder),
   [Amazon Elastic Encoder](//aws.amazon.com/elastictranscoder)
 
 ### Check which format was used
@@ -296,8 +299,8 @@ In JavaScript, use the video's `currentSrc` property to return the source used:
 
 {% include_code _code/basic.html currentsrc javascript %}
 
-Given the source example above, Chrome and Firefox choose `chrome.webm` 
-(because that's the first in the list of potential sources these browsers 
+Given the source example above, Chrome and Firefox choose `chrome.webm`
+(because that's the first in the list of potential sources these browsers
 support) whereas Safari chooses `chrome.mp4`.
 
 ## Size videos correctly
@@ -308,31 +311,31 @@ support) whereas Safari chooses `chrome.mp4`.
 
 When it comes to keeping your users happy, size matters:
 
-* Don't serve videos with a larger frame size or higher quality than the 
+* Don't serve videos with a larger frame size or higher quality than the
   platform can handle.
 * Don't make your videos any longer than they need be.
-* Long videos can cause hiccups with download and seeking; some browsers may 
+* Long videos can cause hiccups with download and seeking; some browsers may
   have to wait until the video downloads before beginning playback.
 
-Try this example on your mobile browser and see what happens: 
+Try this example on your mobile browser and see what happens:
 [simpl.info/longvideo](//simpl.info/longvideo).
 
 ### Check video size
 
-The actual video frame size as encoded may be different from the video 
-element dimensions (just as an image may not be displayed using its actual 
-dimensions). For example, resizing the page 
+The actual video frame size as encoded may be different from the video
+element dimensions (just as an image may not be displayed using its actual
+dimensions). For example, resizing the page
 [simpl.info/video](//simpl.info/video) changes the size of the video element
 but the video's frame size is always 480x270px.
 
-To check the encoded size of a video, use the video element `videoWidth` 
-and `videoHeight` properties. `width` and `height` return the dimensions of 
-the video element, which may have been sized using CSS or inline width and 
+To check the encoded size of a video, use the video element `videoWidth`
+and `videoHeight` properties. `width` and `height` return the dimensions of
+the video element, which may have been sized using CSS or inline width and
 height attributes.
 
 ### Ensure videos don't overflow containers
 
-Here's what a plain video element with no element sizing or CSS looks like 
+Here's what a plain video element with no element sizing or CSS looks like
 in Chrome on Android (portrait and landscape):
 
 <div class="clear">
@@ -345,23 +348,23 @@ in Chrome on Android (portrait and landscape):
   </div>
 </div>
 
-The video elements are too big for the viewport; the user can't even see the 
-video controls properly. It's super important to size video elements to fit 
+The video elements are too big for the viewport; the user can't even see the
+video controls properly. It's super important to size video elements to fit
 their containers.
 
 You can control video dimensions using JavaScript or CSS. JavaScript libraries
-and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain 
-appropriate size and aspect ratio, even for Flash videos from YouTube and 
+and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain
+appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
-Use [CSS media queries](#TODO) to specify the size of elements depending on 
+Use [CSS media queries](#TODO) to specify the size of elements depending on
 the viewport dimensions; `max-width: 100%` is your friend:
 
 {% include_code _code/basic.html styling css %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
 
-For media content in iframes (such as YouTube videos), try a responsive 
+For media content in iframes (such as YouTube videos), try a responsive
 approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)):
 
 **CSS:**
@@ -380,10 +383,10 @@ approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsi
 
 ### How device orientation works across devices
 
-Device orientation isn't an issue for desktop monitors or laptops, but is 
+Device orientation isn't an issue for desktop monitors or laptops, but is
 hugely important when considering web page design for mobile and tablets.
 
-Safari on iPhone does a good job of switching between portrait and landscape 
+Safari on iPhone does a good job of switching between portrait and landscape
 orientation:
 
 <div class="clear">
@@ -396,25 +399,25 @@ orientation:
   </div>
 </div>
 
-Device orientation on an iPad and Chrome on Android can be problematic. 
-For example, without any customization a video playing on an iPad in landscape 
+Device orientation on an iPad and Chrome on Android can be problematic.
+For example, without any customization a video playing on an iPad in landscape
 orientation looks like this:
 
-<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" 
+<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape"
 src="images/iPad-Retina-landscape-video-playing-5x3.png" />
 
-Setting the video `width: 100%` or `max-width: 100%` with CSS can resolve 
-many device orientation layout problems. You may also want to consider 
+Setting the video `width: 100%` or `max-width: 100%` with CSS can resolve
+many device orientation layout problems. You may also want to consider
 fullscreen alternatives.
 
 ### Inline or fullscreen display
 
-Different platforms display video differently. Safari on an iPhone displays a 
+Different platforms display video differently. Safari on an iPhone displays a
 video element inline on a web page, but plays video back in fullscreen mode:
 
 <img class="center" alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster-3x5.png" />
 
-On Android, users can request request fullscreen mode by clicking the 
+On Android, users can request request fullscreen mode by clicking the
 fullscreen icon. But the default is to play video inline:
 
 <img class="center" alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png" />
@@ -426,7 +429,7 @@ Safari on an iPad plays video inline:
 ### Control fullscreening of content
 
 For platforms that do not force fullscreen video playback, the Fullscreen API
-is [widely supported](//caniuse.com/fullscreen). Use this API to control 
+is [widely supported](//caniuse.com/fullscreen). Use this API to control
 fullscreening of content, including video:
 
 {% include_code _code/fullscreen.html elementfs javascript %}
@@ -437,15 +440,15 @@ fullscreening of content, including video:
 
 {% include_code _code/fullscreen.html check javascript %}
 
-You can also use the CSS `:fullscreen` pseudo-class to change the way 
+You can also use the CSS `:fullscreen` pseudo-class to change the way
 elements are displayed in fullscreen mode.
 
-On devices that support the Fullscreen API, consider using thumbnail 
+On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video (demo on Chrome for Android):
 
 <img class="center" alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" />
 
-To see this in action, check out the 
+To see this in action, check out the
 {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap
 or click on a thumbnail, the thumbnail is replaced by a fullscreen video
 element.
@@ -456,8 +459,8 @@ element.
 
 ### Accessibility matters
 
-Accessibility isn't a feature. Users who can't hear or see won't be able to 
-experience a video at all without captions or descriptions. The time it takes 
+Accessibility isn't a feature. Users who can't hear or see won't be able to
+experience a video at all without captions or descriptions. The time it takes
 to add these to your video is much less than the bad experience you are
 delivering to users. Provide at least a base experience for all users.
 
@@ -472,7 +475,7 @@ Using the track element, captions appear like this:
 
 ### Add track element
 
-It's very easy to add captions to your video &ndash; simply add a 
+It's very easy to add captions to your video &ndash; simply add a
 [track element](//www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
 
 {% include_code _code/track.html basic %}
@@ -494,28 +497,28 @@ A track file consists of timed 'cues' in WebVTT format:
 
 ### What is adaptive streaming?
 
-The video element is a simple way to include video in your web pages, but it 
-doesn't enable your site to move between different bitrate video encodings in 
+The video element is a simple way to include video in your web pages, but it
+doesn't enable your site to move between different bitrate video encodings in
 response to network conditions.
 
-Adaptive streaming is a set of techniques that provide more fine grained 
+Adaptive streaming is a set of techniques that provide more fine grained
 control over video download and playback.
 
-* **Buffer control:** choose bitrate depending on the size of the video 
+* **Buffer control:** choose bitrate depending on the size of the video
   buffer, i.e. how much 'fuel in the tank' remains.
 * **Efficient seeking**: move between different parts of a video with minimal unnecessary download.
 * **Bitrate management**: seamlessly swap between higher or lower bitrate in response to connectivity fluctuations.
 
 ### Construct video streams
 
-Video streaming services use server-side solutions to enable adaptive 
-streaming, such as Adobe's RTMP protocol and Flash Media Server. However, 
-these solutions can be expensive and potentially complex, they require 
-plug-ins not supported on mobile platforms, and don't take advantage of 
+Video streaming services use server-side solutions to enable adaptive
+streaming, such as Adobe's RTMP protocol and Flash Media Server. However,
+these solutions can be expensive and potentially complex, they require
+plug-ins not supported on mobile platforms, and don't take advantage of
 HTTP – a protocol optimized over many years for delivery of content on the web.
 
-The [Media Source Extensions](//updates.html5rocks.com/2011/11/Stream-video-using-the-MediaSource-API) 
-(MSE) API enables JavaScript to construct video streams, which in turns 
+The [Media Source Extensions](//updates.html5rocks.com/2011/11/Stream-video-using-the-MediaSource-API)
+(MSE) API enables JavaScript to construct video streams, which in turns
 enables client-side adaptive streaming techniques that take advantage of HTTP.
 
 There's a simple example of MSE at [simpl.info/mse](//simpl.info/mse).
@@ -525,10 +528,10 @@ There's a simple example of MSE at [simpl.info/mse](//simpl.info/mse).
 ### Enable high quality streaming on the web
 
 [Dynamic Adaptive Streaming over HTTP](//www.html5rocks.com/en/tutorials/eme/basics/#related-technology-2)
-(DASH) is an open standard for adaptive streaming designed to enable media 
-delivery at the highest possible quality for both streaming and download. 
+(DASH) is an open standard for adaptive streaming designed to enable media
+delivery at the highest possible quality for both streaming and download.
 Technologies such as Apple's [HTTP Live Streaming](//en.wikipedia.org/wiki/HTTP_Live_Streaming)
-(HLS) and Microsoft's [Smooth Streaming](//en.wikipedia.org/wiki/Adaptive_bitrate_streaming#Microsoft_Smooth_Streaming) 
+(HLS) and Microsoft's [Smooth Streaming](//en.wikipedia.org/wiki/Adaptive_bitrate_streaming#Microsoft_Smooth_Streaming)
 also provide adaptive-bitrate streaming via HTTP, but are not open source.
 
 With DASH:
@@ -597,24 +600,24 @@ see [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-v
 On desktop, `autoplay` tells the browser to immediately start downloading and
 playing the video as soon as it can. On iOS, and Chrome for Android, `autoplay`
 doesn't work; users must tap the screen to play the video. You can test this
-with the video at [simpl.info/video](//simpl.info/video), which has an 
+with the video at [simpl.info/video](//simpl.info/video), which has an
 `autoplay` attribute.
 
 Even on platforms where autoplay is possible, you need to consider whether
 it's a good idea to enable it:
 
 * Data usage can be expensive.
-* Causing media to download and playback to begin, without asking first, can 
+* Causing media to download and playback to begin, without asking first, can
   unexpectedly hog bandwidth and CPU, and thereby delay page rendering.
 * Users may be in a context where playing video or audio is intrusive.
 
-Autoplay behavior is configurable in the Android WebView via the 
+Autoplay behavior is configurable in the Android WebView via the
 [WebSettings API](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)).
 It defaults to true but a WebView app can choose to disable it.
 
 #### Preload
 
-The `preload` attribute provides a hint to the browser as to how much 
+The `preload` attribute provides a hint to the browser as to how much
 information or content should be preloaded.
 
 <table>
@@ -640,17 +643,17 @@ information or content should be preloaded.
   </tbody>
 </table>
 
-The `preload` attribute has different effects on different platforms. 
-For example, Chrome buffers 25 seconds of video on desktop, none on iOS or 
-Android. This means that on mobile, there may be playback startup delays 
-that don't happen on desktop. See [Steve Souders' test page](//stevesouders.com/tests/mediaevents.php) 
+The `preload` attribute has different effects on different platforms.
+For example, Chrome buffers 25 seconds of video on desktop, none on iOS or
+Android. This means that on mobile, there may be playback startup delays
+that don't happen on desktop. See [Steve Souders' test page](//stevesouders.com/tests/mediaevents.php)
 for full details.
 
 ### JavaScript
 
-[The HTML5 Rocks Video article](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript) 
-does a great job of summarizing the JavaScript properties, methods, and events 
-that can be used to control video playback. We've included that content here, 
+[The HTML5 Rocks Video article](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript)
+does a great job of summarizing the JavaScript properties, methods, and events
+that can be used to control video playback. We've included that content here,
 updating it with mobile-specific concerns where relevant.
 
 #### Properties
@@ -696,7 +699,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither playbackRate (demo at [simpl.info/rate](//simpl.info/rate)) 
+Neither playbackRate (demo at [simpl.info/rate](//simpl.info/rate))
 nor volume are supported on mobile.
 
 #### Methods
@@ -727,14 +730,14 @@ nor volume are supported on mobile.
 </table>
 
 On mobile (apart from Opera on Android) play() and pause() don't work unless
-called in response to user action, such as clicking a button: see the 
+called in response to user action, such as clicking a button: see the
 example at [simpl.info/scripted](//simpl.info/scripted). (Likewise, playback
 can't be initiated for content such as embedded YouTube videos.)
 
 #### Events
 
-These are only a subset of the media events that may be fired. Refer to 
-the [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) 
+These are only a subset of the media events that may be fired. Refer to
+the [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events)
 page on the Mozilla Developer Network for a complete listing.
 
 <table class="table">
@@ -773,5 +776,9 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
   </tbody>
 </table>
+
+{% include modules/related.liquid list=page.related.optimize %}
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
