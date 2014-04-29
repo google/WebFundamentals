@@ -5,12 +5,12 @@ toc:
 - title: "Getting Started"
   path: /getting-started/your-first-multi-screen-site/index.html
   section:
-    - title: "Create Your First Multi-screen Site"
+    - title: "Create Your First Multi-Screen Site"
       path: /getting-started/your-first-multi-screen-site/
 - title: "Documentation"
   path: /documentation/
   section:
-    - title: "Multi-device layouts"
+    - title: "Multi-Device Layouts"
       path: /documentation/multi-device-layouts/
       id: "multi-device-layouts"
       section:
@@ -65,5 +65,3 @@ toc:
     path: /resources/styleguide/
   - title: "Example Article"
     path: /resources/example-article/
-- title: Spotlights
-  path: /spotlights/

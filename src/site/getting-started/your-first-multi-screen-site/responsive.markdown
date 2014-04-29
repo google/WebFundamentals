@@ -31,7 +31,7 @@ article]({{site.baseurl}}{{page.article.previous.url}}) we crafted the
 Infomration Architecture of the page and created a basic structure that we
 will now use to make work across all of our target screens and form-factors. 
 
-In this guide we will take our basic structure with content and turn it in to
+In this guide, we will take our basic structure with content and turn it in to
 a beautiful page that is responsive across a large number of screen sizes.
 
 <div class="clear">
