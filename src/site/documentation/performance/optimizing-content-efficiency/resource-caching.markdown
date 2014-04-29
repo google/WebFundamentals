@@ -102,7 +102,7 @@ check if the resource has been modified.
 
 ## Validating cached resource with ETag's
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.validate-etags %}
+{% include modules/takeaway.liquid list=page.key-takeaways.validate-etags %}
 
 
 Let's assume 120 seconds have passed since our initial fetch and the browser has 
@@ -145,7 +145,7 @@ check your server documentation for necessary configuration flags. **
 
 ## Cache-Control 
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.cache-contel %}
+{% include modules/takeaway.liquid list=page.key-takeaways.cache-contel %}
 
 The best resource request is a request that does not need to communicate with 
 the server: a local copy of the resource allows us to eliminate all network 
@@ -236,7 +236,7 @@ server is returning appropriate Cache-Control and ETag headers.**
 
 ## Invalidating and updating cached resources
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.invalidate-cache %}
+{% include modules/takeaway.liquid list=page.key-takeaways.invalidate-cache %}
 
 
 All HTTP requests made by the browser are first routed to the browser cache to 

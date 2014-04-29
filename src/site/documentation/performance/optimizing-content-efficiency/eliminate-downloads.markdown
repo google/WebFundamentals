@@ -45,7 +45,7 @@ implicit and explicit assumptions with your team. A few examples:
 * Does this resource need or have an SLA? Does this resource follow performance 
   best practices: compression, caching, and so on?
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.eliminate-downloads %}
+{% include modules/takeaway.liquid list=page.key-takeaways.eliminate-downloads %}
 
 All too frequently our pages contain resources which are unnecessary, or worse, 
 hinder their performance without delivering much value to the visitor or the 
