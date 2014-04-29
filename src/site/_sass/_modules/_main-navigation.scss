@@ -153,6 +153,7 @@
   @include medium {
     color: $colorText;
     border-bottom-color: transparent;
+    padding-left: 0;
 
     // Only override links inside list
     .main-nav__list--child & {
@@ -236,12 +237,13 @@
 /*==========  ICONS  ==========*/
 .main-nav__icon {
   float: right;
-  font-size: $fontSmall;
+  font-size: $fontBase;
   line-height: $lineHeight;
   vertical-align: middle;
 
   @include medium {
     display: none;
+    font-size: $fontSmall;
   }
 }
 
@@ -258,6 +260,7 @@
     float: none;
     display: inline-block;
     margin-left: 6px;
+    vertical-align: middle;
   }
 
   .subnav-is-opened & {
