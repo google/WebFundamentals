@@ -62,6 +62,8 @@ remember:
 
 {% wrap content%}
 
+{% include modules/toc.liquid %}
+
 <style type="text/css">
   img, video, object {
     max-width: 100%;
