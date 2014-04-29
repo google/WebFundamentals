@@ -81,8 +81,8 @@ The viewport lives in the head of the document and only needs to be declared onc
 {: .related-items--title}
 Learn more about the best practices of using the viewport:
 
-*  [Setting the Viewport]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
-*  [Size content to the viewport]({{site.baseurl}}the-essentials/multi-device-layouts/rwd-fundamentals/index.html#size-content-to-the-viewport)
+*  [Setting the Viewport]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
+*  [Size content to the viewport]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#size-content-to-the-viewport)
 {: .list--links}
 
 </div>
@@ -199,9 +199,9 @@ need to:
 
 Learn more about how and where to use Media Queries:
 
-*  [Using Media Queries]({{site.baseurl}}//web/essentials/the-essentials/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Layout patterns]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/index.html) 
-*  [Mostly Fluid layout]({{site.baseurl}}/the-essentials/multi-device-layouts/rwd-patterns/index.html#mostly-fluid)
+*  [Using Media Queries]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
+*  [Layout patterns]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/index.html) 
+*  [Mostly Fluid layout]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/index.html#mostly-fluid)
 {: .list--links}
 </div>
 </div>
@@ -339,8 +339,8 @@ support it let you display a high density image on a high density display.
 
 Learn how to effectively use images for varying screen densities:
 
-* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
-* [Use media queries to provide high res images or art direction]({{site.baseurl}}/the-essentials/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction)
+* [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [Use media queries to provide high res images or art direction]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction)
 {: .list--links}
 
 </div>
