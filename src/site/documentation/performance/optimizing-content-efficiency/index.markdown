@@ -84,15 +84,11 @@ Unlike their desktop counterparts, web applications do not require a separate in
 
 Achieving an instant web experience in light of these requirements is no small feat, which is why optimizing content efficiency is critical: eliminating unnecessary downloads, optimizing transfer encoding of each resource through various compression techniques, and leveraging caching whenever possible to eliminate redundant downloads.
 
-
-## Guides
+## Lessons
 
 {% for guide in page.articles.optimizing-content-efficiency %}
-{% class %}
-### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
 {{guide.description}}
-{% endclass %}
 {% endfor %}
-
 
 {% endwrap %}

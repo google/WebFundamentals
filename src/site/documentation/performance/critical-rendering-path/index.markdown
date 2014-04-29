@@ -34,13 +34,11 @@ Optimizing the critical rendering path is critical for improving performance of 
 
 Understanding the critical rendering path will also serve as a foundation for all of our future discussions on optimizing the performance of interactive pages. It turns out, the process for processing interactive updates is the same, just done in a continuous loop and ideally at 60 frames per second! However, let's not get ahead of ourselves just yet. First, let's take a quick, ground-up overview of how the browser goes about displaying a simple page.
 
-## Guides
+## Lessons
 
 {% for guide in page.articles.critical-rendering-path %}
-{% class %}
-### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
 {{guide.description}}
-{% endclass %}
 {% endfor %}
 
 {% endwrap%}
