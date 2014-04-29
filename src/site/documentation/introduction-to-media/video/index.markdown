@@ -12,7 +12,7 @@ article:
 collection: introduction-to-media
 key-takeaways:
   add-a-video:
-    - Use the video element to load, code, and play video in your site.
+    - Use the video element to load, decode, and play video in your site.
     - Don't load the whole video if unnecessary &ndash; specify a start and end time.
     - Include a poster image so the user sees something meaningful right away.
     - Specify multiple file formats since not all browsers support the same format.
@@ -95,7 +95,11 @@ Load, decode, and play video:
      <p>This browser does not support the video element.</p>
 </video>
 
-{% include_code _code/basic.html basic %}
+{% highlight html %}
+<video src="chrome.webm" type="video/webm">
+    <p>Your browser does not support the video element.</p>
+</video>
+{% endhighlight %}
 
 ### Specify a start and end time
 
@@ -108,7 +112,11 @@ Fragments API to add a start and end time to the video element:
      <p>This browser does not support the video element.</p>
 </video>
 
-{% include_code _code/base_fragment.html basic %}
+{% highlight html %}
+<video src="chrome.webm#t=5,10" type="video/webm">
+    <p>Your browser does not support the video element.</p>
+</video>
+{% endhighlight %}
 
 You can also use the Media Fragments API to deliver multiple views on the same
 video &ndash; like cue points in a DVD &ndash; without having to encode and
@@ -450,16 +458,13 @@ elements are displayed in fullscreen mode.
 On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
-<video autoplay loop style="margin-top: 10px">
-     <source src="video/fullscreen.webm" type="video/webm" />
-     <source src="video/fullscreen.mp4" type="video/mp4" />
-     <p>This browser does not support the video element.</p>
+<video autoplay loop class="center" style="border: 1px solid black; margin-top: 10px; width: 270px">
+    <source src="video/fullscreen.webm" type="video/webm" />
+    <source src="video/fullscreen.mp4" type="video/mp4" />
+    <p>This browser does not support the video element.</p>
 </video>
 
-To see this in action, check out the
-{% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap
-or click on a thumbnail, the thumbnail is replaced by a fullscreen video
-element.
+To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap or click on a thumbnail, the thumbnail is replaced by a fullscreen video element.
 
 ### Include captions to improve accessibility
 

@@ -102,7 +102,6 @@ Using Callouts in your doc is easy.
 ### Key takeaway
 
     {{ "{% include modules/takeaway.liquid" }}
-    	title='Key Takeaway' 
     	list=page.key-takeaways.use-keytakeaway %}
 
 In your Article YAML Preamble
@@ -111,12 +110,11 @@ In your Article YAML Preamble
 	  use-keytakeaway:
 	    - It is pretty simple to add in a key takeaway
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.use-keytakeaway %}
+{% include modules/takeaway.liquid list=page.key-takeaways.use-keytakeaway %}
 
 ### Remember
 
     {{ "{% include modules/remember.liquid" }}
-    	title='Remember' 
     	list=page.remember.use-remember %}
 
 In your Article YAML Preamble
@@ -125,7 +123,7 @@ In your Article YAML Preamble
 	  use-remember:
 	    - It is pretty simple to add in a remember
 
-{% include modules/remember.liquid title="Remember" list=page.remember.use-remember %}
+{% include modules/remember.liquid list=page.remember.use-remember %}
 
 
 ### Related Content
