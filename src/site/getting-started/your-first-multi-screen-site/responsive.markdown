@@ -160,7 +160,7 @@ where we want to change it.
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
   <p>Sorry your browser doesn't support video. 
-     <a href="videos/smiles.mov">Download the video</a>.
+     <a href="videos/firstbreakpoint.mov">Download the video</a>.
   </p>
 </video>
 
