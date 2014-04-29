@@ -163,6 +163,11 @@
     .main-nav__list--child & {
       @include type--large;
     }
+
+    &:hover {
+      color: $colorGrayDark;
+    }
+
   }
 }
 
@@ -256,7 +261,7 @@
     @extend .icon-plus:before;
 
     @include medium {
-      content:"\e001"; // Took this from _icons.scss - not great, I know.
+      content: $icon-cheveron-down;
     }
   }
 
@@ -264,7 +269,7 @@
     float: none;
     display: inline-block;
     margin-left: 6px;
-    vertical-align: middle;
+    vertical-align: top; // middle breaks baseline grid
   }
 
   .subnav-is-opened & {
@@ -272,7 +277,7 @@
       @extend .icon-minus:before;
 
       @include medium {
-        content:"\e004"; // Same as above
+        content: $icon-cheveron-up;
       }
     }
   }

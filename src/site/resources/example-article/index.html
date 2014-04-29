@@ -18,7 +18,7 @@ collection: resources
 <div class="editorial-header">
   <div class="container">
     <nav class="breadcrumbs">
-      <p> / <a href="#" class="breadcrumbs__link">The Essentials</a> / <a href="#" class="breadcrumbs__link"> Multi-screen layouts</a></p>
+      <p> / <a href="{{site.baseurl}}/resources/" class="breadcrumbs__link">Resources</a></p>
     </nav>
 
     <h1 class="tag editorial-header__title">Layout Basics</h1>
@@ -26,15 +26,12 @@ collection: resources
     <p class="editorial-header__excerpt g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Sed vitae varius augue, eu varius dolor. </p>
     <p class="g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Donec augue diam, scelerisque eget lectus in, posuere aliquet mi. Pellentesque suscipit nisl gravida sem tincidunt, id blandit turpis commodo.</p>
 
-    <div class="editorial-header__toc">
-      <p class="medium editorial-header__toc-title"><i class="icon icon-lessons"></i> More lessons in Layout Basics</p>
-      <ol class="list--links list--variant">
-        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-        <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
-        <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-        <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
-        <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    <div class="toc">
+      <h3 class="toc__title">In this lesson</h3>
+      <ol class="toc__list">
+        <li>Subtitle One</li>
+        <li>Subtitle Two</li>
+        <li>Subtitle Three</li>
       </ol>
     </div>
 
@@ -45,17 +42,11 @@ collection: resources
   <div class="container">
     <h2 class="subsection-title"><strong class="subsection-number">#1</strong> Set the viewport</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, asperiores, possimus eius in sint earum deleniti quos commodi esse atque nesciunt odio cum facilis ipsam ullam. Magni natus ut nulla! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis voluptate eveniet ipsam itaque iusto labore aut repudiandae reiciendis quae iste libero? Laudantium, maiores, natus quia voluptates accusamus dolore voluptatem!</p>
-  </div>
-</div>
 
-<div class="content">
-  <div class="container">
-    {% include modules/highlight.liquid character="*" position="left" title="Key Learnings" list=page.learning-list priority="large" type="learning" %}
-  </div>
-</div>
 
-<div class="content">
-  <div class="container">
+    {% include modules/remember.liquid title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusantium, quo, corporis nemo possimus iste impedit numquam reiciendis eaque similique perspiciatis nam illo error consequuntur beatae fuga blanditiis asperiores iusto?" %}
+
+
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, voluptatum, a qui numquam optio nulla aliquam distinctio tempore quae asperiores necessitatibus nobis ab debitis amet obcaecati cum hic dolore officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, laborum, excepturi, earum, nesciunt maiores quas quisquam corrupti magni quasi deserunt vitae odit. Assumenda, reprehenderit quia eum beatae deleniti dolor laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, beatae, ipsum fugiat quam corporis magni aliquam modi autem dignissimos minima non fuga esse. Eum, eveniet unde quis sint natus perspiciatis.</p>
     <ul>
       <li>Lorem ipsum dolor sit amet.</li>
@@ -65,41 +56,22 @@ collection: resources
 
     <h2 class="subsection-title"><strong class="subsection-number">#2</strong> Size content to the viewport</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi, iusto, totam, non nam omnis minima modi ab sint atque eaque et ratione quaerat amet ex maxime temporibus adipisci hic.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, fugiat provident soluta alias nulla porro consectetur sapiente aliquid sunt facilis corrupti temporibus reiciendis debitis velit voluptates eum odio ratione illum.</p>
-  </div>
-</div>
 
-<div class="content">
-  <div class="container">
-    {% include modules/highlight.liquid character="{" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
-  </div>
-</div>
+    {% include modules/remember.liquid title="Remember" list=page.learning-list %}
 
-<div class="content">
-  <div class="container">
+
     <h3>Apply media queries based on viewport size</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, magnam, veritatis, error necessitatibus tenetur consequatur mollitia debitis enim possimus non modi adipisci aliquam illum porro ratione beatae quod soluta commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, reprehenderit, necessitatibus voluptatem labore sit pariatur delectus mollitia culpa in obcaecati numquam dolor recusandae possimus provident id ipsa odio nobis laboriosam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ad, adipisci, aliquam commodi quo minima numquam facere quos dolore earum dolores dolorum amet molestias quisquam voluptatibus illum itaque quasi debitis?</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, tenetur esse id dolorem reprehenderit quidem facilis quod autem error dignissimos. Dolorem, fugit, dignissimos vitae dicta minima eaque quis voluptates minus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, voluptatem, reprehenderit, soluta vel eligendi assumenda ipsam ex voluptatibus sunt est minima hic impedit porro corrupti laudantium magni natus beatae deserunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, aspernatur, asperiores, repudiandae eaque velit tempora veniam illo vitae earum vero amet dolore atque sequi temporibus modi labore fugit accusamus.</p>
-  </div>
-</div>
 
-<div class="content">
-  <div class="container">
-    {% include modules/highlight.liquid character="!" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusantium, quo, corporis nemo possimus iste impedit numquam reiciendis eaque similique perspiciatis nam illo error consequuntur beatae fuga blanditiis asperiores iusto?" type="remember" %}
-  </div>
-</div>
-
-<div class="content">
-  <div class="container">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sed, reprehenderit, saepe animi assumenda voluptatem labore corporis odit magnam officiis tempora fugiat totam molestias laudantium dicta nemo ea nulla dolores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, quam, et aut in esse aliquam sapiente ab qui incidunt consequatur consequuntur non odio atque dolore cumque hic soluta perferendis natus.</p>
-  </div>
-</div>
 
-<div class="content">
-  <div class="container">
+    {% include modules/takeaway.liquid list=page.learning-list %}
+
+
     <div class="related-guides clear">
       <h3 class="related-guides__title g-wide--1 g-medium--full">Related guides</h3>
       <div class="related-guides__section clear">
-
         <ul class="related-guides-list list--reset">
           <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
             <p><a class="tag themed" href="#" title="Layout basics">Layout basics</a></p>
@@ -114,8 +86,20 @@ collection: resources
             <p class="medium"><a href="#">Guides new, completely device agnostic site created for the this website</a></p>
           </li>
         </ul>
-
       </div>
     </div>
+
+    <div class="editorial-header__toc">
+      <p class="medium editorial-header__toc-title"><i class="icon icon-lessons"></i> More lessons in Layout Basics</p>
+      <ol class="list--links list--variant">
+        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+        <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+        <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+        <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+        <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+      </ol>
+    </div>
+
   </div>
 </div>
