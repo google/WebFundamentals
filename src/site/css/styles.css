@@ -673,11 +673,7 @@ body.debug:after {
 }
 
 /* line 58, ../_sass/_components/_icons.scss */
-<<<<<<< HEAD
-.icon-lessons:before {
-=======
 .icon-google-dev:before {
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
   content: "\e006";
 }
 
@@ -687,7 +683,7 @@ body.debug:after {
 }
 
 /* line 68, ../_sass/_components/_icons.scss */
-.icon-lessons:before, .editorial-header__toc-title:before {
+.icon-lessons:before {
   content: "\e008";
 }
 
@@ -1592,16 +1588,6 @@ body.debug:after {
   padding-bottom: 13px !important;
   color: #3372df;
 }
-<<<<<<< HEAD
-=======
-/* line 84, ../_sass/_modules/_editorial-header.scss */
-.editorial-header__toc-title:before {
-  font-family: "icons";
-  display: inline-block;
-  padding-right: 10px;
-  color: #3372df;
-}
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
 
 /**
 *
@@ -1792,11 +1778,7 @@ body.debug:after {
 }
 /* line 25, ../_sass/_modules/_page-header.scss */
 .page-header h3 {
-<<<<<<< HEAD
   color: #404040;
-=======
-  color: #3372df;
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
   padding-top: 52px;
 }
 
@@ -2240,7 +2222,7 @@ body.debug:after {
 /* line 38, ../_sass/_modules/_did-you-know.scss */
 .did-you-know__symbol:after {
   content: "?";
-  color: #4285f4;
+  color: #3372df;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 700;
   font-size: 400px;
@@ -2905,8 +2887,7 @@ ol.list--links li:nth-child(10n) ~ li a:before, ol.list--links li:nth-child(10n)
   content: counter(list);
 }
 
-<<<<<<< HEAD
-/* line 88, ../_sass/_components/_list.scss */
+/* line 102, ../_sass/_components/_list.scss */
 ol.list--variant {
   font-size: 13px;
   line-height: 2.0000em;
@@ -2915,10 +2896,7 @@ ol.list--variant {
   padding-bottom: 0;
   padding-top: 0;
 }
-/* line 92, ../_sass/_components/_list.scss */
-=======
-/* line 104, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 106, ../_sass/_components/_list.scss */
 ol.list--variant li a:before {
   content: "\e002  0" counter(list);
   font-family: "icons";
@@ -2926,31 +2904,19 @@ ol.list--variant li a:before {
 }
 
 /*==========  CENTERED LIST  ==========*/
-<<<<<<< HEAD
-/* line 102, ../_sass/_components/_list.scss */
-=======
-/* line 112, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 116, ../_sass/_components/_list.scss */
 .centered-list {
   text-align: center;
 }
 
 /*==========  FEATURED LIST  ==========*/
-<<<<<<< HEAD
-/* line 108, ../_sass/_components/_list.scss */
-=======
-/* line 118, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 122, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-<<<<<<< HEAD
-/* line 113, ../_sass/_components/_list.scss */
-=======
-/* line 123, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 127, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2959,38 +2925,22 @@ ol.list--variant li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 113, ../_sass/_components/_list.scss */
-=======
-  /* line 123, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+  /* line 127, ../_sass/_components/_list.scss */
   .featured-list__item {
     min-height: 338px;
     padding: 52px 32px;
   }
 }
-<<<<<<< HEAD
-/* line 126, ../_sass/_components/_list.scss */
-.featured-list__item:first-child {
-  margin-top: 0;
-}
-/* line 130, ../_sass/_components/_list.scss */
-=======
-/* line 136, ../_sass/_components/_list.scss */
-.featured-list__item:first-child {
-  margin-top: 0;
-}
 /* line 140, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+.featured-list__item:first-child {
+  margin-top: 0;
+}
+/* line 144, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-<<<<<<< HEAD
-/* line 135, ../_sass/_components/_list.scss */
-=======
-/* line 145, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 149, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   display: none;
   position: relative;
@@ -2998,11 +2948,7 @@ ol.list--variant li a:before {
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 135, ../_sass/_components/_list.scss */
-=======
-  /* line 145, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+  /* line 149, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     display: block;
     padding-top: 0;
@@ -3011,11 +2957,7 @@ ol.list--variant li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 148, ../_sass/_components/_list.scss */
-=======
-  /* line 158, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+  /* line 162, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -3025,22 +2967,14 @@ ol.list--variant li a:before {
     width: 100%;
   }
 }
-<<<<<<< HEAD
-/* line 159, ../_sass/_components/_list.scss */
-=======
-/* line 169, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 173, ../_sass/_components/_list.scss */
 .featured-list__img img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 159, ../_sass/_components/_list.scss */
-=======
-  /* line 169, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+  /* line 173, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -3052,62 +2986,38 @@ ol.list--variant li a:before {
 }
 
 /*==========  RELATED GUIDES LIST  ==========*/
-<<<<<<< HEAD
-/* line 176, ../_sass/_components/_list.scss */
-=======
-/* line 186, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 190, ../_sass/_components/_list.scss */
 .related-guides-list {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 176, ../_sass/_components/_list.scss */
+  /* line 190, ../_sass/_components/_list.scss */
   .related-guides-list {
     padding-top: 26px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 176, ../_sass/_components/_list.scss */
-=======
-  /* line 186, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+  /* line 190, ../_sass/_components/_list.scss */
   .related-guides-list {
     padding-top: 0;
   }
 }
-<<<<<<< HEAD
-/* line 182, ../_sass/_components/_list.scss */
+/* line 196, ../_sass/_components/_list.scss */
 .related-guides-list p {
   padding-top: 0;
 }
-/* line 186, ../_sass/_components/_list.scss */
+/* line 200, ../_sass/_components/_list.scss */
 .related-guides-list .tag {
   padding-top: 0;
 }
-/* line 190, ../_sass/_components/_list.scss */
-=======
-/* line 191, ../_sass/_components/_list.scss */
-.related-guides-list p {
-  padding-top: 0;
-}
-/* line 195, ../_sass/_components/_list.scss */
-.related-guides-list .tag {
-  padding-top: 0;
-}
-/* line 199, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+/* line 204, ../_sass/_components/_list.scss */
 .related-guides-list li {
   padding-top: 26px;
   padding-bottom: 25px;
 }
 @media only screen and (min-width: 620px) {
-<<<<<<< HEAD
-  /* line 190, ../_sass/_components/_list.scss */
-=======
-  /* line 199, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+  /* line 204, ../_sass/_components/_list.scss */
   .related-guides-list li {
     padding-top: 0;
     padding-bottom: 0;
@@ -3115,19 +3025,11 @@ ol.list--variant li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-<<<<<<< HEAD
-/* line 204, ../_sass/_components/_list.scss */
-.list--reset li {
-  padding-left: 0;
-}
-/* line 209, ../_sass/_components/_list.scss */
-=======
-/* line 213, ../_sass/_components/_list.scss */
-.list--reset li {
-  padding-left: 0;
-}
 /* line 218, ../_sass/_components/_list.scss */
->>>>>>> 125a1d8dd29ab7e0b6c4457021f34be67bd7dcac
+.list--reset li {
+  padding-left: 0;
+}
+/* line 223, ../_sass/_components/_list.scss */
 .list--reset.list--links a:before, .list--reset li:before {
   display: none !important;
 }
