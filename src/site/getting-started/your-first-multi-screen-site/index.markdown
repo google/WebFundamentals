@@ -21,8 +21,9 @@ Our goal in this guide is to build an example product landing page for our
 that covers many of the core principles of building experiences that work well
 across all different device types.
 
-<div class="clear">
-  <img class="g-wide--1 g-medium--half" src="images/narrowsite.png" alt="Narrow Viewport final look" style="max-width: 100%;"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/widesite.png" alt="Narrow Viewport final look" style="max-width: 100%;">
+
+<div class="demo clear">
+  <img class="g-wide--1 g-medium--half" src="images/narrowsite.jpg" alt="Narrow Viewport final look" style="max-width: 100%;"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/widesite.jpg" alt="Narrow Viewport final look" style="max-width: 100%;">
 </div>
 
 
