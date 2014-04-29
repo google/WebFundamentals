@@ -38,11 +38,9 @@ key-takeaways:
     - Use the Media Source Extensions API to construct video streams.
     - Use DASH to enable high quality streaming on the web.
 remember:
-  specify-a-start-time:
+  media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.
-  range-request:
-    - Make sure Range Requests are supported by your server. Range Requests are enabled by
-      default on most servers, but some hosting services may turn them off.
+    - Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.
   multiple-formats:
     - MP4 and WebM are <a href='//en.wikipedia.org/wiki/Container_formats' title='Wikipedia article about media file container formats'>container formats</a>. MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
       Check out <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a> to find out more about how video and audio work on the web.
@@ -93,6 +91,12 @@ users get the best possible experience on any device.
 
 Load, decode, and play video:
 
+<video controls>
+     <source src="video/chrome.webm" type="video/webm" />
+     <source src="video/chrome.mp4" type="video/mp4" />
+     <p>This browser does not support the video element.</p>
+</video>
+
 {% include_code _code/basic.html basic %}
 
 ### Specify a start and end time
@@ -100,15 +104,19 @@ Load, decode, and play video:
 Save bandwidth and make your site feel more responsive: use the Media
 Fragments API to add a start and end time to the video element:
 
-{% include_code _code/base_fragment.html basic %}
+<video controls>
+     <source src="video/chrome.webm#t=5,10" type="video/webm" />
+     <source src="video/chrome.mp4#t=5,10" type="video/mp4" />
+     <p>This browser does not support the video element.</p>
+</video>
 
-{% include modules/remember.liquid title="Remember" list=page.remember.specify-a-start-time %}
+{% include_code _code/base_fragment.html basic %}
 
 You can also use the Media Fragments API to deliver multiple views on the same
 video &ndash; like cue points in a DVD &ndash; without having to encode and
 serve multiple files:
 
-{% include modules/remember.liquid title="Remember" list=page.remember.range-request %}
+{% include modules/remember.liquid title="Remember" list=page.remember.media-fragments %}
 
 To check for Range Request support, your browser tools for
 `Accept-Ranges: bytes` in the response headers:
@@ -446,9 +454,13 @@ You can also use the CSS `:fullscreen` pseudo-class to change the way
 elements are displayed in fullscreen mode.
 
 On devices that support the Fullscreen API, consider using thumbnail
-images as placeholders for video (demo on Chrome for Android):
+images as placeholders for video:
 
-<img class="center" alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" />
+<video loop>
+     <source src="video/fullscreen.webm" type="video/webm" />
+     <source src="video/fullscreen.mp4" type="video/mp4" />
+     <p>This browser does not support the video element.</p>
+</video>
 
 To see this in action, check out the
 {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap
