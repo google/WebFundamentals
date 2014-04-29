@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Create Your Content and Structure"
-description: "Content is the most important aspect of any site. In this guide 
+description: "Content is the most important aspect of any site. In this guide, 
   we will show you can quickly plan to build your first multi-screen site."
-introduction: "Content is the most important aspect of any site. In this guide 
+introduction: "Content is the most important aspect of any site. In this guide, 
   we will show you can quickly plan to build your first multi-screen site."
 notes:
   styling: 
