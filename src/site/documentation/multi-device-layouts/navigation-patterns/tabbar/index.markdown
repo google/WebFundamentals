@@ -19,7 +19,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="/web/essentials/resources/samples/documentation/ulti-device-layouts/navigation-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
+<a href="/web/essentials/resources/samples/documentation/multi-device-layouts/navigation-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
 
 <div style="clear: both;"></div>
 
