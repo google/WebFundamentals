@@ -27,7 +27,7 @@ key-takeaways:
 
 We have identified we need:
 
-1.  An area that describes at a high-level our product "Smiles"
+1.  An area that describes at a high-level our product "CS256: Mobile web development" course
 2.  A form to collect information from users who are interested in our product
 3.  An in depth description and video
 4.  Images of the product in action
@@ -35,7 +35,8 @@ We have identified we need:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.content-critical %}
 
-We have also come up with a rough information architecture and layout for both the narrow and wide viewports.
+We have also come up with a rough information architecture and layout for both
+the narrow and wide viewports.
 
 <div class="demo">
   <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA">
@@ -48,17 +49,16 @@ we will use for the rest of this project.
 
 ## Add content to the page
 
-The basic structure of the site is complete.
-We know the sections we need, the content to display in those sections,
-and where to position it in the overall information architecture.
-We can now start to build out the site.
+The basic structure of the site is complete. We know the sections we need, the
+content to display in those sections, and where to position it in the overall
+information architecture. We can now start to build out the site.
 
 {% include modules/remember.liquid title="Note" list=page.notes.styling %}
 
 ### Create the headline and form
 
-The headline and request-a-demonstration form are the critical components of our page.
-These must be presented to the user immediately.
+The headline and request notification form are the critical components of
+our page. These must be presented to the user immediately.
 
 Adding the header is just a simple set of list items.
 
@@ -67,15 +67,15 @@ Adding the header is just a simple set of list items.
 We need to also fill out the form.  It will be a simple form that collects the
  users' names, their phone number, and a good time to call them back.
 
-All forms should have labels and placeholders to make it easy for users to focus
-elements, understand what is supposed to go in them, and to also help
+All forms should have labels and placeholders to make it easy for users to
+focus elements, understand what is supposed to go in them, and to also help
 accessibility tools understand the structure of the form.  The name attribute
 not only sends the form value to the server, it is also used to give important
 hints to the browser about how to automatically fill in the form for the user.
 
 We will add semantic types to make it quick and simple for users to be able to
-enter content on a mobile device.  For example, when entering a telephone number,
-the user should just see a dial pad.
+enter content on a mobile device.  For example, when entering a telephone
+number, the user should just see a dial pad.
 
 {% include_code _code/withform.html form %}
 
