@@ -2,7 +2,7 @@
 <html>
 <head>
   <!-- // [TEMPLATE header_full] -->
-  <title>Video: Provide captions with the track element</title>
+  <title>Video: Specifying multiple typed video source files</title>
   <style type="text/css">
     #container {
       max-width: 480px;
@@ -18,17 +18,14 @@
 </head>
 <body>
 <div id="container" role="main">
-  <h1>Video: Provide captions with the <code>track</code> element</h1>
-  <!-- // [START track] -->
+  <h1>Video: Specifying multiple typed video source files</h1>
+  <!-- // [START sourcetypes] -->
   <video controls>
     <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'" />
     <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-    <track src="chrome-subtitles-en.vtt" label="English captions"
-           kind="captions" srclang="en" default />
     <p>This browser does not support the video element.</p>
   </video>
-  <!-- // [END track] -->
-  
+  <!-- // [END sourcetypes] -->
 
   <div id="srcInfo" class="is-hidden">
     <p>
@@ -42,7 +39,9 @@
   <script>
 
   function init() {
-    document.querySelector("video").addEventListener("loadedmetadata", showMetadata);
+    var video = document.querySelector("video");
+    video.addEventListener("loadedmetadata", showMetadata);
+    video.addEventListener("play", showMetadata);
   }
 
   function showMetadata(evt) {
@@ -53,10 +52,12 @@
     var srcHeight = document.querySelector("#srcHeight");
 
     srcInfo.classList.remove("is-hidden");
+    /* // [START currentsrc] */
     srcEvent.innerText = evt.type;
     srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
     srcWidth.innerText = this.videoWidth;
     srcHeight.innerText = this.videoHeight;
+    /* // [END currentsrc] */
   }
 
   init();

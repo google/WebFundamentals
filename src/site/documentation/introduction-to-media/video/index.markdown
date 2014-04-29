@@ -101,26 +101,65 @@ Load, decode, and play video:
 </video>
 {% endhighlight %}
 
+### Specify multiple file formats
+
+Because not all browsers support the same video formats, you can specify 
+multiple source files by using the `<source>` element. The source element 
+lets you specify multiple formats as a fallback in case the user's browser 
+doesn't support one of them. For example:
+
+{% include_code _code/video-main.html sourcetypes %}
+
+When the browser parses the `<source>` tags, it uses the optional `type` 
+attribute to help decide which file to download and play. If the browser 
+supports WebM and has the VP8 and Vorbis codecs, it will play 
+chrome.webm, if not, it will check if it can play MPEG-4 videos with the 
+avc1.42E01E and mp4a.40.2 codecs, and so forth.
+
+This approach has several advantages over serving different HTML or 
+server-side scripting, especially on mobile:
+
+* Developers can list formats in order of preference.
+* Native client-side switching reduces latency: only one request is made to
+  get content.
+* Letting the browser choose a format is simpler, quicker and potentially
+  more reliable than using a server-side support database with user-agent detection.
+* Adding a type attribute to a source element enables the browser to select a 
+  video source without having to download part of the video to 'sniff' the format.
+
+All of these points are especially important in mobile contexts, where bandwidth
+and latency are at a premium, and the user's patience is likely to be limited.
+
+{% include modules/remember.liquid title="Remember" list=page.remember.multiple-formats %}
+
+Not including a type attribute can affect performance when there are
+multiple sources with unsupported types: using your mobile browser
+developer tools, compare network activity {% link_sample _code/video-main.html %}with type attributes{% endlink_sample %} and {% link_sample _code/notype.html %}without type attributes{% endlink_sample %}.
+
+**Remember:** [Ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check the response headers in your browsers developer tools.
+
 ### Specify a start and end time
 
 Save bandwidth and make your site feel more responsive: use the Media
-Fragments API to add a start and end time to the video element:
+Fragments API to add a start and end time to the video element.
 
 <video controls>
-     <source src="video/chrome.webm#t=5,10" type="video/webm" />
-     <source src="video/chrome.mp4#t=5,10" type="video/mp4" />
-     <p>This browser does not support the video element.</p>
+  <source src="video/chrome.webm#t=5,10" type="video/webm" />
+  <source src="video/chrome.mp4#t=5,10" type="video/mp4" />
+  <p>This browser does not support the video element.</p>
 </video>
 
+To add a media fragment, you simply add `#t=[start_time][,end_time]` to the 
+media URL. For example, to play the video between seconds 5 through 1, 
+specify:
+
 {% highlight html %}
-<video src="chrome.webm#t=5,10" type="video/webm">
-    <p>Your browser does not support the video element.</p>
-</video>
+<source src="video/chrome.webm#t=5,10" type="video/webm" />
 {% endhighlight %}
 
 You can also use the Media Fragments API to deliver multiple views on the same
 video &ndash; like cue points in a DVD &ndash; without having to encode and
-serve multiple files:
+serve multiple files.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.media-fragments %}
 
@@ -133,9 +172,13 @@ To check for Range Request support, your browser tools for
 
 Add a poster attribute to the video element so that your users have an idea
 of the content as soon as the element loads, without needing to download
-video or start playback:
+video or start playback.
 
-{% include_code _code/base_poster.html basic %}
+{% highlight html %}
+<video poster="poster.jpg" ...>
+  ...
+</video>
+{% endhighlight %}
 
 A poster can also be a fallback if the video `src` is broken or none of the
 video formats supplied are supported. The only downside to poster images is
@@ -143,7 +186,7 @@ an additional file request, which consumes some bandwidth and requires
 rendering. For more information see [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization).
 
 Here's a side-by-side comparison of videos without and with a poster image
-&ndash; we've made the poster image grayscale to prove it's not the video!
+&ndash; we've made the poster image grayscale to prove it's not the video:
 
 <div class="clear">
   <div class="g--half">
@@ -155,67 +198,6 @@ Here's a side-by-side comparison of videos without and with a poster image
   </div>
 </div>
 
-### Specify multiple file formats
-
-Not all browsers support the same video formats.
-
-Use the source element to enable browsers to choose from multiple available
-formats. MP4 and WebM cover all modern browsers, including all mobile browsers:
-
-{% include_code _code/fragment.html sourcetypes %}
-
-The user's browser selects the first available format it can play. This
-approach has several advantages over serving different HTML or server-side
-scripting, especially on mobile:
-
-* Developers can list formats in order of preference.
-* Native client-side switching reduces latency: only one request is made to
-  get content.
-* Letting the browser choose a format is simpler, quicker and potentially
-  more reliable than using a server-side support database with user-agent detection.
-
-All of these points are especially potent in mobile contexts, where bandwidth
-and latency are at a premium, and the user's patience is likely to be limited.
-
-{% include modules/remember.liquid title="Remember" list=page.remember.multiple-formats %}
-
-### Specify each source's type
-
-Adding a type attribute to a source element enables the browser to select a
-video source without having to download part of the video to 'sniff' the format.
-
-Instead of this:
-
-{% highlight html %}
-<source src="video/chrome.webm" />
-{% endhighlight %}
-
-Use this:
-
-{% highlight html %}
-<source src="video/chrome.webm" type="video/webm" />
-{% endhighlight %}
-
-You can specify codecs as well as a mime type. For example:
-
-{% highlight html %}
-<source src="video/chrome.webm" type="video/webm; codecs='vp8, vorbis'" />.
-{% endhighlight %}
-
-Not including a type attribute can affect performance when there are
-multiple sources with unsupported types: using your mobile browser
-developer tools, compare network activity {% link_sample _code/type.html %}with type attributes{% endlink_sample %} and {% link_sample _code/notype.html %}without type attributes{% endlink_sample %}.
-
-**Remember:** [Ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check with [cURL](//en.wikipedia.org/wiki/CURL):
-
-{% highlight bash %}
-curl -I simpl.info/video/video/chrome.mp4
-{% endhighlight %}
-
-This should return a response that includes a header like this:
-
-    Content-Type: video/mp4
-
 ## Provide alternatives for legacy platforms
 
 {% include modules/takeaway.liquid list=page.key-takeaways.provide-alternatives %}
@@ -223,7 +205,7 @@ This should return a response that includes a header like this:
 ### Check which formats are supported
 
 Use `canPlayType()` to find out which video formats are supported. The method
-takes a string argument consistent of a mime type and optional codecs and
+takes a string argument consistent of a `mime-type` and optional codecs and
 returns one of the following values:
 
 <table class="table">
@@ -310,11 +292,16 @@ Want to know which video format was actually chosen by the browser?
 
 In JavaScript, use the video's `currentSrc` property to return the source used:
 
-{% include_code _code/basic.html currentsrc javascript %}
+{% include_code _code/video-main.html currentsrc javascript %}
 
+{% comment %}
+<!--
+  PL - this makes no sense in the given context, something must've been removed.
 Given the source example above, Chrome and Firefox choose `chrome.webm`
 (because that's the first in the list of potential sources these browsers
 support) whereas Safari chooses `chrome.mp4`.
+-->
+{% endcomment %}
 
 ## Size videos correctly
 
@@ -330,8 +317,13 @@ When it comes to keeping your users happy, size matters:
 * Long videos can cause hiccups with download and seeking; some browsers may
   have to wait until the video downloads before beginning playback.
 
+{% comment %} 
+<!--
+  PL - We should remove this, it's mean to tell someone to open a 300+ meg file on their mobile device!
 Try this example on your mobile browser and see what happens:
 [simpl.info/longvideo](//simpl.info/longvideo).
+-->
+{% endcomment %}
 
 ### Check video size
 
@@ -346,8 +338,9 @@ height attributes.
 
 ### Ensure videos don't overflow containers
 
-Here's what a plain video element with no element sizing or CSS looks like
-in Chrome on Android (portrait and landscape):
+When video elements are too big for the viewport, they may overflow their
+container, making it impossible for the user to see the content or use
+the controls.
 
 <div class="clear">
   <div class="g--half">
@@ -359,24 +352,26 @@ in Chrome on Android (portrait and landscape):
   </div>
 </div>
 
-The video elements are too big for the viewport; the user can't even see the
-video controls properly. It's super important to size video elements to fit
-their containers.
-
 You can control video dimensions using JavaScript or CSS. JavaScript libraries
 and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain
 appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
-Use [CSS media queries](#TODO) to specify the size of elements depending on
-the viewport dimensions; `max-width: 100%` is your friend:
+Use [CSS media queries](../../multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) to specify the size of elements depending on
+the viewport dimensions; `max-width: 100%` is your friend.
 
-{% include_code _code/basic.html styling css %}
+{% comment %}
+<!--
+  PL - I took this out because the example didn't make sense from a real
+  world practical view.
+{% include_code _code/video-main.html mediaquery css %}
+-->
+{% endcomment %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
 
 For media content in iframes (such as YouTube videos), try a responsive
-approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)):
+approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
 **CSS:**
 
@@ -386,7 +381,7 @@ approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsi
 
 {% include_code _code/responsive_embed.html markup html %}
 
-Compare the {% link_sample _code/yt.html %}responsive sample{% endlink_sample %} to the {% link_sample _code/unyt.html %}unresponsive version{% endlink_sample %}.
+Compare the {% link_sample _code/responsive_embed.html %}responsive sample{% endlink_sample %} to the {% link_sample _code/unyt.html %}unresponsive version{% endlink_sample %}.
 
 
 ## Customize the video player
@@ -442,15 +437,27 @@ Safari on an iPad plays video inline:
 
 For platforms that do not force fullscreen video playback, the Fullscreen API
 is [widely supported](//caniuse.com/fullscreen). Use this API to control
-fullscreening of content, including video:
+fullscreening of content, or the page.
 
-{% include_code _code/fullscreen.html elementfs javascript %}
+To full screen an element, like a video:
+{% highlight javascript %}
+elem.requestFullScreen();
+{% endhighlight %}
 
-{% include_code _code/fullscreen.html pagefs javascript %}
+To full screen the entire document:
+{% highlight javascript %}
+document.body.requestFullScreen();
+{% endhighlight %}
 
-{% include_code _code/fullscreen.html listener javascript %}
+You can also listen for fullscreen state changes:
+{% highlight javascript %}
+video.addEventListener("fullscreenchange", handler);
+{% endhighlight %}
 
-{% include_code _code/fullscreen.html check javascript %}
+Or, check to see if the element is currently in fullscreen mode:
+{% highlight javascript %}
+console.log("In full screen mode: ", video.displayingFullscreen);
+{% endhighlight %}
 
 You can also use the CSS `:fullscreen` pseudo-class to change the way
 elements are displayed in fullscreen mode.
@@ -458,24 +465,27 @@ elements are displayed in fullscreen mode.
 On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
-<video autoplay loop class="center" style="border: 1px solid black; margin-top: 10px; width: 270px">
-    <source src="video/fullscreen.webm" type="video/webm" />
-    <source src="video/fullscreen.mp4" type="video/mp4" />
-    <p>This browser does not support the video element.</p>
+<video autoplay loop class="center">
+  <source src="video/fullscreen.webm" type="video/webm" />
+  <source src="video/fullscreen.mp4" type="video/mp4" />
+  <p>This browser does not support the video element.</p>
 </video>
 
-To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap or click on a thumbnail, the thumbnail is replaced by a fullscreen video element.
+To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. 
 
-### Include captions to improve accessibility
+**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+extra code for full cross browser compatibility.
 
-{% include modules/takeaway.liquid list=page.key-takeaways.improve-accessibility %}
-
-### Accessibility matters
+## Accessibility matters
 
 Accessibility isn't a feature. Users who can't hear or see won't be able to
 experience a video at all without captions or descriptions. The time it takes
 to add these to your video is much less than the bad experience you are
 delivering to users. Provide at least a base experience for all users.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.improve-accessibility %}
+
+### Include captions to improve accessibility
 
 To make media more accessible on mobile, include captions or descriptions
 using the track element.
@@ -490,7 +500,7 @@ Using the track element, captions appear like this:
 
 It's very easy to add captions to your video &ndash; simply add a track element as a child of the video element:
 
-{% include_code _code/track.html basic %}
+{% include_code _code/track.html track html %}
 
 The track element `src` attribute gives the location of the track file.
 
@@ -652,7 +662,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither playbackRate ({% link_sample _code/rate.html %}see demo{% endlink_sample %}) nor volume are supported on mobile.
+Neither playbackRate ({% link_sample _code/scripted.html %}see demo{% endlink_sample %}) nor volume are supported on mobile.
 
 #### Methods
 

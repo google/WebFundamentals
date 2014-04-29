@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- // [TEMPLATE header_full] -->
-	<title>Video Element: Full Screen</title>
+  <!-- // [TEMPLATE header_full] -->
+  <title>Video: Using the full screen API</title>
+  <style type="text/css">
+    #container {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    video {
+      max-width: 100%;
+    }
+
+  </style>
 </head>
 <body>
 <div id="container" role="main">
+  <h1>Video: Using the full screen API</h1>
+  <video controls>
+    <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'" />
+    <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+    <p>This browser does not support the video element.</p>
+  </video>
 
-  <h1>Video Element: Full Screen</h1>
-
-  <div id="videocontainer">
-    <video src='chrome.webm'>
-      <p>This browser does not support the video element.</p>
-    </video>
-  </div>
+  <button type="button" id="butFullScreenDoc">Make Page Full Screen</button>
+  <button type="button" id="butFullScreenVid">Make Video Full Screen</button>
   
-  <button id="fullscreen">Make Page Full Screen</button>
+
+  <div id="srcInfo" class="is-hidden">
+    <p>
+      <b>Event type:</b> <span id="srcEvent"></span><br>
+      <b>Current source file:</b> <span id="srcFile"></span><br>
+      <b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span>
+    </p>
+  </div>
+
 
   <script>
-  var container = document.getElementById('videocontainer');
-  container.onclick = function () {
-    var videoElement = this.querySelector('video');
-    // Handle older browser versions where method is prefixed.
-    videoElement.requestFullScreen = 
-        videoElement.requestFullScreen || 
-        videoElement.webkitRequestFullScreen || 
-        videoElement.mozRequestFullScreen;
+  var video;
 
-    /* // [START listener] */
-    // Listen for fullscreen state change
-    videoElement.onfullscreenchange = function() {
-      console.log('You fullscreened me!');
-    }
-    /* // [END listener] */
+  function init() {
+    video = document.querySelector("video");
+    video.addEventListener("loadedmetadata", showMetadata);
+    video.addEventListener("play", showMetadata);
+    video.addEventListener("pause", showMetadata);
 
-    /* // [START elementfs] */
-    // Fullscreen a video element
-    videoElement.requestFullScreen();
-    /* // [END elementfs] */
+    video.addEventListener("webkitfullscreenchange", function() {
+      console.log("Full Screen", video.displayingFullscreen);
+    });
 
-    /* // [START check] */
-    // Check if element is fullscreened
-    console.log(videoElement.displayingFullscreen)
-    /* // [END check] */
+    document.querySelector("#butFullScreenDoc").addEventListener("click", fullScreenDoc);
+    document.querySelector("#butFullScreenVid").addEventListener("click", fullScreenVid);
 
-    sampleCompleted("Video-FullScreenContainer");
-  }
+    video.requestFullScreen = 
+      video.requestFullScreen || 
+      video.webkitRequestFullScreen || 
+      video.mozRequestFullScreen;
 
-  document.getElementById('fullscreen').onclick = function() {
-    // Handle older browser versions where method is prefixed.
     document.body.requestFullScreen = 
-        document.body.requestFullScreen || 
-        document.body.webkitRequestFullScreen || 
-        document.body.mozRequestFullScreen;
-
-    /* // [START pagefs] */
-    // Fullscreen the whole page
-    document.body.requestFullScreen();    
-    /* // [END pagefs] */
-
-    sampleCompleted("Video-FullScreenButton");
+      document.body.requestFullScreen || 
+      document.body.webkitRequestFullScreen || 
+      document.body.mozRequestFullScreen;
   }
+
+  function fullScreenDoc(evt) {
+    document.body.requestFullScreen();
+    sampleCompleted("Video-FullScreenDocument");
+  }
+
+  function fullScreenVid(evt) {
+    video.requestFullScreen();
+    sampleCompleted("Video-FullScreenVideo");
+  }
+
+
+
+  function showMetadata(evt) {
+    var srcInfo = document.querySelector("#srcInfo");
+    var srcEvent = document.querySelector("#srcEvent");
+    var srcFile = document.querySelector("#srcFile");
+    var srcWidth = document.querySelector("#srcWidth");
+    var srcHeight = document.querySelector("#srcHeight");
+
+    srcInfo.classList.remove("is-hidden");
+    srcEvent.innerText = evt.type;
+    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.innerText = this.videoWidth;
+    srcHeight.innerText = this.videoHeight;
+  }
+
+  init();
+  
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->
