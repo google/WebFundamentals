@@ -83,8 +83,7 @@
 
   pre {
     margin: 0;
-    padding-top: $lineHeight*2;
-    padding-bottom: $lineHeight;
+    padding-top: $lineHeight;
     margin-left: - $lineHeight;
     font-size: $fontSmall;
 
@@ -99,14 +98,16 @@
     margin: 0;
     padding: 0;
     word-spacing: -2px;
+    display: block;
   }
 
   .highlight-module__container {
-    padding-bottom: $lineHeight*2;
+    padding-bottom: 0;
   }
 
   .highlight-module__cta {
-    margin-bottom: -($lineHeight*4);
+    position: relative;
+    bottom: -($lineHeight*2);
     display: block;
   }
 
