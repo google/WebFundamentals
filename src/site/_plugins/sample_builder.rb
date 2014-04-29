@@ -223,9 +223,8 @@ module SampleBuilder
 				cmp 
 			}	
 			links = samples.map{ |sample| render_sample(sample, context.registers[:site]) }
-		    "<ul>" +
-		    links.join("\n") +
-		    "</ul></li></ul>"
+		    
+		    links.join("\n") 
 	    end
 
 	    def render_sample(sample, site)
@@ -235,9 +234,9 @@ module SampleBuilder
 	    	output = ""
 	    	if @last_section != section
 	    		if @last_section != nil
-	    			output += "</ul></li>"
+	    			output += "</ul>"
 	    		end
-	    		output += "<li>#{section}<ul>"
+	    		output += "<h2>#{section}</h2><ul>"
 	    		@last_section = section
 	    	end
 			output += "<li><a href='#{url}'>#{name}</a></li>"
