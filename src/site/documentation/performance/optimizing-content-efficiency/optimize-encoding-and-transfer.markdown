@@ -1,17 +1,11 @@
 ---
 layout: article
 title: "Optimizing encoding and transfer size"
-description: "Our web applications continue to grow in their scope, ambition, and
-              functionality - that's a good thing. However, the relentless march towards a
-              richer web is driving another trend: the amount of data downloaded by each
-              application continues to increase at a steady pace. "
-introduction: "Our web applications continue to grow in their scope, ambition, and
-               functionality - that's a good thing. However, the relentless march towards a
-               richer web is driving another trend: the amount of data downloaded by each
-               application continues to increase at a steady pace. "
+description: ""
+introduction: ""
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-05
+  written_on: 2014-04-01
+  updated_on: 2014-04-29
   order: 2
 collection: optimizing-content-efficiency
 key-takeaways:
@@ -53,17 +47,6 @@ key-takeaways:
   replace-raster-with-vector:
     - Vector formats are ideally suited for high-resolution screens
     - Audit your image assets and replace them with vector formats where possible
-  validate-etags:
-    - Validation token is communicated by the server via the ETag HTTP header
-    - Validation token enables efficient resource update checks: no data transfer if the resource has not changed.
-  cache-contel:
-    - Each resource can define its caching policy via Cache-Control HTTP header
-    - Cache-Control directives control who can cache the resource, under which conditions, and for how long
-  invalidate-cache:
-    - Locally cached resources are used until the resource "expires"
-    - Embedding a file content fingerprint in the URL enables us to force the client to update to a new version of the resource
-    - Each application needs to define its own cache hierarchy for optimal performance
-
 ---
 
 {% wrap content%}
