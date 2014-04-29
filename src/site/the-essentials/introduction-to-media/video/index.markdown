@@ -47,9 +47,6 @@ remember:
   dont-overflow:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
-  compare-formats:
-    - Compare the
-   {% link_sample _code/yt.html %}responsive sample{% endlink_sample %} to the {% link_sample _code/unyt.html %}unresponsive version{% endlink_sample %}.
   accessibility-matters:
     - The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href="//caniuse.com/track" title="Track element support status">caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
@@ -381,7 +378,8 @@ approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsi
 
 {% include_code _code/responsive_embed.html markup html %}
 
-{% include modules/remember.liquid title="Remember" list=page.remember.compare-formats %}
+Compare the {% link_sample _code/yt.html %}responsive sample{% endlink_sample %} to the {% link_sample _code/unyt.html %}unresponsive version{% endlink_sample %}.
+
 
 ## Customize the video player
 
