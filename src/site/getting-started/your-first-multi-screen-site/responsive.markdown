@@ -296,13 +296,7 @@ viewport and should be display side by side with the bulleted list of content.
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
-<video controls poster="images/floatingvideo.png" style="width: 100%;">
-  <source src="videos/floatingvideo.mov" type="video/mov"></source>
-  <source src="videos/floatingvideo.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
-     <a href="videos/floatingvideo.mov">Download the video</a>.
-  </p>
-</video>
+[TODO: waiting on final video]
 
 ### Tile the Images
 
@@ -310,14 +304,14 @@ The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen and stacked vertically.  This doesn't scale
 well on a wide viewport.
 
-To make the images look correct on the screen they are scaled to 50% of the
-container width.  This means that we will get a nice grid of images and the
-images will inflate to large.
+To make the images look correct on the a wide viewport they are scaled to 30%
+of the container width and laid out horizontally (rather than vertically in
+the narrow view). We will also add some border radius and box-shadow to make
+the images look more appealing.
+
+<img src="images/imageswide.png" style="width:100%" />
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
-
-Tiling images is a good idea because it allows you to display content more 
-effectively depending on the size of the viewport.
 
 ### Make images responsive to DPI
 
