@@ -19,14 +19,14 @@ collection: resources
 
 ### Article & website section titles
 
-  * Camel case capitalization
+  * Title case capitalization
   * Should start with "ing" verb
   * Good: "Handling User Input Across Devices"
   * Bad: "Input handling"
   * For hyphenated words, capitalize as if the hyphens weren't there, e.g. "Multi-Device" and "Peer-to-Peer"
 
 ### Headlines within articles
-  * Sentence case for headlines in articles: "Use placeholders"
+  * Sentence case for headlines in articles: "Use placeholders for images"
 
 ## Linking to external articles
   * Related reading to our articles: Add them in 
