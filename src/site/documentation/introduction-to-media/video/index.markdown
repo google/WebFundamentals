@@ -96,7 +96,9 @@ Load, decode, and play video:
 </video>
 
 {% highlight html %}
-<video src="chrome.webm" type="video/webm"></video>
+<video src="chrome.webm" type="video/webm">
+    <p>Your browser does not support the video element.</p>
+</video>
 {% endhighlight %}
 
 ### Specify a start and end time
@@ -111,7 +113,9 @@ Fragments API to add a start and end time to the video element:
 </video>
 
 {% highlight html %}
-<video src="chrome.webm#t=5,10" type="video/webm"></video>
+<video src="chrome.webm#t=5,10" type="video/webm">
+    <p>Your browser does not support the video element.</p>
+</video>
 {% endhighlight %}
 
 You can also use the Media Fragments API to deliver multiple views on the same
