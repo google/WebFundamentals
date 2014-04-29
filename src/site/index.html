@@ -18,7 +18,6 @@ class: home
     <li class="g-medium--half g-wide--1 {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
       <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
       <p>{{ guide.snippet }}</p>
-      <a href="#" class="cta--secondary">Get started</a>
     </li>
     {% endfor %}
   </ul>
