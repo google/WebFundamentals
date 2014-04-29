@@ -64,7 +64,7 @@ ul.list--links {
     display: none;
   }
   a {
-    @include bullet-type(">");
+    @include bullet-type("", icon-cheveron-right);
     font-weight: 400;
     font-family: $fontHighlight;
     line-height: 1; // fixes baseline grid alignment
@@ -97,12 +97,6 @@ ol.list--variant {
 
 .centered-list {
   text-align: center;
-
-  p {
-    padding-bottom: $lineHeight;
-    @include medium { padding-bottom: 0;}
-  }
-
 }
 
 /*==========  FEATURED LIST  ==========*/

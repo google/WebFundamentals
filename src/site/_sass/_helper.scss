@@ -121,3 +121,31 @@
     display: inline-block;
   }
 }
+
+
+.icon-circle,
+.icon-circle--large {
+  height: 0;
+  width: 0;
+  padding: $lineHeight;
+  background: $colorGray;
+  display: block;
+  position: relative;
+  border-radius: 100%;
+  font-size: $fontLarge;
+
+  i {
+    position: absolute;
+    line-height: 1px;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.icon-circle--large {
+  padding: $lineHeight + $lineHeight/2;
+  font-size: $fontXLarge;
+}
