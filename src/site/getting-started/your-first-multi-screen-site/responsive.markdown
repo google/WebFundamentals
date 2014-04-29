@@ -341,8 +341,8 @@ Learn how to effectively use images for varying screen densities:
 Tables are very hard to get right on devices that have a narrow viewport and need
 special consideration.
 
-We recommend on a narrow viewport that you make your table into two rows, the heading
-and transposing the cells in a row to make the columnar. 
+We recommend on a narrow viewport that you make your table into two rows,
+transposing the heading and cells in a row to make the columnar.
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
@@ -364,13 +364,13 @@ consistent break.
 
 **CONGRATULATIONS.** By the time you read this you will have created your
 first simple product landing page that works across a large range of devices,
-form-factors and screen sizes.
+form-factors, and screen sizes.
 
-If you follow these guidelines you will be off to a good start:
+If you follow these guidelines, you will be off to a good start:
 
 1.  Create a basic IA and understand your content before you code.
-2.  Always set a viewport
-3.  Create your base experience around mobile-first approach
+2.  Always set a viewport.
+3.  Create your base experience around mobile-first approach.
 4.  Once you have your mobile experience, increase the width of the display 
    until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
