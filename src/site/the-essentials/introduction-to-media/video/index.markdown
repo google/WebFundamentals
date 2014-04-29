@@ -105,8 +105,8 @@ Save bandwidth and make your site feel more responsive: use the Media
 Fragments API to add a start and end time to the video element:
 
 <video controls>
-     <source src="video/chrome.webm#t=10,15" type="video/webm" />
-     <source src="video/chrome.mp4#t=10,15" type="video/mp4" />
+     <source src="video/chrome.webm#t=5,10" type="video/webm" />
+     <source src="video/chrome.mp4#t=5,10" type="video/mp4" />
      <p>This browser does not support the video element.</p>
 </video>
 
@@ -454,9 +454,13 @@ You can also use the CSS `:fullscreen` pseudo-class to change the way
 elements are displayed in fullscreen mode.
 
 On devices that support the Fullscreen API, consider using thumbnail
-images as placeholders for video (demo on Chrome for Android):
+images as placeholders for video:
 
-<img class="center" alt="Screenshot of two videos in desktop Chrome, showing thumbnails" src="images/Chrome-desktop-video-thumbnails.jpg" />
+<video loop>
+     <source src="video/fullscreen.webm" type="video/webm" />
+     <source src="video/fullscreen.mp4" type="video/mp4" />
+     <p>This browser does not support the video element.</p>
+</video>
 
 To see this in action, check out the
 {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. When you tap
