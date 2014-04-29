@@ -231,3 +231,43 @@
     display: none;
   }
 }
+
+
+/*==========  ICONS  ==========*/
+.main-nav__icon {
+  float: right;
+  font-size: $fontSmall;
+  line-height: $lineHeight;
+  vertical-align: middle;
+
+  @include medium {
+    display: none;
+  }
+}
+
+.icon-custom {
+  &:before {
+    @extend .icon-plus:before;
+
+    @include medium {
+      content:"\e001"; // Took this from _icons.scss - not great, I know.
+    }
+  }
+
+  @include medium {
+    float: none;
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  .subnav-is-opened & {
+    &:before {
+      @extend .icon-minus:before;
+
+      @include medium {
+        content:"\e004"; // Same as above
+      }
+    }
+  }
+}
+

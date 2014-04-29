@@ -625,8 +625,8 @@ body.debug:after {
 
 @font-face {
   font-family: "icons";
-  src: url("../icons/icons-40fcdaf549ec93a00f0f471ab4e404ca.eot");
-  src: url("../icons/icons-40fcdaf549ec93a00f0f471ab4e404ca.eot?#iefix") format("embedded-opentype"), url("../icons/icons-40fcdaf549ec93a00f0f471ab4e404ca.woff") format("woff"), url("../icons/icons-40fcdaf549ec93a00f0f471ab4e404ca.ttf") format("truetype"), url("../icons/icons-40fcdaf549ec93a00f0f471ab4e404ca.svg?#icons") format("svg");
+  src: url("../icons/icons-cfd5d71cacf1e2ebff0a6d331eb7c36f.eot");
+  src: url("../icons/icons-cfd5d71cacf1e2ebff0a6d331eb7c36f.eot?#iefix") format("embedded-opentype"), url("../icons/icons-cfd5d71cacf1e2ebff0a6d331eb7c36f.woff") format("woff"), url("../icons/icons-cfd5d71cacf1e2ebff0a6d331eb7c36f.ttf") format("truetype"), url("../icons/icons-cfd5d71cacf1e2ebff0a6d331eb7c36f.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -648,68 +648,73 @@ body.debug:after {
 }
 
 /* line 33, ../_sass/_components/_icons.scss */
-.icon-cheveron-left:before, .article-nav-link--prev:before {
+.icon-cheveron-down:before {
   content: "\e001";
 }
 
 /* line 38, ../_sass/_components/_icons.scss */
-.icon-cheveron-right:before, .editorial-header .container:before, .article-nav-link--next:before, ul.list--links a:before, .cta--primary:before {
+.icon-cheveron-left:before, .article-nav-link--prev:before {
   content: "\e002";
 }
 
 /* line 43, ../_sass/_components/_icons.scss */
-.icon-forward-slash:before {
+.icon-cheveron-right:before, .editorial-header .container:before, .article-nav-link--next:before, ul.list--links a:before, .cta--primary:before {
   content: "\e003";
 }
 
 /* line 48, ../_sass/_components/_icons.scss */
-.icon-google-dev:before {
+.icon-cheveron-up:before {
   content: "\e004";
 }
 
 /* line 53, ../_sass/_components/_icons.scss */
-.icon-introduction-to-media:before {
+.icon-forward-slash:before {
   content: "\e005";
 }
 
 /* line 58, ../_sass/_components/_icons.scss */
-.icon-lessons:before, .editorial-header__toc-title:before {
+.icon-google-dev:before {
   content: "\e006";
 }
 
 /* line 63, ../_sass/_components/_icons.scss */
-.icon-minus:before {
+.icon-introduction-to-media:before {
   content: "\e007";
 }
 
 /* line 68, ../_sass/_components/_icons.scss */
-.icon-multi-device-layouts:before {
+.icon-lessons:before, .editorial-header__toc-title:before {
   content: "\e008";
 }
 
 /* line 73, ../_sass/_components/_icons.scss */
-.icon-navigation-cheveron:before {
+.icon-minus:before, .subnav-is-opened .icon-custom:before {
   content: "\e009";
 }
 
 /* line 78, ../_sass/_components/_icons.scss */
-.icon-performance:before {
+.icon-multi-device-layouts:before {
   content: "\e00a";
 }
 
 /* line 83, ../_sass/_components/_icons.scss */
-.icon-plus:before {
+.icon-performance:before {
   content: "\e00b";
 }
 
 /* line 88, ../_sass/_components/_icons.scss */
-.icon-star:before, .home-header:after {
+.icon-plus:before, .icon-custom:before {
   content: "\e00c";
 }
 
 /* line 93, ../_sass/_components/_icons.scss */
-.icon-user-input:before {
+.icon-star:before, .home-header:after {
   content: "\e00d";
+}
+
+/* line 98, ../_sass/_components/_icons.scss */
+.icon-user-input:before {
+  content: "\e00e";
 }
 
 /**
@@ -1099,6 +1104,42 @@ body.debug:after {
   /* line 218, ../_sass/_modules/_main-navigation.scss */
   .main-nav__btn {
     display: none;
+  }
+}
+
+/*==========  ICONS  ==========*/
+/* line 237, ../_sass/_modules/_main-navigation.scss */
+.main-nav__icon {
+  float: right;
+  font-size: 13px;
+  line-height: 26px;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 620px) {
+  /* line 237, ../_sass/_modules/_main-navigation.scss */
+  .main-nav__icon {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  /* line 249, ../_sass/_modules/_main-navigation.scss */
+  .icon-custom:before {
+    content: "\e001";
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 248, ../_sass/_modules/_main-navigation.scss */
+  .icon-custom {
+    float: none;
+    display: inline-block;
+    margin-left: 6px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 264, ../_sass/_modules/_main-navigation.scss */
+  .subnav-is-opened .icon-custom:before {
+    content: "\e004";
   }
 }
 
