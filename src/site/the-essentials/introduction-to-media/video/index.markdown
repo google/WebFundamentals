@@ -106,6 +106,12 @@ Load, decode, and play video:
 Save bandwidth and make your site feel more responsive: use the Media
 Fragments API to add a start and end time to the video element:
 
+<video controls>
+     <source src="video/chrome.webm#t=10,15" type="video/webm" />
+     <source src="video/chrome.mp4#t=10,15" type="video/mp4" />
+     <p>This browser does not support the video element.</p>
+</video>
+
 {% include_code _code/base_fragment.html basic %}
 
 {% include modules/remember.liquid title="Remember" list=page.remember.specify-a-start-time %}
