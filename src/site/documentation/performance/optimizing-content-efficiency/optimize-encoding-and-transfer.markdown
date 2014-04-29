@@ -83,7 +83,7 @@ techniques.
 
 ## Data compression 101
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.compression-101 %}
+{% include modules/takeaway.liquid list=page.key-takeaways.compression-101 %}
 
 The process of reducing the size of data is known as "data compression", and it
 is a deep field of study on its own: many people have spent their entire careers
@@ -157,7 +157,7 @@ algorithms for different content.
 
 ## Minification: preprocessing & context-specific optimizations
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.minification %}
+{% include modules/takeaway.liquid list=page.key-takeaways.minification %}
 
 
 The best way to compress redundant or unnecessary data is to eliminate it
@@ -244,7 +244,7 @@ Tools to help you optimize your resources:
 
 ## Text compression with GZIP
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.text-compression %}
+{% include modules/takeaway.liquid list=page.key-takeaways.text-compression %}
 
 All modern browsers support and automatically negotiate [GZIP
 compression](http://en.wikipedia.org/wiki/Gzip) for all HTTP requests: our job
@@ -372,7 +372,7 @@ the browser can download and display all the assets.
 
 ### Image compression 101
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.image-compression-101 %}
+{% include modules/takeaway.liquid list=page.key-takeaways.image-compression-101 %}
 
 Image compression is both an art and science: an art because there is no one
 definitive answer for how to best compress an individual image, and a science
@@ -496,7 +496,7 @@ their respective optimization options and knobs.
 
 ### Lossless vs. lossy compression
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.lossless-vs-lossy %}
+{% include modules/takeaway.liquid list=page.key-takeaways.lossless-vs-lossy %}
 
 For certain types of data, such as source code for a page, or an executable
 file, it is critical that a compressor does not alter or lose any of the
@@ -552,7 +552,7 @@ high-resolution product photos vs. other assets.
 
 ### Selecting the right image format
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.select-right-image %}
+{% include modules/takeaway.liquid list=page.key-takeaways.select-right-image %}
 
 
 <!-- TODO: Fix formatting of cells -->
@@ -699,7 +699,7 @@ out best settings?
 
 ### Optimizing HiDPI raster images
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.optimize-hidpi-images %}
+{% include modules/takeaway.liquid list=page.key-takeaways.optimize-hidpi-images %}
 
 <img src="image03.png" width="469" height="204" />
 When we talk about pixels, we need to distinguish between different kinds of
@@ -757,7 +757,7 @@ pixel, and minimizing the total number of pixels:
 
 ### Delivering scaled images
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.delivering-scaled-images %}
+{% include modules/takeaway.liquid list=page.key-takeaways.delivering-scaled-images %}
 
 Image optimization boils down to two criteria: optimizing the number of bytes
 used to encode each image pixel, and optimizing the total number of pixels: the
@@ -819,7 +819,7 @@ particular are delivered as close as ****possible to their display size**.
 
 ### Replacing raster images with vector-based formats
 
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.replace-raser-with-vector %}
+{% include modules/takeaway.liquid list=page.key-takeaways.replace-raser-with-vector %}
 
 Images are often the [single largest
 contributor](https://docs.google.com/a/google.com/document/d/1EdBtvM_OIdmZlPhtOq_oLuQ4nGEq1dycOsN8A-KtExY/edit#)
