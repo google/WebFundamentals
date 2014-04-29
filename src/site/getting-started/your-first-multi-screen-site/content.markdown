@@ -3,8 +3,7 @@ layout: article
 title: "Create Your Content and Structure"
 description: "Content is the most important aspect of any site. In this guide, 
   we will show you can quickly plan to build your first multi-screen site."
-introduction: "Content is the most important aspect of any site. In this guide, 
-  we will show you can quickly plan to build your first multi-screen site."
+introduction: "Content is the most important aspect of any site. So let’s design for the content and not let the design dictate the content. In this guide, we identify the content we need first, create a page structure based on this content, and then present the page in a simple linear layout that works well on narrow and wide viewports."
 notes:
   styling: 
     - Styling will come later
@@ -24,18 +23,6 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-In this tutorial we are going to cover how to structure your page with content
-such as text, video and images for a narrow viewport (mobile) experience and
-before we then move on to  work out how we make it responsive across larger
-screens.
-
-{% include modules/takeaway.liquid list=page.key-takeaways.content-critical %}
-
-We believe that the content is the most important aspect of any site. So let's
-design for the content and not let the design dictate the content.  In this
-lesson we will present a simple linear layout that will work well on narrow
-viewports.
-
 ## Create the page structure
 
 We have identified we need:
@@ -45,6 +32,8 @@ We have identified we need:
 3.  An in depth description and video
 4.  Images of the product in action
 5.  A data table with information to back the claims up
+
+{% include modules/takeaway.liquid list=page.key-takeaways.content-critical %}
 
 We have also come up with a rough information architecture and layout for both the narrow and wide viewports.
 
