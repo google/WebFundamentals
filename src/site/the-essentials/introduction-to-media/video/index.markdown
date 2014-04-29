@@ -135,8 +135,7 @@ video or start playback:
 A poster can also be a fallback if the video `src` is broken or none of the
 video formats supplied are supported. The only downside to poster images is
 an additional file request, which consumes some bandwidth and requires
-rendering. For more information see
-[Image optimization](#TODO).
+rendering. For more information see [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization).
 
 Here's a side-by-side comparison of videos without and with a poster image
 &ndash; we've made the poster image grayscale to prove it's not the video!
