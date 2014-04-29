@@ -38,11 +38,9 @@ key-takeaways:
     - Use the Media Source Extensions API to construct video streams.
     - Use DASH to enable high quality streaming on the web.
 remember:
-  specify-a-start-time:
+  media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.
-  range-request:
-    - Make sure Range Requests are supported by your server. Range Requests are enabled by
-      default on most servers, but some hosting services may turn them off.
+    - Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.
   multiple-formats:
     - MP4 and WebM are <a href='//en.wikipedia.org/wiki/Container_formats' title='Wikipedia article about media file container formats'>container formats</a>. MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
       Check out <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a> to find out more about how video and audio work on the web.
@@ -114,13 +112,11 @@ Fragments API to add a start and end time to the video element:
 
 {% include_code _code/base_fragment.html basic %}
 
-{% include modules/remember.liquid title="Remember" list=page.remember.specify-a-start-time %}
-
 You can also use the Media Fragments API to deliver multiple views on the same
 video &ndash; like cue points in a DVD &ndash; without having to encode and
 serve multiple files:
 
-{% include modules/remember.liquid title="Remember" list=page.remember.range-request %}
+{% include modules/remember.liquid title="Remember" list=page.remember.media-fragments %}
 
 To check for Range Request support, your browser tools for
 `Accept-Ranges: bytes` in the response headers:
