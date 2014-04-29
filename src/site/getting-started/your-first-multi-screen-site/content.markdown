@@ -48,9 +48,10 @@ we will use for the rest of this project.
 
 ## Add content to the page
 
-The basic structure of the site is complete and we know what sections we need,
-what content we will display and where it will be positioned in the overall
-information architecture we can now start to build out the site.
+The basic structure of the site is complete.
+We know the sections we need, the content to display in those sections,
+and where to position it in the overall information architecture.
+We can now start to build out the site.
 
 {% include modules/remember.liquid title="Note" list=page.notes.styling %}
 
@@ -101,17 +102,17 @@ Learn more about how to create amazing forms:
 
 The Video and Information section of content will contain a little more depth.
 It will  have a bulleted list of features of our products and will also contain
-a video placeholder  that will show our product working for the user.
+a video placeholder that shows our product working for the user.
 
 {% include_code _code/addcontent.html section1 %}
 
 Videos are often used to describe content in a more interactive manner and are
 frequently used to show a demonstration of a product or a concept.  
 
-By following the best practices you can easily integrate video in to your site:
+By following the best practices, you can easily integrate video in to your site:
 
-*  Add a `controls` attribute to make it easy for people to play the video
-*  Add a `poster` image to give people a preview of the content
+*  Add a `controls` attribute to make it easy for people to play the video.
+*  Add a `poster` image to give people a preview of the content.
 *  Add multiple `<source>` elements based on supported video formats.
 *  Add fall-back text to let people download the video if they can't play it in the window.
 
