@@ -148,6 +148,15 @@
         text-align: center;
       }
 
+      #section3 figure {
+        text-align: center;
+      }
+
+      #section3 figure figcaption {
+        text-align: center;
+        font-weight: 400;
+      }
+
       #footer {
         font-family: Roboto, sans-serif;
         font-weight: 300;
@@ -158,12 +167,52 @@
         padding-top: 20px;
       }
 
+      table {
+        margin-top: 26px;
+        width: 100%;
+      }
       thead {
         font-weight: bold;
       }
 
       tbody {
         text-align: center;
+      }
+
+
+      @media screen and (max-width: 600px) {
+        table thead {
+          display: none;
+        }
+
+        table td {
+          display: block;
+          position: relative;
+          padding-left: 50%;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          text-align: left;
+          background: #e9e9e9;
+        }
+
+        table td:before {
+          content: attr(data-th) " :";
+          display: inline-block;
+          color: #000000;
+          background: #e9e9e9;
+          border-right: 2px solid transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 33%;
+          max-height: 100%;
+
+          font-size: 16px;
+          font-weight: 300;
+          padding-left: 13px;
+          padding-top: 13px;
+        }
       }
 
       @media screen and (min-width: 600px) {
@@ -322,30 +371,36 @@
                  <td>Mobile share</td>
                </tr>
             </thead>
+            <colgroup>
+               <col span="1">
+               <col span="1">
+               <col span="1">
+               <col span="1">
+            </colgroup>
             <tbody>
              <tr>
-                <td><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-IN-monthly-201303-201403">India</a></td>
-                <td>32%</td>
-                <td>1%</td>
-                <td>67%</td>
+                <td data-th="Country"><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-IN-monthly-201303-201403">India</a></td>
+                <td data-th="Desktop share">32%</td>
+                <td data-th="Table share">1%</td>
+                <td data-th="Mobile share">67%</td>
               </tr>
               <tr>
-                <td><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-GB-monthly-201303-201403">GB</a></td>
-                <td>69%</td>
-                <td>13%</td>
-                <td>18%</td>
+                <td data-th="Country"><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-GB-monthly-201303-201403">GB</a></td>
+                <td data-th="Desktop share">69%</td>
+                <td data-th="Table share">13%</td>
+                <td data-th="Mobile share">18%</td>
               </tr>
               <tr>
-                <td><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-US-monthly-201303-201403">US</a></td>
-                <td>69%</td>
-                <td>9%</td>
-                <td>22%</td>
+                <td data-th="Country"><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-US-monthly-201303-201403">US</a></td>
+                <td data-th="Desktop share">69%</td>
+                <td data-th="Table share">9%</td>
+                <td data-th="Mobile share">22%</td>
               </tr>
               <tr>
-                <td><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-CN-monthly-201303-201403">China</a></td>
-                <td>86%</td>
-                <td>4%</td>
-                <td>10%</td>
+                <td data-th="Country"><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-CN-monthly-201303-201403">China</a></td>
+                <td data-th="Desktop share">86%</td>
+                <td data-th="Table share">4%</td>
+                <td data-th="Mobile share">10%</td>
               </tr>
             </tbody>
           </table>
