@@ -24,24 +24,34 @@
       body {
         display: block;
 
-        padding-bottom: 30%;
+        padding-bottom: 72px;
+
         box-sizing: border-box;
 
-        background-image: url('https://s3.amazonaws.com/ooomf-com-files/C3eOS3DFQgGkcuEXMulZ_IMG_2033.jpg');
+        background-image: url('unsplash-img-3.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
 
       .tab-bar {
-        position: fixed;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         
         width: 100%;
         
+        position: fixed;
+
+        left: 0;
         bottom: 0;
         
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
         flex-direction: row;
+
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
 
         background-image: -o-linear-gradient(top, #000 0%, transparent 100%);
@@ -61,7 +71,7 @@
         
         border: none;
         
-        background-color: rgba(254, 254, 254, 0.8);
+        background-color: rgba(254, 254, 254, 0.7);
         
         border-radius: 100%;
         
@@ -108,13 +118,17 @@
         transition: transform 0.4s ease-out;
       }
 
-      .tab-bar button:hover, .tab-container button:active {
-        background-color: rgba(254, 254, 254, 0.9);
+      .tab-bar button:hover {
+        background-color: rgba(254, 254, 254, 0.8);
       }
 
       .tab-bar button:focus {
         background-color: rgba(254, 254, 254, 0.9);
         outline: 0;
+      }
+
+      .tab-bar button:active {
+        background-color: rgba(255, 255, 255, 1.0);
       }
 
       .tab-bar button.selected {
@@ -226,7 +240,7 @@
 
       function onTabClick(index, btn) {
         return function(e) {
-          currentSelectedTab = index;  
+          currentSelectedTab = index;
           selectTab(btn); 
         };
       }
@@ -235,27 +249,39 @@
         var currentTab = document.querySelector('.tab-bar > .tab-btn.selected');
         if(currentTab) {
           currentTab.classList.remove('selected');
-          var contentClassName = currentTab.dataset.tabsection;
+          var contentClassName = getContentClassname(currentTab);
           var sectionClass = document.querySelector('.'+contentClassName);
           sectionClass.classList.remove('selected');
         }
         tabBtn.classList.add('selected');
-        
+
         var clientRect = tabBtn.getBoundingClientRect();
-        
+
         var center = {
           x: clientRect.left + (clientRect.width / 2),
           y: clientRect.top + (clientRect.height / 2)
         };
-        
+
         var translateX = 'translateX('+(center.x - (bgRect.width / 2))+'px) translateY(6px)';
-        
-        tabSelectionBg.style. webkitTransform = translateX;
+
+        tabSelectionBg.style.msTransform = translateX;
+        tabSelectionBg.style.MozTransform = translateX;
+
+        tabSelectionBg.style.webkitTransform = translateX;
         tabSelectionBg.style.tranform = translateX;
 
-        var contentClassName = tabBtn.dataset.tabsection;
+        var contentClassName = getContentClassname(tabBtn);
+
         var sectionClass = document.querySelector('.'+contentClassName);
         sectionClass.classList.add('selected');
+      }
+
+      function getContentClassname(tabBtn) {
+        if(tabBtn.dataset) {
+          return tabBtn.dataset.tabsection;
+        } else {
+          return tabBtn.getAttribute('data-tabsection');
+        }
       }
 
       selectTab(tabBtns[currentSelectedTab]);
@@ -267,6 +293,17 @@
       window.onresize = function() {
        selectTab(tabBtns[currentSelectedTab]);
       };
+    </script>
+
+    <script>
+      var tabBtns = document.querySelectorAll('.tab-bar > button');
+      for(var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', tabBarBtnClick, true);
+      }
+
+      function tabBarBtnClick() {
+        sampleCompleted('tabbar-sample2.html-tabbtnclick');
+      }
     </script>
 
     <!-- // [TEMPLATE footer] -->

@@ -6,9 +6,11 @@
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-24532603-1');ga('send','pageview');
 
+    var isCompleted = {};
     function sampleCompleted(sampleName){
-      if (ga) {
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
         ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
       }
     }
 </script>

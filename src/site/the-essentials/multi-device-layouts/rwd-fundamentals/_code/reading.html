@@ -13,7 +13,7 @@
       }
       /* // [END mqreading] */
     </style>
-    <title>Reading Demo</title>
+    <title>RWD Fundamentals: Optimized reading example</title>
   </head>
   <body>
     <article role="main">
@@ -74,6 +74,18 @@
         leberkas venison shankle short loin shoulder flank swine shank biltong.
       </p>
     </article>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 575px)").addListener(hitMQ);
+      }
 
+      function hitMQ(evt) {
+        sampleCompleted("RWDFundamentals-Reading");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>

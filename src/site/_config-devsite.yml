@@ -8,11 +8,14 @@ baseurl: /web/fundamentals
 url: /web/fundamentals
 highlighter: pygments
 pygments: true
-spotlights: false
+github:
+  root: https://github.com/PaulKinlan/WebDocs
+  content: tree/master/src/site
 include_open_html: false
 generate_sample_jshtml: true
+spotlights: false
 custom:
 kramdown:
-  toc_levels: "2"
+  toc_levels: "2,3,4"
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['config.rb', '*.psd', 'js/*']

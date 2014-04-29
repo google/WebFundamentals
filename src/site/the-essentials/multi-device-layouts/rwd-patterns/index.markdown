@@ -1,15 +1,17 @@
 ---
 layout: article
 title: "Responsive Web Design Patterns"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi."
+description: "Responsive web design patterns are quickly evolving, but there
+              are a handful of established patterns that work well across the
+              desktop and mobile devices"
 introduction: "Responsive web design patterns are quickly evolving, but there
               are a handful of established patterns that work well across the
               desktop and mobile devices."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-04-30
+  updated_on: 2014-04-30
   order: 2
 collection: multi-device-layouts
 ---
@@ -36,7 +38,7 @@ were added when necessary.  The [flexbox layout mode is well
 supported](http://caniuse.com/#search=flexbox) for modern browsers, though may
 still require vendor prefixing for optimal support.
 
-## Mostly Fluid
+## Mostly fluid
 
 The mostly fluid pattern consists primarily of a fluid grid.  On large or medium
 screens, it usually remains the same size, simply adjusting the margins on wider
@@ -64,7 +66,7 @@ Sites using this pattern include:
 
 {% include_code _code/mostly-fluid.html mfluid css %}
 
-## Column Drop
+## Column drop
 
 For full-width multi-column layouts, column drop simply stacks the columns
 vertically as the window width becomes too narrow for the content.  Eventually
@@ -91,9 +93,9 @@ Sites using this pattern include:
 
 {% include_code _code/column-drop.html cdrop css %}
 
-## Layout Shifter
+## Layout shifter
 
-The Layout shifter pattern is the most responsive to with multiple breakpoints
+The layout shifter pattern is the most responsive to with multiple breakpoints
 across several screen widths.  Key to this layout is the way content moves
 about, instead of reflowing and dropping below other columns.  Due to the
 significant differences between each major breakpoint, it is more complex to
@@ -118,7 +120,7 @@ Sites using this pattern include:
 
 {% include_code _code/layout-shifter.html lshifter css %}
 
-## Tiny Tweaks
+## Tiny tweaks
 
 Tiny tweaks simply makes small changes to the layout, such as adjusting font
 size, resizing images or moving content around in very minor ways.  It works
@@ -143,7 +145,7 @@ Sites using this pattern include:
 
 {% include_code _code/tiny-tweaks.html ttweaks css %}
 
-## Off Canvas
+## Off canvas
 
 Rather than stacking content vertically, the off canvas pattern places less
 frequently used content, perhaps navigation or app menus off screen, only
@@ -173,5 +175,7 @@ Sites using this pattern include:
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 {% include_code _code/off-canvas.html ocanvas css %}
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}

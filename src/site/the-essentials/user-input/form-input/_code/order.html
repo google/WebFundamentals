@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <!-- // [TEMPLATE header_full] -->
-    <title>Simple Form</title>
     <style type="text/css">
 
       /* // [START invalidstyle] */
@@ -12,7 +11,7 @@
       /* // [END invalidstyle] */
 
     </style>
-    <title>Sample Order Form</title>
+    <title>Creating Amazing Forms: Sample order form</title>
   </head>
   <body>
     <div role="main">
@@ -162,6 +161,7 @@
         elem.addEventListener("blur", verifyEmail);
         function verifyEmail(input) {
           input = input.srcElement;
+          sampleCompleted("Forms-orderConfirm");
           var primaryEmail = document.getElementById('frmEmailA').value
           /* // [START customvalidation] */
           if (input.value != primaryEmail) {
@@ -181,6 +181,7 @@
         var inputs = document.getElementsByTagName("input");
         var inputs_len = inputs.length;
         var addDirtyClass = function(evt) {
+          sampleCompleted("Forms-order-dirty");
           evt.srcElement.classList.toggle("dirty", true);
         };
         for (var i = 0; i < inputs_len; i++) {
@@ -201,10 +202,7 @@
       initForm();
       initInputs();
       initConfirmEmail();
-      //initNoSubmit();
-
-
-      
+     
 
     </script>
     <!-- // [TEMPLATE footer] -->

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="weather.css">
     <link rel="stylesheet" type="text/css" media="(max-width:600px)" href="weather-small.css">
     <link rel="stylesheet" type="text/css" media="(min-width:601px)" href="weather-large.css">
-    <title>Weather</title>
+    <title>RWD Fundamentals: Weather (3 - final)</title>
   </head>
   <body>
     <div class="weather-forecast" role="main">
@@ -93,5 +93,18 @@
         </div>
       </div>
     </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDFundamentals-Weather");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>

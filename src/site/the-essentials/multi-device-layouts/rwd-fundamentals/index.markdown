@@ -1,14 +1,15 @@
 ---
 layout: article
 title: "Responsive Web Design Fundamentals"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, legend eu tincidunt et, sagittis et mi."
+description: "Much of the web isn't optimized for those multi-screen experinences. Learn the
+             fundamentals get your sites everywhere from a Mobile device to a TV."
 introduction: "The use of mobile devices to surf the web is growing at an astronomical pace,
               but unfortunately much of the web isn't optimized for those mobile devices. Mobile
               devices are often constrained by display size and require a different approach
               to how content is laid out on screen."
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-04-30
+  updated_on: 2014-04-30
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
@@ -37,30 +38,22 @@ remember:
 ---
 {% wrap content %}
 
-<!-- TODO[PETELE] add related items -->
-<!-- TODO[PETELE] add what's next -->
-<!-- TODO[PETELE] remove temp styles -->
-<!-- TODO[PETELE] fixed broken links to some samples -->
-
 <style type="text/css">
+  img, video, object {
+    max-width: 100%;
+  }
 
-  video {
+  img.center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  video.responsiveVideo {
     width: 100%;
   }
-
-  img.wide {
-    width: 100%;
-  }
-
-  img.tall {
-    max-height: 500px;
-  }
-
-  img.sxs {
-    width: 100%;
-  }
-
 </style>
+
 
 {% include modules/toc.liquid %}
 
@@ -70,7 +63,7 @@ be changing, so it's important that your site can adapt to any screen size,
 today or in the future.
 
 {% link_sample _code/weather.html %}
-  <video autoplay loop controls>
+  <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm" />
     <source src="videos/resize.mp4" type="video/mp4" />
   </video>
@@ -83,15 +76,14 @@ the size and capabilities of the device.  For example, on a phone, users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
 
+
 ## Set the viewport
 
 Pages optimized for a variety of devices must include a meta viewport element in
 the head of the document.  A meta viewport tag gives the browser instructions on
 how to control the page's dimensions and scaling.
 
-{% highlight html %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% endhighlight %}
+{% include modules/takeaway.liquid list=page.key-takeaways.set-viewport %}
 
 In order to attempt to provide the best experience, mobile browsers will render
 the page at a desktop screen width (usually about 960px), and then try to make
@@ -100,6 +92,11 @@ the screen.  For users, this means that font sizes may appear inconsistently and
 they have to double-tap or pinch-zoom in order to be able to see and interact
 with the content.
 
+{% highlight html %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endhighlight %}
+
+
 Using the meta viewport value `width=device-width` instructs the page to match
 the screen's width in device independent pixels. This allows the page to reflow
 content to match different screen sizes, whether rendered on a small mobile
@@ -107,16 +104,16 @@ phone or a large desktop monitor.
 
 <div class="clear">
   <div class="g--half">
-    {% link_sample _code/vp-no.html %}
-      <img src="imgs/no-vp.png" class="sxs" alt="Page without a viewport set">
-      See example
+    {% link_sample _code/vp-no.html %} 
+      <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
+      See example 
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp.html %}
-      <img src="imgs/vp.png" class="sxs" alt="Page with a viewport set">
-      See example
+      <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
+      See example 
     {% endlink_sample %}
   </div>
 </div>
@@ -136,13 +133,13 @@ In addition to setting an `initial-scale`, you can also set the `minimum-scale`,
 can disable the user's ability to zoom the viewport, potentially causing
 accessibility issues.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.set-viewport %}
-
 ## Size content to the viewport
 
 On both desktop and mobile devices, users are used to scrolling websites
 vertically but not horizontally, and forcing the user to scroll horizontally or
 to zoom out in order to see the whole page results in a poor user experience.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.size-content-to-vp %}
 
 When developing a mobile site with a `meta viewport` tag, it's easy to
 accidentally create page content that doesn't quite fit within the specified
@@ -165,27 +162,30 @@ viewport on small screens.
 <div class="clear">
   <div class="g--half">
     {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-iph.png" class="sxs" alt="Page with a 344px fixed width element on an iPhone.">
+      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
       See example
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-n5.png" class="sxs" alt="Page with a 344px fixed width element on a Nexus 5.">
+      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
       See example
     {% endlink_sample %}
   </div>
 </div>
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.size-content-to-vp %}
-
-## Use CSS Media Queries For Responsiveness
+## Use CSS media queries for responsiveness
 
 Media queries are simple filters that can be applied to CSS styles.  They make
 it easy to change styles based on the characteristics of the device rendering
 the content, including the display type, width, height, orientation and even
-resolution.  For example, you could place all styles necessary for printing
+resolution.  
+
+{% include modules/takeaway.liquid list=page.key-takeaways.media-queries %}
+
+
+For example, you could place all styles necessary for printing
 inside a print media query:
 
 {% highlight html %}
@@ -266,8 +266,7 @@ Let's take a look an example:
 
 <figure>
   {% link_sample _code/media-queries.html %}
-    <img src="imgs/mq.png" class="wide" alt="Preview of a page using media queries to change properties as it is resized.">
-    See example
+    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
   {% endlink_sample %}
 </figure>
 
@@ -327,9 +326,6 @@ page.
   </div>
 </div>
 
-{% include modules/takeaway.liquid title="Key Takeaways" type="learning" list=page.key-takeaways.media-queries %}
-
-
 ## How to choose breakpoints
 
 While it may be helpful to think about defining breakpoints based on device
@@ -337,6 +333,8 @@ classes, use caution.  Defining breakpoints based on specific devices, products,
 brand names or operating systems, that are in use today will result in a
 maintenance nightmare. Instead, the content itself should determine how the
 layout adjusts to its container.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.choose-breakpoints %}
 
 ### Pick major breakpoints by starting small, then working up
 
@@ -350,12 +348,9 @@ The first step is to make the forecast look good on a small screen.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-1.png" class="tall" alt="Preview of the weather forecast displayed on a small screen." />
-    <br>See example
+    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen." />
   {% endlink_sample %}
 </figure>
-
-[View full sample](weather-1.html)
 
 Next, resize the browser until there is too much white space between the
 elements and the forecast simply doesn't look as good.  The decision is somewhat
@@ -363,8 +358,7 @@ subjective, but above 600px is certainly too wide.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" class="wide" alt="Preview of the weather forecast as the page gets wider." />
-    <br>See example
+    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider." />
   {% endlink_sample %}
 </figure>
 
@@ -380,8 +374,7 @@ styles are placed in `weather-large.css`.
 
 <figure>
   {% link_sample _code/weather-2.html %}
-    <img src="imgs/weather-3.png" class="wide" alt="Preview of the weather forecast designed for a wider screen." />
-    See example
+    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen." />
   {% endlink_sample %}
 </figure>
 
@@ -402,18 +395,16 @@ icons a bit larger.
 
 <div class="clear">
   <div class="g--half">
-    <img src="imgs/weather-4-l.png" class="sxs" alt="Before adding minor breakpoints.">
+    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
   </div>
 
   <div class="g--half g--last">
-    <img src="imgs/weather-4-r.png" class="sxs" alt="After adding minor breakpoints.">
+    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
   </div>
 </div>
 
 Similarly, for the large screens, it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
-
-{% link_sample _code/weather.html %}View finished sample{% endlink_sample %}
 
 {% include_code _code/weather-large.css mqsmallbplg css %}
 
@@ -425,11 +416,11 @@ of a text block grows past about 10 words, a breakpoint should be considered.
 
 <div class="clear">
   <div class="g-wide--1 g-medium--half">
-    <img src="imgs/reading-ph.png" class="sxs"  alt="Before adding minor breakpoints.">
+    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Before adding minor breakpoints.">
   </div>
 
   <div class="g-wide--3 g-wide--last g-medium--half g--last">
-    <img src="imgs/reading-de.png" class="sxs" alt="After adding minor breakpoints.">
+    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="After adding minor breakpoints.">
   </div>
 </div>
 
@@ -437,8 +428,6 @@ Let's take a deeper look at the above blog post example.  On smaller screens,
 the Roboto font at 1em works perfectly giving 10 words per line, but larger
 screens will require a breakpoint. In this case, if the browser width is greater
 than 575px, the ideal content width is 550px.
-
-{% link_sample _code/reading.html %}View finished sample{% endlink_sample %}
 
 {% include_code _code/reading.html mqreading css %}
 
@@ -451,6 +440,7 @@ eliminating the pollen count from the weather forecast could be a serious issue
 for spring time allergy sufferers who need the information to determine if they
 can go outside or not.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.choose-breakpoints %}
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}

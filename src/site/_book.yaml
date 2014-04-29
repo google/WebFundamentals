@@ -3,10 +3,10 @@ toc:
   path: /
   home: true
 - title: "Getting Started"
-  path: /getting-started/multi-screen/index.html
+  path: /getting-started/your-first-multi-screen-site/index.html
   section:
     - title: "Create Your First Multi-screen Site"
-      path: /getting-started/mulit-screen/
+      path: /getting-started/your-first-multi-screen-site/
 - title: "Documentation"
   path: /the-essentials/
   section:
@@ -22,7 +22,7 @@ toc:
           path: /the-essentials/multi-device-layouts/layout-patterns/
         - title: "UI Elements"
           path: /the-essentials/multi-device-layouts/ui-elements/
-    - title: "User Input"
+    - title: "Forms and User Input"
       path: /the-essentials/user-input/
       id: user-input
       section:
@@ -46,15 +46,13 @@ toc:
       section:
         - title: "Critical Path Rendering"
           path: /the-essentials/performance/critical-path-rendering/
-        - title: "Optimizing content efficiency"
+        - title: "Optimizing Content Efficiency"
           path: /the-essentials/performance/optimizing-content-efficiency/
-        - title: "Resource cacheing"
-          path: /the-essentials/performance/resource-cacheing/
-        - title: "Optimizing networking"
+        - title: "Optimizing Networking"
           path: /the-essentials/performance/optimizing-networking/
-        - title: "Optimizing interactivity"
+        - title: "Optimizing Interactivity"
           path: /the-essentials/performance/optimizing-interactivity/
-        - title: "Measuring performance"
+        - title: "Measuring Performance"
           path: /the-essentials/performance/measuring-performance/
 - title: Resources
   path: /resources/

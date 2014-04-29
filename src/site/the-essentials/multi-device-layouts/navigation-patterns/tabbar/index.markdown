@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Tab Bar"
-description: "A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
+description: "<img class='g-medium--full g-wide--full' src='tabbar/images/tabbar.png'>A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -21,7 +21,11 @@ key-takeaways:
 
 <div style="clear: both;"></div>
 
-The tab bar can be used to quickly switch between the sections of your site.
+The Tab Bar can be used to quickly switch between the sections of your site.
+
+It's only appropriate for sites with a relatively small structure, but users find it easy to glance at where they are and where they can within your site.
+
+{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.tabs %}
 
 Limit the total number of tabs to five or less, otherwise each icon and tap target becomes too small and users will struggle to hit the right tab.
 
@@ -33,8 +37,6 @@ One advantage to using tabs is that it gives the user a consistent place to go f
 <a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/tabbar-sample3.html"><img class="g--half g--last" src="images/tabbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.tabs %}
 
 {% include modules/nextarticle.liquid %}
 

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- // [TEMPLATE header_full] -->
-    <title>Media queries for conditional loading of images</title>
+    <title>Images: Using media queries for conditional loading</title>
     <style type="text/css">
       /* // [START conditional] */
       .example {
@@ -37,6 +37,18 @@
       a checkboard background.
     </div>
     <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 500px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("Images-Conditional");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>
 

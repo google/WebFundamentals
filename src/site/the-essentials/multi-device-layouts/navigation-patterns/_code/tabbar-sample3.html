@@ -26,14 +26,14 @@
       }
 
       .tab-bar-container{
-        position: fixed;
-
         width: 100%;
 
-        box-sizing: border-box;
+        position: fixed;
 
         top: 0;
         left: 0;
+
+        box-sizing: border-box;
 
         background-color: #e65050;
         background-image: -o-linear-gradient(bottom, #e25d5e 0%, #d44040 100%);
@@ -44,11 +44,15 @@
       }
 
       .app-bar {
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         
         width: 100%;
         height: 48px;
 
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
         flex-direction: row;
 
         border-bottom-style: solid;
@@ -56,76 +60,86 @@
         border-color: rgba(255, 255, 255, 0.3);
       }
 
-.app-bar .logo {
-  flex: 1;
-  
-  font-size: 20px;
-  line-height: 48px;
-  
-  margin: 0 16px;
-  
-  color: #fdf1f1;
+      .app-bar .logo {
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        
+        font-size: 20px;
+        line-height: 48px;
+        
+        margin: 0 16px;
+        
+        color: #fdf1f1;
 
-  float: none;
-  max-width: none;
-}
+        float: none;
+        max-width: none;
+      }
 
-.app-bar .logo a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: normal;
-}
+      .app-bar .logo a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: normal;
+      }
 
-.app-bar button {
-  width: 48px;
-  height: 48px;
-  
-  background-image: none;
-  background-color: transparent;
-  
-  border: none;
+      .app-bar button {
+        width: 48px;
+        height: 48px;
+        
+        background-image: none;
+        background-color: transparent;
+        
+        border: none;
 
-  padding: 0;
+        padding: 0;
 
-  margin-right: 16px;
-}
+        margin-right: 16px;
+      }
 
-.app-bar button img {
-  width: 32;
-  height: 32px;
-}
+      .app-bar button img {
+        width: 32;
+        height: 32px;
+      }
 
-.app-bar-actions  {
-  display: flex;
-  
-  flex-direction: row;
-}
+      .app-bar-actions  {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+      }
 
-.search {
-  display: none;
-  
-  width: 400px;
-  height: 60px;
-  
-  padding: 16px;
-  margin: 0;
-  
-  box-sizing: border-box;
-  
-  border: none;
-  
-}
+      .search {
+        display: none;
+        
+        width: 400px;
+        height: 60px;
+        
+        padding: 16px;
+        margin: 0;
+        
+        box-sizing: border-box;
+        
+        border: none;
+      }
 
       .tab-bar {
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         
         width: 100%;
         
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
         flex-direction: row;
       }
 
       .tab-bar button {
-
+        -ms-flex: 1;
+        -webkit-flex: 1;
         flex: 1;
 
         padding: 4px;
@@ -134,6 +148,7 @@
         border-right-style: solid;
         border-width: 1px;
         border-color: rgba(255, 255, 255, 0.3);
+        border-radius: 0;
 
         background-color: transparent;
         
@@ -145,9 +160,6 @@
         -webkit-tap-highlight-color: transparent;
       }
 
-      .tab-bar button.selected {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
       .tab-bar button:hover {
         background-color: rgba(255, 255, 255, 0.1);
       }
@@ -157,9 +169,13 @@
         outline: 0;
       }
 
-      .tab-bar button:focus:active {
-        background-color: rgba(255, 255, 255, 0.3);
+      .tab-bar button:active {
+        background-color: rgba(255, 255, 255, 0.4);
         outline: 0;
+      }
+
+      .tab-bar button.selected {
+        background-color: rgba(255, 255, 255, 0.4);
       }
 
       .tab-bar button:last-child {
@@ -223,7 +239,6 @@
       }
 
       function selectTab(btn) {
-        console.log('onTabClick '+' btn = ', btn);
         var currentTab = document.querySelector('.tab-bar > .tab-btn.selected');
         if(currentTab) {
           currentTab.classList.remove('selected');
@@ -232,6 +247,17 @@
       }
 
       selectTab(tabBtns[currentSelectedTab]);
+    </script>
+
+    <script>
+      var tabBtns = document.querySelectorAll('.tab-bar > button');
+      for(var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', tabBarBtnClick, true);
+      }
+
+      function tabBarBtnClick() {
+        sampleCompleted('tabbar-sample3.html-tabbtnclick');
+      }
     </script>
 
     <!-- // [TEMPLATE footer] -->

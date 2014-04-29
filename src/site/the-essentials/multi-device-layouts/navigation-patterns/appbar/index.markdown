@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "App Bar"
-description: "Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
+description: "<img class='g-medium--full g-wide--full' src='appbar/images/appbar.png\'>Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -17,13 +17,15 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/appbar.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample1.html"><img class="g-medium--full g-wide--full" src="images/appbar.png"></a>
 
 <div style="clear: both;"></div>
 
 One expectation users will make when they land on your site is that your site's logo will be at the top of every page and clicking it will take them to your home page.
 
 Traditionally the web has used page headers for this. On mobile devices use the App Bar.
+
+{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.app-bar %}
 
 The App Bar consists of three elements.
 
@@ -41,8 +43,8 @@ If you have a slide in menu, you have the choice of putting the menu on the left
 
 The top left corner is perceived by the user as where the most important elements of your UI lives, however it can also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-sample1.html"><img class="g--half" src="images/appbar-menu-left.png"></a>
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-sample2.html"><img class="g--half g--last" src="images/appbar-menu-right.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample1.html"><img class="g--half" src="images/appbar-menu-left.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample2.html"><img class="g--half g--last" src="images/appbar-menu-right.png"></a>
 
 <div style="clear: both;"></div>
 
@@ -50,12 +52,10 @@ The top left corner is perceived by the user as where the most important element
 
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-sample3.html"><img class="g--half" src="images/appbar-alt-1.png"></a>
-<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-sample4.html"><img class="g--half g--last" src="images/appbar-alt-2.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html"><img class="g--half" src="images/appbar-alt-1.png"></a>
+<a href="/web/essentials/resources/samples/the-essentials/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample.html"><img class="g--half g--last" src="images/appbar-alt-2.png"></a>
 
 <div style="clear: both;"></div>
-
-{% include modules/takeaway.liquid title="Key Takeaway" list=page.key-takeaways.app-bar %}
 
 {% include modules/nextarticle.liquid %}
 

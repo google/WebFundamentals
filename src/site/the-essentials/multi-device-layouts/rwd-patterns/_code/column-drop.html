@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- // [TEMPLATE header_full] -->
+    <!-- // [TEMPLATE header] -->
     <link rel="stylesheet" type="text/css" href="layouts-common.css">
     <style type="text/css">
 
@@ -51,7 +51,7 @@
 
 
     </style>
-    <title>Column Drop - Responsive Web Design Patterns</title>
+    <title>Responsive Web Design Pattern: Column Drop</title>
   </head>
   <body>
     <div class="container" role="main">
@@ -59,5 +59,19 @@
       <div class="c2"></div>
       <div class="c3"></div>
     </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-ColumnDrop");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>

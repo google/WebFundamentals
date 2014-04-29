@@ -1,13 +1,14 @@
 ---
 layout: article
 title: "Images"
-description: "Images were the first media types used on the web and are an integral part of every single page yet they need to be created and managed correctly to ensure that you are not driving users away."
+description: "A picture is worth 1000 words, and images play an integrate part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
+introduction: "A picture is worth 1000 words, and images play an integrate part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
 rel: 
-  gplusauthor: https://plus.google.com/+SamDutton
+  gplusauthor: https://plus.google.com/+PeteLePage
 article:
-  written_on: 2014-04-17
-  updated_on: 2014-04-23
-  order: 2
+  written_on: 2014-04-30
+  updated_on: 2014-04-30
+  order: 1
 collection: introduction-to-media
 key-takeaways:
   use-right-image:
@@ -40,9 +41,25 @@ remember:
       memory and decoding costs it requires.  Resizing large images to fit on 
       smaller screens is expensive and can be particularly painful on low-end
       devices where both memory and processing is limited.
+related:
+  optimize:
+    - <a href="../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization">Image optimization</a>
+    - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
 ---
 
 {% wrap content%}
+
+<style type="text/css">
+  img, video, object {
+    max-width: 100%;
+  }
+
+  img.center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
 
 {% include modules/toc.liquid %}
 
@@ -56,13 +73,16 @@ use too much real estate on a narrow phone.
 
 ### Art direction
 
-![Art direction example](img/art-direction.png)
+<img class="center" src="img/art-direction.png" alt="Art direction example" 
+srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Other times the image may need to be changed more drastically: changing the 
 proportions, cropping and even replacing the entire image.  In this case, 
 changing the image is usually referred to as art direction.  See
 [responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more 
 examples.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.use-right-image %}
 
 ## Images in CSS
 
@@ -217,7 +237,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include modules/highlight.liquid character="!" position="right" title="Important" type="remember" list=page.remember.compressive %}
+{% include modules/highlight.liquid title="Important" type="remember" list=page.remember.compressive %}
 
 #### JavaScript image replacement
 
@@ -234,7 +254,6 @@ means that images won't even start downloading until after the `pageload` event
 fires. In addition, the browser will most likely download both the 1x and 2x 
 images, resulting in increased page weight.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.use-right-image %}
 
 ## Avoid images completely
 
@@ -244,6 +263,8 @@ functionality.  Browsers generate visuals that would have previously required
 images.   This means that browsers no longer need to download separate image 
 files and prevents awkwardly scaled images.  Icons can be rendered using unicode 
 or special icon fonts.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.avoid-images %}
 
 ### Place text in markup, instead of embedded in images
 
@@ -256,31 +277,32 @@ webfonts to achieve the style you need.
 
 ### Use CSS to replace images
 
-Modern browsers can use CSS features to create styles that would previously 
-required images.  For examples, complex gradients can be created using the 
-`background` property, shadows can be created using `box-shadow` and rounded 
-corners can be added with the `border-radius` property. 
-
 <style type="text/css">  
-  div#noImage {  
-    height: 100px;  
-    width: 100%;  
+  p#noImage {  
+    margin-top: 2em;
+    padding: 1em;
+    padding-bottom: 2em;
+    color: white;
     border-radius: 5px;  
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);  
-    color: white;  
-    background: linear-gradient(#4f80f2, #8EAAEC);  
+    box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);   
+    background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
   }   
 </style>  
-<div id="noImage">  
-  Lorem Ipsum!  
-</div>
+<p id="noImage">  
+  Modern browsers can use CSS features to create styles that would previously 
+  required images.  For examples, complex gradients can be created using the 
+  <code>background</code> property, shadows can be created using 
+  <code>box-shadow</code> and rounded corners can be added with the 
+  <code>border-radius</code> property.  
+</p>
 
 {% highlight html %}  
 <style type="text/css">  
-  div#noImage {  
+  div#noImage { 
+    color: white;
     border-radius: 5px;  
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);  
-    background: linear-gradient(#4f80f2, #8EAAEC);  
+    box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);  
+    background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));  
   }   
 </style>  
 {% endhighlight %}
@@ -321,9 +343,11 @@ advantages to images:
 * An entire set of icons can be downloaded in one font. 
 
 {% link_sample _code/icon-font.html %}
-![Example of page that uses Font Awesome](img/icon-fonts.png)  
+<img src="img/icon-fonts.png" class="center"
+srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
+alt="Example of a page that uses FontAwesome for it's font icons.">
 {% endlink_sample %}
-{% include_code _code/icon-font.html todohtml html %}
+{% include_code _code/icon-font.html iconfont html %}
 
 There are hundreds of free and paid icon fonts available including [Font 
 Awesome](http://fortawesome.github.io/Font-Awesome/), 
@@ -332,8 +356,6 @@ Awesome](http://fortawesome.github.io/Font-Awesome/),
 Be sure to balance the weight of the additional HTTP request and file size with 
 the need for the icons.  For example, if you only need a handful of icons, it 
 may be better to use an image or an image sprite.
-
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.avoid-images %}
 
 ## Optimize images for performance
 
@@ -344,8 +366,7 @@ improvements for your website: the fewer bytes the browser has to download, the
 less competition there is for client's bandwidth and the faster the browser can 
 download and display all the assets. 
 
-For a more in-depth look, check out the [Image Optimization](../../performance/optimizing-content-efficiency/#todo) section in 
-[Optimizing Performance](../../performance/optimizing-content-efficiency/).
+{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
 
 ### Choose the right format
 
@@ -406,7 +427,7 @@ background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
 {% link_sample _code/image-sprite.html %}
-![Image sprite used by our sample](img/sprite-sheet.png) 
+<img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example"> 
 {% endlink_sample %}
 {% include_code _code/image-sprite.html sprite css %}
 
@@ -425,7 +446,8 @@ it becomes visible, search engines may never see that content.  In addition,
 users who are looking for information they expect to see in the footer will 
 never see the footer because new content is always loaded.
 
-{% include modules/takeaway.liquid  title="Key Takeaways" type="learning" list=page.key-takeaways.optimize-images %}
+{% include modules/related.liquid list=page.related.optimize %}
 
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}

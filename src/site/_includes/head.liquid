@@ -1,4 +1,6 @@
+{% if site.include_open_html %}
 <meta charset="utf-8" />
+{% endif %}
 
 {% capture page_title %}{% if page.title %}{{ page.title }} — {%endif%}Google Web Fundamentals{% endcapture %}
 <title>{{ page_title }}</title>

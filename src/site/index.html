@@ -7,16 +7,17 @@ class: home
 {% wrap content%}
 
   <div class="centered">
-    <h3 class="xlarge">Web Essentials</h3>
-    <p class="g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus perspiciatis deleniti.</p>
+    <h3 class="xlarge">Build great multi-device web experiences</h3>
+    <p class="g-wide--push-1 g-wide--pull-1">Learn how to design and build for the web on any device.
+    <a href="{{site.baseurl}}/getting-started/multi-screen/index.html">Get started</a>
+    or dive into the fundamentals of modern web design and development.</p>
   </div>
 
   <ul class="centered-list list--reset clear">
     {% for guide in page.articles.the-essentials %}
-    <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
-      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
-      <p>{{guide.snippet}}</p>
-      <a href="{{site.baseurl}}{{guide.url}}" class="cta--secondary">Get started</a>
+    <li class="g-medium--half g-wide--1 {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
+      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+      <p>{{ guide.snippet }}</p>
     </li>
     {% endfor %}
   </ul>
@@ -27,7 +28,7 @@ class: home
   <div class="container-medium">
     <div class="featured-spotlight__container g--pull-half">
       <div class="featured-spotlight__img">
-        <img src="../../imgs/placeholder--wide.png" alt="image exemple">
+        <img src="{{site.baseurl}}/spotlights/images/kinlan-wide.png" alt="image exemple">
       </div>
 
       <div class="container-small">
@@ -51,7 +52,7 @@ class: home
           </div>
           <div class="featured-list__img-wrapper g--half g--last">
             <div class="featured-list__img">
-              <img src="../../imgs/placeholder--small.png" alt="image exemple">
+              <img src="{{site.baseurl}}/spotlights/images/kinlan.png" alt="image exemple">
             </div>
           </div>
         </div>
@@ -65,7 +66,7 @@ class: home
           </div>
           <div class="featured-list__img-wrapper g--half g--last">
             <div class="featured-list__img">
-              <img src="../../imgs/placeholder--small.png" alt="image exemple">
+              <img src="{{site.baseurl}}/spotlights/images/kinlan.png" alt="image exemple">
             </div>
           </div>
         </div>

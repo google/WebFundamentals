@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- // [TEMPLATE header_full] -->
+    <!-- // [TEMPLATE header] -->
     <link rel="stylesheet" type="text/css" href="layouts-common.css">
     <style type="text/css">
 
@@ -27,7 +27,7 @@
       /* // [END ttweaks] */
 
     </style>
-    <title>Tiny Tweaks - Responsive Web Design Patterns</title>
+    <title>Responsive Web Design Pattern: Tiny Tweaks</title>
   </head>
   <body>
     <div class="container" role="main">
@@ -61,5 +61,19 @@
         </p>
       </div>
     </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 500px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-TinyTweaks");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>
