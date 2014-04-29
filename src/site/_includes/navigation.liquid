@@ -1,6 +1,6 @@
 <nav class="main-nav">
 
-  <ul class="main-nav__list clear nav-is-opened">
+  <ul class="main-nav__list clear">
   {% for section in page.content.toc %}
     <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}">
       <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="{{ section.title }}">

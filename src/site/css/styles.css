@@ -1144,7 +1144,7 @@ body.debug:after {
     float: none;
     display: inline-block;
     margin-left: 6px;
-    vertical-align: middle;
+    vertical-align: top;
   }
 }
 @media only screen and (min-width: 620px) {
@@ -1434,36 +1434,37 @@ body.debug:after {
 /* line 84, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
-  padding-top: 52px;
-  padding-bottom: 26px;
+  padding-top: 26px;
   margin-left: -26px;
   font-size: 13px;
 }
-/* line 91, ../_sass/_modules/_highlight.scss */
+/* line 90, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 98, ../_sass/_modules/_highlight.scss */
+/* line 97, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
+  display: block;
 }
 /* line 104, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__container {
-  padding-bottom: 52px;
+  padding-bottom: 0;
 }
 /* line 108, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__cta {
-  margin-bottom: -104px;
+  position: relative;
+  bottom: -52px;
   display: block;
 }
 
 /*==========  LEFT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 118, ../_sass/_modules/_highlight.scss */
+  /* line 119, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1472,14 +1473,14 @@ body.debug:after {
 
 /*==========  RIGHT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 129, ../_sass/_modules/_highlight.scss */
+  /* line 130, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 137, ../_sass/_modules/_highlight.scss */
+  /* line 138, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
@@ -2250,6 +2251,55 @@ body.debug:after {
     top: 200px;
     left: 130%;
   }
+}
+
+/**
+*
+* Table of contents
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_toc.scss */
+.toc__title {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  padding-bottom: 13px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid #e0e0e0;
+}
+@media only screen and (min-width: 800px) {
+  /* line 13, ../_sass/_modules/_toc.scss */
+  .toc__title {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_toc.scss */
+  .toc__title {
+    padding-bottom: 13px;
+    margin-bottom: 13px;
+  }
+}
+
+/* line 26, ../_sass/_modules/_toc.scss */
+.toc__list {
+  padding-top: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 13px;
 }
 
 /**
@@ -3282,6 +3332,22 @@ td:last-child:after {
     border-left: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
   }
+}
+
+/**
+*
+* Media - imgs/videos
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_components/_media.scss */
+img {
+  max-width: 100%;
 }
 
 /**
