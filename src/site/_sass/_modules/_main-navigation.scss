@@ -61,8 +61,6 @@
   @include medium {
     float: left;
     background-color: transparent;
-    width: 20%;
-    border-right: 1px solid darken($colorGrayDark, 10%);
 
     &:last-child {
       border-right: none;
@@ -91,6 +89,10 @@
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
 
+  &:hover {
+    text-decoration: none;
+  }
+
   @include small-only {
     @include container;
   }
@@ -99,16 +101,27 @@
     margin-bottom: 0;
     color: #ffffff;
     @include type--medium;
-    padding-bottom: $lineHeight;
+    padding: $lineHeight $lineHeight/2 $lineHeight;
+    font-weight: 400;
+
+    .main-nav__item--home & {
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $colorYellowSecondary;
+      // box-shadow: 0 0 1px 0 $colorGray;
+    }
+
+    .subnav-is-opened > & {
+      color: $colorYellow;
+    }
   }
 
   @include wide {
     padding-bottom: $lineHeight;
   }
 
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 .main-nav__list--child {
