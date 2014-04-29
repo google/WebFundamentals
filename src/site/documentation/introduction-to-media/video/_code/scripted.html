@@ -49,10 +49,12 @@
       video.pause();
       button.textContent = 'Play'
     }
+    sampleCompleted("Video-ScriptedButtonClick");
   }
 
   video.onplay = function(){
     button.textContent = 'Pause';
+    sampleCompleted("Video-ScriptedOnPlay");
   }
 
   </script>
