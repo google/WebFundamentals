@@ -1,6 +1,6 @@
 {% if site.include_open_html %}
 <!DOCTYPE html>
-<html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
+<html lang="en" class="no-js no-touch" itemscope itemtype="http://schema.org/Article">
   <head>
 {% endif %}
     {% include head.liquid %}
@@ -21,13 +21,18 @@
 
           {% include modules/breadcrumbs.liquid %}
 
-          <h1 class="editorial-header__title">{{page.title}}</h1>
+          <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
+          <h2 class="editorial-header__subtitle">{{page.title}}</h2>
+
           <p class="editorial-header__excerpt g-wide--pull-1">{{page.introduction}}</p>
+
+          {% include modules/lessons_toc.liquid %}
+
         </div>
       </div>
 
       {{ content }}
-    </div>
+    </div> <!-- /.article-container -->
 
     {% include cc.liquid %}
     {% include footer.liquid %}

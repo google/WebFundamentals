@@ -4,8 +4,13 @@ title: Home
 class: home
 ---
 
-{% wrap content%}
+<div class="home-header centered">
+  <h1>Web Central</h1>
+  <p>A handbook for best practice</p>
+  <a href="{{site.baseurl}}/getting-started/multi-screen/index.html" class="button--secondary-variation">Get started</a>
+</div>
 
+<div class="container">
   <div class="centered">
     <h3 class="xlarge">Build great multi-device web experiences</h3>
     <p class="g-wide--push-1 g-wide--pull-1">Learn how to design and build for the web on any device.
@@ -15,14 +20,16 @@ class: home
 
   <ul class="centered-list list--reset clear">
     {% for guide in page.articles.the-essentials %}
-    <li class="g-medium--half g-wide--1 {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
-      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></h3>
+    <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
+      <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
+      <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
+      <a href="{{site.baseurl}}{{guide.url}}" class="cta--secondary">Get started</a>
       <p>{{ guide.snippet }}</p>
     </li>
     {% endfor %}
   </ul>
+</div>
 
-{% endwrap %}
 
 <div class="featured-spotlight">
   <div class="container-medium">

@@ -20,9 +20,9 @@ a:hover {
 }
 
 .cta--primary {
-  @include style-cta($colorBlue, true);
+  @include style-cta($colorBlue, icon-cheveron-right);
 }
 
 .cta--secondary {
-  @include style-cta($colorBlue, false);
+  @include style-cta($colorBlue);
 }

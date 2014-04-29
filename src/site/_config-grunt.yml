@@ -4,8 +4,8 @@ source: site
 destination: appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
-baseurl: http://localhost:8081
-url: http://localhost:8081
+baseurl: ''
+url: ''
 pygments: false
 spotlights: false
 github:

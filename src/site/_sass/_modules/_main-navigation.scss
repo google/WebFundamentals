@@ -23,6 +23,16 @@
   margin: 0;
   padding: 0;
 
+  @include small-only {
+    .js & {
+      display: none;
+    }
+
+    .js &.nav-is-opened {
+      display: block;
+    }
+  }
+
   @include medium {
     text-align: center;
     @include container;
@@ -37,17 +47,20 @@
   position: static;
   padding-left: 0;
 
-  &.main-nav__item--logo {
-    @include small-only {
+
+  @include small-only {
+    &.main-nav__item--home {
       display: none;
+    }
+
+    &.subnav-is-opened {
+      background: #ffffff;
     }
   }
 
   @include medium {
     float: left;
     background-color: transparent;
-    width: 20%;
-    border-right: 1px solid darken($colorGrayDark, 10%);
 
     &:last-child {
       border-right: none;
@@ -80,6 +93,10 @@
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
 
+  &:hover {
+    text-decoration: none;
+  }
+
   @include small-only {
     @include container;
   }
@@ -88,22 +105,27 @@
     margin-bottom: 0;
     color: #ffffff;
     @include type--medium;
-    padding-bottom: $lineHeight;
+    padding: $lineHeight $lineHeight/2 $lineHeight;
+    font-weight: 400;
+
+    .main-nav__item--home & {
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $colorYellowSecondary;
+      // box-shadow: 0 0 1px 0 $colorGray;
+    }
+
+    .subnav-is-opened > & {
+      color: $colorYellow;
+    }
   }
 
   @include wide {
     padding-bottom: $lineHeight;
   }
 
-  &:hover {
-    text-decoration: none;
-  }
-
-  .main-nav__item--logo & {
-    font-size: 60px;
-    padding-top: $lineHeight;
-    line-height: $lineHeight;
-  }
 }
 
 .main-nav__list--child {
@@ -125,6 +147,8 @@
   @include type--base;
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
+  margin-bottom: 0;
+  border-bottom: 1px solid $colorGrayKeyline;
 
   @include small-only {
     padding-left: 10%;
@@ -132,6 +156,8 @@
 
   @include medium {
     color: $colorText;
+    border-bottom-color: transparent;
+    padding-left: 0;
 
     // Only override links inside list
     .main-nav__list--child & {
@@ -142,6 +168,8 @@
 
 
 .main-nav__secondary-nav {
+  display: none;
+
   @include medium {
     background-color: #ffffff;
     position: absolute;
@@ -151,11 +179,10 @@
     padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
     color: $colorText;
 
-    display: none;
+  }
 
-    li:hover & {
-      display: block;
-    }
+  .subnav-is-opened & {
+    display: block;
   }
 }
 
@@ -170,6 +197,10 @@
 .main-nav__link--explore {
   @include style-cta($colorBlue, false);
   display: block;
+
+  @include small-only {
+    border-top: 1px solid $colorGrayKeyline;
+  }
 
   @include medium {
     border-bottom: 1px solid $colorGray;
@@ -187,3 +218,63 @@
 .main-nav__featured-text {
   padding-top: 0;
 }
+
+
+.main-nav__btn {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-top: -($lineHeight + $lineHeight/2);
+
+  background: transparent;
+  color: #ffffff;
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+
+  @include medium {
+    display: none;
+  }
+}
+
+
+/*==========  ICONS  ==========*/
+.main-nav__icon {
+  float: right;
+  font-size: $fontBase;
+  line-height: $lineHeight;
+  vertical-align: middle;
+
+  @include medium {
+    display: none;
+    font-size: $fontSmall;
+  }
+}
+
+.icon-custom {
+  &:before {
+    @extend .icon-plus:before;
+
+    @include medium {
+      content:"\e001"; // Took this from _icons.scss - not great, I know.
+    }
+  }
+
+  @include medium {
+    float: none;
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .subnav-is-opened & {
+    &:before {
+      @extend .icon-minus:before;
+
+      @include medium {
+        content:"\e004"; // Same as above
+      }
+    }
+  }
+}
+

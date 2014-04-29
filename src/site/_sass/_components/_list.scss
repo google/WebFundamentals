@@ -15,6 +15,18 @@ ol {
   padding-left: 0;
   list-style: none;
   margin: 0;
+
+  li.current{
+    color: $colorGray;
+    pointer-events: none;
+    cursor: default;
+    a {
+      color: $colorGray;
+      &:before {
+        content: "# 0" counter(list) !important;
+      }
+    }
+  }
 }
 
 ul li {
@@ -25,15 +37,34 @@ ul li {
 
 ol {
   counter-reset: list;
-  li {
+  > li {
     @include numbered-list;
+    position: relative;
+    padding-left: 32px;
+
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
+    &:nth-child(10n) ~ li:before,
+    &:nth-child(10n):before {
+      content: counter(list);
+    }
+
   }
 }
+
+ul ol {
+  padding-top: 0;
+}
+
+ol ul {
+  padding-top: 0;
+}
+
 
 .list__item {
   @include bullet-type(">");
 }
-
 
 /*==========  LIST LINKS  ==========*/
 
@@ -42,7 +73,7 @@ ul.list--links {
     display: none;
   }
   a {
-    @include bullet-type(">");
+    @include bullet-type("", icon-cheveron-right);
     font-weight: 400;
     font-family: $fontHighlight;
     line-height: 1; // fixes baseline grid alignment
@@ -56,23 +87,33 @@ ol.list--links {
     }
 
     a {
+      display: inline-block;
       @include numbered-list;
-      line-height: 1; // fixes baseline grid alignment
+    }
+
+    &:nth-child(10n) ~ li a:before,
+    &:nth-child(10n) a:before {
+      content: counter(list);
     }
   }
 }
 
+ol.list--variant {
+  @include type--small;
+  padding-top: 0;
+  li {
+    a:before {
+      content: "\e002  0" counter(list);
+      font-family: $fontIcon;
+      font-size: 13px;
+    }
+  }
+}
 
 /*==========  CENTERED LIST  ==========*/
 
 .centered-list {
   text-align: center;
-
-  p {
-    padding-bottom: $lineHeight;
-    @include medium { padding-bottom: 0;}
-  }
-
 }
 
 /*==========  FEATURED LIST  ==========*/
@@ -85,11 +126,11 @@ ol.list--links {
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
-  min-height: $lineHeight * 13;
   padding-top: $lineHeight;
   padding-bottom: $lineHeight;
 
   @include medium {
+    min-height: $lineHeight * 13;
     padding: $lineHeight * 2 32px;
   }
 
@@ -105,11 +146,13 @@ ol.list--links {
 }
 
 .featured-list__img-wrapper {
+  display: none;
   position: relative;
   padding-top: $lineHeight;
   margin: 0 -5%;
 
   @include medium {
+    display: block;
     padding-top: 0;
     margin: 0;
   }
@@ -127,8 +170,8 @@ ol.list--links {
   }
 
   img {
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
     max-width: 100%;
 
     @include medium {
@@ -142,15 +185,45 @@ ol.list--links {
   }
 }
 
+/*==========  RELATED GUIDES LIST  ==========*/
+.related-guides-list {
+  font-family: $fontHighlight;
+  padding-top: 0;
+  @include medium {padding-top: $lineHeight}
+  @include wide {padding-top: 0}
+
+  p {
+    padding-top: 0;
+  }
+
+  .tag {
+    padding-top: 0;
+  }
+
+  li {
+    padding-top: $lineHeight;
+    padding-bottom: $lineHeight - 1;
+
+    @include medium {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
 /*==========  LIST RESET  ==========*/
 
 .list--reset {
   li {
     padding-left: 0;
+  }
 
-    & a:before,
-    &:before {
-      display: none !important; // Fine to use !important when we are forcing an override
-    }
+  &.list--links a:before,
+  & li:before {
+    display: none !important; // Fine to use !important when we are forcing an override
   }
 }
+
+
+
+

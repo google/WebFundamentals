@@ -1,6 +1,6 @@
 {% if site.include_open_html %}
 <!DOCTYPE html>
-<html lang="en" class="no-js" itemscope itemtype="http://schema.org/Article">
+<html lang="en" class="no-js no-touch" itemscope itemtype="http://schema.org/Article">
   <head>
 {% endif %}
     {% include head.liquid %}
@@ -39,11 +39,14 @@
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
           <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
           <p>{{guide.description}}</p>
-          <ol class="list--links list--reset">
-          {% for article in page.articles[guide.id] %}
-            <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
-          {% endfor %}
-          </ol>
+          <div class="secondary-content">
+            <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+            <ol class="list--links list--reset">
+            {% for article in page.articles[guide.id] %}
+              <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
+            {% endfor %}
+            </ol>
+          </div>
         </li>
 
         {% endfor %}
@@ -54,5 +57,7 @@
     {% include footer.liquid %}
 
     {% include scripts.liquid %}
+{% if site.include_open_html %}
   </body>
 </html>
+{% endif %}
