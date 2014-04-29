@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Resources"
-description: "Helpful resources about the site"
+description: "Helpful resources."
 introduction: ""
 id: resources
 ---

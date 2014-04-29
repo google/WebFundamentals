@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Styleguide"
-description: "Styleguide description"
+title: "Visual Style Guide"
+description: "Visual style guide used by this site."
 class: "page--styleguide"
 learning-list:
   - Lorem ipsum dolor sit amet
@@ -28,6 +28,7 @@ NOTE: This is our styleguide
       <li class="summary-header__anchors-item"><a href="#buttons">Buttons</a></li>
       <li class="summary-header__anchors-item"><a href="#lists">Lists</a></li>
       <li class="summary-header__anchors-item"><a href="#links">Links</a></li>
+      <li class="summary-header__anchors-item"><a href="#icons">Icons</a></li>
       <li class="summary-header__anchors-item"><a href="#breadcrumbs">Breadcrumbs</a></li>
       <li class="summary-header__anchors-item"><a href="#table">Table</a></li>
       <li class="summary-header__anchors-item"><a href="#quote">Quote</a></li>
@@ -146,6 +147,56 @@ NOTE: This is our styleguide
 
     <div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="cta">use our tool</a> Fugiat, quam alias voluptatem tempora minus dolor facere cumque necessitatibus placeat velit aliquid ab dolore beatae. Neque ipsam in a illum repellendus?</p>
+    </div>
+
+  </section>
+
+  <a name="icons"></a>
+  <section class="styleguide__icons">
+    <h3 class="styleguide__icons">Icons</h3>
+
+    <div class="clear">
+      <p class="g--third"><i class="icon icon-minus"></i></p>
+      <p class="g--third"><i class="icon icon-plus"></i></p>
+      <p class="g--third g--last"><i class="icon icon-star"></i></p>
+      <p class="g--third"><i class="icon icon-cheveron-right"></i></p>
+      <p class="g--third"><i class="icon icon-cheveron-left"></i></p>
+      <p class="g--third g--last"><i class="icon icon-cheveron-up"></i></p>
+      <p class="g--third"><i class="icon icon-cheveron-down"></i></p>
+      <p class="g--third"><i class="icon icon-forward-slash"></i></p>
+      <p class="g--third g--last"><i class="icon icon-google-dev"></i></p>
+      <p class="g--third"><i class="icon icon-lessons"></i></p>
+      <p class="g--third"><i class="icon icon-multi-device-layouts"></i></p>
+      <p class="g--third g--last"><i class="icon icon-user-input"></i></p>
+      <p class="g--third"><i class="icon icon-introduction-to-media"></i></p>
+      <p class="g--third"><i class="icon icon-performance"></i></p>
+    </div>
+
+    <h4>Icon Circles</h4>
+
+    <div class="clear">
+      <p class="g--half"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
+      <p class="g--half g--last"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
+      <p class="g--half"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
+      <p class="g--half g--last"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
+    </div>
+
+    <h4>Icon Circles - Themed</h4>
+
+    <div class="clear">
+      <p class="g--half theme--multi-device-layouts"><span class="icon-circle themed--background"><i class="icon icon-multi-device-layouts"></i></span></p>
+      <p class="g--half g--last theme--user-input"><span class="icon-circle themed--background"><i class="icon icon-user-input"></i></span></p>
+      <p class="g--half theme--introduction-to-media"><span class="icon-circle themed--background"><i class="icon icon-introduction-to-media"></i></span></p>
+      <p class="g--half g--last theme--performance"><span class="icon-circle themed--background"><i class="icon icon-performance"></i></span></p>
+    </div>
+
+    <h4>Icon Circles - Large</h4>
+
+    <div class="clear">
+      <p class="g--half theme--multi-device-layouts"><span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span></p>
+      <p class="g--half g--last theme--user-input"><span class="icon-circle--large themed--background"><i class="icon icon-user-input"></i></span></p>
+      <p class="g--half theme--introduction-to-media"><span class="icon-circle--large themed--background"><i class="icon icon-introduction-to-media"></i></span></p>
+      <p class="g--half g--last theme--performance"><span class="icon-circle--large themed--background"><i class="icon icon-performance"></i></span></p>
     </div>
 
   </section>
@@ -390,7 +441,7 @@ NOTE: This is our styleguide
 
   {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" type="remember" %}
 
-  {% include_code ../../getting-started/multi-screen/_code/viewport.html viewport %}
+  {% include_code ../../getting-started/your-first-multi-screen-site/_code/viewport.html viewport %}
 
 </section>
 
@@ -709,53 +760,3 @@ NOTE: This is our styleguide
     </div>
   </div>
 </section>
-
-
-<div class="container">
-  <h3 class="styleguide__icons">Icons</h3>
-
-  <div class="clear">
-    <p class="g--third"><i class="icon icon-minus"></i></p>
-    <p class="g--third"><i class="icon icon-plus"></i></p>
-    <p class="g--third g--last"><i class="icon icon-star"></i></p>
-    <p class="g--third"><i class="icon icon-cheveron-right"></i></p>
-    <p class="g--third"><i class="icon icon-cheveron-left"></i></p>
-    <p class="g--third g--last"><i class="icon icon-cheveron-up"></i></p>
-    <p class="g--third g--last"><i class="icon icon-cheveron-down"></i></p>
-    <p class="g--third g--last"><i class="icon icon-forward-slash"></i></p>
-    <p class="g--third"><i class="icon icon-google-dev"></i></p>
-    <p class="g--third"><i class="icon icon-lessons"></i></p>
-    <p class="g--third"><i class="icon icon-multi-screen-layout"></i></p>
-    <p class="g--third"><i class="icon icon-user-input"></i></p>
-    <p class="g--third g--last"><i class="icon icon-media"></i></p>
-    <p class="g--third"><i class="icon icon-performance"></i></p>
-  </div>
-
-  <h4>Icon Circles</h4>
-
-  <div class="clear">
-    <p class="g--half"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
-    <p class="g--half g--last"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
-    <p class="g--half"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
-    <p class="g--half g--last"><span class="icon-circle"><i class="icon icon-lessons"></i></span></p>
-  </div>
-
-  <h4>Icon Circles - Themed</h4>
-
-  <div class="clear">
-    <p class="g--half theme--multi-device-layouts"><span class="icon-circle themed--background"><i class="icon icon-multi-device-layouts"></i></span></p>
-    <p class="g--half g--last theme--user-input"><span class="icon-circle themed--background"><i class="icon icon-user-input"></i></span></p>
-    <p class="g--half theme--introduction-to-media"><span class="icon-circle themed--background"><i class="icon icon-introduction-to-media"></i></span></p>
-    <p class="g--half g--last theme--performance"><span class="icon-circle themed--background"><i class="icon icon-performance"></i></span></p>
-  </div>
-
-  <h4>Icon Circles - Large</h4>
-
-  <div class="clear">
-    <p class="g--half theme--multi-device-layouts"><span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span></p>
-    <p class="g--half g--last theme--user-input"><span class="icon-circle--large themed--background"><i class="icon icon-user-input"></i></span></p>
-    <p class="g--half theme--introduction-to-media"><span class="icon-circle--large themed--background"><i class="icon icon-introduction-to-media"></i></span></p>
-    <p class="g--half g--last theme--performance"><span class="icon-circle--large themed--background"><i class="icon icon-performance"></i></span></p>
-  </div>
-
-</div>

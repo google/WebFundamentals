@@ -30,22 +30,6 @@
   }
 }
 
-.highlight-module--learning {
-  color: #ffffff;
-
-  &:after {
-    background-color: $colorLearning;
-  }
-}
-
-.highlight-module--remember {
-  color: #ffffff;
-
-  &:after {
-    background-color: $colorRemember;
-  }
-}
-
 .highlight-module__container {
   @include container;
   padding-bottom: $lineHeight*3;
@@ -67,7 +51,35 @@
   }
 }
 
+.highlight-module__cta {
+  display: block;
+}
+
+
+/*==========  LEARNING  ==========*/
+.highlight-module--learning {
+  color: #ffffff;
+
+  &:after {
+    background-color: $colorLearning;
+  }
+}
+
+
+/*==========  REMEMBER  ==========*/
+.highlight-module--remember {
+  color: #ffffff;
+
+  &:after {
+    background-color: $colorRemember;
+  }
+}
+
+
+/*==========  CODE  ==========*/
 .highlight-module--code {
+  overflow: visible;
+  margin-bottom: $lineHeight*3;
 
   pre {
     margin: 0;
@@ -89,14 +101,19 @@
     word-spacing: -2px;
   }
 
+  .highlight-module__container {
+    padding-bottom: $lineHeight*2;
+  }
+
+  .highlight-module__cta {
+    margin-bottom: -($lineHeight*4);
+    display: block;
+  }
+
 }
 
-.highlight-module__cta {
-  display: block;
-  @include type--medium;
-  font-family: $fontHighlight;
-}
 
+/*==========  LEFT  ==========*/
 .highlight-module--left {
   &:after {
     @include wide {
@@ -106,6 +123,8 @@
   }
 }
 
+
+/*==========  RIGHT  ==========*/
 .highlight-module--right {
   &:after {
     @include wide {

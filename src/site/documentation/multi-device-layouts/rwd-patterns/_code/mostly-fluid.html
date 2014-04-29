@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header] -->
+    <link rel="stylesheet" type="text/css" href="layouts-common.css">
+    <style type="text/css">
+
+      /* // [START mfluid] */
+      .container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+      }
+
+      .c1, .c2, .c3 {
+        width: 100%;
+      }
+
+      @media (min-width: 600px) {
+        .c2, .c3 {
+          width: 50%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        .container {
+          width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      /* // [END mfluid] */
+      
+
+    </style>
+    <title>Responsive Web Design Pattern: Mostly Fluid</title>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="c1">
+      </div>
+      <div class="c2">
+      </div>
+      <div class="c3">
+      </div>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-MostlyFluid");
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

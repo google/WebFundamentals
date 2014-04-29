@@ -28,6 +28,6 @@
     "grunt-usemin": "~0.1.12",
     "matchdep": "~0.1.2",
     "time-grunt": "~0.1.1",
-    "grunt-webfont": "^0.3.4"
+    "grunt-webfont": "~0.3.4"
   }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- // [TEMPLATE header_full] -->
+	<title>Video Element: Autoplay</title>
+</head>
+<body>
+<div id="container" role="main">
+
+  <h1>Video Element: Autoplay</h1>
+
+  <!-- // [START sourcetypes] -->
+  <video autoplay controls poster="poster.jpg" preload="metadata">
+    <source src="chrome.webm#t=10,15" type="video/webm" />
+    <source src="chrome.mp4#t=10,15" type="video/mp4" />
+    <p>This browser does not support the video element.</p>
+  </video>
+  <!-- // [END sourcetypes] -->
+
+  <p id="videoSrc"></p>
+
+  <script>
+  document.querySelector("video").addEventListener("loadedmetadata", function(){
+    var fileName = this.currentSrc.replace(/^.*[\\\/]/, '');
+  	document.querySelector("#videoSrc").innerHTML = "currentSrc: " + fileName +
+      "<br /> videoWidth: " + this.videoWidth + "px<br /> videoHeight: " + this.videoHeight + "px";
+    sampleCompleted("video/fragment.html")
+  });
+  </script>
+</div>
+<!-- // [TEMPLATE footer] -->
+</body>
+</html>

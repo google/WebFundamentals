@@ -1,0 +1,20 @@
+<div class="related-items">
+  <div class="container">
+    <div class="g-wide--push-1 g-medium--push-1">
+      <h3 class="related-items--title">
+      {% if include.title %}
+        {{ include.title }}
+      {% else %}
+        Related information
+      {% endif %}
+      </h3>
+      {% if include.list %}
+        <ul class="list--links">
+          {% for item in include.list %}
+            <li class="list__item">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -89,9 +89,12 @@ ol.list--links {
     a {
       display: inline-block;
       @include numbered-list;
+<<<<<<< HEAD
       font-family: $fontHighlight;
       font-weight: 300;
       line-height: 1; // reset to baseline from inline-block
+=======
+>>>>>>> 5f8a52011266a1d37081288faadd34441efef27c
     }
 
     &:nth-child(10n) ~ li a:before,

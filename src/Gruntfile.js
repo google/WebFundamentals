@@ -33,6 +33,14 @@ module.exports = function(grunt) {
 					]
 				}]
 			},
+			icons: {
+				files: [{
+					dot: true,
+					src: [
+						'<%= config.source %>/icons/icons*.*'
+					]
+				}]
+			},
 			tidyup: {
 				files: [{
 					dot: true,
@@ -185,7 +193,11 @@ module.exports = function(grunt) {
 		jekyll: {
 			destination: {
 				config: 'site/_config-grunt.yml'
+			},
+			devsite: {
+				config: 'site/_config-devsite.yml'
 			}
+
 		},
 
 		jshint: {
@@ -271,29 +283,13 @@ module.exports = function(grunt) {
 			}
 		},
 
-    webfont: {
-      icons: {
-        src: '<%= config.source %>/icons/*.svg',
-        dest: '<%= config.source %>/icons/',
-        destCss: '<%= config.source %>/_sass/_components/',
-        options: {
-          stylesheet: 'scss',
-          relativeFontPath: '../icons',
-          htmlDemo: false,
-          templateOptions: {
-            classPrefix: 'icon-'
-          }
-        }
-      }
-    },
-
 		watch: {
 			// When styles change, recompile them
 			styles: {
 				files: [
-          '<%= config.source %>/_sass/**/*.scss',
-          '<%= config.source %>/css/**/*.css'
-        ],
+					'<%= config.source %>/_sass/**/*.scss',
+					'<%= config.source %>/css/**/*.css'
+				],
 				tasks: ['compass:uncompressed','copy:cssToDest']
 			},
 
@@ -327,7 +323,22 @@ module.exports = function(grunt) {
 					'<%= config.source %>/**/*.js'			// script files
 				]
 			}
-		}
+		},
+
+		webfont: {
+			icons: {
+				src: '<%= config.source %>/icons/*.svg',
+				dest: '<%= config.source %>/icons/',
+				destCss: '<%= config.source %>/_sass/_components/',
+				options: {
+					hashes: false,
+					stylesheet: 'scss',
+					relativeFontPath: '../icons',
+					htmlDemo: false,
+					template: '<%= config.source %>/_templates/icons-template.css'
+				}
+			}
+		},
 
 	});
 
@@ -357,6 +368,8 @@ module.exports = function(grunt) {
 		if(uncompressed) {
 			return grunt.task.run([
 				'test',						// Code quality control
+				'clean:icons',				// Clean up icon font files for regeneration
+				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
 				'compass:uncompressed',		// Build the CSS using Compass
 				'jekyll:destination',		// Build the site with Jekyll
@@ -370,13 +383,15 @@ module.exports = function(grunt) {
 		} else {
 			return grunt.task.run([
 				'test',						// Code quality control
+				'clean:icons',				// Clean up icon font files for regeneration
+				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
 				'compass:uncompressed',		// Build the CSS using Compass with compression
 				'jekyll:destination',		// Build the site with Jekyll
 				'useminPrepare',			// Prepare for optimised asset substitution
 				'concat',					// Combine JS and CSS assets into single files
 				'cssmin',					// Minify the combined CSS
-				'uglify',					// Minify the combined JS
+				// 'uglify',					// Minify the combined JS
 				'usemin',					// Carry out optimised asset substitution
 				// 'htmlmin:all',			// Minify the final HTML
 				// 'clean:tidyup',			// Clean up any stray source files
@@ -414,9 +429,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', function() {
 
 		return grunt.task.run([
-      'webfont:icons',
-      'clean:destination',
-      'jekyll:destination',
+			'clean:icons',
+			'webfont:icons',
+			'clean:destination',
+			'jekyll:destination',
 			'compass:uncompressed',
 			'open:index',
 			'connect:destination-source',
@@ -443,6 +459,27 @@ module.exports = function(grunt) {
 
 		}
 
+	});
+
+	// Devsite task
+	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
+		grunt.config.set('config', grunt.file.readYAML('site/_config-devsite.yml'));
+		return grunt.task.run([
+			'test',						// Code quality control
+			'clean:icons',				// Clean up icon font files for regeneration
+			'webfont:icons',			// Generate icon font files and SASS
+			'clean:destination',		// Clean out the destination directory
+			'compass:compressed',		// Build the CSS using Compass with compression
+			'jekyll:devsite',		// Build the site with Jekyll
+			'useminPrepare',			// Prepare for optimised asset substitution
+			'concat',					// Combine JS and CSS assets into single files
+			'cssmin',					// Minify the combined CSS
+			'usemin',					// Carry out optimised asset substitution
+			'htmlmin:all',			// Minify the final HTML
+			'clean:tidyup',			// Clean up any stray source files
+			'copy:optimisedjsToSrc',			// Copy the optimised JS back to the source directory
+			'copy:optimisedcssToSrc'			// Copy the optimised CSS back to the source directory
+		]);
 	});
 
 	// Default task
