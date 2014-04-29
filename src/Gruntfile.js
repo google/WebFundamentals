@@ -185,7 +185,11 @@ module.exports = function(grunt) {
 		jekyll: {
 			destination: {
 				config: 'site/_config-grunt.yml'
+			},
+			devsite: {
+				config: 'site/_config-devsite.yml'
 			}
+
 		},
 
 		jshint: {
@@ -322,12 +326,12 @@ module.exports = function(grunt) {
 
 		if(strict) {
 			return grunt.task.run([
-				'jshint:source'
+				//'jshint:source'
 				// 'csslint:strict'
 			]);
 		} else {
 			return grunt.task.run([
-				'jshint:source'
+				//'jshint:source'
 				// 'csslint:lax'
 			]);
 		}
@@ -426,6 +430,26 @@ module.exports = function(grunt) {
 
 		}
 
+	});
+
+	// Devsite task
+	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
+		grunt.config.set('config', grunt.file.readYAML('site/_config-devsite.yml'));
+		return grunt.task.run([
+			'clean:destination',
+			'test',						// Code quality control
+			'clean:destination',		// Clean out the destination directory
+			'compass:compressed',		// Build the CSS using Compass with compression
+			'jekyll:devsite',		// Build the site with Jekyll
+			'useminPrepare',			// Prepare for optimised asset substitution
+			'concat',					// Combine JS and CSS assets into single files
+			'cssmin',					// Minify the combined CSS
+			'usemin',					// Carry out optimised asset substitution
+			'htmlmin:all',			// Minify the final HTML
+			'clean:tidyup',			// Clean up any stray source files
+			'copy:optimisedjsToSrc',			// Copy the optimised JS back to the source directory
+			'copy:optimisedcssToSrc'			// Copy the optimised CSS back to the source directory
+		]);
 	});
 
 	// Default task
