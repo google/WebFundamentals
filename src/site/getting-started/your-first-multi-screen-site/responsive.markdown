@@ -367,6 +367,14 @@ Learn how to effectively use images for varying screen densities:
 Tables are very hard to get right on devices that have a narrow viewport and need
 special consideration.
 
+<video controls poster="images/responsivetable.png" style="width: 100%;">
+  <source src="videos/responsivetable.mov" type="video/mov"></source>
+  <source src="videos/responsivetable.webm" type="video/webm"></source>
+  <p>Sorry your browser doesn't support video. 
+     <a href="videos/responsivetable.mov">Download the video</a>.
+  </p>
+</video>
+
 <div class="related-items">
 <div class="related-items">
 <div class="container">
