@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Tue Apr 29 10:24:08 2014
+Created by FontForge 20120731 at Tue Apr 29 12:17:57 2014
  By Pedro Duarte
 Created by Pedro Duarte with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
@@ -37,10 +37,10 @@ d="M0 448h159l148 -256l-148 -256h-159l148 256z" />
 d="M372 448l-200 -512h-172l201 512h171z" />
     <glyph glyph-name="uniE004" unicode="&#xe004;" 
 d="M219 6h-113l-106 186l106 186h113l-105 -186zM293 378h113l106 -186l-106 -186h-113l105 186z" />
-    <glyph glyph-name="uniE005" unicode="&#xe005;" horiz-adv-x="442" 
-d="M0 448h442v-512h-442v512zM419 -41v466h-396v-466h396zM58 308v47h326v-47h-326zM58 204v46h326v-46h-326zM58 99v46h279v-46h-279z" />
-    <glyph glyph-name="uniE006" unicode="&#xe006;" 
+    <glyph glyph-name="uniE005" unicode="&#xe005;" 
 d="M0 -23l116 291l233 -291h-349zM236 155l160 217l116 -395h-163zM140 349q0 58 58 58t58 -58t-58 -58t-58 58z" />
+    <glyph glyph-name="uniE006" unicode="&#xe006;" horiz-adv-x="442" 
+d="M0 448h442v-512h-442v512zM419 -41v466h-396v-466h396zM58 308v47h326v-47h-326zM58 204v46h326v-46h-326zM58 99v46h279v-46h-279z" />
     <glyph glyph-name="uniE007" unicode="&#xe007;" 
 d="M0 227h512v-70h-512v70z" />
     <glyph glyph-name="uniE008" unicode="&#xe008;" 
