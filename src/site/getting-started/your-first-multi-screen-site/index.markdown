@@ -14,24 +14,29 @@ collection: getting-started
 
 # {{ page.title }}
 
-Building multi-screen experiences is not as hard as it sounds. 
+Building multi-screen experiences is not as hard as it sounds. By following 
+this guide we will build an example product landing page for our
+[CS256 Mobile Web Developement course](https://www.udacity.com/course/cs256) 
+that works well across all different device types.
 
-Our goal in this guide is to build an example product landing page for our
- [CS256 Mobile Web Developement course](https://www.udacity.com/course/cs256).  The end result will be a fully functioning page
-that covers many of the core principles of building experiences that work well
-across all different device types.
+## Lessons
 
+{% for guide in page.articles.multi-screen %}
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
+{{guide.description}}
+{% endfor %}
+
+## Final product
+
+By the end of this guide you will have produced an excellent product landing
+page that you could use on your own sites.  It will be responsive across
+mobile all the way up to TV.
 
 <div class="demo clear">
-  <img class="g-wide--1 g-medium--half" src="images/narrowsite.jpg" alt="Narrow Viewport final look" style="max-width: 100%;"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/widesite.jpg" alt="Narrow Viewport final look" style="max-width: 100%;">
+  <img class="g-wide--1 g-medium--half" src="images/narrowsite.jpg" alt="Narrow Viewport final look" style="max-width: 100%;">
+  <img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/widesite.jpg" alt="Narrow Viewport final look" style="max-width: 100%;">
 </div>
 
 
-{% for guide in page.articles.multi-screen %}
-{% class %}
-### [{{guide.title}}]({{site.baseurl}}{{guide.url}})
-{{guide.description}}
-{% endclass %}
-{% endfor %}
 
 {% endwrap %}
