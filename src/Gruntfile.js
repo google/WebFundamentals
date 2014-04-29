@@ -331,6 +331,7 @@ module.exports = function(grunt) {
 				dest: '<%= config.source %>/icons/',
 				destCss: '<%= config.source %>/_sass/_components/',
 				options: {
+					hashes: false,
 					stylesheet: 'scss',
 					relativeFontPath: '../icons',
 					htmlDemo: false,
@@ -367,6 +368,8 @@ module.exports = function(grunt) {
 		if(uncompressed) {
 			return grunt.task.run([
 				'test',						// Code quality control
+				'clean:icons',				// Clean up icon font files for regeneration
+				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
 				'compass:uncompressed',		// Build the CSS using Compass
 				'jekyll:destination',		// Build the site with Jekyll
@@ -380,6 +383,8 @@ module.exports = function(grunt) {
 		} else {
 			return grunt.task.run([
 				'test',						// Code quality control
+				'clean:icons',				// Clean up icon font files for regeneration
+				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
 				'compass:uncompressed',		// Build the CSS using Compass with compression
 				'jekyll:destination',		// Build the site with Jekyll
@@ -460,8 +465,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
 		grunt.config.set('config', grunt.file.readYAML('site/_config-devsite.yml'));
 		return grunt.task.run([
-			'clean:destination',
 			'test',						// Code quality control
+			'clean:icons',				// Clean up icon font files for regeneration
+			'webfont:icons',			// Generate icon font files and SASS
 			'clean:destination',		// Clean out the destination directory
 			'compass:compressed',		// Build the CSS using Compass with compression
 			'jekyll:devsite',		// Build the site with Jekyll

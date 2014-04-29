@@ -625,13 +625,13 @@ body.debug:after {
 
 @font-face {
   font-family: "icons";
-  src: url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.eot");
-  src: url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.eot?#iefix") format("embedded-opentype"), url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.woff") format("woff"), url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.ttf") format("truetype"), url("../icons/icons-87b2f85ee47de9b6fdbb0ebd5b1e11dc.svg?#icons") format("svg");
+  src: url("../icons/icons.eot");
+  src: url("../icons/icons.eot?#iefix") format("embedded-opentype"), url("../icons/icons.woff") format("woff"), url("../icons/icons.ttf") format("truetype"), url("../icons/icons.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 14, ../_sass/_components/_icons.scss */
+/* line 15, ../_sass/_components/_icons.scss */
 .icon {
   font-family: "icons";
   display: inline-block;
