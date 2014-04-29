@@ -159,6 +159,11 @@
     .main-nav__list--child & {
       @include type--large;
     }
+
+    &:hover {
+      color: $colorGrayDark;
+    }
+
   }
 }
 

@@ -982,6 +982,10 @@ body.debug:after {
     padding-top: 1.3000em;
     padding-bottom: 0;
   }
+  /* line 163, ../_sass/_modules/_main-navigation.scss */
+  .main-nav__link--child:hover {
+    color: #404040;
+  }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
   /* line 159, ../_sass/_modules/_main-navigation.scss */
@@ -996,12 +1000,12 @@ body.debug:after {
   }
 }
 
-/* line 166, ../_sass/_modules/_main-navigation.scss */
+/* line 171, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 166, ../_sass/_modules/_main-navigation.scss */
+  /* line 171, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-nav {
     background-color: #ffffff;
     position: absolute;
@@ -1012,13 +1016,13 @@ body.debug:after {
     color: #404040;
   }
 }
-/* line 180, ../_sass/_modules/_main-navigation.scss */
+/* line 185, ../_sass/_modules/_main-navigation.scss */
 .subnav-is-opened .main-nav__secondary-nav {
   display: block;
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 186, ../_sass/_modules/_main-navigation.scss */
+  /* line 191, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -1033,7 +1037,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 186, ../_sass/_modules/_main-navigation.scss */
+  /* line 191, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -1041,7 +1045,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 186, ../_sass/_modules/_main-navigation.scss */
+  /* line 191, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -1049,7 +1053,7 @@ body.debug:after {
   }
 }
 
-/* line 193, ../_sass/_modules/_main-navigation.scss */
+/* line 198, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link--explore {
   color: #3372df;
   font-weight: 600;
@@ -1061,35 +1065,35 @@ body.debug:after {
   color: #404040;
 }
 @media only screen and (max-width: 619px) {
-  /* line 193, ../_sass/_modules/_main-navigation.scss */
+  /* line 198, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     border-top: 1px solid #e0e0e0;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 193, ../_sass/_modules/_main-navigation.scss */
+  /* line 198, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     border-bottom: 1px solid #737373;
   }
 }
 
-/* line 206, ../_sass/_modules/_main-navigation.scss */
+/* line 211, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 206, ../_sass/_modules/_main-navigation.scss */
+  /* line 211, ../_sass/_modules/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 214, ../_sass/_modules/_main-navigation.scss */
+/* line 219, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }
 
-/* line 219, ../_sass/_modules/_main-navigation.scss */
+/* line 224, ../_sass/_modules/_main-navigation.scss */
 .main-nav__btn {
   position: absolute;
   top: 0;
@@ -1102,14 +1106,14 @@ body.debug:after {
   -webkit-appearance: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 219, ../_sass/_modules/_main-navigation.scss */
+  /* line 224, ../_sass/_modules/_main-navigation.scss */
   .main-nav__btn {
     display: none;
   }
 }
 
 /*==========  ICONS  ==========*/
-/* line 238, ../_sass/_modules/_main-navigation.scss */
+/* line 243, ../_sass/_modules/_main-navigation.scss */
 .main-nav__icon {
   float: right;
   font-size: 16px;
@@ -1117,7 +1121,7 @@ body.debug:after {
   vertical-align: middle;
 }
 @media only screen and (min-width: 620px) {
-  /* line 238, ../_sass/_modules/_main-navigation.scss */
+  /* line 243, ../_sass/_modules/_main-navigation.scss */
   .main-nav__icon {
     display: none;
     font-size: 13px;
@@ -1125,13 +1129,13 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 251, ../_sass/_modules/_main-navigation.scss */
+  /* line 256, ../_sass/_modules/_main-navigation.scss */
   .icon-custom:before {
     content: "\e001";
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 250, ../_sass/_modules/_main-navigation.scss */
+  /* line 255, ../_sass/_modules/_main-navigation.scss */
   .icon-custom {
     float: none;
     display: inline-block;
@@ -1140,7 +1144,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 267, ../_sass/_modules/_main-navigation.scss */
+  /* line 272, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
     content: "\e004";
   }
