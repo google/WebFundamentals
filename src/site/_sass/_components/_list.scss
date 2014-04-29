@@ -62,25 +62,32 @@ ol ul {
 }
 
 
-.list__item {
-  @include bullet-type(">");
-}
+// .list__item {
+//   @include bullet-type(">");
+// }
 
 /*==========  LIST LINKS  ==========*/
 
-ul.list--links {
+ul.list-links {
   li:before {
     display: none;
   }
   a {
-    @include bullet-type("", icon-cheveron-right);
+    @include bullet-type("#");
     font-weight: 400;
-    font-family: $fontHighlight;
-    line-height: 1; // fixes baseline grid alignment
+  }
+
+  &.list-links--primary {
+    a {
+      @include bullet-type("", icon-cheveron-right);
+      font-weight: 400;
+      font-family: $fontHighlight;
+      line-height: 1; // fixes baseline grid alignment
+    }
   }
 }
 
-ol.list--links {
+ol.list-links {
   li {
     &:before {
       display: none;
@@ -89,17 +96,25 @@ ol.list--links {
     a {
       display: inline-block;
       @include numbered-list;
-<<<<<<< HEAD
-      font-family: $fontHighlight;
       font-weight: 300;
-      line-height: 1; // reset to baseline from inline-block
-=======
->>>>>>> 5f8a52011266a1d37081288faadd34441efef27c
     }
 
     &:nth-child(10n) ~ li a:before,
     &:nth-child(10n) a:before {
       content: counter(list);
+    }
+  }
+
+  &.list-links--secondary {
+    @include type--base;
+    @include medium { @include type--small }
+
+    li {
+      padding-left: 0;
+    }
+
+    a:before {
+      display: none;
     }
   }
 }
@@ -109,16 +124,33 @@ ol.list--variation {
   padding-top: 0;
   li {
     a:before {
-      content: "\e002  0" counter(list);
+      content: $icon-cheveron-right " 0" counter(list);
       font-family: $fontIcon;
       font-size: 13px;
     }
   }
 }
 
+/*==========  ANCHOR LIST  ==========*/
+
+.list-anchor {
+  @include type--small;
+
+  li {
+    padding-left: 0;
+    &:before {display: none}
+  }
+
+  a:before {
+    content: "#";
+    display: inline-block;
+    padding-right: 5px;
+  }
+}
+
 /*==========  CENTERED LIST  ==========*/
 
-.centered-list {
+.list-centered {
   text-align: center;
 }
 
@@ -191,31 +223,31 @@ ol.list--variation {
   }
 }
 
-/*==========  RELATED GUIDES LIST  ==========*/
-.related-guides-list {
-  font-family: $fontHighlight;
-  padding-top: 0;
-  @include medium {padding-top: $lineHeight}
-  @include wide {padding-top: 0}
+// /*==========  RELATED GUIDES LIST  ==========*/
+// .related-guides-list {
+//   font-family: $fontHighlight;
+//   padding-top: 0;
+//   @include medium {padding-top: $lineHeight}
+//   @include wide {padding-top: 0}
 
-  p {
-    padding-top: 0;
-  }
+//   p {
+//     padding-top: 0;
+//   }
 
-  .tag {
-    padding-top: 0;
-  }
+//   .tag {
+//     padding-top: 0;
+//   }
 
-  li {
-    padding-top: $lineHeight;
-    padding-bottom: $lineHeight - 1;
+//   li {
+//     padding-top: $lineHeight;
+//     padding-bottom: $lineHeight - 1;
 
-    @include medium {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-}
+//     @include medium {
+//       padding-top: 0;
+//       padding-bottom: 0;
+//     }
+//   }
+// }
 
 /*==========  LIST RESET  ==========*/
 
@@ -224,12 +256,10 @@ ol.list--variation {
     padding-left: 0;
   }
 
-  &.list--links a:before,
+  &.list-links a:before,
   & li:before {
     display: none !important; // Fine to use !important when we are forcing an override
   }
 }
-
-
 
 

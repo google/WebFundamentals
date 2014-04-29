@@ -23,7 +23,7 @@ NOTE: This is our styleguide
       <p>/<a href="#" class="breadcrumbs__link"> Resources</a></p>
     </nav>
     <h1 class="summary-header__title">Styleguide</h1>
-    <ol class="summary-header__anchor-list  list--links">
+    <ol class="summary-header__anchor-list  list-links">
       <li class="summary-header__anchors-item"><a href="#typography">Typography</a></li>
       <li class="summary-header__anchors-item"><a href="#buttons">Buttons</a></li>
       <li class="summary-header__anchors-item"><a href="#lists">Lists</a></li>
@@ -79,18 +79,17 @@ NOTE: This is our styleguide
   <a name="lists"></a>
   <section class="styleguide__lists">
     <h2 class="subsection-title"><strong class="subsection-number">#03</strong> Lists</h2>
+
+    <h3>Default lists</h3>
+
+    <h4>ul</h4>
     <ul>
       <li>Lorem ipsum dolor sit amet.</li>
       <li>Dicta optio cumque dolore hic ea facilis</li>
       <li>Minus, possimus, veniam, incidunt eligendi</li>
     </ul>
 
-    <ul class="list--links">
-      <li class="list__item"><a href="#">Lorem ipsum dolor sit amet</a></li>
-      <li class="list__item"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
-      <li class="list__item"><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
-    </ul>
-
+    <h4>ol</h4>
     <ol>
       <li>Lorem ipsum dolor sit amet</li>
       <li>Dicta optio cumque dolore hic ea facilis</li>
@@ -105,26 +104,48 @@ NOTE: This is our styleguide
       <li>Dicta optio cumque dolore hic ea facilis</li>
     </ol>
 
-    <ol class="list--links">
+    <h3>Default lists of links</h3>
+
+    <h4>ul</h4>
+    <ul class="list-links"> <!-- # helvetica -->
+      <li class="list__item"><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li class="list__item"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li class="list__item"><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    </ul>
+
+    <ul class="list-links list-links--primary"> <!-- > roboto -->
+      <li class="list__item"><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li class="list__item"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li class="list__item"><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    </ul>
+
+    <h4>ol</h4>
+    <ol class="list-links">
       <li><a href="#">Lorem ipsum dolor sit amet</a></li>
       <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
       <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
     </ol>
 
-    <ol class="list--links list--reset">
+    <ol class="list-anchor">
+      <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    </ol>
+
+    <ol class="list-links list-links--secondary">
       <li><a href="#">Layout basics</a></li>
       <li><a href="#">Basics layouts</a></li>
       <li><a href="#">Layout patterns</a></li>
     </ol>
 
-    <ol class="list--links list--variation">
+    <!-- <ol class="list-links list--variation">
       <li><a href="#">Lorem ipsum dolor sit amet</a></li>
       <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
       <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
       <li><a href="#">Lorem ipsum dolor sit amet</a></li>
       <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
       <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
-    </ol>
+    </ol> -->
 
   </section>
 
@@ -464,7 +485,7 @@ NOTE: This is our styleguide
 
       <div class="editorial-header__toc">
         <p class="medium editorial-header__toc-title"><i class="icon icon-lessons"></i> More lessons in Layout Basics</p>
-        <ol class="list--links list--variant">
+        <ol class="list-links list--variant">
           <li><a href="#">Lorem ipsum dolor sit amet</a></li>
           <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
           <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
@@ -528,7 +549,7 @@ NOTE: This is our styleguide
       <li class="guides-list__item g--half">
         <h3 class="xlarge">Multi screen layouts</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list--links list--reset">
+        <ol class="list-links list--reset">
           <li><a href="#">Layout basics</a></li>
           <li><a href="#">Basics layouts</a></li>
           <li><a href="#">Layout patterns</a></li>
@@ -537,7 +558,7 @@ NOTE: This is our styleguide
       <li class="guides-list__item g--half g--last">
         <h3 class="xlarge">Multi screen layouts</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list--links list--reset">
+        <ol class="list-links list--reset">
           <li><a href="#">Layout basics</a></li>
           <li><a href="#">Basics layouts</a></li>
           <li><a href="#">Layout patterns</a></li>
@@ -546,7 +567,7 @@ NOTE: This is our styleguide
       <li class="guides-list__item g--half">
         <h3 class="xlarge">Multi screen layouts</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list--links list--reset">
+        <ol class="list-links list--reset">
           <li><a href="#">Layout basics</a></li>
           <li><a href="#">Basics layouts</a></li>
           <li><a href="#">Layout patterns</a></li>
@@ -555,7 +576,7 @@ NOTE: This is our styleguide
       <li class="guides-list__item g--half g--last">
         <h3 class="xlarge">Multi screen layouts</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list--links list--reset">
+        <ol class="list-links list--reset">
           <li><a href="#">Layout basics</a></li>
           <li><a href="#">Basics layouts</a></li>
           <li><a href="#">Layout patterns</a></li>
@@ -748,7 +769,7 @@ NOTE: This is our styleguide
 
         <div>
           <p><i class="icon icon-lessons"></i> Lessons</p>
-          <ol class="list--links list--reset">
+          <ol class="list-links list--reset">
             <li><a href="#">Modern developer workflow</a></li>
             <li><a href="#">Creating forms</a></li>
             <li><a href="#">Touch input</a></li>
