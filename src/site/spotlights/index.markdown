@@ -5,7 +5,7 @@ description: ""
 ---
 {% wrap content%}
 
-# {{page.title}}
+{% if site.spotlights %}
 
 ## Showcases
 {% for article in page.articles.showcase %}
@@ -17,4 +17,12 @@ description: ""
 {% for article in page.articles.spotlight %}
 *  [{{article.title}}]({{site.baseurl}}{{article.url}})
 {% endfor %}
+
+{% else %}
+# Comming Soon
+
+Thanks for visiting.  We currently don't have any content here.
+
+{% endif %}
+
 {% endwrap %}
