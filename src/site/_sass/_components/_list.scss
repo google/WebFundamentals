@@ -40,7 +40,16 @@ ol {
   > li {
     @include numbered-list;
     position: relative;
-    padding-left: 39px;
+    padding-left: 32px;
+
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
+    &:nth-child(10n) ~ li:before,
+    &:nth-child(10n):before {
+      content: counter(list);
+    }
+
   }
 }
 
@@ -78,9 +87,14 @@ ol.list--links {
     }
 
     a {
-      display: block;
+      display: inline-block;
       @include numbered-list;
-      // line-height: 1; // fixes baseline grid alignment
+      line-height: 1; // reset to baseline from inline-block
+    }
+
+    &:nth-child(10n) ~ li a:before,
+    &:nth-child(10n) a:before {
+      content: counter(list);
     }
   }
 }
