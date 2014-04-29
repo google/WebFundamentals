@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- // [TEMPLATE header_full] -->
+	<title>Embedded YouTube video: responsive</title>
+  <style>
+    /* // [START styling] */
+    div#youTubeContainer {
+        height: 0;
+        margin: 0 0 20px 0;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+    }
+
+    div#youTubeContainer iframe,
+    div#youTubeContainer object,
+    div#youTubeContainer embed {
+        background-color: #222;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    /* // [END styling] */
+    </style>
+</head>
+<body>
+<div id="container" role="main">
+
+  <h1>Embedded YouTube video: responsive</h1>
+
+  <div id="youTubeContainer">
+      <iframe width="560" height="315" src="//www.youtube.com/embed/Oic22dQMRXQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+</div>
+<!-- // [TEMPLATE footer] -->
+</body>
+</html>

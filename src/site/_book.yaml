@@ -3,59 +3,57 @@ toc:
   path: /
   home: true
 - title: "Getting Started"
-  path: /getting-started/multi-screen/index.html
+  path: /getting-started/your-first-multi-screen-site/index.html
   section:
     - title: "Create Your First Multi-screen Site"
-      path: /getting-started/mulit-screen/
+      path: /getting-started/your-first-multi-screen-site/
 - title: "Documentation"
-  path: /the-essentials/
+  path: /documentation/
   section:
     - title: "Multi-device layouts"
-      path: /the-essentials/multi-device-layouts/
+      path: /documentation/multi-device-layouts/
       id: "multi-device-layouts"
       section:
         - title: "Responsive Web Design Fundamentals"
-          path: /the-essentials/multi-device-layouts/rwd-fundamentals/
+          path: /documentation/multi-device-layouts/rwd-fundamentals/
         - title: "Responsive Web Design Patterns"
-          path: /the-essentials/multi-device-layouts/rwd-patterns/
+          path: /documentation/multi-device-layouts/rwd-patterns/
         - title: "Layout Patterns"
-          path: /the-essentials/multi-device-layouts/layout-patterns/
+          path: /documentation/multi-device-layouts/layout-patterns/
         - title: "UI Elements"
-          path: /the-essentials/multi-device-layouts/ui-elements/
-    - title: "User Input"
-      path: /the-essentials/user-input/
+          path: /documentation/multi-device-layouts/ui-elements/
+    - title: "Forms and User Input"
+      path: /documentation/user-input/
       id: user-input
       section:
       - title: "Touch Input"
-        path: /the-essentials/user-input/touch-input/
+        path: /documentation/user-input/touch-input/
       - title: "Form Input"
-        path: /the-essentials/user-input/form-input/
+        path: /documentation/user-input/form-input/
     - title: "Images, Video and Audio"
-      path: /the-essentials/introduction-to-media/
+      path: /documentation/introduction-to-media/
       id: introduction-to-media
       section:
       - title: "Images"
-        path: /the-essentials/introduction-to-media/images/
+        path: /documentation/introduction-to-media/images/
       - title: "Video"
-        path: /the-essentials/introduction-to-media/video/
+        path: /documentation/introduction-to-media/video/
       - title: "Audio"
-        path: /the-essentials/introduction-to-media/audio/
+        path: /documentation/introduction-to-media/audio/
     - title: Performance
-      path: /the-essentials/performance/
+      path: /documentation/performance/
       id: performance
       section:
         - title: "Critical Path Rendering"
-          path: /the-essentials/performance/critical-path-rendering/
-        - title: "Optimizing content efficiency"
-          path: /the-essentials/performance/optimizing-content-efficiency/
-        - title: "Resource cacheing"
-          path: /the-essentials/performance/resource-cacheing/
-        - title: "Optimizing networking"
-          path: /the-essentials/performance/optimizing-networking/
-        - title: "Optimizing interactivity"
-          path: /the-essentials/performance/optimizing-interactivity/
-        - title: "Measuring performance"
-          path: /the-essentials/performance/measuring-performance/
+          path: /documentation/performance/critical-path-rendering/
+        - title: "Optimizing Content Efficiency"
+          path: /documentation/performance/optimizing-content-efficiency/
+        - title: "Optimizing Networking"
+          path: /documentation/performance/optimizing-networking/
+        - title: "Optimizing Interactivity"
+          path: /documentation/performance/optimizing-interactivity/
+        - title: "Measuring Performance"
+          path: /documentation/performance/measuring-performance/
 - title: Resources
   path: /resources/
   section:

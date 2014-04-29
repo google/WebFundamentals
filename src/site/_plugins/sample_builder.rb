@@ -58,8 +58,25 @@ module SampleBuilder
 		end
 
 		def destination(dest)
-			#Jekyll.logger.info "here #{@file}"
      		File.join(dest, @newpath, @file)
+   		end
+
+   		def write(dest)
+   			if super(dest)
+   				if (path =~ /\.css/ || path =~ /\.js/ )
+   					path = destination(dest)
+   					file = File.new(path, "r")
+   					contents = file.read()
+   					file.close
+   					contents.gsub!(/\/\* \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] \*\/\s*\n?/m, "\n")
+   					file = File.new(path, "w")
+					file.write(contents)
+					file.close
+   				end
+   				true
+   			else 
+   				false
+   			end
    		end
 	end
 

@@ -9,6 +9,9 @@ url: /web/essentials
 highlighter: pygments
 pygments: true
 spotlights: false
+github:
+  root: https://github.com/PaulKinlan/WebDocs
+  content: tree/master/src/site
 include_open_html: true
 custom:
 kramdown:
