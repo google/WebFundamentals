@@ -22,19 +22,24 @@
   }
 
   .container {
+
+    &:before {
+      @extend .icon-cheveron-right:before;
+    }
+
     @include medium {
       position: relative;
 
       // Pseudo elements to add the background characters
       &:before {
-        content: ">";
+        font-family: $fontIcon;
         display: block;
         position: absolute;
         line-height: 0;
         top: 35%;
-        right: 90%;
-        font-size: 1400px;
-        color: rgba(0, 0, 0, .1)
+        right: 100%;
+        font-size: 400px;
+        color: rgba(0, 0, 0, .1);
       }
     }
   }
@@ -77,7 +82,8 @@
   color: $colorBlue;
 
   &:before {
-    content:"☰";
+    @extend .icon-lessons:before;
+    font-family: $fontIcon;
     display: inline-block;
     padding-right: 10px;
     color: $colorBlue;

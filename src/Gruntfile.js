@@ -334,9 +334,7 @@ module.exports = function(grunt) {
 					stylesheet: 'scss',
 					relativeFontPath: '../icons',
 					htmlDemo: false,
-					templateOptions: {
-						classPrefix: 'icon-'
-					}
+					template: '<%= config.source %>/_templates/icons-template.css'
 				}
 			}
 		},
@@ -388,7 +386,7 @@ module.exports = function(grunt) {
 				'useminPrepare',			// Prepare for optimised asset substitution
 				'concat',					// Combine JS and CSS assets into single files
 				'cssmin',					// Minify the combined CSS
-				'uglify',					// Minify the combined JS
+				// 'uglify',					// Minify the combined JS
 				'usemin',					// Carry out optimised asset substitution
 				// 'htmlmin:all',			// Minify the final HTML
 				// 'clean:tidyup',			// Clean up any stray source files
