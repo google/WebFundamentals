@@ -86,9 +86,13 @@ ol.list--links {
 }
 
 ol.list--variant {
+  @include type--small;
+  padding-top: 0;
   li {
     a:before {
-      content: "> 0" counter(list);
+      content: "\e002  0" counter(list);
+      font-family: $fontIcon;
+      font-size: 13px;
     }
   }
 }
@@ -171,8 +175,9 @@ ol.list--variant {
 /*==========  RELATED GUIDES LIST  ==========*/
 .related-guides-list {
   font-family: $fontHighlight;
-  padding-top: $lineHeight;
-  @include medium {padding-top: 0}
+  padding-top: 0;
+  @include medium {padding-top: $lineHeight}
+  @include wide {padding-top: 0}
 
   p {
     padding-top: 0;
