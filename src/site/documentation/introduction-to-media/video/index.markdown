@@ -395,11 +395,11 @@ orientation:
 
 <div class="clear">
   <div class="g--half">
-    <img class="center" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait-3x5.png" />
+    <img class="center" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png" />
   </div>
 
   <div class="center" class="g--half g--last">
-    <img class="center" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape-5x3.png" />
+    <img class="center" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
   </div>
 </div>
 
