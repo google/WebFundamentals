@@ -56,24 +56,24 @@ information architecture we can now start to build out the site.
 
 ### Create the headline and form
 
-The headline is the first section and the request a demonstration form our the 
-critical components of our page that we have identifed that must be presetned to the user immediately.
+The headline and request-a-demonstration form are the critical components of our page.
+These must be presented to the user immediately.
 
 Adding the header is just a simple set of list items.
 
 {% include_code _code/addcontent.html headline %}
 
 We need to also fill out the form.  It will be a simple form that collects the
- users' names, their phone number and a good time to call them back.
+ users' names, their phone number, and a good time to call them back.
 
 All forms should have labels and placeholders to make it easy for users to focus
-elements, understand what is supposed to go in them and to also help
+elements, understand what is supposed to go in them, and to also help
 accessibility tools understand the structure of the form.  The name attribute
-not only sends the form value to the server it is also used to give important
-hints to the browser about how to automatically fill the form for the user.
+not only sends the form value to the server, it is also used to give important
+hints to the browser about how to automatically fill in the form for the user.
 
 We will add semantic types to make it quick and simple for users to be able to
-enter content on a mobile device.  For example when entering a telephone number
+enter content on a mobile device.  For example, when entering a telephone number,
 the user should just see a dial pad.
 
 {% include_code _code/withform.html form %}
