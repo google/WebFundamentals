@@ -73,8 +73,9 @@
 
       .swipe-back {
         position: absolute;
-        display: flex;
         display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
         
         width: 100%;
         height: 60px;
@@ -82,14 +83,17 @@
         left: 0;
         top: 0;
         
-        flex-direction: row;
         -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
         
-        justify-content: space-around;
         -ms-flex-pack: justify;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
         
-        align-items: center;
         -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
         
         padding: 0 10px;
         box-sizing: border-box;
@@ -118,6 +122,11 @@
       .swipe-back button:nth-child(4) {
         background-color: #f4b400;
       }
+
+      .promote-layer {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
     </style>
   </head>
 
@@ -131,7 +140,7 @@
           <button></button>
           <button></button>
         </div>
-        <p class="swipe-front">Swipe Me</p>
+        <p class="swipe-front promote-layer">Swipe Me</p>
       </div>
     </section>
 
@@ -143,7 +152,7 @@
           <button></button>
           <button></button>
         </div>
-        <p class="swipe-front">Swipe Me Too</p>
+        <p class="swipe-front promote-layer">Swipe Me Too</p>
       </div>
     </section>
 
@@ -211,8 +220,8 @@
           }
           
           initialTouchPos = getGesturePointFromEvent(evt);
-          
-          swipeFront.style.transition = 'none';
+
+          swipeFront.style.transition = 'initial';
         }.bind(this);
         /* // [END handle-start-gesture] */
 
@@ -308,10 +317,12 @@
           }
           
           transformStyle = 'translateX('+currentXPosition+'px)';
-          swipeFront.style['-webkit-transform'] = transformStyle;
-          swipeFront.style['-moz-transform'] = transformStyle;
-          swipeFront.style.transform = transformStyle;
           
+          swipeFront.style.msTransform = transformStyle;
+          swipeFront.style.MozTransform = transformStyle;
+          swipeFront.style.webkitTransform = transformStyle;
+          swipeFront.style.transform = transformStyle;
+
           currentState = newState;
         }
         
@@ -379,6 +390,16 @@
         }
       };
     </script>
+
+    <script>
+      var swipeFronts = document.querySelectorAll('.swipe-front');
+      for(var i = 0; i < swipeFronts.length; i++) {
+        swipeFronts[i].addEventListener('touchstart', function(){
+          sampleCompleted('touch-demo-1.html-SwipeFrontTouch');
+        });
+      }
+    </script>
+
     <!-- // [TEMPLATE footer] -->
   </body>
 </html>
