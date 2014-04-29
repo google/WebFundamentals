@@ -1,6 +1,7 @@
 toc:
 - title: "Web Fundamentals"
   path: /
+  home: true
 - title: "Getting Started"
   path: /getting-started/your-first-multi-screen-site/index.html
   section:
@@ -11,7 +12,6 @@ toc:
   section:
     - title: "Multi-device layouts"
       path: /documentation/multi-device-layouts/
-      id: "multi-device-layouts"
       section:
         - title: "Responsive Web Design Fundamentals"
           path: /documentation/multi-device-layouts/rwd-fundamentals/
@@ -23,7 +23,6 @@ toc:
           path: /documentation/multi-device-layouts/ui-elements/
     - title: "Forms and User Input"
       path: /documentation/user-input/
-      id: user-input
       section:
       - title: "Touch Input"
         path: /documentation/user-input/touch-input/
@@ -31,7 +30,6 @@ toc:
         path: /documentation/user-input/form-input/
     - title: "Images, Video and Audio"
       path: /documentation/introduction-to-media/
-      id: introduction-to-media
       section:
       - title: "Images"
         path: /documentation/introduction-to-media/images/
@@ -41,7 +39,6 @@ toc:
         path: /documentation/introduction-to-media/audio/
     - title: Performance
       path: /documentation/performance/
-      id: performance
       section:
         - title: "Critical Path Rendering"
           path: /documentation/performance/critical-path-rendering/

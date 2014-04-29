@@ -11,25 +11,35 @@
 **/
 
 .editorial-header {
-  background: $colorGrayBackground;
-  padding-bottom: $lineHeight * 2;
   overflow: hidden;
 
+  .breadcrumbs {
+    color: $colorBlue;
+
+    a {
+      color: $colorBlue;
+    }
+  }
 
   .container {
+
+    &:before {
+      @extend .icon-cheveron-right:before;
+    }
+
     @include medium {
       position: relative;
 
       // Pseudo elements to add the background characters
       &:before {
-        content: ">";
+        font-family: $fontIcon;
         display: block;
         position: absolute;
         line-height: 0;
         top: 35%;
-        right: 90%;
-        font-size: 1400px;
-        color: rgba(0, 0, 0, .1)
+        right: 100%;
+        font-size: 400px;
+        color: rgba(0, 0, 0, .1);
       }
     }
   }
@@ -37,5 +47,37 @@
 }
 
 .editorial-header__excerpt {
-  margin-bottom: $lineHeight * 2;
+  @include type--medium(true);
+  font-family: $fontHighlight;
+}
+
+.editorial-header .tag{
+  padding-top: $lineHeight*2;
+}
+
+.editorial-header__subtitle {
+  @include type--xxlarge;
+  padding-top: 0;
+  @include medium {
+    padding-top: 0;
+    padding-bottom: $lineHeight;
+  }
+  color: $colorBlue;
+}
+
+.editorial-header__toc {
+  margin-top: $lineHeight;
+
+  ol {
+    padding-top: 0;
+    @include medium {padding-top: 0}
+  }
+}
+
+.editorial-header__toc-title {
+  font-family: $fontHighlight;
+  border-bottom: 1px solid $colorGrayKeyline;
+  margin-bottom: 13px;
+  padding-bottom: 13px !important;
+  color: $colorBlue;
 }

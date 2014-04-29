@@ -1,24 +1,94 @@
+/**
+*
+* Article nav
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
 .article-nav {
   overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    border-left: 2px solid $colorGrayKeyline;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
 }
 
 .article-nav-link {
-  background: $colorGrayBackground;
-  padding: $lineHeight $lineHeight - 2;
+  padding: $lineHeight 32px;
   // color: #ffffff;
   float: left;
   width: 50%;
-  border-color: #ffffff;
-  border-style: solid;
-  border-width: 0;
+  // border-color: $colorGrayKeyline;
+  // border-style: solid;
+  // border-width: 0;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    top: 21px;
+    font-family: $fontHighlight;
+    font-size: $fontMedium;
+    font-weight: 400;
+
+    @include medium {
+      top: 25px;
+      font-size: $fontLarge;
+      display: block;
+      padding: 13px 10px;
+      color: #ffffff;
+      background: $colorBlue;
+    }
+  }
+}
+
+.article-nav p {
+  padding: 0;
+  margin: 0;
 }
 
 .article-nav-link--prev {
   text-align: right;
-  border-right-width: 1px;
+  // border-right-width: 1px;
+
+  &:before {
+    font-family: $fontIcon;
+    @extend .icon-cheveron-left:before;
+    left: 32px;
+  }
+
+  p {
+    padding-left: 52px;
+  }
 }
 
 .article-nav-link--next {
-  border-left-width: 1px;
-  background-color: $colorGrayKeyline;
+  // border-left-width: 1px;
+
+  &:before {
+    font-family: $fontIcon;
+    @extend .icon-cheveron-right:before;
+    right: 32px;
+  }
+
+  p {
+    padding-right: 52px;
+  }
 }
+
+.article-nav-count {
+  @include type--large;
+  font-weight: 700;
+  @include medium {font-weight: 400;}
+}
+

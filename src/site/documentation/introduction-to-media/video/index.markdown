@@ -395,11 +395,11 @@ orientation:
 
 <div class="clear">
   <div class="g--half">
-    <img class="center" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait-3x5.png" />
+    <img class="center" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png" />
   </div>
 
   <div class="center" class="g--half g--last">
-    <img class="center" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape-5x3.png" />
+    <img class="center" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
   </div>
 </div>
 
@@ -408,7 +408,7 @@ For example, without any customization a video playing on an iPad in landscape
 orientation looks like this:
 
 <img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape"
-src="images/iPad-Retina-landscape-video-playing-5x3.png" />
+src="images/iPad-Retina-landscape-video-playing.png" />
 
 Setting the video `width: 100%` or `max-width: 100%` with CSS can resolve
 many device orientation layout problems. You may also want to consider
@@ -419,7 +419,7 @@ fullscreen alternatives.
 Different platforms display video differently. Safari on an iPhone displays a
 video element inline on a web page, but plays video back in fullscreen mode:
 
-<img class="center" alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster-3x5.png" />
+<img class="center" alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster.png" />
 
 On Android, users can request request fullscreen mode by clicking the
 fullscreen icon. But the default is to play video inline:
@@ -428,7 +428,7 @@ fullscreen icon. But the default is to play video inline:
 
 Safari on an iPad plays video inline:
 
-<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing-5x3.png" />
+<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing.png" />
 
 ### Control fullscreening of content
 
