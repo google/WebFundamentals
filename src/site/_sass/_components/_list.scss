@@ -171,7 +171,8 @@ ol.list--variant {
 /*==========  RELATED GUIDES LIST  ==========*/
 .related-guides-list {
   font-family: $fontHighlight;
-  padding-top: 0;
+  padding-top: $lineHeight;
+  @include medium {padding-top: 0}
 
   p {
     padding-top: 0;

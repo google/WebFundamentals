@@ -51,11 +51,10 @@
   padding-bottom: $lineHeight*3;
   position: relative;
   z-index: 1;
-
+  @include highlight-symbol();
 
   @include medium {
     padding-bottom: $lineHeight*2;
-    @include highlight-symbol();
   }
 }
 

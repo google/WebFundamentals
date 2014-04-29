@@ -19,20 +19,21 @@
   margin-bottom: $lineHeight*3;
 
   &:after {
-    content: "*";
+    @extend .icon-star:before;
+    font-family: $fontIcon;
     position: absolute;
     display: block;
     width: 100%;
     margin: 0 auto;
-    font-family: $fontHighlight;
-    font-size: 130px;
-    bottom: -25px;
+    font-size: 50px;
+    bottom: -10px;
 
     @include medium {
-      font-size: 300px;
-      bottom: -35px;
+      font-size: 130px;
+      bottom: 0;
     }
-    font-weight: 700;
+
+    font-weight: 500;
     color: #78cfa9;
   }
 }

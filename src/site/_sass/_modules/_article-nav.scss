@@ -38,12 +38,16 @@
     position: absolute;
     top: 21px;
     font-family: $fontHighlight;
-    font-size: $fontXLarge;
+    font-size: $fontMedium;
     font-weight: 400;
 
     @include medium {
-      top: 39px;
-      font-size: $fontXXLarge;
+      top: 25px;
+      font-size: $fontLarge;
+      display: block;
+      padding: 13px 10px;
+      color: #ffffff;
+      background: $colorBlue;
     }
   }
 }
@@ -58,12 +62,13 @@
   // border-right-width: 1px;
 
   &:before {
-    content: "<";
+    font-family: $fontIcon;
+    @extend .icon-cheveron-left:before;
     left: 32px;
   }
 
   p {
-    padding-left: 32px;
+    padding-left: 52px;
   }
 }
 
@@ -71,12 +76,13 @@
   // border-left-width: 1px;
 
   &:before {
-    content: ">";
+    font-family: $fontIcon;
+    @extend .icon-cheveron-right:before;
     right: 32px;
   }
 
   p {
-    padding-right: 32px;
+    padding-right: 52px;
   }
 }
 
