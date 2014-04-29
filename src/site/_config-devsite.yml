@@ -18,4 +18,4 @@ custom:
 kramdown:
   toc_levels: "2,3,4"
 include: ['.htaccess', '_project.yaml', '_book.yaml']
-exclude: ['README.md', 'config.rb', '*.psd', 'js/*', '*.pxm']
+exclude: ['README.md', 'config.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
