@@ -80,12 +80,4 @@
   margin-bottom: 13px;
   padding-bottom: 13px !important;
   color: $colorBlue;
-
-  &:before {
-    @extend .icon-lessons:before;
-    font-family: $fontIcon;
-    display: inline-block;
-    padding-right: 10px;
-    color: $colorBlue;
-  }
 }

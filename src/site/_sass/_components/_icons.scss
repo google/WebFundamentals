@@ -29,69 +29,74 @@
 
 
 // Icons
-$icon-cheveron-left: "\e001";
-.icon-cheveron-left:before {
+$icon-cheveron-down: "\e001";
+.icon-cheveron-down:before {
   content:"\e001";
 }
 
-$icon-cheveron-right: "\e002";
-.icon-cheveron-right:before {
+$icon-cheveron-left: "\e002";
+.icon-cheveron-left:before {
   content:"\e002";
 }
 
-$icon-forward-slash: "\e003";
-.icon-forward-slash:before {
+$icon-cheveron-right: "\e003";
+.icon-cheveron-right:before {
   content:"\e003";
 }
 
-$icon-google-dev: "\e004";
-.icon-google-dev:before {
+$icon-cheveron-up: "\e004";
+.icon-cheveron-up:before {
   content:"\e004";
 }
 
-$icon-lessons: "\e005";
-.icon-lessons:before {
+$icon-forward-slash: "\e005";
+.icon-forward-slash:before {
   content:"\e005";
 }
 
-$icon-media: "\e006";
-.icon-media:before {
+$icon-google-dev: "\e006";
+.icon-google-dev:before {
   content:"\e006";
 }
 
-$icon-minus: "\e007";
-.icon-minus:before {
+$icon-introduction-to-media: "\e007";
+.icon-introduction-to-media:before {
   content:"\e007";
 }
 
-$icon-multi-screen-layout: "\e008";
-.icon-multi-screen-layout:before {
+$icon-lessons: "\e008";
+.icon-lessons:before {
   content:"\e008";
 }
 
-$icon-navigation-cheveron: "\e009";
-.icon-navigation-cheveron:before {
+$icon-minus: "\e009";
+.icon-minus:before {
   content:"\e009";
 }
 
-$icon-performance: "\e00a";
-.icon-performance:before {
+$icon-multi-device-layouts: "\e00a";
+.icon-multi-device-layouts:before {
   content:"\e00a";
 }
 
-$icon-plus: "\e00b";
-.icon-plus:before {
+$icon-performance: "\e00b";
+.icon-performance:before {
   content:"\e00b";
 }
 
-$icon-star: "\e00c";
-.icon-star:before {
+$icon-plus: "\e00c";
+.icon-plus:before {
   content:"\e00c";
 }
 
-$icon-user-input: "\e00d";
-.icon-user-input:before {
+$icon-star: "\e00d";
+.icon-star:before {
   content:"\e00d";
+}
+
+$icon-user-input: "\e00e";
+.icon-user-input:before {
+  content:"\e00e";
 }
 
 

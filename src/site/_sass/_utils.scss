@@ -28,7 +28,7 @@
   $wideGutterWidth: 3.7%;
 
   // Defining colors
-  $colorBlue: #4285f4;
+  $colorBlue: #3372df;
   $colorBlueSecondary: lighten($colorBlue, 30%);
   $colorGreen: #0f9d58;
   $colorGreenSecondary: lighten($colorGreen, 30%);
@@ -338,6 +338,7 @@
       @if $icon {
         font-family: $fontIcon;
         @extend .#{$icon}:before;
+        font-size: $fontSmall;
       }
       @else {
         content: $bullet;
@@ -357,7 +358,7 @@
   @mixin numbered-list() {
     &:before {
       counter-increment: list;
-      content: "#0" counter(list);
+      content: "0" counter(list);
       color: inherit;
       font-weight: 600;
       display: inline-block;
@@ -380,11 +381,11 @@
     @if $icon {
       &:before {
         display: inline-block;
-        padding-right: 16px;
+        padding-right: 10px;
         font-family: $fontIcon;
-        line-height: 26px;
+        line-height: $lineHeight;
         vertical-align: top;
-        font-size: 13px;
+        font-size: $fontSmall;
         @extend .#{$icon}:before;
       }
     }
