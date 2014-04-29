@@ -319,14 +319,6 @@ images will inflate to large.
 Tiling images is a good idea because it allows you to display content more 
 effectively depending on the size of the viewport.
 
-<video controls poster="images/tileimages.png" style="width: 100%;">
-  <source src="videos/tileimages.mov" type="video/mov"></source>
-  <source src="videos/tileimages.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
-     <a href="videos/tileimages.mov">Download the video</a>.
-  </p>
-</video>
-
 ### Make images responsive to DPI
 
 When using images a web developer now also needs to take not only the size of
@@ -367,6 +359,9 @@ Learn how to effectively use images for varying screen densities:
 Tables are very hard to get right on devices that have a narrow viewport and need
 special consideration.
 
+We recommend on a narrow viewport that you make your table into two rows, the heading
+and transposing the cells in a row to make the columnar. 
+
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
@@ -375,21 +370,13 @@ special consideration.
   </p>
 </video>
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
+In our site we have had to create an extra breakpoint just for the table
+content.  We have done this to isolate because we built for a mobile device
+first it is harder to undo applied styles, so we must section off the narrow
+viewport table CSS from the wide viewport css.  This gives us a clear and
+consistent break.
 
-*  Link to images
-*  Link to responsive images.
-*  Link to videos
-</div>
-</div>
-</div>
-</div>
-
+{% include_code _code/content-with-styles.html table-css css %}
 
 ## Wrapping up
 
