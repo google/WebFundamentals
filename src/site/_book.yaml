@@ -21,7 +21,7 @@ toc:
           path: /the-essentials/multi-device-layouts/layout-patterns/
         - title: "UI Elements"
           path: /the-essentials/multi-device-layouts/ui-elements/
-    - title: "User Input"
+    - title: "Forms and User Input"
       path: /the-essentials/user-input/
       id: user-input
       section:

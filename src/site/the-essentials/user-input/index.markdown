@@ -1,6 +1,6 @@
 ---
 layout: section
-title: "User Input"
+title: "Forms and User Input"
 description: "Learn how to create compelling experiences that users will love to use. Create forms users can fill-out on any device. Make it easy, not painful, for users to engage with touch."
 introduction: "How a user interacts with your site or app can often be make or break for the success of your project. Use our guides to learn how to create compelling experiences that users will love to use."
 snippet: "<a href='http://en.wikipedia.org/wiki/KISS_principle'>KISS</a>. Touch, tap, click, and submit."
