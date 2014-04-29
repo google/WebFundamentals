@@ -47,8 +47,6 @@ remember:
   dont-overflow:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
-  compare-formats:
-    - Compare the responsive sample at <a href='//simpl.info/yt' title='Demo of YouTube video with responsive sizing'>simpl.info/yt</a> to the unresponsive version at <a href='//simpl.info/unyt' title='Demo of YouTube video without responsive sizing'>simpl.info/unyt</a>.
   accessibility-matters:
     - The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href="//caniuse.com/track" title="Track element support status">caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
@@ -134,8 +132,7 @@ video or start playback:
 A poster can also be a fallback if the video `src` is broken or none of the
 video formats supplied are supported. The only downside to poster images is
 an additional file request, which consumes some bandwidth and requires
-rendering. For more information see
-[Image optimization](#TODO).
+rendering. For more information see [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization).
 
 Here's a side-by-side comparison of videos without and with a poster image
 &ndash; we've made the poster image grayscale to prove it's not the video!
@@ -199,9 +196,7 @@ You can specify codecs as well as a mime type. For example:
 
 Not including a type attribute can affect performance when there are
 multiple sources with unsupported types: using your mobile browser
-developer tools, compare network activity for
-[simpl.info/video](//simpl.info/video/) and
-[simpl.info/video/notype](//simpl.info/video/notype/).
+developer tools, compare network activity {% link_sample _code/type.html %}with type attributes{% endlink_sample %} and {% link_sample _code/notype.html %}without type attributes{% endlink_sample %}.
 
 **Remember:** [Ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check with [cURL](//en.wikipedia.org/wiki/CURL):
 
@@ -334,9 +329,7 @@ Try this example on your mobile browser and see what happens:
 
 The actual video frame size as encoded may be different from the video
 element dimensions (just as an image may not be displayed using its actual
-dimensions). For example, resizing the page
-[simpl.info/video](//simpl.info/video) changes the size of the video element
-but the video's frame size is always 480x270px.
+dimensions).
 
 To check the encoded size of a video, use the video element `videoWidth`
 and `videoHeight` properties. `width` and `height` return the dimensions of
@@ -385,7 +378,8 @@ approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsi
 
 {% include_code _code/responsive_embed.html markup html %}
 
-{% include modules/remember.liquid title="Remember" list=page.remember.compare-formats %}
+Compare the {% link_sample _code/yt.html %}responsive sample{% endlink_sample %} to the {% link_sample _code/unyt.html %}unresponsive version{% endlink_sample %}.
+
 
 ## Customize the video player
 
@@ -456,7 +450,7 @@ elements are displayed in fullscreen mode.
 On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
-<video loop>
+<video autoplay loop style="margin-top: 10px">
      <source src="video/fullscreen.webm" type="video/webm" />
      <source src="video/fullscreen.mp4" type="video/mp4" />
      <p>This browser does not support the video element.</p>
@@ -489,8 +483,7 @@ Using the track element, captions appear like this:
 
 ### Add track element
 
-It's very easy to add captions to your video &ndash; simply add a
-[track element](//www.html5rocks.com/en/tutorials/track/basics/) as a child of the video element:
+It's very easy to add captions to your video &ndash; simply add a track element as a child of the video element:
 
 {% include_code _code/track.html basic %}
 
@@ -504,63 +497,6 @@ A track file consists of timed 'cues' in WebVTT format:
     1 00:00:00.500 --> 00:00:02.000 The Web is always changing
     2 00:00:02.500 --> 00:00:04.300 and the way we access it is changing
     ...
-
-## Handle poor connectivity with adaptive streaming
-
-{% include modules/takeaway.liquid title="Key Takeaways" list=page.key-takeaways.handle-poor-connectivity %}
-
-### What is adaptive streaming?
-
-The video element is a simple way to include video in your web pages, but it
-doesn't enable your site to move between different bitrate video encodings in
-response to network conditions.
-
-Adaptive streaming is a set of techniques that provide more fine grained
-control over video download and playback.
-
-* **Buffer control:** choose bitrate depending on the size of the video
-  buffer, i.e. how much 'fuel in the tank' remains.
-* **Efficient seeking**: move between different parts of a video with minimal unnecessary download.
-* **Bitrate management**: seamlessly swap between higher or lower bitrate in response to connectivity fluctuations.
-
-### Construct video streams
-
-Video streaming services use server-side solutions to enable adaptive
-streaming, such as Adobe's RTMP protocol and Flash Media Server. However,
-these solutions can be expensive and potentially complex, they require
-plug-ins not supported on mobile platforms, and don't take advantage of
-HTTP – a protocol optimized over many years for delivery of content on the web.
-
-The [Media Source Extensions](//updates.html5rocks.com/2011/11/Stream-video-using-the-MediaSource-API)
-(MSE) API enables JavaScript to construct video streams, which in turns
-enables client-side adaptive streaming techniques that take advantage of HTTP.
-
-There's a simple example of MSE at [simpl.info/mse](//simpl.info/mse).
-
-{% include modules/remember.liquid title="Remember" list=page.remember.construct-video-streams %}
-
-### Enable high quality streaming on the web
-
-[Dynamic Adaptive Streaming over HTTP](//www.html5rocks.com/en/tutorials/eme/basics/#related-technology-2)
-(DASH) is an open standard for adaptive streaming designed to enable media
-delivery at the highest possible quality for both streaming and download.
-Technologies such as Apple's [HTTP Live Streaming](//en.wikipedia.org/wiki/HTTP_Live_Streaming)
-(HLS) and Microsoft's [Smooth Streaming](//en.wikipedia.org/wiki/Adaptive_bitrate_streaming#Microsoft_Smooth_Streaming)
-also provide adaptive-bitrate streaming via HTTP, but are not open source.
-
-With DASH:
-
-* Media is encoded at different bitrates.
-* The different bitrate files are segmented and made available from an HTTP server.
-* A client web app chooses which bitrate to retrieve and play.
-
-DASH can be implemented using the Media Source Extensions API. As part of
-the video segmentation process, an XML manifest known as a Media Presentation
-Description (MPD) is built programmatically. This describes the individual
-video components and how they fit together.
-
-DASH is already in use by sites such as YouTube; you can see DASH in action
-with the [YouTube DASH demo player](//dash-mse-test.appspot.com/dash-player.html?url=http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd).
 
 ## Reference ###
 
@@ -613,9 +549,7 @@ see [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-v
 
 On desktop, `autoplay` tells the browser to immediately start downloading and
 playing the video as soon as it can. On iOS, and Chrome for Android, `autoplay`
-doesn't work; users must tap the screen to play the video. You can test this
-with the video at [simpl.info/video](//simpl.info/video), which has an
-`autoplay` attribute.
+doesn't work; users must tap the screen to play the video.
 
 Even on platforms where autoplay is possible, you need to consider whether
 it's a good idea to enable it:
@@ -713,8 +647,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither playbackRate (demo at [simpl.info/rate](//simpl.info/rate))
-nor volume are supported on mobile.
+Neither playbackRate ({% link_sample _code/rate.html %}see demo{% endlink_sample %}) nor volume are supported on mobile.
 
 #### Methods
 
@@ -744,9 +677,7 @@ nor volume are supported on mobile.
 </table>
 
 On mobile (apart from Opera on Android) play() and pause() don't work unless
-called in response to user action, such as clicking a button: see the
-example at [simpl.info/scripted](//simpl.info/scripted). (Likewise, playback
-can't be initiated for content such as embedded YouTube videos.)
+called in response to user action, such as clicking a button: see the {% link_sample _code/scripted.html %}demo{% endlink_sample %}. (Likewise, playback can't be initiated for content such as embedded YouTube videos.)
 
 #### Events
 
