@@ -89,7 +89,6 @@ ol.list--links {
     a {
       display: inline-block;
       @include numbered-list;
-      line-height: 1; // reset to baseline from inline-block
     }
 
     &:nth-child(10n) ~ li a:before,
