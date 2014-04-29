@@ -382,6 +382,9 @@
         display: inline-block;
         padding-right: 16px;
         font-family: $fontIcon;
+        line-height: 26px;
+        vertical-align: top;
+        font-size: 13px;
         @extend .#{$icon}:before;
       }
     }
@@ -392,22 +395,23 @@
     position: relative;
 
     &:before {
-      display: block;
+      display: none;
 
-      position: absolute;
-      top: 50%;
-      right: $horizontalOffset;
+      @include medium {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: $horizontalOffset;
 
-      font-family: $fontIcon;
-      font-size: $fontSize;
-      font-weight: 900;
-      line-height: 1px;
-      height: 100%;
-      color: #ffffff;
-      text-align: center;
-
-
-      width: $mediumColWidth;
+        font-family: $fontIcon;
+        font-size: $fontSize;
+        font-weight: 900;
+        line-height: 1px;
+        text-align: center;
+        height: 100%;
+        width: $mediumColWidth;
+        color: #ffffff;
+      }
 
       .highlight-module--left & {
         right: auto;
