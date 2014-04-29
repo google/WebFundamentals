@@ -219,7 +219,7 @@ use `touch-action: none` to disable scrolling on touch.
 
 Below is a list of the available parameters for *touch-action*.
 
-<table class="table">
+<table class="table--2">
   <thead>
     <tr>
       <th>Property</th>
@@ -228,23 +228,23 @@ Below is a list of the available parameters for *touch-action*.
   </thead>
   <tbody>
     <tr>
-      <td><code>touch-action: auto</code></td>
-      <td>
+      <td data-th="Property"><code>touch-action: auto</code></td>
+      <td data-th="Description">
         Scrolling works as normal, touching will scroll horizontally and
         vertically if the browser allows it.
       </td>
     </tr>
     <tr>
-      <td><code>touch-action: none</code></td>
-      <td>No scrolling allowed on touch.</td>
+      <td data-th="Property"><code>touch-action: none</code></td>
+      <td data-th="Description">No scrolling allowed on touch.</td>
     </tr>
     <tr>
-      <td><code>touch-action: pan-x</code></td>
-      <td>Horizontal scrolling allowed; vertical scrolling disabled.</td>
+      <td data-th="Property"><code>touch-action: pan-x</code></td>
+      <td data-th="Description">Horizontal scrolling allowed; vertical scrolling disabled.</td>
     </tr>
     <tr>
-      <td><code>touch-action: pan-y</code></td>
-      <td>Vertical scrolling allowed; horizontal scrolling disabled.</td>
+      <td data-th="Property"><code>touch-action: pan-y</code></td>
+      <td data-th="Description">Vertical scrolling allowed; horizontal scrolling disabled.</td>
     </tr>
   </tbody>
 </table>
@@ -261,52 +261,52 @@ The definitive touch events reference can be found here:
 These events are the building blocks for adding new gestures into your
 application:
 
-<table class="table">
+<table class="table--2">
   <thead>
     <tr>
-      <th>Touch, mouse, MS Pointer event</th>
+      <th>Touch, Mouse, MS Pointer Events</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>
+      <td data-th="Event Names">
         <code>touchstart</code>,
         <code>mousedown</code>,
         <code>MSPointerDown</code>
       </td>
-      <td>
+      <td data-th="Description">
         This is called when a finger first touches an element or when the
         user clicks down on the mouse.
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Event Names">
         <code>touchmove</code>,
         <code>mousemove</code>,
         <code>MSPointerMove</code>
       </td>
-      <td>
+      <td data-th="Description">
         This is called when the user moves their finger across the screen or
         drags with the mouse.
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Event Names">
         <code>touchend</code>,
         <code>mouseup</code>,
         <code>MSPointerUp</code>
       </td>
-      <td>
+      <td data-th="Description">
         This is called when the user lifts their finger off of the screen
         or releases the mouse.
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-th="Event Names">
         <code>touchcancel</code>
       </td>
-      <td>
+      <td data-th="Description">
         This is called when the browser cancels the touch gestures.
       </td>
     </tr>
@@ -317,7 +317,7 @@ application:
 
 Each touch event includes three list attributes:
 
-<table class="table">
+<table class="table--2">
   <thead>
     <tr>
       <th>Attribute</th>
@@ -326,15 +326,15 @@ Each touch event includes three list attributes:
   </thead>
   <tbody>
     <tr>
-      <td><code>touches</code></td>
-      <td>
+      <td data-th="Attribute"><code>touches</code></td>
+      <td data-th="Description">
         List of all current touches on the screen, regardless of elements
         being touched.
       </td>
     </tr>
     <tr>
-      <td><code>targetTouches</code></td>
-      <td>
+      <td data-th="Attribute"><code>targetTouches</code></td>
+      <td data-th="Description">
         List of touches that started on the element that is the target of
         the current event. For example, if you bind to a <code>&lt;button&gt;</code>,
         you'll only get touches currently on that button. If you bind to the
@@ -342,8 +342,8 @@ Each touch event includes three list attributes:
       </td>
     </tr>
     <tr>
-      <td>changedTouches</td>
-      <td>
+      <td data-th="Attribute">changedTouches</td>
+      <td data-th="Description">
         List of touches which changed resulting in the event being fired:
         <ul>
           <li>

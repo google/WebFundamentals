@@ -122,7 +122,7 @@ user-select: none;
 
 ### Pseudo Classes for Touch States
 
-<table class="table">
+<table class="table--3">
   <thead>
     <tr>
       <th>Class</th>
@@ -132,11 +132,11 @@ user-select: none;
   </thead>
   <tbody>
     <tr>
-      <td><code>:focus</code></td>
-      <td>
+      <td data-th="Class"><code>:focus</code></td>
+      <td data-th="Example">
         <img alt="Button with Focus State" src="images/btn-focus-state.png">
       </td>
-      <td>
+      <td data-th="Description">
         When you tab through elements on a page, you are moving the focus
         from one element to the next. The focus state allows the user to
         know what element they are currently interacting with; also allows
@@ -144,19 +144,19 @@ user-select: none;
       </td>
     </tr>
     <tr>
-      <td><code>:active</code></td>
-      <td>
+      <td data-th="Class"><code>:active</code></td>
+      <td data-th="Example">
         <img alt="Button in Pressed State" src="images/btn-pressed-state.png">
       </td>
-      <td>
+      <td data-th="Description">
         This is the state an element has when it's being selected, for
         example a user clicking or touching an element.
       </td>
     </tr>
     <tr>
-      <td><code>:hover</code></td>
-      <td><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
-      <td>
+      <td data-th="Class"><code>:hover</code></td>
+      <td data-th="Example"><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
+      <td data-th="Description">
         This state is entered when a is cursor placed over an element.
         Changes in UI on hover are helpful to encourage users to interact
         with elements.
