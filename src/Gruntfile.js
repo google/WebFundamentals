@@ -33,6 +33,14 @@ module.exports = function(grunt) {
 					]
 				}]
 			},
+			icons: {
+				files: [{
+					dot: true,
+					src: [
+						'<%= config.source %>/icons/icons*.*'
+					]
+				}]
+			},
 			tidyup: {
 				files: [{
 					dot: true,
@@ -271,29 +279,13 @@ module.exports = function(grunt) {
 			}
 		},
 
-    webfont: {
-      icons: {
-        src: '<%= config.source %>/icons/*.svg',
-        dest: '<%= config.source %>/icons/',
-        destCss: '<%= config.source %>/_sass/_components/',
-        options: {
-          stylesheet: 'scss',
-          relativeFontPath: '../icons',
-          htmlDemo: false,
-          templateOptions: {
-            classPrefix: 'icon-'
-          }
-        }
-      }
-    },
-
 		watch: {
 			// When styles change, recompile them
 			styles: {
 				files: [
-          '<%= config.source %>/_sass/**/*.scss',
-          '<%= config.source %>/css/**/*.css'
-        ],
+					'<%= config.source %>/_sass/**/*.scss',
+					'<%= config.source %>/css/**/*.css'
+				],
 				tasks: ['compass:uncompressed','copy:cssToDest']
 			},
 
@@ -327,7 +319,23 @@ module.exports = function(grunt) {
 					'<%= config.source %>/**/*.js'			// script files
 				]
 			}
-		}
+		},
+
+		webfont: {
+			icons: {
+				src: '<%= config.source %>/icons/*.svg',
+				dest: '<%= config.source %>/icons/',
+				destCss: '<%= config.source %>/_sass/_components/',
+				options: {
+					stylesheet: 'scss',
+					relativeFontPath: '../icons',
+					htmlDemo: false,
+					templateOptions: {
+						classPrefix: 'icon-'
+					}
+				}
+			}
+		},
 
 	});
 
@@ -414,9 +422,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', function() {
 
 		return grunt.task.run([
-      'webfont:icons',
-      'clean:destination',
-      'jekyll:destination',
+			'clean:icons',
+			'webfont:icons',
+			'clean:destination',
+			'jekyll:destination',
 			'compass:uncompressed',
 			'open:index',
 			'connect:destination-source',
