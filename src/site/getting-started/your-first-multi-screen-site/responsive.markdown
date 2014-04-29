@@ -296,13 +296,7 @@ viewport and should be display side by side with the bulleted list of content.
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
-<video controls poster="images/floatingvideo.png" style="width: 100%;">
-  <source src="videos/floatingvideo.mov" type="video/mov"></source>
-  <source src="videos/floatingvideo.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
-     <a href="videos/floatingvideo.mov">Download the video</a>.
-  </p>
-</video>
+[TODO: waiting on final video]
 
 ### Tile the Images
 
@@ -310,22 +304,14 @@ The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen and stacked vertically.  This doesn't scale
 well on a wide viewport.
 
-To make the images look correct on the screen they are scaled to 50% of the
-container width.  This means that we will get a nice grid of images and the
-images will inflate to large.
+To make the images look correct on the a wide viewport they are scaled to 30%
+of the container width and laid out horizontally (rather than vertically in
+the narrow view). We will also add some border radius and box-shadow to make
+the images look more appealing.
+
+<img src="images/imageswide.png" style="width:100%" />
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
-
-Tiling images is a good idea because it allows you to display content more 
-effectively depending on the size of the viewport.
-
-<video controls poster="images/tileimages.png" style="width: 100%;">
-  <source src="videos/tileimages.mov" type="video/mov"></source>
-  <source src="videos/tileimages.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
-     <a href="videos/tileimages.mov">Download the video</a>.
-  </p>
-</video>
 
 ### Make images responsive to DPI
 
@@ -367,6 +353,9 @@ Learn how to effectively use images for varying screen densities:
 Tables are very hard to get right on devices that have a narrow viewport and need
 special consideration.
 
+We recommend on a narrow viewport that you make your table into two rows, the heading
+and transposing the cells in a row to make the columnar. 
+
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
@@ -375,21 +364,13 @@ special consideration.
   </p>
 </video>
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
+In our site we have had to create an extra breakpoint just for the table
+content.  We have done this to isolate because we built for a mobile device
+first it is harder to undo applied styles, so we must section off the narrow
+viewport table CSS from the wide viewport css.  This gives us a clear and
+consistent break.
 
-*  Link to images
-*  Link to responsive images.
-*  Link to videos
-</div>
-</div>
-</div>
-</div>
-
+{% include_code _code/content-with-styles.html table-css css %}
 
 ## Wrapping up
 

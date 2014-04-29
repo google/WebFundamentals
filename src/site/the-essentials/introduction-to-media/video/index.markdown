@@ -47,8 +47,6 @@ remember:
   dont-overflow:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
-  compare-formats:
-    - Compare the <a href='_code/yt.html' title='Demo of YouTube video with responsive sizing'>responsive sample</a> to the <a href='_code/unyt.html' title='Demo of YouTube video without responsive sizing'>unresponsive version</a>.
   accessibility-matters:
     - The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href="//caniuse.com/track" title="Track element support status">caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
@@ -134,8 +132,7 @@ video or start playback:
 A poster can also be a fallback if the video `src` is broken or none of the
 video formats supplied are supported. The only downside to poster images is
 an additional file request, which consumes some bandwidth and requires
-rendering. For more information see
-[Image optimization](#TODO).
+rendering. For more information see [Image optimization](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization).
 
 Here's a side-by-side comparison of videos without and with a poster image
 &ndash; we've made the poster image grayscale to prove it's not the video!
@@ -199,7 +196,7 @@ You can specify codecs as well as a mime type. For example:
 
 Not including a type attribute can affect performance when there are
 multiple sources with unsupported types: using your mobile browser
-developer tools, compare network activity [_code/type.html](with type attributes) and [_code/notype.html](without type attributes).
+developer tools, compare network activity {% link_sample _code/type.html %}with type attributes{% endlink_sample %} and {% link_sample _code/notype.html %}without type attributes{% endlink_sample %}.
 
 **Remember:** [Ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check with [cURL](//en.wikipedia.org/wiki/CURL):
 
@@ -381,7 +378,8 @@ approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsi
 
 {% include_code _code/responsive_embed.html markup html %}
 
-{% include modules/remember.liquid title="Remember" list=page.remember.compare-formats %}
+Compare the {% link_sample _code/yt.html %}responsive sample{% endlink_sample %} to the {% link_sample _code/unyt.html %}unresponsive version{% endlink_sample %}.
+
 
 ## Customize the video player
 
@@ -649,7 +647,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither playbackRate (see <a href="_code/rate.html" title="Demo of playbackRate property, playing video back at double speed">demo</a>) nor volume are supported on mobile.
+Neither playbackRate ({% link_sample _code/rate.html %}see demo{% endlink_sample %}) nor volume are supported on mobile.
 
 #### Methods
 
@@ -679,8 +677,7 @@ Neither playbackRate (see <a href="_code/rate.html" title="Demo of playbackRate 
 </table>
 
 On mobile (apart from Opera on Android) play() and pause() don't work unless
-called in response to user action, such as clicking a button: see the
-<a href="_code/scripted.html" title="Scripted playback in response to button tap or click">demo</a>. (Likewise, playback can't be initiated for content such as embedded YouTube videos.)
+called in response to user action, such as clicking a button: see the {% link_sample _code/scripted.html %}demo{% endlink_sample %}. (Likewise, playback can't be initiated for content such as embedded YouTube videos.)
 
 #### Events
 
