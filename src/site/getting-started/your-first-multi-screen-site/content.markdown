@@ -14,9 +14,9 @@ article:
 collection: multi-screen
 key-takeaways:
   content-critical:
-    - Understand the content you need first
-    - Sketch out IA for narrow and wide viewports
-    - Create a skeleton view of the page with content but without styling
+    - Identify the content you need first.
+    - Sketch out IA for narrow and wide viewports.
+    - Create a skeleton view of the page with content but without styling.
 ---
 
 {% wrap content %}
