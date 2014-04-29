@@ -22,6 +22,7 @@
 
 .breadcrumbs p {
   @include type--small;
+  padding-top: $lineHeight - 1;
 }
 
 .breadcrumbs__link {

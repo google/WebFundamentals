@@ -41,7 +41,7 @@
           <p>{{guide.description}}</p>
           <div class="secondary-content">
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
-            <ol class="list--links list--reset">
+            <ol class="list-links list--reset">
             {% for article in page.articles[guide.id] %}
               <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
             {% endfor %}

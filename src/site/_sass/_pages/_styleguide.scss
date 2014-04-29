@@ -37,4 +37,11 @@
     display: block;
   }
 
+  .styleguide__lists {
+    ul,
+    ol {
+      margin-bottom: $lineHeight;
+    }
+  }
+
 }

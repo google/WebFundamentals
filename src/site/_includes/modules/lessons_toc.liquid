@@ -1,6 +1,6 @@
 <div class="editorial-header__toc">
   <p class="medium editorial-header__toc-title themed">More lessons in {{ page.parent.title }}</p>
-  <ol class="list--links list--variant">
+  <ol class="list-links list--variant">
 {% for p in page.parent.parent.articles[page.parent.parent.id]  %}
 {% if p.id == page.collection %}
   {% for guide in page.articles[page.collection] %}
