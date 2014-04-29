@@ -36,7 +36,7 @@ notes:
 
 In the previous section on constructing the object model, we built the DOM and the CSSOM trees based on the HTML and CSS input. However, both of these are independent objects which capture different aspects of the document: one describes the content and the other the style rules that need to applied to the document. How do we merge the two and get the browser to render pixels on the screen?
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.render-tree-construction %}
+{% include modules/takeaway.liquid list=page.key-takeaways.render-tree-construction %}
 
 The first step is for the browser to combine the DOM and CSSOM into a "render tree" that captures all the visible DOM content on the page, plus all the CSSOM style information for each node.
 

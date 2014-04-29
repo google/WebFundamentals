@@ -32,7 +32,7 @@ key-takeaways:
 
 In the previous section we saw that the critical rendering path requires that we have both the DOM and the CSSOM to construct the render tree, which creates an important performance implication: **both HTML and CSS are render blocking resources.** The HTML is obvious, since without the DOM we would not have anything to render, but the CSS requirement may be less obvious. What would happen if we try to render a typical page without blocking rendering on CSS?
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.render-blocking-css %}
+{% include modules/takeaway.liquid list=page.key-takeaways.render-blocking-css %}
 
 <table>
 <tr>

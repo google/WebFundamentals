@@ -30,7 +30,7 @@ key-takeaways:
 
 <!-- {% include modules/toc.liquid %} -->
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.measure-crp %}
+{% include modules/takeaway.liquid list=page.key-takeaways.measure-crp %}
 
 The foundation of every solid performance strategy is good measurement and instrumentation. Turns out, that is exactly what the Navigation Timing API provides.
 
