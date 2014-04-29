@@ -12,9 +12,12 @@
 
 ul,
 ol {
-  padding-left: 0;
   list-style: none;
   margin: 0;
+
+  @include small-only {
+    padding-left: 0;
+  }
 }
 
 ul li {
@@ -49,10 +52,6 @@ ol ul {
   padding-top: 0;
 }
 
-
-// .list__item {
-//   @include bullet-type(">");
-// }
 
 /*==========  LIST LINKS  ==========*/
 
@@ -94,16 +93,22 @@ ol.list-links {
   }
 
   &.list-links--secondary {
-    @include type--base;
-    @include medium { @include type--small }
-
-    li {
-      padding-left: 0;
-    }
-
     a:before {
       display: none;
     }
+  }
+}
+
+.list-links--secondary {
+  @include type--base;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  @include medium {
+    @include type--small
   }
 }
 
@@ -122,6 +127,7 @@ ol.list--variation {
 /*==========  ANCHOR LIST  ==========*/
 
 .list-anchor {
+  padding-left: 0;
 
   li {
     @include type--base;
@@ -149,6 +155,7 @@ ol.list--variation {
 
 .list-centered {
   text-align: center;
+  padding-left: 0;
 }
 
 /*==========  FEATURED LIST  ==========*/
@@ -220,31 +227,44 @@ ol.list--variation {
   }
 }
 
-// /*==========  RELATED GUIDES LIST  ==========*/
-// .related-guides-list {
-//   font-family: $fontHighlight;
-//   padding-top: 0;
-//   @include medium {padding-top: $lineHeight}
-//   @include wide {padding-top: 0}
+/*==========  RELATED GUIDES LIST  ==========*/
+.related-guides-list {
+  font-family: $fontHighlight;
+  padding-top: 0;
+  padding-left: 0;
 
-//   p {
-//     padding-top: 0;
-//   }
+  @include medium {
+    padding-top: $lineHeight
+  }
 
-//   .tag {
-//     padding-top: 0;
-//   }
+  @include wide {
+    padding-top: 0
+  }
 
-//   li {
-//     padding-top: $lineHeight;
-//     padding-bottom: $lineHeight - 1;
+  p {
+    padding-top: 0;
+  }
 
-//     @include medium {
-//       padding-top: 0;
-//       padding-bottom: 0;
-//     }
-//   }
-// }
+  .tag {
+    padding-top: 0;
+  }
+
+  li {
+    padding-top: $lineHeight;
+    padding-bottom: $lineHeight - 1;
+    border-bottom: 1px solid $colorGrayKeyline;
+
+    &:last-child {
+      border-color: transparent;
+    }
+
+    @include medium {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-color: transparent;
+    }
+  }
+}
 
 /*==========  LIST RESET  ==========*/
 
@@ -262,8 +282,9 @@ ol.list--variation {
 
 /*==========  LESSONS  ==========*/
 .list-lessons {
-  background: $colorRemember;
+  background: $colorGrayDark;
   padding: 0 $lineHeight $lineHeight;
+  margin-top: $lineHeight;
   text-align: center;
   color: #ffffff;
   font-family: $fontHighlight;
@@ -292,6 +313,7 @@ ol.list--variation {
       color: $colorGrayKeyline;
     }
 
+    // Selecting every adjacent element after .current
     ~ li {
       @include type--xlarge;
       padding-top: 0;
@@ -299,7 +321,32 @@ ol.list--variation {
       @include medium {
         padding-top: 0;
       }
+
+      &:before {
+        font-weight: 400;
+      }
     }
   }
 
+}
+
+
+/*==========  GUIDES INTO - used on homepage  ==========*/
+.list-guides-intro {
+  margin-bottom: $lineHeight*2;
+
+  @include small-only {
+    padding-top: $lineHeight*2;
+  }
+
+  li {
+    border-bottom: 1px solid $colorGrayKeyline;
+    padding-bottom: ($lineHeight*2) - 1;
+    margin-bottom: ($lineHeight*2);
+
+    @include medium {
+      border-color: transparent;
+      padding-bottom: 0;
+    }
+  }
 }

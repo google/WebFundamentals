@@ -24,6 +24,10 @@
   padding-top: $lineHeight/2;
   padding-bottom: $lineHeight/2;
 
+  @include small-only {
+    box-shadow: 0 2px 0 0 $colorGrayBackground;
+  }
+
   @include medium {
     display: none;
   }

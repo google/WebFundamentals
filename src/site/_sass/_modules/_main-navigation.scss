@@ -16,6 +16,7 @@
 
   @include medium {
     background-color: $colorGrayDark;
+    box-shadow: 0 2px 0 0 $colorGrayBackground;
   }
 }
 
@@ -270,6 +271,8 @@
     display: inline-block;
     margin-left: 6px;
     vertical-align: top; // middle breaks baseline grid
+    position: relative;
+    top: 5px;
   }
 
   .subnav-is-opened & {

@@ -28,6 +28,11 @@
     right: 0;
     left: 0;
   }
+
+  ul,
+  ol {
+    padding-left: 0;
+  }
 }
 
 .highlight-module__container {
@@ -79,7 +84,7 @@
 /*==========  CODE  ==========*/
 .highlight-module--code {
   overflow: visible;
-  margin-bottom: $lineHeight*3;
+  margin-bottom: $lineHeight*2;
 
   pre {
     margin: 0;
@@ -107,7 +112,7 @@
 
   .highlight-module__cta {
     position: relative;
-    bottom: -($lineHeight*2);
+    bottom: -$lineHeight;
     display: block;
   }
 
