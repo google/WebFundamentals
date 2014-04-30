@@ -23,7 +23,11 @@ ol {
 ul li {
   position: relative;
   padding-left: 16px;
-  @include bullet-type("#");
+  @include bullet-type("", icon-bullet);
+
+  &:before {
+    font-size: 4px;
+  }
 }
 
 ol {
@@ -60,7 +64,12 @@ ul.list-links {
     display: none;
   }
   a {
-    @include bullet-type("#");
+    @include bullet-type("", icon-bullet);
+
+    &:before {
+      font-size: 4px;
+    }
+
     font-weight: 400;
   }
 
@@ -144,10 +153,15 @@ ol.list--variation {
     }
   }
 
-  a:before {
-    content: "#";
+  a {
+    @include bullet-type("", icon-bullet);
+    line-height: 1; // fixes baseline grid alignment
     display: inline-block;
-    padding-right: 5px;
+    padding-left: 16px;
+
+    &:before {
+      font-size: 4px;
+    }
   }
 }
 
@@ -347,6 +361,11 @@ ol.list--variation {
     @include medium {
       border-color: transparent;
       padding-bottom: 0;
+    }
+
+    &:last-child {
+      border-bottom: transparent;
+      margin-bottom: 0;
     }
   }
 }
