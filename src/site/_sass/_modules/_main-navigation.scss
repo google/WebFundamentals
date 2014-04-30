@@ -36,7 +36,7 @@
 
   @include medium {
     text-align: center;
-    @include container;
+    @include container(true);
     position: static;
   }
 }
@@ -99,7 +99,7 @@
   }
 
   @include small-only {
-    @include container;
+    @include container(true);
   }
 
   @include medium {
@@ -195,7 +195,7 @@
 
 .main-nav__secondary-content {
   @include medium {
-    @include container;
+    @include container(true);
     text-align: left;
   }
 }

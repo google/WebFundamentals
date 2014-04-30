@@ -40,13 +40,24 @@
 
 .home-header h1 {
   @include type--huge;
+
+  @include small-only {
+    @include type--xxlarge;
+  }
+
   padding-top: $lineHeight*2;
-  @include medium {padding-top: $lineHeight*5}
+
+  @include medium {
+    padding-top: $lineHeight*5;
+  }
 }
 
 .home-header p {
   @include type--large;
-  @include medium {padding-top: 0}
+
+  @include medium {
+    padding-top: 0;
+  }
 }
 
 .home-header a {
