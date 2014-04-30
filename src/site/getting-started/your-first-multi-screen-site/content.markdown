@@ -89,10 +89,10 @@ number, the user should just see a dial pad.
 
 Learn more about how to create amazing forms:
 
-*  [Create amazing forms]({{site.baseurl}}/documentation/user-input/form-input/index.html)
-*  [Label and name inputs correctly]({{site.baseurl}}/documentation/user-input/form-input/index.html#label-and-name-inputs-properly)
-*  [Choose the best input type]({{site.baseurl}}/documentation/user-input/form-input/index.html#choose-the-best-input-type)
-*  [Provide real-time validation]({{site.baseurl}}/documentation/user-input/form-input/index.html#provide-real-time-validation)
+*  [Create amazing forms]({{site.baseurl}}/documentation/user-input/form-input/)
+*  [Label and name inputs correctly]({{site.baseurl}}/documentation/user-input/form-input/#label-and-name-inputs-properly)
+*  [Choose the best input type]({{site.baseurl}}/documentation/user-input/form-input/#choose-the-best-input-type)
+*  [Provide real-time validation]({{site.baseurl}}/documentation/user-input/form-input/#provide-real-time-validation)
 {: .list--links}
 </div>
 </div>
@@ -128,9 +128,9 @@ By following the best practices, you can easily integrate video in to your site:
 
 Learn more about the best ways to use video on your site.
 
-*  [Using video effectively]({{site.baseurl}}/documentation/introduction-to-media/video/index.html)
-*  [Change the starting position]({{site.baseurl}}/documentation/introduction-to-media/video/index.html)
-*  [Include a poster image]({{site.baseurl}}/documentation/introduction-to-media/video/index.html)
+*  [Using video effectively]({{site.baseurl}}/documentation/introduction-to-media/video/)
+*  [Change the starting position]({{site.baseurl}}/documentation/introduction-to-media/video/)
+*  [Include a poster image]({{site.baseurl}}/documentation/introduction-to-media/video/)
 {: .list--links}
 </div>
 </div>
@@ -169,9 +169,9 @@ this in the responsive design section.
 
 Discover the best practices for using images in your content.
 
-*  [Using images effectively]({{site.baseurl}}/documentation/introduction-to-media/images/index.html)
-*  [Correct use of images in markup]({site.baseurl}}/documentation/introduction-to-media/images/index.html#images-in-markup)
-*  [Optimizing images 101]({{site.baseurl}}/documentation/optimizing-performance/optimizing-content-efficiency/index.html#image-compression-101)
+*  [Using images effectively]({{site.baseurl}}/documentation/introduction-to-media/images/)
+*  [Correct use of images in markup]({site.baseurl}}/documentation/introduction-to-media/images/#images-in-markup)
+*  [Optimizing images 101]({{site.baseurl}}/documentation/optimizing-performance/optimizing-content-efficiency/#image-compression-101)
 {: .list--links}
 
 </div>

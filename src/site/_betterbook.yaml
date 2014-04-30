@@ -3,7 +3,7 @@ toc:
   path: /
   home: true
 - title: "Getting Started"
-  path: /getting-started/your-first-multi-screen-site/index.html
+  path: /getting-started/your-first-multi-screen-site/
   section:
     - title: "Create Your First Multi-Screen Site"
       path: /getting-started/your-first-multi-screen-site/

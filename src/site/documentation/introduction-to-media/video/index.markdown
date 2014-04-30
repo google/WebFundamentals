@@ -318,7 +318,7 @@ and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain
 appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
-Use [CSS media queries](../../multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
+Use [CSS media queries](../../multi-device-layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
 
