@@ -623,6 +623,13 @@ body.debug:after {
   }
 }
 
+@media only screen and (min-width: 800px) {
+  /* line 52, ../_sass/_global.scss */
+  .content {
+    margin-right: 25.9%;
+  }
+}
+
 @font-face {
   font-family: "icons";
   src: url("../icons/icons.eot");
@@ -1608,7 +1615,7 @@ body.debug:after {
   }
 }
 
-/* line 74, ../_sass/_modules/_editorial-header.scss */
+/* line 77, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc-title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   border-bottom: 1px solid #e0e0e0;
@@ -1902,8 +1909,8 @@ body.debug:after {
 .featured-spotlight__img img {
   margin: 0 auto;
   display: block;
-  position: absolute;
   width: 100%;
+  position: absolute;
   left: 0;
   top: 0;
   margin: 0;
@@ -1912,6 +1919,7 @@ body.debug:after {
   /* line 47, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__img img {
     width: auto;
+    max-width: none;
     left: 109%;
   }
 }

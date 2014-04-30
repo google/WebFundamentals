@@ -67,7 +67,10 @@
 
   ol {
     padding-top: 0;
-    @include medium {padding-top: 0}
+
+    @include medium {
+      padding-top: 0;
+    }
   }
 }
 
