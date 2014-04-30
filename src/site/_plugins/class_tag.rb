@@ -19,7 +19,7 @@ module AddClass
   # Example usage:
   # 
   # {% class key-takeaway %}
-  # // dart code here
+  # // code here
   # {% endclass %}
   #
   # The language name can be ommitted if it is not known.

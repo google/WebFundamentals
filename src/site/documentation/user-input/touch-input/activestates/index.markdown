@@ -43,7 +43,7 @@ Simply altering the color of elements as users touch parts of your UI gives a ba
 The fastest way to support touch is to change the UI in response to a DOM
 element’s change in state. 
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.add-states %}
+{% include modules/takeaway.liquid list=page.key-takeaways.add-states %}
 
 DOM elements can be in one of the following states, default, focus, hover, and active. To change
 our UI for each of these states, we need to apply styles to the following

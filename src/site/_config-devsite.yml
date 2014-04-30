@@ -9,7 +9,7 @@ url: /web/fundamentals
 highlighter: pygments
 pygments: true
 github:
-  root: https://github.com/PaulKinlan/WebDocs
+  root: https://github.com/Google/WebFundamentals
   content: tree/master/src/site
 include_open_html: false
 generate_sample_jshtml: true
@@ -18,4 +18,4 @@ custom:
 kramdown:
   toc_levels: "2,3,4"
 include: ['.htaccess', '_project.yaml', '_book.yaml']
-exclude: ['config.rb', '*.psd', 'js/*']
+exclude: ['README.md', 'config.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']

@@ -476,9 +476,7 @@ module.exports = function(grunt) {
 			'cssmin',					// Minify the combined CSS
 			'usemin',					// Carry out optimised asset substitution
 			'htmlmin:all',			// Minify the final HTML
-			'clean:tidyup',			// Clean up any stray source files
-			'copy:optimisedjsToSrc',			// Copy the optimised JS back to the source directory
-			'copy:optimisedcssToSrc'			// Copy the optimised CSS back to the source directory
+			'clean:tidyup',			// Clean up any stray source filesy
 		]);
 	});
 

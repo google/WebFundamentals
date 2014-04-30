@@ -21,7 +21,7 @@ remember:
 related:
   related-content:
     - <a href="index.html">Style Guide</a>
-    - <a href="../example-article/index.html">Example Article</a>
+    - <a href="../example-article/">Example Article</a>
 ---
 {% comment %}
 NOTE: This is our styleguide
@@ -137,7 +137,7 @@ In your Article YAML Preamble
 related:
   related-content:
     - <a href="index.html">Style Guide</a>
-    - <a href="../example-article/index.html">Example Article</a>
+    - <a href="../example-article/">Example Article</a>
 {% endhighlight %}
 
 {% include modules/related.liquid list=page.related.related-content %}

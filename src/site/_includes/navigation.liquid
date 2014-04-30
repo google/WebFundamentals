@@ -1,6 +1,6 @@
 <nav class="main-nav">
 
-  <ul class="main-nav__list clear">
+  <ul class="main-nav__list clear nav-is-opened">
   {% for section in page.content.toc %}
     <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}">
       <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="{{ section.title }}">
@@ -18,20 +18,18 @@
         <div class="main-nav__secondary-nav">
 
           <div class="main-nav__secondary-content">
-            <a href="{{site.baseurl}}{{ section.path }}" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation <i class="main-nav__icon icon icon-cheveron-right"></i></a>
+            <a href="{{site.baseurl}}{{ section.path }}" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation</a>
 
             <div class="clear">
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
-                    <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">
-                      <span class="main-nav__guide-icon icon-circle themed--background"><i class="icon icon-{{subsection.id}}"></i></span> {{ subsection.title }} <i class="main-nav__icon icon icon-cheveron-right"></i>
-                    </a>
+                    <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">{{ subsection.title }}</a>
                   </li>
                 {% endfor %}
               </ul>
-
               {% comment %}
+              <!-- temp removing this for laucnh" -->
               <div class="main-nav__featured g-medium--1 g-medium--last g-wide--2 g-wide--last">
                 <p class="main-nav__featured-title medium">Feature case study</p>
                 <p class="main-nav__featured-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consectetur adipiscing elit.</p>
