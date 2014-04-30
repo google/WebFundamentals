@@ -67,6 +67,11 @@
   &:after {
     background-color: $colorLearning;
   }
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 }
 
 
@@ -76,6 +81,11 @@
 
   &:after {
     background-color: $colorRemember;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
   }
 }
 
