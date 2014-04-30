@@ -64,8 +64,9 @@ Adding the header is just a simple set of list items.
 
 {% include_code _code/addcontent.html headline %}
 
-We need to also fill out the form.  It will be a simple form that collects the
- users' names, their phone number, and a good time to call them back.
+We need to also fill out the form.
+It will be a simple form that collects the users' names,
+their phone number, and a good time to call them back.
 
 All forms should have labels and placeholders to make it easy for users to
 focus elements, understand what is supposed to go in them, and to also help
@@ -101,7 +102,7 @@ Learn more about how to create amazing forms:
 ### Create the Video and Information section
 
 The Video and Information section of content will contain a little more depth.
-It will  have a bulleted list of features of our products and will also contain
+It will have a bulleted list of features of our products and will also contain
 a video placeholder that shows our product working for the user.
 
 {% include_code _code/addcontent.html section1 %}
@@ -138,25 +139,24 @@ Learn more about the best ways to use video on your site.
 
 ### Create the Images Section
 
-Sites without images can be a little boring.  There are two types of images:
+Sites without images can be a little boring. There are two types of images:
 
-*  Content images &mdash; Images that are in-line in the document and are used 
+*  Content images &mdash; images that are in-line in the document and are used 
    to convey extra information about the content.
-*  Stylistic images &mdash; images are often used to make the site look 
-   better, often these are background images, patterns and gradients.  We will
+*  Stylistic images &mdash; images that are used to make the site look 
+   better; often these are background images, patterns and gradients.  We will
    cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
-The Images section is a collection of content images that we will use that
-demonstrate four different scenarios where our product can be used.
+The Images section is a collection of content images that we will use in our product.
 
 {% include_code _code/addcontent.html section2 %}
 
-Content images are images that are critical to conveying the meaning of the
-page. Think of it as images that are used in newspaper articles.
+Content images are critical to conveying the meaning of the
+page. Think of images used in newspaper articles.
 
 {% include_code _code/addimages.html images html %}
 
-The images in this case our set to scale to 100% of the width of the screen.
+The images are set to scale to 100% of the width of the screen.
 This works well on  mobile devices, but less well on desktop.  We will manage
 this in the responsive design section.
 
@@ -191,9 +191,10 @@ Tables should only be used for tabular data, i.e, matrices of information.
 ### Add a Footer
 
 Most sites need a footer to display content such as Terms and Conditions,
-disclaimers and other content that is not meant to be in the main navigation nor in the main content area of the page.  
+disclaimers, and other content that isn't meant to be in the main navigation
+or in the main content area of the page.
 
-In our site we will just link to Terms and Conditions, a Contact page and 
+In our site, we will just link to Terms and Conditions, a Contact page, and 
 our social media profiles.
 
 {% include_code _code/addcontent.html footer %}
@@ -209,11 +210,11 @@ content ready and in-place to satisfy our business needs.
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
 </div>
 
-You will notice that the page looks terrible right now. That is intentional.
+You will notice that the page looks terrible right now; this is intentional.
 Content is the most important aspect of any site and we needed to make sure we
-have a good solid information architecture and density.  This guide has given
-us an excellent base to build upon, but we will get to a good position quickly
-in our next guide.
+had a good solid information architecture and density.
+This guide has given us an excellent base to build upon.
+We will style our content in the next guide.
 
 {% include modules/nextarticle.liquid %}
 
