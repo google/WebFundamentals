@@ -14,7 +14,7 @@
   background: $colorGrayDark;
   color: #ffffff;
   overflow: hidden;
-  padding-bottom: $lineHeight*3;
+  padding-bottom: $lineHeight*3 - 1;
   margin-top: $lineHeight*2;
 
   p {

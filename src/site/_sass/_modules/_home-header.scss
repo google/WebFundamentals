@@ -42,10 +42,15 @@
 
   & h1 {
     @include type--huge;
+
+    @include small-only {
+     @include type--xxlarge;
+    }
+
     padding-top: $lineHeight*2;
 
     @include medium {
-      padding-top: $lineHeight*5;
+     padding-top: $lineHeight*5;
     }
   }
 
@@ -61,4 +66,3 @@
     margin-top: $lineHeight*2 + $lineHeight/2;
   }
 }
-

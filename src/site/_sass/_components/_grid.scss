@@ -145,7 +145,7 @@
 
   // Only show when parents (body) has debug class
   .debug & {
-    @include container;
+    @include container(true);
 
     position: absolute;
     top: 0;

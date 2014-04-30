@@ -30,22 +30,22 @@ body {
 }
 
 .main-container {
-  @include container;
+  @include container(true);
 }
 
 .container {
-  @include container;
+  @include container(true);
 }
 
 .container-medium {
   @include medium {
-    @include container;
+    @include container(true);
   }
 }
 
 .container-small {
   @include small-only {
-    @include container;
+    @include container(true);
   }
 }
 
