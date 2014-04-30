@@ -20,7 +20,6 @@ article:
 collection: introduction-to-media
 key-takeaways:
   add-a-video:
-    - Use the video element to load, decode, and play video in your site.
     - Don't load the whole video if unnecessary &ndash; specify a start and end time.
     - Include a poster image so the user sees something meaningful right away.
     - Specify multiple file formats since not all browsers support the same format.
@@ -49,9 +48,6 @@ remember:
   media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.
     - Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.
-  multiple-formats:
-    - MP4 and WebM are <a href='//en.wikipedia.org/wiki/Container_formats' title='Wikipedia article about media file container formats'>container formats</a>. MP4 stores audio using AAC compression and video using H.264; WebM uses VP9 and Opus.
-      Check out <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a> to find out more about how video and audio work on the web.
   dont-overflow:
     - Don't force element sizing that results in an aspect ratio different from the original
       video. Squashed or stretched looks bad.
@@ -87,7 +83,7 @@ remember:
 
 ### Add the video element
 
-Load, decode, and play video:
+Use the video element to load, decode, and play video in your site:
 
 <video controls>
      <source src="video/chrome.webm" type="video/webm" />
@@ -103,10 +99,10 @@ Load, decode, and play video:
 
 ### Specify multiple file formats
 
-Because not all browsers support the same video formats, you can specify 
-multiple source files by using the `<source>` element. The source element 
-lets you specify multiple formats as a fallback in case the user's browser 
-doesn't support one of them. For example:
+Not all browsers support the same video formats. 
+The `<source>` element lets you specify multiple formats
+as a fallback in case the user's browser doesn't support one of them.
+For example:
 
 {% include_code _code/video-main.html sourcetypes %}
 
@@ -115,12 +111,15 @@ attribute to help decide which file to download and play. If the browser
 supports WebM and has the VP8 and Vorbis codecs, it will play 
 chrome.webm, if not, it will check if it can play MPEG-4 videos with the 
 avc1.42E01E and mp4a.40.2 codecs, and so forth.
+Check out
+<a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a>
+to find out more about how video and audio work on the web.
 
 This approach has several advantages over serving different HTML or 
 server-side scripting, especially on mobile:
 
 * Developers can list formats in order of preference.
-* Native client-side switching reduces latency: only one request is made to
+* Native client-side switching reduces latency; only one request is made to
   get content.
 * Letting the browser choose a format is simpler, quicker and potentially
   more reliable than using a server-side support database with user-agent detection.
@@ -129,14 +128,13 @@ server-side scripting, especially on mobile:
 
 All of these points are especially important in mobile contexts, where bandwidth
 and latency are at a premium, and the user's patience is likely to be limited.
-
-{% include modules/remember.liquid title="Remember" list=page.remember.multiple-formats %}
-
 Not including a type attribute can affect performance when there are
-multiple sources with unsupported types: using your mobile browser
-developer tools, compare network activity {% link_sample _code/video-main.html %}with type attributes{% endlink_sample %} and {% link_sample _code/notype.html %}without type attributes{% endlink_sample %}.
+multiple sources with unsupported types.
 
-**Remember:** [Ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); otherwise video source type checks won't work. You can check the response headers in your browsers developer tools.
+Using your mobile browser
+developer tools, compare network activity {% link_sample _code/video-main.html %}with type attributes{% endlink_sample %} and {% link_sample _code/notype.html %}without type attributes{% endlink_sample %}.
+Also check the response headers in your browser developer tools to [ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
+otherwise video source type checks won't work.
 
 ### Specify a start and end time
 
