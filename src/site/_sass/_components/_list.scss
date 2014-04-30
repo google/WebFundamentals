@@ -22,9 +22,6 @@ ol {
     cursor: default;
     a {
       color: $colorGray;
-      &:before {
-        content: "# 0" counter(list) !important;
-      }
     }
   }
 }
@@ -223,31 +220,31 @@ ol.list--variation {
   }
 }
 
-// /*==========  RELATED GUIDES LIST  ==========*/
-// .related-guides-list {
-//   font-family: $fontHighlight;
-//   padding-top: 0;
-//   @include medium {padding-top: $lineHeight}
-//   @include wide {padding-top: 0}
+/*==========  RELATED GUIDES LIST  ==========*/
+.related-guides-list {
+  font-family: $fontHighlight;
+  padding-top: 0;
+  @include medium {padding-top: $lineHeight}
+  @include wide {padding-top: 0}
 
-//   p {
-//     padding-top: 0;
-//   }
+  p {
+    padding-top: 0;
+  }
 
-//   .tag {
-//     padding-top: 0;
-//   }
+  .tag {
+    padding-top: 0;
+  }
 
-//   li {
-//     padding-top: $lineHeight;
-//     padding-bottom: $lineHeight - 1;
+  li {
+    padding-top: $lineHeight;
+    padding-bottom: $lineHeight - 1;
 
-//     @include medium {
-//       padding-top: 0;
-//       padding-bottom: 0;
-//     }
-//   }
-// }
+    @include medium {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
 
 /*==========  LIST RESET  ==========*/
 

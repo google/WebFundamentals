@@ -56,8 +56,3 @@
   @extend .button;
   @include style-button(#ffffff, $colorBlue, true);
 }
-
-.styleguide__inverted-block {
-  background: #e8e8e8;
-  padding: 0 13px;
-}
