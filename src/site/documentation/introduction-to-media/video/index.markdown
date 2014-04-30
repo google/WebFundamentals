@@ -585,23 +585,23 @@ updating it with mobile-specific concerns where relevant.
     </tr>
     <tr>
       <td data-th="Property" data-th="Property" data-th="Property"><code>volume</code></td>
-      <td data-th="Description" data-th="Description" data-th="Description">Get or set current volume level for the video.</td>
+      <td data-th="Description" data-th="Description">Get or set current volume level for the video.</td>
     </tr>
     <tr>
       <td data-th="Property" data-th="Property"><code>muted</code></td>
-      <td data-th="Description" data-th="Description">Get or set audio muting.</td>
+      <td data-th="Description">Get or set audio muting.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>playbackRate</code></td>
       <td data-th="Description">Get or set playback rate; 1 is normal speed forward.</td>
     </tr>
     <tr>
-      <td><code>buffered</code></td>
-      <td data-th="Description" data-th="Description" data-th="Description">Information about how much of the video has been buffered and is ready to play (see <a href="//people.mozilla.org/~cpearce/buffered-demo.html" title="Demo displaying amount of buffered video in a canvas element">demo</a>).</td>
+      <td data-th="Property"><code>buffered</code></td>
+      <td data-th="Description">Information about how much of the video has been buffered and is ready to play (see <a href="//people.mozilla.org/~cpearce/buffered-demo.html" title="Demo displaying amount of buffered video in a canvas element">demo</a>).</td>
     </tr>
     <tr>
       <td data-th="Property"><code>currentSrc</code></td>
-      <td data-th="Description" data-th="Description">The address of the video being played.</td>
+      <td data-th="Description">The address of the video being played.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>videoWidth</code></td>
@@ -626,7 +626,7 @@ Neither playbackRate ({% link_sample _code/scripted.html %}see demo{% endlink_sa
   <tbody>
     <tr>
       <td data-th="Method"><code>load()</code></td>
-      <td data-th="Description" data-th="Description">Load or reload a video source without initiating playback: for example, when the video src is changed using JavaScript.</td>
+      <td data-th="Description">Load or reload a video source without initiating playback: for example, when the video src is changed using JavaScript.</td>
     </tr>
     <tr>
       <td data-th="Method"><code>play()</code></td>
@@ -664,7 +664,7 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
     <tr>
       <td data-th="Event" data-th="Event" data-th="Event" data-th="Event"><code>ended</code></td>
-      <td data-th="Description" data-th="Description" data-th="Description">Fired when video has finished playing.</td>
+      <td data-th="Description" data-th="Description">Fired when video has finished playing.</td>
     </tr>
     <tr>
       <td data-th="Event" data-th="Event" data-th="Event"><code>error</code></td>
@@ -672,7 +672,7 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
     <tr>
       <td data-th="Event" data-th="Event"><code>playing</code></td>
-      <td data-th="Description" data-th="Description">Fired when video starts playing for the first time, after being paused, or when restarting.</td>
+      <td data-th="Description">Fired when video starts playing for the first time, after being paused, or when restarting.</td>
     </tr>
     <tr>
       <td data-th="Event"><code>progress</code></td>
