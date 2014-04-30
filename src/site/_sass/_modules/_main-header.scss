@@ -18,7 +18,7 @@
 }
 
 .main-header__title {
-  @include container;
+  @include container(true);
 
   @include type--large;
   padding-top: $lineHeight/2;

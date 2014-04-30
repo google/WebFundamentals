@@ -38,7 +38,6 @@
 .highlight-module__container {
   @include container;
   padding-bottom: $lineHeight*3;
-  position: relative;
   z-index: 1;
   @include highlight-symbol();
 
@@ -111,9 +110,8 @@
   }
 
   .highlight-module__cta {
-    position: relative;
+    position: absolute;
     bottom: -$lineHeight;
-    display: block;
   }
 
 }

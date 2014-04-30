@@ -18,13 +18,15 @@
         <div class="main-nav__secondary-nav">
 
           <div class="main-nav__secondary-content">
-            <a href="{{site.baseurl}}{{ section.path }}" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation</a>
+            <a href="{{site.baseurl}}{{ section.path }}" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation <i class="main-nav__icon icon icon-cheveron-right"></i></a>
 
             <div class="clear">
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
-                    <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">{{ subsection.title }}</a>
+                    <a class="main-nav__link main-nav__link--child" href="{{site.baseurl}}{{ subsection.path }}">
+                      <span class="main-nav__guide-icon icon-circle themed--background"><i class="icon icon-{{subsection.id}}"></i></span> {{ subsection.title }} <i class="main-nav__icon icon icon-cheveron-right"></i>
+                    </a>
                   </li>
                 {% endfor %}
               </ul>

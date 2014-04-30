@@ -149,9 +149,13 @@
   }
 
   // Mixin to constrain elements
-  @mixin container() {
+  @mixin container($isRelative: false) {
     @include prefixr(box-sizing, content-box);
-    position: relative;
+
+    @if $isRelative {
+      position: relative;
+    }
+
     padding-left: 5%;
     padding-right: 5%;
     margin-left: auto;
@@ -324,9 +328,13 @@
   }
 
   @mixin type--huge($isFromMixin: false) {
-    @include type--xxlarge(true);
-
-    @include wide {
+    @if $isFromMixin == false {
+      @include type--xxlarge(true);
+      @include wide {
+        @include rule--huge;
+      }
+    }
+    @else {
       @include rule--huge;
     }
   }

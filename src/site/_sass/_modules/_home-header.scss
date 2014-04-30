@@ -15,7 +15,6 @@
   color: #ffffff;
   position: relative;
   padding-bottom: $lineHeight*3;
-  @include medium {padding-bottom: $lineHeight*4}
   margin-bottom: $lineHeight*3;
 
   &:after {
@@ -36,19 +35,34 @@
     font-weight: 500;
     color: #78cfa9;
   }
-}
 
-.home-header h1 {
-  @include type--huge;
-  padding-top: $lineHeight*2;
-  @include medium {padding-top: $lineHeight*5}
-}
+  @include medium {
+    padding-bottom: $lineHeight*4;
+  }
 
-.home-header p {
-  @include type--large;
-  @include medium {padding-top: 0}
-}
+  & h1 {
+    @include type--huge;
 
-.home-header a {
-  margin-top: $lineHeight*2 + $lineHeight/2;
+    @include small-only {
+     @include type--xxlarge;
+    }
+
+    padding-top: $lineHeight*2;
+
+    @include medium {
+     padding-top: $lineHeight*5;
+    }
+  }
+
+  & p {
+    @include type--large;
+
+    @include medium {
+      padding-top: 0;
+    }
+  }
+
+  & a {
+    margin-top: $lineHeight*2 + $lineHeight/2;
+  }
 }
