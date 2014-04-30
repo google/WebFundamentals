@@ -1,7 +1,7 @@
 Web Fundamentals
 ================
 
-Web Fundamentals is a guide for how to build easily build multi-device experiences.
+Web Fundamentals is a guide for how to build easily build multi-device experiences. 
 
 Technology
 ----------
