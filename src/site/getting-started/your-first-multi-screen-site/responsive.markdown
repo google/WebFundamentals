@@ -206,8 +206,8 @@ viewport, which greatly simplifies our build process.
 
 We have also decided to create full-bleed sections on the narrow viewport that
 stay full-bleed on the wide viewport.  This means we should constrain the
-maximum width of the screen so that the text and paragraphs don't extend in to one
-long single line on ultra wide screens.  We have chosen this point to be 
+maximum width of the screen so that the text and paragraphs don't extend into one
+long, single line on ultra-wide screens.  We have chosen this point to be 
 about 800px.
 
 To achieve this, we need to constrain the width and center the elements.  We
@@ -303,16 +303,16 @@ the images look more appealing.
 
 ### Make images responsive to DPI
 
-When using images, a web developer needs to take the size of
-the viewport and the density of the display into consideration.
+When using images,
+take the size of the viewport and the density of the display into consideration.
 
 The web was built for 96dpi screens.  With the introduction of mobile devices,
 we have seen a huge increase in the pixel density of screens not to mention
 Retina class displays on laptops.  As such, images that are encoded to 96dpi
 often look terrible on a hi-dpi device.
 
-We have a solution that is not widely adopted yet but for browsers that
-support it, you can display a high density image on a high density display.
+We have a solution that is not widely adopted yet.
+For browsers that support it, you can display a high density image on a high density display.
 
 {% highlight html %}
 <img src="photo.png" srcset="photo@2x.png 2x" />  
@@ -352,17 +352,17 @@ transposing the heading and cells in a row to make the columnar.
   </p>
 </video>
 
-In our site, we have had to create an extra breakpoint just for the table
-content.  We have done this to isolate because we built for a mobile device
-first it is harder to undo applied styles, so we must section off the narrow
-viewport table CSS from the wide viewport css.  This gives us a clear and
-consistent break.
+In our site,
+we had to create an extra breakpoint just for the table content.
+When you build for a mobile device first, it is harder to undo applied styles,
+so we must section off the narrow viewport table CSS from the wide viewport css.
+This gives us a clear and consistent break.
 
 {% include_code _code/content-with-styles.html table-css css %}
 
 ## Wrapping up
 
-**CONGRATULATIONS.** By the time you read this you will have created your
+**CONGRATULATIONS.** By the time you read this, you will have created your
 first simple product landing page that works across a large range of devices,
 form-factors, and screen sizes.
 
