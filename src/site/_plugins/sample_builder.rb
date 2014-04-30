@@ -177,6 +177,8 @@ module SampleBuilder
 					#Jekyll.logger.info sourcepath
 					if sourcepath =~ /\.html/
 						pages << Sample.new(site, sourcepath, dirPaths[dir], dirTitles[dir])
+					elsif sourcepath =~ /\.pxm/ || sourcepath =~ /\.psd/
+						# nop.
 					else
 						codepath = File.join(dirPaths[dir], "/_code")
 						prefix, relative_path = sourcepath.split(codepath)
