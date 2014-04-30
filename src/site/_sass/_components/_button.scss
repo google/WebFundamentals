@@ -19,6 +19,7 @@
 
   text-align: center;
 
+  font-family: $fontHighlight;
   font-weight: 600;
   text-decoration: none;
 
@@ -48,15 +49,10 @@
 
 .button--secondary {
   @extend .button;
-  @include style-button(#fafafa, $colorBlue);
+  @include style-button(#ffffff, $colorBlue);
 }
 
 .button--secondary-variation {
   @extend .button;
   @include style-button(#ffffff, $colorBlue, true);
-}
-
-.styleguide__inverted-block {
-  background: #e8e8e8;
-  padding: 0 13px;
 }

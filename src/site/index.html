@@ -14,15 +14,15 @@ class: home
   <div class="centered">
     <h3 class="xlarge">Build great multi-device web experiences</h3>
     <p class="g-wide--push-1 g-wide--pull-1">
-      Web Fundamentals is a comprehensive resource for multi-device web 
-      development.  We're just getting started and want your help, if you 
-      see something amiss or have a suggestion 
-      <a href="{{site.github.root}}/issues">file an issue</a> or 
+      Web Fundamentals is a comprehensive resource for multi-device web
+      development.  We're just getting started and want your help, if you
+      see something amiss or have a suggestion
+      <a href="{{site.github.root}}/issues">file an issue</a> or
       <a href="{{site.github.root}}/pulls">submit a pull request</a>.
     </p>
   </div>
 
-  <ul class="centered-list list--reset clear">
+  <ul class="list-centered list--reset clear">
     {% for guide in page.articles.the-essentials %}
     <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
       <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>

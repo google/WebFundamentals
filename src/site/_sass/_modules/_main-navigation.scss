@@ -16,6 +16,7 @@
 
   @include medium {
     background-color: $colorGrayDark;
+    box-shadow: 0 2px 0 0 $colorGrayBackground;
   }
 }
 
@@ -35,7 +36,7 @@
 
   @include medium {
     text-align: center;
-    @include container;
+    @include container(true);
     position: static;
   }
 }
@@ -98,7 +99,7 @@
   }
 
   @include small-only {
-    @include container;
+    @include container(true);
   }
 
   @include medium {
@@ -130,6 +131,7 @@
 
 .main-nav__list--child {
   padding-top: 0;
+  padding-left: 0;
 }
 
 .main-nav__item--child {
@@ -163,6 +165,11 @@
     .main-nav__list--child & {
       @include type--large;
     }
+
+    &:hover {
+      color: $colorGrayDark;
+    }
+
   }
 }
 
@@ -189,7 +196,7 @@
 
 .main-nav__secondary-content {
   @include medium {
-    @include container;
+    @include container(true);
     text-align: left;
   }
 }
@@ -197,13 +204,14 @@
 .main-nav__link--explore {
   @include style-cta($colorBlue, false);
   display: block;
+  line-height: $lineHeight;
 
   @include small-only {
     border-top: 1px solid $colorGrayKeyline;
   }
 
   @include medium {
-    border-bottom: 1px solid $colorGray;
+    border-bottom: 1px solid $colorGrayKeyline;
   }
 }
 
@@ -245,6 +253,10 @@
   line-height: $lineHeight;
   vertical-align: middle;
 
+  .main-nav__secondary-nav & {
+    font-size: $fontSmall;
+  }
+
   @include medium {
     display: none;
     font-size: $fontSmall;
@@ -256,7 +268,7 @@
     @extend .icon-plus:before;
 
     @include medium {
-      content:"\e001"; // Took this from _icons.scss - not great, I know.
+      content: $icon-cheveron-down;
     }
   }
 
@@ -264,7 +276,9 @@
     float: none;
     display: inline-block;
     margin-left: 6px;
-    vertical-align: middle;
+    vertical-align: top; // middle breaks baseline grid
+    position: relative;
+    top: 5px;
   }
 
   .subnav-is-opened & {
@@ -272,9 +286,17 @@
       @extend .icon-minus:before;
 
       @include medium {
-        content:"\e004"; // Same as above
+        content: $icon-cheveron-up;
       }
     }
   }
 }
 
+// Wrapping in .main-nav due to specicifity
+.main-nav {
+  .main-nav__guide-icon {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+  }
+}

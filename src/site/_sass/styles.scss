@@ -10,8 +10,7 @@
 *
 **/
 
-@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,900|Open+Sans:400");
-// We are using Open Sans for the Google Developers footer
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,900");
 
 @import "_utils";
 @import "_normalize";
@@ -41,6 +40,12 @@
 @import "_modules/_article-nav";
 @import "_modules/_home-header";
 @import "_modules/_did-you-know";
+@import "_modules/_toc";
+@import "_modules/_next-lessons";
+@import "_modules/_beta";
+@import "_modules/_cc";
+@import "_modules/_google-header";
+@import "_modules/_google-footer";
 
 // Components
 @import "_components/_grid";
@@ -49,6 +54,7 @@
 @import "_components/_list";
 @import "_components/_link";
 @import "_components/_table";
+@import "_components/_media";
 @import "_components/_breadcrumb";
 @import "_components/_subsection-title";
 @import "_components/_articles-list";

@@ -29,8 +29,11 @@
       {{ content }}
 
       <div class="articles-section">
+
+        <span class="article-section__icon icon-circle--large themed--background"><i class="icon icon-{{ page.id }}"></i></span>
+
         <div class="container">
-          <p class="articles-count">{{page.articles.[page.id].size}} guides</p>
+          <p class="articles-count themed">{{page.articles.[page.id].size}} guides</p>
           <ol class="articles-list">
 
             {% for guide in page.articles.[page.id] %}

@@ -149,9 +149,13 @@
   }
 
   // Mixin to constrain elements
-  @mixin container() {
+  @mixin container($isRelative: false) {
     @include prefixr(box-sizing, content-box);
-    position: relative;
+
+    @if $isRelative {
+      position: relative;
+    }
+
     padding-left: 5%;
     padding-right: 5%;
     margin-left: auto;
@@ -324,9 +328,13 @@
   }
 
   @mixin type--huge($isFromMixin: false) {
-    @include type--xxlarge(true);
-
-    @include wide {
+    @if $isFromMixin == false {
+      @include type--xxlarge(true);
+      @include wide {
+        @include rule--huge;
+      }
+    }
+    @else {
       @include rule--huge;
     }
   }
@@ -360,19 +368,20 @@
       counter-increment: list;
       content: "0" counter(list);
       color: inherit;
-      font-weight: 600;
+      font-weight: 400;
       display: inline-block;
       position: absolute;
-      top: 0;
       left: 0;
     }
   }
 
   // Mixin to create links
   @mixin style-cta($textColor, $icon: false) {
+    font-family: $fontHighlight;
     color: $textColor;
-    font-weight: 600;
+    font-weight: 400;
     display: inline-block;
+    line-height: 1;
 
     &:hover {
       color: $colorGrayDark;
@@ -384,7 +393,6 @@
         padding-right: 10px;
         font-family: $fontIcon;
         line-height: $lineHeight;
-        vertical-align: top;
         font-size: $fontSmall;
         @extend .#{$icon}:before;
       }
@@ -401,12 +409,11 @@
       @include medium {
         display: block;
         position: absolute;
-        top: 50%;
+        top: 134px;
         right: $horizontalOffset;
 
         font-family: $fontIcon;
         font-size: $fontSize;
-        font-weight: 900;
         line-height: 1px;
         text-align: center;
         height: 100%;
