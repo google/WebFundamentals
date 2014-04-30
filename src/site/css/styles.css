@@ -660,103 +660,108 @@ body.debug:after {
 }
 
 /* line 38, ../_sass/_components/_icons.scss */
-.icon-cheveron-down:before {
+.icon-chevron-down:before {
   content: "\e002";
 }
 
 /* line 43, ../_sass/_components/_icons.scss */
-.icon-cheveron-left:before, .article-nav-link--prev:before {
+.icon-chevron-large:before {
   content: "\e003";
 }
 
 /* line 48, ../_sass/_components/_icons.scss */
-.icon-cheveron-right:before, .article-nav-link--next:before, ul.list-links.list-links--primary a:before, .cta--primary:before {
+.icon-chevron-left:before, .article-nav-link--prev:before {
   content: "\e004";
 }
 
 /* line 53, ../_sass/_components/_icons.scss */
-.icon-cheveron-up:before {
+.icon-chevron-right:before, .article-nav-link--next:before, ul.list-links.list-links--primary a:before, .cta--primary:before {
   content: "\e005";
 }
 
 /* line 58, ../_sass/_components/_icons.scss */
-.icon-close:before {
+.icon-chevron-up:before {
   content: "\e006";
 }
 
 /* line 63, ../_sass/_components/_icons.scss */
-.icon-exclamation:before {
+.icon-close:before {
   content: "\e007";
 }
 
 /* line 68, ../_sass/_components/_icons.scss */
-.icon-forward-slash:before {
+.icon-exclamation:before {
   content: "\e008";
 }
 
 /* line 73, ../_sass/_components/_icons.scss */
-.icon-google-dev:before {
+.icon-forward-slash:before {
   content: "\e009";
 }
 
 /* line 78, ../_sass/_components/_icons.scss */
-.icon-hash:before {
+.icon-google-dev:before {
   content: "\e00a";
 }
 
 /* line 83, ../_sass/_components/_icons.scss */
-.icon-introduction-to-media:before {
+.icon-hash:before {
   content: "\e00b";
 }
 
 /* line 88, ../_sass/_components/_icons.scss */
-.icon-lessons:before {
+.icon-introduction-to-media:before {
   content: "\e00c";
 }
 
 /* line 93, ../_sass/_components/_icons.scss */
-.icon-menu:before {
+.icon-lessons:before {
   content: "\e00d";
 }
 
 /* line 98, ../_sass/_components/_icons.scss */
-.icon-minus:before, .subnav-is-opened .icon-custom:before {
+.icon-menu:before {
   content: "\e00e";
 }
 
 /* line 103, ../_sass/_components/_icons.scss */
-.icon-multi-device-layouts:before {
+.icon-minus:before, .subnav-is-opened .icon-custom:before {
   content: "\e00f";
 }
 
 /* line 108, ../_sass/_components/_icons.scss */
-.icon-performance:before {
+.icon-multi-device-layouts:before {
   content: "\e010";
 }
 
 /* line 113, ../_sass/_components/_icons.scss */
-.icon-plus:before, .icon-custom:before {
+.icon-performance:before {
   content: "\e011";
 }
 
 /* line 118, ../_sass/_components/_icons.scss */
-.icon-question:before {
+.icon-plus:before, .icon-custom:before {
   content: "\e012";
 }
 
 /* line 123, ../_sass/_components/_icons.scss */
-.icon-slash:before {
+.icon-question:before {
   content: "\e013";
 }
 
 /* line 128, ../_sass/_components/_icons.scss */
-.icon-star:before, .home-header:after {
+.icon-slash:before {
   content: "\e014";
 }
 
 /* line 133, ../_sass/_components/_icons.scss */
-.icon-user-input:before {
+.icon-star:before, .home-header:after {
   content: "\e015";
+}
+
+/* line 138, ../_sass/_components/_icons.scss */
+.icon-user-input:before {
+  content: "\e016";
 }
 
 /**
@@ -1203,7 +1208,7 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 285, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
-    content: "\e005";
+    content: "\e006";
   }
 }
 
@@ -1600,19 +1605,20 @@ body.debug:after {
   }
   /* line 30, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container:before {
-    content: "\e004";
+    content: "\e003";
     font-family: "icons";
+    font-size: 1000px;
+    line-height: 0;
     display: block;
     position: absolute;
-    line-height: 0;
-    top: 35%;
+    top: 0;
     right: 100%;
-    font-size: 400px;
-    color: rgba(0, 0, 0, 0.1);
+    color: #f0f0f0;
+    margin: 168px -35px 0 0;
   }
 }
 
-/* line 46, ../_sass/_modules/_editorial-header.scss */
+/* line 47, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__excerpt {
   font-size: 20px;
   font-weight: 300;
@@ -1623,12 +1629,12 @@ body.debug:after {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
-/* line 51, ../_sass/_modules/_editorial-header.scss */
+/* line 52, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .tag {
   padding-top: 52px;
 }
 
-/* line 55, ../_sass/_modules/_editorial-header.scss */
+/* line 56, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__subtitle {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 42px;
@@ -1641,7 +1647,7 @@ body.debug:after {
   color: #3372df;
 }
 @media only screen and (min-width: 800px) {
-  /* line 55, ../_sass/_modules/_editorial-header.scss */
+  /* line 56, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1653,29 +1659,29 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 55, ../_sass/_modules/_editorial-header.scss */
+  /* line 56, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     padding-top: 0;
     padding-bottom: 26px;
   }
 }
 
-/* line 65, ../_sass/_modules/_editorial-header.scss */
+/* line 66, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc {
   margin-top: 26px;
 }
-/* line 68, ../_sass/_modules/_editorial-header.scss */
+/* line 69, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc ol {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 68, ../_sass/_modules/_editorial-header.scss */
+  /* line 69, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__toc ol {
     padding-top: 0;
   }
 }
 
-/* line 77, ../_sass/_modules/_editorial-header.scss */
+/* line 78, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc-title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   border-bottom: 1px solid #e0e0e0;
@@ -3260,7 +3266,7 @@ ol.list--variation {
 }
 /* line 128, ../_sass/_components/_list.scss */
 ol.list--variation li a:before {
-  content: "\e004" " 0" counter(list);
+  content: "\e005" " 0" counter(list);
   font-family: "icons";
   font-size: 13px;
 }

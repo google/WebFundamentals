@@ -268,7 +268,7 @@
     @extend .icon-plus:before;
 
     @include medium {
-      content: $icon-cheveron-down;
+      content: $icon-chevron-down;
     }
   }
 
@@ -286,7 +286,7 @@
       @extend .icon-minus:before;
 
       @include medium {
-        content: $icon-cheveron-up;
+        content: $icon-chevron-up;
       }
     }
   }

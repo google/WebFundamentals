@@ -63,7 +63,7 @@
 
   &:before {
     font-family: $fontIcon;
-    @extend .icon-cheveron-left:before;
+    @extend .icon-chevron-left:before;
     left: 32px;
   }
 
@@ -77,7 +77,7 @@
 
   &:before {
     font-family: $fontIcon;
-    @extend .icon-cheveron-right:before;
+    @extend .icon-chevron-right:before;
     right: 32px;
   }
 

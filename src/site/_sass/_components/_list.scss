@@ -75,7 +75,7 @@ ul.list-links {
 
   &.list-links--primary {
     a {
-      @include bullet-type("", icon-cheveron-right);
+      @include bullet-type("", icon-chevron-right);
       font-weight: 400;
       font-family: $fontHighlight;
       line-height: 1; // fixes baseline grid alignment
@@ -126,7 +126,7 @@ ol.list--variation {
   padding-top: 0;
   li {
     a:before {
-      content: $icon-cheveron-right " 0" counter(list);
+      content: $icon-chevron-right " 0" counter(list);
       font-family: $fontIcon;
       font-size: 13px;
     }
