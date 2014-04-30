@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: landing
 title: "Resources"
 description: "Helpful resources."
 introduction: ""

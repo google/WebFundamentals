@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Samples"
-description: "A list of all samples."
+description: "A list of all samples used in this site."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
