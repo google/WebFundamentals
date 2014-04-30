@@ -80,7 +80,7 @@ Jekyll Special elements
 
 Code import:
 
-    {% highlight html %} {% include sample1.js %} {% endhighlight %}
+    {% highlight javascript %} {% include sample1.js %} {% endhighlight %}
 
 `{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
 `{{ showcases _category_}}` a list of showcases
