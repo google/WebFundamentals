@@ -2348,6 +2348,34 @@ body.debug:after {
 
 /**
 *
+* Beta banner
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_beta.scss */
+#beta {
+  font-size: 0.8em;
+  position: absolute;
+  top: 10px;
+  left: 180px;
+  right: 16px;
+  text-align: right;
+  line-height: 1;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_beta.scss */
+  #beta {
+    top: 16px;
+  }
+}
+
+/**
+*
 * Grid
 *
 * Google Web Fundamentals
