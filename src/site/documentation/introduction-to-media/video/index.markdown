@@ -20,10 +20,9 @@ article:
 collection: introduction-to-media
 key-takeaways:
   add-a-video:
+    - Specify multiple file formats since not all browsers support the same format.
     - Don't load the whole video if unnecessary &ndash; specify a start and end time.
     - Include a poster image so the user sees something meaningful right away.
-    - Specify multiple file formats since not all browsers support the same format.
-    - Improve network performance &ndash; specify each file source's type.
   provide-alternatives:
     - Check which formats are supported.
     - Produce video in multiple formats to cover a range of mobile platforms.
@@ -123,7 +122,7 @@ server-side scripting, especially on mobile:
   get content.
 * Letting the browser choose a format is simpler, quicker and potentially
   more reliable than using a server-side support database with user-agent detection.
-* Adding a type attribute to a source element enables the browser to select a 
+* Specifying each file source's type improves network performance; the browser can select a 
   video source without having to download part of the video to 'sniff' the format.
 
 All of these points are especially important in mobile contexts, where bandwidth
@@ -148,7 +147,7 @@ Fragments API to add a start and end time to the video element.
 </video>
 
 To add a media fragment, you simply add `#t=[start_time][,end_time]` to the 
-media URL. For example, to play the video between seconds 5 through 1, 
+media URL. For example, to play the video between seconds 5 through 10, 
 specify:
 
 {% highlight html %}
@@ -161,8 +160,8 @@ serve multiple files.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.media-fragments %}
 
-To check for Range Request support, your browser tools for
-`Accept-Ranges: bytes` in the response headers:
+Using your browser developer tools,
+check for `Accept-Ranges: bytes` in the response headers:
 
 <img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" />
 
