@@ -1175,7 +1175,7 @@ body.debug:after {
 /* line 297, ../_sass/_modules/_main-navigation.scss */
 .main-nav .main-nav__guide-icon {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   margin-right: 6px;
 }
 
