@@ -585,7 +585,7 @@ updating it with mobile-specific concerns where relevant.
     </tr>
     <tr>
       <td data-th="Property" data-th="Property" data-th="Property"><code>volume</code></td>
-      <td data-th="Description" data-th="Description">Get or set current volume level for the video.</td>
+      <td data-th="Description">Get or set current volume level for the video.</td>
     </tr>
     <tr>
       <td data-th="Property" data-th="Property"><code>muted</code></td>
@@ -663,15 +663,15 @@ page on the Mozilla Developer Network for a complete listing.
       <td data-th="Description">Fired when enough data is available that the browser believes it can play the video completely without interruption.</td>
     </tr>
     <tr>
-      <td data-th="Event" data-th="Event" data-th="Event" data-th="Event"><code>ended</code></td>
-      <td data-th="Description" data-th="Description">Fired when video has finished playing.</td>
+      <td data-th="Event"><code>ended</code></td>
+      <td data-th="Description">Fired when video has finished playing.</td>
     </tr>
     <tr>
-      <td data-th="Event" data-th="Event" data-th="Event"><code>error</code></td>
+      <td data-th="Event"><code>error</code></td>
       <td>Fired if an error occurs.</td>
     </tr>
     <tr>
-      <td data-th="Event" data-th="Event"><code>playing</code></td>
+      <td data-th="Event"><code>playing</code></td>
       <td data-th="Description">Fired when video starts playing for the first time, after being paused, or when restarting.</td>
     </tr>
     <tr>
@@ -679,7 +679,7 @@ page on the Mozilla Developer Network for a complete listing.
       <td data-th="Description">Fired periodically to indicate download progress.</td>
     </tr>
     <tr>
-      <td data-th="Event data-th="Event""><code>waiting</code></td>
+      <td data-th="Event"><code>waiting</code></td>
       <td data-th="Description">Fired when an action is delayed pending completion of another action.</td>
     </tr>
     <tr>
