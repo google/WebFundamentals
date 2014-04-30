@@ -37,11 +37,13 @@
         {% for guide in page.articles.[page.id] %}
 
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
-          <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
-          <p>{{guide.description}}</p>
+          <div class="primary-content">
+            <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
+            <p>{{guide.description}}</p>
+          </div>
           <div class="secondary-content">
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
-            <ol class="list-links list--reset">
+            <ol class="list-links list-links--secondary">
             {% for article in page.articles[guide.id] %}
               <li><a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a></li>
             {% endfor %}
