@@ -15,7 +15,7 @@ collection: getting-started
 # {{ page.title }}
 
 Building multi-screen experiences is not as hard as it sounds. By following 
-this guide we will build an example product landing page for our
+this guide, we will build an example product landing page for our
 [CS256 Mobile Web Developement course](https://www.udacity.com/course/cs256) 
 that works well across all different device types.
 
@@ -28,7 +28,7 @@ that works well across all different device types.
 
 ## Final product
 
-By the end of this guide you will have produced an excellent product landing
+By the end of this guide, you will have produced an excellent product landing
 page that you could use on your own sites.  It will be responsive across
 mobile all the way up to TV.
 
