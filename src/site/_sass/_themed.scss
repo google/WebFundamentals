@@ -22,6 +22,30 @@
 
 }
 
+.themed--background {
+
+  .theme--multi-device-layouts & { background-color: $colorLayouts; }
+
+  .theme--introduction-to-media & { background-color: $colorMedia; }
+
+  .theme--user-input & { background-color: $colorUser; }
+
+  .theme--performance & { background-color: $colorPerformance; }
+
+}
+
+.themed--hover {
+
+  .theme--multi-device-layouts &:hover { color: $colorLayouts; }
+
+  .theme--introduction-to-media &:hover { color: $colorMedia; }
+
+  .theme--user-input &:hover { color: $colorUser; }
+
+  .theme--performance &:hover { color: $colorPerformance; }
+
+}
+
 
 // Wrapped content in .article-container so we can
 // encapsulate what needs to be themed without overriding
@@ -41,6 +65,18 @@
 
 // Let's make sure this is at the end so we can override
 // previous rules. Specicifity rules.
+.themed--hover {
+
+  .nav-theme--multi-device-layouts &:hover { color: $colorLayouts; }
+
+  .nav-theme--introduction-to-media &:hover { color: $colorMedia; }
+
+  .nav-theme--user-input &:hover { color: $colorUser; }
+
+  .nav-theme--performance &:hover { color: $colorPerformance; }
+
+}
+
 .themed {
 
   .nav-theme--multi-device-layouts & { color: $colorLayouts; }
@@ -55,48 +91,12 @@
 
 .themed--background {
 
-  .nav-theme--multi-device-layouts &,
-  .theme--multi-device-layouts & { background-color: $colorLayouts; }
+  .nav-theme--multi-device-layouts & { background-color: $colorLayouts; }
 
-  .nav-theme--introduction-to-media &,
-  .theme--introduction-to-media & { background-color: $colorMedia; }
+  .nav-theme--introduction-to-media & { background-color: $colorMedia; }
 
-  .nav-theme--user-input &,
-  .theme--user-input & { background-color: $colorUser; }
+  .nav-theme--user-input & { background-color: $colorUser; }
 
-  .nav-theme--performance &,
-  .theme--performance & { background-color: $colorPerformance; }
-
-}
-
-
-.themed--hover {
-  .nav-theme--multi-device-layouts &,
-  .theme--multi-device-layouts & {
-    &:hover {
-      color: $colorLayouts;
-    }
-  }
-
-  .nav-theme--introduction-to-media &,
-  .theme--introduction-to-media & {
-    &:hover {
-      color: $colorMedia;
-    }
-  }
-
-  .nav-theme--user-input &,
-  .theme--user-input & {
-    &:hover {
-      color: $colorUser;
-    }
-  }
-
-  .nav-theme--performance &,
-  .theme--performance & {
-    &:hover {
-      color: $colorPerformance;
-    }
-  }
+  .nav-theme--performance & { background-color: $colorPerformance; }
 
 }
