@@ -13,6 +13,8 @@
 a {
   color: $colorBlue;
   text-decoration: none;
+
+  @include prefixr(transition, color 100ms linear);
 }
 
 a:hover {

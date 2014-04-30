@@ -31,6 +31,7 @@
 
     .js &.nav-is-opened {
       display: block;
+      -webkit-animation: showNav 400ms both;
     }
   }
 
@@ -190,6 +191,7 @@
 
   .subnav-is-opened & {
     display: block;
+    -webkit-animation: showNav 400ms both;
   }
 }
 
@@ -232,16 +234,28 @@
   position: absolute;
   top: 0;
   right: 5%;
-  margin-top: -($lineHeight + $lineHeight/2);
+  margin: -36px 0 0;
+  line-height: 1;
 
+  font-size: $fontLarge;
   background: transparent;
   color: #ffffff;
   padding: 0;
   border: none;
   -webkit-appearance: none;
+  outline: none;
 
   @include medium {
     display: none;
+  }
+}
+
+.nav-is-opened + .main-nav__btn {
+  top: -6px;
+
+  & i:before {
+    font-size: $fontMedium;
+    content: $icon-close;
   }
 }
 
@@ -304,3 +318,14 @@
     }
   }
 }
+
+/*==========  CSS ANIMATION  ==========*/
+@-webkit-keyframes showNav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
