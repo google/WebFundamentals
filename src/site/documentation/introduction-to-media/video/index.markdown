@@ -305,7 +305,7 @@ the controls.
 
 <div class="clear">
     <img class="g-wide--1 g-medium--half" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
-    <img class="g-wide--3 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
+    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
 </div>
 
 You can control video dimensions using JavaScript or CSS. JavaScript libraries
@@ -347,7 +347,7 @@ orientation:
 
 <div class="clear">
     <img class="g-wide--1 g-medium--half" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png" />
-    <img class="g-wide--3 g-wide--last g-medium--half g--last" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
+    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
 </div>
 
 Device orientation on an iPad and Chrome on Android can be problematic.
