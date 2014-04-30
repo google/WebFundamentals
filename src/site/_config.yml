@@ -10,7 +10,7 @@ highlighter: pygments
 pygments: true
 spotlights: false
 github:
-  root: https://github.com/PaulKinlan/WebDocs
+  root: https://github.com/Google/WebFundamentals
   content: tree/master/src/site
 include_open_html: true
 custom:
