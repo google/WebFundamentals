@@ -43,6 +43,7 @@ remember:
 {% include modules/toc.liquid %}
 
 <style type="text/css">
+
   img, video, object {
     max-width: 100%;
   }
@@ -189,25 +190,25 @@ returns one of the following values:
 <table class="table">
   <thead>
     <tr>
-      <th>return value</th>
+      <th>Return value</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>(blank string)</td>
-      <td>The container and/or codec isn't supported.</td>
+      <td data-th="Return value">(empty string)</td>
+      <td data-th="Description">The container and/or codec isn't supported.</td>
     </tr>
     <tr>
-      <td><code>maybe</code></td>
-      <td>
+      <td data-th="Return value"><code>maybe</code></td>
+      <td data-th="Description">
         The container and codec(s) might be supported, but the browser
         will need to download some video to check.
       </td>
     </tr>
     <tr>
-      <td><code>probably</code></td>
-      <td>The format appears to be supported.
+      <td data-th="Return value"><code>probably</code></td>
+      <td data-th="Description">The format appears to be supported.
       </td>
     </tr>
   </tbody>
@@ -220,34 +221,34 @@ run in Chrome:
 <table class="table">
   <thead>
     <tr>
-      <th>type</th>
+      <th>Type</th>
       <th>Response</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>video/xyz</code></td>
-      <td>(empty string)</td>
+      <td data-th="Type"><code>video/xyz</code></td>
+      <td data-th="Response">(empty string)</td>
     </tr>
     <tr>
-      <td><code>video/xyz; codecs="avc1.42E01E, mp4a.40.2"</code></td>
-      <td>(blank string)</td>
+      <td data-th="Type"><code>video/xyz; codecs="avc1.42E01E, mp4a.40.2"</code></td>
+      <td data-th="Response">(empty string)</td>
     </tr>
     <tr>
-      <td><code>video/xyz; codecs="nonsense, noise"</code></td>
-      <td>(blank string)</td>
+      <td data-th="Type"><code>video/xyz; codecs="nonsense, noise"</code></td>
+      <td data-th="Response">(empty string)</td>
     </tr>
     <tr>
-      <td><code>video/mp4; codecs="avc1.42E01E, mp4a.40.2"</code></td>
-      <td><code>probably</code></td>
+      <td data-th="Type"><code>video/mp4; codecs="avc1.42E01E, mp4a.40.2"</code></td>
+      <td data-th="Response"><code>probably</code></td>
     </tr>
     <tr>
-      <td><code>video/webm</code></td>
-      <td><code>maybe</code></td>
+      <td data-th="Type"><code>video/webm</code></td>
+      <td data-th="Response"><code>maybe</code></td>
     </tr>
     <tr>
-      <td><code>video/webm; codecs="vp8, vorbis"</code></td>
-      <td><code>probably</code></td>
+      <td data-th="Type"><code>video/webm; codecs="vp8, vorbis"</code></td>
+      <td data-th="Response"><code>probably</code></td>
     </tr>
   </tbody>
 </table>
@@ -479,34 +480,34 @@ see [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-v
   </thead>
   <tbody>
     <tr>
-      <td><code>src</code></td>
-      <td>All browsers</td>
-      <td>Address (URL) of the video.</td>
+      <td data-th="Attribute"><code>src</code></td>
+      <td data-th="Availability">All browsers</td>
+      <td data-th="Description">Address (URL) of the video.</td>
     </tr>
     <tr>
-      <td><code>poster</code></td>
-      <td>All browsers</td>
-      <td>Address (URL) of an image file that the browser can show as soon as the video element is displayed, without downloading video content.</td>
+      <td data-th="Attribute" data-th="Attribute" data-th="Attribute" data-th="Attribute" data-th="Attribute"><code>poster</code></td>
+      <td data-th="Availability" data-th="Availability">All browsers</td>
+      <td data-th="Description">Address (URL) of an image file that the browser can show as soon as the video element is displayed, without downloading video content.</td>
     </tr>
     <tr>
-      <td><code>preload</code></td>
-      <td>All mobile browsers ignore preload.</td>
-      <td>Hints to the browser that preloading metadata (or some video) in advance of playback is worthwhile. Options are none, metadata, or auto (see Preload section for details). </td>
+      <td data-th="Attribute" data-th="Attribute" data-th="Attribute" data-th="Attribute"><code>preload</code></td>
+      <td data-th="Availability">All mobile browsers ignore preload.</td>
+      <td data-th="Description">Hints to the browser that preloading metadata (or some video) in advance of playback is worthwhile. Options are none, metadata, or auto (see Preload section for details). </td>
     </tr>
     <tr>
-      <td><code>autoplay</code></td>
-      <td>Not supported on iPhone or Android; supported on all desktop browsers, iPad, Firefox and Opera for Android.</td>
-      <td>Start download and playback as soon as possible (see Autoplay section). </td>
+      <td data-th="Attribute" data-th="Attribute" data-th="Attribute"><code>autoplay</code></td>
+      <td data-th="Availability">Not supported on iPhone or Android; supported on all desktop browsers, iPad, Firefox and Opera for Android.</td>
+      <td data-th="Description">Start download and playback as soon as possible (see Autoplay section). </td>
     </tr>
     <tr>
-      <td><code>loop</code></td>
-      <td>All browsers</td>
-      <td>Loop the video.</td>
+      <td data-th="Attribute" data-th="Attribute"><code>loop</code></td>
+      <td data-th="Availability">All browsers</td>
+      <td data-th="Description">Loop the video.</td>
     </tr>
     <tr>
-      <td><code>controls</code></td>
-      <td>All browsers</td>
-      <td>Show the default video controls (play, pause, etc.)</td>
+      <td data-th="Attribute"><code>controls</code></td>
+      <td data-th="Availability">All browsers</td>
+      <td data-th="Description">Show the default video controls (play, pause, etc.)</td>
     </tr>
   </tbody>
 </table>
@@ -537,22 +538,22 @@ information or content should be preloaded.
 <table>
   <thead>
     <tr>
-      <th>value</th>
+      <th>Value</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>none</code></td>
-      <td>The user may not even watch the video &ndash; don't preload anything</td>
+      <td data-th="Value"><code>none</code></td>
+      <td data-th="Description">The user may not even watch the video &ndash; don't preload anything</td>
     </tr>
     <tr>
-      <td><code>metadata</code></td>
-      <td>Metadata (duration, dimensions, text tracks) should be preloaded, but with minimal video.</td>
+      <td data-th="Value"><code>metadata</code></td>
+      <td data-th="Description">Metadata (duration, dimensions, text tracks) should be preloaded, but with minimal video.</td>
     </tr>
     <tr>
-      <td><code>auto</code></td>
-      <td>Downloading the entire video right away is considered desirable.</td>
+      <td data-th="Value"><code>auto</code></td>
+      <td data-th="Description">Downloading the entire video right away is considered desirable.</td>
     </tr>
   </tbody>
 </table>
@@ -579,36 +580,36 @@ updating it with mobile-specific concerns where relevant.
   </thead>
   <tbody>
     <tr>
-      <td><code>currentTime</code></td>
-      <td>Get or set playback position in seconds.</td>
+      <td data-th="Property"><code>currentTime</code></td>
+      <td data-th="Description">Get or set playback position in seconds.</td>
     </tr>
     <tr>
-      <td><code>volume</code></td>
-      <td>Get or set current volume level for the video.</td>
+      <td data-th="Property" data-th="Property" data-th="Property"><code>volume</code></td>
+      <td data-th="Description" data-th="Description" data-th="Description">Get or set current volume level for the video.</td>
     </tr>
     <tr>
-      <td><code>muted</code></td>
-      <td>Get or set audio muting.</td>
+      <td data-th="Property" data-th="Property"><code>muted</code></td>
+      <td data-th="Description" data-th="Description">Get or set audio muting.</td>
     </tr>
     <tr>
-      <td><code>playbackRate</code></td>
-      <td>Get or set playback rate; 1 is normal speed forward.</td>
+      <td data-th="Property"><code>playbackRate</code></td>
+      <td data-th="Description">Get or set playback rate; 1 is normal speed forward.</td>
     </tr>
     <tr>
       <td><code>buffered</code></td>
-      <td>Information about how much of the video has been buffered and is ready to play (see <a href="//people.mozilla.org/~cpearce/buffered-demo.html" title="Demo displaying amount of buffered video in a canvas element">demo</a>).</td>
+      <td data-th="Description" data-th="Description" data-th="Description">Information about how much of the video has been buffered and is ready to play (see <a href="//people.mozilla.org/~cpearce/buffered-demo.html" title="Demo displaying amount of buffered video in a canvas element">demo</a>).</td>
     </tr>
     <tr>
-      <td><code>currentSrc</code></td>
-      <td>The address of the video being played.</td>
+      <td data-th="Property"><code>currentSrc</code></td>
+      <td data-th="Description" data-th="Description">The address of the video being played.</td>
     </tr>
     <tr>
-      <td><code>videoWidth</code></td>
-      <td>Width of the video in pixels (which may be different from the video element width).</td>
+      <td data-th="Property"><code>videoWidth</code></td>
+      <td data-th="Description">Width of the video in pixels (which may be different from the video element width).</td>
     </tr>
     <tr>
-      <td><code>videoHeight</code></td>
-      <td>Height of the video in pixels (which may be different from the video element height).</td>
+      <td data-th="Property"><code>videoHeight</code></td>
+      <td data-th="Description">Height of the video in pixels (which may be different from the video element height).</td>
     </tr>
   </tbody>
 </table>
@@ -624,20 +625,20 @@ Neither playbackRate ({% link_sample _code/scripted.html %}see demo{% endlink_sa
   </thead>
   <tbody>
     <tr>
-      <td><code>load()</code></td>
-      <td>Load or reload a video source without initiating playback: for example, when the video src is changed using JavaScript.</td>
+      <td data-th="Method"><code>load()</code></td>
+      <td data-th="Description" data-th="Description">Load or reload a video source without initiating playback: for example, when the video src is changed using JavaScript.</td>
     </tr>
     <tr>
-      <td><code>play()</code></td>
-      <td>Play the video from its current location.</td>
+      <td data-th="Method"><code>play()</code></td>
+      <td data-th="Description">Play the video from its current location.</td>
     </tr>
     <tr>
-      <td><code>pause()</code></td>
-      <td>Pause the video at its current location.</td>
+      <td data-th="Method"><code>pause()</code></td>
+      <td data-th="Description">Pause the video at its current location.</td>
     </tr>
     <tr>
-      <td><code>canPlayType('format')</code></td>
-      <td>Find out which formats are supported (see Check which formats are supported).</td>
+      <td data-th="Method"><code>canPlayType('format')</code></td>
+      <td data-th="Description">Find out which formats are supported (see Check which formats are supported).</td>
     </tr>
   </tbody>
 </table>
@@ -658,32 +659,32 @@ page on the Mozilla Developer Network for a complete listing.
   </thead>
   <tbody>
     <tr>
-      <td><code>canplaythrough</code></td>
-      <td>Fired when enough data is available that the browser believes it can play the video completely without interruption.</td>
+      <td data-th="Event"><code>canplaythrough</code></td>
+      <td data-th="Description">Fired when enough data is available that the browser believes it can play the video completely without interruption.</td>
     </tr>
     <tr>
-      <td><code>ended</code></td>
-      <td>Fired when video has finished playing.</td>
+      <td data-th="Event" data-th="Event" data-th="Event" data-th="Event"><code>ended</code></td>
+      <td data-th="Description" data-th="Description" data-th="Description">Fired when video has finished playing.</td>
     </tr>
     <tr>
-      <td><code>error</code></td>
+      <td data-th="Event" data-th="Event" data-th="Event"><code>error</code></td>
       <td>Fired if an error occurs.</td>
     </tr>
     <tr>
-      <td><code>playing</code></td>
-      <td>Fired when video starts playing for the first time, after being paused, or when restarting.</td>
+      <td data-th="Event" data-th="Event"><code>playing</code></td>
+      <td data-th="Description" data-th="Description">Fired when video starts playing for the first time, after being paused, or when restarting.</td>
     </tr>
     <tr>
-      <td><code>progress</code></td>
-      <td>Fired periodically to indicate download progress.</td>
+      <td data-th="Event"><code>progress</code></td>
+      <td data-th="Description">Fired periodically to indicate download progress.</td>
     </tr>
     <tr>
-      <td><code>waiting</code></td>
-      <td>Fired when an action is delayed pending completion of another action.</td>
+      <td data-th="Event data-th="Event""><code>waiting</code></td>
+      <td data-th="Description">Fired when an action is delayed pending completion of another action.</td>
     </tr>
     <tr>
-      <td><code>loadedmetadata</code></td>
-      <td>Fired when browser finishes loading metadata for video: duration, dimensions and text tracks.</td>
+      <td data-th="Event"><code>loadedmetadata</code></td>
+      <td data-th="Description">Fired when browser finishes loading metadata for video: duration, dimensions and text tracks.</td>
     </tr>
   </tbody>
 </table>
