@@ -20,29 +20,10 @@ article:
 collection: introduction-to-media
 key-takeaways:
   add-a-video:
-    - Specify multiple file formats since not all browsers support the same format.
-    - Don't load the whole video if unnecessary &ndash; specify a start and end time.
-    - Include a poster image so the user sees something meaningful right away.
-  provide-alternatives:
-    - Check which formats are supported.
+    - Use the video element to load, decode, and play video on your site.
     - Produce video in multiple formats to cover a range of mobile platforms.
-    - Check which format was used.
-  size-videos-correctly:
-    - Avoid serving video that is too long, too large in frame size, or unnecessarily high in quality.
-    - Check video size &ndash; frame size may be different from element size.
-    - Ensure videos don't overflow their containers.
-  customize:
-    - Mobile solutions need to consider device orientation.
-    - Different platforms display video different.
-    - Use Fullscreen API to control fullscreening of content.
-  improve-accessibility:
-    - Focus on the user &ndash; accessibility matters.
-    - Add track element as a child of the video element.
-    - Define captions in track file.
-  handle-poor-connectivity:
-    - Enable adaptive streaming to cope with variable network conditions.
-    - Use the Media Source Extensions API to construct video streams.
-    - Use DASH to enable high quality streaming on the web.
+    - Size videos correctly; ensure they don't overflow their containers.
+    - Accessibility matters; add track element as a child of the video element.
 remember:
   media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.
@@ -82,7 +63,7 @@ remember:
 
 ### Add the video element
 
-Use the video element to load, decode, and play video in your site:
+Add the video element to load, decode, and play video in your site:
 
 <video controls>
      <source src="video/chrome.webm" type="video/webm" />
@@ -197,7 +178,9 @@ Here's a side-by-side comparison of videos without and with a poster image
 
 ## Provide alternatives for legacy platforms
 
-{% include modules/takeaway.liquid list=page.key-takeaways.provide-alternatives %}
+Not all video formats are supported on all platforms.
+Check which formats are supported on the major platforms
+and make sure your video works in each of these.
 
 ### Check which formats are supported
 
@@ -302,10 +285,6 @@ support) whereas Safari chooses `chrome.mp4`.
 
 ## Size videos correctly
 
-{% include modules/takeaway.liquid list=page.key-takeaways.size-videos-correctly %}
-
-### Size matters
-
 When it comes to keeping your users happy, size matters:
 
 * Don't serve videos with a larger frame size or higher quality than the
@@ -383,7 +362,9 @@ Compare the {% link_sample _code/responsive_embed.html %}responsive sample{% end
 
 ## Customize the video player
 
-{% include modules/takeaway.liquid list=page.key-takeaways.customize %}
+Different platforms display video differently.
+Mobile solutions need to consider device orientation.
+Use Fullscreen API to control the fullscreen view of video content.
 
 ### How device orientation works across devices
 
@@ -479,8 +460,6 @@ Accessibility isn't a feature. Users who can't hear or see won't be able to
 experience a video at all without captions or descriptions. The time it takes
 to add these to your video is much less than the bad experience you are
 delivering to users. Provide at least a base experience for all users.
-
-{% include modules/takeaway.liquid list=page.key-takeaways.improve-accessibility %}
 
 ### Include captions to improve accessibility
 
