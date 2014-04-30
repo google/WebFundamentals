@@ -5,12 +5,12 @@ description: "The web is accessible on a huge range of devices from small-screen
 introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions.  Each device presents its own unique benefits and also constraints and as a web developer you are expected to support all ranges of devices."
 key-takeaways:
   make-responsive:
-    - Always use a viewport 
+    - Always use a viewport
     - Always start with a narrow viewport first and scale out
     - Base your breakpoints off when you need to adapt the content
     - Create a high-level vision of your layout across major breakpoints
 notes:
-  styling: 
+  styling:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed
@@ -29,7 +29,7 @@ We are building a site that works across in multiple screen sizes and device
 types. In the [previous
 article]({{site.baseurl}}{{page.article.previous.url}}) we crafted the
 Infomration Architecture of the page and created a basic structure that we
-will now use to make work across all of our target screens and form-factors. 
+will now use to make work across all of our target screens and form-factors.
 
 In this guide we will take our basic structure with content and turn it in to
 a beautiful page that is responsive across a large number of screen sizes.
@@ -47,7 +47,7 @@ a beautiful page that is responsive across a large number of screen sizes.
 
 We are using the principles of Mobile First web development.  We start with a
 narrow viewport &mdash; similar to a mobile phone &mdash; and build for that
-experience first and start to scale up to larger device classes.  We can do 
+experience first and start to scale up to larger device classes.  We can do
 this by making our viewport wider and making a judgment call on whether the
 design and layout look right.
 
@@ -83,7 +83,7 @@ Learn more about the best practices of using the viewport:
 
 *  [Setting the Viewport]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#set-the-viewport)
 *  [Size content to the viewport]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#size-content-to-the-viewport)
-{: .list--links}
+{: .list-links}
 
 </div>
 </div>
@@ -92,12 +92,12 @@ Learn more about the best practices of using the viewport:
 
 ## Apply simple styling
 
-Our product and company already has a very specific branding and font guide-lines supplied 
+Our product and company already has a very specific branding and font guide-lines supplied
 in a style guide.
 
 ### Style guide
 
-A style guide is a useful way to get a high-level understanding of the visual representation 
+A style guide is a useful way to get a high-level understanding of the visual representation
 of the page and it helps you ensure that you are consistent through out the design.
 
 #### Colors
@@ -131,10 +131,10 @@ is often used to entice the user in to reading more about the product.
   <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
 </div>
 
-They can be very simple to include, in our case it will be the background to the 
+They can be very simple to include, in our case it will be the background to the
 header and we will apply it via some simple CSS.
 
-{% highlight css %}  
+{% highlight css %}
 #headline {
   padding: 0.8em;
   color: white;
@@ -145,7 +145,7 @@ header and we will apply it via some simple CSS.
 {% endhighlight %}
 
 We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element that way it 
+from the content and we have set it to `cover` the entire element that way it
 always stretches whilst maintaining the correct aspect ratio.
 
 <br style="clear: both;">
@@ -159,7 +159,7 @@ where we want to change it.
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
+  <p>Sorry your browser doesn't support video.
      <a href="videos/smiles.mov">Download the video</a>.
   </p>
 </video>
@@ -172,7 +172,7 @@ responsiveness).
 
 {% highlight css %}
 @media (min-width: 600px) {
-    
+
 }
 {% endhighlight %}
 
@@ -199,10 +199,10 @@ need to:
 
 Learn more about how and where to use Media Queries:
 
-*  [Using Media Queries]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) 
-*  [Layout patterns]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/index.html) 
+*  [Using Media Queries]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness)
+*  [Layout patterns]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/index.html)
 *  [Mostly Fluid layout]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/index.html#mostly-fluid)
-{: .list--links}
+{: .list-links}
 </div>
 </div>
 </div>
@@ -216,7 +216,7 @@ viewport which greatly simplifies our build process.
 We have also decided to create full-bleed sections on the narrow viewport that
 stay full-bleed on the wide viewport.  This means we should constrain the
 maximum width of the screen so that the text and paragraphs don't extend in to one
-long single line on ultra wide screens.  We have chosen this point to be 
+long single line on ultra wide screens.  We have chosen this point to be
 about 800px.
 
 To achieve this we need to constrain the width and center the elements.  We
@@ -243,7 +243,7 @@ on a larger screen but further away.  To increase the readability of the
 content we can increase the size and weight of the typography and we can also
 alter the padding to make distinct areas stand out more.
 
-In our product page we will increase the padding of the section elements by 
+In our product page we will increase the padding of the section elements by
 setting it to remain at 5% of the width.  We will also increase the size of
 the headers for each of the sections.
 
@@ -278,7 +278,7 @@ to each other.
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
+  <p>Sorry your browser doesn't support video.
      <a href="videos/floatingform.mov">Download the video</a>.
   </p>
 </video>
@@ -327,7 +327,7 @@ We have a solution that is not widely adopted yet but for browsers that
 support it let you display a high density image on a high density display.
 
 {% highlight html %}
-<img src="photo.png" srcset="photo@2x.png 2x" />  
+<img src="photo.png" srcset="photo@2x.png 2x" />
 {% endhighlight %}
 
 <div class="related-items">
@@ -341,7 +341,7 @@ Learn how to effectively use images for varying screen densities:
 
 * [Enhance img’s with srcset for high DPI devices]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#enhance-imgs-with-srcset-for-high-dpi-devices)
 * [Use media queries to provide high res images or art direction]({{site.baseurl}}/documentation/introduction-to-media/images/index.html#use-media-queries-to-provide-high-res-images-or-art-direction)
-{: .list--links}
+{: .list-links}
 
 </div>
 </div>
@@ -354,12 +354,12 @@ Tables are very hard to get right on devices that have a narrow viewport and nee
 special consideration.
 
 We recommend on a narrow viewport that you make your table into two rows, the heading
-and transposing the cells in a row to make the columnar. 
+and transposing the cells in a row to make the columnar.
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
+  <p>Sorry your browser doesn't support video.
      <a href="videos/responsivetable.mov">Download the video</a>.
   </p>
 </video>
@@ -383,7 +383,7 @@ If you follow these guidelines you will be off to a good start:
 1.  Create a basic IA and understand your content before you code.
 2.  Always set a viewport
 3.  Create your base experience around mobile-first approach
-4.  Once you have your mobile experience, increase the width of the display 
+4.  Once you have your mobile experience, increase the width of the display
    until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
 

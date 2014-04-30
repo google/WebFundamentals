@@ -15,7 +15,7 @@
 .icon {
   font-family:"icons";
   display:inline-block;
-  vertical-align:middle;
+  vertical-align:top;
   line-height:1;
   font-weight:normal;
   font-style:normal;
@@ -98,3 +98,5 @@ $icon-user-input: "\e00e";
 .icon-user-input:before {
   content:"\e00e";
 }
+
+

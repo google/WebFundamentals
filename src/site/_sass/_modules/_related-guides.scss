@@ -11,12 +11,14 @@
 **/
 
 .related-guides {
-  margin-top: $lineHeight*2;
+  margin-top: $lineHeight*3;
   padding-bottom: $lineHeight*2;
+  border-top: 2px solid $colorGrayKeyline;
+  padding-top: ($lineHeight*2) - 2;
 }
 
 .related-guides__list {
-  .list--links {
+  .list-links {
     padding-top: 0;
   }
 
@@ -28,7 +30,10 @@
 .related-guides__title {
   @include type--xlarge;
   padding-top: 0;
-  @include medium {padding-top: 0;}
+
+  @include medium {
+    padding-top: 0;
+  }
 }
 
 .related-guides__main-link {

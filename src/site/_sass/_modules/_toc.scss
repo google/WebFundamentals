@@ -14,7 +14,7 @@
   @include type--medium;
   font-family: $fontHighlight;
   padding-bottom: $lineHeight/2;
-  margin-bottom: $lineHeight/2;
+  margin-bottom: ($lineHeight/2) - 1;
   border-bottom: 1px solid $colorGrayKeyline;
 
   @include medium {
@@ -27,5 +27,10 @@
   padding-top: 0;
 
   border-bottom: 1px solid $colorGrayKeyline;
-  padding-bottom: $lineHeight/2;
+  padding-bottom: ($lineHeight/2) - 1;
+  margin-bottom: $lineHeight/2;
+
+  a {
+    display: block;
+  }
 }

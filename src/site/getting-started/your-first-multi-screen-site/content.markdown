@@ -1,12 +1,12 @@
 ---
 layout: article
 title: "Create Your Content and Structure"
-description: "Content is the most important aspect of any site. In this guide 
+description: "Content is the most important aspect of any site. In this guide
   we will show you can quickly plan to build your first multi-screen site."
-introduction: "Content is the most important aspect of any site. In this guide 
+introduction: "Content is the most important aspect of any site. In this guide
   we will show you can quickly plan to build your first multi-screen site."
 notes:
-  styling: 
+  styling:
     - Styling will come later
 article:
   written_on: 2014-04-17
@@ -52,7 +52,7 @@ We have also come up with a rough information architecture and layout for both t
   <img class="g-wide--1 g-medium--half" src="images/narrowviewport.jpg" alt="Narrow Viewport IA"><img  class="g-wide--3 g-wide--last g-medium--half g--last" src="images/wideviewport.jpg" alt="Wide Viewport IA">
 </div>
 
-This can be converted easily in to the rough sections of a skeleton page that 
+This can be converted easily in to the rough sections of a skeleton page that
 we will use for the rest of this project.
 
 {% include_code _code/addstructure.html structure %}
@@ -67,7 +67,7 @@ information architecture we can now start to build out the site.
 
 ### Create the headline and form
 
-The headline is the first section and the request a demonstration form our the 
+The headline is the first section and the request a demonstration form our the
 critical components of our page that we have identifed that must be presetned to the user immediately.
 
 Adding the header is just a simple set of list items.
@@ -102,7 +102,7 @@ Learn more about how to create amazing forms:
 *  [Label and name inputs correctly]({{site.baseurl}}/documentation/user-input/form-input/index.html#label-and-name-inputs-properly)
 *  [Choose the best input type]({{site.baseurl}}/documentation/user-input/form-input/index.html#choose-the-best-input-type)
 *  [Provide real-time validation]({{site.baseurl}}/documentation/user-input/form-input/index.html#provide-real-time-validation)
-{: .list--links}
+{: .list-links}
 </div>
 </div>
 </div>
@@ -117,7 +117,7 @@ a video placeholder  that will show our product working for the user.
 {% include_code _code/addcontent.html section1 %}
 
 Videos are often used to describe content in a more interactive manner and are
-frequently used to show a demonstration of a product or a concept.  
+frequently used to show a demonstration of a product or a concept.
 
 By following the best practices you can easily integrate video in to your site:
 
@@ -140,7 +140,7 @@ Learn more about the best ways to use video on your site.
 *  [Using video effectively]({{site.baseurl}}/documentation/introduction-to-media/video/index.html)
 *  [Change the starting position]({{site.baseurl}}/documentation/introduction-to-media/video/index.html)
 *  [Include a poster image]({{site.baseurl}}/documentation/introduction-to-media/video/index.html)
-{: .list--links}
+{: .list-links}
 </div>
 </div>
 </div>
@@ -150,9 +150,9 @@ Learn more about the best ways to use video on your site.
 
 Sites without images can be a little boring.  There are two types of images:
 
-*  Content images &mdash; Images that are in-line in the document and are used 
+*  Content images &mdash; Images that are in-line in the document and are used
    to convey extra information about the content.
-*  Stylistic images &mdash; images are often used to make the site look 
+*  Stylistic images &mdash; images are often used to make the site look
    better, often these are background images, patterns and gradients.  We will
    cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
@@ -182,7 +182,7 @@ Discover the best practices for using images in your content
 *  [Using images effectively]({{site.baseurl}}/documentation/introduction-to-media/images/index.html)
 *  [Correct use of images in markup]({site.baseurl}}/documentation/introduction-to-media/images/index.html#images-in-markup)
 *  [Optimizing images 101]({{site.baseurl}}/documentation/optimizing-performance/optimizing-content-efficiency/index.html#image-compression-101)
-{: .list--links}
+{: .list-links}
 
 </div>
 </div>
@@ -201,18 +201,18 @@ Tables should only be used for tabular data, i.e, matrices of information.
 ### Add a Footer
 
 Most sites need a footer to display content such as Terms and Conditions,
-disclaimers and other content that is not meant to be in the main navigation nor in the main content area of the page.  
+disclaimers and other content that is not meant to be in the main navigation nor in the main content area of the page.
 
-In our site we will just link to Terms and Conditions, a Contact page and 
+In our site we will just link to Terms and Conditions, a Contact page and
 our social media profiles.
 
 {% include_code _code/addcontent.html footer %}
 
 ## Summary
 
-We have created the outline of the site and we have identified all the main 
-structural elements.  We have also made sure that we have all the relevant 
-content ready and in-place to satisfy our business needs.  
+We have created the outline of the site and we have identified all the main
+structural elements.  We have also made sure that we have all the relevant
+content ready and in-place to satisfy our business needs.
 
 <div class="clear">
   <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
