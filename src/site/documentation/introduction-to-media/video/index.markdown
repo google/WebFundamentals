@@ -304,13 +304,8 @@ container, making it impossible for the user to see the content or use
 the controls.
 
 <div class="clear">
-  <div class="g--half">
-    <img class="center" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
-  </div>
-
-  <div class="center" class="g--half g--last">
-    <img class="center" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
-  </div>
+    <img class="g-wide--1 g-medium--half" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
+    <img class="g-wide--3 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
 </div>
 
 You can control video dimensions using JavaScript or CSS. JavaScript libraries
@@ -351,13 +346,8 @@ Safari on iPhone does a good job of switching between portrait and landscape
 orientation:
 
 <div class="clear">
-  <div class="g--half">
-    <img class="center" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png" />
-  </div>
-
-  <div class="center" class="g--half g--last">
-    <img class="center" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
-  </div>
+    <img class="g-wide--1 g-medium--half" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png" />
+    <img class="g-wide--3 g-wide--last g-medium--half g--last" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
 </div>
 
 Device orientation on an iPad and Chrome on Android can be problematic.
