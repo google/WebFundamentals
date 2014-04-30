@@ -485,22 +485,22 @@ see [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-v
       <td data-th="Description">Address (URL) of the video.</td>
     </tr>
     <tr>
-      <td data-th="Attribute" data-th="Attribute" data-th="Attribute" data-th="Attribute" data-th="Attribute"><code>poster</code></td>
-      <td data-th="Availability" data-th="Availability">All browsers</td>
+      <td data-th="Attribute"><code>poster</code></td>
+      <td data-th="Availability">All browsers</td>
       <td data-th="Description">Address (URL) of an image file that the browser can show as soon as the video element is displayed, without downloading video content.</td>
     </tr>
     <tr>
-      <td data-th="Attribute" data-th="Attribute" data-th="Attribute" data-th="Attribute"><code>preload</code></td>
+      <td data-th="Attribute"><code>preload</code></td>
       <td data-th="Availability">All mobile browsers ignore preload.</td>
       <td data-th="Description">Hints to the browser that preloading metadata (or some video) in advance of playback is worthwhile. Options are none, metadata, or auto (see Preload section for details). </td>
     </tr>
     <tr>
-      <td data-th="Attribute" data-th="Attribute" data-th="Attribute"><code>autoplay</code></td>
+      <td data-th="Attribute"><code>autoplay</code></td>
       <td data-th="Availability">Not supported on iPhone or Android; supported on all desktop browsers, iPad, Firefox and Opera for Android.</td>
       <td data-th="Description">Start download and playback as soon as possible (see Autoplay section). </td>
     </tr>
     <tr>
-      <td data-th="Attribute" data-th="Attribute"><code>loop</code></td>
+      <td data-th="Attribute"><code>loop</code></td>
       <td data-th="Availability">All browsers</td>
       <td data-th="Description">Loop the video.</td>
     </tr>
@@ -584,11 +584,11 @@ updating it with mobile-specific concerns where relevant.
       <td data-th="Description">Get or set playback position in seconds.</td>
     </tr>
     <tr>
-      <td data-th="Property" data-th="Property" data-th="Property"><code>volume</code></td>
+      <td data-th="Property"><code>volume</code></td>
       <td data-th="Description">Get or set current volume level for the video.</td>
     </tr>
     <tr>
-      <td data-th="Property" data-th="Property"><code>muted</code></td>
+      <td data-th="Property"><code>muted</code></td>
       <td data-th="Description">Get or set audio muting.</td>
     </tr>
     <tr>
@@ -668,7 +668,7 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
     <tr>
       <td data-th="Event"><code>error</code></td>
-      <td>Fired if an error occurs.</td>
+      <td data-th="Description">Fired if an error occurs.</td>
     </tr>
     <tr>
       <td data-th="Event"><code>playing</code></td>
