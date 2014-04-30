@@ -117,7 +117,7 @@ module Jekyll
   </div>
   </div>
   <div class="highlight-module highlight-module--code highlight-module--right">
-    <div class="highlight-module__container" data-character=" ">
+    <div class="highlight-module__container">
       <code class='html'>#{highlighted_code.strip}</code>
       <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/resources/samples/#{filepath}">View full sample</a>
     </div>
