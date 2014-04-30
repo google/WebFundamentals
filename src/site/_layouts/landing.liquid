@@ -14,21 +14,21 @@
 
     {% include header.liquid %}
 
-    <div class="page-header">
+    <!-- <div class="page-header">
       <div class="container">
 
         {% include modules/breadcrumbs.liquid %}
 
-        <h3 class="xxlarge text-divider">{{ page.title }}</h3>
+        <h3 class="xxlarge text-divider"></h3>
         <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
       </div>
     </div>
 
-    {{ content }}
+    {{ content }} -->
 
     <div class="guides-section">
       <header class="container">
-          <h2 class="xlarge">Guides Section</h2>
+          <h2 class="xxlarge">{{ page.title }}</h2>
           <p>Follow these guides and build web content users can access on any device they choose.</p>
       </header>
 
