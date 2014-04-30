@@ -68,3 +68,35 @@
   .theme--performance & { background-color: $colorPerformance; }
 
 }
+
+
+.themed--hover {
+  .nav-theme--multi-device-layouts &,
+  .theme--multi-device-layouts & {
+    &:hover {
+      color: $colorLayouts;
+    }
+  }
+
+  .nav-theme--introduction-to-media &,
+  .theme--introduction-to-media & {
+    &:hover {
+      color: $colorMedia;
+    }
+  }
+
+  .nav-theme--user-input &,
+  .theme--user-input & {
+    &:hover {
+      color: $colorUser;
+    }
+  }
+
+  .nav-theme--performance &,
+  .theme--performance & {
+    &:hover {
+      color: $colorPerformance;
+    }
+  }
+
+}
