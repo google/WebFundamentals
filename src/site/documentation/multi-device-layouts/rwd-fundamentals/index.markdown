@@ -39,11 +39,8 @@ remember:
 {% wrap content %}
 
 <style type="text/css">
-  img, video, object {
-    max-width: 100%;
-  }
 
-  img.center { 
+  img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -104,16 +101,16 @@ phone or a large desktop monitor.
 
 <div class="clear">
   <div class="g--half">
-    {% link_sample _code/vp-no.html %} 
+    {% link_sample _code/vp-no.html %}
       <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
-      See example 
+      See example
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp.html %}
       <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
-      See example 
+      See example
     {% endlink_sample %}
   </div>
 </div>
@@ -180,7 +177,7 @@ viewport on small screens.
 Media queries are simple filters that can be applied to CSS styles.  They make
 it easy to change styles based on the characteristics of the device rendering
 the content, including the display type, width, height, orientation and even
-resolution.  
+resolution.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.media-queries %}
 

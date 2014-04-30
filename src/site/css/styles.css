@@ -3589,11 +3589,14 @@ td:last-child:after {
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_components/_media.scss */
-img {
+/* line 15, ../_sass/_components/_media.scss */
+img,
+video,
+object {
   max-width: 100%;
 }
-/* line 16, ../_sass/_components/_media.scss */
+
+/* line 21, ../_sass/_components/_media.scss */
 .content img {
   margin-top: 26px;
   margin-bottom: 26px;
