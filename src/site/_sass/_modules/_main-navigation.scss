@@ -131,6 +131,7 @@
 
 .main-nav__list--child {
   padding-top: 0;
+  padding-left: 0;
 }
 
 .main-nav__item--child {
@@ -203,13 +204,14 @@
 .main-nav__link--explore {
   @include style-cta($colorBlue, false);
   display: block;
+  line-height: $lineHeight;
 
   @include small-only {
     border-top: 1px solid $colorGrayKeyline;
   }
 
   @include medium {
-    border-bottom: 1px solid $colorGray;
+    border-bottom: 1px solid $colorGrayKeyline;
   }
 }
 
@@ -251,6 +253,10 @@
   line-height: $lineHeight;
   vertical-align: middle;
 
+  .main-nav__secondary-nav & {
+    font-size: $fontSmall;
+  }
+
   @include medium {
     display: none;
     font-size: $fontSmall;
@@ -286,3 +292,11 @@
   }
 }
 
+// Wrapping in .main-nav due to specicifity
+.main-nav {
+  .main-nav__guide-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+}

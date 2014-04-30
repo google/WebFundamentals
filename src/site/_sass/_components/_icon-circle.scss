@@ -14,13 +14,19 @@
 .icon-circle--large {
   height: 0;
   width: 0;
-  padding: 22px; // Breaks baseline grid
-  margin: 4px auto; // Adds margin top/bottom to fix baseline grid ;)
   background: $colorGray;
   display: block;
   position: relative;
   border-radius: 100%;
   font-size: 0;
+  padding: $lineHeight/2;
+  margin: 0 auto;
+
+  @include medium {
+    padding: 22px; // Breaks baseline grid
+    margin-top: 4px; // Adds margin top/bottom to fix baseline grid ;)
+    margin-bottom: 4px; // Adds margin top/bottom to fix baseline grid ;)
+  }
 
   i {
     position: absolute;
@@ -30,7 +36,11 @@
     left: 0;
     text-align: center;
     color: #ffffff;
-    font-size: $fontLarge;
+    font-size: $fontBase;
+
+    @include medium {
+      font-size: $fontLarge;
+    }
   }
 }
 
