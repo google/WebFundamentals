@@ -362,5 +362,10 @@ ol.list--variation {
       border-color: transparent;
       padding-bottom: 0;
     }
+
+    &:last-child {
+      border-bottom: transparent;
+      margin-bottom: 0;
+    }
   }
 }

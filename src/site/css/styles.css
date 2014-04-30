@@ -1213,6 +1213,12 @@ body.debug:after {
   vertical-align: top;
   margin-right: 6px;
 }
+@media only screen and (min-width: 620px) {
+  /* line 297, ../_sass/_modules/_main-navigation.scss */
+  .main-nav .main-nav__guide-icon {
+    vertical-align: middle;
+  }
+}
 
 /**
 *
@@ -2200,8 +2206,9 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 20, ../_sass/_modules/_home-header.scss */
   .home-header:after {
-    font-size: 130px;
-    bottom: 0;
+    font-size: 68px;
+    line-height: 1px;
+    bottom: 4px;
   }
 }
 @media only screen and (min-width: 620px) {
@@ -2210,7 +2217,7 @@ body.debug:after {
     padding-bottom: 104px;
   }
 }
-/* line 43, ../_sass/_modules/_home-header.scss */
+/* line 44, ../_sass/_modules/_home-header.scss */
 .home-header h1 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -2222,7 +2229,7 @@ body.debug:after {
   padding-top: 52px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 43, ../_sass/_modules/_home-header.scss */
+  /* line 44, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -2234,7 +2241,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 43, ../_sass/_modules/_home-header.scss */
+  /* line 44, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -2246,12 +2253,12 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 43, ../_sass/_modules/_home-header.scss */
+  /* line 44, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
-    padding-top: 130px;
+    padding-top: 78px;
   }
 }
-/* line 57, ../_sass/_modules/_home-header.scss */
+/* line 58, ../_sass/_modules/_home-header.scss */
 .home-header p {
   font-size: 20px;
   font-weight: 300;
@@ -2261,7 +2268,7 @@ body.debug:after {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 57, ../_sass/_modules/_home-header.scss */
+  /* line 58, ../_sass/_modules/_home-header.scss */
   .home-header p {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -2273,12 +2280,12 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 57, ../_sass/_modules/_home-header.scss */
+  /* line 58, ../_sass/_modules/_home-header.scss */
   .home-header p {
     padding-top: 0;
   }
 }
-/* line 65, ../_sass/_modules/_home-header.scss */
+/* line 66, ../_sass/_modules/_home-header.scss */
 .home-header a {
   margin-top: 65px;
 }
@@ -3540,6 +3547,11 @@ ol.list--variation li a:before {
     padding-bottom: 0;
   }
 }
+/* line 366, ../_sass/_components/_list.scss */
+.list-guides-intro li:last-child {
+  border-bottom: transparent;
+  margin-bottom: 0;
+}
 
 /**
 *
@@ -3982,10 +3994,11 @@ object {
     justify-content: space-between;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding-top: 52px;
   }
 }
 
-/* line 26, ../_sass/_components/_guides-list.scss */
+/* line 28, ../_sass/_components/_guides-list.scss */
 .guides-list__item {
   padding: 0;
   background: #ffffff;
@@ -3993,7 +4006,7 @@ object {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 26, ../_sass/_components/_guides-list.scss */
+  /* line 28, ../_sass/_components/_guides-list.scss */
   .guides-list__item {
     display: -webkit-box;
     display: -moz-box;
@@ -4004,47 +4017,47 @@ object {
     -webkit-flex-direction: column;
   }
 }
-/* line 38, ../_sass/_components/_guides-list.scss */
+/* line 40, ../_sass/_components/_guides-list.scss */
 .guides-list__item h3 {
   margin: 0 32px;
 }
-/* line 42, ../_sass/_components/_guides-list.scss */
+/* line 44, ../_sass/_components/_guides-list.scss */
 .guides-list__item p {
   margin: 26px 32px 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 46, ../_sass/_components/_guides-list.scss */
+  /* line 48, ../_sass/_components/_guides-list.scss */
   .guides-list__item .primary-content {
     flex: 1;
     -webkit-flex: 1;
   }
 }
-/* line 53, ../_sass/_components/_guides-list.scss */
+/* line 55, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content {
   position: relative;
-  background: #ebebeb;
+  background: #fafafa;
   margin-top: 52px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 53, ../_sass/_components/_guides-list.scss */
+  /* line 55, ../_sass/_components/_guides-list.scss */
   .guides-list__item .secondary-content {
     width: 100%;
   }
 }
-/* line 62, ../_sass/_components/_guides-list.scss */
+/* line 64, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content .icon-circle {
   position: absolute;
   top: -26px;
   left: 50%;
   margin-left: -22px;
 }
-/* line 70, ../_sass/_components/_guides-list.scss */
+/* line 72, ../_sass/_components/_guides-list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 0 52px;
   margin-top: 0;
 }
-/* line 76, ../_sass/_components/_guides-list.scss */
+/* line 78, ../_sass/_components/_guides-list.scss */
 .guides-list__item:before {
   display: none;
 }
@@ -4221,6 +4234,23 @@ object {
   background-color: #7b5294;
 }
 
+/* line 76, ../_sass/_themed.scss */
+.nav-theme--multi-device-layouts .themed--hover:hover, .theme--multi-device-layouts .themed--hover:hover {
+  color: #297ea9;
+}
+/* line 83, ../_sass/_themed.scss */
+.nav-theme--introduction-to-media .themed--hover:hover, .theme--introduction-to-media .themed--hover:hover {
+  color: #cf423a;
+}
+/* line 90, ../_sass/_themed.scss */
+.nav-theme--user-input .themed--hover:hover, .theme--user-input .themed--hover:hover {
+  color: #2c8566;
+}
+/* line 97, ../_sass/_themed.scss */
+.nav-theme--performance .themed--hover:hover, .theme--performance .themed--hover:hover {
+  color: #7b5294;
+}
+
 /**
 *
 * Styleguide
@@ -4270,6 +4300,11 @@ object {
 .page--styleguide .styleguide__theme-block {
   background: #297ea9;
   padding: 0 13px;
+}
+
+/* line 3, ../_sass/_pages/_page-resources.scss */
+.page--resources .article-section__icon, .page--resources .articles-count {
+  display: none;
 }
 
 /**
