@@ -30,11 +30,9 @@
   margin-bottom: 0;
 
   @include medium {
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    @include flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
   }
 
   h3 {
@@ -45,6 +43,13 @@
     margin: $lineHeight 32px 0;
   }
 
+  .primary-content {
+    @include medium {
+      flex: 1;
+      -webkit-flex: 1;
+    }
+  }
+
   .secondary-content {
     position: relative;
     background: darken($colorGrayBackground, 2%);
@@ -52,8 +57,6 @@
 
     @include medium {
       width: 100%; // needed due to parent being flex
-      -webkit-align-self: flex-end;
-      align-self: flex-end;
     }
 
     .icon-circle {

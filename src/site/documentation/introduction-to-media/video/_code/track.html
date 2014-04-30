@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- // [TEMPLATE header_full] -->
-	<title>Video Element: Tracks</title>
-  <style>
-    /* // [START styling] */
-    video#myvideo {
-        width: 600px;
+  <!-- // [TEMPLATE header_full] -->
+  <title>Video: Provide captions with the track element</title>
+  <style type="text/css">
+    #container {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @media screen and (max-width: 1000px) {
-        video#myvideo {
-            max-width: 100%;
-            width: auto;
-        }
+    video {
+      max-width: 100%;
     }
-    /* // [END styling] */
-    </style>
+
+  </style>
 </head>
 <body>
 <div id="container" role="main">
-
-  <h1>Video Element: Tracks</h1>
-
-  <!-- // [START basic] -->
+  <h1>Video: Provide captions with the <code>track</code> element</h1>
+  <!-- // [START track] -->
   <video controls>
-    <source src="chrome.mp4" type="video/mp4;" />
-    <source src="chrome.webm" type="video/webm" />
-    <track src="chrome-subtitles-en.vtt" label="English captions" 
-         kind="captions" srclang="en" default />
+    <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'" />
+    <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+    <track src="chrome-subtitles-en.vtt" label="English captions"
+           kind="captions" srclang="en" default />
     <p>This browser does not support the video element.</p>
   </video>
-  <!-- // [END basic] -->
+  <!-- // [END track] -->
+  
 
-  <p id="videoSrc"></p>
+  <div id="srcInfo" class="is-hidden">
+    <p>
+      <b>Event type:</b> <span id="srcEvent"></span><br>
+      <b>Current source file:</b> <span id="srcFile"></span><br>
+      <b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span>
+    </p>
+  </div>
+
 
   <script>
-    document.querySelector('video').onloadedmetadata = function(){
-        var fileName = this.currentSrc.replace(/^.*[\\\/]/, '');
-        document.querySelector("#videoSrc").textContent = 'Playing video: ' + fileName;
-    };
+
+  function init() {
+    document.querySelector("video").addEventListener("loadedmetadata", showMetadata);
+  }
+
+  function showMetadata(evt) {
+    var srcInfo = document.querySelector("#srcInfo");
+    var srcEvent = document.querySelector("#srcEvent");
+    var srcFile = document.querySelector("#srcFile");
+    var srcWidth = document.querySelector("#srcWidth");
+    var srcHeight = document.querySelector("#srcHeight");
+
+    srcInfo.classList.remove("is-hidden");
+    srcEvent.innerText = evt.type;
+    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.innerText = this.videoWidth;
+    srcHeight.innerText = this.videoHeight;
+  }
+
+  init();
+  
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->

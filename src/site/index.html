@@ -6,34 +6,35 @@ class: home
 
 <div class="home-header centered">
   <h1>Web Fundamentals</h1>
-  <p>A handbook for best practice</p>
-  <a href="{{site.baseurl}}/getting-started/multi-screen/index.html" class="button--secondary-variation">Get started</a>
+  <p>A handbook for best practices</p>
+  <a href="{{site.baseurl}}/getting-started/your-first-multi-screen-site/" class="button--secondary-variation">Get started</a>
 </div>
 
 <div class="container">
   <div class="centered">
     <h3 class="xlarge">Build great multi-device web experiences</h3>
-    <p class="g-wide--push-1 g-wide--pull-1">Learn how to design and build for the web on any device.
-    <a href="{{site.baseurl}}/getting-started/multi-screen/index.html">Get started</a>
-    or dive into the fundamentals of modern web design and development.</p>
+    <p class="g-wide--push-1 g-wide--pull-1">
+      Web Fundamentals is a comprehensive resource for multi-device web
+      development.  We're just getting started and want your help, if you
+      see something amiss or have a suggestion
+      <a href="{{site.github.root}}/issues">file an issue</a> or
+      <a href="{{site.github.root}}/pulls">submit a pull request</a>.
+    </p>
   </div>
 
-  <ul class="list-guides-intro list-centered list--reset clear">
+  <ul class="list-centered list--reset clear">
     {% for guide in page.articles.the-essentials %}
     <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
       <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
       <h3 class="large text-divider"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
-      <!-- <p>{{ guide.snippet }}</p> -->
       <a href="{{site.baseurl}}{{guide.url}}" class="cta--secondary">Get started</a>
+      <p>{{ guide.snippet }}</p>
     </li>
     {% endfor %}
   </ul>
 </div>
 
-{% comment %}
-The following block should be replaced with the output of the featured_showcase plugin
-{% endcomment %}
-<!--
+{% if site.spotlights == true %}
 <div class="featured-spotlight">
   <div class="container-medium">
     <div class="featured-spotlight__container g--pull-half">
@@ -84,4 +85,4 @@ The following block should be replaced with the output of the featured_showcase 
     </ul>
   </div>
 </div>
--->
+{% endif %}

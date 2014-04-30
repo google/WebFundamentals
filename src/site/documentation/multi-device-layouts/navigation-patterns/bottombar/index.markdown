@@ -29,7 +29,7 @@ For many sites, especially content driven sites, this will be enough space since
 
 If you aren't using a tab and you have too many actions to fit on the App Bar, place actions in a bar along the bottom. 
 
-{% include modules/takeaway.liquid title="TL;DR" list=page.key-takeaways.bottom-bar %}
+{% include modules/takeaway.liquid list=page.key-takeaways.bottom-bar %}
 
 The advantage of this is that you have more space for actions and it's in a touch friendly area and gives you a secondary tier of actions. 
 
