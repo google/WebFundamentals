@@ -34,6 +34,21 @@ In the previous section we saw that the critical rendering path requires that we
 
 {% include modules/takeaway.liquid list=page.key-takeaways.render-blocking-css %}
 
+<div class="clear">
+  <div class="g--half">
+    <b>NYTimes with CSS</b>
+    <img class="center" src="images/nytimes-css-device.png" alt="NYTimes with CSS">
+    
+  </div>
+
+  <div class="g--half g--last">
+    <b>NYTimes without CSS (FOUC)</b>
+    <img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS">
+    
+  </div>
+</div>
+
+{% comment %}
 <table>
 <tr>
 <td>NYTimes with CSS</td>
@@ -44,6 +59,7 @@ In the previous section we saw that the critical rendering path requires that we
 <td><img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS" class="center" /></td>
 </tr>
 </table>
+{% endcomment %}
 
 The above example, showing the NYTimes website with and without CSS, demonstrates why rendering is blocked until CSS is available - without CSS the page is effectively unusable. In fact, the experience on the right is often referred to as a "Flash of Unstyled Content" (FOUC). As a result, the browser will block rendering until it has both the DOM and the CSSOM.
 
@@ -53,9 +69,11 @@ However, what if we have some CSS styles that are only used under certain condit
 
 CSS "media types" and "media queries" allow us to address these use-cases:
 
-    <link href="style.css" rel="stylesheet">
-    <link href="print.css" rel="stylesheet" media="print">
-    <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
+{% highlight html %}
+<link href="style.css" rel="stylesheet">
+<link href="print.css" rel="stylesheet" media="print">
+<link href="other.css" rel="stylesheet" media="(min-width: 40em)">
+{% endhighlight %}
 
 A media query consists of a media type and zero or more expressions that check for the conditions of particular media features. For example, our first stylesheet declaration does not provide any media type or query, hence it will apply in all cases - that is to say, it is always render blocking. On the other hand, the second stylesheet will only apply when the content is being printed - perhaps you want to rearrange the layout, change the fonts, etc - and hence this stylesheet does not need to block the rendering of the page when it is first loaded. Finally, the last stylesheet declaration provides a "media query" which is executed by the browser: if the conditions match, the browser will block rendering until the stylesheet is downloaded and processed.
 
@@ -63,11 +81,12 @@ By using media queries, our presentation can be tailored to specific use cases s
 
 Let's consider some hands-on examples:
 
-    <link href="style.css"    rel="stylesheet">
-    <link href="style.css"    rel="stylesheet" media="screen">
-    <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
-    <link href="print.css"    rel="stylesheet" media="print"></td>
-
+{% highlight html %}
+<link href="style.css"    rel="stylesheet">
+<link href="style.css"    rel="stylesheet" media="screen">
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="print.css"    rel="stylesheet" media="print">
+{% endhighlight %}
 
 * The first declaration is render blocking and matches in all conditions.
 * The second declaration is also render blocking: "screen" is the default type and if you don’t specify any type, it’s implicitly set to "screen". Hence, the first and second declarations are actually equivalent.
