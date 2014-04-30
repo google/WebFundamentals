@@ -3,8 +3,14 @@ layout: article
 title: "Video"
 description: "Learn about the simplest ways to add video to your site and ensure users
               get the best possible experience on any device."
-introduction: "People like videos: videos can be fun and informative; users can also consume information
-               on the go easier than having to read small fonts and scroll down a page on a mobile device."
+introduction: "Videos can be fun, informative, and users can consume information
+               on the go easier than having to read small fonts and scroll down a page on a mobile device.
+               But videos take bandwidth; they don't always work the same across every platform.
+               Any value the user might get from watching video diminishes
+               when the user has to wait for the video to load,
+               or the user presses play and nothing happens.
+               Read more to find the simplest way to add video to your site and
+               ensure users get the best possible experience on any device."
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
@@ -72,14 +78,6 @@ remember:
   }
 
 </style>
-
-But videos take bandwidth, they don't always work the same across every
-platform, so any value the user might get from watching video diminishes when
-the user has to wait for the video to load, or the user presses play and
-nothing happens.
-
-Read more to find the simplest way to add video to your site and ensure
-users get the best possible experience on any device.
 
 ## Add a video
 
