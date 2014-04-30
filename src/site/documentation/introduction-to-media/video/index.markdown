@@ -4,9 +4,7 @@ title: "Video"
 description: "Learn about the simplest ways to add video to your site and ensure users
               get the best possible experience on any device."
 introduction: "Users like videos; they can be fun, informative.
-               On mobile devices,
-               information can be consumed on the go
-               without having to read small fonts and scroll down a page.
+               On mobile devices, videos can be an easier way to consume information.
                But videos take bandwidth;
                they don't always work the same across every platform.
                Users don't like waiting for videos to load,
@@ -23,7 +21,7 @@ key-takeaways:
     - Use the video element to load, decode, and play video on your site.
     - Produce video in multiple formats to cover a range of mobile platforms.
     - Size videos correctly; ensure they don't overflow their containers.
-    - Accessibility matters; add track element as a child of the video element.
+    - Accessibility matters; add the track element as a child of the video element.
 remember:
   media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.
