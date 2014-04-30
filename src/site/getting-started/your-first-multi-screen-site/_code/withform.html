@@ -280,5 +280,27 @@
       <p>We always need a footer.</p>
     </div>
     <!-- // [END footer] -->
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        var inputs = document.querySelectorAll("input");
+        for (var i = 0; i < inputs.length; i++) {
+          var input = inputs[i];
+          input.addEventListener("input", formChanged);
+        }
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function(evt) {
+          sampleCompleted("GettingStarted-WithFormsSubmit");
+          evt.preventDefault();
+        });
+      }
+
+      function formChanged(evt) {
+        sampleCompleted("GettingStarted-WithFormsInput");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>

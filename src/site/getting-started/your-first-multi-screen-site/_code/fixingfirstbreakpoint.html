@@ -371,5 +371,18 @@
       </div>
     </div>
     <!-- // [END footer] -->
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("GettingStarted-FixingFirstBreakoint");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>

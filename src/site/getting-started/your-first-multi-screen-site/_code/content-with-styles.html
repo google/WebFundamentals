@@ -419,5 +419,18 @@
       </div>
     </div>
     <!-- // [END footer] -->
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(max-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("GettingStarted-ContentWithStyles");
+      }
+
+      init();
+
+    </script>
   </body>
 </html>
