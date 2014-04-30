@@ -2405,6 +2405,12 @@ body.debug:after {
   }
 }
 
+/* line 1, ../_sass/_modules/_cc.scss */
+#gc-content-license p {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 /**
 *
 * Grid
