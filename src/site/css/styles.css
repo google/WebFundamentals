@@ -3925,49 +3925,56 @@ img {
 @media only screen and (min-width: 620px) {
   /* line 26, ../_sass/_components/_guides-list.scss */
   .guides-list__item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-direction: column;
+    -webkit-flex-direction: column;
   }
 }
-/* line 40, ../_sass/_components/_guides-list.scss */
+/* line 38, ../_sass/_components/_guides-list.scss */
 .guides-list__item h3 {
   margin: 0 32px;
 }
-/* line 44, ../_sass/_components/_guides-list.scss */
+/* line 42, ../_sass/_components/_guides-list.scss */
 .guides-list__item p {
   margin: 26px 32px 0;
 }
-/* line 48, ../_sass/_components/_guides-list.scss */
+@media only screen and (min-width: 620px) {
+  /* line 46, ../_sass/_components/_guides-list.scss */
+  .guides-list__item .primary-content {
+    flex: 1;
+    -webkit-flex: 1;
+  }
+}
+/* line 53, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content {
   position: relative;
   background: #ebebeb;
   margin-top: 52px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 48, ../_sass/_components/_guides-list.scss */
+  /* line 53, ../_sass/_components/_guides-list.scss */
   .guides-list__item .secondary-content {
     width: 100%;
-    -webkit-align-self: flex-end;
-    align-self: flex-end;
   }
 }
-/* line 59, ../_sass/_components/_guides-list.scss */
+/* line 62, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content .icon-circle {
   position: absolute;
   top: -26px;
   left: 50%;
   margin-left: -22px;
 }
-/* line 67, ../_sass/_components/_guides-list.scss */
+/* line 70, ../_sass/_components/_guides-list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 0 52px;
   margin-top: 0;
 }
-/* line 73, ../_sass/_components/_guides-list.scss */
+/* line 76, ../_sass/_components/_guides-list.scss */
 .guides-list__item:before {
   display: none;
 }
