@@ -29,11 +29,11 @@ module AddWrapper
     end
 
     def render(context)
-      out = '<div'
+      out = '<div class="container">'
+      out += '<div'
       unless @type.nil?
-        out += ' class="' + @type + '"'
+        out += ' class="' + @type + '" markdown="1">'
       end
-      out += '><div class="container" markdown="1">'
       # This markdown=1 is hardly documented anywhere but forces the output to be parsed. http://kramdown.gettalong.org/syntax.html#html-blocks
 
       contents = super

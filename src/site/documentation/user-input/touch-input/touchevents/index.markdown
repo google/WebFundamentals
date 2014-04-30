@@ -342,7 +342,7 @@ Each touch event includes three list attributes:
       </td>
     </tr>
     <tr>
-      <td data-th="Attribute">changedTouches</td>
+      <td data-th="Attribute"><code>changedTouches</code></td>
       <td data-th="Description">
         List of touches which changed resulting in the event being fired:
         <ul>

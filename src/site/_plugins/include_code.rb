@@ -122,8 +122,8 @@ module Jekyll
       <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/resources/samples/#{filepath}">View full sample</a>
     </div>
   </div>
-  <div class="content">
-    <div class="container" markdown="1">
+  <div class="container">
+    <div class="content" markdown="1">
         HTML
       end
   end
