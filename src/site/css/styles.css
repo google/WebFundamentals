@@ -1355,7 +1355,6 @@ body.debug:after {
     right: 45px;
     font-family: "icons";
     font-size: 130px;
-    font-weight: 900;
     line-height: 1px;
     text-align: center;
     height: 100%;
@@ -1363,7 +1362,7 @@ body.debug:after {
     color: #ffffff;
   }
 }
-/* line 425, ../_sass/_utils.scss */
+/* line 424, ../_sass/_utils.scss */
 .highlight-module--left .highlight-module__container:before {
   right: auto;
   left: 45px;
@@ -1374,7 +1373,7 @@ body.debug:after {
     width: 22.2%;
     font-size: 180px;
   }
-  /* line 434, ../_sass/_utils.scss */
+  /* line 433, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 430px;
   }
@@ -2201,18 +2200,6 @@ body.debug:after {
     padding-bottom: 0;
   }
 }
-@media only screen and (max-width: 619px) and (min-width: 800px) {
-  /* line 43, ../_sass/_modules/_home-header.scss */
-  .home-header h1 {
-    font-family: "Roboto Condensed", Helvetica, sans-serif;
-    font-size: 68px;
-    font-weight: 300;
-    line-height: 1.1471em;
-    /* 78px */
-    padding-top: 0.3824em;
-    padding-bottom: 0;
-  }
-}
 @media only screen and (min-width: 620px) {
   /* line 43, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
@@ -2375,6 +2362,34 @@ body.debug:after {
 /* line 1, ../_sass/_modules/_next-lessons.scss */
 .next-lessons {
   text-align: center;
+}
+
+/**
+*
+* Beta banner
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_beta.scss */
+#beta {
+  font-size: 0.8em;
+  position: absolute;
+  top: 10px;
+  left: 180px;
+  right: 16px;
+  text-align: right;
+  line-height: 1;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_beta.scss */
+  #beta {
+    top: 16px;
+  }
 }
 
 /**
@@ -3577,6 +3592,11 @@ td:last-child:after {
 /* line 13, ../_sass/_components/_media.scss */
 img {
   max-width: 100%;
+}
+/* line 16, ../_sass/_components/_media.scss */
+.content img {
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 /**

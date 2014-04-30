@@ -12,4 +12,10 @@
 
 img {
   max-width: 100%;
+
+  .content & {
+    margin-top: $lineHeight;
+    margin-bottom: $lineHeight;
+  }
 }
+
