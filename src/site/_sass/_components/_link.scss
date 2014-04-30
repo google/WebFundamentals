@@ -13,6 +13,8 @@
 a {
   color: $colorBlue;
   text-decoration: none;
+
+  @include prefixr(transition, color 100ms linear);
 }
 
 a:hover {
@@ -20,7 +22,7 @@ a:hover {
 }
 
 .cta--primary {
-  @include style-cta($colorBlue, icon-cheveron-right);
+  @include style-cta($colorBlue, icon-chevron-right);
 }
 
 .cta--secondary {
