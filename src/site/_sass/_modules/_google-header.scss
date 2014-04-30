@@ -1,0 +1,35 @@
+/**
+*
+* Google Developers header bar
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+#gc-googlebar {
+  width: 100%;
+  position: relative;
+  background: #f1f1f1;
+  border-bottom: 1px solid #e5e5e5;
+  height: 48px;
+  margin: 0;
+  overflow: hidden;
+
+  #gc-logo {
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+    float: left;
+    top: 10px;
+
+    img {
+      width: 130px;
+      vertical-align: top;
+    }
+  }
+}

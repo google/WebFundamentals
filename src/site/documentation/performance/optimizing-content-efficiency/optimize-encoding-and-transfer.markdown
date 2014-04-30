@@ -105,8 +105,7 @@ Consider the simple HTML page above and the three different content types that i
 * A “smart” CSS compressor could notice that we’re using an inefficient way of defining rules for ‘.awesome-container’ and collapse the two declarations into one without affecting any other styles, saving yet more bytes.
 * Whitespace (spaces and tabs) is a developer convenience in HTML, CSS, and JavaScript. An additional compressor could strip out all the tabs and spaces.
 
-&nbsp; <!-- TODO.. gah -->
-
+^
 {% include_code _code/minified.html full %}
 
 After applying the above steps our page goes from 406 to 150 characters - 63% compression savings! Granted, it’s not very readable, but it also doesn’t have to be: we can keep the original page as our “development version” and then apply the steps above whenever we are ready to release the page on our website.

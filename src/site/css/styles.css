@@ -9,7 +9,7 @@
 * @author Antoine Grelard
 *
 **/
-@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,900|Open+Sans:400");
+@import url("//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,900");
 /**
 *
 * Utils
@@ -1355,7 +1355,6 @@ body.debug:after {
     right: 45px;
     font-family: "icons";
     font-size: 130px;
-    font-weight: 900;
     line-height: 1px;
     text-align: center;
     height: 100%;
@@ -1363,7 +1362,7 @@ body.debug:after {
     color: #ffffff;
   }
 }
-/* line 425, ../_sass/_utils.scss */
+/* line 424, ../_sass/_utils.scss */
 .highlight-module--left .highlight-module__container:before {
   right: auto;
   left: 45px;
@@ -1374,7 +1373,7 @@ body.debug:after {
     width: 22.2%;
     font-size: 180px;
   }
-  /* line 434, ../_sass/_utils.scss */
+  /* line 433, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 430px;
   }
@@ -2201,18 +2200,6 @@ body.debug:after {
     padding-bottom: 0;
   }
 }
-@media only screen and (max-width: 619px) and (min-width: 800px) {
-  /* line 43, ../_sass/_modules/_home-header.scss */
-  .home-header h1 {
-    font-family: "Roboto Condensed", Helvetica, sans-serif;
-    font-size: 68px;
-    font-weight: 300;
-    line-height: 1.1471em;
-    /* 78px */
-    padding-top: 0.3824em;
-    padding-bottom: 0;
-  }
-}
 @media only screen and (min-width: 620px) {
   /* line 43, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
@@ -2409,6 +2396,140 @@ body.debug:after {
 #gc-content-license p {
   font-size: 0.8em;
   font-style: italic;
+}
+
+/**
+*
+* Google Developers header bar
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_google-header.scss */
+#gc-googlebar {
+  width: 100%;
+  position: relative;
+  background: #f1f1f1;
+  border-bottom: 1px solid #e5e5e5;
+  height: 48px;
+  margin: 0;
+  overflow: hidden;
+}
+/* line 22, ../_sass/_modules/_google-header.scss */
+#gc-googlebar #gc-logo {
+  display: block;
+  height: 50px;
+  text-decoration: none;
+  position: relative;
+  float: left;
+  top: 10px;
+}
+/* line 30, ../_sass/_modules/_google-header.scss */
+#gc-googlebar #gc-logo img {
+  width: 130px;
+  vertical-align: top;
+}
+
+/**
+*
+* Google Developers footer bar
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 14, ../_sass/_modules/_google-footer.scss */
+#gc-footer,
+#gc-footer ul {
+  font-size: 12px;
+  font-weight: normal;
+  background: #333;
+  line-height: 44px;
+}
+
+/* line 21, ../_sass/_modules/_google-footer.scss */
+#gc-footer {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  padding: 0 44px;
+}
+/* line 27, ../_sass/_modules/_google-footer.scss */
+#gc-footer div {
+  line-height: 44px;
+}
+/* line 28, ../_sass/_modules/_google-footer.scss */
+#gc-footer li {
+  margin: 0 30px 0 0;
+}
+/* line 31, ../_sass/_modules/_google-footer.scss */
+#gc-footer li:before {
+  display: none;
+}
+/* line 34, ../_sass/_modules/_google-footer.scss */
+#gc-footer a,
+#gc-footer a:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 39, ../_sass/_modules/_google-footer.scss */
+#gc-footer a:hover,
+#gc-footer a:visited:hover {
+  text-decoration: underline;
+}
+/* line 40, ../_sass/_modules/_google-footer.scss */
+#gc-footer .kd-select {
+  margin-bottom: 2px;
+}
+/* line 41, ../_sass/_modules/_google-footer.scss */
+#gc-footer #developers-logo-footer {
+  float: left;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+/* line 46, ../_sass/_modules/_google-footer.scss */
+#gc-footer #gc-copyright {
+  float: left;
+  width: 75%;
+}
+/* line 50, ../_sass/_modules/_google-footer.scss */
+#gc-footer #gc-copyright img {
+  vertical-align: center;
+  float: left;
+}
+/* line 57, ../_sass/_modules/_google-footer.scss */
+#gc-footer > div ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 64, ../_sass/_modules/_google-footer.scss */
+#gc-footer > div ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 75, ../_sass/_modules/_google-footer.scss */
+#gc-footer > div ul li:first-child, #gc-footer > div ul li.first {
+  padding-left: 0;
+}
+/* line 77, ../_sass/_modules/_google-footer.scss */
+#gc-footer > div ul li:last-child, #gc-footer > div ul li.last {
+  padding-right: 0;
 }
 
 /**
@@ -3611,6 +3732,11 @@ td:last-child:after {
 /* line 13, ../_sass/_components/_media.scss */
 img {
   max-width: 100%;
+}
+/* line 16, ../_sass/_components/_media.scss */
+.content img {
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 /**
