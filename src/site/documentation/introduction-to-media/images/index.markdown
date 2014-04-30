@@ -69,7 +69,8 @@ Responsive web design means that not only can our layouts change based on device
 characteristics, but content as well.  For example, on high resolution (2x)
 displays, high resolution graphics are needed to ensure sharpness.  An image
 that  is 50% width may work just fine when the browser is 800px wide, but will
-use too much real estate on a narrow phone.
+use too much real estate on a narrow phone, and still comes at the same
+bandwidth overhead when scaled down to fit on a smaller screen.
 
 ### Art direction
 
