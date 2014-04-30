@@ -49,7 +49,7 @@
 
 .button--secondary {
   @extend .button;
-  @include style-button(#fafafa, $colorBlue);
+  @include style-button(#ffffff, $colorBlue);
 }
 
 .button--secondary-variation {

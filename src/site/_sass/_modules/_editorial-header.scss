@@ -23,15 +23,12 @@
 
   .container {
 
-    &:before {
-      @extend .icon-cheveron-right:before;
-    }
-
     @include medium {
       position: relative;
 
       // Pseudo elements to add the background characters
       &:before {
+        content: $icon-cheveron-right;
         font-family: $fontIcon;
         display: block;
         position: absolute;

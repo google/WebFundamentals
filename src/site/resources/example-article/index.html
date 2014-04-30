@@ -7,6 +7,8 @@ learning-list:
   - Lorem ipsum dolor sit amet
   - Fugit itaque sapiente earum quo expedita
   - labore aliquam cupiditate veritatis nihil
+  - Lorem ipsum dolor sit amet
+  - Fugit itaque sapiente earum quo expedita
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -28,10 +30,10 @@ collection: resources
 
     <div class="toc">
       <h3 class="toc__title">In this lesson</h3>
-      <ol class="toc__list">
-        <li>Subtitle One</li>
-        <li>Subtitle Two</li>
-        <li>Subtitle Three</li>
+      <ol class="toc__list list-anchor">
+        <li><a href="#">Subtitle One</a></li>
+        <li><a href="#">Subtitle Two</a></li>
+        <li><a href="#">Subtitle Three</a></li>
       </ol>
     </div>
 
@@ -68,7 +70,22 @@ collection: resources
 
     {% include modules/takeaway.liquid list=page.learning-list %}
 
+  </div>
+</div>
 
+<div class="next-lessons container-medium">
+  <h3><i class="icon icon-lessons"></i> Next Lessons</h3>
+  <ol class="list-lessons">
+    <li><a href="#">Lesson title one</a></li>
+    <li class="current"><a href="#">Lesson title two</a></li>
+    <li><a href="#">Lesson title three</a></li>
+    <li><a href="#">Lesson title four</a></li>
+    <li><a href="#">Lesson title five</a></li>
+  </ol>
+</div>
+
+<div class="content">
+  <div class="container">
     <div class="related-guides clear">
       <h3 class="related-guides__title g-wide--1 g-medium--full">Related guides</h3>
       <div class="related-guides__section clear">
@@ -88,18 +105,5 @@ collection: resources
         </ul>
       </div>
     </div>
-
-    <div class="editorial-header__toc">
-      <p class="medium editorial-header__toc-title"><i class="icon icon-lessons"></i> More lessons in Layout Basics</p>
-      <ol class="list--links list--variant">
-        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-        <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
-        <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-        <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
-        <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
-      </ol>
-    </div>
-
   </div>
 </div>

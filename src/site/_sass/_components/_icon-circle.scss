@@ -35,11 +35,35 @@
 }
 
 .icon-circle--large {
-  padding: $lineHeight + $lineHeight/2;
   margin-top: 0;
   margin-bottom: 0;
+  padding: $lineHeight;
+  position: relative;
 
   i {
-    font-size: $fontXLarge;
+    font-size: $fontLarge;
+
+    @include medium {
+      font-size: $fontXLarge;
+    }
   }
+
+  @include medium {
+    padding: $lineHeight + $lineHeight/2;
+
+    &:after {
+      content: "";
+      display: block;
+
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+
+      border: 1px solid rgba(#ffffff, .42);
+      border-radius: 100%;
+    }
+  }
+
 }
