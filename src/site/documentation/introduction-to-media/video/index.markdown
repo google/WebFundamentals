@@ -77,23 +77,23 @@ Add the video element to load, decode, and play video in your site:
 
 ### Specify multiple file formats
 
-Not all browsers support the same video formats. 
+Not all browsers support the same video formats.
 The `<source>` element lets you specify multiple formats
 as a fallback in case the user's browser doesn't support one of them.
 For example:
 
 {% include_code _code/video-main.html sourcetypes %}
 
-When the browser parses the `<source>` tags, it uses the optional `type` 
-attribute to help decide which file to download and play. If the browser 
-supports WebM and has the VP8 and Vorbis codecs, it will play 
-chrome.webm, if not, it will check if it can play MPEG-4 videos with the 
+When the browser parses the `<source>` tags, it uses the optional `type`
+attribute to help decide which file to download and play. If the browser
+supports WebM and has the VP8 and Vorbis codecs, it will play
+chrome.webm, if not, it will check if it can play MPEG-4 videos with the
 avc1.42E01E and mp4a.40.2 codecs, and so forth.
 Check out
 <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a>
 to find out more about how video and audio work on the web.
 
-This approach has several advantages over serving different HTML or 
+This approach has several advantages over serving different HTML or
 server-side scripting, especially on mobile:
 
 * Developers can list formats in order of preference.
@@ -101,7 +101,7 @@ server-side scripting, especially on mobile:
   get content.
 * Letting the browser choose a format is simpler, quicker and potentially
   more reliable than using a server-side support database with user-agent detection.
-* Specifying each file source's type improves network performance; the browser can select a 
+* Specifying each file source's type improves network performance; the browser can select a
   video source without having to download part of the video to 'sniff' the format.
 
 All of these points are especially important in mobile contexts, where bandwidth
@@ -125,8 +125,8 @@ Fragments API to add a start and end time to the video element.
   <p>This browser does not support the video element.</p>
 </video>
 
-To add a media fragment, you simply add `#t=[start_time][,end_time]` to the 
-media URL. For example, to play the video between seconds 5 through 10, 
+To add a media fragment, you simply add `#t=[start_time][,end_time]` to the
+media URL. For example, to play the video between seconds 5 through 10,
 specify:
 
 {% highlight html %}
@@ -227,7 +227,7 @@ run in Chrome:
   <tbody>
     <tr>
       <td><code>video/xyz</code></td>
-      <td>(blank string)</td>
+      <td>(empty string)</td>
     </tr>
     <tr>
       <td><code>video/xyz; codecs="avc1.42E01E, mp4a.40.2"</code></td>
@@ -268,18 +268,11 @@ There are lots of tools to help save the same video in different formats:
 
 Want to know which video format was actually chosen by the browser?
 
-In JavaScript, use the video's `currentSrc` property to return the source used:
+In JavaScript, use the video's `currentSrc` property to return the source used.
 
-{% include_code _code/video-main.html currentsrc javascript %}
-
-{% comment %}
-<!--
-  PL - this makes no sense in the given context, something must've been removed.
-Given the source example above, Chrome and Firefox choose `chrome.webm`
+To see this in action, check out {% link_sample _code/video-main.html %}this demo{% endlink_sample %}: Chrome and Firefox choose `chrome.webm`
 (because that's the first in the list of potential sources these browsers
 support) whereas Safari chooses `chrome.mp4`.
--->
-{% endcomment %}
 
 ## Size videos correctly
 
@@ -291,13 +284,6 @@ When it comes to keeping your users happy, size matters:
 * Long videos can cause hiccups with download and seeking; some browsers may
   have to wait until the video downloads before beginning playback.
 
-{% comment %} 
-<!--
-  PL - We should remove this, it's mean to tell someone to open a 300+ meg file on their mobile device!
-Try this example on your mobile browser and see what happens:
-[simpl.info/longvideo](//simpl.info/longvideo).
--->
-{% endcomment %}
 
 ### Check video size
 
@@ -331,16 +317,7 @@ and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain
 appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
-Use [CSS media queries](../../multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) to specify the size of elements depending on
-the viewport dimensions; `max-width: 100%` is your friend.
-
-{% comment %}
-<!--
-  PL - I took this out because the example didn't make sense from a real
-  world practical view.
-{% include_code _code/video-main.html mediaquery css %}
--->
-{% endcomment %}
+Use [CSS media queries](../../multi-device-layouts/rwd-fundamentals/index.html#use-css-media-queries-for-responsiveness) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
 
@@ -447,7 +424,7 @@ images as placeholders for video:
   <p>This browser does not support the video element.</p>
 </video>
 
-To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}. 
+To see this in action, check out the {% link_sample _code/fullscreen.html %}demo{% endlink_sample %}.
 
 **NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
