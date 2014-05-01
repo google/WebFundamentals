@@ -158,11 +158,7 @@ Now that we have the start and end events taken care of we can actually respond 
 For any of the start and move events, you can easily extract `x` and `y`
 from an event.
 
-The following code snippet first assumes the event is from a
-mouse, extracting `screenX` and `screenY`. It then checks to see if pointer
-events are supported, and if so, gets `clientX` and `clientY` from the event.
-If it’s not, the code checks for `targetTouches` and extracts the first
-touch, if the variable exists:
+The following code snippet checks whether the event is from a touch event by looking for `targetTouches`, if it is then it extracts the `clientX` and `clientY` from the first touch. If the event is a mouse or pointer event then we extract `clientX` and `clientY` directly from the event itself.
 
 {%include_code ../_code/touch-demo-2.html extract-xy javascript %}
 

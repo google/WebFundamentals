@@ -327,20 +327,17 @@
         }
         
         function getGesturePointFromEvent(evt) {
-          var point = {
-            x: evt.screenX,
-            y: evt.screenY
-          };
-          
-          // Prefer touch events if we have them.
-          if (window.navigator.msPointerEnabled) {
-            point.x = evt.clientX;
-            point.y = evt.clientY;
-          } else if (evt.targetTouches && evt.targetTouches.length > 0) {
+          var point = {};
+
+          if(evt.targetTouches) {
             point.x = evt.targetTouches[0].clientX;
             point.y = evt.targetTouches[0].clientY;
+          } else {
+            // Either Mouse event or Pointer Event
+            point.x = evt.clientX;
+            point.y = evt.clientY;
           }
-          
+
           return point;
         }
         
