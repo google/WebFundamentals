@@ -1139,6 +1139,7 @@ body.debug:after {
     display: inline-block;
     line-height: 1;
     text-decoration: none;
+    display: block;
   }
   /* line 386, ../_sass/_utils.scss */
   .main-nav__link--explore:hover {
@@ -1151,27 +1152,27 @@ body.debug:after {
     font-family: "icons";
     line-height: 25px;
     font-size: 13px;
-    content: icon-chevron-right;
+    content: "\e005";
   }
 }
 
-/* line 222, ../_sass/_modules/_main-navigation.scss */
+/* line 223, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 222, ../_sass/_modules/_main-navigation.scss */
+  /* line 223, ../_sass/_modules/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 230, ../_sass/_modules/_main-navigation.scss */
+/* line 231, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }
 
-/* line 235, ../_sass/_modules/_main-navigation.scss */
+/* line 236, ../_sass/_modules/_main-navigation.scss */
 .main-nav__btn {
   position: absolute;
   top: 0;
@@ -1187,36 +1188,36 @@ body.debug:after {
   outline: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 235, ../_sass/_modules/_main-navigation.scss */
+  /* line 236, ../_sass/_modules/_main-navigation.scss */
   .main-nav__btn {
     display: none;
   }
 }
 
-/* line 255, ../_sass/_modules/_main-navigation.scss */
+/* line 256, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn {
   top: -6px;
 }
-/* line 258, ../_sass/_modules/_main-navigation.scss */
+/* line 259, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn i:before {
   font-size: 20px;
   content: "\e007";
 }
 
 /*==========  ICONS  ==========*/
-/* line 266, ../_sass/_modules/_main-navigation.scss */
+/* line 267, ../_sass/_modules/_main-navigation.scss */
 .main-nav__icon {
   float: right;
   font-size: 16px;
   line-height: 26px;
   vertical-align: middle;
 }
-/* line 272, ../_sass/_modules/_main-navigation.scss */
+/* line 273, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav .main-nav__icon {
   font-size: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 266, ../_sass/_modules/_main-navigation.scss */
+  /* line 267, ../_sass/_modules/_main-navigation.scss */
   .main-nav__icon {
     display: none;
     font-size: 13px;
@@ -1224,13 +1225,13 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 283, ../_sass/_modules/_main-navigation.scss */
+  /* line 284, ../_sass/_modules/_main-navigation.scss */
   .icon-custom:before {
     content: "\e002";
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 282, ../_sass/_modules/_main-navigation.scss */
+  /* line 283, ../_sass/_modules/_main-navigation.scss */
   .icon-custom {
     float: none;
     display: inline-block;
@@ -1241,20 +1242,20 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 301, ../_sass/_modules/_main-navigation.scss */
+  /* line 302, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
     content: "\e006";
   }
 }
 
-/* line 313, ../_sass/_modules/_main-navigation.scss */
+/* line 314, ../_sass/_modules/_main-navigation.scss */
 .main-nav .main-nav__guide-icon {
   display: inline-block;
   vertical-align: top;
   margin-right: 6px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 313, ../_sass/_modules/_main-navigation.scss */
+  /* line 314, ../_sass/_modules/_main-navigation.scss */
   .main-nav .main-nav__guide-icon {
     vertical-align: middle;
   }
@@ -1262,12 +1263,12 @@ body.debug:after {
 
 /*==========  CSS ANIMATION  ==========*/
 @-webkit-keyframes showNav {
-  /* line 326, ../_sass/_modules/_main-navigation.scss */
+  /* line 327, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 329, ../_sass/_modules/_main-navigation.scss */
+  /* line 330, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
