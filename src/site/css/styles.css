@@ -2840,12 +2840,19 @@ body.debug:after {
   margin-right: 0;
 }
 
-/* line 145, ../_sass/_components/_grid.scss */
+/* line 138, ../_sass/_components/_grid.scss */
+.g--centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 147, ../_sass/_components/_grid.scss */
 .grid-overlay {
   display: none;
   pointer-events: none;
 }
-/* line 151, ../_sass/_components/_grid.scss */
+/* line 153, ../_sass/_components/_grid.scss */
 .debug .grid-overlay {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -2865,7 +2872,7 @@ body.debug:after {
   display: block;
 }
 @media only screen and (min-width: 620px) {
-  /* line 151, ../_sass/_components/_grid.scss */
+  /* line 153, ../_sass/_components/_grid.scss */
   .debug .grid-overlay {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -2873,26 +2880,26 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 151, ../_sass/_components/_grid.scss */
+  /* line 153, ../_sass/_components/_grid.scss */
   .debug .grid-overlay {
     padding-left: 4.4%;
     padding-right: 4.4%;
     max-width: 864px;
   }
 }
-/* line 162, ../_sass/_components/_grid.scss */
+/* line 164, ../_sass/_components/_grid.scss */
 .debug .grid-overlay [class*="g-"] {
   height: 100%;
   background-color: rgba(89, 89, 89, 0.2);
 }
 @media only screen and (min-width: 620px) and (max-width: 799px) {
-  /* line 168, ../_sass/_components/_grid.scss */
+  /* line 170, ../_sass/_components/_grid.scss */
   .debug .grid-overlay .g-wide--last {
     display: none;
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 151, ../_sass/_components/_grid.scss */
+  /* line 153, ../_sass/_components/_grid.scss */
   .debug .grid-overlay {
     display: none;
   }

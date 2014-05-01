@@ -136,7 +136,9 @@
 
 // This is a global 'centered' class
 .g--centered {
-
+  float: none; // reset float to none so we can center it
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // This is a grid overlay
