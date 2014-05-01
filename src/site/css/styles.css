@@ -4584,16 +4584,27 @@ object {
   padding: 0 13px;
 }
 
-/* line 4, ../_sass/_pages/_page-resources.scss */
+/**
+*
+* Resources page
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 16, ../_sass/_pages/_page-resources.scss */
 .page--resources .article-section__icon, .page--resources .articles-count, .page--resources .guides-list__item .secondary-content {
   display: none;
 }
-/* line 8, ../_sass/_pages/_page-resources.scss */
+/* line 20, ../_sass/_pages/_page-resources.scss */
 .page--resources .primary-content {
   padding-top: 26px;
   padding-bottom: 52px;
 }
-/* line 12, ../_sass/_pages/_page-resources.scss */
+/* line 24, ../_sass/_pages/_page-resources.scss */
 .page--resources .primary-content p {
   margin-top: 0;
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Thu May  1 17:52:49 2014
+Created by FontForge 20120731 at Thu May  1 18:05:22 2014
  By Pedro Duarte
 Created by Pedro Duarte with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
@@ -78,7 +78,7 @@ d="M372 448l-200 -512h-172l201 512h171z" />
     <glyph glyph-name="uniE017" unicode="&#xe017;" 
 d="M182 162l-182 52l36 108l177 -75l-13 201h119l-15 -205l172 73l36 -109l-183 -52l121 -152l-95 -67l-103 168l-101 -162l-96 64z" />
     <glyph glyph-name="uniE018" unicode="&#xe018;" 
-d="M422 414l90 -43l-196 -406l-90 43l-226 109l44 90l225 -109z" />
+d="M0 92l50 104l301 -145l-50 -104zM512 386l-211 -439l-105 50l212 439z" />
     <glyph glyph-name="uniE019" unicode="&#xe019;" 
 d="M314 192q0 -24 -17 -41t-41 -17t-41 17t-17 41t17 41t41 17t41 -17t17 -41zM256 320q-53 0 -90.5 -37.5t-37.5 -90.5t37.5 -90.5t90.5 -37.5t90.5 37.5t37.5 90.5t-37.5 90.5t-90.5 37.5zM256 343q63 0 107 -44t44 -107t-44 -107t-107 -44t-107 44t-44 107t44 107t107 44
 zM256 436q-101 0 -172.5 -71.5t-71.5 -172.5t71.5 -172.5t172.5 -71.5t172.5 71.5t71.5 172.5t-71.5 172.5t-172.5 71.5zM256 448q106 0 181 -75t75 -181t-75 -181t-181 -75t-181 75t-75 181t75 181t181 75z" />
