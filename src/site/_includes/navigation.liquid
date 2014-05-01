@@ -3,7 +3,7 @@
   <ul class="main-nav__list clear">
   {% for section in page.content.toc %}
     <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}">
-      <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="{{ section.title }}">
+      <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
         {{ section.title }}
 
         {% if false || section.title == "Documentation" %}
@@ -18,13 +18,13 @@
         <div class="main-nav__secondary-nav">
 
           <div class="main-nav__secondary-content">
-            <a href="{{site.baseurl}}{{ section.path }}" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation <i class="main-nav__icon icon icon-chevron-right"></i></a>
+            <a href="{{site.baseurl}}{{ section.path }}" title="Explore The Documentation" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation <i class="main-nav__icon icon icon-chevron-right"></i></a>
 
             <div class="clear">
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
-                    <a class="main-nav__link main-nav__link--child themed--hover" href="{{site.baseurl}}{{ subsection.path }}">
+                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.baseurl}}{{ subsection.path }}">
                       <span class="main-nav__guide-icon icon-circle themed--background"><i class="icon icon-{{subsection.id}}"></i></span> {{ subsection.title }} <i class="main-nav__icon icon icon-chevron-right"></i>
                     </a>
                   </li>
@@ -35,7 +35,7 @@
               <div class="main-nav__featured g-medium--1 g-medium--last g-wide--2 g-wide--last">
                 <p class="main-nav__featured-title medium">Feature case study</p>
                 <p class="main-nav__featured-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consectetur adipiscing elit.</p>
-                <a href="{{site.baseurl}}#" class="cta--secondary main-nav__featured-cta">View</a>
+                <a href="{{site.baseurl}}#" title="View the case study" class="cta--secondary main-nav__featured-cta">View</a>
               </div>
               {% endcomment %}
             </div>
