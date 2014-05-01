@@ -1933,7 +1933,7 @@ body.debug:after {
 .guides-section {
   background: #f0f0f0;
   text-align: center;
-  padding: 26px 0 52px;
+  padding: 26px 0 104px;
 }
 
 /**
@@ -2750,84 +2750,52 @@ body.debug:after {
 *
 **/
 /* line 14, ../_sass/_modules/_google-footer.scss */
-#gc-footer,
-#gc-footer ul {
-  font-size: 12px;
-  font-weight: normal;
-  background: #333;
-  line-height: 44px;
-}
-
-/* line 21, ../_sass/_modules/_google-footer.scss */
 #gc-footer {
+  font-size: 13px;
+  background: #404040;
+  font-weight: 400;
+  padding: 26px 0 52px;
   overflow: hidden;
-  *zoom: 1;
   clear: both;
 }
-/* line 26, ../_sass/_modules/_google-footer.scss */
-#gc-footer div {
-  line-height: 44px;
+/* line 23, ../_sass/_modules/_google-footer.scss */
+#gc-footer ul {
+  margin: 0 0 0 52px;
+  padding: 0;
 }
-/* line 27, ../_sass/_modules/_google-footer.scss */
+/* line 28, ../_sass/_modules/_google-footer.scss */
 #gc-footer li {
-  margin: 0 30px 0 0;
+  padding-left: 0;
 }
-/* line 30, ../_sass/_modules/_google-footer.scss */
+@media only screen and (min-width: 620px) {
+  /* line 28, ../_sass/_modules/_google-footer.scss */
+  #gc-footer li {
+    margin-right: 30px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+}
+/* line 38, ../_sass/_modules/_google-footer.scss */
+#gc-footer li a {
+  color: #e0e0e0;
+  font-size: 16px;
+  display: block;
+}
+@media only screen and (min-width: 620px) {
+  /* line 38, ../_sass/_modules/_google-footer.scss */
+  #gc-footer li a {
+    font-size: 13px;
+  }
+}
+/* line 48, ../_sass/_modules/_google-footer.scss */
 #gc-footer li:before {
   display: none;
 }
-/* line 33, ../_sass/_modules/_google-footer.scss */
-#gc-footer a,
-#gc-footer a:visited {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-}
-/* line 38, ../_sass/_modules/_google-footer.scss */
-#gc-footer a:hover,
-#gc-footer a:visited:hover {
-  text-decoration: underline;
-}
-/* line 39, ../_sass/_modules/_google-footer.scss */
-#gc-footer .kd-select {
-  margin-bottom: 2px;
-}
-/* line 40, ../_sass/_modules/_google-footer.scss */
-#gc-footer #developers-logo-footer {
-  float: left;
-  margin-top: 10px;
-  margin-right: 30px;
-}
-/* line 47, ../_sass/_modules/_google-footer.scss */
-#gc-footer #gc-copyright img {
+/* line 51, ../_sass/_modules/_google-footer.scss */
+#gc-footer img {
   vertical-align: center;
   float: left;
-}
-/* line 54, ../_sass/_modules/_google-footer.scss */
-#gc-footer > div ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 61, ../_sass/_modules/_google-footer.scss */
-#gc-footer > div ul li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-/* line 72, ../_sass/_modules/_google-footer.scss */
-#gc-footer > div ul li:first-child, #gc-footer > div ul li.first {
-  padding-left: 0;
-}
-/* line 74, ../_sass/_modules/_google-footer.scss */
-#gc-footer > div ul li:last-child, #gc-footer > div ul li.last {
-  padding-right: 0;
+  margin-top: 1px;
 }
 
 /**
@@ -4620,9 +4588,18 @@ object {
   padding: 0 13px;
 }
 
-/* line 3, ../_sass/_pages/_page-resources.scss */
-.page--resources .article-section__icon, .page--resources .articles-count {
+/* line 4, ../_sass/_pages/_page-resources.scss */
+.page--resources .article-section__icon, .page--resources .articles-count, .page--resources .guides-list__item .secondary-content {
   display: none;
+}
+/* line 8, ../_sass/_pages/_page-resources.scss */
+.page--resources .primary-content {
+  padding-top: 26px;
+  padding-bottom: 52px;
+}
+/* line 12, ../_sass/_pages/_page-resources.scss */
+.page--resources .primary-content p {
+  margin-top: 0;
 }
 
 /**
