@@ -64,7 +64,9 @@
   }
 
   p {
-    padding-left: 52px;
+    @include medium {
+      padding-left: 52px;
+    }
   }
 }
 
@@ -78,7 +80,9 @@
   }
 
   p {
-    padding-right: 52px;
+    @include medium {
+      padding-right: 52px;
+    }
   }
 }
 
