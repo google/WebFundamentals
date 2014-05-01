@@ -632,8 +632,8 @@ body.debug:after {
 
 @font-face {
   font-family: "icons";
-  src: url("../icons/icons.eot");
-  src: url("../icons/icons.eot?#iefix") format("embedded-opentype"), url("../icons/icons.woff") format("woff"), url("../icons/icons.ttf") format("truetype"), url("../icons/icons.svg?#icons") format("svg");
+  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot");
+  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot?#iefix") format("embedded-opentype"), url("//web-central.appspot.com/web/essentials/icons/icons.woff") format("woff"), url("//web-central.appspot.com/web/essentials/icons/icons.ttf") format("truetype"), url("//web-central.appspot.com/web/essentials/icons/icons.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2470,7 +2470,11 @@ body.debug:after {
   display: block;
 }
 
-<<<<<<< HEAD
+/* line 38, ../_sass/_modules/_toc.scss */
+.toc__sublist {
+  padding-top: 0;
+}
+
 /**
 *
 * Next Lessons
@@ -2483,14 +2487,6 @@ body.debug:after {
 *
 **/
 /* line 13, ../_sass/_modules/_next-lessons.scss */
-=======
-/* line 38, ../_sass/_modules/_toc.scss */
-.toc__sublist {
-  padding-top: 0;
-}
-
-/* line 1, ../_sass/_modules/_next-lessons.scss */
->>>>>>> 08232e5116f707252617db8a8f907d58d87da5ac
 .next-lessons {
   background: #404040;
   padding: 26px 26px 52px;
