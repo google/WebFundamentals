@@ -224,7 +224,11 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
 `max-height`.
 
 
-<table class="table--2">
+<table class="table-2">
+  <colgroup>
+    <col span="1">
+    <col span="1">
+  </colgroup>
   <thead>
     <tr>
       <th data-th="attribute">attribute</th>

@@ -106,7 +106,7 @@ td:last-child:after {
   }
 }
 
-.table--2 {
+.table-2 {
   col {
     width: $mediumContainer / 2;
     @include wide {
@@ -124,7 +124,7 @@ td:last-child:after {
   }
 }
 
-.table--3 {
+.table-3 {
   col {
     width: $mediumContainer / 3;
     @include wide {
@@ -143,7 +143,7 @@ td:last-child:after {
   }
 }
 
-.table--4 {
+.table-4 {
   col {
     width: $mediumContainer / 4;
     @include wide {
