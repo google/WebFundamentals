@@ -99,7 +99,8 @@
     margin: 0;
     padding-top: $lineHeight;
     margin-left: - $lineHeight;
-    font-size: $fontSmall;
+    font-size: $fontSmall - 1;
+    line-height: $lineHeight - ($lineHeight/4);
 
     span {
       margin: 0;

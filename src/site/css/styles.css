@@ -1553,26 +1553,27 @@ body.debug:after {
   margin: 0;
   padding-top: 26px;
   margin-left: -26px;
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 19.5px;
 }
-/* line 104, ../_sass/_modules/_highlight.scss */
+/* line 105, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 111, ../_sass/_modules/_highlight.scss */
+/* line 112, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
   display: block;
 }
-/* line 118, ../_sass/_modules/_highlight.scss */
+/* line 119, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__container {
   padding-bottom: 0;
 }
-/* line 122, ../_sass/_modules/_highlight.scss */
+/* line 123, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__cta {
   position: absolute;
   bottom: -26px;
@@ -1580,7 +1581,7 @@ body.debug:after {
 
 /*==========  LEFT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 132, ../_sass/_modules/_highlight.scss */
+  /* line 133, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1589,14 +1590,14 @@ body.debug:after {
 
 /*==========  RIGHT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 143, ../_sass/_modules/_highlight.scss */
+  /* line 144, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 151, ../_sass/_modules/_highlight.scss */
+  /* line 152, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
@@ -3492,17 +3493,21 @@ ol.list--variation li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 286, ../_sass/_components/_list.scss */
+/* line 285, ../_sass/_components/_list.scss */
+.list--reset {
+  padding-left: 0;
+}
+/* line 288, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 291, ../_sass/_components/_list.scss */
+/* line 293, ../_sass/_components/_list.scss */
 .list--reset.list-links a:before, .list--reset li:before {
   display: none !important;
 }
 
 /*==========  LESSONS  ==========*/
-/* line 298, ../_sass/_components/_list.scss */
+/* line 300, ../_sass/_components/_list.scss */
 .list-lessons {
   background: #404040;
   padding: 0 26px 26px;
@@ -3512,29 +3517,29 @@ ol.list--variation li a:before {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   white-space: pre-line;
 }
-/* line 307, ../_sass/_components/_list.scss */
+/* line 309, ../_sass/_components/_list.scss */
 .list-lessons a {
   color: #ffffff;
 }
-/* line 311, ../_sass/_components/_list.scss */
+/* line 313, ../_sass/_components/_list.scss */
 .list-lessons li {
   display: inline-block;
   width: auto;
   clear: both;
   padding-left: 0;
 }
-/* line 317, ../_sass/_components/_list.scss */
+/* line 319, ../_sass/_components/_list.scss */
 .list-lessons li:before {
   display: inline-block;
   position: static;
   padding-right: 16px;
 }
-/* line 326, ../_sass/_components/_list.scss */
+/* line 328, ../_sass/_components/_list.scss */
 .list-lessons .current,
 .list-lessons .current a {
   color: #e0e0e0;
 }
-/* line 331, ../_sass/_components/_list.scss */
+/* line 333, ../_sass/_components/_list.scss */
 .list-lessons .current ~ li {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 26px;
@@ -3546,7 +3551,7 @@ ol.list--variation li a:before {
   padding-top: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 331, ../_sass/_components/_list.scss */
+  /* line 333, ../_sass/_components/_list.scss */
   .list-lessons .current ~ li {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -3558,41 +3563,41 @@ ol.list--variation li a:before {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 331, ../_sass/_components/_list.scss */
+  /* line 333, ../_sass/_components/_list.scss */
   .list-lessons .current ~ li {
     padding-top: 0;
   }
 }
-/* line 339, ../_sass/_components/_list.scss */
+/* line 341, ../_sass/_components/_list.scss */
 .list-lessons .current ~ li:before {
   font-weight: 400;
 }
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
-/* line 349, ../_sass/_components/_list.scss */
+/* line 351, ../_sass/_components/_list.scss */
 .list-guides-intro {
   margin-bottom: 52px;
 }
 @media only screen and (max-width: 619px) {
-  /* line 349, ../_sass/_components/_list.scss */
+  /* line 351, ../_sass/_components/_list.scss */
   .list-guides-intro {
     padding-top: 52px;
   }
 }
-/* line 356, ../_sass/_components/_list.scss */
+/* line 358, ../_sass/_components/_list.scss */
 .list-guides-intro li {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 51px;
   margin-bottom: 52px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 356, ../_sass/_components/_list.scss */
+  /* line 358, ../_sass/_components/_list.scss */
   .list-guides-intro li {
     border-color: transparent;
     padding-bottom: 0;
   }
 }
-/* line 366, ../_sass/_components/_list.scss */
+/* line 368, ../_sass/_components/_list.scss */
 .list-guides-intro li:last-child {
   border-bottom: transparent;
   margin-bottom: 0;
@@ -3641,7 +3646,7 @@ a:hover {
   display: inline-block;
   padding-right: 10px;
   font-family: "icons";
-  line-height: 26px;
+  line-height: 25px;
   font-size: 13px;
 }
 
