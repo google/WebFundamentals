@@ -14,21 +14,44 @@
   width: 100%;
   position: relative;
   background: #f1f1f1;
-  border-bottom: 1px solid #e5e5e5;
-  height: 52px;
   margin: 0;
+  padding: 0 0 $lineHeight;
+
+  @include medium {
+    height: $lineHeight * 4;
+    padding-bottom: 0;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+}
+
+#gc-logo {
+  text-decoration: none;
+  display: block;
+  margin: $lineHeight auto;
+  width: 43px;
+
   overflow: hidden;
 
-  #gc-logo {
-    display: block;
-    text-decoration: none;
-    position: relative;
-    float: left;
-    top: 10px;
 
-    img {
-      width: 130px;
-      vertical-align: top;
+
+  @include medium {
+    float: left;
+    margin-top: 29px;
+    width: 56px;
+    width: auto;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 158px;
+    max-width: none;
+
+    @include medium {
+      width: 210px;
     }
   }
 }

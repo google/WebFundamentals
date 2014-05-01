@@ -79,6 +79,7 @@ ul.list-links {
       font-weight: 400;
       font-family: $fontHighlight;
       line-height: 1; // fixes baseline grid alignment
+      text-decoration: none;
     }
   }
 }
@@ -298,49 +299,28 @@ ol.list--variation {
 
 /*==========  LESSONS  ==========*/
 .list-lessons {
-  background: $colorGrayDark;
-  padding: 0 $lineHeight $lineHeight;
-  margin-top: $lineHeight;
-  text-align: center;
-  color: #ffffff;
-  font-family: $fontHighlight;
-  white-space: pre-line; // Clearing inline-block li's
+  padding-left: 0;
 
   & a {
     color: #ffffff;
   }
 
-  & li {
-    display: inline-block;
-    width: auto;
-    clear: both;
-    padding-left: 0;
-
-    &:before {
-      display: inline-block;
-      position: static;
-      padding-right: 16px;
-    }
-  }
-
   & .current {
     &,
     a {
-      color: $colorGrayKeyline;
+      text-decoration: none;
+      cursor: default;
     }
 
-    // Selecting every adjacent element after .current
-    ~ li {
-      @include type--xlarge;
-      padding-top: 0;
-
-      @include medium {
-        padding-top: 0;
-      }
-
-      &:before {
-        font-weight: 400;
-      }
+    & .icon {
+      font-size: $fontSmall;
+      display: inline-block;
+      background: rgba(#000000, .2);
+      border-radius: 100%;
+      width: 26px;
+      line-height: 26px;
+      text-align: center;
+      margin-left: 7px;
     }
   }
 

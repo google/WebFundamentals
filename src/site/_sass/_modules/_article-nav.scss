@@ -26,12 +26,8 @@
 
 .article-nav-link {
   padding: $lineHeight 32px;
-  // color: #ffffff;
   float: left;
   width: 50%;
-  // border-color: $colorGrayKeyline;
-  // border-style: solid;
-  // border-width: 0;
   position: relative;
 
   &:before{
@@ -68,7 +64,9 @@
   }
 
   p {
-    padding-left: 52px;
+    @include medium {
+      padding-left: 52px;
+    }
   }
 }
 
@@ -82,7 +80,9 @@
   }
 
   p {
-    padding-right: 52px;
+    @include medium {
+      padding-right: 52px;
+    }
   }
 }
 

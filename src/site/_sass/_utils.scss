@@ -47,7 +47,7 @@
 
   $colorText: $colorGrayDark;
   $colorHighlight: $colorBlue;
-  $colorWarning: $colorYellow;
+  $colorWarning: $colorYellowSecondary;
   $colorMuted: $colorGray;
   $colorDanger: $colorRed;
 
@@ -376,7 +376,7 @@
   }
 
   // Mixin to create links
-  @mixin style-cta($textColor, $icon: false) {
+  @mixin style-cta($textColor, $linkIcon: false) {
     font-family: $fontHighlight;
     color: $textColor;
     font-weight: 400;
@@ -387,14 +387,15 @@
       color: $colorGrayDark;
     }
 
-    @if $icon {
+    @if $linkIcon {
+      text-decoration: none;
       &:before {
         display: inline-block;
         padding-right: 10px;
         font-family: $fontIcon;
         line-height: ($lineHeight) - 1; // remove 1px from line-height to fix baseline alignment
         font-size: $fontSmall;
-        @extend .#{$icon}:before;
+        content: $linkIcon;
       }
     }
   }

@@ -89,6 +89,7 @@
   font-family: $fontHighlight;
   @include type--large;
   margin-bottom: 1px;
+  text-decoration: none;
 
   display: block;
 
@@ -213,8 +214,12 @@
   }
 
   @include medium {
-    border-bottom: 1px solid $colorGrayKeyline;
+    @include style-cta($colorBlue, $icon-chevron-right);
   }
+}
+
+.main-nav__link--explore-wrapper {
+  border-bottom: 1px solid $colorGrayKeyline;
 }
 
 .main-nav__featured {

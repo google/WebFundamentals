@@ -35,11 +35,10 @@
   @include medium {padding-bottom: $lineHeight}
 
   &:after {
-    content: "?";
+    content: $icon-question;
     color: $colorBlue;
-    font-family: $fontHighlight;
-    font-weight: 700;
-    font-size: 400px;
+    font-family: $fontIcon;
+    font-size: 300px;
     top: 150px;
     left: 30%;
     position: relative;
@@ -48,9 +47,16 @@
 
     @include medium {
       position: absolute;
-      font-size: 500px;
+      font-size: 400px;
       top: 200px;
-      left: 130%;
+      left: 110%;
+    }
+
+    @include wide {
+      position: absolute;
+      font-size: 400px;
+      top: 200px;
+      left: 124%;
     }
   }
 }

@@ -57,8 +57,9 @@
 
   .secondary-content {
     position: relative;
-    background: lighten($colorGrayBackground, 4%);
-    margin-top: $lineHeight*2;
+    // background: #f5f5f5;
+    margin-top: ($lineHeight*2) - 1;
+    border-top: 1px solid $colorGrayKeyline;
 
     @include medium {
       width: 100%; // needed due to parent being flex
@@ -66,12 +67,13 @@
 
     .icon-circle {
       position: absolute;
-      top: -$lineHeight/2;
+      top: -$lineHeight - 2;
       left: 50%;
-      margin-left: -22px;
+      margin-left: -21px;
+      border: 2px solid #ffffff;
 
-      @include medium {
-        top: -$lineHeight;
+      & i {
+        font-size: 23px;
       }
     }
   }

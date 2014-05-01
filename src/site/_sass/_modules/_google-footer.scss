@@ -10,69 +10,47 @@
 *
 **/
 
-#gc-footer,
-#gc-footer ul {
-  font-size: 12px;
-  font-weight: normal;
-  background: #333;
-  line-height: 44px;
-}
 
 #gc-footer {
+  font-size: $fontSmall;
+  background: $colorGrayDark;
+  font-weight: 400;
+
+  padding: 26px 0 52px;
   overflow: hidden;
-  *zoom: 1;
   clear: both;
 
-  div { line-height:44px; }
-  li {
-    margin:0 30px 0 0;
+  & ul {
+    margin: 0 0 0 52px;
+    padding: 0;
+  }
+
+  & li {
+    padding-left: 0;
+
+    @include medium {
+      margin-right: 30px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+
+    & a {
+      color: $colorGrayKeyline;
+      font-size: $fontBase;
+      display: block;
+
+      @include medium {
+        font-size: $fontSmall;
+      }
+    }
 
     &:before { display:none; }
   }
-  a,
-  a:visited{
-    text-decoration: none;
-    color: rgba(255,255,255,0.8);
-  }
-  a:hover,
-  a:visited:hover { text-decoration:underline; }
-  .kd-select{ margin-bottom:2px; }
-  #developers-logo-footer {
+
+  & img {
+    vertical-align: center;
     float: left;
-    margin-top: 10px;
-    margin-right: 30px;
-  }
-  #gc-copyright {
-
-    img {
-      vertical-align: center;
-      float: left;
-    }
-  }
-
-  > div {
-    ul {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      overflow: hidden;
-      *zoom:1;
-
-      li {
-        list-style-image: none;
-        list-style-type: none;
-        margin-left: 0;
-        white-space: nowrap;
-        display: inline;
-        float: left;
-        padding-left: 4px;
-        padding-right:4px;
-
-        &:first-child,
-        &.first { padding-left: 0; }
-        &:last-child,
-        &.last{padding-right:0}
-      }
-    }
+    margin-top: 1px;
   }
 }

@@ -18,14 +18,16 @@
         <div class="main-nav__secondary-nav">
 
           <div class="main-nav__secondary-content">
-            <a href="{{site.baseurl}}{{ section.path }}" title="Explore The Documentation" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation <i class="main-nav__icon icon icon-chevron-right"></i></a>
+            <div class="main-nav__link--explore-wrapper">
+              <a href="{{site.baseurl}}{{ section.path }}" title="Explore The Documentation" class="main-nav__link main-nav__link--child main-nav__link--explore">Explore The Documentation <i class="main-nav__icon icon icon-chevron-right"></i></a>
+            </div>
 
             <div class="clear">
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
                     <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.baseurl}}{{ subsection.path }}">
-                      <span class="main-nav__guide-icon icon-circle themed--background"><i class="icon icon-{{subsection.id}}"></i></span> {{ subsection.title }} <i class="main-nav__icon icon icon-chevron-right"></i>
+                      <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span> {{ subsection.title }} <i class="main-nav__icon icon icon-chevron-right"></i>
                     </a>
                   </li>
                 {% endfor %}

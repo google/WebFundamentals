@@ -31,10 +31,10 @@
 
       <div class="articles-section">
 
-        <span class="article-section__icon icon-circle--large themed--background"><i class="icon icon-{{ page.id }}"></i></span>
+        <span class="article-section__icon icon-circle--large themed themed--background"><span>{{page.articles.[page.id].size}}</span></span>
 
         <div class="container">
-          <p class="articles-count themed">{{page.articles.[page.id].size}} guides</p>
+          <p class="articles-count themed">Guides available</p>
           <ol class="articles-list">
 
             {% for guide in page.articles.[page.id] %}
