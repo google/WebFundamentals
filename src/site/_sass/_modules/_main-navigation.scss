@@ -215,7 +215,8 @@
 
   @include medium {
     border-bottom: 1px solid $colorGrayKeyline;
-    @include style-cta($colorBlue, icon-chevron-right);
+    @include style-cta($colorBlue, $icon-chevron-right);
+    display: block;
   }
 }
 
