@@ -36,12 +36,12 @@ collection: touch-input
 Have you ever touched or clicked an element on a web page and questioned
 whether the site actually detected it?
 
-Simply altering the color of elements as users touch parts of your UI gives a basic reassurance that your site is working. Not only does this alleviate frustation, but can also give a snappy and responsive feel to your site. 
+Simply altering the color of elements as users touch parts of your UI gives a basic reassurance that your site is working. Not only does this alleviate frustation, but can also give a snappy and responsive feel to your site.
 
 ### Use Pseudo Classes to Change UI for each Touch State
 
 The fastest way to support touch is to change the UI in response to a DOM
-element’s change in state. 
+element’s change in state.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.add-states %}
 
@@ -122,7 +122,7 @@ user-select: none;
 
 ### Pseudo Classes for Touch States
 
-<table class="table--3">
+<table class="table-3">
   <thead>
     <tr>
       <th>Class</th>

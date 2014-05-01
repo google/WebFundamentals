@@ -2470,6 +2470,7 @@ body.debug:after {
   display: block;
 }
 
+<<<<<<< HEAD
 /**
 *
 * Next Lessons
@@ -2482,6 +2483,14 @@ body.debug:after {
 *
 **/
 /* line 13, ../_sass/_modules/_next-lessons.scss */
+=======
+/* line 38, ../_sass/_modules/_toc.scss */
+.toc__sublist {
+  padding-top: 0;
+}
+
+/* line 1, ../_sass/_modules/_next-lessons.scss */
+>>>>>>> 08232e5116f707252617db8a8f907d58d87da5ac
 .next-lessons {
   background: #404040;
   padding: 26px 26px 52px;
@@ -3863,57 +3872,57 @@ td:last-child:after {
 }
 
 /* line 110, ../_sass/_components/_table.scss */
-.table--2 col {
+.table-2 col {
   width: 344px;
 }
 @media only screen and (min-width: 800px) {
   /* line 110, ../_sass/_components/_table.scss */
-  .table--2 col {
+  .table-2 col {
     width: 432px;
   }
 }
 @media only screen and (min-width: 620px) {
   /* line 120, ../_sass/_components/_table.scss */
-  .table--2 th:first-child,
-  .table--2 td:first-child {
+  .table-2 th:first-child,
+  .table-2 td:first-child {
     border-right: 2px solid #ffffff;
   }
 }
 
 /* line 128, ../_sass/_components/_table.scss */
-.table--3 col {
+.table-3 col {
   width: 229.33333px;
 }
 @media only screen and (min-width: 800px) {
   /* line 128, ../_sass/_components/_table.scss */
-  .table--3 col {
+  .table-3 col {
     width: 288px;
   }
 }
 @media only screen and (min-width: 620px) {
   /* line 138, ../_sass/_components/_table.scss */
-  .table--3 th:nth-child(2),
-  .table--3 td:nth-child(2) {
+  .table-3 th:nth-child(2),
+  .table-3 td:nth-child(2) {
     border-left: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
   }
 }
 
 /* line 147, ../_sass/_components/_table.scss */
-.table--4 col {
+.table-4 col {
   width: 172px;
 }
 @media only screen and (min-width: 800px) {
   /* line 147, ../_sass/_components/_table.scss */
-  .table--4 col {
+  .table-4 col {
     width: 216px;
   }
 }
 @media only screen and (min-width: 620px) {
   /* line 158, ../_sass/_components/_table.scss */
-  .table--4 th:nth-child(2), .table--4 th:nth-child(3),
-  .table--4 td:nth-child(2),
-  .table--4 td:nth-child(3) {
+  .table-4 th:nth-child(2), .table-4 th:nth-child(3),
+  .table-4 td:nth-child(2),
+  .table-4 td:nth-child(3) {
     border-left: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
   }
@@ -4057,34 +4066,27 @@ object {
   box-shadow: inset 0 1px 0 0 #e0e0e0;
   margin-right: 0;
   margin-left: 30%;
-  padding-bottom: 26px;
 }
-@media only screen and (min-width: 620px) {
-  /* line 23, ../_sass/_components/_articles-list.scss */
-  .articles-list__item:before {
-    padding-top: 26px;
-  }
-}
-/* line 39, ../_sass/_components/_articles-list.scss */
+/* line 34, ../_sass/_components/_articles-list.scss */
 .articles-list__item h3 a:hover {
   text-decoration: none;
 }
-/* line 44, ../_sass/_components/_articles-list.scss */
+/* line 39, ../_sass/_components/_articles-list.scss */
 .articles-list__item p {
   margin-top: 26px;
   margin-bottom: 26px;
 }
-/* line 49, ../_sass/_components/_articles-list.scss */
+/* line 44, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 49, ../_sass/_components/_articles-list.scss */
+  /* line 44, ../_sass/_components/_articles-list.scss */
   .articles-list__item:first-child {
     padding-top: 24px;
   }
 }
-/* line 56, ../_sass/_components/_articles-list.scss */
+/* line 51, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child:before {
   display: none;
 }

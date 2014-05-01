@@ -16,6 +16,6 @@ generate_sample_jshtml: true
 spotlights: false
 custom:
 kramdown:
-  toc_levels: "2,3,4"
+  toc_levels: "2"
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['README.md', 'config.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
