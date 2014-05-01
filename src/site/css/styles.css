@@ -2280,7 +2280,7 @@ body.debug:after {
   font-size: 50px;
   bottom: -10px;
   font-weight: 500;
-  color: #78cfa9;
+  color: #b7cdf4;
 }
 @media only screen and (min-width: 620px) {
   /* line 20, ../_sass/_modules/_home-header.scss */
@@ -2415,7 +2415,7 @@ body.debug:after {
 }
 /* line 37, ../_sass/_modules/_did-you-know.scss */
 .did-you-know__symbol:after {
-  content: "\e013";
+  content: "\e015";
   color: #3372df;
   font-family: "icons";
   font-size: 300px;
@@ -2632,7 +2632,7 @@ body.debug:after {
   line-height: 0px;
   top: 50%;
   display: block;
-  -webkit-animation: cog 5000ms linear infinite;
+  -webkit-animation: cog 2000ms linear infinite;
 }
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_beta.scss */
