@@ -34,29 +34,21 @@ handlers:
   static_files: build/static/\1
   expiration: 7d
   upload: build/static/(.*\.woff)
-  http_headers:
-    Access-Control-Allow-Origin: '*'
 
 - url: /web/essentials/(.*\.eot)
   static_files: build/static/\1
   expiration: 7d
   upload: build/static/(.*\.eot)
-  http_headers:
-    Access-Control-Allow-Origin: '*'
 
 - url: /web/essentials/(.*\.ttf)
   static_files: build/static/\1
   expiration: 7d
   upload: build/static/(.*\.ttf)
-  http_headers:
-    Access-Control-Allow-Origin: '*'
 
 - url: /web/essentials/(.*\.svg)
   static_files: build/static/\1
   expiration: 7d
   upload: build/static/(.*\.svg)
-  http_headers:
-    Access-Control-Allow-Origin: '*'
 
 - url: /web/essentials/index.html
   static_files: build/static/index.html
