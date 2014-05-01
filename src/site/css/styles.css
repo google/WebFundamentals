@@ -1147,14 +1147,12 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 207, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
-    border-bottom: 1px solid #e0e0e0;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     color: #3372df;
     font-weight: 400;
     display: inline-block;
     line-height: 1;
     text-decoration: none;
-    display: block;
   }
   /* line 386, ../_sass/_utils.scss */
   .main-nav__link--explore:hover {
@@ -1171,23 +1169,28 @@ body.debug:after {
   }
 }
 
-/* line 223, ../_sass/_modules/_main-navigation.scss */
+/* line 221, ../_sass/_modules/_main-navigation.scss */
+.main-nav__link--explore-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* line 225, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 223, ../_sass/_modules/_main-navigation.scss */
+  /* line 225, ../_sass/_modules/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 231, ../_sass/_modules/_main-navigation.scss */
+/* line 233, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }
 
-/* line 236, ../_sass/_modules/_main-navigation.scss */
+/* line 238, ../_sass/_modules/_main-navigation.scss */
 .main-nav__btn {
   position: absolute;
   top: 0;
@@ -1203,36 +1206,36 @@ body.debug:after {
   outline: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 236, ../_sass/_modules/_main-navigation.scss */
+  /* line 238, ../_sass/_modules/_main-navigation.scss */
   .main-nav__btn {
     display: none;
   }
 }
 
-/* line 256, ../_sass/_modules/_main-navigation.scss */
+/* line 258, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn {
   top: -6px;
 }
-/* line 259, ../_sass/_modules/_main-navigation.scss */
+/* line 261, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn i:before {
   font-size: 20px;
   content: "\e007";
 }
 
 /*==========  ICONS  ==========*/
-/* line 267, ../_sass/_modules/_main-navigation.scss */
+/* line 269, ../_sass/_modules/_main-navigation.scss */
 .main-nav__icon {
   float: right;
   font-size: 16px;
   line-height: 26px;
   vertical-align: middle;
 }
-/* line 273, ../_sass/_modules/_main-navigation.scss */
+/* line 275, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav .main-nav__icon {
   font-size: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 267, ../_sass/_modules/_main-navigation.scss */
+  /* line 269, ../_sass/_modules/_main-navigation.scss */
   .main-nav__icon {
     display: none;
     font-size: 13px;
@@ -1240,13 +1243,13 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 284, ../_sass/_modules/_main-navigation.scss */
+  /* line 286, ../_sass/_modules/_main-navigation.scss */
   .icon-custom:before {
     content: "\e002";
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 283, ../_sass/_modules/_main-navigation.scss */
+  /* line 285, ../_sass/_modules/_main-navigation.scss */
   .icon-custom {
     float: none;
     display: inline-block;
@@ -1257,20 +1260,20 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 302, ../_sass/_modules/_main-navigation.scss */
+  /* line 304, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
     content: "\e006";
   }
 }
 
-/* line 314, ../_sass/_modules/_main-navigation.scss */
+/* line 316, ../_sass/_modules/_main-navigation.scss */
 .main-nav .main-nav__guide-icon {
   display: inline-block;
   vertical-align: top;
   margin-right: 6px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 314, ../_sass/_modules/_main-navigation.scss */
+  /* line 316, ../_sass/_modules/_main-navigation.scss */
   .main-nav .main-nav__guide-icon {
     vertical-align: middle;
   }
@@ -1278,12 +1281,12 @@ body.debug:after {
 
 /*==========  CSS ANIMATION  ==========*/
 @-webkit-keyframes showNav {
-  /* line 327, ../_sass/_modules/_main-navigation.scss */
+  /* line 329, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 330, ../_sass/_modules/_main-navigation.scss */
+  /* line 332, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
@@ -2543,7 +2546,7 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 39, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:before {
-    content: "03";
+    content: attr(data-current-lesson);
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -3759,18 +3762,14 @@ ol.list--variation li a:before {
 /* line 13, ../_sass/_components/_link.scss */
 a {
   color: #3372df;
-  -webkit-transition: color 100ms linear;
-  -moz-transition: color 100ms linear;
-  -ms-transition: color 100ms linear;
-  transition: color 100ms linear;
 }
 
-/* line 18, ../_sass/_components/_link.scss */
+/* line 17, ../_sass/_components/_link.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 22, ../_sass/_components/_link.scss */
+/* line 21, ../_sass/_components/_link.scss */
 .cta--primary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   color: #3372df;
@@ -3793,7 +3792,7 @@ a:hover {
   content: "\e005";
 }
 
-/* line 26, ../_sass/_components/_link.scss */
+/* line 25, ../_sass/_components/_link.scss */
 .cta--secondary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   color: #3372df;
@@ -4588,16 +4587,27 @@ object {
   padding: 0 13px;
 }
 
-/* line 4, ../_sass/_pages/_page-resources.scss */
+/**
+*
+* Resources page
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 16, ../_sass/_pages/_page-resources.scss */
 .page--resources .article-section__icon, .page--resources .articles-count, .page--resources .guides-list__item .secondary-content {
   display: none;
 }
-/* line 8, ../_sass/_pages/_page-resources.scss */
+/* line 20, ../_sass/_pages/_page-resources.scss */
 .page--resources .primary-content {
   padding-top: 26px;
   padding-bottom: 52px;
 }
-/* line 12, ../_sass/_pages/_page-resources.scss */
+/* line 24, ../_sass/_pages/_page-resources.scss */
 .page--resources .primary-content p {
   margin-top: 0;
 }

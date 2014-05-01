@@ -3,7 +3,6 @@
 {% endcomment %}
 
 {% assign type = "remember" %}
-{% assign character = "!" %}
 {% assign title = "Remember" %}
 {% assign position = "right" %}
 
@@ -13,11 +12,8 @@
 {% if include.type %}
 {% assign type = include.type %}
 {% endif %}
-{% if include.character %}
-{% assign character = include.character %}
-{% endif %}
 {% if include.position %}
 {% assign position = include.position %}
 {% endif %}
 
-{% include modules/highlight.liquid title=title text=include.text list=include.list position=position type=type character=character %}
+{% include modules/highlight.liquid title=title text=include.text list=include.list position=position type=type %}
