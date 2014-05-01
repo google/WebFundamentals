@@ -77,6 +77,8 @@ handlers:
   static_files: build/static/\1
   expiration: 7d
   upload: build/static/(.+)
+  http_headers:
+    Access-Control-Allow-Origin: https://developers.google.com
 
 skip_files:
 - ^(.*/)?.*\.psd$
