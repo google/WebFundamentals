@@ -32,28 +32,28 @@ handlers:
 
 - url: /web/essentials/(.*\.woff)
   static_files: build/static/\1
-  expiration: 7d
+  expiration: 1d
   upload: build/static/(.*\.woff)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/essentials/(.*\.eot)
   static_files: build/static/\1
-  expiration: 7d
+  expiration: 1d
   upload: build/static/(.*\.eot)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/essentials/(.*\.ttf)
   static_files: build/static/\1
-  expiration: 7d
+  expiration: 1d
   upload: build/static/(.*\.ttf)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/essentials/(.*\.svg)
   static_files: build/static/\1
-  expiration: 7d
+  expiration: 1d
   upload: build/static/(.*\.svg)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
