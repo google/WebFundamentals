@@ -4,7 +4,7 @@ Web Fundamentals
 Web Fundamentals is a technical documentation center for multi-device web development.  Our goal is to build a resource for modern web developers that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
 View the live site: https://developers.google.com/web/fundamentals/
-
+ 
 Release status
 --------------
 
