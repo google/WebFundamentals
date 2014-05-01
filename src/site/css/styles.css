@@ -1794,7 +1794,7 @@ body.debug:after {
 /* line 13, ../_sass/_modules/_related-guides.scss */
 .related-guides {
   margin-top: 78px;
-  padding-bottom: 52px;
+  padding-bottom: 50px;
   border-top: 2px solid #e0e0e0;
   padding-top: 50px;
 }
@@ -2187,22 +2187,26 @@ body.debug:after {
   font-family: "icons";
   left: 32px;
 }
-/* line 66, ../_sass/_modules/_article-nav.scss */
-.article-nav-link--prev p {
-  padding-left: 52px;
+@media only screen and (min-width: 620px) {
+  /* line 66, ../_sass/_modules/_article-nav.scss */
+  .article-nav-link--prev p {
+    padding-left: 52px;
+  }
 }
 
-/* line 74, ../_sass/_modules/_article-nav.scss */
+/* line 76, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--next:before {
   font-family: "icons";
   right: 32px;
 }
-/* line 80, ../_sass/_modules/_article-nav.scss */
-.article-nav-link--next p {
-  padding-right: 52px;
+@media only screen and (min-width: 620px) {
+  /* line 82, ../_sass/_modules/_article-nav.scss */
+  .article-nav-link--next p {
+    padding-right: 52px;
+  }
 }
 
-/* line 85, ../_sass/_modules/_article-nav.scss */
+/* line 89, ../_sass/_modules/_article-nav.scss */
 .article-nav-count {
   font-size: 20px;
   font-weight: 300;
@@ -2213,7 +2217,7 @@ body.debug:after {
   font-weight: 700;
 }
 @media only screen and (min-width: 800px) {
-  /* line 85, ../_sass/_modules/_article-nav.scss */
+  /* line 89, ../_sass/_modules/_article-nav.scss */
   .article-nav-count {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -2225,7 +2229,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 85, ../_sass/_modules/_article-nav.scss */
+  /* line 89, ../_sass/_modules/_article-nav.scss */
   .article-nav-count {
     font-weight: 400;
   }
@@ -2395,11 +2399,10 @@ body.debug:after {
 }
 /* line 37, ../_sass/_modules/_did-you-know.scss */
 .did-you-know__symbol:after {
-  content: "?";
+  content: "\e013";
   color: #3372df;
-  font-family: "Roboto Condensed", Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 400px;
+  font-family: "icons";
+  font-size: 300px;
   top: 150px;
   left: 30%;
   position: relative;
@@ -2410,9 +2413,18 @@ body.debug:after {
   /* line 37, ../_sass/_modules/_did-you-know.scss */
   .did-you-know__symbol:after {
     position: absolute;
-    font-size: 500px;
+    font-size: 400px;
     top: 200px;
-    left: 130%;
+    left: 110%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 37, ../_sass/_modules/_did-you-know.scss */
+  .did-you-know__symbol:after {
+    position: absolute;
+    font-size: 400px;
+    top: 200px;
+    left: 124%;
   }
 }
 
@@ -2470,7 +2482,11 @@ body.debug:after {
   display: block;
 }
 
-<<<<<<< HEAD
+/* line 38, ../_sass/_modules/_toc.scss */
+.toc__sublist {
+  padding-top: 0;
+}
+
 /**
 *
 * Next Lessons
@@ -2483,14 +2499,6 @@ body.debug:after {
 *
 **/
 /* line 13, ../_sass/_modules/_next-lessons.scss */
-=======
-/* line 38, ../_sass/_modules/_toc.scss */
-.toc__sublist {
-  padding-top: 0;
-}
-
-/* line 1, ../_sass/_modules/_next-lessons.scss */
->>>>>>> 08232e5116f707252617db8a8f907d58d87da5ac
 .next-lessons {
   background: #404040;
   padding: 26px 26px 52px;
@@ -4050,14 +4058,14 @@ object {
 
 /* line 17, ../_sass/_components/_articles-list.scss */
 .articles-list__item {
-  padding-bottom: 51px;
+  padding-bottom: 52px;
   padding-left: 0;
 }
-/* line 20, ../_sass/_components/_articles-list.scss */
+/* line 21, ../_sass/_components/_articles-list.scss */
 .articles-list__item:last-child {
-  padding-bottom: 52px;
+  padding-bottom: 53px;
 }
-/* line 23, ../_sass/_components/_articles-list.scss */
+/* line 27, ../_sass/_components/_articles-list.scss */
 .articles-list__item:before {
   content: "";
   display: block;
@@ -4067,26 +4075,26 @@ object {
   margin-right: 0;
   margin-left: 30%;
 }
-/* line 34, ../_sass/_components/_articles-list.scss */
+/* line 38, ../_sass/_components/_articles-list.scss */
 .articles-list__item h3 a:hover {
   text-decoration: none;
 }
-/* line 39, ../_sass/_components/_articles-list.scss */
+/* line 43, ../_sass/_components/_articles-list.scss */
 .articles-list__item p {
   margin-top: 26px;
   margin-bottom: 26px;
 }
-/* line 44, ../_sass/_components/_articles-list.scss */
+/* line 48, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 44, ../_sass/_components/_articles-list.scss */
+  /* line 48, ../_sass/_components/_articles-list.scss */
   .articles-list__item:first-child {
     padding-top: 24px;
   }
 }
-/* line 51, ../_sass/_components/_articles-list.scss */
+/* line 55, ../_sass/_components/_articles-list.scss */
 .articles-list__item:first-child:before {
   display: none;
 }
@@ -4265,7 +4273,7 @@ object {
 @media only screen and (min-width: 620px) {
   /* line 47, ../_sass/_components/_icon-circle.scss */
   .icon-circle--large {
-    padding: 39px;
+    padding: 38px;
     box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.42);
     border: 1px solid;
     -webkit-transition: all 100ms linear;

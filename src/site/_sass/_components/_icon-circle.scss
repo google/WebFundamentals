@@ -59,7 +59,7 @@
   }
 
   @include medium {
-    padding: $lineHeight + $lineHeight/2;
+    padding: ($lineHeight + $lineHeight/2) - 1;
 
     box-shadow: inset 0px 0px 0px 1px rgba(#ffffff, .42);
     border: 1px solid;
