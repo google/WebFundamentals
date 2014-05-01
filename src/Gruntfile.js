@@ -467,7 +467,7 @@ module.exports = function(grunt) {
 		return grunt.task.run([
 			'test',						// Code quality control
 			'clean:icons',				// Clean up icon font files for regeneration
-			'webfont:icons',			// Generate icon font files and SASS
+			//'webfont:icons',			// Generate icon font files and SASS
 			'clean:destination',		// Clean out the destination directory
 			'compass:compressed',		// Build the CSS using Compass with compression
 			'jekyll:devsite',		// Build the site with Jekyll

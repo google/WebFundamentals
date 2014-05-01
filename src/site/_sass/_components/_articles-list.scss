@@ -29,10 +29,6 @@
     margin-right: 0;
     margin-left: 30%;
     padding-bottom: $lineHeight;
-
-    @include medium {
-      padding-top: $lineHeight;
-    }
   }
 
   h3 {
