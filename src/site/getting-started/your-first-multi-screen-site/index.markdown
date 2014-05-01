@@ -16,7 +16,7 @@ collection: getting-started
 
 Building multi-screen experiences is not as hard as it sounds. By following 
 the lessons in this guide, we will build an example product landing page for our
-[CS256 Mobile Web Developement course](https://www.udacity.com/course/cs256) 
+[CS256 Mobile Web Development course](https://www.udacity.com/course/cs256) 
 that works well across all different device types.
 
 ## Lessons
