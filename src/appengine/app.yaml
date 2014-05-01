@@ -75,7 +75,7 @@ handlers:
 
 - url: /web/essentials/(.*)
   static_files: build/static/\1
-  expiration: 7d
+  expiration:  1h
   upload: build/static/(.+)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
