@@ -2,7 +2,7 @@
 layout: article
 title: "Responsive Web Design Fundamentals"
 description: "Much of the web isn't optimized for those multi-screen experiences. Learn the
-             fundamentals get your sites everywhere from a Mobile device to a TV."
+             fundamentals to get your site working on mobile, desktop or anything else with a screen."
 introduction: "The use of mobile devices to surf the web is growing at an astronomical pace,
               but unfortunately much of the web isn't optimized for those mobile devices. Mobile
               devices are often constrained by display size and require a different approach
