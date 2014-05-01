@@ -30,21 +30,28 @@
 #gc-logo {
   text-decoration: none;
   display: block;
-  margin: $lineHeight 0 ;
+  margin: $lineHeight auto;
+  width: 43px;
+
+  overflow: hidden;
+
+
 
   @include medium {
     float: left;
-    margin-top: 38px;
+    margin-top: 29px;
+    width: 56px;
+    width: auto;
   }
 
   img {
-    width: 210px;
     display: block;
     margin: 0 auto;
+    width: 158px;
+    max-width: none;
 
     @include medium {
-      width: 130px;
-      vertical-align: top;
+      width: 210px;
     }
   }
 }
