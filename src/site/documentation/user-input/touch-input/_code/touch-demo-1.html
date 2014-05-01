@@ -65,7 +65,7 @@
         z-index: 2;
         
         /* // [START touch-action-example] */
-        // Pass all touches to javascript
+        /* Pass all touches to javascript */
         -ms-touch-action: none;
         touch-action: none;
         /* // [END touch-action-example] */
@@ -128,6 +128,8 @@
         backface-visibility: hidden;
       }
     </style>
+
+    <script src="http://198.51.100.39:8080/target/target-script-min.js#anonymous"></script>
   </head>
 
   <body>
@@ -228,6 +230,8 @@
         // Handle move gestures
         this.handleGestureMove = function (evt) {
           evt.preventDefault();
+
+          console.log('handleGestureMove');
 
           lastTouchPos = getGesturePointFromEvent(evt);
           
