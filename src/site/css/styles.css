@@ -632,8 +632,8 @@ body.debug:after {
 
 @font-face {
   font-family: "icons";
-  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot");
-  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot?#iefix") format("embedded-opentype"), url("//web-central.appspot.com/web/essentials/icons/icons.woff") format("woff"), url("//web-central.appspot.com/web/essentials/icons/icons.ttf") format("truetype"), url("//web-central.appspot.com/web/essentials/icons/icons.svg?#icons") format("svg");
+  src: url("../icons/icons.eot");
+  src: url("../icons/icons.eot?#iefix") format("embedded-opentype"), url("../icons/icons.woff") format("woff"), url("../icons/icons.ttf") format("truetype"), url("../icons/icons.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2543,7 +2543,7 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 39, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:before {
-    content: "03";
+    content: attr(data-current-lesson);
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -3759,18 +3759,14 @@ ol.list--variation li a:before {
 /* line 13, ../_sass/_components/_link.scss */
 a {
   color: #3372df;
-  -webkit-transition: color 100ms linear;
-  -moz-transition: color 100ms linear;
-  -ms-transition: color 100ms linear;
-  transition: color 100ms linear;
 }
 
-/* line 18, ../_sass/_components/_link.scss */
+/* line 17, ../_sass/_components/_link.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 22, ../_sass/_components/_link.scss */
+/* line 21, ../_sass/_components/_link.scss */
 .cta--primary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   color: #3372df;
@@ -3793,7 +3789,7 @@ a:hover {
   content: "\e005";
 }
 
-/* line 26, ../_sass/_components/_link.scss */
+/* line 25, ../_sass/_components/_link.scss */
 .cta--secondary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   color: #3372df;
