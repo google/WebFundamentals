@@ -26,9 +26,6 @@ devsite:
 	#cd ./src/site && jekyll build $(param1)	--config _config-devsite.yml
 	cd ./src && grunt devsite
 
-devsitediff:
-	cd /google/src/cloud/$(USER)/webfundamentals && g4 sync && diff --brief -rq google3/googledata/devsite/content/en/web/fundamentals $(PWD)/src/appengine/build/devsite
-
 #Image squisher task.
 imsq:
 	find ./src/site -iname *.png | xargs /home/build/static/projects/webgroup/imsq
