@@ -28,11 +28,6 @@
     box-shadow: inset 0 1px 0 0 $colorGrayKeyline;
     margin-right: 0;
     margin-left: 30%;
-    padding-bottom: $lineHeight;
-
-    @include medium {
-      padding-top: $lineHeight;
-    }
   }
 
   h3 {
