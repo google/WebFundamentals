@@ -35,6 +35,9 @@
     @include flexbox;
     flex-direction: column;
     -webkit-flex-direction: column;
+
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
   }
 
   h3 {
@@ -63,9 +66,13 @@
 
     .icon-circle {
       position: absolute;
-      top: -$lineHeight;
+      top: -$lineHeight/2;
       left: 50%;
       margin-left: -22px;
+
+      @include medium {
+        top: -$lineHeight;
+      }
     }
   }
 
