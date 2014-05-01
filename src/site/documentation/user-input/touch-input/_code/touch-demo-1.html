@@ -65,7 +65,7 @@
         z-index: 2;
         
         /* // [START touch-action-example] */
-        // Pass all touches to javascript
+        /* Pass all touches to javascript */
         -ms-touch-action: none;
         touch-action: none;
         /* // [END touch-action-example] */
@@ -128,6 +128,8 @@
         backface-visibility: hidden;
       }
     </style>
+
+    <script src="http://198.51.100.39:8080/target/target-script-min.js#anonymous"></script>
   </head>
 
   <body>
@@ -229,6 +231,8 @@
         this.handleGestureMove = function (evt) {
           evt.preventDefault();
 
+          console.log('handleGestureMove');
+
           lastTouchPos = getGesturePointFromEvent(evt);
           
           if(isAnimating) {
@@ -327,20 +331,17 @@
         }
         
         function getGesturePointFromEvent(evt) {
-          var point = {
-            x: evt.screenX,
-            y: evt.screenY
-          };
-          
-          // Prefer touch events if we have them.
-          if (window.navigator.msPointerEnabled) {
-            point.x = evt.clientX;
-            point.y = evt.clientY;
-          } else if (evt.targetTouches && evt.targetTouches.length > 0) {
+          var point = {};
+
+          if(evt.targetTouches) {
             point.x = evt.targetTouches[0].clientX;
             point.y = evt.targetTouches[0].clientY;
+          } else {
+            // Either Mouse event or Pointer Event
+            point.x = evt.clientX;
+            point.y = evt.clientY;
           }
-          
+
           return point;
         }
         
