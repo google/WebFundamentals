@@ -1,6 +1,6 @@
-<div class="next-lessons container-medium">
-  <h3 class="themed"><i class="icon icon-lessons"></i> Next Lessons</h3>
-  <ol class="list-lessons themed--background">
-{% for p in page.parent.parent.articles[page.parent.parent.id] %}{% if p.id == page.collection %}{% for guide in page.articles[page.collection] %}<li{% if guide.url == page.url %} title="{{guide.title}}" class="current"{% endif %}><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></li>
+<div class="next-lessons container-medium themed--background">
+  <h3><i class="icon icon-lessons"></i> Next Lessons</h3>
+  <ol class="list-lessons list-links">
+{% for p in page.parent.parent.articles[page.parent.parent.id] %}{% if p.id == page.collection %}{% for guide in page.articles[page.collection] %}<li{% if guide.url == page.url %} class="current"{% endif %} title="{{guide.title}}"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}} {% if guide.url == page.url %} <i class="icon icon-star"></i>{% endif %}</a></li>
 {% endfor %}{% endif %}{% endfor %}</ol>
 </div>

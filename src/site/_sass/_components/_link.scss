@@ -12,17 +12,15 @@
 
 a {
   color: $colorBlue;
-  text-decoration: none;
-
   @include prefixr(transition, color 100ms linear);
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .cta--primary {
-  @include style-cta($colorBlue, icon-chevron-right);
+  @include style-cta($colorBlue, $icon-chevron-right);
 }
 
 .cta--secondary {

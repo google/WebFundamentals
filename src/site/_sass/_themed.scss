@@ -24,13 +24,17 @@
 
 .themed--background {
 
-  .theme--multi-device-layouts & { background-color: $colorLayouts; }
+  .theme--multi-device-layouts &,
+  .theme--multi-device-layouts &.next-lessons:before { background-color: $colorLayouts; }
 
-  .theme--introduction-to-media & { background-color: $colorMedia; }
+  .theme--introduction-to-media &,
+  .theme--introduction-to-media &.next-lessons:before { background-color: $colorMedia; }
 
-  .theme--user-input & { background-color: $colorUser; }
+  .theme--user-input &,
+  .theme--user-input &.next-lessons:before { background-color: $colorUser; }
 
-  .theme--performance & { background-color: $colorPerformance; }
+  .theme--performance &,
+  .theme--performance &.next-lessons:before { background-color: $colorPerformance; }
 
 }
 
@@ -43,6 +47,18 @@
   .theme--user-input &:hover { color: $colorUser; }
 
   .theme--performance &:hover { color: $colorPerformance; }
+
+}
+
+.themed--hover-secondary {
+
+  .theme--multi-device-layouts &:hover { color: $colorLayoutsSecondary; }
+
+  .theme--introduction-to-media &:hover { color: $colorMediaSecondary; }
+
+  .theme--user-input &:hover { color: $colorUserSecondary; }
+
+  .theme--performance &:hover { color: $colorPerformanceSecondary; }
 
 }
 

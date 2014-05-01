@@ -31,6 +31,10 @@
   @include medium {
     display: none;
   }
+
+  & a {
+    text-decoration: none;
+  }
 }
 
 .main-header__logo {

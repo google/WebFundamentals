@@ -61,18 +61,16 @@
   @include medium {
     padding: $lineHeight + $lineHeight/2;
 
-    &:after {
-      content: "";
-      display: block;
+    box-shadow: inset 0px 0px 0px 1px rgba(#ffffff, .42);
+    border: 1px solid;
 
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      right: 2px;
-      bottom: 2px;
+    // demo transition
+    -webkit-transition: all 100ms linear;
+    -webkit-transform: translateZ(0); // kick in hardware acceleration
 
-      border: 1px solid rgba(#ffffff, .42);
-      border-radius: 100%;
+    .no-touch a:hover & {
+      box-shadow: inset 0px 0px 0px 1px #ffffff;
+      -webkit-transform: scale(1.1);
     }
   }
 
