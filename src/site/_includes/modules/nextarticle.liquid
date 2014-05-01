@@ -2,10 +2,10 @@
 <div class="container-medium">
   <nav class="article-nav">
   {% if page.article.previous %}
-  <a href="#" class="article-nav-link article-nav-link--prev" href="{{site.baseurl}}{{ page.article.previous.url }}">Previous '{{ page.article.previous.title }}'</a>
+  <a href="#" class="article-nav-link article-nav-link--prev" title="Previous article" href="{{site.baseurl}}{{ page.article.previous.url }}">Previous '{{ page.article.previous.title }}'</a>
   {% endif %}
   {% if page.article.next %}
-  <a href="#" class="article-nav-link article-nav-link--next" href="{{site.baseurl}}{{ page.article.next.url }}" style="float: right;">Next '{{ page.article.next.title }}'</a>
+  <a href="#" class="article-nav-link article-nav-link--next" title="Next article" href="{{site.baseurl}}{{ page.article.next.url }}" style="float: right;">Next '{{ page.article.next.title }}'</a>
   {% endif %}
   </nav>
 </div>
