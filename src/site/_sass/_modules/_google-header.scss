@@ -14,19 +14,35 @@
   width: 100%;
   position: relative;
   background: #f1f1f1;
-  border-bottom: 1px solid #e5e5e5;
-  height: 52px;
   margin: 0;
-  overflow: hidden;
+  padding: 0 0 $lineHeight;
 
-  #gc-logo {
-    display: block;
-    text-decoration: none;
-    position: relative;
+  @include medium {
+    height: $lineHeight * 4;
+    padding-bottom: 0;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+}
+
+#gc-logo {
+  text-decoration: none;
+  display: block;
+  margin: $lineHeight 0 ;
+
+  @include medium {
     float: left;
-    top: 10px;
+    margin-top: 38px;
+  }
 
-    img {
+  img {
+    width: 210px;
+    display: block;
+    margin: 0 auto;
+
+    @include medium {
       width: 130px;
       vertical-align: top;
     }
