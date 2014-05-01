@@ -23,6 +23,10 @@
   font-weight: 600;
   text-decoration: none;
 
+  outline: 0;
+
+  @include prefixr(transition, none);
+
   &:hover {
     background: #4d4d4d;
     color: #ffffff;

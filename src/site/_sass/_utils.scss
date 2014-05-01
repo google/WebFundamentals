@@ -392,7 +392,7 @@
         display: inline-block;
         padding-right: 10px;
         font-family: $fontIcon;
-        line-height: $lineHeight;
+        line-height: ($lineHeight) - 1; // remove 1px from line-height to fix baseline alignment
         font-size: $fontSmall;
         @extend .#{$icon}:before;
       }
@@ -452,7 +452,6 @@
 
   // Mixin for flexbox
   @mixin flexbox {
-    display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;

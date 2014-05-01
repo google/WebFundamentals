@@ -116,7 +116,7 @@ and end events to the document:
 
 {% include_code ../_code/touch-demo-1.html handle-start-gesture javascript %}
 
-The end callback we add is `handleGestureEnd` which removes the move 
+The end callback we add is `handleGestureEnd` which removes the move
 and end events from the document when the gesture has finished:
 
 {% include_code ../_code/touch-demo-1.html handle-end-gesture javascript %}
@@ -215,7 +215,7 @@ use `touch-action: none` to disable scrolling on touch.
 
 Below is a list of the available parameters for *touch-action*.
 
-<table class="table--2">
+<table class="table-2">
   <thead>
     <tr>
       <th>Property</th>
@@ -257,7 +257,7 @@ The definitive touch events reference can be found here:
 These events are the building blocks for adding new gestures into your
 application:
 
-<table class="table--2">
+<table class="table-2">
   <thead>
     <tr>
       <th>Touch, Mouse, MS Pointer Events</th>
@@ -313,7 +313,7 @@ application:
 
 Each touch event includes three list attributes:
 
-<table class="table--2">
+<table class="table-2">
   <thead>
     <tr>
       <th>Attribute</th>

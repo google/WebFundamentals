@@ -20,8 +20,10 @@
 
           {% include modules/breadcrumbs.liquid %}
 
-          <h3 class="xxlarge text-divider themed">{{ page.title }}</h3>
-          <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
+          <header class="clear">
+            <h3 class="xxlarge text-divider themed">{{ page.title }}</h3>
+            <p class="page-header__excerpt g-wide--3 g--centered">{{page.introduction}}</p>
+          </header>
         </div>
       </div>
 
@@ -37,7 +39,7 @@
 
             {% for guide in page.articles.[page.id] %}
             <li class="articles-list__item">
-              <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" class="themed">{{guide.title}}</a></h3>
+              <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" title="Read the lesson {{guide.title}}" class="themed">{{guide.title}}</a></h3>
               <p class="g-wide--push-1 g-wide--pull-1">{{guide.description}}</p>
             </li>
             {% endfor %}

@@ -66,7 +66,7 @@ remember:
     max-width: 100%;
   }
 
-  img.center { 
+  img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -144,7 +144,7 @@ the users name, email address and phone number, you should use:
 
 ### Recommended input `name` and `autocomplete` attribute values
 
-<table class="table--3 autocompletes">
+<table class="table-3 autocompletes">
   <thead>
     <tr>
       <th data-th="Content type">Content type</th>
@@ -264,7 +264,7 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<table class="table--2 inputtypes">
+<table class="table-2 inputtypes">
   <thead>
     <tr>
       <th data-th="Input type">Input <code>type</code></th>
@@ -423,7 +423,7 @@ this:
 
 ##### Common regular expression patterns
 
-<table class="table--2 tc-heavyright">
+<table class="table-2 tc-heavyright">
   <thead>
     <tr>
       <th data-th="Description">Description</th>
@@ -515,7 +515,7 @@ a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:
 
-<table class="table--2 tc-heavyright">
+<table class="table-2 tc-heavyright">
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -567,7 +567,7 @@ the user has completed the form properly before they've submitted the form.
 HTML5 also introduces a number of new pseudo-classes that can be used to style
 inputs based on their value or attributes.
 
-<table class="table--2 tc-heavyright">
+<table class="table-2 tc-heavyright">
   <thead>
     <tr>
       <th data-th="Pseudo-class">Pseudo-class</th>

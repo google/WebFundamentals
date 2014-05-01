@@ -20,12 +20,12 @@
 require 'set'
 
 module SampleBuilder
-	class Template 
+	class Template
 		@@header = nil
 		@@header_full = nil
 		@@footer = nil
 		# TODO(ianbarber): Avoid having 3 identical functions maybe.
-		def self.header(site) 
+		def self.header(site)
 			if @@header.nil?
 				content = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
 				@@header = Liquid::Template.parse(content).render({"baseurl" => site.baseurl})
@@ -33,7 +33,7 @@ module SampleBuilder
 			@@header
 		end
 
-		def self.header_full(site) 
+		def self.header_full(site)
 			if @@header_full.nil?
 				content = File.read(File.join(site.source, "_includes/sample_header_full.html"))
 				@@header_full = Liquid::Template.parse(content).render({"baseurl" => site.baseurl})
@@ -41,7 +41,7 @@ module SampleBuilder
 			@@header_full
 		end
 
-		def self.footer(site) 
+		def self.footer(site)
 			if @@footer.nil?
 				content = File.read(File.join(site.source, "_includes/sample_footer.html"))
 				@@footer = Liquid::Template.parse(content).render({"baseurl" => site.baseurl})
@@ -74,7 +74,7 @@ module SampleBuilder
 					file.close
    				end
    				true
-   			else 
+   			else
    				false
    			end
    		end
@@ -128,25 +128,25 @@ module SampleBuilder
       		@section = section
     	end
 
-    	def contents() 
+    	def contents()
     		contents = File.read(@sourcepath)
     		contents.gsub!(/<!-- \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] -->\s*\n?/m, "\n")
     		contents.gsub!(/\/\* \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] \*\/\s*\n?/m, "\n")
-    		contents.gsub(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches| 
+    		contents.gsub(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches|
     			tag = $1.downcase
-    			if (tag == "header") 
+    			if (tag == "header")
     				Template.header(@site)
     			elsif (tag == "header_full")
     				Template.header(@site) + Template.header_full(@site)
     			elsif (tag == "footer")
     				Template.footer(@site)
-				else 
+				else
 					""
 				end
     		}
     	end
 
-    	def filename() 
+    	def filename()
     		# TODO(ianbarber): Include directory in output.
     		File.join(@dir, File.basename(@sourcepath))
     	end
@@ -166,12 +166,12 @@ module SampleBuilder
 			site.pages.each do |page|
 				dir = File.join(File.dirname(File.join(path, page.path)), "_code")
 				if File.exist?(dir)
-					dirs.add(dir) 
+					dirs.add(dir)
 					dirPaths[dir] = File.dirname(page.path)
 					dirTitles[dir] = page.dir
 				end
 			end
-			
+
 			dirs.each do |dir|
 				Dir.glob(dir + "/*").each do |sourcepath|
 					#Jekyll.logger.info sourcepath
@@ -184,10 +184,10 @@ module SampleBuilder
 						prefix, relative_path = sourcepath.split(codepath)
 
 						site.static_files << SampleAssetFile.new(
-							site, 
-							site.source, 
+							site,
+							site.source,
 							File.dirname(File.join(codepath, relative_path)),
-							File.basename(sourcepath), 
+							File.basename(sourcepath),
 							File.dirname(File.join(gen_dir, dirPaths[dir], relative_path)))
 					end
 				end
@@ -198,10 +198,10 @@ module SampleBuilder
 				dirname = File.dirname(File.join(target_dir, filename))
 				location = File.join(gen_dir, filename)
 				site.static_files << SampleFile.new(
-						site, 
-						site.dest, 
-						File.dirname(location), 
-						File.basename(filename), 
+						site,
+						site.dest,
+						File.dirname(location),
+						File.basename(filename),
 						page.contents,
 						page.section)
 		  	end
@@ -216,17 +216,17 @@ module SampleBuilder
 
 	    def render(context)
 			samples = context.registers[:site].static_files.select{|p| p.is_a?(SampleFile) }
-			samples.sort!{ 
-				|a,b| 
-				cmp = a.section <=> b.section; 
-				if cmp == 0 
-					cmp = a.title.casecmp b.title 
+			samples.sort!{
+				|a,b|
+				cmp = a.section <=> b.section;
+				if cmp == 0
+					cmp = a.title.casecmp b.title
 				end
-				cmp 
-			}	
+				cmp
+			}
 			links = samples.map{ |sample| render_sample(sample, context.registers[:site]) }
-		    
-		    links.join("\n") 
+
+		    links.join("\n")
 	    end
 
 	    def render_sample(sample, site)
@@ -238,7 +238,7 @@ module SampleBuilder
 	    		if @last_section != nil
 	    			output += "</ul>"
 	    		end
-	    		output += "<h2>#{section}</h2><ul>"
+	    		output += "<h2>#{section}</h2><ul class='list-links'>"
 	    		@last_section = section
 	    	end
 			output += "<li><a href='#{url}'>#{name}</a></li>"
