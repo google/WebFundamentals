@@ -47,6 +47,7 @@
     display: block;
 
     -webkit-animation: cog 4000ms ease-in-out;
+    animation: cog 4000ms ease-in-out;
   }
 
   @include medium {
@@ -68,5 +69,15 @@
 
   100% {
     -webkit-transform: rotate(1079deg);
+  }
+}
+
+@keyframes cog {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1079deg);
   }
 }

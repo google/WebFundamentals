@@ -2709,6 +2709,7 @@ pre {
   top: 50%;
   display: block;
   -webkit-animation: cog 4000ms ease-in-out;
+  animation: cog 4000ms ease-in-out;
 }
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_beta.scss */
@@ -2719,20 +2720,32 @@ pre {
     padding-right: 58px;
   }
 }
-/* line 59, ../_sass/_modules/_beta.scss */
+/* line 60, ../_sass/_modules/_beta.scss */
 .beta a {
   color: #404040;
 }
 
 @-webkit-keyframes cog {
-  /* line 65, ../_sass/_modules/_beta.scss */
+  /* line 66, ../_sass/_modules/_beta.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 69, ../_sass/_modules/_beta.scss */
+  /* line 70, ../_sass/_modules/_beta.scss */
   100% {
     -webkit-transform: rotate(1079deg);
+  }
+}
+
+@keyframes cog {
+  /* line 76, ../_sass/_modules/_beta.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 80, ../_sass/_modules/_beta.scss */
+  100% {
+    transform: rotate(1079deg);
   }
 }
 
