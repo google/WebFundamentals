@@ -2718,6 +2718,12 @@ pre {
   display: block;
   -webkit-animation: cog 4000ms ease-in-out;
   animation: cog 4000ms ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
 }
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_beta.scss */
@@ -2728,30 +2734,30 @@ pre {
     padding-right: 58px;
   }
 }
-/* line 60, ../_sass/_modules/_beta.scss */
+/* line 66, ../_sass/_modules/_beta.scss */
 .beta a {
   color: #404040;
 }
 
 @-webkit-keyframes cog {
-  /* line 66, ../_sass/_modules/_beta.scss */
+  /* line 72, ../_sass/_modules/_beta.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 70, ../_sass/_modules/_beta.scss */
+  /* line 76, ../_sass/_modules/_beta.scss */
   100% {
     -webkit-transform: rotate(1079deg);
   }
 }
 
 @keyframes cog {
-  /* line 76, ../_sass/_modules/_beta.scss */
+  /* line 82, ../_sass/_modules/_beta.scss */
   0% {
     transform: rotate(0deg);
   }
 
-  /* line 80, ../_sass/_modules/_beta.scss */
+  /* line 86, ../_sass/_modules/_beta.scss */
   100% {
     transform: rotate(1079deg);
   }
@@ -3820,6 +3826,143 @@ ol.list-links.list-links--secondary a:before {
   margin-bottom: 0;
 }
 
+/*==========  ARTICLE LIST  ==========*/
+/* line 348, ../_sass/_components/_list.scss */
+.articles-list {
+  padding-left: 0;
+}
+
+/* line 352, ../_sass/_components/_list.scss */
+.articles-list__item {
+  padding-bottom: 52px;
+  padding-left: 0;
+}
+/* line 356, ../_sass/_components/_list.scss */
+.articles-list__item:last-child {
+  padding-bottom: 53px;
+}
+/* line 362, ../_sass/_components/_list.scss */
+.articles-list__item:before {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 1px;
+  box-shadow: inset 0 1px 0 0 #e0e0e0;
+  margin-right: 0;
+  margin-left: 30%;
+}
+/* line 373, ../_sass/_components/_list.scss */
+.articles-list__item h3 a:hover {
+  text-decoration: none;
+}
+/* line 378, ../_sass/_components/_list.scss */
+.articles-list__item p {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+/* line 383, ../_sass/_components/_list.scss */
+.articles-list__item:first-child {
+  padding-top: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 383, ../_sass/_components/_list.scss */
+  .articles-list__item:first-child {
+    padding-top: 24px;
+  }
+}
+/* line 390, ../_sass/_components/_list.scss */
+.articles-list__item:first-child:before {
+  display: none;
+}
+
+/*==========  GUIDES LIST  ==========*/
+/* line 398, ../_sass/_components/_list.scss */
+.guides-list {
+  overflow: hidden;
+}
+@media only screen and (min-width: 620px) {
+  /* line 398, ../_sass/_components/_list.scss */
+  .guides-list {
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 52px;
+  }
+}
+
+/* line 412, ../_sass/_components/_list.scss */
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 412, ../_sass/_components/_list.scss */
+  .guides-list__item {
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+}
+/* line 427, ../_sass/_components/_list.scss */
+.guides-list__item h3 {
+  margin: 0 32px;
+}
+/* line 431, ../_sass/_components/_list.scss */
+.guides-list__item p {
+  margin: 26px 32px 0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 435, ../_sass/_components/_list.scss */
+  .guides-list__item .primary-content {
+    flex: 1;
+    -webkit-flex: 1;
+  }
+}
+/* line 442, ../_sass/_components/_list.scss */
+.guides-list__item .secondary-content {
+  position: relative;
+  margin-top: 51px;
+  border-top: 1px solid #e0e0e0;
+}
+@media only screen and (min-width: 620px) {
+  /* line 442, ../_sass/_components/_list.scss */
+  .guides-list__item .secondary-content {
+    width: 100%;
+  }
+}
+/* line 452, ../_sass/_components/_list.scss */
+.guides-list__item .secondary-content .icon-circle {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  margin-left: -21px;
+  border: 2px solid #ffffff;
+}
+/* line 459, ../_sass/_components/_list.scss */
+.guides-list__item .secondary-content .icon-circle i {
+  font-size: 23px;
+}
+/* line 465, ../_sass/_components/_list.scss */
+.guides-list__item ol {
+  margin: 26px 0 0;
+  padding: 52px 0 52px;
+  margin-top: 0;
+}
+/* line 471, ../_sass/_components/_list.scss */
+.guides-list__item:before {
+  display: none;
+}
+
 /**
 *
 * Link
@@ -4167,163 +4310,6 @@ object {
   padding-bottom: 0;
   padding-top: 0;
   display: block;
-}
-
-/**
-*
-* Articles list
-*
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
-**/
-/* line 13, ../_sass/_components/_articles-list.scss */
-.articles-list {
-  padding-left: 0;
-}
-
-/* line 17, ../_sass/_components/_articles-list.scss */
-.articles-list__item {
-  padding-bottom: 52px;
-  padding-left: 0;
-}
-/* line 21, ../_sass/_components/_articles-list.scss */
-.articles-list__item:last-child {
-  padding-bottom: 53px;
-}
-/* line 27, ../_sass/_components/_articles-list.scss */
-.articles-list__item:before {
-  content: "";
-  display: block;
-  width: 40%;
-  height: 1px;
-  box-shadow: inset 0 1px 0 0 #e0e0e0;
-  margin-right: 0;
-  margin-left: 30%;
-}
-/* line 38, ../_sass/_components/_articles-list.scss */
-.articles-list__item h3 a:hover {
-  text-decoration: none;
-}
-/* line 43, ../_sass/_components/_articles-list.scss */
-.articles-list__item p {
-  margin-top: 26px;
-  margin-bottom: 26px;
-}
-/* line 48, ../_sass/_components/_articles-list.scss */
-.articles-list__item:first-child {
-  padding-top: 0;
-}
-@media only screen and (min-width: 620px) {
-  /* line 48, ../_sass/_components/_articles-list.scss */
-  .articles-list__item:first-child {
-    padding-top: 24px;
-  }
-}
-/* line 55, ../_sass/_components/_articles-list.scss */
-.articles-list__item:first-child:before {
-  display: none;
-}
-
-/**
-*
-* Guides List
-*
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
-**/
-/* line 14, ../_sass/_components/_guides-list.scss */
-.guides-list {
-  overflow: hidden;
-}
-@media only screen and (min-width: 620px) {
-  /* line 14, ../_sass/_components/_guides-list.scss */
-  .guides-list {
-    display: -moz-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-top: 52px;
-  }
-}
-
-/* line 28, ../_sass/_components/_guides-list.scss */
-.guides-list__item {
-  padding: 0;
-  background: #ffffff;
-  margin-top: 26px;
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 620px) {
-  /* line 28, ../_sass/_components/_guides-list.scss */
-  .guides-list__item {
-    display: -moz-box;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-  }
-}
-/* line 43, ../_sass/_components/_guides-list.scss */
-.guides-list__item h3 {
-  margin: 0 32px;
-}
-/* line 47, ../_sass/_components/_guides-list.scss */
-.guides-list__item p {
-  margin: 26px 32px 0;
-}
-@media only screen and (min-width: 620px) {
-  /* line 51, ../_sass/_components/_guides-list.scss */
-  .guides-list__item .primary-content {
-    flex: 1;
-    -webkit-flex: 1;
-  }
-}
-/* line 58, ../_sass/_components/_guides-list.scss */
-.guides-list__item .secondary-content {
-  position: relative;
-  margin-top: 51px;
-  border-top: 1px solid #e0e0e0;
-}
-@media only screen and (min-width: 620px) {
-  /* line 58, ../_sass/_components/_guides-list.scss */
-  .guides-list__item .secondary-content {
-    width: 100%;
-  }
-}
-/* line 68, ../_sass/_components/_guides-list.scss */
-.guides-list__item .secondary-content .icon-circle {
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  margin-left: -21px;
-  border: 2px solid #ffffff;
-}
-/* line 75, ../_sass/_components/_guides-list.scss */
-.guides-list__item .secondary-content .icon-circle i {
-  font-size: 23px;
-}
-/* line 81, ../_sass/_components/_guides-list.scss */
-.guides-list__item ol {
-  margin: 26px 0 0;
-  padding: 52px 0 52px;
-  margin-top: 0;
-}
-/* line 87, ../_sass/_components/_guides-list.scss */
-.guides-list__item:before {
-  display: none;
 }
 
 /**

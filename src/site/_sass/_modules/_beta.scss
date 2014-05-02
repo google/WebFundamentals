@@ -48,6 +48,12 @@
 
     -webkit-animation: cog 4000ms ease-in-out;
     animation: cog 4000ms ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
   }
 
   @include medium {
