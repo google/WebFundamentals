@@ -2350,8 +2350,8 @@ pre {
   /* line 13, ../_sass/_modules/_home-header.scss */
   .home-header {
     padding-bottom: 104px;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-size: 1200px;
+    background-position: center 30%;
   }
 }
 @media only screen and (min-width: 800px) {

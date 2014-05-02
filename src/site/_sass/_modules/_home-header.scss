@@ -19,8 +19,8 @@
 
   @include medium {
     padding-bottom: $lineHeight*4;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-size: 1200px;
+    background-position: center 30%;
   }
 
   @include wide {
