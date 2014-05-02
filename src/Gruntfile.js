@@ -369,20 +369,20 @@ module.exports = function(grunt) {
 	});
 
 	// Build task
-	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
+	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --compressed: enables code compression (css)', function() {
 
-		var uncompressed = grunt.option('uncompressed');
+		var compressed = grunt.option('compressed');
 
-		if(uncompressed) {
+		if(compressed) {
 			return grunt.task.run([
 				'test',						// Code quality control
 				'clean:icons',				// Clean up icon font files for regeneration
 				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
-				'compass:uncompressed',		// Build the CSS using Compass
+				'compass:compressed',		// Build the CSS using Compass with compression
 				'cssmin',					// Minify the combined CSS
 				'jekyll:destination',		// Build the site with Jekyll
-				// 'replace:iconfont',			// Swap out local icon font references for fully qualified URL
+				// 'replace:iconfont',		// Swap out local icon font references for fully qualified URL
 			]);
 		} else {
 			return grunt.task.run([
@@ -390,10 +390,10 @@ module.exports = function(grunt) {
 				'clean:icons',				// Clean up icon font files for regeneration
 				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
-				'compass',					// Build the CSS using Compass with compression
+				'compass:uncompressed',		// Build the CSS using Compass without compression
 				'cssmin',					// Minify the combined CSS
 				'jekyll:destination',		// Build the site with Jekyll
-				// 'replace:iconfont',			// Swap out local icon font references for fully qualified URL
+				// 'replace:iconfont',		// Swap out local icon font references for fully qualified URL
 			]);
 		}
 
@@ -411,7 +411,7 @@ module.exports = function(grunt) {
 	});
 
 	// Serve task
-	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.\nOptions:\n  --uncompressed: avoids code compression (js,css,html)', function() {
+	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.', function() {
 
 		return grunt.task.run([
 			'test',
@@ -446,7 +446,7 @@ module.exports = function(grunt) {
 
 		if(production) {
 			return grunt.task.run([
-				'build --uncompressed',
+				'build',
 				'replace:production'
 			]);
 		} else {
@@ -466,7 +466,7 @@ module.exports = function(grunt) {
 			'test',						// Code quality control
 			'clean:icons',				// Clean up icon font files for regeneration
 			//'webfont:icons',			// Generate icon font files and SASS
-			'compass:compressed',		// Build the CSS using Compass with compression
+			'compass:uncompressed',		// Build the CSS using Compass with compression
 			'cssmin',					// Minify the combined CSS
 			'clean:destination',		// Clean out the destination directory
 			'jekyll:devsite',			// Build the site with Jekyll
