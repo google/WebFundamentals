@@ -1,21 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
-<<<<<<< HEAD
 <!--
 2014-5-2: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri May  2 11:12:20 2014
+Created by FontForge 20120731 at Fri May  2 11:31:00 2014
  By Antoine Grelard
 Created by Antoine Grelard with FontForge 2.0 (http://fontforge.sf.net)
-=======
-<svg xmlns="http://www.w3.org/2000/svg">
-<metadata>
-Created by FontForge 20120731 at Fri May  2 11:12:01 2014
- By Pedro Duarte
-Created by Pedro Duarte with FontForge 2.0 (http://fontforge.sf.net)
->>>>>>> 6a860d0f01160e1773daf3fdf6fd9fb4c0e14601
 </metadata>
 <defs>
 <font id="icons" horiz-adv-x="512" >
@@ -30,7 +22,7 @@ Created by Pedro Duarte with FontForge 2.0 (http://fontforge.sf.net)
     bbox="-0.0441687 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+E001-E019"
+    unicode-range="U+E001-E018"
   />
     <missing-glyph />
     <glyph glyph-name="uniE001" unicode="&#xe001;" 
@@ -54,37 +46,35 @@ l76 31l45 -45l-31 -77c3 -6 6 -12 8 -18l76 -32v-64zM256 80c62 0 111 50 111 112s-4
 d="M-0 192l256 256l256 -256l-256 -256z" />
     <glyph glyph-name="uniE00A" unicode="&#xe00a;" horiz-adv-x="116" 
 d="M116 111h-116v337h116v-337zM116 -64h-116v93h116v-93z" />
-    <glyph glyph-name="uniE00B" unicode="&#xe00b;" horiz-adv-x="372" 
-d="M372 448l-200 -512h-172l201 512h171z" />
-    <glyph glyph-name="uniE00C" unicode="&#xe00c;" 
+    <glyph glyph-name="uniE00B" unicode="&#xe00b;" 
 d="M219 6h-113l-106 186l106 186h113l-105 -186zM293 378h113l106 -186l-106 -186h-113l105 186z" />
-    <glyph glyph-name="uniE00D" unicode="&#xe00d;" horiz-adv-x="392" 
+    <glyph glyph-name="uniE00C" unicode="&#xe00c;" horiz-adv-x="392" 
 d="M205 80h-57l-24 -144h-70l24 144h-78v65h89l15 92h-78v65h89l24 146h69l-23 -146h56l24 146h70l-24 -146h81v-65h-91l-16 -92h81v-65h-91l-24 -144h-70zM159 145h56l16 92h-57z" />
-    <glyph glyph-name="uniE00E" unicode="&#xe00e;" 
+    <glyph glyph-name="uniE00D" unicode="&#xe00d;" 
 d="M0 -23l116 291l233 -291h-349zM236 155l160 217l116 -395h-163zM140 349c0 39 19 58 58 58s58 -19 58 -58s-19 -58 -58 -58s-58 19 -58 58z" />
-    <glyph glyph-name="uniE00F" unicode="&#xe00f;" horiz-adv-x="442" 
+    <glyph glyph-name="uniE00E" unicode="&#xe00e;" horiz-adv-x="442" 
 d="M0 448h442v-512h-442v512zM419 -41v466h-396v-466h396zM58 308v47h326v-47h-326zM58 204v46h326v-46h-326zM58 99v46h279v-46h-279z" />
-    <glyph glyph-name="uniE010" unicode="&#xe010;" 
+    <glyph glyph-name="uniE00F" unicode="&#xe00f;" 
 d="M0 372v76h512v-76h-512zM0 220v76h512v-76h-512zM0 69v76h512v-76h-512z" />
-    <glyph glyph-name="uniE011" unicode="&#xe011;" 
+    <glyph glyph-name="uniE010" unicode="&#xe010;" 
 d="M0 227h512v-70h-512v70z" />
-    <glyph glyph-name="uniE012" unicode="&#xe012;" 
+    <glyph glyph-name="uniE011" unicode="&#xe011;" 
 d="M36 156l-36 36l123 122l36 -36zM123 70l-123 122l36 36l123 -122zM476 228l36 -36l-123 -122l-36 36zM389 314l123 -122l-36 -36l-123 122zM33 204v-24h411v24h-411z" />
-    <glyph glyph-name="uniE013" unicode="&#xe013;" 
+    <glyph glyph-name="uniE012" unicode="&#xe012;" 
 d="M221 37c0 23 12 35 35 35s35 -12 35 -35s-12 -35 -35 -35s-35 12 -35 35zM402 258c-45 51 -101 76 -169 76c-60 0 -112 -21 -156 -62s-68 -92 -71 -152h-6v3v3c0 71 25 131 75 181s110 75 181 75c73 0 135 -27 185 -80zM237 42l26 -23l221 246l-26 24zM444 189l43 47
 c17 -35 25 -71 25 -110c0 -1 -1 -6 -1 -14l-53 20c-2 19 -7 38 -14 57z" />
-    <glyph glyph-name="uniE014" unicode="&#xe014;" 
+    <glyph glyph-name="uniE013" unicode="&#xe013;" 
 d="M221 448h70v-512h-70v512zM0 227h512v-70h-512v70z" />
-    <glyph glyph-name="uniE015" unicode="&#xe015;" horiz-adv-x="344" 
+    <glyph glyph-name="uniE014" unicode="&#xe014;" horiz-adv-x="344" 
 d="M100 76c0 35 6 57 17 73s31 35 61 56c15 10 28 22 37 36s13 30 13 49s-6 35 -16 46s-25 17 -44 17c-15 0 -28 -5 -38 -14s-16 -30 -16 -42h-113l-1 2c-1 48 15 84 46 108s71 41 122 41c55 0 98 -19 129 -46s47 -65 47 -112c0 -29 -9 -55 -26 -79s-39 -42 -65 -56
 c-15 -10 -25 -22 -30 -33s-7 -34 -7 -46h-116zM209 -64h-104v81h104v-81z" />
-    <glyph glyph-name="uniE016" unicode="&#xe016;" horiz-adv-x="372" 
+    <glyph glyph-name="uniE015" unicode="&#xe015;" horiz-adv-x="372" 
 d="M372 448l-200 -512h-172l201 512h171z" />
-    <glyph glyph-name="uniE017" unicode="&#xe017;" 
+    <glyph glyph-name="uniE016" unicode="&#xe016;" 
 d="M182 162l-182 52l36 108l177 -75l-13 201h119l-15 -205l172 73l36 -109l-183 -52l121 -152l-95 -67l-103 168l-101 -162l-96 64z" />
-    <glyph glyph-name="uniE018" unicode="&#xe018;" 
+    <glyph glyph-name="uniE017" unicode="&#xe017;" 
 d="M0 92l50 104l301 -145l-50 -104zM512 386l-211 -439l-105 50l212 439z" />
-    <glyph glyph-name="uniE019" unicode="&#xe019;" 
+    <glyph glyph-name="uniE018" unicode="&#xe018;" 
 d="M314 192c0 -32 -26 -58 -58 -58s-58 26 -58 58s26 58 58 58s58 -26 58 -58zM256 320c-71 0 -128 -57 -128 -128s57 -128 128 -128s128 57 128 128s-57 128 -128 128zM256 343v0c84 0 151 -67 151 -151s-67 -151 -151 -151s-151 67 -151 151s67 151 151 151zM256 436
 c-135 0 -244 -109 -244 -244s109 -244 244 -244s244 109 244 244s-109 244 -244 244zM256 448v0c141 0 256 -115 256 -256s-115 -256 -256 -256s-256 115 -256 256s115 256 256 256z" />
   </font>
