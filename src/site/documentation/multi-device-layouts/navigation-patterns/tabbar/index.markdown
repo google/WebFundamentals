@@ -19,7 +19,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="/web/essentials/resources/samples/documentation/multi-device-layouts/navigation-patterns/tabbar-sample1.html"><img class="g-medium--full g-wide--full" src="images/tabbar.png"></a>
+{% link_sample ../_code/tabbar-sample1.html %} <img class="g-medium--full g-wide--full" src="images/tabbar.png"> {% endlink_sample %} 
 
 <div style="clear: both;"></div>
 
@@ -35,8 +35,8 @@ Position your tabs above or below your main content, this is a trade off between
 
 One advantage to using tabs is that it gives the user a consistent place to go for navigation and makes it easy to glance at where they are within the site.
 
-<a href="/web/essentials/resources/samples/documentation/multi-device-layouts/navigation-patterns/tabbar-sample2.html"><img class="g--half" src="images/tabbar-alt-1.png"></a>
-<a href="/web/essentials/resources/samples/documentation/multi-device-layouts/navigation-patterns/tabbar-sample3.html"><img class="g--half g--last" src="images/tabbar-alt-2.png"></a>
+{% link_sample ../_code/tabbar-sample2.html %} <img class="g--half" src="images/tabbar-alt-1.png"> {% endlink_sample %} 
+{% link_sample ../_code/tabbar-sample3.html %} <img class="g--half g--last" src="images/tabbar-alt-2.png"> {% endlink_sample %}
 
 <div style="clear: both;"></div>
 
