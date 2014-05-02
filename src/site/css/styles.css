@@ -2357,11 +2357,10 @@ pre {
 @media only screen and (min-width: 800px) {
   /* line 13, ../_sass/_modules/_home-header.scss */
   .home-header {
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-size: 1560px;
   }
 }
-/* line 31, ../_sass/_modules/_home-header.scss */
+/* line 30, ../_sass/_modules/_home-header.scss */
 .home-header:after {
   font-family: "icons";
   position: absolute;
@@ -2374,14 +2373,14 @@ pre {
   color: #b7cdf4;
 }
 @media only screen and (min-width: 620px) {
-  /* line 31, ../_sass/_modules/_home-header.scss */
+  /* line 30, ../_sass/_modules/_home-header.scss */
   .home-header:after {
     font-size: 68px;
     line-height: 1px;
     bottom: 4px;
   }
 }
-/* line 52, ../_sass/_modules/_home-header.scss */
+/* line 51, ../_sass/_modules/_home-header.scss */
 .home-header h1 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -2393,7 +2392,7 @@ pre {
   padding-top: 52px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 52, ../_sass/_modules/_home-header.scss */
+  /* line 51, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -2405,7 +2404,7 @@ pre {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 52, ../_sass/_modules/_home-header.scss */
+  /* line 51, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -2417,12 +2416,12 @@ pre {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 52, ../_sass/_modules/_home-header.scss */
+  /* line 51, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     padding-top: 78px;
   }
 }
-/* line 66, ../_sass/_modules/_home-header.scss */
+/* line 65, ../_sass/_modules/_home-header.scss */
 .home-header p {
   font-size: 20px;
   font-weight: 300;
@@ -2432,7 +2431,7 @@ pre {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 66, ../_sass/_modules/_home-header.scss */
+  /* line 65, ../_sass/_modules/_home-header.scss */
   .home-header p {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -2444,12 +2443,12 @@ pre {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 66, ../_sass/_modules/_home-header.scss */
+  /* line 65, ../_sass/_modules/_home-header.scss */
   .home-header p {
     padding-top: 0;
   }
 }
-/* line 74, ../_sass/_modules/_home-header.scss */
+/* line 73, ../_sass/_modules/_home-header.scss */
 .home-header a {
   margin-top: 65px;
 }
