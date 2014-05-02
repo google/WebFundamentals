@@ -634,6 +634,10 @@ pre {
   .content {
     margin-right: 25.9%;
   }
+  /* line 61, ../_sass/_global.scss */
+  .content pre {
+    margin-right: -25.9%;
+  }
 }
 
 @font-face {
