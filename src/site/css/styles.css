@@ -2340,13 +2340,28 @@ pre {
 **/
 /* line 13, ../_sass/_modules/_home-header.scss */
 .home-header {
-  background: #3372df;
+  background: #3372df url(../imgs/devices.svg) no-repeat center center;
   color: #ffffff;
   position: relative;
   padding-bottom: 78px;
   margin-bottom: 78px;
 }
-/* line 20, ../_sass/_modules/_home-header.scss */
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_home-header.scss */
+  .home-header {
+    padding-bottom: 104px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 13, ../_sass/_modules/_home-header.scss */
+  .home-header {
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+}
+/* line 31, ../_sass/_modules/_home-header.scss */
 .home-header:after {
   font-family: "icons";
   position: absolute;
@@ -2359,20 +2374,14 @@ pre {
   color: #b7cdf4;
 }
 @media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_modules/_home-header.scss */
+  /* line 31, ../_sass/_modules/_home-header.scss */
   .home-header:after {
     font-size: 68px;
     line-height: 1px;
     bottom: 4px;
   }
 }
-@media only screen and (min-width: 620px) {
-  /* line 13, ../_sass/_modules/_home-header.scss */
-  .home-header {
-    padding-bottom: 104px;
-  }
-}
-/* line 44, ../_sass/_modules/_home-header.scss */
+/* line 52, ../_sass/_modules/_home-header.scss */
 .home-header h1 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -2384,7 +2393,7 @@ pre {
   padding-top: 52px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 44, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -2396,7 +2405,7 @@ pre {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 44, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -2408,12 +2417,12 @@ pre {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 44, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     padding-top: 78px;
   }
 }
-/* line 58, ../_sass/_modules/_home-header.scss */
+/* line 66, ../_sass/_modules/_home-header.scss */
 .home-header p {
   font-size: 20px;
   font-weight: 300;
@@ -2423,7 +2432,7 @@ pre {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 58, ../_sass/_modules/_home-header.scss */
+  /* line 66, ../_sass/_modules/_home-header.scss */
   .home-header p {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -2435,12 +2444,12 @@ pre {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 58, ../_sass/_modules/_home-header.scss */
+  /* line 66, ../_sass/_modules/_home-header.scss */
   .home-header p {
     padding-top: 0;
   }
 }
-/* line 66, ../_sass/_modules/_home-header.scss */
+/* line 74, ../_sass/_modules/_home-header.scss */
 .home-header a {
   margin-top: 65px;
 }
