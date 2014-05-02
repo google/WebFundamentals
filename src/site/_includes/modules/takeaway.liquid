@@ -5,6 +5,7 @@
 {% assign type = "learning" %}
 {% assign title = "Key Takeaways" %}
 {% assign position = "left" %}
+{% assign inline = false %}
 
 {% if include.title %}
 {% assign title = include.title %}
@@ -15,6 +16,9 @@
 {% if include.position %}
 {% assign position = include.position %}
 {% endif %}
+{% if include.inline %}
+{% assign inline = include.inline %}
+{% endif %}
 
 
-{% include modules/highlight.liquid title=title text=include.text list=include.list position=position type=type character=character %}
+{% include modules/highlight.liquid title=title text=include.text list=include.list position=position type=type character=character inline=inline %}

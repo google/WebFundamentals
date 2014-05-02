@@ -44,6 +44,10 @@
   @include medium {
     padding-bottom: $lineHeight*2;
   }
+
+  @include wide {
+    min-height: $lineHeight*8;
+  }
 }
 
 .highlight-module__title {
@@ -98,9 +102,11 @@
   pre {
     margin: 0;
     padding-top: $lineHeight;
-    margin-left: - $lineHeight;
     font-size: $fontBase - 2;
     line-height: $lineHeight;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 
     span {
       margin: 0;
@@ -155,5 +161,52 @@
         left: 0;
       }
     }
+  }
+}
+
+/*==========  INLINE  ==========*/
+.highlight-module--inline {
+  color: $colorText;
+  overflow: visible;
+  margin: $lineHeight 0 0;
+
+  & .highlight-module__container {
+    padding-bottom: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  & .highlight-module__content {
+    border-color: $colorGrayKeyline;
+    border-style: solid;
+    border-width: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-bottom: -2px; // Offsetting 2px to considerate border top/bottom - baseline rules.
+    padding:  0 0 $lineHeight;
+  }
+
+  & .highlight-module__title {
+    @include type--large;
+  }
+
+  &.highlight-module--remember {
+    & .highlight-module__title,
+    & li:before {
+      color: $colorRemember;
+    }
+  }
+
+  &.highlight-module--learning {
+    & .highlight-module__title,
+    & li:before {
+      color: $colorLearning;
+    }
+  }
+
+  &:after {
+    display: none !important;
   }
 }

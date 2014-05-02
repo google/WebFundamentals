@@ -11,11 +11,22 @@
 **/
 
 .home-header {
-  background: $colorBlue;
+  background: $colorBlue url(../imgs/devices.svg) no-repeat center center;
   color: #ffffff;
   position: relative;
   padding-bottom: $lineHeight*3;
   margin-bottom: $lineHeight*3;
+
+  @include medium {
+    padding-bottom: $lineHeight*4;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  @include wide {
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
 
   &:after {
     @extend .icon-star:before;
@@ -37,9 +48,6 @@
     color: $colorBlueSecondary;
   }
 
-  @include medium {
-    padding-bottom: $lineHeight*4;
-  }
 
   & h1 {
     @include type--huge;

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family:"icons";
-  src:url("//web-central.appspot.com/web/essentials/icons/icons.eot?1");
-  src:url("//web-central.appspot.com/web/essentials/icons/icons.eot?1#iefix") format("embedded-opentype"),
-		url("//web-central.appspot.com/web/essentials/icons/icons.woff?1") format("woff"),
-		url("//web-central.appspot.com/web/essentials/icons/icons.ttf?1") format("truetype"),
-		url("//web-central.appspot.com/web/essentials/icons/icons.svg?1#icons") format("svg");
+  src:url("../icons/icons.eot");
+  src:url("../icons/icons.eot?#iefix") format("embedded-opentype"),
+		url("../icons/icons.woff") format("woff"),
+		url("../icons/icons.ttf") format("truetype"),
+		url("../icons/icons.svg?#icons") format("svg");
   font-weight:normal;
   font-style:normal;
 }
@@ -79,79 +79,74 @@ $icon-exclamation: "\e00a";
   content:"\e00a";
 }
 
-$icon-forward-slash: "\e00b";
-.icon-forward-slash:before {
+$icon-google-dev: "\e00b";
+.icon-google-dev:before {
   content:"\e00b";
 }
 
-$icon-google-dev: "\e00c";
-.icon-google-dev:before {
+$icon-hash: "\e00c";
+.icon-hash:before {
   content:"\e00c";
 }
 
-$icon-hash: "\e00d";
-.icon-hash:before {
+$icon-introduction-to-media: "\e00d";
+.icon-introduction-to-media:before {
   content:"\e00d";
 }
 
-$icon-introduction-to-media: "\e00e";
-.icon-introduction-to-media:before {
+$icon-lessons: "\e00e";
+.icon-lessons:before {
   content:"\e00e";
 }
 
-$icon-lessons: "\e00f";
-.icon-lessons:before {
+$icon-menu: "\e00f";
+.icon-menu:before {
   content:"\e00f";
 }
 
-$icon-menu: "\e010";
-.icon-menu:before {
+$icon-minus: "\e010";
+.icon-minus:before {
   content:"\e010";
 }
 
-$icon-minus: "\e011";
-.icon-minus:before {
+$icon-multi-device-layouts: "\e011";
+.icon-multi-device-layouts:before {
   content:"\e011";
 }
 
-$icon-multi-device-layouts: "\e012";
-.icon-multi-device-layouts:before {
+$icon-performance: "\e012";
+.icon-performance:before {
   content:"\e012";
 }
 
-$icon-performance: "\e013";
-.icon-performance:before {
+$icon-plus: "\e013";
+.icon-plus:before {
   content:"\e013";
 }
 
-$icon-plus: "\e014";
-.icon-plus:before {
+$icon-question: "\e014";
+.icon-question:before {
   content:"\e014";
 }
 
-$icon-question: "\e015";
-.icon-question:before {
+$icon-slash: "\e015";
+.icon-slash:before {
   content:"\e015";
 }
 
-$icon-slash: "\e016";
-.icon-slash:before {
+$icon-star: "\e016";
+.icon-star:before {
   content:"\e016";
 }
 
-$icon-star: "\e017";
-.icon-star:before {
+$icon-tick: "\e017";
+.icon-tick:before {
   content:"\e017";
 }
 
-$icon-tick: "\e018";
-.icon-tick:before {
-  content:"\e018";
-}
-
-$icon-user-input: "\e019";
+$icon-user-input: "\e018";
 .icon-user-input:before {
-  content:"\e019";
+  content:"\e018";
 }
 
 

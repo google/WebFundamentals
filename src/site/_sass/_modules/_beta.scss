@@ -25,12 +25,12 @@
   &:before {
     content: $icon-diamond;
     font-family: $fontIcon;
-    font-size: 60px;
+    font-size: 64px;
     line-height: 0px;
     color: $colorYellow;
 
     position: absolute;
-    right: -30px;
+    right: -32px;
     top: 50%;
   }
 
@@ -39,14 +39,14 @@
     font-size: 26px;
     color: #ffffff;
     position: absolute;
-    width: 60px;
-    right: -30px;
+    width: 64px;
+    right: -32px;
     text-align: center;
     line-height: 0px;
     top: 50%;
     display: block;
 
-    -webkit-animation: cog 2000ms linear infinite;
+    -webkit-animation: cog 4000ms ease-in-out;
   }
 
   @include medium {
@@ -61,12 +61,12 @@
   }
 }
 
-
 @-webkit-keyframes cog {
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
-    -webkit-transform: rotate(359deg);
+    -webkit-transform: rotate(1079deg);
   }
 }

@@ -39,7 +39,7 @@ NOTE: This is our styleguide
       <li class="summary-header__anchors-item"><a href="#guides-section">Guides section</a></li>
       <li class="summary-header__anchors-item"><a href="#page-header">Page header</a></li>
       <li class="summary-header__anchors-item"><a href="#quote">Quote</a></li>
-      <li class="summary-header__anchors-item"><a href="#centered-list">Centered list</a></li>
+      <li class="summary-header__anchors-item"><a href="#guides-intro">Guides Intro</a></li>
       <li class="summary-header__anchors-item"><a href="#featured-spotlight">Featured spotlight</a></li>
       <li class="summary-header__anchors-item"><a href="#featured-list">Featured list</a></li>
       <li class="summary-header__anchors-item"><a href="#article-navigation">Article navigation</a></li>
@@ -143,7 +143,19 @@ NOTE: This is our styleguide
       <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
     </ol>
 
+    <ol class="list-anchor list-small">
+      <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
+      <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
+    </ol>
+
     <ol class="list-links list-links--secondary">
+      <li><a href="#">Layout basics</a></li>
+      <li><a href="#">Basics layouts</a></li>
+      <li><a href="#">Layout patterns</a></li>
+    </ol>
+
+    <ol class="list-links list-links--secondary list-small">
       <li><a href="#">Layout basics</a></li>
       <li><a href="#">Basics layouts</a></li>
       <li><a href="#">Layout patterns</a></li>
@@ -186,13 +198,23 @@ NOTE: This is our styleguide
       <p class="g--third"><i class="icon icon-chevron-left"></i></p>
       <p class="g--third g--last"><i class="icon icon-chevron-up"></i></p>
       <p class="g--third"><i class="icon icon-chevron-down"></i></p>
-      <p class="g--third"><i class="icon icon-forward-slash"></i></p>
+      <p class="g--third"><i class="icon icon-slash"></i></p>
       <p class="g--third g--last"><i class="icon icon-google-dev"></i></p>
       <p class="g--third"><i class="icon icon-lessons"></i></p>
       <p class="g--third"><i class="icon icon-multi-device-layouts"></i></p>
       <p class="g--third g--last"><i class="icon icon-user-input"></i></p>
       <p class="g--third"><i class="icon icon-introduction-to-media"></i></p>
       <p class="g--third"><i class="icon icon-performance"></i></p>
+      <p class="g--third g--last"><i class="icon icon-bullet"></i></p>
+      <p class="g--third"><i class="icon icon-chevron-large"></i></p>
+      <p class="g--third"><i class="icon icon-close"></i></p>
+      <p class="g--third g--last"><i class="icon icon-cog"></i></p>
+      <p class="g--third"><i class="icon icon-diamond"></i></p>
+      <p class="g--third"><i class="icon icon-exclamation"></i></p>
+      <p class="g--third g--last"><i class="icon icon-hash"></i></p>
+      <p class="g--third"><i class="icon icon-menu"></i></p>
+      <p class="g--third"><i class="icon icon-question"></i></p>
+      <p class="g--third g--last"><i class="icon icon-tick"></i></p>
     </div>
 
     <h4>Icon Circles</h4>
@@ -451,15 +473,23 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid character="!" position="right" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="remember" %}
+  {% include modules/remember.liquid text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-  {% include modules/highlight.liquid character="*" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+  {% include modules/takeaway.liquid position="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-  {% include modules/highlight.liquid character="!" position="right" title="Remember" list=page.learning-list type="remember" %}
+  {% include modules/remember.liquid position="right"  list=page.learning-list %}
 
-  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" type="remember" %}
+  {% include modules/remember.liquid position="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
 
   {% include_code _code/test.html somehtml html %}
+
+  {% highlight html %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% endhighlight %}
+
+  {% include modules/takeaway.liquid list=page.learning-list inline=true %}
+
+  {% include modules/remember.liquid list=page.learning-list inline=true %}
 
 </section>
 
@@ -481,9 +511,9 @@ NOTE: This is our styleguide
       <p class="editorial-header__excerpt g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Sed vitae varius augue, eu varius dolor. </p>
       <p class="g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Donec augue diam, scelerisque eget lectus in, posuere aliquet mi. Pellentesque suscipit nisl gravida sem tincidunt, id blandit turpis commodo.</p>
 
-      <div class="editorial-header__toc">
-        <p class="medium editorial-header__toc-title"><i class="icon icon-lessons"></i> More lessons in Layout Basics</p>
-        <ol class="list-links">
+      <div class="toc">
+        <p class="toc__title">In this lesson</p>
+        <ol class="toc__list list-anchor" id="toc">
           <li><a href="#">Lorem ipsum dolor sit amet</a></li>
           <li class="current"><a href="#">Dicta optio cumque dolore hic ea facilis</a></li>
           <li><a href="#">Minus, possimus, veniam, incidunt eligendi</a></li>
@@ -540,50 +570,68 @@ NOTE: This is our styleguide
 
 <section class="styleguide__guides-section">
   <div class="guides-section">
-    <header class="container">
-        <h2 class="xlarge">Guides Section</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor.</p>
-    </header>
+        <header class="container">
+            <h2 class="xxlarge">Documentation</h2>
+            <p>Follow these guides and build web content users can access on any device they choose.</p>
+        </header>
 
-    <ul class="guides-list container-medium">
-      <li class="guides-list__item g--half">
-        <h3 class="xlarge">Multi screen layouts</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list-links list-links--secondary">
-          <li><a href="#">Layout basics</a></li>
-          <li><a href="#">Basics layouts</a></li>
-          <li><a href="#">Layout patterns</a></li>
-        </ol>
-      </li>
-      <li class="guides-list__item g--half g--last">
-        <h3 class="xlarge">Multi screen layouts</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list-links list-links--secondary">
-          <li><a href="#">Layout basics</a></li>
-          <li><a href="#">Basics layouts</a></li>
-          <li><a href="#">Layout patterns</a></li>
-        </ol>
-      </li>
-      <li class="guides-list__item g--half">
-        <h3 class="xlarge">Multi screen layouts</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list-links list-links--secondary">
-          <li><a href="#">Layout basics</a></li>
-          <li><a href="#">Basics layouts</a></li>
-          <li><a href="#">Layout patterns</a></li>
-        </ol>
-      </li>
-      <li class="guides-list__item g--half g--last">
-        <h3 class="xlarge">Multi screen layouts</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros dolor, pharetra eu tincidunt et, sagittis et mi.</p>
-        <ol class="list-links list-links--secondary">
-          <li><a href="#">Layout basics</a></li>
-          <li><a href="#">Basics layouts</a></li>
-          <li><a href="#">Layout patterns</a></li>
-        </ol>
-      </li>
-    </ul>
-  </div>
+        <ul class="guides-list container-medium">
+          <li class="guides-list__item g--half theme--multi-device-layouts ">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#" title="Go to Multi-Device Layouts" class="themed">Multi-Device Layouts</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, velit, illum iure id in saepe laborum. Doloribus, eaque, assumenda inventore eos iusto tenetur error dolorem suscipit molestiae natus ullam aliquam?</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="#" title="Read the lesson Responsive Web Design Fundamentals">Responsive Web Design Fundamentals</a></li>
+                <li><a href="#" title="Read the lesson Responsive Web Design Patterns">Responsive Web Design Patterns</a></li>
+                <li><a href="#" title="Read the lesson Navigation and Action Patterns">Navigation and Action Patterns</a></li>
+              </ol>
+            </div>
+          </li>
+          <li class="guides-list__item g--half theme--introduction-to-media g--last">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#" title="Go to Images, Audio and Video" class="themed">Images, Audio and Video</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, fugit ea maiores omnis ad iste autem sed reiciendis amet quam deleniti sapiente laboriosam voluptate pariatur veniam quod beatae sunt architecto?</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="#" title="Read the lesson Images">Images</a></li>
+                <li><a href="#" title="Read the lesson Video">Video</a></li>
+                <li><a href="#" title="Read the lesson Audio">Audio</a></li>
+              </ol>
+            </div>
+          </li>
+          <li class="guides-list__item g--half theme--user-input ">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#" title="Go to Forms and User Input" class="themed">Forms and User Input</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, adipisci, aspernatur. Velit, consequatur, temporibus, neque minus obcaecati dolor officia architecto voluptatem et pariatur quo vitae saepe laborum ratione eum. Soluta.</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="#" title="Read the lesson Create Amazing Forms">Create Amazing Forms</a></li>
+                <li><a href="#" title="Read the lesson Add Touch to Your Site">Add Touch to Your Site</a></li>
+              </ol>
+            </div>
+          </li>
+          <li class="guides-list__item g--half theme--performance g--last">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#" title="Go to Optimizing Performance" class="themed">Optimizing Performance</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ratione officia officiis natus illum quos cumque quis! Optio, dolore, eligendi ea culpa quod esse atque architecto reprehenderit at tempora itaque!</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="#" title="Read the lesson Critical Rendering Path">Critical Rendering Path</a></li>
+                <li><a href="#" title="Read the lesson Optimizing Content Efficiency">Optimizing Content Efficiency</a></li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </div>
 </section>
 
 <div class="container">
@@ -619,8 +667,8 @@ NOTE: This is our styleguide
 </section>
 
 <div class="container">
-  <a name="centered-list"></a>
-  <h2 class="subsection-title"><strong class="subsection-number">#16</strong> Centered list</h2>
+  <a name="guides-intro"></a>
+  <h2 class="subsection-title"><strong class="subsection-number">#16</strong> Guides intro</h2>
 </div>
 
 <section class="styleguide__centered-list">
