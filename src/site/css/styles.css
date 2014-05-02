@@ -2678,11 +2678,11 @@ pre {
 .beta:before {
   content: "\e009";
   font-family: "icons";
-  font-size: 60px;
+  font-size: 64px;
   line-height: 0px;
   color: #f4b400;
   position: absolute;
-  right: -30px;
+  right: -32px;
   top: 50%;
 }
 /* line 37, ../_sass/_modules/_beta.scss */
@@ -2691,8 +2691,8 @@ pre {
   font-size: 26px;
   color: #ffffff;
   position: absolute;
-  width: 60px;
-  right: -30px;
+  width: 64px;
+  right: -32px;
   text-align: center;
   line-height: 0px;
   top: 50%;
@@ -2708,18 +2708,18 @@ pre {
     padding-right: 58px;
   }
 }
-/* line 60, ../_sass/_modules/_beta.scss */
+/* line 59, ../_sass/_modules/_beta.scss */
 .beta a {
   color: #404040;
 }
 
 @-webkit-keyframes cog {
-  /* line 66, ../_sass/_modules/_beta.scss */
+  /* line 65, ../_sass/_modules/_beta.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 70, ../_sass/_modules/_beta.scss */
+  /* line 69, ../_sass/_modules/_beta.scss */
   100% {
     -webkit-transform: rotate(1079deg);
   }

@@ -25,12 +25,12 @@
   &:before {
     content: $icon-diamond;
     font-family: $fontIcon;
-    font-size: 60px;
+    font-size: 64px;
     line-height: 0px;
     color: $colorYellow;
 
     position: absolute;
-    right: -30px;
+    right: -32px;
     top: 50%;
   }
 
@@ -39,14 +39,13 @@
     font-size: 26px;
     color: #ffffff;
     position: absolute;
-    width: 60px;
-    right: -30px;
+    width: 64px;
+    right: -32px;
     text-align: center;
     line-height: 0px;
     top: 50%;
     display: block;
 
-    // -webkit-animation: cog 4000ms linear;
     -webkit-animation: cog 4000ms ease-in-out;
   }
 
