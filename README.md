@@ -45,7 +45,7 @@ curl -sSL https://get.rvm.io | bash
 
 ### Set RVM Default to 2.0.0
 
-rvm install ruby-2.0.0-p451  
+rvm install ruby-2.0.0-p451
 rvm --default use 2.0.0
 
 ### Install Pygments
@@ -54,7 +54,7 @@ easy_install pygments
 
 ### Install Kramdown
 
-sudo gem install kramdown
+gem install kramdown
 
 ### Install Jekyll
  [http://jekyllrb.com/](http://jekyllrb.com/)
