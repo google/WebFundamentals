@@ -54,7 +54,7 @@ Mac
 
 
 Using project-level meta data
------------------------------
+=============================
 
 The table of contents is generated from `src/site/_project.yaml`
 
