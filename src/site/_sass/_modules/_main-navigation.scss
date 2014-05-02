@@ -121,7 +121,7 @@
     }
 
     .subnav-is-opened > & {
-      color: $colorYellow;
+      color: $colorYellowSecondary;
     }
   }
 
@@ -219,7 +219,9 @@
 }
 
 .main-nav__link--explore-wrapper {
-  border-bottom: 1px solid $colorGrayKeyline;
+  @include medium {
+    border-bottom: 1px solid $colorGrayKeyline;
+  }
 }
 
 .main-nav__featured {
@@ -287,6 +289,7 @@
     @extend .icon-plus:before;
 
     @include medium {
+      font-size: 9px;
       content: $icon-chevron-down;
     }
   }
@@ -295,9 +298,10 @@
     float: none;
     display: inline-block;
     margin-left: 6px;
+    line-height: $lineHeight/2;
     vertical-align: top; // middle breaks baseline grid
     position: relative;
-    top: 5px;
+    top: 7px;
   }
 
   .subnav-is-opened & {

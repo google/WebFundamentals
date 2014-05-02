@@ -124,6 +124,10 @@
 
   .highlight-module__container {
     padding-bottom: 0;
+
+    @include wide {
+      min-height: none;
+    }
   }
 
   .highlight-module__cta {

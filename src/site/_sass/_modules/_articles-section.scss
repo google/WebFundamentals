@@ -13,6 +13,12 @@
 .articles-section {
   background: $colorGrayBackground;
   text-align: center;
+
+  .article-section__icon {
+    margin-top: 0;
+    margin-bottom: 0;
+    top: -($lineHeight);
+  }
 }
 
 .articles-count {
@@ -22,10 +28,3 @@
   font-weight: 400;
 }
 
-.article-section__icon {
-  top: -($lineHeight);
-
-  @include medium {
-    top: -($lineHeight + $lineHeight/2);
-  }
-}

@@ -22,7 +22,7 @@
 
           <header class="clear">
             <h3 class="xxlarge text-divider themed">{{ page.title }}</h3>
-            <p class="page-header__excerpt g-wide--3 g--centered">{{page.introduction}}</p>
+            <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">{{page.introduction}}</p>
           </header>
         </div>
       </div>
@@ -31,7 +31,7 @@
 
       <div class="articles-section">
 
-        <span class="article-section__icon icon-circle--large themed themed--background"><span>{{page.articles.[page.id].size}}</span></span>
+        <span class="article-section__icon icon-circle themed themed--background"><span>{{page.articles.[page.id].size}}</span></span>
 
         <div class="container">
           <p class="articles-count themed">Guides available</p>
@@ -39,8 +39,8 @@
 
             {% for guide in page.articles.[page.id] %}
             <li class="articles-list__item">
-              <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" title="Read the lesson {{guide.title}}" class="themed">{{guide.title}}</a></h3>
-              <p class="g-wide--push-1 g-wide--pull-1">{{guide.description}}</p>
+              <h3 class="xlarge g-wide--2 g--centered"><a href="{{site.baseurl}}{{guide.url}}" title="Read the lesson {{guide.title}}" class="themed">{{guide.title}}</a></h3>
+              <p class="g-medium--2 g-wide--3 g--centered">{{guide.description}}</p>
             </li>
             {% endfor %}
 
