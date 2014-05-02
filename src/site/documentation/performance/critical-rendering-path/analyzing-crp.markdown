@@ -170,7 +170,7 @@ After chatting with our site developers we realized that the JavaScript we inclu
 
 Making the script asynchronous has several advantages:
 
-* The script is no longer parser blocking and does not part of the critical rendering path
+* The script is no longer parser blocking and is not part of the critical rendering path
 * Because there are no other critical scripts, the CSS also does not need to block the domContentLoaded event
 * The sooner the domContentLoaded event fires, the sooner other application logic can begin executing
 
