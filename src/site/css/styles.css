@@ -632,8 +632,8 @@ body.debug:after {
 
 @font-face {
   font-family: "icons";
-  src: url("../icons/icons.eot");
-  src: url("../icons/icons.eot?#iefix") format("embedded-opentype"), url("../icons/icons.woff") format("woff"), url("../icons/icons.ttf") format("truetype"), url("../icons/icons.svg?#icons") format("svg");
+  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot");
+  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot?#iefix") format("embedded-opentype"), url("//web-central.appspot.com/web/essentials/icons/icons.woff") format("woff"), url("//web-central.appspot.com/web/essentials/icons/icons.ttf") format("truetype"), url("//web-central.appspot.com/web/essentials/icons/icons.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2635,7 +2635,7 @@ body.debug:after {
   line-height: 0px;
   top: 50%;
   display: block;
-  -webkit-animation: cog 2000ms linear infinite;
+  -webkit-animation: cog 4000ms ease-in-out;
 }
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_beta.scss */
@@ -2646,7 +2646,7 @@ body.debug:after {
     padding-right: 58px;
   }
 }
-/* line 59, ../_sass/_modules/_beta.scss */
+/* line 60, ../_sass/_modules/_beta.scss */
 .beta a {
   color: #404040;
 }
@@ -2657,9 +2657,9 @@ body.debug:after {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 69, ../_sass/_modules/_beta.scss */
+  /* line 70, ../_sass/_modules/_beta.scss */
   100% {
-    -webkit-transform: rotate(359deg);
+    -webkit-transform: rotate(1079deg);
   }
 }
 

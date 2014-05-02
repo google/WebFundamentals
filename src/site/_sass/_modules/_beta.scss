@@ -46,7 +46,8 @@
     top: 50%;
     display: block;
 
-    -webkit-animation: cog 2000ms linear infinite;
+    // -webkit-animation: cog 4000ms linear;
+    -webkit-animation: cog 4000ms ease-in-out;
   }
 
   @include medium {
@@ -61,12 +62,12 @@
   }
 }
 
-
 @-webkit-keyframes cog {
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
-    -webkit-transform: rotate(359deg);
+    -webkit-transform: rotate(1079deg);
   }
 }
