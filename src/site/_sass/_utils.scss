@@ -454,7 +454,6 @@
   // Mixin for flexbox
   @mixin flexbox {
     display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }

@@ -504,6 +504,12 @@ body.debug:after {
 }
 
 /* line 32, ../_sass/_global.scss */
+pre {
+  background: #f0f0f0;
+  padding: 13px;
+}
+
+/* line 37, ../_sass/_global.scss */
 .main-container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -516,7 +522,7 @@ body.debug:after {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 32, ../_sass/_global.scss */
+  /* line 37, ../_sass/_global.scss */
   .main-container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -524,7 +530,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 32, ../_sass/_global.scss */
+  /* line 37, ../_sass/_global.scss */
   .main-container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -532,7 +538,7 @@ body.debug:after {
   }
 }
 
-/* line 36, ../_sass/_global.scss */
+/* line 41, ../_sass/_global.scss */
 .container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -545,7 +551,7 @@ body.debug:after {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 36, ../_sass/_global.scss */
+  /* line 41, ../_sass/_global.scss */
   .container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -553,7 +559,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 36, ../_sass/_global.scss */
+  /* line 41, ../_sass/_global.scss */
   .container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -562,7 +568,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 45, ../_sass/_global.scss */
   .container-medium {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -576,7 +582,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 45, ../_sass/_global.scss */
   .container-medium {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -584,7 +590,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 45, ../_sass/_global.scss */
   .container-medium {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -593,7 +599,7 @@ body.debug:after {
 }
 
 @media only screen and (max-width: 619px) {
-  /* line 46, ../_sass/_global.scss */
+  /* line 51, ../_sass/_global.scss */
   .container-small {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -607,7 +613,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 620px) {
-  /* line 46, ../_sass/_global.scss */
+  /* line 51, ../_sass/_global.scss */
   .container-small {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -615,7 +621,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 800px) {
-  /* line 46, ../_sass/_global.scss */
+  /* line 51, ../_sass/_global.scss */
   .container-small {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -624,7 +630,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 52, ../_sass/_global.scss */
+  /* line 57, ../_sass/_global.scss */
   .content {
     margin-right: 25.9%;
   }
@@ -705,78 +711,73 @@ body.debug:after {
 }
 
 /* line 83, ../_sass/_components/_icons.scss */
-.icon-forward-slash:before {
+.icon-google-dev:before {
   content: "\e00b";
 }
 
 /* line 88, ../_sass/_components/_icons.scss */
-.icon-google-dev:before {
+.icon-hash:before {
   content: "\e00c";
 }
 
 /* line 93, ../_sass/_components/_icons.scss */
-.icon-hash:before {
+.icon-introduction-to-media:before {
   content: "\e00d";
 }
 
 /* line 98, ../_sass/_components/_icons.scss */
-.icon-introduction-to-media:before {
+.icon-lessons:before {
   content: "\e00e";
 }
 
 /* line 103, ../_sass/_components/_icons.scss */
-.icon-lessons:before {
+.icon-menu:before {
   content: "\e00f";
 }
 
 /* line 108, ../_sass/_components/_icons.scss */
-.icon-menu:before {
+.icon-minus:before, .subnav-is-opened .icon-custom:before {
   content: "\e010";
 }
 
 /* line 113, ../_sass/_components/_icons.scss */
-.icon-minus:before, .subnav-is-opened .icon-custom:before {
+.icon-multi-device-layouts:before {
   content: "\e011";
 }
 
 /* line 118, ../_sass/_components/_icons.scss */
-.icon-multi-device-layouts:before {
+.icon-performance:before {
   content: "\e012";
 }
 
 /* line 123, ../_sass/_components/_icons.scss */
-.icon-performance:before {
+.icon-plus:before, .icon-custom:before {
   content: "\e013";
 }
 
 /* line 128, ../_sass/_components/_icons.scss */
-.icon-plus:before, .icon-custom:before {
+.icon-question:before {
   content: "\e014";
 }
 
 /* line 133, ../_sass/_components/_icons.scss */
-.icon-question:before {
+.icon-slash:before {
   content: "\e015";
 }
 
 /* line 138, ../_sass/_components/_icons.scss */
-.icon-slash:before {
+.icon-star:before, .home-header:after {
   content: "\e016";
 }
 
 /* line 143, ../_sass/_components/_icons.scss */
-.icon-star:before, .home-header:after {
+.icon-tick:before {
   content: "\e017";
 }
 
 /* line 148, ../_sass/_components/_icons.scss */
-.icon-tick:before {
-  content: "\e018";
-}
-
-/* line 153, ../_sass/_components/_icons.scss */
 .icon-user-input:before {
-  content: "\e019";
+  content: "\e018";
 }
 
 /**
@@ -1595,28 +1596,30 @@ body.debug:after {
 .highlight-module--code pre {
   margin: 0;
   padding-top: 26px;
-  margin-left: -26px;
   font-size: 14px;
   line-height: 26px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-/* line 105, ../_sass/_modules/_highlight.scss */
+/* line 107, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 112, ../_sass/_modules/_highlight.scss */
+/* line 114, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
   display: block;
 }
-/* line 119, ../_sass/_modules/_highlight.scss */
+/* line 121, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__container {
   padding-bottom: 0;
 }
-/* line 123, ../_sass/_modules/_highlight.scss */
+/* line 125, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__cta {
   position: absolute;
   bottom: -26px;
@@ -1624,7 +1627,7 @@ body.debug:after {
 
 /*==========  LEFT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 133, ../_sass/_modules/_highlight.scss */
+  /* line 135, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1633,14 +1636,14 @@ body.debug:after {
 
 /*==========  RIGHT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 144, ../_sass/_modules/_highlight.scss */
+  /* line 146, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 152, ../_sass/_modules/_highlight.scss */
+  /* line 154, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
@@ -1648,21 +1651,21 @@ body.debug:after {
 }
 
 /*==========  INLINE  ==========*/
-/* line 162, ../_sass/_modules/_highlight.scss */
+/* line 164, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline {
   color: #404040;
   overflow: visible;
   margin: 26px 0 0;
 }
-/* line 167, ../_sass/_modules/_highlight.scss */
+/* line 169, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__container {
   padding-bottom: 0;
 }
-/* line 170, ../_sass/_modules/_highlight.scss */
+/* line 172, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__container:before {
   display: none;
 }
-/* line 175, ../_sass/_modules/_highlight.scss */
+/* line 177, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__content {
   border-color: #e0e0e0;
   border-style: solid;
@@ -1672,7 +1675,7 @@ body.debug:after {
   margin-bottom: -2px;
   padding: 0 0 26px;
 }
-/* line 185, ../_sass/_modules/_highlight.scss */
+/* line 187, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__title {
   font-size: 20px;
   font-weight: 300;
@@ -1682,7 +1685,7 @@ body.debug:after {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 185, ../_sass/_modules/_highlight.scss */
+  /* line 187, ../_sass/_modules/_highlight.scss */
   .highlight-module--inline .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -1693,15 +1696,15 @@ body.debug:after {
     padding-bottom: 0;
   }
 }
-/* line 191, ../_sass/_modules/_highlight.scss */
+/* line 193, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline.highlight-module--remember .highlight-module__title, .highlight-module--inline.highlight-module--remember li:before {
   color: #09829a;
 }
-/* line 198, ../_sass/_modules/_highlight.scss */
+/* line 200, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline.highlight-module--learning .highlight-module__title, .highlight-module--inline.highlight-module--learning li:before {
   color: #da2e75;
 }
-/* line 203, ../_sass/_modules/_highlight.scss */
+/* line 205, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline:after {
   display: none !important;
 }
@@ -2477,7 +2480,7 @@ body.debug:after {
 }
 /* line 37, ../_sass/_modules/_did-you-know.scss */
 .did-you-know__symbol:after {
-  content: "\e015";
+  content: "\e014";
   color: #3372df;
   font-family: "icons";
   font-size: 300px;
@@ -2632,7 +2635,7 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 69, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:after {
-    content: "\e00f";
+    content: "\e00e";
     font-family: "icons";
     font-size: 150px;
     right: 40px;
@@ -4096,7 +4099,7 @@ object {
   padding-top: 2.0000em;
   padding-bottom: 0;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
@@ -4212,7 +4215,6 @@ object {
   /* line 14, ../_sass/_components/_guides-list.scss */
   .guides-list {
     display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-between;
@@ -4234,46 +4236,42 @@ object {
   /* line 28, ../_sass/_components/_guides-list.scss */
   .guides-list__item {
     display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
     -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
   }
 }
-/* line 45, ../_sass/_components/_guides-list.scss */
+/* line 43, ../_sass/_components/_guides-list.scss */
 .guides-list__item h3 {
   margin: 0 32px;
 }
-/* line 49, ../_sass/_components/_guides-list.scss */
+/* line 47, ../_sass/_components/_guides-list.scss */
 .guides-list__item p {
   margin: 26px 32px 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 53, ../_sass/_components/_guides-list.scss */
+  /* line 51, ../_sass/_components/_guides-list.scss */
   .guides-list__item .primary-content {
     flex: 1;
     -webkit-flex: 1;
-    -ms-flex: 1;
   }
 }
-/* line 61, ../_sass/_components/_guides-list.scss */
+/* line 58, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content {
   position: relative;
   margin-top: 51px;
   border-top: 1px solid #e0e0e0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 61, ../_sass/_components/_guides-list.scss */
+  /* line 58, ../_sass/_components/_guides-list.scss */
   .guides-list__item .secondary-content {
     width: 100%;
   }
 }
-/* line 71, ../_sass/_components/_guides-list.scss */
+/* line 68, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content .icon-circle {
   position: absolute;
   top: -28px;
@@ -4281,17 +4279,17 @@ object {
   margin-left: -21px;
   border: 2px solid #ffffff;
 }
-/* line 78, ../_sass/_components/_guides-list.scss */
+/* line 75, ../_sass/_components/_guides-list.scss */
 .guides-list__item .secondary-content .icon-circle i {
   font-size: 23px;
 }
-/* line 84, ../_sass/_components/_guides-list.scss */
+/* line 81, ../_sass/_components/_guides-list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 0 52px;
   margin-top: 0;
 }
-/* line 90, ../_sass/_components/_guides-list.scss */
+/* line 87, ../_sass/_components/_guides-list.scss */
 .guides-list__item:before {
   display: none;
 }

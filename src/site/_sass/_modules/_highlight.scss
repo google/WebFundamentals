@@ -98,9 +98,11 @@
   pre {
     margin: 0;
     padding-top: $lineHeight;
-    margin-left: - $lineHeight;
     font-size: $fontBase - 2;
     line-height: $lineHeight;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 
     span {
       margin: 0;
