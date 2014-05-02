@@ -1803,7 +1803,7 @@ body.debug:after {
 *
 * Related items
 *
-* Google Web Essentials
+* Google Web Fundamentals
 *
 * R/GA 2014
 * @author Pedro Duarte
@@ -2732,12 +2732,14 @@ body.debug:after {
   display: block;
   margin: 0 auto;
   width: 158px;
+  height: 39px;
   max-width: none;
 }
 @media only screen and (min-width: 620px) {
   /* line 47, ../_sass/_modules/_google-header.scss */
   #gc-logo img {
     width: 210px;
+    height: 52px;
   }
 }
 
@@ -4365,7 +4367,7 @@ object {
 *
 * Themed styles
 *
-* Google Web Essentials
+* Google Web Fundamentals
 *
 * R/GA 2014
 * @author Pedro Duarte

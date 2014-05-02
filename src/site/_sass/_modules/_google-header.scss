@@ -48,10 +48,12 @@
     display: block;
     margin: 0 auto;
     width: 158px;
+    height: 39px;
     max-width: none;
 
     @include medium {
       width: 210px;
+      height: 52px;
     }
   }
 }
