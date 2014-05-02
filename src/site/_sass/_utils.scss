@@ -410,7 +410,7 @@
       @include medium {
         display: block;
         position: absolute;
-        top: 134px;
+        top: 106px;
         right: $horizontalOffset;
 
         font-family: $fontIcon;
@@ -428,6 +428,7 @@
       }
 
       @include wide {
+        top: 134px;
         width: $wideColWidth;
         font-size: $fontSize + 50;
 
