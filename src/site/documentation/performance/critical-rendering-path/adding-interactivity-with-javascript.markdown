@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Adding Interactivy with JavaScript"
+title: "Adding Interactivity with JavaScript"
 description: "JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance."
 introduction: "JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance."
 article:
@@ -14,7 +14,7 @@ key-takeaways:
     - JavaScript execution blocks on CSSOM
     - JavaScript blocks DOM construction unless explicitly declared as async
 ---
-{% wrap content%}
+{% wrap content %}
 
 <style type="text/css">
   img, video, object {
@@ -88,4 +88,4 @@ Adding the async keyword to the script tag tells the browser that it should not 
 
 {% include modules/nextarticle.liquid %}
 
-{% endwrap%}
+{% endwrap %}
