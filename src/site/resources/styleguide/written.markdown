@@ -33,7 +33,7 @@ collection: resources
   * Related reading to external: Use only when necessary
 
 ## "Mobile" vs. "multi-device" vs "multi-screen" vs "mobile-only" vs "mobile-first"
-  * Use "multi-device" for consistency expect when a different term is needed for precision
+  * Use "multi-device" for consistency except when a different term is needed for precision
 
 ## Article length
   * _need content here_
