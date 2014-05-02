@@ -504,6 +504,12 @@ body.debug:after {
 }
 
 /* line 32, ../_sass/_global.scss */
+pre {
+  background: #f0f0f0;
+  padding: 13px;
+}
+
+/* line 37, ../_sass/_global.scss */
 .main-container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -516,7 +522,7 @@ body.debug:after {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 32, ../_sass/_global.scss */
+  /* line 37, ../_sass/_global.scss */
   .main-container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -524,7 +530,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 32, ../_sass/_global.scss */
+  /* line 37, ../_sass/_global.scss */
   .main-container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -532,7 +538,7 @@ body.debug:after {
   }
 }
 
-/* line 36, ../_sass/_global.scss */
+/* line 41, ../_sass/_global.scss */
 .container {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -545,7 +551,7 @@ body.debug:after {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 36, ../_sass/_global.scss */
+  /* line 41, ../_sass/_global.scss */
   .container {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -553,7 +559,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 36, ../_sass/_global.scss */
+  /* line 41, ../_sass/_global.scss */
   .container {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -562,7 +568,7 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 45, ../_sass/_global.scss */
   .container-medium {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -576,7 +582,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 45, ../_sass/_global.scss */
   .container-medium {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -584,7 +590,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 40, ../_sass/_global.scss */
+  /* line 45, ../_sass/_global.scss */
   .container-medium {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -593,7 +599,7 @@ body.debug:after {
 }
 
 @media only screen and (max-width: 619px) {
-  /* line 46, ../_sass/_global.scss */
+  /* line 51, ../_sass/_global.scss */
   .container-small {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -607,7 +613,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 620px) {
-  /* line 46, ../_sass/_global.scss */
+  /* line 51, ../_sass/_global.scss */
   .container-small {
     padding-left: 4.8%;
     padding-right: 4.8%;
@@ -615,7 +621,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 800px) {
-  /* line 46, ../_sass/_global.scss */
+  /* line 51, ../_sass/_global.scss */
   .container-small {
     padding-left: 4.4%;
     padding-right: 4.4%;
@@ -624,16 +630,20 @@ body.debug:after {
 }
 
 @media only screen and (min-width: 800px) {
-  /* line 52, ../_sass/_global.scss */
+  /* line 57, ../_sass/_global.scss */
   .content {
     margin-right: 25.9%;
+  }
+  /* line 61, ../_sass/_global.scss */
+  .content pre {
+    margin-right: -25.9%;
   }
 }
 
 @font-face {
   font-family: "icons";
-  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot");
-  src: url("//web-central.appspot.com/web/essentials/icons/icons.eot?#iefix") format("embedded-opentype"), url("//web-central.appspot.com/web/essentials/icons/icons.woff") format("woff"), url("//web-central.appspot.com/web/essentials/icons/icons.ttf") format("truetype"), url("//web-central.appspot.com/web/essentials/icons/icons.svg?#icons") format("svg");
+  src: url("../icons/icons.eot");
+  src: url("../icons/icons.eot?#iefix") format("embedded-opentype"), url("../icons/icons.woff") format("woff"), url("../icons/icons.ttf") format("truetype"), url("../icons/icons.svg?#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -705,78 +715,73 @@ body.debug:after {
 }
 
 /* line 83, ../_sass/_components/_icons.scss */
-.icon-forward-slash:before {
+.icon-google-dev:before {
   content: "\e00b";
 }
 
 /* line 88, ../_sass/_components/_icons.scss */
-.icon-google-dev:before {
+.icon-hash:before {
   content: "\e00c";
 }
 
 /* line 93, ../_sass/_components/_icons.scss */
-.icon-hash:before {
+.icon-introduction-to-media:before {
   content: "\e00d";
 }
 
 /* line 98, ../_sass/_components/_icons.scss */
-.icon-introduction-to-media:before {
+.icon-lessons:before {
   content: "\e00e";
 }
 
 /* line 103, ../_sass/_components/_icons.scss */
-.icon-lessons:before {
+.icon-menu:before {
   content: "\e00f";
 }
 
 /* line 108, ../_sass/_components/_icons.scss */
-.icon-menu:before {
+.icon-minus:before, .subnav-is-opened .icon-custom:before {
   content: "\e010";
 }
 
 /* line 113, ../_sass/_components/_icons.scss */
-.icon-minus:before, .subnav-is-opened .icon-custom:before {
+.icon-multi-device-layouts:before {
   content: "\e011";
 }
 
 /* line 118, ../_sass/_components/_icons.scss */
-.icon-multi-device-layouts:before {
+.icon-performance:before {
   content: "\e012";
 }
 
 /* line 123, ../_sass/_components/_icons.scss */
-.icon-performance:before {
+.icon-plus:before, .icon-custom:before {
   content: "\e013";
 }
 
 /* line 128, ../_sass/_components/_icons.scss */
-.icon-plus:before, .icon-custom:before {
+.icon-question:before {
   content: "\e014";
 }
 
 /* line 133, ../_sass/_components/_icons.scss */
-.icon-question:before {
+.icon-slash:before {
   content: "\e015";
 }
 
 /* line 138, ../_sass/_components/_icons.scss */
-.icon-slash:before {
+.icon-star:before, .home-header:after {
   content: "\e016";
 }
 
 /* line 143, ../_sass/_components/_icons.scss */
-.icon-star:before, .home-header:after {
+.icon-tick:before {
   content: "\e017";
 }
 
 /* line 148, ../_sass/_components/_icons.scss */
-.icon-tick:before {
-  content: "\e018";
-}
-
-/* line 153, ../_sass/_components/_icons.scss */
 .icon-user-input:before {
-  content: "\e019";
+  content: "\e018";
 }
 
 /**
@@ -1468,7 +1473,7 @@ body.debug:after {
   .highlight-module__container:before {
     display: block;
     position: absolute;
-    top: 134px;
+    top: 106px;
     right: 45px;
     font-family: "icons";
     font-size: 130px;
@@ -1487,10 +1492,11 @@ body.debug:after {
 @media only screen and (min-width: 800px) {
   /* line 407, ../_sass/_utils.scss */
   .highlight-module__container:before {
+    top: 134px;
     width: 22.2%;
     font-size: 180px;
   }
-  /* line 434, ../_sass/_utils.scss */
+  /* line 435, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 430px;
   }
@@ -1501,8 +1507,14 @@ body.debug:after {
     padding-bottom: 52px;
   }
 }
+@media only screen and (min-width: 800px) {
+  /* line 38, ../_sass/_modules/_highlight.scss */
+  .highlight-module__container {
+    min-height: 208px;
+  }
+}
 
-/* line 49, ../_sass/_modules/_highlight.scss */
+/* line 53, ../_sass/_modules/_highlight.scss */
 .highlight-module__title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -1514,7 +1526,7 @@ body.debug:after {
   padding-top: 26px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 49, ../_sass/_modules/_highlight.scss */
+  /* line 53, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -1526,7 +1538,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 49, ../_sass/_modules/_highlight.scss */
+  /* line 53, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -1538,7 +1550,7 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 800px) and (min-width: 800px) {
-  /* line 49, ../_sass/_modules/_highlight.scss */
+  /* line 53, ../_sass/_modules/_highlight.scss */
   .highlight-module__title {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 68px;
@@ -1550,73 +1562,75 @@ body.debug:after {
   }
 }
 
-/* line 58, ../_sass/_modules/_highlight.scss */
+/* line 62, ../_sass/_modules/_highlight.scss */
 .highlight-module__cta {
   display: block;
 }
 
 /*==========  LEARNING  ==========*/
-/* line 64, ../_sass/_modules/_highlight.scss */
+/* line 68, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning {
   color: #ffffff;
 }
-/* line 67, ../_sass/_modules/_highlight.scss */
+/* line 71, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning:after {
   background-color: #da2e75;
 }
-/* line 71, ../_sass/_modules/_highlight.scss */
+/* line 75, ../_sass/_modules/_highlight.scss */
 .highlight-module--learning a {
   color: #ffffff;
   text-decoration: underline;
 }
 
 /*==========  REMEMBER  ==========*/
-/* line 79, ../_sass/_modules/_highlight.scss */
+/* line 83, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember {
   color: #ffffff;
 }
-/* line 82, ../_sass/_modules/_highlight.scss */
+/* line 86, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember:after {
   background-color: #09829a;
 }
-/* line 86, ../_sass/_modules/_highlight.scss */
+/* line 90, ../_sass/_modules/_highlight.scss */
 .highlight-module--remember a {
   color: #ffffff;
   text-decoration: underline;
 }
 
 /*==========  CODE  ==========*/
-/* line 94, ../_sass/_modules/_highlight.scss */
+/* line 98, ../_sass/_modules/_highlight.scss */
 .highlight-module--code {
   overflow: visible;
   margin-bottom: 52px;
 }
-/* line 98, ../_sass/_modules/_highlight.scss */
+/* line 102, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre {
   margin: 0;
   padding-top: 26px;
-  margin-left: -26px;
   font-size: 14px;
   line-height: 26px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-/* line 105, ../_sass/_modules/_highlight.scss */
+/* line 111, ../_sass/_modules/_highlight.scss */
 .highlight-module--code pre span {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 112, ../_sass/_modules/_highlight.scss */
+/* line 118, ../_sass/_modules/_highlight.scss */
 .highlight-module--code code {
   margin: 0;
   padding: 0;
   word-spacing: -2px;
   display: block;
 }
-/* line 119, ../_sass/_modules/_highlight.scss */
+/* line 125, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__container {
   padding-bottom: 0;
 }
-/* line 123, ../_sass/_modules/_highlight.scss */
+/* line 129, ../_sass/_modules/_highlight.scss */
 .highlight-module--code .highlight-module__cta {
   position: absolute;
   bottom: -26px;
@@ -1624,7 +1638,7 @@ body.debug:after {
 
 /*==========  LEFT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 133, ../_sass/_modules/_highlight.scss */
+  /* line 139, ../_sass/_modules/_highlight.scss */
   .highlight-module--left:after {
     width: 80%;
     right: 20%;
@@ -1633,18 +1647,77 @@ body.debug:after {
 
 /*==========  RIGHT  ==========*/
 @media only screen and (min-width: 800px) {
-  /* line 144, ../_sass/_modules/_highlight.scss */
+  /* line 150, ../_sass/_modules/_highlight.scss */
   .highlight-module--right:after {
     width: 80%;
     left: 20%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 152, ../_sass/_modules/_highlight.scss */
+  /* line 158, ../_sass/_modules/_highlight.scss */
   .highlight-module--right.highlight-module--code:after {
     width: 100%;
     left: 0;
   }
+}
+
+/*==========  INLINE  ==========*/
+/* line 168, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline {
+  color: #404040;
+  overflow: visible;
+  margin: 26px 0 0;
+}
+/* line 173, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline .highlight-module__container {
+  padding-bottom: 0;
+}
+/* line 176, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline .highlight-module__container:before {
+  display: none;
+}
+/* line 181, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline .highlight-module__content {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  border-left-width: 0;
+  border-right-width: 0;
+  margin-bottom: -2px;
+  padding: 0 0 26px;
+}
+/* line 191, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline .highlight-module__title {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 800px) {
+  /* line 191, ../_sass/_modules/_highlight.scss */
+  .highlight-module--inline .highlight-module__title {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+}
+/* line 197, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline.highlight-module--remember .highlight-module__title, .highlight-module--inline.highlight-module--remember li:before {
+  color: #09829a;
+}
+/* line 204, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline.highlight-module--learning .highlight-module__title, .highlight-module--inline.highlight-module--learning li:before {
+  color: #da2e75;
+}
+/* line 209, ../_sass/_modules/_highlight.scss */
+.highlight-module--inline:after {
+  display: none !important;
 }
 
 /**
@@ -1803,7 +1876,7 @@ body.debug:after {
 *
 * Related items
 *
-* Google Web Essentials
+* Google Web Fundamentals
 *
 * R/GA 2014
 * @author Pedro Duarte
@@ -2267,13 +2340,28 @@ body.debug:after {
 **/
 /* line 13, ../_sass/_modules/_home-header.scss */
 .home-header {
-  background: #3372df;
+  background: #3372df url(../imgs/devices.svg) no-repeat center center;
   color: #ffffff;
   position: relative;
   padding-bottom: 78px;
   margin-bottom: 78px;
 }
-/* line 20, ../_sass/_modules/_home-header.scss */
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_home-header.scss */
+  .home-header {
+    padding-bottom: 104px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 13, ../_sass/_modules/_home-header.scss */
+  .home-header {
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+}
+/* line 31, ../_sass/_modules/_home-header.scss */
 .home-header:after {
   font-family: "icons";
   position: absolute;
@@ -2286,20 +2374,14 @@ body.debug:after {
   color: #b7cdf4;
 }
 @media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_modules/_home-header.scss */
+  /* line 31, ../_sass/_modules/_home-header.scss */
   .home-header:after {
     font-size: 68px;
     line-height: 1px;
     bottom: 4px;
   }
 }
-@media only screen and (min-width: 620px) {
-  /* line 13, ../_sass/_modules/_home-header.scss */
-  .home-header {
-    padding-bottom: 104px;
-  }
-}
-/* line 44, ../_sass/_modules/_home-header.scss */
+/* line 52, ../_sass/_modules/_home-header.scss */
 .home-header h1 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -2311,7 +2393,7 @@ body.debug:after {
   padding-top: 52px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 44, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -2323,7 +2405,7 @@ body.debug:after {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 44, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -2335,12 +2417,12 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 44, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     padding-top: 78px;
   }
 }
-/* line 58, ../_sass/_modules/_home-header.scss */
+/* line 66, ../_sass/_modules/_home-header.scss */
 .home-header p {
   font-size: 20px;
   font-weight: 300;
@@ -2350,7 +2432,7 @@ body.debug:after {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 58, ../_sass/_modules/_home-header.scss */
+  /* line 66, ../_sass/_modules/_home-header.scss */
   .home-header p {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -2362,12 +2444,12 @@ body.debug:after {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 58, ../_sass/_modules/_home-header.scss */
+  /* line 66, ../_sass/_modules/_home-header.scss */
   .home-header p {
     padding-top: 0;
   }
 }
-/* line 66, ../_sass/_modules/_home-header.scss */
+/* line 74, ../_sass/_modules/_home-header.scss */
 .home-header a {
   margin-top: 65px;
 }
@@ -2418,7 +2500,7 @@ body.debug:after {
 }
 /* line 37, ../_sass/_modules/_did-you-know.scss */
 .did-you-know__symbol:after {
-  content: "\e015";
+  content: "\e014";
   color: #3372df;
   font-family: "icons";
   font-size: 300px;
@@ -2573,7 +2655,7 @@ body.debug:after {
 @media only screen and (min-width: 620px) {
   /* line 69, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:after {
-    content: "\e00f";
+    content: "\e00e";
     font-family: "icons";
     font-size: 150px;
     right: 40px;
@@ -2616,11 +2698,11 @@ body.debug:after {
 .beta:before {
   content: "\e009";
   font-family: "icons";
-  font-size: 60px;
+  font-size: 64px;
   line-height: 0px;
   color: #f4b400;
   position: absolute;
-  right: -30px;
+  right: -32px;
   top: 50%;
 }
 /* line 37, ../_sass/_modules/_beta.scss */
@@ -2629,13 +2711,13 @@ body.debug:after {
   font-size: 26px;
   color: #ffffff;
   position: absolute;
-  width: 60px;
-  right: -30px;
+  width: 64px;
+  right: -32px;
   text-align: center;
   line-height: 0px;
   top: 50%;
   display: block;
-  -webkit-animation: cog 2000ms linear infinite;
+  -webkit-animation: cog 4000ms ease-in-out;
 }
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_beta.scss */
@@ -2652,14 +2734,14 @@ body.debug:after {
 }
 
 @-webkit-keyframes cog {
-  /* line 66, ../_sass/_modules/_beta.scss */
+  /* line 65, ../_sass/_modules/_beta.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
 
   /* line 69, ../_sass/_modules/_beta.scss */
   100% {
-    -webkit-transform: rotate(359deg);
+    -webkit-transform: rotate(1079deg);
   }
 }
 
@@ -2732,12 +2814,14 @@ body.debug:after {
   display: block;
   margin: 0 auto;
   width: 158px;
+  height: 39px;
   max-width: none;
 }
 @media only screen and (min-width: 620px) {
   /* line 47, ../_sass/_modules/_google-header.scss */
   #gc-logo img {
     width: 210px;
+    height: 52px;
   }
 }
 
@@ -3469,39 +3553,13 @@ ol.list-links.list-links--secondary a:before {
 .list-links--secondary li {
   padding-left: 0;
 }
-@media only screen and (min-width: 620px) {
-  /* line 112, ../_sass/_components/_list.scss */
-  .list-links--secondary {
-    font-size: 13px;
-    line-height: 2.0000em;
-    /* 26px */
-    padding-top: 2.0000em;
-    padding-bottom: 0;
-  }
-}
-
-/* line 125, ../_sass/_components/_list.scss */
-ol.list--variation {
-  font-size: 13px;
-  line-height: 2.0000em;
-  /* 26px */
-  padding-top: 2.0000em;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-/* line 129, ../_sass/_components/_list.scss */
-ol.list--variation li a:before {
-  content: "\e005" " 0" counter(list);
-  font-family: "icons";
-  font-size: 13px;
-}
 
 /*==========  ANCHOR LIST  ==========*/
-/* line 139, ../_sass/_components/_list.scss */
+/* line 123, ../_sass/_components/_list.scss */
 .list-anchor {
   padding-left: 0;
 }
-/* line 142, ../_sass/_components/_list.scss */
+/* line 126, ../_sass/_components/_list.scss */
 .list-anchor li {
   font-size: 16px;
   line-height: 1.6250em;
@@ -3511,22 +3569,11 @@ ol.list--variation li a:before {
   padding-top: 0;
   padding-left: 0;
 }
-/* line 147, ../_sass/_components/_list.scss */
+/* line 131, ../_sass/_components/_list.scss */
 .list-anchor li:before {
   display: none;
 }
-@media only screen and (min-width: 620px) {
-  /* line 142, ../_sass/_components/_list.scss */
-  .list-anchor li {
-    font-size: 13px;
-    line-height: 2.0000em;
-    /* 26px */
-    padding-top: 2.0000em;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-/* line 157, ../_sass/_components/_list.scss */
+/* line 137, ../_sass/_components/_list.scss */
 .list-anchor a {
   line-height: 1;
   display: inline-block;
@@ -3543,26 +3590,39 @@ ol.list--variation li a:before {
   left: 0;
   line-height: 26px;
 }
-/* line 163, ../_sass/_components/_list.scss */
+/* line 143, ../_sass/_components/_list.scss */
 .list-anchor a:before {
   font-size: 4px;
 }
 
+/*==========  SMALL LIST  ==========*/
+@media only screen and (min-width: 620px) {
+  /* line 153, ../_sass/_components/_list.scss */
+  .list-small li {
+    font-size: 13px;
+    line-height: 2.0000em;
+    /* 26px */
+    padding-top: 2.0000em;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
 /*==========  CENTERED LIST  ==========*/
-/* line 171, ../_sass/_components/_list.scss */
+/* line 163, ../_sass/_components/_list.scss */
 .list-centered {
   text-align: center;
   padding-left: 0;
 }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 178, ../_sass/_components/_list.scss */
+/* line 170, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px;
 }
 
-/* line 183, ../_sass/_components/_list.scss */
+/* line 175, ../_sass/_components/_list.scss */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -3571,22 +3631,22 @@ ol.list--variation li a:before {
   margin-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 183, ../_sass/_components/_list.scss */
+  /* line 175, ../_sass/_components/_list.scss */
   .featured-list__item {
     min-height: 338px;
     padding: 52px 32px;
   }
 }
-/* line 196, ../_sass/_components/_list.scss */
+/* line 188, ../_sass/_components/_list.scss */
 .featured-list__item:first-child {
   margin-top: 0;
 }
-/* line 200, ../_sass/_components/_list.scss */
+/* line 192, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 205, ../_sass/_components/_list.scss */
+/* line 197, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   display: none;
   position: relative;
@@ -3594,7 +3654,7 @@ ol.list--variation li a:before {
   margin: 0 -5%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 205, ../_sass/_components/_list.scss */
+  /* line 197, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     display: block;
     padding-top: 0;
@@ -3603,7 +3663,7 @@ ol.list--variation li a:before {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 218, ../_sass/_components/_list.scss */
+  /* line 210, ../_sass/_components/_list.scss */
   .featured-list__img {
     padding-top: 60.8%;
     padding-bottom: 0;
@@ -3613,14 +3673,14 @@ ol.list--variation li a:before {
     width: 100%;
   }
 }
-/* line 229, ../_sass/_components/_list.scss */
+/* line 221, ../_sass/_components/_list.scss */
 .featured-list__img img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 229, ../_sass/_components/_list.scss */
+  /* line 221, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -3632,44 +3692,44 @@ ol.list--variation li a:before {
 }
 
 /*==========  RELATED GUIDES LIST  ==========*/
-/* line 246, ../_sass/_components/_list.scss */
+/* line 238, ../_sass/_components/_list.scss */
 .related-guides-list {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   padding-top: 0;
   padding-left: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 246, ../_sass/_components/_list.scss */
+  /* line 238, ../_sass/_components/_list.scss */
   .related-guides-list {
     padding-top: 26px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 246, ../_sass/_components/_list.scss */
+  /* line 238, ../_sass/_components/_list.scss */
   .related-guides-list {
     padding-top: 0;
   }
 }
-/* line 259, ../_sass/_components/_list.scss */
+/* line 251, ../_sass/_components/_list.scss */
 .related-guides-list p {
   padding-top: 0;
 }
-/* line 263, ../_sass/_components/_list.scss */
+/* line 255, ../_sass/_components/_list.scss */
 .related-guides-list .tag {
   padding-top: 0;
 }
-/* line 267, ../_sass/_components/_list.scss */
+/* line 259, ../_sass/_components/_list.scss */
 .related-guides-list li {
   padding-top: 26px;
   padding-bottom: 25px;
   border-bottom: 1px solid #e0e0e0;
 }
-/* line 272, ../_sass/_components/_list.scss */
+/* line 264, ../_sass/_components/_list.scss */
 .related-guides-list li:last-child {
   border-color: transparent;
 }
 @media only screen and (min-width: 620px) {
-  /* line 267, ../_sass/_components/_list.scss */
+  /* line 259, ../_sass/_components/_list.scss */
   .related-guides-list li {
     padding-top: 0;
     padding-bottom: 0;
@@ -3678,35 +3738,35 @@ ol.list--variation li a:before {
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 286, ../_sass/_components/_list.scss */
+/* line 278, ../_sass/_components/_list.scss */
 .list--reset {
   padding-left: 0;
 }
-/* line 289, ../_sass/_components/_list.scss */
+/* line 281, ../_sass/_components/_list.scss */
 .list--reset li {
   padding-left: 0;
 }
-/* line 294, ../_sass/_components/_list.scss */
+/* line 286, ../_sass/_components/_list.scss */
 .list--reset.list-links a:before, .list--reset li:before {
   display: none !important;
 }
 
 /*==========  LESSONS  ==========*/
-/* line 301, ../_sass/_components/_list.scss */
+/* line 293, ../_sass/_components/_list.scss */
 .list-lessons {
   padding-left: 0;
 }
-/* line 304, ../_sass/_components/_list.scss */
+/* line 296, ../_sass/_components/_list.scss */
 .list-lessons a {
   color: #ffffff;
 }
-/* line 310, ../_sass/_components/_list.scss */
+/* line 302, ../_sass/_components/_list.scss */
 .list-lessons .current,
 .list-lessons .current a {
   text-decoration: none;
   cursor: default;
 }
-/* line 315, ../_sass/_components/_list.scss */
+/* line 307, ../_sass/_components/_list.scss */
 .list-lessons .current .icon {
   font-size: 13px;
   display: inline-block;
@@ -3719,30 +3779,30 @@ ol.list--variation li a:before {
 }
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
-/* line 331, ../_sass/_components/_list.scss */
+/* line 323, ../_sass/_components/_list.scss */
 .list-guides-intro {
   margin-bottom: 52px;
 }
 @media only screen and (max-width: 619px) {
-  /* line 331, ../_sass/_components/_list.scss */
+  /* line 323, ../_sass/_components/_list.scss */
   .list-guides-intro {
     padding-top: 52px;
   }
 }
-/* line 338, ../_sass/_components/_list.scss */
+/* line 330, ../_sass/_components/_list.scss */
 .list-guides-intro li {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 51px;
   margin-bottom: 52px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 338, ../_sass/_components/_list.scss */
+  /* line 330, ../_sass/_components/_list.scss */
   .list-guides-intro li {
     border-color: transparent;
     padding-bottom: 0;
   }
 }
-/* line 348, ../_sass/_components/_list.scss */
+/* line 340, ../_sass/_components/_list.scss */
 .list-guides-intro li:last-child {
   border-bottom: transparent;
   margin-bottom: 0;
@@ -4059,7 +4119,7 @@ object {
   padding-top: 2.0000em;
   padding-bottom: 0;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
@@ -4175,7 +4235,6 @@ object {
   /* line 14, ../_sass/_components/_guides-list.scss */
   .guides-list {
     display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-between;
@@ -4197,7 +4256,6 @@ object {
   /* line 28, ../_sass/_components/_guides-list.scss */
   .guides-list__item {
     display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -4389,7 +4447,7 @@ object {
 *
 * Themed styles
 *
-* Google Web Essentials
+* Google Web Fundamentals
 *
 * R/GA 2014
 * @author Pedro Duarte
