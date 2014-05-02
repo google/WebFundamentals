@@ -473,15 +473,23 @@ NOTE: This is our styleguide
 
 <section class="styleguide__highlights">
 
-  {% include modules/highlight.liquid character="!" position="right" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="remember" %}
+  {% include modules/remember.liquid text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-  {% include modules/highlight.liquid character="*" position="left" title="Important" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." type="learning" %}
+  {% include modules/takeaway.liquid position="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
 
-  {% include modules/highlight.liquid character="!" position="right" title="Remember" list=page.learning-list type="remember" %}
+  {% include modules/remember.liquid position="right"  list=page.learning-list %}
 
-  {% include modules/highlight.liquid character="!" position="left" title="Remember" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" type="remember" %}
+  {% include modules/remember.liquid position="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." priority="large" %}
 
   {% include_code _code/test.html somehtml html %}
+
+  {% highlight html %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% endhighlight %}
+
+  {% include modules/takeaway.liquid list=page.learning-list inline=true %}
+
+  {% include modules/remember.liquid list=page.learning-list inline=true %}
 
 </section>
 

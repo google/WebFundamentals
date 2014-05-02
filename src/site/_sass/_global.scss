@@ -57,5 +57,9 @@ pre {
 .content {
   @include wide {
     margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+
+    & pre {
+      margin-right: -25.9%;
+    }
   }
 }
