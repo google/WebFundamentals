@@ -2340,7 +2340,7 @@ pre {
 **/
 /* line 13, ../_sass/_modules/_home-header.scss */
 .home-header {
-  background: #3372df url(../imgs/devices.svg) no-repeat center center;
+  background: #3372df no-repeat center center;
   color: #ffffff;
   position: relative;
   padding-bottom: 78px;
@@ -2349,9 +2349,10 @@ pre {
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_home-header.scss */
   .home-header {
-    padding-bottom: 104px;
+    background-image: url(../imgs/devices.svg);
     background-size: 1200px;
     background-position: center 30%;
+    padding-bottom: 104px;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -2360,7 +2361,7 @@ pre {
     background-size: 1560px;
   }
 }
-/* line 30, ../_sass/_modules/_home-header.scss */
+/* line 31, ../_sass/_modules/_home-header.scss */
 .home-header:after {
   font-family: "icons";
   position: absolute;
@@ -2373,14 +2374,14 @@ pre {
   color: #b7cdf4;
 }
 @media only screen and (min-width: 620px) {
-  /* line 30, ../_sass/_modules/_home-header.scss */
+  /* line 31, ../_sass/_modules/_home-header.scss */
   .home-header:after {
     font-size: 68px;
     line-height: 1px;
     bottom: 4px;
   }
 }
-/* line 51, ../_sass/_modules/_home-header.scss */
+/* line 52, ../_sass/_modules/_home-header.scss */
 .home-header h1 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 68px;
@@ -2389,10 +2390,9 @@ pre {
   /* 78px */
   padding-top: 0.3824em;
   padding-bottom: 0;
-  padding-top: 52px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 51, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 110px;
@@ -2404,7 +2404,7 @@ pre {
   }
 }
 @media only screen and (max-width: 619px) {
-  /* line 51, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -2413,15 +2413,16 @@ pre {
     /* 52px */
     padding-top: 0.6190em;
     padding-bottom: 0;
+    padding-top: 52px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 51, ../_sass/_modules/_home-header.scss */
+  /* line 52, ../_sass/_modules/_home-header.scss */
   .home-header h1 {
     padding-top: 78px;
   }
 }
-/* line 65, ../_sass/_modules/_home-header.scss */
+/* line 66, ../_sass/_modules/_home-header.scss */
 .home-header p {
   font-size: 20px;
   font-weight: 300;
@@ -2431,7 +2432,7 @@ pre {
   padding-bottom: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 65, ../_sass/_modules/_home-header.scss */
+  /* line 66, ../_sass/_modules/_home-header.scss */
   .home-header p {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 26px;
@@ -2443,12 +2444,12 @@ pre {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 65, ../_sass/_modules/_home-header.scss */
+  /* line 66, ../_sass/_modules/_home-header.scss */
   .home-header p {
     padding-top: 0;
   }
 }
-/* line 73, ../_sass/_modules/_home-header.scss */
+/* line 74, ../_sass/_modules/_home-header.scss */
 .home-header a {
   margin-top: 65px;
 }
@@ -2697,11 +2698,11 @@ pre {
 .beta:before {
   content: "\e009";
   font-family: "icons";
-  font-size: 64px;
+  font-size: 70px;
   line-height: 0px;
   color: #f4b400;
   position: absolute;
-  right: -32px;
+  right: -35px;
   top: 50%;
 }
 /* line 37, ../_sass/_modules/_beta.scss */
@@ -2710,8 +2711,8 @@ pre {
   font-size: 26px;
   color: #ffffff;
   position: absolute;
-  width: 64px;
-  right: -32px;
+  width: 70px;
+  right: -35px;
   text-align: center;
   line-height: 0px;
   top: 50%;
@@ -2799,29 +2800,27 @@ pre {
     padding-bottom: 0;
   }
 }
-/* line 25, ../_sass/_modules/_google-header.scss */
-#gc-googlebar .container {
-  overflow: hidden;
-}
 
-/* line 30, ../_sass/_modules/_google-header.scss */
+/* line 26, ../_sass/_modules/_google-header.scss */
 #gc-logo {
   text-decoration: none;
   display: block;
-  margin: 26px auto;
+  margin: 0 auto 26px;
+  padding-top: 26px;
   width: 43px;
   overflow: hidden;
 }
 @media only screen and (min-width: 620px) {
-  /* line 30, ../_sass/_modules/_google-header.scss */
+  /* line 26, ../_sass/_modules/_google-header.scss */
   #gc-logo {
     float: left;
     margin-top: 29px;
     width: 56px;
     width: auto;
+    padding-top: 0;
   }
 }
-/* line 47, ../_sass/_modules/_google-header.scss */
+/* line 45, ../_sass/_modules/_google-header.scss */
 #gc-logo img {
   display: block;
   margin: 0 auto;
@@ -2830,7 +2829,7 @@ pre {
   max-width: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 47, ../_sass/_modules/_google-header.scss */
+  /* line 45, ../_sass/_modules/_google-header.scss */
   #gc-logo img {
     width: 210px;
     height: 52px;
@@ -3818,6 +3817,10 @@ ol.list-links.list-links--secondary a:before {
 .list-guides-intro li:last-child {
   border-bottom: transparent;
   margin-bottom: 0;
+}
+/* line 346, ../_sass/_components/_list.scss */
+.list-guides-intro h3 {
+  margin-bottom: 26px;
 }
 
 /**

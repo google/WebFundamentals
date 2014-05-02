@@ -248,15 +248,15 @@ ol.list-links {
     padding-top: 0
   }
 
-  p {
+  & p {
     padding-top: 0;
   }
 
-  .tag {
+  & .tag {
     padding-top: 0;
   }
 
-  li {
+  & li {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight - 1;
     border-bottom: 1px solid $colorGrayKeyline;
@@ -327,7 +327,7 @@ ol.list-links {
     padding-top: $lineHeight*2;
   }
 
-  li {
+  & li {
     border-bottom: 1px solid $colorGrayKeyline;
     padding-bottom: ($lineHeight*2) - 1;
     margin-bottom: ($lineHeight*2);
@@ -341,5 +341,9 @@ ol.list-links {
       border-bottom: transparent;
       margin-bottom: 0;
     }
+  }
+
+  & h3 {
+    margin-bottom: $lineHeight;
   }
 }
