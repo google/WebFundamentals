@@ -48,6 +48,6 @@ collection: resources
 
 ## Media
   * All images need to be in 3:5 or 5:3 ratio
-  * Images will be compressed for you during the deploymentt step.  You do not need to worry about compressing your own images.
+  * Images will be compressed for you during the deployment step.  You do not need to worry about compressing your own images.
 
 {% endwrap %}
