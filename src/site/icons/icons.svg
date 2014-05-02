@@ -1,13 +1,19 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2014-5-2: Created.
+2014-5-1: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
+<<<<<<< HEAD
 Created by FontForge 20120731 at Fri May  2 10:42:58 2014
  By Antoine Grelard
 Created by Antoine Grelard with FontForge 2.0 (http://fontforge.sf.net)
+=======
+Created by FontForge 20120731 at Thu May  1 18:23:27 2014
+ By Andrew Hawkes
+Created by Andrew Hawkes with FontForge 2.0 (http://fontforge.sf.net)
+>>>>>>> a2d52f330c052e0653b4313dcf813e4a226c145a
 </metadata>
 <defs>
 <font id="icons" horiz-adv-x="512" >
