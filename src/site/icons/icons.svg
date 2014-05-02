@@ -1,5 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<<<<<<< HEAD
 <!--
 2014-5-2: Created.
 -->
@@ -8,6 +9,13 @@
 Created by FontForge 20120731 at Fri May  2 11:12:20 2014
  By Antoine Grelard
 Created by Antoine Grelard with FontForge 2.0 (http://fontforge.sf.net)
+=======
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Fri May  2 11:12:01 2014
+ By Pedro Duarte
+Created by Pedro Duarte with FontForge 2.0 (http://fontforge.sf.net)
+>>>>>>> 6a860d0f01160e1773daf3fdf6fd9fb4c0e14601
 </metadata>
 <defs>
 <font id="icons" horiz-adv-x="512" >
