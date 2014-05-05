@@ -75,9 +75,6 @@ To parse the `_book.yaml` file, include `{% injectdata content _book.yaml %}` in
 Jekyll Special elements
 -----------------------
 
-Code import:
-
-    {% highlight javascript %} {% include sample1.js %} {% endhighlight %}
-
-`{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
-`{{ showcases _category_}}` a list of showcases.
+* Code import: `{% highlight javascript %} {% include sample1.js %} {% endhighlight %}`
+* `{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
+* `{{ showcases _category_}}` a list of showcases.
