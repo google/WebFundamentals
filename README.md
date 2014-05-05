@@ -66,7 +66,7 @@ Generating Table of Contents
 
 The table of contents is generated from `src/site/_book.yaml`
 
-To parse the `_book.yaml` include `{% injectdata content _book.yaml %}` in the page and then iterate as follows:
+To parse the `_book.yaml` file, include `{% injectdata content _book.yaml %}` in the page and then iterate as follows:
 
      {% for section in page.content.toc %}
         SOME MARKUP
