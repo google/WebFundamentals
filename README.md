@@ -1,8 +1,8 @@
 Web Fundamentals
 ================
 
-Web Fundamentals is a technical documentation center for multi-device web 
-development.  Our goal is to build a resource for modern web developers 
+Web Fundamentals is a technical documentation center for multi-device web
+development.  Our goal is to build a resource for modern web developers
 that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
 View the live site: https://developers.google.com/web/fundamentals/
@@ -11,7 +11,7 @@ View the live site: https://developers.google.com/web/fundamentals/
 Release status
 --------------
 
-The project was initiated in late March and soft launched to the public on 
+The project was initiated in late March and soft launched to the public on
 April 30th.  We're planning for a more polished 1.0 release in June.
 
 Technology
@@ -58,7 +58,7 @@ Using project-level meta data
 
 The table of contents is generated from `src/site/_project.yaml`
 
-To parse the `_project.yaml` file include `{% injectdata content _project.yaml %}` in the page.
+To parse the `_project.yaml` file, include `{% injectdata content _project.yaml %}` in the page.
 
 You then have access to the variables in the page object.
 
