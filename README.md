@@ -58,9 +58,7 @@ Using project-level meta data
 
 The table of contents is generated from `src/site/_project.yaml`
 
-To parse the `_project.yaml` file, include `{% injectdata content _project.yaml %}` in the page.
-
-You then have access to the variables in the page object.
+To parse the `_project.yaml` file, include `{% injectdata content _project.yaml %}` in the page. You then have access to the variables in the page object.
 
 
 Generating Table of Contents
