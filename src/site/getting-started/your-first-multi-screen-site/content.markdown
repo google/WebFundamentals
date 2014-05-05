@@ -172,7 +172,7 @@ Discover the best practices for using images in your content.
 
 *  [Using images effectively]({{site.baseurl}}/documentation/introduction-to-media/images/)
 *  [Correct use of images in markup]({site.baseurl}}/documentation/introduction-to-media/images/#images-in-markup)
-*  [Optimizing images 101]({{site.baseurl}}/documentation/optimizing-performance/optimizing-content-efficiency/#image-compression-101)
+*  [Optimizing images 101]({{site.baseurl}}/documentation/performance/optimizing-content-efficiency/#image-compression-101)
 {: .list--links}
 
 </div>
