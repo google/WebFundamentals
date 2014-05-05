@@ -58,9 +58,7 @@ Using project-level meta data
 
 The table of contents is generated from `src/site/_project.yaml`
 
-To parse the `_project.yaml` file include `{% injectdata content _project.yaml %}` in the page.
-
-You then have access to the variables in the page object.
+To parse the `_project.yaml` file, include `{% injectdata content _project.yaml %}` in the page. You then have access to the variables in the page object.
 
 
 Generating Table of Contents
@@ -68,7 +66,7 @@ Generating Table of Contents
 
 The table of contents is generated from `src/site/_book.yaml`
 
-To parse the `_book.yaml` include `{% injectdata content _book.yaml %}` in the page and then iterate as follows:
+To parse the `_book.yaml` file, include `{% injectdata content _book.yaml %}` in the page and then iterate as follows:
 
      {% for section in page.content.toc %}
         SOME MARKUP
@@ -77,9 +75,6 @@ To parse the `_book.yaml` include `{% injectdata content _book.yaml %}` in the p
 Jekyll Special elements
 -----------------------
 
-Code import:
-
-    {% highlight javascript %} {% include sample1.js %} {% endhighlight %}
-
-`{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
-`{{ showcases _category_}}` a list of showcases
+* Code import: `{% highlight javascript %} {% include sample1.js %} {% endhighlight %}`
+* `{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
+* `{{ showcases _category_}}` a list of showcases.
