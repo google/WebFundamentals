@@ -20,25 +20,25 @@ description: ""
     <ul class="latest-spotlights__list list-reset">
       <li class="latest-spotlights__item">
         <a href="#" class="latest-spotlights__link">
-          <img src="../../imgs/image-example.jpg" alt="image example">
+          <img src="../imgs/image-example.jpg" alt="image example">
           <p class="small">Spotlight name</p>
         </a>
       </li>
       <li class="latest-spotlights__item">
         <a href="#" class="latest-spotlights__link">
-          <img src="../../imgs/image-example-2.jpg" alt="image example">
+          <img src="../imgs/image-example-2.jpg" alt="image example">
           <p class="small">Spotlight name</p>
         </a>
       </li>
       <li class="latest-spotlights__item">
         <a href="#" class="latest-spotlights__link">
-          <img src="../../imgs/image-example-3.jpg" alt="image example">
+          <img src="../imgs/image-example-3.jpg" alt="image example">
           <p class="small">Spotlight name</p>
         </a>
       </li>
       <li class="latest-spotlights__item">
         <a href="#" class="latest-spotlights__link">
-          <img src="../../imgs/image-example-4.jpg" alt="image example">
+          <img src="../imgs/image-example-4.jpg" alt="image example">
           <p class="small">Spotlight name</p>
         </a>
       </li>
