@@ -50,13 +50,17 @@
 
   &:nth-child(even) {
     .latest-spotlights__link {
-      margin-right: 1px;
+      @include medium {
+        margin-left: 1px;
+      }
     }
   }
 
   &:nth-child(odd) {
     .latest-spotlights__link {
-      margin-left: 1px;
+      @include medium {
+        margin-right: 1px;
+      }
     }
   }
 }
@@ -70,6 +74,9 @@
   display: block;
   width: 100%;
   @include prefixr(transition, opacity .2s ease-in-out);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+
 }
 
 .latest-spotlights__link p {

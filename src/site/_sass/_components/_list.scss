@@ -137,7 +137,6 @@ ol.list-links {
 
   a {
     @include bullet-type("", icon-bullet);
-    line-height: 1; // fixes baseline grid alignment
     display: inline-block;
     padding-left: 16px;
 
