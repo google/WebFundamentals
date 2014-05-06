@@ -57,10 +57,11 @@
       padding-top: $lineHeight*2;
     }
 
-
     @include medium {
       padding-top: $lineHeight*3;
     }
+
+    @include color-inherit;
   }
 
   & p {
@@ -69,6 +70,8 @@
     @include medium {
       padding-top: 0;
     }
+
+    @include color-inherit;
   }
 
   & a {

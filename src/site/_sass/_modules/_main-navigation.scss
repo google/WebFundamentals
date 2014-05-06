@@ -123,11 +123,14 @@
     .subnav-is-opened > & {
       color: $colorYellowSecondary;
     }
+
+    @include color-inherit;
   }
 
   @include wide {
     padding-bottom: $lineHeight;
   }
+
 
 }
 
