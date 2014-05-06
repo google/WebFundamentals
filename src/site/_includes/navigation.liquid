@@ -2,7 +2,7 @@
 
   <ul class="main-nav__list clear">
   {% for section in page.content.toc %}
-    <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}{% if page.url contains section.path %} main-nav__item--current{% endif %}">
+    <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}">
       <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
         {{ section.title }}
         {% if section.title == "Documentation" %}
