@@ -88,7 +88,8 @@ By contrast, “no-store” is much simpler, as it simply disallows the browser 
 
 ### "public" vs. "private"
 
-If the response is marked as public then it can be cached by the browser, as well as any intermediate cache - e.g.  CDNs and other proxy caches will typically only cache and serve “public” responses, unless configured otherwise.
+If the response is marked as "public" then it can be cached, even if it has HTTP authentication associated with it, and even when the response status code isn't normally cacheable. Most of the time, "public" isn't necessary, because explicit caching information (like "max-age") indicates
+that the response is cacheable anyway.
 
 By contrast, “private” responses can be cached by the browser but are typically intended for a single user and hence are not allowed to be cached by any intermediate cache - e.g. an HTML page with private user information can be cached by that user’s browser, but not by a CDN.
 
@@ -110,7 +111,7 @@ Follow the decision tree above to determine the optimal caching policy for a par
 </tr>
 </thead>
 <tr>
-  <td>public, max-age=86400</td>
+  <td>max-age=86400</td>
   <td>Response can be cached by browser and any intermediary caches for up to 1 day (60 seconds x 60 minutes x 24 hours)</td>
 </tr>
 <tr>
@@ -145,7 +146,7 @@ Once the response is cached by the browser, the cached version will be used unti
 The ability to define per-resource caching policies allows us to define “cache hierarchies” that allow us to control not only how long each is cached for, but also how quickly new versions are seen by visitor. For example, let’s analyze the above example:
 
 * The HTML is marked with “no-cache”, which means that the browser will always revalidate the document on each request and fetch the latest version if the contents change. Also, within the HTML markup we embed fingerprints in the URLs for CSS and JavaScript assets: if the contents of those files change, than the HTML of the page will change as well and new copy of the HTML response will be downloaded.
-* The CSS is marked as public, which allows it to be cached by intermediate caches (e.g. a CDN), and is set to expire in 1 year. Note that we can use the “far future expires” of 1 year safely because we embed the file fingerprint its filename: if the CSS is updated, the URL will change as well.
+* The CSS is allowed to be cached by browsers and intermediate caches (e.g. a CDN), and is set to expire in 1 year. Note that we can use the “far future expires” of 1 year safely because we embed the file fingerprint its filename: if the CSS is updated, the URL will change as well.
 * The JavaScript is also set to expire in 1 year, but is marked as private, perhaps because it contains some private user data that the CDN shouldn’t cache.
 * The image is cached without a version or unique fingerprint and is set to expire in 1 day.
 
