@@ -9,7 +9,7 @@ article:
   updated_on: 2014-01-06
   order: 3
 id: user-input
-collection: the-essentials
+collection: documentation
 ---
 
 {% comment %}
