@@ -20,15 +20,13 @@
 <div id="container" role="main">
   <h1>Video: Provide captions with the <code>track</code> element</h1>
   <!-- // [START track] -->
-  <video controls>
-    <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'" />
-    <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+  <video src="chrome.webm" controls>
     <track src="chrome-subtitles-en.vtt" label="English captions"
            kind="captions" srclang="en" default />
     <p>This browser does not support the video element.</p>
   </video>
   <!-- // [END track] -->
-  
+
 
   <div id="srcInfo" class="is-hidden">
     <p>
@@ -53,14 +51,14 @@
     var srcHeight = document.querySelector("#srcHeight");
 
     srcInfo.classList.remove("is-hidden");
-    srcEvent.innerText = evt.type;
-    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
-    srcWidth.innerText = this.videoWidth;
-    srcHeight.innerText = this.videoHeight;
+    srcEvent.textContent = evt.type;
+    srcFile.textContent = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.textContent = this.videoWidth;
+    srcHeight.textContent = this.videoHeight;
   }
 
   init();
-  
+
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->

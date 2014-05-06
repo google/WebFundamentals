@@ -21,8 +21,8 @@
   <h1>Video: Specifying multiple typed video source files</h1>
   <!-- // [START sourcetypes] -->
   <video controls>
-    <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'" />
-    <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+    <source src="chrome.webm" type="video/webm" />
+    <source src="chrome.mp4" type="video/mp4" />
     <p>This browser does not support the video element.</p>
   </video>
   <!-- // [END sourcetypes] -->
@@ -53,15 +53,15 @@
 
     srcInfo.classList.remove("is-hidden");
     /* // [START currentsrc] */
-    srcEvent.innerText = evt.type;
-    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
-    srcWidth.innerText = this.videoWidth;
-    srcHeight.innerText = this.videoHeight;
+    srcEvent.textContent = evt.type;
+    srcFile.textContent = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.textContent = this.videoWidth;
+    srcHeight.textContent = this.videoHeight;
     /* // [END currentsrc] */
   }
 
   init();
-  
+
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->
