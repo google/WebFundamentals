@@ -34,6 +34,11 @@
   position: relative;
 }
 
+.featured-spotlight__title {
+  @include type--xxlarge;
+  @include color-inherit;
+}
+
 .featured-spotlight__img {
   @include small-only {
     padding-top: 58.4%;

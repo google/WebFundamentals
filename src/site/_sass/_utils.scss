@@ -45,7 +45,7 @@
   $colorGray: #737373;
   $colorGrayDark: #404040;
 
-  $colorText: $colorGrayDark;
+  $colorText: $colorGray;
   $colorHighlight: $colorBlue;
   $colorWarning: $colorYellowSecondary;
   $colorMuted: $colorGray;
@@ -225,6 +225,7 @@
   }
 
   @mixin rule--medium {
+    color: $colorGrayDark;
     font-size: $fontMedium;
     font-weight: 300;
     line-height: 1.3000em; /* 26px */
@@ -233,6 +234,7 @@
   }
 
   @mixin rule--large {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontLarge;
     font-weight: 300;
@@ -242,6 +244,7 @@
   }
 
   @mixin rule--xlarge {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontXLarge;
     font-weight: 300;
@@ -251,6 +254,7 @@
   }
 
   @mixin rule--xxlarge {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontXXLarge;
     font-weight: 300;
@@ -260,6 +264,7 @@
   }
 
   @mixin rule--huge {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontHuge;
     font-weight: 300;
@@ -336,6 +341,17 @@
     }
     @else {
       @include rule--huge;
+    }
+  }
+
+  // Creating a mixing to inherit color from parent
+  // this is because we also need to reset it from
+  // the media query. More manageable like this.
+  @mixin color-inherit {
+    color: inherit;
+
+    @include medium {
+      color: inherit;
     }
   }
 

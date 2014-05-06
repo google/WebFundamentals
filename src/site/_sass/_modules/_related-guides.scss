@@ -17,16 +17,6 @@
   padding-top: ($lineHeight*2) - 2;
 }
 
-.related-guides__list {
-  .list-links {
-    padding-top: 0;
-  }
-
-  a {
-    display: block;
-  }
-}
-
 .related-guides__title {
   @include type--xlarge;
   padding-top: 0;

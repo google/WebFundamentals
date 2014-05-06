@@ -16,15 +16,16 @@
 
   .article-section__icon {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 8px; // by default, icon-circle has margin-top/bottom of 4px to fix baseline issues, in this specific case, we need to remove margin-top, so in order to normalize baseline again, we add it to margin-bottom
     top: -($lineHeight);
   }
 }
 
 .articles-count {
-  color: $colorBlue;
+  color: $colorGray;
   font-family: $fontHighlight;
-  margin-top: -($lineHeight*2);
+  display: block;
+  position: relative;
+  top: -($lineHeight);
   font-weight: 400;
 }
-
