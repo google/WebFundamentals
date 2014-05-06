@@ -53,7 +53,7 @@ Great news, every browser ships with an implementation of an HTTP cache! All we 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (“x234dff”) that can be used after the response has expired to check if the resource has been modified.
 
 
-## Validating cached responses with ETag's
+## Validating cached responses with ETags
 
 {% include modules/takeaway.liquid list=page.key-takeaways.validate-etags %}
 
@@ -63,7 +63,7 @@ That’s the problem that validation tokens, as specified in the ETag header, ar
 
 <img src="images/http-cache-control.png" class="center" alt="HTTP Cache-Control example" />
 
-In above example the client automatically provides the ETag token within the “If-None-Match” HTTP request header, server checks the token against the current resource, and if it has not changed returns a “304 Not Modified” response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
+In above example the client automatically provides the ETag token within the “If-None-Match” HTTP request header, the server checks the token against the current resource, and if it has not changed returns a “304 Not Modified” response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
 As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf: it will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. **The only thing that’s left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.**
 
@@ -84,7 +84,7 @@ The best request is a request that does not need to communicate with the server:
 
 “no-cache” indicates that the returned response cannot be used to satisfy a subsequent request to the same URL without first checking with the server if the response has changed. As a result, if a proper validation token (ETag) is present, no-cache will incur a roundtrip to validate the cached response, but can eliminate the download if the resource has not changed.
 
-By contrast, “no-store” is much simpler, as it simply disallows the browser and all intermediate caches to store any version of the returned response - e.g. response containing private personal or banking data. Everytime the user requests this asset, a request is sent to the server and a full response is downloaded each and every time.
+By contrast, “no-store” is much simpler, as it simply disallows the browser and all intermediate caches to store any version of the returned response - e.g. one containing private personal or banking data. Everytime the user requests this asset, a request is sent to the server and a full response is downloaded each and every time.
 
 ### "public" vs. "private"
 
@@ -134,7 +134,7 @@ According to HTTP Archive, amongst the top 300,000 sites (by Alexa rank), [nearl
 
 All HTTP requests made by the browser are first routed to the browser cache to check if there is a valid cached response that can be used to fulfill the request. If there is a match, the response is read from the cache and we eliminate both the network latency and the data costs incurred by the transfer. **However, what if we want to update or invalidate a cached response?**
 
-For example, let’s say we’ve told our visitors to cache a CSS stylesheet for up to 24 hours (max-age=86400), but our designer has just committed an update that we would like to make available to all users. How do we notify all the visitors with what is now a “stale” cached copy of our CSS to update their caches? Trick question, we can’t, at least not without changing the URL of the resource.
+For example, let’s say we’ve told our visitors to cache a CSS stylesheet for up to 24 hours (max-age=86400), but our designer has just committed an update that we would like to make available to all users. How do we notify all the visitors with what is now a “stale” cached copy of our CSS to update their caches? It's a trick question - we can’t, at least not without changing the URL of the resource.
 
 Once the response is cached by the browser, the cached version will be used until it is no longer fresh, as determined by max-age or expires, or until it is evicted from cache for some other reason - e.g. user clearing their browser cache. As a result, different users might end up using different versions of the file when the page is constructed: users who just fetched the resource will use the new version, while users who cached an earlier (but still valid) copy will use an older version of its response.
 
