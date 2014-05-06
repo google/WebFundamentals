@@ -2150,6 +2150,53 @@ li > p {
 
 /**
 *
+* Spotlight Header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header {
+  margin-bottom: 78px;
+}
+
+/* line 17, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__container {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 800px) {
+  /* line 21, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header__container:after {
+    content: "\e016";
+    font-family: "icons";
+    display: block;
+    font-size: 450px;
+    line-height: 1;
+    color: #f0f0f0;
+    position: absolute;
+    right: 52px;
+    top: -52px;
+  }
+}
+
+/* line 36, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__copy {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 41, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__cta {
+  margin-top: 26px;
+}
+
+/**
+*
 * Related items
 *
 * Google Web Fundamentals
@@ -2159,16 +2206,16 @@ li > p {
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_modules/_related-guides.scss */
-.related-guides {
+/* line 13, ../_sass/_modules/_related-items.scss */
+.related-items {
   margin-top: 78px;
   padding-bottom: 102px;
   border-top: 2px solid #e0e0e0;
   padding-top: 50px;
 }
 
-/* line 20, ../_sass/_modules/_related-guides.scss */
-.related-guides__title {
+/* line 20, ../_sass/_modules/_related-items.scss */
+.related-items__title {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 26px;
@@ -2181,8 +2228,8 @@ li > p {
   padding-top: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 20, ../_sass/_modules/_related-guides.scss */
-  .related-guides__title {
+  /* line 20, ../_sass/_modules/_related-items.scss */
+  .related-items__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
@@ -2195,21 +2242,28 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_modules/_related-guides.scss */
-  .related-guides__title {
+  /* line 20, ../_sass/_modules/_related-items.scss */
+  .related-items__title {
     padding-top: 0;
   }
 }
 
-/* line 29, ../_sass/_modules/_related-guides.scss */
-.related-guides__main-link {
+/* line 29, ../_sass/_modules/_related-items.scss */
+.related-items__main-link {
   text-transform: uppercase;
 }
-/* line 32, ../_sass/_modules/_related-guides.scss */
-.related-guides__main-link:before {
+/* line 32, ../_sass/_modules/_related-items.scss */
+.related-items__main-link:before {
   content: "#";
   display: inline-block;
   padding-right: 2px;
+}
+
+/* line 40, ../_sass/_modules/_related-items.scss */
+.related-items--minimal {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 52px;
 }
 
 /**

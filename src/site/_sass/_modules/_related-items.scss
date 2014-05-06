@@ -11,16 +11,34 @@
 **/
 
 .related-items {
-  background-color: $colorGrayDark;
-  color: #ffffff;
-  padding-bottom: $lineHeight * 2;
-  margin-top: $lineHeight * 2;
-
-  .list-links {
-    a {
-      color: #ffffff;
-    }
-  }
-
+  margin-top: $lineHeight*3;
+  padding-bottom: ($lineHeight*4) - 2;
+  border-top: 2px solid $colorGrayKeyline;
+  padding-top: ($lineHeight*2) - 2;
 }
 
+.related-items__title {
+  @include type--xlarge;
+  padding-top: 0;
+
+  @include medium {
+    padding-top: 0;
+  }
+}
+
+.related-items__main-link {
+  text-transform: uppercase;
+
+  &:before {
+    content: "#";
+    display: inline-block;
+    padding-right: 2px;
+  }
+}
+
+
+.related-items--minimal {
+  border-top: none;
+  padding-top: 0;
+  margin-top: $lineHeight*2;
+}

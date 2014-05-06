@@ -1,0 +1,43 @@
+/**
+*
+* Spotlight Header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.spotlight-header {
+  margin-bottom: $lineHeight*3;
+}
+
+.spotlight-header__container {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    @include wide {
+      content: $icon-star;
+      font-family: $fontIcon;
+      display: block;
+      font-size: 450px;
+      line-height: 1;
+      color: $colorGrayBackground;
+      position: absolute;
+      right: $lineHeight*2;
+      top: -$lineHeight*2;
+    }
+  }
+}
+
+.spotlight-header__copy {
+  position: relative;
+  z-index: 2;
+}
+
+.spotlight-header__cta {
+  margin-top: $lineHeight;
+}

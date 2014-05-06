@@ -54,6 +54,8 @@ toc:
           path: /documentation/performance/optimizing-interactivity/
         - title: "Measuring Performance"
           path: /documentation/performance/measuring-performance/
+- title: Spotlights
+  path: /spotlights/
 - title: Resources
   path: /resources/
   section:
