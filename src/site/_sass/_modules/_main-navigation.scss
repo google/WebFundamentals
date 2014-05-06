@@ -84,6 +84,10 @@
   }
 }
 
+.main-nav__item--current {
+  color: $colorYellowSecondary;
+}
+
 .main-nav__link {
   color: $colorGrayDark;
   font-family: $fontHighlight;
