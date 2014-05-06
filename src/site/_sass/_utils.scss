@@ -230,6 +230,7 @@
     line-height: 1.3000em; /* 26px */
     padding-top: 1.3000em;
     padding-bottom: 0;
+    letter-spacing: -1px;
   }
 
   @mixin rule--large {
@@ -239,6 +240,7 @@
     line-height: 1.0000em; /* 26px */
     padding-top: 1.0000em;
     padding-bottom: 0;
+    letter-spacing: -1px;
   }
 
   @mixin rule--xlarge {
@@ -248,6 +250,7 @@
     line-height: 1.2381em; /* 52px */
     padding-top: 0.6190em;
     padding-bottom: 0;
+    letter-spacing: -1px;
   }
 
   @mixin rule--xxlarge {
@@ -257,6 +260,7 @@
     line-height: 1.1471em; /* 78px */
     padding-top: 0.3824em;
     padding-bottom: 0;
+    letter-spacing: -3px;
   }
 
   @mixin rule--huge {
@@ -266,6 +270,7 @@
     line-height: 1.19em; /* 130px */
     padding-top: 0.2364em;
     padding-bottom: 0;
+    letter-spacing: -5px;
   }
 
 
@@ -382,6 +387,7 @@
     font-weight: 400;
     display: inline-block;
     line-height: 1;
+    letter-spacing: 1px;
 
     &:hover {
       color: $colorGrayDark;
