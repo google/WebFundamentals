@@ -24,7 +24,7 @@ class: home
     </p>
   </div>
 
-  <ul class="list-guides-intro list-centered list--reset clear">
+  <ul class="list-guides-intro list-centered list-reset clear">
     {% for guide in page.articles.documentation %}
     <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
       <a href="{{site.baseurl}}{{guide.url}}" title="{{guide.title}}" class="themed">

@@ -17,9 +17,24 @@ object {
 }
 
 img {
-
   .content & {
     margin-top: $lineHeight;
     margin-bottom: $lineHeight;
+  }
+}
+
+
+.media--video {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 54.2%;
+
+  & > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
