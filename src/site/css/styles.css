@@ -2994,7 +2994,7 @@ li > p {
   line-height: 19px;
   text-align: center;
   padding: 13px 40px 13px 13px;
-  margin: 0 13px -5%;
+  margin: 0 13px 0 -5%;
   position: relative;
 }
 /* line 24, ../_sass/_modules/_beta.scss */
