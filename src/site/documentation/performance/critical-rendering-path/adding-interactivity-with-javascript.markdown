@@ -14,7 +14,7 @@ key-takeaways:
     - JavaScript execution blocks on CSSOM
     - JavaScript blocks DOM construction unless explicitly declared as async
 ---
-{% wrap content%}
+{% wrap content %}
 
 <style type="text/css">
   img, video, object {
@@ -88,4 +88,4 @@ Adding the async keyword to the script tag tells the browser that it should not 
 
 {% include modules/nextarticle.liquid %}
 
-{% endwrap%}
+{% endwrap %}
