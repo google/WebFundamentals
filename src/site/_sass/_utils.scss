@@ -215,6 +215,7 @@
     line-height: 2.0000em; /* 26px */
     padding-top: 2.0000em;
     padding-bottom: 0;
+    letter-spacing: 0;
   }
 
   @mixin rule--base {
@@ -222,6 +223,7 @@
     line-height: 1.6250em; /* 26px */
     padding-top: 1.6250em;
     padding-bottom: 0;
+    letter-spacing: 0;
   }
 
   @mixin rule--medium {

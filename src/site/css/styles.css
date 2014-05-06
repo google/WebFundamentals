@@ -676,6 +676,7 @@ small {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
+  letter-spacing: 0;
 }
 
 /* line 28, ../_sass/_components/_typography.scss */
@@ -688,6 +689,7 @@ ol {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
 }
 
 /* line 33, ../_sass/_components/_typography.scss */
@@ -698,6 +700,7 @@ h4 {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
 }
 @media only screen and (min-width: 800px) {
   /* line 33, ../_sass/_components/_typography.scss */
@@ -1167,6 +1170,7 @@ li > p {
     /* 26px */
     padding-top: 1.6250em;
     padding-bottom: 0;
+    letter-spacing: 0;
     padding: 26px 13px 26px;
     font-weight: 400;
     color: inherit;
@@ -1235,6 +1239,7 @@ li > p {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-top: 13px;
   padding-bottom: 12px;
   margin-bottom: 0;
@@ -1349,7 +1354,7 @@ li > p {
   display: block;
   line-height: 26px;
 }
-/* line 408, ../_sass/_utils.scss */
+/* line 410, ../_sass/_utils.scss */
 .main-nav__link--explore:hover {
   color: #404040;
 }
@@ -1370,11 +1375,11 @@ li > p {
     letter-spacing: 1px;
     text-decoration: none;
   }
-  /* line 408, ../_sass/_utils.scss */
+  /* line 410, ../_sass/_utils.scss */
   .main-nav__link--explore:hover {
     color: #404040;
   }
-  /* line 414, ../_sass/_utils.scss */
+  /* line 416, ../_sass/_utils.scss */
   .main-nav__link--explore:before {
     display: inline-block;
     padding-right: 10px;
@@ -1683,12 +1688,12 @@ li > p {
     max-width: 864px;
   }
 }
-/* line 429, ../_sass/_utils.scss */
+/* line 431, ../_sass/_utils.scss */
 .highlight-module__container:before {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 429, ../_sass/_utils.scss */
+  /* line 431, ../_sass/_utils.scss */
   .highlight-module__container:before {
     display: block;
     position: absolute;
@@ -1703,19 +1708,19 @@ li > p {
     color: #ffffff;
   }
 }
-/* line 447, ../_sass/_utils.scss */
+/* line 449, ../_sass/_utils.scss */
 .highlight-module--left .highlight-module__container:before {
   right: auto;
   left: 45px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 429, ../_sass/_utils.scss */
+  /* line 431, ../_sass/_utils.scss */
   .highlight-module__container:before {
     top: 134px;
     width: 22.2%;
     font-size: 180px;
   }
-  /* line 457, ../_sass/_utils.scss */
+  /* line 459, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 430px;
   }
@@ -2455,6 +2460,7 @@ li > p {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-top: 104px;
   padding-left: 26px;
 }
@@ -2880,6 +2886,7 @@ li > p {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   padding-bottom: 13px;
   margin-bottom: 12px;
@@ -3121,6 +3128,7 @@ li > p {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-top: 26px;
 }
 
@@ -3346,7 +3354,7 @@ li > p {
   color: #ffffff;
   background: rgba(64, 64, 64, 0.85);
 }
-/* line 366, ../_sass/_utils.scss */
+/* line 368, ../_sass/_utils.scss */
 .latest-spotlights__link p:before {
   font-family: "icons";
   font-size: 13px;
@@ -3411,6 +3419,7 @@ li > p {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
+  letter-spacing: 0;
   display: block;
   margin: 0 10px;
 }
@@ -3753,7 +3762,7 @@ ul li {
   position: relative;
   padding-left: 16px;
 }
-/* line 366, ../_sass/_utils.scss */
+/* line 368, ../_sass/_utils.scss */
 ul li:before {
   font-family: "icons";
   font-size: 13px;
@@ -3778,7 +3787,7 @@ ol > li {
   position: relative;
   padding-left: 32px;
 }
-/* line 388, ../_sass/_utils.scss */
+/* line 390, ../_sass/_utils.scss */
 ol > li:before {
   counter-increment: list;
   content: "0" counter(list);
@@ -3812,7 +3821,7 @@ ul.list-links li:before {
 ul.list-links a {
   font-weight: 400;
 }
-/* line 366, ../_sass/_utils.scss */
+/* line 368, ../_sass/_utils.scss */
 ul.list-links a:before {
   font-family: "icons";
   font-size: 13px;
@@ -3838,7 +3847,7 @@ ul.list-links.list-links--primary a {
   line-height: 1;
   text-decoration: none;
 }
-/* line 366, ../_sass/_utils.scss */
+/* line 368, ../_sass/_utils.scss */
 ul.list-links.list-links--primary a:before {
   font-family: "icons";
   font-size: 13px;
@@ -3859,7 +3868,7 @@ ol.list-links li a {
   display: inline-block;
   font-weight: 300;
 }
-/* line 388, ../_sass/_utils.scss */
+/* line 390, ../_sass/_utils.scss */
 ol.list-links li a:before {
   counter-increment: list;
   content: "0" counter(list);
@@ -3885,6 +3894,7 @@ ol.list-links.list-links--secondary a:before {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-left: 0;
 }
 /* line 117, ../_sass/_components/_list.scss */
@@ -3904,6 +3914,7 @@ ol.list-links.list-links--secondary a:before {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-top: 0;
   padding-left: 0;
 }
@@ -3917,7 +3928,7 @@ ol.list-links.list-links--secondary a:before {
   display: inline-block;
   padding-left: 16px;
 }
-/* line 366, ../_sass/_utils.scss */
+/* line 368, ../_sass/_utils.scss */
 .list-anchor a:before {
   font-family: "icons";
   font-size: 13px;
@@ -3942,6 +3953,7 @@ ol.list-links.list-links--secondary a:before {
     /* 26px */
     padding-top: 2.0000em;
     padding-bottom: 0;
+    letter-spacing: 0;
     padding-top: 0;
   }
 }
@@ -4336,11 +4348,11 @@ a:hover {
   letter-spacing: 1px;
   text-decoration: none;
 }
-/* line 408, ../_sass/_utils.scss */
+/* line 410, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
-/* line 414, ../_sass/_utils.scss */
+/* line 416, ../_sass/_utils.scss */
 .cta--primary:before {
   display: inline-block;
   padding-right: 10px;
@@ -4359,7 +4371,7 @@ a:hover {
   line-height: 1;
   letter-spacing: 1px;
 }
-/* line 408, ../_sass/_utils.scss */
+/* line 410, ../_sass/_utils.scss */
 .cta--secondary:hover {
   color: #404040;
 }
@@ -4395,6 +4407,7 @@ table th {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   color: inherit;
 }
 @media only screen and (min-width: 800px) {
@@ -4579,10 +4592,26 @@ object {
   max-width: 100%;
 }
 
-/* line 21, ../_sass/_components/_media.scss */
+/* line 20, ../_sass/_components/_media.scss */
 .content img {
   margin-top: 26px;
   margin-bottom: 26px;
+}
+
+/* line 27, ../_sass/_components/_media.scss */
+.media--video {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 54.2%;
+}
+/* line 33, ../_sass/_components/_media.scss */
+.media--video > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /**
@@ -4616,6 +4645,7 @@ object {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-top: 26px;
 }
 
@@ -4626,6 +4656,7 @@ object {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
+  letter-spacing: 0;
   color: black;
   font-weight: 400;
   padding-top: 0;
@@ -4661,6 +4692,7 @@ object {
   /* 26px */
   padding-top: 1.6250em;
   padding-bottom: 0;
+  letter-spacing: 0;
   padding-top: 0;
   display: block;
 }
@@ -5248,6 +5280,7 @@ object {
   /* 26px */
   padding-top: 2.0000em;
   padding-bottom: 0;
+  letter-spacing: 0;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
