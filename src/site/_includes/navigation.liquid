@@ -5,7 +5,6 @@
     <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}">
       <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
         {{ section.title }}
-
         {% if section.title == "Documentation" %}
         <i class="main-nav__icon icon icon-custom"></i>
         {% else %}
