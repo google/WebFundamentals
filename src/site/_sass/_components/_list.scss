@@ -235,8 +235,8 @@ ol.list-links {
   }
 }
 
-/*==========  RELATED GUIDES LIST  ==========*/
-.related-guides-list {
+/*==========  RELATED ITEMS LIST  ==========*/
+.related-items-list {
   font-family: $fontHighlight;
   padding-top: 0;
   padding-left: 0;
@@ -266,6 +266,13 @@ ol.list-links {
       border-color: transparent;
     }
 
+    // Selecting the 4th element and then every 3rd adjacent one
+    &:nth-child(3n + 4) {
+      @include wide {
+        margin-left: 25.9%;
+      }
+    }
+
     @include medium {
       padding-top: 0;
       padding-bottom: 0;
@@ -276,7 +283,7 @@ ol.list-links {
 
 /*==========  LIST RESET  ==========*/
 
-.list--reset {
+.list-reset {
   padding-left: 0;
 
   li {

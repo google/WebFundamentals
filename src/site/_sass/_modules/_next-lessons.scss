@@ -18,6 +18,8 @@
   position: relative;
 
   h3 {
+    @include color-inherit;
+
     i {
       @include medium {
         display: none;

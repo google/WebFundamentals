@@ -1,0 +1,41 @@
+/**
+*
+* Latest spotlights
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.latest-spotlights {
+  background: $colorYellowSecondary;
+}
+
+.latest-spotlights__item {
+  width: 50%;
+  float: left;
+
+  &:nth-child(even) {
+    .latest-spotlights__link {
+      margin-right: 1px;
+    }
+  }
+
+  &:nth-child(odd) {
+    .latest-spotlights__link {
+      margin-left: 1px;
+    }
+  }
+}
+
+.latest-spotlights__link {
+  display: block;
+}
+
+.latest-spotlights__link img {
+  display: block;
+  width: 100%;
+}
