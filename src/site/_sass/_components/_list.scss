@@ -74,6 +74,7 @@ ul.list-links {
   }
 
   &.list-links--primary {
+    letter-spacing: 1px;
     a {
       @include bullet-type("", icon-chevron-right);
       font-weight: 400;
@@ -234,8 +235,8 @@ ol.list-links {
   }
 }
 
-/*==========  RELATED GUIDES LIST  ==========*/
-.related-guides-list {
+/*==========  RELATED ITEMS LIST  ==========*/
+.related-items-list {
   font-family: $fontHighlight;
   padding-top: 0;
   padding-left: 0;
@@ -248,21 +249,28 @@ ol.list-links {
     padding-top: 0
   }
 
-  p {
+  & p {
     padding-top: 0;
   }
 
-  .tag {
+  & .tag {
     padding-top: 0;
   }
 
-  li {
+  & li {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight - 1;
     border-bottom: 1px solid $colorGrayKeyline;
 
     &:last-child {
       border-color: transparent;
+    }
+
+    // Selecting the 4th element and then every 3rd adjacent one
+    &:nth-child(3n + 4) {
+      @include wide {
+        margin-left: 25.9%;
+      }
     }
 
     @include medium {
@@ -275,7 +283,7 @@ ol.list-links {
 
 /*==========  LIST RESET  ==========*/
 
-.list--reset {
+.list-reset {
   padding-left: 0;
 
   li {
@@ -305,12 +313,12 @@ ol.list-links {
     }
 
     & .icon {
-      font-size: $fontSmall;
+      font-size: 10px;
       display: inline-block;
       background: rgba(#000000, .2);
       border-radius: 100%;
-      width: 26px;
-      line-height: 26px;
+      width: $lineHeight;
+      line-height: $lineHeight;
       text-align: center;
       margin-left: 7px;
     }
@@ -322,12 +330,9 @@ ol.list-links {
 /*==========  GUIDES INTO - used on homepage  ==========*/
 .list-guides-intro {
   margin-bottom: $lineHeight*2;
+  padding-top: $lineHeight*2;
 
-  @include small-only {
-    padding-top: $lineHeight*2;
-  }
-
-  li {
+  & li {
     border-bottom: 1px solid $colorGrayKeyline;
     padding-bottom: ($lineHeight*2) - 1;
     margin-bottom: ($lineHeight*2);
@@ -342,22 +347,23 @@ ol.list-links {
       margin-bottom: 0;
     }
   }
+
+  & h3 {
+    margin-bottom: $lineHeight;
+    @include color-inherit;
+  }
 }
 
 /*==========  ARTICLE LIST  ==========*/
 .articles-list {
-  padding-left: 0;
+  padding: ($lineHeight * 3) 0 ($lineHeight * 2 + 1);
 }
 
 .articles-list__item {
-
-  padding-bottom: $lineHeight * 2;
-
-  &:last-child {
-    padding-bottom: $lineHeight * 2 + 1;
-  }
-
   padding-left: 0;
+  padding-bottom: $lineHeight*2;
+  margin-bottom: $lineHeight*2;
+  position: relative;
 
   &:before {
     content: "";
@@ -366,30 +372,34 @@ ol.list-links {
     height: 1px;
     box-shadow: inset 0 1px 0 0 $colorGrayKeyline;
     margin-right: 0;
-    margin-left: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20%;
   }
 
-  h3 {
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  p {
-    margin-top: $lineHeight;
-    margin-bottom: $lineHeight;
-  }
-
-  &:first-child {
-    padding-top: 0;
-
-    @include medium {
-      padding-top: $lineHeight - 2;
-    }
-
+  &:last-child {
     &:before {
       display: none;
     }
+  }
+
+  & h3 {
+    padding-top: 0;
+
+    & a {
+      text-decoration: none;
+      border-bottom: 1px solid;
+      padding-bottom: 0px;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  & p {
+    margin-top: $lineHeight;
   }
 
 }
@@ -424,11 +434,21 @@ ol.list-links {
     -webkit-flex-wrap: wrap;
   }
 
-  h3 {
+  & h3 {
     margin: 0 32px;
+
+    & a {
+      text-decoration: none;
+      border-bottom: 1px solid;
+      padding-bottom: 1px;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
   }
 
-  p {
+  & p {
     margin: $lineHeight 32px 0;
   }
 

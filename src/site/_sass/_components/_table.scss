@@ -24,6 +24,7 @@ table {
     display: none;
     font-family: $fontHighlight;
     @include type--medium;
+    @include color-inherit;
   }
 
   tr {

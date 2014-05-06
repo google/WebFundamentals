@@ -13,11 +13,13 @@
 .next-lessons {
   background: $colorGrayDark;
   padding: $lineHeight $lineHeight $lineHeight*2;
-  margin-top: $lineHeight;
+  margin-top: $lineHeight*3;
   color: #ffffff;
   position: relative;
 
   h3 {
+    @include color-inherit;
+
     i {
       @include medium {
         display: none;

@@ -21,16 +21,13 @@
     height: $lineHeight * 4;
     padding-bottom: 0;
   }
-
-  .container {
-    overflow: hidden;
-  }
 }
 
 #gc-logo {
   text-decoration: none;
   display: block;
-  margin: $lineHeight auto;
+  margin: 0 auto $lineHeight;
+  padding-top: $lineHeight;
   width: 43px;
 
   overflow: hidden;
@@ -42,6 +39,8 @@
     margin-top: 29px;
     width: 56px;
     width: auto;
+    padding-top: 0;
+    margin-bottom: 0;
   }
 
   img {

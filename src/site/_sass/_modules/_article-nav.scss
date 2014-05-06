@@ -55,12 +55,11 @@
 
 .article-nav-link--prev {
   text-align: right;
-  // border-right-width: 1px;
 
   &:before {
+    content: $icon-chevron-left;
     font-family: $fontIcon;
-    @extend .icon-chevron-left:before;
-    left: 32px;
+    left: 0;
   }
 
   p {
@@ -71,12 +70,10 @@
 }
 
 .article-nav-link--next {
-  // border-left-width: 1px;
-
   &:before {
+    content: $icon-chevron-right;
     font-family: $fontIcon;
-    @extend .icon-chevron-right:before;
-    right: 32px;
+    right: 0;
   }
 
   p {
@@ -89,6 +86,11 @@
 .article-nav-count {
   @include type--large;
   font-weight: 700;
-  @include medium {font-weight: 400;}
+
+  @include medium {
+    font-weight: 400;
+  }
+
+  @include color-inherit;
 }
 

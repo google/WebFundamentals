@@ -42,6 +42,11 @@
     }
   }
 
+  // Also adding subtitle here due to specifity
+  .editorial-header__subtitle {
+    margin-top: 0;
+  }
+
 }
 
 .editorial-header__excerpt {
@@ -56,10 +61,13 @@
 .editorial-header__subtitle {
   @include type--xxlarge;
   padding-top: 0;
+
   @include medium {
     padding-top: 0;
     padding-bottom: $lineHeight;
+    margin-top: 0;
   }
+
   color: $colorBlue;
 }
 

@@ -20,6 +20,7 @@
 @import "../css/syntax.css";
 
 // Icons - Leave it here to otherfiles can extend if needed
+@import "_components/_typography";
 @import "_components/_icons";
 
 // Modules
@@ -46,10 +47,10 @@
 @import "_modules/_cc";
 @import "_modules/_google-header";
 @import "_modules/_google-footer";
+@import "_modules/_latest-spotlights";
 
 // Components
 @import "_components/_grid";
-@import "_components/_typography";
 @import "_components/_button";
 @import "_components/_list";
 @import "_components/_link";

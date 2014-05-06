@@ -11,16 +11,17 @@
 **/
 
 .home-header {
-  background: $colorBlue url(../imgs/devices.svg) no-repeat center center;
+  background: $colorBlue no-repeat center center;
   color: #ffffff;
   position: relative;
   padding-bottom: $lineHeight*3;
   margin-bottom: $lineHeight*3;
 
   @include medium {
-    padding-bottom: $lineHeight*4;
+    background-image: url(../imgs/devices.svg);
     background-size: 1200px;
     background-position: center 30%;
+    padding-bottom: $lineHeight*4;
   }
 
   @include wide {
@@ -53,13 +54,14 @@
 
     @include small-only {
       @include type--xlarge(true);
+      padding-top: $lineHeight*2;
     }
-
-    padding-top: $lineHeight*2;
 
     @include medium {
       padding-top: $lineHeight*3;
     }
+
+    @include color-inherit;
   }
 
   & p {
@@ -68,6 +70,8 @@
     @include medium {
       padding-top: 0;
     }
+
+    @include color-inherit;
   }
 
   & a {
