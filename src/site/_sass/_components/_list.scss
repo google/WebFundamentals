@@ -349,6 +349,7 @@ ol.list-links {
 
   & h3 {
     margin-bottom: $lineHeight;
+    @include color-inherit;
   }
 }
 

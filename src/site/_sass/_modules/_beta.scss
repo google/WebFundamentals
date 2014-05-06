@@ -11,16 +11,15 @@
 **/
 
 .beta {
-  font-family: $fontHighlight;
-  padding: $lineHeight/2 40px $lineHeight/2 $lineHeight/2;
-  line-height: 19px;
-  margin-left: -5%;
-  margin-right: $lineHeight/2;
-  margin-top: 0;
   background: $colorWarning;
-  text-align: center;
-  position: relative;
+  font-family: $fontHighlight;
+  color: $colorGrayDark;
   font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  padding: $lineHeight/2 40px $lineHeight/2 $lineHeight/2;
+  margin: 0 $lineHeight/2 -5%;
+  position: relative;
 
   &:before {
     content: $icon-diamond;
@@ -64,7 +63,7 @@
   }
 
   & a {
-    color: $colorText;
+    color: $colorGrayDark;
   }
 }
 
