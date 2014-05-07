@@ -145,7 +145,6 @@
 // Its purpose is to show users our grid system
 // It becomes visible when a class 'debug' is added to the body
 .grid-overlay {
-
   display: none;
   pointer-events: none;
 
@@ -158,6 +157,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 2;
     height: 100%;
     display: block;
 

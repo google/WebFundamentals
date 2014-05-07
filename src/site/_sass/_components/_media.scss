@@ -10,25 +10,88 @@
 *
 **/
 
+// clear floats for media
+.media {
+  overflow: hidden;
+}
+
 img,
 video,
 object {
-  max-width: 100%;
-}
+  width: 100%;
+  display: block; // remove the default inline-block 4px gap
+  margin-top: $lineHeight;
+  margin-bottom: $lineHeight;
 
-img {
-  .content & {
-    margin-top: $lineHeight;
-    margin-bottom: $lineHeight;
+  @include medium {
+    width: auto;
+    max-width: 100%;
   }
 }
 
+figure,
+img,
+.media--video {
+
+  // Remove padding-top from p's immediately after these elements
+  & + p {
+    padding-top: 0;
+  }
+
+  // In _typography.scss we set every h3 in .container to have extra top spacing
+  // but if the h3 is immediately after these elements, we want to undo this
+  .content & + h3 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+figure {
+  display: block;
+
+  // this is used to give it a "full bleed" look on mobile
+  margin-left: -6%;
+  margin-right: -6%;
+
+  @include medium {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+figcaption {
+  border-top: 1px solid $colorGrayKeyline;
+  font-size: $fontSmall;
+  margin-bottom: ($lineHeight * 2)- 1;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  clear: both;
+
+  @include medium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .media--video {
   position: relative;
   height: 0;
   overflow: hidden;
   padding-top: 54.2%;
+  margin-top: $lineHeight;
+  margin-bottom: $lineHeight;
+
+  // this is used to give it a "full bleed" look on mobile
+  margin-left: -6%;
+  margin-right: -6%;
+
+  @include medium {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   & > iframe {
     position: absolute;
@@ -36,5 +99,20 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+// This class needs to be used whenever the content
+// starts a new subsection - needs more space to
+// differenciate from previous subsection
+.media-subsection {
+  padding-top: $lineHeight;
+}
+
+// This class forces the element to be fluid (100% width)
+.fluid {
+  &,
+  & img {
+    min-width: 100%;
   }
 }
