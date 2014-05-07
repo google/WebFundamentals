@@ -823,21 +823,19 @@ li > p {
 .content [class*="g-"] h1, .content [class*="g-"] h2, .content [class*="g-"] h3, .content [class*="g-"] h4, .content [class*="g-"] h5, .content [class*="g-"] h6, .content [class*="g-"] p, .content [class*="g-"] ul, .content [class*="g-"] ol {
   margin-right: 0;
 }
-/* line 83, ../_sass/_components/_typography.scss */
-.content [class*="g-"] h2,
-.content [class*="g-"] h3 {
+/* line 85, ../_sass/_components/_typography.scss */
+.content .media-subsection p {
   padding-top: 0;
-  margin-top: 26px;
 }
-/* line 89, ../_sass/_components/_typography.scss */
+/* line 90, ../_sass/_components/_typography.scss */
 .content h2 {
   margin-top: 78px;
 }
-/* line 93, ../_sass/_components/_typography.scss */
+/* line 94, ../_sass/_components/_typography.scss */
 .content h3 {
   margin-top: 52px;
 }
-/* line 97, ../_sass/_components/_typography.scss */
+/* line 98, ../_sass/_components/_typography.scss */
 .content h4 {
   margin-top: 26px;
 }
@@ -4781,8 +4779,9 @@ figure {
 
 /* line 63, ../_sass/_components/_media.scss */
 figcaption {
-  border-top: 1px solid #e0e0e0;
   font-size: 13px;
+  color: #404040;
+  border-top: 1px solid #e0e0e0;
   margin-bottom: 51px;
   padding-left: 5%;
   padding-right: 5%;
@@ -4797,7 +4796,7 @@ figcaption {
   }
 }
 
-/* line 79, ../_sass/_components/_media.scss */
+/* line 80, ../_sass/_components/_media.scss */
 .media--video {
   position: relative;
   height: 0;
@@ -4809,13 +4808,13 @@ figcaption {
   margin-right: -6%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 79, ../_sass/_components/_media.scss */
+  /* line 80, ../_sass/_components/_media.scss */
   .media--video {
     margin-left: 0;
     margin-right: 0;
   }
 }
-/* line 96, ../_sass/_components/_media.scss */
+/* line 97, ../_sass/_components/_media.scss */
 .media--video > iframe {
   position: absolute;
   top: 0;
@@ -4824,12 +4823,12 @@ figcaption {
   height: 100%;
 }
 
-/* line 108, ../_sass/_components/_media.scss */
+/* line 109, ../_sass/_components/_media.scss */
 .media-subsection {
   padding-top: 26px;
 }
 
-/* line 115, ../_sass/_components/_media.scss */
+/* line 116, ../_sass/_components/_media.scss */
 .fluid, .fluid img {
   min-width: 100%;
 }

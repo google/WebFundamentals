@@ -77,12 +77,13 @@ li > p {
     h1, h2, h3, h4, h5, h6, p, ul, ol {
       margin-right: 0;
     }
+  }
 
-    // if these elements are used in a grid we don't need so much top spacing
-    h2,
-    h3 {
+  // This element is used when we have copy and image next to each other
+  // refer to _media.scss and example-article.html for all the info
+  .media-subsection {
+    p {
       padding-top: 0;
-      margin-top: $lineHeight;
     }
   }
 
