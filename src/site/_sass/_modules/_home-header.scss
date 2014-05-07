@@ -55,6 +55,7 @@
     @include small-only {
       @include type--xlarge(true);
       padding-top: $lineHeight*2;
+      @include color-inherit;
     }
 
     @include medium {
