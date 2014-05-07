@@ -11,7 +11,12 @@
 **/
 
 .case-study-wrapper {
-  background: $colorGrayBackground;
   padding-top: $lineHeight;
   padding-bottom: $lineHeight*2;
+
+  @include medium {
+    background: $colorGrayBackground;
+    margin-bottom: $lineHeight*3;
+  }
+
 }

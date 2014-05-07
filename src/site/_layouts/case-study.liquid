@@ -1,0 +1,24 @@
+{% if site.include_open_html %}
+<!DOCTYPE html>
+<html lang="en" class="no-js no-touch" itemscope itemtype="http://schema.org/Article">
+  <head>
+{% endif %}
+    {% include head.liquid %}
+  </head>
+
+  <body class="{{ page.class }}">
+    {% injectdata content _betterbook.yaml %}
+
+    {% include google_header.html %}
+
+    {% include header.liquid %}
+
+    {{ content }}
+
+    {% include footer.liquid %}
+
+{% if site.include_open_html %}
+    {% include scripts.liquid %}
+  </body>
+</html>
+{% endif %}

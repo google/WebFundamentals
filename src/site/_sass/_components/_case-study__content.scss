@@ -10,5 +10,9 @@
 *
 **/
 
-.case-study__content {}
+.case-study__img-wrapper {
+  @include medium {
+    padding-top: $lineHeight*3;
+  }
+}
 

@@ -33,6 +33,18 @@
   }
 }
 
+.spotlight-header--detail {
+
+  & .spotlight-header__container {
+
+    &:after {
+      display: none;
+    }
+
+  }
+
+}
+
 .spotlight-header__copy {
   position: relative;
   z-index: 2;

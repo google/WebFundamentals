@@ -281,6 +281,11 @@ ol.list-links {
 
   & p {
     padding-top: 0;
+    color: $colorBlue;
+  }
+
+  & img+p {
+    padding-top: 13px;
   }
 
   & .tag {

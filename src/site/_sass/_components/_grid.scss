@@ -131,7 +131,11 @@
 //  <div class="third"></div>
 //  <div class="third"></div>
 //  <div class="third last"></div>
-.g--last { margin-right: 0; }
+.g--last {
+  @include medium {
+    margin-right: 0;
+  }
+}
 
 
 // This is a global 'centered' class
