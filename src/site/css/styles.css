@@ -3482,6 +3482,83 @@ li > p {
 
 /**
 *
+* Our view
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 13, ../_sass/_modules/_our-view.scss */
+.our-view {
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (max-width: 619px) {
+  /* line 17, ../_sass/_modules/_our-view.scss */
+  .our-view .our-view__title {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media only screen and (max-width: 619px) {
+  /* line 13, ../_sass/_modules/_our-view.scss */
+  .our-view {
+    margin-bottom: -1px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 29, ../_sass/_modules/_our-view.scss */
+  .our-view:after {
+    background: #ffd45b;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 50%;
+    right: 0;
+    left: 50%;
+  }
+}
+
+/* line 44, ../_sass/_modules/_our-view.scss */
+.our-view__content {
+  color: #404040;
+  padding-top: 26px;
+  padding-bottom: 52px;
+}
+@media only screen and (max-width: 619px) {
+  /* line 44, ../_sass/_modules/_our-view.scss */
+  .our-view__content {
+    background: #ffd45b;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 26px;
+  }
+}
+
+/* line 60, ../_sass/_modules/_our-view.scss */
+.our-view__list-wrapper .our-view__subtitle {
+  padding-left: 16px;
+  font-weight: 400;
+}
+/* line 65, ../_sass/_modules/_our-view.scss */
+.our-view__list-wrapper:last-child {
+  margin-top: 26px;
+}
+@media only screen and (max-width: 619px) {
+  /* line 65, ../_sass/_modules/_our-view.scss */
+  .our-view__list-wrapper:last-child {
+    border-top: 1px solid #f4b400;
+  }
+}
+
+/**
+*
 * Grid
 *
 * Google Web Fundamentals
