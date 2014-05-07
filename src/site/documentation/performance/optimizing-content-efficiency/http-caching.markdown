@@ -101,7 +101,7 @@ This directive specifies the maximum time in seconds that the fetched response i
 
 <img src="images/http-cache-decision-tree.png" class="center" alt="Cache decision tree" />
 
-Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many of their responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
+Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
 <table>
 <thead>
@@ -112,7 +112,7 @@ Follow the decision tree above to determine the optimal caching policy for a par
 </thead>
 <tr>
   <td>max-age=86400</td>
-  <td>Response can be cached by browser and any intermediary caches for up to 1 day (60 seconds x 60 minutes x 24 hours)</td>
+  <td>Response can be cached by browser and any intermediary caches (i.e. it is "public") for up to 1 day (60 seconds x 60 minutes x 24 hours)</td>
 </tr>
 <tr>
   <td>private, max-age=600</td>
