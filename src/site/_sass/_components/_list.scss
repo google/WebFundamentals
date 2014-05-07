@@ -11,30 +11,34 @@
 **/
 
 ul,
-ol {
+ol,
+dl {
   list-style: none;
   margin: 0;
+  padding-left: $lineHeight*2;
 
   @include small-only {
     padding-left: 0;
   }
 }
 
-ul li {
+li,
+dt {
   position: relative;
   padding-left: 16px;
-  @include bullet-type("", icon-bullet);
+}
 
-  &:before {
-    font-size: 4px;
+ul {
+  > li {
+    @include bullet();
   }
 }
 
 ol {
   counter-reset: list;
+
   > li {
     @include numbered-list;
-    position: relative;
     padding-left: 32px;
 
     // This selected every adjacent <li>
@@ -48,6 +52,8 @@ ol {
   }
 }
 
+
+// Find nested lists
 ul ol {
   padding-top: 0;
 }
@@ -56,6 +62,26 @@ ol ul {
   padding-top: 0;
 }
 
+/*==========  DEFINITION LIST  ==========*/
+
+
+dt {
+  @include bullet($icon-hash, $fontSmall);
+
+  font-family: $fontHighlight;
+  font-weight: 400;
+
+  @include medium {
+    font-weight: 700;
+  }
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: $lineHeight;
+}
+
+
 
 /*==========  LIST LINKS  ==========*/
 
@@ -63,8 +89,9 @@ ul.list-links {
   li:before {
     display: none;
   }
+
   a {
-    @include bullet-type("", icon-bullet);
+    @include bullet();
 
     &:before {
       font-size: 4px;
@@ -75,8 +102,9 @@ ul.list-links {
 
   &.list-links--primary {
     letter-spacing: 1px;
-    a {
-      @include bullet-type("", icon-chevron-right);
+
+    & a {
+      @include bullet($icon-chevron-right, $fontSmall);
       font-weight: 400;
       font-family: $fontHighlight;
       line-height: 1; // fixes baseline grid alignment
@@ -91,12 +119,15 @@ ol.list-links {
       display: none;
     }
 
-    a {
+    & a {
       display: inline-block;
       @include numbered-list;
       font-weight: 300;
     }
 
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
     &:nth-child(10n) ~ li a:before,
     &:nth-child(10n) a:before {
       content: counter(list);
@@ -114,7 +145,7 @@ ol.list-links {
   @include type--base;
   padding-left: 0;
 
-  li {
+  & li {
     padding-left: 0;
   }
 }
@@ -136,7 +167,7 @@ ol.list-links {
   }
 
   a {
-    @include bullet-type("", icon-bullet);
+    @include bullet();
     display: inline-block;
     padding-left: 16px;
 
@@ -150,7 +181,7 @@ ol.list-links {
 
 .list-small {
 
-  li {
+  & li {
     @include medium {
       @include type--small;
       padding-top: 0;
@@ -189,7 +220,7 @@ ol.list-links {
     margin-top: 0;
   }
 
-  p {
+  & p {
     margin-bottom: $lineHeight;
   }
 }
@@ -218,7 +249,7 @@ ol.list-links {
 
   }
 
-  img {
+  & img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -328,7 +359,7 @@ ol.list-links {
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
 .list-guides-intro {
-  margin-bottom: $lineHeight*2;
+  margin-bottom: ($lineHeight*2) - 1;
   padding-top: $lineHeight*2;
 
   & li {
@@ -355,7 +386,7 @@ ol.list-links {
 
 /*==========  ARTICLE LIST  ==========*/
 .articles-list {
-  padding: ($lineHeight * 3) 0 ($lineHeight * 2 + 1);
+  padding: (($lineHeight * 3) - 1) 0 ($lineHeight * 2 + 1);
 }
 
 .articles-list__item {
@@ -451,16 +482,15 @@ ol.list-links {
     margin: $lineHeight 32px 0;
   }
 
-  .primary-content {
+  & .primary-content {
     @include medium {
       flex: 1;
       -webkit-flex: 1;
     }
   }
 
-  .secondary-content {
+  & .secondary-content {
     position: relative;
-    // background: #f5f5f5;
     margin-top: ($lineHeight*2) - 1;
     border-top: 1px solid $colorGrayKeyline;
 
@@ -468,7 +498,7 @@ ol.list-links {
       width: 100%; // needed due to parent being flex
     }
 
-    .icon-circle {
+    & .icon-circle {
       position: absolute;
       top: -$lineHeight - 2;
       left: 50%;
@@ -481,7 +511,7 @@ ol.list-links {
     }
   }
 
-  ol {
+  & ol {
     margin: $lineHeight 0 0;
     padding: $lineHeight*2 0 $lineHeight*2;
     margin-top: 0;

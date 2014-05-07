@@ -25,7 +25,8 @@ small {
 .base,
 p,
 ul,
-ol {
+ol,
+dl {
   @include type--base;
 }
 
