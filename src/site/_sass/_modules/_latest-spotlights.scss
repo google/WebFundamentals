@@ -71,6 +71,7 @@
 .latest-spotlights__link img {
   display: block;
   width: 100%;
+  margin: 0;
   @include prefixr(transition, opacity .2s ease-in-out);
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
@@ -78,7 +79,7 @@
 }
 
 .latest-spotlights__link p {
-  @include bullet($icon-chevron-right);
+  @include bullet($icon-chevron-right, $fontSmall);
   position: absolute;
   left: 0;
   bottom: $lineHeight - ($lineHeight/2);
