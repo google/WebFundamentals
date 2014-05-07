@@ -5977,3 +5977,13 @@ figcaption {
   content: "# ";
   display: inline-block;
 }
+
+/*==========  INDENTED CONTENT  ==========*/
+/* line 132, ../_sass/_helper.scss */
+.indented {
+  padding-left: 52px;
+}
+/* line 137, ../_sass/_helper.scss */
+.indented ul, .indented ol, .indented dl {
+  padding-left: 0;
+}

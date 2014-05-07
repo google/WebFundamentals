@@ -1,5 +1,5 @@
 ---
-layout: case-study
+layout: showcase
 title: "Case study example"
 description: "This is an example of a case study page"
 showcase:
@@ -37,7 +37,7 @@ collection: showcase
       </dl>
     </div>
     <figure class="case-study__img-wrapper g--half g--last">
-      <img src="../../imgs/placeholder-vertical-image.jpg" alt="image placeholder">
+      <img src="../../imgs/placeholder--side-by-side.png" alt="image placeholder" class="fluid">
     </figure>
   </div>
 </div>
@@ -50,7 +50,7 @@ collection: showcase
   <p class="g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
 
   <div>
-    <div class="g--half">
+    <div class="indented g--half">
       <h3>Data examples</h3>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, perferendis error voluptatem quo porro? Labore, obcaecati, alias, officiis exercitationem minus quam vero expedita nulla cumque quia qui quos explicabo quibusdam.</p>
@@ -66,7 +66,7 @@ collection: showcase
     </div>
   </div>
   <figure class="case-study__img-wrapper g--half g--last">
-      <img src="../../imgs/placeholder-vertical-image.jpg" alt="image placeholder">
+      <img src="../../imgs/placeholder--side-by-side.png" alt="image placeholder" class="fluid">
   </figure>
 
 </div>

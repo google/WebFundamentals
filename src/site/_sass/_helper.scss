@@ -126,3 +126,15 @@
     display: inline-block;
   }
 }
+
+/*==========  INDENTED CONTENT  ==========*/
+
+.indented {
+  padding-left: $lineHeight*2;
+
+  & ul,
+  & ol,
+  & dl {
+    padding-left: 0;
+  }
+}
