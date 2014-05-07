@@ -85,3 +85,14 @@
 
   }
 }
+
+.next-lessons--minimal {
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  & ol {
+    padding-left: 0;
+  }
+}
