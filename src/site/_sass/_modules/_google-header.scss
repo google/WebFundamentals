@@ -11,11 +11,10 @@
 **/
 
 #gc-googlebar {
-  width: 100%;
   position: relative;
-  background: #f1f1f1;
-  margin: 0;
+  background: $colorGrayBackground;
   padding: 0 0 $lineHeight;
+  overflow: hidden;
 
   @include medium {
     height: $lineHeight * 4;
@@ -29,10 +28,7 @@
   margin: 0 auto $lineHeight;
   padding-top: $lineHeight;
   width: 43px;
-
   overflow: hidden;
-
-
 
   @include medium {
     float: left;

@@ -12,13 +12,11 @@
 
 .latest-spotlights {
   background: $colorYellowSecondary;
-  padding-bottom: $lineHeight*3;
+  padding-bottom: $lineHeight*3 + 3;
   padding-top: $lineHeight*1;
-  margin-bottom: -6px;
 
   @include medium {
     padding-top: $lineHeight*2;
-    margin-bottom: -2px;
   }
 }
 
@@ -80,7 +78,7 @@
 }
 
 .latest-spotlights__link p {
-  @include bullet-type("", icon-chevron-right);
+  @include bullet($icon-chevron-right);
   position: absolute;
   left: 0;
   bottom: $lineHeight - ($lineHeight/2);

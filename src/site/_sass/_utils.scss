@@ -364,25 +364,21 @@
 
 
   // LISTS
-  @mixin bullet-type($bullet, $icon: false) {
+  @mixin bullet($icon: $icon-bullet, $fontSize: 4px) {
     &:before {
-      @if $icon {
-        font-family: $fontIcon;
-        @extend .#{$icon}:before;
-        font-size: $fontSmall;
-      }
-      @else {
-        content: $bullet;
-        font-family: $fontHighlight;
-      }
+      content: $icon;
+      font-family: $fontIcon;
+      font-size: $fontSize;
 
       display: block;
+      width: 16px; // Same width as padding-left on the items
+      text-align: left;
       font-weight: 400;
+      line-height: $lineHeight;
+
       position: absolute;
       top: 0;
       left: 0;
-      line-height: $lineHeight;
-
     }
   }
 
