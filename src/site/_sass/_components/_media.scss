@@ -61,8 +61,10 @@ figure {
 }
 
 figcaption {
-  font-size: $fontSmall;
   color: $colorGrayDark;
+  font-family: $fontHighlight;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   border-top: 1px solid $colorGrayKeyline;
   margin-bottom: ($lineHeight * 2)- 1;
 

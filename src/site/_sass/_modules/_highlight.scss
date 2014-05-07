@@ -63,6 +63,8 @@
 
 .highlight-module__cta {
   display: block;
+  font-size: $fontSmall;
+  font-weight: 400;
 }
 
 
@@ -102,7 +104,6 @@
   margin-bottom: $lineHeight*2;
 
   pre {
-    font-size: $fontBase - 2;
     line-height: $lineHeight;
     margin: 0 0 0 -26px;
     padding: $lineHeight 0 0 0;
@@ -125,7 +126,7 @@
     padding-bottom: 0;
 
     @include wide {
-      min-height: none;
+      min-height: 0;
     }
   }
 
