@@ -27,7 +27,7 @@
 
   <button type="button" id="butFullScreenDoc">Make Page Full Screen</button>
   <button type="button" id="butFullScreenVid">Make Video Full Screen</button>
-  
+
 
   <div id="srcInfo" class="is-hidden">
     <p>
@@ -54,14 +54,14 @@
     document.querySelector("#butFullScreenDoc").addEventListener("click", fullScreenDoc);
     document.querySelector("#butFullScreenVid").addEventListener("click", fullScreenVid);
 
-    video.requestFullScreen = 
-      video.requestFullScreen || 
-      video.webkitRequestFullScreen || 
+    video.requestFullScreen =
+      video.requestFullScreen ||
+      video.webkitRequestFullScreen ||
       video.mozRequestFullScreen;
 
-    document.body.requestFullScreen = 
-      document.body.requestFullScreen || 
-      document.body.webkitRequestFullScreen || 
+    document.body.requestFullScreen =
+      document.body.requestFullScreen ||
+      document.body.webkitRequestFullScreen ||
       document.body.mozRequestFullScreen;
   }
 
@@ -85,14 +85,14 @@
     var srcHeight = document.querySelector("#srcHeight");
 
     srcInfo.classList.remove("is-hidden");
-    srcEvent.innerText = evt.type;
-    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
-    srcWidth.innerText = this.videoWidth;
-    srcHeight.innerText = this.videoHeight;
+    srcEvent.textContent = evt.type;
+    srcFile.textContent = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.textContent = this.videoWidth;
+    srcHeight.textContent = this.videoHeight;
   }
 
   init();
-  
+
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->

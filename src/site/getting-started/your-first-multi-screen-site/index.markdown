@@ -35,7 +35,6 @@ mobile all the way up to TV.
 <div class="container-medium">
   <div class="next-lessons next-lessons--minimal" data-current-lesson="03">
     <h3><i class="icon icon-lessons"></i> Lessons</h3>
-
 <div markdown="1">
 {% for guide in page.articles.multi-screen %}
 1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
@@ -44,7 +43,5 @@ mobile all the way up to TV.
 </div>
   </div>
 </div>
-
-
 
 

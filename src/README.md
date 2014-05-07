@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-- [NodeJS with NPM](http://nodejs.com)
+- [NodeJS with NPM](http://nodejs.org)
 - [Jekyll](http://jekyllrb.com)
 
 

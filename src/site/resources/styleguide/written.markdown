@@ -33,7 +33,7 @@ collection: resources
   * Related reading to external: Use only when necessary
 
 ## "Mobile" vs. "multi-device" vs "multi-screen" vs "mobile-only" vs "mobile-first"
-  * Use "multi-device" for consistency expect when a different term is needed for precision
+  * Use "multi-device" for consistency except when a different term is needed for precision
 
 ## Article length
   * _need content here_
@@ -48,6 +48,6 @@ collection: resources
 
 ## Media
   * All images need to be in 3:5 or 5:3 ratio
-  * Images will be compressed for you during the deploymentt step.  You do not need to worry about compressing your own images.
+  * Images will be compressed for you during the deployment step.  You do not need to worry about compressing your own images.
 
 {% endwrap %}

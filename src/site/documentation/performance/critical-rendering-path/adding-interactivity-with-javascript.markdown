@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Adding Interactivy with JavaScript"
+title: "Adding Interactivity with JavaScript"
 description: "JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance."
 introduction: "JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance."
 article:
@@ -14,7 +14,7 @@ key-takeaways:
     - JavaScript execution blocks on CSSOM
     - JavaScript blocks DOM construction unless explicitly declared as async
 ---
-{% wrap content%}
+{% wrap content %}
 
 <style type="text/css">
   img, video, object {
@@ -36,7 +36,7 @@ JavaScript is a dynamic language that runs in the browser and allows us to alter
 
 {% include_code _code/script.html full %}
 
-* JavaScript allows us to reach into the DOM and pull out the reference to the hidden span node - the node may not be visible in the render tree, but it's still there in the DOM! Then, once we have the reference, we can change its text (via .innerText), and even override its calculated display style property from ‘none' to ‘inline'. Once all is said and done, our page will now display "**Hello interactive students!**".
+* JavaScript allows us to reach into the DOM and pull out the reference to the hidden span node - the node may not be visible in the render tree, but it's still there in the DOM! Then, once we have the reference, we can change its text (via .textContent), and even override its calculated display style property from ‘none' to ‘inline'. Once all is said and done, our page will now display "**Hello interactive students!**".
 
 * JavaScript also allows us to create, style, and append and remove new elements to the DOM. In fact, technically our entire page could be just one big JavaScript file which creates and styles the elements one by one - that would work, but working with HTML and CSS is much easier in practice. In the second part of our JavaScript function we create a new div element, set its text content, style it, and append it to the body.
 
@@ -88,4 +88,4 @@ Adding the async keyword to the script tag tells the browser that it should not 
 
 {% include modules/nextarticle.liquid %}
 
-{% endwrap%}
+{% endwrap %}

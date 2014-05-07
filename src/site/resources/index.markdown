@@ -1,7 +1,7 @@
 ---
 layout: landing
 title: "Resources"
-description: "Helpful resources."
+description: "Helpful resources that you can use to learn how we have built and maintain the site"
 introduction: ""
 id: resources
 ---

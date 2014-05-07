@@ -128,8 +128,6 @@
         backface-visibility: hidden;
       }
     </style>
-
-    <script src="http://198.51.100.39:8080/target/target-script-min.js#anonymous"></script>
   </head>
 
   <body>
@@ -176,7 +174,7 @@
         var STATE_LEFT_SIDE = 2;
         var STATE_RIGHT_SIDE = 3;
         
-        var swipeFront = element.querySelector('.swipe-front');
+        var swipeFrontElement = element.querySelector('.swipe-front');
         var swipeBack = element.querySelector('.swipe-back');
         var isAnimating = false;
         var initialTouchPos = null;
@@ -187,12 +185,12 @@
         
         // Perform client width here as this can be expensive and doens't 
         // change until window.onresize
-        var itemWidth = swipeFront.clientWidth;
+        var itemWidth = swipeFrontElement.clientWidth;
         var slopValue = itemWidth * (1/4);
 
         // On resize, change the slop value
         this.resize = function() {
-          itemWidth = swipeFront.clientWidth;
+          itemWidth = swipeFrontElement.clientWidth;
           slopValue = itemWidth * (1/4);
         }
 
@@ -223,7 +221,7 @@
           
           initialTouchPos = getGesturePointFromEvent(evt);
 
-          swipeFront.style.transition = 'initial';
+          swipeFrontElement.style.transition = 'initial';
         }.bind(this);
         /* // [END handle-start-gesture] */
 
@@ -303,7 +301,7 @@
           
           changeState(newState);
           
-          swipeFront.style.transition = 'all 150ms ease-out';
+          swipeFrontElement.style.transition = 'all 150ms ease-out';
         }
 
         function changeState(newState) {
@@ -322,10 +320,10 @@
           
           transformStyle = 'translateX('+currentXPosition+'px)';
           
-          swipeFront.style.msTransform = transformStyle;
-          swipeFront.style.MozTransform = transformStyle;
-          swipeFront.style.webkitTransform = transformStyle;
-          swipeFront.style.transform = transformStyle;
+          swipeFrontElement.style.msTransform = transformStyle;
+          swipeFrontElement.style.MozTransform = transformStyle;
+          swipeFrontElement.style.webkitTransform = transformStyle;
+          swipeFrontElement.style.transform = transformStyle;
 
           currentState = newState;
         }
@@ -354,9 +352,9 @@
           
           var newXTransform = (currentXPosition - differenceInX)+'px';
           var transformStyle = 'translateX('+newXTransform+')';
-          swipeFront.style['-webkit-transform'] = transformStyle;
-          swipeFront.style['-moz-transform'] = transformStyle;
-          swipeFront.style.transform = transformStyle;
+          swipeFrontElement.style['-webkit-transform'] = transformStyle;
+          swipeFrontElement.style['-moz-transform'] = transformStyle;
+          swipeFrontElement.style.transform = transformStyle;
           
           isAnimating = false;
         }
@@ -365,13 +363,13 @@
         // Check if pointer events are supported.
         if (window.navigator.msPointerEnabled) {
           // Add Pointer Event Listener
-          swipeFront.addEventListener('MSPointerDown', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('MSPointerDown', this.handleGestureStart, true);
         } else {
           // Add Touch Listener
-          swipeFront.addEventListener('touchstart', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('touchstart', this.handleGestureStart, true);
           
           // Add Mouse Listener
-          swipeFront.addEventListener('mousedown', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('mousedown', this.handleGestureStart, true);
         }
         /* // [END addlisteners] */
       }

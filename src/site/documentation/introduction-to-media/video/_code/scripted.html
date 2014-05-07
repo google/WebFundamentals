@@ -31,7 +31,7 @@
     Playback Speed (<span id="playbackSpeed">1</span>)
     <input type="range" value="1" id="rangeSpeed" min="0.1" max="2" step="0.1">
   </label>
-  
+
   <div id="srcInfo" class="is-hidden">
     <p>
       <b>Event type:</b> <span id="srcEvent"></span><br>
@@ -62,11 +62,11 @@
   function clickAction(evt) {
     if (video.paused) {
       video.play();
-      but.innerText = "Pause";
+      but.textContent = "Pause";
 
     } else {
       video.pause();
-      but.innerText = "Play";
+      but.textContent = "Play";
     }
     sampleCompleted("Video-ScriptedButton");
   }
@@ -74,7 +74,7 @@
   function changeSpeed(evt) {
     var speed = parseFloat(rangeSpeed.value);
     video.playbackRate = speed;
-    speedLabel.innerText = speed;
+    speedLabel.textContent = speed;
     sampleCompleted("Video-ScriptedSpeed");
   }
 
@@ -86,14 +86,14 @@
     var srcHeight = document.querySelector("#srcHeight");
 
     srcInfo.classList.remove("is-hidden");
-    srcEvent.innerText = evt.type;
-    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
-    srcWidth.innerText = this.videoWidth;
-    srcHeight.innerText = this.videoHeight;
+    srcEvent.textContent = evt.type;
+    srcFile.textContent = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.textContent = this.videoWidth;
+    srcHeight.textContent = this.videoHeight;
   }
 
   init();
-  
+
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->

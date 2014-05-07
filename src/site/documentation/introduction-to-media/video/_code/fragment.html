@@ -50,14 +50,14 @@
     var srcHeight = document.querySelector("#srcHeight");
 
     srcInfo.classList.remove("is-hidden");
-    srcEvent.innerText = evt.type;
-    srcFile.innerText = this.currentSrc.replace(/^.*[\\\/]/, '');
-    srcWidth.innerText = this.videoWidth;
-    srcHeight.innerText = this.videoHeight;
+    srcEvent.textContent = evt.type;
+    srcFile.textContent = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.textContent = this.videoWidth;
+    srcHeight.textContent = this.videoHeight;
   }
 
   init();
-  
+
   </script>
 </div>
 <!-- // [TEMPLATE footer] -->

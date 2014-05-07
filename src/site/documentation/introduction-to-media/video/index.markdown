@@ -86,10 +86,7 @@ For example:
 {% include_code _code/video-main.html sourcetypes %}
 
 When the browser parses the `<source>` tags, it uses the optional `type`
-attribute to help decide which file to download and play. If the browser
-supports WebM and has the VP8 and Vorbis codecs, it will play
-chrome.webm, if not, it will check if it can play MPEG-4 videos with the
-avc1.42E01E and mp4a.40.2 codecs, and so forth.
+attribute to help decide which file to download and play. If the browser supports WebM, it will play chrome.webm, if not, it will check if it can play MPEG-4 videos.
 Check out
 <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a>
 to find out more about how video and audio work on the web.
