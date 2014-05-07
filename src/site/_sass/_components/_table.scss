@@ -41,6 +41,9 @@ table {
     display: block;
     padding-top: $lineHeight/2;
     padding-bottom: $lineHeight/2;
+    min-height: $lineHeight*3;
+    // min-height so that when the title on the left goes on two lines
+    // we can still see the title even when the content on the right is only on one line.
 
     // This is to re-plicate the table-headers for mobile
     &:before {
