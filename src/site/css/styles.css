@@ -2315,24 +2315,20 @@ li > p {
 * @author Antoine Grelard
 *
 **/
-/* line 13, ../_sass/_modules/_editorial-header.scss */
-.editorial-header {
-  overflow: hidden;
-}
-/* line 16, ../_sass/_modules/_editorial-header.scss */
+/* line 15, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .breadcrumbs {
   color: #3372df;
 }
-/* line 19, ../_sass/_modules/_editorial-header.scss */
+/* line 18, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .breadcrumbs a {
   color: #3372df;
 }
 @media only screen and (min-width: 620px) {
-  /* line 24, ../_sass/_modules/_editorial-header.scss */
+  /* line 23, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container {
     position: relative;
   }
-  /* line 30, ../_sass/_modules/_editorial-header.scss */
+  /* line 29, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container:before {
     content: "\e003";
     font-family: "icons";
@@ -2346,12 +2342,12 @@ li > p {
     margin: 168px -35px 0 0;
   }
 }
-/* line 46, ../_sass/_modules/_editorial-header.scss */
+/* line 45, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .editorial-header__subtitle {
   margin-top: 0;
 }
 
-/* line 52, ../_sass/_modules/_editorial-header.scss */
+/* line 51, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__excerpt {
   color: #404040;
   font-size: 20px;
@@ -2364,12 +2360,12 @@ li > p {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
-/* line 57, ../_sass/_modules/_editorial-header.scss */
+/* line 56, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .tag {
   padding-top: 52px;
 }
 
-/* line 61, ../_sass/_modules/_editorial-header.scss */
+/* line 60, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__subtitle {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2384,7 +2380,7 @@ li > p {
   color: #3372df;
 }
 @media only screen and (min-width: 800px) {
-  /* line 61, ../_sass/_modules/_editorial-header.scss */
+  /* line 60, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2398,7 +2394,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 61, ../_sass/_modules/_editorial-header.scss */
+  /* line 60, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     padding-top: 0;
     padding-bottom: 26px;
@@ -2406,22 +2402,22 @@ li > p {
   }
 }
 
-/* line 74, ../_sass/_modules/_editorial-header.scss */
+/* line 73, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc {
   margin-top: 26px;
 }
-/* line 77, ../_sass/_modules/_editorial-header.scss */
+/* line 76, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc ol {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 77, ../_sass/_modules/_editorial-header.scss */
+  /* line 76, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__toc ol {
     padding-top: 0;
   }
 }
 
-/* line 86, ../_sass/_modules/_editorial-header.scss */
+/* line 85, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc-title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   border-bottom: 1px solid #e0e0e0;
@@ -3418,6 +3414,15 @@ li > p {
     font-size: 210px;
     right: 120px;
   }
+}
+
+/* line 91, ../_sass/_modules/_next-lessons.scss */
+.next-lessons--minimal:after, .next-lessons--minimal:before {
+  display: none;
+}
+/* line 95, ../_sass/_modules/_next-lessons.scss */
+.next-lessons--minimal ol {
+  padding-left: 0;
 }
 
 /**
