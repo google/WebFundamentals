@@ -53,7 +53,48 @@ h1 {
   @include type--huge;
 }
 
-
 li > p {
   padding-top: 0;
+}
+
+
+// Below are all the rules for content based pages (articles)
+.content {
+
+  // We don't want our content to use the full width of our container
+  // because the lines of text get too long and therefore hard to read
+  // This is selecting all the content elements needed so far and
+  // setting it to use 3 columns
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    @include wide {
+      margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+    }
+  }
+
+  // Remove the indentation from any text elements that are inside a grid...
+  // Needs refactoring.
+  [class*="g-"] {
+    h1, h2, h3, h4, h5, h6, p, ul, ol {
+      margin-right: 0;
+    }
+
+    // if these elements are used in a grid we don't need so much top spacing
+    h2,
+    h3 {
+      padding-top: 0;
+      margin-top: $lineHeight;
+    }
+  }
+
+  h2 {
+    margin-top: $lineHeight*3;
+  }
+
+  h3 {
+    margin-top: $lineHeight*2;
+  }
+
+  h4 {
+    margin-top: $lineHeight;
+  }
 }
