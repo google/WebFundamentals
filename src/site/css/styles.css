@@ -3446,7 +3446,7 @@ li > p {
 }
 /* line 107, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link:hover p:before {
-  opacity: .5;
+  color: #b7cdf4;
 }
 /* line 112, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link:hover img {
@@ -4508,8 +4508,9 @@ table td {
   display: block;
   padding-top: 13px;
   padding-bottom: 13px;
+  min-height: 78px;
 }
-/* line 46, ../_sass/_components/_table.scss */
+/* line 49, ../_sass/_components/_table.scss */
 table td:before {
   content: attr(data-th) " :";
   display: inline-block;
@@ -4529,26 +4530,26 @@ table td:before {
   padding-top: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 46, ../_sass/_components/_table.scss */
+  /* line 49, ../_sass/_components/_table.scss */
   table td:before {
     display: none;
   }
 }
-/* line 71, ../_sass/_components/_table.scss */
+/* line 74, ../_sass/_components/_table.scss */
 table th,
 table td {
   position: relative;
   padding-left: 140px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 71, ../_sass/_components/_table.scss */
+  /* line 74, ../_sass/_components/_table.scss */
   table th,
   table td {
     display: table-cell;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 80, ../_sass/_components/_table.scss */
+  /* line 83, ../_sass/_components/_table.scss */
   table th {
     padding: 26px;
     padding-top: 13px;
@@ -4556,14 +4557,14 @@ table td {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 88, ../_sass/_components/_table.scss */
+  /* line 91, ../_sass/_components/_table.scss */
   table td {
     padding: 26px;
     padding-bottom: 25px;
   }
 }
 
-/* line 96, ../_sass/_components/_table.scss */
+/* line 99, ../_sass/_components/_table.scss */
 td:last-child:after {
   content: "";
   display: block;
@@ -4575,42 +4576,42 @@ td:last-child:after {
   width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 96, ../_sass/_components/_table.scss */
+  /* line 99, ../_sass/_components/_table.scss */
   td:last-child:after {
     display: none;
   }
 }
 
-/* line 111, ../_sass/_components/_table.scss */
+/* line 114, ../_sass/_components/_table.scss */
 .table-2 col {
   width: 344px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 111, ../_sass/_components/_table.scss */
+  /* line 114, ../_sass/_components/_table.scss */
   .table-2 col {
     width: 432px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 121, ../_sass/_components/_table.scss */
+  /* line 124, ../_sass/_components/_table.scss */
   .table-2 th:first-child,
   .table-2 td:first-child {
     border-right: 2px solid #ffffff;
   }
 }
 
-/* line 129, ../_sass/_components/_table.scss */
+/* line 132, ../_sass/_components/_table.scss */
 .table-3 col {
   width: 229.33333px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 129, ../_sass/_components/_table.scss */
+  /* line 132, ../_sass/_components/_table.scss */
   .table-3 col {
     width: 288px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 139, ../_sass/_components/_table.scss */
+  /* line 142, ../_sass/_components/_table.scss */
   .table-3 th:nth-child(2),
   .table-3 td:nth-child(2) {
     border-left: 2px solid #ffffff;
@@ -4618,18 +4619,18 @@ td:last-child:after {
   }
 }
 
-/* line 148, ../_sass/_components/_table.scss */
+/* line 151, ../_sass/_components/_table.scss */
 .table-4 col {
   width: 172px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 148, ../_sass/_components/_table.scss */
+  /* line 151, ../_sass/_components/_table.scss */
   .table-4 col {
     width: 216px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 159, ../_sass/_components/_table.scss */
+  /* line 162, ../_sass/_components/_table.scss */
   .table-4 th:nth-child(2), .table-4 th:nth-child(3),
   .table-4 td:nth-child(2),
   .table-4 td:nth-child(3) {
