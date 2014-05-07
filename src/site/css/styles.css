@@ -2796,6 +2796,13 @@ li > p {
     padding-bottom: 0;
     letter-spacing: -0.3px;
     padding-top: 52px;
+    color: inherit;
+  }
+}
+@media only screen and (max-width: 619px) and (min-width: 620px) {
+  /* line 52, ../_sass/_modules/_home-header.scss */
+  .home-header h1 {
+    color: inherit;
   }
 }
 @media only screen and (min-width: 620px) {
@@ -2810,7 +2817,7 @@ li > p {
     color: inherit;
   }
 }
-/* line 67, ../_sass/_modules/_home-header.scss */
+/* line 68, ../_sass/_modules/_home-header.scss */
 .home-header p {
   color: #404040;
   font-size: 20px;
@@ -2823,7 +2830,7 @@ li > p {
   color: inherit;
 }
 @media only screen and (min-width: 800px) {
-  /* line 67, ../_sass/_modules/_home-header.scss */
+  /* line 68, ../_sass/_modules/_home-header.scss */
   .home-header p {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2837,18 +2844,18 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 67, ../_sass/_modules/_home-header.scss */
+  /* line 68, ../_sass/_modules/_home-header.scss */
   .home-header p {
     padding-top: 0;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 67, ../_sass/_modules/_home-header.scss */
+  /* line 68, ../_sass/_modules/_home-header.scss */
   .home-header p {
     color: inherit;
   }
 }
-/* line 77, ../_sass/_modules/_home-header.scss */
+/* line 78, ../_sass/_modules/_home-header.scss */
 .home-header a {
   margin-top: 65px;
 }
