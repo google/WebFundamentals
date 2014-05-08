@@ -2555,30 +2555,26 @@ li > p {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
-/* line 29, ../_sass/_modules/_spotlight-header.scss */
-.spotlight-header--landscape {
-  overflow: hidden;
-}
 @media only screen and (min-width: 620px) {
-  /* line 29, ../_sass/_modules/_spotlight-header.scss */
+  /* line 28, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape {
-    min-height: 390px;
+    min-height: 338px;
   }
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 37, ../_sass/_modules/_spotlight-header.scss */
+  /* line 35, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--portrait {
     min-height: 390px;
   }
 }
 
-/* line 43, ../_sass/_modules/_spotlight-header.scss */
+/* line 41, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__container {
   position: relative;
 }
 @media only screen and (min-width: 800px) {
-  /* line 47, ../_sass/_modules/_spotlight-header.scss */
+  /* line 45, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--portrait .spotlight-header__container:after {
     content: "\e016";
     font-family: "icons";
@@ -2593,41 +2589,46 @@ li > p {
   }
 }
 
-/* line 66, ../_sass/_modules/_spotlight-header.scss */
+/* line 64, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--detail .spotlight-header__container:after {
   display: none;
 }
 
-/* line 72, ../_sass/_modules/_spotlight-header.scss */
+/* line 70, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
 }
 
-/* line 77, ../_sass/_modules/_spotlight-header.scss */
+/* line 75, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__cta {
   margin-top: 26px;
 }
 
-/* line 81, ../_sass/_modules/_spotlight-header.scss */
+/* line 79, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__media {
   position: relative;
 }
 
+/* line 83, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__image {
+  margin-bottom: 0;
+}
 @media only screen and (min-width: 620px) {
-  /* line 85, ../_sass/_modules/_spotlight-header.scss */
+  /* line 83, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header__image {
     position: absolute;
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
-/* line 91, ../_sass/_modules/_spotlight-header.scss */
+/* line 92, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--portrait .spotlight-header__image {
   width: 100%;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 96, ../_sass/_modules/_spotlight-header.scss */
+  /* line 97, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     width: auto;
     max-width: none;
@@ -2635,7 +2636,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 96, ../_sass/_modules/_spotlight-header.scss */
+  /* line 97, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     height: 364px;
   }
@@ -3979,14 +3980,19 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_case-study-wrapper.scss */
   .case-study-wrapper {
+    padding-top: 78px;
     background: #f0f0f0;
-    margin-bottom: 78px;
   }
   /* line 21, ../_sass/_modules/_case-study-wrapper.scss */
   .case-study-wrapper.has-video-after {
     margin-bottom: -182px;
     padding-bottom: 208px;
   }
+}
+/* line 27, ../_sass/_modules/_case-study-wrapper.scss */
+.case-study-wrapper h2 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /**

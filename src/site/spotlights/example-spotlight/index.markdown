@@ -2,12 +2,15 @@
 layout: showcase
 title: "Spotlight example"
 description: "This is an example of a spotlight page"
+introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius."
+header_image: ../../imgs/placeholder--device-landscape-2.png
+header_orientation: landscape
 showcase:
   written_on: 2014-01-01
   updated_on: 2014-02-02
 collection: spotlight
 ---
-
+<!--
 <header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
   <div class="spotlight-header__container container">
     <nav class="breadcrumbs">
@@ -24,22 +27,25 @@ collection: spotlight
       <img src="../../imgs/placeholder--device-landscape-2.png" class="spotlight-header__image">
     </div>
   </div>
-</header>
+</header> -->
+
+<div class="case-study-wrapper has-video-after">
+  <div class="container clear">
+    <div class="content">
+      <h2>Title goes here</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, ea magni assumenda iusto facere impedit distinctio consectetur nihil fuga dolore enim repellat similique at provident praesentium laborum delectus aspernatur perspiciatis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, fuga reprehenderit minima beatae a sequi natus eum ullam. Laboriosam, culpa, enim et rem suscipit ipsam cupiditate dolorum fugit cum similique!</p>
+    </div>
+  </div>
+</div>
+
 
 <div class="container clear">
-
   <div class="content">
+    {% include modules/video.liquid id="dEGJ8XyZw40" %}
+
     <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, fugit, quod, necessitatibus, eveniet praesentium id atque possimus placeat quo earum perferendis et laudantium eaque excepturi modi maiores facilis nam veritatis!</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, sunt ipsa odio rem saepe obcaecati cum non qui fugiat necessitatibus inventore aut maxime hic tenetur deserunt eligendi sed illo vitae.</p>
-
-  </div>
-
-  {% include modules/video.liquid id="dEGJ8XyZw40" %}
-
-  <div class="content">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>

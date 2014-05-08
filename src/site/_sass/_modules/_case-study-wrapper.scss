@@ -15,13 +15,18 @@
   padding-bottom: $lineHeight*2;
 
   @include medium {
+    padding-top: $lineHeight*3;
     background: $colorGrayBackground;
-    margin-bottom: $lineHeight*3;
 
     &.has-video-after {
       margin-bottom: - $lineHeight*7;
       padding-bottom: $lineHeight*8;
     }
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
   }
 
 }

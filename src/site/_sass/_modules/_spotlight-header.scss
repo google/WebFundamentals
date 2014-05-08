@@ -25,11 +25,9 @@
   font-family: $fontHighlight;
 }
 
-// If we have a landscape image, we need overflow hidden
 .spotlight-header--landscape {
-  overflow: hidden;
   @include medium {
-    min-height: $lineHeight*15;
+    min-height: $lineHeight*13;
   }
 }
 
@@ -83,9 +81,12 @@
 }
 
 .spotlight-header__image {
+  margin-bottom: 0;
+
   @include medium {
     position: absolute;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .spotlight-header--portrait & {

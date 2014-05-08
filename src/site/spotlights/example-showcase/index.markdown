@@ -1,9 +1,10 @@
 ---
 layout: showcase
 title: "Showcase example"
-introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias deserunt nemo quisquam harum. Dolores dolorum tempore voluptatem."
-header_image: ../../imgs/placeholder--device-landscape.jpg
 description: "This is an example of a showcase page"
+introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus."
+header_image: ../../imgs/placeholder--device-landscape.png
+header_orientation: landscape
 showcase:
   written_on: 2014-01-01
   updated_on: 2014-02-02
@@ -42,7 +43,7 @@ related_guides:
     section: Multi-device layouts
 ---
 
-<header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
+<!-- <header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
   <div class="spotlight-header__container container">
     <nav class="breadcrumbs">
       <p>
@@ -58,7 +59,7 @@ related_guides:
       <img src="../../imgs/placeholder--device-landscape.jpg" class="spotlight-header__image">
     </div>
   </div>
-</header>
+</header> -->
 
 <div class="case-study-wrapper has-video-after">
   <div class="container clear">
