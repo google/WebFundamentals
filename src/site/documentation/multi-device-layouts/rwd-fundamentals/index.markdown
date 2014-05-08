@@ -38,7 +38,7 @@ remember:
 ---
 {% wrap content %}
 
-<style type="text/css">
+<style>
 
   img.center {
     display: block;
@@ -186,7 +186,7 @@ For example, you could place all styles necessary for printing
 inside a print media query:
 
 {% highlight html %}
-<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+<link rel="stylesheet" href="print.css" media="print" />
 {% endhighlight %}
 
 In addition to using the `media` attribute in the stylesheet link, there are two
