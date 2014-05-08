@@ -11,10 +11,10 @@
 
 - Clone this repo
 - Move into the project root directory
-- Install dependencies using npm with `npm install`
+- Install dependencies: `npm install`
 
 
 ## Running the build
 
-- Run the Jekyll build via grunt with `grunt`
+- Run the Jekyll build: `grunt`
 
