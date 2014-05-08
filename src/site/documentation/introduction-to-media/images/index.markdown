@@ -208,7 +208,7 @@ characteristics of the device, for example using a 2x image on a 2x display,
 or a 1x image on a 2x device when on a limited bandwidth network.
 
 {% highlight html %}
-<img src="photo.png" srcset="photo@2x.png 2x" ... />
+<img src="photo.png" srcset="photo@2x.png 2x" ...>
 {% endhighlight %}
 
 On browsers that don't support `srcset`, the browser simply uses the default

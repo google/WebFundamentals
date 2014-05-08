@@ -55,8 +55,8 @@ In the previous section we saw that the critical rendering path requires that we
 <td>NYTimes without CSS (FOUC)</td>
 </tr>
 <tr>
-<td><img src="images/nytimes-css-device.png" alt="NYTimes with CSS" class="center" /></td>
-<td><img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS" class="center" /></td>
+<td><img src="images/nytimes-css-device.png" alt="NYTimes with CSS" class="center"></td>
+<td><img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS" class="center"></td>
 </tr>
 </table>
 {% endcomment %}

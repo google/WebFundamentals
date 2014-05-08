@@ -27,7 +27,7 @@ collection: performance
 
 What does a modern web application look like? [HTTP Archive](http://httparchive.org/) can help us answer this question. The project tracks how the web is built by periodically crawling the most popular sites (300,000+ from the Alexa Top 1M list) and recording and aggregating analytics on the number resources, content types, and other metadata for each individual destination.
 
-<img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trends" />
+<img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trends">
 
 <table>
 <thead>

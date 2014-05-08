@@ -297,7 +297,7 @@ of the container width and laid out horizontally (rather than vertically in
 the narrow view). We will also add some border radius and box-shadow to make
 the images look more appealing.
 
-<img src="images/imageswide.png" style="width:100%" />
+<img src="images/imageswide.png" style="width:100%">
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
@@ -315,7 +315,7 @@ We have a solution that is not widely adopted yet.
 For browsers that support it, you can display a high density image on a high density display.
 
 {% highlight html %}
-<img src="photo.png" srcset="photo@2x.png 2x" />  
+<img src="photo.png" srcset="photo@2x.png 2x">  
 {% endhighlight %}
 
 <div class="related-items">

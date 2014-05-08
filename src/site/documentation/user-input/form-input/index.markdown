@@ -112,10 +112,10 @@ elements may be covered by the virtual keyboard.
 The placeholder attribute provides a hint to the user about what's expected in
 the input by displaying its value as light text until the element gets focus.
 
-<input type="text" placeholder="MM-YYYY" />
+<input type="text" placeholder="MM-YYYY">
 
 {% highlight html%}
-<input type="text" placeholder="MM-YYYY" ... />
+<input type="text" placeholder="MM-YYYY" ...>
 {% endhighlight %}
 
 
@@ -245,7 +245,7 @@ and potentially preventing the backspace character from being used for
 navigation.
 
 {% highlight html %}
-<input type="text" autofocus ... />
+<input type="text" autofocus ...>
 {% endhighlight %}
 
 ## Choose the best input type
@@ -418,7 +418,7 @@ followed by a dash and an additional 4 digits), we would set the `pattern` like
 this:
 
 {% highlight html %}
-<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ... />
+<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 {% endhighlight %}
 
 ##### Common regular expression patterns
@@ -465,7 +465,7 @@ the form can be submitted. For example, to make the zip code required, we'd
 simply add the required attribute:
 
 {% highlight html %}
-<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ... />
+<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 {% endhighlight %}
 
 #### The `min`, `max` and `step` attributes
@@ -477,7 +477,7 @@ shoe size input would set a minumum size of 1 and a maximum size 13, with a step
 of 0.5
 
 {% highlight html %}
-<input type="number" min="1" max="13" step="0.5" ... />
+<input type="number" min="1" max="13" step="0.5" ...>
 {% endhighlight %}
 
 #### The `maxlength` attribute
@@ -488,7 +488,7 @@ user can provide. For example, if you want to limit a filename to 12 characters,
 you can use the following.
 
 {% highlight html %}
-<input type="text" id="83filename" maxlength="12" ... />
+<input type="text" id="83filename" maxlength="12" ...>
 {% endhighlight %}
 
 #### The `novalidate` attribute
@@ -501,7 +501,7 @@ JavaScript APIs will still allow you to check if the form validates.
 {% highlight html %}
 <form role="form" novalidate>
   <label for="inpEmail">Email address</label>
-  <input type="email" ... />
+  <input type="email" ...>
 </form>
 {% endhighlight %}
 
@@ -639,7 +639,7 @@ attribute to each form element with the appropriate value and add the
 `requestAutocomplete()` function on the form element. The browser will handle
 the rest.
 
-<img src="imgs/rac_flow.png" class="center" alt="Request autocomplete flow" />
+<img src="imgs/rac_flow.png" class="center" alt="Request autocomplete flow">
 
 {% include_code _code/rac.html rac javascript %}
 
