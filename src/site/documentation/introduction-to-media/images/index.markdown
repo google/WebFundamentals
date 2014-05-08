@@ -49,7 +49,7 @@ related:
 
 {% wrap content%}
 
-<style type="text/css">
+<style>
   img, video, object {
     max-width: 100%;
   }
@@ -278,7 +278,7 @@ webfonts to achieve the style you need.
 
 ### Use CSS to replace images
 
-<style type="text/css">
+<style>
   p#noImage {
     margin-top: 2em;
     padding: 1em;
@@ -298,7 +298,7 @@ webfonts to achieve the style you need.
 </p>
 
 {% highlight html %}
-<style type="text/css">
+<style>
   div#noImage {
     color: white;
     border-radius: 5px;
