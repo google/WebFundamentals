@@ -1871,7 +1871,7 @@ li > p {
   background: #404040;
   color: #ffffff;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* line 20, ../_sass/_modules/_main-header.scss */
@@ -2488,16 +2488,34 @@ li > p {
 **/
 /* line 13, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header {
-  margin-bottom: 78px;
+  padding-bottom: 26px;
+}
+@media only screen and (min-width: 620px) {
+  /* line 13, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header {
+    padding-bottom: 78px;
+    min-height: 312px;
+  }
 }
 
-/* line 17, ../_sass/_modules/_spotlight-header.scss */
-.spotlight-header__container {
-  position: relative;
+/* line 23, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header--landscape {
   overflow: hidden;
 }
+
+@media only screen and (min-width: 620px) {
+  /* line 28, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header--portrait {
+    min-height: 390px;
+  }
+}
+
+/* line 34, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__container {
+  position: relative;
+}
 @media only screen and (min-width: 800px) {
-  /* line 21, ../_sass/_modules/_spotlight-header.scss */
+  /* line 37, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header__container:after {
     content: "\e016";
     font-family: "icons";
@@ -2508,23 +2526,55 @@ li > p {
     position: absolute;
     right: 52px;
     top: -52px;
+    z-index: -1;
   }
 }
 
-/* line 40, ../_sass/_modules/_spotlight-header.scss */
+/* line 57, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--detail .spotlight-header__container:after {
   display: none;
 }
 
-/* line 48, ../_sass/_modules/_spotlight-header.scss */
+/* line 65, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
 }
 
-/* line 53, ../_sass/_modules/_spotlight-header.scss */
+/* line 70, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__cta {
   margin-top: 26px;
+}
+
+/* line 74, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__media {
+  position: relative;
+}
+
+@media only screen and (min-width: 620px) {
+  /* line 78, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header__image {
+    position: absolute;
+  }
+}
+/* line 83, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header--portrait .spotlight-header__image {
+  width: 100%;
+  max-width: 100%;
+}
+@media only screen and (min-width: 620px) {
+  /* line 88, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header--landscape .spotlight-header__image {
+    width: auto;
+    max-width: none;
+    height: 260px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 88, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header--landscape .spotlight-header__image {
+    height: 364px;
+  }
 }
 
 /**
@@ -5279,6 +5329,7 @@ figcaption {
 /* line 118, ../_sass/_components/_media.scss */
 .fluid, .fluid img {
   min-width: 100%;
+  max-width: 100%;
 }
 
 /**
