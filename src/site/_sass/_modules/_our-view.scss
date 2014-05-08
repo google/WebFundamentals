@@ -63,6 +63,11 @@
     font-weight: 400;
   }
 
+  & ul,
+  & ol {
+    padding-left: 16px;
+  }
+
   &:last-child {
     margin-top: $lineHeight;
 

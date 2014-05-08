@@ -1,0 +1,31 @@
+{% if page.our_views %}
+<div class="our-view">
+  <div class="container-medium clear">
+    <div class="g--half">
+      <h2 class="huge our-view__title">Our view</h2>
+    </div>
+    <div class="our-view__content g--half g--last">
+    {% if page.our_views.good %}
+      <div class="our-view__list-wrapper">
+        <h3 class="our-view__subtitle">The good</h3>
+        <ul>
+        {% for opinion in page.our_views.good %}
+          <li>{{opinion}}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% if page.our_views.bad %}
+      <div class="our-view__list-wrapper">
+        <h3 class="our-view__subtitle">Where to improve</h3>
+        <ul>
+        {% for opinion in page.our_views.bad %}
+          <li>{{opinion}}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

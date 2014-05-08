@@ -12,8 +12,10 @@
 
 .spotlight-header {
   padding-bottom: $lineHeight;
+  text-align: center;
 
   @include medium {
+    text-align: left;
     padding-bottom: $lineHeight*3;
   }
 }
@@ -23,11 +25,9 @@
   font-family: $fontHighlight;
 }
 
-// If we have a landscape image, we need overflow hidden
 .spotlight-header--landscape {
-  overflow: hidden;
   @include medium {
-    min-height: $lineHeight*18;
+    min-height: $lineHeight*13;
   }
 }
 
@@ -47,12 +47,12 @@
         content: $icon-star;
         font-family: $fontIcon;
         display: block;
-        font-size: 450px;
+        font-size: 380px;
         line-height: 1;
         color: $colorGrayBackground;
         position: absolute;
-        right: $lineHeight*2;
-        top: -$lineHeight*2;
+        right: 16%;
+        top: -96px;
         z-index: -1;
       }
     }
@@ -60,15 +60,11 @@
 }
 
 .spotlight-header--detail {
-
   & .spotlight-header__container {
-
     &:after {
       display: none;
     }
-
   }
-
 }
 
 .spotlight-header__copy {
@@ -85,9 +81,12 @@
 }
 
 .spotlight-header__image {
+  margin-bottom: 0;
+
   @include medium {
     position: absolute;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .spotlight-header--portrait & {

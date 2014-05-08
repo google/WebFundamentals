@@ -58,7 +58,13 @@ figure {
     margin-left: 0;
     margin-right: 0;
   }
+
+  &.contained {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
+
 
 figcaption {
   color: $colorGrayDark;
@@ -83,7 +89,7 @@ figcaption {
   position: relative;
   height: 0;
   overflow: hidden;
-  padding-top: 54.2%;
+  padding-top: 63.1%;
   margin-top: $lineHeight;
   margin-bottom: $lineHeight;
 
@@ -92,6 +98,7 @@ figcaption {
   margin-right: -6%;
 
   @include medium {
+    padding-top: 54.2%;
     margin-left: 0;
     margin-right: 0;
   }

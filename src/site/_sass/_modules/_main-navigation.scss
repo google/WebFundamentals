@@ -31,7 +31,7 @@
 
     .js &.nav-is-opened {
       display: block;
-      -webkit-animation: showNav 400ms both;
+      @include prefixr(animation, showNav 250ms ease-out both)
     }
   }
 
@@ -86,7 +86,6 @@
 
 .main-nav__item--current {
   color: $colorYellowSecondary;
-  cursor: default;
 }
 
 .main-nav__link {
@@ -118,6 +117,10 @@
 
     .main-nav__item--home & {
       padding-left: 0;
+    }
+
+    .main-nav__item--current & {
+      cursor: default;
     }
 
     &:hover {
@@ -337,7 +340,7 @@
 }
 
 /*==========  CSS ANIMATION  ==========*/
-@-webkit-keyframes showNav {
+@include keyframes(showNav){
   0% {
     opacity: 0;
   }
@@ -345,4 +348,3 @@
     opacity: 1;
   }
 }
-

@@ -12,7 +12,7 @@
 
 .latest-spotlights {
   background: $colorYellowSecondary;
-  padding-bottom: $lineHeight*3 + 3;
+  padding-bottom: $lineHeight*2 + 3;
   padding-top: $lineHeight*1;
 
   @include medium {
@@ -30,37 +30,34 @@
 }
 
 .latest-spotlights__item {
-  @include medium {
-    width: 50%;
-    float: left;
-  }
-  margin-top: 2px;
+  margin-top: $lineHeight/2;
 
   &:first-of-type {
     margin-top: 0;
   }
 
   @include medium {
+    width: 50%;
+    float: left;
+    margin-top: 2px;
+
     &:nth-of-type(2) {
       margin-top: 0;
     }
-  }
 
-  &:nth-child(even) {
-    .latest-spotlights__link {
-      @include medium {
+    &:nth-child(even) {
+      .latest-spotlights__link {
         margin-left: 1px;
       }
     }
-  }
 
-  &:nth-child(odd) {
-    .latest-spotlights__link {
-      @include medium {
+    &:nth-child(odd) {
+      .latest-spotlights__link {
         margin-right: 1px;
       }
     }
   }
+
 }
 
 .latest-spotlights__link {
