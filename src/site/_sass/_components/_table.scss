@@ -14,12 +14,12 @@ table {
   margin-top: $lineHeight;
   width: 100%;
 
-  thead {
+  & thead {
     background: $colorBlue;
     color: #ffffff;
   }
 
-  th {
+  & th {
     text-align: center;
     display: none;
     font-family: $fontHighlight;
@@ -27,17 +27,22 @@ table {
     @include color-inherit;
   }
 
-  tr {
+  & tr {
     @include medium {
       border-bottom: 1px solid #ffffff;
     }
   }
 
-  tbody {
+  & tbody {
     background: $colorGrayBackground;
   }
 
-  td {
+  & code {
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+
+  & td {
     display: block;
     padding-top: $lineHeight/2;
     padding-bottom: $lineHeight/2;
@@ -70,8 +75,13 @@ table {
     }
   }
 
-  th,
-  td {
+  & th,
+  & td {
+
+    @include small-only {
+      padding-right: 5px;
+    }
+
     position: relative;
     padding-left: 140px;
 
@@ -80,7 +90,7 @@ table {
     }
   }
 
-  th {
+  & th {
     @include medium {
       padding: $lineHeight;
       padding-top: 13px;
@@ -88,7 +98,7 @@ table {
     }
   }
 
-  td {
+  & td {
     @include medium {
       padding: $lineHeight;
       padding-bottom: $lineHeight - 1;
@@ -111,15 +121,15 @@ td:last-child:after {
 }
 
 .table-2 {
-  col {
+  & col {
     width: $mediumContainer / 2;
     @include wide {
       width: $wideContainer / 2;
     }
   }
 
-  th,
-  td {
+  & th,
+  & td {
     @include medium {
       &:first-child {
         border-right: 2px solid #ffffff;
@@ -129,15 +139,15 @@ td:last-child:after {
 }
 
 .table-3 {
-  col {
+  & col {
     width: $mediumContainer / 3;
     @include wide {
       width: $wideContainer / 3;
     }
   }
 
-  th,
-  td {
+  & th,
+  & td {
     @include medium {
       &:nth-child(2) {
         border-left: 2px solid #ffffff;
@@ -148,15 +158,15 @@ td:last-child:after {
 }
 
 .table-4 {
-  col {
+  & col {
     width: $mediumContainer / 4;
     @include wide {
       width: $wideContainer / 4;
     }
   }
 
-  th,
-  td {
+  & th,
+  & td {
     @include medium {
       &:nth-child(2),
       &:nth-child(3) {

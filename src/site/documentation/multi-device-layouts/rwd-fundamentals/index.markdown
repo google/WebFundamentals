@@ -231,8 +231,8 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
   </colgroup>
   <thead>
     <tr>
-      <th data-th="attribute">attribute</th>
-      <th data-th="Result">Result</th>
+      <th>attribute</th>
+      <th>Result</th>
     </tr>
   </thead>
   <tbody>

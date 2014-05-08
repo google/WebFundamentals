@@ -1,11 +1,11 @@
 ---
 layout: showcase
-title: "Case study example"
-description: "This is an example of a case study page"
+title: "Spotlight example"
+description: "This is an example of a spotlight page"
 showcase:
   written_on: 2014-01-01
   updated_on: 2014-02-02
-collection: showcase
+collection: spotlight
 ---
 
 <header class="spotlight-header spotlight-header--detail">
@@ -17,57 +17,30 @@ collection: showcase
     </nav>
     <div class="spotlight-header__copy g--half">
       <h2 class="xxlarge">Case study title</h2>
+      <p class="medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, perspiciatis, debitis obcaecati dolorum consequuntur delectus.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora, nesciunt blanditiis quos eaque facere quam vitae similique aliquid atque! Sequi, nemo odio quis nam adipisci repellat aliquid molestiae maxime.</p>
     </div>
   </div>
 </header>
 
-<div class="case-study-wrapper">
-  <div class="container clear">
-    <div class="g--half">
-      <h2>Title goes here</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, fugit, quod, necessitatibus, eveniet praesentium id atque possimus placeat quo earum perferendis et laudantium eaque excepturi modi maiores facilis nam veritatis!</p>
-      <dl>
-        <dt>Who</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, totam, voluptas, harum itaque placeat consequuntur eligendi eius illum facilis architecto nobis aliquid. Consequuntur voluptatum eaque repellendus soluta cupiditate distinctio quam.</dd>
-        <dt>Who</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, totam, voluptas, harum itaque placeat consequuntur eligendi eius illum facilis architecto nobis aliquid. Consequuntur voluptatum eaque repellendus soluta cupiditate distinctio quam.</dd>
-        <dt>Who</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, totam, voluptas, harum itaque placeat consequuntur eligendi eius illum facilis architecto nobis aliquid. Consequuntur voluptatum eaque repellendus soluta cupiditate distinctio quam.</dd>
-      </dl>
-    </div>
-    <figure class="case-study__img-wrapper g--half g--last">
-      <img src="../../imgs/placeholder--side-by-side.png" alt="image placeholder" class="fluid">
-    </figure>
-  </div>
-</div>
-
 <div class="container clear">
+
+  <div class="content">
+    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, fugit, quod, necessitatibus, eveniet praesentium id atque possimus placeat quo earum perferendis et laudantium eaque excepturi modi maiores facilis nam veritatis!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, sunt ipsa odio rem saepe obcaecati cum non qui fugiat necessitatibus inventore aut maxime hic tenetur deserunt eligendi sed illo vitae.</p>
+
+  </div>
+
   {% include modules/video.liquid id="dEGJ8XyZw40" %}
 
-  <h2>The impact</h2>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
 
-  <p class="g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
-
-  <div>
-    <div class="indented g--half">
-      <h3>Data examples</h3>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, perferendis error voluptatem quo porro? Labore, obcaecati, alias, officiis exercitationem minus quam vero expedita nulla cumque quia qui quos explicabo quibusdam.</p>
-
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, deleniti nemo inventore autem? Velit, laboriosam, voluptatibus, officia inventore.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, molestiae, voluptatem tempora natus libero eligendi mollitia temporibus vero veritatis reiciendis.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, repudiandae similique reprehenderit accusantium consequatur harum maiores quas sapiente repellat.</li>
-      </ul>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, nostrum, a culpa sed perspiciatis voluptas alias eos quis. Quos, laboriosam, modi aliquam odit illo quam ut veritatis obcaecati autem reiciendis?</p>
-
-    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
   </div>
-  <figure class="case-study__img-wrapper g--half g--last">
-      <img src="../../imgs/placeholder--side-by-side.png" alt="image placeholder" class="fluid">
-  </figure>
 
 </div>
 
