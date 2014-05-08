@@ -53,8 +53,7 @@
   & .related-items {
 
     &:first-child {
-      border: none;
-      padding-top: $lineHeight*3;
+      padding-top: ($lineHeight*3) - 2;
       padding-bottom: 0;
     }
 

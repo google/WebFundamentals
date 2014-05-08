@@ -138,3 +138,16 @@
     padding-left: 0;
   }
 }
+
+.indented-medium {
+
+  @include medium {
+    padding-left: $lineHeight*2;
+
+    & ul,
+    & ol,
+    & dl {
+      padding-left: 0;
+    }
+  }
+}
