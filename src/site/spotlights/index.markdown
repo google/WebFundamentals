@@ -25,7 +25,7 @@ NOTE: the spotlight header required a modifier to render properly
 </header>
 
 <div class="latest-spotlights">
-  <div class="container-medium clear">
+  <div class="container clear">
     <h2>Latest spotlights</h2>
     <ul class="latest-spotlights__list list-reset">
       <li class="latest-spotlights__item">
@@ -64,19 +64,19 @@ NOTE: the spotlight header required a modifier to render properly
       <ul class="related-items-list list-reset">
         <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
           <a href="#">
-            <img src="../../imgs/image-example-2.jpg" alt="Case study name">
+            <img src="../../imgs/placeholder--small.png" alt="Case study name">
             <p class="medium">Guides title which goes over two lines</p>
           </a>
         </li>
         <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
           <a href="#">
-            <img src="../../imgs/image-example-2.jpg" alt="Case study name">
+            <img src="../../imgs/placeholder--small.png" alt="Case study name">
             <p class="medium">Guides completely device agnostic site created for the this website</p>
           </a>
         </li>
         <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
           <a href="#">
-            <img src="../../imgs/image-example-3.jpg" alt="Case study name">
+            <img src="../../imgs/placeholder--small.png" alt="Case study name">
             <p class="medium">Guides new, completely device agnostic site created for the this website</p>
           </a>
         </li>

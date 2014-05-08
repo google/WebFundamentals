@@ -284,8 +284,22 @@ ol.list-links {
     color: $colorBlue;
   }
 
-  & img+p {
-    padding-top: 13px;
+  & img {
+    @include small-only {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  & img + p {
+    @include small-only {
+      margin-left: 50%;
+      padding-left: $lineHeight/2;
+    }
+
+    @include medium {
+      padding-top: 13px;
+    }
   }
 
   & .tag {
@@ -296,6 +310,7 @@ ol.list-links {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight - 1;
     border-bottom: 1px solid $colorGrayKeyline;
+    overflow: hidden;
 
     &:last-child {
       border-color: transparent;

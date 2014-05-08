@@ -47,12 +47,12 @@
         content: $icon-star;
         font-family: $fontIcon;
         display: block;
-        font-size: 450px;
+        font-size: 380px;
         line-height: 1;
         color: $colorGrayBackground;
         position: absolute;
-        right: $lineHeight*2;
-        top: -$lineHeight*2;
+        right: 16%;
+        top: -96px;
         z-index: -1;
       }
     }
@@ -60,15 +60,11 @@
 }
 
 .spotlight-header--detail {
-
   & .spotlight-header__container {
-
     &:after {
       display: none;
     }
-
   }
-
 }
 
 .spotlight-header__copy {
