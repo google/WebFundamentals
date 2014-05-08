@@ -21,7 +21,7 @@ Follow either of the two links above to access the appropriate CLA and instructi
 
 ## Writing Code ##
 
-If your contribution contains code, please make sure that it follows [the style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml), otherwise we will have to ask you to make changes, and that's no fun for anyone.
+If your contribution contains code, please make sure that it follows [the style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml). Otherwise we will have to ask you to make changes, and that's no fun for anyone.
 
 ## Formatting HTML ##
 
