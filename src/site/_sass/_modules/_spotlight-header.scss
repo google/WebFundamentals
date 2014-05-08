@@ -11,24 +11,50 @@
 **/
 
 .spotlight-header {
-  margin-bottom: $lineHeight*3;
+  padding-bottom: $lineHeight;
+
+  @include medium {
+    padding-bottom: $lineHeight*3;
+  }
+}
+
+.spotlight-header__excerpt {
+  @include type--medium(true);
+  font-family: $fontHighlight;
+}
+
+// If we have a landscape image, we need overflow hidden
+.spotlight-header--landscape {
+  overflow: hidden;
+  @include medium {
+    min-height: $lineHeight*18;
+  }
+}
+
+
+.spotlight-header--portrait {
+  @include medium {
+    min-height: $lineHeight*15;
+  }
 }
 
 .spotlight-header__container {
   position: relative;
-  overflow: hidden;
 
   &:after {
-    @include wide {
-      content: $icon-star;
-      font-family: $fontIcon;
-      display: block;
-      font-size: 450px;
-      line-height: 1;
-      color: $colorGrayBackground;
-      position: absolute;
-      right: $lineHeight*2;
-      top: -$lineHeight*2;
+    .spotlight-header--portrait & {
+      @include wide {
+        content: $icon-star;
+        font-family: $fontIcon;
+        display: block;
+        font-size: 450px;
+        line-height: 1;
+        color: $colorGrayBackground;
+        position: absolute;
+        right: $lineHeight*2;
+        top: -$lineHeight*2;
+        z-index: -1;
+      }
     }
   }
 }
@@ -53,3 +79,33 @@
 .spotlight-header__cta {
   margin-top: $lineHeight;
 }
+
+.spotlight-header__media {
+  position: relative;
+}
+
+.spotlight-header__image {
+  @include medium {
+    position: absolute;
+    margin-top: 0;
+  }
+
+  .spotlight-header--portrait & {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .spotlight-header--landscape & {
+    @include medium {
+      width: auto;
+      max-width: none;
+      height: 260px
+    }
+
+    @include wide {
+      height: 364px;
+    }
+  }
+
+}
+

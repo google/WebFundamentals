@@ -3,13 +3,23 @@ layout: default
 title: "Showcases"
 description: ""
 ---
+{% comment %}
+NOTE: the spotlight header required a modifier to render properly
+      If the image in the spotlight-header div is a portrait image
+      make sure to add 'spotlight-header--portrait'.
+      If the image is landscape, make sure you add 'spotlight-header--landscape'
+{% endcomment %}
 
-<header class="spotlight-header">
+<header class="spotlight-header spotlight-header--portrait clear">
   <div class="spotlight-header__container container">
     <div class="spotlight-header__copy g--half">
       <h2 class="huge">The Guardian</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, error cupiditate.</p>
       <a href="#" class="spotlight-header__cta cta--primary">View styleguide</a>
+    </div>
+    <div class="spotlight-header__media g--half g--last">
+      <img src="../imgs/placeholder--device-portrait.png" class="spotlight-header__image">
+      <!-- <img src="../imgs/placeholder--device-landscape.png" class="spotlight-header__image"> -->
     </div>
   </div>
 </header>

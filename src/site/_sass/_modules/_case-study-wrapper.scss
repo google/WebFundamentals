@@ -17,6 +17,11 @@
   @include medium {
     background: $colorGrayBackground;
     margin-bottom: $lineHeight*3;
+
+    &.has-video-after {
+      margin-bottom: - $lineHeight*7;
+      padding-bottom: $lineHeight*8;
+    }
   }
 
 }
