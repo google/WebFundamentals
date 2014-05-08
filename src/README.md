@@ -11,7 +11,7 @@
 
 - Clone this repo
 - Move into the project root directory
-- Install dependancies using npm with `npm install`
+- Install dependencies using npm with `npm install`
 
 
 ## Running the build
