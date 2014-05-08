@@ -16,7 +16,7 @@ Please fill out either the individual or corporate Contributor License Agreement
 Follow either of the two links above to access the appropriate CLA and instructions for how to sign and return it. Once we receive it, we'll add you to the official list of contributors and be able to accept your patches.
 
 1. Sign the contributors license agreement above.
-2. Decide which code you want to submit. A submission should be a set of changes that addresses one issue in the [issue tracker](https://github.com/Google/WebFoundations/issues). Please don't mix more than one logical change per submittal, because it makes the history hard to follow. If you want to make a change (e.g. add a sample or feature) that doesn't have a corresponding issue in the issue tracker, please create one.
+2. Decide which code you want to submit. A submission should be a set of changes that addresses one issue in the [issue tracker](https://github.com/Google/WebFoundations/issues). Please don't mix more than one logical change per submission, because it makes the history hard to follow. If you want to make a change (e.g. add a sample or feature) that doesn't have a corresponding issue in the issue tracker, please create one.
 3. **Submitting**: When you are ready to submit, send us a Pull Request!
 
 ## Writing Code ##
