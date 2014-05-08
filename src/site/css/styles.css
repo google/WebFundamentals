@@ -2515,8 +2515,8 @@ li > p {
   position: relative;
 }
 @media only screen and (min-width: 800px) {
-  /* line 37, ../_sass/_modules/_spotlight-header.scss */
-  .spotlight-header__container:after {
+  /* line 38, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header--lanscape .spotlight-header__container:after {
     content: "\e016";
     font-family: "icons";
     display: block;
@@ -2530,40 +2530,41 @@ li > p {
   }
 }
 
-/* line 57, ../_sass/_modules/_spotlight-header.scss */
+/* line 59, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--detail .spotlight-header__container:after {
   display: none;
 }
 
-/* line 65, ../_sass/_modules/_spotlight-header.scss */
+/* line 67, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
 }
 
-/* line 70, ../_sass/_modules/_spotlight-header.scss */
+/* line 72, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__cta {
   margin-top: 26px;
 }
 
-/* line 74, ../_sass/_modules/_spotlight-header.scss */
+/* line 76, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__media {
   position: relative;
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 78, ../_sass/_modules/_spotlight-header.scss */
+  /* line 80, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header__image {
     position: absolute;
+    margin-top: 0;
   }
 }
-/* line 83, ../_sass/_modules/_spotlight-header.scss */
+/* line 86, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--portrait .spotlight-header__image {
   width: 100%;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 88, ../_sass/_modules/_spotlight-header.scss */
+  /* line 91, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     width: auto;
     max-width: none;
@@ -2571,7 +2572,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 88, ../_sass/_modules/_spotlight-header.scss */
+  /* line 91, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     height: 364px;
   }
@@ -3532,22 +3533,19 @@ li > p {
 .beta .icon {
   font-family: "icons";
   font-size: 26px;
-  color: #ffffff;
-  position: absolute;
+  line-height: 70px;
   width: 70px;
-  right: -35px;
+  height: 70px;
+  color: #ffffff;
   text-align: center;
-  line-height: 0px;
-  top: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -35px;
+  margin-top: -2px;
   display: block;
   -webkit-animation: cog 4000ms ease-in-out;
   animation: cog 4000ms ease-in-out;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-perspective-origin: 50% 50%;
-  -ms-perspective-origin: 50% 50%;
-  perspective-origin: 50% 50%;
 }
 @media only screen and (min-width: 620px) {
   /* line 13, ../_sass/_modules/_beta.scss */
@@ -3558,30 +3556,30 @@ li > p {
     padding-right: 58px;
   }
 }
-/* line 65, ../_sass/_modules/_beta.scss */
+/* line 64, ../_sass/_modules/_beta.scss */
 .beta a {
   color: #404040;
 }
 
 @-webkit-keyframes cog {
-  /* line 71, ../_sass/_modules/_beta.scss */
+  /* line 70, ../_sass/_modules/_beta.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 75, ../_sass/_modules/_beta.scss */
+  /* line 74, ../_sass/_modules/_beta.scss */
   100% {
     -webkit-transform: rotate(1079deg);
   }
 }
 
 @keyframes cog {
-  /* line 81, ../_sass/_modules/_beta.scss */
+  /* line 80, ../_sass/_modules/_beta.scss */
   0% {
     transform: rotate(0deg);
   }
 
-  /* line 85, ../_sass/_modules/_beta.scss */
+  /* line 84, ../_sass/_modules/_beta.scss */
   100% {
     transform: rotate(1079deg);
   }
@@ -3756,7 +3754,7 @@ li > p {
 
 /* line 23, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights h2 {
-  padding-bottom: 52px;
+  padding-bottom: 26px;
   text-align: center;
 }
 @media only screen and (min-width: 620px) {

@@ -35,17 +35,19 @@
   position: relative;
 
   &:after {
-    @include wide {
-      content: $icon-star;
-      font-family: $fontIcon;
-      display: block;
-      font-size: 450px;
-      line-height: 1;
-      color: $colorGrayBackground;
-      position: absolute;
-      right: $lineHeight*2;
-      top: -$lineHeight*2;
-      z-index: -1;
+    .spotlight-header--lanscape & {
+      @include wide {
+        content: $icon-star;
+        font-family: $fontIcon;
+        display: block;
+        font-size: 450px;
+        line-height: 1;
+        color: $colorGrayBackground;
+        position: absolute;
+        right: $lineHeight*2;
+        top: -$lineHeight*2;
+        z-index: -1;
+      }
     }
   }
 }
@@ -78,6 +80,7 @@
 .spotlight-header__image {
   @include medium {
     position: absolute;
+    margin-top: 0;
   }
 
   .spotlight-header--portrait & {

@@ -36,23 +36,22 @@
   .icon {
     font-family: $fontIcon;
     font-size: 26px;
-    color: #ffffff;
-    position: absolute;
+    line-height: 70px;
     width: 70px;
-    right: -35px;
+    height: 70px;
+    color: #ffffff;
     text-align: center;
-    line-height: 0px;
-    top: 50%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: -35px;
+    margin-top: -2px;
     display: block;
 
     -webkit-animation: cog 4000ms ease-in-out;
     animation: cog 4000ms ease-in-out;
-    -webkit-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-perspective-origin: 50% 50%;
-    -ms-perspective-origin: 50% 50%;
-    perspective-origin: 50% 50%;
+
   }
 
   @include medium {
