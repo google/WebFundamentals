@@ -2618,9 +2618,19 @@ li > p {
 /* line 19, ../_sass/_modules/_related-items.scss */
 .related-items img {
   margin: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+}
+/* line 28, ../_sass/_modules/_related-items.scss */
+.related-items a:hover img {
+  opacity: .8;
 }
 
-/* line 25, ../_sass/_modules/_related-items.scss */
+/* line 35, ../_sass/_modules/_related-items.scss */
 .related-items__title {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2634,7 +2644,7 @@ li > p {
   padding-top: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 25, ../_sass/_modules/_related-items.scss */
+  /* line 35, ../_sass/_modules/_related-items.scss */
   .related-items__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2648,36 +2658,36 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 25, ../_sass/_modules/_related-items.scss */
+  /* line 35, ../_sass/_modules/_related-items.scss */
   .related-items__title {
     padding-top: 0;
   }
 }
 
-/* line 34, ../_sass/_modules/_related-items.scss */
+/* line 44, ../_sass/_modules/_related-items.scss */
 .related-items__main-link {
   text-transform: uppercase;
 }
-/* line 37, ../_sass/_modules/_related-items.scss */
+/* line 47, ../_sass/_modules/_related-items.scss */
 .related-items__main-link:before {
   content: "#";
   display: inline-block;
   padding-right: 2px;
 }
 
-/* line 45, ../_sass/_modules/_related-items.scss */
+/* line 55, ../_sass/_modules/_related-items.scss */
 .related-items--minimal {
   border-top: none;
   padding-top: 0;
   margin-top: 52px;
 }
 
-/* line 55, ../_sass/_modules/_related-items.scss */
+/* line 65, ../_sass/_modules/_related-items.scss */
 .related-items-group .related-items:first-child {
   padding-top: 76px;
   padding-bottom: 0;
 }
-/* line 60, ../_sass/_modules/_related-items.scss */
+/* line 70, ../_sass/_modules/_related-items.scss */
 .related-items-group .related-items:last-child {
   margin-top: 52px;
 }
