@@ -3,7 +3,7 @@
   {% for section in page.content.toc %}
     {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
     {% if site.spotlights == true or checkTitle != 'spotlights' %}
-    <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}">
+    <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} main-nav__item--current{% endif %}">
       <a class="main-nav__link" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
         {{ section.title }}
         {% if section.title == "Documentation" %}
