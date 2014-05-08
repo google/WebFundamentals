@@ -4884,28 +4884,30 @@ ol.list-links.list-links--secondary a:before {
 .articles-list__item h3 {
   padding-top: 0;
 }
-/* line 425, ../_sass/_components/_list.scss */
-.articles-list__item h3 a {
-  text-decoration: none;
-  border-bottom: 1px solid;
-  padding-bottom: 0px;
+@media only screen and (min-width: 620px) {
+  /* line 426, ../_sass/_components/_list.scss */
+  .articles-list__item h3 a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 0px;
+  }
+  /* line 431, ../_sass/_components/_list.scss */
+  .articles-list__item h3 a:hover {
+    border-bottom: none;
+  }
 }
-/* line 430, ../_sass/_components/_list.scss */
-.articles-list__item h3 a:hover {
-  border-bottom: none;
-}
-/* line 436, ../_sass/_components/_list.scss */
+/* line 438, ../_sass/_components/_list.scss */
 .articles-list__item p {
   margin-top: 26px;
 }
 
 /*==========  GUIDES LIST  ==========*/
-/* line 443, ../_sass/_components/_list.scss */
+/* line 445, ../_sass/_components/_list.scss */
 .guides-list {
   overflow: hidden;
 }
 @media only screen and (min-width: 620px) {
-  /* line 443, ../_sass/_components/_list.scss */
+  /* line 445, ../_sass/_components/_list.scss */
   .guides-list {
     display: -moz-box;
     display: -webkit-flex;
@@ -4918,7 +4920,7 @@ ol.list-links.list-links--secondary a:before {
   }
 }
 
-/* line 457, ../_sass/_components/_list.scss */
+/* line 459, ../_sass/_components/_list.scss */
 .guides-list__item {
   padding: 0;
   background: #ffffff;
@@ -4926,7 +4928,7 @@ ol.list-links.list-links--secondary a:before {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 457, ../_sass/_components/_list.scss */
+  /* line 459, ../_sass/_components/_list.scss */
   .guides-list__item {
     display: -moz-box;
     display: -webkit-flex;
@@ -4937,44 +4939,44 @@ ol.list-links.list-links--secondary a:before {
     -webkit-flex-wrap: wrap;
   }
 }
-/* line 472, ../_sass/_components/_list.scss */
+/* line 474, ../_sass/_components/_list.scss */
 .guides-list__item h3 {
   margin: 0 32px;
 }
-/* line 475, ../_sass/_components/_list.scss */
+/* line 477, ../_sass/_components/_list.scss */
 .guides-list__item h3 a {
   text-decoration: none;
   border-bottom: 1px solid;
   padding-bottom: 1px;
 }
-/* line 480, ../_sass/_components/_list.scss */
+/* line 482, ../_sass/_components/_list.scss */
 .guides-list__item h3 a:hover {
   border-bottom: none;
 }
-/* line 486, ../_sass/_components/_list.scss */
+/* line 488, ../_sass/_components/_list.scss */
 .guides-list__item p {
   margin: 26px 32px 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 490, ../_sass/_components/_list.scss */
+  /* line 492, ../_sass/_components/_list.scss */
   .guides-list__item .primary-content {
     flex: 1;
     -webkit-flex: 1;
   }
 }
-/* line 497, ../_sass/_components/_list.scss */
+/* line 499, ../_sass/_components/_list.scss */
 .guides-list__item .secondary-content {
   position: relative;
   margin-top: 51px;
   border-top: 1px solid #e0e0e0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 497, ../_sass/_components/_list.scss */
+  /* line 499, ../_sass/_components/_list.scss */
   .guides-list__item .secondary-content {
     width: 100%;
   }
 }
-/* line 506, ../_sass/_components/_list.scss */
+/* line 508, ../_sass/_components/_list.scss */
 .guides-list__item .secondary-content .icon-circle {
   position: absolute;
   top: -28px;
@@ -4982,17 +4984,17 @@ ol.list-links.list-links--secondary a:before {
   margin-left: -21px;
   border: 2px solid #ffffff;
 }
-/* line 513, ../_sass/_components/_list.scss */
+/* line 515, ../_sass/_components/_list.scss */
 .guides-list__item .secondary-content .icon-circle i {
   font-size: 23px;
 }
-/* line 519, ../_sass/_components/_list.scss */
+/* line 521, ../_sass/_components/_list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 0 52px;
   margin-top: 0;
 }
-/* line 525, ../_sass/_components/_list.scss */
+/* line 527, ../_sass/_components/_list.scss */
 .guides-list__item:before {
   display: none;
 }

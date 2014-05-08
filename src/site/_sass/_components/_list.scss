@@ -422,13 +422,15 @@ ol.list-links {
   & h3 {
     padding-top: 0;
 
-    & a {
-      text-decoration: none;
-      border-bottom: 1px solid;
-      padding-bottom: 0px;
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: 1px solid;
+        padding-bottom: 0px;
 
-      &:hover {
-        border-bottom: none;
+        &:hover {
+          border-bottom: none;
+        }
       }
     }
   }

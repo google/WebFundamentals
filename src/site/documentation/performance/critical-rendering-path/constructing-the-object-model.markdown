@@ -20,7 +20,7 @@ notes:
 ---
 {% wrap content%}
 
-<style type="text/css">
+<style>
   img, video, object {
     max-width: 100%;
   }
@@ -57,7 +57,7 @@ Every time the browser has to process HTML markup it has to step through all of 
 
 <img src="images/dom-timeline.png" class="center" alt="Tracing DOM construction in DevTools" />
 
-{% include modules/highlight.liquid character="{" position="left" title="Note" list=page.notes.devtools %}
+{% include modules/remember.liquid title="Note" list=page.notes.devtools %}
 
 If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step &mdash; in example above, it took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the page was larger, as most pages are, this process might take significantly longer. You will see in our future sections on creating smooth animations that this can easily become your bottleneck if the browser has to process large amounts of HTML. That said, let’s not get ahead of ourselves…
 
