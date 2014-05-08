@@ -1,0 +1,17 @@
+{% if page.related_guides %}
+<div class="related-items clear">
+  <h3 class="related-items__title g-wide--1 g-medium--full">Related guides</h3>
+  <div class="related-items__section clear">
+
+    <ul class="related-items-list list-reset">
+    {% for guide in page.related_guides %}
+      <li class="g-medium--1 g-wide--1 {% cycle '','','g-medium--last g-wide--last' %} theme--{{guide.section | downcase | replace:' ','-'}}">
+        <p><a class="tag themed" href="#" title="{{guide.section}}">{{guide.section}}</a></p>
+        <p class="medium"><a href="#">{{guide.title}}</a></p>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
+{% endif %}
