@@ -15,7 +15,7 @@ ol,
 dl {
   list-style: none;
   margin: 0;
-  padding-left: $lineHeight*2;
+  padding-left: 32px;
 
   @include small-only {
     padding-left: 0;

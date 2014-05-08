@@ -12,8 +12,10 @@
 
 .spotlight-header {
   padding-bottom: $lineHeight;
+  text-align: center;
 
   @include medium {
+    text-align: left;
     padding-bottom: $lineHeight*3;
   }
 }

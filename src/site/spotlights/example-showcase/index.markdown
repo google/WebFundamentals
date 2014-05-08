@@ -17,7 +17,8 @@ collection: showcase
     </nav>
     <div class="spotlight-header__copy g--half">
       <h2 class="xxlarge">Case study title</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias deserunt nemo quisquam harum. Dolores dolorum tempore voluptatem.</p>
+      <p class="spotlight-header__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias.</p>
     </div>
     <div class="spotlight-header__media g--half g--last">
       <img src="../../imgs/placeholder--device-landscape.jpg" class="spotlight-header__image">
@@ -54,7 +55,7 @@ collection: showcase
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
   </div>
 
-  <div>
+  <div class="spotlight-content clear">
     <div class="indented-medium g--half">
       <h3>Data examples</h3>
 
@@ -69,10 +70,16 @@ collection: showcase
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, nostrum, a culpa sed perspiciatis voluptas alias eos quis. Quos, laboriosam, modi aliquam odit illo quam ut veritatis obcaecati autem reiciendis?</p>
 
     </div>
-    <figure class="case-study__img-wrapper g--half g--last">
-        <img src="../../imgs/placeholder--side-by-side.png" alt="image placeholder" class="fluid">
-    </figure>
+
+    <div class="centered g--half g--last">
+      <h3>Key users</h3>
+      <figure class="case-study__img-wrapper contained">
+        <img src="../../imgs/placeholder--square.png" alt="image placeholder" class="fluid">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, porro eius.</figcaption>
+      </figure>
+    </div>
   </div>
+
 
 </div>
 

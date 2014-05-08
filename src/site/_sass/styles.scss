@@ -62,14 +62,14 @@
 @import "_components/_breadcrumb";
 @import "_components/_subsection-title";
 @import "_components/_icon-circle";
-@import "_components/_case-study__content";
 
 
 @import "_themed";
 
 // Pages
 @import "_pages/_styleguide";
-@import "_pages/_page-resources";
+@import "_pages/_resources";
+@import "_pages/_spotlight";
 
 // Make sure this is last to override anything else :)
 @import "_helper";

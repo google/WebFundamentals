@@ -17,11 +17,11 @@ collection: spotlight
     </nav>
     <div class="spotlight-header__copy g--half">
       <h2 class="xxlarge">Case study title</h2>
-      <p class="spotlight-header__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vel nihil sapiente modi laudantium blanditiis incidunt perspiciatis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias deserunt nemo quisquam harum. Dolores dolorum tempore voluptatem.</p>
+      <p class="spotlight-header__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias deserunt nemo quisquam harum.</p>
     </div>
     <div class="spotlight-header__media g--half g--last">
-      <img src="../../imgs/placeholder--device-landscape.jpg" class="spotlight-header__image">
+      <img src="../../imgs/placeholder--device-landscape-2.png" class="spotlight-header__image">
     </div>
   </div>
 </header>

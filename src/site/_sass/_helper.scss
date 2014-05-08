@@ -134,7 +134,7 @@
 /*==========  INDENTED CONTENT  ==========*/
 
 .indented {
-  padding-left: $lineHeight*2;
+  padding-left: 32px;
 
   & ul,
   & ol,
@@ -146,7 +146,7 @@
 .indented-medium {
 
   @include medium {
-    padding-left: $lineHeight*2;
+    padding-left: 32px;
 
     & ul,
     & ol,
