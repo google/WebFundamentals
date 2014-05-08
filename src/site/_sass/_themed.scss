@@ -12,13 +12,53 @@
 
 .themed {
 
-  .theme--multi-device-layouts & { color: $colorLayouts; }
+  .theme--multi-device-layouts & {
+    color: $colorLayouts;
 
-  .theme--introduction-to-media & { color: $colorMedia; }
+    &.text-divider:before {
+      color: $colorLayouts;
+    }
 
-  .theme--user-input & { color: $colorUser; }
+    &.text-divider:after {
+      color: $colorLayoutsSecondary;
+    }
+  }
 
-  .theme--performance & { color: $colorPerformance; }
+  .theme--introduction-to-media & {
+    color: $colorMedia;
+
+    &.text-divider:before {
+      color: $colorMedia;
+    }
+
+    &.text-divider:after {
+      color: $colorMediaSecondary;
+    }
+  }
+
+  .theme--user-input & {
+    color: $colorUser;
+
+    &.text-divider:before {
+      color: $colorUser;
+    }
+
+    &.text-divider:after {
+      color: $colorUserSecondary;
+    }
+  }
+
+  .theme--performance & {
+    color: $colorPerformance;
+
+    &.text-divider:before {
+      color: $colorPerformance;
+    }
+
+    &.text-divider:after {
+      color: $colorPerformanceSecondary;
+    }
+  }
 
 }
 

@@ -128,8 +128,9 @@
       font-size: $fontBase;
       line-height: $lineHeight - 6;
       padding-top: 18px; // Random number... only way to align the home item as it doesnt follow the baseline grid alignment
+      font-weight: 400;
       position: relative;
-      padding-left: 32px;
+      padding-left: 31px;
 
       &:before {
         content: $icon-slash;
@@ -164,6 +165,7 @@
     .main-nav__item--home & {
       padding-top: 18px; // Random number... only way to align the home item as it doesnt follow the baseline grid alignment
       line-height: $lineHeight - 6;
+      letter-spacing: 1px;
     }
   }
 

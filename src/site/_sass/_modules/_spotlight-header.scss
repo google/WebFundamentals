@@ -40,23 +40,6 @@
 
 .spotlight-header__container {
   position: relative;
-
-  &:after {
-    .spotlight-header--portrait & {
-      @include wide {
-        content: $icon-star;
-        font-family: $fontIcon;
-        display: block;
-        font-size: 380px;
-        line-height: 1;
-        color: $colorGrayBackground;
-        position: absolute;
-        right: 16%;
-        top: -96px;
-        z-index: -1;
-      }
-    }
-  }
 }
 
 .spotlight-header--detail {
