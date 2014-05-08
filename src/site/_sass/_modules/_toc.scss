@@ -18,7 +18,7 @@
   border-bottom: 1px solid $colorGrayKeyline;
 
   @include medium {
-    padding-bottom: $lineHeight/2;
+    padding-bottom: ($lineHeight/2) - 1;
     margin-bottom: $lineHeight/2;
   }
 }

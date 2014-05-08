@@ -1,0 +1,27 @@
+/**
+*
+* Case study wrapper
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.case-study-wrapper {
+  padding-top: $lineHeight;
+  padding-bottom: $lineHeight*2;
+
+  @include medium {
+    background: $colorGrayBackground;
+    margin-bottom: $lineHeight*3;
+
+    &.has-video-after {
+      margin-bottom: - $lineHeight*7;
+      padding-bottom: $lineHeight*8;
+    }
+  }
+
+}

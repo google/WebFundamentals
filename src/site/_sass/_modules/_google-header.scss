@@ -11,37 +11,32 @@
 **/
 
 #gc-googlebar {
-  width: 100%;
   position: relative;
-  background: #f1f1f1;
-  margin: 0;
+  background: $colorGrayBackground;
   padding: 0 0 $lineHeight;
+  overflow: hidden;
 
   @include medium {
     height: $lineHeight * 4;
     padding-bottom: 0;
-  }
-
-  .container {
-    overflow: hidden;
   }
 }
 
 #gc-logo {
   text-decoration: none;
   display: block;
-  margin: $lineHeight auto;
+  margin: 0 auto $lineHeight;
+  padding-top: $lineHeight;
   width: 43px;
-
   overflow: hidden;
-
-
 
   @include medium {
     float: left;
     margin-top: 29px;
     width: 56px;
     width: auto;
+    padding-top: 0;
+    margin-bottom: 0;
   }
 
   img {

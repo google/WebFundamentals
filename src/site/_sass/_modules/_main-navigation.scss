@@ -31,7 +31,7 @@
 
     .js &.nav-is-opened {
       display: block;
-      -webkit-animation: showNav 400ms both;
+      @include prefixr(animation, showNav 250ms ease-out both)
     }
   }
 
@@ -84,6 +84,10 @@
   }
 }
 
+.main-nav__item--current {
+  color: $colorYellowSecondary;
+}
+
 .main-nav__link {
   color: $colorGrayDark;
   font-family: $fontHighlight;
@@ -115,19 +119,26 @@
       padding-left: 0;
     }
 
+    .main-nav__item--current & {
+      cursor: default;
+    }
+
     &:hover {
       color: $colorYellowSecondary;
       // box-shadow: 0 0 1px 0 $colorGray;
     }
 
     .subnav-is-opened > & {
-      color: $colorYellow;
+      color: $colorYellowSecondary;
     }
+
+    @include color-inherit;
   }
 
   @include wide {
     padding-bottom: $lineHeight;
   }
+
 
 }
 
@@ -219,7 +230,9 @@
 }
 
 .main-nav__link--explore-wrapper {
-  border-bottom: 1px solid $colorGrayKeyline;
+  @include medium {
+    border-bottom: 1px solid $colorGrayKeyline;
+  }
 }
 
 .main-nav__featured {
@@ -287,6 +300,7 @@
     @extend .icon-plus:before;
 
     @include medium {
+      font-size: 9px;
       content: $icon-chevron-down;
     }
   }
@@ -295,9 +309,10 @@
     float: none;
     display: inline-block;
     margin-left: 6px;
+    line-height: $lineHeight/2;
     vertical-align: top; // middle breaks baseline grid
     position: relative;
-    top: 5px;
+    top: 7px;
   }
 
   .subnav-is-opened & {
@@ -325,7 +340,7 @@
 }
 
 /*==========  CSS ANIMATION  ==========*/
-@-webkit-keyframes showNav {
+@include keyframes(showNav){
   0% {
     opacity: 0;
   }
@@ -333,4 +348,3 @@
     opacity: 1;
   }
 }
-

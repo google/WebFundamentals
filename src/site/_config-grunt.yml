@@ -7,7 +7,7 @@ permalink: /articles/:title.html
 baseurl: ''
 url: ''
 pygments: false
-spotlights: false
+spotlights: true
 github:
   root: https://github.com/Google/WebFundamentals
   content: tree/master/src/site

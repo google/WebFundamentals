@@ -57,10 +57,14 @@
   @include wide {
     @include type--xxlarge;
   }
+
+  @include color-inherit;
 }
 
 .highlight-module__cta {
   display: block;
+  font-size: $fontSmall;
+  font-weight: 400;
 }
 
 
@@ -100,13 +104,9 @@
   margin-bottom: $lineHeight*2;
 
   pre {
-    margin: 0;
-    padding-top: $lineHeight;
-    font-size: $fontBase - 2;
     line-height: $lineHeight;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0 0 0 -26px;
+    padding: $lineHeight 0 0 0;
 
     span {
       margin: 0;
@@ -124,6 +124,10 @@
 
   .highlight-module__container {
     padding-bottom: 0;
+
+    @include wide {
+      min-height: 0;
+    }
   }
 
   .highlight-module__cta {
@@ -184,8 +188,7 @@
     border-width: 1px;
     border-left-width: 0;
     border-right-width: 0;
-    margin-bottom: -2px; // Offsetting 2px to considerate border top/bottom - baseline rules.
-    padding:  0 0 $lineHeight;
+    padding:  0 0 ($lineHeight - 2);
   }
 
   & .highlight-module__title {

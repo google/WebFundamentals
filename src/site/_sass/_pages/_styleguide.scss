@@ -54,4 +54,13 @@
     padding: 0 13px;
   }
 
+  .styleguide__typography p {
+    padding-bottom: 26px;
+    padding-top: 0;
+  }
+
+  .styleguide__typography>strong {
+    padding-top: $lineHeight;
+  }
+
 }

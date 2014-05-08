@@ -131,7 +131,11 @@
 //  <div class="third"></div>
 //  <div class="third"></div>
 //  <div class="third last"></div>
-.g--last { margin-right: 0; }
+.g--last {
+  @include medium {
+    margin-right: 0;
+  }
+}
 
 
 // This is a global 'centered' class
@@ -145,7 +149,6 @@
 // Its purpose is to show users our grid system
 // It becomes visible when a class 'debug' is added to the body
 .grid-overlay {
-
   display: none;
   pointer-events: none;
 
@@ -158,6 +161,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 2;
     height: 100%;
     display: block;
 

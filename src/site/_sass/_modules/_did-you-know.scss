@@ -40,10 +40,11 @@
     font-family: $fontIcon;
     font-size: 300px;
     top: 150px;
-    left: 30%;
+    left: 0;
     position: relative;
     display: block;
-    width: 0;
+    width: 100%;
+    text-align: center;
 
     @include medium {
       position: absolute;
@@ -56,7 +57,7 @@
       position: absolute;
       font-size: 400px;
       top: 200px;
-      left: 124%;
+      left: 110%;
     }
   }
 }
