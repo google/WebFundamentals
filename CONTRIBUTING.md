@@ -4,7 +4,7 @@
 
 ### Contributor License Agreements
 
-This section only applies if you are submitting a patch for us. The CLA mentioned below does not apply if you are giving us a brand new article or tutorial.
+This section only applies if you are submitting a patch. The CLA mentioned below does not apply if you are giving us a brand new article or tutorial.
 
 We'd love to accept your code patches! However, before we can take them, we have to jump a couple of legal hurdles.
 
