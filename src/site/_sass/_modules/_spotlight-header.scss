@@ -35,7 +35,7 @@
   position: relative;
 
   &:after {
-    .spotlight-header--lanscape & {
+    .spotlight-header--portrait & {
       @include wide {
         content: $icon-star;
         font-family: $fontIcon;
