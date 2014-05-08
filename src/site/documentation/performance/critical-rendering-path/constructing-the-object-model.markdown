@@ -20,7 +20,7 @@ notes:
 ---
 {% wrap content%}
 
-<style type="text/css">
+<style>
   img, video, object {
     max-width: 100%;
   }

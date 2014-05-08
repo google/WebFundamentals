@@ -33,7 +33,7 @@ notes:
 
 {% include modules/toc.liquid %}
 
-<style type="text/css">
+<style>
   img, video, object {
     max-width: 100%;
   }
