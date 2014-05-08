@@ -2,16 +2,13 @@
 layout: default
 title: "Showcases"
 description: ""
-
-{% commend %}
-
+---
+{% comment %}
 NOTE: the spotlight header required a modifier to render properly
       If the image in the spotlight-header div is a portrait image
       make sure to add 'spotlight-header--portrait'.
       If the image is landscape, make sure you add 'spotlight-header--landscape'
-
-{% endcommend %}
----
+{% endcomment %}
 
 <header class="spotlight-header spotlight-header--portrait clear">
   <div class="spotlight-header__container container">
