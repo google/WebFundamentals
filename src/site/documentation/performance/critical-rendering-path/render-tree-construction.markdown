@@ -50,7 +50,7 @@ To construct the render tree, the browser roughly does the following:
 1. For each visible node find the appropriate matching CSSOM rules and apply them.
 1. Emit visible nodes with content and their computed styles.
 
-{% include modules/highlight.liquid character="{" position="left" title="Note" list=page.notes.hidden %}
+{% include modules/remember.liquid list=page.notes.hidden %}
 
 The final output is a render that contains both the content and the style information of all the visible content on the screen - we're getting close!  **With the render tree in place, we can proceed to the "layout" stage.**
 

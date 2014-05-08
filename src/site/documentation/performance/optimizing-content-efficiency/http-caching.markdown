@@ -67,7 +67,7 @@ In above example the client automatically provides the ETag token within the “
 
 As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf: it will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. **The only thing that’s left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.**
 
-{% include modules/highlight.liquid character="{" position="left" title="" list=page.notes.boilerplate-configs %}
+{% include modules/remember.liquid list=page.notes.boilerplate-configs %}
 
 
 ## Cache-Control
@@ -76,7 +76,7 @@ As a web developer, how do you take advantage of efficient revalidation? The bro
 
 The best request is a request that does not need to communicate with the server: a local copy of the response allows us to eliminate all network latency and avoid data charges for the data transfer. To achieve this, the HTTP specification allows the server to return a [number of different Cache-Control directives](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) that control how, and for how long, the individual response can be cached by the browser and other intermediate caches.
 
-{% include modules/highlight.liquid character="{" position="left" title="" list=page.notes.cache-control %}
+{% include modules/remember.liquid list=page.notes.cache-control %}
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control example" />
 

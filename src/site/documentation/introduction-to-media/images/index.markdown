@@ -238,7 +238,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include modules/highlight.liquid title="Important" type="remember" list=page.remember.compressive %}
+{% include modules/remember.liquid title="Important" list=page.remember.compressive %}
 
 #### JavaScript image replacement
 
