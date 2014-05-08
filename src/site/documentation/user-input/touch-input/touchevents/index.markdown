@@ -128,7 +128,7 @@ events no longer firing. By adding the move event to the document, we'll continu
 You can use the `"Show potential scroll bottlenecks"` feature in Chrome DevTools
 to show how the touch events behave:
 
-<img class="g-medium--full g-wide--full" src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools" />
+<img class="g-medium--full g-wide--full" src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools">
 
 <div style="clear: both;"></div>
 

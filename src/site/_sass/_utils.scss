@@ -45,7 +45,7 @@
   $colorGray: #737373;
   $colorGrayDark: #404040;
 
-  $colorText: $colorGrayDark;
+  $colorText: $colorGray;
   $colorHighlight: $colorBlue;
   $colorWarning: $colorYellowSecondary;
   $colorMuted: $colorGray;
@@ -215,6 +215,7 @@
     line-height: 2.0000em; /* 26px */
     padding-top: 2.0000em;
     padding-bottom: 0;
+    letter-spacing: 0;
   }
 
   @mixin rule--base {
@@ -222,50 +223,61 @@
     line-height: 1.6250em; /* 26px */
     padding-top: 1.6250em;
     padding-bottom: 0;
+    letter-spacing: 0;
   }
 
   @mixin rule--medium {
+    color: $colorGrayDark;
     font-size: $fontMedium;
     font-weight: 300;
     line-height: 1.3000em; /* 26px */
     padding-top: 1.3000em;
     padding-bottom: 0;
+    letter-spacing: -0.3px;
   }
 
   @mixin rule--large {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontLarge;
     font-weight: 300;
     line-height: 1.0000em; /* 26px */
     padding-top: 1.0000em;
     padding-bottom: 0;
+    letter-spacing: -0.3px;
   }
 
   @mixin rule--xlarge {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontXLarge;
     font-weight: 300;
     line-height: 1.2381em; /* 52px */
     padding-top: 0.6190em;
     padding-bottom: 0;
+    letter-spacing: -0.3px;
   }
 
   @mixin rule--xxlarge {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontXXLarge;
     font-weight: 300;
     line-height: 1.1471em; /* 78px */
     padding-top: 0.3824em;
     padding-bottom: 0;
+    letter-spacing: -3px;
   }
 
   @mixin rule--huge {
+    color: $colorGrayDark;
     font-family: $fontHighlight;
     font-size: $fontHuge;
     font-weight: 300;
     line-height: 1.19em; /* 130px */
     padding-top: 0.2364em;
     padding-bottom: 0;
+    letter-spacing: -5px;
   }
 
 
@@ -339,27 +351,34 @@
     }
   }
 
+  // Creating a mixing to inherit color from parent
+  // this is because we also need to reset it from
+  // the media query. More manageable like this.
+  @mixin color-inherit {
+    color: inherit;
+
+    @include medium {
+      color: inherit;
+    }
+  }
+
 
   // LISTS
-  @mixin bullet-type($bullet, $icon: false) {
+  @mixin bullet($icon: $icon-bullet, $fontSize: 4px) {
     &:before {
-      @if $icon {
-        font-family: $fontIcon;
-        @extend .#{$icon}:before;
-        font-size: $fontSmall;
-      }
-      @else {
-        content: $bullet;
-        font-family: $fontHighlight;
-      }
+      content: $icon;
+      font-family: $fontIcon;
+      font-size: $fontSize;
 
       display: block;
+      width: 16px; // Same width as padding-left on the items
+      text-align: left;
       font-weight: 400;
+      line-height: $lineHeight;
+
       position: absolute;
       top: 0;
       left: 0;
-      line-height: $lineHeight;
-
     }
   }
 
@@ -382,6 +401,7 @@
     font-weight: 400;
     display: inline-block;
     line-height: 1;
+    letter-spacing: 1px;
 
     &:hover {
       color: $colorGrayDark;

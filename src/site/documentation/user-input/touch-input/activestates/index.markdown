@@ -77,7 +77,7 @@ Internet Explorer on Windows Phone has a similar behavior, but is suppressed
 via a meta tag:
 
 {% highlight html %}
-<meta name="msapplication-tap-highlight" content="no" />
+<meta name="msapplication-tap-highlight" content="no">
 {% endhighlight %}
 
 #### Override FirefoxOS Button State Styles

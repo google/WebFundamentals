@@ -38,7 +38,7 @@ remember:
 ---
 {% wrap content %}
 
-<style type="text/css">
+<style>
 
   img.center {
     display: block;
@@ -61,8 +61,8 @@ today or in the future.
 
 {% link_sample _code/weather.html %}
   <video autoplay loop controls class="responsiveVideo">
-    <source src="videos/resize.webm" type="video/webm" />
-    <source src="videos/resize.mp4" type="video/mp4" />
+    <source src="videos/resize.webm" type="video/webm">
+    <source src="videos/resize.mp4" type="video/mp4">
   </video>
 {% endlink_sample %}
 
@@ -121,7 +121,7 @@ mode, and zoom rather than reflow to fill the screen. Adding the attribute
 pixels and device independent pixels regardless of device orientation, and
 allows the page to take advantage of the full landscape width.
 
-{% include modules/highlight.liquid character="!" position="right" title="Remember" type="remember" list=page.remember.use-commas %}
+{% include modules/remember.liquid list=page.remember.use-commas %}
 
 ### Ensure an accessible viewport
 
@@ -186,7 +186,7 @@ For example, you could place all styles necessary for printing
 inside a print media query:
 
 {% highlight html %}
-<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+<link rel="stylesheet" href="print.css" media="print">
 {% endhighlight %}
 
 In addition to using the `media` attribute in the stylesheet link, there are two
@@ -349,7 +349,7 @@ The first step is to make the forecast look good on a small screen.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen." />
+    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen.">
   {% endlink_sample %}
 </figure>
 
@@ -359,7 +359,7 @@ subjective, but above 600px is certainly too wide.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider." />
+    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider.">
   {% endlink_sample %}
 </figure>
 
@@ -375,7 +375,7 @@ styles are placed in `weather-large.css`.
 
 <figure>
   {% link_sample _code/weather-2.html %}
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen." />
+    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
   {% endlink_sample %}
 </figure>
 

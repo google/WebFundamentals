@@ -33,7 +33,7 @@ notes:
 
 {% include modules/toc.liquid %}
 
-<style type="text/css">
+<style>
   img, video, object {
     max-width: 100%;
   }
@@ -112,7 +112,7 @@ After applying the above steps our page goes from 406 to 150 characters - 63% co
 
 Taking a step back, the above example illustrates an important point: a general purpose compressor - say one designed to compress arbitrary text - could probably also do a pretty good job of compressing the page above, but it would never know to strip the comments, collapse the CSS rules, or dozens of other content-specific optimizations. This is why preprocessing / minification / context-aware optimization can be such a powerful tool.
 
-{% include modules/highlight.liquid character="{" position="left" title="" list=page.notes.jquery-minify %}
+{% include modules/remember.liquid list=page.notes.jquery-minify %}
 
 Similarly, above techniques can be extended beyond just text-based assets. Images, video, and other content types all contain their own forms of metadata and various payloads. For example, whenever you take a picture with a camera, the photo also typically embeds a lot of extra information: camera settings, location, and so on. Depending on your application, this data may be critical (e.g. a photo sharing site), or completely useless and you should consider whether it is worth removing. In practice, this metadata can add up to tens of kilobytes for every image!
 
@@ -195,11 +195,11 @@ The best part is that enabling GZIP is one of the simplest and highest payoff op
 
 What’s the best config for your server? The HTML5 Boilerplate project contains [sample configuration files](https://github.com/h5bp/server-configs) for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for the GZIP section, and confirm that your server is configured with recommended settings.
 
-<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size" />
+<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size">
 
 A quick and simple way to see GZIP in action is to open Chrome Developer Tools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
 
-{% include modules/highlight.liquid character="{" position="left" title="" list=page.notes.gzip %}
+{% include modules/remember.liquid list=page.notes.gzip %}
 
 Finally, a word of warning: while most servers will automatically compress the assets for you when serving them to the user, some CDNs require extra care and manual effort to ensure that the GZIP asset is served. Audit your site and ensure that your assets are, in fact, [being compressed](http://www.whatsmyip.org/http-compression-test/)!
 

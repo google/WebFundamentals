@@ -49,7 +49,7 @@ related:
 
 {% wrap content%}
 
-<style type="text/css">
+<style>
   img, video, object {
     max-width: 100%;
   }
@@ -208,7 +208,7 @@ characteristics of the device, for example using a 2x image on a 2x display,
 or a 1x image on a 2x device when on a limited bandwidth network.
 
 {% highlight html %}
-<img src="photo.png" srcset="photo@2x.png 2x" ... />
+<img src="photo.png" srcset="photo@2x.png 2x" ...>
 {% endhighlight %}
 
 On browsers that don't support `srcset`, the browser simply uses the default
@@ -238,7 +238,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include modules/highlight.liquid title="Important" type="remember" list=page.remember.compressive %}
+{% include modules/remember.liquid title="Important" list=page.remember.compressive %}
 
 #### JavaScript image replacement
 
@@ -278,7 +278,7 @@ webfonts to achieve the style you need.
 
 ### Use CSS to replace images
 
-<style type="text/css">
+<style>
   p#noImage {
     margin-top: 2em;
     padding: 1em;
@@ -298,7 +298,7 @@ webfonts to achieve the style you need.
 </p>
 
 {% highlight html %}
-<style type="text/css">
+<style>
   div#noImage {
     color: white;
     border-radius: 5px;

@@ -14,10 +14,14 @@
   background: $colorGrayDark;
   color: #ffffff;
   overflow: hidden;
-  padding-bottom: $lineHeight*3 - 1;
+  padding-bottom: $lineHeight*3;
   margin-top: $lineHeight*2;
 
-  p {
+  & h3 {
+    @include color-inherit;
+  }
+
+  & p {
     padding-bottom: $lineHeight;
   }
 
@@ -32,6 +36,11 @@
 
 .featured-spotlight__container {
   position: relative;
+}
+
+.featured-spotlight__title {
+  @include type--xxlarge;
+  @include color-inherit;
 }
 
 .featured-spotlight__img {

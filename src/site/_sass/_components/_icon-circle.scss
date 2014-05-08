@@ -40,7 +40,7 @@
     font-weight: 700;
 
     @include medium {
-      font-size: $fontXLarge;
+      font-size: $fontLarge;
     }
   }
 }
@@ -54,6 +54,12 @@
   i {
     font-size: $fontLarge;
 
+    @include medium {
+      font-size: $fontXLarge;
+    }
+  }
+
+  span {
     @include medium {
       font-size: $fontXLarge;
     }

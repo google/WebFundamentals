@@ -107,6 +107,10 @@
   text-align: center;
 }
 
+.text-highlight {
+  font-family: $fontHighlight;
+}
+
 
 /*==========  TAG  ==========*/
 .tag {
@@ -124,5 +128,30 @@
   &:before {
     content: "# ";
     display: inline-block;
+  }
+}
+
+/*==========  INDENTED CONTENT  ==========*/
+
+.indented {
+  padding-left: 32px;
+
+  & ul,
+  & ol,
+  & dl {
+    padding-left: 0;
+  }
+}
+
+.indented-medium {
+
+  @include medium {
+    padding-left: 32px;
+
+    & ul,
+    & ol,
+    & dl {
+      padding-left: 0;
+    }
   }
 }

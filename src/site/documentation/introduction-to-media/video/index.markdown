@@ -42,7 +42,7 @@ remember:
 
 {% include modules/toc.liquid %}
 
-<style type="text/css">
+<style>
 
   img, video, object {
     max-width: 100%;
@@ -65,8 +65,8 @@ remember:
 Add the video element to load, decode, and play video in your site:
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm" />
-     <source src="video/chrome.mp4" type="video/mp4" />
+     <source src="video/chrome.webm" type="video/webm">
+     <source src="video/chrome.mp4" type="video/mp4">
      <p>This browser does not support the video element.</p>
 </video>
 
@@ -118,8 +118,8 @@ Save bandwidth and make your site feel more responsive: use the Media
 Fragments API to add a start and end time to the video element.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm" />
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4" />
+  <source src="video/chrome.webm#t=5,10" type="video/webm">
+  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
   <p>This browser does not support the video element.</p>
 </video>
 
@@ -128,7 +128,7 @@ media URL. For example, to play the video between seconds 5 through 10,
 specify:
 
 {% highlight html %}
-<source src="video/chrome.webm#t=5,10" type="video/webm" />
+<source src="video/chrome.webm#t=5,10" type="video/webm">
 {% endhighlight %}
 
 You can also use the Media Fragments API to deliver multiple views on the same
@@ -140,7 +140,7 @@ serve multiple files.
 Using your browser developer tools,
 check for `Accept-Ranges: bytes` in the response headers:
 
-<img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png" />
+<img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Include a poster image
 
@@ -164,11 +164,11 @@ Here's a side-by-side comparison of videos without and with a poster image
 
 <div class="clear">
   <div class="g--half">
-    <img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png" />
+    <img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png">
   </div>
 
   <div class="g--half g--last">
-    <img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png" />
+    <img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png">
   </div>
 </div>
 
@@ -301,8 +301,8 @@ container, making it impossible for the user to see the content or use
 the controls.
 
 <div class="clear">
-    <img class="g-wide--1 g-medium--half" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png" />
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png" />
+    <img class="g-wide--1 g-medium--half" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
+    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
 You can control video dimensions using JavaScript or CSS. JavaScript libraries
@@ -343,8 +343,8 @@ Safari on iPhone does a good job of switching between portrait and landscape
 orientation:
 
 <div class="clear">
-    <img class="g-wide--1 g-medium--half" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png" />
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png" />
+    <img class="g-wide--1 g-medium--half" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png">
+    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png">
 </div>
 
 Device orientation on an iPad and Chrome on Android can be problematic.
@@ -352,7 +352,7 @@ For example, without any customization a video playing on an iPad in landscape
 orientation looks like this:
 
 <img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape"
-src="images/iPad-Retina-landscape-video-playing.png" />
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Setting the video `width: 100%` or `max-width: 100%` with CSS can resolve
 many device orientation layout problems. You may also want to consider
@@ -363,16 +363,16 @@ fullscreen alternatives.
 Different platforms display video differently. Safari on an iPhone displays a
 video element inline on a web page, but plays video back in fullscreen mode:
 
-<img class="center" alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster.png" />
+<img class="center" alt="Screenshot of video element on iPhone, portrait" src="images/iPhone-video-with-poster.png">
 
 On Android, users can request request fullscreen mode by clicking the
 fullscreen icon. But the default is to play video inline:
 
-<img class="center" alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png" />
+<img class="center" alt="Screenshot of video playing in Chrome on Android, portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Safari on an iPad plays video inline:
 
-<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing.png" />
+<img class="center" alt="Screenshot of video playing in Safari on iPad Retina, landscape" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### Control fullscreening of content
 
@@ -407,8 +407,8 @@ On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm" />
-  <source src="video/fullscreen.mp4" type="video/mp4" />
+  <source src="video/fullscreen.webm" type="video/webm">
+  <source src="video/fullscreen.mp4" type="video/mp4">
   <p>This browser does not support the video element.</p>
 </video>
 
@@ -433,7 +433,7 @@ using the track element.
 
 Using the track element, captions appear like this:
 
- <img class="center" alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg" />
+ <img class="center" alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Add track element
 
