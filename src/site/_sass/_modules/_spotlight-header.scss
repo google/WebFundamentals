@@ -29,7 +29,7 @@
 .spotlight-header--landscape {
   overflow: hidden;
   @include medium {
-    min-height: $lineHeight*18;
+    min-height: $lineHeight*15;
   }
 }
 

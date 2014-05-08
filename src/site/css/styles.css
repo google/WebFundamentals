@@ -2562,7 +2562,7 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 29, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape {
-    min-height: 468px;
+    min-height: 390px;
   }
 }
 
