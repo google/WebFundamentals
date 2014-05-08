@@ -48,7 +48,7 @@ Great news, every browser ships with an implementation of an HTTP cache! All we 
 
 {% include modules/highlight.liquid character="{" position="left" title="" list=page.notes.webview-cache %}
 
-<img src="images/http-request.png" class="center" alt="HTTP request" />
+<img src="images/http-request.png" class="center" alt="HTTP request">
 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (“x234dff”) that can be used after the response has expired to check if the resource has been modified.
 
@@ -61,7 +61,7 @@ Let’s assume 120 seconds have passed since our initial fetch and the browser h
 
 That’s the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
 
-<img src="images/http-cache-control.png" class="center" alt="HTTP Cache-Control example" />
+<img src="images/http-cache-control.png" class="center" alt="HTTP Cache-Control example">
 
 In above example the client automatically provides the ETag token within the “If-None-Match” HTTP request header, the server checks the token against the current resource, and if it has not changed returns a “304 Not Modified” response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
@@ -78,7 +78,7 @@ The best request is a request that does not need to communicate with the server:
 
 {% include modules/remember.liquid list=page.notes.cache-control %}
 
-<img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control example" />
+<img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control example">
 
 ### "no-cache" and "no-store"
 
@@ -99,7 +99,7 @@ This directive specifies the maximum time in seconds that the fetched response i
 
 ## Defining optimal Cache-Control policy
 
-<img src="images/http-cache-decision-tree.png" class="center" alt="Cache decision tree" />
+<img src="images/http-cache-decision-tree.png" class="center" alt="Cache decision tree">
 
 Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
@@ -141,7 +141,7 @@ Once the response is cached by the browser, the cached version will be used unti
 
 **So, how do we get the best of both worlds: client-side caching and quick updates?** Simple, we can change the URL of the resource and force the user to download the new response whenever its content changes. Typically, this is done by embedding a fingerprint of the file, or a version number, in its filename - e.g. style.**x234dff**.css.
 
-<img src="images/http-cache-hierarchy.png" class="center" alt="Cache hierarchy" />
+<img src="images/http-cache-hierarchy.png" class="center" alt="Cache hierarchy">
 
 The ability to define per-resource caching policies allows us to define “cache hierarchies” that allow us to control not only how long each is cached for, but also how quickly new versions are seen by visitor. For example, let’s analyze the above example:
 

@@ -195,7 +195,7 @@ The best part is that enabling GZIP is one of the simplest and highest payoff op
 
 What’s the best config for your server? The HTML5 Boilerplate project contains [sample configuration files](https://github.com/h5bp/server-configs) for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for the GZIP section, and confirm that your server is configured with recommended settings.
 
-<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size" />
+<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size">
 
 A quick and simple way to see GZIP in action is to open Chrome Developer Tools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
 
