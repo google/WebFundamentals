@@ -8,7 +8,7 @@ showcase:
 collection: showcase
 ---
 
-<header class="spotlight-header spotlight-header--detail">
+<header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
   <div class="spotlight-header__container container">
     <nav class="breadcrumbs">
       <p>
@@ -17,7 +17,10 @@ collection: showcase
     </nav>
     <div class="spotlight-header__copy g--half">
       <h2 class="xxlarge">Case study title</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora, nesciunt blanditiis quos eaque facere quam vitae similique aliquid atque! Sequi, nemo odio quis nam adipisci repellat aliquid molestiae maxime.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias deserunt nemo quisquam harum. Dolores dolorum tempore voluptatem.</p>
+    </div>
+    <div class="spotlight-header__media g--half g--last">
+      <img src="../../imgs/placeholder--device-landscape.jpg" class="spotlight-header__image">
     </div>
   </div>
 </header>

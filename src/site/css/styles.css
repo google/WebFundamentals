@@ -2494,28 +2494,46 @@ li > p {
   /* line 13, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header {
     padding-bottom: 78px;
-    min-height: 312px;
   }
 }
 
-/* line 23, ../_sass/_modules/_spotlight-header.scss */
+/* line 21, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__excerpt {
+  color: #404040;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3000em;
+  /* 26px */
+  padding-top: 1.3000em;
+  padding-bottom: 0;
+  letter-spacing: -0.3px;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+}
+
+/* line 27, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--landscape {
   overflow: hidden;
 }
+@media only screen and (min-width: 620px) {
+  /* line 27, ../_sass/_modules/_spotlight-header.scss */
+  .spotlight-header--landscape {
+    min-height: 468px;
+  }
+}
 
 @media only screen and (min-width: 620px) {
-  /* line 28, ../_sass/_modules/_spotlight-header.scss */
+  /* line 35, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--portrait {
     min-height: 390px;
   }
 }
 
-/* line 34, ../_sass/_modules/_spotlight-header.scss */
+/* line 41, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__container {
   position: relative;
 }
 @media only screen and (min-width: 800px) {
-  /* line 37, ../_sass/_modules/_spotlight-header.scss */
+  /* line 44, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header__container:after {
     content: "\e016";
     font-family: "icons";
@@ -2530,40 +2548,40 @@ li > p {
   }
 }
 
-/* line 57, ../_sass/_modules/_spotlight-header.scss */
+/* line 64, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--detail .spotlight-header__container:after {
   display: none;
 }
 
-/* line 65, ../_sass/_modules/_spotlight-header.scss */
+/* line 72, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
 }
 
-/* line 70, ../_sass/_modules/_spotlight-header.scss */
+/* line 77, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__cta {
   margin-top: 26px;
 }
 
-/* line 74, ../_sass/_modules/_spotlight-header.scss */
+/* line 81, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__media {
   position: relative;
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 78, ../_sass/_modules/_spotlight-header.scss */
+  /* line 85, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header__image {
     position: absolute;
   }
 }
-/* line 83, ../_sass/_modules/_spotlight-header.scss */
+/* line 90, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--portrait .spotlight-header__image {
   width: 100%;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 88, ../_sass/_modules/_spotlight-header.scss */
+  /* line 95, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     width: auto;
     max-width: none;
@@ -2571,7 +2589,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 88, ../_sass/_modules/_spotlight-header.scss */
+  /* line 95, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     height: 364px;
   }
@@ -3804,9 +3822,10 @@ li > p {
 .latest-spotlights__link {
   display: block;
   position: relative;
+  background: #ffffff;
 }
 
-/* line 71, ../_sass/_modules/_latest-spotlights.scss */
+/* line 72, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link img {
   display: block;
   width: 100%;
@@ -3819,7 +3838,7 @@ li > p {
   -webkit-transform: translateZ(0) scale(1, 1);
 }
 
-/* line 81, ../_sass/_modules/_latest-spotlights.scss */
+/* line 82, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link p {
   position: absolute;
   left: 0;
@@ -3848,7 +3867,7 @@ li > p {
   top: 0;
   left: 0;
 }
-/* line 90, ../_sass/_modules/_latest-spotlights.scss */
+/* line 91, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link p:before {
   padding-top: 13px;
   padding-left: 16px;
@@ -3858,17 +3877,17 @@ li > p {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* line 103, ../_sass/_modules/_latest-spotlights.scss */
+/* line 104, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link:hover p {
   background: #3372df;
 }
-/* line 106, ../_sass/_modules/_latest-spotlights.scss */
+/* line 107, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link:hover p:before {
   color: #b7cdf4;
 }
-/* line 111, ../_sass/_modules/_latest-spotlights.scss */
+/* line 112, ../_sass/_modules/_latest-spotlights.scss */
 .latest-spotlights__link:hover img {
-  opacity: .5;
+  opacity: .8;
 }
 
 /**
