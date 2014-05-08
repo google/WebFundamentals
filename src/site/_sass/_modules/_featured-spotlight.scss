@@ -17,7 +17,11 @@
   padding-bottom: $lineHeight*3;
   margin-top: $lineHeight*2;
 
-  p {
+  & h3 {
+    @include color-inherit;
+  }
+
+  & p {
     padding-bottom: $lineHeight;
   }
 
