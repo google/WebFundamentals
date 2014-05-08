@@ -11,12 +11,28 @@
 **/
 
 .spotlight-header {
-  margin-bottom: $lineHeight*3;
+  padding-bottom: $lineHeight;
+
+  @include medium {
+    padding-bottom: $lineHeight*3;
+    min-height: 312px;
+  }
+}
+
+// If we have a landscape image, we need overflow hidden
+.spotlight-header--landscape {
+  overflow: hidden;
+}
+
+
+.spotlight-header--portrait {
+  @include medium {
+    min-height: 390px;
+  }
 }
 
 .spotlight-header__container {
   position: relative;
-  overflow: hidden;
 
   &:after {
     @include wide {
@@ -29,6 +45,7 @@
       position: absolute;
       right: $lineHeight*2;
       top: -$lineHeight*2;
+      z-index: -1;
     }
   }
 }
@@ -53,3 +70,32 @@
 .spotlight-header__cta {
   margin-top: $lineHeight;
 }
+
+.spotlight-header__media {
+  position: relative;
+}
+
+.spotlight-header__image {
+  @include medium {
+    position: absolute;
+  }
+
+  .spotlight-header--portrait & {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .spotlight-header--landscape & {
+    @include medium {
+      width: auto;
+      max-width: none;
+      height: 260px
+    }
+
+    @include wide {
+      height: 364px;
+    }
+  }
+
+}
+
