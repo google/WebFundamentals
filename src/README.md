@@ -10,7 +10,7 @@
 ## Installation
 
 - Clone this repo
-- Move into the project root directory
+- Move to the `src` directory in your working copy
 - Install dependencies: `npm install`
 
 
