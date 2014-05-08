@@ -1,6 +1,6 @@
 # Contributing: submitting patches and tutorials
 
-## Submitting a code patch, studio/playground sample
+## Submitting a code patch or studio/playground sample
 
 ### Contributor License Agreements
 
@@ -21,8 +21,8 @@ Follow either of the two links above to access the appropriate CLA and instructi
 
 ## Writing Code ##
 
-If your contribution contains code, please make sure that it follows [the style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml), otherwise we will have to ask you to make changes, and that's no fun for anyone. 
+If your contribution contains code, please make sure that it follows [the style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml), otherwise we will have to ask you to make changes, and that's no fun for anyone.
 
 ## Formatting HTML ##
 
-To simplify PR reviews, please word-wrap HTML files at 80 characters or less. 
+To simplify PR reviews, please word-wrap HTML files at 80 characters or less.
