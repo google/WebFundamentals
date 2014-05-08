@@ -84,6 +84,16 @@
     }
 
   }
+
+  & .list-lessons {
+    @include medium {
+      margin-right: 173px;
+    }
+
+    @include wide {
+      margin-right: 306px;
+    }
+  }
 }
 
 .next-lessons--minimal {

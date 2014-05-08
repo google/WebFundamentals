@@ -3568,12 +3568,24 @@ li > p {
     right: 120px;
   }
 }
+@media only screen and (min-width: 620px) {
+  /* line 88, ../_sass/_modules/_next-lessons.scss */
+  .next-lessons .list-lessons {
+    margin-right: 173px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 88, ../_sass/_modules/_next-lessons.scss */
+  .next-lessons .list-lessons {
+    margin-right: 306px;
+  }
+}
 
-/* line 91, ../_sass/_modules/_next-lessons.scss */
+/* line 101, ../_sass/_modules/_next-lessons.scss */
 .next-lessons--minimal:after, .next-lessons--minimal:before {
   display: none;
 }
-/* line 95, ../_sass/_modules/_next-lessons.scss */
+/* line 105, ../_sass/_modules/_next-lessons.scss */
 .next-lessons--minimal ol {
   padding-left: 0;
 }
