@@ -26,24 +26,12 @@
 
   outline: 0;
 
-  @include prefixr(transition, none);
-
   &:hover {
     background: #4d4d4d;
     color: #ffffff;
-    border: 1px solid #4d4d4d;
+    border-color: #4d4d4d;
     text-decoration: none;
   }
-}
-
-// Mixin to create buttons
-@mixin style-button($color, $textColor, $isInverted: false) {
-
-  background: $color;
-  color: $textColor;
-  border: 1px solid darken($color, 10%);
-
-  @if $isInverted { border-color: transparent;}
 }
 
 

@@ -47,6 +47,7 @@
   $colorGrayBackground: #f0f0f0;
   $colorGrayKeyline: #e0e0e0;
   $colorGray: #737373;
+  $colorGrayMedium: #bababa;
   $colorGrayDark: #404040;
 
   $colorText: $colorGray;
@@ -396,6 +397,14 @@
       position: absolute;
       left: 0;
     }
+  }
+
+  // Mixin to create buttons
+  @mixin style-button($color, $textColor, $isInverted: false) {
+    background: $color;
+    color: $textColor;
+    border: 1px solid darken($color, 10%);
+    @if $isInverted { border-color: transparent; }
   }
 
   // Mixin to create links
