@@ -105,22 +105,22 @@ Follow the decision tree above to determine the optimal caching policy for a par
 
 <table>
 <thead>
-<tr>
-  <td width="30%">Cache-Control directives</td>
-  <td>Explanation</td>
-</tr>
+  <tr>
+    <th width="30%">Cache-Control directives</th>
+    <th>Explanation</th>
+  </tr>
 </thead>
 <tr>
-  <td>max-age=86400</td>
-  <td>Response can be cached by browser and any intermediary caches (i.e. it is "public") for up to 1 day (60 seconds x 60 minutes x 24 hours)</td>
+  <td data-th="cache-control">max-age=86400</td>
+  <td data-th="explanation">Response can be cached by browser and any intermediary caches (i.e. it is "public") for up to 1 day (60 seconds x 60 minutes x 24 hours)</td>
 </tr>
 <tr>
-  <td>private, max-age=600</td>
-  <td>Response can be cached by the client’s browser only for up to 10 minutes (60 seconds x 10 minutes)</td>
+  <td data-th="cache-control">private, max-age=600</td>
+  <td data-th="explanation">Response can be cached by the client’s browser only for up to 10 minutes (60 seconds x 10 minutes)</td>
 </tr>
 <tr>
-  <td>no-store</td>
-  <td>Response is not allowed to be cached and must be fetched in full on every request.</td>
+  <td data-th="cache-control">no-store</td>
+  <td data-th="explanation">Response is not allowed to be cached and must be fetched in full on every request.</td>
 </tr>
 </table>
 
