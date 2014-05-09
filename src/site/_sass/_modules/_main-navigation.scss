@@ -91,19 +91,13 @@
   }
 }
 
-.main-nav__item--current {
-  color: $colorYellowSecondary;
-}
-
 .main-nav__link {
+  @include type--large;
   color: $colorGrayDark;
   font-family: $fontHighlight;
-  @include type--large;
   margin-bottom: 1px;
   text-decoration: none;
-
   display: block;
-
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
 
@@ -116,22 +110,65 @@
   }
 
   @include medium {
-    margin-bottom: 0;
-    color: #ffffff;
     @include type--medium;
+    color: #ffffff;
+    margin-bottom: 0;
     padding: $lineHeight $lineHeight/2 $lineHeight;
+    position: relative;
 
+    @include color-inherit;
+  }
+
+}
+
+.main-nav__link--parent {
+  @include medium {
+    position: relative;
+
+    .no-touch &:hover {
+      color: $colorYellowSecondary;
+    }
+
+    // Creating arrow states for active item
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid $colorGrayBackground;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      display: none;
+    }
+
+    // Rules for when on current page
+    .main-nav__item--current & {
+      cursor: default;
+
+      .no-touch &:hover {
+        color: $colorGrayMedium;
+      }
+
+      // Show arrow when on current page
+      &:after {
+        display: block;
+      }
+    }
+
+    // Special rules for when it's in the home item
     .main-nav__item--home & {
       padding: $lineHeight/2 0 0 0;
       margin-top: 2px;
       font-weight: 300;
       font-size: $fontBase;
       line-height: $lineHeight - 6;
-      padding-top: 18px; // Random number... only way to align the home item as it doesnt follow the baseline grid alignment
+      padding: 18px 0 18px 31px; // Random number... only way to align the home item as it doesnt follow the baseline grid alignment
       font-weight: 400;
-      position: relative;
-      padding-left: 31px;
 
+      // Creating the slash icon
       &:before {
         content: $icon-slash;
         font-family: $fontIcon;
@@ -143,20 +180,6 @@
       }
     }
 
-    .main-nav__item--current & {
-      cursor: default;
-    }
-
-    &:hover {
-      color: $colorYellowSecondary;
-      // box-shadow: 0 0 1px 0 $colorGray;
-    }
-
-    .subnav-is-opened > & {
-      color: $colorYellowSecondary;
-    }
-
-    @include color-inherit;
   }
 
   @include wide {
@@ -168,8 +191,36 @@
       letter-spacing: 1px;
     }
   }
+}
 
 
+// Rules for elements when on the current page
+.main-nav__item--current {
+  color: $colorGrayMedium;
+
+  // Special rules for when its the home item
+  &.main-nav__item--home {
+    color: #ffffff;
+
+    & .main-nav__link--parent {
+      .no-touch &:hover {
+        color: #ffffff;
+      }
+
+      &:before {
+        color: $colorGrayMedium;
+      }
+    }
+  }
+
+  &.main-nav__item--has-child {
+    & .main-nav__link--parent {
+      .no-touch &:hover {
+        color: $colorYellowSecondary;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .main-nav__list--child {
@@ -225,6 +276,9 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 2;
+    border-top: 5px solid $colorGrayDark; // cover the current page arrow ;)
+    margin-top: -5px; // cover the current page arrow ;)
     border-bottom: 2px solid $colorGrayDark;
     padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
     color: $colorText;
@@ -233,7 +287,7 @@
 
   .subnav-is-opened & {
     display: block;
-    -webkit-animation: showNav 400ms both;
+    -webkit-animation: showNav 250ms ease-out both;
   }
 }
 
