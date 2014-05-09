@@ -5101,31 +5101,56 @@ ol.list-links.list-links--secondary a:before {
   margin-top: 26px;
   padding-left: 0;
 }
-/* line 550, ../_sass/_components/_list.scss */
-.recommended-list .recommended-list__item > div {
+@media only screen and (max-width: 619px) {
+  /* line 546, ../_sass/_components/_list.scss */
+  .recommended-list .recommended-list__item {
+    margin: 0 5%;
+  }
+}
+/* line 555, ../_sass/_components/_list.scss */
+.recommended-list .recommended-list__item .recommanded-list__content {
   background: #ffffff;
   padding: 39px 32px;
 }
-/* line 554, ../_sass/_components/_list.scss */
-.recommended-list .recommended-list__item > div > h4 {
-  padding-top: 0;
+@media only screen and (max-width: 619px) {
+  /* line 555, ../_sass/_components/_list.scss */
+  .recommended-list .recommended-list__item .recommanded-list__content {
+    border-top: 26px solid #f0f0f0;
+    margin-bottom: -26px;
+  }
+  /* line 564, ../_sass/_components/_list.scss */
+  .recommended-list .recommended-list__item .recommanded-list__content:first-child {
+    border: none;
+    margin-bottom: 0;
+  }
 }
-/* line 559, ../_sass/_components/_list.scss */
+/* line 570, ../_sass/_components/_list.scss */
+.recommended-list .recommended-list__item .recommanded-list__content > h4 {
+  padding-top: 0;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+}
+/* line 576, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item:first-child {
   margin-top: 0;
 }
-/* line 563, ../_sass/_components/_list.scss */
+/* line 580, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .icon-circle {
-  display: inline-block;
-  padding: 13px;
-  vertical-align: middle;
-  margin: 0;
+  display: none;
 }
-/* line 570, ../_sass/_components/_list.scss */
+@media only screen and (min-width: 620px) {
+  /* line 580, ../_sass/_components/_list.scss */
+  .recommended-list .recommended-list__item .icon-circle {
+    display: inline-block;
+    padding: 13px;
+    vertical-align: top;
+    margin: 0;
+  }
+}
+/* line 591, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .icon {
   font-size: 16px;
 }
-/* line 574, ../_sass/_components/_list.scss */
+/* line 595, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .cta--primary {
   margin-top: 26px;
 }
@@ -6229,7 +6254,7 @@ figcaption {
 .divider span:after {
   color: #a0c3ff;
   content: "\e005";
-  right: 8px;
+  right: 6px;
 }
 /* line 123, ../_sass/_helper.scss */
 .divider .divider-icon--secondary {

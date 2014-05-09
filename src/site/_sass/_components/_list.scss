@@ -544,15 +544,32 @@ ol.list-links {
   padding: 0;
 
   & .recommended-list__item {
+
+    @include small-only {
+      margin: 0 5%;
+    }
+
     margin-top: $lineHeight;
     padding-left: 0;
 
-    &>div {
+    & .recommanded-list__content {
+
       background: #ffffff;
       padding: ($lineHeight + $lineHeight/2) 32px;
 
+      @include small-only {
+        border-top: $lineHeight solid $colorGrayBackground;
+        margin-bottom: -26px;
+
+        &:first-child {
+          border: none;
+          margin-bottom: 0;
+        }
+      }
+
       &>h4 {
         padding-top: 0;
+        font-family: $fontHighlight;
       }
     }
 
@@ -561,10 +578,14 @@ ol.list-links {
     }
 
     & .icon-circle {
-      display: inline-block;
-      padding: 13px;
-      vertical-align: middle;
-      margin: 0;
+      display: none;
+
+      @include medium {
+        display: inline-block;
+        padding: 13px;
+        vertical-align: top;
+        margin: 0;
+      }
     }
 
     & .icon {
