@@ -231,7 +231,6 @@ ol.list-links {
 .featured-list__img-wrapper {
   position: relative;
   padding-top: $lineHeight;
-  margin: 0 -5%;
 
   @include medium {
     padding-top: 0;
@@ -549,6 +548,10 @@ ol.list-links {
       margin: 0 5%;
     }
 
+    @include medium {
+      @include flexbox;
+    }
+
     margin-top: $lineHeight;
     padding-left: 0;
 
@@ -567,10 +570,25 @@ ol.list-links {
         }
       }
 
+      @include medium {
+        @include flexbox;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+
       &>h4 {
         padding-top: 0;
         font-family: $fontHighlight;
       }
+
+      & p {
+        padding-bottom: $lineHeight;
+      }
+
+      & .cta--primary {
+        margin-top: auto;
+      }
+
     }
 
     &:first-child {
@@ -590,10 +608,6 @@ ol.list-links {
 
     & .icon {
       font-size: $fontBase;
-    }
-
-    & .cta--primary {
-      margin-top: $lineHeight;
     }
   }
 }

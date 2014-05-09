@@ -19,6 +19,10 @@
   $mediumContainer: 688px;
   $wideContainer: 864px;
 
+  $containerBleed: 16px;
+  $mediumContainerBleed: 30px;
+  $wideContainerBleed: 35px;
+
   // Defining grid sizes
   $mediumColCount: 3;
   $mediumColWidth: 30.3%;
@@ -157,21 +161,21 @@
       position: relative;
     }
 
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: $containerBleed;
+    padding-right: $containerBleed;
     margin-left: auto;
     margin-right: auto;
 
 
     @include medium {
-      padding-left: 4.8%;
-      padding-right: 4.8%;
+      padding-left: $mediumContainerBleed;
+      padding-right: $mediumContainerBleed;
       max-width: $mediumContainer;
     }
 
     @include wide {
-      padding-left: 4.4%;
-      padding-right: 4.4%;
+      padding-left: $wideContainerBleed;
+      padding-right: $wideContainerBleed;
     	max-width: $wideContainer;
     }
   }
