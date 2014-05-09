@@ -2414,12 +2414,12 @@ li > p {
     margin: 168px -35px 0 0;
   }
 }
-/* line 45, ../_sass/_modules/_editorial-header.scss */
-.editorial-header .editorial-header__subtitle {
+/* line 46, ../_sass/_modules/_editorial-header.scss */
+.editorial-header h2 {
   margin-top: 0;
 }
 
-/* line 51, ../_sass/_modules/_editorial-header.scss */
+/* line 52, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__excerpt {
   color: #404040;
   font-size: 20px;
@@ -2432,12 +2432,12 @@ li > p {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
-/* line 56, ../_sass/_modules/_editorial-header.scss */
+/* line 57, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .tag {
   padding-top: 52px;
 }
 
-/* line 60, ../_sass/_modules/_editorial-header.scss */
+/* line 61, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__subtitle {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2452,7 +2452,7 @@ li > p {
   color: #4285f4;
 }
 @media only screen and (min-width: 800px) {
-  /* line 60, ../_sass/_modules/_editorial-header.scss */
+  /* line 61, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2466,7 +2466,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 60, ../_sass/_modules/_editorial-header.scss */
+  /* line 61, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     padding-top: 0;
     padding-bottom: 26px;
@@ -2474,22 +2474,22 @@ li > p {
   }
 }
 
-/* line 73, ../_sass/_modules/_editorial-header.scss */
+/* line 74, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc {
   margin-top: 26px;
 }
-/* line 76, ../_sass/_modules/_editorial-header.scss */
+/* line 77, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc ol {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 76, ../_sass/_modules/_editorial-header.scss */
+  /* line 77, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__toc ol {
     padding-top: 0;
   }
 }
 
-/* line 85, ../_sass/_modules/_editorial-header.scss */
+/* line 86, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc-title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   border-bottom: 1px solid #e0e0e0;
@@ -3511,6 +3511,34 @@ li > p {
   margin-top: 78px;
   color: #ffffff;
   position: relative;
+  /* &:before {
+    @include medium {
+      content: attr(data-current-lesson);
+
+      font-family: $fontHighlight;
+      font-size: $fontBase;
+      font-weight: 400;
+
+      background: $colorGrayDark;
+      display: inline-block;
+      padding: 13px 7px;
+
+      right: 127px;
+      top: 143px;
+
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @include wide {
+      font-size: $fontMedium;
+      padding-left: 15px;
+      padding-right: 15px;
+      top: 126px;
+      right: 230px;
+    }
+
+  } */
 }
 /* line 20, ../_sass/_modules/_next-lessons.scss */
 .next-lessons h3 {
@@ -3529,81 +3557,64 @@ li > p {
   }
 }
 /* line 31, ../_sass/_modules/_next-lessons.scss */
-.next-lessons:before, .next-lessons:after {
+.next-lessons:after {
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
+  vertical-align: top;
+  line-height: 0;
   display: none;
 }
 @media only screen and (min-width: 620px) {
   /* line 31, ../_sass/_modules/_next-lessons.scss */
-  .next-lessons:before, .next-lessons:after {
-    display: inline-block;
+  .next-lessons:after {
+    display: block;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 41, ../_sass/_modules/_next-lessons.scss */
-  .next-lessons:before {
-    content: attr(data-current-lesson);
-    font-family: "Roboto Condensed", Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    background: #404040;
-    display: inline-block;
-    padding: 5px 7px;
-    right: 127px;
-    top: 143px;
-    z-index: 1;
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-@media only screen and (min-width: 800px) {
-  /* line 41, ../_sass/_modules/_next-lessons.scss */
-  .next-lessons:before {
-    font-size: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    top: 126px;
-    right: 230px;
-  }
-}
-@media only screen and (min-width: 620px) {
-  /* line 71, ../_sass/_modules/_next-lessons.scss */
+  /* line 81, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:after {
     content: "\e00e";
     font-family: "icons";
     font-size: 150px;
     right: 40px;
-    top: 185px;
+    top: 197px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 71, ../_sass/_modules/_next-lessons.scss */
+  /* line 81, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:after {
-    font-size: 210px;
+    font-size: 218px;
     right: 120px;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 88, ../_sass/_modules/_next-lessons.scss */
+  /* line 99, ../_sass/_modules/_next-lessons.scss */
   .next-lessons .list-lessons {
     margin-right: 173px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 88, ../_sass/_modules/_next-lessons.scss */
+  /* line 99, ../_sass/_modules/_next-lessons.scss */
   .next-lessons .list-lessons {
     margin-right: 306px;
   }
 }
 
-/* line 101, ../_sass/_modules/_next-lessons.scss */
+/* line 110, ../_sass/_modules/_next-lessons.scss */
+.next-lessons--minimal {
+  margin-bottom: 78px;
+}
+/* line 114, ../_sass/_modules/_next-lessons.scss */
 .next-lessons--minimal:after, .next-lessons--minimal:before {
   display: none;
 }
-/* line 105, ../_sass/_modules/_next-lessons.scss */
+/* line 118, ../_sass/_modules/_next-lessons.scss */
 .next-lessons--minimal ol {
   padding-left: 0;
+}
+/* line 122, ../_sass/_modules/_next-lessons.scss */
+.next-lessons--minimal a {
+  color: #ffffff;
 }
 
 /**
