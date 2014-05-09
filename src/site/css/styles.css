@@ -3807,7 +3807,7 @@ li > p {
   /* line 25, ../_sass/_modules/_google-header.scss */
   #gc-logo {
     float: left;
-    margin-top: 29px;
+    margin-top: 35px;
     width: 56px;
     width: auto;
     padding-top: 0;
@@ -3821,13 +3821,6 @@ li > p {
   width: 158px;
   height: 39px;
   max-width: none;
-}
-@media only screen and (min-width: 620px) {
-  /* line 42, ../_sass/_modules/_google-header.scss */
-  #gc-logo img {
-    width: 210px;
-    height: 52px;
-  }
 }
 
 /**
