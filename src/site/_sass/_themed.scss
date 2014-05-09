@@ -15,11 +15,11 @@
   .theme--multi-device-layouts & {
     color: $colorLayouts;
 
-    &.text-divider:before {
+    &.logo-icon:before {
       color: $colorLayouts;
     }
 
-    &.text-divider:after {
+    &.logo-icon:after {
       color: $colorLayoutsSecondary;
     }
   }
@@ -27,11 +27,11 @@
   .theme--introduction-to-media & {
     color: $colorMedia;
 
-    &.text-divider:before {
+    &.logo-icon:before {
       color: $colorMedia;
     }
 
-    &.text-divider:after {
+    &.logo-icon:after {
       color: $colorMediaSecondary;
     }
   }
@@ -39,11 +39,11 @@
   .theme--user-input & {
     color: $colorUser;
 
-    &.text-divider:before {
+    &.logo-icon:before {
       color: $colorUser;
     }
 
-    &.text-divider:after {
+    &.logo-icon:after {
       color: $colorUserSecondary;
     }
   }
@@ -51,11 +51,11 @@
   .theme--performance & {
     color: $colorPerformance;
 
-    &.text-divider:before {
+    &.logo-icon:before {
       color: $colorPerformance;
     }
 
-    &.text-divider:after {
+    &.logo-icon:after {
       color: $colorPerformanceSecondary;
     }
   }

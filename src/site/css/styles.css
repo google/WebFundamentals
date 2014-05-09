@@ -2854,9 +2854,8 @@ li > p {
 /* line 31, ../_sass/_modules/_page-header.scss */
 .page-header__excerpt {
   position: relative;
-  padding-top: 0;
 }
-/* line 35, ../_sass/_modules/_page-header.scss */
+/* line 34, ../_sass/_modules/_page-header.scss */
 .page-header__excerpt:last-child {
   padding-bottom: 104px;
 }
@@ -5764,11 +5763,11 @@ figcaption {
   color: #297ea9;
 }
 /* line 18, ../_sass/_themed.scss */
-.theme--multi-device-layouts .themed.text-divider:before {
+.theme--multi-device-layouts .themed.logo-icon:before {
   color: #297ea9;
 }
 /* line 22, ../_sass/_themed.scss */
-.theme--multi-device-layouts .themed.text-divider:after {
+.theme--multi-device-layouts .themed.logo-icon:after {
   color: #89c4e2;
 }
 /* line 27, ../_sass/_themed.scss */
@@ -5776,11 +5775,11 @@ figcaption {
   color: #cf423a;
 }
 /* line 30, ../_sass/_themed.scss */
-.theme--introduction-to-media .themed.text-divider:before {
+.theme--introduction-to-media .themed.logo-icon:before {
   color: #cf423a;
 }
 /* line 34, ../_sass/_themed.scss */
-.theme--introduction-to-media .themed.text-divider:after {
+.theme--introduction-to-media .themed.logo-icon:after {
   color: #edb8b5;
 }
 /* line 39, ../_sass/_themed.scss */
@@ -5788,11 +5787,11 @@ figcaption {
   color: #2c8566;
 }
 /* line 42, ../_sass/_themed.scss */
-.theme--user-input .themed.text-divider:before {
+.theme--user-input .themed.logo-icon:before {
   color: #2c8566;
 }
 /* line 46, ../_sass/_themed.scss */
-.theme--user-input .themed.text-divider:after {
+.theme--user-input .themed.logo-icon:after {
   color: #78d2b3;
 }
 /* line 51, ../_sass/_themed.scss */
@@ -5800,11 +5799,11 @@ figcaption {
   color: #7b5294;
 }
 /* line 54, ../_sass/_themed.scss */
-.theme--performance .themed.text-divider:before {
+.theme--performance .themed.logo-icon:before {
   color: #7b5294;
 }
 /* line 58, ../_sass/_themed.scss */
-.theme--performance .themed.text-divider:after {
+.theme--performance .themed.logo-icon:after {
   color: #c4add2;
 }
 
@@ -6180,57 +6179,62 @@ figcaption {
 
 /*==========  TEXT DIVIDER  ==========*/
 /* line 64, ../_sass/_helper.scss */
-hr {
+.text-divider {
   width: 40%;
   margin: 26px auto;
+  margin-top: 52px;
   margin-bottom: 25px;
   border: 0;
   height: 1px;
   color: #e0e0e0;
   background-color: #e0e0e0;
-  position: relative;
 }
-/* line 75, ../_sass/_helper.scss */
-hr:before, hr:after {
+/* line 74, ../_sass/_helper.scss */
+.text-divider span {
+  background: #ffffff;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 39px;
+  height: 1px;
+}
+/* line 83, ../_sass/_helper.scss */
+.text-divider span:before, .text-divider span:after {
   position: absolute;
   font-family: "icons";
   top: -12px;
-  background-color: #ffffff;
   color: #4285f4;
 }
-/* line 83, ../_sass/_helper.scss */
-hr:before {
+/* line 90, ../_sass/_helper.scss */
+.text-divider span:before {
   content: "\e004";
-  left: 44%;
-  width: 31px;
-  text-align: left;
-  padding-left: 8px;
+  left: 8px;
 }
-/* line 91, ../_sass/_helper.scss */
-hr:after {
-  content: "\e005";
-  right: 47%;
+/* line 95, ../_sass/_helper.scss */
+.text-divider span:after {
   color: #a0c3ff;
+  content: "\e005";
+  right: 8px;
 }
 
-/* line 101, ../_sass/_helper.scss */
-.text-divider--secondary:before, .text-divider--secondary:after {
+/* line 103, ../_sass/_helper.scss */
+.text-divider--secondary span {
   background-color: #f0f0f0;
 }
 
 /*==========  GENERIC  ==========*/
-/* line 107, ../_sass/_helper.scss */
+/* line 108, ../_sass/_helper.scss */
 .centered {
   text-align: center;
 }
 
-/* line 111, ../_sass/_helper.scss */
+/* line 112, ../_sass/_helper.scss */
 .text-highlight {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
 /*==========  TAG  ==========*/
-/* line 117, ../_sass/_helper.scss */
+/* line 118, ../_sass/_helper.scss */
 .tag {
   font-size: 13px;
   line-height: 2.0000em;
@@ -6244,32 +6248,32 @@ hr:after {
   display: inline-block;
   text-decoration: none;
 }
-/* line 125, ../_sass/_helper.scss */
+/* line 126, ../_sass/_helper.scss */
 .tag:hover {
   color: #404040;
 }
-/* line 129, ../_sass/_helper.scss */
+/* line 130, ../_sass/_helper.scss */
 .tag:before {
   content: "# ";
   display: inline-block;
 }
 
 /*==========  INDENTED CONTENT  ==========*/
-/* line 137, ../_sass/_helper.scss */
+/* line 138, ../_sass/_helper.scss */
 .indented {
   padding-left: 32px;
 }
-/* line 142, ../_sass/_helper.scss */
+/* line 143, ../_sass/_helper.scss */
 .indented ul, .indented ol, .indented dl {
   padding-left: 0;
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 147, ../_sass/_helper.scss */
+  /* line 148, ../_sass/_helper.scss */
   .indented-medium {
     padding-left: 32px;
   }
-  /* line 154, ../_sass/_helper.scss */
+  /* line 155, ../_sass/_helper.scss */
   .indented-medium ul, .indented-medium ol, .indented-medium dl {
     padding-left: 0;
   }

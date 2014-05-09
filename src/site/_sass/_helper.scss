@@ -61,46 +61,47 @@
 
 /*==========  TEXT DIVIDER  ==========*/
 
-hr {
+.text-divider {
   width: 40%;
   margin: $lineHeight auto;
+  margin-top: $lineHeight*2;
   margin-bottom: $lineHeight - 1;
   border: 0;
   height: 1px;
   color: $colorGrayKeyline;
   background-color: $colorGrayKeyline;
-  position: relative;
 
-  &:before,
-  &:after {
-    position: absolute;
-    font-family: $fontIcon;
-    top: -12px;
-    background-color: #ffffff;
-    color: $colorBlue;
+  & span {
+    background: #ffffff;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 39px;
+    height: 1px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      font-family: $fontIcon;
+      top: -12px;
+      color: $colorBlue;
+    }
+
+    &:before {
+      content: $icon-chevron-left;
+      left: 8px;
+    }
+
+    &:after {
+      color: $colorBlueSecondary;
+      content: $icon-chevron-right;
+      right: 8px;
+    }
   }
-
-  &:before {
-    content: $icon-chevron-left;
-    left: 44%;
-    width: 31px;
-    text-align: left;
-    padding-left: 8px;
-  }
-
-  &:after {
-    content: $icon-chevron-right;
-    right: 47%;
-    color: $colorBlueSecondary;
-  }
-
 }
 
-.text-divider--secondary {
-  &:before,
-  &:after {
-    background-color: $colorGrayBackground;
-  }
+.text-divider--secondary span {
+  background-color: $colorGrayBackground;
 }
 
 /*==========  GENERIC  ==========*/
