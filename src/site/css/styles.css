@@ -3862,45 +3862,50 @@ li > p {
   clear: both;
 }
 /* line 23, ../_sass/_modules/_google-footer.scss */
-#gc-footer ul {
+#gc-footer .google-list {
   margin: 0 0 0 52px;
   padding: 0;
 }
-/* line 28, ../_sass/_modules/_google-footer.scss */
-#gc-footer li {
+/* line 27, ../_sass/_modules/_google-footer.scss */
+#gc-footer .google-list li {
   padding-left: 0;
 }
-@media only screen and (min-width: 620px) {
-  /* line 28, ../_sass/_modules/_google-footer.scss */
-  #gc-footer li {
-    margin-right: 30px;
-    display: inline-block;
-    margin-top: 4px;
-  }
-}
-/* line 38, ../_sass/_modules/_google-footer.scss */
-#gc-footer li a {
-  color: #e0e0e0;
+/* line 31, ../_sass/_modules/_google-footer.scss */
+#gc-footer .google-list li a {
   font-size: 16px;
-  display: block;
 }
 @media only screen and (min-width: 620px) {
-  /* line 38, ../_sass/_modules/_google-footer.scss */
-  #gc-footer li a {
+  /* line 31, ../_sass/_modules/_google-footer.scss */
+  #gc-footer .google-list li a {
     font-size: 13px;
   }
 }
+/* line 41, ../_sass/_modules/_google-footer.scss */
+#gc-footer li {
+  display: inline-block;
+}
+@media only screen and (min-width: 620px) {
+  /* line 41, ../_sass/_modules/_google-footer.scss */
+  #gc-footer li {
+    margin-right: 30px;
+  }
+}
 /* line 48, ../_sass/_modules/_google-footer.scss */
+#gc-footer li a {
+  color: #e0e0e0;
+  display: block;
+}
+/* line 53, ../_sass/_modules/_google-footer.scss */
 #gc-footer li:before {
   display: none;
 }
-/* line 51, ../_sass/_modules/_google-footer.scss */
+/* line 56, ../_sass/_modules/_google-footer.scss */
 #gc-footer img {
   vertical-align: center;
   float: left;
   margin-top: 1px;
 }
-/* line 57, ../_sass/_modules/_google-footer.scss */
+/* line 62, ../_sass/_modules/_google-footer.scss */
 #gc-footer #developers-logo-footer {
   width: auto;
 }
@@ -5224,6 +5229,20 @@ ol.list-links.list-links--secondary a:before {
 }
 /* line 609, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .icon {
+  font-size: 16px;
+}
+
+/*==========  SITE MAP LIST  ==========*/
+/* line 617, ../_sass/_components/_list.scss */
+.sitemap-list {
+  padding-left: 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 25px;
+  padding-bottom: 52px;
+}
+
+/* line 624, ../_sass/_components/_list.scss */
+.sitemap-list__link--parent {
   font-size: 16px;
 }
 

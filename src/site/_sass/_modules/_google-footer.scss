@@ -20,29 +20,34 @@
   overflow: hidden;
   clear: both;
 
-  & ul {
+  & .google-list {
     margin: 0 0 0 52px;
     padding: 0;
+
+    & li {
+      padding-left: 0;
+
+
+      & a {
+        font-size: $fontBase;
+
+        @include medium {
+          font-size: $fontSmall;
+        }
+      }
+    }
   }
 
   & li {
-    padding-left: 0;
+    display: inline-block;
 
     @include medium {
       margin-right: 30px;
-      display: inline-block;
-      margin-top: 4px;
     }
-
 
     & a {
       color: $colorGrayKeyline;
-      font-size: $fontBase;
       display: block;
-
-      @include medium {
-        font-size: $fontSmall;
-      }
     }
 
     &:before { display:none; }

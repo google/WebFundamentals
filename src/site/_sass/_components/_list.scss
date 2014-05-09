@@ -612,3 +612,15 @@ ol.list-links {
   }
 }
 
+/*==========  SITE MAP LIST  ==========*/
+
+.sitemap-list {
+  padding-left: 0;
+  border-bottom: 1px solid $colorGrayKeyline;
+  margin-bottom: $lineHeight - 1;;
+  padding-bottom: $lineHeight*2;
+}
+
+.sitemap-list__link--parent {
+  font-size: $fontBase;
+}
