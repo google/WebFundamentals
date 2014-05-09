@@ -50,8 +50,8 @@ figure {
   display: block;
 
   // this is used to give it a "full bleed" look on mobile
-  margin-left: -6%;
-  margin-right: -6%;
+  margin-left: -$containerBleed;
+  margin-right: -$containerBleed;
 
   @include medium {
     display: inline-block;
@@ -94,8 +94,8 @@ figcaption {
   margin-bottom: $lineHeight;
 
   // this is used to give it a "full bleed" look on mobile
-  margin-left: -6%;
-  margin-right: -6%;
+  margin-left: -$containerBleed;
+  margin-right: -$containerBleed;
 
   @include medium {
     padding-top: 54.2%;
@@ -124,6 +124,5 @@ figcaption {
   &,
   & img {
     min-width: 100%;
-    max-width: 100%;
   }
 }

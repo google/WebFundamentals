@@ -51,9 +51,9 @@ collection: showcase
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
             <a href="#" class="cta--primary">View Google</a>
           </div>
-          <div class="featured-list__img-wrapper g--half g--last">
+          <figure class="featured-list__img-wrapper g--half g--last">
             <img src="../../imgs/placeholder--medium.png" alt="image exemple">
-          </div>
+          </figure>
         </div>
       </li>
       <div class="divider divider--fluid">
@@ -66,9 +66,9 @@ collection: showcase
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
             <a href="#" class="cta--primary">View Google</a>
           </div>
-          <div class="featured-list__img-wrapper g--half g--last">
+          <figure class="featured-list__img-wrapper g--half g--last">
             <img src="../../imgs/placeholder--medium.png" alt="image exemple">
-          </div>
+          </figure>
         </div>
       </li>
     </ul>
