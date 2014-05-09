@@ -22,8 +22,8 @@
 
           <header class="clear">
             <h3 class="xxlarge themed">{{ page.title }}</h3>
-            <div class="text-divider">
-              <span class="themed logo-icon"></span>
+            <div class="divider">
+              <span class="themed divider-icon"></span>
             </div>
             <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">{{page.introduction}}</p>
           </header>
@@ -45,6 +45,9 @@
               <h3 class="xlarge g-wide--2 g--centered"><a href="{{site.baseurl}}{{guide.url}}" title="Read the lesson {{guide.title}}" class="themed">{{guide.title}}</a></h3>
               <p class="g-medium--2 g-wide--3 g--centered">{{guide.description}}</p>
             </li>
+            <div class="divider divider--secondary divider--short">
+              <span class="divider-icon divider-icon--secondary"></span>
+            </div>
             {% endfor %}
 
           </ol>
