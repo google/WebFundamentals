@@ -32,7 +32,7 @@
 
   @include medium {
     float: left;
-    margin-top: 29px;
+    margin-top: 35px;
     width: 56px;
     width: auto;
     padding-top: 0;
@@ -46,9 +46,9 @@
     height: 39px;
     max-width: none;
 
-    @include medium {
-      width: 210px;
-      height: 52px;
-    }
+    // @include medium {
+    //   width: 210px;
+    //   height: 52px;
+    // }
   }
 }
