@@ -15,7 +15,6 @@
   font-family: $fontHighlight;
   color: $colorGrayDark;
   font-weight: 400;
-  line-height: 19px;
   text-align: center;
   padding: $lineHeight/2 40px $lineHeight/2 $lineHeight/2;
   margin: 0 $lineHeight/2 0 -5%;
@@ -36,29 +35,32 @@
   .icon {
     font-family: $fontIcon;
     font-size: 26px;
-    line-height: 70px;
-    width: 70px;
-    height: 70px;
-    color: #ffffff;
     text-align: center;
+    color: #ffffff;
+
+    width: 70px;
+    height: 0;
+    line-height: 0;
+    margin-right: -35px; // half of width
+
+    overflow: visible;
 
     position: absolute;
     right: 0;
-    top: 0;
-    margin-right: -35px;
-    margin-top: -2px;
+    top: 50%;
     display: block;
 
     -webkit-animation: cog 4000ms ease-in-out;
     animation: cog 4000ms ease-in-out;
-
   }
 
   @include medium {
     float: right;
-    margin-top: 18px;
+    // margin-top: $lineHeight/2;
     padding-left: 32px;
     padding-right: (32px) + 26;
+    width: auto;
+    max-width: 76%;
   }
 
   & a {

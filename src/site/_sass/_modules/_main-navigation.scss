@@ -63,20 +63,8 @@
     float: left;
     background-color: transparent;
 
-    &.main-nav__item--home {
-      width: 21.5%;
-    }
-
     &:last-child {
       border-right: none;
-    }
-  }
-
-  @include wide {
-    // Taken from _grid.scss to equal 1 column
-    &.main-nav__item--home & {
-      margin-right: 3.7%;
-      width: 22.2%;
     }
   }
 
@@ -157,39 +145,10 @@
         display: block;
       }
     }
-
-    // Special rules for when it's in the home item
-    .main-nav__item--home & {
-      padding: $lineHeight/2 0 0 0;
-      margin-top: 2px;
-      font-weight: 300;
-      font-size: $fontBase;
-      line-height: $lineHeight - 6;
-      padding: 18px 0 18px 31px; // Random number... only way to align the home item as it doesnt follow the baseline grid alignment
-      font-weight: 400;
-
-      // Creating the slash icon
-      &:before {
-        content: $icon-slash;
-        font-family: $fontIcon;
-        font-size: 38px;
-        position: absolute;
-        left: 0;
-        top: 37px;
-        line-height: 0;
-      }
-    }
-
   }
 
   @include wide {
     padding-bottom: $lineHeight;
-
-    .main-nav__item--home & {
-      padding-top: 18px; // Random number... only way to align the home item as it doesnt follow the baseline grid alignment
-      line-height: $lineHeight - 6;
-      letter-spacing: 1px;
-    }
   }
 }
 
@@ -197,21 +156,6 @@
 // Rules for elements when on the current page
 .main-nav__item--current {
   color: $colorGrayMedium;
-
-  // Special rules for when its the home item
-  &.main-nav__item--home {
-    color: #ffffff;
-
-    & .main-nav__link--parent {
-      .no-touch &:hover {
-        color: #ffffff;
-      }
-
-      &:before {
-        color: $colorGrayMedium;
-      }
-    }
-  }
 
   &.main-nav__item--has-child {
     & .main-nav__link--parent {
