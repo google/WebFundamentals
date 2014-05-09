@@ -206,13 +206,9 @@ ol.list-links {
 
 .featured-list__item {
   padding-left: 0;
-  padding-top: $lineHeight;
-  padding-bottom: $lineHeight;
 
   @include medium {
-    border-top: 1px solid $colorGrayKeyline;
-    padding-top: $lineHeight*2;
-    margin-bottom: -1px;
+    padding-top: $lineHeight;
   }
 
   margin-top: $lineHeight;
@@ -412,36 +408,28 @@ ol.list-links {
 
 /*==========  ARTICLE LIST  ==========*/
 .articles-list {
-  padding: (($lineHeight * 3) - 1) 0 ($lineHeight * 2 + 1);
+  padding: (($lineHeight * 2) - 1) 0 ($lineHeight * 2 + 1);
+
+  .divider {
+
+    &:last-child {
+      display: none;
+    }
+
+  }
+
 }
 
 .articles-list__item {
   padding-left: 0;
-  padding-bottom: $lineHeight*2;
   margin-bottom: $lineHeight*2;
   position: relative;
 
   &:before {
-    content: "";
-    display: block;
-    width: 40%;
-    height: 1px;
-    box-shadow: inset 0 1px 0 0 $colorGrayKeyline;
-    margin-right: 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -20%;
-  }
-
-  &:last-child {
-    &:before {
-      display: none;
-    }
+    display: none;
   }
 
   & h3 {
-    padding-top: 0;
 
     @include medium {
       & a {

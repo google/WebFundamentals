@@ -17,8 +17,8 @@ collection: showcase
     </nav>
     <header class="clear">
       <h3 class="xxlarge">All spotlights</h3>
-      <div class="text-divider">
-        <span class="themed logo-icon"></span>
+      <div class="divider">
+        <span class="themed divider-icon"></span>
       </div>
       <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">Don't assume your users prefer one device over another. Provide a great experience no matter what device they choose. Main goal for responsive web design: create sites, apps, and experiences that scale well across all devices.</p>
     </header>
@@ -56,6 +56,9 @@ collection: showcase
           </div>
         </div>
       </li>
+      <div class="divider divider--fluid">
+        <span class="divider-icon divider-icon--secondary"></span>
+      </div>
       <li class="featured-list__item clear">
         <div class="container-small">
           <div class="featured-list__content g--half">
