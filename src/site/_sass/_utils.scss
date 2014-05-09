@@ -395,6 +395,14 @@
     }
   }
 
+  // Mixin to create buttons
+  @mixin style-button($color, $textColor, $isInverted: false) {
+    background: $color;
+    color: $textColor;
+    border: 1px solid darken($color, 10%);
+    @if $isInverted { border-color: transparent; }
+  }
+
   // Mixin to create links
   @mixin style-cta($textColor, $linkIcon: false, $fontWeight: 400) {
     font-family: $fontHighlight;

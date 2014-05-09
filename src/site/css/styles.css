@@ -1772,7 +1772,7 @@ li > p {
   display: block;
   line-height: 26px;
 }
-/* line 407, ../_sass/_utils.scss */
+/* line 415, ../_sass/_utils.scss */
 .main-nav__link--explore:hover {
   color: #404040;
 }
@@ -1793,11 +1793,11 @@ li > p {
     letter-spacing: 1px;
     text-decoration: none;
   }
-  /* line 407, ../_sass/_utils.scss */
+  /* line 415, ../_sass/_utils.scss */
   .main-nav__link--explore:hover {
     color: #404040;
   }
-  /* line 413, ../_sass/_utils.scss */
+  /* line 421, ../_sass/_utils.scss */
   .main-nav__link--explore:before {
     display: inline-block;
     padding-right: 10px;
@@ -2142,12 +2142,12 @@ li > p {
     max-width: 864px;
   }
 }
-/* line 428, ../_sass/_utils.scss */
+/* line 436, ../_sass/_utils.scss */
 .highlight-module__container:before {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 428, ../_sass/_utils.scss */
+  /* line 436, ../_sass/_utils.scss */
   .highlight-module__container:before {
     display: block;
     position: absolute;
@@ -2162,19 +2162,19 @@ li > p {
     color: #ffffff;
   }
 }
-/* line 446, ../_sass/_utils.scss */
+/* line 454, ../_sass/_utils.scss */
 .highlight-module--left .highlight-module__container:before {
   right: auto;
   left: 45px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 428, ../_sass/_utils.scss */
+  /* line 436, ../_sass/_utils.scss */
   .highlight-module__container:before {
     top: 134px;
     width: 22.2%;
     font-size: 180px;
   }
-  /* line 456, ../_sass/_utils.scss */
+  /* line 464, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 430px;
   }
@@ -4459,34 +4459,30 @@ li > p {
   text-decoration: none;
   letter-spacing: 1px;
   outline: 0;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  transition: none;
 }
-/* line 31, ../_sass/_components/_button.scss */
+/* line 29, ../_sass/_components/_button.scss */
 .button:hover, .button--primary:hover, .button--secondary:hover, .button--secondary-variation:hover {
   background: #4d4d4d;
   color: #ffffff;
-  border: 1px solid #4d4d4d;
+  border-color: #4d4d4d;
   text-decoration: none;
 }
 
-/* line 50, ../_sass/_components/_button.scss */
+/* line 38, ../_sass/_components/_button.scss */
 .button--primary {
   background: #3372df;
   color: white;
   border: 1px solid #1e5ac1;
 }
 
-/* line 55, ../_sass/_components/_button.scss */
+/* line 43, ../_sass/_components/_button.scss */
 .button--secondary {
   background: white;
   color: #3372df;
   border: 1px solid #e6e6e6;
 }
 
-/* line 60, ../_sass/_components/_button.scss */
+/* line 48, ../_sass/_components/_button.scss */
 .button--secondary-variation {
   background: white;
   color: #3372df;
@@ -5230,11 +5226,11 @@ a:hover {
   letter-spacing: 1px;
   text-decoration: none;
 }
-/* line 407, ../_sass/_utils.scss */
+/* line 415, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
-/* line 413, ../_sass/_utils.scss */
+/* line 421, ../_sass/_utils.scss */
 .cta--primary:before {
   display: inline-block;
   padding-right: 10px;
@@ -5253,7 +5249,7 @@ a:hover {
   line-height: 1;
   letter-spacing: 1px;
 }
-/* line 407, ../_sass/_utils.scss */
+/* line 415, ../_sass/_utils.scss */
 .cta--secondary:hover {
   color: #404040;
 }
