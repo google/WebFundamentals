@@ -7,7 +7,7 @@ snippet: "Touch, tap, click, and submit."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 3
+  order: 2
 id: user-input
 collection: documentation
 ---

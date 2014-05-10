@@ -7,7 +7,7 @@ snippet: "Only use media that loads fast and scales."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 2
+  order: 3
 id: introduction-to-media
 collection: documentation
 ---
