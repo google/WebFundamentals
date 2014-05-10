@@ -10,3 +10,19 @@
 *
 **/
 
+.back-to-top {
+  border-top: 2px solid $colorGrayKeyline;
+  margin-bottom: -2px;
+  margin-top: $lineHeight;
+  padding: $lineHeight/2 0;
+  text-align: center;
+
+  & .cta--secondary {
+    text-decoration: none;
+
+    & .icon {
+      vertical-align: middle;
+      padding-left: 5px;
+    }
+  }
+}

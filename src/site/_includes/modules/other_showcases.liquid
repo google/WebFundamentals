@@ -5,7 +5,7 @@
 
     <ul class="related-items-list list-reset">
     {% for casestudy in page.other_case_studies %}
-      <li class="g-medium--1 g-wide--1 {% cycle '','','g-medium--last g-wide--last' %} theme--{{casestudy.theme}}}">
+      <li class="g-medium--1 g-wide--1 {% cycle '','','g-medium--last g-wide--last' %}">
         <a href="{{casestudy.link}}">
           <img src="{{casestudy.image}}" alt="{{casestudy.title}}">
           <p class="medium">{{casestudy.description}}</p>

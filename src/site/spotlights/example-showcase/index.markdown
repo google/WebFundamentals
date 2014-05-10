@@ -1,22 +1,19 @@
 ---
 layout: showcase
 title: "Showcase example"
-introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus pariatur nihil fugiat repudiandae nostrum alias deserunt nemo quisquam harum. Dolores dolorum tempore voluptatem."
-header_image: ../../imgs/placeholder--device-landscape.jpg
 description: "This is an example of a showcase page"
-showcase:
-  written_on: 2014-01-01
-  updated_on: 2014-02-02
-collection: showcase
+introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus."
+header_image: ../../imgs/placeholder--device-landscape.png
+header_orientation: landscape
 our_views:
   good:
-    - Phasellus ultrices nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Phasellus ultrices nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Phasellus ultrices nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
   bad:
-    - Phasellus ultrices nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Phasellus ultrices nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Phasellus ultrices nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
 other_case_studies:
   - title: Case study number one
     description: Guides title which goes over two lines
@@ -40,6 +37,10 @@ related_guides:
   - title: Related guide number three with a title that's honestly way too long
     link: /spotlights/example-showcase/
     section: Multi-device layouts
+showcase:
+  written_on: 2014-01-01
+  updated_on: 2014-02-02
+collection: showcase
 ---
 
 <div class="case-study-wrapper has-video-after">

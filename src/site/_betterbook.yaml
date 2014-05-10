@@ -1,14 +1,12 @@
 toc:
-- title: "Web Fundamentals"
+- title: "Home"
   path: /
   home: true
 - title: "Getting Started"
   path: /getting-started/your-first-multi-screen-site/
-  section:
-    - title: "Create Your First Multi-Screen Site"
-      path: /getting-started/your-first-multi-screen-site/
 - title: "Documentation"
   path: /documentation/
+  hasSubNav: true
   section:
     - title: "Multi-Device Layouts"
       path: /documentation/multi-device-layouts/

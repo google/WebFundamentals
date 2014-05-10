@@ -199,25 +199,28 @@ ol.list-links {
 /*==========  FEATURED LIST  ==========*/
 
 .featured-list {
-  padding-top: $lineHeight * 3;
-  padding-bottom: $lineHeight * 3;
+  padding-top: $lineHeight * 2;
+  padding-bottom: $lineHeight * 2;
+  padding-left: 0;
 }
 
 .featured-list__item {
-  background: #ffffff;
   padding-left: 0;
-  padding-top: $lineHeight;
-  padding-bottom: $lineHeight;
 
   @include medium {
-    min-height: $lineHeight * 13;
-    padding: $lineHeight * 2 32px;
+    padding-top: $lineHeight;
   }
 
   margin-top: $lineHeight;
 
   &:first-child {
     margin-top: 0;
+    padding-top: 0;
+    border: none;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 
   & p {
@@ -226,13 +229,10 @@ ol.list-links {
 }
 
 .featured-list__img-wrapper {
-  display: none;
   position: relative;
   padding-top: $lineHeight;
-  margin: 0 -5%;
 
   @include medium {
-    display: block;
     padding-top: 0;
     margin: 0;
   }
@@ -326,6 +326,7 @@ ol.list-links {
     @include medium {
       padding-top: 0;
       padding-bottom: 0;
+      margin-bottom: 0;
       border-color: transparent;
     }
   }
@@ -406,36 +407,28 @@ ol.list-links {
 
 /*==========  ARTICLE LIST  ==========*/
 .articles-list {
-  padding: (($lineHeight * 3) - 1) 0 ($lineHeight * 2 + 1);
+  padding: (($lineHeight * 2) - 1) 0 ($lineHeight * 2 + 1);
+
+  .divider {
+
+    &:last-child {
+      display: none;
+    }
+
+  }
+
 }
 
 .articles-list__item {
   padding-left: 0;
-  padding-bottom: $lineHeight*2;
   margin-bottom: $lineHeight*2;
   position: relative;
 
   &:before {
-    content: "";
-    display: block;
-    width: 40%;
-    height: 1px;
-    box-shadow: inset 0 1px 0 0 $colorGrayKeyline;
-    margin-right: 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -20%;
-  }
-
-  &:last-child {
-    &:before {
-      display: none;
-    }
+    display: none;
   }
 
   & h3 {
-    padding-top: 0;
 
     @include medium {
       & a {
@@ -542,4 +535,92 @@ ol.list-links {
   &:before {
     display: none;
   }
+}
+
+/*==========  recommended LIST  ==========*/
+
+.recommended-list {
+  padding: 0;
+
+  & .recommended-list__item {
+
+    @include small-only {
+      margin: 0 5%;
+    }
+
+    @include medium {
+      @include flexbox;
+    }
+
+    margin-top: $lineHeight;
+    padding-left: 0;
+
+    & .recommanded-list__content {
+
+      background: #ffffff;
+      padding: ($lineHeight + $lineHeight/2) 32px;
+
+      @include small-only {
+        border-top: $lineHeight solid $colorGrayBackground;
+        margin-bottom: -26px;
+
+        &:first-child {
+          border: none;
+          margin-bottom: 0;
+        }
+      }
+
+      @include medium {
+        @include flexbox;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+
+      &>h4 {
+        padding-top: 0;
+        font-family: $fontHighlight;
+      }
+
+      & p {
+        padding-bottom: $lineHeight;
+      }
+
+      & .cta--primary {
+        margin-top: auto;
+      }
+
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & .icon-circle {
+      display: none;
+
+      @include medium {
+        display: inline-block;
+        padding: 13px;
+        vertical-align: top;
+        margin: 0;
+      }
+    }
+
+    & .icon {
+      font-size: $fontBase;
+    }
+  }
+}
+
+/*==========  SITE MAP LIST  ==========*/
+
+.sitemap-list {
+  padding-left: 0;
+  border-bottom: 1px solid $colorGrayKeyline;
+  margin-bottom: $lineHeight - 1;;
+  padding-bottom: $lineHeight*2;
+}
+
+.sitemap-list__link--parent {
+  font-size: $fontBase;
 }

@@ -17,7 +17,7 @@
   <div class="next-lessons themed--background" data-current-lesson="0{{articleIndex}}">
     <h3><i class="icon icon-lessons"></i> Next Lessons</h3>
     <ol class="list-lessons list-links">
-  {% for p in page.parent.parent.articles[page.parent.parent.id] %}{% if p.id == page.collection %}{% for guide in page.articles[page.collection] %}<li{% if guide.url == page.url %} class="current"{% endif %} title="{{guide.title}}"><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}} {% if guide.url == page.url %} <i class="icon icon-tick"></i>{% endif %}</a></li>
+  {% for p in page.parent.parent.articles[page.parent.parent.id] %}{% if p.id == page.collection %}{% for guide in page.articles[page.collection] %}<li{% if guide.url == page.url %} class="current"{% endif %} title="{{guide.title}}"><a {% if guide.url != page.url %} href="{{site.baseurl}}{{guide.url}}"{% endif %}>{{guide.title}} {% if guide.url == page.url %} <i class="icon icon-tick"></i>{% endif %}</a></li>
   {% endfor %}{% endif %}{% endfor %}</ol>
   </div>
 </div>

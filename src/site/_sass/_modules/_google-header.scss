@@ -10,45 +10,72 @@
 *
 **/
 
-#gc-googlebar {
-  position: relative;
+.google-header {
   background: $colorGrayBackground;
-  padding: 0 0 $lineHeight;
   overflow: hidden;
+  position: relative;
+}
 
-  @include medium {
-    height: $lineHeight * 4;
-    padding-bottom: 0;
-  }
+.google-header__top {
+  border-bottom: 1px solid $colorGrayKeyline;
+  text-align: left;
+  padding: $lineHeight/2 0 ($lineHeight/2 - 1) 0;
 }
 
 #gc-logo {
   text-decoration: none;
   display: block;
-  margin: 0 auto $lineHeight;
-  padding-top: $lineHeight;
-  width: 43px;
-  overflow: hidden;
-
-  @include medium {
-    float: left;
-    margin-top: 29px;
-    width: 56px;
-    width: auto;
-    padding-top: 0;
-    margin-bottom: 0;
-  }
+  margin: 0 auto;
 
   img {
     display: block;
     margin: 0 auto;
-    width: 158px;
-    height: 39px;
+    width: 106px;
+    height: 26px;
     max-width: none;
+  }
 
-    @include medium {
-      width: 210px;
-      height: 52px;
+  @include medium {
+    width: auto;
+    padding-top: 0;
+    margin-bottom: 0;
+
+    img {
+      margin: 0;
     }
+  }
+
+}
+
+.google-header__bottom {
+  padding: $lineHeight/2 0;
+  overflow: hidden;
+
+  @include medium {
+    padding-top: $lineHeight;
+    padding-bottom: $lineHeight;
+  }
+}
+
+.main-header__wf-logo {
+  display: none;
+
+  @include medium {
+    display: block;
+    float: left;
+    padding: 0;
+    width: 120px;
+  }
+
+  @include wide {
+    width: 170px;
+  }
+
+  a {
+    font-family: $fontHighlight;
+    font-weight: 400;
+    text-decoration: none;
+    color: $colorGrayDark;
+    display: block;
   }
 }

@@ -1,9 +1,40 @@
-<footer id="gc-footer">
+<footer id="gc-footer" class="main-footer">
+
+  <div class="main-footer__sitemap container">
+    <ul class="sitemap-list clear">
+    {% for section in page.content.toc %}
+
+      {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
+
+      {% if site.spotlights == true or checkTitle != 'spotlights' %}
+      <li class="sitemap__item sitemap__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} sitemap__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} sitemap__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} sitemap__item--current{% endif %} {% if section.hasSubNav %} sitemap__item--has-child{% endif %}">
+        <a class="sitemap-list__link sitemap-list__link--parent" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
+          {{ section.title }}
+        </a>
+
+        <!-- {% if section.section %}
+        <ul class="sitemap-list--child g-medium--2 g-wide--2">
+          {% for subsection in section.section %}
+            <li class="sitemap__item--child nav-theme--{{subsection.id}}">
+              <a class="sitemap-list__link sitemap-list__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.baseurl}}{{ subsection.path }}">
+                {{ subsection.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %} -->
+
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+
   <div id="gc-copyright" class="container">
     <a href="//developers.google.com/">
       <img id="developers-logo-footer" src="//developers.google.com/_static/0f4dd8c48e/images/developers-logo-footer.png" alt="Google Developers logo">
     </a>
-    <ul>
+    <ul class="google-list">
       <li><a href="http://www.google.com/">Google</a></li>
       <li><a href="//developers.google.com/site-terms">Terms of Service</a></li>
       <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>

@@ -19,6 +19,10 @@
   $mediumContainer: 688px;
   $wideContainer: 864px;
 
+  $containerBleed: 16px;
+  $mediumContainerBleed: 30px;
+  $wideContainerBleed: 35px;
+
   // Defining grid sizes
   $mediumColCount: 3;
   $mediumColWidth: 30.3%;
@@ -28,14 +32,14 @@
   $wideGutterWidth: 3.7%;
 
   // Defining colors
-  $colorBlue: #3372df;
-  $colorBlueSecondary: lighten($colorBlue, 30%);
+  $colorBlue: #4285f4;
+  $colorBlueSecondary: #a0c3ff;
   $colorGreen: #0f9d58;
-  $colorGreenSecondary: lighten($colorGreen, 30%);
+  $colorGreenSecondary: #78cfa9;
   $colorRed: #cb4437;
-  $colorRedSecondary: lighten($colorRed, 30%);
+  $colorRedSecondary: #ed9d97;
   $colorYellow: #f4b400;
-  $colorYellowSecondary: lighten($colorYellow, 20%);
+  $colorYellowSecondary: #ffe168;
 
   $colorRemember: #09829a;
   $colorLearning: #da2e75;
@@ -43,10 +47,11 @@
   $colorGrayBackground: #f0f0f0;
   $colorGrayKeyline: #e0e0e0;
   $colorGray: #737373;
+  $colorGrayMedium: #bababa;
   $colorGrayDark: #404040;
 
   $colorText: $colorGray;
-  $colorHighlight: $colorBlue;
+  $colorHighlight: #3372df;
   $colorWarning: $colorYellowSecondary;
   $colorMuted: $colorGray;
   $colorDanger: $colorRed;
@@ -149,33 +154,33 @@
   }
 
   // Mixin to constrain elements
-  @mixin container($isRelative: false) {
+  @mixin container($isRelative: false, $ignoreMobile: false) {
     @include prefixr(box-sizing, content-box);
 
     @if $isRelative {
       position: relative;
     }
 
-    padding-left: 5%;
-    padding-right: 5%;
+    @if $ignoreMobile == false {
+      padding-left: $containerBleed;
+      padding-right: $containerBleed;
+    }
+
     margin-left: auto;
     margin-right: auto;
 
-
-    @include medium {
-      padding-left: 4.8%;
-      padding-right: 4.8%;
+    @include media-query(medium) {
+      padding-left: $mediumContainerBleed;
+      padding-right: $mediumContainerBleed;
       max-width: $mediumContainer;
     }
 
-    @include wide {
-      padding-left: 4.4%;
-      padding-right: 4.4%;
+    @include media-query(wide) {
+      padding-left: $wideContainerBleed;
+      padding-right: $wideContainerBleed;
     	max-width: $wideContainer;
     }
   }
-
-
 
   // Mixin to show a baseline grid
   // only visible when body has 'debug' class
@@ -394,11 +399,19 @@
     }
   }
 
+  // Mixin to create buttons
+  @mixin style-button($color, $textColor, $isInverted: false) {
+    background: $color;
+    color: $textColor;
+    border: 1px solid darken($color, 10%);
+    @if $isInverted { border-color: transparent; }
+  }
+
   // Mixin to create links
-  @mixin style-cta($textColor, $linkIcon: false) {
+  @mixin style-cta($textColor, $linkIcon: false, $fontWeight: 400) {
     font-family: $fontHighlight;
     color: $textColor;
-    font-weight: 400;
+    font-weight: $fontWeight;
     display: inline-block;
     line-height: 1;
     letter-spacing: 1px;

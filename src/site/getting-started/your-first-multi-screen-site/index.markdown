@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: default
 title: "Your First Multi-Screen Site"
 description: "The web is accessible on a huge range of devices from small-screen phones
 to huge-screen televisions. Learn how to build a site that works well across all these devices."
@@ -11,6 +11,24 @@ id: multi-screen
 collection: getting-started
 lessonsToc: false
 ---
+
+<div class="article-container">
+  <div class="editorial-header">
+    <div class="container">
+      <div class="content">
+
+        {% include modules/breadcrumbs.liquid %}
+
+        <h1>Getting Started</h1>
+        <h2>{{ page.title }}</h2>
+
+        <p class="editorial-header__excerpt">{{page.description}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 {% wrap content%}
 
 Building multi-screen experiences is not as hard as it sounds. By following

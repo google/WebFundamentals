@@ -42,7 +42,8 @@
   }
 
   // Also adding subtitle here due to specifity
-  .editorial-header__subtitle {
+  // but also be more generic about it
+  h2 {
     margin-top: 0;
   }
 

@@ -13,25 +13,16 @@
 
     {% include header.liquid %}
 
-    <!-- <div class="page-header">
-      <div class="container">
-
-        {% include modules/breadcrumbs.liquid %}
-
-        <h3 class="xxlarge text-divider"></h3>
-        <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
-      </div>
-    </div>
-
-    {{ content }} -->
-
     <div class="guides-section">
       <header class="container">
           <h2 class="xxlarge">{{ page.title }}</h2>
+          <div class="divider divider--secondary">
+            <span class="themed divider-icon"></span>
+          </div>
           <p>{{ page.description }}</p>
       </header>
 
-      <ul class="guides-list container-medium">
+      <ul class="guides-list container">
 
         {% for guide in page.articles.[page.id] %}
 
