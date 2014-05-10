@@ -16,7 +16,7 @@ collection: resources
 
 
 ## Capitalization and naming
-  * Across the site, for hyphenated words, capitalize as if the hyphens weren't there (e.g., "Multi-Device" and "Peer-to-Peer") 
+  * Across the site, for hyphenated words, capitalize as if the hyphens weren't there (e.g., "Multi-Device" and "Peer-to-Peer").
 
 ### Website section titles
   * Title case capitalization (e.g., "Multi-Device Layouts" not "Multi-device layouts"). 
