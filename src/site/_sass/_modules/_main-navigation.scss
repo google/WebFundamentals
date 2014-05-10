@@ -35,8 +35,8 @@
     }
   }
 
+  @include container(true, true); // second paremeter is to ignore mobile rules
   @include medium {
-    @include container(true);
     position: static;
   }
 }
@@ -237,8 +237,9 @@
 
 
 .main-nav__secondary-content {
+  @include container(true, true); // second parameter is to ignore mobile
+
   @include medium {
-    @include container(true);
     text-align: left;
   }
 }

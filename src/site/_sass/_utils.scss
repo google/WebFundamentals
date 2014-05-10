@@ -154,33 +154,33 @@
   }
 
   // Mixin to constrain elements
-  @mixin container($isRelative: false) {
+  @mixin container($isRelative: false, $ignoreMobile: false) {
     @include prefixr(box-sizing, content-box);
 
     @if $isRelative {
       position: relative;
     }
 
-    padding-left: $containerBleed;
-    padding-right: $containerBleed;
+    @if $ignoreMobile == false {
+      padding-left: $containerBleed;
+      padding-right: $containerBleed;
+    }
+
     margin-left: auto;
     margin-right: auto;
 
-
-    @include medium {
+    @include media-query(medium) {
       padding-left: $mediumContainerBleed;
       padding-right: $mediumContainerBleed;
       max-width: $mediumContainer;
     }
 
-    @include wide {
+    @include media-query(wide) {
       padding-left: $wideContainerBleed;
       padding-right: $wideContainerBleed;
     	max-width: $wideContainer;
     }
   }
-
-
 
   // Mixin to show a baseline grid
   // only visible when body has 'debug' class

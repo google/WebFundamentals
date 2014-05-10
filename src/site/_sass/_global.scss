@@ -44,9 +44,7 @@ pre {
 }
 
 .container-medium {
-  @include medium {
-    @include container(true);
-  }
+  @include container(true, true); // second parameter is to ignore mobile rules - so it only applies from medium up
 }
 
 .container-small {

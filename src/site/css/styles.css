@@ -567,21 +567,17 @@ pre {
   }
 }
 
-@media only screen and (min-width: 620px) {
-  /* line 46, ../_sass/_global.scss */
-  .container-medium {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    -ms-box-sizing: content-box;
-    box-sizing: content-box;
-    position: relative;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+/* line 46, ../_sass/_global.scss */
+.container-medium {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media only screen and (min-width: 620px) and (min-width: 620px) {
+@media only screen and (min-width: 620px) {
   /* line 46, ../_sass/_global.scss */
   .container-medium {
     padding-left: 30px;
@@ -589,7 +585,7 @@ pre {
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 620px) and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   /* line 46, ../_sass/_global.scss */
   .container-medium {
     padding-left: 35px;
@@ -599,7 +595,7 @@ pre {
 }
 
 @media only screen and (max-width: 619px) {
-  /* line 52, ../_sass/_global.scss */
+  /* line 50, ../_sass/_global.scss */
   .container-small {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -613,7 +609,7 @@ pre {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 620px) {
-  /* line 52, ../_sass/_global.scss */
+  /* line 50, ../_sass/_global.scss */
   .container-small {
     padding-left: 30px;
     padding-right: 30px;
@@ -621,7 +617,7 @@ pre {
   }
 }
 @media only screen and (max-width: 619px) and (min-width: 800px) {
-  /* line 52, ../_sass/_global.scss */
+  /* line 50, ../_sass/_global.scss */
   .container-small {
     padding-left: 35px;
     padding-right: 35px;
@@ -1340,6 +1336,13 @@ li > p {
 .main-nav__list {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (max-width: 619px) {
   /* line 28, ../_sass/_modules/_main-navigation.scss */
@@ -1358,32 +1361,23 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 23, ../_sass/_modules/_main-navigation.scss */
   .main-nav__list {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    -ms-box-sizing: content-box;
-    box-sizing: content-box;
-    position: relative;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    position: static;
-  }
-}
-@media only screen and (min-width: 620px) and (min-width: 620px) {
-  /* line 23, ../_sass/_modules/_main-navigation.scss */
-  .main-nav__list {
     padding-left: 30px;
     padding-right: 30px;
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 620px) and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   /* line 23, ../_sass/_modules/_main-navigation.scss */
   .main-nav__list {
     padding-left: 35px;
     padding-right: 35px;
     max-width: 864px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 23, ../_sass/_modules/_main-navigation.scss */
+  .main-nav__list {
+    position: static;
   }
 }
 
@@ -1680,22 +1674,17 @@ li > p {
   -webkit-animation: showNav 250ms ease-out both;
 }
 
-@media only screen and (min-width: 620px) {
-  /* line 239, ../_sass/_modules/_main-navigation.scss */
-  .main-nav__secondary-content {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    -ms-box-sizing: content-box;
-    box-sizing: content-box;
-    position: relative;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
+/* line 239, ../_sass/_modules/_main-navigation.scss */
+.main-nav__secondary-content {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media only screen and (min-width: 620px) and (min-width: 620px) {
+@media only screen and (min-width: 620px) {
   /* line 239, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 30px;
@@ -1703,7 +1692,7 @@ li > p {
     max-width: 688px;
   }
 }
-@media only screen and (min-width: 620px) and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   /* line 239, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 35px;
@@ -1711,8 +1700,14 @@ li > p {
     max-width: 864px;
   }
 }
+@media only screen and (min-width: 620px) {
+  /* line 239, ../_sass/_modules/_main-navigation.scss */
+  .main-nav__secondary-content {
+    text-align: left;
+  }
+}
 
-/* line 246, ../_sass/_modules/_main-navigation.scss */
+/* line 247, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link--explore {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   color: #4285f4;
@@ -1728,13 +1723,13 @@ li > p {
   color: #404040;
 }
 @media only screen and (max-width: 619px) {
-  /* line 246, ../_sass/_modules/_main-navigation.scss */
+  /* line 247, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     border-top: 1px solid #e0e0e0;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 246, ../_sass/_modules/_main-navigation.scss */
+  /* line 247, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     color: #4285f4;
@@ -1760,29 +1755,29 @@ li > p {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 260, ../_sass/_modules/_main-navigation.scss */
+  /* line 261, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore-wrapper {
     border-bottom: 1px solid #e0e0e0;
   }
 }
 
-/* line 266, ../_sass/_modules/_main-navigation.scss */
+/* line 267, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 266, ../_sass/_modules/_main-navigation.scss */
+  /* line 267, ../_sass/_modules/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 274, ../_sass/_modules/_main-navigation.scss */
+/* line 275, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }
 
-/* line 279, ../_sass/_modules/_main-navigation.scss */
+/* line 280, ../_sass/_modules/_main-navigation.scss */
 .main-nav__btn {
   position: absolute;
   top: 0;
@@ -1798,36 +1793,36 @@ li > p {
   outline: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 279, ../_sass/_modules/_main-navigation.scss */
+  /* line 280, ../_sass/_modules/_main-navigation.scss */
   .main-nav__btn {
     display: none;
   }
 }
 
-/* line 299, ../_sass/_modules/_main-navigation.scss */
+/* line 300, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn {
   top: -6px;
 }
-/* line 302, ../_sass/_modules/_main-navigation.scss */
+/* line 303, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn i:before {
   font-size: 20px;
   content: "\e007";
 }
 
 /*==========  ICONS  ==========*/
-/* line 310, ../_sass/_modules/_main-navigation.scss */
+/* line 311, ../_sass/_modules/_main-navigation.scss */
 .main-nav__icon {
   float: right;
   font-size: 16px;
   line-height: 26px;
   vertical-align: middle;
 }
-/* line 316, ../_sass/_modules/_main-navigation.scss */
+/* line 317, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav .main-nav__icon {
   font-size: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 310, ../_sass/_modules/_main-navigation.scss */
+  /* line 311, ../_sass/_modules/_main-navigation.scss */
   .main-nav__icon {
     display: none;
     font-size: 13px;
@@ -1835,14 +1830,14 @@ li > p {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 327, ../_sass/_modules/_main-navigation.scss */
+  /* line 328, ../_sass/_modules/_main-navigation.scss */
   .icon-custom:before {
     font-size: 9px;
     content: "\e002";
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 326, ../_sass/_modules/_main-navigation.scss */
+  /* line 327, ../_sass/_modules/_main-navigation.scss */
   .icon-custom {
     float: none;
     display: inline-block;
@@ -1854,20 +1849,20 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 347, ../_sass/_modules/_main-navigation.scss */
+  /* line 348, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
     content: "\e006";
   }
 }
 
-/* line 359, ../_sass/_modules/_main-navigation.scss */
+/* line 360, ../_sass/_modules/_main-navigation.scss */
 .main-nav .main-nav__guide-icon {
   display: inline-block;
   vertical-align: top;
   margin-right: 6px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 359, ../_sass/_modules/_main-navigation.scss */
+  /* line 360, ../_sass/_modules/_main-navigation.scss */
   .main-nav .main-nav__guide-icon {
     vertical-align: middle;
   }
@@ -1875,48 +1870,48 @@ li > p {
 
 /*==========  CSS ANIMATION  ==========*/
 @-webkit-keyframes showNav {
-  /* line 372, ../_sass/_modules/_main-navigation.scss */
+  /* line 373, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 375, ../_sass/_modules/_main-navigation.scss */
+  /* line 376, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes showNav {
-  /* line 372, ../_sass/_modules/_main-navigation.scss */
+  /* line 373, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 375, ../_sass/_modules/_main-navigation.scss */
+  /* line 376, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes showNav {
-  /* line 372, ../_sass/_modules/_main-navigation.scss */
+  /* line 373, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 375, ../_sass/_modules/_main-navigation.scss */
+  /* line 376, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes showNav {
-  /* line 372, ../_sass/_modules/_main-navigation.scss */
+  /* line 373, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 375, ../_sass/_modules/_main-navigation.scss */
+  /* line 376, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
