@@ -35,7 +35,7 @@ By optimizing the critical rendering path we can significantly improve the time 
 ## Lessons
 
 {% for guide in page.articles.critical-rendering-path %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
 {{guide.description}}
 {% endfor %}
 

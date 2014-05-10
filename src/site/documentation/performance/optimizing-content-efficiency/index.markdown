@@ -87,7 +87,7 @@ Achieving an instant web experience in light of these requirements is no small f
 ## Lessons
 
 {% for guide in page.articles.optimizing-content-efficiency %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
 {{guide.description}}
 {% endfor %}
 

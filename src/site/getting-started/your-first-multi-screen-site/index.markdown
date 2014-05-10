@@ -55,7 +55,7 @@ mobile all the way up to TV.
     <h3><i class="icon icon-lessons"></i> Lessons</h3>
 <div markdown="1">
 {% for guide in page.articles.multi-screen %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
 {{guide.description}}
 {% endfor %}
 </div>

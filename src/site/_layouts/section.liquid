@@ -42,7 +42,7 @@
 
             {% for guide in page.articles.[page.id] %}
             <li class="articles-list__item">
-              <h3 class="xlarge g-wide--2 g--centered"><a href="{{site.baseurl}}{{guide.url}}" title="Read the lesson {{guide.title}}" class="themed">{{guide.title}}</a></h3>
+              <h3 class="xlarge g-wide--2 g--centered"><a href="{{site.baseurl}}{{guide.url | clean}}" title="Read the lesson {{guide.title}}" class="themed">{{guide.title}}</a></h3>
               <p class="g-medium--2 g-wide--3 g--centered">{{guide.description}}</p>
             </li>
             <div class="divider divider--secondary divider--short">
