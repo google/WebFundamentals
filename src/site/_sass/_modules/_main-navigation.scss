@@ -31,7 +31,7 @@
 
     .js &.nav-is-opened {
       display: block;
-      @include prefixr(animation, showNav 250ms ease-out both)
+      @include prefixr(animation, showNav 250ms ease-in-out both)
     }
   }
 
@@ -231,7 +231,7 @@
 
   .subnav-is-opened & {
     display: block;
-    -webkit-animation: showNav 250ms ease-out both;
+    -webkit-animation: showNav 250ms ease-in-out both;
   }
 }
 

@@ -16,9 +16,21 @@
   color: $colorGrayDark;
   font-weight: 400;
   text-align: center;
-  padding: $lineHeight/2 40px $lineHeight/2 $lineHeight/2;
-  margin: 0 $lineHeight/2 0 -5%;
+  padding: $lineHeight/2 51px $lineHeight/2 $lineHeight/2;
+  margin: 10px $lineHeight/2 10px -5%;
   position: relative;
+  line-height: 16px;
+
+  @include medium {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 32px;
+    padding-right: (32px) + $lineHeight;
+    line-height: $lineHeight;
+    width: auto;
+    max-width: 76%;
+  }
 
   &:before {
     content: $icon-diamond;
@@ -52,15 +64,6 @@
 
     -webkit-animation: cog 4000ms ease-in-out;
     animation: cog 4000ms ease-in-out;
-  }
-
-  @include medium {
-    float: right;
-    // margin-top: $lineHeight/2;
-    padding-left: 32px;
-    padding-right: (32px) + 26;
-    width: auto;
-    max-width: 76%;
   }
 
   & a {

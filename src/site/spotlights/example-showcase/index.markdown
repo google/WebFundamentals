@@ -43,7 +43,6 @@ showcase:
 collection: showcase
 ---
 
-
 <div class="case-study-wrapper has-video-after">
   <div class="container clear">
     <div class="g--half">

@@ -42,20 +42,20 @@ notes:
 
 Let’s start, with the simplest possible case: a plain HTML page with some text and a single image. What does the browser need to do to process this simple page?
 
-<img src="images/full-process.png" alt="DOM construction process" />
+<img src="images/full-process.png" alt="DOM construction process">
 
 1. **Conversion:** the browser reads the raw bytes of the HTML off the disk or network and translates them to individual characters based on specified encoding of the file (e.g. UTF-8).
 1. **Tokenizing:** the browser converts strings of characters into distinct tokens specified by the [W3C HTML5 standard](http://www.w3.org/TR/html5/) - e.g. "<html>", "<body>" and other strings within the "angle brackets". Each token has a special meaning and a set of rules.
 1. **Lexing:** the emitted tokens are converted into "objects" which define their properties and rules.
 1. **DOM construction:** Finally, because the HTML markup defines relationships between different tags (some tags are contained within tags) the created objects are linked in a tree data structure that also captures the parent-child relationships defined in the original markup: _HTML_ object is a parent of the _body_ object, the _body_ is a parent of the _paragraph_ object, and so on.
 
-<img src="images/dom-tree.png" class="center" alt="DOM tree" />
+<img src="images/dom-tree.png" class="center" alt="DOM tree">
 
 **The final output of this entire process is the Document Object Model, or the "DOM" of our simple page, which the browser uses for all further processing of the page.**
 
 Every time the browser has to process HTML markup it has to step through all of the steps above: convert bytes to characters, identify tokens, convert tokens to nodes, and build the DOM tree. This entire process can take some time, especially if we have a large amount of HTML to process.
 
-<img src="images/dom-timeline.png" class="center" alt="Tracing DOM construction in DevTools" />
+<img src="images/dom-timeline.png" class="center" alt="Tracing DOM construction in DevTools">
 
 {% include modules/remember.liquid title="Note" list=page.notes.devtools %}
 
@@ -73,11 +73,11 @@ Of course, we could have declared our styles directly within the HTML markup (in
 
 Just as with HTML, we need to convert the received CSS rules into something that the browser can understand and work with. Hence, once again, we repeat a very similar process as we did with HTML:
 
-<img src="images/cssom-construction.png" class="center" alt="CSSOM construction steps" />
+<img src="images/cssom-construction.png" class="center" alt="CSSOM construction steps">
 
 The CSS bytes are converted into characters, then to tokens and nodes, and finally are linked into a tree structure known as the "CSS Object Model", or CSSOM for short:
 
-<img src="images/cssom-tree.png" class="center" alt="CSSOM tree" />
+<img src="images/cssom-tree.png" class="center" alt="CSSOM tree">
 
 Why does the CSSOM have a tree structure? When computing the final set of styles for any object on the page, the browser starts with the most general rule applicable to that node (e.g. if it is a child of body element, then all body styles apply) and then recursively refines the computed styles by applying more specific rules - i.e. the rules "cascade down".
 
@@ -87,7 +87,7 @@ Also, note that the above tree is not the complete CSSOM tree and only shows the
 
 Curious to know how long the CSS processing took? Record a timeline in DevTools and look for "Recalculate Style" event: unlike DOM parsing, the timeline doesn’t show a separate "Parse CSS" entry, and instead captures parsing and CSSOM tree construction, plus the recursive calculation of computed styles under this one event.
 
-<img src="images/cssom-timeline.png" class="center" alt="Tracing CSSOM construction in DevTools" />
+<img src="images/cssom-timeline.png" class="center" alt="Tracing CSSOM construction in DevTools">
 
 Our trivial stylesheet takes ~0.6ms to process and affects 8 elements on the page -- not much, but once again, not free. However, where did the 8 elements come from? The CSSOM and DOM and are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the render tree that links the DOM and CSSOM together.
 

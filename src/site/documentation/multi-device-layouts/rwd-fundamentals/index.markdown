@@ -38,6 +38,20 @@ remember:
 ---
 {% wrap content %}
 
+<style>
+
+  img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  video.responsiveVideo {
+    width: 100%;
+  }
+</style>
+
+
 {% include modules/toc.liquid %}
 
 There is a multitude of different screen sizes across phones, "phablets",
@@ -46,9 +60,9 @@ be changing, so it's important that your site can adapt to any screen size,
 today or in the future.
 
 {% link_sample _code/weather.html %}
-  <video autoplay loop controls>
-    <source src="videos/resize.webm" type="video/webm" />
-    <source src="videos/resize.mp4" type="video/mp4" />
+  <video autoplay loop controls class="responsiveVideo">
+    <source src="videos/resize.webm" type="video/webm">
+    <source src="videos/resize.mp4" type="video/mp4">
   </video>
 {% endlink_sample %}
 
@@ -69,10 +83,10 @@ how to control the page's dimensions and scaling.
 {% include modules/takeaway.liquid list=page.key-takeaways.set-viewport %}
 
 In order to attempt to provide the best experience, mobile browsers will render
-the page at a desktop screen width (usually about 980px, though this varies
-across devices), and then try to make the content look better by increasing
-font sizes and scaling the content to fit the screen.  For users, this means
-that font sizes may appear inconsistently and they have to double-tap or
+the page at a desktop screen width (usually about 980px, though this varies 
+across devices), and then try to make the content look better by increasing 
+font sizes and scaling the content to fit the screen.  For users, this means 
+that font sizes may appear inconsistently and they have to double-tap or 
 pinch-zoom in order to be able to see and interact with the content.
 
 {% highlight html %}
@@ -172,7 +186,7 @@ For example, you could place all styles necessary for printing
 inside a print media query:
 
 {% highlight html %}
-<link rel="stylesheet" href="print.css" media="print" />
+<link rel="stylesheet" href="print.css" media="print">
 {% endhighlight %}
 
 In addition to using the `media` attribute in the stylesheet link, there are two
@@ -217,8 +231,8 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
   </colgroup>
   <thead>
     <tr>
-      <th>attribute</th>
-      <th>Result</th>
+      <th data-th="attribute">attribute</th>
+      <th data-th="Result">Result</th>
     </tr>
   </thead>
   <tbody>
@@ -253,7 +267,7 @@ Let's take a look an example:
 
 <figure>
   {% link_sample _code/media-queries.html %}
-    <img src="imgs/mq.png" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
+    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
   {% endlink_sample %}
 </figure>
 
@@ -335,7 +349,7 @@ The first step is to make the forecast look good on a small screen.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-1.png" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen." />
+    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen.">
   {% endlink_sample %}
 </figure>
 
@@ -345,7 +359,7 @@ subjective, but above 600px is certainly too wide.
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider." />
+    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider.">
   {% endlink_sample %}
 </figure>
 
@@ -361,7 +375,7 @@ styles are placed in `weather-large.css`.
 
 <figure>
   {% link_sample _code/weather-2.html %}
-    <img src="imgs/weather-3.png" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen." />
+    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
   {% endlink_sample %}
 </figure>
 
