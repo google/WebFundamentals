@@ -183,19 +183,21 @@ Sites without images can be a little boring. There are two types of images:
    better; often these are background images, patterns and gradients.  We will
    cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
-The Images section in our page is a collection of content images that we will
-use in our product.
+The Images section in our page is a collection of content images. 
 
 Content images are critical to conveying the meaning of the page. Think of
-them like the images used in newspaper articles.
+them like the images used in newspaper articles.  The images we are using are
+pictures of the tutors on the project:  Chris Wilson, Peter Lubbers and Sean
+Bennet.
 
 {% include_code _code/addimages.html images html %}
 
-The images are set to scale to 100% of the width of the screen.
-This works well on  mobile devices, but less well on desktop.  We will manage
-this in the responsive design section.
+The images are set to scale to 100% of the width of the screen. This works
+well on devices with a narrow vieport, but less well on those with a
+wideviewport (like desktop).  We will manage this in the responsive design
+section.
 
-{% include modules/related_guides.liquid list=page.related-guides.video %}
+{% include modules/related_guides.liquid list=page.related-guides.images %}
 
 ### Add the Tabulated Data Section
 
