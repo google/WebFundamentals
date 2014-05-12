@@ -1,22 +1,16 @@
 ---
 layout: article
-title: "Video"
-description: "Learn about the simplest ways to add video to your site and ensure users
-              get the best possible experience on any device."
-introduction: "Users like videos; they can be fun, informative.
-               On mobile devices, videos can be an easier way to consume information.
-               But videos take bandwidth;
-               they don't always work the same across every platform.
-               Users don't like waiting for videos to load,
-               or when they press play and nothing happens.
-               Read more to find the simplest way to add video to your site and
-               ensure users get the best possible experience on any device."
+title: "Accessibility matters"
+description: "Accessibility isn't a feature."
+introduction: "Accessibility isn't a feature. Users who can't hear or see won't be able to
+              experience a video at all without captions or descriptions. The time it takes
+              to add these to your video is much less than the bad experience you are
+              delivering to users. Provide at least a base experience for all users."
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
-  order: 2
-collection: introduction-to-media
-id: videos
+  order: 4
+collection: videos
 key-takeaways:
   add-a-video:
     - Use the video element to load, decode, and play video on your site.
@@ -41,6 +35,8 @@ remember:
 
 {% wrap content%}
 
+{% include modules/toc.liquid %}
+
 <style>
 
   img, video, object {
@@ -55,10 +51,39 @@ remember:
 
 </style>
 
-{% for guide in page.articles.videos %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
-{{guide.description}}
-{% endfor %}
+
+## Include captions to improve accessibility
+
+To make media more accessible on mobile, include captions or descriptions
+using the track element.
+
+{% include modules/remember.liquid title="Remember" list=page.remember.accessibility-matters %}
+
+Using the track element, captions appear like this:
+
+ <img class="center" alt="Screenshot showing captions displayed using the track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+
+## Add track element
+
+It's very easy to add captions to your video &ndash; simply add a track element as a child of the video element:
+
+{% include_code _code/track.html track html %}
+
+The track element `src` attribute gives the location of the track file.
+
+## Define captions in track file
+
+A track file consists of timed 'cues' in WebVTT format:
+
+    WEBVTT
+
+    00:00.000 --> 00:04.000
+    Man sitting on a tree branch, using a laptop.
+
+    00:05.000 --> 00:08.000
+    The branch breaks, and he starts to fall.
+
+    ...
 
 {% include modules/nextarticle.liquid %}
 
