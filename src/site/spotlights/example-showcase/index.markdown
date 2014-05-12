@@ -37,10 +37,10 @@ related_guides:
   - title: Related guide number three with a title that's honestly way too long
     link: /spotlights/example-showcase/
     section: Multi-device layouts
-showcase:
+article:
   written_on: 2014-01-01
   updated_on: 2014-02-02
-collection: showcase
+collection: resources
 ---
 
 <div class="case-study-wrapper has-video-after">

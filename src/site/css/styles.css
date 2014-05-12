@@ -2820,7 +2820,7 @@ li > p {
   border-right-width: 0;
   border-bottom-width: 0;
 }
-/* line 22, ../_sass/_modules/_related-items.scss */
+/* line 21, ../_sass/_modules/_related-items.scss */
 .related-items img {
   margin: 0;
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -2830,19 +2830,19 @@ li > p {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
 }
-/* line 30, ../_sass/_modules/_related-items.scss */
+/* line 29, ../_sass/_modules/_related-items.scss */
 .related-items a:hover img {
   opacity: .8;
 }
 
-/* line 39, ../_sass/_modules/_related-items.scss */
+/* line 38, ../_sass/_modules/_related-items.scss */
 .related-items--minimal {
   border-top: none;
   padding-top: 0;
   margin-top: 52px;
 }
 
-/* line 48, ../_sass/_modules/_related-items.scss */
+/* line 47, ../_sass/_modules/_related-items.scss */
 .related-items--inline {
   margin-top: 26px;
   padding-bottom: 26px;
@@ -2851,7 +2851,7 @@ li > p {
   padding-top: 0;
 }
 
-/* line 56, ../_sass/_modules/_related-items.scss */
+/* line 55, ../_sass/_modules/_related-items.scss */
 .related-items__title {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2865,7 +2865,7 @@ li > p {
   padding-top: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 56, ../_sass/_modules/_related-items.scss */
+  /* line 55, ../_sass/_modules/_related-items.scss */
   .related-items__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2879,12 +2879,12 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 56, ../_sass/_modules/_related-items.scss */
+  /* line 55, ../_sass/_modules/_related-items.scss */
   .related-items__title {
     padding-top: 0;
   }
 }
-/* line 64, ../_sass/_modules/_related-items.scss */
+/* line 63, ../_sass/_modules/_related-items.scss */
 .related-items--inline .related-items__title {
   color: #404040;
   font-size: 20px;
@@ -2896,7 +2896,7 @@ li > p {
   letter-spacing: -0.3px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 64, ../_sass/_modules/_related-items.scss */
+  /* line 63, ../_sass/_modules/_related-items.scss */
   .related-items--inline .related-items__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2910,23 +2910,23 @@ li > p {
   }
 }
 
-/* line 69, ../_sass/_modules/_related-items.scss */
+/* line 68, ../_sass/_modules/_related-items.scss */
 .related-items__main-link {
   text-transform: uppercase;
 }
-/* line 72, ../_sass/_modules/_related-items.scss */
+/* line 71, ../_sass/_modules/_related-items.scss */
 .related-items__main-link:before {
   content: "#";
   display: inline-block;
   padding-right: 2px;
 }
 
-/* line 84, ../_sass/_modules/_related-items.scss */
+/* line 83, ../_sass/_modules/_related-items.scss */
 .related-items-group .related-items:first-child {
   padding-top: 76px;
   padding-bottom: 0;
 }
-/* line 89, ../_sass/_modules/_related-items.scss */
+/* line 88, ../_sass/_modules/_related-items.scss */
 .related-items-group .related-items:last-child {
   margin-top: 0;
 }

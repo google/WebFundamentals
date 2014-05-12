@@ -2,6 +2,20 @@
 layout: default
 title: "Showcases"
 description: ""
+related-guides:
+  create-amazing-forms:
+    -
+      title: Create amazing forms
+      href: /documentation/user-input/form-input/
+      thumbnail: ../imgs/placeholder--small.png
+    -
+      title: Label and name inputs correctly
+      href: /documentation/user-input/form-input/#label-and-name-inputs-properly
+      thumbnail: ../imgs/placeholder--small.png
+    -
+      title: Choose the best input type
+      href: /documentation/user-input/form-input/#choose-the-best-input-type
+      thumbnail: ../imgs/placeholder--small.png
 ---
 {% comment %}
 NOTE: the spotlight header required a modifier to render properly
@@ -56,32 +70,4 @@ NOTE: the spotlight header required a modifier to render properly
   </div>
 </div>
 
-<div class="container">
-  <div class="related-items related-items--minimal clear">
-    <h3 class="related-items__title g-wide--1 g-medium--full">More case studies</h3>
-    <div class="related-items__section clear">
-
-      <ul class="related-items-list list-reset">
-        <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
-          <a href="#">
-            <img src="../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides title which goes over two lines</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
-          <a href="#">
-            <img src="../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides completely device agnostic site created for the this website</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
-          <a href="#">
-            <img src="../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides new, completely device agnostic site created for the this website</p>
-          </a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</div>
+{% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms minimal=true %}
