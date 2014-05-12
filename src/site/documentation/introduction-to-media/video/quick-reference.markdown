@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Quick Reference"
-description: "A quick overview of properties on the video element"
-introduction: "A quick overview of properties on the video element"
+description: "A quick overview of properties on the video element."
+introduction: "A quick overview of properties on the video element."
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29

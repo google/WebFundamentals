@@ -129,7 +129,7 @@ information architecture. We can now start to build out the site.
 The headline and request notification form are the critical components of
 our page. These must be presented to the user immediately.
 
-Adding the header is just some simple text that describes what the course is
+In the headline, add simple text to describe the course:
 
 {% include_code _code/addheadline.html headline %}
 
