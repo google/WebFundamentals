@@ -30,7 +30,6 @@
     padding: 0;
     background: transparent;
     width: 120px;
-
   }
 
   @include wide {
@@ -41,8 +40,15 @@
     font-weight: 300;
   }
 
+  & a {
+    .no-touch &:hover {
+      color: $colorGray;
+    }
+  }
+
+  // reduce margin-bottom only if beta banner exists
   .beta + & {
-    margin-bottom: 22px; // reduce margin-bottom only if beta banner exists
+    margin-bottom: 22px;
   }
 }
 

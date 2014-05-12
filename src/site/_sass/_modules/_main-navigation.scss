@@ -25,6 +25,9 @@
   padding: 0;
 
   @include small-only {
+    box-shadow: 0 0 0 2px $colorGrayDark;
+    // border-bottom: $lineHeight solid $colorGrayDark;
+
     .js & {
       display: none;
     }
@@ -87,6 +90,10 @@
 
   &:hover {
     text-decoration: none;
+  }
+
+  .main-nav__item:last-child & {
+    margin-bottom: 0;
   }
 
   @include small-only {
@@ -312,6 +319,7 @@
 /*==========  ICONS  ==========*/
 .main-nav__icon {
   float: right;
+  margin-right: 7px;
   font-size: $fontBase;
   line-height: $lineHeight;
   vertical-align: middle;
