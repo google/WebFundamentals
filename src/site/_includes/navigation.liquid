@@ -1,4 +1,4 @@
-{% assign superSection = section.title | downcase | trim | replace:' ','-' %}
+{% assign superSection = page.title %}
 {% for section in page.content.toc %}
 {% unless section.home %}{% if page.url contains section.path %}{% assign superSection = section.title%}{% endif %}{% endunless %}
 {% if section.home and page.url == '/index.html' %}{% assign superSection = 'Home'%}{% endif %}
