@@ -2332,12 +2332,13 @@ li > p {
 /* line 177, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__container {
   padding-bottom: 0;
+  min-height: 0;
 }
-/* line 180, ../_sass/_modules/_highlight.scss */
+/* line 181, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__container:before {
   display: none;
 }
-/* line 185, ../_sass/_modules/_highlight.scss */
+/* line 186, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__content {
   border-color: #e0e0e0;
   border-style: solid;
@@ -2346,7 +2347,7 @@ li > p {
   border-right-width: 0;
   padding: 0 0 24px;
 }
-/* line 194, ../_sass/_modules/_highlight.scss */
+/* line 195, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline .highlight-module__title {
   color: #404040;
   font-size: 20px;
@@ -2358,7 +2359,7 @@ li > p {
   letter-spacing: -0.3px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 194, ../_sass/_modules/_highlight.scss */
+  /* line 195, ../_sass/_modules/_highlight.scss */
   .highlight-module--inline .highlight-module__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2371,15 +2372,15 @@ li > p {
     letter-spacing: -0.3px;
   }
 }
-/* line 200, ../_sass/_modules/_highlight.scss */
+/* line 201, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline.highlight-module--remember .highlight-module__title, .highlight-module--inline.highlight-module--remember li:before {
   color: #09829a;
 }
-/* line 207, ../_sass/_modules/_highlight.scss */
+/* line 208, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline.highlight-module--learning .highlight-module__title, .highlight-module--inline.highlight-module--learning li:before {
   color: #da2e75;
 }
-/* line 212, ../_sass/_modules/_highlight.scss */
+/* line 213, ../_sass/_modules/_highlight.scss */
 .highlight-module--inline:after {
   display: none !important;
 }
