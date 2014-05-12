@@ -27,6 +27,7 @@
 
 .spotlight-header--landscape {
   overflow-x: hidden;
+  position: relative;
 
   @include medium {
     min-height: $lineHeight*20;
@@ -55,6 +56,11 @@
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
+
+  & p {
+    margin-bottom: $lineHeight*6;
+  }
+
 }
 
 .spotlight-header__cta {
@@ -62,7 +68,9 @@
 }
 
 .spotlight-header__media {
-  position: relative;
+  .spotlight-header--portrait & {
+    position: relative;
+  }
 }
 
 .spotlight-header__image {

@@ -2753,6 +2753,7 @@ li > p {
 /* line 28, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--landscape {
   overflow-x: hidden;
+  position: relative;
 }
 @media only screen and (min-width: 620px) {
   /* line 28, ../_sass/_modules/_spotlight-header.scss */
@@ -2762,57 +2763,61 @@ li > p {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 37, ../_sass/_modules/_spotlight-header.scss */
+  /* line 38, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--portrait {
     min-height: 390px;
   }
 }
 
-/* line 43, ../_sass/_modules/_spotlight-header.scss */
+/* line 44, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__container {
   position: relative;
 }
 
-/* line 49, ../_sass/_modules/_spotlight-header.scss */
+/* line 50, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--detail .spotlight-header__container:after {
   display: none;
 }
 
-/* line 55, ../_sass/_modules/_spotlight-header.scss */
+/* line 56, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
 }
-
 /* line 60, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header__copy p {
+  margin-bottom: 156px;
+}
+
+/* line 66, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__cta {
   margin-top: 26px;
 }
 
-/* line 64, ../_sass/_modules/_spotlight-header.scss */
-.spotlight-header__media {
+/* line 71, ../_sass/_modules/_spotlight-header.scss */
+.spotlight-header--portrait .spotlight-header__media {
   position: relative;
 }
 
-/* line 68, ../_sass/_modules/_spotlight-header.scss */
+/* line 76, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header__image {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 68, ../_sass/_modules/_spotlight-header.scss */
+  /* line 76, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header__image {
     position: absolute;
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-/* line 77, ../_sass/_modules/_spotlight-header.scss */
+/* line 85, ../_sass/_modules/_spotlight-header.scss */
 .spotlight-header--portrait .spotlight-header__image {
   width: 100%;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 82, ../_sass/_modules/_spotlight-header.scss */
+  /* line 90, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     position: relative;
     width: auto;
@@ -2821,7 +2826,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 82, ../_sass/_modules/_spotlight-header.scss */
+  /* line 90, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--landscape .spotlight-header__image {
     height: 364px;
   }
