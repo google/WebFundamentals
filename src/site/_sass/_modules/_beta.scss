@@ -17,7 +17,7 @@
   font-weight: 400;
   text-align: center;
   padding: $lineHeight/2 51px $lineHeight/2 $lineHeight/2;
-  margin: 10px $lineHeight/2 10px -5%;
+  margin: 23px 32px 23px 0;
   position: relative;
   line-height: 16px;
 
@@ -29,7 +29,13 @@
     padding-right: (32px) + $lineHeight;
     line-height: $lineHeight;
     width: auto;
-    max-width: 76%;
+    max-width: 72%;
+  }
+
+  @include wide {
+    & br {
+      display: none;
+    }
   }
 
   &:before {

@@ -12,12 +12,12 @@
 
 .related-items {
   margin-top: $lineHeight*3;
-  padding-bottom: ($lineHeight*4) - 2;
+  // padding-bottom: ($lineHeight*4) - 2;
+  padding-top: ($lineHeight*2) - 2;
   border: 2px solid $colorGrayKeyline;
   border-left-width: 0;
   border-right-width: 0;
   border-bottom-width: 0;
-  padding-top: ($lineHeight*2) - 2;
 
   & img {
     margin: 0;
@@ -27,7 +27,6 @@
   }
 
   & a:hover {
-
     & img {
       opacity: .8;
     }
