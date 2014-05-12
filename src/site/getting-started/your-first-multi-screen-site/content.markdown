@@ -183,12 +183,11 @@ Sites without images can be a little boring. There are two types of images:
    better; often these are background images, patterns and gradients.  We will
    cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
-The Images section is a collection of content images that we will use in our product.
+The Images section in our page is a collection of content images that we will
+use in our product.
 
-{% include_code _code/addcontent.html section2 %}
-
-Content images are critical to conveying the meaning of the
-page. Think of images used in newspaper articles.
+Content images are critical to conveying the meaning of the page. Think of
+them like the images used in newspaper articles.
 
 {% include_code _code/addimages.html images html %}
 
