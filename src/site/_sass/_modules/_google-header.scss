@@ -12,8 +12,6 @@
 
 .google-header {
   background: $colorGrayBackground;
-  overflow: hidden;
-  position: relative;
 }
 
 .google-header__top {
@@ -22,30 +20,6 @@
   padding: $lineHeight/2 0 ($lineHeight/2 - 1) 0;
 }
 
-#gc-logo {
-  text-decoration: none;
-  display: block;
-  margin: 0 auto;
-
-  img {
-    display: block;
-    margin: 0 auto;
-    width: 106px;
-    height: 26px;
-    max-width: none;
-  }
-
-  @include medium {
-    width: auto;
-    padding-top: 0;
-    margin-bottom: 0;
-
-    img {
-      margin: 0;
-    }
-  }
-
-}
 
 .google-header__bottom {
   padding: $lineHeight/2 0;
@@ -57,7 +31,27 @@
   }
 }
 
-.main-header__wf-logo {
+.google-header__dev-logo {
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: 110px;
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    width: 106px;
+    height: $lineHeight;
+    max-width: none;
+  }
+
+  @include medium {
+    margin: 0;
+  }
+
+}
+
+.google-header__wf-logo {
   display: none;
 
   @include medium {
@@ -71,7 +65,7 @@
     width: 170px;
   }
 
-  a {
+  & a {
     font-family: $fontHighlight;
     font-weight: 400;
     text-decoration: none;
