@@ -1,7 +1,13 @@
+{% assign superSection = section.title | downcase | trim | replace:' ','-' %}
+{% for section in page.content.toc %}
+{% unless section.home %}{% if page.url contains section.path %}{% assign superSection = section.title%}{% endif %}{% endunless %}
+{% if section.home and page.url == '/index.html' %}{% assign superSection = 'Home'%}{% endif %}
+{% endfor %}
+
 <nav class="main-nav">
 
   <header class="main-nav__header">
-    <span class="main-nav__current-label">Current Page</span>
+    <span class="main-nav__current-label">{{superSection}}</span>
 
     <button class="main-nav__btn btn--toggle-nav">
       <i class="icon icon-menu"></i>
