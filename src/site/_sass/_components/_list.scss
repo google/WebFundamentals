@@ -314,6 +314,14 @@ ol.list-links {
   }
 }
 
+.related-items-list--inline {
+  & li {
+    padding-top: $lineHeight;
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
 /*==========  LIST RESET  ==========*/
 
 .list-reset {

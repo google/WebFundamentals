@@ -11,13 +11,13 @@
 **/
 
 .back-to-top {
-  border-top: 2px solid $colorGrayKeyline;
+  border-top: 2px solid $colorGrayMedium;
   margin-bottom: -2px;
   margin-top: $lineHeight;
-  padding: $lineHeight/2 0;
   text-align: center;
 
   & .cta--secondary {
+    padding: $lineHeight/2 0;
     text-decoration: none;
 
     & .icon {

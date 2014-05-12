@@ -22,8 +22,12 @@
 
 
 .google-header__bottom {
-  padding: $lineHeight/2 0;
   overflow: hidden;
+
+  @include small-only {
+    padding: 0;
+    box-shadow: 0 2px 0 0 #f0f0f0;
+  }
 
   @include medium {
     padding-top: $lineHeight;
@@ -49,27 +53,4 @@
     margin: 0;
   }
 
-}
-
-.google-header__wf-logo {
-  display: none;
-
-  @include medium {
-    display: block;
-    float: left;
-    padding: 0;
-    width: 120px;
-  }
-
-  @include wide {
-    width: 170px;
-  }
-
-  & a {
-    font-family: $fontHighlight;
-    font-weight: 400;
-    text-decoration: none;
-    color: $colorGrayDark;
-    display: block;
-  }
 }

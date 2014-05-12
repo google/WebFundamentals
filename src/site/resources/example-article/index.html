@@ -9,6 +9,29 @@ learning-list:
   - labore aliquam cupiditate veritatis nihil
   - Lorem ipsum dolor sit amet
   - Fugit itaque sapiente earum quo expedita
+related-guides:
+  create-amazing-forms:
+    -
+      title: Create amazing forms
+      href: /documentation/user-input/form-input/
+      section:
+        id: user-input
+        title: "Forms"
+        href: /documentation/user-input/form-input/
+    -
+      title: Label and name inputs correctly
+      href: /documentation/user-input/form-input/#label-and-name-inputs-properly
+      section:
+        id: user-input
+        title: "Forms"
+        href: /documentation/user-input/form-input/
+    -
+      title: Choose the best input type
+      href: /documentation/user-input/form-input/#choose-the-best-input-type
+      section:
+        id: user-input
+        title: Forms
+        href: /documentation/user-input/form-input/
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -22,10 +45,17 @@ collection: resources
 This is an example of how an article page should be laid out.
 The purpose of this page, is to help authors when structuring articles.
 
-Guidelines:
+Notes:
   Any sort of "article content" should always be wrapped in <div class="content"></div>
   it's important to remember this, because all html text elements (h1-h6, p, ul, ol...)
-  are set to seat in 3 columns on desktop. Please refer to _typography.scss for detauls.
+  are set to seat in 3 columns on desktop. Please refer to _typography.scss for details
+
+  If modules are going to be included in the middle of an article, it's important
+  to exit <div class="container"></div> then re-open it
+
+  Takeaway module to be only added once
+
+  Related Guides to be added at the bottom of an article
 
 {% endcomment %}
 
@@ -63,6 +93,10 @@ Guidelines:
     {% include modules/remember.liquid text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusantium, quo, corporis nemo possimus iste impedit numquam reiciendis eaque similique perspiciatis nam illo error consequuntur beatae fuga blanditiis asperiores iusto?" %}
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, voluptatum, a qui numquam optio nulla aliquam distinctio tempore quae asperiores necessitatibus nobis ab debitis amet obcaecati cum hic dolore officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, laborum, excepturi, earum, nesciunt maiores quas quisquam corrupti magni quasi deserunt vitae odit. Assumenda, reprehenderit quia eum beatae deleniti dolor laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, beatae, ipsum fugiat quam corporis magni aliquam modi autem dignissimos minima non fuga esse. Eum, eveniet unde quis sint natus perspiciatis.</p>
+
+    {% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms inline=true %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, quos perferendis neque fuga laudantium temporibus expedita officiis consectetur delectus ab sint rem maiores placeat commodi ducimus aliquid atque! Ipsa, similique.</p>
 
     <ul>
       <li>Lorem ipsum dolor sit amet.</li>
@@ -213,7 +247,10 @@ Guidelines:
 </div>
 
 
-<div class="container">
+{% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms %}
+
+
+<!-- <div class="container">
   <div class="related-items clear">
     <h3 class="related-items__title g-wide--1 g-medium--full">Related guides</h3>
     <div class="related-items__section clear">
@@ -234,3 +271,4 @@ Guidelines:
     </div>
   </div>
 </div>
+ -->

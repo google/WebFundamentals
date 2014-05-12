@@ -20,23 +20,45 @@
 .main-header__title {
   @include container(true);
 
-  @include type--large;
+  @include type--medium(true);
+
   padding-top: $lineHeight/2;
   padding-bottom: $lineHeight/2;
-
-  @include small-only {
-    box-shadow: 0 2px 0 0 $colorGrayBackground;
-  }
+  background: $colorGrayDark;
 
   @include medium {
-    display: none;
+
+    @include type--large(true);
+
+    padding-top: 0;
+    float: left;
+    padding: 0;
+    background: transparent;
+    width: 120px;
+
+    & span {
+      font-weight: 300;
+    }
+
   }
 
-  & a {
-    text-decoration: none;
+  @include wide {
+    width: 170px;
+
   }
+
 }
 
 .main-header__logo {
+  text-decoration: none;
   color: #ffffff;
+
+  @include medium {
+    font-family: $fontHighlight;
+    font-weight: 400;
+    text-decoration: none;
+    color: $colorGrayDark;
+    display: block;
+  }
+
 }
