@@ -48,8 +48,20 @@
 }
 
 .main-footer__title {
+  @include type--large(true);
+
+  // font-family: $fontHighlight;
+  font-weight: 400;
+
+
   @include medium {
     padding-top: 0;
+  }
+
+  & span {
+    display: block;
+    font-weight: 300;
+
   }
 
   & img {
@@ -99,6 +111,11 @@
 
 
 .main-footer__google-section {
+
+  & a {
+    color: $colorGrayKeyline;
+  }
+
   @include medium {
     float: left;
     width: 50%;
