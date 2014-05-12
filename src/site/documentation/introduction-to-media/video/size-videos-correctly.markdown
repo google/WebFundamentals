@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Size videos correctly"
-description: "When it comes to keeping your users happy, size matters"
+description: "When it comes to keeping your users happy, size matters."
 introduction: "When it comes to keeping your users happy, size matters:"
 article:
   written_on: 2014-04-16
