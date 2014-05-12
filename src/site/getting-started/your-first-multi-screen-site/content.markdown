@@ -21,7 +21,6 @@ related-guides:
         id: user-input
         title: "Forms"
         href: /documentation/user-input/form-input/
-      href: /documentation/user-input/form-input/
     - 
       title: Label and name inputs correctly
       href: /documentation/user-input/form-input/#label-and-name-inputs-properly
@@ -36,6 +35,51 @@ related-guides:
         id: user-input
         title: Forms
         href: /documentation/user-input/form-input/
+  video:
+    - 
+      title: Using video effectively
+      href: /documentation/introduction-to-media/video/
+      section: 
+        id: introduction-to-media
+        title: "Video"
+        href: /documentation/introduction-to-media/
+    -  
+      title: Change the starting position 
+      href: /documentation/introduction-to-media/video/
+      section: 
+        id: introduction-to-media
+        title: "Video"
+        href: /documentation/introduction-to-media/
+    -  
+      title: Include a poster image
+      href: /documentation/introduction-to-media/video/
+      section: 
+        id: introduction-to-media
+        title: "Video"
+        href: /documentation/introduction-to-media/
+  images:
+    - 
+      title: Using images effectively
+      href: /documentation/introduction-to-media/images/
+      section: 
+        id: introduction-to-media
+        title: "Images"
+        href: /documentation/introduction-to-media/
+    -  
+      title:  Correct use of images in markup
+      href: /documentation/introduction-to-media/images/#images-in-markup
+      section: 
+        id: introduction-to-media
+        title: "Images"
+        href: /documentation/introduction-to-media/
+    - 
+      title: Optimizing images 101
+      href: /documentation/performance/optimizing-content-efficiency/#image-compression-101
+      section: 
+        id: introduction-to-media
+        title: "Images"
+        href: /documentation/introduction-to-media/
+
 key-takeaways:
   content-critical:
     - Identify the content you need first.
@@ -105,8 +149,6 @@ number, the user should just see a dial pad.
 
 {% include_code _code/addform.html form %}
 
-&nbsp;
-
 {% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms %}
 
 ### Create the Video and Information section
@@ -129,23 +171,7 @@ By following the best practices, you can easily integrate video in to your site:
 
 {% include_code _code/addvideo.html video html %}
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Learn more about the best ways to use video on your site.
-
-*  [Using video effectively]({{site.baseurl}}/documentation/introduction-to-media/video/)
-*  [Change the starting position]({{site.baseurl}}/documentation/introduction-to-media/video/)
-*  [Include a poster image]({{site.baseurl}}/documentation/introduction-to-media/video/)
-{: .list--links}
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid list=page.related-guides.video %}
 
 ### Create the Images Section
 
@@ -170,24 +196,7 @@ The images are set to scale to 100% of the width of the screen.
 This works well on  mobile devices, but less well on desktop.  We will manage
 this in the responsive design section.
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Discover the best practices for using images in your content.
-
-*  [Using images effectively]({{site.baseurl}}/documentation/introduction-to-media/images/)
-*  [Correct use of images in markup]({site.baseurl}}/documentation/introduction-to-media/images/#images-in-markup)
-*  [Optimizing images 101]({{site.baseurl}}/documentation/performance/optimizing-content-efficiency/#image-compression-101)
-{: .list--links}
-
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid list=page.related-guides.video %}
 
 ### Add the Tabulated Data Section
 
