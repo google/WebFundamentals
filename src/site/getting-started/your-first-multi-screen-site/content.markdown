@@ -149,7 +149,7 @@ number, the user should just see a dial pad.
 
 {% include_code _code/addform.html form %}
 
-{% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms %}
+{% include modules/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
 ### Create the Video and Information section
 
@@ -171,7 +171,7 @@ By following the best practices, you can easily integrate video in to your site:
 
 {% include_code _code/addvideo.html video html %}
 
-{% include modules/related_guides.liquid list=page.related-guides.video %}
+{% include modules/related_guides.liquid inline=true list=page.related-guides.video %}
 
 ### Create the Images Section
 
@@ -197,7 +197,7 @@ well on devices with a narrow vieport, but less well on those with a
 wideviewport (like desktop).  We will manage this in the responsive design
 section.
 
-{% include modules/related_guides.liquid list=page.related-guides.images %}
+{% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
 ### Add the Tabulated Data Section
 
