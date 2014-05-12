@@ -18,46 +18,59 @@
 }
 
 .main-header__title {
-  @include container(true);
+  @include type--large(true);
 
-  @include type--medium(true);
-
-  padding-top: $lineHeight/2;
-  padding-bottom: $lineHeight/2;
-  background: $colorGrayDark;
+  padding-top: 0;
+  margin: $lineHeight 0 $lineHeight;
 
   @include medium {
-
-    @include type--large(true);
-
     padding-top: 0;
+    margin: 0;
     float: left;
     padding: 0;
     background: transparent;
     width: 120px;
 
-    & span {
-      font-weight: 300;
-    }
-
   }
 
   @include wide {
     width: 170px;
-
   }
 
+  & span {
+    font-weight: 300;
+  }
+
+  .beta + & {
+    margin-bottom: 22px; // reduce margin-bottom only if beta banner exists
+  }
+}
+
+.main-nav__header {
+  @include container(true);
+  @include type--medium(true);
+  color: #ffffff;
+  font-family: $fontHighlight;
+  padding-top: $lineHeight/2;
+  padding-bottom: $lineHeight/2;
+  background: $colorGrayDark;
+
+  @include medium {
+    display: none;
+  }
+}
+
+.main-nav__current-label {
 }
 
 .main-header__logo {
   text-decoration: none;
-  color: #ffffff;
+  color: $colorGrayDark;
+  font-weight: 400;
 
   @include medium {
     font-family: $fontHighlight;
-    font-weight: 400;
     text-decoration: none;
-    color: $colorGrayDark;
     display: block;
   }
 

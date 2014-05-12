@@ -50,10 +50,6 @@
 
 
   @include small-only {
-    &.main-nav__item--home {
-      display: none;
-    }
-
     &.subnav-is-opened {
       background: #ffffff;
     }
@@ -98,13 +94,19 @@
   }
 
   @include medium {
-    @include type--medium;
+    @include type--medium(true);
     color: #ffffff;
     margin-bottom: 0;
     padding: $lineHeight $lineHeight/2 $lineHeight;
     position: relative;
 
     @include color-inherit;
+
+    .main-nav__item--home & {
+      @include medium {
+        padding-left: 0;
+      }
+    }
   }
 
 }
@@ -159,9 +161,11 @@
 
   &.main-nav__item--has-child {
     & .main-nav__link--parent {
-      .no-touch &:hover {
-        color: $colorYellowSecondary;
-        cursor: pointer;
+      @include medium {
+        .no-touch &:hover {
+          color: $colorYellowSecondary;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -210,7 +214,6 @@
 
   }
 }
-
 
 .main-nav__secondary-nav {
   display: none;
@@ -280,14 +283,13 @@
 .main-nav__btn {
   position: absolute;
   top: 0;
-  right: 5%;
-  margin: -36px 0 0;
-  line-height: 1;
-
+  right: $containerBleed;
+  margin: 0 0 0;
+  line-height: $lineHeight;
   font-size: $fontLarge;
   background: transparent;
   color: #ffffff;
-  padding: 0;
+  padding: ($lineHeight/2 + 3 ) 0 ($lineHeight/2 - 3 ) $containerBleed*2;
   border: none;
   -webkit-appearance: none;
   outline: none;
