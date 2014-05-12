@@ -12,6 +12,30 @@ article:
   updated_on: 2014-04-23
   order: 1
 collection: multi-screen
+related-guides:
+  create-amazing-forms:
+    -
+      title: Create amazing forms
+      href: /documentation/user-input/form-input/
+      section: 
+        id: user-input
+        title: "Forms"
+        href: /documentation/user-input/form-input/
+      href: /documentation/user-input/form-input/
+    - 
+      title: Label and name inputs correctly
+      href: /documentation/user-input/form-input/#label-and-name-inputs-properly
+      section: 
+        id: user-input
+        title: "Forms"
+        href: /documentation/user-input/form-input/
+    - 
+      title: Choose the best input type
+      href: /documentation/user-input/form-input/#choose-the-best-input-type
+      section: 
+        id: user-input
+        title: Forms
+        href: /documentation/user-input/form-input/
 key-takeaways:
   content-critical:
     - Identify the content you need first.
@@ -54,16 +78,16 @@ The basic structure of the site is complete. We know the sections we need, the
 content to display in those sections, and where to position it in the overall
 information architecture. We can now start to build out the site.
 
-{% include modules/remember.liquid title="Note" list=page.notes.styling %}
+{% include modules/remember.liquid title="Note" inline="true" list=page.notes.styling %}
 
 ### Create the headline and form
 
 The headline and request notification form are the critical components of
 our page. These must be presented to the user immediately.
 
-Adding the header is just a simple set of list items.
+Adding the header is just some simple text that describes what the course is
 
-{% include_code _code/addcontent.html headline %}
+{% include_code _code/addheadline.html headline %}
 
 We need to also fill out the form.
 It will be a simple form that collects the users' names,
@@ -79,26 +103,11 @@ We will add semantic types to make it quick and simple for users to be able to
 enter content on a mobile device.  For example, when entering a telephone
 number, the user should just see a dial pad.
 
-{% include_code _code/withform.html form %}
+{% include_code _code/addform.html form %}
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
+&nbsp;
 
-Learn more about how to create amazing forms:
-
-*  [Create amazing forms]({{site.baseurl}}/documentation/user-input/form-input/)
-*  [Label and name inputs correctly]({{site.baseurl}}/documentation/user-input/form-input/#label-and-name-inputs-properly)
-*  [Choose the best input type]({{site.baseurl}}/documentation/user-input/form-input/#choose-the-best-input-type)
-*  [Provide real-time validation]({{site.baseurl}}/documentation/user-input/form-input/#provide-real-time-validation)
-{: .list--links}
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms %}
 
 ### Create the Video and Information section
 
