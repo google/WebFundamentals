@@ -263,7 +263,7 @@ ol.list-links {
 
   & p {
     padding-top: 0;
-    color: $colorBlue;
+    color: $colorHighlight;
   }
 
   & img {
@@ -307,7 +307,6 @@ ol.list-links {
 
     @include medium {
       padding-top: 0;
-      padding-bottom: 0;
       margin-bottom: 0;
       border-color: transparent;
     }

@@ -26,8 +26,10 @@
 }
 
 .spotlight-header--landscape {
+  overflow-x: hidden;
+
   @include medium {
-    min-height: $lineHeight*13;
+    min-height: $lineHeight*20;
   }
 }
 
@@ -79,6 +81,7 @@
 
   .spotlight-header--landscape & {
     @include medium {
+      position: relative;
       width: auto;
       max-width: none;
       height: 260px
