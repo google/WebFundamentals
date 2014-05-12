@@ -217,7 +217,7 @@ and at a maximum size of 800px.
 
 The container will be a simple `div` in the following form:
 
-    {% highlight html %}<div class="container">...</div>{% endhighlight %}
+{% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 {% include_code _code/fixingfirstbreakpoint.html containerhtml html %}
 
