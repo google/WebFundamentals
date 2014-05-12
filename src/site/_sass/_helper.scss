@@ -61,11 +61,10 @@
 
 
 /*==========  TEXT DIVIDER  ==========*/
-
 .divider {
   width: 80%;
   margin: $lineHeight auto;
-  margin-top: $lineHeight*2;
+  margin-top: $lineHeight;
   margin-bottom: $lineHeight - 1;
   border: 0;
   height: 1px;
@@ -93,12 +92,21 @@
 
   }
 
+  &.divider--spaced {
+
+    @include medium {
+      margin-top: $lineHeight*2;
+      margin-bottom: $lineHeight*2 - 1;
+    }
+
+  }
+
   & span {
     background: #ffffff;
     position: relative;
     margin: 0 auto;
     display: block;
-    width: 39px;
+    width: 35px;
     height: 1px;
 
     &:before,

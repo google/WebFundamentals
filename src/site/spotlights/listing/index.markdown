@@ -56,7 +56,7 @@ collection: showcase
           </figure>
         </div>
       </li>
-      <div class="divider divider--fluid">
+      <div class="divider divider--fluid divider--spaced">
         <span class="divider-icon divider-icon--secondary"></span>
       </div>
       <li class="featured-list__item clear">

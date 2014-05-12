@@ -10,19 +10,119 @@
 *
 **/
 
-.back-to-top {
-  border-top: 2px solid $colorGrayKeyline;
-  margin-bottom: -2px;
-  margin-top: $lineHeight;
-  padding: $lineHeight/2 0;
-  text-align: center;
+.main-footer {
+  background: $colorGrayDark;
+  padding: $lineHeight 0 ($lineHeight*4 - $lineHeight/2); // remove half because our li's have half lineHeight margin-bottom
 
-  & .cta--secondary {
-    text-decoration: none;
+  @include medium {
+    padding-top: $lineHeight*2;
+  }
 
-    & .icon {
-      vertical-align: middle;
-      padding-left: 5px;
+  &,
+  & a {
+    color: #ffffff;
+  }
+
+  & h3 {
+    @include color-inherit;
+  }
+
+}
+
+.main-footer__list-group {
+  position: relative;
+  overflow: hidden;
+
+  @include medium {
+    &:after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: $colorGray;
+      position: absolute;
+      left: 50%;
+      top: 0;
     }
+  }
+}
+
+.main-footer__title {
+  @include type--large(true);
+
+  // font-family: $fontHighlight;
+  font-weight: 400;
+
+
+  @include medium {
+    padding-top: 0;
+  }
+
+  & span {
+    display: block;
+    font-weight: 300;
+
+  }
+
+  & img {
+    margin: 0;
+    height: 26px;
+    width: auto;
+    display: block;
+  }
+}
+
+.main-footer__list {
+  padding: $lineHeight 0 0 0;
+
+  & li {
+    margin-bottom: $lineHeight/2;
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.main-footer__list--primary {
+  font-family: $fontHighlight;
+  font-size: $fontBase;
+  font-weight: 400;
+
+  @include small-only {
+    border-bottom: 1px solid $colorGray;
+    padding-bottom: $lineHeight*3 - $lineHeight/2;
+    margin-bottom: $lineHeight;
+  }
+
+  @include medium {
+    padding-top: 0;
+    float: left;
+    width: 50%;
+  }
+}
+
+.main-footer__list--secondary {
+  font-size: $fontSmall;
+  line-height: $lineHeight;
+  padding-top: $lineHeight/2;
+}
+
+
+.main-footer__google-section {
+
+  & a {
+    color: $colorGrayKeyline;
+  }
+
+  @include medium {
+    float: left;
+    width: 50%;
+    padding-left: $mediumGutterWidth*2;
+  }
+
+  @include wide {
+    padding-left: $wideGutterWidth*2;
   }
 }

@@ -9,8 +9,6 @@
   <body class="{{ page.class }}">
     {% injectdata content _betterbook.yaml %}
 
-    {% include google_header.html %}
-
     {% include header.liquid %}
 
     <header class="spotlight-header spotlight-header--detail spotlight-header--{{ page.header_orientation }} clear">
@@ -32,7 +30,7 @@
 
     <div class="container">
       <div class="related-items-group">
-        {% include modules/other_showcases.liquid %}
+        {% include modules/other_showcases.liquid minimal=true %}
         {% include modules/related_guides.liquid %}
       </div>
 
