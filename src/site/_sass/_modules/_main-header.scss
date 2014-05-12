@@ -24,12 +24,11 @@
   margin: $lineHeight 0 $lineHeight;
 
   @include medium {
-    padding-top: 0;
+    padding: 0;
     margin: 0;
     float: left;
-    padding: 0;
     background: transparent;
-    width: 120px;
+    width: 150px;
   }
 
   @include wide {
@@ -48,7 +47,9 @@
 
   // reduce margin-bottom only if beta banner exists
   .beta + & {
-    margin-bottom: 22px;
+    @include small-only {
+      margin-bottom: 22px;
+    }
   }
 }
 
@@ -64,9 +65,6 @@
   @include medium {
     display: none;
   }
-}
-
-.main-nav__current-label {
 }
 
 .main-header__logo {

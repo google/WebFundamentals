@@ -1955,12 +1955,11 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 20, ../_sass/_modules/_main-header.scss */
   .main-header__title {
-    padding-top: 0;
+    padding: 0;
     margin: 0;
     float: left;
-    padding: 0;
     background: transparent;
-    width: 120px;
+    width: 150px;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -1969,20 +1968,22 @@ li > p {
     width: 170px;
   }
 }
-/* line 39, ../_sass/_modules/_main-header.scss */
+/* line 38, ../_sass/_modules/_main-header.scss */
 .main-header__title span {
   font-weight: 300;
 }
-/* line 44, ../_sass/_modules/_main-header.scss */
+/* line 43, ../_sass/_modules/_main-header.scss */
 .no-touch .main-header__title a:hover {
   color: #737373;
 }
-/* line 50, ../_sass/_modules/_main-header.scss */
-.beta + .main-header__title {
-  margin-bottom: 22px;
+@media only screen and (max-width: 619px) {
+  /* line 49, ../_sass/_modules/_main-header.scss */
+  .beta + .main-header__title {
+    margin-bottom: 22px;
+  }
 }
 
-/* line 55, ../_sass/_modules/_main-header.scss */
+/* line 56, ../_sass/_modules/_main-header.scss */
 .main-nav__header {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -2008,7 +2009,7 @@ li > p {
   background: #404040;
 }
 @media only screen and (min-width: 620px) {
-  /* line 55, ../_sass/_modules/_main-header.scss */
+  /* line 56, ../_sass/_modules/_main-header.scss */
   .main-nav__header {
     padding-left: 30px;
     padding-right: 30px;
@@ -2016,7 +2017,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 55, ../_sass/_modules/_main-header.scss */
+  /* line 56, ../_sass/_modules/_main-header.scss */
   .main-nav__header {
     padding-left: 35px;
     padding-right: 35px;
@@ -2024,20 +2025,20 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 55, ../_sass/_modules/_main-header.scss */
+  /* line 56, ../_sass/_modules/_main-header.scss */
   .main-nav__header {
     display: none;
   }
 }
 
-/* line 72, ../_sass/_modules/_main-header.scss */
+/* line 70, ../_sass/_modules/_main-header.scss */
 .main-header__logo {
   text-decoration: none;
   color: #404040;
   font-weight: 400;
 }
 @media only screen and (min-width: 620px) {
-  /* line 72, ../_sass/_modules/_main-header.scss */
+  /* line 70, ../_sass/_modules/_main-header.scss */
   .main-header__logo {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     text-decoration: none;
