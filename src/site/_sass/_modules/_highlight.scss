@@ -120,6 +120,8 @@
     padding: 0;
     word-spacing: -2px;
     display: block;
+    word-break: normal;
+    word-wrap: normal;
   }
 
   .highlight-module__container {

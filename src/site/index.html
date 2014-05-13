@@ -37,22 +37,10 @@ title: Home
   </ul>
 </div>
 
-{% if site.spotlights == true %}
-<div class="featured-spotlight">
-  <div class="container-medium">
-    <div class="featured-spotlight__container g--pull-half">
-      <div class="featured-spotlight__img">
-        <img src="../../imgs/placeholder--wide.png" alt="image exemple">
-      </div>
 
-      <div class="container-small">
-        <h3 class="xxlarge">Featured spotlight</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed vitae varius augue, eu varius dolor.</p>
-        <a href="#" class="cta--primary">View Google</a>
-      </div>
-    </div>
-  </div>
-</div>
+{% if site.spotlights == true %}
+
+{% featured_showcase showcase %}
 
 <div class="featured-section">
   <div class="container-medium">

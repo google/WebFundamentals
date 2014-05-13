@@ -17,65 +17,65 @@ related-guides:
     -
       title: Create amazing forms
       href: /documentation/user-input/form-input/
-      section: 
+      section:
         id: user-input
         title: "Forms"
         href: /documentation/user-input/form-input/
-    - 
+    -
       title: Label and name inputs correctly
       href: /documentation/user-input/form-input/#label-and-name-inputs-properly
-      section: 
+      section:
         id: user-input
         title: "Forms"
         href: /documentation/user-input/form-input/
-    - 
+    -
       title: Choose the best input type
       href: /documentation/user-input/form-input/#choose-the-best-input-type
-      section: 
+      section:
         id: user-input
         title: Forms
         href: /documentation/user-input/form-input/
   video:
-    - 
+    -
       title: Using video effectively
       href: /documentation/introduction-to-media/video/
-      section: 
+      section:
         id: introduction-to-media
         title: "Video"
         href: /documentation/introduction-to-media/
-    -  
-      title: Change the starting position 
+    -
+      title: Change the starting position
       href: /documentation/introduction-to-media/video/
-      section: 
+      section:
         id: introduction-to-media
         title: "Video"
         href: /documentation/introduction-to-media/
-    -  
+    -
       title: Include a poster image
       href: /documentation/introduction-to-media/video/
-      section: 
+      section:
         id: introduction-to-media
         title: "Video"
         href: /documentation/introduction-to-media/
   images:
-    - 
+    -
       title: Using images effectively
       href: /documentation/introduction-to-media/images/
-      section: 
+      section:
         id: introduction-to-media
         title: "Images"
         href: /documentation/introduction-to-media/
-    -  
+    -
       title:  Correct use of images in markup
       href: /documentation/introduction-to-media/images/#images-in-markup
-      section: 
+      section:
         id: introduction-to-media
         title: "Images"
         href: /documentation/introduction-to-media/
-    - 
+    -
       title: Optimizing images 101
       href: /documentation/performance/optimizing-content-efficiency/#image-compression-101
-      section: 
+      section:
         id: introduction-to-media
         title: "Images"
         href: /documentation/introduction-to-media/
@@ -183,7 +183,7 @@ Sites without images can be a little boring. There are two types of images:
    better; often these are background images, patterns and gradients.  We will
    cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
-The Images section in our page is a collection of content images. 
+The Images section in our page is a collection of content images.
 
 Content images are critical to conveying the meaning of the page. Think of
 them like the images used in newspaper articles.  The images we are using are

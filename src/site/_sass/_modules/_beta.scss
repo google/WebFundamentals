@@ -68,8 +68,10 @@
     top: 50%;
     display: block;
 
-    -webkit-animation: cog 4000ms ease-in-out;
-    animation: cog 4000ms ease-in-out;
+    .page--home & {
+      -webkit-animation: cog 4000ms ease-in-out;
+      animation: cog 4000ms ease-in-out;
+    }
   }
 
   & a {

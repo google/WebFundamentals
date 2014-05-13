@@ -471,15 +471,18 @@ ol.list-links {
   & h3 {
     margin: 0 32px;
 
-    & a {
-      text-decoration: none;
-      border-bottom: 1px solid;
-      padding-bottom: 1px;
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: 1px solid;
+        padding-bottom: 1px;
 
-      &:hover {
-        border-bottom: none;
+        &:hover {
+          border-bottom: none;
+        }
       }
     }
+
   }
 
   & p {
@@ -517,7 +520,7 @@ ol.list-links {
 
   & ol {
     margin: $lineHeight 0 0;
-    padding: $lineHeight*2 0 $lineHeight*2;
+    padding: $lineHeight*2 16px;
     margin-top: 0;
   }
 

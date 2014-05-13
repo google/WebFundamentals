@@ -2,6 +2,7 @@
 layout: default
 title: "Showcase example"
 description: "This is an example of a showcase page"
+class: listing
 showcase:
   written_on: 2014-01-01
   updated_on: 2014-02-02

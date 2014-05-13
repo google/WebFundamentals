@@ -112,6 +112,10 @@
     .main-nav__item--home & {
       @include medium {
         padding-left: 0;
+
+        &:after {
+          left: 40%;
+        }
       }
     }
   }
@@ -174,6 +178,14 @@
           cursor: pointer;
         }
       }
+    }
+  }
+}
+
+.main-nav__item--home {
+  .page--home & {
+    @include small-only {
+      display: none;
     }
   }
 }

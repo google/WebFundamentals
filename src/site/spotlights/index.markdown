@@ -2,6 +2,7 @@
 layout: default
 title: "Showcases"
 description: ""
+class: case-study
 related-guides:
   create-amazing-forms:
     -
@@ -33,7 +34,6 @@ NOTE: the spotlight header required a modifier to render properly
     </div>
     <div class="spotlight-header__media g--half g--last">
       <img src="../imgs/placeholder--device-portrait.png" class="spotlight-header__image">
-      <!-- <img src="../imgs/placeholder--device-landscape.png" class="spotlight-header__image"> -->
     </div>
   </div>
 </header>

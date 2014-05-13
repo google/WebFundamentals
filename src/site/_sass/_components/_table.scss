@@ -37,11 +37,6 @@ table {
     background: $colorGrayBackground;
   }
 
-  & code {
-    word-break: break-word;
-    word-wrap: break-word;
-  }
-
   & td {
     display: block;
     padding-top: $lineHeight/2;

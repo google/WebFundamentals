@@ -4,6 +4,7 @@ title: "Documentation"
 description: "Follow these guides and build web content users can access on any device they choose."
 introduction: ""
 id: documentation
+class: documentation
 ---
 
 {% comment %}

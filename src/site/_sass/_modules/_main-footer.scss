@@ -92,7 +92,7 @@
 
   @include small-only {
     border-bottom: 1px solid $colorGray;
-    padding-bottom: $lineHeight*3 - $lineHeight/2;
+    padding-bottom: $lineHeight*2 + 1;
     margin-bottom: $lineHeight;
   }
 

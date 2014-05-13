@@ -14,11 +14,12 @@
   background: $colorGrayDark;
   color: #ffffff;
   overflow: hidden;
-  padding-bottom: $lineHeight*3;
   margin-top: $lineHeight*2;
 
   & h3 {
     @include color-inherit;
+    word-break: break-word;
+    word-wrap: break-word;
   }
 
   & p {
@@ -29,13 +30,17 @@
     color: #ffffff;
 
     &:hover {
-      color: #ffffff;
+      color: $colorGrayMedium;
     }
   }
 }
 
 .featured-spotlight__container {
   position: relative;
+
+  & div+div {
+    padding-bottom: $lineHeight*3;
+  }
 }
 
 .featured-spotlight__title {
@@ -66,6 +71,7 @@
     @include medium {
       width: auto;
       max-width: none;
+      height: 100%;
       left: 100% + $mediumGutterWidth*2;
     }
 

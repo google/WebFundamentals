@@ -33,18 +33,27 @@
     padding-top: $lineHeight;
     padding-bottom: $lineHeight;
   }
+
+  & .main-header__title {
+
+    @include small-only {
+      padding: 0 16px;
+    }
+
+  }
+
 }
 
 .google-header__dev-logo {
   text-decoration: none;
   display: block;
   margin: 0 auto;
-  width: 110px;
+  width: 181px;
 
   & img {
     display: block;
     margin: 0 auto;
-    width: 106px;
+    width: 181px;
     height: $lineHeight;
     max-width: none;
   }
