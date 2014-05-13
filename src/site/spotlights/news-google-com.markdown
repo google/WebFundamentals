@@ -8,7 +8,7 @@ showcase:
   updated_on: 2014-02-02
   featured: true
   small-promo-image: spotlights/images/kinlan.png
-  wide-promo-image: /imgs/placeholder--wide.png
+  wide-promo-image: /imgs/placeholder--featured-spotlight.png
 collection: showcase
 ---
 

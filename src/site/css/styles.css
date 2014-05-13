@@ -2185,7 +2185,7 @@ li > p {
   /* line 88, ../_sass/_modules/_main-footer.scss */
   .main-footer__list--primary {
     border-bottom: 1px solid #737373;
-    padding-bottom: 65px;
+    padding-bottom: 53px;
     margin-bottom: 26px;
   }
 }
@@ -3139,38 +3139,43 @@ li > p {
   background: #404040;
   color: #ffffff;
   overflow: hidden;
-  padding-bottom: 78px;
   margin-top: 52px;
 }
-/* line 20, ../_sass/_modules/_featured-spotlight.scss */
+/* line 19, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight h3 {
   color: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 @media only screen and (min-width: 620px) {
-  /* line 20, ../_sass/_modules/_featured-spotlight.scss */
+  /* line 19, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight h3 {
     color: inherit;
   }
 }
-/* line 24, ../_sass/_modules/_featured-spotlight.scss */
+/* line 25, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight p {
   padding-bottom: 26px;
 }
-/* line 28, ../_sass/_modules/_featured-spotlight.scss */
+/* line 29, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight .cta--primary {
   color: #ffffff;
 }
-/* line 31, ../_sass/_modules/_featured-spotlight.scss */
+/* line 32, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight .cta--primary:hover {
   color: #ffffff;
 }
 
-/* line 37, ../_sass/_modules/_featured-spotlight.scss */
+/* line 38, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight__container {
   position: relative;
 }
-
 /* line 41, ../_sass/_modules/_featured-spotlight.scss */
+.featured-spotlight__container div + div {
+  padding-bottom: 78px;
+}
+
+/* line 46, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight__title {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -3184,7 +3189,7 @@ li > p {
   color: inherit;
 }
 @media only screen and (min-width: 800px) {
-  /* line 41, ../_sass/_modules/_featured-spotlight.scss */
+  /* line 46, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -3198,14 +3203,14 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 41, ../_sass/_modules/_featured-spotlight.scss */
+  /* line 46, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__title {
     color: inherit;
   }
 }
 
 @media only screen and (max-width: 619px) {
-  /* line 46, ../_sass/_modules/_featured-spotlight.scss */
+  /* line 51, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__img {
     padding-top: 58.4%;
     padding-bottom: 0;
@@ -3215,7 +3220,7 @@ li > p {
     width: 100%;
   }
 }
-/* line 56, ../_sass/_modules/_featured-spotlight.scss */
+/* line 61, ../_sass/_modules/_featured-spotlight.scss */
 .featured-spotlight__img img {
   margin: 0 auto;
   display: block;
@@ -3226,15 +3231,16 @@ li > p {
   margin: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 56, ../_sass/_modules/_featured-spotlight.scss */
+  /* line 61, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__img img {
     width: auto;
     max-width: none;
+    height: 100%;
     left: 109%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 56, ../_sass/_modules/_featured-spotlight.scss */
+  /* line 61, ../_sass/_modules/_featured-spotlight.scss */
   .featured-spotlight__img img {
     left: 107.4%;
   }
