@@ -182,6 +182,14 @@
   }
 }
 
+.main-nav__item--home {
+  .page--home & {
+    @include small-only {
+      display: none;
+    }
+  }
+}
+
 .main-nav__list--child {
   padding-top: 0;
   padding-left: 0;

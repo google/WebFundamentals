@@ -1602,24 +1602,31 @@ li > p {
   }
 }
 
-/* line 185, ../_sass/_modules/_main-navigation.scss */
+@media only screen and (max-width: 619px) {
+  /* line 186, ../_sass/_modules/_main-navigation.scss */
+  .page--home .main-nav__item--home {
+    display: none;
+  }
+}
+
+/* line 193, ../_sass/_modules/_main-navigation.scss */
 .main-nav__list--child {
   padding-top: 0;
   padding-left: 0;
 }
 
-/* line 190, ../_sass/_modules/_main-navigation.scss */
+/* line 198, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item--child {
   padding-top: 0;
   position: static;
   padding-left: 0;
 }
-/* line 195, ../_sass/_modules/_main-navigation.scss */
+/* line 203, ../_sass/_modules/_main-navigation.scss */
 .main-nav__item--child:before {
   display: none;
 }
 
-/* line 200, ../_sass/_modules/_main-navigation.scss */
+/* line 208, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link--child {
   background: #ffffff;
   font-size: 16px;
@@ -1634,19 +1641,19 @@ li > p {
   border-bottom: 1px solid #e0e0e0;
 }
 @media only screen and (max-width: 619px) {
-  /* line 200, ../_sass/_modules/_main-navigation.scss */
+  /* line 208, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--child {
     padding-left: 10%;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 200, ../_sass/_modules/_main-navigation.scss */
+  /* line 208, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--child {
     color: #737373;
     border-bottom-color: transparent;
     padding-left: 0;
   }
-  /* line 218, ../_sass/_modules/_main-navigation.scss */
+  /* line 226, ../_sass/_modules/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     color: #404040;
     font-size: 20px;
@@ -1657,13 +1664,13 @@ li > p {
     padding-bottom: 0;
     letter-spacing: -0.3px;
   }
-  /* line 222, ../_sass/_modules/_main-navigation.scss */
+  /* line 230, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--child:hover {
     color: #404040;
   }
 }
 @media only screen and (min-width: 620px) and (min-width: 800px) {
-  /* line 218, ../_sass/_modules/_main-navigation.scss */
+  /* line 226, ../_sass/_modules/_main-navigation.scss */
   .main-nav__list--child .main-nav__link--child {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -1677,12 +1684,12 @@ li > p {
   }
 }
 
-/* line 229, ../_sass/_modules/_main-navigation.scss */
+/* line 237, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 229, ../_sass/_modules/_main-navigation.scss */
+  /* line 237, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-nav {
     background-color: #ffffff;
     position: absolute;
@@ -1696,13 +1703,13 @@ li > p {
     color: #737373;
   }
 }
-/* line 246, ../_sass/_modules/_main-navigation.scss */
+/* line 254, ../_sass/_modules/_main-navigation.scss */
 .subnav-is-opened .main-nav__secondary-nav {
   display: block;
   -webkit-animation: showNav 250ms ease-in-out both;
 }
 
-/* line 253, ../_sass/_modules/_main-navigation.scss */
+/* line 261, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-content {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1713,7 +1720,7 @@ li > p {
   margin-right: auto;
 }
 @media only screen and (min-width: 620px) {
-  /* line 253, ../_sass/_modules/_main-navigation.scss */
+  /* line 261, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 30px;
     padding-right: 30px;
@@ -1721,7 +1728,7 @@ li > p {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 253, ../_sass/_modules/_main-navigation.scss */
+  /* line 261, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     padding-left: 35px;
     padding-right: 35px;
@@ -1729,13 +1736,13 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 253, ../_sass/_modules/_main-navigation.scss */
+  /* line 261, ../_sass/_modules/_main-navigation.scss */
   .main-nav__secondary-content {
     text-align: left;
   }
 }
 
-/* line 261, ../_sass/_modules/_main-navigation.scss */
+/* line 269, ../_sass/_modules/_main-navigation.scss */
 .main-nav__link--explore {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   color: #3372df;
@@ -1751,13 +1758,13 @@ li > p {
   color: #404040;
 }
 @media only screen and (max-width: 619px) {
-  /* line 261, ../_sass/_modules/_main-navigation.scss */
+  /* line 269, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     border-top: 1px solid #e0e0e0;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 261, ../_sass/_modules/_main-navigation.scss */
+  /* line 269, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     color: #3372df;
@@ -1783,29 +1790,29 @@ li > p {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 275, ../_sass/_modules/_main-navigation.scss */
+  /* line 283, ../_sass/_modules/_main-navigation.scss */
   .main-nav__link--explore-wrapper {
     border-bottom: 1px solid #e0e0e0;
   }
 }
 
-/* line 281, ../_sass/_modules/_main-navigation.scss */
+/* line 289, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 281, ../_sass/_modules/_main-navigation.scss */
+  /* line 289, ../_sass/_modules/_main-navigation.scss */
   .main-nav__featured {
     display: block;
   }
 }
 
-/* line 289, ../_sass/_modules/_main-navigation.scss */
+/* line 297, ../_sass/_modules/_main-navigation.scss */
 .main-nav__featured-text {
   padding-top: 0;
 }
 
-/* line 294, ../_sass/_modules/_main-navigation.scss */
+/* line 302, ../_sass/_modules/_main-navigation.scss */
 .main-nav__btn {
   position: absolute;
   top: 0;
@@ -1821,24 +1828,24 @@ li > p {
   outline: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 294, ../_sass/_modules/_main-navigation.scss */
+  /* line 302, ../_sass/_modules/_main-navigation.scss */
   .main-nav__btn {
     display: none;
   }
 }
 
-/* line 313, ../_sass/_modules/_main-navigation.scss */
+/* line 321, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn {
   top: -6px;
 }
-/* line 316, ../_sass/_modules/_main-navigation.scss */
+/* line 324, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn i:before {
   font-size: 20px;
   content: "\e007";
 }
 
 /*==========  ICONS  ==========*/
-/* line 324, ../_sass/_modules/_main-navigation.scss */
+/* line 332, ../_sass/_modules/_main-navigation.scss */
 .main-nav__icon {
   float: right;
   margin-right: 7px;
@@ -1846,12 +1853,12 @@ li > p {
   line-height: 26px;
   vertical-align: middle;
 }
-/* line 331, ../_sass/_modules/_main-navigation.scss */
+/* line 339, ../_sass/_modules/_main-navigation.scss */
 .main-nav__secondary-nav .main-nav__icon {
   font-size: 13px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 324, ../_sass/_modules/_main-navigation.scss */
+  /* line 332, ../_sass/_modules/_main-navigation.scss */
   .main-nav__icon {
     display: none;
     font-size: 13px;
@@ -1859,14 +1866,14 @@ li > p {
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 342, ../_sass/_modules/_main-navigation.scss */
+  /* line 350, ../_sass/_modules/_main-navigation.scss */
   .icon-custom:before {
     font-size: 9px;
     content: "\e002";
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 341, ../_sass/_modules/_main-navigation.scss */
+  /* line 349, ../_sass/_modules/_main-navigation.scss */
   .icon-custom {
     float: none;
     display: inline-block;
@@ -1878,20 +1885,20 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 362, ../_sass/_modules/_main-navigation.scss */
+  /* line 370, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
     content: "\e006";
   }
 }
 
-/* line 374, ../_sass/_modules/_main-navigation.scss */
+/* line 382, ../_sass/_modules/_main-navigation.scss */
 .main-nav .main-nav__guide-icon {
   display: inline-block;
   vertical-align: top;
   margin-right: 6px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 374, ../_sass/_modules/_main-navigation.scss */
+  /* line 382, ../_sass/_modules/_main-navigation.scss */
   .main-nav .main-nav__guide-icon {
     vertical-align: middle;
   }
@@ -1899,48 +1906,48 @@ li > p {
 
 /*==========  CSS ANIMATION  ==========*/
 @-webkit-keyframes showNav {
-  /* line 387, ../_sass/_modules/_main-navigation.scss */
+  /* line 395, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 390, ../_sass/_modules/_main-navigation.scss */
+  /* line 398, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes showNav {
-  /* line 387, ../_sass/_modules/_main-navigation.scss */
+  /* line 395, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 390, ../_sass/_modules/_main-navigation.scss */
+  /* line 398, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes showNav {
-  /* line 387, ../_sass/_modules/_main-navigation.scss */
+  /* line 395, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 390, ../_sass/_modules/_main-navigation.scss */
+  /* line 398, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes showNav {
-  /* line 387, ../_sass/_modules/_main-navigation.scss */
+  /* line 395, ../_sass/_modules/_main-navigation.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 390, ../_sass/_modules/_main-navigation.scss */
+  /* line 398, ../_sass/_modules/_main-navigation.scss */
   100% {
     opacity: 1;
   }
