@@ -42,3 +42,6 @@ output_style = :compressed
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
+
+# Enabling mixin recursion by applying a monkey patch to SASS compiler
+require "./sass-visit-mixin-monkey-patch"

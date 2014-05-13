@@ -5,12 +5,12 @@ description: "The web is accessible on a huge range of devices from small-screen
 introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions. Each device presents its own unique benefits and also constraints. As a web developer, you are expected to support all ranges of devices."
 key-takeaways:
   make-responsive:
-    - Always use a viewport. 
+    - Always use a viewport.
     - Always start with a narrow viewport first and scale out.
     - Base your breakpoints off when you need to adapt the content.
     - Create a high-level vision of your layout across major breakpoints.
 notes:
-  styling: 
+  styling:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed.
@@ -91,12 +91,12 @@ Learn more about the best practices of using the viewport:
 
 ## Apply simple styling
 
-Our product and company already has a very specific branding and font guide-lines supplied 
+Our product and company already has a very specific branding and font guide-lines supplied
 in a style guide.
 
 ### Style guide
 
-A style guide is a useful way to get a high-level understanding of the visual representation 
+A style guide is a useful way to get a high-level understanding of the visual representation
 of the page and it helps you ensure that you are consistent through out the design.
 
 #### Colors
@@ -124,10 +124,10 @@ is often used to entice the user to read more about the product.
   <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
 </div>
 
-They can be very simple to include. In our case, it will be the background to the 
+They can be very simple to include. In our case, it will be the background to the
 header and we will apply it via some simple CSS.
 
-{% highlight css %}  
+{% highlight css %}
 #headline {
   padding: 0.8em;
   color: white;
@@ -138,7 +138,7 @@ header and we will apply it via some simple CSS.
 {% endhighlight %}
 
 We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element that way it 
+from the content and we have set it to `cover` the entire element that way it
 always stretches whilst maintaining the correct aspect ratio.
 
 <br style="clear: both;">
@@ -152,7 +152,7 @@ where we want to change it.
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
+  <p>Sorry your browser doesn't support video.
      <a href="videos/firstbreakpoint.mov">Download the video</a>.
   </p>
 </video>
@@ -163,7 +163,7 @@ using a technology called [Media Queries]({{site.baseurl}}/documentation/multi-d
 
 {% highlight css %}
 @media (min-width: 600px) {
-    
+
 }
 {% endhighlight %}
 
@@ -190,8 +190,8 @@ need to:
 
 Learn more about how and where to use Media Queries:
 
-*  [Using Media Queries]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) 
-*  [Layout patterns]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/) 
+*  [Using Media Queries]({{site.baseurl}}/documentation/multi-device-layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)
+*  [Layout patterns]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/)
 *  [Mostly Fluid layout]({{site.baseurl}}/documentation/multi-device-layouts/rwd-patterns/#mostly-fluid)
 {: .list--links}
 </div>
@@ -207,7 +207,7 @@ viewport, which greatly simplifies our build process.
 We have also decided to create full-bleed sections on the narrow viewport that
 stay full-bleed on the wide viewport.  This means we should constrain the
 maximum width of the screen so that the text and paragraphs don't extend into one
-long, single line on ultra-wide screens.  We have chosen this point to be 
+long, single line on ultra-wide screens.  We have chosen this point to be
 about 800px.
 
 To achieve this, we need to constrain the width and center the elements.  We
@@ -217,7 +217,7 @@ and at a maximum size of 800px.
 
 The container will be a simple `div` in the following form:
 
-    {% highlight html %}<div class="container">...</div>{% endhighlight %}
+{% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 {% include_code _code/fixingfirstbreakpoint.html containerhtml html %}
 
@@ -234,7 +234,7 @@ on a larger screen but further away.  To increase the readability of the
 content, we can increase the size and weight of the typography and we can also
 alter the padding to make distinct areas stand out more.
 
-In our product page, we will increase the padding of the section elements by 
+In our product page, we will increase the padding of the section elements by
 setting it to remain at 5% of the width.  We will also increase the size of
 the headers for each of the sections.
 
@@ -269,7 +269,7 @@ to each other.
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
+  <p>Sorry your browser doesn't support video.
      <a href="videos/floatingform.mov">Download the video</a>.
   </p>
 </video>
@@ -297,7 +297,7 @@ of the container width and laid out horizontally (rather than vertically in
 the narrow view). We will also add some border radius and box-shadow to make
 the images look more appealing.
 
-<img src="images/imageswide.png" style="width:100%" />
+<img src="images/imageswide.png" style="width:100%">
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
@@ -315,7 +315,7 @@ We have a solution that is not widely adopted yet.
 For browsers that support it, you can display a high density image on a high density display.
 
 {% highlight html %}
-<img src="photo.png" srcset="photo@2x.png 2x" />  
+<img src="photo.png" srcset="photo@2x.png 2x">
 {% endhighlight %}
 
 <div class="related-items">
@@ -347,7 +347,7 @@ transposing the heading and cells in a row to make the columnar.
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video. 
+  <p>Sorry your browser doesn't support video.
      <a href="videos/responsivetable.mov">Download the video</a>.
   </p>
 </video>
@@ -371,7 +371,7 @@ If you follow these guidelines, you will be off to a good start:
 1.  Create a basic IA and understand your content before you code.
 2.  Always set a viewport.
 3.  Create your base experience around mobile-first approach.
-4.  Once you have your mobile experience, increase the width of the display 
+4.  Once you have your mobile experience, increase the width of the display
    until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
 

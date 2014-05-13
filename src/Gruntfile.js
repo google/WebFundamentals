@@ -210,60 +210,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		replace: {
-			files: [
-				{expand: true, flatten: true, src: ['<%=config.destination>/**/*.html'], dest: '<%=config.destination>/'}
-			],
-			iconfont: {
-				files: [
-					{
-						expand: true,
-						flatten: true,
-						src: '<%=config.destination>/css/styles.min.css',
-						dest: '<%=config.destination>/css/'
-					}
-				],
-				options: {
-					patterns: [
-						{
-							match: '../icons/icons.',
-							replacement: '//web-central.appspot.com/web/essentials/icons/icons.'
-						}
-					]
-				}
-			},
-			develop: {
-				options: {
-					patterns: [
-						{
-							match: 'http://localhost:8081',
-							replacement: '/'
-						}
-					]
-				}
-			},
-			stage: {
-				options: {
-					patterns: [
-						{
-							match: 'http://localhost:8081',
-							replacement: '/'
-						}
-					]
-				}
-			},
-			production: {
-				options: {
-					patterns: [
-						{
-							match: 'http://localhost:8081',
-							replacement: '/web/essentials'
-						}
-					]
-				}
-			}
-		},
-
 		shell: {
 			options: {
 				failOnError: true,
@@ -382,7 +328,6 @@ module.exports = function(grunt) {
 				'compass:compressed',		// Build the CSS using Compass with compression
 				'cssmin',					// Minify the combined CSS
 				'jekyll:destination',		// Build the site with Jekyll
-				// 'replace:iconfont',		// Swap out local icon font references for fully qualified URL
 			]);
 		} else {
 			return grunt.task.run([
@@ -393,7 +338,6 @@ module.exports = function(grunt) {
 				'compass:uncompressed',		// Build the CSS using Compass without compression
 				'cssmin',					// Minify the combined CSS
 				'jekyll:destination',		// Build the site with Jekyll
-				// 'replace:iconfont',		// Swap out local icon font references for fully qualified URL
 			]);
 		}
 
@@ -439,29 +383,10 @@ module.exports = function(grunt) {
 
 	});
 
-	// Develop task
-	grunt.registerTask('deploy', 'Runs the "test" task, then builds the website and carries out string replacement on specific URLs.\nOptions:\n  --production: carries out path replacement for production environment', function() {
-
-		var production = grunt.option('production');
-
-		if(production) {
-			return grunt.task.run([
-				'build',
-				'replace:production'
-			]);
-		} else {
-			return grunt.task.run([
-				'build',
-				'replace:develop'
-			]);
-
-		}
-
-	});
-
 	// Devsite task
 	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
 		grunt.config.set('config', grunt.file.readYAML('site/_config-devsite.yml'));
+
 		return grunt.task.run([
 			'test',						// Code quality control
 			'clean:icons',				// Clean up icon font files for regeneration
@@ -470,9 +395,9 @@ module.exports = function(grunt) {
 			'cssmin',					// Minify the combined CSS
 			'clean:destination',		// Clean out the destination directory
 			'jekyll:devsite',			// Build the site with Jekyll
-			// 'replace:iconfont',			// Swap out local icon font references for fully qualified URL
 			'htmlmin:all'				// Minify the final HTML
 		]);
+
 	});
 
 	// Default task

@@ -1,9 +1,17 @@
-<header id="gc-googlebar">
-  <div class="container">
-    <a id="gc-logo" href="//developers.google.com/">
-      <img src="//developers.google.com/_static/0f4dd8c48e/images/developers-logo.svg" alt="Google">
-    </a>
-    {% include beta.liquid %}
+<header class="google-header">
+
+  <div class="google-header__top">
+    <div class="container">
+      <a class="google-header__dev-logo" href="//developers.google.com/">
+        <img src="//developers.google.com/_static/0f4dd8c48e/images/developers-logo.svg" alt="Google Developers Homepage">
+      </a>
+    </div>
+  </div>
+
+  <div class="google-header__bottom">
+    <div class="container">
+      <h1 class="large google-header__wf-logo"><a href="{{site.baseurl}}">Web Fundamentals</a></h1>
+      {% include beta.liquid %}
+    </div>
   </div>
 </header>
-

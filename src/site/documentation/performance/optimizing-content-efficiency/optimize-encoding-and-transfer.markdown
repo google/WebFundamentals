@@ -130,59 +130,59 @@ All modern browsers support and automatically negotiate GZIP compression for all
 <table>
 <thead>
   <tr>
-    <td>Library</td>
-    <td>Size</td>
-    <td>Compressed size</td>
-    <td>Compression ratio</td>
+    <th>Library</th>
+    <th>Size</th>
+    <th>Compressed size</th>
+    <th>Compression ratio</th>
   </tr>
 </thead>
 <tr>
-  <td>jquery-1.11.0.js</td>
-  <td>276 KB</td>
-  <td>82 KB</td>
-  <td>70%</td>
+  <td data-th="library">jquery-1.11.0.js</td>
+  <td data-th="size">276 KB</td>
+  <td data-th="compressed">82 KB</td>
+  <td data-th="savings">70%</td>
 </tr>
 <tr>
-  <td>jquery-1.11.0.min.js</td>
-  <td>94 KB</td>
-  <td>33 KB</td>
-  <td>65%</td>
+  <td data-th="library">jquery-1.11.0.min.js</td>
+  <td data-th="size">94 KB</td>
+  <td data-th="compressed">33 KB</td>
+  <td data-th="savings">65%</td>
 </tr>
 <tr>
-  <td>angular-1.2.15.js</td>
-  <td>729 KB</td>
-  <td>182 KB</td>
-  <td>75%</td>
+  <td data-th="library">angular-1.2.15.js</td>
+  <td data-th="size">729 KB</td>
+  <td data-th="compressed">182 KB</td>
+  <td data-th="savings">75%</td>
 </tr>
 <tr>
-  <td>angular-1.2.15.min.js</td>
-  <td>101 KB</td>
-  <td>37 KB</td>
-  <td>63%</td>
+  <td data-th="library">angular-1.2.15.min.js</td>
+  <td data-th="size">101 KB</td>
+  <td data-th="compressed">37 KB</td>
+  <td data-th="savings">63%</td>
 </tr>
 <tr>
-  <td>bootstrap-3.1.1.css</td>
-  <td>118 KB</td>
-  <td>18 KB</td>
-  <td>85%</td>
+  <td data-th="library">bootstrap-3.1.1.css</td>
+  <td data-th="size">118 KB</td>
+  <td data-th="compressed">18 KB</td>
+  <td data-th="savings">85%</td>
 </tr>
 <tr>
-  <td>bootstrap-3.1.1.min.css</td>
-  <td>98 KB</td>
-  <td>17 KB</td>
-  <td>83%</td>
+  <td data-th="library">bootstrap-3.1.1.min.css</td>
+  <td data-th="size">98 KB</td>
+  <td data-th="compressed">17 KB</td>
+  <td data-th="savings">83%</td>
 </tr>
 <tr>
-  <td>foundation-5.css</td>
-  <td>186 KB</td>
-  <td>22 KB</td>
-  <td>88%</td>
+  <td data-th="library">foundation-5.css</td>
+  <td data-th="size">186 KB</td>
+  <td data-th="compressed">22 KB</td>
+  <td data-th="savings">88%</td>
 </tr>
 <tr>
-  <td>foundation-5.min.css</td>
-  <td>146 KB</td>
-  <td>18 KB</td>
-  <td>88%</td>
+  <td data-th="library">foundation-5.min.css</td>
+  <td data-th="size">146 KB</td>
+  <td data-th="compressed">18 KB</td>
+  <td data-th="savings">88%</td>
 </tr>
 </table>
 
@@ -195,7 +195,7 @@ The best part is that enabling GZIP is one of the simplest and highest payoff op
 
 What’s the best config for your server? The HTML5 Boilerplate project contains [sample configuration files](https://github.com/h5bp/server-configs) for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for the GZIP section, and confirm that your server is configured with recommended settings.
 
-<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size" />
+<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size">
 
 A quick and simple way to see GZIP in action is to open Chrome Developer Tools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
 

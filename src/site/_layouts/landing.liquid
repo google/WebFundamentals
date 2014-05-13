@@ -9,42 +9,31 @@
   <body class="{{ page.class }} page--{{page.id}}">
     {% injectdata content _betterbook.yaml %}
 
-    {% include google_header.html %}
-
     {% include header.liquid %}
-
-    <!-- <div class="page-header">
-      <div class="container">
-
-        {% include modules/breadcrumbs.liquid %}
-
-        <h3 class="xxlarge text-divider"></h3>
-        <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">{{page.introduction}}</p>
-      </div>
-    </div>
-
-    {{ content }} -->
 
     <div class="guides-section">
       <header class="container">
           <h2 class="xxlarge">{{ page.title }}</h2>
+          <div class="divider divider--secondary">
+            <span class="themed divider-icon"></span>
+          </div>
           <p>{{ page.description }}</p>
       </header>
 
-      <ul class="guides-list container-medium">
+      <ul class="guides-list container">
 
         {% for guide in page.articles.[page.id] %}
 
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
           <div class="primary-content">
-            <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
+            <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | clean}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
             <p>{{guide.description}}</p>
           </div>
           <div class="secondary-content">
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
             <ol class="list-links list-links--secondary">
             {% for article in page.articles[guide.id] %}
-              <li><a href="{{site.baseurl}}{{article.url}}" title="Read the lesson {{article.title}}">{{article.title}}</a></li>
+              <li><a href="{{site.baseurl}}{{article.url | clean}}" title="Read the lesson {{article.title}}">{{article.title}}</a></li>
             {% endfor %}
             </ol>
           </div>

@@ -25,19 +25,21 @@
   padding: 0;
 
   @include small-only {
+    box-shadow: 0 0 0 2px $colorGrayDark;
+    // border-bottom: $lineHeight solid $colorGrayDark;
+
     .js & {
       display: none;
     }
 
     .js &.nav-is-opened {
       display: block;
-      -webkit-animation: showNav 400ms both;
+      @include prefixr(animation, showNav 250ms ease-in-out both)
     }
   }
 
+  @include container(true, true); // second paremeter is to ignore mobile rules
   @include medium {
-    text-align: center;
-    @include container(true);
     position: static;
   }
 }
@@ -51,10 +53,6 @@
 
 
   @include small-only {
-    &.main-nav__item--home {
-      display: none;
-    }
-
     &.subnav-is-opened {
       background: #ffffff;
     }
@@ -74,10 +72,6 @@
     padding-top: 0;
   }
 
-  &:first-child a {
-    font-weight: 400;
-  }
-
   // Remove list styles
   &:before {
     display: none;
@@ -85,14 +79,12 @@
 }
 
 .main-nav__link {
+  @include type--large;
   color: $colorGrayDark;
   font-family: $fontHighlight;
-  @include type--large;
   margin-bottom: 1px;
   text-decoration: none;
-
   display: block;
-
   padding-top: $lineHeight/2;
   padding-bottom: ($lineHeight/2) - 1;
 
@@ -100,35 +92,90 @@
     text-decoration: none;
   }
 
+  .main-nav__item:last-child & {
+    margin-bottom: 0;
+  }
+
   @include small-only {
     @include container(true);
   }
 
   @include medium {
-    margin-bottom: 0;
+    @include type--medium(true);
     color: #ffffff;
-    @include type--medium;
+    margin-bottom: 0;
     padding: $lineHeight $lineHeight/2 $lineHeight;
-    font-weight: 400;
+    position: relative;
+
+    @include color-inherit;
 
     .main-nav__item--home & {
-      padding-left: 0;
+      @include medium {
+        padding-left: 0;
+      }
     }
+  }
 
-    &:hover {
+}
+
+.main-nav__link--parent {
+  @include medium {
+    position: relative;
+
+    .no-touch &:hover {
       color: $colorYellowSecondary;
-      // box-shadow: 0 0 1px 0 $colorGray;
     }
 
-    .subnav-is-opened > & {
-      color: $colorYellow;
+    // Creating arrow states for active item
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid $colorGrayBackground;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      display: none;
+    }
+
+    // Rules for when on current page
+    .main-nav__item--current & {
+      cursor: default;
+
+      .no-touch &:hover {
+        color: $colorGrayMedium;
+      }
+
+      // Show arrow when on current page
+      &:after {
+        display: block;
+      }
     }
   }
 
   @include wide {
     padding-bottom: $lineHeight;
   }
+}
 
+
+// Rules for elements when on the current page
+.main-nav__item--current {
+  color: $colorGrayMedium;
+
+  &.main-nav__item--has-child {
+    & .main-nav__link--parent {
+      @include medium {
+        .no-touch &:hover {
+          color: $colorYellowSecondary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .main-nav__list--child {
@@ -175,7 +222,6 @@
   }
 }
 
-
 .main-nav__secondary-nav {
   display: none;
 
@@ -184,6 +230,9 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 2;
+    border-top: 5px solid $colorGrayDark; // cover the current page arrow ;)
+    margin-top: -5px; // cover the current page arrow ;)
     border-bottom: 2px solid $colorGrayDark;
     padding-bottom: ($lineHeight*2) - 2; // remove the 2px border from the padding
     color: $colorText;
@@ -192,20 +241,21 @@
 
   .subnav-is-opened & {
     display: block;
-    -webkit-animation: showNav 400ms both;
+    -webkit-animation: showNav 250ms ease-in-out both;
   }
 }
 
 
 .main-nav__secondary-content {
+  @include container(true, true); // second parameter is to ignore mobile
+
   @include medium {
-    @include container(true);
     text-align: left;
   }
 }
 
 .main-nav__link--explore {
-  @include style-cta($colorBlue, false);
+  @include style-cta($colorHighlight, false);
   display: block;
   line-height: $lineHeight;
 
@@ -214,12 +264,14 @@
   }
 
   @include medium {
-    @include style-cta($colorBlue, $icon-chevron-right);
+    @include style-cta($colorHighlight, $icon-chevron-right);
   }
 }
 
 .main-nav__link--explore-wrapper {
-  border-bottom: 1px solid $colorGrayKeyline;
+  @include medium {
+    border-bottom: 1px solid $colorGrayKeyline;
+  }
 }
 
 .main-nav__featured {
@@ -238,14 +290,13 @@
 .main-nav__btn {
   position: absolute;
   top: 0;
-  right: 5%;
-  margin: -36px 0 0;
-  line-height: 1;
-
+  right: $containerBleed;
+  margin: 0 0 0;
+  line-height: $lineHeight;
   font-size: $fontLarge;
   background: transparent;
   color: #ffffff;
-  padding: 0;
+  padding: ($lineHeight/2 + 3 ) 0 ($lineHeight/2 - 3 ) $containerBleed*2;
   border: none;
   -webkit-appearance: none;
   outline: none;
@@ -268,6 +319,7 @@
 /*==========  ICONS  ==========*/
 .main-nav__icon {
   float: right;
+  margin-right: 7px;
   font-size: $fontBase;
   line-height: $lineHeight;
   vertical-align: middle;
@@ -287,6 +339,7 @@
     @extend .icon-plus:before;
 
     @include medium {
+      font-size: 9px;
       content: $icon-chevron-down;
     }
   }
@@ -295,9 +348,10 @@
     float: none;
     display: inline-block;
     margin-left: 6px;
+    line-height: $lineHeight/2;
     vertical-align: top; // middle breaks baseline grid
     position: relative;
-    top: 5px;
+    top: 7px;
   }
 
   .subnav-is-opened & {
@@ -325,7 +379,7 @@
 }
 
 /*==========  CSS ANIMATION  ==========*/
-@-webkit-keyframes showNav {
+@include keyframes(showNav){
   0% {
     opacity: 0;
   }
@@ -333,4 +387,3 @@
     opacity: 1;
   }
 }
-

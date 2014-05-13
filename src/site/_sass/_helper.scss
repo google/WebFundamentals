@@ -37,6 +37,7 @@
 .color--gray-background { color: $colorGrayBackground; }
 .color--gray-keyline { color: $colorGrayKeyline; }
 .color--gray { color: $colorGray; }
+.color--gray-medium { color: $colorGrayMedium; }
 .color--gray-dark { color: $colorGrayDark; }
 
 .color--text { color: $colorText; }
@@ -60,51 +61,108 @@
 
 
 /*==========  TEXT DIVIDER  ==========*/
+.divider {
+  width: 80%;
+  margin: $lineHeight auto;
+  margin-top: $lineHeight;
+  margin-bottom: $lineHeight - 1;
+  border: 0;
+  height: 1px;
+  color: $colorGrayKeyline;
+  background-color: $colorGrayKeyline;
 
-.text-divider {
-  position: relative;
-  margin-bottom: $lineHeight;
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
+  @include medium {
     width: 40%;
+  }
+
+  &.divider--short {
+    width: 70%;
+
+    @include medium {
+      width: 25%;
+    }
+
+  }
+
+  &.divider--fluid {
+
+    @include medium {
+      width: 100%;
+    }
+
+  }
+
+  &.divider--spaced {
+
+    @include medium {
+      margin-top: $lineHeight*2;
+      margin-bottom: $lineHeight*2 - 1;
+    }
+
+  }
+
+  & span {
+    background: #ffffff;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 35px;
     height: 1px;
-    box-shadow: 0 1px 0 0 $colorGrayKeyline;
-    left: 30%;
-    bottom: -$lineHeight/2;
-  }
 
-  &.xlarge {
-    margin-bottom: $lineHeight*2;
+    &:before,
+    &:after {
+      position: absolute;
+      font-family: $fontIcon;
+      top: -12px;
+      color: $colorBlue;
+    }
+
+    &:before {
+      content: $icon-chevron-left;
+      left: 8px;
+    }
 
     &:after {
-      bottom: -($lineHeight*2)/2;
+      color: $colorBlueSecondary;
+      content: $icon-chevron-right;
+      right: 6px;
     }
   }
 
-  &.xxlarge {
-    margin-bottom: $lineHeight*3;
+  & .divider-icon--secondary {
+    width: 23px;
+
+    &:before {
+      content: "*";
+      font-family: $fontHighlight;
+      font-size: $fontXLarge;
+      font-weight: 700;
+      color: $colorGrayKeyline;
+      top: -9px;
+      left: 3px;
+    }
 
     &:after {
-      bottom: -($lineHeight*3)/2;
+      display: none;
     }
+
   }
 
-  &.huge {
-    margin-bottom: $lineHeight*3;
-
-    &:after {
-      bottom: -($lineHeight*3)/2;
-    }
-  }
 }
 
+.divider--secondary {
+  & span {
+    background-color: $colorGrayBackground;
+  }
+}
 
 /*==========  GENERIC  ==========*/
 .centered {
   text-align: center;
+}
+
+.text-highlight {
+  font-family: $fontHighlight;
 }
 
 
@@ -124,5 +182,30 @@
   &:before {
     content: "# ";
     display: inline-block;
+  }
+}
+
+/*==========  INDENTED CONTENT  ==========*/
+
+.indented {
+  padding-left: 32px;
+
+  & ul,
+  & ol,
+  & dl {
+    padding-left: 0;
+  }
+}
+
+.indented-medium {
+
+  @include medium {
+    padding-left: 32px;
+
+    & ul,
+    & ol,
+    & dl {
+      padding-left: 0;
+    }
   }
 }

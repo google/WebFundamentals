@@ -15,10 +15,10 @@
 
   .breadcrumbs {
     text-align: left;
-    color: $colorBlue;
+    color: $colorHighlight;
 
     a {
-      color: $colorBlue;
+      color: $colorHighlight;
     }
   }
 
@@ -30,9 +30,8 @@
 
 .page-header__excerpt {
   position: relative;
-  padding-top: 0;
 
   &:last-child {
-    padding-bottom: $lineHeight * 3;
+    padding-bottom: $lineHeight * 4;
   }
 }

@@ -11,30 +11,34 @@
 **/
 
 ul,
-ol {
+ol,
+dl {
   list-style: none;
   margin: 0;
+  padding-left: 32px;
 
   @include small-only {
     padding-left: 0;
   }
 }
 
-ul li {
+li,
+dt {
   position: relative;
   padding-left: 16px;
-  @include bullet-type("", icon-bullet);
+}
 
-  &:before {
-    font-size: 4px;
+ul {
+  > li {
+    @include bullet();
   }
 }
 
 ol {
   counter-reset: list;
+
   > li {
     @include numbered-list;
-    position: relative;
     padding-left: 32px;
 
     // This selected every adjacent <li>
@@ -48,6 +52,8 @@ ol {
   }
 }
 
+
+// Find nested lists
 ul ol {
   padding-top: 0;
 }
@@ -56,6 +62,26 @@ ol ul {
   padding-top: 0;
 }
 
+/*==========  DEFINITION LIST  ==========*/
+
+
+dt {
+  @include bullet($icon-hash, $fontSmall);
+
+  font-family: $fontHighlight;
+  font-weight: 400;
+
+  @include medium {
+    font-weight: 700;
+  }
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: $lineHeight;
+}
+
+
 
 /*==========  LIST LINKS  ==========*/
 
@@ -63,8 +89,9 @@ ul.list-links {
   li:before {
     display: none;
   }
+
   a {
-    @include bullet-type("", icon-bullet);
+    @include bullet();
 
     &:before {
       font-size: 4px;
@@ -74,8 +101,10 @@ ul.list-links {
   }
 
   &.list-links--primary {
-    a {
-      @include bullet-type("", icon-chevron-right);
+    letter-spacing: 1px;
+
+    & a {
+      @include bullet($icon-chevron-right, $fontSmall);
       font-weight: 400;
       font-family: $fontHighlight;
       line-height: 1; // fixes baseline grid alignment
@@ -90,12 +119,15 @@ ol.list-links {
       display: none;
     }
 
-    a {
+    & a {
       display: inline-block;
       @include numbered-list;
       font-weight: 300;
     }
 
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
     &:nth-child(10n) ~ li a:before,
     &:nth-child(10n) a:before {
       content: counter(list);
@@ -113,7 +145,7 @@ ol.list-links {
   @include type--base;
   padding-left: 0;
 
-  li {
+  & li {
     padding-left: 0;
   }
 }
@@ -135,8 +167,7 @@ ol.list-links {
   }
 
   a {
-    @include bullet-type("", icon-bullet);
-    line-height: 1; // fixes baseline grid alignment
+    @include bullet();
     display: inline-block;
     padding-left: 16px;
 
@@ -150,7 +181,7 @@ ol.list-links {
 
 .list-small {
 
-  li {
+  & li {
     @include medium {
       @include type--small;
       padding-top: 0;
@@ -168,57 +199,39 @@ ol.list-links {
 /*==========  FEATURED LIST  ==========*/
 
 .featured-list {
-  padding-top: $lineHeight * 3;
-  padding-bottom: $lineHeight * 3;
+  padding-top: $lineHeight * 2;
+  padding-left: 0;
 }
 
 .featured-list__item {
-  background: #ffffff;
-  padding-left: 0;
-  padding-top: $lineHeight;
-  padding-bottom: $lineHeight;
+  padding: $lineHeight 0;
 
-  @include medium {
-    min-height: $lineHeight * 13;
-    padding: $lineHeight * 2 32px;
+  & h3 {
+    padding-top: 0;
   }
 
-  margin-top: $lineHeight;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  p {
+  & p {
     margin-bottom: $lineHeight;
   }
 }
 
 .featured-list__img-wrapper {
-  display: none;
   position: relative;
   padding-top: $lineHeight;
-  margin: 0 -5%;
 
   @include medium {
-    display: block;
     padding-top: 0;
     margin: 0;
+  }
+
+  & img {
+    margin : 0;
   }
 }
 
 .featured-list__img {
-  @include medium {
-    padding-top: 60.8%;
-    padding-bottom: 0;
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
 
-  }
-
-  img {
+  & img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -234,8 +247,8 @@ ol.list-links {
   }
 }
 
-/*==========  RELATED GUIDES LIST  ==========*/
-.related-guides-list {
+/*==========  RELATED ITEMS LIST  ==========*/
+.related-items-list {
   font-family: $fontHighlight;
   padding-top: 0;
   padding-left: 0;
@@ -248,34 +261,69 @@ ol.list-links {
     padding-top: 0
   }
 
-  p {
+  & p {
+    padding-top: 0;
+    color: $colorHighlight;
+  }
+
+  & img {
+    @include small-only {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  & img + p {
+    @include small-only {
+      margin-left: 50%;
+      padding-left: $lineHeight/2;
+    }
+
+    @include medium {
+      padding-top: 13px;
+    }
+  }
+
+  & .tag {
     padding-top: 0;
   }
 
-  .tag {
-    padding-top: 0;
-  }
-
-  li {
+  & li {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight - 1;
     border-bottom: 1px solid $colorGrayKeyline;
+    overflow: hidden;
 
     &:last-child {
       border-color: transparent;
     }
 
+    // Selecting the 4th element and then every 3rd adjacent one
+    &:nth-child(3n + 4) {
+      @include wide {
+        margin-left: 25.9%;
+      }
+    }
+
     @include medium {
       padding-top: 0;
-      padding-bottom: 0;
+      margin-bottom: 0;
       border-color: transparent;
     }
   }
 }
 
+.related-items-list--inline {
+  & li {
+    padding-top: $lineHeight;
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
 /*==========  LIST RESET  ==========*/
 
-.list--reset {
+.list-reset {
   padding-left: 0;
 
   li {
@@ -305,12 +353,12 @@ ol.list-links {
     }
 
     & .icon {
-      font-size: $fontSmall;
+      font-size: 10px;
       display: inline-block;
       background: rgba(#000000, .2);
       border-radius: 100%;
-      width: 26px;
-      line-height: 26px;
+      width: $lineHeight;
+      line-height: $lineHeight;
       text-align: center;
       margin-left: 7px;
     }
@@ -321,13 +369,10 @@ ol.list-links {
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
 .list-guides-intro {
-  margin-bottom: $lineHeight*2;
+  margin-bottom: ($lineHeight*2) - 1;
+  padding-top: $lineHeight*2;
 
-  @include small-only {
-    padding-top: $lineHeight*2;
-  }
-
-  li {
+  & li {
     border-bottom: 1px solid $colorGrayKeyline;
     padding-bottom: ($lineHeight*2) - 1;
     margin-bottom: ($lineHeight*2);
@@ -340,6 +385,218 @@ ol.list-links {
     &:last-child {
       border-bottom: transparent;
       margin-bottom: 0;
+    }
+  }
+
+  & h3 {
+    margin-bottom: $lineHeight;
+    @include color-inherit;
+  }
+}
+
+/*==========  ARTICLE LIST  ==========*/
+.articles-list {
+  padding: (($lineHeight * 2) - 1) 0 ($lineHeight * 2 + 1);
+
+  .divider {
+
+    &:last-child {
+      display: none;
+    }
+
+  }
+
+}
+
+.articles-list__item {
+  padding-left: 0;
+  margin-bottom: $lineHeight*2;
+  position: relative;
+
+  &:before {
+    display: none;
+  }
+
+  & h3 {
+
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: 1px solid;
+        padding-bottom: 0px;
+
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  & p {
+    margin-top: $lineHeight;
+  }
+
+}
+
+/*==========  GUIDES LIST  ==========*/
+.guides-list {
+  overflow: hidden;
+
+  @include medium {
+    @include flexbox;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    padding-top: $lineHeight*2;
+  }
+}
+
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: $lineHeight;
+  margin-bottom: 0;
+
+  @include medium {
+    @include flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  & h3 {
+    margin: 0 32px;
+
+    & a {
+      text-decoration: none;
+      border-bottom: 1px solid;
+      padding-bottom: 1px;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  & p {
+    margin: $lineHeight 32px 0;
+  }
+
+  & .primary-content {
+    @include medium {
+      flex: 1;
+      -webkit-flex: 1;
+    }
+  }
+
+  & .secondary-content {
+    position: relative;
+    margin-top: ($lineHeight*2) - 1;
+    border-top: 1px solid $colorGrayKeyline;
+
+    @include medium {
+      width: 100%; // needed due to parent being flex
+    }
+
+    & .icon-circle {
+      position: absolute;
+      top: -$lineHeight - 2;
+      left: 50%;
+      margin-left: -21px;
+      border: 2px solid #ffffff;
+
+      & i {
+        font-size: 23px;
+      }
+    }
+  }
+
+  & ol {
+    margin: $lineHeight 0 0;
+    padding: $lineHeight*2 0 $lineHeight*2;
+    margin-top: 0;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+/*==========  recommended LIST  ==========*/
+
+.recommended-list {
+  padding: 0;
+
+  & .recommended-list__item {
+
+    @include small-only {
+      margin: 0 5%;
+    }
+
+    @include medium {
+      @include flexbox;
+    }
+
+    margin-top: $lineHeight;
+    padding-left: 0;
+
+    & .recommanded-list__content {
+
+      background: #ffffff;
+      padding: ($lineHeight + $lineHeight/2) 32px;
+
+      @include small-only {
+        border-top: $lineHeight solid $colorGrayBackground;
+        margin-bottom: -26px;
+
+        &:first-child {
+          border: none;
+          margin-bottom: 0;
+        }
+      }
+
+      @include medium {
+        @include flexbox;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+
+      &>h4 {
+        padding-top: 0;
+        font-family: $fontHighlight;
+      }
+
+      & p {
+        padding-bottom: $lineHeight;
+      }
+
+      & .cta--primary {
+        margin-top: auto;
+      }
+
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & .icon-circle {
+      display: none;
+
+      @include medium {
+        display: inline-block;
+        padding: 13px;
+        vertical-align: top;
+        margin: 0;
+      }
+    }
+
+    & .icon {
+      font-size: $fontBase;
     }
   }
 }

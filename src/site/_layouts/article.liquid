@@ -9,8 +9,6 @@
   <body class="{{ page.class }} page--article article--{{page.collection}} theme--{{page.collection}}">
     {% injectdata content _betterbook.yaml %}
 
-    {% include google_header.html %}
-
     {% include header.liquid %}
 
     <div class="article-container">
@@ -31,7 +29,9 @@
 
       {{ content }}
 
-      {% include modules/lessons_toc.liquid %}
+      {% if page.lessonsToc != false %}
+        {% include modules/lessons_toc.liquid %}
+      {% endif %}
 
     </div> <!-- /.article-container -->
 

@@ -12,6 +12,74 @@ article:
   updated_on: 2014-04-23
   order: 1
 collection: multi-screen
+related-guides:
+  create-amazing-forms:
+    -
+      title: Create amazing forms
+      href: /documentation/user-input/form-input/
+      section: 
+        id: user-input
+        title: "Forms"
+        href: /documentation/user-input/form-input/
+    - 
+      title: Label and name inputs correctly
+      href: /documentation/user-input/form-input/#label-and-name-inputs-properly
+      section: 
+        id: user-input
+        title: "Forms"
+        href: /documentation/user-input/form-input/
+    - 
+      title: Choose the best input type
+      href: /documentation/user-input/form-input/#choose-the-best-input-type
+      section: 
+        id: user-input
+        title: Forms
+        href: /documentation/user-input/form-input/
+  video:
+    - 
+      title: Using video effectively
+      href: /documentation/introduction-to-media/video/
+      section: 
+        id: introduction-to-media
+        title: "Video"
+        href: /documentation/introduction-to-media/
+    -  
+      title: Change the starting position 
+      href: /documentation/introduction-to-media/video/
+      section: 
+        id: introduction-to-media
+        title: "Video"
+        href: /documentation/introduction-to-media/
+    -  
+      title: Include a poster image
+      href: /documentation/introduction-to-media/video/
+      section: 
+        id: introduction-to-media
+        title: "Video"
+        href: /documentation/introduction-to-media/
+  images:
+    - 
+      title: Using images effectively
+      href: /documentation/introduction-to-media/images/
+      section: 
+        id: introduction-to-media
+        title: "Images"
+        href: /documentation/introduction-to-media/
+    -  
+      title:  Correct use of images in markup
+      href: /documentation/introduction-to-media/images/#images-in-markup
+      section: 
+        id: introduction-to-media
+        title: "Images"
+        href: /documentation/introduction-to-media/
+    - 
+      title: Optimizing images 101
+      href: /documentation/performance/optimizing-content-efficiency/#image-compression-101
+      section: 
+        id: introduction-to-media
+        title: "Images"
+        href: /documentation/introduction-to-media/
+
 key-takeaways:
   content-critical:
     - Identify the content you need first.
@@ -54,16 +122,16 @@ The basic structure of the site is complete. We know the sections we need, the
 content to display in those sections, and where to position it in the overall
 information architecture. We can now start to build out the site.
 
-{% include modules/remember.liquid title="Note" list=page.notes.styling %}
+{% include modules/remember.liquid title="Note" inline="true" list=page.notes.styling %}
 
 ### Create the headline and form
 
 The headline and request notification form are the critical components of
 our page. These must be presented to the user immediately.
 
-Adding the header is just a simple set of list items.
+In the headline, add simple text to describe the course:
 
-{% include_code _code/addcontent.html headline %}
+{% include_code _code/addheadline.html headline %}
 
 We need to also fill out the form.
 It will be a simple form that collects the users' names,
@@ -79,26 +147,9 @@ We will add semantic types to make it quick and simple for users to be able to
 enter content on a mobile device.  For example, when entering a telephone
 number, the user should just see a dial pad.
 
-{% include_code _code/withform.html form %}
+{% include_code _code/addform.html form %}
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Learn more about how to create amazing forms:
-
-*  [Create amazing forms]({{site.baseurl}}/documentation/user-input/form-input/)
-*  [Label and name inputs correctly]({{site.baseurl}}/documentation/user-input/form-input/#label-and-name-inputs-properly)
-*  [Choose the best input type]({{site.baseurl}}/documentation/user-input/form-input/#choose-the-best-input-type)
-*  [Provide real-time validation]({{site.baseurl}}/documentation/user-input/form-input/#provide-real-time-validation)
-{: .list--links}
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
 ### Create the Video and Information section
 
@@ -120,23 +171,7 @@ By following the best practices, you can easily integrate video in to your site:
 
 {% include_code _code/addvideo.html video html %}
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Learn more about the best ways to use video on your site.
-
-*  [Using video effectively]({{site.baseurl}}/documentation/introduction-to-media/video/)
-*  [Change the starting position]({{site.baseurl}}/documentation/introduction-to-media/video/)
-*  [Include a poster image]({{site.baseurl}}/documentation/introduction-to-media/video/)
-{: .list--links}
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid inline=true list=page.related-guides.video %}
 
 ### Create the Images Section
 
@@ -148,37 +183,21 @@ Sites without images can be a little boring. There are two types of images:
    better; often these are background images, patterns and gradients.  We will
    cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
-The Images section is a collection of content images that we will use in our product.
+The Images section in our page is a collection of content images. 
 
-{% include_code _code/addcontent.html section2 %}
-
-Content images are critical to conveying the meaning of the
-page. Think of images used in newspaper articles.
+Content images are critical to conveying the meaning of the page. Think of
+them like the images used in newspaper articles.  The images we are using are
+pictures of the tutors on the project:  Chris Wilson, Peter Lubbers and Sean
+Bennet.
 
 {% include_code _code/addimages.html images html %}
 
-The images are set to scale to 100% of the width of the screen.
-This works well on  mobile devices, but less well on desktop.  We will manage
-this in the responsive design section.
+The images are set to scale to 100% of the width of the screen. This works
+well on devices with a narrow vieport, but less well on those with a
+wideviewport (like desktop).  We will manage this in the responsive design
+section.
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Discover the best practices for using images in your content.
-
-*  [Using images effectively]({{site.baseurl}}/documentation/introduction-to-media/images/)
-*  [Correct use of images in markup]({site.baseurl}}/documentation/introduction-to-media/images/#images-in-markup)
-*  [Optimizing images 101]({{site.baseurl}}/documentation/performance/optimizing-content-efficiency/#image-compression-101)
-{: .list--links}
-
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
 ### Add the Tabulated Data Section
 
@@ -213,9 +232,8 @@ content ready and in-place to satisfy our business needs.
 
 You will notice that the page looks terrible right now; this is intentional.
 Content is the most important aspect of any site and we needed to make sure we
-had a good solid information architecture and density.
-This guide has given us an excellent base to build upon.
-We will style our content in the next guide.
+had a good solid information architecture and density. This guide has given us
+an excellent base to build upon. We will style our content in the next guide.
 
 {% include modules/nextarticle.liquid %}
 

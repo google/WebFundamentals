@@ -1,0 +1,40 @@
+{% if include.list %}
+
+  {% if include.inline %}
+  </div>
+  {% else %}
+  <div class="container">
+  {% endif %}
+
+    <div class="related-items {% if include.inline %} related-items--inline g-wide--pull-1{% endif %} {% if include.minimal %} related-items--minimal {% endif %} clear">
+      <h3 class="related-items__title {% unless include.inline %} g-wide--1 g-medium--full{% endunless %}">Related guides</h3>
+      <div class="related-items__section clear">
+
+        <ul class="related-items-list {% if include.inline %} related-items-list--inline{% endif %} list-reset">
+        {% for guide in include.list %}
+          <li class="{% unless include.inline %}g-medium--1 g-wide--1 {% endunless %} {% cycle '','','g-medium--last g-wide--last' %} theme--{{guide.section.id | downcase | replace:' ','-'}}">
+            {% if guide.section %}
+              <p><a class="tag themed" href="{{site.baseurl}}/{{guide.section.href}}" title="{{guide.section.title}}">{{guide.section.title}}</a></p>
+            {% endif %}
+
+            <a href="{{site.baseurl}}/{{guide.href}}#">
+              {% if guide.thumbnail %}
+              <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">
+              {% endif %}
+              <p class="medium">{{guide.title}}</p>
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+
+  {% if include.inline %}
+  <div class="content">
+  {% else %}
+  </div>
+  {% endif %}
+
+{% endif %}
+

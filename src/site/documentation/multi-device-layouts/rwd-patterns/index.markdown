@@ -48,7 +48,7 @@ that it usually only requires one breakpoint between small screens and large
 screens.
 
 {% link_sample _code/mostly-fluid.html %}
-  <img src="imgs/mostly-fluid.svg" />
+  <img src="imgs/mostly-fluid.svg">
   Try it
 {% endlink_sample %}
 
@@ -75,7 +75,7 @@ breakpoints for this layout pattern is dependent on the content and will change
 for each design.
 
 {% link_sample _code/column-drop.html %}
-  <img src="imgs/column-drop.svg" />
+  <img src="imgs/column-drop.svg">
   Try it
 {% endlink_sample %}
 
@@ -103,7 +103,7 @@ maintain and likely involves changes within elements, not just overall content
 layout.
 
 {% link_sample _code/layout-shifter.html %}
-  <img src="imgs/layout-shifter.svg" />
+  <img src="imgs/layout-shifter.svg">
   Try it
 {% endlink_sample %}
 
@@ -128,7 +128,7 @@ well on single column layouts such as one page linear websites, text heavy
 articles.
 
 {% link_sample _code/tiny-tweaks.html %}
-  <img src="imgs/tiny-tweaks.svg" />
+  <img src="imgs/tiny-tweaks.svg">
   Try it
 {% endlink_sample %}
 
@@ -153,7 +153,7 @@ showing it when the screen size is large enough, and on smaller screens, content
 is only a click away.
 
 {% link_sample _code/off-canvas.html %}
-  <img src="imgs/off-canvas.svg" />
+  <img src="imgs/off-canvas.svg">
   Try it
 {% endlink_sample %}
 

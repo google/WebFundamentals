@@ -28,14 +28,14 @@ Delivering a fast web experience requires a lot of work by the browser. Most of 
 
 Optimizing for performance is all about understanding what happens in these intermediate steps between receiving the HTML, CSS, and JavaScript bytes and the required processing to turn them into rendered pixels - that's the **critical rendering path**.
 
-<img src="images/progressive-rendering.png" class="center" alt="progressive page rendering" />
+<img src="images/progressive-rendering.png" class="center" alt="progressive page rendering">
 
 By optimizing the critical rendering path we can significantly improve the time to first render of our pages. Further, understanding the critical rendering path will also serve as a foundation for building well performing interactive applications. It turns out, the process for processing interactive updates is the same, just done in a continuous loop and ideally at 60 frames per second! However, let's not get ahead of ourselves just yet. First, let's take a quick, ground-up overview of how the browser goes about displaying a simple page.
 
 ## Lessons
 
 {% for guide in page.articles.critical-rendering-path %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url}}) &mdash;
+1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
 {{guide.description}}
 {% endfor %}
 

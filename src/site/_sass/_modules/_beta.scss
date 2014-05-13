@@ -11,53 +11,69 @@
 **/
 
 .beta {
-  font-family: $fontHighlight;
-  padding: $lineHeight/2 40px $lineHeight/2 $lineHeight/2;
-  line-height: 19px;
-  margin-left: -5%;
-  margin-right: $lineHeight/2;
-  margin-top: 0;
   background: $colorWarning;
-  text-align: center;
-  position: relative;
+  font-family: $fontHighlight;
+  color: $colorGrayDark;
   font-weight: 400;
+  text-align: center;
+  padding: $lineHeight/2 51px $lineHeight/2 $lineHeight/2;
+  margin: 23px 32px 23px 0;
+  position: relative;
+  line-height: 16px;
+
+  @include medium {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 32px;
+    padding-right: (32px) + $lineHeight;
+    line-height: $lineHeight;
+    width: auto;
+    max-width: 72%;
+  }
+
+  @include wide {
+    & br {
+      display: none;
+    }
+  }
 
   &:before {
     content: $icon-diamond;
     font-family: $fontIcon;
-    font-size: 64px;
+    font-size: 70px;
     line-height: 0px;
     color: $colorYellow;
 
     position: absolute;
-    right: -32px;
+    right: -35px;
     top: 50%;
   }
 
   .icon {
     font-family: $fontIcon;
     font-size: 26px;
-    color: #ffffff;
-    position: absolute;
-    width: 64px;
-    right: -32px;
     text-align: center;
-    line-height: 0px;
+    color: #ffffff;
+
+    width: 70px;
+    height: 0;
+    line-height: 0;
+    margin-right: -35px; // half of width
+
+    overflow: visible;
+
+    position: absolute;
+    right: 0;
     top: 50%;
     display: block;
 
     -webkit-animation: cog 4000ms ease-in-out;
-  }
-
-  @include medium {
-    float: right;
-    margin-top: 18px;
-    padding-left: 32px;
-    padding-right: (32px) + 26;
+    animation: cog 4000ms ease-in-out;
   }
 
   & a {
-    color: $colorText;
+    color: $colorGrayDark;
   }
 }
 
@@ -68,5 +84,15 @@
 
   100% {
     -webkit-transform: rotate(1079deg);
+  }
+}
+
+@keyframes cog {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1079deg);
   }
 }
