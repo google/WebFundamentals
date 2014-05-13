@@ -5303,7 +5303,7 @@ ol.list-links.list-links--secondary a:before {
 /* line 521, ../_sass/_components/_list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
-  padding: 52px 0 52px;
+  padding: 52px 16px;
   margin-top: 0;
 }
 /* line 527, ../_sass/_components/_list.scss */
