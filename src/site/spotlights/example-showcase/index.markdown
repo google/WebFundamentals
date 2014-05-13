@@ -5,6 +5,7 @@ description: "This is an example of a showcase page"
 introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus."
 header_image: ../../imgs/placeholder--device-landscape.png
 header_orientation: landscape
+class: showcase
 our_views:
   good:
     - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.

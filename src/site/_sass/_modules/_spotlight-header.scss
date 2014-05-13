@@ -32,6 +32,19 @@
   @include medium {
     min-height: $lineHeight*20;
   }
+
+  & .spotlight-header__copy {
+
+    & p {
+
+      @include medium {
+        margin-bottom: $lineHeight*6;
+      }
+
+    }
+  }
+
+
 }
 
 
@@ -56,11 +69,6 @@
 .spotlight-header__copy {
   position: relative;
   z-index: 2;
-
-  & p {
-    margin-bottom: $lineHeight*6;
-  }
-
 }
 
 .spotlight-header__cta {

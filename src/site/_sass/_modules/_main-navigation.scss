@@ -112,6 +112,10 @@
     .main-nav__item--home & {
       @include medium {
         padding-left: 0;
+
+        &:after {
+          left: 40%;
+        }
       }
     }
   }

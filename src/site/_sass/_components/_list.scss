@@ -471,15 +471,18 @@ ol.list-links {
   & h3 {
     margin: 0 32px;
 
-    & a {
-      text-decoration: none;
-      border-bottom: 1px solid;
-      padding-bottom: 1px;
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: 1px solid;
+        padding-bottom: 1px;
 
-      &:hover {
-        border-bottom: none;
+        &:hover {
+          border-bottom: none;
+        }
       }
     }
+
   }
 
   & p {

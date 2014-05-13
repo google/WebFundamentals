@@ -28,7 +28,7 @@ module Jekyll
       else
         @item_count = item_count.to_i
       end
-      
+
     end
 
     def render(context)
@@ -56,7 +56,7 @@ module Jekyll
     end
 
     def render_article(showcase)
-      
+
       written_on = showcase.data["showcase"]["written_on"]
       updated_on = showcase.data["showcase"]["updated_on"]
       date = fmt_date(written_on)
@@ -65,10 +65,20 @@ module Jekyll
       end
 
       <<-END
-      <div>
-        <a href="#{showcase.full_path}"><strong>#{showcase.data["title"]}</strong></a><br>
-        <br>
-        #{showcase.data["description"]}
+      <div class="featured-spotlight">
+        <div class="container-medium">
+          <div class="featured-spotlight__container g--pull-half">
+            <div class="featured-spotlight__img">
+              <img src="#{showcase.data["showcase"]["wide-promo-image"]}" alt="image exemple">
+            </div>
+
+            <div class="container-small">
+              <h3 class="xxlarge">#{showcase.data["title"]}</h3>
+              <p>#{showcase.data["introduction"]}</p>
+              <a href="#{showcase.full_path}" class="cta--primary">View case study</a>
+            </div>
+          </div>
+        </div>
       </div>
       END
     end

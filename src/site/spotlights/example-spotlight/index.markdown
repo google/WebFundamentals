@@ -5,6 +5,7 @@ description: "This is an example of a spotlight page"
 introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius."
 header_image: ../../imgs/placeholder--device-landscape-2.png
 header_orientation: landscape
+class: spotlight
 our_views:
   good:
     - Spotlight urna fermentum fermentum. Curabitur a interdum lacus.
