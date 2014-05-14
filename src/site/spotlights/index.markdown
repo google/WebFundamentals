@@ -28,7 +28,7 @@ NOTE: the spotlight header required a modifier to render properly
 <header class="spotlight-header spotlight-header--portrait clear">
   <div class="spotlight-header__container container">
     <div class="spotlight-header__copy g--half">
-      <h2 class="huge">The Guardian</h2>
+      <h2 class="huge">Some site</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, error cupiditate.</p>
       <a href="#" class="spotlight-header__cta cta--primary">View styleguide</a>
     </div>

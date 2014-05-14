@@ -23,7 +23,7 @@
       <ul class="guides-list container">
 
         {% for guide in page.articles.[page.id] %}
-
+        {% if guide.published != false %}
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
           <div class="primary-content">
             <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | clean}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
@@ -38,7 +38,7 @@
             </ol>
           </div>
         </li>
-
+        {% endif %}
         {% endfor %}
 
       </ul>
