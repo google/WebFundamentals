@@ -45,8 +45,8 @@
 // is included in the middle of content blocks
 // Example usage: http://localhost:8081/resources/example-article/
 .related-items--inline {
-  margin-top: $lineHeight;
-  padding-bottom: $lineHeight;
+  margin-top: $lineHeight - 1;
+  padding-bottom: $lineHeight - 1;
   border-top-width: 1px;
   border-bottom-width: 1px;
   padding-top: 0;
