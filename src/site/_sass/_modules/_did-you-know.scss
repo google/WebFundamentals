@@ -28,6 +28,11 @@
     padding-left: 0;
     @include medium {padding-left: 32px}
   }
+
+  & .icon {
+    vertical-align: 0;
+  }
+
 }
 
 .did-you-know__symbol {

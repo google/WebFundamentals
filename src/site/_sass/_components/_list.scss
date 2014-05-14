@@ -417,19 +417,34 @@ ol.list-links {
     display: none;
   }
 
-  & h3 {
+  & a {
+    display: block;
+    text-decoration: none;
+    padding-bottom: 0px;
 
-    @include medium {
-      & a {
+    h3 {
+      display: inline;
+      text-decoration: underline;
+
+      @include medium {
         text-decoration: none;
         border-bottom: 1px solid;
-        padding-bottom: 0px;
-
-        &:hover {
-          border-bottom: none;
-        }
       }
     }
+
+    .no-touch &:hover h3 {
+      text-decoration: none;
+
+      @include medium {
+        border-bottom: none;
+      }
+    }
+
+  }
+
+  & h3 {
+    color: $colorHighlight;
+
   }
 
   & p {

@@ -1,7 +1,6 @@
 .gc-content-license {
   border-top: 2px solid $colorGrayKeyline;
   margin-top: ($lineHeight*3) - 2;
-  margin-bottom: $lineHeight*4;
 
   & p {
     @include type--small;
