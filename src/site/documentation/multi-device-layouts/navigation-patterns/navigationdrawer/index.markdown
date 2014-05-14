@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Navigation Drawer"
-description: "<img class='g-medium--full g-wide--full' src='navigationdrawer/images/navdrawer.png'>For sites with a larger number of sections and subsections the Navigation Drawer is a much better fit. It can be a scrollable off-canvas element to your site as well as be a common place for global state."
+description: "For sites with a larger number of sections and subsections the Navigation Drawer is a much better fit. It can be a scrollable off-canvas element to your site as well as be a common place for global state."
+thumbnail: navigationdrawer/images/navdrawer.png
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -19,7 +20,7 @@ key-takeaways:
 
 {% wrap content%}
 
-{% link_sample ../_code/appbar-navdrawer-sample1.html %} <img class="g-medium--full g-wide--full" src="images/navdrawer.png"> {% endlink_sample %} 
+{% link_sample ../_code/appbar-navdrawer-sample1.html %} <img class="g-medium--full g-wide--full" src="images/navdrawer.png"> {% endlink_sample %}
 
 <div style="clear: both;"></div>
 
@@ -33,9 +34,9 @@ The key advantages of this approach is that the content can grow inside a scroll
 
 For users there is a small amount to learning to do to find the Navigation Drawer so having a clearly place menu button is extremely important.
 
-{% link_sample ../_code/appbar-navdrawer-bottombar-sample.html %} <img class="g--third" src="images/navdrawer-alt-1.png"> {% endlink_sample %} 
-{% link_sample ../_code/appbar-navdrawer-sample.html %} <img class="g--third" src="images/navdrawer-alt-2.png"> {% endlink_sample %} 
-{% link_sample ../_code/navdrawer-sample4.html %} <img class="g--third g--last" src="images/navdrawer-alt-3.png"> {% endlink_sample %} 
+{% link_sample ../_code/appbar-navdrawer-bottombar-sample.html %} <img class="g--third" src="images/navdrawer-alt-1.png"> {% endlink_sample %}
+{% link_sample ../_code/appbar-navdrawer-sample.html %} <img class="g--third" src="images/navdrawer-alt-2.png"> {% endlink_sample %}
+{% link_sample ../_code/navdrawer-sample4.html %} <img class="g--third g--last" src="images/navdrawer-alt-3.png"> {% endlink_sample %}
 
 <div style="clear: both;"></div>
 

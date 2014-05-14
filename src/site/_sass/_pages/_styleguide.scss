@@ -20,6 +20,7 @@
     margin-bottom: $lineHeight*2;
     border-bottom: 1px solid #ccc;
     padding-bottom: $lineHeight*3 - 1;
+    margin-top: $lineHeight;
 
   }
 
@@ -72,7 +73,7 @@
 
   }
 
-  & pre {
+  & .container pre {
     margin: 0;
   }
 

@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Tab Bar"
-description: "<img class='g-medium--full g-wide--full' src='tabbar/images/tabbar.png'>A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
+description: "A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
+thumbnail: tabbar/images/tabbar.png
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -19,7 +20,7 @@ key-takeaways:
 
 {% wrap content%}
 
-{% link_sample ../_code/tabbar-sample1.html %} <img class="g-medium--full g-wide--full" src="images/tabbar.png"> {% endlink_sample %} 
+{% link_sample ../_code/tabbar-sample1.html %} <img class="g-medium--full g-wide--full" src="images/tabbar.png"> {% endlink_sample %}
 
 <div style="clear: both;"></div>
 
@@ -35,7 +36,7 @@ Position your tabs above or below your main content, this is a trade off between
 
 One advantage to using tabs is that it gives the user a consistent place to go for navigation and makes it easy to glance at where they are within the site.
 
-{% link_sample ../_code/tabbar-sample2.html %} <img class="g--half" src="images/tabbar-alt-1.png"> {% endlink_sample %} 
+{% link_sample ../_code/tabbar-sample2.html %} <img class="g--half" src="images/tabbar-alt-1.png"> {% endlink_sample %}
 {% link_sample ../_code/tabbar-sample3.html %} <img class="g--half g--last" src="images/tabbar-alt-2.png"> {% endlink_sample %}
 
 <div style="clear: both;"></div>

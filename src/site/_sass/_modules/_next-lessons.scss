@@ -21,6 +21,7 @@
     @include color-inherit;
 
     i {
+      vertical-align: middle;
       @include medium {
         display: none;
       }
