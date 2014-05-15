@@ -125,7 +125,7 @@ Now, let's consider the same page but with an external CSS file:
 
 {% include_code _code/analysis_with_css.html full %}
 
-<img src="images/analysis-dom-css-js.png" alt="DOM, CSSOM, and JS CRP" class="center">
+<img src="images/analysis-dom-css.png" alt="DOM, CSSOM" class="center">
 
 Once again, we incur a network roundtrip to fetch the HTML document and then the retrieved markup tells us that we will also need the CSS file: this means that the browser has to go back to the server and get the CSS before it can render the page on the screen. **As a result, this page will incur a minimum of two roundtrips before the page can be displayed** - once again, the CSS file may take multiple roundtrips, hence the emphasis on "minimum".
 
