@@ -66,7 +66,7 @@ The output of the layout process is a "box model" which precisely captures the e
 
 Finally, now that we know which nodes are visible, their computed styles, and geometry, we can finally pass this information to our final stage which will convert each node in the render tree to actual pixels on the screen - this step is often referred to as "painting" or "rasterizing."
 
-Did you follow all of that? Each of these steps requires a non-trivial amount of work by the browser, which also means that it can often take quite a bit of time. Thankfully, Chrome DevTools can help us get some insight into all three of the stages we've described above:
+Did you follow all of that? Each of these steps requires a non-trivial amount of work by the browser, which also means that it can often take quite a bit of time. Thankfully, Chrome DevTools can help us get some insight into all three of the stages we've described above. Let's examine the layout stage for our original "hello world" example:
 
 <img src="images/layout-timeline.png" alt="Measuring layout in DevTools" class="center">
 
