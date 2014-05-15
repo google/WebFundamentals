@@ -10,6 +10,8 @@ collection: resources
 ---
 {% wrap content%}
 
+{% include modules/breadcrumbs.liquid %}
+
 # {{ page.title }}
 
 This page lists all of the code samples used for the snippets throughout these pages.

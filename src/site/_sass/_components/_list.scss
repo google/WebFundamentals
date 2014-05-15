@@ -20,6 +20,11 @@ dl {
   @include small-only {
     padding-left: 0;
   }
+
+  & ul,
+  & ol {
+    padding-left: 0;
+  }
 }
 
 li,
@@ -54,11 +59,10 @@ ol {
 
 
 // Find nested lists
-ul ol {
-  padding-top: 0;
-}
-
-ol ul {
+ul ol,
+ol ul,
+ul ul,
+ol ol {
   padding-top: 0;
 }
 
@@ -261,45 +265,6 @@ ol.list-links {
     padding-top: 0
   }
 
-  & p {
-    padding-top: 0;
-    color: $colorHighlight;
-  }
-
-  & img {
-    @include small-only {
-      width: 50%;
-      float: left;
-    }
-  }
-
-  & img + p {
-    @include small-only {
-      margin-left: 50%;
-      padding-left: $lineHeight/2;
-    }
-
-    @include medium {
-      padding-top: 13px;
-    }
-  }
-
-  & .tag {
-    padding-top: 0;
-    display: block; // fixes baseline
-    max-width: 0; // fixes baseline
-    white-space: nowrap;
-  }
-
-  // in this case we have a block element inside an inline element
-  // causing the anchor tag to be fluid and therefore having a
-  // much wider clickable area than desired
-  // the following is a "hacky" solution
-  & a p {
-    max-width: 0;
-    white-space: nowrap;
-  }
-
   & li {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight - 1;
@@ -323,6 +288,38 @@ ol.list-links {
       border-color: transparent;
     }
   }
+
+  & p {
+    padding-top: 0;
+    color: $colorHighlight;
+  }
+
+  & a {
+    @include small-only {
+      overflow: hidden;
+    }
+
+    display: block;
+  }
+
+  & img {
+    @include small-only {
+      width: 50%;
+      float: left;
+      margin-right: $lineHeight/2;
+    }
+
+    @include medium {
+      margin-bottom: $lineHeight/2 + 2;
+    }
+  }
+
+  & .tag {
+    padding-top: 0;
+    display: block; // fixes baseline
+    max-width: 0; // fixes baseline
+    white-space: nowrap;
+  }
 }
 
 .related-items-list--inline {
@@ -330,13 +327,13 @@ ol.list-links {
     padding-top: $lineHeight;
     border: none;
     padding-bottom: 0;
-
-    & p a {
-      display: inline-block;
-      white-space: nowrap;
-    }
   }
 
+  & a {
+    @include medium {
+      display: inline-block;
+    }
+  }
 }
 
 /*==========  LIST RESET  ==========*/

@@ -1162,7 +1162,7 @@ li > p {
 
 @media only screen and (min-width: 800px) {
   /* line 68, ../_sass/_components/_typography.scss */
-  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p, .content ul, .content ol {
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p, .content > ul, .content > ol {
     margin-right: 25.9%;
   }
 }
@@ -2813,7 +2813,7 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 51, ../_sass/_modules/_spotlight-header.scss */
   .spotlight-header--portrait {
-    min-height: 390px;
+    min-height: 520px;
   }
 }
 
@@ -2916,9 +2916,10 @@ li > p {
   border-top: none;
   padding-top: 0;
   margin-top: 52px;
+  margin-bottom: 2px;
 }
 
-/* line 47, ../_sass/_modules/_related-items.scss */
+/* line 48, ../_sass/_modules/_related-items.scss */
 .related-items--inline {
   margin-top: 25px;
   padding-bottom: 25px;
@@ -2927,7 +2928,7 @@ li > p {
   padding-top: 0;
 }
 
-/* line 55, ../_sass/_modules/_related-items.scss */
+/* line 56, ../_sass/_modules/_related-items.scss */
 .related-items__title {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2941,7 +2942,7 @@ li > p {
   padding-top: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 55, ../_sass/_modules/_related-items.scss */
+  /* line 56, ../_sass/_modules/_related-items.scss */
   .related-items__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2955,12 +2956,12 @@ li > p {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 55, ../_sass/_modules/_related-items.scss */
+  /* line 56, ../_sass/_modules/_related-items.scss */
   .related-items__title {
     padding-top: 0;
   }
 }
-/* line 63, ../_sass/_modules/_related-items.scss */
+/* line 64, ../_sass/_modules/_related-items.scss */
 .related-items--inline .related-items__title {
   color: #404040;
   font-size: 20px;
@@ -2972,7 +2973,7 @@ li > p {
   letter-spacing: -0.3px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 63, ../_sass/_modules/_related-items.scss */
+  /* line 64, ../_sass/_modules/_related-items.scss */
   .related-items--inline .related-items__title {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2986,23 +2987,23 @@ li > p {
   }
 }
 
-/* line 68, ../_sass/_modules/_related-items.scss */
+/* line 69, ../_sass/_modules/_related-items.scss */
 .related-items__main-link {
   text-transform: uppercase;
 }
-/* line 71, ../_sass/_modules/_related-items.scss */
+/* line 72, ../_sass/_modules/_related-items.scss */
 .related-items__main-link:before {
   content: "#";
   display: inline-block;
   padding-right: 2px;
 }
 
-/* line 83, ../_sass/_modules/_related-items.scss */
+/* line 84, ../_sass/_modules/_related-items.scss */
 .related-items-group .related-items:first-child {
   padding-top: 76px;
   padding-bottom: 0;
 }
-/* line 88, ../_sass/_modules/_related-items.scss */
+/* line 89, ../_sass/_modules/_related-items.scss */
 .related-items-group .related-items:last-child {
   margin-top: 0;
 }
@@ -4730,8 +4731,16 @@ dl {
     padding-left: 0;
   }
 }
+/* line 25, ../_sass/_components/_list.scss */
+ul ul, ul ol,
+ol ul,
+ol ol,
+dl ul,
+dl ol {
+  padding-left: 0;
+}
 
-/* line 26, ../_sass/_components/_list.scss */
+/* line 31, ../_sass/_components/_list.scss */
 li,
 dt {
   position: relative;
@@ -4753,11 +4762,11 @@ ul > li:before {
   left: 0;
 }
 
-/* line 37, ../_sass/_components/_list.scss */
+/* line 42, ../_sass/_components/_list.scss */
 ol {
   counter-reset: list;
 }
-/* line 40, ../_sass/_components/_list.scss */
+/* line 45, ../_sass/_components/_list.scss */
 ol > li {
   padding-left: 32px;
 }
@@ -4771,23 +4780,21 @@ ol > li:before {
   position: absolute;
   left: 0;
 }
-/* line 48, ../_sass/_components/_list.scss */
+/* line 53, ../_sass/_components/_list.scss */
 ol > li:nth-child(10n) ~ li:before, ol > li:nth-child(10n):before {
   content: counter(list);
 }
 
-/* line 57, ../_sass/_components/_list.scss */
-ul ol {
-  padding-top: 0;
-}
-
-/* line 61, ../_sass/_components/_list.scss */
-ol ul {
+/* line 65, ../_sass/_components/_list.scss */
+ul ol,
+ol ul,
+ul ul,
+ol ol {
   padding-top: 0;
 }
 
 /*==========  DEFINITION LIST  ==========*/
-/* line 68, ../_sass/_components/_list.scss */
+/* line 72, ../_sass/_components/_list.scss */
 dt {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
@@ -4807,24 +4814,24 @@ dt:before {
   left: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 68, ../_sass/_components/_list.scss */
+  /* line 72, ../_sass/_components/_list.scss */
   dt {
     font-weight: 700;
   }
 }
 
-/* line 79, ../_sass/_components/_list.scss */
+/* line 83, ../_sass/_components/_list.scss */
 dd {
   margin-left: 0;
   margin-bottom: 26px;
 }
 
 /*==========  LIST LINKS  ==========*/
-/* line 89, ../_sass/_components/_list.scss */
+/* line 93, ../_sass/_components/_list.scss */
 ul.list-links li:before {
   display: none;
 }
-/* line 93, ../_sass/_components/_list.scss */
+/* line 97, ../_sass/_components/_list.scss */
 ul.list-links a {
   font-weight: 400;
 }
@@ -4842,15 +4849,15 @@ ul.list-links a:before {
   top: 0;
   left: 0;
 }
-/* line 96, ../_sass/_components/_list.scss */
+/* line 100, ../_sass/_components/_list.scss */
 ul.list-links a:before {
   font-size: 4px;
 }
-/* line 103, ../_sass/_components/_list.scss */
+/* line 107, ../_sass/_components/_list.scss */
 ul.list-links.list-links--primary {
   letter-spacing: 1px;
 }
-/* line 106, ../_sass/_components/_list.scss */
+/* line 110, ../_sass/_components/_list.scss */
 ul.list-links.list-links--primary a {
   font-weight: 400;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -4872,11 +4879,11 @@ ul.list-links.list-links--primary a:before {
   left: 0;
 }
 
-/* line 118, ../_sass/_components/_list.scss */
+/* line 122, ../_sass/_components/_list.scss */
 ol.list-links li:before {
   display: none;
 }
-/* line 122, ../_sass/_components/_list.scss */
+/* line 126, ../_sass/_components/_list.scss */
 ol.list-links li a {
   display: inline-block;
   font-weight: 300;
@@ -4891,16 +4898,16 @@ ol.list-links li a:before {
   position: absolute;
   left: 0;
 }
-/* line 132, ../_sass/_components/_list.scss */
+/* line 136, ../_sass/_components/_list.scss */
 ol.list-links li:nth-child(10n) ~ li a:before, ol.list-links li:nth-child(10n) a:before {
   content: counter(list);
 }
-/* line 138, ../_sass/_components/_list.scss */
+/* line 142, ../_sass/_components/_list.scss */
 ol.list-links.list-links--secondary a:before {
   display: none;
 }
 
-/* line 144, ../_sass/_components/_list.scss */
+/* line 148, ../_sass/_components/_list.scss */
 .list-links--secondary {
   font-size: 16px;
   line-height: 1.6250em;
@@ -4910,17 +4917,17 @@ ol.list-links.list-links--secondary a:before {
   letter-spacing: 0;
   padding-left: 0;
 }
-/* line 148, ../_sass/_components/_list.scss */
+/* line 152, ../_sass/_components/_list.scss */
 .list-links--secondary li {
   padding-left: 0;
 }
 
 /*==========  ANCHOR LIST  ==========*/
-/* line 155, ../_sass/_components/_list.scss */
+/* line 159, ../_sass/_components/_list.scss */
 .list-anchor {
   padding-left: 0;
 }
-/* line 158, ../_sass/_components/_list.scss */
+/* line 162, ../_sass/_components/_list.scss */
 .list-anchor li {
   font-size: 16px;
   line-height: 1.6250em;
@@ -4931,11 +4938,11 @@ ol.list-links.list-links--secondary a:before {
   padding-top: 0;
   padding-left: 0;
 }
-/* line 163, ../_sass/_components/_list.scss */
+/* line 167, ../_sass/_components/_list.scss */
 .list-anchor li:before {
   display: none;
 }
-/* line 169, ../_sass/_components/_list.scss */
+/* line 173, ../_sass/_components/_list.scss */
 .list-anchor a {
   display: inline-block;
   padding-left: 16px;
@@ -4954,14 +4961,14 @@ ol.list-links.list-links--secondary a:before {
   top: 0;
   left: 0;
 }
-/* line 174, ../_sass/_components/_list.scss */
+/* line 178, ../_sass/_components/_list.scss */
 .list-anchor a:before {
   font-size: 4px;
 }
 
 /*==========  SMALL LIST  ==========*/
 @media only screen and (min-width: 620px) {
-  /* line 184, ../_sass/_components/_list.scss */
+  /* line 188, ../_sass/_components/_list.scss */
   .list-small li {
     font-size: 13px;
     line-height: 2.0000em;
@@ -4974,57 +4981,57 @@ ol.list-links.list-links--secondary a:before {
 }
 
 /*==========  CENTERED LIST  ==========*/
-/* line 194, ../_sass/_components/_list.scss */
+/* line 198, ../_sass/_components/_list.scss */
 .list-centered {
   text-align: center;
   padding-left: 0;
 }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 201, ../_sass/_components/_list.scss */
+/* line 205, ../_sass/_components/_list.scss */
 .featured-list {
   padding-top: 52px;
   padding-left: 0;
 }
 
-/* line 206, ../_sass/_components/_list.scss */
+/* line 210, ../_sass/_components/_list.scss */
 .featured-list__item {
   padding: 26px 0;
 }
-/* line 209, ../_sass/_components/_list.scss */
+/* line 213, ../_sass/_components/_list.scss */
 .featured-list__item h3 {
   padding-top: 0;
 }
-/* line 213, ../_sass/_components/_list.scss */
+/* line 217, ../_sass/_components/_list.scss */
 .featured-list__item p {
   margin-bottom: 26px;
 }
 
-/* line 218, ../_sass/_components/_list.scss */
+/* line 222, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper {
   position: relative;
   padding-top: 26px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 218, ../_sass/_components/_list.scss */
+  /* line 222, ../_sass/_components/_list.scss */
   .featured-list__img-wrapper {
     padding-top: 0;
     margin: 0;
   }
 }
-/* line 227, ../_sass/_components/_list.scss */
+/* line 231, ../_sass/_components/_list.scss */
 .featured-list__img-wrapper img {
   margin: 0;
 }
 
-/* line 234, ../_sass/_components/_list.scss */
+/* line 238, ../_sass/_components/_list.scss */
 .featured-list__img img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 234, ../_sass/_components/_list.scss */
+  /* line 238, ../_sass/_components/_list.scss */
   .featured-list__img img {
     margin: 0;
     position: absolute;
@@ -5036,129 +5043,129 @@ ol.list-links.list-links--secondary a:before {
 }
 
 /*==========  RELATED ITEMS LIST  ==========*/
-/* line 251, ../_sass/_components/_list.scss */
+/* line 255, ../_sass/_components/_list.scss */
 .related-items-list {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   padding-top: 0;
   padding-left: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 251, ../_sass/_components/_list.scss */
+  /* line 255, ../_sass/_components/_list.scss */
   .related-items-list {
     padding-top: 26px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 251, ../_sass/_components/_list.scss */
+  /* line 255, ../_sass/_components/_list.scss */
   .related-items-list {
     padding-top: 0;
   }
 }
-/* line 264, ../_sass/_components/_list.scss */
-.related-items-list p {
-  padding-top: 0;
-  color: #3372df;
-}
-@media only screen and (max-width: 619px) {
-  /* line 269, ../_sass/_components/_list.scss */
-  .related-items-list img {
-    width: 50%;
-    float: left;
-  }
-}
-@media only screen and (max-width: 619px) {
-  /* line 276, ../_sass/_components/_list.scss */
-  .related-items-list img + p {
-    margin-left: 50%;
-    padding-left: 13px;
-  }
-}
-@media only screen and (min-width: 620px) {
-  /* line 276, ../_sass/_components/_list.scss */
-  .related-items-list img + p {
-    padding-top: 13px;
-  }
-}
-/* line 287, ../_sass/_components/_list.scss */
-.related-items-list .tag {
-  padding-top: 0;
-  display: block;
-  max-width: 0;
-  white-space: nowrap;
-}
-/* line 298, ../_sass/_components/_list.scss */
-.related-items-list a p {
-  max-width: 0;
-  white-space: nowrap;
-}
-/* line 303, ../_sass/_components/_list.scss */
+/* line 268, ../_sass/_components/_list.scss */
 .related-items-list li {
   padding-top: 26px;
   padding-bottom: 25px;
   border-bottom: 1px solid #e0e0e0;
   overflow: hidden;
 }
-/* line 309, ../_sass/_components/_list.scss */
+/* line 274, ../_sass/_components/_list.scss */
 .related-items-list li:last-child {
   border-color: transparent;
 }
 @media only screen and (min-width: 800px) {
-  /* line 314, ../_sass/_components/_list.scss */
+  /* line 279, ../_sass/_components/_list.scss */
   .related-items-list li:nth-child(3n + 4) {
     margin-left: 25.9%;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 303, ../_sass/_components/_list.scss */
+  /* line 268, ../_sass/_components/_list.scss */
   .related-items-list li {
     padding-top: 0;
     margin-bottom: 0;
     border-color: transparent;
   }
 }
+/* line 292, ../_sass/_components/_list.scss */
+.related-items-list p {
+  padding-top: 0;
+  color: #3372df;
+}
+/* line 297, ../_sass/_components/_list.scss */
+.related-items-list a {
+  display: block;
+}
+@media only screen and (max-width: 619px) {
+  /* line 297, ../_sass/_components/_list.scss */
+  .related-items-list a {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 619px) {
+  /* line 305, ../_sass/_components/_list.scss */
+  .related-items-list img {
+    width: 50%;
+    float: left;
+    margin-right: 13px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  /* line 305, ../_sass/_components/_list.scss */
+  .related-items-list img {
+    margin-bottom: 15px;
+  }
+}
+/* line 317, ../_sass/_components/_list.scss */
+.related-items-list .tag {
+  padding-top: 0;
+  display: block;
+  max-width: 0;
+  white-space: nowrap;
+}
 
-/* line 329, ../_sass/_components/_list.scss */
+/* line 326, ../_sass/_components/_list.scss */
 .related-items-list--inline li {
   padding-top: 26px;
   border: none;
   padding-bottom: 0;
 }
-/* line 334, ../_sass/_components/_list.scss */
-.related-items-list--inline li p a {
-  display: inline-block;
-  white-space: nowrap;
+@media only screen and (min-width: 620px) {
+  /* line 332, ../_sass/_components/_list.scss */
+  .related-items-list--inline a {
+    display: inline-block;
+  }
 }
 
 /*==========  LIST RESET  ==========*/
-/* line 344, ../_sass/_components/_list.scss */
+/* line 341, ../_sass/_components/_list.scss */
 .list-reset {
   padding-left: 0;
 }
-/* line 347, ../_sass/_components/_list.scss */
+/* line 344, ../_sass/_components/_list.scss */
 .list-reset li {
   padding-left: 0;
 }
-/* line 352, ../_sass/_components/_list.scss */
+/* line 349, ../_sass/_components/_list.scss */
 .list-reset.list-links a:before, .list-reset li:before {
   display: none !important;
 }
 
 /*==========  LESSONS  ==========*/
-/* line 359, ../_sass/_components/_list.scss */
+/* line 356, ../_sass/_components/_list.scss */
 .list-lessons {
   padding-left: 0;
 }
-/* line 362, ../_sass/_components/_list.scss */
+/* line 359, ../_sass/_components/_list.scss */
 .list-lessons a {
   color: #ffffff;
 }
-/* line 368, ../_sass/_components/_list.scss */
+/* line 365, ../_sass/_components/_list.scss */
 .list-lessons .current,
 .list-lessons .current a {
   text-decoration: none;
   cursor: default;
 }
-/* line 373, ../_sass/_components/_list.scss */
+/* line 370, ../_sass/_components/_list.scss */
 .list-lessons .current .icon {
   font-size: 10px;
   display: inline-block;
@@ -5171,105 +5178,105 @@ ol.list-links.list-links--secondary a:before {
 }
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
-/* line 389, ../_sass/_components/_list.scss */
+/* line 386, ../_sass/_components/_list.scss */
 .list-guides-intro {
   margin-bottom: 51px;
   padding-top: 52px;
 }
-/* line 393, ../_sass/_components/_list.scss */
+/* line 390, ../_sass/_components/_list.scss */
 .list-guides-intro li {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 51px;
   margin-bottom: 52px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 393, ../_sass/_components/_list.scss */
+  /* line 390, ../_sass/_components/_list.scss */
   .list-guides-intro li {
     border-color: transparent;
     padding-bottom: 0;
   }
 }
-/* line 403, ../_sass/_components/_list.scss */
+/* line 400, ../_sass/_components/_list.scss */
 .list-guides-intro li:last-child {
   border-bottom: transparent;
   margin-bottom: 0;
 }
-/* line 409, ../_sass/_components/_list.scss */
+/* line 406, ../_sass/_components/_list.scss */
 .list-guides-intro h3 {
   margin-bottom: 26px;
   color: inherit;
 }
 @media only screen and (min-width: 620px) {
-  /* line 409, ../_sass/_components/_list.scss */
+  /* line 406, ../_sass/_components/_list.scss */
   .list-guides-intro h3 {
     color: inherit;
   }
 }
 
 /*==========  ARTICLE LIST  ==========*/
-/* line 416, ../_sass/_components/_list.scss */
+/* line 413, ../_sass/_components/_list.scss */
 .articles-list {
   padding: 51px 0 53px;
 }
-/* line 421, ../_sass/_components/_list.scss */
+/* line 418, ../_sass/_components/_list.scss */
 .articles-list .divider:last-child {
   display: none;
 }
 
-/* line 429, ../_sass/_components/_list.scss */
+/* line 426, ../_sass/_components/_list.scss */
 .articles-list__item {
   padding-left: 0;
   margin-bottom: 52px;
   position: relative;
 }
-/* line 434, ../_sass/_components/_list.scss */
+/* line 431, ../_sass/_components/_list.scss */
 .articles-list__item:before {
   display: none;
 }
-/* line 438, ../_sass/_components/_list.scss */
+/* line 435, ../_sass/_components/_list.scss */
 .articles-list__item a {
   display: block;
   text-decoration: none;
   padding-bottom: 0px;
 }
-/* line 443, ../_sass/_components/_list.scss */
+/* line 440, ../_sass/_components/_list.scss */
 .articles-list__item a h3 {
   display: inline;
   text-decoration: underline;
 }
 @media only screen and (min-width: 620px) {
-  /* line 443, ../_sass/_components/_list.scss */
+  /* line 440, ../_sass/_components/_list.scss */
   .articles-list__item a h3 {
     text-decoration: none;
     border-bottom: 1px solid;
   }
 }
-/* line 453, ../_sass/_components/_list.scss */
+/* line 450, ../_sass/_components/_list.scss */
 .no-touch .articles-list__item a:hover h3 {
   text-decoration: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 453, ../_sass/_components/_list.scss */
+  /* line 450, ../_sass/_components/_list.scss */
   .no-touch .articles-list__item a:hover h3 {
     border-bottom: none;
   }
 }
-/* line 463, ../_sass/_components/_list.scss */
+/* line 460, ../_sass/_components/_list.scss */
 .articles-list__item h3 {
   color: #3372df;
 }
-/* line 468, ../_sass/_components/_list.scss */
+/* line 465, ../_sass/_components/_list.scss */
 .articles-list__item p {
   margin-top: 26px;
 }
 
 /*==========  GUIDES LIST  ==========*/
-/* line 475, ../_sass/_components/_list.scss */
+/* line 472, ../_sass/_components/_list.scss */
 .guides-list {
   overflow: hidden;
 }
 @media only screen and (min-width: 620px) {
-  /* line 475, ../_sass/_components/_list.scss */
+  /* line 472, ../_sass/_components/_list.scss */
   .guides-list {
     display: -webkit-flex;
     display: flex;
@@ -5280,14 +5287,14 @@ ol.list-links.list-links--secondary a:before {
     padding-top: 52px;
   }
   @supports not (flex-wrap: wrap) {
-    /* line 475, ../_sass/_components/_list.scss */
+    /* line 472, ../_sass/_components/_list.scss */
     .guides-list {
       display: block;
     }
 }
 }
 
-/* line 489, ../_sass/_components/_list.scss */
+/* line 486, ../_sass/_components/_list.scss */
 .guides-list__item {
   padding: 0;
   background: #ffffff;
@@ -5295,7 +5302,7 @@ ol.list-links.list-links--secondary a:before {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 489, ../_sass/_components/_list.scss */
+  /* line 486, ../_sass/_components/_list.scss */
   .guides-list__item {
     display: -webkit-flex;
     display: flex;
@@ -5305,52 +5312,52 @@ ol.list-links.list-links--secondary a:before {
     -webkit-flex-wrap: wrap;
   }
   @supports not (flex-wrap: wrap) {
-    /* line 489, ../_sass/_components/_list.scss */
+    /* line 486, ../_sass/_components/_list.scss */
     .guides-list__item {
       display: block;
     }
 }
 }
-/* line 504, ../_sass/_components/_list.scss */
+/* line 501, ../_sass/_components/_list.scss */
 .guides-list__item h3 {
   margin: 0 32px;
 }
 @media only screen and (min-width: 620px) {
-  /* line 508, ../_sass/_components/_list.scss */
+  /* line 505, ../_sass/_components/_list.scss */
   .guides-list__item h3 a {
     text-decoration: none;
     border-bottom: 1px solid;
     padding-bottom: 1px;
   }
-  /* line 513, ../_sass/_components/_list.scss */
+  /* line 510, ../_sass/_components/_list.scss */
   .guides-list__item h3 a:hover {
     border-bottom: none;
   }
 }
-/* line 521, ../_sass/_components/_list.scss */
+/* line 518, ../_sass/_components/_list.scss */
 .guides-list__item p {
   margin: 26px 32px 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 525, ../_sass/_components/_list.scss */
+  /* line 522, ../_sass/_components/_list.scss */
   .guides-list__item .primary-content {
     flex: 1;
     -webkit-flex: 1;
   }
 }
-/* line 532, ../_sass/_components/_list.scss */
+/* line 529, ../_sass/_components/_list.scss */
 .guides-list__item .secondary-content {
   position: relative;
   margin-top: 51px;
   border-top: 1px solid #e0e0e0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 532, ../_sass/_components/_list.scss */
+  /* line 529, ../_sass/_components/_list.scss */
   .guides-list__item .secondary-content {
     width: 100%;
   }
 }
-/* line 541, ../_sass/_components/_list.scss */
+/* line 538, ../_sass/_components/_list.scss */
 .guides-list__item .secondary-content .icon-circle {
   position: absolute;
   top: -28px;
@@ -5358,69 +5365,69 @@ ol.list-links.list-links--secondary a:before {
   margin-left: -21px;
   border: 2px solid #ffffff;
 }
-/* line 548, ../_sass/_components/_list.scss */
+/* line 545, ../_sass/_components/_list.scss */
 .guides-list__item .secondary-content .icon-circle i {
   font-size: 23px;
 }
-/* line 554, ../_sass/_components/_list.scss */
+/* line 551, ../_sass/_components/_list.scss */
 .guides-list__item ol {
   margin: 26px 0 0;
   padding: 52px 16px;
   margin-top: 0;
 }
-/* line 560, ../_sass/_components/_list.scss */
+/* line 557, ../_sass/_components/_list.scss */
 .guides-list__item:before {
   display: none;
 }
 
 /*==========  recommended LIST  ==========*/
-/* line 567, ../_sass/_components/_list.scss */
+/* line 564, ../_sass/_components/_list.scss */
 .recommended-list {
   padding: 0;
 }
-/* line 570, ../_sass/_components/_list.scss */
+/* line 567, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item {
   margin-top: 26px;
   padding-left: 0;
 }
 @media only screen and (max-width: 619px) {
-  /* line 570, ../_sass/_components/_list.scss */
+  /* line 567, ../_sass/_components/_list.scss */
   .recommended-list .recommended-list__item {
     margin: 0 5%;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 570, ../_sass/_components/_list.scss */
+  /* line 567, ../_sass/_components/_list.scss */
   .recommended-list .recommended-list__item {
     display: -webkit-flex;
     display: flex;
   }
   @supports not (flex-wrap: wrap) {
-    /* line 570, ../_sass/_components/_list.scss */
+    /* line 567, ../_sass/_components/_list.scss */
     .recommended-list .recommended-list__item {
       display: block;
     }
 }
 }
-/* line 583, ../_sass/_components/_list.scss */
+/* line 580, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .recommanded-list__content {
   background: #ffffff;
   padding: 39px 32px;
 }
 @media only screen and (max-width: 619px) {
-  /* line 583, ../_sass/_components/_list.scss */
+  /* line 580, ../_sass/_components/_list.scss */
   .recommended-list .recommended-list__item .recommanded-list__content {
     border-top: 26px solid #f0f0f0;
     margin-bottom: -26px;
   }
-  /* line 592, ../_sass/_components/_list.scss */
+  /* line 589, ../_sass/_components/_list.scss */
   .recommended-list .recommended-list__item .recommanded-list__content:first-child {
     border: none;
     margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 583, ../_sass/_components/_list.scss */
+  /* line 580, ../_sass/_components/_list.scss */
   .recommended-list .recommended-list__item .recommanded-list__content {
     display: -webkit-flex;
     display: flex;
@@ -5428,35 +5435,35 @@ ol.list-links.list-links--secondary a:before {
     -webkit-flex-direction: column;
   }
   @supports not (flex-wrap: wrap) {
-    /* line 583, ../_sass/_components/_list.scss */
+    /* line 580, ../_sass/_components/_list.scss */
     .recommended-list .recommended-list__item .recommanded-list__content {
       display: block;
     }
 }
 }
-/* line 604, ../_sass/_components/_list.scss */
+/* line 601, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .recommanded-list__content > h4 {
   padding-top: 0;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
-/* line 609, ../_sass/_components/_list.scss */
+/* line 606, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .recommanded-list__content p {
   padding-bottom: 26px;
 }
-/* line 613, ../_sass/_components/_list.scss */
+/* line 610, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .recommanded-list__content .cta--primary {
   margin-top: auto;
 }
-/* line 619, ../_sass/_components/_list.scss */
+/* line 616, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item:first-child {
   margin-top: 0;
 }
-/* line 623, ../_sass/_components/_list.scss */
+/* line 620, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .icon-circle {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 623, ../_sass/_components/_list.scss */
+  /* line 620, ../_sass/_components/_list.scss */
   .recommended-list .recommended-list__item .icon-circle {
     display: inline-block;
     padding: 13px;
@@ -5464,7 +5471,7 @@ ol.list-links.list-links--secondary a:before {
     margin: 0;
   }
 }
-/* line 634, ../_sass/_components/_list.scss */
+/* line 631, ../_sass/_components/_list.scss */
 .recommended-list .recommended-list__item .icon {
   font-size: 16px;
 }
@@ -6293,34 +6300,30 @@ figcaption {
 .page--styleguide .styleguide__breadcrumb .breadcrumbs {
   display: block;
 }
-/* line 44, ../_sass/_pages/_styleguide.scss */
-.page--styleguide .styleguide__lists ul, .page--styleguide .styleguide__lists ol {
-  margin-bottom: 26px;
-}
-/* line 49, ../_sass/_pages/_styleguide.scss */
+/* line 41, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__inverted-block {
   background: #e8e8e8;
   padding: 0 13px;
 }
-/* line 54, ../_sass/_pages/_styleguide.scss */
+/* line 46, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__theme-block {
   background: #297ea9;
   padding: 0 13px;
 }
-/* line 59, ../_sass/_pages/_styleguide.scss */
+/* line 51, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__typography p {
   padding-bottom: 26px;
   padding-top: 0;
 }
-/* line 64, ../_sass/_pages/_styleguide.scss */
+/* line 56, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__typography > strong {
   padding-top: 26px;
 }
-/* line 70, ../_sass/_pages/_styleguide.scss */
+/* line 62, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .styleguide__case-study-wrapper .case-study-wrapper {
   margin-top: 0;
 }
-/* line 76, ../_sass/_pages/_styleguide.scss */
+/* line 68, ../_sass/_pages/_styleguide.scss */
 .page--styleguide .container pre {
   margin: 0;
 }

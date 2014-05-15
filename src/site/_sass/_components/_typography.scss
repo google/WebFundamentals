@@ -65,7 +65,7 @@ li > p {
   // because the lines of text get too long and therefore hard to read
   // This is selecting all the content elements needed so far and
   // setting it to use 3 columns
-  h1, h2, h3, h4, h5, h6, p, ul, ol {
+  h1, h2, h3, h4, h5, h6, p, & > ul, & > ol {
     @include wide {
       margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
     }

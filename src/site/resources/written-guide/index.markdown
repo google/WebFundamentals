@@ -12,6 +12,10 @@ collection: resources
 
 {% wrap content %}
 
+{% include modules/breadcrumbs.liquid %}
+
+# {{ page.title }}
+
 {% include modules/toc.liquid %}
 
 
@@ -19,7 +23,7 @@ collection: resources
   * Across the site, for hyphenated words, capitalize as if the hyphens weren't there (e.g., "Multi-Device" and "Peer-to-Peer").
 
 ### Website section titles
-  * Title case capitalization (e.g., "Multi-Device Layouts" not "Multi-device layouts"). 
+  * Title case capitalization (e.g., "Multi-Device Layouts" not "Multi-device layouts").
   * Avoid verbs in top-level section titles.
 
 ### Article titles

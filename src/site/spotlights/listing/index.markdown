@@ -30,7 +30,7 @@ collection: showcase
   <div class="container-medium">
     <div class="featured-spotlight__container g--pull-half">
       <div class="featured-spotlight__img">
-        <img src="../../imgs/placeholder--wide.png" alt="image exemple">
+        <img src="../../imgs/placeholder--featured-spotlight.png" alt="image exemple">
       </div>
 
       <div class="container-small">

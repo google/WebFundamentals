@@ -17,12 +17,14 @@
               <p><a class="tag themed" href="{{site.baseurl}}/{{guide.section.href}}" title="{{guide.section.title}}">{{guide.section.title}}</a></p>
             {% endif %}
 
-            <a href="{{site.baseurl}}/{{guide.href}}#">
-              {% if guide.thumbnail %}
-              <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">
-              {% endif %}
-              <p class="medium">{{guide.title}}</p>
-            </a>
+            <p class="medium">
+              <a href="{{site.baseurl}}/{{guide.href}}#">
+                {% if guide.thumbnail %}
+                <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">
+                {% endif %}
+                {{guide.title}}
+              </a>
+            </p>
           </li>
         {% endfor %}
         </ul>

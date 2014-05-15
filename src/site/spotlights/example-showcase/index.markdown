@@ -17,15 +17,15 @@ our_views:
     - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
 other_case_studies:
   - title: Case study number one
-    description: Guides title which goes over two lines
+    description: Case study title
     link: /spotlights/example-showcase/
     image: ../../imgs/image-example-2.jpg
   - title: Case study number two
-    description: Guides completely device agnostic site created for the this website
+    description: Case study title
     link: /spotlights/example-showcase/
     image: ../../imgs/image-example-3.jpg
   - title: Case study number three
-    description: Guides new, completely device agnostic site created for the this website
+    description: Case study title
     link: /spotlights/example-showcase/
     image: ../../imgs/image-example-4.jpg
 related_guides:

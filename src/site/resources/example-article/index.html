@@ -38,8 +38,6 @@ article:
   order: 4
 collection: resources
 ---
-
-
 {% comment %}
 
 This is an example of how an article page should be laid out.
@@ -64,7 +62,7 @@ Notes:
   <div class="container">
     <div class="content">
       <nav class="breadcrumbs">
-        <p>/ <a href="{{site.baseurl}}/resources/" class="breadcrumbs__link">Resources</a></p>
+        <p><a class="breadcrumbs__link" href="{{site.baseurl}}/">Home</a>/ <a href="{{site.baseurl}}/resources/" class="breadcrumbs__link">Resources</a> /</p>
       </nav>
 
       <h1 class="tag editorial-header__title">Layout Basics</h1>
@@ -87,6 +85,18 @@ Notes:
 <div class="container">
   <div class="content">
     <h2 id="subtitle-one" class="subsection-title"><strong class="subsection-number">#1</strong> Subtitle one</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, perferendis error voluptatem quo porro? Labore, obcaecati, alias, officiis exercitationem minus quam vero expedita nulla cumque quia qui quos explicabo quibusdam.</p>
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+      </li>
+      <li>Lorem ipsum dolor sit amet</li>
+    </ol>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, asperiores, possimus eius in sint earum deleniti quos commodi esse atque nesciunt odio cum facilis ipsam ullam. Magni natus ut nulla! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis voluptate eveniet ipsam itaque iusto labore aut repudiandae reiciendis quae iste libero? Laudantium, maiores, natus quia voluptates accusamus dolore voluptatem!</p>
 
@@ -248,27 +258,3 @@ Notes:
 
 
 {% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms %}
-
-
-<!-- <div class="container">
-  <div class="related-items clear">
-    <h3 class="related-items__title g-wide--1 g-medium--full">Related guides</h3>
-    <div class="related-items__section clear">
-      <ul class="related-items-list list-reset">
-        <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
-          <p><a class="tag themed" href="#" title="Layout basics">Layout basics</a></p>
-          <p class="medium"><a href="#">Guides title which goes over two lines</a></p>
-        </li>
-        <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
-          <p><a class="tag themed" href="#" title="Media">Media</a></p>
-          <p class="medium"><a href="#">Guides completely device agnostic site created for the this website</a></p>
-        </li>
-        <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
-          <p><a class="tag themed" href="#" title="Performance">Performance</a></p>
-          <p class="medium"><a href="#">Guides new, completely device agnostic site created for the this website</a></p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
- -->

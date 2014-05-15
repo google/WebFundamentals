@@ -29,6 +29,10 @@ NOTE: This is our styleguide
 
 {% wrap content %}
 
+{% include modules/breadcrumbs.liquid %}
+
+# {{ page.title }}
+
 {% include modules/toc.liquid %}
 
 ## Headings
@@ -52,13 +56,13 @@ Styles for how to include code into the documents.
 ### Inline code with no sample
 
   {{ "&#123;% highlight html %&#125;" }}
-   
+
     <html>
         <head>
           <title>Hello World</title>
         </head>
     </html>
-  
+
   {{ "&#123;% endhighlight %&#125;" }}
 
 {% highlight html %}
@@ -71,7 +75,7 @@ Styles for how to include code into the documents.
 
 ### Include Javascript
 
-  {{ "&#123;% include_code _code/test.js testjs javascript %&#125;" }} 
+  {{ "&#123;% include_code _code/test.js testjs javascript %&#125;" }}
 
 {% include_code _code/test.js somejs javascript %}
 
@@ -91,7 +95,7 @@ Styles for how to include code into the documents.
 
 ### Link to sample
 
-  {{ "&#123;% link_sample _code/test.html %&#125;See sample&#123;% endlink_sample %&#125;" }}  
+  {{ "&#123;% link_sample _code/test.html %&#125;See sample&#123;% endlink_sample %&#125;" }}
 
 {% link_sample _code/test.html %}See sample{% endlink_sample %}
 
