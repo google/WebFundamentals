@@ -73,8 +73,8 @@ related-guides:
         title: "Images"
         href: documentation/introduction-to-media/
     -
-      title: Optimizing images 101
-      href: documentation/performance/optimizing-content-efficiency/#image-compression-101
+      title: Image optimization
+      href: documentation/performance/optimizing-content-efficiency/image-optimization.html
       section:
         id: introduction-to-media
         title: "Images"
