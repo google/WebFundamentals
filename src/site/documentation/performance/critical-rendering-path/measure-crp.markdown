@@ -28,8 +28,6 @@ key-takeaways:
   }
 </style>
 
-<!-- {% include modules/toc.liquid %} -->
-
 {% include modules/takeaway.liquid list=page.key-takeaways.measure-crp %}
 
 The foundation of every solid performance strategy is good measurement and instrumentation. Turns out, that is exactly what the Navigation Timing API provides.
@@ -60,7 +58,7 @@ The HTML specification dictates specific conditions for each and every event: wh
     * If there is no parser blocking JavaScript than _documentContentLoaded_ will fire immediately after _domInteractive_.
 * **domComplete** marks when the page and all of its subresources are ready.
 
-&nbsp; <!-- TODO: ummm... wth? -->
+^
 
 {% include_code _code/measure_crp.html full html %}
 

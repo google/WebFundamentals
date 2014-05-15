@@ -28,7 +28,7 @@ key-takeaways:
   }
 </style>
 
-<!-- {% include modules/toc.liquid %} -->
+{% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.adding-interactivity %}
 

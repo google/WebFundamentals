@@ -32,7 +32,7 @@ notes:
   }
 </style>
 
-<!-- {% include modules/toc.liquid %} -->
+{% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.construct-object-model %}
 

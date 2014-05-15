@@ -11,8 +11,6 @@ collection: critical-rendering-path
 ---
 {% wrap content%}
 
-<!-- {% include modules/toc.liquid %} -->
-
 In order to deliver the fastest possible time to first render, we need to optimize three variables:
 
 * **Minimize the number of critical resources.**

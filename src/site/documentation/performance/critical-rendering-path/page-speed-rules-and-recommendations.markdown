@@ -11,8 +11,6 @@ collection: critical-rendering-path
 ---
 {% wrap content %}
 
-<!-- {% include modules/toc.liquid %} -->
-
 ## Eliminate render-blocking JavaScript and CSS
 
 To deliver the fastest time to first render, you want to minimize and (where possible) eliminate the number of critical resources on the page, minimize the number of downloaded critical bytes, and optimize the critical path length.
