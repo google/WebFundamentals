@@ -17,8 +17,6 @@ lessonsToc: false
     <div class="container">
       <div class="content">
 
-        {% include modules/breadcrumbs.liquid %}
-
         <h1>Getting Started</h1>
         <h2>{{ page.title }}</h2>
 
