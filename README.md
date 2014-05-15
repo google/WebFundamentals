@@ -7,6 +7,9 @@ that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
 View the live site: https://developers.google.com/web/fundamentals/
 
+Links: [Live site](https://developers.google.com/web/fundamentals/) | 
+[Planned content](https://docs.google.com/a/chromium.org/document/d/1X2bbv7_ZQcHLXP_v4jtJ34NkUdBE2Yjr-LgxW596GQc/edit)
+
 
 Release status
 --------------
