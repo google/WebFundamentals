@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Image optimization"
-description: ""
-introduction: ""
+description: "Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client's bandwidth and the faster the browser can download and render useful content on the screen."
+introduction: "Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client's bandwidth and the faster the browser can download and render useful content on the screen."
 article:
   written_on: 2014-05-07
   updated_on: 2014-05-10
@@ -71,8 +71,6 @@ notes:
 
 {% include modules/toc.liquid %}
 
-Images often account for [most of the downloaded bytes](/web/fundamentals/documentation/performance/optimizing-content-efficiency/index) on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client’s bandwidth and the faster the browser can download and render useful content on the screen.
-
 Image optimization is both an art and science: an art because there is no one definitive answer for how best to compress an individual image, and a science because there are many well developed techniques and algorithms that can significantly reduce the size of an image. Finding the optimal settings for your image requires careful analysis along many dimensions: format capabilities, content of encoded data, quality, pixel dimensions, and more.
 
 ## Eliminating and replacing images
@@ -93,7 +91,7 @@ If you ever find yourself encoding text in an image asset, stop and reconsider. 
 
 {% include modules/takeaway.liquid list=page.key-takeaways.vector-raster %}
 
-Once you’ve determined that an image is, in fact, the optimal format to achieve the desired effect, the next critical choice is to select the appropriate format:
+Once you've determined that an image is, in fact, the optimal format to achieve the desired effect, the next critical choice is to select the appropriate format:
 
 &nbsp;
 
@@ -114,22 +112,22 @@ Once you’ve determined that an image is, in fact, the optimal format to achiev
 
 Each format has its own set of pros and cons. Vector formats are ideally suited for images that consist of simple geometric shapes (e.g. logos, text, icons, and so on), and deliver sharp results at every resolution and zoom setting, which makes them an ideal format for high-resolution screens and assets that need to be displayed at varying sizes.
 
-However, vector formats fall short when the scene is complicated (e.g. a photo): the amount of SVG markup to describe all the shapes can be prohibitively high and the output may still not look "photorealistic". When that’s the case, that’s when you should be using a raster image format such as GIF, PNG, JPEG, or one of the newer formats such as JPEG-XR and WebP.
+However, vector formats fall short when the scene is complicated (e.g. a photo): the amount of SVG markup to describe all the shapes can be prohibitively high and the output may still not look "photorealistic". When that's the case, that's when you should be using a raster image format such as GIF, PNG, JPEG, or one of the newer formats such as JPEG-XR and WebP.
 
-Raster images do not have the same nice properties of being resolution or zoom independent - when you scale up a raster image you’ll see jagged and blurry graphics. As a result, you may need to save multiple versions of a raster image at various resolutions to deliver the optimal experience to your users.
+Raster images do not have the same nice properties of being resolution or zoom independent - when you scale up a raster image you'll see jagged and blurry graphics. As a result, you may need to save multiple versions of a raster image at various resolutions to deliver the optimal experience to your users.
 
 
 ## Implications of high-resolution screens
 
 {% include modules/takeaway.liquid list=page.key-takeaways.hidpi %}
 
-When we talk about image pixels, we need to distinguish between different kinds of pixels: CSS pixels and device pixels. A single CSS pixel may contain multiple device pixels - e.g. a single CSS pixel may correspond directly to a single device pixel, or may be backed by multiple device pixels. What’s the point? Well, the more device pixels there are, the finer the detail of the displayed content on the screen.
+When we talk about image pixels, we need to distinguish between different kinds of pixels: CSS pixels and device pixels. A single CSS pixel may contain multiple device pixels - e.g. a single CSS pixel may correspond directly to a single device pixel, or may be backed by multiple device pixels. What's the point? Well, the more device pixels there are, the finer the detail of the displayed content on the screen.
 
 <img src="images/css-vs-device-pixels.png" class="center" alt="CSS vs device pixels">
 
 High DPI (HiDPI) screens produce beautiful results, but there is one obvious tradeoff: our image assets require more detail in order to take advantage of the higher device pixel counts. The good news is, vector images are ideally suited for this task, as they can be rendered at any resolution with sharp results - we might incur a higher processing cost to render the finer detail, but the underlying asset is the same and is resolution independent.
 
-On the other hand, raster images pose a much larger challenge because they encode image data on a per-pixel basis. Hence, the larger the number of pixels, the larger the filesize of a raster image. As an example, let’s consider the difference between a photo asset displayed at 100x100 (CSS) pixels:
+On the other hand, raster images pose a much larger challenge because they encode image data on a per-pixel basis. Hence, the larger the number of pixels, the larger the filesize of a raster image. As an example, let's consider the difference between a photo asset displayed at 100x100 (CSS) pixels:
 
 <table>
 <thead>
@@ -205,7 +203,7 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
 <thead>
   <tr>
     <th>Dimensions</th>
-    <th>Pixesl</th>
+    <th>Pixels</th>
     <th>File size</th>
   </tr>
 </thead>
@@ -236,24 +234,23 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
 </tr>
 </table>
 
-39KB for a 100x100 pixel image may not seem like a big deal, but the filesize quickly explodes for larger images and makes image assets both slow and expensive to download. Thankfully, what we’ve described so far is the "uncompressed" image format. What could we do to reduce the image file size?
+39KB for a 100x100 pixel image may not seem like a big deal, but the filesize quickly explodes for larger images and makes image assets both slow and expensive to download. Thankfully, what we've described so far is the "uncompressed" image format. What could we do to reduce the image file size?
 
-One simple strategy is to reduce the "bit-depth" of the image from 8 bits per channel to a smaller color palette: 8 bits per channel gives us 256 values per channel and 16,777,216 (2563) colors in total. What if we reduced the palette to 256 colors? Then we would only need 8 bits in total for the RGB channels and immediately save two bytes per pixel -- that’s 50% compression savings over our original 4 bytes per pixel format!
+One simple strategy is to reduce the "bit-depth" of the image from 8 bits per channel to a smaller color palette: 8 bits per channel gives us 256 values per channel and 16,777,216 (2563) colors in total. What if we reduced the palette to 256 colors? Then we would only need 8 bits in total for the RGB channels and immediately save two bytes per pixel -- that's 50% compression savings over our original 4 bytes per pixel format!
 
 <img src="images/artifacts.png" class="center" alt="Compression artifacts">
 
 {% include modules/remember.liquid title="Note" list=page.notes.artifacts %}
 
-Next, once we’ve optimized the data stored in individual pixels we could get more clever and look at nearby pixels as well: turns out, many images, and especially photos, have many nearby pixels with similar colors - e.g. the sky, repeating textures, and so on. Using this information to our advantage the compressor can apply "[delta encoding](http://en.wikipedia.org/wiki/Delta_encoding)" where instead of storing the individual values for each pixel, we can store the difference between nearby pixels: if the adjacent pixels are the same, then the delta is "zero" and we only need to store a single bit! But why stop there…
+Next, once we've optimized the data stored in individual pixels we could get more clever and look at nearby pixels as well: turns out, many images, and especially photos, have many nearby pixels with similar colors - e.g. the sky, repeating textures, and so on. Using this information to our advantage the compressor can apply "[delta encoding](http://en.wikipedia.org/wiki/Delta_encoding)" where instead of storing the individual values for each pixel, we can store the difference between nearby pixels: if the adjacent pixels are the same, then the delta is "zero" and we only need to store a single bit! But why stop there...
 
 The human eye has different level of sensitivity to different colors: we can optimize our color encoding to account for this by reducing or increasing  the palette for those colors.
 "Nearby" pixels form a two dimensional grid, which means that each pixel has multiple neighbors: we can use this fact to further improve delta encoding.
-Instead of looking at just the immediate neighbors for each pixel, we can look at larger blocks of nearby pixels and encode different blocks with different settings.
-And so on…
+Instead of looking at just the immediate neighbors for each pixel, we can look at larger blocks of nearby pixels and encode different blocks with different settings. And so on...
 
-As you can tell, image optimization gets complicated quickly (or fun, depending on your perspective), and is an active area of academic and commercial research. Images occupy a lot of bytes and there is a lot of value in developing better image compression techniques! If you’re curious to learn more, head to the [Wikipedia page](http://en.wikipedia.org/wiki/Image_compression), or check out the [WebP compression techniques whitepaper](https://developers.google.com/speed/webp/docs/compression) for a hands-on example.
+As you can tell, image optimization gets complicated quickly (or fun, depending on your perspective), and is an active area of academic and commercial research. Images occupy a lot of bytes and there is a lot of value in developing better image compression techniques! If you're curious to learn more, head to the [Wikipedia page](http://en.wikipedia.org/wiki/Image_compression), or check out the [WebP compression techniques whitepaper](https://developers.google.com/speed/webp/docs/compression) for a hands-on example.
 
-So, once again, this is all great, but also very academic: how does it help us optimize images on our pages? Well, we are definitely not in a position to invent new compression techniques, but it’s important to understand the shape of the problem: RGBA pixels, bit-depth, and various optimization techniques. All of these concepts are critical to understand and keep in mind before we dive into the discussions of various raster image formats.
+So, once again, this is all great, but also very academic: how does it help us optimize images on our pages? Well, we are definitely not in a position to invent new compression techniques, but it's important to understand the shape of the problem: RGBA pixels, bit-depth, and various optimization techniques. All of these concepts are critical to understand and keep in mind before we dive into the discussions of various raster image formats.
 
 
 ## Lossless vs lossy image compression
@@ -269,11 +266,11 @@ In fact, due to how they eye works, we can often get away with discarding some i
 
 **The first step is optional, and the exact algorithm will depend on the particular image format, but it is important to understand that any image can undergo a lossy compression step to reduce its size.** In fact, the difference between various image formats, such as GIF, PNG, JPEG, and others, is in the combination of the specific algorithms they use (or omit) when applying the lossy and lossless steps.
 
-So, what is the "optimal" configuration of lossy and lossless optimization? The answer depends on the image contents and your own criteria such as the tradeoff between filesize and artifacts introduced by lossy compression: in some cases you may want to skip lossy optimization to communicate intricate detail in its full fidelity, and in others you may be able to apply aggressive lossy optimization to reduce the filesize of the image asset.  This is where your own judgement and context need to come into play - there is no one universal setting.
+So, what is the "optimal" configuration of lossy and lossless optimization? The answer depends on the image contents and your own criteria such as the tradeoff between filesize and artifacts introduced by lossy compression: in some cases you may want to skip lossy optimization to communicate intricate detail in its full fidelity, and in others you may be able to apply aggressive lossy optimization to reduce the filesize of the image asset.  This is where your own judgment and context need to come into play - there is no one universal setting.
 
 <img src="images/save-for-web.png" class="center" alt="Save for web">
 
-As a hands-on example, when using a lossy format such as JPEG, the compressor will typically expose a customizable "quality" setting (e.g. the quality slider provided by the "Save for Web" functionality in Adobe Photoshop), which is typically a number between 1 and 100 that controls the inner workings of the specific collection of lossy and lossless algorithms. For best results, experiment with various quality settings for your images, and don’t be afraid to dial down the quality - the visual results are often very good and the filesize savings can be quite large.
+As a hands-on example, when using a lossy format such as JPEG, the compressor will typically expose a customizable "quality" setting (e.g. the quality slider provided by the "Save for Web" functionality in Adobe Photoshop), which is typically a number between 1 and 100 that controls the inner workings of the specific collection of lossy and lossless algorithms. For best results, experiment with various quality settings for your images, and don't be afraid to dial down the quality - the visual results are often very good and the filesize savings can be quite large.
 
 {% include modules/remember.liquid title="Note" list=page.notes.quality %}
 
@@ -339,7 +336,7 @@ There are three universally supported image formats: GIF, PNG, and JPEG. In addi
 1. **Are you optimizing a photo, screenshot, or a similar image asset? Use JPEG.**
   * JPEG uses a combination of lossy and lossless optimization to reduce filesize of the image asset. Try several JPEG quality levels to find the best quality vs. filesize tradeoff for your asset.
 
-Finally, once you’ve determined the optimal image format and its settings for each of your assets, consider adding an additional variant encoded in WebP and JPEG XR. Both of of these formats are new, and unfortunately are not (yet) universally supported by all browsers, but they can nonetheless provide significant savings for newer clients - e.g. on average, WebP delivers a [30% filesize decrease](https://developers.google.com/speed/webp/docs/webp_study) over a comparable JPEG image.
+Finally, once you've determined the optimal image format and its settings for each of your assets, consider adding an additional variant encoded in WebP and JPEG XR. Both of of these formats are new, and unfortunately are not (yet) universally supported by all browsers, but they can nonetheless provide significant savings for newer clients - e.g. on average, WebP delivers a [30% filesize decrease](https://developers.google.com/speed/webp/docs/webp_study) over a comparable JPEG image.
 
 Since neither WebP and JPEG XR are universally supported, you will need to add additional logic to your application or servers to serve the appropriate resource:
 
@@ -352,7 +349,35 @@ Finally, note that if you are using a Webview to render content in your native a
 
 ## Tools and parameter tuning
 
-[WIP] Too many tools, too little useful guidance... Have tips? Let us know.
+There is no one perfect image format, tool, or a set of optimization parameters that apply to all images. For best results you will have to pick the format and its settings depending on the contents of the image, and its visual and other technical requirements.
+
+<table>
+<thead>
+  <tr>
+    <th>Tool</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tr>
+  <td data-th="tool"><a href="http://www.lcdf.org/gifsicle/">gifsicle</a></td>
+  <td data-th="description">create and optimize GIF images</td>
+</tr>
+<tr>
+  <td data-th="tool"><a href="http://jpegclub.org/jpegtran/">jpegtran</a></td>
+  <td data-th="description">optimize JPEG images</td>
+</tr>
+<tr>
+  <td data-th="tool"><a href="http://optipng.sourceforge.net/">optipng</a></td>
+  <td data-th="description">lossless PNG optimization</td>
+</tr>
+<tr>
+  <td data-th="tool"><a href="http://pngquant.org/">pngquant</a></td>
+  <td data-th="description">lossy PNG optimization</td>
+</tr>
+</table>
+
+
+Don't be afraid to experiment with parameters of each compressor. Dial down the quality, see how it looks, then rinse, lather and repeat. Once you've found a good set of settings, you can apply them to other similar images on your site, but don't assume that all images must be compressed with the same settings.
 
 
 ## Delivering scaled image assets
@@ -405,7 +430,7 @@ Some tips and techniques to keep in mind as you work on optimizing your images:
 * **Prefer vector formats:** vector images are resolution and scale independent, which makes them a perfect fit for the multi-device and high-resolution world.
 * **Minify and compress SVG assets:** XML markup produced by most drawing applications often contains unnecessary metadata which can be removed; ensure that your servers are configured to apply GZIP compression for SVG assets.
 * **Pick best raster image format:** determine your functional requirements and select the one that suits each particular asset.
-* **Experiment with optimal quality settings for raster formats:** don’t be afraid to dial down the "quality" settings, the results are often very good and byte savings are significant.
+* **Experiment with optimal quality settings for raster formats:** don't be afraid to dial down the "quality" settings, the results are often very good and byte savings are significant.
 * **Remove unnecessary image metadata:** many raster images contain unnecessary metadata about the asset: geo information, camera information, and so on. Use appropriate tools to strip this data.
 * **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size size of the image. Pay close to attention to large images in particular, as they account for largest overhead when resized!
 * **Automate, automate, automate:** invest into automated tools and infrastructure that will ensure that all of your image assets are always optimized.
