@@ -94,6 +94,10 @@ webfonts to achieve the style you need.
     box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);
     background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
   }
+  
+  p#noImage code {
+    color: rgb(64, 64, 64);
+  }
 </style>
 <p id="noImage">
   Modern browsers can use CSS features to create styles that would previously
