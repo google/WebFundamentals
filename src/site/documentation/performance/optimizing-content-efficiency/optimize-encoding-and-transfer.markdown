@@ -101,7 +101,7 @@ The best way to compress redundant or unnecessary data is to eliminate it altoge
 
 Consider the simple HTML page above and the three different content types that it contains: HTML markup, CSS styles, and JavaScript. Each of these content types has different rules for what constitutes valid HTML markup, CSS rules, or JavaScript content, different rules for indicating comments, and so on. How could we reduce the size of this page?
 
-* Code comments are a developer’s best friend, but the browser does not need to see them! Simply stripping the CSS (/* ... */), HTML (<!-- … -->), and JavaScript (// …) comments can significantly reduce the total size of the page.
+* Code comments are a developer’s best friend, but the browser does not need to see them! Simply stripping the CSS (`/* … */`), HTML (`<!-- … -->`), and JavaScript (`// …`) comments can significantly reduce the total size of the page.
 * A “smart” CSS compressor could notice that we’re using an inefficient way of defining rules for ‘.awesome-container’ and collapse the two declarations into one without affecting any other styles, saving yet more bytes.
 * Whitespace (spaces and tabs) is a developer convenience in HTML, CSS, and JavaScript. An additional compressor could strip out all the tabs and spaces.
 

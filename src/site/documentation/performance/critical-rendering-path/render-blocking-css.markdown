@@ -28,7 +28,6 @@ key-takeaways:
   }
 </style>
 
-<!-- {% include modules/toc.liquid %} -->
 
 In the previous section we saw that the critical rendering path requires that we have both the DOM and the CSSOM to construct the render tree, which creates an important performance implication: **both HTML and CSS are render blocking resources.** The HTML is obvious, since without the DOM we would not have anything to render, but the CSS requirement may be less obvious. What would happen if we try to render a typical page without blocking rendering on CSS?
 
@@ -38,13 +37,13 @@ In the previous section we saw that the critical rendering path requires that we
   <div class="g--half">
     <b>NYTimes with CSS</b>
     <img class="center" src="images/nytimes-css-device.png" alt="NYTimes with CSS">
-    
+
   </div>
 
   <div class="g--half g--last">
     <b>NYTimes without CSS (FOUC)</b>
     <img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS">
-    
+
   </div>
 </div>
 

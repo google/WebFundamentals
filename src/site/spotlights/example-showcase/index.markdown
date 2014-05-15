@@ -1,6 +1,7 @@
 ---
 layout: showcase
 title: "Showcase example"
+published: false
 description: "This is an example of a showcase page"
 introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus."
 header_image: ../../imgs/placeholder--device-landscape.png

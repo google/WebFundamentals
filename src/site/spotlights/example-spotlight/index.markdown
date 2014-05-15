@@ -1,6 +1,7 @@
 ---
 layout: showcase
 title: "Spotlight example"
+published: false
 description: "This is an example of a spotlight page"
 introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius."
 header_image: ../../imgs/placeholder--device-landscape-2.png
