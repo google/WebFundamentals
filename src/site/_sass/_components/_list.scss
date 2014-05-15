@@ -286,6 +286,18 @@ ol.list-links {
 
   & .tag {
     padding-top: 0;
+    display: block; // fixes baseline
+    max-width: 0; // fixes baseline
+    white-space: nowrap;
+  }
+
+  // in this case we have a block element inside an inline element
+  // causing the anchor tag to be fluid and therefore having a
+  // much wider clickable area than desired
+  // the following is a "hacky" solution
+  & a p {
+    max-width: 0;
+    white-space: nowrap;
   }
 
   & li {
@@ -318,7 +330,13 @@ ol.list-links {
     padding-top: $lineHeight;
     border: none;
     padding-bottom: 0;
+
+    & p a {
+      display: inline-block;
+      white-space: nowrap;
+    }
   }
+
 }
 
 /*==========  LIST RESET  ==========*/
