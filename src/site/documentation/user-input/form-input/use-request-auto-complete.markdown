@@ -2,9 +2,9 @@
 layout: article
 title: "Simplify checkout with requestAutocomplete API"
 description: "While `requestAutocomplete` was designed to help users fill out any form, today
-it's most common use is in eCommerce where shopping cart abandonment on the mobile web <a href='http://seewhy.com/blog/2012/10/10/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>."
+its most common use is in eCommerce where shopping cart abandonment on the mobile web <a href='http://seewhy.com/blog/2012/10/10/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>."
 introduction: "While `requestAutocomplete` was designed to help users fill out any form, today
-it's most common use is in eCommerce where shopping cart abandonment on the
+its most common use is in eCommerce where shopping cart abandonment on the
 mobile web <a href='http://seewhy.com/blog/2012/10/10/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>. Imagine 97% of people in a supermarket, with a cart brimming full of things that
 they want, flipping their cart over and walking out."
 article:
