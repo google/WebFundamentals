@@ -38,7 +38,7 @@ The App Bar consists of three elements.
 
 Nearly every site on the internet will have actions they enable their users to perform, search for example. Place buttons to perform these actions in the App Bar, giving your user a common to find out what the current actions are available on that page.
 
-If you have a menu, use the hamburger icon (three vertical lines) and place it on the far left or far right. Once you have selected a side, don't move it, always keep it in the same position meaning the user only needs to learn where it is once.
+If you have a menu, use the hamburger icon (three horizontal lines) and place it on the far left or far right. Once you have selected a side, don't move it, always keep it in the same position meaning the user only needs to learn where it is once.
 
 ## Left vs Right Menu Button
 
