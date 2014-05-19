@@ -84,6 +84,12 @@ webfonts to achieve the style you need.
 
 ## Use CSS to replace images
 
+Modern browsers can use CSS features to create styles that would previously
+required images.  For examples, complex gradients can be created using the
+<code>background</code> property, shadows can be created using
+<code>box-shadow</code> and rounded corners can be added with the
+<code>border-radius</code> property.
+
 <style>
   p#noImage {
     margin-top: 2em;
@@ -100,11 +106,12 @@ webfonts to achieve the style you need.
   }
 </style>
 <p id="noImage">
-  Modern browsers can use CSS features to create styles that would previously
-  required images.  For examples, complex gradients can be created using the
-  <code>background</code> property, shadows can be created using
-  <code>box-shadow</code> and rounded corners can be added with the
-  <code>border-radius</code> property.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
 {% highlight html %}
