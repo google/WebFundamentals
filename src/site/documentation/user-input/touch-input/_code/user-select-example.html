@@ -7,7 +7,7 @@
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <title>Web Essential: States Example</title>
+    <title>user-select Example</title>
     
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -42,7 +42,7 @@
         text-decoration: none;
       }
 
-      .btn {
+      button {
         background-color: #c0392b;
 
         /* // [START user-select] */
@@ -59,37 +59,45 @@
         background-image: none;
       }
 
-      .btn.user-selectable {
+      button.user-selectable {
         -moz-user-select: auto;
         -webkit-user-select: auto;
         -ms-user-select: auto;
         user-select: auto;
       }
 
-      .btn:hover {
+      button:hover {
         background-color: #B32C1E;
       }
       
-      .btn:focus {
+      button:focus {
         background-color: #8D0600;
         /* The outline parameter surpresses the border color / outline when focused */
         outline: 0;
       }
       
-      .btn:active {
+      button:active {
         background-color: #9A1305;
       }
 
       /* Firefox Specific CSS to remove focus ring */
-      .btn::-moz-focus-inner {
+      button::-moz-focus-inner {
         border: 0;
       }
     </style>
   </head>
 
   <body>
-    <a class="btn" tabindex="1" href="#">None Selectable Text</a>
+    <button class="btn" tabindex="1">None Selectable Text</button>
     
-    <a class="btn user-selectable" tabindex="2" href="tel:+44 (0) 123456789">+44 (0) 123456789</a>
+    <button class="btn user-selectable" tabindex="2">+44 (0) 123456789</button>
+
+    <script>
+      window.onload = function() {
+        if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+          document.body.addEventListener('touchstart', function() {}, false);
+        }
+      };
+    </script>
   </body>
 </html>

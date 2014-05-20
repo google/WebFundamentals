@@ -55,11 +55,51 @@ See [Pseudo classes for touch states](#pseudo-classes-for-touch-states):
 
 ![Image illustrating the different colors for button states](images/button-states.png)
 
+### Hover and Focus Stickiness
+
+On most mobile browsers *hover* and/or *focus* states will apply 
+to an element after it's been tapped.
+
+Consider carefully 
+what styles you set and how they will look to the user after
+they finish their touch.
+
+Bear in mind that anchor tags and buttons may have different behaviour in different browsers, so assume in some cases *hover* will remain and in others *focus* will remain.
+
+### Enabling Active State Support on iOS
+
+Unfortunately, Safari on iOS does not apply the *active* state by default, to get it working you need to add a `touchstart` event listener to the *document body* or to each element.
+
+You should do this behind a user agent test so it's only run on iOS devices.
+
+Adding a touch start to the body has the advantage of applying to all elements in the DOM, however this may have performance issues when scrolling the page.
+
+{% highlight js %}
+window.onload = function() {
+  if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+    document.body.addEventListener('touchstart', function() {}, false);
+  }
+};
+{% endhighlight %}
+
+The alternative is to add the touch start listeners to all the interactable elements in the page, alleviating some of the performance concerns.
+
+{% highlight js %}
+window.onload = function() {
+  if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+    var elements = document.querySelectorAll('button');
+    var emptyFunction = function() {};
+    for(var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('touchstart', emptyFunction, false);
+    }
+  }
+};
+{% endhighlight %}
+
 ### Override Default Browser Styles for Touch States
 
-Different browsers have implemented their own styles in response to user’s
-touch. When you implement your own styles, you may want to override these
-browser styles as well.
+Once you add styles for the different states, you'll notice that most browsers implement their own styles to respond to a user’s
+touch, you should override these defaults when you've added your own styles.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.override-default %}
 
@@ -98,7 +138,7 @@ Suppress the outline color when an element is focused using `outline: 0`.
 .btn:focus {
   outline: 0;
 
-  // Add replacement focus styling here
+  // Add replacement focus styling here (i.e. border)
 }
 {% endhighlight %}
 
@@ -132,7 +172,16 @@ user-select: none;
   </thead>
   <tbody>
     <tr>
-      <td data-th="Class"><code>:focus</code></td>
+      <td data-th="Class">:hover</td>
+      <td data-th="Example"><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
+      <td data-th="Description">
+        This state is entered when a is cursor placed over an element.
+        Changes in UI on hover are helpful to encourage users to interact
+        with elements.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Class">:focus</td>
       <td data-th="Example">
         <img alt="Button with Focus State" src="images/btn-focus-state.png">
       </td>
@@ -144,22 +193,13 @@ user-select: none;
       </td>
     </tr>
     <tr>
-      <td data-th="Class"><code>:active</code></td>
+      <td data-th="Class">:active</td>
       <td data-th="Example">
         <img alt="Button in Pressed State" src="images/btn-pressed-state.png">
       </td>
       <td data-th="Description">
         This is the state an element has when it's being selected, for
         example a user clicking or touching an element.
-      </td>
-    </tr>
-    <tr>
-      <td data-th="Class"><code>:hover</code></td>
-      <td data-th="Example"><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
-      <td data-th="Description">
-        This state is entered when a is cursor placed over an element.
-        Changes in UI on hover are helpful to encourage users to interact
-        with elements.
       </td>
     </tr>
   </tbody>

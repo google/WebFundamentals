@@ -251,6 +251,12 @@
         for(var i = 0; i < sliderElements.length; i++) {
           new Slider(sliderElements[i]);
         }
+
+        window.onload = function() {
+          if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+            document.body.addEventListener('touchstart', function() {}, false);
+          }
+        };
       };
     </script>
 

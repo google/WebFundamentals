@@ -381,6 +381,12 @@
         for(var i = 0; i < swipeRevealItemElements.length; i++) {
           swipeRevealItems.push(new SwipeRevealItem(swipeRevealItemElements[i]));
         }
+
+        window.onload = function() {
+          if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+            document.body.addEventListener('touchstart', function() {}, false);
+          }
+        };
       };
 
       window.onresize = function () {
