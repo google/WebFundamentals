@@ -280,18 +280,20 @@ Let's take a look an example:
 * When the browser <b>height is greater than the width</b>, `portrait.css` will be applied.
 
 
-### A note on `min-``device-width`
+### A note on `min-device-width`
 
-In addition to `*-width`, it is also possible to create queries based on
-`*-device-width`; the difference is subtle but very important.  `min-width` is
-based on the size of the browser window, where as `min-device-width` is based on
-the size of the screen.
+It is also possible to create queries based on
+`*-device-width`; though this practice is **strongly discouraged**. 
 
-On a mobile device, this really doesn't matter that much as in most cases the
-user can't resize the window, but on a desktop, users can control the size of
-their windows and will expect the content to adapt naturally.  Therefore, you
-should avoid using `*-device-width`, since the page won't respond when the
-desktop browser window is resized.
+The difference is subtle but very important: `min-width` is based on the 
+size of the browser window, whereas `min-device-width` is based on
+the size of the screen.  Unfortunately some browsers, including the legacy 
+Android browser may not report the device width properly and instead 
+report the screen size in device pixels instead of the expected viewport width. 
+
+In addition, using `*-device-width` can prevent content from adapting on 
+desktops or other devices that allow windows to be resized because the query
+is based on the actual device size, not the size of the browser window.
 
 ### Use relative units
 
