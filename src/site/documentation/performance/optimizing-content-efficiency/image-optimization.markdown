@@ -129,7 +129,8 @@ High DPI (HiDPI) screens produce beautiful results, but there is one obvious tra
 
 On the other hand, raster images pose a much larger challenge because they encode image data on a per-pixel basis. Hence, the larger the number of pixels, the larger the filesize of a raster image. As an example, let's consider the difference between a photo asset displayed at 100x100 (CSS) pixels:
 
-<table>
+<table class="table-3">
+<colgroup><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Screen resolution</th>
@@ -137,6 +138,7 @@ On the other hand, raster images pose a much larger challenge because they encod
     <th>Uncompressed filesize (4 bytes per pixel)</th>
   </tr>
 </thead>
+<tbody>
 <tr>
   <td data-th="resolution">1x</td>
   <td data-th="total pixels">100 x 100 = 10,000</td>
@@ -152,6 +154,7 @@ On the other hand, raster images pose a much larger challenge because they encod
   <td data-th="total pixels">100 x 100 x 9 = 90,000</td>
   <td data-th="filesize">360,000 bytes</td>
 </tr>
+</tbody>
 </table>
 
 When we double the resolution the physical screen the total number of pixels increases by a factor of four: double the number of horizontal pixels, times double the number of vertical pixels. Hence, a "2x" screen not just doubles, but quadruples the number of required pixels!
@@ -199,7 +202,8 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
 
 {% include modules/remember.liquid title="Note" list=page.notes.decompressed %}
 
-<table>
+<table class="table-3">
+<colgroup><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Dimensions</th>
@@ -207,6 +211,7 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
     <th>File size</th>
   </tr>
 </thead>
+<tbody>
 <tr>
   <td data-th="dimensions">100 x 100</td>
   <td data-th="pixels">10,000</td>
@@ -232,6 +237,7 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
   <td data-th="pixels">640,000</td>
   <td data-th="file size">2500 KB</td>
 </tr>
+</tbody>
 </table>
 
 39KB for a 100x100 pixel image may not seem like a big deal, but the filesize quickly explodes for larger images and makes image assets both slow and expensive to download. Thankfully, what we've described so far is the "uncompressed" image format. What could we do to reduce the image file size?
@@ -282,7 +288,8 @@ As a hands-on example, when using a lossy format such as JPEG, the compressor wi
 In addition to different lossy and lossless compression algorithms, different image formats support different features such as animation and transparency (alpha) channels. As a result, the choice of the "right format" for a particular image is a combination of desired visual results and functional requirements.
 
 
-<table>
+<table class="table-4">
+<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Format</th>
@@ -291,6 +298,7 @@ In addition to different lossy and lossless compression algorithms, different im
     <th>Browser</th>
   </tr>
 </thead>
+<tbody>
 <tr>
   <td data-th="format"><a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format">GIF</a></td>
   <td data-th="transparency">Yes</td>
@@ -321,6 +329,7 @@ In addition to different lossy and lossless compression algorithms, different im
   <td data-th="animation">Yes</td>
   <td data-th="browser">Chrome, Opera, Android</td>
 </tr>
+</tbody>
 </table>
 
 There are three universally supported image formats: GIF, PNG, and JPEG. In addition to these formats, some browsers also support newer formats such as WebP and JPEG XR, which offer better overall compression and more features. So, which format should you use?
@@ -351,13 +360,15 @@ Finally, note that if you are using a Webview to render content in your native a
 
 There is no one perfect image format, tool, or a set of optimization parameters that apply to all images. For best results you will have to pick the format and its settings depending on the contents of the image, and its visual and other technical requirements.
 
-<table>
+<table class="table-2">
+<colgroup><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Tool</th>
     <th>Description</th>
   </tr>
 </thead>
+<tbody>
 <tr>
   <td data-th="tool"><a href="http://www.lcdf.org/gifsicle/">gifsicle</a></td>
   <td data-th="description">create and optimize GIF images</td>
@@ -374,6 +385,7 @@ There is no one perfect image format, tool, or a set of optimization parameters 
   <td data-th="tool"><a href="http://pngquant.org/">pngquant</a></td>
   <td data-th="description">lossy PNG optimization</td>
 </tr>
+</tbody>
 </table>
 
 
@@ -394,7 +406,8 @@ As a result, one of the simplest and most effective image optimization technique
 
 The overhead of shipping unnecessary pixels, only to have the browser rescale the image on our behalf, is a big missed opportunity to reduce and optimize the total number of bytes required to render the page. Further, note that resizing is not simply a function of the number of pixels by which the image is reduced by, but also of its natural size.
 
-<table>
+<table class="table-3">
+<colgroup><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Natural size</th>
@@ -402,6 +415,7 @@ The overhead of shipping unnecessary pixels, only to have the browser rescale th
     <th>Unnecessary pixels</th>
   </tr>
 </thead>
+<tbody>
 <tr>
   <td data-th="natural">110 x 110</td>
   <td data-th="display">100 x 100</td>
@@ -417,6 +431,7 @@ The overhead of shipping unnecessary pixels, only to have the browser rescale th
   <td data-th="display">800 x 800</td>
   <td data-th="overhead">810 x 810 - 800 x 800 = 16100</td>
 </tr>
+</tbody>
 </table>
 
 Note that in all three cases above the display size is "only 10 pixels smaller" than the natural size of the image. However, the number of extra pixels that we would have to encode and ship is significantly higher the larger the natural size! As a result, while you may not be able to guarantee that every single asset is delivered at the exact display size, **you should ensure that the number of unnecessary pixels is minimal, and that your large assets in particular are delivered as close as possible to their display size.**
