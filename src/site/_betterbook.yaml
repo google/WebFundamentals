@@ -2,6 +2,10 @@ toc:
 - title: "Home"
   path: /
   home: true
+- title: "Getting Started"
+  path: /getting-started/your-first-multi-screen-site/
+- title: "Documentation"
+  path: /#documentation
   hasSubNav: true
   section:
     - title: "Multi-Device Layouts"
@@ -48,8 +52,6 @@ toc:
           path: /performance/optimizing-interactivity/
         - title: "Measuring Performance"
           path: /performance/measuring-performance/
-- title: "Getting Started"
-  path: /getting-started/your-first-multi-screen-site/
 - title: Spotlights
   path: /spotlights/
 - title: Resources
