@@ -80,8 +80,8 @@ The viewport lives in the head of the document and only needs to be declared onc
 {: .related-items--title}
 Learn more about the best practices of using the viewport:
 
-*  [Setting the Viewport]({{site.baseurl}}/multi-device-layouts/rwd-fundamentals/#set-the-viewport)
-*  [Size content to the viewport]({{site.baseurl}}/multi-device-layouts/rwd-fundamentals/#size-content-to-the-viewport)
+*  [Setting the Viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#set-the-viewport)
+*  [Size content to the viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#size-content-to-the-viewport)
 {: .list--links}
 
 </div>
@@ -159,7 +159,7 @@ where we want to change it.
 
 600px appears to be a good place to create our first breakpoint as it will give us scope
 to reposition elements to make them fit the screen better.  We can do this
-using a technology called [Media Queries]({{site.baseurl}}/multi-device-layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+using a technology called [Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
 
 {% highlight css %}
 @media (min-width: 600px) {
@@ -190,9 +190,9 @@ need to:
 
 Learn more about how and where to use Media Queries:
 
-*  [Using Media Queries]({{site.baseurl}}/multi-device-layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)
-*  [Layout patterns]({{site.baseurl}}/multi-device-layouts/rwd-patterns/)
-*  [Mostly Fluid layout]({{site.baseurl}}/multi-device-layouts/rwd-patterns/#mostly-fluid)
+*  [Using Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)
+*  [Layout patterns]({{site.baseurl}}/layouts/rwd-patterns/)
+*  [Mostly Fluid layout]({{site.baseurl}}/layouts/rwd-patterns/#mostly-fluid)
 {: .list--links}
 </div>
 </div>
@@ -327,8 +327,8 @@ For browsers that support it, you can display a high density image on a high den
 
 Learn how to effectively use images for varying screen densities:
 
-* [Enhance imgs with srcset for high DPI devices]({{site.baseurl}}/introduction-to-media/images/#enhance-imgs-with-srcset-for-high-dpi-devices)
-* [Use media queries to provide high res images or art direction]({{site.baseurl}}/introduction-to-media/images/#use-media-queries-to-provide-high-res-images-or-art-direction)
+* [Enhance imgs with srcset for high DPI devices]({{site.baseurl}}/media/images/#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [Use media queries to provide high res images or art direction]({{site.baseurl}}/media/images/#use-media-queries-to-provide-high-res-images-or-art-direction)
 {: .list--links}
 
 </div>

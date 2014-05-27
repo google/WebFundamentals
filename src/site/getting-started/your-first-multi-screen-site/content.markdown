@@ -16,69 +16,69 @@ related-guides:
   create-amazing-forms:
     -
       title: Create amazing forms
-      href: documentation/user-input/form-input/
+      href: documentation/input/form-input/
       section:
         id: user-input
         title: "Forms"
-        href: documentation/user-input/form-input/
+        href: documentation/input/form-input/
     -
       title: Label and name inputs correctly
-      href: documentation/user-input/form-input/label-and-name-inputs.html
+      href: documentation/input/form-input/label-and-name-inputs.html
       section:
         id: user-input
         title: "Forms"
-        href: documentation/user-input/form-input/
+        href: documentation/input/form-input/
     -
       title: Choose the best input type
-      href: documentation/user-input/form-input/choose-the-best-input-type.html
+      href: documentation/input/form-input/choose-the-best-input-type.html
       section:
         id: user-input
         title: Forms
-        href: documentation/user-input/form-input/
+        href: documentation/input/form-input/
   video:
     -
       title: Using video effectively
-      href: documentation/introduction-to-media/video/
+      href: documentation/media/video/
       section:
         id: introduction-to-media
         title: "Video"
-        href: documentation/introduction-to-media/
+        href: documentation/media/
     -
       title: Change the starting position
-      href: documentation/introduction-to-media/video/
+      href: documentation/media/video/
       section:
         id: introduction-to-media
         title: "Video"
-        href: documentation/introduction-to-media/
+        href: documentation/media/
     -
       title: Include a poster image
-      href: documentation/introduction-to-media/video/
+      href: documentation/media/video/
       section:
         id: introduction-to-media
         title: "Video"
-        href: documentation/introduction-to-media/
+        href: documentation/media/
   images:
     -
       title: Using images effectively
-      href: documentation/introduction-to-media/images/
+      href: documentation/media/images/
       section:
         id: introduction-to-media
         title: "Images"
-        href: documentation/introduction-to-media/
+        href: documentation/media/
     -
       title:  Correct use of images in markup
-      href: documentation/introduction-to-media/images/#images-in-markup
+      href: documentation/media/images/#images-in-markup
       section:
         id: introduction-to-media
         title: "Images"
-        href: documentation/introduction-to-media/
+        href: documentation/media/
     -
       title: Image optimization
       href: documentation/performance/optimizing-content-efficiency/image-optimization.html
       section:
         id: introduction-to-media
         title: "Images"
-        href: documentation/introduction-to-media/
+        href: documentation/media/
 
 key-takeaways:
   content-critical:

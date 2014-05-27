@@ -20,7 +20,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
 	<img class="g-medium--full g-wide--full" src="images/appbar.png">
 </a>
 <div style="clear: both;"></div>
@@ -47,10 +47,10 @@ If you have a slide in menu, you have the choice of putting the menu on the left
 
 The top left corner is perceived by the user as where the most important elements of your UI lives, however it can also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
 	<img class="g--half" src="images/appbar-menu-left.png">
 </a>
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample2.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample2.html">
 	<img class="g--half g--last" src="images/appbar-menu-right.png">
 </a>
 
@@ -60,10 +60,10 @@ The top left corner is perceived by the user as where the most important element
 
 The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
 	<img class="g--half" src="images/appbar-alt-1.png">
 </a>
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
 	<img class="g--half g--last" src="images/appbar-alt-2.png">
 </a>
 

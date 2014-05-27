@@ -20,7 +20,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
 	<img class="g-medium--full g-wide--full" src="images/navdrawer.png">
 </a>
 
@@ -36,15 +36,15 @@ The key advantages of this approach is that the content can grow inside a scroll
 
 For users there is a small amount to learning to do to find the Navigation Drawer so having a clearly place menu button is extremely important.
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
 	<img class="g--third" src="images/navdrawer-alt-1.png">
 </a>
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-sample.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
 	<img class="g--third" src="images/navdrawer-alt-2.png">
 </a>
 
-<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/navdrawer-sample4.html">
+<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">
 	<img class="g--third g--last" src="images/navdrawer-alt-3.png"> 
 </a>
 

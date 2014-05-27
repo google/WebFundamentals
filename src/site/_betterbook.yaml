@@ -9,35 +9,35 @@ toc:
   hasSubNav: true
   section:
     - title: "Multi-Device Layouts"
-      path: /multi-device-layouts/
+      path: /layouts/
       id: "multi-device-layouts"
       section:
         - title: "Responsive Web Design Fundamentals"
-          path: /multi-device-layouts/rwd-fundamentals/
+          path: /layouts/rwd-fundamentals/
         - title: "Responsive Web Design Patterns"
-          path: /multi-device-layouts/rwd-patterns/
+          path: /layouts/rwd-patterns/
         - title: "Layout Patterns"
-          path: /multi-device-layouts/layout-patterns/
+          path: /layouts/layout-patterns/
         - title: "UI Elements"
-          path: /multi-device-layouts/ui-elements/
+          path: /layouts/ui-elements/
     - title: "Forms and User Input"
-      path: /user-input/
+      path: /input/
       id: user-input
       section:
       - title: "Touch Input"
-        path: /user-input/touch-input/
+        path: /input/touch-input/
       - title: "Form Input"
-        path: /user-input/form-input/
+        path: /input/form-input/
     - title: "Images, Video and Audio"
-      path: /introduction-to-media/
+      path: /media/
       id: introduction-to-media
       section:
       - title: "Images"
-        path: /introduction-to-media/images/
+        path: /media/images/
       - title: "Video"
-        path: /introduction-to-media/video/
+        path: /media/video/
       - title: "Audio"
-        path: /introduction-to-media/audio/
+        path: /media/audio/
     - title: Performance
       path: /performance/
       id: performance
