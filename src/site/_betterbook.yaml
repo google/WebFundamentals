@@ -2,7 +2,7 @@ toc:
 - title: "Home"
   path: /
   home: true
-- title: "Getting Started"
+- title: "Get Started"
   path: /getting-started/your-first-multi-screen-site/
 - title: "Documentation"
   path: /#documentation
