@@ -20,7 +20,7 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="{{site.baseurl}}/resources/samples/documentation/multi-device-layouts/navigation-patterns/bottombar-sample1.html">
+<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/bottombar-sample1.html">
 	<img class="g-medium--full g-wide--full" src="images/bottombar.png">
 </a>
 
@@ -38,7 +38,7 @@ The advantage of this is that you have more space for actions and it's in a touc
 
 Limit yourself to five actions at most, avoiding the buttons becoming to small and difficult to tap.
 
-<a href="{{site.baseurl}}/resources/samples/documentation/multi-device-layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+<a href="{{site.baseurl}}/resources/samples/multi-device-layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
 	<img class="g--half g--last" src="images/bottom-bar-alt-1.png"> 
 </a>
 
