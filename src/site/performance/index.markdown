@@ -9,7 +9,7 @@ article:
   updated_on: 2014-04-28
   order: 4
 id: performance
-collection: documentation
+collection: home
 ---
 
 {% comment %}

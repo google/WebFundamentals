@@ -25,6 +25,8 @@ module Jekyll
         a << get_page_from_url(url)
       end
 
+      a << get_page_from_url(url)
+
       a.pop
 
       return a.reverse

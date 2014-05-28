@@ -9,7 +9,7 @@ article:
   updated_on: 2014-01-06
   order: 1
 id: multi-device-layouts
-collection: documentation
+collection: home
 ---
 
 {% comment %}
