@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Responsive Web Design Fundamentals"
+title: "Responsive Web Design Basics"
 description: "Much of the web isn't optimized for those multi-screen experiences. Learn the
              fundamentals to get your site working on mobile, desktop or anything else with a screen."
 introduction: "The use of mobile devices to surf the web is growing at an astronomical pace,

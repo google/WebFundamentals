@@ -12,7 +12,7 @@ toc:
       path: /layouts/
       id: "multi-device-layouts"
       section:
-        - title: "Responsive Web Design Fundamentals"
+        - title: "Responsive Web Design Basics"
           path: /layouts/rwd-fundamentals/
         - title: "Responsive Web Design Patterns"
           path: /layouts/rwd-patterns/

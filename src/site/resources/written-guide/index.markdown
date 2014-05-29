@@ -27,7 +27,7 @@ collection: resources
   * Avoid verbs in top-level section titles.
 
 ### Article titles
-  * Title case capitalization (e.g., "Responsive Web Design Fundamentals" not "Responsive web design fundamentals").
+  * Title case capitalization (e.g., "Responsive Web Design Basics" not "Responsive web design basics").
   * Use imperative verbs when possible (e.g., "Set the viewport" not "Setting the viewport").
 
 ### Headlines within articles
