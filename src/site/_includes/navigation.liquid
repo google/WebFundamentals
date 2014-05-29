@@ -1,7 +1,7 @@
 {% assign superSection = page.title %}
 {% for section in page.content.toc %}
 {% unless section.home %}{% if page.url contains section.path %}{% assign superSection = section.title%}{% endif %}{% endunless %}
-{% if section.home and page.url == '/index.html' %}{% assign superSection = 'Web Fundamentals'%}{% endif %}
+{% if section.home and page.url == '/index.html' %}{% assign superSection = 'Web <strong>Fundamentals</strong>'%}{% endif %}
 {% endfor %}
 
 <nav class="main-nav">
