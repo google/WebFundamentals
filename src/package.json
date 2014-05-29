@@ -26,6 +26,6 @@
     "grunt-shell": "~0.3.1",
     "matchdep": "~0.1.2",
     "time-grunt": "~0.1.1",
-    "grunt-webfont": "~0.3.4"
+    "grunt-webfont": "^0.4.2"
   }
 }
