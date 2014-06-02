@@ -11,7 +11,7 @@ notes:
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 4
+  order: 5
 #collection: multi-device-tools
 ---
 
@@ -23,7 +23,9 @@ TBD.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
-# TBD.
+## TBD
+
+TBD.
 
 {% include modules/nextarticle.liquid %}
 

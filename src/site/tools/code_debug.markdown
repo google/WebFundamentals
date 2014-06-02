@@ -13,7 +13,7 @@ notes:
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
+  order: 3
 #collection: multi-device-tools
 ---
 
@@ -25,13 +25,33 @@ TBD.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-# Choose a starting point
+# Watch code changes
 
-# Create your project
+TBD.
 
-# Preview the project
+# Code considerations
 
-# Debug & iterate
+TBD.
+
+## Pages
+
+TBD.
+
+## Styles
+
+TBD.
+
+## JavaScript
+
+TBD.
+
+## Images
+
+TBD.
+
+# Multi-device debugging
+
+TBD.
 
 {% include modules/nextarticle.liquid %}
 

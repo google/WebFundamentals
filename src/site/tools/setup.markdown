@@ -6,12 +6,12 @@ key-takeaways:
   starter-kit:
     - TBD.
 notes:
-  placeholder: 
-    - TBD.
+  command-line: 
+    - Most of your interactions with the Google Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 1
+  order: 2
 #collection: multi-device-tools
 ---
 
@@ -19,10 +19,7 @@ article:
 
 {% include modules/toc.liquid %}
 
-Most of your interactions with the Google Web Starter Kit will be
-through the command line.
-Run commands in the Terminal app if you’re on Mac, your shell in Linux,
-or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
+TBD.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
@@ -33,6 +30,8 @@ you will need the following:
 
 * NodeJS v?
 * npm v?(which comes bundles with Node)
+
+{% include modules/remember.liquid title="Note" list=page.notes.command-line %}
 
 You can check if you have Node and npm installed by typing:
 
@@ -49,7 +48,7 @@ You can use Web Starter Kit just by cloning the repository and buildingon what w
 
 git clone git://github.com/yeoman/web-starter-kit.git
 
-# Choose starting point
+# Check out starter files 
 
 You will want to checkout `index.html` (the default starting point, slide-out menu),'alt-layout.html' (if you prefer a horizontal nav) or `basic.html` (no layout).
 
