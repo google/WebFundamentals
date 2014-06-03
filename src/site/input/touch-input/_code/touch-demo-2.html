@@ -121,6 +121,22 @@
                 };
       })();
 
+      var pointerDownName = 'MSPointerDown';
+      var pointerUpName = 'MSPointerUp';
+      var pointerMoveName = 'MSPointerMove';
+
+      if(window.PointerEvent) {
+        pointerDownName = 'pointerdown';
+        pointerUpName = 'pointerup';
+        pointerMoveName = 'pointermove';
+      }
+
+      // Simple way to check if some form of pointerevents is enabled or not
+      window.PointerEventsSupport = false;
+      if(window.PointerEvent || window.navigator.msPointerEnabled) {
+        window.PointerEventsSupport = true;
+      }
+
       function Slider(element) {
         var isAnimating = false;
         var lastYPos = 0;
@@ -138,7 +154,7 @@
         initialYPos = point.y;
         /* // [END stash-start] */
 
-        if (!window.navigator.msPointerEnabled) {
+        if (!window.PointerEventsSupport) {
           // Add Mouse Listeners
           document.addEventListener('mousemove', this.handleGestureMove, true);
           document.addEventListener('mouseup', this.handleGestureEnd, true);
@@ -152,7 +168,7 @@
           return;
         }
         
-        if (!window.navigator.msPointerEnabled) {  
+        if (!window.PointerEventsSupport) {  
           // Remove Mouse Listeners
           document.removeEventListener('mousemove', this.handleGestureMove, true);
           document.removeEventListener('mouseup', this.handleGestureEnd, true);
@@ -228,11 +244,11 @@
 
         /* // [START addlisteners] */
         // Check if pointer events are supported.
-        if (window.navigator.msPointerEnabled) {
+        if (window.PointerEventsSupport) {
           // Add Pointer Event Listener
-          elementHold.addEventListener('MSPointerDown', this.handleGestureStart, true);
-          elementHold.addEventListener('MSPointerMove', this.handleGestureMove, true);
-          elementHold.addEventListener('MSPointerUp', this.handleGestureEnd, true);
+          elementHold.addEventListener(pointerDownName, this.handleGestureStart, true);
+          elementHold.addEventListener(pointerMoveName, this.handleGestureMove, true);
+          elementHold.addEventListener(pointerUpName, this.handleGestureEnd, true);
         } else {
           // Add Touch Listeners
           elementHold.addEventListener('touchstart', this.handleGestureStart, true);
@@ -252,6 +268,7 @@
           new Slider(sliderElements[i]);
         }
 
+        // We do this so :active pseudo classes are applied.
         window.onload = function() {
           if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
             document.body.addEventListener('touchstart', function() {}, false);
