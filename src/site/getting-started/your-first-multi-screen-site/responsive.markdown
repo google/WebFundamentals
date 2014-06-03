@@ -138,7 +138,7 @@ header and we will apply it via some simple CSS.
 {% endhighlight %}
 
 We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element that way it
+from the content and we have set it to `cover` the entire element; that way it
 always stretches whilst maintaining the correct aspect ratio.
 
 <br style="clear: both;">
