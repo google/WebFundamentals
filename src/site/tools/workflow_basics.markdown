@@ -17,8 +17,6 @@ article:
 
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
 You can't use the same developer workflow for desktop-only and expect
 to slightly modify it for the multi-device web.
 
@@ -28,6 +26,8 @@ these three things into account when deciding on your developer workflow:
 * Performance and style must be considered at all stages in your workflow.
 * You should choose scaffolding or boilerplate built with multi-device in mind.
 * Choose tools that make it easy to debug, build, and test across lots of form factors.
+
+{% include modules/toc.liquid %}
 
 ##  Consider performance and style at every stage in workflow
 
