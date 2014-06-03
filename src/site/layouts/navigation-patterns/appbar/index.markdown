@@ -23,6 +23,7 @@ key-takeaways:
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
 	<img class="g-medium--full g-wide--full" src="images/appbar.png">
 </a>
+
 <div style="clear: both;"></div>
 
 One expectation users will make when they land on your site is that your site's logo will be at the top of every page and clicking it will take them to your home page.
