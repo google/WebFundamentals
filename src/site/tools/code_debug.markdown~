@@ -62,12 +62,6 @@ Reload the local staged version;
 
 IMAGE PLACEHOLDER
 
-TODO: Check if the below note is accurate.
-
-Note: You can also run the`gulp images` tool to manually optimize images,
-a good idea when you've added a group of images to your image folder,
-but haven't yet added them to any pages.
-
 TODO: Talk to addy about styling for section class="main-content". It should at least display content in the main area. If he doesn't make this change, I'll need to move the image out of the section into the body and add styling to show it correctly.
 
 QUESTION: Is the image automatically moved to the dist folder? Presumably I should put a note reminding developers to checkout the new image so that it's officially part of the project.
@@ -76,20 +70,20 @@ QUESTION: Is the image automatically moved to the dist folder? Presumably I shou
 
 Use the `gulp html` tool to minify pages.
 
-TODO: add a paragraph to index.html and see what happens.
-
-## Add css
+## Apply UX patterns
 
 Need to cover style guide-- where is it, how can it be used?
 Als cover default UX patterns that come with starter files.
 
+## Optimize images, styles, and fonts
+
 Use the `gulp styles` tool to optimize css.
+
+Use the `gulp images` tool to optimize images.
 
 TODO: find out what this is for! use the `gulp fonts` tool to create webfonts. 
 
 ## Check your JavaScript
-
-TODO: add js file to our project and then reference it in index.html.
 
 Use the `gulp jshint` tool to detect problems in your JavaScript code.
 

@@ -2,7 +2,7 @@
 layout: article
 title: "Set Up Your Dev Environment"
 description: "Set up your development environment and quickly get up and running with the Web Starter Kit."
-introduction: "Follow the instructions in this guide and you will have the basic foundation your project needs to be responsive and performance across devices."
+introduction: "Before you write any code, get the starter files and tools you need to create a responsive and performant site. The Web Starter Kit comes with a responsive boilerplate and a set of tools that test that your site is responsive and performance across devices."
 key-takeaways:
   starter-kit:
     - Decide how much UX you want to inherit from the Web Starter Kit: a responsive layout or just a very basic boilerplate?
@@ -35,38 +35,53 @@ you will need the following:
 
 You can check if you have Node and npm installed by typing:
 
-$ node --version && npm --version
+$ node -v
+
+$ npm -v
+
+## Clone repository
+
+You can use the Web Starter Kit by simply cloning the repository and building
+on wha's included in the `app` directory:
+
+git clone https://github.com/yeoman/web-starter-kit.git
+
+$ cd web-starter-kit/app
+
+## Install tooling
 
 If you are using the kit tooling,
 install the dependencies needed:
 
-npm install
+$ cd web-starter-kit
 
-## Create your project folder
+$ sudo npm install
 
-mkdir my-responsive-project
+I had to manually install gulp-- check with Addy on this:
+Also, I ran npm install a second time after installing gulp,
+to make sure I had gulp dependencies.
+Need to re-run this to get cleanest path.
 
-## Clone repository
-
-You can use Web Starter Kit just by cloning the repository and buildingon what we include in the `app` directory:
-
-git clone git://github.com/yeoman/web-starter-kit.git
+$ sudo npm install gulp-g
 
 ## Check out starter files 
 
-You will want to checkout `index.html` (the default starting point, slide-out menu),'alt-layout.html' (if you prefer a horizontal nav) or `basic.html` (no layout).
+Check out one of these starter files:
 
-## Install tooling dependencies
+* <a href="">index.html</a> - the default starting point, slide-out menu
+* <a href="">alt-layout.html</a> - if you prefer a horizontal nav
+* <a href="">basic.html</a> - no layout
 
-If you are using the optional tooling,
-install the dependencies needed:
+$ cd web-starter-kit/app
 
-npm install
+$ git add index.html
 
-If you see permission or access errors,
-prepend sudo to the above command:
-
-sudo npm install
+Question: what does Addy mean by checking out the starter file?
+I've got a copy of everything in the build,
+so it seems like everything is the default checkout.
+True, if I want to modify the file,
+I need to do a git add,
+so that's what I've done here. 
 
 ## Build the project
 
@@ -74,15 +89,22 @@ Build the current project:
 
 gulp
 
+The build tool creates a new project directory: `web-starter-kit/dist`.
+
 ## Review the build output
 
-Open up the 'blah' directory and take a look at your project files:
+Here's a snapshot of the project files in the `dist` directory:
 
-TBD.
+IMAGE PLACEHOLDER
 
-TODO: Can you open index.html or basic.html in local staged version?
-TODO: How do the project files differ based on path taken (index, basic,
-and/or tooling install)?
+## Stage the build output
+
+Run the `gulp watch` tool to open up a local staged version of the project
+(for more information on this tool, see <a href="">Track Code Changes).
+
+The tool opens up the checked-out starter file, for example, `index.html`:
+
+IMAGE PLACEHOLDER 
 
 {% include modules/nextarticle.liquid %}
 
