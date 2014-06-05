@@ -17,7 +17,7 @@
   font-weight: 400;
   text-align: center;
   padding: $lineHeight/2 51px $lineHeight/2 $lineHeight/2;
-  margin: 0 32px 23px 0;
+  margin: 0 23px 23px 0;
   position: relative;
   line-height: 16px;
 
@@ -29,8 +29,8 @@
     float: right;
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 32px;
-    padding-right: (32px) + $lineHeight;
+    padding-left: 24px;
+    padding-right: (12px) + $lineHeight;
     line-height: $lineHeight;
     width: auto;
     max-width: 72%;
@@ -49,18 +49,18 @@
   &:before {
     content: $icon-diamond;
     font-family: $fontIcon;
-    font-size: 70px;
+    font-size: 51px;
     line-height: 0px;
     color: $colorYellow;
 
     position: absolute;
-    right: -35px;
+    right: -25px;
     top: 50%;
   }
 
   .icon {
     font-family: $fontIcon;
-    font-size: 26px;
+    font-size: 24px;
     text-align: center;
     color: #ffffff;
 
