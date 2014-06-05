@@ -11,7 +11,7 @@ rel:
   gplusauthor: https://plus.google.com/+MattGaunt
 key-takeaways:
   touch-events:
-    - For full device support, handle touch, mouse and MS Pointer Events.
+    - For full device support, handle touch, mouse and Pointer Events.
     - Always bind start event listeners to the element itself.
     - If you want the user to interact with one particular element, bind your
       move and end listeners to the document in the touchstart method; ensure you unbind them from
@@ -70,25 +70,34 @@ For some situations, you may find that you would like to support mouse
 interaction as well; which you can do with the mouse events:
 `mousedown`, `mousemove`, and `mouseup`.
 
-For Windows Phone devices, you need to support Pointer Events which are a
+For Windows Touch devices, you need to support Pointer Events which are a
 new set of events. Pointer Events merge mouse and touch events into one set of
 callbacks. This is currently only supported in Internet Explorer 10+ with
-the events `MSPointerDown`, `MSPointerMove`, and `MSPointerUp`.
+the prefixed events `MSPointerDown`, `MSPointerMove`, and `MSPointerUp` and 
+in IE 11+ the unprefixed events `pointerdown`, `pointermove`, and `pointerup`.
 
 Touch, mouse and Pointer Events are the building blocks for adding new
-gestures into your application (see [Touch, mouse and MS Pointer events](#touch-mouse-and-ms-pointer-events)).
+gestures into your application (see [Touch, mouse and Pointer events](#touch-mouse-and-pointer-events)).
 
-Include these events in the `addEventListener()` method, along with the
+Include these event names in the `addEventListener()` method, along with the
 event’s callback function and a boolean. The boolean determines whether you
 should catch the event before or after other elements have had the
 opportunity to catch and interpret the events (`true` means we want the event
-before other elements):
+before other elements).
 
 {% include_code ../_code/touch-demo-1.html addlisteners javascript %}
 
 This code first checks to see if Pointer Events are supported by testing for
-`window.navigator.msPointerEnabled`. If they aren’t, we add listeners for
-touch and mouse events instead.
+`window.PointerEventsSupport`, if Pointer Events aren’t supported, we add listeners for
+touch and mouse events instead. 
+
+The value `window.PointerEventSupport` is determined by looking for the 
+existence of `window.PointerEvent` or the now deprecated 
+`window.navigator.msPointerEnabled` objects. If they are supported we use 
+varibles for event names, which use the prefixed or unprefixed versions depending 
+on the existence of `window.PointerEvent`. 
+
+{% include_code ../_code/touch-demo-1.html pointereventsupport javascript %}
 
 ### Handle Single-Element Interaction
 
@@ -140,7 +149,7 @@ applies to touch only, for mouse interactions you should continue to apply
 the `mousemove` and `mouseup` listeners to the document.
 
 Since we only wish to track touches on a particular element, we can add the
-move and end listeners for touch and pointer events to element straight away:
+move and end listeners for touch and pointer events to the element straight away:
 
 {% include_code ../_code/touch-demo-2.html addlisteners javascript %}
 
@@ -252,7 +261,7 @@ Below is a list of the available parameters for *touch-action*.
 The definitive touch events reference can be found here:
 [w3 Touch Events](http://www.w3.org/TR/touch-events/).
 
-### Touch, Mouse, and MS Pointer events
+### Touch, Mouse, and Pointer events
 
 These events are the building blocks for adding new gestures into your
 application:
@@ -260,7 +269,7 @@ application:
 <table class="table-2">
   <thead>
     <tr>
-      <th>Touch, Mouse, MS Pointer Events</th>
+      <th>Touch, Mouse, Pointer Events</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -269,7 +278,7 @@ application:
       <td data-th="Event Names">
         <code>touchstart</code>,
         <code>mousedown</code>,
-        <code>MSPointerDown</code>
+        <code>pointerdown</code>
       </td>
       <td data-th="Description">
         This is called when a finger first touches an element or when the
@@ -280,7 +289,7 @@ application:
       <td data-th="Event Names">
         <code>touchmove</code>,
         <code>mousemove</code>,
-        <code>MSPointerMove</code>
+        <code>pointermove</code>
       </td>
       <td data-th="Description">
         This is called when the user moves their finger across the screen or
@@ -291,7 +300,7 @@ application:
       <td data-th="Event Names">
         <code>touchend</code>,
         <code>mouseup</code>,
-        <code>MSPointerUp</code>
+        <code>pointerup</code>
       </td>
       <td data-th="Description">
         This is called when the user lifts their finger off of the screen

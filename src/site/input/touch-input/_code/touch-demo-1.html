@@ -168,6 +168,24 @@
                 };
       })();
 
+      /* // [START pointereventsupport] */
+      var pointerDownName = 'MSPointerDown';
+      var pointerUpName = 'MSPointerUp';
+      var pointerMoveName = 'MSPointerMove';
+
+      if(window.PointerEvent) {
+        pointerDownName = 'pointerdown';
+        pointerUpName = 'pointerup';
+        pointerMoveName = 'pointermove';
+      }
+      
+      // Simple way to check if some form of pointerevents is enabled or not
+      window.PointerEventsSupport = false;
+      if(window.PointerEvent || window.navigator.msPointerEnabled) {
+        window.PointerEventsSupport = true;
+      }
+      /* // [END pointereventsupport] */
+
       function SwipeRevealItem(element) {
         // Gloabl state variables
         var STATE_DEFAULT = 1;
@@ -204,10 +222,10 @@
           }
 
           // Add the move and end listeners
-          if (window.navigator.msPointerEnabled) {
+          if (window.PointerEventsSupport) {
             // Pointer events are supported.
-            document.addEventListener('MSPointerMove', this.handleGestureMove, true);
-            document.addEventListener('MSPointerUp', this.handleGestureEnd, true);
+            document.addEventListener(pointerMoveName, this.handleGestureMove, true);
+            document.addEventListener(pointerUpName, this.handleGestureEnd, true);
           } else {
             // Add Touch Listeners
             document.addEventListener('touchmove', this.handleGestureMove, true);
@@ -254,10 +272,10 @@
           isAnimating = false;
           
           // Remove Event Listeners
-          if (window.navigator.msPointerEnabled) {
+          if (window.PointerEventsSupport) {
             // Remove Pointer Event Listeners
-            document.removeEventListener('MSPointerMove', this.handleGestureMove, true);
-            document.removeEventListener('MSPointerUp', this.handleGestureEnd, true);
+            document.removeEventListener(pointerMoveName, this.handleGestureMove, true);
+            document.removeEventListener(pointerUpName, this.handleGestureEnd, true);
           } else {
             // Remove Touch Listeners
             document.removeEventListener('touchmove', this.handleGestureMove, true);
@@ -361,9 +379,9 @@
 
         /* // [START addlisteners] */
         // Check if pointer events are supported.
-        if (window.navigator.msPointerEnabled) {
+        if (window.PointerEventsSupport) {
           // Add Pointer Event Listener
-          swipeFrontElement.addEventListener('MSPointerDown', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener(pointerDownName, this.handleGestureStart, true);
         } else {
           // Add Touch Listener
           swipeFrontElement.addEventListener('touchstart', this.handleGestureStart, true);
@@ -382,6 +400,7 @@
           swipeRevealItems.push(new SwipeRevealItem(swipeRevealItemElements[i]));
         }
 
+        // We do this so :active pseudo classes are applied.
         window.onload = function() {
           if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
             document.body.addEventListener('touchstart', function() {}, false);

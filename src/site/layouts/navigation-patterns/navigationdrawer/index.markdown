@@ -38,13 +38,9 @@ For users there is a small amount to learning to do to find the Navigation Drawe
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
 	<img class="g--third" src="images/navdrawer-alt-1.png">
-</a>
-
-<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
+</a><a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
 	<img class="g--third" src="images/navdrawer-alt-2.png">
-</a>
-
-<a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">
+</a><a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">
 	<img class="g--third g--last" src="images/navdrawer-alt-3.png"> 
 </a>
 

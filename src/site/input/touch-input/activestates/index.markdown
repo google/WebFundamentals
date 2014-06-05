@@ -17,7 +17,7 @@ key-takeaways:
     - Make your site feel snappy and responsive&colon; change the UI for each state :hover, :active and :focus.
     - Don’t override a browser’s default responses to touch and focus unless you are
       implementing your own UI changes.
-    - Disable text selection on elements user’s will touch, unless there’s
+    - Disable text selection on elements users will touch, unless there’s
       a good reason why users might need to copy / select the text.
 remember:
   disable-user-select:
