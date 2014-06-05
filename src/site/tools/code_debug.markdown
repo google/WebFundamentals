@@ -37,7 +37,15 @@ Use the `gulp watch` tool to automatically watches files.
 
 This tool supports live reloading in your browser and lets you sync changes across devices to debug changes as they go live. This tool also runs optimization tools based on the type of change. You can also use these optimization tools on their own, depending on what you want to do.
 
-## Add an image
+TODO: Find out specifics on exactly what happens when you use the gulp tools.
+What does 'optimize' mean in terms of css, images, JavaScript.
+Use gulp docs but also confirm with Addy if any changes were made.
+
+TODO: Find out style specifics like what happens to images that you add to main content, how are they responsive.
+
+'What's happening under-the-hood'; 'What's being patterned/styled by the boilerplate'. Answer these along the way.
+
+## Add and optimize an image
 
 To see the `gulp watch` tool in action: add <a href="">awesome-photo.jpg to the images folder.
 Keep your terminal and local staged version open.
@@ -48,12 +56,11 @@ $ git add awesome-photo.jpg
 
 Add the image to the `"main-content"` section in `index.html`:
 
-`
+{% highlight html %}
 <section class="main-content">
   <div><img src="awesome-photo.jpg"></div>
 </section>
-
-`
+{% endhighlight %}
 
 As soon as you add the image to the file and save,
 watch your terminal.
@@ -76,9 +83,31 @@ QUESTION: Is the image automatically moved to the dist folder? Presumably I shou
 
 Use the `gulp html` tool to minify pages.
 
-TODO: add a paragraph to index.html and see what happens.
+TODO: Find out more about this tool.
+I added a paragraph to index.html and it's lost in the section.
+When does the tool get called? What would I need to change in the html?
 
-## Add css
+## Add and optimize css
+
+Add a style change to the <a href="">main.css</a> in web-starter-kit/apps/styles folder:
+
+{% highlight css %}
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #C9DAF8;
+  box-sizing: border-box;
+  top: 65px;
+  overflow: hidden;
+}
+{% endhighlight %}
+
+Watch the terminal-- `gulp styles` minifies the css and injects the new css
+into all connected browers.
+
+TODO: Find out what this means by all connected browsers.
+How do I connect browsers? 
 
 Need to cover style guide-- where is it, how can it be used?
 Als cover default UX patterns that come with starter files.
@@ -87,7 +116,7 @@ Use the `gulp styles` tool to optimize css.
 
 TODO: find out what this is for! use the `gulp fonts` tool to create webfonts. 
 
-## Check your JavaScript
+## Add JavaScript
 
 TODO: add js file to our project and then reference it in index.html.
 
@@ -112,6 +141,10 @@ TBD.
 ## Device emulation
 
 TBD.
+
+## TODOS
+
+
 
 {% include modules/takeaway.liquid list=page.key-takeaways.debug %}
 
