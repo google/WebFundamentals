@@ -16,8 +16,8 @@
   color: $colorGrayDark;
   font-weight: 400;
   text-align: center;
-  padding: $lineHeight/2 51px $lineHeight/2 $lineHeight/2;
-  margin: 0 23px 23px 0;
+  padding: 5px 32px 5px 12px;
+  margin: 0 25px 23px 0;
   position: relative;
   line-height: 16px;
 
@@ -27,10 +27,8 @@
 
   @include medium {
     float: right;
-    margin-top: 0;
+    margin-top: 8px;
     margin-bottom: 0;
-    padding-left: 24px;
-    padding-right: (12px) + $lineHeight;
     line-height: $lineHeight;
     width: auto;
     max-width: 72%;
