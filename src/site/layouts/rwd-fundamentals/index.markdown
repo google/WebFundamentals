@@ -333,7 +333,7 @@ page.
 
 While it may be helpful to think about defining breakpoints based on device
 classes, use caution.  Defining breakpoints based on specific devices, products,
-brand names or operating systems, that are in use today will result in a
+brand names, or operating systems that are in use today will result in a
 maintenance nightmare. Instead, the content itself should determine how the
 layout adjusts to its container.
 
