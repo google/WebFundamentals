@@ -2,7 +2,7 @@
 layout: article
 title: "Set Up Your Dev Environment"
 description: "Set up your development environment and quickly get up and running with the Web Starter Kit."
-introduction: "Before you write any code, get the starter files and tools you need to create a responsive and performant site. The Web Starter Kit comes with a responsive boilerplate and a set of tools that test that your site is responsive and performance across devices."
+introduction: "Before you write any code, get the starter files and tools you need to create a responsive and performant site. The Web Starter Kit comes with a responsive boilerplate and a set of tools that let you code and test live changes across devices."
 key-takeaways:
   starter-kit:
     - Decide how much UX you want to inherit from the Web Starter Kit: a responsive layout or just a very basic boilerplate?
@@ -99,7 +99,8 @@ IMAGE PLACEHOLDER
 
 ## Stage the build output
 
-Run the `gulp watch` tool to open up a local staged version of the project
+From the web-starter-kit folder,
+run the `gulp watch` tool to open up a local staged version of the project
 (for more information on this tool, see <a href="">Track Code Changes).
 
 The tool opens up the checked-out starter file, for example, `index.html`:
