@@ -434,7 +434,7 @@ ol.list-links {
 
   & a {
     display: block;
-    text-decoration: none;
+    text-decoration: none !important;
     padding-bottom: 0px;
 
     h3 {
@@ -443,7 +443,7 @@ ol.list-links {
 
       @include medium {
         text-decoration: none;
-        border-bottom: 1px solid;
+        border-bottom: none;
       }
     }
 
@@ -451,7 +451,7 @@ ol.list-links {
       text-decoration: none;
 
       @include medium {
-        border-bottom: none;
+        border-bottom: 1px solid;
       }
     }
 
