@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Critical Rendering Path"
-description: "Optimizing the critical rendering path is critical for improving performance of our pages: our goal is to prioritize and display the content that relates to the primary action the user wants to take on a page."
+description: "Optimizing the critical rendering path by prioritizing the display of content that relates to the primary action the user wants to take on a page."
 introduction: "Optimizing the critical rendering path is critical for improving performance of our pages: our goal is to prioritize and display the content that relates to the primary action the user wants to take on a page."
 article:
   written_on: 2014-04-01

@@ -6,7 +6,7 @@
     {% include head.liquid %}
   </head>
 
-  <body class="page--{{ page.class }} page--{{page.id}}">
+  <body class="page--{{ page.class }} page--{{page.id}} theme--{{page.id}}">
     {% injectdata content _betterbook.yaml %}
 
     {% include header.liquid %}

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Optimizing Content Efficiency"
-description: "Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!"
+description: "The amount of data downloaded by each app continues to increase. To deliver great performance we need to optimize delivery of each and every byte!"
 introduction: "Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!"
 article:
   written_on: 2014-04-01

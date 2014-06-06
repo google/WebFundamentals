@@ -523,13 +523,16 @@ ol.list-links {
     @include medium {
       flex: 1;
       -webkit-flex: 1;
+      min-height: 300px;
+      max-height: 300px;
     }
   }
 
   & .secondary-content {
     position: relative;
-    margin-top: ($lineHeight*2) - 1;
+    margin-top: ($lineHeight);
     border-top: 1px solid $colorGrayKeyline;
+    flex: 1;
 
     @include medium {
       width: 100%; // needed due to parent being flex
@@ -549,9 +552,30 @@ ol.list-links {
   }
 
   & ol {
-    margin: $lineHeight 0 0;
-    padding: $lineHeight*2 16px;
+    margin: $lineHeight 32px 0;
+    padding: $lineHeight*2 0px;
     margin-top: 0;
+    text-align: left;
+    flex: 1;
+
+    & li {
+      list-style: none;
+      padding-left: 32px;
+
+      &:before {
+        counter-increment: list;
+        content: "0" counter(list);
+        color: inherit;
+        font-weight: 400;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+      }
+
+      & a {
+        vertical-align: top;
+      }
+    }
   }
 
   &:before {

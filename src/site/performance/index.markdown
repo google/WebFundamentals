@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: landing
 title: "Optimizing Performance"
 description: "Performance is a feature. Deliver your content to users as quickly as possible. Once they're in your app, make page interaction and rendering as smooth as possible."
 introduction: "To deliver the best user experience, we must deliver content as quickly as possible (&lt;1 second), and ensure that our code is always able respond to user input within milliseconds (&lt;16 milliseconds)."
