@@ -17,7 +17,7 @@
 .google-header__top {
   border-bottom: 1px solid $colorGrayKeyline;
   text-align: left;
-  padding: $lineHeight/2 0 ($lineHeight/2 - 1) 0;
+  height: $lineHeight * 2;
 }
 
 
@@ -49,6 +49,7 @@
   display: block;
   margin: 0 auto;
   width: 181px;
+  padding-top: $lineHeight / 2;
 
   & img {
     display: block;
