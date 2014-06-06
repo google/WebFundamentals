@@ -12,7 +12,7 @@
 
 .main-footer {
   background: $colorGrayDark;
-  padding: $lineHeight 0 ($lineHeight*4 - $lineHeight/2); // remove half because our li's have half lineHeight margin-bottom
+  padding: $lineHeight 0 $lineHeight * 2; // remove half because our li's have half lineHeight margin-bottom
 
   @include medium {
     padding-top: $lineHeight*2;
