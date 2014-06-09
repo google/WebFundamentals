@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Deploy Your Project"
+title: "Build & Deploy"
 description: "TBD."
 key-takeaways:
   deploy:

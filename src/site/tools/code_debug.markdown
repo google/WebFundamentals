@@ -33,20 +33,33 @@ The focus isn't on building the app, the code is super-simple. It's to show you 
 
 ## Track code changes and optimize
 
-When you're ready to write code, run `gulp watch`.
+When you're ready to write code,
+run <a href="https://www.npmjs.org/package/gulp-watch">gulp watch</a>.
 This tool tracks changes as you code, reloads live changes in your browser,
 and automatically runs optimization tools specific to the changes made.
 For example, when you add an image,
 the image is automatically optimized and loaded in any browser instance open
 on any device.
 
-TODO: Find out specifics on exactly what happens when you use the gulp tools.
-What does 'optimize' mean in terms of css, images, JavaScript.
-Use gulp docs but also confirm with Addy if any changes were made.
+As you write code,
+establish a cross-device testing pattern that works best for you.
+Always check responsiveness.
+After you reload the browser,
+shrink it to tablet and phone size and see how the content behaves.
+Do this all the time-- make this a natural part of your workflow.
 
-TODO: Find out style specifics like what happens to images that you add to main content, how are they responsive.
+The `gulp watch` tool makes it very easy to test across devices.
+In your terminal,
+notice two access points: local address
+(for example, `http://localhost:3002)
+and external address for accessing on other devices
+(for example, `http://172.18.96.103:3002).
 
-'What's happening under-the-hood'; 'What's being patterned/styled by the boilerplate'. Answer these along the way.
+Best way to test external devices is on the actual devices;
+have a phone and tablet handy, and simply access the external address.
+If you're limited to a desktop,
+there are other ways to test as you code which are covered
+in <a href="">Device emulation below</a>.
 
 ## Add and optimize an image
 
@@ -67,26 +80,26 @@ Add the image to the `"main-content"` section in `index.html`:
 
 As soon as you add the image to the file and save,
 watch your terminal.
-The `gulp watch` tool automatically optimizes the image
-and updates the files in the dist folder.
+The `gulp watch` tool runs the image through
+<a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a>
+and outputs the optimized image in the dist folder.
 
 Reload the browser live to see the image:
 
 IMAGE PLACEHOLDER
 
-TODO: Check if the below note is accurate.
+Don't forget to resize the browser to see
+how the image looks on different device sizes.
 
 Note: You can also run the`gulp images` tool to manually optimize images,
 a good idea when you've added a group of images to your image folder,
 but haven't yet added them to any pages.
 
-TODO: Talk to addy about styling for section class="main-content". It should at least display content in the main area. If he doesn't make this change, I'll need to move the image out of the section into the body and add styling to show it correctly.
-
-TODO: Should I add a note reminding developers to checkout the new image so that it's officially part of the project.
-
 ## Minify pages
 
-Use the `gulp html` tool to minify pages.
+Add html and the `gulp html` tool minifies the content
+using <a href="https://www.npmjs.org/package/gulp-minify-html">gulp-minify</a>
+and pushes it to `dist` folder.
 
 {% highlight html %}
 <section class="main-content">
@@ -95,20 +108,14 @@ Use the `gulp html` tool to minify pages.
 </section>
 {% endhighlight %}
 
-
-TODO: Find out more about this tool.
-There's lots of details on gulp-minify-html here:
-https://www.npmjs.org/package/gulp-minify-html
-I'm wondering just how much of it applies to instance in web starter kit.
-Also, what triggers it by default.
-Small changes to html don't appear to trigger it;
-I added a paragraph to index.html and it's lost in the section.
+Reload any opened browser on any device and see your content live.
 
 ## Add and optimize css
 
 When you add style changes,
-`gulp watch` runs the `gulp styles` tool, minifying css
-and injects it into all connected browsers.
+`gulp watch` runs the 
+<a href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
+minifying css and injecting it into all connected browsers.
 
 Add this style change to the <a href="">main.css</a> in web-starter-kit/apps/styles folder:
 
@@ -116,6 +123,7 @@ Add this style change to the <a href="">main.css</a> in web-starter-kit/apps/sty
 body {
   position: relative;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   font-weight: 300;
   background-color: #C9DAF8;
   box-sizing: border-box;
@@ -124,21 +132,11 @@ body {
 }
 {% endhighlight %}
 
-Reload the browser:
+Reload and resize browser to see how styles look:
 
 IMAGE PLACEHOLDER
 
-TODO: Do we want to cover having different types of browsers open from the start?
-I'm tempted to stick to one browser in the beginning.
-Then later in the doc talk about multiple browsers.
-How do I connect to different browsers?
-
-TODO: Should I mention in setup and through this doc
-that developers should check responsiveness of each change.
-At the very least,
-they should shrink the browser window open on desktop.
-It might be better, as mentioned above,
-to have multiple instances open on different devices. 
+TODO: Put in small responsive css change that developers can notice.
 
 ## Apply UX Patterns
 
@@ -150,16 +148,21 @@ Use the Web Starter Kit style guide:
 
 `$ cd web-starter-ki/app/styleguide/`
 
-TODO: Default UX patterns that come out-of-the-box with starter files;
-I'm thinking a section per starter file with a table describing
-what patterns you get for free, and maybe a link to docs on these patterns
-for more information.
+Each starter file comes with it's own UX patterns:
+
+TODO: Create one table with three columns titled: UX Pattern,
+Starter File, Description.
+The table basically lists UX pattern, which starter files it is in,
+and describes the pattern-- mainly linking off to existing docs.
 
 {% include modules/remember.liquid title="Note" list=page.styles %}
 
 ## Add JavaScript
 
-The `gulp watch` detects errors in your JavaScript.
+The `gulp watch` tool minifies your JavaScript
+(<a href="https://www.npmjs.org/package/gulp-jsmin">gulp-jsmin</a>)
+and detects errors
+<a href="https://www.npmjs.org/package/gulp-jshint">gulp jshint</a>.
 
 Update `index.html` to call a new script, `app.js`:
 
@@ -186,34 +189,24 @@ document.body.appendChild(loadTime);
 
 The terminal shows the following error:
 
-PLACEHOLDER FOR ERROR -- not working yet.
+PLACEHOLDER FOR ERROR
 
 TODO: Raise issue with Addy. There's a bug in my JavaScript:
 'blue; should be 'blue'. How come jshint isn't catching this?
-When the bug is in place, the JavaScript just doesn't work.
-And 'jshint' doesn't show up in the gulp watch instance
-while there's a bug, but as soon as I fix the bug,
-it starts again and JavaScript works.
+If I can't get this bug to show up,
+I can pick one of the other bugs suggested in the issue response.
 
 Fix the error and reload the browser:
 
 IMAGE PLACEHOLDER INCLUDING JAVASCRIPT
-
-TODO: Raise an issue that the DevTools pop-out doesn't seem to be working
-in the staged project.
-When you click it,
-the DevTools don't pop-out, they stay in the browser, and take over it.
-It's super annoying.
-This is an important issue to raise.
-
-TODO: add js file to our project and then reference it in index.html.
 
 ## Check performance
 
 Now that you've added some html, css, and JavaScript,
 it's time to checkout how the project is performing.
 
-The Web Starter Kit integrates with the <a href="">PageSpeed Insights</a>.
+The Web Starter Kit integrates with the
+<a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a>.
 If you haven't used PageSpeed Insights,
 you are about to start.
 
@@ -250,10 +243,6 @@ TBD.
 TBD.
 
 ## Remote debugging
-
-TBD.
-
-## Device emulation
 
 TBD.
 

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Build & Test"
+title: "Test your site on multiple devices"
 description: "TBD."
 key-takeaways:
   starter-kit:
@@ -24,6 +24,10 @@ TBD.
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
 ## TBD.
+
+TBD.
+
+## Device emulation
 
 TBD.
 
