@@ -9,6 +9,60 @@ key-takeaways:
     - Always start with a narrow viewport first and scale out.
     - Base your breakpoints off when you need to adapt the content.
     - Create a high-level vision of your layout across major breakpoints.
+related-guides:
+  responsive:
+    -
+      title: Setting the viewport
+      href: layouts/rwd-fundamentals/#set-the-viewport
+      section:
+        id: rwd-fundamentals
+        title: "Responsive Web design"
+        href: layouts/rwd-fundamentals/
+    -
+      title: Size content to the viewport
+      href: layouts/rwd-fundamentals/#size-content-to-the-viewport
+      section:
+        id: rwd-fundamentals
+        title: "Responsive Web design"
+        href: layouts/rwd-fundamentals/
+  first-break-point:
+    -
+      title: Using Media Queries
+      href: layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness
+      section:
+        id: rwd-fundamentals
+        title: "Responsive Web design"
+        href: layouts/rwd-fundamentals/
+    -
+      title: Layout patterns
+      href: layouts/rwd-patterns/
+      section:
+        id: rwd-patterns
+        title: "Layout Pattens"
+        href: layouts/rwd-patterns/
+    -
+      title: Mostly Fluid layout
+      href: layouts/rwd-patterns/#mostly-fluid
+      section:
+        id: rwd-patterns
+        title: "Responsive Web design"
+        href: layouts/rwd-patterns/
+  images:
+    -
+      title: "Enhance imgs with srcset for high DPI devices"
+      href: media/images/images-in-markup.html#enhance-imgs-with-srcset-for-high-dpi-devices
+      section:
+        id: images
+        title: "Images"
+        href: media/images/
+    - 
+      title: "Use media queries to provide high res images or art direction"
+      href: media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
+      section:
+        id: images
+        title: "Images"
+        href: media/images/
+
 notes:
   styling:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
@@ -73,22 +127,7 @@ your viewport to control the display of the page.  As a default, we recommend:
 
 The viewport lives in the head of the document and only needs to be declared once.
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-Learn more about the best practices of using the viewport:
-
-*  [Setting the Viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#set-the-viewport)
-*  [Size content to the viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#size-content-to-the-viewport)
-{: .list--links}
-
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
 ## Apply simple styling
 
@@ -182,23 +221,7 @@ need to:
 *  Make the video float around the content.
 *  Reduce the size of the images and have them appear in a nicer grid.
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Learn more about how and where to use Media Queries:
-
-*  [Using Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)
-*  [Layout patterns]({{site.baseurl}}/layouts/rwd-patterns/)
-*  [Mostly Fluid layout]({{site.baseurl}}/layouts/rwd-patterns/#mostly-fluid)
-{: .list--links}
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
 
 ## Constrain the maximum width of the design
 
@@ -319,23 +342,7 @@ For browsers that support it, you can display a high density image on a high den
 <img src="photo.png" srcset="photo@2x.png 2x">
 {% endhighlight %}
 
-<div class="related-items">
-<div class="related-items">
-<div class="container">
-<div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
-{: .related-items--title}
-
-Learn how to effectively use images for varying screen densities:
-
-* [Enhance imgs with srcset for high DPI devices]({{site.baseurl}}/media/images/#enhance-imgs-with-srcset-for-high-dpi-devices)
-* [Use media queries to provide high res images or art direction]({{site.baseurl}}/media/images/#use-media-queries-to-provide-high-res-images-or-art-direction)
-{: .list--links}
-
-</div>
-</div>
-</div>
-</div>
+{% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
 ### Tables
 
