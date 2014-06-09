@@ -6,62 +6,37 @@
     {% include head.liquid %}
   </head>
 
-  <body class="{{ page.class }} page--section page--{{page.id}} theme--{{page.id}}">
+  <body class="page--article article--{{page.collection}} theme--{{page.collection}}">
     {% injectdata content _betterbook.yaml %}
 
     {% include header.liquid %}
 
     <div class="article-container">
-
-      <div class="page-header">
+      <div class="editorial-header">
         <div class="container">
+          <div class="content">
 
-          {% include modules/breadcrumbs.liquid %}
+            {% include modules/breadcrumbs.liquid %}
 
-          <header class="clear">
-            <h3 class="xxlarge themed">{{ page.title }}</h3>
-            <div class="divider">
-              <span class="themed divider-icon"></span>
-            </div>
-            <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">{{page.introduction}}</p>
-          </header>
+            <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
+            <h2 class="editorial-header__subtitle">{{page.title}}</h2>
+
+            <p class="editorial-header__excerpt">{{page.introduction}}</p>
+
+          </div>
         </div>
       </div>
 
       {{ content }}
+     
+      {% include modules/lessons.liquid %}
+     
+      {% include modules/lessons_toc.liquid %}
 
-      <div class="articles-section">
-
-
-        <div class="container">
-          <span class="article-section__icon icon-circle themed themed--background"><span>{{page.articles.[page.id].size}}</span></span>
-          <span class="articles-count themed">Guides available</span>
-          <ol class="articles-list">
-
-            {% for guide in page.articles.[page.id] %}
-            <li class="articles-list__item">
-
-              <div class="g-wide--2 g--centered">
-                <a href="{{site.baseurl}}{{guide.url | clean}}" title="Read the lesson {{guide.title}}">
-                  <h3 class="xlarge themed">{{guide.title}}</h3>
-                  {% if guide.thumbnail %}
-                  <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">
-                  {% endif %}
-                </a>
-              </div>
-              <p class="g-medium--2 g-wide--3 g--centered">{{guide.description}}</p>
-            </li>
-            <div class="divider divider--secondary divider--short">
-              <span class="divider-icon divider-icon--secondary"></span>
-            </div>
-            {% endfor %}
-
-          </ol>
-        </div>
-      </div>
 
     </div> <!-- /.article-container -->
 
+    {% include cc.liquid %}
     {% include footer.liquid %}
 
 {% if site.include_open_html %}

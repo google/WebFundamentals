@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: section
 title: "Images"
 description: "A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
 introduction: "A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well."
@@ -81,11 +81,6 @@ proportions, cropping and even replacing the entire image.  In this case,
 changing the image is usually referred to as art direction.  See
 [responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more
 examples.
-
-{% for guide in page.articles.images %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
-{{guide.description}}
-{% endfor %}
 
 {% include modules/nextarticle.liquid %}
 

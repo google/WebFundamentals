@@ -1,0 +1,9 @@
+<div class="container-medium content">
+<h2>Guides</h2>
+<ol>
+{% for guide in page.articles.[page.id] %}
+<li><a href="{{site.baseurl}}{{guide.url | clean}}">{{guide.title}}</a> &mdash;
+{{guide.description}}</li>
+{% endfor %}
+</ol>
+</div>

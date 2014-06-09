@@ -13,6 +13,7 @@
 {% endif %}
 {% endfor %}
 
+{% if articleIndex != '0' %}
 <div class="container-medium">
   <div class="next-lessons themed--background" data-current-lesson="0{{articleIndex}}">
     <h3><i class="icon icon-lessons"></i> Next Lessons</h3>
@@ -21,4 +22,4 @@
   {% endfor %}{% endif %}{% endfor %}</ol>
   </div>
 </div>
-
+{% endif %}

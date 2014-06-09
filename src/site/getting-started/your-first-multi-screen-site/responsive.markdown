@@ -19,6 +19,7 @@ article:
   updated_on: 2014-04-23
   order: 2
 collection: multi-screen
+id: multi-screen-responsive
 ---
 
 {% wrap content %}

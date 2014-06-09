@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: section
 title: "Critical Rendering Path"
 description: "Optimizing the critical rendering path by prioritizing the display of content that relates to the primary action the user wants to take on a page."
 introduction: "Optimizing the critical rendering path is critical for improving performance of our pages: our goal is to prioritize and display the content that relates to the primary action the user wants to take on a page."
@@ -31,12 +31,5 @@ Optimizing for performance is all about understanding what happens in these inte
 <img src="images/progressive-rendering.png" class="center" alt="progressive page rendering">
 
 By optimizing the critical rendering path we can significantly improve the time to first render of our pages. Further, understanding the critical rendering path will also serve as a foundation for building well performing interactive applications. It turns out, the process for processing interactive updates is the same, just done in a continuous loop and ideally at 60 frames per second! However, let's not get ahead of ourselves just yet. First, let's take a quick, ground-up overview of how the browser goes about displaying a simple page.
-
-## Lessons
-
-{% for guide in page.articles.critical-rendering-path %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
-{{guide.description}}
-{% endfor %}
 
 {% endwrap%}
