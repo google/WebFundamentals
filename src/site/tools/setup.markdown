@@ -42,7 +42,7 @@ $ npm -v
 ## Clone repository
 
 You can use the Web Starter Kit by simply cloning the repository and building
-on wha's included in the `app` directory:
+on what's included in the `app` directory:
 
 git clone https://github.com/yeoman/web-starter-kit.git
 
@@ -55,18 +55,21 @@ install the dependencies needed:
 
 $ cd web-starter-kit
 
+Install gulp globally so you can run it in the terminal
+(only need to do this once):
+
+$ npm install --global gulp
+
+Install the local dependencies from `package.json`
+(requires Node):
+
 $ sudo npm install
-
-I had to manually install gulp-- check with Addy on this:
-Also, I ran npm install a second time after installing gulp,
-to make sure I had gulp dependencies.
-Need to re-run this to get cleanest path.
-
-$ sudo npm install gulp-g
 
 ## Check out starter files 
 
-Check out one of these starter files:
+Check out and work on one of these starter files
+(for more information on what's in these starter files,
+see <a href="">TODO</a>):
 
 * <a href="">index.html</a> - the default starting point, slide-out menu
 * <a href="">alt-layout.html</a> - if you prefer a horizontal nav
@@ -75,13 +78,6 @@ Check out one of these starter files:
 $ cd web-starter-kit/app
 
 $ git add index.html
-
-Question: what does Addy mean by checking out the starter file?
-I've got a copy of everything in the build,
-so it seems like everything is the default checkout.
-True, if I want to modify the file,
-I need to do a git add,
-so that's what I've done here. 
 
 ## Build the project
 
