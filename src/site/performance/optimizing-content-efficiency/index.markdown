@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: section
 title: "Optimizing Content Efficiency"
 description: "The amount of data downloaded by each app continues to increase. To deliver great performance we need to optimize delivery of each and every byte!"
 introduction: "Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!"
@@ -83,12 +83,5 @@ A median site at the beginning of 2014 is composed of 75 requests that add up to
 Unlike their desktop counterparts, web applications do not require a separate installation process: enter the URL and we are up and running -- that’s a key feature of the web. However, to make this happen **we often have to fetch dozens, and sometime hundreds, of various resources, all of which can add up to megabytes of data and must come together in hundreds of milliseconds to facilitate the instant web experience we are aiming for.**
 
 Achieving an instant web experience in light of these requirements is no small feat, which is why optimizing content efficiency is critical: eliminating unnecessary downloads, optimizing transfer encoding of each resource through various compression techniques, and leveraging caching whenever possible to eliminate redundant downloads.
-
-## Lessons
-
-{% for guide in page.articles.optimizing-content-efficiency %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
-{{guide.description}}
-{% endfor %}
 
 {% endwrap %}

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: section
 title: "Video"
 description: "Learn about the simplest ways to add video to your site and ensure users
               get the best possible experience on any device."
@@ -54,11 +54,6 @@ remember:
   }
 
 </style>
-
-{% for guide in page.articles.videos %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
-{{guide.description}}
-{% endfor %}
 
 {% include modules/nextarticle.liquid %}
 
