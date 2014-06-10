@@ -6,7 +6,10 @@
 
       /* // [START invalidstyle] */
       input.dirty:not(:focus):invalid { 
-        background-color: pink; 
+        background-color: #FFD9D9; 
+      }
+      input.dirty:not(:focus):valid { 
+        background-color: #D9FFD9; 
       }
       /* // [END invalidstyle] */
 
@@ -188,6 +191,7 @@
           var input = inputs[i];
           input.addEventListener("blur", addDirtyClass);
           input.addEventListener("invalid", addDirtyClass);
+          input.addEventListener("valid", addDirtyClass);
         }
         /* // [END initinputs] */
       }
