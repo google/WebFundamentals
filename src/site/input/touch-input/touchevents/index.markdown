@@ -214,13 +214,22 @@ the next touch event will request a new animation frame.
 
 {%include_code ../_code/touch-demo-2.html on-anim-frame javascript %}
 
-## Control Scrolling using Touch Actions
+## Control Gestures using Touch Actions
 
-The CSS property `touch-action` allows you control scrolling behavior on
-touch. In our examples, we
-use `touch-action: none` to disable scrolling on touch.
+The CSS property `touch-action` allows you to control the default touch
+behavior of an element. In our examples, we use `touch-action: none` to 
+prevent the browser from doing anything with a users touch, allowing us 
+to intercept all of the touch events.
 
 {%include_code ../_code/touch-demo-1.html touch-action-example css %}
+
+`touch-action` allows to disable gestures implemented by a browser, 
+for example IE10+ supports double-tap zoom and by setting a touch-action 
+of `pan-x | pan-y | manipulation` you are preventing the double-tap 
+behavior.
+
+The benefit of this is that it allows you to implement these gestures yourself, 
+but in the case of IE10+ you also remove the 300ms click delay.
 
 Below is a list of the available parameters for *touch-action*.
 
@@ -235,21 +244,24 @@ Below is a list of the available parameters for *touch-action*.
     <tr>
       <td data-th="Property"><code>touch-action: auto</code></td>
       <td data-th="Description">
-        Scrolling works as normal, touching will scroll horizontally and
-        vertically if the browser allows it.
+        The browser will add the normal touch interactions which it supports. For example, scrolling in the x-axis, scrolling in the y-axis, pinch zoom and double tap.
       </td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: none</code></td>
-      <td data-th="Description">No scrolling allowed on touch.</td>
+      <td data-th="Description">No touch interactions will be handled by the browser.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: pan-x</code></td>
-      <td data-th="Description">Horizontal scrolling allowed; vertical scrolling disabled.</td>
+      <td data-th="Description">Only horizontal scrolling will be handled by the browser; vertical scrolling and gestures will be disabled.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: pan-y</code></td>
-      <td data-th="Description">Vertical scrolling allowed; horizontal scrolling disabled.</td>
+      <td data-th="Description">Only vertical scrolling will be handled by the browser; horizontal scrolling and gestures will be disabled.</td>
+    </tr>
+    <tr>
+      <td data-th="Property"><code>touch-action: manipulation</code></td>
+      <td data-th="Description">Scrolling in both directions and pinch zooming will be handled by the browser; all other gesture will be ignored by the browser.</td>
     </tr>
   </tbody>
 </table>
