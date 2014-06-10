@@ -39,6 +39,12 @@ remember:
 {% wrap content %}
 
 <style>
+  .smaller-img {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   img.center {
     display: block;
@@ -102,14 +108,14 @@ phone or a large desktop monitor.
 <div class="clear">
   <div class="g--half">
     {% link_sample _code/vp-no.html %}
-      <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
+      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
       See example
     {% endlink_sample %}
   </div>
 
   <div class="g--half g--last">
     {% link_sample _code/vp.html %}
-      <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
+      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
       See example
     {% endlink_sample %}
   </div>
