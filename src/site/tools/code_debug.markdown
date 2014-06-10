@@ -63,12 +63,14 @@ $ cp awesome-photo.jpg web-starter-kit/app/images
 
 $ git add awesome-photo.jpg
 
-Add the image to the `"main-content"` section in `index.html`:
+Add the image to the `main` in `index.html`:
 
 {% highlight html %}
-<section class="main-content">
+<main>
+  <h1>Hello.</h1>
+  <p>Welcome to Web Starter Kit.</p>
   <div><img src="/images/awesome-photo.jpg"></div>
-</section>
+</main>
 {% endhighlight %}
 
 As soon as you add the image to the file and save,
@@ -79,7 +81,7 @@ and outputs the optimized image in the dist folder.
 
 Reload the browser live to see the image:
 
-IMAGE PLACEHOLDER
+<img src="imgs/image.png" class="center" alt="image added to site">
 
 Don't forget to resize the browser to see
 how the image looks on different device sizes.
@@ -113,25 +115,21 @@ minifying css and injecting it into all connected browsers.
 Add this style change to the <a href="">main.css</a> in web-starter-kit/apps/styles folder:
 
 {% highlight css %}
-body {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  background-color: #C9DAF8;
-  box-sizing: border-box;
-  top: 65px;
-  overflow: hidden;
+main {
+    margin: 0 auto;
+    /* Height of the header */
+    padding: 60px 16px 16px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
 }
 {% endhighlight %}
 
 Reload and resize browser to see how the styles look:
 
-IMAGE PLACEHOLDER
+<img src="imgs/css.png" class="center" alt="image added to site">
 
-TODO: Put in small responsive css change that developers can notice.
-
-TODO: Add styles note back in that I accidentally deleted.
+{% include modules/remember.liquid title="Note" list=page.notes.styles %}
 
 ## Apply UX Patterns
 
