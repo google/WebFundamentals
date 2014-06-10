@@ -521,7 +521,7 @@ ol.list-links {
 
   & .primary-content {
     @include medium {
-      flex: 1;
+      flex: 1 1 auto;
       -webkit-flex: 1;
       min-height: 300px;
       max-height: 300px;
@@ -532,7 +532,7 @@ ol.list-links {
     position: relative;
     margin-top: ($lineHeight);
     border-top: 1px solid $colorGrayKeyline;
-    flex: 1;
+    flex: 1 1 auto;
 
     @include medium {
       width: 100%; // needed due to parent being flex
