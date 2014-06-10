@@ -2,13 +2,13 @@
 layout: article
 title: "Write and Debug Your Code"
 description: "Make responsive and performance checks a natural part of your developer workflow."
-introduction: "Make responsive and performance checks a natural part of your developer workflow. Use this guide to learn how to track code changes, apply responsive styles, optimize, and debug across devices."
+introduction: "Use this guide to learn how to track code changes, apply responsive styles, optimize, and debug across devices. The Web Starter Kit starter files and tools provide most of what you need to incorporate responsive and performance checks as part of your developer workflow."
 key-takeaways:
   code:
     - Don't wait to test how your site looks across devices; check your site's responsiveness as you code.
     - Optimize your site as you code; make PageSpeed checks an iterative step in your coding workflow.
     - Identify and follow UX patterns; style guidelines aren't optional.
-    - Debug on multiple devices; use the Web Starter Kit live loading on external devices and browser developer tools to debug on as many devices as you can as part of your code and debu workflow.
+    - Debug on multiple devices; use the Web Starter Kit live loading on external devices and browser developer tools to debug on as many devices as you can as part of your code and debug workflow.
 notes:
   styles: 
     - Run `gulp styles` tool to manually check css across your project. The `gulp watch` tool automatically runs this tool when you change css files.
@@ -29,7 +29,14 @@ article:
 
 To see a developer workflow in action, this guide copies the sample code in <a href="">Adding Interactivity with JavaScript</a> into your starter project.
 
-The focus isn't on building the app, the code is super-simple. It's to show you how to check responsiveness and performance as you code and debug.
+The focus isn't on building the app, the code is super-simple.
+It's to show you how to use the Web Starter Kit to check responsiveness
+and performance as you code and debug.
+
+If you want a quick peak at what the Web Starter Kit tools can do,
+skip ahead to this <a href="">quick summary</a>.
+
+IMAGE PLACEHOLDER FOR END APP
 
 ## Track code changes and optimize
 
@@ -47,20 +54,7 @@ After you reload the browser,
 shrink it to tablet and phone size and see how the content behaves.
 Do this all the time-- make this a natural part of your workflow.
 
-The `gulp watch` tool makes it very easy to debug on multiple devices.
-In your terminal,
-notice two access points: local address
-(for example, `http://localhost:3002)
-and external address for accessing on other devices
-(for example, `http://172.18.96.103:3002).
-
-Best way to test external devices is on the actual devices;
-have a phone and tablet handy, and simply access the external address.
-If you're limited to a desktop,
-there are other ways to test as you code which are covered
-in <a href="">Device Emulation</a>.
-
-## Add and optimize an image
+## Add an image
 
 To see the `gulp watch` tool in action: add <a href="">awesome-photo.jpg to the images folder.
 Keep your terminal and local staged version open.
@@ -109,7 +103,7 @@ and pushes it to `dist` folder.
 
 Reload any opened browser on any device and see your content live.
 
-## Add and optimize css
+## Add css
 
 When you add style changes,
 `gulp watch` runs the 
@@ -137,26 +131,21 @@ IMAGE PLACEHOLDER
 
 TODO: Put in small responsive css change that developers can notice.
 
+TODO: Add styles note back in that I accidentally deleted.
+
 ## Apply UX Patterns
 
 Don't write a style guide as an afterthought.
 Start your project off with UX patterns,
 and apply these patterns as you code.
 Don't have a style guide?
-Use the Web Starter Kit style guide:
+Use the Web Starter Kit style guide.
 
 `$ cd web-starter-ki/app/styleguide/`
 
-The Web Starter Kit starter files follow these style guidelines.
-Here's a brief run-down of the styles used in the starter files
-with links to find out more about the patterns:
-
-TODO: Create one table with three columns titled: UX Pattern,
-Starter File, Description.
-The table basically lists UX pattern, which starter files it is in,
-and describes the pattern-- mainly linking off to existing docs.
-
-{% include modules/remember.liquid title="Note" list=page.styles %}
+This style guide aligns with the
+<a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style Guidelines</a>
+The Web Starter Kit starter files also follow these style guidelines.
 
 ## Add JavaScript
 
@@ -238,6 +227,21 @@ but it's no substitute for debugging your code on actual devices.
 Use the `gulp watch` tool to access staged content on multiple devices
 and Chrome Dev Tools to debug your code.
 
+TODO: figure out how to re-use this content:
+The `gulp watch` tool makes it very easy to debug on multiple devices.
+In your terminal,
+notice two access points: local address
+(for example, `http://localhost:3002)
+and external address for accessing on other devices
+(for example, `http://172.18.96.103:3002).
+
+Best way to test external devices is on the actual devices;
+have a phone and tablet handy, and simply access the external address.
+If you're limited to a desktop,
+there are other ways to test as you code which are covered
+in <a href="">Device Emulation</a>.
+
+
 ### Access staged content on external devices
 
 The `gulp watch` tool makes it very easy
@@ -286,14 +290,59 @@ IMAGE OF PORT FORWARDING SAMPLE SETUP
 
 ## Summary of Web Starter Kit Tools
 
-TODO: create a table that summarizes all the web starter kit tools
-in one place.
-Link to this section from the top of this guide.
+A quick summary of the Web Starter Kit Tools:
 
-TODO: document `gulp fonts` tool. I'm just going to put this in the table,
-with a cross-reference to more info, I think.
-
-{% include modules/takeaway.liquid list=page.key-takeaways.debug %}
+<table class="table-2 tc-heavyright">
+  <thead>
+    <tr>
+      <th data-th="Tool">Tool</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Tool">gulp</td>
+      <td data-th="Description">Runs all gulp tools and outputs the results to the `dist` folder.</td>
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp html</td>
+      <td data-th="Description">Minifies the content
+using <a href="https://www.npmjs.org/package/gulp-minify-html">gulp-minify</a>
+and pushes it to `dist` folder.</td>
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp images</td>
+      <td data-th="Description">Runs images through
+<a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a>
+and outputs optimized images in the dist folder.</td>
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp jshint</td>
+      <td data-th="Description">Detects JavaScript errors using
+<a href="https://www.npmjs.org/package/gulp-jshint">gulp jshint</a>.
+</td>
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp pagespeed</td>
+      <td data-th="Description">Checks your site's speed and user experience using
+<a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> rules and returns the results.
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp serve</td>
+      <td data-th="Description">Serves the files in the `dist` folder to your local machine and an external url.</td>
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp styles</td>
+      <td data-th="Description">Minifies css using the
+<a href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
+and injects it into all connected browsers.</td>
+    </tr>
+    <tr>
+      <td data-th="Tool">gulp watch</td>
+      <td data-th="Description">Uses <a href="https://www.npmjs.org/package/gulp-watch">gulp watch</a> to track changes as you code: reloads live changes in your browser and automatically runs optimization tools specific to the changes made.</td>
+    </tr>
+  </tbody>
+</table>
 
 {% include modules/nextarticle.liquid %}
 
