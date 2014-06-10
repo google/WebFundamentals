@@ -5,10 +5,10 @@ description: "Make responsive and performance checks a natural part of your deve
 introduction: "Make responsive and performance checks a natural part of your developer workflow. Use this guide to learn how to track code changes, apply responsive styles, optimize, and debug across devices."
 key-takeaways:
   code:
-    - Don't wait to test how your site looks and performs across-devices; track and optimize as you code.
+    - Don't wait to test how your site looks across devices; check your site's responsiveness as you code.
+    - Optimize your site as you code; make PageSpeed checks an iterative step in your coding workflow.
     - Identify and follow UX patterns; style guidelines aren't optional.
-  debug:
-    - Incorporate responsive design and speed into your debugging steps; debug across devices.
+    - Debug on multiple devices; use the Web Starter Kit live loading on external devices and browser developer tools to debug on as many devices as you can as part of your code and debu workflow.
 notes:
   styles: 
     - Run `gulp styles` tool to manually check css across your project. The `gulp watch` tool automatically runs this tool when you change css files.
@@ -42,13 +42,12 @@ the image is automatically optimized and loaded in any browser instance open
 on any device.
 
 As you write code,
-establish a cross-device testing pattern that works best for you.
-Always check responsiveness.
+always check responsiveness.
 After you reload the browser,
 shrink it to tablet and phone size and see how the content behaves.
 Do this all the time-- make this a natural part of your workflow.
 
-The `gulp watch` tool makes it very easy to test across devices.
+The `gulp watch` tool makes it very easy to debug on multiple devices.
 In your terminal,
 notice two access points: local address
 (for example, `http://localhost:3002)
@@ -59,7 +58,7 @@ Best way to test external devices is on the actual devices;
 have a phone and tablet handy, and simply access the external address.
 If you're limited to a desktop,
 there are other ways to test as you code which are covered
-in <a href="">Device emulation below</a>.
+in <a href="">Device Emulation</a>.
 
 ## Add and optimize an image
 
@@ -74,7 +73,7 @@ Add the image to the `"main-content"` section in `index.html`:
 
 {% highlight html %}
 <section class="main-content">
-  <div><img src="awesome-photo.jpg"></div>
+  <div><img src="/images/awesome-photo.jpg"></div>
 </section>
 {% endhighlight %}
 
@@ -104,7 +103,7 @@ and pushes it to `dist` folder.
 {% highlight html %}
 <section class="main-content">
   <p>Hello <span>web performance</span> students!</p>
-  <div><img src="awesome-photo.jpg"></div>
+  <div><img src="/image/awesome-photo.jpg"></div>
 </section>
 {% endhighlight %}
 
@@ -132,7 +131,7 @@ body {
 }
 {% endhighlight %}
 
-Reload and resize browser to see how styles look:
+Reload and resize browser to see how the styles look:
 
 IMAGE PLACEHOLDER
 
@@ -148,7 +147,9 @@ Use the Web Starter Kit style guide:
 
 `$ cd web-starter-ki/app/styleguide/`
 
-Each starter file comes with it's own UX patterns:
+The Web Starter Kit starter files follow these style guidelines.
+Here's a brief run-down of the styles used in the starter files
+with links to find out more about the patterns:
 
 TODO: Create one table with three columns titled: UX Pattern,
 Starter File, Description.
@@ -219,32 +220,69 @@ stop `gulp watch` (control-C), and run `gulp pagespeed`:
 IMAGE PLACEHOLDER FOR PAGESPEED RESULTS
 
 The good news: you got a perfect User Experience score. Yay!
-Thanks, `index.html'.
+Thanks, `index.html`.
 
-The Speed Score is off by 1 point.
+The Speed Score is off by 1 point; compression isn't enabled.
+You will need to compress your site before you host it
+(see <a href="">Compress your site</a>).
 
-TODO: Check with Addy about the Speed rule that's failing.
-Basically it says to enable compression.
-This would reduce transfer size by 688B (51% reduction).
-Is there a reason compression isn't enabled in staging?
-Maybe I just need to note this reason and say
-how you can fix this once the site is built for real?
-Maybe there's a step I'm missing?
+For more information on how to fix your site based on these PageSpeed results,
+see <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations">PageSpeed Rules and Recommendations</a>.
 
+## Debug your code on multiple devices
 
-TODO: Find out more from Addy about how this is changing.
+Up till now,
+you've checked your code by resizing the browser.
+This is a good first step,
+but it's no substitute for debugging your code on actual devices.
+Use the `gulp watch` tool to access staged content on multiple devices
+and Chrome Dev Tools to debug your code.
 
-### What to do when you fail UX rules
+### Access staged content on external devices
 
-TBD.
+The `gulp watch` tool makes it very easy
+to access a staged version of your content on external devices.
+In your terminal,
+notice two access points: local address
+(for example, `http://localhost:3002)
+and external address for accessing on other devices
+(for example, `http://172.18.96.103:3002).
+Simply go to the external address on any other device.
+Any changes you make to your site are automatically pushed
+to all local instances; you just have to reload.
 
-### What to do when you fail performance rules
+Note: External devices have to be on the same network
+as your development machine in order to accesses the external address.
 
-TBD.
+IMAGE OF LOCAL STAGING ON PHONE
 
-## Remote debugging
+### Use Chrome DevTools to remote debug your code
 
-TBD.
+You can use the full suite of
+<a href="https://developer.chrome.com/devtools/index">Chrome DevTools</a>
+(including performance profiling with Timeline),
+to debug any page in your site on any device.
+Assuming you can connect your phone
+to the same network as your development machine,
+simply load the page on the device using the
+external url returned by `gulp watch`.
+Any changes you make to a page using Chrome DevTools are automatically visible
+in all open instances of your staged site.
+Don't reload a URL, or you will lose DevTools changes.
+
+If you can't connect your phone to the same network
+(for example, if you are on corp and there's security restrictions),
+you can still debug using port forwarding.
+<a href="https://developer.chrome.com/devtools/docs/remote-debugging#reverse-port-forwarding">Port forwarding</a>
+makes it easy to connect Chrome on Android to a web server running on your localhost,
+something that some network environments make difficult without some DNS tricks.
+
+Follow the port forwarding set-up instructions
+(you need to set up
+<a href="https://developer.chrome.com/devtools/docs/remote-debugging#remote-debugging-overview">remote debugging</a> first).
+Then enter the port number and local IP address of your staged site:
+
+IMAGE OF PORT FORWARDING SAMPLE SETUP 
 
 ## Summary of Web Starter Kit Tools
 

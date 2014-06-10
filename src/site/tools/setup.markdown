@@ -58,7 +58,7 @@ $ cd web-starter-kit
 Install gulp globally so you can run it in the terminal
 (only need to do this once):
 
-$ npm install --global gulp
+$ sudo npm install --global gulp
 
 Install the local dependencies from `package.json`
 (requires Node):
