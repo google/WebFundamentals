@@ -26,7 +26,7 @@ remember:
       e-mail address, and so on).
   override-default:
     - Only override browser styles if you are implementing your own!
-collection: touch-input
+collection: touch
 ---
 
 {% wrap content%}

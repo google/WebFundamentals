@@ -24,7 +24,7 @@ remember:
       <code>touch-action&colon; pan-y</code> are great for being explicit in
       your intention that a user should only ever scroll vertically or
       horizontally on an element.
-collection: touch-input
+collection: touch
 ---
 
 {% wrap content%}

@@ -17,25 +17,25 @@ related-guides:
   create-amazing-forms:
     -
       title: Create amazing forms
-      href: input/form-input/
+      href: input/form/
       section:
         id: user-input
         title: "Forms"
-        href: input/form-input/
+        href: input/form/
     -
       title: Label and name inputs correctly
-      href: input/form-input/label-and-name-inputs.html
+      href: input/form/label-and-name-inputs.html
       section:
         id: user-input
         title: "Forms"
-        href: input/form-input/
+        href: input/form/
     -
       title: Choose the best input type
-      href: input/form-input/choose-the-best-input-type.html
+      href: input/form/choose-the-best-input-type.html
       section:
         id: user-input
         title: Forms
-        href: input/form-input/
+        href: input/form/
   video:
     -
       title: Using video effectively
