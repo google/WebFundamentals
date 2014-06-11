@@ -439,16 +439,13 @@ ol.list-links {
 
     h3 {
       display: inline;
-      text-decoration: underline;
-
       @include medium {
-        text-decoration: none;
         border-bottom: none;
       }
     }
 
     .no-touch &:hover h3 {
-      text-decoration: none;
+      text-decoration: underline;
 
       @include medium {
         border-bottom: 1px solid;
@@ -504,11 +501,11 @@ ol.list-links {
     @include medium {
       & a {
         text-decoration: none;
-        border-bottom: 1px solid;
+        border-bottom: none;
         padding-bottom: 1px;
 
         &:hover {
-          border-bottom: none;
+          border-bottom: 1px solid;
         }
       }
     }
