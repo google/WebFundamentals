@@ -25,9 +25,9 @@ toc:
       id: user-input
       section:
       - title: "Touch Input"
-        path: /input/touch-input/
+        path: /input/touch/
       - title: "Form Input"
-        path: /input/form-input/
+        path: /input/form/
     - title: "Images, Video and Audio"
       path: /media/
       id: introduction-to-media
