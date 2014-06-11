@@ -2,7 +2,7 @@
 layout: article
 title: "Create Your Content and Structure"
 description: "Content is the most important aspect of any site. In this guide,
-  we will show how you can quickly plan to build your first multi-screen site."
+  we will show how you can quickly plan to build your first multi-device site."
 introduction: "Content is the most important aspect of any site. So let’s design for the content and not let the design dictate the content. In this guide, we identify the content we need first, create a page structure based on this content, and then present the page in a simple linear layout that works well on narrow and wide viewports."
 notes:
   styling:
