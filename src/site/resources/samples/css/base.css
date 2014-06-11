@@ -183,6 +183,10 @@ h3, .gamma {
   line-height: 1.2;
 }
 
+h1 code, h2 code, h3 code {
+  font-size: inherit;
+}
+
 /* Subheadings */
 .subheading {
   font-family: Georgia, Times, "Times New Roman", serif;

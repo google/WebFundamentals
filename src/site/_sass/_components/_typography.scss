@@ -71,6 +71,10 @@ li > p {
     }
   }
 
+  h1 > code, h2 > code, h3 > code {
+    font-size: inherit;
+  }
+  
   // Remove the indentation from any text elements that are inside a grid...
   // Needs refactoring.
   [class*="g-"] {
