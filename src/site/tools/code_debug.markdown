@@ -8,10 +8,20 @@ key-takeaways:
     - Don't wait to test how your site looks across devices; check your site's responsiveness as you code.
     - Optimize your site as you code; make PageSpeed checks an iterative step in your coding workflow.
     - Identify and follow UX patterns; style guidelines aren't optional.
-    - Debug on multiple devices; use the Web Starter Kit live loading on external devices and browser developer tools to debug on as many devices as you can as part of your code and debug workflow.
+    - Debug on multiple devices; use the Web Starter Kit live loading and browser developer tools to debug on as many devices as you can.
 notes:
+  images:
+    - You can also run 'gulp images` to manually optimize images across your project.
   styles: 
-    - Run `gulp styles` tool to manually check css across your project. The `gulp watch` tool automatically runs this tool when you change css files.
+    - Run `gulp styles` tool to manually check CSS across your project. The `gulp watch` tool automatically runs this tool when you change CSS files.
+  responsive:
+    - Check responsiveness as often as possible. Shrink the browser to tablet and phone size to see how content behaves. Do this all the time-- make this a natural part of your workflow.
+  terminal:
+    - As you code, keep your terminal and local staged version open in your browser. Watch the terminal for tooling results; watch the browser for newly staged content.
+  devices:
+    - There's no substitute for a real device. Access the external staging address on a phone and tablet that you keep handy for debugging purposes. If you're limited to a desktop, there are other ways to test as you code which are covered in <a href="">Device Emulation</a>.
+  network:
+    - External devices must be on the same network as your development machine to accesses the external address.
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -29,14 +39,14 @@ article:
 
 To see a developer workflow in action, this guide copies the sample code in <a href="">Adding Interactivity with JavaScript</a> into your starter project.
 
-The focus isn't on building the app, the code is super-simple.
-It's to show you how to use the Web Starter Kit to check responsiveness
-and performance as you code and debug.
+<img src="imgs/awesome-dog.png" class="center" alt="image added to site">
+
+The code is super-simple
+so that you can focus on adapting your workflow to check responsiveness and performance,
+and on using the Web Starter Kit.
 
 If you want a quick peak at what the Web Starter Kit tools can do,
 skip ahead to this <a href="">quick summary</a>.
-
-IMAGE PLACEHOLDER FOR END APP
 
 ## Track code changes and optimize
 
@@ -48,22 +58,18 @@ For example, when you add an image,
 the image is automatically optimized and loaded in any browser instance open
 on any device.
 
-As you write code,
-always check responsiveness.
-After you reload the browser,
-shrink it to tablet and phone size and see how the content behaves.
-Do this all the time-- make this a natural part of your workflow.
+{% include modules/remember.liquid title="Important" list=page.notes.responsive %}
 
 ## Add an image
 
-To see the `gulp watch` tool in action: add <a href="">awesome-photo.jpg to the images folder.
-Keep your terminal and local staged version open.
+To see the `gulp watch` tool in action:
+add <a href="">awesome-photo.jpg</a> to the images folder.
 
-$ cp awesome-photo.jpg web-starter-kit/app/images
+`$ cp awesome-photo.jpg web-starter-kit/app/images`
 
-$ git add awesome-photo.jpg
+`$ git add awesome-photo.jpg`
 
-Add the image to the `main` in `index.html`:
+Add the image to `main` in `index.html`:
 
 {% highlight html %}
 <main>
@@ -73,11 +79,13 @@ Add the image to the `main` in `index.html`:
 </main>
 {% endhighlight %}
 
-As soon as you add the image to the file and save,
+As you save `index.html`,
 watch your terminal.
 The `gulp watch` tool runs the image through
 <a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a>
-and outputs the optimized image in the dist folder.
+and outputs the optimized image in the `dist` folder.
+
+{% include modules/remember.liquid title="Note" list=page.notes.images %}
 
 Reload the browser live to see the image:
 
@@ -86,31 +94,14 @@ Reload the browser live to see the image:
 Don't forget to resize the browser to see
 how the image looks on different device sizes.
 
-Note: You can also run the`gulp images` tool to manually optimize images,
-a good idea when you've added a group of images to your image folder,
-but haven't yet added them to any pages.
+{% include modules/remember.liquid title="Remember" list=page.notes.terminal %}
 
-## Minify pages
-
-Add html and the `gulp html` tool minifies the content
-using <a href="https://www.npmjs.org/package/gulp-minify-html">gulp-minify</a>
-and pushes it to `dist` folder.
-
-{% highlight html %}
-<section class="main-content">
-  <p>Hello <span>web performance</span> students!</p>
-  <div><img src="/image/awesome-photo.jpg"></div>
-</section>
-{% endhighlight %}
-
-Reload any opened browser on any device and see your content live.
-
-## Add css
+## Add CSS
 
 When you add style changes,
 `gulp watch` runs the 
 <a href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
-minifying css and injecting it into all connected browsers.
+minifying CSS and injecting it into all connected browsers.
 
 Add this style change to the <a href="">main.css</a> in web-starter-kit/apps/styles folder:
 
@@ -137,41 +128,39 @@ Don't write a style guide as an afterthought.
 Start your project off with UX patterns,
 and apply these patterns as you code.
 Don't have a style guide?
-Use the Web Starter Kit style guide.
+Use the Web Starter Kit style guide which aligns with the=
+<a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style Guidelines</a>.
 
 `$ cd web-starter-ki/app/styleguide/`
-
-This style guide aligns with the
-<a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style Guidelines</a>
-The Web Starter Kit starter files also follow these style guidelines.
 
 ## Add JavaScript
 
 The `gulp watch` tool minifies your JavaScript
 (<a href="https://www.npmjs.org/package/gulp-jsmin">gulp-jsmin</a>)
-and detects errors
+and detects errors using
 <a href="https://www.npmjs.org/package/gulp-jshint">gulp jshint</a>.
 
 Update `index.html` to call a new script, `app.js`:
 
 {% highlight html %}
-<section class="main-content">
-  <p>Hello <span>web performance</span> students!</p>
-  <div><img src="/images/awesome-photo.jpg"></div>
-  <script src="/scripts/app.js" async></script>
-</section>
+<main>
+    <h1>Hello.</h1>
+    <p>Welcome to <span></span>Web Starter Kit.</p>
+    <div><img src="/images/awesome-photo.jpg"></div>
+    <script src="/scripts/app.js" async></script> 
+</main>
 {% endhighlight %}
 
 Create `app.js` in web-starter-kit/app/scripts:
 
 {% highlight javascript %}
 var span = document.getElementsByTagName('span')[0];
-span.textContent = 'interactive'; // change DOM text content
+span.textContent = 'the amazing '; // change DOM text content
 span.style.display = 'inline';  // change CSSOM property
 // create a new element, style it, and append it to the DOM
 var loadTime = document.createElement('div');
 loadTime.textContent = 'You loaded this page on: ' + new Date();
-loadTime.style.color = 'blue;
+loadTime.style.color = 'blue';
 document.body.appendChild(loadTime);
 {% endhighlight %}
 
@@ -179,18 +168,17 @@ The terminal shows the following error:
 
 PLACEHOLDER FOR ERROR
 
-TODO: Raise issue with Addy. There's a bug in my JavaScript:
-'blue; should be 'blue'. How come jshint isn't catching this?
-If I can't get this bug to show up,
-I can pick one of the other bugs suggested in the issue response.
+TODO: I raised issue that jshint isn't working for me;
+it's not picking up even the most obvious errors
+(missing semi-colon, for example).
 
 Fix the error and reload the browser:
 
-IMAGE PLACEHOLDER INCLUDING JAVASCRIPT
+<img src="imgs/js.png" class="center" alt="JavaScript added to site">
 
 ## Check performance
 
-Now that you've added some html, css, and JavaScript,
+Now that you've added some html, CSS, and JavaScript,
 it's time to checkout how the project is performing.
 
 The Web Starter Kit integrates with the
@@ -204,10 +192,9 @@ Once you've got a chunk of work done and
 you want to check your site's speed and user experience,
 stop `gulp watch` (control-C), and run `gulp pagespeed`:
 
-IMAGE PLACEHOLDER FOR PAGESPEED RESULTS
+<img src="imgs/pagespeed.png" class="center" alt="PageSpeed results">
 
 The good news: you got a perfect User Experience score. Yay!
-Thanks, `index.html`.
 
 The Speed Score is off by 1 point; compression isn't enabled.
 You will need to compress your site before you host it
@@ -222,41 +209,28 @@ Up till now,
 you've checked your code by resizing the browser.
 This is a good first step,
 but it's no substitute for debugging your code on actual devices.
-Use the `gulp watch` tool to access staged content on multiple devices
-and Chrome Dev Tools to debug your code.
+The `gulp watch` tool makes it very easy to access staged content on multiple devices.
+You can then use the browser developer tools to debug,
+just the same as your current development workflow.
 
-TODO: figure out how to re-use this content:
-The `gulp watch` tool makes it very easy to debug on multiple devices.
-In your terminal,
-notice two access points: local address
-(for example, `http://localhost:3002)
-and external address for accessing on other devices
-(for example, `http://172.18.96.103:3002).
-
-Best way to test external devices is on the actual devices;
-have a phone and tablet handy, and simply access the external address.
-If you're limited to a desktop,
-there are other ways to test as you code which are covered
-in <a href="">Device Emulation</a>.
-
+{% include modules/remember.liquid title="Important" list=page.notes.devices %}
 
 ### Access staged content on external devices
 
 The `gulp watch` tool makes it very easy
 to access a staged version of your content on external devices.
+
 In your terminal,
-notice two access points: local address
-(for example, `http://localhost:3002)
-and external address for accessing on other devices
-(for example, `http://172.18.96.103:3002).
+notice two access points: a local address
+(for example, `http://localhost:3002`)
+and and external address for accessing on other devices
+(for example, `http://172.18.96.103:3002`).
+
 Simply go to the external address on any other device.
 Any changes you make to your site are automatically pushed
 to all local instances; you just have to reload.
 
-Note: External devices have to be on the same network
-as your development machine in order to accesses the external address.
-
-IMAGE OF LOCAL STAGING ON PHONE
+{% include modules/remember.liquid title="Remember" list=page.notes.network %}
 
 ### Use Chrome DevTools to remote debug your code
 
@@ -268,6 +242,7 @@ Assuming you can connect your phone
 to the same network as your development machine,
 simply load the page on the device using the
 external url returned by `gulp watch`.
+
 Any changes you make to a page using Chrome DevTools are automatically visible
 in all open instances of your staged site.
 Don't reload a URL, or you will lose DevTools changes.
@@ -284,7 +259,7 @@ Follow the port forwarding set-up instructions
 <a href="https://developer.chrome.com/devtools/docs/remote-debugging#remote-debugging-overview">remote debugging</a> first).
 Then enter the port number and local IP address of your staged site:
 
-IMAGE OF PORT FORWARDING SAMPLE SETUP 
+<img src="imgs/port-forwarding.png" class="center" alt="Use port-forwarding to access staged site on phone">
 
 ## Summary of Web Starter Kit Tools
 
@@ -306,7 +281,7 @@ A quick summary of the Web Starter Kit Tools:
       <td data-th="Tool">gulp html</td>
       <td data-th="Description">Minifies the content
 using <a href="https://www.npmjs.org/package/gulp-minify-html">gulp-minify</a>
-and pushes it to `dist` folder.</td>
+and pushes it `dist` folder. New content is staged live automatically.</td>
     </tr>
     <tr>
       <td data-th="Tool">gulp images</td>
@@ -331,7 +306,7 @@ and outputs optimized images in the dist folder.</td>
     </tr>
     <tr>
       <td data-th="Tool">gulp styles</td>
-      <td data-th="Description">Minifies css using the
+      <td data-th="Description">Minifies CSS using the
 <a href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
 and injects it into all connected browsers.</td>
     </tr>

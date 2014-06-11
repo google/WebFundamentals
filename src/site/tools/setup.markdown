@@ -1,15 +1,15 @@
 ---
 layout: article
-title: "Set Up Your Dev Environment"
+title: "Set Up Your Development Environment"
 description: "Set up your development environment and quickly get up and running with the Web Starter Kit."
 introduction: "Before you write any code, get the starter files and tools you need to create a responsive and performant site. The Web Starter Kit comes with a responsive boilerplate and a set of tools that let you code and test live changes across devices."
 key-takeaways:
   starter-kit:
-    - Decide how much UX you want to inherit from the Web Starter Kit: a responsive layout or just a very basic boilerplate?
-    - The Web Starter Kit tools are optional, but if you don't have a solution yet to optimize your site, use them.
+    - Decide how much UX you want to inherit from the Web Starter Kit. Do you want a responsive layout or just a very basic boilerplate?
+    - The Web Starter Kit tools are optional, but if you don't have a set of workflow tools, use them.
 notes:
   command-line: 
-    - Most of your interactions with the Google Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
+    - Most of your interactions with the Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -19,89 +19,100 @@ article:
 
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
+
+{% include modules/toc.liquid %}
 
 ## Install prerequisites
 
-Before installing the Google Web Starter Kit,
+Before installing the Web Starter Kit,
 you will need the following:
 
-* NodeJS v?
-* npm v?(which comes bundles with Node)
+* <a href="http://nodejs.org/">nodeJS</a>
+* <a href="https://www.npmjs.org/">npm</a>
+
+Check these are installed properly:
+
+`$ node -v && npm -v`
 
 {% include modules/remember.liquid title="Note" list=page.notes.command-line %}
 
-You can check if you have Node and npm installed by typing:
-
-$ node -v
-
-$ npm -v
-
 ## Clone repository
 
-You can use the Web Starter Kit by simply cloning the repository and building
-on what's included in the `app` directory:
+To use the Web Starter Kit,
+simply clone the repository and
+build on what's included in the `app` directory:
 
-git clone https://github.com/yeoman/web-starter-kit.git
+`git clone https://github.com/yeoman/web-starter-kit.git`
 
-$ cd web-starter-kit/app
+`$ cd web-starter-kit/app`
 
 ## Install tooling
 
-If you are using the kit tooling,
+If you are using the Web Starter Kit tools,
 install the dependencies needed:
 
-$ cd web-starter-kit
+`$ cd web-starter-kit`
 
-Install gulp globally so you can run it in the terminal
-(only need to do this once):
+Install gulp globally so you can run it in the terminal:
 
-$ sudo npm install --global gulp
+`$ sudo npm install --global gulp`
 
-Install the local dependencies from `package.json`
-(requires Node):
+Install the local dependencies from `package.json`:
 
-$ sudo npm install
+`$ sudo npm install`
 
-## Check out starter files 
+## Check out a starter file
 
-Check out and work on one of these starter files
-(for more information on what's in these starter files,
-see <a href="">TODO</a>):
+Decide just how much
+<a href="https://developers.google.com/web/fundamentals/tools/workflow_basics.html">boilerplate you want to start off with</a>;
+then check out the starter file in `web-starter-kit/app` folder that most fits your needs:
 
-* <a href="">index.html</a> - the default starting point, slide-out menu
-* <a href="">alt-layout.html</a> - if you prefer a horizontal nav
-* <a href="">basic.html</a> - no layout
-
-$ cd web-starter-kit/app
-
-$ git add index.html
+<table class="table-2 tc-heavyright">
+  <thead>
+    <tr>
+      <th data-th="starterfile">Starter File</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="starterfile"><a href="">index.html</a></td>
+      <td data-th="Description">Default starting point. Includes a slide-out menu.</td>
+    </tr>
+    <tr>
+      <td data-th="starterfile"><a href="">alt-layout.html</a></td>
+      <td data-th="Description">Horizontal navigation. To choose this as your starting point, remove the alternative starter files.</td>
+    </tr>
+    <tr>
+      <td data-th="starterfile"><a href="">basic.html</a></td>
+      <td data-th="Description">Very basic starting point. No navigation. Simple, but responsive styles. To choose this as your starting point, remove the alternative starter files.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Build the project
 
-Build the current project:
-
-gulp
-
-The build tool creates a new project directory: `web-starter-kit/dist`.
+In `web-starter-kit/app`, run the `gulp` tool to build the current project.
+The first time you run this tool,
+it creates the project directory: `web-starter-kit/dist`.
 
 ## Review the build output
 
-Here's a snapshot of the project files in the `dist` directory:
+Here's a snapshot of the project files in the `web-starter-kit/dist` directory:
 
-IMAGE PLACEHOLDER
+<img src="imgs/structure.png" class="center" alt="project files in dist directory">
 
 ## Stage the build output
 
 From the web-starter-kit folder,
 run the `gulp watch` tool to open up a local staged version of the project
-(for more information on this tool, see <a href="">Track Code Changes).
+(for more information on this tool,
+see <a href="https://developers.google.com/web/fundamentals/tools/code_debug.html">Track Code Changes</a>).
 
-The tool opens up the checked-out starter file, for example, `index.html`:
+The tool opens up the build version of your starter file, `index.html`:
 
-IMAGE PLACEHOLDER 
+<img src="imgs/index.png" class="center" alt="phone and desktop view of staged index.html">
 
 {% include modules/nextarticle.liquid %}
 
