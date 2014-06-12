@@ -1,8 +1,8 @@
 ---
 layout: landing
 title: "Multi-Device Tools"
-description: "Device capabilities and network availability vary greatly. Your development workflow needs to think in terms of finite resources. Use the Web Starter Kit to build an experience that works great across devices."
-introduction: "Not all devices are equal when it comes to CPU, GPU, and battery life. Often mobile devices are underpowered and subject to slow or unreliable connections. Use these guides to change your development workflow to account for finite resources. The Web Starter Kit provides the scaffolding and tools that get you most of the way."
+description: "Adjust your development workflow to think in terms of finite resources. Device capabilities and network availability vary greatly. Choose tools that help you build a site that is responsive and performant on all devices."
+introduction: "Not all devices are equal when it comes to CPU, GPU, and battery life. Often mobile devices are underpowered and subject to slow or unreliable connections. Use these guides to change your development workflow to account for finite resources. The Web Starter Kit provides the scaffolding, tools, and style guidelines that get you most of the way."
 id: multi-device-tools
 ---
 
