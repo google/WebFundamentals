@@ -46,7 +46,7 @@ If you have a menu, use the hamburger icon (three horizontal lines) and place it
 
 If you have a slide in menu, you have the choice of putting the menu on the left or right hand side.
 
-The top left corner is perceived by the user as where the most important elements of your UI lives, however it can also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
+The top left corner is perceived by the user as where the most important elements of your UI lives, however it can also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single-handedly.
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
 	<img class="g--half" src="images/appbar-menu-left.png">
@@ -59,7 +59,7 @@ The top left corner is perceived by the user as where the most important element
 
 ## Guidelines
 
-The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
+The App Bar is a set of principles that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
 	<img class="g--half" src="images/appbar-alt-1.png">
