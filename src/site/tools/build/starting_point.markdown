@@ -1,14 +1,14 @@
 ---
 layout: article
-title: "Build & Deploy"
+title: "Foundations and Building Blocks"
 description: "TBD."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
+  order: 1
 #collection: build-your-site
 key-takeaways:
-  deploy:
+  starter:
     - TBD.
 notes:
   placeholder:
@@ -20,7 +20,7 @@ notes:
 
 TBD.
 
-{% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
+{% include modules/takeaway.liquid list=page.key-takeaways.starter %}
 
 ## TBD
 

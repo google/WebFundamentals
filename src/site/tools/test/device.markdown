@@ -1,14 +1,14 @@
 ---
 layout: article
-title: "Build & Deploy"
+title: "Device Testing"
 description: "TBD."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
-#collection: build-your-site
+  order: 1
+collection: test
 key-takeaways:
-  deploy:
+  starter-kit:
     - TBD.
 notes:
   placeholder:
@@ -22,7 +22,19 @@ TBD.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
-## TBD
+## TBD.
+
+TBD.
+
+## Device emulation
+
+TBD.
+
+## TBD.
+
+TBD.
+
+## TBD.
 
 TBD.
 
