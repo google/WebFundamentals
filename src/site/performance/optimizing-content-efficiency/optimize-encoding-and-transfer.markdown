@@ -127,7 +127,8 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 All modern browsers support and automatically negotiate GZIP compression for all HTTP requests: our job is to ensure that the server is properly configured to serve the compressed resource when requested by the client.
 
 
-<table>
+<table class="table-4">
+<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Library</th>
