@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Build Your Site"
-description: "Use the Web Starter Kit to build an experience that works great across devices."
-introduction: "The Web Starter Kit provides the scaffolding and tools that get you most of the way."
+description: "Build a site that's responsive and performant. Use Chrome DevTools designated to build sites that work great across devices. Walk through the steps to build your site with the Web Starter Kit."
+introduction: "Build a site that's responsive and performant. Use Chrome DevTools designated to build sites that work great across devices. Walk through the steps to build your site with the Web Starter Kit."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
