@@ -49,8 +49,13 @@ remember:
       devices where both memory and processing is limited.
 related:
   optimize:
-    - <a href="../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization">Image optimization</a>
-    - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
+  -
+      title: "Image optimization"
+      href: performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization
+      section:
+        id: optimizing-content-efficiency
+        title: "Optimizing Content Efficiency"
+        href: performance/optimizing-content-efficiency/
 ---
 
 {% wrap content %}
@@ -137,7 +142,7 @@ it becomes visible, search engines may never see that content.  In addition,
 users who are looking for information they expect to see in the footer will
 never see the footer because new content is always loaded.
 
-{% include modules/related.liquid list=page.related.optimize %}
+{% include modules/related_guides.liquid inline=true list=page.related.optimize %}
 
 {% include modules/nextarticle.liquid %}
 
