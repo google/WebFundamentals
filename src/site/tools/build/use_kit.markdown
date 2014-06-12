@@ -6,7 +6,7 @@ introduction: "Before you write any code, get the starter files and tools you ne
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
+  order: 3
 collection: build-your-site
 key-takeaways:
   starter-kit:

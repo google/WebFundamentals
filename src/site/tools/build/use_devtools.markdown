@@ -1,14 +1,14 @@
 ---
 layout: article
-title: "Foundations and Building Blocks"
+title: "Use Chrome DevTools to Debug Your Site"
 description: "TBD."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 1
+  order: 3
 collection: build-your-site
 key-takeaways:
-  starter:
+  deploy:
     - TBD.
 notes:
   placeholder:
@@ -20,7 +20,7 @@ notes:
 
 TBD.
 
-{% include modules/takeaway.liquid list=page.key-takeaways.starter %}
+{% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
 ## TBD
 
