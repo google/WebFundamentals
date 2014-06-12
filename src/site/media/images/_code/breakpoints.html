@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript" src="picturefill-2.1.0.js" async></script>
+  <style type="text/css">
+    @media (max-width: 500px) {
+      .vp-small {
+        font-weight: bold;
+      }
+    }
+    @media (min-width: 500px) and (max-width: 600px) {
+      .vp-medium {
+        font-weight: bold;
+      }
+    }
+    @media (min-width: 600px) {
+      .vp-large {
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body role="main">
+  <h1>Using breakpoints in the <code>&lt;picture&gt;</code> element</h1>
+  <p>
+    <b>Note:</b> this sample uses the <a href="http://scottjehl.github.io/picturefill/">
+    picturefill</a> polyfill to provide backwards compatibility for browsers 
+    that do not support the &lt;picture&gt; element.
+  </p>
+  <!-- // [START picture] -->
+  <img src="/img/400.png" 
+       sizes="(min-width: 600px) 25vw, (min-width: 500px) 50vw, 100vw"
+       srcset="/img/100.png 100w, /img/200.png 200w, /img/400.png 400w,
+               /img/800.png 800w, /img/1600.png 1600w, /img/2000.png 2000w">
+  <!-- // [END picture] -->
+  <p class="vp-small">Viewport widths 0 to 499px:</p>
+  <ul class="vp-small">
+    <li>the image is 100% of the viewport width</li>
+  </ul>
+  <p class="vp-medium">Viewport widths 500px to 599px:</p>
+  <ul class="vp-medium">
+    <li>the image is 50% of the viewport width</li>
+  </ul>
+  <p class="vp-large">Viewport widths 600px and over:</p>
+  <ul class="vp-large">
+    <li>the image is 25% of the viewport width</li>
+  </ul>
+</body>
+</html>
