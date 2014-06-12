@@ -1,12 +1,12 @@
 ---
 layout: article
-title: "Set Up Your Development Environment"
+title: "Set Up Web Starter Kit"
 description: "Set up your development environment and quickly get up and running with the Web Starter Kit."
 introduction: "Before you write any code, get the starter files and tools you need to create a responsive and performant site. The Web Starter Kit comes with a responsive boilerplate and a set of tools that let you code and test live changes across devices."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 1
+  order: 3
 collection: set-up
 key-takeaways:
   starter-kit:
