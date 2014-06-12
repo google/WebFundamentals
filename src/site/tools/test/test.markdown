@@ -2,19 +2,18 @@
 layout: article
 title: "Test your site on multiple devices"
 description: "TBD."
+article:
+  written_on: 2014-05-29
+  updated_on: 2014-05-29
+  order: 1
+collection: test
 key-takeaways:
   starter-kit:
     - TBD.
 notes:
-  placeholder: 
+  placeholder:
     - TBD.
-article:
-  written_on: 2014-05-29
-  updated_on: 2014-05-29
-  order: 4
-collection: multi-device-tools
 ---
-
 {% wrap content %}
 
 {% include modules/toc.liquid %}
