@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Use Chrome DevTools to Debug Your Site"
+title: "Debug with Chrome DevTools"
 description: "TBD."
 article:
   written_on: 2014-05-29
