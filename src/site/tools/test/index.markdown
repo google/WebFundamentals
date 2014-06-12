@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Types of Testing"
-description: "TBD."
+description: "Learn about the types of testing directed toward building responsive and performant sites across multiple devices. There's no substitute as good as testing with real devices, but there are testing tools that come close."
 introduction: "TBD."
 article:
   written_on: 2014-05-29
