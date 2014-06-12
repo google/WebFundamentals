@@ -1,12 +1,12 @@
 ---
 layout: article
-title: "Write and Debug Your Code"
+title: "Incorporate Web Starter Kit into Your Workflow"
 description: "Make responsive and performance checks a natural part of your developer workflow."
 introduction: "Use this guide to learn how to track code changes, apply responsive styles, optimize, and debug across devices. The Web Starter Kit starter files and tools provide most of what you need to incorporate responsive and performance checks as part of your developer workflow."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
+  order: 3
 collection: workflow
 key-takeaways:
   code:
