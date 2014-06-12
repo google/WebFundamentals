@@ -104,7 +104,7 @@ height, only pixel density is well supported today.  To balance current
 behavior with future features, stick with simply providing the 2x image in
 the attribute.
 
-## Art direction in responsive images
+## Art direction in responsive images with `picture`
 
 Changing images based on device characteristics, also known as art direction
 can be accomplished using the picture element.  The `picture` element defines
