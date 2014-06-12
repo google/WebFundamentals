@@ -15,7 +15,7 @@ article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
   order: 1
-collection: multi-device-tools
+collection: tools
 ---
 {% wrap content %}
 

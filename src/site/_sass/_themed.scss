@@ -36,6 +36,18 @@
     }
   }
 
+  .theme--tools & {
+    color: $colorMedia;
+
+    &.divider-icon:before {
+      color: $colorTools;
+    }
+
+    &.divider-icon:after {
+      color: $colorToolsSecondary;
+    }
+  }
+
   .theme--user-input & {
     color: $colorUser;
 
@@ -73,6 +85,9 @@
   .theme--user-input &,
   .theme--user-input &.next-lessons:before { background-color: $colorUser; }
 
+  .theme--tools &,
+  .theme--tools &.next-lessons:before { background-color: $colorTools; }
+
   .theme--performance &,
   .theme--performance &.next-lessons:before { background-color: $colorPerformance; }
 
@@ -86,6 +101,8 @@
 
   .theme--user-input &:hover { color: $colorUser; }
 
+  .theme--tools &:hover { color: $colorTools; }
+
   .theme--performance &:hover { color: $colorPerformance; }
 
 }
@@ -95,6 +112,8 @@
   .theme--multi-device-layouts &:hover { color: $colorLayoutsSecondary; }
 
   .theme--introduction-to-media &:hover { color: $colorMediaSecondary; }
+
+  .theme--tools &:hover { color: $colorToolsSecondary; }
 
   .theme--user-input &:hover { color: $colorUserSecondary; }
 
@@ -113,6 +132,8 @@
 
   .article--introduction-to-media & { color: $colorMedia; }
 
+  .article--tools & { color: $colorTools; }
+
   .article--user-input & { color: $colorUser; }
 
   .article--performance & { color: $colorPerformance; }
@@ -127,6 +148,8 @@
 
   .nav-theme--introduction-to-media &:hover { color: $colorMedia; }
 
+  .nav-theme--tools &:hover { color: $colorTools; }
+
   .nav-theme--user-input &:hover { color: $colorUser; }
 
   .nav-theme--performance &:hover { color: $colorPerformance; }
@@ -139,6 +162,8 @@
 
   .nav-theme--introduction-to-media & { color: $colorMedia; }
 
+  .nav-theme--tools & { color: $colorTools; }
+
   .nav-theme--user-input & { color: $colorUser; }
 
   .nav-theme--performance & { color: $colorPerformance; }
@@ -150,6 +175,8 @@
   .nav-theme--multi-device-layouts & { background-color: $colorLayouts; }
 
   .nav-theme--introduction-to-media & { background-color: $colorMedia; }
+
+  .nav-theme--tools & { background-color: $colorTools; }
 
   .nav-theme--user-input & { background-color: $colorUser; }
 
