@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Create a Workflow"
-description: "A good development workflow automates build tasks and tests your site's responsiveness and performance. Learn what a build process is, the tasks to automate, and how to incorporate the Web Starter Kit into your workflow."
-introduction: "A good development workflow automates build tasks and tests your site's responsiveness and performance. Learn what a build process is, the tasks to automate, and how to incorporate the Web Starter Kit into your workflow."
+description: "A good development workflow automates build tasks and tests responsiveness and performance. Learn what a build process is, the tasks to automate, and how to incorporate the Web Starter Kit into your workflow."
+introduction: "A good development workflow automates build tasks and tests responsiveness and performance. Learn what a build process is, the tasks to automate, and how to incorporate the Web Starter Kit into your workflow."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
