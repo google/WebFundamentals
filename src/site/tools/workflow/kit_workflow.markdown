@@ -1,8 +1,13 @@
 ---
 layout: article
-title: "Write and Debug Your Code"
+title: "Incorporate Web Starter Kit into Your Workflow"
 description: "Make responsive and performance checks a natural part of your developer workflow."
 introduction: "Use this guide to learn how to track code changes, apply responsive styles, optimize, and debug across devices. The Web Starter Kit starter files and tools provide most of what you need to incorporate responsive and performance checks as part of your developer workflow."
+article:
+  written_on: 2014-05-29
+  updated_on: 2014-05-29
+  order: 3
+collection: workflow
 key-takeaways:
   code:
     - Don't wait to test how your site looks across devices; check your site's responsiveness as you code.
@@ -22,13 +27,7 @@ notes:
     - There's no substitute for a real device. Access the external staging address on a phone and tablet that you keep handy for debugging purposes. If you're limited to a desktop, there are other ways to test as you code which are covered in <a href="">Device Emulation</a>.
   network:
     - External devices must be on the same network as your development machine to accesses the external address.
-article:
-  written_on: 2014-05-29
-  updated_on: 2014-05-29
-  order: 3
-collection: tools
 ---
-
 {% wrap content %}
 
 {% include modules/toc.liquid %}

@@ -1,22 +1,21 @@
 ---
 layout: article
-title: "Set Up Your Development Environment"
-description: "Set up your development environment and quickly get up and running with the Web Starter Kit."
+title: "Build Your Site with Web Starter Kit"
+description: "Quickly get up and running with the Web Starter Kit."
 introduction: "Before you write any code, get the starter files and tools you need to create a responsive and performant site. The Web Starter Kit comes with a responsive boilerplate and a set of tools that let you code and test live changes across devices."
+article:
+  written_on: 2014-05-29
+  updated_on: 2014-05-29
+  order: 3
+collection: build-your-site
 key-takeaways:
   starter-kit:
     - Decide how much UX you want to inherit from the Web Starter Kit. Do you want a responsive layout or just a very basic boilerplate?
     - The Web Starter Kit tools are optional, but if you don't have a set of workflow tools, use them.
 notes:
-  command-line: 
+  command-line:
     - Most of your interactions with the Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
-article:
-  written_on: 2014-05-29
-  updated_on: 2014-05-29
-  order: 2
-collection: tools
 ---
-
 {% wrap content %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}

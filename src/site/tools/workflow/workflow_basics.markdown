@@ -3,19 +3,19 @@ layout: article
 title: "Developer Workflow Basics"
 description: "If your existing developer workflow wasn't created with multiple devices in mind, change is inevitable. Start with the basics."
 introduction: "It's easy to get overwhelmed when you're trying to figure out how to adjust your workflow to cover the wide range of platforms and devices. The goal of these docs and the Web Starter Kit is to recommend a workflow, starting point, and set of tools that you can use to developer for the multi-device web."
+article:
+  written_on: 2014-05-29
+  updated_on: 2014-05-29
+  order: 1
+collection: workflow
 key-takeaways:
   workflow-basics:
     - Performance and style must be considered at all stages in your workflow.
     - Choose scaffolding or boilerplate built with multi-device in mind.
     - Use tools that make it easy to debug, build, and test across lots of form factors.
 notes:
-  tbd: 
+  tbd:
     - TBD.
-article:
-  written_on: 2014-05-29
-  updated_on: 2014-05-29
-  order: 1
-collection: tools
 ---
 {% wrap content %}
 
