@@ -11,3 +11,9 @@ rel:
 collection: user-location
 introduction: ""
 ---
+
+{% wrap content %}
+
+{% include modules/toc.liquid %}
+
+{% endwrap %}

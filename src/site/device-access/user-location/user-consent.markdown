@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Obtain User's Consent"
+title: "Efficiently obtain the user's consent"
 description: ""
 article:
   written_on: 2014-01-01
@@ -11,3 +11,9 @@ rel:
 collection: user-location
 introduction: ""
 ---
+
+{% wrap content %}
+
+{% include modules/toc.liquid %}
+
+{% endwrap %}
