@@ -9,17 +9,17 @@ article:
   order: 1
 collection: set-up
 key-takeaways:
-  tbd:
+  editor:
     - Choose an editor that lets you customize short-cuts and has lots of plugins to help you write better code.
     - Install a package manager; seriously. Install it now.
     - Use package manager to install plugins to make you a better coder; start with recommendations in this guide.
 notes:
   blog:
-    - Though focused on the Sublime text editor, this <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> does a good job capturing how to get the most out of a your editor.
+    - This <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> is an approachable overview on how to get to know and love Sublime. Most of the topics are relevant to any text editor, not just Sublime.
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.tbd %}
+{% include modules/takeaway.liquid list=page.key-takeaways.editor %}
 
 {% include modules/toc.liquid %}
 
@@ -38,7 +38,8 @@ Top editors also let you customize commands and keyboard shortcuts
 so that you only have to remember your own implementations.
 
 <a href="http://www.sublimetext.com/">Sublime</a> and
-<a href="http://www.vim.org/">Vim</a> are two great editors that have lots of command line support
+<a href="http://www.vim.org/">Vim</a> are two great editors
+with editor command support
 and tons of plugins to help you write better code faster.
 They also have package managers that make it easy to install new plugins.
 Sublime plugins trend towards the web developer,
@@ -57,11 +58,21 @@ Here's a sneak peak at what you can do with the
 
 <img src="imgs/package_control.png" class="center" alt="project files in dist directory">
 
-## Recommended Plug-ins
+## There's a Plugin for that
 
-Once you've installed the package manager,
-you have access to all available plugins.
-To install a plugin,
+Plugins help you stay more productive.
+What are the things you keep having to
+go back out to other tools to do?
+
+Linting - there's a plugin for that.
+Shwoing what changes haven't been committed - 
+there are plugins for that.
+Integration with other tools,
+such as GitHub,
+there are plugins for that.
+
+Package managers make it very easy to find, install, and update plugins.
+In the Sublime editor,
 open your package manager
 (`ctrl+shift+p`),
 enter 'Install Package', and
@@ -74,6 +85,10 @@ Here's a subset of recommended plugins, some popular, some not yet, but they sho
 
 <table class="table-2 tc-heavyright">
   <thead>
+    <tr>
+      <td data-th="plugin"><a href="https://github.com/sindresorhus/sublime-autoprefixer">Autoprefixer</a></td>
+      <td data-th="Description">Uses <a href="https://github.com/ai/autoprefixer">Autoprefixer library</a> to prefix properties and values according to the <a href="http://caniuse.com/">Can I Use database</a>.</td>
+    </tr>
     <tr>
       <th data-th="plugin">Plugin</th>
       <th data-th="Description">Description</th>
