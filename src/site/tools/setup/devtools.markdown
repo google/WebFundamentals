@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Set Up Developer Tools"
-description: "TBD."
-introduction: "TBD."
+description: "Find out which developer tools are essential to your development workflow, including build, live reloading, device emulation, and remote debugging tools."
+introduction: "Find out which developer tools are essential to your development workflow, including build, live reloading, device emulation, and remote debugging tools."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -21,36 +21,47 @@ notes:
 
 {% include modules/toc.liquid %}
 
-## TBD
+## Tools you need and why
 
-TBD.
+Link to tooling slideck.
 
-<table class="table-2 tc-heavyright">
-  <thead>
-    <tr>
-      <th data-th="starterfile">Starter File</th>
-      <th data-th="Description">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="starterfile"><a href="">index.html</a></td>
-      <td data-th="Description">Default starting point. Includes a slide-out menu.</td>
-    </tr>
-    <tr>
-      <td data-th="starterfile"><a href="">alt-layout.html</a></td>
-      <td data-th="Description">Horizontal navigation. To choose this as your starting point, remove the alternative starter files.</td>
-    </tr>
-    <tr>
-      <td data-th="starterfile"><a href="">basic.html</a></td>
-      <td data-th="Description">Very basic starting point. No navigation. Simple, but responsive styles. To choose this as your starting point, remove the alternative starter files.</td>
-    </tr>
-  </tbody>
-</table>
+## Set up build tools
 
-## TBD
+Build tooling-- lots out there, we've chosen Gulp in WSK
+(others include Grunt, Broccoli, Make)
 
-TBD.
+## Set up live reloading
+
+LiveReload. Navigate to same URL, synchronize scrolls, clicks, navigation (GhostLab),
+and test across devices, actual, real devices.
+
+Get Live Reloads on edit - Grunt + LiveReload (Web Starter Kit)
+
+## Set up device emulation
+
+Emulation tool needs to be covered here-- set up anyway.
+Should be used at all times.
+
+Emulate viewport, touch events, orientation, user agent, geolocation
+
+## Set up remote debugging
+
+Chrome DevTools, Weinre comparison?
+Firefox for Android + ADB, Safari remote debugging
+
+chrome://inspect Raw USB debugging
+
+Remote debugging + timeline
+Rendering performance tooling
+
+## Set up screencast and recording tools
+
+Take screenshots so that you can meticulously check the same
+page on different devices. Do we want to include link to Remote Preview?
+
+Tool to get device screenshots
+Adobe Edge for screenshots (what about new DevTools screencasting?)
+Related to this-- record traffic sessions and playback to check performance, etc.
 
 {% include modules/nextarticle.liquid %}
 
