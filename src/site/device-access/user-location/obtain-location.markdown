@@ -16,7 +16,10 @@ rel:
 collection: user-location
 key-takeaways:
   geo: 
-    -  asd
+    -  Check for Compatibility before you use the API
+    -  Prefer a coarse location, over a fine location
+    -  Always handle errors
+    -  Don't poll for the data too frequently to save the user's battery
 
 ---
 
@@ -35,6 +38,9 @@ method whenever you request a location.
 
 ## Check for Compatibility
 
+The geolocation API is now supported in the majority of browsers, but it is
+good practice to always check for support before you do anything.
+
 You can easily check for compatibility by testing for the presence of the
 geolocation object:
 
@@ -50,9 +56,9 @@ else {
 
 ## Determine the User's Current Location
 
-getCurrentPosition() will asynchronously report on the user's current
-location. Call it as soon as the page loads, so that it will correctly
-populate - and save for later - the starting position:
+The geolocation API offeres a simple 'one-shot' method to obtain the users
+location  `getCurrentPosition()`.  A call to this method will asynchronously
+report on the user's  current location.
 
 {% highlight javascript %}
 window.onload = function() {
@@ -70,11 +76,10 @@ permissions, the browser will typically check for user consent. Depending on
 the browser, there may also be preferences to always allow - or disallow -
 permission lookups, in which case the confirmation process will be bypassed.
 
-Having run this code, you should now be able to see the starting position.
 Depending on the location device your browser is using, the position object
 might actually contain a lot more than just latitude and longitude, e.g. it
-could include an altitude or a direction. You can explore further by logging
-the position variable to the console.
+could include an altitude or a direction.  You can't tell what extra information
+that location system will use until it actually returns the data.
 
 ## Testing Geolocation with your site
 
@@ -87,27 +92,22 @@ and simulating geolocation not being available via the overrides menu.
 
 <img src="images/emulategeolocation.png">
 
-Overriding geolocation positions
-
-Navigate to the Geolocation demo
-
-Allow the page access to your position. This should hopefully be accurate.
-
-Open up the overrides menu in the DevTools
-
-Check “Override Geolocation” then enter in Lat = 41.4949819 and Lat = -0.1461206
-
-
-
-Refresh the page. The demo will now use your overridden positions for geolocation
+*  Open up the overrides menu in the DevTools
+*  Check “Override Geolocation” then enter in Lat = 41.4949819 and Lat = -0.1461206
+*  Refresh the page and it will now use your overridden positions for geolocation
 
 ## Decide how accuratly you need the location
+
+TODO: Note - Fused Location
 
 ## Set a timeout
 
 ##  Handle Errors
 
-Unfortunately, not all location lookups are successful. Perhaps a GPS could not be located or the user has suddenly disabled location lookups. A second, optional, argument to getCurrentPosition() will be called in the event of an error, so you can notify the user inside the callback:
+Unfortunately, not all location lookups are successful. Perhaps a GPS could
+not be located or the user has suddenly disabled location lookups. A second,
+optional, argument to getCurrentPosition() will be called in the event of an
+error, so you can notify the user inside the callback:
 
 {% highlight javascript %}
 window.onload = function() {
