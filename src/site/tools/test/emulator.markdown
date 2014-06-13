@@ -24,7 +24,7 @@ TBD.
 
 ## TBD.
 
-TBD.
+Emulate viewport, touch events, orientation, user agent, geolocation
 
 ## Device emulation
 

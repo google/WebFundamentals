@@ -6,8 +6,8 @@ introduction: "It's easy to get overwhelmed when you're trying to figure out how
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 1
-collection: workflow
+  order: 5
+###collection: workflow
 key-takeaways:
   workflow-basics:
     - Performance and style must be considered at all stages in your workflow.

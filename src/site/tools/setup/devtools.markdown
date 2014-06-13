@@ -11,12 +11,16 @@ collection: set-up
 key-takeaways:
   devtools:
     - Make the command line work for you; create aliases that are easy to remember and fast to type.
-    - 
+    - Don't check responsive layouts manually; get a tool to resize and capture screen views.
+    - Set up build tools that automatically optimize, build, and live reload your testing url.
+    - Don't wait to see your site on a device; use device emulation and remote debugging now not later. 
 notes:
   alias:
     - Check out this good use case for aliases: list of <a href="http://tjholowaychuk.tumblr.com/post/26904939933/git-extras-introduction-screencast"> Git aliases</a>.
   firefox:
     - To test on Firefox browser, enable <a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">Responsive Design View</a>.
+  grunt:
+    - Check out this easy-to-follow <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">blog post on using the grunt build tools</a>-- good resource if your new to build tools.
 ---
 {% wrap content %}
 
@@ -93,35 +97,46 @@ press the Responsive Inspect icon in the extension tool bar.
 
 ## Set up build and live reloading tools
 
-Build tooling-- lots out there, we've chosen Gulp in WSK
-(others include Grunt, Broccoli, Make)
+Build tools streamline the process of transferring source files to a target result
+(examples:
+<a href="http://gruntjs.com/">Grunt</a>, 
+<a href="https://github.com/broccolijs/broccoli">Broccoli</a>,
+<a href="http://www.gnu.org/software/make/">Make</a>,
+and <a href="http://gulpjs.com/">Gulp</a>).
+You want build tools that keep track of your site's performance;
+they optimize source files automatically and measure your site's performance.
 
-Obvious-- build tools builds your assets into a distribution folder,
-something that you can then host somewhere.
+Live reloading tools apply source file changes
+(CSS, HTML, JavaScript, image changes)
+to your site live,
+no reloading required, compilers, templating just works
+(examples:
+<a href="http://livereload.com/">LiveReload</a>
+<a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>). 
+You want live reloading tools that let you navigate to the same URL
+on different devices. Scrolling, clicks, and navigation are synchronized.
 
-What you need to think about now in build tools:
-automatic optmization of all files
+The Web Starter Kit does it all:
+watches for changes, optmizes files, builds your site,
+and reloads the browser live.
+The next guide provides step-by-step instructions
+on how to set up and Web Starter Kit.
 
-Hook into live reloading-- very important to be able to automatically push changes live to urls.
+{% include modules/remember.liquid title="Note" list=page.notes.grunt %}
 
-Performance is key ingredient for building for multi-device web.
-Build tools not only should optimize for you, but also report performance changes
-as you code 
-(run builds and check what the exact term of stuff constantly being reported by build tools).
+## Set up multi-device debugging now, not later
 
-LiveReload. Navigate to same URL, synchronize scrolls, clicks, navigation (GhostLab),
-and test across devices, actual, real devices.
+Search for "device emulator";
+lots and lots of options out there for emulating your site
+on any kind of device.
+If you've got one and it does what you need,
+then move on to the next topic.
 
-Adobe Edge Inspect: http://html.adobe.com/edge/inspect/
+If you don't,
+use the Chrome DevTools emulator:
 
-## Set up device emulation
-
-Emulation tool needs to be covered here-- set up anyway.
-Should be used at all times.
-
-Emulate viewport, touch events, orientation, user agent, geolocation
-
-## Set up remote debugging
+Learn the all the tricks for using this emulator
+in <a href="">Emulation Testing</a>.
 
 Chrome DevTools, Weinre comparison?
 

@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Build Your Site"
-description: "Build your multi-device site from the ground up. Learn about Chrome DevTools designated to build sites that work great across devices. Walk through the steps to build your site with the Web Starter Kit."
-introduction: "Build your multi-device site from the ground up. Learn about Chrome DevTools designated to build sites that work great across devices. Walk through the steps to build your site with the Web Starter Kit."
+description: "Build your multi-device site from the ground up. Learn what a build process is, how to build a site with the Web Starter Kit, and how to debug with Chrome Developer Tools."
+introduction: "Build your multi-device site from the ground up. Learn what a build process is, the tasks to automate, and how to build a site with the Web Starter Kit. Learn how to debug with Chrome Developer Tools."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
