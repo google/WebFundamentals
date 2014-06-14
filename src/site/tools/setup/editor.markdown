@@ -65,7 +65,7 @@ What are the things you keep having to
 go back out to other tools to do?
 
 Linting - there's a plugin for that.
-Shwoing what changes haven't been committed - 
+Showing what changes haven't been committed - 
 there are plugins for that.
 Integration with other tools,
 such as GitHub,
@@ -86,15 +86,15 @@ Here's a subset of recommended plugins, some popular, some not yet, but they sho
 <table class="table-2 tc-heavyright">
   <thead>
     <tr>
-      <td data-th="plugin"><a href="https://github.com/sindresorhus/sublime-autoprefixer">Autoprefixer</a></td>
-      <td data-th="Description">Uses <a href="https://github.com/ai/autoprefixer">Autoprefixer library</a> to prefix properties and values according to the <a href="http://caniuse.com/">Can I Use database</a>.</td>
-    </tr>
-    <tr>
       <th data-th="plugin">Plugin</th>
       <th data-th="Description">Description</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td data-th="plugin"><a href="https://github.com/sindresorhus/sublime-autoprefixer">Autoprefixer</a></td>
+      <td data-th="Description">Uses <a href="https://github.com/ai/autoprefixer">Autoprefixer library</a> to prefix properties and values according to the <a href="http://caniuse.com/">Can I Use database</a>.</td>
+    </tr>
     <tr>
       <td data-th="plugin"><a href="http://weslly.github.io/ColorPicker/">ColorPicker</a></td>
       <td data-th="Description">Pick any color from the palette.</td>

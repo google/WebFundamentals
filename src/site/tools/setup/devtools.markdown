@@ -16,11 +16,13 @@ key-takeaways:
     - Don't wait to see your site on a device; use device emulation and remote debugging now not later. 
 notes:
   alias:
-    - Check out this good use case for aliases: list of <a href="http://tjholowaychuk.tumblr.com/post/26904939933/git-extras-introduction-screencast"> Git aliases</a>.
+    - Check out this list of <a href="http://tjholowaychuk.tumblr.com/post/26904939933/git-extras-introduction-screencast"> Git aliases</a>.
   firefox:
     - To test on Firefox browser, enable <a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">Responsive Design View</a>.
   grunt:
-    - Check out this easy-to-follow <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">blog post on using the grunt build tools</a>-- good resource if your new to build tools.
+    - Check out this <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">blog post on using the grunt build tools</a>; good beginner's resource to web build tools.
+  windows:
+    - See these <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx">instructions for setting up Windows aliases</a>.
 ---
 {% wrap content %}
 
@@ -31,13 +33,15 @@ notes:
 ## Tools you need and why
 
 There's no shortage of options when it comes to tools in the web development world.
-There's often so much choice, it's daunting, and so you try and find the simplest
-path to building a great site and stick with it as long as it's working for you.
+There's often so much choice, it's daunting.
+You find the simplest path to building a great site and
+stick with it as long as it's working for you.
 
-If you want your site to work on smaller devices with less network reliability,
-you need to build tools to optimize performance,
-check your site's responsiveness,
-and push changes to a live url on many devices.
+But if you want your site to work on small devices
+with unreliable network connectivity,
+you must invest the time and effort it takes
+to learn how to use build tools that will optimize performance
+and check your site's responsiveness across devices.
 
 Tools for testing across devices include a combination of actual devices,
 device emulation, and device debugging tools.
@@ -48,8 +52,8 @@ But you need to do this and you need tools to help you make this as easy as poss
 
 ## Set up aliases for common commands
 
-Testing your site across devices takes time.
-You need to steal back that time any way you can.
+You need to save as much time as you can
+for the extra effort it takes to test across devices.
 If you are still looking at a list of command shortcuts every time
 you make your way into the terminal and/or
 you are manually typing the same long commands,
@@ -57,36 +61,34 @@ it's time to create some short-cuts.
 
 The easiest way create command-line short-cuts is to
 add aliases for common commands to your `bashrc` file.
-On Mac or Linux,
-(see these <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx">instructions for setting up Windows aliases</a>):
+On Mac or Linux:
 
-* From the command line anywhere, type `vim ~/.bashrc
-* Add a new alias, for example, `master = 'git checkout master'`
+* From the command line anywhere, type `vim ~/.bashrc`.
+* Add a new alias, for example, `master = 'git checkout master'`.
 * From your source directory, run `master`.
 
 Another slightly more advanced way to create short-cuts is
 to <a href="http://dotfiles.github.io/">store dotfiles in GitHub</a>.
 One major gain: your short-cuts won't be device dependent.
 
-{% include modules/remember.liquid title="Note" list=page.notes.alias %}
+{% include modules/remember.liquid title="Note" list=page.notes.windows %}
 
 ##Set up responsive tools
 
-Checking your site's responsiveness needn't be a manual task
-of resizing the browser and watching for changes in behavior.
+Checking your site's responsiveness needn't be a manual task.
 Get at least one tool to resize the browser,
 and preferably one with image capturing
 so that you can compare multiple views.
 
 For Chrome,
-<a href="http://outof.me/responsive-inspector-beta-released/">Responsive Inspect Chrome extension
+<a href="http://outof.me/responsive-inspector-beta-released/">Responsive Inspect Chrome extension</a>
 visually shows the media queries of an opened site,
 lets you resize the site in the browser,
 and take a screenshot.
 
 <img src="imgs/inspector.png" class="center" alt="Responsive Inspector Chrome extension">
 
-To set-up and use the extension:
+To set up and use the extension:
 
 * <a href="https://chrome.google.com/webstore/detail/responsive-inspector/memcdolmmnmnleeiodllgpibdjlkbpim?hl=en">Download</a> the extension from the Chrome Web Store.
 * On any opened site,
@@ -119,16 +121,15 @@ on different devices. Scrolling, clicks, and navigation are synchronized.
 The Web Starter Kit does it all:
 watches for changes, optmizes files, builds your site,
 and reloads the browser live.
-The next guide provides step-by-step instructions
-on how to set up and Web Starter Kit.
+Follow the instructions in the
+<a href="https://developers.google.com/web/fundamentals/tools/setup/setup_kit.html">next guide</a>
+to set up the Web Starter Kit.
 
 {% include modules/remember.liquid title="Note" list=page.notes.grunt %}
 
 ## Set up emulation and debugging tools
 
-Set up debugging tools for multiple devices at the start of your project;
-don't wait.
-
+Don't put off debugging your site across multiple projects.
 A very simple first step is to set up a device emulator
 that integrates with debugging tools.
 Using a device emulator,
@@ -145,8 +146,8 @@ Eventually, preferably as soon as possible,
 you must debug your site on actual devices.
 Remote debugging tools let you debug your site on a desktop
 and see changes on remote devices.
-
-Here's a brief comparison of remote debugging options: 
+Here's a brief comparison of remote debugging options,
+with links to set-up documentation: 
 
 <table class="table-2 tc-heavyright">
   <thead>
@@ -157,24 +158,20 @@ Here's a brief comparison of remote debugging options:
   </thead>
   <tbody>
     <tr>
-      <td data-th="tool"><a href="">Chrome DevTools Remote Debugging</td>
-      <td data-th="Description">TBD.</td>
+      <td data-th="tool"><a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome DevTools Remote Debugging</td>
+      <td data-th="Description">Use Chrome DevTools on your development machine to inspect, debug, and analyze browser tabs and WebViews on your Android device. Learn how to use Chrome remote debugging in <a href="https://developers.google.com/web/fundamentals/tools/build/use_devtools.html">Debug with Chrome DevTools</a>.</td>
     </tr>
     <tr>
-      <td data-th="tool"><a href="">Weinre</a></td>
-      <td data-th="Description">TBD.</td>
+      <td data-th="tool"><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Installing.html">Weinre</a></td>
+      <td data-th="Description">Remote debugger for web pages. Debugging tools work on Chrome and Safari browsers. Test web pages on Android Browser, iOS Mobile Safari application, and PhoneGap/Cordova.</td>
     </tr>
     <tr>
-      <td data-th="tool"><a href="">Firefox for Android + ADB</td>
-      <td data-th="Description">TBD.</td>
+      <td data-th="tool"><a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">Firefox for Android + ADB</td>
+      <td data-th="Description">Inspect or debug code running in Firefox for Android over USB.</td>
     </tr>
     <tr>
-      <td data-th="tool"><a href="">Safari remote debugging</a></td>
-      <td data-th="Description">TBD.</td>
-    </tr>
-    <tr>
-      <td data-th="tool"><a href="">chrome://inspect Raw USB debugging</a></td>
-      <td data-th="Description">TBD.</td>
+      <td data-th="tool"><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html#//apple_ref/doc/uid/TP40007874-CH2-SW1">Safari Web Inspector - Safari on iOS</a></td>
+      <td data-th="Description">Debug web content on iOS device directly from your desktop.</td>
     </tr>
   </tbody>
 </table>
