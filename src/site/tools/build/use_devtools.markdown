@@ -18,7 +18,8 @@ notes:
 
 {% include modules/toc.liquid %}
 
-TBD.
+Remote debugging + timeline
+Rendering performance tooling
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 

@@ -124,30 +124,60 @@ on how to set up and Web Starter Kit.
 
 {% include modules/remember.liquid title="Note" list=page.notes.grunt %}
 
-## Set up multi-device debugging now, not later
+## Set up emulation and debugging tools
 
-Search for "device emulator";
-lots and lots of options out there for emulating your site
-on any kind of device.
-If you've got one and it does what you need,
-then move on to the next topic.
+Set up debugging tools for multiple devices at the start of your project;
+don't wait.
 
-If you don't,
-use the Chrome DevTools emulator:
+A very simple first step is to set up a device emulator
+that integrates with debugging tools.
+Using a device emulator,
+you can project your site on any screen size,
+debug the code,
+and the changes are automatically visible
+in the device emulator.
+Chrome DevTools has a device emulator built in;
+learn how to use the Chrome DevTools emulator
+in <a href="https://developers.google.com/web/fundamentals/tools/test/emulator.html">Emulation Testing</a>.
 
-Learn the all the tricks for using this emulator
-in <a href="">Emulation Testing</a>.
+Emulation is a good start, but it's no substitute for the real thing.
+Eventually, preferably as soon as possible,
+you must debug your site on actual devices.
+Remote debugging tools let you debug your site on a desktop
+and see changes on remote devices.
 
-Chrome DevTools, Weinre comparison?
+Here's a brief comparison of remote debugging options: 
 
-Adobe Edge Inspect: http://html.adobe.com/edge/inspect/
-
-Firefox for Android + ADB, Safari remote debugging
-
-chrome://inspect Raw USB debugging
-
-Remote debugging + timeline
-Rendering performance tooling
+<table class="table-2 tc-heavyright">
+  <thead>
+    <tr>
+      <th data-th="tool">Remote Debugging Tool</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="tool"><a href="">Chrome DevTools Remote Debugging</td>
+      <td data-th="Description">TBD.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="">Weinre</a></td>
+      <td data-th="Description">TBD.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="">Firefox for Android + ADB</td>
+      <td data-th="Description">TBD.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="">Safari remote debugging</a></td>
+      <td data-th="Description">TBD.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="">chrome://inspect Raw USB debugging</a></td>
+      <td data-th="Description">TBD.</td>
+    </tr>
+  </tbody>
+</table>
 
 {% include modules/nextarticle.liquid %}
 
