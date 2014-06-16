@@ -50,7 +50,7 @@
   // This element represents the lesson icon
   &:after {
     @include medium {
-      content: $icon-lessons;
+      content: $icon-guides;
       font-family: $fontIcon;
       font-size: 150px;
 
