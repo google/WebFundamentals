@@ -37,7 +37,14 @@ method whenever you request a location.
 
 ## When to use Geolocation
 
-TBD.  List of use-good use cases.
+
+*  Find where the user is closet to a physical location of yours to tailor 
+   the user experience
+*  Tailor information (such as news) to the users location
+*  Show the position of a user on a map
+*  Tag data created inside your application with the users location 
+   (i.e, geo-tagging a picture)
+
 
 ## Check for Compatibility
 
