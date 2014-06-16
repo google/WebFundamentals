@@ -24,6 +24,18 @@
     }
   }
 
+  .theme--device-access & {
+    color: $colorDevice;
+
+    &.divider-icon:before {
+      color: $colorDevice;
+    }
+
+    &.divider-icon:after {
+      color: $colorDeviceSecondary;
+    }
+  }
+
   .theme--introduction-to-media & {
     color: $colorMedia;
 
@@ -79,6 +91,9 @@
   .theme--multi-device-layouts &,
   .theme--multi-device-layouts &.next-lessons:before { background-color: $colorLayouts; }
 
+  .theme--device-access &,
+  .theme--device-access &.next-lessons:before { background-color: $colorDevice; }
+
   .theme--introduction-to-media &,
   .theme--introduction-to-media &.next-lessons:before { background-color: $colorMedia; }
 
@@ -97,6 +112,8 @@
 
   .theme--multi-device-layouts &:hover { color: $colorLayouts; }
 
+  .theme--device-access &:hover { color: $colorDevice; }
+
   .theme--introduction-to-media &:hover { color: $colorMedia; }
 
   .theme--user-input &:hover { color: $colorUser; }
@@ -110,6 +127,8 @@
 .themed--hover-secondary {
 
   .theme--multi-device-layouts &:hover { color: $colorLayoutsSecondary; }
+
+  .theme--device-access &:hover { color: $colorDeviceSecondary; }
 
   .theme--introduction-to-media &:hover { color: $colorMediaSecondary; }
 
@@ -130,6 +149,8 @@
 
   .article--multi-device-layouts & { color: $colorLayouts; }
 
+  .article--device-access & { color: $colorDevice; }
+
   .article--introduction-to-media & { color: $colorMedia; }
 
   .article--tools & { color: $colorTools; }
@@ -146,6 +167,8 @@
 
   .nav-theme--multi-device-layouts &:hover { color: $colorLayouts; }
 
+  .nav-theme--device-access &:hover { color: $colorDevice; }
+
   .nav-theme--introduction-to-media &:hover { color: $colorMedia; }
 
   .nav-theme--tools &:hover { color: $colorTools; }
@@ -160,6 +183,8 @@
 
   .nav-theme--multi-device-layouts & { color: $colorLayouts; }
 
+  .nav-theme--device-access & { color: $colorDevice; }
+
   .nav-theme--introduction-to-media & { color: $colorMedia; }
 
   .nav-theme--tools & { color: $colorTools; }
@@ -173,6 +198,8 @@
 .themed--background {
 
   .nav-theme--multi-device-layouts & { background-color: $colorLayouts; }
+
+  .nav-theme--device-access & { background-color: $colorDevice; }
 
   .nav-theme--introduction-to-media & { background-color: $colorMedia; }
 
