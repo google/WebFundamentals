@@ -27,6 +27,8 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
+{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
+
 The API is device-agnostic; it doesn't care how the browser determines
 location, so long as clients can request and receive location data in a
 standard way. The underlying mechanism might be via GPS, wifi, or simply
