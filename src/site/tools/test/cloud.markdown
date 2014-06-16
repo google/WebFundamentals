@@ -5,8 +5,8 @@ description: "TBD."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 4
-#collection: test
+  order: 2
+collection: test
 key-takeaways:
   starter-kit:
     - TBD.
@@ -22,13 +22,27 @@ TBD.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
-## TBD.
+## What is cloud testing?
 
 Fortunately a number of real-time testing services have popped up allowing you
 to test a device with a specific operating system and browser in the cloud
 from the comfort of your browser window.
 Many even have support for not just testing remote sites
 but also those running on a local server via local tunneling.
+
+## What's the difference between emulators and simulators?
+
+From http://www.mobilexweb.com/emulators
+
+Generally speaking, an emulator is a piece of software that translates compiled code from an original architecture to the platform where it is running, such as the great MAME. In the mobile development world, a device emulator is a desktop application that emulates mobile device hardware and operating systems, allowing us to test and debug our applications and see how they are working. There are also operating system emulators that don’t represent any real device hardware but rather the operating system as a whole. These exist for Windows Mobile and Android.
+
+On the other hand, a simulator is a less complex application that simulates some of the behavior of a device, but does not emulate hardware and does not work over the real operating system. These tools are simpler and less useful than emulators. A simulator may be created by the device manufacturer or by some other company offering a simulation environment for developers.
+
+If you want to simulate iOS you will want to install XCode from the App Store.
+
+IMAGE PLACEHOLDER
+
+## Cloud testing services
 
 If you’re working on an open-source project,
 Sauce Labs are an excellent option as they’re free to use.
@@ -79,13 +93,9 @@ across browsers/devices,
 you’ll need a test runner that can run your test suite on these platforms.
 Some options for this include Testacular, Yeti and Thrill.
 
-## TBD.
+## Simulator testing
 
-TBD.
-
-## TBD.
-
-TBD.
+If you want to simulate iOS you will want to install XCode from the App Store.
 
 {% include modules/nextarticle.liquid %}
 
