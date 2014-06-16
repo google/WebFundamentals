@@ -5,7 +5,7 @@ description: "Device emulation is the next best thing to real device testing."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
+  order: 3
 collection: test
 key-takeaways:
   starter-kit:
