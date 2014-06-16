@@ -18,15 +18,15 @@ notes:
 
 {% include modules/toc.liquid %}
 
-TBD.
-
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
 ## TBD.
 
-TBD.
+In addition, if you want to simulate iOS you will want to install XCode from the App Store.
 
-## Device emulation
+IMAGE PLACEHOLDER
+
+## TBD
 
 TBD.
 
