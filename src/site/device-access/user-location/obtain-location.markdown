@@ -1,15 +1,15 @@
 ---
 layout: article
 title: "Obtain the user's current location"
-introduction: "The Geolocation API lets you find out where the user is and
-keep tabs on them as they move around, always with the user's consent. This
-functionality could be used as part of user queries, e.g. to guide someone to
-a destination point. It could also be used for 'geo-tagging' some content the
-user has created, e.g. to mark where a photo was taken."
-description: "The Geolocation API lets you find out where the user is and keep tabs on them as they move around, always with the user's consent."
+introduction: "The Geolocation API lets you find out where the user is, 
+  always with the user's consent. This functionality could be used as part 
+  of user queries, e.g. to guide someone to a destination point. It could
+  also be used for 'geo-tagging' some content the user has created, e.g. 
+  to mark where a photo was taken."
+description: "The Geolocation API lets you find out where the user is, always with the user's consent."
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-06-06
+  updated_on: 2014-06-06
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
@@ -26,7 +26,6 @@ key-takeaways:
 {% wrap content %}
 
 {% include modules/toc.liquid %}
-{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
 
 The API is device-agnostic; it doesn't care how the browser determines
 location, so long as clients can request and receive location data in a
@@ -36,7 +35,6 @@ is going to take some time, the API is asynchronous; you pass it a callback
 method whenever you request a location.
 
 ## When to use Geolocation
-
 
 *  Find where the user is closet to a physical location of yours to tailor 
    the user experience
