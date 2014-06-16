@@ -16,5 +16,7 @@ collection: getting-started
 
 {% wrap content%}
 
+<img src="images/finaloutput-@2x.jpg">
+
 {% endwrap %}
 
