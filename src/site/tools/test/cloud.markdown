@@ -42,10 +42,16 @@ If you want to simulate iOS you will want to install XCode from the App Store.
 
 IMAGE PLACEHOLDER
 
+## Simulator testing
+
+If you want to simulate iOS you will want to install XCode from the App Store.
+
 ## Cloud testing services
 
 If you’re working on an open-source project,
 Sauce Labs are an excellent option as they’re free to use.
+DeviceAnywhere
+Ghost Labs
 Otherwise you can sign up for a free account which comes with 30 minutes of manual testing.
 They have an extensive list of desktop browsers,
 some mobile browsers and also support a screenshot service for taking periodic shots
@@ -92,10 +98,6 @@ Pro-tip: for those more interested in running their unit tests
 across browsers/devices,
 you’ll need a test runner that can run your test suite on these platforms.
 Some options for this include Testacular, Yeti and Thrill.
-
-## Simulator testing
-
-If you want to simulate iOS you will want to install XCode from the App Store.
 
 {% include modules/nextarticle.liquid %}
 
