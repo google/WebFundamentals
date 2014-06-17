@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Real Device Testing"
-description: "There's no substitute for testing your site on real devices. But it can be cumbersome if you don't have the right tools. What you want is your target devices a click away from your testing site."
+description: "Always test on real devices. Don't waste time on manually setting up each testing device. Choose tools that let you test across many devices in one-click."
+introduction: "Always test on real devices. Don't waste time on manually setting up each testing device. Choose tools that let you test across many devices in one-click."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -9,10 +10,13 @@ article:
 collection: test
 key-takeaways:
   starter-kit:
-    - TBD.
+    - There's no substitute for real device testing. You must test on real devices.
+    - You don't need to dread the set-up and manual testing process anymore. Testing your site on real devices need only be a click away.
+    - Choose a testing solution that has live reloading. Change in one place and see those changes everywhere.
+    - Synchronized testing solution let you test user interaction on all devices at the same time.
 notes:
-  placeholder:
-    - TBD.
+  unit-tests:
+    - If interested in running unit tests across browsers/devices, you’ll need a test runner that canrun your test suite on these platforms. Some options for this include <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/">Yeti</a> and <a href="http://thrilljs.com/">Thrill</a>.
 ---
 {% wrap content %}
 
@@ -20,83 +24,111 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
-## Cross device testing
+## Set up device testing in one click
 
-<a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/">cross device testing</a>
-is important.
-Being able to sync clicks, scrolls, navigation between devices is important
-because you can see exactly what breaks and what visually needs improvement
-in your RWD design instead of after the fact.
+If you've started testing your site on different devices within the last two years,
+it's likely you've gone through set up steps for the different platforms
+multiple times.
 
-Ideally, you just want your target devices to be a click away.
-The Web Starter Kit makes this possible.
-Just navigate to local url and
-external url on any device.
+You've experienced the frustration of using your site on a device,
+seeing something wrong,
+having to switch back to your development environment,
+fix it, rebuild, push to each device again, maybe having to repeat some or all of the set-up steps.
 
-What Web Starter Kit gives you:
+Manual device testing isn't a practical workflow.
 
-Cross-device Synchronization
-Synchronize clicks, scrolls, forms and live-reload across multiple devices as you edit your project. Powered by BrowserSync.
+<img src="imgs/manual.png" class="center" alt="developer struggling to test on mobile manually">
 
-Live Browser Reloading and Performance optmization
-Reload the browser in real-time anytime an edit is made without the need for an extension.
-Compile Sass into CSS with ease, bringing support for variables, mixins and more.
-Minify and concatenate JavaScript, CSS, HTML and Images to help keep your pages lean.
+What you need is a tool that lets you connect to any device in one-click.
+Once connected to any device,
+changes made in your development environment are automatically pushed to connected devices.
 
-Built in HTTP Server
-A built in server for previewing your site means you can test your pages without messing with other tools.
-PageSpeed Insights Reporting
-Web performance metrics showing how well your site performs on mobile and desktop.
+The Web Starter Kit has a built in HTTP Server for previewing your site.
+This means that you can test your pages on any device without messing with other tools.
+So long as your development environment and devices can be on the same network,
+you can access the same local version of your site on any external devices.
 
-Pro-tip: If interested in running unit tests across browsers/devices, you’ll need a test runner that canrun your test suite on these platforms. Some options for this include Karma, Yeti and Thrill.
+## Live Browser Reloading
 
-It’s not always possible to own the devices you’re targeting, especially if you’re a freelancer or don’t work for a large company. There are thankfully an increasing number of
+Arguably the biggest frustration with testing on real devices is the inability
+to quickly fix a bug that you see on the real device in your source code.
+
+With live browser reloading,
+you don't need to access developer tools on your mobile device.
+As you change your source code,
+any instance of your site opened on any device is automatically reloaded live.
+
+The Web Starter Kit takes reloading that bit further.
+As you change your source code,
+the tools compile Sass into CSS,
+minify and concatenate JavaScript, CSS, HTML, and Images
+and push the optmized site.
+
+## Synchronize testing across devices
+
+Sync clicks, scrolls, and navigation between devices
+so you can see exactly what breaks and what visually needs improvement.
+
+Powered by <a href="http://browsersync.io/">BrowserSync</a>,
+the Web Starter Kit synchronizes clicks, scrolls, forms and live-reload
+across multiple devices as you edit your project.
+
+## Summary of device testing tools
+
+Here's a summary of cross-device testing tools
+(inspired by
+<a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>):
+
+<table class="table-2 tc-heavyright">
+  <thead>
+    <tr>
+      <th data-th="tool">Cross-device Testing Tool</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="tool"><a href="https://github.com/google/web-starter-kit">Web Starter Kit</td>
+      <td data-th="Description">Point any device to local version of your site. Update source files and tool automatically optimizes and pushes content to browser. Synchronized testing across devices. Develop on Mac, Linux, or Windows platforms; it's free.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="http://blog.mattbailey.co/post/50337824984/grunt-synchronised-testing-between-browsers-devices">Grunt + LiveReload</a></td>
+      <td data-th="Description">Similar to Web Starter Kit, you can enable cross-device testing where each change you make in your editor causes a reload in any device you've opened your local site on. Some set-up required to get this going.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a></td>
+      <td data-th="Description">Loads the URL from your current Chrome tab onto any local device into a Webview inside the Adobe Edge Inspect app. You need to install each device manually and use specific clients on each single device. Requires a subscription to Creative Cloud.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="http://viljamis.com/blog/2012/remote-preview/">Remote Preview</td>
+      <td data-th="Description">You host the tool's html page and content and point your device's browser to it. The tool regular checks a file for a URL and loads it into an iframe. Light-weight tool great for chaining devices together and easily changing URL across all of them. Doesn't support synchronized testing though.</td>
+    </tr>
+    <tr>
+      <td data-th="tool"><a href="http://vanamco.com/ghostlab/">Ghostlab</a></td>
+      <td data-th="Description">Creates a local server from within the app for any directory.
+Any connected browser will sync interactions with the page. Only available for Mac; purchase fee.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Which devices you need and how to get them
+
+Brad Frost's
+<a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
+is a good starting point for deciding which devices you need
+and provides links to get those devices.
+But it's not always possible to own the devices you're targeting,
+especially if you’re a freelancer or don’t work for a large company.
+
+There are an increasing number of
 <a href="http://opendevicelab.com/">open device-labs</a> that can loan you hardware,
 but even if you do own your target devices,
 it can be a tedious process setting them all up for testing.
-DeviceAnywhere are another option that focus on the manual testing of real devices.
 
-## Sychronized testing across devices
+The next section covers a range of cloud testing services that can get you most of the way
+in terms of testing on a range of devices, without actually having those devices.
 
-If you’re already using Grunt (or Yeoman) and have LiveReload setup,
-it’s easy to update your workflow to enable cross-device testing
-where each change you make in your editor causes a reload
-in any of the devices you’ve opened up your local app on.
-For more information on how to set this up,
-see Matt Bailey’s write-up.
-
-## Improve flow from desktop to target device
-
-If you have access to some of your target devices,
-there are a number of tools aimed at improving the flow
-from desktop to your mobile devices.
-
-Remote Preview is an open source tool where you host its html page and content
-and point your device's browser to.
-The page will regular check a file for a URL and load it into an iframe.
-This is great for chaining devices together and easily changing URL
-across all of them.
-
-Adobe Edge Inspect is a tool which loads the url from your current Chrome tab,
-onto any local device with the Adobe Edge Inspect app open.
-
-Ghostlab has a nice flow where you create a local server
-from within the app for any directory and
-any connected browser will sync interactions with the page
-(i.e. scrolling, clicking and form filling).
-
-The biggest criticisms of these tools is that,
-depending on the number of devices you intend to test,
-the initial set-up and can be cumbersome and some tools fail
-to support the way an end user would view your web app.
-For instance Remote Preview loads the page in an iframe,
-which can have adverse effects and
-Adobe Edge Inspect loads the page into a WebView inside of their application.
-
-In building the Web Starter Kit,
-we looked at a range of these tools, and brought the best of them together
-into the one kit so you just have to set up the kit
-and you get an improved flow from desktop to any device pointing to the staging url.
+{% include modules/remember.liquid title="Note" list=page.notes.unit-tests %}
 
 {% include modules/nextarticle.liquid %}
 

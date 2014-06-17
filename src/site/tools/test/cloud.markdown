@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Cloud Testing"
-description: "TBD."
+description: "While there's no substitue for real device testing, cloud testing gets you most of the way. Your testing story should include both real and cloud-based testing."
+introduction: "While there's no substitue for real device testing, cloud testing gets you most of the way. Your testing story should include both real and cloud-based testing."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -9,93 +10,125 @@ article:
 collection: test
 key-takeaways:
   starter-kit:
-    - TBD.
+    - Cloud testing lets you test your site on browsers, platforms, and devices in the cloud; you don't have to own the device to get a relatively good idea of how your site will behave.
+    - Emulators mimic the mobile device hardware and operating systems; simulators don't.
+    - If you don't have access to a real device, use an emulator rather than a simulator.
+    - For iOS testing, use the iOS simulator in combination with testing on real iOS devices.
 notes:
-  placeholder:
-    - TBD.
+  emulator-summary:
+    - For the complete run-down on emulators and simulators, see <a href="http://www.mobilexweb.com/emulators">Mobile Emulators & Simulators: The Ultimate Guide</a>.
 ---
 {% wrap content %}
 
 {% include modules/toc.liquid %}
 
-TBD.
-
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
 ## What is cloud testing?
 
-Fortunately a number of real-time testing services have popped up allowing you
-to test a device with a specific operating system and browser in the cloud
-from the comfort of your browser window.
-Many even have support for not just testing remote sites
-but also those running on a local server via local tunneling.
+Cloud testing uses tools in the cloud to test your site.
+These tools emulate real device testing,
+but they aren't a replacement for real device testing.
+There are, however, big enough advantages to testing in the cloud;
+your development workflow should incorporate both real device testing and cloud testing.
+
+Three key advantages to testing in the cloud:
+
+1. You don't need to buy lots of devices.
+2. You can test your site in the same development workspace as your code editor and debugging tools.
+3. Automated unit tests can run your site on many browsers, platforms, and devices at the same time.
 
 ## What's the difference between emulators and simulators?
 
-From http://www.mobilexweb.com/emulators
+Emulators 'emulate' device hardware and operating systems,
+letting you test and debug your application and see how it is working
+almost as if testing on the actual device.
+If you haven't chosen an emulator yet,
+go with the Chrome DevTools Mobile Emulator 
+(see the <a href="https://developers.google.com/web/fundamentals/tools/test/emulator.html">next section for a detailed overview</a>).
 
-Generally speaking, an emulator is a piece of software that translates compiled code from an original architecture to the platform where it is running, such as the great MAME. In the mobile development world, a device emulator is a desktop application that emulates mobile device hardware and operating systems, allowing us to test and debug our applications and see how they are working. There are also operating system emulators that don’t represent any real device hardware but rather the operating system as a whole. These exist for Windows Mobile and Android.
+<img src="imgs/emulation.png" class="center" alt="Chrome DevTools emulator">
 
-On the other hand, a simulator is a less complex application that simulates some of the behavior of a device, but does not emulate hardware and does not work over the real operating system. These tools are simpler and less useful than emulators. A simulator may be created by the device manufacturer or by some other company offering a simulation environment for developers.
+Simulators let you 'simulate' how your site looks and feels
+on a device.
+They typically don't emulate operating system or hardware features.
+If you have a Mac,
+the iOS simulator is a great tool for seeing how your site behaves
+on an iOS device while working with the Web Inspector
+(see below for more on how to use the iOS simulator).
 
-If you want to simulate iOS you will want to install XCode from the App Store.
+Emulators tests more than just your site's responsiveness.
+You can emulate network performance, hardware features like geolocation,
+and other platform features.
+Some emulators let you run a local server via local tunneling,
+so that you are testing your site on an actual device somewhere.
+
+Simulators are usually easier to use than emulators,
+but they aren't as useful; they don't give the full picture
+of how your site will behave on a device.
+
+{% include modules/remember.liquid title="Note" list=page.notes.emulator-summary %}
+
+## How to use the iOS simulator
+
+According to the <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html">iOS Simulator User Guide</a>,
+you should "think of the simulator as a preliminary testing tool to use
+before testing your app on an actual device".
+
+The iOS simulator comes with XCode,
+which you can <a href="https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12">install from the App Store</a>.
+To open your site in the simulator:
+
+* Launch Xcode.
+* Choose Xcode > Open Developer Tool > iOS Simulator. The simulator displays the Home screen of whichever simulated device was last used.
+* From the Home screen, click Safari.
+* In the address field in Safari, type your site's URL and press the Return key.
+
+If your Mac is connected to the internet,
+Safari displays your site in the simulator:
 
 IMAGE PLACEHOLDER
+Todo: Yikes-- iOS simulator doesn't seem to work for URLs in Safari!
+I have a starter image in my mailbox that I can use to raise a bug with Apple.
 
-## Cloud testing services
+## Unit testing
 
-If you’re working on an open-source project,
-Sauce Labs are an excellent option as they’re free to use.
-Otherwise you can sign up for a free account which comes with 30 minutes of manual testing.
-They have an extensive list of desktop browsers,
-some mobile browsers and also support a screenshot service for taking periodic shots
-of how your application looks on a variety of your target devices.
+When testing on real devices,
+you are somewhat limited by the devices themselves.
+But with cloud testing services,
+you have the ability to test your site against
+any number of browsers, platforms, and devices at the same time.
 
-Pro-tips:
-* If you would prefer to use an open-source tool for your device screenshots,
-a lot of developers enjoy using Casper for this.
-We’ve also had some success using grunt-autoshot for creating screenshots of our pages
-at different responsive breakpoints.
-* If you use Grunt,
-there are tasks available for running your unit tests via Sauce Labs.
+Both <a href="https://saucelabs.com/">Sauce Labs</a>
+and <a href="http://www.keynote.com/solutions/testing/mobile-testing">DeviceAnywhere</a>
+let you write unit tests in any number of languages
+and run them against a range of emulated environments.
 
-BrowserStack are our preferred option and have a larger catalog of setups available
-for mobile device testing and are fairly easy to use.
+If you use Grunt,
+there are tasks available for
+<a href="https://www.npmjs.org/package/grunt-saucelabs-qunit">running unit tests via Sauce Labs</a>.
+
+<a href="https://www.browserstack.com/automate">BrowserStack</a>
+is the easiest to use:
 You select an operating system, select your browser version and device type,
-select a URL to browse and it will spin up a hosted virtual machine
+select a URL to browse, and it spins up a hosted virtual machine
 that you can interact with.
-You also get access to the most common browser developer tools
-such as Chrome DevTools and Firebug.
 
-You also get access to the most common browser developer tools
-such as Chrome DevTools and Firebug.
+You can also fire up multiple emulators in the same screen,
+letting you test how your app looks and feels across multiple devices
+at the same time.
 
-What many developers don’t realize is that if you fire up one device emulator,
-you can also ask BrowserStack to fire up other emulators in the same screen,
-meaning you can test out how your app looks and feels
-on a Nexus tablet and an iPad at the same time.
+## Take screenshots of your site
 
-Pro-tips:
+Many cloud testing services include a screenshot tool. 
+With no set-up required,
+you can type in a URL on the
+<a href="http://www.browserstack.com/responsive">BrowserStack website</a>.
 
-* There are Grunt tasks available for firing new emulators up using BrowserStack
-such as grunt-browserstack.
-In our experience, however, it’s usually just easier to use grunt-open
-to open up your browser window for you then navigate to the browserstack site
-with the device/OS you want to test.
-* You can also setup command-line aliases
-for firing up combinations of browsers and devices.
-See these dotfiles for an example.
+The tool automatically creates screenshots
+for the URL on a range of devices and saves them in a downloadable URL:
 
-A quick note BrowserStack is officially used by the jQuery team for testing their builds whilst Sauce Labs sponsor the Selenium testing project.
-
-Pro-tip: for those more interested in running their unit tests
-across browsers/devices,
-you’ll need a test runner that can run your test suite on these platforms.
-Some options for this include Testacular, Yeti and Thrill.
-
-## Simulator testing
-
-If you want to simulate iOS you will want to install XCode from the App Store.
+<img src="imgs/browserstack.png" class="center" alt="screenshots of URL on range of devices">
 
 {% include modules/nextarticle.liquid %}
 

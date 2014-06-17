@@ -5,8 +5,8 @@ description: "TBD."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 3
-collection: test
+  order: 4
+#collection: test
 key-takeaways:
   starter-kit:
     - TBD.
