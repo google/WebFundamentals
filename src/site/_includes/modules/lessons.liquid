@@ -1,9 +1,7 @@
-<div class="container-medium content">
-<h2>Guides</h2>
-<ol>
-{% for guide in page.articles.[page.id] %}
-<li><a href="{{site.baseurl}}{{guide.url | clean}}">{{guide.title}}</a> &mdash;
-{{guide.description}}</li>
-{% endfor %}
-</ol>
+<div class="container-medium">
+  <div class="guides" data-current-lesson="0{{articleIndex}}">
+    <h3><i class="icon icon-lessons"></i> Guides</h3>
+    <ol class="list-guides list-links">
+ {% for guide in page.articles.[page.id] %}<li title="{{guide.title}}"><a href="{{site.baseurl}}{{guide.url | clean}}">{{guide.title}}</a></li>{% endfor %}</ol>
+  </div>
 </div>

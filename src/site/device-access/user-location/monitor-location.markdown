@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Monitor the user's location"
-description: ""
+description: "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -10,10 +10,64 @@ rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
 introduction: ""
+key-takeaways:
+  geo: 
+    -  Check for Compatibility before you use the API
+    -  Minimize the use of watching the users location to save battery
+    -  Always handle errors
 ---
 
 {% wrap content %}
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
+
+The API is device-agnostic; it doesn't care how the browser determines
+location, so long as clients can request and receive location data in a
+standard way. The underlying mechanism might be via GPS, wifi. Since any of
+these lookups is going to take some time, the API is asynchronous; you pass it
+a callback method whenever you request a location.
+
+## When to use Geolocation to watch the user's location
+
+*  Your application needs to update the user interface based on new location 
+   information
+*  You applications needs to update business logic when the user enters a certain
+   defined zone
+
+## Watching the users location
+
+The Geolocation API allows you to obtain the users location (with user
+consent) with a single call to `getCurrentPosition()`.  
+
+If you want to continually monitor the location of the user, the geolocation
+API has a method called `watchPosition()`. It opperates in a similar way to
+`getCurrentPosition()` yet it will fire multiple times as the positioning
+software:
+
+1.  Gets a more accurate lock on the user
+2.  The users position changes.
+ 
+{% highlight javascript %}
+navigator.geolocation.watchPosition(function(position) {
+  document.getElementById('currentLat').innerHTML = position.coords.latitude;
+  document.getElementById('currentLon').innerHTML = position.coords.longitude;
+});
+{% endhighlight %}
+
+## Conserve battery
+
+Watching for changes to a geolocation is not a free operation.  Whilst
+operating systems might be introducing platform features to let applications
+hook in to the geo subsystem, you as a web developer have no idea what support
+the users device has for monitoring the users location.
+
+Once you have no need to track the users position call `cancelWatch` to turn
+of the geolocation systems.
+
+## Always Handle Errors
+
+
 
 {% endwrap %}

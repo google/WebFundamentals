@@ -1,15 +1,15 @@
 ---
 layout: article
-title: "Obtain the user's location"
-introduction: "The Geolocation API lets you find out where the user is and
-keep tabs on them as they move around, always with the user's consent. This
-functionality could be used as part of user queries, e.g. to guide someone to
-a destination point. It could also be used for 'geo-tagging' some content the
-user has created, e.g. to mark where a photo was taken."
-description: "The Geolocation API lets you find out where the user is and keep tabs on them as they move around, always with the user's consent."
+title: "Obtain the user's current location"
+introduction: "The Geolocation API lets you find out where the user is, 
+  always with the user's consent. This functionality could be used as part 
+  of user queries, e.g. to guide someone to a destination point. It could
+  also be used for 'geo-tagging' some content the user has created, e.g. 
+  to mark where a photo was taken."
+description: "The Geolocation API lets you find out where the user is, always with the user's consent."
 article:
-  written_on: 2014-01-01
-  updated_on: 2014-01-06
+  written_on: 2014-06-06
+  updated_on: 2014-06-06
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
@@ -35,6 +35,16 @@ standard way. The underlying mechanism might be via GPS, wifi, or simply
 asking the user to enter their location manually. Since any of these lookups
 is going to take some time, the API is asynchronous; you pass it a callback
 method whenever you request a location.
+
+## When to use Geolocation
+
+*  Find where the user is closet to a physical location of yours to tailor 
+   the user experience
+*  Tailor information (such as news) to the users location
+*  Show the position of a user on a map
+*  Tag data created inside your application with the users location 
+   (i.e, geo-tagging a picture)
+
 
 ## Check for Compatibility
 
@@ -63,11 +73,12 @@ report on the user's  current location.
 {% highlight javascript %}
 window.onload = function() {
   var startPos;
-  navigator.geolocation.getCurrentPosition(function(position) {
+  var geoSuccess = function(position) {
     startPos = position;
     document.getElementById('startLat').innerHTML = startPos.coords.latitude;
     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-  });
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
 };
 {% endhighlight %}
 
@@ -96,13 +107,7 @@ and simulating geolocation not being available via the overrides menu.
 *  Check “Override Geolocation” then enter in Lat = 41.4949819 and Lat = -0.1461206
 *  Refresh the page and it will now use your overridden positions for geolocation
 
-## Decide how accuratly you need the location
-
-TODO: Note - Fused Location
-
-## Set a timeout
-
-##  Handle Errors
+##  Always Handle Errors
 
 Unfortunately, not all location lookups are successful. Perhaps a GPS could
 not be located or the user has suddenly disabled location lookups. A second,
@@ -112,17 +117,93 @@ error, so you can notify the user inside the callback:
 {% highlight javascript %}
 window.onload = function() {
   var startPos;
-  navigator.geolocation.getCurrentPosition(function(position) {
-    // same as above
-  }, function(error) {
-    alert('Error occurred. Error code: ' + error.code);
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(position) {
+    console.log('Error occurred. Error code: ' + error.code);
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
     //   2: position unavailable (error response from locaton provider)
     //   3: timed out
-  });
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 };
 {% endhighlight %}
+
+## Reduce the need to start-up geo location hardware.
+
+For many use-cases you don't need to use the most up to location of the user,
+you just need a rough estimate.
+
+Use the `maximumAge` optional property to tell the browser to user a recently
+obtained geolocation result.  This not only returns quicker if the user has
+requested the data before it also stops the browser from having to start up
+it's geolcation hardware interfaces such as Wifi tranangultaion or the GPS.
+
+{% highlight javascript %}
+window.onload = function() {
+  var startPos;
+  var geoOptions = {
+  	maximumAge: 5 * 60 * 1000,
+  }
+
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(position) {
+    console.log('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+};
+{% endhighlight %}
+
+## Set a timeout
+
+Unless set your request to get the current position could never return.
+
+{% highlight javascript %}
+window.onload = function() {
+  var startPos;
+  var geoOptions = {
+
+  }
+
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(position) {
+    console.log('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+};
+{% endhighlight %}
+
+## Decide how accuratly you need the location
+
+Your site should ask for as little information as possible.
+
+If you 
+TODO: Note - Fused Location
+
 
 {% endwrap %}

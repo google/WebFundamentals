@@ -108,8 +108,6 @@ started on the element itself, the browser can check if the touch occured in a
 region with a touch event listener and if it’s not, can handle it faster
 by not having to run any additional javascript.
 
-![Illustrating Binding Touch Events to Document in touchstart](images/scroll-bottleneck.gif)
-
 The steps taken to implement this are:
 
 1. Add the start events listener to an element.
@@ -138,6 +136,11 @@ You can use the `"Show potential scroll bottlenecks"` feature in Chrome DevTools
 to show how the touch events behave:
 
 <img class="g-medium--full g-wide--full" src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools">
+
+With this enabled you can see where touch events are bound and ensure your logic for adding
+and removing listeners is working as you'd expect.
+
+![Illustrating Binding Touch Events to Document in touchstart](images/scroll-bottleneck.gif)
 
 <div style="clear: both;"></div>
 
