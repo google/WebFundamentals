@@ -12,18 +12,6 @@ collection: performance
 ---
 {% wrap content%}
 
-<style>
-  img, video, object {
-    max-width: 100%;
-  }
-
-  img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
-
 Delivering a fast web experience requires a lot of work by the browser. Most of this work is hidden from us as web developers: we write the markup, and a nice looking page comes out on the screen. But how exactly does the browser go from consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?
 
 Optimizing for performance is all about understanding what happens in these intermediate steps between receiving the HTML, CSS, and JavaScript bytes and the required processing to turn them into rendered pixels - that's the **critical rendering path**.
