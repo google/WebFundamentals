@@ -1,78 +1,153 @@
 ---
 layout: article
 title: "Emulator Testing"
-description: "Device emulation is the next best thing to real device testing."
+description: "Device emulation is the next best thing to real device testing. Learn how to use the Chrome DevTools Mobile Emulator to test your site across many devices."
+introduction: "Device emulation is the next best thing to real device testing. Learn how to use the Chrome DevTools Mobile Emulator to test your site across many devices."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
   order: 3
 collection: test
 key-takeaways:
-  starter-kit:
-    - TBD.
+  emulator:
+    - Start prototyping on the desktop; then tackle the mobile-specific parts on the devices you intend to support. Device emulation makes this process more straightforward.
+    - The Chrome DevTools Mobile Emulation tool lets you emulate your site on a range of devices, testing not just the site's responsive, but how the site responds to user interactions and hardware constraints.
+    - Devices often have unreliable connectivity; emulate network conditions.
 notes:
-  comparions:
-    - Describe different between emulation and simulation and then point to simulation docs. Emulation is more than simulation. It tries to mimic everything about the device, not just the layout, for example.
+    - TBD.
 ---
 {% wrap content %}
 
 {% include modules/toc.liquid %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
-
-## Testing multiple versions at the same time
-
-There are of course emulators available for Android and if you are interested in testing against multiple versions of Android at the same time, Paul Kinlan has a write-up that shows you how to set this up.
+{% include modules/takeaway.liquid list=page.key-takeaways.emulator %}
 
 ## Emulate viewport
 
-It's often easier to start prototyping on the desktop and then tackle the mobile-specific parts on the devices you intend to support. Device emulation can make this process more straightforward.
-
-The DevTools support for device emulation includes native User Agent and dimension overriding. This allows developers to debug mobile browsers on different devices and operating systems via the Overrides menu.
+When you select a device and press the Emulator button,
+the tool zooms the page out to the physical default viewport of that device.
+In the case of the Nexus 4, the device-width is 768.
+See the
+<a href="https://developer.chrome.com/devtools/docs/mobile-emulation">Chrome DevTools Mobile Emulation docs</a>
+for detailed information on using the Chrome DevTools Mobile Emulator.
 
 IMAGE PLACEHOLDER
+Todo: screenshot of web fundamentals site emulated on Nexus 4
+with DevTools open to show Enable Viewport setting.
 
 ## Emulate touch events
 
-Touch is an input method that's difficult to test on the desktop, since most desktops don't have touch input. Having to test on mobile can lengthen your development cycle, since every change you make needs to be pushed out to a server and then loaded on the device.
+Touch is an input method that's difficult to test on the desktop,
+since most desktops don't have touch input.
+Having to test on mobile can lengthen your development cycle,
+since every change you make needs to be pushed out to a server and then loaded on the device.
 
-A solution to this problem is to simulate touch events on your development machine. For single-touches, the Chrome DevTools supports single touch event emulation to make it easier to debug mobile applications on the desktop.
+A solution to this problem is to simulate touch events on your development machine.
+For single-touches,
+the Chrome DevTools supports single touch event emulation
+to make it easier to debug mobile applications on the desktop.
+
+To enable support for touch event emulation:
+
+1. Open the Emulation panel in the DevTools.
+2. Enable "Emulate touch screen" in the Sensors pane.
 
 IMAGE PLACEHOLDER
+Todo: screenshot of web fundamentals site and DevTools
+with Sensors pane open and setting enabled.
 
-Multi-touch events can be simulated if you have a device with touch input, such as a modern Apple MacBook. For further assistance with multi-touch event simulation, see Multi-touch web development.
+Multi-touch events can be simulated if you have a device with touch input,
+such as a modern Apple MacBook.
+For further assistance with multi-touch event simulation,
+see <a href="http://www.html5rocks.com/en/mobile/touch/">Multi-touch web development</a>.
 
 ## Emulate orientation
 
-Many new mobile devices are now shipping with accelerometers, gyroscopes, compasses and other hardware designed to determine capture motion and orientation data.
-Web browsers are providing increasingly more access to that new hardware, including such examples as the HTML5 DeviceOrientation events. These events provide developers with information about the orientation, motion and acceleration of the device.
-If your application is taking advantage of device orientation events, it can also be useful to override the values received by these events during debugging to avoid the need to test them on a physical mobile device.
-The DevTools also support overriding device orientation.
-For more information, read the DevTools mobile emulation documentation.
+Many new mobile devices are now shipping with accelerometers, gyroscopes,
+compasses and other hardware designed to determine capture motion and orientation data.
+Web browsers are providing increasingly more access to that new hardware,
+including such examples as the
+<a href="http://dev.w3.org/geo/api/spec-source-orientation">HTML5 DeviceOrientation events</a>.
+These events provide developers with information about the orientation,
+motion, and acceleration of the device.
 
-IMAGE PLACEHOLDER
+If your application is taking advantage of device orientation events,
+it can also be useful to override the values received by these events
+during debugging to avoid the need to test them on a physical mobile device.
+
+The DevTools also support overriding device orientation.
+For more information,
+read the
+<a href="https://developer.chrome.com/devtools/docs/mobile-emulation#device-orientation-overrides"> Chrome DevTools device orientation overrides documentation</a>.
 
 ## Emulate network conditions
 
-You may wish to emulate the network conditions your users might experience during development. Luckily there are a few tools that can assist with this. 
+If you aren't able to test on all real devices,
+you should emulate network conditions
+your users might experience.
 
-If on a Mac, you can try out the Network Link Conditioner found in the Lion Developer Tools. These can be installed by going to Applications > Utilities > Network Link Conditioner and double-clicking the prefpane file.  Once you've launched it you'll see a drop-down listing a number of preconfigured network scenarios including 3G and EDGE.
+If on a Mac,
+try out the
+<a href="http://www.neglectedpotential.com/2012/05/slow-your-apps-roll/">Network Link Conditioner</a>
+found in the Lion Developer Tools.
+These can be installed by going to Applications > Utilities > Network Link Conditioner
+and double-clicking the prefpane file.
+
+Once you've launched it,
+you'll see a drop-down listing a number of preconfigured network scenarios including 3G and EDGE:
 
 IMAGE PLACEHOLDER
+Todo: Just use image from Addy's notes.
 
-On Windows, options also include Fiddler and Charles - a HTTP proxy which can throttle your connection speeds. As you can see below, there are plenty of settings available for defining the network characteristics you would like to simulate.
+On Windows,
+options also include
+<a href="http://www.telerik.com/fiddler">Fiddler</a> and
+<a href="http://www.charlesproxy.com/">Charles</a>, an HTTP proxy which can throttle your connection speeds.
+
+As you can see below, there are plenty of
+<a href="http://roderick.dk/2012/05/11/simulate-slow-web-connections/">settings</a>
+available for defining the network characteristics you would like to simulate.
 
 IMAGE PLACEHOLDER
-
-There are also a few other options for slow connection emulation which we didn’t get a chance to try out including Slowly.app (OSX, $), ipfw (Mac, Linux) and wipfw (Windows).
+Todo: Just use image from Addy's notes.
 
 ## Emulate user agent
 
-TBD.
+The DevTools support for device emulation includes native User Agent and dimension overriding.
+This allows developers to debug mobile browsers
+on different devices and operating systems via the Overrides menu.
+
+1. Within the Emulation panel, open up the Sensors pane. 
+2. Check "Spoof user agent" and select "Android 2.3 - Nexus S".
+3. Refresh the page.
+
+An updated user-agent field is now sent as part of the request headers for page resources.
+Some websites may decide to serve optimized versions of the page depending on the user-agent,
+this is one case where
+<a href="https://developer.chrome.com/devtools/docs/mobile-emulation#useragent-spoofing">spoofing a user-agent</a> may be useful.
+
+IMAGE PLACEHOLDER
+Todo: Show web fundamentals and user agent field.
 
 ## Emulate geolocation
 
-TBD.
+When working with HTML5 geolocation support in an application,
+it can be useful to debug the output received
+when using different values for longitude and latitude.
+The DevTools support both overriding position values for navigator.geolocation
+and simulating geolocation not being available via the Sensors pane.
+See the <a href="https://developer.chrome.com/devtools/docs/mobile-emulation#device-geolocation-overrides">Chrome DevTools geolocation overrides</a> documentation.
+
+## Testing multiple versions at the same time
+
+The Web Starter Kit's live reloading makes it possible
+to emulate your site on multiple devices and test at the same time:
+
+1. Navigate to your site's URL.
+2. Open up the Emulation panel and select a device.
+3. Repeat this process for multiple devices.
+
+Any changes you make to your site with automatically be pushed to each device emulation.
 
 {% include modules/nextarticle.liquid %}
 

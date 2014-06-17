@@ -1,7 +1,8 @@
 ---
 layout: article
 title: "Real Device Testing"
-description: "There's no substitute for testing your site on real devices. What you don't want: manual set-up for each device; repeating testing steps for each device. What you want: one-click testing across lots of devices."
+description: "Always test on real devices. Don't waste time on manually setting up each testing device. Choose tools that let you test across many devices in one-click."
+introduction: "Always test on real devices. Don't waste time on manually setting up each testing device. Choose tools that let you test across many devices in one-click."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -12,7 +13,7 @@ key-takeaways:
     - There's no substitute for real device testing. You must test on real devices.
     - You don't need to dread the set-up and manual testing process anymore. Testing your site on real devices need only be a click away.
     - Choose a testing solution that has live reloading. Change in one place and see those changes everywhere.
-    - Choose a synchronized testing solution. Test user interaction on all devices at the same time.
+    - Synchronized testing solution let you test user interaction on all devices at the same time.
 notes:
   unit-tests:
     - If interested in running unit tests across browsers/devices, you’ll need a test runner that canrun your test suite on these platforms. Some options for this include <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/">Yeti</a> and <a href="http://thrilljs.com/">Thrill</a>.
@@ -27,9 +28,13 @@ notes:
 
 If you've started testing your site on different devices within the last two years,
 it's likely you've gone through set up steps for the different platforms
-multiple times, and you've experienced the frustration of using your site on a device,
-seeing something wrong, having to switch bak to your development environment,
+multiple times.
+
+You've experienced the frustration of using your site on a device,
+seeing something wrong,
+having to switch back to your development environment,
 fix it, rebuild, push to each device again, maybe having to repeat some or all of the set-up steps.
+
 Manual device testing isn't a practical workflow.
 
 <img src="imgs/manual.png" class="center" alt="developer struggling to test on mobile manually">
@@ -37,6 +42,7 @@ Manual device testing isn't a practical workflow.
 What you need is a tool that lets you connect to any device in one-click.
 Once connected to any device,
 changes made in your development environment are automatically pushed to connected devices.
+
 The Web Starter Kit has a built in HTTP Server for previewing your site.
 This means that you can test your pages on any device without messing with other tools.
 So long as your development environment and devices can be on the same network,
@@ -46,6 +52,7 @@ you can access the same local version of your site on any external devices.
 
 Arguably the biggest frustration with testing on real devices is the inability
 to quickly fix a bug that you see on the real device in your source code.
+
 With live browser reloading,
 you don't need to access developer tools on your mobile device.
 As you change your source code,
@@ -57,13 +64,11 @@ the tools compile Sass into CSS,
 minify and concatenate JavaScript, CSS, HTML, and Images
 and push the optmized site.
 
-IMAGE PLACEHOLDER
-Todo: Capture picture of sample app open on multiple pages.
-
 ## Synchronize testing across devices
 
 Sync clicks, scrolls, and navigation between devices
 so you can see exactly what breaks and what visually needs improvement.
+
 Powered by <a href="http://browsersync.io/">BrowserSync</a>,
 the Web Starter Kit synchronizes clicks, scrolls, forms and live-reload
 across multiple devices as you edit your project.
@@ -71,7 +76,8 @@ across multiple devices as you edit your project.
 ## Summary of device testing tools
 
 Here's a summary of cross-device testing tools
-(inspired by <a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>):
+(inspired by
+<a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>):
 
 <table class="table-2 tc-heavyright">
   <thead>
@@ -107,12 +113,13 @@ Any connected browser will sync interactions with the page. Only available for M
 
 ## Which devices you need and how to get them
 
-Brad Frost's <a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
+Brad Frost's
+<a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
 is a good starting point for deciding which devices you need
 and provides links to get those devices.
-
 But it's not always possible to own the devices you're targeting,
 especially if you’re a freelancer or don’t work for a large company.
+
 There are an increasing number of
 <a href="http://opendevicelab.com/">open device-labs</a> that can loan you hardware,
 but even if you do own your target devices,
