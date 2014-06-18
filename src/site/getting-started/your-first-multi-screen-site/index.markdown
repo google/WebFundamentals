@@ -16,7 +16,7 @@ collection: getting-started
 
 {% wrap content%}
 
-<img src="images/finaloutput-@2x.jpg">
+<img src="images/finaloutput-2x.jpg">
 
 Building for multiple devices with differing capabilities, vastly different
 screen sizes and interaction methods it can seem daunting, if not impossible
