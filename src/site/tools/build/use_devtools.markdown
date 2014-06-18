@@ -85,6 +85,10 @@ Todo: Create simplate placeholder that shows Screen options
 in DevTools emulator.
 
 <table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
   <thead>
     <tr>
       <th data-th="setting">Setting</th>

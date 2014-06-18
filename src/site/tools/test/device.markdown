@@ -99,6 +99,10 @@ Here's a summary of cross-device testing tools
 <a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>):
 
 <table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
   <thead>
     <tr>
       <th data-th="tool">Cross-device Testing Tool</th>

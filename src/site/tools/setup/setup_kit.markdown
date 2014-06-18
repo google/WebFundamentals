@@ -68,6 +68,10 @@ Decide just how much
 then check out the starter file in `web-starter-kit/app` folder that most fits your needs:
 
 <table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
   <thead>
     <tr>
       <th data-th="starterfile">Starter File</th>

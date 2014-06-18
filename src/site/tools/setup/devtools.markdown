@@ -150,6 +150,10 @@ Here's a brief comparison of remote debugging options,
 with links to set-up documentation: 
 
 <table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
   <thead>
     <tr>
       <th data-th="tool">Remote Debugging Tool</th>

@@ -265,6 +265,10 @@ Then enter the port number and local IP address of your staged site:
 A quick summary of the Web Starter Kit Tools:
 
 <table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
   <thead>
     <tr>
       <th data-th="Tool">Tool</th>
