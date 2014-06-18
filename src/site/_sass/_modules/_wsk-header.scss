@@ -1,0 +1,81 @@
+/**
+*
+* Home header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.wsk-header {
+  background: $colorTools no-repeat center center;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: $lineHeight*3;
+  margin-bottom: $lineHeight*3;
+
+  @include medium {
+    background-image: url(../imgs/devices.svg);
+    background-size: 1200px;
+    background-position: center 30%;
+    padding-bottom: $lineHeight*4;
+  }
+
+  @include wide {
+    background-size: 1560px;
+  }
+
+  &:after {
+    @extend .icon-tools:before;
+    font-family: $fontIcon;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 50px;
+    bottom: -10px;
+
+    @include medium {
+      font-size: $fontXXLarge;
+      line-height: 1px;
+      bottom: 4px;
+    }
+
+    font-weight: 500;
+    color: $colorToolsSecondary;
+  }
+
+
+  & h1 {
+    @include type--huge;
+
+    @include small-only {
+      @include type--xlarge(true);
+      padding-top: $lineHeight*2;
+      @include color-inherit;
+    }
+
+    @include medium {
+      padding-top: $lineHeight*3;
+    }
+
+    @include color-inherit;
+  }
+
+  & p {
+    @include type--large;
+
+    @include medium {
+      padding-top: 0;
+    }
+
+    @include color-inherit;
+  }
+
+  & a {
+    margin-top: $lineHeight*2 + $lineHeight/2;
+  }
+}
