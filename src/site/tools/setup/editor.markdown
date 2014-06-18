@@ -84,6 +84,10 @@ Check out these
 Here are the plugins we love and recommend you install because they help you speed up your development:
 
 <table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
   <thead>
     <tr>
       <th data-th="plugin">Plugin</th>
