@@ -51,7 +51,7 @@ software:
 2.  The users position changes.
  
 {% highlight javascript %}
-navigator.geolocation.watchPosition(function(position) {
+var watchId = navigator.geolocation.watchPosition(function(position) {
   document.getElementById('currentLat').innerHTML = position.coords.latitude;
   document.getElementById('currentLon').innerHTML = position.coords.longitude;
 });
