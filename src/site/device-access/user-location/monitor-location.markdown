@@ -56,18 +56,43 @@ navigator.geolocation.watchPosition(function(position) {
 });
 {% endhighlight %}
 
-## Conserve battery
+## Always clear up and conserve battery
 
 Watching for changes to a geolocation is not a free operation.  Whilst
 operating systems might be introducing platform features to let applications
 hook in to the geo subsystem, you as a web developer have no idea what support
-the users device has for monitoring the users location.
+the users device has for monitoring the users location and whilst you are watching
+a posisition you are engaging the device in a lot of extra processing
 
-Once you have no need to track the users position call `cancelWatch` to turn
+Once you have no need to track the users position call `clearWatch` to turn
 of the geolocation systems.
 
 ## Always Handle Errors
 
+Unfortunately, not all location lookups are successful. Perhaps a GPS could
+not be located or the user has suddenly disabled location lookups. A second,
+optional, argument to getCurrentPosition() will be called in the event of an
+error, so you can notify the user inside the callback:
+
+{% highlight javascript %}
+window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(position) {
+    console.log('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  };
+  navigator.geolocation.watchPosition(geoSuccess, geoError);
+};
+{% endhighlight %}
 
 
 {% endwrap %}
