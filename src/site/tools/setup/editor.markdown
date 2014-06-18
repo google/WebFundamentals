@@ -11,11 +11,11 @@ collection: set-up
 key-takeaways:
   editor:
     - Choose an editor that lets you customize short-cuts and has lots of plugins to help you write better code.
-    - Install a package manager; seriously. Install it now.
-    - Use package manager to install plugins to make you a better coder; start with recommendations in this guide.
+    - Consider installing a package manager to make it easier to discover, install, and update plugins.
+    - Use the package manager to install plugins that help keep you productive durinig development; start with the recommendations in this guide.
 notes:
   blog:
-    - This <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> is an approachable overview on how to get to know and love Sublime. Most of the topics are relevant to any text editor, not just Sublime.
+    - Rob Dodson's <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> on how to get to know and love Sublime is a great reference for getting the most out of your editor. The concepts are relevant to any text editor, not just Sublime.
 ---
 {% wrap content %}
 
@@ -42,16 +42,16 @@ so that you only have to remember your own implementations.
 with editor command support
 and tons of plugins to help you write better code faster.
 They also have package managers that make it easy to install new plugins.
-Sublime plugins trend towards the web developer,
+Though Sublime costs money, its plugins trend towards the web developer,
 so these guides assume Sublime as the default editor of choice.
 
 {% include modules/remember.liquid title="Note" list=page.notes.blog %}
 
-## Install a Package Manager
+## Consider installing a package manager
 
 Package managers make it easy to find, install, and keep packages up-to-date.
 If you've never used a package manager before,
-seriously stop writing code and install one for your editor now.
+consider installing one for your editor now.
 
 Here's a sneak peak at what you can do with the
 <a href="https://sublime.wbond.net/">Sublime Text package manager</a>.
@@ -81,7 +81,7 @@ then enter the name of the plugin you are looking for
 
 Check out these
 <a href="https://sublime.wbond.net/browse">trending lists of Sublime plugins</a>.
-Here's a subset of recommended plugins, some popular, some not yet, but they should or will be soon:
+Here are the plugins we love and recommend you install because they help you speed up your development:
 
 <table class="table-2 tc-heavyright">
   <thead>
@@ -113,7 +113,7 @@ Here's a subset of recommended plugins, some popular, some not yet, but they sho
     </tr>
     <tr>
       <td data-th="plugin"><a href="https://github.com/dz0ny/LiveReload-sublimetext2">LiveReload</a></td>
-      <td data-th="Description">Live reloading browser support.</td>
+      <td data-th="Description">Live reloading browser support. If you're using the Web Starter Kit, you don't need this plugin.</td>
     </tr>
     <tr>
       <td data-th="plugin"><a href="https://github.com/robdodson/PolymerSnippets">PolymerSnippets</a></td>
