@@ -12,7 +12,7 @@ key-takeaways:
   build-process:
     - Build steps shouldn't be linear and manually driven; they should be cyclical and automatic.
     - Testing across many devices is a laborous task. Automate as much as you can!
-    - Limit context switching; integrate build tools with debugging tools so you can interate with ease.
+    - Limit context switching; integrate build tools with debugging tools so you can iterate with ease.
 notes:
   tbd:
     - TBD.

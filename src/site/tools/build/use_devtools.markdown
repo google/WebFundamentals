@@ -10,8 +10,9 @@ article:
 collection: build-your-site
 key-takeaways:
   devtools:
-    - Using the Web Starter Kit + Chrome DevTools, debug real and emulated devices from your development workspace with one-click.
-    - 
+    - With Web Starter Kit + Chrome DevTools, debug your site on real and emulated devices with one-click.
+    - Users won't stay on any page that performs badly in normal network conditions; check network performance on real devices;
+    - Check your site's responsive layouts on a range of devices using the Chrome DevTools Screen pane within the Emulation panel.
 notes:
   optimize:
     - See <a href="https://web-central.appspot.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html">Critical Rendering Path</a> for more insight on using the network timeline.
@@ -24,9 +25,8 @@ notes:
 
 ## Debug on real devices and in the cloud
 
-Using the Web Starter Kit + Chrome DevTools,
-debug real and emulated devices
-from your development workspace with one-click:
+With Web Starter Kit + Chrome DevTools,
+debug your site on real and emulated devices with one-click:
 
 1. Set up <a href="https://developer.chrome.com/devtools/docs/remote-debugging">remote debugging</a>
 for any real device you wish to test your site on.
@@ -47,17 +47,13 @@ devtools opened to debug site in all instances.
 
 ## Check network performance
 
-Check
-<a href="https://developer.chrome.com/devtools/docs/network">network performance</a>
-on at least one real device;
-don't skip this test no matter how confident you are in your emulated tests.
-
 Users won't stay on any page that performs badly
 in normal network conditions;
 and they will lose patience fast even when network connectivity is shakey.
-Deliver a site that works well under most network conditions,
-and users are happy.
 
+Check
+<a href="https://developer.chrome.com/devtools/docs/network">network performance</a>
+on real devices and preferably in varying network connectivity. 
 John McCutchan's
 <a href="http://www.html5rocks.com/en/mobile/profiling/">Profiling Mobile HTML5 Apps With Chrome DevTools</a>
 describes how to check network performance on a device
@@ -77,11 +73,9 @@ Todo: Screenshot of timeline for web fundamentals site on connected device.
 
 ## Debug page responsiveness
 
-Simply by using the Chrome DevTools Emulation panel
-for a range of devices,
-you can check the layout of your site on each devices.
-The Chrome DevTools Emulation Panel
-automatically sets the layout of a URL to the selected device.
+Check the layout of your site on a range of devices
+using the Chrome DevTools Emulation panel.
+This panel automatically sets the layout of a URL to the selected device.
 Dive deeper into the responsiveness of your site
 on an emulated device, by changing the settings
 in the Screen pane:
@@ -99,26 +93,26 @@ in DevTools emulator.
   </thead>
   <tbody>
     <tr>
-      <td data-th="setting">Emulate screen</td>
-      <td data-th="Description">.</td>
+      <td data-th="setting">Emulate screen resolution</td>
+      <td data-th="Description">By default, matches the actual dimensions of the selected device. Uncheck the Emulatate screen setting and enter any new dimensions.
     </tr>
     <tr>
       <td data-th="setting">Enable text autosizing</td>
-      <td data-th="Description">.</td>
+      <td data-th="Description">Emulate font boosting which occurs on mobile devices. Android artificially increases the font metrics used by text autosizing. Enabled by default only when emulating an Android device</td>
     </tr>
     <tr>
       <td data-th="setting">Emulate viewport</td>
-      <td data-th="Description">.</td>
+      <td data-th="Description">Zooms the page out to the physical default viewport of that device.</td>
     </tr>
     <tr>
       <td data-th="setting">Shrink to fit</td>
-      <td data-th="Description">.</td>
+      <td data-th="Description">Ensures the emulated device screen is completely visible within your browser window. This setting does not emulate the device differently.</td>
     </tr>
     <tr>
       <td data-th="setting">CSS media</td>
-      <td data-th="Description">.</td>
+      <td data-th="Description">Print is the default media type; additional media types include tv, speech, projection, and more. This setting doesn't actually impact the emulator.</td>
     </tr>
-  </tbody)
+  </tbody>
 </table>
 
 {% include modules/nextarticle.liquid %}
