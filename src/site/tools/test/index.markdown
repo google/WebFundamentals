@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Types of Testing"
-description: "Learn about testing directed toward building responsive and performant sites across multiple devices. While there's no substitute for testing with real devices, there are many virtual tools to add to your workflow."
-introduction: "Learn about testing directed toward building responsive and performant sites across multiple devices. While there's no substitute for testing with real devices, there are many virtual tools to add to your workflow."
+description: "Learn about testing for the multi-device web. Test your site's responsive layouts and performance on real and virtual devices in the cloud."
+introduction: "Learn about testing for the multi-device web. Test your site's responsive layouts and performance on real and virtual devices in the cloud."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
