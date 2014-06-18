@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Efficiently obtain the user's consent"
+title: "Getting the user to consent to location sharing"
 description: ""
 article:
   written_on: 2014-01-01
@@ -27,15 +27,15 @@ of possibilities such as advanced filtering, pinpointing the user on a map,
 and offering them pro-active suggestions on things they can do based on their
 current position.
 
-As a user your physical location it is a piece of information you want to
+As a user your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
 shows a prompt when a site asks for their location.
 
 [TODO add image]
 
-Recent user studies have [TODO: ADD link from Jenny Gove] have shown that
+Recent user studies have <a <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
 users are distrustful of sites that simply prompt the user to away their
-position on page load
+position on page load.  So what are the best practice?
 
 ## Assume the user will not give you their location
 
@@ -44,9 +44,8 @@ location so you need to adopt a defensive development style.
 
 1.  Handle all errors out of the geolocation API so that you can adapt your
     site to this condition
-2.  Be clear and explicit about your need for the API
-3.  Use a fallback solution.
-
+2.  Be clear and explicit about your need for the location
+3.  Use a fallback solution if needed.
 
 ## Use a fallback
 
@@ -71,16 +70,63 @@ expect to trigger a request.
 
 ## Give clear indication that an action will request their location
 
-If you are going to request access to the users current location make it clear
-with a prompt that you need it.
+<a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">In a study by the Google Ads team</a>, when users were asked to book a hotel room in Boston for an upcoming conference on one particular hotels site, they were prompted to share their GPS location immediately after tapping the ‘Find and Book’ call-to-action on the homepage.
 
-For example if you can offer better results to users because you know their
-location, indicate that and give your users confidence that you are not trying
-to track them.
+In some cases users became frustrated because they struggled to understand why she was being shown hotels in San Francisco when she wanted to book a room in Boston.
 
-## Gently nude the user to grant permission to their location
+A better experience is to make sure the user understands why you’re asking
+them for location. Add in a well known signifier that is common  across
+devices, such as range finder.
+
+<img src="images/indication.png">
+
+Or consider a very explict call to action such as “Find Near Me.” 
+
+<img src="images/nearme.png">
+
+## Gently nudge the user to grant permission to their location
+
+You don't have access 
 
 1.  Set a relatively short timeout for the geo-location API,
 2.  Handle the error message
+3.  Re-request the Geo-location
+
+{% highlight javascript %}
+button.onclick = function() {
+  var startPos;
+  var element = document.getElementById("nudge");
+
+  var showNudgeBanner = function() {
+    nudge.style.display = "block";
+  };
+
+  var hideNudgeBanner = function() {
+    nudge.style.display = "none";
+  };
+
+  var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
+
+  var geoSuccess = function(position) {
+    hideNudeBanner();
+    // We have the location, don't display banner
+    clearTimeout(nudgeTimeoutId); 
+
+    // Do magic with location
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(error) {
+    switch(error.code) {
+      case error.TIMEOUT:
+        // The user didn't accept the callout
+        showNudgeBanner();
+        break;
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+};
+{% endhighlight %}
 
 {% endwrap %}

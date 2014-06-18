@@ -2,7 +2,8 @@
 layout: landing
 title: "Device Access"
 description: "You have a suprising amount of access to the user's device, from Geo Location and Device Orientation, to Access to the communication stack such the dialer and SMS.  Learn how to take advantage of features that your users will love"
-introduction: "TBD.."
+introduction: "You have a suprising amount of access to the user's device, from Geo Location and Device Orientation, to Access to the communication stack such the dialer and SMS.  Learn how to take advantage of features that your users will love"
+snippet: "Locate, call and snap"
 id: device-access
 collection: home
 article:

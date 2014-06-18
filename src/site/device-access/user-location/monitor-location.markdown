@@ -31,6 +31,7 @@ a callback method whenever you request a location.
 
 ## When to use Geolocation to watch the user's location
 
+*  You want to obtain a more precise lock on the user location
 *  Your application needs to update the user interface based on new location 
    information
 *  You applications needs to update business logic when the user enters a certain
