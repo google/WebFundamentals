@@ -17,10 +17,8 @@ key-takeaways:
 notes:
   alias:
     - Check out this list of <a href="http://tjholowaychuk.tumblr.com/post/26904939933/git-extras-introduction-screencast"> Git aliases</a>.
-  firefox:
-    - To test on Firefox browser, enable <a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">Responsive Design View</a>.
   grunt:
-    - Check out this <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">blog post on using the grunt build tools</a>; good beginner's resource to web build tools.
+    - Chris Coyier's <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">Grunt for People Who Think Things Like Grunt are Weird and Hard</a> blog post is good beginner's resource to web build tools.
   windows:
     - See these <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx">instructions for setting up Windows aliases</a>.
 ---
@@ -46,7 +44,7 @@ and check your site's responsiveness across devices.
 Tools for testing across devices include a combination of actual devices,
 device emulation, and device debugging tools.
 It's kind of scary, the thought of testing your site on any number of devices.
-But you need to do this and you need tools to help you make this as easy as possible.
+But you need to do this and you need the tools to make this possible:
 
 <img src="imgs/url.png" class="center" alt="lots of devices open to same url">
 
@@ -58,6 +56,8 @@ If you are still looking at a list of command shortcuts every time
 you make your way into the terminal and/or
 you are manually typing the same long commands,
 it's time to create some short-cuts.
+
+### How to create command-line short-cuts
 
 The easiest way create command-line short-cuts is to
 add aliases for common commands to your `bashrc` file.
@@ -73,6 +73,38 @@ One major gain: your short-cuts won't be device dependent.
 
 {% include modules/remember.liquid title="Note" list=page.notes.windows %}
 
+### List of common aliases
+
+You don't have to, but we recommend aliases for these common commands:
+
+<table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th data-th="command">Command</th>
+      <th data-th="alias">Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="command">Launch a server</td>
+      <td data-th="alias">`alias server = "python -m SimpleHTTPServer"`
+    </tr>
+    <tr>
+      <td data-th="command">Fire up your editor</td>
+      <td data-th="alias">`alias st='open -a "Sublime Text"'`</td>
+    </tr>
+    <tr>
+      <td data-th="command">Go to a directory you commonly work in
+</td>
+      <td data-th="alias">`alias p="cd ~/projects"`</td>
+    </tr>
+  </tbody>
+</table>
+
 ##Set up responsive tools
 
 Checking your site's responsiveness needn't be a manual task.
@@ -81,10 +113,12 @@ and preferably one with image capturing
 so that you can compare multiple views.
 
 For Chrome,
-<a href="http://outof.me/responsive-inspector-beta-released/">Responsive Inspect Chrome extension</a>
-visually shows the media queries of an opened site,
+the <a href="http://outof.me/responsive-inspector-beta-released/">Responsive Inspect Chrome extension</a>
+visually shows the media queries of an opened site.
+The extension shows the `min-width` and `max-width`
+of each media query specified in CSS stylesheets,
 lets you resize the site in the browser,
-and take a screenshot.
+and take a screenshot:
 
 <img src="imgs/inspector.png" class="center" alt="Responsive Inspector Chrome extension">
 
@@ -95,26 +129,30 @@ To set up and use the extension:
 press the Responsive Inspect icon in the extension tool bar.
 * Resize screen and take a screen shot.
 
-{% include modules/remember.liquid title="Note" list=page.notes.firefox %}
+To test on the Firefox browser, enable the <a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">Responsive Design View</a>.
+Use this view to change the size of content area without having
+to resize the entire browser window.
 
 ## Set up build and live reloading tools
 
-Build tools streamline the process of transferring source files to a target result
-(examples:
-<a href="http://gruntjs.com/">Grunt</a>, 
-<a href="https://github.com/broccolijs/broccoli">Broccoli</a>,
-<a href="http://www.gnu.org/software/make/">Make</a>,
-and <a href="http://gulpjs.com/">Gulp</a>).
+Build tools streamline the process of transferring source files to a target result.
 You want build tools that keep track of your site's performance;
 they optimize source files automatically and measure your site's performance.
+We recommend <a href="http://gulpjs.com/">Gulp</a>.
+Other examples include:
+<a href="http://gruntjs.com/">Grunt</a>, 
+<a href="https://github.com/broccolijs/broccoli">Broccoli</a>,
+<a href="http://www.gnu.org/software/make/">Make</a>.
 
 Live reloading tools apply source file changes
 (CSS, HTML, JavaScript, image changes)
 to your site live,
 no reloading required, compilers, templating just works
 (examples:
-<a href="http://livereload.com/">LiveReload</a>
-<a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>). 
+<a href="http://vanamco.com/ghostlab/">Ghostlab (commercial)</a>
+<a href="http://livereload.com/">LiveReload (commercial)</a>
+<a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>,
+<a href="http://livestyle.emmet.io/install/">Emmet LiveStyle</a>). 
 You want live reloading tools that let you navigate to the same URL
 on different devices. Scrolling, clicks, and navigation are synchronized.
 
@@ -122,7 +160,7 @@ The Web Starter Kit does it all:
 watches for changes, optmizes files, builds your site,
 and reloads the browser live.
 Follow the instructions in the
-<a href="https://developers.google.com/web/fundamentals/tools/setup/setup_kit.html">next guide</a>
+[next guide]({{site.baseurl}}/tools/setup/setup_kit)
 to set up the Web Starter Kit.
 
 {% include modules/remember.liquid title="Note" list=page.notes.grunt %}
@@ -130,18 +168,18 @@ to set up the Web Starter Kit.
 ## Set up emulation and debugging tools
 
 Don't put off debugging your site across multiple projects.
-A very simple first step is to set up a device emulator
+A very simple first step is to set up a device emulation
 that integrates with debugging tools.
-Using a device emulator,
+Using device emulation,
 you can project your site on any screen size,
 debug the code,
-and the changes are automatically visible
-in the device emulator.
-Chrome DevTools has a device emulator built in;
-learn how to use the Chrome DevTools emulator
-in <a href="https://developers.google.com/web/fundamentals/tools/test/emulator.html">Emulation Testing</a>.
+and the changes are automatically visible.
 
+Chrome DevTools has device emulation built in;
+learn how to use
+[DevTools emulation]({{site.baseurl}}/tools/test/emulator).
 Emulation is a good start, but it's no substitute for the real thing.
+
 Eventually, preferably as soon as possible,
 you must debug your site on actual devices.
 Remote debugging tools let you debug your site on a desktop
@@ -159,7 +197,8 @@ with links to set-up documentation:
   <tbody>
     <tr>
       <td data-th="tool"><a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome DevTools Remote Debugging</td>
-      <td data-th="Description">Use Chrome DevTools on your development machine to inspect, debug, and analyze browser tabs and WebViews on your Android device. Learn how to use Chrome remote debugging in <a href="https://developers.google.com/web/fundamentals/tools/build/use_devtools.html">Debug with Chrome DevTools</a>.</td>
+      <td data-th="Description">Use Chrome DevTools on your development machine to inspect, debug, and analyze browser tabs and WebViews on your Android device. Learn how to use Chrome remote debugging in
+[Debug with Chrome DevTools]({{site.baseurl}}/tools/build/use_devtools)
     </tr>
     <tr>
       <td data-th="tool"><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Installing.html">Weinre</a></td>
