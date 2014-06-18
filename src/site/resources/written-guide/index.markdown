@@ -19,6 +19,14 @@ collection: resources
 {% include modules/toc.liquid %}
 
 
+## IA
+
+Anything linked to from the main menu is a "landing page". A landing page is a collection of sections. A section is a grouping a guides. A guide is an individual piece of content.
+
+A landing page will link to a section detail page, but also a list of the guides in that section.
+
+A section has an index page that gives a high-level summary of the guides and a list of the guides. It will include a video introducing the topic
+
 ## Capitalization and naming
   * Across the site, for hyphenated words, capitalize as if the hyphens weren't there (e.g., "Multi-Device" and "Peer-to-Peer").
 
