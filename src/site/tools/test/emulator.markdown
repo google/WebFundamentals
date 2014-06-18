@@ -31,9 +31,7 @@ See the
 <a href="https://developer.chrome.com/devtools/docs/mobile-emulation">Chrome DevTools Mobile Emulation docs</a>
 for detailed information on using the Chrome DevTools Mobile Emulator.
 
-IMAGE PLACEHOLDER
-Todo: screenshot of web fundamentals site emulated on Nexus 4
-with DevTools open to show Enable Viewport setting.
+<img src="imgs/viewport.png" class="center" alt="starter file in Mobile Emulator">
 
 ## Emulate touch events
 
@@ -52,9 +50,7 @@ To enable support for touch event emulation:
 1. Open the Emulation panel in the DevTools.
 2. Enable "Emulate touch screen" in the Sensors pane.
 
-IMAGE PLACEHOLDER
-Todo: screenshot of web fundamentals site and DevTools
-with Sensors pane open and setting enabled.
+<img src="imgs/touch.png" class="center" alt="Mobile emulator Sensors pane">
 
 Multi-touch events can be simulated if you have a device with touch input,
 such as a modern Apple MacBook.
@@ -65,6 +61,7 @@ see <a href="http://www.html5rocks.com/en/mobile/touch/">Multi-touch web develop
 
 Many new mobile devices are now shipping with accelerometers, gyroscopes,
 compasses and other hardware designed to determine capture motion and orientation data.
+
 Web browsers are providing increasingly more access to that new hardware,
 including such examples as the
 <a href="http://dev.w3.org/geo/api/spec-source-orientation">HTML5 DeviceOrientation events</a>.
@@ -96,49 +93,49 @@ and double-clicking the prefpane file.
 Once you've launched it,
 you'll see a drop-down listing a number of preconfigured network scenarios including 3G and EDGE:
 
-IMAGE PLACEHOLDER
-Todo: Just use image from Addy's notes.
+<img src="imgs/lint.png" class="center" alt="Network Link Conditioner">
 
 On Windows,
 options also include
 <a href="http://www.telerik.com/fiddler">Fiddler</a> and
-<a href="http://www.charlesproxy.com/">Charles</a>, an HTTP proxy which can throttle your connection speeds.
+<a href="http://www.charlesproxy.com/">Charles</a>,
+an HTTP proxy which can throttle your connection speeds.
+Check out the
+<a href="http://roderick.dk/2012/05/11/simulate-slow-web-connections/">network characteristics</a>
+you can simulate:
 
-As you can see below, there are plenty of
-<a href="http://roderick.dk/2012/05/11/simulate-slow-web-connections/">settings</a>
-available for defining the network characteristics you would like to simulate.
-
-IMAGE PLACEHOLDER
-Todo: Just use image from Addy's notes.
+<img src="imgs/throttling.png" class="center" alt="Settings for simulating network conditions">
 
 ## Emulate user agent
 
-The DevTools support for device emulation includes native User Agent and dimension overriding.
-This allows developers to debug mobile browsers
-on different devices and operating systems via the Overrides menu.
+The native User Agent and dimension overriding lets you debug mobile browsers
+on different devices and operating systems.
 
 1. Within the Emulation panel, open up the Sensors pane. 
 2. Check "Spoof user agent" and select "Android 2.3 - Nexus S".
 3. Refresh the page.
 
-An updated user-agent field is now sent as part of the request headers for page resources.
-Some websites may decide to serve optimized versions of the page depending on the user-agent,
-this is one case where
+An updated user-agent field is now sent as part
+of the request headers for page resources.
+Some websites may decide to serve optimized versions
+of the page depending on the user-agent.
+This is one case where
 <a href="https://developer.chrome.com/devtools/docs/mobile-emulation#useragent-spoofing">spoofing a user-agent</a> may be useful.
 
-IMAGE PLACEHOLDER
-Todo: Show web fundamentals and user agent field.
+<img src="imgs/useragent.png" class="center" alt="native user-agent overrides">
 
 ## Emulate geolocation
 
 When working with HTML5 geolocation support in an application,
 it can be useful to debug the output received
 when using different values for longitude and latitude.
-The DevTools support both overriding position values for navigator.geolocation
+
+The DevTools support both overriding position values
+for <a href="http://www.w3schools.com/html/html5_geolocation.asp">navigator.geolocation</a>
 and simulating geolocation not being available via the Sensors pane.
 See the <a href="https://developer.chrome.com/devtools/docs/mobile-emulation#device-geolocation-overrides">Chrome DevTools geolocation overrides</a> documentation.
 
-## Testing multiple versions at the same time
+## Test multiple versions at the same time
 
 The Web Starter Kit's live reloading makes it possible
 to emulate your site on multiple devices and test at the same time:
