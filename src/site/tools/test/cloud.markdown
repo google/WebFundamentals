@@ -15,7 +15,7 @@ key-takeaways:
     - If you don't have access to a real device, use an emulator rather than a simulator.
     - For iOS testing, use the iOS simulator in combination with testing on real iOS devices.
 notes:
-  emulator-summary:
+  emulatorsummary:
     - For the complete run-down on emulators and simulators, see <a href="http://www.mobilexweb.com/emulators">Mobile Emulators & Simulators: The Ultimate Guide</a>.
 ---
 {% wrap content %}
@@ -34,9 +34,9 @@ your development workflow should incorporate both real device testing and cloud 
 
 Three key advantages to testing in the cloud:
 
-1. You don't need to buy lots of devices.
-2. You can test your site in the same development workspace as your code editor and debugging tools.
-3. Automated unit tests can run your site on many browsers, platforms, and devices at the same time.
+* You don't need to buy lots of devices.
+* You can test your site in the same development workspace as your code editor and debugging tools.
+* Automated unit tests can run your site on many browsers, platforms, and devices at the same time.
 
 ## What's the difference between emulators and simulators?
 
@@ -66,8 +66,7 @@ so that you are testing your site on an actual device somewhere.
 Simulators are usually easier to use than emulators,
 but they aren't as useful; they don't give the full picture
 of how your site will behave on a device.
-
-{% include modules/remember.liquid title="Note" list=page.notes.emulator-summary %}
+For the complete run-down on emulators and simulators, see <a href="http://www.mobilexweb.com/emulators">Mobile Emulators & Simulators: The Ultimate Guide</a>.
 
 ## How to use the iOS simulator
 
@@ -87,9 +86,7 @@ To open your site in the simulator:
 If your Mac is connected to the internet,
 Safari displays your site in the simulator:
 
-IMAGE PLACEHOLDER
-Todo: Yikes-- iOS simulator doesn't seem to work for URLs in Safari!
-I have a starter image in my mailbox that I can use to raise a bug with Apple.
+<img src="imgs/WebFundamentalsIOS.png" class="center" alt="web fundamentals site in iOS simulator">
 
 ## Unit testing
 
