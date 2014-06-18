@@ -73,6 +73,25 @@ Powered by <a href="http://browsersync.io/">BrowserSync</a>,
 the Web Starter Kit synchronizes clicks, scrolls, forms and live-reload
 across multiple devices as you edit your project.
 
+## Which devices you need and how to get them
+
+Brad Frost's
+<a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
+is a good starting point for deciding which devices you need
+and provides links to get those devices.
+But it's not always possible to own the devices you're targeting,
+especially if you’re a freelancer or don’t work for a large company.
+
+There are an increasing number of
+<a href="http://opendevicelab.com/">open device-labs</a> that can loan you hardware,
+but even if you do own your target devices,
+it can be a tedious process setting them all up for testing.
+
+The next section covers a range of cloud testing services
+that can get you most of the way in terms of testing on a range of devices,without actually having those devices.
+
+{% include modules/remember.liquid title="Note" list=page.notes.unit-tests %}
+
 ## Summary of device testing tools
 
 Here's a summary of cross-device testing tools
@@ -88,7 +107,7 @@ Here's a summary of cross-device testing tools
   </thead>
   <tbody>
     <tr>
-      <td data-th="tool"><a href="https://github.com/google/web-starter-kit">Web Starter Kit</td>
+      <td data-th="tool"><a href="https://github.com/google/web-starter-kit">Web Starter Kit</a></td>
       <td data-th="Description">Point any device to local version of your site. Update source files and tool automatically optimizes and pushes content to browser. Synchronized testing across devices. Develop on Mac, Linux, or Windows platforms; it's free.</td>
     </tr>
     <tr>
@@ -100,35 +119,15 @@ Here's a summary of cross-device testing tools
       <td data-th="Description">Loads the URL from your current Chrome tab onto any local device into a Webview inside the Adobe Edge Inspect app. You need to install each device manually and use specific clients on each single device. Requires a subscription to Creative Cloud.</td>
     </tr>
     <tr>
-      <td data-th="tool"><a href="http://viljamis.com/blog/2012/remote-preview/">Remote Preview</td>
+      <td data-th="tool"><a href="http://viljamis.com/blog/2012/remote-preview/">Remote Preview</a></td>
       <td data-th="Description">You host the tool's html page and content and point your device's browser to it. The tool regular checks a file for a URL and loads it into an iframe. Light-weight tool great for chaining devices together and easily changing URL across all of them. Doesn't support synchronized testing though.</td>
     </tr>
     <tr>
       <td data-th="tool"><a href="http://vanamco.com/ghostlab/">Ghostlab</a></td>
-      <td data-th="Description">Creates a local server from within the app for any directory.
-Any connected browser will sync interactions with the page. Only available for Mac; purchase fee.</td>
+      <td data-th="Description">Creates a local server from within the app for any directory. Any connected browser will sync interactions with the page. Only available for Mac; purchase fee.</td>
     </tr>
   </tbody>
 </table>
-
-## Which devices you need and how to get them
-
-Brad Frost's
-<a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
-is a good starting point for deciding which devices you need
-and provides links to get those devices.
-But it's not always possible to own the devices you're targeting,
-especially if you’re a freelancer or don’t work for a large company.
-
-There are an increasing number of
-<a href="http://opendevicelab.com/">open device-labs</a> that can loan you hardware,
-but even if you do own your target devices,
-it can be a tedious process setting them all up for testing.
-
-The next section covers a range of cloud testing services that can get you most of the way
-in terms of testing on a range of devices, without actually having those devices.
-
-{% include modules/remember.liquid title="Note" list=page.notes.unit-tests %}
 
 {% include modules/nextarticle.liquid %}
 
