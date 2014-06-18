@@ -38,6 +38,14 @@ toc:
         path: /media/video/
       - title: "Audio"
         path: /media/audio/
+    - title: "Device Access"
+      path: /device-access/
+      id: device-access
+      section:
+      - title: "User location"
+        path: /device-access/user-location
+      - title: "Click to call"
+        path: /device-access/click-to-call
     - title: Performance
       path: /performance/
       id: performance
@@ -52,8 +60,8 @@ toc:
           path: /performance/optimizing-interactivity/
         - title: "Measuring Performance"
           path: /performance/measuring-performance/
-- title: Spotlights
-  path: /spotlights/
+- title: Tools
+  path: /tools/
 - title: Resources
   path: /resources/
   section:
