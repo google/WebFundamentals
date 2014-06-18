@@ -118,6 +118,8 @@ the Web Starter Kit build tools automate these tasks:
 and images.
 * Compiles Sass into CSS.
 
+The next section covers the Web Starter Kit build process in detail.
+
 <img src="imgs/web-starter-kit.gif" class="center" alt="web starter kit in action">
 
 {% include modules/nextarticle.liquid %}
