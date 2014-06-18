@@ -9,7 +9,7 @@ article:
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
-introduction: ""
+introduction:  "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
 key-takeaways:
   geo: 
     -  Check for Compatibility before you use the API
@@ -21,13 +21,13 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
-
 The API is device-agnostic; it doesn't care how the browser determines
 location, so long as clients can request and receive location data in a
 standard way. The underlying mechanism might be via GPS, wifi. Since any of
 these lookups is going to take some time, the API is asynchronous; you pass it
 a callback method whenever you request a location.
+
+{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
 
 ## When to use Geolocation to watch the user's location
 
