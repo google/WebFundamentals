@@ -5,6 +5,13 @@ title: Web Fundamentals
 id: home
 ---
 
+<style>
+  .sections {
+    margin-bottom: 52px;
+  }
+
+</style>
+
 <div class="home-header centered">
   <div class="container">
     <h1>Web <b>Fundamentals</b></h1>
@@ -24,20 +31,28 @@ id: home
       <a href="{{site.github.root}}/pulls" title="Submit a pull request on GitHub">submit a pull request</a>.
     </p>
   </div>
-
-  <ul class="list-guides-intro list-centered list-reset clear">
-    {% for guide in page.articles.home %}
-    <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
-      <a href="{{site.baseurl}}{{guide.url | clean}}" title="{{guide.title}}" class="themed">
-        <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
-        <h3 class="large">{{guide.title}}</h3>
-      </a>
-      <p>{{ guide.snippet }}</p>
-    </li>
-    {% endfor %}
-  </ul>
 </div>
 
+<div class="container sections">
+  <div class="centered">  
+    <ul class="guides-list container">
+
+      {% for guide in page.articles.[page.id] %}
+      {% if guide.published != false %}
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
+        <a href="{{site.baseurl}}{{guide.url | clean}}" title="{{guide.title}}" class="themed">
+            <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
+            <h3 class="large">{{guide.title}}</h3>
+          </a>
+          <p>{{ guide.snippet }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+    </div>
+  </div>
+</div>
 
 {% if site.spotlights == true %}
 
