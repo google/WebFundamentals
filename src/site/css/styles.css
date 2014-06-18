@@ -1361,8 +1361,13 @@ li > p {
 }
 
 /* line 158, ../_sass/_components/_icons.scss */
-.icon-user-input:before {
+.icon-tools:before {
   content: "\e01a";
+}
+
+/* line 163, ../_sass/_components/_icons.scss */
+.icon-user-input:before {
+  content: "\e01b";
 }
 
 /**
