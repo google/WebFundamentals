@@ -183,7 +183,7 @@ Each touch event has three lists containing touch data
 
 In most cases, `targetTouches` gives you everything you need.
 
-### Request Animation Frame
+### requestAnimationFrame
 
 Since the event callbacks are fired on the main thread, we want to run as
 little code as possible in the callback to keep our frame rate high,
