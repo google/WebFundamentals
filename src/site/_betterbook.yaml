@@ -64,6 +64,7 @@ toc:
   path: /tools/
 - title: Resources
   path: /resources/
+  in_header: false
   section:
   - title: "Glossary"
     path: /resources/glossary/

@@ -111,7 +111,7 @@ and simulating geolocation not being available via the overrides menu.
 
 Unfortunately, not all location lookups are successful. Perhaps a GPS could
 not be located or the user has suddenly disabled location lookups. A second,
-optional, argument to getCurrentPosition() will be called in the event of an
+optional, argument to `getCurrentPosition()` will be called in the event of an
 error, so you can notify the user inside the callback:
 
 {% highlight javascript %}
@@ -169,7 +169,7 @@ window.onload = function() {
 };
 {% endhighlight %}
 
-## Set a timeout
+## Don't keep the user waiting, set a timeout
 
 Unless set your request to get the current position could never return.
 
@@ -185,7 +185,7 @@ window.onload = function() {
     document.getElementById('startLat').innerHTML = startPos.coords.latitude;
     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
   };
-  var geoError = function(position) {
+  var geoError = function(error) {
     console.log('Error occurred. Error code: ' + error.code);
     // error.code can be:
     //   0: unknown error
