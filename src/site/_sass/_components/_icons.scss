@@ -154,9 +154,14 @@ $icon-tick: "\e019";
   content:"\e019";
 }
 
-$icon-user-input: "\e01a";
-.icon-user-input:before {
+$icon-tools: "\e01a";
+.icon-tools:before {
   content:"\e01a";
+}
+
+$icon-user-input: "\e01b";
+.icon-user-input:before {
+  content:"\e01b";
 }
 
 
