@@ -20,7 +20,6 @@ key-takeaways:
 {% wrap content %}
 
 {% include modules/toc.liquid %}
-{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
 
 As a web developer, having access to the users location opens up a huge number
 of possibilities such as advanced filtering, pinpointing the user on a map,
@@ -31,9 +30,9 @@ As a user your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
 shows a prompt when a site asks for their location.
 
-[TODO add image]
+{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
 
-Recent user studies have <a <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
+Recent user studies have <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
 users are distrustful of sites that simply prompt the user to away their
 position on page load.  So what are the best practice?
 
@@ -47,7 +46,7 @@ location so you need to adopt a defensive development style.
 2.  Be clear and explicit about your need for the location
 3.  Use a fallback solution if needed.
 
-## Use a fallback
+## Use a fallback if geolcation is required
 
 Our recomnedation is to not tie your site or application in to requiring
 access to the users current location, but  If your application or site
@@ -61,12 +60,22 @@ telecommunications hub to the user, or the nearest cell phone tower.  In many
 cases they might not even be that accurate, especially if the user is on VPN
 or some other proxy service.
 
-## Request Access on a user gesture
+## Always request access to location on a user gesture
 
-Never try to request access to the users current location on page load.  The
-user hasn't had time to read the page and understand the context of the
-request.  Instead wait for a user gesture on an action that the user would 
+Never try to request access to the users current location on page load (like
+in the following picture). There is no context for the reason why the site is
+requesting the  users current location.
+
+<img src="images/geolocation.png">
+
+The user hasn't had time to read the page and understand the context of the
+request.  Instead wait for a user gesture on an action that the user would
 expect to trigger a request.
+
+Instead you should give the user a clear call-to-action or an indication  that
+an operation will require access to the location.  The user will then be able
+to more easily associate the system prompt for access with the action they
+just initiated.
 
 ## Give clear indication that an action will request their location
 
