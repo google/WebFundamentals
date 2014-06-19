@@ -165,11 +165,15 @@ Don't put off debugging your site across multiple devices. A very simple
 first step is to set up device emulation that integrates with debugging
 tools.
 
-Using device emulation,
-you can project your site on any screen size,
-debug the code,
-and the changes are automatically visible.
-Chrome DevTools has device emulation built in;
+Using device emulators, such as [iOS Safari Simulator](https://developer.apple
+.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introductio
+n/Introduction.html), [GenyMotion](http://www.genymotion.com/) and the
+[Official Android
+Emulator](http://developer.android.com/tools/devices/emulator.html) for
+Android devices as well as [Modern.ie](https://modern.ie/) for versions of IE;
+you can see how your site works across a range of devices.
+
+Chrome DevTools has a device emulation feature built in which simply mimics some device behavior such as screen size, screen density and touch support;
 learn how to use
 [DevTools emulation]({{site.baseurl}}/tools/test/emulator.html).
 
@@ -200,7 +204,7 @@ with links to set-up documentation:
     </tr>
     <tr>
       <td data-th="tool"><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Installing.html">Weinre</a></td>
-      <td data-th="Description">Remote debugger for web pages. Debugging tools work on Chrome and Safari browsers. Test web pages on Android Browser, iOS Mobile Safari application, and PhoneGap/Cordova.</td>
+      <td data-th="Description">Remote debugger for web pages. This is helpful when there is no remote debug tools available for a browser, for example the Android Browser on older devices (pre-KitKat).</td>
     </tr>
     <tr>
       <td data-th="tool"><a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">Firefox for Android + ADB</td>
