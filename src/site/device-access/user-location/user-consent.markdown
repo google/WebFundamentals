@@ -9,7 +9,10 @@ article:
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
-introduction: ""
+introduction: "As a web developer, having access to the users location opens up a huge number
+  of possibilities such as advanced filtering, pinpointing the user on a map,
+  and offering them pro-active suggestions on things they can do based on their
+  current position."
 key-takeaways:
   geo: 
     -  Assume the user will not give you their location
@@ -19,22 +22,17 @@ key-takeaways:
 
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
-As a web developer, having access to the users location opens up a huge number
-of possibilities such as advanced filtering, pinpointing the user on a map,
-and offering them pro-active suggestions on things they can do based on their
-current position.
-
-As a user your physical location is a piece of information you want to
+As a user, your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
 shows a prompt when a site asks for their location.
 
-{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
+{% include modules/toc.liquid %}
 
 Recent user studies have <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
 users are distrustful of sites that simply prompt the user to away their
 position on page load.  So what are the best practice?
+
+{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
 
 ## Assume the user will not give you their location
 
