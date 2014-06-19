@@ -144,13 +144,9 @@ Other examples include:
 <a href="https://github.com/broccolijs/broccoli">Broccoli</a>,
 <a href="http://www.gnu.org/software/make/">Make</a>.
 
-You also want live reloading tools that let you navigate to the same URL
-on different devices.
-Live reloading tools apply source file changes
-(CSS, HTML, JavaScript, image changes)
-to your site live,
-no reloading required, compilers, templating just works.
-Scrolling, clicks, and navigation are synchronized.
+You also want live reloading which will automatically update the page with any
+changes you make to your HTML, CSS, Javascript and images. No more manual
+refreshing of the page after every tweak.
 
 Examples:
 
@@ -159,9 +155,8 @@ Examples:
 * <a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>
 * <a href="http://livestyle.emmet.io/install/">Emmet LiveStyle</a>
 
-The Web Starter Kit does it all:
-watches for changes, optmizes files, builds your site,
-and reloads the browser live.
+The Web Starter Kit does all this and more:
+watches for changes, optmizes files, builds your site, reloads the browser live and synchronizes scrolling, clicks, and navigation across all your devices.
 Follow the instructions in the
 [next guide]({{site.baseurl}}/tools/setup/setup_kit.html)
 to set up the Web Starter Kit.
