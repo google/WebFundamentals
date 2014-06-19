@@ -10,6 +10,8 @@ article:
 collection: tools
 id: set-up
 ---
-{% comment %}
-Page content will be output by the section layout pased on the article collection matching page.id
-{% endcomment %}
+{% wrap content%}
+
+A good development environment sets you up for success.  A great editor lets you code efficiently and helps you identify issues quickly; Developers tools that integrate into the browser let you quickly check that the code you create produces the correct output across all browsers; and a bootstrapper lets you start your project that follows all the best practices in seconds.
+
+{% endwrap %}
