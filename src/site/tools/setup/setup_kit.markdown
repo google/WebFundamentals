@@ -16,8 +16,6 @@ key-takeaways:
 notes:
   command-line:
     - Most of your interactions with the Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
-  github:
-    - If you don't already have one, you need a <a href="https://github.com/">GitHub account</a> to clone the Web Starter Kit repository.
   next:
     - Now that you've set up the Web Starter Kit, try [building a site]({{site.baseurl}}/tools/build/build_site.html).
 ---
@@ -36,8 +34,6 @@ build on what's included in the `app` directory:
 `git clone https://github.com/google/web-starter-kit.git`
 
 `$ cd web-starter-kit/app`
-
-{% include modules/remember.liquid title="Important" list=page.notes.github %}
 
 ## Install tooling
 
