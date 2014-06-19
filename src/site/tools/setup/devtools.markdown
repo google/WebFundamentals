@@ -71,7 +71,7 @@ Another slightly more advanced way to create short-cuts is
 to <a href="http://dotfiles.github.io/">store dotfiles in GitHub</a>.
 One major gain: your short-cuts won't be device dependent.
 
-{% include modules/remember.liquid title="Note" list=page.notes.windows %}
+{% include modules/remember.liquid title="Note" inline=true list=page.notes.windows %}
 
 ### List of common aliases
 
@@ -166,7 +166,7 @@ Follow the instructions in the
 [next guide]({{site.baseurl}}/tools/setup/setup_kit.html)
 to set up the Web Starter Kit.
 
-{% include modules/remember.liquid title="Note" list=page.notes.grunt %}
+{% include modules/remember.liquid title="Note" inline=true list=page.notes.grunt %}
 
 ## Set up emulation and debugging tools
 

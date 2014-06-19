@@ -177,7 +177,7 @@ Unless set your request to get the current position could never return.
 window.onload = function() {
   var startPos;
   var geoOptions = {
-
+     timeout: 10 * 1000
   }
 
   var geoSuccess = function(position) {
@@ -200,7 +200,38 @@ window.onload = function() {
 
 ## Prefer a coarse location over a fine grained location
 
-Many uses of geo-location don't require a fine grained location, for example if you 
+If you want to find the nearest store to a user it is unlikely that you need
+1 meter precision to  work that out.  The API is designed to give a coarse 
+location that returns as quickly as possible.
+
+If you do need high-precision it is possible to override the default setting
+with the `enableHighAccuracy` option.  Use this sparingly: it will be slower
+to resolve and use more battery.
+
+{% highlight javascript %}
+window.onload = function() {
+  var startPos;
+  var geoOptions = {
+    enableHighAccuracy: true
+  }
+
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(error) {
+    console.log('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+};
+{% endhighlight %}
 
 
 {% endwrap %}

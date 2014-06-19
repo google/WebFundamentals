@@ -185,6 +185,16 @@
     }
   }
 
+  & li a {
+    color: $colorHighlight;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
   & .highlight-module__content {
     border-color: $colorGrayKeyline;
     border-style: solid;
