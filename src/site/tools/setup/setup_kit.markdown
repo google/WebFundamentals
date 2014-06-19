@@ -23,9 +23,9 @@ notes:
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
-
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
 ## Clone repository
 

@@ -24,9 +24,9 @@ notes:
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.devtools %}
-
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.devtools %}
 
 ## Tools you need and why
 

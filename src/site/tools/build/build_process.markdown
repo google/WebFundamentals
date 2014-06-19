@@ -20,9 +20,10 @@ notes:
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.build-process %}
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.build-process %}
 
 ## How should the build process be used in your workflow?
 

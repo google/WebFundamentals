@@ -19,9 +19,9 @@ notes:
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.editor %}
-
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.editor %}
 
 ## Truly learn to use your editor
 
