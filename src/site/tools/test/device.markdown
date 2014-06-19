@@ -16,7 +16,7 @@ key-takeaways:
     - Synchronized testing solution let you test user interaction on all devices at the same time.
 notes:
   unit-tests:
-    - If interested in running unit tests across browsers/devices, you’ll need a test runner that canrun your test suite on these platforms. Some options for this include <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/">Yeti</a> and <a href="http://thrilljs.com/">Thrill</a>.
+    - If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/">Yeti</a> and <a href="http://thrilljs.com/">Thrill</a>.
 ---
 {% wrap content %}
 
@@ -35,7 +35,8 @@ seeing something wrong,
 having to switch back to your development environment,
 fix it, rebuild, push to each device again, maybe having to repeat some or all of the set-up steps.
 
-Manual device testing isn't a practical workflow.
+Testing on a mobile device away
+from your development environment isn't a practical workflow.
 
 <img src="imgs/manual.png" class="center" alt="developer struggling to test on mobile manually">
 
@@ -48,13 +49,14 @@ This means that you can test your pages on any device without messing with other
 So long as your development environment and devices can be on the same network,
 you can access the same local version of your site on any external devices.
 
-## Live Browser Reloading
+## Live browser reloading
 
 Arguably the biggest frustration with testing on real devices is the inability
 to quickly fix a bug that you see on the real device in your source code.
 
 With live browser reloading,
-you don't need to access developer tools on your mobile device.
+debug your source code on your development machine
+and see the changes instantly on your mobile device.
 As you change your source code,
 any instance of your site opened on any device is automatically reloaded live.
 
@@ -75,6 +77,19 @@ across multiple devices as you edit your project.
 
 ## Which devices you need and how to get them
 
+The Web Starer Kit supports the following devices:
+
+* IE10, IE11
+* FF 30, 31
+* Chrome 34, 35
+* Safari 7, 8
+* Opera 23, 24
+* iOS Safari 7, 8
+* Opera Coast
+* Android / Chrome 4.4, 4.4.3
+* Blackberry 1.0
+* IE Mobile 10
+
 Brad Frost's
 <a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
 is a good starting point for deciding which devices you need
@@ -87,16 +102,18 @@ There are an increasing number of
 but even if you do own your target devices,
 it can be a tedious process setting them all up for testing.
 
-The next section covers a range of cloud testing services
-that can get you most of the way in terms of testing on a range of devices,without actually having those devices.
+The
+[next guide]({{site.baseurl}}/tools/test/cloud.html)
+covers a range of cloud testing services
+that can get you most of the way in terms of testing on a range of devices
+without actually having those devices.
 
 {% include modules/remember.liquid title="Note" list=page.notes.unit-tests %}
 
 ## Summary of device testing tools
 
-Here's a summary of cross-device testing tools
-(inspired by
-<a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>):
+Inspired by
+<a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>, here's a summary of cross-device testing tools:
 
 <table class="table-2 tc-heavyright">
   <colgroup>
@@ -127,7 +144,7 @@ Here's a summary of cross-device testing tools
       <td data-th="Description">You host the tool's html page and content and point your device's browser to it. The tool regular checks a file for a URL and loads it into an iframe. Light-weight tool great for chaining devices together and easily changing URL across all of them. Doesn't support synchronized testing though.</td>
     </tr>
     <tr>
-      <td data-th="tool"><a href="http://vanamco.com/ghostlab/">Ghostlab</a></td>
+      <td data-th="tool"><a href="http://vanamco.com/ghostlab/">Ghostlab (commercial)</a></td>
       <td data-th="Description">Creates a local server from within the app for any directory. Any connected browser will sync interactions with the page. Only available for Mac; purchase fee.</td>
     </tr>
   </tbody>
