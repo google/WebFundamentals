@@ -91,16 +91,16 @@ You don't have to, but we recommend aliases for these common commands:
   <tbody>
     <tr>
       <td data-th="command">Launch a server</td>
-      <td data-th="alias">`alias server = "python -m SimpleHTTPServer"`</td>
+      <td data-th="alias">alias server = "python -m SimpleHTTPServer"</td>
     </tr>
     <tr>
       <td data-th="command">Fire up your editor</td>
-      <td data-th="alias">`alias st='open -a "Sublime Text"'`</td>
+      <td data-th="alias">alias st='open -a "Sublime Text"'</td>
     </tr>
     <tr>
       <td data-th="command">Go to a directory you commonly work in
 </td>
-      <td data-th="alias">`alias p="cd ~/projects"`</td>
+      <td data-th="alias">alias p="cd ~/projects"</td>
     </tr>
   </tbody>
 </table>
@@ -114,10 +114,10 @@ so that you can compare multiple views.
 
 For Chrome,
 the <a href="http://outof.me/responsive-inspector-beta-released/">Responsive Inspect Chrome extension</a>
-visually shows the media queries of an opened site.
-The extension shows the `min-width` and `max-width`
-of each media query specified in CSS stylesheets,
-lets you resize the site in the browser,
+visually shows the media queries of an opened site,
+including the `min-width` and `max-width`
+of each media query specified in CSS stylesheets.
+Use this tool to resize the site in the browser
 and take a screenshot:
 
 <img src="imgs/inspector.png" class="center" alt="Responsive Inspector Chrome extension">
@@ -144,23 +144,26 @@ Other examples include:
 <a href="https://github.com/broccolijs/broccoli">Broccoli</a>,
 <a href="http://www.gnu.org/software/make/">Make</a>.
 
+You also want live reloading tools that let you navigate to the same URL
+on different devices.
 Live reloading tools apply source file changes
 (CSS, HTML, JavaScript, image changes)
 to your site live,
-no reloading required, compilers, templating just works
-(examples:
-<a href="http://vanamco.com/ghostlab/">Ghostlab (commercial)</a>
-<a href="http://livereload.com/">LiveReload (commercial)</a>
-<a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>,
-<a href="http://livestyle.emmet.io/install/">Emmet LiveStyle</a>). 
-You want live reloading tools that let you navigate to the same URL
-on different devices. Scrolling, clicks, and navigation are synchronized.
+no reloading required, compilers, templating just works.
+Scrolling, clicks, and navigation are synchronized.
+
+Examples:
+
+* <a href="http://vanamco.com/ghostlab/">Ghostlab (commercial)</a>
+* <a href="http://livereload.com/">LiveReload (commercial)</a>
+* <a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>
+* <a href="http://livestyle.emmet.io/install/">Emmet LiveStyle</a>
 
 The Web Starter Kit does it all:
 watches for changes, optmizes files, builds your site,
 and reloads the browser live.
 Follow the instructions in the
-[next guide]({{site.baseurl}}/tools/setup/setup_kit)
+[next guide]({{site.baseurl}}/tools/setup/setup_kit.html)
 to set up the Web Starter Kit.
 
 {% include modules/remember.liquid title="Note" list=page.notes.grunt %}
@@ -170,20 +173,21 @@ to set up the Web Starter Kit.
 Don't put off debugging your site across multiple projects.
 A very simple first step is to set up a device emulation
 that integrates with debugging tools.
+
 Using device emulation,
 you can project your site on any screen size,
 debug the code,
 and the changes are automatically visible.
-
 Chrome DevTools has device emulation built in;
 learn how to use
-[DevTools emulation]({{site.baseurl}}/tools/test/emulator).
-Emulation is a good start, but it's no substitute for the real thing.
+[DevTools emulation]({{site.baseurl}}/tools/test/emulator.html).
 
+Emulation is a good start, but it's no substitute for the real thing.
 Eventually, preferably as soon as possible,
 you must debug your site on actual devices.
 Remote debugging tools let you debug your site on a desktop
 and see changes on remote devices.
+
 Here's a brief comparison of remote debugging options,
 with links to set-up documentation: 
 
@@ -201,8 +205,7 @@ with links to set-up documentation:
   <tbody>
     <tr>
       <td data-th="tool"><a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome DevTools Remote Debugging</td>
-      <td data-th="Description">Use Chrome DevTools on your development machine to inspect, debug, and analyze browser tabs and WebViews on your Android device. Learn how to use Chrome remote debugging in
-[Debug with Chrome DevTools]({{site.baseurl}}/tools/build/use_devtools)
+      <td data-th="Description">Use Chrome DevTools on your development machine to inspect, debug, and analyze browser tabs and WebViews on your Android device.
     </tr>
     <tr>
       <td data-th="tool"><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Installing.html">Weinre</a></td>
