@@ -27,8 +27,7 @@ notes:
 
 Code editors are the quintessential development tool.
 But what makes an editor more than a simple word processor
-are it's shortcuts that get you working faster and
-support for installing (and creating) all sorts of plugins.
+are it's shortcuts that get you working faster.
 
 You know you've truly learned to use your editor
 when you are able to move around your code fast
@@ -37,21 +36,17 @@ It's always good to keep a cheatsheet handy for editor commands.
 Top editors also let you customize commands and keyboard shortcuts
 so that you only have to remember your own implementations.
 
-<a href="http://www.sublimetext.com/">Sublime</a> and
-<a href="http://www.vim.org/">Vim</a> are two great editors
-with editor command support
-and tons of plugins to help you write better code faster.
-They also have package managers that make it easy to install new plugins.
-Though Sublime costs money, its plugins trend towards the web developer,
-so these guides assume Sublime as the default editor of choice.
+<a href="http://www.sublimetext.com/">Sublime</a> is a great editor with tons
+of plugins to help you write better code faster. It also has a package manager
+that makes it easy to install new plugins. Though Sublime costs money, you can
+try it for free and this guide assumes Sublime as the default editor of
+choice.
 
 {% include modules/remember.liquid title="Note" list=page.notes.blog %}
 
-## Consider installing a package manager
+## Install the package manager
 
-Package managers make it easy to find, install, and keep packages up-to-date.
-If you've never used a package manager before,
-consider installing one for your editor now.
+Package managers make it easy to find, install, and keep packages / plugins up-to-date.
 
 Here's a sneak peak at what you can do with the
 <a href="https://sublime.wbond.net/">Sublime Text package manager</a>.
