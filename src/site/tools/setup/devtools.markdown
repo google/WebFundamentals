@@ -17,8 +17,6 @@ key-takeaways:
 notes:
   alias:
     - Check out this list of <a href="http://tjholowaychuk.tumblr.com/post/26904939933/git-extras-introduction-screencast"> Git aliases</a>.
-  grunt:
-    - Chris Coyier's <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">Grunt for People Who Think Things Like Grunt are Weird and Hard</a> blog post is good beginner's resource to web build tools.
   windows:
     - See these <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx">instructions for setting up Windows aliases</a>.
 ---
@@ -160,8 +158,6 @@ watches for changes, optmizes files, builds your site, reloads the browser live 
 Follow the instructions in the
 [next guide]({{site.baseurl}}/tools/setup/setup_kit.html)
 to set up the Web Starter Kit.
-
-{% include modules/remember.liquid title="Note" inline=true list=page.notes.grunt %}
 
 ## Set up emulation and debugging tools
 
