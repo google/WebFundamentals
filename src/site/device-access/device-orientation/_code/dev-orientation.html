@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Device orientation</title>
+    <style type="text/css">
+      .h5logo {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div role="main" class="container">
+      <h1>Device Orientation</h1>
+      <p>
+        Device orientation is <b><span id="doeSupported">not</span></b> supported 
+        on your device.
+      </p>
+
+      <img id="h5logo" src="html5-logo.svg" class="h5logo">
+
+      <h2>Rotation Data</h2>
+      <p>
+        <b>alpha:</b> <span id="alpha"></span><br>
+        <b>beta:</b> <span id="beta"></span><br>
+        <b>gamma:</b> <span id="gamma"></span><br>
+      </p>
+
+      <p>
+        <b>Last updated:</b> <span id="timestamp"></span>
+      </p>
+
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+
+      var fixed = 2;
+      var h5logo  = document.getElementById("h5logo");
+      var timestamp = document.getElementById("timestamp");
+      var alpha = document.getElementById("alpha");
+      var beta = document.getElementById("beta");
+      var gamma = document.getElementById("gamma");
+
+
+      /* // [START devori] */
+      if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+        document.getElementById("doeSupported").innerText = "";
+      }
+      /* // [END devori] */
+
+      var deviceOrientationData;
+
+      function deviceOrientationHandler(evt) {
+        deviceOrientationData = evt;
+        try {
+          timestamp.innerText = new Date(evt.timeStamp);
+          alpha.innerText = evt.alpha.toFixed(fixed);
+          beta.innerText = evt.beta.toFixed(fixed);
+          gamma.innerText = evt.gamma.toFixed(fixed);
+          var rotation = "rotate("+ evt.alpha +"deg) rotate3d(1,0,0, "+ (evt.gamma * -1)+"deg)";
+          h5logo.style.webkitTransform = rotation;
+          h5logo.style.transform = rotation;
+        } catch (ex) {
+          document.getElementById("doeSupported").innerText = "NOT";
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
