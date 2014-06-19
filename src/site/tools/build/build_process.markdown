@@ -11,7 +11,8 @@ collection: build-your-site
 key-takeaways:
   build-process:
     - Build steps shouldn't be linear and manually driven; they should be cyclical and automatic.
-    - Testing across many devices is a laborous task. Automate as much as you can!
+    - Your build process tools must optimize for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
+    - Testing across many devices is a laborious task. Automate as much as you can!
     - Limit context switching; integrate build tools with debugging tools so you can iterate with ease.
 notes:
   tbd:
@@ -30,68 +31,56 @@ that you run towards the end of your development workflow.
 Instead, integrate your build process with your coding,
 testing, and iterative debugging cylces.
 
-Get tools that automatically run build tasks
-so that you can keep coding.
-Anytime you save code,
-these tools automatically test the code compiles,
-optimize the code, compile,
-and run tests to check responsiveness,
-performance, and brower/device compatibility.
-
 ##  What tasks should the build process automate?
 
-Your build process should automatically do these three tasks:
+Get tools that automatically run these build tasks
+so that you can keep coding:
 
-* Compile code.
-* Test compiled code.
-* Integrate with debugging tools.
+* Test the code compiles and report errors.
+* Optimize the code by minifying and concatenating
+JavaScript, CSS, HTML, and images.
+* Test responsiveness.
+* Test performance.
+* Compile optimized code.
+* Reload code in the browser.
 
-There's quite a bit that needs to happen within each of these tasks
-so that your site is ready for deployment on many devices.
+We prefer and recommend
+<a href="http://gulpjs.com/">Gulp</a>
+because it's an expressive, streaming build system
+that's easy to set up.
 
-### Compile code
-
-As you code,
-your build tools should test the code compiles,
-report errors so you can debug, optimize code,
-compile new version of site with new code,
-and automatically load the changes live.
-
-Lots of build tools support this workflow:
-<a href="http://gruntjs.com/">Grunt</a>,
-<a href="http://www.gnu.org/software/make/">Make</a>,
-<a href="https://github.com/broccolijs/broccoli">Broccolli</a>.
-The Web Starter Kit uses
-<a href="http://gulpjs.com/">Gulp</a>.
-
-Regardless of whether or your using a command-line set of tools
+Regardless of whether you're using a command-line set of tools
 or a GUI like <a href="https://incident57.com/codekit/">CodeKit</a>,
 your build process tools should automatically
 optimize your code as you work,
 and iteratively update compiled code.
 
-Build steps shouldn't be linear and manually driven;
-they should be cyclical and automatic. 
+Additional build tools that support this workflow:
 
-### Test compiled code
+* <a href="http://gruntjs.com/">Grunt</a>
+* <a href="http://www.gnu.org/software/make/">Make</a>
+* <a href="https://github.com/broccolijs/broccoli">Broccolli</a>
 
-Testing across many devices is a laborous task.
+## Automate testing
+
+Testing across many devices is a laborious task.
 Automate as much as you can!
 
 * Your build process should integrate with live reloading
 and support synchronized navigation so you can test
 your site on many devices in one-click.
 * Integrate your build process with a responsive screenshot tool
-like <a href="">BrowserStack</a> so you can check your site's
+like <a href="http://www.browserstack.com/">BrowserStack (commercial)</a>
+so you can check your site's
 layout across lots and lots of devices.
 * Integrate your build process with a performance tool like
-<a href="">PageSpeed</a>. Make it easy to check performance
-all the time and on any device.
+<a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed</a>.
+Make it easy to check performance all the time and on any device.
 * Get your build process to kick off unit tests that 'emulate' your site
 on as many devices as possible. Mimic hardware and network constraints
 as much as possible in these tests.
 
-### Integrate with debugging tools
+## Integrate with debugging tools
 
 Limit context switching;
 integrate build tools with debugging tools so you can interate with ease.
