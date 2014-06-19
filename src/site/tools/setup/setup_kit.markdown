@@ -61,7 +61,7 @@ Install the local dependencies from `package.json`:
 
 `$ sudo npm install`
 
-## Check out a starter file
+## Pick a layout
 
 Decide just how much
 <a href="https://developers.google.com/web/fundamentals/tools/workflow_basics.html">boilerplate you want to start off with</a>;
@@ -116,6 +116,15 @@ see <a href="https://developers.google.com/web/fundamentals/tools/code_debug.htm
 The tool opens up the build version of your starter file, `index.html`:
 
 <img src="imgs/index.png" class="center" alt="phone and desktop view of staged index.html">
+
+## Open Chrome DevTools emulation tool
+
+As soon as you have a version of your site up and running in a browser,
+open the Chrome DevTools
+<a href="https://developer.chrome.com/devtools/docs/mobile-emulation">emulation panel</a>,
+select a mobile device, and emulate:
+
+<img src="imgs/emulation.png" class="center" alt="phone and desktop view of staged index.html">
 
 {% include modules/nextarticle.liquid %}
 

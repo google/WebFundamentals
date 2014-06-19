@@ -91,7 +91,7 @@ You don't have to, but we recommend aliases for these common commands:
   <tbody>
     <tr>
       <td data-th="command">Launch a server</td>
-      <td data-th="alias">`alias server = "python -m SimpleHTTPServer"`
+      <td data-th="alias">`alias server = "python -m SimpleHTTPServer"`</td>
     </tr>
     <tr>
       <td data-th="command">Fire up your editor</td>
