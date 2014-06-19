@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Emulator Testing"
-description: "Device emulation is the next best thing to real device testing. Learn how to use the Chrome DevTools Mobile Emulator to test your site across many devices."
-introduction: "Device emulation is the next best thing to real device testing. Learn how to use the Chrome DevTools Mobile Emulator to test your site across many devices."
+title: "Use DevTools Emulation"
+description: "Learn how to use the Chrome DevTools emulation tool to test your site across many devices."
+introduction: "Learn how to use the Chrome DevTools emulation tool to test your site across many devices."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
@@ -10,8 +10,8 @@ article:
 collection: test
 key-takeaways:
   emulator:
-    - Start prototyping on the desktop; then tackle the mobile-specific parts on the devices you intend to support. Device emulation makes this process more straightforward.
-    - The Chrome DevTools Mobile Emulation tool lets you emulate your site on a range of devices, testing not just the site's responsive, but how the site responds to user interactions and hardware constraints.
+    - Start prototyping on the desktop; then tackle the mobile-specific parts on the devices you intend to support. The emulation tool makes this process more straightforward.
+    - The emulation tool helps you test your site on a range of devices, testing not just the site's responsive, but how the site responds to user interactions and device location.
     - Devices often have unreliable connectivity; emulate network conditions.
 notes:
     - TBD.
@@ -22,14 +22,21 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.emulator %}
 
+## Choose device to emulate
+
+Once your site is running in a browser, open the Chrome DevTools emulation panel,
+select a mobile device, and emulate:
+
+<img src="imgs/emulate.png" class="center" alt="Chrome DevTools emulation tool">
+
 ## Emulate viewport
 
 When you select a device and press the Emulator button,
 the tool zooms the page out to the physical default viewport of that device.
 In the case of the Nexus 4, the device-width is 768.
 See the
-<a href="https://developer.chrome.com/devtools/docs/mobile-emulation">Chrome DevTools Mobile Emulation docs</a>
-for detailed information on using the Chrome DevTools Mobile Emulator.
+<a href="https://developer.chrome.com/devtools/docs/mobile-emulation">mobile emulation docs</a>
+for more information.
 
 <img src="imgs/viewport.png" class="center" alt="starter file in Mobile Emulator">
 
@@ -60,11 +67,11 @@ see <a href="http://www.html5rocks.com/en/mobile/touch/">Multi-touch web develop
 ## Emulate orientation
 
 Many new mobile devices are now shipping with accelerometers, gyroscopes,
-compasses and other hardware designed to determine capture motion and orientation data.
+compasses and other hardware designed to capture motion and orientation data.
 
 Web browsers are providing increasingly more access to that new hardware,
 including such examples as the
-<a href="http://dev.w3.org/geo/api/spec-source-orientation">HTML5 DeviceOrientation events</a>.
+<a href="http://www.html5rocks.com/en/tutorials/device/orientation/">HTML5 DeviceOrientation events</a>.
 These events provide developers with information about the orientation,
 motion, and acceleration of the device.
 
@@ -74,8 +81,7 @@ during debugging to avoid the need to test them on a physical mobile device.
 
 The DevTools also support overriding device orientation.
 For more information,
-read the
-<a href="https://developer.chrome.com/devtools/docs/mobile-emulation#device-orientation-overrides"> Chrome DevTools device orientation overrides documentation</a>.
+read <a href="https://developer.chrome.com/devtools/docs/mobile-emulation#device-orientation-overrides">Device Orientation Overrides</a>.
 
 ## Emulate network conditions
 
@@ -87,7 +93,7 @@ If on a Mac,
 try out the
 <a href="http://www.neglectedpotential.com/2012/05/slow-your-apps-roll/">Network Link Conditioner</a>
 found in the Lion Developer Tools.
-These can be installed by going to Applications > Utilities > Network Link Conditioner
+This can be installed by going to Applications > Utilities > Network Link Conditioner
 and double-clicking the prefpane file.
 
 Once you've launched it,
@@ -100,7 +106,7 @@ options also include
 <a href="http://www.telerik.com/fiddler">Fiddler</a> and
 <a href="http://www.charlesproxy.com/">Charles</a>,
 an HTTP proxy which can throttle your connection speeds.
-Check out the
+These are the
 <a href="http://roderick.dk/2012/05/11/simulate-slow-web-connections/">network characteristics</a>
 you can simulate:
 
