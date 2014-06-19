@@ -33,7 +33,7 @@ To use the Web Starter Kit,
 simply clone the repository and
 build on what's included in the `app` directory:
 
-`git clone https://github.com/yeoman/web-starter-kit.git`
+`git clone https://github.com/google/web-starter-kit.git`
 
 `$ cd web-starter-kit/app`
 
@@ -116,10 +116,6 @@ that most fits your needs:
       <td data-th="Description">Default starting point. Includes a slide-out menu.</td>
     </tr>
     <tr>
-      <td data-th="starterfile"><a href="https://github.com/google/web-starter-kit/blob/master/app/alt-layout.html">alt-layout.html</a></td>
-      <td data-th="Description">Horizontal navigation. To choose this as your starting point, remove the alternative starter files.</td>
-    </tr>
-    <tr>
       <td data-th="starterfile"><a href="https://github.com/google/web-starter-kit/blob/master/app/basic.html">basic.html</a></td>
       <td data-th="Description">Very basic starting point. No navigation. Simple, but responsive styles. To choose this as your starting point, remove the alternative starter files.</td>
     </tr>
@@ -141,7 +137,7 @@ Here's a snapshot of the project files in the `web-starter-kit/dist` directory:
 ## Stage the build output
 
 From the `web-starter-kit` folder,
-run the `gulp watch` tool to open up a local staged version of the project
+run the `gulp serve` tool to open up a local staged version of the project
 (for more information on this tool,
 see [Track code changes and optimize]({{site.baseurl}}/tools/build/build_site.html#track-code-changes-and-optimize)).
 The tool opens up the build version of your starter file, `index.html`.
