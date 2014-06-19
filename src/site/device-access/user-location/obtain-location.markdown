@@ -231,7 +231,7 @@ window.onload = function() {
 
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
 };
-{% endhiglight %}
+{% endhighlight %}
 
 
 {% endwrap %}
