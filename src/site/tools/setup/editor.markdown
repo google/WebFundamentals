@@ -58,7 +58,7 @@ Here's a sneak peak at what you can do with the
 
 <img src="imgs/package_control.png" class="center" alt="project files in dist directory">
 
-## There's a Plugin for that
+## There's a plugin for that
 
 Plugins help you stay more productive.
 What are the things you keep having to

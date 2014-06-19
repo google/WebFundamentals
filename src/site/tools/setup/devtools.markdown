@@ -12,7 +12,7 @@ key-takeaways:
   devtools:
     - Make the command line work for you; create aliases that are easy to remember and fast to type.
     - Don't check responsive layouts manually; get a tool to resize and capture screen views.
-    - Set up build tools that automatically optimize, build, and live reload your testing url.
+    - Set up build tools that automatically optimize, build, and live reload your testing URL.
     - Don't wait to see your site on a device; use device emulation and remote debugging now not later. 
 notes:
   alias:
@@ -46,7 +46,7 @@ device emulation, and device debugging tools.
 It's kind of scary, the thought of testing your site on any number of devices.
 But you need to do this and you need the tools to make this possible:
 
-<img src="imgs/url.png" class="center" alt="lots of devices open to same url">
+<img src="imgs/url.png" class="center" alt="lots of devices open to same URL">
 
 ## Set up aliases for common commands
 
