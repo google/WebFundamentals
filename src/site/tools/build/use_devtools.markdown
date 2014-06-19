@@ -10,18 +10,32 @@ article:
 collection: build-your-site
 key-takeaways:
   devtools:
+    - Integrate Chrome DevTools into your development workflow; use mobile emulation panel from the very start of your project.
     - With Web Starter Kit + Chrome DevTools, debug your site on real and emulated devices with one-click.
     - Users won't stay on any page that performs badly in normal network conditions; check network performance on real devices;
     - Check your site's responsive layouts on a range of devices using the Chrome DevTools Screen pane within the Emulation panel.
 notes:
   optimize:
-    - See <a href="https://web-central.appspot.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html">Critical Rendering Path</a> for more insight on using the network timeline.
+    - See <a href="https://web-central.appspot.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html">Critical Rendering Path</a> and <a href="http://www.html5rocks.com/en/mobile/profiling/">Profiling Mobile HTML5 Apps With Chrome DevTools</a> for more insight on using the network timeline.
 ---
 {% wrap content %}
 
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.devtools %}
+
+## Integrate Chrome DevTools
+
+At the very start of your project,
+keep Chrome DevTools open and
+[emulate your site]({{site.baseurl}}/tools/test/emulator.html)
+on at least one mobile device.
+
+As you code and debug your code,
+check how your site responds on the mobile device.
+This is a key habit to acquire as part of your development workflow.
+
+<img src="imgs/emulate.png" class="center" alt="Chrome DevTools emulation tool">
 
 ## Debug on real devices and in the cloud
 
@@ -41,10 +55,6 @@ and start debugging.
 Live reloading and synchronization
 lets you debug on all real and emulated devices at the same time.
 
-IMAGE PLACEHOLDER
-Todo: Image showing real device, emulated device, and
-devtools opened to debug site in all instances.
-
 ## Check network performance
 
 Users won't stay on any page that performs badly
@@ -54,35 +64,28 @@ and they will lose patience fast even when network connectivity is shakey.
 Check
 <a href="https://developer.chrome.com/devtools/docs/network">network performance</a>
 on real devices and preferably in varying network connectivity. 
-John McCutchan's
-<a href="http://www.html5rocks.com/en/mobile/profiling/">Profiling Mobile HTML5 Apps With Chrome DevTools</a>
-describes how to check network performance on a device
-using Chrome DevTools remote debugging.
-
 Record how your site behaves on the network,
 and pay close attention to the timeline.
+
 You don't want the timeline to show everything happening
 at the end of a page render;
 you do want a more optimized render,
 where some assets load in different frames on the timeline:
 
-IMAGE PLACEHOLDER
-Todo: Screenshot of timeline for web fundamentals site on connected device.
+<img src="imgs/timeline.png" class="center" alt="timeline for web fundamentals site">
 
 {% include modules/remember.liquid title="Important" list=page.notes.optimize %}
 
 ## Debug page responsiveness
 
-Check the layout of your site on a range of devices
-using the Chrome DevTools Emulation panel.
-This panel automatically sets the layout of a URL to the selected device.
+Use the
+[emulation tool]({{site.baseurl}}/tools/test/emulator.html)
+to check the layout of your site on a range of devices.
+This tool automatically sets the layout of a URL to the selected device.
+
 Dive deeper into the responsiveness of your site
 on an emulated device, by changing the settings
 in the Screen pane:
-
-SCREENCAST PLACEHOLDER
-Todo: Create simplate placeholder that shows Screen options
-in DevTools emulator.
 
 <table class="table-2 tc-heavyright">
   <colgroup>
@@ -102,7 +105,7 @@ in DevTools emulator.
     </tr>
     <tr>
       <td data-th="setting">Enable text autosizing</td>
-      <td data-th="Description">Emulate font boosting which occurs on mobile devices. Android artificially increases the font metrics used by text autosizing. Enabled by default only when emulating an Android device</td>
+      <td data-th="Description">Emulate font boosting which occurs on mobile devices. Android artificially increases the font metrics used by text autosizing. Enabled by default only when emulating an Android device.</td>
     </tr>
     <tr>
       <td data-th="setting">Emulate viewport</td>
@@ -114,7 +117,7 @@ in DevTools emulator.
     </tr>
     <tr>
       <td data-th="setting">CSS media</td>
-      <td data-th="Description">Print is the default media type; additional media types include tv, speech, projection, and more. This setting doesn't actually impact the emulator.</td>
+      <td data-th="Description">Print is the default media type; additional media types include tv, speech, projection, and more. This setting does not emulate the device differently.</td>
     </tr>
   </tbody>
 </table>

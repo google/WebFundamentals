@@ -20,7 +20,7 @@ notes:
   styles: 
     - Run gulp styles tool to manually check CSS across your project. The gulp watch tool automatically runs this tool when you change CSS files.
   responsive:
-    - Check responsiveness as often as possible. Shrink the browser to tablet and phone size to see how content behaves all the time. Better still, get a tool that does this for you.
+    - Check responsiveness as often as possible. Shrink the browser to tablet and phone size to see how content behaves all the time.
   terminal:
     - As you code, keep your terminal and local staged version open in your browser. Watch the terminal for tooling results; watch the browser for newly staged content.
   devices:
@@ -162,7 +162,7 @@ Update `index.html` to call a new script, `app.js`:
 </main>
 {% endhighlight %}
 
-Create `app.js` in web-starter-kit/app/scripts:
+Create `app.js` in `web-starter-kit/app/scripts`:
 
 {% highlight javascript %}
 var span = document.getElementsByTagName('span')[0];
