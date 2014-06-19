@@ -19,7 +19,9 @@ rel:
 collection: device-orientation
 key-takeaways:
   devorientation: 
-    -  TBD
+    -  Use sparingly
+    -  Test for support
+    -  Don't update the UI on every orientation event, instead sync to requestAnimationFrame
 ---
 
 {% wrap content %}
