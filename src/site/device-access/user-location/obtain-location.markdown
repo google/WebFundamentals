@@ -198,12 +198,9 @@ window.onload = function() {
 };
 {% endhighlight %}
 
-## Decide how accuratly you need the location
+## Prefer a coarse location over a fine grained location
 
-Your site should ask for as little information as possible.
-
-If you 
-TODO: Note - Fused Location
+Many uses of geo-location don't require a fine grained location, for example if you 
 
 
 {% endwrap %}
