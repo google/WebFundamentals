@@ -11,7 +11,19 @@ collection: tools
 id: build-your-site
 ---
 
-{% comment %}
-Page content will be output by the section layout pased on the article collection matching page.id
-{% endcomment %}
+{% wrap content%}
 
+Web developers have to think about a million things at once and the build step
+is one of the most critical, yet most cumbersome to get started with.  You
+have to work out all the tasks that you need to automate such as: Image
+compression, CSS minification, JavaScript concatenation, Responsive testing,
+Unit testing, the list goes on...
+
+Follow these guides and learn the best way to structure your workflow so that
+the sites that you create already follow all the best practices from the
+minute you start.
+
+You can also use Web Starter Kit to begin your projects with an amazing
+default workflow and great looking templates right out of the box.
+
+{% endwrap %}
