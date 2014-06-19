@@ -81,7 +81,9 @@ just initiated.
 
 <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">In a study by the Google Ads team</a>, when users were asked to book a hotel room in Boston for an upcoming conference on one particular hotels site, they were prompted to share their GPS location immediately after tapping the ‘Find and Book’ call-to-action on the homepage.
 
-In some cases users became frustrated because they struggled to understand why she was being shown hotels in San Francisco when she wanted to book a room in Boston.
+In some cases users became frustrated because they struggled to understand why
+she was being shown hotels in San Francisco when she wanted to book a room in
+Boston.
 
 A better experience is to make sure the user understands why you’re asking
 them for location. Add in a well known signifier that is common  across
@@ -95,11 +97,19 @@ Or consider a very explict call to action such as “Find Near Me.”
 
 ## Gently nudge the user to grant permission to their location
 
-You don't have access 
+You don't have access to any of the steps of what the user is doing.  You know exactly
+when the user disallows access to their location, but you don't know
+when they grant you access, you only know you obtained access when results appear.
 
-1.  Set a relatively short timeout for the geo-location API,
-2.  Handle the error message
-3.  Re-request the Geo-location
+It is good practice to "tickle" the user into action if you need them to complete the action.
+
+We recommend: 
+
+1.  Setup a timer that will trigger after a short period - 5 seconds is a good value
+2.  If you get an error message show a message to the user
+3.  If you get a postive response, disable the timer and process the results
+4.  If after the timeout you haven't got a postive response show a notification to the user
+5.  If the response comes in later and the notification is still present remove it from the screen
 
 {% highlight javascript %}
 button.onclick = function() {
