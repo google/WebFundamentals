@@ -173,9 +173,9 @@ Emulator](http://developer.android.com/tools/devices/emulator.html) for
 Android devices as well as [Modern.ie](https://modern.ie/) for versions of IE;
 you can see how your site works across a range of devices.
 
-Chrome DevTools has a device emulation feature built in which simply mimics some device behavior such as screen size, screen density and touch support;
-learn how to use
-[DevTools emulation]({{site.baseurl}}/tools/test/emulator.html).
+Chrome DevTools has a device emulation feature built in which mimics some
+device behaviors such as screen size, screen density and touch support; learn
+how to use [DevTools emulation]({{site.baseurl}}/tools/test/emulator.html).
 
 Emulation is a good start, but it's no substitute for the real thing.
 Eventually, preferably as soon as possible,
