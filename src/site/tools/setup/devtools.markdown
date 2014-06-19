@@ -161,9 +161,9 @@ to set up the Web Starter Kit.
 
 ## Set up emulation and debugging tools
 
-Don't put off debugging your site across multiple projects.
-A very simple first step is to set up a device emulation
-that integrates with debugging tools.
+Don't put off debugging your site across multiple devices. A very simple
+first step is to set up device emulation that integrates with debugging
+tools.
 
 Using device emulation,
 you can project your site on any screen size,
