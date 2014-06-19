@@ -9,7 +9,10 @@ article:
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
-introduction: ""
+introduction: "As a web developer, having access to the users location opens up a huge number
+  of possibilities such as advanced filtering, pinpointing the user on a map,
+  and offering them pro-active suggestions on things they can do based on their
+  current position."
 key-takeaways:
   geo: 
     -  Assume the user will not give you their location
@@ -19,22 +22,17 @@ key-takeaways:
 
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
-As a web developer, having access to the users location opens up a huge number
-of possibilities such as advanced filtering, pinpointing the user on a map,
-and offering them pro-active suggestions on things they can do based on their
-current position.
-
-As a user your physical location is a piece of information you want to
+As a user, your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
 shows a prompt when a site asks for their location.
 
-{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
+{% include modules/toc.liquid %}
 
 Recent user studies have <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
 users are distrustful of sites that simply prompt the user to away their
 position on page load.  So what are the best practice?
+
+{% include modules/takeaway.liquid list=page.key-takeaways.geo %}
 
 ## Assume the user will not give you their location
 
@@ -81,7 +79,9 @@ just initiated.
 
 <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">In a study by the Google Ads team</a>, when users were asked to book a hotel room in Boston for an upcoming conference on one particular hotels site, they were prompted to share their GPS location immediately after tapping the ‘Find and Book’ call-to-action on the homepage.
 
-In some cases users became frustrated because they struggled to understand why she was being shown hotels in San Francisco when she wanted to book a room in Boston.
+In some cases users became frustrated because they struggled to understand why
+she was being shown hotels in San Francisco when she wanted to book a room in
+Boston.
 
 A better experience is to make sure the user understands why you’re asking
 them for location. Add in a well known signifier that is common  across
@@ -95,11 +95,19 @@ Or consider a very explict call to action such as “Find Near Me.”
 
 ## Gently nudge the user to grant permission to their location
 
-You don't have access 
+You don't have access to any of the steps of what the user is doing.  You know exactly
+when the user disallows access to their location, but you don't know
+when they grant you access, you only know you obtained access when results appear.
 
-1.  Set a relatively short timeout for the geo-location API,
-2.  Handle the error message
-3.  Re-request the Geo-location
+It is good practice to "tickle" the user into action if you need them to complete the action.
+
+We recommend: 
+
+1.  Setup a timer that will trigger after a short period - 5 seconds is a good value
+2.  If you get an error message show a message to the user
+3.  If you get a postive response, disable the timer and process the results
+4.  If after the timeout you haven't got a postive response show a notification to the user
+5.  If the response comes in later and the notification is still present remove it from the screen
 
 {% highlight javascript %}
 button.onclick = function() {

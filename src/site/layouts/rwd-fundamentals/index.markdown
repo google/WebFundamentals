@@ -59,7 +59,6 @@ remember:
   }
 </style>
 
-
 {% include modules/toc.liquid %}
 
 There is a multitude of different screen sizes across phones, "phablets",
