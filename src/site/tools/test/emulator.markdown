@@ -64,7 +64,7 @@ compasses and other hardware designed to determine capture motion and orientatio
 
 Web browsers are providing increasingly more access to that new hardware,
 including such examples as the
-<a href="http://dev.w3.org/geo/api/spec-source-orientation">HTML5 DeviceOrientation events</a>.
+<a href="http://w3c.github.io/deviceorientation/spec-source-orientation.html">HTML5 DeviceOrientation events</a>.
 These events provide developers with information about the orientation,
 motion, and acceleration of the device.
 
