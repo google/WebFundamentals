@@ -38,20 +38,19 @@ Three key advantages to testing in the cloud:
 * You can test your site in the same development workspace as your code editor and debugging tools.
 * Automated unit tests can run your site on many browsers, platforms, and devices at the same time.
 
-## What's the difference between emulators and simulators?
+## Difference between emulators and simulators?
 
 Emulators 'emulate' device hardware and operating systems,
 letting you test and debug your application and see how it is working
 almost as if testing on the actual device.
-If you haven't chosen an emulator yet,
-go with the Chrome DevTools Mobile Emulator 
-(see the <a href="https://developers.google.com/web/fundamentals/tools/test/emulator.html">next section for a detailed overview</a>).
+Use the Chrome DevTools [mobile emulation tool]({{site.baseurl}}/tools/test/emulator.html).
 
-<img src="imgs/emulation.png" class="center" alt="Chrome DevTools emulator">
+<img src="imgs/emulate.png" class="center" alt="Chrome DevTools emulator">
 
 Simulators let you 'simulate' how your site looks and feels
 on a device.
 They typically don't emulate operating system or hardware features.
+
 If you have a Mac,
 the iOS simulator is a great tool for seeing how your site behaves
 on an iOS device while working with the Web Inspector
@@ -66,7 +65,8 @@ so that you are testing your site on an actual device somewhere.
 Simulators are usually easier to use than emulators,
 but they aren't as useful; they don't give the full picture
 of how your site will behave on a device.
-For the complete run-down on emulators and simulators, see <a href="http://www.mobilexweb.com/emulators">Mobile Emulators & Simulators: The Ultimate Guide</a>.
+For the complete run-down on emulators and simulators,
+see <a href="http://www.mobilexweb.com/emulators">Mobile Emulators & Simulators: The Ultimate Guide</a>.
 
 ## How to use the iOS simulator
 
@@ -74,14 +74,14 @@ According to the <a href="https://developer.apple.com/library/ios/documentation/
 you should "think of the simulator as a preliminary testing tool to use
 before testing your app on an actual device".
 
-The iOS simulator comes with XCode,
+The iOS simulator comes with Xcode,
 which you can <a href="https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12">install from the App Store</a>.
 To open your site in the simulator:
 
-* Launch Xcode.
-* Choose Xcode > Open Developer Tool > iOS Simulator. The simulator displays the Home screen of whichever simulated device was last used.
-* From the Home screen, click Safari.
-* In the address field in Safari, type your site's URL and press the Return key.
+1. Launch Xcode.
+2. Choose Xcode > Open Developer Tool > iOS Simulator. The simulator displays the Home screen of whichever simulated device was last used.
+3. From the Home screen, click Safari.
+4. In the address field in Safari, type your site's URL and press the Return key.
 
 If your Mac is connected to the internet,
 Safari displays your site in the simulator:
@@ -91,13 +91,13 @@ Safari displays your site in the simulator:
 ## Unit testing
 
 When testing on real devices,
-you are somewhat limited by the devices themselves.
+you are somewhat limited by the number of devices you have access to.
 But with cloud testing services,
 you have the ability to test your site against
 any number of browsers, platforms, and devices at the same time.
 
-Both <a href="https://saucelabs.com/">Sauce Labs</a>
-and <a href="http://www.keynote.com/solutions/testing/mobile-testing">DeviceAnywhere</a>
+Both <a href="https://saucelabs.com/">Sauce Labs (commercial)</a>
+and <a href="http://www.keynote.com/solutions/testing/mobile-testing">DeviceAnywhere (commercial)</a>
 let you write unit tests in any number of languages
 and run them against a range of emulated environments.
 
@@ -105,7 +105,7 @@ If you use Grunt,
 there are tasks available for
 <a href="https://www.npmjs.org/package/grunt-saucelabs-qunit">running unit tests via Sauce Labs</a>.
 
-<a href="https://www.browserstack.com/automate">BrowserStack</a>
+<a href="https://www.browserstack.com/automate">BrowserStack (commercial)</a>
 is the easiest to use:
 You select an operating system, select your browser version and device type,
 select a URL to browse, and it spins up a hosted virtual machine
@@ -117,7 +117,9 @@ at the same time.
 
 ## Take screenshots of your site
 
-Many cloud testing services include a screenshot tool. 
+Many cloud testing services include a screenshot tool.
+Screenshots are an important comparison tool
+between views on different devices. 
 With no set-up required,
 you can type in a URL on the
 <a href="http://www.browserstack.com/responsive">BrowserStack website</a>.
