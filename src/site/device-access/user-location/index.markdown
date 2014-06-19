@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "User location"
-description: "Learn how to integrate geolocation into your site"
+description: "Most browsers and devices have access to the users geo-location. Learn how to work with the users location in your site and apps."
 introduction: "The Geolocation API lets you find out where the user is, always with the
   user's consent. This functionality could be used as part of user queries, e.g.
   to guide someone to a destination point. It could also be used for 'geo-
