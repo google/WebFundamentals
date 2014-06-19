@@ -13,7 +13,7 @@ key-takeaways:
     - There's no substitute for real device testing. You must test on real devices.
     - You don't need to dread the set-up and manual testing process anymore. Testing your site on real devices need only be a click away.
     - Choose a testing solution that has live reloading. Change in one place and see those changes everywhere.
-    - Synchronized testing solution let you test user interaction on all devices at the same time.
+    - Synchronized testing lets you test user interaction on all devices at the same time.
 notes:
   unit-tests:
     - If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/">Yeti</a> and <a href="http://thrilljs.com/">Thrill</a>.
@@ -63,7 +63,7 @@ any instance of your site opened on any device is automatically reloaded live.
 The Web Starter Kit takes reloading that bit further.
 As you change your source code,
 the tools compile Sass into CSS,
-minify and concatenate JavaScript, CSS, HTML, and Images
+minify and concatenate JavaScript, CSS, HTML, and images
 and push the optmized site.
 
 ## Synchronize testing across devices
