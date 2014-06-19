@@ -10,7 +10,15 @@ article:
 collection: tools
 id: test
 ---
-{% comment %}
-Page content will be output by the section layout pased on the article collection matching page.id
-{% endcomment %}
 
+{% wrap content%}
+
+Nearly every developer hates testing on the web.  Not only do you have to
+contend with all the different browsers and all of their different versions,
+you now have to also manage the vast array of devices and form factors that
+now exist.
+
+Follow these guides to learn about the tools at your disposal that will make
+your life a lot easier when it  comes to testing your site.
+
+{% endwrap %}
