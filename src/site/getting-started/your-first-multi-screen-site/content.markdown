@@ -200,6 +200,18 @@ section.
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
+Many people don't have the ability to view images and often use an assistive
+technology such as a screen reader that will parse the data on the page and
+relay that to the user verbally.  You should ensure that all your content
+images  have a descriptive `alt` tag that the screen reader can speak out to
+the user.
+
+When added `alt` tags make sure that you keep the alt text as concise as
+possible to fully describe  the image.  For example in our demo we simply 
+format the attribute to be "Name: Role", this presents enough information
+to the user to understand that this section is about the authors and what
+their job is.
+
 ### Add the Tabulated Data Section
 
 The final section is a simple table that is used to show specific product stats
