@@ -62,7 +62,7 @@ add aliases for common commands to your `bashrc` file.
 On Mac or Linux:
 
 * From the command line anywhere, type `vim ~/.bashrc`.
-* Add a new alias, for example, `master = 'git checkout master'`.
+* Add a new alias, for example, `alias master='git checkout master'`.
 * From your source directory, run `master`.
 
 Another slightly more advanced way to create short-cuts is
