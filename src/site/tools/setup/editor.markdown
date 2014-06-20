@@ -12,7 +12,7 @@ key-takeaways:
   editor:
     - Choose an editor that lets you customize short-cuts and has lots of plugins to help you write better code.
     - Consider installing a package manager to make it easier to discover, install, and update plugins.
-    - Use the package manager to install plugins that help keep you productive durinig development; start with the recommendations in this guide.
+    - Use the package manager to install plugins that help keep you productive during development; start with the recommendations in this guide.
 notes:
   blog:
     - Rob Dodson's <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> on how to get to know and love Sublime is a great reference for getting the most out of your editor. The concepts are relevant to any text editor, not just Sublime.
