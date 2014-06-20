@@ -18,7 +18,7 @@ notes:
   images:
     - You can also run gulp images to manually optimize images across your project.
   styles: 
-    - Run gulp styles tool to manually check CSS across your project. The gulp watch tool automatically runs this tool when you change CSS files.
+    - Run gulp styles tool to manually check CSS across your project. The gulp serve tool automatically runs this tool when you change CSS files.
   responsive:
     - Check responsiveness as often as possible. Shrink the browser to tablet and phone size to see how content behaves all the time.
   terminal:
@@ -36,26 +36,23 @@ notes:
 
 ## Build this sample app
 
-To see the Web Starter Kit tools in action,
-this guide walks you through the build process
-as you add an image, update HTML and CSS,
-and add some JavaScript to your starter project.
-If you want a quick peak at what the Web Starter Kit tools can do,
-skip ahead to this
-[quick summary]({{site.baseurl}}/tools/build/build_site.html#summary-of-web-starter-kit-tools).
+To see the Web Starter Kit tools in action, this guide walks you through the
+build process as you add an image, update HTML and CSS, and add some
+JavaScript to your starter project. If you want a quick peak at what the Web
+Starter Kit tools can do, skip ahead to this 
+[quick summary]({{site.baseurl}}/tools/build/build_site.html#summary-of-web-starter-
+kit-tools).
 
-Before you start,
-make sure you've
-[set up the Web Starter Kit]({{site.baseurl}}/tools/setup/setup_kit.html).
-When you are finished the walking through the steps in this guide,
-this is what you'll see in your browser:
+Before you start, make sure you've [set up the Web Starter Kit]({{site.baseurl}}/tools/setup/setup_kit.html).
+When you are finished the walking through the steps in this guide, this is what you'll see in your
+browser:
 
 <img src="imgs/js.png" class="center" alt="JavaScript added to site">
 
 ## Track code changes and optimize
 
 When you're ready to write code,
-run <a href="https://www.npmjs.org/package/gulp-watch">gulp watch</a>.
+run <a href="https://www.npmjs.org/package/gulp-serve">gulp serve</a>.
 This tool tracks changes as you code, reloads live changes in your browser,
 and automatically runs optimization tools specific to the changes made.
 For example, when you add an image,
@@ -66,8 +63,8 @@ on any device.
 
 ## Add an image
 
-To see the `gulp watch` tool in action:
-add <a href="https://github.com/google/WebFundamentals/blob/master/src/site/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
+To see the `gulp serve` tool in action: add 
+<a href="https://github.com/google/WebFundamentals/blob/master/src/site/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
 to the images folder.
 
 `$ cp awesome-photo.jpg web-starter-kit/app/images`
@@ -84,10 +81,8 @@ Add the image to `main` in `index.html`:
 </main>
 {% endhighlight %}
 
-As you save `index.html`,
-watch your terminal.
-The `gulp watch` tool runs the image through
-<a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a>
+As you save `index.html`, watch your terminal. The `gulp serve` tool runs the
+image through <a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a> 
 and outputs the optimized image in the `dist` folder.
 
 {% include modules/remember.liquid title="Note" list=page.notes.images %}
@@ -96,16 +91,15 @@ Reload the browser live to see the image:
 
 <img src="imgs/image.png" class="center" alt="image added to site">
 
-Don't forget to resize the browser to see
-how the image looks on different device sizes.
+Don't forget to resize the browser to see how the image looks on different
+device sizes.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.terminal %}
 
 ## Add CSS
 
-When you add style changes,
-`gulp watch` runs the 
-<a href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
+When you add style changes, `gulp serve` runs the  <a
+href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
 minifying CSS and injecting it into all connected browsers.
 
 Add this style change to the
@@ -131,12 +125,11 @@ Reload and resize the browser to see how the styles look:
 
 ## Apply UX patterns
 
-Don't write a style guide as an afterthought.
-Start your project off with UX patterns,
-and apply these patterns as you code.
-Don't have a style guide?
-Use the Web Starter Kit style guide which aligns with the
-<a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style Guidelines</a>.
+Don't write a style guide as an afterthought. Start your project off with UX
+patterns, and apply these patterns as you code. Don't have a style guide? Use
+the Web Starter Kit style guide which aligns with the 
+<a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style
+Guidelines</a>.
 
 `$ cd web-starter-kit/app/styleguide/`
 
@@ -146,7 +139,7 @@ Here's a sneak peak at some of the styles covered:
 
 ## Add JavaScript
 
-The `gulp watch` tool minifies your JavaScript
+The `gulp serve` tool minifies your JavaScript
 (<a href="https://www.npmjs.org/package/gulp-jsmin">gulp-jsmin</a>)
 and detects errors using
 <a href="https://www.npmjs.org/package/gulp-jshint">gulp jshint</a>.
@@ -181,54 +174,49 @@ Reload the browser:
 
 ## Check performance
 
-Now that you've added some html, CSS, and JavaScript,
-it's time to checkout how the project is performing.
+Now that you've added some html, CSS, and JavaScript, it's time to checkout
+how the project is performing.
 
 The Web Starter Kit integrates with
 <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a>.
 If you haven't used PageSpeed Insights,
 you are about to start.
 
-Once you've got a chunk of work done and
-you want to check your site's speed and user experience,
-stop `gulp watch` (control-C), and run `gulp pagespeed`:
+Once you've got a chunk of work done and you want to check your site's speed
+and user experience, stop `gulp serve` (control-C), and run `gulp pagespeed`:
 
 <img src="imgs/pagespeed.png" class="center" alt="PageSpeed results">
 
 The good news: you got a perfect User Experience score. Yay!
 
-The Speed Score is off by 1 point; compression isn't enabled.
-You won't compress your site until you are ready to host it.
+The Speed Score is off by 1 point; compression isn't enabled. You won't
+compress your site until you are ready to host it.
 
 For more information on how to fix your site based on these PageSpeed results,
 see <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations">PageSpeed Rules and Recommendations</a>.
 
 ## Debug your code on multiple devices
 
-Up till now,
-you've checked your code by resizing the browser.
-This is a good first step,
-but it's no substitute for debugging your code on actual devices.
-The `gulp watch` tool makes it easy to access staged content on multiple devices.
-You can then use the browser developer tools to debug,
-just the same as your current development workflow.
+Up till now, you've checked your code by resizing the browser. This is a good
+first step, but it's no substitute for debugging your code on actual devices.
+The `gulp serve` tool makes it easy to access staged content on multiple
+devices. You can then use the browser developer tools to debug, just the same
+as your current development workflow.
 
 {% include modules/remember.liquid title="Important" list=page.notes.devices %}
 
 ### Access staged content on external devices
 
-The `gulp watch` tool makes it easy
+The `gulp serve` tool makes it easy
 to access a staged version of your content on external devices.
 
-In your terminal,
-notice two access points: a local address
-(for example, `http://localhost:3002`)
-and an externally friendly address for accessing on other devices
-(for example, `http://123.45.67.103:3002`).
+In your terminal, notice two access points: a local address (for example,
+`http://localhost:3002`) and an externally friendly address for accessing on
+other devices (for example, `http://123.45.67.103:3002`).
 
-Navigate to the second address on any other device.
-Any changes you make to your site are automatically pushed
-to all local instances; you just have to reload.
+Navigate to the second address on any other device. Any changes you make to
+your site are automatically pushed to all local instances; you just have to
+reload.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.network %}
 
@@ -241,11 +229,11 @@ to debug any page in your site on any device.
 Assuming you can connect your phone
 to the same network as your development machine,
 simply load the page on the device using the
-externally friendly URL returned by `gulp watch`.
+externally friendly URL returned by `gulp serve`.
 
 Any changes you make to a page using Chrome DevTools are automatically visible
-in all open instances of your staged site.
-Don't reload a URL, or you will lose DevTools changes.
+in all open instances of your staged site. Don't reload a URL, or you will
+lose DevTools changes.
 
 You can also debug using port forwarding.
 <a href="https://developer.chrome.com/devtools/docs/remote-debugging#reverse-port-forwarding">Port forwarding</a>
@@ -305,17 +293,13 @@ and outputs optimized images in the distribution folder.</td>
     </tr>
     <tr>
       <td data-th="Tool">gulp serve</td>
-      <td data-th="Description">Serves the files in the distribution folder to your local machine and an external URL.</td>
+      <td data-th="Description">Serves the files in the distribution folder to your local machine and an external URL. It also tracks changes as you code: reloads live changes in your browser and automatically runs optimization tools specific to the changes made.</td>
     </tr>
     <tr>
       <td data-th="Tool">gulp styles</td>
       <td data-th="Description">Minifies CSS using the
 <a href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
 and injects it into all connected browsers.</td>
-    </tr>
-    <tr>
-      <td data-th="Tool">gulp watch</td>
-      <td data-th="Description">Uses <a href="https://www.npmjs.org/package/gulp-watch">gulp watch</a> to track changes as you code: reloads live changes in your browser and automatically runs optimization tools specific to the changes made.</td>
     </tr>
   </tbody>
 </table>
