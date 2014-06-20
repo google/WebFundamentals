@@ -138,7 +138,7 @@ Don't have a style guide?
 Use the Web Starter Kit style guide which aligns with the
 <a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style Guidelines</a>.
 
-`$ cd web-starter-ki/app/styleguide/`
+`$ cd web-starter-kit/app/styleguide/`
 
 Here's a sneak peak at some of the styles covered:
 
