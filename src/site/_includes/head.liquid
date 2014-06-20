@@ -5,8 +5,16 @@
 {% capture page_title %}{% if page.id != "home" %}{{ page.title }} — Web Fundamentals{%else%}Web Fundamentals — Google Developers{%endif%}{% endcapture %}
 <title>{{ page_title }}</title>
 
-<meta name="author" content="" />
-<meta name="description" content="" />
+{% if page.rel.gplusauthor %}
+<meta name="author" content="{{ page.rel.gplusauthor }}" />
+{% endif %}
+
+{% if page.description %}
+<meta name="description" content="{{ page.description }}" />
+{% else %}
+<meta name="description" content="Google Web Fundamentals" />
+{% endif %}
+
 <link rel="icon" href="{{site.baseurl}}/favicon.ico" />
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
