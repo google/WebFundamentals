@@ -27,10 +27,10 @@ notes:
 
 Code editors are the quintessential development tool.
 But what makes an editor more than a simple word processor
-are it's shortcuts that get you working faster.
+are its shortcuts that get you working faster.
 
 You know you've truly learned to use your editor
-when you are able to move around your code fast
+when you are able to quickly move around your code
 using a range of keyboard short-cuts and editor commands.
 It's always good to keep a cheatsheet handy for editor commands.
 Top editors also let you customize commands and keyboard shortcuts
