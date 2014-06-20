@@ -89,7 +89,7 @@ You don't have to, but we recommend aliases for these common commands:
   <tbody>
     <tr>
       <td data-th="command">Launch a server</td>
-      <td data-th="alias">alias server = "python -m SimpleHTTPServer"</td>
+      <td data-th="alias">alias server="python -m SimpleHTTPServer"</td>
     </tr>
     <tr>
       <td data-th="command">Fire up your editor</td>
@@ -153,11 +153,11 @@ Examples:
 * <a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>
 * <a href="http://livestyle.emmet.io/install/">Emmet LiveStyle</a>
 
-The Web Starter Kit does all this and more:
-watches for changes, optmizes files, builds your site, reloads the browser live and synchronizes scrolling, clicks, and navigation across all your devices.
-Follow the instructions in the
-[next guide]({{site.baseurl}}/tools/setup/setup_kit.html)
-to set up the Web Starter Kit.
+The Web Starter Kit does all this and more: watches for changes, optmizes
+files, builds your site, reloads the browser live and synchronizes scrolling,
+clicks, and navigation across all your devices. Follow the instructions in the
+[next guide]({{site.baseurl}}/tools/setup/setup_kit.html) to set up the Web
+Starter Kit.
 
 ## Set up emulation and debugging tools
 
@@ -178,13 +178,12 @@ device behaviors such as screen size, screen density and touch support; learn
 how to use [DevTools emulation]({{site.baseurl}}/tools/test/emulator.html).
 
 Emulation is a good start, but it's no substitute for the real thing.
-Eventually, preferably as soon as possible,
-you must debug your site on actual devices.
-Remote debugging tools let you debug your site on a desktop
-and see changes on remote devices.
+Eventually, preferably as soon as possible, you must debug your site on actual
+devices. Remote debugging tools let you debug your site on a desktop and see
+changes on remote devices.
 
-Here's a brief comparison of remote debugging options,
-with links to set-up documentation: 
+Here's a brief comparison of remote debugging options, with links to set-up
+documentation:
 
 <table class="table-2 tc-heavyright">
   <colgroup>
