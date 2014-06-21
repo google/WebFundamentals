@@ -165,9 +165,7 @@ Don't put off debugging your site across multiple devices. A very simple
 first step is to set up device emulation that integrates with debugging
 tools.
 
-Using device emulators, such as [iOS Safari Simulator](https://developer.apple
-.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introductio
-n/Introduction.html), [GenyMotion](http://www.genymotion.com/) and the
+Using device emulators, such as [iOS Safari Simulator](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html), [GenyMotion](http://www.genymotion.com/) and the
 [Official Android
 Emulator](http://developer.android.com/tools/devices/emulator.html) for
 Android devices as well as [Modern.ie](https://modern.ie/) for versions of IE;
