@@ -1,7 +1,7 @@
-<nav class="breadcrumbs">
+<nav class="breadcrumbs" itemprop="breadcrumb">
   <p>
   {% for p in page.ancestors %}
-    <a href="{{site.baseurl}}{{ p.url | clean}}" title="{{ p.title }}">{{ p.title }}</a>
+    <a href="{{site.baseurl}}{{ p.url | clean}}" title="{{ p.title }}" {% if forloop.first %}rel="home"{%endif%} >{{ p.title }}</a>
     /
   {% endfor %}
   </p>
