@@ -11,7 +11,7 @@
 
     {% include header.liquid %}
 
-    <div class="article-container">
+    <div class="article-container" itemprop="text">
       <div class="editorial-header">
         <div class="container">
           <div class="content">
@@ -19,9 +19,9 @@
             {% include modules/breadcrumbs.liquid %}
 
             <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
-            <h2 class="editorial-header__subtitle">{{page.title}}</h2>
+            <h2 class="editorial-header__subtitle" itemprop="name">{{page.title}}</h2>
 
-            <p class="editorial-header__excerpt">{{page.introduction}}</p>
+            <p class="editorial-header__excerpt" itemprop="headline">{{page.introduction}}</p>
 
           </div>
         </div>
