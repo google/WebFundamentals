@@ -101,7 +101,7 @@ in the Screen pane:
   <tbody>
     <tr>
       <td data-th="setting">Emulate screen resolution</td>
-      <td data-th="Description">By default, matches the actual dimensions of the selected device. Uncheck the Emulatate screen setting and enter any new dimensions.
+      <td data-th="Description">By default, matches the actual dimensions of the selected device. Uncheck the Emulate screen setting and enter any new dimensions.
     </tr>
     <tr>
       <td data-th="setting">Enable text autosizing</td>

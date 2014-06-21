@@ -66,7 +66,7 @@ else {
 
 ## Determine the User's Current Location
 
-The geolocation API offeres a simple 'one-shot' method to obtain the users
+The geolocation API offers a simple 'one-shot' method to obtain the users
 location  `getCurrentPosition()`.  A call to this method will asynchronously
 report on the user's  current location.
 
@@ -127,7 +127,7 @@ window.onload = function() {
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
-    //   2: position unavailable (error response from locaton provider)
+    //   2: position unavailable (error response from location provider)
     //   3: timed out
   };
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
@@ -142,7 +142,7 @@ you just need a rough estimate.
 Use the `maximumAge` optional property to tell the browser to user a recently
 obtained geolocation result.  This not only returns quicker if the user has
 requested the data before it also stops the browser from having to start up
-it's geolcation hardware interfaces such as Wifi tranangultaion or the GPS.
+it's geolocation hardware interfaces such as Wifi triangulation or the GPS.
 
 {% highlight javascript %}
 window.onload = function() {
@@ -161,7 +161,7 @@ window.onload = function() {
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
-    //   2: position unavailable (error response from locaton provider)
+    //   2: position unavailable (error response from location provider)
     //   3: timed out
   };
 
@@ -190,7 +190,7 @@ window.onload = function() {
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
-    //   2: position unavailable (error response from locaton provider)
+    //   2: position unavailable (error response from location provider)
     //   3: timed out
   };
 
@@ -225,7 +225,7 @@ window.onload = function() {
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
-    //   2: position unavailable (error response from locaton provider)
+    //   2: position unavailable (error response from location provider)
     //   3: timed out
   };
 

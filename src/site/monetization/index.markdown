@@ -13,6 +13,6 @@ id: monetization
 ---
 
 {% comment %}
-Page content will be output by the section layout pased on the article collection matching page.id
+Page content will be output by the section layout based on the article collection matching page.id
 {% endcomment %}
 
