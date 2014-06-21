@@ -85,7 +85,7 @@ This will install Gulp globally.
 Next, install the local dependencies Web Starter Kit requires:
 
 `$ cd web-starter-kit`
-`$ sudo npm install`
+`$ npm install`
 
 That's it!
 You should now have everything needed to use the Gulp tools in Web Starter Kit.

@@ -43,7 +43,7 @@ The Geolocation API allows you to obtain the users location (with user
 consent) with a single call to `getCurrentPosition()`.  
 
 If you want to continually monitor the location of the user, the geolocation
-API has a method called `watchPosition()`. It opperates in a similar way to
+API has a method called `watchPosition()`. It operates in a similar way to
 `getCurrentPosition()` yet it will fire multiple times as the positioning
 software:
 
@@ -63,7 +63,7 @@ Watching for changes to a geolocation is not a free operation.  Whilst
 operating systems might be introducing platform features to let applications
 hook in to the geo subsystem, you as a web developer have no idea what support
 the users device has for monitoring the users location and whilst you are watching
-a posisition you are engaging the device in a lot of extra processing
+a position you are engaging the device in a lot of extra processing
 
 Once you have no need to track the users position call `clearWatch` to turn
 of the geolocation systems.
@@ -88,7 +88,7 @@ window.onload = function() {
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
-    //   2: position unavailable (error response from locaton provider)
+    //   2: position unavailable (error response from location provider)
     //   3: timed out
   };
   navigator.geolocation.watchPosition(geoSuccess, geoError);

@@ -83,7 +83,7 @@ considered in relation to the keyboard.
 
 Rotation data is returned as a [Euler angle](http://en.wikipedia.org/wiki/Euler_angles),
 representing the number of degrees of difference between the device's coordinate
-frame and the Earth coodrindate frame.
+frame and the Earth coordinate frame.
 
 <div>
   <div class="g--third">
