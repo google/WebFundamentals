@@ -17,7 +17,7 @@ key-takeaways:
   devmotion: 
     -  Use device motion for when the current motion of the device is needed.
     -  <code>rotationRate</code> is provided in &deg;/sec.
-    -  <code>accleration</code> and <code>accelerationWithGravity</code> is
+    -  <code>acceleration</code> and <code>accelerationWithGravity</code> is
        provided in m/sec<sup>2</sup>.
     -  Be aware of differences between browser implementations.
 ---
@@ -106,7 +106,7 @@ with it's screen facing up.
 </table>
 
 Conversely, if the phone were held so the screen was perpendicular to the
-ground, and was directly visble to the viewer:
+ground, and was directly visible to the viewer:
 
 <table class="table-4">
   <colgroup>

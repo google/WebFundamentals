@@ -44,9 +44,9 @@ location so you need to adopt a defensive development style.
 2.  Be clear and explicit about your need for the location
 3.  Use a fallback solution if needed.
 
-## Use a fallback if geolcation is required
+## Use a fallback if geolocation is required
 
-Our recomnedation is to not tie your site or application in to requiring
+Our recommendation is to not tie your site or application in to requiring
 access to the users current location, but  If your application or site
 absolutely requires it there are 3rd party solutions that allow you to obtain
 a best guess of where the person currently is.
@@ -89,7 +89,7 @@ devices, such as range finder.
 
 <img src="images/indication.png">
 
-Or consider a very explict call to action such as “Find Near Me.” 
+Or consider a very explicit call to action such as “Find Near Me.”
 
 <img src="images/nearme.png">
 
@@ -105,8 +105,8 @@ We recommend:
 
 1.  Setup a timer that will trigger after a short period - 5 seconds is a good value
 2.  If you get an error message show a message to the user
-3.  If you get a postive response, disable the timer and process the results
-4.  If after the timeout you haven't got a postive response show a notification to the user
+3.  If you get a positive response, disable the timer and process the results
+4.  If after the timeout you haven't got a positive response show a notification to the user
 5.  If the response comes in later and the notification is still present remove it from the screen
 
 {% highlight javascript %}

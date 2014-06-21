@@ -30,7 +30,7 @@ notes:
 Your build process shouldn't be a separate set of tasks
 that you run towards the end of your development workflow.
 Instead, integrate your build process with your coding,
-testing, and iterative debugging cylces.
+testing, and iterative debugging cycles.
 
 ##  What tasks should the build process automate?
 
@@ -84,13 +84,13 @@ as much as possible in these tests.
 ## Integrate with debugging tools
 
 Limit context switching;
-integrate build tools with debugging tools so you can interate with ease.
+integrate build tools with debugging tools so you can integrate with ease.
 Avoid at all costs the separation between debugging your code
 and seeing the results on a range of devices.
 This slows your development to a halt
 and you'll start to think maybe it's OK to just have a site that works nice on a desktop.
 
-Seemless integration with debugging tools means you can debug your code
+Seamless integration with debugging tools means you can debug your code
 and see it live on as many real and emulated devices as you deem necessary.
 You can keep debugging your code,
 and the build tools automatically push code changes live.
