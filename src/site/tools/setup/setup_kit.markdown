@@ -28,8 +28,9 @@ notes:
 ## Clone repository
 
 To use the Web Starter Kit,
-simply clone the repository and
-build on what's included in the `app` directory:
+simply clone the repository or download the
+[latest release](https://github.com/google/web-starter-kit/releases) and build on
+what's included in the `app` directory:
 
 `git clone https://github.com/google/web-starter-kit.git`
 
