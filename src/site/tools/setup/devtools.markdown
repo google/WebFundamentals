@@ -61,7 +61,7 @@ The easiest way create command-line short-cuts is to
 add aliases for common commands to your `bashrc` file.
 On Mac or Linux:
 
-* From the command line anywhere, type `vim ~/.bashrc`.
+* From the command line anywhere, type `open -a 'Sublime Text' ~/.bashrc`.
 * Add a new alias, for example, `alias master='git checkout master'`.
 * From your source directory, run `master`.
 

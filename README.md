@@ -48,10 +48,11 @@ Mac
     * `rvm --default use 2.0.0`
 1. Install [Pygments](http://pygments.org/)
     * `easy_install pygments`
-1. Install [Kramdown](http://kramdown.gettalong.org/)
-    * `gem install kramdown`
-1. Install [Jekyll](http://jekyllrb.com/)
-    * `gem install jekyll`
+1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/), [Kramdown](http://kramdown.gettalong.org/) and [Sass](http://sass-lang.com/install)) 
+    * cd src/ && `bundle install`
+1. Install [Node.js](http://nodejs.org/)
+1. Install the [Grunt CLI](http://gruntjs.com/)
+    * `npm install -g grunt-cli
 
 
 Using project-level meta data
