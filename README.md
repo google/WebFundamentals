@@ -52,6 +52,9 @@ Mac
     * `gem install kramdown`
 1. Install [Jekyll](http://jekyllrb.com/)
     * `gem install jekyll`
+1. Install [Node.js](http://nodejs.org/)
+1. Install the [Grunt CLI](http://gruntjs.com/)
+    * `npm install -g grunt-cli
 
 
 Using project-level meta data

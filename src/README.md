@@ -3,7 +3,9 @@
 
 ## Prerequisites
 
-- [NodeJS with NPM](http://nodejs.org)
+- [Node.js with npm](http://nodejs.org)
+- The [Grunt CLI](http://gruntjs.com/)
+	* `npm install -g grunt-cli`
 - [Jekyll](http://jekyllrb.com)
 
 
