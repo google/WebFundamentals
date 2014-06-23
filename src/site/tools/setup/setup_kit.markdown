@@ -15,7 +15,7 @@ key-takeaways:
     - Once you've successfully set up the build tools, the site automatically loads in the browser.
 notes:
   command-line:
-    - Most of your interactions with the Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or <a href="http://www.cygwin.com/">Cygwin if you are on Windows</a>.
+    - Most of your interactions with the Web Starter Kit will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or cmd.exe if you are on Windows.
   next:
     - Now that you've set up the Web Starter Kit, try [building a site]({{site.baseurl}}/tools/build/build_site.html).
 ---
@@ -46,23 +46,18 @@ and the [Sass gem](http://sass-lang.com/install) installed.
 
 ### Node
 
-Check if you already have Node installed.
-Bring up a terminal and type `node -v`.
-If Node responds, and if it shows a version at or above v0.10.x,
-proceed to checking if you have Ruby installed too.
-If you require Node,
-go to [NodeJS.org](http://nodejs.org/) and click on the big green Install button.
+Check if you already have Node installed. Bring up a terminal and type `node
+-v`. If Node responds, and if it shows a version at or above v0.10.x, proceed
+to checking if you have Ruby installed too. If you require Node, go to
+[NodeJS.org](http://nodejs.org/) and click on the big green Install button.
 
 ### Ruby
 
-Bring up a terminal and type `ruby -v`.
-If Ruby responds,
-and if it shows a version number at or above 1.8.7,
-then type `gem --version`.
-If you don't see any errors, proceed to installing the Sass gem.
-If you require Ruby,
-it can be installed from the
-[Ruby downloads](https://www.ruby-lang.org/en/downloads/) page.
+Bring up a terminal and type `ruby -v`. If Ruby responds, and if it shows a
+version number at or above 1.8.7, then type `gem --version`. If you don't see
+any errors, proceed to installing the Sass gem. If you require Ruby, it can be
+installed from the [Ruby downloads](https://www.ruby-lang.org/en/downloads/)
+page.
 
 ### Sass gem
 
