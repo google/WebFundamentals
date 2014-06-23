@@ -36,7 +36,7 @@ If you aren't using a tab and you have too many actions to fit on the App Bar, p
 
 The advantage of this is that you have more space for actions and it's in a touch friendly area and gives you a secondary tier of actions.
 
-Limit yourself to five actions at most, avoiding the buttons becoming to small and difficult to tap.
+Limit yourself to five actions at most, avoiding the buttons becoming too small and difficult to tap.
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
 	<img class="g--half g--last" src="images/bottom-bar-alt-1.png"> 
