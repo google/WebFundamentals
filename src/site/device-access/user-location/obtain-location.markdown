@@ -136,7 +136,7 @@ window.onload = function() {
 
 ## Reduce the need to start-up geo location hardware.
 
-For many use-cases you don't need to use the most up to location of the user,
+For many use-cases you don't need to use the most up-to-date location of the user,
 you just need a rough estimate.
 
 Use the `maximumAge` optional property to tell the browser to user a recently
