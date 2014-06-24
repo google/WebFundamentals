@@ -9,14 +9,14 @@ article:
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
-introduction: "As a web developer, having access to the users location opens up a huge number
+introduction: "As a web developer, having access to the user's location opens up a huge number
   of possibilities such as advanced filtering, pinpointing the user on a map,
   and offering them pro-active suggestions on things they can do based on their
   current position."
 key-takeaways:
   geo: 
     -  Assume the user will not give you their location
-    -  Make it clear why you need access to the users location
+    -  Make it clear why you need access to the user's location
     -  Don't immediately prompt for access on page load.
 ---
 
@@ -28,8 +28,8 @@ shows a prompt when a site asks for their location.
 
 {% include modules/toc.liquid %}
 
-Recent user studies have <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
-users are distrustful of sites that simply prompt the user to away their
+Recent user studies <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
+users are distrustful of sites that simply prompt the user to give away their
 position on page load.  So what are the best practice?
 
 {% include modules/takeaway.liquid list=page.key-takeaways.geo %}
@@ -47,22 +47,22 @@ location so you need to adopt a defensive development style.
 ## Use a fallback if geolocation is required
 
 Our recommendation is to not tie your site or application in to requiring
-access to the users current location, but  If your application or site
+access to the user's current location, but  if your application or site
 absolutely requires it there are 3rd party solutions that allow you to obtain
 a best guess of where the person currently is.
 
-These solutions often work by looking at the users-IP address and mapping that
+These solutions often work by looking at the user's IP address and mapping that
 to the physical addresses registered with the RIPE database.  These locations
-are often not very accurate normally giving you a position on the nearest
+are often not very accurate normally giving you a position of the nearest
 telecommunications hub to the user, or the nearest cell phone tower.  In many
 cases they might not even be that accurate, especially if the user is on VPN
 or some other proxy service.
 
 ## Always request access to location on a user gesture
 
-Never try to request access to the users current location on page load (like
+Never try to request access to the user's current location on page load (like
 in the following picture). There is no context for the reason why the site is
-requesting the  users current location.
+requesting the  user's current location.
 
 <img src="images/geolocation.png">
 
@@ -71,7 +71,7 @@ request.  Instead wait for a user gesture on an action that the user would
 expect to trigger a request.
 
 Instead you should give the user a clear call-to-action or an indication  that
-an operation will require access to the location.  The user will then be able
+an operation will require access to their location.  The user will then be able
 to more easily associate the system prompt for access with the action they
 just initiated.
 

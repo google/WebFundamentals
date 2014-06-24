@@ -13,7 +13,7 @@ introduction:  "The Geolocation API lets you watch where the user is and keep ta
 key-takeaways:
   geo: 
     -  Check for Compatibility before you use the API
-    -  Minimize the use of watching the users location to save battery
+    -  Minimize the use of watching the user's location to save battery
     -  Always handle errors
 ---
 
@@ -39,7 +39,7 @@ a callback method whenever you request a location.
 
 ## Watching the users location
 
-The Geolocation API allows you to obtain the users location (with user
+The Geolocation API allows you to obtain the user's location (with user
 consent) with a single call to `getCurrentPosition()`.  
 
 If you want to continually monitor the location of the user, the geolocation
@@ -48,7 +48,7 @@ API has a method called `watchPosition()`. It operates in a similar way to
 software:
 
 1.  Gets a more accurate lock on the user
-2.  The users position changes.
+2.  The user's position changes.
  
 {% highlight javascript %}
 var watchId = navigator.geolocation.watchPosition(function(position) {
@@ -62,10 +62,10 @@ var watchId = navigator.geolocation.watchPosition(function(position) {
 Watching for changes to a geolocation is not a free operation.  Whilst
 operating systems might be introducing platform features to let applications
 hook in to the geo subsystem, you as a web developer have no idea what support
-the users device has for monitoring the users location and whilst you are watching
+the user's device has for monitoring the user's location and whilst you are watching
 a position you are engaging the device in a lot of extra processing
 
-Once you have no need to track the users position call `clearWatch` to turn
+Once you have no need to track the user's position call `clearWatch` to turn
 of the geolocation systems.
 
 ## Always Handle Errors

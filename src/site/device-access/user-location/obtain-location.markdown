@@ -38,11 +38,11 @@ method whenever you request a location.
 
 ## When to use Geolocation
 
-*  Find where the user is closet to a physical location of yours to tailor 
+*  Find where the user is closest to a physical location of yours to tailor 
    the user experience
-*  Tailor information (such as news) to the users location
+*  Tailor information (such as news) to the user's location
 *  Show the position of a user on a map
-*  Tag data created inside your application with the users location 
+*  Tag data created inside your application with the user's location 
    (i.e, geo-tagging a picture)
 
 
@@ -66,7 +66,7 @@ else {
 
 ## Determine the User's Current Location
 
-The geolocation API offers a simple 'one-shot' method to obtain the users
+The geolocation API offers a simple 'one-shot' method to obtain the user's
 location  `getCurrentPosition()`.  A call to this method will asynchronously
 report on the user's  current location.
 
@@ -136,13 +136,13 @@ window.onload = function() {
 
 ## Reduce the need to start-up geo location hardware.
 
-For many use-cases you don't need to use the most up to location of the user,
+For many use-cases you don't need to use the most up to date location of the user,
 you just need a rough estimate.
 
-Use the `maximumAge` optional property to tell the browser to user a recently
+Use the `maximumAge` optional property to tell the browser to use a recently
 obtained geolocation result.  This not only returns quicker if the user has
 requested the data before it also stops the browser from having to start up
-it's geolocation hardware interfaces such as Wifi triangulation or the GPS.
+its geolocation hardware interfaces such as Wifi triangulation or the GPS.
 
 {% highlight javascript %}
 window.onload = function() {
@@ -171,7 +171,7 @@ window.onload = function() {
 
 ## Don't keep the user waiting, set a timeout
 
-Unless set your request to get the current position could never return.
+Unless you set a timeout, your request to get the current position might never return.
 
 {% highlight javascript %}
 window.onload = function() {
