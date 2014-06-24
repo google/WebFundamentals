@@ -175,7 +175,7 @@ JavaScript APIs will still allow you to check if the form validates.
 ### Use JavaScript for more complex real-time validation
 
 When the built-in validation plus regular expressions aren't enough, you can use
-the [Constrains Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+the [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
 a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:
