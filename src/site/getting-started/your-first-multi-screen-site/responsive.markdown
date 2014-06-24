@@ -84,7 +84,7 @@ We are building a site that works across multiple screen sizes and device
 types. In the [previous
 article]({{site.baseurl}}{{page.article.previous.url}}), we crafted the
 Information Architecture of the page and created a basic structure.
-In this guide, we will take our basic structure with content and turn it in to
+In this guide, we will take our basic structure with content and turn it into
 a beautiful page that is responsive across a large number of screen sizes.
 
 <div class="clear">
@@ -108,7 +108,7 @@ making a judgment call on whether the design and layout look right.
 Earlier we created a couple of different high-level designs for how our content
 should be displayed. Now we need make our page adapt to those different layouts.
 We do this by making a decision on where to place our breakpoints &mdash; a point
-where the layout and styles change &mdash; based on how the contents fits the
+where the layout and styles change &mdash; based on how the content fits the
 screen-size.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.make-responsive %}
@@ -137,7 +137,7 @@ in a style guide.
 ### Style guide
 
 A style guide is a useful way to get a high-level understanding of the visual representation
-of the page and it helps you ensure that you are consistent through out the design.
+of the page and it helps you ensure that you are consistent throughout the design.
 
 #### Colors
 
@@ -316,7 +316,7 @@ The images in the narrow viewport (mobile devices mostly) interface are set to
 be  the full width of the screen and stacked vertically.  This doesn't scale
 well on a wide viewport.
 
-To make the images look correct on the a wide viewport, they are scaled to 30%
+To make the images look correct on a wide viewport, they are scaled to 30%
 of the container width and laid out horizontally (rather than vertically in
 the narrow view). We will also add some border radius and box-shadow to make
 the images look more appealing.

@@ -19,11 +19,11 @@ collection: getting-started
 <img src="images/finaloutput-2x.jpg">
 
 Building for multiple devices with differing capabilities, vastly different
-screen sizes and interaction methods it can seem daunting, if not impossible
+screen sizes and interaction methods can seem daunting, if not impossible
 to get started.
 
-It is not as hard as you think building fully responsive sites and to show
-you, this guide takes you the steps that you can use to get started.  We have broken it in to two 
+It is not as hard to build fully responsive sites as you think, and to show
+you, this guide takes you through the steps that you can use to get started.  We have broken it into two 
 simple steps:
 
 1.  Defining the information architecture (commonly known as IA) and structure of the page,
