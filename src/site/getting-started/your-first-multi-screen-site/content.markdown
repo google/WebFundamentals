@@ -112,7 +112,7 @@ the narrow and wide viewports.
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="Wide Viewport IA">
 </div>
 
-This can be converted easily in to the rough sections of a skeleton page that
+This can be converted easily into the rough sections of a skeleton page that
 we will use for the rest of this project.
 
 {% include_code _code/addstructure.html structure %}
@@ -163,7 +163,7 @@ a video placeholder that shows our product working for the user.
 Videos are often used to describe content in a more interactive manner and are
 frequently used to show a demonstration of a product or a concept.
 
-By following the best practices, you can easily integrate video in to your site:
+By following the best practices, you can easily integrate video into your site:
 
 *  Add a `controls` attribute to make it easy for people to play the video.
 *  Add a `poster` image to give people a preview of the content.
@@ -195,7 +195,7 @@ Bennet.
 
 The images are set to scale to 100% of the width of the screen. This works
 well on devices with a narrow vieport, but less well on those with a
-wideviewport (like desktop).  We will manage this in the responsive design
+wide viewport (like desktop).  We will manage this in the responsive design
 section.
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
@@ -206,7 +206,7 @@ relay that to the user verbally.  You should ensure that all your content
 images  have a descriptive `alt` tag that the screen reader can speak out to
 the user.
 
-When added `alt` tags make sure that you keep the alt text as concise as
+When adding `alt` tags make sure that you keep the alt text as concise as
 possible to fully describe  the image.  For example in our demo we simply 
 format the attribute to be "Name: Role", this presents enough information
 to the user to understand that this section is about the authors and what
