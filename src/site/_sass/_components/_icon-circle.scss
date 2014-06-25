@@ -2,12 +2,6 @@
 *
 * Icon Circle
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .icon-circle,
@@ -40,7 +34,7 @@
     font-weight: 700;
 
     @include medium {
-      font-size: $fontLarge;
+      font-size: $fontXLarge;
     }
   }
 }
@@ -54,12 +48,6 @@
   i {
     font-size: $fontLarge;
 
-    @include medium {
-      font-size: $fontXLarge;
-    }
-  }
-
-  span {
     @include medium {
       font-size: $fontXLarge;
     }

@@ -2,27 +2,20 @@
 *
 * Link
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 a {
-  color: $colorHighlight;
-  text-decoration: none;
+  color: $colorBlue;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .cta--primary {
-  @include style-cta($colorHighlight, $icon-chevron-right, 700);
+  @include style-cta($colorBlue, $icon-chevron-right);
 }
 
 .cta--secondary {
-  @include style-cta($colorHighlight);
+  @include style-cta($colorBlue);
 }

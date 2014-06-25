@@ -2,44 +2,8 @@
 *
 * Grid
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
-.demo {
-  margin-bottom: $lineHeight;
-  margin-top: $lineHeight;
-}
-
-.demo {
-  [class*="g-"] {
-    background-color: #eee;
-    position: relative;
-    margin-bottom: $lineHeight;
-    min-height: $lineHeight*6;
-
-    &:before,
-    &:after {
-      @include type--small;
-      display: block;
-      margin: 0 10px;
-    }
-
-    &:before {
-      content: "HTML classes: ";
-      font-weight: 700;
-    }
-
-    &:after {
-      content: attr(class);
-      word-spacing: 15px;
-    }
-  }
-}
 
 @include medium-only {
   // Generating grid classes for medium view
@@ -78,6 +42,7 @@
   }
 
   .g-medium--last { margin-right: 0; }
+  .g-medium--last + .g-medium--half { clear: left; }
 
   .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
 }
@@ -101,8 +66,6 @@
       }
     }
   }
-
-  .g-wide--first { clear: both; }
 
   .g-wide--last { margin-right: 0; }
 
@@ -133,11 +96,7 @@
 //  <div class="third"></div>
 //  <div class="third"></div>
 //  <div class="third last"></div>
-.g--last {
-  @include medium {
-    margin-right: 0;
-  }
-}
+.g--last { margin-right: 0; }
 
 
 // This is a global 'centered' class
@@ -151,6 +110,7 @@
 // Its purpose is to show users our grid system
 // It becomes visible when a class 'debug' is added to the body
 .grid-overlay {
+
   display: none;
   pointer-events: none;
 
@@ -163,7 +123,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
     height: 100%;
     display: block;
 
