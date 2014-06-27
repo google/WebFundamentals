@@ -17,9 +17,8 @@
 
 versionStr=${1:-master}
 
-(
-  cd ../../../
-  make build
-)
+pushd ../../../
+make build
+popd
 
 appcfg.py --oauth2 --version=$versionStr update ../
