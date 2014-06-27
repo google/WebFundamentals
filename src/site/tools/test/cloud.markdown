@@ -103,7 +103,7 @@ and run them against a range of emulated environments.
 
 If you use Grunt,
 there are tasks available for
-<a href="https://www.npmjs.org/package/grunt-saucelabs-qunit">running unit tests via Sauce Labs</a>.
+<a href="https://www.npmjs.org/package/grunt-saucelabs">running unit tests via Sauce Labs</a>.
 
 <a href="https://www.browserstack.com/automate">BrowserStack (commercial)</a>
 is the easiest to use:
