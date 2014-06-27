@@ -116,7 +116,7 @@ that most fits your needs:
 
 ## Build the project
 
-In `web-starter-kit/app`, run the `gulp` tool to build the current project.
+In the root of the project `web-starter-kit`, run the `gulp` tool to build the current project.
 The first time you run this tool,
 it creates the project directory: `web-starter-kit/dist`.
 
