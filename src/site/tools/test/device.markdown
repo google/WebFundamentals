@@ -64,7 +64,7 @@ The Web Starter Kit takes reloading that bit further.
 As you change your source code,
 the tools compile Sass into CSS,
 minify and concatenate JavaScript, CSS, HTML, and images
-and push the optmized site.
+and push the optimized site.
 
 ## Synchronize testing across devices
 

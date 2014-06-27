@@ -153,7 +153,7 @@ Examples:
 * <a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>
 * <a href="http://livestyle.emmet.io/install/">Emmet LiveStyle</a>
 
-The Web Starter Kit does all this and more: watches for changes, optmizes
+The Web Starter Kit does all this and more: watches for changes, optimizes
 files, builds your site, reloads the browser live and synchronizes scrolling,
 clicks, and navigation across all your devices. Follow the instructions in the
 [next guide]({{site.baseurl}}/tools/setup/setup_kit.html) to set up the Web
