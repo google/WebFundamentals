@@ -15,10 +15,10 @@
 # limitations under the License.
 
 
-versionStr=${1:-master}
+versionStr="${1:-master}"
 
 pushd ../../../
 make build
 popd
 
-appcfg.py --oauth2 --version=$versionStr update ../
+appcfg.py --oauth2 --version="$versionStr" update ../
