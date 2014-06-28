@@ -52,7 +52,7 @@ Mac
     * cd src/ && `bundle install`
 1. Install [Node.js](http://nodejs.org/)
 1. Install the [Grunt CLI](http://gruntjs.com/)
-    * `npm install -g grunt-cli
+    * `npm install -g grunt-cli`
 
 
 Using project-level meta data
