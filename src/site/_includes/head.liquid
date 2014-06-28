@@ -31,4 +31,10 @@
 {% endif %}
 <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Google Web Fundamentals{% endif %}">
 
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://developers.google.com/web/fundamentals/" />
+<meta property="og:image" content="{{ page.snippet_img }}" />
+<meta property="og:image" content="/imgs/lono.png" />
+
 <link rel="stylesheet" media="screen" href="{{site.baseurl}}/css/styles.min.css" />
