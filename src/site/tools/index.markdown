@@ -13,6 +13,6 @@ collection: home
 ---
 
 {% comment %}
-Page content will be output by the section layout pased on the article collection matching page.id
+Page content will be output by the section layout passed on the article collection matching page.id
 {% endcomment %}
 

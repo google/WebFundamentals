@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Cloud Testing"
-description: "While there's no substitue for real device testing, cloud testing gets you most of the way. Your testing story should include both real and cloud-based testing."
-introduction: "While there's no substitue for real device testing, cloud testing gets you most of the way. Your testing story should include both real and cloud-based testing."
+description: "While there's no substitute for real device testing, cloud testing gets you most of the way. Your testing story should include both real and cloud-based testing."
+introduction: "While there's no substitute for real device testing, cloud testing gets you most of the way. Your testing story should include both real and cloud-based testing."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
