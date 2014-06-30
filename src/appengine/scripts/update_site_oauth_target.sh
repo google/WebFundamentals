@@ -14,12 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+set -e
 
-versionStr=${1:-master}
 
-(
-  cd ../../../
-  make build
-)
+versionStr="${1:-master}"
 
-appcfg.py --oauth2 --version=$versionStr update ../
+pushd ../../../
+make build
+popd
+
+appcfg.py --oauth2 --version="$versionStr" update ../
