@@ -17,3 +17,13 @@ rel:
 collection: user-input
 id: form-input
 ---
+
+{% wrap content %}
+
+For an overview of these guides on creating amazing forms, check out the video below.
+
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/iYYHRwLqrKM?controls=2&amp;modestbranding=1&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+{% endwrap %}
