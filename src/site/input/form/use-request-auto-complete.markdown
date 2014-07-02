@@ -70,6 +70,10 @@ Rather than the site relying on a particular payment provider,
 card information) from the browser, which are optionally stored by the browser
 much like other auto-complete fields.
 
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/ljYeHwGgzQk?controls=2&amp;modestbranding=1&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
 ### `requestAutocomplete` flow
 
 The ideal experience will show the `requestAutocomplete` dialog instead of loading the
