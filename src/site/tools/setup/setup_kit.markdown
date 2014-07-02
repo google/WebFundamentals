@@ -105,11 +105,11 @@ that most fits your needs:
   <tbody>
     <tr>
       <td data-th="starterfile"><a href="https://github.com/google/web-starter-kit/blob/master/app/index.html">index.html</a></td>
-      <td data-th="Description">Default starting point. Includes a slide-out menu.</td>
+      <td data-th="Description">Default starting point. Includes a slide-out menu. To choose this as your starting point, remove the alternative basic.html file.</td>
     </tr>
     <tr>
       <td data-th="starterfile"><a href="https://github.com/google/web-starter-kit/blob/master/app/basic.html">basic.html</a></td>
-      <td data-th="Description">Very basic starting point. No navigation. Simple, but responsive styles. To choose this as your starting point, remove the alternative starter files.</td>
+      <td data-th="Description">Very basic starting point. No navigation. Simple, but responsive styles. To choose this as your starting point, remove the alternative index.html file.</td>
     </tr>
   </tbody>
 </table>
