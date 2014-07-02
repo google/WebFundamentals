@@ -15,6 +15,18 @@ article:
 id: touch
 collection: user-input
 ---
+{% wrap content %}
+
+The following guides cover how you can make elements of your page response to a users touch
+as well as how to add custom gestures to your site.
+
+This video gives you a brief overview of both these guides.
+
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/Rwc4fHUnGuU?controls=2&amp;modestbranding=1&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+{% endwrap %}
 
 {% comment %}
 Guide list content will be output by the landing layout pased on the article collection matching page.id
