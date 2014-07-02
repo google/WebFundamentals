@@ -41,19 +41,9 @@ remember:
 
 {% wrap content%}
 
-<style>
-
-  img, video, object {
-    max-width: 100%;
-  }
-
-  img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-</style>
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/j5fYOYrsocs?controls=2&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 {% include modules/nextarticle.liquid %}
 
