@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-10
   order: 3
 collection: optimizing-content-efficiency
+rel:
+  gplusauthor: https://plus.google.com/+IlyaGrigorik
 key-takeaways:
   replace:
     - Eliminate unnecessary image resources

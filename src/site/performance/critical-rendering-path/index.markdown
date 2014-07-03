@@ -9,6 +9,8 @@ article:
   order: 1
 id: critical-rendering-path
 collection: performance
+rel:
+  gplusauthor: https://plus.google.com/+IlyaGrigorik
 ---
 {% wrap content%}
 

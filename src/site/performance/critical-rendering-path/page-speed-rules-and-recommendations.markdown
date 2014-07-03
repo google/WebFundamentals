@@ -8,6 +8,8 @@ article:
   updated_on: 2014-04-28
   order: 8
 collection: critical-rendering-path
+rel:
+  gplusauthor: https://plus.google.com/+IlyaGrigorik
 ---
 {% wrap content %}
 
