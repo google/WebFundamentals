@@ -1,7 +1,9 @@
-<nav class="breadcrumbs" itemprop="breadcrumb">
+<nav class="breadcrumbs">
   <p>
   {% for p in page.ancestors %}
-    <a href="{{site.baseurl}}{{ p.url | clean}}" title="{{ p.title }}" {% if forloop.first %}rel="home"{%endif%} >{{ p.title }}</a>
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="{{site.baseurl}}{{ p.url | clean}}" title="{{ p.title }}" {% if forloop.first %}rel="home"{%endif%} itemprop="url"><span itemprop="title">{{ p.title }}</span></a>
+    </span>
     /
   {% endfor %}
   </p>
