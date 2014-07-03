@@ -13,6 +13,8 @@ article:
   order: 1
 id: user-location
 collection: device-access
+rel:
+  gplusauthor: https://plus.google.com/+PaulKinlan
 ---
 
 {% wrap content %}
