@@ -9,6 +9,8 @@ key-takeaways:
     - Always start with a narrow viewport first and scale out.
     - Base your breakpoints off when you need to adapt the content.
     - Create a high-level vision of your layout across major breakpoints.
+rel:
+  gplusauthor: https://plus.google.com/+PaulKinlan
 related-guides:
   responsive:
     -
