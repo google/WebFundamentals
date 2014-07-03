@@ -13,6 +13,8 @@ introduction: "As a web developer, having access to the user's location opens up
   of possibilities such as advanced filtering, pinpointing the user on a map,
   and offering them pro-active suggestions on things they can do based on their
   current position."
+rel:
+  gplusauthor: https://plus.google.com/+PaulKinlan
 key-takeaways:
   geo: 
     -  Assume the user will not give you their location
