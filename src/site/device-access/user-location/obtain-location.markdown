@@ -14,8 +14,6 @@ article:
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
-rel:
-  gplusauthor: https://plus.google.com/+PaulKinlan
 key-takeaways:
   geo: 
     -  Check for Compatibility before you use the API
