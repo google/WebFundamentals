@@ -10,6 +10,8 @@ rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
 collection: user-location
 introduction:  "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
+rel:
+  gplusauthor: https://plus.google.com/+PaulKinlan
 key-takeaways:
   geo: 
     -  Check for Compatibility before you use the API
