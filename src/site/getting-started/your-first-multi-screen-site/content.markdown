@@ -15,6 +15,7 @@ id: multi-screen-content
 collection: multi-screen
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
+  twitterauthor: "@Paul_Kinlan"
 related-guides:
   create-amazing-forms:
     -

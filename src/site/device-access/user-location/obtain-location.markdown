@@ -13,6 +13,7 @@ article:
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
+  twitterauthor: "@Paul_Kinlan"
 collection: user-location
 key-takeaways:
   geo: 

@@ -11,6 +11,7 @@ key-takeaways:
     - Create a high-level vision of your layout across major breakpoints.
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
+  twitterauthor: "@Paul_Kinlan"
 related-guides:
   responsive:
     -

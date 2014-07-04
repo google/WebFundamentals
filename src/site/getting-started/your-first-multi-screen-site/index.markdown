@@ -14,6 +14,7 @@ id: multi-screen
 collection: getting-started
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
+  twitterauthor: "@Paul_Kinlan"
 ---
 
 {% wrap content%}
