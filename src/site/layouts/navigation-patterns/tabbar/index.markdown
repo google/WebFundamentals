@@ -2,7 +2,7 @@
 layout: article
 title: "Tab Bar"
 description: "A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
-thumbnail: tabbar/images/tabbar.png
+thumbnail: images/tabbar.png
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06

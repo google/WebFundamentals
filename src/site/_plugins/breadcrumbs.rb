@@ -39,13 +39,15 @@ module Jekyll
       h = orig_to_liquid
       h['ancestors'] = self.ancestors
       h['parent'] = self.ancestors.last
+      h['current_directory'] = self.ancestors
+      h['filepath'], h['filename'] = File.split(self.url)
       return h
     end
 
     private
 
     ##
-    # Gets Page object that has given url. Very efficient O(n) solution.
+    # Gets Page object that has given url. Very in-efficient O(n) solution.
     def get_page_from_url(url)
       site.pages.each do |page|
         return page if page.url == url

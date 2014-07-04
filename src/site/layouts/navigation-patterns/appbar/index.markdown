@@ -2,7 +2,7 @@
 layout: article
 title: "App Bar"
 description: "Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
-thumbnail: appbar/images/appbar.png
+thumbnail: images/appbar.png
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
