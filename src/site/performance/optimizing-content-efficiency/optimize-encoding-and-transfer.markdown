@@ -22,7 +22,7 @@ key-takeaways:
   text-compression:
     - "GZIP performs best on text-based assets: CSS, JavaScript, HTML"
     - All modern browsers support GZIP compression and will automatically request it
-    - Your server needs to configured to enable GZIP compression
+    - Your server needs to be configured to enable GZIP compression
     - Some CDNs require special care to ensure that GZIP is enabled
 notes:
   jquery-minify:
