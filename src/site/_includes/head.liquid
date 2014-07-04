@@ -20,12 +20,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
 
-{% if page.snippet_img %}<meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
+{% if page.thumbnail %}<meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
 <meta property="twitter:account_id" content="@chromiumdev" />
 <meta property="twitter:site" content="@chromiumdev" />
 <meta property="twitter:description" content="{{page.description}}" />
 {% if page.rel.twitterauthor %}<meta property="twitter:creator" content="{{ page.rel.twitterauthor }}" />{% else %}<meta property="twitter:creator" content="@chromiumdev" />{% endif%}
-{% if page.snippet_img %}<meta name="twitter:image:src" content={{ page.snippet_img }}" />
+{% if page.thumbnail %}<meta name="twitter:image:src" content={{ page.thumbnail }}" />
 {% else %}<meta property="twitter:image:src" content="https://developers.google.com/web/fundamentals/imgs/logo.png" />{% endif %}
 
 
@@ -33,11 +33,7 @@
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
 
 <meta itemprop="name" content="{{ page_title }}">
-{% if page.snippet_img %}
-<meta itemprop="image" content="{{ page.snippet_img }}">
-{% else %}
 <meta itemprop="image" content="/imgs/logo.png">
-{% endif %}
 <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Google Web Fundamentals{% endif %}">
 
 <meta property="og:site_name" content="Web Fundamentals" />
