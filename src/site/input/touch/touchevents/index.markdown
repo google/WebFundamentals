@@ -9,6 +9,7 @@ article:
   order: 2
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
+  twitterauthor: "@gauntface"
 key-takeaways:
   touch-events:
     - For full device support, handle touch, mouse and Pointer Events.

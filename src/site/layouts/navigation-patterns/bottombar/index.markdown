@@ -9,6 +9,7 @@ article:
   order: 4
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
+  twitterauthor: "@gauntface"
 collection: navigation-patterns
 introduction: "If you are developing a web app and find that the number of actions a user can perform is more than the App Bar can handle, the best option is to overflow into a Bottom Bar."
 key-takeaways:

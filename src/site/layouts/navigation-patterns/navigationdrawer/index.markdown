@@ -9,6 +9,7 @@ article:
   order: 3
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
+  twitterauthor: "@gauntface"
 collection: navigation-patterns
 introduction: "For sites with a larger number of sections and subsections the Navigation Drawer is a much better fit. It can be a scrollable off-canvas element to your site as well as be a common place for global state."
 key-takeaways:
