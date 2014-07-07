@@ -17,6 +17,7 @@ article:
   order: 3
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: form-input
 key-takeaways:
   provide-real-time-validation:

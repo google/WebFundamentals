@@ -14,6 +14,7 @@ article:
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: user-input
 id: form-input
 ---

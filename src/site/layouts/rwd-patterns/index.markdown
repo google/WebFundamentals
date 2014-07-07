@@ -9,6 +9,7 @@ introduction: "Responsive web design patterns are quickly evolving, but there
               desktop and mobile devices."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

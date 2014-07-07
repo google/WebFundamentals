@@ -8,6 +8,7 @@ introduction: "For full-width multi-column layouts, column drop simply stacks th
   vertically as the window width becomes too narrow for the content.  "
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

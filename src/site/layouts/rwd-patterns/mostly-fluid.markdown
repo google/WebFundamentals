@@ -9,6 +9,7 @@ introduction: "The mostly fluid pattern consists primarily of a fluid grid.  On 
   screens."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

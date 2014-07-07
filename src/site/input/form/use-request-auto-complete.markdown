@@ -13,6 +13,7 @@ article:
   order: 4
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: form-input
 key-takeaways:
   use-request-auto-complete:

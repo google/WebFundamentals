@@ -13,6 +13,7 @@ article:
   order: 3
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: rwd-fundamentals
 key-takeaways:
   set-viewport:

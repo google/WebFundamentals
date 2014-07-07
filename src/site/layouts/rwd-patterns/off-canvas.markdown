@@ -10,6 +10,7 @@ introduction: "Rather than stacking content vertically, the off canvas pattern p
   is only a click away."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

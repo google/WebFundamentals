@@ -14,6 +14,7 @@ article:
   order: 2
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: form-input
 key-takeaways:
   label-and-name:

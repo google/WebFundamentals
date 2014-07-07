@@ -11,6 +11,7 @@ less competition there is for client's bandwidth and the faster the browser can
 download and display all the assets."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

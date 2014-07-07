@@ -8,6 +8,7 @@ introduction: "The layout shifter pattern is the most responsive to with multipl
   across several screen widths."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

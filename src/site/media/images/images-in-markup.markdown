@@ -9,6 +9,7 @@ formats.  Including images that work across devices is no different than for
 desktop, and only requires a few minor tweaks to create a good experience."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-06-12

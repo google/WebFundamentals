@@ -13,6 +13,7 @@ article:
   order: 1
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: form-input
 key-takeaways:
   choose-best-input-type:

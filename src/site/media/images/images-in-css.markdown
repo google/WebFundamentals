@@ -10,6 +10,7 @@ powerful, enabling conditional image loading based on screen resolution,
 viewport size and more."
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

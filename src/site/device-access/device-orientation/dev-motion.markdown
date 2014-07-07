@@ -12,6 +12,7 @@ article:
 id: device-orientation
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: device-orientation
 key-takeaways:
   devmotion: 

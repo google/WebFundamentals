@@ -8,6 +8,7 @@ introduction: "Tiny tweaks simply makes small changes to the layout, such as adj
   size, resizing images or moving content around in very minor ways.  "
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

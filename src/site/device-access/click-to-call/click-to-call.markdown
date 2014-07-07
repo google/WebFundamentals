@@ -14,6 +14,7 @@ article:
 id: click-to-call
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
 collection: click-to-call
 key-takeaways:
   c2c: 
