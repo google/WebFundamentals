@@ -60,7 +60,9 @@ remember:
   }
 </style>
 
-{% include modules/toc.liquid %}
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/oK09n_PGhTo?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 There is a multitude of different screen sizes across phones, "phablets",
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
