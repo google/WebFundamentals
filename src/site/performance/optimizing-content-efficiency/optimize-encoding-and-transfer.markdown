@@ -139,6 +139,7 @@ All modern browsers support and automatically negotiate GZIP compression for all
     <th>Compression ratio</th>
   </tr>
 </thead>
+<tbody>
 <tr>
   <td data-th="library">jquery-1.11.0.js</td>
   <td data-th="size">276 KB</td>
@@ -187,6 +188,7 @@ All modern browsers support and automatically negotiate GZIP compression for all
   <td data-th="compressed">18 KB</td>
   <td data-th="savings">88%</td>
 </tr>
+</tbody>
 </table>
 
 The above table illustrates the savings provided by GZIP compression for a few of the most popular JavaScript libraries and CSS frameworks. The savings range from 60 to 88%, and note that the combination of minified files (identified by “.min” in their filenames), plus GZIP, offers an even larger win.
