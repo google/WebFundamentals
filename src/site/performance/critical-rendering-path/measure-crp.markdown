@@ -57,7 +57,7 @@ The HTML specification dictates specific conditions for each and every event: wh
 
 * **domInteractive** marks when DOM is ready.
 * **domContentLoaded** typically marks when [both the DOM and CSSOM are ready](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * If there is no parser blocking JavaScript than _documentContentLoaded_ will fire immediately after _domInteractive_.
+    * If there is no parser blocking JavaScript then _documentContentLoaded_ will fire immediately after _domInteractive_.
 * **domComplete** marks when the page and all of its subresources are ready.
 
 ^
