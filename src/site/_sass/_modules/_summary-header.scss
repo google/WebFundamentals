@@ -2,12 +2,6 @@
 *
 * Editorial Header
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .summary-header {
@@ -25,7 +19,6 @@
 
 .summary-header__anchor-list {
   margin-top: $lineHeight * 2;
-  padding-left: 0;
 }
 
 
@@ -33,8 +26,4 @@
   & a {
     color: #ffffff;
   }
-}
-
-.summary-header__title {
-  @include color-inherit;
 }

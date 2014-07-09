@@ -2,12 +2,6 @@
 *
 * Button
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .button {
@@ -22,30 +16,41 @@
   font-family: $fontHighlight;
   font-weight: 600;
   text-decoration: none;
-  letter-spacing: 1px;
 
   outline: 0;
+
+  @include prefixr(transition, none);
 
   &:hover {
     background: #4d4d4d;
     color: #ffffff;
-    border-color: #4d4d4d;
+    border: 1px solid #4d4d4d;
     text-decoration: none;
   }
+}
+
+// Mixin to create buttons
+@mixin style-button($color, $textColor, $isInverted: false) {
+
+  background: $color;
+  color: $textColor;
+  border: 1px solid darken($color, 10%);
+
+  @if $isInverted { border-color: transparent;}
 }
 
 
 .button--primary {
   @extend .button;
-  @include style-button($colorHighlight, #ffffff);
+  @include style-button(#4285f4, #ffffff);
 }
 
 .button--secondary {
   @extend .button;
-  @include style-button(#ffffff, $colorHighlight);
+  @include style-button(#ffffff, $colorBlue);
 }
 
 .button--secondary-variation {
   @extend .button;
-  @include style-button(#ffffff, $colorHighlight, true);
+  @include style-button(#ffffff, $colorBlue, true);
 }

@@ -2,15 +2,9 @@
 *
 * Global
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
-* {
+*, *::before, *::after {
   @include prefixr(box-sizing, border-box);
 }
 
@@ -29,6 +23,11 @@ body {
   @include baseline-grid();
 }
 
+pre {
+  background: $colorGrayBackground;
+  padding: 13px;
+}
+
 .main-container {
   @include container(true);
 }
@@ -38,11 +37,23 @@ body {
 }
 
 .container-medium {
-  @include container(true, true); // second parameter is to ignore mobile rules - so it only applies from medium up
+  @include medium {
+    @include container(true);
+  }
 }
 
 .container-small {
   @include small-only {
     @include container(true);
+  }
+}
+
+.content {
+  @include wide {
+    margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+
+    & pre {
+      margin-right: -25.9%;
+    }
   }
 }

@@ -2,71 +2,81 @@
 *
 * Styleguide
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .page--styleguide {
 
-  & .styleguide__module-title {
+  .styleguide__module-title {
     margin-bottom: $lineHeight;
   }
 
-  & section {
+  section {
     margin-bottom: $lineHeight*2;
     border-bottom: 1px solid #ccc;
     padding-bottom: $lineHeight*3 - 1;
-    margin-top: $lineHeight;
 
   }
 
-  & .styleguide__color-list {
+  .styleguide__color-list {
     text-align: center;
 
-    & li {
+    li {
       border-bottom: $lineHeight*2 solid;
       margin-bottom: $lineHeight;
       position: relative;
     }
   }
 
-  & .styleguide__breadcrumb .breadcrumbs{
+  .styleguide__breadcrumb .breadcrumbs{
     display: block;
   }
 
-  & .styleguide__inverted-block {
+  .styleguide__lists {
+    ul,
+    ol {
+      margin-bottom: $lineHeight;
+    }
+  }
+
+  .styleguide__inverted-block {
     background: #e8e8e8;
     padding: 0 13px;
   }
 
-  & .styleguide__theme-block {
+  .styleguide__theme-block {
     background: $colorLayouts;
     padding: 0 13px;
   }
 
-  & .styleguide__typography p {
-    padding-bottom: 26px;
-    padding-top: 0;
-  }
+}
 
-  & .styleguide__typography>strong {
-    padding-top: $lineHeight;
-  }
+.demo {
+  margin-bottom: $lineHeight;
+  margin-top: $lineHeight;
+}
 
-  & .styleguide__case-study-wrapper {
+.demo {
+  [class*="g-"] {
+    background-color: $colorGrayLight;
+    position: relative;
+    margin-bottom: $lineHeight;
+    min-height: $lineHeight*6;
 
-    & .case-study-wrapper {
-      margin-top: 0;
+    &::before,
+    &::after {
+      @include type--small;
+      display: block;
+      margin: 0 10px;
     }
 
-  }
+    &::before {
+      content: "HTML classes: ";
+      font-weight: 700;
+    }
 
-  & .container pre {
-    margin: 0;
+    &::after {
+      content: attr(class);
+      word-spacing: 15px;
+    }
   }
-
 }

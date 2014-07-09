@@ -36,7 +36,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 nav,
 section,
@@ -403,32 +402,4 @@ th {
    ========================================================================== */
 blockquote {
   margin: 0;
-}
-
-/* Pre and Code elements default look and feel
-    =========================================================================*/
-pre,
-code {
-  font-size: $fontBase - 2;
-}
-
-pre {
-  background: $colorGrayBackground;
-  padding: 13px;
-}
-
-code {
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
-p {
-  & code {
-    background: $colorGrayBackground;
-    display: inline-block;
-    padding: 4px;
-    border-radius: 1px;
-    font-size: $fontBase - 3;
-    line-height: 1;
-  }
 }

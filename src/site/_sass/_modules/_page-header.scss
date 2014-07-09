@@ -2,12 +2,6 @@
 *
 * Page header
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .page-header {
@@ -15,10 +9,10 @@
 
   .breadcrumbs {
     text-align: left;
-    color: $colorHighlight;
+    color: $colorBlue;
 
     a {
-      color: $colorHighlight;
+      color: $colorBlue;
     }
   }
 
@@ -30,8 +24,9 @@
 
 .page-header__excerpt {
   position: relative;
+  padding-top: 0;
 
   &:last-child {
-    padding-bottom: $lineHeight * 4;
+    padding-bottom: $lineHeight * 3;
   }
 }

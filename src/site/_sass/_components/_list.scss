@@ -2,102 +2,62 @@
 *
 * List
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 ul,
-ol,
-dl {
+ol {
   list-style: none;
   margin: 0;
-  padding-left: 32px;
 
   @include small-only {
     padding-left: 0;
   }
-
-  & ul,
-  & ol {
-    padding-left: 0;
-  }
 }
 
-li,
-dt {
+ul li {
   position: relative;
   padding-left: 16px;
-}
+  @include bullet-type("", icon-bullet);
 
-ul {
-  > li {
-    @include bullet();
+  &::before {
+    font-size: 4px;
   }
 }
 
 ol {
   counter-reset: list;
-
   > li {
     @include numbered-list;
+    position: relative;
     padding-left: 32px;
 
     // This selected every adjacent <li>
     // from the 10th and overrides the
     // content property of each
-    &:nth-child(10n) ~ li:before,
-    &:nth-child(10n):before {
+    &:nth-child(10n) ~ li::before,
+    &:nth-child(10n)::before {
       content: counter(list);
     }
 
   }
 }
 
-
-// Find nested lists
 ul ol,
-ol ul,
-ul ul,
-ol ol {
+ol ul {
   padding-top: 0;
 }
-
-/*==========  DEFINITION LIST  ==========*/
-
-
-dt {
-  @include bullet($icon-hash, $fontSmall);
-
-  font-family: $fontHighlight;
-  font-weight: 400;
-
-  @include medium {
-    font-weight: 700;
-  }
-}
-
-dd {
-  margin-left: 0;
-  margin-bottom: $lineHeight;
-}
-
 
 
 /*==========  LIST LINKS  ==========*/
 
 ul.list-links {
-  li:before {
+  li::before {
     display: none;
   }
-
   a {
-    @include bullet();
+    @include bullet-type("", icon-bullet);
 
-    &:before {
+    &::before {
       font-size: 4px;
     }
 
@@ -105,10 +65,8 @@ ul.list-links {
   }
 
   &.list-links--primary {
-    letter-spacing: 1px;
-
-    & a {
-      @include bullet($icon-chevron-right, $fontSmall);
+    a {
+      @include bullet-type("", icon-chevron-right);
       font-weight: 400;
       font-family: $fontHighlight;
       line-height: 1; // fixes baseline grid alignment
@@ -119,27 +77,24 @@ ul.list-links {
 
 ol.list-links {
   li {
-    &:before {
+    &::before {
       display: none;
     }
 
-    & a {
+    a {
       display: inline-block;
       @include numbered-list;
       font-weight: 300;
     }
 
-    // This selected every adjacent <li>
-    // from the 10th and overrides the
-    // content property of each
-    &:nth-child(10n) ~ li a:before,
-    &:nth-child(10n) a:before {
+    &:nth-child(10n) ~ li a::before,
+    &:nth-child(10n) a::before {
       content: counter(list);
     }
   }
 
   &.list-links--secondary {
-    a:before {
+    a::before {
       display: none;
     }
   }
@@ -149,7 +104,7 @@ ol.list-links {
   @include type--base;
   padding-left: 0;
 
-  & li {
+  li {
     padding-left: 0;
   }
 }
@@ -164,18 +119,19 @@ ol.list-links {
     padding-top: 0;
     padding-left: 0;
 
-    &:before {
+    &::before {
       display: none
     }
 
   }
 
   a {
-    @include bullet();
+    @include bullet-type("", icon-bullet);
+    line-height: 1; // fixes baseline grid alignment
     display: inline-block;
     padding-left: 16px;
 
-    &:before {
+    &::before {
       font-size: 4px;
     }
   }
@@ -185,7 +141,7 @@ ol.list-links {
 
 .list-small {
 
-  & li {
+  li {
     @include medium {
       @include type--small;
       padding-top: 0;
@@ -203,39 +159,57 @@ ol.list-links {
 /*==========  FEATURED LIST  ==========*/
 
 .featured-list {
-  padding-top: $lineHeight * 2;
-  padding-left: 0;
+  padding-top: $lineHeight * 3;
+  padding-bottom: $lineHeight * 3;
 }
 
 .featured-list__item {
-  padding: $lineHeight 0;
+  background: #ffffff;
+  padding-left: 0;
+  padding-top: $lineHeight;
+  padding-bottom: $lineHeight;
 
-  & h3 {
-    padding-top: 0;
+  @include medium {
+    min-height: $lineHeight * 13;
+    padding: $lineHeight * 2 32px;
   }
 
-  & p {
+  margin-top: $lineHeight;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  p {
     margin-bottom: $lineHeight;
   }
 }
 
 .featured-list__img-wrapper {
+  display: none;
   position: relative;
   padding-top: $lineHeight;
+  margin: 0 -5%;
 
   @include medium {
+    display: block;
     padding-top: 0;
     margin: 0;
-  }
-
-  & img {
-    margin : 0;
   }
 }
 
 .featured-list__img {
+  @include medium {
+    padding-top: 60.8%;
+    padding-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
 
-  & img {
+  }
+
+  img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -251,8 +225,8 @@ ol.list-links {
   }
 }
 
-/*==========  RELATED ITEMS LIST  ==========*/
-.related-items-list {
+/*==========  RELATED GUIDES LIST  ==========*/
+.related-guides-list {
   font-family: $fontHighlight;
   padding-top: 0;
   padding-left: 0;
@@ -265,88 +239,42 @@ ol.list-links {
     padding-top: 0
   }
 
-  & li {
+  p {
+    padding-top: 0;
+  }
+
+  .tag {
+    padding-top: 0;
+  }
+
+  li {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight - 1;
     border-bottom: 1px solid $colorGrayKeyline;
-    overflow: hidden;
 
     &:last-child {
       border-color: transparent;
     }
 
-    // Selecting the 4th element and then every 3rd adjacent one
-    &:nth-child(3n + 4) {
-      @include wide {
-        margin-left: 25.9%;
-      }
-    }
-
     @include medium {
       padding-top: 0;
-      margin-bottom: 0;
+      padding-bottom: 0;
       border-color: transparent;
-    }
-  }
-
-  & p {
-    padding-top: 0;
-    color: $colorHighlight;
-  }
-
-  & a {
-    @include small-only {
-      overflow: hidden;
-    }
-
-    display: block;
-  }
-
-  & img {
-    @include small-only {
-      width: 50%;
-      float: left;
-      margin-right: $lineHeight/2;
-    }
-
-    @include medium {
-      margin-bottom: $lineHeight/2 + 2;
-    }
-  }
-
-  & .tag {
-    padding-top: 0;
-    display: block; // fixes baseline
-    max-width: 0; // fixes baseline
-    white-space: nowrap;
-  }
-}
-
-.related-items-list--inline {
-  & li {
-    padding-top: $lineHeight;
-    border: none;
-    padding-bottom: 0;
-  }
-
-  & a {
-    @include medium {
-      display: inline-block;
     }
   }
 }
 
 /*==========  LIST RESET  ==========*/
 
-.list-reset {
+.list--reset {
   padding-left: 0;
 
   li {
     
   }
 
-  &.list-links a:before,
-  & li:before {
+  &.list-links a::before,
+  & li::before {
     display: none !important; // Fine to use !important when we are forcing an override
   }
 }
@@ -368,56 +296,29 @@ ol.list-links {
     }
 
     & .icon {
-      font-size: 10px;
+      font-size: $fontSmall;
       display: inline-block;
       background: rgba(#000000, .2);
       border-radius: 100%;
-      width: $lineHeight;
-      line-height: $lineHeight;
+      width: 26px;
+      line-height: 26px;
       text-align: center;
       margin-left: 7px;
     }
   }
 
 }
-
-/*==========  LESSONS  ==========*/
-.list-guides {
-  padding-left: 0;
-
-  & a {
-    color: #ffffff;
-  }
-
-  & .current {
-    &,
-    a {
-      text-decoration: none;
-      cursor: default;
-    }
-
-    & .icon {
-      font-size: 10px;
-      display: inline-block;
-      background: rgba(#000000, .2);
-      border-radius: 100%;
-      width: $lineHeight;
-      line-height: $lineHeight;
-      text-align: center;
-      margin-left: 7px;
-    }
-  }
-
-}
-
 
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
 .list-guides-intro {
-  margin-bottom: ($lineHeight*2) - 1;
-  padding-top: $lineHeight*2;
+  margin-bottom: $lineHeight*2;
 
-  & li {
+  @include small-only {
+    padding-top: $lineHeight*2;
+  }
+
+  li {
     border-bottom: 1px solid $colorGrayKeyline;
     padding-bottom: ($lineHeight*2) - 1;
     margin-bottom: ($lineHeight*2);
@@ -430,257 +331,6 @@ ol.list-links {
     &:last-child {
       border-bottom: transparent;
       margin-bottom: 0;
-    }
-  }
-
-  & h3 {
-    margin-bottom: $lineHeight;
-    @include color-inherit;
-  }
-}
-
-/*==========  ARTICLE LIST  ==========*/
-.articles-list {
-  padding: (($lineHeight * 2) - 1) 0 ($lineHeight * 2 + 1);
-
-  .divider {
-
-    &:last-child {
-      display: none;
-    }
-
-  }
-
-}
-
-.articles-list__item {
-  padding-left: 0;
-  margin-bottom: $lineHeight*2;
-  position: relative;
-
-  &:before {
-    display: none;
-  }
-
-  & a {
-    display: block;
-    text-decoration: none !important;
-    padding-bottom: 0px;
-
-    h3 {
-      display: inline;
-      @include medium {
-        border-bottom: none;
-      }
-    }
-
-    .no-touch &:hover h3 {
-      text-decoration: underline;
-
-      @include medium {
-        border-bottom: 1px solid;
-      }
-    }
-
-  }
-
-  & h3 {
-    color: $colorHighlight;
-
-  }
-
-  & p {
-    margin-top: $lineHeight;
-  }
-
-}
-
-/*==========  GUIDES LIST  ==========*/
-.guides-list {
-  overflow: hidden;
-
-  @include medium {
-    @include flexbox;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    padding-top: $lineHeight*2;
-  }
-}
-
-.guides-list__item {
-  padding: 0;
-  background: #ffffff;
-  margin-top: $lineHeight;
-  margin-bottom: 0;
-
-  @include medium {
-    @include flexbox;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-  }
-
-  & h3 {
-    margin: 0 32px;
-
-    @include medium {
-      & a {
-        text-decoration: none;
-        border-bottom: none;
-        padding-bottom: 1px;
-
-        &:hover {
-          border-bottom: 1px solid;
-        }
-      }
-    }
-
-  }
-
-  & p {
-    margin: $lineHeight 32px 0;
-  }
-
-  & .primary-content {
-    @include medium {
-      flex: 1 1 auto;
-      -webkit-flex: 1;
-      min-height: 300px;
-      max-height: 300px;
-    }
-  }
-
-  & .secondary-content {
-    position: relative;
-    margin-top: ($lineHeight);
-    border-top: 1px solid $colorGrayKeyline;
-    flex: 1 1 auto;
-
-    @include medium {
-      width: 100%; // needed due to parent being flex
-    }
-
-    & .icon-circle {
-      position: absolute;
-      top: -$lineHeight - 2;
-      left: 50%;
-      margin-left: -21px;
-      border: 2px solid #ffffff;
-
-      & i {
-        font-size: 23px;
-      }
-    }
-  }
-
-  & ol {
-    margin: $lineHeight 32px 0;
-    padding: $lineHeight*2 0px;
-    margin-top: 0;
-    text-align: left;
-    flex: 1;
-
-    & li {
-      list-style: none;
-      padding-left: 32px;
-
-      &:before {
-        counter-increment: list;
-        content: "0" counter(list);
-        color: inherit;
-        font-weight: 400;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-      }
-
-      & a {
-        vertical-align: top;
-      }
-    }
-  }
-
-  &:before {
-    display: none;
-  }
-}
-
-/*==========  recommended LIST  ==========*/
-
-.recommended-list {
-  padding: 0;
-
-  & .recommended-list__item {
-
-    @include small-only {
-      margin: 0 5%;
-    }
-
-    @include medium {
-      @include flexbox;
-    }
-
-    margin-top: $lineHeight;
-    padding-left: 0;
-
-    & .recommanded-list__content {
-
-      background: #ffffff;
-      padding: ($lineHeight + $lineHeight/2) 32px;
-
-      @include small-only {
-        border-top: $lineHeight solid $colorGrayBackground;
-        margin-bottom: -26px;
-
-        &:first-child {
-          border: none;
-          margin-bottom: 0;
-        }
-      }
-
-      @include medium {
-        @include flexbox;
-        flex-direction: column;
-        -webkit-flex-direction: column;
-      }
-
-      &>h4 {
-        padding-top: 0;
-        font-family: $fontHighlight;
-      }
-
-      & p {
-        padding-bottom: $lineHeight;
-      }
-
-      & .cta--primary {
-        margin-top: auto;
-      }
-
-    }
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    & .icon-circle {
-      display: none;
-
-      @include medium {
-        display: inline-block;
-        padding: 13px;
-        vertical-align: top;
-        margin: 0;
-      }
-    }
-
-    & .icon {
-      font-size: $fontBase;
     }
   }
 }

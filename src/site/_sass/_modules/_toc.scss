@@ -2,12 +2,6 @@
 *
 * Table of contents
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .toc__title {
@@ -18,7 +12,7 @@
   border-bottom: 1px solid $colorGrayKeyline;
 
   @include medium {
-    padding-bottom: ($lineHeight/2) - 1;
+    padding-bottom: $lineHeight/2;
     margin-bottom: $lineHeight/2;
   }
 }
@@ -28,7 +22,7 @@
 
   border-bottom: 1px solid $colorGrayKeyline;
   padding-bottom: ($lineHeight/2) - 1;
-  margin-bottom: - $lineHeight/2;
+  margin-bottom: $lineHeight/2;
 
   a {
     display: block;

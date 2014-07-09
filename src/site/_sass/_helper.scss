@@ -2,22 +2,16 @@
 *
 * Helper
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 
 .clear {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content:"";
     display:table;
   }
-  &:after {
+  &::after {
     clear:both;
   }
 }
@@ -37,7 +31,6 @@
 .color--gray-background { color: $colorGrayBackground; }
 .color--gray-keyline { color: $colorGrayKeyline; }
 .color--gray { color: $colorGray; }
-.color--gray-medium { color: $colorGrayMedium; }
 .color--gray-dark { color: $colorGrayDark; }
 
 .color--text { color: $colorText; }
@@ -50,12 +43,9 @@
 .color--learning { color: $colorLearning; }
 
 .color--layouts { color: $colorLayouts; }
-.color--device { color: $colorDevice; }
-.color--tools { color: $colorTools; }
 .color--user { color: $colorUser; }
 .color--media { color: $colorMedia; }
 .color--performance { color: $colorPerformance; }
-.color--tools-secondary { color: $colorToolsSecondary; }
 .color--layouts-secondary { color: $colorLayoutsSecondary; }
 .color--user-secondary { color: $colorUserSecondary; }
 .color--media-secondary { color: $colorMediaSecondary; }
@@ -64,108 +54,51 @@
 
 
 /*==========  TEXT DIVIDER  ==========*/
-.divider {
-  width: 80%;
-  margin: $lineHeight auto;
-  margin-top: $lineHeight;
-  margin-bottom: $lineHeight - 1;
-  border: 0;
-  height: 1px;
-  color: $colorGrayKeyline;
-  background-color: $colorGrayKeyline;
 
-  @include medium {
-    width: 40%;
-  }
+.text-divider {
+  position: relative;
+  margin-bottom: $lineHeight;
 
-  &.divider--short {
-    width: 70%;
-
-    @include medium {
-      width: 25%;
-    }
-
-  }
-
-  &.divider--fluid {
-
-    @include medium {
-      width: 100%;
-    }
-
-  }
-
-  &.divider--spaced {
-
-    @include medium {
-      margin-top: $lineHeight*2;
-      margin-bottom: $lineHeight*2 - 1;
-    }
-
-  }
-
-  & span {
-    background: #ffffff;
-    position: relative;
-    margin: 0 auto;
+  &::after {
+    content: "";
     display: block;
-    width: 35px;
+    position: absolute;
+    width: 40%;
     height: 1px;
+    box-shadow: 0 1px 0 0 $colorGrayKeyline;
+    left: 30%;
+    bottom: -$lineHeight/2;
+  }
 
-    &:before,
-    &:after {
-      position: absolute;
-      font-family: $fontIcon;
-      top: -12px;
-      color: $colorBlue;
-    }
+  &.xlarge {
+    margin-bottom: $lineHeight*2;
 
-    &:before {
-      content: $icon-chevron-left;
-      left: 8px;
-    }
-
-    &:after {
-      color: $colorBlueSecondary;
-      content: $icon-chevron-right;
-      right: 6px;
+    &::after {
+      bottom: -($lineHeight*2)/2;
     }
   }
 
-  & .divider-icon--secondary {
-    width: 23px;
+  &.xxlarge {
+    margin-bottom: $lineHeight*3;
 
-    &:before {
-      content: "*";
-      font-family: $fontHighlight;
-      font-size: $fontXLarge;
-      font-weight: 700;
-      color: $colorGrayKeyline;
-      top: -9px;
-      left: 3px;
+    &::after {
+      bottom: -($lineHeight*3)/2;
     }
-
-    &:after {
-      display: none;
-    }
-
   }
 
-}
+  &.huge {
+    margin-bottom: $lineHeight*3;
 
-.divider--secondary {
-  & span {
-    background-color: $colorGrayBackground;
+    &::after {
+      bottom: -($lineHeight*3)/2;
+    }
   }
 }
+
 
 /*==========  GENERIC  ==========*/
 .centered {
   text-align: center;
-}
-
-.text-highlight {
-  font-family: $fontHighlight;
 }
 
 
@@ -182,33 +115,8 @@
     color: $colorGrayDark;
   }
 
-  &:before {
+  &::before {
     content: "# ";
     display: inline-block;
-  }
-}
-
-/*==========  INDENTED CONTENT  ==========*/
-
-.indented {
-  padding-left: 32px;
-
-  & ul,
-  & ol,
-  & dl {
-    padding-left: 0;
-  }
-}
-
-.indented-medium {
-
-  @include medium {
-    padding-left: 32px;
-
-    & ul,
-    & ol,
-    & dl {
-      padding-left: 0;
-    }
   }
 }

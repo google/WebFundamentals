@@ -2,27 +2,16 @@
 *
 * Editorial Header
 *
-* Google Web Fundamentals
-*
-* R/GA 2014
-* @author Pedro Duarte
-* @author Antoine Grelard
-*
 **/
 
 .featured-spotlight {
   background: $colorGrayDark;
   color: #ffffff;
   overflow: hidden;
+  padding-bottom: $lineHeight*3 - 1;
   margin-top: $lineHeight*2;
 
-  & h3 {
-    @include color-inherit;
-    word-break: break-word;
-    word-wrap: break-word;
-  }
-
-  & p {
+  p {
     padding-bottom: $lineHeight;
   }
 
@@ -30,27 +19,18 @@
     color: #ffffff;
 
     &:hover {
-      color: $colorGrayMedium;
+      color: #ffffff;
     }
   }
 }
 
 .featured-spotlight__container {
   position: relative;
-
-  & div+div {
-    padding-bottom: $lineHeight*2;
-  }
-}
-
-.featured-spotlight__title {
-  @include type--xxlarge;
-  @include color-inherit;
 }
 
 .featured-spotlight__img {
   @include small-only {
-    padding-top: 43.4%;
+    padding-top: 58.4%;
     padding-bottom: 0;
     height: 0;
     overflow: hidden;
@@ -71,7 +51,6 @@
     @include medium {
       width: auto;
       max-width: none;
-      height: 100%;
       left: 100% + $mediumGutterWidth*2;
     }
 
