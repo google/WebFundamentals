@@ -3,7 +3,7 @@ toc:
   path: /
   home: true
 - title: "Get Started"
-  path: /getting-started/your-first-multi-screen-site/
+  path: /getting-started/
 - title: "Documentation"
   path: /#documentation
   hasSubNav: true
