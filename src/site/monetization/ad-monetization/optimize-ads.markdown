@@ -28,8 +28,61 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## TBD
+## Optimize ad formatting
+
+TBD.
+
+### Choose a wide ad format
+
+TBD.
+
+### Opt in to text and display ads
+
+TBD.
+
+### Match your site's colors
+
+TBD.
+
+## Optimize ad placement
+
+TBD.
+
+## Check your optimization scores
+
+TBD.
+
+### Multi-screen support
+
+TBD.
+
+### Site health
+
+TBD.
+
+### Revenue optimization
+
+TBD.
+
+## Monitor ad performance
+
+TBD.
+
+### Summary of performance reports
+
+TBD.
+
+### See which ads are targeted to your site
 
 TBD. 
+
+### Run experiments
+
+TBD.
+
+## Tips to increase traffic to your site
+
+TBD. Essentially if your site gets more traffic, more ads will be clicked.
+Summarize from support topic: https://support.google.com/adsense/answer/1348732?hl=en
 
 {% endwrap %}
