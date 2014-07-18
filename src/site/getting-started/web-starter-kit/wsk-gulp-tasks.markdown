@@ -2,7 +2,12 @@
 layout: article
 title: "A Look at the Gulp Tasks"
 description: ""
-introduction: ""
+introduction: "When using Web Starter Kit there are 3 particular commands that
+you'll use on a regular basis, one simply helps with starting a server but has
+some extremely helpful tools to help with development, the second command builds
+a production version of the site, ready for you to deploy and the third command
+let's you quickly check the production version of your site by creating a server
+using only the production assets."
 notes:
 article:
   written_on: 2014-04-17
@@ -20,11 +25,58 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## Whats the Build Doing?
+## What Does WSK Do to Help with Development?
 
-When you're up and running with Web Starter Kit you can quickly build a production
-ready version of your site with the simple `gulp` command. There is a lot
-going on behind the scenes, so let's take a quick look and what is happening.
+Where the build process helps you look after the housekeeping of your project,
+Web Starter Kit has some added goodies which help you improve your development
+workflow.
+
+Well by running your site with the `gulp serve` command, you get the following
+out of the box.
+
+### First up is Live Reload.
+
+If you've built web pages before and not used Live Reload, then chances are you've
+gone through the pain of making changes and finding your browser
+window, hitting Ctrl+r to refresh the page and check your changes.
+
+Live Reload simply removes the manual refresh step, you can make changes in your
+editor and see them take affect immediately in a browser window.
+
+<!-- TODO:  Insert Image of Editing Code and Live Reload Occuring -->
+
+### Testing Across All the Things
+
+Live Reload is great for quick checking of changes, but what about testing across
+multiple browsers or devices and wanting to check a change at the bottom of the
+page?
+
+That's where Browser Sync can help.
+
+Any scrolls, taps or keyboard presses will be shared across any connected browser.
+
+<!-- TODO:  Insert Image of Scrolling and Tapping -->
+
+Combine the two of these and we have a very powerful developer environment.
+
+<!-- TODO: Insert Image of Changing styles visible, scroll to footer, change styles -->
+
+### Autoprefixing for Your Convenience
+
+### Check Your Javascript
+
+
+
+
+## Development Server? Check. What About the Production Build?
+
+You can quickly build a production ready version of your site with the simple
+`gulp` command. There is a lot going on behind the scenes when you run this,
+so let's take a quick look and what is happening.
+
+The production build will do many of the same things the server does,
+autoprefixing and JSHinting for example, but also does a plethora of other
+tasks, all aimed to give you an efficient and fast site.
 
 The main tasks Web Starter Kit does for a build is as follows:
 
@@ -32,7 +84,7 @@ The main tasks Web Starter Kit does for a build is as follows:
 
     First the build will build the Sass in your project as well as build the Sass
     in the styleguide. After the Sass has been compiled to CSS, the build
-    uses an autoprefixer over everything.
+    uses the autoprefixer over everything.
 
 2. Check your Javascript for Problems
 
@@ -96,45 +148,16 @@ The main tasks Web Starter Kit does for a build is as follows:
 
 That's a lot to cram in to one little, albeit powerful command.
 
-## Building? Check. What About Development?
-
-Where the build process helps you look after the housekeeping of your project,
-Web Starter Kit has some added goodies which help you improve your development
-workflow.
-
-Well by running your site with the `gulp serve` command, you get the following
-out of the box.
-
-### First up is Live Reload.
-
-If you've built web pages before and not used Live Reload, then chances are you've
-gone through the pain of making changes and finding your browser
-window, hitting Ctrl+r to refresh the page and check your changes.
-
-Live Reload simply removes the manual refresh step, you can make changes in your
-editor and see them take affect immediately in a browser window.
-
-<!-- TODO:  Insert Image of Editing Code and Live Reload Occuring -->
-
-### Testing Across All the Things
-
-Live Reload is great for quick checking of changes, but what about testing across
-multiple browsers or devices and wanting to check a change at the bottom of the
-page?
-
-That's where Browser Sync can help.
-
-Any scrolls, taps or keyboard presses will be shared across any connected browser.
-
-<!-- TODO:  Insert Image of Scrolling and Tapping -->
-
-Combine the two of these and we have a very powerful developer environment.
-
-<!-- TODO:  Changing and scrolling -->
-
 ## Serving Production
 
-## Building Production
+From time to time you'll want to check that the production build
+of your site is working as expected and this is where `gulp serve:dist` can help.
+It'll build a production version of your site, start a server for it and open
+it in your browser.
+
+This doesn't come with things like the Live Reloading or Browser Sync features
+of the normal server, but it's a realible way of testing your site before
+deploying it.
 
 {% include modules/nextarticle.liquid %}
 
