@@ -28,7 +28,35 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## TBD
+## Available ads platforms
+
+TBD.
+
+### Adsense platform
+
+TBD.
+
+### Double-click for Publishers platform
+
+TBD.
+
+### Double-click Exchange platform
+
+TBD.
+
+## How ads look
+
+TBD.
+
+### Ads style and content
+
+TBD.
+
+### Ads placement
+
+TBD.
+
+## How ads targeting works
 
 TBD. 
 
