@@ -28,8 +28,24 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## TBD
+## Submit your application
 
-TBD. 
+TBD. Include prerequisites here.  
+
+## Create ad units
+
+TBD. Cover formatting here.
+
+## Include ad units in your site
+
+TBD. Cover placement and related policy here.
+
+## Grant crawlers access
+
+TBD.
+
+## Configure payment settings
+
+TBD.
 
 {% endwrap %}
