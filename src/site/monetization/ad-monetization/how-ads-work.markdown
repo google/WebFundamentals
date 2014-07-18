@@ -28,19 +28,19 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## Available ads platforms
+## Available platforms
 
 TBD.
 
-### Adsense platform
+### Adsense
 
 TBD.
 
-### Double-click for Publishers platform
+### Double-click for Publishers
 
 TBD.
 
-### Double-click Exchange platform
+### Double-click Exchange
 
 TBD.
 
