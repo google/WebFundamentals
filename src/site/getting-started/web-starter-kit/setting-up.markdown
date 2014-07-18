@@ -27,9 +27,46 @@ key-takeaways:
 
 ### NodeJS
 
+Check if you already have Node installed. Bring up a terminal and type `node
+-v`. If Node responds, and if it shows a version at or above v0.10.x, proceed
+to checking if you have Ruby installed too. If you require Node, go to
+[NodeJS.org](http://nodejs.org/) and click on the big green Install button.
+
 ### Ruby &amp; Sass
 
+Bring up a terminal and type `ruby -v`. If Ruby responds, and if it shows a
+version number at or above 1.8.7, then type `gem --version`. If you don't see
+any errors, proceed to installing the Sass gem. If you require Ruby, it can be
+installed from the [Ruby downloads](https://www.ruby-lang.org/en/downloads/)
+page.
+
+Bring up a terminal and type `sass -v`.
+If Sass is installed, it should return a version number at or above 3.3.x.
+If you don't see any errors, proceed to the Gulp installation.
+If you need to install Sass, see the command-line instructions on the
+[Sass installation](http://sass-lang.com/install) page.
+
 ### NPM Dependencies
+
+Bring up a terminal and type `gulp -v`.
+If Gulp is installed it should return a version number at or above 3.5.x.
+If you don't see any errors, proceed to the Gulp commands section.
+If you need to install Gulp, open up a terminal and type in the following:
+
+`$ sudo npm install --global gulp`
+
+This will install Gulp globally.
+Next, install the local dependencies Web Starter Kit requires:
+
+`$ cd web-starter-kit`
+`$ npm install`
+
+That's it!
+You should now have everything needed to use the Gulp tools in Web Starter Kit.
+
+## Launch Web Starter Kit's Server
+
+    $ gulp serve
 
 {% include modules/nextarticle.liquid %}
 

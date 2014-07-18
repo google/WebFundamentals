@@ -22,6 +22,12 @@ key-takeaways:
 
 ## HTTP Server with Perks
 
+When you're up and running with Web Starter Kit you can quickly start viewing
+what your site is looking like with the command `gulp serve`. There is a lot
+going on behind the scenes so let's take a quick look and what is happening.
+
+### Building Your Site
+
 ### Live Reload
 
 ### Browser Sync
