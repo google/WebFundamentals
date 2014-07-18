@@ -1,7 +1,9 @@
 ---
 layout: article
 title: "A Look at the Gulp Tasks"
-description: ""
+description: "The Web Starter Kit gives you a lot of stuff out of the box and
+it might seem slightly overwhelming, but breaking down the most common tasks
+and what each one does will quickly demystify the magic of this kit."
 introduction: "When using Web Starter Kit there are 3 particular commands that
 you'll use on a regular basis, one simply helps with starting a server but has
 some extremely helpful tools to help with development, the second command builds
