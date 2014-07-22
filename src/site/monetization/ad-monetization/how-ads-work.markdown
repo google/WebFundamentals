@@ -32,12 +32,7 @@ key-takeaways:
 ## Available platforms
 
 <a href="https://support.google.com/adsense/answer/9712?hl=en&ref_topic=1319753&rd=1">Google AdSense<a/> is a free product available to all websites.
-The Double-click platform is an ad management platform for large sites with adversiting teams.
-
-You need to <a href="rms/publishergeneral/#utm_medium=et&utm_campaign=en&utm_source=ww-ww-et-nelson_doubleclick">contact DoubleClick's Solutions for Publishers</a>
-to get started with DoubleClick for Publishers (DFP).
-DoubleClick Ad Exchange is an invite only product
-that provides publishers detailed and finely-tuned controls for advertising savvy organizations.
+The Double-click platform is an ad management platform for large sites with advertising teams.
 
 ### Adsense
 
@@ -54,29 +49,33 @@ When you use responsive ad units,
 the AdSense crawler is intelligent enough to detect which device
 a user is on and adjust an ad to fit that device accordingly.
 
+### Double-click
 
-### Double-click for Publishers
+The Double-click platform helps publishers sell, schedule, deliver,
+and measure all of their ad inventory.
+There's two tiers to the platform: Double-click for Publishers (DFP)
+and DoubleClick Ad Exchange.
 
-help
-publishers sell, schedule, deliver, and measure all of their ad inventory,
-
-DFP allows publishers who have direct relationships with advertisers
-to reserve their inventory but also the flexibility to integrate
+Double-click for Publishers (DFP) allows publishers who have direct relationships
+with advertisers to reserve their inventory but also the flexibility to integrate
 with other auction-based services (like AdSense or Ad Exchange).
+<a href="rms/publishergeneral/#utm_medium=et&utm_campaign=en&utm_source=ww-ww-et-nelson_doubleclick">Contact DoubleClick's Solutions for Publishers</a>
+to get started with DoubleClick for Publishers (DFP).
 
-DoubleClick for Publishers offers a Google Publisher Tag (GPT) API
-which is an ad tagging library for DFP that can dynamically build ad requests.
+DoubleClick Ad Exchange is an invite only product
+that provides publishers detailed and finely-tuned controls for advertising savvy organizations.
+
+With DFP,
+you can create responsive ad units using the
+<a href="https://developers.google.com/doubleclick-gpt/reference?rd=1">Google Publisher Tag (GPT) API</a>,
+an ad tagging library for DFP that can dynamically build ad requests.
 GPT takes key details such as ad unit name, ad size, and custom targeting,
 builds the request, and displays the ad on web pages.
 This API can be used to setup
 <a href="https://support.google.com/dfp_premium/answer/3423562?hl=en">responsive ad units</a>
 to be served on a responsive site.
 
-### Double-click Ad Exchange
-
-
-
-DoubleClick Ad Exchange currently doesn’t offer a responsive ad tag but we encourage developers to integrate with DoubleClick for Publishers and then run Ad Exchange through the GPT API
+DoubleClick Ad Exchange currently doesn’t offer a responsive ad tag but we encourage developers to integrate with DoubleClick for Publishers and then run Ad Exchange through the GPT API.
 
 ## How ads look
 
