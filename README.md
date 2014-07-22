@@ -5,15 +5,16 @@ Web Fundamentals is a technical documentation center for multi-device web
 development.  Our goal is to build a resource for modern web developers 
 that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
-Links: [Live site](https://developers.google.com/web/fundamentals/) | 
-[Planned content](https://docs.google.com/a/chromium.org/document/d/1X2bbv7_ZQcHLXP_v4jtJ34NkUdBE2Yjr-LgxW596GQc/edit)
+
+Content plan
+------------
+Content plan for Web Fundamentals is tracked through GitHub Issues and our [Site Structure + Content Inventory](http://goo.gl/nWDD0M) doc
 
 
 Release status
 --------------
 
-The project was initiated in late March and soft launched to the public on 
-April 30th.  We're planning for a more polished 1.0 release in June.
+The project was soft launched in late April with a formal v1 launch in June 2014.  We've now moved to a six-week rolling release cycle.
 
 Technology
 ----------
