@@ -6,7 +6,7 @@ introduction: "TBD."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
-  order: 3
+  order: 4
 id: optimize-ads
 collection: ad-monetization
 key-takeaways:
@@ -27,26 +27,6 @@ key-takeaways:
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
-
-## Optimize ad formatting
-
-TBD.
-
-### Choose a wide ad format
-
-TBD.
-
-### Opt in to text and display ads
-
-TBD.
-
-### Match your site's colors
-
-TBD.
-
-## Optimize ad placement
-
-TBD.
 
 ## Check your optimization scores
 

@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "How Ads Work"
-description: "Learn how ads work. At a glance, you make ad spaces available on your site. Adversiters bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
-introduction: "Learn how ads work. At a glance, you make ad spaces available on your site. Adversiters bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
+description: "Learn how ads work. At a glance, you make ad spaces available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
+introduction: "Learn how ads work. At a glance, you make ad spaces available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads. Read on to dive deeper into how ads work."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
@@ -11,23 +11,21 @@ id: how-ads-work
 collection: ad-monetization
 key-takeaways:
   tldr: 
-    - Choose the ads platform best for your site; the Adsense platform is free and available to all websites; the DoubleClick platform suit large sites with adversiting teams.
-    - The best ads improve user experience; format ads so they don't look out of place on your site; resize ads in response to the user's device.
-    - Ads should be placed where users can choose to see them; never place ads where they might interfere with a user's intended experience on your site.
+    - Choose the ads platform best for your site; the Adsense platform is free and available to all websites; the DoubleClick platform suit large sites with adversiting teams. 
+    - The best ads look at home on your site; their color, content, size, and location enhance user experience. 
     - Users click on ads that are relevant to the content they are looking for; understand how ads targeting works so that you can maximize your revenue.
+notes:
+  placement:
+    - Advertisers choose sites that displays ads where the advertisers want them to appear, and in the size that best compliments their ads designs.
+  targeting:
+    - Ads are targeted based on overall site content, not keywords or categories. If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
 ---
 
 {% wrap content %}
 
-Read on to dive deeper into the fundamentals of ads monetization.
-If you want to get started including ads in your site,
-jump to 
-[Include Ads in Your Site]({{site.baseurl}}/monetization/ad-monetization/include_ads.html).
-And if you want to learn everything there is to know about ads,
-the help centers for the ads platforms,
-<a href="https://support.google.com/adsense/answer/181947?hl=en">Google AdSense</a> and
-<a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a>
-include getting starting guides and much more.
+This guide covers the basics of how ads work.
+Learn everything there is to know about ads
+in the <a href="https://support.google.com/adsense/answer/181947?hl=en">Google AdSense</a> and <a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a> help centers.
 
 <style type="text/css">
   img.center {
@@ -100,95 +98,76 @@ Though Ad Exchange currently doesn’t offer a responsive ad tag,
 developers can integrate with DoubleClick for Publishers and
 then run Ad Exchange through the GPT API.
 
-## Ad formatting
+## How ads look
 
-The best ads improve user experience.
-While the actual ad content comes from advertisers,
-you have control over the content type, color, and size of those ads.
-Ad formatting best practices are described in detail in
-[Optimize ad formatting]({{site.baseurl}}/monetization/ad-monetization/optimize_ads.html#optimize-ad-formatting).
-Here's a quick summary of ad formatting options.
+The main characteristics that define how ads look are content style, ad size,
+and ad placement.
+Here's a live version of the web starter kit, mobile and desktop view,
+with ads included:
 
-### Supported content types
+TODO: Add side-by-side images of wsk ad sample for desktop and mobile
 
-To maximize the advertisers bidding for ad space,
-we recommend allowing
-[text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
-and [display ads](https://support.google.com/adsense/answer/185666?hl=en&ref_topic=29561)
-for each ad unit.
+The first thing to notice is type of content displayed in the ads.
+Both ads show text-only ads; however, one of the ads uses color
+to highlight the ads link.
 
-Sample text ad for mobile:
+Also notice that the content in both ads is related to the web starter kit.
+*** Todo *** need to explain this relationship based on the ad that gets displayed
+and I manage to capture in the image.
 
-<img src="images/mobiletext_withoutcolor.png" class="center" alt="Sample mobile text ad">
+In addition to text-only ads,
+many advertisers include images in their ads.
+Make sure to support text and display ads in your site
+so that you are attracting a wider range of advertisers.
 
-Sample display ad for mobile:
+The next characteristic is size.
+The ad units in this sample are responsive.
+The ads code automatically resizes the ads
+to match the desktop and mobile views.
 
-<img src="images/mobileimage.png" class="center" alt="Sample mobile image ad">
+The third characteristic, ads placement, determines where the ads
+live in your website.
+The web starter kit sample includes an ad at the top of the page
+and an ad at the bottom.
+Since these ads are responsive,
+the ads code automatically knows to size the top ad as a banner,
+so that the ad is still visible to the user without getting in the way,
+without pushing the site's content beyond the fold.
 
-### Ad styles
+Find out how to customize the look of ads on your side in
+[Customize Your Ads]({{site.baseurl}}/monetization/ad-monetization/customize_ads.html).
 
-With Google Adsense,
-you can create combinations of colors and fonts that compliment your site.
-either using
-<a href="https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>
-or by create your own combinations of colors and fonts
-and applying these custom styles to ad units.
+{% include modules/remember.liquid title="Important" list=page.notes.placement %}
 
-For example, add color to ad links so that users can better see the website
-they will go to when they click on the ad:
+## How ads are targeted
 
-<img src="images/mobiletext_withcolor.png" class="center" alt="Sample mobile text ad with links in color">
+Google AdSense automatically targets ads most relevant to the content user's are looking for when they go to your site using the following markers:
 
-### Ad sizes
+* Content and language: users will see ads that match your site's content and language.
+* Placement: adversiters can target sites that have ad units placed where they want their ads to appear, and matched to the size they want their ads to be displayed in on targeted devices.
+* User's interest: your website and adversiters can target specific user groups, for example, sports enthusiasts.
 
-The simplest and most effective way to size your ads so that they respond
-to a user's device is to
-[create responsive ad units]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
+{% include modules/remember.liquid title="Important" list=page.notes.targeting %}
 
-To make your code simpler and save you time and effort,
-the responsive ad code automatically adapts the ad unit size to your page layout.
-The code calculates the required size dynamically based on the width of the ad unit’s parent container,
-then determines what's the best standard height to go with that width.
+## How the ad auction works
 
-For example,
-if you have a <div> with a width of 30% and you place responsive ad code within the <div>,
-then depending on the width of the user's screen, the ad is automatically sized differently.
-If your page is viewed on a tablet with a width of 1024px,
-the code serves a 307x250 ad, and if it's viewed on a 21" desktop PC with a 1680px width,
-the code serves a 504x60 ad.
+The ad auction determines which ads will appear on your pages
+and how much you'll earn from those ads.
+Google places relevant
+[cost-per-click (CPC)](https://support.google.com/adsense/answer/32725)
+and [cost-per-thousand-impressions (CPM)](https://support.google.com/adsense/answer/18196).
+ads in the same auction and lets them compete against one another.
+The auction takes place instantaneously and when it's over our system automatically picks the advertisers who are willing to pay the most.
 
-TODO: Insert image here that shows the above example using web starter kit.
+Certain ad sizes have more auction pressure than others
+When advertisers build advertisements,
+they typically make them common sizes (i.e. 300px by 250px).
+As it relates to your site, the more popular a size is with advertisers,
+the greater the competition will be for ad inventory/placements on your site.
+The higher the competition, or ‘auction pressure’,
+the more the advertiser will pay to be viewed and clicked on your site.
 
-If the smart sizing isn't exactly what you want in your site,
-you can change the ad unit code to specify sizing.
-For example, 
-you may want a vertical ad on desktop
-to be horizontal on mobile
-(see [Advanced features in this help topic](https://support.google.com/adsense/answer/3543893?hl=en&ref_topic=3641113)).
-
-To choose the ad sizes best for your content,
-see the
-<a href="https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421">Google AdSense guide to ad sizes</a>.
-
-## Ad placement
-
-When it comes to deciding where to place ads on your site,
-and how many ads to include,
-always put the user first:
-
-* Use ads to augment site content; not the other way around.
-* Always follow the [Google AdSense program policies](https://support.google.com/adsense/answer/48182?hl=en()). Pages with excessive ads, ads that push the content down below the fold, ads clustered together that dominate the viewable space or ads without clear labeling against ad policies.
-* Avoid adding too many units which distract users from content.
-* Ensure ads provide value to users.  If you have ad units that generate significantly less revenue or drive less clicks or views, it’s likely they are not providing value to users.
-* Maintain a balance between ads and content. Avoid adding too many units which distract users from content.
-
-Here are some placement options for mobile ads (see also [sample code for ads placement]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#include-ad-units-in-your-site)):
-
-<img src="images/mobile_ads_placement.png" class="center" alt="Sample mobile image ad">
-
-## Ad targeting
-
-Users click on ads that are relevant to the content they are looking for;
-understand how ads targeting works so that you can maximize your revenue.
+The Google Adsense help center explains how the ad auction works in detail
+using a simple example (see [Google AdSense program policies](https://support.google.com/adsense/answer/160525?hl=en&ref_topic=1628432)).
 
 {% endwrap %}
