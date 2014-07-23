@@ -19,7 +19,7 @@ rel:
 
 {% wrap content%}
 
-<img src="images/finaloutput-2x.jpg">
+<img src="images/finaloutput-2x.jpg" alt="many devices showing the final project">
 
 Building for multiple devices with differing capabilities, vastly different
 screen sizes and interaction methods can seem daunting, if not impossible
