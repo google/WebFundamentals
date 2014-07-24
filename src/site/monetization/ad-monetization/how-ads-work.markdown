@@ -17,6 +17,8 @@ key-takeaways:
 notes:
   placement:
     - Advertisers choose sites that displays ads where the advertisers want them to appear, and in the size that best compliments their ads designs.
+  contenttype:
+    - In addition to text-only ads, many advertisers include images in their ads. Make sure to support text and display ads in your site so that you are attracting a wider range of advertisers. 
   targeting:
     - Ads are targeted based on overall site content, not keywords or categories. If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
 ---
@@ -100,48 +102,45 @@ then run Ad Exchange through the GPT API.
 
 ## How ads look
 
-The main characteristics that define how ads look are content style, ad size,
-and ad placement.
-Here's a live version of the web starter kit, mobile and desktop view,
-with ads included:
+How ads look depends on content style, ad size, and ad placement.
+Websites can include multiple ad each with it's own unique appearance.
+For example, this [website](http://meggin.github.io/)
+is a deployed version of the web starter kit with two ad units:
 
-TODO: Add side-by-side images of wsk ad sample for desktop and mobile
+<img src="images/ads_sample.png" class="center" alt="Sample website with ads on desktop and mobile">
 
-The first thing to notice is type of content displayed in the ads.
-Both ads show text-only ads; however, one of the ads uses color
-to highlight the ads link.
+In this sample,
+ads are placed at the top and bottom of the page.
+Both ad are responsive;
+the ads automatically resize based on a combination
+of where the ads are placed and the user's device.
+It's important that ads are visible,
+but don't detract from the main user experience.
+Responsive ads ensure your website's content
+isn't pushed beyond the fold.
 
-Also notice that the content in both ads is related to the web starter kit.
-*** Todo *** need to explain this relationship based on the ad that gets displayed
-and I manage to capture in the image.
+Learn how to build the web starter kit with ads in
+[Include Ads in Your Site]({{site.baseurl}}/monetization/ad-monetization/include_ads.html)).
 
-In addition to text-only ads,
-many advertisers include images in their ads.
-Make sure to support text and display ads in your site
-so that you are attracting a wider range of advertisers.
+Ads can include text and image content and can match the font styles in your website,
+Some ads highlight links, others do not;
+images can maximize the space, or simply point the user to take action.
+Also notice how ads content can target a user
+(the web starter kit sample tells you a little bit about the user
+taking the screenshot).
+Navigate to the website and refresh the page a few times;
+see how the ads content changes.
 
-The next characteristic is size.
-The ad units in this sample are responsive.
-The ads code automatically resizes the ads
-to match the desktop and mobile views.
+{% include modules/remember.liquid title="Important" list=page.notes.contenttype %}
 
-The third characteristic, ads placement, determines where the ads
-live in your website.
-The web starter kit sample includes an ad at the top of the page
-and an ad at the bottom.
-Since these ads are responsive,
-the ads code automatically knows to size the top ad as a banner,
-so that the ad is still visible to the user without getting in the way,
-without pushing the site's content beyond the fold.
-
-Find out how to customize the look of ads on your side in
+There are many ways to customize how ads look on your site.
+For best practices, see
 [Customize Your Ads]({{site.baseurl}}/monetization/ad-monetization/customize_ads.html).
-
-{% include modules/remember.liquid title="Important" list=page.notes.placement %}
 
 ## How ads are targeted
 
-Google AdSense automatically targets ads most relevant to the content user's are looking for when they go to your site using the following markers:
+Google AdSense automatically targets ads most relevant to the content user's are looking
+for when they go to your site using the following markers:
 
 * Content and language: users will see ads that match your site's content and language.
 * Placement: adversiters can target sites that have ad units placed where they want their ads to appear, and matched to the size they want their ads to be displayed in on targeted devices.
@@ -157,7 +156,8 @@ Google places relevant
 [cost-per-click (CPC)](https://support.google.com/adsense/answer/32725)
 and [cost-per-thousand-impressions (CPM)](https://support.google.com/adsense/answer/18196).
 ads in the same auction and lets them compete against one another.
-The auction takes place instantaneously and when it's over our system automatically picks the advertisers who are willing to pay the most.
+The auction takes place instantaneously and when it's over,
+the system automatically picks the advertisers who are willing to pay the most.
 
 Certain ad sizes have more auction pressure than others
 When advertisers build advertisements,
