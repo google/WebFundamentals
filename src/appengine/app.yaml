@@ -15,6 +15,10 @@ pagespeed:
 
 #default_expiration: "1d"
 handlers:
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
 - url: /web/fundamentals/(.*\.png)
   static_files: build/static/\1
   expiration: 1d
