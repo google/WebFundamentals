@@ -23,40 +23,101 @@ key-takeaways:
 ## Making the Most of the Styleguide
 
 Web Starter Kit comes with a styleguide which is a quick and easy way to view
-all the styles you'll have in your web app.
+all the styles your site can use.
 
-If you start a local server for Web Starter Kit with `gulp serve` and go to
-/styleguide/ you'll see everything you get by default.
+Go and check it out by running `gulp serve` and clicking the styleguide link
 
-<!-- TODO: Explain why the styleguide is useful -->
+The reason we've included a styleguide, is that by thinking of your CSS in
+a generic way and breaking up your styles and classes into components, you
+get a clean structure for your styles and you can how all your components look
+when placed together.
 
 ### Viewing the Styleguide HTML
 
 To see what HTML and class names are needed to add an element to your HTML page
-you can click the 'Toggle Code Snippets' button.
+you can click the 'Toggle Code Snippets' button at the top of the page.
 
-<!-- TODO: Include image of the Toggle Code Snippets Button -->
+![Showing Where on the Web Starter Kit Styleguide the Toggle Code Snippets
+Button Is](images/wsk-code-sample-toggle.jpg)
 
 After which you'll see a code example below each element with example HTML
 that you can copy, paste and alter into your normal pages.
 
-<!-- TODO: Include Example of a code snippet -->
+![Example of the Web Starter Kit Code Snippets](images/wsk-styleguide-code-snippets.jpg)
 
 ## Extending the Styleguide
 
-Whenever you have a new element that you're adding to your site and you think
-it's to appear more than once, then it should be a prime candidate for adding
+Whenever you are creating a new element for your site and it's going to appear
+across your site is various places, then it's be a prime candidate for adding it
 to the Styleguide.
 
 ### The Steps
 
-1. Add the HTML to styleguide.html
+1. Open *app/styleguide/index.html* and just after the last element, add the HTML
+   for your new element.
 
-2. Add a new Sass file in /styleguide/styles/
+   In this example let's add a footer element and swap out the old footer with the
+   back to top link
 
-3. Test out how it looks on localhost:<Port Number>/styleguide/
+2. Inside *app/styles/components/* create a new Sass file with an appropriate
+   name for your component.
 
-4. Use in your page and Profit :)
+   Here we'll create _footer.scss and add some really basic styles to get us
+   started.
+
+       .Footer {
+           background-color: #404040;
+       }
+
+
+   The underscore in the filename *_footer.scss* indicates that the file is
+   designed to be imported, rather than be used to create a separate CSS file
+   and your filename should be the same.
+
+3. Open *app/styles/components.scss* and at the bottom of the file, import your
+   new Sass file like so.
+
+       // New Styles
+       @import "_components/_footer";
+
+4. Test out how it looks on localhost:<Port Number>/styleguide/ and make sure
+   it's working, if it is then add feel free to add some more styles if you
+   want to.
+
+       .Footer {
+         height: 180px;
+
+         color: white;
+         background-color: #404040;
+
+         a {
+           text-decoration: none;
+           color: white;
+         }
+       }
+
+5. Use it in your pages, maybe add a title and link to the element at the top
+   of the page.
+
+       // Footer Link
+       <li class="summary-header__anchors-item"><a href="#footer">Footer</a></li>
+
+       .......
+
+       // Footer Title
+       <div class="container">
+          <a name="footer"></a>
+          <h2 class="subsection-title"><strong class="subsection-number">#21</strong> Footer</h2>
+       </div>
+       <footer class="Footer">
+         <div class="container">
+           <p><a href="#"><i class="icon icon-chevron-up"></i> Back to top</a></p>
+         </div>
+       </footer>
+
+6. done :)
+
+    ![A new footer for the Web Starter Kit styleguide](images/wsk-footer.jpg)
 
 
 {% include modules/nextarticle.liquid %}
