@@ -90,7 +90,9 @@ so be descriptive.
 7. In the <strong>Ad code</strong> box that appears,
 select the <strong>Smart sizing (recommended)</strong> option from the Mode drop-down. This is the recommended mode and doesn’t require you to make any changes to your ad code.
 
-Generated ad code that goes into your site:
+The `data-ad-format=auto` tag in the generated ad code enables
+the smart sizing behavior for the responsive ad unit.
+Past the generated code into your site:
 
 {% highlight html %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

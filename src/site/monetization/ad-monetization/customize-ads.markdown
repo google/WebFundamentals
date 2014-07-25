@@ -10,13 +10,17 @@ article:
 id: customize-ads
 collection: ad-monetization
 key-takeaways:
-  tldr:
-    - Style your ads so they don't look out of place on your site; 
-    - Resize ads in response to the user's device.
-    - Never place ads where they might interfere with a user's intended experience on your site.
+  tldr: 
+    - Use Responsive Ad Units for all inventory.
+    - Look for opportunities to integrate ads throughout the content to avoid ad blindness;
+    - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push content below it.
+    - Maximize revenue by allowing text and display images to compete for your ad space.
+    - Style your ads so they don't look out of place on your site.
 notes:
   targeting:
     - Ads are targeted based on overall site content, not keywords or categories. If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
+  testing:
+    - While smart sizing should automatically display ads in the best size based on the user's device, you should always test your ads on different devices and screens to make sure that the responsive behavior is working correctly.
 ---
 
 {% wrap content %}
@@ -33,6 +37,99 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
+## Size ads in relation to the user's device
+
+The simplest and most effective way to size your ads so that they respond
+to a user's device is to
+[create responsive ad units]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
+
+To make your code simpler and save you time and effort,
+the responsive ad code automatically adapts the ad unit size to your page layout.
+The code calculates the required size dynamically based on the width of the ad unit’s parent container,
+then determines what's the best standard height to go with that width:
+
+*** Todo ***
+
+<table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th data-th="size">Parent container width</th>
+      <th data-th="behavior">Ad size served</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="command">Todo</td>
+      <td data-th="alias">Todo</td>
+    </tr>
+    <tr>
+      <td data-th="command">Todo</td>
+      <td data-th="alias">Todo</td>
+    </tr>
+    <tr>
+      <td data-th="command">Todo</td>
+      <td data-th="alias">Todo</td>
+    </tr>
+  </tbody>
+</table>
+
+{% include modules/remember.liquid title="Important" list=page.notes.testing %}
+
+## What if responsive sizing isn't enough?
+
+If the smart sizing isn't exactly what you want in your site,
+you can switch to advanced mode and override smart sizing
+in your responsive ad unit code
+(see [Advanced features in this help topic](https://support.google.com/adsense/answer/3543893?hl=en&ref_topic=3641113)).
+
+For example,
+you can control the exact sizing of ads using
+[media queries]({{site.baseurl}}/layouts/rwd-fundamentals/use-media-queries.html):
+
+1. Follow the instructions to [create a responsive ad unit]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
+2. In the Ad code box,
+select the <strong>Advanced (code modification required) mode
+from the Mode drop-down.
+3. Modify the ad code to set the exact sizes of your ads based on the user's device:
+
+{% highlight html %}
+<style type="text/css">
+.adslot_1 { width: 320px; height: 50px; }
+@media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
+@media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } }
+</style>
+<ins class="adsbygoogle adslot_1"
+    style="display:inline-block;"
+    data-ad-client="ca-pub-1234"
+    data-ad-slot="5678"></ins>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{% endhighlight %}
+
+If you're considering overriding smart sizing,
+the Google AdSense [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421)
+is a great resource for choosing the best ad sizes.
+
+## Place ads where users benefit the most
+
+When it comes to deciding where to place ads on your site,
+and how many ads to include, always put the user first
+(see also these [best practices for ads placement](https://support.google.com/adsense/answer/1282097?ref_topic=3001646&rd=1):
+
+* Use ads to augment site content; not the other way around.
+* Always follow the [Google AdSense program policies](https://support.google.com/adsense/answer/48182?hl=en()). Pages with excessive ads, ads that push the content down below the fold, ads clustered together that dominate the viewable space or ads without clear labeling are all against ad policies.
+* Avoid adding too many units which distract users from content.
+* Ensure ads provide value to users. If you have ad units that generate significantly less revenue or drive less clicks or views, it’s likely they are not providing value to users.
+* Maintain a balance between ads and content. Avoid adding too many units which distract users from content.
+
+Sample placement options for mobile ads:
+
+<img src="images/mobile_ads_placement.png" class="center" alt="Sample mobile image ad">
+
 ## Allow text and images in your ads
 
 To maximize the advertisers bidding for ad space,
@@ -48,69 +145,19 @@ Sample display ad for mobile:
 
 <img src="images/mobileimage.png" class="center" alt="Sample mobile image ad">
 
-## Style ads to compliment your site
+## Choose ad styles that compliment your
 
-With Google Adsense,
-you can create combinations of colors and fonts that compliment your site.
-either using
-<a href="https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>
-or by create your own combinations of colors and fonts
+Create combinations of ad types, colors, and fonts that compliment your site
+and bring you the best revenue opportunies.
+
+Use <a href="https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>
+or create your own combinations of colors and fonts
 and applying these custom styles to ad units.
 
-For example, add color to ad links so that users can better see the website
-they will go to when they click on the ad:
+Add color to ad links:
 
 <img src="images/mobiletext_withcolor.png" class="center" alt="Sample mobile text ad with links in color">
 
-## Size ads in relation to the user's device
-
-The simplest and most effective way to size your ads so that they respond
-to a user's device is to
-[create responsive ad units]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
-
-To make your code simpler and save you time and effort,
-the responsive ad code automatically adapts the ad unit size to your page layout.
-The code calculates the required size dynamically based on the width of the ad unit’s parent container,
-then determines what's the best standard height to go with that width.
-
-For example,
-if you have a <div> with a width of 30% and you place responsive ad code within the <div>,
-then depending on the width of the user's screen, the ad is automatically sized differently.
-If your page is viewed on a tablet with a width of 1024px,
-the code serves a 307x250 ad, and if it's viewed on a 21" desktop PC with a 1680px width,
-the code serves a 504x60 ad.
-
-TODO: Insert image here that shows the above example using web starter kit.
-
-## What if responsive sizing isn't enough?
-
-If the smart sizing isn't exactly what you want in your site,
-you can change the ad unit code to specify sizing.
-For example, 
-you may want a vertical ad on desktop
-to be horizontal on mobile
-(see [Advanced features in this help topic](https://support.google.com/adsense/answer/3543893?hl=en&ref_topic=3641113)).
-
-To choose the ad sizes best for your content,
-see the
-<a href="https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421">Google AdSense guide to ad sizes</a>.
-
-## Place ads where users benefit the most
-
-When it comes to deciding where to place ads on your site,
-and how many ads to include,
-always put the user first:
-
-* Use ads to augment site content; not the other way around.
-* Always follow the [Google AdSense program policies](https://support.google.com/adsense/answer/48182?hl=en()). Pages with excessive ads, ads that push the content down below the fold, ads clustered together that dominate the viewable space or ads without clear labeling against ad policies.
-* Avoid adding too many units which distract users from content.
-* Ensure ads provide value to users.  If you have ad units that generate significantly less revenue or drive less clicks or views, it’s likely they are not providing value to users.
-* Maintain a balance between ads and content. Avoid adding too many units which distract users from content.
-
-Here are some placement options for mobile ads (see also [sample code for ads placement]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#include-ad-units-in-your-site)):
-
-<img src="images/mobile_ads_placement.png" class="center" alt="Sample mobile image ad">
-
-See also these [best practices for ads placement](https://support.google.com/adsense/answer/1282097?ref_topic=3001646&rd=1).
+Todo: table showing different ad styles, based on predefined ad styles: https://support.google.com/adsense/answer/6002585
 
 {% endwrap %}

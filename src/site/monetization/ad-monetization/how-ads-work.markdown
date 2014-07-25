@@ -100,6 +100,9 @@ then run Ad Exchange through the GPT API.
 
 ## How ads look
 
+Todo: consider including a table here sample ad types
+and sizes, similar to the table in customizing ads.
+
 How ads look depends on content style, ad size, and ad placement.
 Websites can include multiple ad each with it's own unique appearance.
 For example, this [website](http://meggin.github.io/)
