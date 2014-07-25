@@ -1,9 +1,9 @@
 ---
 layout: landing
 title: "Monetization"
-description: "TBD description"
-introduction: "TBD introduction"
-snippet: "TBD snippet"
+description: "Learn how to maximize your revenue on any device. Improve user experience and get paid."
+introduction: "Learn how to maximize your revenue on any device. Improve user experience and get paid."
+snippet: "Maximize your revenue potential on any device."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29

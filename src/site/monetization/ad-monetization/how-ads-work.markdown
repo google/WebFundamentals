@@ -17,10 +17,8 @@ key-takeaways:
 notes:
   placement:
     - Advertisers choose sites that displays ads where the advertisers want them to appear, and in the size that best compliments their ads designs.
-  contenttype:
-    - In addition to text-only ads, many advertisers include images in their ads. Make sure to support text and display ads in your site so that you are attracting a wider range of advertisers. 
   targeting:
-    - Ads are targeted based on overall site content, not keywords or categories. If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
+    - If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
 ---
 
 {% wrap content %}
@@ -105,46 +103,51 @@ then run Ad Exchange through the GPT API.
 How ads look depends on content style, ad size, and ad placement.
 Websites can include multiple ad each with it's own unique appearance.
 For example, this [website](http://meggin.github.io/)
-is a deployed version of the web starter kit with two ad units:
+is a deployed version of the web starter kit with two ad units.
+
+Navigate to the website and refresh the page a few times;
+see how the ads content changes.
+Notice anything familiar about the ads?
+Ads are matched to a website
+using the site's content and the user's online interests
+(more to come on this).
+
+In the web starter kit ads sample,
+ads are placed at the top and bottom of the page
+and both ads are responsive;
+they automatically resize based on a combination
+of where they've been placed on the page and
+on the user's device:
 
 <img src="images/ads_sample.png" class="center" alt="Sample website with ads on desktop and mobile">
 
-In this sample,
-ads are placed at the top and bottom of the page.
-Both ad are responsive;
-the ads automatically resize based on a combination
-of where the ads are placed and the user's device.
 It's important that ads are visible,
 but don't detract from the main user experience.
 Responsive ads ensure your website's content
 isn't pushed beyond the fold.
 
-Learn how to build the web starter kit with ads in
-[Include Ads in Your Site]({{site.baseurl}}/monetization/ad-monetization/include_ads.html)).
+Some ads include text-only; others include images.
+Many advertisers include images in their ads.
+Make sure to support text and display ads in your site so that you are attracting a wider range of advertisers.
 
-Ads can include text and image content and can match the font styles in your website,
-Some ads highlight links, others do not;
-images can maximize the space, or simply point the user to take action.
-Also notice how ads content can target a user
-(the web starter kit sample tells you a little bit about the user
-taking the screenshot).
-Navigate to the website and refresh the page a few times;
-see how the ads content changes.
-
-{% include modules/remember.liquid title="Important" list=page.notes.contenttype %}
-
+Ad styles can match or contrast the color and font styles on a site.
+Some ads highlight links, others include action buttons.
 There are many ways to customize how ads look on your site.
-For best practices, see
-[Customize Your Ads]({{site.baseurl}}/monetization/ad-monetization/customize_ads.html).
+Learn how to
+[include ads in your site]({{site.baseurl}}/monetization/ad-monetization/include_ads.html)
+and how to improve user experience by [customizing how your ads look]({{site.baseurl}}/monetization/ad-monetization/customize_ads.html). 
 
 ## How ads are targeted
 
-Google AdSense automatically targets ads most relevant to the content user's are looking
-for when they go to your site using the following markers:
+Google AdSense automatically targets ads most relevant
+to the content user's are looking for when they go to your site
+using the following markers:
 
 * Content and language: users will see ads that match your site's content and language.
 * Placement: adversiters can target sites that have ad units placed where they want their ads to appear, and matched to the size they want their ads to be displayed in on targeted devices.
 * User's interest: your website and adversiters can target specific user groups, for example, sports enthusiasts.
+
+Ads are targeted based on overall site content, not keywords or categories.
 
 {% include modules/remember.liquid title="Important" list=page.notes.targeting %}
 
