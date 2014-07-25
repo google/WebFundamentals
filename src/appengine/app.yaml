@@ -82,3 +82,4 @@ handlers:
 
 skip_files:
 - ^(.*/)?.*\.psd$
+- ^(.*/)?.*\.pxm$

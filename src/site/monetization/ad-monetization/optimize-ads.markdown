@@ -6,7 +6,7 @@ introduction: "TBD."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
-  order: 3
+  order: 4
 id: optimize-ads
 collection: ad-monetization
 key-takeaways:
@@ -28,8 +28,41 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## TBD
+## Check your optimization scores
+
+TBD.
+
+### Multi-screen support
+
+TBD.
+
+### Site health
+
+TBD.
+
+### Revenue optimization
+
+TBD.
+
+## Monitor ad performance
+
+TBD.
+
+### Summary of performance reports
+
+TBD.
+
+### See which ads are targeted to your site
 
 TBD. 
+
+### Run experiments
+
+TBD.
+
+## Tips to increase traffic to your site
+
+TBD. Essentially if your site gets more traffic, more ads will be clicked.
+Summarize from support topic: https://support.google.com/adsense/answer/1348732?hl=en
 
 {% endwrap %}
