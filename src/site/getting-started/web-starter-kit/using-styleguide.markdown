@@ -115,10 +115,19 @@ to the Styleguide.
          </div>
        </footer>
 
-6. done :)
+6. Done :)
 
     ![A new footer for the Web Starter Kit styleguide](images/wsk-footer.jpg)
 
+Once you've altered the Styleguide, run `gulp` or `gulp serve` and the styleguides
+Sass will be compiled down into CSS for you and included in any page which has
+the components.css file inside it (like the *app/index.html* file).
+
+    <!-- build:css styles/components/main.min.css -->
+    <link rel="stylesheet" href="styles/h5bp.css">
+    <link rel="stylesheet" href="styles/components/components.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 
 {% include modules/nextarticle.liquid %}
 
