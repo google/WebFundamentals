@@ -11,7 +11,7 @@ id: how-ads-work
 collection: ad-monetization
 key-takeaways:
   tldr: 
-    - Choose the ads platform best for your site; the Adsense platform is free and available to all websites; the DoubleClick platform suit large sites with adversiting teams. 
+    - Choose the ads platform best for your site; the Adsense platform is free and available to all websites; the DoubleClick platform suit large sites with advertising teams. 
     - The best ads look at home on your site; their color, content, size, and location enhance user experience. 
     - Users click on ads that are relevant to the content they are looking for; understand how ads targeting works so that you can maximize your revenue.
 notes:
@@ -147,8 +147,8 @@ to the content user's are looking for when they go to your site
 using the following markers:
 
 * Content and language: users will see ads that match your site's content and language.
-* Placement: adversiters can target sites that have ad units placed where they want their ads to appear, and matched to the size they want their ads to be displayed in on targeted devices.
-* User's interest: your website and adversiters can target specific user groups, for example, sports enthusiasts.
+* Placement: advertisers can target sites that have ad units placed where they want their ads to appear, and matched to the size they want their ads to be displayed in on targeted devices.
+* User's interest: your website and advertisers can target specific user groups, for example, sports enthusiasts.
 
 Ads are targeted based on overall site content, not keywords or categories.
 

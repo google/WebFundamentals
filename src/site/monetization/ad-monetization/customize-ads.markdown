@@ -118,7 +118,8 @@ is a great resource for choosing the best ad sizes.
 
 When it comes to deciding where to place ads on your site,
 and how many ads to include, always put the user first
-(see also these [best practices for ads placement](https://support.google.com/adsense/answer/1282097?ref_topic=3001646&rd=1):
+(see also these
+[best practices for ads placement](https://support.google.com/adsense/answer/1282097?ref_topic=3001646&rd=1)):
 
 * Use ads to augment site content; not the other way around.
 * Always follow the [Google AdSense program policies](https://support.google.com/adsense/answer/48182?hl=en()). Pages with excessive ads, ads that push the content down below the fold, ads clustered together that dominate the viewable space or ads without clear labeling are all against ad policies.
@@ -130,22 +131,17 @@ Sample placement options for mobile ads:
 
 <img src="images/mobile_ads_placement.png" class="center" alt="Sample mobile image ad">
 
-## Allow text and images in your ads
+## Maximize bidding potential
 
-To maximize the advertisers bidding for ad space,
-allow [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
+To maximize the advertisers bidding for ad space:
+
+* Allow [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
 and [display ads](https://support.google.com/adsense/answer/185666?hl=en&ref_topic=29561)
 for each ad unit.
+* Todo - include a list item on size options (different sizes attract different ads).
+* Todo - research if there's anthing else.
 
-Sample text ad for mobile:
-
-<img src="images/mobiletext_withoutcolor.png" class="center" alt="Sample mobile text ad">
-
-Sample display ad for mobile:
-
-<img src="images/mobileimage.png" class="center" alt="Sample mobile image ad">
-
-## Choose ad styles that compliment your
+## Choose styles that compliment your site
 
 Create combinations of ad types, colors, and fonts that compliment your site
 and bring you the best revenue opportunies.
@@ -154,10 +150,20 @@ Use <a href="https://support.google.com/adsense/answer/6002585">predefined ad st
 or create your own combinations of colors and fonts
 and applying these custom styles to ad units.
 
+Todo: Create table showing different ad styles, based on predefined ad styles:
+https://support.google.com/adsense/answer/6002585.
+I've moved some samples in earlier draft to here, as they will become part of the table.
+
 Add color to ad links:
 
 <img src="images/mobiletext_withcolor.png" class="center" alt="Sample mobile text ad with links in color">
 
-Todo: table showing different ad styles, based on predefined ad styles: https://support.google.com/adsense/answer/6002585
+Sample text ad for mobile:
+
+<img src="images/mobiletext_withoutcolor.png" class="center" alt="Sample mobile text ad">
+
+Sample display ad for mobile:
+
+<img src="images/mobileimage.png" class="center" alt="Sample mobile image ad">
 
 {% endwrap %}
