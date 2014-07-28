@@ -100,45 +100,66 @@ then run Ad Exchange through the GPT API.
 
 ## How ads look
 
-Todo: consider including a table here sample ad types
-and sizes, similar to the table in customizing ads.
+You've seen ads and know what they look like.
+But you may not yet be aware of how much of an ad's appearance is controlled
+by the advertiser versus how much control you have over how ads look on your site.
 
-How ads look depends on content style, ad size, and ad placement.
-Websites can include multiple ad each with it's own unique appearance.
-For example, this [website](http://meggin.github.io/)
-is a deployed version of the web starter kit with two ad units.
+How ads look depends ad size, ad placement, the type of ad content delivered,
+and how ad content is styled.
+The following table describes the attributes that control an ad's appearance
+(learn more in
+[Customize Your Ads]({{site.baseurl}}/monetization/ad-monetization/customize_ads.html)).
 
-Navigate to the website and refresh the page a few times;
-see how the ads content changes.
-Notice anything familiar about the ads?
-Ads are matched to a website
-using the site's content and the user's online interests
-(more to come on this).
-
-In the web starter kit ads sample,
-ads are placed at the top and bottom of the page
-and both ads are responsive;
-they automatically resize based on a combination
-of where they've been placed on the page and
-on the user's device:
-
-<img src="images/ads_sample.png" class="center" alt="Sample website with ads on desktop and mobile">
-
-It's important that ads are visible,
-but don't detract from the main user experience.
-Responsive ads ensure your website's content
-isn't pushed beyond the fold.
-
-Some ads include text-only; others include images.
-Many advertisers include images in their ads.
-Make sure to support text and display ads in your site so that you are attracting a wider range of advertisers.
-
-Ad styles can match or contrast the color and font styles on a site.
-Some ads highlight links, others include action buttons.
-There are many ways to customize how ads look on your site.
-Learn how to
-[include ads in your site]({{site.baseurl}}/monetization/ad-monetization/include_ads.html)
-and how to improve user experience by [customizing how your ads look]({{site.baseurl}}/monetization/ad-monetization/customize_ads.html). 
+<table class="table-2">
+  <thead>
+    <tr>
+      <th data-th="Attribute">Attribute</th>
+      <th data-th="Example">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Attribute">
+        <strong>Placement:</strong><br> You have full control over where ads are placed on your site. Place ads where they are visible, but don't detract from the main user experience. Here are some common examples of where to place (and size) ads based on how the content is laid out on mobile (see also these <a href="https://support.google.com/adsense/answer/1282097?hl=en&ref_topic=1307438">best practices for ads placement</a>).
+      </td>
+      <td data-th="Example">
+        <img src="images/mobile_ads_placment.png" srcset="images/mobile_ads_placement.png 1x, images/mobile_ads_placement.png 2x">
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Attribute">
+        <strong>Size:</strong><br> You have full control over how ads are sized; however, we recommend using responsive ads. Responsive ads are automatically sized based on the user's device. If smart sizing doesn't match your needs, follow this <a href="https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421">guide to ad sizes</a>.
+      </td>
+      <td data-th="Example">
+        <img src="images/ads_sample.png" srcset="images/ads_sample.png 1x, images/ads_sample.png 2x">
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Attribute">
+        <strong>Content type:</strong><br> Some ads are text-only; many advertisers include images in their ads. Make sure to support text and display ads in your site so that you are attracting a wider range of advertisers.
+      </td>
+      <td data-th="Example">
+        <img src="images/mobileimage.png" srcset="images/mobileimage.png 1x, images/mobileimage.png 2x">
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Attribute">
+        <strong>Content style:</strong><br> You have full control over the color, font, and font-sizing for text ads. Choose styles that match or contrast the styles on your site. For example, you can change the color of URL text so that users see clearly where the link will take them.
+      </td>
+      <td data-th="Example">
+        <img src="images/mobiletext_withcolor.png" srcset="images/mobiletext_withcolor.png 1x, images/mobiletext_withcolor.png 2x">
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Attribute">
+        <strong>Actual content:</strong><br> Advertisers write their own ad content. Ad targeting determines which ads appear based on matching the ad content to your site's content and a user's common browsing behaviors. For example, house-hunting users may see real estate ads. The next section covers ads targeting in detail.
+      </td>
+      <td data-th="Example">
+        <img src="images/ads_desktop.png" srcset="images/ads_desktop.png 1x, images/ads_desktop.png 2x">        
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## How ads are targeted
 
