@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "How Ads Work"
-description: "Learn how ads work. At a glance, you make ad spaces available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
-introduction: "Learn how ads work. At a glance, you make ad spaces available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads. Read on to dive deeper into how ads work."
+description: "At a glance, you make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
+introduction: "At a glance, you make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads. Read on to dive deeper into how ads work."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
@@ -11,21 +11,23 @@ id: how-ads-work
 collection: ad-monetization
 key-takeaways:
   tldr: 
-    - Choose the ads platform best for your site; the Adsense platform is free and available to all websites; the DoubleClick platform suit large sites with advertising teams. 
-    - The best ads look at home on your site; their color, content, size, and location enhance user experience. 
+    - Choose the ads platform best suited to your site. We recommend the AdSense platform for most sites, and the DoubleClick platform for sites with their own advertising teams.
+    - Ads work best when they integrate nicely in your site; their color, content, size, and location enhance user experience. 
     - Users click on ads that are relevant to the content they are looking for; understand how ads targeting works so that you can maximize your revenue.
 notes:
   placement:
-    - Advertisers choose sites that displays ads where the advertisers want them to appear, and in the size that best compliments their ads designs.
+    - Understanding how ad targeting works can help you to maximize your revenue.
   targeting:
     - If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
 ---
 
 {% wrap content %}
 
-This guide covers the basics of how ads work.
-Learn everything there is to know about ads
-in the <a href="https://support.google.com/adsense/answer/181947?hl=en">Google AdSense</a> and <a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a> help centers.
+This guide covers the basics of how ads work,
+but to learn more, refer to the
+<a href="https://support.google.com/adsense/answer/181947?hl=en">Google AdSense</a> and
+<a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a>
+help centers.
 
 <style type="text/css">
   img.center {
@@ -39,16 +41,15 @@ in the <a href="https://support.google.com/adsense/answer/181947?hl=en">Google A
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## Available platforms
+## Choose the best ads platform for your site
 
-Choose the ads platform best for your site.
-Most websites use the
-[Google AdSense platform](https://support.google.com/adsense/answer/9712?hl=en&ref_topic=1319753&rd=1);
-it's free and available to all websites.
-The <a href="http://www.google.com/doubleclick/publishers/solutions/">DoubleClick platform</a>
-is an ad management platform for large sites with advertising teams.
+We recommend the
+[Google AdSense platform](https://support.google.com/adsense/answer/9712?hl=en&ref_topic=1319753&rd=1)
+for most sites; it's free and available to all.
+The [DoubleClick platform](http://www.google.com/doubleclick/publishers/solutions/">DoubleClick platform)
+is best for sites with their own adversiting teams.
 
-### Adsense
+### AdSense
 
 Google Adsense integrates with Google ads, targeting ads specific to your site content.
 The platform also comes with these tools:
@@ -60,15 +61,14 @@ The platform also comes with these tools:
 The simplest way to use Google Adsense is to create
 <a href="https://support.google.com/adsense/answer/3213689?hl=en">responsive ad units</a>.
 When you use responsive ad units,
-the AdSense crawler is intelligent enough to detect which device
-a user is on and adjust an ad to fit that device accordingly.
+the ad code is intelligent enough to determine how big the parent container is
+and dynamically change the ad size that's shown.
 Learn more about how to use responsive ad units in
 [Include Ads in Your Site]({{site.baseurl}}/monetization/ad-monetization/include_ads.html).
 
 ### DoubleClick
 
-The DoubleClick platform helps publishers sell, schedule, deliver,
-and measure all of their ad inventory.
+The DoubleClick platform helps publishers manage their ad inventory.
 There's two tiers to the platform:
 <a href="http://www.google.com/doubleclick/publishers/solutions/ad-serving.html">Double-click for Publishers (DFP)</a>
 and <a href="http://www.google.com/doubleclick/publishers/solutions/yield-management.html">DoubleClick Ad Exchange</a>.
@@ -77,8 +77,11 @@ to get started with DFP or Ad Exchange.
 
 #### DoubleClick for Publishers
 
-DoubleClick for Publishers (DFP) allows publishers who have direct relationships
-with advertisers to reserve their inventory but also the flexibility to integrate
+DoubleClick for Publishers (DFP) is an ad management platform
+that helps publishers sell, schedule, deliver,
+and measure all of their ad inventory.
+It allows publishers who have direct relationships with advertisers
+to reserve their inventory but also the flexibility to integrate
 with other auction-based services (like AdSense or Ad Exchange).
 
 Similar to Google Adsense,
@@ -87,7 +90,11 @@ DFP lets you create responsive ad units using the
 an ad tagging library for DFP that can dynamically build ad requests.
 GPT takes key details such as ad unit name, ad size, and custom targeting,
 builds the request, and displays the ad on web pages.
-See <a href="https://support.google.com/dfp_premium/answer/3423562?hl=en">Double-click's Building responsive ads</a> to learn how to use this API.
+See <a href="https://support.google.com/dfp_premium/answer/3423562?hl=en">Double-click's Building responsive ads</a>
+to learn how to use this API.
+
+If you’re a large site with a dedicated advertising sales team,
+this is the product for you.
 
 #### DoubleClick Ad Exchange
 
@@ -165,7 +172,8 @@ The following table describes the attributes that control an ad's appearance
 
 Google AdSense automatically targets ads most relevant
 to the content user's are looking for when they go to your site
-using the following markers:
+using the following markers
+(see also the [ads targeting help](https://support.google.com/adsense/answer/9713?hl=en&ref_topic=1628432)):
 
 * Content and language: users will see ads that match your site's content and language.
 * Placement: advertisers can target sites that have ad units placed where they want their ads to appear, and matched to the size they want their ads to be displayed in on targeted devices.
@@ -178,23 +186,13 @@ Ads are targeted based on overall site content, not keywords or categories.
 ## How the ad auction works
 
 The ad auction determines which ads will appear on your pages
-and how much you'll earn from those ads.
+and how much you'll earn from those ads
+([see also the ad auction help](https://support.google.com/adsense/answer/160525?hl=en&ref_topic=1628432)).
+
 Google places relevant
 [cost-per-click (CPC)](https://support.google.com/adsense/answer/32725)
-and [cost-per-thousand-impressions (CPM)](https://support.google.com/adsense/answer/18196).
-ads in the same auction and lets them compete against one another.
-The auction takes place instantaneously and when it's over,
-the system automatically picks the advertisers who are willing to pay the most.
-
-Certain ad sizes have more auction pressure than others
-When advertisers build advertisements,
-they typically make them common sizes (i.e. 300px by 250px).
-As it relates to your site, the more popular a size is with advertisers,
-the greater the competition will be for ad inventory/placements on your site.
-The higher the competition, or ‘auction pressure’,
-the more the advertiser will pay to be viewed and clicked on your site.
-
-The Google Adsense help center explains how the ad auction works in detail
-using a simple example (see [Google AdSense program policies](https://support.google.com/adsense/answer/160525?hl=en&ref_topic=1628432)).
+and [cost-per-thousand-impressions (CPM)](https://support.google.com/adsense/answer/18196)
+ads in the same auction, lets them compete against one another, and
+automatically picks the advertisers who are willing to pay the most.
 
 {% endwrap %}

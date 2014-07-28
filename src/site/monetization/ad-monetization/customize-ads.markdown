@@ -133,13 +133,15 @@ Sample placement options for mobile ads:
 
 ## Maximize bidding potential
 
-To maximize the advertisers bidding for ad space:
+The higher the competition, or ‘auction pressure’,
+the more the advertiser will pay to be viewed and clicked on your site.
+Maximize your bidding potential by:
 
-* Allow [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
+* Allowing [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
 and [display ads](https://support.google.com/adsense/answer/185666?hl=en&ref_topic=29561)
 for each ad unit.
-* Todo - include a list item on size options (different sizes attract different ads).
-* Todo - research if there's anthing else.
+* Including more than one ad unit in your site.
+* Using ad sizes that are popular with advertisers (for example, 300px by 250px).
 
 ## Choose styles that compliment your site
 
