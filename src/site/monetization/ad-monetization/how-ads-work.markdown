@@ -39,7 +39,7 @@ There are many ad serving platforms available, and choosing the one that
 is right for you is important. We recommend the
 [Google AdSense platform](http://www.google.com/adsense/start/)
 for most sites; it's free use and available to almost any site. The [DoubleClick platform](https://www.google.com/doubleclick/publishers/)
-is best for sites with their own adversiting teams.
+is best for sites with their own advertising teams.
 
 ### AdSense
 
@@ -75,7 +75,7 @@ Place ads where they are visible, but don't detract from the main user experienc
 
 <img src="images/mobile_ads_placement.png" alt="Common examples of where to place mobile ads">
 
-For example, 320&times;100px ads may be interspursed through list content, articles may
+For example, 320&times;100px ads may be interspersed through list content, articles may
 include a 300&times;250px ads, and long form content may include a combination
 of ads.  Refer to [Best practices for ad placement](https://support.google.com/adsense/answer/1282097?ref_topic=1307438)
 in the AdSense help for further details. 
@@ -116,7 +116,7 @@ and language.
 * **Placement** - advertisers can target sites that have ad units placed 
 where they want their ads to appear, and matched to the size they want their 
 ads to be displayed in on targeted devices.
-* **User's interest** your website and advertisers can target specific user 
+* **User's interest** - your website and advertisers can target specific user 
 groups, for example, sports enthusiasts.
 
 
