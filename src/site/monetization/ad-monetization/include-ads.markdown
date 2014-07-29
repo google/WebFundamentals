@@ -21,7 +21,7 @@ notes:
   body:
     - Paste all ad code within the body tag; otherwise the ads won't work.
   smarttag:
-    - The `data-ad-format=auto` tag in the generated ad code enables the smart sizing behavior for the responsive ad unit.
+    - The data-ad-format=auto tag in the generated ad code enables the smart sizing behavior for the responsive ad unit.
 ---
 
 {% wrap content %}
