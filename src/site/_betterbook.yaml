@@ -38,6 +38,12 @@ toc:
         path: /media/video/
       - title: "Audio"
         path: /media/audio/
+    - title: "Montetization"
+      path: /monetization/
+      id: monetization
+      section:
+      - title: "Ad Monetization"
+        path: /monetization/ad-monetization/
     - title: "Device Access"
       path: /device-access/
       id: device-access
