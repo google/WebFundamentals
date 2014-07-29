@@ -16,8 +16,8 @@ key-takeaways:
     - Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.
     - Verify payment settings and wait for the money to start rolling in.
 notes:
-  multipleunits:
-    - To include more than one ad on a page in your site, create responsive ad units for each ad.
+  crawler:
+    - Make sure you're not blocking the AdSense crawler from accessing your site (see <a href="https://support.google.com/adsense/answer/10532?hl=en">this help topic</a>). 
   body:
     - Paste all ad code within the body tag; otherwise the ads won't work.
   smarttag:
@@ -78,9 +78,9 @@ Use this same site to manage your ads once your application's been approved.
 
 You have three options for sizing your ad units:
 
-* Use a specific ad size recommended by Google AdSense (see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421)).
-* Create a [custom-sized ad unit](https://support.google.com/adsense/answer/3289364?hl=en&ref_topic=3640746).
-* Create a [responsive ad units](https://support.google.com/adsense/answer/3213689?hl=en&ref_topic=3641113).
+* Use specific ad sizes recommended by Google AdSense (see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421)).
+* Create [custom-sized ad units](https://support.google.com/adsense/answer/3289364?hl=en&ref_topic=3640746).
+* Create [responsive ad units](https://support.google.com/adsense/answer/3213689?hl=en&ref_topic=3641113).
 
 You are building a responsive site; use respoonsive ad units.
 Responsive ad units allow you to control the size of the ads on your page,
@@ -96,7 +96,7 @@ use responsive ad units in [advanced mode]({{site.baseurl}}/monetization/ad-mone
 
 To create a responsive ad unit
 (see also [Create an ad unit](https://support.google.com/adsense/answer/6002575?rd=1()) and
-[Create a responsive ad unit](https://support.google.com/adsense/answer/3543893?hl=en&ref_topic=3641113):
+[Create a responsive ad unit](https://support.google.com/adsense/answer/3543893?hl=en&ref_topic=3641113)):
 
 1. Visit the [My ads tab](https://www.google.com/adsense/app#myads-springboard).
 2. Click <strong>+New ad unit</strong>.
@@ -112,18 +112,7 @@ After creating your ad unit,
 AdSense provide a snippet of code to include on your site,
 similar to the code below:
 
-{% highlight html %}
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Top ad in web starter kit sample -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="XX-XXX-XXXXXXXXXXXXXXXX"
-     data-ad-slot="XXXXXXXXXX"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-{% endhighlight %}
+{% include_code _code/ad.html adunit html%}
 
 {% include modules/remember.liquid title="Note" list=page.notes.smarttag %}
 
@@ -131,64 +120,20 @@ similar to the code below:
 
 Paste the snippet provided by AdSense into your markup
 to include the ad unit on your page.
+To include multiple ads,
+either re-use the same ad unit or create multiple ad units.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.body %}
 
-In the Web Starter Kit sample:
+In the Web Starter Kit sample,
+we created two responsive units:
 
 1. Open the `index.html` in the `app` folder.
 2. Include both ad units in the `main` tag:
 
-{% highlight html %}
-<main>
-  <div>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Top ad in web starter kit sample -->
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="XX-XXX-XXXXXXXXXXXXXXXX"
-	     data-ad-slot="XXXXXXXXXX"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-  </div>
-  <h1 id="hello">Hello!</h1>
-  <p>Welcome to Web Starter Kit.</p>
-  <h2 id="get-started">Get Started.</h2>
-  <p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide/index.html">Style Guide</a>.
-  </p>
-  <div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Bottom ad in web starter kit sample -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5163983549070020"
-         data-ad-slot="1901537998"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-</main>
-{% endhighlight %}
+{% include_code _code/index.html main html%}
 
-{% include modules/remember.liquid title="Important" list=page.notes.multipleunits %}
-
-## Give access to the crawler
-
-The Google AdSense crawler must be able index your site's content.
-Make sure your `robot.txt` doesn't exclude `User-agent: Mediaparners-Google`
-(see also [this help topic](https://support.google.com/adsense/answer/10532?hl=en)).
-
-By default, `robot.txt` in the web starter kit allows all crawlers
-access to the site's content:
-
-{% highlight html %}
-# Allow crawling of all content
-User-agent: *
-Disallow:
-{% endhighlight %}
+{% include modules/remember.liquid title="Important" list=page.notes.crawler %}
 
 ## Configure payment settings
 
