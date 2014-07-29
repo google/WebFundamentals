@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Include AdSense Ads on Your Site"
-description: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense application, create ad units and place them in your site, and get paid."
-introduction: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense application, create ad units and place them in your site, and get paid."
+description: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
+introduction: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
@@ -11,7 +11,7 @@ id: include-ads
 collection: ad-monetization
 key-takeaways:
   tldr: 
-    - To submit a Google AdSense application, you must be 18, have a Google Account, and address. If you don't already have one, create an AdSense account.
+    - To create an AdSense account, you must be 18, have a Google Account, and address.
     - Your website must be live before submitting an application, and the website content must comply with Adsense policies.
     - Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.
     - Verify payment settings and wait for the money to start rolling in.
@@ -37,7 +37,7 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## Build this sample app with ads
+## Build sample page with ads
 
 In this walk-through,
 you'll build a simple page that includes responsive ads
@@ -71,7 +71,7 @@ ads are hosted on this site.
 so you can receive payments.
 
 If you don't already have an account, you can create one at 
-[Google AdSense site](www.google.com/adsense).
+<a href="https://www.google.com/adsense">www.google.com/adsense</a>.
 Use this same site to manage your ads once your application's been approved.
 
 ## Create ad units
@@ -140,10 +140,18 @@ we created two responsive units:
 You must complete all the steps below before you can receive your first payment
 (see also the [Intro to AdSense payments](https://support.google.com/adsense/answer/1709858?hl=en&ref_topic=1727160)):
 
-1. Go to your [payee profile](https://www.google.com/adsense/app#payments3/h=BILLING_PROFILE) and select <strong>Submit tax information</strong>. Follow the guided steps to submit the appropriate tax forms and requirements. 
-2. Confirm the payee name and address. If you need to correct any information, follow [these instructions](https://support.google.com/adsense/answer/2498454?ctx=billing&rd=1).
-3. Select your form of payment on the [Payment settings page](https://www.google.com/adsense/app#payments3/h=ACCOUNT_SETTINGS).
-4. Enter your [personal identification number (PIN)](https://support.google.com/adsense/answer/157667), once you receive it. This PIN verifies the accuracy of your account information.
-5. If your current balance reaches the [payment threshold](https://support.google.com/adsense/answer/1709871#p) by the end of themonth, a 21-day payment processing period begins. After the processing period ends, you will receive a payment. 
+1. Go to your [payee profile](https://www.google.com/adsense/app#payments3/h=BILLING_PROFILE)
+and select <strong>Submit tax information</strong>.
+Follow the guided steps to submit the appropriate tax forms and requirements. 
+2. Confirm the payee name and address. If you need to correct any information,
+follow [these instructions](https://support.google.com/adsense/answer/2498454?ctx=billing&rd=1).
+3. Select your form of payment on the
+[Payment settings page](https://www.google.com/adsense/app#payments3/h=ACCOUNT_SETTINGS).
+4. Enter your [personal identification number (PIN)](https://support.google.com/adsense/answer/157667),
+once you receive it.
+This PIN verifies the accuracy of your account information.
+5. If your current balance reaches the [payment threshold](https://support.google.com/adsense/answer/1709871#p)
+by the end of the month, a 21-day payment processing period begins.
+After the processing period ends, you will receive a payment. 
 
 {% endwrap %}
