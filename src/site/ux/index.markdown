@@ -5,11 +5,10 @@ description: "TBD"
 introduction: "TBD"
 snippet: "TBD"
 id: ux
-collection: home
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 1
+  order: 3
 ---
 
 {% comment %}

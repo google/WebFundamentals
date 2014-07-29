@@ -7,9 +7,9 @@ snippet: "Maximize your revenue potential on any device."
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 0
+  order: 5
 id: monetization
-#collection: home
+collection: home
 ---
 
 {% comment %}

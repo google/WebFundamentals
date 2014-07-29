@@ -48,6 +48,18 @@
     }
   }
 
+  .theme--monetization & {
+    color: $colorMonetization;
+
+    &.divider-icon:before {
+      color: $colorMonetization;
+    }
+
+    &.divider-icon:after {
+      color: $colorMonetizationSecondary;
+    }
+  }
+
   .theme--tools & {
     color: $colorTools;
 
@@ -97,6 +109,9 @@
   .theme--introduction-to-media &,
   .theme--introduction-to-media &.next-lessons:before { background-color: $colorMedia; }
 
+  .theme--monetization &,
+  .theme--monetization &.next-lessons:before { background-color: $colorMonetization; }
+
   .theme--user-input &,
   .theme--user-input &.next-lessons:before { background-color: $colorUser; }
 
@@ -119,6 +134,9 @@
   .theme--introduction-to-media &,
   .theme--introduction-to-media &.next-lessons:before { background-color: $colorMediaSecondary; }
 
+  .theme--monetization &,
+  .theme--monetization &.next-lessons:before { background-color: $colorMonetizationSecondary; }
+
   .theme--user-input &,
   .theme--user-input &.next-lessons:before { background-color: $colorUserSecondary; }
 
@@ -138,6 +156,8 @@
 
   .theme--introduction-to-media &:hover { color: $colorMedia; }
 
+  .theme--monetization &:hover { color: $colorMonetization; }
+
   .theme--user-input &:hover { color: $colorUser; }
 
   .theme--tools &:hover { color: $colorTools; }
@@ -153,6 +173,8 @@
   .theme--device-access &:hover { color: $colorDeviceSecondary; }
 
   .theme--introduction-to-media &:hover { color: $colorMediaSecondary; }
+
+  .theme--monetization &:hover { color: $colorMonetizationSecondary; }
 
   .theme--tools &:hover { color: $colorToolsSecondary; }
 
@@ -175,6 +197,8 @@
 
   .article--introduction-to-media & { color: $colorMedia; }
 
+  .article--monetization & { color: $colorMonetization; }
+
   .article--tools & { color: $colorTools; }
 
   .article--user-input & { color: $colorUser; }
@@ -193,6 +217,8 @@
 
   .nav-theme--introduction-to-media &:hover { color: $colorMedia; }
 
+  .nav-theme--monetization &:hover { color: $colorMonetization; }
+
   .nav-theme--tools &:hover { color: $colorTools; }
 
   .nav-theme--user-input &:hover { color: $colorUser; }
@@ -208,6 +234,8 @@
   .nav-theme--device-access & { color: $colorDevice; }
 
   .nav-theme--introduction-to-media & { color: $colorMedia; }
+
+  .nav-theme--monetization & { color: $colorMonetization; }
 
   .nav-theme--tools & { color: $colorTools; }
 
@@ -225,6 +253,8 @@
 
   .nav-theme--introduction-to-media & { background-color: $colorMedia; }
 
+  .nav-theme--monetization & { background-color: $colorMonetization; }
+
   .nav-theme--tools & { background-color: $colorTools; }
 
   .nav-theme--user-input & { background-color: $colorUser; }
@@ -240,6 +270,8 @@
   .nav-theme--device-access & { background-color: $colorDeviceSecondary; }
 
   .nav-theme--introduction-to-media & { background-color: $colorMediaSecondary; }
+
+  .nav-theme--monetization & { background-color: $colorMonetizationSecondary; }
 
   .nav-theme--tools & { background-color: $colorToolsSecondary; }
 
