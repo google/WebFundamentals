@@ -4,11 +4,15 @@ title: "How Ads Work"
 description: "At a glance, you make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
 introduction: "At a glance, you make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
 article:
-  written_on: 2014-07-17
-  updated_on: 2014-07-17
+  written_on: 2014-07-28
+  updated_on: 2014-07-28
   order: 1
 id: how-ads-work
 collection: ad-monetization
+rel:
+  gplusauthor: https://plus.google.com/+PeteLePage
+  gplusauthor: https://plus.google.com/110573989653316535297
+  twitterauthor: "@petele"
 key-takeaways:
   tldr: 
     - Choose the ads platform best suited to your site. We recommend the <a href="http://www.google.com/adsense/start/">AdSense</a> platform for most sites, and the <a href="http://www.google.com/doubleclick/publishers/">DoubleClick platform</a> for sites with their own advertising teams.
