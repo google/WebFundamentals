@@ -15,12 +15,14 @@ key-takeaways:
     - Look for opportunities to integrate ads throughout the content to avoid ad blindness;
     - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push content below it.
     - Maximize revenue by allowing text and display images to compete for your ad space.
-    - Style your ads so they don't look out of place on your site.
+    - Style your ads so they don't look out of place on your site; choose text styles that blend, compliment, or contrast your site.
 notes:
   targeting:
     - Ads are targeted based on overall site content, not keywords or categories. If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
   testing:
     - While smart sizing should automatically display ads in the best size based on the user's device, you should always test your ads on different devices and screens to make sure that the responsive behavior is working correctly.
+  images:
+    - Advertisers have full control over how their display ads look. You can influence the types of display ads that appear on your site using ad placement and sizing, but you can't actually control the image content.
 ---
 
 {% wrap content %}
@@ -48,7 +50,8 @@ the responsive ad code automatically adapts the ad unit size to your page layout
 The code calculates the required size dynamically based on the width of the ad unit’s parent container,
 then determines what's the best standard height to go with that width:
 
-*** Todo ***
+*** Todo: contacted PM for details on algorithm that controls smart sizing;
+will complete this table once I hear back.***
 
 <table class="table-2 tc-heavyright">
   <colgroup>
@@ -135,37 +138,47 @@ Sample placement options for mobile ads:
 
 The higher the competition, or ‘auction pressure’,
 the more the advertiser will pay to be viewed and clicked on your site.
-Maximize your bidding potential by:
+To maximize your bidding potential:
 
-* Allowing [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
+* Allow [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
 and [display ads](https://support.google.com/adsense/answer/185666?hl=en&ref_topic=29561)
-for each ad unit.
-* Including more than one ad unit in your site.
-* Using ad sizes that are popular with advertisers (for example, 300px by 250px).
+for each ad unit. Many advertisers include images in their ads;
+if you exclude display ads, you lose out on more advertisers bidding for your ad space.
+* [Maximize ad space](https://support.google.com/adsense/answer/17958?hl=en&ref_topic=3001714)
+by including more than one ad unit in your site.
+* Use ad sizes that are popular with advertisers, for example, 300px by 250px
+(see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&rd=1)).
+* Place ads near your content, but don't let the ads get in the way of that content (see also
+[Best practices for ads placement](https://support.google.com/adsense/answer/1282097?hl=en&ref_topic=3001646)). 
 
-## Choose styles that compliment your site
+## Choose text styles that compliment your site
 
-Create combinations of ad types, colors, and fonts that compliment your site
-and bring you the best revenue opportunies.
+The [most successful ad styles](https://support.google.com/adsense/answer/17957)
+blend or contrast with your site's styles.
+Create combinations of colors and fonts that compliment your site
+and bring you the best revenue opportunies. 
 
-Use <a href="https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>
-or create your own combinations of colors and fonts
-and applying these custom styles to ad units.
+### What can you customize?
 
-Todo: Create table showing different ad styles, based on predefined ad styles:
-https://support.google.com/adsense/answer/6002585.
-I've moved some samples in earlier draft to here, as they will become part of the table.
+You have full control over the following styles applied to text ads:
 
-Add color to ad links:
+* Border color
+* Background color
+* Text font family and font size
+* Default text color
+* Text color specific for the ad title
+* Text color specific for URLs
 
-<img src="images/mobiletext_withcolor.png" class="center" alt="Sample mobile text ad with links in color">
+{% include modules/remember.liquid title="Note" list=page.notes.images %}
 
-Sample text ad for mobile:
+### How to apply styles
 
-<img src="images/mobiletext_withoutcolor.png" class="center" alt="Sample mobile text ad">
+Google AdSense comes with
+<a href="https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>.
+Use these predefined styles as is, tweak predefined styles, or create a style from scratch.
 
-Sample display ad for mobile:
+Todo: flesh out these instructions.
 
-<img src="images/mobileimage.png" class="center" alt="Sample mobile image ad">
+<img src="images/customize.png" class="center" alt="Ads styles customization window">
 
 {% endwrap %}
