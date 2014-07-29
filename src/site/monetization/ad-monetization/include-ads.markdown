@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Include Ads in Your Site"
-description: "Follow the steps in this guide to learn how to include ads in your site. Submit an application, create ad units and place them in your site, and get paid."
-introduction: "Follow the steps in this guide to learn how to include ads in your site. Submit an application, create ad units and place them in your site, and get paid."
+title: "Include AdSense Ads on Your Site"
+description: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense application, create ad units and place them in your site, and get paid."
+introduction: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense application, create ad units and place them in your site, and get paid."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
@@ -11,11 +11,10 @@ id: include-ads
 collection: ad-monetization
 key-takeaways:
   tldr: 
-    - To submit a Google AdSense application, you must be 18, have a Google Account, and address.
+    - To submit a Google AdSense application, you must be 18, have a Google Account, and address. If you don't already have one, create an AdSense account.
     - Your website must be live before submitting an application, and the website content must comply with Adsense policies.
-    - Make sure your ads match the user's device; create responsive ad units.
-    - Configure your payment settings so that you are eligible to receive payments.
-    - You will only receive payments once your account reaches the payment threshold.
+    - Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.
+    - Verify payment settings and wait for the money to start rolling in.
 notes:
   multipleunits:
     - To include more than one ad on a page in your site, create responsive ad units for each ad.
@@ -38,37 +37,40 @@ notes:
 
 ## Build this sample app with ads
 
-To see ads in action,
-this guide walks you through the steps required to include ads
-in the web starter kit using
-[Google AdSense]({{site.baseurl}}/monetization/ad-monetization/how-ads-work.html#available-platforms).
-If you've never used the web starter kit,
-follow [these instructions]({{site.baseurl}}/tools/setup/setup_kit.html)
-to get set up.
-
-Here's how the ads look on mobile and desktop:
+In this walk-through,
+you'll build a simple page that includes responsive ads
+using Google AdSense and the Web Starter Kit:
 
 <img src="images/ads_sample.png" class="center" alt="Sample website with ads on desktop and mobile">
 
-## Submit your application
+If you're unfamiliar with the Web Start Kit,
+refer to the
+[Set Up Web Starter Kit]({{site.baseurl}}/tools/setup/setup_kit.html) documentation.
 
-To submit an application for Google Adsense,
-you must meet these
-[requirements](https://support.google.com/adsense/answer/9724?hl=en&ref_topic=1319756):
+In order to include ads in your site and get paid,
+you'll need to follow these simple steps:
 
-* Be at least 18 years old and have a verified Google Account.
-* Own a live website or other online content that complies with
+1. Create an AdSense account.
+2. Create ad units.
+3. Place ad units on a page.
+4. Configure payment settings.
+
+## Create an AdSense account
+
+In order to serve ads on your site, you need to create AdSense account,
+and agree to their terms of service.
+You'll need to verify:
+
+* You are at least 18 years old and have a verified Google Account.
+* You own a live website or other online content that complies with
 [Google AdSense program policies](https://support.google.com/adsense/answer/48182);
 ads are hosted on this site.
-* Have a postal address and a mailing address associated with your bank account
+* You have a postal address and a mailing address associated with your bank account
 so you can receive payments.
 
-To initiate the application process,
-go to the [Google AdSense site](www.google.com/adsense).
-This is the same site you will log into once your application's been approved.
-
-Everything you need to know about getting your application approved
-is covered in [this Google AdSense help topic](https://support.google.com/adsense/answer/75109?hl=en&ref_topic=1319758). 
+If you don't already have an account, you can create one at 
+[Google AdSense site](www.google.com/adsense).
+Use this same site to manage your ads once your application's been approved.
 
 ## Create ad units
 
@@ -99,8 +101,8 @@ Past the generated code into your site:
 <!-- Top ad in web starter kit sample -->
 <ins class="adsbygoogle"
      style="display:block"
-     data-ad-client="ca-pub-5163983549070020"
-     data-ad-slot="1452382795"
+     data-ad-client="XX-XXX-XXXXXXXXXXXXXXXX"
+     data-ad-slot="XXXXXXXXXX"
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
@@ -130,8 +132,8 @@ In the web starter kit sample:
 	<!-- Top ad in web starter kit sample -->
 	<ins class="adsbygoogle"
 	     style="display:block"
-	     data-ad-client="ca-pub-5163983549070020"
-	     data-ad-slot="1452382795"
+	     data-ad-client="XX-XXX-XXXXXXXXXXXXXXXX"
+	     data-ad-slot="XXXXXXXXXX"
 	     data-ad-format="auto"></ins>
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
