@@ -53,7 +53,7 @@ AdSense also provides you with the tools you need to be successful, including:
 
 * Complete [customization tools](https://support.google.com/adsense/answer/160374?ref_topic=1307421) to change the look and feel of your ads.
 * [Performance tools](https://support.google.com/adsense/answer/2973289?ref_topic=2717009) to monitor and optimize your ad performance.
-* Tools to [manage payments](https://support.google.com/adsense/answer/2569265?hl=en&ref_topic=1727160)
+* Tools to [manage payments](https://support.google.com/adsense/answer/2569265?hl=en&ref_topic=1727160).
 
 In addition, AdSense provides the ability to choose from a variety of ad 
 sizes and formats, including
