@@ -20,6 +20,8 @@ notes:
     - To include more than one ad on a page in your site, create responsive ad units for each ad.
   body:
     - Paste all ad code within the body tag; otherwise the ads won't work.
+  smarttag:
+    - The `data-ad-format=auto` tag in the generated ad code enables the smart sizing behavior for the responsive ad unit.
 ---
 
 {% wrap content %}
@@ -74,9 +76,23 @@ Use this same site to manage your ads once your application's been approved.
 
 ## Create ad units
 
-[Responsive ad units](https://support.google.com/adsense/answer/3213689?hl=en&ref_topic=3641113)
-allow you to control the size of the ads on your page,
+You have three options for sizing your ad units:
+
+* Use a specific ad size recommended by Google AdSense (see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421)).
+* Create a [custom-sized ad unit](https://support.google.com/adsense/answer/3289364?hl=en&ref_topic=3640746).
+* Create a [responsive ad units](https://support.google.com/adsense/answer/3213689?hl=en&ref_topic=3641113).
+
+You are building a responsive site; use respoonsive ad units.
+Responsive ad units allow you to control the size of the ads on your page,
 in line with how you control the layout of the rest of your page across devices.
+Ads automatically resize based on the width of the device's parent container.
+
+If you don't use responsive ad units,
+you will have to write a lot more code to control
+how ads appear based on a user's device,
+and there's no need to write extra code.
+Even if you must specify the exact size of your ad units,
+use responsive ad units in [advanced mode]({{site.baseurl}}/monetization/ad-monetization/customize-ads.html#what-if-responsive-sizing-isnt-enough).
 
 To create a responsive ad unit
 (see also [Create an ad unit](https://support.google.com/adsense/answer/6002575?rd=1()) and
@@ -92,9 +108,9 @@ so be descriptive.
 7. In the <strong>Ad code</strong> box that appears,
 select the <strong>Smart sizing (recommended)</strong> option from the Mode drop-down. This is the recommended mode and doesn’t require you to make any changes to your ad code.
 
-The `data-ad-format=auto` tag in the generated ad code enables
-the smart sizing behavior for the responsive ad unit.
-Past the generated code into your site:
+After creating your ad unit,
+AdSense provide a snippet of code to include on your site,
+similar to the code below:
 
 {% highlight html %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -109,18 +125,16 @@ Past the generated code into your site:
 </script>
 {% endhighlight %}
 
-{% include modules/remember.liquid title="Important" list=page.notes.multipleunits %}
+{% include modules/remember.liquid title="Note" list=page.notes.smarttag %}
 
 ## Include ad units in your site
 
-Copy and paste the ad code into the HTML source code of your page
-where you'd like the ad to appear,
-keeping in mind that it will dynamically inherit the size
-of the parent container.
+Paste the snippet provided by AdSense into your markup
+to include the ad unit on your page.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.body %}
 
-In the web starter kit sample:
+In the Web Starter Kit sample:
 
 1. Open the `index.html` in the `app` folder.
 2. Include both ad units in the `main` tag:
@@ -159,7 +173,7 @@ In the web starter kit sample:
 </main>
 {% endhighlight %}
 
-There are several options for customizing the way your ads look so that they are more inline with your site design (see [Customize Your Ads]({{site.baseurl}}/monetization/ad-monetization/customize-ads.html)).
+{% include modules/remember.liquid title="Important" list=page.notes.multipleunits %}
 
 ## Give access to the crawler
 
