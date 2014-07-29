@@ -4,20 +4,20 @@ title: "Include AdSense Ads on Your Site"
 description: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 introduction: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 article:
-  written_on: 2014-07-17
-  updated_on: 2014-07-17
+  written_on: 2014-07-28
+  updated_on: 2014-07-28
   order: 2
 id: include-ads
 collection: ad-monetization
 key-takeaways:
   tldr: 
     - To create an AdSense account, you must be 18, have a Google Account, and address.
-    - Your website must be live before submitting an application, and the website content must comply with Adsense policies.
+    - Your website must be live before submitting an application, and the website content must comply with AdSense policies.
     - Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.
     - Verify payment settings and wait for the money to start rolling in.
 notes:
   crawler:
-    - Make sure you're not blocking the AdSense crawler from accessing your site (see <a href="https://support.google.com/adsense/answer/10532?hl=en">this help topic</a>). 
+    - Make sure you're not blocking the AdSense crawler from accessing your site (see <a href="https://support.google.com/adsense/answer/10532">this help topic</a>). 
   body:
     - Paste all ad code within the body tag; otherwise the ads won't work.
   smarttag:
@@ -26,13 +26,6 @@ notes:
 ---
 
 {% wrap content %}
-<style type="text/css">
-  img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
 
 {% include modules/toc.liquid %}
 
@@ -40,18 +33,20 @@ notes:
 
 ## Build sample page with ads
 
-In this walk-through,
-you'll build a simple page that includes responsive ads
+In this walk-through, you'll build a simple page that includes responsive ads
 using Google AdSense and the Web Starter Kit:
 
-<img src="images/ads_sample.png" class="center" alt="Sample website with ads on desktop and mobile">
+<img src="images/ad-ss-600.png" sizes="100vw" 
+  srcset="images/ad-ss-1200.png 1200w, 
+          images/ad-ss-900.png 900w,
+          images/ad-ss-600.png 600w, 
+          images/ad-ss-300.png 300w" 
+  alt="Sample website with ads on desktop and mobile">
 
-If you're unfamiliar with the Web Start Kit,
-refer to the
+If you're unfamiliar with the Web Start Kit, refer to the
 [Set Up Web Starter Kit]({{site.baseurl}}/tools/setup/setup_kit.html) documentation.
 
-In order to include ads in your site and get paid,
-you'll need to follow these simple steps:
+In order to include ads in your site and get paid, you'll need to follow these simple steps:
 
 1. Create an AdSense account.
 2. Create ad units.
@@ -76,10 +71,9 @@ An ad unit is a set of ads that are displayed on your page as a result of
 JavaScript you add to your page.  You have three options for sizing your ad
 units:
 
-* **[Responsive (Recommended)](https://support.google.com/adsense/answer/3213689?hl=en&ref_topic=3641113)**. 
-* [Pre-defined](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421).
-* [Custom-sized](https://support.google.com/adsense/answer/3289364?hl=en&ref_topic=3640746).
-
+* **[Responsive (Recommended)](https://support.google.com/adsense/answer/3213689?ref_topic=3641113)**. 
+* [Pre-defined](https://support.google.com/adsense/answer/6002621?ref_topic=1307421).
+* [Custom-sized](https://support.google.com/adsense/answer/3289364?ref_topic=3640746).
 
 You are building a responsive site; use respoonsive ad units. Responsive ads 
 automatically resize based on the size of the device and the width of the 
@@ -121,7 +115,6 @@ on your site, similar to the code below:
 </script>
 {% endhighlight %}
 
-
 {% include modules/remember.liquid title="Note" list=page.notes.smarttag %}
 
 ## Include ad units in your site
@@ -137,9 +130,18 @@ mobile device or via the Chrome emulator.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.body %}
 
-<img src=""><br>
-[Try it](/web/fundamentals/resources/samples/monetization/ad-monetization/)
-
+<div>
+  <a href="/web/fundamentals/resources/samples/monetization/ad-monetization/">
+    <img src="images/ad-ss-600.png" sizes="100vw" 
+      srcset="images/ad-ss-1200.png 1200w, 
+              images/ad-ss-900.png 900w,
+              images/ad-ss-600.png 600w, 
+              images/ad-ss-300.png 300w" 
+      alt="Sample website with ads on desktop and mobile">
+    <br>
+    Try it
+  </a>
+</div>
 
 ## Configure payment settings
 
