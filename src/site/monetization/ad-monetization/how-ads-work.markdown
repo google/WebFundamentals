@@ -88,7 +88,12 @@ in the AdSense help for further details.
 For the most flexibility, use responsive ads. Responsive ads are automatically
 sized based on the user's device. 
 
-<img src="images/ads_sample.png" alt="Page with sample ads">
+<img src="images/ad-ss-600.png" 
+  srcset="images/ad-ss-1200.png 1200w, 
+          images/ad-ss-900.png 900w,
+          images/ad-ss-600.png 600w, 
+          images/ad-ss-300.png 300w" 
+  alt="Sample website with ads on desktop and mobile">
 
 It may be necessary to use staticly sized ads, in this case, refer to
 the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?ref_topic=1307421).
