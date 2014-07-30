@@ -15,7 +15,7 @@ key-takeaways:
     - Look for opportunities to integrate ads throughout the content to avoid ad blindness;
     - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push content below it.
     - Maximize revenue by allowing text and display images to compete for your ad space.
-    - Style your ads so they don't look out of place on your site; choose text styles that blend, compliment, or contrast your site.
+    - Choose text styles that blend, compliment, or contrast your site.
 notes:
   targeting:
     - Ads are targeted based on overall site content, not keywords or categories. If you'd like to display ads related to specific topics, include complete sentences and paragraphs about these topics.
@@ -47,38 +47,15 @@ to a user's device is to
 
 To make your code simpler and save you time and effort,
 the responsive ad code automatically adapts the ad unit size to your page layout.
+
 The code calculates the required size dynamically based on the width of the ad unit’s parent container,
-then determines what's the best standard height to go with that width:
+then picks the best-performing ad size that fits in the container.
+For example, a mobile-optimized site with a width of 360px might show a 320x50 ad unit.
 
-*** Todo: contacted PM for details on algorithm that controls smart sizing;
-will complete this table once I hear back.***
-
-<table class="table-2 tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th data-th="size">Parent container width</th>
-      <th data-th="behavior">Ad size served</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="command">Todo</td>
-      <td data-th="alias">Todo</td>
-    </tr>
-    <tr>
-      <td data-th="command">Todo</td>
-      <td data-th="alias">Todo</td>
-    </tr>
-    <tr>
-      <td data-th="command">Todo</td>
-      <td data-th="alias">Todo</td>
-    </tr>
-  </tbody>
-</table>
+Track the current
+[top performing ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421#top)
+in the Google AdSense
+[Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421#top).
 
 {% include modules/remember.liquid title="Important" list=page.notes.testing %}
 
@@ -153,14 +130,12 @@ by including more than one ad unit in your site.
 
 ## Choose text styles that compliment your site
 
-The [most successful ad styles](https://support.google.com/adsense/answer/17957)
-blend or contrast with your site's styles.
-Create combinations of colors and fonts that compliment your site
-and bring you the best revenue opportunies. 
+The [most successful ads](https://support.google.com/adsense/answer/17957)
+blend or contrast your site's styles. 
 
-### What can you customize?
+### What styles can you customize?
 
-You have full control over the following styles applied to text ads:
+You have full control over these styles in text ads:
 
 * Border color
 * Background color
@@ -171,14 +146,23 @@ You have full control over the following styles applied to text ads:
 
 {% include modules/remember.liquid title="Note" list=page.notes.images %}
 
-### How to apply styles
+### How to apply styles to text ads
 
-Google AdSense comes with
-<a href="https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>.
-Use these predefined styles as is, tweak predefined styles, or create a style from scratch.
+Google AdSense makes it very easy to customize text ad styles.
+Not only can you apply text ad styles to new ad units;
+you can also push style changes to live text ads already using a style.
 
-Todo: flesh out these instructions.
+All text ads use the Google AdSense <strong>Default</strong>
+[predefined style](https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>).
+When creating a new unit,
+you can apply a different style to text ads
+by expanding the <strong>Text ad style</strong> property:
 
-<img src="images/customize.png" class="center" alt="Ads styles customization window">
+<img src="images/customize.png" class="center" alt="Text ad styles">
+
+Use any predefined style as is, make slight changes to the style,
+or create, name, and save a new style.
+Once you've saved a new style,
+that style can be applied to any existing or new ad units.
 
 {% endwrap %}
