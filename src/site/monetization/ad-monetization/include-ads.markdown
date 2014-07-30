@@ -75,15 +75,27 @@ units:
 * [Pre-defined](https://support.google.com/adsense/answer/6002621?ref_topic=1307421).
 * [Custom-sized](https://support.google.com/adsense/answer/3289364?ref_topic=3640746).
 
-You are building a responsive site; use respoonsive ad units. Responsive ads 
-automatically resize based on the size of the device and the width of the 
-parent container.  Responsive work in line with your responsive layout, ensuring
-your site looks great on any device.
+You are building a responsive site; use respoonsive ad units.
+Responsive ads automatically resize based on the size of the device
+and the width of the parent container.
+Responsive ads work in line with your responsive layout,
+ensuring your site looks great on any device.
 
 If you don't use responsive ad units, you will have to write a lot more code 
 to control how ads appear based on a user's device. Even if you must specify 
 the exact size of your ad units, use responsive ad units in 
 [advanced mode]({{site.baseurl}}/monetization/ad-monetization/customize-ads.html#what-if-responsive-sizing-isnt-enough).
+
+To make your code simpler and save you time and effort,
+the responsive ad code automatically adapts the ad unit size to your page layout.
+The code calculates the required size dynamically based on the width of the ad unit’s parent container,
+then picks the best-performing ad size that fits in the container.
+For example, a mobile-optimized site with a width of 360px might show a 320x50 ad unit.
+
+Track the current
+[top performing ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421#top)
+in the Google AdSense
+[Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421#top).
 
 ### To create a responsive ad unit
 

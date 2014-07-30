@@ -8,7 +8,7 @@ article:
   updated_on: 2014-07-17
   order: 4
 id: optimize-ads
-collection: ad-monetization
+#collection: ad-monetization
 key-takeaways:
   tldr: 
     -  TBD.
