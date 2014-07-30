@@ -144,13 +144,15 @@ The `gulp serve` tool minifies your JavaScript
 and detects errors using
 <a href="https://www.npmjs.org/package/gulp-jshint">gulp jshint</a>.
 
-Update `index.html` to call a new script, `app.js`:
+Update `index.html` and add the newly created script, and a `<span>` that
+will be the container where the date is placed:
 
 {% highlight html %}
 <main>
     <h1>Hello.</h1>
-    <p>Welcome to <span></span>Web Starter Kit.</p>
+    <p>Welcome to Web Starter Kit.</p>
     <div><img src="/images/awesome-photo.jpg"></div>
+    <span></span>
     <script src="/scripts/app.js" async></script> 
 </main>
 {% endhighlight %}
