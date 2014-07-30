@@ -71,9 +71,9 @@ An ad unit is a set of ads that are displayed on your page as a result of
 JavaScript you add to your page.  You have three options for sizing your ad
 units:
 
-* **[Responsive (Recommended)](https://support.google.com/adsense/answer/3213689?ref_topic=3641113)**. 
-* [Pre-defined](https://support.google.com/adsense/answer/6002621?ref_topic=1307421).
-* [Custom-sized](https://support.google.com/adsense/answer/3289364?ref_topic=3640746).
+* **[Responsive (Recommended)](https://support.google.com/adsense/answer/3213689)**. 
+* [Pre-defined](https://support.google.com/adsense/answer/6002621).
+* [Custom-sized](https://support.google.com/adsense/answer/3289364).
 
 You are building a responsive site; use respoonsive ad units.
 Responsive ads automatically resize based on the size of the device
@@ -93,9 +93,9 @@ then picks the best-performing ad size that fits in the container.
 For example, a mobile-optimized site with a width of 360px might show a 320x50 ad unit.
 
 Track the current
-[top performing ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421#top)
+[top performing ad sizes](https://support.google.com/adsense/answer/6002621#top)
 in the Google AdSense
-[Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421#top).
+[Guide to ad sizes](https://support.google.com/adsense/answer/6002621#top).
 
 ### To create a responsive ad unit
 
@@ -167,7 +167,7 @@ the steps below:
 4. Enter your [personal identification number (PIN)](https://support.google.com/adsense/answer/157667). This PIN verifies the accuracy of your account information.
 5. Check to see if your balance reaches the [payment threshold](https://support.google.com/adsense/answer/1709871). 
 
-Refer to [Intro to AdSense payments](https://support.google.com/adsense/answer/1709858?ref_topic=1727160)
+Refer to [Intro to AdSense payments](https://support.google.com/adsense/answer/1709858)
 for any additional questions.
 
 {% endwrap %}

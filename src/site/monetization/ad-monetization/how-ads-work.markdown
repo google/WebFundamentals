@@ -29,7 +29,7 @@ notes:
 
 This guide covers the basics of how ads work,
 but to learn more, refer to the
-<a href="https://support.google.com/adsense/answer/181947?hl=en">Google AdSense</a> and
+<a href="https://support.google.com/adsense/answer/181947">Google AdSense</a> and
 <a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a>
 help centers.
 
@@ -55,9 +55,9 @@ of advertiser demand.
 
 AdSense also provides you with the tools you need to be successful, including:
 
-* Complete [customization tools](https://support.google.com/adsense/answer/160374?ref_topic=1307421) to change the look and feel of your ads.
-* [Performance tools](https://support.google.com/adsense/answer/2973289?ref_topic=2717009) to monitor and optimize your ad performance.
-* Tools to [manage payments](https://support.google.com/adsense/answer/2569265?hl=en&ref_topic=1727160).
+* Complete [customization tools](https://support.google.com/adsense/answer/160374) to change the look and feel of your ads.
+* [Performance tools](https://support.google.com/adsense/answer/2973289) to monitor and optimize your ad performance.
+* Tools to [manage payments](https://support.google.com/adsense/answer/2569265).
 
 In addition, AdSense provides the ability to choose from a variety of ad 
 sizes and formats, including
@@ -81,7 +81,7 @@ Place ads where they are visible, but don't detract from the main user experienc
 
 For example, 320&times;100px ads may be interspersed through list content, articles may
 include a 300&times;250px ads, and long form content may include a combination
-of ads.  Refer to [Best practices for ad placement](https://support.google.com/adsense/answer/1282097?ref_topic=1307438)
+of ads.  Refer to [Best practices for ad placement](https://support.google.com/adsense/answer/1282097)
 in the AdSense help for further details. 
 
 ### Ad size
@@ -96,7 +96,7 @@ sized based on the user's device.
   alt="Sample website with ads on desktop and mobile">
 
 It may be necessary to use staticly sized ads, in this case, refer to
-the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?ref_topic=1307421).
+the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621).
 
 
 ### Ad type
@@ -117,7 +117,7 @@ where the link will take them.
 
 ## How ads are targeted
 Google AdSense automatically delivers ads that are [targeted to your content 
-or audience](https://support.google.com/adsense/answer/9713?ref_topic=1628432).
+or audience](https://support.google.com/adsense/answer/9713).
 This is done in several ways:
 
 * **Content and language** - users will see ads that match your site's content
@@ -130,7 +130,7 @@ groups, for example, sports enthusiasts.
 
 
 ## How ads are selected
-The [ad auction](https://support.google.com/adsense/answer/160525?hl=en&ref_topic=1628432)
+The [ad auction](https://support.google.com/adsense/answer/160525)
 is used to select the ads that will appear on your pages and determine how
 much you’ll earn from those ads. In a traditional auction, interested bidders 
 state the maximum price they're willing to pay to buy a specific item. 
