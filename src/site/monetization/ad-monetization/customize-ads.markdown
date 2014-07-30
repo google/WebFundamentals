@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Customize Your Ads"
-description: "The best ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
-introduction: "The best ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
+description: "The best can ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
+introduction: "The best can ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
 article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
@@ -42,34 +42,33 @@ notes:
 ## Place ads where users benefit the most
 
 When it comes to deciding where to place ads on your site,
-and how many ads to include, always put the user first
-(see also these
-[best practices for ads placement](https://support.google.com/adsense/answer/1282097?ref_topic=3001646&rd=1)):
+and how many ads to include, always put the user first!
 
 * Use ads to augment site content; not the other way around.
-* Always follow the [Google AdSense program policies](https://support.google.com/adsense/answer/48182?hl=en()). Pages with excessive ads, ads that push the content down below the fold, ads clustered together that dominate the viewable space or ads without clear labeling are all against ad policies.
-* Avoid adding too many units which distract users from content.
-* Ensure ads provide value to users. If you have ad units that generate significantly less revenue or drive less clicks or views, it’s likely they are not providing value to users.
-* Maintain a balance between ads and content. Avoid adding too many units which distract users from content.
+* Pages with excessive ads, ads that push the content down below the fold, 
+ads clustered together that dominate the viewable space or ads without clear 
+labeling lead to lower user satisfaction and are against AdSense policies.
+* Ensure ads provide value to users. If you have ad units that generate 
+significantly less revenue or drive less clicks or views, it’s likely they 
+are not providing value to users.
 
 Sample placement options for mobile ads:
 
 <img src="images/mobile_ads_placement.png" class="center" alt="Sample mobile image ad">
 
+For more information, review the AdSense 
+[best practices for ads placement](https://support.google.com/adsense/answer/1282097)
+
+
 ## What if responsive sizing isn't enough?
-
-If the smart sizing isn't exactly what you want in your site,
-you can switch to advanced mode and override smart sizing
-in your responsive ad unit code
-(see [Advanced features in this help topic](https://support.google.com/adsense/answer/3543893?hl=en&ref_topic=3641113)).
-
-For example,
-you can control the exact sizing of ads using
+In some cases, you may need more control over the way your ads are displayed
+than simply using responsive ads.  In this case, you can switch 
+to advanced mode and override smart sizing in your responsive ad unit code. 
+For example, you can control the exact sizing of ads using
 [media queries]({{site.baseurl}}/layouts/rwd-fundamentals/use-media-queries.html):
 
 1. Follow the instructions to [create a responsive ad unit]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
-2. In the Ad code box,
-select the <strong>Advanced (code modification required)</strong>
+2. In the Ad code box, select the <strong>Advanced (code modification required)</strong>
 from the Mode drop-down.
 3. Modify the ad code to set the exact sizes of your ads based on the user's device:
 
@@ -92,35 +91,35 @@ from the Mode drop-down.
   Try it
 {% endlink_sample %}
 
+See [advanced features](https://support.google.com/adsense/answer/3543893) in the AdSense help for more information.
+
 {% include modules/remember.liquid title="Important" list=page.notes.testing %}
 
 ## Maximize bidding potential
 
-The higher the competition, or ‘auction pressure’,
-the more the advertiser will pay to be viewed and clicked on your site.
-To maximize your bidding potential:
+The higher the competition, or 'auction pressure', the more the advertiser 
+will pay to be viewed and clicked on your site. To maximize your bidding
+potential:
 
-* Allow [text](https://support.google.com/adsense/answer/185665?hl=en&ref_topic=29561)
-and [display ads](https://support.google.com/adsense/answer/185666?hl=en&ref_topic=29561)
-for each ad unit. Many advertisers include images in their ads;
-if you exclude display ads, you lose out on more advertisers bidding for your ad space.
-* [Maximize ad space](https://support.google.com/adsense/answer/17958?hl=en&ref_topic=3001714)
+* Be sure to allow both [text](https://support.google.com/adsense/answer/185665)
+and [display ads](https://support.google.com/adsense/answer/185666). Excluding
+one type of ads limits the number of advertisers available to you.
+* [Maximize ad space](https://support.google.com/adsense/answer/17958)
 by including more than one ad unit in your site.
 * Use ad sizes that are popular with advertisers, for example, 300px by 250px
-(see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&rd=1)).
-* Place ads near your content, but don't let the ads get in the way of that content (see also
-[Best practices for ads placement](https://support.google.com/adsense/answer/1282097?hl=en&ref_topic=3001646)). 
+(see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621)).
+* Place ads near your content, but don't let the ads get in the way. 
 
-## Choose text styles that compliment your site
+## Choose styles that compliment your site
 
 The [most successful ads](https://support.google.com/adsense/answer/17957)
-blend or contrast your site's styles. 
-Google AdSense provides a set of [predefined ad styles](https://support.google.com/adsense/answer/6002585);
-choose any of these styles or create your own.
+blend or contrast your site's styles. Google AdSense provides a set of 
+[predefined ad styles](https://support.google.com/adsense/answer/6002585);
+choose the style that best fits your site or create your own.
 
 ### What's customizable
 
-Customize any of the following styles in text ads:
+You can customize any of the following styles in text ads:
 
 * Border color
 * Background color
@@ -131,25 +130,25 @@ Customize any of the following styles in text ads:
 
 ### How to apply styles
 
-When creating a new unit,
-you can apply a different style to text ads
-by expanding the <strong>Text ad style</strong> property:
+When creating a new unit, you can apply a different style to text ads by 
+expanding the <strong>Text ad style</strong> property:
 
 <img src="images/customize.png" class="center" alt="Text ad styles">
 
-All text ads use the Google AdSense <strong>Default</strong> style.
-Use any predefined style as is, make slight changes to the style,
-or create, name, and save a new style.
+All text ads use the Google AdSense <strong>Default</strong> style.  You can 
+use any of the predefined style as is, make slight changes to the style,
+or create, your own custom style.
 
-Once you've saved a new style,
-you can apply it to any existing or new ad units:
+Once you've saved a new style, you can apply it to any of your existing or 
+new ad units:
 
 1. Navigate to [Ad Styles](https://www.google.com/adsense/app#myads-springboard/view=AD_STYLES).
-2. Select the ad style you want to change from the list of <strong>Ad styles available for all your active products</strong>.
+2. Select the ad style you want to change from the list of 
+<strong>Ad styles available for all your active products</strong>.
 3. Make changes and <strong>Save ad style</strong>.
 
-When you change an existing ad style,
-any active ad units using that style are automatically updated.
+When you change an existing ad style, any active ad units using that style 
+are automatically updated.
 
 {% include modules/remember.liquid title="Note" list=page.notes.images %}
 
