@@ -12,7 +12,7 @@ collection: ad-monetization
 key-takeaways:
   tldr: 
     - Use Responsive Ad Units for all inventory.
-    - Look for opportunities to integrate ads throughout the content to avoid ad blindness;
+    - Look for opportunities to integrate ads throughout the content to avoid ad blindness.
     - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push content below it.
     - Maximize revenue by allowing text and display images to compete for your ad space.
     - Choose text styles that blend, compliment, or contrast your site.
@@ -72,7 +72,7 @@ you can control the exact sizing of ads using
 
 1. Follow the instructions to [create a responsive ad unit]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
 2. In the Ad code box,
-select the <strong>Advanced (code modification required) mode
+select the <strong>Advanced (code modification required)</strong>
 from the Mode drop-down.
 3. Modify the ad code to set the exact sizes of your ads based on the user's device:
 
@@ -89,10 +89,6 @@ from the Mode drop-down.
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 {% endhighlight %}
-
-If you're considering overriding smart sizing,
-the Google AdSense [Guide to ad sizes](https://support.google.com/adsense/answer/6002621?hl=en&ref_topic=1307421)
-is a great resource for choosing the best ad sizes.
 
 ## Place ads where users benefit the most
 
@@ -132,10 +128,7 @@ by including more than one ad unit in your site.
 
 The [most successful ads](https://support.google.com/adsense/answer/17957)
 blend or contrast your site's styles. 
-
-### What styles can you customize?
-
-You have full control over these styles in text ads:
+Customize thes styles to compliment your site's styles:
 
 * Border color
 * Background color
@@ -144,25 +137,26 @@ You have full control over these styles in text ads:
 * Text color specific for the ad title
 * Text color specific for URLs
 
-{% include modules/remember.liquid title="Note" list=page.notes.images %}
-
-### How to apply styles to text ads
+## How to apply styles to text ads
 
 Google AdSense makes it very easy to customize text ad styles.
 Not only can you apply text ad styles to new ad units;
 you can also push style changes to live text ads already using a style.
 
-All text ads use the Google AdSense <strong>Default</strong>
-[predefined style](https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>).
 When creating a new unit,
 you can apply a different style to text ads
 by expanding the <strong>Text ad style</strong> property:
 
 <img src="images/customize.png" class="center" alt="Text ad styles">
 
+All text ads use the Google AdSense <strong>Default</strong>
+[predefined style](https://support.google.com/adsense/answer/6002585">predefined ad styles<a/>).
 Use any predefined style as is, make slight changes to the style,
 or create, name, and save a new style.
+
 Once you've saved a new style,
 that style can be applied to any existing or new ad units.
+
+{% include modules/remember.liquid title="Note" list=page.notes.images %}
 
 {% endwrap %}
