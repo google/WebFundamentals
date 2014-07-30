@@ -78,17 +78,22 @@ from the Mode drop-down.
 
 {% highlight html %}
 <style type="text/css">
-.adslot_1 { width: 320px; height: 50px; }
-@media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
-@media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } }
+  .adslot_1 { width: 320px; height: 50px; }
+  @media (max-width:400px) { .adslot_1 { display:none !important; } }
+  @media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
+  @media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } }
 </style>
 <ins class="adsbygoogle adslot_1"
-    style="display:inline-block;"
+    style="display:block;"
     data-ad-client="ca-pub-1234"
     data-ad-slot="5678"></ins>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 {% endhighlight %}
+
+{% link_sample _code/customize.html %}
+  Try it
+{% endlink_sample %}
 
 ## Place ads where users benefit the most
 
