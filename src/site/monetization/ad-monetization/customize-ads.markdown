@@ -57,7 +57,7 @@ Sample placement options for mobile ads:
 <img src="images/mobile_ads_placement.png" class="center" alt="Sample mobile image ad">
 
 For more information, review the AdSense 
-[best practices for ads placement](https://support.google.com/adsense/answer/1282097)
+[best practices for ads placement](https://support.google.com/adsense/answer/1282097).
 
 
 ## What if responsive sizing isn't enough?
