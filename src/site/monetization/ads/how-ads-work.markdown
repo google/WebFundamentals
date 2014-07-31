@@ -4,8 +4,8 @@ title: "How Ads Work"
 description: "At a glance, you make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
 introduction: "At a glance, you make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads on your site and the highest bid wins. You get paid when users click on the ads."
 article:
-  written_on: 2014-07-28
-  updated_on: 2014-07-28
+  written_on: 2014-07-31
+  updated_on: 2014-07-31
   order: 1
 id: how-ads-work
 collection: ads

@@ -4,8 +4,8 @@ title: "Include AdSense Ads on Your Site"
 description: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 introduction: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 article:
-  written_on: 2014-07-28
-  updated_on: 2014-07-28
+  written_on: 2014-07-31
+  updated_on: 2014-07-31
   order: 2
 id: include-ads
 collection: ads

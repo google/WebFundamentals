@@ -4,8 +4,8 @@ title: "Optimize Your Ads"
 description: "TBD."
 introduction: "TBD."
 article:
-  written_on: 2014-07-17
-  updated_on: 2014-07-17
+  written_on: 2014-07-31
+  updated_on: 2014-07-31
   order: 4
 id: optimize-ads
 #collection: ads

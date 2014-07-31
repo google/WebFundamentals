@@ -4,8 +4,8 @@ title: "Customize Your Ads"
 description: "The best ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
 introduction: "The best ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
 article:
-  written_on: 2014-07-17
-  updated_on: 2014-07-17
+  written_on: 2014-07-31
+  updated_on: 2014-07-31
   order: 3
 id: customize-ads
 collection: ads
