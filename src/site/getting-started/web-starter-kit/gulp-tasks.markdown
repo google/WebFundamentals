@@ -16,7 +16,7 @@ article:
   updated_on: 2014-04-23
   order: 2
 id: using-wsk-styleguide
-collection: web-starter-kit
+#collection: web-starter-kit
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
   twitterauthor: "@Gauntface"

@@ -13,7 +13,7 @@ article:
   updated_on: 2014-04-23
   order: 1
 id: setting-up-wsk
-collection: web-starter-kit
+#collection: web-starter-kit
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
   twitterauthor: "@Gauntface"
