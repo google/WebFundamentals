@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <title></title>
+  <!-- // [TEMPLATE header_full] -->
+  <title>Images: srcset and the sizes attribute</title>
   <script type="text/javascript" src="picturefill-2.1.0.js" async></script>
+  <link rel="stylesheet" type="text/css" href="margins.css">
 </head>
 <body role="main">
-  <h1>Specifying sizes for the <code>&lt;picture&gt;</code> element</h1>
-  <p>
-    <b>Note:</b> this sample uses the <a href="http://scottjehl.github.io/picturefill/">
-    picturefill</a> polyfill to provide backwards compatibility for browsers 
-    that do not support the &lt;picture&gt; element.
-  </p>
+  <div class="add_margin">
+    <h1>Specifying sizes for the <code>&lt;picture&gt;</code> element</h1>
+    <p>
+      <b>Note:</b> this sample uses the <a href="http://scottjehl.github.io/picturefill/">
+      picturefill</a> polyfill to provide backwards compatibility for browsers 
+      that do not support the &lt;picture&gt; element.
+    </p>
+  </div>
   <!-- // [START picture] -->
-  <img src="/img/lighthouse-200.jpg" sizes="50vw"
-       srcset="/img/lighthouse-100.jpg 100w, /img/lighthouse-200.jpg 200w,
-               /img/lighthouse-400.jpg 400w, /img/lighthouse-800.jpg 800w,
-               /img/lighthouse-1000.jpg 1000w, /img/lighthouse-1400.jpg 1400w,
-               /img/lighthouse-1800.jpg 1800w">
+  <img src="lighthouse-200.jpg" sizes="50vw"
+       srcset="lighthouse-100.jpg 100w, lighthouse-200.jpg 200w,
+               lighthouse-400.jpg 400w, lighthouse-800.jpg 800w,
+               lighthouse-1000.jpg 1000w, lighthouse-1400.jpg 1400w,
+               lighthouse-1800.jpg 1800w">
   <!-- // [END picture] -->
-  <p>The image should always be 50% of the viewport width and show at
+  <p class="add_margin">The image should always be 50% of the viewport width and show at
     the correct pixel density.
   </p>
+  <!-- // [TEMPLATE footer] -->
 </body>
 </html>
