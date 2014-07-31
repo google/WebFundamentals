@@ -8,7 +8,7 @@ article:
   updated_on: 2014-07-28
   order: 2
 id: include-ads
-collection: ad-monetization
+collection: ads
 key-takeaways:
   tldr: 
     - To create an AdSense account, you must be 18, have a Google Account, and address.
@@ -84,7 +84,7 @@ ensuring your site looks great on any device.
 If you don't use responsive ad units, you will have to write a lot more code 
 to control how ads appear based on a user's device. Even if you must specify 
 the exact size of your ad units, use responsive ad units in 
-[advanced mode]({{site.baseurl}}/monetization/ad-monetization/customize-ads.html#what-if-responsive-sizing-isnt-enough).
+[advanced mode]({{site.baseurl}}/monetization/ads/customize-ads.html#what-if-responsive-sizing-isnt-enough).
 
 To make your code simpler and save you time and effort,
 the responsive ad code automatically adapts the ad unit size to your page layout.
@@ -143,7 +143,7 @@ mobile device or via the Chrome emulator.
 {% include modules/remember.liquid title="Remember" list=page.notes.body %}
 
 <div>
-  <a href="/web/fundamentals/resources/samples/monetization/ad-monetization/">
+  <a href="/web/fundamentals/resources/samples/monetization/ads/">
     <img src="images/ad-ss-600.png" sizes="100vw" 
       srcset="images/ad-ss-1200.png 1200w, 
               images/ad-ss-900.png 900w,

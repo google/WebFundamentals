@@ -8,7 +8,7 @@ article:
   updated_on: 2014-07-28
   order: 1
 id: how-ads-work
-collection: ad-monetization
+collection: ads
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
   gplusauthor: https://plus.google.com/110573989653316535297

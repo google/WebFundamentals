@@ -7,7 +7,7 @@ article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
   order: 1
-id: ad-monetization
+id: ads
 collection: monetization
 ---
 

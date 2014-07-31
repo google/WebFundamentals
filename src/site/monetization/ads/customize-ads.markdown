@@ -8,7 +8,7 @@ article:
   updated_on: 2014-07-17
   order: 3
 id: customize-ads
-collection: ad-monetization
+collection: ads
 key-takeaways:
   tldr: 
     - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push content below it.
@@ -67,7 +67,7 @@ to advanced mode and override smart sizing in your responsive ad unit code.
 For example, you can control the exact sizing of ads using
 [media queries]({{site.baseurl}}/layouts/rwd-fundamentals/use-media-queries.html):
 
-1. Follow the instructions to [create a responsive ad unit]({{site.baseurl}}/monetization/ad-monetization/include-ads.html#create-ad-units).
+1. Follow the instructions to [create a responsive ad unit]({{site.baseurl}}/monetization/ads/include-ads.html#create-ad-units).
 2. In the Ad code box, select the <strong>Advanced (code modification required)</strong>
 from the Mode drop-down.
 3. Modify the ad code to set the exact sizes of your ads based on the user's device:
