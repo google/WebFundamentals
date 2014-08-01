@@ -105,7 +105,7 @@ and simulating geolocation not being available via the overrides menu.
 <img src="images/emulategeolocation.png">
 
 *  Open up the overrides menu in the DevTools
-*  Check “Override Geolocation” then enter in Lat = 41.4949819 and Lat = -0.1461206
+*  Check “Override Geolocation” then enter in Lat = 41.4949819 and Lon = -0.1461206
 *  Refresh the page and it will now use your overridden positions for geolocation
 
 ##  Always Handle Errors
