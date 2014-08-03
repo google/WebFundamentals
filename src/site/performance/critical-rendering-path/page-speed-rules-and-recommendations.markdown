@@ -27,7 +27,7 @@ Async resources unblock the document parser and allow the browser to avoid block
 
 ### **Defer parsing JavaScript**
 
-Any non-essential scripts that are not critical to constructing the visible content for the initial render should be deferred to minimize the amount of work the browser has to perform to render the page.
+Any non-essential scripts those are not critical to constructing the visible content for the initial render should be deferred to minimize the amount of work the browser has to perform to render the page.
 
 ### **Avoid long running JavaScript**
 
