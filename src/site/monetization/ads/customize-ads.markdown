@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Customize Your Ads"
-description: "The best ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
-introduction: "The best ads improve user experience; format ads so they don't look out of place on your site. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
+description: "The best can ads improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
+introduction: "The best can ads improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
 article:
   written_on: 2014-07-31
   updated_on: 2014-07-31
@@ -11,7 +11,7 @@ id: customize-ads
 collection: ads
 key-takeaways:
   tldr: 
-    - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push content below it.
+    - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it.
     - Always use responsive ad units; if smart sizing isn't enough, switch to advanced mode.
     - Maximize revenue by allowing text and display images to compete for your ad space.
     - Look for opportunities to integrate ads throughout the content to avoid ad blindness.
@@ -45,7 +45,7 @@ When it comes to deciding where to place ads on your site,
 and how many ads to include, always put the user first!
 
 * Use ads to augment site content; not the other way around.
-* Pages with excessive ads, ads that push the content down below the fold, 
+* Pages with excessive ads, ads that push important content down below the fold, 
 ads clustered together that dominate the viewable space or ads without clear 
 labeling lead to lower user satisfaction and are against AdSense policies.
 * Ensure ads provide value to users. If you have ad units that generate 
@@ -75,7 +75,6 @@ from the Mode drop-down.
 {% highlight html %}
 <style type="text/css">
   .adslot_1 { width: 320px; height: 50px; }
-  @media (max-width:400px) { .adslot_1 { display:none !important; } }
   @media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
   @media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } }
 </style>
@@ -104,11 +103,8 @@ potential:
 * Be sure to allow both [text](https://support.google.com/adsense/answer/185665)
 and [display ads](https://support.google.com/adsense/answer/185666). Excluding
 one type of ads limits the number of advertisers available to you.
-* [Maximize ad space](https://support.google.com/adsense/answer/17958)
-by including more than one ad unit in your site.
 * Use ad sizes that are popular with advertisers, for example, 300px by 250px
 (see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621)).
-* Place ads near your content, but don't let the ads get in the way. 
 
 ## Choose styles that compliment your site
 
