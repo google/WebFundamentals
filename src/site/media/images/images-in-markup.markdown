@@ -127,11 +127,12 @@ depending on media queries or image format.
 {% include_code _code/media.html picture html %}
 
 In the above example, if the browser width is at least 800px, then either
-`300.png` or `600.png` will be used, depending on the device resolution.  If
-the browser is between 400px and 800px, then either `200.png` or `400.png`
-will be used, again, depending on the device resolution.  For backwards
-compatibility or where the `picture` element isn’t supported, the browser
-will render the `img` element instead, and should always be included.
+`head.jpg` or `head-2x.jpg` will be used, depending on the device resolution. 
+If the browser is between 450px and 800px, then either `head-small.jpg` or 
+`head-small-2x.jpg` will be used, again, depending on the device resolution.
+For screen widths less than 450px and backwards compatibility where the 
+`picture` element isn’t supported, the browser will render the `img` element 
+instead, and should always be included.
 
 ### Relative sized images
 
