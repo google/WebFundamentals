@@ -25,7 +25,7 @@ key-takeaways:
       for elements and include the <code>autocomplete</code> attribute.
 remember:
   use-placeholders:
-    - Placeholders disappear as soon as focus is placed in an element, thus
+    - Placeholders disappear as soon as the user starts typing in an element, thus
       they are not a replacement for labels.  They should be used as an aid
       to help guide users on the required format and content.
   recommend-input:
@@ -90,7 +90,8 @@ elements may be covered by the virtual keyboard.
 ### Use placeholders
 
 The placeholder attribute provides a hint to the user about what's expected in
-the input by displaying its value as light text until the element gets focus.
+the input, typically by displaying the value as light text until the the user 
+starts typing in the element.
 
 <input type="text" placeholder="MM-YYYY">
 
