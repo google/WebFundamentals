@@ -40,7 +40,7 @@ Contributing
 ------------
 
 Web Fundamentals is an open source project and we welcome your contributions! 
-Before submitting a pull request, please review [contributing.md](contributing.md)
+Before submitting a pull request, please review [CONTRIBUTING.md](CONTRIBUTING.md)
 and make sure that there is an issue filed describing the fix or new content.
 If you don't complete these steps, we won't be able to accept your pull request, sorry.
 
