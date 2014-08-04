@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Customize Your Ads"
-description: "The best can ads improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
-introduction: "The best can ads improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
+description: "The best ads can improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
+introduction: "The best ads can improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
 article:
   written_on: 2014-07-31
   updated_on: 2014-07-31
