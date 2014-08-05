@@ -19,65 +19,65 @@ handlers:
   static_files: robots.txt
   upload: robots.txt
 
-- url: /web/fundamentals/(.*\.png)
+- url: /web/(.*\.png)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.png)
 
-- url: /web/fundamentals/(.*\.ico)
+- url: /web/(.*\.ico)
   static_files: build/static/\1
   expiration: 7d
   upload: build/static/(.*\.ico)
 
-- url: /web/fundamentals/(.*\.jpg)
+- url: /web/(.*\.jpg)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.jpg)
 
-- url: /web/fundamentals/(.*\.woff)
+- url: /web/(.*\.woff)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.woff)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
-- url: /web/fundamentals/(.*\.eot)
+- url: /web/(.*\.eot)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.eot)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
-- url: /web/fundamentals/(.*\.ttf)
+- url: /web/(.*\.ttf)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.ttf)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
-- url: /web/fundamentals/(.*\.svg)
+- url: /web/(.*\.svg)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.svg)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
-- url: /web/fundamentals/index.html
+- url: /web/index.html
+  static_files: build/static/fundamentals/index.html
+  upload: build/static/fundamentals/index.html
+  secure: always
+
+- url: /web/
   static_files: build/static/index.html
   upload: build/static/index.html
   secure: always
 
-- url: /web/fundamentals/
-  static_files: build/static/index.html
-  upload: build/static/index.html
-  secure: always
-
-- url: /web/fundamentals/(.+)/
+- url: /web/(.+)/
   static_files: build/static/\1/index.html
   upload: build/static/(.+)/index.html
   secure: always
 
-- url: /web/fundamentals/(.*)
+- url: /web/(.*)
   static_files: build/static/\1
   expiration:  1h
   upload: build/static/(.+)
