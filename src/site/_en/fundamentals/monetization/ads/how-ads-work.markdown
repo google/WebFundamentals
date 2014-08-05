@@ -48,9 +48,9 @@ is best for sites with their own advertising teams.
 ### AdSense
 
 Google AdSense is a free, simple way for sites of all sizes to earn money by 
-displaying targeted ads. AdSense shows ads that are relevent to your users
+displaying targeted ads. AdSense shows ads that are relevant to your users
 with automatic targeting.  You do not need to manage inventory or advertiser
-relatioships, AdSense gives you instant and automatic access to a huge source
+relationships, AdSense gives you instant and automatic access to a huge source
 of advertiser demand.
 
 AdSense also provides you with the tools you need to be successful, including:
@@ -95,7 +95,7 @@ sized based on the user's device.
           images/ad-ss-300.png 300w" 
   alt="Sample website with ads on desktop and mobile">
 
-It may be necessary to use staticly sized ads, in this case, refer to
+It may be necessary to use statically sized ads, in this case, refer to
 the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621).
 
 
