@@ -181,13 +181,13 @@ module SampleBuilder
 					else
 						codepath = File.join(dirPaths[dir], "/_code")
 						prefix, relative_path = sourcepath.split(codepath)
-
+						assetdir = dirPaths[dir].sub("_en/fundamentals/", "")
 						site.static_files << SampleAssetFile.new(
 							site,
 							site.source,
 							File.dirname(File.join(codepath, relative_path)),
 							File.basename(sourcepath),
-							File.dirname(File.join(gen_dir, dirPaths[dir], relative_path)))
+							File.dirname(File.join(gen_dir, assetdir, relative_path)))
 					end
 				end
 			end
