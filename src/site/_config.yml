@@ -4,8 +4,9 @@ source: .
 destination: ../appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
-baseurl: /web/fundamentals
-url: /web/fundamentals
+baseurl: /web
+fundamentals: /web/fundamentals
+url: /web
 highlighter: pygments
 pygments: true
 spotlights: false

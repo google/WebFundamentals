@@ -15,7 +15,7 @@
     {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
     {% if section.in_header != false and site.spotlights == true or checkTitle != 'spotlights'  %}
     <li class="main-nav__item main-nav__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} main-nav__item--current{% endif %} {% if section.hasSubNav %} main-nav__item--has-child{% endif %}">
-      <a class="main-nav__link main-nav__link--parent" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
+      <a class="main-nav__link main-nav__link--parent" href="{{site.fundamentals}}{{ section.path }}" title="Go to {{ section.title }}">
 
         {{ section.title }}
 
@@ -36,7 +36,7 @@
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in section.section %}
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
-                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.baseurl}}{{ subsection.path }}">
+                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.fundamentals}}{{ subsection.path }}">
                       <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span> {{ subsection.title }} <i class="main-nav__icon icon icon-chevron-right"></i>
                     </a>
                   </li>
@@ -47,7 +47,7 @@
               <div class="main-nav__featured g-medium--1 g-medium--last g-wide--2 g-wide--last">
                 <p class="main-nav__featured-title medium">Feature case study</p>
                 <p class="main-nav__featured-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consectetur adipiscing elit.</p>
-                <a href="{{site.baseurl}}#" title="View the case study" class="cta--secondary main-nav__featured-cta">View</a>
+                <a href="{{site.fundamentals}}#" title="View the case study" class="cta--secondary main-nav__featured-cta">View</a>
               </div>
               {% endcomment %}
             </div>

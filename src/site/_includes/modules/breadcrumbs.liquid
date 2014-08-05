@@ -2,7 +2,7 @@
   <p>
   {% for p in page.ancestors %}
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    <a href="{{site.baseurl}}{{ p.url | clean}}" title="{{ p.title }}" {% if forloop.first %}rel="home"{%endif%} itemprop="url"><span itemprop="title">{{ p.title }}</span></a>
+    <a href="{{site.fundamentals}}{{ p.url }}" title="{{ p.title }}" {% if forloop.first %}rel="home"{%endif%} itemprop="url"><span itemprop="title">{{ p.title }}</span></a>
     </span>
     /
   {% endfor %}

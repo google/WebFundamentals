@@ -8,7 +8,7 @@
 
         {% if site.spotlights == true or checkTitle != 'spotlights' %}
         <li class="sitemap__item sitemap__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} sitemap__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} sitemap__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} sitemap__item--current{% endif %} {% if section.hasSubNav %} sitemap__item--has-child{% endif %}">
-          <a class="sitemap-list__link sitemap-list__link--parent" href="{{site.baseurl}}{{ section.path }}" title="Go to {{ section.title }}">
+          <a class="sitemap-list__link sitemap-list__link--parent" href="{{site.fundamentals}}{{ section.path }}" title="Go to {{ section.title }}">
             {{ section.title }}
           </a>
         </li>
@@ -23,7 +23,7 @@
 
       <div class="main-footer__google-section">
         <h3 class="main-footer__title"><a href="https://developers.google.com/">
-          <img id="developers-logo-footer" src="{{site.baseurl}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
+          <img id="developers-logo-footer" src="{{site.fundamentals}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
         </a></h3>
         <ul class="main-footer__list main-footer__list--secondary google-list">
           <li><a href="http://www.google.com/">Google</a></li>
