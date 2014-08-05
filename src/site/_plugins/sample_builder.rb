@@ -105,7 +105,7 @@ module SampleBuilder
 		end
 
   		def write(dest)
-  			dest_path = destination(dest).sub("/_en/fundamentals", "")
+  			dest_path = destination(dest)
   			dirname = File.dirname(dest_path)
       		FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
       		if @use_jshtml
@@ -147,14 +147,13 @@ module SampleBuilder
     	end
 
     	def filename()
-    		# TODO(ianbarber): Include directory in output.
-    		File.join(@dir, File.basename(@sourcepath))
+    		File.join(@dir, File.basename(@sourcepath).sub("/_en/fundamentals", ""))
     	end
   	end
 
 	class Generator < Jekyll::Generator
 		def generate(site)
-			gen_dir = "resources/samples"
+			gen_dir = "fundamentals/resources/samples"
 			pages = []
 			dirs = Set.new
 			dirPaths = {}
@@ -194,9 +193,11 @@ module SampleBuilder
 			end
 
 		  	pages.each do |page|
+		  		Jekyll.logger.info "SAMPLE: " + page.filename
 				filename = page.filename
 				dirname = File.dirname(File.join(target_dir, filename))
-				location = File.join(gen_dir, filename)
+				location = File.join(gen_dir, filename.sub("_en/fundamentals/", ""))
+				Jekyll.logger.info "SAMPLE: " + location
 				site.static_files << SampleFile.new(
 						site,
 						site.dest,
