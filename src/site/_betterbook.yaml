@@ -1,82 +1,85 @@
 toc:
 - title: "Web <strong>Fundamentals</strong>"
-  path: /
+  path: /fundamentals/
   home: true
 - title: "Get Started"
-  path: /getting-started/your-first-multi-screen-site/
+  path: /fundamentals/getting-started/your-first-multi-screen-site/
 - title: "Documentation"
-  path: /#documentation
+  path: /fundamentals/#documentation
   hasSubNav: true
   section:
     - title: "Multi-Device Layouts"
-      path: /layouts/
+      path: /fundamentals/layouts/
       id: "multi-device-layouts"
       section:
         - title: "Responsive Web Design Basics"
-          path: /layouts/rwd-fundamentals/
+          path: /fundamentals/layouts/rwd-fundamentals/
         - title: "Responsive Web Design Patterns"
-          path: /layouts/rwd-patterns/
+          path: /fundamentals/layouts/rwd-patterns/
         - title: "Layout Patterns"
-          path: /layouts/layout-patterns/
+          path: /fundamentals/layouts/layout-patterns/
         - title: "UI Elements"
-          path: /layouts/ui-elements/
+          path: /fundamentals/layouts/ui-elements/
     - title: "Forms and User Input"
-      path: /input/
+      path: /fundamentals/input/
       id: user-input
       section:
       - title: "Touch Input"
-        path: /input/touch/
+        path: /fundamentals/input/touch/
       - title: "Form Input"
-        path: /input/form/
+        path: /fundamentals/input/form/
     - title: "Images, Video and Audio"
-      path: /media/
+      path: /fundamentals/media/
       id: introduction-to-media
       section:
       - title: "Images"
-        path: /media/images/
+        path: /fundamentals/media/images/
       - title: "Video"
-        path: /media/video/
+        path: /fundamentals/media/video/
       - title: "Audio"
-        path: /media/audio/
+        path: /fundamentals/media/audio/
     - title: "Monetization"
-      path: /monetization/
+      path: /fundamentals/monetization/
       id: monetization
       section:
       - title: "Ad Monetization"
-        path: /monetization/ad-monetization/
+        path: /fundamentals/monetization/ad-monetization/
     - title: "Device Access"
-      path: /device-access/
+      path: /fundamentals/device-access/
       id: device-access
       section:
       - title: "User location"
-        path: /device-access/user-location
+        path: /fundamentals/device-access/user-location
       - title: "Click to call"
-        path: /device-access/click-to-call
+        path: /fundamentals/device-access/click-to-call
     - title: Performance
-      path: /performance/
+      path: /fundamentals/performance/
       id: performance
       section:
         - title: "Critical Path Rendering"
-          path: /performance/critical-path-rendering/
+          path: /fundamentals/performance/critical-path-rendering/
         - title: "Optimizing Content Efficiency"
-          path: /performance/optimizing-content-efficiency/
+          path: /fundamentals/performance/optimizing-content-efficiency/
         - title: "Optimizing Networking"
-          path: /performance/optimizing-networking/
+          path: /fundamentals/performance/optimizing-networking/
         - title: "Optimizing Interactivity"
-          path: /performance/optimizing-interactivity/
+          path: /fundamentals/performance/optimizing-interactivity/
         - title: "Measuring Performance"
-          path: /performance/measuring-performance/
+          path: /fundamentals/performance/measuring-performance/
 - title: Tools
-  path: /tools/
+  path: /fundamentals/tools/
 - title: Resources
-  path: /resources/
+  path: /fundamentals/resources/
   in_header: false
   section:
   - title: "Glossary"
-    path: /resources/glossary/
+    path: /fundamentals/resources/glossary/
   - title: "Samples"
-    path: /resources/samples/
+    path: /fundamentals/resources/samples/
   - title: "Styleguide"
-    path: /resources/styleguide/
+    path: /fundamentals/resources/styleguide/
   - title: "Example Article"
-    path: /resources/example-article/
+    path: /fundamentals/resources/example-article/
+- title: Web <strong>Starter Kit</strong>
+  path: /starter-kit/
+  in_header: false

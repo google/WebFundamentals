@@ -23,8 +23,9 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
-        String filepath = File.join(File.dirname(page["path"]), @file).sub("/_code", "")
-        url = File.join(context.registers[:site].baseurl, "/resources/samples", filepath).strip
+        relpath = File.dirname(page["path"]).sub("/_en", "")
+        String filepath = File.join(relpath, @file).sub("/_code", "")
+        url = File.join(context.registers[:site].baseurl, "/fundamentals/resources/samples", filepath).strip
         out = super(context)
         "<a href=\"#{url}\">#{out}</a>"
     end
@@ -113,13 +114,15 @@ module Jekyll
         @character = '}'
       end
 
+      relpath = filepath.sub("_en/", "")
+
       <<-HTML
   </div>
   </div>
   <div class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
       <code class='html'>#{highlighted_code.strip}</code>
-      <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/resources/samples/#{filepath}">View full sample</a>
+      <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/fundamentals/resources/samples/#{relpath}">View full sample</a>
     </div>
   </div>
   <div class="container">

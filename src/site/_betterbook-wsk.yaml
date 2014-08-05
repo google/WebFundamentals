@@ -1,0 +1,17 @@
+toc:
+- title: "Web <strong>Starter Kit</strong>"
+  path: /starter-kit/
+  home: true
+- title: "Download"
+  path: https://github.com/google/web-starter-kit/releases/
+  external: true
+- title: "Getting Started"
+  path: /fundamentals/tools/setup/setup_kit.html
+- title: "Documentation"
+  path: /fundamentals/tools/
+- title: "GitHub"
+  path: https://github.com/google/web-starter-kit
+  external: true
+- title: Web <strong>Fundamentals</strong>
+  path: /fundamentals/
+  in_header: false

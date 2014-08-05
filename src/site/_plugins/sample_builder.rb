@@ -105,7 +105,7 @@ module SampleBuilder
 		end
 
   		def write(dest)
-  			dest_path = destination(dest)
+  			dest_path = destination(dest).sub("/_en/fundamentals", "")
   			dirname = File.dirname(dest_path)
       		FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
       		if @use_jshtml
