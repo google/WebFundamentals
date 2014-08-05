@@ -75,7 +75,7 @@ units:
 * [Pre-defined](https://support.google.com/adsense/answer/6002621).
 * [Custom-sized](https://support.google.com/adsense/answer/3289364).
 
-You are building a responsive site; use respoonsive ad units.
+You are building a responsive site; use responsive ad units.
 Responsive ads automatically resize based on the size of the device
 and the width of the parent container.
 Responsive ads work in line with your responsive layout,
