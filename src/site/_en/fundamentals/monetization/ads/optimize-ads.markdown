@@ -44,17 +44,13 @@ TBD.
 
 TBD.
 
-## Monitor ad performance
+## See which ads are targeted to your site
 
-TBD.
-
-### Summary of performance reports
-
-TBD.
-
-### See which ads are targeted to your site
-
-TBD. 
+If you'd like to see how ads are being targeted to your site,
+we recommend running the <strong>Targeting types</strong> report.
+To run this report,
+visit the <strong>Performance reports</strong tab in your AdSense account
+and select <strong>Targeting types</strong> in the left-hand panel.
 
 ### Run experiments
 
