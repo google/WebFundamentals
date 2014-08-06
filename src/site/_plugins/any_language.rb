@@ -41,7 +41,7 @@ module Jekyll
     def destination(dest)
       path = self.superdest("")
       if @includelang        
-        path = File.join(@langcode, path)
+        path = File.join("_langs", @langcode, path)
       end
       path = File.join(dest, path)
     end
