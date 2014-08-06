@@ -4,7 +4,7 @@ title: "Getting the user to consent to location sharing"
 description: ""
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-08-06
   order: 2
 rel:
   gplusauthor: https://plus.google.com/+PaulKinlan
@@ -61,15 +61,24 @@ or some other proxy service.
 
 ## Always request access to location on a user gesture
 
-Never try to request access to the user's current location on page load (like
-in the following picture). There is no context for the reason why the site is
-requesting the  user's current location.
+Make sure the user understands why you’re asking for their location, and what
+the benefit to them will be.  Asking for it immediately on the homepage as 
+the site loads results in a poor user experience.
 
-<img src="images/geolocation.png">
-
-The user hasn't had time to read the page and understand the context of the
-request.  Instead wait for a user gesture on an action that the user would
-expect to trigger a request.
+<div class="clear g-wide--pull-1">
+  <div class="g--half">
+    <figure class="fluid">
+      <img src="images/sw-navigation-bad-md.png" alt="">
+      <figcaption>Asking for it immediately on the homepage as the site loads results in a poor user experience.</figcaption>
+    </figure>
+  </div>
+  <div class="g--half g--last">
+    <figure class="fluid">
+      <img src="images/sw-navigation-good-md.png" alt="">
+      <figcaption>Always request access to location on a user gesture</figcaption>
+      </figure>
+  </div>
+</div>
 
 Instead you should give the user a clear call-to-action or an indication  that
 an operation will require access to their location.  The user will then be able

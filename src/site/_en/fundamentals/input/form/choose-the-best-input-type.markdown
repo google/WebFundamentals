@@ -1,16 +1,18 @@
 ---
 layout: article
 title: "Choose the best input type"
-description: "Every tap counts. Users appreciate websites that automatically present number
+description: "Streamline information entry by using the right input type.
+Users appreciate websites that automatically present number
 pads for entering phone numbers, or automatically advance fields as they entered
 them. Look for opportunities to eliminate wasted taps in your forms."
-introduction: "Every tap counts. Users appreciate websites that automatically present number
+introduction: "Streamline information entry by using the right input type.
+Users appreciate websites that automatically present number
 pads for entering phone numbers, or automatically advance fields as they entered
 them. Look for opportunities to eliminate wasted taps in your forms."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
-  order: 1
+  updated_on: 2014-08-06
+  order: 2
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
   twitterauthor: "@petele"

@@ -4,8 +4,8 @@ title: "Commerce and Conversions"
 description: "The customer journey is getting more complex, and users expect to convert on their own terms."
 introduction: "The customer journey is getting more complex, and users expect to convert on their own terms. In this section, we look at how to drive conversions by putting your visitors in control."
 article:
-  written_on: 2014-07-28
-  updated_on: 2014-07-28
+  written_on: 2014-08-06
+  updated_on: 2014-08-06
   order: 3
 id: principles-of-site-design-conversion
 rel:
@@ -23,20 +23,39 @@ key-takeaways:
 
 {% wrap content %}
 
+<style type="text/css">
+  img.phone {
+    max-height: 500px;
+  }
+</style>
+
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
 ## Let users explore before they commit
 
-Placing registration gates too early in a site experience can be detrimental to 
-conversion. In the study, participants became frustrated by sites that demanded 
-registration in order to continue - especially if the site was an unfamiliar 
-brand.  While getting access to customer information may be integral to your 
-business, asking for it too early may result in fewer registrations, so don't 
-ask for it too early.
+Requiring login or account creation too early in a site experience can be 
+detrimental to conversion. In the study, participants became frustrated by 
+sites that demanded registration in order to continue - especially if the 
+site was an unfamiliar brand.  While getting access to customer information 
+may be integral to your business, asking for it too early may result in fewer 
+registrations, so don’t ask for it too early.
 
-<img src="image00.png" width="624" height="332" />
+<div class="clear g-wide--pull-1">
+  <div class="g--half">
+    <figure class="fluid">
+      <img src="imgs/cc-gates-bad-md.png" alt="Site with login gates">
+      <figcaption>Placing login or registration too early in a site can be detrimental to conversion.</figcaption>
+    </figure>
+  </div>
+  <div class="g--half g--last">
+    <figure class="fluid">
+      <img src="imgs/cc-gates-good-md.png" alt="Allow browsing without sign in.">
+      <figcaption>Allow users to browse the site without requiring sign in.</figcaption>
+      </figure>
+  </div>
+</div>
 
 Before offering their personal information, users want to browse content and get 
 a sense of what a site has to offer.  In the study, many of the sites that 
@@ -51,7 +70,10 @@ guest checkout as "convenient," "simple," and "easy [and] quick." They were
 annoyed at a site that required registration to purchase, especially since the 
 site didn't explain how registration would benefit them.
 
-<img src="image01.png" width="272" height="408" />
+<figure>
+  <img src="imgs/cc-purchase-guest-good-md.png" class="phone" alt="Site with guest or logged in purchase.">
+  <figcaption>Allow users to purchase with a guest account.</figcaption>
+</figure>
 
 ## Make it easy to finish on another device
 
@@ -60,7 +82,10 @@ perhaps to see it on a bigger screen, or they get distracted and want to pick it
 up later.  For instance, a career site allowed participants to email themselves 
 jobs to apply for later.
 
-<img src="image02.png" width="284" height="410" />
+<figure>
+  <img src="imgs/cc-other-device-good-md.png" class="phone" alt="Site that allows users to continue on another device.">
+  <figcaption>Provide easy ways for users to continue browsing or shopping on another device.</figcaption>
+</figure>
 
 Offer an easy way to save or share information across devices, for example 
 provide a way for users to share items across social networks or to email a link 
@@ -73,14 +98,6 @@ users, offer a third-party checkout service they may already use. Several retail
 sites in the study offered third-party payment services as an option, reducing 
 purchasing friction for users of those services and allowing the site to prefill 
 shipping info.
-
-## Use click-to-call buttons for complex tasks
-
-Offer [click-to-call](https://developers.google.com/web/fundamentals/device-access/click-to-call/click-to-call) 
-at points in the conversion process that require entry of complex or sensitive 
-information.  Participants appreciated the option to call a financial services 
-company to complete an action over the phone, rather than fill out complicated 
-forms on their mobile device.
 
 {% endwrap %}
 
