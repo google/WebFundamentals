@@ -51,7 +51,7 @@ module Jekyll
   class LanguageAsset < Jekyll::StaticFile
     def initialize(site, dest, path, file, langcode, includelang)
       super(site, dest, File.join("_" + langcode, path), file)
-      @newpath = includelang ? File.join(langcode, path) : path;
+      @newpath = includelang ? File.join("_langs", langcode, path) : path;
       @file = file
       @langcode = langcode
       @includelang = includelang
@@ -111,7 +111,7 @@ module Jekyll
       elsif source_file =~ /\.(markdown|html)/ 
         # Markdown is our main content language, create a page.
         site.pages << LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang);
-      elsif source_file =~ /\.(png|jpg)/
+      elsif source_file =~ /\.(png|jpg|css|mp4|webm|vtt|svg)/
         # Copy across other assets.
         #Jekyll.logger.info relative_dir + " vs " + File.join(langcode, relative_dir)
         site.static_files << LanguageAsset.new(

@@ -101,7 +101,7 @@ module SampleBuilder
 		end
 
 		def url
-			File.join(@path, @filename)
+			File.join(@path.sub("_langs/en", ""), @filename)
 		end
 
   		def write(dest)
@@ -147,7 +147,7 @@ module SampleBuilder
     	end
 
     	def filename()
-    		File.join(@dir, File.basename(@sourcepath).sub("/_en/fundamentals", ""))
+    		File.join(@dir, File.basename(@sourcepath).sub("/_en", ""))
     	end
   	end
 
@@ -184,7 +184,7 @@ module SampleBuilder
 					else
 						codepath = File.join(dirPaths[dir], "/_code")
 						prefix, relative_path = sourcepath.split(codepath)
-						assetdir = dirPaths[dir].sub("_en/fundamentals/", "")
+						assetdir = dirPaths[dir].sub("_en/", "").sub("fundamentals/", "")
 						site.static_files << SampleAssetFile.new(
 							site,
 							site.source,
@@ -196,11 +196,12 @@ module SampleBuilder
 			end
 
 		  	pages.each do |page|
-		  		Jekyll.logger.info "SAMPLE: " + page.filename
+		  		#Jekyll.logger.info "SAMPLE: " + page.filename
 				filename = page.filename
 				dirname = File.dirname(File.join(target_dir, filename))
-				location = File.join(gen_dir, filename.sub("_en/fundamentals/", ""))
-				Jekyll.logger.info "SAMPLE: " + location
+				location = File.join(gen_dir, 
+					filename.sub("_en/", "").sub("fundamentals/", ""))
+				#Jekyll.logger.info "SAMPLE: " + location
 				site.static_files << SampleFile.new(
 						site,
 						site.dest,
