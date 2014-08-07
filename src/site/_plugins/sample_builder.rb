@@ -154,6 +154,9 @@ module SampleBuilder
 	class Generator < Jekyll::Generator
 		def generate(site)
 			gen_dir = "fundamentals/resources/samples"
+			if site.config.has_key?("langs_available")
+				gen_dir = File.join("_langs/en", gen_dir)
+			end
 			pages = []
 			dirs = Set.new
 			dirPaths = {}
