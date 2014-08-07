@@ -11,7 +11,7 @@ submitting the form."
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
-  order: 2
+  order: 3
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
   twitterauthor: "@petele"

@@ -12,7 +12,7 @@ rel:
   twitterauthor: "@petele"
 article:
   written_on: 2014-04-30
-  updated_on: 2014-06-12
+  updated_on: 2014-08-06
   order: 1
 collection: images
 key-takeaways:
@@ -51,6 +51,10 @@ remember:
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  img.phone {
+    max-height: 500px;
+    
   }
 </style>
 
@@ -224,6 +228,20 @@ specify the the size of them image.  When the browser width is greater than
 600px, the image will be 25% of the viewport width, when it is between 500px
 and 600px, the image will be 50% of the viewport width, and below 500px, it
 will be full width.
+
+
+## Make product images expandable
+
+Customers want to see what they're buying.  On retail sites, users expect to be 
+able to view high resolution closeups of products to get a better look at 
+details, and study participants got frustrated if they weren't able to.
+
+<img src="img/sw-make-images-expandable-good-md.png" class="phone" srcset="img/sw-make-images-expandable-good-md.png 1x, img/sw-make-images-expandable-good-lg.png 2x" alt="J. Crews website with expandable product image">
+<figcaption>J. Crew's website with expandable product image.</figcaption>
+
+A good example of tappable, expandable images is provided by the J. Crew site.  
+An disappearing overlay indicates that an image is tappable, providing a zoomed 
+in image with fine detail visible.
 
 
 ## Other image techniques

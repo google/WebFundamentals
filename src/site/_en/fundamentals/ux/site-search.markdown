@@ -4,8 +4,8 @@ title: "Site Search"
 description: "Site search is vital for helping mobile users find what they're looking for in a hurry."
 introduction: "Site search is vital for helping mobile users find what they're looking for in a hurry."
 article:
-  written_on: 2014-07-28
-  updated_on: 2014-07-28
+  written_on: 2014-08-06
+  updated_on: 2014-08-06
   order: 2
 id: principles-of-site-design-ssearch
 rel:
@@ -22,6 +22,12 @@ key-takeaways:
 
 {% wrap content %}
 
+<style type="text/css">
+  img.phone {
+    max-height: 500px;
+  }
+</style>
+
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
@@ -33,7 +39,10 @@ be one of the first things mobile users see on your site, avoid hiding it behind
 a menu. In the study, participants responded best to easily-visible, open text 
 search boxes at the top of a page.
 
-<img src="image00.png" width="624" height="338" />
+<figure>
+  <img src="images/ss-search-md.jpg" alt="Sample of site with search accessible and not.">
+  <figcaption>Ensure that search isn't hidden behind a menu or hard to find place.</figcaption>
+</figure>
 
 ## Ensure site search results are relevant
 
@@ -42,7 +51,20 @@ so they don't have to swipe through multiple pages of results. Make life easier
 for users with smart-search features like autocomplete, corrected misspellings 
 and suggesting search terms or providing related matches.
 
-<img src="image01.png" width="624" height="341" />
+<div class="clear g-wide--pull-1">
+  <div class="g--half">
+    <figure class="fluid">
+      <img src="images/ss-relevant-bad-md.png" alt="Search returning irrelevant results">
+      <figcaption>This site includes results for anything with the word kid in it.</figcaption>
+    </figure>
+  </div>
+  <div class="g--half g--last">
+    <figure class="fluid">
+      <img src="images/ss-relevant-good-md.png" alt="Site with relevant search results">
+      <figcaption>Macy's returns only kids items.</figcaption>
+      </figure>
+  </div>
+</div>
 
 Participants didn't bother to swipe through multiple pages of search results. 
 Instead, they judged a site's search based on the results it returned first, so 
@@ -58,7 +80,10 @@ site allowed participants to specify configurations that didn't actually exist.
 Help users avoid problems by letting them know how many results will be returned 
 with a particular filter applied.
 
-<img src="image02.png" width="624" height="314" />
+<figure>
+  <img src="images/ss-filters-md.jpg" class="phone" alt="Make filters accessible.">
+  <figcaption>Avoid placing filters in hard to find places.</figcaption>
+</figure>
 
 Don't bury the filters at the bottom of the page where users have to scroll to 
 the end of the result set before they can begin to filter what they're looking 
@@ -70,7 +95,10 @@ For sites that serve diverse customer segments, it can be helpful to ask users a
 few questions before they search to ensure they get results from the most 
 relevant content segment. 
 
-<img src="image03.png" width="300" height="410" />
+<figure>
+  <img src="images/ss-guide-good-md.png" class="phone" alt="Zappos guides users by asking them what they're looking for.">
+  <figcaption>Help users to find what they're looking for by guiding them in the right direction.</figcaption>
+</figure>
 
 For example, a large shoe retailer began its mobile searches by having 
 participants select the gender and size of shoe they were looking for.
