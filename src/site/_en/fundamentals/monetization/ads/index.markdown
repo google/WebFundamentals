@@ -6,7 +6,7 @@ introduction: "Serving advertisements provides a way for web developers to make 
 article:
   written_on: 2014-07-31
   updated_on: 2014-07-31
-  order: 1
+  order: 2
 id: ads
 collection: monetization
 ---

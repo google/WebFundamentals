@@ -1,0 +1,30 @@
+---
+layout: article
+title: "Make It Easy To Finish On Another Device"
+description: "Offer an easy way to save or share information across devices"
+introduction: "Offer an easy way to save or share information across devices, for example provide a way for users to share items across social networks or to email a link directly within the site itself."
+rel:
+  gplusauthor: https://plus.google.com/+PeteLePage
+  twitterauthor: "@petele"
+article:
+  written_on: 2014-08-07
+  updated_on: 2014-08-07
+  order: 3
+id: cc-finish-another-device
+collection: cc-principles
+---
+
+{% wrap content %}
+
+
+<figure>
+  <img src="imgs/cc-other-device-good.png" srcset="imgs/cc-other-device-good.png 1x, imgs/cc-other-device-good-2x.png 2x" alt="Site that allows users to continue on another device.">
+  <figcaption>Provide easy ways for users to continue browsing or shopping on another device.</figcaption>
+</figure>
+
+There are many reasons a user might want to finish a task on another device, 
+perhaps to see it on a bigger screen, or they get distracted and want to pick it 
+up later.  For instance, a career site allowed participants to email themselves 
+jobs to apply for later.
+
+{% endwrap %}
