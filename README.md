@@ -67,6 +67,17 @@ Mac
 1. Install the [Grunt CLI](http://gruntjs.com/)
     * `npm install -g grunt-cli`
 
+Running the site
+================
+
+Once you have all the dependencies installed go to the root of the checked out repo and type:
+
+```
+make server
+```
+
+This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at http://localhost:8081), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
+
 
 Using project-level meta data
 =============================
