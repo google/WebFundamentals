@@ -7,9 +7,8 @@ description: "Responsive web design patterns are quickly evolving, but there
 introduction: "The mostly fluid pattern consists primarily of a fluid grid.  On large or medium
   screens, it usually remains the same size, simply adjusting the margins on wider
   screens."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

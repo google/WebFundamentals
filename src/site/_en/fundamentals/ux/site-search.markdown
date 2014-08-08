@@ -8,9 +8,8 @@ article:
   updated_on: 2014-08-06
   order: 2
 id: principles-of-site-design-ssearch
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+author:
+  - petelepage
 collection: principles-of-site-design
 key-takeaways:
   tldr:   

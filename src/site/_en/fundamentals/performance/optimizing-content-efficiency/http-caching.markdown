@@ -8,8 +8,8 @@ article:
   updated_on: 2014-01-05
   order: 4
 collection: optimizing-content-efficiency
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 key-takeaways:
   validate-etags:
     - "Validation token is communicated by the server via the ETag HTTP header"

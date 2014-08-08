@@ -1,9 +1,26 @@
-/* THANKS */
-To the web
+---
 
-Authors: Pete LePage, Paul Kinlan, Sam Dutton, Matt Guan, Meggin Kearny, Katie McCormick
-Developers: ..
-Designers: ..
+---
+
+/* THANKS */
+
+Authors: 
+{% for c in site.data["contributors"] %}
+ {% assign contributor = c[1] %}{% if contributor.role contains "author" %}{{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
+
+Translators: 
+{% for c in site.data["contributors"] %}
+ {% assign contributor = c[1] %}{% if contributor.role contains "translator" %}{{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
+
+Developers:
+
+{% for c in site.data["contributors"] %}
+ {% assign contributor = c[1] %}{% if contributor.role contains "engineer" %}{{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
+
+Special thanks:
+
+{% for c in site.data["contributors"] %}
+ {% assign contributor = c[1] %}{% if contributor.role contains "thanks" %}{{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
 
 /* SITE */
 Standards: HTML5, CSS3

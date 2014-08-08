@@ -6,9 +6,8 @@ description: "Responsive web design patterns are quickly evolving, but there
               desktop and mobile devices"
 introduction: "The layout shifter pattern is the most responsive to with multiple breakpoints
   across several screen widths."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

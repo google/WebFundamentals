@@ -10,9 +10,8 @@ article:
   order: 3
 id: using-wsk-styleguide
 #collection: web-starter-kit
-rel:
-  gplusauthor: https://plus.google.com/+MattGaunt
-  twitterauthor: "@Gauntface"
+authors:
+  - mattgaunt
 key-takeaways:
 ---
 

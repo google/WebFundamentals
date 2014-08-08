@@ -1,0 +1,81 @@
+# A collection of all the people who have kindly contributed content for us.
+
+petelepage:
+  name:
+    given: Pete
+    family: LePage
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://petelepage.com
+  google: +PeteLePage
+  twitter: petele
+  email: petele@google.com
+  description: "Pete is a Developer Advocate"
+
+ilyagrigorik:
+  name:
+    given: Ilya
+    family: Grigorik
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://igvita.com
+  google: +IlyaGrigorik
+  twitter: igrigorik
+  description: "Ilya is a Developer Advocate and Web Perf Guru"
+
+mattgaunt:
+  name:
+    given: Matt
+    family: Gaunt
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage: http://blog.gauntface.com
+  google: +MattGuant
+  twitter: gauntface
+  description: "Matt is a Developer Advocate"
+
+ianbarber:
+  name:
+    given: Ian
+    family: Barber
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - engineer
+  homepage: http://ianbarber.com
+  google: +ianbarber
+  twitter: ianbarber
+  email: ianbarber@google.com
+  description: "Ian is DRE"
+
+paulkinlan:
+  name:
+    given: Paul
+    family: Kinlan
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  homepage: http://paul.kinlan.me
+  google: +PaulKinlan
+  twitter: paul_kinlan
+  email: paulkinlan@google.com
+  description: "Paul is a Developer Advocate"
+

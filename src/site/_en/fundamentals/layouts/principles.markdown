@@ -7,9 +7,8 @@ article:
   written_on: 2014-08-04
   updated_on: 2014-08-04
 id: hp-nav-principles
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 collection: principles-of-site-design
 ---
 

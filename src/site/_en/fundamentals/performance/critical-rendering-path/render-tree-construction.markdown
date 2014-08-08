@@ -8,8 +8,8 @@ article:
   updated_on: 2014-04-28
   order: 2
 collection: critical-rendering-path
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 key-takeaways:
   render-tree-construction:
     - The DOM and CSSOM trees are combined to form the render tree

@@ -13,9 +13,9 @@ article:
   order: 1
 id: multi-screen-content
 collection: multi-screen
-rel:
-  gplusauthor: https://plus.google.com/+PaulKinlan
-  twitterauthor: "@Paul_Kinlan"
+authors:
+  - paulkinlan
+translators:
 related-guides:
   create-amazing-forms:
     -

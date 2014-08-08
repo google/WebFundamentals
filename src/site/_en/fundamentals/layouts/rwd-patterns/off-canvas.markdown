@@ -8,9 +8,8 @@ introduction: "Rather than stacking content vertically, the off canvas pattern p
   frequently used content, perhaps navigation or app menus off screen, only
   showing it when the screen size is large enough, and on smaller screens, content
   is only a click away."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

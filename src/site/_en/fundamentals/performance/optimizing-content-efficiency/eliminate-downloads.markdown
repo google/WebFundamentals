@@ -8,8 +8,8 @@ article:
   updated_on: 2014-04-29
   order: 1
 collection: optimizing-content-efficiency
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 key-takeaways:
   eliminate-downloads:
     - "Inventory all own and third party assets on your pages"

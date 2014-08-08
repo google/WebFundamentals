@@ -8,8 +8,8 @@ article:
   updated_on: 2014-04-29
   order: 2
 id: optimizing-content-efficiency
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 collection: performance
 ---
 

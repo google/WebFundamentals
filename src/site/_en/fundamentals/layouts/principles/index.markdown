@@ -8,9 +8,8 @@ article:
   updated_on: 2014-08-04
   order: 0
 id: hp-nav-principles
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 id: layout-principles
 collection: multi-device-layouts
 ---

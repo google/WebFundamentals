@@ -7,9 +7,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 2
-rel:
-  gplusauthor: https://plus.google.com/+MattGaunt
-  twitterauthor: "@gauntface"
+authors:
+  - mattgaunt
 collection: navigation-patterns
 introduction: "A Tab Bar can be used as the main navigation for your site. It gives the user visibility of the main sections of your site as well as an easy way to identify where they are within your web app."
 key-takeaways:

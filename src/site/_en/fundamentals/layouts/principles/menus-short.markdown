@@ -3,9 +3,8 @@ layout: article
 title: "Keep Menus Short and Sweet"
 description: ""
 introduction: "An extensive menu might work well for your desktop site, but mobile users won't have the patience to scroll through a long list of options to try and find what they want. Consider how you can present the fewest menu items possible."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

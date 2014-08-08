@@ -11,9 +11,8 @@ article:
   written_on: 2014-06-06
   updated_on: 2014-06-06
   order: 1
-rel:
-  gplusauthor: https://plus.google.com/+PaulKinlan
-  twitterauthor: "@Paul_Kinlan"
+authors:
+  - paulkinlan
 collection: user-location
 key-takeaways:
   geo: 

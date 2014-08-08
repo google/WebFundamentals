@@ -3,9 +3,8 @@ layout: article
 title: "Keep users in a single browser window"
 description: ""
 introduction: "Switching between windows on a smartphone can be troublesome, and raises the risk that visitors might not find their way back to your site."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

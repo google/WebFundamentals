@@ -3,9 +3,8 @@ layout: article
 title: "Don't let promotions steal the show"
 description: ""
 introduction: "Promotions and ads can overshadow the content they're next to, and make it harder for users to accomplish tasks."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

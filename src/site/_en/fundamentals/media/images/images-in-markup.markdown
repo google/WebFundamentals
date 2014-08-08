@@ -7,9 +7,8 @@ introduction: "The <code>img</code> element is powerful – it downloads,
 decodes and renders content – and modern browsers support a range of image 
 formats.  Including images that work across devices is no different than for 
 desktop, and only requires a few minor tweaks to create a good experience."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-08-06

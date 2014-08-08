@@ -11,9 +11,8 @@ article:
   order: 3
 id: device-orientation
 collection: device-access
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 remember:
   not-stable:
     - Use <b>extreme</b> caution when deciding to use device motion or

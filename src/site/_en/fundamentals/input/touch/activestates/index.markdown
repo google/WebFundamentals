@@ -10,9 +10,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 1
-rel:
-  gplusauthor: https://plus.google.com/+MattGaunt
-  twitterauthor: "@gauntface"
+authors:
+  - mattgaunt
 key-takeaways:
   add-states:
     - Make your site feel snappy and responsive&colon; change the UI for each state :hover, :active and :focus.

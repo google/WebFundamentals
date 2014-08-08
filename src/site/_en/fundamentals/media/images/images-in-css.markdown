@@ -8,9 +8,8 @@ elements, making it easy to add multiple images, cause them to repeat, and more.
  When combined with media queries, the background property becomes even more
 powerful, enabling conditional image loading based on screen resolution,
 viewport size and more."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

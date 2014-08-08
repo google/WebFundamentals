@@ -3,9 +3,8 @@ layout: article
 title: "Keep Calls To Action Front and Center"
 description: "Desc"
 introduction: "It can be easy for mobile users to miss menu items, so always put your key calls-to-action where you know users will see them."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

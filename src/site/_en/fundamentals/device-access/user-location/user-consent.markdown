@@ -6,9 +6,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-08-06
   order: 2
-rel:
-  gplusauthor: https://plus.google.com/+PaulKinlan
-  twitterauthor: "@Paul_Kinlan"
+authors:
+  - paulkinlan
 collection: user-location
 introduction: "As a web developer, having access to the user's location opens up a huge number
   of possibilities such as advanced filtering, pinpointing the user on a map,

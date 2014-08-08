@@ -1,0 +1,14 @@
+<div class="container clear">
+	<div class="g-wide--3 g-wide--last">
+		<h4>Authors</h4>
+		{% for author in page.authors %}
+		{% assign contributor = site.data["contributors"][author] %}
+<a href="{{site.url}}/fundamentals/contributors.html#{{author}}">{{contributor.name.given}} {{contributor.name.family}}</a>
+		{% endfor %}
+		<h4>Translators</h4>
+		{% for author in page.translators %}
+		{% assign contributor = site.data["contributors"][author] %}
+<a href="{{site.url}}/fundamentals/contributors.html#{{author}}">{{contributor.name.given}} {{contributor.name.family}}</a>
+		{% endfor %}
+	</div>
+</div>

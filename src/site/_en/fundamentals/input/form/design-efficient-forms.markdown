@@ -7,9 +7,8 @@ article:
   written_on: 2014-08-06
   updated_on: 2014-08-06
   order: 1
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 collection: form-input
 key-takeaways:
   tldr:

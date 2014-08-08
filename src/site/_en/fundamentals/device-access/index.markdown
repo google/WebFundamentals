@@ -6,9 +6,8 @@ introduction: "You have a surprising amount of access to the user's device, from
 snippet: "Locate, call and snap"
 id: device-access
 collection: home
-rel:
-  gplusauthor: https://plus.google.com/+PaulKinlan
-  twitterauthor: "@Paul_Kinlan"
+authors:
+  - paulkinlan
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29

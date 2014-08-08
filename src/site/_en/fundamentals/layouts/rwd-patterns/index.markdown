@@ -7,9 +7,8 @@ description: "Responsive web design patterns are quickly evolving, but there
 introduction: "Responsive web design patterns are quickly evolving, but there
               are a handful of established patterns that work well across the
               desktop and mobile devices."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

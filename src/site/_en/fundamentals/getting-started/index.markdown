@@ -5,6 +5,9 @@ description: "It can often seem daunting to get started building sites and exper
 introduction: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web."
 id: getting-started
 collection: home
+authors:
+  - paulkinlan
+translators:
 ---
 
 {% comment %}

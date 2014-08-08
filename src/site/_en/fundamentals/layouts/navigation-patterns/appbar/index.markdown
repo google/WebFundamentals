@@ -7,9 +7,8 @@ article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
   order: 1
-rel:
-  gplusauthor: https://plus.google.com/+MattGaunt
-  twitterauthor: "@gauntface"
+authors:
+  - mattgaunt
 collection: navigation-patterns
 introduction: "Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
 key-takeaways:

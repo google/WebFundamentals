@@ -14,9 +14,8 @@ article:
   order: 1
 id: setting-up-wsk
 #collection: web-starter-kit
-rel:
-  gplusauthor: https://plus.google.com/+MattGaunt
-  twitterauthor: "@Gauntface"
+authors:
+  - mattgaunt
 key-takeaways:
 ---
 

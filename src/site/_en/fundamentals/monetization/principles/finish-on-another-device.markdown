@@ -3,9 +3,8 @@ layout: article
 title: "Make It Easy To Finish On Another Device"
 description: "Offer an easy way to save or share information across devices"
 introduction: "Offer an easy way to save or share information across devices, for example provide a way for users to share items across social networks or to email a link directly within the site itself."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

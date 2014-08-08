@@ -3,9 +3,8 @@ layout: article
 title: "Make It Easy To Get To The Home Page"
 description: ""
 introduction: "When mobile users navigate through your site, they want an easy way to get back to your initial homepage."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

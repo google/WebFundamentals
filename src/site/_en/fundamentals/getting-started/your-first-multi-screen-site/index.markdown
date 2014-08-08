@@ -12,9 +12,9 @@ article:
   order: 2
 id: multi-screen
 collection: getting-started
-rel:
-  gplusauthor: https://plus.google.com/+PaulKinlan
-  twitterauthor: "@Paul_Kinlan"
+authors:
+  - paulkinlan
+translators:
 ---
 
 {% wrap content%}

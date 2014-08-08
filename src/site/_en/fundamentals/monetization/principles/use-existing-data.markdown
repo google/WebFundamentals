@@ -3,9 +3,8 @@ layout: article
 title: "Use Existing Information To Maximize Convenience"
 description: "Take advantage of information you already have, and/or use third-party payment services to make conversion as easy as possible."
 introduction: "Take advantage of information you already have, and/or use third-party payment services to make conversion as easy as possible."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07

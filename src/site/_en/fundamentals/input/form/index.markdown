@@ -12,9 +12,8 @@ article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
   order: 1
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 collection: user-input
 id: form-input
 ---

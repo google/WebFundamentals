@@ -8,8 +8,8 @@ article:
   updated_on: 2014-04-28
   order: 1
 collection: critical-rendering-path
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 key-takeaways:
   construct-object-model:
     - Bytes → characters → tokens → nodes → object model

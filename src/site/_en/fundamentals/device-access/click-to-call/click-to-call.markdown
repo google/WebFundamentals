@@ -12,9 +12,8 @@ article:
   updated_on: 2014-06-17
   order: 1
 id: click-to-call
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 collection: click-to-call
 key-takeaways:
   c2c: 

@@ -10,9 +10,8 @@ functionality.  Browsers generate visuals that would have previously required
 images.   This means that browsers no longer need to download separate image
 files and prevents awkwardly scaled images.  Icons can be rendered using unicode
 or special icon fonts."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-06-10

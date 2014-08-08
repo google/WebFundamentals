@@ -10,9 +10,8 @@ article:
   updated_on: 2014-06-17
   order: 1
 id: device-orientation
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 collection: device-orientation
 key-takeaways:
   devmotion: 

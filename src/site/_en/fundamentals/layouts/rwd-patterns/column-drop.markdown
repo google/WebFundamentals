@@ -6,9 +6,8 @@ description: "Responsive web design patterns are quickly evolving, but there
               desktop and mobile devices"
 introduction: "For full-width multi-column layouts, column drop simply stacks the columns
   vertically as the window width becomes too narrow for the content.  "
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

@@ -5,8 +5,11 @@
 {% capture page_title %}{% if page.id != "home" %}{{ page.title }} — Web Fundamentals{%else%}Web Fundamentals — Google Developers{%endif%}{% endcapture %}
 <title>{{ page_title }}</title>
 
-{% if page.rel.gplusauthor %}
-<meta name="author" content="{{ page.rel.gplusauthor }}" />
+{% assign author = page.authors[0] %}
+{% assign main_author = site.data["contributors"][author]%}
+
+{% if main_author.google %}
+<meta name="author" content="{{ main_author.google }}" />
 {% endif %}
 
 {% if page.description %}
@@ -27,12 +30,12 @@
 <meta property="twitter:account_id" content="@chromiumdev" />
 <meta property="twitter:site" content="@chromiumdev" />
 <meta property="twitter:description" content="{{page.description}}" />
-{% if page.rel.twitterauthor %}<meta property="twitter:creator" content="{{ page.rel.twitterauthor }}" />{% else %}<meta property="twitter:creator" content="@chromiumdev" />{% endif%}
+{% if main_author.twitter %}<meta property="twitter:creator" content="{{ main_author.twitter }}" />{% else %}<meta property="twitter:creator" content="@chromiumdev" />{% endif%}
 {% if page.thumbnail %}<meta name="twitter:image:src" content="https://developers.google.com/{{site.fundamentals}}{{ page.filepath }}/{{ page.thumbnail }}" />
 {% else %}<meta property="twitter:image:src" content="https://developers.google.com/web/fundamentals/imgs/logo.png" />{% endif %}
 
 
-{% if page.rel.gplusauthor %}<link rel="author" href="{{ page.rel.gplusauthor }}/posts">{% endif %}
+{% if main_author.google %}<link rel="author" href="{{ main_author.google }}/posts">{% endif %}
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
 
 <meta itemprop="name" content="{{ page_title }}">
@@ -46,6 +49,6 @@
 {% if page.snippet_img %}<meta property="og:image" content="https://developers.google.com/{{site.fundamentals}}{{ page.filepath }}/{{ page.thumbnail }}" />
 {% else %}<meta property="og:image" content="https://developers.google.com/web/fundamentals/imgs/logo.png" />{% endif %}
 <meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
-{% if page.rel.fbauthor %}<meta property="og:author" content="{{ page.rel.fbauthor }}" />{% endif %}
+{% if main_author.facebook %}<meta property="og:author" content="{{ main_author.facebook }}" />{% endif %}
 
 <link rel="stylesheet" media="screen" href="{{site.baseurl}}/css/styles.min.css" />

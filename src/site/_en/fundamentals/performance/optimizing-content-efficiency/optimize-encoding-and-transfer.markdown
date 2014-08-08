@@ -8,8 +8,8 @@ article:
   updated_on: 2014-04-29
   order: 2
 collection: optimizing-content-efficiency
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 key-takeaways:
   compression-101:
     - Compression is the process of encoding information using fewer bits

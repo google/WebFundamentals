@@ -6,9 +6,8 @@ description: "Responsive web design patterns are quickly evolving, but there
               desktop and mobile devices"
 introduction: "Tiny tweaks simply makes small changes to the layout, such as adjusting font
   size, resizing images or moving content around in very minor ways.  "
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

@@ -9,10 +9,8 @@ article:
   order: 1
 id: how-ads-work
 collection: ads
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  gplusauthor: https://plus.google.com/110573989653316535297
-  twitterauthor: "@petele"
+author:
+  - petelepage
 key-takeaways:
   tldr: 
     - Choose the ads platform best suited to your site. We recommend the <a href="http://www.google.com/adsense/start/">AdSense</a> platform for most sites, and the <a href="http://www.google.com/doubleclick/publishers/">DoubleClick platform</a> for sites with their own advertising teams.

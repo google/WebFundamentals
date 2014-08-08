@@ -8,8 +8,8 @@ article:
   updated_on: 2014-04-28
   order: 3
 collection: critical-rendering-path
-rel:
-  gplusauthor: https://plus.google.com/+IlyaGrigorik
+authors:
+  - ilyagrigorik
 key-takeaways:
   render-blocking-css:
     - By default CSS is treated as a render blocking resource

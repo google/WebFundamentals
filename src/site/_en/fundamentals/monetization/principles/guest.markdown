@@ -3,9 +3,8 @@ layout: article
 title: "Let Users Purchase As A Guest"
 description: "Offer the option to check out as a guest, and encourage registration with tangible benefits."
 introduction: "Offer the option to check out as a guest, and encourage registration with tangible benefits."
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 article:
   written_on: 2014-08-07
   updated_on: 2014-08-07
