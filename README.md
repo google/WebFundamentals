@@ -67,6 +67,17 @@ Mac
 1. Install the [Grunt CLI](http://gruntjs.com/)
     * `npm install -g grunt-cli`
 
+Running the site
+================
+
+Once you have all the dependencies installed go to the root of the checked out repo and type:
+
+```
+make server
+```
+
+This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at [http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
+
 
 Using project-level meta data
 =============================
@@ -93,3 +104,19 @@ Jekyll Special elements
 * Code import: `{% highlight javascript %} {% include sample1.js %} {% endhighlight %}`
 * `{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
 * `{{ showcases _category_}}` a list of showcases.
+
+
+Translations
+=============================
+
+The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br". 
+
+To test translations set the lang variabe in the _config.yml. For example, to set the mode to French:
+
+    lang: "fr"
+
+Note the underscore is not required here. 
+
+To ensure the content is built when being released onto developers.google.com, ensure that the langs_available list in _config-devsite.yml is updated to include any new language directories being added. For example, to add French:
+
+    langs_available: ["fr"]

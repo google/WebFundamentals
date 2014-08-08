@@ -11,7 +11,7 @@ module Jekyll
     # parent pages ready for iteration.
     def ancestors
       a = []
-      url = self.url
+      url = self.url.sub("/fundamentals", "")
       while url != "/index.html"
         pt = url.split("/")
         if pt[-1] != "index.html"
@@ -50,7 +50,7 @@ module Jekyll
     # Gets Page object that has given url. Very in-efficient O(n) solution.
     def get_page_from_url(url)
       site.pages.each do |page|
-        return page if page.url == url
+        return page if page.url == ("/fundamentals" + url)
       end
     end
   end

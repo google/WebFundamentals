@@ -66,6 +66,7 @@ module Jekyll
     def generate(site)
       lang = site.config["lang"]
       lang = lang ? lang : "en"
+      Jekyll.logger.info "Generating For Lang " + lang
       if site.config.has_key?("langs_available")
         generate_all_langs(site)
       else
@@ -79,7 +80,7 @@ module Jekyll
         relative_dir = File.dirname(source_file.sub(site.source + "/_en/", ""));
         langcode = lang
         # If the file doesn't exist in the translated language, back off to "en".
-        if langcode != "en" && !File.exists?(File.join(site.source, langcode, relative_dir, file_name))
+        if langcode != "en" && !File.exists?(File.join(site.source, "_" + langcode, relative_dir, file_name))
           langcode = "en"
         end
         create_page(site, source_file, relative_dir, file_name, langcode)
