@@ -46,6 +46,21 @@ mattgaunt:
   twitter: gauntface
   description: "Matt is a Developer Advocate"
 
+mattgaunt:
+  name:
+    given: Paul
+    family: Lewis
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage: http://aerotwist.com/
+  google: +PaulLewis
+  twitter: aerotwist
+  description: "Paul is a Design and Perf Advocate"
+
 ianbarber:
   name:
     given: Ian
