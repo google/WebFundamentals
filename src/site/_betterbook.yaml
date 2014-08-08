@@ -28,6 +28,12 @@ toc:
         path: /fundamentals/input/touch/
       - title: "Form Input"
         path: /fundamentals/input/form/
+    - title: "Look and Feel"
+      path: /fundamentals/look-and-feel/
+      id: look-and-feel
+      section:
+      - title: "Intro to Animations"
+        path: /fundamentals/look-and-feel/animations/
     - title: "Images, Video and Audio"
       path: /fundamentals/media/
       id: introduction-to-media
