@@ -17,6 +17,10 @@
     display: none;
   }
 
+   & .contributors-list__item .secondary-content {
+    display: none;
+  }
+
   & .primary-content {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight*2;

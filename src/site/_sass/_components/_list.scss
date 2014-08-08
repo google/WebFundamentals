@@ -610,6 +610,133 @@ ol.list-links {
   }
 }
 
+/*==========  CONTRIBUTORS LIST  ==========*/
+.contributors-list {
+  overflow: hidden;
+
+  @include medium {
+    @include flexbox;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    padding-top: $lineHeight*2;
+  }
+}
+
+.no-touch {
+  .icon-circle--large {
+    border: none !important;
+  }
+
+  a:hover .icon-circle--large {
+    -webkit-transform: none !important;
+  }
+
+}
+
+
+.contributors-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: $lineHeight;
+  margin-bottom: 0;
+
+  @include medium {
+    @include flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  & h3 {
+    margin: 0 32px;
+
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: none;
+        padding-bottom: 1px;
+
+        &:hover {
+          border-bottom: 1px solid;
+        }
+      }
+    }
+
+  }
+
+  & p {
+    margin: $lineHeight 32px 0;
+  }
+
+  & .primary-content {
+    @include medium {
+      flex: 1 1 auto;
+      -webkit-flex: 1;
+      min-height: 300px;
+      max-height: 300px;
+    }
+  }
+
+  & .secondary-content {
+    position: relative;
+    margin-top: ($lineHeight);
+    border-top: 1px solid $colorGrayKeyline;
+    flex: 1 1 auto;
+
+    @include medium {
+      width: 100%; // needed due to parent being flex
+    }
+
+    & .icon-circle {
+      position: absolute;
+      top: -$lineHeight - 2;
+      left: 50%;
+      margin-left: -21px;
+      border: 2px solid #ffffff;
+
+      & i {
+        font-size: 23px;
+      }
+    }
+  }
+
+  & ol {
+    margin: $lineHeight 32px 0;
+    padding: $lineHeight*2 0px;
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+
+    & li {
+      list-style: none;
+      padding-left: 32px;
+
+      &:before {
+        counter-increment: list;
+        content: "0" counter(list);
+        color: inherit;
+        font-weight: 400;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+      }
+
+      & a {
+        vertical-align: top;
+      }
+    }
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
 /*==========  recommended LIST  ==========*/
 
 .recommended-list {
