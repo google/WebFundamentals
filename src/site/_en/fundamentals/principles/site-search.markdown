@@ -22,12 +22,6 @@ key-takeaways:
 
 {% wrap content %}
 
-<style type="text/css">
-  img.phone {
-    max-height: 500px;
-  }
-</style>
-
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
@@ -40,7 +34,7 @@ a menu. In the study, participants responded best to easily-visible, open text
 search boxes at the top of a page.
 
 <figure>
-  <img src="images/ss-search-md.jpg" alt="Sample of site with search accessible and not.">
+  <img src="images/ss-search.jpg" srcset="images/ss-search.jpg 1x, images/ss-search-2x.jpg 2x" alt="Sample of site with search accessible and not.">
   <figcaption>Ensure that search isn't hidden behind a menu or hard to find place.</figcaption>
 </figure>
 
@@ -54,13 +48,13 @@ and suggesting search terms or providing related matches.
 <div class="clear g-wide--pull-1">
   <div class="g--half">
     <figure class="fluid">
-      <img src="images/ss-relevant-bad-md.png" alt="Search returning irrelevant results">
+      <img src="images/ss-relevant-bad.png" srcset="images/ss-relevant-bad.png 1x, images/ss-relevant-bad-2x.png 2x" alt="Search returning irrelevant results">
       <figcaption>This site includes results for anything with the word kid in it.</figcaption>
     </figure>
   </div>
   <div class="g--half g--last">
     <figure class="fluid">
-      <img src="images/ss-relevant-good-md.png" alt="Site with relevant search results">
+      <img src="images/ss-relevant-good.png" srcset="images/ss-relevant-good.png 1x, images/ss-relevant-good-2x.png 2x" alt="Site with relevant search results">
       <figcaption>Macy's returns only kids items.</figcaption>
       </figure>
   </div>
@@ -81,7 +75,7 @@ Help users avoid problems by letting them know how many results will be returned
 with a particular filter applied.
 
 <figure>
-  <img src="images/ss-filters-md.jpg" class="phone" alt="Make filters accessible.">
+  <img src="images/ss-filters.jpg" srcset="images/ss-filters.jpg 1x, images/ss-filters-2x.jpg 2x" alt="Make filters accessible.">
   <figcaption>Avoid placing filters in hard to find places.</figcaption>
 </figure>
 
@@ -96,7 +90,7 @@ few questions before they search to ensure they get results from the most
 relevant content segment. 
 
 <figure>
-  <img src="images/ss-guide-good-md.png" class="phone" alt="Zappos guides users by asking them what they're looking for.">
+  <img src="images/ss-guide-good.png" srcset="images/ss-guide-good.png 1x, images/ss-guide-good-2x.png 2x" alt="Zappos guides users by asking them what they're looking for.">
   <figcaption>Help users to find what they're looking for by guiding them in the right direction.</figcaption>
 </figure>
 
