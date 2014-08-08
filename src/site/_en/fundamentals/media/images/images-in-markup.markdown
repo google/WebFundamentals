@@ -235,8 +235,10 @@ Customers want to see what they're buying.  On retail sites, users expect to be
 able to view high resolution closeups of products to get a better look at 
 details, and study participants got frustrated if they weren't able to.
 
-<img src="img/sw-make-images-expandable-good-md.png" class="phone" srcset="img/sw-make-images-expandable-good-md.png 1x, img/sw-make-images-expandable-good-lg.png 2x" alt="J. Crews website with expandable product image">
-<figcaption>J. Crew's website with expandable product image.</figcaption>
+<figure>
+  <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="J. Crews website with expandable product image">
+  <figcaption>J. Crew's website with expandable product image.</figcaption>
+</figure>
 
 A good example of tappable, expandable images is provided by the J. Crew site.  
 An disappearing overlay indicates that an image is tappable, providing a zoomed 
