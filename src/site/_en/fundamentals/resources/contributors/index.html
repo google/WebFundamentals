@@ -30,12 +30,13 @@ collection: resources
     <h2>Authors</h2>
     <ul class="list-guides-intro guides-list container">
     {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
       {% assign cid = contributor[1] %}
       {% if cid.role contains "author" %}
       
-      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;" id="{{cindex}}">
         <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
-            <span class="icon-circle--large themed--background">Face</span>
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
             <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
           </a>
           <p>{{ cid.description }}</p>
@@ -52,12 +53,13 @@ collection: resources
     <h2>Translators</h2>
     <ul class="list-guides-intro guides-list container">
     {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
       {% assign cid = contributor[1] %}
       {% if cid.role contains "translator" %}
       
       <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
         <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
-            <span class="icon-circle--large themed--background">Face</span>
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
             <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
           </a>
           <p>{{ cid.description }}</p>
@@ -74,12 +76,13 @@ collection: resources
     <h2>Engineers</h2>
     <ul class="list-guides-intro guides-list container">
     {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
       {% assign cid = contributor[1] %}
       {% if cid.role contains "engineer" %}
       
       <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
         <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
-            <span class="icon-circle--large themed--background">Face</span>
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
             <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
           </a>
           <p>{{ cid.description }}</p>
