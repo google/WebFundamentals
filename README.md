@@ -76,7 +76,7 @@ Once you have all the dependencies installed go to the root of the checked out r
 make server
 ```
 
-This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at http://localhost:8081), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
+This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at http://localhost:8081/web/fundamentals/), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
 
 
 Using project-level meta data
