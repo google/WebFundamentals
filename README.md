@@ -93,3 +93,19 @@ Jekyll Special elements
 * Code import: `{% highlight javascript %} {% include sample1.js %} {% endhighlight %}`
 * `{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
 * `{{ showcases _category_}}` a list of showcases.
+
+
+Translations
+=============================
+
+The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br". 
+
+To test translations set the lang variabe in the _config.yml. For example, to set the mode to French:
+
+    lang: "fr"
+
+Note the underscore is not required here. 
+
+To ensure the content is built when being released onto developers.google.com, ensure that the langs_available list in _config-devsite.yml is updated to include any new language directories being added. For example, to add French:
+
+    langs_available: ["fr"]
