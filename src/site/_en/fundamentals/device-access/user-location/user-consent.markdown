@@ -67,13 +67,13 @@ the site loads results in a poor user experience.
 <div class="clear g-wide--pull-1">
   <div class="g--half">
     <figure class="fluid">
-      <img src="images/sw-navigation-bad-md.png" alt="">
+      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
       <figcaption>Asking for it immediately on the homepage as the site loads results in a poor user experience.</figcaption>
     </figure>
   </div>
   <div class="g--half g--last">
     <figure class="fluid">
-      <img src="images/sw-navigation-good-md.png" alt="">
+      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
       <figcaption>Always request access to location on a user gesture</figcaption>
       </figure>
   </div>
