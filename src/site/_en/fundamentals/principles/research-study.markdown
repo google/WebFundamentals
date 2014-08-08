@@ -6,11 +6,10 @@ introduction: "Google and AnswerLab undertook an intensive research study examin
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
-  order: 2
+  order: 1
 id: about-principles-study
-rel:
-  gplusauthor: https://plus.google.com/+PeteLePage
-  twitterauthor: "@petele"
+authors:
+  - petelepage
 collection: principles-of-site-design
 ---
 

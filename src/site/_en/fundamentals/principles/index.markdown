@@ -9,6 +9,8 @@ article:
   order: 1
 id: ux-principles-landing
 collection: principles-of-site-design
+authors:
+  - petelepage
 list:
   -
     title: "Site-wide design considerations"
@@ -16,7 +18,7 @@ list:
     list: 
     -
       title: Use responsive design patterns
-      link: /web/fundamentals/layouts/
+      link: /web/fundamentals/layouts/rwd-fundamentals/
     -
       title: Don't make users pinch-to-zoom
       link: /web/fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport.html

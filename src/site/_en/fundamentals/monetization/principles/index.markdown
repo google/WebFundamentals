@@ -9,6 +9,8 @@ article:
   order: 1
 id: cc-principles
 collection: monetization
+authors:
+  - petelepage
 ---
 
 {% comment %}
