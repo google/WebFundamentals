@@ -15,8 +15,7 @@ collection: principles-of-site-design
 
 {% wrap content %}
 
-The [results](http://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)
-uncovered a set of design principles, which were grouped into 
+The results uncovered a set of design principles, which were grouped into 
 five sections: 
 
 * Site-wide Design Considerations
@@ -28,6 +27,24 @@ five sections:
 The common thread in all sections is that mobile users tend to be very 
 goal-oriented - they expect to be able to get what they need from a mobile 
 site easily, immediately, and on their own terms. 
+
+</div>
+<div class="related-items  related-items--inline g-wide--pull-1  clear">
+  <h3 class="related-items__title ">Read the study</h3>
+  <div class="related-items__section clear">
+    <ul class="related-items-list  related-items-list--inline list-reset">
+      <li class="theme--principles">
+        <p class="medium">
+          <a href="/web/http://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&amp;utm_term=chrome&amp;utm_content=ux-landing&amp;utm_campaign=web-fundamentals#"> 
+            Principles of Mobile Site Design- Delight Users and Drive Conversions
+          </a>
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="content" markdown="1">
 
 ## About the study methodology
 
