@@ -3,12 +3,13 @@ layout: grouped-list
 title: "Principles of Site Design"
 description: ""
 introduction: "Google and AnswerLab undertook an intensive <a href='research-study.html'>research study</a> examining how a range of users interacted with a diverse set of mobile sites.  The goal, to answer the question: what makes a good mobile site?"
+snippet: "Principles to ensure a great experience."
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
   order: 1
-id: ux-principles-landing
-collection: principles-of-site-design
+id: principles
+collection: home
 authors:
   - petelepage
 list:

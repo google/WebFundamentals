@@ -108,6 +108,18 @@
     }
   }
 
+  .theme--principles & {
+    color: $colorPrinciples;
+
+    &.divider-icon:before {
+      color: $colorPrinciples;
+    }
+
+    &.divider-icon:after {
+      color: $colorPrinciplesSecondary;
+    }
+  }
+
 }
 
 .themed--background {
@@ -135,6 +147,9 @@
 
   .theme--look-and-feel &,
   .theme--look-and-feel &.next-lessons:before { background-color: $colorLookAndFeel; }
+
+  .theme--principles &,
+  .theme--principles &.next-lessons:before { background-color: $colorPrinciples; }
 
 }
 
