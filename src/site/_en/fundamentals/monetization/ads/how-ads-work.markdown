@@ -9,7 +9,7 @@ article:
   order: 1
 id: how-ads-work
 collection: ads
-author:
+authors:
   - petelepage
 key-takeaways:
   tldr: 
