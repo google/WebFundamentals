@@ -19,7 +19,7 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-<img src="imgs/arm-arc.gif" alt="An arm moving in an arc." />
+<img src="imgs/gifs/arm-arc.gif" alt="An arm moving in an arc." />
 
 As you can see from the image above, when an arm moves it creates an arc, but it starts slowly, accelerates, and then decelerates at the end.
 
