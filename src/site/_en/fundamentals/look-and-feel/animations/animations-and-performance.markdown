@@ -6,7 +6,7 @@ introduction: "Care must be taken to maintain 60fps whenever you are animating, 
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
-  order: 3
+  order: 10
 id: animations-and-performance
 collection: animations
 key-takeaways:

@@ -11,10 +11,17 @@
 	  		background: #f2f2f2;
 	  	}
 
-	  	p {
-	  		font-family: 'Helvetica', Arial, sans-serif;
-	  		text-align: center;
-	  	}
+			.button-container {
+			  text-align: center;
+			}
+
+			.box-mover {
+			  background: #4285f4;
+			  border: none;
+			  padding: 10px 12px;
+			  border-radius: 3px;
+			  color: #FFF;
+			}
 
 	  	.box {
 			  width: 100px;
@@ -24,10 +31,10 @@
 			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 
 			  -webkit-transform: translate(0, 0);
-			  -webkit-transition: -webkit-transform 500ms ease-in;
+			  -webkit-transition: -webkit-transform 500ms;
 
 			  transform: translate(0, 0);
-			  transition: transform 500ms ease-in;
+			  transition: transform 500ms;
 
 			  will-change: transform;
 			}
@@ -39,14 +46,24 @@
 	</head>
 
 	<body>
-		<p>Click on the box to animate it</p>
 		<div class="box"></div>
 
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
 		<script>
+			var boxMover = document.querySelector('.box-mover');
 			var box = document.querySelector('.box');
-			box.addEventListener('click', function() {
-				box.classList.toggle('move');
-			});
+			var x = 100;
+
+			boxMover.addEventListener('click', function() {
+			  TweenLite.to(box, 1.5, {
+			    x: x + '%',
+			    ease: 'Elastic.easeOut'
+			  });
+
+			  x = (x === 100 ? -100 : 100);
+
+			}, false);
+
 		</script>
 	</body>
 

@@ -6,7 +6,7 @@ introduction: "Nothing in nature moves linearly from one point to another. In re
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
-  order: 4
+  order: 3
 id: easing-and-natural-motion
 collection: animations
 key-takeaways:
@@ -19,10 +19,6 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-<img src="imgs/gifs/arm-arc.gif" alt="An arm moving in an arc." />
-
-As you can see from the image above, when an arm moves it creates an arc, but it starts slowly, accelerates, and then decelerates at the end.
-
 In classic animation the terms for motion that starts slowly and accelerates is “slow in”, and those that start quickly and decelerate are referred to as “slow out”, but the terminology most commonly used on the web for these are “ease in” and “ease out” respectively. We sometimes combine the two, which we call “ease in out”. Easing, then, is really the process of making the animation less severe or pronounced.
 
 ## Easing Keywords
@@ -31,12 +27,12 @@ CSS transitions and animations both let you choose the kind of easing you want t
 
 Here are some of the keywords that you can use in CSS:
 
-* linear
-* ease-in
-* ease-out
-* ease-in-out
+* `linear`
+* `ease-in`
+* `ease-out`
+* `ease-in-out`
 
-Source: [http://www.w3.org/TR/css3-transitions/#transition-timing-function-property](CSS Transitions, W3C)
+Source: [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
 You can also you use a steps keyword, which allows you to create transitions that have discrete steps, but those listed above are the most useful for creating animations that feel natural, and that’s exactly what we want.
 
@@ -46,11 +42,11 @@ To understand these a little more, let’s take a look at a sample case of movin
 
 Animations without any kind of easing are referred to as linear. If we were to make a graph of what a linear transition looks like it would be something like this:
 
-<img src="imgs/linear.png" style="max-width: 300px" />
+<img src="imgs/linear.png" style="max-width: 300px" alt="Linear ease animation curve." />
 
 As time moves along the value increases in equal amounts. When this is applied to an element’s property, such as its position, it looks like this:
 
-{% link_sample _code/box-move-linear.html %}See sample{% endlink_sample %}
+{% link_sample _code/box-move-linear.html %}See a linear animation.{% endlink_sample %}
 
 Whether you’re coding your animations by CSS or JavaScript you’ll find that there is always an option for linear motion. To achieve the effect above with CSS, our code would look something like this:
 
@@ -64,7 +60,7 @@ With linear motion things tend to feel robotic and unnatural, and this is someth
 
 Easing out causes the animation to start more quickly than linear ones, and it also has deceleration at the end.
 
-<img src="imgs/ease-out.png" style="max-width: 300px" />
+<img src="imgs/ease-out.png" style="max-width: 300px" alt="Ease-out animation curve." />
 
 There are many ways to achieve an ease out effect, but the simplest is the ease-out keyword in CSS:
 
@@ -72,7 +68,7 @@ There are many ways to achieve an ease out effect, but the simplest is the ease-
 transition: transform 500ms ease-out;
 {% endhighlight %}
 
-{% link_sample _code/box-move-ease-out.html %}See sample{% endlink_sample %}
+{% link_sample _code/box-move-ease-out.html %}See an ease-out animation.{% endlink_sample %}
 
 Easing out is typically the best for user interface work, because the fast start gives your animations a feeling of responsiveness, while still allowing for a little bit of natural slowdown at the end.
 
@@ -80,7 +76,7 @@ Easing out is typically the best for user interface work, because the fast start
 
 Ease-in animations start slowly and end fast; the opposite of ease-out.
 
-<img src="imgs/ease-in.png" style="max-width: 300px" />
+<img src="imgs/ease-in.png" style="max-width: 300px" alt="Ease-in animation curve." />
 
 This kind of animation is like a heavy stone falling, where it starts slowly and hits the ground quickly with a deadening thump.
 
@@ -90,7 +86,7 @@ To use an ease in animation, similarly to ease out and linear animations, you ca
 transition: transform 500ms ease-in;
 {% endhighlight %}
 
-{% link_sample _code/box-move-ease-in.html %}See sample{% endlink_sample %}
+{% link_sample _code/box-move-ease-in.html %}See an ease-in animation.{% endlink_sample %}
 
 From an interaction point of view, however, ease ins can feel a little unusual because of their abrupt end; as we saw earlier things that move in the real world tend to decelerate rather than simply stopping dead. Ease ins also have the detrimental effect of feeling sluggish to get going, which will negatively impact the perception of responsiveness in your app.
 
@@ -98,7 +94,7 @@ From an interaction point of view, however, ease ins can feel a little unusual b
 
 Easing in and out is akin to a car accelerating and decelerating and, used judiciously, can provide a more dramatic effect than just easing out.
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" />
+<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out animation curve." />
 
 Care must be taken here to not have an overly long animation duration, because of the sluggishness of an ease-in start to the animation. Typically something in the region of 300 - 500ms is going to be suitable, but it will depend heavily on the feel of your project as to what the exact number is. That said, because of the slow start, fast middle, and slow end, you will end up with an increased contrast to the animation, which can be quite satisfying for users.
 
@@ -108,7 +104,7 @@ To get an ease-in-out animation you can use the ease-in-out CSS keyword:
 transition: transform 500ms ease-in-out;
 {% endhighlight %}
 
-{% link_sample _code/box-move-ease-in-out.html %}See sample{% endlink_sample %}
+{% link_sample _code/box-move-ease-in-out.html %}See an ease-in-out animation.{% endlink_sample %}
 
 {% include modules/nextarticle.liquid %}
 
