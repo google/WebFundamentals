@@ -70,6 +70,8 @@
   $colorMediaSecondary: lighten($colorMedia, 30%);
   $colorPerformance: #7b5294;
   $colorPerformanceSecondary: lighten($colorPerformance, 30%);
+  $colorLookAndFeel: #404040;
+  $colorLookAndFeelSecondary: lighten($colorLookAndFeel, 30%);
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif;
