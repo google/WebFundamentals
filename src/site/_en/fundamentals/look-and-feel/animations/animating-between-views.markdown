@@ -15,10 +15,10 @@ key-takeaways:
     - Ensure any animations you use are snappy and the durations are kept short.
     - Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when  used in a desktop context.
 notes:
-  sixtyfps:
-    You should be aiming to maintain 60fps for all of your animations. That way your users will not experience stuttering animations that pull them out of their experience. Ensure that any animating element has will-change set for anything you plan to change well ahead of the animation starting. For view transitions, it’s highly likely you will want to use <code>will-change: transform</code>.
-  flinging:
-    "Making this kind of hierarchy in a cross-browser way can be challenging. For example, iOS requires additional an additional CSS property, <code>-webkit-overflow-scrolling: touch</code>, to ‘reenable’ fling scrolling, but you don’t get to control which axis that’s for, as you can with the standard overflow property. Be sure to test your implementation across a range of devices!"
+  sixtyfps: 
+    - "You should be aiming to maintain 60fps for all of your animations. That way your users will not experience stuttering animations that pull them out of their experience. Ensure that any animating element has will-change set for anything you plan to change well ahead of the animation starting. For view transitions, it’s highly likely you will want to use <code>will-change: transform</code>."
+  flinging: 
+    - "Making this kind of hierarchy in a cross-browser way can be challenging. For example, iOS requires additional an additional CSS property, <code>-webkit-overflow-scrolling: touch</code>, to ‘reenable’ fling scrolling, but you don’t get to control which axis that’s for, as you can with the standard overflow property. Be sure to test your implementation across a range of devices!"
 
 authors:
   - paullewis

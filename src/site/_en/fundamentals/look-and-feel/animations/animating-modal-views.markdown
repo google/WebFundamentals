@@ -16,7 +16,7 @@ key-takeaways:
     - Be sure to get rid of the modal view quickly when the user dismisses it, but you should bring it on to screen a little more slowly so it doesn't surprise the user.
 notes:
   pointerevents:
-    Older versions of Internet Explorer don’t support the <code>pointer-event</code> property, so for those browsers you will have to manually toggle the display property. The downside there is that it takes a frame for the change to “take hold,” so you must then use a requestAnimationFrame callback to start the animation. If you don’t wait a frame then the modal overlay will simply appear.
+    - Older versions of Internet Explorer don’t support the <code>pointer-event</code> property, so for those browsers you will have to manually toggle the display property. The downside there is that it takes a frame for the change to “take hold,” so you must then use a requestAnimationFrame callback to start the animation. If you don’t wait a frame then the modal overlay will simply appear.
 
 authors:
   - paullewis
