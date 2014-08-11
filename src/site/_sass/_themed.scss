@@ -277,6 +277,8 @@
 
   .nav-theme--principles &:hover { color: $colorPrinciples; }
 
+  .nav-theme--principles-of-site-design &:hover { color: $colorPrinciples; }
+
 }
 
 .themed {
@@ -320,6 +322,8 @@
   .nav-theme--look-and-feel & { background-color: $colorLookAndFeel; }
 
   .nav-theme--principles & { background-color: $colorPrinciples; }
+
+  .nav-theme--principles-of-site-design & { background-color: $colorPrinciples; }
 
 }
 
