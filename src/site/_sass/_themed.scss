@@ -179,6 +179,9 @@
   .theme--look-and-feel &,
   .theme--look-and-feel &.next-lessons:before { background-color: $colorLookAndFeelSecondary; }
 
+  .theme--principles &,
+  .theme--principles &.next-lessons:before { background-color: $colorPrinciplesSecondary; }
+
 }
 
 .themed--hover {
@@ -199,6 +202,8 @@
 
   .theme--look-and-feel &:hover { color: $colorLookAndFeel; }
 
+  .theme--principles &:hover { color: $colorPrinciples; }
+
 }
 
 .themed--hover-secondary {
@@ -218,6 +223,8 @@
   .theme--performance &:hover { color: $colorPerformanceSecondary; }
 
   .theme--look-and-feel &:hover { color: $colorLookAndFeelSecondary; }
+
+  .theme--principles &:hover { color: $colorPrinciplesSecondary; }
 
 }
 
@@ -243,6 +250,8 @@
   .article--performance & { color: $colorPerformance; }
 
   .article--look-and-feel & { color: $colorLookAndFeel; }
+
+  .article--principles & { color: $colorPrinciples; }
 }
 
 
@@ -266,6 +275,8 @@
 
   .nav-theme--look-and-feel &:hover { color: $colorLookAndFeel; }
 
+  .nav-theme--principles &:hover { color: $colorPrinciples; }
+
 }
 
 .themed {
@@ -285,6 +296,8 @@
   .nav-theme--performance & { color: $colorPerformance; }
 
   .nav-theme--look-and-feel & { color: $colorLookAndFeel; }
+
+  .nav-theme--principles & { color: $colorPrinciples; }
 
 }
 
@@ -306,6 +319,8 @@
 
   .nav-theme--look-and-feel & { background-color: $colorLookAndFeel; }
 
+  .nav-theme--principles & { background-color: $colorPrinciples; }
+
 }
 
 .themed--background-secondary {
@@ -325,6 +340,8 @@
   .nav-theme--performance & { background-color: $colorPerformanceSecondary; }
 
   .nav-theme--look-and-feel & { background-color: $colorLookAndFeelSecondary; }
+
+  .nav-theme--principles & { background-color: $colorPrinciplesSecondary; }
 
 }
 
