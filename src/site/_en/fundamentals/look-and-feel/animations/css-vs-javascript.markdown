@@ -1,21 +1,19 @@
 ---
 layout: article
-title: "Intro to Animations"
-description: "Get a better understanding of animations and their use in modern apps and sites."
-introduction: "Animations are increasingly a required part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straight forward. What should be animated, and when? What kind of feel should the animation have? How can you add life to your project without overwhelming your users?"
+title: "CSS vs JavaScript Animations"
+description: "You can animate with CSS or JavaScript. Which should you use, and why?"
+introduction: "There are two primary ways to do animations on the web: using CSS and using JavaScript. Which one you choose really depends on what else you have as a dependency in your project, and what effect you're trying to achieve."
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
   order: 2
-id: animations
-collection: look-and-feel
+id: css-vs-javascript-animations
+collection: animations
 key-takeaways:
   code:
-    - Use animations as a way to add life to your projects.
     - Use CSS animations for simpler “one-shot” transitions, like toggling UI element states.
     - Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind or slow-down.
     - If you choose to animate with JavaScript, go with TweenLite or, if you need more features, TweenMax.
-    - Take care that your animations don’t cause performance issues; ensure you know the impact of animating a given CSS property.
 
 notes:
   keyframes:
@@ -28,25 +26,12 @@ authors:
 ---
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-## Properties to animate
+You can achieve most effects with both CSS and JavaScript, but the amount of effort and time will differ. Each has their pros and cons, but this is a good rule-of-thumb:
 
-Great animations add a layer of enjoyment and engagement to your projects for your users. Care must also be taken to maintain performance as it will be very noticeable should they stutter or skip, and potentially be worse than no animation at all.
-
-You can animate pretty much anything you like, whether that’s widths, heights, positions, colors, backgrounds, but there are two major considerations:
-
-1. **Animations should be in support of user interaction.** Don’t just animate something because you can. That just annoys users and feels obstructive. Use strategically placed animations to reinforce the user interactions. So if they tap on the menu icon, shoot the menu out of the side of the page, or if they tap a button, have it glow or bounce to acknowledge their interaction. Do not, under any circumstances, animate the entirety of your page.
-2. **Not all animations are equal.** Some properties are more expensive to change than others. So, for example, changing the box-shadow of an element will require a much more expensive paint operation than changing -- say -- the text color. You can read more on the performance considerations of animations below, but if you want the TL;DR stick to transforms and opacity.
-
-## Ways of animating
-
-There are two primary ways to do animations on the web: using CSS and using JavaScript. There are pros and cons to each:
-
-* **Use CSS when you have smaller, self-contained states for UI elements.** For example, CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip.
-* **Use JavaScript when you need significant control over your animations.** For example, something that tracks a touch position, or an animation that you need to stop, pause, slow-down or reverse.
+* **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves are written in your CSS.
+* **Use JavaScript when you need significant control over your animations.** Something that dynamically tracks a touch position, or an animation that you need to stop, pause, slow-down or reverse are both examples of when you need JavaScript-based animations.
 
 ### Animate with CSS
 
@@ -193,25 +178,6 @@ This code starts to become very complex and difficult to manage as you try to ex
 
 Since you are in total control of the elements styles at every step you can slow down the animation, pause it, stop it, reverse it and manipulate it as you see fit.
 
-## High Performance Animations
-
-Care must be taken to maintain 60fps whenever you are animating, because any stutters or stalls will be noticeable to your users and negatively impact their experiences. Animating properties is not free, and some properties are cheaper to animate than others. For example, animating the width and height of an element changes the geometry of the element and may cause other elements on the page to move or change size. This process is called layout, and can be expensive if your page has a lot of elements. Whenever layout is triggered, the page or part of it will normally need to be painted, which is typically even more expensive than the layout operation.
-
-Where you can, you should avoid animating properties that trigger layout or paint. For most modern browsers this means animating just opacity or transform, both of which can be highly optimized by the browser, and it doesn’t matter if the animation is handled by JavaScript or CSS.
-
-For a full list of the work triggered by individual CSS properties can be found at [CSS Triggers](http://csstriggers.com), and you can find a full guide on creating [High Performance Animations on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
-
-### Using the will-change property
-
-It is worth using [`will-change`](http://dev.w3.org/csswg/css-will-change/) to ensure the browser knows that you intend to change an element’s property. This allows the browser to put the most appropriate optimizations in place ahead of you making the change. Care must be taken to not overuse will-change, however, as it can cause the browser to waste resources, which will in turn cause performance issues.
-
-The general rule of thumb is that if the animation could be triggered in the next 200ms, either by a user’s interaction or because of your application’s state, then having will-change on animating elements is a good idea. For most cases, then, any element in your app’s current view that you intend to animate should have will-change set for whichever properties you plan to change. In the case of the box sample we’ve been using throughout this guide, adding will-change would give us:
-
-{% highlight css %}
-.box {
-  will-change: transform;
-}
-{% endhighlight %}
 
 {% include modules/nextarticle.liquid %}
 
