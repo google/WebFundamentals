@@ -6,7 +6,7 @@ introduction: "Care must be taken to maintain 60fps whenever you are animating, 
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
-  order: 10
+  order: 9
 id: animations-and-performance
 collection: animations
 key-takeaways:
@@ -16,21 +16,16 @@ key-takeaways:
     - Where you can stick to changing transforms and opacity.
     - Use <code>will-change</code> to ensure that the browser knows what you plan to animate.
 
-
 authors:
   - paullewis
 ---
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-## High Performance Animations
+Animating properties is not free, and some properties are cheaper to animate than others. For example, animating the `width` and `height` of an element changes its geometry and may cause other elements on the page to move or change size. This process is called layout, and can be expensive if your page has a lot of elements. Whenever layout is triggered, the page or part of it will normally need to be painted, which is typically even more expensive than the layout operation itself.
 
- Animating properties is not free, and some properties are cheaper to animate than others. For example, animating the width and height of an element changes the geometry of the element and may cause other elements on the page to move or change size. This process is called layout, and can be expensive if your page has a lot of elements. Whenever layout is triggered, the page or part of it will normally need to be painted, which is typically even more expensive than the layout operation.
-
-Where you can, you should avoid animating properties that trigger layout or paint. For most modern browsers this means animating just opacity or transform, both of which can be highly optimized by the browser, and it doesn’t matter if the animation is handled by JavaScript or CSS.
+Where you can, you should avoid animating properties that trigger layout or paint. For most modern browsers this means limiting animations to `opacity` or `transform`, both of which can be highly optimized by the browser; it doesn’t matter if the animation is handled by JavaScript or CSS.
 
 For a full list of the work triggered by individual CSS properties can be found at [CSS Triggers](http://csstriggers.com), and you can find a full guide on creating [High Performance Animations on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
@@ -45,6 +40,13 @@ The general rule of thumb is that if the animation could be triggered in the nex
   will-change: transform;
 }
 {% endhighlight %}
+
+## CSS vs JavaScript Performance
+
+There are many pages and threads around the web that discuss the relative merits of CSS and JavaScript animations from a performance perspective. Here are a couple of points to keep in mind:
+
+* If any animation, CSS or JavaScript, triggers either paint or layout, the "main thread" will be required to do the work. In these cases there is virtually no difference as to where the animation originated (CSS or JavaScript) as the overhead of layout or paint will likely dwarf any work of the CSS or JavaScript execution.
+* CSS-based animations are typically handled on a separate thread to the browser's "main thread", where styling, layout, painting, and JavaScript are executed. This means that if the browser is running some expensive tasks, CSS-based animations can potentially keep going without being interrupted, depending on which properties are being animated.
 
 {% include modules/nextarticle.liquid %}
 

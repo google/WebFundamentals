@@ -9,6 +9,8 @@
 	  <style>
 	  	html {
 	  		background: #f2f2f2;
+	  		width: 100%;
+	  		height: 100%;
 	  	}
 
 			.button-container {
@@ -23,29 +25,27 @@
 			  color: #FFF;
 			}
 
-	  	.box {
-			  width: 100px;
+			.box {
+			  position: absolute;
+			  width: 162px;
 			  height: 100px;
-
+			  left: 50%;
+			  top: 50%;
+			  margin: -50px 0 0 -81px;
+			  border-radius: 2px;
+			  border: 1px solid #EEE;
+			  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 			  background: #FFF;
-			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-
-			  -webkit-transform: translate(0, 0);
-			  -webkit-transition: -webkit-transform 500ms;
-
-			  transform: translate(0, 0);
-			  transition: transform 500ms;
-
-			  will-change: transform;
-			}
-
-			.box.move {
-			  transform: translate(100px, 100px);
 			}
 	  </style>
 	</head>
 
 	<body>
+
+	  <div class="button-container">
+	    <button class="box-mover">Move the box</button>
+	  </div>
+
 		<div class="box"></div>
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
