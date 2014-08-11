@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Choosing the Right Easing"
-description: ""
+description: "Choose the appropriate easing for your project, whether that's easing in, out, or both. Maybe even go bouncy for extra shenanigans!"
 introduction: "Now we know about the various options available to us for easing our animations, what kind of easing should you use in your projects, and what kind of durations should they have?"
 article:
   written_on: 2014-08-08

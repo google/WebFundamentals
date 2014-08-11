@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Animating Modal Views"
-description: ""
+description: "Learn how to animate modal views in your apps."
 introduction: "Modal views are for important messages, and for which you have very good reasons to block the user interface. Care must be taken when you use them as they are disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life."
 article:
   written_on: 2014-08-08

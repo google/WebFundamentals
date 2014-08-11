@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Asymmetric Animation Timing"
-description: ""
+description: "Breaking symmetry provides contrast and appeal to your projects. Learn when and how to apply this to your projects."
 introduction: "Asymmetry to your animation durations aids your user experience by allowing you to express personality while at the same time responding quickly to user interactions. It also provides contrast to the feel, which makes the interface more visually appealing."
 article:
   written_on: 2014-08-08
