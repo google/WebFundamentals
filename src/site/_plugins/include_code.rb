@@ -23,7 +23,7 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("/_en", "").sub("/fundamentals", "")
+        relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
         String filepath = File.join(relpath, @file).sub("/_code", "")
         url = File.join(context.registers[:site].baseurl, "/fundamentals/resources/samples", filepath).strip
         out = super(context)
