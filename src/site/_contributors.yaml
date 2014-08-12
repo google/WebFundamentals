@@ -16,6 +16,20 @@ petelepage:
   email: petele@google.com
   description: "Pete is a Developer Advocate"
 
+megginkearney:
+  name:
+    given: Meggin
+    family: Kearny
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  google: +PeteLePage
+  email: mkearney@google.com
+  description: "Meggin is a Tech Writer"
+
 ilyagrigorik:
   name:
     given: Ilya
