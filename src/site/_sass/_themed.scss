@@ -108,7 +108,7 @@
     }
   }
 
-  .theme--principles & {
+  .theme--principles-of-site-design & {
     color: $colorPrinciples;
 
     &.divider-icon:before {
@@ -148,8 +148,8 @@
   .theme--look-and-feel &,
   .theme--look-and-feel &.next-lessons:before { background-color: $colorLookAndFeel; }
 
-  .theme--principles &,
-  .theme--principles &.next-lessons:before { background-color: $colorPrinciples; }
+  .theme--principles-of-site-design &,
+  .theme--principles-of-site-design &.next-lessons:before { background-color: $colorPrinciples; }
 
 }
 
@@ -179,8 +179,8 @@
   .theme--look-and-feel &,
   .theme--look-and-feel &.next-lessons:before { background-color: $colorLookAndFeelSecondary; }
 
-  .theme--principles &,
-  .theme--principles &.next-lessons:before { background-color: $colorPrinciplesSecondary; }
+  .theme--principles-of-site-design &,
+  .theme--principles-of-site-design &.next-lessons:before { background-color: $colorPrinciplesSecondary; }
 
 }
 
@@ -202,7 +202,7 @@
 
   .theme--look-and-feel &:hover { color: $colorLookAndFeel; }
 
-  .theme--principles &:hover { color: $colorPrinciples; }
+  .theme--principles-of-site-design &:hover { color: $colorPrinciples; }
 
 }
 
@@ -224,7 +224,7 @@
 
   .theme--look-and-feel &:hover { color: $colorLookAndFeelSecondary; }
 
-  .theme--principles &:hover { color: $colorPrinciplesSecondary; }
+  .theme--principles-of-site-design &:hover { color: $colorPrinciplesSecondary; }
 
 }
 
@@ -251,7 +251,7 @@
 
   .article--look-and-feel & { color: $colorLookAndFeel; }
 
-  .article--principles & { color: $colorPrinciples; }
+  .article--principles-of-site-design & { color: $colorPrinciples; }
 }
 
 
@@ -275,8 +275,6 @@
 
   .nav-theme--look-and-feel &:hover { color: $colorLookAndFeel; }
 
-  .nav-theme--principles &:hover { color: $colorPrinciples; }
-
   .nav-theme--principles-of-site-design &:hover { color: $colorPrinciples; }
 
 }
@@ -299,7 +297,7 @@
 
   .nav-theme--look-and-feel & { color: $colorLookAndFeel; }
 
-  .nav-theme--principles & { color: $colorPrinciples; }
+  .nav-theme--principles-of-site-design & { color: $colorPrinciples; }
 
 }
 
@@ -320,8 +318,6 @@
   .nav-theme--performance & { background-color: $colorPerformance; }
 
   .nav-theme--look-and-feel & { background-color: $colorLookAndFeel; }
-
-  .nav-theme--principles & { background-color: $colorPrinciples; }
 
   .nav-theme--principles-of-site-design & { background-color: $colorPrinciples; }
 
@@ -345,7 +341,7 @@
 
   .nav-theme--look-and-feel & { background-color: $colorLookAndFeelSecondary; }
 
-  .nav-theme--principles & { background-color: $colorPrinciplesSecondary; }
+  .nav-theme--principles-of-site-design & { background-color: $colorPrinciplesSecondary; }
 
 }
 
