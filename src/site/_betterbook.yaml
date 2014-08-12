@@ -10,7 +10,7 @@ toc:
   section:
     - title: "Principles of Site Design"
       path: /fundamentals/principles/
-      id: "principles"
+      id: "principles-of-site-design"
     - title: "Multi-Device Layouts"
       path: /fundamentals/layouts/
       id: "multi-device-layouts"
