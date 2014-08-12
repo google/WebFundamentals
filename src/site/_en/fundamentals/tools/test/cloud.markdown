@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 2
 collection: test
+authors:
+  - megginkearney
 key-takeaways:
   starter-kit:
     - Cloud testing lets you test your site on browsers, platforms, and devices in the cloud; you don't have to own the device to get a relatively good idea of how your site will behave.

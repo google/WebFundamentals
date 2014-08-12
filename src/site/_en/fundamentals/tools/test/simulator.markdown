@@ -7,6 +7,8 @@ article:
   updated_on: 2014-05-29
   order: 4
 #collection: test
+authors:
+  - megginkearney
 key-takeaways:
   starter-kit:
     - TBD.
