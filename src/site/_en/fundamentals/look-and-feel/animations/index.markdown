@@ -24,21 +24,19 @@ authors:
 
 ## Choose the right things to animate
 
-Great animations add a layer of enjoyment and engagement to your projects for your users. Care must also be taken to maintain performance as it will be very noticeable should they stutter or skip, and potentially be worse than no animation at all.
-
-You can animate pretty much anything you like, whether that’s widths, heights, positions, colors, backgrounds, but you'll need to be aware of performance issues and how animations affect the personality of your application.
+Great animations add a layer of enjoyment and engagement to your projects for your users. You can animate pretty much anything you like, whether that’s widths, heights, positions, colors, backgrounds, but you'll need to be aware of potential performance bottlenecks and how animations will affect the personality of your application. Stuttering or poorly-chosen animations can negatively affect user experience, so they need to be both performant and appropriate.
 
 ## Use animations to support interactions
 
-Don’t just animate something because you can. That just annoys users and feels obstructive. Instead, use strategically placed animations to reinforce the user interactions. So if they tap on the menu icon, shoot the menu out of the side of the page, or if they tap a button, have it glow or bounce to acknowledge their interaction. Do not, under any circumstances, animate the entirety of your page!
+Don’t just animate something because you can; it just annoys users and feels obstructive. Instead, use strategically placed animations to _reinforce_ the user interactions. If they tap on the menu icon, shoot the menu out of the side of the page, or if they tap a button, use perhaps a subtle glow or bounce to acknowledge the interaction. Take care to avoid animations that interrupt or obstruct the user's activity unnecessarily.
 
 ## Avoid animating expensive properties
 
-The only thing worse than animations that are ill-placed are those that cause the page to stutter. This will leave users feeling frustrated and unhappy.
+The only thing worse than animations that are ill-placed are those that cause the page to stutter. This will leave users feeling frustrated and unhappy, and likely wishing you hadn't bothered to animate things at all!
 
-Some properties are more expensive to change than others, and are therefore more likely to make apps stutter. So, for example, changing the box-shadow of an element will require a much more expensive paint operation than changing -- say -- the text color. Changing the width of an element is likely to be more expensive than changing its transform. You can read more on the performance considerations of animations in the [Animations and Performance](animations-and-performance.html) guide, but if you want the TL;DR stick to transforms and opacity changes, and make use of `will-change`.
+Some properties are more expensive to change than others, and are therefore more likely to make things stutter. So, for example, changing the `box-shadow` of an element will require a much more expensive paint operation than changing -- say -- its text color. Changing the `width` of an element is likely to be more expensive than changing its `transform`.
 
-If you want to know exactly which work is triggered by animating a given property check [CSS Triggers](http://csstriggers.com).
+You can read more on the performance considerations of animations in the [Animations and Performance](animations-and-performance.html) guide, but if you want the TL;DR stick to transforms and opacity changes, and make use of `will-change`. If you want to know exactly which work is triggered by animating a given property check [CSS Triggers](http://csstriggers.com).
 
 
 {% include modules/nextarticle.liquid %}

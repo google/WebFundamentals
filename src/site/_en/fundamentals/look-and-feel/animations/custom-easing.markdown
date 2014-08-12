@@ -22,11 +22,11 @@ authors:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/).
+If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined bezier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/).
 
-In CSS these bezier curves take four values, or 2 pairs of numbers, with each pair describing the x and y coordinates of a cubic bezier curve’s control points.  The starting point of the bezier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to control the control points. The x values for the two control points must be between 0 and 1, and each control point’s y value can exceed the [0, 1] limit, although the spec isn’t clear by how much!
+In CSS these bezier curves take four values, or 2 pairs of numbers, with each pair describing the X and Y coordinates of a cubic bezier curve’s control points.  The starting point of the bezier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much!
 
-Changing the x and y value of each control point will give you vastly different curve, and therefore a vastly different feel to your animation. For example, if the first control point is in the lower right the animation will be slow to start. If it’s in the top left area it’s going to be fast to start. Conversely, if the second control point is in the bottom right of the grid it’s going to be fast at the end, whereas if it’s in the top left it will be slow to end.
+Changing the X and Y value of each control point will give you vastly different curve, and therefore a vastly different feel to your animation. For example, if the first control point is in the lower right the animation will be slow to start. If it’s in the top left area it’s going to be fast to start. Conversely, if the second control point is in the bottom right of the grid it’s going to be fast at the end, whereas if it’s in the top left it will be slow to end.
 
 For comparison, here are two curves: a typical ease-in-out curve and a custom curve:
 
@@ -41,11 +41,11 @@ The CSS for the custom curve is:
 transition: transform 500ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
 {% endhighlight %}
 
-The first two numbers are the x and y coordinates of the first control point, the second two numbers are the x and y coordinates of the second control point.
+The first two numbers are the X and Y coordinates of the first control point, the second two numbers are the X and Y coordinates of the second control point.
 
-Making a custom curve is a lot of fun, and it gives you significant control over the feel of the animation. For example, given the above curve, you can see we have something that resembles an ease-in-out, but we’ve shortened the ease-in, or ‘getting going’ portion of the animation, and we’ve elongated the slow down at the end.
+Making a custom curve is a lot of fun, and it gives you significant control over the feel of the animation. For example, given the above curve, you can see the curve resembles a classic ease-in-out curve, but with a shortened ease-in, or ‘getting going’, portion, and an elongated slowdown at the end.
 
-Have a try making your own animation curves. Experiment with this {% link_sample _code/curve-playground.html %}animation curve tool{% endlink_sample %} and how it affects the feel of the animation.
+Experiment with this {% link_sample _code/curve-playground.html %}animation curve tool{% endlink_sample %} and see how the curve affects the feel of an animation.
 
 ## Use JavaScript for more control
 
@@ -59,7 +59,7 @@ To use something like TweenMax include the script in your page:
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 {% endhighlight %}
 
-Once that’s in place you can call TweenMax against your element and tell it which properties you’d like, along with any easing you’d like. There are a ton of easing:
+Once that’s in place you can call TweenMax against your element and tell it which properties you’d like, along with any easing you’d like. There are a ton of easing options that you can use; the code below uses an elastic ease-out:
 
 {% highlight javascript %}
 var box = document.getElementById('my-box');
@@ -71,7 +71,7 @@ TweenMax.to(box, animationDurationInSeconds, {
 });
 {% endhighlight %}
 
-The [TweenMax documentation](http://api.greensock.com/js/com/greensock/TweenMax.html) highlights all the options you have here, so they’re well worth a read.
+The [TweenMax documentation](http://greensock.com/docs/#/HTML5/GSAP/TweenMax/) highlights all the options you have here, so it's well worth a read.
 
 
 {% include modules/nextarticle.liquid %}

@@ -63,7 +63,7 @@ Now whenever the modal view is required, you can use JavaScript to toggle the "v
 modal.classList.add('visible');
 {% endhighlight %}
 
-At this point the modal view will appear without any animation, so  that can now be added in:
+At this point the modal view will appear without any animation, so that can now be added in:
 
 {% highlight css %}
 .modal {
@@ -83,7 +83,7 @@ At this point the modal view will appear without any animation, so  that can now
 
 Adding `scale` to the transform makes the view appear to drop onto the screen slightly, which is a nice effect. The default transition applies to both transform and opacity properties with a custom curve and a duration of 0.1 seconds.
 
-The duration is pretty short, though, but it's ideal for when the user dismisses the view and wants to get back to your app. The downside is that it’s probably too aggressive for when the modal view appears. To fix this you should override the transition values for the "visible" class:
+The duration is pretty short, though, but it's ideal for when the user dismisses the view and wants to get back to your app. The downside is that it’s probably too aggressive for when the modal view appears. To fix this you should override the transition values for the `visible` class:
 
 {% highlight css %}
 .modal.visible {

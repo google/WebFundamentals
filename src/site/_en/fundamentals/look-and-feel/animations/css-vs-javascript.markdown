@@ -2,7 +2,7 @@
 layout: article
 title: "CSS vs JavaScript Animations"
 description: "You can animate with CSS or JavaScript. Which should you use, and why?"
-introduction: "There are two primary ways to create animations on the web: with CSS and with JavaScript. Which one you choose really depends on what else you have as a dependency in your project, and what effect you're trying to achieve."
+introduction: "There are two primary ways to create animations on the web: with CSS and with JavaScript. Which one you choose really depends on the other dependencies of your project, and what kinds of effects you're trying to achieve."
 article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
@@ -30,12 +30,16 @@ authors:
 
 Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time will differ. Each has their pros and cons, but these are good rules-of-thumb:
 
-* **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves are written in your CSS.
-* **Use JavaScript when you need significant control over your animations.** Something that dynamically tracks a touch position, or an animation that you need to stop, pause, slow-down or reverse are both examples of when you need JavaScript-based animations.
+* **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves will be in your CSS.
+* **Use JavaScript when you need significant control over your animations.** Something that dynamically tracks a touch position, or an animation that you need to stop, pause, slow-down or reverse typically require you to use JavaScript.
+
+If you're already using jQuery or a JavaScript framework that includes animation functionality then you may find it more convenient overall to stick with that for your animations than switching to CSS.
 
 ### Animate with CSS
 
-There’s no doubt that animating with CSS is the simplest way to get something moving on screen:
+There’s no doubt that animating with CSS is the simplest way to get something moving on screen.
+
+Below is some CSS that will move an element 100px in both the X & Y axes. It's done by using a CSS transitions that's set to take 500ms. When the `move` class is added the `transform` value is changed and the transition begins.
 
 {% highlight css %}
 .box {
@@ -52,13 +56,11 @@ There’s no doubt that animating with CSS is the simplest way to get something 
 }
 {% endhighlight %}
 
-Here we have a box element that we want to move 100px in both the X & Y axes on hover. To achieve this we use a CSS transition and declare that we would like the animation to take 500 milliseconds.
-
 {% link_sample _code/box-move-simple.html %}See sample{% endlink_sample %}
 
-We have other options besides the time that the transition takes, such as how the animation feels as it animates. You can get more on that in the [“The Basics of Easing”](the-basics-of-easing.html) guide.
+Besides the transition's duration there are options for the easing, which is essentially how the animation feels. You can get more on that in the [“The Basics of Easing”](the-basics-of-easing.html) guide.
 
-If you create separate CSS classes to manage your animations, you can then use JavaScript to toggle each animation on and off:
+If, as in the above snippet, you create separate CSS classes to manage your animations, you can then use JavaScript to toggle each animation on and off:
 
 {% highlight javascript %}
 box.classList.add('move');
@@ -77,11 +79,11 @@ function onTransitionEnd() {
 }
 {% endhighlight %}
 
-In addition to using CSS transitions, we can also use CSS animations, which will allow us to have much more control over individual animation keyframes, durations and iterations.
+In addition to using CSS transitions, you can also use CSS animations, which will allow you to have much more control over individual animation keyframes, durations and iterations.
 
 {% include modules/remember.liquid title="Note" list=page.notes.keyframes %}
 
-We can, for example, animate the box in the same way as we did with the transition, but have it animate without any user interactions like clicking, and with infinite repetitions. We can also change multiple properties at the same time:
+You  can, for example, animate the box in the same way with transitions, but have it animate without any user interactions like clicking, and with infinite repetitions. You can also change multiple properties at the same time:
 
 {% highlight css %}
 /**
@@ -174,9 +176,9 @@ box.startAnimation();
 
 {% link_sample _code/box-move-js.html %}See sample{% endlink_sample %}
 
-This code starts to become very complex and difficult to manage as you try to expand it to cover more cases, so generally speaking you will benefit from choosing one of the many JavaScript libraries available for animation. If you are using jQuery in your project already, you will likely benefit from sticking with it and using the [`.animate()`](http://api.jquery.com/animate/) functions. If, on the other hand, you’re in need of a dedicated library then look at [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), which is both powerful and lightweight.
+This code starts to become very complex and difficult to manage as you try to expand it to cover more cases, so generally speaking you will benefit from choosing one of the many JavaScript libraries available for animation. If you are using jQuery in your project already, you will likely benefit from sticking with it and using the [`.animate()`](http://api.jquery.com/animate/) functions. If, on the other hand, you’re in need of a dedicated library then look at [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), which is  very powerful. There is a lightweight form of it, called TweenLite, which is friendlier from a file size point of view.
 
-Since you are in total control of the elements styles at every step you can slow down the animation, pause it, stop it, reverse it and manipulate it as you see fit.
+Since with JavaScript animations you are in total control of the elements styles at every step you can slow down the animation, pause it, stop it, reverse it and manipulate it as you see fit.
 
 {% include modules/nextarticle.liquid %}
 
