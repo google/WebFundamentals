@@ -30,6 +30,20 @@ megginkearney:
   email: mkearney@google.com
   description: "Meggin is a Tech Writer"
 
+samdutton:
+  name:
+    given: Sam
+    family: Dutton
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  google: +SamDutton
+  email: dutton@google.com
+  description: "Sam is a Developer Advocate"
+
 ilyagrigorik:
   name:
     given: Ilya
