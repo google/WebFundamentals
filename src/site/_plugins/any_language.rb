@@ -109,7 +109,7 @@ module Jekyll
     def create_page(site, source_file, relative_dir, file_name, langcode, includelang=false)
       if relative_dir =~ /_.*/ 
         # Don't process underscore files.
-      elsif source_file =~ /\.(markdown|html)/ 
+      elsif source_file =~ /\.(markdown|html)|sitemap\.xml/ 
         # Markdown is our main content language, create a page.
         site.pages << LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang);
       elsif source_file =~ /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
