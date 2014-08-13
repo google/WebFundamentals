@@ -5,7 +5,7 @@ description: "Everyone increasingly relies on the mobile web for research and di
 introduction: "Google and AnswerLab undertook an intensive research study examining how a range of users interacted with a diverse set of mobile sites.  The goal, to answer the question: what makes a good mobile site?"
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-08-13
   order: 1
 id: about-principles-study
 authors:
@@ -35,7 +35,7 @@ site easily, immediately, and on their own terms.
     <ul class="related-items-list  related-items-list--inline list-reset">
       <li class="theme--principles">
         <p class="medium">
-          <a href="/web/http://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&amp;utm_term=chrome&amp;utm_content=ux-landing&amp;utm_campaign=web-fundamentals#"> 
+          <a href="https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals"> 
             Principles of Mobile Site Design- Delight Users and Drive Conversions
           </a>
         </p>
