@@ -14,11 +14,11 @@ ianbarber:
   country: UK
   role:
     - engineer
-  homepage: http://ianbarber.com
+  homepage: http://riskcompletefailure.com
   google: +ianbarber
   twitter: ianbarber
   email: ianbarber@google.com
-  description: "Ian is DRE"
+  description: "Ian is a DRE"
 
 samdutton:
   name:
@@ -74,7 +74,7 @@ megginkearney:
   country: USA
   role:
     - author
-  google: +PeteLePage
+  google: 110573989653316535297
   email: mkearney@google.com
   description: "Meggin is a Tech Writer"
 
