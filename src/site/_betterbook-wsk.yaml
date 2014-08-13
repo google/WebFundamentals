@@ -7,7 +7,7 @@ toc:
   external: true
 - title: "Getting Started"
   path: /fundamentals/tools/setup/setup_kit.html
-- title: "Documentation"
+- title: "Docs"
   path: /fundamentals/tools/
 - title: "GitHub"
   path: https://github.com/google/web-starter-kit
