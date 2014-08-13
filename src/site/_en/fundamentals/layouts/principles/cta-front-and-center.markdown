@@ -7,7 +7,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-08-07
-  updated_on: 2014-08-07
+  updated_on: 2014-08-13
   order: 1
 collection: layout-principles
 key-takeaways:
@@ -18,8 +18,9 @@ key-takeaways:
 
 {% wrap content%}
 
-Study participants had the easiest time completing tasks on sites that clearly 
-displayed primary calls-to-action in the main body of the site, with secondary tasks available 
+[Study participants](/web/fundamentals/principles/research-study.html) had
+the easiest time completing tasks on sites that clearly displayed primary 
+calls-to-action in the main body of the site, with secondary tasks available 
 through menus or below the fold. Your mobile calls-to-action will probably be 
 different than on desktop, put yourself in your users' shoes when determining 
 placement.

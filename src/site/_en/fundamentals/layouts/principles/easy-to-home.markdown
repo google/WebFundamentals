@@ -7,7 +7,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-08-07
-  updated_on: 2014-08-07
+  updated_on: 2014-08-13
   order: 3
 collection: layout-principles
 key-takeaways:
@@ -26,7 +26,8 @@ search or start a new browse experience.
 </figure>
 
 Users expect tapping the logo at the top of a page to take them back to the 
-homepage, and study participants became frustrated if it didn't work.
+homepage, and [study participants](/web/fundamentals/principles/research-study.html) 
+became frustrated if it didn't work.
 
 {% include modules/nextarticle.liquid %}
 

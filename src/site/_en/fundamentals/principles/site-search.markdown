@@ -5,7 +5,7 @@ description: "Site search is vital for helping mobile users find what they're lo
 introduction: "Site search is vital for helping mobile users find what they're looking for in a hurry."
 article:
   written_on: 2014-08-06
-  updated_on: 2014-08-06
+  updated_on: 2014-08-13
   order: 2
 id: principles-of-site-design-ssearch
 authors:
@@ -29,8 +29,9 @@ key-takeaways:
 
 Users looking for specific information usually turn to search - so search should 
 be one of the first things mobile users see on your site, avoid hiding it behind 
-a menu. In the study, participants responded best to easily-visible, open text 
-search boxes at the top of a page.
+a menu. In the [study](/web/fundamentals/principles/research-study.html), 
+participants responded best to easily-visible, open text search boxes at the 
+top of a page.
 
 <figure>
   <img src="images/ss-search.jpg" srcset="images/ss-search.jpg 1x, images/ss-search-2x.jpg 2x" alt="Sample of site with search accessible and not.">
@@ -59,19 +60,21 @@ and suggesting search terms or providing related matches.
   </div>
 </div>
 
-Participants didn't bother to swipe through multiple pages of search results. 
-Instead, they judged a site's search based on the results it returned first, so 
-make sure your first page of search results are the strongest. 
+[Participants](/web/fundamentals/principles/research-study.html) didn't 
+bother to swipe through multiple pages of search results. Instead, they 
+judged a site's search based on the results it returned first, so make sure 
+your first page of search results are the strongest. 
 
 ## Implement filters to narrow results
 
 Provide easy to use filters to help narrow the search results to more relevant 
-results for users.  Participants relied on filters to narrow down search 
-results, and actually abandoned sites that couldn't reduce volume. However, you 
-also need to ensure users don't filter themselves into a box - one car dealer 
-site allowed participants to specify configurations that didn't actually exist. 
-Help users avoid problems by letting them know how many results will be returned 
-with a particular filter applied.
+results for users.  [Participants](/web/fundamentals/principles/research-study.html) 
+relied on filters to narrow down search results, and actually abandoned sites 
+that couldn't reduce volume. However, you also need to ensure users don't 
+filter themselves into a box - one car dealer site allowed participants to 
+specify configurations that didn't actually exist. Help users avoid problems 
+by letting them know how many results will be returned with a particular 
+filter applied.
 
 <figure>
   <img src="images/ss-filters.jpg" srcset="images/ss-filters.jpg 1x, images/ss-filters-2x.jpg 2x" alt="Make filters accessible.">
