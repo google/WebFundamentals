@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 1
 collection: test
+authors:
+  - megginkearney
 key-takeaways:
   starter-kit:
     - There's no substitute for real device testing. You must test on real devices.

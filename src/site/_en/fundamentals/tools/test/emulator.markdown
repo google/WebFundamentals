@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 3
 collection: test
+authors:
+  - megginkearney
 key-takeaways:
   emulator:
     - Start prototyping on the desktop; then tackle the mobile-specific parts on the devices you intend to support. The emulation tool makes this process more straightforward.

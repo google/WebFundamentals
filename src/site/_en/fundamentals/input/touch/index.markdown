@@ -14,6 +14,8 @@ article:
   order: 2
 id: touch
 collection: user-input
+authors:
+  - mattgaunt
 ---
 {% wrap content %}
 

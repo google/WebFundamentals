@@ -1,49 +1,38 @@
 # A collection of all the people who have kindly contributed content for us.
 
-petelepage:
-  name:
-    given: Pete
-    family: LePage
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  homepage: http://petelepage.com
-  google: +PeteLePage
-  twitter: petele
-  email: petele@google.com
-  description: "Pete is a Developer Advocate"
+##
+## Please add new contributors in alphabetical order by family name.
+##
 
-megginkearney:
+ianbarber:
   name:
-    given: Meggin
-    family: Kearny
+    given: Ian
+    family: Barber
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: UK
   role:
-    - author
-  google: +PeteLePage
-  email: mkearney@google.com
-  description: "Meggin is a Tech Writer"
+    - engineer
+  homepage: http://riskcompletefailure.com
+  google: +ianbarber
+  twitter: ianbarber
+  email: ianbarber@google.com
+  description: "Ian is a DRE"
 
-ilyagrigorik:
+samdutton:
   name:
-    given: Ilya
-    family: Grigorik
+    given: Sam
+    family: Dutton
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: UK
   role:
     - author
-  homepage: http://igvita.com
-  google: +IlyaGrigorik
-  twitter: igrigorik
-  description: "Ilya is a Developer Advocate and Web Perf Guru"
+  google: +SamDutton
+  email: dutton@google.com
+  description: "Sam is a Developer Advocate"
 
 mattgaunt:
   name:
@@ -60,36 +49,34 @@ mattgaunt:
   twitter: gauntface
   description: "Matt is a Developer Advocate"
 
-paullewis:
+ilyagrigorik:
   name:
-    given: Paul
-    family: Lewis
+    given: Ilya
+    family: Grigorik
   org:
     name: Google
     unit: Developer Relations
-  country: UK
+  country: USA
   role:
     - author
-  homepage: http://aerotwist.com/
-  google: +PaulLewis
-  twitter: aerotwist
-  description: "Paul is a Design and Perf Advocate"
+  homepage: http://igvita.com
+  google: +IlyaGrigorik
+  twitter: igrigorik
+  description: "Ilya is a Developer Advocate and Web Perf Guru"
 
-ianbarber:
+megginkearney:
   name:
-    given: Ian
-    family: Barber
+    given: Meggin
+    family: Kearny
   org:
     name: Google
     unit: Developer Relations
-  country: UK
+  country: USA
   role:
-    - engineer
-  homepage: http://ianbarber.com
-  google: +ianbarber
-  twitter: ianbarber
-  email: ianbarber@google.com
-  description: "Ian is DRE"
+    - author
+  google: 110573989653316535297
+  email: mkearney@google.com
+  description: "Meggin is a Tech Writer"
 
 paulkinlan:
   name:
@@ -108,3 +95,33 @@ paulkinlan:
   email: paulkinlan@google.com
   description: "Paul is a Developer Advocate"
 
+petelepage:
+  name:
+    given: Pete
+    family: LePage
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://petelepage.com
+  google: +PeteLePage
+  twitter: petele
+  email: petele@google.com
+  description: "Pete is a Developer Advocate"
+
+paullewis:
+  name:
+    given: Paul
+    family: Lewis
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage: http://aerotwist.com/
+  google: +PaulLewis
+  twitter: aerotwist
+  description: "Paul is a Design and Perf Advocate"

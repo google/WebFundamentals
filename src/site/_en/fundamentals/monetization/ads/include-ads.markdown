@@ -9,6 +9,9 @@ article:
   order: 2
 id: include-ads
 collection: ads
+authors:
+  - megginkearney
+  - petelepage
 key-takeaways:
   tldr: 
     - To create an AdSense account, you must be 18, have a Google Account, and address.

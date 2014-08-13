@@ -5,15 +5,17 @@ description: "The best ads can improve user experience. While the actual ad cont
 introduction: "The best ads can improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
 article:
   written_on: 2014-07-31
-  updated_on: 2014-07-31
+  updated_on: 2014-08-12
   order: 3
 id: customize-ads
 collection: ads
+authors:
+  - megginkearney
+  - petelepage
 key-takeaways:
   tldr: 
     - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it.
     - Always use responsive ad units; if smart sizing isn't enough, switch to advanced mode.
-    - Maximize revenue by allowing text and display images to compete for your ad space.
     - Look for opportunities to integrate ads throughout the content to avoid ad blindness.
     - Choose text styles that blend, compliment, or contrast your site.
 notes:
@@ -93,18 +95,6 @@ from the Mode drop-down.
 See [advanced features](https://support.google.com/adsense/answer/3543893) in the AdSense help for more information.
 
 {% include modules/remember.liquid title="Important" list=page.notes.testing %}
-
-## Maximize bidding potential
-
-The higher the competition, or 'auction pressure', the more the advertiser 
-will pay to be viewed and clicked on your site. To maximize your bidding
-potential:
-
-* Be sure to allow both [text](https://support.google.com/adsense/answer/185665)
-and [display ads](https://support.google.com/adsense/answer/185666). Excluding
-one type of ads limits the number of advertisers available to you.
-* Use ad sizes that are popular with advertisers, for example, 300px by 250px
-(see also the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621)).
 
 ## Choose styles that compliment your site
 

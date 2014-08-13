@@ -9,6 +9,8 @@ article:
   order: 3
 collection: tools
 id: build-your-site
+authors:
+  - megginkearney
 ---
 
 {% wrap content%}

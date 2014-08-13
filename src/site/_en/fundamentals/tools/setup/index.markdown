@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 1 
 collection: tools
+authors:
+  - megginkearney
 id: set-up
 ---
 {% wrap content%}

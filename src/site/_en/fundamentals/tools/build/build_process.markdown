@@ -17,6 +17,8 @@ key-takeaways:
 notes:
   tbd:
     - TBD.
+authors:
+  - megginkearney
 ---
 {% wrap content %}
 
