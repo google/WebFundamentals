@@ -9,7 +9,7 @@
 {% assign main_author = site.data["contributors"][author]%}
 
 {% if main_author.google %}
-<meta name="author" content="{{ main_author.google }}" />
+<meta name="author" content="https://plus.google.com/{{ main_author.google }}/posts" />
 {% endif %}
 
 {% if page.description %}
@@ -35,7 +35,7 @@
 {% else %}<meta property="twitter:image:src" content="https://developers.google.com/web/fundamentals/imgs/logo.png" />{% endif %}
 
 
-{% if main_author.google %}<link rel="author" href="{{ main_author.google }}/posts">{% endif %}
+{% if main_author.google %}<link rel="author" href="https://plus.google.com/{{ main_author.google }}/posts">{% endif %}
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
 
 <meta itemprop="name" content="{{ page_title }}">

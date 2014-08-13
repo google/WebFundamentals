@@ -10,6 +10,7 @@ article:
 id: how-ads-work
 collection: ads
 authors:
+  - megginkearney
   - petelepage
 key-takeaways:
   tldr: 

@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 3
 collection: build-your-site
+authors:
+  - megginkearney
 key-takeaways:
   devtools:
     - Integrate Chrome DevTools into your development workflow; use mobile emulation panel from the very start of your project.

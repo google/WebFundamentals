@@ -8,7 +8,7 @@ article:
   written_on: 2014-08-08
   updated_on: 2014-08-08
   order: 1
-id: principles
+id: principles-of-site-design
 collection: home
 authors:
   - petelepage

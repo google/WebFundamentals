@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 2
 collection: set-up
+authors:
+  - megginkearney
 key-takeaways:
   devtools:
     - Make the command line work for you; create aliases that are easy to remember and fast to type.

@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 3
 collection: set-up
+authors:
+  - megginkearney
 key-takeaways:
   starter-kit:
     - Decide how much UX to inherit from the Web Starter Kit. Do you want a responsive layout or a basic boilerplate?
