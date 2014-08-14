@@ -48,6 +48,11 @@ a lower score in a category means there are potential areas for improvement,
 pay special attention to items flagged with a red or yellow exclamation mark.
 
 <figure>
+  <img src="images/optimization_score.png" alt="Revenue optimization scorecard">
+  <figcaption>Revenue optimization scorecard</figcaption>
+</figure>
+
+<figure>
   <img src="images/multiscreen_score.png" alt="Multi-screen scorecard">
   <figcaption>Multi-screen scorecard</figcaption>
 </figure>
@@ -57,10 +62,7 @@ pay special attention to items flagged with a red or yellow exclamation mark.
   <figcaption>Site health scorecard</figcaption>
 </figure>
 
-<figure>
-  <img src="images/optimization_score.png" alt="Revenue optimization scorecard">
-  <figcaption>Revenue optimization scorecard</figcaption>
-</figure>
+
 
 The <b>Recommendation box</b> on the [Home](https://www.google.com/adsense/app#home)
 tab offers recommendations how your site could be changed to earn more revenue. 
@@ -70,16 +72,13 @@ provided when there is a high confidence of increased performance.
 
 {% include modules/remember.liquid title="Learn more" text="Review <a href='https://support.google.com/adsense/answer/3006004'>about the scorecard</a> and the <a href='https://support.google.com/adsense/answer/1725006'>recommendation box</a> in AdSense help." %}
 
-## Run performance reports
+## Use performance reports
 
 Use the Google AdSense <b>[Performance reports](https://www.google.com/adsense/app#viewreports)</b> 
 tab to see how much you’re earning, what impacts those earnings, and graphs
 to chart trends over time.
 
-There are several [pre-defined reports](https://support.google.com/adsense/answer/164700),
-and it’s possible to [create custom reports](https://support.google.com/adsense/answer/1703033)
-based on specific needs.  In most cases, you’ll find the reports below will
-meet your needs and will help to maximize your ad revenue:
+Use the reports below to get started:
 
 <table class="table-2">
   <colgroup>
@@ -104,25 +103,41 @@ meet your needs and will help to maximize your ad revenue:
     </tr>
     <tr>
       <td data-th="Report">
-        <a href="https://support.google.com/adsense/answer/23168">Targeting types</a>
+        Ad units
       </td>
       <td data-th="Description">
-        Reports how ads are being targeted to your site; specifically compares
-        the percentage of ads targeting your site's content compared to the
-        percentage of ads targeting user-interests.
+        View performance for individual ad units you've customized to help
+        analyze which ad units perform better and decide whether these type 
+        of units can be placed in other locations, it can also help you better
+        understand why they are performing so well, allowing you to apply it
+        to other units.
       </td>
     </tr>
     <tr>
       <td data-th="Report">
-        <a href="https://support.google.com/adsense/answer/3373004">Platforms</a>
+        <a href="https://support.google.com/adsense/answer/1407511">Sites</a>
       </td>
       <td data-th="Description">
-        Shows which devices your ad units were viewed on, for example, on 
-        desktop or mobile. 
+        If you own multiple sites, this report can help you understand if one
+        site is performing better and how you might replicate that behavior
+        on other sites.
       </td>
     </tr>
   </tbody>
 </table>
+
+### Sign up for customized help and performance suggestions
+
+In addition to performance reports, AdSense can send occasional customized
+help and performance report suggestions by email. To sign up, verify 
+your email address in [Personal settings](https://www.google.com/adsense/app#personalSettings),
+and check the *Customized help and performance suggestions* checkbox under
+*Email preferences*.
+
+<figure>
+  <img src="images/adsense-emails.jpg" srcset="images/adsense-emails.jpg 1x, images/adsense-emails-2x.jpg 2x" alt="AdSense personal settings page">
+  <figcaption>Enable Customized help and performance suggestions emails.</figcaption>
+</figure>
 
 {% include modules/remember.liquid title="Learn more" text="Learn more about <a href='https://support.google.com/adsense/answer/160562'>performance reports</a> in AdSense help." %}
 
@@ -136,6 +151,11 @@ potential:
 and [display ads](https://support.google.com/adsense/answer/185666). Excluding
 one type of ads limits the number of advertisers available to you.
 * Use ad sizes that are popular with advertisers, see the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621).
+* In some cases, certain ads may not blend well with your content, be careful
+about blocking too many categories as it will lower your potential earnings.
+
+<b>Note:</b> this information is also included in the publisher scorecard, 
+but it's crucial to strong ad performance!
 
 ## Don't block the AdSense crawler
 
