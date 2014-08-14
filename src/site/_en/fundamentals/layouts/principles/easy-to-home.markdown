@@ -22,7 +22,7 @@ search or start a new browse experience.
 
 <figure>
   <img src="imgs/hpnav-hp-good.png" srcset="imgs/hpnav-hp-good.png 1x, imgs/hpnav-hp-good-2x.png 2x" alt="Clicking the logo returns users to the home page.">
-  <figcaption>Clicking the logo in the upper right corner returns users to the home page.</figcaption>
+  <figcaption>Clicking the logo in the upper left corner returns users to the home page.</figcaption>
 </figure>
 
 Users expect tapping the logo at the top of a page to take them back to the 
