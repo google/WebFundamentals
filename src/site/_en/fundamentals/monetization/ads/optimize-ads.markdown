@@ -108,7 +108,7 @@ Use the reports below to get started:
       <td data-th="Description">
         View performance for individual ad units you've customized to help
         analyze which ad units perform better and decide whether these type 
-        of units can be placed in other locations, it can also help you better
+        of units can be placed in other locations. It can also help you better
         understand why they are performing so well, allowing you to apply it
         to other units.
       </td>
