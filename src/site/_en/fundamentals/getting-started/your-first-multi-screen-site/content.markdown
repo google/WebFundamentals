@@ -185,7 +185,7 @@ Sites without images can be a little boring. There are two types of images:
    to convey extra information about the content.
 *  Stylistic images &mdash; images that are used to make the site look
    better; often these are background images, patterns and gradients.  We will
-   cover this in the [next article]({{site.fundamentals}}{{page.article.next.url}}).
+   cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
 
 The Images section in our page is a collection of content images.
 
