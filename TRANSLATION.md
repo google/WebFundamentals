@@ -23,11 +23,11 @@ Adding a translation
 3.  Create the article in the same directory hierarchy but under this new directory.
 4.  Translate the article
 5.  Translate the article YAML metadata 
-	a.  Localize the title
-	b.  Localize the description
-	c.  Localize the introduction
-	e.  Localize the notes (if present)
-	f.  Localize the key-takeaways (the TLDR's if present).
+	1.  Localize the title
+	2.  Localize the description
+	3.  Localize the introduction
+	4.  Localize the notes (if present)
+	5.  Localize the key-takeaways (the TLDR's if present).
 6.  Give yourself some credit by adding your details to the contributors file and add your 
     name to the "translators:" property.
 
