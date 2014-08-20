@@ -42,7 +42,7 @@ Credit
 
 We want to make sure that you get the credit for the articles that you translate.
 
-Add your details to `/src/site/_contributors.yaml` and add `- translator` to the `role` attriute.  We use this information to populate our [contributors page](http://developers.gogole.com/web/fundamentals/resources/contributors) and also to attach your name to each article.  For example:
+Add your details to `/src/site/_contributors.yaml` and add `- translator` to the `role` attriute.  We use this information to populate our [contributors page](http://developers.google.com/web/fundamentals/resources/contributors) and also to attach your name to each article.  For example:
 
 	paulkinlan:
 	  name:
