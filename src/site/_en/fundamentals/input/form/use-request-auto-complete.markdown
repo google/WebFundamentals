@@ -78,7 +78,7 @@ much like other auto-complete fields.
 
 The ideal experience will show the `requestAutocomplete` dialog instead of loading the
 page that displays the checkout form. If all goes well, the user shouldn't see
-the form at all.  You can easily add `requestAutoComplete` to existing forms
+the form at all.  You can easily add `requestAutocomplete` to existing forms
 without having to change any field names.  Simply add the `autocomplete`
 attribute to each form element with the appropriate value and add the
 `requestAutocomplete()` function on the form element. The browser will handle
