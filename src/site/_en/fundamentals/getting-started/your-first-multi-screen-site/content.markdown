@@ -20,69 +20,69 @@ related-guides:
   create-amazing-forms:
     -
       title: Create amazing forms
-      href: input/form/
+      href: fundamentals/input/form/
       section:
         id: user-input
         title: "Forms"
-        href: input/form/
+        href: fundamentals/input/form/
     -
       title: Label and name inputs correctly
-      href: input/form/label-and-name-inputs.html
+      href: fundamentals/input/form/label-and-name-inputs
       section:
         id: user-input
         title: "Forms"
-        href: input/form/
+        href: fundamentals/input/form/
     -
       title: Choose the best input type
-      href: input/form/choose-the-best-input-type.html
+      href: fundamentals/input/form/choose-the-best-input-type
       section:
         id: user-input
         title: Forms
-        href: input/form/
+        href: fundamentals/input/form/
   video:
     -
       title: Using video effectively
-      href: media/video/
+      href: fundamentals/media/video/
       section:
         id: introduction-to-media
         title: "Video"
-        href: media/
+        href: fundamentals/media/
     -
       title: Change the starting position
-      href: media/video/
+      href: fundamentals/media/video/add-a-video#specify-a-start-and-end-time
       section:
         id: introduction-to-media
         title: "Video"
-        href: media/
+        href: fundamentals/media/
     -
       title: Include a poster image
-      href: media/video/
+      href: fundamentals/media/video/add-a-video#include-a-poster-image
       section:
         id: introduction-to-media
         title: "Video"
-        href: media/
+        href: fundamentals/media/
   images:
     -
       title: Using images effectively
-      href: media/images/
+      href: fundamentals/media/images/
       section:
         id: introduction-to-media
         title: "Images"
-        href: media/
+        href: fundamentals/media/
     -
       title:  Correct use of images in markup
-      href: media/images/#images-in-markup
+      href: fundamentals/media/images/images-in-markup
       section:
         id: introduction-to-media
         title: "Images"
-        href: media/
+        href: fundamentals/media/
     -
       title: Image optimization
-      href: performance/optimizing-content-efficiency/image-optimization.html
+      href: fundamentals/performance/optimizing-content-efficiency/image-optimization
       section:
         id: introduction-to-media
         title: "Images"
-        href: media/
+        href: fundamentals/media/
 
 key-takeaways:
   content-critical:

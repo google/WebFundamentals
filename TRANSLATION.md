@@ -3,7 +3,7 @@ Translations
 
 The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br". 
 
-To test translations set the lang variabe in the _config.yml. For example, to set the mode to French:
+To test translations set the lang variable in the _config.yml. For example, to set the mode to French:
 
     lang: "fr"
 
@@ -17,17 +17,17 @@ To ensure the content is built when being released onto developers.google.com, e
 Adding a translation
 --------------------
 
-1.  Find the article in the original source langauge
-2.  Create the root language code in `src/site` if it does not exist for the langauge your 
+1.  Find the article in the original source language
+2.  Create the root language code in `src/site` if it does not exist for the langauge you 
     are translating.  For example create `src/site/_es` for Spanish.
 3.  Create the article in the same directory hierarchy but under this new directory.
 4.  Translate the article
 5.  Translate the article YAML metadata 
-	a.  Localize the title
-	b.  Localize the description
-	c.  Localize the introduction
-	e.  Localize the notes (if present)
-	f.  Loalize the key-takeaways (the TLDR's if present).
+	1.  Localize the title
+	2.  Localize the description
+	3.  Localize the introduction
+	4.  Localize the notes (if present)
+	5.  Localize the key-takeaways (the TLDR's if present).
 6.  Give yourself some credit by adding your details to the contributors file and add your 
     name to the "translators:" property.
 
@@ -42,7 +42,7 @@ Credit
 
 We want to make sure that you get the credit for the articles that you translate.
 
-Add your details to `/src/site/_contributors.yaml` and add `- translator` to the `role` attriute.  We use this information to populate our [contributors page](http://developers.gogole.com/web/fundamentals/resources/contributors) and also to attach your name to each article.  For example:
+Add your details to `/src/site/_contributors.yaml` and add `- translator` to the `role` attriute.  We use this information to populate our [contributors page](http://developers.google.com/web/fundamentals/resources/contributors) and also to attach your name to each article.  For example:
 
 	paulkinlan:
 	  name:
