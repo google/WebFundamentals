@@ -11,7 +11,7 @@ article:
   written_on: 2014-07-17
   updated_on: 2014-07-17
   order: 3
-id: web-starter-kit
+#id: web-starter-kit
 #collection: getting-started
 ---
 

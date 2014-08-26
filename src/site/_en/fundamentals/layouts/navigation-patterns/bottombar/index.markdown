@@ -24,6 +24,16 @@ key-takeaways:
 	<img class="g-medium--full g-wide--full" src="images/bottombar.png">
 </a>
 
+<div class="g-medium--2 g-medium--last g-wide--3">
+  <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/bottombar-sample1.html">
+    <img src="images/bottombar.png">
+  </a>
+
+  <div style="text-align:center;">
+    <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/bottombar-sample1.html">Demo</a>
+  </div>
+</div>
+
 <div style="clear: both;"></div>
 
 We've seen that the App Bar can be used for placing actions.
@@ -38,9 +48,16 @@ The advantage of this is that you have more space for actions and it's in a touc
 
 Limit yourself to five actions at most, avoiding the buttons becoming too small and difficult to tap.
 
-<a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
-	<img class="g--half g--last" src="images/bottom-bar-alt-1.png"> 
-</a>
+<div class="g-medium--2 g-medium--last g-wide--3">
+  <div class="g--half">
+    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+      <img src="images/bottom-bar-alt-1.png">
+    </a>
+    <div style="text-align:center;">
+      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">Demo</a>
+    </div>
+  </div>
+</div>
 
 <div style="clear: both;"></div>
 
