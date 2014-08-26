@@ -3,3 +3,4 @@ build
 .sass-cache/
 node_modules/
 src/.ruby-gemset
+src/.rvmrc
