@@ -18,7 +18,7 @@ Adding a translation
 --------------------
 
 1.  Find the article in the original source language
-2.  Create the root language code in `src/site` if it does not exist for the langauge you 
+2.  Create the root language code in `src/site` if it does not exist for the language you 
     are translating.  For example create `src/site/_es` for Spanish.
 3.  Create the article in the same directory hierarchy but under this new directory.
 4.  Translate the article
