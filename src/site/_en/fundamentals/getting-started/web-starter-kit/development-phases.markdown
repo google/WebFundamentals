@@ -37,20 +37,18 @@ to reload.
 With Live Reload, you can make changes in your editor and see them take effect
 immediately in any browser with your site open.
 
-<video controls>
-     <source src="video/wsk-livereload-demo.mp4" type="video/mp4">
-     <p>This browser does not support the video element.</p>
-</video>
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 ### Testing Across Devices
 
 Browser Sync helps you test your site across multiple devices. Any scrolls,
 taps, or keyboard presses will be shared across any connected browser.
 
-<video controls>
-     <source src="video/wsk-browsersync-demo.mp4" type="video/mp4">
-     <p>This browser does not support the video element.</p>
-</video>
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 ### Automate Prefixing
 
