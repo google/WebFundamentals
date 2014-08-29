@@ -40,7 +40,7 @@ With Live Reload, you can make changes in your editor and see them take effect
 immediately in any browser with your site open.
 
 <div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+  <iframe style="background-image: url(https://i.ytimg.com/vi/JE-ejS8N3YI/maxresdefault.jpg);" src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
 ### Testing Across Devices
@@ -171,8 +171,8 @@ them over into the final build as well.
 
 ## Test Your Production Build
 
-From time to time, you’ll want to check that the production build is working as
-expected. The `gulp serve:dist` command builds a production version of your site,
+Before you push anything into production, you need to make sure everything works
+as you'd expect. The `gulp serve:dist` command builds a production version of your site,
 starts a server, and opens a browser for you. This doesn’t have Live Reload or
 Browser Sync, but it’s a reliable way of testing your site before deploying it.
 
