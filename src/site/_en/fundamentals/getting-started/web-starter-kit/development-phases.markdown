@@ -52,6 +52,10 @@ taps, or keyboard presses will be shared across any connected browser.
   <iframe src="https://www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
+This only works when you run your site with `gulp serve`. Try it out by running
+`gulp serve`, open the URL in two browser windows side by side and scroll
+one of the pages.
+
 ### Automate Prefixing
 
 When targeting a range of browsers, you’ll need to use vendor prefixes to
@@ -104,6 +108,11 @@ whenever you make a change to a JavaScript file.
 While you are running the serve command, any changes made to any of the Sass
 files in your project will get compiled into CSS and prefixed, after which your
 page will be reloaded with Live Reload.
+
+For those new to Sass, the project describes itself as a “CSS
+extension language”. Essentially it’s CSS with some extra features. For example,
+it adds support for variables and functions, which help you structure your CSS
+in a modular and reusable fashion.
 
 ## Build a Production Version of Your Site
 
