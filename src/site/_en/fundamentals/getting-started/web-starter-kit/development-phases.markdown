@@ -40,7 +40,7 @@ With Live Reload, you can make changes in your editor and see them take effect
 immediately in any browser with your site open.
 
 <div class="media media--video">
-  <iframe style="background-image: url(https://i.ytimg.com/vi/JE-ejS8N3YI/maxresdefault.jpg);" src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+  <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
 ### Testing Across Devices
