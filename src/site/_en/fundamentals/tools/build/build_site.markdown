@@ -66,7 +66,7 @@ on any device.
 ## Add an image
 
 To see the `gulp serve` tool in action: add 
-<a href="https://github.com/google/WebFundamentals/blob/master/src/site/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
+<a href="https://github.com/google/WebFundamentals/blob/master/src/site/_en/fundamentals/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
 to the images folder.
 
 `$ cp awesome-photo.jpg web-starter-kit/app/images`
