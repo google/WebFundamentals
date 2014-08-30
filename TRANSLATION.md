@@ -62,6 +62,7 @@ Add your details to `/src/site/_contributors.yaml` and add `- translator` to the
 	  description: "Paul is a Developer Advocate"
 
 For each article that you translate add your id to `translators:` property.  For example
+
     translators:
       - paulkinlan
       - petelepage
