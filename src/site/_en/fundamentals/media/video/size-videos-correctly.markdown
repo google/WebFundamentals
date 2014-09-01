@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Size videos correctly"
-description: "When it comes to keeping your users happy, size matters."
-introduction: "When it comes to keeping your users happy, size matters:"
+description: "Keep an eye on the size of your videos."
+introduction: "Keep an eye on the size of your videos:"
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
@@ -50,7 +50,7 @@ remember:
 
 </style>
 
-When it comes to keeping your users happy, size matters:
+There are several ways in which video size matters:
 
 * Don't serve videos with a larger frame size or higher quality than the
   platform can handle.
