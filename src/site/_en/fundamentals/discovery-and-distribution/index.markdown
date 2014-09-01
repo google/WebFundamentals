@@ -1,0 +1,19 @@
+---
+layout: landing
+title: "Discovery and Distribution"
+description: ""
+introduction: ""
+snippet: "Spread your website to the world"
+id: discovery-and-distribution
+collection: home
+authors:
+  - agektmr
+article:
+  written_on: 2014-08-31
+  updated_on: 2014-08-31
+  order: 9
+---
+
+{% comment %}
+Guide list content will be output by the landing layout based on the article collection matching page.id
+{% endcomment %}
