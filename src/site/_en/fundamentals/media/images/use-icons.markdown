@@ -40,7 +40,7 @@ key-takeaways:
 
 Many fonts include support for the myriad of unicode glyphs, which can be used
 instead of images.  Unlike images, unicode fonts scale well, and look good no
-matter matter how small or large they appear on screen.
+matter how small or large they appear on screen.
 
 Beyond the normal character set, unicode may include symbols for number forms
 (&#8528;), arrows (&#8592;), math operators (&#8730;), geometric shapes
