@@ -26,7 +26,7 @@ the history hard to follow. If you want to make a change
 (e.g. add a sample or feature) that doesn't have a corresponding issue in the
 issue tracker, please create one.
 3. **Submitting**: When you are ready to submit, send us a Pull Request. Be
-sure to include the issue number you're fixed and the name you used to sign
+sure to include the issue number you've fixed and the name you used to sign
 the CLA.
 
 ## Writing Code ##

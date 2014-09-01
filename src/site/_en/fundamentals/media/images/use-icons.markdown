@@ -5,7 +5,7 @@ description: "When adding icons to your page, use SVG icons where possible or
 in some cases, unicode characters."
 introduction: "When adding icons to your page, use SVG icons where possible or
 in some cases, unicode characters."
-author:
+authors:
   - petelepage
 article:
   written_on: 2014-06-10

@@ -17,6 +17,8 @@ article:
   order: 2
 collection: introduction-to-media
 id: videos
+authors:
+  - samdutton
 key-takeaways:
   add-a-video:
     - Use the video element to load, decode, and play video on your site.

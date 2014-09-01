@@ -20,9 +20,15 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
-	<img class="g-medium--full g-wide--full" src="images/navdrawer.png">
-</a>
+<div class="g-medium--2 g-medium--last g-wide--3">
+  <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+    <img src="images/navdrawer.png">
+  </a>
+
+  <div style="text-align:center;">
+    <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">Demo</a>
+  </div>
+</div>
 
 <div style="clear: both;"></div>
 
@@ -36,13 +42,36 @@ The key advantages of this approach is that the content can grow inside a scroll
 
 For users there is a small amount to learning to do to find the Navigation Drawer so having a clearly place menu button is extremely important.
 
-<a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
-	<img class="g--third" src="images/navdrawer-alt-1.png">
-</a><a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
-	<img class="g--third" src="images/navdrawer-alt-2.png">
-</a><a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">
-	<img class="g--third g--last" src="images/navdrawer-alt-3.png"> 
-</a>
+<div class="g-medium--2 g-medium--last g-wide--3">
+
+  <div class="g--third">
+    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+      <img src="images/navdrawer-alt-1.png">
+    </a>
+    <div style="text-align:center;">
+      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">Demo</a>
+    </div>
+  </div>
+
+  <div class="g--third">
+    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
+      <img src="images/navdrawer-alt-2.png">
+    </a>
+    <div style="text-align:center;">
+      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">Demo</a>
+    </div>
+  </div>
+
+  <div class="g--third g--last">
+    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">
+      <img src="images/navdrawer-alt-3.png">
+    </a>
+    <div style="text-align:center;">
+      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">Demo</a>
+    </div>
+  </div>
+
+</div>
 
 <div style="clear: both;"></div>
 

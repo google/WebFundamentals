@@ -17,6 +17,8 @@
 
 			  background: #FFF;
 			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+			  will-change: transform;
 			}
 	  </style>
 	</head>
@@ -28,7 +30,7 @@
 		function Box () {
 
 		  var animationStartTime = 0;
-		  var animationDuration = 1300;
+		  var animationDuration = 500;
 		  var target = document.querySelector('.box');
 
 		  this.startAnimation = function() {
@@ -43,6 +45,8 @@
 		    var xPosition = positionInAnimation * 100;
 		    var yPosition = positionInAnimation * 100;
 
+
+		    target.style.WebKitTransform = 'translate(' + xPosition + 'px, ' + yPosition + 'px)';
 		    target.style.transform = 'translate(' + xPosition + 'px, ' + yPosition + 'px)';
 
 		    if (positionInAnimation <= 1)

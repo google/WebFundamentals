@@ -3,7 +3,7 @@ layout: article
 title: "Let Users Explore Before They Commit"
 description: "Allow visitors to use your site without registering for an account."
 introduction: "Requiring login or account creation too early in a site experience can be detrimental to conversion."
-author:
+authors:
   - petelepage
 article:
   written_on: 2014-08-07

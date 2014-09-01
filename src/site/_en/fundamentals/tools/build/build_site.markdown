@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 2
 collection: build-your-site
+authors:
+  - megginkearney
 key-takeaways:
   code:
     - Don't wait to test how your site looks across devices; check your site's responsiveness as you code.

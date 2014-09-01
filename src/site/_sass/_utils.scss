@@ -64,12 +64,16 @@
   $colorToolsSecondary: lighten($colorTools, 30%);
   $colorUser: #2c8566;
   $colorUserSecondary: lighten($colorUser, 30%);
-  $colorMonetization: #cf423a;
+  $colorMonetization: #056f00;
   $colorMonetizationSecondary: lighten($colorMonetization, 30%);
   $colorMedia: #cf423a;
   $colorMediaSecondary: lighten($colorMedia, 30%);
   $colorPerformance: #7b5294;
   $colorPerformanceSecondary: lighten($colorPerformance, 30%);
+  $colorLookAndFeel: #404040;
+  $colorLookAndFeelSecondary: lighten($colorLookAndFeel, 30%);
+  $colorPrinciples: #ff5722;
+  $colorPrinciplesSecondary: lighten($colorPrinciples, 30%);
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif;

@@ -9,7 +9,8 @@ article:
   order: 1
 id: how-ads-work
 collection: ads
-author:
+authors:
+  - megginkearney
   - petelepage
 key-takeaways:
   tldr: 

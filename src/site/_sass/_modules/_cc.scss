@@ -1,5 +1,6 @@
 .gc-content-license {
   margin-top: ($lineHeight*3) - 2;
+  margin-bottom: ($lineHeight*2);
 
   & p {
     @include type--small;

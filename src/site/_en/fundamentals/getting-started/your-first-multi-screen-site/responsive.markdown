@@ -16,40 +16,39 @@ related-guides:
   responsive:
     -
       title: Setting the viewport
-      href: layouts/rwd-fundamentals/#set-the-viewport
+      href: fundamentals/layouts/rwd-fundamentals/set-the-viewport
       section:
-        id: rwd-fundamentals
         title: "Responsive Web design"
-        href: layouts/rwd-fundamentals/
+        href: fundamentals/layouts/rwd-fundamentals/set-the-viewport
     -
       title: Size content to the viewport
-      href: layouts/rwd-fundamentals/#size-content-to-the-viewport
+      href: fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport
       section:
         id: rwd-fundamentals
         title: "Responsive Web design"
-        href: layouts/rwd-fundamentals/
+        href: fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport
   first-break-point:
     -
       title: Using Media Queries
-      href: layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness
+      href: fundamentals/layouts/rwd-fundamentals/use-media-queries
       section:
         id: rwd-fundamentals
         title: "Responsive Web design"
-        href: layouts/rwd-fundamentals/
+        href: fundamentals/layouts/rwd-fundamentals/use-media-queries
     -
       title: Layout patterns
-      href: layouts/rwd-patterns/
+      href: fundamentals/layouts/rwd-patterns/
       section:
         id: rwd-patterns
-        title: "Layout Pattens"
-        href: layouts/rwd-patterns/
+        title: "Layout Patterns"
+        href: fundamentals/layouts/rwd-patterns/
     -
       title: Mostly Fluid layout
-      href: layouts/rwd-patterns/#mostly-fluid
+      href: fundamentals/layouts/rwd-patterns/mostly-fluid
       section:
         id: rwd-patterns
         title: "Responsive Web design"
-        href: layouts/rwd-patterns/
+        href: fundamentals/layouts/rwd-patterns/mostly-fluid
   images:
     -
       title: "Enhance imgs with srcset for high DPI devices"
@@ -85,7 +84,7 @@ id: multi-screen-responsive
 
 We are building a site that works across multiple screen sizes and device
 types. In the [previous
-article]({{site.fundamentals}}{{page.article.previous.url}}), we crafted the
+article]({{site.baseurl}}{{page.article.previous.url}}), we crafted the
 Information Architecture of the page and created a basic structure.
 In this guide, we will take our basic structure with content and turn it into
 a beautiful page that is responsive across a large number of screen sizes.

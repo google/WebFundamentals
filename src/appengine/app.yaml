@@ -24,6 +24,12 @@ handlers:
   expiration: 1d
   upload: build/static/(.*\.png)
 
+
+- url: /web/(.*\.gif)
+  static_files: build/static/\1
+  expiration: 1d
+  upload: build/static/(.*\.gif)
+
 - url: /web/(.*\.ico)
   static_files: build/static/\1
   expiration: 7d

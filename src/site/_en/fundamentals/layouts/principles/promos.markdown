@@ -7,7 +7,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-08-07
-  updated_on: 2014-08-07
+  updated_on: 2014-08-13
   order: 4
 collection: layout-principles
 key-takeaways:
@@ -17,10 +17,10 @@ key-takeaways:
 
 {% wrap content%}
 
-Participants visiting one company's mobile 
-site were distracted by a large promotional banner and missed the navigational 
-buttons beneath it, making it hard for them to learn more about the company's 
-offerings. 
+[Participants](/web/fundamentals/principles/research-study.html)
+visiting one company's mobile site were distracted by a large promotional 
+banner and missed the navigational buttons beneath it, making it hard for 
+them to learn more about the company's offerings. 
 
 <div class="clear g-wide--pull-1">
   <div class="g--half">

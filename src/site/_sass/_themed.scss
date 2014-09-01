@@ -96,6 +96,30 @@
     }
   }
 
+  .theme--look-and-feel & {
+    color: $colorLookAndFeel;
+
+    &.divider-icon:before {
+      color: $colorLookAndFeel;
+    }
+
+    &.divider-icon:after {
+      color: $colorLookAndFeelSecondary;
+    }
+  }
+
+  .theme--principles-of-site-design & {
+    color: $colorPrinciples;
+
+    &.divider-icon:before {
+      color: $colorPrinciples;
+    }
+
+    &.divider-icon:after {
+      color: $colorPrinciplesSecondary;
+    }
+  }
+
 }
 
 .themed--background {
@@ -120,6 +144,12 @@
 
   .theme--performance &,
   .theme--performance &.next-lessons:before { background-color: $colorPerformance; }
+
+  .theme--look-and-feel &,
+  .theme--look-and-feel &.next-lessons:before { background-color: $colorLookAndFeel; }
+
+  .theme--principles-of-site-design &,
+  .theme--principles-of-site-design &.next-lessons:before { background-color: $colorPrinciples; }
 
 }
 
@@ -146,6 +176,12 @@
   .theme--performance &,
   .theme--performance &.next-lessons:before { background-color: $colorPerformanceSecondary; }
 
+  .theme--look-and-feel &,
+  .theme--look-and-feel &.next-lessons:before { background-color: $colorLookAndFeelSecondary; }
+
+  .theme--principles-of-site-design &,
+  .theme--principles-of-site-design &.next-lessons:before { background-color: $colorPrinciplesSecondary; }
+
 }
 
 .themed--hover {
@@ -164,6 +200,10 @@
 
   .theme--performance &:hover { color: $colorPerformance; }
 
+  .theme--look-and-feel &:hover { color: $colorLookAndFeel; }
+
+  .theme--principles-of-site-design &:hover { color: $colorPrinciples; }
+
 }
 
 .themed--hover-secondary {
@@ -181,6 +221,10 @@
   .theme--user-input &:hover { color: $colorUserSecondary; }
 
   .theme--performance &:hover { color: $colorPerformanceSecondary; }
+
+  .theme--look-and-feel &:hover { color: $colorLookAndFeelSecondary; }
+
+  .theme--principles-of-site-design &:hover { color: $colorPrinciplesSecondary; }
 
 }
 
@@ -204,6 +248,10 @@
   .article--user-input & { color: $colorUser; }
 
   .article--performance & { color: $colorPerformance; }
+
+  .article--look-and-feel & { color: $colorLookAndFeel; }
+
+  .article--principles-of-site-design & { color: $colorPrinciples; }
 }
 
 
@@ -225,6 +273,10 @@
 
   .nav-theme--performance &:hover { color: $colorPerformance; }
 
+  .nav-theme--look-and-feel &:hover { color: $colorLookAndFeel; }
+
+  .nav-theme--principles-of-site-design &:hover { color: $colorPrinciples; }
+
 }
 
 .themed {
@@ -242,6 +294,10 @@
   .nav-theme--user-input & { color: $colorUser; }
 
   .nav-theme--performance & { color: $colorPerformance; }
+
+  .nav-theme--look-and-feel & { color: $colorLookAndFeel; }
+
+  .nav-theme--principles-of-site-design & { color: $colorPrinciples; }
 
 }
 
@@ -261,6 +317,10 @@
 
   .nav-theme--performance & { background-color: $colorPerformance; }
 
+  .nav-theme--look-and-feel & { background-color: $colorLookAndFeel; }
+
+  .nav-theme--principles-of-site-design & { background-color: $colorPrinciples; }
+
 }
 
 .themed--background-secondary {
@@ -278,6 +338,10 @@
   .nav-theme--user-input & { background-color: $colorUserSecondary; }
 
   .nav-theme--performance & { background-color: $colorPerformanceSecondary; }
+
+  .nav-theme--look-and-feel & { background-color: $colorLookAndFeelSecondary; }
+
+  .nav-theme--principles-of-site-design & { background-color: $colorPrinciplesSecondary; }
 
 }
 

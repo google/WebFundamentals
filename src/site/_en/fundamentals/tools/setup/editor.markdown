@@ -8,6 +8,8 @@ article:
   updated_on: 2014-05-29
   order: 1
 collection: set-up
+authors:
+  - megginkearney
 key-takeaways:
   editor:
     - Choose an editor that lets you customize short-cuts and has lots of plugins to help you write better code.

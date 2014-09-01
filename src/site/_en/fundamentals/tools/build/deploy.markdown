@@ -7,6 +7,8 @@ article:
   updated_on: 2014-05-29
   order: 2
 ###collection: build-your-site
+authors:
+  - megginkearney
 key-takeaways:
   deploy:
     - TBD.

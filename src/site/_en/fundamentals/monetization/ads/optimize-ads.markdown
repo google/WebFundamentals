@@ -1,69 +1,90 @@
 ---
 layout: article
 title: "Optimize Your Ads"
-description: "Google AdSense comes with a set of tools to help you optimize your ads. Use these tools to maximize your earning potential."
-introduction: "Google AdSense comes with a set of tools to help you optimize your ads. Use these tools to maximize your earning potential."
+description: "Optimizing your site, and the ads that appear on it can improve the quality of ads served and increase your earning potential."
+introduction: "Optimizing your ads and site is crucial when it comes to the success of your goals. Through optimization, you can help grow your ad revenue, improve usability of your site, get more traffic or accomplish any of your other goals."
 article:
-  written_on: 2014-07-31
-  updated_on: 2014-07-31
+  written_on: 2014-08-12
+  updated_on: 2014-08-12
   order: 4
 id: optimize-ads
 collection: ads
+authors:
+  - megginkearney
+  - petelepage
 key-takeaways:
-  tldr: 
-    -  Use AdSense scorecards to check your site's general health, responsiveness, and ads revenue potential.
-    -  Run performance reports to monitor which platforms and ad sizes return the most revenue.
-    -  Follow AdSense recommendations to maximize revenue potential.
+  tldr:
+  - Periodically check your AdSense <b>scorecard</b> and implement any <b>recommendations</b>.
+  - Review <b>performance reports</b> to understand what ads are providing the most value to you and your users.
+  - Choose ads that perform best on your site.
+  - Don't block the AdSense crawler in <code>robots.txt</code>.
+
 ---
 
 {% wrap content %}
-<style type="text/css">
-  img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
+
+Want to get better results with AdSense ads and make sure that you give your
+users what they want while getting what you want? Need some inspiration?
+Check out these tips from AdSense specialists who have worked with publishers
+of all sizes.
+
+<b>Note:</b> while this article focuses on AdSense, the concepts apply to any 
+ad provider.
 
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## Check scorecards
+## Check scorecards and Recommendations
 
-Want to know if your site and ads are as good as they can be?
-Check your site's general health, multiple-screen support, and ads revenue potential
-using the [Google AdSense scorecards](https://support.google.com/adsense/answer/3006004?).
+Use the scorecard on the <b>[Home](https://www.google.com/adsense/app#home)</b>
+tab of your account to check how well your ad settings, webpages and content
+are performing compared to those of other AdSense publishers.
 
-Each scorecard reports any improvements that need to be made,
-and helps you make the necessary fixes.
-Address any items that you see with a red or yellow exclamation mark,
-as fixing them may help to increase your traffic and/or revenue.
+Scorecard is organized into different categories (revenue optimization, site 
+health, etc.), provides a score of one to five blue dots. Each score indicates
+the ranking relative to other publishers in that particular category. While
+a lower score in a category means there are potential areas for improvement,
+pay special attention to items flagged with a red or yellow exclamation mark.
 
-These sample scorecards show green check marks, indicating a healthy site,
-with maximized ads revenue potential.
+<figure>
+  <img src="images/optimization_score.png" alt="Revenue optimization scorecard">
+  <figcaption>Revenue optimization scorecard</figcaption>
+</figure>
 
-### Multi-screen scorecard
+<figure>
+  <img src="images/multiscreen_score.png" alt="Multi-screen scorecard">
+  <figcaption>Multi-screen scorecard</figcaption>
+</figure>
 
-<img src="images/multiscreen_score.png" class="center" alt="Multi-screen scorecard">
+<figure>
+  <img src="images/site_score.png" alt="Site health scorecard">
+  <figcaption>Site health scorecard</figcaption>
+</figure>
 
-### Site health scorecard
 
-<img src="images/site_score.png" class="center" alt="Site health scorecard">
 
-### Revenue optimization scorecard
+The <b>Recommendation box</b> on the [Home](https://www.google.com/adsense/app#home)
+tab offers recommendations how your site could be changed to earn more revenue. 
+These recommendations are based on analyzing the performance of recommendations
+that have been recently implemented by other AdSense publishers and are only
+provided when there is a high confidence of increased performance.
 
-<img src="images/optimization_score.png" class="center" alt="Revenu optimization scorecard">
+{% include modules/remember.liquid title="Learn more" text="Review <a href='https://support.google.com/adsense/answer/3006004'>about the scorecard</a> and the <a href='https://support.google.com/adsense/answer/1725006'>recommendation box</a> in AdSense help." %}
 
-## Run performance reports
+## Use performance reports
 
-[Google AdSense performance reports](https://support.google.com/adsense/answer/160562?hl=en&ref_topic=19209)
-provide more insight into not just how much you're earning,
-but what impacts those earnings.
+Use the Google AdSense <b>[Performance reports](https://www.google.com/adsense/app#viewreports)</b> 
+tab to see how much you’re earning, what impacts those earnings, and graphs
+to chart trends over time.
 
-We recommend using these reports to maximize your ads revenue on multiple devices:
+Use the reports below to get started:
 
-<table class="table">
+<table class="table-2">
+  <colgroup>
+    <col span="1">
+    <col span="1">
+  </colgroup>
   <thead>
     <tr>
       <th>Report</th>
@@ -72,33 +93,84 @@ We recommend using these reports to maximize your ads revenue on multiple device
   </thead>
   <tbody>
     <tr>
-      <td data-th="Report"><a href="https://support.google.com/adsense/answer/3540509?hl=en&ref_topic=3721751">Creative sizes</a></td>
-      <td data-th="Description">Shows you the size of displayed ads served on your site; use this report to understand trends in ad sizing when using responsive ads.</td>
-    </tr>
-    <tr>
-      <td data-th="Report"><a href="https://support.google.com/adsense/answer/23168?hl=en">Targeting types</a></td>
-      <td data-th="Description">Reports how ads are being targeted to your site; specifically compares the percentage of ads targeting your site's content compared to the percentage of ads targeting user-interests.
+      <td data-th="Report">
+        <a href="https://support.google.com/adsense/answer/3540509">Creative sizes</a>
+      </td>
+      <td data-th="Description">
+        Shows you the size of displayed ads served on your site; use this 
+        report to understand trends in ad sizing when using responsive ads.
       </td>
     </tr>
     <tr>
-      <td data-th="Report"><a href="https://support.google.com/adsense/answer/3373004?hl=en&ref_topic=3721751">Platforms</a></td>
-      <td data-th="Description">Shows which devices your ad units were viewed on, for example, on desktop or mobile. 
+      <td data-th="Report">
+        Ad units
+      </td>
+      <td data-th="Description">
+        View performance for individual ad units you've customized to help
+        analyze which ad units perform better and decide whether these type 
+        of units can be placed in other locations. It can also help you better
+        understand why they are performing so well, allowing you to apply it
+        to other units.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Report">
+        <a href="https://support.google.com/adsense/answer/1407511">Sites</a>
+      </td>
+      <td data-th="Description">
+        If you own multiple sites, this report can help you understand if one
+        site is performing better and how you might replicate that behavior
+        on other sites.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Follow recommendations
+### Sign up for customized help and performance suggestions
 
-Googe Adsense analyzes your site's ad traffic to determine
-how your site could be changed to earn you more revenue.
+In addition to performance reports, AdSense can send occasional customized
+help and performance report suggestions by email. To sign up, verify 
+your email address in [Personal settings](https://www.google.com/adsense/app#personalSettings),
+and check the *Customized help and performance suggestions* checkbox under
+*Email preferences*.
 
-Results are shown on your home page in the
-[Recommendations box](https://support.google.com/adsense/answer/1725006?hl=en). Follow these recommendations to improve ad performance and revenue.
+<figure>
+  <img src="images/adsense-emails.jpg" srcset="images/adsense-emails.jpg 1x, images/adsense-emails-2x.jpg 2x" alt="AdSense personal settings page">
+  <figcaption>Enable Customized help and performance suggestions emails.</figcaption>
+</figure>
 
-We also recommend that you follow these
-[tips](https://support.google.com/adsense/answer/1348732?hl=en)
-to drive more traffic to your site; the more people who come to your site,
-the more people likely to click on ads. 
+{% include modules/remember.liquid title="Learn more" text="Learn more about <a href='https://support.google.com/adsense/answer/160562'>performance reports</a> in AdSense help." %}
+
+## Maximize bidding potential
+
+The higher the competition, or 'auction pressure', the more the advertiser 
+will pay to be viewed and clicked on your site. To maximize your bidding
+potential:
+
+* Be sure to allow both [text](https://support.google.com/adsense/answer/185665)
+and [display ads](https://support.google.com/adsense/answer/185666). Excluding
+one type of ads limits the number of advertisers available to you.
+* Use ad sizes that are popular with advertisers, see the [Guide to ad sizes](https://support.google.com/adsense/answer/6002621).
+* In some cases, certain ads may not blend well with your content, be careful
+about blocking too many categories as it will lower your potential earnings.
+
+<b>Note:</b> this information is also included in the publisher scorecard, 
+but it's crucial to strong ad performance!
+
+## Don't block the AdSense crawler
+
+Verify that the [robots.txt](https://support.google.com/webmasters/answer/6062608)
+file on your site [doesn’t block the AdSense crawler](https://support.google.com/adsense/answer/10532).
+AdSense needs to be able to process and index the content of web pages and 
+uses the AdSense crawler to visit your site and determine its content.  This
+allows AdSense to provide relevant ads.
+
+To update the `robots.txt` file to grant the AdSense crawler access to your 
+pages, *remove* the following two lines of text from your `robots.txt`:
+
+    User-agent: Mediapartners-Google
+    Disallow: /
+
+
 
 {% endwrap %}
