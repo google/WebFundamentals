@@ -66,7 +66,7 @@ on any device.
 ## Add an image
 
 To see the `gulp serve` tool in action: add 
-<a href="https://github.com/google/WebFundamentals/blob/master/src/site/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
+<a href="https://github.com/google/WebFundamentals/blob/master/src/site/_en/fundamentals/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
 to the images folder.
 
 `$ cp awesome-photo.jpg web-starter-kit/app/images`
@@ -79,7 +79,7 @@ Add the image to `main` in `index.html`:
 <main>
   <h1>Hello.</h1>
   <p>Welcome to Web Starter Kit.</p>
-  <div><img src="/images/awesome-photo.jpg"></div>
+  <div><img src="imgs/awesome-photo.jpg"></div>
 </main>
 {% endhighlight %}
 
@@ -153,7 +153,7 @@ will be the container where the date is placed:
 <main>
     <h1>Hello.</h1>
     <p>Welcome to Web Starter Kit.</p>
-    <div><img src="/images/awesome-photo.jpg"></div>
+    <div><img src="imgs/awesome-photo.jpg"></div>
     <span></span>
     <script src="/scripts/app.js" async></script> 
 </main>
