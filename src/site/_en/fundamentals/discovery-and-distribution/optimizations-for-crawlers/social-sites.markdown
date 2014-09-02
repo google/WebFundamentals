@@ -59,9 +59,14 @@ By adding `itemscope`, you can specify the the tag as a block of contents about 
 
 ### itemprop
 `itemprop`s define properties for `itemtype`s in the scope. For providing metadata to social sites, typical `itemprop` values are `name`, `description` and `image`.
-  
-These microdata provides semantic information to crawlers, typically for [Google+](https://plus.google.com/).
-  
+
+### Resources
+These microdata provides semantic information to crawlers, typically for [Google+](https://plus.google.com/).  
+To learn more about snippets and rendering on Google+, read following documents:
+
+* [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
+* [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
+
 In order to validate rich snippets on Google+, you can use tools like
 
 * [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
@@ -114,8 +119,8 @@ A meta tag consists of a `property` attribute and a `content` attribute. Propert
 
 These meta tags provide semantic information to crawlers from social sites, typically from [Google+](https://plus.google.com/), [Facebook](https://www.facebook.com/).
   
-There are more things you can attach to the post. Learn them at [ogp.me](http://ogp.me/).
-  
+### Resources
+There are more things you can attach to the post. Learn them at [ogp.me](http://ogp.me/).  
 In order to validate your markup, Facebook provides [Debugger](https://developers.facebook.com/tools/debug/).
 
 ## Twitter Cards
@@ -129,8 +134,8 @@ By using `twitter:site`, you can also add a Twitter account.
 
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
+### Resources
+To learn more about Twitter Cards, visit [Twitter's developer site](https://dev.twitter.com/docs/cards).  
 Twitter provides [Card Validator](https://dev.twitter.com/docs/cards/validation/validator) to validate your Twitter Card.
-
-To learn more about Twitter Card, visit [Twitter's developer site](https://dev.twitter.com/docs/cards).
 
 {% endwrap %}
