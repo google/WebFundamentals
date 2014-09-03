@@ -125,3 +125,19 @@ paullewis:
   google: +PaulLewis
   twitter: aerotwist
   description: "Paul is a Design and Perf Advocate"
+
+agektmr:
+  name:
+    given: Eiji
+    family: Kitamura
+  org:
+    name: Google
+    unit: Developer Relations
+  country: Japan
+  role:
+    - author
+  homepage: http://blog.agektmr.com
+  google: +agektmr
+  twitter: agektmr
+  email: agektmr@google.com
+  description: "Eiji is a Developer Advocate"
