@@ -35,7 +35,7 @@ task runner. NPM is used to download the modules needed to perform certain tasks
 in Gulp.
 
 If you aren’t sure if you have NodeJS and NPM, check by opening a terminal and
-running node -v. If Node responds, check the version matches the current version
+running `node -v`. If Node responds, check the version matches the current version
 on NodeJS.org.
 
 If you don’t get a response or have an old version then go to NodeJS.org and
@@ -50,7 +50,7 @@ extension language”. Essentially it’s CSS with some extra features. For exam
 it adds support for variables and functions, which help you structure your CSS
 in a modular and reusable fashion.
 
-First check if you have Ruby already with ruby -v. If you get an error or a
+First check if you have Ruby already with `ruby -v`. If you get an error or a
 version number less than 1.8.7, you need to install Ruby by visiting the Ruby
 downloads page.
 
