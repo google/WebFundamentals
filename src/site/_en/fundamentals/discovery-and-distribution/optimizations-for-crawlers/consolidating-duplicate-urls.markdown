@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Consolidating Duplicate URLs"
-description: "Serving same content with multiple URLs confuse search engines. In order to optimize search results of your page, consolidating URLs is highly recommended."
-introduction: "Serving same content with multiple URLs confuse search engines. In order to optimize search results of your page, consolidating URLs is highly recommended."
+description: "Serving same content using multiple URLs confuse search engines. In order to optimize search results of your page, consolidating URLs is highly recommended."
+introduction: "Serving same content using multiple URLs confuse search engines. In order to optimize search results of your page, consolidating URLs is highly recommended."
 snippet: "Spread your work to the world"
 id: consolidating-duplicate-urls
 collection: optimizations-for-crawlers

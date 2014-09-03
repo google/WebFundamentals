@@ -67,7 +67,7 @@ To learn more about snippets and rendering on Google+, read following documents:
 * [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
 * [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
 
-In order to validate rich snippets on Google+, you can use tools like
+In order to validate rich snippets on Google+, you can use tools such as:
 
 * [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
@@ -75,12 +75,12 @@ In order to validate rich snippets on Google+, you can use tools like
 <img src="imgs/semantic-inspector.png" srcset="imgs/semantic-inspector.png 1x, imgs/semantic-inspector-2x.png 2x" />
 
 ## Open Graph Protocol (OGP)
-Second option is to use RDFa based markup called OGP (Open Graph Protocol). Here's an example:
+Second option is to use RDFa based markup called Open Graph Protocol (OGP). Here's an example:
 {% include_code _code/social-sites.html ogp %}
-By adding these meta tags in `head` section of a webpage, your website can provide various information to the social site where it is shared on.
+By adding these meta tags in `head` section of your webpage, it can provide various information to the social site where it is shared on.
 
 ### Properties and contents
-A meta tag consists of a `property` attribute and a `content` attribute. Properties and contents take following values:
+A `meta` tag consists of a `property` attribute and a `content` attribute. Properties and contents take following values:
 
 <table class="table-2">
   <colgroup>
@@ -112,7 +112,7 @@ A meta tag consists of a `property` attribute and a `content` attribute. Propert
     </tr>
     <tr>
       <td data-th="Property"><code>og:type</code></td>
-      <td data-th="Content">A string that indicates a type of the webpage. You should be able to find one that is suitable in <a href="https://developers.facebook.com/docs/reference/opengraph/">this page</a>.</td>
+      <td data-th="Content">A string that indicates a type of the webpage. You can find one that is suitable for your webpage <a href="https://developers.facebook.com/docs/reference/opengraph/">here</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -120,22 +120,33 @@ A meta tag consists of a `property` attribute and a `content` attribute. Propert
 These meta tags provide semantic information to crawlers from social sites, typically from [Google+](https://plus.google.com/), [Facebook](https://www.facebook.com/).
   
 ### Resources
-There are more things you can attach to the post. Learn them at [ogp.me](http://ogp.me/).  
+There are even more things you can attach to the post. Learn them at [ogp.me](http://ogp.me/).  
 In order to validate your markup, Facebook provides [Debugger](https://developers.facebook.com/tools/debug/).
 
 ## Twitter Cards
 [Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to OGP applicable for [Twitter](https://twitter.com/). They add media attachments to tweets with a link to your website.
   
-In order to get Twitter Card working, [your domain must be approved](https://dev.twitter.com/docs/cards/validation/validator) and must contain `twitter:card` as `name` attribute instead of `property` attribute.
+In order to get a Twitter Card working, [your domain must be approved](https://dev.twitter.com/docs/cards/validation/validator) and must contain a `meta` tag that has `twitter:card` as `name` attribute instead of `property` attribute.
   
 Here's a quick example:
 {% include_code _code/social-sites.html twitter %}
-By using `twitter:site`, you can also add a Twitter account.
+By using `twitter:site`, you can associate a Twitter account to the post.
 
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
 ### Resources
 To learn more about Twitter Cards, visit [Twitter's developer site](https://dev.twitter.com/docs/cards).  
-Twitter provides [Card Validator](https://dev.twitter.com/docs/cards/validation/validator) to validate your Twitter Card.
+In order to validate your markup, Twitter provides [Card Validator](https://dev.twitter.com/docs/cards/validation/validator).
+
+## The Best Practice
+Given all three options, the best thing you can do is to include all efficiently in your webpage. Here's an example:
+{% include_code _code/social-sites2.html best_practice %}
+Notice that microdata and OGP share some markups:
+
+* `itemscope` is located at `head` tag
+* `title` and `description` are shared between microdata and OGP
+* `itemprop="image"` is using `link` tag with `href` attribute instead of reusing `meta` tag with `property="og:image"`
+  
+Lastly, make sure to validate that your webpage appears as expected on each social sites before publishing them.
 
 {% endwrap %}
