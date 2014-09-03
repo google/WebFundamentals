@@ -24,8 +24,9 @@
     "grunt-jekyll": "~0.3.9",
     "grunt-open": "~0.2.2",
     "grunt-shell": "~0.3.1",
+    "grunt-webfont": "^0.4.2",
+    "latest-release": "^1.0.0",
     "matchdep": "~0.1.2",
-    "time-grunt": "~0.1.1",
-    "grunt-webfont": "^0.4.2"
+    "time-grunt": "~0.1.1"
   }
 }
