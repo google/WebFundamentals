@@ -7,15 +7,15 @@ related-guides:
   create-amazing-forms:
     -
       title: Create amazing forms
-      href: input/form/
+      href: fundamentals/input/form/
       thumbnail: ../imgs/placeholder--small.png
     -
       title: Label and name inputs correctly
-      href: input/form/#label-and-name-inputs-properly
+      href: fundamentals/input/form/#label-and-name-inputs-properly
       thumbnail: ../imgs/placeholder--small.png
     -
       title: Choose the best input type
-      href: input/form/#choose-the-best-input-type
+      href: fundamentals/input/form/#choose-the-best-input-type
       thumbnail: ../imgs/placeholder--small.png
 ---
 {% comment %}
