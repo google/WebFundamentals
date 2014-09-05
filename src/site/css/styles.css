@@ -524,7 +524,7 @@ body {
   color: #404040;
   position: relative;
 }
-/* line 200, ../_sass/_utils.scss */
+/* line 202, ../_sass/_utils.scss */
 body:after {
   content: "";
   position: absolute;
@@ -546,7 +546,7 @@ body:after {
   -ms-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-/* line 221, ../_sass/_utils.scss */
+/* line 223, ../_sass/_utils.scss */
 body.debug:after {
   display: block;
   pointer-events: none;
@@ -1812,7 +1812,7 @@ li > p {
   display: block;
   line-height: 26px;
 }
-/* line 429, ../_sass/_utils.scss */
+/* line 431, ../_sass/_utils.scss */
 .main-nav__link--explore:hover {
   color: #404040;
 }
@@ -1833,11 +1833,11 @@ li > p {
     letter-spacing: 1px;
     text-decoration: none;
   }
-  /* line 429, ../_sass/_utils.scss */
+  /* line 431, ../_sass/_utils.scss */
   .main-nav__link--explore:hover {
     color: #404040;
   }
-  /* line 435, ../_sass/_utils.scss */
+  /* line 437, ../_sass/_utils.scss */
   .main-nav__link--explore:before {
     display: inline-block;
     padding-right: 10px;
@@ -2359,12 +2359,12 @@ li > p {
     max-width: 864px;
   }
 }
-/* line 450, ../_sass/_utils.scss */
+/* line 452, ../_sass/_utils.scss */
 .highlight-module__container:before {
   display: none;
 }
 @media only screen and (min-width: 620px) {
-  /* line 450, ../_sass/_utils.scss */
+  /* line 452, ../_sass/_utils.scss */
   .highlight-module__container:before {
     display: block;
     position: absolute;
@@ -2379,24 +2379,24 @@ li > p {
     color: #ffffff;
   }
 }
-/* line 468, ../_sass/_utils.scss */
+/* line 470, ../_sass/_utils.scss */
 .highlight-module--left .highlight-module__container:before {
   right: auto;
   left: 32px;
 }
 @media only screen and (min-width: 800px) {
-  /* line 450, ../_sass/_utils.scss */
+  /* line 452, ../_sass/_utils.scss */
   .highlight-module__container:before {
     top: 134px;
     right: 35px;
     width: 20.5%;
     font-size: 180px;
   }
-  /* line 479, ../_sass/_utils.scss */
+  /* line 481, ../_sass/_utils.scss */
   .highlight-module--left .highlight-module__container:before {
     left: 35px;
   }
-  /* line 483, ../_sass/_utils.scss */
+  /* line 485, ../_sass/_utils.scss */
   .highlight-module--large .highlight-module__container:before {
     font-size: 430px;
   }
@@ -4504,7 +4504,7 @@ li > p {
   color: #ffffff;
   background: rgba(64, 64, 64, 0.85);
 }
-/* line 383, ../_sass/_utils.scss */
+/* line 385, ../_sass/_utils.scss */
 .latest-spotlights__link p:before {
   content: "\e005";
   font-family: "icons";
@@ -5078,7 +5078,7 @@ dt {
   padding-left: 16px;
 }
 
-/* line 383, ../_sass/_utils.scss */
+/* line 385, ../_sass/_utils.scss */
 ul > li:before {
   content: "\e001";
   font-family: "icons";
@@ -5101,7 +5101,7 @@ ol {
 ol > li {
   padding-left: 32px;
 }
-/* line 401, ../_sass/_utils.scss */
+/* line 403, ../_sass/_utils.scss */
 ol > li:before {
   counter-increment: list;
   content: "0" counter(list);
@@ -5130,7 +5130,7 @@ dt {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400;
 }
-/* line 383, ../_sass/_utils.scss */
+/* line 385, ../_sass/_utils.scss */
 dt:before {
   content: "\e00f";
   font-family: "icons";
@@ -5166,7 +5166,7 @@ ul.list-links li:before {
 ul.list-links a {
   font-weight: 400;
 }
-/* line 383, ../_sass/_utils.scss */
+/* line 385, ../_sass/_utils.scss */
 ul.list-links a:before {
   content: "\e001";
   font-family: "icons";
@@ -5195,7 +5195,7 @@ ul.list-links.list-links--primary a {
   line-height: 1;
   text-decoration: none;
 }
-/* line 383, ../_sass/_utils.scss */
+/* line 385, ../_sass/_utils.scss */
 ul.list-links.list-links--primary a:before {
   content: "\e005";
   font-family: "icons";
@@ -5219,7 +5219,7 @@ ol.list-links li a {
   display: inline-block;
   font-weight: 300;
 }
-/* line 401, ../_sass/_utils.scss */
+/* line 403, ../_sass/_utils.scss */
 ol.list-links li a:before {
   counter-increment: list;
   content: "0" counter(list);
@@ -5278,7 +5278,7 @@ ol.list-links.list-links--secondary a:before {
   display: inline-block;
   padding-left: 16px;
 }
-/* line 383, ../_sass/_utils.scss */
+/* line 385, ../_sass/_utils.scss */
 .list-anchor a:before {
   content: "\e001";
   font-family: "icons";
@@ -6027,11 +6027,11 @@ a:hover {
   letter-spacing: 1px;
   text-decoration: none;
 }
-/* line 429, ../_sass/_utils.scss */
+/* line 431, ../_sass/_utils.scss */
 .cta--primary:hover {
   color: #404040;
 }
-/* line 435, ../_sass/_utils.scss */
+/* line 437, ../_sass/_utils.scss */
 .cta--primary:before {
   display: inline-block;
   padding-right: 10px;
@@ -6050,7 +6050,7 @@ a:hover {
   line-height: 1;
   letter-spacing: 1px;
 }
-/* line 429, ../_sass/_utils.scss */
+/* line 431, ../_sass/_utils.scss */
 .cta--secondary:hover {
   color: #404040;
 }
@@ -6720,346 +6720,395 @@ figcaption {
 .theme--principles-of-site-design .themed.divider-icon:after {
   color: #ffcbbb;
 }
-
-/* line 128, ../_sass/_themed.scss */
-.theme--multi-device-layouts .themed--background, .theme--multi-device-layouts .themed--background.next-lessons:before {
-  background-color: #297ea9;
-}
-/* line 131, ../_sass/_themed.scss */
-.theme--device-access .themed--background, .theme--device-access .themed--background.next-lessons:before {
-  background-color: #29a8a8;
-}
-/* line 134, ../_sass/_themed.scss */
-.theme--introduction-to-media .themed--background, .theme--introduction-to-media .themed--background.next-lessons:before {
-  background-color: #cf423a;
-}
-/* line 137, ../_sass/_themed.scss */
-.theme--monetization .themed--background, .theme--monetization .themed--background.next-lessons:before {
-  background-color: #056f00;
-}
-/* line 140, ../_sass/_themed.scss */
-.theme--user-input .themed--background, .theme--user-input .themed--background.next-lessons:before {
-  background-color: #2c8566;
-}
-/* line 143, ../_sass/_themed.scss */
-.theme--tools .themed--background, .theme--tools .themed--background.next-lessons:before {
-  background-color: #cf3a8c;
-}
-/* line 146, ../_sass/_themed.scss */
-.theme--performance .themed--background, .theme--performance .themed--background.next-lessons:before {
-  background-color: #7b5294;
-}
-/* line 149, ../_sass/_themed.scss */
-.theme--look-and-feel .themed--background, .theme--look-and-feel .themed--background.next-lessons:before {
-  background-color: #404040;
-}
-/* line 152, ../_sass/_themed.scss */
-.theme--principles-of-site-design .themed--background, .theme--principles-of-site-design .themed--background.next-lessons:before {
-  background-color: #ff5722;
-}
-
-/* line 159, ../_sass/_themed.scss */
-.theme--multi-device-layouts .themed--background-secondary, .theme--multi-device-layouts .themed--background-secondary.next-lessons:before {
-  background-color: #89c4e2;
-}
-/* line 162, ../_sass/_themed.scss */
-.theme--device-access .themed--background-secondary, .theme--device-access .themed--background-secondary.next-lessons:before {
-  background-color: #89c4e2;
-}
-/* line 165, ../_sass/_themed.scss */
-.theme--introduction-to-media .themed--background-secondary, .theme--introduction-to-media .themed--background-secondary.next-lessons:before {
-  background-color: #edb8b5;
-}
-/* line 168, ../_sass/_themed.scss */
-.theme--monetization .themed--background-secondary, .theme--monetization .themed--background-secondary.next-lessons:before {
-  background-color: #14ff09;
-}
-/* line 171, ../_sass/_themed.scss */
-.theme--user-input .themed--background-secondary, .theme--user-input .themed--background-secondary.next-lessons:before {
-  background-color: #78d2b3;
-}
-/* line 174, ../_sass/_themed.scss */
-.theme--tools .themed--background-secondary, .theme--tools .themed--background-secondary.next-lessons:before {
-  background-color: #edb5d4;
-}
-/* line 177, ../_sass/_themed.scss */
-.theme--performance .themed--background-secondary, .theme--performance .themed--background-secondary.next-lessons:before {
-  background-color: #c4add2;
-}
-/* line 180, ../_sass/_themed.scss */
-.theme--look-and-feel .themed--background-secondary, .theme--look-and-feel .themed--background-secondary.next-lessons:before {
-  background-color: #8c8c8c;
-}
-/* line 183, ../_sass/_themed.scss */
-.theme--principles-of-site-design .themed--background-secondary, .theme--principles-of-site-design .themed--background-secondary.next-lessons:before {
-  background-color: #ffcbbb;
-}
-
-/* line 189, ../_sass/_themed.scss */
-.theme--multi-device-layouts .themed--hover:hover {
-  color: #297ea9;
-}
-/* line 191, ../_sass/_themed.scss */
-.theme--device-access .themed--hover:hover {
-  color: #29a8a8;
-}
-/* line 193, ../_sass/_themed.scss */
-.theme--introduction-to-media .themed--hover:hover {
-  color: #cf423a;
-}
-/* line 195, ../_sass/_themed.scss */
-.theme--monetization .themed--hover:hover {
-  color: #056f00;
-}
-/* line 197, ../_sass/_themed.scss */
-.theme--user-input .themed--hover:hover {
-  color: #2c8566;
-}
-/* line 199, ../_sass/_themed.scss */
-.theme--tools .themed--hover:hover {
-  color: #cf3a8c;
-}
-/* line 201, ../_sass/_themed.scss */
-.theme--performance .themed--hover:hover {
-  color: #7b5294;
-}
-/* line 203, ../_sass/_themed.scss */
-.theme--look-and-feel .themed--hover:hover {
-  color: #404040;
-}
-/* line 205, ../_sass/_themed.scss */
-.theme--principles-of-site-design .themed--hover:hover {
+/* line 123, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed {
   color: #ff5722;
 }
-
-/* line 211, ../_sass/_themed.scss */
-.theme--multi-device-layouts .themed--hover-secondary:hover {
-  color: #89c4e2;
+/* line 126, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed.divider-icon:before {
+  color: #ff5722;
 }
-/* line 213, ../_sass/_themed.scss */
-.theme--device-access .themed--hover-secondary:hover {
-  color: #89c4e2;
-}
-/* line 215, ../_sass/_themed.scss */
-.theme--introduction-to-media .themed--hover-secondary:hover {
-  color: #edb8b5;
-}
-/* line 217, ../_sass/_themed.scss */
-.theme--monetization .themed--hover-secondary:hover {
-  color: #14ff09;
-}
-/* line 219, ../_sass/_themed.scss */
-.theme--tools .themed--hover-secondary:hover {
-  color: #edb5d4;
-}
-/* line 221, ../_sass/_themed.scss */
-.theme--user-input .themed--hover-secondary:hover {
-  color: #78d2b3;
-}
-/* line 223, ../_sass/_themed.scss */
-.theme--performance .themed--hover-secondary:hover {
-  color: #c4add2;
-}
-/* line 225, ../_sass/_themed.scss */
-.theme--look-and-feel .themed--hover-secondary:hover {
-  color: #8c8c8c;
-}
-/* line 227, ../_sass/_themed.scss */
-.theme--principles-of-site-design .themed--hover-secondary:hover {
+/* line 130, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed.divider-icon:after {
   color: #ffcbbb;
 }
 
+/* line 140, ../_sass/_themed.scss */
+.theme--multi-device-layouts .themed--background, .theme--multi-device-layouts .themed--background.next-lessons:before {
+  background-color: #297ea9;
+}
+/* line 143, ../_sass/_themed.scss */
+.theme--device-access .themed--background, .theme--device-access .themed--background.next-lessons:before {
+  background-color: #29a8a8;
+}
+/* line 146, ../_sass/_themed.scss */
+.theme--introduction-to-media .themed--background, .theme--introduction-to-media .themed--background.next-lessons:before {
+  background-color: #cf423a;
+}
+/* line 149, ../_sass/_themed.scss */
+.theme--monetization .themed--background, .theme--monetization .themed--background.next-lessons:before {
+  background-color: #056f00;
+}
+/* line 152, ../_sass/_themed.scss */
+.theme--user-input .themed--background, .theme--user-input .themed--background.next-lessons:before {
+  background-color: #2c8566;
+}
+/* line 155, ../_sass/_themed.scss */
+.theme--tools .themed--background, .theme--tools .themed--background.next-lessons:before {
+  background-color: #cf3a8c;
+}
+/* line 158, ../_sass/_themed.scss */
+.theme--performance .themed--background, .theme--performance .themed--background.next-lessons:before {
+  background-color: #7b5294;
+}
+/* line 161, ../_sass/_themed.scss */
+.theme--look-and-feel .themed--background, .theme--look-and-feel .themed--background.next-lessons:before {
+  background-color: #404040;
+}
+/* line 164, ../_sass/_themed.scss */
+.theme--principles-of-site-design .themed--background, .theme--principles-of-site-design .themed--background.next-lessons:before {
+  background-color: #ff5722;
+}
+/* line 167, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed--background, .theme--discovery-and-distribution .themed--background.next-lessons:before {
+  background-color: #ff5722;
+}
+
+/* line 174, ../_sass/_themed.scss */
+.theme--multi-device-layouts .themed--background-secondary, .theme--multi-device-layouts .themed--background-secondary.next-lessons:before {
+  background-color: #89c4e2;
+}
+/* line 177, ../_sass/_themed.scss */
+.theme--device-access .themed--background-secondary, .theme--device-access .themed--background-secondary.next-lessons:before {
+  background-color: #89c4e2;
+}
+/* line 180, ../_sass/_themed.scss */
+.theme--introduction-to-media .themed--background-secondary, .theme--introduction-to-media .themed--background-secondary.next-lessons:before {
+  background-color: #edb8b5;
+}
+/* line 183, ../_sass/_themed.scss */
+.theme--monetization .themed--background-secondary, .theme--monetization .themed--background-secondary.next-lessons:before {
+  background-color: #14ff09;
+}
+/* line 186, ../_sass/_themed.scss */
+.theme--user-input .themed--background-secondary, .theme--user-input .themed--background-secondary.next-lessons:before {
+  background-color: #78d2b3;
+}
+/* line 189, ../_sass/_themed.scss */
+.theme--tools .themed--background-secondary, .theme--tools .themed--background-secondary.next-lessons:before {
+  background-color: #edb5d4;
+}
+/* line 192, ../_sass/_themed.scss */
+.theme--performance .themed--background-secondary, .theme--performance .themed--background-secondary.next-lessons:before {
+  background-color: #c4add2;
+}
+/* line 195, ../_sass/_themed.scss */
+.theme--look-and-feel .themed--background-secondary, .theme--look-and-feel .themed--background-secondary.next-lessons:before {
+  background-color: #8c8c8c;
+}
+/* line 198, ../_sass/_themed.scss */
+.theme--principles-of-site-design .themed--background-secondary, .theme--principles-of-site-design .themed--background-secondary.next-lessons:before {
+  background-color: #ffcbbb;
+}
+/* line 201, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed--background-secondary, .theme--discovery-and-distribution .themed--background-secondary.next-lessons:before {
+  background-color: #ffcbbb;
+}
+
+/* line 206, ../_sass/_themed.scss */
+.theme--multi-device-layouts .themed--hover:hover {
+  color: #297ea9;
+}
+/* line 208, ../_sass/_themed.scss */
+.theme--device-access .themed--hover:hover {
+  color: #29a8a8;
+}
+/* line 210, ../_sass/_themed.scss */
+.theme--introduction-to-media .themed--hover:hover {
+  color: #cf423a;
+}
+/* line 212, ../_sass/_themed.scss */
+.theme--monetization .themed--hover:hover {
+  color: #056f00;
+}
+/* line 214, ../_sass/_themed.scss */
+.theme--user-input .themed--hover:hover {
+  color: #2c8566;
+}
+/* line 216, ../_sass/_themed.scss */
+.theme--tools .themed--hover:hover {
+  color: #cf3a8c;
+}
+/* line 218, ../_sass/_themed.scss */
+.theme--performance .themed--hover:hover {
+  color: #7b5294;
+}
+/* line 220, ../_sass/_themed.scss */
+.theme--look-and-feel .themed--hover:hover {
+  color: #404040;
+}
+/* line 222, ../_sass/_themed.scss */
+.theme--principles-of-site-design .themed--hover:hover {
+  color: #ff5722;
+}
+/* line 224, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed--hover:hover {
+  color: #ff5722;
+}
+
+/* line 230, ../_sass/_themed.scss */
+.theme--multi-device-layouts .themed--hover-secondary:hover {
+  color: #89c4e2;
+}
+/* line 232, ../_sass/_themed.scss */
+.theme--device-access .themed--hover-secondary:hover {
+  color: #89c4e2;
+}
+/* line 234, ../_sass/_themed.scss */
+.theme--introduction-to-media .themed--hover-secondary:hover {
+  color: #edb8b5;
+}
+/* line 236, ../_sass/_themed.scss */
+.theme--monetization .themed--hover-secondary:hover {
+  color: #14ff09;
+}
 /* line 238, ../_sass/_themed.scss */
+.theme--tools .themed--hover-secondary:hover {
+  color: #edb5d4;
+}
+/* line 240, ../_sass/_themed.scss */
+.theme--user-input .themed--hover-secondary:hover {
+  color: #78d2b3;
+}
+/* line 242, ../_sass/_themed.scss */
+.theme--performance .themed--hover-secondary:hover {
+  color: #c4add2;
+}
+/* line 244, ../_sass/_themed.scss */
+.theme--look-and-feel .themed--hover-secondary:hover {
+  color: #8c8c8c;
+}
+/* line 246, ../_sass/_themed.scss */
+.theme--principles-of-site-design .themed--hover-secondary:hover {
+  color: #ffcbbb;
+}
+/* line 248, ../_sass/_themed.scss */
+.theme--discovery-and-distribution .themed--hover-secondary:hover {
+  color: #ffcbbb;
+}
+
+/* line 259, ../_sass/_themed.scss */
 .article--multi-device-layouts .article-container h1, .article--multi-device-layouts
 .article-container h2 {
   color: #297ea9;
 }
-/* line 240, ../_sass/_themed.scss */
+/* line 261, ../_sass/_themed.scss */
 .article--device-access .article-container h1, .article--device-access
 .article-container h2 {
   color: #29a8a8;
 }
-/* line 242, ../_sass/_themed.scss */
+/* line 263, ../_sass/_themed.scss */
 .article--introduction-to-media .article-container h1, .article--introduction-to-media
 .article-container h2 {
   color: #cf423a;
 }
-/* line 244, ../_sass/_themed.scss */
+/* line 265, ../_sass/_themed.scss */
 .article--monetization .article-container h1, .article--monetization
 .article-container h2 {
   color: #056f00;
 }
-/* line 246, ../_sass/_themed.scss */
+/* line 267, ../_sass/_themed.scss */
 .article--tools .article-container h1, .article--tools
 .article-container h2 {
   color: #cf3a8c;
 }
-/* line 248, ../_sass/_themed.scss */
+/* line 269, ../_sass/_themed.scss */
 .article--user-input .article-container h1, .article--user-input
 .article-container h2 {
   color: #2c8566;
 }
-/* line 250, ../_sass/_themed.scss */
+/* line 271, ../_sass/_themed.scss */
 .article--performance .article-container h1, .article--performance
 .article-container h2 {
   color: #7b5294;
 }
-/* line 252, ../_sass/_themed.scss */
+/* line 273, ../_sass/_themed.scss */
 .article--look-and-feel .article-container h1, .article--look-and-feel
 .article-container h2 {
   color: #404040;
 }
-/* line 254, ../_sass/_themed.scss */
+/* line 275, ../_sass/_themed.scss */
 .article--principles-of-site-design .article-container h1, .article--principles-of-site-design
 .article-container h2 {
   color: #ff5722;
 }
+/* line 277, ../_sass/_themed.scss */
+.article--discovery-and-distribution .article-container h1, .article--discovery-and-distribution
+.article-container h2 {
+  color: #ff5722;
+}
 
-/* line 262, ../_sass/_themed.scss */
+/* line 285, ../_sass/_themed.scss */
 .nav-theme--multi-device-layouts .themed--hover:hover {
   color: #297ea9;
 }
-/* line 264, ../_sass/_themed.scss */
+/* line 287, ../_sass/_themed.scss */
 .nav-theme--device-access .themed--hover:hover {
   color: #29a8a8;
 }
-/* line 266, ../_sass/_themed.scss */
+/* line 289, ../_sass/_themed.scss */
 .nav-theme--introduction-to-media .themed--hover:hover {
   color: #cf423a;
 }
-/* line 268, ../_sass/_themed.scss */
+/* line 291, ../_sass/_themed.scss */
 .nav-theme--monetization .themed--hover:hover {
   color: #056f00;
 }
-/* line 270, ../_sass/_themed.scss */
+/* line 293, ../_sass/_themed.scss */
 .nav-theme--tools .themed--hover:hover {
   color: #cf3a8c;
 }
-/* line 272, ../_sass/_themed.scss */
+/* line 295, ../_sass/_themed.scss */
 .nav-theme--user-input .themed--hover:hover {
   color: #2c8566;
 }
-/* line 274, ../_sass/_themed.scss */
+/* line 297, ../_sass/_themed.scss */
 .nav-theme--performance .themed--hover:hover {
   color: #7b5294;
 }
-/* line 276, ../_sass/_themed.scss */
+/* line 299, ../_sass/_themed.scss */
 .nav-theme--look-and-feel .themed--hover:hover {
   color: #404040;
 }
-/* line 278, ../_sass/_themed.scss */
+/* line 301, ../_sass/_themed.scss */
 .nav-theme--principles-of-site-design .themed--hover:hover {
   color: #ff5722;
 }
-
-/* line 284, ../_sass/_themed.scss */
-.nav-theme--multi-device-layouts .themed {
-  color: #297ea9;
-}
-/* line 286, ../_sass/_themed.scss */
-.nav-theme--device-access .themed {
-  color: #29a8a8;
-}
-/* line 288, ../_sass/_themed.scss */
-.nav-theme--introduction-to-media .themed {
-  color: #cf423a;
-}
-/* line 290, ../_sass/_themed.scss */
-.nav-theme--monetization .themed {
-  color: #056f00;
-}
-/* line 292, ../_sass/_themed.scss */
-.nav-theme--tools .themed {
-  color: #cf3a8c;
-}
-/* line 294, ../_sass/_themed.scss */
-.nav-theme--user-input .themed {
-  color: #2c8566;
-}
-/* line 296, ../_sass/_themed.scss */
-.nav-theme--performance .themed {
-  color: #7b5294;
-}
-/* line 298, ../_sass/_themed.scss */
-.nav-theme--look-and-feel .themed {
-  color: #404040;
-}
-/* line 300, ../_sass/_themed.scss */
-.nav-theme--principles-of-site-design .themed {
+/* line 303, ../_sass/_themed.scss */
+.nav-theme--discovery-and-distribution .themed--hover:hover {
   color: #ff5722;
 }
 
-/* line 306, ../_sass/_themed.scss */
+/* line 309, ../_sass/_themed.scss */
+.nav-theme--multi-device-layouts .themed {
+  color: #297ea9;
+}
+/* line 311, ../_sass/_themed.scss */
+.nav-theme--device-access .themed {
+  color: #29a8a8;
+}
+/* line 313, ../_sass/_themed.scss */
+.nav-theme--introduction-to-media .themed {
+  color: #cf423a;
+}
+/* line 315, ../_sass/_themed.scss */
+.nav-theme--monetization .themed {
+  color: #056f00;
+}
+/* line 317, ../_sass/_themed.scss */
+.nav-theme--tools .themed {
+  color: #cf3a8c;
+}
+/* line 319, ../_sass/_themed.scss */
+.nav-theme--user-input .themed {
+  color: #2c8566;
+}
+/* line 321, ../_sass/_themed.scss */
+.nav-theme--performance .themed {
+  color: #7b5294;
+}
+/* line 323, ../_sass/_themed.scss */
+.nav-theme--look-and-feel .themed {
+  color: #404040;
+}
+/* line 325, ../_sass/_themed.scss */
+.nav-theme--principles-of-site-design .themed {
+  color: #ff5722;
+}
+/* line 327, ../_sass/_themed.scss */
+.nav-theme--discovery-and-distribution .themed {
+  color: #ff5722;
+}
+
+/* line 333, ../_sass/_themed.scss */
 .nav-theme--multi-device-layouts .themed--background {
   background-color: #297ea9;
 }
-/* line 308, ../_sass/_themed.scss */
+/* line 335, ../_sass/_themed.scss */
 .nav-theme--device-access .themed--background {
   background-color: #29a8a8;
 }
-/* line 310, ../_sass/_themed.scss */
+/* line 337, ../_sass/_themed.scss */
 .nav-theme--introduction-to-media .themed--background {
   background-color: #cf423a;
 }
-/* line 312, ../_sass/_themed.scss */
+/* line 339, ../_sass/_themed.scss */
 .nav-theme--monetization .themed--background {
   background-color: #056f00;
 }
-/* line 314, ../_sass/_themed.scss */
+/* line 341, ../_sass/_themed.scss */
 .nav-theme--tools .themed--background {
   background-color: #cf3a8c;
 }
-/* line 316, ../_sass/_themed.scss */
+/* line 343, ../_sass/_themed.scss */
 .nav-theme--user-input .themed--background {
   background-color: #2c8566;
 }
-/* line 318, ../_sass/_themed.scss */
+/* line 345, ../_sass/_themed.scss */
 .nav-theme--performance .themed--background {
   background-color: #7b5294;
 }
-/* line 320, ../_sass/_themed.scss */
+/* line 347, ../_sass/_themed.scss */
 .nav-theme--look-and-feel .themed--background {
   background-color: #404040;
 }
-/* line 322, ../_sass/_themed.scss */
+/* line 349, ../_sass/_themed.scss */
 .nav-theme--principles-of-site-design .themed--background {
   background-color: #ff5722;
 }
+/* line 351, ../_sass/_themed.scss */
+.nav-theme--discovery-and-distribution .themed--background {
+  background-color: #ff5722;
+}
 
-/* line 328, ../_sass/_themed.scss */
+/* line 357, ../_sass/_themed.scss */
 .nav-theme--multi-device-layouts .themed--background-secondary {
   background-color: #89c4e2;
 }
-/* line 330, ../_sass/_themed.scss */
+/* line 359, ../_sass/_themed.scss */
 .nav-theme--device-access .themed--background-secondary {
   background-color: #89c4e2;
 }
-/* line 332, ../_sass/_themed.scss */
+/* line 361, ../_sass/_themed.scss */
 .nav-theme--introduction-to-media .themed--background-secondary {
   background-color: #edb8b5;
 }
-/* line 334, ../_sass/_themed.scss */
+/* line 363, ../_sass/_themed.scss */
 .nav-theme--monetization .themed--background-secondary {
   background-color: #14ff09;
 }
-/* line 336, ../_sass/_themed.scss */
+/* line 365, ../_sass/_themed.scss */
 .nav-theme--tools .themed--background-secondary {
   background-color: #edb5d4;
 }
-/* line 338, ../_sass/_themed.scss */
+/* line 367, ../_sass/_themed.scss */
 .nav-theme--user-input .themed--background-secondary {
   background-color: #78d2b3;
 }
-/* line 340, ../_sass/_themed.scss */
+/* line 369, ../_sass/_themed.scss */
 .nav-theme--performance .themed--background-secondary {
   background-color: #c4add2;
 }
-/* line 342, ../_sass/_themed.scss */
+/* line 371, ../_sass/_themed.scss */
 .nav-theme--look-and-feel .themed--background-secondary {
   background-color: #8c8c8c;
 }
-/* line 344, ../_sass/_themed.scss */
+/* line 373, ../_sass/_themed.scss */
 .nav-theme--principles-of-site-design .themed--background-secondary {
+  background-color: #ffcbbb;
+}
+/* line 375, ../_sass/_themed.scss */
+.nav-theme--discovery-and-distribution .themed--background-secondary {
   background-color: #ffcbbb;
 }
 
@@ -7319,37 +7368,47 @@ figcaption {
 }
 
 /* line 59, ../_sass/_helper.scss */
+.color--discovery-and-distribution {
+  color: #ff5722;
+}
+
+/* line 60, ../_sass/_helper.scss */
 .color--tools-secondary {
   color: #edb5d4;
 }
 
-/* line 60, ../_sass/_helper.scss */
+/* line 61, ../_sass/_helper.scss */
 .color--layouts-secondary {
   color: #89c4e2;
 }
 
-/* line 61, ../_sass/_helper.scss */
+/* line 62, ../_sass/_helper.scss */
 .color--user-secondary {
   color: #78d2b3;
 }
 
-/* line 62, ../_sass/_helper.scss */
+/* line 63, ../_sass/_helper.scss */
 .color--media-secondary {
   color: #edb8b5;
 }
 
-/* line 63, ../_sass/_helper.scss */
+/* line 64, ../_sass/_helper.scss */
 .color--monetization-secondary {
   color: #14ff09;
 }
 
-/* line 64, ../_sass/_helper.scss */
+/* line 65, ../_sass/_helper.scss */
 .color--performance-secondary {
   color: #c4add2;
 }
 
+/* line 66, ../_sass/_helper.scss */
+.color--discovery-and-distribution-secondary {
+  color: #ffcbbb;
+}
+
 /*==========  TEXT DIVIDER  ==========*/
-/* line 69, ../_sass/_helper.scss */
+/* line 70, ../_sass/_helper.scss */
 .divider {
   width: 80%;
   margin: 26px auto;
@@ -7361,35 +7420,35 @@ figcaption {
   background-color: #e0e0e0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 69, ../_sass/_helper.scss */
+  /* line 70, ../_sass/_helper.scss */
   .divider {
     width: 40%;
   }
 }
-/* line 83, ../_sass/_helper.scss */
+/* line 84, ../_sass/_helper.scss */
 .divider.divider--short {
   width: 70%;
 }
 @media only screen and (min-width: 620px) {
-  /* line 83, ../_sass/_helper.scss */
+  /* line 84, ../_sass/_helper.scss */
   .divider.divider--short {
     width: 25%;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 92, ../_sass/_helper.scss */
+  /* line 93, ../_sass/_helper.scss */
   .divider.divider--fluid {
     width: 100%;
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 100, ../_sass/_helper.scss */
+  /* line 101, ../_sass/_helper.scss */
   .divider.divider--spaced {
     margin-top: 52px;
     margin-bottom: 51px;
   }
 }
-/* line 109, ../_sass/_helper.scss */
+/* line 110, ../_sass/_helper.scss */
 .divider span {
   background: #ffffff;
   position: relative;
@@ -7398,29 +7457,29 @@ figcaption {
   width: 35px;
   height: 1px;
 }
-/* line 118, ../_sass/_helper.scss */
+/* line 119, ../_sass/_helper.scss */
 .divider span:before, .divider span:after {
   position: absolute;
   font-family: "icons";
   top: -12px;
   color: #4285f4;
 }
-/* line 125, ../_sass/_helper.scss */
+/* line 126, ../_sass/_helper.scss */
 .divider span:before {
   content: "\e004";
   left: 8px;
 }
-/* line 130, ../_sass/_helper.scss */
+/* line 131, ../_sass/_helper.scss */
 .divider span:after {
   color: #a0c3ff;
   content: "\e005";
   right: 6px;
 }
-/* line 137, ../_sass/_helper.scss */
+/* line 138, ../_sass/_helper.scss */
 .divider .divider-icon--secondary {
   width: 23px;
 }
-/* line 140, ../_sass/_helper.scss */
+/* line 141, ../_sass/_helper.scss */
 .divider .divider-icon--secondary:before {
   content: "*";
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -7430,29 +7489,29 @@ figcaption {
   top: -9px;
   left: 3px;
 }
-/* line 150, ../_sass/_helper.scss */
+/* line 151, ../_sass/_helper.scss */
 .divider .divider-icon--secondary:after {
   display: none;
 }
 
-/* line 159, ../_sass/_helper.scss */
+/* line 160, ../_sass/_helper.scss */
 .divider--secondary span {
   background-color: #f0f0f0;
 }
 
 /*==========  GENERIC  ==========*/
-/* line 165, ../_sass/_helper.scss */
+/* line 166, ../_sass/_helper.scss */
 .centered {
   text-align: center;
 }
 
-/* line 169, ../_sass/_helper.scss */
+/* line 170, ../_sass/_helper.scss */
 .text-highlight {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
 /*==========  TAG  ==========*/
-/* line 175, ../_sass/_helper.scss */
+/* line 176, ../_sass/_helper.scss */
 .tag {
   font-size: 13px;
   line-height: 2.0000em;
@@ -7466,32 +7525,32 @@ figcaption {
   display: inline-block;
   text-decoration: none;
 }
-/* line 183, ../_sass/_helper.scss */
+/* line 184, ../_sass/_helper.scss */
 .tag:hover {
   color: #404040;
 }
-/* line 187, ../_sass/_helper.scss */
+/* line 188, ../_sass/_helper.scss */
 .tag:before {
   content: "# ";
   display: inline-block;
 }
 
 /*==========  INDENTED CONTENT  ==========*/
-/* line 195, ../_sass/_helper.scss */
+/* line 196, ../_sass/_helper.scss */
 .indented {
   padding-left: 32px;
 }
-/* line 200, ../_sass/_helper.scss */
+/* line 201, ../_sass/_helper.scss */
 .indented ul, .indented ol, .indented dl {
   padding-left: 0;
 }
 
 @media only screen and (min-width: 620px) {
-  /* line 205, ../_sass/_helper.scss */
+  /* line 206, ../_sass/_helper.scss */
   .indented-medium {
     padding-left: 32px;
   }
-  /* line 212, ../_sass/_helper.scss */
+  /* line 213, ../_sass/_helper.scss */
   .indented-medium ul, .indented-medium ol, .indented-medium dl {
     padding-left: 0;
   }
