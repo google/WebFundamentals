@@ -2,5 +2,5 @@ build
 .DS_Store
 .sass-cache/
 node_modules/
-src/.ruby-gemset
-src/.rvmrc
+.ruby-gemset
+.rvmrc
