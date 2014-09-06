@@ -15,10 +15,10 @@ collection: cc-principles
 
 {% wrap content %}
 
-For your registered users, remember and pre-fill their preferences. For new 
-users, offer a third-party checkout service they may already use. Several 
-retail sites in the study offered third-party payment services as an option, 
-reducing purchasing friction for users of those services and allowing the site 
+For your registered users, remember and pre-fill their preferences. For new
+users, offer a third-party checkout service they may already use. Several
+retail sites in the study offered third-party payment services as an option,
+reducing purchasing friction for users of those services and allowing the site
 to prefill shipping info.
 
 {% endwrap %}

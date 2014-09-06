@@ -4,18 +4,18 @@
 
 ### Contributor License Agreements
 
-We'd love to accept your code patches! However, before we can take them, we 
+We'd love to accept your code patches! However, before we can take them, we
 have to jump a couple of legal hurdles.
 
-Please fill out either the individual or corporate Contributor License 
+Please fill out either the individual or corporate Contributor License
 Agreement.
 
-* If you are an individual writing original source code and you're sure you 
+* If you are an individual writing original source code and you're sure you
 own the intellectual property, then sign an [individual CLA](https://developers.google.com/open-source/cla/individual).
-* If you work for a company that wants to allow you to contribute your work, 
+* If you work for a company that wants to allow you to contribute your work,
 then sign a [corporate CLA](https://developers.google.com/open-source/cla/corporate).
 
-Follow either of the two links above to access the appropriate CLA and 
+Follow either of the two links above to access the appropriate CLA and
 instructions for how to sign and return it.
 
 1. Sign the contributors license agreement above.
@@ -31,7 +31,7 @@ the CLA.
 
 ## Writing Code ##
 
-If your contribution contains code, please make sure that it follows 
+If your contribution contains code, please make sure that it follows
 [the style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml).
 Otherwise we will have to ask you to make changes, and that's no fun for anyone.
 

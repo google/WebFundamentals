@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Obtain the user's current location"
-introduction: "The Geolocation API lets you find out where the user is, 
-  always with the user's consent. This functionality could be used as part 
+introduction: "The Geolocation API lets you find out where the user is,
+  always with the user's consent. This functionality could be used as part
   of user queries, e.g. to guide someone to a destination point. It could
-  also be used for 'geo-tagging' some content the user has created, e.g. 
+  also be used for 'geo-tagging' some content the user has created, e.g.
   to mark where a photo was taken."
 description: "The Geolocation API lets you find out where the user is, always with the user's consent."
 article:
@@ -15,7 +15,7 @@ authors:
   - paulkinlan
 collection: user-location
 key-takeaways:
-  geo: 
+  geo:
     -  Check for Compatibility before you use the API
     -  Prefer a coarse location, over a fine location
     -  Always handle errors
@@ -38,11 +38,11 @@ method whenever you request a location.
 
 ## When to use Geolocation
 
-*  Find where the user is closest to a physical location of yours to tailor 
+*  Find where the user is closest to a physical location of yours to tailor
    the user experience
 *  Tailor information (such as news) to the user's location
 *  Show the position of a user on a map
-*  Tag data created inside your application with the user's location 
+*  Tag data created inside your application with the user's location
    (i.e, geo-tagging a picture)
 
 
@@ -201,7 +201,7 @@ window.onload = function() {
 ## Prefer a coarse location over a fine grained location
 
 If you want to find the nearest store to a user it is unlikely that you need
-1 meter precision to  work that out.  The API is designed to give a coarse 
+1 meter precision to  work that out.  The API is designed to give a coarse
 location that returns as quickly as possible.
 
 If you do need high-precision it is possible to override the default setting

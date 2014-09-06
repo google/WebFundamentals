@@ -6,7 +6,7 @@ introduction: "Set up your environment to include a good editor, debugging tools
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 1 
+  order: 1
 collection: tools
 authors:
   - megginkearney
@@ -14,7 +14,7 @@ id: set-up
 ---
 {% wrap content%}
 
-A good development environment sets you up for success.  
+A good development environment sets you up for success.
 
 A great editor lets you code efficiently and helps you identify issues quickly; Developers tools that integrate into the browser let you quickly check that the code you create produces the correct output across all browsers; and a bootstrapper lets you start your project that follows all the best practices in seconds.
 

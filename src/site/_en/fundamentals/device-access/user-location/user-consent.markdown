@@ -14,7 +14,7 @@ introduction: "As a web developer, having access to the user's location opens up
   and offering them pro-active suggestions on things they can do based on their
   current position."
 key-takeaways:
-  geo: 
+  geo:
     -  Assume the user will not give you their location
     -  Make it clear why you need access to the user's location
     -  Don't immediately prompt for access on page load.
@@ -61,7 +61,7 @@ or some other proxy service.
 ## Always request access to location on a user gesture
 
 Make sure the user understands why you’re asking for their location, and what
-the benefit to them will be.  Asking for it immediately on the homepage as 
+the benefit to them will be.  Asking for it immediately on the homepage as
 the site loads results in a poor user experience.
 
 <div class="clear g-wide--pull-1">
@@ -110,7 +110,7 @@ when they grant you access, you only know you obtained access when results appea
 
 It is good practice to "tickle" the user into action if you need them to complete the action.
 
-We recommend: 
+We recommend:
 
 1.  Setup a timer that will trigger after a short period - 5 seconds is a good value
 2.  If you get an error message show a message to the user
@@ -136,7 +136,7 @@ button.onclick = function() {
   var geoSuccess = function(position) {
     hideNudeBanner();
     // We have the location, don't display banner
-    clearTimeout(nudgeTimeoutId); 
+    clearTimeout(nudgeTimeoutId);
 
     // Do magic with location
     startPos = position;

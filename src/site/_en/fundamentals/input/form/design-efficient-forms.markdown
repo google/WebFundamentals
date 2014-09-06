@@ -27,8 +27,8 @@ key-takeaways:
 
 ## Minimize repeated actions and fields
 
-Make sure your forms have no repeated actions, only as many fields as 
-necessary, and take advantage of 
+Make sure your forms have no repeated actions, only as many fields as
+necessary, and take advantage of
 [autofill](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
@@ -39,14 +39,14 @@ so that users can easily complete forms with pre-populated data.
   </figcaption>
 </figure>
 
-Look for opportunities to pre-fill information you already know, or may 
-anticipated to save the user from having to provide it.  For example, 
-pre-populate the shipping address with the last shipping address supplied by 
+Look for opportunities to pre-fill information you already know, or may
+anticipated to save the user from having to provide it.  For example,
+pre-populate the shipping address with the last shipping address supplied by
 the user.
 
 ## Show users how far along they are
 
-Progress bars and menus should accurately convey overall progress through 
+Progress bars and menus should accurately convey overall progress through
 multi-step forms and processes.
 
 <figure>
@@ -56,16 +56,16 @@ multi-step forms and processes.
   </figcaption>
 </figure>
 
-If you place a disproportionately complex form in an earlier step, users 
-are more likely to abandon your site before they go through the entire process. 
+If you place a disproportionately complex form in an earlier step, users
+are more likely to abandon your site before they go through the entire process.
 
 
 ## Provide visual calendars when selecting dates
 
-Users often need more context when scheduling appointments and travel dates, 
-to make things easier and prevent them from leaving your site to check their 
-calendar app, provide a visual calendar with clear labeling for selecting 
-start and end dates. 
+Users often need more context when scheduling appointments and travel dates,
+to make things easier and prevent them from leaving your site to check their
+calendar app, provide a visual calendar with clear labeling for selecting
+start and end dates.
 
 <figure>
   <img src="imgs/forms-calendar-good.png" srcset="imgs/forms-calendar-good.png 1x, imgs/forms-calendar-good-2x.png 2x" alt="Hotel website with easy to use calendar">

@@ -11,22 +11,22 @@ article:
   order: 3
 collection: layout-principles
 key-takeaways:
-  tldr: 
+  tldr:
     - Use your logo as a navigation button to return to the homepage.
 ---
 
 {% wrap content%}
 
-For example, they may want to get back to do another 
-search or start a new browse experience.  
+For example, they may want to get back to do another
+search or start a new browse experience.
 
 <figure>
   <img src="imgs/hpnav-hp-good.png" srcset="imgs/hpnav-hp-good.png 1x, imgs/hpnav-hp-good-2x.png 2x" alt="Clicking the logo returns users to the home page.">
   <figcaption>Clicking the logo in the upper left corner returns users to the home page.</figcaption>
 </figure>
 
-Users expect tapping the logo at the top of a page to take them back to the 
-homepage, and [study participants](/web/fundamentals/principles/research-study.html) 
+Users expect tapping the logo at the top of a page to take them back to the
+homepage, and [study participants](/web/fundamentals/principles/research-study.html)
 became frustrated if it didn't work.
 
 {% include modules/nextarticle.liquid %}

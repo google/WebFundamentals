@@ -89,7 +89,7 @@ elements may be covered by the virtual keyboard.
 ### Use placeholders
 
 The placeholder attribute provides a hint to the user about what's expected in
-the input, typically by displaying the value as light text until the the user 
+the input, typically by displaying the value as light text until the the user
 starts typing in the element.
 
 <input type="text" placeholder="MM-YYYY">

@@ -4,8 +4,8 @@ title: "Images in Markup"
 description: "The `img` element is powerful – it downloads, decodes and renders content – and
 modern browsers support a range of image formats."
 introduction: "The <code>img</code> element is powerful – it downloads,
-decodes and renders content – and modern browsers support a range of image 
-formats.  Including images that work across devices is no different than for 
+decodes and renders content – and modern browsers support a range of image
+formats.  Including images that work across devices is no different than for
 desktop, and only requires a few minor tweaks to create a good experience."
 authors:
   - petelepage
@@ -20,18 +20,18 @@ key-takeaways:
       overflowing the container.
     - Use the <code>picture</code> element when you want to specify different
       images depending on device characteristics (a.k.a. art direction).
-    - Use <code>srcset</code> and the <code>x</code> descriptor in the 
-      <code>img</code> element to give hints to the browser about the best 
+    - Use <code>srcset</code> and the <code>x</code> descriptor in the
+      <code>img</code> element to give hints to the browser about the best
       image to use when choosing from different densities.
 remember:
   picture-support:
     - The <code>picture</code> element is still <b>under development</b> and
-      as of June 2014 is only available in nightlies.  Because of it’s strong 
+      as of June 2014 is only available in nightlies.  Because of it’s strong
       backward compatibility and the
       <a href="http://picturefill.responsiveimages.org/">Picturefill polyfill</a>,
-      we have included it now and recommend you use it with caution. 
+      we have included it now and recommend you use it with caution.
       See the <a href="http://responsiveimages.org/#implementation">
-      ResponsiveImages.org</a> site for further details. 
+      ResponsiveImages.org</a> site for further details.
   compressive:
     - Use caution with the compressive technique because of the increased
       memory and decoding costs it requires.  Resizing large images to fit on
@@ -53,7 +53,7 @@ remember:
   }
   img.phone {
     max-height: 500px;
-    
+
   }
 </style>
 
@@ -85,11 +85,11 @@ screen readers and other assistive technologies.
 
 ## Enhance `img`'s with `srcset` for high DPI devices
 
-The `srcset` attribute enhances the behavior of the `img` element, making it 
-easy to provide multiple image files for different device characteristics. 
-Similar to the `image-set` [CSS function](images-in-css.html#use-image-set-to-provide-high-res-images) native to CSS, `srcset` allows the browser to choose the best 
-image depending on the characteristics of the device, for example using a 2x 
-image on a 2x display, and potentially in the future, a 1x image on a 2x 
+The `srcset` attribute enhances the behavior of the `img` element, making it
+easy to provide multiple image files for different device characteristics.
+Similar to the `image-set` [CSS function](images-in-css.html#use-image-set-to-provide-high-res-images) native to CSS, `srcset` allows the browser to choose the best
+image depending on the characteristics of the device, for example using a 2x
+image on a 2x display, and potentially in the future, a 1x image on a 2x
 device when on a limited bandwidth network.
 
 {% highlight html %}
@@ -103,7 +103,7 @@ capabilities.  When `srcset` is supported, the  comma-separated list of
 image/conditions is parsed prior to making any requests, and only the most
 appropriate image is downloaded and displayed.
 
-While the conditions can include everything from pixel density to width and 
+While the conditions can include everything from pixel density to width and
 height, only pixel density is well supported today.  To balance current
 behavior with future features, stick with simply providing the 2x image in
 the attribute.
@@ -130,21 +130,21 @@ depending on media queries or image format.
 {% include_code _code/media.html picture html %}
 
 In the above example, if the browser width is at least 800px, then either
-`head.jpg` or `head-2x.jpg` will be used, depending on the device resolution. 
-If the browser is between 450px and 800px, then either `head-small.jpg` or 
+`head.jpg` or `head-2x.jpg` will be used, depending on the device resolution.
+If the browser is between 450px and 800px, then either `head-small.jpg` or
 `head-small-2x.jpg` will be used, again, depending on the device resolution.
-For screen widths less than 450px and backwards compatibility where the 
-`picture` element isn’t supported, the browser will render the `img` element 
+For screen widths less than 450px and backwards compatibility where the
+`picture` element isn’t supported, the browser will render the `img` element
 instead, and should always be included.
 
 ### Relative sized images
 
-When the final size of the image isn’t known, it can be difficult to specify 
+When the final size of the image isn’t known, it can be difficult to specify
 a density descriptor for the image sources.  This is especially true for
 images that span a proportional width of the browser and are fluid, depending
 on the size of the browser.
 
-Instead of supplying fixed image sizes and densities, the size of each 
+Instead of supplying fixed image sizes and densities, the size of each
 supplied image can be specified by adding a width descriptor along with the
 size of the image element, allowing the browser to automatically calculate
 the effective pixel density and choose the best image to download.
@@ -218,7 +218,7 @@ image the browser would choose:
 In many cases, the size or image may change depending on the site’s layout
 breakpoints.  For example, on a small screen, you might want the image to
 span the full width of the viewport, while on larger screens, it should only
-take a small proportion.  
+take a small proportion.
 
 {% include_code _code/breakpoints.html picture html %}
 
@@ -231,8 +231,8 @@ will be full width.
 
 ## Make product images expandable
 
-Customers want to see what they're buying.  On retail sites, users expect to be 
-able to view high resolution closeups of products to get a better look at 
+Customers want to see what they're buying.  On retail sites, users expect to be
+able to view high resolution closeups of products to get a better look at
 details, and [study participants](/web/fundamentals/principles/research-study.html) got frustrated if they weren't able to.
 
 <figure>
@@ -240,8 +240,8 @@ details, and [study participants](/web/fundamentals/principles/research-study.ht
   <figcaption>J. Crew's website with expandable product image.</figcaption>
 </figure>
 
-A good example of tappable, expandable images is provided by the J. Crew site.  
-An disappearing overlay indicates that an image is tappable, providing a zoomed 
+A good example of tappable, expandable images is provided by the J. Crew site.
+An disappearing overlay indicates that an image is tappable, providing a zoomed
 in image with fine detail visible.
 
 

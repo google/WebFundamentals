@@ -11,7 +11,7 @@ article:
   order: 1
 collection: layout-principles
 key-takeaways:
-  tldr: 
+  tldr:
     - Feature your primary calls-to-action in your most prominent site space.
 
 ---
@@ -19,10 +19,10 @@ key-takeaways:
 {% wrap content%}
 
 [Study participants](/web/fundamentals/principles/research-study.html) had
-the easiest time completing tasks on sites that clearly displayed primary 
-calls-to-action in the main body of the site, with secondary tasks available 
-through menus or below the fold. Your mobile calls-to-action will probably be 
-different than on desktop, put yourself in your users' shoes when determining 
+the easiest time completing tasks on sites that clearly displayed primary
+calls-to-action in the main body of the site, with secondary tasks available
+through menus or below the fold. Your mobile calls-to-action will probably be
+different than on desktop, put yourself in your users' shoes when determining
 placement.
 
 <div class="clear g-wide--pull-1">
@@ -40,9 +40,9 @@ placement.
   </div>
 </div>
 
-When users get to a site, they typically have a particular task in mind.  The 
-site on the left only only offers users a Learn more button, while on the right, 
-users are able to quickly get a quote, find a local agent, make a payment or log 
+When users get to a site, they typically have a particular task in mind.  The
+site on the left only only offers users a Learn more button, while on the right,
+users are able to quickly get a quote, find a local agent, make a payment or log
 in.
 
 {% include modules/nextarticle.liquid %}

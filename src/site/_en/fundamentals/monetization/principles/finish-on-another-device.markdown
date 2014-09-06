@@ -21,9 +21,9 @@ collection: cc-principles
   <figcaption>Provide easy ways for users to continue browsing or shopping on another device.</figcaption>
 </figure>
 
-There are many reasons a user might want to finish a task on another device, 
-perhaps to see it on a bigger screen, or they get distracted and want to pick it 
-up later.  For instance, a career site allowed participants to email themselves 
+There are many reasons a user might want to finish a task on another device,
+perhaps to see it on a bigger screen, or they get distracted and want to pick it
+up later.  For instance, a career site allowed participants to email themselves
 jobs to apply for later.
 
 {% endwrap %}

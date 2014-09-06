@@ -19,7 +19,7 @@ key-takeaways:
 notes:
   images:
     - You can also run gulp images to manually optimize images across your project.
-  styles: 
+  styles:
     - Run gulp styles tool to manually check CSS across your project. The gulp serve tool automatically runs this tool when you change CSS files.
   responsive:
     - Check responsiveness as often as possible. Shrink the browser to tablet and phone size to see how content behaves all the time.
@@ -41,7 +41,7 @@ notes:
 To see the Web Starter Kit tools in action, this guide walks you through the
 build process as you add an image, update HTML and CSS, and add some
 JavaScript to your starter project. If you want a quick peak at what the Web
-Starter Kit tools can do, skip ahead to this 
+Starter Kit tools can do, skip ahead to this
 [quick summary]({{site.fundamentals}}/tools/build/build_site.html#summary-of-web-starter-
 kit-tools).
 
@@ -65,7 +65,7 @@ on any device.
 
 ## Add an image
 
-To see the `gulp serve` tool in action: add 
+To see the `gulp serve` tool in action: add
 <a href="https://github.com/google/WebFundamentals/blob/master/src/site/_en/fundamentals/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
 to the images folder.
 
@@ -84,7 +84,7 @@ Add the image to `main` in `index.html`:
 {% endhighlight %}
 
 As you save `index.html`, watch your terminal. The `gulp serve` tool runs the
-image through <a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a> 
+image through <a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a>
 and outputs the optimized image in the `dist` folder.
 
 {% include modules/remember.liquid title="Note" list=page.notes.images %}
@@ -129,7 +129,7 @@ Reload and resize the browser to see how the styles look:
 
 Don't write a style guide as an afterthought. Start your project off with UX
 patterns, and apply these patterns as you code. Don't have a style guide? Use
-the Web Starter Kit style guide which aligns with the 
+the Web Starter Kit style guide which aligns with the
 <a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style
 Guidelines</a>.
 
@@ -155,7 +155,7 @@ will be the container where the date is placed:
     <p>Welcome to Web Starter Kit.</p>
     <div><img src="imgs/awesome-photo.jpg"></div>
     <span></span>
-    <script src="/scripts/app.js" async></script> 
+    <script src="/scripts/app.js" async></script>
 </main>
 {% endhighlight %}
 

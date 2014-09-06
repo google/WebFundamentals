@@ -15,11 +15,11 @@ collection: cc-principles
 
 {% wrap content %}
 
-In a [research study](/web/fundamentals/principles/), participants didn't 
-necessarily want to commit to creating an account with the retailer. 
-Participants described the guest checkout as <b>"convenient"</b>, <b>"simple"</b>, 
-and <b>"easy [and] quick"</b>. They were annoyed at a site that required 
-registration to purchase, especially since the site didn't explain how 
+In a [research study](/web/fundamentals/principles/), participants didn't
+necessarily want to commit to creating an account with the retailer.
+Participants described the guest checkout as <b>"convenient"</b>, <b>"simple"</b>,
+and <b>"easy [and] quick"</b>. They were annoyed at a site that required
+registration to purchase, especially since the site didn't explain how
 registration would benefit them.
 
 <figure>

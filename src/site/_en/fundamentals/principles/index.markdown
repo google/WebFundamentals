@@ -16,7 +16,7 @@ list:
   -
     title: "Site-wide design considerations"
     description: "Mobile users will notice and be delighted by the small things you do for them to enhance their experience."
-    list: 
+    list:
     -
       title: Use responsive design patterns
       link: /web/fundamentals/layouts/rwd-fundamentals/
@@ -102,7 +102,7 @@ list:
     -
       title: Use existing information to maximize convenience
       link: /web/fundamentals/monetization/principles/use-existing-data.html
-    - 
+    -
       title: Use click-to-call buttons for complex tasks
       link: /web/fundamentals/device-access/click-to-call/click-to-call.html
 
