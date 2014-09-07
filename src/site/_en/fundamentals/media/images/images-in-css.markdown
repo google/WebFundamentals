@@ -46,10 +46,6 @@ remember:
       memory and decoding costs it requires.  Resizing large images to fit on
       smaller screens is expensive and can be particularly painful on low-end
       devices where both memory and processing is limited.
-related:
-  optimize:
-    - <a href="../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization">Image optimization</a>
-    - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
 ---
 
 {% wrap content%}

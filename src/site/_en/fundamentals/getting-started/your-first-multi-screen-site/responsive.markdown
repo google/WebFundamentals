@@ -52,14 +52,14 @@ related-guides:
   images:
     -
       title: "Enhance imgs with srcset for high DPI devices"
-      href: media/images/images-in-markup.html#enhance-imgs-with-srcset-for-high-dpi-devices
+      href: fundamentals/media/images/images-in-markup.html#enhance-imgs-with-srcset-for-high-dpi-devices
       section:
         id: images
         title: "Images"
         href: media/images/
     - 
       title: "Use media queries to provide high res images or art direction"
-      href: media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
+      href: fundamentals/media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
       section:
         id: images
         title: "Images"
