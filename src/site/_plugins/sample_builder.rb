@@ -144,6 +144,7 @@ module SampleBuilder
 					""
 				end
     		}
+        Liquid::Template.parse(contents).render(@site.site_payload)
     	end
 
     	def filename()

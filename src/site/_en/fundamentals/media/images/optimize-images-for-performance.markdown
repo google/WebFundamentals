@@ -51,7 +51,7 @@ related:
   optimize:
   -
       title: "Image optimization"
-      href: performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization
+      href: fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization
       section:
         id: optimizing-content-efficiency
         title: "Optimizing Content Efficiency"

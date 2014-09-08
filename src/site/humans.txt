@@ -16,6 +16,10 @@ Developers:
 {% for c in site.data["contributors"] %}{% assign contributor = c[1] %}{% if contributor.role contains "engineer" %}
   {{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
 
+External Contributors:
+{% for c in site.data["contributors"] %}{% assign contributor = c[1] %}{% if contributor.role contains "contributor" %}
+  {{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
+
 Special thanks:
 {% for c in site.data["contributors"] %}{% assign contributor = c[1] %}{% if contributor.role contains "thanks" %}
   {{contributor.name.given}} {{contributor.name.family}}{% endif %}{% endfor %}
