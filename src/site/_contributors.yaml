@@ -4,6 +4,23 @@
 ## Please add new contributors in alphabetical order by family name.
 ##
 
+jbnicolai:
+  name:
+    given: Joshua
+    family: Appelman
+  org:
+    name: Xebia
+    unit: Software Consultancy
+  country: NL
+  role:
+    - engineer
+    - contributor
+  homepage: http://jbnicolai.com
+  google: +JoshuaAppelman
+  twitter: BoyNicolai
+  email: me@jbnicolai.com
+  description: "Open source contributor and software consultant"
+
 ianbarber:
   name:
     given: Ian
