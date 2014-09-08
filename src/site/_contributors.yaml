@@ -125,3 +125,19 @@ paullewis:
   google: +PaulLewis
   twitter: aerotwist
   description: "Paul is a Design and Perf Advocate"
+
+cwdoh:
+  name:
+    given: Chang W.
+    family: Doh
+  org:
+    name: GDG Korea WebTech
+    unit: Organizer
+  country: KR
+  role:
+    - translator
+  homepage: http://cwdoh.com
+  google: +ChangwookDoh
+  twitter: cwdoh
+  email: changwook.doh@gmail.com
+  description: "Chang is a mobile and HTML5 technologist"
