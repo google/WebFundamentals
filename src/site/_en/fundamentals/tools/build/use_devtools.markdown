@@ -65,7 +65,7 @@ and they will lose patience fast even when network connectivity is shakey.
 
 Check
 <a href="https://developer.chrome.com/devtools/docs/network">network performance</a>
-on real devices and preferably in varying network connectivity. 
+on real devices and preferably in varying network connectivity.
 Record how your site behaves on the network,
 and pay close attention to the timeline.
 

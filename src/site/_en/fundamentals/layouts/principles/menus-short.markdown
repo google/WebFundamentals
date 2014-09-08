@@ -11,7 +11,7 @@ article:
   order: 2
 collection: layout-principles
 key-takeaways:
-  tldr: 
+  tldr:
     - A shorter menu with distinct categories is easier for mobile visitors to navigate.
 ---
 
@@ -22,8 +22,8 @@ key-takeaways:
   <figcaption>Menus are short and sweet.</figcaption>
 </figure>
 
-Macy's, a major department store refined the product categories on its mobile 
-site, presenting study participants with a shorter, more clearly-defined list 
+Macy's, a major department store refined the product categories on its mobile
+site, presenting study participants with a shorter, more clearly-defined list
 than on desktop.
 
 {% include modules/nextarticle.liquid %}

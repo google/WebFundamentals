@@ -1,8 +1,8 @@
 Web Fundamentals
 ================
 
-Web Fundamentals is a technical documentation center for multi-device web 
-development.  Our goal is to build a resource for modern web developers 
+Web Fundamentals is a technical documentation center for multi-device web
+development.  Our goal is to build a resource for modern web developers
 that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
 
@@ -41,7 +41,7 @@ This is a Jekyll build.
 Contributing
 ------------
 
-Web Fundamentals is an open source project and we welcome your contributions! 
+Web Fundamentals is an open source project and we welcome your contributions!
 Before submitting a pull request, please review [CONTRIBUTING.md](CONTRIBUTING.md)
 and make sure that there is an issue filed describing the fix or new content.
 If you don't complete these steps, we won't be able to accept your pull request, sorry.
@@ -61,7 +61,7 @@ Mac
     * `rvm --default use 2.0.0`
 1. Install [Pygments](http://pygments.org/)
     * `easy_install pygments`
-1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/), [Kramdown](http://kramdown.gettalong.org/) and [Sass](http://sass-lang.com/install)) 
+1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/), [Kramdown](http://kramdown.gettalong.org/) and [Sass](http://sass-lang.com/install))
     * cd src/ && `bundle install`
 1. Install [Node.js](http://nodejs.org/)
 1. Install the [Grunt CLI](http://gruntjs.com/)
@@ -109,13 +109,13 @@ Jekyll Special elements
 Translations
 =============================
 
-The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br". 
+The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br".
 
 To test translations set the lang variabe in the _config.yml. For example, to set the mode to French:
 
     lang: "fr"
 
-Note the underscore is not required here. 
+Note the underscore is not required here.
 
 To ensure the content is built when being released onto developers.google.com, ensure that the langs_available list in _config-devsite.yml is updated to include any new language directories being added. For example, to add French:
 

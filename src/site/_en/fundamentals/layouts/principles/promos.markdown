@@ -12,15 +12,15 @@ article:
 collection: layout-principles
 key-takeaways:
   tldr:
-    - Make sure promotions do not interfere with navigation and are clearly distinct from calls-to-action. 
+    - Make sure promotions do not interfere with navigation and are clearly distinct from calls-to-action.
 ---
 
 {% wrap content%}
 
 [Participants](/web/fundamentals/principles/research-study.html)
-visiting one company's mobile site were distracted by a large promotional 
-banner and missed the navigational buttons beneath it, making it hard for 
-them to learn more about the company's offerings. 
+visiting one company's mobile site were distracted by a large promotional
+banner and missed the navigational buttons beneath it, making it hard for
+them to learn more about the company's offerings.
 
 <div class="clear g-wide--pull-1">
   <div class="g--half">
@@ -37,9 +37,9 @@ them to learn more about the company's offerings.
   </div>
 </div>
 
-For app promotions, use easily dismissible banners, which were preferred by 
-study participants; as opposed to large interstitials (also known as door 
-slams).  
+For app promotions, use easily dismissible banners, which were preferred by
+study participants; as opposed to large interstitials (also known as door
+slams).
 
 {% include modules/nextarticle.liquid %}
 

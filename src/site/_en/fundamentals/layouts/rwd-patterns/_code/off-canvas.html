@@ -9,7 +9,7 @@
       body {
         overflow-x: hidden;
       }
-      
+
       .container {
         display: block;
       }
@@ -18,20 +18,20 @@
         position: absolute;
         width: 250px;
         height: 100%;
-        
+
         /*
           This is a trick to improve performance on newer versions of Chrome
           #perfmatters
         */
         -webkit-backface-visibility: hidden;
-        backface-visibility: hidden; 
+        backface-visibility: hidden;
 
         -webkit-transition: -webkit-transform 0.4s ease-out;
         transition: transform 0.4s ease-out;
-        
+
         z-index: 1;
       }
-  
+
       .c1 {
         /*
         Using translate3d as a trick to improve performance on older versions of Chrome
@@ -46,7 +46,7 @@
         width: 100%;
         position: absolute;
       }
-      
+
       .c3 {
         left: 100%;
       }
@@ -60,7 +60,7 @@
         -webkit-transform: translate(-250px,0);
         transform: translate(-250px,0);
       }
-      
+
       @media (min-width: 500px) {
         /* If the screen is wider then 500px, use Flexbox */
         .container {
@@ -95,7 +95,7 @@
         }
       }
       /* // [END ocanvas] */
-      
+
 
     </style>
     <title>Responsive Web Design Pattern: Off Canvas</title>
@@ -128,13 +128,13 @@
         } else {
           leftDrawer.classList.remove("open");
           rightDrawer.classList.add("open");
-        }  
+        }
       }
 
       mainPanel.addEventListener("click", toggle);
       leftDrawer.addEventListener("click", toggle);
       rightDrawer.addEventListener("click", toggle);
-      
+
     </script>
     <!-- // [TEMPLATE footer] -->
     <script type="text/javascript">

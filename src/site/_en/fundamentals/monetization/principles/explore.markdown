@@ -15,10 +15,10 @@ collection: cc-principles
 
 {% wrap content %}
 
-In a [research study](/web/fundamentals/principles/), 
-participants became frustrated by sites that demanded registration in order 
-to continue - especially if the site was an unfamiliar brand.  While getting 
-access to customer information may be integral to your business, asking for 
+In a [research study](/web/fundamentals/principles/),
+participants became frustrated by sites that demanded registration in order
+to continue - especially if the site was an unfamiliar brand.  While getting
+access to customer information may be integral to your business, asking for
 it too early may result in fewer registrations, so don’t ask for it too early.
 
 <div class="clear g-wide--pull-1">
@@ -36,9 +36,9 @@ it too early may result in fewer registrations, so don’t ask for it too early.
   </div>
 </div>
 
-Before offering their personal information, users want to browse content and get 
-a sense of what a site has to offer.  In the study, many of the sites that 
-participants rated the lowest were those where they were forced to create an 
+Before offering their personal information, users want to browse content and get
+a sense of what a site has to offer.  In the study, many of the sites that
+participants rated the lowest were those where they were forced to create an
 account upfront in order to continue.
 
 {% endwrap %}

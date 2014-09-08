@@ -47,7 +47,7 @@ body {
 .weather-forecast {
   padding: 10px 10px 0 10px;
   display: inline-block;
-  
+
 }
 
 /* Header row */
@@ -137,7 +137,7 @@ body {
 }
 
 .seven-day-fc {
-  
+
   margin: 0 -11px -1px -11px;
   padding: 10px;
 }

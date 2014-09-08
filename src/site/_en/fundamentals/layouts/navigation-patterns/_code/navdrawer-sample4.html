@@ -9,26 +9,26 @@
     <!-- // [END ms-specific] -->
 
     <title>Nav Drawer Sample 4</title>
-    
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <style>
           html, body {
         width: 100%;
         height: 100%;
-        
+
         margin: 0;
         padding: 0;
       }
 
       body {
         position: relative;
-  
+
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
 
         background-color: #fff;
-        
+
         box-sizing: border-box;
 
         -webkit-transition: -webkit-transform 0.4s ease-out;
@@ -46,7 +46,7 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        
+
         width: 100%;
         height: 60px;
 
@@ -55,7 +55,7 @@
         flex-direction: row;
 
         position: fixed;
-        
+
         top: 0;
         left: 0;
 
@@ -71,12 +71,12 @@
         -ms-flex: 1;
         -webkit-flex: 1;
         flex: 1;
-        
+
         font-size: 20px;
         line-height: 60px;
-        
+
         margin: 0 16px;
-        
+
         color: rgba(254, 254, 254, 0.8);
 
         float: none;
@@ -94,12 +94,12 @@
 
         width: 44px;
         height: 44px;
-        
+
         flex-direction: row;
 
         background-image: none;
         background-color: transparent;
-        
+
         border: none;
 
         padding: 4px;
@@ -174,7 +174,7 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        
+
         -ms-flex-direction: row;
         -webkit-flex-direction: row;
         flex-direction: row;
@@ -182,15 +182,15 @@
 
       .search {
         display: none;
-        
+
         width: 400px;
         height: 60px;
-        
+
         padding: 16px;
         margin: 0;
-        
+
         box-sizing: border-box;
-        
+
         border: none;
       }
 
@@ -203,21 +203,21 @@
       }
 
       @media all and (min-width: 1200px) {
-        
+
         body {
           padding: 16px;
         }
-        
+
         .app-bar {
           display: block;
-          
+
           height: 130px;
-          
+
           padding: 0 16px;
           margin-bottom: 16px;
-          
+
           box-sizing: border-box;
-          
+
           -webkit-transform: translate(0,0);
           transform: translate(0,0);
 
@@ -229,38 +229,38 @@
           -webkit-transform: translate(0,0);
           transform: translate(0,0);
         }
-        
+
         .app-bar .logo {
           float: left;
-          
+
           margin: 0;
-          
-          font-size: 100px;  
+
+          font-size: 100px;
           line-height: 130px;
         }
 
         .app-bar-actions {
           float: right;
-          
+
           margin: 35px 0;
         }
-        
+
         .app-bar:after {
           content: ' ';
-          
+
           display:block;
           height: 0;
           overflow: hidden;
-          
+
           clear: both;
         }
-        
+
         .search {
           display: block;
-          
+
           padding-left: 16px;
         }
-        
+
         button.menu {
           display: none;
         }
@@ -268,15 +268,15 @@
 
       .navdrawer-container {
         position: fixed;
-        
+
         width: 250px;
         height: 100%;
-        
+
         top: 0;
         right: 0;
 
         background-color: #0095b7;
-        
+
         color: #fefefe;
 
         -webkit-transform: translate(250px,0);
@@ -333,13 +333,13 @@
 
       .navdrawer-container ul li a {
         display: block;
-        
+
         height: 60px;
-        
+
         padding: 0 20px;
-        
+
         line-height: 60px;
-        
+
         text-decoration: none;
         color: white;
       }
@@ -366,13 +366,13 @@
       @media all and (min-width: 1200px) {
         .navdrawer-container {
           position: initial;
-          
+
           width: 100%;
           height: auto;
-          
+
           -webkit-transform: translate(0,0);
           transform: translate(0,0);
-          
+
           -webkit-transition: none;
           transition: none;
 
@@ -383,12 +383,12 @@
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
-          
+
           -ms-flex-direction: row;
           -webkit-flex-direction: row;
           flex-direction: row;
         }
-  
+
         .navdrawer-container ul li {
           border: none;
         }
@@ -419,14 +419,14 @@
     <header class="app-bar promote-layer">
       <h1 class="logo"><a href="#">Logo</a></h1>
       <section class="app-bar-actions">
-        
+
       </section>
       <button class="menu">
         <img class="menu-icon" src="./hamburger-icon-light.png">
         <img class="close-icon" src="./close-icon-light.png">
       </button>
     </header>
-  
+
     <nav class="navdrawer-container promote-layer">
       <ul>
         <li><a href="#">Item 1</a></li>

@@ -9,14 +9,14 @@
     <!-- // [END ms-specific] -->
 
     <title>Nav Drawer Sample 3</title>
-    
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <style>
       html, body {
         width: 100%;
         height: 100%;
-        
+
         margin: 0;
         padding: 0;
       }
@@ -24,7 +24,7 @@
       body {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
-        
+
         background-image: url('unsplash-img-2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -49,7 +49,7 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        
+
         width: 100%;
         height: 60px;
 
@@ -76,12 +76,12 @@
         -ms-flex: 1 1;
         -webkit-flex: 1 1;
         flex: 1 1;
-        
+
         font-size: 20px;
         line-height: 60px;
-        
+
         margin: 0 16px;
-        
+
         color: #fefefe;
 
         float: none;
@@ -98,7 +98,7 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        
+
         -ms-flex-direction: row;
         -webkit-flex-direction: row;
         flex-direction: row;
@@ -110,14 +110,14 @@
         display: flex;
 
         height: 44px;
-        
+
         -ms-flex-direction: row;
         -webkit-flex-direction: row;
         flex-direction: row;
 
         background-image: none;
         background-color: transparent;
-        
+
         padding: 4px;
         margin: 8px 8px 8px 0px;
 
@@ -162,36 +162,36 @@
 
       .search {
         display: none;
-        
+
         width: 400px;
         height: 60px;
-        
+
         padding: 16px;
         margin: 0 8px 0 0;
-        
+
         box-sizing: border-box;
-        
+
         border: none;
       }
 
       @media all and (min-width: 1200px) {
-  
+
         body {
           padding: 16px;
         }
-  
+
         .app-bar {
           display: block;
-          
+
           position: initial;
 
           height: 130px;
-          
+
           padding: 0 16px 16px 16px;
-          
+
           box-sizing: border-box;
         }
-        
+
         .app-bar.open {
           -webkit-transform: translate(0,0);
           transform: translate(0,0);
@@ -199,35 +199,35 @@
 
         .app-bar .logo {
           float: left;
-          
+
           margin: 0;
-          
-          font-size: 100px;  
+
+          font-size: 100px;
           line-height: 130px;
         }
 
         .app-bar-actions {
           float: right;
-          
+
           margin: 35px 0;
         }
-  
+
         .app-bar:after {
           content: ' ';
-          
+
           display:block;
           height: 0;
           overflow: hidden;
-          
+
           clear: both;
         }
-  
+
         .search {
           display: block;
-          
+
           padding-left: 16px;
         }
-  
+
         a.menu {
           display: none;
         }
@@ -235,7 +235,7 @@
 
       .navdrawer-container {
         position: fixed;
-        
+
         top: 60px;
         left: 0;
 
@@ -249,7 +249,7 @@
         overflow: hidden;
 
         z-index:1;
-        
+
         -webkit-transition: height 0.4s ease-out, background-color 0.4s ease-out;
         transition: height 0.4s ease-out, background-color 0.4s ease-out;
       }
@@ -272,13 +272,13 @@
 
       .navdrawer-container ul li a {
         display: block;
-        
+
         height: 60px;
-        
+
         padding: 0 20px;
-        
+
         line-height: 60px;
-        
+
         text-decoration: none;
         color: white;
       }
@@ -305,10 +305,10 @@
     @media all and (min-width: 1200px) {
       .navdrawer-container, .navdrawer-container.open {
         position: initial;
-        
+
         width: 100%;
         height: auto;
-        
+
         -webkit-transform: translate(0,0);
         transform: translate(0,0);
 
@@ -320,12 +320,12 @@
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
-          
+
           -ms-flex-direction: row;
           -webkit-flex-direction: row;
           flex-direction: row;
         }
-        
+
         .navdrawer-container ul li {
           border: none;
         }
@@ -355,7 +355,7 @@
       </section>
       <a class="menu btn"><img src="./hamburger.png"> Menu</a>
     </header>
-  
+
     <nav class="navdrawer-container">
       <ul>
         <li><a href="#">Item 1</a></li>

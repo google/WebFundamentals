@@ -119,7 +119,7 @@ you can simulate:
 The native User Agent and dimension overriding lets you debug mobile browsers
 on different devices and operating systems.
 
-1. Within the Emulation panel, open up the Sensors pane. 
+1. Within the Emulation panel, open up the Sensors pane.
 2. Check "Spoof user agent" and select "Android 2.3 - Nexus S".
 3. Refresh the page.
 

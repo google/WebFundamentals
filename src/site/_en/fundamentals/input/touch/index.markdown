@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Add Touch to Your Site"
-description: "Touchscreens are available on more and more devices, 
-  from phones up to desktop screens. Your app should respond to their touch 
+description: "Touchscreens are available on more and more devices,
+  from phones up to desktop screens. Your app should respond to their touch
   in intuitive and beautiful ways."
 introduction: "Touchscreens are available on more and more devices, ranging
   from phones up to desktop screens. When your users choose to interact with

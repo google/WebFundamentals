@@ -57,12 +57,12 @@ You're a super &#9733;
 You're a super &#9733;
 
 ## Replace complex icons with SVG
-For more complex icon requirements, SVG icons are generally lightweight, 
+For more complex icon requirements, SVG icons are generally lightweight,
 easy to use and can be styled with CSS. SVG have a number of advantages over
 raster images:
 
 * They're vector graphics that can be infinitely scaled.
-* CSS effects such as color, shadowing, transparency and animations are 
+* CSS effects such as color, shadowing, transparency and animations are
   straightforward.
 * SVG images can be inlined right in the document.
 * They are semantic.
@@ -74,18 +74,18 @@ raster images:
 
 ## Use icon fonts with caution
 
-Icon fonts are popular, and can be easy to use, but have some drawbacks 
+Icon fonts are popular, and can be easy to use, but have some drawbacks
 compared to SVG icons.
 
-* They're vector graphics that can be infinitely scaled, but may be 
+* They're vector graphics that can be infinitely scaled, but may be
   anti-aliased resulting in icons that aren’t as sharp as expected.
 * Limited styling with CSS.
-* Pixel perfect positioning can be difficult, depending on line-height, 
+* Pixel perfect positioning can be difficult, depending on line-height,
   letter spacing, etc.
-* Are not semantic, and can be difficult to use with screen readers or 
+* Are not semantic, and can be difficult to use with screen readers or
   other assistive technology.
-* Unless properly scoped, can result in a large file size for only using a 
-  small subset of the icons available. 
+* Unless properly scoped, can result in a large file size for only using a
+  small subset of the icons available.
 
 
 {% link_sample _code/icon-font.html %}

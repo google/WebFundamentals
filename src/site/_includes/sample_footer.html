@@ -9,7 +9,7 @@
     var isCompleted = {};
     function sampleCompleted(sampleName){
       if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
         isCompleted[sampleName] = true;
       }
     }

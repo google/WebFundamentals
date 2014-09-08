@@ -28,7 +28,7 @@ users what they want while getting what you want? Need some inspiration?
 Check out these tips from AdSense specialists who have worked with publishers
 of all sizes.
 
-<b>Note:</b> while this article focuses on AdSense, the concepts apply to any 
+<b>Note:</b> while this article focuses on AdSense, the concepts apply to any
 ad provider.
 
 {% include modules/toc.liquid %}
@@ -41,7 +41,7 @@ Use the scorecard on the <b>[Home](https://www.google.com/adsense/app#home)</b>
 tab of your account to check how well your ad settings, webpages and content
 are performing compared to those of other AdSense publishers.
 
-Scorecard is organized into different categories (revenue optimization, site 
+Scorecard is organized into different categories (revenue optimization, site
 health, etc.), provides a score of one to five blue dots. Each score indicates
 the ranking relative to other publishers in that particular category. While
 a lower score in a category means there are potential areas for improvement,
@@ -65,7 +65,7 @@ pay special attention to items flagged with a red or yellow exclamation mark.
 
 
 The <b>Recommendation box</b> on the [Home](https://www.google.com/adsense/app#home)
-tab offers recommendations how your site could be changed to earn more revenue. 
+tab offers recommendations how your site could be changed to earn more revenue.
 These recommendations are based on analyzing the performance of recommendations
 that have been recently implemented by other AdSense publishers and are only
 provided when there is a high confidence of increased performance.
@@ -74,7 +74,7 @@ provided when there is a high confidence of increased performance.
 
 ## Use performance reports
 
-Use the Google AdSense <b>[Performance reports](https://www.google.com/adsense/app#viewreports)</b> 
+Use the Google AdSense <b>[Performance reports](https://www.google.com/adsense/app#viewreports)</b>
 tab to see how much you’re earning, what impacts those earnings, and graphs
 to chart trends over time.
 
@@ -97,7 +97,7 @@ Use the reports below to get started:
         <a href="https://support.google.com/adsense/answer/3540509">Creative sizes</a>
       </td>
       <td data-th="Description">
-        Shows you the size of displayed ads served on your site; use this 
+        Shows you the size of displayed ads served on your site; use this
         report to understand trends in ad sizing when using responsive ads.
       </td>
     </tr>
@@ -107,7 +107,7 @@ Use the reports below to get started:
       </td>
       <td data-th="Description">
         View performance for individual ad units you've customized to help
-        analyze which ad units perform better and decide whether these type 
+        analyze which ad units perform better and decide whether these type
         of units can be placed in other locations. It can also help you better
         understand why they are performing so well, allowing you to apply it
         to other units.
@@ -129,7 +129,7 @@ Use the reports below to get started:
 ### Sign up for customized help and performance suggestions
 
 In addition to performance reports, AdSense can send occasional customized
-help and performance report suggestions by email. To sign up, verify 
+help and performance report suggestions by email. To sign up, verify
 your email address in [Personal settings](https://www.google.com/adsense/app#personalSettings),
 and check the *Customized help and performance suggestions* checkbox under
 *Email preferences*.
@@ -143,7 +143,7 @@ and check the *Customized help and performance suggestions* checkbox under
 
 ## Maximize bidding potential
 
-The higher the competition, or 'auction pressure', the more the advertiser 
+The higher the competition, or 'auction pressure', the more the advertiser
 will pay to be viewed and clicked on your site. To maximize your bidding
 potential:
 
@@ -154,18 +154,18 @@ one type of ads limits the number of advertisers available to you.
 * In some cases, certain ads may not blend well with your content, be careful
 about blocking too many categories as it will lower your potential earnings.
 
-<b>Note:</b> this information is also included in the publisher scorecard, 
+<b>Note:</b> this information is also included in the publisher scorecard,
 but it's crucial to strong ad performance!
 
 ## Don't block the AdSense crawler
 
 Verify that the [robots.txt](https://support.google.com/webmasters/answer/6062608)
 file on your site [doesn’t block the AdSense crawler](https://support.google.com/adsense/answer/10532).
-AdSense needs to be able to process and index the content of web pages and 
+AdSense needs to be able to process and index the content of web pages and
 uses the AdSense crawler to visit your site and determine its content.  This
 allows AdSense to provide relevant ads.
 
-To update the `robots.txt` file to grant the AdSense crawler access to your 
+To update the `robots.txt` file to grant the AdSense crawler access to your
 pages, *remove* the following two lines of text from your `robots.txt`:
 
     User-agent: Mediapartners-Google

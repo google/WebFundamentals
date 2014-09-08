@@ -57,10 +57,10 @@ See [Pseudo classes for touch states](#pseudo-classes-for-touch-states):
 
 ### Hover and Focus Stickiness
 
-On most mobile browsers *hover* and/or *focus* states will apply 
+On most mobile browsers *hover* and/or *focus* states will apply
 to an element after it's been tapped.
 
-Consider carefully 
+Consider carefully
 what styles you set and how they will look to the user after
 they finish their touch.
 

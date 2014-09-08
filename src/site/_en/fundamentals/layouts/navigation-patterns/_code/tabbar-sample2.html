@@ -9,7 +9,7 @@
     <!-- // [END ms-specific] -->
 
     <title>Tab Bar Sample 2</title>
-    
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <style>
@@ -20,7 +20,7 @@
         margin: 0;
         padding: 0;
       }
-      
+
       body {
         display: block;
 
@@ -38,14 +38,14 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        
+
         width: 100%;
-        
+
         position: fixed;
 
         left: 0;
         bottom: 0;
-        
+
         -ms-flex-direction: row;
         -webkit-flex-direction: row;
         flex-direction: row;
@@ -66,22 +66,22 @@
       .tab-bar button {
         width: 40px;
         height:40px;
-        
+
         margin: 16px;
-        
+
         border: none;
-        
+
         background-color: rgba(254, 254, 254, 0.7);
-        
+
         border-radius: 100%;
-        
+
         padding: 0;
-        
+
         -webkit-transition: background-color 0.4s ease-out;
         transition: background-color 0.4s ease-out;
-        
+
         -webkit-tap-highlight-color: transparent;
-        
+
         z-index: 2;
       }
 
@@ -92,24 +92,24 @@
 
       .tab-selected-bg {
         position: absolute;
-        
+
         width: 60px;
         height: 60px;
-        
+
         border-style: solid;
         border-radius: 100%;
         border-width: 2px;
         border-color: rgb(254, 254, 254);
-        
+
         box-sizing: border-box;
-        
+
         left: 0;
-        
+
         -webkit-transform: translateX(-10px) translateY(6px);
         transform: translateX(-10px) translateY(6px);
-        
+
         opacity: 1;
-        
+
         z-index: 1;
       }
 
@@ -177,7 +177,7 @@
   </head>
 
   <body>
-    
+
     <nav class="tab-bar">
       <div class="tab-selected-bg"></div>
       <button class="tab-btn tab-1" data-tabsection="info-tab-content"><img src="about-icon.png"></button>
@@ -241,7 +241,7 @@
       function onTabClick(index, btn) {
         return function(e) {
           currentSelectedTab = index;
-          selectTab(btn); 
+          selectTab(btn);
         };
       }
 
@@ -287,7 +287,7 @@
       selectTab(tabBtns[currentSelectedTab]);
 
       window.addEventListener('load', function() {
-        tabSelectionBg.classList.add('initialised');  
+        tabSelectionBg.classList.add('initialised');
       });
 
       window.onresize = function() {

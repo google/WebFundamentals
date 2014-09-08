@@ -16,7 +16,7 @@ authors:
   - petelepage
 collection: click-to-call
 key-takeaways:
-  c2c: 
+  c2c:
     -  Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema
     -  Always use the international dialing format
 ---
@@ -36,12 +36,12 @@ key-takeaways:
 
 ## Link telephone numbers for click to call
 
-While many modern mobile browsers will automatically detect phone numbers 
+While many modern mobile browsers will automatically detect phone numbers
 and convert them to links, it’s a good idea to do this directly in your code.
 By manually tagging each phone number, you can ensure phone numbers are always
 enabled for click to call and that they will be styled to match your site.
 
-To mark a phone number as a link, use the `tel:` scheme.  The syntax is 
+To mark a phone number as a link, use the `tel:` scheme.  The syntax is
 simple:
 
 {% highlight html %}
@@ -56,7 +56,7 @@ NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-71
 
 On most devices with telephone capabilities, the user will receive a
 confirmation before the number is dialed, to ensure users are not being
-tricked into calling expensive long distance or premium phone numbers. 
+tricked into calling expensive long distance or premium phone numbers.
 When the device doesn’t support phone calls, users may be presented with a
 menu allowing them to choose how the browser should handle the number.
 
@@ -66,7 +66,7 @@ Communicator.
 
 ## Use the international dialing format
 
-Always supply the phone number using the international dialing format: 
+Always supply the phone number using the international dialing format:
 the plus sign (+), country code, area code and number.  While not absolutely
 necessary, it’s a good idea to separate each segment of the number with a
 hyphen (-) for easier reading and better auto-detection.
@@ -94,6 +94,6 @@ following meta tag to the top of the page:
 
 In addition to the `tel:` schema, some modern browsers also support the `sms:`
 and `mms:` schemas, though support is not as consistent, and some
-features like setting the message body don't always work.  
+features like setting the message body don't always work.
 
 {% endwrap %}

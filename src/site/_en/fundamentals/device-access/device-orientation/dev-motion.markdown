@@ -14,7 +14,7 @@ authors:
   - petelepage
 collection: device-orientation
 key-takeaways:
-  devmotion: 
+  devmotion:
     -  Use device motion for when the current motion of the device is needed.
     -  <code>rotationRate</code> is provided in &deg;/sec.
     -  <code>acceleration</code> and <code>accelerationWithGravity</code> is
@@ -41,8 +41,8 @@ There are several uses for device motion events.  For example:
 ## Check for support and listen for events
 
 To listen for `DeviceMotionEvent`s, first, check to see if the events are
-supported in the browser.  Then, attach an event listener to the `window` 
-object listening for `devicemotion` events. 
+supported in the browser.  Then, attach an event listener to the `window`
+object listening for `devicemotion` events.
 
 {% include_code _code/jump-test.html devmot javascript %}
 
@@ -53,10 +53,10 @@ rotation (in &deg; per second) and acceleration (in m per second<sup>2</sup>)
 of the device, at that moment in time.  Some devices do not have the hardware
 to exclude the effect of gravity.
 
-The event returns four properties, 
-<a href="index.html#device-frame-coordinate">`accelerationIncludingGravity`</a>, 
-<a href="index.html#device-frame-coordinate">`acceleration`</a>, 
-which excludes the effects of gravity, 
+The event returns four properties,
+<a href="index.html#device-frame-coordinate">`accelerationIncludingGravity`</a>,
+<a href="index.html#device-frame-coordinate">`acceleration`</a>,
+which excludes the effects of gravity,
 <a href="index.html#rotation-data">`rotationRate`</a> and `interval`.
 
 For example, let's take a look at a phone, lying on a flat table,
@@ -154,7 +154,7 @@ ground, and was directly visible to the viewer:
 ### Sample: Calculating the maximum acceleration of an object
 
 One way to use  device motion events is to calculate the maximum acceleration
-of an object.  For example, what's the maximum acceleration of a person 
+of an object.  For example, what's the maximum acceleration of a person
 jumping.
 
 {% include_code _code/jump-test.html devmothand javascript %}

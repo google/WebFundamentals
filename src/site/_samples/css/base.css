@@ -18,7 +18,7 @@ body {
   line-height: 1em;
   margin-bottom: 0;
 }
-  
+
 #headline h2 {
   font-weight: 200;
   font-size: 30px;
@@ -155,11 +155,11 @@ tbody {
 
   #headline {
     padding: 20px 5%;
-    
+
   }
 
   #headline #blurb {
-    float: left; 
+    float: left;
     font-weight: 200;
     width: 50%;
     font-size: 18px;
@@ -178,16 +178,16 @@ tbody {
     box-sizing: border-box;=
     font-weight: 300;
   }
-  
+
   #section1 #section2, #section3 {
      padding: 10px 20% 80px 20%;
   }
-  
+
   #section1 h2, #section2 h2, #section3 h2  {
     margin-top: 0;
     font-size: 60px
   }
-  
+
   #section2 div img{
     width: 48%;
     box-sizing: border-box;

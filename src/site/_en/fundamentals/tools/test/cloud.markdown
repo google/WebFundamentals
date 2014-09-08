@@ -121,7 +121,7 @@ at the same time.
 
 Many cloud testing services include a screenshot tool.
 Screenshots are an important comparison tool
-between views on different devices. 
+between views on different devices.
 With no set-up required,
 you can type in a URL on the
 <a href="http://www.browserstack.com/responsive">BrowserStack website</a>.

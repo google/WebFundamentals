@@ -69,17 +69,17 @@ required images.  For examples, complex gradients can be created using the
     box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);
     background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
   }
-  
+
   p#noImage code {
     color: rgb(64, 64, 64);
   }
 </style>
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 

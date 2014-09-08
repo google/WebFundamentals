@@ -9,7 +9,7 @@
     <div role="main" class="container">
       <h1>Jump Test</h1>
       <p>
-        Device motion is <b><span id="dmeSupported">not</span></b> supported 
+        Device motion is <b><span id="dmeSupported">not</span></b> supported
         on your device
       </p>
 
@@ -51,7 +51,7 @@
         if (timer === undefined) {
           doCounter();
         }
-        
+
       }
 
       function doCounter() {
@@ -97,13 +97,13 @@
         document.getElementById("result").style.display = "block";
       }
 
-      
+
       function deviceMotionHandler(evt) {
-        
+
         if (evt.acceleration.x < jumpMin.x) {
           jumpMin.x = evt.acceleration.x;
         }
-        
+
         if (evt.acceleration.y < jumpMin.y) {
           jumpMin.y = evt.acceleration.y;
         }
@@ -123,7 +123,7 @@
         }
         /* // [END devmothand] */
       }
-      
+
 
       init();
 
