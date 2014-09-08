@@ -6,7 +6,7 @@ toc:
   path: https://github.com/google/web-starter-kit/releases/tag/v0.5.0
   external: true
 - title: "Getting Started"
-  path: /fundamentals/tools/setup/setup_kit.html
+  path: /fundamentals/getting-started/web-starter-kit/
 - title: "Docs"
   path: /fundamentals/tools/
 - title: "GitHub"
