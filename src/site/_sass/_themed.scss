@@ -120,6 +120,18 @@
     }
   }
 
+  .theme--discovery-and-distribution & {
+    color: $colorDiscoveryAndDistribution;
+
+    &.divider-icon:before {
+      color: $colorDiscoveryAndDistribution;
+    }
+
+    &.divider-icon:after {
+      color: $colorDiscoveryAndDistributionSecondary;
+    }
+  }
+
 }
 
 .themed--background {
@@ -150,6 +162,9 @@
 
   .theme--principles-of-site-design &,
   .theme--principles-of-site-design &.next-lessons:before { background-color: $colorPrinciples; }
+
+  .theme--discovery-and-distribution &,
+  .theme--discovery-and-distribution &.next-lessons:before { background-color: $colorDiscoveryAndDistribution; }
 
 }
 
@@ -182,6 +197,8 @@
   .theme--principles-of-site-design &,
   .theme--principles-of-site-design &.next-lessons:before { background-color: $colorPrinciplesSecondary; }
 
+  .theme--discovery-and-distribution &,
+  .theme--discovery-and-distribution &.next-lessons:before { background-color: $colorDiscoveryAndDistributionSecondary; }
 }
 
 .themed--hover {
@@ -204,6 +221,8 @@
 
   .theme--principles-of-site-design &:hover { color: $colorPrinciples; }
 
+  .theme--discovery-and-distribution &:hover { color: $colorDiscoveryAndDistribution; }
+
 }
 
 .themed--hover-secondary {
@@ -225,6 +244,8 @@
   .theme--look-and-feel &:hover { color: $colorLookAndFeelSecondary; }
 
   .theme--principles-of-site-design &:hover { color: $colorPrinciplesSecondary; }
+
+  .theme--discovery-and-distribution &:hover { color: $colorDiscoveryAndDistributionSecondary; }
 
 }
 
@@ -252,6 +273,8 @@
   .article--look-and-feel & { color: $colorLookAndFeel; }
 
   .article--principles-of-site-design & { color: $colorPrinciples; }
+
+  .article--discovery-and-distribution & { color: $colorDiscoveryAndDistribution; }
 }
 
 
@@ -277,6 +300,8 @@
 
   .nav-theme--principles-of-site-design &:hover { color: $colorPrinciples; }
 
+  .nav-theme--discovery-and-distribution &:hover { color: $colorDiscoveryAndDistribution; }
+
 }
 
 .themed {
@@ -298,6 +323,8 @@
   .nav-theme--look-and-feel & { color: $colorLookAndFeel; }
 
   .nav-theme--principles-of-site-design & { color: $colorPrinciples; }
+
+  .nav-theme--discovery-and-distribution & { color: $colorDiscoveryAndDistribution; }
 
 }
 
@@ -321,6 +348,8 @@
 
   .nav-theme--principles-of-site-design & { background-color: $colorPrinciples; }
 
+  .nav-theme--discovery-and-distribution & { background-color: $colorDiscoveryAndDistribution; }
+
 }
 
 .themed--background-secondary {
@@ -342,6 +371,8 @@
   .nav-theme--look-and-feel & { background-color: $colorLookAndFeelSecondary; }
 
   .nav-theme--principles-of-site-design & { background-color: $colorPrinciplesSecondary; }
+
+  .nav-theme--discovery-and-distribution & { background-color: $colorDiscoveryAndDistributionSecondary; }
 
 }
 
