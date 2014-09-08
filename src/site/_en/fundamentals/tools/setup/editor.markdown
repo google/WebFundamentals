@@ -12,7 +12,7 @@ authors:
   - megginkearney
 key-takeaways:
   editor:
-    - Choose an editor that lets you customize short-cuts and has lots of plugins to help you write better code.
+    - Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code.
     - Consider installing a package manager to make it easier to discover, install, and update plugins.
     - Use the package manager to install plugins that help keep you productive during development; start with the recommendations in this guide.
 notes:
@@ -33,15 +33,15 @@ are its shortcuts that get you working faster.
 
 You know you've truly learned to use your editor
 when you are able to quickly move around your code
-using a range of keyboard short-cuts and editor commands.
+using a range of keyboard shortcuts and editor commands.
 It's always good to keep a cheatsheet handy for editor commands.
 Top editors also let you customize commands and keyboard shortcuts
 so that you only have to remember your own implementations.
 
-<a href="http://www.sublimetext.com/">Sublime</a> is a great editor with tons
+<a href="http://www.sublimetext.com/">Sublime Text</a> is a great editor with tons
 of plugins to help you write better code faster. It also has a package manager
-that makes it easy to install new plugins. Though Sublime costs money, you can
-try it for free and this guide assumes Sublime as the default editor of
+that makes it easy to install new plugins. Though Sublime Text costs money, you can
+try it for free and this guide assumes Sublime Text as the default editor of
 choice.
 
 {% include modules/remember.liquid title="Note" list=page.notes.blog %}
@@ -62,22 +62,20 @@ What are the things you keep having to
 go back out to other tools to do?
 
 Linting - there's a plugin for that.
-Showing what changes haven't been committed - 
+Showing what changes haven't been committed -
 there are plugins for that.
 Integration with other tools,
 such as GitHub,
 there are plugins for that.
 
 Package managers make it very easy to find, install, and update plugins.
-In the Sublime editor,
-open your package manager
-(`ctrl+shift+p`),
-enter 'Install Package', and
-then enter the name of the plugin you are looking for
-(or else browse all plugins).
+
+- In the Sublime Text editor, open your package manager (`ctrl+shift+p`).
+- Enter 'Install Package'.
+- Enter the name of the plugin you are looking for (or else browse all plugins).
 
 Check out these
-<a href="https://sublime.wbond.net/browse">trending lists of Sublime plugins</a>.
+<a href="https://sublime.wbond.net/browse">trending lists of Sublime Text plugins</a>.
 Here are the plugins we love and recommend you install because they help you speed up your development:
 
 <table class="table-2 tc-heavyright">
@@ -118,7 +116,7 @@ Here are the plugins we love and recommend you install because they help you spe
     </tr>
     <tr>
       <td data-th="plugin"><a href="https://github.com/robdodson/PolymerSnippets">PolymerSnippets</a></td>
-      <td data-th="Description">Keyboard short-cuts to create <a href="http://www.polymer-project.org/">Polymer</a> and Web Component snippets fast.</td>
+      <td data-th="Description">Keyboard shortcuts to create <a href="http://www.polymer-project.org/">Polymer</a> and Web Component snippets fast.</td>
     </tr>
     <tr>
       <td data-th="plugin"><a href="https://github.com/bgreenlee/sublime-github">sublime-github</a></td>
