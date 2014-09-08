@@ -29,12 +29,11 @@ notes:
 
 ## Clone repository
 
-To use the Web Starter Kit,
-simply clone the repository or download the
+To use the Web Starter Kit, clone the repository or download the
 [latest release](https://github.com/google/web-starter-kit/releases/latest) and build on
 what's included in the `app` directory:
 
-`git clone https://github.com/google/web-starter-kit.git`
+`$ git clone https://github.com/google/web-starter-kit.git`
 
 `$ cd web-starter-kit/app`
 
@@ -75,7 +74,7 @@ If you need to install Sass, see the command-line instructions on the
 Bring up a terminal and type `gulp -v`.
 If Gulp is installed it should return a version number at or above 3.5.x.
 If you don't see any errors, proceed to the Gulp commands section.
-If you need to install Gulp, open up a terminal and type in the following:
+If you need to install Gulp, open up a terminal and type the following:
 
 `$ sudo npm install --global gulp`
 
@@ -83,6 +82,7 @@ This will install Gulp globally.
 Next, install the local dependencies Web Starter Kit requires:
 
 `$ cd web-starter-kit`
+
 `$ npm install`
 
 That's it!
@@ -118,7 +118,7 @@ that most fits your needs:
 
 ## Build the project
 
-In the root of the project `web-starter-kit`, run the `gulp` tool to build the current project.
+In the root of the `web-starter-kit` project, run the `gulp` tool to build the current project.
 The first time you run this tool,
 it creates the project directory: `web-starter-kit/dist`.
 
