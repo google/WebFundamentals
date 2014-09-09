@@ -23,9 +23,46 @@ module Jekyll
       @data_filename = @params[1]
     end
 
+    def get_path_titles(layer)
+      path_titles = Hash.new
+      layer.each_index do |key|
+        if (layer[key].has_key?("path"))
+          path_titles[layer[key]["path"]] = layer[key]["title"]
+        end
+        if layer[key]["section"]
+          path_titles.merge!(get_path_titles(layer[key]["section"]))
+        end
+      end
+      path_titles
+    end
+
+    def merge(base, path_titles)
+      base.each_index do |key|
+        if path_titles.has_key?(base[key]["path"])
+          base[key]["en_title"] = base[key]["title"]
+          base[key]["title"] = path_titles[base[key]["path"]]
+        end
+        if base[key]["section"]
+          #base[key]["section"] =
+          merge(base[key]["section"], path_titles)
+        end
+      end
+      base
+    end
+
     def render(context)
-      @data_file = File.join(context.registers[:site].source, @data_filename)
+      site = context.registers[:site]
+      @data_file = File.join(site.source, @data_filename)
       data = YAML.load_file(@data_file)
+      # Check if there is a language specific version, and load that.
+      lang = site.config["lang"]
+      if lang && lang != "en"
+        lang_file = File.join(site.source, "_" + lang, @data_filename)
+        if File.exists?(lang_file)
+          lang_book = YAML.load_file(lang_file)
+          merge(data["toc"], get_path_titles(lang_book["toc"]))
+        end
+      end
       context.environments.first["page"][@data_name] = data
       nil
     end
