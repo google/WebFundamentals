@@ -19,8 +19,8 @@ key-takeaways:
 notes:
   images:
     - You can also run gulp images to manually optimize images across your project.
-  styles: 
-    - Run gulp styles tool to manually check CSS across your project. The gulp serve tool automatically runs this tool when you change CSS files.
+  styles:
+    - Run the gulp styles tool to manually check CSS across your project. The gulp serve tool automatically runs this tool when you change CSS files.
   responsive:
     - Check responsiveness as often as possible. Shrink the browser to tablet and phone size to see how content behaves all the time.
   terminal:
@@ -41,13 +41,12 @@ notes:
 To see the Web Starter Kit tools in action, this guide walks you through the
 build process as you add an image, update HTML and CSS, and add some
 JavaScript to your starter project. If you want a quick peak at what the Web
-Starter Kit tools can do, skip ahead to this 
+Starter Kit tools can do, skip ahead to this
 [quick summary]({{site.fundamentals}}/tools/build/build_site.html#summary-of-web-starter-
 kit-tools).
 
 Before you start, make sure you've [set up the Web Starter Kit]({{site.fundamentals}}/tools/setup/setup_kit.html).
-When you are finished the walking through the steps in this guide, this is what you'll see in your
-browser:
+When you are finished walking through the steps in this guide, this is what you'll see in your browser:
 
 <img src="imgs/js.png" class="center" alt="JavaScript added to site">
 
@@ -65,7 +64,7 @@ on any device.
 
 ## Add an image
 
-To see the `gulp serve` tool in action: add 
+To see the `gulp serve` tool in action: add
 <a href="https://github.com/google/WebFundamentals/blob/master/src/site/_en/fundamentals/tools/build/imgs/awesome-photo.jpg">awesome-photo.jpg</a>
 to the images folder.
 
@@ -84,12 +83,12 @@ Add the image to `main` in `index.html`:
 {% endhighlight %}
 
 As you save `index.html`, watch your terminal. The `gulp serve` tool runs the
-image through <a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a> 
+image through <a href="https://www.npmjs.org/package/gulp-imagemin">imagemin</a>
 and outputs the optimized image in the `dist` folder.
 
 {% include modules/remember.liquid title="Note" list=page.notes.images %}
 
-Reload the browser live to see the image:
+Reload the browser to see the image:
 
 <img src="imgs/image.png" class="center" alt="image added to site">
 
@@ -105,7 +104,7 @@ href="https://www.npmjs.org/package/gulp-minify-css">gulp-minify-css tool</a>,
 minifying CSS and injecting it into all connected browsers.
 
 Add this style change to the
-<a href="https://github.com/google/web-starter-kit/blob/master/app/styles/main.css">main.css</a>
+<a href="https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss">main.scss</a>
 in `web-starter-kit/apps/styles` folder:
 
 {% highlight css %}
@@ -129,13 +128,11 @@ Reload and resize the browser to see how the styles look:
 
 Don't write a style guide as an afterthought. Start your project off with UX
 patterns, and apply these patterns as you code. Don't have a style guide? Use
-the Web Starter Kit style guide which aligns with the 
+the Web Starter Kit style guide which aligns with the
 <a href="https://developers.google.com/web/fundamentals/resources/styleguide/">Web Fundamentals Style
 Guidelines</a>.
 
-`$ cd web-starter-kit/app/styleguide/`
-
-Here's a sneak peak at some of the styles covered:
+Open `web-starter-kit/app/styleguide.html` for a sneak peak at some of the styles covered:
 
 <img src="imgs/styleguide.png" class="center" alt="style guide table of contents">
 
@@ -146,7 +143,7 @@ The `gulp serve` tool minifies your JavaScript
 and detects errors using
 <a href="https://www.npmjs.org/package/gulp-jshint">gulp jshint</a>.
 
-Update `index.html` and add the newly created script, and a `<span>` that
+Update `index.html` and add the newly created script, add a `<span>` that
 will be the container where the date is placed:
 
 {% highlight html %}
@@ -155,7 +152,7 @@ will be the container where the date is placed:
     <p>Welcome to Web Starter Kit.</p>
     <div><img src="imgs/awesome-photo.jpg"></div>
     <span></span>
-    <script src="/scripts/app.js" async></script> 
+    <script src="/scripts/app.js" async></script>
 </main>
 {% endhighlight %}
 
@@ -178,7 +175,7 @@ Reload the browser:
 
 ## Check performance
 
-Now that you've added some html, CSS, and JavaScript, it's time to checkout
+Now that you've added some HTML, CSS, and JavaScript, it's time to see
 how the project is performing.
 
 The Web Starter Kit integrates with
@@ -191,7 +188,7 @@ and user experience, stop `gulp serve` (control-C), and run `gulp pagespeed`:
 
 <img src="imgs/pagespeed.png" class="center" alt="PageSpeed results">
 
-The good news: you got a perfect User Experience score. Yay!
+The good news: you got a perfect User Experience score!
 
 The Speed Score is off by 1 point; compression isn't enabled. You won't
 compress your site until you are ready to host it.
@@ -236,7 +233,7 @@ simply load the page on the device using the
 externally friendly URL returned by `gulp serve`.
 
 Any changes you make to a page using Chrome DevTools are automatically visible
-in all open instances of your staged site. Don't reload a URL, or you will
+in all open instances of your staged site. If you reload the page, you will
 lose DevTools changes.
 
 You can also debug using port forwarding.
