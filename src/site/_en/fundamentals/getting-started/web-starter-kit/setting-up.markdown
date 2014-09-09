@@ -68,7 +68,7 @@ terminal, change directory into your project folder and run npm install.
     $ cd web-starter-kit
     $ npm install
 
-That’s it! You now have everything need to use the Gulp tools in Web Starter
+That’s it! You now have everything that's needed to use the Gulp tools in Web Starter
 Kit.
 
 The next section of this guide covers how to use Gulp, but if you want to see
