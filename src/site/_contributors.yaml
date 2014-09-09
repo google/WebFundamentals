@@ -81,6 +81,22 @@ ilyagrigorik:
   twitter: igrigorik
   description: "Ilya is a Developer Advocate and Web Perf Guru"
 
+umarhansa:
+  name:
+    given: Umar
+    family: Hansa
+  org:
+    name: Shazam
+    unit: Web Development
+  country: UK
+  role:
+    - contributor
+  homepage: https://umaar.com
+  google: +UmarHansa
+  twitter: umaar
+  email: umar.hansa@gmail.com
+  description: "Umar is a front-end web developer"
+
 megginkearney:
   name:
     given: Meggin
