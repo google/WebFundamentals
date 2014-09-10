@@ -83,7 +83,7 @@ The Web Starer Kit supports the following devices:
 
 * IE10, IE11
 * FF 30, 31
-* Chrome 34, 35
+* Chrome 36, 37
 * Safari 7, 8
 * Opera 23, 24
 * iOS Safari 7, 8
@@ -135,7 +135,7 @@ Inspired by
     </tr>
     <tr>
       <td data-th="tool"><a href="http://blog.mattbailey.co/post/50337824984/grunt-synchronised-testing-between-browsers-devices">Grunt + LiveReload</a></td>
-      <td data-th="Description">Similar to Web Starter Kit, you can enable cross-device testing where each change you make in your editor causes a reload in any device you've opened your local site on. Some set-up required to get this going.</td>
+      <td data-th="Description">Similar to Web Starter Kit, you can enable cross-device testing where each change you make in your editor causes a reload in any device you've opened your local site on. Some set-up is required to get this going.</td>
     </tr>
     <tr>
       <td data-th="tool"><a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a></td>
@@ -143,7 +143,7 @@ Inspired by
     </tr>
     <tr>
       <td data-th="tool"><a href="http://viljamis.com/blog/2012/remote-preview/">Remote Preview</a></td>
-      <td data-th="Description">You host the tool's html page and content and point your device's browser to it. The tool regular checks a file for a URL and loads it into an iframe. Light-weight tool great for chaining devices together and easily changing URL across all of them. Doesn't support synchronized testing though.</td>
+      <td data-th="Description">You host the tool's html page and content and point your device's browser to it. The tool regularly checks a file for a URL and loads it into an iframe. Light-weight tool great for chaining devices together and easily changing URL's across all of them. Doesn't support synchronized testing though.</td>
     </tr>
     <tr>
       <td data-th="tool"><a href="http://vanamco.com/ghostlab/">Ghostlab (commercial)</a></td>
