@@ -285,7 +285,7 @@ The narrow viewport means that we have a lot less horizontal space available for
 us to comfortably position elements on the screen.
 
 To make more effective use of the horizontal screen space, we need to break out
-of the  the linear flow of the header and move the form and list to be next
+of the linear flow of the header and move the form and list to be next
 to each other.
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
@@ -308,7 +308,7 @@ the video will scale up to be too large and look incorrect when placed next
 to our list of features.
 
 The video element needs to be moved out of the vertical flow of the narrow
-viewport and should be displayed side-by-side with the bulleted list of content.
+viewport and should be displayed side-by-side with the bulleted list of content on an wide viewport.
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
