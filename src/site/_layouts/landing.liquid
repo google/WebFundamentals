@@ -23,7 +23,8 @@
       <ul class="guides-list container">
 
         {% for guide in page.articles.[page.id] %}
-        {% if guide.published != false %}
+        {% comment %} Include all guides, overwrite the guide if there is a translation {% endcomment %}
+        {% if guide.published != false and (guide.is_localized != true or guide.langcode == page.langcode) %}
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
           <div class="primary-content">
             <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | clean}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
@@ -33,7 +34,9 @@
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
             <ol class="list-links list-links--secondary">
             {% for article in page.articles[guide.id] %}
+              {% if article.is_localized != true or article.langcode == page.langcode %}
               <li><a href="{{site.baseurl}}{{article.url | clean}}" title="Read the lesson {{article.title}}">{{article.title}}</a></li>
+              {% endif %}
             {% endfor %}
             </ol>
           </div>
