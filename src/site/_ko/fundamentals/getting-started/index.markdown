@@ -1,0 +1,16 @@
+---
+layout: landing
+title: "시작하기"
+description: "웹에 접근 가능한 모든 디바이스들에서 동작하는 사이트 및 사례의 구축을 시작하는 것은 종종 난감하게 보일 수 있습니다."
+introduction: "웹에 접근할 수 있는 모든 디바이스들에서 동작하는 사이트와 사례의 구축을 시작하는 것은 종종 난감하게 보일 수 있습니다."
+id: getting-started
+collection: home
+authors:
+  - paulkinlan
+translators:
+  - cwdoh
+---
+
+{% comment %}
+Guide list content will be output by the landing layout based on the article collection matching page.id
+{% endcomment %}
