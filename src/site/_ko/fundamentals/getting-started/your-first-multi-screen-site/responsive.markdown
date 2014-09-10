@@ -284,10 +284,6 @@ viewport and should be displayed side-by-side with the bulleted list of content.
 이미지를 사용할 때,
 뷰포트의 사이즈와 화면의 밀도(Density)를 고려해야 합니다.
 
-The web was built for 96dpi screens.  With the introduction of mobile devices,
-we have seen a huge increase in the pixel density of screens not to mention
-Retina class displays on laptops.  As such, images that are encoded to 96dpi
-often look terrible on a hi-dpi device.
 웹은 96dpi 화면을 위해 구축되었습니다. 랩탑의 레티나급 디스플레이에 대해 언급할 필요없이 우리는 화면의 픽셀 밀집도가 모바일 디바이스들의 도입과 함께 비약적으로 증가하는 것을 봐왔습니다. 일반적으로 96dpi로 인코딩된 이미지는 높은 DPI 디바이스에서 몹시 이상하게 보이기도 합니다.
 
 이에 대해 폭넓게 적용할 수 있는 해결방법은 아직 없습니다.
@@ -328,7 +324,6 @@ often look terrible on a hi-dpi device.
 **축하합니다.** 이 가이드를 읽는 동안, 여러분은 광범위한 디바이스과 형식인자(Form-factor)들, 화면 사이즈를 가지는 디바이스에서 동작하는 단순한 상품 방문 페이지의 첫걸음을 내딛었습니다.
 
 
-If you follow these guidelines, you will be off to a good start:
 이 가이드라인을 따랐다면, 여러분은 다음과 같은 사항에 대해 순조로운 출발을 할 수 있을 것입니다.
 
 1.  기초적인 정보구조(IA) 생성하기와 코딩 이전의 콘텐츠에 대해 이해하기.
