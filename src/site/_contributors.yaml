@@ -4,6 +4,23 @@
 ## Please add new contributors in alphabetical order by family name.
 ##
 
+jbnicolai:
+  name:
+    given: Joshua
+    family: Appelman
+  org:
+    name: Xebia
+    unit: Software Consultancy
+  country: NL
+  role:
+    - engineer
+    - contributor
+  homepage: http://jbnicolai.com
+  google: +JoshuaAppelman
+  twitter: BoyNicolai
+  email: me@jbnicolai.com
+  description: "Open source contributor and software consultant"
+
 ianbarber:
   name:
     given: Ian
@@ -63,6 +80,22 @@ ilyagrigorik:
   google: +IlyaGrigorik
   twitter: igrigorik
   description: "Ilya is a Developer Advocate and Web Perf Guru"
+
+umarhansa:
+  name:
+    given: Umar
+    family: Hansa
+  org:
+    name: Shazam
+    unit: Web Development
+  country: UK
+  role:
+    - contributor
+  homepage: https://umaar.com
+  google: +UmarHansa
+  twitter: umaar
+  email: umar.hansa@gmail.com
+  description: "Umar is a front-end web developer"
 
 megginkearney:
   name:
@@ -126,12 +159,28 @@ paullewis:
   twitter: aerotwist
   description: "Paul is a Design and Perf Advocate"
 
+agektmr:
+  name:
+    given: Eiji
+    family: Kitamura
+  org:
+    name: Google
+    unit: Developer Relations
+  country: Japan
+  role:
+    - author
+  homepage: http://blog.agektmr.com
+  google: +agektmr
+  twitter: agektmr
+  email: agektmr@google.com
+  description: "Eiji is a Developer Advocate"
+
 cwdoh:
   name:
     given: Chang W.
     family: Doh
   org:
-    name: GDG Korea WebTech
+    name: webapplications.kr
     unit: Organizer
   country: KR
   role:
