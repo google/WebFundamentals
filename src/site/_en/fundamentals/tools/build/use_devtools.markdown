@@ -18,7 +18,7 @@ key-takeaways:
     - Check your site's responsive layouts on a range of devices using the Chrome DevTools Screen pane within the Emulation panel.
 notes:
   optimize:
-    - See <a href="https://web-central.appspot.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html">Critical Rendering Path</a> and <a href="http://www.html5rocks.com/en/mobile/profiling/">Profiling Mobile HTML5 Apps With Chrome DevTools</a> for more insight on using the network timeline.
+    - See <a href="/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html">Critical Rendering Path</a> and <a href="http://www.html5rocks.com/en/mobile/profiling/">Profiling Mobile HTML5 Apps With Chrome DevTools</a> for more insight on using the network timeline.
 ---
 {% wrap content %}
 
@@ -49,7 +49,7 @@ for any real device you wish to test your site on.
 2. Navigate on your real device to the your site's URL
 (`gulp build` returns this URL).
 3. Open up this same URL on your desktop.
-4. Set up <a href="https://developer.chrome.com/devtools/docs/mobile-emulation">device emulation</a> for any device.
+4. Set up <a href="https://developer.chrome.com/devtools/docs/device-mode">device emulation</a> for any device.
 5. Repeat steps 3 and 4 to emulate different devices.
 
 Choose any open tab, access the Chrome DevTools,
@@ -61,11 +61,11 @@ lets you debug on all real and emulated devices at the same time.
 
 Users won't stay on any page that performs badly
 in normal network conditions;
-and they will lose patience fast even when network connectivity is shakey.
+and they will lose patience fast even when network connectivity is shaky.
 
 Check
 <a href="https://developer.chrome.com/devtools/docs/network">network performance</a>
-on real devices and preferably in varying network connectivity. 
+on real devices and preferably in varying network connectivity.
 Record how your site behaves on the network,
 and pay close attention to the timeline.
 
