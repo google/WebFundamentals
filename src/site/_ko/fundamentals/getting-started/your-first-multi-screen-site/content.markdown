@@ -86,9 +86,9 @@ related-guides:
 
 key-takeaways:
   content-critical:
-    - Identify the content you need first.
-    - Sketch out Information Architecture (IA) for narrow and wide viewports.
-    - Create a skeleton view of the page with content but without styling.
+    - 가장 필요한 콘텐츠 정의하기.
+    - 좁고 넓은 뷰포트에 대한 대략적인 정보구조(Information Architecture, IA) 구성하기.
+    - 스타일 없이 콘텐츠를 가진 페이지 뷰의 뼈대 만들기
 ---
 
 {% wrap content %}
@@ -191,8 +191,7 @@ key-takeaways:
 
 마지막 섹션은 상품의 명확한 통계를 보여주기 위해 사용될 간단한 테이블입니다.
 
-Tables should only be used for tabular data, i.e, matrices of information.
-테이블은 표 데이터를 위해서만 사용되어야 합니다. (예를 들자면 정보의 행렬)
+테이블은 (행렬 형태로 구성된 정보와 같은) 표 데이터를 위해서만 사용되어야 합니다.
 
 {% include_code _code/addcontent.html section3 %}
 
