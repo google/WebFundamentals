@@ -73,7 +73,8 @@ inside a print media query:
 In addition to using the `media` attribute in the stylesheet link, there are two
 other ways to apply media queries that can be embedded in a CSS file: `@media`
 and `@import`.  For performance reasons, either of the first two methods are
-recommended over the `@import` syntax.
+recommended over the `@import` syntax
+(see [Avoid CSS imports]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
 
 {% highlight css %}
 @media print {

@@ -69,7 +69,8 @@ until a breakpoint becomes necessary.  This will allow you to optimize
 breakpoints based on content and maintain the fewest number of breakpoints
 possible.
 
-Let's work through the example we saw at the beginning, the weather forecast.
+Let's work through the example we saw at the beginning,
+the [weather forecast]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
 The first step is to make the forecast look good on a small screen.
 
 <figure>
