@@ -37,6 +37,22 @@ ianbarber:
   email: ianbarber@google.com
   description: "Ian is a DRE"
 
+cwdoh:
+  name:
+    given: Chang W.
+    family: Doh
+  org:
+    name: webapplications.kr
+    unit: Organizer
+  country: KR
+  role:
+    - translator
+  homepage: http://cwdoh.com
+  google: +ChangwookDoh
+  twitter: cwdoh
+  email: changwook.doh@gmail.com
+  description: "Chang is a mobile and HTML5 technologist"
+
 samdutton:
   name:
     given: Sam
