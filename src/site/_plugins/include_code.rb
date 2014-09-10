@@ -69,7 +69,12 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
+        lang = context.registers[:site].config["lang"];
+        lang = lang ? lang : "en"
         String filepath = File.join(File.dirname(page["path"]), @file)
+        if lang != "en"
+          filepath.sub!("_" + lang + "/", "_en/")
+        end
         String file = File.join(path, filepath)
         contents = File.read(file)
         snippet = getmatch(contents, @lang, @section)
