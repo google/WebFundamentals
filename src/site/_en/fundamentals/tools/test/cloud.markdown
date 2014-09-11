@@ -96,7 +96,7 @@ When testing on real devices,
 you are somewhat limited by the number of devices you have access to.
 But with cloud testing services,
 you have the ability to test your site against
-any number of browsers, platforms, and devices at the same time.
+many browsers, platforms, and devices at the same time.
 
 Both <a href="https://saucelabs.com/">Sauce Labs (commercial)</a>
 and <a href="http://www.keynote.com/solutions/testing/mobile-testing">DeviceAnywhere (commercial)</a>
@@ -110,7 +110,7 @@ there are tasks available for
 <a href="https://www.browserstack.com/automate">BrowserStack (commercial)</a>
 is the easiest to use:
 You select an operating system, select your browser version and device type,
-select a URL to browse, and it spins up a hosted virtual machine
+select a URL to browse, and BrowserStack spins up a hosted virtual machine
 that you can interact with.
 
 You can also fire up multiple emulators in the same screen,
@@ -121,7 +121,7 @@ at the same time.
 
 Many cloud testing services include a screenshot tool.
 Screenshots are an important comparison tool
-between views on different devices. 
+between views on different devices.
 With no set-up required,
 you can type in a URL on the
 <a href="http://www.browserstack.com/responsive">BrowserStack website</a>.

@@ -30,8 +30,10 @@ module Jekyll
         @includelang = includelang
 
         self.process(name)
+        
         #Jekyll.logger.info "Reading " + File.join(base, "_" + langcode, dir, name)
         self.read_yaml(File.join(base, "_" + langcode, dir), name)
+        self.data['langcode'] = langcode ? langcode : "en"
     end
 
     def relative_path
@@ -45,7 +47,6 @@ module Jekyll
       end
       path = File.join(dest, path)
     end
-
   end
 
   class LanguageAsset < Jekyll::StaticFile
@@ -93,15 +94,32 @@ module Jekyll
         # Go through English language version and generate 
         file_name = File.basename(source_file);
         relative_dir = File.dirname(source_file.sub(site.source + "/_en/", ""));
-        create_page(site, source_file, relative_dir, file_name, "en", true)
+        root_page = create_page(site, source_file, relative_dir, file_name, "en", true)
+        translated_page_list = []
+        if root_page != nil
+          root_page.data['is_localized'] = false
+          translated_page_list << root_page
+        end
 
         # For any file, generate the localised variant if available.
         lang_code_list.each do |langcode|
           #Jekyll.logger.info "Logging code " + File.join(site.source, "_" + langcode, relative_dir, file_name)
           if File.exists?(File.join(site.source, "_" + langcode, relative_dir, file_name))
+            
             #Jekyll.logger.info "Logging file " + file_name
-            create_page(site, source_file, relative_dir, file_name, langcode, true)
+            page = create_page(site, source_file, relative_dir, file_name, langcode, true)
+            # If we know we have a page add it to a list of translations
+            if page != nil
+              if root_page != nil
+                root_page.data['is_localized'] = true
+              end
+              translated_page_list << page
+            end
           end
+        end
+        # Map all the translations for a page on to each other
+        translated_page_list.each do |translated_page|
+          translated_page.data["translations"] = translated_page_list
         end
       end
     end
@@ -111,7 +129,9 @@ module Jekyll
         # Don't process underscore files.
       elsif source_file =~ /\.(markdown|html)|sitemap\.xml/ 
         # Markdown is our main content language, create a page.
-        site.pages << LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang);
+        page = LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang)
+        site.pages << page
+        return page
       elsif source_file =~ /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
         # Copy across other assets.
         #Jekyll.logger.info relative_dir + " vs " + File.join(langcode, relative_dir)
@@ -123,6 +143,8 @@ module Jekyll
           langcode,
           includelang) 
       end
+
+      return nil
     end
   end
   
