@@ -37,6 +37,22 @@ ianbarber:
   email: ianbarber@google.com
   description: "Ian is a DRE"
 
+陈三:
+  name:
+    given: Sam
+    family: Chen
+  org:
+    name: 
+    unit: 
+  country: China
+  role:
+    - translator
+  homepage: http://www.zfanw.com/blog/
+  google: +陈三
+  twitter: chenxsan
+  email: chenxsan@google.com
+  description: "Sam is a Front End Developer"
+
 cwdoh:
   name:
     given: Chang W.
