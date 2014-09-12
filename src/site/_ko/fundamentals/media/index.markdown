@@ -10,6 +10,8 @@ article:
   order: 3
 id: introduction-to-media
 collection: home
+translators:
+  - nurinamu
 ---
 
 {% comment %}

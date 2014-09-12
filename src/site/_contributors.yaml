@@ -144,6 +144,22 @@ paulkinlan:
   email: paulkinlan@google.com
   description: "Paul is a Developer Advocate"
 
+nurinamu:
+  name:
+    given: Wonjae
+    family: Lee
+  org:
+    name: Veckon
+    unit: Developer
+  country: KR
+  role:
+    - translator
+  homepage: http://nurinamu.com
+  google: +nurinamu
+  twitter: nurinamu
+  email: nurinamu@gmail.com
+  description: "Wonjae loves WebRTC and HHK"
+
 petelepage:
   name:
     given: Pete
