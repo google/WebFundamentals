@@ -5,20 +5,20 @@ description: "Before the browser can render content to the screen it needs to co
 introduction: "Before the browser can render the page it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-09-12
   order: 1
 collection: critical-rendering-path
 authors:
   - ilyagrigorik
 key-takeaways:
   construct-object-model:
-    - Bytes → characters → tokens → nodes → object model
-    - HTML markup is transformed into a Document Object Model (DOM), CSS markup is transformed into a CSS Object Model (CSSOM)
-    - DOM and CSSOM are independent data structures
-    - Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM
+    - Bytes → characters → tokens → nodes → object model.
+    - HTML markup is transformed into a Document Object Model (DOM), CSS markup is transformed into a CSS Object Model (CSSOM).
+    - DOM and CSSOM are independent data structures.
+    - Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM.
 notes:
   devtools:
-    - We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools documentation</a>, or if you're new to DevTools, I recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> course.
+    - We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href="https://developer.chrome.com/devtools">Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> course.
 ---
 {% wrap content%}
 
@@ -61,7 +61,7 @@ Every time the browser has to process HTML markup it has to step through all of 
 
 {% include modules/remember.liquid title="Note" list=page.notes.devtools %}
 
-If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step &mdash; in example above, it took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the page was larger, as most pages are, this process might take significantly longer. You will see in our future sections on creating smooth animations that this can easily become your bottleneck if the browser has to process large amounts of HTML. That said, let’s not get ahead of ourselves…
+If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step &mdash; in the example above, it took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the page was larger, as most pages are, this process might take significantly longer. You will see in our future sections on creating smooth animations that this can easily become your bottleneck if the browser has to process large amounts of HTML.
 
 With the DOM tree ready, do we have enough information to render the page to the screen? Not yet! The DOM tree captures the properties and relationships of the document markup, but it does not tell us anything about how the element should look when rendered. That’s the responsibility of the CSSOM, which we turn to next!
 

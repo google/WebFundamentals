@@ -5,7 +5,7 @@ description: "Once we've eliminated any unnecessary resources, the next step is 
 introduction: "Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!"
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-29
+  updated_on: 2014-09-12
   order: 2
 collection: optimizing-content-efficiency
 authors:
@@ -202,7 +202,7 @@ What’s the best config for your server? The HTML5 Boilerplate project contains
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size">
 
-A quick and simple way to see GZIP in action is to open Chrome Developer Tools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
+A quick and simple way to see GZIP in action is to open Chrome DevTools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
 
 {% include modules/remember.liquid list=page.notes.gzip %}
 
