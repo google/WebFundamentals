@@ -20,25 +20,41 @@ handlers:
   upload: robots.txt
 
 - url: /web/(.*\.png)
+  static_files: build/static/_langs/en/\1
+  expiration: 1d
+  upload: build/static/_langs/en/(.*\.png)
+
+- url: /web/imgs/(.*\.png)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.png)
 
-
 - url: /web/(.*\.gif)
-  static_files: build/static/\1
+  static_files: build/static/_langs/en/\1
   expiration: 1d
-  upload: build/static/(.*\.gif)
+  upload: build/static/_langs/en/(.*\.gif)
 
 - url: /web/(.*\.ico)
-  static_files: build/static/\1
+  static_files: build/static/_langs/en/\1
   expiration: 7d
-  upload: build/static/(.*\.ico)
+  upload: build/static/_langs/en/(.*\.ico)
 
-- url: /web/(.*\.jpg)
+- url: /web/fundamentals/imgs/(.*\.jpg)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.jpg)
+
+- url: /web/(.*\.jpg)
+  static_files: build/static/_langs/en/\1
+  expiration: 1d
+  upload: build/static/_langs/en/(.*\.jpg)
+
+- url: /web/(.*\.svg)
+  static_files: build/static/\1
+  expiration: 1d
+  upload: build/static/(.*\.svg)
+  http_headers:
+    Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/(.*\.woff)
   static_files: build/static/\1
@@ -61,12 +77,7 @@ handlers:
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
-- url: /web/(.*\.svg)
-  static_files: build/static/\1
-  expiration: 1d
-  upload: build/static/(.*\.svg)
-  http_headers:
-    Access-Control-Allow-Origin: https://developers.google.com
+
 
 - url: /web/(.*\.css)
   static_files: build/static/\1
