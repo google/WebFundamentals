@@ -5,7 +5,7 @@ description: "Once we've eliminated any unnecessary resources, the next step is 
 introduction: "Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!"
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-29
+  updated_on: 2014-09-12
   order: 2
 collection: optimizing-content-efficiency
 authors:

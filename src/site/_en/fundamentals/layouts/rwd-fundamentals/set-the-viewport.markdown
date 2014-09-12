@@ -8,7 +8,7 @@ introduction: "Pages optimized for a variety of devices must include a meta view
   how to control the page's dimensions and scaling."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-09-12
   order: 1
 authors:
   - petelepage

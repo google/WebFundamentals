@@ -10,7 +10,7 @@ introduction: "While it may be helpful to think about defining breakpoints based
   layout adjusts to its container."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-09-12
   order: 4
 authors:
   - petelepage

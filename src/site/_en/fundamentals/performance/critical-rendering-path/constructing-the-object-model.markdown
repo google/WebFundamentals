@@ -5,7 +5,7 @@ description: "Before the browser can render content to the screen it needs to co
 introduction: "Before the browser can render the page it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-09-12
   order: 1
 collection: critical-rendering-path
 authors:
