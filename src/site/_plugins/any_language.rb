@@ -115,6 +115,7 @@ module Jekyll
                 root_page.data['is_localized'] = true
               end
               page.data['is_localized'] = true
+              page.data['is_localization'] = true
               translated_page_list << page
             end
           end
@@ -149,5 +150,16 @@ module Jekyll
       return nil
     end
   end
-  
+
+  module LocalizeLink
+    def localize_link(input, page) 
+      if page["is_localization"] == true
+        input = input + "?hl=" + page["langcode"]
+      end
+      return input
+    end
+  end
+
 end
+
+ Liquid::Template.register_filter(Jekyll::LocalizeLink)
