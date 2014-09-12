@@ -202,7 +202,7 @@ What’s the best config for your server? The HTML5 Boilerplate project contains
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size">
 
-A quick and simple way to see GZIP in action is to open Chrome Developer Tools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
+A quick and simple way to see GZIP in action is to open Chrome DevTools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 24.8 KB during transfer!
 
 {% include modules/remember.liquid list=page.notes.gzip %}
 
