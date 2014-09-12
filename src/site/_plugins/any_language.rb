@@ -34,6 +34,7 @@ module Jekyll
         #Jekyll.logger.info "Reading " + File.join(base, "_" + langcode, dir, name)
         self.read_yaml(File.join(base, "_" + langcode, dir), name)
         self.data['langcode'] = langcode ? langcode : "en"
+        self.data['is_localized'] = false
     end
 
     def relative_path
@@ -113,6 +114,7 @@ module Jekyll
               if root_page != nil
                 root_page.data['is_localized'] = true
               end
+              page.data['is_localized'] = true
               translated_page_list << page
             end
           end
