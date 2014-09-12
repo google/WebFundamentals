@@ -13,7 +13,7 @@ authors:
 key-takeaways:
   emulator:
     - Start prototyping on the desktop; then tackle the mobile-specific parts on the devices you intend to support. The emulation tool makes this process more straightforward.
-    - The emulation tool helps you test your site on a range of devices, testing not just the site's responsive, but how the site responds to user interactions and device location.
+    - The emulation tool helps you test your site on a range of devices, testing not just that the site is responsive, but how the site responds to user interactions and device location.
     - Devices often have unreliable connectivity; emulate network conditions.
 notes:
     - TBD.
@@ -119,7 +119,7 @@ you can simulate:
 The native User Agent and dimension overriding lets you debug mobile browsers
 on different devices and operating systems.
 
-1. Within the Emulation panel, open up the Sensors pane. 
+1. Within the Emulation panel, open up the Sensors pane.
 2. Check "Spoof user agent" and select "Android 2.3 - Nexus S".
 3. Refresh the page.
 
@@ -152,7 +152,7 @@ to emulate your site on multiple devices and test at the same time:
 2. Open up the Emulation panel and select a device.
 3. Repeat this process for multiple devices.
 
-Any changes you make to your site with automatically be pushed to each device emulation.
+Any changes you make to your site will automatically be pushed to each device.
 
 {% include modules/nextarticle.liquid %}
 
