@@ -68,9 +68,14 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        path = context.registers[:site].source;
-        lang = context.registers[:site].config["lang"];
-        lang = lang ? lang : "en"
+        site = context.registers[:site]
+        path = site.source;
+        lang = site.config["lang"]
+        if !lang && page.has_key?('langcode')
+          lang = page["langcode"]
+        elsif !lang
+          lang = "en"
+        end
         String filepath = File.join(File.dirname(page["path"]), @file)
         if lang != "en"
           filepath.sub!("_" + lang + "/", "_en/")
