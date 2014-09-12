@@ -30,11 +30,12 @@ from google.appengine.ext.webapp.template import render
 class AllPages(webapp2.RequestHandler):
     def get(self, path):
         lang = self.request.get("hl", "en")
-        
-        if path[-5:0] != ".html":
+
+
+        if path[-5:] != ".html":
             # App engine strips out trailing '/' for directories
             path = os.path.join(path, "index.html")
-
+        
         root_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", "en", path)
         lang_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", lang, path)
         
