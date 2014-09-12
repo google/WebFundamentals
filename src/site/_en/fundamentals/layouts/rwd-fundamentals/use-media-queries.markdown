@@ -9,7 +9,7 @@ introduction: "Media queries are simple filters that can be applied to CSS style
   resolution."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-09-12
   order: 3
 authors:
   - petelepage
