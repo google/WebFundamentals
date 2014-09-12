@@ -68,27 +68,24 @@ handlers:
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
+- url: /web/(.*\.css)
+  static_files: build/static/\1
+  expiration: 1d
+  upload: build/static/(.*\.css)
+  http_headers:
+    Access-Control-Allow-Origin: https://developers.google.com
+
 - url: /web/index.html
-  static_files: build/static/fundamentals/index.html
-  upload: build/static/fundamentals/index.html
+  script: main.app
   secure: always
 
 - url: /web/
-  static_files: build/static/index.html
-  upload: build/static/index.html
-  secure: always
-
-- url: /web/(.+)/
-  static_files: build/static/\1/index.html
-  upload: build/static/(.+)/index.html
+  script: main.app
   secure: always
 
 - url: /web/(.*)
-  static_files: build/static/\1
-  expiration:  1h
-  upload: build/static/(.+)
-  http_headers:
-    Access-Control-Allow-Origin: https://developers.google.com
+  script: main.app
+  secure: always
 
 skip_files:
 - ^(.*/)?.*\.psd$
