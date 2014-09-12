@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- // [TEMPLATE header_full] -->
+  <title>Video: Using the full screen API</title>
+  <style>
+    #container {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    video {
+      max-width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+<div id="container" role="main">
+  <h1>Video: Using the full screen API</h1>
+  <video controls>
+    <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'">
+    <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+    <p>This browser does not support the video element.</p>
+  </video>
+
+  <button type="button" id="butFullScreenDoc">Make Page Full Screen</button>
+  <button type="button" id="butFullScreenVid">Make Video Full Screen</button>
+
+
+  <div id="srcInfo" class="is-hidden">
+    <p>
+      <b>Event type:</b> <span id="srcEvent"></span><br>
+      <b>Current source file:</b> <span id="srcFile"></span><br>
+      <b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span>
+    </p>
+  </div>
+
+
+  <script>
+  var video;
+
+  function init() {
+    video = document.querySelector("video");
+    video.addEventListener("loadedmetadata", showMetadata);
+    video.addEventListener("play", showMetadata);
+    video.addEventListener("pause", showMetadata);
+
+    video.addEventListener("webkitfullscreenchange", function() {
+      console.log("Full Screen", video.displayingFullscreen);
+    });
+
+    document.querySelector("#butFullScreenDoc").addEventListener("click", fullScreenDoc);
+    document.querySelector("#butFullScreenVid").addEventListener("click", fullScreenVid);
+
+    video.requestFullScreen =
+      video.requestFullScreen ||
+      video.webkitRequestFullScreen ||
+      video.mozRequestFullScreen;
+
+    document.body.requestFullScreen =
+      document.body.requestFullScreen ||
+      document.body.webkitRequestFullScreen ||
+      document.body.mozRequestFullScreen;
+  }
+
+  function fullScreenDoc(evt) {
+    document.body.requestFullScreen();
+    sampleCompleted("Video-FullScreenDocument");
+  }
+
+  function fullScreenVid(evt) {
+    video.requestFullScreen();
+    sampleCompleted("Video-FullScreenVideo");
+  }
+
+
+
+  function showMetadata(evt) {
+    var srcInfo = document.querySelector("#srcInfo");
+    var srcEvent = document.querySelector("#srcEvent");
+    var srcFile = document.querySelector("#srcFile");
+    var srcWidth = document.querySelector("#srcWidth");
+    var srcHeight = document.querySelector("#srcHeight");
+
+    srcInfo.classList.remove("is-hidden");
+    srcEvent.textContent = evt.type;
+    srcFile.textContent = this.currentSrc.replace(/^.*[\\\/]/, '');
+    srcWidth.textContent = this.videoWidth;
+    srcHeight.textContent = this.videoHeight;
+  }
+
+  init();
+
+  </script>
+</div>
+<!-- // [TEMPLATE footer] -->
+</body>
+</html>
