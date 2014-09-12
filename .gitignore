@@ -1,7 +1,11 @@
+*~
+*.pyc
+*.swp
+.idea
+*.DS_Store
 build
 .DS_Store
 .sass-cache/
 node_modules/
 .ruby-gemset
 .rvmrc
-.pyc
