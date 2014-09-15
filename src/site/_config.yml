@@ -20,3 +20,4 @@ kramdown:
 include: ['.htaccess']
 exclude: ['config.rb']
 langs_available: ['ko', 'zh-cn']
+lang: en
