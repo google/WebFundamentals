@@ -222,3 +222,20 @@ agektmr:
   twitter: agektmr
   email: agektmr@google.com
   description: "Eiji is a Developer Advocate"
+
+greenido:
+  name:
+    given: Ido
+    family: Green
+  org:
+    name: Google
+    unit: Developer Relations
+  country: IL
+  role:
+    - author
+    - engineer
+  homepage: http://greenido.wordpress.com
+  google: +IdoGreen
+  twitter: greenido
+  email: idog@google.com
+  description: "Ido is a Developer Advocate and a runner"

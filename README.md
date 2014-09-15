@@ -5,6 +5,10 @@ Web Fundamentals is a technical documentation center for multi-device web
 development.  Our goal is to build a resource for modern web developers 
 that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
+In this repo (which is the fork of  google/WebFundamentals) we are going to focus on a hebrew translation for WF.
+Please feel free to ping me and join this effort.
+
+
 
 Content plan
 ------------
