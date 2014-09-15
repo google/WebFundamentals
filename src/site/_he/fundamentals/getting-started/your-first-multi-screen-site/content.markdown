@@ -1,21 +1,21 @@
 ---
 layout: article
-title: "콘텐츠 및 구조 생성"
-description: "콘텐츠는 모든 사이트에서 가장 중요한 부분입니다. 이 가이드에서는 어떻게 여러분의 첫번째 멀티디바이스용 사이트를 구축하기 위한 계획을 빠르게 할 수 있는지를 보여드리려 합니다."
-introduction: "콘텐츠는 어떠한 사이트에서도 가장 중요한 부분입니다. 따라서 우리는 콘텐츠의 기술이 아닌 콘텐츠를 위한 기획을 할 것입니다. 이 가이드에서 우리는 가장 필요한 콘텐츠를 확인하고, 이에 기초하여 페이지 구조를 생성한 뒤 좁거나 넓은 뷰포트 모두에서 제대로 동작하는 간단한 선형 레이아웃을 통해 페이지를 표현해 볼 것입니다."
+title: "צור את התוכן והמבנה"
+description: "תוכן הוא ההיבט החשוב ביותר של כל אתר. במדריך זה, נבחן כיצד אתה יכול לתכנן ביעילות כדי לבנות את האתר הרב מכשירי הראשון שלך."
+introduction: "תוכן הוא ההיבט החשוב ביותר של כל אתר. אז רצוי לעצב עבור התוכן ולא לתת לעיצוב להכתיב את התוכן. במדריך זה, אנו מזהים את התוכן שאנחנו צריכים בעדיפות ראשונה, ליצור מבנה דף המבוסס עליו ולאחר מכן, תציג את הדף בפריסה ליניארית שעובדת היטב על viewports הצר ורחב."
 notes:
   styling:
-    - 스타일링은 이후에 진행할 것입니다.
+    - הסטייל יגיע מאוחר יותר.
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2014-09-15
   order: 1
 id: multi-screen-content
 collection: multi-screen
 authors:
   - paulkinlan
 translators:
-  - cwdoh
+  - greenido
 related-guides:
   create-amazing-forms:
     -
@@ -84,18 +84,18 @@ related-guides:
         title: "Images"
         href: fundamentals/media/
 
-key-takeaways:
-  content-critical:
-    - Identify the content you need first.
-    - Sketch out Information Architecture (IA) for narrow and wide viewports.
-    - Create a skeleton view of the page with content but without styling.
+ערקי הדברים שחשוב לזכור:
+  קריטי לתוכן:
+    - אפיין את התוכן לו אתה זקוק בתחילה
+    - לשרטט את ארכיטקטורת מידע (IA) לviewports הצר ורחב.
+    - יצירת תצוגת שלד של הדף עם תוכן אבל בלי סגנון.
 ---
 
 {% wrap content %}
 
 {% include modules/toc.liquid %}
 
-## 페이지 구조 생성하기
+## צור את מבנה הדף
 
 우리에게 필요한 것을 확인해보자면 다음과 같습니다.
 
