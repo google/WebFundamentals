@@ -19,5 +19,6 @@ kramdown:
   toc_levels: "2"
 include: ['.htaccess']
 exclude: ['config.rb']
-# don't set langs_available in here to avoid breaking plain jekyll serve.
-lang: ko
+# comment this for plain jekyll serve usage.
+langs_available: ['ko']
+lang: en
