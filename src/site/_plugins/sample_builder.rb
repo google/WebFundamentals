@@ -152,6 +152,8 @@ module SampleBuilder
   end
 
   class Generator < Jekyll::Generator
+    # Run near the end of the process.
+    priority :low
     def generate(site)
       gen_dir = "fundamentals/resources/samples"
       if site.config.has_key?("langs_available")
@@ -163,7 +165,6 @@ module SampleBuilder
       dirTitles = {}
       path = site.source
       target_dir = File.join(site.dest, gen_dir)
-
       # Look for _code samples.
       site.pages.each do |page|
         dir = File.join(File.dirname(File.join(path, page.path)), "_code")
@@ -235,7 +236,8 @@ module SampleBuilder
     end
 
     def render_sample(sample, site)
-      url = File.join(site.baseurl, sample.url)
+      url = File.join(site.config["sample_link_base"],
+          sample.url.sub("/fundamentals/resources/samples/", ""))
       name = sample.title
       section = sample.section
       output = ""

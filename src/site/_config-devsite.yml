@@ -21,3 +21,4 @@ kramdown:
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
 langs_available: ['ko']
+sample_link_base: "http://googlesamples.github.io/web-fundamentals/samples/"
