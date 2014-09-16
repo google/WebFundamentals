@@ -22,7 +22,7 @@ module Jekyll
       site.data["language_names"] = data
     end
   end
-  
+
   # Go through the English version of the site, and generate a page for every 
   # article. If the language code is not english, then we need to check for a
   # matching file. The language code should be defined in the config.
@@ -73,6 +73,8 @@ module Jekyll
   end
 
   class AnyLanguage < Generator
+    # We want this to run early in the process.
+    priority :highest
     def generate(site)
       lang = site.config["lang"]
       lang = lang ? lang : "en"
