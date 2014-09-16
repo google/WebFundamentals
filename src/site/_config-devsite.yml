@@ -20,4 +20,4 @@ kramdown:
   toc_levels: "2"
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
-langs_available: ['ko']
+langs_available: ['ko', 'he']
