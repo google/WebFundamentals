@@ -34,12 +34,16 @@
           </div>
           <div class="secondary-content">
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
-            <ol class="list-links list-links--secondary">
+            <ol class="list-links list-links--secondary" {% if group.start %}style="counter-reset: list {{group.start}}"{% endif %}>
             {% for item in group.list %}
               <li>
-                <a href="{{item.link}}" title="Read the lesson {{item.title}}">
+                {% if item.link %}
+                  <a href="{{item.link}}" title="Read the lesson {{item.title}}">
+                    {{item.title}}
+                  </a>
+                {% else %}
                   {{item.title}}
-                </a>
+                {% endif %}
               </li>
             {% endfor %}
             </ol>
