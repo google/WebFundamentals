@@ -8,3 +8,12 @@
   {% endfor %}
   </p>
 </nav>
+{% if page.translations.size > 1 %}
+<nav class="translatelinks">
+  <p>
+  {% for t in page.translations %}
+    <a href="{{site.baseurl}}{{ t.url | canonical_url | localize_link:t }}">{{  t.langcode | lang_name }}</a>
+  {% endfor %}
+  </p>
+</nav>
+{% endif %}

@@ -19,5 +19,6 @@ kramdown:
   toc_levels: "2"
 include: ['.htaccess']
 exclude: ['config.rb']
-langs_available: ['ko', 'zh-cn']
-lang: en
+# comment this for plain jekyll serve usage.
+langs_available: ['ko']
+sample_link_base: "/web/fundamentals/resources/samples/"
