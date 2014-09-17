@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- // [TEMPLATE header_full] -->
-
-    
-<!-- IE Specific to remove tap highlight -->
-    <meta name="msapplication-tap-highlight" content="no">
-    
-<title>States Example</title>
-    
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-    <style>
-      body {
+<!DOCTYPE html><html><head><!-- // [TEMPLATE header_full] --><!-- IE Specific to remove tap highlight --><meta name="msapplication-tap-highlight" content="no"><title>States Example</title><link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css"><style>body {
         background-color: #d3e2fc;
         
         margin: 32px;
@@ -87,28 +73,8 @@
 
       .btn::-moz-focus-inner {
         border: 0;
-      }
-      
-</style>
-  </head>
-
-  <body>
-    <button class="btn" tabindex="1">Button 1</button>
-    
-    <button class="btn hover" tabindex="2">Button 2</button>
-    
-    <button class="btn active" tabindex="3">Button 3</button>
-    
-    <button class="btn focus" tabindex="4">Button 4</button>
-
-    <script>
-      window.onload = function() {
+      }</style><body><button class="btn" tabindex="1">Button 1</button> <button class="btn hover" tabindex="2">Button 2</button> <button class="btn active" tabindex="3">Button 3</button> <button class="btn focus" tabindex="4">Button 4</button><script>window.onload = function() {
         if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
           document.body.addEventListener('touchstart', function() {}, false);
         }
-      };
-    </script>
-
-    <!-- // [TEMPLATE footer] -->
-  </body>
-</html>
+      };</script><!-- // [TEMPLATE footer] -->

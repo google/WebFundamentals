@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- // [TEMPLATE header_full] -->
-  <title>Video: Scripting and adjusting playspeed of videos</title>
-  <style>
-    #container {
+<!DOCTYPE html><html><head><!-- // [TEMPLATE header_full] --><title>Video: Scripting and adjusting playspeed of videos</title><style>#container {
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
@@ -12,37 +6,7 @@
 
     video {
       max-width: 100%;
-    }
-
-  </style>
-</head>
-<body>
-<div id="container" role="main">
-  <h1>Video: Scripting and adjusting playspeed of videos</h1>
-  <video>
-    <source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'">
-    <source src="chrome.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-    <p>This browser does not support the video element.</p>
-  </video>
-
-  <button type="button" id="butAction">Play</button>
-
-  <label for="rangeSpeed">
-    Playback Speed (<span id="playbackSpeed">1</span>)
-    <input type="range" value="1" id="rangeSpeed" min="0.1" max="2" step="0.1">
-  </label>
-
-  <div id="srcInfo" class="is-hidden">
-    <p>
-      <b>Event type:</b> <span id="srcEvent"></span><br>
-      <b>Current source file:</b> <span id="srcFile"></span><br>
-      <b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span>
-    </p>
-  </div>
-
-
-  <script>
-  var video, but, rangeSpeed, speedLabel;
+    }</style><body><div id="container" role="main"><h1>Video: Scripting and adjusting playspeed of videos</h1><video><source src="chrome.webm" type="video/webm; codecs='vp8, vorbis'"><source src="chrome.mp4" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"><p>This browser does not support the video element.</p></video><button type="button" id="butAction">Play</button><label for="rangeSpeed">Playback Speed (<span id="playbackSpeed">1</span>)<input type="range" value="1" id="rangeSpeed" min="0.1" max="2" step="0.1"></label><div id="srcInfo" class="is-hidden"><p><b>Event type:</b> <span id="srcEvent"></span><br><b>Current source file:</b> <span id="srcFile"></span><br><b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span></p></div><script>var video, but, rangeSpeed, speedLabel;
 
   function init() {
     video = document.querySelector("video");
@@ -92,10 +56,4 @@
     srcHeight.textContent = this.videoHeight;
   }
 
-  init();
-
-  </script>
-</div>
-<!-- // [TEMPLATE footer] -->
-</body>
-</html>
+  init();</script></div><!-- // [TEMPLATE footer] -->
