@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- // [TEMPLATE header] -->
-    <link rel="stylesheet" href="layouts-common.css">
-    <style>
-
-      
-body {
+<!DOCTYPE html><html lang="en"><head><!-- // [TEMPLATE header] --><link rel="stylesheet" href="layouts-common.css"><style>body {
         overflow-x: hidden;
       }
       
@@ -93,24 +85,7 @@ body {
           -webkit-transform: translate(0,0);
           transform: translate(0,0);
         }
-      }
-      
-</style>
-    <title>Responsive Web Design Pattern: Off Canvas</title>
-  </head>
-  <body>
-    <div class="container" role="main">
-      <div class="c1" id="leftDrawer">
-      </div>
-      <div class="c2" id="mainPanel">
-        Click the <code>div</code>'s to change views
-      </div>
-      <div class="c3" id="rightDrawer">
-      </div>
-    </div>
-
-    <script type="text/javascript">
-      var position = 0;
+      }</style><title>Responsive Web Design Pattern: Off Canvas</title><body><div class="container" role="main"><div class="c1" id="leftDrawer"></div><div class="c2" id="mainPanel">Click the <code>div</code>'s to change views</div><div class="c3" id="rightDrawer"></div></div><script type="text/javascript">var position = 0;
       var mainPanel = document.getElementById("mainPanel");
       var leftDrawer = document.getElementById("leftDrawer");
       var rightDrawer = document.getElementById("rightDrawer");
@@ -131,12 +106,7 @@ body {
 
       mainPanel.addEventListener("click", toggle);
       leftDrawer.addEventListener("click", toggle);
-      rightDrawer.addEventListener("click", toggle);
-      
-    </script>
-    <!-- // [TEMPLATE footer] -->
-    <script type="text/javascript">
-      function init() {
+      rightDrawer.addEventListener("click", toggle);</script><!-- // [TEMPLATE footer] --><script type="text/javascript">function init() {
         window.matchMedia("(min-width: 800px)").addListener(hitMQ);
         window.matchMedia("(min-width: 500px)").addListener(hitMQ);
       }
@@ -145,8 +115,4 @@ body {
         sampleCompleted("RWDPatterns-OffCanvas");
       }
 
-      init();
-
-    </script>
-  </body>
-</html>
+      init();</script>

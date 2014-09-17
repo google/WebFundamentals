@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- // [TEMPLATE header_full] -->
-
-    <title>App Bar &amp; Nav Drawer Sample</title>
-
-    
-<!-- IE Specific to remove tap highlight -->
-    <meta name="msapplication-tap-highlight" content="no">
-    
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-    <style>
-      html, body {
+<!DOCTYPE html><html><head><!-- // [TEMPLATE header_full] --><title>App Bar &amp; Nav Drawer Sample</title><!-- IE Specific to remove tap highlight --><meta name="msapplication-tap-highlight" content="no"><link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css"><style>html, body {
         width: 100%;
         height: 100%;
         
@@ -305,35 +291,7 @@
         .navdrawer-container ul li {
           border: none;
         }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header class="app-bar promote-layer">
-      <h1 class="logo">Logo</h1>
-      
-      <section class="app-bar-actions">
-        <input class="search" placeholder="Search">
-        <button><img src="./search.png"></button>
-      </section>
-      <button class="menu"><img src="./hamburger.png"></button>
-    </header>
-  
-    <nav class="navdrawer-container promote-layer">
-      <ul>
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
-      </ul>
-    </nav>
-    
-    <section class="main-content">
-    </section>
-
-    <script>
-      var navdrawerContainer = document.querySelector('.navdrawer-container');
+      }</style><body><header class="app-bar promote-layer"><h1 class="logo">Logo</h1><section class="app-bar-actions"><input class="search" placeholder="Search"><button><img src="./search.png"></button></section><button class="menu"><img src="./hamburger.png"></button></header><nav class="navdrawer-container promote-layer"><ul><li><a href="#">Item 1</a></li><li><a href="#">Item 2</a></li><li><a href="#">Item 3</a></li><li><a href="#">Item 4</a></li></ul></nav><section class="main-content"></section><script>var navdrawerContainer = document.querySelector('.navdrawer-container');
       var appbarElement = document.querySelector('.app-bar');
 
       var menuBtn = document.querySelector('.menu');
@@ -346,16 +304,7 @@
           appbarElement.classList.add('open');
           navdrawerContainer.classList.add('open');
         }
-      }, true);
-    </script>
-
-    <script>
-      var menuBtn = document.querySelector('.menu');
+      }, true);</script><script>var menuBtn = document.querySelector('.menu');
       menuBtn.addEventListener('click', function() {
         sampleCompleted('appbar-navdrawer-sample2.html-menubtnclick');
-      }, true);
-    </script>
-
-    <!-- // [TEMPLATE footer] -->
-  </body>
-</html>
+      }, true);</script><!-- // [TEMPLATE footer] -->

@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- // [TEMPLATE header_full] -->
-
-    <!-- IE Specific to remove tap highlight -->
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <title>Touch Example 2</title>
-    
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-    <style>
-      body {
+<!DOCTYPE html><html><head><!-- // [TEMPLATE header_full] --><!-- IE Specific to remove tap highlight --><meta name="msapplication-tap-highlight" content="no"><title>Touch Example 2</title><link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css"><style>body {
         width: 100%;
         height: 100%;
         
@@ -91,26 +78,7 @@
       .promote-layer {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-      }
-    </style>
-  </head>
-
-  <body>
-
-    <div class="container">
-      <div class="v-slider">
-        <div class="track"></div>
-        <div class="hold promote-layer"></div>
-      </div>
-
-      <div class="v-slider">
-        <div class="track"></div>
-        <div class="hold promote-layer"></div>
-      </div>
-    </div>
-
-    <script>
-      // Shim for requestAnimationFrame from Paul Irishpaul ir
+      }</style><body><div class="container"><div class="v-slider"><div class="track"></div><div class="hold promote-layer"></div></div><div class="v-slider"><div class="track"></div><div class="hold promote-layer"></div></div></div><script>// Shim for requestAnimationFrame from Paul Irishpaul ir
       // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/ 
       window.requestAnimFrame = (function(){
         return  window.requestAnimationFrame       ||
@@ -270,17 +238,9 @@ function limitValueToSlider(value) {
             document.body.addEventListener('touchstart', function() {}, false);
           }
         };
-      };
-    </script>
-
-    <script>
-      var holds = document.querySelectorAll('.hold');
+      };</script><script>var holds = document.querySelectorAll('.hold');
       for(var i = 0; i < holds.length; i++) {
         holds[i].addEventListener('touchstart', function(){
           sampleCompleted('touch-demo-2.html-HoldTouch');
         });
-      }
-    </script>
-    <!-- // [TEMPLATE footer] -->
-  </body>
-</html>
+      }</script><!-- // [TEMPLATE footer] -->

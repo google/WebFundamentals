@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- IE Specific to remove tap highlight -->
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <title>user-select Example</title>
-    
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-    <style>
-      body {
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- IE Specific to remove tap highlight --><meta name="msapplication-tap-highlight" content="no"><title>user-select Example</title><link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css"><style>body {
         background-color: #e74c3c;
         
         margin: 32px;
@@ -82,21 +68,8 @@
       /* Firefox Specific CSS to remove focus ring */
       button::-moz-focus-inner {
         border: 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <button class="btn" tabindex="1">None Selectable Text</button>
-    
-    <button class="btn user-selectable" tabindex="2">+44 (0) 123456789</button>
-
-    <script>
-      window.onload = function() {
+      }</style><body><button class="btn" tabindex="1">None Selectable Text</button> <button class="btn user-selectable" tabindex="2">+44 (0) 123456789</button><script>window.onload = function() {
         if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
           document.body.addEventListener('touchstart', function() {}, false);
         }
-      };
-    </script>
-  </body>
-</html>
+      };</script>
