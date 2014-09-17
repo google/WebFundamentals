@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- // [TEMPLATE header_full] -->
-  <title>Video: Specifying a start and end time with media fragments</title>
-  <style>
-    #container {
+<!DOCTYPE html><html><head><!-- // [TEMPLATE header_full] --><title>Video: Specifying a start and end time with media fragments</title><style>#container {
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
@@ -12,32 +6,7 @@
 
     video {
       max-width: 100%;
-    }
-
-  </style>
-</head>
-<body>
-<div id="container" role="main">
-  <h1>Video: Specifying a start and end time with media fragments</h1>
-  
-<video controls>
-    <source src="chrome.webm#t=5,10" type="video/webm; codecs='vp8, vorbis'">
-    <source src="chrome.mp4#t=5,10" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-    <p>This browser does not support the video element.</p>
-  </video>
-  
-<div id="srcInfo" class="is-hidden">
-    <p>
-      <b>Event type:</b> <span id="srcEvent"></span><br>
-      <b>Current source file:</b> <span id="srcFile"></span><br>
-      <b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span>
-    </p>
-  </div>
-
-
-  <script>
-
-  function init() {
+    }</style><body><div id="container" role="main"><h1>Video: Specifying a start and end time with media fragments</h1><video controls=""><source src="chrome.webm#t=5,10" type="video/webm; codecs='vp8, vorbis'"><source src="chrome.mp4#t=5,10" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"><p>This browser does not support the video element.</p></video><div id="srcInfo" class="is-hidden"><p><b>Event type:</b> <span id="srcEvent"></span><br><b>Current source file:</b> <span id="srcFile"></span><br><b>Video size:</b> <span id="srcWidth"></span>&times;<span id="srcHeight"></span></p></div><script>function init() {
     document.querySelector("video").addEventListener("loadedmetadata", showMetadata);
   }
 
@@ -55,10 +24,4 @@
     srcHeight.textContent = this.videoHeight;
   }
 
-  init();
-
-  </script>
-</div>
-<!-- // [TEMPLATE footer] -->
-</body>
-</html>
+  init();</script></div><!-- // [TEMPLATE footer] -->
