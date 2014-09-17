@@ -102,11 +102,13 @@ list:
       link: /web/fundamentals/media/images/images-in-markup.html#make-product-images-expandable
     -
       title: Tell users which orientation works best
+      link: orientation-works-best.html
     -
       title: Keep your user in a single browser window
       link: /web/fundamentals/layouts/principles/single-browser.html
     -
       title: Avoid 'full site' labeling
+      link: /web/fundamentals/layouts/principles/avoid-full-site-labeling.html
     -
       title: Be clear why you need a user's location
       link: /web/fundamentals/device-access/user-location/user-consent.html#always-request-access-to-location-on-a-user-gesture
