@@ -84,7 +84,6 @@ module SampleBuilder
 
     def initialize(site, dest, path, file, contents, section)
       super(site, dest, path, file)
-      @use_jshtml = site.config['generate_sample_jshtml']
       @contents = contents
       @path = path
       @filename = file
@@ -107,9 +106,6 @@ module SampleBuilder
       dest_path = destination(dest)
       dirname = File.dirname(dest_path)
       FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
-      if @use_jshtml
-        dest_path.sub!('.html', '.jshtml')
-      end
       file = File.new(dest_path, "w")
       file.write(@contents)
       file.close
