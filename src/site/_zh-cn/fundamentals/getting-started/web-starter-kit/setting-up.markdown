@@ -1,12 +1,8 @@
 ---
 layout: article
-title: "Set Up Web Starter Kit"
-description: "If you are new to Web Starter Kit, then this guide is for you. It
-steps through how to get up and running with Web Starter Kit as quickly as
-possible."
-introduction: "Web Starter Kit relies on NodeJS, NPM, Ruby & Sass to work, once
-you've got these on your machine, you'll have everything you need to start using
-Web Starter Kit in your projects."
+title: "装配 Web 新手开发包"
+description: "如果你对 Web 新手开发包很陌生，那么本指南就是为你准备的。它逐步指引你怎样开始，然后尽可能快地上手 Web 新手开发包工具。"
+introduction: "Web 新手开发包依赖于 NodeJS，NPM，Ruby & Sass，一旦你在你的机器上安装好这些，你就万事俱备，只差在你的项目中开始使用 Web 新手开发包。"
 notes:
 article:
   written_on: 2014-04-17
@@ -16,6 +12,8 @@ id: setting-up-wsk
 collection: web-starter-kit
 authors:
   - mattgaunt
+translators:
+  - 陈三
 key-takeaways:
 ---
 
@@ -23,56 +21,39 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## Install These One Time Dependencies
+## 安装这一生一次的依赖
 
-There are two tool sets you need to install on your machine before you can build
-sites with Web Starter Kit: NodeJS & NPM, Ruby & Sass.
+在你使用 Web 新手开发包建站前，你需要在你的机器上安装两个工具集：NodeJS & NPM，Ruby & Sass。
 
 ### NodeJS & NPM
 
-Web Starter Kit’s build tools need Node and NPM. Node is used to run Gulp, the
-task runner. NPM is used to download the modules needed to perform certain tasks
-in Gulp.
+Web 新手开发包的构建工具需要 Node 跟 NPM。Node 用于跑 Gulp 任务运行器。NPM 则用于下载安装 Gulp 任务执行所需的模块。
 
-If you aren’t sure if you have NodeJS and NPM, check by opening a terminal and
-running `node -v`. If Node responds, check the version matches the current version
-on NodeJS.org.
+如果你不确认自己是否已经安装 NodeJS 和 NPM，打开一个终端，执行 `node -v` 命令。如果 Node 反馈了，检查看看版本是否跟 NodeJS.org 上的一致。
 
-If you don’t get a response or have an old version then go to NodeJS.org and
-click on the big green Install button. NPM will be installed with NodeJS
-automatically.
+如果命令没有反馈，或者版本较老，那么请访问 NodeJS.org 网站，点击那个很大的绿色安装按钮。NPM 会随着 NodeJS 一起自动安装。
 
 ### Ruby & Sass
 
-Web Starter Kit uses Sass to make our style guide nice and modular, but Sass
-requires Ruby. For those new to Sass, the project describes itself as a “CSS
-extension language”. Essentially it’s CSS with some extra features. For example,
-it adds support for variables and functions, which help you structure your CSS
-in a modular and reusable fashion.
+Web 新手开发包使用 Sass 来优化样式指南、模块化样式，但是 Sass 需要 Ruby。给不知道 Sass 的介绍一下，这个项目把自己形容为 “CSS 扩展语言”。基本上，它就是 CSS 外加些额外特性。比如，它添加了变量和函数的支持，有助于你模块化、复用 CSS。
+ 
+首先用 `ruby -v` 检查你是否已经安装 Ruby。如果有报错，或者版本号低于 1.8.7，那么你需要访问 Ruby 的下载页面安装 Ruby。
 
-First check if you have Ruby already with `ruby -v`. If you get an error or a
-version number less than 1.8.7, you need to install Ruby by visiting the Ruby
-downloads page.
-
-Once you have Ruby, install Sass with the following command:
+一旦有了 Ruby，执行以下命令安装 Sass：
 `$ gem install sass`
 
-## Set Up Your Web Starter Kit Project
+## 装配你的 Web 新手开发包项目
 
-The first step is to go to [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
-and download and extract the zip.
+第一步，打开 [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)，下载并解压 zip 文件。
 
-Next, you need to install the local dependencies for Web Starter Kit. Open a
-terminal, change directory into your project folder and run npm install.
+接着，你需要给 Web 新手开发包安装本地依赖。打开一个终端，切换目录到你的项目文件夹，然后执行 npm install。
 
     $ cd web-starter-kit
     $ npm install
 
-That’s it! You now have everything that's needed to use the Gulp tools in Web Starter
-Kit.
+就这些了！你现在已经为使用 Web 新手开发包中的 Gulp 工具准备好所有必需的东西。
 
-The next section of this guide covers how to use Gulp, but if you want to see
-how things look, try running the local server by typing `gulp serve`.
+这个指南的下一节里将介绍如何使用 Gulp，如果你现在想看个究竟，试着键入 `gulp serve` 命令来运行本地服务器。
 
 <img src="images/wsk-on-pixel-n5.png">
 
