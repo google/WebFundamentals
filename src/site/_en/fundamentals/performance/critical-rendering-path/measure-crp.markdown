@@ -13,8 +13,8 @@ authors:
   - ilyagrigorik
 key-takeaways:
   measure-crp:
-    - Navigation Timing provides high resolution timestamps for measuring CRP
-    - Browser emits series of consumable events which capture various stages of the CRP
+    - Navigation Timing provides high resolution timestamps for measuring CRP.
+    - Browser emits series of consumable events which capture various stages of the CRP.
 ---
 {% wrap content%}
 
