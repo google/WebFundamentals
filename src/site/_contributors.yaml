@@ -37,6 +37,22 @@ ianbarber:
   email: ianbarber@google.com
   description: "Ian is a DRE"
 
+陈三:
+  name:
+    given: Sam
+    family: Chen
+  org:
+    name: 
+    unit: 
+  country: China
+  role:
+    - translator
+  homepage: http://www.zfanw.com/blog/
+  google: +陈三
+  twitter: chenxsan
+  email: chenxsan@google.com
+  description: "Sam is a Front End Developer"
+
 cwdoh:
   name:
     given: Chang W.
@@ -144,6 +160,22 @@ paulkinlan:
   email: paulkinlan@google.com
   description: "Paul is a Developer Advocate"
 
+nurinamu:
+  name:
+    given: Wonjae
+    family: Lee
+  org:
+    name: Veckon
+    unit: Developer
+  country: KR
+  role:
+    - translator
+  homepage: http://nurinamu.com
+  google: +nurinamu
+  twitter: nurinamu
+  email: nurinamu@gmail.com
+  description: "Wonjae loves WebRTC and HHK"
+
 petelepage:
   name:
     given: Pete
@@ -190,3 +222,20 @@ agektmr:
   twitter: agektmr
   email: agektmr@google.com
   description: "Eiji is a Developer Advocate"
+
+greenido:
+  name:
+    given: Ido
+    family: Green
+  org:
+    name: Google
+    unit: Developer Relations
+  country: IL
+  role:
+    - author
+    - engineer
+  homepage: http://greenido.wordpress.com
+  google: +IdoGreen
+  twitter: greenido
+  email: idog@google.com
+  description: "Ido is a Developer Advocate and a runner"

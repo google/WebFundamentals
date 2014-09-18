@@ -18,3 +18,4 @@ kramdown:
 include: ['.htaccess']
 exclude: ['config.rb']
 include_open_html: true
+sample_link_base: "/web/fundamentals/resources/samples/"
