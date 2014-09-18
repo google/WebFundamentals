@@ -1,12 +1,8 @@
 ---
 layout: article
-title: "Development Phases"
-description: "Every developer will go through various phases during the
-development of a project. Web Starter Kit makes you more productive and
-simplifies a range of tasks for each phase."
-introduction: "During development, there are 3 particular commands that you'll
-use on a regular basis: gulp serve, gulp serve:dist, and gulp. Let’s look at
-how each task helps you develop your site."
+title: "开发阶段"
+description: "每个开发者在项目的开发过程中，都会经历不同的阶段。Web 新手开发包提高你的效率，并简化各阶段的许多工作。"
+introduction: "在开发过程中，有三个特别的命令你会经常用到：gulp serve，gulp serve:dist，和 gulp。让我们看看这每一个任务都是怎样帮助你开发站点的。"
 notes:
 article:
   written_on: 2014-04-17
@@ -16,6 +12,8 @@ id: development-phases
 collection: web-starter-kit
 authors:
   - mattgaunt
+translators:
+  - 陈三
 key-takeaways:
 ---
 
@@ -23,46 +21,38 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## Start a Local Server
+## 启动一个本地服务器
 
-The first task we’ll look at is: `$ gulp serve`.
+我们要看的第一个任务是：`$ gulp serve`。
 
-On the surface, this task starts a local HTTP server so you can view your site
-in a browser, but behind the scenes there are some extra tools at work.
+表面上看，这个任务启动了一个本地 HTTP 服务器，让你可以在浏览器中查看你的站点，但幕后其实有一些其他工具在运作。
 
-### Live Reload
+### 实时刷新
 
-Live reload eliminates the traditional refresh dance of making a change in the
-editor, switching to the browser, hitting CTRL-R, and then waiting for the page
-to reload.
+传统的刷新过程是，编辑器中修改，切换到浏览器，按 CTRL-R，等待页面重载，实时刷新则消去这一步。
 
-With Live Reload, you can make changes in your editor and see them take effect
-immediately in any browser with your site open.
+有了实时刷新，你可以一边在编辑器中修改，一边看它们在打开的浏览器中即时生效。
 
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-### Testing Across Devices
+### 跨设备测试
 
-Browser Sync helps you test your site across multiple devices. Any scrolls,
-taps, or keyboard presses will be shared across any connected browser.
+Browser Sync 帮你跨设备测试站点。任何的滚动，轻拍，或按键都将同步给所有连接着的浏览器。
 
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-This only works when you run your site with `gulp serve`. Try it out by running
-`gulp serve`, open the URL in two browser windows side by side and scroll
-one of the pages.
+这只有在你执行 `gulp serve` 命令运行网站后才能起作用。试着运行 `gulp serve`，在两个并排的浏览器窗口中打开 URL，然后滚动其中一个页面。
 
-### Automate Prefixing
 
-When targeting a range of browsers, you’ll need to use vendor prefixes to
-ensure you can use features in each of them. Web Starter Kit automates all of
-the prefixing for you.
+### 自动化添加前缀
 
-Our example CSS (below) doesn’t include any vendor prefixes:
+在面向诸多浏览器时，你需要使用浏览器厂商前缀来确保你能够使用它们的特性。Web 新手开发包为你自动化所有的添加前缀的工作。
+
+我们的示例 CSS (下面) 不包含任何浏览器厂商前缀：
 
     .app-bar-container {
       display: flex;
@@ -76,8 +66,7 @@ Our example CSS (below) doesn’t include any vendor prefixes:
       margin: 0 auto;
     }
 
-The build process runs the CSS through the autoprefixer which produces the
-final output below:
+构建过程会让 autoprefixer 过一遍 CSS，输出的最终结果如下：
 
     .app-bar-container {
       display: -webkit-flex;
@@ -95,95 +84,66 @@ final output below:
       margin: 0 auto;
     }
 
-### Check Your Javascript
+### 检查你的 JavaScript
 
-JSHint is a tool which scans your JavaScript code to check for possible problems
-with your JavaScript logic and [enforces coding best practices](http://www.jshint.com/docs/).
+JSHint 是一个扫描 JavaScript 代码的工具，用于检查你 JavaScript 逻辑中的可能问题，而且能[强化编码的最佳实践](http://www.jshint.com/docs/)。
 
-The tool runs whenever you build the project or, if you are running gulp server,
-whenever you make a change to a JavaScript file.
+在你构建项目时，或是你运行 gulp server 然后对一个 JavaScript 文件做了修改，JSHint 都会运行。
 
-### Compile Your Sass
+### 编译你的 Sass
 
-While you are running the serve command, any changes made to any of the Sass
-files in your project will get compiled into CSS and prefixed, after which your
-page will be reloaded with Live Reload.
+在你运行 serve 命令后，项目中任何针对 Sass 文件的修改都会被编译成 CSS 并且添加浏览器厂商前缀，随后页面由实时刷新功能来重载。
 
-For those new to Sass, the project describes itself as a “CSS
-extension language”. Essentially it’s CSS with some extra features. For example,
-it adds support for variables and functions, which help you structure your CSS
-in a modular and reusable fashion.
+给不知道 Sass 的介绍一下，Sass 项目把自身描述为一种“CSS 扩展语言”。基本上它就是 CSS 加一些额外特性。比如，它添加了变量和函数的支持，可以帮你模块化、复用 CSS，更好地组织 CSS。
 
-## Build a Production Version of Your Site
+## 构建网站的生产版本
 
-You can build a production ready version of your site with the simple gulp
-command. This command runs some the tasks we’ve seen already, with additional
-tasks aimed at making your site load faster and more efficiently.
+只要 gulp 命令，你就可以给你的网站构建一个可立即部署的版本。这个命令运行一些我们前面已经见过的任务，以及其它致力于让你的网站加载更快、更高效的任务。
 
-The main tasks the production build performs are:
+构建生产版本执行的主要任务有：
 
-### Build Styles
+### 构建样式
 
-First the build will compile the Sass in your project. After the Sass has been
-compiled, the Autoprefixer runs over all the CSS.
+构建首先会先编译项目中的 Sass。Sass 编译完成后，Autoprefixer 过一遍所有的 CSS。
 
-### Check your JavaScript for problems
+### 检查 JavaScript 中的问题
 
-The second build step runs JSHint over your JavaScript.
+第二步运行 JSHint 检查 JavaScript。
 
-### Build the HTML Pages
+### 构建 HTML 页面
 
-The next step examines your HTML files, looking for build blocks to concatenate
-and minify JavaScript. After the JavaScript is taken care of, the build process
-minifies the HTML page.
+下一步就是检查你的 HTML 文件，查找构建块，合并、压缩 JavaScript。处理完 JavaScript 后，构建会压缩 HTML 页面。
 
-Minification reduces the number of characters in the final JavaScript file by
-removing comments or space characters that aren’t actually needed, as well as
-some other techniques. This reduces the final file size, speeding up your
-site’s load time.
+通过移除并非真正需要的注释或空格符，配合其它技术，压缩减小了最终 JavaScript 文件的字符数。这就减小了最终的文件大小，加快站点加载时间。
 
-Concatenation means pasting the contents of multiple files into one. The reason
-we do this is so that the browser only has to make one request to a server
-rather than many, which is faster for your users.
+合并意味着把多个文件的内容并成一个。之所以这样做是因为浏览器可以因此只发送一个请求给服务器，而不是多个，对你的用户来说，这会更快。
 
-A build block has everything needed to manage which JavaScript files we minify
-and concatenate together. Let’s look at a sample build block:
+关于哪些 JavaScript 文件需要我们合并、压缩到一起，构建块中都有。且让我们看一个构建块示例：
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/example-1.js"></script>
     <script src="scripts/example-2.js"></script>
     <!-- endbuild -->
 
-As you can see, a build block is nothing more than a specially formatted comment.
-The first line indicates the build block is for JavaScript and the final
-filename and path should be scripts/main.min.js. The last line closes the block.
-Everything in-between is the list of JavaScript files we want to minify and
-concatenate, in this case *example-1.js* and *example-2.js*.
+如你所见，一个构建块不过是一个格式特殊的注释，第一行表示该构建块是针对 JavaScript 的，最终文件的名称及路径应该是 scripts/main.min.js。最后一行关闭了块。两行之间则是我们要压缩、合并的 JavaScript 文件，在这个例子中是指 *example-1.js* 和 *example-2.js*。
 
-### Optimize any image assets
+### 优化图片资源
 
-For JPEGs and PNGs, the meta data in the image is stripped out; it isn’t needed
-to render the image. The meta data includes information such as the camera used
-to take the photo.
+JPEGs 和 PNGs 格式的图片的元数据被剔除；对渲染图片来说这些是多余的。元数据包括了诸如拍照所用的相机等信息。
 
-For SVGs, it’ll remove any attributes which aren’t needed or any whitespace and
-comments that exist.
+至于 SVGs，构建会移除所有不需要的属性或空白，以及存在的注释。
 
-### Copy Fonts
+### 拷贝字体
 
-This simple task copies our fonts from the app to the the final build directory.
+这个简单工作就是把我们的字体从 app 目录拷贝到最终的构建目录里。
 
-### Copy over Any Files from the Root Directory
+### 拷贝根目录下所有文件
 
-If the build finds any files in the root directory of the project, it will copy
-them over into the final build as well.
+如果项目根目录下存在任何文件，则构建也会将它们拷入最终的构建目录中。
 
-## Test Your Production Build
+## 测试你的生成
 
-Before you push anything into production, you need to make sure everything works
-as you'd expect. The `gulp serve:dist` command builds a production version of your site,
-starts a server, and opens a browser for you. This doesn’t have Live Reload or
-Browser Sync, but it’s a reliable way of testing your site before deploying it.
+在你推送任何东西到生产环境前，你需要确保一切如你所预料的一样正常工作。`gulp serve:dist` 命令构建出一个网站的生产版本，然后启动一个服务器，再为你打开一个浏览器。它没有实时刷新或 Browser Sync，但在部署你的站点前，它是个可靠的测试站点的方法。
 
 {% include modules/nextarticle.liquid %}
 
