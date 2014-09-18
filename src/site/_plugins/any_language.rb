@@ -14,10 +14,18 @@
 
 module Jekyll
   
+  # Extract language code to name mappings.
+  class LanguageNameGenerator < Generator
+    def generate(site)
+      data_file = File.join(site.source, "_langnames.yaml")
+      data = YAML.load_file(data_file)
+      site.data["language_names"] = data
+    end
+  end
+
   # Go through the English version of the site, and generate a page for every 
   # article. If the language code is not english, then we need to check for a
   # matching file. The language code should be defined in the config.
-
   class LanguagePage < Page
     attr_accessor :langcode
     alias superdest destination
@@ -34,6 +42,7 @@ module Jekyll
         #Jekyll.logger.info "Reading " + File.join(base, "_" + langcode, dir, name)
         self.read_yaml(File.join(base, "_" + langcode, dir), name)
         self.data['langcode'] = langcode ? langcode : "en"
+        self.data['is_localized'] = false
     end
 
     def relative_path
@@ -64,6 +73,8 @@ module Jekyll
   end
 
   class AnyLanguage < Generator
+    # We want this to run early in the process.
+    priority :highest
     def generate(site)
       lang = site.config["lang"]
       lang = lang ? lang : "en"
@@ -113,6 +124,8 @@ module Jekyll
               if root_page != nil
                 root_page.data['is_localized'] = true
               end
+              page.data['is_localized'] = true
+              page.data['is_localization'] = true
               translated_page_list << page
             end
           end
@@ -147,5 +160,24 @@ module Jekyll
       return nil
     end
   end
-  
+
+  module LocalizeLink
+    def localize_link(input, page) 
+      if page["is_localization"] == true
+        input = input + "?hl=" + page["langcode"]
+      end
+      return input
+    end
+  end
+
+  module LanguageName
+    def lang_name(input)
+      site = @context.registers[:site]
+      site.data["language_names"][input]
+    end
+  end
 end
+
+ Liquid::Template.register_filter(Jekyll::LocalizeLink)
+ Liquid::Template.register_filter(Jekyll::LanguageName)
+ 

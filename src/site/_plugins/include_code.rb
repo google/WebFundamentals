@@ -25,7 +25,7 @@ module Jekyll
         path = context.registers[:site].source;
         relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
         String filepath = File.join(relpath, @file).sub("/_code", "")
-        url = File.join(context.registers[:site].baseurl, "/fundamentals/resources/samples", filepath).strip
+        url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
         "<a href=\"#{url}\">#{out}</a>"
     end
@@ -34,8 +34,6 @@ module Jekyll
   class IncludeCodeTag < Liquid::Tag
     include Liquid::StandardFilters
 
-    # This is the base domain we will link to for samples.
-    @@sample_link_base = "https://google-developers.appspot.com/"
     @@comment_formats = {
       "html" => ["<!--", "-->"],
       "css" => ["\\\/\\\*", "\\\*\\\/"],
@@ -68,9 +66,14 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        path = context.registers[:site].source;
-        lang = context.registers[:site].config["lang"];
-        lang = lang ? lang : "en"
+        site = context.registers[:site]
+        path = site.source;
+        lang = site.config["lang"]
+        if !lang && page.has_key?('langcode')
+          lang = page["langcode"]
+        elsif !lang
+          lang = "en"
+        end
         String filepath = File.join(File.dirname(page["path"]), @file)
         if lang != "en"
           filepath.sub!("_" + lang + "/", "_en/")
