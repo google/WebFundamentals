@@ -19,9 +19,9 @@ authors:
 collection: device-orientation
 key-takeaways:
   devorientation: 
-    -  Use sparingly
-    -  Test for support
-    -  Don't update the UI on every orientation event, instead sync to requestAnimationFrame
+    -  Use sparingly.
+    -  Test for support.
+    -  Don't update the UI on every orientation event; instead sync to requestAnimationFrame.
 ---
 
 {% wrap content %}

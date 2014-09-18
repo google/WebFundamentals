@@ -17,8 +17,8 @@ authors:
 collection: click-to-call
 key-takeaways:
   c2c: 
-    -  Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema
-    -  Always use the international dialing format
+    -  Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
+    -  Always use the international dialing format.
 ---
 
 {% wrap content %}
