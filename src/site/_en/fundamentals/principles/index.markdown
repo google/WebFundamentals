@@ -81,8 +81,7 @@ list:
       title: Provide visual calendar for date selection
       link: /web/fundamentals/input/form/design-efficient-forms.html#provide-visual-calendars-when-selecting-dates
     -
-      title: Minimize form errors with real-time validation
-      link: /web/fundamentals/input/form/provide-real-time-validation.html
+      title: Minimize form errors with <a href="/web/fundamentals/input/form/label-and-name-inputs.html">labeling</a> and <a href="/web/fundamentals/input/form/provide-real-time-validation.html">real-time validation</a>
     -
       title: Design efficient forms
       link: /web/fundamentals/input/form/design-efficient-forms.html
