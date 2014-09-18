@@ -233,7 +233,7 @@ module SampleBuilder
 
     def render_sample(sample, site)
       url = File.join(site.config["sample_link_base"],
-          sample.url.sub("/fundamentals/resources/samples/", ""))
+          sample.url.sub("fundamentals/resources/samples/", ""))
       name = sample.title
       section = sample.section
       output = ""
