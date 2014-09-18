@@ -12,10 +12,10 @@ authors:
   - ilyagrigorik
 key-takeaways:
   render-tree-construction:
-    - The DOM and CSSOM trees are combined to form the render tree
-    - Render tree contains only the nodes required to render the page
-    - Layout computes the exact position and size of each object
-    - Paint is the last step that takes in the final render tree and renders the pixels to the screen
+    - The DOM and CSSOM trees are combined to form the render tree.
+    - Render tree contains only the nodes required to render the page.
+    - Layout computes the exact position and size of each object.
+    - Paint is the last step that takes in the final render tree and renders the pixels to the screen.
 notes:
   hidden:
     - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element is still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
@@ -54,7 +54,7 @@ To construct the render tree, the browser roughly does the following:
 
 The final output is a render that contains both the content and the style information of all the visible content on the screen - we're getting close!  **With the render tree in place, we can proceed to the "layout" stage.**
 
-Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the viewport of the device - that's the "layout" stage, also sometimes known as "reflow."
+Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the [viewport]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) of the device - that's the "layout" stage, also sometimes known as "reflow."
 
 To figure out the exact size and position of each object the browser begins at the root of the render tree and traverses it to compute the geometry of each object on the page. Let's consider a simple hands-on example:
 
@@ -83,11 +83,11 @@ Once all is said and done, our page is finally visible in the viewport - woohoo!
 
 Let's do a quick recap of all the steps the browser went through:
 
-1. Process HTML markup and build the DOM tree
-1. Process CSS markup and build the CSSOM tree
-1. Combine the DOM and CSSOM into a render tree
-1. Run layout on the render tree to compute geometry of each node
-1. Paint the individual nodes to the screen
+1. Process HTML markup and build the DOM tree.
+1. Process CSS markup and build the CSSOM tree.
+1. Combine the DOM and CSSOM into a render tree.
+1. Run layout on the render tree to compute geometry of each node.
+1. Paint the individual nodes to the screen.
 
 Our demo page may look very simple, but it requires quite a bit of work! Care to guess what would happen if the DOM, or CSSOM is modified? We would have to repeat the same process over again to figure out which pixels need to be re-rendered on the screen.
 
