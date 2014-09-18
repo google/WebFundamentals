@@ -12,9 +12,9 @@ authors:
   - ilyagrigorik
 key-takeaways:
   adding-interactivity:
-    - JavaScript can query and modify DOM and CSSOM
-    - JavaScript execution blocks on CSSOM
-    - JavaScript blocks DOM construction unless explicitly declared as async
+    - JavaScript can query and modify DOM and CSSOM.
+    - JavaScript execution blocks on CSSOM.
+    - JavaScript blocks DOM construction unless explicitly declared as async.
 ---
 {% wrap content %}
 
@@ -58,10 +58,10 @@ What if the browser hasn't finished downloading and building the CSSOM when we w
 
 In short, JavaScript introduces a lot of new dependencies between the DOM, CSSOM, and JavaScript execution and can lead to significant delays in how quickly the browser can process and render our page on the screen:
 
-1. The location of the script in the document is significant
-1. DOM construction is paused when a script tag is encountered and until the script has finished executing
-1. JavaScript can query and modify the DOM and CSSOM
-1. JavaScript execution is delayed until the CSSOM is ready
+1. The location of the script in the document is significant.
+1. DOM construction is paused when a script tag is encountered and until the script has finished executing.
+1. JavaScript can query and modify the DOM and CSSOM.
+1. JavaScript execution is delayed until the CSSOM is ready.
 
 When we talk about "optimizing the critical rendering path," to a large degree we're talking about understanding and optimizing the dependency graph between HTML, CSS, and JavaScript.
 
