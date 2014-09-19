@@ -5,7 +5,7 @@ description: "If you are developing a web app and find that the number of action
 thumbnail: bottombar/images/bottombar.png
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 4
 authors:
   - mattgaunt

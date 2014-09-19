@@ -5,7 +5,7 @@ description: "For sites with a larger number of sections and subsections the Nav
 thumbnail: images/navdrawer.png
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 3
 authors:
   - mattgaunt
