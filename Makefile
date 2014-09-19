@@ -16,8 +16,9 @@ deploy: build
 	@echo "Visit http://web-central.appspot.com"
 
 server:
-	@echo "Visit: http://0.0.0.0:8081/web/fundamentals/"
-	cd ./src/site && jekyll serve -w --port=8081 --trace $(param1)
+	@echo "Visit: http://0.0.0.0:8081/fundamentals/"
+	cd ./src && grunt serve
+	# jekyll serve -w --port=8081 --trace $(param1)
 
 devsite:
 	cd ./src && grunt devsite

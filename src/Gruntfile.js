@@ -206,7 +206,7 @@ module.exports = function(grunt) {
 
 		open: {
 			index: {
-				path: 'http://localhost:<%=config.port%>'
+				path: 'http://localhost:<%=config.port%>/fundamentals'
 			}
 		},
 
