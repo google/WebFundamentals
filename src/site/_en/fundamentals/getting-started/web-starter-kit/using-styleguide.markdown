@@ -100,7 +100,7 @@ should be able to see the footer in all it’s glory.
         }
 
 
-6. Let’s add a title in style guide.html so it looks like the other style guide
+6. Let’s add a title in styleguide.html so it looks like the other style guide
 elements and perhaps a link at the top of the page.
 
         // Footer Link at top of styleguide.html
