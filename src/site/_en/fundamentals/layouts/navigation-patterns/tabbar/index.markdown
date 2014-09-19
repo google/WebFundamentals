@@ -5,7 +5,7 @@ description: "A Tab Bar can be used as the main navigation for your site. It giv
 thumbnail: images/tabbar.png
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 2
 authors:
   - mattgaunt
