@@ -11,7 +11,7 @@ collection: animations
 id: animating-modal-views
 key-takeaways:
   code:
-    - Modal views should be used sparingly; users will get frustrated if you interupt their experience unnecessarily.
+    - Modal views should be used sparingly; users will get frustrated if you interrupt their experience unnecessarily.
     - Adding scale to the animation gives a nice 'drop on' effect.
     - Be sure to get rid of the modal view quickly when the user dismisses it, but you should bring it on to screen a little more slowly so it doesn't surprise the user.
 notes:
