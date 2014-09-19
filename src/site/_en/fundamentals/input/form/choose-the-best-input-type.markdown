@@ -199,7 +199,7 @@ The `datalist` element isn't an input type, but a list of suggested input values
 to associated with a form field. It lets the browser suggest autocomplete
 options as the user types. Unlike select elements where users must scan long
 lists to find the value they're looking for, and limiting them only to those
-lists, `datalist`s provide hints as the user types.
+lists, `datalist` element provides hints as the user types.
 
 {% include_code _code/order.html datalist %}
 
