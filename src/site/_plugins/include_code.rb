@@ -31,6 +31,23 @@ module Jekyll
     end
   end
 
+  class LinkSampleButton < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+      @file = markup
+    end
+
+    def render(context)
+        page = context.environments.first["page"]
+        path = context.registers[:site].source;
+        relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
+        String filepath = File.join(relpath, @file).sub("/_code", "")
+        url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
+        out = super(context)
+        "<a class=\"button--primary\" href=\"#{url}\">#{out}</a>"
+    end
+  end
+
   class IncludeCodeTag < Liquid::Tag
     include Liquid::StandardFilters
 
@@ -130,7 +147,7 @@ module Jekyll
   <div class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
       <code class='html'>#{highlighted_code.strip}</code>
-      <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/fundamentals/resources/samples/#{relpath}">View full sample</a>
+      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].baseurl}/fundamentals/resources/samples/#{relpath}">Try full sample</a>
     </div>
   </div>
   <div class="container">
@@ -142,3 +159,4 @@ end
 
 Liquid::Template.register_tag('include_code', Jekyll::IncludeCodeTag)
 Liquid::Template.register_tag('link_sample', Jekyll::LinkSampleBlock)
+Liquid::Template.register_tag('link_sample_button', Jekyll::LinkSampleButton)
