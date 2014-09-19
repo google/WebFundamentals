@@ -1,6 +1,6 @@
 ---
 layout: section
-title: "Device orientation"
+title: "Device Orientation"
 description: "Device motion and orientation events provide access to the built in
   accelerometer, gyroscope and compass in mobile devices."
 introduction: "Device motion and orientation events provide access to the built in

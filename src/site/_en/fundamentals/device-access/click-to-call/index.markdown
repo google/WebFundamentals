@@ -1,6 +1,6 @@
 ---
 layout: section
-title: "Click to call"
+title: "Click to Call"
 description: "On devices with phone capabilities, make it easy for users to
   directly connect with you by simply tapping a phone number, more commonly
   known as click to call."
