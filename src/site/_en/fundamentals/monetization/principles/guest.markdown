@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Let Users Purchase As A Guest"
+title: "Let users purchase as a guest"
 description: "Offer the option to check out as a guest, and encourage registration with tangible benefits."
 introduction: "Offer the option to check out as a guest, and encourage registration with tangible benefits."
 authors:
