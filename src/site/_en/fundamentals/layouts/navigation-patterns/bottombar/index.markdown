@@ -20,17 +20,15 @@ key-takeaways:
 
 {% wrap content%}
 
-<a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/bottombar-sample1.html">
-	<img class="g-medium--full g-wide--full" src="images/bottombar.png">
-</a>
-
 <div class="g-medium--2 g-medium--last g-wide--3">
-  <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/bottombar-sample1.html">
+  {% link_sample _code/bottombar-sample1.html %}
     <img src="images/bottombar.png">
-  </a>
+  {% endlink_sample%}
 
   <div style="text-align:center;">
-    <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/bottombar-sample1.html">Demo</a>
+    {% link_sample_button _code/bottombar-sample1.html %}
+      Demo
+    {% endlink_sample_button %}
   </div>
 </div>
 
@@ -50,11 +48,13 @@ Limit yourself to five actions at most, avoiding the buttons becoming too small 
 
 <div class="g-medium--2 g-medium--last g-wide--3">
   <div class="g--half">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+    {% link_sample _code/appbar-navdrawer-bottombar-sample.html %}
       <img src="images/bottom-bar-alt-1.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">Demo</a>
+      {% link_sample_button _code/appbar-navdrawer-bottombar-sample.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 </div>
