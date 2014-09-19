@@ -21,12 +21,12 @@ key-takeaways:
 {% wrap content%}
 
 <div class="g-medium--2 g-medium--last g-wide--3">
-  {% link_sample _code/appbar-navdrawer-sample1.html %}
+  {% link_sample ../_code/appbar-navdrawer-sample1.html %}
   	<img src="images/appbar.png">
   {% endlink_sample %}
 
   <div style="text-align:center;">
-    {% link_sample_button _code/appbar-navdrawer-sample1.html %}
+    {% link_sample_button ../_code/appbar-navdrawer-sample1.html %}
       Demo
     {% endlink_sample_button %}
   </div>
@@ -58,22 +58,22 @@ The top left corner is perceived by the user as where the most important element
 
 <div class="g-medium--2 g-medium--last g-wide--3">
   <div class="g--half">
-    {% link_sample _code/appbar-navdrawer-sample1.html %}
+    {% link_sample ../_code/appbar-navdrawer-sample1.html %}
     	<img src="images/appbar-menu-left.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/appbar-navdrawer-sample1.html %}
+      {% link_sample_button ../_code/appbar-navdrawer-sample1.html %}
         Demo
       {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--half g--last">
-    {% link_sample _code/appbar-navdrawer-sample2.html %}
+    {% link_sample ../_code/appbar-navdrawer-sample2.html %}
     	<img src="images/appbar-menu-right.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/appbar-navdrawer-sample2.html %}
+      {% link_sample_button ../_code/appbar-navdrawer-sample2.html %}
         Demo
       {% endlink_sample_button %}
     </div>
@@ -88,22 +88,22 @@ The App Bar is a set of principles that you should apply to give your users a pr
 
 <div class="g-medium--2 g-medium--last g-wide--3">
   <div class="g--half">
-    {% link_sample _code/appbar-navdrawer-bottombar-sample.html %}
+    {% link_sample ../_code/appbar-navdrawer-bottombar-sample.html %}
       <img src="images/appbar-alt-1.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/appbar-navdrawer-bottombar-sample.html %}
+      {% link_sample_button ../_code/appbar-navdrawer-bottombar-sample.html %}
         Demo
       {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--half g--last">
-    {% link_sample _code/appbar-navdrawer-sample.html %}
+    {% link_sample ../_code/appbar-navdrawer-sample.html %}
       <img src="images/appbar-alt-2.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/appbar-navdrawer-sample.html %}
+      {% link_sample_button ../_code/appbar-navdrawer-sample.html %}
         Demo
       {% endlink_sample_button %}
     </div>
