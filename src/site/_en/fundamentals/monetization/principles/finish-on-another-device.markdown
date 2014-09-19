@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Make It Easy To Finish On Another Device"
+title: "Make it easy to finish on another device"
 description: "Offer an easy way to save or share information across devices"
 introduction: "Offer an easy way to save or share information across devices, for example provide a way for users to share items across social networks or to email a link directly within the site itself."
 authors:

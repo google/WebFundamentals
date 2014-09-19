@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Optimize Your Ads"
+title: "Optimize your ads"
 description: "Optimizing your site, and the ads that appear on it can improve the quality of ads served and increase your earning potential."
 introduction: "Optimizing your ads and site is crucial when it comes to the success of your goals. Through optimization, you can help grow your ad revenue, improve usability of your site, get more traffic or accomplish any of your other goals."
 article:
