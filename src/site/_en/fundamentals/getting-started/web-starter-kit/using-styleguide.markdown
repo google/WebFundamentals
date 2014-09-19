@@ -59,7 +59,7 @@ new Sass file like so.
 
 4. Test out how it looks on localhost by going to http://localhost:<Port Number>/styleguide/ and make sure the build was successful.
 
-5. Finally,  use your new component in your pages.
+5. Finally, use your new component in your pages.
 
 ### Example of How to Add a Component
 
