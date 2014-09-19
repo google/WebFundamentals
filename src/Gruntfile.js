@@ -370,8 +370,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', function() {
 
 		return grunt.task.run([
-			'clean:icons',				// Clean up icon font files for regeneration
-			'webfont:icons',			// Generate icon font files and SASS
 			'compass:uncompressed',		// Build the CSS using Compass without compression
 			'cssmin',					// Minify the combined CSS
 			'clean:destination',		// Clean out the destination directory
