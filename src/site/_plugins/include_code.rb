@@ -146,8 +146,8 @@ module Jekyll
   </div>
   <div class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
-      <code class='html'>#{highlighted_code.strip}</code>
-      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].baseurl}/fundamentals/resources/samples/#{relpath}">Try full sample</a>
+      <code class='html'>#{highlighted_code.strip}</code>                                                     
+      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">Try full sample</a>
     </div>
   </div>
   <div class="container">
