@@ -21,12 +21,12 @@ key-takeaways:
 {% wrap content%}
 
 <div class="g-medium--2 g-medium--last g-wide--3">
-  {% link_sample _code/appbar-navdrawer-sample1.html %}
+  {% link_sample ../_code/appbar-navdrawer-sample1.html %}
     <img src="images/navdrawer.png">
   {% endlink_sample %}
 
   <div style="text-align:center;">
-    {% link_sample_button _code/appbar-navdrawer-sample1.html %}
+    {% link_sample_button ../_code/appbar-navdrawer-sample1.html %}
       Demo
     {% endlink_sample_button %}
   </div>
@@ -47,33 +47,33 @@ For users there is a small amount to learning to do to find the Navigation Drawe
 <div class="g-medium--2 g-medium--last g-wide--3">
 
   <div class="g--third">
-    {% link_sample _code/appbar-navdrawer-bottombar-sample.html %}
+    {% link_sample ../_code/appbar-navdrawer-bottombar-sample.html %}
       <img src="images/navdrawer-alt-1.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/appbar-navdrawer-bottombar-sample.html %}
+      {% link_sample_button ../_code/appbar-navdrawer-bottombar-sample.html %}
         Demo
       {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--third">
-    {% link_sample _code/appbar-navdrawer-sample.html %}
+    {% link_sample ../_code/appbar-navdrawer-sample.html %}
       <img src="images/navdrawer-alt-2.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/appbar-navdrawer-sample.html %}
+      {% link_sample_button ../_code/appbar-navdrawer-sample.html %}
         Demo
       {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--third g--last">
-    {% link_sample _code/navdrawer-sample4.html %}
+    {% link_sample ../_code/navdrawer-sample4.html %}
       <img src="images/navdrawer-alt-3.png">
     {% endlink_sample %}
     <div style="text-align:center;">
-      {% link_sample_button _code/navdrawer-sample4.html %}
+      {% link_sample_button ../_code/navdrawer-sample4.html %}
         Demo
       {% endlink_sample_button %}
     </div>
