@@ -24,7 +24,7 @@ module Jekyll
         page = context.environments.first["page"]
         path = context.registers[:site].source;
         relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
-        String filepath = File.join(relpath, @file).sub("/_code", "")
+        String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
         "<a href=\"#{url}\">#{out}</a>"
@@ -41,7 +41,7 @@ module Jekyll
         page = context.environments.first["page"]
         path = context.registers[:site].source;
         relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
-        String filepath = File.join(relpath, @file).sub("/_code", "")
+        String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
         "<a class=\"button--primary\" href=\"#{url}\">#{out}</a>"
@@ -91,7 +91,7 @@ module Jekyll
         elsif !lang
           lang = "en"
         end
-        String filepath = File.join(File.dirname(page["path"]), @file)
+        String filepath = Pathname.new(File.join(File.dirname(page["path"]), @file)).cleanpath.to_s
         if lang != "en"
           filepath.sub!("_" + lang + "/", "_en/")
         end
