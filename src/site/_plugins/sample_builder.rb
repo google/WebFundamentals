@@ -26,7 +26,7 @@ module SampleBuilder
     # TODO(ianbarber): Avoid having 3 identical functions maybe.
     def self.header(site)
       if @@header.nil?
-        content = File.read(File.join(site.source, "_includes/sample_header_basic.html"))
+        content = File.read(File.join(site.source, "_includes/sample_header.html"))
         @@header = Liquid::Template.parse(content).render({"baseurl" => site.config["sample_link_base"]})
       end
       @@header
