@@ -21,12 +21,14 @@ key-takeaways:
 {% wrap content%}
 
 <div class="g-medium--2 g-medium--last g-wide--3">
-  <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/tabbar-sample1.html">
+  {% link_sample _code/tabbar-sample1.html %}
     <img src="images/tabbar.png">
-  </a>
+  {% endlink_sample %}
 
   <div style="text-align:center;">
-    <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/tabbar-sample1.html">Demo</a>
+    {% link_sample_button _code/tabbar-sample1.html %}
+      Demo
+    {% endlink_sample_button %}
   </div>
 </div>
 
@@ -46,20 +48,24 @@ One advantage to using tabs is that it gives the user a consistent place to go f
 
 <div class="g-medium--2 g-medium--last g-wide--3">
   <div class="g--half">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/tabbar-sample2.html">
+    {% link_sample _code/tabbar-sample2.html %}
       <img src="images/tabbar-alt-1.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/tabbar-sample2.html">Demo</a>
+      {% link_sample_button _code/tabbar-sample2.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--half g--last">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/tabbar-sample3.html">
+    {% link_sample _code/tabbar-sample3.html %}
       <img src="images/tabbar-alt-2.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/tabbar-sample3.html">Demo</a>
+      {% link_sample_button _code/tabbar-sample3.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 </div>
