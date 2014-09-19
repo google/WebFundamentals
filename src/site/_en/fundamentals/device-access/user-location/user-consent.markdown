@@ -9,10 +9,7 @@ article:
 authors:
   - paulkinlan
 collection: user-location
-introduction: "As a web developer, having access to the user's location opens up a huge number
-  of possibilities such as advanced filtering, pinpointing the user on a map,
-  and offering pro-active suggestions on things the user can do based on their
-  current position."
+introduction: "As a web developer, having access to the user's location opens up a huge number of possibilities such as advanced filtering, pinpointing the user on a map, and offering pro-active suggestions on things the user can do based on their current position."
 key-takeaways:
   geo: 
     -  Assume users will not give you their location.
@@ -24,7 +21,7 @@ key-takeaways:
 
 As a user, your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
-shows a prompt when a site asks for their location.
+shows a prompt when a site asks for your location.
 
 {% include modules/toc.liquid %}
 
@@ -74,26 +71,26 @@ the site loads results in a poor user experience.
   <div class="g--half g--last">
     <figure class="fluid">
       <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption>Always request access to location on a user gesture</figcaption>
+      <figcaption>Always request access to location on a user gesture.</figcaption>
       </figure>
   </div>
 </div>
 
 Instead you should give the user a clear call-to-action or an indication that
-an operation will require access to his or her location.  The user will then be able
+an operation will require access to their location.  The user will then be able
 to more easily associate the system prompt for access with the action
 just initiated.
 
 ## Give clear indication that an action will request their location
 
-<a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">In a study by the Google Ads team</a>, when users were asked to book a hotel room in Boston for an upcoming conference on one particular hotels site, they were prompted to share their GPS location immediately after tapping the ‘Find and Book’ call-to-action on the homepage.
+<a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">In a study by the Google Ads team</a>, when a user was asked to book a hotel room in Boston for an upcoming conference on one particular hotels site, they were prompted to share their GPS location immediately after tapping the ‘Find and Book’ call-to-action on the homepage.
 
-In some cases, users became frustrated because they struggled to understand why
+In some cases, the user became frustrated because they struggled to understand why
 they were being shown hotels in San Francisco when they wanted to book a room in
 Boston.
 
 A better experience is to make sure users understands why you’re asking
-them for location. Add in a well known signifier that is common  across
+them for location. Add in a well known signifier that is common across
 devices, such as range finder.
 
 <img src="images/indication.png">
@@ -108,7 +105,7 @@ You don't have access to any of the steps of what users are doing.  You know exa
 when the users disallow access to their location, but you don't know
 when they grant you access; you only know you obtained access when results appear.
 
-It is good practice to "tickle" the users into action if you need them to complete the action.
+It is good practice to "tickle" the user into action if you need them to complete the action.
 
 We recommend: 
 
