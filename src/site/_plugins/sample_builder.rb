@@ -23,29 +23,20 @@ module SampleBuilder
     @@header = nil
     @@header_full = nil
     @@footer = nil
-    # TODO(ianbarber): Avoid having 3 identical functions maybe.
-    def self.header(site)
-      if @@header.nil?
-        content = File.read(File.join(site.source, "_includes/sample_header.html"))
-        @@header = Liquid::Template.parse(content).render({"baseurl" => site.config["sample_link_base"]})
-      end
-      @@header
-    end
 
-    def self.header_full(site)
-      if @@header_full.nil?
-        content = File.read(File.join(site.source, "_includes/sample_header_full.html"))
-        @@header_full = Liquid::Template.parse(content).render({"baseurl" => site.config["sample_link_base"]})
-      end
-      @@header_full
-    end
+    class_variables.each do |class_var|
+      name = class_var.to_s[2..-1].to_sym
 
-    def self.footer(site)
-      if @@footer.nil?
-        content = File.read(File.join(site.source, "_includes/sample_footer.html"))
-        @@footer = Liquid::Template.parse(content).render({"baseurl" => site.config["sample_link_base"]})
+      define_singleton_method name do |site|
+        if class_variable_get(class_var).nil?
+          content = File.read(File.join(site.source,
+            "_includes/sample_#{name}.html"))
+          class_variable_set(class_var,
+            Liquid::Template.parse(content).render({
+              "baseurl" => site.config["sample_link_base"]}))
+        end
+        class_variable_get(class_var)
       end
-      @@footer
     end
   end
 
