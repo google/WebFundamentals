@@ -46,7 +46,7 @@ The modal overlay should be aligned to the viewport so it needs to have its `pos
 }
 {% endhighlight %}
 
-It has an initial `opacity` of 0 so it's hidden from view, but then it will also need `pointer-events` set to `none` so that click and touches pass through. Without that it will block all interactions rendering the whole page unresponsive. Finally, since it will animate its `opacity` and `transform` those need to be marked as changing with `will-change`.
+It has an initial `opacity` of 0 so it's hidden from view, but then it will also need `pointer-events` set to `none` so that click and touches pass through. Without that it will block all interactions rendering the whole page unresponsive. Finally, since it will animate its `opacity` and `transform` those need to be marked as changing with `will-change` (see also [Using the will-change property]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property)).
 
 When the view is visible it will need to accept interactions and have an `opacity` of 1:
 
@@ -63,7 +63,8 @@ Now whenever the modal view is required, you can use JavaScript to toggle the "v
 modal.classList.add('visible');
 {% endhighlight %}
 
-At this point the modal view will appear without any animation, so that can now be added in:
+At this point the modal view will appear without any animation, so that can now be added in
+(see also [Custom Easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)):
 
 {% highlight css %}
 .modal {
