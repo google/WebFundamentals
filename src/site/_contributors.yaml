@@ -239,3 +239,18 @@ greenido:
   twitter: greenido
   email: idog@google.com
   description: "Ido is a Developer Advocate and a runner"
+
+jacquerie:
+  name:
+    given: Jacopo
+    family: Notarstefano
+  country: Italy
+  role:
+    - engineer
+    - contributor
+  homepage: http://jacquerie.github.io
+  google: +JacopoNotarstefano
+  twitter: Jaconotar
+  email: jacopo.notarstefano@gmail.com
+  description: "Jacopo is a Full Stack Developer"
+
