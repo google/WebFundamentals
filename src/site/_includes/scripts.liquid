@@ -37,18 +37,20 @@
           var documentationIsOpenedClass = 'subnav-is-opened';
           var documentationIsOpened = false;
 
-          documentationLink.addEventListener('click', function (event) {
-            event.preventDefault();
+          if (documentationLink) {
+            documentationLink.addEventListener('click', function (event) {
+              event.preventDefault();
 
-            if (!documentationIsOpened) {
-              documentationIsOpened = true;
-              addClass(documentationItem, documentationIsOpenedClass);
-            } else {
-              documentationIsOpened = false;
-              removeClass(documentationItem, documentationIsOpenedClass);
-            }
+              if (!documentationIsOpened) {
+                documentationIsOpened = true;
+                addClass(documentationItem, documentationIsOpenedClass);
+              } else {
+                documentationIsOpened = false;
+                removeClass(documentationItem, documentationIsOpenedClass);
+              }
 
-          });
+            });
+          }
         }
 
         var isTouch = function() {
