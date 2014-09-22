@@ -5,7 +5,7 @@ description: "You can't optimize what you can't measure. Thankfully, the Navigat
 introduction: "You can't optimize what you can't measure. Thankfully, the Navigation Timing API gives us all the necessary tools to measure each step of the critical rendering path!"
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-09-18
   featured: true
   order: 5
 collection: critical-rendering-path
