@@ -66,10 +66,12 @@ Mac
 1. Install [Pygments](http://pygments.org/)
     * `easy_install pygments`
 1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/), [Kramdown](http://kramdown.gettalong.org/), [Sass](http://sass-lang.com/install) and [Compass](http://compass-style.org/install/)) 
-    * cd src/ && `bundle install`
+    * `cd src/ && bundle install`
 1. Install [Node.js](http://nodejs.org/)
 1. Install the [Grunt CLI](http://gruntjs.com/)
     * `npm install -g grunt-cli`
+1. Install [npm](https://www.npmjs.org) dependencies
+    * `cd src/ && npm install`
 
 Running the site
 ================
