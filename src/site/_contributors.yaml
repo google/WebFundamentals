@@ -254,3 +254,18 @@ jacquerie:
   email: jacopo.notarstefano@gmail.com
   description: "Jacopo is a Full Stack Developer"
 
+pbakaus:
+  name:
+    given: Paul
+    family: Bakaus
+  org:
+    name: Google
+    unit: Developer Relations
+  country: DE
+  role:
+    - author
+  homepage: http://paulbakaus.com
+  google: +PaulBakaus
+  twitter: pbakaus
+  email: pbakaus@google.com
+  description: "Paul is a Developer Advocate"

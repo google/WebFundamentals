@@ -1,16 +1,17 @@
 ---
 layout: landing
-title: "Device Access"
-description: "You have a surprising amount of access to the user's device, from geo location and device orientation, to access to the communication stack such as the dialer and SMS. Learn how to take advantage of features that your users will love."
-introduction: "You have a surprising amount of access to the user's device, from geo location and device orientation, to access to the communication stack such as the dialer and SMS. Learn how to take advantage of features that your users will love."
+title: "Device Access & Integration"
+description: "There are a surprising number of ways to integrate with and access features on the user's device, from geo location and device orientation, accessing the communication stack such as the dialer and SMS, to makeing apps sticky on the home screen. Learn how to take advantage of features that your users will love."
+introduction: "There are a surprising number of ways to integrate with and access features on the user's device, from geo location and device orientation, accessing the communication stack such as the dialer and SMS, to makeing apps sticky on the home screen. Learn how to take advantage of features that your users will love."
 snippet: "Locate, call, and snap."
 id: device-access
 collection: home
 authors:
   - paulkinlan
+  - pbakaus
 article:
   written_on: 2014-05-29
-  updated_on: 2014-05-29
+  updated_on: 2014-09-22
   order: 6
 ---
 

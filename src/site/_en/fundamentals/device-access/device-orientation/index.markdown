@@ -8,7 +8,7 @@ introduction: "Device motion and orientation events provide access to the built 
 article:
   written_on: 2014-06-17
   updated_on: 2014-06-17
-  order: 3
+  order: 4
 id: device-orientation
 collection: device-access
 authors:
