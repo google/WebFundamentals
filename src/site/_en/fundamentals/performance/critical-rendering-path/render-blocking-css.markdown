@@ -5,7 +5,7 @@ description: "By default CSS is treated as a render blocking resource, which mea
 introduction: "By default CSS is treated as a render blocking resource, which means that the browser will hold rendering of any processed content until the CSSOM is constructed. Make sure to keep your CSS lean, deliver it as quickly as possible, and use media types and queries to unblock rendering."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-09-18
   order: 3
 collection: critical-rendering-path
 authors:
