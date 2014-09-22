@@ -7,7 +7,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-08-07
-  updated_on: 2014-08-07
+  updated_on: 2014-09-19
   order: 2
 id: cc-purchase-as-guest
 collection: cc-principles
