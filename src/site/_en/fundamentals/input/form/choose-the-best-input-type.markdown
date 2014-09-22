@@ -11,7 +11,7 @@ pads for entering phone numbers, or automatically advance fields as they entered
 them. Look for opportunities to eliminate wasted taps in your forms."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-08-06
+  updated_on: 2014-09-19
   order: 2
 authors:
   - petelepage
