@@ -5,7 +5,7 @@ description: "When it comes to keeping your users happy, size matters."
 introduction: "When it comes to keeping your users happy, size matters."
 article:
   written_on: 2014-04-16
-  updated_on: 2014-04-29
+  updated_on: 2014-09-19
   order: 3
 collection: videos
 authors:
