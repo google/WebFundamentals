@@ -5,7 +5,7 @@ description: "You can animate with CSS or JavaScript. Which should you use, and 
 introduction: "There are two primary ways to create animations on the web: with CSS and with JavaScript. Which one you choose really depends on the other dependencies of your project, and what kinds of effects you're trying to achieve."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-09-19
   order: 2
 id: css-vs-javascript-animations
 collection: animations
