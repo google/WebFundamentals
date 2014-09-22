@@ -5,7 +5,7 @@ description: "Using touch events, you can create custom interactions for your UI
 introduction: "If you have an idea for custom interactions and gestures for your site, there are two topics to keep in mind: how to support the range of mobile browsers and how to keep your frame rate high. In this article, we'll look at exactly these topics."
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 2
 authors:
   - mattgaunt
