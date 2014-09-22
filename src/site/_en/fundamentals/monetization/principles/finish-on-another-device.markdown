@@ -7,7 +7,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-08-07
-  updated_on: 2014-08-07
+  updated_on: 2014-09-19
   order: 3
 id: cc-finish-another-device
 collection: cc-principles
