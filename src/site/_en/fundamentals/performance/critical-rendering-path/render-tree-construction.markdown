@@ -5,7 +5,7 @@ description: "The CSSOM and DOM trees are combined into a render tree, which is 
 introduction: "The CSSOM and DOM trees are combined into a render tree, which is then used to compute the layout of each visible element and serves as an input to the paint process which renders the pixels to screen. Optimizing each of these steps is critical to achieve optimal rendering performance."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-09-18
   order: 2
 collection: critical-rendering-path
 authors:
