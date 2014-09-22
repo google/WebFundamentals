@@ -5,7 +5,7 @@ introduction: "The Geolocation API lets you find out where the user is, always w
 description: "The Geolocation API lets you find out where the user is, always with the user's consent."
 article:
   written_on: 2014-06-06
-  updated_on: 2014-06-06
+  updated_on: 2014-09-19
   order: 1
 authors:
   - paulkinlan
