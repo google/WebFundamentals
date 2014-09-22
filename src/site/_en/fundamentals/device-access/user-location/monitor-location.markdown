@@ -4,7 +4,7 @@ title: "Monitor the user's location"
 description: "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-18
   order: 2
 authors:
   - paulkinlan
