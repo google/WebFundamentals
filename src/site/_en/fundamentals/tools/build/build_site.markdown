@@ -78,7 +78,7 @@ Add the image to `main` in `index.html`:
 <main>
   <h1>Hello.</h1>
   <p>Welcome to Web Starter Kit.</p>
-  <div><img src="imgs/awesome-photo.jpg"></div>
+  <div><img src="images/awesome-photo.jpg"></div>
 </main>
 {% endhighlight %}
 
