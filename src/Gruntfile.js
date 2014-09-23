@@ -321,8 +321,8 @@ module.exports = function(grunt) {
 
 		if(compressed) {
 			return grunt.task.run([
-				'clean:icons',				// Clean up icon font files for regeneration
-				'webfont:icons',			// Generate icon font files and SASS
+				//'clean:icons',				// Clean up icon font files for regeneration
+				//'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
 				'compass:compressed',		// Build the CSS using Compass with compression
 				'cssmin',					// Minify the combined CSS
@@ -330,8 +330,8 @@ module.exports = function(grunt) {
 			]);
 		} else {
 			return grunt.task.run([
-				'clean:icons',				// Clean up icon font files for regeneration
-				'webfont:icons',			// Generate icon font files and SASS
+				//'clean:icons',				// Clean up icon font files for regeneration
+				//'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
 				'compass:uncompressed',		// Build the CSS using Compass without compression
 				'cssmin',					// Minify the combined CSS
