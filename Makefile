@@ -9,7 +9,7 @@ build: copy
     #add_version
 
 copy: clean
-	cd ./src/site && jekyll build $(param1)
+	cd ./src && grunt develop
 
 deploy: build
 	cd ./src/appengine/build && appcfg.py --oauth2 update .
