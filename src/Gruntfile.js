@@ -321,7 +321,6 @@ module.exports = function(grunt) {
 
 		if(compressed) {
 			return grunt.task.run([
-				'test',						// Code quality control
 				'clean:icons',				// Clean up icon font files for regeneration
 				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
@@ -331,7 +330,6 @@ module.exports = function(grunt) {
 			]);
 		} else {
 			return grunt.task.run([
-				'test',						// Code quality control
 				'clean:icons',				// Clean up icon font files for regeneration
 				'webfont:icons',			// Generate icon font files and SASS
 				'clean:destination',		// Clean out the destination directory
