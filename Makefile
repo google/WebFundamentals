@@ -9,6 +9,7 @@ build: copy
     #add_version
 
 copy: clean
+	rvm --default use 2.0.0-p451
 	cd ./src && grunt build
 
 deploy: build
