@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>1.5.1'
+gem 'jekyll', '>=2.4.0'
 gem 'kramdown'
-gem 'sass', '>=3.2'
+gem 'sass', '>=3.4.5'
 gem 'compass'
