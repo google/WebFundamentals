@@ -11,6 +11,7 @@ build: copy
 copy: clean
 	cd ./src
 	rvm --default use 2.0.0-p451
+	pwd
 	bundle install
 	grunt build
 
