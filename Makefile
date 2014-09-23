@@ -10,6 +10,7 @@ build: copy
 
 copy: clean
 	rvm --default use 2.0.0-p451
+	bundle install
 	cd ./src && grunt build
 
 deploy: build
