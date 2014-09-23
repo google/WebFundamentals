@@ -5,11 +5,11 @@ XDGOPEN=$(shell type xdg-open 2>/dev/null)
 clean:
 	rm -rf ./src/appengine/build
 
-build: copy 
+build: copy
     #add_version
 
 copy: clean
-	cd ./src && grunt develop
+	cd ./src && grunt build
 
 deploy: build
 	cd ./src/appengine/build && appcfg.py --oauth2 update .
