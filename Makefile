@@ -9,9 +9,10 @@ build: copy
     #add_version
 
 copy: clean
+	cd ./src
 	rvm --default use 2.0.0-p451
 	bundle install
-	cd ./src && grunt build
+	grunt build
 
 deploy: build
 	cd ./src/appengine/build && appcfg.py --oauth2 update .
