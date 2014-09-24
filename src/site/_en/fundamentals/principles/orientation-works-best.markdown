@@ -15,7 +15,9 @@ collection: layout-principles
 key-takeaways:
   tldr: 
     - Communicate to users if your site works best in a certain orientation, but ensure your important calls-to-action can be completed regardless of orientation.
-
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple22
 ---
 
 {% wrap content%}

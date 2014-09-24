@@ -39,6 +39,10 @@ remember:
     - If you're asking for any kind of personal information or credit card
       data, ensure the page is served via SSL.  Otherwise the dialog will
       warn the user their information may not be secure.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple14
+  - g.co/mobilesiteprinciple15
 ---
 {% wrap content %}
 
