@@ -50,6 +50,11 @@ handlers:
   upload: build/static/_langs/en/(.*\.jpg)
 
 - url: /web/(.*\.svg)
+  static_files: build/static/_langs/en/\1
+  expiration: 1d
+  upload: build/static/_langs/en/(.*\.svg)
+
+- url: /web/(.*\.svg)
   static_files: build/static/\1
   expiration: 1d
   upload: build/static/(.*\.svg)
