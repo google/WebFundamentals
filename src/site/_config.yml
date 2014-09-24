@@ -1,11 +1,12 @@
+# For AppEngine
 safe: false
 port: 8081
-source: .
-destination: ../appengine/build/static
+source: site
+destination: appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
 baseurl: /web
-fundamentals: /web/fundamentals
+fundamentals: /fundamentals
 url: /web
 highlighter: pygments
 pygments: true
