@@ -10,8 +10,8 @@ build: copy
 
 copy: clean
 	cd ./src rvm --default use 2.0.0-p451
-	cd ./src && bundle install
-	cd ./src && grunt build
+	cd ./src && rvm . do which ruby bundle install
+	cd ./src && rvm . do which ruby grunt build
 
 deploy: build
 	cd ./src/appengine/build && appcfg.py --oauth2 update .
