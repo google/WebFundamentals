@@ -14,7 +14,7 @@ key-takeaways:
   anatomy:
     - "Unicode fonts can contain thousands of glyphs"
     - "There are four font formats: WOFF2, WOFF, EOT, TTF"
-    - "Some font formats require use of HTTP compression"
+    - "Some font formats require use of GZIP compression"
   font-family:
     - "Use format() hint to specify multiple font formats"
     - "Subset large unicode fonts to improve performance: use unicode-range subsetting and provide a manual subsetting fallback for older browsers"
@@ -33,8 +33,6 @@ notes:
     - "The order in which the font variants are specified matters. The browser will pick the first format it supports. Hence, if you want the newer browsers to use WOFF2, then you should place WOFF2 declaration above WOFF, and so on."
   unicode-subsetting:
     - "Unicode-range subsetting is particular important for Asian languages, where the number of glyphs is much larger than in western languages and a typical 'full' font is often measured in megabytes, instead of tens of kilobytes!"
-  manual-subsetting:
-    - "To see the benefits of unicode-range subsetting in action, inspect the <a href='http://fonts.googleapis.com/css?family=Roboto'>following Roboto font-family declaration</a> in a browser that supports unicode-range (e.g. Chrome) vs. one that does not (e.g. Firefox). Google Fonts automatically detects and serves the optimized declaration to each browser."
   synthesis:
     - "For best consistency and visual results you should not rely on font synthesis. Instead, minimize the number of used font variants and specify their locations, such that the browser can download them when they are used on the page. That said, in some cases a synthesized variant <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>may be a viable option</a> - use with caution."
   webfontloader:
@@ -76,7 +74,7 @@ So, where does that leave us? There isn't a single format that works in all brow
 
 A font is a collection of glyphs, each of which is a set of paths describing the letter form. The individual glyphs are, of course, different, but they nonetheless contain a lot of similar information that can be compressed with GZIP, or a compatible compressor: 
 
-* EOT, and TTF formats are not compressed by default: ensure that your servers are configured to apply [HTTP compression](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) when delivering these formats.
+* EOT, and TTF formats are not compressed by default: ensure that your servers are configured to apply [GZIP compression](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) when delivering these formats.
 * WOFF has built-in compression - ensure that your WOFF compressor is using optimal compression settings. 
 * WOFF2 uses custom preprocessing and compression algorithms to deliver ~30% filesize reduction over other formats - see [report](http://www.w3.org/TR/WOFF20ER/).
 
@@ -113,8 +111,8 @@ Each @font-face declaration provides the name of the font family, which acts as 
   src: local('Awesome Font Italic'),
        url('/fonts/awesome-i.woff2') format('woff2'), 
        url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesom-i.ttf') format('ttf'),
-       url('/fonts/awesom-i.eot') format('eot');
+       url('/fonts/awesome-i.ttf') format('ttf'),
+       url('/fonts/awesome-i.eot') format('eot');
 }
 {% endhighlight %}
 
@@ -190,9 +188,14 @@ support it](http://caniuse.com/#feat=font-unicode-range), yet. Some browsers
 simply ignore the unicode-range hint and will download all variants, while 
 others may not process the @font-face declaration at all. To address this, we need to fallback to "manual subsetting" for older browsers.
 
-Because old browsers are not smart enough to select just the necessary subsets and cannot construct a composite font, we have to fallback to providing a single font resource that contains all necessary subsets, and hide the rest from the browser. For example, if the page is only using Latin characters, then we can strip other glyphs and serve that particular subset as a standalone resource. How do we determine which subsets are needed? The exact logic is left to the application - e.g. some font services allow manual subsetting via custom query parameters, which you can use to manually specify the required subset for your page.
+Because old browsers are not smart enough to select just the necessary subsets and cannot construct a composite font, we have to fallback to providing a single font resource that contains all necessary subsets, and hide the rest from the browser. For example, if the page is only using Latin characters, then we can strip other glyphs and serve that particular subset as a standalone resource. 
 
-{% include modules/remember.liquid title="Note" list=page.notes.manual-subsetting %}
+1. **How do we determine which subsets are needed?** 
+  - If unicode-range subsetting is supported by the browser, then it will automatically select the right subset. The page just needs to provide the subset files and specify appropriate unicode-ranges in the @font-face rules.
+  - If unicode-range is not supported then the page needs to hide all unnecessary subsets - i.e. the developer must specify required subsets.
+1. **How do we generate font subsets?**
+  - Use the open-source [pyftsubset tool](https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16) to subset and optimize your fonts.
+  - Some font services allow manual subsetting via custom query parameters, which you can use to manually specify the required subset for your page - consult the documentation of your font provider.
 
 
 ### Font selection and synthesis
@@ -366,7 +369,7 @@ That said, a naive implementation may incur large downloads and unnecessary dela
 
 1. **Audit and monitor your font use:** do not use too many fonts on your pages, and for each font, minimize the number of used variants. This will assist in delivering a more consistent and a faster experience for your users.
 1. **Subset your font resources:** many fonts can be subset, or split into multiple unicode-ranges to deliver just the glyphs required by a particular page - this reduces the filesize and improves download speed of the resource. However, when defining the subsets be careful to optimize for font re-use - e.g. you don't want to download a different but overlapping set of characters on each page. A good practice is to subset based on language - e.g. Latin, Cyrillic, and so on.
-1. **Deliver optimized font formats to each browser:** each font should be provided in WOFF2, WOFF, EOT, and TTF formats. Make sure to apply HTTP compression to EOT and TTF formats, as they are not compressed by default.
+1. **Deliver optimized font formats to each browser:** each font should be provided in WOFF2, WOFF, EOT, and TTF formats. Make sure to apply GZIP compression to EOT and TTF formats, as they are not compressed by default.
 1. **Specify revalidation and optimal caching policies:** fonts are static resources that are infrequently updated. Make sure that your servers provide a long-lived max-age timestamp, and a revalidation token, to allow for efficient font re-use between different pages.
 1. **Use Font Loading API to optimize the Critical Rendering Path:** default lazyloading behavior may result in delayed text rendering. Font Loading API allows us to override this behavior for particular fonts, and to specify custom rendering and timeout strategies for different content on the page. For older browsers that do not support the API, you can use the webfontloader JavaScript library or use the CSS inlining strategy.
 
