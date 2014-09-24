@@ -13,6 +13,9 @@ collection: layout-principles
 key-takeaways:
   tldr: 
     - A shorter menu with distinct categories is easier for mobile visitors to navigate.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple2
 ---
 
 {% wrap content%}

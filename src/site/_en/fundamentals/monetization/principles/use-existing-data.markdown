@@ -11,6 +11,9 @@ article:
   order: 4
 id: how-ads-work
 collection: cc-principles
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple11
 ---
 
 {% wrap content %}

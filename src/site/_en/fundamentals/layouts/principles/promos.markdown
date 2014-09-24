@@ -13,6 +13,9 @@ collection: layout-principles
 key-takeaways:
   tldr:
     - Make sure promotions do not interfere with navigation and are clearly distinct from calls-to-action. 
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple4
 ---
 
 {% wrap content%}

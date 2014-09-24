@@ -11,6 +11,9 @@ article:
   order: 3
 id: cc-finish-another-device
 collection: cc-principles
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple13
 ---
 
 {% wrap content %}
