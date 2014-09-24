@@ -6,7 +6,7 @@ destination: appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
 baseurl: /web
-fundamentals: /fundamentals
+fundamentals: /web/fundamentals
 url: /web
 highlighter: pygments
 pygments: true
