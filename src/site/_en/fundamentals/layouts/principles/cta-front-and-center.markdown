@@ -13,7 +13,9 @@ collection: layout-principles
 key-takeaways:
   tldr: 
     - Feature your primary calls-to-action in your most prominent site space.
-
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple1
 ---
 
 {% wrap content%}

@@ -5,7 +5,7 @@ description: "Internet Explorer and Safari allow you to specify a custom title t
 introduction: "Internet Explorer and Safari allow you to specify a custom title that is used as app name next to or on top of your icon."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-09-22
+  updated_on: 2014-09-24
   order: 3
 id: use-a-custom-title
 authors:
@@ -25,7 +25,9 @@ Add this code to your head `<head>`:
 <meta name="apple-mobile-web-app-title" content="Web Fundamentals">
 {% endhighlight %}
 
-All three browsers use the default `<title>` attribute if the additional tags are not around, Chrome does not have a way to specify a custom name different from the title.
+All three browsers use the default `<title>` attribute if the additional tags 
+are not around, Chrome does not have a way to specify a custom name different
+from the title.
 
 {% include modules/remember.liquid title="Note" list=page.notes.undocumented %}
 
