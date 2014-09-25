@@ -44,7 +44,6 @@ aliases](http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.8
 
 These are a few commands that you may find useful.
 
-<!-- TODO: Fix formatting of cells -->
 <table class="table-2 tc-heavyright">
   <colgroup>
     <col span="1" />

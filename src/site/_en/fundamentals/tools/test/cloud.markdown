@@ -6,7 +6,7 @@ introduction: "While there's no substitute for real device testing, cloud testin
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 2
+  order: 4
 collection: test
 authors:
   - megginkearney
