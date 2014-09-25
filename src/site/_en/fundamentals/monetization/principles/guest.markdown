@@ -11,6 +11,9 @@ article:
   order: 2
 id: cc-purchase-as-guest
 collection: cc-principles
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple10
 ---
 
 {% wrap content %}

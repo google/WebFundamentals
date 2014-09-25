@@ -18,6 +18,7 @@ spotlights: false
 custom:
 kramdown:
   toc_levels: "2"
+  entity_output: :as_input
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
 langs_available: ['ko']

@@ -5,7 +5,7 @@ description: "To make your site stand out, be sure to provide a beautiful, full 
 introduction: "To make your site stand out, be sure to provide a beautiful, full size icon, otherwise the favicon or a low quality screenshot may be used."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-09-22
+  updated_on: 2014-09-24
   order: 2
 id: specify-an-icon
 authors:
@@ -15,9 +15,14 @@ collection: stickyness
 
 {% wrap content %}
 
-<img src="images/icons.png" />
+<figure>
+  <img src="images/icons.png" alt="Customizing icons per platform" />
+  <figcaption>Adding custom icons is an easy way to stand out.</figcaption>
+</figure>
 
-Add the following code to your `<head>` to add a custom icon to Chrome, Safari and Internet Explorer:
+
+Add the following code to your `<head>` to add a custom icon to Chrome, Safari
+and Internet Explorer:
 
 {% highlight html %}
 <!-- icon in the highest resolution we need it for -->
@@ -31,11 +36,17 @@ Add the following code to your `<head>` to add a custom icon to Chrome, Safari a
 <meta name="msapplication-square310x310logo" content="icon\_largetile.png">
 {% endhighlight %}
 
-In this example, Chrome, Safari and Opera use the 228x228px icon, which is scaled to the necessary size by the device.. Both Chrome and Safari use the `<link>` tag and support the "sizes" attribute, the only difference in syntax is the "rel" attribute: "icon" (Chrome) vs. "apple-touch-icon" (Safari).
+In this example, Chrome, Safari and Opera use the 228x228px icon, which is 
+scaled to the necessary size by the device. Both Chrome and Safari use the 
+`<link>` tag and support the `sizes` attribute, the only difference in syntax 
+is the `rel` attribute: `icon` (Chrome) vs. `apple-touch-icon` (Safari).
 
-Windows 8' new home screen experience supports four different layouts for pinned sites, and requires four icons. You can leave out the relevant meta tags if you don't want to support a specific size.
+Windows 8' new home screen experience supports four different layouts for 
+pinned sites, and requires four icons. You can leave out the relevant meta 
+tags if you don't want to support a specific size.
 
-You can specify [explicit sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27) by providing a separate link tag for each icon, preventing the OS from having to resize the icon:
+You can specify [explicit sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27) by providing a separate link tag 
+for each icon, preventing the OS from having to resize the icon:
 
 {% highlight html %}
 <link rel="apple-touch-icon" href="touch-icon-iphone.png">

@@ -10,6 +10,9 @@ article:
   updated_on: 2014-08-07
   order: 5
 collection: layout-principles
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple23
 ---
 
 {% wrap content%}

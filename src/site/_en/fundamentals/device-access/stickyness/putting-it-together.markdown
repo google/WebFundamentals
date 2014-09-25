@@ -1,11 +1,11 @@
 ---
 layout: article
-title: "Putting it all together"
+title: "Putting It All Together"
 description: "Let's take all that we discussed and bring it into one big form."
 introduction: "Let's take all that we discussed and bring it into one big form."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-09-22
+  updated_on: 2014-09-24
   order: 5
 id: putting-it-together
 authors:
@@ -15,11 +15,13 @@ collection: stickyness
 
 {% wrap content %}
 
-Our own [Web Starter Kit](//developers.google.com/web/starter-kit) includes support for the most common options and is great as starting point, but if you are curious as to how a more complete implementation looks like, here’s the portion of the `<head>` of Web Starter Kit that we expanded with more `<meta>` tags:
+Our own [Web Starter Kit](//developers.google.com/web/starter-kit) includes
+support for the most common options and is great as starting point, but if you
+are curious as to how a more complete implementation looks like, here’s the
+portion of the `<head>` of Web Starter Kit that we expanded with more
+`<meta>` tags:
 
 {% highlight html %}
-…
-
 <!-- hide the browser UI -->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,8 +31,7 @@ Our own [Web Starter Kit](//developers.google.com/web/starter-kit) includes supp
 <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
 
 <!-- Icons -->
-
-  <!-- icon in the highest resolution we need it for, in this case Opera Coast, reused for safari -->
+  <!-- icon in the highest resolution we need it for -->
   <link rel="icon" sizes="228x228" href="images/touch/icon-228x228.png">
   <link rel="apple-touch-icon" href="images/touch/icon-228x228.png">
 
@@ -108,7 +109,6 @@ Our own [Web Starter Kit](//developers.google.com/web/starter-kit) includes supp
   <!-- Color of navigation buttons (back/forward) (Desktop) -->
   <meta name="msapplication-navbutton-color" content="#FF3300" />
 
-…
 {% endhighlight %}
 
 {% endwrap %}

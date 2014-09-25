@@ -16,6 +16,7 @@ github:
 custom:
 kramdown:
   toc_levels: "2"
+  entity_output: :as_input
 include: ['.htaccess']
 exclude: ['config.rb']
 include_open_html: true

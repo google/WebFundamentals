@@ -15,6 +15,9 @@ key-takeaways:
     -  Assume users will not give you their location.
     -  Make it clear why you need access to the user's location.
     -  Don't immediately prompt for access on page load.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple25
 ---
 
 {% wrap content %}
