@@ -1234,157 +1234,157 @@ li > p {
 
 /* line 33, ../_sass/_components/_icons.scss */
 .icon-bullet:before {
-  content: "\e001";
+  content: "\f101";
 }
 
 /* line 38, ../_sass/_components/_icons.scss */
 .icon-chevron-down:before {
-  content: "\e002";
+  content: "\f102";
 }
 
 /* line 43, ../_sass/_components/_icons.scss */
 .icon-chevron-large:before {
-  content: "\e003";
+  content: "\f103";
 }
 
 /* line 48, ../_sass/_components/_icons.scss */
 .icon-chevron-left:before {
-  content: "\e004";
+  content: "\f104";
 }
 
 /* line 53, ../_sass/_components/_icons.scss */
 .icon-chevron-right:before {
-  content: "\e005";
+  content: "\f105";
 }
 
 /* line 58, ../_sass/_components/_icons.scss */
 .icon-chevron-up:before {
-  content: "\e006";
+  content: "\f106";
 }
 
 /* line 63, ../_sass/_components/_icons.scss */
 .icon-close:before {
-  content: "\e007";
+  content: "\f107";
 }
 
 /* line 68, ../_sass/_components/_icons.scss */
 .icon-cog:before {
-  content: "\e008";
+  content: "\f108";
 }
 
 /* line 73, ../_sass/_components/_icons.scss */
 .icon-device-access:before {
-  content: "\e009";
+  content: "\f109";
 }
 
 /* line 78, ../_sass/_components/_icons.scss */
 .icon-diamond:before {
-  content: "\e00a";
+  content: "\f10a";
 }
 
 /* line 83, ../_sass/_components/_icons.scss */
 .icon-discovery-and-distribution:before {
-  content: "\e00b";
+  content: "\f10b";
 }
 
 /* line 88, ../_sass/_components/_icons.scss */
 .icon-exclamation:before {
-  content: "\e00c";
+  content: "\f10c";
 }
 
 /* line 93, ../_sass/_components/_icons.scss */
 .icon-google-dev:before {
-  content: "\e00d";
+  content: "\f10d";
 }
 
 /* line 98, ../_sass/_components/_icons.scss */
 .icon-guides:before {
-  content: "\e00e";
+  content: "\f10e";
 }
 
 /* line 103, ../_sass/_components/_icons.scss */
 .icon-hash:before {
-  content: "\e00f";
+  content: "\f10f";
 }
 
 /* line 108, ../_sass/_components/_icons.scss */
 .icon-introduction-to-media:before {
-  content: "\e010";
+  content: "\f110";
 }
 
 /* line 113, ../_sass/_components/_icons.scss */
 .icon-lessons:before {
-  content: "\e011";
+  content: "\f111";
 }
 
 /* line 118, ../_sass/_components/_icons.scss */
 .icon-look-and-feel:before {
-  content: "\e012";
+  content: "\f112";
 }
 
 /* line 123, ../_sass/_components/_icons.scss */
 .icon-menu:before {
-  content: "\e013";
+  content: "\f113";
 }
 
 /* line 128, ../_sass/_components/_icons.scss */
 .icon-minus:before, .subnav-is-opened .icon-custom:before {
-  content: "\e014";
+  content: "\f114";
 }
 
 /* line 133, ../_sass/_components/_icons.scss */
 .icon-monetization:before {
-  content: "\e015";
+  content: "\f115";
 }
 
 /* line 138, ../_sass/_components/_icons.scss */
 .icon-multi-device-layouts:before {
-  content: "\e016";
+  content: "\f116";
 }
 
 /* line 143, ../_sass/_components/_icons.scss */
 .icon-performance:before {
-  content: "\e017";
+  content: "\f117";
 }
 
 /* line 148, ../_sass/_components/_icons.scss */
 .icon-plus:before, .icon-custom:before {
-  content: "\e018";
+  content: "\f118";
 }
 
 /* line 153, ../_sass/_components/_icons.scss */
 .icon-principles-of-site-design:before {
-  content: "\e019";
+  content: "\f119";
 }
 
 /* line 158, ../_sass/_components/_icons.scss */
 .icon-question:before {
-  content: "\e01a";
+  content: "\f11a";
 }
 
 /* line 163, ../_sass/_components/_icons.scss */
 .icon-slash:before {
-  content: "\e01b";
+  content: "\f11b";
 }
 
 /* line 168, ../_sass/_components/_icons.scss */
 .icon-star:before, .home-header:after {
-  content: "\e01c";
+  content: "\f11c";
 }
 
 /* line 173, ../_sass/_components/_icons.scss */
 .icon-tick:before {
-  content: "\e01d";
+  content: "\f11d";
 }
 
 /* line 178, ../_sass/_components/_icons.scss */
 .icon-tools:before, .wsk-header:after {
-  content: "\e01e";
+  content: "\f11e";
 }
 
 /* line 183, ../_sass/_components/_icons.scss */
 .icon-user-input:before {
-  content: "\e01f";
+  content: "\f11f";
 }
 
 /**
@@ -1844,7 +1844,7 @@ li > p {
     font-family: "icons";
     line-height: 25px;
     font-size: 13px;
-    content: "";
+    content: "";
   }
 }
 
@@ -1900,7 +1900,7 @@ li > p {
 /* line 324, ../_sass/_modules/_main-navigation.scss */
 .nav-is-opened + .main-nav__btn i:before {
   font-size: 20px;
-  content: "";
+  content: "";
 }
 
 /*==========  ICONS  ==========*/
@@ -1928,7 +1928,7 @@ li > p {
   /* line 350, ../_sass/_modules/_main-navigation.scss */
   .icon-custom:before {
     font-size: 9px;
-    content: "";
+    content: "";
   }
 }
 @media only screen and (min-width: 620px) {
@@ -1946,7 +1946,7 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 370, ../_sass/_modules/_main-navigation.scss */
   .subnav-is-opened .icon-custom:before {
-    content: "";
+    content: "";
   }
 }
 
@@ -2663,7 +2663,7 @@ li > p {
   }
   /* line 29, ../_sass/_modules/_editorial-header.scss */
   .editorial-header .container:before {
-    content: "";
+    content: "";
     font-family: "icons";
     font-size: 1000px;
     line-height: 0;
@@ -3450,7 +3450,7 @@ li > p {
 }
 /* line 59, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--prev:before {
-  content: "";
+  content: "";
   font-family: "icons";
   left: 0;
 }
@@ -3463,7 +3463,7 @@ li > p {
 
 /* line 73, ../_sass/_modules/_article-nav.scss */
 .article-nav-link--next:before {
-  content: "";
+  content: "";
   font-family: "icons";
   right: 0;
 }
@@ -3882,7 +3882,7 @@ li > p {
 }
 /* line 42, ../_sass/_modules/_did-you-know.scss */
 .did-you-know__symbol:after {
-  content: "";
+  content: "";
   color: #4285f4;
   font-family: "icons";
   font-size: 300px;
@@ -4058,7 +4058,7 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 82, ../_sass/_modules/_next-lessons.scss */
   .next-lessons:after {
-    content: "";
+    content: "";
     font-family: "icons";
     font-size: 150px;
     right: 40px;
@@ -4162,7 +4162,7 @@ li > p {
 @media only screen and (min-width: 620px) {
   /* line 51, ../_sass/_modules/_guides.scss */
   .guides:after {
-    content: "";
+    content: "";
     font-family: "icons";
     font-size: 150px;
     right: 40px;
@@ -4484,7 +4484,7 @@ li > p {
 }
 /* line 385, ../_sass/_utils.scss */
 .latest-spotlights__link p:before {
-  content: "";
+  content: "";
   font-family: "icons";
   font-size: 13px;
   display: block;
@@ -5058,7 +5058,7 @@ dt {
 
 /* line 385, ../_sass/_utils.scss */
 ul > li:before {
-  content: "";
+  content: "";
   font-family: "icons";
   font-size: 4px;
   display: block;
@@ -5110,7 +5110,7 @@ dt {
 }
 /* line 385, ../_sass/_utils.scss */
 dt:before {
-  content: "";
+  content: "";
   font-family: "icons";
   font-size: 13px;
   display: block;
@@ -5146,7 +5146,7 @@ ul.list-links a {
 }
 /* line 385, ../_sass/_utils.scss */
 ul.list-links a:before {
-  content: "";
+  content: "";
   font-family: "icons";
   font-size: 4px;
   display: block;
@@ -5175,7 +5175,7 @@ ul.list-links.list-links--primary a {
 }
 /* line 385, ../_sass/_utils.scss */
 ul.list-links.list-links--primary a:before {
-  content: "";
+  content: "";
   font-family: "icons";
   font-size: 13px;
   display: block;
@@ -5258,7 +5258,7 @@ ol.list-links.list-links--secondary a:before {
 }
 /* line 385, ../_sass/_utils.scss */
 .list-anchor a:before {
-  content: "";
+  content: "";
   font-family: "icons";
   font-size: 4px;
   display: block;
@@ -6016,7 +6016,7 @@ a:hover {
   font-family: "icons";
   line-height: 25px;
   font-size: 13px;
-  content: "";
+  content: "";
 }
 
 /* line 26, ../_sass/_components/_link.scss */
@@ -7541,13 +7541,13 @@ figcaption {
 }
 /* line 126, ../_sass/_helper.scss */
 .divider span:before {
-  content: "";
+  content: "";
   left: 8px;
 }
 /* line 131, ../_sass/_helper.scss */
 .divider span:after {
   color: #a0c3ff;
-  content: "";
+  content: "";
   right: 6px;
 }
 /* line 138, ../_sass/_helper.scss */
