@@ -20,4 +20,4 @@ kramdown:
 include: ['.htaccess']
 exclude: ['config.rb']
 include_open_html: true
-sample_link_base: "/fundamentals/resources/samples/"
+sample_link_base: "http://localhost:8081/fundamentals/resources/samples/"

@@ -23,4 +23,4 @@ include: ['.htaccess']
 exclude: ['config.rb']
 # comment this for plain jekyll serve usage.
 langs_available: ['ko']
-sample_link_base: "/web/fundamentals/resources/samples/"
+sample_link_base: "https://web-central.appspot.com/web/fundamentals/resources/samples/"
