@@ -5,8 +5,8 @@ description: "Build your multi-device site from the ground up. Learn what a buil
 introduction: "Build your multi-device site from the ground up. Learn what a build process is, the tasks to automate, and how to build a site with the Web Starter Kit. Learn how to debug with Chrome DevTools."
 article:
   written_on: 2014-05-29
-  updated_on: 2014-09-12
-  order: 3
+  updated_on: 2014-09-25
+  order: 2
 collection: tools
 id: build-your-site
 authors:
@@ -24,8 +24,5 @@ Unit testing, the list goes on...
 Follow these guides and learn the best way to structure your workflow so that
 the sites that you create already follow all the best practices from the
 minute you start.
-
-You can also use Web Starter Kit to begin your projects with an amazing
-default workflow and great looking templates right out of the box.
 
 {% endwrap %}
