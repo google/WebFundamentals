@@ -7,7 +7,7 @@ article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
   order: 3
-collection: test
+collection: devices
 authors:
   - mattgaunt
 key-takeaways:
@@ -75,6 +75,8 @@ Once you're emulator is booted, click on the Browser icon and you'll be able to
 test your site on the old Stock Browser for Android.
 
 <img src="imgs/android-emulator-stock-browser.png" alt="Android Emulator Stock Browser Screenshot" />
+
+### Test with Chromes Content Shell
 
 To install the Chromium Content Shell for Android, leave your emulator running
 and run the following commands in a terminal:
