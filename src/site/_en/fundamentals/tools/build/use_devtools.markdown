@@ -6,7 +6,7 @@ introduction: "Use Chrome DevTools on your development machine to debug on your 
 article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
-  order: 3
+  order: 2
 collection: build-your-site
 authors:
   - megginkearney
