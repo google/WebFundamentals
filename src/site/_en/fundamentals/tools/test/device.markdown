@@ -1,21 +1,22 @@
 ---
 layout: article
 title: "Real Device Testing"
-description: "Always test on real devices. Don't waste time on manually setting up each testing device. Choose tools that let you test across many devices in one-click."
-introduction: "Always test on real devices. Don't waste time on manually setting up each testing device. Choose tools that let you test across many devices in one-click."
+description: "When it comes to testing and developing on a real device there are a few things
+to point out and some tips to bear in mind."
+introduction: "When it comes to testing and developing on a real device there are a few things
+to point out and some tips to bear in mind."
 article:
   written_on: 2014-05-29
-  updated_on: 2014-05-29
+  updated_on: 2014-09-25
   order: 1
 collection: test
 authors:
   - megginkearney
+  - mattgaunt
 key-takeaways:
   starter-kit:
     - There's no substitute for real device testing. You must test on real devices.
-    - You don't need to dread the set-up and manual testing process anymore. Testing your site on real devices need only be a click away.
-    - Choose a testing solution that has live reloading. Change in one place and see those changes everywhere.
-    - Synchronized testing lets you test user interaction on all devices at the same time.
+    - BrowserSync allows you to test user interaction on all devices at the same time.
 notes:
   unit-tests:
     - If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/">Yeti</a> and <a href="http://thrilljs.com/">Thrill</a>.
@@ -26,131 +27,110 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.starter-kit %}
 
-## Set up device testing in one click
+## Test a Local Server
 
-If you've started testing your site on different devices within the last two years,
-it's likely you've gone through set up steps for the different platforms
-multiple times.
+One of the simplest ways to test on a real device is to simply find the IP
+address of your computer, run your web server and then point your mobile devices
+to your computers IP address.
 
-You've experienced the frustration of using your site on a device,
-seeing something wrong,
-having to switch back to your development environment,
-fix it, rebuild, push to each device again, maybe having to repeat some or all of the set-up steps.
+Every OS has a different way of finding out your IP address. If you spot
+the network panel on your computer, that will be the easiest way to find your
+local IP address.  
 
-Testing on a mobile device away
-from your development environment isn't a practical workflow.
+OS X and Ubuntu users can always run \`ifconfig\` from the terminal; Windows
+users can run \`ipconfig\` from the command prompt.
 
-<img src="imgs/manual.png" class="center" alt="developer struggling to test on mobile manually">
+## Test on Mobile Using Port Forwarding
 
-What you need is a tool that lets you connect to any device in one-click.
-Once connected to any device,
-changes made in your development environment are automatically pushed to connected devices.
+It's often easier and more flexible to test your using Chromes Port Forwarding
+feature. This shares localhost sites from your computer, to your phone over
+USB.
 
-The Web Starter Kit has a built in HTTP Server for previewing your site.
-This means that you can test your pages on any device without messing with other tools.
-So long as your development environment and devices can be on the same network,
-you can access the same local version of your site on any external devices.
+The first step is to enable USB debugging on your Android device. Go to
+**Settings &gt; About Phone** and tap the **Build number** seven times (yes
+seven times). Then return back to the **Settings** screen and select **Developer
+Options**.
 
-## Live browser reloading
+<div class="media media--video">
+  <iframe src="//www.youtube.com/embed/06k_hSKZvbo?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
-Arguably the biggest frustration with testing on real devices is the inability
-to quickly fix a bug that you see on the real device in your source code.
+In Developer Options make sure the **USB debugging** is checked.
 
-With live browser reloading,
-debug your source code on your development machine
-and see the changes instantly on your mobile device.
-As you change your source code,
-any instance of your site opened on any device is automatically reloaded live.
+<img src="imgs/usb_debugging_on.png" alt="Enable USB Debugging" />
 
-The Web Starter Kit takes reloading that bit further.
-As you change your source code,
-the tools compile Sass into CSS,
-minify and concatenate JavaScript, CSS, HTML, and images
-and push the optimized site.
+Now double check that your site running locally. In this example we have a
+server running on port **3000**, so the URL is
+[http://localhost:3000/](http://localhost:3000/):
 
-## Synchronize testing across devices
+<img src="imgs/port-forwarding-site-demo.png" alt="Demo site we are using as an example" />
 
-Sync clicks, scrolls, and navigation between devices
-so you can see exactly what breaks and what visually needs improvement.
+Open a new tab in Chrome and type in the URL `chrome://inspect` and plug your
+phone in over USB.
 
-Powered by <a href="http://browsersync.io/">BrowserSync</a>,
-the Web Starter Kit synchronizes clicks, scrolls, forms and live-reload
-across multiple devices as you edit your project.
+<img src="imgs/chrome-inspect.png" alt="Chrome Inspect Screenshot" />
 
-## Which devices you need and how to get them
+Clicking on the \`Port Forwarding\` button will allow you to enter the port your
+server is on as well as a localhost port on your phone.
 
-The Web Starer Kit supports the following devices:
+<img src="imgs/port-forwarding-dialog.png" alt="Port Forwarding Settings" />
 
-* IE10, IE11
-* FF 30, 31
-* Chrome 36, 37
-* Safari 7, 8
-* Opera 23, 24
-* iOS Safari 7, 8
-* Opera Coast
-* Android / Chrome 4.4, 4.4.3
-* Blackberry 1.0
-* IE Mobile 10
+Make sure 'Enable port forwarding' is checked at the bottom.Press 'Done' and
+you'll be able to open http://localhost:3000 on your mobile device and see your
+site.
 
-Brad Frost's
-<a href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Mobile Devices without Breaking the Bank</a>
-is a good starting point for deciding which devices you need
-and provides links to get those devices.
-But it's not always possible to own the devices you're targeting,
-especially if you’re a freelancer or don’t work for a large company.
+## Use DevTools for Mobile Browsers
 
-There are an increasing number of
-<a href="http://opendevicelab.com/">open device-labs</a> that can loan you hardware,
-but even if you do own your target devices,
-it can be a tedious process setting them all up for testing.
+Each browser/platform has it's own way to debug sites. Use the appropriate
+DevTools to help debug problems.
 
-The
-[next guide]({{site.fundamentals}}/tools/test/cloud.html)
-covers a range of cloud testing services
-that can get you most of the way in terms of testing on a range of devices
-without actually having those devices.
+### Chrome for Android
 
-{% include modules/remember.liquid title="Note" list=page.notes.unit-tests %}
+You can use Chrome DevTools with Chrome for Android by setting up your device
+for development and then visiting chrome://inspect. [Check out our Chrome
+docs](https://developer.chrome.com/devtools/docs/remote-debugging) on how to set
+all of this up.
 
-## Summary of device testing tools
+<img src="imgs/chrome-inspect-devtools.png" alt="Chrome Inspect Demo" />
 
-Inspired by
-<a href="http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/#toc-intro">Synchronized Cross Device Testing</a>, here's a summary of cross-device testing tools:
+### Safari for iOS
 
-<table class="table-2 tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th data-th="tool">Cross-device Testing Tool</th>
-      <th data-th="Description">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="tool"><a href="https://github.com/google/web-starter-kit">Web Starter Kit</a></td>
-      <td data-th="Description">Point any device to local version of your site. Update source files and tool automatically optimizes and pushes content to browser. Synchronized testing across devices. Develop on Mac, Linux, or Windows platforms; it's free.</td>
-    </tr>
-    <tr>
-      <td data-th="tool"><a href="http://blog.mattbailey.co/post/50337824984/grunt-synchronised-testing-between-browsers-devices">Grunt + LiveReload</a></td>
-      <td data-th="Description">Similar to Web Starter Kit, you can enable cross-device testing where each change you make in your editor causes a reload in any device you've opened your local site on. Some set-up is required to get this going.</td>
-    </tr>
-    <tr>
-      <td data-th="tool"><a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a></td>
-      <td data-th="Description">Loads the URL from your current Chrome tab onto any local device into a Webview inside the Adobe Edge Inspect app. You need to install each device manually and use specific clients on each single device. Requires a subscription to Creative Cloud.</td>
-    </tr>
-    <tr>
-      <td data-th="tool"><a href="http://viljamis.com/blog/2012/remote-preview/">Remote Preview</a></td>
-      <td data-th="Description">You host the tool's html page and content and point your device's browser to it. The tool regularly checks a file for a URL and loads it into an iframe. Light-weight tool great for chaining devices together and easily changing URL's across all of them. Doesn't support synchronized testing though.</td>
-    </tr>
-    <tr>
-      <td data-th="tool"><a href="http://vanamco.com/ghostlab/">Ghostlab (commercial)</a></td>
-      <td data-th="Description">Creates a local server from within the app for any directory. Any connected browser will sync interactions with the page. Only available for Mac; purchase fee.</td>
-    </tr>
-  </tbody>
-</table>
+To debug Safari for iOS, follow these steps:
+
+1. Open Safari on your iOS device.
+1. Connect it to your computer via USB.
+1. Open Safari on your computer.
+1. In Safari's menu, go to "Develop" and, look for your devices name .
+1. Select the tab you want to debug.
+
+<img src="imgs/ios-safari-debugging.png" alt="Safari iOS Debugging Menu" />
+
+### IE for Windows Phone
+
+Unfortunately there is no way to debug a site on Windows Phone, but you can  
+[emulate a mobile browser on the desktop version of IE
+11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
+We'll cover this in the [next article](browseremulation.html).
+
+## Browser Sync
+
+If you have a large number of devices to test against, you may find it
+overwhelming to do a basic test across all of the devices. [Browser
+Sync](http://www.browsersync.io/) can help with this by synchronising
+interactions across all of your devices. This includes scrolling, clicking and
+form entry.
+
+<div class="media media--video">
+  <iframe src="//www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+Browser Sync is enabled out of the box with [Web Starter
+Kit](https://developers.google.com/web/starter-kit/), so try it out there or
+check out the gulp file for how to integrate it in your own workflow.
+
+If you aren't using Gulp, head on over to the [BrowserSync
+site](http://www.browsersync.io/) for alternative approaches to using it.
+
 
 {% include modules/nextarticle.liquid %}
 
