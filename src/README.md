@@ -22,3 +22,6 @@
 
 - Run the Jekyll build: `grunt`
 
+## Change log
+
+- (09/24/2014) NPM and Gem bundles updated, be sure to run `npm update` and `bundle install`

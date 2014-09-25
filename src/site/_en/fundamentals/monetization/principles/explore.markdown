@@ -11,6 +11,9 @@ article:
   order: 1
 id: cc-explore
 collection: cc-principles
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple9
 ---
 
 {% wrap content %}

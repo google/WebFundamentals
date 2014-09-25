@@ -15,7 +15,9 @@ collection: layout-principles
 key-takeaways:
   tldr: 
     - If necessary, make it easy to switch between site experiences, but use labels like "desktop" instead of "full" to be clear that both sites offer a full experience.
-
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple24
 ---
 
 {% wrap content%}
