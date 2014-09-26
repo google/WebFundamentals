@@ -21,8 +21,8 @@ have to work out all the tasks that you need to automate such as: Image
 compression, CSS minification, JavaScript concatenation, Responsive testing,
 Unit testing, the list goes on...
 
-Follow these guides and learn the best way to structure your workflow so that
-the sites that you create already follow all the best practices from the
+Follow this guide to learn the best way to structure your workflow so that
+the sites you create already follow all the best practices from the
 minute you start.
 
 {% endwrap %}
