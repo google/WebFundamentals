@@ -1,16 +1,19 @@
 ---
 layout: article
-title: "Let Users Explore Before They Commit"
+title: "Let users explore before they commit"
 description: "Allow visitors to use your site without registering for an account."
 introduction: "Requiring login or account creation too early in a site experience can be detrimental to conversion."
 authors:
   - petelepage
 article:
   written_on: 2014-08-07
-  updated_on: 2014-08-07
+  updated_on: 2014-09-19
   order: 1
 id: cc-explore
 collection: cc-principles
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple9
 ---
 
 {% wrap content %}

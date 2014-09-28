@@ -4,7 +4,7 @@ title: "Monitor the user's location"
 description: "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-18
   order: 2
 authors:
   - paulkinlan
@@ -12,9 +12,9 @@ collection: user-location
 introduction:  "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
 key-takeaways:
   geo: 
-    -  Check for Compatibility before you use the API
-    -  Minimize the use of watching the user's location to save battery
-    -  Always handle errors
+    -  Check for Compatibility before you use the API.
+    -  Minimize the use of watching the user's location to save battery.
+    -  Always handle errors.
 ---
 
 {% wrap content %}
@@ -31,11 +31,11 @@ a callback method whenever you request a location.
 
 ## When to use Geolocation to watch the user's location
 
-*  You want to obtain a more precise lock on the user location
+*  You want to obtain a more precise lock on the user location.
 *  Your application needs to update the user interface based on new location 
-   information
+   information.
 *  You applications needs to update business logic when the user enters a certain
-   defined zone
+   defined zone.
 
 ## Watching the users location
 
@@ -47,7 +47,7 @@ API has a method called `watchPosition()`. It operates in a similar way to
 `getCurrentPosition()` yet it will fire multiple times as the positioning
 software:
 
-1.  Gets a more accurate lock on the user
+1.  Gets a more accurate lock on the user.
 2.  The user's position changes.
  
 {% highlight javascript %}

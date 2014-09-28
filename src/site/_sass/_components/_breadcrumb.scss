@@ -35,3 +35,14 @@
     padding-top: 0;
   }
 }
+
+.translatelinks {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.translatelinks p {
+  @include type--small;
+  padding-top: 0;
+}

@@ -2,20 +2,19 @@
 layout: article
 title: "Size videos correctly"
 description: "When it comes to keeping your users happy, size matters."
-introduction: "When it comes to keeping your users happy, size matters:"
+introduction: "When it comes to keeping your users happy, size matters."
 article:
   written_on: 2014-04-16
-  updated_on: 2014-04-29
+  updated_on: 2014-09-19
   order: 3
 collection: videos
 authors:
   - samdutton
 key-takeaways:
-  add-a-video:
-    - Use the video element to load, decode, and play video on your site.
-    - Produce video in multiple formats to cover a range of mobile platforms.
-    - Size videos correctly; ensure they don't overflow their containers.
-    - Accessibility matters; add the track element as a child of the video element.
+  size-matters:
+    - Don't serve videos with a larger frame size or higher quality than the platform can handle.
+    - Don't make your videos any longer than they need be.
+    - Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback.
 remember:
   media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.
@@ -30,11 +29,22 @@ remember:
   optimize:
     - <a href="../images/">Images</a>
     - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
+related:
+  media:
+  -
+      title: "Use CSS media queries for responsiveness"
+      href: fundamentals/layouts/rwd-fundamentals/use-media-queries.html
+      section:
+        id: rwd-fundamentals
+        title: "Responsive Web Design Basics"
+        href: layouts/rwd-fundamentals/
 ---
 
 {% wrap content%}
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.size-matters %}
 
 <style>
 
@@ -49,14 +59,6 @@ remember:
   }
 
 </style>
-
-When it comes to keeping your users happy, size matters:
-
-* Don't serve videos with a larger frame size or higher quality than the
-  platform can handle.
-* Don't make your videos any longer than they need be.
-* Long videos can cause hiccups with download and seeking; some browsers may
-  have to wait until the video downloads before beginning playback.
 
 ## Check video size
 
@@ -87,10 +89,12 @@ other sources.
 
 Use [CSS media queries](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
 
-{% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
+{% include modules/related_guides.liquid inline=true list=page.related.media %}
 
 For media content in iframes (such as YouTube videos), try a responsive
 approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
+
+{% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
 
 **CSS:**
 

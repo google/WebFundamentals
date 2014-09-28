@@ -5,12 +5,12 @@ description: "Much of the web isn't optimized for those multi-device experiences
              fundamentals to get your site working on mobile, desktop or anything else with a screen."
 introduction: "While it may be helpful to think about defining breakpoints based on device
   classes, use caution.  Defining breakpoints based on specific devices, products,
-  brand names, or operating systems that are in use today will result in a
+  brand names, or operating systems that are in use today can result in a
   maintenance nightmare. Instead, the content itself should determine how the
   layout adjusts to its container."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-09-12
   order: 4
 authors:
   - petelepage
@@ -69,7 +69,8 @@ until a breakpoint becomes necessary.  This will allow you to optimize
 breakpoints based on content and maintain the fewest number of breakpoints
 possible.
 
-Let's work through the example we saw at the beginning, the weather forecast.
+Let's work through the example we saw at the beginning,
+the [weather forecast]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
 The first step is to make the forecast look good on a small screen.
 
 <figure>

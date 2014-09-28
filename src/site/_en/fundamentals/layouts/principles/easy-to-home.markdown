@@ -13,6 +13,9 @@ collection: layout-principles
 key-takeaways:
   tldr: 
     - Use your logo as a navigation button to return to the homepage.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple3
 ---
 
 {% wrap content%}

@@ -1,7 +1,8 @@
+# For AppEngine
 safe: false
 port: 8081
-source: .
-destination: ../appengine/build/static
+source: site
+destination: appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
 baseurl: /web
@@ -17,6 +18,9 @@ include_open_html: true
 custom:
 kramdown:
   toc_levels: "2"
+  entity_output: :as_input
 include: ['.htaccess']
 exclude: ['config.rb']
-lang : "ko"
+# comment this for plain jekyll serve usage.
+langs_available: ['ko', 'ja', 'zh-cn', 'he']
+sample_link_base: "/web/fundamentals/resources/samples/"

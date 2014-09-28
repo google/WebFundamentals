@@ -1,6 +1,6 @@
 ---
 layout: section
-title: "Click to call"
+title: "Click to Call"
 description: "On devices with phone capabilities, make it easy for users to
   directly connect with you by simply tapping a phone number, more commonly
   known as click to call."
@@ -10,7 +10,7 @@ introduction: "On devices with phone capabilities, make it easy for users to
 article:
   written_on: 2014-06-17
   updated_on: 2014-06-17
-  order: 2
+  order: 3
 id: click-to-call
 collection: device-access
 ---

@@ -19,9 +19,11 @@
 {% endif %}
 
 <link rel="canonical" href="https://developers.google.com/web{{page.url | canonical_url}}">
-
-
 <link rel="icon" href="{{site.baseurl}}/favicon.ico" />
+
+{% for translated_page in page.translations %}
+<link rel="alternate" hreflang="{{translated_page.langcode}}" href="/web{{page.url}}?hl={{translated_page.langcode}}" />
+{% endfor %}
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />

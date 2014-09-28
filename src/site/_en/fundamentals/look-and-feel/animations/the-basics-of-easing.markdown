@@ -5,7 +5,7 @@ description: "Learn how to soften and give weighting to your animations."
 introduction: "Nothing in nature moves linearly from one point to another. In reality things tend to accelerate or decelerate as they move. Our brains are wired to expect this kind of motion, so when animating you should use this to your advantage. Natural motion will make your users feel more comfortable with your apps, which in turn leads to a better overall experience."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-09-19
   order: 3
 id: the-basics-of-easing
 collection: animations
@@ -26,7 +26,7 @@ In classic animation the terms for motion that starts slowly and accelerates is 
 
 ## Easing Keywords
 
-CSS transitions and animations both let you choose the kind of easing you want to use for your animations. You can use keywords that affect the easing (or timing as it's sometimes called) of the animation in question. You can also go completely custom with your easing, which gives you way more freedom to express your app's personality.
+CSS transitions and animations both let you [choose the kind of easing you want to use for your animations]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html). You can use keywords that affect the easing (or timing as it's sometimes called) of the animation in question. You can also [go completely custom with your easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html), which gives you way more freedom to express your app's personality.
 
 Here are some of the keywords that you can use in CSS:
 

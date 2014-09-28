@@ -59,7 +59,7 @@ new Sass file like so.
 
 4. Test out how it looks on localhost by going to http://localhost:<Port Number>/styleguide/ and make sure the build was successful.
 
-5. Finally,  use your new component in your pages.
+5. Finally, use your new component in your pages.
 
 ### Example of How to Add a Component
 
@@ -100,7 +100,7 @@ should be able to see the footer in all it’s glory.
         }
 
 
-6. Let’s add a title in style guide.html so it looks like the other style guide
+6. Let’s add a title in styleguide.html so it looks like the other style guide
 elements and perhaps a link at the top of the page.
 
         // Footer Link at top of styleguide.html

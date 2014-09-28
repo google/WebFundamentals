@@ -1,25 +1,21 @@
 ---
 layout: article
 title: "Obtain the user's current location"
-introduction: "The Geolocation API lets you find out where the user is, 
-  always with the user's consent. This functionality could be used as part 
-  of user queries, e.g. to guide someone to a destination point. It could
-  also be used for 'geo-tagging' some content the user has created, e.g. 
-  to mark where a photo was taken."
+introduction: "The Geolocation API lets you find out where the user is, always with the user's consent. This functionality could be used as part of user queries, for example, to guide someone to a destination point. It could also be used for 'geo-tagging' some content the user has created, for example, to mark where a photo was taken."
 description: "The Geolocation API lets you find out where the user is, always with the user's consent."
 article:
   written_on: 2014-06-06
-  updated_on: 2014-06-06
+  updated_on: 2014-09-19
   order: 1
 authors:
   - paulkinlan
 collection: user-location
 key-takeaways:
   geo: 
-    -  Check for Compatibility before you use the API
-    -  Prefer a coarse location, over a fine location
-    -  Always handle errors
-    -  Don't poll for the data too frequently to save the user's battery
+    -  Check for Compatibility before you use the API.
+    -  Prefer a coarse location over a fine location.
+    -  Always handle errors.
+    -  Don't poll for the data too frequently to save the user's battery.
 
 ---
 
@@ -39,11 +35,11 @@ method whenever you request a location.
 ## When to use Geolocation
 
 *  Find where the user is closest to a physical location of yours to tailor 
-   the user experience
-*  Tailor information (such as news) to the user's location
-*  Show the position of a user on a map
+   the user experience.
+*  Tailor information (such as news) to the user's location.
+*  Show the position of a user on a map.
 *  Tag data created inside your application with the user's location 
-   (i.e, geo-tagging a picture)
+   (i.e, geo-tagging a picture).
 
 
 ## Check for Compatibility
@@ -88,9 +84,7 @@ the browser, there may also be preferences to always allow - or disallow -
 permission lookups, in which case the confirmation process will be bypassed.
 
 Depending on the location device your browser is using, the position object
-might actually contain a lot more than just latitude and longitude, e.g. it
-could include an altitude or a direction.  You can't tell what extra information
-that location system will use until it actually returns the data.
+might actually contain a lot more than just latitude and longitude, for example, it could include an altitude or a direction.  You can't tell what extra information that location system will use until it actually returns the data.
 
 ## Testing Geolocation with your site
 
@@ -103,9 +97,9 @@ and simulating geolocation not being available via the overrides menu.
 
 <img src="images/emulategeolocation.png">
 
-*  Open up the overrides menu in the DevTools
-*  Check “Override Geolocation” then enter in Lat = 41.4949819 and Lon = -0.1461206
-*  Refresh the page and it will now use your overridden positions for geolocation
+1. Open up the overrides menu in the DevTools.
+2. Check “Override Geolocation” then enter in Lat = 41.4949819 and Lon = -0.1461206.
+3. Refresh the page and it will now use your overridden positions for geolocation.
 
 ##  Always Handle Errors
 
@@ -134,7 +128,7 @@ window.onload = function() {
 };
 {% endhighlight %}
 
-## Reduce the need to start-up geo location hardware.
+## Reduce the need to start-up geo location hardware
 
 For many use-cases you don't need to use the most up to date location of the user,
 you just need a rough estimate.

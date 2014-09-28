@@ -24,18 +24,33 @@ module Jekyll
         page = context.environments.first["page"]
         path = context.registers[:site].source;
         relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
-        String filepath = File.join(relpath, @file).sub("/_code", "")
-        url = File.join(context.registers[:site].baseurl, "/fundamentals/resources/samples", filepath).strip
+        String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
+        url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
         "<a href=\"#{url}\">#{out}</a>"
+    end
+  end
+
+  class LinkSampleButton < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+      @file = markup
+    end
+
+    def render(context)
+        page = context.environments.first["page"]
+        path = context.registers[:site].source;
+        relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
+        String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
+        url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
+        out = super(context)
+        "<a class=\"button--primary\" href=\"#{url}\">#{out}</a>"
     end
   end
 
   class IncludeCodeTag < Liquid::Tag
     include Liquid::StandardFilters
 
-    # This is the base domain we will link to for samples.
-    @@sample_link_base = "https://google-developers.appspot.com/"
     @@comment_formats = {
       "html" => ["<!--", "-->"],
       "css" => ["\\\/\\\*", "\\\*\\\/"],
@@ -68,10 +83,15 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        path = context.registers[:site].source;
-        lang = context.registers[:site].config["lang"];
-        lang = lang ? lang : "en"
-        String filepath = File.join(File.dirname(page["path"]), @file)
+        site = context.registers[:site]
+        path = site.source;
+        lang = site.config["lang"]
+        if !lang && page.has_key?('langcode')
+          lang = page["langcode"]
+        elsif !lang
+          lang = "en"
+        end
+        String filepath = Pathname.new(File.join(File.dirname(page["path"]), @file)).cleanpath.to_s
         if lang != "en"
           filepath.sub!("_" + lang + "/", "_en/")
         end
@@ -126,8 +146,8 @@ module Jekyll
   </div>
   <div class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
-      <code class='html'>#{highlighted_code.strip}</code>
-      <a class="highlight-module__cta" href="#{context.registers[:site].baseurl}/fundamentals/resources/samples/#{relpath}">View full sample</a>
+      <code class='html'>#{highlighted_code.strip}</code>                                                     
+      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">Try full sample</a>
     </div>
   </div>
   <div class="container">
@@ -139,3 +159,4 @@ end
 
 Liquid::Template.register_tag('include_code', Jekyll::IncludeCodeTag)
 Liquid::Template.register_tag('link_sample', Jekyll::LinkSampleBlock)
+Liquid::Template.register_tag('link_sample_button', Jekyll::LinkSampleButton)
