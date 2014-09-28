@@ -17,7 +17,7 @@ id: home
   <div class="container">
     <h1>Web <b>Fundamentals</b></h1>
     <p>모던 웹 개발을 위한 최적의 사례 모음</p>
-    <a href="{{site.fundamentals}}/getting-started/your-first-multi-screen-site/" title="Get started with Web Fundamentals" class="button--secondary-variation">시작하기</a>
+    <a href="{{site.fundamentals}}/getting-started/your-first-multi-screen-site/?hl={{page.langcode}}" title="Get started with Web Fundamentals" class="button--secondary-variation">시작하기</a>
   </div>
 </div>
 
@@ -30,7 +30,7 @@ id: home
       <a href="{{site.github.root}}/pulls" title="Submit a pull request on GitHub">Pull Request를 보내주시기 바랍니다</a>.
     </p>
     <p class="g-wide--3 g--centered">
-      저희가 제시하는 최고의 사례 지침 전부를 따르는 새로운 사이트 생성을 시작하기 위해 여러분은 <a href="/web/starter-kit/">Google Web Starter Kit</a>를 사용할 수 있습니다.
+      여러분은 여기서 제시하는 최적의 안내 사항 전부에 따라 새로운 사이트 제작의 시작을 위해 <a href="/web/starter-kit/">Google Web Starter Kit</a>를 사용할 수 있습니다.
     </p>
   </div>
 </div>
@@ -40,9 +40,9 @@ id: home
     <ul class="list-guides-intro guides-list container">
 
       {% for guide in page.articles.[page.id] %}
-      {% if guide.published != false %}
+      {% if guide.published != false  and (guide.is_localized != true or page.langcode == guide.langcode) %}
       <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
-        <a href="{{site.baseurl}}{{guide.url | clean}}" title="{{guide.title}}" class="themed">
+        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}" class="themed">
             <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
             <h3 class="large">{{guide.title}}</h3>
           </a>

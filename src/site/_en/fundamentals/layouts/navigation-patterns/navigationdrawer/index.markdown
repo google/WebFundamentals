@@ -5,7 +5,7 @@ description: "For sites with a larger number of sections and subsections the Nav
 thumbnail: images/navdrawer.png
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 3
 authors:
   - mattgaunt
@@ -21,12 +21,14 @@ key-takeaways:
 {% wrap content%}
 
 <div class="g-medium--2 g-medium--last g-wide--3">
-  <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+  {% link_sample ../_code/appbar-navdrawer-sample1.html %}
     <img src="images/navdrawer.png">
-  </a>
+  {% endlink_sample %}
 
   <div style="text-align:center;">
-    <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">Demo</a>
+    {% link_sample_button ../_code/appbar-navdrawer-sample1.html %}
+      Demo
+    {% endlink_sample_button %}
   </div>
 </div>
 
@@ -45,29 +47,35 @@ For users there is a small amount to learning to do to find the Navigation Drawe
 <div class="g-medium--2 g-medium--last g-wide--3">
 
   <div class="g--third">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+    {% link_sample ../_code/appbar-navdrawer-bottombar-sample.html %}
       <img src="images/navdrawer-alt-1.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">Demo</a>
+      {% link_sample_button ../_code/appbar-navdrawer-bottombar-sample.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--third">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
+    {% link_sample ../_code/appbar-navdrawer-sample.html %}
       <img src="images/navdrawer-alt-2.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">Demo</a>
+      {% link_sample_button ../_code/appbar-navdrawer-sample.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--third g--last">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">
+    {% link_sample ../_code/navdrawer-sample4.html %}
       <img src="images/navdrawer-alt-3.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/navdrawer-sample4.html">Demo</a>
+      {% link_sample_button ../_code/navdrawer-sample4.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 

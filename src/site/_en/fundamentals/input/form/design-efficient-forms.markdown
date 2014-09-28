@@ -15,8 +15,10 @@ key-takeaways:
     - Use existing data to pre-populate fields and be sure to enable auto-fill.
     - Use clearly-labeled progress bars to help users get through multi-part forms.
     - Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones.
-
-
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple16
+  - g.co/mobilesiteprinciple18
 ---
 
 {% wrap content %}

@@ -11,7 +11,7 @@ pads for entering phone numbers, or automatically advance fields as they entered
 them. Look for opportunities to eliminate wasted taps in your forms."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-08-06
+  updated_on: 2014-09-19
   order: 2
 authors:
   - petelepage
@@ -39,6 +39,10 @@ remember:
     - If you're asking for any kind of personal information or credit card
       data, ensure the page is served via SSL.  Otherwise the dialog will
       warn the user their information may not be secure.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple14
+  - g.co/mobilesiteprinciple15
 ---
 {% wrap content %}
 
@@ -199,7 +203,7 @@ The `datalist` element isn't an input type, but a list of suggested input values
 to associated with a form field. It lets the browser suggest autocomplete
 options as the user types. Unlike select elements where users must scan long
 lists to find the value they're looking for, and limiting them only to those
-lists, `datalist`s provide hints as the user types.
+lists, `datalist` element provides hints as the user types.
 
 {% include_code _code/order.html datalist %}
 

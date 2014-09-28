@@ -5,13 +5,13 @@ description: "Learn how to animate modal views in your apps."
 introduction: "Modal views are for important messages, and for which you have very good reasons to block the user interface. Care must be taken when you use them as they are disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-09-19
   order: 6
 collection: animations
 id: animating-modal-views
 key-takeaways:
   code:
-    - Modal views should be used sparingly; users will get frustrated if you interupt their experience unnecessarily.
+    - Modal views should be used sparingly; users will get frustrated if you interrupt their experience unnecessarily.
     - Adding scale to the animation gives a nice 'drop on' effect.
     - Be sure to get rid of the modal view quickly when the user dismisses it, but you should bring it on to screen a little more slowly so it doesn't surprise the user.
 notes:
@@ -46,7 +46,7 @@ The modal overlay should be aligned to the viewport so it needs to have its `pos
 }
 {% endhighlight %}
 
-It has an initial `opacity` of 0 so it's hidden from view, but then it will also need `pointer-events` set to `none` so that click and touches pass through. Without that it will block all interactions rendering the whole page unresponsive. Finally, since it will animate its `opacity` and `transform` those need to be marked as changing with `will-change`.
+It has an initial `opacity` of 0 so it's hidden from view, but then it will also need `pointer-events` set to `none` so that click and touches pass through. Without that it will block all interactions rendering the whole page unresponsive. Finally, since it will animate its `opacity` and `transform` those need to be marked as changing with `will-change` (see also [Using the will-change property]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property)).
 
 When the view is visible it will need to accept interactions and have an `opacity` of 1:
 
@@ -63,7 +63,8 @@ Now whenever the modal view is required, you can use JavaScript to toggle the "v
 modal.classList.add('visible');
 {% endhighlight %}
 
-At this point the modal view will appear without any animation, so that can now be added in:
+At this point the modal view will appear without any animation, so that can now be added in
+(see also [Custom Easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)):
 
 {% highlight css %}
 .modal {

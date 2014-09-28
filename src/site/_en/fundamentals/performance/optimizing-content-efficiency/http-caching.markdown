@@ -6,7 +6,7 @@ introduction: "Fetching something over the network is both slow and expensive: l
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-05
-  order: 4
+  order: 5
 collection: optimizing-content-efficiency
 authors:
   - ilyagrigorik

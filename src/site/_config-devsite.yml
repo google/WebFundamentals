@@ -1,3 +1,4 @@
+# For developers.google.com
 safe: false
 port: 8081
 source: site
@@ -13,11 +14,12 @@ github:
   root: https://github.com/Google/WebFundamentals
   content: tree/master/src/site
 include_open_html: false
-generate_sample_jshtml: true
 spotlights: false
 custom:
 kramdown:
   toc_levels: "2"
+  entity_output: :as_input
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
-langs_available: ["ko"]
+langs_available: ['ko', 'ja', 'zh-cn', 'he']
+sample_link_base: "http://googlesamples.github.io/web-fundamentals/samples/"

@@ -5,7 +5,7 @@ description: "Users have learnt to expect a header on all of the desktop sites, 
 thumbnail: images/appbar.png
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 1
 authors:
   - mattgaunt
@@ -21,12 +21,14 @@ key-takeaways:
 {% wrap content%}
 
 <div class="g-medium--2 g-medium--last g-wide--3">
-  <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+  {% link_sample ../_code/appbar-navdrawer-sample1.html %}
   	<img src="images/appbar.png">
-  </a>
+  {% endlink_sample %}
 
   <div style="text-align:center;">
-    <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">Demo</a>
+    {% link_sample_button ../_code/appbar-navdrawer-sample1.html %}
+      Demo
+    {% endlink_sample_button %}
   </div>
 </div>
 
@@ -56,20 +58,24 @@ The top left corner is perceived by the user as where the most important element
 
 <div class="g-medium--2 g-medium--last g-wide--3">
   <div class="g--half">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
+    {% link_sample ../_code/appbar-navdrawer-sample1.html %}
     	<img src="images/appbar-menu-left.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">Demo</a>
+      {% link_sample_button ../_code/appbar-navdrawer-sample1.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--half g--last">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample2.html">
+    {% link_sample ../_code/appbar-navdrawer-sample2.html %}
     	<img src="images/appbar-menu-right.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample2.html">Demo</a>
+      {% link_sample_button ../_code/appbar-navdrawer-sample2.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 </div>
@@ -82,20 +88,24 @@ The App Bar is a set of principles that you should apply to give your users a pr
 
 <div class="g-medium--2 g-medium--last g-wide--3">
   <div class="g--half">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
+    {% link_sample ../_code/appbar-navdrawer-bottombar-sample.html %}
       <img src="images/appbar-alt-1.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">Demo</a>
+      {% link_sample_button ../_code/appbar-navdrawer-bottombar-sample.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 
   <div class="g--half g--last">
-    <a href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
+    {% link_sample ../_code/appbar-navdrawer-sample.html %}
       <img src="images/appbar-alt-2.png">
-    </a>
+    {% endlink_sample %}
     <div style="text-align:center;">
-      <a class="button--primary" href="{{site.fundamentals}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">Demo</a>
+      {% link_sample_button ../_code/appbar-navdrawer-sample.html %}
+        Demo
+      {% endlink_sample_button %}
     </div>
   </div>
 </div>

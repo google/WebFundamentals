@@ -37,6 +37,9 @@ remember:
       memory and decoding costs it requires.  Resizing large images to fit on
       smaller screens is expensive and can be particularly painful on low-end
       devices where both memory and processing is limited.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple21
 ---
 
 {% wrap content%}

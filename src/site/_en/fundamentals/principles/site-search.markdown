@@ -17,6 +17,12 @@ key-takeaways:
     - Make sure your site search returns the strongest results first, and implement smart-search features like autocomplete and spelling corrections.  
     - Offer filters to help users get what they need from search, but make sure users can't filter a search to return zero results.   
     - If your offerings can be easily narrowed by segment, asking a few questions upfront helps ensure visitors see relevant results.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple5
+  - g.co/mobilesiteprinciple6
+  - g.co/mobilesiteprinciple7
+  - g.co/mobilesiteprinciple8
 ---
 
 {% wrap content %}

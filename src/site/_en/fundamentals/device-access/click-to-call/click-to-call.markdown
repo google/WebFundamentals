@@ -9,7 +9,7 @@ introduction: "On devices with phone capabilities, make it easy for users to
   known as click to call. "
 article:
   written_on: 2014-06-17
-  updated_on: 2014-06-17
+  updated_on: 2014-09-18
   order: 1
 id: click-to-call
 authors:
@@ -17,8 +17,11 @@ authors:
 collection: click-to-call
 key-takeaways:
   c2c: 
-    -  Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema
-    -  Always use the international dialing format
+    -  Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
+    -  Always use the international dialing format.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple12
 ---
 
 {% wrap content %}

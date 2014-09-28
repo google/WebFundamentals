@@ -55,7 +55,9 @@ module Jekyll
       @data_file = File.join(site.source, @data_filename)
       data = YAML.load_file(@data_file)
       # Check if there is a language specific version, and load that.
-      lang = site.config["lang"]
+      lang = context.environments.first["page"].has_key?('langcode') ?
+          context.environments.first["page"]['langcode'] :
+          site.config["lang"]
       if lang && lang != "en"
         lang_file = File.join(site.source, "_" + lang, @data_filename)
         if File.exists?(lang_file)

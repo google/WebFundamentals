@@ -9,7 +9,7 @@ introduction: "Media queries are simple filters that can be applied to CSS style
   resolution."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-09-12
   order: 3
 authors:
   - petelepage
@@ -73,7 +73,8 @@ inside a print media query:
 In addition to using the `media` attribute in the stylesheet link, there are two
 other ways to apply media queries that can be embedded in a CSS file: `@media`
 and `@import`.  For performance reasons, either of the first two methods are
-recommended over the `@import` syntax.
+recommended over the `@import` syntax
+(see [Avoid CSS imports]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
 
 {% highlight css %}
 @media print {
@@ -123,7 +124,7 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
     </tr>
     <tr>
       <td data-th="attribute"><code>max-width</code></td>
-      <td data-th="Result">Rules applied for any browser width under the value defined in the query.</td>
+      <td data-th="Result">Rules applied for any browser width below the value defined in the query.</td>
     </tr>
     <tr>
       <td data-th="attribute"><code>min-height</code></td>
@@ -131,7 +132,7 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
     </tr>
     <tr>
       <td data-th="attribute"><code>max-height</code></td>
-      <td data-th="Result">Rules applied for any browser height under the value defined in the query.</td>
+      <td data-th="Result">Rules applied for any browser height below the value defined in the query.</td>
     </tr>
     <tr>
       <td data-th="attribute"><code>orientation=portrait</code></td>
@@ -164,15 +165,15 @@ Let's take a look an example:
 ## A note on `min-device-width`
 
 It is also possible to create queries based on
-`*-device-width`; though this practice is **strongly discouraged**. 
+`*-device-width`; though this practice is **strongly discouraged**.
 
-The difference is subtle but very important: `min-width` is based on the 
+The difference is subtle but very important: `min-width` is based on the
 size of the browser window, whereas `min-device-width` is based on
-the size of the screen.  Unfortunately some browsers, including the legacy 
-Android browser may not report the device width properly and instead 
-report the screen size in device pixels instead of the expected viewport width. 
+the size of the screen.  Unfortunately some browsers, including the legacy
+Android browser may not report the device width properly and instead
+report the screen size in device pixels instead of the expected viewport width.
 
-In addition, using `*-device-width` can prevent content from adapting on 
+In addition, using `*-device-width` can prevent content from adapting on
 desktops or other devices that allow windows to be resized because the query
 is based on the actual device size, not the size of the browser window.
 

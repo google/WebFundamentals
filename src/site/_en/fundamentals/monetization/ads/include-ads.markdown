@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Include AdSense Ads on Your Site"
+title: "Include AdSense ads on your site"
 description: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 introduction: "Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid."
 article:

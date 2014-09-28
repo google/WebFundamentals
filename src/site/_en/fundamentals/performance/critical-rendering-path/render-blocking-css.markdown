@@ -5,16 +5,24 @@ description: "By default CSS is treated as a render blocking resource, which mea
 introduction: "By default CSS is treated as a render blocking resource, which means that the browser will hold rendering of any processed content until the CSSOM is constructed. Make sure to keep your CSS lean, deliver it as quickly as possible, and use media types and queries to unblock rendering."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-09-18
   order: 3
 collection: critical-rendering-path
 authors:
   - ilyagrigorik
+related-guides:
+  media-queries:
+    -
+      title: Use CSS media queries for responsiveness
+      href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+      section:
+        title: "Responsive Web design"
+        href: fundamentals/layouts/rwd-fundamentals/use-media-queries
 key-takeaways:
   render-blocking-css:
-    - By default CSS is treated as a render blocking resource
-    - Media types and media queries allow us to mark some CSS resources as non render blocking
-    - All CSS resources, regardless of blocking or non-blocking behavior are downloaded by the browser
+    - By default, CSS is treated as a render blocking resource.
+    - Media types and media queries allow us to mark some CSS resources as non-render blocking.
+    - All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser.
 ---
 {% wrap content%}
 
@@ -76,9 +84,11 @@ CSS "media types" and "media queries" allow us to address these use-cases:
 <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
 {% endhighlight %}
 
-A media query consists of a media type and zero or more expressions that check for the conditions of particular media features. For example, our first stylesheet declaration does not provide any media type or query, hence it will apply in all cases - that is to say, it is always render blocking. On the other hand, the second stylesheet will only apply when the content is being printed - perhaps you want to rearrange the layout, change the fonts, etc - and hence this stylesheet does not need to block the rendering of the page when it is first loaded. Finally, the last stylesheet declaration provides a "media query" which is executed by the browser: if the conditions match, the browser will block rendering until the stylesheet is downloaded and processed.
+A [media query]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html) consists of a media type and zero or more expressions that check for the conditions of particular media features. For example, our first stylesheet declaration does not provide any media type or query, hence it will apply in all cases - that is to say, it is always render blocking. On the other hand, the second stylesheet will only apply when the content is being printed - perhaps you want to rearrange the layout, change the fonts, etc - and hence this stylesheet does not need to block the rendering of the page when it is first loaded. Finally, the last stylesheet declaration provides a "media query" which is executed by the browser: if the conditions match, the browser will block rendering until the stylesheet is downloaded and processed.
 
 By using media queries, our presentation can be tailored to specific use cases such as display vs. print, and also to dynamic conditions such as changes in screen orientation, resize events, and more. **When declaring your stylesheet assets, pay close attention to the media type and queries, as they will have big performance impact on the critical rendering path!**
+
+{% include modules/related_guides.liquid inline=true list=page.related-guides.media-queries %}
 
 Let's consider some hands-on examples:
 

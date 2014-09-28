@@ -34,6 +34,9 @@ key-takeaways:
 remember:
   use-commas:
     - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple20
 ---
 {% wrap content %}
 

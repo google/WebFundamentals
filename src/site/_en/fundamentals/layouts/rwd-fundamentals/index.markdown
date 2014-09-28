@@ -15,7 +15,6 @@ authors:
   - petelepage
 id: rwd-fundamentals
 collection: multi-device-layouts
-
 key-takeaways:
   set-viewport:
     - Use meta viewport tag to control the width and scaling of the browsers viewport.
@@ -37,6 +36,9 @@ key-takeaways:
 remember:
   use-commas:
     - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple19
 ---
 {% wrap content %}
 

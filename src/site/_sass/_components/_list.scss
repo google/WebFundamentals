@@ -591,7 +591,7 @@ ol.list-links {
 
       &:before {
         counter-increment: list;
-        content: "0" counter(list);
+        content: counter(list, decimal-leading-zero);
         color: inherit;
         font-weight: 400;
         display: inline-block;
@@ -718,7 +718,7 @@ ol.list-links {
 
       &:before {
         counter-increment: list;
-        content: "0" counter(list);
+        content: counter(list, decimal-leading-zero);
         color: inherit;
         font-weight: 400;
         display: inline-block;

@@ -1,11 +1,11 @@
 ---
 layout: article
 title: "Implement Custom Gestures"
-description: "Using touch events you can create custom interactions for your UI. The question is how can you do this efficiently, keeping your frame rate high and your users happy."
-introduction: "If you have an idea for custom interactions and gestures for your site there are two topics to keep in mind, how do I support the range of mobile browsers and how do I keep my frame rate high. In this article we'll look at exactly this."
+description: "Using touch events, you can create custom interactions for your UI. The question is how can you do this efficiently, keeping your frame rate high and your users happy."
+introduction: "If you have an idea for custom interactions and gestures for your site, there are two topics to keep in mind: how to support the range of mobile browsers and how to keep your frame rate high. In this article, we'll look at exactly these topics."
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-09-19
   order: 2
 authors:
   - mattgaunt
@@ -132,8 +132,9 @@ Mouse events follow this same pattern since it’s easy for a user to
 accidentally move the mouse outside of the element, which results in the move
 events no longer firing. By adding the move event to the document, we'll continue to get mouse movements regardless of where they are on the page.
 
-You can use the `"Show potential scroll bottlenecks"` feature in Chrome DevTools
-to show how the touch events behave:
+You can use the
+[Show potential scroll bottlenecks](https://developer.chrome.com/devtools/docs/rendering-settings#show-potential scroll bottlenecks)
+feature in Chrome DevTools to show how the touch events behave:
 
 <img class="g-medium--full g-wide--full" src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools">
 
