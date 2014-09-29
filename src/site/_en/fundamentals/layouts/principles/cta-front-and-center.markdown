@@ -43,7 +43,7 @@ placement.
 </div>
 
 When users get to a site, they typically have a particular task in mind.  The 
-site on the left only only offers users a Learn more button, while on the right, 
+site on the left only offers users a Learn more button, while on the right, 
 users are able to quickly get a quote, find a local agent, make a payment or log 
 in.
 
