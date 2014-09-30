@@ -24,7 +24,7 @@ notes:
 ## PageSpeed Insights
 
 PageSpeed Insights is a tool which gives you a list of optimisations you can
-make to your site to improve a pages load time and highlights any common design
+make to your site to improve page load time and highlights any common design
 problems to improve the user experience.
 
 The speed problems will generally fall into categories which can be solved at
@@ -42,7 +42,7 @@ To see how the Grunt and Gulp tasks can be used to improve your PageSpeed score,
 You might want to think of WebPageTest as being the advanced version of
 PageSpeed Insights.
 
-[WebPageTest.org](http://webpagetest.org) is a fantastic tool for testing you
+[WebPageTest.org](http://webpagetest.org) is a fantastic tool for testing your
 site's performance, testing over multiple runs where you can define the network
 speed, location of request and even the see the performance of a repeat view.
 

@@ -81,7 +81,7 @@ Write CSS, ignoring vendor prefixes and when you want to add them, hit
 \`ctrl+shift+p\` and type \`Autoprefix CSS\`.
 
 [We cover how you can automate this in your build
-process](https://docs.google.com/a/google.com/document/d/1LdIDK-AsBEuoCz-q5JjlNNJax16kGjtgse-VgoHuyO8/edit#heading=h.fpo2ow8ffilz),
+process]({{site.baseurl}}/fundamentals/tools/build/setupbuildprocess.html),
 that way your CSS stays lean and you don't need to remember to hit
 'ctrl+shift+p\`.
 

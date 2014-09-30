@@ -31,7 +31,7 @@ notes:
 
 One of the simplest ways to test on a real device is to simply find the IP
 address of your computer, run your web server and then point your mobile devices
-to your computers IP address.
+to your computer's IP address.
 
 Every OS has a different way of finding out your IP address. If you spot
 the network panel on your computer, that will be the easiest way to find your
@@ -42,7 +42,7 @@ users can run \`ipconfig\` from the command prompt.
 
 ## Test on Mobile Using Port Forwarding
 
-It's often easier and more flexible to test your using Chromes Port Forwarding
+It's often easier and more flexible to test your site using Chromes Port Forwarding
 feature. This shares localhost sites from your computer, to your phone over
 USB.
 
@@ -75,7 +75,7 @@ server is on as well as a localhost port on your phone.
 
 <img src="imgs/port-forwarding-dialog.png" alt="Port Forwarding Settings" />
 
-Make sure 'Enable port forwarding' is checked at the bottom.Press 'Done' and
+Make sure 'Enable port forwarding' is checked at the bottom. Press 'Done' and
 you'll be able to open http://localhost:3000 on your mobile device and see your
 site.
 

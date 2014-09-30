@@ -13,7 +13,7 @@ authors:
   - mattgaunt
 key-takeaways:
   emulator:
-    - Quickly test your sites responsiveness and support for mobile API's using DevTools emulation.
+    - Quickly test your site's responsiveness and support for mobile APIs using DevTools emulation.
 notes:
     - TBD.
 ---
@@ -43,7 +43,7 @@ You can activate device emulation by following these four steps:
 
 <img src="imgs/chrome-devtools-emulation.png" alt="Chrome DevTools Emulation Guide" />
 
-## FireFox Responsive View
+## Firefox Responsive View
 
 Firefox has a responsive design mode which encourages you stop thinking in terms
 of specific devices and instead explore how your design changes at common screen
@@ -57,7 +57,7 @@ to resize it, illustrated in step 2.
 
 ## IE Device Emulation
 
-IE11 has a feature where you can change the viewport to match a Window Phone as
+IE11 has a feature where you can change the viewport to match a Windows Phone as
 well as test how your site on older versions of IE.
 
 To change the emulated browser do the following:
