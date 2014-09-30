@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Set Up Your Build Process"
-description: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, [minify](http://en.wikipedia.org/wiki/Minification_(programming)) them, [concatenate](http://en.wikipedia.org/wiki/Concatenation) / merge them and optimise files like images."
-introduction: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, [minify](http://en.wikipedia.org/wiki/Minification_(programming)) them, [concatenate](http://en.wikipedia.org/wiki/Concatenation) / merge them and optimise files like images."
+description: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, minify them, concatenate / merge them and optimise files like images."
+introduction: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, minify them, concatenate / merge them and optimise files like images."
 article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
@@ -10,7 +10,7 @@ article:
 collection: build-your-site
 key-takeaways:
   build-process:
-    - Your build process tools must optimize for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
+    - Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
     - Use tools like LiveReload to make your development process smoother.
 notes:
   tbd:
@@ -119,7 +119,7 @@ For Minification you can use the following.
   </tbody>
 </table>
 
-For catenation, you can use the following:
+For concatenation, you can use the following:
 
 <table class="table-3 tc-heavyright">
   <colgroup>
@@ -209,7 +209,8 @@ you.
 
 ### Never Leave Your Text Editor with Live Reloading
 
-Use live reloading once, and you won't be able to live without it.
+Live reloading updates your site in your browser each time your make a change.
+After using it once, you won't be able to live without it. 
 
 Web Starter Kit uses browser-sync for Live Reload support and Yeoman's webapp
 generator uses Live Reload in Grunt.

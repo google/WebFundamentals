@@ -17,8 +17,6 @@ notes:
 ---
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
 If you're on a Mac, try out the Network Link Conditioner found in the Lion
 Developer Tools.
 This can be installed by going opening Xcode, go to the menu item &gt; Open
