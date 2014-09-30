@@ -223,6 +223,22 @@ agektmr:
   email: agektmr@google.com
   description: "Eiji is a Developer Advocate"
 
+jeokrang:
+  name:
+    given: Hunmin
+    family: Kim
+  org:
+    name: NHN Technology Services
+    unit: Front-End Development Team
+  country: Korea
+  role:
+    - translator
+  homepage: http://huns.me
+  google: +jeokrang
+  twitter:
+  email: jeokrang@gmail.com
+  description: "Hunmin is a Web Front-End Developer"
+
 greenido:
   name:
     given: Ido
