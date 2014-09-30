@@ -38,7 +38,7 @@ notes:
   synthesis:
     - "For best consistency and visual results you should not rely on font synthesis. Instead, minimize the number of used font variants and specify their locations, such that the browser can download them when they are used on the page. That said, in some cases a synthesized variant <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>may be a viable option</a> - use with caution."
   webfontloader:
-    - "Font Loading API is still <a href='http://caniuse.com/#feat=font-loading'>under development in some browsers</a>. For browsers that do not support it, the <a href='https://github.com/typekit/webfontloader'>webfontloader library</a> provides similar API and functionality, albeit with the overhead of an additional JavaScript dependency."
+    - "Font Loading API is still <a href='http://caniuse.com/#feat=font-loading'>under development in some browsers</a>. Consider using the <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a>, or the <a href='https://github.com/typekit/webfontloader'>webfontloader library</a>, to deliver similar functionality, albeit with the overhead of an additional JavaScript dependency."
   font-inlining: 
     - "Use inlining selectively! Recall that the reason @font-face uses lazyload behavior is to avoid downloading unnecessary font variants and subsets. Also, increasing the size of your CSS via aggressive inlining will negatively impact your <a href='/web/fundamentals/performance/critical-rendering-path/'>critical rendering path</a> - the browser must download all CSS before it can construct the CSSOM, build the render tree, and render page contents to the screen."
 ---
