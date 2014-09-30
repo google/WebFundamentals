@@ -1,8 +1,10 @@
 ---
 layout: article
 title: "Use DevTools Emulation"
-description: "Learn how to use browser emulation tools to test a range of device features."
-introduction: "Learn how to use browser emulation tools to test a range of device features."
+description: "When you don’t have a particular device, or want to do a spot check on something,
+the best option is to emulate the device right inside your browser."
+introduction: "When you don’t have a particular device, or want to do a spot check on something,
+the best option is to emulate the device right inside your browser."
 article:
   written_on: 2014-05-29
   updated_on: 2014-09-25
@@ -19,16 +21,13 @@ notes:
 ---
 {% wrap content %}
 
+Browser emulation is great for testing site responsiveness, but they don’t
+emulate differences in API and CSS support. Test your site on browsers running
+on the devices to be certain everything behaves as expected.
+
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.emulator %}
-
-When you don’t have a particular device, or want to do a spot check on something,
-the best option is to emulate the device right inside your browser.
-
-Browser emulators are great for testing site responsiveness, but they don’t
-emulate differences in API and CSS support. Test your site on browsers running
-on the devices to be certain everything behaves as expected.
 
 ## Chrome DevTools Emulation
 
@@ -38,7 +37,7 @@ You can activate device emulation by following these four steps:
 
 1. With Chrome DevTools open, click the arrow icon with three horizontal lines
 2. Click the mobile device in the top left.
-3. Select the 'emulation' tab at the bottom.
+3. Select the `Emulation` tab at the bottom.
 4. Then select the device you want to test against from the drop down.
 
 <img src="imgs/chrome-devtools-emulation.png" alt="Chrome DevTools Emulation Guide" />
