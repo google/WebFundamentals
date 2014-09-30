@@ -73,9 +73,9 @@ server is on as well as a localhost port on your phone.
 
 <img src="imgs/port-forwarding-dialog.png" alt="Port Forwarding Settings" />
 
-Make sure 'Enable port forwarding' is checked at the bottom. Press 'Done' and
-you'll be able to open http://localhost:3000 on your mobile device and see your
-site.
+Make sure the 'Enable port forwarding' checkbox at the bottom of the popup
+is checked. Press 'Done' and you'll be able to open http://localhost:3000 on
+your mobile device and see your site.
 
 ## Using DevTools for Mobile Browsers
 
@@ -85,7 +85,7 @@ DevTools to help debug problems.
 ### Chrome for Android
 
 You can use Chrome DevTools with Chrome for Android by setting up your device
-for development and then visiting chrome://inspect. [Check out our Chrome
+for development and then visiting `chrome://inspect`. [Check out our Chrome
 docs](https://developer.chrome.com/devtools/docs/remote-debugging) on how to set
 all of this up.
 
@@ -98,7 +98,7 @@ To debug Safari for iOS, follow these steps:
 1. Open Safari on your iOS device.
 1. Connect it to your computer via USB.
 1. Open Safari on your computer.
-1. In Safari's menu, go to "Develop" and, look for your devices name .
+1. In Safari's menu, go to `Develop` and, look for your devices name.
 1. Select the tab you want to debug.
 
 <img src="imgs/ios-safari-debugging.png" alt="Safari iOS Debugging Menu" />
