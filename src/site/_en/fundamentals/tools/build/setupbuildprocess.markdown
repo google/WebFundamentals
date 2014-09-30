@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Set Up Your Build Process"
+title: "Add a Build Process"
 description: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, minify them, concatenate / merge them and optimise files like images."
 introduction: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, minify them, concatenate / merge them and optimise files like images."
 article:
@@ -210,7 +210,7 @@ you.
 ### Never Leave Your Text Editor with Live Reloading
 
 Live reloading updates your site in your browser each time your make a change.
-After using it once, you won't be able to live without it. 
+After using it once, you won't be able to live without it.
 
 Web Starter Kit uses browser-sync for Live Reload support and Yeoman's webapp
 generator uses Live Reload in Grunt.

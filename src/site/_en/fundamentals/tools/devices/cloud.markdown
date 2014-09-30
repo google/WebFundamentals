@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Cloud Based Testing"
+title: "Use Cloud Based Emulators and Devices"
 description: "If you can’t use the simulators for whatever reason or all of the above looks a bit scary, then cloud based simulators are the next best thing."
 introduction: "If you can’t use the simulators for whatever reason or all of the above looks a bit scary, then cloud based simulators are the next best thing."
 article:

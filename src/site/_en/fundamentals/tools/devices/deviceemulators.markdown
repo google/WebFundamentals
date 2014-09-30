@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Use Device Emulators for Easy Local Testing"
+title: "Use Device Emulators"
 description: ""
 introduction: ""
 article:

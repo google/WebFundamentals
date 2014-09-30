@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Use Browser Emulation"
+title: "Use DevTools Emulation"
 description: "Learn how to use browser tools to test your site for a range of emulated device features."
 introduction: "Learn how to use browser tools to test your site for a range of emulated device features."
 article:
