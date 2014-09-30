@@ -76,7 +76,7 @@ test your site on the old Stock Browser for Android.
 
 <img src="imgs/android-emulator-stock-browser.png" alt="Android Emulator Stock Browser Screenshot" />
 
-### Test with Chromes Content Shell
+## Chromes Content Shell on Android
 
 To install the Chromium Content Shell for Android, leave your emulator running
 and run the following commands in a terminal:
@@ -90,7 +90,23 @@ Now you can test your site with the Chromium Content Shell.
 
 <img src="imgs/android-avd-contentshell.png" alt="Android Emulator Content Shell" />
 
-### iOS Simulator
+## Firefox on Android
+
+Similar to Chromium's Content Shell, you can get an APK to install Firefox onto
+the emulator.
+
+Open the URL below, select the right language and download the  .apk file.
+
+[https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/](https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/)
+
+From here, you can install the file onto an open emulator or connected Android
+device with the following command:
+
+adb install &lt;path to apk&gt;/fennec-XX.X.XX.android-arm.apk
+
+<img src="imgs/ff-on-android-emulator.png" alt="Firefox Icon on Android Emulator" />
+
+## iOS Simulator
 
 The iOS simulator for Mac OS X comes with XCode, which you can [install from the
 App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
@@ -109,23 +125,7 @@ Simulator, open the iOS simulator as above, then right click the iOS Simulator
 icon in your dock and select 'Keep in Dock'. Just click this icon whenever you
 need it.
 
-#### Firefox on Android
-
-Similar to Chromium's Content Shell, you can get an APK to install Firefox onto
-the emulator.
-
-Open the URL below, select the right language and download the  .apk file.
-
-[https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/](https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/)
-
-From here, you can install the file onto an open emulator or connected Android
-device with the following command:
-
-adb install &lt;path to apk&gt;/fennec-XX.X.XX.android-arm.apk
-
-<img src="imgs/ff-on-android-emulator.png" alt="Firefox Icon on Android Emulator" />
-
-### Modern.IE
+## Modern.IE
 
 The final set of emulators worth mentioning are the Modern.IE Virtual Machines
 which give you access different versions of IE on your computer via VirtualBox
