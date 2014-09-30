@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Test Against Mobile Network Conditions"
-description: "It’s easy to overlook the network conditions your users will face on mobile. Use tools to emulate different network conditions and your users will thank you."
-introduction: "It’s easy to overlook the network conditions your users will face on mobile. Use tools to emulate different network conditions and your users will thank you."
+description: "It’s easy to overlook the network conditions your users will face on mobile. Use tools to emulate different network conditions, fix up any load time issues and your users will thank you."
+introduction: "It’s easy to overlook the network conditions your users will face on mobile. Use tools to emulate different network conditions, fix up any load time issues and your users will thank you."
 article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
@@ -17,17 +17,17 @@ notes:
 ---
 {% wrap content %}
 
-If you're on a Mac, try out the Network Link Conditioner found in the Lion
+If you're on a Mac, try out the Network Link Conditioner tool found in the Lion
 Developer Tools.
+
 This can be installed by doing the following:
 
 1. Open Xcode
-2. Select the following from the menu: ` XCode &gt; Open
-Developer Tool &gt; More Developer Tools
+2. Select the following from the menu: `XCode > Open Developer Tool > More Developer Tools`
 3. When the Apple Developer site opens, go to `Hardware IO Tools for Xcode` and
 download the Network Link Conditioner dmg file.
 4. Once the dmg is downloaded, double click the file and then select the Network
-Link Conditioner.prefpane and select 'Install' on the System Preferences window.
+Link Conditioner.prefpane and select `Install` on the System Preferences window.
 
 After installation, the panel will open and you'll see a drop-down listing a number of
 preconfigured network scenarios including 3G and EDGE. Select one, turn the tool
