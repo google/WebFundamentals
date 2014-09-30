@@ -11,7 +11,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-04-30
-  updated_on: 2014-08-13
+  updated_on: 2014-09-30
   order: 1
 collection: images
 key-takeaways:
@@ -25,11 +25,11 @@ key-takeaways:
       image to use when choosing from different densities.
 remember:
   picture-support:
-    - The <code>picture</code> element is still <b>under development</b> and
-      as of June 2014 is only available in nightlies.  Because of it’s strong 
-      backward compatibility and the
-      <a href="http://picturefill.responsiveimages.org/">Picturefill polyfill</a>,
-      we have included it now and recommend you use it with caution. 
+    - The <code>picture</code> element is beginning to land in browsers.
+      Although it's not available in every browser yet, we recommend it's
+      use because of the strong backward compatibility and potential use 
+      of the 
+      <a href="http://picturefill.responsiveimages.org/">Picturefill polyfill</a>.
       See the <a href="http://responsiveimages.org/#implementation">
       ResponsiveImages.org</a> site for further details. 
   compressive:
@@ -88,12 +88,24 @@ screen readers and other assistive technologies.
 
 ## Enhance `img`'s with `srcset` for high DPI devices
 
-The `srcset` attribute enhances the behavior of the `img` element, making it 
-easy to provide multiple image files for different device characteristics. 
-Similar to the `image-set` [CSS function](images-in-css.html#use-image-set-to-provide-high-res-images) native to CSS, `srcset` allows the browser to choose the best 
-image depending on the characteristics of the device, for example using a 2x 
-image on a 2x display, and potentially in the future, a 1x image on a 2x 
-device when on a limited bandwidth network.
+<div class="clear">
+  <div class="g--half">
+    <p>
+      The <code>srcset</code> attribute enhances the behavior of the 
+      <code>img</code> element, making it easy to provide multiple image files 
+      for different device characteristics. Similar to the <code>image-set</code>
+      <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS function</a>
+      native to CSS, <code>srcset</code> allows the browser to choose the best 
+      image depending on the characteristics of the device, for example using 
+      a 2x image on a 2x display, and potentially in the future, a 1x image on 
+      a 2x device when on a limited bandwidth network.
+    </p>
+  </div>
+
+  <div class="g--half g--last">
+    {% include modules/video.liquid id="Pzc5Dly_jEM" %}
+  </div>
+</div>
 
 {% highlight html %}
 <img src="photo.png" srcset="photo@2x.png 2x" ...>
@@ -113,10 +125,11 @@ the attribute.
 
 ## Art direction in responsive images with `picture`
 
-Changing images based on device characteristics, also known as art direction
-can be accomplished using the picture element.  The `picture` element defines
-a declarative solution for providing multiple versions of an image based on
-different characteristics, like device size, device resolution, orientation,
+Changing images based on device characteristics, also known as art
+direction can be accomplished using the picture element.  The 
+<code>picture</code> element defines a declarative solution for 
+providing multiple versions of an image based on different 
+characteristics, like device size, device resolution, orientation,
 and more.
 
 <img class="center" src="img/art-direction.png" alt="Art direction example"
@@ -124,11 +137,21 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 {% include modules/remember.liquid title="Important" list=page.remember.picture-support %}
 
-The `picture` element should be used when an image source exists in multiple
-densities, or when a responsive design dictates a somewhat different image on
-some types of screens.  Similar to the `video` element, multiple `source`
-elements can be included, making it possible to specify different image files
-depending on media queries or image format.
+<div class="clear">
+  <div class="g--half">
+    <p>
+      The <code>picture</code> element should be used when an image source 
+      exists in multiple densities, or when a responsive design dictates a 
+      somewhat different image on some types of screens.  Similar to the 
+      <code>video</code> element, multiple <code>source</code> elements can 
+      be included, making it possible to specify different image files
+      depending on media queries or image format.
+    </p>
+  </div>
+  <div class="g--half g--last">
+    {% include modules/video.liquid id="QINlm3vjnaY" %}
+  </div>
+</div>
 
 {% include_code _code/media.html picture html %}
 
