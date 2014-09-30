@@ -30,19 +30,19 @@
 <meta name="google-site-verification" content="zFM_etMkM6oOvH6CNip7QxEbslAw6kJ2kiGJBYYBIcA" />
 
 {% if page.thumbnail %}<meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
-<meta property="twitter:account_id" content="@chromiumdev" />
-<meta property="twitter:site" content="@chromiumdev" />
-<meta property="twitter:description" content="{{page.description}}" />
-{% if main_author.twitter %}<meta property="twitter:creator" content="{{ main_author.twitter }}" />{% else %}<meta property="twitter:creator" content="@chromiumdev" />{% endif%}
+<meta name="twitter:account_id" content="@chromiumdev" />
+<meta name="twitter:site" content="@chromiumdev" />
+<meta name="twitter:description" content="{{page.description}}" />
+{% if main_author.twitter %}<meta name="twitter:creator" content="{{ main_author.twitter }}" />{% else %}<meta name="twitter:creator" content="@chromiumdev" />{% endif%}
 {% if page.thumbnail %}<meta name="twitter:image:src" content="https://developers.google.com/{{site.baseurl}}{{ page.filepath }}/{{ page.thumbnail }}" />
-{% else %}<meta property="twitter:image:src" content="https://developers.google.com/web/fundamentals/imgs/logo.png" />{% endif %}
+{% else %}<meta name="twitter:image:src" content="https://developers.google.com/web/imgs/logo.png" />{% endif %}
 
 
 {% if main_author.google %}<link rel="author" href="https://plus.google.com/{{ main_author.google }}/posts">{% endif %}
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
 
 <meta itemprop="name" content="{{ page_title }}">
-<link itemprop="image" href="/imgs/logo.png">
+{% if page.thumbnail %}<link itemprop="image" href="https://developers.google.com/{{site.baseurl}}{{ page.filepath }}/{{ page.thumbnail }}">{% else %}<link itemprop="image" href="https://developers.google.com/web/imgs/logo.png">{% endif %}
 <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Google Web Fundamentals{% endif %}">
 
 <meta property="og:site_name" content="Web Fundamentals" />
@@ -50,7 +50,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://developers.google.com/web/fundamentals/" />
 {% if page.snippet_img %}<meta property="og:image" content="https://developers.google.com/{{site.fundamentals}}{{ page.filepath }}/{{ page.thumbnail }}" />
-{% else %}<meta property="og:image" content="https://developers.google.com/web/fundamentals/imgs/logo.png" />{% endif %}
+{% else %}<meta property="og:image" content="https://developers.google.com/web/imgs/logo.png" />{% endif %}
 <meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
 {% if main_author.facebook %}<meta property="og:author" content="{{ main_author.facebook }}" />{% endif %}
 
