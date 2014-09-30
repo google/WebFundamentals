@@ -78,12 +78,12 @@ If you want a quick way to add vendor prefixes to your CSS, you can do so with
 this handy plugin.
 
 Write CSS, ignoring vendor prefixes and when you want to add them, hit
-\`ctrl+shift+p\` and type \`Autoprefix CSS\`.
+`ctrl+shift+p` and type `Autoprefix CSS`.
 
 [We cover how you can automate this in your build
 process]({{site.baseurl}}/fundamentals/tools/build/setupbuildprocess.html),
 that way your CSS stays lean and you don't need to remember to hit
-'ctrl+shift+p\`.
+`ctrl+shift+p`.
 
 <img src="imgs/sublime-autoprefixer.gif" alt="Sublime Autoprefixer Plugin Example" />
 
@@ -99,13 +99,13 @@ restart your machine to get it working).
 
 #### ColorPicker
 
-Pick any color from the palette and add it to your CSS with \`ctrl+shift+c\`.
+Pick any color from the palette and add it to your CSS with `ctrl+shift+c`.
 
 <img src="imgs/sublime-color-picker.png" alt="Sublime Color Picker Plugin" />
 
 #### Emmet
 
-Adds some useful keyboard shortcuts and snippets to your text editor. Check out
+Add some useful keyboard shortcuts and snippets to your text editor. Check out
 the video on [Emmet.io](http://emmet.io/) for an intro into what it can do (a
 personal favorite is the 'Toggle Comment' command).
 
@@ -113,7 +113,7 @@ personal favorite is the 'Toggle Comment' command).
 
 #### Git Gutter
 
-Adds a marker in the gutter wherever there is a change made to the file.
+Add a marker in the gutter wherever there is a change made to the file.
 
 <img src="imgs/sublime-git-gutter.png" alt="Screenshot of the Sublime Git Gutter Plugin" />
 

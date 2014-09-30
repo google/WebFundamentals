@@ -27,7 +27,7 @@ notes:
 
 ## Connect to a Local Server
 
-One of the simplest ways to test on a real device is to simply find the IP
+One of the simplest ways to test on a real device, is to simply find the IP
 address of your computer, run your web server and then point your mobile devices
 to your computer's IP address.
 
@@ -35,8 +35,8 @@ Every OS has a different way of finding out your IP address. If you spot
 the network panel on your computer, that will be the easiest way to find your
 local IP address.  
 
-OS X and Ubuntu users can always run \`ifconfig\` from the terminal; Windows
-users can run \`ipconfig\` from the command prompt.
+OS X and Ubuntu users can always run `ifconfig` from the terminal; Windows
+users can run `ipconfig` from the command prompt.
 
 ## Use Port Forwarding to Connect to Your Server
 
@@ -45,19 +45,19 @@ feature. This shares localhost sites from your computer, to your phone over
 USB.
 
 The first step is to enable USB debugging on your Android device. Go to
-**Settings &gt; About Phone** and tap the **Build number** seven times (yes
-seven times). Then return back to the **Settings** screen and select **Developer
+**Settings &gt; About Phone** and tap the **Build number** seven times. Then
+return back to the **Settings** screen and select **Developer
 Options**.
 
 <div class="media media--video">
   <iframe src="//www.youtube.com/embed/06k_hSKZvbo?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-In Developer Options make sure the **USB debugging** is checked.
+In Developer Options, make sure the **USB debugging** is checked.
 
 <img src="imgs/usb_debugging_on.png" alt="Enable USB Debugging" />
 
-Now double check that your site running locally. In this example we have a
+Check your site running locally. In this example we have a
 server running on port **3000**, so the URL is
 [http://localhost:3000/](http://localhost:3000/):
 
@@ -68,7 +68,7 @@ phone in over USB.
 
 <img src="imgs/chrome-inspect.png" alt="Chrome Inspect Screenshot" />
 
-Clicking on the \`Port Forwarding\` button will allow you to enter the port your
+Clicking on the `Port Forwarding` button will allow you to enter the port your
 server is on as well as a localhost port on your phone.
 
 <img src="imgs/port-forwarding-dialog.png" alt="Port Forwarding Settings" />

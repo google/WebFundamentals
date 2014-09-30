@@ -19,14 +19,17 @@ notes:
 
 If you're on a Mac, try out the Network Link Conditioner found in the Lion
 Developer Tools.
-This can be installed by going opening Xcode, go to the menu item &gt; Open
-Developer Tool &gt; More Developer Tools. This will open the Apple Developer
-site, then go to \`Hardware IO Tools for Xcode\` and download the dmg file.
+This can be installed by doing the following:
 
-Once the dmg is downloaded, double click the file and then select the Network
+1. Open Xcode
+2. Select the following from the menu: ` XCode &gt; Open
+Developer Tool &gt; More Developer Tools
+3. When the Apple Developer site opens, go to `Hardware IO Tools for Xcode` and
+download the Network Link Conditioner dmg file.
+4. Once the dmg is downloaded, double click the file and then select the Network
 Link Conditioner.prefpane and select 'Install' on the System Preferences window.
 
-This will then launch the panel and you'll see a drop-down listing a number of
+After installation, the panel will open and you'll see a drop-down listing a number of
 preconfigured network scenarios including 3G and EDGE. Select one, turn the tool
 on and your connection to the internet will be the selected speed, meaning
 you'll be able to test for different network types.

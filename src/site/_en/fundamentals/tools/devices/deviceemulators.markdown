@@ -21,14 +21,13 @@ notes:
 ## Android Emulator
 
 There is a word of warning to be said about the Android emulator. At the moment,
-there is no way to install Chrome on an Android emulator. You can test the
-Android Browser, which ships by default on older versions of Android and the
-Android emulator.
+there is no way to install Chrome on an Android emulator. However, you can use the
+Android Browser, the Chrome Content Shell and Firefox Android which we'll cover
+in this guide.
 
-To test for Chrome on Android, you can use the Chromium Content Shell, which
-uses the same Chrome rendering engine, but comes without any of the browser
-specific features, which we'll demonstrate below.
-<!-- No converter for: PAGE_BREAK -->
+Chromium Content Shell uses the same Chrome rendering engine, but comes without any of the browser
+specific features.
+
 The Android emulator comes with the Android SDK which you need to [download from
 here](http://developer.android.com/sdk/installing/studio.html).
 
@@ -46,13 +45,61 @@ set-up to emulate a Nexus 5.
 Initially you'll be present with a somewhat scary form, but most items are
 simple:
 
-1. AVD Name: What would you like to call the emulator. Include the device name
-   as well as what version of Android you apply to it
-2. Device: This will give you a set of default devices you can use.
-3. CPU/ABI: To test the Chrome Content Shell you need to select ARM.
-4. Use Host GPU: This is important as it can drastically improve the emulators
-   performance.
-5. The other fields are optional as to whether you fill them in or not.
+<table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th data-th="Label">Label</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Label">
+        AVD Name
+      </td>
+      <td data-th="Description">
+        What would you like to call the emulator. Include the device name
+           as well as what version of Android you apply to it
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Label">
+        Device
+      </td>
+      <td data-th="Description">
+        This will give you a set of default devices you can use.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Label">
+        CPU/ABI
+      </td>
+      <td data-th="Description">
+        To test the Chrome Content Shell you need to select ARM.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Label">
+        Use Host GPU
+      </td>
+      <td data-th="Description">
+        This is important as it can drastically improve the emulators performance.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Label">
+        Other
+      </td>
+      <td data-th="Description">
+        The other fields are optional as to whether you fill them in or not.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <img src="imgs/android-avd-filled-in.png" alt="Android AVD Filled In" />
 
@@ -65,9 +112,9 @@ listed. Select it and click start.
 
 <img src="imgs/android-avd-result.png" alt="Android AVD Confirmation Dialog" />
 
-A dialog will pop with some options.You may wish to select the \`scale display
-to real size\` so that the emulator doesn't fill up your computer screen;
-otherwise click \`Launch\`.
+A dialog will pop with some options.You may wish to select the `scale display
+to real size` so that the emulator doesn't fill up your computer screen;
+otherwise click `Launch`.
 
 <img src="imgs/android-avd-launch.png" alt="Android AVD Launch Dialog" />
 
@@ -76,15 +123,14 @@ test your site on the old Stock Browser for Android.
 
 <img src="imgs/android-emulator-stock-browser.png" alt="Android Emulator Stock Browser Screenshot" />
 
-## Chromes Content Shell on Android
+## Chromium Content Shell on Android
 
 To install the Chromium Content Shell for Android, leave your emulator running
 and run the following commands in a terminal:
 
-git clone
-[https://github.com/PaulKinlan/chromium-android-installer.git](https://github.com/PaulKinlan/chromium-android-installer.git)
-chmod u+x ./chromium-android-installer/\*.sh
-./chromium-android-installer/install-chromeandroid.sh
+    git clone https://github.com/PaulKinlan/chromium-android-installer.git
+    chmod u+x ./chromium-android-installer/\*.sh
+    ./chromium-android-installer/install-chromeandroid.sh
 
 Now you can test your site with the Chromium Content Shell.
 
@@ -97,12 +143,12 @@ the emulator.
 
 Open the URL below, select the right language and download the  .apk file.
 
-[https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/](https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/)
+    https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/
 
 From here, you can install the file onto an open emulator or connected Android
 device with the following command:
 
-adb install &lt;path to apk&gt;/fennec-XX.X.XX.android-arm.apk
+    adb install &lt;path to apk&gt;/fennec-XX.X.XX.android-arm.apk
 
 <img src="imgs/ff-on-android-emulator.png" alt="Firefox Icon on Android Emulator" />
 
@@ -111,8 +157,8 @@ adb install &lt;path to apk&gt;/fennec-XX.X.XX.android-arm.apk
 The iOS simulator for Mac OS X comes with XCode, which you can [install from the
 App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
 
-To open the iOS Simulator, open Xcode, go to \`Xcode\` in the top menu &gt;
-\`Open Developer Tool\` and select iOS Simulator.
+To open the iOS Simulator, open Xcode, go to `Xcode` in the top menu &gt;
+`Open Developer Tool` and select iOS Simulator.
 
 <img src="imgs/xcode-ios-simulator.png" alt="Xcode Menu for iOS Simulator" />
 
@@ -127,15 +173,12 @@ need it.
 
 ## Modern.IE
 
-The final set of emulators worth mentioning are the Modern.IE Virtual Machines
-which give you access different versions of IE on your computer via VirtualBox
-(or VMWare). Head over to the [download page
-here](https://modern.ie/en-us/virtualization-tools#downloads) to get up and
-running.
+Modern.IE Virtual Machines let you access different versions of IE on your
+computer via VirtualBox (or VMWare). Choose a machine on the [download page
+here](https://modern.ie/en-us/virtualization-tools#downloads).
 
-It's worth mentioning that in the IE11 VM, you can actually test different
-versions of IE by changing the 'Document Mode'. They may not be perfect
-representation's but they are fairly close.
+It's worth mentioning that in the IE11 VM, you can test different
+versions of IE by changing the 'Document Mode', see [this section for more info.]({{site.baseurl}}/fundamentals/tools/devices/browseremulation.html#ie-device-emulation)
 
 <img src="imgs/modern-ie-simulator.png" alt="Modern IE VM" />
 
