@@ -5,7 +5,7 @@ description: "Typography is fundamental to good design, branding, readability, a
 introduction: "Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly, providing consistent and sharp text rendering regardless of the screen size and resolution. Webfonts are critical to good design, UX, and performance."
 article:
   written_on: 2014-09-20
-  updated_on: 2014-09-23
+  updated_on: 2014-09-30
   order: 4
 collection: optimizing-content-efficiency
 authors:
@@ -25,14 +25,16 @@ key-takeaways:
     - "Font inlining allows us to override default lazyload font loading in older browsers"
 
 notes:
+  svg:
+    - "Technically, there is also the <a herf='http://caniuse.com/#feat=svg-fonts'>SVG font container</a>, but it was never supported by IE or Firefox, and is now deprecated in Chrome. As such, it is of limited use and we are intentionally omitting it in this guide."
   zopfli:
-    - "Consider using <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli compression</a> for SVG, EOT, TTF, and WOFF formats. Zopfli is a zlib compatible compressor that delivers ~5% filesize reduction over gzip."
+    - "Consider using <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli compression</a> for EOT, TTF, and WOFF formats. Zopfli is a zlib compatible compressor that delivers ~5% filesize reduction over gzip."
   local-fonts: 
     - "Unless you are referencing one of the default system fonts, in practice it is rare for the user to have it locally installed, especially on mobile devices, where it is effectively impossible to 'install' additional fonts. As a result, you should always provide a list of external font locations."
   font-order:
     - "The order in which the font variants are specified matters. The browser will pick the first format it supports. Hence, if you want the newer browsers to use WOFF2, then you should place WOFF2 declaration above WOFF, and so on."
   unicode-subsetting:
-    - "Unicode-range subsetting is particular important for Asian languages, where the number of glyphs is much larger than in western languages and a typical 'full' font is often measured in megabytes, instead of tens of kilobytes!"
+    - "Unicode-range subsetting is particularly important for Asian languages, where the number of glyphs is much larger than in western languages and a typical 'full' font is often measured in megabytes, instead of tens of kilobytes!"
   synthesis:
     - "For best consistency and visual results you should not rely on font synthesis. Instead, minimize the number of used font variants and specify their locations, such that the browser can download them when they are used on the page. That said, in some cases a synthesized variant <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>may be a viable option</a> - use with caution."
   webfontloader:
@@ -69,6 +71,9 @@ So, where does that leave us? There isn't a single format that works in all brow
 * Serve WOFF variant to majority of browsers
 * Serve TTF variant to old Android (below 4.4) browsers
 * Serve EOT variant to old IE (below IE9) browsers
+^
+
+{% include modules/remember.liquid title="Note" list=page.notes.svg %}
 
 ### Reducing font size with compression
 
@@ -368,7 +373,7 @@ Contrary to popular belief, use of webfonts does not need to delay page renderin
 That said, a naive implementation may incur large downloads and unnecessary delays. This is where we need to dust off our optimization toolkit and assist the browser by optimizing the font assets themselves and how they are fetched and used on our pages. 
 
 1. **Audit and monitor your font use:** do not use too many fonts on your pages, and for each font, minimize the number of used variants. This will assist in delivering a more consistent and a faster experience for your users.
-1. **Subset your font resources:** many fonts can be subset, or split into multiple unicode-ranges to deliver just the glyphs required by a particular page - this reduces the filesize and improves download speed of the resource. However, when defining the subsets be careful to optimize for font re-use - e.g. you don't want to download a different but overlapping set of characters on each page. A good practice is to subset based on language - e.g. Latin, Cyrillic, and so on.
+1. **Subset your font resources:** many fonts can be subset, or split into multiple unicode-ranges to deliver just the glyphs required by a particular page - this reduces the filesize and improves download speed of the resource. However, when defining the subsets be careful to optimize for font re-use - e.g. you don't want to download a different but overlapping set of characters on each page. A good practice is to subset based on script - e.g. Latin, Cyrillic, and so on.
 1. **Deliver optimized font formats to each browser:** each font should be provided in WOFF2, WOFF, EOT, and TTF formats. Make sure to apply GZIP compression to EOT and TTF formats, as they are not compressed by default.
 1. **Specify revalidation and optimal caching policies:** fonts are static resources that are infrequently updated. Make sure that your servers provide a long-lived max-age timestamp, and a revalidation token, to allow for efficient font re-use between different pages.
 1. **Use Font Loading API to optimize the Critical Rendering Path:** default lazyloading behavior may result in delayed text rendering. Font Loading API allows us to override this behavior for particular fonts, and to specify custom rendering and timeout strategies for different content on the page. For older browsers that do not support the API, you can use the webfontloader JavaScript library or use the CSS inlining strategy.
