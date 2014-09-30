@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Add a Build Process"
-description: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, minify them, concatenate / merge them and optimise files like images."
-introduction: "Every site should have a development version and a production version. The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on. A production version will take these files, minify them, concatenate / merge them and optimise files like images."
+description: "Every site should have a development version and a production version.<br /><br />The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.<br /><br />A production version will take these files, minify them, concatenate / merge them and optimise files like images."
+introduction: "Every site should have a development version and a production version.<br /><br />The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.<br /><br />A production version will take these files, minify them, concatenate / merge them and optimise files like images."
 article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
@@ -29,7 +29,7 @@ Before you start coding, you need to consider how to optimise and build the
 production version of your site. Setting up this workflow from the start
 prevents any nasty surprises at the end of the project and you can add tools
 into your workflow that speed up your development, doing the monotonous tasks
-for you. This is where a build process can help.
+for you.
 
 ## What Is a Build Process
 
@@ -44,7 +44,8 @@ command line tools. If you have no experience of either, use Gulp, we use it for
 [Web Starter Kit](https://developers.google.com/web/starter-kit/) and recommend
 you do the same.
 
-There are tools which have GUIs and may be a bit easier to get to grips with.
+There are tools which have GUIs and may be a bit easier to get to grips with but
+will be less flexible.
 
 <table class="table-2 tc-heavyright">
   <colgroup>
@@ -175,13 +176,14 @@ For concatentation, use the following:
   </tbody>
 </table>
 
+**Note**  
 You can use Sass by taking advantage of the 'import' feature ([See Web Starter
 Kit for an example](https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss)).
 
 ### Optimise Your Images
 
 Image optimisation is an important step to help speed up your site; you'd be
-surprise how much smaller you can make an image without losing quality. Meta
+surprised how much smaller you can make an image without losing quality. Meta
 data is removed from the image as it's not needed by the browser to display the
 image, for example, information about the camera used to take the photo.
 
@@ -231,7 +233,8 @@ include:
   </tbody>
 </table>
 
-Note: If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.baseurl}}/fundamentals/tools/setup/editor.html#autoprefixer) for
+**Note**  
+If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.baseurl}}/fundamentals/tools/setup/editor.html#autoprefixer) for
 you.
 
 ### Never Leave Your Text Editor with Live Reloading
@@ -239,8 +242,7 @@ you.
 Live reloading updates your site in your browser each time your make a change.
 After using it once, you won't be able to live without it.
 
-Web Starter Kit uses browser-sync for Live Reload support and Yeoman's webapp
-generator uses Live Reload in Grunt.
+Web Starter Kit uses browser-sync for Live Reload support.
 
 <table class="table-2 tc-heavyright">
   <colgroup>
@@ -261,7 +263,8 @@ generator uses Live Reload in Grunt.
   </tbody>
 </table>
 
-Note: If you like the idea of Live Reloading, but don't want to have a build
+**Note**  
+If you like the idea of Live Reloading, but don't want to have a build
 process, [Addy Osmani's write up on
 HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)
 covers a range of alternatives (some free and some commercial).
