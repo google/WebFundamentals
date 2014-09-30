@@ -14,8 +14,8 @@ authors:
 key-takeaways:
   editor:
     - Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code.
-    - Consider installing a package manager to make it easier to discover, install, and update plugins.
-    - Use the package manager to install plugins that help keep you productive during development; start with the recommendations in this guide.
+    - Make use of the package manager to make it easier to discover, install, and update plugins.
+    - Install plugins that help keep you productive during development; start with the recommendations in this guide.
 notes:
   blog:
     - Rob Dodson's <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> on how to get to know and love Sublime is a great reference for getting the most out of your editor. The concepts are relevant to any text editor, not just Sublime.
@@ -93,7 +93,7 @@ Gutter Color shows you a small color sample next to your CSS.
 
 <img src="imgs/sublime-gutter-color.png" alt="Sublime Gutter Color Screenshot" />
 
-The plugin requires ImageMagick. If you are an Mac OS X, we recommend trying the
+The plugin requires ImageMagick. If you are on Mac OS X, we recommend trying the
 installer from [CactusLabs](http://cactuslab.com/imagemagick/) (you may need to
 restart your machine to get it working).
 
@@ -113,7 +113,7 @@ personal favorite is the 'Toggle Comment' command).
 
 #### Git Gutter
 
-Add a marker in the gutter wherever there is a change made to the file.
+Add a marker in the gutter wherever there is a change made to a file.
 
 <img src="imgs/sublime-git-gutter.png" alt="Screenshot of the Sublime Git Gutter Plugin" />
 

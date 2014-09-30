@@ -32,9 +32,15 @@ notes:
 The easiest way create command-line shortcuts is to add aliases for common
 commands to your bashrc file. On Mac or Linux:
 
-1. From the command line anywhere, type `open -a 'Sublime Text' ~/.bashrc`.
-1. Add a new alias, for example, `alias master='git checkout master'`.
-1. Anytime you are in a directory with a git repo, you can run the command
+1. From the command line anywhere, type:
+
+        open -a 'Sublime Text' ~/.bashrc
+
+2. Add a new alias, for example:
+
+    alias master='git checkout master'
+
+3. Anytime you are in a directory with a git repo, you can run the command
    `master` and it will checkout the master branch for you.
 
 Note: See these instructions for [setting up Windows
@@ -79,10 +85,10 @@ These are a few commands that you may find useful.
 ## Save, Share and Sync Your Shortcuts
 
 Store your shortcuts and dot files on Github. The major gain with this is
-our shortcuts can be shared across devices and they are always backed up.
+your shortcuts can be shared across devices and they are always backed up.
 
 Github even created a [dedicated page for dotfiles](http://dotfiles.github.io/)
-and quite  a few of the Chrome Team have forked
+and quite a few of the Chrome Team have forked
 [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles).
 
 {% include modules/nextarticle.liquid %}

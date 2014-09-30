@@ -20,14 +20,14 @@ notes:
 ---
 {% wrap content %}
 
-{% include modules/toc.liquid %}
-
 Here are two Chrome Extensions that have some useful functionality to help with
-debugging and your designs.
+debugging your designs.
+
+{% include modules/toc.liquid %}
 
 ## Emmet Re:View
 
-Emmet review is a tool which makes it easy to see what your site looks like at
+Emmet Re:View is a tool which makes it easy to see what your site looks like at
 each of your media queries and syncs the scrolling of all the pages. You can see
 a demo of it [on their
 site](http://re-view.emmet.io/).
@@ -39,7 +39,7 @@ Store](https://chrome.google.com/webstore/detail/emmet-review/epejoicbhllgiimigo
 
 ## What Font?
 
-The last extension we use on a regular basis is What Font. This Chrome Extension
+The last extension we use on a regular basis is *What Font?*. This Chrome Extension
 will tell you the name of the font currently being used on the page. This is
 really handy for debugging any web font issues.
 
