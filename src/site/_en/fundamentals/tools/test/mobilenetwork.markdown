@@ -6,8 +6,8 @@ introduction: "It’s easy to overlook the network conditions your users will fa
 article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
-  order: 5
-collection: devices
+  order: 1
+collection: test
 authors:
   - megginkearney
   - mattgaunt

@@ -2,14 +2,11 @@
 layout: article
 title: "Test Your Deployed Site"
 description: ""
-introduction: "Once your site is deployed, check that your site is performing and acting as
-you'd expect. Running your site through these online tools gives you an overview
-of where your site can be improved as well as an indication as to what your
-users are experiencing when landing on your page."
+introduction: "Once your site is deployed, check that your site is performing and acting as you'd expect. Running your site through these online tools gives you an overview of where your site can be improved as well as an indication as to what your users are experiencing when landing on your page."
 article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
-  order: 1
+  order: 2
 collection: test
 authors:
   - mattgaunt
