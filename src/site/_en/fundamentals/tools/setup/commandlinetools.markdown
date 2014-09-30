@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Set Up Command Line Shortcuts"
-description: "Set up shortcuts for the command line tasks you user over and over again. If you find yourself typing the same thing in your command line over and over again then this will alleviate that."
-introduction: "Set up shortcuts for the command line tasks you user over and over again. If you find yourself typing the same thing in your command line over and over again then this will alleviate that."
+description: "Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that."
+introduction: "Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that."
 article:
   written_on: 2014-09-25
   updated_on: 2014-09-25
@@ -32,10 +32,10 @@ notes:
 The easiest way create command-line shortcuts is to add aliases for common
 commands to your bashrc file. On Mac or Linux:
 
-1. From the command line anywhere, type \`open -a 'Sublime Text' ~/.bashrc\`.
-1. Add a new alias, for example, \`alias master='git checkout master'\`.
+1. From the command line anywhere, type `open -a 'Sublime Text' ~/.bashrc`.
+1. Add a new alias, for example, `alias master='git checkout master'`.
 1. Anytime you are in a directory with a git repo, you can run the command
-   \`master\` and it will checkout the master branch for you.
+   `master` and it will checkout the master branch for you.
 
 Note: See these instructions for [setting up Windows
 aliases](http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx).

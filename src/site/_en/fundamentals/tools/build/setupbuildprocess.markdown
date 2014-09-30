@@ -44,13 +44,39 @@ command line tools. If you have no experience of either, use Gulp, we use it for
 [Web Starter Kit](https://developers.google.com/web/starter-kit/) and recommend
 you do the same.
 
-There are tools which have GUI's and may be a bit easier to get to grips with.
+There are tools which have GUIs and may be a bit easier to get to grips with.
 
-* [OS X / Windows]
-  [Prepr](http://alphapixels.com/prepros/)[os](http://mixture.io/)
-* [OS X / Windows] [Mixture](http://mixture.io/)
-* [OS X] [CodeKit](https://incident57.com/codekit/).
-* [OS X] [HammerForMac](http://hammerformac.com/)
+<table class="table-2 tc-heavyright">
+  <colgroup>
+    <col span="1" />
+    <col span="1" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th data-th="Supported Platforms">Supported Platforms</th>
+      <th data-th="Tool Name">Tool Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Supported Platforms">OS X / Windows</td>
+      <td data-th="Gulp"><a href="http://alphapixels.com/prepros/">Prepros</a></td>
+    </tr>
+    <tr>
+      <td data-th="Supported Platforms">OS X / Windows</td>
+      <td data-th="Gulp"><a href="http://mixture.io/">Mixture</a></td>
+    </tr>
+    <tr>
+      <td data-th="Supported Platforms">OS X</td>
+      <td data-th="Gulp"><a href="https://incident57.com/codekit/">CodeKit</a></td>
+    </tr>
+    <tr>
+      <td data-th="Supported Platforms">OS X</td>
+      <td data-th="Gulp"><a href="http://hammerformac.com/">HammerForMac</a></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## What Tasks Should be in a Build Process
 
@@ -80,12 +106,13 @@ For those unfamiliar with the terms concatenation and minification,
 concatenation means simply merging multiple files together, i.e. copying and
 pasting several files into one. The reason we do this is that it's more
 efficient for a browser to fetch one file, rather than lots of small files.
+
 Minification is the process of taking a file and making the overall number of
 characters less, without changing how the code works. A good example of this is
 removing comments, or taking a long variable name and making it smaller. This
 makes the file size smaller, leading to faster downloads.
 
-For Minification you can use the following.
+For minification, use the following:
 
 <table class="table-3 tc-heavyright">
   <colgroup>
@@ -119,7 +146,7 @@ For Minification you can use the following.
   </tbody>
 </table>
 
-For concatenation, you can use the following:
+For concatentation, use the following:
 
 <table class="table-3 tc-heavyright">
   <colgroup>
@@ -148,8 +175,8 @@ For concatenation, you can use the following:
   </tbody>
 </table>
 
-You can use Sass by taking advantage of the 'includes' feature ([See Web Starter
-Kit for an example](https://developers.google.com/web/starter-kit/)).
+You can use Sass by taking advantage of the 'import' feature ([See Web Starter
+Kit for an example](https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss)).
 
 ### Optimise Your Images
 
@@ -173,8 +200,8 @@ For optimising images you can use these modules.
   </thead>
   <tbody>
     <tr>
-      <td data-th="Gulp"><a href="">gulp-imagemin</a></td>
-      <td data-th="Grunt"><a href="">grunt-contrib-imagemin</a></td>
+      <td data-th="Gulp"><a href="https://github.com/sindresorhus/gulp-imagemin">gulp-imagemin</a></td>
+      <td data-th="Grunt"><a href="https://github.com/gruntjs/grunt-contrib-imagemin">grunt-contrib-imagemin</a></td>
     </tr>
   </tbody>
 </table>
@@ -204,7 +231,7 @@ include:
   </tbody>
 </table>
 
-Note: If you prefer, you can add a Sublime package to do the auto-prefixing for
+Note: If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.baseurl}}/fundamentals/tools/setup/editor.html#autoprefixer) for
 you.
 
 ### Never Leave Your Text Editor with Live Reloading

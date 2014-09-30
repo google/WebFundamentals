@@ -1,6 +1,6 @@
 ---
 layout: section
-title: "Running on Devices and Platforms"
+title: "Developing on Devices"
 description: "View your site's responsive layouts and check the performance on real and virtual devices."
 introduction: "View your site's responsive layouts and check the performance on real and virtual devices."
 article:

@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Use DevTools Emulation"
-description: "Learn how to use browser tools to test your site for a range of emulated device features."
-introduction: "Learn how to use browser tools to test your site for a range of emulated device features."
+description: "Learn how to use browser emulation tools to test a range of device features."
+introduction: "Learn how to use browser emulation tools to test a range of device features."
 article:
   written_on: 2014-05-29
   updated_on: 2014-09-25
@@ -13,7 +13,7 @@ authors:
   - mattgaunt
 key-takeaways:
   emulator:
-    - Quickly test your site's responsiveness and support for mobile APIs using DevTools emulation.
+    - Quickly test your site’s responsiveness and support for mobile APIs using DevTools emulation.
 notes:
     - TBD.
 ---
@@ -26,13 +26,13 @@ notes:
 When you don’t have a particular device, or want to do a spot check on something,
 the best option is to emulate the device right inside your browser.
 
-These are great for testing the responsiveness of your site, but they do not
-emulate differences in API and CSS support, so you will still need to test on
-browsers running on the devices to be certain that everything is as expected.
+Browser emulators are great for testing site responsiveness, but they don’t
+emulate differences in API and CSS support. Test your site on browsers running
+on the devices to be certain everything behaves as expected.
 
 ## Chrome DevTools Emulation
 
-Chrome DevTools has a Device emulation tool which will create a viewport with the right width and height to match a selected device and account for the screen density.
+[Chrome DevTools](https://developer.chrome.com/devtools) has a Device emulation tool which will create a viewport with the right width and height to match a selected device and account for the screen density.
 
 You can activate device emulation by following these four steps:
 
@@ -45,9 +45,10 @@ You can activate device emulation by following these four steps:
 
 ## Firefox Responsive View
 
-Firefox has a responsive design mode which encourages you stop thinking in terms
-of specific devices and instead explore how your design changes at common screen
-sizes or your own size by dragging the edges.
+Firefox has a [responsive design view](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View)
+which encourages you stop thinking in terms of specific devices and instead
+explore how your design changes at common screen sizes or your own size by
+dragging the edges.
 
 To use the responsive view, open the developer tools in Firefox and click the
 icon illustrated in step 1 below and use the handles at the side of the web page
@@ -57,10 +58,10 @@ to resize it, illustrated in step 2.
 
 ## IE Device Emulation
 
-IE11 has a feature where you can change the viewport to match a Windows Phone as
-well as test how your site on older versions of IE.
+IE11 has a feature where you can [change the viewport to match a Windows Phone](http://msdn.microsoft.com/en-gb/library/ie/dn255001(v=vs.85).aspx)
+as well as view your site on older versions of IE.
 
-To change the emulated browser do the following:
+To change the emulated browser, do the following:
 
 1. Select the emulation tab.
 2. Click the drop down labelled **Browser profile** and select your device.
