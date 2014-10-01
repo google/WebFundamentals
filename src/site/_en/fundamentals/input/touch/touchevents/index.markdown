@@ -222,18 +222,18 @@ the next touch event will request a new animation frame.
 
 The CSS property `touch-action` allows you to control the default touch
 behavior of an element. In our examples, we use `touch-action: none` to 
-prevent the browser from doing anything with a users touch, allowing us 
+prevent the browser from doing anything with a users' touch, allowing us 
 to intercept all of the touch events.
 
 {%include_code ../_code/touch-demo-1.html touch-action-example css %}
 
-`touch-action` allows to disable gestures implemented by a browser, 
-for example IE10+ supports double-tap zoom and by setting a touch-action 
-of `pan-x | pan-y | manipulation` you are preventing the double-tap 
+`touch-action` allows you to disable gestures implemented by a browser. 
+For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action 
+of `pan-x | pan-y | manipulation` you prevent the default double-tap 
 behavior.
 
-The benefit of this is that it allows you to implement these gestures yourself, 
-but in the case of IE10+ you also remove the 300ms click delay.
+This allows you to implement a double-tap gesture yourself.
+In the case of IE10+, it also eliminates the 300ms click delay.
 
 Below is a list of the available parameters for *touch-action*.
 
