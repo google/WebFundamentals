@@ -26,7 +26,7 @@ key-takeaways:
 
 notes:
   svg:
-    - "Technically, there is also the <a herf='http://caniuse.com/#feat=svg-fonts'>SVG font container</a>, but it was never supported by IE or Firefox, and is now deprecated in Chrome. As such, it is of limited use and we are intentionally omitting it in this guide."
+    - "Technically, there is also the <a href='http://caniuse.com/svg-fonts'>SVG font container</a>, but it was never supported by IE or Firefox, and is now deprecated in Chrome. As such, it is of limited use and we are intentionally omitting it in this guide."
   zopfli:
     - "Consider using <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli compression</a> for EOT, TTF, and WOFF formats. Zopfli is a zlib compatible compressor that delivers ~5% filesize reduction over gzip."
   local-fonts: 
