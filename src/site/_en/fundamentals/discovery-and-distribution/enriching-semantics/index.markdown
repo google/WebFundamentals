@@ -5,7 +5,7 @@ description: "Search engines crawl your website, index it and list it if user's 
 introduction: "Search engines crawl your website, index it and list it if user's query matches your content. Learn how to semantically enrich your content so that users can get better information on search results."
 snippet: "Spread your work to the world"
 id: enriching-semantics
-collection: discovery-and-distribution
+# collection: discovery-and-distribution
 authors:
   - agektmr
 article:
