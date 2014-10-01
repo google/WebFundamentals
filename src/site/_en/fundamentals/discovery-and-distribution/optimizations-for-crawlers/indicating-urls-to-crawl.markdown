@@ -5,7 +5,7 @@ description: ""
 introduction: ""
 snippet: "Spread your work to the world"
 id: indicating-urls-to-crawl
-collection: optimizations-for-crawlers
+# collection: optimizations-for-crawlers
 authors:
   - agektmr
 article:
