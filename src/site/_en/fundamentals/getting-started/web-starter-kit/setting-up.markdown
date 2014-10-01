@@ -74,6 +74,9 @@ Kit.
 The next section of this guide covers how to use Gulp, but if you want to see
 how things look, try running the local server by typing `gulp serve`.
 
+Install gulp with the following command:
+`$ npm install gulp -g`
+
 <img src="images/wsk-on-pixel-n5.png">
 
 {% include modules/nextarticle.liquid %}
