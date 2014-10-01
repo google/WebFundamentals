@@ -31,7 +31,8 @@ What does a modern web application look like? [HTTP Archive](http://httparchive.
 
 <img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trends">
 
-<table>
+<table class="table-4">
+<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th></th>
