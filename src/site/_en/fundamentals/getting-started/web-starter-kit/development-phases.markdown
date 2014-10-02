@@ -10,7 +10,7 @@ how each task helps you develop your site."
 notes:
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2014-10-02
   order: 2
 id: development-phases
 collection: web-starter-kit
@@ -117,7 +117,7 @@ in a modular and reusable fashion.
 ## Build a Production Version of Your Site
 
 You can build a production ready version of your site with the simple gulp
-command. This command runs some the tasks we’ve seen already, with additional
+command. This command runs some of the tasks we’ve seen already, with additional
 tasks aimed at making your site load faster and more efficiently.
 
 The main tasks the production build performs are:
