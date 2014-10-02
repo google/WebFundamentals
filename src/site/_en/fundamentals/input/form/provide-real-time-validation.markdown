@@ -201,7 +201,7 @@ reason that an element is invalid:
     </tr>
     <tr>
       <td data-th="API"><code>checkValidity()</code></td>
-      <td data-th="Description">Returns <code>true</code> if the element satisfies all of it's constraints, and <code>false</code> otherwise.</td>
+      <td data-th="Description">Returns <code>true</code> if the element satisfies all of its constraints, and <code>false</code> otherwise.</td>
     </tr>
     <tr>
       <td data-th="API"><code>validity</code></td>
