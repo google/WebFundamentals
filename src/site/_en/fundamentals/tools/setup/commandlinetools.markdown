@@ -71,10 +71,6 @@ These are a few commands that you may find useful.
       <td data-th="Alias">alias server="python -m SimpleHTTPServer"</td>
     </tr>
     <tr>
-      <td data-th="Command">Open your editor</td>
-      <td data-th="Alias">alias st='open -a "Sublime Text"'</td>
-    </tr>
-    <tr>
       <td data-th="Command">Go to a directory you commonly work in</td>
       <td data-th="Alias">alias p="cd ~/projects"</td>
     </tr>
