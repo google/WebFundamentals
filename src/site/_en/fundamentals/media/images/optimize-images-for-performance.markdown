@@ -87,7 +87,7 @@ change in file size.
 
 When choosing the right format, it is important to consider both the origin of
 the image (raster or vector), and the content (colors, animation, text, etc).
-No one format will fit all image types and each has it's own strengths and
+No one format will fit all image types and each has its own strengths and
 weaknesses.
 
 Start with these guidelines when choosing the right format:

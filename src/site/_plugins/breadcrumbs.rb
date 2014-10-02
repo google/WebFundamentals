@@ -7,7 +7,7 @@ module Jekyll
   class Page
 
     ##
-    # We add a custom method to the page variable, that returns an ordered list of it's
+    # We add a custom method to the page variable, that returns an ordered list of its
     # parent pages ready for iteration.
     def ancestors
       a = []
