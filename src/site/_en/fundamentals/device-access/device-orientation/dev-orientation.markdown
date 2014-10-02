@@ -52,7 +52,7 @@ object listening for `deviceorientation` events.
 
 The device orientation event fires when the device moves, or changes 
 orientation.  It returns data about the difference between the device in 
-it's current position in relation to the <a href="index.html#earth-coordinate-frame">
+its current position in relation to the <a href="index.html#earth-coordinate-frame">
 Earth coordinate frame</a>.
 
 The event typically returns three properties, 
