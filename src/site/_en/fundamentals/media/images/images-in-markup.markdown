@@ -26,7 +26,7 @@ key-takeaways:
 remember:
   picture-support:
     - The <code>picture</code> element is beginning to land in browsers.
-      Although it's not available in every browser yet, we recommend it's
+      Although it's not available in every browser yet, we recommend its
       use because of the strong backward compatibility and potential use 
       of the 
       <a href="http://picturefill.responsiveimages.org/">Picturefill polyfill</a>.
@@ -72,7 +72,7 @@ from accidentally overflowing the viewport.  For example, `width: 50%;`, will
 cause the image width to be 50% of the containing element (not the viewport or
 actual pixel size).
 
-Because CSS allows content to overflow it's container, it may be necessary use
+Because CSS allows content to overflow its container, it may be necessary use
 max-width: 100% to prevent images and other content from overflowing.  For
 example:
 

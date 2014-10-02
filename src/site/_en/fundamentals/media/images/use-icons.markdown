@@ -91,7 +91,7 @@ compared to SVG icons.
 {% link_sample _code/icon-font.html %}
 <img src="img/icon-fonts.png" class="center"
 srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
-alt="Example of a page that uses FontAwesome for it's font icons.">
+alt="Example of a page that uses FontAwesome for its font icons.">
 {% endlink_sample %}
 {% include_code _code/icon-font.html iconfont html %}
 

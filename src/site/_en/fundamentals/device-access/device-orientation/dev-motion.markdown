@@ -60,7 +60,7 @@ which excludes the effects of gravity,
 <a href="index.html#rotation-data">`rotationRate`</a> and `interval`.
 
 For example, let's take a look at a phone, lying on a flat table,
-with it's screen facing up.
+with its screen facing up.
 
 <table class="table-4">
   <colgroup>

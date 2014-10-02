@@ -79,7 +79,7 @@ your mobile device and see your site.
 
 ## Using DevTools for Mobile Browsers
 
-Each browser/platform has it's own way to debug sites. Use the appropriate
+Each browser/platform has its own way to debug sites. Use the appropriate
 DevTools to help debug problems.
 
 ### Chrome for Android
