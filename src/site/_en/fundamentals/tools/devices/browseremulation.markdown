@@ -21,9 +21,10 @@ notes:
 ---
 {% wrap content %}
 
-Browser emulation is great for testing site responsiveness, but they don’t
-emulate differences in API and CSS support. Test your site on browsers running
-on the devices to be certain everything behaves as expected.
+Browser emulation is great for testing a sites responsiveness, but they don’t
+emulate differences in API, CSS support and certain behaviors that you'd see
+on a mobile browser. Test your site on browsers running on real devices to be
+certain everything behaves as expected.
 
 {% include modules/toc.liquid %}
 
