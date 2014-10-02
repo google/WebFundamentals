@@ -31,7 +31,7 @@ specific features.
 The Android emulator comes with the Android SDK which you need to [download from
 here](http://developer.android.com/sdk/installing/studio.html).
 
-Start by opening Android Studio and go to `Tools &gt; Android &gt; AVD Manager
+Start by opening Android Studio and go to `Tools > Android > AVD Manager
 (Android Virtual Device Manager)`. AVD is the place where you set up the
 emulators you'd like to use.
 
