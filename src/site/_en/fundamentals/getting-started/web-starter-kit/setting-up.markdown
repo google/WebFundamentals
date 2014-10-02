@@ -63,19 +63,18 @@ The first step is to go to [https://developers.google.com/web/starter-kit/](http
 and download and extract the zip.
 
 Next, you need to install the local dependencies for Web Starter Kit. Open a
-terminal, change directory into your project folder and run npm install.
+terminal, change directory into your project folder and run the following npm
+install scripts.
 
     $ cd web-starter-kit
     $ npm install
+    $ npm install gulp -g
 
 That’s it! You now have everything that's needed to use the Gulp tools in Web Starter
 Kit.
 
 The next section of this guide covers how to use Gulp, but if you want to see
 how things look, try running the local server by typing `gulp serve`.
-
-Install gulp with the following command:
-`$ npm install gulp -g`
 
 <img src="images/wsk-on-pixel-n5.png">
 
