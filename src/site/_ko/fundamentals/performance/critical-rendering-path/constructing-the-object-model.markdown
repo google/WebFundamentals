@@ -46,7 +46,7 @@ notes:
 
 {% include_code _code/basic_dom.html full %}
 
-가장 간단한 경우를 놓고 이야기해 봅시다. 어떤 텍스트와 간단한 이미지가 있는 단순 HTML 페이지가 있습니다. 이 간단한 페이지를 브라우저는 어떻게 처리할까요?
+아주 간단한 예제를 가지고 이야기해 봅시다. 어떤 텍스트와 간단한 이미지가 있는 단순한 HTML 페이지가 있습니다. 이 페이지를 브라우저는 어떻게 처리할까요?
 
 <img src="images/full-process.png" alt="DOM construction process">
 
