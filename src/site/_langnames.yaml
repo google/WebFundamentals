@@ -1,13 +1,39 @@
-de: 'Deutsch'
-en: 'English'
-fr: 'Français'
-he: 'עִבְרִית'
-es: 'Español'
-it: 'Italiano'
-ja: '日本語'
-ko: '한국어'
-pt: 'Português (Brasil)'
-ru: 'Pусский'
-'zh-cn': '中文 (简体)'
-tw: '中文（繁體）'
-fa: 'فارسی'
+de:
+  name: 'Deutsch'
+
+en:
+  name: 'English'
+
+fr:
+  name: 'Français'
+
+he:
+  name: 'עִבְרִית'
+  rtl: true
+
+es:
+  name: 'Español'
+
+it:
+  name: 'Italiano'
+
+ja:
+  name: '日本語'
+
+ko:
+  name: '한국어'
+
+pt:
+  name: 'Português (Brasil)'
+
+ru:
+  name: 'Pусский'
+
+'zh-cn':
+  name: '中文 (简体)'
+
+tw:
+  name: '中文（繁體）'
+
+fa:
+  name: 'فارسی'
