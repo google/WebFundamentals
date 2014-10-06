@@ -6,7 +6,7 @@
     {% include head.liquid %}
   </head>
 
-  <body class="page--{{ page.class }}">
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}">
     {% injectdata content _betterbook.yaml %}
 
     {% include header.liquid %}
