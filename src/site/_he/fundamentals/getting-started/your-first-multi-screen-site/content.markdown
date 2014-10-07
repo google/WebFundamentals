@@ -8,7 +8,7 @@ notes:
     - הסטייל יגיע מאוחר יותר.
 article:
   written_on: 2014-04-17
-  updated_on: 2014-09-15
+  updated_on: 2014-10-07
   order: 1
 id: multi-screen-content
 collection: multi-screen
