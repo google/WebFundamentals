@@ -33,9 +33,22 @@ dt {
   padding-left: 16px;
 }
 
+body[dir=rtl] li,
+body[dir=rtl] dt {
+  position: relative;
+  padding-left: 0px;
+  padding-right: 32px;
+}
+
 ul {
   > li {
     @include bullet();
+  }
+}
+
+body[dir=rtl] ul {
+  > li {
+    @include bullet("right");
   }
 }
 
@@ -57,6 +70,15 @@ ol {
   }
 }
 
+body[dir=rtl] ol {
+  counter-reset: list;
+
+  > li {
+    @include numbered-list("right");
+    padding-left: 0px;
+    padding-right: 32px;
+  }
+}
 
 // Find nested lists
 ul ol,
@@ -70,7 +92,7 @@ ol ol {
 
 
 dt {
-  @include bullet($icon-hash, $fontSmall);
+  @include bullet("left", $icon-hash, $fontSmall);
 
   font-family: $fontHighlight;
   font-weight: 400;
@@ -78,6 +100,10 @@ dt {
   @include medium {
     font-weight: 700;
   }
+}
+
+body[dir=rtl] dt {
+  @include bullet("right", $icon-hash, $fontSmall);
 }
 
 dd {
@@ -108,11 +134,24 @@ ul.list-links {
     letter-spacing: 1px;
 
     & a {
-      @include bullet($icon-chevron-right, $fontSmall);
+      @include bullet("left", $icon-chevron-right, $fontSmall);
       font-weight: 400;
       font-family: $fontHighlight;
       line-height: 1; // fixes baseline grid alignment
       text-decoration: none;
+    }
+  }
+}
+
+body[dir=rtl] ul.list-links {
+  a {
+    @include bullet("right");
+  }
+  &.list-links--primary {
+    letter-spacing: 1px;
+
+    & a {
+      @include bullet("right", $icon-chevron-right, $fontSmall);
     }
   }
 }
@@ -141,6 +180,18 @@ ol.list-links {
   &.list-links--secondary {
     a:before {
       display: none;
+    }
+  }
+}
+
+body[dir=rtl] ol.list-links {
+  li {
+    &:before {
+      display: none;
+    }
+
+    & a {
+      @include numbered-list("right");
     }
   }
 }
@@ -180,6 +231,25 @@ ol.list-links {
     }
   }
 }
+
+body[dir=rtl] .list-anchor {
+  li {
+    @include type--base;
+    padding-top: 0;
+    padding-left: 0;
+
+    &:before {
+      display: none
+    }
+  }
+  a {
+    @include bullet("right");
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 32px;
+  }
+}
+
 
 /*==========  SMALL LIST  ==========*/
 

@@ -78,6 +78,13 @@
   }
 }
 
+body[dir=rtl] .main-nav__item {
+  // Remove list styles
+  &:before {
+    display: none;
+  }
+}
+
 .main-nav__link {
   @include type--large;
   color: $colorGrayDark;

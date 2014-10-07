@@ -381,7 +381,7 @@
 
 
   // LISTS
-  @mixin bullet($icon: $icon-bullet, $fontSize: 4px) {
+  @mixin bullet($side: "left", $icon: $icon-bullet, $fontSize: 4px) {
     &:before {
       content: $icon;
       font-family: $fontIcon;
@@ -395,11 +395,16 @@
 
       position: absolute;
       top: 0;
-      left: 0;
+      @if $side == "left" {
+        left: 0px;
+      }
+      @if $side == "right" {
+        right: 0px;
+      }
     }
   }
 
-  @mixin numbered-list() {
+  @mixin numbered-list($side: "left") {
     &:before {
       counter-increment: list;
       content: "0" counter(list);
@@ -407,7 +412,12 @@
       font-weight: 400;
       display: inline-block;
       position: absolute;
-      left: 0;
+      @if $side == "left" {
+        left: 0px;
+      }
+      @if $side == "right" {
+        right: 0px;
+      }
     }
   }
 
