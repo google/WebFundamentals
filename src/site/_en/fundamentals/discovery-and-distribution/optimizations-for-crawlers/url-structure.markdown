@@ -15,8 +15,8 @@ collection: optimizations-for-crawlers
 authors:
   - agektmr
 article:
-  written_on: 2014-09-30
-  updated_on: 2014-09-30
+  written_on: 2014-10-08
+  updated_on: 2014-10-08
   order: 2
 key-takeaways:
   - Determine the URL structure of your webpage
