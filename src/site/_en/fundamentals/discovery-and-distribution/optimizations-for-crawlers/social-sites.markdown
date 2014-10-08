@@ -15,8 +15,8 @@ collection: optimizations-for-crawlers
 authors:
   - agektmr
 article:
-  written_on: 2014-08-31
-  updated_on: 2014-08-31
+  written_on: 2014-10-08
+  updated_on: 2014-10-08
   order: 1
 key-takeaways:
   - Use schema.org microdata to provide page title, description and an image for Google+.
