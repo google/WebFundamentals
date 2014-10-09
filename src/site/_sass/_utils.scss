@@ -56,6 +56,9 @@
   $colorMuted: $colorGray;
   $colorDanger: $colorRed;
 
+  // Note - these colors are also hard coded in _includes/header.liquid so
+  // that we can include the meta theme-color.  If you update any of these
+  // you'll also need to update them in that file as well.
   $colorLayouts: #297ea9;
   $colorLayoutsSecondary: lighten($colorLayouts, 30%);
   $colorDevice: #29A8A8;
