@@ -412,11 +412,14 @@
       font-weight: 400;
       display: inline-block;
       position: absolute;
+      top: 0;
       @if $side == "left" {
         left: 0px;
+        right: auto;
       }
       @if $side == "right" {
         right: 0px;
+        left: auto;
       }
     }
   }
