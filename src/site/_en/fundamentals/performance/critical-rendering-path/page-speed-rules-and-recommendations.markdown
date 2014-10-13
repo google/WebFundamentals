@@ -5,7 +5,7 @@ description: "PageSpeed Insights rules in context: what to pay attention to when
 introduction: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-04-28
+  updated_on: 2014-10-16
   order: 8
 collection: critical-rendering-path
 authors:
@@ -24,6 +24,27 @@ JavaScript resources are parser blocking by default unless marked as _async_ or 
 ### **Prefer async JavaScript resources**
 
 Async resources unblock the document parser and allow the browser to avoid blocking on CSSOM prior to executing the script. Often, if the script can be made async, it also means it is not essential for the first render - consider loading async scripts after the initial render.
+
+### **Avoid synchronous server calls** 
+
+Use the `navigator.sendBeacon()` method to limit data sent by XMLHttpRequests in
+`unload` handlers. Because many browsers require such requests to be
+synchronous, they can slow page transitions, sometimes noticeably. The following
+code shows how to use `navigator.sendBeacon()` to send data to the server in the
+`pagehide` handler instead of in the `unload` handler.
+
+{% highlight html %}
+<script>
+  function() {
+    window.addEventListener('pagehide', logData, false);
+    function logData() {
+      navigator.sendBeacon(
+        'https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop',
+        'Sent by a beacon!');
+    }
+  }();
+</script>
+{% endhighlight %}
 
 ### **Defer parsing JavaScript**
 
