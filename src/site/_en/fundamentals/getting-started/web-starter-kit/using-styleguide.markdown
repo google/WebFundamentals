@@ -42,7 +42,7 @@ site, consider adding the element to your style guide.
 
 ### Add a New Component
 
-1. Open *app/styleguide/index.html* and after the last element, add the HTML
+1. Open *app/styleguide.html* and after the last element, add the HTML
 for your new element.
 
 2. Inside app/styles/components/, create a new Sass file with an appropriate
@@ -57,7 +57,7 @@ new Sass file like so.
     Don’t forget to include the underscore in the filename; it indicates that
     the file is designed to be merged into other Sass files.
 
-4. Test out how it looks on localhost by going to http://localhost:<Port Number>/styleguide/ and make sure the build was successful.
+4. Test out how it looks on localhost by going to http://localhost:<Port Number>/styleguide.html and make sure the build was successful.
 
 5. Finally, use your new component in your pages.
 
@@ -65,7 +65,7 @@ new Sass file like so.
 
 Below is a simple step through of adding a component to the Style Guide.
 
-1. First we add our <footer> tag at the bottom of app/styleguide/index.html
+1. First we add our <footer> tag at the bottom of app/styleguide.html
 and give it a class name Footer.
 
 2. Then we create our sass file. Here we’ll create
