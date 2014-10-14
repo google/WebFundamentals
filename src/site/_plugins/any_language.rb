@@ -16,6 +16,7 @@ module Jekyll
   
   # Extract language code to name mappings.
   class LanguageNameGenerator < Generator
+    priority :highest
     def generate(site)
       data_file = File.join(site.source, "_langnames.yaml")
       data = YAML.load_file(data_file)
@@ -41,7 +42,11 @@ module Jekyll
         
         #Jekyll.logger.info "Reading " + File.join(base, "_" + langcode, dir, name)
         self.read_yaml(File.join(base, "_" + langcode, dir), name)
-        self.data['langcode'] = langcode ? langcode : "en"
+        langcode = langcode ? langcode : "en"
+        self.data['langcode'] = langcode
+        if site.data["language_names"][langcode].key?('rtl')
+          self.data['rtl'] = site.data["language_names"][langcode]['rtl'];
+        end
         self.data['is_localized'] = false
     end
 
@@ -74,7 +79,7 @@ module Jekyll
 
   class AnyLanguage < Generator
     # We want this to run early in the process.
-    priority :highest
+    priority :high
     def generate(site)
       lang = site.config["lang"]
       lang = lang ? lang : "en"
@@ -173,7 +178,7 @@ module Jekyll
   module LanguageName
     def lang_name(input)
       site = @context.registers[:site]
-      site.data["language_names"][input]
+      site.data["language_names"][input]['name']
     end
   end
 end
