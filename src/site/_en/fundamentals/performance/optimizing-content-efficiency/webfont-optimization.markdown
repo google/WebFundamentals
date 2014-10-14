@@ -243,7 +243,7 @@ _Awesome Font_ family:
 
 @font-face {
   font-family: 'Awesome Font';
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
   src: local('Awesome Font'),
        url('/fonts/awesome-l-700.woff2') format('woff2'), 

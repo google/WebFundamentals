@@ -54,4 +54,33 @@
 <meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
 {% if main_author.facebook %}<meta property="og:author" content="{{ main_author.facebook }}" />{% endif %}
 
+{% comment %}
+Adds themed colors for web site stickiness.
+{% endcomment %}
+{% if page.filepath contains "principles" %}
+<meta name="theme-color" content="#ff5722">
+{% else if page.filepath contains "layouts" %}
+<meta name="theme-color" content="#297ea8">
+{% else if page.filepath contains "input" %}
+<meta name="theme-color" content="#ff0000">
+{% else if page.filepath contains "look-and-feel" %}
+<meta name="theme-color" content="#404040">
+{% else if page.filepath contains "media" %}
+<meta name="theme-color" content="#cf423a">
+{% else if page.filepath contains "monetization" %}
+<meta name="theme-color" content="#056f00">
+{% else if page.filepath contains "device-access" %}
+<meta name="theme-color" content="#28a8a8">
+{% else if page.filepath contains "performance" %}
+<meta name="theme-color" content="#7b5294">
+{% else if page.filepath contains "tools" %}
+<meta name="theme-color" content="#cf3a8c">
+{% else if page.filepath contains "discovery-and-distribution" %}
+<meta name="theme-color" content="#ff5722">
+{% else if page.filepath contains "input" %}
+<meta name="theme-color" content="#2c8566">
+{% else %}
+<meta name="theme-color" content="#4285f4">
+{% endif %}
+
 <link rel="stylesheet" media="screen" href="{{site.baseurl}}/css/styles.min.css" />

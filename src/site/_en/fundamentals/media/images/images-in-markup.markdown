@@ -249,7 +249,7 @@ take a small proportion.
 {% include_code _code/breakpoints.html picture html %}
 
 The `sizes` attribute in the above example uses several media queries to
-specify the the size of them image.  When the browser width is greater than
+specify the size of the image. When the browser width is greater than
 600px, the image will be 25% of the viewport width, when it is between 500px
 and 600px, the image will be 50% of the viewport width, and below 500px, it
 will be full width.
