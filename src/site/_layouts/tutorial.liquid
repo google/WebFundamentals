@@ -1,12 +1,12 @@
 {% if site.include_open_html %}
 <!DOCTYPE html>
-<html lang="en" class="no-js no-touch" itemscope itemtype="http://schema.org/Article">
+<html lang="en" class="no-js no-touch">
   <head>
 {% endif %}
     {% include head.liquid %}
   </head>
 
-  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="{{ page.class }}">
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="{{ page.class }}" itemscope itemtype="http://schema.org/Article">
     {% injectdata content _betterbook.yaml %}
 
     {% include header.liquid %}
