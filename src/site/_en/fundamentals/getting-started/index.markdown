@@ -1,8 +1,8 @@
 ---
 layout: landing
 title: "Get Started"
-description: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web."
-introduction: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web."
+description: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web. But don't worry, we've provided some guides to help you get started."
+introduction: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web. But don't worry, we've provided some guides to help you get started."
 id: getting-started
 collection: home
 authors:
