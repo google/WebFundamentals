@@ -9,7 +9,7 @@ introduction: "Media queries are simple filters that can be applied to CSS style
   resolution."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-09-12
+  updated_on: 2014-10-10
   order: 3
 authors:
   - petelepage
@@ -176,6 +176,15 @@ report the screen size in device pixels instead of the expected viewport width.
 In addition, using `*-device-width` can prevent content from adapting on
 desktops or other devices that allow windows to be resized because the query
 is based on the actual device size, not the size of the browser window.
+
+## Use `any-pointer` and `any-hover` for flexible interactions
+
+Starting with Chrome 39, your style sheets can write selectors that cover
+multiple pointer types and hover behaviors. The `any-pointer` and `any-hover`
+media features are similar to `pointer` and `hover` in allowing you to query the
+capabilities of the user's pointer. Unlike the later, `any-pointer` and
+`any-hover` operate on the union of all pointer devices rather than the just the
+primary pointer device.
 
 ## Use relative units
 
