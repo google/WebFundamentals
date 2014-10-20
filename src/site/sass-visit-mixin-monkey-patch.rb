@@ -6,7 +6,7 @@ class Sass::Tree::Visitors::Perform < Sass::Tree::Visitors::Base
     include_loop = false
 
     @stack.push(:filename => node.filename, :line => node.line, :name => node.name)
-    raise Sass::SyntaxError.new("Undefined mixin '#{node.name}'.") unless mixin = @environment.mixin(node.name)
+    raise Sass::SyntaxError.new("Undefined mixin '#{node.name}'.") unless mixin == @environment.mixin(node.name)
 
     if node.children.any? && !mixin.has_content
       raise Sass::SyntaxError.new(%Q{Mixin "#{node.name}" does not accept a content block.})
