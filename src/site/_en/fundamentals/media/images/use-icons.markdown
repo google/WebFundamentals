@@ -39,7 +39,7 @@ key-takeaways:
 ## Replace simple icons with unicode
 
 Many fonts include support for the myriad of unicode glyphs, which can be used
-instead of images.  Unlike images, unicode fonts scale well, and look good no
+instead of images. Unlike images, unicode fonts scale well, and look good no
 matter how small or large they appear on screen.
 
 Beyond the normal character set, unicode may include symbols for number forms
@@ -48,7 +48,7 @@ Beyond the normal character set, unicode may include symbols for number forms
 notation (&#9836;), Greek letters (&#937;), even chess pieces (&#9822;).
 
 Including a unicode character is done in the same way named entities are:
-`&#XXXX`, where `XXXX` represents the unicode character number.  For example:
+`&#XXXX`, where `XXXX` represents the unicode character number. For example:
 
 {% highlight html %}
 You're a super &#9733;
@@ -57,6 +57,7 @@ You're a super &#9733;
 You're a super &#9733;
 
 ## Replace complex icons with SVG
+
 For more complex icon requirements, SVG icons are generally lightweight, 
 easy to use and can be styled with CSS. SVG have a number of advantages over
 raster images:
@@ -100,7 +101,7 @@ Awesome](http://fortawesome.github.io/Font-Awesome/),
 [Pictos](http://pictos.cc/) and [Glyphicons](http://glyphicons.com/).
 
 Be sure to balance the weight of the additional HTTP request and file size with
-the need for the icons.  For example, if you only need a handful of icons, it
+the need for the icons. For example, if you only need a handful of icons, it
 may be better to use an image or an image sprite.
 
 {% include modules/nextarticle.liquid %}
