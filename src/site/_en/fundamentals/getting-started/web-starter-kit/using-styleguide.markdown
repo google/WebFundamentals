@@ -2,14 +2,14 @@
 layout: article
 title: "How to Use the Style Guide"
 description: "Web Starter Kit encourages you to develop in a style guide
-driven manner. You split up your UI into manageable chunks of Sass so that
-you can quickly see which components you are using on your site.
-This guide explains how to use and extend the style guide in WSK."
+  driven manner. You split up your UI into manageable chunks of Sass so that
+  you can quickly see which components you are using on your site.
+  This guide explains how to use and extend the style guide in WSK."
 introduction: "Web Starter Kit comes with a style guide, a quick and easy way
-to view all the styles your site uses. By thinking of your CSS in terms of
-components and breaking up your styles and classes accordingly, you get a
-clean structure for your styles and you can see how all your components look
-when placed together."
+  to view all the styles your site uses. By thinking of your CSS in terms of
+  components and breaking up your styles and classes accordingly, you get a
+  clean structure for your styles and you can see how all your components look
+  when placed together."
 notes:
 article:
   written_on: 2014-04-17
