@@ -2,9 +2,7 @@
 layout: article
 title: "Tell users which orientation works best"
 description: "Communicate to users if your site works best in a certain orientation, but ensure your important calls-to-action can be completed regardless of orientation."
-introduction: "Design for both landscape and portrait, or encourage users to 
-switch to the optimal screen orientation - but make sure your important 
-calls-to-action can be completed even if they ignore the suggestion to switch."
+introduction: "Design for both landscape and portrait, or encourage users to switch to the optimal screen orientation - but make sure your important calls-to-action can be completed even if they ignore the suggestion to switch."
 authors:
   - petelepage
 article:

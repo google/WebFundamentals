@@ -8,6 +8,7 @@ article:
   updated_on: 2014-07-31
   order: 1
 id: how-ads-work
+priority: 0
 collection: ads
 authors:
   - megginkearney

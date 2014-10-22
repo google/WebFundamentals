@@ -1,18 +1,15 @@
 ---
 layout: article
 title: "Images in Markup"
-description: "The `img` element is powerful – it downloads, decodes and renders content – and
-modern browsers support a range of image formats."
-introduction: "The <code>img</code> element is powerful – it downloads,
-decodes and renders content – and modern browsers support a range of image 
-formats.  Including images that work across devices is no different than for 
-desktop, and only requires a few minor tweaks to create a good experience."
+description: "The `img` element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image formats."
+introduction: "The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience."
 authors:
   - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-09-30
   order: 1
+priority: 0
 collection: images
 key-takeaways:
   img-in-markup:

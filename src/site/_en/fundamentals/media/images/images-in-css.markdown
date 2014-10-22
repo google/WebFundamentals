@@ -1,19 +1,15 @@
 ---
 layout: article
 title: "Images in CSS"
-description: "The CSS `background` property is a powerful tool for adding complex images to
-elements, making it easy to add multiple images, cause them to repeat, and more."
-introduction: "The CSS `background` property is a powerful tool for adding complex images to
-elements, making it easy to add multiple images, cause them to repeat, and more.
- When combined with media queries, the background property becomes even more
-powerful, enabling conditional image loading based on screen resolution,
-viewport size and more."
+description: "The CSS `background` property is a powerful tool for adding complex images to elements, making it easy to add multiple images, cause them to repeat, and more."
+introduction: "The CSS `background` property is a powerful tool for adding complex images to elements, making it easy to add multiple images, cause them to repeat, and more.  When combined with media queries, the background property becomes even more powerful, enabling conditional image loading based on screen resolution, viewport size and more."
 authors:
   - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
   order: 2
+priority: 0
 collection: images
 key-takeaways:
   use-right-image:

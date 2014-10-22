@@ -12,6 +12,7 @@ article:
   written_on: 2014-04-30
   updated_on: 2014-09-12
   order: 4
+priority: 0
 authors:
   - petelepage
 collection: rwd-fundamentals

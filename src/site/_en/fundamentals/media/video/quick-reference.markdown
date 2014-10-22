@@ -16,6 +16,7 @@ key-takeaways:
     - Produce video in multiple formats to cover a range of mobile platforms.
     - Size videos correctly; ensure they don't overflow their containers.
     - Accessibility matters; add the track element as a child of the video element.
+priority: 1
 remember:
   media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.

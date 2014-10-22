@@ -8,6 +8,7 @@ article:
   updated_on: 2014-04-29
   order: 2
 id: optimizing-content-efficiency
+priority: 0
 authors:
   - ilyagrigorik
 collection: performance

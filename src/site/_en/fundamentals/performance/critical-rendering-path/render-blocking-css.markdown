@@ -8,6 +8,7 @@ article:
   updated_on: 2014-09-18
   order: 3
 collection: critical-rendering-path
+priority: 0
 authors:
   - ilyagrigorik
 related-guides:

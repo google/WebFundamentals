@@ -1,10 +1,8 @@
 ---
 layout: article
 title: "Use SVG for icons"
-description: "When adding icons to your page, use SVG icons where possible or
-in some cases, unicode characters."
-introduction: "When adding icons to your page, use SVG icons where possible or
-in some cases, unicode characters."
+description: "When adding icons to your page, use SVG icons where possible or in some cases, unicode characters."
+introduction: "When adding icons to your page, use SVG icons where possible or in some cases, unicode characters."
 authors:
   - petelepage
 article:
@@ -12,6 +10,7 @@ article:
   updated_on: 2014-06-10
   order: 3
 collection: images
+priority: 1
 key-takeaways:
   avoid-images:
     - Use SVG or unicode for icons instead of raster images.

@@ -9,6 +9,7 @@ article:
   order: 3
 id: customize-ads
 collection: ads
+priority: 0
 authors:
   - megginkearney
   - petelepage
