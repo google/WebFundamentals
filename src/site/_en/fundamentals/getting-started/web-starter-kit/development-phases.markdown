@@ -1,12 +1,12 @@
 ---
 layout: article
 title: "Development Phases"
-description: "Every developer will go through various phases during the
-development of a project. Web Starter Kit makes you more productive and
-simplifies a range of tasks for each phase."
-introduction: "During development, there are 3 particular commands that you'll
-use on a regular basis: gulp serve, gulp serve:dist, and gulp. Let’s look at
-how each task helps you develop your site."
+description: "Every developer will go through various phases during the 
+  development of a project. Web Starter Kit makes you more productive and 
+  simplifies a range of tasks for each phase."
+introduction: "During development, there are 3 particular commands that 
+  you'll use on a regular basis: gulp serve, gulp serve:dist, and gulp. 
+  Let’s look at how each task helps you develop your site."
 notes:
 article:
   written_on: 2014-04-17
