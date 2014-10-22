@@ -17,6 +17,7 @@ article:
   order: 2
 collection: introduction-to-media
 id: videos
+priority: 1
 authors:
   - samdutton
 key-takeaways:

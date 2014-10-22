@@ -2,9 +2,7 @@
 layout: article
 title: "Avoid 'full site' labels"
 description: "If necessary, make it easy to switch between site experiences, but use labels like 'desktop' instead of 'full' to be clear that both sites offer a full experience."
-introduction: "If you provide a link on a page to a separate desktop experience, use terms
-like 'desktop' instead of 'full' to avoid confusion between what's available
-between the sites."
+introduction: "If you provide a link on a page to a separate desktop experience, use terms like 'desktop' instead of 'full' to avoid confusion between what's available between the sites."
 authors:
   - petelepage
 article:

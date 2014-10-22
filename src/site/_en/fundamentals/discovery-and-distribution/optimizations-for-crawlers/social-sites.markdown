@@ -1,14 +1,8 @@
 ---
 layout: article
 title: "Control Appearance on Social Sites"
-description: "You can influence the way your site appears when shared via social
-media by adding a few lines of code to each page. This can help to bring more
-people to your site by providing previews with richer information than would
-otherwise be available."
-introduction: "You can influence the way your site appears when shared via
-social media by adding a few lines of code to each page. This can help to bring
-more people to your site by providing previews with richer information than
-would otherwise be available."
+description: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help to bring more people to your site by providing previews with richer information than would otherwise be available."
+introduction: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help to bring more people to your site by providing previews with richer information than would otherwise be available."
 snippet: "Boost discoverability of your webpage"
 id: social-sites
 collection: optimizations-for-crawlers

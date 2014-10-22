@@ -14,6 +14,7 @@ article:
 collection: videos
 authors:
   - samdutton
+priority: 1
 key-takeaways:
   add-a-video:
     - Use the video element to load, decode, and play video on your site.
