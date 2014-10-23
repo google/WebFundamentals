@@ -175,6 +175,18 @@ paullewis:
   twitter: aerotwist
   description: "Paul is a Design and Perf Advocate"
 
+jasonpark:
+  name:
+    given: Jason
+    family: Park
+  country: Singapore
+  role:
+    - translator
+  google: +JasonPark0913
+  twitter: hyunjO_on
+  email: jpar225@gmail.com
+  description: "Jason is a Node.js Developer"
+
 agektmr:
   name:
     given: Eiji
