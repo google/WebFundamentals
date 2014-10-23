@@ -87,8 +87,8 @@ simple:
         Use Host GPU
       </td>
       <td data-th="Description">
-        Make sure you **check this** field as it can drastically improve the
-        emulators performance.
+        Make sure you <strong>check this</strong> field as it can drastically
+        improve the emulators performance.
       </td>
     </tr>
     <tr>
