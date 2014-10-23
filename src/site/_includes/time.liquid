@@ -1,10 +1,10 @@
   <div class="content">
     <div class="container">
       {% if page.article.updated_on %}
-        Last updated on {{ page.article.updated_on }}
+        {{"updated_on" | localize_string}} {{ page.article.updated_on }}
       {% else %}
         {% if page.article.written_on %}
-          Written on {{ page.article.written_on }}
+          {{"written_on" | localize_string}} {{ page.article.written_on }}
         {% endif %}
       {% endif %}
     </div>

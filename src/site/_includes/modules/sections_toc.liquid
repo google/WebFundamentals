@@ -1,13 +1,13 @@
 <div class="container">
   <span class="article-section__icon icon-circle themed themed--background"><span>{{page.articles.[page.id].size}}</span></span>
-  <span class="articles-count themed">Guides available</span>
+  <span class="articles-count themed">{{"guides_available" | localize_string}}</span>
   <ol class="articles-list">
 
     {% for guide in page.articles.[page.id] %}
     <li class="articles-list__item">
 
       <div class="g-wide--2 g--centered">
-        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="Read the lesson {{guide.title}}">
+        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{"read_the_lesson" | localize_string}} {{guide.title}}">
           <h3 class="xlarge themed">{{guide.title}}</h3>
           {% if guide.thumbnail %}
           <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">

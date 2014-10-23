@@ -2,10 +2,10 @@
 <div class="container-medium">
   <nav class="article-nav">
   {% if page.article.previous %}
-  <a href="#" class="article-nav-link article-nav-link--prev" title="Previous article" href="{{site.baseurl}}{{ page.article.previous.url }}">Previous '{{ page.article.previous.title }}'</a>
+  <a href="#" class="article-nav-link article-nav-link--prev" title="{{"previous_article" | localize_string}}" href="{{site.baseurl}}{{ page.article.previous.url }}">{{"previous" | localize_string}} '{{ page.article.previous.title }}'</a>
   {% endif %}
   {% if page.article.next %}
-  <a href="#" class="article-nav-link article-nav-link--next" title="Next article" href="{{site.baseurl}}{{ page.article.next.url }}" style="float: right;">Next '{{ page.article.next.title }}'</a>
+  <a href="#" class="article-nav-link article-nav-link--next" title="{{"next_article" | localize_string}}" href="{{site.baseurl}}{{ page.article.next.url }}" style="float: right;">{{"next" | localize_string}} '{{ page.article.next.title }}'</a>
   {% endif %}
   </nav>
 </div>

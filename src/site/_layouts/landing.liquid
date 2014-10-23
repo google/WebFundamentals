@@ -35,7 +35,7 @@
             <ol class="list-links list-links--secondary">
             {% for article in page.articles[guide.id] %}
               {% if article.is_localized != true or article.langcode == page.langcode %}
-              <li><a href="{{site.baseurl}}{{article.url | clean | localize_link:article}}" title="Read the lesson {{article.title}}">{{article.title}}</a></li>
+              <li><a href="{{site.baseurl}}{{article.url | clean | localize_link:article}}" title="{{"read_the_lesson" | localize_string}} {{article.title}}">{{article.title}}</a></li>
               {% endif %}
             {% endfor %}
             </ol>
