@@ -9,7 +9,7 @@ introduction: "Not all video formats are supported on all platforms.
               and make sure your video works in each of these."
 article:
   written_on: 2014-04-16
-  updated_on: 2014-04-29
+  updated_on: 2014-10-23
   order: 2
 collection: videos
 authors:
@@ -61,7 +61,7 @@ Use `canPlayType()` to find out which video formats are supported. The method
 takes a string argument consistent of a `mime-type` and optional codecs and
 returns one of the following values:
 
-<table class="table">
+<table class="table-2">
   <thead>
     <tr>
       <th>Return value</th>
@@ -92,7 +92,7 @@ Here are some examples of `canPlayType()` arguments and return values when
 run in Chrome:
 
 
-<table class="table">
+<table class="table-2">
   <thead>
     <tr>
       <th>Type</th>
