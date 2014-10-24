@@ -21,6 +21,22 @@ jbnicolai:
   email: me@jbnicolai.com
   description: "Open source contributor and software consultant"
 
+pbakaus:
+  name:
+    given: Paul
+    family: Bakaus
+  org:
+    name: Google
+    unit: Developer Relations
+  country: DE
+  role:
+    - author
+  homepage: http://paulbakaus.com
+  google: +PaulBakaus
+  twitter: pbakaus
+  email: pbakaus@google.com
+  description: "Paul is a Developer Advocate"
+
 ianbarber:
   name:
     given: Ian
@@ -160,53 +176,6 @@ paulkinlan:
   email: paulkinlan@google.com
   description: "Paul is a Developer Advocate"
 
-nurinamu:
-  name:
-    given: Wonjae
-    family: Lee
-  org:
-    name: Veckon
-    unit: Developer
-  country: KR
-  role:
-    - translator
-  homepage: http://nurinamu.com
-  google: +nurinamu
-  twitter: nurinamu
-  email: nurinamu@gmail.com
-  description: "Wonjae loves WebRTC and HHK"
-
-petelepage:
-  name:
-    given: Pete
-    family: LePage
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  homepage: http://petelepage.com
-  google: +PeteLePage
-  twitter: petele
-  email: petele@google.com
-  description: "Pete is a Developer Advocate"
-
-paullewis:
-  name:
-    given: Paul
-    family: Lewis
-  org:
-    name: Google
-    unit: Developer Relations
-  country: UK
-  role:
-    - author
-  homepage: http://aerotwist.com/
-  google: +PaulLewis
-  twitter: aerotwist
-  description: "Paul is a Design and Perf Advocate"
-
 agektmr:
   name:
     given: Eiji
@@ -256,6 +225,53 @@ greenido:
   email: idog@google.com
   description: "Ido is a Developer Advocate and a runner"
 
+nurinamu:
+  name:
+    given: Wonjae
+    family: Lee
+  org:
+    name: Veckon
+    unit: Developer
+  country: KR
+  role:
+    - translator
+  homepage: http://nurinamu.com
+  google: +nurinamu
+  twitter: nurinamu
+  email: nurinamu@gmail.com
+  description: "Wonjae loves WebRTC and HHK"
+
+petelepage:
+  name:
+    given: Pete
+    family: LePage
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://petelepage.com
+  google: +PeteLePage
+  twitter: petele
+  email: petele@google.com
+  description: "Pete is a Developer Advocate"
+
+paullewis:
+  name:
+    given: Paul
+    family: Lewis
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage: http://aerotwist.com/
+  google: +PaulLewis
+  twitter: aerotwist
+  description: "Paul is a Design and Perf Advocate"
+
 jacquerie:
   name:
     given: Jacopo
@@ -270,18 +286,14 @@ jacquerie:
   email: jacopo.notarstefano@gmail.com
   description: "Jacopo is a Full Stack Developer"
 
-pbakaus:
+jasonpark:
   name:
-    given: Paul
-    family: Bakaus
-  org:
-    name: Google
-    unit: Developer Relations
-  country: DE
+    given: Jason
+    family: Park
+  country: Singapore
   role:
-    - author
-  homepage: http://paulbakaus.com
-  google: +PaulBakaus
-  twitter: pbakaus
-  email: pbakaus@google.com
-  description: "Paul is a Developer Advocate"
+    - translator
+  google: +JasonPark0913
+  twitter: hyunjO_on
+  email: jpar225@gmail.com
+  description: "Jason is a Node.js Developer"
