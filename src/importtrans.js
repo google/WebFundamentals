@@ -226,7 +226,7 @@ function init() {
   commander
     .version("0.4.1")
     .usage("[options] <file|folder containing translated files>")
-    .option("-r, --wfroot [path]", "Path to Web Fundamentals root", ".")
+    .option("-r, --wfroot [./site/]", "Path to Web Fundamentals root", "./site/")
     .option("-t, --temp [path]", "Temporary directory", tempDir)
     .option("-v, --verbose", "Verbose and debug output")
     .parse(process.argv);
