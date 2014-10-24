@@ -24,7 +24,9 @@ var yamlKeys = [
   "title", "description", "introduction", "key-takeaways", "notes", "remember"
 ];
 
-
+// Parses the HTML and extracts any responsive table headers 
+// (data-th="something"), then hashes the entire string and stores the value
+// for translation.
 function extractResponsiveTableHeaders(html) {
   var result = {};
   var headers = html.match(/data-th="(.+?)"/g);
@@ -35,15 +37,20 @@ function extractResponsiveTableHeaders(html) {
   return result;
 }
 
+// Parses the HTML and replaces any responsive table headers
+// (data-th="something") with their translated versions.
 function replaceResponsiveTableHeaders(html, arb) {
   var headers = html.match(/data-th="(.+?)"/g);
   under.each(headers, function(header) {
-    //var hash = md5.md5(header);
-    //html = html.replace(header, )
+    var hash = md5.md5(header);
+    var str = arb[hash];
+    if (typeof str === "string") {
+      var re = new RegExp("data-th=\"" + header + "\"", "g");
+      html = html.replace(re, "data-th=\"" + str + "\"");
+    }
   });
   return html;
 }
-
 
 function replaceStringsInYaml(content, arb) {
   var yaml = YAML.load(content);
