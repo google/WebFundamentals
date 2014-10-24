@@ -28,14 +28,43 @@ function importLanguage(pathToLang, lang) {
   if (commander.verbose) {
     console.log("Reading strings.arb file.");
   }
-  var arbs = fs.readFileSync(path.join(pathToLang, "strings.arb")).toString();
-  arbs = JSON.parse(arbs);
+
+  try {
+    var arbs = fs.readFileSync(path.join(pathToLang, "strings.arb")).toString();
+    arbs = JSON.parse(arbs);
+  } catch (ex) {
+    arbs = {};
+    var msg = {"file": "strings.arb", "lang": lang, "error": ex};
+    result.details.push(msg);
+    console.log(colors.red("\u2718 Error reading or parsing strings.arb file."));
+  }
 
   // Copy the template strings file to the appropriate location
-  var newStringsFile = "_data/localized_strings/" + lang + ".json";
-  newStringsFile = path.join(commander.wfroot, newStringsFile);
-  var stringsFile = path.join(pathToLang, "templates-strings.arb");
-  fs.createReadStream(stringsFile).pipe(fs.createWriteStream(newStringsFile));
+  try {
+    var newStringsFile = "_data/localized_strings/" + lang + ".json";
+    newStringsFile = path.join(commander.wfroot, newStringsFile);
+    var stringsFile = path.join(pathToLang, "templates-strings.arb");
+    fs.createReadStream(stringsFile).pipe(fs.createWriteStream(newStringsFile));
+  } catch (ex) {
+    var msg = {"file": lang + ".json", "lang": lang, "error": ex};
+    result.details.push(msg);
+    console.log(colors.red("\u2718 Error copying template strings."));
+  }
+
+  // Copy the _betterbook.yaml and update it with the latest translations
+  try {
+    var bbArbs = fs.readFileSync(path.join(pathToLang, "betterbook.arb")).toString();
+    bbArbs = JSON.parse(bbArbs);
+    var betterBookFile = path.join(commander.wfroot, "_betterbook.yaml");
+    var enBetterBook = fs.readFileSync(betterBookFile);
+    var localizedBetterBook = common.replaceStringsInYaml(enBetterBook, bbArbs);
+    betterBookFile = path.join(commander.wfroot, "_" + lang, "_betterbook.yaml");
+    fs.writeFileSync(betterBookFile, localizedBetterBook);
+  } catch (ex) {
+    var msg = {"file": "_betterbook.yaml", "lang": lang, "error": ex};
+    result.details.push(msg);
+    console.log(colors.red("\u2718 Error handling _betterbook.yaml."));
+  }
 
   // Get the list of files
   common.recurseDir(pathToLang, pathToLang, function(file) {
