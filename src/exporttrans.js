@@ -146,6 +146,13 @@ function main() {
   templateStrings = path.join(commander.args[0], templateStrings);
   var newTemplateStrings = path.join(commander.temp, "templates-strings.arb");
   fs.createReadStream(templateStrings).pipe(fs.createWriteStream(newTemplateStrings));
+
+  // Get the _betterbook.yaml file, convert it to an ARB file and add it to the ZIP
+  var bbFile = path.join(commander.args[0], "..", "_betterbook.yaml");
+  var bBookYaml = YAML.load(fs.readFileSync(bbFile));
+  var bBookArb = common.extractStringsFromYaml(bBookYaml);
+  var bbArbFile = path.join(commander.temp, "betterbook.arb");
+  fs.writeFileSync(bbArbFile, JSON.stringify(bBookArb, null, 2));
   
   // Create the ZIP file with the necessary files.
   var zip = new AdmZip();
