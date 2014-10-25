@@ -11,6 +11,7 @@ article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
   order: 1
+priority: 0
 id: multi-screen-content
 collection: multi-screen
 authors:

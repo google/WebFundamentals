@@ -5,15 +5,24 @@ description: "Web Fundamentals is a comprehensive resource for multi-device
 class: home
 title: Web Fundamentals
 id: home
+priority: 0
 ---
 
 <style>
   .sections {
     margin-bottom: 52px;
   }
+  #potentialAction {
+    display: none;
+  }
 
 </style>
-
+<meta itemprop="url" content="https://developers.google.com/web/fundamentals"/>
+<form id="potentialAction" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+  <meta itemprop="target" content="https://developers.google.com/search/results?p=%2Fweb%2Ffundamentals&q={search_term_string}"/>
+  <input itemprop="query-input" type="text" name="search_term_string" required/>
+  <input type="submit"/>
+</form>
 <div class="home-header centered">
   <div class="container">
     <h1>Web <b>Fundamentals</b></h1>

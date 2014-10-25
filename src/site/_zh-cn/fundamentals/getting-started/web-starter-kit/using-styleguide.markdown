@@ -33,7 +33,7 @@ key-takeaways:
 
 ### 添加一个新的组件
 
-1. 打开 *app/styleguide/index.html*，在最后一个元素后面给你的新元素添加 HTML。
+1. 打开 *app/styleguide.html*，在最后一个元素后面给你的新元素添加 HTML。
 
 2. 在 app/styles/components/ 中，给你的组件创建一个名称合适的新 Sass 文件。
 
@@ -44,7 +44,7 @@ key-takeaways:
 
     别忘了在文件名中添加下划线；它指明该文件的目的是用于合并到其他 Sass 文件。
 
-4. 访问 http://localhost:<Port Number>/styleguide/，在本地测试它的外观情况，确保构建成功。
+4. 访问 http://localhost:<Port Number>/styleguide.html，在本地测试它的外观情况，确保构建成功。
 
 5. 最后，在你的页面中使用新组件。
 
@@ -52,7 +52,7 @@ key-takeaways:
 
 下面是一个简单的添加组件到样式指南中的步骤。
 
-1. 首先我们在 app/styleguide/index.html 底部添加 <footer> 标签，给它一个类名 Footer。
+1. 首先我们在 app/styleguide.html 底部添加 <footer> 标签，给它一个类名 Footer。
 
 2. 接着创建我们的 Sass 文件。这里我们会创建 app/styles/components/_footer.scss 文件然后添加一些非常基本的样式以便开始。
 

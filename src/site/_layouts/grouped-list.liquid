@@ -38,7 +38,7 @@
             {% for item in group.list %}
               <li>
                 {% if item.link %}
-                  <a href="{{item.link}}" title="Read the lesson {{item.title}}">
+                  <a href="{{item.link}}" title="{{"read_the_lesson" | localize_string}} {{item.title}}">
                     {{item.title}}
                   </a>
                 {% else %}

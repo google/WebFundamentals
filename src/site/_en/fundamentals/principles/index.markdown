@@ -10,6 +10,7 @@ article:
   order: 1
 id: principles-of-site-design
 collection: home
+priority: 0
 authors:
   - petelepage
 list:

@@ -186,13 +186,11 @@ ol.list-links {
 
 body[dir=rtl] ol.list-links {
   li {
-    &:before {
-      display: none;
+    a:before {
+        display: none;
     }
 
-    & a {
-      @include numbered-list("right");
-    }
+    @include numbered-list("right");
   }
 }
 
@@ -675,6 +673,12 @@ body[dir=rtl] .list-anchor {
     }
   }
 
+  &:before {
+    display: none;
+  }
+}
+
+body[dir=rtl] .guides-list__item {
   &:before {
     display: none;
   }

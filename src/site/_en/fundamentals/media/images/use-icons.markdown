@@ -1,10 +1,8 @@
 ---
 layout: article
 title: "Use SVG for icons"
-description: "When adding icons to your page, use SVG icons where possible or
-in some cases, unicode characters."
-introduction: "When adding icons to your page, use SVG icons where possible or
-in some cases, unicode characters."
+description: "When adding icons to your page, use SVG icons where possible or in some cases, unicode characters."
+introduction: "When adding icons to your page, use SVG icons where possible or in some cases, unicode characters."
 authors:
   - petelepage
 article:
@@ -12,6 +10,7 @@ article:
   updated_on: 2014-06-10
   order: 3
 collection: images
+priority: 1
 key-takeaways:
   avoid-images:
     - Use SVG or unicode for icons instead of raster images.
@@ -39,7 +38,7 @@ key-takeaways:
 ## Replace simple icons with unicode
 
 Many fonts include support for the myriad of unicode glyphs, which can be used
-instead of images.  Unlike images, unicode fonts scale well, and look good no
+instead of images. Unlike images, unicode fonts scale well, and look good no
 matter how small or large they appear on screen.
 
 Beyond the normal character set, unicode may include symbols for number forms
@@ -48,7 +47,7 @@ Beyond the normal character set, unicode may include symbols for number forms
 notation (&#9836;), Greek letters (&#937;), even chess pieces (&#9822;).
 
 Including a unicode character is done in the same way named entities are:
-`&#XXXX`, where `XXXX` represents the unicode character number.  For example:
+`&#XXXX`, where `XXXX` represents the unicode character number. For example:
 
 {% highlight html %}
 You're a super &#9733;
@@ -57,6 +56,7 @@ You're a super &#9733;
 You're a super &#9733;
 
 ## Replace complex icons with SVG
+
 For more complex icon requirements, SVG icons are generally lightweight, 
 easy to use and can be styled with CSS. SVG have a number of advantages over
 raster images:
@@ -100,7 +100,7 @@ Awesome](http://fortawesome.github.io/Font-Awesome/),
 [Pictos](http://pictos.cc/) and [Glyphicons](http://glyphicons.com/).
 
 Be sure to balance the weight of the additional HTTP request and file size with
-the need for the icons.  For example, if you only need a handful of icons, it
+the need for the icons. For example, if you only need a handful of icons, it
 may be better to use an image or an image sprite.
 
 {% include modules/nextarticle.liquid %}

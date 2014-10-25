@@ -1,18 +1,15 @@
 ---
 layout: article
 title: "Images in Markup"
-description: "The `img` element is powerful – it downloads, decodes and renders content – and
-modern browsers support a range of image formats."
-introduction: "The <code>img</code> element is powerful – it downloads,
-decodes and renders content – and modern browsers support a range of image 
-formats.  Including images that work across devices is no different than for 
-desktop, and only requires a few minor tweaks to create a good experience."
+description: "The `img` element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image formats."
+introduction: "The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience."
 authors:
   - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-09-30
   order: 1
+priority: 0
 collection: images
 key-takeaways:
   img-in-markup:
@@ -249,7 +246,7 @@ take a small proportion.
 {% include_code _code/breakpoints.html picture html %}
 
 The `sizes` attribute in the above example uses several media queries to
-specify the the size of them image.  When the browser width is greater than
+specify the size of the image. When the browser width is greater than
 600px, the image will be 25% of the viewport width, when it is between 500px
 and 600px, the image will be 50% of the viewport width, and below 500px, it
 will be full width.

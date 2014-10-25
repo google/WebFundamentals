@@ -10,6 +10,7 @@ article:
   updated_on: 2014-04-30
   order: 1
 collection: introduction-to-media
+priority: 0
 id: images
 key-takeaways:
   use-right-image:

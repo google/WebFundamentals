@@ -9,6 +9,7 @@ article:
   order: 4
 id: optimize-ads
 collection: ads
+priority: 0
 authors:
   - megginkearney
   - petelepage

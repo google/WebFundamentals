@@ -10,6 +10,7 @@ article:
 collection: critical-rendering-path
 authors:
   - ilyagrigorik
+priority: 0
 key-takeaways:
   adding-interactivity:
     - JavaScript can query and modify DOM and CSSOM.

@@ -5,7 +5,7 @@ description: "While nothing can replace the real thing, emulators and simulators
 introduction: "While nothing can replace the real thing, emulators and simulators can be used to check API and CSS support when you don't have access to a device."
 article:
   written_on: 2014-09-25
-  updated_on: 2014-09-25
+  updated_on: 2014-10-23
   order: 3
 collection: devices
 authors:
@@ -87,8 +87,8 @@ simple:
         Use Host GPU
       </td>
       <td data-th="Description">
-        Make sure you **check this** field as it can drastically improve the
-        emulators performance.
+        Make sure you <strong>check this</strong> field as it can drastically
+        improve the emulator's performance.
       </td>
     </tr>
     <tr>

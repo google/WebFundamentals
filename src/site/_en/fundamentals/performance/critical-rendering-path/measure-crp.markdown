@@ -9,6 +9,7 @@ article:
   featured: true
   order: 5
 collection: critical-rendering-path
+priority: 0
 authors:
   - ilyagrigorik
 key-takeaways:

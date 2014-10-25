@@ -8,6 +8,7 @@ article:
   written_on: 2014-04-01
   updated_on: 2014-04-28
   order: 4
+priority: 0
 id: performance
 collection: home
 ---

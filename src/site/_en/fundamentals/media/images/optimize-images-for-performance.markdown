@@ -1,20 +1,15 @@
 ---
 layout: article
 title: "Optimize images for performance"
-description: "Images often account for most of the downloaded bytes and also often occupy a
-significant amount of the visual space on the page."
-introduction: "Images often account for most of the downloaded bytes and also often occupy a
-significant amount of the visual space on the page. As a result, optimizing
-images can often yield some of the largest byte savings and performance
-improvements for your website: the fewer bytes the browser has to download, the
-less competition there is for client's bandwidth and the faster the browser can
-download and display all the assets."
+description: "Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page."
+introduction: "Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for client's bandwidth and the faster the browser can download and display all the assets."
 authors:
   - petelepage
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
   order: 4
+priority: 0
 collection: images
 key-takeaways:
   use-right-image:
