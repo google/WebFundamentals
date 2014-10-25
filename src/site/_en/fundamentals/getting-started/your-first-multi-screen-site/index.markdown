@@ -11,6 +11,7 @@ article:
   updated_on: 2014-01-06
   order: 2
 id: multi-screen
+priority: 0
 collection: getting-started
 authors:
   - paulkinlan

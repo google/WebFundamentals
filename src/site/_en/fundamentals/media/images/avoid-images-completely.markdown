@@ -1,17 +1,11 @@
 ---
 layout: article
 title: "Avoid images completely"
-description: "Sometimes, the best image isn't actually an image at all. Whenever possible, use
-the native capabilities of the browser to provide the same or similar
-functionality."
-introduction: "Sometimes, the best image isn't actually an image at all. Whenever possible, use
-the native capabilities of the browser to provide the same or similar
-functionality.  Browsers generate visuals that would have previously required
-images.   This means that browsers no longer need to download separate image
-files and prevents awkwardly scaled images.  Icons can be rendered using unicode
-or special icon fonts."
+description: "Sometimes, the best image isn't actually an image at all. Whenever possible, use the native capabilities of the browser to provide the same or similar functionality."
+introduction: "Sometimes, the best image isn't actually an image at all. Whenever possible, use the native capabilities of the browser to provide the same or similar functionality.  Browsers generate visuals that would have previously required images.   This means that browsers no longer need to download separate image files and prevents awkwardly scaled images.  Icons can be rendered using unicode or special icon fonts."
 authors:
   - petelepage
+priority: 0
 article:
   written_on: 2014-04-30
   updated_on: 2014-06-10

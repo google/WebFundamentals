@@ -1,9 +1,9 @@
 {% if page.layout == "article" %}
 {% if page.article.updated_on %}
-  <p>Updated on {{ page.article.updated_on }}</p>
+  <p>{{"updated_on" | localize_string}} {{ page.article.updated_on }}</p>
 {% else %}
   {% if page.article.written_on %}
-  <p>Written on {{ page.article.written_on }}</p>
+  <p>{{"written_on" | localize_string}} {{ page.article.written_on }}</p>
   {% endif %}
 {% endif %}
 {% endif %}

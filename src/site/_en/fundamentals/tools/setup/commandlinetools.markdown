@@ -5,7 +5,7 @@ description: "Set up shortcuts for the command line tasks you use over and over 
 introduction: "Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that."
 article:
   written_on: 2014-09-25
-  updated_on: 2014-09-25
+  updated_on: 2014-10-23
   order: 2
 collection: set-up
 authors:
@@ -38,7 +38,7 @@ commands to your bashrc file. On Mac or Linux:
 
 2. Add a new alias, for example:
 
-    alias master='git checkout master'
+        alias master='git checkout master'
 
 3. Anytime you are in a directory with a git repo, you can run the command
    `master` and it will checkout the master branch for you.
@@ -64,15 +64,15 @@ These are a few commands that you may find useful.
   <tbody>
     <tr>
       <td data-th="Command">Open your editor</td>
-      <td data-th="Alias">alias st='open -a "Sublime Text"'</td>
+      <td data-th="Alias"><code>alias st='open -a "Sublime Text"'</code></td>
     </tr>
     <tr>
       <td data-th="Command">Launch a server</td>
-      <td data-th="Alias">alias server="python -m SimpleHTTPServer"</td>
+      <td data-th="Alias"><code>alias server="python -m SimpleHTTPServer"</code></td>
     </tr>
     <tr>
       <td data-th="Command">Go to a directory you commonly work in</td>
-      <td data-th="Alias">alias p="cd ~/projects"</td>
+      <td data-th="Alias"><code>alias p="cd ~/projects"</code></td>
     </tr>
   </tbody>
 </table>

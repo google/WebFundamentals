@@ -1,10 +1,8 @@
 ---
 layout: article
 title: "Use DevTools Emulation"
-description: "When you don’t have a particular device, or want to do a spot check on something,
-the best option is to emulate the device right inside your browser."
-introduction: "When you don’t have a particular device, or want to do a spot check on something,
-the best option is to emulate the device right inside your browser."
+description: "When you don’t have a particular device, or want to do a spot check on something, the best option is to emulate the device right inside your browser."
+introduction: "When you don’t have a particular device, or want to do a spot check on something, the best option is to emulate the device right inside your browser."
 article:
   written_on: 2014-05-29
   updated_on: 2014-09-25

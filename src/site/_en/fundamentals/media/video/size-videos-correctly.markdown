@@ -15,6 +15,7 @@ key-takeaways:
     - Don't serve videos with a larger frame size or higher quality than the platform can handle.
     - Don't make your videos any longer than they need be.
     - Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback.
+priority: 1
 remember:
   media-fragments:
     - The Media Fragments API is supported on most platforms, but not on iOS.

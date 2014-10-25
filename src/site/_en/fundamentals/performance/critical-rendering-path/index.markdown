@@ -9,6 +9,7 @@ article:
   order: 1
 id: critical-rendering-path
 collection: performance
+priority: 0
 authors:
   - ilyagrigorik
 ---
