@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "객체 모델 생성"
-description: "브라우저는 화면에 콘텐츠를 렌더링 하기 전에 DOM과 CSSOM 트리를 구축합니다. 따라서 브라우저가 HTML과 CSS를 가능한 한 빨리 읽을 수 있게 도와주십시요."
-introduction: "브라우저는 페이지를 렌더링 하기 전에 DOM과 CSSOM 트리를 구축합니다. 따라서 브라우저가 HTML과 CSS를 가능한 한 빨리 읽을 수 있게 도와주세요."
+description: "브라우저는 화면에 콘텐츠를 렌더링 하기 전에 DOM과 CSSOM 트리를 구축합니다. 따라서 HTML과 CSS를 가능한 한 빨리 브라우저에게 전달해야 합니다."
+introduction: "브라우저는 페이지를 렌더링 하기 전에 DOM과 CSSOM 트리를 구축합니다. 따라서 HTML과 CSS를 가능한 한 빨리 브라우저에게 전달해야 합니다."
 article:
   written_on: 2014-04-01
   updated_on: 2014-09-12
