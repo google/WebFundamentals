@@ -112,7 +112,7 @@ Translations
 
 The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br". 
 
-To test translations set the lang variabe in the _config_grunt.yml. For example, to set the mode to French:
+To test translations set the lang variabe in the _config-grunt.yml. For example, to set the mode to French:
 
     lang: "fr"
 
