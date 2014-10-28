@@ -50,7 +50,7 @@ related:
       section:
         id: optimizing-content-efficiency
         title: "Optimizing Content Efficiency"
-        href: performance/optimizing-content-efficiency/
+        href: fundamentals/performance/optimizing-content-efficiency/
 ---
 
 {% wrap content %}
