@@ -8,7 +8,7 @@ introduction: "Pages optimized for a variety of devices must include a meta view
   how to control the page's dimensions and scaling."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-09-12
+  updated_on: 2014-10-29
   order: 1
 priority: 0
 authors:
@@ -70,7 +70,7 @@ that font sizes may appear inconsistently and they have to double-tap or
 pinch-to-zoom in order to be able to see and interact with the content.
 
 {% highlight html %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {% endhighlight %}
 
 
