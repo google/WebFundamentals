@@ -1,16 +1,12 @@
 ---
 layout: article
-title: "Optimize images for performance"
-description: "Images often account for most of the downloaded bytes and also often occupy a
-significant amount of the visual space on the page."
-introduction: "Images often account for most of the downloaded bytes and also often occupy a
-significant amount of the visual space on the page. As a result, optimizing
-images can often yield some of the largest byte savings and performance
-improvements for your website: the fewer bytes the browser has to download, the
-less competition there is for client's bandwidth and the faster the browser can
-download and display all the assets."
+title: "优化图片提升性能"
+description: "图片通常占了下载字节的多数，在页面上一般也占据很大部分的可视空间。"
+introduction: "图片通常占了下载字节的多数，在页面上一般也占据很大部分的可视空间。因此，优化图片通常可以最大限度地给你的网站节省字节并提升性能：浏览器要下载的字节越少，客户端对带宽的竞争就越小，浏览器下载、显示所有资源的速度就越快。"
 authors:
   - petelepage
+translators:
+  - 陈三
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
@@ -33,14 +29,10 @@ key-takeaways:
       use unicode characters in place of images, and replace complex icons
       with icon fonts.
   optimize-images:
-    - Don't just randomly choose an image format, understand the different
-      formats available, and use the format best suited.
-    - Include image optimization and compression tools into your workflow to
-      reduce file sizes.
-    - Reduce the number of http requests by placing frequently used images
-      into image sprites.
-    - Consider loading images only after they’ve scrolled into view to
-      improve the initial page load time and reduce the initial page weight.
+    - 不要随便选择图片格式，弄清现有格式的区别，用最适合的格式。
+    - 在你的工作流程中引进图片优化与压缩工具，减小文件大小。
+    - 将常用图片放入图片精灵中，减少 http 请求数量。
+    - 考虑在图片滚动进入视口后才加载，以改善页面初始加载时间，减小页面首次初始大小。
 remember:
   compressive:
     - Use caution with the compressive technique because of the increased
@@ -50,12 +42,12 @@ remember:
 related:
   optimize:
   -
-      title: "Image optimization"
+      title: "图片优化"
       href: fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization
       section:
         id: optimizing-content-efficiency
-        title: "Optimizing Content Efficiency"
-        href: performance/optimizing-content-efficiency/
+        title: "优化内容效率"
+        href: fundamentals/performance/optimizing-content-efficiency/
 ---
 
 {% wrap content %}
@@ -64,83 +56,45 @@ related:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.optimize-images %}
 
-## Choose the right format
+## 选择正确的格式
 
-There are two types of images to consider: [vector
-images](http://en.wikipedia.org/wiki/Vector_graphics) and [raster
-images](http://en.wikipedia.org/wiki/Raster_graphics). For raster images, you
-also need to choose the right compression format, for example: `GIF`, `PNG`, `JPG`.
+有两类图片类型可以考虑：[矢量图](http://en.wikipedia.org/wiki/Vector_graphics)与[位图](http://en.wikipedia.org/wiki/Raster_graphics)。对于位图，你一样需要选择正确的压缩格式，比如：`GIF`、`PNG`、`JPG`。
 
-**Raster images**, like photographs and other images which are represented as a
-grid of individual dots or pixels. Raster images typically come from a camera or
-scanner, or can be created in the browser with the `canvas` element.  As the
-image size gets larger, the file size grows as well.  When scaled larger than
-their original size, raster images get blurry as the browser needs to guess how
-to fill in the missing pixels.
+**位图**，诸如相片及其它通过独立的点或像素网格表示的图片。位图通常来自照相机或扫描仪，也可以在浏览器中借助 `canvas` 元素创建。随着图片尺寸的增加，文件大小跟着增加。如果位图拉伸超过初始尺寸，则会变得模糊，因为浏览器需要猜测怎样填补缺失的像素。
 
-**Vector images**, such as logos and line art are be defined by a set of curves,
-lines, shapes and fill colors. Vector images are created with programs like
-Adobe Illustrator or Inkscape and saved to a vector format like
-[`SVG`](http://css-tricks.com/using-svg/).  Because vector images are built on
-simple primitives, they can be scaled without any loss in quality without a
-change in file size.
+**矢量图**，譬如商标和线描，它们是由一系列的曲线、直线、形状和填充色构成的。矢量图使用 Adobe Illustrator 或 Inkscape 这样的程序创建，保存为矢量格式如 [`SVG`](http://css-tricks.com/using-svg/)。因为矢量图是建立在简单图元上，它们可以进行无损伸缩，还能保持文件大小不变。
 
-When choosing the right format, it is important to consider both the origin of
-the image (raster or vector), and the content (colors, animation, text, etc).
-No one format will fit all image types and each has it's own strengths and
-weaknesses.
+选择图片格式时，需要综合考虑图片的源格式（位图还是矢量）及内容（颜色、动画、文本等等）。没有一个格式能够适用所有图片类型，它们各有优劣。
 
-Start with these guidelines when choosing the right format:
+在选择正确的格式时，先参考以下指导：
 
-* Use `JPG` for photographic images.
-* Use `SVG` for vector art and solid color graphics such as logos and line art.
-  If vector art is unavailable, try WebP or PNG.
-* Use `PNG` rather than `GIF` as it allows for more colors and offers better
-  compression ratios.
-* For longer animations, consider using `<video>` which provide better image
-  quality and gives the user control over playback.
+* 摄影图片使用 `JPG`。
+* 诸如商标和线描的矢量插画及纯色图形使用 `SVG`。如果矢量不可用，试试 WebP 或 PNG。
+* 图片需要更丰富的颜色及更好压缩比时，使用 `PNG` 而不是 `GIF`。
+* 长动画考虑使用 `<video>`，能提供更好的图片质量，还允许用户控制回放。
 
-## Reduce the file size
+## 减小文件大小
 
-Image file size can be considerably reduced by 'post-processing' them after
-saving. There are a number of tools for image compression – lossy and lossless,
-online, GUI, command line.  Where possible, it's best to try automating image
-optimization so that it's a first-class citizen in your workflow.
+在保存图片后，图片文件大小可以通过后处理减掉相当一部分。有很多图片压缩工具 - 有损与无损的、在线的、GUI 的、命令行的。在可能的情况下，最好自动化图片优化，这样在你的工作流程中，它就是一等公民。
 
-Several tools are available that perform further, lossless compression on `JPG`
-and `PNG` files, with no effect on image quality. For `JPG`, try
-[jpegtran](http://jpegclub.org/) or
-[jpegoptim](http://freshmeat.net/projects/jpegoptim/) (available on Linux only;
-run with the --strip-all option). For `PNG`, try
-[OptiPNG](http://optipng.sourceforge.net/) or
-[PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
+有许多工具可用来对 `JPG` 和 `PNG` 文件做进一步的无损压缩，而不会对图片质量造成影响。对于 `JPG`，试试 [jpegtran](http://jpegclub.org/) 或 [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (只 Linux 下有；通过 --strip-all 选项运行。对于 `PNG`，试试 [OptiPNG](http://optipng.sourceforge.net/) 或 [PNGOUT](http://www.advsys.net/ken/util/pngout.htm)。
 
-## Use image sprites
+## 使用图片精灵
 
-CSS spriting is a technique whereby a number of images are combined in a single
-'sprite sheet' image. Individual images can then be used by specifying the
-background image for an element (the sprite sheet) plus an offset to display the
-correct part.
+图片精灵是一个将许多图片合并到一个单一'精灵表'图片的技术。然后单一的图片就可以通过设定元素背景图片（所谓的精灵表）加上位移来显示正确的部分。
 
 {% link_sample _code/image-sprite.html %}
 <img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example">
 {% endlink_sample %}
 {% include_code _code/image-sprite.html sprite css %}
 
-Spriting has the advantage of reducing the number of downloads required to get
-multiple images, while still enabling caching.
+精灵化的好处是，减少了读取多张图片的下载数量，而且还能保持缓存的启用。
 
-## Consider lazy loading
+## 考虑延缓加载
 
-Lazy loading can significantly speed up loading on long pages that include many
-images below the fold by loading them either as needed or once the primary
-content has finished loading and rendering.  In addition to performance
-improvements, using lazy loading can create infinite scrolling experiences.
+首屏包含许多图片的长页面中，延缓加载能极大提高加载速度，可以按需加载，或者在主要内容加载完成且渲染好之后加载。除了性能上的提升外，使用延缓加载能产生无限滚动的体验。
 
-Be careful when creating infinite scrolling pages, because content is loaded as
-it becomes visible, search engines may never see that content.  In addition,
-users who are looking for information they expect to see in the footer will
-never see the footer because new content is always loaded.
+在创建无限滚动的页面时，需要注意，内容是可见后才加载的，搜索引擎因此可能永远看不到该内容。此外，用户想查看脚部信息也不可能了，因为总是有新内容被载入。
 
 {% include modules/related_guides.liquid inline=true list=page.related.optimize %}
 
