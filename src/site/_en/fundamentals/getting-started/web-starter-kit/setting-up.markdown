@@ -26,7 +26,7 @@ key-takeaways:
 ## Install These One Time Dependencies
 
 There are two tool sets you need to install on your machine before you can build
-sites with Web Starter Kit: NodeJS & NPM, Ruby & Sass.
+sites with Web Starter Kit: NodeJS, NPM, & Sass.
 
 ### NodeJS & NPM
 
@@ -42,20 +42,16 @@ If you don’t get a response or have an old version then go to NodeJS.org and
 click on the big green Install button. NPM will be installed with NodeJS
 automatically.
 
-### Ruby & Sass
+### Sass
 
-Web Starter Kit uses Sass to make our style guide nice and modular, but Sass
-requires Ruby. For those new to Sass, the project describes itself as a “CSS
-extension language”. Essentially it’s CSS with some extra features. For example,
-it adds support for variables and functions, which help you structure your CSS
-in a modular and reusable fashion.
+Web Starter Kit uses Sass to make our style guide nice and modular. For those 
+new to Sass, the project describes itself as a “CSS extension language”. 
+Essentially it’s CSS with some extra features. For example, it adds support for 
+variables and functions, which help you structure your CSS in a modular and 
+reusable fashion.
 
-First check if you have Ruby already with `ruby -v`. If you get an error or a
-version number less than 1.8.7, you need to install Ruby by visiting the Ruby
-downloads page.
-
-Once you have Ruby, install Sass with the following command:
-`$ gem install sass`
+Once you have installed the NPM packages, along with Gulp (globally), Sass will 
+be available to you.
 
 ## Set Up Your Web Starter Kit Project
 
