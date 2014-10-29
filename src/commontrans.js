@@ -1,4 +1,4 @@
-var fs = require("fs");
+var fs = require('fs');
 var path = require("path");
 var YAML = require("js-yaml");
 var marked = require("marked");
@@ -19,6 +19,27 @@ if (!String.prototype.endsWith) {
     }
   });
 }
+
+function writeArbs(filename, obj) {
+  under.each(obj, function(val, key) {
+    if (typeof val === "string") {
+      obj[key] = val.replace(/(<.+?>)/g, "{@$1}");
+    }
+  });
+  fs.writeFileSync(filename, JSON.stringify(obj, null, 2));
+}
+
+function readArbs(filename) {
+  var arbs = fs.readFileSync(filename);
+  arbs = JSON.parse(arbs.toString());
+  under.each(arbs, function(val, key) {
+    if (typeof val === "string") {
+      arbs[key] = val.replace(/{@(<.+?>)}/g , "$1");
+    }
+  });
+  return arbs;
+}
+
 
 var yamlKeys = [
   "title", "description", "introduction", "key-takeaways", "notes", "remember"
@@ -58,7 +79,7 @@ function replaceStringsInYaml(content, arb) {
     var hash = md5.md5(val);
     var translatedString = arb[hash];
     if (translatedString) {
-      yml[key] = translatedString.replace(/{@(<.+?>)}/g , "$1");
+      yml[key] = translatedString;
     }
   }, false);
   return YAML.dump(yaml);
@@ -68,7 +89,7 @@ function extractStringsFromYaml(yaml) {
   var result = {};
   recurseYaml(yaml, function(key, val) {
     var hash = md5.md5(val);
-    result[hash] = val.replace(/(<.+?>)/g, "{@$1}");
+    result[hash] = val;
   }, false);
   return result;
 }
@@ -215,6 +236,8 @@ exports.markdownToHTML = markdownToHTML;
 exports.wrapJekyllTags = wrapJekyllTags;
 exports.htmlToMarkdown = htmlToMarkdown;
 exports.standardString = standardString;
+exports.writeArbs = writeArbs;
+exports.readArbs = readArbs;
 exports.gttCleanup = gttCleanup;
 exports.recurseDir = recurseDir;
 exports.extractStringsFromYaml = extractStringsFromYaml;

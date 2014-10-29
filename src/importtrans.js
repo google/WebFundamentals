@@ -30,8 +30,7 @@ function importLanguage(pathToLang, lang) {
   }
 
   try {
-    var arbs = fs.readFileSync(path.join(pathToLang, "strings.arb")).toString();
-    arbs = JSON.parse(arbs);
+    arbs = common.readArbs(path.join(pathToLang, "strings.arb"));
   } catch (ex) {
     arbs = {};
     var msg = {"file": "strings.arb", "lang": lang, "error": ex};
@@ -41,10 +40,10 @@ function importLanguage(pathToLang, lang) {
 
   // Copy the template strings file to the appropriate location
   try {
-    var newStringsFile = "_data/localized_strings/" + lang + ".json";
-    newStringsFile = path.join(commander.wfroot, newStringsFile);
-    var stringsFile = path.join(pathToLang, "templates-strings.arb");
-    fs.createReadStream(stringsFile).pipe(fs.createWriteStream(newStringsFile));
+    var templateArbsFile = path.join(pathToLang, "templates-strings.arb");
+    var templateArbs = common.readArbs(templateArbsFile);
+    var localizedTemplateStrings = "_data/localized_strings/" + lang + ".json";
+    fs.writeFileSync(localizedTemplateStrings, JSON.stringify(templateArbs, null, 2));
   } catch (ex) {
     var msg = {"file": lang + ".json", "lang": lang, "error": ex};
     result.details.push(msg);
@@ -53,8 +52,7 @@ function importLanguage(pathToLang, lang) {
 
   // Copy the _betterbook.yaml and update it with the latest translations
   try {
-    var bbArbs = fs.readFileSync(path.join(pathToLang, "betterbook.arb")).toString();
-    bbArbs = JSON.parse(bbArbs);
+    var bbArbs = common.readArbs(path.join(pathToLang, "betterbook.arb"));
     var betterBookFile = path.join(commander.wfroot, "_betterbook.yaml");
     var enBetterBook = fs.readFileSync(betterBookFile);
     var localizedBetterBook = common.replaceStringsInYaml(enBetterBook, bbArbs);
