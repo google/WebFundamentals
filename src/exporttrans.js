@@ -1,15 +1,20 @@
 #!/usr/bin/env node
 
-var fs = require("fs");
-var path = require("path");
-var under = require("underscore");
-var commander = require("commander");
-var moment = require("moment");
-var common = require("./commontrans");
-var AdmZip = require("adm-zip");
-var rimraf = require("rimraf");
-var YAML = require("js-yaml");
-var colors = require("colors/safe");
+/* jshint strict: true, node:true, browser:false */
+
+
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var under = require('underscore');
+var commander = require('commander');
+var moment = require('moment');
+var common = require('./commontrans');
+var AdmZip = require('adm-zip');
+var rimraf = require('rimraf');
+var YAML = require('js-yaml');
+var colors = require('colors/safe');
 
 var _arbs = {};
 
@@ -21,9 +26,9 @@ function handleFile(file) {
 
   // Check if the file contains YAML, if it does, separate the two
   // pieces so that they can be dealt with individually.
-  if (content.trimLeft().indexOf("---") === 0) {
-    var yamlStart = content.indexOf("---") + 3;
-    var yamlStop = content.indexOf("---", yamlStart);
+  if (content.trimLeft().indexOf('---') === 0) {
+    var yamlStart = content.indexOf('---') + 3;
+    var yamlStop = content.indexOf('---', yamlStart);
     yaml = content.substring(yamlStart, yamlStop);
     try {
       // Convert the YAML string to a YAML object
@@ -33,7 +38,11 @@ function handleFile(file) {
       // it's below the threshold, skip the file.
       var docPri = yamlObj.priority === undefined ? 2 : yamlObj.priority;
       if (docPri > commander.priority) {
-        return {"status": "skipped", "message": "File was below priority", "source": file};
+        return {
+          status: 'skipped',
+          message: 'File was below priority',
+          source: file
+        };
       }
 
       // Get the date the document was last updated and compare to the last
@@ -47,14 +56,23 @@ function handleFile(file) {
         lastUpdated = moment();
       }
       if (commander.date.isAfter(lastUpdated) === true) {
-        return {"status": "skipped", "message": "File has not changed.", "source": file};
+        return {
+          status: 'skipped',
+          message: 'File has not changed.',
+          source: file
+        };
       }
 
       // Parse the YAML object and extract the strings we want to translate
       under.extend(_arbs, common.extractStringsFromYaml(yamlObj));
     } catch (ex) {
       // An error occured, most likely while trying to parse the YAML, #fail
-      return {"status": "error", "message": "An error occured", "source": file, "ex": ex};
+      return {
+        status: 'error',
+        message: 'An error occured',
+        source: file,
+        ex: ex
+      };
     }
 
     // Get the markdown out of the doc, and then convert it to HTML
@@ -74,38 +92,45 @@ function handleFile(file) {
   // If there is YAML, wrap it in notranslate and append it to the top of
   // the newly created HTML doc.
   if (yaml) {
-    html = "<div class=\"notranslate\">\n---" + yaml + "---\n</div>\n\n" + html;
+    html = '<div class="notranslate">\n---' + yaml + '---\n</div>\n\n' + html;
   }
 
   // GTT gets cranky if you submit a file that has no translatable content
   // so we add a single string to the bottom of every file.
   html += common.standardString;
 
-  // Generate the file name for the new file, GTT requires folders to be 
+  // Generate the file name for the new file, GTT requires folders to be
   // essentially flat, so we use _-_ as a folder indicator, we also need to
   // rename the file to .html so that GTT doesn't get too upset.
-  var newFileName = file.replace(commander.args[0], "");
+  var newFileName = file.replace(commander.args[0], '');
   if (newFileName.indexOf(path.sep) === 0) {
     newFileName = newFileName.substring(1);
   }
-  newFileName = newFileName.replace(/\//g, "_-_");
+  newFileName = newFileName.replace(/\//g, '_-_');
   newFileName = path.join(commander.temp, newFileName);
-  newFileName = newFileName.replace(".markdown", ".html");
+  newFileName = newFileName.replace('.markdown', '.html');
 
   // Attempt to save the new file.
   try {
     fs.writeFileSync(newFileName, html);
   } catch (ex) {
     return {
-      "status": "error", "message": "Unable to save file",
-      "source": file, "dest": newFileName, "ex": ex
+      status: 'error',
+      message: 'Unable to save file',
+      source: file,
+      dest: newFileName,
+      ex: ex
     };
   }
-  return {"status": "success", "source": file, "dest": newFileName};
+  return {
+    status: 'success',
+    source: file,
+    dest: newFileName
+  };
 }
 
 function main() {
-  var detailLog = "";
+  var detailLog = '';
 
   // Create our temporary working directory
   fs.mkdirSync(commander.temp);
@@ -113,49 +138,49 @@ function main() {
   // Walk the source directory and generate the appropriate files.
   var iCount = 0, iSucceeded = 0, iFailed = 0, iSkipped = 0;
   common.recurseDir(commander.args[0], commander.args[0], function(file) {
-    if ((file.endsWith(".html")) || (file.endsWith(".markdown"))) {
+    if ((file.endsWith('.html')) || (file.endsWith('.markdown'))) {
       iCount++;
       var result = handleFile(file, commander.temp);
-      if (result.status === "success") {
-        console.log(colors.green("\u2714 %s"), file);
+      if (result.status === 'success') {
+        console.log(colors.green('\u2714 %s'), file);
         iSucceeded++;
-      } else if (result.status === "skipped") {
+      } else if (result.status === 'skipped') {
         if (commander.verbose) {
-          console.log(colors.yellow("- %s"), file);
+          console.log(colors.yellow('- %s'), file);
         }
         iSkipped++;
       } else {
-        console.log(colors.red("\u2718 %s"), file);
+        console.log(colors.red('\u2718 %s'), file);
         iFailed++;
-        detailLog += result.file + "\n";
-        detailLog += "  " + result.message + "\n";
+        detailLog += result.file + '\n';
+        detailLog += '  ' + result.message + '\n';
         if (result.ex) {
-          detailLog += "  " + result.ex.message;
+          detailLog += '  ' + result.ex.message;
         }
-        detailLog += "\n\n";
+        detailLog += '\n\n';
       }
     }
   });
 
   // write the ARBs file
-  var arbsFile = path.join(commander.temp, "strings.arb");
+  var arbsFile = path.join(commander.temp, 'strings.arb');
   common.writeArbs(arbsFile, _arbs);
 
   // Get the template localization file and add it to the ZIP
-  var stringsFile = "../_data/localized_strings/en.json";
+  var stringsFile = '../_data/localized_strings/en.json';
   stringsFile = path.join(commander.args[0], stringsFile);
   var templateStringsArb = common.readArbs(stringsFile);
-  var templateStringsFileName = path.join(commander.temp, "templates-strings.arb");
+  var templateStringsFileName = path.join(commander.temp, 'templates-strings.arb');
   common.writeArbs(templateStringsFileName, templateStringsArb);
 
 
   // Get the _betterbook.yaml file, convert it to an ARB file and add it to the ZIP
-  var bbFile = path.join(commander.args[0], "..", "_betterbook.yaml");
+  var bbFile = path.join(commander.args[0], '..', '_betterbook.yaml');
   var bBookYaml = YAML.load(fs.readFileSync(bbFile));
   var bBookArb = common.extractStringsFromYaml(bBookYaml);
-  var bbArbFile = path.join(commander.temp, "betterbook.arb");
+  var bbArbFile = path.join(commander.temp, 'betterbook.arb');
   common.writeArbs(bbArbFile, bBookArb);
-  
+
   // Create the ZIP file with the necessary files.
   var zip = new AdmZip();
   common.recurseDir(commander.temp, commander.temp, function(file) {
@@ -167,57 +192,57 @@ function main() {
   if (commander.verbose === undefined) {
     rimraf(commander.temp, function(err) {
       if (err) {
-        console.log(colors.red("Error: Unable to remove temporary directory."));
+        console.log(colors.red('Error: Unable to remove temporary directory.'));
       }
     });
   }
-  console.log("Files inspected:", iCount);
-  console.log("Success: ", colors.green(iSucceeded.toString()));
-  console.log("Skipped: ", colors.yellow(iSkipped.toString()));
-  console.log("Errors:  ", colors.red(iFailed.toString()));
-  console.log("ZIP file created:", colors.cyan(commander.output));
+  console.log('Files inspected:', iCount);
+  console.log('Success: ', colors.green(iSucceeded.toString()));
+  console.log('Skipped: ', colors.yellow(iSkipped.toString()));
+  console.log('Errors:  ', colors.red(iFailed.toString()));
+  console.log('ZIP file created:', colors.cyan(commander.output));
   if (detailLog.length > 0) {
-    var dlHeader = "WebFundamentals ExportTrans Log\n";
-    dlHeader += new Date()  + "\n\n";
-    fs.writeFileSync("exporttrans.log", dlHeader + detailLog);
-    console.log(" See", colors.red("exporttrans.log"), "for details.");
+    var dlHeader = 'WebFundamentals ExportTrans Log\n';
+    dlHeader += new Date() + '\n\n';
+    fs.writeFileSync('exporttrans.log', dlHeader + detailLog);
+    console.log(' See', colors.red('exporttrans.log'), 'for details.');
   }
 }
 
 
 function init() {
-  var tempDir = "_exporttrans-" + Date.now();
-  var defaultFile = "WebFundamentals-" + moment().format("YYYYMMDD") + ".zip";
-  console.log("WebFundamentals ExportTrans");
+  var tempDir = '_exporttrans-' + Date.now();
+  var defaultFile = 'WebFundamentals-' + moment().format('YYYYMMDD') + '.zip';
+  console.log('WebFundamentals ExportTrans');
   commander
-    .version("0.0.1")
-    .usage("[options] <path to _en>")
-    .option("-p, --priority <#>", "Maximum priority for files (1)", 1)
-    .option("-d, --date <YYYY-MM-DD>", "Cut off date for file selection (2000-01-01)", "2000-01-01")
-    .option("-o, --output <filename>", "ZIP file to create", defaultFile)
-    .option("-t, --temp <path>", "Temporary directory", tempDir)
-    .option("-v, --verbose", "Verbose and debug output")
+    .version('0.0.1')
+    .usage('[options] <path to _en>')
+    .option('-p, --priority <#>', 'Maximum priority for files (1)', 1)
+    .option('-d, --date <YYYY-MM-DD>', 'Cut off date for file selection (2000-01-01)', '2000-01-01')
+    .option('-o, --output <filename>', 'ZIP file to create', defaultFile)
+    .option('-t, --temp <path>', 'Temporary directory', tempDir)
+    .option('-v, --verbose', 'Verbose and debug output')
     .parse(process.argv);
-  
+
   if (commander.args.length !== 1) {
     commander.help();
     return;
   }
 
   if (fs.existsSync(commander.output) === true) {
-    console.log(colors.yellow("Warning: output file exists, will be overwritten."));
+    console.log(colors.yellow('Warning: output file exists, will be overwritten.'));
   }
 
   var errors = [];
 
-  commander.date = moment(commander.date, "YYYY-MM-DD");
+  commander.date = moment(commander.date, 'YYYY-MM-DD');
   if (commander.date.isValid() === false) {
-    errors.push(colors.red("Error: Invalid date format, try 2014-01-01"));
+    errors.push(colors.red('Error: Invalid date format, try 2014-01-01'));
   }
 
   var pri = parseInt(commander.priority, 10);
   if ((pri < 0) || (under.isNaN(pri) === true)) {
-    errors.push(colors.red("Error: Priority must be an integer greater >= 0"));
+    errors.push(colors.red('Error: Priority must be an integer greater >= 0'));
   }
 
   if (errors.length === 0) {
