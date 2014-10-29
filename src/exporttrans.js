@@ -139,20 +139,22 @@ function main() {
 
   // write the ARBs file
   var arbsFile = path.join(commander.temp, "strings.arb");
-  fs.writeFileSync(arbsFile, JSON.stringify(_arbs, null, 2));
+  common.writeArbs(arbsFile, _arbs);
 
   // Get the template localization file and add it to the ZIP
-  var templateStrings = "../_data/localized_strings/en.json";
-  templateStrings = path.join(commander.args[0], templateStrings);
-  var newTemplateStrings = path.join(commander.temp, "templates-strings.arb");
-  fs.createReadStream(templateStrings).pipe(fs.createWriteStream(newTemplateStrings));
+  var stringsFile = "../_data/localized_strings/en.json";
+  stringsFile = path.join(commander.args[0], stringsFile);
+  var templateStringsArb = common.readArbs(stringsFile);
+  var templateStringsFileName = path.join(commander.temp, "templates-strings.arb");
+  common.writeArbs(templateStringsFileName, templateStringsArb);
+
 
   // Get the _betterbook.yaml file, convert it to an ARB file and add it to the ZIP
   var bbFile = path.join(commander.args[0], "..", "_betterbook.yaml");
   var bBookYaml = YAML.load(fs.readFileSync(bbFile));
   var bBookArb = common.extractStringsFromYaml(bBookYaml);
   var bbArbFile = path.join(commander.temp, "betterbook.arb");
-  fs.writeFileSync(bbArbFile, JSON.stringify(bBookArb, null, 2));
+  common.writeArbs(bbArbFile, bBookArb);
   
   // Create the ZIP file with the necessary files.
   var zip = new AdmZip();
