@@ -165,7 +165,7 @@ For concatentation, use the following:
   <tbody>
     <tr>
       <td data-th="Type of File">CSS (Sass)</td>
-      <td data-th="Gulp"><a href="https://github.com/sindresorhus/gulp-ruby-sass">gulp-ruby-sass</a> or <a href="https://github.com/jonkemp/gulp-useref">gulp-useref</a></td>
+      <td data-th="Gulp"><a href="https://github.com/dlmanning/gulp-sass">gulp-sass</a> or <a href="https://github.com/jonkemp/gulp-useref">gulp-useref</a></td>
       <td data-th="Grunt"><a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a> or <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a></td>
     </tr>
     <tr>
