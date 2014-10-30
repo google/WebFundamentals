@@ -141,13 +141,19 @@ module Jekyll
 
       relpath = filepath.sub("_en/fundamentals/", "")
 
+      page = context.environments.first["page"]
+      site = context.registers[:site]
+
+      link_text = site.data["localized_strings"][page["langcode"]]["try_sample"]
+      link_text = link_text ? link_text : site.data["localized_strings"]["en"]["try_sample"]
+
       <<-HTML
   </div>
   </div>
   <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
       <code class='html'>#{highlighted_code.strip}</code>                                                     
-      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">Try full sample</a>
+      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">#{link_text}</a>
     </div>
   </div>
   <div class="container">
