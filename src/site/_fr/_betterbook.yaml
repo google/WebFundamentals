@@ -89,6 +89,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: "Exemple d'article"
         path: /fundamentals/resources/example-article/
-  - title: "<strong>Kit de lancement</strong> sur le Web"
+  - title: "Web <strong>Starter Kit</strong>"
     path: /starter-kit/
     in_header: false

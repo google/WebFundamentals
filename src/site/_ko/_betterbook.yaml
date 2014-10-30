@@ -89,6 +89,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: 예제 도움말
         path: /fundamentals/resources/example-article/
-  - title: "웹 <strong>시작 도움말</strong>"
+  - title: "Web <strong>Starter Kit</strong>"
     path: /starter-kit/
     in_header: false

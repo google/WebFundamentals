@@ -89,6 +89,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: 範例文章
         path: /fundamentals/resources/example-article/
-  - title: "網站<strong>開發新手工具包</strong>"
+  - title: "Web <strong>Starter Kit</strong>"
     path: /starter-kit/
     in_header: false
