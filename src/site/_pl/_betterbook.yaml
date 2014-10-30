@@ -2,93 +2,93 @@ toc:
   - title: "Web <strong>Fundamentals</strong>"
     path: /fundamentals/
     home: true
-  - title: 시작하기
+  - title: Wprowadzenie
     path: /fundamentals/getting-started/
-  - title: 문서
+  - title: Dokumentacja
     path: "/fundamentals/#documentation"
     hasSubNav: true
     section:
-      - title: 사이트 디자인 정책
+      - title: Zasady projektowania witryn
         path: /fundamentals/principles/
         id: principles-of-site-design
-      - title: 여러 기기 레이아웃
+      - title: Układ strony obsługiwany na wielu urządzeniach
         path: /fundamentals/layouts/
         id: multi-device-layouts
         section:
-          - title: 반응형 웹 디자인 기초
+          - title: Podstawy elastycznego projektowania witryn
             path: /fundamentals/layouts/rwd-fundamentals/
-          - title: 반응형 웹 디자인 패턴
+          - title: Sposoby elastycznego projektowania witryn
             path: /fundamentals/layouts/rwd-patterns/
-          - title: 레이아웃 패턴
+          - title: Wzory układu strony
             path: /fundamentals/layouts/layout-patterns/
-          - title: UI 요소
+          - title: Elementy interfejsu użytkownika
             path: /fundamentals/layouts/ui-elements/
-      - title: 양식 및 사용자 입력
+      - title: Formularze i obsługa przez użytkownika
         path: /fundamentals/input/
         id: user-input
         section:
-          - title: 터치 입력
+          - title: Obsługa dotykowa
             path: /fundamentals/input/touch/
-          - title: 양식 입력
+          - title: Wpisywanie do formularzy
             path: /fundamentals/input/form/
-      - title: 디자인과 분위기
+      - title: Wygląd i ogólne wrażenie
         path: /fundamentals/look-and-feel/
         id: look-and-feel
         section:
-          - title: 애니메이션 소개
+          - title: Wprowadzenie do animacji
             path: /fundamentals/look-and-feel/animations/
-      - title: "이미지, 동영상, 오디오"
+      - title: "Obrazy, wideo i dźwięk"
         path: /fundamentals/media/
         id: introduction-to-media
         section:
-          - title: 이미지
+          - title: Obrazy
             path: /fundamentals/media/images/
-          - title: 동영상
+          - title: Wideo
             path: /fundamentals/media/video/
-          - title: 오디오
+          - title: Dźwięk
             path: /fundamentals/media/audio/
-      - title: 수익 창출
+      - title: Zarabianie
         path: /fundamentals/monetization/
         id: monetization
         section:
-          - title: 광고를 통한 수익 창출
+          - title: Zarabianie na reklamach
             path: /fundamentals/monetization/ad-monetization/
-      - title: 기기 액세스
+      - title: Dostęp do urządzenia
         path: /fundamentals/device-access/
         id: device-access
         section:
-          - title: 사용자 위치
+          - title: Lokalizacja użytkownika
             path: /fundamentals/device-access/user-location
-          - title: 클릭 투 콜
+          - title: "Kliknij, aby połączyć"
             path: /fundamentals/device-access/click-to-call
-      - title: 성능
+      - title: Wydajność
         path: /fundamentals/performance/
         id: performance
         section:
-          - title: 최상 렌더링 경로
+          - title: Krytyczna ścieżka renderowania
             path: /fundamentals/performance/critical-path-rendering/
-          - title: 콘텐츠 효율성 최적화
+          - title: Optymalizowanie obsługi treści
             path: /fundamentals/performance/optimizing-content-efficiency/
-          - title: 네트워킹 최적화
+          - title: Optymalizowanie sieci
             path: /fundamentals/performance/optimizing-networking/
-          - title: 상호작용 기능 최적화
+          - title: Optymalizowanie obsługi interaktywnej
             path: /fundamentals/performance/optimizing-interactivity/
-          - title: 성과 측정
+          - title: Mierzenie wydajności
             path: /fundamentals/performance/measuring-performance/
-  - title: 도구
+  - title: Narzędzia
     path: /fundamentals/tools/
-  - title: 리소스
+  - title: Zasoby
     path: /fundamentals/resources/
     in_header: false
     section:
-      - title: 용어집
+      - title: Słownik
         path: /fundamentals/resources/glossary/
-      - title: 샘플
+      - title: Przykłady
         path: /fundamentals/resources/samples/
-      - title: 스타일가이드
+      - title: Poradnik dotyczący stylów
         path: /fundamentals/resources/styleguide/
-      - title: 예제 도움말
+      - title: Przykładowy artykuł
         path: /fundamentals/resources/example-article/
-  - title: "웹 <strong>시작 도움말</strong>"
+  - title: "Sieciowy <strong>zestaw startowy</strong>"
     path: /starter-kit/
     in_header: false
