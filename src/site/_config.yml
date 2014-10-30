@@ -22,5 +22,5 @@ kramdown:
 include: ['.htaccess']
 exclude: ['config.rb']
 # comment this for plain jekyll serve usage.
-langs_available: ['ko', 'zh-cn', 'he', 'de']
+langs_available: ['de', 'fr', 'he', 'ko', 'zh-cn']
 sample_link_base: "/web/fundamentals/resources/samples/"
