@@ -2,93 +2,93 @@ toc:
   - title: "Web <strong>Fundamentals</strong>"
     path: /fundamentals/
     home: true
-  - title: 시작하기
+  - title: Aan de slag
     path: /fundamentals/getting-started/
-  - title: 문서
+  - title: Documentatie
     path: "/fundamentals/#documentation"
     hasSubNav: true
     section:
-      - title: 사이트 디자인 정책
+      - title: Principes van site-ontwerp
         path: /fundamentals/principles/
         id: principles-of-site-design
-      - title: 여러 기기 레이아웃
+      - title: Lay-outs voor meerdere apparaten
         path: /fundamentals/layouts/
         id: multi-device-layouts
         section:
-          - title: 반응형 웹 디자인 기초
+          - title: Basisprincipes van responsive webdesign
             path: /fundamentals/layouts/rwd-fundamentals/
-          - title: 반응형 웹 디자인 패턴
+          - title: Patronen voor responsive webdesign
             path: /fundamentals/layouts/rwd-patterns/
-          - title: 레이아웃 패턴
+          - title: Lay-outpatronen
             path: /fundamentals/layouts/layout-patterns/
-          - title: UI 요소
+          - title: UI-elementen
             path: /fundamentals/layouts/ui-elements/
-      - title: 양식 및 사용자 입력
+      - title: Formulieren en invoer van gebruikers
         path: /fundamentals/input/
         id: user-input
         section:
-          - title: 터치 입력
+          - title: Invoer via aanraking
             path: /fundamentals/input/touch/
-          - title: 양식 입력
+          - title: Invoer via formulier
             path: /fundamentals/input/form/
-      - title: 디자인과 분위기
+      - title: Uiterlijk
         path: /fundamentals/look-and-feel/
         id: look-and-feel
         section:
-          - title: 애니메이션 소개
+          - title: Inleiding tot animaties
             path: /fundamentals/look-and-feel/animations/
-      - title: "이미지, 동영상, 오디오"
+      - title: "Afbeeldingen, video en audio"
         path: /fundamentals/media/
         id: introduction-to-media
         section:
-          - title: 이미지
+          - title: Afbeeldingen
             path: /fundamentals/media/images/
-          - title: 동영상
+          - title: Video
             path: /fundamentals/media/video/
-          - title: 오디오
+          - title: Audio
             path: /fundamentals/media/audio/
-      - title: 수익 창출
+      - title: Inkomsten genereren
         path: /fundamentals/monetization/
         id: monetization
         section:
-          - title: 광고를 통한 수익 창출
+          - title: Inkomsten genereren met advertenties
             path: /fundamentals/monetization/ad-monetization/
-      - title: 기기 액세스
+      - title: Apparaattoegang
         path: /fundamentals/device-access/
         id: device-access
         section:
-          - title: 사용자 위치
+          - title: Locatie van gebruikers
             path: /fundamentals/device-access/user-location
-          - title: 클릭 투 콜
+          - title: Klikken om te bellen
             path: /fundamentals/device-access/click-to-call
-      - title: 성능
+      - title: Prestaties
         path: /fundamentals/performance/
         id: performance
         section:
-          - title: 최상 렌더링 경로
+          - title: Weergave kritiek pad
             path: /fundamentals/performance/critical-path-rendering/
-          - title: 콘텐츠 효율성 최적화
+          - title: Efficiëntie van inhoud optimaliseren
             path: /fundamentals/performance/optimizing-content-efficiency/
-          - title: 네트워킹 최적화
+          - title: Netwerken optimaliseren
             path: /fundamentals/performance/optimizing-networking/
-          - title: 상호작용 기능 최적화
+          - title: Interactiviteit optimaliseren
             path: /fundamentals/performance/optimizing-interactivity/
-          - title: 성과 측정
+          - title: Prestaties meten
             path: /fundamentals/performance/measuring-performance/
-  - title: 도구
+  - title: Tools
     path: /fundamentals/tools/
-  - title: 리소스
+  - title: Bronnen
     path: /fundamentals/resources/
     in_header: false
     section:
-      - title: 용어집
+      - title: Woordenlijst
         path: /fundamentals/resources/glossary/
-      - title: 샘플
+      - title: Voorbeelden
         path: /fundamentals/resources/samples/
-      - title: 스타일가이드
+      - title: Stijlgids
         path: /fundamentals/resources/styleguide/
-      - title: 예제 도움말
+      - title: Voorbeeld van artikel
         path: /fundamentals/resources/example-article/
-  - title: "웹 <strong>시작 도움말</strong>"
+  - title: "<strong>Webstarterskit</strong>"
     path: /starter-kit/
     in_header: false

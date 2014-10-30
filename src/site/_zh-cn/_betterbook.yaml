@@ -2,93 +2,93 @@ toc:
   - title: "Web <strong>Fundamentals</strong>"
     path: /fundamentals/
     home: true
-  - title: 시작하기
+  - title: 制作指南
     path: /fundamentals/getting-started/
-  - title: 문서
+  - title: 文档
     path: "/fundamentals/#documentation"
     hasSubNav: true
     section:
-      - title: 사이트 디자인 정책
+      - title: 网站设计原理
         path: /fundamentals/principles/
         id: principles-of-site-design
-      - title: 여러 기기 레이아웃
+      - title: 多设备布局
         path: /fundamentals/layouts/
         id: multi-device-layouts
         section:
-          - title: 반응형 웹 디자인 기초
+          - title: 自适应网页设计基础知识
             path: /fundamentals/layouts/rwd-fundamentals/
-          - title: 반응형 웹 디자인 패턴
+          - title: 自适应网页设计模式
             path: /fundamentals/layouts/rwd-patterns/
-          - title: 레이아웃 패턴
+          - title: 布局模式
             path: /fundamentals/layouts/layout-patterns/
-          - title: UI 요소
+          - title: 界面元素
             path: /fundamentals/layouts/ui-elements/
-      - title: 양식 및 사용자 입력
+      - title: 表单和用户输入
         path: /fundamentals/input/
         id: user-input
         section:
-          - title: 터치 입력
+          - title: 触摸输入
             path: /fundamentals/input/touch/
-          - title: 양식 입력
+          - title: 表单输入
             path: /fundamentals/input/form/
-      - title: 디자인과 분위기
+      - title: 外观和风格
         path: /fundamentals/look-and-feel/
         id: look-and-feel
         section:
-          - title: 애니메이션 소개
+          - title: 动画简介
             path: /fundamentals/look-and-feel/animations/
-      - title: "이미지, 동영상, 오디오"
+      - title: 图片、视频和音频
         path: /fundamentals/media/
         id: introduction-to-media
         section:
-          - title: 이미지
+          - title: 图片
             path: /fundamentals/media/images/
-          - title: 동영상
+          - title: 视频
             path: /fundamentals/media/video/
-          - title: 오디오
+          - title: 音频
             path: /fundamentals/media/audio/
-      - title: 수익 창출
+      - title: 获利
         path: /fundamentals/monetization/
         id: monetization
         section:
-          - title: 광고를 통한 수익 창출
+          - title: 广告获利
             path: /fundamentals/monetization/ad-monetization/
-      - title: 기기 액세스
+      - title: 设备相关权限
         path: /fundamentals/device-access/
         id: device-access
         section:
-          - title: 사용자 위치
+          - title: 用户位置信息
             path: /fundamentals/device-access/user-location
-          - title: 클릭 투 콜
+          - title: 点击通话
             path: /fundamentals/device-access/click-to-call
-      - title: 성능
+      - title: 性能
         path: /fundamentals/performance/
         id: performance
         section:
-          - title: 최상 렌더링 경로
+          - title: 关键路径呈现
             path: /fundamentals/performance/critical-path-rendering/
-          - title: 콘텐츠 효율성 최적화
+          - title: 优化内容效率
             path: /fundamentals/performance/optimizing-content-efficiency/
-          - title: 네트워킹 최적화
+          - title: 优化网络
             path: /fundamentals/performance/optimizing-networking/
-          - title: 상호작용 기능 최적화
+          - title: 优化互动功能
             path: /fundamentals/performance/optimizing-interactivity/
-          - title: 성과 측정
+          - title: 评估性能
             path: /fundamentals/performance/measuring-performance/
-  - title: 도구
+  - title: 工具
     path: /fundamentals/tools/
-  - title: 리소스
+  - title: 资源
     path: /fundamentals/resources/
     in_header: false
     section:
-      - title: 용어집
+      - title: 术语表
         path: /fundamentals/resources/glossary/
-      - title: 샘플
+      - title: 范例
         path: /fundamentals/resources/samples/
-      - title: 스타일가이드
+      - title: 风格指南
         path: /fundamentals/resources/styleguide/
-      - title: 예제 도움말
+      - title: 文章范例
         path: /fundamentals/resources/example-article/
-  - title: "웹 <strong>시작 도움말</strong>"
+  - title: "网站制作<strong>初学者工具包</strong>"
     path: /starter-kit/
     in_header: false
