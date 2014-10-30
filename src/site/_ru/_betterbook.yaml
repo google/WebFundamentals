@@ -89,6 +89,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: Пример статьи
         path: /fundamentals/resources/example-article/
-  - title: "<strong>Набор инструментов для начинающих</strong> веб-дизайнеров"
+  - title: "Web <strong>Starter Kit</strong>"
     path: /starter-kit/
     in_header: false

@@ -89,6 +89,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: Örnek Makale
         path: /fundamentals/resources/example-article/
-  - title: "Web <strong>Başlangıç Kiti</strong>"
+  - title: "Web <strong>Starter Kit</strong>"
     path: /starter-kit/
     in_header: false

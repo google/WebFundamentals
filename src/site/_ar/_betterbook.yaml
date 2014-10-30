@@ -89,6 +89,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: نموذج مقالة
         path: /fundamentals/resources/example-article/
-  - title: "<strong>دليل المبتدئ</strong> على الويب"
+  - title: "Web <strong>Starter Kit</strong>"
     path: /starter-kit/
     in_header: false
