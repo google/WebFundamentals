@@ -42,6 +42,9 @@ pl:
 ru:
   name: 'Pусский'
 
+tr:
+  name: 'Türkçe'
+
 'zh-cn':
   name: '中文 (简体)'
 
