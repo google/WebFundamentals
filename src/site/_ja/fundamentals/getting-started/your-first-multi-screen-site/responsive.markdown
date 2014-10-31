@@ -1,14 +1,14 @@
----
+﻿---
 layout: article
-title: "レスポンシブにしよう"
-description: "ウェブは小さな携帯電話から大きなテレビまで、様々な画面サイズを持ったデバイスからアクセスすることができます。これらすべてのデバイスに対応したサイトの構築方法について学びましょう。"  
-introduction: "ウェブは小さな携帯電話から大きなテレビまで、様々な画面サイズを持ったデバイスからアクセスすることができます。各デバイスはそれぞれに特化した利点と制約の中で表現を行います。ウェブ開発者のあなたには、これらすべてのデバイスのサポートが期待されます。"  
+title: "レスポンシブにする"
+description: "ウェブは小さな携帯端末から大きなテレビまで、さまざまな画面サイズのデバイスからアクセスできます。これらすべてのデバイスに対応したサイトの構築方法について学びましょう。"
+introduction: "ウェブは小さな携帯端末から大きなテレビまで、さまざまな画面サイズのデバイスからアクセスできます。各デバイスにはそれぞれのメリットと制約があります。ウェブデベロッパーは、あらゆるデバイスに対応させることが求められます。"
 key-takeaways:
   make-responsive:
-    - Always use a viewport.
-    - Always start with a narrow viewport first and scale out.
-    - Base your breakpoints off when you need to adapt the content.
-    - Create a high-level vision of your layout across major breakpoints.
+    - 必ずビューポートを使用する。
+    - 最初は必ず狭いビューポートから作業を始め、徐々に大きなサイズへと進む。
+    - コンテンツを適合させる必要がある場合は、ブレークポイントを基準として用いる。
+    - レイアウトについて、複数のメジャー ブレークポイント間にわたるハイレベルのビジョンを作成する。
 authors:
   - paulkinlan
 translators:
@@ -16,61 +16,61 @@ translators:
 related-guides:
   responsive:
     -
-      title: Setting the viewport
+      title: ビューポートを設定する
       href: fundamentals/layouts/rwd-fundamentals/set-the-viewport
       section:
-        title: "Responsive Web design"
+        title: "レスポンシブなウェブデザイン"
         href: fundamentals/layouts/rwd-fundamentals/set-the-viewport
     -
-      title: Size content to the viewport
+      title: コンテンツのサイズをビューポートに合わせる
       href: fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport
       section:
         id: rwd-fundamentals
-        title: "Responsive Web design"
+        title: "レスポンシブなウェブデザイン"
         href: fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport
   first-break-point:
     -
-      title: Using Media Queries
+      title: メディア クエリを使用する
       href: fundamentals/layouts/rwd-fundamentals/use-media-queries
       section:
         id: rwd-fundamentals
-        title: "Responsive Web design"
+        title: "レスポンシブなウェブデザイン"
         href: fundamentals/layouts/rwd-fundamentals/use-media-queries
     -
-      title: Layout patterns
+      title: レイアウトのパターン
       href: fundamentals/layouts/rwd-patterns/
       section:
         id: rwd-patterns
-        title: "Layout Patterns"
+        title: "レイアウトのパターン"
         href: fundamentals/layouts/rwd-patterns/
     -
-      title: Mostly Fluid layout
+      title: 大部分がフルードなレイアウト
       href: fundamentals/layouts/rwd-patterns/mostly-fluid
       section:
         id: rwd-patterns
-        title: "Responsive Web design"
+        title: "レスポンシブなウェブデザイン"
         href: fundamentals/layouts/rwd-patterns/mostly-fluid
   images:
     -
-      title: "Enhance imgs with srcset for high DPI devices"
+      title: "高 DPI のデバイス向けに srcset で img の動作を拡張する"
       href: fundamentals/media/images/images-in-markup.html#enhance-imgs-with-srcset-for-high-dpi-devices
       section:
         id: images
-        title: "Images"
+        title: "画像"
         href: media/images/
     - 
-      title: "Use media queries to provide high res images or art direction"
+      title: "メディア クエリを使用して高解像度の画像やアート ディレクションを提供する"
       href: fundamentals/media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
       section:
         id: images
-        title: "Images"
+        title: "画像"
         href: media/images/
 
 notes:
   styling:
-    - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
+    - ブランドのガイドラインに合った色、パディング、フォントのスタイル設定を含む、一連のスタイルを適用済みです。
   not-all-at-once:
-    - You don't have to move all the elements at once, you can make smaller adjustments if needed.
+    - すべての要素を一度に移動する必要はありません。必要に応じて細かい調整を加えることができます。
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
@@ -83,66 +83,52 @@ id: multi-screen-responsive
 
 {% include modules/toc.liquid %}
 
-We are building a site that works across multiple screen sizes and device
-types. In the [previous
-article]({{site.baseurl}}{{page.article.previous.url}}), we crafted the
-Information Architecture of the page and created a basic structure.
-In this guide, we will take our basic structure with content and turn it into
-a beautiful page that is responsive across a large number of screen sizes.
+複数の画面サイズやデバイスの種類に対応できるサイトを構築します。[前の記事]({{site.baseurl}}{{page.article.previous.url}})では、ページの情報アーキテクチャを策定し、基本構造を作成しました。
+このガイドでは、コンテンツを含んだページの基本構造について取り上げ、さまざまな画面サイズに対応するレスポンシブな洗練されたページへと変えます。
 
 <div class="clear">
   <figure class="g-wide--2 g-medium--half">
-    <img  src="images/content.png" alt="Content" style="max-width: 100%;">
-    <figcaption>{% link_sample _code/content-without-styles.html %} Content and structure {% endlink_sample %} </figcaption>
+    <img  src="images/content.png" alt="コンテンツ" style="max-width: 100%;">
+    <figcaption>{% link_sample _code/content-without-styles.html %} コンテンツと構造 {% endlink_sample %} </figcaption>
   </figure>
   <figure class="g-wide--2 g-wide--last g-medium--half g--last">
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
-    <figcaption>{% link_sample _code/content-with-styles.html %} Final site {% endlink_sample %} </figcaption>
+    <figcaption>{% link_sample _code/content-with-styles.html %} 最終的なサイト {% endlink_sample %} </figcaption>
   </figure>
 </div>
 
-Following the principles of Mobile First web development,
-we start with a narrow viewport &mdash; similar to a mobile phone &mdash;
-and build for that experience first.
-Then we scale up to larger device classes.
-We can do this by making our viewport wider and
-making a judgment call on whether the design and layout look right.
+ウェブ開発におけるモバイル ファーストの原則に従い、携帯端末のような狭いビューポートから作業を開始し、まず狭いビューポート用のエクスペリエンスを構築します。
+そのうえで、より大きなデバイスのクラスへとスケールを拡大します。
+具体的には、ビューポートの幅を広げ、デザインとレイアウトの外観が適切かどうかを判断していきます。
 
-Earlier we created a couple of different high-level designs for how our content
-should be displayed. Now we need make our page adapt to those different layouts.
-We do this by making a decision on where to place our breakpoints &mdash; a point
-where the layout and styles change &mdash; based on how the content fits the
-screen-size.
+これまでの作業で、コンテンツの表示方法を定めたハイレベルのデザインをいくつか作成しました。ここでは、ページをそれらの各レイアウトに合わせる必要があります。
+コンテンツが画面サイズに合っているかを基準に、ブレークポイント（レイアウトとスタイルが変わるポイント）をどこに設定するかを決めていくことで、各レイアウトをページに適合させていきます。
 
 {% include modules/takeaway.liquid list=page.key-takeaways.make-responsive %}
 
-## Add a viewport
+## ビューポートを追加します
 
-Even for a basic page, you **must** always include a viewport meta tag.
-The viewport is the most critical component you need for building multi-device experiences.
-Without it, your site will not work well on a mobile device.
+基礎段階のページでも、必ず meta viewport タグを含める**必要があります**。
+ビューポートは、マルチデバイス対応サイトの構築に必要な最重要コンポーネントです。
+ビューポートがないと、サイトは携帯端末上で正しく表示されません。
 
-The viewport indicates to the browser that the page needs to be scaled to fit
-the screen.  There are many different configurations that you can specify for
-your viewport to control the display of the page.  As a default, we recommend:
+ビューポートは、画面に収めるためにページをスケーリングする必要があることをブラウザに通知します。ビューポートでページの表示を制御するために指定できる設定項目は数多くありますが、デフォルトとして、次のように設定することをおすすめします。
 
 {% include_code _code/viewport.html viewport %}
 
-The viewport lives in the head of the document and only needs to be declared once.
+ビューポートはドキュメントの head 部に配置します。宣言が必要なのは 1 回のみです。
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
-## Apply simple styling
+## シンプルなスタイリングを適用します
 
-Our product and company already has a very specific branding and font guide-lines supplied
-in a style guide.
+今回の商品と企業では厳密なブランディングとフォントのガイドラインが既に存在し、スタイルガイドとして提供されています。
 
-### Style guide
+### スタイルガイド
 
-A style guide is a useful way to get a high-level understanding of the visual representation
-of the page and it helps you ensure that you are consistent throughout the design.
+スタイルガイドを利用することで、ページの視覚表現の概要を理解できるほか、デザイン全体で一貫性を確実に保つことができます。
 
-#### Colors
+#### 色
 
 <div class="styles" style="font-family: monospace;">
   <div style="background-color: #39b1a4">#39b1a4</div>
@@ -153,22 +139,17 @@ of the page and it helps you ensure that you are consistent throughout the desig
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
 
-### Add stylistic images
+### スタイル用画像を追加します
 
-In the previous guide, we added images called "content images".  These were
-images that were important to the narrative of our product.  Stylistic images
-are images that are not needed as part of the core content but add visual flare
-or help guide the user's attention to a specific piece of content.
+前のガイドでは「コンテンツ画像」と呼ばれる画像を追加しました。これらの画像は、商品のストーリーを伝えるうえで重要なものです。スタイル用画像は、主要コンテンツの一部として必要な画像ではなく、視覚的な効果を加えたり、ユーザーをコンテンツの特定部分に注目させるために用いられます。
 
-A good example of this is a headline image for the 'above the fold' content.  It
-is often used to entice the user to read more about the product.
+スタイル用画像のわかりやすい例としては、「サイトの一面」のコンテンツのヘッドライン画像があります。商品の詳細情報へとユーザーを誘導する目的でヘッドライン画像が使用されていることがよくあります。
 
 <div class="g-wide--2 g-wide--last g-medium--half g--last">
-  <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+  <img  src="images/narrowsite.png" alt="デザインされたサイト" style="max-width: 100%;">
 </div>
 
-They can be very simple to include. In our case, it will be the background to the
-header and we will apply it via some simple CSS.
+スタイル用画像は簡単に追加できます。今回の例では、ヘッドラインの背景にスタイル用画像を使用し、簡単な CSS で画像を適用します。
 
 {% highlight css %}
 #headline {
@@ -180,29 +161,23 @@ header and we will apply it via some simple CSS.
 }
 {% endhighlight %}
 
-We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element; that way it
-always stretches whilst maintaining the correct aspect ratio.
+コンテンツよりも目立たないよう、ぼかしの入ったシンプルな背景画像を選び、要素全体にフィット（cover）するよう設定しました。これにより、画像は常に正しいアスペクト比を保ちつつ画面いっぱいに表示されます。
 
 <br style="clear: both;">
 
-## Set your first breakpoint
+## あなたの最初のブレークポイントを設定します
 
-The design starts to look bad at about 600px wide.  In our case, the length of
-the line is going above 10 words (the optimal reading length) and that is
-where we want to change it.
+幅が 600px 近くになると、デザインの見栄えが悪くなり始めます。今回の例では、行の長さが 10 語（読みやすい適切な長さ）を超えるため、これを変更する必要があります。
 
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video.
-     <a href="videos/firstbreakpoint.mov">Download the video</a>.
+  <p>お使いのブラウザでは動画がサポートされていません。
+     <a href="videos/firstbreakpoint.mov">動画をダウンロードしてください</a>。
   </p>
 </video>
 
-600px appears to be a good place to create our first breakpoint as it will give us scope
-to reposition elements to make them fit the screen better.  We can do this
-using a technology called [Media Queries]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+画面に合うよう要素を再配置する機会となることから、600px は最初のブレークポイントの作成に適したサイズと思われます。ブレークポイントは、[メディア クエリ]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)というテクノロジーを使用することで作成できます。
 
 {% highlight css %}
 @media (min-width: 600px) {
@@ -210,39 +185,30 @@ using a technology called [Media Queries]({{site.fundamentals}}/layouts/rwd-fund
 }
 {% endhighlight %}
 
-There is more space on a larger screen so there is more flexibility with how
-content can be displayed.
+大きな画面の場合はより多くのスペースがあるため、コンテンツをより柔軟な方法で表示できます。
 
 {% include modules/remember.liquid title="Note" list=page.notes.not-all-at-once %}
 
-In the context of our product page, it looks like we will
-need to:
+今回の商品ページでは、次の作業が必要と考えられます。
 
-*  Constrain the maximum width of the design.
-*  Alter the padding of elements and reduce the text size.
-*  Move the form to float in-line with the heading content.
-*  Make the video float around the content.
-*  Reduce the size of the images and have them appear in a nicer grid.
+*  デザインの最大幅を抑制する。
+*  要素のパディングを変更し、テキストのサイズを小さくする。
+*  フォームを移動し、ヘッドラインのコンテンツの横に回り込ませる。
+*  動画をコンテンツに回り込ませる。
+*  画像のサイズを縮小し、見栄えよく並べて表示する。
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
 
-## Constrain the maximum width of the design
+## デザインの最大幅を抑制する
 
-We have chosen to have only two major layouts: a narrow viewport and a wide
-viewport, which greatly simplifies our build process.
+主なレイアウトを狭いビューポートと広いビューポートの 2 つのみとしたことで、構築のプロセスが大幅に簡略化されています。
 
-We have also decided to create full-bleed sections on the narrow viewport that
-stay full-bleed on the wide viewport.  This means we should constrain the
-maximum width of the screen so that the text and paragraphs don't extend into one
-long, single line on ultra-wide screens.  We have chosen this point to be
-about 800px.
+また、狭いビューポート上に余白なしのセクションを作成することとしましたが、これらのセクションは広いビューポートでも余白なしのままとなります。このため、幅の極めて広い画面上でテキストや段落が横に長い 1 つの行になってしまわないよう、画面の最大幅を制限する必要があります。この制限を行うサイズを 800px 付近とすることにしました。
 
-To achieve this, we need to constrain the width and center the elements.  We
-need  to create a container around each major section and apply a `margin:
-auto`.  This will allow the screen to grow but the content remain centered
-and at a maximum size of 800px.
+これを行うには、要素の幅を制限して中央揃えにする必要があります。各主要セクションを格納するコンテナを作成して、margin: 
+auto を適用する必要があります。これにより、画面が大きくなってもコンテンツを最大幅 800px で中央揃えのままにすることができます。
 
-The container will be a simple `div` in the following form:
+コンテナには、次のような形式のシンプルな div を使用します。
 
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
@@ -250,44 +216,32 @@ The container will be a simple `div` in the following form:
 
 {% include_code _code/fixingfirstbreakpoint.html container css %}
 
-## Alter the padding and reduce text size
+## パディングを変更してテキストのサイズを小さくする
 
-On the narrow viewport, we don't have a lot of space to display content so
-the size and weight of the typography is often drastically reduced to fit the
-screen.
+狭いビューポートでは、コンテンツの表示スペースがあまり広くないため、画面に収まるように文字のサイズや太さを大幅に減らすことがよくあります。
 
-With a larger viewport, we need to consider that the user is more likely to be
-on a larger screen but further away.  To increase the readability of the
-content, we can increase the size and weight of the typography and we can also
-alter the padding to make distinct areas stand out more.
+大きいビューポートでは、ユーザーがさらに大きい画面を使用する可能性を考慮する必要があります。コンテンツを読みやすくするには、文字のサイズや太さを増やすことができるほか、パディングを変更して個々の領域を区別しやすくこともできます。
 
-In our product page, we will increase the padding of the section elements by
-setting it to remain at 5% of the width.  We will also increase the size of
-the headers for each of the sections.
+今回の商品ページでは、セクションの各要素のパディングを幅の 5% に設定することで、パディングを増やします。また、各セクションの見出しのサイズも大きくします。
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
-## Adapt elements to wide viewport
+## 広いビューポートに要素を適合させる
 
-Our narrow viewport was a stacked linear display.  Each major section and the content
-inside them was displayed in order from top to bottom.
+狭いビューポートでは、直線的にコンテンツを積み重ねて表示しています。各主要セクションとそこに含まれるコンテンツは、上から下へ順に表示されます。
 
-A wide viewport gives us extra space to use to display the content in an optimal way
-for that screen.  For our product page, this means that according to our IA we can:
+広いビューポートでは、より多くのスペースを使用できるため、大きな画面に適した方法でコンテンツを表示できます。これを今回の商品ページに当てはめると、IA に従って次のように変更できます。
 
-*  Move the form around the header information.
-*  Position the video to the right of the key points.
-*  Tile the images.
-*  Expand the table.
+*  フォームをヘッドラインの情報の横に回り込ませる。
+*  動画を主な特徴の箇条書きの右側に配置する。
+*  画像をタイル表示する。
+*  表を大きくする。
 
-### Float the Form element
+### フォーム要素を回り込ませる
 
-The narrow viewport means that we have a lot less horizontal space available for
-us to comfortably position elements on the screen.
+狭いビューポートでは、画面上に要素を適切に配置するために使用できる横方向のスペースがそれほど多くありません。
 
-To make more effective use of the horizontal screen space, we need to break out
-of the linear flow of the header and move the form and list to be next
-to each other.
+横方向の画面スペースを有効利用するために、ヘッドラインのコンテンツを直線的に配置せずに、フォームとリストが隣り合わせになるよう移動させる必要があります。
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
 
@@ -296,50 +250,37 @@ to each other.
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video.
-     <a href="videos/floatingform.mov">Download the video</a>.
+  <p>お使いのブラウザでは動画がサポートされていません。
+     <a href="videos/floatingform.mov">動画をダウンロードしてください</a>。
   </p>
 </video>
 
-### Float the Video element
+### 動画要素を回り込ませる
 
-The video in the narrow viewport interface is designed  to be the full width of
-the screen and positioned after the list of key features. On a wide viewport,
-the video will scale up to be too large and look incorrect when placed next
-to our list of features.
+狭いビューポートのインターフェースでは、動画は画面幅いっぱいになるようにデザインされており、主な特徴のリストの後に配置されています。広いビューポートでは、特徴のリストの後ろに動画を配置すると、サイズが拡大されすぎて見づらくなります。
 
-The video element needs to be moved out of the vertical flow of the narrow
-viewport and should be displayed side-by-side with the bulleted list of content on a wide viewport.
+広いビューポートでは、動画要素を狭いビューポートでの縦に表示するフローから外して、コンテンツの箇条書きリストの隣に表示する必要があります。
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
-### Tile the Images
+### 画像をタイル表示する
 
-The images in the narrow viewport (mobile devices mostly) interface are set to
-be  the full width of the screen and stacked vertically.  This doesn't scale
-well on a wide viewport.
+狭いビューポート（通常は携帯端末）のインターフェースでは、画像は画面幅いっぱいで縦に連けて表示するよう設定されています。この設定では、広いビューポートでは画像がうまくスケーリングされません。
 
-To make the images look correct on a wide viewport, they are scaled to 30%
-of the container width and laid out horizontally (rather than vertically in
-the narrow view). We will also add some border radius and box-shadow to make
-the images look more appealing.
+画像を広いビューポートで正しく表示するために、画像をコンテナの幅の 30% にスケーリングして、（狭いビューでの縦方向ではなく）横方向に配置するよう設定します。また、border-radius と box-shadow を追加して、画像の見栄えを向上させます。
 
 <img src="images/imageswide.png" style="width:100%">
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
-### Make images responsive to DPI
+### DPI に応じて画像をレスポンシブにする
 
-When using images,
-take the size of the viewport and the density of the display into consideration.
+画像を使用する際は、ビューポートのサイズとディスプレイの解像度を考慮してください。
 
-The web was built for 96dpi screens.  With the introduction of mobile devices,
-we have seen a huge increase in the pixel density of screens not to mention
-Retina class displays on laptops.  As such, images that are encoded to 96dpi
-often look terrible on a hi-dpi device.
+ウェブは元来 96dpi の画面向けに作成されています。ノートパソコンにおける Retina クラスのディスプレイや携帯端末の登場により、画面のピクセル密度は大幅に向上しました。そのため、96dpi 向けにエンコードされた画像は、解像度の高いデバイスでは見栄えがひどく低下することも少なくありません。
 
-We have a solution that is not widely adopted yet.
-For browsers that support it, you can display a high density image on a high density display.
+この問題には、まだあまり普及していない解決策があります。
+これに対応しているブラウザでは、高密度のディスプレイにおいて高密度の画像を表示できます。
 
 {% highlight html %}
 <img src="photo.png" srcset="photo@2x.png 2x">
@@ -347,45 +288,39 @@ For browsers that support it, you can display a high density image on a high den
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
-### Tables
+### 表
 
-Tables are very hard to get right on devices that have a narrow viewport and need
-special consideration.
+狭いビューポートのデバイスで表を見やすく表示することは容易ではないため、特別な配慮が必要です。
 
-We recommend on a narrow viewport that you make your table into two rows,
-transposing the heading and cells in a row to make the columnar.
+狭いビューポートでは、行の見出しを 1 つの列、行のデータセルをもう 1 つの列にして、見出しとデータの 2 行分の情報を 2 つの列で表示した縦長の表にすることをおすすめします。
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video.
-     <a href="videos/responsivetable.mov">Download the video</a>.
+  <p>お使いのブラウザでは動画がサポートされていません。
+     <a href="videos/responsivetable.mov">動画をダウンロードしてください</a>。
   </p>
 </video>
 
-In our site,
-we had to create an extra breakpoint just for the table content.
-When you build for a mobile device first, it is harder to undo applied styles,
-so we must section off the narrow viewport table CSS from the wide viewport css.
-This gives us a clear and consistent break.
+今回のサイトでは、表のコンテンツ専用のブレークポイントを追加で作成する必要があります。
+携帯端末向けのサイトを最初に構築する場合、適用済みのスタイルを取り消すことは難しいため、広いビューポートの table の CSS と狭いビューポートの table の CSS を分ける必要があります。
+これにより、明確で一貫したスタイルの変更が可能になります。
 
 {% include_code _code/content-with-styles.html table-css css %}
 
-## Wrapping up
+## まとめ
 
-**CONGRATULATIONS.** By the time you read this, you will have created your
-first simple product landing page that works across a large range of devices,
-form-factors, and screen sizes.
+**お疲れ様でした。** これで、さまざまなデバイス、形状、画面サイズに対応した、はじめてのシンプルな商品ランディングページの作成は完了です。
 
-If you follow these guidelines, you will be off to a good start:
+次のガイドラインに従うことで、構築作業を適切に開始できます。
 
-1.  Create a basic IA and understand your content before you code.
-2.  Always set a viewport.
-3.  Create your base experience around mobile-first approach.
-4.  Once you have your mobile experience, increase the width of the display
-   until it doesn't look right and set your breakpoint there.
-5.  Keep iterating.
+1.  基本の IA を策定してコンテンツを理解してから、コーディングに入る。
+2.  必ずビューポートを設定する。
+3.  モバイルファーストのアプローチに基づいて、基本的なエクスペリエンスを作成する。
+4.  モバイルのエクスペリエンスが完成したら、ディスプレイの幅を広げていき、表示が崩れるところでブレークポイントを設定する。
+5.  上記を繰り返す。
 
 {% include modules/nextarticle.liquid %}
 
 {% endwrap %}
+

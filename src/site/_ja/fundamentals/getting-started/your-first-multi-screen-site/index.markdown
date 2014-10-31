@@ -1,8 +1,8 @@
----
+﻿---
 layout: section
-title: "はじめてのマルチデバイスサイト"
-description: "ウェブは小さな携帯電話から大きなテレビまで、様々な画面サイズを持ったデバイスからアクセスすることができます。これらすべてのデバイスに対応したサイトの構築方法について学びましょう。"
-introduction: "マルチデバイスサイトを構築するのは、思ったほど大変ではありません。このガイドでは、<a href='https://www.udacity.com/course/cs256'>CS256 モバイルサイト開発コース</a> のプロダクトランディングページという建前で、様々なデバイスに対応したサンプルサイトを構築していきます。"
+title: "はじめてのマルチデバイス サイト"
+description: "ウェブは小さな携帯端末から大きなテレビまで、さまざまな画面サイズのデバイスからアクセスできます。これらすべてのデバイスに対応したサイトの構築方法について学びましょう。"
+introduction: "マルチデバイス サイトを構築するのは、思ったほど大変ではありません。このガイドでは、<a href='https://www.udacity.com/course/cs256'>CS256 モバイルサイト構築コース</a>の商品ランディング ページを例に、さまざまなデバイスに対応したランディング ページを作成していきます。"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -12,21 +12,19 @@ collection: getting-started
 authors:
   - paulkinlan
 translators:
+  - agektmr
 ---
 
 {% wrap content%}
 
-<img src="images/finaloutput-2x.jpg" alt="many devices showing the final project">
+<img src="images/finaloutput-2x.jpg" alt="完成したプロジェクトを表示している各デバイス">
 
-Building for multiple devices with differing capabilities, vastly different
-screen sizes and interaction methods can seem daunting, if not impossible
-to get started.
+機能だけでなく、画面サイズや操作方法が大きく異なる複数のデバイスに対応したサイトの構築に取り掛かることは、不可能ではないにしても大変な作業のように思えます。
 
-It is not as hard to build fully responsive sites as you think, and to show
-you, this guide takes you through the steps that you can use to get started.  We have broken it into two
-simple steps:
+完全なレスポンシブ サイトの構築は、思ったほど大変ではありません。このガイドでは、レスポンシブ サイトの構築の開始に役立つ手順を紹介します。作業は次の 2 つの手順に分かれます。
 
-1.  Defining the information architecture (commonly known as IA) and structure of the page,
-2.  Adding design elements to make it responsive and look good across all devices.
+1.  情報アーキテクチャ（IA）とページ構造を定義する 
+2.  デザイン要素を追加し、あらゆるデバイスで適切に表示されるレスポンシブなページにする
 
 {% endwrap %}
+

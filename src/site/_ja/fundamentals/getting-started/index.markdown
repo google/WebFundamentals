@@ -1,8 +1,8 @@
----
+﻿---
 layout: landing
 title: "さあ、はじめよう"
-description: "ウェブにアクセスする全てのデバイスに対応したサイトを構築しはじめるあなたに送る、最初の一歩"
-introduction: "ウェブにアクセスする全てのデバイスに対応したサイトを構築しはじめるあなたに送る、最初の一歩"
+description: "ウェブにアクセスするあらゆるデバイスに対応したサイトとエクスペリエンスの構築は、思いのほか簡単にはじめることができます。"
+introduction: "ウェブにアクセスするあらゆるデバイスに対応したサイトとエクスペリエンスの構築は、思いのほか簡単にはじめることができます。"
 id: getting-started
 collection: home
 authors:
@@ -13,3 +13,4 @@ translators:
 {% comment %}
 Guide list content will be output by the landing layout based on the article collection matching page.id
 {% endcomment %}
+
