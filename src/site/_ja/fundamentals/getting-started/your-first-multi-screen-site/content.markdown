@@ -1,11 +1,11 @@
 ---
 layout: article
-title: "コンテンツと構造を作る"
-description: "どんなサイトでも、最も重要なのはコンテンツです。このガイドでは、マルチデバイスサイト構築の計画方法について解説します。"
-introduction: "どんなサイトでも、最も重要なのはコンテンツです。ならばコンテンツのためのデザインをすべきであり、デザインにコンテンツを決めさせるのはやめなしょう。このガイドでは、まず必要なコンテンツを決定し、コンテンツに従ってページの構造を作り、画面が狭くても広くても意味のある、シンプルで連続的なレイアウトを作っていきます。"
+title: "コンテンツと構造を作成する"
+description: "コンテンツは、すべてのサイトにおいて最も重要な側面です。このガイドで紹介する方法を参考にして、はじめてのマルチデバイス対応サイトの構築計画をすぐに立てることができます。"
+introduction: " コンテンツは、すべてのサイトにおいて最も重要な側面です。デザインにコンテンツを規定させるのではなく、コンテンツに合わせてデザインしましょう。このガイドでは、まず必要なコンテンツを特定し、そのコンテンツを基にページ構造を作成してから、狭いビューポートと広いビューポートの両方に対応したシンプルなリニア レイアウトでページを表示します。"
 notes:
   styling:
-    - Styling will come later
+    - スタイルは後に来る
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
@@ -16,28 +16,29 @@ authors:
   - paulkinlan
 translators:
   - agektmr
+translators:
 related-guides:
   create-amazing-forms:
     -
-      title: 素晴らしいフォームを作る
+      title: すばらしいフォームを作る
       href: fundamentals/input/form/
       section:
         id: user-input
-        title: "Forms"
+        title: "フォーム"
         href: fundamentals/input/form/
     -
-      title: Label and name inputs correctly
+      title: 入力の label と name を正しく設定する
       href: fundamentals/input/form/label-and-name-inputs
       section:
         id: user-input
-        title: "Forms"
+        title: "フォーム"
         href: fundamentals/input/form/
     -
       title: 最適な input type を選ぶ
       href: fundamentals/input/form/choose-the-best-input-type
       section:
         id: user-input
-        title: "Forms"
+        title: "フォーム"
         href: fundamentals/input/form/
   video:
     -
@@ -45,21 +46,21 @@ related-guides:
       href: fundamentals/media/video/
       section:
         id: introduction-to-media
-        title: "Video"
+        title: "動画"
         href: fundamentals/media/
     -
-      title: スタート地点を変える
+      title: 開始位置を変更する
       href: fundamentals/media/video/add-a-video#specify-a-start-and-end-time
       section:
         id: introduction-to-media
-        title: "Video"
+        title: "動画"
         href: fundamentals/media/
     -
       title: ポスター画像を含める
       href: fundamentals/media/video/add-a-video#include-a-poster-image
       section:
         id: introduction-to-media
-        title: "Video"
+        title: "動画"
         href: fundamentals/media/
   images:
     -
@@ -67,28 +68,28 @@ related-guides:
       href: fundamentals/media/images/
       section:
         id: introduction-to-media
-        title: "Images"
+        title: "画像"
         href: fundamentals/media/
     -
       title:  マークアップにおける画像の正しい使い方
       href: fundamentals/media/images/images-in-markup
       section:
         id: introduction-to-media
-        title: "Images"
+        title: "画像"
         href: fundamentals/media/
     -
       title: 画像の最適化
       href: fundamentals/performance/optimizing-content-efficiency/image-optimization
       section:
         id: introduction-to-media
-        title: "Images"
+        title: "画像"
         href: fundamentals/media/
 
 key-takeaways:
   content-critical:
-    - Identify the content you need first.
-    - Sketch out Information Architecture (IA) for narrow and wide viewports.
-    - Create a skeleton view of the page with content but without styling.
+    - まず必要なコンテンツを特定する。
+    - 狭いビューポートと広いビューポート用の情報アーキテクチャ（IA）を作成する。
+    - コンテンツ（スタイルは未適用）を含めたページのスケルトン ビューを作る。
 ---
 
 {% wrap content %}
@@ -97,59 +98,47 @@ key-takeaways:
 
 ## ページの構造を作る
 
-We have identified we need:
+以下のコンテンツが必要なことがわかりました。
 
-1.  An area that describes at a high-level our product "CS256: Mobile web development" course
-2.  A form to collect information from users who are interested in our product
-3.  An in depth description and video
-4.  Images of the product in action
-5.  A data table with information to back the claims up
+1.  自社の商品「CS256: モバイルサイト構築」コースの概要を説明する領域
+2.  商品に関心のあるユーザーの情報を収集するためのフォーム
+3.  詳細な説明と動画
+4.  商品を利用している画像
+5.  説明内容を裏付ける情報のデータ表
 
 {% include modules/takeaway.liquid list=page.key-takeaways.content-critical %}
 
-We have also come up with a rough information architecture and layout for both
-the narrow and wide viewports.
+また、狭いビューポートと広いビューポートの両方について、大まかな情報アーキテクチャとレイアウトを作成しました。
 
 <div class="demo clear" style="background-color: white;">
-  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.png" alt="Narrow Viewport IA">
-  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="Wide Viewport IA">
+  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.png" alt="狭いビューポートの IA">
+  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="広いビューポートの IA">
 </div>
 
-This can be converted easily into the rough sections of a skeleton page that
-we will use for the rest of this project.
+この情報アーキテクチャは、このプロジェクトの残りの部分で使うスケルトン ページの大まかな各セクションへと簡単に転換できます。
 
 {% include_code _code/addstructure.html structure %}
 
 ## ページにコンテンツを追加する
 
-The basic structure of the site is complete. We know the sections we need, the
-content to display in those sections, and where to position it in the overall
-information architecture. We can now start to build out the site.
+サイトの基本構造は完成しました。必要なセクション、各セクションに表示するコンテンツ、情報アーキテクチャ内のどこにコンテンツを配置すべきかがわかりました。これで、サイト構築を開始できます。
 
 {% include modules/remember.liquid title="Note" inline="true" list=page.notes.styling %}
 
 ### ヘッドラインとフォームを作る
 
-The headline and request notification form are the critical components of
-our page. These must be presented to the user immediately.
+ヘッドラインとリクエスト フォームはこのページの重要な構成要素であり、ユーザーに対して即座に表示する必要があります。
 
-In the headline, add simple text to describe the course:
+ヘッドラインには、コースを説明する簡単なテキストを追加します。
 
 {% include_code _code/addheadline.html headline %}
 
-We need to also fill out the form.
-It will be a simple form that collects the users' names,
-their phone number, and a good time to call them back.
+また、フォームも作成する必要があります。
+ユーザーの名前、電話番号、折り返し電話の希望時間帯を入力してもらうシンプルなフォームを作成します。
 
-All forms should have labels and placeholders to make it easy for users to
-focus elements, understand what is supposed to go in them, and to also help
-accessibility tools understand the structure of the form.  The name attribute
-not only sends the form value to the server, it is also used to give important
-hints to the browser about how to automatically fill in the form for the user.
+すべてのフォームにラベルとプレースホルダを設定する必要があります。これらを設定することで、ユーザーが各要素に注目して入力項目をすぐに理解できるようになるほか、ユーザー補助ツールがフォームの構造を認識しやすくなります。name 属性は、フォームの値をサーバーに送信するだけでなく、ブラウザにフォームへの自動入力の方法についてのヒントを与える役割も持っています。
 
-We will add semantic types to make it quick and simple for users to be able to
-enter content on a mobile device.  For example, when entering a telephone
-number, the user should just see a dial pad.
+ユーザーが携帯端末で素早く簡単にコンテンツを入力できるよう、適切な入力タイプを設定します。たとえば、電話番号を入力する際には、ダイヤルパッドが表示されるようにします。
 
 {% include_code _code/addform.html form %}
 
@@ -157,21 +146,19 @@ number, the user should just see a dial pad.
 
 ### 動画と情報のセクションを作る
 
-The Video and Information section of content will contain a little more depth.
-It will have a bulleted list of features of our products and will also contain
-a video placeholder that shows our product working for the user.
+コンテンツの動画と情報のセクションには、もう少し詳しい情報を含めます。
+商品の特徴の箇条書きリストと、商品がユーザーにとって役立つことを示す動画のプレースホルダを含めます。
 
 {% include_code _code/addcontent.html section1 %}
 
-Videos are often used to describe content in a more interactive manner and are
-frequently used to show a demonstration of a product or a concept.
+動画は、コンテンツをよりインタラクティブに説明する手段として、コンセプトや商品のデモンストレーションによく利用されます。
 
-By following the best practices, you can easily integrate video into your site:
+以下に示すおすすめの方法に従って、簡単に動画をサイトに組み込むことができます。
 
-*  Add a `controls` attribute to make it easy for people to play the video.
-*  Add a `poster` image to give people a preview of the content.
-*  Add multiple `<source>` elements based on supported video formats.
-*  Add fall-back text to let people download the video if they can't play it in the window.
+*  controls 属性を追加して、ユーザーが動画を簡単に再生できるようにします。
+*  poster でポスター画像を追加して、コンテンツのプレビューを表示します。
+*  サポートされている動画形式に基づいて、複数の <source> 要素を追加します。
+*  ユーザーがウィンドウ内で動画を再生できない場合に動画をダウンロードできるよう、代替テキストを追加します。
 
 {% include_code _code/addvideo.html video html %}
 
@@ -179,78 +166,54 @@ By following the best practices, you can easily integrate video into your site:
 
 ### 画像のセクションを作る
 
-Sites without images can be a little boring. There are two types of images:
+画像を使用しないと、やや退屈なサイトになりかねません。画像には次の 2 つの種類があります。
 
-*  Content images &mdash; images that are in-line in the document and are used
-   to convey extra information about the content.
-*  Stylistic images &mdash; images that are used to make the site look
-   better; often these are background images, patterns and gradients.  We will
-   cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
+*  コンテンツ画像 &mdash; ドキュメントにインラインで表示され、コンテンツに関する追加情報を伝える画像。
+*  スタイル用画像 &mdash; サイトの外観の向上を目的として使用される画像。多くの場合、背景画像、パターン、グラデーションの画像を指す。スタイル画像については、[次の記事]({{site.baseurl}}{{page.article.next.url}})で説明します。
 
-The Images section in our page is a collection of content images.
+ページの画像セクションは、コンテンツ画像の集合で構成されます。
 
-Content images are critical to conveying the meaning of the page. Think of
-them like the images used in newspaper articles.  The images we are using are
-pictures of the tutors on the project:  Chris Wilson, Peter Lubbers and Sean
-Bennet.
+コンテンツ画像はページの内容を伝えるうえで不可欠です。新聞記事で使用される画像と同じ役割があると考えてください。ここでは、プロジェクトの講師である Chris Wilson、Peter Lubbers、Sean Bennet の写真の画像を使用します。
 
 {% include_code _code/addimages.html images html %}
 
-The images are set to scale to 100% of the width of the screen. This works
-well on devices with a narrow vieport, but less well on those with a
-wide viewport (like desktop).  We will manage this in the responsive design
-section.
+画像は画面の幅 100% にスケーリングするよう設定されています。この設定は狭いビューポートのデバイスではうまく機能しますが、広いビューポートのデバイス（パソコンなど）では適切に機能しません。この問題はレスポンシブ デザインのセクションで対処します。
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
-Many people don't have the ability to view images and often use an assistive
-technology such as a screen reader that will parse the data on the page and
-relay that to the user verbally.  You should ensure that all your content
-images  have a descriptive `alt` tag that the screen reader can speak out to
-the user.
+画像を見ることができないユーザーも少なくありません。そうしたユーザーは多くの場合、ページ上のデータを解析してその情報をユーザーに言葉で伝えるスクリーンリーダーなどの支援技術を利用します。スクリーン リーダーを使用するユーザーに画像の内容を言葉で確実に伝えられるよう、すべてのコンテンツ画像のタグに alt 属性でわかりやすい代替テキストを設定する必要があります。
 
-When adding `alt` tags make sure that you keep the alt text as concise as
-possible to fully describe  the image.  For example in our demo we simply 
-format the attribute to be "Name: Role", this presents enough information
-to the user to understand that this section is about the authors and what
-their job is.
+タグに alt 属性を追加する際は、できるだけ簡潔な代替テキストで画像の内容を十分に説明するようにしてください。たとえば、このデモでは alt 属性の代替テキストを「名前: 役割」というシンプルな形式にしています。これで、ここが担当者とその役割についてのセクションだと理解するのに十分な情報がユーザーに伝わります。
 
-### 表組みのデータセクションを追加する
+### 表組みのデータ セクションを追加する
 
-The final section is a simple table that is used to show specific product stats
-about the product.
+最後のセクションは、商品に関する具体的なデータを示したシンプルな表のセクションです。
 
-Tables should only be used for tabular data, i.e, matrices of information.
+表は、表組みのデータ（つまり、行と列で構成される情報）にのみ使用してください。
 
 {% include_code _code/addcontent.html section3 %}
 
 ### フッターを追加する
 
-Most sites need a footer to display content such as Terms and Conditions,
-disclaimers, and other content that isn't meant to be in the main navigation
-or in the main content area of the page.
+多くのサイトでは、メインのナビゲーションやページの主なコンテンツ領域への掲載に向かない、利用規約や免責条項などのコンテンツを表示するためにフッターが必要です。
 
-In our site, we will just link to Terms and Conditions, a Contact page, and
-our social media profiles.
+今回のサイトでは、利用規約、お問い合わせページ、ソーシャル メディアのプロフィールへのリンクのみを掲載します。
 
 {% include_code _code/addcontent.html footer %}
 
 ## まとめ
 
-We have created the outline of the site and we have identified all the main
-structural elements.  We have also made sure that we have all the relevant
-content ready and in-place to satisfy our business needs.
+サイトの概略を作成し、主な構成要素をすべて特定しました。また、ビジネスのニーズを満たすための、すべての関連コンテンツを用意して配置しました。
 
 <div class="clear">
-  <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
+  <img class="g-wide--2 g-medium--half" src="images/content.png" alt="コンテンツ" style="max-width: 100%;">
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
 </div>
 
-You will notice that the page looks terrible right now; this is intentional.
-Content is the most important aspect of any site and we needed to make sure we
-had a good solid information architecture and density. This guide has given us
-an excellent base to build upon. We will style our content in the next guide.
+現時点ではページの見栄えが良くありませんが、これは意図的なものです。
+コンテンツはすべてのサイトにおいて最も重要な側面であるため、まずしっかりとした情報アーキテクチャと密度を確実に構築する必要がありました。このガイドによって適切な構築の基礎が得られました。次のガイドでは、コンテンツにスタイルを適用します。
 
 {% include modules/nextarticle.liquid %}
 
 {% endwrap %}
+
