@@ -4,15 +4,18 @@ de:
 en:
   name: 'English'
 
+es:
+  name: 'Español'
+
+fa:
+  name: 'فارسی'
+
 fr:
   name: 'Français'
 
 he:
   name: 'עִבְרִית'
   rtl: true
-
-es:
-  name: 'Español'
 
 it:
   name: 'Italiano'
@@ -23,7 +26,13 @@ ja:
 ko:
   name: '한국어'
 
-pt:
+nl:
+  name: 'Nederlands'
+
+pl:
+  name: 'Polski'
+
+'pt-br':
   name: 'Português (Brasil)'
 
 ru:
@@ -32,14 +41,12 @@ ru:
 'zh-cn':
   name: '中文 (简体)'
 
-tw:
+'zh-tw':
   name: '中文（繁體）'
 
-fa:
-  name: 'فارسی'
 
-nl:
-  name: 'Nederlands'
 
-pl:
-  name: 'Polski'
+
+
+
+
