@@ -31,18 +31,34 @@ class AllPages(webapp2.RequestHandler):
     def get(self, path):
         lang = self.request.get("hl", "en")
 
+        text = None
+        file_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", lang, path)
+        if os.path.isfile(file_path):
+          text = render(file_path, {})
 
-        if path[-5:] != ".html":
-            # App engine strips out trailing '/' for directories
-            path = os.path.join(path, "index.html")
-        
-        root_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", "en", path)
-        lang_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", lang, path)
-        
-        try:
-            text = render(lang_path, {})
-        except:
-            text = render(root_path, {})
+        file_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", lang, path) + ".html"
+        if text is None and os.path.isfile(file_path):
+          text = render(file_path, {})
+
+        file_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", lang, path, "index.html")
+        if text is None and os.path.isfile(file_path):
+          text = render(file_path, {})
+
+        file_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", "en", path)
+        if text is None and os.path.isfile(file_path):
+          text = render(file_path, {})
+
+        file_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", "en", path) + ".html"
+        if text is None and os.path.isfile(file_path):
+          text = render(file_path, {})
+
+        file_path = os.path.join(os.path.dirname(__file__), "build", "static", "_langs", "en", path, "index.html")
+        if text is None and os.path.isfile(file_path):
+          text = render(file_path, {})
+
+        if text is None:
+          text = "404 - Requested file not found."
+          self.response.set_status(404)
 
         # TODO
         # Access-Control-Allow-Origin: https://developers.google.com
