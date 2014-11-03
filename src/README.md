@@ -22,6 +22,10 @@
 
 - Run the Jekyll build: `grunt`
 
+### On Mac
+
+- Due to the number of files in the project, you will likely need to increase the maximum number of open file handles.  Use `ulimit -n 1024` to increase the maximum number of open files to 1024 from the default of 256. 
+
 ## Change log
 
 - (09/24/2014) NPM and Gem bundles updated, be sure to run `npm update` and `bundle install`
