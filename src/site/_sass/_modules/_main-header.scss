@@ -67,6 +67,10 @@
   }
 }
 
+body[dir=rtl] .main-nav__header {
+  text-align: left;
+}
+
 .main-header__logo {
   text-decoration: none;
   color: $colorGrayDark;

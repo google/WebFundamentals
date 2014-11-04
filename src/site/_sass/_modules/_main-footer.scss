@@ -85,6 +85,10 @@
   }
 }
 
+body[dir=rtl] ul.main-footer__list>li:before {
+ display: none;
+}
+
 .main-footer__list--primary {
   font-family: $fontHighlight;
   font-size: $fontBase;
@@ -126,5 +130,12 @@
 
   @include wide {
     padding-left: $wideGutterWidth*2;
+  }
+}
+
+body[dir=rtl] .main-footer__google-section {
+  @include wide {
+    padding-left: 0px;
+    padding-right: $wideGutterWidth*2;
   }
 }
