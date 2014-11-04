@@ -79,6 +79,10 @@
 }
 
 body[dir=rtl] .main-nav__item {
+  list-style: none;
+  display: block;
+  position: static;
+
   // Remove list styles
   &:before {
     display: none;
@@ -202,10 +206,27 @@ body[dir=rtl] .main-nav__item {
   padding-left: 0;
 }
 
+body[dir=rtl] .main-nav__list--child {
+  padding-right: 0;
+  margin-right: 0;
+}
+
 .main-nav__item--child {
   padding-top: 0;
   position: static;
   padding-left: 0;
+
+  &:before {
+    display: none;
+  }
+}
+
+body[dir=rtl] .main-nav__item--child {
+  padding-top: 0;
+  position: static;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: right;
 
   &:before {
     display: none;
