@@ -194,7 +194,7 @@ Tipik bir örnek olarak svgo, Illustrator tarafindan olusturulan yukaridaki SVG 
 
 Bir tarama resim, bagimsiz `piksel`lerden olusan 2 boyutlu bir kilavuzdur. Örnegin, 100x100 piksellik bir resim, 10.000 piksellik bir siradir. Bununla birlikte, her bir piksel "[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)" degerlerini saklar: (R) kirmizi kanal, (G) yesil kanal, (B) mavi kanal ve (A) alfa (seffaflik) kanali.
 
-Dahili olarak, tarayici her bir kanal için 256 deger (gölgeler) ayirir. Bu da kanal basina 8 bit (28 = 256) ve piksel basina 4 bayta (4 kanal x 8 bit = 32 bit = 4 bayt) karsilik gelir. Sonuç olarak, kilavuzun boyutlarini bilirsek dosya boyutunu kolayca hesaplayabiliriz:
+Dahili olarak, tarayici her bir kanal için 256 deger (gölgeler) ayirir. Bu da kanal basina 8 bit (2 ^ 8 = 256) ve piksel basina 4 bayta (4 kanal x 8 bit = 32 bit = 4 bayt) karsilik gelir. Sonuç olarak, kilavuzun boyutlarini bilirsek dosya boyutunu kolayca hesaplayabiliriz:
 
 * 100 x 100 piksellik resim 10.000 pikselden olusur
 * 10.000 piksel x 4 bayt = 40.000 bayt
