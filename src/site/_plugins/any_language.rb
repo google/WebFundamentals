@@ -114,6 +114,8 @@ module Jekyll
         translated_page_list = []
         if root_page != nil
           root_page.data['is_localized'] = false
+          root_page.data['is_localization'] = false
+          root_page.data['has_localization'] = {'test' => true};
           translated_page_list << root_page
         end
 
@@ -128,10 +130,15 @@ module Jekyll
             if page != nil
               if root_page != nil
                 root_page.data['is_localized'] = true
+                root_page.data['has_localization'][langcode] = true;
               end
               page.data['is_localized'] = true
               page.data['is_localization'] = true
               translated_page_list << page
+            end
+          else
+            if root_page != nil
+              root_page.data['has_localization'][langcode] = false;
             end
           end
         end
