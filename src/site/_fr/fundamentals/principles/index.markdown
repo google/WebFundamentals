@@ -94,7 +94,7 @@ list:
       title: Optimisez la totalité de votre site pour les appareils mobiles.
       link: /web/fundamentals/layouts/rwd-fundamentals/
     -
-      title: Ne forcez pas les utilisateurs à "pincer pour zoomer".
+      title: Ne forcez pas les utilisateurs à 'pincer pour zoomer'.
       link: /web/fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport.html
     -
       title: Permettez aux utilisateurs d`agrandir les images des produits.
