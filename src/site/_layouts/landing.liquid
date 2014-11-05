@@ -38,8 +38,10 @@
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
             <ol class="list-links list-links--secondary">
             {% for article in page.articles[guide.id] %}
-              {% if article.is_localized != true or article.langcode == page.langcode %}
+              {% if article.langcode == page.langcode or article.langcode == guide.langcode %}
+              {% if article.langcode == page.langcode or article.has_localization[page.langcode] == false %}
               <li><a href="{{site.baseurl}}{{article.url | clean | localize_link:article}}" title="{{"read_the_lesson" | localize_string}} {{article.title}}">{{article.title}}</a></li>
+              {% endif %}
               {% endif %}
             {% endfor %}
             </ol>
