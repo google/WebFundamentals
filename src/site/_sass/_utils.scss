@@ -56,7 +56,7 @@
   $colorMuted: $colorGray;
   $colorDanger: $colorRed;
 
-  // Note - these colors are also hard coded in _includes/header.liquid so
+  // Note - these colors are also hard coded in _includes/head.liquid so
   // that we can include the meta theme-color.  If you update any of these
   // you'll also need to update them in that file as well.
   $colorLayouts: #297ea9;
@@ -77,7 +77,7 @@
   $colorLookAndFeelSecondary: lighten($colorLookAndFeel, 30%);
   $colorPrinciples: #ff5722;
   $colorPrinciplesSecondary: lighten($colorPrinciples, 30%);
-  $colorDiscoveryAndDistribution: #ff5722;
+  $colorDiscoveryAndDistribution: #3f51b5;
   $colorDiscoveryAndDistributionSecondary: lighten($colorDiscoveryAndDistribution, 30%);
 
   // Defining font family
