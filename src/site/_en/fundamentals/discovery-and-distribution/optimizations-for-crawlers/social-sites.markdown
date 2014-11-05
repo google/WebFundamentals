@@ -10,7 +10,7 @@ authors:
   - agektmr
 article:
   written_on: 2014-10-08
-  updated_on: 2014-10-08
+  updated_on: 2014-11-05
   order: 1
 key-takeaways:
   - Use schema.org microdata to provide page title, description and an image for Google+.
@@ -76,17 +76,17 @@ Here's an example:
 While most metadata are embedded in the head section of a webpage, microdata
 lives where the context exists.
 
-### Add itemscope to define microdata scope
+### Add `itemscope` to define microdata scope
 By adding `itemscope`, you can specify the tag as a block of contents about a
 particular item.
 
-### Add itemtype to define type of your website
+### Add `itemtype` to define type of your website
 The type of item can be specified using the `itemtype` attribute along with the
 `itemscope`. The value of an `itemtype` can be determined according to the type
 of the content on your webpage. You should be able to find one that is relevant
 in [this page](http://schema.org/docs/full.html).
 
-### Add itemprop to describe each item using schema.org vocaburary
+### Add `itemprop` to describe each item using schema.org vocaburary
 `itemprop`s define properties for `itemtype`s in the scope. For providing
 metadata to social sites, typical `itemprop` values are `name`, `description`
 and `image`.
@@ -118,7 +118,7 @@ Facebook objects.
 When included in the head section of your page, this metadata is used for rich
 snippet information when the page is shared.
 
-### Use 'og:' namespaced meta tags to describe metadata
+### Use `og:` namespaced `meta` tags to describe metadata
 A `meta` tag consists of a `property` attribute and a `content` attribute.
 Properties and contents take following values:
 
@@ -179,7 +179,7 @@ In order to validate your markup on Facebook, you can use tools such as:
 [webpage. By adding the appropriate metadata, Tweets with links to your page
 [will have a card added that includes the rich detail you've added.
 
-### Use 'twitter:' namespaced meta tags to describe metadata
+### Use `twitter:` namespaced meta tags to describe metadata
 In order to get a Twitter Card working, [your domain must be
 approved](https://dev.twitter.com/docs/cards/validation/validator) and must
 contain a meta tag that has `twitter:card` as `name` attribute instead of
@@ -213,7 +213,7 @@ Notice that microdata and OGP share some markups:
 * `itemscope` is located at `head` tag
 * `title` and `description` are shared between microdata and OGP
 * `itemprop="image"` is using `link` tag with `href` attribute instead of
-`reusing `meta` tag with `property="og:image"`
+reusing `meta` tag with `property="og:image"`
   
 Lastly, make sure to validate that your webpage appears as expected on each social sites before publishing them.
 
