@@ -10,6 +10,7 @@ article:
   order: 3
 id: introduction-to-media
 collection: home
+priority: 0
 ---
 
 {% comment %}

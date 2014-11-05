@@ -10,6 +10,7 @@ article:
   order: 2
 id: user-input
 collection: home
+priority: 0
 ---
 
 {% comment %}

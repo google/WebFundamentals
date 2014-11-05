@@ -10,6 +10,7 @@ article:
   order: 0
 id: tools
 collection: home
+priority: 0
 ---
 
 {% comment %}
