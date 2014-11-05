@@ -10,13 +10,13 @@ authors:
   - agektmr
 article:
   written_on: 2014-10-08
-  updated_on: 2014-10-08
+  updated_on: 2014-11-05
   order: 2
 key-takeaways:
   - Determine the URL structure of your webpage
   - Responsive design is most recommended
-  - Use rel="canonical" + rel="alternate" for separate desktop/mobile sites
-  - Use Vary HTTP header for a single URL dynamically serving separate desktop/mobile HTMLs
+  - Use <code>rel="canonical"</code> + <code>rel="alternate"</code> for separate desktop/mobile sites
+  - Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
 ---
 {% wrap content %}
 
@@ -69,7 +69,7 @@ By making it responsive:
 Learn how to build your website with responsive web design at [Multi-Device
 Layouts](https://developers.google.com/web/fundamentals/layouts/) section.
 
-## Use link[rel=canonical] and link[rel=alternate] when serving from separate URLs
+## Use `link[rel=canonical]` and `link[rel=alternate]` when serving from separate URLs
 Serving similar contents on a desktop version and a mobile version at different
 URLs may cause confusion for both users and search engines because it's not
 obvious for viewers that they are intended to be identical. You should indicate:
@@ -81,7 +81,7 @@ obvious for viewers that they are intended to be identical. You should indicate:
 This information can help search engines better index content and ensure users
 find what they're looking for in a format that works for their device.
 
-### Use link[rel=alternate] for desktop version
+### Use `link[rel=alternate]` for desktop version
 On desktop page, indicate that there's a mobile version on a different URL by
 adding `link` tag with `rel="alternate"` pointing to mobile version URL with
 `href`. By adding `media` attribute with value of `"only screen and (max-width:
@@ -95,7 +95,7 @@ small screens.
 <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.example.com/">
 {% endhighlight %}
 
-### Use link[rel=canonical] for mobile version
+### Use `link[rel=canonical]` for mobile version
 On mobile specific pages, indicate that there's a desktop (canonical) version at
 a different URL by adding `link` tag with `rel="canonical"` pointing to desktop
 version URL with `href`.
@@ -109,7 +109,7 @@ version URL with `href`.
   
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
 
-## Use Vary HTTP header for device oriented serving site
+## Use `Vary HTTP` header for device oriented serving site
 Serving different HTML based on device type can reduce unnecessary redirects,
 serves optimized HTML, provides single URL for search engines, but it also has
 several disadvantages:
@@ -124,7 +124,7 @@ Google’s Webmaster Guidelines.
 By letting search engines know that the content varies depending on user agent,
 they can optimize search results for the user agent that is sending queries.
 
-### Use Vary HTTP header
+### Use `Vary HTTP` header
 In order to indicate that the URL serves different HTML depending on user agent,
 provide `Vary: User-Agent` in HTTP header.
 
