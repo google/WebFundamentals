@@ -26,7 +26,7 @@ notes:
 
 {% wrap content %}
 
-يتناول هذا الدليل أساسيات كيفية عمل الإعلانات، وللتعرف على مزيد من المعلومات، يمكنك الاطلاع على <aمراكز مساعدة href="https://support.google.com/adsense/answer/181947">Google AdSense</a> و<a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a>.
+يتناول هذا الدليل أساسيات كيفية عمل الإعلانات، وللتعرف على مزيد من المعلومات، يمكنك الاطلاع على <a href="https://support.google.com/adsense/answer/181947">Google AdSense</a> و<a href="https://support.google.com/dfp_sb/?utm_medium=et&utm_source=dfp_sb_support_tab&utm_campaign=dfp_sb#topic=13148">Google DoubleClick</a> مراكز مساعدة.
 
 {% include modules/toc.liquid %}
 
