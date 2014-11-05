@@ -53,6 +53,14 @@ toc:
         section:
           - title: מונטיזציה של מודעות
             path: /fundamentals/monetization/ad-monetization/
+      - title: גילוי והפצה
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: גישה למכשיר
         path: /fundamentals/device-access/
         id: device-access

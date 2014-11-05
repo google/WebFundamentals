@@ -53,6 +53,14 @@ toc:
         section:
           - title: 광고를 통한 수익 창출
             path: /fundamentals/monetization/ad-monetization/
+      - title: 검색 및 배포
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: 기기 액세스
         path: /fundamentals/device-access/
         id: device-access

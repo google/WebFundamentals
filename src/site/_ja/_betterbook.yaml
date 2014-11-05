@@ -53,6 +53,14 @@ toc:
         section:
           - title: 広告収益化
             path: /fundamentals/monetization/ad-monetization/
+      - title: ディスカバリーおよび配布
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: デバイス アクセス
         path: /fundamentals/device-access/
         id: device-access
