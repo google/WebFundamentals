@@ -10,6 +10,7 @@ article:
   order: 1
 id: multi-device-layouts
 collection: home
+priority: 0
 ---
 
 {% comment %}

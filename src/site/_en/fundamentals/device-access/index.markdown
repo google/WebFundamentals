@@ -13,6 +13,7 @@ article:
   written_on: 2014-05-29
   updated_on: 2014-09-22
   order: 6
+priority: 0
 ---
 
 {% comment %}
