@@ -6999,15 +6999,15 @@ figcaption {
 }
 /* line 123, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed {
-  color: #ff5722;
+  color: #3f51b5;
 }
 /* line 126, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed.divider-icon:before {
-  color: #ff5722;
+  color: #3f51b5;
 }
 /* line 130, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed.divider-icon:after {
-  color: #ffcbbb;
+  color: #abb4e2;
 }
 
 /* line 139, ../_sass/_themed.scss */
@@ -7048,7 +7048,7 @@ figcaption {
 }
 /* line 166, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed--background, .theme--discovery-and-distribution .themed--background.next-lessons:before {
-  background-color: #ff5722;
+  background-color: #3f51b5;
 }
 
 /* line 173, ../_sass/_themed.scss */
@@ -7089,7 +7089,7 @@ figcaption {
 }
 /* line 200, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed--background-secondary, .theme--discovery-and-distribution .themed--background-secondary.next-lessons:before {
-  background-color: #ffcbbb;
+  background-color: #abb4e2;
 }
 
 /* line 206, ../_sass/_themed.scss */
@@ -7130,7 +7130,7 @@ figcaption {
 }
 /* line 224, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed--hover:hover {
-  color: #ff5722;
+  color: #3f51b5;
 }
 
 /* line 230, ../_sass/_themed.scss */
@@ -7171,7 +7171,7 @@ figcaption {
 }
 /* line 248, ../_sass/_themed.scss */
 .theme--discovery-and-distribution .themed--hover-secondary:hover {
-  color: #ffcbbb;
+  color: #abb4e2;
 }
 
 /* line 259, ../_sass/_themed.scss */
@@ -7222,7 +7222,7 @@ figcaption {
 /* line 277, ../_sass/_themed.scss */
 .article--discovery-and-distribution .article-container h1, .article--discovery-and-distribution
 .article-container h2 {
-  color: #ff5722;
+  color: #3f51b5;
 }
 
 /* line 285, ../_sass/_themed.scss */
@@ -7263,7 +7263,7 @@ figcaption {
 }
 /* line 303, ../_sass/_themed.scss */
 .nav-theme--discovery-and-distribution .themed--hover:hover {
-  color: #ff5722;
+  color: #3f51b5;
 }
 
 /* line 309, ../_sass/_themed.scss */
@@ -7304,7 +7304,7 @@ figcaption {
 }
 /* line 327, ../_sass/_themed.scss */
 .nav-theme--discovery-and-distribution .themed {
-  color: #ff5722;
+  color: #3f51b5;
 }
 
 /* line 333, ../_sass/_themed.scss */
@@ -7345,7 +7345,7 @@ figcaption {
 }
 /* line 351, ../_sass/_themed.scss */
 .nav-theme--discovery-and-distribution .themed--background {
-  background-color: #ff5722;
+  background-color: #3f51b5;
 }
 
 /* line 357, ../_sass/_themed.scss */
@@ -7386,7 +7386,7 @@ figcaption {
 }
 /* line 375, ../_sass/_themed.scss */
 .nav-theme--discovery-and-distribution .themed--background-secondary {
-  background-color: #ffcbbb;
+  background-color: #abb4e2;
 }
 
 /**
@@ -7646,7 +7646,7 @@ figcaption {
 
 /* line 59, ../_sass/_helper.scss */
 .color--discovery-and-distribution {
-  color: #ff5722;
+  color: #3f51b5;
 }
 
 /* line 60, ../_sass/_helper.scss */
@@ -7681,7 +7681,7 @@ figcaption {
 
 /* line 66, ../_sass/_helper.scss */
 .color--discovery-and-distribution-secondary {
-  color: #ffcbbb;
+  color: #abb4e2;
 }
 
 /*==========  TEXT DIVIDER  ==========*/
