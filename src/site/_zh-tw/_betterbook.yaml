@@ -69,7 +69,7 @@ toc:
             path: /fundamentals/device-access/user-location
           - title: 點選通話
             path: /fundamentals/device-access/click-to-call
-      - title: 成效
+      - title: 效能
         path: /fundamentals/performance/
         id: performance
         section:
