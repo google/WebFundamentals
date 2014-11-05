@@ -194,7 +194,7 @@ Nesse contexto, o svgo diminui em 58% o tamanho do arquivo SVG gerado pelo Illus
 
 Uma imagem vetorial é somente uma grade bidimensional de `pixels` individuais, ou seja, uma imagem de 100 x 100 pixels é uma sequência de 10.000 pixels. Cada pixel, por sua vez, armazena os valores `[ÓRGÃO](http://en.wikipedia.org/wiki/RGBA_color_espaço): (R) canal vermelho, (G) canal verde, (B) canal azul e (A) canal alfa (transparência).
 
-Internamente, o navegador aloca 256 valores (tons) para cada canal, que se convertem em 8 bits por canal (28 = 256) e 4 bytes por pixel (4 canais x 8 bits = 32 bits = 4 bytes). Como resultado, o tamanho do arquivo é facilmente calculado quando conhecemos as dimensões da grade:
+Internamente, o navegador aloca 256 valores (tons) para cada canal, que se convertem em 8 bits por canal (2 ^ 8 = 256) e 4 bytes por pixel (4 canais x 8 bits = 32 bits = 4 bytes). Como resultado, o tamanho do arquivo é facilmente calculado quando conhecemos as dimensões da grade:
 
 * uma imagem de 100 x 100 pixels é composta por 10.000 pixels
 * 10.000 pixels x 4 bytes = 40.000 bytes

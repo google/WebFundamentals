@@ -193,7 +193,7 @@ In dit geval kan het SVG-bestand uit Illustrator met 58% worden verkleind en wor
 
 Een rasterafbeelding is een eenvoudig tweedimensionaal raster met afzonderlijke pixels. Een afbeelding van 100 x 100 pixels bestaat uit 10.000 pixels. In elke pixel zijn de [RGBA](http://en.wikipedia.org/wiki/RGBA_color_space) waarden opgeslagen: (R) rood kanaal, (G) groen kanaal, (B) blauw kanaal en (A) alfa (transparant) kanaal.
 
-De browser kent aan elk kanaal 256 kleuren (tinten) toe. Dit zijn 8 bits per kanaal (28 = 256) en 4 bytes per pixel (4 kanalen x 8 bits = 32 bits = 4 bytes). Als we de afmetingen van het raster weten, kunnen we eenvoudig de bestandsgrootte berekenen:
+De browser kent aan elk kanaal 256 kleuren (tinten) toe. Dit zijn 8 bits per kanaal (2 ^ 8 = 256) en 4 bytes per pixel (4 kanalen x 8 bits = 32 bits = 4 bytes). Als we de afmetingen van het raster weten, kunnen we eenvoudig de bestandsgrootte berekenen:
 
 * Afbeelding van 100 x 100px bestaat uit 10.000 pixels
 * 10.000 pixels x 4 bytes = 40.000 bytes

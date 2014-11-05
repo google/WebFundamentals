@@ -192,7 +192,7 @@ Por ejemplo, svgo reduce el tamaño del archivo SVG anterior generado por Illust
 
 Una imagen de mapa de bits es simplemente una cuadrícula de `píxeles` individuales de dos dimensiones (p. ej., una imagen de 100 x 100 píxeles es una secuencia de 10.000 píxeles). A su vez, cada píxel almacena los valores `[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)`: (R) canal rojo, (G) canal verde, (B) canal azul y (A) canal alfa (transparencia).
 
-El navegador asigna internamente 256 valores (sombras) a cada canal, lo que se traduce en 8 bits por canal (28 = 256) y 4 bytes por píxel (4 canales x 8 bits = 32 bits = 4 bytes). Por lo tanto, si conocemos las dimensiones de la cuadrícula, podremos calcular fácilmente el tamaño del archivo:
+El navegador asigna internamente 256 valores (sombras) a cada canal, lo que se traduce en 8 bits por canal (2 ^ 8 = 256) y 4 bytes por píxel (4 canales x 8 bits = 32 bits = 4 bytes). Por lo tanto, si conocemos las dimensiones de la cuadrícula, podremos calcular fácilmente el tamaño del archivo:
 
 * Una imagen de 100 x 100 píxeles está formada por 10.000 píxeles
 * 10.000 píxeles x 4 bytes = 40.000 bytes

@@ -192,7 +192,7 @@ In unserem Fall reduziert SVGO die Größe der obigen von Illustrator erzeugten 
 
 Bei einer Rastergrafik handelt es sich einfach um ein zweidimensionales Raster aus einzelnen `Pixeln`. So besteht eine Pixelgrafik mit 100 x 100 Pixeln beispielsweise aus einer Abfolge von 10.000 Pixeln. In jedem Pixel sind wiederum die `[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)`-Werte gespeichert: roter Kanal (R), grüner Kanal (G), blauer Kanal (B) und der Alpha- oder Transparenzkanal (A).
 
-Intern ordnet der Browser jedem Kanal 256 Werte (Schattierungen) zu, was umgerechnet 8 Bits pro Kanal (28 = 256) und 4 Bytes pro Pixel entspricht (4 Kanäle x 8 Bits = 32 Bits = 4 Bytes). Wenn wir die Abmessungen des Rasters kennen, können wir folglich die Dateigröße einfach berechnen:
+Intern ordnet der Browser jedem Kanal 256 Werte (Schattierungen) zu, was umgerechnet 8 Bits pro Kanal (2 ^ 8 = 256) und 4 Bytes pro Pixel entspricht (4 Kanäle x 8 Bits = 32 Bits = 4 Bytes). Wenn wir die Abmessungen des Rasters kennen, können wir folglich die Dateigröße einfach berechnen:
 
 * Eine Grafik mit 100 x 100 Pixeln besteht aus 10.000 Pixeln.
 * 10.000 Pixel x 4 Bytes = 40.000 Bytes

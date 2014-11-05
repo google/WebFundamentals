@@ -192,7 +192,7 @@ Nel caso illustrato, svgo riduce le dimensioni del file SVG generato con Illustr
 
 Un`immagine raster consiste semplicemente in una griglia bidimensionale di singoli `pixel`; ad es., un`immagine di 100x100 pixel è una sequenza di 10.000 pixel. Ogni pixel contiene a sua volta i valori `[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)`: (R) canale rosso (red channel), (G) canale verde (green channel), (B) canale blu (blue channel e (A) canale alfa (della trasparenza - alpha channel).
 
-Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si traducono in 8 bit per canale (28 = 256) e 4 byte per pixel (4 canali x 8 bit = 32 bit = 4 byte). Di conseguenza, conoscendo le dimensioni della griglia, possiamo facilmente calcolare le dimensioni del file.
+Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si traducono in 8 bit per canale (2 ^ 8 = 256) e 4 byte per pixel (4 canali x 8 bit = 32 bit = 4 byte). Di conseguenza, conoscendo le dimensioni della griglia, possiamo facilmente calcolare le dimensioni del file.
 
 * Un`immagine di 100 x 100px è composta da 10.000 pixel
 * 10.000 pixel x 4 byte = 40.000 byte

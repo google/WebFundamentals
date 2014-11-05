@@ -193,7 +193,7 @@ Rzeczywiście, narzędzie svgo redukuje rozmiar powyższego pliku SVG z programu
 
 Obraz rastrowy stanowi po prostu 2-wymiarową matrycę poszczególnych pikseli &ndash; np. obraz o rozdzielczości 100x100 pikseli zawiera sekwencję 10 000 pikseli. Z kolei w każdym pikselu zapisywane są wartości `[RGBA](http://pl.wikipedia.org/wiki/RGBA)`: (R) dla kanału koloru czerwonego, (G) dla kanału koloru zielonego, (B) dla kanału koloru niebieskiego i (A) dla kanału alfa (przezroczystości).
 
-Wewnętrznie przeglądarka przydziela do każdego kanału 256 wartości (odcieni), co przekłada się na 8 bitów na kanał (28 = 256) lub 4 bajty na piksel (4 kanały x 8 bitów = 32 bity = 4 bajty). Dzięki temu przy znajomości rozmiarów matrycy można łatwo określić rozmiar pliku:
+Wewnętrznie przeglądarka przydziela do każdego kanału 256 wartości (odcieni), co przekłada się na 8 bitów na kanał (2 ^ 8 = 256) lub 4 bajty na piksel (4 kanały x 8 bitów = 32 bity = 4 bajty). Dzięki temu przy znajomości rozmiarów matrycy można łatwo określić rozmiar pliku:
 
 * obraz 100 x 100 pikseli składa się z 10 000 pikseli
 * 10 000 pikseli x 4 bajty = 40 000 bajtów
