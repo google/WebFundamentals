@@ -17,6 +17,10 @@ notes:
 ---
 {% wrap content %}
 
+If you're running Google Chrome, you can use the [Network
+Conditioning](https://developer.chrome.com/devtools/docs/device-mode#network-conditions)
+feature offered by the DevTools.
+
 If you're on a Mac, try out the Network Link Conditioner tool found in the Lion
 Developer Tools.
 
