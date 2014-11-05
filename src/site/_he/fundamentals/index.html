@@ -40,9 +40,9 @@ id: home
     <ul class="list-guides-intro guides-list container">
 
       {% for guide in page.articles.[page.id] %}
-      {% if guide.published != false %}
+      {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
       <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
-        <a href="{{site.baseurl}}{{guide.url | clean}}" title="{{guide.title}}" class="themed">
+        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}" class="themed">
             <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
             <h3 class="large">{{guide.title}}</h3>
           </a>
