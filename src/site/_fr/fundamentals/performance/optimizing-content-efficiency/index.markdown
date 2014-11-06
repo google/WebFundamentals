@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Optimiser le contenu de façon efficace"
-description: "La quantité de données téléchargée par chaque application ne cesse d`augmenter. Pour offrir d`excellentes performances, nous devons optimiser la livraison de chaque octet !"
-introduction: "Nos applications Web continuent de se développer en termes de portée, d`ambition et de fonctionnalité. Et c`est une bonne chose. Cependant, la course incessante vers un Web plus riche provoque une autre tendance : la quantité de données téléchargée par chaque application augmente sens cesse, rapidement. Pour offrir d`excellentes performances, nous devons optimiser la livraison de chaque octet de données !"
+description: "La quantité de données téléchargée par chaque application ne cesse d'augmenter. Pour offrir d'excellentes performances, nous devons optimiser la livraison de chaque octet !"
+introduction: "Nos applications Web continuent de se développer en termes de portée, d'ambition et de fonctionnalité. Et c'est une bonne chose. Cependant, la course incessante vers un Web plus riche provoque une autre tendance : la quantité de données téléchargée par chaque application augmente sens cesse, rapidement. Pour offrir d'excellentes performances, nous devons optimiser la livraison de chaque octet de données !"
 article:
   written_on: 2014-04-01
   updated_on: 2014-04-29
@@ -79,13 +79,13 @@ collection: performance
 </tr>
 </table>
 
-Les données ci-dessus capturent la tendance de la croissance du nombre d`octets téléchargés pour les destinations populaires sur Internet entre janvier 2013 et janvier 2014. Bien sûr, tous les sites n`ont pas la même croissance, et ne nécessitent pas la même quantité de données. C`est pour cette raison que nous mettons en évidence les différents quantiles au sein de la distribution : 50e (médian), 75e et 90e.
+Les données ci-dessus capturent la tendance de la croissance du nombre d'octets téléchargés pour les destinations populaires sur Internet entre janvier 2013 et janvier 2014. Bien sûr, tous les sites n'ont pas la même croissance, et ne nécessitent pas la même quantité de données. C'est pour cette raison que nous mettons en évidence les différents quantiles au sein de la distribution : 50e (médian), 75e et 90e.
 
-Un site médian au début de l`année 2014 est composé de 75 requêtes pour un total de 1 054 Ko transférés, et le nombre total d`octets et de demandes n`a pas cessé d`augmenter rapidement au cours de l`année précédente. Cette information n`est pas surprenante en soit, mais elle a des implications importantes en termes de performances : oui, les vitesses d`Internet augmentent, mais elles augmentent à une vitesse différente selon les pays, et de nombreux utilisateurs sont encore soumis à des plafonds de données et à des forfaits mesurés et onéreux, en particulier sur les appareils mobiles.
+Un site médian au début de l'année 2014 est composé de 75 requêtes pour un total de 1 054 Ko transférés, et le nombre total d'octets et de demandes n'a pas cessé d'augmenter rapidement au cours de l'année précédente. Cette information n'est pas surprenante en soit, mais elle a des implications importantes en termes de performances : oui, les vitesses d'Internet augmentent, mais elles augmentent à une vitesse différente selon les pays, et de nombreux utilisateurs sont encore soumis à des plafonds de données et à des forfaits mesurés et onéreux, en particulier sur les appareils mobiles.
 
-Contrairement à leurs équivalents sur les ordinateurs de bureau, les applications Web ne nécessitent pas un processus d`installation distinct : saisissez l`URL et l`application est prête à l`emploi. C`est l`une des principales caractéristiques d`Internet. Cependant, pour y parvenir **nous devons souvent récupérer des dizaines, parfois même des centaines, de ressources différentes, ce qui peut représenter des mégaoctets de données, qui doivent être rassemblés en des centaines de millisecondes pour permettre l`expérience instantanée d`Internet que nous souhaitons offrir.**
+Contrairement à leurs équivalents sur les ordinateurs de bureau, les applications Web ne nécessitent pas un processus d'installation distinct : saisissez l'URL et l'application est prête à l'emploi. C'est l'une des principales caractéristiques d'Internet. Cependant, pour y parvenir **nous devons souvent récupérer des dizaines, parfois même des centaines, de ressources différentes, ce qui peut représenter des mégaoctets de données, qui doivent être rassemblés en des centaines de millisecondes pour permettre l'expérience instantanée d'Internet que nous souhaitons offrir.**
 
-À la lumière de ces exigences, obtenir une expérience instantanée d`Internet n`est pas une mince affaire. C`est pourquoi il est indispensable d`optimiser l`efficacité du contenu, en éliminant les téléchargements inutiles, en optimisant l`encodage du transfert de chaque ressource à l`aide de diverses techniques de compression et en utilisant la mise en cache chaque fois que c`est possible pour éliminer les téléchargements redondants.
+À la lumière de ces exigences, obtenir une expérience instantanée d'Internet n'est pas une mince affaire. C'est pourquoi il est indispensable d'optimiser l'efficacité du contenu, en éliminant les téléchargements inutiles, en optimisant l'encodage du transfert de chaque ressource à l'aide de diverses techniques de compression et en utilisant la mise en cache chaque fois que c'est possible pour éliminer les téléchargements redondants.
 
 {% endwrap %}
 

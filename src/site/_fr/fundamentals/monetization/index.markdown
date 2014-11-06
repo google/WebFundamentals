@@ -1,8 +1,8 @@
 ---
 layout: landing
 title: "Monétisation"
-description: "Découvrez comment optimiser vos revenus sur tous les appareils. Améliorez l`expérience des internautes et gagnez de l`argent."
-introduction: "Découvrez comment optimiser vos revenus sur tous les appareils. Améliorez l`expérience des internautes et gagnez de l`argent."
+description: "Découvrez comment optimiser vos revenus sur tous les appareils. Améliorez l'expérience des internautes et gagnez de l'argent."
+introduction: "Découvrez comment optimiser vos revenus sur tous les appareils. Améliorez l'expérience des internautes et gagnez de l'argent."
 snippet: "Optimisez vos revenus sur tous les appareils. "
 article:
   written_on: 2014-05-29

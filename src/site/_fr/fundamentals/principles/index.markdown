@@ -2,7 +2,7 @@
 layout: grouped-list
 title: "Principes de la conception de site"
 description: ""
-introduction: "Les équipes de Google et AnswerLab ont entrepris une <a href='research-study.html'>étude de recherche</a> intensive pour découvrir comment un ensemble d`utilisateurs interagissait avec différents ensembles de sites mobiles. L`objectif est de répondre à la question suivante : qu`est-ce qu`un bon site mobile ?"
+introduction: "Les équipes de Google et AnswerLab ont entrepris une <a href='research-study.html'>étude de recherche</a> intensive pour découvrir comment un ensemble d'utilisateurs interagissait avec différents ensembles de sites mobiles. L'objectif est de répondre à la question suivante : qu'est-ce qu'un bon site mobile ?"
 snippet: "Principes pour garantir une excellente expérience."
 article:
   written_on: 2014-08-08
@@ -14,24 +14,24 @@ authors:
   - petelepage
 list:
   -
-    title: "Page d`accueil et navigation sur le site"
-    description: "La page d`accueil d`un ordinateur de bureau a souvent de nombreuses utilités, mais la page d`accueil d`un appareil mobile doit surtout permettre de connecter les utilisateurs au contenu qu`ils recherchent."
+    title: "Page d'accueil et navigation sur le site"
+    description: "La page d'accueil d'un ordinateur de bureau a souvent de nombreuses utilités, mais la page d'accueil d'un appareil mobile doit surtout permettre de connecter les utilisateurs au contenu qu'ils recherchent."
     list:
     -
-      title: Conservez les incitations à l`action à l`avant et au centre.
+      title: Conservez les incitations à l'action à l'avant et au centre.
       link: /web/fundamentals/layouts/principles/cta-front-and-center.html
     -
       title: Conservez des menus courts et attractifs.
       link: /web/fundamentals/layouts/principles/menus-short.html
     -
-      title: Facilitez le retour à la page d`accueil.
+      title: Facilitez le retour à la page d'accueil.
       link: /web/fundamentals/layouts/principles/easy-to-home.html
     -
       title: Ne laissez pas les promotions prendre toute la place.
       link: /web/fundamentals/layouts/principles/promos.html 
   -
     title: "Recherche sur le site"
-    description: "La recherche sur le site est essentielle pour aider les utilisateurs de mobiles à trouver rapidement ce qu`ils cherchent."
+    description: "La recherche sur le site est essentielle pour aider les utilisateurs de mobiles à trouver rapidement ce qu'ils cherchent."
     start: 4
     list:
     -
@@ -48,27 +48,27 @@ list:
       link: /web/fundamentals/principles/site-search.html#guide-users-to-better-site-search-results
   -
     title: "Commerce et conversion"
-    description: "Le parcours du client devient de plus en plus complexe, et les utilisateurs d`attendent à effectuer la conversion à leurs conditions."
+    description: "Le parcours du client devient de plus en plus complexe, et les utilisateurs d'attendent à effectuer la conversion à leurs conditions."
     start: 8
     list:
     -
-      title: Permettez aux utilisateurs d`explorer le site avant de s`engager.
+      title: Permettez aux utilisateurs d'explorer le site avant de s'engager.
       link: /web/fundamentals/monetization/principles/explore.html
     -
-      title: Permettez aux utilisateurs d`effectuer des achats en tant qu`invités.
+      title: Permettez aux utilisateurs d'effectuer des achats en tant qu'invités.
       link: /web/fundamentals/monetization/principles/guest.html
     -
       title: Utilisez les informations existantes pour optimiser le confort des visiteurs.
       link: /web/fundamentals/monetization/principles/use-existing-data.html
     - 
-      title: Utilisez les boutons d`appel pour les tâches complexes.
+      title: Utilisez les boutons d'appel pour les tâches complexes.
       link: /web/fundamentals/device-access/click-to-call/click-to-call.html
     - 
-      title: Permettrez à l`utilisateur de terminer facilement une action sur un autre appareil.
+      title: Permettrez à l'utilisateur de terminer facilement une action sur un autre appareil.
       link: /web/fundamentals/monetization/principles/finish-on-another-device
   -
     title: "Saisie de formulaire"
-    description: "Qu`il s`agisse d`effectuer un achat, d`obtenir un devis ou de s`inscrire sur une liste de destinataires, la conversion de votre utilisateur doit être aussi fluide que possible."
+    description: "Qu'il s'agisse d'effectuer un achat, d'obtenir un devis ou de s'inscrire sur une liste de destinataires, la conversion de votre utilisateur doit être aussi fluide que possible."
     start: 13
     list:
     -
@@ -86,8 +86,8 @@ list:
       title: Concevez des formulaires efficaces.
       link: /web/fundamentals/input/form/design-efficient-forms.html
   -
-    title: "Facilité d`utilisation et facteur de formulaire"
-    description: "Les utilisateurs d`appareils mobiles remarquent et apprécient les petites chose que vous faites pour améliorer leur expérience."
+    title: "Facilité d'utilisation et facteur de formulaire"
+    description: "Les utilisateurs d'appareils mobiles remarquent et apprécient les petites chose que vous faites pour améliorer leur expérience."
     start: 18
     list: 
     -
@@ -97,7 +97,7 @@ list:
       title: Ne forcez pas les utilisateurs à 'pincer pour zoomer'.
       link: /web/fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport.html
     -
-      title: Permettez aux utilisateurs d`agrandir les images des produits.
+      title: Permettez aux utilisateurs d'agrandir les images des produits.
       link: /web/fundamentals/media/images/images-in-markup.html#make-product-images-expandable
     -
       title: Dites aux utilisateurs quelle orientation fonctionne le mieux.
