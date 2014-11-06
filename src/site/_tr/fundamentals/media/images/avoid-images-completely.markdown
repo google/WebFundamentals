@@ -38,7 +38,7 @@ key-takeaways:
 
 Mümkün oldugunda, metin bir metin olmali ve örnegin basliklar için resimlerin kullanilmasi veya telefon numaralari veya adresler gibi iletisim bilgilerinin dogrudan resimlerin içine yerlestirilmesi gibi resimlerin içine yerlestirilmemelidir.  Bu, kullanicilarin bilgileri kopyalayip yapistirabilmesini engeller, ekran okuyucularin bilgilere erisememesine neden olur ve duyarli degildir.  Bunun yerine, metni biçimlendirmenizin içine yerlestirin ve gerekiyorsa ihtiyaç duydugunuz stili gerçeklestirmek için web yazi tiplerini kullanin.
 
-## Resimlerin yerini almasi için CSS`yi kullanma
+## Resimlerin yerini almasi için CSS'yi kullanma
 
 Modern tarayicilar, önceden resimleri gerektiren stiller olusturmak için CSS özelliklerini kullanabilir.  Örnegin, karmasik renk geçisleri <code>background</code>; gölgeler <code>box-shadow</code> özelligi kullanilarak olusturulabilir ve yuvarlanmis köseler <code>border-radius</code> özelligiyle eklenebilir.
 

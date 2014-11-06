@@ -18,12 +18,12 @@ key-takeaways:
     - Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.
 remember:
   media-fragments:
-    - Medya Parçalari API`si çogu platformda desteklenir, ancak iOS`ta desteklenmez.
+    - Medya Parçalari API'si çogu platformda desteklenir, ancak iOS'ta desteklenmez.
     - Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
   dont-overflow:
     - Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
   accessibility-matters:
-    - Izleme ögesi Android için Chrome`da, iOS Safari`de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
+    - Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
   construct-video-streams:
     - MSE, Android üzerinde Chrome ve Opera, masaüstü için Internet Explorer 11 ve Chrome tarafindan desteklenir ve <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions uygulama zaman çizelgesi'>Firefox</a> için de destek saglanmasi planlanmaktadir.
   optimize:
@@ -76,7 +76,7 @@ Tüm tarayicilar ayni video biçimlerini desteklemez.
 {% include_code _code/video-main.html sourcetypes %}
 
 Tarayici `<source>` etiketlerini ayristirdiginda, indirilip oynatilacak dosyaya karar vermesinde yardimci olmasi için istege bagli `type` özelligini kullanir. Tarayici WebM biçimini destekliyorsa chrome.webm dosyasini oynatir, aksi halde MPEG-4 videolarini oynatip oynatamayacagini kontrol eder.
-Video ve sesin web`de nasil çalistigiyla ilgili daha fazla bilgi edinmek için <a href='//www.xiph.org/video/vid1.shtml' title='Dijital video ile ilgili son derece eglenceli ve bilgilendirici video kilavuz'>A Digital Media Primer for Geeks</a> adli videoya göz atin.
+Video ve sesin web'de nasil çalistigiyla ilgili daha fazla bilgi edinmek için <a href='//www.xiph.org/video/vid1.shtml' title='Dijital video ile ilgili son derece eglenceli ve bilgilendirici video kilavuz'>A Digital Media Primer for Geeks</a> adli videoya göz atin.
 
 Bu yaklasimin farkli HTML sunma veya sunucu tarafi komut dosyasi olusturmaya göre, özellikle mobil cihazlar açisindan bazi avantajlari vardir:
 
@@ -93,7 +93,7 @@ Ayrica, [sunucunuzun dogru MIME türünü bildirdiginden emin olmak](//developer
 
 ## Bir baslangiç ve bitis zamani belirtme
 
-Bant genisliginden tasarruf edin ve sitenizin daha duyarli hissettirmesini saglayin: Video ögesine bir baslangiç ve bitis zamani eklemek için Medya Parçalari API`sini kullanin.
+Bant genisliginden tasarruf edin ve sitenizin daha duyarli hissettirmesini saglayin: Video ögesine bir baslangiç ve bitis zamani eklemek için Medya Parçalari API'sini kullanin.
 
 <video controls>
   <source src="video/chrome.webm#t=5,10" type="video/webm">
@@ -101,13 +101,13 @@ Bant genisliginden tasarruf edin ve sitenizin daha duyarli hissettirmesini sagla
      <p>Bu tarayici video ögesini desteklemiyor.</p>
 </video>
 
-Bir medya parçasi eklemek için medya URL`sine yalnizca `#t=[start_time][,end_time]` kodunu eklersiniz. Örnegin, videoyu 5. saniye ile 10. saniye arasinda oynatmak için sunlari belirtin:
+Bir medya parçasi eklemek için medya URL'sine yalnizca `#t=[start_time][,end_time]` kodunu eklersiniz. Örnegin, videoyu 5. saniye ile 10. saniye arasinda oynatmak için sunlari belirtin:
 
 {% highlight html %}
 <source src="video/chrome.webm#t=5,10" type="video/webm">
 {% endhighlight %}
 
-Medya Parçalari API`sini, birden çok dosyayi kodlayip sunmak zorunda kalmadan ayni videoda birden çok görünüm sunmak (DVD`lerdeki bölüm baslangiçlari gibi) için de kullanabilirsiniz.
+Medya Parçalari API'sini, birden çok dosyayi kodlayip sunmak zorunda kalmadan ayni videoda birden çok görünüm sunmak (DVD'lerdeki bölüm baslangiçlari gibi) için de kullanabilirsiniz.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.media-fragments %}
 

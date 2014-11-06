@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Duyarli Web Tasarimi Temel Bilgileri"
-description: "Web`in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin."
-introduction: "Web'de sörf yapmak için mobil cihazlarin kullanilmasi çok büyük bir hizla artmaktadir, ancak ne yazik ki web`in çogunlugu bu mobil cihazlar için optimize edilmemistir. Mobil cihazlar genellikle ekran boyutuna göre sinirlanir ve içerigin ekrana yerlestirilme sekliyle ilgili farkli bir yaklasim gereklidir."
+description: "Web'in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin."
+introduction: "Web'de sörf yapmak için mobil cihazlarin kullanilmasi çok büyük bir hizla artmaktadir, ancak ne yazik ki web'in çogunlugu bu mobil cihazlar için optimize edilmemistir. Mobil cihazlar genellikle ekran boyutuna göre sinirlanir ve içerigin ekrana yerlestirilme sekliyle ilgili farkli bir yaklasim gereklidir."
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
@@ -61,7 +61,7 @@ shortlinks:
   <iframe src="https://www.youtube.com/embed/oK09n_PGhTo?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-Telefonlarda, `tablet-telefonlarda`, tabletlerde, masaüstü bilgisayarlarda, oyun konsollarinda, TV`lerde, hatta giyilebilir ürünlerde çok farkli ekran boyutlari söz konusudur.  Ekran boyutlari her zaman degismektedir, dolayisiyla sitenizin bugün veya gelecekte her ekran boyutuna uyum saglayabilmesi önemlidir.
+Telefonlarda, `tablet-telefonlarda`, tabletlerde, masaüstü bilgisayarlarda, oyun konsollarinda, TV'lerde, hatta giyilebilir ürünlerde çok farkli ekran boyutlari söz konusudur.  Ekran boyutlari her zaman degismektedir, dolayisiyla sitenizin bugün veya gelecekte her ekran boyutuna uyum saglayabilmesi önemlidir.
 
 {% link_sample _code/weather.html %}
   <video autoplay loop controls class="responsiveVideo">

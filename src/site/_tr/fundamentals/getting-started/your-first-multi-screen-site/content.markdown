@@ -171,7 +171,7 @@ Resim bulunmayan siteler biraz sikici olabilir. Iki tür resim vardir:
 
 Sayfamizdaki Resimler bölümü, içerik resimlerinden olusan bir koleksiyondur.
 
-Içerik resimleri, sayfanin anlamini aktarma açisindan önemlidir. Bunlari, gazete makalelerinde kullanilan resimler gibi düsünebilirsiniz. Kullandigimiz resimler, projenin egitmenleri olan Chris Wilson, Peter Lubbers ve Sean Bennet`in resimleridir.
+Içerik resimleri, sayfanin anlamini aktarma açisindan önemlidir. Bunlari, gazete makalelerinde kullanilan resimler gibi düsünebilirsiniz. Kullandigimiz resimler, projenin egitmenleri olan Chris Wilson, Peter Lubbers ve Sean Bennet'in resimleridir.
 
 {% include_code _code/addimages.html images html %}
 
@@ -195,7 +195,7 @@ Tablolar yalnizca bilgi matrisleri gibi tablo seklindeki veriler için kullanilm
 
 Çogu sitenin Sartlar ve Kosullar, sorumlulugun reddi beyanlari gibi içerigi ve sayfanin ana gezinme veya ana içerik alaninda bulunmamasi gereken baska içerikleri görüntülemek için bir altbilgiye ihtiyaci vardir.
 
-Bizim sitemizde, yalnizca Sartlar ve Kosullar`a, bir Iletisim sayfasina ve sosyal medya profillerimize baglanti verecegiz.
+Bizim sitemizde, yalnizca Sartlar ve Kosullar'a, bir Iletisim sayfasina ve sosyal medya profillerimize baglanti verecegiz.
 
 {% include_code _code/addcontent.html footer %}
 

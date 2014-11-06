@@ -18,12 +18,12 @@ key-takeaways:
     - Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.
 remember:
   media-fragments:
-    - Medya Parçalari API`si çogu platformda desteklenir, ancak iOS`ta desteklenmez.
+    - Medya Parçalari API'si çogu platformda desteklenir, ancak iOS'ta desteklenmez.
     - Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
   dont-overflow:
     - Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
   accessibility-matters:
-    - Izleme ögesi Android için Chrome`da, iOS Safari`de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
+    - Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
   construct-video-streams:
     - MSE, Android üzerinde Chrome ve Opera, masaüstü için Internet Explorer 11 ve Chrome tarafindan desteklenir ve <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions uygulama zaman çizelgesi'>Firefox</a> için de destek saglanmasi planlanmaktadir.
 ---
@@ -74,7 +74,7 @@ Video ögesi özelliklerinin ve tanimlarinin tam listesi için [video ögesi tek
     </tr>
     <tr>
       <td data-th="Özellik"><code>autoplay</code></td>
-      <td data-th="Kullanilabilirlik">iPhone veya Android`de desteklenmez; tüm masaüstü tarayicilar, iPad, Firefox ve Android için Opera`da desteklenir.</td>
+      <td data-th="Kullanilabilirlik">iPhone veya Android'de desteklenmez; tüm masaüstü tarayicilar, iPad, Firefox ve Android için Opera'da desteklenir.</td>
       <td data-th="Description">Indirmeye ve oynatmaya mümkün olan en kisa zamanda baslatir (Otomatik oynatma bölümüne bakin). </td>
     </tr>
     <tr>
@@ -92,15 +92,15 @@ Video ögesi özelliklerinin ve tanimlarinin tam listesi için [video ögesi tek
 
 ### Otomatik oynatma
 
-Masaüstünde `autoplay` özelligi, tarayiciya videoyu hemen indirmeye baslamasini ve mümkün olan en kisa zamanda oynatmasini bildirir. iOS`ta ve Android için Chrome`da, `autoplay` özelligi çalismaz; kullanicilarin videoyu oynatmak için ekrana hafifçe vurmasi gerekir.
+Masaüstünde `autoplay` özelligi, tarayiciya videoyu hemen indirmeye baslamasini ve mümkün olan en kisa zamanda oynatmasini bildirir. iOS'ta ve Android için Chrome'da, `autoplay` özelligi çalismaz; kullanicilarin videoyu oynatmak için ekrana hafifçe vurmasi gerekir.
 
 Otomatik oynatmanin mümkün oldugu platformlarda bile, bunu etkinlestirmenin iyi bir fikir olup olmadigini degerlendirmeniz gerekir:
 
 * Veri kullanimi pahali olabilir.
-* Önce sormadan medyanin indirilip oynatilmaya baslamasina neden olmaniz, beklenmedik bir sekilde bant genisligini ve CPU`yu isgal edebilir ve dolayisiyla, sayfanin olusturulmasinda gecikmeye neden olabilir.
+* Önce sormadan medyanin indirilip oynatilmaya baslamasina neden olmaniz, beklenmedik bir sekilde bant genisligini ve CPU'yu isgal edebilir ve dolayisiyla, sayfanin olusturulmasinda gecikmeye neden olabilir.
 * Kullanicilar, video oynatmak veya ses çalmak için uygun olmayan bir durumda olabilir.
 
-Otomatik oynatma davranisi Android WebView`da [WebSettings API`si](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)) araciligiyla yapilandirilabilir.
+Otomatik oynatma davranisi Android WebView'da [WebSettings API'si](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)) araciligiyla yapilandirilabilir.
 Varsayilan olarak true degerine ayarlanir, ancak bir WebView uygulamasi bunu devre disi birakmayi seçebilir.
 
 ### Önceden yükleme
@@ -131,7 +131,7 @@ Varsayilan olarak true degerine ayarlanir, ancak bir WebView uygulamasi bunu dev
 </table>
 
 `preload` özelliginin farkli platformlarda farkli etkileri vardir.
-Örnegin, Chrome masaüstünde videonun 25 saniyesini arabellegine alirken, iOS veya Android`de arabellege alma islemi gerçeklestirmez. Bu, mobil cihazlarda, masaüstünde olmayan oynatmayi baslatma gecikmelerinin olabilecegi anlamina gelir. Tüm ayrintilar için [Steve Souders`in test sayfasina](//stevesouders.com/tests/mediaevents.php) bakin.
+Örnegin, Chrome masaüstünde videonun 25 saniyesini arabellegine alirken, iOS veya Android'de arabellege alma islemi gerçeklestirmez. Bu, mobil cihazlarda, masaüstünde olmayan oynatmayi baslatma gecikmelerinin olabilecegi anlamina gelir. Tüm ayrintilar için [Steve Souders'in test sayfasina](//stevesouders.com/tests/mediaevents.php) bakin.
 
 ## JavaScript
 
@@ -214,7 +214,7 @@ dügmeyi tiklama gibi kullanici eylemlerine yanit olarak çagrilmadikça çalism
 
 ### Olaylar
 
-Bunlar, etkinlesebilecek medya olaylarinin yalnizca bir alt kümesidir. Tam liste için Mozilla Developer Network`te [Medya olaylari](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) sayfasina bakin.
+Bunlar, etkinlesebilecek medya olaylarinin yalnizca bir alt kümesidir. Tam liste için Mozilla Developer Network'te [Medya olaylari](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) sayfasina bakin.
 
 <table class="table">
   <thead>

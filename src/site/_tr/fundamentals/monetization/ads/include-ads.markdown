@@ -36,7 +36,7 @@ notes:
 
 ## Reklamlar içeren örnek sayfa olusturma
 
-Bu gözden geçirmede, Google AdSense ve Web Starter Kit`i kullanarak duyarli reklamlar içeren bir örnek sayfa olusturacaksiniz:
+Bu gözden geçirmede, Google AdSense ve Web Starter Kit'i kullanarak duyarli reklamlar içeren bir örnek sayfa olusturacaksiniz:
 
 <img src="images/ad-ss-600.png" sizes="100vw" 
   srcset="images/ad-ss-1200.png 1200w, 
@@ -45,7 +45,7 @@ Bu gözden geçirmede, Google AdSense ve Web Starter Kit`i kullanarak duyarli re
           images/ad-ss-300.png 300w" 
   alt="Masaüstü ve mobil cihazlar için reklamlari olan örnek web sitesi">
 
-Web Start Kit`e yabanciysaniz [Web Starter Kit`i Ayarlama]({{site.fundamentals}}/tools/setup/setup_kit.html) dokümanlarina bakin.
+Web Start Kit'e yabanciysaniz [Web Starter Kit'i Ayarlama]({{site.fundamentals}}/tools/setup/setup_kit.html) dokümanlarina bakin.
 
 Reklamlari sitenize eklemek ve ödeme almak için su basit adimlari izlemeniz gerekir:
 
@@ -64,7 +64,7 @@ Reklamlari sitenizde sunmak için etkin bir AdSense hesabinizin olmasi gerekir. 
 
 ## Reklam birimleri olusturma
 
-Reklam birimi, sayfaniza eklediginiz JavaScript`in sonucu olarak sayfanizda görüntülenen bir reklam grubudur.  Reklam birimlerinizi boyutlandirirken üç seçeneginiz vardir:
+Reklam birimi, sayfaniza eklediginiz JavaScript'in sonucu olarak sayfanizda görüntülenen bir reklam grubudur.  Reklam birimlerinizi boyutlandirirken üç seçeneginiz vardir:
 
 * **[Duyarli (Önerilen)](https://support.google.com/adsense/answer/3213689)**. 
 * [Önceden tanimlanmis](https://support.google.com/adsense/answer/6002621).
@@ -85,15 +85,15 @@ Su anda [en iyi performans gösteren reklam boyutlarini](https://support.google.
 ### Duyarli reklam birimi olusturmak için
 
 1. [Reklamlarim sekmesini](https://www.google.com/adsense/app#myads-springboard) ziyaret edin.
-2. <strong>+Yeni reklam birimi</strong>`ni tiklayin.
+2. <strong>+Yeni reklam birimi</strong>'ni tiklayin.
 3. Reklam biriminize benzersiz bir ad verin. Bu ad, sitenize yapistirilan reklam kodunda görüneceginden açiklayici olmasina çalisin.
-4. Reklam boyutu açilir listesinden <strong>Duyarli</strong>`yi seçin.
-5. Reklam türü açilir listesinden <strong>Metin ve görüntülü reklamlar</strong>`i seçin.
-6. <strong>Kaydet ve kodu al</strong>`i tiklayin.
+4. Reklam boyutu açilir listesinden <strong>Duyarli</strong>'yi seçin.
+5. Reklam türü açilir listesinden <strong>Metin ve görüntülü reklamlar</strong>'i seçin.
+6. <strong>Kaydet ve kodu al</strong>'i tiklayin.
 7. Görüntülenen <strong>Reklam kodu</strong> kutusunda, Mod açilir listesinden <strong>Akilli boyutlandirma (önerilen)</strong> seçenegini belirleyin. 
 Bu, önerilen moddur ve reklam kodunuzda herhangi bir degisiklik yapmanizi gerektirmez.
 
-Reklam biriminizi olusturduktan sonra, AdSense asagidakine benzer, sitenize eklenecek bir kod snippet`i saglar:
+Reklam biriminizi olusturduktan sonra, AdSense asagidakine benzer, sitenize eklenecek bir kod snippet'i saglar:
 
 {% highlight html %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -112,10 +112,10 @@ Reklam biriminizi olusturduktan sonra, AdSense asagidakine benzer, sitenize ekle
 
 ## Reklam birimlerini sitenize ekleme
 
-Reklami sayfaya eklemek için saglanan AdSense snippet`ini biçimlendirmemize yapistirmamiz gerekir.  Birden çok reklami eklemek istiyorsaniz ayni reklam birimini yeniden kullanabilir veya birden çok reklam birimi olusturabilirsiniz.
+Reklami sayfaya eklemek için saglanan AdSense snippet'ini biçimlendirmemize yapistirmamiz gerekir.  Birden çok reklami eklemek istiyorsaniz ayni reklam birimini yeniden kullanabilir veya birden çok reklam birimi olusturabilirsiniz.
 
 1. `app` klasöründeki `index.html` dosyasini açin.
-2. Saglanan snippet`i `main` etiketine yapistirin.
+2. Saglanan snippet'i `main` etiketine yapistirin.
 3. Dosyayi kaydedin ve tarayicinizda görüntülemeyi deneyin, ardindan bir mobil cihazda veya Chrome öykünücüsü araciligiyla açmaya çalisin.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.body %}
