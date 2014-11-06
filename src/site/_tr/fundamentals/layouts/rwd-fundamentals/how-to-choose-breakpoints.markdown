@@ -82,7 +82,7 @@ Daha sonra, ögeler arasinda çok fazla beyaz bosluk oluncaya ve tahmin kötü g
 
 {% include_code _code/weather-2.html mqweather2 %}
 
-Son olarak, CSS`yi yeniden yazin.  Bu örnekte, `weather.css` dosyasina yazi tipleri, simgeler, temel konumlandirma ve renkler gibi genel stilleri yerlestirdik.  Daha sonra, küçük ekrana iliskin belirli yerlesimler `weather-small.css` ve genis ekran stilleri `weather-large.css` dosyasina yerlestirilir.
+Son olarak, CSS'yi yeniden yazin.  Bu örnekte, `weather.css` dosyasina yazi tipleri, simgeler, temel konumlandirma ve renkler gibi genel stilleri yerlestirdik.  Daha sonra, küçük ekrana iliskin belirli yerlesimler `weather-small.css` ve genis ekran stilleri `weather-large.css` dosyasina yerlestirilir.
 
 <figure>
   {% link_sample _code/weather-2.html %}

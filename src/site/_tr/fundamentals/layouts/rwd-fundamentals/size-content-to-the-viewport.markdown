@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Içerigi görünüme göre boyutlandirma"
-description: "Web`in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin."
+description: "Web'in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin."
 introduction: "Hem masaüstü hem de mobil cihazlarda kullanicilar web sitelerini yatay olarak degil, dikey olarak kaydirmaya aliskindir ve kullaniciyi, tüm sayfayi görmesi için yatay olarak kaydirmaya veya uzaklastirmaya zorlamak kötü bir kullanici deneyimiyle sonuçlanir."
 article:
   written_on: 2014-04-30

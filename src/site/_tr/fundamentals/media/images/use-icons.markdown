@@ -49,7 +49,7 @@ Süper &#9733; oldugunuz belli.
 Süper &#9733; oldugunuz belli.
 
 ## Karmasik simgeleri SVG ile degistirme
-Daha karmasik simge gereksinimleri için SVG simgeleri genellikle hafif ve kullanimi kolaydir, ayrica CSS ile biçimlendirilebilirler. SVG`nin tarama resimlerine göre bazi avantajlari vardir:
+Daha karmasik simge gereksinimleri için SVG simgeleri genellikle hafif ve kullanimi kolaydir, ayrica CSS ile biçimlendirilebilirler. SVG'nin tarama resimlerine göre bazi avantajlari vardir:
 
 * Bunlar, sonsuz bir sekilde ölçeklenebilen vektör grafikleridir.
 * Renk, gölgeleme, seffaflik ve animasyonlar gibi CSS efektleri dogrudan uygulanir.

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Duyarlilik için CSS medya sorgularini kullanma"
-description: "Web`in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin."
+description: "Web'in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin."
 introduction: "Medya sorgulari, CSS stillerine uygulanabilecek basit filtrelerdir.  Içerigi olusturan cihazin ekran türü, genislik, yükseklik, yön, hatta çözünürlügünü de içeren özelliklerine göre stilleri degistirmeyi kolaylastirirlar."
 article:
   written_on: 2014-04-30
@@ -75,7 +75,7 @@ Stil sayfasi baglantisinda `media` özelligini kullanmaya ek olarak, bir CSS dos
 @import url(print.css) print;
 {% endhighlight %}
 
-Medya sorgulari için geçerli olan mantik, birbiriyle örtüsür ve bu ölçütü karsilayan filtrelerin sonucunda belirlenen CSS blogu, CSS`deki standart öncelik kurallari kullanilarak uygulanir.
+Medya sorgulari için geçerli olan mantik, birbiriyle örtüsür ve bu ölçütü karsilayan filtrelerin sonucunda belirlenen CSS blogu, CSS'deki standart öncelik kurallari kullanilarak uygulanir.
 
 ## Medya sorgularini görüntü alani boyutuna göre uygulama
 
