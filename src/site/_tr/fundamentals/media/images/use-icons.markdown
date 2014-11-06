@@ -75,7 +75,7 @@ Simge yazi tipleri popülerdir ve kolayca kullanilabilirler, ancak SVG simgeleri
 {% link_sample _code/icon-font.html %}
 <img src="img/icon-fonts.png" class="center"
 srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
-alt="Yazi tipi simgeleri için FontAwesome`in kullanildigi bir sayfanin örnegi.">
+alt="Yazi tipi simgeleri için FontAwesome'in kullanildigi bir sayfanin örnegi.">
 {% endlink_sample %}
 {% include_code _code/icon-font.html iconfont html %}
 

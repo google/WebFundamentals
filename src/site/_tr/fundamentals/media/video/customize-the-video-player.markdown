@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Video oynaticiyi özellestirme"
-description: "Farkli platformlar videoyu farkli sekilde görüntüler. Mobil çözümlerde cihaz yönünün dikkate alinmasi gerekir. Video içeriginin tam ekran görünümünü kontrol etmek için Tam Ekran API`sini kullanin."
-introduction: "Farkli platformlar videoyu farkli sekilde görüntüler. Mobil çözümlerde cihaz yönünün dikkate alinmasi gerekir. Video içeriginin tam ekran görünümünü kontrol etmek için Tam Ekran API`sini kullanin."
+description: "Farkli platformlar videoyu farkli sekilde görüntüler. Mobil çözümlerde cihaz yönünün dikkate alinmasi gerekir. Video içeriginin tam ekran görünümünü kontrol etmek için Tam Ekran API'sini kullanin."
+introduction: "Farkli platformlar videoyu farkli sekilde görüntüler. Mobil çözümlerde cihaz yönünün dikkate alinmasi gerekir. Video içeriginin tam ekran görünümünü kontrol etmek için Tam Ekran API'sini kullanin."
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
@@ -18,12 +18,12 @@ key-takeaways:
     - Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.
 remember:
   media-fragments:
-    - Medya Parçalari API`si çogu platformda desteklenir, ancak iOS`ta desteklenmez.
+    - Medya Parçalari API'si çogu platformda desteklenir, ancak iOS'ta desteklenmez.
     - Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
   dont-overflow:
     - Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
   accessibility-matters:
-    - Izleme ögesi Android için Chrome`da, iOS Safari`de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
+    - Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
   construct-video-streams:
     - MSE, Android üzerinde Chrome ve Opera, masaüstü için Internet Explorer 11 ve Chrome tarafindan desteklenir ve <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions uygulama zaman çizelgesi'>Firefox</a> için de destek saglanmasi planlanmaktadir.
   optimize:
@@ -49,21 +49,21 @@ remember:
 
 </style>
 
-Farkli platformlar videoyu farkli sekilde görüntüler. Mobil çözümlerde cihaz yönünün dikkate alinmasi gerekir. Video içeriginin tam ekran görünümünü kontrol etmek için Tam Ekran API`sini kullanin.
+Farkli platformlar videoyu farkli sekilde görüntüler. Mobil çözümlerde cihaz yönünün dikkate alinmasi gerekir. Video içeriginin tam ekran görünümünü kontrol etmek için Tam Ekran API'sini kullanin.
 
 ## Cihaz yönü farkli cihazlarda nasil çalisir?
 
 Cihaz yönü masaüstü monitörler veya dizüstü bilgisayarlar için bir sorun degildir, ancak mobil cihazlar ve tabletler için web sayfasi tasarlanirken çok büyük öneme sahiptir.
 
-iPhone`daki Safari, dikey ve yatay yönler arasinda geçis yapmada basarilidir:
+iPhone'daki Safari, dikey ve yatay yönler arasinda geçis yapmada basarilidir:
 
 <div class="clear">
     <img class="g-wide--1 g-medium--half" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, dikey" src="images/iPhone-video-playing-portrait.png">
     <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="images/iPhone-video-playing-landscape.png">
 </div>
 
-iPad`de ve Android için Chrome`da cihaz yönü sorunlu olabilir.
-Örnegin, hiç özellestirme yapilmadan, yatay yöndeki bir iPad`de oynayan bir video sunun gibi görünür:
+iPad'de ve Android için Chrome'da cihaz yönü sorunlu olabilir.
+Örnegin, hiç özellestirme yapilmadan, yatay yöndeki bir iPad'de oynayan bir video sunun gibi görünür:
 
 <img class="center" alt="iPad Retina'daki Safari'de oynayan videonun ekran görüntüsü, yatay"
 src="images/iPad-Retina-landscape-video-playing.png">
@@ -72,7 +72,7 @@ Videoyu CSS ile `width: 100%` veya `max-width: 100%` degerine ayarlamak, birçok
 
 ## Satir içi veya tam ekran görüntü
 
-Farkli platformlar videoyu farkli sekilde görüntüler. iPhone`daki Safari, web sayfasindaki bir video ögesini satir içinde görüntüler, ancak videoyu tam ekran modunda oynatir:
+Farkli platformlar videoyu farkli sekilde görüntüler. iPhone'daki Safari, web sayfasindaki bir video ögesini satir içinde görüntüler, ancak videoyu tam ekran modunda oynatir:
 
 <img class="center" alt="iPhone'da video ögesinin ekran görüntüsü, dikey" src="images/iPhone-video-with-poster.png">
 
@@ -86,7 +86,7 @@ iPad'deki Safari, videoyu satir içinde oynatir:
 
 ## Içerigin tam ekran olmasini kontrol etme
 
-Tam ekran video oynatmayi zorlamayan platformlar için Tam Ekran API`si [yaygin bir sekilde desteklenir](//caniuse.com/fullscreen). Içerigin veya sayfanin tam ekran olmasini kontrol etmek için bu API`yi kullanin.
+Tam ekran video oynatmayi zorlamayan platformlar için Tam Ekran API'si [yaygin bir sekilde desteklenir](//caniuse.com/fullscreen). Içerigin veya sayfanin tam ekran olmasini kontrol etmek için bu API'yi kullanin.
 
 video: gibi bir ögeyi tam ekran yapmak için
 {% highlight javascript %}
@@ -110,7 +110,7 @@ console.log("In full screen mode: ", video.displayingFullscreen);
 
 Ögelerin tam ekran modunda görüntülenme seklini degistirmek için CSS `:fullscreen` söz sinifini da kullanabilirsiniz.
 
-Tam Ekran API`sini destekleyen cihazlarda, video için yer tutucu olarak küçük resimleri kullanabilirsiniz:
+Tam Ekran API'sini destekleyen cihazlarda, video için yer tutucu olarak küçük resimleri kullanabilirsiniz:
 
 <video autoplay loop class="center">
   <source src="video/fullscreen.webm" type="video/webm">
