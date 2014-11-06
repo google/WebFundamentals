@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Offrir des solutions pour les anciennes plates-formes"
-description: "Certains formats vidéos ne sont pas compatibles avec toutes les plates-formes. Vérifiez quels sont les formats compatibles avec les plates-formes principales, puis assurez-vous que votre vidéo fonctionne dans chacun d`entre eux."
-introduction: "Certains formats vidéos ne sont pas compatibles avec toutes les plates-formes. Vérifiez quels sont les formats compatibles avec les plates-formes principales, puis assurez-vous que votre vidéo fonctionne dans chacun d`entre eux."
+description: "Certains formats vidéos ne sont pas compatibles avec toutes les plates-formes. Vérifiez quels sont les formats compatibles avec les plates-formes principales, puis assurez-vous que votre vidéo fonctionne dans chacun d'entre eux."
+introduction: "Certains formats vidéos ne sont pas compatibles avec toutes les plates-formes. Vérifiez quels sont les formats compatibles avec les plates-formes principales, puis assurez-vous que votre vidéo fonctionne dans chacun d'entre eux."
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
@@ -12,23 +12,23 @@ authors:
   - samdutton
 key-takeaways:
   add-a-video:
-    - Utilisez l`élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site.
+    - Utilisez l'élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site.
     - Créez des vidéos de plusieurs formats pour couvrir une gamme de plates-formes mobiles.
-    - Définissez correctement la taille des vidéos. Veillez à ce qu`elles ne débordent pas de leurs contenants.
-    - L`accessibilité est importante. Ajoutez l`élément de suivi en tant qu`élément enfant de l`élément vidéo.
+    - Définissez correctement la taille des vidéos. Veillez à ce qu'elles ne débordent pas de leurs contenants.
+    - L'accessibilité est importante. Ajoutez l'élément de suivi en tant qu'élément enfant de l'élément vidéo.
 remember:
   media-fragments:
-    - L`API Media Fragments est compatible avec la plupart des plates-formes, à l`exception d`iOS.
-    - Assurez-vous que les demandes de type `Range` sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu`elles soient désactivées sur certains services d`hébergement.
+    - L'API Media Fragments est compatible avec la plupart des plates-formes, à l'exception d'iOS.
+    - Assurez-vous que les demandes de type `Range` sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu'elles soient désactivées sur certains services d'hébergement.
   dont-overflow:
-    - Ne définissez pas en force un dimensionnement d`élément qui génère un format d`image différent de celui de la vidéo d`origine. Les vidéos écrasées ou étirées donnent une mauvaise image du site.
+    - Ne définissez pas en force un dimensionnement d'élément qui génère un format d'image différent de celui de la vidéo d'origine. Les vidéos écrasées ou étirées donnent une mauvaise image du site.
   accessibility-matters:
-    - L`élément de suivi est compatible avec Chrome pour Android, Safari pour iOS, ainsi que tous les navigateurs actuels pour ordinateur de bureau, sauf Firefox (voir <a href="http://caniuse.com/track" title="État de compatibilité d`un élément de suivi">caniuse.com/track</a>). Plusieurs polyfills sont également disponibles. Nous vous recommandons d`utiliser l`<a href='//www.delphiki.com/html5/playr/' title='élément de suivi polyfill Playr'>Playr</a> ou le<a href='//captionatorjs.com/' title='suivi Captionator'>Captionator</a>.
+    - L'élément de suivi est compatible avec Chrome pour Android, Safari pour iOS, ainsi que tous les navigateurs actuels pour ordinateur de bureau, sauf Firefox (voir <a href="http://caniuse.com/track" title="État de compatibilité d'un élément de suivi">caniuse.com/track</a>). Plusieurs polyfills sont également disponibles. Nous vous recommandons d'utiliser l'<a href='//www.delphiki.com/html5/playr/' title='élément de suivi polyfill Playr'>Playr</a> ou le<a href='//captionatorjs.com/' title='suivi Captionator'>Captionator</a>.
   construct-video-streams:
-    - MSE est compatible avec Chrome et Opera sur Android, ainsi qu`avec Internet Explorer 11 et Chrome pour les ordinateurs de bureau. La compatibilité est également prévue pour <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
+    - MSE est compatible avec Chrome et Opera sur Android, ainsi qu'avec Internet Explorer 11 et Chrome pour les ordinateurs de bureau. La compatibilité est également prévue pour <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
   optimize:
     - <a href="../images/">Images</a>
-    - <a href="../../performance/optimizing-content-efficiency/">Optimiser l`efficacité du contenu</a>
+    - <a href="../../performance/optimizing-content-efficiency/">Optimiser l'efficacité du contenu</a>
 ---
 
 {% wrap content%}
@@ -51,7 +51,7 @@ remember:
 
 ## Vérifier les formats compatibles
 
-Utilisez l`attribut `canPlayType()` pour savoir quels formats vidéos sont compatibles. La méthode nécessite un argument de chaîne composé d`un `type MIME` et de codecs facultatifs. Elle renvoie ensuite l`une des valeurs suivantes :
+Utilisez l'attribut `canPlayType()` pour savoir quels formats vidéos sont compatibles. La méthode nécessite un argument de chaîne composé d'un `type MIME` et de codecs facultatifs. Elle renvoie ensuite l'une des valeurs suivantes :
 
 <table class="table">
   <thead>
@@ -63,7 +63,7 @@ Utilisez l`attribut `canPlayType()` pour savoir quels formats vidéos sont compa
   <tbody>
     <tr>
       <td data-th="Valeur renvoyée">(chaîne vide)</td>
-      <td data-th="Description">Le contenant et/ou le codec n`est pas compatible.</td>
+      <td data-th="Description">Le contenant et/ou le codec n'est pas compatible.</td>
     </tr>
     <tr>
       <td data-th="Valeur renvoyée"><code>maybe</code></td>
@@ -80,7 +80,7 @@ Utilisez l`attribut `canPlayType()` pour savoir quels formats vidéos sont compa
   </tbody>
 </table>
 
-Voici quelques exemples d`arguments `canPlayType()` et de valeurs renvoyées lors de l`exécution dans Chrome :
+Voici quelques exemples d'arguments `canPlayType()` et de valeurs renvoyées lors de l'exécution dans Chrome :
 
 
 <table class="table">
@@ -121,11 +121,11 @@ Voici quelques exemples d`arguments `canPlayType()` et de valeurs renvoyées lor
 
 ## Créer une vidéo dans plusieurs formats
 
-Les nombreux outils suivants permettent d`enregistrer la même vidéo dans différents formats :
+Les nombreux outils suivants permettent d'enregistrer la même vidéo dans différents formats :
 
 * Outils pour les ordinateurs de bureau : [FFmpeg](//ffmpeg.org/)
-* Applications d`interface graphique utilisateur : [Miro](//www.mirovideoconverter.com/), [HandBrake](//handbrake.fr/), [VLC](//www.videolan.org/)
-* Services d`encodage/transcodage en ligne : [Zencoder](//en.wikipedia.org/wiki/Zencoder), [Amazon Elastic Encoder](//aws.amazon.com/elastictranscoder)
+* Applications d'interface graphique utilisateur : [Miro](//www.mirovideoconverter.com/), [HandBrake](//handbrake.fr/), [VLC](//www.videolan.org/)
+* Services d'encodage/transcodage en ligne : [Zencoder](//en.wikipedia.org/wiki/Zencoder), [Amazon Elastic Encoder](//aws.amazon.com/elastictranscoder)
 
 ##Vérifier le format utilisé
 
@@ -133,7 +133,7 @@ Vous voulez savoir quel format vidéo a été sélectionné par le navigateur ?
 
 Dans JavaScript, utilisez la propriété `currentSrc` de la vidéo pour renvoyer la source utilisée.
 
-Pour regarder une démonstration, {% link_sample _code/video-main.html %}cliquez ici{% endlink_sample %} : Chrome et Firefox ont sélectionné `chrome.webm` (car c`est le premier format répertorié dans la liste des sources potentielles compatibles avec ces navigateurs). Le navigateur Safari a sélectionné `chrome.mp4`.
+Pour regarder une démonstration, {% link_sample _code/video-main.html %}cliquez ici{% endlink_sample %} : Chrome et Firefox ont sélectionné `chrome.webm` (car c'est le premier format répertorié dans la liste des sources potentielles compatibles avec ces navigateurs). Le navigateur Safari a sélectionné `chrome.mp4`.
 
 {% include modules/nextarticle.liquid %}
 
