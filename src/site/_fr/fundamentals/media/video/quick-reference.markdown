@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Guide de référence rapide"
-description: "Brève présentation des propriétés de l`élément vidéo"
-introduction: "Brève présentation des propriétés de l`élément vidéo"
+description: "Brève présentation des propriétés de l'élément vidéo"
+introduction: "Brève présentation des propriétés de l'élément vidéo"
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
@@ -12,20 +12,20 @@ authors:
   - samdutton
 key-takeaways:
   add-a-video:
-    - Utilisez l`élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site.
+    - Utilisez l'élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site.
     - Créez des vidéos de plusieurs formats pour couvrir une gamme de plates-formes mobiles.
-    - Définissez correctement la taille des vidéos. Veillez à ce qu`elles ne débordent pas de leurs contenants.
-    - L`accessibilité est importante. Ajoutez l`élément de suivi en tant qu`élément enfant de l`élément vidéo.
+    - Définissez correctement la taille des vidéos. Veillez à ce qu'elles ne débordent pas de leurs contenants.
+    - L'accessibilité est importante. Ajoutez l'élément de suivi en tant qu'élément enfant de l'élément vidéo.
 remember:
   media-fragments:
-    - L`API Media Fragments est compatible avec la plupart des plates-formes, à l`exception d`iOS.
-    - Assurez-vous que les demandes de type `Range` sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu`elles soient désactivées sur certains services d`hébergement.
+    - L'API Media Fragments est compatible avec la plupart des plates-formes, à l'exception d'iOS.
+    - Assurez-vous que les demandes de type `Range` sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu'elles soient désactivées sur certains services d'hébergement.
   dont-overflow:
-    - Ne définissez pas en force un dimensionnement d`élément qui génère un format d`image différent de celui de la vidéo d`origine. Les vidéos écrasées ou étirées donnent une mauvaise image du site.
+    - Ne définissez pas en force un dimensionnement d'élément qui génère un format d'image différent de celui de la vidéo d'origine. Les vidéos écrasées ou étirées donnent une mauvaise image du site.
   accessibility-matters:
-    - L`élément de suivi est compatible avec Chrome pour Android, Safari pour iOS, ainsi que tous les navigateurs actuels pour ordinateur de bureau, sauf Firefox (voir <a href="http://caniuse.com/track" title="État de compatibilité d`un élément de suivi">caniuse.com/track</a>). Plusieurs polyfills sont également disponibles. Nous vous recommandons d`utiliser l`<a href='//www.delphiki.com/html5/playr/' title='élément de suivi polyfill Playr'>Playr</a> ou le<a href='//captionatorjs.com/' title='suivi Captionator'>Captionator</a>.
+    - L'élément de suivi est compatible avec Chrome pour Android, Safari pour iOS, ainsi que tous les navigateurs actuels pour ordinateur de bureau, sauf Firefox (voir <a href="http://caniuse.com/track" title="État de compatibilité d'un élément de suivi">caniuse.com/track</a>). Plusieurs polyfills sont également disponibles. Nous vous recommandons d'utiliser l'<a href='//www.delphiki.com/html5/playr/' title='élément de suivi polyfill Playr'>Playr</a> ou le<a href='//captionatorjs.com/' title='suivi Captionator'>Captionator</a>.
   construct-video-streams:
-    - MSE est compatible avec Chrome et Opera sur Android, ainsi qu`avec Internet Explorer 11 et Chrome pour les ordinateurs de bureau. La compatibilité est également prévue pour <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
+    - MSE est compatible avec Chrome et Opera sur Android, ainsi qu'avec Internet Explorer 11 et Chrome pour les ordinateurs de bureau. La compatibilité est également prévue pour <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
 ---
 
 {% wrap content%}
@@ -46,9 +46,9 @@ remember:
 
 </style>
 
-## Attributs d`élément vidéo
+## Attributs d'élément vidéo
 
-Pour obtenir la liste complète des attributs d`élément vidéo et de leurs définitions, consultez la page relative à la [norme de l`élément vidéo](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
+Pour obtenir la liste complète des attributs d'élément vidéo et de leurs définitions, consultez la page relative à la [norme de l'élément vidéo](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
 <table class="table">
   <thead>
@@ -65,7 +65,7 @@ Pour obtenir la liste complète des attributs d`élément vidéo et de leurs dé
     <tr>
       <td data-th="Attribut"><code>poster</code></td>
       <td data-th="Disponibilité">Tous les navigateurs</td>
-      <td data-th="Description">Adresse (URL) d`un fichier d`images que le navigateur peut présenter dès l`affichage de l`élément vidéo, sans télécharger de contenu vidéo.</td>
+      <td data-th="Description">Adresse (URL) d'un fichier d'images que le navigateur peut présenter dès l'affichage de l'élément vidéo, sans télécharger de contenu vidéo.</td>
     </tr>
     <tr>
       <td data-th="Attribut"><code>preload</code></td>
@@ -92,20 +92,20 @@ Pour obtenir la liste complète des attributs d`élément vidéo et de leurs dé
 
 ### Lecture automatique
 
-Sur un ordinateur de bureau, l`attribut `autoplay` indique au navigateur de démarrer immédiatement le téléchargement et la lecture de la vidéo, dès que cela est possible. Sur iOS et Chrome pour Android, l`attribut `autoplay` ne fonctionne pas. L`internaute doit appuyer sur l`écran pour lire la vidéo.
+Sur un ordinateur de bureau, l'attribut `autoplay` indique au navigateur de démarrer immédiatement le téléchargement et la lecture de la vidéo, dès que cela est possible. Sur iOS et Chrome pour Android, l'attribut `autoplay` ne fonctionne pas. L'internaute doit appuyer sur l'écran pour lire la vidéo.
 
-Même sur les plates-formes sur lesquelles il est possible d`intégrer l`attribut `autoplay`, vous devez tenir compte des facteurs suivants avant de l`activer :
+Même sur les plates-formes sur lesquelles il est possible d'intégrer l'attribut `autoplay`, vous devez tenir compte des facteurs suivants avant de l'activer :
 
-* La consommation de données peut s`avérer coûteuse.
-* Lorsque le téléchargement et la lecture du contenu multimédia démarrent sans demander l`autorisation de l`internaute, la bande passante et le CPU risquent d`être monopolisés de façon inattendue et d`entraîner un retard dans l`affichage de la page.
-* L`internaute peut se trouver dans un environnement dans lequel la lecture d`un contenu vidéo ou audio peut le déranger.
+* La consommation de données peut s'avérer coûteuse.
+* Lorsque le téléchargement et la lecture du contenu multimédia démarrent sans demander l'autorisation de l'internaute, la bande passante et le CPU risquent d'être monopolisés de façon inattendue et d'entraîner un retard dans l'affichage de la page.
+* L'internaute peut se trouver dans un environnement dans lequel la lecture d'un contenu vidéo ou audio peut le déranger.
 
-Le comportement de la lecture automatique peut être configuré dans la section AndroidWebView de l`[API WebSettings](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)).
+Le comportement de la lecture automatique peut être configuré dans la section AndroidWebView de l'[API WebSettings](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)).
 Par défaut, ce comportement est défini sur la valeur `true`, mais il peut être désactivé par une application WebView.
 
 ### Préchargement
 
-L`attribut `preload` indique au navigateur la quantité d`informations ou de contenu à précharger.
+L'attribut `preload` indique au navigateur la quantité d'informations ou de contenu à précharger.
 
 <table>
   <thead>
@@ -117,7 +117,7 @@ L`attribut `preload` indique au navigateur la quantité d`informations ou de con
   <tbody>
     <tr>
       <td data-th="Valeur"><code>none</code></td>
-      <td data-th="Description">L`internaute peut ne pas regarder la vidéo du tout. Aucun préchargement n`est lancé</td>.
+      <td data-th="Description">L'internaute peut ne pas regarder la vidéo du tout. Aucun préchargement n'est lancé</td>.
     </tr>
     <tr>
       <td data-th="Valeur"><code>metadata</code></td>
@@ -125,17 +125,17 @@ L`attribut `preload` indique au navigateur la quantité d`informations ou de con
     </tr>
     <tr>
       <td data-th="Valeur"><code>auto</code></td>
-      <td data-th="Description">Le téléchargement immédiat de l`intégralité de la vidéo est le comportement souhaité.</td>
+      <td data-th="Description">Le téléchargement immédiat de l'intégralité de la vidéo est le comportement souhaité.</td>
     </tr>
   </tbody>
 </table>
 
-L`attribut "preload" entraîne des effets différents selon les plates-formes.
-Par exemple, le navigateur Chrome met en mémoire tampon 25 secondes de contenu vidéo sur un ordinateur de bureau, et rien sur iOS ou Android. Cela peut entraîner des retards au démarrage de la lecture sur les appareils mobiles, qui n`existent pas sur les ordinateurs de bureau. Consultez la [page de test de Steve Souder] (//stevesouders.com/tests/mediaevents.php) pour obtenir davantage d`informations.
+L'attribut "preload" entraîne des effets différents selon les plates-formes.
+Par exemple, le navigateur Chrome met en mémoire tampon 25 secondes de contenu vidéo sur un ordinateur de bureau, et rien sur iOS ou Android. Cela peut entraîner des retards au démarrage de la lecture sur les appareils mobiles, qui n'existent pas sur les ordinateurs de bureau. Consultez la [page de test de Steve Souder] (//stevesouders.com/tests/mediaevents.php) pour obtenir davantage d'informations.
 
 ## JavaScript
 
-L`article relatif à la [vidéo du site HTML5 Rocks](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript) résume parfaitement les propriétés, les méthodes et les événements JavaScript qui peuvent être utilisés pour contrôler la lecture de contenu vidéo. Nous avons intégré le contenu de cet article dans cette section et avons mis à jour les contenus spécifiques aux appareils mobiles, le cas échéant.
+L'article relatif à la [vidéo du site HTML5 Rocks](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript) résume parfaitement les propriétés, les méthodes et les événements JavaScript qui peuvent être utilisés pour contrôler la lecture de contenu vidéo. Nous avons intégré le contenu de cet article dans cette section et avons mis à jour les contenus spécifiques aux appareils mobiles, le cas échéant.
 
 ### Propriétés
 
@@ -167,15 +167,15 @@ L`article relatif à la [vidéo du site HTML5 Rocks](//www.html5rocks.com/en/tut
     </tr>
     <tr>
       <td data-th="Propriété"><code>currentSrc</code></td>
-      <td data-th="Description">L`adresse de la vidéo en cours de lecture.</td>
+      <td data-th="Description">L'adresse de la vidéo en cours de lecture.</td>
     </tr>
     <tr>
       <td data-th="Propriété"><code>videoWidth</code></td>
-      <td data-th="Description">Largeur de la vidéo en pixels (qui peut être différente de la largeur de l`élément vidéo).</td>
+      <td data-th="Description">Largeur de la vidéo en pixels (qui peut être différente de la largeur de l'élément vidéo).</td>
     </tr>
     <tr>
       <td data-th="Propriété"><code>videoHeight</code></td>
-      <td data-th="Description">Hauteur de la vidéo en pixels (qui peut être différente de la hauteur de l`élément vidéo).</td>
+      <td data-th="Description">Hauteur de la vidéo en pixels (qui peut être différente de la hauteur de l'élément vidéo).</td>
     </tr>
   </tbody>
 </table>
@@ -192,7 +192,7 @@ Les propriétés "playbackRate" ({% link_sample _code/scripted.html %}voir la d�
   <tbody>
     <tr>
       <td data-th="Méthode"><code>load()</code></td>
-      <td data-th="Description">Charge ou recharge une source vidéo sans lancer la lecture : par exemple, lorsque que l`attribut `src` est modifié à l`aide de JavaScript.</td>
+      <td data-th="Description">Charge ou recharge une source vidéo sans lancer la lecture : par exemple, lorsque que l'attribut `src` est modifié à l'aide de JavaScript.</td>
     </tr>
     <tr>
       <td data-th="Méthode"><code>play()</code></td>
@@ -204,17 +204,17 @@ Les propriétés "playbackRate" ({% link_sample _code/scripted.html %}voir la d�
     </tr>
     <tr>
       <td data-th="Méthode"><code>canPlayType('format')</code></td>
-      <td data-th="Description">Détecte les formats compatibles (consultez l`article `Vérifier les formats compatibles`).</td>
+      <td data-th="Description">Détecte les formats compatibles (consultez l'article 'Vérifier les formats compatibles').</td>
     </tr>
   </tbody>
 </table>
 
 Sur les plates-formes mobiles (sauf Opera sur Android), les méthodes `play()` et `pause()` ne fonctionnent pas sauf si
-elles sont appelées en réponse à une action de l`internaute, un clic, par exemple : regardez la {% link_sample _code/scripted.html %}démonstration{% endlink_sample %}. De même, la lecture ne peut pas être lancée pour le contenu tel que les vidéos YouTube intégrées.
+elles sont appelées en réponse à une action de l'internaute, un clic, par exemple : regardez la {% link_sample _code/scripted.html %}démonstration{% endlink_sample %}. De même, la lecture ne peut pas être lancée pour le contenu tel que les vidéos YouTube intégrées.
 
 ### Événements
 
-Les événements répertoriés ci-dessous ne représentent qu`une partie des événements multimédia qui peuvent être mis en œuvre. Consultez la page [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) du site Mozilla Developer Network pour obtenir une liste complète.
+Les événements répertoriés ci-dessous ne représentent qu'une partie des événements multimédia qui peuvent être mis en œuvre. Consultez la page [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) du site Mozilla Developer Network pour obtenir une liste complète.
 
 <table class="table">
   <thead>
@@ -232,11 +232,11 @@ Les événements répertoriés ci-dessous ne représentent qu`une partie des év
     </tr>
     <tr>
       <td data-th="Événement"><code>error</code></td>
-      <td data-th="Description">Est envoyé lorsqu`une erreur se produit.</td>
+      <td data-th="Description">Est envoyé lorsqu'une erreur se produit.</td>
     </tr>
     <tr>
       <td data-th="Événement"><code>playing</code></td>
-      <td data-th="Description">Est envoyé lorsque la lecture de la vidéo démarre pour la première fois, après avoir été mise en pause ou lors d`un redémarrage.</td>
+      <td data-th="Description">Est envoyé lorsque la lecture de la vidéo démarre pour la première fois, après avoir été mise en pause ou lors d'un redémarrage.</td>
     </tr>
     <tr>
       <td data-th="Événement"><code>progress</code></td>
@@ -244,7 +244,7 @@ Les événements répertoriés ci-dessous ne représentent qu`une partie des év
     </tr>
     <tr>
       <td data-th="Événement"><code>waiting</code></td>
-      <td data-th="Description">Est envoyé lorsqu`une action est retardée dans l`attente de la fin d`une autre action.</td>
+      <td data-th="Description">Est envoyé lorsqu'une action est retardée dans l'attente de la fin d'une autre action.</td>
     </tr>
     <tr>
       <td data-th="Événement"><code>loadedmetadata</code></td>
