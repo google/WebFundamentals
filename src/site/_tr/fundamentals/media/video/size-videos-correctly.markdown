@@ -17,12 +17,12 @@ key-takeaways:
     - Uzun videolar, indirme ve aramada kesintilere neden olabilir; bazi tarayicilar videoyu oynatmaya baslamak için indirme isleminin bitmesini bekleyebilir.
 remember:
   media-fragments:
-    - Medya Parçalari API`si çogu platformda desteklenir, ancak iOS`ta desteklenmez.
+    - Medya Parçalari API'si çogu platformda desteklenir, ancak iOS'ta desteklenmez.
     - Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
   dont-overflow:
     - Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
   accessibility-matters:
-    - Izleme ögesi Android için Chrome`da, iOS Safari`de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
+    - Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
   construct-video-streams:
     - MSE, Android üzerinde Chrome ve Opera, masaüstü için Internet Explorer 11 ve Chrome tarafindan desteklenir ve <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions uygulama zaman çizelgesi'>Firefox</a> için de destek saglanmasi planlanmaktadir.
   optimize:
@@ -75,13 +75,13 @@ imkansiz hale getirebilirler.
     <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Android Chrome ekran görüntüsü, yatay: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="images/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
-Video boyutlarini JavaScript veya CSS`yi kullanarak kontrol edebilirsiniz. JavaScript kitapliklari ve [FitVids](//fitvidsjs.com/) gibi eklentiler, YouTube ve diger kaynaklardaki Flash videolar için bile uygun boyutun ve en boy oraninin korunmasini mümkün kilmaktadir.
+Video boyutlarini JavaScript veya CSS'yi kullanarak kontrol edebilirsiniz. JavaScript kitapliklari ve [FitVids](//fitvidsjs.com/) gibi eklentiler, YouTube ve diger kaynaklardaki Flash videolar için bile uygun boyutun ve en boy oraninin korunmasini mümkün kilmaktadir.
 
 Görüntü alani boyutlarina bagli olarak ögelerin boyutunu belirtmek için [CSS medya sorgularini](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) kullanin; `max-width: 100%` sizin dostunuzdur.
 
 {% include modules/related_guides.liquid inline=true list=page.related.media %}
 
-iframe içindeki medya içerigi (YouTube videolari gibi) için duyarli bir yaklasim deneyin ([John Surdakowski`nin önerdigi](//avexdesigns.com/responsive-youtube-embed/) gibi bir yaklasim).
+iframe içindeki medya içerigi (YouTube videolari gibi) için duyarli bir yaklasim deneyin ([John Surdakowski'nin önerdigi](//avexdesigns.com/responsive-youtube-embed/) gibi bir yaklasim).
 
 {% include modules/remember.liquid title="Remember" list=page.remember.dont-overflow %}
 

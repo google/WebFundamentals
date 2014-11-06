@@ -26,7 +26,7 @@ key-takeaways:
 AdSense reklamlariyla daha iyi sonuçlar almak ve siz istediginizi alirken kullanicilariniza da istedikleriniz verdiginizden emin olmak istiyor musunuz? Biraz ilhama mi ihtiyaciniz var?
 Her büyüklükten yayincilarla çalisan AdSense uzmanlarinin bu ipuçlarina göz atin.
 
-<b>Not:</b> Bu makale AdSense`e odaklaniyor olsa da, kavramlar tüm reklam saglayicilari için geçerlidir.
+<b>Not:</b> Bu makale AdSense'e odaklaniyor olsa da, kavramlar tüm reklam saglayicilari için geçerlidir.
 
 {% include modules/toc.liquid %}
 
@@ -128,7 +128,7 @@ Rekabet veya `açik artirma baskisi` arttikça, reklamverenler de sitenizde gör
 ## AdSense tarayicisini engellemeyin
 
 Sitenizdeki [robots.txt](https://support.google.com/webmasters/answer/6062608) dosyasinin [AdSense tarayicisini engellemedigini](https://support.google.com/adsense/answer/10532) dogrulayin.
-AdSense`in web sayfalarinin içerigini isleyebilmesi ve dizine ekleyebilmesi gerekir. AdSense, sitenizi ziyaret etmek ve içerigi belirlemek için AdSense tarayicisini kullanir.  Bu, AdSense`in alakali reklamlar saglamasina olanak tanir.
+AdSense'in web sayfalarinin içerigini isleyebilmesi ve dizine ekleyebilmesi gerekir. AdSense, sitenizi ziyaret etmek ve içerigi belirlemek için AdSense tarayicisini kullanir.  Bu, AdSense'in alakali reklamlar saglamasina olanak tanir.
 
 AdSense tarayicisinin sayfalariniza erismesine izin vermek üzere `robots.txt` dosyasini güncellemek için `robots.txt` dosyanizdan su iki metin satirini *kaldirin*:
 

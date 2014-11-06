@@ -101,7 +101,7 @@ Metin reklamlarda yer alan asagidaki stilleri özellestirebilirsiniz:
 * Metin yazi tipi ailesi ve yazi tipi boyutu
 * Varsayilan metin rengi
 * Reklam basligina özel metin rengi
-* URL`lere özel metin rengi
+* URL'lere özel metin rengi
 
 ### Stiller nasil uygulanir?
 
@@ -116,7 +116,7 @@ yeni reklam birimlerinizin herhangi birine uygulayabilirsiniz:
 
 1. [Reklam Stilleri](https://www.google.com/adsense/app#myads-springboard/view=AD_STYLES)'ne gidin.
 2. Degistirmek istediginiz reklam stilini <strong>Tüm aktif ürünleriniz için kullanabileceginiz reklam stilleri</strong> listesinden seçin.
-3. Degisiklikleri yapin ve <strong>Reklam stilini kaydet</strong>`i tiklayin.
+3. Degisiklikleri yapin ve <strong>Reklam stilini kaydet</strong>'i tiklayin.
 
 Mevcut bir reklam stilini degistirdiginizde, bu stili kullanan aktif reklam birimleri de otomatik olarak güncellenir.
 
