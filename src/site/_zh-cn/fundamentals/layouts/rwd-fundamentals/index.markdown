@@ -70,7 +70,7 @@ shortlinks:
   </video>
 {% endlink_sample %}
 
-自适应网页设计（这一概念最初是由 [Ethan Marcotte 在`A List Apart`中](http://alistapart.com/article/responsive-web-design/)提出的）回应了用户及其所用设备的需求。版式会因根据设备的大小和功能而变化。例如，手机可能会以单列视图的形式呈现内容，而同样的内容可能会以双列的形式呈现在平板电脑上。
+自适应网页设计（这一概念最初是由 [Ethan Marcotte 在'A List Apart'中](http://alistapart.com/article/responsive-web-design/)提出的）回应了用户及其所用设备的需求。版式会因根据设备的大小和功能而变化。例如，手机可能会以单列视图的形式呈现内容，而同样的内容可能会以双列的形式呈现在平板电脑上。
 
 {% include modules/nextarticle.liquid %}
 

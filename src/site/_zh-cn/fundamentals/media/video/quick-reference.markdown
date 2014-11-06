@@ -19,7 +19,7 @@ key-takeaways:
 remember:
   media-fragments:
     - 多数移动平台（iOS 除外）都支持 Media Fragments API。
-    - 请确保您的服务器支持`范围请求`。默认情况下，多数服务器中的`范围请求`处于启用状态，不过，有些托管服务可能会将其关闭。
+    - 请确保您的服务器支持'范围请求'。默认情况下，多数服务器中的'范围请求'处于启用状态，不过，有些托管服务可能会将其关闭。
   dont-overflow:
     - 请勿强制调整元素尺寸，否则会使宽高比异于原始视频。挤压或拉伸都会造成较差的视觉效果。
   accessibility-matters:
@@ -70,12 +70,12 @@ remember:
     <tr>
       <td data-th="属性"><code>preload</code></td>
       <td data-th="适用范围">所有移动浏览器均无法预加载。</td>
-      <td data-th="说明">浏览器提示：播放前预加载元数据（或某个视频）十分重要。选项包括无、元数据或自动（请参阅`预加载`部分，了解详情）。</td>
+      <td data-th="说明">浏览器提示：播放前预加载元数据（或某个视频）十分重要。选项包括无、元数据或自动（请参阅'预加载'部分，了解详情）。</td>
     </tr>
     <tr>
       <td data-th="属性"><code>autoplay</code></td>
       <td data-th="适用范围">iPhone 和 Android 设备均不支持；所有桌面版浏览器、iPad 以及 Android 版 Firefox 和 Opera 均支持。</td>
-      <td data-th="Description">尽快开始下载和播放（请参阅`自动播放`部分）。</td>
+      <td data-th="Description">尽快开始下载和播放（请参阅'自动播放'部分）。</td>
     </tr>
     <tr>
       <td data-th="属性"><code>loop</code></td>

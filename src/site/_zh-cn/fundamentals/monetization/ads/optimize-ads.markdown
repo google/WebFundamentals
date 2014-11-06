@@ -110,14 +110,14 @@ key-takeaways:
 
 <figure>
   <img src="images/adsense-emails.jpg" srcset="images/adsense-emails.jpg 1x, images/adsense-emails-2x.jpg 2x" alt="AdSense 个人设置页面">
-  <figcaption>接收`个性化优化建议`电子邮件。</figcaption>
+  <figcaption>接收'个性化优化建议'电子邮件。</figcaption>
 </figure>
 
 {% include modules/remember.liquid title="Learn more" text="在 AdSense 帮助中详细了解<a href='https://support.google.com/adsense/answer/160562'>效果报告</a>。" %}
 
 ## 最大程度地提高出价潜力
 
-竞争越激烈（或`竞价`越高），那么广告客户愿为您网站上的查看次数和点击次数支付的费用越高。要最大程度地提高出价潜力，请执行以下操作：
+竞争越激烈（或'竞价'越高），那么广告客户愿为您网站上的查看次数和点击次数支付的费用越高。要最大程度地提高出价潜力，请执行以下操作：
 
 * 确保同时支持[文字广告](https://support.google.com/adsense/answer/185665)和[展示广告](https://support.google.com/adsense/answer/185666)。排除某类广告，限制适合您的广告客户的数量。
 * 使用受广告客户欢迎的广告尺寸，请参阅[广告尺寸指南](https://support.google.com/adsense/answer/6002621)。
