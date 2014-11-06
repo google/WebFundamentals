@@ -58,11 +58,11 @@ related:
 
 ## 选择正确的格式
 
-有两类图片类型可以考虑：[矢量图](http://en.wikipedia.org/wiki/Vector_graphics)与[位图](http://en.wikipedia.org/wiki/Raster_graphics)。对于位图，你一样需要选择正确的压缩格式，比如：'GIF'、'PNG'、'JPG'。
+有两类图片类型可以考虑：[矢量图](http://en.wikipedia.org/wiki/Vector_graphics)与[位图](http://en.wikipedia.org/wiki/Raster_graphics)。对于位图，你一样需要选择正确的压缩格式，比如：`GIF`、`PNG`、`JPG`。
 
 **位图**，诸如相片及其它通过独立的点或像素网格表示的图片。位图通常来自照相机或扫描仪，也可以在浏览器中借助 `canvas` 元素创建。随着图片尺寸的增加，文件大小跟着增加。如果位图拉伸超过初始尺寸，则会变得模糊，因为浏览器需要猜测怎样填补缺失的像素。
 
-**矢量图**，譬如商标和线描，它们是由一系列的曲线、直线、形状和填充色构成的。矢量图使用 Adobe Illustrator 或 Inkscape 这样的程序创建，保存为矢量格式如 ['SVG'](http://css-tricks.com/using-svg/)。因为矢量图是建立在简单图元上，它们可以进行无损伸缩，还能保持文件大小不变。
+**矢量图**，譬如商标和线描，它们是由一系列的曲线、直线、形状和填充色构成的。矢量图使用 Adobe Illustrator 或 Inkscape 这样的程序创建，保存为矢量格式如 [`SVG`](http://css-tricks.com/using-svg/)。因为矢量图是建立在简单图元上，它们可以进行无损伸缩，还能保持文件大小不变。
 
 选择图片格式时，需要综合考虑图片的源格式（位图还是矢量）及内容（颜色、动画、文本等等）。没有一个格式能够适用所有图片类型，它们各有优劣。
 
