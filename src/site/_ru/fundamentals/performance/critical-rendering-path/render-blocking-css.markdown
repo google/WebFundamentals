@@ -46,13 +46,13 @@ key-takeaways:
 <div class="clear">
   <div class="g--half">
     <b>"Нью-Йорк таймс" с CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt=""Нью-Йорк таймс" с CSS">
+    <img class="center" src="images/nytimes-css-device.png" alt="Нью-Йорк таймс с CSS">
 
   </div>
 
   <div class="g--half g--last">
     <b>"Нью-Йорк таймс" без CSS</b>
-    <img src="images/nytimes-nocss-device.png" alt=""Нью-Йорк таймс" без CSS">
+    <img src="images/nytimes-nocss-device.png" alt="Нью-Йорк таймс без CSS">
 
   </div>
 </div>
@@ -64,8 +64,8 @@ key-takeaways:
 <td>"Нью-Йорк таймс" без CSS</td>
 </tr>
 <tr>
-<td><img src="images/nytimes-css-device.png" alt=""Нью-Йорк таймс" с CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt=""Нью-Йорк таймс" без CSS" class="center"></td>
+<td><img src="images/nytimes-css-device.png" alt="Нью-Йорк таймс с CSS" class="center"></td>
+<td><img src="images/nytimes-nocss-device.png" alt="Нью-Йорк таймс без CSS" class="center"></td>
 </tr>
 </table>
 {% endcomment %}
