@@ -61,13 +61,13 @@ remember:
 
 媒体查询不仅影响页面布局，还可以用于有条件地加载图片，或是基于视口宽度提供艺术指导。
 
-举下面的例子说，在小屏幕上，只有 'small.png' 被下载然后应用于内容 'div'，而在大屏幕上，'background-image: url(body.png)' 应用于 body，'background-image: url(large.png)' 应用于内容 'div'。
+举下面的例子说，在小屏幕上，只有 `small.png` 被下载然后应用于内容 `div`，而在大屏幕上，`background-image: url(body.png)` 应用于 body，`background-image: url(large.png)` 应用于内容 `div`。
 
 {% include_code _code/conditional-mq.html conditional css %}
 
 ## 使用 image-set 提供高分辨率图片
 
-CSS 中的 'image-set' 函数加强了 'background' 属性的功能，使它能够为不同设备特征提供多种图片文件。这样浏览器就可以基于设备特征选择最适图片，比如在 2x 显示屏上使用 2x 图片，而在有限的带宽网络中，2x 的设备仍使用 1x 图片。
+CSS 中的 `image-set` 函数加强了 `background` 属性的功能，使它能够为不同设备特征提供多种图片文件。这样浏览器就可以基于设备特征选择最适图片，比如在 2x 显示屏上使用 2x 图片，而在有限的带宽网络中，2x 的设备仍使用 1x 图片。
 
 {% highlight css %}
 background-image: image-set(
@@ -78,11 +78,11 @@ background-image: image-set(
 
 除了加载合适的图片外，浏览器也会相应调整其大小。换句话说，浏览器假定了 2x 图片是 1x 图片的两倍大，因此会将 2x 图片缩小一半，最后图片在页面上看上去就一样大小。
 
-对 'image-set()' 的支持目前还很少，仅 Chrome 和 Safari 上通过 '-webkit' 浏览器前缀支持。对于 'image-set()' 不被支持的情况，一定要小心加入后备图片，比如：
+对 `image-set()` 的支持目前还很少，仅 Chrome 和 Safari 上通过 `-webkit` 浏览器前缀支持。对于 `image-set()` 不被支持的情况，一定要小心加入后备图片，比如：
 
 {% include_code _code/image-set.html imageset css %}
 
-上例中，支持 image-set 的浏览器会加载合适的图片，不支持的则回落到 1x 图片。明显需要提醒你的是，'image-set()' 的浏览器支持非常少，大部分浏览器会取到 1x 图片。
+上例中，支持 image-set 的浏览器会加载合适的图片，不支持的则回落到 1x 图片。明显需要提醒你的是，`image-set()` 的浏览器支持非常少，大部分浏览器会取到 1x 图片。
 
 ## 使用媒体查询提供高分辨率图片或是艺术指导
 
@@ -96,11 +96,11 @@ background-image: image-set(
 }
 {% endhighlight %}
 
-Chrome、Firefox 和 Opera 都支持标准的 '(min-resolution: 2dppx)'，Safari 和 Android 浏览器则均需要旧的浏览器前缀语法 - 无 'dppx' 单位。记住，这些样式只有在设备匹配媒体查询时才被加载，切记要给基础情况指定样式。这能确保浏览器不支持分辨率特有的媒体查询时，仍有东西被渲染。
+Chrome、Firefox 和 Opera 都支持标准的 `(min-resolution: 2dppx)`，Safari 和 Android 浏览器则均需要旧的浏览器前缀语法 - 无 `dppx` 单位。记住，这些样式只有在设备匹配媒体查询时才被加载，切记要给基础情况指定样式。这能确保浏览器不支持分辨率特有的媒体查询时，仍有东西被渲染。
 
 {% include_code _code/media-query-dppx.html mqdppx css %}
 
-你也可以使用 min-width 语法基于视口尺寸显示不同图片。这个技术的好处是，如果媒体查询不匹配，则图片不会被下载。如下，'bg.png' 只有在浏览器宽度是 500px 或更大时才被下载，然后应用于 'body'。
+你也可以使用 min-width 语法基于视口尺寸显示不同图片。这个技术的好处是，如果媒体查询不匹配，则图片不会被下载。如下，`bg.png` 只有在浏览器宽度是 500px 或更大时才被下载，然后应用于 `body`。
 
 
 {% highlight css %}
