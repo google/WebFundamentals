@@ -23,12 +23,12 @@ key-takeaways:
     - "GZIP, en iyi performansini metin tabanli varliklar üzerinde gösterir: CSS, JavaScript, HTML"
     - Tüm modern tarayicilar GZIP sikistirmasini destekler ve otomatik olarak bunu ister
     - Sunucunuzun GZIP sikistirmasi saglayacak sekilde yapilandirilmasi gerekir
-    - Bazi CDN`ler, GZIP`in etkinlestirilmesine özel önem verir
+    - Bazi CDN'ler, GZIP'in etkinlestirilmesine özel önem verir
 notes:
   jquery-minify:
     - "Tipik bir örnekte JQuery kitapliginin sikistirilmamis gelistirme sürümü artik 300 KB boyuta yaklasmaktadir. Ayni kitapligin küçültülmüs (yorumlar kaldirilmis vb.) sürümü yaklasik 3 kat daha küçüktür: Yaklasik 100 KB."
   gzip:
-    - "Ister inanin ister inanmayin, GZIP`in varligin boyutunu artirabildigi durumlar söz konusudur. Bu genellikle varlik çok küçük ve GZIP sözlügünün ek yükü sikistirma tasarrufundan yüksek oldugunda veya kaynak zaten iyi bir sekilde sikistirilmissa görülür. Bazi sunucular, bu sorunu önlemek için bir `minimum dosya boyutu esigi` belirlemenize olanak tanir."
+    - "Ister inanin ister inanmayin, GZIP'in varligin boyutunu artirabildigi durumlar söz konusudur. Bu genellikle varlik çok küçük ve GZIP sözlügünün ek yükü sikistirma tasarrufundan yüksek oldugunda veya kaynak zaten iyi bir sekilde sikistirilmissa görülür. Bazi sunucular, bu sorunu önlemek için bir `minimum dosya boyutu esigi` belirlemenize olanak tanir."
 ---
 
 {% wrap content%}
@@ -105,7 +105,7 @@ Yukaridaki basit HTML sayfasini ve içerdigi üç farkli içerik türünü düs�
 
 * Kod yorumlari bir gelistiricinin en iyi dostudur, ancak tarayicinin bunlari görmesine gerek yoktur! Basit bir sekilde CSS (`/* ... */`), HTML (`<!-- ... -->`) ve JavaScript (`// ...`) yorumlarini çikarmamiz sayfanin toplam boyutunu önemli ölçüde azaltabilir.
 * Bir `akilli` CSS sikistiricisi, `.awesome-container` ile ilgili kurallari tanimlamak için verimsiz bir yol kullandigimizi fark edebilir ve diger stilleri etkilemeden iki bildirimi bir bildirime indirebilir ve böylece, daha fazla bayttan tasarruf saglayabilir.
-* Bosluk (aralar ve sekmeler) HTML, CSS ve JavaScript`te gelistiriciye kolaylik saglar. Bir ek sikistirici, tüm sekmeleri ve aralari çikarabilir.
+* Bosluk (aralar ve sekmeler) HTML, CSS ve JavaScript'te gelistiriciye kolaylik saglar. Bir ek sikistirici, tüm sekmeleri ve aralari çikarabilir.
 
 ^
 {% include_code _code/minified.html full %}
@@ -124,9 +124,9 @@ Kisacasi, varliklarinizin verimliligini optimize ederken ilk adim olarak farkli 
 
 {% include modules/takeaway.liquid list=page.key-takeaways.text-compression %}
 
-[GZIP](http://en.wikipedia.org/wiki/Gzip), herhangi bir bayt akisina uygulanabilecek genel bir sikistiricidir: Içine bakildiginda önceden görülen içerigin bir kismini hatirlar ve yinelenen veri parçalarini verimli bir sekilde bulup degistirmeyi dener. Meraklilar, [GZIP`in düsük seviyeli harika bir açiklamasi için buraya](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s) bakabilir. Bununla birlikte, GZIP uygulamada en iyi performansini metne dayali içerikte göstererek büyük dosyalar için %70-90'a varan sikistirma oranlari gerçeklestirebilir. Diger yandan GZIP`in alternatif algoritmalarla önceden sikistirilmis varliklar (ör. çogu resim biçimi) üzerinde çalistirilmasi hemen hemen hiç iyilestirme saglamaz.
+[GZIP](http://en.wikipedia.org/wiki/Gzip), herhangi bir bayt akisina uygulanabilecek genel bir sikistiricidir: Içine bakildiginda önceden görülen içerigin bir kismini hatirlar ve yinelenen veri parçalarini verimli bir sekilde bulup degistirmeyi dener. Meraklilar, [GZIP'in düsük seviyeli harika bir açiklamasi için buraya](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s) bakabilir. Bununla birlikte, GZIP uygulamada en iyi performansini metne dayali içerikte göstererek büyük dosyalar için %70-90'a varan sikistirma oranlari gerçeklestirebilir. Diger yandan GZIP'in alternatif algoritmalarla önceden sikistirilmis varliklar (ör. çogu resim biçimi) üzerinde çalistirilmasi hemen hemen hiç iyilestirme saglamaz.
 
-Tüm modern tarayicilar GZIP`i destekler ve tüm HTTP istekleri için GZIP sikistirmasini otomatik olarak görüsür: Bizim isimiz, sunucunun istemci tarafindan istendiginde sikistirilmis kaynak sunmak üzere dogru bir sekilde yapilandirildigindan emin olmaktir.
+Tüm modern tarayicilar GZIP'i destekler ve tüm HTTP istekleri için GZIP sikistirmasini otomatik olarak görüsür: Bizim isimiz, sunucunun istemci tarafindan istendiginde sikistirilmis kaynak sunmak üzere dogru bir sekilde yapilandirildigindan emin olmaktir.
 
 
 <table class="table-4">
@@ -191,22 +191,22 @@ Tüm modern tarayicilar GZIP`i destekler ve tüm HTTP istekleri için GZIP sikis
 </tbody>
 </table>
 
-Yukaridaki tabloda GZIP sikistirmasinin en popüler birkaç JavaScript kitapligi ve CSS çerçevesi için sagladigi tasarruflar gösterilmektedir. Tasarruflar %60 ile 88 arasinda degisir. Bununla birlikte, küçültülen dosyalarin (dosya adlarindaki `.min` ekinden tanimlanirlar) ve GZIP`in birlikte daha da fazla kazanim saglayacagini unutmayin.
+Yukaridaki tabloda GZIP sikistirmasinin en popüler birkaç JavaScript kitapligi ve CSS çerçevesi için sagladigi tasarruflar gösterilmektedir. Tasarruflar %60 ile 88 arasinda degisir. Bununla birlikte, küçültülen dosyalarin (dosya adlarindaki `.min` ekinden tanimlanirlar) ve GZIP'in birlikte daha da fazla kazanim saglayacagini unutmayin.
 
 1. **Önce içerige özel optimizasyonlar uygulayin: CSS, JS ve HTML küçültücüler.**
 2. **Küçültülen çiktiyi sikistirmak için GZIP`i uygulayin.**
 
-Bunun en iyi tarafi, GZIP`in etkinlestirilmesinin uygulamasi en basit ve en yüksek ödüllü optimizasyonlardan biri olmasidir. Maalesef birçok kisi bunu uygulamayi unutur. Çogu web sunucusu içerigi sizin adiniza sikistirir; sizin tek yapmaniz gereken sunucunun GZIP sikistirmasindan yararlanacak tüm içerik türlerini sikistirmak üzere dogru bir sekilde yapilandirildigini dogrulamaktir.
+Bunun en iyi tarafi, GZIP'in etkinlestirilmesinin uygulamasi en basit ve en yüksek ödüllü optimizasyonlardan biri olmasidir. Maalesef birçok kisi bunu uygulamayi unutur. Çogu web sunucusu içerigi sizin adiniza sikistirir; sizin tek yapmaniz gereken sunucunun GZIP sikistirmasindan yararlanacak tüm içerik türlerini sikistirmak üzere dogru bir sekilde yapilandirildigini dogrulamaktir.
 
 Sunucunuz için en iyi yapilandirma nedir? HTML5 Standart Metin projesi, her bir yapilandirma isareti ve ayari için ayrintili açiklamalarla birlikte en popüler sunucularin tümü için [örnek yapilandirma dosyalari](https://github.com/h5bp/server-configs) içerir: Listede favori sunucunuzu bulun, GZIP bölümünü arayin ve sunucunuzun önerilen ayarlarla yapilandirildigini onaylayin.
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="Gerçek ve aktarim boyutunun karsilastirildigi DevTools demosu">
 
-GZIP`i uygulamada görmenin hizli ve basit bir yolu Chrome DevTools`u açip Ag panelinde `Boyut / Içerik` sütununu incelemektir: `Boyut`, varligin aktarim boyutunu, `Içerik` ise varligin sikistirilmamis boyutunu belirtir. Yukaridaki örnekte yer alan HTML varligi için GZIP, aktarim sirasinda 24,8 KB tasarruf etmistir!
+GZIP'i uygulamada görmenin hizli ve basit bir yolu Chrome DevTools'u açip Ag panelinde `Boyut / Içerik` sütununu incelemektir: `Boyut`, varligin aktarim boyutunu, `Içerik` ise varligin sikistirilmamis boyutunu belirtir. Yukaridaki örnekte yer alan HTML varligi için GZIP, aktarim sirasinda 24,8 KB tasarruf etmistir!
 
 {% include modules/remember.liquid list=page.notes.gzip %}
 
-Son olarak, bir uyarimiz var: Çogu sunucu, varliklari sizin için otomatik olarak sikistirir, ancak bunlari kullaniciya sunarken bazi CDN`ler, GZIP ögesinin sunuldugundan emin olmak için ekstra özen ve manuel çalismagerektirir. Sitenizi denetleyin ve varliklarinizin gerçekten [sikistirildigindan](http://www.whatsmyip.org/http-compression-test/) emin olun!
+Son olarak, bir uyarimiz var: Çogu sunucu, varliklari sizin için otomatik olarak sikistirir, ancak bunlari kullaniciya sunarken bazi CDN'ler, GZIP ögesinin sunuldugundan emin olmak için ekstra özen ve manuel çalismagerektirir. Sitenizi denetleyin ve varliklarinizin gerçekten [sikistirildigindan](http://www.whatsmyip.org/http-compression-test/) emin olun!
 
 
 

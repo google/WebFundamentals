@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Olusturmayi Engelleyen CSS"
-description: "Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSSOM olusturuluncaya kadar tarayicinin islenmis herhangi bir içerigin olusturulmasini bekletecegi anlamina gelir. CSS`nizi küçük tuttugunuzdan, mümkün olan en hizli sekilde sagladiginizdan ve olusturmayi engellemeyecek medya türleri ve sorgulari kullandiginizdan emin olun."
-introduction: "Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSSOM olusturuluncaya kadar tarayicinin islenmis herhangi bir içerigin olusturulmasini bekletecegi anlamina gelir. CSS`nizi küçük tuttugunuzdan, mümkün olan en hizli sekilde sagladiginizdan ve olusturmayi engellemeyecek medya türleri ve sorgulari kullandiginizdan emin olun."
+description: "Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSSOM olusturuluncaya kadar tarayicinin islenmis herhangi bir içerigin olusturulmasini bekletecegi anlamina gelir. CSS'nizi küçük tuttugunuzdan, mümkün olan en hizli sekilde sagladiginizdan ve olusturmayi engellemeyecek medya türleri ve sorgulari kullandiginizdan emin olun."
+introduction: "Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSSOM olusturuluncaya kadar tarayicinin islenmis herhangi bir içerigin olusturulmasini bekletecegi anlamina gelir. CSS'nizi küçük tuttugunuzdan, mümkün olan en hizli sekilde sagladiginizdan ve olusturmayi engellemeyecek medya türleri ve sorgulari kullandiginizdan emin olun."
 article:
   written_on: 2014-04-01
   updated_on: 2014-09-18
@@ -39,7 +39,7 @@ key-takeaways:
 </style>
 
 
-Önceki bölümde, olusturma agacinin yapimi için kritik olusturma yolunun hem DOM`yi hem de CSSOM`yi gerektirdigini ve bunun, performans üzerinde önemli bir sonucunun oldugunu gördük: **Hem HTML hem de CSS, olusturmayi engelleyen kaynaklardir.** DOM olmadan olusturacak bir seyimiz olmayacagi için HTML gereksinimi açiktir, ancak CSS gereksinimi o kadar açik olmayabilir. CSS`de olusturmayi engellemeden tipik bir sayfayi olusturmayi denersek ne olur?
+Önceki bölümde, olusturma agacinin yapimi için kritik olusturma yolunun hem DOM'yi hem de CSSOM'yi gerektirdigini ve bunun, performans üzerinde önemli bir sonucunun oldugunu gördük: **Hem HTML hem de CSS, olusturmayi engelleyen kaynaklardir.** DOM olmadan olusturacak bir seyimiz olmayacagi için HTML gereksinimi açiktir, ancak CSS gereksinimi o kadar açik olmayabilir. CSS'de olusturmayi engellemeden tipik bir sayfayi olusturmayi denersek ne olur?
 
 {% include modules/takeaway.liquid list=page.key-takeaways.render-blocking-css %}
 
@@ -70,7 +70,7 @@ key-takeaways:
 </table>
 {% endcomment %}
 
-CSS ile ve CSS olmadan NYTimes web sitesinin yer aldigi yukaridaki örnekte, CSS kullanilabilir hale gelinceye kadar olusturmanin neden engellendigi gösterilmektedir. CSS olmadan, sayfa kullanilamaz durumdadir. Aslinda, sagdaki deneyime genellikle `Biçimlendirilmemis Içerigin Yanip Sönmesi` (FOUC) adi verilir. Sonuç olarak, tarayici hem DOM hem de CSSOM`ye sahip oluncaya kadar olusturmayi engeller.
+CSS ile ve CSS olmadan NYTimes web sitesinin yer aldigi yukaridaki örnekte, CSS kullanilabilir hale gelinceye kadar olusturmanin neden engellendigi gösterilmektedir. CSS olmadan, sayfa kullanilamaz durumdadir. Aslinda, sagdaki deneyime genellikle `Biçimlendirilmemis Içerigin Yanip Sönmesi` (FOUC) adi verilir. Sonuç olarak, tarayici hem DOM hem de CSSOM'ye sahip oluncaya kadar olusturmayi engeller.
 
 > **_CSS, olusturmayi engelleyen bir kaynaktir, ilk olusturma süresini optimize etmek için istemciye mümkün oldugunca çabuk ve hizli bir sekilde ulastirin!_**
 
@@ -100,11 +100,11 @@ Simdi biraz uygulama örneklerine bakalim:
 {% endhighlight %}
 
 * Ilk bildirim olusturmayi engeller ve tüm kosullarla eslesir.
-* Ikinci bildirim de olusturmayi engeller: `ekran` varsayilan türdür ve herhangi bir tür belirtmezseniz dolayli olarak `ekran`a ayarlanir. Dolayisiyla, birinci ve ikinci bildirimler aslinda esdegerdir.
+* Ikinci bildirim de olusturmayi engeller: 'ekran' varsayilan türdür ve herhangi bir tür belirtmezseniz dolayli olarak 'ekran'a ayarlanir. Dolayisiyla, birinci ve ikinci bildirimler aslinda esdegerdir.
 * Üçüncü bildirim bir dinamik medya sorgusudur ve sayfa yüklenirken degerlendirilir. Sayfa yüklenirken cihazin yönüne bagli olarak portrait.css olusturmayi engelleyebilir veya engellemeyebilir.
 * Son bildirim yalnizca sayfa yazdirilirken uygulanir, dolayisiyla sayfa tarayiciya ilk kez yüklenirken olusturmayi engellemez.
 
-Son olarak, `olusturmayi engelleme`nin yalnizca tarayicinin söz konusu kaynakta sayfanin ilk olusturmasini bekletmek zorunda olup olmayacagini belirttigini unutmayin. Her durumda, CSS varligi tarayici tarafindan indirilir, ancak engelleme yapmayan kaynaklar için bu islem daha düsük öncelikli olur.
+Son olarak, 'olusturmayi engelleme'nin yalnizca tarayicinin söz konusu kaynakta sayfanin ilk olusturmasini bekletmek zorunda olup olmayacagini belirttigini unutmayin. Her durumda, CSS varligi tarayici tarafindan indirilir, ancak engelleme yapmayan kaynaklar için bu islem daha düsük öncelikli olur.
 
 {% include modules/nextarticle.liquid %}
 

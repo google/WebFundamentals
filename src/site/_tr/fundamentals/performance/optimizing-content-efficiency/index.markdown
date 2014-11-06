@@ -27,7 +27,7 @@ collection: performance
   }
 </style>
 
-Modern bir web uygulamasi nasil görünür? [HTTP Archive](http://httparchive.org/), bu sorunun yanitini bulmamiza yardim edebilir. Proje, en popüler siteleri (Aleksa Ilk 1M listesindeki 300.000'den fazla site) periyodik bir sekilde tarayip kaydederek ve bagimsiz her bir hedefe iliskin kaynak sayisi, içerik türleri ve diger meta verilerle ilgili analizleri toplayarak web`in nasil olusturuldugunu izlemektedir.
+Modern bir web uygulamasi nasil görünür? [HTTP Archive](http://httparchive.org/), bu sorunun yanitini bulmamiza yardim edebilir. Proje, en popüler siteleri (Aleksa Ilk 1M listesindeki 300.000'den fazla site) periyodik bir sekilde tarayip kaydederek ve bagimsiz her bir hedefe iliskin kaynak sayisi, içerik türleri ve diger meta verilerle ilgili analizleri toplayarak web'in nasil olusturuldugunu izlemektedir.
 
 <img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trendleri">
 
@@ -79,11 +79,11 @@ Modern bir web uygulamasi nasil görünür? [HTTP Archive](http://httparchive.or
 </tr>
 </table>
 
-Yukaridaki veriler, Ocak 2013 ile Ocak 2014 arasinda web`deki popüler hedefler için indirilen bayt sayisindaki büyüme trendini yakalar. Elbette, her site ayni hizda büyümez veya ayni miktarda veri gerektirmez; bu yüzden dagitim içindeki farkli yüzdelik dilimleri vurguladik: 50 (orta), 75 ve 90.
+Yukaridaki veriler, Ocak 2013 ile Ocak 2014 arasinda web'deki popüler hedefler için indirilen bayt sayisindaki büyüme trendini yakalar. Elbette, her site ayni hizda büyümez veya ayni miktarda veri gerektirmez; bu yüzden dagitim içindeki farkli yüzdelik dilimleri vurguladik: 50 (orta), 75 ve 90.
 
-2014`ün basinda ortalama bir site, toplam 1054 KB bayt aktaran 75 istekten olusuyordu ve toplam bayt (ve istek) sayisi önceki yil boyunca sabit bir hizda büyüdü. Tek basina bu çok sasirtici olmamakla birlikte önemli performans çikarimlari tasir: Evet, Internet hizlari giderek yükseltmektedir, ancak farkli ülkelerde farkli hizlarda artar ve birçok kullanici, özellikle mobil kullanim açisindan hâlâ veri sinirlamalarina ve ölçülen, pahali tarifelere tabidir.
+2014'ün basinda ortalama bir site, toplam 1054 KB bayt aktaran 75 istekten olusuyordu ve toplam bayt (ve istek) sayisi önceki yil boyunca sabit bir hizda büyüdü. Tek basina bu çok sasirtici olmamakla birlikte önemli performans çikarimlari tasir: Evet, Internet hizlari giderek yükseltmektedir, ancak farkli ülkelerde farkli hizlarda artar ve birçok kullanici, özellikle mobil kullanim açisindan hâlâ veri sinirlamalarina ve ölçülen, pahali tarifelere tabidir.
 
-Masaüstü benzerlerinden farkli olarak, web uygulamalari ayri bir yükleme süreci gerektirmez: URL`yi girersiniz ve uygulama çalismaya hazirdir. Bu, web`in önemli bir özelligidir. Bununla birlikte, bunun olmasi için **genellikle çesitli kaynaklari onlarca, hatta bazen yüzlerce kez getirmemiz gerekir. Bunlarin tümü megabaytlarca veri eder ve hedefledigimiz aninda web deneyimini kolaylastirmak için yüzlerce milisaniyede bir araya getirilmeleri gerekir.**
+Masaüstü benzerlerinden farkli olarak, web uygulamalari ayri bir yükleme süreci gerektirmez: URL'yi girersiniz ve uygulama çalismaya hazirdir. Bu, web'in önemli bir özelligidir. Bununla birlikte, bunun olmasi için **genellikle çesitli kaynaklari onlarca, hatta bazen yüzlerce kez getirmemiz gerekir. Bunlarin tümü megabaytlarca veri eder ve hedefledigimiz aninda web deneyimini kolaylastirmak için yüzlerce milisaniyede bir araya getirilmeleri gerekir.**
 
 Bu gereksinimlerin isiginda bir aninda web deneyimini gerçeklestirmek küçük bir is degildir, bu yüzden de içerik verimliliginin optimize edilmesi kritik öneme sahiptir: Gereksiz indirmelerin çikarilmasi, çesitli sikistirma teknikleriyle her bir kaynagin aktarim kodlamasinin optimize edilmesi ve yedek indirmeleri ortadan kaldirmak için mümkün oldugunda önbellege almadan yararlanilmasi.
 

@@ -35,7 +35,7 @@ key-takeaways:
     - Gözlerimizin çalisma seklinde dolayi, resimler kayipli sikistirma için mükemmel adaylardir
     - Resim optimizasyonu, bir kayipli ve kayipsiz sikistirma islevidir
     - "Resim biçimlerindeki farklar, resmi optimize etmek için kullanilan kayipli ve kayipsiz algoritmalardan ve bu algoritmalarin kullanimlarindaki farkliliklardan kaynaklanir"
-    - "Tüm resimler için geçerli tek bir en iyi biçim veya `kalite ayari` yoktur: Belirli sikistirici ve resim içeriklerinin her bir kombinasyonu benzersiz bir çikis olusturur"
+    - "Tüm resimler için geçerli tek bir en iyi biçim veya 'kalite ayari' yoktur: Belirli sikistirici ve resim içeriklerinin her bir kombinasyonu benzersiz bir çikis olusturur"
   formats:
     - "Dogru evrensel biçimi seçerek baslayin: GIF, PNG, JPEG"
     - "Her bir biçim için en iyi ayarlari deneyip seçin: Kalite, palet boyutu vb."
@@ -54,7 +54,7 @@ notes:
   quality:
     - "Farkli resim biçimlerinin kalite düzeylerinin, resmi kodlamak için kullanilan algoritmalardaki farkliliklar nedeniyle dogrudan karsilastirilamadigini unutmayin: 90 kaliteli JPEG, 90 kaliteli bir WebP'den çok farkli bir sonuç olusturur. Aslinda, ayni resim biçiminin kalite düzeyleri bile sikistiricinin uygulamasina bagli olarak görünür sekilde farkli çikis üretebilir!"
   resized:
-    - "Chrome DevTools`ta imleci resim ögesinin üzerinde beklettiginizde, resim varliginin `dogal` ve `ekran` boyutlari görünür. Yukaridaki örnekte 300x260 piksellik resim indirilir, ancak görüntülenirken istemcide ölçegi küçültülür (245x212)."
+    - "Chrome DevTools'ta imleci resim ögesinin üzerinde beklettiginizde, resim varliginin 'dogal' ve 'ekran' boyutlari görünür. Yukaridaki örnekte 300x260 piksellik resim indirilir, ancak görüntülenirken istemcide ölçegi küçültülür (245x212)."
 ---
 
 {% wrap content%}
@@ -86,7 +86,7 @@ Daha sonra, istenen sonuçlari daha verimli bir sekilde saglayabilecek bir alter
 * **CSS etkileri** (gradyanlar, gölgeler vb.) ve CSS animasyonlari, genellikle bir resim dosyasinin gerektiginden daha az sayida bayt ile her çözünürlükte ve zum düzeyinde her zaman net görünen, çözünürlükten bagimsiz varliklar olusturmak için kullanilabilir.
 * **Web yazi tipleri** metin seçme, arama ve yeniden boyutlandirma yetenegini korurken güzel yazi biçimleri kullanilabilmesini saglar. Bu, kullanilabilirlik açisindan önemli bir iyilestirmedir.
 
-Kendinizi bir resim varliginin içine metin kodlarken bulursaniz durun ve yeniden düsünün. Harika tipografi iyi tasarim, marka bilinci olusturma ve okunabilirlik için kritik öneme sahiptir, ancak resim içindeki metin seçilebilir, aranabilir, zum yapilabilir, erisilebilir ve yüksek DPI`ya sahip cihazlar için kolay kullanilabilir degildir. Web yazi tiplerinin kullanilmasi, [kendi optimizasyon ayarlarini](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/) gerektirir, ancak tüm bu endiseleri ele alir ve her zaman daha iyi bir metin görüntüleme seçenegidir.
+Kendinizi bir resim varliginin içine metin kodlarken bulursaniz durun ve yeniden düsünün. Harika tipografi iyi tasarim, marka bilinci olusturma ve okunabilirlik için kritik öneme sahiptir, ancak resim içindeki metin seçilebilir, aranabilir, zum yapilabilir, erisilebilir ve yüksek DPI'ya sahip cihazlar için kolay kullanilabilir degildir. Web yazi tiplerinin kullanilmasi, [kendi optimizasyon ayarlarini](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/) gerektirir, ancak tüm bu endiseleri ele alir ve her zaman daha iyi bir metin görüntüleme seçenegidir.
 
 
 ## Vektör ve Tarama resimler
@@ -127,7 +127,7 @@ Resim piksellerinden söz ettigimizde, farkli piksel türlerini birbirinden ayir
 
 <img src="images/css-vs-device-pixels.png" class="center" alt="CSS ve cihaz pikselleri">
 
-Yüksek DPI`ya sahip (HiDPI) ekranlar güzel sonuçlar üretir, ancak bunun için açikça bir seyden vazgeçmeleri gerekir: Resim varliklarimizin daha yüksek cihaz pikseli sayisindan yararlanabilmesi için daha ayrintili olmasi gerekir. Iyi haber, vektör resimlerinin bu görev için ideal bir sekilde uygun oldugudur. Her çözünürlükte net sonuçlarla olusturulabilirler. Daha ince ayrintiyi olusturmak için daha yüksek bir isleme maliyeti ödeyebiliriz, ancak temel varlik aynidir ve çözünürlükten bagimsizdir.
+Yüksek DPI'ya sahip (HiDPI) ekranlar güzel sonuçlar üretir, ancak bunun için açikça bir seyden vazgeçmeleri gerekir: Resim varliklarimizin daha yüksek cihaz pikseli sayisindan yararlanabilmesi için daha ayrintili olmasi gerekir. Iyi haber, vektör resimlerinin bu görev için ideal bir sekilde uygun oldugudur. Her çözünürlükte net sonuçlarla olusturulabilirler. Daha ince ayrintiyi olusturmak için daha yüksek bir isleme maliyeti ödeyebiliriz, ancak temel varlik aynidir ve çözünürlükten bagimsizdir.
 
 Diger yandan, tarama resimler, resim verilerini piksel temelinde kodladiklari için çok daha büyük bir zorluga neden olur. Dolayisiyla, piksel sayisi arttikça, bir tarama resmin dosya boyutu da büyür. Örnek olarak, 100x100 (CSS) pikselde görüntülenen bir fotograf varligi arasindaki farki düsünelim:
 
@@ -168,7 +168,7 @@ Bu, uygulamada ne anlama gelir? Yüksek çözünürlüklü ekranlar, güzel resi
 
 {% include modules/takeaway.liquid list=page.key-takeaways.optimizing-vector %}
 
-Tüm modern tarayicilar, iki boyutlu grafikler için XML tabanli bir resim biçimi olan Ölçeklenebilir Vektör Grafikleri`ni (SVG) destekler: SVG biçimlendirmesini dogrudan sayfaya yerlestirebilir veya harici bir kaynak olarak saglayabiliriz. Dolayisiyla, bir SVG dosyasi çogu vektör tabanli çizim yazilimiyla veya el ile dogrudan en sevdiginiz metin düzenleyicisinde olusturulabilir.
+Tüm modern tarayicilar, iki boyutlu grafikler için XML tabanli bir resim biçimi olan Ölçeklenebilir Vektör Grafikleri'ni (SVG) destekler: SVG biçimlendirmesini dogrudan sayfaya yerlestirebilir veya harici bir kaynak olarak saglayabiliriz. Dolayisiyla, bir SVG dosyasi çogu vektör tabanli çizim yazilimiyla veya el ile dogrudan en sevdiginiz metin düzenleyicisinde olusturulabilir.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -183,7 +183,7 @@ Tüm modern tarayicilar, iki boyutlu grafikler için XML tabanli bir resim biçi
 </svg>
 {% endhighlight %}
 
-Yukaridaki örnek, siyah bir ana hatti ve kirmizi bir arka plani olan basit bir daire sekli olusturur ve bu sekilde Adobe Illustrator`dan disa aktarilmistir. Fark edebileceginiz gibi genellikle varligin tarayicida olusturulmasi için gerekli olmayan katman bilgileri, açiklamalar ve XML ad alanlari gibi çok sayida meta veri içermektedir. Sonuç olarak, [svgo](https://github.com/svg/svgo) gibi bir araç çalistirarak SVG dosyalarinizi küçültmeniz her zaman iyi bir fikirdir.
+Yukaridaki örnek, siyah bir ana hatti ve kirmizi bir arka plani olan basit bir daire sekli olusturur ve bu sekilde Adobe Illustrator'dan disa aktarilmistir. Fark edebileceginiz gibi genellikle varligin tarayicida olusturulmasi için gerekli olmayan katman bilgileri, açiklamalar ve XML ad alanlari gibi çok sayida meta veri içermektedir. Sonuç olarak, [svgo](https://github.com/svg/svgo) gibi bir araç çalistirarak SVG dosyalarinizi küçültmeniz her zaman iyi bir fikirdir.
 
 Tipik bir örnek olarak svgo, Illustrator tarafindan olusturulan yukaridaki SVG dosyasinin boyutunu %58 oraninda küçülterek 470 bayttan 199 bayta düsürür. Bunun yani sira, SVG XML tabanli bir biçim oldugundan aktarim boyutunu küçültmek için GZIP sikistirmasini da uygulayabiliriz. Sunucunuzun SVG varliklarini sikistiracak sekilde yapilandirildigindan emin olun!
 
@@ -244,16 +244,16 @@ Dahili olarak, tarayici her bir kanal için 256 deger (gölgeler) ayirir. Bu da 
 
 100x100 piksellik bir resim için 39 KB büyük bir sorun gibi görünmeyebilir, ancak daha büyük resimlerde dosya boyutu hizla patlar ve resim varliklarini indirilmesi yavas ve pahali ögeler haline getirir. Neyse ki, simdiye kadar `sikistirilmamis` resim biçimini açikladik. Resim dosyasinin boyutunu küçültmek için ne yapabiliriz?
 
-Bir basit strateji, resmin `bit derinligi`ni kanal basina 8 bitten daha küçük bir renk paletine düsürmektir: Kanal basina 8 bit bize kanal basina 256 deger ve toplamda 16.777.216 (2563) renk verir. Paleti 256 renge düsürseydik ne olurdu? O zaman RGB kanallari için toplamda yalnizca 8 bite ihtiyacimiz olurdu ve hemen piksel basina iki bayt tasarruf ederdik. Bu, orijinal piksel basina 4 bayt biçimimize göre %50 sikistirma tasarrufuna karsilik gelir!
+Bir basit strateji, resmin 'bit derinligi'ni kanal basina 8 bitten daha küçük bir renk paletine düsürmektir: Kanal basina 8 bit bize kanal basina 256 deger ve toplamda 16.777.216 (2563) renk verir. Paleti 256 renge düsürseydik ne olurdu? O zaman RGB kanallari için toplamda yalnizca 8 bite ihtiyacimiz olurdu ve hemen piksel basina iki bayt tasarruf ederdik. Bu, orijinal piksel basina 4 bayt biçimimize göre %50 sikistirma tasarrufuna karsilik gelir!
 
 <img src="images/artifacts.png" class="center" alt="Sikistirma yapay nesneleri">
 
 {% include modules/remember.liquid title="Note" list=page.notes.artifacts %}
 
-Bagimsiz piksellerde saklanan verileri optimize ettikten sonra, daha akilli olabilir ve yakindaki piksellere de bakabilirdik: Görünüse göre birçok resmin, özellikle de fotograflarin benzer renklere sahip birçok yakin pikseli var (ör. gökyüzü, tekrar eden dokular vb.). Sikistirici, bu bilgileri avantajimiza kullanarak `[delta kodlamasini](http://en.wikipedia.org/wiki/Delta_encoding)` uygulayabilir. Bu durumda, her bir pikselin bagimsiz degerlerini saklamak yerine yakindaki pikseller arasindaki farki saklayabiliriz: Bitisik pikseller ayniysa delta `sifir` olur ve yalnizca tek bir biti saklamamiz gerekir! Peki ama neden orada duralim?
+Bagimsiz piksellerde saklanan verileri optimize ettikten sonra, daha akilli olabilir ve yakindaki piksellere de bakabilirdik: Görünüse göre birçok resmin, özellikle de fotograflarin benzer renklere sahip birçok yakin pikseli var (ör. gökyüzü, tekrar eden dokular vb.). Sikistirici, bu bilgileri avantajimiza kullanarak '[delta kodlamasini](http://en.wikipedia.org/wiki/Delta_encoding)' uygulayabilir. Bu durumda, her bir pikselin bagimsiz degerlerini saklamak yerine yakindaki pikseller arasindaki farki saklayabiliriz: Bitisik pikseller ayniysa delta 'sifir' olur ve yalnizca tek bir biti saklamamiz gerekir! Peki ama neden orada duralim?
 
 Insan gözü farkli renklere karsi farkli hassasliktadir: Paleti bu renkler için düsürerek veya yükselterek bunu hesaba katabilir ve renk kodlamamizi optimize edebiliriz.
-`Yakindaki` pikseller, iki boyutlu bir kilavuz olusturur. Bu, her bir pikselin birden çok komsusu oldugu anlamina gelir: Delta kodlamasini daha da iyilestirmek için bu gerçegi kullanabiliriz.
+'Yakindaki' pikseller, iki boyutlu bir kilavuz olusturur. Bu, her bir pikselin birden çok komsusu oldugu anlamina gelir: Delta kodlamasini daha da iyilestirmek için bu gerçegi kullanabiliriz.
 Her bir pikselin yalnizca bitisigindeki komsularina bakmak yerine, yakindaki piksellerden olusan daha genis bloklara bakabilir ve farkli bloklari farkli ayarlarla kodlayabiliriz. Ve bu böyle devam eder...
 
 Gördügünüz üzere, resim optimizasyonu hizla karmasiklasir (veya bakis açiniza göre eglenceli bir hal alir) ve akademik ve ticari arastirmalarin aktif bir alanidir. Resimler çok fazla bayt kullanir ve daha iyi resim sikistirma teknikleri gelistirme çok deger saglar! Daha fazla bilgi edinmeye merakliysaniz [Wikipedia sayfasina](http://en.wikipedia.org/wiki/Image_compression) gidin veya uygulamali bir örnek için [WebP sikistirma teknikleri tanitim yazisina](https://developers.google.com/speed/webp/docs/compression) göz atin.
@@ -265,20 +265,20 @@ Bir kez daha, bunlarin hesap harika, ama ayni zamanda çok akademik: Bu, sayfala
 
 {% include modules/takeaway.liquid list=page.key-takeaways.lossless-lossy %}
 
-Bir sayfanin kaynak kodu veya bir yürütülebilir dosya gibi belirli veri türleri için bir sikistiricinin orijinal bilgileri degistirmemesi veya kaybetmemesi kritik öneme sahiptir: Tek bir eksik veya yanlis veri biti, dosya içeriginin anlamini tamamiyla degistirebilir veya daha kötüsü, tümüyle bozabilir. Resimler, ses ve video gibi diger bazi veri türleri için orijinal verilerin bir `yaklasik` yansimasinin saglanmasi mükemmel bir sekilde kabul edilebilir.
+Bir sayfanin kaynak kodu veya bir yürütülebilir dosya gibi belirli veri türleri için bir sikistiricinin orijinal bilgileri degistirmemesi veya kaybetmemesi kritik öneme sahiptir: Tek bir eksik veya yanlis veri biti, dosya içeriginin anlamini tamamiyla degistirebilir veya daha kötüsü, tümüyle bozabilir. Resimler, ses ve video gibi diger bazi veri türleri için orijinal verilerin bir 'yaklasik' yansimasinin saglanmasi mükemmel bir sekilde kabul edilebilir.
 
 Aslinda, gözün çalisma seklinden dolayi, bir resmin dosya boyutunu küçültmek için her bir pikselle ilgili bazi bilgilerin atilmasi sik sik yanimiza kâr kalir. Örnegin, gözlerimizin farkli renklere karsi hassasiyeti farklidir ve bu, bazi renkleri kodlamak için daha az sayida bit kullanabilecegimiz anlamina gelir. Sonuç olarak, tipik bir resim optimizasyonu ardisik düzeni iki üst düzey adimdan olusur:
 
-1. Resim, bazi piksel verilerini çikaran `[kayipli](http://en.wikipedia.org/wiki/Lossy_compression)` bir filtreyle islenir
-1. Resim, piksel verilerini sikistiran `[kayipsiz](http://en.wikipedia.org/wiki/Lossless_compression)` bir filtreyle islenir
+1. Resim, bazi piksel verilerini çikaran '[kayipli](http://en.wikipedia.org/wiki/Lossy_compression)' bir filtreyle islenir
+1. Resim, piksel verilerini sikistiran '[kayipsiz](http://en.wikipedia.org/wiki/Lossless_compression)' bir filtreyle islenir
 
 **Ilk adim istege baglidir ve kesin algoritma ilgili resim biçimine bagli olur, ancak herhangi bir resmin, boyutunun küçültülmesi için kayipli bir sikistirma adimindan geçirilebileceginin anlasilmasi önemlidir.** Aslinda GIF, PNG, JPEG ve digerleri gibi çesitli resim biçimleri arasindaki fark, kayipli ve kayipsiz adimlar uygulanirken kullandiklari belirli algoritmalarin birlestirilmesindedir (veya atilmasindadir).
 
-Dolayisiyla, kayipli ve kayipsiz optimizasyonun `en iyi` yapilandirmasi nedir? Yanit, resim içerigine ve kayipli sikistirmanin getirdigi dosya boyutu ile yapay nesneler arasindaki degis tokus gibi ölçütlerinize baglidir: Bazi durumlarda, karisik ayrintilari tam dogrulukta iletmek için kayipli optimizasyonu atlamak isteyebilirsiniz; diger durumlardaysa resim varliginin dosya boyutunu azaltmak için agresif bir kayipli optimizasyon uygulayabilirsiniz. Burada sizin karariniz ve baglaminiz devreye girmelidir. Tek bir evrensel ayar yoktur.
+Dolayisiyla, kayipli ve kayipsiz optimizasyonun 'en iyi' yapilandirmasi nedir? Yanit, resim içerigine ve kayipli sikistirmanin getirdigi dosya boyutu ile yapay nesneler arasindaki degis tokus gibi ölçütlerinize baglidir: Bazi durumlarda, karisik ayrintilari tam dogrulukta iletmek için kayipli optimizasyonu atlamak isteyebilirsiniz; diger durumlardaysa resim varliginin dosya boyutunu azaltmak için agresif bir kayipli optimizasyon uygulayabilirsiniz. Burada sizin karariniz ve baglaminiz devreye girmelidir. Tek bir evrensel ayar yoktur.
 
 <img src="images/save-for-web.png" class="center" alt="Web için kaydetme">
 
-Uygulamali örnek olarak, JPEG gibi kayipli bir biçimi kullanirken sikistirici genellikle özellestirilebilir `kalite` ayarini açar (ör. Adobe Photoshop`taki `Web için Kaydet` islevinin sagladigi kalite kaydirma çubugu). Bu genellikle kayipli ve kayipsiz algoritmalarin belirli bir koleksiyonunun iç çalismalarini kontrol eden 1 ile 100 arasinda bir sayi olur. En iyi sonuçlar için resimlerinizi çesitli kalite ayarlariyla deneyin ve kaliteyi düsürmekten korkmayin. Görsel sonuçlar genellikle çok iyi olur ve dosya boyutu tasarruflari oldukça büyük olabilir.
+Uygulamali örnek olarak, JPEG gibi kayipli bir biçimi kullanirken sikistirici genellikle özellestirilebilir `kalite` ayarini açar (ör. Adobe Photoshop'taki 'Web için Kaydet' islevinin sagladigi kalite kaydirma çubugu). Bu genellikle kayipli ve kayipsiz algoritmalarin belirli bir koleksiyonunun iç çalismalarini kontrol eden 1 ile 100 arasinda bir sayi olur. En iyi sonuçlar için resimlerinizi çesitli kalite ayarlariyla deneyin ve kaliteyi düsürmekten korkmayin. Görsel sonuçlar genellikle çok iyi olur ve dosya boyutu tasarruflari oldukça büyük olabilir.
 
 {% include modules/remember.liquid title="Note" list=page.notes.quality %}
 
@@ -340,7 +340,7 @@ Evrensel olarak desteklenen üç resim biçimi vardir: GIF, PNG ve JPEG. Bu biç
 
 1. **Animasyona ihtiyaciniz var mi? Varsa GIF tek evrensel seçenektir.**
   * GIF, renk paletini en fazla 256 renkle sinirlandirarak çogu resim için kötü bir seçenek haline gelir. Bununla birlikte, PNG-8 küçük bir paletle resimler için daha iyi sikistirma saglar. Sonuç olarak, GIF yalnizca animasyon gerektiginde dogru yanittir.
-1. **Ince ayrintiyi en yüksek çözünürlükle korumaniz gerekiyor mu? PNG`yi kullanin.**
+1. **Ince ayrintiyi en yüksek çözünürlükle korumaniz gerekiyor mu? PNG'yi kullanin.**
   * PNG, renk paleti boyutu seçimi disinda herhangi bir kayipli sikistirma algoritmasi uygulamaz. Sonuç olarak, en yüksek kaliteli resmi olusturur, ancak bu, diger biçimlerden önemli ölçüde daha büyük bir dosya boyutuna mal olur. Akillica kullanin.
   * Resim varligi geometrik sekillerden olusan resimler içeriyorsa resmi bir vektör (SVG) biçimine dönüstürmeyi düsünebilirsiniz!
   * Resim varligi metin içeriyorsa durun ve yeniden düsünün. Resimlerin içindeki metin seçilebilir, aranabilir veya `zum yapilabilir` olmaz. Bir özel görünümü (marka bilinci olusturma veya baska nedenlerle) aktarmaniz gerekiyorsa bunun yerine bir web yazi tipi kullanin.
@@ -351,11 +351,11 @@ Son olarak, en uygun resim biçimini ve varliklarinizin her biri için ayarlarin
 
 WebP ve JPEG XR evrensel olarak desteklenmediginden, uygun kaynagi sunmak için uygulamaniza veya sunuculariniza ek mantik eklemeniz gerekir:
 
-* Bazi CDN`ler, JPEG XR ve WebP teslimini de içeren resim optimizasyonunu hizmet olarak saglar.
+* Bazi CDN'ler, JPEG XR ve WebP teslimini de içeren resim optimizasyonunu hizmet olarak saglar.
 * Bazi açik kaynak araçlari (ör. Apache için PageSpeed veya Nginx) uygun varliklarin optimizasyonunu, dönüstürülmesini ve sunumunu otomatiklestirir.
 * Istemciyi algilamak, hangi biçimleri desteklediklerini kontrol etmek ve kullanilabilir en iyi resim biçimini sunmak için ek uygulama mantigi ekleyebilirsiniz.
 
-Son olarak, yerel uygulamanizda içerik olusturmak için bir Webview kullaniyorsaniz, istemci üzerinde tam denetime sahip olacaginizi ve özel olarak WebP`yi kullanabileceginizi unutmayin! Facebook, Google+ ve diger birçok site, tüm resimlerini uygulamalari içinde saglamak için WebP`yi kullanir. Bunun sagladigi tasarruf kesinlikle buna deger. WebP hakkinda daha fazla bilgi edinmek için Google I/O 2013`teki [WebP: Deploying Faster, Smaller, and More Beautiful Images](https://www.youtube.com/watch?v=pS8udLMOOaE) baslikli sunuma göz atin.
+Son olarak, yerel uygulamanizda içerik olusturmak için bir Webview kullaniyorsaniz, istemci üzerinde tam denetime sahip olacaginizi ve özel olarak WebP'yi kullanabileceginizi unutmayin! Facebook, Google+ ve diger birçok site, tüm resimlerini uygulamalari içinde saglamak için WebP'yi kullanir. Bunun sagladigi tasarruf kesinlikle buna deger. WebP hakkinda daha fazla bilgi edinmek için Google I/O 2013'teki [WebP: Deploying Faster, Smaller, and More Beautiful Images](https://www.youtube.com/watch?v=pS8udLMOOaE) baslikli sunuma göz atin.
 
 
 ## Araçlar ve parametre ayari
@@ -447,9 +447,9 @@ Resimlerinizi optimize etme üzerinde çalisirken aklinizda bulundurmaniz gereke
 * **Vektör biçimlerini tercih edin:** Vektör resimler çözünürlükten ve ölçekten bagimsizdir. Bu özellikleri, vektör biçimlerini çoklu cihaz ve yüksek çözünürlük dünyasi ile mükemmel bir sekilde uyumlu hale getirir.
 * **SVG varliklarini küçültün ve sikistirin:** Çogu çizim uygulamasi tarafindan olusturulan XML biçimlendirmesi, genellikle kaldirilabilecek gereksiz meta veriler içerir; sunucularinizin SVG varliklari için GZIP sikistirmasi uygulayacak sekilde yapilandirildigindan emin olun.
 * **En iyi tarama resim biçimini seçin:** Islevsel gereksinimlerinizi belirleyin ve ilgili her bir varliga uygun olan biçimi seçin.
-* **Tarama biçimleri için en uygun kalite ayarlariyla deneyler yapin:** `Kalite` ayarlarini düsürmekten korkmayin, sonuçlar genellikle çok iyi olur ve önemli ölçüde bayt tasarrufu saglanir.
+* **Tarama biçimleri için en uygun kalite ayarlariyla deneyler yapin:** 'Kalite' ayarlarini düsürmekten korkmayin, sonuçlar genellikle çok iyi olur ve önemli ölçüde bayt tasarrufu saglanir.
 * **Gereksiz resim meta verilerini kaldirin:** Birçok tarama resmi varlikla ilgili gereksiz meta veriler içerir: Cografya bilgileri, kamera bilgileri vb. Bu verileri çikarmak için uygun araçlari kullanin.
-* **Ölçeklenmis resimler sunun:** Resimleri sunucuda yeniden boyutlandirin ve `ekran` boyutunun, resmin `dogal` boyutuna mümkün oldugunca yakin oldugundan emin olun. Büyük resimler yeniden boyutlandirildiklarinda en büyük ek yükten sorumlu oldugu için özellikle büyük resimlere dikkat edin!
+* **Ölçeklenmis resimler sunun:** Resimleri sunucuda yeniden boyutlandirin ve 'ekran' boyutunun, resmin `dogal` boyutuna mümkün oldugunca yakin oldugundan emin olun. Büyük resimler yeniden boyutlandirildiklarinda en büyük ek yükten sorumlu oldugu için özellikle büyük resimlere dikkat edin!
 * **Otomatiklestirin, otomatiklestirin, otomatiklestirin:** Tüm resim varliklarinizin her zaman optimize edilmis olmasini saglayacak otomatik araçlara ve altyapiya yatirim yapin.
 
 

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "HTTP`yi önbellege alma"
+title: "HTTP'yi önbellege alma"
 description: "Bir seyin ag üzerinden getirilmesi yavas ve pahalidir: Büyük yanitlar, istemci ile sunucu arasinda çok sayida gelis gidis gerçeklestirmesini gerektirdiginden kullanilabilir duruma gelmeleri ve tarayici tarafindan islenebilmeleri gecikir, ayrica ziyaretçi için veri maliyetleri olur. Sonuç olarak, önceden getirilen kaynaklari önbellege alma ve yeniden kullanma yetenegi, performansi optimize etmenin önemli bir unsurudur."
 introduction: "Bir seyin ag üzerinden getirilmesi yavas ve pahalidir: Büyük yanitlar, istemci ile sunucu arasinda çok sayida gelis gidis gerçeklestirmesini gerektirdiginden kullanilabilir duruma gelmeleri ve tarayici tarafindan islenebilmeleri gecikir, ayrica ziyaretçi için veri maliyetleri olur. Sonuç olarak, önceden getirilen kaynaklari önbellege alma ve yeniden kullanma yetenegi, performansi optimize etmenin önemli bir unsurudur."
 article:
@@ -18,8 +18,8 @@ key-takeaways:
     - "Her bir kaynak, Cache-Control HTTP üstbilgisi araciligiyla kendi önbellege alma politikasini tanimlayabilir"
     - "Cache-Control yönergeleri yaniti kimin, hangi kosullar altinda ve ne kadar süreyle önbellege alabilecegini kontrol eder"
   invalidate-cache:
-    - "Yerel olarak önbellege alinan yanitlar, kaynagin `kullanim süresi sona erinceye` kadar kullanilir"
-    - "URL`ye bir dosya içerigi parmak izi yerlestirmemiz, istemciyi yanitin yeni bir sürümüne güncellemeye zorlayabilmemizi saglar"
+    - "Yerel olarak önbellege alinan yanitlar, kaynagin 'kullanim süresi sona erinceye' kadar kullanilir"
+    - "URL'ye bir dosya içerigi parmak izi yerlestirmemiz, istemciyi yanitin yeni bir sürümüne güncellemeye zorlayabilmemizi saglar"
     - "En iyi performans için her bir uygulamanin kendi önbellek hiyerarsisini tanimlamasi gerekir"
 notes:
   webview-cache:
@@ -84,7 +84,7 @@ En iyi istek, sunucuyla iletisim gerektirmeyen istektir: Yanitin bir yerel kopya
 
 ### `no-cache` ve `no-store`
 
-`no-cache`, önce sunucu yanitin degisip degismedigini kontrol etmeden, döndürülen yanitin ayni URL`ye izleyen bir istegin gönderilmesi için kullanilamayacagini belirtir. Sonuç olarak, uygun bir dogrulama belirteci (ETag) varsa no-cache, önbellege alinan yanitin dogrulanmasi için bir gelis gidis gerçeklestirilmesine neden olur, ancak kaynak degismemisse indirme islemini önleyebilir.
+`no-cache`, önce sunucu yanitin degisip degismedigini kontrol etmeden, döndürülen yanitin ayni URL'ye izleyen bir istegin gönderilmesi için kullanilamayacagini belirtir. Sonuç olarak, uygun bir dogrulama belirteci (ETag) varsa no-cache, önbellege alinan yanitin dogrulanmasi için bir gelis gidis gerçeklestirilmesine neden olur, ancak kaynak degismemisse indirme islemini önleyebilir.
 
 Bunun tersine `no-store` çok basittir. Tarayicinin ve hiçbir araci önbelleginin, döndürülen yanitin (ör. gizli kisisel veya bankacilik verilerini içeren bir yanit) hiçbir sürümünü depolamasina izin vermez. Kullanici bu varligi her istediginde, sunucuya bir istek gönderilir ve her defasinda bir tam yanit indirilir.
 
@@ -138,34 +138,34 @@ HTTP Archive sitesine göre (Alexa siralamasi temelinde) ilk 300.000 site arasin
 
 Tarayici tarafindan olusturulan tüm HTTP istekleri, istegin yerine getirilmesi için kullanilabilecek önbellege alinmis geçerli bir yanitin olup olmadiginin kontrol edilmesi amaciyla öncelikle tarayici önbellegine yönlendirilir. Bir eslesme bulunursa yanit önbellekten okunur ve hem ag gecikmesini hem de aktarimin neden olacagi veri maliyetlerini ortadan kaldirmis oluruz. **Bununla birlikte, önbellege alinmis bir yaniti güncellemek veya geçersiz kilmak istersek ne olur?**
 
-Örnegin, ziyaretçilerimize bir CSS stil sayfasini en fazla 24 saat için (max-age=86400) önbellege almalarini bildirdigimizi, ancak tasarimcimizin tüm kullanicilarimizin kullanimina sunmak isteyecegimiz yeni bir güncelleme gönderdigini düsünelim. CSS`mizin artik `eskiyen` önbellege alinmis bir kopyasina sahip tüm ziyaretçileri önbelleklerini güncellemeleri için nasil bilgilendiririz? Bu bir tuzak soru. Bunu yapamayiz, en azindan kaynagin URL`sini degistirmeden yapamayiz.
+Örnegin, ziyaretçilerimize bir CSS stil sayfasini en fazla 24 saat için (max-age=86400) önbellege almalarini bildirdigimizi, ancak tasarimcimizin tüm kullanicilarimizin kullanimina sunmak isteyecegimiz yeni bir güncelleme gönderdigini düsünelim. CSS'mizin artik 'eskiyen' önbellege alinmis bir kopyasina sahip tüm ziyaretçileri önbelleklerini güncellemeleri için nasil bilgilendiririz? Bu bir tuzak soru. Bunu yapamayiz, en azindan kaynagin URL'sini degistirmeden yapamayiz.
 
 Yanit tarayici tarafindan önbellege alindiktan sonra, önbellege alinmis sürüm max-age veya expires özellikleriyle belirlenen sekilde yeniligini kaybedinceye veya kullanicinin tarayici önbellegini temizlemesi gibi baska bir nedenle önbellekten çikarilincaya kadar kullanilir. Sonuç olarak, farkli kullanicilar sayfa olusturulurken dosyanin farkli sürümlerini kullanabilir; kaynagi yeni getiren kullanicilar yeni sürümü kullanirken, önceki (ancak hâlâ geçerli) bir kopyayi önbelleklerine almis olan kullanicilar yanitin daha eski bir sürümünü kullanir.
 
-**Peki, istemci tarafinda önbellege alma ile hizli güncellemelerin her ikisinden nasil yararlaniriz?** Basit, kaynagin URL`sini degistirebiliriz ve içerigi degistiginde, kullaniciyi yeni yaniti indirmeye zorlariz. Genellikle bu, dosya adina (ör. style) dosyanin bir parmak izi veya bir sürüm numarasi yerlestirilerek yapilir.**x234dff**.css.
+**Peki, istemci tarafinda önbellege alma ile hizli güncellemelerin her ikisinden nasil yararlaniriz?** Basit, kaynagin URL'sini degistirebiliriz ve içerigi degistiginde, kullaniciyi yeni yaniti indirmeye zorlariz. Genellikle bu, dosya adina (ör. style) dosyanin bir parmak izi veya bir sürüm numarasi yerlestirilerek yapilir.**x234dff**.css.
 
 <img src="images/http-cache-hierarchy.png" class="center" alt="Önbellek hiyerarsisi">
 
 Önbellege alma politikalarini kaynak temelinde tanimlama yetenegi, her bir kaynagin ne kadar süreyle önbellege alinacaginin yani sira yeni sürümlerin ziyaretçi tarafindan ne kadar çabuk görünecegini de kontrol etmemize olanak tanir. Örnegin, yukaridaki örnegi analiz edelim:
 
-* HTML `no-cache` koduyla isaretlenir. Bu, tarayicinin her istekte dokümani her zaman yeniden dogrulayacagi ve içerik degistiyse en son sürümü getirecegi anlamina gelir. Ayrica, HTML biçimlendirmesindeki CSS ve JavaScript varliklarinin URL`lerine parmak izleri yerlestiririz: Bu dosyalarin içerigi degisirse sayfanin HTML`si de degisir ve HTML yanitinin yeni kopyasi indirilir.
-* CSS`nin tarayicilar ve araci önbellekleri (ör. bir CDN) tarafindan önbellege alinmasina izin verilir ve 1 yil içinde süresinin sona erecegi ayarlanir. Dosya adina dosya parmak izini yerlestirdigimiz için 1 yil gibi `uzak gelecek süre sonlarini` kullanabildigimizi unutmayin: CSS güncellenirse URL de degisir.
-* JavaScript de 1 yil içinde süresi dolacak sekilde ayarlanir, ancak CDN`nin önbellege almamasi gereken bazi gizli kullanici verilerini içerdigi için gizli olarak isaretlenir.
+* HTML `no-cache` koduyla isaretlenir. Bu, tarayicinin her istekte dokümani her zaman yeniden dogrulayacagi ve içerik degistiyse en son sürümü getirecegi anlamina gelir. Ayrica, HTML biçimlendirmesindeki CSS ve JavaScript varliklarinin URL'lerine parmak izleri yerlestiririz: Bu dosyalarin içerigi degisirse sayfanin HTML'si de degisir ve HTML yanitinin yeni kopyasi indirilir.
+* CSS'nin tarayicilar ve araci önbellekleri (ör. bir CDN) tarafindan önbellege alinmasina izin verilir ve 1 yil içinde süresinin sona erecegi ayarlanir. Dosya adina dosya parmak izini yerlestirdigimiz için 1 yil gibi `uzak gelecek süre sonlarini` kullanabildigimizi unutmayin: CSS güncellenirse URL de degisir.
+* JavaScript de 1 yil içinde süresi dolacak sekilde ayarlanir, ancak CDN'nin önbellege almamasi gereken bazi gizli kullanici verilerini içerdigi için gizli olarak isaretlenir.
 * Resim, bir sürüm veya benzersiz parmak izi olmadan önbellege alinir ve süresi 1 günde dolacak sekilde ayarlanir.
 
-ETag, Cache-Control ve benzersiz URL`lerin birlesimi hepsinden de yararlanmamiza olanak tanir: Uzun vadeli süre sonlari, yanitin nerede önbellege alinabilecegiyle kontrol ve istege bagli güncellemeler.
+ETag, Cache-Control ve benzersiz URL'lerin birlesimi hepsinden de yararlanmamiza olanak tanir: Uzun vadeli süre sonlari, yanitin nerede önbellege alinabilecegiyle kontrol ve istege bagli güncellemeler.
 
 ## Önbellege alma kontrol listesi
 
-Tek bir tane en iyi önbellege alma politikasi yoktur. Trafik kaliplariniza, sunulan verilerin türüne ve veri yeniligi açisindan uygulamaya özel gereksinimlere bagli olarak, kaynak temelinde uygun ayarlari ve genel `önbellege alma hiyerarsisini` tanimlayip yapilandirmaniz gerekir.
+Tek bir tane en iyi önbellege alma politikasi yoktur. Trafik kaliplariniza, sunulan verilerin türüne ve veri yeniligi açisindan uygulamaya özel gereksinimlere bagli olarak, kaynak temelinde uygun ayarlari ve genel 'önbellege alma hiyerarsisini' tanimlayip yapilandirmaniz gerekir.
 
 Önbellege alma stratejisi üzerinde çalisirken aklinizda bulundurmaniz gereken bazi ipuçlari ve teknikler:
 
-1. **Tutarli URL`ler kullanin:** Ayni içerigi farkli URL`lerde sunarsaniz, içerik birden çok kez getirilip depolanir. Ipucu: [URL`lerin büyük/küçük harfe duyarli oldugunu](http://www.w3.org/TR/WD-html40-970708/htmlweb.html) unutmayin!
+1. **Tutarli URL'ler kullanin:** Ayni içerigi farkli URL'lerde sunarsaniz, içerik birden çok kez getirilip depolanir. Ipucu: [URL'lerin büyük/küçük harfe duyarli oldugunu](http://www.w3.org/TR/WD-html40-970708/htmlweb.html) unutmayin!
 2. **Sunucunun bir dogrulama belirteci (ETag) sagladigindan emin olun:** Dogrulama belirteçleri, sunucuda bir kaynak degismediginde ayni baytlar aktarma gerekliligini ortadan kaldirir.
 3. **Hangi kaynaklarin aracilar tarafindan önbellege alinabilecegini tanimlayin:** Tüm kullanicilar için ayni yanitlara sahip olan kaynaklar, bir CDN ve diger aracilar tarafindan önbellege alinabilecek harika adaylardir.
 4. **Her bir kaynak için en uygun önbellek kullanim süresini belirleyin:** Farkli kaynaklarin farkli yenilik gereksinimleri olabilir. Her birini denetleyin ve uygun max-age degerini belirleyin.
-5. **Siteniz için en iyi önbellek hiyerarsisini belirleyin:** Kaynak URL`lerinin içerik parmak izleriyle kombinasyonu ve HTML dokümanlari için kisa veya no-cache kullanim süreleri, güncellemelerin istemci tarafindan alinma hizini kontrol etmenize olanak tanir.
+5. **Siteniz için en iyi önbellek hiyerarsisini belirleyin:** Kaynak URL'lerinin içerik parmak izleriyle kombinasyonu ve HTML dokümanlari için kisa veya no-cache kullanim süreleri, güncellemelerin istemci tarafindan alinma hizini kontrol etmenize olanak tanir.
 6. **Dalgalanmalari en aza indirin:** Bazi kaynaklar, digerlerinden daha sik güncellenir. Kaynagin sik güncellenen belirli bir parçasi varsa (ör. JavaScript islevi veya CSS stilleri kümesi) bu kodu ayri bir dosya olarak saglamayi düsünebilirsiniz. Bunu yapmaniz içerigin geri kalaninin (ör. çok sik degismeyen kitaplik kodu) önbellekten getirilmesine olanak tanir ve bir güncelleme getirilirken indirilen içerik miktarini en aza indirir.
 
 
