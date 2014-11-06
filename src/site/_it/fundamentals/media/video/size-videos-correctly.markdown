@@ -14,20 +14,20 @@ key-takeaways:
   size-matters:
     - Non pubblicare video di dimensioni o qualità superiori alla capacità della piattaforma utilizzata.
     - La lunghezza del video non deve eccedere quella necessaria.
-    - Se i video sono troppo lunghi, il download procede a singhiozzo e le operazioni di ricerca sono rallentate; prima di eseguire la riproduzione, alcuni browser potrebbero dover attendere l`intero download del video.
+    - Se i video sono troppo lunghi, il download procede a singhiozzo e le operazioni di ricerca sono rallentate; prima di eseguire la riproduzione, alcuni browser potrebbero dover attendere l'intero download del video.
 remember:
   media-fragments:
     - La Media Fragments API è supportata dalla maggior parte delle piattaforme, eccetto iOS.
     - Assicurati che le richieste di intervallo siano supportate dal tuo server. Le richieste di intervallo sono attivate per impostazione predefinita nella maggior parte dei server; tuttavia, alcuni servizi di hosting potrebbero disabilitarle.
   dont-overflow:
-    - Non modificare la dimensione dell`elemento in modo tale che non rispetti le proporzioni del video originale. Lo schiacciamento e l`allungamento creano un effetto sgradevole.
+    - Non modificare la dimensione dell'elemento in modo tale che non rispetti le proporzioni del video originale. Lo schiacciamento e l'allungamento creano un effetto sgradevole.
   accessibility-matters:
-    - L`elemento traccia è supportato da Chrome per Android, Safari  per iOS e tutti gli attuali browser su desktop, eccetto Firefox (vedi <a href="http://caniuse.com/track" title="Stato supporto elemento traccia">caniuse.com/track</a>). Sono disponibili anche diversi polyfill. Si consiglia di utilizzare <a href='//www.delphiki.com/html5/playr/' title='Polyfill elemento traccia Playr'>Playr</a> o <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
+    - L'elemento traccia è supportato da Chrome per Android, Safari  per iOS e tutti gli attuali browser su desktop, eccetto Firefox (vedi <a href="http://caniuse.com/track" title="Stato supporto elemento traccia">caniuse.com/track</a>). Sono disponibili anche diversi polyfill. Si consiglia di utilizzare <a href='//www.delphiki.com/html5/playr/' title='Polyfill elemento traccia Playr'>Playr</a> o <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
     - MSE è supportato da Chrome e Opera su Android, Internet Explorer 11 e Chrome per desktop, con supporto pianificato per <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title="Sequenza temporale di implementazione MSE Firefox">Firefox</a>.
   optimize:
     - <a href="../images/">Immagini</a>
-    - <a href="../../performance/optimizing-content-efficiency/">Ottimizzazione dell`efficienza nei contenuti</a>
+    - <a href="../../performance/optimizing-content-efficiency/">Ottimizzazione dell'efficienza nei contenuti</a>
 related:
   media:
   -
@@ -61,18 +61,18 @@ related:
 
 ## Verifica le dimensioni del video
 
-Le dimensioni effettive del video codificato potrebbero non corrispondere alle dimensioni dell`elemento video (come nel caso di un`immagine che non può essere visualizzata utilizzando le sue dimensioni reali).
+Le dimensioni effettive del video codificato potrebbero non corrispondere alle dimensioni dell'elemento video (come nel caso di un'immagine che non può essere visualizzata utilizzando le sue dimensioni reali).
 
-Per verificare le dimensioni codificate di un video, utilizza le proprietà dell`elemento video: `videoWidth` e `videoHeight`. Le proprietà `width` e `height` restituiscono le dimensioni dell`elemento video, che potrebbero essere state dimensionate utilizzando CSS o gli attributi larghezza e altezza incorporati.
+Per verificare le dimensioni codificate di un video, utilizza le proprietà dell'elemento video: `videoWidth` e `videoHeight`. Le proprietà `width` e `height` restituiscono le dimensioni dell'elemento video, che potrebbero essere state dimensionate utilizzando CSS o gli attributi larghezza e altezza incorporati.
 
 ## Assicurati che i video non siano più grandi dei contenitori
 
 Quando gli elementi video sono troppo grandi per il riquadro di visualizzazione, possono eccedere dai rispettivi contenitori, impedendo la visualizzazione e 
-l`utilizzo dei controlli da parte degli utenti.
+l'utilizzo dei controlli da parte degli utenti.
 
 <div class="clear">
-    <img class="g-wide--1 g-medium--half" alt="Screenshot verticale di Android Chrome: l`elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Screenshot orizzontale di Android Chrome: l`elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-landscape-video-unstyled.png">
+    <img class="g-wide--1 g-medium--half" alt="Screenshot verticale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-portrait-video-unstyled.png">
+    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Screenshot orizzontale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
 Puoi controllare le dimensioni del video con JavaScript o CSS. Le librerie e i plugin di JavaScript, come [FitVids](//fitvidsjs.com/), consentono di rispettare le dimensioni e le proporzioni corrette, anche nel caso dei video Flash di YouTube e di altre fonti.
@@ -93,7 +93,7 @@ Per contenuti multimediali in iframes (come i video di YouTube), opta per un app
 
 {% include_code _code/responsive_embed.html markup html %}
 
-Confronta l`{% link_sample _code/responsive_embed.html %}esempio reattivo{% endlink_sample %} con {% link_sample _code/unyt.html %}con la versione non reattiva{% endlink_sample %}.
+Confronta l'{% link_sample _code/responsive_embed.html %}esempio reattivo{% endlink_sample %} con {% link_sample _code/unyt.html %}con la versione non reattiva{% endlink_sample %}.
 
 
 {% include modules/nextarticle.liquid %}
