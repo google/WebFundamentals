@@ -2,8 +2,8 @@
 layout: grouped-list
 title: "Principi di Site Design"
 description: ""
-introduction: "Google e AnswerLab hanno realizzato <a href='research-study.html'>uno studio approfondito</a> esaminando il modo in cui un campione variegato di utenti interagiva con un gruppo diversificato di siti mobili. L`obiettivo era quello di rispondere alla domanda: che cosa rende un sito un sito ben fatto?"
-snippet: "Principi per garantire un`esperienza ottimale."
+introduction: "Google e AnswerLab hanno realizzato <a href='research-study.html'>uno studio approfondito</a> esaminando il modo in cui un campione variegato di utenti interagiva con un gruppo diversificato di siti mobili. L'obiettivo era quello di rispondere alla domanda: che cosa rende un sito un sito ben fatto?"
+snippet: "Principi per garantire un'esperienza ottimale."
 article:
   written_on: 2014-08-08
   updated_on: 2014-09-17
@@ -18,7 +18,7 @@ list:
     description: "Una homepage desktop serve spesso a più obiettivi, mentre la homepage mobile  è finalizzata soprattutto a connettere gli utenti ai contenuti che stanno cercando."
     list:
     -
-      title: Colloca gli inviti all`azione nella parte frontale e centrale
+      title: Colloca gli inviti all'azione nella parte frontale e centrale
       link: /web/fundamentals/layouts/principles/cta-front-and-center.html
     -
       title: Scegli menu brevi e concisi
@@ -52,7 +52,7 @@ list:
     start: 8
     list:
     -
-      title: Lascia all`utente la possibilità di esplorare prima di acquistare
+      title: Lascia all'utente la possibilità di esplorare prima di acquistare
       link: /web/fundamentals/monetization/principles/explore.html
     -
       title: Consenti agli utenti di acquistare come ospiti
@@ -68,11 +68,11 @@ list:
       link: /web/fundamentals/monetization/principles/finish-on-another-device
   -
     title: "Inserimento di dati"
-    description: "Che si tratti di un acquisto, di una richiesta di preventivo o dell`iscrizione a una newsletter, l`esperienza di conversione dell`utente deve essere il più lineare possibile."
+    description: "Che si tratti di un acquisto, di una richiesta di preventivo o dell'iscrizione a una newsletter, l'esperienza di conversione dell'utente deve essere il più lineare possibile."
     start: 13
     list:
     -
-      title: Semplifica l`inserimento di dati
+      title: Semplifica l'inserimento di dati
       link: /web/fundamentals/input/form/choose-the-best-input-type.html
     -
       title: Scegli il metodo di inserimento più semplice
@@ -91,7 +91,7 @@ list:
     start: 18
     list: 
     -
-      title: Ottimizza l`intero sito per gli utenti mobili
+      title: Ottimizza l'intero sito per gli utenti mobili
       link: /web/fundamentals/layouts/rwd-fundamentals/
     -
       title: Non costringere gli utenti al pinch-to-zoom
@@ -100,16 +100,16 @@ list:
       title: Assicurati che le immagini prodotto siano espandibili
       link: /web/fundamentals/media/images/images-in-markup.html#make-product-images-expandable
     -
-      title: Comunica agli utenti l`orientamento migliore
+      title: Comunica agli utenti l'orientamento migliore
       link: orientation-works-best.html
     -
-      title: Mantieni l`utente in una finestra unica del browser
+      title: Mantieni l'utente in una finestra unica del browser
       link: /web/fundamentals/layouts/principles/single-browser.html
     -
-      title: Evita il labeling `full site`
+      title: Evita il labeling 'full site'
       link: /web/fundamentals/layouts/principles/avoid-full-site-labeling.html
     -
-      title: Specifica perché l`utente deve inserire un recapito
+      title: Specifica perché l'utente deve inserire un recapito
       link: /web/fundamentals/device-access/user-location/user-consent.html#always-request-access-to-location-on-a-user-gesture
 
 ---

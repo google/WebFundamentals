@@ -13,23 +13,23 @@ authors:
   - samdutton
 key-takeaways:
   add-a-video:
-    - Utilizza l`elemento video per caricare, decodificare e riprodurre video sul tuo sito.
-    - Crea video in più formati che coprano un`ampia gamma di piattaforme mobili.
+    - Utilizza l'elemento video per caricare, decodificare e riprodurre video sul tuo sito.
+    - Crea video in più formati che coprano un'ampia gamma di piattaforme mobili.
     - Ridimensiona correttamente i video e assicurati che non superino le capacità dei relativi contenitori.
-    - Dato che l`accessibilità è importante, aggiungi l`elemento traccia come una componente dell`elemento video.
+    - Dato che l'accessibilità è importante, aggiungi l'elemento traccia come una componente dell'elemento video.
 remember:
   media-fragments:
     - La Media Fragments API è supportata dalla maggior parte delle piattaforme, eccetto iOS.
     - Assicurati che le richieste di intervallo siano supportate dal tuo server. Le richieste di intervallo sono attivate per impostazione predefinita nella maggior parte dei server; tuttavia, alcuni servizi di hosting potrebbero disabilitarle.
   dont-overflow:
-    - Non modificare la dimensione dell`elemento in modo tale che non rispetti le proporzioni del video originale. Lo schiacciamento e l`allungamento creano un effetto sgradevole.
+    - Non modificare la dimensione dell'elemento in modo tale che non rispetti le proporzioni del video originale. Lo schiacciamento e l'allungamento creano un effetto sgradevole.
   accessibility-matters:
-    - L`elemento traccia è supportato da Chrome per Android, Safari  per iOS e tutti gli attuali browser su desktop, eccetto Firefox (vedi <a href="http://caniuse.com/track" title="Stato supporto elemento traccia">caniuse.com/track</a>). Sono disponibili anche diversi polyfill. Si consiglia di utilizzare <a href='//www.delphiki.com/html5/playr/' title='Polyfill elemento traccia Playr'>Playr</a> o <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
+    - L'elemento traccia è supportato da Chrome per Android, Safari  per iOS e tutti gli attuali browser su desktop, eccetto Firefox (vedi <a href="http://caniuse.com/track" title="Stato supporto elemento traccia">caniuse.com/track</a>). Sono disponibili anche diversi polyfill. Si consiglia di utilizzare <a href='//www.delphiki.com/html5/playr/' title='Polyfill elemento traccia Playr'>Playr</a> o <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
   construct-video-streams:
     - MSE è supportato da Chrome e Opera su Android, Internet Explorer 11 e Chrome per desktop, con supporto pianificato per <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Sequenza temporale di implementazione MSE Firefox'>Firefox</a>.
   optimize:
     - <a href="../images/">Immagini</a>
-    - <a href="../../performance/optimizing-content-efficiency/">Ottimizzazione dell`efficienza nei contenuti</a>
+    - <a href="../../performance/optimizing-content-efficiency/">Ottimizzazione dell'efficienza nei contenuti</a>
 ---
 
 {% wrap content%}

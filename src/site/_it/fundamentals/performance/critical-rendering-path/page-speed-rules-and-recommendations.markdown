@@ -23,7 +23,7 @@ Le risorse JavaScript bloccano il parser per impostazione predefinita, a meno ch
 
 ### **Preferire le risorse async di JavaScript**
 
-Le risorse async sbloccano il parser del documento e consentono al browser di evitare il blocco di CSSOM prima dell`esecuzione dello script. Spesso, se lo script può essere reso async significa anche che non è essenziale per il primo rendering; considera dunque il caricamento degli script async dopo il rendering iniziale.
+Le risorse async sbloccano il parser del documento e consentono al browser di evitare il blocco di CSSOM prima dell'esecuzione dello script. Spesso, se lo script può essere reso async significa anche che non è essenziale per il primo rendering; considera dunque il caricamento degli script async dopo il rendering iniziale.
 
 ### **Rinvio analisi JavaScript**
 
@@ -37,17 +37,17 @@ Il JavaScript a esecuzione prolungata impedisce al browser di costruire DOM, CSS
 
 CSS è necessario per la costruzione della struttura di rendering e spesso JavaScript bloccherà CSS durante la costruzione iniziale della pagina. Devi assicurarti che qualsiasi CSS non essenziale sia indicato come non critico (ad esempio query di stampa e di altri supporti) e che la quantità di CSS critico e il tempo per fornirlo siano il minimo possibile.
 
-### **Inserimento CSS nell`intestazione del documento**
+### **Inserimento CSS nell'intestazione del documento**
 
-Tutte le risorse CSS devono essere specificate il prima possibile all`interno del documento HTML, così che il browser possa rilevare i tag `<link>` e inviare la richiesta per CSS il prima possibile.
+Tutte le risorse CSS devono essere specificate il prima possibile all'interno del documento HTML, così che il browser possa rilevare i tag `<link>` e inviare la richiesta per CSS il prima possibile.
 
 ### **Evitare importazioni CSS**
 
-La direttiva dell`importazione CSS (@import) consente a un foglio di stile di importare le regole da un altro foglio di stile. Tuttavia, queste direttive devono essere evitate perché inseriscono altri roundtrip nel percorso critico: le risorse CSS importate sono individuate solo dopo che è stato ricevuto e analizzato il foglio di stile CSS con la regola @import.
+La direttiva dell'importazione CSS (@import) consente a un foglio di stile di importare le regole da un altro foglio di stile. Tuttavia, queste direttive devono essere evitate perché inseriscono altri roundtrip nel percorso critico: le risorse CSS importate sono individuate solo dopo che è stato ricevuto e analizzato il foglio di stile CSS con la regola @import.
 
 ### **CSS con blocco rendering inline**
 
-Per prestazioni migliori, potresti voler considerare l`incorporamento del CSS critico direttamente nel documento HTML. Questo elimina roundtrip aggiuntivi nel percorso critico e, se eseguiti correttamente, possono essere utilizzati per fornire una lunghezza del percorso critico a `unico roundtrip` dove solo l`HTML è una risorsa che blocca.
+Per prestazioni migliori, potresti voler considerare l'incorporamento del CSS critico direttamente nel documento HTML. Questo elimina roundtrip aggiuntivi nel percorso critico e, se eseguiti correttamente, possono essere utilizzati per fornire una lunghezza del percorso critico a 'unico roundtrip' dove solo l'HTML è una risorsa che blocca.
 
 {% include modules/nextarticle.liquid %}
 

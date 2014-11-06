@@ -2,7 +2,7 @@
 layout: article
 title: "Ottimizza i tuoi annunci"
 description: "Ottimizzare il tuo sito e gli annunci che vengono visualizzati, può migliorare la qualità degli annunci visualizzati e aumentare i tuoi ricavi potenziali."
-introduction: "Ottimizzare i tuoi annunci e il tuo sito è fondamentale per raggiungere il successo. L`ottimizzazione ti consente di aumentare le tue entrate derivanti dagli annunci, migliorare l`usabilità del tuo sito e aumentarne il traffico, inoltre, ti permette di raggiungere gli obbiettivi che ti sei preposto."
+introduction: "Ottimizzare i tuoi annunci e il tuo sito è fondamentale per raggiungere il successo. L'ottimizzazione ti consente di aumentare le tue entrate derivanti dagli annunci, migliorare l'usabilità del tuo sito e aumentarne il traffico, inoltre, ti permette di raggiungere gli obbiettivi che ti sei preposto."
 article:
   written_on: 2014-08-12
   updated_on: 2014-08-12
@@ -24,7 +24,7 @@ key-takeaways:
 {% wrap content %}
 
 Desideri ottenere risultati migliori con gli annunci AdSense, assicurarti di dare ai tuoi utenti ciò che desiderano e, allo stesso tempo, ottenere ciò che desideri? Hai bisogno di ispirazione?
-Dai un`occhiata ai consigli degli specialisti AdSense che hanno lavorato con publisher di ogni dimensione.
+Dai un'occhiata ai consigli degli specialisti AdSense che hanno lavorato con publisher di ogni dimensione.
 
 <b>Nota:</b> il presente articolo si focalizza su AdSense, ma i concetti si applicano a tutti i provider di pubblicità.
 
@@ -39,8 +39,8 @@ Utilizza lo scorecard <b>[Home](https://www.google.com/adsense/app#home)</b> nel
 Lo scorecard è suddiviso in diverse categorie (ottimizzazione entrate, buono stato del sito e così via) e fornisce un punteggio da uno a cinque punti blu. Ogni punteggio indica il posizionamento riferito ad altri publisher in quella specifica categoria. Un punteggio basso, in una categoria specifica, significa che ci sono potenziali aree di miglioramento, tuttavia, presta speciale attenzione agli elementi segnalati con un punto esclamativo rosso o giallo.
 
 <figure>
-  <img src="images/optimization_score.png" alt="Scorecard per l`ottimizzazione delle entrate">
-  <figcaption>Scorecard per l`ottimizzazione delle entrate</figcaption>
+  <img src="images/optimization_score.png" alt="Scorecard per l'ottimizzazione delle entrate">
+  <figcaption>Scorecard per l'ottimizzazione delle entrate</figcaption>
 </figure>
 
 <figure>
@@ -56,13 +56,13 @@ Lo scorecard è suddiviso in diverse categorie (ottimizzazione entrate, buono st
 
 
 La <b>casella Consigli</b> nella scheda [Home](https://www.google.com/adsense/app#home) offre consigli su come modificare il tuo sito per aumentare le entrate. 
-Questi consigli si basano sull`analisi dei risultati dei consigli implementati recentemente da altri publisher AdSense e, vengono forniti quando c`è una solida fiducia in un aumento di rendimento.
+Questi consigli si basano sull'analisi dei risultati dei consigli implementati recentemente da altri publisher AdSense e, vengono forniti quando c'è una solida fiducia in un aumento di rendimento.
 
 {% include modules/remember.liquid title="Learn more" text="Fai riferimento alla guida AdSense <a href='https://support.google.com/adsense/answer/3006004'>per informazioni sullo scorecard</a> e <a href='https://support.google.com/adsense/answer/1725006'>per la casella Consigli</a>." %}
 
 ## Utilizza i rapporti sul rendimento
 
-Utilizza la scheda AdSense Google <b>[Rapporti sul rendimento](https://www.google.com/adsense/app#viewreports)</b> per visualizzare i tuoi ricavi, cosa incide su di essi e i relativi grafici sull`andamento nel tempo.
+Utilizza la scheda AdSense Google <b>[Rapporti sul rendimento](https://www.google.com/adsense/app#viewreports)</b> per visualizzare i tuoi ricavi, cosa incide su di essi e i relativi grafici sull'andamento nel tempo.
 
 Utilizza i seguenti rapporti per iniziare:
 
@@ -117,7 +117,7 @@ Oltre ai rapporti di rendimento, AdSense ti può offrire tramite email consigli 
 
 ## Massimizza il potenziale di partecipazione alle aste
 
-Maggiore è la competizione o la `pressione delle aste`, più gli inserzionisti saranno disposti a pagare per essere visualizzati e cliccati sul tuo sito. Per massimizzare il tuo potenziale di partecipazione alle aste:
+Maggiore è la competizione o la 'pressione delle aste', più gli inserzionisti saranno disposti a pagare per essere visualizzati e cliccati sul tuo sito. Per massimizzare il tuo potenziale di partecipazione alle aste:
 
 * Assicurati di poter consentire sia annunci di [testo](https://support.google.com/adsense/answer/185665), sia [annunci display](https://support.google.com/adsense/answer/185666). Escludere un tipo di annuncio, limita il numero di inserzionisti a tua disposizione.
 * Utilizza dimensioni annuncio apprezzate dagli inserzionisti; vedi la [Guida alle dimensioni annuncio](https://support.google.com/adsense/answer/6002621).
@@ -130,7 +130,7 @@ Maggiore è la competizione o la `pressione delle aste`, più gli inserzionisti 
 Verifica che il file [robots.txt](https://support.google.com/webmasters/answer/6062608), sul tuo sito, [non blocchi il crawler AdSense](https://support.google.com/adsense/answer/10532).
 AdSense deve poter processare e indicizzare il contenuto delle pagine web e utilizza il crawler AdSense per visitare il tuo sito e determinare il suo contenuto.  In questo modo, AdSense fornisce annunci pertinenti.
 
-Per aggiornare il file `robots.txt` in modo da garantire l`accesso del crawler AdSense alle tue pagine, *rimuovi* le seguenti due righe di testo dal tuo `robots.txt`:
+Per aggiornare il file `robots.txt` in modo da garantire l'accesso del crawler AdSense alle tue pagine, *rimuovi* le seguenti due righe di testo dal tuo `robots.txt`:
 
     User-agent: Mediapartners-Google
     Disallow: /

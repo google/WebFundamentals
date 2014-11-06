@@ -16,18 +16,18 @@ key-takeaways:
     - Utilizza i meta viewport tag per controllare larghezza e scala dei viewport dei browser.
     - Inserisci <code>width=device-width</code> per ottenere una corrispondenza con la larghezza dello schermo in pixel indipendenti dal dispositivo.
     - Inserisci <code>initial-scale=1</code> per stabilire una relazione 1:1 fra i pixel del CSS e quelli indipendenti dal dispositivo.
-    - Controlla l`accessibilità della pagina senza disabilitare l`opzione di scalabilità dell`utente.
+    - Controlla l'accessibilità della pagina senza disabilitare l'opzione di scalabilità dell'utente.
   size-content-to-vp:
     - Non utilizzare elementi di grandi dimensioni e larghezza fissa.
     - La resa ottimale dei contenuti non deve essere legata alla larghezza di un viewport specifico.
     - Utilizza i media query CSS per applicare diversi stili per gli schermi ampi e ristretti.
   media-queries:
     - Puoi usare le media query per applicare gli stili in base alle caratteristiche del dispositivo.
-    - Utilizza <code>min-width</code> al posto di <code>min-device-width</code> per ottenere un`esperienza adatta al maggior numero di dispositivi possibile.
+    - Utilizza <code>min-width</code> al posto di <code>min-device-width</code> per ottenere un'esperienza adatta al maggior numero di dispositivi possibile.
     - Usa dimensioni relative degli elementi per evitare interruzioni della disposizione.
   choose-breakpoints:
     - Crea breakpoint in base ai contenuti e non a dispositivi, prodotti o brand specifici.
-    - Progetta per i dispositivi mobili più piccoli, quindi incrementa l`esperienza con la progressiva disponibilità di spazio su schermo.
+    - Progetta per i dispositivi mobili più piccoli, quindi incrementa l'esperienza con la progressiva disponibilità di spazio su schermo.
     - Mantieni le linee di testo a un massimo di 70 o 80 caratteri.
 remember:
   use-commas:
@@ -61,7 +61,7 @@ shortlinks:
   <iframe src="https://www.youtube.com/embed/oK09n_PGhTo?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-I formati dello schermo utilizzati da telefoni, `phablet`, tablet, desktop, console per videogiochi, TV e dispositivi indossabili sono molteplici. I formati dello schermo sono in continua evoluzione ed è quindi importante creare un sito capace di adattarsi a qualsiasi formato futuro.
+I formati dello schermo utilizzati da telefoni, 'phablet', tablet, desktop, console per videogiochi, TV e dispositivi indossabili sono molteplici. I formati dello schermo sono in continua evoluzione ed è quindi importante creare un sito capace di adattarsi a qualsiasi formato futuro.
 
 {% link_sample _code/weather.html %}
   <video autoplay loop controls class="responsiveVideo">

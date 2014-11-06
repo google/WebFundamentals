@@ -15,18 +15,18 @@ key-takeaways:
     - Utilizza i meta viewport tag per controllare larghezza e scala dei viewport dei browser.
     - Inserisci <code>width=device-width</code> per ottenere una corrispondenza con la larghezza dello schermo in pixel indipendenti dal dispositivo.
     - Inserisci <code>initial-scale=1</code> per stabilire una relazione 1:1 fra i pixel del CSS e quelli indipendenti dal dispositivo.
-    - Controlla l`accessibilità della pagina senza disabilitare l`opzione di scalabilità dell`utente.
+    - Controlla l'accessibilità della pagina senza disabilitare l'opzione di scalabilità dell'utente.
   size-content-to-vp:
     - Non utilizzare elementi di grandi dimensioni e larghezza fissa.
     - La resa ottimale dei contenuti non deve essere legata alla larghezza di un viewport specifico.
     - Utilizza i media query CSS per applicare diversi stili per gli schermi ampi e ristretti.
   media-queries:
     - Puoi usare le media query per applicare gli stili in base alle caratteristiche del dispositivo.
-    - Utilizza <code>min-width</code> al posto di <code>min-device-width</code> per ottenere un`esperienza adatta al maggior numero di dispositivi possibile.
+    - Utilizza <code>min-width</code> al posto di <code>min-device-width</code> per ottenere un'esperienza adatta al maggior numero di dispositivi possibile.
     - Usa dimensioni relative degli elementi per evitare interruzioni della disposizione.
   choose-breakpoints:
     - Crea breakpoint in base ai contenuti e non a dispositivi, prodotti o brand specifici.
-    - Progetta per i dispositivi mobili più piccoli, quindi incrementa l`esperienza con la progressiva disponibilità di spazio su schermo.
+    - Progetta per i dispositivi mobili più piccoli, quindi incrementa l'esperienza con la progressiva disponibilità di spazio su schermo.
     - Mantieni le linee di testo a un massimo di 70 o 80 caratteri.
 remember:
   use-commas:
@@ -61,7 +61,7 @@ remember:
 
 Progetta i contenuti in funzione degli schermi di piccole dimensioni, quindi espandi lo schermo fino al punto in cui occorre inserire un breakpoint. Così facendo, puoi ottimizzare i breakpoint in base ai contenuti e ridurne il numero.
 
-Passiamo all`esempio preso in esame all`inizio, le [previsioni del tempo]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
+Passiamo all'esempio preso in esame all'inizio, le [previsioni del tempo]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
 Innanzitutto, occorre conferire un aspetto gradevole alle previsioni su schermo.
 
 <figure>
@@ -74,11 +74,11 @@ Quindi, ridimensiona lo schermo fino a visualizzare un eccesso di spazio bianco 
 
 <figure>
   {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Anteprima delle previsioni del tempo con l`aumento dell`ampiezza della pagina.">
+    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Anteprima delle previsioni del tempo con l'aumento dell'ampiezza della pagina.">
   {% endlink_sample %}
 </figure>
 
-Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per il browser con dimensioni massime di 600 pixel e l`altro per le dimensioni superiori ai 600 pixel.
+Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per il browser con dimensioni massime di 600 pixel e l'altro per le dimensioni superiori ai 600 pixel.
 
 {% include_code _code/weather-2.html mqweather2 %}
 
@@ -118,22 +118,22 @@ Secondo la teoria classica della leggibilità, una colonna dovrebbe contenere da
 
 <div class="clear">
   <div class="g-wide--1 g-medium--half">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Prima dell`aggiunta di breakpoint minori.">
+    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Prima dell'aggiunta di breakpoint minori.">
   </div>
 
   <div class="g-wide--3 g-wide--last g-medium--half g--last">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Dopo l`aggiunta di breakpoint minori.">
+    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Dopo l'aggiunta di breakpoint minori.">
   </div>
 </div>
 
-Osserviamo attentamente il post del blog dell`esempio precedente. Su schermi piccoli, il carattere Roboto a 1 em offre una resa ottimale con 10 parole per linea, anche se con schermi più grandi occorre un breakpoint. In questo caso, con una larghezza del browser superiore a 575 pixel, la larghezza ideale dei contenuti è di 550 pixel.
+Osserviamo attentamente il post del blog dell'esempio precedente. Su schermi piccoli, il carattere Roboto a 1 em offre una resa ottimale con 10 parole per linea, anche se con schermi più grandi occorre un breakpoint. In questo caso, con una larghezza del browser superiore a 575 pixel, la larghezza ideale dei contenuti è di 550 pixel.
 
 {% include_code _code/reading.html mqreading css %}
 
 ## Mai nascondere completamente i contenuti
 
 Attenzione alla scelta dei contenuti da nascondere o visualizzare in base al formato dello schermo.
-Non nascondere i contenuti solo a causa dell`impossibilità di inserirli su schermo: il formato dello schermo non offre un`indicazione definitiva dei desideri di un utente. Ad esempio, l`eliminazione del conteggio dei pollini dalle previsioni del tempo potrebbe costituire un problema grave per le persone con allergie stagionali in cerca di informazioni per uscire all`aperto.
+Non nascondere i contenuti solo a causa dell'impossibilità di inserirli su schermo: il formato dello schermo non offre un'indicazione definitiva dei desideri di un utente. Ad esempio, l'eliminazione del conteggio dei pollini dalle previsioni del tempo potrebbe costituire un problema grave per le persone con allergie stagionali in cerca di informazioni per uscire all'aperto.
 
 
 {% include modules/nextarticle.liquid %}

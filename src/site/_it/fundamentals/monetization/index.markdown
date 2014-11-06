@@ -1,8 +1,8 @@
 ---
 layout: landing
 title: "Monetizzazione"
-description: "Apprendi come massimizzare le entrate su qualsiasi dispositivo. Migliora l`esperienza dell`utente e ottieni introiti."
-introduction: "Apprendi come massimizzare le entrate su qualsiasi dispositivo. Migliora l`esperienza dell`utente e ottieni introiti."
+description: "Apprendi come massimizzare le entrate su qualsiasi dispositivo. Migliora l'esperienza dell'utente e ottieni introiti."
+introduction: "Apprendi come massimizzare le entrate su qualsiasi dispositivo. Migliora l'esperienza dell'utente e ottieni introiti."
 snippet: "Massimizza i tuoi ricavi potenziali su qualsiasi dispositivo."
 article:
   written_on: 2014-05-29
