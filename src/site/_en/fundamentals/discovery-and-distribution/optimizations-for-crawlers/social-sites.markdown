@@ -72,7 +72,9 @@ many methods to parse a page and understand it's content. By using
 search engines to better understand the contents of the page.
 
 Here's an example:
+
 {% include_code _code/social-sites.html microdata %}
+
 While most metadata are embedded in the head section of a webpage, microdata
 lives where the context exists.
 
@@ -114,7 +116,22 @@ In order to validate rich snippets on Google+, you can use tools such as:
 The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
 metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
-{% include_code _code/social-sites.html ogp %}
+
+{% highlight html %}
+<html prefix="g: http://ogp.me/ns#">
+  <head>
+    <meta property="og:title" content="Enjoy Fireworks">
+    <meta property="og:description" content="Fireworks are beautiful.">
+    <meta property="og:image" content="https://example.com/fireworks.png">
+    <meta property="og:url" content="https://example.com/fireworks.html">
+    <meta property="og:type" content="website">
+{% endhighlight %}
+
+{% link_sample_button _code/social-sites.html %}
+{{ 'try_sample' | localize_string }}
+{% endlink_sample_button %}
+
+
 When included in the head section of your page, this metadata is used for rich
 snippet information when the page is shared.
 
@@ -187,7 +204,21 @@ contain a meta tag that has `twitter:card` as `name` attribute instead of
   
 Here's a quick example:
 
-{% include_code _code/social-sites.html twitter %}
+{% highlight html %}
+<html prefix="g: http://ogp.me/ns#">
+  <head>
+    <meta property="og:title" content="Enjoy Fireworks">
+    <meta property="og:description" content="Fireworks are beautiful. This ...">
+    <meta property="og:image" content="https://example.com/fireworks.png">
+    <meta property="og:url" content="https://example.com/fireworks.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="agektmr">
+{% endhighlight %}
+
+{% link_sample_button _code/social-sites2.html %}
+{{ 'try_sample' | localize_string }}
+{% endlink_sample_button %}
 
 By assigning Twitter id as content of twitter:site, Twitter embeds it to the
 shared post so people can easily engage with the page owner.
@@ -207,7 +238,39 @@ In order to validate your markup, Twitter provides:
 ## The Best Practice
 Given all three options, the best thing you can do is to include all efficiently
 in your webpage. Here's an example:
-{% include_code _code/social-sites2.html best_practice %}
+
+{% highlight html %}
+<!-- namespace declaration -->
+<html prefix="og: http://ogp.me/ns#">
+  <!-- define microdata scope and type -->
+  <head itemscope itemtype="http://schema.org/Article">
+    <title>Enjoy Fireworks</title>
+    <!-- define ogp and itemprop of microdata in one line -->
+    <meta property="og:title" itemprop="name" content="Enjoy Fireworks">
+    <!-- define ogp image -->
+    <meta property="og:image" content="https://example.com/fireworks.png">
+    <!-- use link[href] to define image url for microdata -->
+    <link itemprop="image" href="//example.com/fireworks.png">
+    <!-- define ogp and itemprop of microdata in one line -->
+    <meta property="og:url" content="//example.com/fireworks.html">
+    <!-- define ogp type -->
+    <meta property="og:type" content="website">
+    <!-- define twitter cards type -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- define site's owner twitter id -->
+    <meta name="twitter:site" content="agektmr">
+    <!-- define description for ogp and itemprop of microdata in one line -->
+    <meta property="og:description" itemprop="description"
+      content="Fireworks are beautiful. Fireworks make loud bangs!">
+    <!-- general description (separate with ogp and microdata) -->
+    <meta name="description" 
+      content="Fireworks are beautiful and are very loud!">
+{% endhighlight %}
+
+{% link_sample_button _code/social-sites2.html %}
+{{ 'try_sample' | localize_string }}
+{% endlink_sample_button %}
+
 Notice that microdata and OGP share some markups:
 
 * `itemscope` is located at `head` tag
