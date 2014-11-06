@@ -21,7 +21,7 @@ key-takeaways:
     - "Sayfa ve metin olusturma performansini iyilestirmek için biçimsel yazi tipi çesitlerinin sayisini azaltin"
   font-crp:
     - "Yazi tipi istekleri, olusturma agaci olusturuluncaya kadar geciktirilir. Bu, metin olusturmasinin gecikmesine neden olabilir"
-    - "Yazi Tipi Yükleme API`si, varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilan özel yazi tipi yükleme ve olusturma stratejileri uygulamamiza olanak tanir"
+    - "Yazi Tipi Yükleme API'si, varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilan özel yazi tipi yükleme ve olusturma stratejileri uygulamamiza olanak tanir"
     - "Yazi tipini satir içinde kullanma, eski tarayicilardaki varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilmamiza olanak tanir"
 
 notes:
@@ -38,9 +38,9 @@ notes:
   synthesis:
     - "En iyi tutarlilik ve görsel sonuçlar için yazi tipi sentezine güvenmemeniz gerekir. Bunun yerine, kullanilan yazi tipi çesitlerinin sayisini en aza indirin ve konumlarini belirtin. Bu sekilde, tarayici sayfada kullanildiklarinda bunlari indirebilir. Bununla birlikte, bazi durumlarda sentezlenmis bir çesit <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>uygun bir seçenek olabilir</a>; bunu kullanirken dikkatli olun."
   webfontloader:
-    - "Yazi Tipi Yükleme API`si <a href='http://caniuse.com/#feat=font-loading'>bazi tarayicilarda hâlâ gelistirme asamasindadir</a>. Benzer bir islevsellik saglamak için <a href='https://github.com/bramstein/fontloader'>FontLoader çoklu dolgusunu</a> veya <a href='https://github.com/typekit/webfontloader'>webfontloader kitapligini</a> kullanmayi düsünebilirsiniz; ancak bunlar, bir JavaScript bagimliligi ek yükü de getirir."
+    - "Yazi Tipi Yükleme API'si <a href='http://caniuse.com/#feat=font-loading'>bazi tarayicilarda hâlâ gelistirme asamasindadir</a>. Benzer bir islevsellik saglamak için <a href='https://github.com/bramstein/fontloader'>FontLoader çoklu dolgusunu</a> veya <a href='https://github.com/typekit/webfontloader'>webfontloader kitapligini</a> kullanmayi düsünebilirsiniz; ancak bunlar, bir JavaScript bagimliligi ek yükü de getirir."
   font-inlining: 
-    - "Satir içi kullanirken seçici olun! @font-face kuralinin geç yükleme davranisini kullanma nedeninin, gereksiz yazi tipi çesitlerini ve alt kümelerini indirmekten kaçinmak oldugunu unutmayin. Ayrica, CSS dosyanizin boyutunu agresif satir içi kullanimla büyütmek <a href='/web/fundamentals/performance/critical-rendering-path/'>kritik olusturma yolunuzu</a> olumsuz bir sekilde etkiler. Tarayicinin CSSOM`yi, olusturma agacini ve ekranda sayfa içerigini olusturmadan önce tüm CSS`yi indirmesi gerekir."
+    - "Satir içi kullanirken seçici olun! @font-face kuralinin geç yükleme davranisini kullanma nedeninin, gereksiz yazi tipi çesitlerini ve alt kümelerini indirmekten kaçinmak oldugunu unutmayin. Ayrica, CSS dosyanizin boyutunu agresif satir içi kullanimla büyütmek <a href='/web/fundamentals/performance/critical-rendering-path/'>kritik olusturma yolunuzu</a> olumsuz bir sekilde etkiler. Tarayicinin CSSOM'yi, olusturma agacini ve ekranda sayfa içerigini olusturmadan önce tüm CSS'yi indirmesi gerekir."
 ---
 
 {% wrap content%}
@@ -57,13 +57,13 @@ Web yazi tipi, gliflerden olusan bir koleksiyondur ve her bir glif, bir harfi ve
 
 <img src="images/glyphs.png" class="center" alt="Yazi tipi glif tablosu">
 
-Bir yazi tipi seçerken hangi karakter kümelerinin desteklendigine dikkat edilmesi önem tasir. Sayfa içeriginizi birden çok dile yerellestirmeniz gerekiyorsa kullanicilariniza tutarli bir görünüm ve deneyim saglayabilecek bir yazi tipi kullanmaniz gerekir. Örnegin, [Google`in Noto yazi tipi ailesi](https://www.google.com/get/noto/) dünyadaki tüm dilleri desteklemeyi amaçlar. Ancak, Noto'nun toplam boyutunun tüm diller dahil oldugunda 130 MB üzerinde bir ZIP indirmesi oldugunu unutmayin! 
+Bir yazi tipi seçerken hangi karakter kümelerinin desteklendigine dikkat edilmesi önem tasir. Sayfa içeriginizi birden çok dile yerellestirmeniz gerekiyorsa kullanicilariniza tutarli bir görünüm ve deneyim saglayabilecek bir yazi tipi kullanmaniz gerekir. Örnegin, [Google'in Noto yazi tipi ailesi](https://www.google.com/get/noto/) dünyadaki tüm dilleri desteklemeyi amaçlar. Ancak, Noto'nun toplam boyutunun tüm diller dahil oldugunda 130 MB üzerinde bir ZIP indirmesi oldugunu unutmayin! 
 
-Açik bir biçimde, tipografinin performansi engellememesi için web`de yazi tiplerini kullanirken dikkatli bir mühendislik çalismasi gerekir. Neyse ki web platformu gerekli tüm temel ögeleri saglar ve bu kilavuzun geri kalaninda, her ikisinden de en iyi sekilde nasil yararlanacagimiza uygulamali bir sekilde bakacagiz.
+Açik bir biçimde, tipografinin performansi engellememesi için web'de yazi tiplerini kullanirken dikkatli bir mühendislik çalismasi gerekir. Neyse ki web platformu gerekli tüm temel ögeleri saglar ve bu kilavuzun geri kalaninda, her ikisinden de en iyi sekilde nasil yararlanacagimiza uygulamali bir sekilde bakacagiz.
 
 ### Web yazi tipi biçimleri
 
-Bugün web`de dört yazi tipi kapsayici biçimi kullanilmaktadir: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) ve [WOFF2](http://www.w3.org/TR/WOFF2/). Ne yazik ki çok çesitli seçenekler olmasina ragmen, tüm eski ve yeni tarayicilarda çalisan tek bir evrensel biçim yoktur: EOT [yalnizca IE'de çalisir](http://caniuse.com/#feat=eot), TTF [IE'de kismen desteklenir](http://caniuse.com/#search=ttf), WOFF en genis destegi alir, ancak [bazi eski tarayicilarda kullanilamaz](http://caniuse.com/#feat=woff) ve WOFF 2.0 destegi [üzerinde birçok tarayicinin çalismalari devam etmektedir](http://caniuse.com/#feat=woff2).
+Bugün web'de dört yazi tipi kapsayici biçimi kullanilmaktadir: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) ve [WOFF2](http://www.w3.org/TR/WOFF2/). Ne yazik ki çok çesitli seçenekler olmasina ragmen, tüm eski ve yeni tarayicilarda çalisan tek bir evrensel biçim yoktur: EOT [yalnizca IE'de çalisir](http://caniuse.com/#feat=eot), TTF [IE'de kismen desteklenir](http://caniuse.com/#search=ttf), WOFF en genis destegi alir, ancak [bazi eski tarayicilarda kullanilamaz](http://caniuse.com/#feat=woff) ve WOFF 2.0 destegi [üzerinde birçok tarayicinin çalismalari devam etmektedir](http://caniuse.com/#feat=woff2).
 
 Peki bu bizim açimizdan ne anlama geliyor? Tüm tarayicilarda çalisan tek bir biçimin olmamasi, tutarli bir deneyim saglamak için birden çok biçim saglamamiz gerektigi anlamina gelir:
 
@@ -124,7 +124,7 @@ Her bir @font-face bildirimi, yazi tipi ailesinin adini saglar. Yazi tipi ailesi
 Ilk olarak, yukaridaki örnekte iki stili (normal ve _italic_) olan tek bir _Awesome Font_ ailesinin tanimlandigina ve her bir stilin farkli bir yazi tipi kaynak kümesini isaret ettigine dikkat edin. Dolayisiyla, her bir `src` tanimlayicisi öncelikli, virgülle ayrilmis bir kaynak çesitleri listesi içerir: 
 
 * `local()` yönergesi, yerel olarak yüklenmis yazi tiplerine basvuruda bulunmamiza, bunlari yüklememize ve kullanmamiza olanak tanir.
-* `url()` yönergesi, harici yazi tiplerini yüklememize olanak tanir ve saglanan URL`nin basvuruda bulundugu yazi tipinin biçimini belirten, istege bagli bir `format()` ipucu içermesine izin verilir.
+* `url()` yönergesi, harici yazi tiplerini yüklememize olanak tanir ve saglanan URL'nin basvuruda bulundugu yazi tipinin biçimini belirten, istege bagli bir `format()` ipucu içermesine izin verilir.
 
 ^
 {% include modules/remember.liquid title="Note" list=page.notes.local-fonts %}
@@ -274,9 +274,9 @@ Yazi tiplerinin geç yüklenmesi, metin olusturmayi geciktirebilecek önemli bir
 <img src="images/font-crp.png" class="center" alt="Yazi tipi kritik olusturma yolu">
 
 1. Tarayici HTML dokümanini ister
-2. Tarayici, HTML yanitini ayristirmaya ve DOM`yi olusturmaya baslar
+2. Tarayici, HTML yanitini ayristirmaya ve DOM'yi olusturmaya baslar
 3. Tarayici; CSS, JS ve diger kaynaklari kesfeder ve istekler gönderir
-4. Tarayici, tüm CSS içerigi alindiktan sonra CSSOM`yi olusturur ve olusturma agaci yapimi için bunu DOM agaciyla birlestirir
+4. Tarayici, tüm CSS içerigi alindiktan sonra CSSOM'yi olusturur ve olusturma agaci yapimi için bunu DOM agaciyla birlestirir
   * Yazi tipi istekleri, olusturma agaci sayfada belirtilen metni olusturmak için gereken yazi tipi çesitlerini belirttikten sonra gönderilir
 5. Tarayici yer paylasimini gerçeklestirir ve içerigi ekranda boyar
   * Yazi tipi henüz mevcut degilse, tarayici hiç metin pikseli olusturamaz
@@ -290,9 +290,9 @@ Olusturma agaci olusturulduktan kisa bir süre sonra yapilabilen sayfa içerigin
 
 Farkli olusturma stratejilerini destekleyen ve bunlara karsi olan iyi tartismalar vardir: Bazi kisiler yeni olusturmayi rahatsiz edici bulurken digerleri aninda sonuçlar görmeyi tercih eder ve yazi tipi indirildikten sonra sayfanin yeniden düzenlenmesini önemsemez. Biz burada bu tartismaya girmeyecegiz. Önemli olan nokta, geç yüklemenin bayt sayisini azaltmasi, ancak ayni zamanda metin olusturmasini geciktirme potansiyelinin de olmasidir. Simdi, bu davranisi nasil optimize edebilecegimize bakalim.
 
-### Yazi Tipi Yükleme API`si ile yazi tipi olusturmayi optimize etme
+### Yazi Tipi Yükleme API'si ile yazi tipi olusturmayi optimize etme
 
-[Yazi Tipi Yükleme API`si](http://dev.w3.org/csswg/css-font-loading/), CSS yazi tipi yüzlerinin tanimlanmasi ve kullanilmasi, indirme isleme ilerleme durumunun izlenmesi ve varsayilan geç yükleme davranisinin geçersiz kilinmasi için bir komut dosyasi arayüzü saglar. Örnegin, belirli bir yazi tipi çesidinin gerekeceginden eminsek bunu tanimlayabilir ve tarayiciya, yazi tipi kaynagini hemen getirmeye baslamasini söyleyebiliriz:
+[Yazi Tipi Yükleme API'si](http://dev.w3.org/csswg/css-font-loading/), CSS yazi tipi yüzlerinin tanimlanmasi ve kullanilmasi, indirme isleme ilerleme durumunun izlenmesi ve varsayilan geç yükleme davranisinin geçersiz kilinmasi için bir komut dosyasi arayüzü saglar. Örnegin, belirli bir yazi tipi çesidinin gerekeceginden eminsek bunu tanimlayabilir ve tarayiciya, yazi tipi kaynagini hemen getirmeye baslamasini söyleyebiliriz:
 
 {% highlight javascript %}
 var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {
@@ -327,12 +327,12 @@ En iyisi, sayfadaki farkli içerik için yukaridaki stratejileri karistirip esle
 
 ### Satir içi kullanimla yazi tipi olusturmayi optimize etme
 
-`Bos metin sorunu` nu ortadan kaldirmak üzere Yazi Tipi Yükleme API`sini kullanmaya alternatif basit bir strateji de yazi tipi içerigini bir CSS stil sayfasinda satir içinde kullanmaktir:
+`Bos metin sorunu` nu ortadan kaldirmak üzere Yazi Tipi Yükleme API'sini kullanmaya alternatif basit bir strateji de yazi tipi içerigini bir CSS stil sayfasinda satir içinde kullanmaktir:
 
-* Eslesen medya sorgularina sahip CSS stil sayfalari, CSSOM`yi olusturmak için gerekli olduklarindan tarayici tarafindan yüksek öncelikle otomatik olarak indirilir.
+* Eslesen medya sorgularina sahip CSS stil sayfalari, CSSOM'yi olusturmak için gerekli olduklarindan tarayici tarafindan yüksek öncelikle otomatik olarak indirilir.
 * Yazi tipi verilerinin CSS stil sayfasinda satir içinde kullanilmasi tarayiciyi, yazi tipini yüksek öncelikle ve olusturma agacini beklemeden indirmeye zorlar. Bu yaklasim, varsayilan geç yükleme davranisini el ile geçersiz kilar.
 
-Satir içinde kullanma stratejisi çok esnek degildir ve farkli içerik için özel zaman asimlari veya olusturma stratejileri tanimlamamiza olanak tanimaz, ancak tüm tarayicilarda çalisan basit ve saglam bir çözümdür. En iyi sonuçlar için satir içinde kullanilan yazi tiplerini bagimsiz bir stil sayfasina ayirin ve bunlari uzun bir max-age degeriyle sunun. Bu sekilde, CSS`nizi güncellediginizde ziyaretçileri bu yazi tiplerini yeniden indirmeye zorlamamis olursunuz. 
+Satir içinde kullanma stratejisi çok esnek degildir ve farkli içerik için özel zaman asimlari veya olusturma stratejileri tanimlamamiza olanak tanimaz, ancak tüm tarayicilarda çalisan basit ve saglam bir çözümdür. En iyi sonuçlar için satir içinde kullanilan yazi tiplerini bagimsiz bir stil sayfasina ayirin ve bunlari uzun bir max-age degeriyle sunun. Bu sekilde, CSS'nizi güncellediginizde ziyaretçileri bu yazi tiplerini yeniden indirmeye zorlamamis olursunuz. 
 
 {% include modules/remember.liquid title="Note" list=page.notes.font-inlining %}
 
@@ -340,7 +340,7 @@ Satir içinde kullanma stratejisi çok esnek degildir ve farkli içerik için ö
 
 Yazi tipi kaynaklari genellikle sik güncellenmeyen statik kaynaklardir. Sonuç olarak, uzun bir max-age süre sonu için çok uygundurlar. Tüm yazi tipi kaynaklari için hem bir [kosullu ETag üstbilgisi](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#validating-cached-responses-with-etags) hem de bir [en iyi Cache-Control politikasi](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#cache-control) belirttiginizden emin olun.   
     
-Yazi tiplerinin localStorage içinde veya baska mekanizmalar araciligiyla depolanmasina gerek yoktur. Bunlarin her birinin kendi performans avantajlari vardir. Tarayicinin HTTP önbellegi, Yazi Tipi Yükleme API`si veya webfontloader kitapligiyla birlikte, yazi tipi kaynaklarini tarayiciya teslim etmek için en iyi ve en saglam mekanizmayi saglar.
+Yazi tiplerinin localStorage içinde veya baska mekanizmalar araciligiyla depolanmasina gerek yoktur. Bunlarin her birinin kendi performans avantajlari vardir. Tarayicinin HTTP önbellegi, Yazi Tipi Yükleme API'si veya webfontloader kitapligiyla birlikte, yazi tipi kaynaklarini tarayiciya teslim etmek için en iyi ve en saglam mekanizmayi saglar.
 
 
 ## Optimizasyon kontrol listesi
@@ -353,7 +353,7 @@ Bununla birlikte, denenmemis bir uygulama büyük indirmelere ve gereksiz gecikm
 2. **Yazi tipi kaynaklarinizin alt kümesini olusturun:** Yalnizca belirli bir sayfa için gereken glifleri saglamak üzere birçok yazi tipinin alt kümesi olusturulabilir veya yazi tipleri birden çok unicode araligina bölünebilir. Bu, dosya boyutunu küçültür ve kaynagin indirme hizini iyilestirir. Ancak, alt kümeleri tanimlarken yazi tipi yeniden kullanimi optimizasyonuna dikkat edin. Her sayfada farkli, ancak örtüsen bir karakter kümesini indirmek istemezsiniz. Iyi bir uygulama yazili metne dayali alt küme olusturmaktir (ör. Latin, Kiril vb.).
 3. **Her bir tarayiciya optimize edilmis yazi tipi biçimleri saglayin:** Her bir yazi tipi WOFF2, WOFF, EOT ve TTF biçimlerinde saglanmalidir. EOT ve TTF biçimleri varsayilan olarak sikistirilmadigindan, bu biçimlere GZIP sikistirmasi uyguladiginizdan emin olun.
 4. **Yeniden dogrulama ve en uygun önbellege alma politikalarini belirtin:** Yazi tipleri, sik güncellenmeyen statik kaynaklardir. Farkli sayfalar arasinda verimli yazi tipi yeniden kullanimina imkan tanimak için sunucularinizin uzun ömürlü bir max-age zaman damgasi ve bir yeniden dogrulama belirteci sagladigindan emin olun.
-5. **Kritik Olusturma Yolunu optimize etmek için Yazi Tipi Yükleme API`sini kullanin:** Varsayilan geç yükleme davranisi, metin olusturmasini geciktirebilir. Yazi Tipi Yükleme API`si, belirli yazi tipleri için bu davranisi geçersiz kilmamiza ve sayfadaki farkli içerik için özel olusturma ve zaman asimi stratejileri belirtmemize olanak tanir. API`yi desteklemeyen eski tarayicilarda, webfontloader JavaScript kitapligini veya CSS satir içinde kullanim stratejisini kullanabilirsiniz.
+5. **Kritik Olusturma Yolunu optimize etmek için Yazi Tipi Yükleme API'sini kullanin:** Varsayilan geç yükleme davranisi, metin olusturmasini geciktirebilir. Yazi Tipi Yükleme API'si, belirli yazi tipleri için bu davranisi geçersiz kilmamiza ve sayfadaki farkli içerik için özel olusturma ve zaman asimi stratejileri belirtmemize olanak tanir. API'yi desteklemeyen eski tarayicilarda, webfontloader JavaScript kitapligini veya CSS satir içinde kullanim stratejisini kullanabilirsiniz.
 
 {% endwrap %}
 
