@@ -18,12 +18,12 @@ key-takeaways:
     - Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.
 remember:
   media-fragments:
-    - Medya Parçalari API`si çogu platformda desteklenir, ancak iOS`ta desteklenmez.
+    - Medya Parçalari API'si çogu platformda desteklenir, ancak iOS'ta desteklenmez.
     - Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
   dont-overflow:
     - Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
   accessibility-matters:
-    - Izleme ögesi Android için Chrome`da, iOS Safari`de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
+    - Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
   construct-video-streams:
     - MSE, Android üzerinde Chrome ve Opera, masaüstü için Internet Explorer 11 ve Chrome tarafindan desteklenir ve <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions uygulama zaman çizelgesi'>Firefox</a> için de destek saglanmasi planlanmaktadir.
   optimize:
@@ -51,7 +51,7 @@ remember:
 
 ## Hangi biçimlerin desteklendigini kontrol etme
 
-Hangi video biçimlerinin desteklendigini ögrenmek için `canPlayType()` islevini kullanin. Yöntem; bir `mime-type` ve istege bagli codec`lerden olusan bir dize bagimsiz degiskeni alir ve asagidaki degerlerin birini döndürür:
+Hangi video biçimlerinin desteklendigini ögrenmek için `canPlayType()` islevini kullanin. Yöntem; bir `mime-type` ve istege bagli codec'lerden olusan bir dize bagimsiz degiskeni alir ve asagidaki degerlerin birini döndürür:
 
 <table class="table">
   <thead>
@@ -68,7 +68,7 @@ Hangi video biçimlerinin desteklendigini ögrenmek için `canPlayType()` islevi
     <tr>
       <td data-th="Dönüs degeri"><code>maybe</code></td>
       <td data-th="Açiklama">
-        Kapsayici ve codec`ler destekleniyor olabilir, ancak tarayicinin
+        Kapsayici ve codec'ler destekleniyor olabilir, ancak tarayicinin
         kontrol etmek üzere videonun bir kismini indirmesi gerekiyor.
       </td>
     </tr>
@@ -80,7 +80,7 @@ Hangi video biçimlerinin desteklendigini ögrenmek için `canPlayType()` islevi
   </tbody>
 </table>
 
-Burada bazi `canPlayType()` bagimsiz degisken örneklerini ve Chrome`da çalistirildiklarinda gelen dönüs degerlerini bulabilirsiniz:
+Burada bazi `canPlayType()` bagimsiz degisken örneklerini ve Chrome'da çalistirildiklarinda gelen dönüs degerlerini bulabilirsiniz:
 
 
 <table class="table">
@@ -131,7 +131,7 @@ Ayni videoyu farkli biçimlerde kaydetmenize yardimci olacak çok sayida araç v
 
 Tarayicinin hangi video biçimini seçtigini bilmek ister misiniz?
 
-Kullanilan kaynagi döndürmek için JavaScript`te, videonun `currentSrc` özelligini kullanin.
+Kullanilan kaynagi döndürmek için JavaScript'te, videonun `currentSrc` özelligini kullanin.
 
 Bunu çalisirken görmek için {% link_sample _code/video-main.html %}bu demoya{% endlink_sample %} göz atin: Chrome ve Firefox, `chrome.webm` kaynagini seçerken (bunun, bu tarayicilarin destekledigi olasi kaynaklar listesinde ilk sirada olmasindan kaynaklanir) Safari `chrome.mp4` kaynagini seçer.
 

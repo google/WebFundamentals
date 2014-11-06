@@ -19,12 +19,12 @@ key-takeaways:
     - Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.
 remember:
   media-fragments:
-    - Medya Parçalari API`si çogu platformda desteklenir, ancak iOS`ta desteklenmez.
+    - Medya Parçalari API'si çogu platformda desteklenir, ancak iOS'ta desteklenmez.
     - Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
   dont-overflow:
     - Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
   accessibility-matters:
-    - Izleme ögesi Android için Chrome`da, iOS Safari`de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
+    - Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href="http://caniuse.com/track" title="Izleme ögesi destek durumu">caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
   construct-video-streams:
     - MSE, Android üzerinde Chrome ve Opera, masaüstü için Internet Explorer 11 ve Chrome tarafindan desteklenir ve <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions uygulama zaman çizelgesi'>Firefox</a> için de destek saglanmasi planlanmaktadir.
   optimize:
