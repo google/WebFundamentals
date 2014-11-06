@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Personalizza i tuoi annunci"
-description: "I migliori annunci possono migliorare l`esperienza dell`utente. Mentre il contenuto reale degli annunci proviene dagli inserzionisti, tu ne controlli il tipo di contenuto, il colore, le dimensioni e il posizionamento."
-introduction: "I migliori annunci possono migliorare l`esperienza dell`utente. Mentre il contenuto reale degli annunci proviene dagli inserzionisti, tu ne controlli il tipo di contenuto, il colore, le dimensioni e il posizionamento."
+description: "I migliori annunci possono migliorare l'esperienza dell'utente. Mentre il contenuto reale degli annunci proviene dagli inserzionisti, tu ne controlli il tipo di contenuto, il colore, le dimensioni e il posizionamento."
+introduction: "I migliori annunci possono migliorare l'esperienza dell'utente. Mentre il contenuto reale degli annunci proviene dagli inserzionisti, tu ne controlli il tipo di contenuto, il colore, le dimensioni e il posizionamento."
 article:
   written_on: 2014-07-31
   updated_on: 2014-08-12
@@ -14,9 +14,9 @@ authors:
   - petelepage
 key-takeaways:
   tldr: 
-    - Non posizionare mai annunci all`interno del tuo sito dove potrebbero interferire con l`esperienza mirata all`utente; assicurati che gli annunci nella parte visibile della pagina non rileghino contenuti importanti nella parte inferiore.
+    - Non posizionare mai annunci all'interno del tuo sito dove potrebbero interferire con l'esperienza mirata all'utente; assicurati che gli annunci nella parte visibile della pagina non rileghino contenuti importanti nella parte inferiore.
     - Utilizza sempre unità pubblicitarie reattive; se non bastasse un dimensionamento intelligente, passa alla modalità avanzata.
-    - Cerca di integrare gli annunci all`interno del contenuto per evitare che l`annuncio passi inosservato.
+    - Cerca di integrare gli annunci all'interno del contenuto per evitare che l'annuncio passi inosservato.
     - Scegli stili di testo che si integrino, completino o contrastino con il tuo sito.
 notes:
   targeting:
@@ -24,7 +24,7 @@ notes:
   testing:
     - Testa sempre i tuoi annunci su diversi dispositivi e schermate, per accertarti che ci sia la giusta reattività.
   images:
-    - Gli inserzionisti hanno il pieno controllo di come sono visualizzati i loro annunci display. Puoi influenzare i tipi di annunci display visualizzati sul tuo sito utilizzando il posizionamento e il dimensionamento annunci, ma non puoi controllare il contenuto dell`immagine.
+    - Gli inserzionisti hanno il pieno controllo di come sono visualizzati i loro annunci display. Puoi influenzare i tipi di annunci display visualizzati sul tuo sito utilizzando il posizionamento e il dimensionamento annunci, ma non puoi controllare il contenuto dell'immagine.
 ---
 
 {% wrap content %}
@@ -44,10 +44,10 @@ notes:
 ## Posiziona gli annunci dove gli utenti possono trarre maggior vantaggio
 
 Per decidere dove posizionare gli annunci sul tuo sito
-e quanti annunci includere, concentrati per prima cosa sull`utente.
+e quanti annunci includere, concentrati per prima cosa sull'utente.
 
 * Utilizza gli annunci per aumentare il contenuto del sito e non viceversa.
-* Pagine con annunci eccessivi, annunci che relegano contenuti importanti nella parte inferiore della pagina o raggruppati in maniera da occupare quasi l`intero spazio visualizzabile e, infine, privi di adeguata etichettatura, diminuiscono la soddisfazione dell`utente e sono contro le politiche di AdSense.
+* Pagine con annunci eccessivi, annunci che relegano contenuti importanti nella parte inferiore della pagina o raggruppati in maniera da occupare quasi l'intero spazio visualizzabile e, infine, privi di adeguata etichettatura, diminuiscono la soddisfazione dell'utente e sono contro le politiche di AdSense.
 * Assicurati che gli annunci apportino valore aggiunto agli utenti. Se le unità pubblicitarie diminuiscono sensibilmente le entrate, i clic o le visualizzazioni, molto probabilmente non apportano valore aggiunto agli utenti.
 
 Opzioni di posizionamento campione per annunci per cellulari:
@@ -59,12 +59,12 @@ Per ulteriori informazioni, rivedi le
 
 
 ## Cosa fare se il dimensionamento reattivo non è sufficiente?
-In alcuni casi, potresti dover controllare la modalità di visualizzazione degli annunci, piuttosto che utilizzare semplicemente annunci reattivi. In questo caso, puoi passare alla modalità avanzata e sostituire il dimensionamento intelligente nel codice dell`unità pubblicitaria reattiva. 
+In alcuni casi, potresti dover controllare la modalità di visualizzazione degli annunci, piuttosto che utilizzare semplicemente annunci reattivi. In questo caso, puoi passare alla modalità avanzata e sostituire il dimensionamento intelligente nel codice dell'unità pubblicitaria reattiva. 
 Ad esempio, puoi controllare il dimensionamento esatto degli annunci utilizzando [query supporti]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html):
 
-1. Segui le istruzioni per [creare un`unità pubblicitaria reattiva]({{site.fundamentals}}/monetization/ads/include-ads.html#create-ad-units).
-2. Nella casella relativa all`annuncio, seleziona <strong>Advanced (è richiesta la modifica del codice)</strong> dal menu a discesa Modalità.
-3. Modifica il codice annuncio per impostare le dimensioni esatte dei tuoi annunci, in base al dispositivo dell`utente:
+1. Segui le istruzioni per [creare un'unità pubblicitaria reattiva]({{site.fundamentals}}/monetization/ads/include-ads.html#create-ad-units).
+2. Nella casella relativa all'annuncio, seleziona <strong>Advanced (è richiesta la modifica del codice)</strong> dal menu a discesa Modalità.
+3. Modifica il codice annuncio per impostare le dimensioni esatte dei tuoi annunci, in base al dispositivo dell'utente:
 
 {% highlight html %}
 <style type="text/css">
@@ -100,7 +100,7 @@ Puoi personalizzare ognuno dei seguenti stili negli annunci di testo:
 * Colore sfondo
 * Famiglia di caratteri di testo e dimensione carattere
 * Colore del testo predefinito
-* Colore del testo, specifico per il titolo dell`annuncio
+* Colore del testo, specifico per il titolo dell'annuncio
 * Colore del testo, specifico per URL
 
 ### Come applicare gli stili
@@ -115,10 +115,10 @@ Una volta salvato il nuovo stile, puoi applicarlo a qualsiasi tua
 nuova o già esistente unità pubblicitaria:
 
 1. Vai agli [stili degli annunci](https://www.google.com/adsense/app#myads-springboard/view=AD_STYLES).
-2. Seleziona lo stile dell`annuncio che desideri modificare dalla lista degli <strong>stili degli annunci disponibili per tutti i tuoi prodotti attivi</strong>.
-3. Effettua le modifiche e <strong>salva lo stile dell`annuncio</strong>.
+2. Seleziona lo stile dell'annuncio che desideri modificare dalla lista degli <strong>stili degli annunci disponibili per tutti i tuoi prodotti attivi</strong>.
+3. Effettua le modifiche e <strong>salva lo stile dell'annuncio</strong>.
 
-Quando modifichi uno stile dell`annuncio esistente, tutte le unità pubblicitarie attive che utilizzano quello stile vengono aggiornate automaticamente.
+Quando modifichi uno stile dell'annuncio esistente, tutte le unità pubblicitarie attive che utilizzano quello stile vengono aggiornate automaticamente.
 
 {% include modules/remember.liquid title="Note" list=page.notes.images %}
 

@@ -28,26 +28,26 @@ notes:
   svg:
     - "Tecnicamente esiste anche l'<a href='http://caniuse.com/svg-fonts'>SVG font container</a>, ma non è mai stato supportato né in IE, né in Firefox e non è approvato in Chrome. Di conseguenza, ha un utilizzo limitato e lo ometteremo intenzionalmente nella presente guida."
   zopfli:
-    - "Valuta l`utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>compressione Zopfli</a> per i formati EOT, TTF e WOFF. Zopfli è un compressore compatibile con zlib che offre una riduzione delle dimensioni file ~5% superiore a gzip."
+    - "Valuta l'utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>compressione Zopfli</a> per i formati EOT, TTF e WOFF. Zopfli è un compressore compatibile con zlib che offre una riduzione delle dimensioni file ~5% superiore a gzip."
   local-fonts: 
-    - "A meno che non faccia riferimento a uno dei font di sistema predefiniti, nella realtà è raro che l`utente l`abbia installato localmente, soprattutto su dispositivi mobili, dove è di fatto impossibile `installare` font aggiuntivi. Di conseguenza, dovrai sempre fornire un elenco di percorsi font esterni."
+    - "A meno che non faccia riferimento a uno dei font di sistema predefiniti, nella realtà è raro che l'utente l'abbia installato localmente, soprattutto su dispositivi mobili, dove è di fatto impossibile 'installare' font aggiuntivi. Di conseguenza, dovrai sempre fornire un elenco di percorsi font esterni."
   font-order:
-    - "L`ordine di specifica delle varianti del font ha una data importanza. Il browser sceglierà il primo formato supportato. Di conseguenza, se desideri che i browser più recenti utilizzino WOFF2, dovrai posizionare il riferimento WOFF2 sopra WOFF, e così via."
+    - "L'ordine di specifica delle varianti del font ha una data importanza. Il browser sceglierà il primo formato supportato. Di conseguenza, se desideri che i browser più recenti utilizzino WOFF2, dovrai posizionare il riferimento WOFF2 sopra WOFF, e così via."
   unicode-subsetting:
-    - "I subset unicode-range sono particolarmente importanti per le lingue asiatiche, il cui numero di glifi è molto più elevato rispetto alle lingue occidentali e un tipico font `intero` è spesso misurato in megabyte, invece che in decine di kilobyte!"
+    - "I subset unicode-range sono particolarmente importanti per le lingue asiatiche, il cui numero di glifi è molto più elevato rispetto alle lingue occidentali e un tipico font 'intero' è spesso misurato in megabyte, invece che in decine di kilobyte!"
   synthesis:
-    - "Per una maggiore coerenza nei risultati visivi, non affidarti alla font-synthesis. Minimizza invece il numero di varianti del font utilizzate e specificane il percorso, in modo che il browser possa scaricarle quando sono utilizzate nella pagina. Detto ciò, in alcuni casi una variante synthesized <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>può rappresentare un`opzione valida</a> - utilizzala con cautela."
+    - "Per una maggiore coerenza nei risultati visivi, non affidarti alla font-synthesis. Minimizza invece il numero di varianti del font utilizzate e specificane il percorso, in modo che il browser possa scaricarle quando sono utilizzate nella pagina. Detto ciò, in alcuni casi una variante synthesized <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>può rappresentare un'opzione valida</a> - utilizzala con cautela."
   webfontloader:
-    - "Font Loading API è ancora <a href='http://caniuse.com/#feat=font-loading'>in fase di sviluppo in alcuni browser</a>. Valuta l`utilizzo del <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> o della <a href='https://github.com/typekit/webfontloader'>webfontloader library</a> per ottenere funzionalità simili, sebbene con un`ulteriore dipendenza da JavaScript."
+    - "Font Loading API è ancora <a href='http://caniuse.com/#feat=font-loading'>in fase di sviluppo in alcuni browser</a>. Valuta l'utilizzo del <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> o della <a href='https://github.com/typekit/webfontloader'>webfontloader library</a> per ottenere funzionalità simili, sebbene con un'ulteriore dipendenza da JavaScript."
   font-inlining: 
-    - "Utilizza l`inlining con criterio selettivo! Ricorda che@font-face utilizza il lazy load per evitare di scaricare varianti e subset di font non necessari. Inoltre, l`aumento delle dimensioni del tuo CSS con un inlining aggressivo avrà un impatto negativo sul <a href='/web/fundamentals/performance/critical-rendering-path/'>percorso di rendering critico</a> - il  browser deve scaricare l`intero CSS prima di costruire il CSSOM e il render tree e visualizzare i contenuti della pagina sullo schermo."
+    - "Utilizza l'inlining con criterio selettivo! Ricorda che@font-face utilizza il lazy load per evitare di scaricare varianti e subset di font non necessari. Inoltre, l'aumento delle dimensioni del tuo CSS con un inlining aggressivo avrà un impatto negativo sul <a href='/web/fundamentals/performance/critical-rendering-path/'>percorso di rendering critico</a> - il  browser deve scaricare l'intero CSS prima di costruire il CSSOM e il render tree e visualizzare i contenuti della pagina sullo schermo."
 ---
 
 {% wrap content%}
 
 {% include modules/toc.liquid %}
 
-L`ottimizzazione dei font web rappresenta una fase critica nell`intera strategia prestazionale. Ogni font costituisce una risorsa aggiuntiva, e alcuni font possono bloccare il rendering del testo, ma il solo fatto che la pagina utilizzi i font web non significa che il rendering debba essere più lento. Al contrario, un font ottimizzato, assieme a una strategia ponderata in merito al loro caricamento e alla loro applicazione nella pagina, può ridurre le dimensioni totali di quest`ultima e migliorare i tempi di rendering.
+L'ottimizzazione dei font web rappresenta una fase critica nell'intera strategia prestazionale. Ogni font costituisce una risorsa aggiuntiva, e alcuni font possono bloccare il rendering del testo, ma il solo fatto che la pagina utilizzi i font web non significa che il rendering debba essere più lento. Al contrario, un font ottimizzato, assieme a una strategia ponderata in merito al loro caricamento e alla loro applicazione nella pagina, può ridurre le dimensioni totali di quest'ultima e migliorare i tempi di rendering.
 
 ## Anatomia di un font web
 
@@ -57,15 +57,15 @@ Un font web è una raccolta di glifi, ciascuno dei quali rappresenta una forma v
 
 <img src="images/glyphs.png" class="center" alt="Tabella dei glifi font">
 
-Nella scelta di un font, è importante considerare i set di caratteri supportati. Per localizzare i contenuti di una pagina in più lingue, dovrai utilizzare un font che sia in grado di garantire un aspetto e un`esperienza coerenti agli utenti. Ad esempio, la [famiglia di font Noto di Google](https://www.google.com/get/noto/) mira a supportare tutte le lingue del mondo. Tuttavia, ricorda che le dimensioni totali di Noto, incluse tutte le lingue, ammontano a più di 130 MB. Scarica ZIP! 
+Nella scelta di un font, è importante considerare i set di caratteri supportati. Per localizzare i contenuti di una pagina in più lingue, dovrai utilizzare un font che sia in grado di garantire un aspetto e un'esperienza coerenti agli utenti. Ad esempio, la [famiglia di font Noto di Google](https://www.google.com/get/noto/) mira a supportare tutte le lingue del mondo. Tuttavia, ricorda che le dimensioni totali di Noto, incluse tutte le lingue, ammontano a più di 130 MB. Scarica ZIP! 
 
-Naturalmente, l`utilizzo di font web richiede una progettazione attenta per garantire che la tipografia non intralci le prestazioni. Per fortuna, la piattaforma web offre tutte le primitive necessarie, mentre nella presente guida daremo un`occhiata pratica a come ottenere il meglio da entrambi i lati.
+Naturalmente, l'utilizzo di font web richiede una progettazione attenta per garantire che la tipografia non intralci le prestazioni. Per fortuna, la piattaforma web offre tutte le primitive necessarie, mentre nella presente guida daremo un'occhiata pratica a come ottenere il meglio da entrambi i lati.
 
 ### Formati dei font web
 
-Oggigiorno, sul web sono disponibili quattro famiglie di font: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format), e [WOFF2](http://www.w3.org/TR/WOFF2/). Sfortunatamente, nonostante l`ampia scelta, non esiste un unico formato universale che funzioni in tutti i browser, più o meno recenti: EOT funziona [solo su IE](http://caniuse.com/#feat=eot), TTF è [parzialmente supportato in IE](http://caniuse.com/#search=ttf), WOFF è maggiormente supportato [non disponibile in alcuni browser precedenti](http://caniuse.com/#feat=woff), mentre il supporto di WOFF 2.0 è ancora [in progress in molti browser](http://caniuse.com/#feat=woff2).
+Oggigiorno, sul web sono disponibili quattro famiglie di font: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format), e [WOFF2](http://www.w3.org/TR/WOFF2/). Sfortunatamente, nonostante l'ampia scelta, non esiste un unico formato universale che funzioni in tutti i browser, più o meno recenti: EOT funziona [solo su IE](http://caniuse.com/#feat=eot), TTF è [parzialmente supportato in IE](http://caniuse.com/#search=ttf), WOFF è maggiormente supportato [non disponibile in alcuni browser precedenti](http://caniuse.com/#feat=woff), mentre il supporto di WOFF 2.0 è ancora [in progress in molti browser](http://caniuse.com/#feat=woff2).
 
-Dunque, come dobbiamo muoverci? Non esiste un unico formato che funzioni in tutti i browser, il che significa che dobbiamo utilizzare più formati per offrire un`esperienza coerente:
+Dunque, come dobbiamo muoverci? Non esiste un unico formato che funzioni in tutti i browser, il che significa che dobbiamo utilizzare più formati per offrire un'esperienza coerente:
 
 * Offrire la variante WOFF 2.0 ai browser che la supportano
 * Offrire la variante WOFF alla maggior parte dei browser
@@ -83,7 +83,7 @@ Un font è una raccolta di glifi, ciascuno dei quali è composto da un insieme d
 * WOFF ha una compressione integrata - assicurati che il tuo compressore WOFF utilizzi impostazioni ottimali. 
 * WOFF2 utilizza algoritmi di pre-elaborazione e compressione personalizzati per garantire una riduzione di ~30% delle dimensioni file rispetto ad altri formati - vedi [report](http://www.w3.org/TR/WOFF20ER/).
 
-Vale infine la pena notare che alcuni formati font contengono metadati aggiuntivi, quali informazioni di  [font hinting](http://en.wikipedia.org/wiki/Font_hinting) e [kerning](http://en.wikipedia.org/wiki/Kerning) che possono non essere necessarie su alcune piattaforme, ma che consentono un`ulteriore ottimizzazione delle dimensioni file. Consulta le opzioni di ottimizzazione messe a disposizione dal tuo compressore font e, se scegli questo percorso, assicurati di disporre delle infrastrutture adatte per testare e utilizzare tali font ottimizzati in ogni browser. Ad es., Google Fonts offre più di 30 varianti ottimizzate per ogni font, individuando e fornendo automaticamente la variabile ottimale per ogni piattaforma e browser.
+Vale infine la pena notare che alcuni formati font contengono metadati aggiuntivi, quali informazioni di  [font hinting](http://en.wikipedia.org/wiki/Font_hinting) e [kerning](http://en.wikipedia.org/wiki/Kerning) che possono non essere necessarie su alcune piattaforme, ma che consentono un'ulteriore ottimizzazione delle dimensioni file. Consulta le opzioni di ottimizzazione messe a disposizione dal tuo compressore font e, se scegli questo percorso, assicurati di disporre delle infrastrutture adatte per testare e utilizzare tali font ottimizzati in ogni browser. Ad es., Google Fonts offre più di 30 varianti ottimizzate per ogni font, individuando e fornendo automaticamente la variabile ottimale per ogni piattaforma e browser.
 
 {% include modules/remember.liquid title="Note" list=page.notes.zopfli %}
 
@@ -91,7 +91,7 @@ Vale infine la pena notare che alcuni formati font contengono metadati aggiuntiv
 
 {% include modules/takeaway.liquid list=page.key-takeaways.font-family %}
 
-L`at-rule nel CSS @font-face ci consente di definire il percorso di un determinato font, nonché le sue caratteristiche stilistiche e i codepoint Unicode per cui deve essere utilizzato. È possibile utilizzare una combinazione di tali dichiarazioni @font-face per costruire una `famiglia di font` che il browser userà per stabilire quali font debbano essere scaricati e applicati alla pagina corrente. Diamo un`occhiata più da vicino a come funziona dietro le quinte.
+L'at-rule nel CSS @font-face ci consente di definire il percorso di un determinato font, nonché le sue caratteristiche stilistiche e i codepoint Unicode per cui deve essere utilizzato. È possibile utilizzare una combinazione di tali dichiarazioni @font-face per costruire una 'famiglia di font' che il browser userà per stabilire quali font debbano essere scaricati e applicati alla pagina corrente. Diamo un'occhiata più da vicino a come funziona dietro le quinte.
 
 ### Selezione formato
 
@@ -121,15 +121,15 @@ Ogni dichiarazione @font-face fornisce il nome della famiglia di font, utilizzat
 }
 {% endhighlight %}
 
-Nota innanzitutto che gli esempi precedenti definiscono un`unica famiglia _Awesome Font_ con due stili (normale e _itaic_), ciascuno dei quali si riferisce a un insieme diverso di font. Ogni `src` descriptor contiene un elenco prioritario, separato da virgole, di varianti: 
+Nota innanzitutto che gli esempi precedenti definiscono un'unica famiglia _Awesome Font_ con due stili (normale e _itaic_), ciascuno dei quali si riferisce a un insieme diverso di font. Ogni `src` descriptor contiene un elenco prioritario, separato da virgole, di varianti: 
 
 * La direttiva `local()` ci consente di riferirci, caricare e utilizzare i font installati localmente.
-* La direttiva `url()` dci consente di caricare font esterni, che possono contenere un suggerimento `format()` aggiuntivo che indichi il formato del font cui fa riferimento l`URL fornito.
+* La direttiva `url()` dci consente di caricare font esterni, che possono contenere un suggerimento `format()` aggiuntivo che indichi il formato del font cui fa riferimento l'URL fornito.
 
 ^
 {% include modules/remember.liquid title="Note" list=page.notes.local-fonts %}
 
-Quando stabilisce che il font è necessario, il browser scorre l`elenco di risorse fornito nell`ordine specificato e prova a caricare la risorsa corretta. Ad esempio, seguendo l`esempio precedente:
+Quando stabilisce che il font è necessario, il browser scorre l'elenco di risorse fornito nell'ordine specificato e prova a caricare la risorsa corretta. Ad esempio, seguendo l'esempio precedente:
 
 1. Il browser esegue il layout di pagina e stabilisce quali varianti del font sono necessarie per il rendering del testo.
 2. Per ogni font richiesto, il browser verifica se è disponibile localmente.
@@ -145,7 +145,7 @@ La combinazione di direttive interne ed esterne con format hint idonei ci consen
 
 Oltre alle proprietà del font, quali stile, spessore ed estensione, la norma @font-face ci consente di definire un insieme di codepoin Unicode supportati da ogni risorsa. Questo ci consente di suddividere un font Unicode vasto in subset più piccoli (ad es. latino, cirillico, greco) e scaricare soltanto i glifi necessari per il rendering del testo di una data pagina.
 
-L`[unicode-range descriptor](http://www.w3.org/TR/css3-fonts/#descdef-unicode-range) ci consente di specificare un elenco delimitato da virgole di valori di range, ciascuno dei quali può collocarsi in uno dei tre gruppi seguenti:
+L'[unicode-range descriptor](http://www.w3.org/TR/css3-fonts/#descdef-unicode-range) ci consente di specificare un elenco delimitato da virgole di valori di range, ciascuno dei quali può collocarsi in uno dei tre gruppi seguenti:
 
 * Codepoint singolo (ad es. U+416)
 * Range di intervallo (ad es. U+400-4ff): indica il codepoint iniziale e quello finale di un range
@@ -181,7 +181,7 @@ Ad esempio, possiamo suddividere la nostra famiglia _Awesome Font_ nei subset La
 
 {% include modules/remember.liquid title="Note" list=page.notes.unicode-subsetting %}
 
-L`utilizzo di subset unicode-range e di file distinti per ogni variante stilistica del font ci consente di definire una famiglia di font composita più rapida ed efficiente da scaricare; il visitatore dovrà infatti scaricare soltanto le varianti e i subset necessari, senza essere obbligato a scaricare subset che potrebbe non utilizzare mai né visualizzare sulla pagina. 
+L'utilizzo di subset unicode-range e di file distinti per ogni variante stilistica del font ci consente di definire una famiglia di font composita più rapida ed efficiente da scaricare; il visitatore dovrà infatti scaricare soltanto le varianti e i subset necessari, senza essere obbligato a scaricare subset che potrebbe non utilizzare mai né visualizzare sulla pagina. 
 
 detto ciò, unicode-range ha un piccolo difetto: [non tutti i browser lo supportano](http://caniuse.com/#feat=font-unicode-range), o almeno, non ancora. Alcuni browser ignorano semplicemente l'hint unicode-range e scaricano tutte le varianti, mentre altri non elaborano proprio la dichiarazione @font-face. Per risolvere tutto ciò, dobbiamo eseguire un "subsetting manuale" nelle vecchie versioni dei browser.
 
@@ -211,7 +211,7 @@ Ad esempio, il diagramma precedente illustra una famiglia di font che offre tre 
   </div>
 </div>
 
-Un`operazione logica simile si applica alle varianti _italic_. Il font designer controlla quali varianti produrrà, mentre noi verifichiamo le varianti che useremo sulla pagina. Visto che ogni variante prevede un download separato, è buona norma scaricarne un numero esiguo! Ad esempio, possiamo definire due varianti di grassetto per la nostra famiglia _Awesome Font_: 
+Un'operazione logica simile si applica alle varianti _italic_. Il font designer controlla quali varianti produrrà, mentre noi verifichiamo le varianti che useremo sulla pagina. Visto che ogni variante prevede un download separato, è buona norma scaricarne un numero esiguo! Ad esempio, possiamo definire due varianti di grassetto per la nostra famiglia _Awesome Font_: 
 
 {% highlight css %}
 @font-face {
@@ -239,10 +239,10 @@ Un`operazione logica simile si applica alle varianti _italic_. Il font designer 
 }
 {% endhighlight %}
 
-Nell`esempio precedente, la famiglia _Awesome Font_ risulta composta da due risorse che coprono il medesimo insieme di glifi latini (U+000-5FF), ma offre due `spessori` diversi: normale (400) e grassetto (700). Tuttavia, che cosa accade se una delle nostre regole CSS specifica uno spessore diverso o definisce la proprietà font-style come corsivo?
+Nell'esempio precedente, la famiglia _Awesome Font_ risulta composta da due risorse che coprono il medesimo insieme di glifi latini (U+000-5FF), ma offre due 'spessori' diversi: normale (400) e grassetto (700). Tuttavia, che cosa accade se una delle nostre regole CSS specifica uno spessore diverso o definisce la proprietà font-style come corsivo?
 
 * Se non è disponibile un font corrispondente, il browser lo sostituisce con quello più simile.
-* Se non viene trovata alcuna corrispondenza stilistica (nell`esempio precedente, non dichiariamo alcuna variante corsiva), il browser sintetizzerà la propria variante. 
+* Se non viene trovata alcuna corrispondenza stilistica (nell'esempio precedente, non dichiariamo alcuna variante corsiva), il browser sintetizzerà la propria variante. 
 
 <img src="images/font-synthesis.png" class="center" alt="Font synthesis">
 
@@ -254,7 +254,7 @@ Nell`esempio precedente, la famiglia _Awesome Font_ risulta composta da due riso
   </div>
 </div>
 
-L`esempio precedente illustra le differenze tra font reale e sintetizzato per Open-Sans; tutte le varianti sintetizzate sono generate dal medesimo font con spessore 400. Come puoi vedere, i risultati sono notevolmente diversi. I dettagli di generazioni delle varianti grassetto e diagonale non sono specificati. I risultati varieranno quindi da browser a browser, e dipenderanno anche molto dal font.
+L'esempio precedente illustra le differenze tra font reale e sintetizzato per Open-Sans; tutte le varianti sintetizzate sono generate dal medesimo font con spessore 400. Come puoi vedere, i risultati sono notevolmente diversi. I dettagli di generazioni delle varianti grassetto e diagonale non sono specificati. I risultati varieranno quindi da browser a browser, e dipenderanno anche molto dal font.
 
 {% include modules/remember.liquid title="Note" list=page.notes.synthesis %}
 
@@ -263,9 +263,9 @@ L`esempio precedente illustra le differenze tra font reale e sintetizzato per Op
 
 {% include modules/takeaway.liquid list=page.key-takeaways.font-crp %}
 
-Un font web `completo` che includa tutte le varianti stilistiche, che potrebbero non servirci, nonché tutti i glifi, che potremmo non utilizzare mai, può comportare un download di diversi megabyte. Per risolvere tale problema, la norma CSS @font-face è finalizzata specificatamente a consentire la suddivisione della famiglia di font in una raccolta di risorse: subset unicode, varianti di stile distinte, e così via. 
+Un font web 'completo' che includa tutte le varianti stilistiche, che potrebbero non servirci, nonché tutti i glifi, che potremmo non utilizzare mai, può comportare un download di diversi megabyte. Per risolvere tale problema, la norma CSS @font-face è finalizzata specificatamente a consentire la suddivisione della famiglia di font in una raccolta di risorse: subset unicode, varianti di stile distinte, e così via. 
 
-Stabilito ciò il browser definisce i subset e le varianti necessarie e scarica l`insieme minimo richiesto per il rendering del testo. Tale percorso risulta particolarmente conveniente, ma, se non stiamo attenti, può anche creare un collo di bottiglia nel percorso di rendering critico, ritardandolo; un effetto che sicuramente vogliamo evitare! 
+Stabilito ciò il browser definisce i subset e le varianti necessarie e scarica l'insieme minimo richiesto per il rendering del testo. Tale percorso risulta particolarmente conveniente, ma, se non stiamo attenti, può anche creare un collo di bottiglia nel percorso di rendering critico, ritardandolo; un effetto che sicuramente vogliamo evitare! 
 
 ### Font web e percorso di rendering critico
 
@@ -276,13 +276,13 @@ Il lazy load di un font implica un aspetto importante che può ritardare il rend
 1. Il browser richiede il documento HTML
 2. Il browser inizia a scansionare la risposta HTML e a costruire il DOM
 3. Il browser scopre risorse CSS, JS e di altro tipo e indirizza le richieste
-4. Il browser crea il CSSOM una volta ricevuto tutto il contenuto CSS e lo combina con l`albero DOM per costruire il render tree
+4. Il browser crea il CSSOM una volta ricevuto tutto il contenuto CSS e lo combina con l'albero DOM per costruire il render tree
   * Una volta che il render tree indica quali varianti sono necessarie per il rendering del testo specifico presente sulla pagina, vengono inviate le richieste di font
 5. Il browser definisce il layout e inserisce i contenuti sullo schermo
   * Se il font non è ancora disponibile, il browser potrebbe non renderizzare alcun pixel di testo
   * Non appena il font è disponibile, il browser inserisce i pixel di testo
 
-La `competizione` tra la prima rappresentazione dei contenuti della pagina, che può essere realizzata subito dopo la creazione del render tree, e la richiesta di risorse font, è quella che crea il `problema degli spazi bianchi` in cui il browser deve renderizzare il layout della pagina ma omette qualsiasi testo. Il risultato differisce tra i diversi browser:
+La 'competizione' tra la prima rappresentazione dei contenuti della pagina, che può essere realizzata subito dopo la creazione del render tree, e la richiesta di risorse font, è quella che crea il 'problema degli spazi bianchi' in cui il browser deve renderizzare il layout della pagina ma omette qualsiasi testo. Il risultato differisce tra i diversi browser:
 
 * Safari effettua il rendering del testo soltanto una volta completato il download del font.
 * Chrome e Firefox bloccano il rendering per 3 secondi, dopo i quali utilizzano un font alternativo e, una volta scaricato il font, renderizzano nuovamente il testo in base ad esso.
@@ -292,7 +292,7 @@ Vi sono vantaggi e svantaggi in ogni strategia di rendering: alcuni trovano fast
 
 ### Ottimizzazione del rendering del font con Font Loading API
 
-[Font Loading API](http://dev.w3.org/csswg/css-font-loading/) offre un`interfaccia di scripting per definire e manipolare le font face CSS, tracciarne il download e sostituire il loro comportamento lazy load. Ad esempio, se siamo sicuri che sarà necessaria una specifica variante del font, possiamo definirla e comunicare al browser di iniziare immediatamente a recuperare la risorsa:
+[Font Loading API](http://dev.w3.org/csswg/css-font-loading/) offre un'interfaccia di scripting per definire e manipolare le font face CSS, tracciarne il download e sostituire il loro comportamento lazy load. Ad esempio, se siamo sicuri che sarà necessaria una specifica variante del font, possiamo definirla e comunicare al browser di iniziare immediatamente a recuperare la risorsa:
 
 {% highlight javascript %}
 var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {
@@ -327,12 +327,12 @@ La cosa migliore è mixare e combinare le strategie precedenti per i diversi con
 
 ### Ottimizzazione del rendering con inlining
 
-Una semplice strategia alternativa per utilizzare Font Loading API consiste nell`eliminare il `problema degli spazi bianchi` con priorità alta, poiché sono necessari per costruire il CSSOM.
+Una semplice strategia alternativa per utilizzare Font Loading API consiste nell'eliminare il 'problema degli spazi bianchi' con priorità alta, poiché sono necessari per costruire il CSSOM.
 
 * Gli stylesheet CSS come media query corrispondenti sono scaricati automaticamente dal browser con priorità alta, essendo necessari per costruire il CSSOM.
-* L`inlining dei dati del font nello stylesheet CSS obbliga il browser a scaricare il font senza priorità alta e senza attendere il render tree, agendo quindi come override manuale sul comportamento lazy load predefinito.
+* L'inlining dei dati del font nello stylesheet CSS obbliga il browser a scaricare il font senza priorità alta e senza attendere il render tree, agendo quindi come override manuale sul comportamento lazy load predefinito.
 
-La strategia di inlining non è flessibile e non ci consente di definire alcun timeout personalizzato o strategia di rendering per contenuti diversi, ma rappresenta comunque una soluzione semplice ed efficace in tutti i browser. Per ottenere migliori risultati, separa i font sottoposti ad inlining in stylesheet separati e imposta una proprietà max-age lunga; in tal modo, all`aggiornamento del CSS, non obbligherai i visitatori a riscaricare i font. 
+La strategia di inlining non è flessibile e non ci consente di definire alcun timeout personalizzato o strategia di rendering per contenuti diversi, ma rappresenta comunque una soluzione semplice ed efficace in tutti i browser. Per ottenere migliori risultati, separa i font sottoposti ad inlining in stylesheet separati e imposta una proprietà max-age lunga; in tal modo, all'aggiornamento del CSS, non obbligherai i visitatori a riscaricare i font. 
 
 {% include modules/remember.liquid title="Note" list=page.notes.font-inlining %}
 
@@ -345,15 +345,15 @@ Non è necessario immagazzinare i font nel local storage o attraverso altri mecc
 
 ## Checklist di ottimizzazione
 
-Contrariamente a quanto si crede, l`utilizzo di font web non ritarda necessariamente il rendering della pagina né ha un impatto negativo su altre prestazioni. Un utilizzo dei font ottimizzato può garantire all`utente un`esperienza migliore sotto ogni punto di vista: branding perfetto, migliore leggibilità, fruibilità e ricercabilità, offrendo al contempo una risoluzione multipla scalabile che ben si adatta a qualsiasi formato e risoluzione del monitor. Non temere di utilizzare i font web! 
+Contrariamente a quanto si crede, l'utilizzo di font web non ritarda necessariamente il rendering della pagina né ha un impatto negativo su altre prestazioni. Un utilizzo dei font ottimizzato può garantire all'utente un'esperienza migliore sotto ogni punto di vista: branding perfetto, migliore leggibilità, fruibilità e ricercabilità, offrendo al contempo una risoluzione multipla scalabile che ben si adatta a qualsiasi formato e risoluzione del monitor. Non temere di utilizzare i font web! 
 
-Certo, un`applicazione non ponderata può causare ritardi evitabili e download eccessivamente pesanti. È per questo che dobbiamo svecchiare i nostri strumenti di ottimizzazione e supportare il browser ottimizzando i font stessi e il relativo recupero e utilizzo sulle nostre pagine. 
+Certo, un'applicazione non ponderata può causare ritardi evitabili e download eccessivamente pesanti. È per questo che dobbiamo svecchiare i nostri strumenti di ottimizzazione e supportare il browser ottimizzando i font stessi e il relativo recupero e utilizzo sulle nostre pagine. 
 
-1. **Verifica e controlla il tuo utilizzo dei font:** non utilizzare troppi font sulle tue pagine e, per ogni font, minimizza il numero di varianti utilizzate. Ciò ti consentirà di offrire ai tuoi utenti un`esperienza più rapida e uniforme.
+1. **Verifica e controlla il tuo utilizzo dei font:** non utilizzare troppi font sulle tue pagine e, per ogni font, minimizza il numero di varianti utilizzate. Ciò ti consentirà di offrire ai tuoi utenti un'esperienza più rapida e uniforme.
 2. **Suddividi i font in subset:** molti font possono essere suddivisi in subset o in più unicode-range, così da utilizzare soltanto i glifi richiesti da una pagina specifica - così facendo, le dimensioni file si riducono, mentre la velocità di download della risorsa aumenta. Tuttavia, nella definizione dei subset, fa attenzione ad ottimizzarli per il riutilizzo dei font; ad es., per ogni pagina non scaricare un set di caratteri diverso ma sovrapposto. È buona norma creare subset in base allo script, ad es. latino, cirillico, e così via.
 3. **Orttimizza il formato dei font per ogni browser:** ogni font dovrebbe essere fornito in formato WOFF2, WOFF, EOT e TTF. Assicurati di comprimere con GZIP i formati EOT e TTF, non compressi per default.
 4. **Specifica le policy ottimali di riconvalida e caching:** i font sono risorse statiche che vengono aggiornate molto raramente. Assicurati che i tuoi server prevedano un timestamp max-age di lunga durata e un token di riconvalida per consentire un riutilizzo efficace tra pagine diverse.
-5. **Utilizza FontLoading APO per ottimizzare il percorso di rendering critico:** il lazy loading predefinito può comportare un ritardo nel rendering del testo. Font Loading API ci consente di evitarlo per determinati font, specificando una strategia di rendering e timeout personalizzata in base ai diversi contenuti della pagina. Per le versioni più vecchie dei browser che non supportano l`API, puoi utilizzare la webfontloader JavaScript library o la strategia di inlining del CSS.
+5. **Utilizza FontLoading APO per ottimizzare il percorso di rendering critico:** il lazy loading predefinito può comportare un ritardo nel rendering del testo. Font Loading API ci consente di evitarlo per determinati font, specificando una strategia di rendering e timeout personalizzata in base ai diversi contenuti della pagina. Per le versioni più vecchie dei browser che non supportano l'API, puoi utilizzare la webfontloader JavaScript library o la strategia di inlining del CSS.
 
 {% endwrap %}
 

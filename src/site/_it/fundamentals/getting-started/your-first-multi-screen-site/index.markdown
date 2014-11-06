@@ -2,7 +2,7 @@
 layout: section
 title: "Il tuo primo sito per dispositivi multipli"
 description: "È possibile accedere al Web con numerosi dispositivi che spaziano dai telefoni ai televisori e con dimensioni dello schermo molto diverse fra loro. Scopri come costruire un sito utilizzabile al meglio con numerosi dispositivi."
-introduction: "La creazione delle esperienze per dispositivi multipli non è un`operazione molto difficile. Seguendo questa guida creeremo la pagina di destinazione di un prodotto di esempio per il nostro<a href='https://www.udacity.com/course/cs256'>Corso di sviluppo Web per dispositivi mobili CS256</a> adattabile a tutti i tipi di dispositivo."
+introduction: "La creazione delle esperienze per dispositivi multipli non è un'operazione molto difficile. Seguendo questa guida creeremo la pagina di destinazione di un prodotto di esempio per il nostro<a href='https://www.udacity.com/course/cs256'>Corso di sviluppo Web per dispositivi mobili CS256</a> adattabile a tutti i tipi di dispositivo."
 article:
  written_on: 2014-01-01
  updated_on: 2014-01-06
@@ -18,7 +18,7 @@ translators:
 
 <img src="images/finaloutput-2x.jpg" alt="diversi dispositivi che visualizzano il progetto finale">
 
-L`idea dello sviluppo per dispositivi multipli con funzionalità, formati dello schermo e metodi di interazione molto diversi può sembrare scoraggiante, ma è non impossibile.
+L'idea dello sviluppo per dispositivi multipli con funzionalità, formati dello schermo e metodi di interazione molto diversi può sembrare scoraggiante, ma è non impossibile.
 
 La creazione di siti reattivi non è difficile come sembra: questa guida spiega come iniziare. Abbiamo diviso la guida in due semplici passaggi:
 
