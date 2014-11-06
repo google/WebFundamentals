@@ -49,6 +49,13 @@
 
 }
 
+body[dir=rtl] .editorial-header .container:before {
+  right: auto;
+  left: 100%;
+  content: $icon-chevron-left;
+  margin: 168px 0 0 -35px;
+}
+
 .editorial-header__excerpt {
   @include type--medium(true);
   font-family: $fontHighlight;
