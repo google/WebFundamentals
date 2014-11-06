@@ -106,7 +106,7 @@ list:
       title: 让您的用户处于单一浏览器窗口中
       link: /web/fundamentals/layouts/principles/single-browser.html
     -
-      title: 避免`完全网站`标签
+      title: 避免'完全网站'标签
       link: /web/fundamentals/layouts/principles/avoid-full-site-labeling.html
     -
       title: 弄清楚为什么您需要用户的位置

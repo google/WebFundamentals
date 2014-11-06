@@ -63,7 +63,7 @@ notes:
 例如，您可以使用[媒体查询]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html)精确控制广告尺寸：
 
 1. 请按照相关说明[创建自适应广告单元]({{site.fundamentals}}/monetization/ads/include-ads.html#create-ad-units)。
-2. 在广告代码框中，从`模式`下拉菜单中选择<strong>高级（需要修改代码）</strong>。
+2. 在广告代码框中，从'模式'下拉菜单中选择<strong>高级（需要修改代码）</strong>。
 3. 修改广告代码，以便根据用户设备设置精确的广告尺寸：
 
 {% highlight html %}

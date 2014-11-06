@@ -84,13 +84,13 @@ notes:
 
 ### 要创建自适应广告单元，请执行以下操作：
 
-1. 访问[`我的广告`标签](https://www.google.com/adsense/app#myads-springboard)。
+1. 访问['我的广告'标签](https://www.google.com/adsense/app#myads-springboard)。
 2. 点击 <strong>+新建广告单元</strong>。
 3. 为您的广告单元输入唯一名称。该名称会显示在粘贴到网站内的广告代码中，因此应使用描述性名称。
-4. 从`广告尺寸`下拉菜单中选择<strong>自适应</strong>。
-5. 从`广告类型`下拉菜单中选择<strong>文字和展示广告</strong>。
+4. 从'广告尺寸'下拉菜单中选择<strong>自适应</strong>。
+5. 从'广告类型'下拉菜单中选择<strong>文字和展示广告</strong>。
 6. 点击<strong>保存并获取代码</strong>。
-7. 在显示的<strong>广告代码</strong>框中，从`模式`下拉菜单中选择<strong>智能确定尺寸（推荐）</strong>选项。
+7. 在显示的<strong>广告代码</strong>框中，从'模式'下拉菜单中选择<strong>智能确定尺寸（推荐）</strong>选项。
 这是推荐的模式且不需要您对广告代码做出任何更改。
 
 创建广告单元后，AdSense 会提供要纳入您的网站的一段代码，这段代码与下面的代码类似：
@@ -139,7 +139,7 @@ notes:
 
 1. 在[收款人资料](https://www.google.com/adsense/app#payments3/h=BILLING_PROFILE)中验证您已提供了必需的所有纳税信息。
 2. 确认您的收款人姓名和地址是否正确。
-3. 在[`付款设置`页面](https://www.google.com/adsense/app#payments3/h=ACCOUNT_SETTINGS)中选择您的付款方式。
+3. 在['付款设置'页面](https://www.google.com/adsense/app#payments3/h=ACCOUNT_SETTINGS)中选择您的付款方式。
 4. 输入您的[个人身份号码（PIN 码）](https://support.google.com/adsense/answer/157667)。该 PIN 码会验证您帐户信息的准确性。
 5. 检查您的余额是否达到了[付款阈值](https://support.google.com/adsense/answer/1709871)。
 
