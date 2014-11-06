@@ -38,7 +38,7 @@ Nesne modelinin olusturulmasina iliskin önceki bölümde, HTML ve CSS girisleri
 
 {% include modules/takeaway.liquid list=page.key-takeaways.render-tree-construction %}
 
-Ilk adim, tarayicinin DOM ve CSSOM`yi, sayfadaki tüm görünür DOM içerigini ve her bir dügüme iliskin CSSOM stil bilgilerinin tümünü yakalayan bir `olusturma agaci`nda birlestirmesi içindir.
+Ilk adim, tarayicinin DOM ve CSSOM'yi, sayfadaki tüm görünür DOM içerigini ve her bir dügüme iliskin CSSOM stil bilgilerinin tümünü yakalayan bir 'olusturma agaci'nda birlestirmesi içindir.
 
 <img src="images/render-tree-construction.png" alt="DOM ve CSSOM, olusturma agacini olusturmak üzere birlestirilir" class="center">
 
@@ -52,19 +52,19 @@ Olusturma agacini olusturmak için tarayici kabaca asagidakileri yapar:
 
 {% include modules/remember.liquid list=page.notes.hidden %}
 
-Son çikti, hem içerigi hem de ekranda görünen tüm içerigin stil bilgilerini içeren bir olusturmadir. Yaklasiyoruz!  **Olusturma agaci tamamlandiginda, `yer paylasimi` asamasina geçebiliriz.**
+Son çikti, hem içerigi hem de ekranda görünen tüm içerigin stil bilgilerini içeren bir olusturmadir. Yaklasiyoruz!  **Olusturma agaci tamamlandiginda, 'yer paylasimi' asamasina geçebiliriz.**
 
-Bu noktaya kadar, hangi dügümlerin görünür olmasi gerektigini ve bunlarin hesaplanan stillerini hesapladik, ancak cihazin [görüntü alani]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) içindeki tam konumlarini ve boyutlarini hesaplamadik. Bu, `yer paylasimi` asamasidir; bazen `yeniden düzenleme` olarak da bilinir.
+Bu noktaya kadar, hangi dügümlerin görünür olmasi gerektigini ve bunlarin hesaplanan stillerini hesapladik, ancak cihazin [görüntü alani]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) içindeki tam konumlarini ve boyutlarini hesaplamadik. Bu, 'yer paylasimi' asamasidir; bazen 'yeniden düzenleme' olarak da bilinir.
 
 Her bir nesnenin kesin boyutunu ve konumunu belirlemek için tarayici, olusturma agacinin kökünden baslar ve sayfadaki her bir nesnenin geometrisini hesaplamak için üzerinden geçer. Basit bir uygulama örnegini degerlendirelim:
 
 {% include_code _code/nested.html full %}
 
-Yukaridaki sayfanin gövdesi iç içe yerlestirilmis iki div ögesi içerir: Ilk (üst) div ögesi, dügümün görüntü boyutunu görüntü alani genisliginin %50`sine ve üst ögenin içerdigi ikinci div ögesi, genisligini üst ögenin %50`sine (görüntü alani genisliginin %25`ine) ayarlar!
+Yukaridaki sayfanin gövdesi iç içe yerlestirilmis iki div ögesi içerir: Ilk (üst) div ögesi, dügümün görüntü boyutunu görüntü alani genisliginin %50'sine ve üst ögenin içerdigi ikinci div ögesi, genisligini üst ögenin %50'sine (görüntü alani genisliginin %25'ine) ayarlar!
 
 <img src="images/layout-viewport.png" alt="Yer paylasimi bilgilerini hesaplama" class="center">
 
-Yer paylasimi sürecinin sonucu, görüntü alani içindeki her bir ögenin kesin konumunu ve boyutunu tam olarak yakalayan bir `kutu model`dir: Göreli ölçülerin tümü, ekranda mutlak piksel konumlarina dönüstürülmüs ve diger islemler yapilmistir.
+Yer paylasimi sürecinin sonucu, görüntü alani içindeki her bir ögenin kesin konumunu ve boyutunu tam olarak yakalayan bir 'kutu model'dir: Göreli ölçülerin tümü, ekranda mutlak piksel konumlarina dönüstürülmüs ve diger islemler yapilmistir.
 
 Son olarak, artik hangi dügümlerin görünür olduklarini, bunlarin hesaplanan stillerini ve geometrilerini bildigimize göre, sonunda bu bilgileri son asamamiza geçirebiliriz. Bu asamada, olusturma agacindaki her bir dügümü ekranda gerçek piksellere dönüstürecegiz. Bu adima genellikle `boyama` veya `tarama` adi verilir.
 
@@ -72,10 +72,10 @@ Tüm bunlari takip edebildiniz mi? Bu adimlarin her biri, tarayici tarafindan az
 
 <img src="images/layout-timeline.png" alt="DevTools'ta yer paylasimini ölçme" class="center">
 
-* Olusturma agaci yapimi ile konum ve boyut hesaplamasi, Zaman Çizelgesi`nde `Yer Paylasimi` olayi ile yakalanir.
-* Yer paylasimi tamamlandiktan sonra, tarayici birer `Boyama Ayarlari` ve `Boyama` olayi yayinlar. Bunlar, olusturma agacini ekranda gerçek piksellere dönüstürür.
+* Olusturma agaci yapimi ile konum ve boyut hesaplamasi, Zaman Çizelgesi'nde 'Yer Paylasimi' olayi ile yakalanir.
+* Yer paylasimi tamamlandiktan sonra, tarayici birer 'Boyama Ayarlari' ve 'Boyama' olayi yayinlar. Bunlar, olusturma agacini ekranda gerçek piksellere dönüstürür.
 
-Olusturma agaci yapimi, yer paylasimi ve boyama islemlerini gerçeklestirmek için gereken süre dokümanin boyutuna, uygulanan stillere ve elbette, üzerinde çalistirildigi cihaza bagli olarak degisiklik gösterir: Doküman ne kadar büyükse tarayicinin yapmasi gereken is de o kadar fazla olur; stiller karmasiklastikça boyama için harcanan süre de uzar (ör. mat bir rengi boyamasi `ucuz`dur ve bir kabarti gölgesinin hesaplanmasi ve olusturulmasi `pahali`dir).
+Olusturma agaci yapimi, yer paylasimi ve boyama islemlerini gerçeklestirmek için gereken süre dokümanin boyutuna, uygulanan stillere ve elbette, üzerinde çalistirildigi cihaza bagli olarak degisiklik gösterir: Doküman ne kadar büyükse tarayicinin yapmasi gereken is de o kadar fazla olur; stiller karmasiklastikça boyama için harcanan süre de uzar (ör. mat bir rengi boyamasi 'ucuz'dur ve bir kabarti gölgesinin hesaplanmasi ve olusturulmasi 'pahali'dir).
 
 Sonunda, sayfamiz görüntü alaninda görünür hale geldi. Yasasin!
 
@@ -85,7 +85,7 @@ Tarayicinin gerçeklestirdigi tüm adimlari hizlica özetleyelim:
 
 1. HTML biçimlendirmesini isleme ve DOM agacini olusturma.
 2. CSS biçimlendirmesini isleme ve CSSOM agacini olusturma.
-3. DOM ve CSSOM`yi bir olusturma agacinda birlestirme.
+3. DOM ve CSSOM'yi bir olusturma agacinda birlestirme.
 4. Her bir dügüm geometrisini hesaplamak için olusturma agacinda yer paylasimini çalistirma.
 5. Ekran için bagimsiz dügümleri boyama.
 

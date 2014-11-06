@@ -106,7 +106,7 @@ list:
       title: Kullanicinizi tek bir tarayici penceresinde tutun
       link: /web/fundamentals/layouts/principles/single-browser.html
     -
-      title: "Tam site` etiketlemesinden kaçinin"
+      title: "Tam site' etiketlemesinden kaçinin"
       link: /web/fundamentals/layouts/principles/avoid-full-site-labeling.html
     -
       title: Bir kullanicinin konumuna neden ihtiyaç duydugunuzu açikça belirtin
