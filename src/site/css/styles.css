@@ -2729,6 +2729,14 @@ body[dir=rtl] ul.main-footer__list > li:before {
 }
 
 /* line 52, ../_sass/_modules/_editorial-header.scss */
+body[dir=rtl] .editorial-header .container:before {
+  right: auto;
+  left: 100%;
+  content: "";
+  margin: 168px 0 0 -35px;
+}
+
+/* line 59, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__excerpt {
   color: #404040;
   font-size: 20px;
@@ -2741,12 +2749,12 @@ body[dir=rtl] ul.main-footer__list > li:before {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
 }
 
-/* line 57, ../_sass/_modules/_editorial-header.scss */
+/* line 64, ../_sass/_modules/_editorial-header.scss */
 .editorial-header .tag {
   padding-top: 52px;
 }
 
-/* line 61, ../_sass/_modules/_editorial-header.scss */
+/* line 68, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__subtitle {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2761,7 +2769,7 @@ body[dir=rtl] ul.main-footer__list > li:before {
   color: #4285f4;
 }
 @media only screen and (min-width: 800px) {
-  /* line 61, ../_sass/_modules/_editorial-header.scss */
+  /* line 68, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     color: #404040;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -2775,7 +2783,7 @@ body[dir=rtl] ul.main-footer__list > li:before {
   }
 }
 @media only screen and (min-width: 620px) {
-  /* line 61, ../_sass/_modules/_editorial-header.scss */
+  /* line 68, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__subtitle {
     padding-top: 0;
     padding-bottom: 26px;
@@ -2783,22 +2791,22 @@ body[dir=rtl] ul.main-footer__list > li:before {
   }
 }
 
-/* line 74, ../_sass/_modules/_editorial-header.scss */
+/* line 81, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc {
   margin-top: 26px;
 }
-/* line 77, ../_sass/_modules/_editorial-header.scss */
+/* line 84, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc ol {
   padding-top: 0;
 }
 @media only screen and (min-width: 620px) {
-  /* line 77, ../_sass/_modules/_editorial-header.scss */
+  /* line 84, ../_sass/_modules/_editorial-header.scss */
   .editorial-header__toc ol {
     padding-top: 0;
   }
 }
 
-/* line 86, ../_sass/_modules/_editorial-header.scss */
+/* line 93, ../_sass/_modules/_editorial-header.scss */
 .editorial-header__toc-title {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   border-bottom: 1px solid #e0e0e0;
