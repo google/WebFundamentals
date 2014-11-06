@@ -13,7 +13,7 @@ collection: images
 key-takeaways:
   use-right-image:
     - Görüntünün özellikleri için en iyi resmi kullanin; ekran boyutu, cihaz çözünürlügü ve sayfa yerlesimini dikkate alin.
-    - <code>min-resolution</code> ve <code>-webkit-min-device-pixel-ratio</code> ile medya sorgulari kullanan yüksek DPI`ya sahip görüntüler için CSS`deki <code>background-image</code> özelligini degistirin.
+    - <code>min-resolution</code> ve <code>-webkit-min-device-pixel-ratio</code> ile medya sorgulari kullanan yüksek DPI`ya sahip görüntüler için CSS'deki <code>background-image</code> özelligini degistirin.
     - Biçimlendirmede 1x resme ek olarak yüksek çözünürlüklü resimler saglamak için srcset tanimlayicisini kullanin.
     - JavaScript resim degistirme tekniklerini kullanirken veya son derece sikistirilmis yüksek çözünürlüklü resimleri düsük çözünürlüklü cihazlara sunarken performans maliyetlerini göz önünde bulundurun.
   avoid-images:
@@ -57,7 +57,7 @@ Dogru biçimi seçerken su yönergelerle baslayin:
 
 * Fotograf resimleri için `JPG` biçimini kullanin.
 * Vektör resimleri ve logolar ile çizgi resimler gibi sabit renkli grafikler için `SVG` biçimini kullanin.
-  Vektör resmi kullanilamiyorsa WebP veya PNG`yi deneyin.
+  Vektör resmi kullanilamiyorsa WebP veya PNG'yi deneyin.
 * Daha fazla renge olanak tanidigi ve daha iyi sikistirma oranlari sundugu için `GIF` yerine `PNG` biçimini kullanin.
 * Daha uzun animasyonlar için daha iyi resim kalitesi saglayan ve kullanicinin oynatma üzerinde denetim sahibi olmasini saglayan `<video>` ögesini kullanmayi düsünebilirsiniz.
 

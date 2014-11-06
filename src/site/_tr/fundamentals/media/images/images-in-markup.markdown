@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Biçimlendirme Içindeki Resimler"
-description: "`img`, güçlü bir ögedir; içerigi indirir, kodunu çözer ve olusturur. Modern tarayicilar da çesitli resim biçimlerini destekler."
+description: "<code>img</code>, güçlü bir ögedir; içerigi indirir, kodunu çözer ve olusturur. Modern tarayicilar da çesitli resim biçimlerini destekler."
 introduction: "<code>img</code>, güçlü bir ögedir; içerigi indirir, kodunu çözer ve olusturur. Modern tarayicilar da çesitli resim biçimlerini destekler. Cihazlarda çalisan resimleri içerme, masaüstü için tasarimdan farkli degildir ve iyi bir deneyim olusturmak için yalnizca birkaç küçük degisikligin yapilmasi yeterlidir."
 authors:
   - petelepage
@@ -52,7 +52,7 @@ shortlinks:
 
 ## Resimler için göreli boyutlar kullanma
 
-Resimlerin yanlislikla görüntü alanindan tasmalarini önlemek için resimlere iliskin genislikleri belirtirken göreli birimler kullanmayi unutmayin.  Örnegin, `width: 50%;`, resim genisliginin resmin içinde bulundugu ögenin (görüntü alaninin veya gerçek piksel boyutunun degil) %50`si kadar olmasina neden olur.
+Resimlerin yanlislikla görüntü alanindan tasmalarini önlemek için resimlere iliskin genislikleri belirtirken göreli birimler kullanmayi unutmayin.  Örnegin, `width: 50%;`, resim genisliginin resmin içinde bulundugu ögenin (görüntü alaninin veya gerçek piksel boyutunun degil) %50'si kadar olmasina neden olur.
 
 CSS, içerigin kapsayicisindan tasmasina izin verdiginden, resimlerin ve diger içerigin tasmasini önlemek için max-width: 100% ögesinin kullanilmasi gerekebilir.  Örnegin:
 
@@ -64,12 +64,12 @@ img, embed, object, video {
 
 `img` ögelerindeki `alt` özelligiyle anlamli açiklamalar sagladiginizdan emin olun; bunlar, ekran okuyuculara ve diger yardimci teknolojilere baglam saglayarak sitenizin daha erisilebilir hale gelmesine yardimci olur.
 
-## `img` ögelerini yüksek DPI`ya sahip cihazlar için `srcset` özelligiyle gelistirme
+## `img` ögelerini yüksek DPI'ya sahip cihazlar için `srcset` özelligiyle gelistirme
 
 <div class="clear">
   <div class="g--half">
     <p>
-      <code>srcset</code> özelligi, <code>img</code> ögesinin davranisini gelistirerek farkli cihaz özellikleri için birden çok resim dosyasi saglamayi kolaylastirir. CSS`de yerel olarak bulunan <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS islevine</a> benzer bir sekilde <code>srcset</code>, tarayicinin cihazin özelliklerine bagli olarak en iyi resmi seçmesine olanak tanir; örnegin, 2x bir ekranda 2x resim ve olasilikla ileride, sinirli bir bant genisligine sahip agdaki 2x cihazda 1x resim kullanma.
+      <code>srcset</code> özelligi, <code>img</code> ögesinin davranisini gelistirerek farkli cihaz özellikleri için birden çok resim dosyasi saglamayi kolaylastirir. CSS'de yerel olarak bulunan <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS islevine</a> benzer bir sekilde <code>srcset</code>, tarayicinin cihazin özelliklerine bagli olarak en iyi resmi seçmesine olanak tanir; örnegin, 2x bir ekranda 2x resim ve olasilikla ileride, sinirli bir bant genisligine sahip agdaki 2x cihazda 1x resim kullanma.
     </p>
   </div>
 
@@ -118,7 +118,7 @@ Sabit resim boyutlari ve yogunluklari saglamak yerine, saglanan her bir resmin b
 
 {% include_code _code/sizes.html picture html %}
 
-Yukaridaki örnek, görüntü alani genisliginin yarisi kadar olan (`sizes=`50vw``) bir resim olusturur ve tarayicinin genisligi ile cihazin piksel oranina bagli olarak, tarayicinin tarayici penceresinin ne büyüklükte oldugundan bagimsiz olarak dogru resmi seçmesine olanak tanir.  Örnegin, asagidaki tabloda tarayicinin seçecegi resim gösterilmektedir:
+Yukaridaki örnek, görüntü alani genisliginin yarisi kadar olan (`sizes='50vw'`) bir resim olusturur ve tarayicinin genisligi ile cihazin piksel oranina bagli olarak, tarayicinin tarayici penceresinin ne büyüklükte oldugundan bagimsiz olarak dogru resmi seçmesine olanak tanir.  Örnegin, asagidaki tabloda tarayicinin seçecegi resim gösterilmektedir:
 
 <table class="table-4">
   <colgroup>
@@ -182,7 +182,7 @@ Birçok durumda, resmin boyutu sitenin yerlesim kesme noktalarina bagli olarak d
 
 {% include_code _code/breakpoints.html picture html %}
 
-Yukaridaki örnekte bulunan `sizes` özelligi, resmin boyutunu belirtmek için çesitli medya sorgulari kullanir.  Tarayici genisligi 600 pikselden büyük oldugunda resim, görüntü alaninin genisliginin %25`i kadar olurken, tarayici genisligi 500 piksel ile 600 piksel araliginda oldugunda görüntü alani genisliginin %50`si ve 500 pikselin altindaki tarayici genisliklerinde tam genislikte olacaktir.
+Yukaridaki örnekte bulunan `sizes` özelligi, resmin boyutunu belirtmek için çesitli medya sorgulari kullanir.  Tarayici genisligi 600 pikselden büyük oldugunda resim, görüntü alaninin genisliginin %25'i kadar olurken, tarayici genisligi 500 piksel ile 600 piksel araliginda oldugunda görüntü alani genisliginin %50'si ve 500 pikselin altindaki tarayici genisliklerinde tam genislikte olacaktir.
 
 
 ## Ürün resimlerini genisletilebilir yapma
@@ -191,7 +191,7 @@ Müsteriler, satin aldiklari ürünleri görmek ister.  Perakende satis siteleri
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Genisletilebilir ürün resminin bulundugu J. Crew web sitesi">
-  <figcaption>J. Crew`in genisletilebilir ürün resmi bulunan web sitesi.</figcaption>
+  <figcaption>J. Crew'in genisletilebilir ürün resmi bulunan web sitesi.</figcaption>
 </figure>
 
 J. Crew sitesinde hafifçe vurulabilir, genisletilebilir resimlere iyi bir örnek saglanmaktadir. Kaybolan bir yer paylasimi, hafifçe vurulabilecek bir resmin oldugunu ve ince ayrintilarin görülebildigi zum yapilmis bir resmin saglanacagini belirtir.
@@ -214,7 +214,7 @@ teknigi](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview), cihaz
 
 JavaScript resim degisimi, cihazin yeteneklerini kontrol ederve `dogru seyi yapar`. Cihaz piksel oranini `window.devicePixelRatio` araciligiyla belirleyebilir, ekran genisligini ve yüksekligini alabilir ve `navigator.connection` araciligiyla veya sahte bir istek yayinlayarak ag baglantisi dinlemesi bile yapabilirsiniz. Tüm bu bilgileri topladiktan sonra, hangi resmin yüklenecegine karar verebilirsiniz.
 
-Bu yaklasimin bir büyük olumsuz yönü de JavaScript`in kullanilmasi nedeniyle ileri bakma ayristiricisinin isi bitinceye kadar resim yüklemesini geciktireceginiz anlamina gelir. Bu da `pageload` etkinligi baslamadan resimlerin indirilmeye bile baslanmayacak olmasi demektir. Buna ek olarak, tarayici muhtemelen hem 1x hem de 2x resimleri indirecek, dolayisiyla sayfa agirligi artmis olacaktir.
+Bu yaklasimin bir büyük olumsuz yönü de JavaScript'in kullanilmasi nedeniyle ileri bakma ayristiricisinin isi bitinceye kadar resim yüklemesini geciktireceginiz anlamina gelir. Bu da `pageload` etkinligi baslamadan resimlerin indirilmeye bile baslanmayacak olmasi demektir. Buna ek olarak, tarayici muhtemelen hem 1x hem de 2x resimleri indirecek, dolayisiyla sayfa agirligi artmis olacaktir.
 
 {% include modules/nextarticle.liquid %}
 

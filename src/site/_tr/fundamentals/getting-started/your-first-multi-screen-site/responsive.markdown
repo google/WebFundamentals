@@ -82,7 +82,7 @@ id: multi-screen-responsive
 
 {% include modules/toc.liquid %}
 
-Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale]({{site.baseurl}}{{page.article.previous.url}}) baslikli makalede, sayfanin Bilgi Mimarisi`ni isledik ve bir temel yapi olusturduk.
+Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale]({{site.baseurl}}{{page.article.previous.url}}) baslikli makalede, sayfanin Bilgi Mimarisi'ni isledik ve bir temel yapi olusturduk.
 Bu kilavuzda, içerikle temel yapimizi alip çok sayida ekran boyutuna duyarli güzel bir sayfaya dönüstürecegiz.
 
 <div class="clear">
@@ -148,7 +148,7 @@ Buna iyi bir örnek, "ekranin üst kismi"ndaki içerik için bir manset resmi ku
   <img  src="images/narrowsite.png" alt="Tasarlanmis site" style="max-width: 100%;">
 </div>
 
-Eklenmeleri çok basit olabilir. Bizim örnegimizde, bu basligin arka plani olacaktir ve bazi basit CSS`ler araciligiyla uygulanacaktir.
+Eklenmeleri çok basit olabilir. Bizim örnegimizde, bu basligin arka plani olacaktir ve bazi basit CSS'ler araciligiyla uygulanacaktir.
 
 {% highlight css %}
 #headline {
@@ -204,8 +204,7 @@ Yalnizca iki ana yerlesimimizin olmasini seçtik: dar bir görüntü alani ve ge
 
 Ayrica, dar görüntü alaninda kenarliksiz bölümler olusturmaya ve bu bölümlerin, genis görüntü alaninda kenarliksiz kalmasina karar verdik.  Bu, metin ve paragraflarin ultra genis ekranlarda tek, uzun bir satira uzamamasi için ekranin maksimum genisligini sinirlamamiz gerektigi anlamina gelir.  Bu noktanin yaklasik 800 pikselde olmasini seçtik.
 
-Bunu gerçeklestirmek için genisligi sinirlandirmamiz ve ögeleri ortalamamiz gerekir.  Her bir ana bölümün çevresinde bir kapsayici olusturup bir `margin: 
-auto` kodu uygulamaliyiz. Bu, ekranin büyümesine, ancak içerigin ortalanmis bir sekilde ve maksimum 800 piksel boyutta kalmasina olanak taniyacak.
+Bunu gerçeklestirmek için genisligi sinirlandirmamiz ve ögeleri ortalamamiz gerekir.  Her bir ana bölümün çevresinde bir kapsayici olusturup bir `margin: auto` kodu uygulamaliyiz. Bu, ekranin büyümesine, ancak içerigin ortalanmis bir sekilde ve maksimum 800 piksel boyutta kalmasina olanak taniyacak.
 
 Kapsayici, asagidaki biçimde basit bir `div` ögesi olacak:
 
@@ -221,7 +220,7 @@ Dar görüntü alaninda, içerigi görüntülemek için çok fazla alanimiz olma
 
 Daha genis bir görüntü alanimiz oldugunda kullanicinin daha genis bir ekranda, ancak ekrandan biraz daha uzakta bulunma olasiligini göz önünde bulundurmamiz gerekir.  Içerigin okunabilirligini artirmak için tipografinin boyutunu ve agirligini artirabilir ve ayri alanlari daha da ayirmak için dolguyu degistirebiliriz.
 
-Ürün sayfamizda, bölüm ögelerinin dolgusunu genisligin %5`inde kalacak sekilde ayarlayarak dolguyu artiracagiz.  Ayrica, her bir bölümün basliklarinin boyutunu da artiracagiz.
+Ürün sayfamizda, bölüm ögelerinin dolgusunu genisligin %5'inde kalacak sekilde ayarlayarak dolguyu artiracagiz.  Ayrica, her bir bölümün basliklarinin boyutunu da artiracagiz.
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
@@ -229,7 +228,7 @@ Daha genis bir görüntü alanimiz oldugunda kullanicinin daha genis bir ekranda
 
 Dar görüntü alanimiz, yigin seklinde dogrusal bir görüntüydü.  Her bir ana bölüm ve içindeki içerik, yukaridan asagiya dogru görüntüleniyordu.
 
-Genis görüntü alani, bize içerigi ilgili ekran için en uygun sekilde görüntülemek üzere kullanabilecegimiz fazladan alan verir.  Ürün sayfamiz için bu, IA`miza göre asagidakileri yapabilecegimiz anlamina gelir:
+Genis görüntü alani, bize içerigi ilgili ekran için en uygun sekilde görüntülemek üzere kullanabilecegimiz fazladan alan verir.  Ürün sayfamiz için bu, IA'miza göre asagidakileri yapabilecegimiz anlamina gelir:
 
 *  Formu, baslik bilgileri çevresinde hareket ettirme.
 *  Videoyu, önemli noktalarin sagina yerlestirme.
@@ -266,13 +265,13 @@ Video ögesinin, dar görüntü alaninin dikey akisinin disina tasinmasi ve geni
 
 Dar görüntü alani arayüzündeki resimler (çogunlukla mobil cihazlar), ekranin tam genisligini kaplayacak ve dikey olarak yigilacak sekilde ayarlanir.  Bu, genis görüntü alaninda iyi bir sekilde ölçeklenmez.
 
-Resimlerin genis bir görüntü alaninda dogru görünmesini saglamak için kapsayici genisliginin %30`una ölçeklenirler ve (dar görüntü alanindaki gibi dikey yerlestirilmeleri yerine) yatay olarak yerlestirilirler. Ayrica, resimleri daha çekici hale getirmek için biraz sinir yariçapi ve kutu gölgesi de ekleyecegiz.
+Resimlerin genis bir görüntü alaninda dogru görünmesini saglamak için kapsayici genisliginin %30'una ölçeklenirler ve (dar görüntü alanindaki gibi dikey yerlestirilmeleri yerine) yatay olarak yerlestirilirler. Ayrica, resimleri daha çekici hale getirmek için biraz sinir yariçapi ve kutu gölgesi de ekleyecegiz.
 
 <img src="images/imageswide.png" style="width:100%">
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
-### Resimleri DPI`ya duyarli yapma
+### Resimleri DPI'ya duyarli yapma
 
 Resimleri kullanirken, görüntü alaninin boyutunu ve ekranin yogunlugunu dikkate alin.
 
@@ -302,7 +301,7 @@ Dar bir görüntü alaninda tablonuzu iki satirdan olusturmanizi, bir satirdaki 
 </video>
 
 Sitemizde, yalnizca tablo içerigi için fazladan bir kesme noktasi olusturmamiz gerekiyordu.
-Önce bir mobil cihaz için olusturdugunuzda, uygulanan stilleri geri almak daha zor olacagindan, dar görüntü alani tablosu CSS`sini genis görüntü alani  CSS`sinden ayirmamiz gerekir.
+Önce bir mobil cihaz için olusturdugunuzda, uygulanan stilleri geri almak daha zor olacagindan, dar görüntü alani tablosu CSS'sini genis görüntü alani  CSS'sinden ayirmamiz gerekir.
 Bu, bize net ve tutarli bir kesme saglar.
 
 {% include_code _code/content-with-styles.html table-css css %}

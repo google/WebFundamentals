@@ -14,7 +14,7 @@ id: images
 key-takeaways:
   use-right-image:
     - Görüntünün özellikleri için en iyi resmi kullanin; ekran boyutu, cihaz çözünürlügü ve sayfa yerlesimini dikkate alin.
-    - <code>min-resolution</code> ve <code>-webkit-min-device-pixel-ratio</code> ile medya sorgulari kullanan yüksek DPI`ya sahip görüntüler için CSS`deki <code>background-image</code> özelligini degistirin.
+    - <code>min-resolution</code> ve <code>-webkit-min-device-pixel-ratio</code> ile medya sorgulari kullanan yüksek DPI`ya sahip görüntüler için CSS'deki <code>background-image</code> özelligini degistirin.
     - Biçimlendirmede 1x resme ek olarak yüksek çözünürlüklü resimler saglamak için srcset tanimlayicisini kullanin.
     - JavaScript resim degistirme tekniklerini kullanirken veya son derece sikistirilmis yüksek çözünürlüklü resimleri düsük çözünürlüklü cihazlara sunarken performans maliyetlerini göz önünde bulundurun.
   avoid-images:
