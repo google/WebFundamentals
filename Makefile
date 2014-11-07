@@ -20,7 +20,10 @@ deploy: build
 server:
 	@echo "Visit: http://0.0.0.0:8081/fundamentals/"
 	cd ./src && grunt develop
-	# jekyll serve -w --port=8081 --trace $(param1)
+
+test:
+	@echo "Visit: http://0.0.0.0:8081/fundamentals/"
+	cd ./src && grunt build
 
 devsite:
 	cd ./src && grunt devsite

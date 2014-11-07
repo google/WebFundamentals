@@ -20,74 +20,72 @@ handlers:
   upload: robots.txt
 
 - url: /web/(.*\.png)
-  static_files: build/static/_langs/en/\1
+  static_files: build/devsite/_langs/en/\1
   expiration: 1d
-  upload: build/static/_langs/en/(.*\.png)
+  upload: build/devsite/_langs/en/(.*\.png)
 
 - url: /web/imgs/(.*\.png)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.png)
+  upload: build/devsite/(.*\.png)
 
 - url: /web/(.*\.gif)
-  static_files: build/static/_langs/en/\1
+  static_files: build/devsite/_langs/en/\1
   expiration: 1d
-  upload: build/static/_langs/en/(.*\.gif)
+  upload: build/devsite/_langs/en/(.*\.gif)
 
 - url: /web/(.*\.ico)
-  static_files: build/static/_langs/en/\1
+  static_files: build/devsite/_langs/en/\1
   expiration: 7d
-  upload: build/static/_langs/en/(.*\.ico)
+  upload: build/devsite/_langs/en/(.*\.ico)
 
 - url: /web/fundamentals/imgs/(.*\.jpg)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.jpg)
+  upload: build/devsite/(.*\.jpg)
 
 - url: /web/(.*\.jpg)
-  static_files: build/static/_langs/en/\1
+  static_files: build/devsite/_langs/en/\1
   expiration: 1d
-  upload: build/static/_langs/en/(.*\.jpg)
+  upload: build/devsite/_langs/en/(.*\.jpg)
 
 - url: /web/(.*\.svg)
-  static_files: build/static/_langs/en/\1
+  static_files: build/devsite/_langs/en/\1
   expiration: 1d
-  upload: build/static/_langs/en/(.*\.svg)
+  upload: build/devsite/_langs/en/(.*\.svg)
 
 - url: /web/(.*\.svg)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.svg)
+  upload: build/devsite/(.*\.svg)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/(.*\.woff)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.woff)
+  upload: build/devsite/(.*\.woff)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/(.*\.eot)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.eot)
+  upload: build/devsite/(.*\.eot)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
 - url: /web/(.*\.ttf)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.ttf)
+  upload: build/devsite/(.*\.ttf)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
-
-
 - url: /web/(.*\.css)
-  static_files: build/static/\1
+  static_files: build/devsite/\1
   expiration: 1d
-  upload: build/static/(.*\.css)
+  upload: build/devsite/(.*\.css)
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
