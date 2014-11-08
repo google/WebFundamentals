@@ -31,7 +31,7 @@
         {% if guide.langcode == page.langcode or guide.is_localization == false %}
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
           <div class="primary-content">
-            <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
+            <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | canonicalize | localize_link:guide}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
             <p>{{guide.description}}</p>
           </div>
           <div class="secondary-content">
@@ -40,7 +40,7 @@
             {% for article in page.articles[guide.id] %}
               {% if article.langcode == page.langcode or article.langcode == guide.langcode %}
               {% if article.langcode == page.langcode or article.has_localization[page.langcode] == false %}
-              <li><a href="{{site.baseurl}}{{article.url | clean | localize_link:article}}" title="{{"read_the_lesson" | localize_string}} {{article.title}}">{{article.title}}</a></li>
+              <li><a href="{{site.baseurl}}{{article.url | canonicalize | localize_link:article}}" title="{{"read_the_lesson" | localize_string}} {{article.title}}">{{article.title}}</a></li>
               {% endif %}
               {% endif %}
             {% endfor %}
