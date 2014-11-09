@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Control Appearance on Social Sites"
-description: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help to bring more people to your site by providing previews with richer information than would otherwise be available."
-introduction: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help to bring more people to your site by providing previews with richer information than would otherwise be available."
+description: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."
+introduction: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."
 snippet: "Boost discoverability of your webpage"
 id: social-sites
 collection: optimizations-for-crawlers
@@ -10,7 +10,7 @@ authors:
   - agektmr
 article:
   written_on: 2014-10-08
-  updated_on: 2014-11-05
+  updated_on: 2014-11-09
   order: 1
 key-takeaways:
   - Use schema.org microdata to provide page title, description and an image for Google+.
@@ -25,8 +25,8 @@ key-takeaways:
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
 You can influence the way your site appears when shared via social media by
-adding a few lines of code to each page. This can help to increase engagement
-by providing previews with richer information than would otherwise be available.
+adding a few lines of code to each page. This can help increase engagement by
+providing previews with richer information than would otherwise be available.
 Without it, social sites will provide only basic information, without images or
 other helpful information. 
 
@@ -48,8 +48,8 @@ preview.
       <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
        imgs/gplus-snippet-2-2x.png 2x" />
       <figcaption>With the appropriate markup, the correct title, a short
-       description and an image is included. Adding these items can help
-       increase engagement. </figcaption>
+       description and an image are included. Adding these items can help
+       increase engagement.</figcaption>
     </figure>
   </div>
 </div>
@@ -60,16 +60,16 @@ But describing your website tends be cumbersome and can miss the point from the
 page owners aspect. Some services restrict the number of characters users can
 put in the note.
 
-By adding the appropriate metadata to your pages, you can help simplify the
-sharing process for users by providing the title, a description and an
-attractive image. This means they don't have to spend valuable time (or
-characters) describing the link.
+By adding the appropriate metadata to your pages, you can simplify the sharing
+process for users by providing the title, a description and an attractive
+image. This means they don't have to spend valuable time (or characters)
+describing the link.
 
-## Use schema.org + microdata to provide rich snippets on Google+ Crawlers use
-many methods to parse a page and understand it's content. By using
+## Use schema.org + microdata to provide rich snippets on Google+
+Crawlers use many methods to parse a page and understand its content. By using
 [microdata](http://www.w3.org/TR/microdata/), and
-[schema.org](https://schema.org/) vocabulary, you have help social sites and
-search engines to better understand the contents of the page.
+[schema.org](https://schema.org/) vocabulary, you help social sites and search
+engines better understand the contents of the page.
 
 Here's an example:
 
@@ -96,7 +96,7 @@ and `image`.
 ### Learn more
 These microdata provides semantic information to crawlers, typically for
 [Google+](https://plus.google.com/) and Google Search. To learn more about
-snippets and rendering on Google+, read following documents:
+snippets and rendering on Google+, read the following documents:
 
 * [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
 * [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
@@ -137,7 +137,7 @@ snippet information when the page is shared.
 
 ### Use `og:` namespaced `meta` tags to describe metadata
 A `meta` tag consists of a `property` attribute and a `content` attribute.
-Properties and contents take following values:
+Properties and contents may take the following values:
 
 <table class="table-2">
   <colgroup>
@@ -169,13 +169,13 @@ Properties and contents take following values:
     </tr>
     <tr>
       <td data-th="Property"><code>og:type</code></td>
-      <td data-th="Content">A string that indicates a type of the webpage. You can find one that is suitable for your webpage <a href="https://developers.facebook.com/docs/reference/opengraph/">here</a>.</td>
+      <td data-th="Content">A string that indicates the type of the webpage. You can find one that is suitable for your webpage <a href="https://developers.facebook.com/docs/reference/opengraph/">here</a>.</td>
     </tr>
   </tbody>
 </table>
 
 These meta tags provide semantic information to crawlers from social sites,
-typically from [Google+](https://plus.google.com/),
+typically from [Google+](https://plus.google.com/) and
 [Facebook](https://www.facebook.com/).
 
 ### Learn more
@@ -190,16 +190,16 @@ In order to validate your markup on Facebook, you can use tools such as:
 * [Debugger](https://developers.facebook.com/tools/debug/)
 
 ## Use Twitter Cards to provide rich snippets on Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to Open
-[Graph Protocol applicable for Twitter](https://twitter.com/). They allow you to
-[add media attachments like images and video to Tweets with a link to your
-[webpage. By adding the appropriate metadata, Tweets with links to your page
-[will have a card added that includes the rich detail you've added.
+[Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
+Open [Graph Protocol applicable for Twitter](https://twitter.com/). They allow
+you to add media attachments like images and video to Tweets with a link to
+your webpage. By adding the appropriate metadata, Tweets with links to your
+page will have a card added that includes the rich detail you've added.
 
 ### Use `twitter:` namespaced meta tags to describe metadata
 In order to get a Twitter Card working, [your domain must be
 approved](https://dev.twitter.com/docs/cards/validation/validator) and must
-contain a meta tag that has `twitter:card` as `name` attribute instead of
+contain a meta tag that has `twitter:card` as the `name` attribute instead of
 `property` attribute.
   
 Here's a quick example:
@@ -220,8 +220,9 @@ Here's a quick example:
 {{ 'try_sample' | localize_string }}
 {% endlink_sample_button %}
 
-By assigning Twitter id as content of twitter:site, Twitter embeds it to the
-shared post so people can easily engage with the page owner.
+By assigning the Twitter id to the value of twitter:site, Twitter embeds this
+information in the shared post so that people can easily engage with the page
+owner.
 
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
@@ -236,8 +237,8 @@ In order to validate your markup, Twitter provides:
 * [Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
 
 ## The Best Practice
-Given all three options, the best thing you can do is to include all efficiently
-in your webpage. Here's an example:
+Given all three options, the best thing you can do is to include them all in
+your webpage. Here's an example:
 
 {% highlight html %}
 <!-- namespace declaration -->
@@ -271,13 +272,14 @@ in your webpage. Here's an example:
 {{ 'try_sample' | localize_string }}
 {% endlink_sample_button %}
 
-Notice that microdata and OGP share some markups:
+Notice that microdata and OGP share some markup:
 
 * `itemscope` is located at `head` tag
 * `title` and `description` are shared between microdata and OGP
 * `itemprop="image"` is using `link` tag with `href` attribute instead of
 reusing `meta` tag with `property="og:image"`
   
-Lastly, make sure to validate that your webpage appears as expected on each social sites before publishing them.
+Lastly, make sure to validate that your webpage appears as expected on each
+social sites before publishing.
 
 {% endwrap %}
