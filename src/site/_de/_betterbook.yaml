@@ -23,7 +23,7 @@ toc:
             path: /fundamentals/layouts/layout-patterns/
           - title: Elemente der Nutzeroberfläche
             path: /fundamentals/layouts/ui-elements/
-      - title: Formrn und Nutzereingabe
+      - title: Formen und Nutzereingabe
         path: /fundamentals/input/
         id: user-input
         section:
