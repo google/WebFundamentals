@@ -30,6 +30,7 @@
     "grunt-shell": "~0.7.0",
     "grunt-webfont": "~0.4.8",
     "js-yaml": "^3.2.2",
+    "latest-release": "^1.0.0",
     "marked": "^0.3.2",
     "matchdep": "~0.3.0",
     "mkdirp": "^0.5.0",
