@@ -117,20 +117,7 @@ The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
 metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
 
-{% highlight html %}
-<html prefix="g: http://ogp.me/ns#">
-  <head>
-    <meta property="og:title" content="Enjoy Fireworks">
-    <meta property="og:description" content="Fireworks are beautiful.">
-    <meta property="og:image" content="https://example.com/fireworks.png">
-    <meta property="og:url" content="https://example.com/fireworks.html">
-    <meta property="og:type" content="website">
-{% endhighlight %}
-
-{% link_sample_button _code/social-sites.html %}
-{{ 'try_sample' | localize_string }}
-{% endlink_sample_button %}
-
+{% include_code _code/social-sites.html ogp %}
 
 When included in the head section of your page, this metadata is used for rich
 snippet information when the page is shared.
@@ -204,21 +191,7 @@ contain a meta tag that has `twitter:card` as the `name` attribute instead of
   
 Here's a quick example:
 
-{% highlight html %}
-<html prefix="g: http://ogp.me/ns#">
-  <head>
-    <meta property="og:title" content="Enjoy Fireworks">
-    <meta property="og:description" content="Fireworks are beautiful. This ...">
-    <meta property="og:image" content="https://example.com/fireworks.png">
-    <meta property="og:url" content="https://example.com/fireworks.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="agektmr">
-{% endhighlight %}
-
-{% link_sample_button _code/social-sites2.html %}
-{{ 'try_sample' | localize_string }}
-{% endlink_sample_button %}
+{% include_code _code/social-sites.html twitter %}
 
 By assigning the Twitter id to the value of twitter:site, Twitter embeds this
 information in the shared post so that people can easily engage with the page
@@ -240,37 +213,7 @@ In order to validate your markup, Twitter provides:
 Given all three options, the best thing you can do is to include them all in
 your webpage. Here's an example:
 
-{% highlight html %}
-<!-- namespace declaration -->
-<html prefix="og: http://ogp.me/ns#">
-  <!-- define microdata scope and type -->
-  <head itemscope itemtype="http://schema.org/Article">
-    <title>Enjoy Fireworks</title>
-    <!-- define ogp and itemprop of microdata in one line -->
-    <meta property="og:title" itemprop="name" content="Enjoy Fireworks">
-    <!-- define ogp image -->
-    <meta property="og:image" content="https://example.com/fireworks.png">
-    <!-- use link[href] to define image url for microdata -->
-    <link itemprop="image" href="//example.com/fireworks.png">
-    <!-- define ogp and itemprop of microdata in one line -->
-    <meta property="og:url" content="//example.com/fireworks.html">
-    <!-- define ogp type -->
-    <meta property="og:type" content="website">
-    <!-- define twitter cards type -->
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- define site's owner twitter id -->
-    <meta name="twitter:site" content="agektmr">
-    <!-- define description for ogp and itemprop of microdata in one line -->
-    <meta property="og:description" itemprop="description"
-      content="Fireworks are beautiful. Fireworks make loud bangs!">
-    <!-- general description (separate with ogp and microdata) -->
-    <meta name="description" 
-      content="Fireworks are beautiful and are very loud!">
-{% endhighlight %}
-
-{% link_sample_button _code/social-sites2.html %}
-{{ 'try_sample' | localize_string }}
-{% endlink_sample_button %}
+{% include_code _code/social-sites2.html best_practice %}
 
 Notice that microdata and OGP share some markup:
 
