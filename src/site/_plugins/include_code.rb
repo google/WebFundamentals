@@ -102,6 +102,8 @@ module Jekyll
             match = getmatcher_tag(lang, "[^\\]]+", "\\w+")
             snippet.gsub!(/#{match}/mi, "")
         end
+        snippet = Liquid::Template.parse(snippet).render({
+          "baseurl" => site.config["sample_link_base"]})
         render_codehighlighter(context, snippet, filepath)
     end
 
