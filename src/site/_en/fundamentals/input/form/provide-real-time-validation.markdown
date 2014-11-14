@@ -159,6 +159,17 @@ you can use the following.
 <input type="text" id="83filename" maxlength="12" ...>
 {% endhighlight %}
 
+#### The `minlength` attribute
+
+The `minlength` attribute can be used to specify the minimum length of an input or
+textbox and is useful when you want to specify a minimum length the user must
+provide. For example, if you want to specify that a file name requires at least
+8 characters, you can use the following.
+
+{% highlight html %}
+<input type="text" id="83filename" minlength="8" ...>
+{% endhighlight %}
+
 #### The `novalidate` attribute
 
 In some cases, you may want to allow the user to submit the form even if it
@@ -201,7 +212,11 @@ reason that an element is invalid:
     </tr>
     <tr>
       <td data-th="API"><code>checkValidity()</code></td>
-      <td data-th="Description">Returns <code>true</code> if the element satisfies all of its constraints, and <code>false</code> otherwise.</td>
+      <td data-th="Description">Returns <code>true</code> if the element satisfies all of its constraints, and <code>false</code> otherwise. Deciding how the page responds when the check returns <code>false</code> is left up to the developer.</td>
+    </tr>
+    <tr>
+      <td data-th="API"><code>reportValidity()</code></td>
+      <td data-th="Description">Returns <code>true</code> if the element satisfies all of its constraints, and <code>false</code> otherwise. When the page responds <code>false</code>, constraint problems are reported to the user.</td>
     </tr>
     <tr>
       <td data-th="API"><code>validity</code></td>
