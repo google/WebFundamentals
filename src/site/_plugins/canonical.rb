@@ -17,12 +17,12 @@ module Jekyll
   # Provides the canonical URL for the current page by removing
   # index.html and removing .html from the page names.
   #
-  module CanonicalURL
-    def canonical_url(url)
+  module CanonicalizeURL
+    def canonicalize(url)
       url = url.sub('index.html', '')
       url = url.sub('.html', '')
     end
   end
 end
 
-Liquid::Template.register_filter(Jekyll::CanonicalURL)
+Liquid::Template.register_filter(Jekyll::CanonicalizeURL)
