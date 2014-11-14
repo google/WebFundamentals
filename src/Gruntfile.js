@@ -185,17 +185,17 @@ module.exports = function(grunt) {
 		jekyll: {
 			appengine: {
 			  options: {
-				  config: 'site/_config.yml'
+				  config: 'site/_config-wsk-version.yml,site/_config.yml'
 			  }
 			},
 			develop: {
 			  options: {
-				  config: 'site/_config-grunt.yml'
+				  config: 'site/_config-wsk-version.yml,site/_config-grunt.yml'
 			  }
 			},
 			devsite: {
 			  options: {
-				  config: 'site/_config-devsite.yml'
+				  config: 'site/_config-wsk-version.yml,site/_config-devsite.yml'
 			  }
 			}
 
@@ -300,10 +300,38 @@ module.exports = function(grunt) {
 					htmlDemo: false,
 					template: '<%= config.source %>/_templates/icons-template.css'
 				}
-			}
-		},
+			},
 
+		}
 	});
+
+	grunt.registerTask('wsk-version', 'Uses the Github API to determine the latest web-starter-kit version, and writes it to ./site/_config-wsk-version.yml', function () {
+		var latest = require('latest-release');
+		var done = this.async();
+		var out = './site/_config-wsk-version.yml';
+
+		grunt.log.writeln('Determining latest web-starter-kit version..');
+
+		latest('google', 'web-starter-kit', function (release, err) {
+			if (err) {
+				grunt.verbose.or.write('Failed to retrieve latest web-starter-kit release information').error().error(err.message);
+			} else {
+				grunt.log.writeln('Latest version is: ' + release.name);
+				grunt.log.writeln('Saved release information under: ' + out);
+				/*jshint camelcase: false */
+				/*ignore the casing on the variables. These come directly from the Githup API.*/
+				grunt.file.write(out,
+					'wsk-tag: '     + release.tag_name    + '\n'   +
+					'wsk-name: '    + release.name        + '\n'   +
+					'wsk-zip-url: ' + release.zipball_url + '\n'
+					);
+				/*jshint camelcase: true */
+				done();
+			}
+		});
+	});
+
+
 
 	// Test task
 	grunt.registerTask('test', 'Lints all javascript and CSS sources.\nOptions: --strict: enable strict linting mode', function(){
@@ -335,6 +363,7 @@ module.exports = function(grunt) {
 				'clean:destination',		// Clean out the destination directory
 				'compass:compressed',		// Build the CSS using Compass with compression
 				'cssmin',					// Minify the combined CSS
+				'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
 				'jekyll:appengine',		// Build the site with Jekyll
 			]);
 		} else {
@@ -344,6 +373,7 @@ module.exports = function(grunt) {
 				'clean:destination',		// Clean out the destination directory
 				'compass:uncompressed',		// Build the CSS using Compass without compression
 				'cssmin',					// Minify the combined CSS
+				'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
 				'jekyll:appengine',		// Build the site with Jekyll
 			]);
 		}
