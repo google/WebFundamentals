@@ -94,7 +94,7 @@ Curious to know how long the CSS processing took? Record a timeline in DevTools 
 
 <img src="images/cssom-timeline.png" class="center" alt="Tracing CSSOM construction in DevTools">
 
-Our trivial stylesheet takes ~0.6ms to process and affects 8 elements on the page -- not much, but once again, not free. However, where did the 8 elements come from? The CSSOM and DOM and are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the render tree that links the DOM and CSSOM together.
+Our trivial stylesheet takes ~0.6ms to process and affects 8 elements on the page -- not much, but once again, not free. However, where did the 8 elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the render tree that links the DOM and CSSOM together.
 
 {% include modules/nextarticle.liquid %}
 
