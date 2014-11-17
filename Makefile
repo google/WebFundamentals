@@ -9,6 +9,7 @@ build: copy
     #add_version
 
 copy: clean
+	cd ./src && npm install
 	cd ./src rvm --default use 2.0.0-p451
 	cd ./src && rvm . do bundle install
 	cd ./src && rvm . do grunt build
