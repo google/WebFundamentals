@@ -5,7 +5,7 @@ description: "The following are customizations that are very useful, but work on
 introduction: "The following are customizations that are very useful, but work only in a subset of browsers. All of them are optional but strongly suggested, as they further enhance the app experience."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-09-24
+  updated_on: 2014-11-18
   order: 4
 id: additional-customizations
 authors:
@@ -16,6 +16,20 @@ collection: stickyness
 {% wrap content %}
 
 {% include modules/toc.liquid %}
+
+## Chrome: Color the browser elements
+
+Starting with Chrome 39 on mobile, you can override application colors such as
+the title bar color and the highlight in the color switcher using a meta
+tag. For example:
+
+{% highlight html %}
+<meta name="theme-color" content="#00ff00">
+{% endhighlight %}
+
+Though this tag is not yet supported in other browswers, you can do the same
+thing with `msapplication-navbutton-color` on Internet Explorer and 
+`apple-mobile-web-app-status-bar-style` on mobile safari.
 
 ## Safari: Startup images, status bar appearance
 
