@@ -4,13 +4,13 @@ title: "Set Up Web Starter Kit"
 description: "If you are new to Web Starter Kit, then this guide is for you. 
   It steps through how to get up and running with Web Starter Kit as quickly 
   as possible."
-introduction: "Web Starter Kit relies on NodeJS, NPM, Ruby & Sass to work, 
-  once you've got these on your machine, you'll have everything you need to 
-  start using Web Starter Kit in your projects."
+introduction: "Web Starter Kit relies on NodeJS, NPM, & Sass to work, once
+  you've got these on your machine, you'll have everything you need to start
+  using Web Starter Kit in your projects."
 notes:
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2014-11-20
   order: 1
 id: setting-up-wsk
 collection: web-starter-kit
