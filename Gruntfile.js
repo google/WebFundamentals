@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
 	// App configuration
-	var config = grunt.file.readYAML('site/_config-grunt.yml');
+	var config = grunt.file.readYAML('config/local.yml');
 
 	// Tasks configuration
 	grunt.initConfig({
@@ -24,6 +24,12 @@ module.exports = function(grunt) {
 		config: config,
 
 		clean: {
+			build: {
+				files: [{
+					dot: true,
+					src: ['src/appengine/build']
+				}]
+			},
 			destination: {
 				files: [{
 					dot: true,
@@ -134,7 +140,7 @@ module.exports = function(grunt) {
 
 		csslint: {
 			options: {
-				csslintrc: '.csslintrc'
+				csslintrc: 'src/.csslintrc'
 			},
 			lax: {
 				src: '<%= config.destination %>/css/*.css',
@@ -160,6 +166,19 @@ module.exports = function(grunt) {
 			}
 		},
 
+		gae: {
+			options: {
+				path: 'src/appengine',
+				auth: 'oauth2'
+			},
+			deploy: {
+				action: 'update'
+			},
+			local: {
+				action: 'run'
+			}
+		},
+
 		htmlmin: {
 			all: {
 				options: {
@@ -182,20 +201,41 @@ module.exports = function(grunt) {
 			}
 		},
 
+		imagemin: {
+			normal: {
+				options: {
+					optimizationLevel: 7
+				},
+				files: [{
+					expand: true,
+					src: ['**/*.png']
+				}]
+			},
+			o2: {
+				options: {
+					optimizationLevel: 2
+				},
+				files: [{
+					expand: true,
+					src: ['**/*.png']
+				}]
+			},
+		},
+
 		jekyll: {
 			appengine: {
 			  options: {
-				  config: 'site/_config-wsk-version.yml,site/_config.yml'
+				  config: 'config/wsk-version.yml,config/appengine.yml'
 			  }
 			},
 			develop: {
 			  options: {
-				  config: 'site/_config-wsk-version.yml,site/_config-grunt.yml'
+				  config: 'config/wsk-version.yml,config/local.yml'
 			  }
 			},
 			devsite: {
 			  options: {
-				  config: 'site/_config-wsk-version.yml,site/_config-devsite.yml'
+				  config: 'config/wsk-version.yml,config/devsite.yml'
 			  }
 			}
 
@@ -203,7 +243,7 @@ module.exports = function(grunt) {
 
 		jshint: {
 			options: {
-				jshintrc: '.jshintrc'
+				jshintrc: 'src/.jshintrc'
 			},
 			source: [
 				'Gruntfile.js',
@@ -305,10 +345,10 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('wsk-version', 'Uses the Github API to determine the latest web-starter-kit version, and writes it to ./site/_config-wsk-version.yml', function () {
+	grunt.registerTask('wsk-version', 'Uses the Github API to determine the latest web-starter-kit version, and writes it to ./config/wsk-version.yml', function () {
 		var latest = require('latest-release');
 		var done = this.async();
-		var out = './site/_config-wsk-version.yml';
+		var out = './config/wsk-version.yml';
 
 		grunt.log.writeln('Determining latest web-starter-kit version..');
 
@@ -420,7 +460,7 @@ module.exports = function(grunt) {
 
 	// Devsite task
 	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
-		grunt.config.set('config', grunt.file.readYAML('site/_config-devsite.yml'));
+		grunt.config.set('config', grunt.file.readYAML('config/devsite.yml'));
 
 		return grunt.task.run([
 			'test',						// Code quality control

@@ -1,25 +1,26 @@
-# For developers.google.com
+# For AppEngine
 safe: false
 port: 8081
-source: site
-destination: ./appengine/build/devsite
+source: src/site
+destination: ./src/appengine/build/devsite
 markdown: kramdown
 permalink: /articles/:title.html
-fundamentals: /web/fundamentals
 baseurl: /web
+fundamentals: /web/fundamentals
 url: /web
 highlighter: pygments
 pygments: true
+spotlights: false
 github:
   root: https://github.com/Google/WebFundamentals
   content: tree/master/src/site
-include_open_html: false
-spotlights: false
+include_open_html: true
 custom:
 kramdown:
   toc_levels: "2"
   entity_output: :as_input
-include: ['.htaccess', '_project.yaml', '_book.yaml']
-exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
+include: ['.htaccess']
+exclude: ['config.rb']
+# comment this for plain jekyll serve usage.
 langs_available: ['ar', 'de', 'es', 'fr', 'he', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
-sample_link_base: "http://googlesamples.github.io/web-fundamentals/samples/"
+sample_link_base: "/web/fundamentals/resources/samples/"
