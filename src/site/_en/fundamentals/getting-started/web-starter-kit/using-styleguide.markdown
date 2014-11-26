@@ -13,7 +13,7 @@ introduction: "Web Starter Kit comes with a style guide, a quick and easy way
 notes:
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2014-11-23
   order: 3
 id: using-wsk-styleguide
 collection: web-starter-kit
@@ -42,48 +42,50 @@ site, consider adding the element to your style guide.
 
 ### Add a New Component
 
-1. Open *app/styleguide.html* and after the last element, add the HTML
+1. Open `app/styleguide.html` and after the last element, add the HTML
 for your new element.
 
-2. Inside app/styles/components/, create a new Sass file with an appropriate
-name for your component.
+2. Inside `app/styles/components/_components`, create a new Sass file with an
+appropriate name for your component.
 
-3. Open app/styles/components.scss and at the bottom of the file, import your
+3. Open `app/styles/components.scss` and at the bottom of the file, import your
 new Sass file like so.
 
         // New Styles
-        @import "_components/_<My Component Name>";
+        @import "_components/_<MyComponentName>";
 
     Don’t forget to include the underscore in the filename; it indicates that
     the file is designed to be merged into other Sass files.
 
-4. Test out how it looks on localhost by going to http://localhost:<Port Number>/styleguide.html and make sure the build was successful.
+4. Test out how it looks on localhost by going to
+`http://localhost:<PortNumber>/styleguide.html` and make sure the build was
+successful.
 
 5. Finally, use your new component in your pages.
 
 ### Example of How to Add a Component
 
-Below is a simple step through of adding a component to the Style Guide.
+Below is a simple step through of adding a component to the style guide.
 
-1. First we add our <footer> tag at the bottom of app/styleguide.html
-and give it a class name Footer.
+1. First we add our `<footer>` tag at the bottom of `app/styleguide.html`
+and give it a class name of "Footer".
 
 2. Then we create our sass file. Here we’ll create
-app/styles/components/_footer.scss and add some really basic styles to get
-us started.
+`app/styles/components/_components/_footer.scss` and add some really basic
+styles to get us started.
 
         .Footer {
           height: 180px;
           background-color: #404040;
         }
 
-3. At the bottom of components.scss, we add our footer sass file.
+3. At the bottom of `components.scss`, we add our footer sass file.
 
         // New Styles
         @import "_components/_footer";
 
-4. By this point, running gulp serve and checking out the style guide, we
-should be able to see the footer in all it’s glory.
+4. By this point, running `gulp serve` and checking out the style guide, we
+should be able to see the footer in all its glory.
 
 5. Add a little more to our styles:
 
@@ -100,8 +102,8 @@ should be able to see the footer in all it’s glory.
         }
 
 
-6. Let’s add a title in styleguide.html so it looks like the other style guide
-elements and perhaps a link at the top of the page.
+6. Let’s add a title in `styleguide.html` so it looks like the other style
+guide elements and perhaps a link at the top of the page.
 
         // Footer Link at top of styleguide.html
         <li class="summary-header__anchors-item">
@@ -139,7 +141,7 @@ elements and perhaps a link at the top of the page.
     ![A new footer for the Web Starter Kit styleguide](images/wsk-footer.jpg)
 
 You can now use the footer component in any page which includes the
-components.scss file inside it (like the app/styles/main.scss file).
+`components.scss` file inside it (like the `app/styles/main.scss` file).
 
     /*
      * Visual Style Guide styles
