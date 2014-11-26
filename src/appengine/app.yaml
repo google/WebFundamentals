@@ -19,83 +19,26 @@ handlers:
   static_files: robots.txt
   upload: robots.txt
 
-- url: /web/(.*\.png)
+- url: /web/imgs
+  static_dir: build/devsite/imgs
+  expiration: 1d
+
+- url: /web/(.*\.(png|gif|jpg|svg))
   static_files: build/devsite/_langs/en/\1
   expiration: 1d
-  upload: build/devsite/_langs/en/(.*\.png)
-
-- url: /web/imgs/(.*\.png)
-  static_files: build/devsite/\1
-  expiration: 1d
-  upload: build/devsite/(.*\.png)
-
-- url: /web/(.*\.gif)
-  static_files: build/devsite/_langs/en/\1
-  expiration: 1d
-  upload: build/devsite/_langs/en/(.*\.gif)
+  upload: build/devsite/_langs/en/(.*\.(png|gif|jpg|svg))
 
 - url: /web/(.*\.ico)
   static_files: build/devsite/_langs/en/\1
   expiration: 7d
   upload: build/devsite/_langs/en/(.*\.ico)
 
-- url: /web/fundamentals/imgs/(.*\.jpg)
+- url: /web/(.*\.(woff|eot|ttf|css))
   static_files: build/devsite/\1
   expiration: 1d
-  upload: build/devsite/(.*\.jpg)
-
-- url: /web/(.*\.jpg)
-  static_files: build/devsite/_langs/en/\1
-  expiration: 1d
-  upload: build/devsite/_langs/en/(.*\.jpg)
-
-- url: /web/(.*\.svg)
-  static_files: build/devsite/_langs/en/\1
-  expiration: 1d
-  upload: build/devsite/_langs/en/(.*\.svg)
-
-- url: /web/(.*\.svg)
-  static_files: build/devsite/\1
-  expiration: 1d
-  upload: build/devsite/(.*\.svg)
+  upload: build/devsite/(.*\.(woff|eot|ttf|css))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
-
-- url: /web/(.*\.woff)
-  static_files: build/devsite/\1
-  expiration: 1d
-  upload: build/devsite/(.*\.woff)
-  http_headers:
-    Access-Control-Allow-Origin: https://developers.google.com
-
-- url: /web/(.*\.eot)
-  static_files: build/devsite/\1
-  expiration: 1d
-  upload: build/devsite/(.*\.eot)
-  http_headers:
-    Access-Control-Allow-Origin: https://developers.google.com
-
-- url: /web/(.*\.ttf)
-  static_files: build/devsite/\1
-  expiration: 1d
-  upload: build/devsite/(.*\.ttf)
-  http_headers:
-    Access-Control-Allow-Origin: https://developers.google.com
-
-- url: /web/(.*\.css)
-  static_files: build/devsite/\1
-  expiration: 1d
-  upload: build/devsite/(.*\.css)
-  http_headers:
-    Access-Control-Allow-Origin: https://developers.google.com
-
-- url: /web/index.html
-  script: main.app
-  secure: always
-
-- url: /web/
-  script: main.app
-  secure: always
 
 - url: /web/(.*)
   script: main.app
