@@ -1,13 +1,13 @@
 # For local builds
 safe: false
 port: 8081
-source: site
-destination: ./appengine/build/static
+source: src/site
+destination: ./src/appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
-baseurl: 
+baseurl:
 fundamentals: /fundamentals
-url: 
+url:
 highlighter: pygments
 spotlights: false
 github:
