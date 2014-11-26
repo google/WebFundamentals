@@ -5,7 +5,7 @@ description: "The following are customizations that are very useful, but work on
 introduction: "The following are customizations that are very useful, but work only in a subset of browsers. All of them are optional but strongly suggested, as they further enhance the app experience."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-11-18
+  updated_on: 2014-11-25
   order: 4
 id: additional-customizations
 authors:
@@ -27,7 +27,7 @@ tag. For example:
 <meta name="theme-color" content="#00ff00">
 {% endhighlight %}
 
-Though this tag is not yet supported in other browswers, you can do the same
+Though this tag is not yet supported in other browsers, you can do the same
 thing with `msapplication-navbutton-color` on Internet Explorer and 
 `apple-mobile-web-app-status-bar-style` on mobile safari.
 
