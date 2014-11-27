@@ -66,7 +66,7 @@ Mac
 1. Install the [Grunt CLI](http://gruntjs.com/)
     * `npm install -g grunt-cli`
 1. Install [npm](https://www.npmjs.org) dependencies
-    * `cd src/ && npm install`
+    * `npm install`
 
 Running the site
 ================
