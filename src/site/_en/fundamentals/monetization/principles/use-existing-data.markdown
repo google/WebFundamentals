@@ -9,7 +9,7 @@ article:
   written_on: 2014-08-07
   updated_on: 2014-09-19
   order: 4
-id: how-ads-work
+id: use-existing-data
 collection: cc-principles
 shortlinks: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
