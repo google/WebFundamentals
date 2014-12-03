@@ -8,6 +8,9 @@ introduction: "Web Starter Kit relies on NodeJS, NPM, & Sass to work, once
   you've got these on your machine, you'll have everything you need to start
   using Web Starter Kit in your projects."
 notes:
+  nosudo: If you see permission or access errors such as <code>EPERM</code>
+    or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around.
+    Consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this page</a> for a more robust solution.
 article:
   written_on: 2014-04-17
   updated_on: 2014-11-20
@@ -68,6 +71,8 @@ install scripts.
 
 That’s it! You now have everything that's needed to use the Gulp tools in Web Starter
 Kit.
+
+{% include modules/remember.liquid title="Errors?" list=page.notes.nosudo %}
 
 The next section of this guide covers how to use Gulp, but if you want to see
 how things look, try running the local server by typing `gulp serve`.
