@@ -37,7 +37,7 @@ Web Starter Kit’s build tools need Node and NPM. Node is used to run Gulp, the
 task runner. NPM is used to download the modules needed to perform certain tasks
 in Gulp.
 
-If you aren’t sure if you have NodeJS and NPM, check by opening a terminal and
+If you aren’t sure if you have NodeJS and NPM, check by opening a command prompt and
 running `node -v`. If Node responds, check the version matches the current version
 on NodeJS.org.
 
@@ -62,7 +62,7 @@ The first step is to go to [https://developers.google.com/web/starter-kit/](http
 and download and extract the zip.
 
 Next, you need to install the local dependencies for Web Starter Kit. Open a
-terminal, change directory into your project folder and run the following npm
+command prompt, change directory into your project folder and run the following npm
 install scripts.
 
     $ cd web-starter-kit
