@@ -127,7 +127,7 @@ test your site on the old Stock Browser for Android.
 ## Chromium Content Shell on Android
 
 To install the Chromium Content Shell for Android, leave your emulator running
-and run the following commands in a terminal:
+and run the following commands at a command prompt:
 
     git clone https://github.com/PaulKinlan/chromium-android-installer.git
     chmod u+x ./chromium-android-installer/\*.sh
