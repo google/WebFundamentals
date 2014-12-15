@@ -35,7 +35,7 @@ Every OS has a different way of finding out your IP address. If you spot
 the network panel on your computer, that will be the easiest way to find your
 local IP address.  
 
-OS X and Ubuntu users can always run `ifconfig` from the terminal; Windows
+OS X and Ubuntu users can always run `ifconfig` from a command prompt; Windows
 users can run `ipconfig` from the command prompt.
 
 ## Use Port Forwarding to Connect to Your Server
