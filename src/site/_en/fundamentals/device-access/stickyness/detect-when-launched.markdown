@@ -5,8 +5,8 @@ description: "Sometimes it’s useful to know whether the app is launched from t
 introduction: "Sometimes it’s useful to know whether the app is launched from the home screen vs. the web browser."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-09-24
-  order: 4
+  updated_on: 2014-12-17
+  order: 5
 id: detect-when-launched
 authors:
   - pbakaus
