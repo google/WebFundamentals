@@ -19,13 +19,13 @@ collection: stickyness
 
 # Adding a Manifest
 
-Adding a WebApp manifest is really easy, you create a manifest.json 
-file which contains the settings for your WebApp and then add a 
-*link* to it from your html pages.
+Adding a WebApp manifest is really easy, you create a manifest.json
+file which contains the settings and resources for your WebApp and
+then add a *link* to it from your html pages.
 
 ## Creating the Manifest
 
-You can call the manifest whatever you want. Most people will probably just use manifest.json.
+You can call the manifest whatever you want. Most people will probably just use manifest.json. An example is given below.
 
 {% highlight json %}
 {
@@ -111,7 +111,7 @@ The icons for your web app can be defined as above, with a type, size and densit
 <div class="clear g-wide--full">
     <figure>
         <img src="images/homescreen-icon.png" alt="Add to Homescreen Icon">
-        
+
         <figcaption>Add to Homescreen Icon</figcaption>
     </figure>
 </div>
@@ -139,7 +139,7 @@ Don't worry, if you think users would prefer to view your page as a normal site 
 <div class="clear g-wide--full">
     <figure class="fluid">
         <img src="images/manifest-display-options.png" alt="web-app-capable">
-        
+
         <figcaption>Manifest Display Options</figcaption>
     </figure>
 </div>
@@ -148,7 +148,7 @@ Don't worry, if you think users would prefer to view your page as a normal site 
 
 ## Orientation Option
 
-You can enforce a specific orientation, this should be used with care, users prefer being able to view apps in both orientations, but some use cases (i.e. games) only work in one orientation, in which case use the *orientation* option to enforce *landscape* or *portrait*.
+You can enforce a specific orientation, which is really useful for some use cases like games, which may only work in landscape. However, this should be used with care. Users prefer being able to view apps in both orientations.
 
 {% highlight json %}
 "orientation": "landscape"
@@ -157,7 +157,7 @@ You can enforce a specific orientation, this should be used with care, users pre
 <div class="clear g-wide--full">
     <figure class="fluid">
         <img src="images/manifest-orientation-options.png" alt="WebApp Manifest Orientation Options">
-        
+
         <figcaption>WebApp Manifest Orientation Options</figcaption>
     </figure>
 </div>
@@ -166,7 +166,7 @@ You can enforce a specific orientation, this should be used with care, users pre
 
 # Browser Support
 
-As of Nov 2014 Chrome has implemented the manifest, Mozilla are implementing and [IE is exploring the area](https://status.modern.ie/webapplicationmanifest?term=manifest).
+As of Nov 2014 Chrome has implemented the manifest. Mozilla are implementing and [IE is exploring the area](https://status.modern.ie/webapplicationmanifest?term=manifest).
 
 {% include modules/nextarticle.liquid %}
 
