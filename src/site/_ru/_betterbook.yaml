@@ -1,5 +1,5 @@
 toc:
-  - title: "Web <strong>Fundamentals</strong>"
+  - title: "Основополагающие <strong>веб-стандарты</strong>"
     path: /fundamentals/
     home: true
   - title: Начало работы
@@ -57,9 +57,9 @@ toc:
         path: /fundamentals/discovery-and-distribution/
         id: discovery-and-distribution
         section:
-          - title: "Optimization for Crawlers"
+          - title: "Оптимизация под поисковых ботов"
             path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
-          - title: "Enriching Search Results"
+          - title: "Улучшение результатов поиска"
             path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: Доступ к устройству
         path: /fundamentals/device-access/
@@ -97,6 +97,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: Пример статьи
         path: /fundamentals/resources/example-article/
-  - title: "Web <strong>Starter Kit</strong>"
+  - title: "Инструмент <strong>веб-разработки</strong>"
     path: /starter-kit/
     in_header: false
