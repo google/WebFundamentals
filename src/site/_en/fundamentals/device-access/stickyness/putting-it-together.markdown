@@ -5,7 +5,7 @@ description: "Let's take all that we discussed and bring it into one big form."
 introduction: "Let's take all that we discussed and bring it into one big form."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-12-17
+  updated_on: 2014-12-18
   order: 7
 id: putting-it-together
 authors:
@@ -17,7 +17,7 @@ collection: stickyness
 {% wrap content %}
 
 [Web Starter Kit](//developers.google.com/web/starter-kit) includes
-support for the most common options and is great as starting point, but if you
+support for the most common options and is great as a starting point, but if you
 are curious as to how a more complete implementation looks, here’s the
 portion of the `<head>` of Web Starter Kit that we expanded with more
 `<meta>` tags:
