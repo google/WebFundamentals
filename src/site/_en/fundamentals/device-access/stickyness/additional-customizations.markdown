@@ -20,10 +20,10 @@ collection: stickyness
 
 ## Color the browser elements
 
-Chrome, Safari, Internet Explorer and Opera Coast allow you to define colors for elements of the browser and / or platform using meta tags.
+Chrome, Firefox OS, Safari, Internet Explorer and Opera Coast allow you to define colors for elements of the browser and / or platform using meta tags.
 
 {% highlight html %}
-<!-- Chrome -->
+<!-- Chrome & Firefox OS -->
 <meta name="theme-color" content="#4285f4">
 <!-- Windows Phone -->
 <meta name="msapplication-navbutton-color" content="#4285f4">
@@ -35,7 +35,7 @@ Chrome, Safari, Internet Explorer and Opera Coast allow you to define colors for
 <div class="clear g-wide--full">
     <figure class="fluid">
         <img src="images/theme-color.png" alt="Example of a Site Using the theme-color Meta Tag">
-        
+
         <figcaption>Example of a Site Using the theme-color Meta Tag</figcaption>
     </figure>
 </div>

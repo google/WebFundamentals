@@ -18,7 +18,7 @@ collection: stickyness
 
 [Web Starter Kit](//developers.google.com/web/starter-kit) includes
 support for the most common options and is great as starting point, but if you
-are curious as to how a more complete implementation looks like, here’s the
+are curious as to how a more complete implementation looks, here’s the
 portion of the `<head>` of Web Starter Kit that we expanded with more
 `<meta>` tags:
 
