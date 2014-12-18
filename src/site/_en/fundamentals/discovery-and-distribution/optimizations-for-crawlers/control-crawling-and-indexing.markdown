@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Control crawling and indexing from search engines"
-description: "Being listed on search engines is vital to deliver your website to the world. But incorrect configuration may cause unexpected information to spread all over the web. Uderstand how crawlers work and index your website to keep away from accidents."
-introduction: "Being listed on search engines is vital to deliver your website to the world. But incorrect configuration may cause unexpected information to spread all over the web. Uderstand how crawlers work and index your website to keep away from accidents."
-snippet: "Spread your work to the world"
+description: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
+introduction: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
+snippet: "Keep restricted information safe"
 id: control-crawling-and-indexing
 collection: optimizations-for-crawlers
 authors:
@@ -15,13 +15,16 @@ key-takeaways:
   - No robots.txt, no robots meta tags required for fully accessible pages
   - Use noindex for pages you want to limit access to those who know the URL
   - Use relevant authentication mechanism for pages you want to keep private
+remember:
+  crawlers:
+    - "Many people confuses crawling and indexing. Prohibiting crawling doesn't mean the page won't show up in the search results. For example, when a third party website has a link to one of your webpages which is blocked from crawling, the page may still be listed in search results (In that case, the result won't have detailed description)."
 notes:
   robots:
     - "You can absolutely do without robots.txt if no crawling control is required. Just keep in mind not to return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details."
   x-robots-tag:
     - "If you disallow crawls using robots.txt,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your webpages by following links from other websites.</li><li>Search engines can't detect <code>noindex</code> because it can't crawl.</li></ul>"
   searchable:
-    - "Wondering if you should prohibit crawling JavaScript and Stylesheet files? Google's guidelines recommend them to be crawlable in order to let crawlers find contents available through modern technologies such as AJAX."
+    - "Wondering if you should prohibit crawling JavaScript and Stylesheet files? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google now try its best to understand them</a> to find contents available through modern technologies such as AJAX. You should definitely allow crawlers to crawl it."
 
 ---
 
@@ -29,7 +32,7 @@ notes:
 
 {% include modules/toc.liquid %}
 
-Sharing information to the world has no better place than the web. Once you publish a document to the web, it will be immediately available to the rest of the world. The page will be available for anyone as long as they know the URL and that's where search engines come in. Once search engines learn about your website, your documents will be searchable and accessible from people all around the world.  
+Sharing information to the world has no better place than the web. Once you publish a document to the web, it will be immediately available to the rest of the world. The page will be visible to anyone as long as they know the URL and that's where search engines come in. Once search engines learn about your website, your documents will be searchable and accessible from people all around the world.  
 
 However, there are some cases where you don't want people to find those documents even though you want to put them on the web. For example, a blog's admin page is something only limited people should have access to. There's nothing beneficial for you to let people search those pages through search engines.  
 
@@ -44,10 +47,10 @@ Before learning how to control search results, understanding how search engines 
 
 "Indexing" is when a search engine stores a website's URL and any associated information to their database so it will be ready to be served as a search result.  
 
-Many people confuses crawling and indexing. Prohibiting crawling doesn't mean the page won't show up in the search results. For example, when a third party website has a link to one of your webpages which is blocked from crawling, the page may still be listed in search results (In that case, the result won't have detailed description).  
+{% include modules/remember.liquid title="Remember" list=page.remember.crawlers %}
 
 ## Control search bots' crawling
-You can actually control how well-behaved crawlers access your webpage using a text file called robots.txt. (Note that not all crawlers necessarily respect robots.txt. Imagine that anyone can create their own stray crawlers.)  
+You can actually control how well-behaved crawlers access your webpage using a text file called robots.txt. (Not all crawlers necessarily respect robots.txt. Imagine that anyone can create their own stray crawlers.)  
 
 ### How to use robots.txt
 Robots.txt is a simple text file describing how you want search bots to crawl your site.
@@ -92,7 +95,7 @@ Yandex also provides [a similar tool](https://webmaster.yandex.com/robots.xml).
 If you don't want your webpage to show up in the search results, robots.txt isn't the right solution. You need to allow those pages to be crawled, and explicitly indicate that you don't want them to be indexed. There are two solutions:  
 
 ### Use robots meta tags
-In order to indicate you don't want an HTML page to be indexed, insert a specific kind of meta tag. By setting its attributes as `name="robots"` and `content="noindex"`, you can indicate that you don't want any search engines to index the page.  
+In order to indicate you don't want an HTML page to be indexed, insert a specific kind of `meta` tag. By setting its attributes as `name="robots"` and `content="noindex"`, you can indicate that you don't want any search engines to index the page.  
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -113,6 +116,8 @@ Other options for robots meta tag can be found here:
 * [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/html.xml)
+
+[Find lists of user agent names](#appendix-list-of-crawler-user-agents).
 
 ### X-Robots-Tag
 In order to indicate you don't want other resources than HTML such as images, stylesheets or script files, to be indexed, add `X-Robots-Tag: noindex` in HTTP header.  
@@ -139,7 +144,7 @@ To learn more about X-Robots-Tag:
 
 {% include modules/remember.liquid title="Note" list=page.notes.x-robots-tag %}
 
-**Don't expect robots.txt to control search indexes.**
+Don't expect robots.txt to control search indexes.
 
 ## Solution examples by type of contents
 What are the best solutions to control crawling and indexing? Let's have a look at example solutions depending on the types of pages.  
@@ -169,7 +174,7 @@ In this type, you don't want search engines to index those pages.
 {% include modules/remember.liquid title="Note" list=page.notes.searchable %}
 
 ### Restricted access from authorized people
-Confidential pages you want only those who have right permissions can access. In this case, even if someone finds the URL, the server refuses to present a result without a proper credential. For example:  
+Confidential pages you want only those who have right permissions can access. In this case, even if someone finds the URL, the server refuses to present the result without a proper credential. For example:  
 
 * Privately shared content on a social network
 * Enterprise expense system
@@ -179,7 +184,6 @@ In this type of pages, you don't want search engines to crawl nor index them.
 
 * Return response code 401 "Unauthorised" for an access without a proper credential (or redirect the user to a login page)
 * Do not use robots.txt to disallow crawling these pages. Otherwise 401 can't be detected.
-
 
 The restriction mechanism here can be IP address, Cookie, Basic Auth, OAuth, etc. How to implement such authentication / authorization depends on your infrastructure and is out of this article's scope.  
 
@@ -206,5 +210,11 @@ Check out concrete steps at respective search engines' help pages:
 * [Google](https://support.google.com/webmasters/answer/1663419)
 * [Bing](http://www.bing.com/webmaster/help/bing-content-removal-tool-cb6c294d)
 * [Yandex](https://help.yandex.com/webmaster/yandex-indexing/removing-from-index.xml)
+
+## Appendix: List of crawler user agents
+
+* [Google](https://support.google.com/webmasters/answer/1061943)
+* [Bing](http://www.bing.com/webmaster/help/which-crawlers-does-bing-use-8c184ec0)
+* [Yandex](https://help.yandex.com/search/robots/logs.xml)
 
 {% endwrap %}
