@@ -68,8 +68,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		concat: {},
-
 		connect: {
 			options: {
 				hostname: '',
@@ -105,37 +103,37 @@ module.exports = function(grunt) {
 				dest: '<%= config.source %>/js/',
 				flatten: true,
 				filter: 'isFile',
-				expand:true,
+				expand: true,
 				nonull: true,
-				cwd: '<%= config.destination %>/js/',
+				cwd: '<%= config.destination %>/js/'
 			},
 			optimisedcssToSrc: {
 				src: '*.min.css',
 				dest: '<%= config.source %>/css/',
 				flatten: true,
 				filter: 'isFile',
-				expand:true,
+				expand: true,
 				nonull: true,
-				cwd: '<%= config.destination %>/css/',
+				cwd: '<%= config.destination %>/css/'
 			},
 			jsToDest: {
 				src: '*.js',
 				dest: '<%= config.destination %>/js/',
 				flatten: true,
 				filter: 'isFile',
-				expand:true,
+				expand: true,
 				nonull: true,
-				cwd: '<%= config.source %>/js/',
+				cwd: '<%= config.source %>/js/'
 			},
 			cssToDest: {
 				src: '*.css',
 				dest: '<%= config.destination %>/css/',
 				flatten: true,
 				filter: 'isFile',
-				expand:true,
+				expand: true,
 				nonull: true,
-				cwd: '<%= config.source %>/css/',
-			},
+				cwd: '<%= config.source %>/css/'
+			}
 		},
 
 		csslint: {
@@ -219,24 +217,24 @@ module.exports = function(grunt) {
 					expand: true,
 					src: ['**/*.png']
 				}]
-			},
+			}
 		},
 
 		jekyll: {
 			appengine: {
-			  options: {
-				  config: 'config/wsk-version.yml,config/appengine.yml'
-			  }
+				options: {
+					config: 'config/wsk-version.yml,config/appengine.yml'
+				}
 			},
 			develop: {
-			  options: {
-				  config: 'config/wsk-version.yml,config/local.yml'
-			  }
+				options: {
+					config: 'config/wsk-version.yml,config/local.yml'
+				}
 			},
 			devsite: {
-			  options: {
-				  config: 'config/wsk-version.yml,config/devsite.yml'
-			  }
+				options: {
+					config: 'config/wsk-version.yml,config/devsite.yml'
+				}
 			}
 
 		},
@@ -257,18 +255,6 @@ module.exports = function(grunt) {
 			index: {
 				path: 'http://localhost:<%=config.port%>/fundamentals'
 			}
-		},
-
-		shell: {
-			options: {
-				failOnError: true,
-				stdout: true,
-				stderr: true
-			}
-		},
-
-		uglify: {
-			build: {}
 		},
 
 		useminPrepare: {
@@ -293,13 +279,13 @@ module.exports = function(grunt) {
 					'<%= config.source %>/css/**/*.css',
 					'!<%= config.source %>/css/**/*.min.css'
 				],
-				tasks: ['compass:uncompressed','cssmin','copy:cssToDest']
+				tasks: ['compass:uncompressed', 'cssmin', 'copy:cssToDest']
 			},
 
 			// when scripts change, lint them and copy to destination
 			scripts: {
 				files: ['<%= config.source %>/**/*.js'],
-				tasks: ['jshint:source','copy:jsToDest']
+				tasks: ['jshint:source', 'copy:jsToDest']
 			},
 
 			// when jekyll source changes, recompile them
@@ -320,10 +306,10 @@ module.exports = function(grunt) {
 					livereload: LIVERELOAD_PORT
 				},
 				files: [
-					'<%= config.destination %>/**/*.html',	// view files (from jekyll)
-					'<%= config.destination %>/css/*.css',	// css files (from sass)
-					'<%= config.source %>/**/*.css',		// css files (raw)
-					'<%= config.source %>/**/*.js'			// script files
+					'<%= config.destination %>/**/*.html',  // view files (from jekyll)
+					'<%= config.destination %>/css/*.css',  // css files (from sass)
+					'<%= config.source %>/**/*.css',    // css files (raw)
+					'<%= config.source %>/**/*.js'      // script files
 				]
 			}
 		},
@@ -340,19 +326,19 @@ module.exports = function(grunt) {
 					htmlDemo: false,
 					template: '<%= config.source %>/_templates/icons-template.css'
 				}
-			},
+			}
 
 		}
 	});
 
-	grunt.registerTask('wsk-version', 'Uses the Github API to determine the latest web-starter-kit version, and writes it to ./config/wsk-version.yml', function () {
+	grunt.registerTask('wsk-version', 'Uses the Github API to determine the latest web-starter-kit version, and writes it to ./config/wsk-version.yml', function() {
 		var latest = require('latest-release');
 		var done = this.async();
 		var out = './config/wsk-version.yml';
 
 		grunt.log.writeln('Determining latest web-starter-kit version..');
 
-		latest('google', 'web-starter-kit', function (release, err) {
+		latest('google', 'web-starter-kit', function(release, err) {
 			if (err) {
 				grunt.verbose.or.write('Failed to retrieve latest web-starter-kit release information').error().error(err.message);
 			} else {
@@ -361,8 +347,8 @@ module.exports = function(grunt) {
 				/*jshint camelcase: false */
 				/*ignore the casing on the variables. These come directly from the Githup API.*/
 				grunt.file.write(out,
-					'wsk-tag: '     + release.tag_name    + '\n'   +
-					'wsk-name: '    + release.name        + '\n'   +
+					'wsk-tag: ' + release.tag_name + '\n' +
+					'wsk-name: ' + release.name + '\n' +
 					'wsk-zip-url: ' + release.zipball_url + '\n'
 					);
 				/*jshint camelcase: true */
@@ -374,103 +360,58 @@ module.exports = function(grunt) {
 
 
 	// Test task
-	grunt.registerTask('test', 'Lints all javascript and CSS sources.\nOptions: --strict: enable strict linting mode', function(){
+	grunt.registerTask('test', 'Lints all javascript and CSS sources.', 'jshint:source');
 
-		var strict = grunt.option('strict');
-
-		if(strict) {
-			return grunt.task.run([
-				'jshint:source'
-				// 'csslint:strict'
-			]);
+	// Build CSS task
+	grunt.registerTask('buildcss', 'Build the CSS using Compass.\nOptions:\n  --compressed: enables compression', function() {
+		if (grunt.option('compressed')) {
+			return grunt.task.run(['compass:compressed']);
 		} else {
-			return grunt.task.run([
-				'jshint:source'
-				// 'csslint:lax'
-			]);
+			return grunt.task.run(['compass:uncompressed']);
 		}
 	});
+
 
 	// Build task
-	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --compressed: enables code compression (css)', function() {
-
-		var compressed = grunt.option('compressed');
-
-		if(compressed) {
-			return grunt.task.run([
-				//'clean:icons',				// Clean up icon font files for regeneration
-				//'webfont:icons',			// Generate icon font files and SASS
-				'clean:destination',		// Clean out the destination directory
-				'compass:compressed',		// Build the CSS using Compass with compression
-				'cssmin',					// Minify the combined CSS
-				'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
-				'jekyll:appengine',		// Build the site with Jekyll
-			]);
-		} else {
-			return grunt.task.run([
-				//'clean:icons',				// Clean up icon font files for regeneration
-				//'webfont:icons',			// Generate icon font files and SASS
-				'clean:destination',		// Clean out the destination directory
-				'compass:uncompressed',		// Build the CSS using Compass without compression
-				'cssmin',					// Minify the combined CSS
-				'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
-				'jekyll:appengine',		// Build the site with Jekyll
-			]);
-		}
-
-	});
-
-	grunt.registerTask('previewbuild', 'Use this task to preview the final build in your browser. \n  Note: Runs tests automatically before building and serving', function() {
-
-		return grunt.task.run([
+	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --compressed: enables code compression (css)', [
 			'test',
-			'build',
-			'open:index',
-			'connect:destination:keepalive'
-		]);
+			'clean:destination',    // Clean out the destination directory
+			'buildcss',   // Build the CSS using Compass with compression
+			'cssmin',         // Minify the combined CSS
+			'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
+			'jekyll:appengine'   // Build the site with Jekyll
+	]);
 
-	});
+	grunt.registerTask('previewbuild', 'Use this task to preview the final build in your browser.\n  Note: Runs tests automatically before building and serving', ['test', 'build', 'open:index', 'connect:destination:keepalive']);
 
 	// Serve task
-	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.', function() {
-
-		return grunt.task.run([
-			'test',
-			'build',
-			'open:index',
-			'connect:destination:keepalive'
-		]);
-
-	});
+	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.', 'previewbuild');
 
 	// Develop task
-	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', function() {
-
-		return grunt.task.run([
-			'compass:uncompressed',		// Build the CSS using Compass without compression
-			'cssmin',					// Minify the combined CSS
-			'clean:destination',		// Clean out the destination directory
-			'jekyll:develop',		// Build the site with Jekyll
+	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', [
+			'test',
+			'clean:destination',    // Clean out the destination directory
+			'compass:uncompressed',   // Build the CSS using Compass without compression
+			'cssmin',         // Minify the combined CSS
+			'jekyll:develop',   // Build the site with Jekyll
 			'open:index',
 			'connect:destination-source',
 			'watch'
-		]);
-
-	});
+	]);
 
 	// Devsite task
 	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
 		grunt.config.set('config', grunt.file.readYAML('config/devsite.yml'));
 
 		return grunt.task.run([
-			'test',						// Code quality control
-			'clean:icons',				// Clean up icon font files for regeneration
-			'webfont:icons',			// Generate icon font files and SASS
-			'compass:uncompressed',		// Build the CSS using Compass with compression
-			'cssmin',					// Minify the combined CSS
-			'clean:destination',		// Clean out the destination directory
-			'jekyll:devsite',			// Build the site with Jekyll
-			'htmlmin:all'				// Minify the final HTML
+			'test',           // Code quality control
+			'clean:destination',    // Clean out the destination directory
+			'clean:icons',        // Clean up icon font files for regeneration
+			'webfont:icons',      // Generate icon font files and SASS
+			'compass:uncompressed',   // Build the CSS using Compass with compression
+			'cssmin',         // Minify the combined CSS
+			'jekyll:devsite',     // Build the site with Jekyll
+			'htmlmin:all'       // Minify the final HTML
 		]);
 
 	});
