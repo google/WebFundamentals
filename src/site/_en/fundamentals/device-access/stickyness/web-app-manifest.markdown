@@ -19,7 +19,7 @@ collection: stickyness
 
 # Adding a Manifest
 
-Adding a WebApp manifest is really easy, you create a manifest.json
+Adding a WebApp manifest is really easy. You create a manifest.json
 file which contains the settings and resources for your WebApp and
 then add a *link* to it from your html pages.
 
@@ -80,7 +80,7 @@ If you don't provide a *start_url*, then the current page will be used, which is
 
 ## Telling the Browser About Your Manifest
 
-Once you have the manifest created and and on your site, all you need to do is add a link tag from all your pages that encompass your web app as follows.
+Once you have the manifest created and and on your site, all you need to do is add a link tag to all the pages that encompass your web app as follows.
 
 {% highlight html %}
 <link rel="manifest" href="/manifest.json">
