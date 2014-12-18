@@ -1,16 +1,17 @@
 ---
 layout: article
 title: "Hide the Browser UI"
-description: "Your users can add your site to the homescreen even without any special code on your end, but we recommend to have your web app display without the browser UI when launched from the homescreen (effectively going fullscreen)."
-introduction: "Your users can add your site to the homescreen even without any special code on your end, but we recommend to have your web app display without the browser UI when launched from the homescreen (effectively going fullscreen)."
+description: "Your users can add your site to the homescreen without any special code, but we recommend that you make your web app display without the browser UI when launched from the homescreen (effectively going fullscreen)."
+introduction: "Your users can add your site to the homescreen without any special code, but we recommend that you make your web app display without the browser UI when launched from the homescreen (effectively going fullscreen)."
 article:
   written_on: 2014-09-22
-  updated_on: 2014-09-24
-  order: 1
+  updated_on: 2014-12-17
+  order: 2
 id: hide-browser-ui
 collection: stickyness
 authors:
   - pbakaus
+  - mattgaunt
 collection: stickyness
 ---
 
@@ -19,14 +20,25 @@ collection: stickyness
 Add the following code to the `<head>` of your page:
 
 {% highlight html %}
-<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 {% endhighlight %}
 
 
-This will tell both Mobile Safari and Chrome for Android that they're dealing 
-with a web app. Internet Explorer doesn't require instructions for this, as 
-sites open fullscreen in Windows' start screen experience from the get-go.
+This will tell Mobile Safari that it's dealing 
+with a web app.
+
+Internet Explorer doesn't require instructions for this, as 
+sites will launch fullscreen by default
+
+<div class="clear g-wide--full">
+    <figure class="fluid">
+        <img src="images/web-app-capable.png" alt="web-app-capable">
+        
+        <figcaption>Launching a Site with Web App Capable Meta Tag</figcaption>
+    </figure>
+</div>
+
+<div class="clear"></div>
 
 {% include modules/nextarticle.liquid %}
 
