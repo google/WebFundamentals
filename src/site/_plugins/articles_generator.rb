@@ -18,48 +18,50 @@ module Jekyll
 
   class CollectionGenerator < Generator
     def generate(site)
+      curr_lang = site.data['curr_lang']
+      prime_lang = site.data['prime_lang']
+
       # Find all the collection pages
-      collections = site.pages.select { |page| page.data.has_key?('collection') && page.data.has_key?('article') }
+      pages = site.data['primes']
+      pages = pages ? pages.values : site.pages
+      collections = pages.map { |page|
+        next if page.data['published'] == false
+        next unless (['collection', 'article'] - page.data.keys).empty?
+        # no need to loop over translations if this is not a localized build
+        next page if curr_lang == prime_lang
+        # find localized page or default to prime
+        page.data['translations'].find { |p| p.langcode == curr_lang } || page
+      }.compact
       
       # aggregate all the article into categories
-      
-      # todo learn about map
-      articles = {}
-      collections.each do |page|
-        collection = page.data['collection'];
-        if collection != nil
-          if articles.has_key?(collection) == false
-            articles[collection] = []
-          end
-          articles[collection].push(page)
-        end
-      end
-      
-      articles.keys.each do |article| 
-        articles[article] = articles[article].sort do |a, b|
+      articles = collections.inject({}) { |cats, page|
+        next cats unless c = page.data['collection']
+        cats[c] ||= []
+        cats[c] << page
+        cats
+      }
+
+      # sort articles by 'order' value from Front Matter
+      articles.keys.each do |cat|
+        articles[cat] = articles[cat].sort do |a, b|
           a_order = a.data['article']['order'] || 0
           b_order = b.data['article']['order'] || 0
           a_order <=> b_order
         end
 
-        previous = nil
-
-        articles[article].each do |a|
-          if previous != nil
-            a.data['article']['previous'] = previous
-            previous.data['article']['next']  = a
-          else
-            a.data['article']['previous'] = nil
-          end
-
-          previous = a
-        end
+        articles[cat].each_with_index { |a, i|
+          a.data['article']['next'] = articles[cat][i+1]
+          a.data['article']['previous'] = articles[cat][i-1] if i > 0
+        }
       end
       
       # Add all the pages per category to each page.
       site.pages.each do |page| 
         page.data['articles'] = articles
       end
+      site.data['primes'].values.each do |page|
+        page.data['articles'] = articles
+      end if curr_lang != prime_lang
     end
   end
   
