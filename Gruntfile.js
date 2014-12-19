@@ -49,25 +49,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		compass: {
-			options: {
-				sassDir: '<%= config.source %>/_sass',
-				imagesDir: '<%= config.source %>/imgs',
-				cssDir: '<%= config.source %>/css',
-				force: true
-			},
-			uncompressed: {
-				options: {
-					outputStyle: 'expanded'
-				}
-			},
-			compressed: {
-				options: {
-					outputStyle: 'compressed'
-				}
-			}
-		},
-
 		connect: {
 			options: {
 				hostname: '',
@@ -257,6 +238,30 @@ module.exports = function(grunt) {
 			}
 		},
 
+		sass: {
+			options: {
+				precision: 10,
+				includePaths: ['<%= config.source %>/css'],
+				imagePath: '<%= config.source %>/imgs'
+			},
+			uncompressed: {
+				options: {
+					outputStyle: 'nested'
+				},
+				files: {
+					'<%= config.source %>/css/styles.css': '<%= config.source %>/_sass/styles.scss'
+				}
+			},
+			compressed: {
+				options: {
+					outputStyle: 'compressed'
+				},
+				files: {
+					'<%= config.source %>/css/styles.css': '<%= config.source %>/_sass/styles.scss'
+				}
+			}
+		},
+
 		useminPrepare: {
 			html: '<%= config.destination %>/index.html',
 			options: {
@@ -279,7 +284,7 @@ module.exports = function(grunt) {
 					'<%= config.source %>/css/**/*.css',
 					'!<%= config.source %>/css/**/*.min.css'
 				],
-				tasks: ['compass:uncompressed', 'cssmin', 'copy:cssToDest']
+				tasks: ['sass:uncompressed', 'cssmin', 'copy:cssToDest']
 			},
 
 			// when scripts change, lint them and copy to destination
@@ -297,7 +302,7 @@ module.exports = function(grunt) {
 					'<%= config.source %>/**/*.rb',
 					'<%= config.source %>/**/*.md'
 				],
-				tasks: ['jekyll:develop', 'compass:uncompressed']
+				tasks: ['jekyll:develop', 'sass:uncompressed']
 			},
 
 			// when served files change, reload them in the browser
@@ -363,11 +368,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', 'Lints all javascript and CSS sources.', 'jshint:source');
 
 	// Build CSS task
-	grunt.registerTask('buildcss', 'Build the CSS using Compass.\nOptions:\n  --compressed: enables compression', function() {
+	grunt.registerTask('buildcss', 'Build the CSS using libsass.\nOptions:\n  --compressed: enables compression', function() {
 		if (grunt.option('compressed')) {
-			return grunt.task.run(['compass:compressed']);
+			return grunt.task.run(['sass:compressed']);
 		} else {
-			return grunt.task.run(['compass:uncompressed']);
+			return grunt.task.run(['sass:uncompressed']);
 		}
 	});
 
@@ -376,7 +381,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --compressed: enables code compression (css)', [
 			'test',
 			'clean:destination',    // Clean out the destination directory
-			'buildcss',   // Build the CSS using Compass with compression
+			'buildcss',   // Build the CSS using libsass with compression
 			'cssmin',         // Minify the combined CSS
 			'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
 			'jekyll:appengine'   // Build the site with Jekyll
@@ -391,7 +396,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', [
 			'test',
 			'clean:destination',    // Clean out the destination directory
-			'compass:uncompressed',   // Build the CSS using Compass without compression
+			'sass:uncompressed',   // Build the CSS using libsass without compression
 			'cssmin',         // Minify the combined CSS
 			'jekyll:develop',   // Build the site with Jekyll
 			'open:index',
@@ -408,7 +413,7 @@ module.exports = function(grunt) {
 			'clean:destination',    // Clean out the destination directory
 			'clean:icons',        // Clean up icon font files for regeneration
 			'webfont:icons',      // Generate icon font files and SASS
-			'compass:uncompressed',   // Build the CSS using Compass with compression
+			'sass:uncompressed',   // Build the CSS using libsass with compression
 			'cssmin',         // Minify the combined CSS
 			'jekyll:devsite',     // Build the site with Jekyll
 			'htmlmin:all'       // Minify the final HTML
