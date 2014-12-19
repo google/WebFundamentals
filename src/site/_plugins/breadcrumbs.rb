@@ -7,9 +7,15 @@ module Jekyll
   class Page
 
     ##
+    # Caching version of find_ancestors
+    def ancestors
+      @ancestors ||= find_ancestors
+    end
+
+    ##
     # We add a custom method to the page variable, that returns an ordered list of its
     # parent pages ready for iteration.
-    def ancestors
+    def find_ancestors
       a = []
       url = self.url.sub("/fundamentals", "")
       while url != "/index.html"
@@ -48,10 +54,10 @@ module Jekyll
 
     ##
     # Gets Page object that has given url. Very in-efficient O(n) solution.
-    def get_page_from_url(url)
-      site.pages.each do |page|
-        return page if page.url == ("/fundamentals" + url)
-      end
+    def get_page_from_url(pageurl)
+      pageurl = "/fundamentals" + pageurl
+      return site.data['primes'][pageurl] if site.data.key? 'primes'
+      site.pages.find { |page| page.url == pageurl }
     end
   end
 end

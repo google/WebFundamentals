@@ -9,7 +9,6 @@ baseurl: /web
 fundamentals: /web/fundamentals
 url: /web
 highlighter: pygments
-pygments: true
 spotlights: false
 github:
   root: https://github.com/Google/WebFundamentals
@@ -21,6 +20,9 @@ kramdown:
   entity_output: :as_input
 include: ['.htaccess']
 exclude: ['config.rb']
+keep_files: ['_langs\/[a-z\-]+']
 # comment this for plain jekyll serve usage.
 langs_available: ['ar', 'de', 'es', 'fr', 'he', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
+# primary language, source of translations.
+prime_lang: en
 sample_link_base: "/web/fundamentals/resources/samples/"

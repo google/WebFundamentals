@@ -7,7 +7,7 @@ snippet: "Create flexible, not fixed, layouts."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
-  order: 1
+  order: 0
 id: multi-device-layouts
 collection: home
 priority: 0

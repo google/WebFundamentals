@@ -21,6 +21,31 @@ module Jekyll
       data_file = File.join(site.source, "_langnames.yaml")
       data = YAML.load_file(data_file)
       site.data["language_names"] = data
+      site.data["translations"] = translations(site)
+    end
+
+    # Generate translations manifest.
+    def translations(site)
+      return {} unless site.config.key? 'langs_available'
+
+      lang = site.config['prime_lang'] || 'en'
+      prefix = [site.source, "_#{lang}", ''].join '/'
+      allfiles = File.join prefix, '**', '*.*'
+
+      Dir.glob(allfiles).inject({}) { |trans, filepath|
+        reldir = File.dirname filepath.sub(prefix, '')
+        # skip underscore dirs, _code and _assets
+        next trans if reldir =~ /^_/
+        next trans if reldir =~ /\/_(code|assets)/
+
+        filename = File.basename filepath
+        relpath = File.join reldir, filename
+
+        trans[relpath] = site.config['langs_available'].select { |hl|
+          File.exists? File.join(site.source, "_#{hl}", reldir, filename)
+        }
+        trans
+      }
     end
   end
 
@@ -81,95 +106,106 @@ module Jekyll
     # We want this to run early in the process.
     priority :high
     def generate(site)
-      lang = site.config["lang"]
-      lang = lang ? lang : "en"
-      Jekyll.logger.info "Generating For Lang " + lang
-      if site.config.has_key?("langs_available")
-        generate_all_langs(site)
-      else
-        generate_one_lang(site, lang)
+      site.config['prime_lang'] ||= 'en'
+      return generate_simple(site) unless site.config.key? 'langs_available'
+
+      lang = ENV['TRANS_LANG'] || site.config['prime_lang']
+      site.data['curr_lang'] = lang
+      generate_multilang(site)
+    end
+
+    # Generate pages w/o multi language support.
+    def generate_simple(site)
+      lang = site.config['prime_lang'] || site.config['lang'] || 'en'
+      Jekyll.logger.info "Generating w/o multilang support for '#{lang}'"
+
+      prefix = [site.source, "_#{lang}", ''].join '/'
+      allfiles = File.join prefix, '**', '*.*'
+
+      Dir.glob(allfiles) do |source_file|
+        file_name = File.basename source_file
+        relative_dir = File.dirname source_file.sub(prefix, '')
+        create_page(site, source_file, relative_dir, file_name, lang)
       end
     end
 
-    def generate_one_lang(site, lang)
-      Dir.glob(site.source + "/_en/**/*.*") do |source_file| 
-        file_name = File.basename(source_file);
-        relative_dir = File.dirname(source_file.sub(site.source + "/_en/", ""));
-        langcode = lang
-        # If the file doesn't exist in the translated language, back off to "en".
-        if langcode != "en" && !File.exists?(File.join(site.source, "_" + langcode, relative_dir, file_name))
-          langcode = "en"
-        end
-        create_page(site, source_file, relative_dir, file_name, langcode)
+    # Generates with multi language support for a single language specified
+    # in site.data['curr_lang'].
+    # site.config['prime_lang'] is still used as a primary language as the base
+    # for original content.
+    # Static assets are processed only when lang == prime_lang.
+    def generate_multilang(site)
+      lang = site.data['curr_lang']
+      prime_lang = site.config['prime_lang']
+      is_localization = prime_lang != lang
+
+      Jekyll.logger.info "Generating translation in '#{lang}'"
+
+      prefix_lang = File.join site.source, "_#{lang}"
+      prefix_prime = File.join site.source, "_#{prime_lang}"
+
+      # Hack to skip processing regular content
+      # if we're building a translation.
+      if is_localization
+        site.static_files = []
+        site.pages = []
       end
-    end
 
-    def generate_all_langs(site)
-      lang_code_list = site.config["langs_available"];
-      Dir.glob(site.source + "/_en/**/*.*") do |source_file| 
-        # Go through English language version and generate 
-        file_name = File.basename(source_file);
-        relative_dir = File.dirname(source_file.sub(site.source + "/_en/", ""));
-        root_page = create_page(site, source_file, relative_dir, file_name, "en", true)
-        translated_page_list = []
-        if root_page != nil
-          root_page.data['is_localized'] = false
-          root_page.data['is_localization'] = false
-          root_page.data['has_localization'] = {'test' => true};
-          translated_page_list << root_page
+      # prime language pages map url => page
+      site.data['primes'] = {}
+      # Outer loop over each page of prime_lang and their translations
+      site.data['translations'].each do |relpath, locales|
+        reldir, name = File.split relpath
+        prime_file = File.join(prefix_prime, relpath)
+        lang_file = File.join(prefix_lang, relpath)
+
+        prime = create_page(site, prime_file, reldir, name, prime_lang, true, !is_localization)
+        next unless prime
+
+        has_localization = locales.inject({}) { |loc, hl| loc[hl] = true; loc }
+        prime.data.merge!(
+          'is_localized' => !locales.empty?,
+          'is_localization' => false,
+          'has_localization' => has_localization)
+
+        raise "Two pages at the same URL #{prime.url}" if site.data['primes'].key? prime.url
+
+        site.data['primes'][prime.url] = prime
+        translated_pages = [prime]
+
+        # Inner loop over known single page translations from the manifest
+        (locales || []).each do |hl|
+          hl_file = File.join site.source, "_#{hl}", relpath
+          page = create_page(site, hl_file, reldir, name, hl, true, hl == lang)
+          page.data.merge!('is_localized' => true, 'is_localization' => true)
+          translated_pages << page
         end
 
-        # For any file, generate the localised variant if available.
-        lang_code_list.each do |langcode|
-          #Jekyll.logger.info "Logging code " + File.join(site.source, "_" + langcode, relative_dir, file_name)
-          if File.exists?(File.join(site.source, "_" + langcode, relative_dir, file_name))
-            
-            #Jekyll.logger.info "Logging file " + file_name
-            page = create_page(site, source_file, relative_dir, file_name, langcode, true)
-            # If we know we have a page add it to a list of translations
-            if page != nil
-              if root_page != nil
-                root_page.data['is_localized'] = true
-                root_page.data['has_localization'][langcode] = true;
-              end
-              page.data['is_localized'] = true
-              page.data['is_localization'] = true
-              translated_page_list << page
-            end
-          else
-            if root_page != nil
-              root_page.data['has_localization'][langcode] = false;
-            end
-          end
-        end
         # Map all the translations for a page on to each other
-        translated_page_list.each do |translated_page|
-          translated_page.data["translations"] = translated_page_list
+        translated_pages.each do |page|
+          page.data["translations"] = translated_pages
         end
       end
     end
 
-    def create_page(site, source_file, relative_dir, file_name, langcode, includelang=false)
-      if relative_dir =~ /_.*/ 
-        # Don't process underscore files.
-      elsif source_file =~ /\.(markdown|html)|sitemap\.xml/ 
+    # Creates a new LanguagePage or a LanguageAsset, and adds it to site.pages unless process is false.
+    # Returns only LanguagePage instance, otherwise nil.
+    def create_page(site, source_file, relative_dir, file_name, langcode, includelang = false, process = true)
+      # Don't process underscore files.
+      return if relative_dir =~ /^_/
+
+      case source_file
+      when /\.(markdown|html)|sitemap\.xml/
         # Markdown is our main content language, create a page.
         page = LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang)
-        site.pages << page
-        return page
-      elsif source_file =~ /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
+        site.pages << page if process
+        page
+      when /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
         # Copy across other assets.
-        #Jekyll.logger.info relative_dir + " vs " + File.join(langcode, relative_dir)
-        site.static_files << LanguageAsset.new(
-          site,
-          site.source,
-          relative_dir,
-          file_name,
-          langcode,
-          includelang) 
+        asset = LanguageAsset.new(site, site.source, relative_dir, file_name, langcode, includelang)
+        site.static_files << asset if process
+        nil
       end
-
-      return nil
     end
   end
 
