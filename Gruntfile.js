@@ -201,25 +201,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		jekyll: {
-			appengine: {
-				options: {
-					config: 'config/wsk-version.yml,config/appengine.yml'
-				}
-			},
-			develop: {
-				options: {
-					config: 'config/wsk-version.yml,config/local.yml'
-				}
-			},
-			devsite: {
-				options: {
-					config: 'config/wsk-version.yml,config/devsite.yml'
-				}
-			}
-
-		},
-
 		jshint: {
 			options: {
 				jshintrc: 'src/.jshintrc'
@@ -362,7 +343,71 @@ module.exports = function(grunt) {
 		});
 	});
 
+	// jekyll:target [--lang <lang_code,lang_code,...|all>]
+	// where 'target' is config/target.yml file.
+	// defaults to '--lang all'.
+	// 'all' builds for all languages specified in config.yml/langs_available + 'en'.
+	// builds w/o multilang support if config.yml is missing langs_available.
+	grunt.registerTask('jekyll', 'Run jekyll build.\nOptions:\n  [--lang]: list of languages or "all"', function() {
+		var langs = grunt.option('lang') || 'all';
 
+		var cfgname = this.args[0] || 'develop';
+		if (cfgname === 'develop') {
+			cfgname = 'local';
+		}
+
+		// read langs from config/target.yml
+		// returns langs_available + prime_lang
+		//         or [] if langs_available is not defined.
+		var langsFromConfig = function() {
+			/*jshint camelcase: false */
+			var cfg = grunt.file.readYAML('config/' + cfgname + '.yml');
+			if (typeof cfg.langs_available === 'undefined') {
+				return [];
+			}
+			cfg.langs_available.unshift(cfg.prime_lang);
+			return cfg.langs_available;
+			/*jshint camelcase: true */
+		};
+
+		if (langs === 'all' ) {
+			langs = langsFromConfig();
+		} else {
+			langs = langs.split(/,|\s/).filter(function(item) {
+				return item.length > 0;
+			});
+		}
+
+		var cfgfiles = 'config/wsk-version.yml,config/' + cfgname + '.yml';
+		var args = ['build', '--config', cfgfiles, '-t'];
+		var spawnJekyll = function(lang, callback) {
+			var opts = {env: process.env, stdio: 'inherit'};
+			if (lang !== null) {
+				opts.env.TRANS_LANG = lang;
+			}
+			grunt.util.spawn({cmd: 'jekyll', args: args, opts: opts}, callback);
+		};
+
+		var done = this.async();
+		var count = 0;
+		var waitAll = function(err, res, code) {
+			if (err) {
+				grunt.fatal(String(res), code);
+			}
+			if (++count >= langs.length) {
+				done();
+			}
+		};
+
+		// multilang build
+		for (var i = 0; i < langs.length; i++) {
+			spawnJekyll(langs[i], waitAll);
+		}
+		// simple build (no multilang support)
+		if (langs.length === 0) {
+			spawnJekyll(null, waitAll);
+		}
+	});
 
 	// Test task
 	grunt.registerTask('test', 'Lints all javascript and CSS sources.', 'jshint:source');

@@ -22,13 +22,7 @@
 
       <ul class="guides-list container">
 
-        {% for guide in page.articles.[page.id] %}
-        {% comment %} Include all guides if: it is localized to the language of the page,
-        there are no localizations, or it is English and there is no localized version.
-        {% endcomment %}
-        {% if guide.published != false %}
-        {% if guide.langcode == page.langcode or guide.has_localization[page.langcode] == false %}
-        {% if guide.langcode == page.langcode or guide.is_localization == false %}
+      {% for guide in page.articles[page.id] %}
         <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
           <div class="primary-content">
             <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | canonicalize | localize_link:guide}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
@@ -38,19 +32,12 @@
             <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
             <ol class="list-links list-links--secondary">
             {% for article in page.articles[guide.id] %}
-              {% if article.langcode == page.langcode or article.langcode == guide.langcode %}
-              {% if article.langcode == page.langcode or article.has_localization[page.langcode] == false %}
               <li><a href="{{site.baseurl}}{{article.url | canonicalize | localize_link:article}}" title="{{"read_the_lesson" | localize_string}} {{article.title}}">{{article.title}}</a></li>
-              {% endif %}
-              {% endif %}
             {% endfor %}
             </ol>
           </div>
         </li>
-        {% endif %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
+      {% endfor %}
 
       </ul>
     </div>
