@@ -32,7 +32,6 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-gae": "^0.2.4",
-    "grunt-jekyll": "~0.4.2",
     "grunt-open": "~0.2.3",
     "grunt-webfont": "~0.4.8",
     "js-yaml": "^3.2.2",

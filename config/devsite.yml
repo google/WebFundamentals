@@ -9,7 +9,6 @@ fundamentals: /web/fundamentals
 baseurl: /web
 url: /web
 highlighter: pygments
-pygments: true
 github:
   root: https://github.com/Google/WebFundamentals
   content: tree/master/src/site
@@ -21,5 +20,8 @@ kramdown:
   entity_output: :as_input
 include: ['.htaccess', '_project.yaml', '_book.yaml']
 exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
+keep_files: ['_langs\/[a-z\-]+']
 langs_available: ['ar', 'de', 'es', 'fr', 'he', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
+# primary language, source of translations.
+prime_lang: en
 sample_link_base: "http://googlesamples.github.io/web-fundamentals/samples/"
