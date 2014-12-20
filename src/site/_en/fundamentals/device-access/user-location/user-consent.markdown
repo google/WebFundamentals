@@ -134,7 +134,7 @@ button.onclick = function() {
   var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
 
   var geoSuccess = function(position) {
-    hideNudeBanner();
+    hideNudgeBanner();
     // We have the location, don't display banner
     clearTimeout(nudgeTimeoutId); 
 
