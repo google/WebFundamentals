@@ -58,7 +58,7 @@ related-guides:
         id: images
         title: "Images"
         href: media/images/
-    - 
+    -
       title: "Use media queries to provide high res images or art direction"
       href: fundamentals/media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
       section:
