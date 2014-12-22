@@ -33,6 +33,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/web/fundamentals/",
+  "start_url": "/web/fundamentals/?homescreen=1",
   "display": "standalone"
 }
