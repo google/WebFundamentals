@@ -1,3 +1,7 @@
+---
+layout: manifest
+permalink: /manifest.json
+---
 {
   "short_name": "Web Fundamentals",
   "name": "Google Developers - Web Fundamentals",
@@ -33,6 +37,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/web/fundamentals/?homescreen=1",
+  "start_url": "{{site.fundamentals}}?homescreen=1",
   "display": "standalone"
 }
