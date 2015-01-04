@@ -1,5 +1,5 @@
 toc:
-  - title: "Основополагающие <strong>веб-стандарты</strong>"
+  - title: "<strong>Фундаментальные</strong> веб-стандарты"
     path: /fundamentals/
     home: true
   - title: Начало работы
@@ -57,9 +57,9 @@ toc:
         path: /fundamentals/discovery-and-distribution/
         id: discovery-and-distribution
         section:
-          - title: "Оптимизация под поисковых ботов"
+          - title: "Оптимизация структуры сайта"
             path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
-          - title: "Улучшение результатов поиска"
+          - title: "Расширение возможностей сайта"
             path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: Доступ к устройству
         path: /fundamentals/device-access/
