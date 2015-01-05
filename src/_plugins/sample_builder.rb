@@ -134,7 +134,7 @@ module SampleBuilder
     end
 
     def filename()
-      File.join(@dir, File.basename(@sourcepath).sub("/_en", ""))
+      File.join(@dir, File.basename(@sourcepath).sub("/_langs/en", ""))
     end
   end
 
@@ -172,7 +172,7 @@ module SampleBuilder
           else
             codepath = File.join(dirPaths[dir], "/_code")
             prefix, relative_path = sourcepath.split(codepath)
-            assetdir = dirPaths[dir].sub("_en/", "").sub("fundamentals/", "")
+            assetdir = dirPaths[dir].sub("_langs/en/", "").sub("fundamentals/", "")
             site.static_files << SampleAssetFile.new(
               site,
               site.source,
@@ -188,7 +188,7 @@ module SampleBuilder
         filename = page.filename
         dirname = File.dirname(File.join(target_dir, filename))
         location = File.join(gen_dir,
-        filename.sub("_en/", "").sub("fundamentals/", ""))
+        filename.sub("_langs/en/", "").sub("fundamentals/", ""))
         #Jekyll.logger.info "SAMPLE: " + location
         site.static_files << SampleFile.new(
           site,

@@ -59,7 +59,7 @@ module Jekyll
           context.environments.first["page"]['langcode'] :
           site.config["lang"]
       if lang && lang != "en"
-        lang_file = File.join(site.source, "_" + lang, @data_filename)
+        lang_file = File.join(site.source, "_langs", lang, @data_filename)
         if File.exists?(lang_file)
           lang_book = YAML.load_file(lang_file)
           merge(data["toc"], get_path_titles(lang_book["toc"]))

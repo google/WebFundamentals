@@ -1,8 +1,8 @@
 # For local builds
 safe: false
 port: 8081
-source: src/site
-destination: ./src/appengine/build/static
+source: src
+destination: appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
 baseurl:
@@ -12,12 +12,12 @@ highlighter: pygments
 spotlights: false
 github:
   root: https://github.com/Google/WebFundamentals
-  content: tree/master/src/site
+  content: tree/master/src
+include_open_html: true
 custom:
 kramdown:
   toc_levels: "2"
   entity_output: :as_input
 include: ['.htaccess']
 exclude: ['config.rb']
-include_open_html: true
 sample_link_base: "/fundamentals/resources/samples/"

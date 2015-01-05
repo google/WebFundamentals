@@ -23,7 +23,7 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
+        relpath = File.dirname(page["path"]).sub("_langs/en/", "").sub("fundamentals/", "")
         String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
@@ -40,7 +40,7 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("_en/", "").sub("fundamentals/", "")
+        relpath = File.dirname(page["path"]).sub("_langs/en/", "").sub("fundamentals/", "")
         String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
@@ -93,7 +93,7 @@ module Jekyll
         end
         String filepath = Pathname.new(File.join(File.dirname(page["path"]), @file)).cleanpath.to_s
         if lang != "en"
-          filepath.sub!("_" + lang + "/", "_en/")
+          filepath.sub!("_langs/" + lang + "/", "_langs/en/")
         end
         String file = File.join(path, filepath)
         contents = File.read(file)
@@ -141,7 +141,7 @@ module Jekyll
         @character = '}'
       end
 
-      relpath = filepath.sub("_en/fundamentals/", "")
+      relpath = filepath.sub("_langs/en/fundamentals/", "")
 
       page = context.environments.first["page"]
       site = context.registers[:site]
