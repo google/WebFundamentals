@@ -6,7 +6,7 @@ build: copy
 
 copy: clean
 	npm install
-	cd ./src && rvm . do bundle install
+	rvm . do bundle install
 	grunt build
 
 deploy: build
