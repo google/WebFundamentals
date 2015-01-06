@@ -317,15 +317,12 @@ module.exports = function(grunt) {
 	// Test task
 	grunt.registerTask('test', 'Lints all javascript and CSS sources.', 'jshint:source');
 
+	grunt.registerTask('prepare', ['wsk-version', 'test', 'clean:destination', 'sass', 'cssmin']);
 
 	// Build task
-	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --compressed: enables code compression (css)', [
-			'test',
-			'clean:destination',    // Clean out the destination directory
-			'sass',   // Build the CSS using libsass with compression
-			'cssmin',         // Minify the combined CSS
-			'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
-			'jekyll:appengine'   // Build the site with Jekyll
+	grunt.registerTask('build', 'Runs the "test" task, then builds the website.', [
+		'prepare',
+		'jekyll:appengine'   // Build the site with Jekyll
 	]);
 
 	// Develop task
@@ -337,20 +334,13 @@ module.exports = function(grunt) {
 	]);
 
 	// Devsite task
-	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
-
-		return grunt.task.run([
-			'test',           // Code quality control
-			'clean:destination',    // Clean out the destination directory
-			'clean:icons',        // Clean up icon font files for regeneration
-			'webfont:icons',      // Generate icon font files and SASS
-			'sass',   // Build the CSS using libsass with compression
-			'cssmin',         // Minify the combined CSS
-			'jekyll:devsite',     // Build the site with Jekyll
-			'htmlmin:all'       // Minify the final HTML
-		]);
-
-	});
+	grunt.registerTask('devsite', 'Runs the build steps with devsite config', [
+		'clean:icons',        // Clean up icon font files for regeneration
+		'webfont:icons',      // Generate icon font files and SASS
+		'prepare',
+		'jekyll:devsite',     // Build the site with Jekyll
+		'htmlmin:all'         // Minify the final HTML
+	]);
 
 	// Default task
 	grunt.registerTask('default', 'develop');
