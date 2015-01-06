@@ -26,36 +26,34 @@ import re
 from google.appengine.ext.webapp.template import render
 
 
-build_dir = "devsite" # static
-
 class AllPages(webapp2.RequestHandler):
     def get(self, path):
         lang = self.request.get("hl", "en")
 
         text = None
-        file_path = os.path.join(os.path.dirname(__file__), "build", build_dir, "_langs", lang, path)
+        file_path = os.path.join(os.path.dirname(__file__), "build", "_langs", lang, path)
         if os.path.isfile(file_path):
-          text = render(file_path, {})
+          text = render("wrapper.tpl", {"content": file_path, "lang": lang})
 
-        file_path = os.path.join(os.path.dirname(__file__), "build", build_dir, "_langs", lang, path) + ".html"
+        file_path = os.path.join(os.path.dirname(__file__), "build", "_langs", lang, path) + ".html"
         if text is None and os.path.isfile(file_path):
-          text = render(file_path, {})
+          text = render("wrapper.tpl", {"content": file_path, "lang": lang})
 
-        file_path = os.path.join(os.path.dirname(__file__), "build", build_dir, "_langs", lang, path, "index.html")
+        file_path = os.path.join(os.path.dirname(__file__), "build", "_langs", lang, path, "index.html")
         if text is None and os.path.isfile(file_path):
-          text = render(file_path, {})
+          text = render("wrapper.tpl", {"content": file_path, "lang": lang})
 
-        file_path = os.path.join(os.path.dirname(__file__), "build", build_dir, "_langs", "en", path)
+        file_path = os.path.join(os.path.dirname(__file__), "build", "_langs", "en", path)
         if text is None and os.path.isfile(file_path):
-          text = render(file_path, {})
+          text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
 
-        file_path = os.path.join(os.path.dirname(__file__), "build", build_dir, "_langs", "en", path) + ".html"
+        file_path = os.path.join(os.path.dirname(__file__), "build", "_langs", "en", path) + ".html"
         if text is None and os.path.isfile(file_path):
-          text = render(file_path, {})
+          text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
 
-        file_path = os.path.join(os.path.dirname(__file__), "build", build_dir, "_langs", "en", path, "index.html")
+        file_path = os.path.join(os.path.dirname(__file__), "build", "_langs", "en", path, "index.html")
         if text is None and os.path.isfile(file_path):
-          text = render(file_path, {})
+          text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
 
         if text is None:
           text = "404 - Requested file not found."

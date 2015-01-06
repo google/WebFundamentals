@@ -1,27 +1,2 @@
 # For developers.google.com
-safe: false
-port: 8081
-source: src
-destination: appengine/build/devsite
-markdown: kramdown
-permalink: /articles/:title.html
-fundamentals: /web/fundamentals
-baseurl: /web
-url: /web
-highlighter: pygments
-github:
-  root: https://github.com/Google/WebFundamentals
-  content: tree/master/src
-include_open_html: false
-spotlights: false
-custom:
-kramdown:
-  toc_levels: "2"
-  entity_output: :as_input
-include: ['.htaccess', '_project.yaml', '_book.yaml']
-exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
-keep_files: ['_langs\/[a-z\-]+']
-langs_available: ['ar', 'de', 'es', 'fr', 'he', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
-# primary language, source of translations.
-prime_lang: en
 sample_link_base: "http://googlesamples.github.io/web-fundamentals/samples/"

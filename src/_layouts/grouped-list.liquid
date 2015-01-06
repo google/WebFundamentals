@@ -1,8 +1,3 @@
-{% if site.include_open_html %}
-<!DOCTYPE html>
-<html lang="en" class="no-js no-touch">
-  <head>
-{% endif %}
     {% include head.liquid %}
   </head>
 
@@ -55,9 +50,3 @@
     </div>
 
     {% include footer.liquid %}
-
-{% if site.include_open_html %}
-    {% include scripts.liquid %}
-  </body>
-</html>
-{% endif %}
