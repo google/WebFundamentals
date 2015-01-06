@@ -4,10 +4,6 @@
 'use strict';
 
 var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function(connect, dir) {
-	return connect.static(require('path').resolve(dir));
-};
 
 module.exports = function(grunt) {
 
@@ -37,35 +33,6 @@ module.exports = function(grunt) {
 						'<%= config.source %>/icons/icons*.*'
 					]
 				}]
-			}
-		},
-
-		connect: {
-			options: {
-				hostname: '',
-				port: config.port
-			},
-			'destination-source': {
-				options: {
-					middleware: function(connect) {
-						return [
-							lrSnippet,
-							// serves from destination first
-							mountFolder(connect, config.destination),
-							// falls back to source if not found in destination
-							mountFolder(connect, config.source)
-						];
-					}
-				}
-			},
-			destination: {
-				options: {
-					middleware: function(connect) {
-						return [
-							mountFolder(connect, config.destination)
-						];
-					}
-				}
 			}
 		},
 
@@ -145,7 +112,16 @@ module.exports = function(grunt) {
 				action: 'update'
 			},
 			local: {
-				action: 'run'
+				action: 'run',
+				options: {
+					async: true,
+					args: {
+						port: config.port
+					}
+				}
+			},
+			stop: {
+				action: 'kill'
 			}
 		},
 
@@ -205,9 +181,12 @@ module.exports = function(grunt) {
 		},
 
 		open: {
-			index: {
-				path: 'http://localhost:<%=config.port%>/fundamentals'
-			}
+			local: {
+				path: 'http://localhost:<%=config.port%>/web/fundamentals'
+			},
+			staging: {
+				path: 'http://web-central.appspot.com/web/fundamentals'
+			},
 		},
 
 		sass: {
@@ -284,9 +263,7 @@ module.exports = function(grunt) {
 				},
 				files: [
 					'<%= config.destination %>/**/*.html',  // view files (from jekyll)
-					'<%= config.destination %>/css/*.css',  // css files (from sass)
-					'<%= config.source %>/**/*.css',    // css files (raw)
-					'<%= config.source %>/**/*.js'      // script files
+					'<%= config.destination %>/css/*.css'   // css files (from sass)
 				]
 			}
 		},
@@ -420,26 +397,16 @@ module.exports = function(grunt) {
 			'jekyll:appengine'   // Build the site with Jekyll
 	]);
 
-	grunt.registerTask('previewbuild', 'Use this task to preview the final build in your browser.\n  Note: Runs tests automatically before building and serving', ['test', 'build', 'open:index', 'connect:destination:keepalive']);
-
-	// Serve task
-	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.', 'previewbuild');
-
 	// Develop task
-	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', [
-			'test',
-			'clean:destination',    // Clean out the destination directory
-			'sass:uncompressed',   // Build the CSS using libsass without compression
-			'cssmin',         // Minify the combined CSS
-			'jekyll:appengine',   // Build the site with Jekyll
-			'open:index',
-			'connect:destination-source',
-			'watch'
+	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content and watches for changes.', [
+		'build',   // Build the site with Jekyll
+		'gae:local',
+		'open:local',
+		'watch'
 	]);
 
 	// Devsite task
 	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
-		grunt.config.set('config', grunt.file.readYAML('config/devsite.yml'));
 
 		return grunt.task.run([
 			'test',           // Code quality control
