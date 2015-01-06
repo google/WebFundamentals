@@ -20,23 +20,23 @@ handlers:
   upload: robots.txt
 
 - url: /web/imgs
-  static_dir: build/devsite/imgs
+  static_dir: build/imgs
   expiration: 1d
 
 - url: /web/(.*\.(png|gif|jpg|svg))
-  static_files: build/devsite/_langs/en/\1
+  static_files: build/_langs/en/\1
   expiration: 1d
-  upload: build/devsite/_langs/en/(.*\.(png|gif|jpg|svg))
+  upload: build/_langs/en/(.*\.(png|gif|jpg|svg))
 
 - url: /web/(.*\.ico)
-  static_files: build/devsite/_langs/en/\1
+  static_files: build/_langs/en/\1
   expiration: 7d
-  upload: build/devsite/_langs/en/(.*\.ico)
+  upload: build/_langs/en/(.*\.ico)
 
 - url: /web/(.*\.(woff|eot|ttf|css))
-  static_files: build/devsite/\1
+  static_files: build/\1
   expiration: 1d
-  upload: build/devsite/(.*\.(woff|eot|ttf|css))
+  upload: build/(.*\.(woff|eot|ttf|css))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
