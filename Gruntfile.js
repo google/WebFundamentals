@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 			build: {
 				files: [{
 					dot: true,
-					src: ['src/appengine/build']
+					src: ['appengine/build']
 				}]
 			},
 			destination: {
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 
 		csslint: {
 			options: {
-				csslintrc: 'src/.csslintrc'
+				csslintrc: '.csslintrc'
 			},
 			lax: {
 				src: '<%= config.destination %>/css/*.css',
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
 
 		gae: {
 			options: {
-				path: 'src/appengine',
+				path: 'appengine',
 				auth: 'oauth2'
 			},
 			deploy: {
@@ -203,7 +203,7 @@ module.exports = function(grunt) {
 
 		jshint: {
 			options: {
-				jshintrc: 'src/.jshintrc'
+				jshintrc: '.jshintrc'
 			},
 			source: [
 				'Gruntfile.js',

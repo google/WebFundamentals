@@ -29,7 +29,7 @@ module Jekyll
       return {} unless site.config.key? 'langs_available'
 
       lang = site.config['prime_lang'] || 'en'
-      prefix = [site.source, "_#{lang}", ''].join '/'
+      prefix = [site.source, "_langs", lang, ''].join '/'
       allfiles = File.join prefix, '**', '*.*'
 
       Dir.glob(allfiles).inject({}) { |trans, filepath|
@@ -42,7 +42,7 @@ module Jekyll
         relpath = File.join reldir, filename
 
         trans[relpath] = site.config['langs_available'].select { |hl|
-          File.exists? File.join(site.source, "_#{hl}", reldir, filename)
+          File.exists? File.join(site.source, "_langs", hl, reldir, filename)
         }
         trans
       }
@@ -65,8 +65,8 @@ module Jekyll
 
         self.process(name)
         
-        #Jekyll.logger.info "Reading " + File.join(base, "_" + langcode, dir, name)
-        self.read_yaml(File.join(base, "_" + langcode, dir), name)
+        #Jekyll.logger.info "Reading " + File.join(base, "_langs", langcode, dir, name)
+        self.read_yaml(File.join(base, "_langs", langcode, dir), name)
         langcode = langcode ? langcode : "en"
         self.data['langcode'] = langcode
         if site.data["language_names"][langcode].key?('rtl')
@@ -76,7 +76,7 @@ module Jekyll
     end
 
     def relative_path
-      File.join("_" + @langcode, @dir, @name)
+      File.join("_langs", @langcode, @dir, @name)
     end
 
     def destination(dest)
@@ -90,7 +90,7 @@ module Jekyll
 
   class LanguageAsset < Jekyll::StaticFile
     def initialize(site, dest, path, file, langcode, includelang)
-      super(site, dest, File.join("_" + langcode, path), file)
+      super(site, dest, File.join("_langs", langcode, path), file)
       @newpath = includelang ? File.join("_langs", langcode, path) : path;
       @file = file
       @langcode = langcode
@@ -119,7 +119,7 @@ module Jekyll
       lang = site.config['prime_lang'] || site.config['lang'] || 'en'
       Jekyll.logger.info "Generating w/o multilang support for '#{lang}'"
 
-      prefix = [site.source, "_#{lang}", ''].join '/'
+      prefix = [site.source, "_langs", lang, ''].join '/'
       allfiles = File.join prefix, '**', '*.*'
 
       Dir.glob(allfiles) do |source_file|
@@ -141,8 +141,8 @@ module Jekyll
 
       Jekyll.logger.info "Generating translation in '#{lang}'"
 
-      prefix_lang = File.join site.source, "_#{lang}"
-      prefix_prime = File.join site.source, "_#{prime_lang}"
+      prefix_lang = File.join site.source, "_langs", lang
+      prefix_prime = File.join site.source, "_langs", prime_lang
 
       # Hack to skip processing regular content
       # if we're building a translation.
@@ -175,7 +175,7 @@ module Jekyll
 
         # Inner loop over known single page translations from the manifest
         (locales || []).each do |hl|
-          hl_file = File.join site.source, "_#{hl}", relpath
+          hl_file = File.join site.source, "_langs", hl, relpath
           page = create_page(site, hl_file, reldir, name, hl, true, hl == lang)
           page.data.merge!('is_localized' => true, 'is_localization' => true)
           translated_pages << page
