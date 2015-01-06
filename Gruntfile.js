@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
 	// App configuration
-	var config = grunt.file.readYAML('config/local.yml');
+	var config = grunt.file.readYAML('config/common.yml');
 
 	// Tasks configuration
 	grunt.initConfig({
@@ -24,19 +24,10 @@ module.exports = function(grunt) {
 		config: config,
 
 		clean: {
-			build: {
-				files: [{
-					dot: true,
-					src: ['appengine/build']
-				}]
-			},
 			destination: {
 				files: [{
 					dot: true,
-					src: [
-						'<%= config.destination %>/*',
-						'!<%= config.destination %>/.git*'
-					]
+					src: '<%= config.destination %>/*'
 				}]
 			},
 			icons: {
@@ -283,7 +274,7 @@ module.exports = function(grunt) {
 					'<%= config.source %>/**/*.rb',
 					'<%= config.source %>/**/*.md'
 				],
-				tasks: ['jekyll:develop', 'sass:uncompressed']
+				tasks: ['jekyll:appengine']
 			},
 
 			// when served files change, reload them in the browser
@@ -351,17 +342,14 @@ module.exports = function(grunt) {
 	grunt.registerTask('jekyll', 'Run jekyll build.\nOptions:\n  [--lang]: list of languages or "all"', function() {
 		var langs = grunt.option('lang') || 'all';
 
-		var cfgname = this.args[0] || 'develop';
-		if (cfgname === 'develop') {
-			cfgname = 'local';
-		}
+		var cfgname = this.args[0] || 'appengine';
 
 		// read langs from config/target.yml
 		// returns langs_available + prime_lang
 		//         or [] if langs_available is not defined.
 		var langsFromConfig = function() {
 			/*jshint camelcase: false */
-			var cfg = grunt.file.readYAML('config/' + cfgname + '.yml');
+			var cfg = grunt.file.readYAML('config/common.yml');
 			if (typeof cfg.langs_available === 'undefined') {
 				return [];
 			}
@@ -378,7 +366,7 @@ module.exports = function(grunt) {
 			});
 		}
 
-		var cfgfiles = 'config/wsk-version.yml,config/' + cfgname + '.yml';
+		var cfgfiles = 'config/wsk-version.yml,config/common.yml,config/' + cfgname + '.yml';
 		var args = ['build', '--config', cfgfiles, '-t'];
 		var spawnJekyll = function(lang, callback) {
 			var opts = {env: process.env, stdio: 'inherit'};
@@ -443,7 +431,7 @@ module.exports = function(grunt) {
 			'clean:destination',    // Clean out the destination directory
 			'sass:uncompressed',   // Build the CSS using libsass without compression
 			'cssmin',         // Minify the combined CSS
-			'jekyll:develop',   // Build the site with Jekyll
+			'jekyll:appengine',   // Build the site with Jekyll
 			'open:index',
 			'connect:destination-source',
 			'watch'
