@@ -11,22 +11,26 @@
 **/
 
 .latest-spotlights {
-  background: $colorYellowSecondary;
   padding-bottom: $lineHeight*2 + 3;
   padding-top: $lineHeight*1;
 
   @include medium {
-    padding-top: $lineHeight*2;
+    padding-top: $lineHeight*1;
   }
+
+  background: $colorYellowSecondary;
 }
 
 .latest-spotlights h2 {
-  padding-bottom: $lineHeight;
   text-align: center;
 
   @include medium {
     text-align: left;
   }
+}
+
+.latest-spotlights > div > p {
+  padding-bottom: $lineHeight;
 }
 
 .latest-spotlights__item {
@@ -61,19 +65,18 @@
 }
 
 .latest-spotlights__link {
-  display: block;
+  display: inline-block;
   position: relative;
   background: #ffffff;
 }
 
 .latest-spotlights__link img {
   display: block;
-  width: 100%;
   margin: 0;
   @include prefixr(transition, opacity .2s ease-in-out);
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
-
+  max-height: 12em;
 }
 
 .latest-spotlights__link p {
@@ -111,3 +114,18 @@
   }
 }
 
+.latest-spotlights__description {
+ 
+  @include medium {
+    width: 61%;
+    display: inline-block;
+  }
+  
+  vertical-align: top;
+  padding-left: 1em;
+
+}
+
+.latest-spotlights__description a {
+  margin-top: $lineHeight/2;
+}

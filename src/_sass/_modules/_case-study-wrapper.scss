@@ -14,10 +14,12 @@
   padding-top: $lineHeight;
   padding-bottom: $lineHeight*2;
 
+  background: $colorGrayBackground;
+
   @include medium {
     margin-top: - $lineHeight*6;
     padding-top: $lineHeight*3;
-    background: $colorGrayBackground;
+    background: linear-gradient(to right, #ffe168 50%, #CFA600 50%);
 
     &.has-video-after {
       margin-bottom: - $lineHeight*7;
@@ -30,4 +32,17 @@
     padding-top: 0;
   }
 
+}
+
+.case-study__dl ul {
+  padding-top: 0;
+}
+
+.case-study-inverted {
+  @include medium {
+    color: #fff;
+    h2 {
+      color: #fff;
+    }
+  }
 }
