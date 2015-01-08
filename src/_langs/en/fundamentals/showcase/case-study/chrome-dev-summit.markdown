@@ -1,12 +1,13 @@
 ---
-layout: showcase
+layout: case-study
+collection: case-study
+
 title: "Chrome Dev Summit 2014"
 published: false
 introduction: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
 
 header_image: ../../../imgs/placeholder--device-landscape.png
 header_orientation: landscape
-class: showcase
 
 overview:
   description: "The CDS site was the premier destination to read about all things Chrome Dev Summit, a two-day developer event about Chrome in 2014. It was used by attendees to get infos about the schedule, signup and more."
@@ -56,7 +57,6 @@ other_case_studies:
 article:
   written_on: 2014-01-01
   updated_on: 2014-02-02
-collection: resources
 ---
 
 <div class="case-study-wrapper">
