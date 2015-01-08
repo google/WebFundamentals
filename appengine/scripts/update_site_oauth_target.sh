@@ -19,7 +19,7 @@ set -e
 
 versionStr="${1:-master}"
 
-pushd ../../../
+pushd ../../
 make build
 popd
 
