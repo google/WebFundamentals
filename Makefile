@@ -8,7 +8,7 @@ copy: clean
 	npm install
 	rvm . do gem cleanup
 	rvm . do bundle install
-	grunt build
+	rvm . do grunt build
 
 deploy: build
 	grunt gae:deploy
