@@ -1,8 +1,9 @@
 ---
+id: showcase
 layout: default
+collection: home
 title: "Showcases"
 description: ""
-class: case-study
 ---
 {% comment %}
 NOTE: the spotlight header required a modifier to render properly
