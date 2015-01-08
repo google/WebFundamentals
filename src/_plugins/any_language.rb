@@ -80,11 +80,15 @@ module Jekyll
     end
 
     def destination(dest)
-      path = self.superdest("")
+      original_target = Pathname.new self.superdest("")
+      base = Pathname.new dest
+      relative = original_target.relative_path_from base
+      path = ""
       if @includelang        
-        path = File.join("_langs", @langcode, path)
+        path = File.join("_langs", @langcode)
       end
-      path = File.join(dest, path)
+      path = File.join(base, path, relative)
+      path
     end
   end
 
