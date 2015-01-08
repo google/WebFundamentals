@@ -16,7 +16,7 @@ overview:
     - Feature 1
     - Feature 2
     - Feature 3
-  advantages_over_native:
+  webbyness:
     - Some advantage
     - Another cool advantage
 
@@ -81,11 +81,11 @@ article:
           </dd> 
         {% endif %}
 
-        {% if page.overview.advantages_over_native %}
-          <dt>Advantages over native</dt>
+        {% if page.overview.webbyness %}
+          <dt>Webbyness</dt>
           <dd>
             <ul>
-            {% for advantage in page.overview.advantages_over_native %}
+            {% for advantage in page.overview.webbyness %}
               <li>
                 {{advantage}}
               </li>
