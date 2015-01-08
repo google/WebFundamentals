@@ -12,6 +12,7 @@
   "@guides_available": {"description": "Heading - A title used to list the guides/articles available on the page."},
   "in_this_guide": "In this guide",
   "@in_this_guide": {"description": "Heading - lists the different topics covered in the guide/article."},
+  "more_spotlights": "More spotlights",
   "more_case_studies": "More case studies",
   "@more_case_studies": {"description": "Link - to more case studies."},
   "next": "Next",

@@ -1,0 +1,42 @@
+/**
+*
+* Spotlight wrapper
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Paul Bakaus
+*
+**/
+
+.spotlight-wrapper {
+  padding-top: $lineHeight;
+  padding-bottom: $lineHeight*2;
+
+  background: $colorGrayBackground;
+
+  @include medium {
+    margin-top: - $lineHeight*6;
+    padding-top: $lineHeight*3;
+    background: $colorYellowSecondary;
+  }
+
+  @include wide {
+    min-height: 470px;
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+}
+
+.spotlight-listing .related-items {
+  margin-top: 0;
+  border: 0;
+}
+
+.spotlight-listing .related-items-list li:nth-child(3n+4) {
+  margin-left: auto;
+}
