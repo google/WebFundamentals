@@ -1,5 +1,5 @@
 clean:
-	grunt clean:build
+	grunt clean:destination
 
 build: copy
     #add_version
