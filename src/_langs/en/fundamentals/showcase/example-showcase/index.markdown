@@ -1,12 +1,36 @@
 ---
 layout: showcase
-title: "Showcase example"
+title: "Chrome Dev Summit 2014"
 published: false
-description: "This is an example of a showcase page"
-introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, iste, natus, eius laborum error ad voluptatibus."
-header_image: ../../imgs/placeholder--device-landscape.png
+introduction: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
+
+header_image: ../../../imgs/placeholder--device-landscape.png
 header_orientation: landscape
 class: showcase
+
+overview:
+  description: "The CDS site was the premier destination to read about all things Chrome Dev Summit, a two-day developer event about Chrome in 2014. It was used by attendees to get infos about the schedule, signup and more."
+  audience: Offline and online attendees of the Chrome Dev Summit 2014.
+  features:
+    - Feature 1
+    - Feature 2
+    - Feature 3
+  advantages_over_native:
+    - Some advantage
+    - Another cool advantage
+
+behind_the_scenes:
+  description: "Remarkable is the smoothness at which the site runs in various mobile browsers. It's utilizing the layout and paint cycles of the browser in the best way possible."
+  owp:
+    - Service Worker
+    - Manifest
+  patterns:
+    - Expanding cards
+    - Responsive Grid
+  samples:
+    - Sample 1
+    - Sample 2
+
 our_views:
   good:
     - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
@@ -20,53 +44,119 @@ other_case_studies:
   - title: Case study number one
     description: Case study title
     link: /spotlights/example-showcase/
-    image: ../../imgs/image-example-2.jpg
+    image: ../../../imgs/image-example-2.jpg
   - title: Case study number two
     description: Case study title
     link: /spotlights/example-showcase/
-    image: ../../imgs/image-example-3.jpg
+    image: ../../../imgs/image-example-3.jpg
   - title: Case study number three
     description: Case study title
     link: /spotlights/example-showcase/
-    image: ../../imgs/image-example-4.jpg
-related_guides:
-  - title: Related guide number one
-    link: /spotlights/example-showcase/
-    section: Introduction to media
-  - title: Related guide number two with a longer title
-    link: /spotlights/example-showcase/
-    section: Performance
-  - title: Related guide number three with a title that's honestly way too long
-    link: /spotlights/example-showcase/
-    section: Multi-device layouts
+    image: ../../../imgs/image-example-4.jpg
 article:
   written_on: 2014-01-01
   updated_on: 2014-02-02
 collection: resources
 ---
 
-<div class="case-study-wrapper has-video-after">
+<div class="case-study-wrapper">
   <div class="container clear">
-    <div class="g--half">
-      <h2>Title goes here</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, fugit, quod, necessitatibus, eveniet praesentium id atque possimus placeat quo earum perferendis et laudantium eaque excepturi modi maiores facilis nam veritatis!</p>
-      <dl>
-        <dt>Who</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, totam, voluptas, harum itaque placeat consequuntur eligendi eius illum facilis architecto nobis aliquid. Consequuntur voluptatum eaque repellendus soluta cupiditate distinctio quam.</dd>
-        <dt>Who</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, totam, voluptas, harum itaque placeat consequuntur eligendi eius illum facilis architecto nobis aliquid. Consequuntur voluptatum eaque repellendus soluta cupiditate distinctio quam.</dd>
-        <dt>Who</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, totam, voluptas, harum itaque placeat consequuntur eligendi eius illum facilis architecto nobis aliquid. Consequuntur voluptatum eaque repellendus soluta cupiditate distinctio quam.</dd>
+    <div class="g--third">
+      <h2>Overview</h2>
+      <p>{{page.overview.description}}</p>
+      <dl class="case-study__dl">
+        <dt>Target audience</dt>
+        <dd>{{page.overview.audience}}</dd>
+
+        {% if page.overview.features %}
+          <dt>Features</dt>
+          <dd>
+            <ul>
+            {% for feature in page.overview.features %}
+              <li>
+                {{feature}}
+              </li>
+            {% endfor %}
+            </ul>
+          </dd> 
+        {% endif %}
+
+        {% if page.overview.advantages_over_native %}
+          <dt>Advantages over native</dt>
+          <dd>
+            <ul>
+            {% for advantage in page.overview.advantages_over_native %}
+              <li>
+                {{advantage}}
+              </li>
+            {% endfor %}
+            </ul>
+          </dd> 
+        {% endif %}
+
       </dl>
     </div>
-    <figure class="case-study__img-wrapper g--half g--last">
-      <img src="../../imgs/placeholder--side-by-side.png" alt="image placeholder" class="fluid">
+
+    <figure class="case-study__img-wrapper g--third">
+      <img src="images/cover.jpg" alt="{{page.title}} on Nexus 5" class="fluid">
     </figure>
+
+    <div class="g--third g--last case-study-inverted">
+      <h2>Behind the scenes</h2>
+      <p>{{page.behind_the_scenes.description}}</p>
+      <dl class="case-study__dl">
+
+        {% if page.behind_the_scenes.owp %}
+          <dt>New web platform features</dt>
+          <dd>
+            <ul>
+            {% for owp in page.behind_the_scenes.owp %}
+              <li>
+                {{owp}}
+              </li>
+            {% endfor %}
+            </ul>
+          </dd> 
+        {% endif %}
+
+        {% if page.behind_the_scenes.patterns %}
+          <dt>Patterns</dt>
+          <dd>
+            <ul>
+            {% for pattern in page.behind_the_scenes.patterns %}
+              <li>
+                {{pattern}}
+              </li>
+            {% endfor %}
+            </ul>
+          </dd> 
+        {% endif %}
+
+        {% if page.behind_the_scenes.samples %}
+          <dt>Forkable samples</dt>
+          <dd>
+            <ul>
+            {% for sample in page.behind_the_scenes.samples %}
+              <li>
+                {{sample}}
+              </li>
+            {% endfor %}
+            </ul>
+          </dd> 
+        {% endif %}
+
+      </dl>
+    </div>
+
   </div>
 </div>
 
 <div class="container clear">
+
+  <div class="content">
+  <h2>The interview</h2>
   {% include modules/video.liquid id="dEGJ8XyZw40" %}
+  </div>
 
   <div class="content">
     <h2>The impact</h2>
@@ -93,7 +183,7 @@ collection: resources
     <div class="centered g--half g--last">
       <h3>Key users</h3>
       <figure class="case-study__img-wrapper contained">
-        <img src="../../imgs/placeholder--square.png" alt="image placeholder" class="fluid">
+        <img src="../../../imgs/placeholder--square.png" alt="image placeholder" class="fluid">
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, porro eius.</figcaption>
       </figure>
     </div>
