@@ -215,9 +215,7 @@ module Jekyll
 
   module LocalizeLink
     def localize_link(input, page) 
-      if page["is_localization"] == true
-        input = input + "?hl=" + page["langcode"]
-      end
+      input = input + "?hl=" + page["langcode"] || site.config['prime_lang']
       return input
     end
   end
