@@ -6,6 +6,7 @@ build: copy
 
 copy: clean
 	npm install
+	rvm . do gem cleanup
 	rvm . do bundle install
 	grunt build
 
