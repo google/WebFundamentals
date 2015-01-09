@@ -135,6 +135,7 @@ module Jekyll
       highlighted_code = Pygments.highlight(snippet, :lexer => @lang, :options => @options)
       if highlighted_code.nil?
           Jekyll.logger.error "There was an error highlighting your code."
+          highlighted_code = ""
       end
 
       if @lang == 'css'
