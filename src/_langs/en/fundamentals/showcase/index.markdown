@@ -4,6 +4,7 @@ layout: default
 collection: home
 title: "Showcases"
 description: ""
+published: true
 ---
 {% comment %}
 NOTE: the spotlight header required a modifier to render properly

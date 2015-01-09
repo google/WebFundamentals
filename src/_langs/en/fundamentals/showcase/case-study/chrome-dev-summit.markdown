@@ -3,7 +3,7 @@ layout: case-study
 collection: case-study
 
 title: "Chrome Dev Summit 2014"
-published: false
+published: true
 introduction: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
 
 header_image: ../../../imgs/placeholder--device-landscape.png

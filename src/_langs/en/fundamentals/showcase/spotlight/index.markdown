@@ -4,6 +4,7 @@ title: "All spotlights"
 description: "Listing of all spotlights."
 id: spotlight
 collection: showcase
+published: true
 ---
 
 <div class="page-header">
@@ -21,8 +22,8 @@ collection: showcase
 
 <div class="container spotlight-listing">
 
-      {% for spotlight in page.articles %}
-        <p>{{spotlight | first}}</p>
+      {% for spotlight in page.articles.case-study %}
+        <p>{{spotlight.title}}</p>
       {% endfor %}
 
   <div class="related-items clear">
