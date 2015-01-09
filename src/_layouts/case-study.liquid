@@ -6,7 +6,7 @@
 
     {% include header.liquid %}
 
-    <header class="spotlight-header spotlight-header--detail spotlight-header--{{ page.header_orientation }} clear">
+    <header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
       <div class="spotlight-header__container container">
         {% include modules/breadcrumbs.liquid %}
         <div class="spotlight-header__copy g--half">
@@ -14,10 +14,102 @@
           <p>{{ page.introduction }}</p>
         </div>
         <div class="spotlight-header__media g--half g--last">
-          <img src="{{ page.header_image }}" class="spotlight-header__image">
+          <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ page.id }}/device-landscape.jpg" class="spotlight-header__image">
         </div>
       </div>
     </header>
+
+  <div class="case-study-wrapper">
+    <div class="container clear">
+      <div class="g--third">
+        <h2>Overview</h2>
+        <p>{{page.overview.description}}</p>
+        <dl class="case-study__dl">
+          <dt>Target audience</dt>
+          <dd>{{page.overview.audience}}</dd>
+
+          {% if page.overview.features %}
+            <dt>Features</dt>
+            <dd>
+              <ul>
+              {% for feature in page.overview.features %}
+                <li>
+                  {{feature}}
+                </li>
+              {% endfor %}
+              </ul>
+            </dd> 
+          {% endif %}
+
+          {% if page.overview.webbyness %}
+            <dt>Webbyness</dt>
+            <dd>
+              <ul>
+              {% for advantage in page.overview.webbyness %}
+                <li>
+                  {{advantage}}
+                </li>
+              {% endfor %}
+              </ul>
+            </dd> 
+          {% endif %}
+
+        </dl>
+      </div>
+
+      <figure class="case-study__img-wrapper g--third">
+        <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ page.id }}/screenshot-portrait.jpg" alt="{{page.title}} on Nexus 5" class="fluid">
+      </figure>
+
+      <div class="g--third g--last case-study-inverted">
+        <h2>Behind the scenes</h2>
+        <p>{{page.behind_the_scenes.description}}</p>
+        <dl class="case-study__dl">
+
+          {% if page.behind_the_scenes.owp %}
+            <dt>New web platform features</dt>
+            <dd>
+              <ul>
+              {% for owp in page.behind_the_scenes.owp %}
+                <li>
+                  {{owp}}
+                </li>
+              {% endfor %}
+              </ul>
+            </dd> 
+          {% endif %}
+
+          {% if page.behind_the_scenes.patterns %}
+            <dt>Patterns</dt>
+            <dd>
+              <ul>
+              {% for pattern in page.behind_the_scenes.patterns %}
+                <li>
+                  {{pattern}}
+                </li>
+              {% endfor %}
+              </ul>
+            </dd> 
+          {% endif %}
+
+          {% if page.behind_the_scenes.samples %}
+            <dt>Forkable samples</dt>
+            <dd>
+              <ul>
+              {% for sample in page.behind_the_scenes.samples %}
+                <li>
+                  {{sample}}
+                </li>
+              {% endfor %}
+              </ul>
+            </dd> 
+          {% endif %}
+
+        </dl>
+      </div>
+
+    </div>
+  </div>
 
     {{ content }}
 
