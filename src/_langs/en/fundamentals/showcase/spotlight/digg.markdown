@@ -3,7 +3,7 @@ layout: spotlight
 collection: spotlight
 
 title: "Digg.com"
-published: false
+published: true
 description: "Featuring a fast hamburger menu and a clean layout."
 introduction: "Featuring a fast hamburger menu and a clean layout, Digg works amazingly well on mobile."
 header_image: http://40.media.tumblr.com/a77ae878c17cc666d898f86b724f9d08/tumblr_ngumxeiVx61tk03rro1_1280.png
