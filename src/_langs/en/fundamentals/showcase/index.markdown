@@ -14,6 +14,7 @@ NOTE: the spotlight header required a modifier to render properly
 {% endcomment %}
 
 {% assign caseStudies = page.articles.case-study | sort: 'date' | reverse  %}
+{% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
 
 <header class="spotlight-header spotlight-header-main spotlight-header--portrait clear">
   <div class="spotlight-header__container container">
@@ -46,28 +47,23 @@ NOTE: the spotlight header required a modifier to render properly
     </div>
 
     <ul class="latest-spotlights__list list-reset">
+
+      {% for spotlight in spotlights limit:2 %}
+
       <li class="latest-spotlights__item">
-        <a href="./example-spotlight" class="latest-spotlights__link">
-          <img src="../../imgs/image-portrait.jpg" alt="image example">
+        <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}" class="latest-spotlights__link">
+          <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.jpg" alt="Screenshot of {{spotlight.title}}">
           <p class="small">Spotlight</p>
         </a>
         <div class="latest-spotlights__description">
-          <h3>Spotlight name</h3>
-          <p>Small splotlight descrition noting why this spotlight is such a great app.</p>
-          <a href="#" class="cta--primary">View Spotlight</a>
+          <h3>{{spotlight.title}}</h3>
+          <p>{{spotlight.introduction}}</p>
+          <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}" class="cta--primary">View Spotlight</a>
         </div>
       </li>
-      <li class="latest-spotlights__item">
-        <a href="./example-spotlight" class="latest-spotlights__link">
-          <img src="../../imgs/image-portrait.jpg" alt="image example">
-          <p class="small">Spotlight</p>
-        </a>
-        <div class="latest-spotlights__description">
-          <h3>Spotlight name</h3>
-          <p>Small splotlight descrition noting why this spotlight is such a great app.</p>
-          <a href="#" class="cta--primary">View Spotlight</a>
-        </div>
-      </li>
+
+      {% endfor %}
+
     </ul>
     
   </div>
