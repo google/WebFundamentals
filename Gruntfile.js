@@ -187,7 +187,6 @@ module.exports = function(grunt) {
 			// when jekyll source changes, recompile them
 			jekyll: {
 				files: [
-					'<%= config.source %>/**/*.html',
 					'<%= config.source %>/**/*.liquid',
 					'<%= config.source %>/**/*.markdown',
 					'<%= config.source %>/**/*.rb',
