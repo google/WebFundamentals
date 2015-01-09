@@ -902,97 +902,97 @@ li > p {
   -moz-osx-font-smoothing: grayscale; }
 
 .icon-bullet:before {
-  content: "\e001"; }
+  content: "\f101"; }
 
 .icon-chevron-down:before {
-  content: "\e002"; }
+  content: "\f102"; }
 
 .icon-chevron-large:before {
-  content: "\e003"; }
+  content: "\f103"; }
 
 .icon-chevron-left:before {
-  content: "\e004"; }
+  content: "\f104"; }
 
 .icon-chevron-right:before {
-  content: "\e005"; }
+  content: "\f105"; }
 
 .icon-chevron-up:before {
-  content: "\e006"; }
+  content: "\f106"; }
 
 .icon-close:before {
-  content: "\e007"; }
+  content: "\f107"; }
 
 .icon-cog:before {
-  content: "\e008"; }
+  content: "\f108"; }
 
 .icon-device-access:before {
-  content: "\e009"; }
+  content: "\f109"; }
 
 .icon-diamond:before {
-  content: "\e00a"; }
+  content: "\f10a"; }
 
 .icon-discovery-and-distribution:before {
-  content: "\e00b"; }
+  content: "\f10b"; }
 
 .icon-exclamation:before {
-  content: "\e00c"; }
+  content: "\f10c"; }
 
 .icon-google-dev:before {
-  content: "\e00d"; }
+  content: "\f10d"; }
 
 .icon-guides:before {
-  content: "\e00e"; }
+  content: "\f10e"; }
 
 .icon-hash:before {
-  content: "\e00f"; }
+  content: "\f10f"; }
 
 .icon-introduction-to-media:before {
-  content: "\e010"; }
+  content: "\f110"; }
 
 .icon-lessons:before {
-  content: "\e011"; }
+  content: "\f111"; }
 
 .icon-look-and-feel:before {
-  content: "\e012"; }
+  content: "\f112"; }
 
 .icon-menu:before {
-  content: "\e013"; }
+  content: "\f113"; }
 
 .icon-minus:before, .subnav-is-opened .icon-custom:before {
-  content: "\e014"; }
+  content: "\f114"; }
 
 .icon-monetization:before {
-  content: "\e015"; }
+  content: "\f115"; }
 
 .icon-multi-device-layouts:before {
-  content: "\e016"; }
+  content: "\f116"; }
 
 .icon-performance:before {
-  content: "\e017"; }
+  content: "\f117"; }
 
 .icon-plus:before, .icon-custom:before {
-  content: "\e018"; }
+  content: "\f118"; }
 
 .icon-principles-of-site-design:before {
-  content: "\e019"; }
+  content: "\f119"; }
 
 .icon-question:before {
-  content: "\e01a"; }
+  content: "\f11a"; }
 
 .icon-slash:before {
-  content: "\e01b"; }
+  content: "\f11b"; }
 
 .icon-star:before, .home-header:after {
-  content: "\e01c"; }
+  content: "\f11c"; }
 
 .icon-tick:before {
-  content: "\e01d"; }
+  content: "\f11d"; }
 
 .icon-tools:before, .wsk-header:after {
-  content: "\e01e"; }
+  content: "\f11e"; }
 
 .icon-user-input:before {
-  content: "\e01f"; }
+  content: "\f11f"; }
 
 /**
 *
@@ -1329,7 +1329,7 @@ body[dir=rtl] .main-nav__item--child {
         font-family: "icons";
         line-height: 25px;
         font-size: 13px;
-        content: "\e005"; } }
+        content: "\f105"; } }
 
 @media only screen and (min-width: 620px) {
   .main-nav__link--explore-wrapper {
@@ -1365,7 +1365,7 @@ body[dir=rtl] .main-nav__item--child {
   top: -6px; }
   .nav-is-opened + .main-nav__btn i:before {
     font-size: 20px;
-    content: "\e007"; }
+    content: "\f107"; }
 
 /*==========  ICONS  ==========*/
 .main-nav__icon {
@@ -1384,7 +1384,7 @@ body[dir=rtl] .main-nav__item--child {
 @media only screen and (min-width: 620px) {
   .icon-custom:before {
     font-size: 9px;
-    content: "\e002"; } }
+    content: "\f102"; } }
 @media only screen and (min-width: 620px) {
   .icon-custom {
     float: none;
@@ -1396,7 +1396,7 @@ body[dir=rtl] .main-nav__item--child {
     top: 7px; } }
 @media only screen and (min-width: 620px) {
   .subnav-is-opened .icon-custom:before {
-    content: "\e006"; } }
+    content: "\f106"; } }
 
 .main-nav .main-nav__guide-icon {
   display: inline-block;
@@ -1913,7 +1913,7 @@ body[dir=rtl] ul.main-footer__list > li:before {
   .editorial-header .container {
     position: relative; }
     .editorial-header .container:before {
-      content: "\e003";
+      content: "\f103";
       font-family: "icons";
       font-size: 1000px;
       line-height: 0;
@@ -1929,7 +1929,7 @@ body[dir=rtl] ul.main-footer__list > li:before {
 body[dir=rtl] .editorial-header .container:before {
   right: auto;
   left: 100%;
-  content: "\e004";
+  content: "\f104";
   margin: 168px 0 0 -35px; }
 
 .editorial-header__excerpt {
@@ -2543,7 +2543,7 @@ body[dir=rtl] .editorial-header .container:before {
 .article-nav-link--prev {
   text-align: right; }
   .article-nav-link--prev:before {
-    content: "\e004";
+    content: "\f104";
     font-family: "icons";
     left: 0; }
   @media only screen and (min-width: 620px) {
@@ -2551,7 +2551,7 @@ body[dir=rtl] .editorial-header .container:before {
       padding-left: 52px; } }
 
 .article-nav-link--next:before {
-  content: "\e005";
+  content: "\f105";
   font-family: "icons";
   right: 0; }
 @media only screen and (min-width: 620px) {
@@ -2849,7 +2849,7 @@ body[dir=rtl] .editorial-header .container:before {
     .did-you-know__symbol {
       padding-bottom: 26px; } }
   .did-you-know__symbol:after {
-    content: "\e01a";
+    content: "\f11a";
     color: #4285f4;
     font-family: "icons";
     font-size: 300px;
@@ -2986,7 +2986,7 @@ body[dir=rtl] .editorial-header .container:before {
         display: block; } }
   @media only screen and (min-width: 620px) {
     .next-lessons:after {
-      content: "\e011";
+      content: "\f111";
       font-family: "icons";
       font-size: 150px;
       right: 40px;
@@ -3051,7 +3051,7 @@ body[dir=rtl] .editorial-header .container:before {
     font-weight: 600; }
   @media only screen and (min-width: 620px) {
     .guides:after {
-      content: "\e00e";
+      content: "\f10e";
       font-family: "icons";
       font-size: 150px;
       right: 40px;
@@ -3716,7 +3716,7 @@ body[dir=rtl] li, body[dir=rtl] dt {
   padding-right: 32px; }
 
 ul > li:before {
-  content: "\e001";
+  content: "\f101";
   font-family: "icons";
   font-size: 4px;
   display: block;
@@ -3729,7 +3729,7 @@ ul > li:before {
   left: 0px; }
 
 body[dir=rtl] ul > li:before {
-  content: "\e001";
+  content: "\f101";
   font-family: "icons";
   font-size: 4px;
   display: block;
@@ -3782,7 +3782,7 @@ dt {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-weight: 400; }
   dt:before {
-    content: "\e00f";
+    content: "\f10f";
     font-family: "icons";
     font-size: 13px;
     display: block;
@@ -3798,7 +3798,7 @@ dt {
       font-weight: 700; } }
 
 body[dir=rtl] dt:before {
-  content: "\e00f";
+  content: "\f10f";
   font-family: "icons";
   font-size: 13px;
   display: block;
@@ -3820,7 +3820,7 @@ ul.list-links li:before {
 ul.list-links a {
   font-weight: 400; }
   ul.list-links a:before {
-    content: "\e001";
+    content: "\f101";
     font-family: "icons";
     font-size: 4px;
     display: block;
@@ -3841,7 +3841,7 @@ ul.list-links.list-links--primary {
     line-height: 1;
     text-decoration: none; }
     ul.list-links.list-links--primary a:before {
-      content: "\e005";
+      content: "\f105";
       font-family: "icons";
       font-size: 13px;
       display: block;
@@ -3854,7 +3854,7 @@ ul.list-links.list-links--primary {
       left: 0px; }
 
 body[dir=rtl] ul.list-links a:before {
-  content: "\e001";
+  content: "\f101";
   font-family: "icons";
   font-size: 4px;
   display: block;
@@ -3868,7 +3868,7 @@ body[dir=rtl] ul.list-links a:before {
 body[dir=rtl] ul.list-links.list-links--primary {
   letter-spacing: 1px; }
   body[dir=rtl] ul.list-links.list-links--primary a:before {
-    content: "\e005";
+    content: "\f105";
     font-family: "icons";
     font-size: 13px;
     display: block;
@@ -3942,7 +3942,7 @@ body[dir=rtl] ol.list-links li:before {
     display: inline-block;
     padding-left: 16px; }
     .list-anchor a:before {
-      content: "\e001";
+      content: "\f101";
       font-family: "icons";
       font-size: 4px;
       display: block;
@@ -3972,7 +3972,7 @@ body[dir=rtl] .list-anchor a {
   padding-left: 0px;
   padding-right: 32px; }
   body[dir=rtl] .list-anchor a:before {
-    content: "\e001";
+    content: "\f101";
     font-family: "icons";
     font-size: 4px;
     display: block;
@@ -4459,7 +4459,7 @@ a:hover {
     font-family: "icons";
     line-height: 25px;
     font-size: 13px;
-    content: "\e005"; }
+    content: "\f105"; }
 
 .cta--secondary {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -5412,11 +5412,11 @@ figcaption {
       top: -12px;
       color: #4285f4; }
     .divider span:before {
-      content: "\e004";
+      content: "\f104";
       left: 8px; }
     .divider span:after {
       color: #a0c3ff;
-      content: "\e005";
+      content: "\f105";
       right: 6px; }
   .divider .divider-icon--secondary {
     width: 23px; }

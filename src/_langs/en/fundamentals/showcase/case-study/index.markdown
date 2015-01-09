@@ -2,6 +2,7 @@
 layout: default
 collection: showcase
 id: case-study
+published: true
 
 title: "Showcase example"
 description: "This is an example of a showcase page"
