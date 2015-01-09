@@ -4,7 +4,7 @@ collection: showcase
 id: case-study
 published: true
 
-title: "Showcase example"
+title: "Case studies"
 description: "This is an example of a showcase page"
 
 showcase:
@@ -14,117 +14,51 @@ showcase:
 
 <div class="page-header">
   <div class="container">
-    <nav class="breadcrumbs">
-      <p>
-        <a href="/spotlights/index.html" title="Spotlights">Spotlights</a>/
-      </p>
-    </nav>
+    {% include modules/breadcrumbs.liquid %}
     <header class="clear">
-      <h3 class="xxlarge">All spotlights</h3>
+      <h3 class="xxlarge">All case studies</h3>
       <div class="divider">
         <span class="themed divider-icon"></span>
       </div>
-      <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">Don't assume your users prefer one device over another. Provide a great experience no matter what device they choose. Main goal for responsive web design: create sites, apps, and experiences that scale well across all devices.</p>
+      <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">Every month, we talk with the engineering team behind a successful mobile web offering to share with you what worked, what didn't and how you can follow their footsteps.</p>
     </header>
-  </div>
-</div>
-
-<div class="featured-spotlight">
-  <div class="container-medium">
-    <div class="featured-spotlight__container g--pull-half">
-      <div class="featured-spotlight__img">
-        <img src="../../imgs/placeholder--featured-spotlight.png" alt="image exemple">
-      </div>
-
-      <div class="container-small">
-        <h3 class="xxlarge">Featured spotlight</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed vitae varius augue, eu varius dolor.</p>
-        <a href="#" class="cta--primary">View Google</a>
-      </div>
-    </div>
   </div>
 </div>
 
 <div class="featured-section">
   <div class="container-medium">
-    <ul class="featured-list">
-      <li class="featured-list__item clear">
-        <div class="container-small">
-          <div class="featured-list__content g--half">
-            <h3>Case study</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
-            <a href="#" class="cta--primary">View Google</a>
+
+    <ul>
+
+      {% assign caseStudies = page.articles.case-study | sort: 'date' | reverse  %}
+      {% for caseStudy in caseStudies %}
+
+        <li class="featured-list__item clear">
+          <div class="container-small">
+            <div class="featured-list__content g--half">
+              <h3 class="xlarge">
+                <strong class="subsection-number">{{caseStudy.article.written_on | date:"%B" }} case study</strong>
+                {{caseStudy.title}}
+              </h3>
+              <p>{{caseStudy.introduction}}</p>
+              <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}" class="cta--primary">Read the case study</a>
+            </div>
+            <figure class="featured-list__img-wrapper g--half g--last">
+              <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ caseStudy.id }}/thumbnail-medium.jpg" alt="{{caseStudy.title}}">
+            </figure>
           </div>
-          <figure class="featured-list__img-wrapper g--half g--last">
-            <img src="../../imgs/placeholder--medium.png" alt="image exemple">
-          </figure>
-        </div>
-      </li>
-      <div class="divider divider--fluid divider--spaced">
-        <span class="divider-icon divider-icon--secondary"></span>
-      </div>
-      <li class="featured-list__item clear">
-        <div class="container-small">
-          <div class="featured-list__content g--half">
-            <h3>Case study</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
-            <a href="#" class="cta--primary">View Google</a>
+        </li>
+
+        {% unless forloop.last %}
+          <div class="divider divider--fluid divider--spaced">
+            <span class="divider-icon divider-icon--secondary"></span>
           </div>
-          <figure class="featured-list__img-wrapper g--half g--last">
-            <img src="../../imgs/placeholder--medium.png" alt="image exemple">
-          </figure>
-        </div>
-      </li>
+        {% endunless %}
+
+      {% endfor %}
+
     </ul>
   </div>
 </div>
 
-<div class="container">
-
-  <div class="related-items clear">
-    <h3 class="related-items__title g-wide--1 g-medium--full">More case studies</h3>
-    <div class="related-items__section clear">
-
-      <ul class="related-items-list list-reset">
-        <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
-          <a href="#">
-            <img src="../../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides title which goes over two lines</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
-          <a href="#">
-            <img src="../../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides completely device agnostic site created for the this website</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
-          <a href="#">
-            <img src="../../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides new, completely device agnostic site created for the this website</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-wide--1 theme--multi-device-layouts">
-          <a href="#">
-            <img src="../../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides title which goes over two lines</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
-          <a href="#">
-            <img src="../../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides completely device agnostic site created for the this website</p>
-          </a>
-        </li>
-        <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
-          <a href="#">
-            <img src="../../imgs/placeholder--small.png" alt="Case study name">
-            <p class="medium">Guides new, completely device agnostic site created for the this website</p>
-          </a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-
-</div>
+{% include cc.liquid %}

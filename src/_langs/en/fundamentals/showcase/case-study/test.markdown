@@ -3,14 +3,14 @@ layout: case-study
 collection: case-study
 published: true
 
-date: 2015-01-09
+date: 2014-12-01
 article:
-  written_on: 2015-01-09
-  updated_on: 2015-01-09
+  written_on: 2014-12-01
+  updated_on: 2014-12-01
 
-id: chrome-dev-summit
-title: "Chrome Dev Summit 2014"
-introduction: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
+id: test
+title: "Test"
+introduction: "I'm just a dummy to try out the automatic sorting of case studies."
 
 overview:
   description: "The CDS site was the premier destination to read about all things Chrome Dev Summit, a two-day developer event about Chrome in 2014. It was used by attendees to get infos about the schedule, signup and more."
