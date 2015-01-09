@@ -288,6 +288,7 @@ module.exports = function(grunt) {
 			var opts = {env: process.env, stdio: 'inherit'};
 			if (lang !== null) {
 				opts.env.TRANS_LANG = lang;
+				opts.env.MENTOS_TIMEOUT = 32;
 			}
 			grunt.util.spawn({cmd: 'jekyll', args: args, opts: opts}, callback);
 		};
