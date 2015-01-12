@@ -11,13 +11,13 @@
 
 .spotlight-wrapper {
   padding-top: $lineHeight;
-  padding-bottom: $lineHeight*2;
 
   background: $colorGrayBackground;
 
   @include medium {
     margin-top: - $lineHeight*6;
     padding-top: $lineHeight*3;
+    padding-bottom: $lineHeight*2;
     background: $colorYellowSecondary;
   }
 
@@ -31,11 +31,20 @@
   }
 
   .related-items {
+
+    margin-top: 38px;
+    padding-top: 24px;
+
     @include medium {
+      margin-top: 78px;
+      padding-top: 50px;
       border-color: #EAC017;
     }
   }
 
+  .related-items-list a {
+    overflow: visible;
+  }
 
 }
 
@@ -51,10 +60,10 @@
 .spotlight-wrapper__content {
 
   @include wide {
-    min-height: 280px;
-  }
-
-  @include wide {
     min-height: 310px;
   }
+}
+
+.spotlight-tags {
+  padding-top: 0.5em;
 }

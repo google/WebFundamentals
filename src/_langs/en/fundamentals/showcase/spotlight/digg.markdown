@@ -11,6 +11,9 @@ article:
 
 title: "Digg.com"
 introduction: "Featuring a fast hamburger menu and a clean layout, Digg works amazingly well on mobile."
+tags: 
+- reader
+- news
 
 related:
 -
