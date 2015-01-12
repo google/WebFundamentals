@@ -2138,6 +2138,9 @@ body[dir=rtl] .editorial-header .container:before {
   .spotlight-wrapper h2 {
     margin-top: 0;
     padding-top: 0; }
+  @media only screen and (min-width: 620px) {
+    .spotlight-wrapper .related-items {
+      border-color: #EAC017; } }
 
 .spotlight-listing .related-items {
   margin-top: 0;
@@ -2145,6 +2148,13 @@ body[dir=rtl] .editorial-header .container:before {
 
 .spotlight-listing .related-items-list li:nth-child(3n+4) {
   margin-left: auto; }
+
+@media only screen and (min-width: 800px) {
+  .spotlight-wrapper__content {
+    min-height: 280px; } }
+@media only screen and (min-width: 800px) {
+  .spotlight-wrapper__content {
+    min-height: 310px; } }
 
 /**
 *

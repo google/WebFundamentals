@@ -30,6 +30,13 @@
     padding-top: 0;
   }
 
+  .related-items {
+    @include medium {
+      border-color: #EAC017;
+    }
+  }
+
+
 }
 
 .spotlight-listing .related-items {
@@ -39,4 +46,15 @@
 
 .spotlight-listing .related-items-list li:nth-child(3n+4) {
   margin-left: auto;
+}
+
+.spotlight-wrapper__content {
+
+  @include wide {
+    min-height: 280px;
+  }
+
+  @include wide {
+    min-height: 310px;
+  }
 }

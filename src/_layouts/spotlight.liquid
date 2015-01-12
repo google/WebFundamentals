@@ -21,19 +21,15 @@
 
     <div class="spotlight-wrapper">
       <div class="container clear">
-        <div class="content g--half g--last">
+        <div class="content spotlight-wrapper__content g--half g--last">
           <h2>Our thoughts</h2>
           {{ content }}
         </div>
       </div>
+      {% include modules/related_guides.liquid inline=false list=page.related %}
     </div>
 
-    <div class="container">
-      <div class="related-items-group">
-        {% include modules/more_spotlights.liquid %}
-        {% include modules/related_guides.liquid inline=true list=page.related %}
-      </div>
+    {% include modules/more_spotlights.liquid %}
 
-    </div>
 
     {% include footer.liquid %}
