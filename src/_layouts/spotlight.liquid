@@ -12,6 +12,11 @@
         <div class="spotlight-header__copy g--half">
           <h1 class="xxlarge">{{ page.title }}</h1>
           <p>{{ page.introduction }}</p>
+          <p class="spotlight-tags">
+          {% for tag in page.tags %}
+          <a href="{{site.baseurl}}/fundamentals/showcase/spotlight/{{tag}}">#{{tag}}</a>
+          {% endfor %}
+          </p>
         </div>
         <div class="spotlight-header__media g--half g--last">
           <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ page.id }}/screenshot.jpg" class="spotlight-header__image">
