@@ -19,6 +19,15 @@
     padding-bottom: $lineHeight*3;
   }
 
+  h1 a {
+    display: block;
+    font-size: 16pt;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 3em;
+  }
+
 }
 
 .spotlight-header-main {

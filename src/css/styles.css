@@ -2044,6 +2044,13 @@ body[dir=rtl] .editorial-header .container:before {
     .spotlight-header {
       text-align: left;
       padding-bottom: 78px; } }
+  .spotlight-header h1 a {
+    display: block;
+    font-size: 16pt;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 3em; }
 
 .spotlight-header-main .divider {
   background-color: #C89800; }
