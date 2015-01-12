@@ -85,6 +85,8 @@ toc:
           path: /fundamentals/performance/measuring-performance/
 - title: Tools
   path: /fundamentals/tools/
+- title: Showcase
+  path: /fundamentals/showcase/
 - title: Resources
   path: /fundamentals/resources/
   in_header: false
