@@ -7,6 +7,8 @@ collection: showcase
 published: true
 ---
 
+{% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
+
 <div class="page-header">
   <div class="container">
     {% include modules/breadcrumbs.liquid %}
@@ -16,13 +18,27 @@ published: true
         <span class="themed divider-icon"></span>
       </div>
       <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">Sites and apps we love, regardless of their mainstream success. Always pushing the web forward.</p>
+
+      <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">
+        {% capture tags %}
+          {% for spotlight in spotlights %}
+            {% for tag in spotlight.tags %}
+              {{ tag }}
+            {% endfor %}
+          {% endfor %}
+        {% endcapture %}
+
+        {% assign sortedtags = tags | split:' ' | sort %}
+
+        {% for tag in sortedtags %}
+          <a href="{{site.baseurl}}/fundamentals/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
+        {% endfor %}
+      </p>
     </header>
   </div>
 </div>
 
 <div class="container spotlight-listing">
-
-  {% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
 
   <div class="related-items clear">
     <div class="related-items__section clear">
