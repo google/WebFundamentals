@@ -1,0 +1,40 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/Article">
+    {% injectdata content _betterbook.yaml %}
+
+    {% include header.liquid %}
+
+    <header class="spotlight-header spotlight-header--detail spotlight-header--portrait clear">
+      <div class="spotlight-header__container container">
+        {% include modules/breadcrumbs.liquid %}
+        <div class="spotlight-header__copy g--half">
+          <h1 class="xxlarge">{{ page.title }}<a href="{{page.link}}" target="_blank">{{page.link}}</a></h1>
+          <p>{{ page.introduction }}</p>
+          <p class="spotlight-tags">
+          {% for tag in page.tags %}
+          <a href="{{site.baseurl}}/fundamentals/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
+          {% endfor %}
+          </p>
+        </div>
+        <div class="spotlight-header__media g--half g--last">
+          <a href="{{page.link}}" target="_blank"><img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ page.id }}/screenshot.jpg" class="spotlight-header__image"></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="spotlight-wrapper">
+      <div class="container clear">
+        <div class="content spotlight-wrapper__content g--half g--last">
+          <h2>Our thoughts</h2>
+          {{ content }}
+        </div>
+      </div>
+      {% include modules/related_guides.liquid inline=false list=page.related %}
+    </div>
+
+    {% include modules/more_spotlights.liquid %}
+
+
+    {% include footer.liquid %}

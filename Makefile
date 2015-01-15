@@ -1,13 +1,14 @@
 clean:
-	grunt clean:build
+	grunt clean:destination
 
 build: copy
     #add_version
 
 copy: clean
 	npm install
-	cd ./src && rvm . do bundle install
-	grunt build
+	rvm . do gem cleanup
+	rvm . do bundle install
+	rvm . do grunt build
 
 deploy: build
 	grunt gae:deploy

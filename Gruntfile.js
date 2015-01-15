@@ -4,10 +4,6 @@
 'use strict';
 
 var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function(connect, dir) {
-	return connect.static(require('path').resolve(dir));
-};
 
 module.exports = function(grunt) {
 
@@ -16,7 +12,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
 	// App configuration
-	var config = grunt.file.readYAML('config/local.yml');
+	var config = grunt.file.readYAML('config/common.yml');
 
 	// Tasks configuration
 	grunt.initConfig({
@@ -24,88 +20,21 @@ module.exports = function(grunt) {
 		config: config,
 
 		clean: {
-			build: {
-				files: [{
-					dot: true,
-					src: ['src/appengine/build']
-				}]
-			},
 			destination: {
 				files: [{
 					dot: true,
-					src: [
-						'<%= config.destination %>/*',
-						'!<%= config.destination %>/.git*'
-					]
+					src: '<%= config.destination %>/*'
 				}]
 			},
 			icons: {
 				files: [{
 					dot: true,
-					src: [
-						'<%= config.source %>/icons/icons*.*'
-					]
+					src: '<%= config.source %>/icons/icons*.*'
 				}]
 			}
 		},
 
-		connect: {
-			options: {
-				hostname: '',
-				port: config.port
-			},
-			'destination-source': {
-				options: {
-					middleware: function(connect) {
-						return [
-							lrSnippet,
-							// serves from destination first
-							mountFolder(connect, config.destination),
-							// falls back to source if not found in destination
-							mountFolder(connect, config.source)
-						];
-					}
-				}
-			},
-			destination: {
-				options: {
-					middleware: function(connect) {
-						return [
-							mountFolder(connect, config.destination)
-						];
-					}
-				}
-			}
-		},
-
 		copy: {
-			optimisedjsToSrc: {
-				src: '*.min.js',
-				dest: '<%= config.source %>/js/',
-				flatten: true,
-				filter: 'isFile',
-				expand: true,
-				nonull: true,
-				cwd: '<%= config.destination %>/js/'
-			},
-			optimisedcssToSrc: {
-				src: '*.min.css',
-				dest: '<%= config.source %>/css/',
-				flatten: true,
-				filter: 'isFile',
-				expand: true,
-				nonull: true,
-				cwd: '<%= config.destination %>/css/'
-			},
-			jsToDest: {
-				src: '*.js',
-				dest: '<%= config.destination %>/js/',
-				flatten: true,
-				filter: 'isFile',
-				expand: true,
-				nonull: true,
-				cwd: '<%= config.source %>/js/'
-			},
 			cssToDest: {
 				src: '*.css',
 				dest: '<%= config.destination %>/css/',
@@ -119,7 +48,7 @@ module.exports = function(grunt) {
 
 		csslint: {
 			options: {
-				csslintrc: 'src/.csslintrc'
+				csslintrc: '.csslintrc'
 			},
 			lax: {
 				src: '<%= config.destination %>/css/*.css',
@@ -147,14 +76,23 @@ module.exports = function(grunt) {
 
 		gae: {
 			options: {
-				path: 'src/appengine',
+				path: 'appengine',
 				auth: 'oauth2'
 			},
 			deploy: {
 				action: 'update'
 			},
 			local: {
-				action: 'run'
+				action: 'run',
+				options: {
+					async: true,
+					args: {
+						port: config.port
+					}
+				}
+			},
+			stop: {
+				action: 'kill'
 			}
 		},
 
@@ -203,57 +141,35 @@ module.exports = function(grunt) {
 
 		jshint: {
 			options: {
-				jshintrc: 'src/.jshintrc'
+				jshintrc: '.jshintrc'
 			},
 			source: [
 				'Gruntfile.js',
-				'<%= config.source %>/**/js/**/*.js',
-				'!<%= config.source %>/**/vendors/**/*.js',
-				'!<%= config.source %>/**/*.min.js'
+				'<%= config.source %>/**/*.js',
+				'!<%= config.source %>/**/_code/**/*.js'
 			]
 		},
 
 		open: {
-			index: {
-				path: 'http://localhost:<%=config.port%>/fundamentals'
-			}
+			local: {
+				path: 'http://localhost:<%=config.port%>/web/fundamentals'
+			},
+			staging: {
+				path: 'http://web-central.appspot.com/web/fundamentals'
+			},
 		},
 
 		sass: {
 			options: {
 				precision: 10,
 				includePaths: ['<%= config.source %>/css'],
-				imagePath: '<%= config.source %>/imgs'
+				imagePath: '<%= config.source %>/imgs',
+				outputStyle: 'nested'
 			},
-			uncompressed: {
-				options: {
-					outputStyle: 'nested'
-				},
+			all: {
 				files: {
 					'<%= config.source %>/css/styles.css': '<%= config.source %>/_sass/styles.scss'
 				}
-			},
-			compressed: {
-				options: {
-					outputStyle: 'compressed'
-				},
-				files: {
-					'<%= config.source %>/css/styles.css': '<%= config.source %>/_sass/styles.scss'
-				}
-			}
-		},
-
-		useminPrepare: {
-			html: '<%= config.destination %>/index.html',
-			options: {
-				dest: '<%= config.destination %>'
-			}
-		},
-
-		usemin: {
-			html: ['<%= config.destination %>/**/*.html'],
-			options: {
-				dirs: ['<%= config.destination %>']
 			}
 		},
 
@@ -265,25 +181,18 @@ module.exports = function(grunt) {
 					'<%= config.source %>/css/**/*.css',
 					'!<%= config.source %>/css/**/*.min.css'
 				],
-				tasks: ['sass:uncompressed', 'cssmin', 'copy:cssToDest']
-			},
-
-			// when scripts change, lint them and copy to destination
-			scripts: {
-				files: ['<%= config.source %>/**/*.js'],
-				tasks: ['jshint:source', 'copy:jsToDest']
+				tasks: ['sass', 'cssmin', 'copy:cssToDest']
 			},
 
 			// when jekyll source changes, recompile them
 			jekyll: {
 				files: [
-					'<%= config.source %>/**/*.html',
 					'<%= config.source %>/**/*.liquid',
 					'<%= config.source %>/**/*.markdown',
 					'<%= config.source %>/**/*.rb',
 					'<%= config.source %>/**/*.md'
 				],
-				tasks: ['jekyll:develop', 'sass:uncompressed']
+				tasks: ['jekyll:appengine']
 			},
 
 			// when served files change, reload them in the browser
@@ -293,9 +202,7 @@ module.exports = function(grunt) {
 				},
 				files: [
 					'<%= config.destination %>/**/*.html',  // view files (from jekyll)
-					'<%= config.destination %>/css/*.css',  // css files (from sass)
-					'<%= config.source %>/**/*.css',    // css files (raw)
-					'<%= config.source %>/**/*.js'      // script files
+					'<%= config.destination %>/css/*.css'   // css files (from sass)
 				]
 			}
 		},
@@ -351,17 +258,14 @@ module.exports = function(grunt) {
 	grunt.registerTask('jekyll', 'Run jekyll build.\nOptions:\n  [--lang]: list of languages or "all"', function() {
 		var langs = grunt.option('lang') || 'all';
 
-		var cfgname = this.args[0] || 'develop';
-		if (cfgname === 'develop') {
-			cfgname = 'local';
-		}
+		var cfgname = this.args[0] || 'appengine';
 
 		// read langs from config/target.yml
 		// returns langs_available + prime_lang
 		//         or [] if langs_available is not defined.
 		var langsFromConfig = function() {
 			/*jshint camelcase: false */
-			var cfg = grunt.file.readYAML('config/' + cfgname + '.yml');
+			var cfg = grunt.file.readYAML('config/common.yml');
 			if (typeof cfg.langs_available === 'undefined') {
 				return [];
 			}
@@ -378,12 +282,13 @@ module.exports = function(grunt) {
 			});
 		}
 
-		var cfgfiles = 'config/wsk-version.yml,config/' + cfgname + '.yml';
+		var cfgfiles = 'config/wsk-version.yml,config/common.yml,config/' + cfgname + '.yml';
 		var args = ['build', '--config', cfgfiles, '-t'];
 		var spawnJekyll = function(lang, callback) {
 			var opts = {env: process.env, stdio: 'inherit'};
 			if (lang !== null) {
 				opts.env.TRANS_LANG = lang;
+				// opts.env.MENTOS_TIMEOUT = 32;
 			}
 			grunt.util.spawn({cmd: 'jekyll', args: args, opts: opts}, callback);
 		};
@@ -412,59 +317,30 @@ module.exports = function(grunt) {
 	// Test task
 	grunt.registerTask('test', 'Lints all javascript and CSS sources.', 'jshint:source');
 
-	// Build CSS task
-	grunt.registerTask('buildcss', 'Build the CSS using libsass.\nOptions:\n  --compressed: enables compression', function() {
-		if (grunt.option('compressed')) {
-			return grunt.task.run(['sass:compressed']);
-		} else {
-			return grunt.task.run(['sass:uncompressed']);
-		}
-	});
-
+	grunt.registerTask('prepare', ['wsk-version', 'test', 'clean:destination', 'sass', 'cssmin']);
 
 	// Build task
-	grunt.registerTask('build', 'Runs the "test" task, then builds the website.\nOptions:\n  --compressed: enables code compression (css)', [
-			'test',
-			'clean:destination',    // Clean out the destination directory
-			'buildcss',   // Build the CSS using libsass with compression
-			'cssmin',         // Minify the combined CSS
-			'wsk-version',  // Check if wsk was updated. If so, update the URL to point to the latest version
-			'jekyll:appengine'   // Build the site with Jekyll
+	grunt.registerTask('build', 'Runs the "test" task, then builds the website.', [
+		'prepare',
+		'jekyll:appengine'   // Build the site with Jekyll
 	]);
 
-	grunt.registerTask('previewbuild', 'Use this task to preview the final build in your browser.\n  Note: Runs tests automatically before building and serving', ['test', 'build', 'open:index', 'connect:destination:keepalive']);
-
-	// Serve task
-	grunt.registerTask('serve', 'Runs the "build" task, then serves the website locally.', 'previewbuild');
-
 	// Develop task
-	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content (source and destination) and watches for changes.', [
-			'test',
-			'clean:destination',    // Clean out the destination directory
-			'sass:uncompressed',   // Build the CSS using libsass without compression
-			'cssmin',         // Minify the combined CSS
-			'jekyll:develop',   // Build the site with Jekyll
-			'open:index',
-			'connect:destination-source',
-			'watch'
+	grunt.registerTask('develop', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content and watches for changes.', [
+		'build',   // Build the site with Jekyll
+		'gae:local',
+		'open:local',
+		'watch'
 	]);
 
 	// Devsite task
-	grunt.registerTask('devsite', 'Runs the build steps with devsite config', function() {
-		grunt.config.set('config', grunt.file.readYAML('config/devsite.yml'));
-
-		return grunt.task.run([
-			'test',           // Code quality control
-			'clean:destination',    // Clean out the destination directory
-			'clean:icons',        // Clean up icon font files for regeneration
-			'webfont:icons',      // Generate icon font files and SASS
-			'sass:uncompressed',   // Build the CSS using libsass with compression
-			'cssmin',         // Minify the combined CSS
-			'jekyll:devsite',     // Build the site with Jekyll
-			'htmlmin:all'       // Minify the final HTML
-		]);
-
-	});
+	grunt.registerTask('devsite', 'Runs the build steps with devsite config', [
+		'clean:icons',        // Clean up icon font files for regeneration
+		'webfont:icons',      // Generate icon font files and SASS
+		'prepare',
+		'jekyll:devsite',     // Build the site with Jekyll
+		'htmlmin:all'         // Minify the final HTML
+	]);
 
 	// Default task
 	grunt.registerTask('default', 'develop');

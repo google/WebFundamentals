@@ -1,0 +1,69 @@
+/**
+*
+* Spotlight wrapper
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Paul Bakaus
+*
+**/
+
+.spotlight-wrapper {
+  padding-top: $lineHeight;
+
+  background: $colorGrayBackground;
+
+  @include medium {
+    margin-top: - $lineHeight*6;
+    padding-top: $lineHeight*3;
+    padding-bottom: $lineHeight*2;
+    background: $colorYellowSecondary;
+  }
+
+  @include wide {
+    min-height: 470px;
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .related-items {
+
+    margin-top: 38px;
+    padding-top: 24px;
+
+    @include medium {
+      margin-top: 78px;
+      padding-top: 50px;
+      border-color: #EAC017;
+    }
+  }
+
+  .related-items-list a {
+    overflow: visible;
+  }
+
+}
+
+.spotlight-listing .related-items {
+  margin-top: 0;
+  border: 0;
+}
+
+.spotlight-listing .related-items-list li:nth-child(3n+4) {
+  margin-left: auto;
+}
+
+.spotlight-wrapper__content {
+
+  @include wide {
+    min-height: 310px;
+  }
+}
+
+.spotlight-tags {
+  padding-top: 0.5em;
+}

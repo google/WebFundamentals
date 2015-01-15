@@ -1,0 +1,49 @@
+application: web-central
+version: 1
+
+runtime: python27
+api_version: 1
+threadsafe: true
+
+pagespeed:
+  enabled_rewriters:
+    - InlineImages
+    - CollapseWhitespace
+    - RemoveComments
+    - InlineJs
+  url_blacklist:
+
+#default_expiration: "1d"
+handlers:
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /web/imgs
+  static_dir: build/imgs
+  expiration: 1d
+
+- url: /web/(.*\.(png|gif|jpg|svg))
+  static_files: build/_langs/en/\1
+  expiration: 1d
+  upload: build/_langs/en/(.*\.(png|gif|jpg|svg))
+
+- url: /web/(.*\.ico)
+  static_files: build/_langs/en/\1
+  expiration: 7d
+  upload: build/_langs/en/(.*\.ico)
+
+- url: /web/(.*\.(woff|eot|ttf|css))
+  static_files: build/\1
+  expiration: 1d
+  upload: build/(.*\.(woff|eot|ttf|css))
+  http_headers:
+    Access-Control-Allow-Origin: https://developers.google.com
+
+- url: /web/(.*)
+  script: main.app
+  secure: always
+
+skip_files:
+- ^(.*/)?.*\.psd$
+- ^(.*/)?.*\.pxm$

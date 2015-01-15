@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="related-items clear">
+    <h3 class="related-items__title g-wide--1 g-medium--full">More spotlights</h3>
+    <div class="related-items__section clear">
+
+      <ul class="related-items-list list-reset">
+
+        {% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
+        {% for spotlight in spotlights limit:6 %}
+
+          <li class="g-medium--1 g-wide--1{% cycle 'more-spotlights': '', '', ' g-medium--last g-wide--last' %}">
+            <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}">
+              <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.jpg" alt="{{spotlight.title}}">
+              <p class="medium">{{spotlight.title}}</p>
+            </a>
+          </li>
+
+        {% endfor %}
+
+      </ul>
+
+    </div>
+  </div>
+
+</div>
