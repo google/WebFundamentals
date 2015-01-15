@@ -54,7 +54,9 @@ module Jekyll
           a.data['article']['previous'] = articles[cat][i-1] if i > 0
         }
       end
-      
+
+      site.data['articles'] = articles
+
       # Add all the pages per category to each page.
       site.pages.each do |page| 
         page.data['articles'] = articles
