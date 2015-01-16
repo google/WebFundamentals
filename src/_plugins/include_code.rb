@@ -23,7 +23,7 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("_langs/en/", "").sub("fundamentals/", "")
+        relpath = File.dirname(page["path"]).sub("_langs/#{page['langcode']}/", "").sub("fundamentals/", "")
         String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
@@ -40,7 +40,7 @@ module Jekyll
     def render(context)
         page = context.environments.first["page"]
         path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("_langs/en/", "").sub("fundamentals/", "")
+        relpath = File.dirname(page["path"]).sub("_langs/#{page['langcode']}/", "").sub("fundamentals/", "")
         String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
