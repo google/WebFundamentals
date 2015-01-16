@@ -2185,39 +2185,46 @@ body[dir=rtl] .editorial-header .container:before {
   @media only screen and (min-width: 620px) {
     .spotlight-scores {
       margin-top: 50px; } }
-  @media only screen and (min-width: 800px) {
-    .spotlight-scores {
-      margin-left: -37px;
-      margin-right: 37px; } }
   .spotlight-scores div {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 18px; }
     @media only screen and (min-width: 620px) {
       .spotlight-scores div {
-        display: block; } }
+        display: block;
+        margin-top: 0; } }
   .spotlight-scores span {
-    font-size: 30px;
+    font-size: 28px;
     display: inline-block;
     border-radius: 100px;
-    width: 120px; }
+    width: 100px; }
     @media only screen and (min-width: 620px) {
       .spotlight-scores span {
-        line-height: 127px;
-        height: 120px; } }
+        color: #fff; } }
     @media only screen and (min-width: 620px) {
-      .spotlight-scores span.low {
-        background: #ed9d97; } }
+      .spotlight-scores span {
+        line-height: 107px;
+        height: 100px; } }
     .spotlight-scores span.low strong {
       color: #cb4437; }
     @media only screen and (min-width: 620px) {
-      .spotlight-scores span.medium {
-        background: #ffe168; } }
+      .spotlight-scores span.low {
+        background: #cb4437; }
+        .spotlight-scores span.low strong {
+          color: #fff; } }
     .spotlight-scores span.medium strong {
       color: #f4b400; }
     @media only screen and (min-width: 620px) {
-      .spotlight-scores span.high {
-        background: #78cfa9; } }
+      .spotlight-scores span.medium {
+        background: #f4b400; }
+        .spotlight-scores span.medium strong {
+          color: #fff; } }
     .spotlight-scores span.high strong {
       color: #0f9d58; }
+    @media only screen and (min-width: 620px) {
+      .spotlight-scores span.high {
+        background: #0f9d58; }
+        .spotlight-scores span.high strong {
+          color: #fff; } }
   .spotlight-scores a {
     display: block; }
     @media only screen and (min-width: 620px) {
