@@ -52,7 +52,7 @@ NOTE: the spotlight header required a modifier to render properly
 
       <li class="latest-spotlights__item">
         <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}" class="latest-spotlights__link">
-          <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.jpg" alt="Screenshot of {{spotlight.title}}">
+          <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="Screenshot of {{spotlight.title}}">
           <p class="small">Spotlight</p>
         </a>
         <div class="latest-spotlights__description">

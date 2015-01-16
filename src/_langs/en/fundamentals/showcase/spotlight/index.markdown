@@ -40,7 +40,7 @@ published: true
 
           <li class="g-medium--1 g-wide--1{% cycle 'all-case-spotlights': '', '', ' g-medium--last g-wide--last' %}">
             <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}">
-              <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.jpg" alt="{{spotlight.title}}">
+              <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="{{spotlight.title}}">
               <p class="medium">{{spotlight.title}}</p>
             </a>
           </li>

@@ -35,13 +35,13 @@
     padding-top: 24px;
 
     @include medium {
-      margin-top: 160px;
+      margin-top: 218px;
       padding-top: 50px;
       border-color: #EAC017;
     }
 
     @include wide {
-      margin-top: 280px;
+      margin-top: 408px;
     }
 
   }
@@ -75,6 +75,12 @@
     margin-top: inherit;
   }
 
+  @include wide {
+    h2,h3,p {
+      margin-right: 11.9%;
+    }
+  }
+
 }
 
 .spotlight-tags {
@@ -88,6 +94,11 @@
 
   @include medium {
     margin-top: 50px;
+  }
+
+  @include wide {
+    margin-left: -20px;
+    margin-right: 20px;
   }
 
   div {

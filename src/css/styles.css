@@ -2152,12 +2152,12 @@ body[dir=rtl] .editorial-header .container:before {
     padding-top: 24px; }
     @media only screen and (min-width: 620px) {
       .spotlight-wrapper .related-items {
-        margin-top: 160px;
+        margin-top: 218px;
         padding-top: 50px;
         border-color: #EAC017; } }
     @media only screen and (min-width: 800px) {
       .spotlight-wrapper .related-items {
-        margin-top: 280px; } }
+        margin-top: 408px; } }
   .spotlight-wrapper .related-items-list {
     padding-top: 26px; }
   .spotlight-wrapper .related-items-list a {
@@ -2175,6 +2175,10 @@ body[dir=rtl] .editorial-header .container:before {
     min-height: 310px; } }
 .spotlight-wrapper__content h3 {
   margin-top: inherit; }
+@media only screen and (min-width: 800px) {
+  .spotlight-wrapper__content h2, .spotlight-wrapper__content h3, .spotlight-wrapper__content p {
+    margin-right: 11.9%; }
+ }
 
 .spotlight-tags {
   padding-top: 0.5em; }
@@ -2185,6 +2189,10 @@ body[dir=rtl] .editorial-header .container:before {
   @media only screen and (min-width: 620px) {
     .spotlight-scores {
       margin-top: 50px; } }
+  @media only screen and (min-width: 800px) {
+    .spotlight-scores {
+      margin-left: -20px;
+      margin-right: 20px; } }
   .spotlight-scores div {
     display: inline-block;
     margin-top: 18px; }
@@ -3345,8 +3353,7 @@ div.related-items-on-spotlight {
 
 .latest-spotlights__link {
   display: inline-block;
-  position: relative;
-  background: #ffffff; }
+  position: relative; }
 
 .latest-spotlights__link img {
   display: block;
