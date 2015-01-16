@@ -19,7 +19,8 @@ tags:
 - news
 scores:
   pagespeed:
-      value: 57
+      speed: 57
+      ux: 97
   webpagetest:
       value: 8291
       result: http://www.webpagetest.org/result/150115_EM_TMG/

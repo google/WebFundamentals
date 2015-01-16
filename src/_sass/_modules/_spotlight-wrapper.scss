@@ -90,54 +90,73 @@
     margin-top: 50px;
   }
 
-  @include wide {
-    margin-left: -37px;
-    margin-right: 37px;
-  }
-
   div {
     display: inline-block;
+    margin-top: 18px;
     @include medium {
       display: block;
+      margin-top: 0;
     }
   }
 
   span {
-    font-size: 30px;
+    font-size: 28px;
     display: inline-block;
     border-radius: 100px;
-    width: 120px;
+    width: 100px;
 
     @include medium {
-      line-height: 127px;
-      height: 120px;
+      color: #fff;
+    }
+
+    @include medium {
+      line-height: 107px;
+      height: 100px;
     }    
 
     &.low {
-      @include medium {
-        background: $colorRedSecondary;
-      }
+
       strong {
         color: $colorRed;
       }
+
+      @include medium {
+        background: $colorRed;
+        strong {
+          color: #fff;
+        }
+      }
+
     }
 
     &.medium {
-      @include medium {
-        background: $colorYellowSecondary;
-      }
+
       strong {
         color: $colorYellow;
       }
+
+      @include medium {
+        background: $colorYellow;
+        strong {
+          color: #fff;
+        }
+      }
+
     }
 
     &.high {
-      @include medium {
-        background: $colorGreenSecondary;
-      }
+
       strong {
         color: $colorGreen;
       }
+
+      @include medium {
+        background: $colorGreen;
+        strong {
+          color: #fff;
+        }
+      }
+
     }
 
   }
