@@ -199,7 +199,7 @@ module Jekyll
       return if relative_dir =~ /^_/
 
       case source_file
-      when /\.(markdown|html)|sitemap\.xml/
+      when /\.(markdown|html)|sitemap\.xml|feed\.xml/
         # Markdown is our main content language, create a page.
         page = LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang)
         site.pages << page if process
