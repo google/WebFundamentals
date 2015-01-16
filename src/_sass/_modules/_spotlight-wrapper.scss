@@ -15,7 +15,6 @@
   background: $colorGrayBackground;
 
   @include medium {
-    margin-top: - $lineHeight*6;
     padding-top: $lineHeight*3;
     padding-bottom: $lineHeight*2;
     background: $colorYellowSecondary;
@@ -36,10 +35,19 @@
     padding-top: 24px;
 
     @include medium {
-      margin-top: 78px;
+      margin-top: 160px;
       padding-top: 50px;
       border-color: #EAC017;
     }
+
+    @include wide {
+      margin-top: 280px;
+    }
+
+  }
+
+  .related-items-list {
+    padding-top: 26px;
   }
 
   .related-items-list a {
@@ -62,8 +70,92 @@
   @include wide {
     min-height: 310px;
   }
+
+  h3 {
+    margin-top: inherit;
+  }
+
 }
 
 .spotlight-tags {
   padding-top: 0.5em;
+}
+
+.spotlight-scores {
+
+  text-align: center;
+  margin-top: 30px;
+
+  @include medium {
+    margin-top: 50px;
+  }
+
+  @include wide {
+    margin-left: -37px;
+    margin-right: 37px;
+  }
+
+  div {
+    display: inline-block;
+    @include medium {
+      display: block;
+    }
+  }
+
+  span {
+    font-size: 30px;
+    display: inline-block;
+    border-radius: 100px;
+    width: 120px;
+
+    @include medium {
+      line-height: 127px;
+      height: 120px;
+    }    
+
+    &.low {
+      @include medium {
+        background: $colorRedSecondary;
+      }
+      strong {
+        color: $colorRed;
+      }
+    }
+
+    &.medium {
+      @include medium {
+        background: $colorYellowSecondary;
+      }
+      strong {
+        color: $colorYellow;
+      }
+    }
+
+    &.high {
+      @include medium {
+        background: $colorGreenSecondary;
+      }
+      strong {
+        color: $colorGreen;
+      }
+    }
+
+  }
+
+  a {
+    display: block;
+    @include medium {
+      margin-top: 12px;
+    }
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+}
+
+div.related-items-on-spotlight {
+  margin-top: 0;
+  border: 0;
 }

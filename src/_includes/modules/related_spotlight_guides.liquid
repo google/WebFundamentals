@@ -1,0 +1,30 @@
+{% if include.list %}
+
+<div class="related-items {% if include.minimal %} related-items--minimal {% endif %} g--half g--last">
+  <h3 class="related-items__title g--full">{{"related_guides" | localize_string}}</h3>
+  <div class="related-items__section clear">
+
+    <ul class="related-items-list list-reset">
+    {% for guide in include.list %}
+      <li class="g--half {% cycle '','g--last' %} theme--{{guide.section.id | downcase | replace:' ','-'}}">
+        {% if guide.section %}
+          <p><a class="tag themed" href="{{site.baseurl}}/{{guide.section.href}}" title="{{guide.section.title}}">{{guide.section.title}}</a></p>
+        {% endif %}
+
+        <p class="medium">
+          <a href="{{site.baseurl}}/{{guide.href}}">
+            {% if guide.thumbnail %}
+            <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">
+            {% endif %}
+            {{guide.title}}
+          </a>
+        </p>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
+
+{% endif %}
+
