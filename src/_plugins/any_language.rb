@@ -13,7 +13,7 @@
 # limitations under the License.
 
 module Jekyll
-  
+
   # Extract language code to name mappings.
   class LanguageNameGenerator < Generator
     priority :highest
@@ -49,7 +49,7 @@ module Jekyll
     end
   end
 
-  # Go through the English version of the site, and generate a page for every 
+  # Go through the English version of the site, and generate a page for every
   # article. If the language code is not english, then we need to check for a
   # matching file. The language code should be defined in the config.
   class LanguagePage < Page
@@ -64,7 +64,7 @@ module Jekyll
         @includelang = includelang
 
         self.process(name)
-        
+
         #Jekyll.logger.info "Reading " + File.join(base, "_langs", langcode, dir, name)
         self.read_yaml(File.join(base, "_langs", langcode, dir), name)
         langcode = langcode ? langcode : "en"
@@ -84,7 +84,7 @@ module Jekyll
       base = Pathname.new dest
       relative = original_target.relative_path_from base
       path = ""
-      if @includelang        
+      if @includelang
         path = File.join("_langs", @langcode)
       end
       path = File.join(base, path, relative)
@@ -214,7 +214,7 @@ module Jekyll
   end
 
   module LocalizeLink
-    def localize_link(input, page) 
+    def localize_link(input, page)
       input = input + "?hl=" + page["langcode"] || site.config['prime_lang']
       return input
     end
@@ -223,7 +223,7 @@ module Jekyll
   module LocalizeString
     def localize_string(input)
 
-      # Get the page, so we determine which language we're in 
+      # Get the page, so we determine which language we're in
       page = @context.registers[:page]
 
       # Get the site, so we can access the language packs
@@ -231,14 +231,14 @@ module Jekyll
 
       en_strings = site.data["localized_strings"]["en"]
       lo_strings = site.data["localized_strings"][page["langcode"]]
-      
+
       # Get the language pack for the current language, or if that pack
       # doesn't exist, fallback to the English pack.
       lang_pack = lo_strings ? lo_strings : en_strings
 
       # Get the localized string in specified language, if it doesn't exist
       # get the english version of the string, if that doesn't exist, return
-      # UNKNOWN, then about the build with a big bad warning.
+      # UNKNOWN, then abort the build with a big bad warning.
       result = lang_pack[input] ? lang_pack[input] : en_strings[input]
       result = result ? result : "UNKNOWN"
       if result == "UNKNOWN"
@@ -260,4 +260,4 @@ end
  Liquid::Template.register_filter(Jekyll::LocalizeLink)
  Liquid::Template.register_filter(Jekyll::LanguageName)
  Liquid::Template.register_filter(Jekyll::LocalizeString)
- 
+

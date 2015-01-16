@@ -13,7 +13,7 @@
 # limitations under the License.
 
 module Jekyll
-  
+
   #  Creates an ordered group of articles built around a collection.
 
   class CollectionGenerator < Generator
@@ -32,7 +32,7 @@ module Jekyll
         # find localized page or default to prime
         page.data['translations'].find { |p| p.langcode == curr_lang } || page
       }.compact
-      
+
       # aggregate all the article into categories
       articles = collections.inject({}) { |cats, page|
         next cats unless c = page.data['collection']
@@ -58,7 +58,7 @@ module Jekyll
       site.data['articles'] = articles
 
       # Add all the pages per category to each page.
-      site.pages.each do |page| 
+      site.pages.each do |page|
         page.data['articles'] = articles
       end
       site.data['primes'].values.each do |page|
@@ -66,5 +66,5 @@ module Jekyll
       end if curr_lang != prime_lang
     end
   end
-  
+
 end
