@@ -56,9 +56,9 @@ Mac
 1. Install [XCode Command Line Tools](https://developer.apple.com/xcode/downloads/)
 1. Install [RVM](https://rvm.io/rubies/default)
     * `curl -sSL https://get.rvm.io | bash`
-1. Set RVM Default to 2.0.0
-    * `rvm install ruby-2.0.0-p451`
-    * `rvm --default use 2.0.0`
+1. Set RVM Default to 2.2.0
+    * `rvm install ruby-2.2.0`
+    * `rvm --default use 2.2.0`
 1. Install [Pygments](http://pygments.org/)
     * `easy_install pygments`
 1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/) and [Kramdown](http://kramdown.gettalong.org/))
