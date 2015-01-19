@@ -3455,6 +3455,9 @@ div.related-items-on-spotlight {
 .case-study-previous {
   padding-top: 26px; }
 
+.case-study__img-wrapper img {
+  margin-left: 2%; }
+
 /**
 *
 * Our view
