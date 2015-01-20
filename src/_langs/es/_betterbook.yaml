@@ -1,5 +1,5 @@
 toc:
-  - title: "Aspectos básicos de la <strong>Web</strong>"
+  - title: "Web <strong>Fundamentals</strong>"
     path: /fundamentals/
     home: true
   - title: Empezar
@@ -57,9 +57,9 @@ toc:
         path: /fundamentals/discovery-and-distribution/
         id: discovery-and-distribution
         section:
-          - title: "Optimization for Crawlers"
+          - title: "Optimización for Crawlers"
             path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
-          - title: "Mejoras los resultados de las búsquedas"
+          - title: "Mejora los resultados de las búsquedas"
             path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: Acceso del dispositivo
         path: /fundamentals/device-access/
@@ -67,7 +67,7 @@ toc:
         section:
           - title: Ubicación del usuario
             path: /fundamentals/device-access/user-location
-          - title: Click para llamada
+          - title: Click para llamar
             path: /fundamentals/device-access/click-to-call
       - title: Rendimiento
         path: /fundamentals/performance/
