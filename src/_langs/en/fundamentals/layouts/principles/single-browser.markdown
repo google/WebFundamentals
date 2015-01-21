@@ -26,7 +26,7 @@ Try to keep users in one place by avoiding calls-to-action that launch new windo
 
 For example, if you accept coupons, consider offering these on your site to 
 avoid users opening new windows to search elsewhere.  Consider other ways that 
-might cause a user to to look outside your site and provide easy to use features 
+might cause a user to look outside your site and provide easy to use features 
 to keep them on your site.
 
 
