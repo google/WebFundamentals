@@ -268,7 +268,7 @@ So, once again, this is all great, but also very academic: how does it help us o
 
 For certain types of data, such as source code for a page, or an executable file, it is critical that a compressor does not alter or lose any of the original information: a single missing or wrong bit of data could completely change the meaning of the contents of the file, or worse, break it entirely. For some other types of data, such as images, audio, and video, it may be perfectly acceptable to deliver an "approximate" representation of the original data.
 
-In fact, due to how they eye works, we can often get away with discarding some information about each pixel in order to reduce the filesize of an image - e.g. our eyes have different sensitivity to different colors, which means that we can use fewer bits to encode some colors. As a result, a typical image optimization pipeline consists of two high level steps:
+In fact, due to how the eye works, we can often get away with discarding some information about each pixel in order to reduce the filesize of an image - e.g. our eyes have different sensitivity to different colors, which means that we can use fewer bits to encode some colors. As a result, a typical image optimization pipeline consists of two high level steps:
 
 1. Image is processed with a "[lossy](http://en.wikipedia.org/wiki/Lossy_compression)" filter that eliminates some pixel data
 1. Image is processed with a "[lossless](http://en.wikipedia.org/wiki/Lossless_compression)" filter that compresses the pixel data
