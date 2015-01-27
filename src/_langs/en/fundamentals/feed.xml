@@ -1,23 +1,26 @@
 ---
-name: "Web Fundamentals"
-description: "Best practices for modern web development"
+name: "Web Fundamentals - All posts"
+description: "All articles, tutorials and case studies. Best practices for modern web development"
 ---
-{% assign pages = site.pages | sort: 'article.written_on' %}<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
-	<channel>
-		<title>{{ page.name | xml_escape }}</title>
-		<description>{% if page.description %}{{ page.description | xml_escape }}{% endif %}</description>		
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in pages %}{% if post.article %}
-			<item>
-				<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
-				{% if post.authors %}<dc:creator>{{ post.authors[0] | xml_escape }}</dc:creator>{% endif %}        
-				{% if post.introduction %}<description>{{ post.introduction | xml_escape }}</description>{% elsif post.description %}<description>{{ post.description | xml_escape }}</description>{% endif %}
-				<pubDate>{{ post.article.written_on | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-			</item>
-		{% endif %}{% endfor %}
-	</channel>
-</rss>
+{% assign pages = site.pages | deepsort: 'article', 'written_on' | reverse %}<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+
+	<title>{{ page.name | xml_escape }}</title>
+	<icon>https://developers.google.com/web/favicon.ico</icon>
+	<id>https://developers.google.com{{ site.url }}/fundamentals/feed.xml</id>
+	<link type="text/html" href="https://developers.google.com{{ site.url }}/fundamentals/" rel="alternate"/>
+	<description>{% if page.description %}{{ page.description | xml_escape }}{% endif %}</description>
+
+{% for post in pages limit: 20 %}{% if post.article %}
+	<entry>
+		<published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+		<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>	
+		<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
+		{% if post.introduction %}<content type="html">{{ post.introduction | xml_escape }}</content>{% elsif post.description %}<content type="html">{{ post.description | xml_escape }}</content>{% endif %}
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}" />
+		<id>https://developers.google.com{{ site.url }}{{ post.url }}</id>
+		{% if post.authors %}<author><name>{% for author in post.authors %}{% assign contributor = site.data["contributors"][author] %}{{contributor.name.given}} {{contributor.name.family}}{% if forloop.last == false %}, {% endif %}{% endfor %}</name></author>{% endif %}	
+	</entry>
+{% endif %}{% endfor %}
+
+</feed>
