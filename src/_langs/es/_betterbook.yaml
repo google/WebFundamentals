@@ -53,13 +53,13 @@ toc:
         section:
           - title: Monetización de anuncios
             path: /fundamentals/monetization/ad-monetization/
-      - title: Descubrimiento y Distribución
+      - title: Descubrimiento y distribución
         path: /fundamentals/discovery-and-distribution/
         id: discovery-and-distribution
         section:
-          - title: "Optimization for Crawlers"
+          - title: "Optimización for Crawlers"
             path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
-          - title: "Enriching Search Results"
+          - title: "Mejora los resultados de las búsquedas"
             path: /fundamentals/discovery-and-distribution/enriching-search-results/
       - title: Acceso del dispositivo
         path: /fundamentals/device-access/
@@ -67,13 +67,13 @@ toc:
         section:
           - title: Ubicación del usuario
             path: /fundamentals/device-access/user-location
-          - title: Clic de llamada
+          - title: Click para llamar
             path: /fundamentals/device-access/click-to-call
       - title: Rendimiento
         path: /fundamentals/performance/
         id: performance
         section:
-          - title: Visualización de la ruta importante
+          - title: Visualización de la ruta crítica
             path: /fundamentals/performance/critical-path-rendering/
           - title: Optimización de la eficacia del contenido
             path: /fundamentals/performance/optimizing-content-efficiency/
@@ -97,6 +97,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: Artículo de ejemplo
         path: /fundamentals/resources/example-article/
-  - title: "Web <strong>Starter Kit</strong>"
+  - title: "<strong>Kit de herramientas</strong> para empezar"
     path: /starter-kit/
     in_header: false
