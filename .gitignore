@@ -9,3 +9,4 @@ build
 node_modules/
 .ruby-gemset
 .rvmrc
+.grunt-gae-pid
