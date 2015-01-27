@@ -1,25 +1,19 @@
 Translations
 ============
 
-The base content is in english under the "_en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "_es", "_pt-br".
+All article sources are in `src/_langs`. The base content is in english under the "en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "es", "pt-br".
 
-To test translations set the lang variable in the config/local.yml. For example, to set the mode to French:
-
-    lang: "fr"
-
-Note the underscore is not required here.
-
-To ensure the content is built when being released onto developers.google.com, ensure that the langs_available list in config/devsite.yml is updated to include any new language directories being added. For example, to add French:
-
+To add translations include the language code in the `langs_available` variable in config/common.yml. For example, to add French:
+```
     langs_available: ["fr"]
-
+```
 
 Adding a translation
 --------------------
 
 1.  Find the article in the original source language
-2.  Create the root language code in `src/site` if it does not exist for the language you
-    are translating.  For example create `src/site/_es` for Spanish.
+2.  Create the root language code in `src/_langs` if it does not exist for the language you
+    are translating.  For example create `src/_langs/es` for Spanish.
 3.  Create the article in the same directory hierarchy but under this new directory.
 4.  Translate the article
 5.  Translate the article YAML metadata
@@ -35,14 +29,14 @@ Adding a translation
 Licence
 -------
 
-All of our content is Creative Commons 3.0.  Contributions and translations are very much appreciated, however you must sign our Contribution Agreement for the code to be pulled back in to the repository.
+All of our content is Creative Commons 3.0.  Contributions and translations are very much appreciated, however you must sign our [Contributor License Agreement](CONTRIBUTING.md) for the code to be pulled back in to the repository.
 
 Credit
 ------
 
 We want to make sure that you get the credit for the articles that you translate.
 
-Add your details to `/src/site/_contributors.yaml` and add `- translator` to the `role` attriute.  We use this information to populate our [contributors page](http://developers.google.com/web/fundamentals/resources/contributors) and also to attach your name to each article.  For example:
+Add your details to `/src/_contributors.yaml` and add `- translator` to the `role` attriute.  We use this information to populate our [contributors page](http://developers.google.com/web/fundamentals/resources/contributors) and also to attach your name to each article.  For example:
 
 	paulkinlan:
 	  name:
