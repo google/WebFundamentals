@@ -109,7 +109,7 @@ We can do this by making our viewport wider and
 making a judgment call on whether the design and layout look right.
 
 Earlier we created a couple of different high-level designs for how our content
-should be displayed. Now we need make our page adapt to those different layouts.
+should be displayed. Now we need to make our page adapt to those different layouts.
 We do this by making a decision on where to place our breakpoints &mdash; a point
 where the layout and styles change &mdash; based on how the content fits the
 screen-size.
