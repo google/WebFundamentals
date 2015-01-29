@@ -1,9 +1,9 @@
 Translations
 ============
 
-All article sources are in `src/_langs`. The base content is in english under the "en" directory. Translations can be added following the same structure with either a two letter or composite language code: e.g. "es", "pt-br".
+All article sources are in `src/_langs`. The base content is in English under the "en" directory. Add translations by following the same structure with either a two letter or composite language code: e.g. "es", "pt-br".
 
-To add translations include the language code in the `langs_available` variable in config/common.yml. For example, to add French:
+Update the build to include the language code in the `langs_available` variable in config/common.yml. For example, to add French:
 ```
     langs_available: ["fr"]
 ```
