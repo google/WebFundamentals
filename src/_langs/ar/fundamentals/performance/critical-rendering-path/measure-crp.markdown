@@ -52,7 +52,7 @@ key-takeaways:
 
 * **domInteractive** لتحديد وقت استعداد DOM.
 * **domContentLoaded** يستخدم عادة لتحديد وقت [استعداد كل من DOM و CSSOM](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * إذا لم يكن هناك جافا سكريبت يحظر المحلل، فسيتم تشغيل _documentContentLoaded_ في الحال بعد _domInteractive_.
+    * إذا لم يكن هناك جافا سكريبت يحظر المحلل، فسيتم تشغيل _DOMContentLoaded_ في الحال بعد _domInteractive_.
 * **domComplete** لتحديد وقت استعداد الصفحة وجميع مواردها الفرعية.
 
 ^

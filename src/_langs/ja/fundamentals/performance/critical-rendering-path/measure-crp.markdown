@@ -52,7 +52,7 @@ HTML 仕様では、イベントを発行する際に満たすべき条件など
 
 * **domInteractive:** DOM の準備が整ったことを示します。
 * **domContentLoaded:** 通常、[DOM と CSSOM が両方とも準備が整った](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/)ことを示します。
-* パーサー ブロック JavaScript が存在しない場合、_documentContentLoaded_ は _domInteractive_ の直後に発行されます。
+* パーサー ブロック JavaScript が存在しない場合、_DOMContentLoaded_ は _domInteractive_ の直後に発行されます。
 * **domComplete:** ページとサブリソースがすべて準備が整った時点を示します。
 
 ^

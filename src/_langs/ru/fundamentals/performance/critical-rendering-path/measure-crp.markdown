@@ -52,7 +52,7 @@ key-takeaways:
 
 * **domInteractive**. Модель DOM готова.
 * **domContentLoaded**. Модели [DOM и CSSOM](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/) готовы.
-    * Если в HTML-документе нет встроенного кода JavaScript, событие _documentContentLoaded_ инициируется сразу после _domInteractive_.
+    * Если в HTML-документе нет встроенного кода JavaScript, событие _DOMContentLoaded_ инициируется сразу после _domInteractive_.
 * **domComplete**. Страница готова, ее контент загружен.
 
 ^
