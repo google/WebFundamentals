@@ -52,7 +52,7 @@ La especificación HTML requiere condiciones específicas para cada evento: cuá
 
 * **domInteractive** indica cuándo está listo el DOM.
 * **domContentLoaded** indica normalmente cuándo [están listos el DOM y el CSSOM](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * Si ningún analizador bloquea el código JavaScript , `_documentContentLoaded_` se activará justo después de `_domInteractive_`.
+    * Si ningún analizador bloquea el código JavaScript , `_DOMContentLoaded_` se activará justo después de `_domInteractive_`.
 * **domComplete** indica cuándo están listos la página y todos sus recursos.
 
 ^

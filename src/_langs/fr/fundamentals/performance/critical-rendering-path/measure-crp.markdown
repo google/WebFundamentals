@@ -52,7 +52,7 @@ La spécification du modèle HTML dicte les conditions spécifiques pour chaque 
 
 * **domInteractive** indique le moment où le modèle DOM est prêt.
 * **domContentLoaded** indique généralement quand [les modèles DOM et CSSOM sont prêts tous les deux](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * Si aucun analyseur ne bloque le JavaScript, alors _documentContentLoaded_ est déclenché immédiatement après _domInteractive_.
+    * Si aucun analyseur ne bloque le JavaScript, alors _DOMContentLoaded_ est déclenché immédiatement après _domInteractive_.
 * **domComplete** indique quand la page et toutes ses sous-ressources sont prêtes.
 
 ^

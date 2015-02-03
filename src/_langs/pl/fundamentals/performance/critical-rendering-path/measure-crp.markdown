@@ -52,7 +52,7 @@ Specyfikacja HTML określa szczegóły odnośnie do występowania każdego ze zd
 
 * **domInteractive** sygnalizuje, kiedy gotowy jest model DOM.
 * **domContentLoaded** zazwyczaj sygnalizuje, kiedy [zarówno model DOM, jak i model CSSOM są gotowe](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * Jeśli nie występują skrypty JavaScript blokujące parsowanie, zdarzenie _documentContentLoaded_ jest wyzwalane bezpośrednio po zdarzeniu _domInteractive_.
+    * Jeśli nie występują skrypty JavaScript blokujące parsowanie, zdarzenie _DOMContentLoaded_ jest wyzwalane bezpośrednio po zdarzeniu _domInteractive_.
 * Zdarzenie **domComplete** informuje o gotowości strony i wszystkich skojarzonych z nią zasobów.
 
 ^

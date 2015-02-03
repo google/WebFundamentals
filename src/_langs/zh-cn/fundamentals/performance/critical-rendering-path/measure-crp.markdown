@@ -53,7 +53,7 @@ HTML 规范中指明了每一个事件的具体条件：什么时候触发，什
 
 * **domInteractive** 标记 DOM 准备就绪。
 * **domContentLoaded** 通常标记 [DOM 和 CSSOM 都准备就绪] 的时间 (http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/)。
-    * 如果没有解析器阻塞 JavaScript，_documentContentLoaded_ 会在 _domInteractive_ 之后立即触发。
+    * 如果没有解析器阻塞 JavaScript，_DOMContentLoaded_ 会在 _domInteractive_ 之后立即触发。
 * **domComplete** 标记网页及其所有附属资源都已经准备就绪的时间。
 
 ^

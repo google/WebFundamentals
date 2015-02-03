@@ -52,7 +52,7 @@ Die HTML-Spezifikation gibt die Bedingungen für jedes einzelne Ereignis vor: wa
 
 * **domInteractive** markiert die Einsatzbereitschaft des DOM.
 * **domContentLoaded** markiert typischerweise den Zeitpunkt, zu dem [sowohl das DOM als auch das CSSOM einsatzbereit sind](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * Wenn kein Parser vorhanden ist, der JavaScript blockiert, dann wird _documentContentLoaded_ unmittelbar nach _domInteractive_ gestartet.
+    * Wenn kein Parser vorhanden ist, der JavaScript blockiert, dann wird _DOMContentLoaded_ unmittelbar nach _domInteractive_ gestartet.
 * **domComplete** markiert den Zeitpunkt, zu dem die Seite und alle ihre Unterressourcen einsatzbereit sind.
 
 ^
