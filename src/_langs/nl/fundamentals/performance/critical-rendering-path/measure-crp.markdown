@@ -52,7 +52,7 @@ De HTML-specificatie geeft bepaalde voorwaarden voor elke gebeurtenis: wanneer d
 
 * **domInteractive** markeert wanneer de DOM-opbouw klaar is.
 * **domContentLoaded** markeert gewoonlijk wanneer [zowel de DOM- als de CSSOM-opbouw klaar zijn](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * Als er geen parserblokkerend JavaScript bestaat, wordt _documentContentLoaded_ direct na _domInteractive_ gelanceerd.
+    * Als er geen parserblokkerend JavaScript bestaat, wordt _DOMContentLoaded_ direct na _domInteractive_ gelanceerd.
 * **domComplete** markeert wanneer de pagina, inclusief alle subbronnen, klaar is.
 
 ^

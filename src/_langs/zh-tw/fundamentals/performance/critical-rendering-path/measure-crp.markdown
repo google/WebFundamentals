@@ -52,7 +52,7 @@ HTML 規格中指明了每一個事件的具體條件：該在什麼時候觸發
 
 * **domInteractive** 標記 DOM 準備就緒。
 * **domContentLoaded** 通常標記 [DOM 和 CSSOM 都準備就緒]的時間(http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/)。
-    * 如果沒有禁止剖析器的 JavaScript，_documentContentLoaded_ 會在 _domInteractive_ 之後立即觸發。
+    * 如果沒有禁止剖析器的 JavaScript，_DOMContentLoaded_ 會在 _domInteractive_ 之後立即觸發。
 * **domComplete** 標記網頁和所有附屬資源都已經準備就緒的時間。
 
 ^
