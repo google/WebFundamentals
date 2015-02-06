@@ -53,8 +53,8 @@ Essentially it’s CSS with some extra features. For example, it adds support fo
 variables and functions, which help you structure your CSS in a modular and 
 reusable fashion.
 
-Once you have installed the NPM packages, along with Gulp (globally), Sass will 
-be available to you.
+Once you have installed the NPM packages, along with Gulp (globally), install Sass
+by running the following Ruby command to make Sass available to you: `gem install sass`
 
 ## Set Up Your Web Starter Kit Project
 
