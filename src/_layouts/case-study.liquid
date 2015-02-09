@@ -2,19 +2,19 @@
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/Article">
-    {% injectdata content _betterbook.yaml %}
+    {% injectdata content _betterbook-showcase.yaml %}
 
     {% include header.liquid %}
 
     <header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
       <div class="spotlight-header__container container">
-        {% include modules/breadcrumbs.liquid %}
+        {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
         <div class="spotlight-header__copy g--half">
           <h1 class="xxlarge">{{ page.title }}</h1>
           <p>{{ page.introduction }}</p>
         </div>
         <div class="spotlight-header__media g--half g--last">
-          <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ page.id }}/device-landscape.jpg" class="spotlight-header__image">
+          <img src="{{site.baseurl}}/showcase/case-study/images/{{ page.id }}/device-landscape.jpg" class="spotlight-header__image">
         </div>
       </div>
     </header>
@@ -58,7 +58,7 @@
       </div>
 
       <figure class="case-study__img-wrapper g--third">
-        <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ page.id }}/screenshot-portrait.png" alt="{{page.title}} on Nexus 5" class="fluid">
+        <img src="{{site.baseurl}}/showcase/case-study/images/{{ page.id }}/screenshot-portrait.png" alt="{{page.title}} on Nexus 5" class="fluid">
       </figure>
 
       <div class="g--third g--last case-study-inverted">
