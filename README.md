@@ -54,6 +54,11 @@ Mac
 ---
 
 1. Install [XCode Command Line Tools](https://developer.apple.com/xcode/downloads/)
+1. Install [NVM](https://github.com/creationix/nvm)
+    * `curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash`
+1. Install node 0.10.x
+    * `nvm install 0.10`
+    * `nvm use 0.10`
 1. Install [RVM](https://rvm.io/rubies/default)
     * `curl -sSL https://get.rvm.io | bash`
 1. Set RVM Default to 2.2.0
