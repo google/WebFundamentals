@@ -105,14 +105,14 @@ should be able to see the footer in all its glory.
 6. Let’s add a title in `styleguide.html` so it looks like the other style
 guide elements and perhaps a link at the top of the page.
 
-        // Footer Link at top of styleguide.html
+        <!-- Footer Link at top of styleguide.html -->
         <li class="summary-header__anchors-item">
           <a href="#footer">Footer</a>
         </li>
 
         .......
 
-        // Footer Title
+        <!-- Footer Title -->
         <div class="container">
           <a name="footer"></a>
             <h2 class="subsection-title">
@@ -125,16 +125,17 @@ guide elements and perhaps a link at the top of the page.
 
 7. Finally, flesh out our HTML a bit
 
-
-        <footer class="Footer">
-          <div class="container">
-            <p>
-              <a href="#">
-                <i class="icon icon-chevron-up"></i> Back to top
-              </a>
-            </p>
-          </div>
-        </footer>
+        <div class="code-sample">
+          <footer class="Footer">
+            <div class="container">
+              <p>
+                <a href="#">
+                  <i class="icon icon-chevron-up"></i> Back to top
+                </a>
+              </p>
+            </div>
+          </footer>
+        </div>
 
 8. Done :)
 
