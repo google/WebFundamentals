@@ -35,7 +35,7 @@ key-takeaways:
 
 1. 打开 *app/styleguide.html*，在最后一个元素后面给你的新元素添加 HTML。
 
-2. 在 app/styles/components/ 中，给你的组件创建一个名称合适的新 Sass 文件。
+2. 在 app/styles/components/_components/ 中，给你的组件创建一个名称合适的新 Sass 文件。
 
 3. 打开 app/styles/components.scss，在文件底部，以如下方式导入新 Sass 文件。
 
