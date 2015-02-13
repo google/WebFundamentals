@@ -86,6 +86,7 @@ module.exports = function(grunt) {
 				action: 'run',
 				options: {
 					async: true,
+					asyncOutput: true,
 					args: {
 						port: config.port
 					}
