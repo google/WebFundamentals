@@ -1,4 +1,4 @@
-Web Fundamentals
+Web Fundamentals [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
 ================
 
 Web Fundamentals is a technical documentation center for multi-device web
