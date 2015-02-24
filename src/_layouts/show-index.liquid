@@ -1,0 +1,52 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+  	<!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    <!-- Lets plan out the order of videos -->
+    {% assign shows = page.articles[page.id] | sort: 'date' | reverse  %}
+    {% assign latestShow = shows | first %}
+
+    {% include header.liquid %}
+
+    <h1>{{ page.title }}</h1>
+
+    <!-- Latest Episode -->
+    <h2>Latest Episode</h2>
+
+    <h3>{{ lastestShow.title }}</h3>
+
+    <!-- The YouTube embed page -->
+    {% include modules/video.liquid id="{ latestShow.youtubeVideoID }" %}
+
+
+
+
+
+
+    <!-- Display the latest episodes for a show series -->
+    <h2>Previous Episodes</h2>
+
+    <ol>
+      {% for show in shows %}
+      	<a href="{{site.baseurl}}{{show.url | canonicalize}}">
+      		<div class="lastestEpisode">
+	      		<div class="lastestEpisode--image">
+	      			<img src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+	      		</div>
+	      		<div class="lastestEpisode--title">
+	      			{{ show.title }}
+	      		</div>
+	      	</div>
+      	</a>
+	    {% endfor %}
+    </ol>
+
+    <!-- Display content from the markdown -->
+    {{ content }}
+
+
+    {% include footer.liquid %}

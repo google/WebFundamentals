@@ -1,0 +1,29 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+  	<!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    <h1>{{ page.title }}</h1>
+    <h1>{{ page.subtitle }}</h1>
+
+    <!-- The YouTube embed page -->
+    {% include modules/video.liquid id="{ page.youtubeVideoID }" %}
+
+    {{ content }}
+
+    <div class="videolinks">
+    	<div class="videolinks--next">
+    		Next Video
+    	</div>
+
+    	<div class="videolinks--prev">
+    		Previous video
+    	</div>
+    </div>
+
+    {% include footer.liquid %}
