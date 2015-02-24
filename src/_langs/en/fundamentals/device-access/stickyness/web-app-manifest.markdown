@@ -28,7 +28,7 @@ Adding a WebApp manifest is really easy. You create a manifest.json
 file which contains the settings and resources for your WebApp and
 then add a *link* to it from your html pages.
 
-## Creating the Manifest
+## Creating the manifest
 
 You can call the manifest whatever you want. Most people will probably just use manifest.json. An example is given below.
 
@@ -71,7 +71,7 @@ You should include a *short_name* as this will get used for the launcher text.
 
 If you don't provide a *start_url*, then the current page will be used, which is unlikely to be what your users want.
 
-## Tell the Browser About Your Manifest
+## Tell the browser about your manifest
 
 Once you have the manifest created and and on your site, all you need to do is add a link tag to all the pages that encompass your web app as follows.
 
@@ -79,7 +79,7 @@ Once you have the manifest created and and on your site, all you need to do is a
 <link rel="manifest" href="/manifest.json">
 {% endhighlight %}
 
-## Create great App Icons for the device
+## Create great app icons for the device
 
 When a user adds your site to their homescreen, you can define a set of icons for the browser to use.
 
