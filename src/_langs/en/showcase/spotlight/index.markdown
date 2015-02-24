@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: showcase
 title: "All spotlights"
 description: "Listing of all spotlights."
 id: spotlight
@@ -10,7 +10,7 @@ published: true
 
 <div class="page-header">
   <div class="container">
-    {% include modules/breadcrumbs.liquid %}
+    {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
     <header class="clear">
       <h3 class="xxlarge">All spotlights</h3>
       <div class="divider">
@@ -20,7 +20,7 @@ published: true
 
       <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">
         {% for tag in site.data['tags'] %}
-          <a href="{{site.baseurl}}/fundamentals/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
+          <a href="{{site.baseurl}}/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
         {% endfor %}
       </p>
     </header>
@@ -40,7 +40,7 @@ published: true
 
           <li class="g-medium--1 g-wide--1{% cycle 'all-case-spotlights': '', '', ' g-medium--last g-wide--last' %}">
             <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}">
-              <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="{{spotlight.title}}">
+              <img src="{{site.baseurl}}/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="{{spotlight.title}}">
               <p class="medium">{{spotlight.title}}</p>
             </a>
           </li>

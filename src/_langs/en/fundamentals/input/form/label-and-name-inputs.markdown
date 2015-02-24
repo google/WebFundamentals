@@ -36,7 +36,7 @@ remember:
     - If you're asking for any kind of personal information or credit card
       data, ensure the page is served via SSL.  Otherwise the dialog will
       warn the user their information may not be secure.
-shortlinks: 
+shortlinks:
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple17a
 ---
@@ -87,7 +87,7 @@ elements may be covered by the virtual keyboard.
 ### Use placeholders
 
 The placeholder attribute provides a hint to the user about what's expected in
-the input, typically by displaying the value as light text until the the user 
+the input, typically by displaying the value as light text until the the user
 starts typing in the element.
 
 <input type="text" placeholder="MM-YYYY">
@@ -121,6 +121,15 @@ the users name, email address and phone number, you should use:
 
 ### Recommended input `name` and `autocomplete` attribute values
 
+<style>
+  table td { padding: 13px 26px; }
+  table ul { padding: 13px 0; }
+</style>
+
+`autocomplete` attribute values are part of the [HTML Autofill spec](https://html.spec.whatwg.org/multipage/forms.html#autofill). The most commonly used `autocomplete` attributes are shown below.
+
+The `autocomplete` attributes should be prefixed with either `shipping` or `billing`, depending on the context.
+
 <table class="table-3 autocompletes">
   <thead>
     <tr>
@@ -138,7 +147,14 @@ the users name, email address and phone number, you should use:
         <code>mname</code>
         <code>lname</code>
       </td>
-      <td data-th="autocomplete attribute"><code>name</code></td>
+      <td data-th="autocomplete attribute">
+        <ul>
+          <li><code>name</code> (full name)</li>
+          <li><code>given-name</code> (first name)</li>
+          <li><code>additional-name</code> (middle name)</li>
+          <li><code>family-name</code> (last name)</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td data-th="Content type">Email</td>
@@ -159,11 +175,13 @@ the users name, email address and phone number, you should use:
         <code>country</code>
       </td>
       <td data-th="autocomplete attribute">
-        <code>street-address</code>
-        <code>locality</code>
-        <code>region</code>
-        <code>postal-code</code>
-        <code>country</code>
+        <ul>
+          <li><code>street-address</code></li>
+          <li><code>address-level-1</code> (state or province)</li>
+          <li><code>address-level-2</code> (city)</li>
+          <li><code>postal-code</code> (zip code)</li>
+          <li><code>country</code></li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -191,19 +209,19 @@ the users name, email address and phone number, you should use:
         <code>card-type</code>
       </td>
       <td data-th="autocomplete attribute">
-        <code>cc-name</code>
-        <code>cc-number</code>
-        <code>cc-csc</code>
-        <code>cc-exp-month</code>
-        <code>cc-exp-year</code>
-        <code>cc-exp</code>
-        <code>cc-type</code>
+        <ul>
+          <li><code>cc-name</code></li>
+          <li><code>cc-number</code></li>
+          <li><code>cc-csc</code></li>
+          <li><code>cc-exp-month</code></li>
+          <li><code>cc-exp-year</code></li>
+          <li><code>cc-exp</code></li>
+          <li><code>cc-type</code></li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
-
-The `autocomplete` attributes should be prefixed with either `shipping` or `billing`, depending on the context.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.recommend-input %}
 

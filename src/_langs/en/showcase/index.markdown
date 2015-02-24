@@ -1,6 +1,6 @@
 ---
 id: showcase
-layout: default
+layout: showcase
 collection: home
 title: "Showcases"
 description: ""
@@ -33,7 +33,7 @@ NOTE: the spotlight header required a modifier to render properly
       <a href="{{site.baseurl}}{{caseStudies[0].url | canonicalize}}" class="spotlight-header__cta cta--primary">Read the case study</a>
     </div>
     <div class="spotlight-header__media g--half g--last">
-      <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ caseStudies[0].id }}/device-portrait.png" class="spotlight-header__image">
+      <img src="{{site.baseurl}}/showcase/case-study/images/{{ caseStudies[0].id }}/device-portrait.png" class="spotlight-header__image">
     </div>
   </div>
 </header>
@@ -43,7 +43,7 @@ NOTE: the spotlight header required a modifier to render properly
     <h2 class="xlarge">Also noteworthy</h2>
     <div class="clear">
       <p class="g--half">Sites and apps we love, regardless of their mainstream success. Always pushing the web forward.</p>
-      <p class="g--half g--last"><a href="{{site.baseurl}}/fundamentals/showcase/spotlight/" class="cta--primary">All spotlights</a></p>
+      <p class="g--half g--last"><a href="{{site.baseurl}}/showcase/spotlight/" class="cta--primary">All spotlights</a></p>
     </div>
 
     <ul class="latest-spotlights__list list-reset">
@@ -52,7 +52,7 @@ NOTE: the spotlight header required a modifier to render properly
 
       <li class="latest-spotlights__item">
         <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}" class="latest-spotlights__link">
-          <img src="{{site.baseurl}}/fundamentals/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="Screenshot of {{spotlight.title}}">
+          <img src="{{site.baseurl}}/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="Screenshot of {{spotlight.title}}">
           <p class="small">Spotlight</p>
         </a>
         <div class="latest-spotlights__description">
@@ -77,7 +77,7 @@ NOTE: the spotlight header required a modifier to render properly
 
   <div class="clear case-study-previous__desc">
     <p class="g--half">Every case study is unique and includes new learnings. Check out the latest, or browse through all of them.</p>
-    <p class="g--half g--last"><a href="{{site.baseurl}}/fundamentals/showcase/case-study/" class="cta--primary">All case studies</a></p>    
+    <p class="g--half g--last"><a href="{{site.baseurl}}/showcase/case-study/" class="cta--primary">All case studies</a></p>    
   </div>
 
 
@@ -96,7 +96,7 @@ NOTE: the spotlight header required a modifier to render properly
               <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}" class="cta--primary">Read the case study</a>
             </div>
             <figure class="featured-list__img-wrapper g--half g--last">
-              <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ caseStudy.id }}/thumbnail-medium.jpg" alt="{{caseStudy.title}}">
+              <img src="{{site.baseurl}}/showcase/case-study/images/{{ caseStudy.id }}/thumbnail-medium.jpg" alt="{{caseStudy.title}}">
             </figure>
           </div>
         </li>

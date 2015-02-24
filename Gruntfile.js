@@ -86,6 +86,7 @@ module.exports = function(grunt) {
 				action: 'run',
 				options: {
 					async: true,
+					asyncOutput: true,
 					args: {
 						port: config.port
 					}
@@ -284,14 +285,14 @@ module.exports = function(grunt) {
 		}
 
 		var cfgfiles = 'config/wsk-version.yml,config/common.yml,config/' + cfgname + '.yml';
-		var args = ['build', '--config', cfgfiles, '-t'];
+		var args = ['exec', 'jekyll', 'build', '--config', cfgfiles, '-t'];
 		var spawnJekyll = function(lang, callback) {
 			var opts = {env: process.env, stdio: 'inherit'};
 			if (lang !== null) {
 				opts.env.TRANS_LANG = lang;
 				// opts.env.MENTOS_TIMEOUT = 32;
 			}
-			grunt.util.spawn({cmd: 'jekyll', args: args, opts: opts}, callback);
+			grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, callback);
 		};
 
 		var done = this.async();
