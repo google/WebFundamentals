@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: showcase
 collection: showcase
 id: case-study
 published: true
@@ -14,7 +14,7 @@ showcase:
 
 <div class="page-header">
   <div class="container">
-    {% include modules/breadcrumbs.liquid %}
+    {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
     <header class="clear">
       <h3 class="xxlarge">All case studies</h3>
       <div class="divider">
@@ -44,7 +44,7 @@ showcase:
               <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}" class="cta--primary">Read the case study</a>
             </div>
             <figure class="featured-list__img-wrapper g--half g--last">
-              <img src="{{site.baseurl}}/fundamentals/showcase/case-study/images/{{ caseStudy.id }}/thumbnail-medium.jpg" alt="{{caseStudy.title}}">
+              <img src="{{site.baseurl}}/showcase/case-study/images/{{ caseStudy.id }}/thumbnail-medium.jpg" alt="{{caseStudy.title}}">
             </figure>
           </div>
         </li>

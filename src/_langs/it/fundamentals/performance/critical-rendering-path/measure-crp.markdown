@@ -52,7 +52,7 @@ La specifica HTML detta condizioni precise per ogni evento: quando deve essere a
 
 * **domInteractive** segna quando DOM è pronto.
 * **domContentLoaded** solitamente segna quando [sia DOM che CSSOM sono pronti](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
-    * In assenza di JavaScript con blocco parser, _documentContentLoaded_ verrà attivato immediatamente dopo _domInteractive_.
+    * In assenza di JavaScript con blocco parser, _DOMContentLoaded_ verrà attivato immediatamente dopo _domInteractive_.
 * **domComplete** segna quando la pagina e tutte le relative sottorisorse sono pronte.
 
 ^

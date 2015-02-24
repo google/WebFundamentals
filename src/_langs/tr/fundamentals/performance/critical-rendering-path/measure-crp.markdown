@@ -52,7 +52,7 @@ HTML belirtimi, her olay için belirli kosullar getirir: Olayin ne zaman etkinle
 
 * **domInteractive**, DOM'nin hazir oldugu zamani isaretler.
 * **domContentLoaded**, genellikle [hem DOM hem de CSSOM'nin hazir oldugu](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/) zamani isaretler.
-    * Ayristiriciyi engelleyen JavaScript yoksa _documentContentLoaded_ olayi, _domInteractive_ olayindan hemen sonra etkinlesir.
+    * Ayristiriciyi engelleyen JavaScript yoksa _DOMContentLoaded_ olayi, _domInteractive_ olayindan hemen sonra etkinlesir.
 * **domComplete**, sayfanin ve tüm alt kaynaklarinin hazir oldugu zamani isaretler.
 
 ^
