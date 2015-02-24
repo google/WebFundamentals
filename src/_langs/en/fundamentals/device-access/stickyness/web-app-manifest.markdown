@@ -13,11 +13,16 @@ authors:
   - mattgaunt
   - paulkinlan
 collection: stickyness
+key-takeaways:
+  manifest:
+    - Define a range of icons so that they work across all device form factors
+    - Choose a good `short_name` as this is what users will see
+    - Add a launch URL and a Querystring parameter so that you can track how many users launch your app
 ---
 
 {% wrap content %}
 
-# Adding a Manifest
+{% include modules/takeaway.liquid list=page.key-takeaways.manifest %}
 
 Adding a WebApp manifest is really easy. You create a manifest.json
 file which contains the settings and resources for your WebApp and
@@ -66,7 +71,7 @@ You should include a *short_name* as this will get used for the launcher text.
 
 If you don't provide a *start_url*, then the current page will be used, which is unlikely to be what your users want.
 
-## Telling the Browser About Your Manifest
+## Tell the Browser About Your Manifest
 
 Once you have the manifest created and and on your site, all you need to do is add a link tag to all the pages that encompass your web app as follows.
 
@@ -74,7 +79,7 @@ Once you have the manifest created and and on your site, all you need to do is a
 <link rel="manifest" href="/manifest.json">
 {% endhighlight %}
 
-# App Icons
+## Create great App Icons for the device
 
 When a user adds your site to their homescreen, you can define a set of icons for the browser to use.
 
@@ -106,11 +111,7 @@ The icons for your web app can be defined as above, with a type, size and densit
 
 <div class="clear"></div>
 
-# Manifest Options
-
-The manifest offers a range of different options and depending on your usecase, some will help you a great deal.
-
-## Display Option
+## Configure how your site is lauched
 
 You make your WebApp hide the browsers UI by defining the *display* type to *standalone*.
 
@@ -134,7 +135,7 @@ Don't worry, if you think users would prefer to view your page as a normal site 
 
 <div class="clear"></div>
 
-## Orientation Option
+## Define the initial orientation of the page
 
 You can enforce a specific orientation, which is really useful for some use cases like games, which may only work in landscape. However, this should be used with care. Users prefer being able to view apps in both orientations.
 
@@ -152,7 +153,11 @@ You can enforce a specific orientation, which is really useful for some use case
 
 <div class="clear"></div>
 
-# Browser Support
+## Is it safe to use today. A.K.A Browser Support
+
+Yes.  This is a progressive feature that if you support, users of browsers that can handle this feature will
+get a better experience.  If the browser doesn't support the manifest then users are not stopped from using the
+site.
 
 As of Nov 2014 Chrome has implemented the manifest. Mozilla are implementing and [IE is exploring the area](https://status.modern.ie/webapplicationmanifest?term=manifest).
 
