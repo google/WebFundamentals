@@ -1,7 +1,7 @@
 ---
 id: css-triggers
 layout: show-single
-collection: http203
+collection: http203-series-1
 title: "Pointer Events"
 description: "A discussion on PointerEvents and what is happening with them in Chrome."
 published: true
