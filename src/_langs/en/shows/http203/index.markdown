@@ -6,7 +6,9 @@ title: "HTTP 203"
 description: ""
 published: true
 ---
-{% comment %}
-NOTE:
-{% endcomment %}
 
+TODO: Intro to HTTP203
+
+TODO: Who should watch?
+
+TODO: What's the message?

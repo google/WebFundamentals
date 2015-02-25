@@ -1,8 +1,5 @@
 <!-- Lets plan out the order of videos -->
-<!--{% assign series = page.articles[page.id] | sort: 'date' | reverse  %}
-{% assign latestSeries = series | first %}
-{% assign latestShows = page.articles[latestSeries.id] | sort: 'date' | reverse %}
-{% assign latestShow = latestShows | first %}-->
+{% assign shows = page.articles[page.id] | sort: 'date' | reverse  %}
 
 
     {% include head.liquid %}
@@ -22,17 +19,10 @@
 	    <!-- Display content from the markdown -->
 	    {{ content }}
 
-	    <!-- Latest Episode -->
-	    <h2>Latest Episode: {{ latestShow.title }}</h2>
-
-	    {% include modules/video.liquid id=latestShow.youtubeVideoID %}
-
-	    <!-- Display the latest episodes for a show series -->
-	    <h2>Previous Episodes</h2>
+	    <h2>Episodes</h2>
 
 	    <ol>
-	      {% for show in latestShows %}
-	      	{% if show != latestShow %}
+	      {% for show in shows %}
 	      	<a href="{{site.baseurl}}{{show.url | canonicalize}}">
 	      		<div class="lastestEpisode">
 		      		<div class="lastestEpisode--image">
@@ -43,7 +33,6 @@
 		      		</div>
 		      	</div>
 	      	</a>
-	      	{% endif %}
 		    {% endfor %}
 	    </ol>
 

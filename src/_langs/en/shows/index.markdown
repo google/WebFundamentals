@@ -1,14 +1,17 @@
 ---
 id: shows
 layout: shows
-collection: shows
 title: "Shows"
 description: ""
 published: true
 ---
 {% comment %}
-NOTE:
+NOTE: Testing: collection: home
+Fundmentals index: for guide in page.articles.[page.id]
 {% endcomment %}
+
+
+{% wrap content %}
 
 # Shows
 
@@ -32,3 +35,5 @@ NOTE:
     Chrome Dev Summit 2014
   </li>
 </ul>
+
+{% endwrap %}
