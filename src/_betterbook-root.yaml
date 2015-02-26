@@ -1,0 +1,15 @@
+toc:
+- title: "/<strong>Web</strong>"
+  path: /
+  home: true
+- title: Web <strong>Fundamentals</strong>
+  path: /fundamentals/
+- title: Web <strong>Starter Kit</strong>
+  path: /starter-kit/
+- title: Shows
+  path: /shows/
+- title: Tools
+  path: /tools/
+- title: Primers
+  path: /primers/
+

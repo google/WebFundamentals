@@ -37,6 +37,10 @@ handlers:
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 
+- url: /web
+  script: main.app
+  secure: always
+
 - url: /web/(.*)
   script: main.app
   secure: always
