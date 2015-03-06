@@ -76,6 +76,7 @@
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
   max-height: 12em;
+  width: auto;
 }
 
 .latest-spotlights__link p {
@@ -114,11 +115,10 @@
 }
 
 .latest-spotlights__description {
- 
-  @include medium {
-    width: 61%;
-    display: inline-block;
-  }
+
+  width: 61%;
+  display: inline-block;
+
   
   vertical-align: top;
   padding-left: 1em;
@@ -127,4 +127,11 @@
 
 .latest-spotlights__description a {
   margin-top: $lineHeight/2;
+}
+
+.latest-spotlights-all {
+  text-align: center;
+  @include medium {
+    text-align: left;
+  }
 }

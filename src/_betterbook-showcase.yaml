@@ -6,6 +6,8 @@ toc:
   path: /showcase/case-study/
 - title: "Spotlights"
   path: /showcase/spotlight/
+- title: "Deep Dives"
+  path: /showcase/deep-dive/
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
