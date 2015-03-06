@@ -43,7 +43,7 @@ NOTE: the spotlight header required a modifier to render properly
     <h2 class="xlarge">Also noteworthy</h2>
     <div class="clear">
       <p class="g--half">Sites and apps we love, regardless of their mainstream success. Always pushing the web forward.</p>
-      <p class="g--half g--last"><a href="{{site.baseurl}}/showcase/spotlight/" class="cta--primary">All spotlights</a></p>
+      <p class="g--half g--last latest-spotlights-all"><a href="{{site.baseurl}}/showcase/spotlight/" class="cta--primary">All spotlights</a></p>
     </div>
 
     <ul class="latest-spotlights__list list-reset">
@@ -71,7 +71,7 @@ NOTE: the spotlight header required a modifier to render properly
 
 
 <div class="featured-section case-study-previous">
-  <div class="container-medium">
+  <div class="container">
 
   <h2>Previous case studies</h2>
 
