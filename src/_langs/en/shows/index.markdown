@@ -1,6 +1,6 @@
 ---
 id: shows
-layout: shows
+layout: default
 title: "Shows"
 description: ""
 published: true
@@ -10,30 +10,59 @@ NOTE: Testing: collection: home
 Fundmentals index: for guide in page.articles.[page.id]
 {% endcomment %}
 
+{% assign shows = page.articles[page.id] | sort: 'title'  %}
 
 {% wrap content %}
 
 # Shows
 
-// TODO: Add in some intro content
+Here you'll find all of the available shows from
+the Google Developer team related to web.
 
-// Latest Show
+Select a show or video and start exploring.
 
-# Check Out the Available Shows
-
-<ul>
-  <li>
-    HTTP 203
-  </li>
-  <li>
-    Polycasts
-  </li>
-  <li>
-    Chrome Dev Summit 2015
-  </li>
-  <li>
-    Chrome Dev Summit 2014
-  </li>
-</ul>
+<ol class="webshows--videolist">
+  {% for show in shows %}
+    <li class="webshows--videolistitem">
+      <div class="webshows--videoheader webshows--videoheader-{{ show.id }}">
+        {{ show.title }}
+      </div>
+      <div class="webshows--videos webshows--videos-{{ show.id }}">
+        {% assign showSeries = page.articles[show.id]  | sort: 'date' %}
+        <ol>
+        {% for series in showSeries %}
+          <li>
+            <div class="webshows--videoseriestitle webshows--videoseriestitle-{{ series.id }}">
+              {{ series.title }}
+            </div>
+            <ol>
+              {% assign seriesVideos = page.articles[series.id]  | sort: 'date' %}
+              {% assign displayedShows = 0 %}
+              {% assign MAX_DISPLAYED_SHOWS = 5 %}
+              {% for video in seriesVideos %}
+                {% if displayedShows < MAX_DISPLAYED_SHOWS %}
+                <li>
+                  <a href="{{site.baseurl}}{{video.url | canonicalize}}">
+                    <div class="lastestEpisode">
+                      <div class="lastestEpisode--image">
+                        <img src="http://img.youtube.com/vi/{{ video.youtubeVideoID }}/0.jpg" />
+                      </div>
+                      <div class="lastestEpisode--title">
+                        {{ video.title }}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                {% endif %}
+                {% assign displayedShows = displayedShows | plus: 1 %}
+              {% endfor %}
+            </ol>
+          </li>
+        {% endfor %}
+        </ol>
+      </div>
+    </li>
+  {% endfor %}
+</ol>
 
 {% endwrap %}
