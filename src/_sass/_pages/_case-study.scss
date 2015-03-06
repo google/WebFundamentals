@@ -11,6 +11,8 @@
 			text-align: center;
 		}
 
+
+
 		@include medium {
 
 			p {
@@ -30,7 +32,24 @@
 		figure {
 			margin-right: 3.7%;
 		}
+
+		.spotlight-scores {
+			margin-top: 2em;
+		}
+
+		.spotlight-header__container {
+			margin-top: 2em;
+		}
+	}
+
+	.spotlight-header--landscape .spotlight-header__copy {
+		@include medium {
+			p {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 
 }
+

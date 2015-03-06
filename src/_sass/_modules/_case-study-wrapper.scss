@@ -17,7 +17,7 @@
   background: $colorGrayBackground;
 
   @include medium {
-    margin-top: - $lineHeight*3;
+    margin-top: - $lineHeight*2;
     padding-top: $lineHeight*3;
     background: linear-gradient(to right, #ffe168 50%, #CFA600 50%);
 
