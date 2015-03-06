@@ -5,11 +5,11 @@
     <style>
 
       /* // [START invalidstyle] */
-      input.dirty:not(:focus):invalid { 
-        background-color: #FFD9D9; 
+      input.dirty:not(:focus):invalid {
+        background-color: #FFD9D9;
       }
-      input.dirty:not(:focus):valid { 
-        background-color: #D9FFD9; 
+      input.dirty:not(:focus):valid {
+        background-color: #D9FFD9;
       }
       /* // [END invalidstyle] */
 
@@ -23,24 +23,24 @@
           <legend>Contact Info</legend>
           <!-- // [START autocomplete] -->
           <label for="frmNameA">Name</label>
-          <input type="text" name="name" id="frmNameA" 
-          placeholder="Full name" required autocomplete="name">
+          <input type="text" name="name" id="frmNameA"
+            placeholder="Full name" required autocomplete="name">
 
           <label for="frmEmailA">Email</label>
-          <input type="email" name="email" id="frmEmailA" 
+          <input type="email" name="email" id="frmEmailA"
             placeholder="name@example.com" required autocomplete="email">
 
           <label for="frmEmailC">Confirm Email</label>
-          <input type="email" name="emailC" id="frmEmailC" 
+          <input type="email" name="emailC" id="frmEmailC"
             placeholder="name@example.com" required autocomplete="email">
-           
+
           <label for="frmPhoneNumA">Phone</label>
-          <input type="tel" name="phone" id="frmPhoneNumA" 
+          <input type="tel" name="phone" id="frmPhoneNumA"
             placeholder="+1-555-555-1212" required autocomplete="tel">
           <!-- // [END autocomplete] -->
 
           <label for="frmShoeSize">Shoe Size</label>
-          <input type="number" name="shoe-size" id="frmShoeSize" 
+          <input type="number" name="shoe-size" id="frmShoeSize"
             min="1" max="18" step="0.5">
 
           <!-- // [START datalist] -->
@@ -59,24 +59,24 @@
           <legend>Shipping</legend>
           <!-- // [START labels] -->
           <label for="frmAddressS">Address</label>
-          <input type="text" name="ship-address" required id="frmAddressS" 
+          <input type="text" name="ship-address" required id="frmAddressS"
             placeholder="123 Any Street" autocomplete="shipping street-address">
           <!-- // [END labels] -->
-           
+
           <label for="frmCityS">City</label>
-          <input type="text" name="ship-city" required id="frmCityS" 
+          <input type="text" name="ship-city" required id="frmCityS"
             placeholder="New York" autocomplete="shipping locality">
-           
+
           <label for="frmStateS">State</label>
-          <input type="text" name="ship-state" required id="frmStateS" 
+          <input type="text" name="ship-state" required id="frmStateS"
             placeholder="NY" autocomplete="shipping region">
-           
+
           <label for="frmZipS">Zip</label>
-          <input type="text" name="ship-zip" required id="frmZipS" 
+          <input type="text" name="ship-zip" required id="frmZipS"
             placeholder="10011" autocomplete="shipping postal-code">
-           
+
           <label for="frmCountryS">Country</label>
-          <input type="text" name="ship-country" required id="frmCountryS" 
+          <input type="text" name="ship-country" required id="frmCountryS"
             placeholder="USA" autocomplete="shipping country">
 
           <label>
@@ -87,25 +87,25 @@
 
         <fieldset>
           <legend>Billing</legend>
-        
+
           <label for="frmAddressB">Address</label>
-          <input type="text" name="bill-address" id="frmAddressB" required 
+          <input type="text" name="bill-address" id="frmAddressB" required
             placeholder="123 Any Street" autocomplete="billing street-address">
-           
+
           <label for="frmCityB">City</label>
-          <input type="text" name="bill-city" id="frmCityB" required 
+          <input type="text" name="bill-city" id="frmCityB" required
             placeholder="New York" autocomplete="billing locality">
-           
+
           <label for="frmStateB">State</label>
-          <input type="text" name="bill-state" id="frmStateB" required 
+          <input type="text" name="bill-state" id="frmStateB" required
             placeholder="NY" autocomplete="billing region">
-           
+
           <label for="frmZipB">Zip</label>
-          <input type="text" name="bill-zip" id="frmZipB" required 
+          <input type="text" name="bill-zip" id="frmZipB" required
             placeholder="10011" autocomplete="billing postal-code">
-           
+
           <label for="frmCountryB">Country</label>
-          <input type="text" name="bill-country" id="frmCountryB" 
+          <input type="text" name="bill-country" id="frmCountryB"
             required placeholder="USA" autocomplete="billing country">
         </fieldset>
 
@@ -113,20 +113,20 @@
           <legend>Payment</legend>
           <p>Do <b>NOT</b> provide real credit card information in this field.</p>
           <label for="frmNameCC">Name on card</label>
-          <input type="text" name="ccname" id="frmNameCC" 
+          <input type="text" name="ccname" id="frmNameCC"
             required placeholder="Full Name" autocomplete="cc-name">
-           
+
           <label for="frmCCNum">Card Number</label>
-          <input type="text" name="cardnumber" id="frmCCNum" 
+          <input type="text" name="cardnumber" id="frmCCNum"
             required autocomplete="cc-number">
-           
+
           <label for="frmCCCVC">CVC</label>
-          <input type="text" name="cvc" id="frmCCCVC" required 
+          <input type="text" name="cvc" id="frmCCCVC" required
             autocomplete="cc-csc">
-          
+
           <label for="frmCCExp">Expiry</label>
           <!-- // [START placeholder] -->
-          <input type="text" name="cc-exp" id="frmCCExp" required 
+          <input type="text" name="cc-exp" id="frmCCExp" required
             placeholder="MM-YYYY" autocomplete="cc-exp">
           <!-- // [END placeholder] -->
         </fieldset>
@@ -139,7 +139,7 @@
 
     <script type="text/javascript">
       var form;
-      
+
       function initForm() {
         form = document.getElementById("usrForm")
         /* // [START preventsubmission] */
@@ -206,7 +206,7 @@
       initForm();
       initInputs();
       initConfirmEmail();
-     
+
 
     </script>
     <!-- // [TEMPLATE footer] -->
