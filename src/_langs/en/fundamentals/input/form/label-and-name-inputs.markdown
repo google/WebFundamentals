@@ -126,9 +126,9 @@ the users name, email address and phone number, you should use:
   table ul { padding: 13px 0; }
 </style>
 
-`autocomplete` attribute values are part of the [HTML Autofill spec](https://html.spec.whatwg.org/multipage/forms.html#autofill). The most commonly used `autocomplete` attributes are shown below.
+`autocomplete` attribute values are part of the current [WHATWG HTML Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill). The most commonly used `autocomplete` attributes are shown below.
 
-The `autocomplete` attributes should be prefixed with either `shipping` or `billing`, depending on the context.
+The `autocomplete` attributes can be accompanied with a section name, such as **`shipping `**`given-name` or **`billing `**`street-address`. The browser will auto-complete different sections separately, and not as a continuous form.
 
 <table class="table-3 autocompletes">
   <thead>
