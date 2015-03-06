@@ -1,0 +1,24 @@
+$padding: 8px !default;
+
+.smallvideo {
+	width: 200px;
+
+	position: relative;
+}
+
+.smallvideo--image {
+
+}
+
+.smallvideo--title {
+	width: 100%;
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	padding: $padding;
+
+	background: rgba(0, 0, 0, 0.7);
+	color: rgba(255, 255, 255, 1.0);
+}

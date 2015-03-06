@@ -22,21 +22,21 @@ the Google Developer team related to web.
 
 Select a show or video and start exploring.
 
-<ol class="webshows--videolist">
+<ol class="shows--videolist">
   {% for show in shows %}
-    <li class="webshows--videolistitem">
-      <div class="webshows--videoheader webshows--videoheader-{{ show.id }}">
+    <li class="shows--videolistitem">
+      <div class="shows--header shows--header-{{ show.id }}">
         {{ show.title }}
       </div>
-      <div class="webshows--videos webshows--videos-{{ show.id }}">
+      <div class="shows--videos shows--videos-{{ show.id }}">
         {% assign showSeries = page.articles[show.id]  | sort: 'date' %}
-        <ol>
+        <ol class="series-list">
         {% for series in showSeries %}
           <li>
-            <div class="webshows--videoseriestitle webshows--videoseriestitle-{{ series.id }}">
+            <div class="shows--videoseriestitle shows--videoseriestitle-{{ series.id }}">
               {{ series.title }}
             </div>
-            <ol>
+            <ol class="flatrowlist">
               {% assign seriesVideos = page.articles[series.id]  | sort: 'date' %}
               {% assign displayedShows = 0 %}
               {% assign MAX_DISPLAYED_SHOWS = 5 %}
@@ -44,11 +44,11 @@ Select a show or video and start exploring.
                 {% if displayedShows < MAX_DISPLAYED_SHOWS %}
                 <li>
                   <a href="{{site.baseurl}}{{video.url | canonicalize}}">
-                    <div class="lastestEpisode">
-                      <div class="lastestEpisode--image">
+                    <div class="smallvideo">
+                      <div class="smallvideo--image">
                         <img src="http://img.youtube.com/vi/{{ video.youtubeVideoID }}/0.jpg" />
                       </div>
-                      <div class="lastestEpisode--title">
+                      <div class="smallvideo--title">
                         {{ video.title }}
                       </div>
                     </div>
