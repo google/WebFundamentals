@@ -1,0 +1,36 @@
+.case-study {
+
+	h1 {
+		text-align: center;
+	}
+
+	.content {
+
+		h2 {
+			margin-right: 0;
+			text-align: center;
+		}
+
+		@include medium {
+
+			p {
+				margin-right: 4%;
+				margin-left: 4%;
+			}
+
+		}
+
+	}
+
+	figure {
+		margin-right: 0;
+	}
+
+	@include medium {
+		figure {
+			margin-right: 3.7%;
+		}
+	}
+
+
+}
