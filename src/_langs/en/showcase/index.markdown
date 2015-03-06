@@ -1,7 +1,7 @@
 ---
 id: showcase
 layout: showcase
-collection: home
+collection: web
 title: "Showcases"
 description: ""
 published: true

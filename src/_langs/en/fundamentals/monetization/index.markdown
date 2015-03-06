@@ -10,7 +10,7 @@ article:
   order: 5
 priority: 0
 id: monetization
-collection: home
+collection: fundamentals
 ---
 
 {% comment %}

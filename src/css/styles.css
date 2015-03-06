@@ -2219,12 +2219,12 @@ body[dir=rtl] .editorial-header .container:before {
         background: #cb4437; }
         .spotlight-scores span.low strong {
           color: #fff; } }
-    .spotlight-scores span.medium strong {
+    .spotlight-scores span.med strong {
       color: #f4b400; }
     @media only screen and (min-width: 620px) {
-      .spotlight-scores span.medium {
+      .spotlight-scores span.med {
         background: #f4b400; }
-        .spotlight-scores span.medium strong {
+        .spotlight-scores span.med strong {
           color: #fff; } }
     .spotlight-scores span.high strong {
       color: #0f9d58; }
@@ -3438,7 +3438,7 @@ div.related-items-on-spotlight {
   background: #f0f0f0; }
   @media only screen and (min-width: 620px) {
     .case-study-wrapper {
-      margin-top: -78px;
+      margin-top: -52px;
       padding-top: 78px;
       background: linear-gradient(to right, #ffe168 50%, #CFA600 50%); }
       .case-study-wrapper.has-video-after {
@@ -5375,6 +5375,16 @@ figcaption {
 @media only screen and (min-width: 620px) {
   .case-study figure {
     margin-right: 3.7%; }
+
+  .case-study .spotlight-scores {
+    margin-top: 2em; }
+
+  .case-study .spotlight-header__container {
+    margin-top: 2em; }
+ }
+@media only screen and (min-width: 620px) {
+  .case-study .spotlight-header--landscape .spotlight-header__copy p {
+    margin-bottom: 0; }
  }
 
 /**

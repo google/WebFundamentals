@@ -9,7 +9,7 @@ article:
   updated_on: 2014-09-17
   order: 1
 id: principles-of-site-design
-collection: home
+collection: fundamentals
 priority: 0
 authors:
   - petelepage
