@@ -3,6 +3,7 @@ id: shows
 layout: shows
 title: "Shows"
 description: ""
+collection: web
 published: true
 ---
 {% comment %}

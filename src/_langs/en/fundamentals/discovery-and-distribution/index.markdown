@@ -5,7 +5,7 @@ description: ""
 introduction: ""
 snippet: "Spread your website to the world"
 id: discovery-and-distribution
-#collection: home
+collection: fundamentals
 authors:
   - agektmr
 article:

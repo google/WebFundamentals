@@ -9,7 +9,7 @@ article:
   updated_on: 2014-05-29
   order: 0
 id: tools
-collection: home
+collection: fundamentals
 priority: 0
 ---
 
