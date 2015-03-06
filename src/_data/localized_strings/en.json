@@ -43,6 +43,8 @@
   "@remember": {"description": "Heading - a reminder for an important note"},
   "spotlights_tagged": "All spotlights tagged '%s'",
   "@spotlights_tagged": {"description": "Title - for a page that lists case-studies with a particular tag. The %s must be included literally, as a placeholder for the tag name."},
+  "deep-dives_tagged": "All deep dives tagged '%s'",
+  "@deep-dives_tagged": {"description": "Title - for a page that lists case-studies with a particular tag. The %s must be included literally, as a placeholder for the tag name."},
   "submit_feedback": "Submit Feedback",
   "@submit_feedback": {"description": "Link - to a site where users can submit feedback"},
   "terms_of_service": "Terms of Service",
