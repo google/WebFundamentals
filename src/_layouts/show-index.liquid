@@ -1,0 +1,97 @@
+<!-- Lets plan out the order of videos -->
+{% if page.articles[page.id] %}
+	{% assign series = page.articles[page.id] | sort: 'date' | reverse  %}
+	{% assign latestSeries = series | first %}
+	{% if page.articles[latestSeries.id] %}
+		{% assign latestShows = page.articles[latestSeries.id] | sort: 'date' | reverse %}
+		{% assign latestShow = latestShows | first %}
+	{% endif %}
+
+	{% assign totalPreviousShows = 0 %}
+	{% for singleSeries in series %}
+		{% if page.articles[singleSeries.id] %}
+			{% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' | reverse %}
+			{%if seriesShows.size > 0 %}
+				{% for show in seriesShows %}
+					{% if show != latestShow %}
+					  	{% assign totalPreviousShows = totalPreviousShows | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+  	<!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    {% wrap content %}
+
+	    <h1>{{ page.title }}</h1>
+
+	    <!-- Display content from the markdown -->
+	    {{ content }}
+
+
+
+	    <!-- Latest Episode -->
+	    {% if latestShow %}
+	    	<h2>Latest Episode: {{ latestShow.title }}</h2>
+	    	{% include modules/video.liquid id=latestShow.youtubeVideoID %}
+	    {% endif %}
+
+
+
+
+	    <!-- Previous Episodes -->
+	    {% if totalPreviousShows > 0 %}
+		    <h2>Previous Episodes</h2>
+		    {% assign firstSeries = true %}
+		    {% for singleSeries in series %}
+
+		    	{% if page.articles[singleSeries.id] %}
+			    	{% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' | reverse %}
+
+			    	<!-- Greater than 1 to acount for latest video  -->
+			    	{%if firstSeries and seriesShows.size <= 1 %}
+			    		{% continue %}
+			    	{% endif %}
+
+				    {%if seriesShows.size > 0 %}
+					    <!-- Display the latest episodes for a show series -->
+
+					    <h3>{{ singleSeries.title }}</h3>
+
+					    <ol>
+					      {% for show in seriesShows %}
+					      	{% if show != latestShow %}
+					      	<a href="{{site.baseurl}}{{show.url | canonicalize}}">
+					      		<div class="lastestEpisode">
+						      		<div class="lastestEpisode--image">
+						      			<img src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+						      		</div>
+						      		<div class="lastestEpisode--title">
+						      			{{ show.title }}
+						      		</div>
+						      	</div>
+					      	</a>
+					      	{% endif %}
+						    {% endfor %}
+					    </ol>
+				    {% endif %}
+				   {% endif %}
+
+			    {% assign firstSeries = false %}
+		    {% endfor %}
+		  {% endif %}
+
+    {% endwrap %}
+
+    {% include footer.liquid %}

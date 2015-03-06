@@ -63,13 +63,26 @@ other_case_studies:
 <div class="container clear">
 
   <div class="content">
-  <h2>The interview</h2>
-  {% include modules/video.liquid id="dEGJ8XyZw40" %}
+  <h2>Development</h2>
+    <div class="divider divider--secondary">
+      <span class="themed divider-icon"></span>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
   </div>
 
   <div class="content">
-    <h2>The impact</h2>
+    <h2>Performance</h2>
+    <div class="divider divider--secondary">
+      <span class="themed divider-icon"></span>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
+  </div>
 
+  <div class="content">
+    <h2>Success</h2>
+    <div class="divider divider--secondary">
+      <span class="themed divider-icon"></span>
+    </div>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, itaque, velit, magni nostrum esse vero dolorem veritatis earum nisi quis pariatur eius sint beatae quos qui numquam reiciendis atque ab!</p>
   </div>
 

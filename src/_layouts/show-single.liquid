@@ -1,0 +1,74 @@
+<!-- Lets plan out the order of videos -->
+{% assign shows = page.articles[page.collection] | sort: 'date' | reverse  %}
+
+{% assign foundVideo = false %}
+{% for show in shows %}
+  {% if show.youtubeVideoID != page.youtubeVideoID %}
+    {% if foundVideo == false %}
+      {% assign nextVideo = show %}
+    {% else %}
+      {% assign prevVideo = show %}
+      {% break %}
+    {% endif %}
+  {% else %}
+    {% assign foundVideo = true %}
+  {% endif %}
+{% endfor %}
+
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+  	<!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    {% wrap content %}
+
+      <h1>{{ page.title }}</h1>
+      <h1>{{ page.subtitle }}</h1>
+
+      <!-- The YouTube embed page -->
+      {% include modules/video.liquid id=page.youtubeVideoID %}
+
+      {{ content }}
+
+      <div class="videolinks">
+      	<div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
+      		Next Video
+          {% if nextVideo != nil %}
+            <a href="{{site.baseurl}}{{nextVideo.url | canonicalize}}">
+              <div class="lastestEpisode">
+                <div class="lastestEpisode--image">
+                  <img src="http://img.youtube.com/vi/{{ nextVideo.youtubeVideoID }}/0.jpg" />
+                </div>
+                <div class="lastestEpisode--title">
+                  {{ nextVideo.title }}
+                </div>
+              </div>
+            </a>
+          {% endif %}
+      	</div>
+
+      	<div class="videolinks--prev{% if prevVideo == nil %} not-available{% endif %}">
+      		Previous video
+          {% if prevVideo != nil %}
+            <a href="{{site.baseurl}}{{prevVideo.url | canonicalize}}">
+              <div class="lastestEpisode">
+                <div class="lastestEpisode--image">
+                  <img src="http://img.youtube.com/vi/{{ prevVideo.youtubeVideoID }}/0.jpg" />
+                </div>
+                <div class="lastestEpisode--title">
+                  {{ prevVideo.title }}
+                </div>
+              </div>
+            </a>
+          {% endif %}
+      	</div>
+      </div>
+
+    {% endwrap %}
+
+    {% include footer.liquid %}
