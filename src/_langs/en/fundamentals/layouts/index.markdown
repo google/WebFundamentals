@@ -9,7 +9,7 @@ article:
   updated_on: 2014-01-06
   order: 0
 id: multi-device-layouts
-collection: home
+collection: fundamentals
 priority: 0
 ---
 

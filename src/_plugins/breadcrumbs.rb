@@ -17,7 +17,7 @@ module Jekyll
     # parent pages ready for iteration.
     def find_ancestors
       a = []
-      url = self.url.sub("/fundamentals", "")
+      url = self.url # .sub("/fundamentals", "")
       while url != "/index.html"
         pt = url.split("/")
         if pt[-1] != "index.html"
@@ -55,7 +55,7 @@ module Jekyll
     ##
     # Gets Page object that has given url. Very in-efficient O(n) solution.
     def get_page_from_url(pageurl)
-      pageurl = "/fundamentals" + pageurl
+      # pageurl = "/fundamentals" + pageurl
       return site.data['primes'][pageurl] if site.data.key? 'primes'
       site.pages.find { |page| page.url == pageurl }
     end

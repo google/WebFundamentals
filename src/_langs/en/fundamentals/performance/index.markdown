@@ -10,7 +10,7 @@ article:
   order: 4
 priority: 0
 id: performance
-collection: home
+collection: fundamentals
 ---
 
 {% comment %}

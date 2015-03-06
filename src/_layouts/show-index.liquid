@@ -29,10 +29,11 @@
 
   	<!-- Select Appropriate betterbook -->
     {% injectdata content _betterbook-shows.yaml %}
-
     {% include header.liquid %}
 
     {% wrap content %}
+
+   	 	{% include modules/breadcrumbs.liquid %}
 
 	    <h1>{{ page.title }}</h1>
 
