@@ -1,0 +1,32 @@
+.shows--videolist {
+	list-style: none;
+}
+
+.shows--videolistitem {
+	padding: 0;
+}
+
+.shows--videolistitem:before {
+	display: none;
+}
+
+.shows--header {
+	@include type--xxlarge;
+}
+
+.shows--videoseriestitle {
+	@include type--large;
+	padding-top: 0;
+}
+
+.series-list {
+	list-style: none;
+}
+
+.series-list li {
+	padding: 0;
+}
+
+.series-list li:before {
+	display: none;
+}
