@@ -9,7 +9,7 @@ article:
   updated_on: 2014-09-19
   order: 0
 id: look-and-feel
-collection: home
+collection: fundamentals
 priority: 0
 ---
 

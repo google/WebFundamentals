@@ -12,6 +12,14 @@ id: chrome-dev-summit
 title: "Chrome Dev Summit 2014"
 introduction: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
 
+scores:
+  pagespeed:
+      speed: 73
+      ux: 99
+  webpagetest:
+      value: 5000
+      result: http://www.webpagetest.org/result/150306_X0_PQF/
+
 overview:
   description: "The CDS site was the premier destination to read about all things Chrome Dev Summit, a two-day developer event about Chrome in 2014. It was used by attendees to get infos about the schedule, signup and more."
   audience: Offline and online attendees of the Chrome Dev Summit 2014.

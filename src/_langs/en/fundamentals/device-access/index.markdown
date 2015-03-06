@@ -5,7 +5,7 @@ description: "There are a surprising number of ways to integrate with and access
 introduction: "There are a surprising number of ways to integrate with and access features on the user's device, from geo location and device orientation, accessing the communication stack such as the dialer and SMS, to makeing apps sticky on the home screen. Learn how to take advantage of features that your users will love."
 snippet: "Locate, call, and snap."
 id: device-access
-collection: home
+collection: fundamentals
 authors:
   - paulkinlan
   - pbakaus

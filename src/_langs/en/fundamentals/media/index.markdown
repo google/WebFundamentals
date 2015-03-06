@@ -9,7 +9,7 @@ article:
   updated_on: 2014-01-06
   order: 3
 id: introduction-to-media
-collection: home
+collection: fundamentals
 priority: 0
 ---
 

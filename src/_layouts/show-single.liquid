@@ -26,7 +26,7 @@
     {% include header.liquid %}
 
     {% wrap content %}
-
+      {% include modules/breadcrumbs.liquid %}
       <h1>{{ page.title }}</h1>
       <h1>{{ page.subtitle }}</h1>
 
