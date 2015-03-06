@@ -89,6 +89,8 @@ This will have Jekyll build the site, run a static server to listen on port 8081
 
 On Mac, due to the number of files in the project, you will likely need to increase the maximum number of open file handles.  Use `ulimit -n 1024` to increase the maximum number of open files to 1024 from the default of 256.
 
+If you want to build a single language then run this: `grunt develop --lang=en`.
+
 
 Using project-level meta data
 =============================
