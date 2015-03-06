@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Responsiv machen"
-description: "Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Displays bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Erfahren Sie, wie Sie eine Website erstellen, die auf allen Geräten gut funktioniert."
-introduction: "Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Displays bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Jedes dieser Geräte bringt eigene Vorteile, jedoch auch Einschränkungen mit sich. Als Webentwickler wird von Ihnen erwartet, sämtliche Geräte zu unterstützen."
+description: "Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Bildschirmen bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Erfahren Sie, wie Sie eine Website erstellen, die auf allen Geräten gut funktioniert."
+introduction: "Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Bildschirmen bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Jedes dieser Geräte bringt eigene Vorteile, jedoch auch Einschränkungen mit sich. Als Webentwickler wird von Ihnen erwartet, sämtliche Geräte zu unterstützen."
 key-takeaways:
   make-responsive:
     - Immer einen Darstellungsbereich verwenden
@@ -96,7 +96,7 @@ In diesem Leitfaden nehmen wir unsere Grundstruktur mit Inhalten und verwandeln 
   </figure>
 </div>
 
-Gemäß den Prinzipien der ``Mobile First``-Webentwicklung, wonach zuerst für Mobilgeräte entwickelt wird, beginnen wir mit einem schmalen Darstellungsbereich, ähnlich dem Display eines Mobiltelefons.
+Gemäß den Prinzipien der ``Mobile First``-Webentwicklung, wonach zuerst für Mobilgeräte entwickelt wird, beginnen wir mit einem schmalen Darstellungsbereich, ähnlich dem Bildschirm eines Mobiltelefons.
 Anschließend skalieren wir für größere Geräteklassen nach oben.
 Dazu verbreitern wir den Darstellungsbereich und überprüfen, ob Design und Layout anschließend noch passen.
 
@@ -105,13 +105,13 @@ Dazu müssen wir uns auf Grundlage dessen, wie die Inhalte auf den jeweiligen Bi
 
 {% include modules/takeaway.liquid list=page.key-takeaways.make-responsive %}
 
-## Darstellungsbereich einzufügen 
+## Darstellungsbereich einfügen 
 
-Selbst bei sehr einfachen Seiten ist es obligatorisch, ein Darstellungsbereich-Meta-Tag einzufügen.
-Der Darstellungsbereich ist bei der Entwicklung einer Erfahrung für verschiedene Geräte die wichtigste Komponente.
+Selbst bei sehr einfachen Seiten ist es *obligatorisch*, ein Darstellungsbereich-Meta-Tag einzufügen.
+Der Darstellungsbereich ist die wichtigste Komponente zur Realisierung geeigneter Mehr-Geräte-Erlebnisse.
 Ohne ihn funktioniert Ihre Website auf Mobilgeräten nicht besonders gut.
 
-Der Darstellungsbereich signalisiert dem Browser, dass die Seite skaliert werden muss, damit sie auf den Bildschirm passt. Es gibt viele verschiedene Konfigurationen, die Sie für Ihren Darstellungsbereich zur Steuerung der Seitendarstellung festlegen können. Wir empfehlen Folgendes als Standard:
+Der Darstellungsbereich signalisiert dem Browser, dass die Seite skaliert werden muss, damit sie auf den Bildschirm passt. Es gibt viele verschiedene Konfigurationen, die Sie für Ihren Darstellungsbereich zur Steuerung der Seitendarstellung festlegen können. Wir empfehlen folgenden Standard:
 
 {% include_code _code/viewport.html viewport %}
 
@@ -119,7 +119,7 @@ Der Darstellungsbereich befindet sich in der Kopfzeile des Dokuments und muss nu
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
-## Bewerben einfachen Styling 
+## Einfaches Styling anwenden
 
 Unser Produkt und unser Unternehmen haben bereits ein ganz bestimmtes Branding und Richtlinien für die Schriftart in einem Styleguide.
 
@@ -138,9 +138,9 @@ Ein Styleguide stellt eine gute Möglichkeit dar, ein umfassendes Verständnis f
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
 
-### In Stilistische Bilder 
+### Ansprechende Bilder hinzufügen
 
-Im vorherigen Leitfaden haben wir Bilder hinzugefügt, die wir als Bilder zum Inhalt bezeichnet haben. Dabei handelte es sich um Bilder, die wichtig für die Beschreibung unseres Produkts waren. Stilistische Bilder sind Bilder, die zwar nichts zu den Kerninhalten beitragen, jedoch visuelle Eleganz verleihen oder dabei helfen, die Aufmerksamkeit des Nutzers auf bestimmte Inhalte zu lenken.
+Im vorherigen Leitfaden haben wir inhaltliche Bilder hinzugefügt, die wichtig für die Beschreibung unseres Produkts waren. Ansprechende Bilder sind Bilder, die zwar nichts zu den Kerninhalten beitragen, jedoch visuelle Eleganz verleihen oder dabei helfen, die Aufmerksamkeit des Nutzers auf bestimmte Inhalte zu lenken.
 
 Ein gutes Beispiel hierfür ist ein Titelbild für den Inhalt, der ohne Scrollen sichtbar ist. Dieses wird häufig dazu genutzt, Nutzer dafür zu gewinnen, mehr über das Produkt zu lesen.
 
@@ -148,7 +148,7 @@ Ein gutes Beispiel hierfür ist ein Titelbild für den Inhalt, der ohne Scrollen
   <img  src="images/narrowsite.png" alt="Website mit Design" style="max-width: 100%;">
 </div>
 
-Solche Bilder können sehr einfach ergänzt werden. In unserem Fall fügen wir eines als Hintergrund für die Kopfzeile ein und wenden es mithilfe von ein wenig einfachem CSS-Code an.
+Solche Bilder können sehr einfach hinzugefügt werden. In unserem Fall fügen wir eines als Hintergrund für die Kopfzeile ein und wenden es mithilfe von ein wenig einfachem CSS-Code an.
 
 {% highlight css %}
 #headline {
@@ -164,7 +164,7 @@ Wir haben ein einfaches Hintergrundbild ausgewählt, das unscharf ist, damit es 
 
 <br style="clear: both;">
 
-## Stellen Sie Ihre erste Haltepunkt
+## Legen Sie Ihren ersten Übergangspunkt an
 
 Das Design sieht ab 600 Pixeln in der Breite unvorteilhaft aus. In unserem Fall übersteigt die Länge einer Zeile sieben Wörter - die optimale Länge zum Lesen - und hier möchten wir es ändern.
 
@@ -263,9 +263,9 @@ Das Videoelement muss aus dem vertikalen Fluss des schmalen Darstellungsbereichs
 
 ### Bilder gekachelt darstellen
 
-Die Bilder sind für schmale Darstellungsbereiche, in der Regel die Displays von Mobilgeräten, so eingestellt, dass Sie die Breite des Bildschirms ausfüllen und vertikal gestapelt erscheinen. Eine Skalierung dieses Prinzips für breite Darstellungsbereiche ist nicht ratsam.
+Die Bilder sind für schmale Darstellungsbereiche, in der Regel die Bildschirme von Mobilgeräten, so eingestellt, dass Sie die Breite des Bildschirms ausfüllen und vertikal gestapelt erscheinen. Eine Skalierung dieses Prinzips für breite Darstellungsbereiche ist nicht ratsam.
 
-Damit die Bilder in breiten Darstellungsbereichen richtig erscheinen, werden sie auf 30 % der Container-Breite skaliert und horizontal statt vertikal ausgerichtet, wie es in schmalen Darstellungsbereichen der Fall ist. Darüber hinaus fügen wir einen Randradius und einen Feldschatten hinzu, um die Optik der Bilder zusätzlich zu verbessern.
+Damit die Bilder in breiten Darstellungsbereichen richtig erscheinen, werden sie auf 30 % der Container-Breite skaliert und horizontal statt vertikal ausgerichtet, wie es in schmalen Darstellungsbereichen der Fall ist. Darüber hinaus fügen wir eine Umrandung und Schlagschatten hinzu, um die Optik der Bilder zusätzlich zu verbessern.
 
 <img src="images/imageswide.png" style="width:100%">
 
