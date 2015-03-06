@@ -8,8 +8,8 @@
 
     <header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
       <div class="spotlight-header__container container">
+        {% include modules/breadcrumbs.liquid %}
         <h1 class="xxlarge"><strong class="subsection-number">{{page.article.written_on | date:"%B" }} case study</strong>{{ page.title }}</h1>
-        {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
         <div class="divider divider--secondary">
           <span class="themed divider-icon"></span>
         </div>

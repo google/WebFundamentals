@@ -14,7 +14,7 @@ showcase:
 
 <div class="page-header">
   <div class="container">
-    {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
+    {% include modules/breadcrumbs.liquid %}
     <header class="clear">
       <h3 class="xxlarge">All case studies</h3>
       <div class="divider">
