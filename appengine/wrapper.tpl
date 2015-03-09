@@ -66,20 +66,25 @@
 
             var initSubMenus = function() {
 
-              var initParent = function(parent, link) {
+              var parentIsOpenedClass = 'subnav-is-opened';
+              var openParent = null;
 
-                var parentIsOpenedClass = 'subnav-is-opened';
-                var parentIsOpened = false;
+              var initParent = function(parent, link) {
 
                 link.addEventListener('click', function (event) {
                   event.preventDefault();
 
-                  if (!parentIsOpened) {
-                    parentIsOpened = true;
+                  if (!openParent) {
+                    openParent = parent;
                     addClass(parent, parentIsOpenedClass);
-                  } else {
-                    parentIsOpened = false;
+                  } else if(openParent === parent) {
+                    openParent = false;
                     removeClass(parent, parentIsOpenedClass);
+                  } else {
+                    removeClass(openParent, parentIsOpenedClass);
+                    openParent = parent;
+                    addClass(parent, parentIsOpenedClass);
+                    
                   }
 
                 });
