@@ -12,9 +12,6 @@ toc:
 - title: "GitHub"
   path: https://github.com/google/web-starter-kit
   external: true
-- title: Web <strong>Showcase</strong>
-  path: /showcase/
-  in_header: false
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
