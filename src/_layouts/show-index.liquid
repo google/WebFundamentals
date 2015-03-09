@@ -54,6 +54,7 @@
 	    <!-- Previous Episodes -->
 	    {% if totalPreviousShows > 0 %}
 		    <h2>Previous Episodes</h2>
+
 		    {% assign firstSeries = true %}
 		    {% for singleSeries in series %}
 
@@ -68,21 +69,25 @@
 				    {%if seriesShows.size > 0 %}
 					    <!-- Display the latest episodes for a show series -->
 
-					    <h3>{{ singleSeries.title }}</h3>
+					    <div class="shows--videoseriestitle shows--videoseriestitle-{{ singleSeries.id }}">
+					    	<a class="smallvideo--link" href="{{site.baseurl}}{{singleSeries.url | canonicalize}}">{{ singleSeries.title }}</a>
+					    </div>
 
-					    <ol>
+					    <ol class="flatrowlist">
 					      {% for show in seriesShows %}
 					      	{% if show != latestShow %}
-					      	<a href="{{site.baseurl}}{{show.url | canonicalize}}">
-					      		<div class="lastestEpisode">
-						      		<div class="lastestEpisode--image">
-						      			<img src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
-						      		</div>
-						      		<div class="lastestEpisode--title">
-						      			{{ show.title }}
-						      		</div>
-						      	</div>
-					      	</a>
+					      	<li>
+						      	<a class="smallvideo--link" href="{{site.baseurl}}{{show.url | canonicalize}}">
+						      		<div class="smallvideo">
+							      		<div class="smallvideo--imagecontainer">
+							      			<img class="smallvideo--image" src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+							      		</div>
+							      		<div class="smallvideo--title-container">
+							      			<p class="smallvideo--title">{{ show.title }}</p>
+							      		</div>
+							      	</div>
+						      	</a>
+						      </li>
 					      	{% endif %}
 						    {% endfor %}
 					    </ol>

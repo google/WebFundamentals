@@ -3,7 +3,7 @@ id: css-triggers
 layout: show-single
 collection: http203-series-1
 title: "Frame Timing"
-description: ""
+description: "This is a video description"
 published: true
 youtubeVideoID: 4zoC3eaa9z0
 

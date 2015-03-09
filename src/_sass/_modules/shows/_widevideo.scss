@@ -1,0 +1,46 @@
+$padding: 8px !default;
+$colorBlue: #4285f4 !default;
+$image-container-width: 55%;
+
+.widevideo {
+	margin-bottom: (2 * $padding);
+}
+
+.widevideo:after {
+	content: '';
+
+	display: block;
+	clear: both;
+}
+
+.widevideo--imagecontainer {
+	width: $image-container-width;
+
+	float: left;
+}
+
+.widevideo--image {
+	margin: 0;
+}
+
+.widevideo--details {
+	width: 99% - $image-container-width;
+	float: left;
+	padding-left: $padding;
+}
+
+.widevideo--title {
+	@include type--large;
+
+	padding-top: 0;
+}
+
+@include wide {
+  .widevideo--title {
+		padding-top: 0;
+	}
+}
+
+.widevideo--description{
+	padding-top: $padding;
+}

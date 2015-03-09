@@ -33,9 +33,7 @@ Select a show or video and start exploring.
         <ol class="series-list">
         {% for series in showSeries %}
           <li>
-            <div class="shows--videoseriestitle shows--videoseriestitle-{{ series.id }}">
-              {{ series.title }}
-            </div>
+            <div class="shows--videoseriestitle shows--videoseriestitle-{{ series.id }}">{{ series.title }}</div>
             <ol class="flatrowlist">
               {% assign seriesVideos = page.articles[series.id]  | sort: 'date' %}
               {% assign displayedShows = 0 %}
@@ -43,13 +41,13 @@ Select a show or video and start exploring.
               {% for video in seriesVideos %}
                 {% if displayedShows < MAX_DISPLAYED_SHOWS %}
                 <li>
-                  <a href="{{site.baseurl}}{{video.url | canonicalize}}">
+                  <a class="smallvideo--link" href="{{site.baseurl}}{{video.url | canonicalize}}">
                     <div class="smallvideo">
-                      <div class="smallvideo--image">
-                        <img src="http://img.youtube.com/vi/{{ video.youtubeVideoID }}/0.jpg" />
+                      <div class="smallvideo--imagecontainer">
+                        <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ video.youtubeVideoID }}/0.jpg" />
                       </div>
-                      <div class="smallvideo--title">
-                        {{ video.title }}
+                      <div class="smallvideo--title-container">
+                        <p class="smallvideo--title">{{ video.title }}</p>
                       </div>
                     </div>
                   </a>

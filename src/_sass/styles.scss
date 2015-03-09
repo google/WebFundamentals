@@ -71,10 +71,13 @@
 @import "_modules/_case-study-wrapper";
 @import "_modules/_our-view";
 @import "_modules/_back-to-top";
+@import "_modules/_blanklist";
 
 // Modules for Shows
-@import "_modules/_small-video";
-@import "_modules/_flat-row-list";
+@import "_modules/shows/_small-video";
+@import "_modules/shows/_flat-row-list";
+@import "_modules/shows/_videolinks";
+@import "_modules/shows/_widevideo";
 @import "_pages/_shows-index";
 
 // Components
