@@ -11,6 +11,16 @@
   </header>
 
   <ul class="main-nav__list clear">
+
+    {% comment %}
+    <li class="main-nav__item">
+      <a class="main-nav__link main-nav__link--web main-nav__link--parent" href="/web?hl={{page.langcode}}" title="Go to /web">
+        /web
+        <i class="main-nav__icon icon icon-chevron-right"></i>
+      </a>
+    </li>
+    {% endcomment %}
+
   {% for section in page.content.toc %}
     {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
     {% assign stripTitle = section.title | strip_html %}
