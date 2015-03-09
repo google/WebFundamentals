@@ -97,9 +97,6 @@ toc:
     path: /fundamentals/resources/styleguide/
   - title: "Example Article"
     path: /fundamentals/resources/example-article/
-- title: Web <strong>Showcase</strong>
-  path: /showcase/
-  in_header: false
 - title: Shows
   path: /shows/
   in_header: false
