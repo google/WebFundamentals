@@ -1152,6 +1152,22 @@ body[dir=rtl] .main-nav__item {
           .main-nav__item--home .main-nav__link:after {
             left: 40%; } } }
 
+.main-nav__link--web {
+  border-right: 4px solid #fff;
+  margin-right: 1em; }
+  @media only screen and (max-width: 619px) {
+    .main-nav__link--web {
+      margin-right: auto;
+      margin-left: auto;
+      border-right: none; } }
+
+@media (min-width: 1043px) {
+  .main-nav__link--web {
+    border-right: 4px solid #fff;
+    margin-right: 1em;
+    margin-left: -88px; }
+ }
+
 @media only screen and (min-width: 620px) {
   .main-nav__link--parent {
     position: relative; }
@@ -1270,7 +1286,7 @@ body[dir=rtl] .main-nav__item--child {
       border-top: 5px solid #404040;
       margin-top: -5px;
       border-bottom: 2px solid #404040;
-      padding-bottom: 50px;
+      padding-bottom: 24px;
       color: #404040; } }
   .subnav-is-opened .main-nav__secondary-nav {
     display: block;

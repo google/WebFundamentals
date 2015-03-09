@@ -18,7 +18,34 @@
 
     <script type="text/javascript">
       (function(document) {
-            var toggleDocumentationMenu = function() {
+
+            var isTouch = function() {
+              return ('ontouchstart' in window) ||
+                window.DocumentTouch && document instanceof DocumentTouch;
+            };
+
+            var addClass = function (element, className) {
+              if (!element) { return; }
+              element.className = element.className.replace(/\s+$/gi, '') + ' ' + className;
+            };
+
+            var removeClass = function(element, className) {
+              if (!element) { return; }
+              element.className = element.className.replace(className, '');
+            };
+
+            var html = document.querySelector('html');
+            removeClass(html, 'no-js');
+            addClass(html, 'js');
+
+            if (isTouch()) {
+              removeClass(html, 'no-touch');
+              addClass(html, 'is-touch');
+            }
+
+
+
+            var initSmallNav = function() {
               var navBtn = document.querySelector('.main-nav__btn');
               var navList = document.querySelector('.main-nav__list');
               var navIsOpenedClass = 'nav-is-opened';
@@ -37,56 +64,49 @@
               });
             }
 
-            var toggleMainNav = function() {
-              var documentationItem =
-                  document.querySelector('.main-nav__item--documentation');
-              var documentationLink =
-                  document.querySelector('.main-nav__item--documentation > .main-nav__link');
-              var documentationIsOpenedClass = 'subnav-is-opened';
-              var documentationIsOpened = false;
+            var initSubMenus = function() {
 
-              if (documentationLink) {
-                documentationLink.addEventListener('click', function (event) {
+              var parentIsOpenedClass = 'subnav-is-opened';
+              var openParent = null;
+
+              var initParent = function(parent, link) {
+
+                link.addEventListener('click', function (event) {
                   event.preventDefault();
 
-                  if (!documentationIsOpened) {
-                    documentationIsOpened = true;
-                    addClass(documentationItem, documentationIsOpenedClass);
+                  if (!openParent) {
+                    openParent = parent;
+                    addClass(parent, parentIsOpenedClass);
+                  } else if(openParent === parent) {
+                    openParent = false;
+                    removeClass(parent, parentIsOpenedClass);
                   } else {
-                    documentationIsOpened = false;
-                    removeClass(documentationItem, documentationIsOpenedClass);
+                    removeClass(openParent, parentIsOpenedClass);
+                    openParent = parent;
+                    addClass(parent, parentIsOpenedClass);
+                    
                   }
 
                 });
-              }
-            }
 
-            var isTouch = function() {
-              return ('ontouchstart' in window) ||
-                window.DocumentTouch && document instanceof DocumentTouch;
+              };
+
+              var parents = document.querySelectorAll('.main-nav__item--has-child'), parent, link;
+
+              for (var i = 0; i < parents.length; i++) {
+                parent = parents[i];
+                link = parent.querySelector('.main-nav__link');
+                if(link) {
+                  initParent(parent, link);
+                }
+              }
+
             };
 
-            var addClass = function (element, className) {
-              if (!element) { return; }
-              element.className = element.className.replace(/\s+$/gi, '') + ' ' + className;
-            }
 
-            var removeClass = function(element, className) {
-              if (!element) { return; }
-              element.className = element.className.replace(className, '');
-            }
+            initSmallNav();
+            initSubMenus();
 
-            var html = document.querySelector('html');
-            removeClass(html, 'no-js');
-            addClass(html, 'js');
-
-            if (isTouch()) {
-              removeClass(html, 'no-touch');
-              addClass(html, 'is-touch');
-            }
-
-            toggleDocumentationMenu();
-            toggleMainNav();
           })(document);
     </script>
   </body>
