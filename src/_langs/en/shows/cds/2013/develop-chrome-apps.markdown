@@ -1,6 +1,6 @@
 ---
 id: develop-chrome-app-distribute-profit
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Develop Chrome Apps on Desktop/Mobile, Distribute and Profit"
 description: ""

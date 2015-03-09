@@ -1,6 +1,6 @@
 ---
 id: tls-all-the-things
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "TLS All the Things! Security with Performance"
 description: ""

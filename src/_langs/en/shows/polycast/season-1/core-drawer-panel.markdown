@@ -1,6 +1,6 @@
 ---
 id: core-drawer-panel
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-1
 title: "Core Drawer Panel"
 description: ""

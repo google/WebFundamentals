@@ -1,6 +1,6 @@
 ---
 id: http203-series-1
-layout: series-index
+layout: shows/series-index
 collection: http203
 title: "HTTP 203: Series 1"
 description: ""

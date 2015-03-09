@@ -1,6 +1,6 @@
 ---
 id: chrome-leadership-panel
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Chrome Leadership Panel Q&A"
 description: ""

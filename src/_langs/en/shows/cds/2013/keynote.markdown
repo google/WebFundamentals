@@ -1,6 +1,6 @@
 ---
 id: keynote
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Keynote"
 description: ""

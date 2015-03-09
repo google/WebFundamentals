@@ -1,6 +1,6 @@
 ---
 id: core-iconset
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-1
 title: "Core Iconset"
 description: ""

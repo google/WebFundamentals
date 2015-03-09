@@ -1,6 +1,6 @@
 ---
 id: routing-101
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-2
 title: "Routing 101"
 description: ""

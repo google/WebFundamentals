@@ -1,6 +1,6 @@
 ---
 id: build-mobile-apps-with-chrome-webview
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Build Mobile Apps with the Chrome WebView"
 description: ""

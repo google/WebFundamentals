@@ -1,6 +1,6 @@
 ---
 id: optimizing-network-performance
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Optimizing Network Performance"
 description: ""

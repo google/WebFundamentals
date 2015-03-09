@@ -1,6 +1,6 @@
 ---
 id: power-of-auto-bindings
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-2
 title: "The Awesome Power of Auto-Binding Templates"
 description: ""

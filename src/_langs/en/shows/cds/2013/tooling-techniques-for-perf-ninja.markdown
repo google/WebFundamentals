@@ -1,6 +1,6 @@
 ---
 id: tooling-techniques-for-the-perf-ninja
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Tooling Techniques for the Performance Ninja"
 description: ""

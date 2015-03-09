@@ -1,6 +1,6 @@
 ---
 id: best-ux-patterns-for-mobile-web-apps
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Best UX patterns for Mobile Web Apps"
 description: ""

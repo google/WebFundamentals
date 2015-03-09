@@ -1,6 +1,6 @@
 ---
 id: polycasts-season-1
-layout: series-index
+layout: shows/series-index
 collection: polycasts
 title: "Polycasts: Season 1"
 description: ""

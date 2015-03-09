@@ -1,6 +1,6 @@
 ---
 id: media-apis-for-the-web
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Media APIs for the Multi-Platform Web"
 description: ""

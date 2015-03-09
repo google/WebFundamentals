@@ -1,6 +1,6 @@
 ---
 id: devtools-for-mobile
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "DevTools for Mobile"
 description: ""

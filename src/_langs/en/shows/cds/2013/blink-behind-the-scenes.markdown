@@ -1,6 +1,6 @@
 ---
 id: blink-behind-the-scenes
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Blink: Behind the Scenes"
 description: ""

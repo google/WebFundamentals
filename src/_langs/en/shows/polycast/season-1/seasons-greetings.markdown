@@ -1,6 +1,6 @@
 ---
 id: seasons-greetings
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-1
 title: "Season's greetings!"
 description: ""

@@ -1,6 +1,6 @@
 ---
 id: the-jake-bits
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "The Jake Bits"
 description: ""

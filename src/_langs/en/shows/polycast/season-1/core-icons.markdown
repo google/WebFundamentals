@@ -1,6 +1,6 @@
 ---
 id: core-icons
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-1
 title: "Core Icons"
 description: ""

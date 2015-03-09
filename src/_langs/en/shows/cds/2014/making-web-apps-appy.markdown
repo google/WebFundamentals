@@ -1,6 +1,6 @@
 ---
 id: making-web-apps-appy
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Making Web Apps Appy"
 description: ""

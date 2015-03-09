@@ -1,6 +1,6 @@
 ---
 id: polycasts
-layout: show-index
+layout: shows/show-index
 collection: shows
 title: "Polycasts"
 description: ""

@@ -1,6 +1,6 @@
 ---
 id: web-components-and-polymer-panel
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Web Components and Polymer Panel"
 description: ""

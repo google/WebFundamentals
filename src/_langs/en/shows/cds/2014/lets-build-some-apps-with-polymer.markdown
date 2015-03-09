@@ -1,6 +1,6 @@
 ---
 id: lets-build-some-apps-with-polymer
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Let’s Build Some Apps with Polymer!"
 description: ""

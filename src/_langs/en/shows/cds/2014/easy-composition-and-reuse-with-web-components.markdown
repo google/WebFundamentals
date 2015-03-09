@@ -1,6 +1,6 @@
 ---
 id: easy-composition-and-reuse-with-web-components
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Easy Composition and Resuse with Web Components"
 description: ""

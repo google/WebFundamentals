@@ -1,6 +1,6 @@
 ---
 id: the-applied-science-of-runtime-performance
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "The Applied Science of Runtime Performance"
 description: ""
