@@ -1,10 +1,10 @@
 {% assign pages = site.pages | deepsort: 'article', 'written_on' | reverse %}<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 
-	<title>/web – Fundamentals</title>
+	<title>/web at Google</title>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
-	<id>https://developers.google.com{{ site.url }}/fundamentals/feed.xml</id>
-	<link type="text/html" href="https://developers.google.com{{ site.url }}/fundamentals/" rel="alternate"/>
+	<id>https://developers.google.com{{ site.url }}/feed.xml</id>
+	<link type="text/html" href="https://developers.google.com{{ site.url }}/" rel="alternate"/>
 	<description>All articles, tutorials, shows and case studies. Best practices for modern web development.</description>
 {% assign num = 0 %}{% for post in pages %}{% if num < 10 and post.article and post.collection != "shows" and post.layout != "show-single" and post.layout != "series-index" and post.layout != "spotlight" and post.layout != "deep-dive" and post.layout != "case-study" %}
 	<entry>
