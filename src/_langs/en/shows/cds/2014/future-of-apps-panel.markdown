@@ -1,6 +1,6 @@
 ---
 id: future-of-apps-panel
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Future of Apps Panel"
 description: ""

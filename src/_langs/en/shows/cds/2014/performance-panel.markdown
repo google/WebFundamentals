@@ -1,6 +1,6 @@
 ---
 id: performance-panel
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Performance Panel"
 description: ""

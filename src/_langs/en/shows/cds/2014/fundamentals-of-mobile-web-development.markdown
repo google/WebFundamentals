@@ -1,6 +1,6 @@
 ---
 id: fundamentals-of-mobile-web-development
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Fundamentals of Mobile Web Development"
 description: ""

@@ -1,6 +1,6 @@
 ---
 id: whats-new-in-polymer-0-5-1
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-1
 title: "What's new in Polymer 0.5.1"
 description: ""

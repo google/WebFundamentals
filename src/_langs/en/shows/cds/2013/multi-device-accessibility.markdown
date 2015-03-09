@@ -1,6 +1,6 @@
 ---
 id: multi-device-accessibility
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Multi-Device Accessibility"
 description: ""

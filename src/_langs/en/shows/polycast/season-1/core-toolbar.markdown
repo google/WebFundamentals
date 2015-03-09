@@ -1,6 +1,6 @@
 ---
 id: core-toolbar
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-1
 title: "Core Toolbar"
 description: ""

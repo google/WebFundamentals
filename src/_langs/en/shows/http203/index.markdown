@@ -1,6 +1,6 @@
 ---
 id: http203
-layout: show-index
+layout: shows/show-index
 collection: shows
 title: "HTTP 203"
 description: ""

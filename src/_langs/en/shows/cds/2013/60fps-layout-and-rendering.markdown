@@ -1,6 +1,6 @@
 ---
 id: 60fps-layout-and-rendering
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "60fps Layout and Rendering"
 description: ""

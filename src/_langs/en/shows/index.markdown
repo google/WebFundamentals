@@ -1,6 +1,6 @@
 ---
 id: shows
-layout: default
+layout: shows/default
 title: "Shows"
 description: ""
 collection: web

@@ -1,6 +1,6 @@
 ---
 id: content-switcheroo
-layout: show-single
+layout: shows/show-single
 collection: polycasts-season-2
 title: "Content Switcheroo with Core-Pages"
 description: ""

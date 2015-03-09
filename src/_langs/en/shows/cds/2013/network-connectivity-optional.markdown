@@ -1,6 +1,6 @@
 ---
 id: network-connectivity-optional
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Network Connectivity: Optional"
 description: ""

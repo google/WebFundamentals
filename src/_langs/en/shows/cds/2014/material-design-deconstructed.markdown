@@ -1,6 +1,6 @@
 ---
 id: material-design-deconstructed
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Material Design Deconstructed"
 description: ""

@@ -1,6 +1,6 @@
 ---
 id: dart-for-the-modern-web-developer
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Dart for the Modern Web Developer"
 description: ""

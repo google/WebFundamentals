@@ -1,6 +1,6 @@
 ---
 id: portable-native-client
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Portable Native Client"
 description: ""

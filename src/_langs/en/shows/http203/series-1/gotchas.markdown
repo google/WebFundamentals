@@ -1,6 +1,6 @@
 ---
 id: css-triggers
-layout: show-single
+layout: shows/show-single
 collection: http203-series-1
 title: "Gotchas"
 description: "This is a video description"

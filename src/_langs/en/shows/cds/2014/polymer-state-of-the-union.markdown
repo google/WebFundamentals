@@ -1,6 +1,6 @@
 ---
 id: polymer-state-of-the-union
-layout: show-single
+layout: shows/show-single
 collection: cds-2014
 title: "Polymer: State of the Union"
 description: ""

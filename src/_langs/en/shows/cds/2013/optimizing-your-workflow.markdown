@@ -1,6 +1,6 @@
 ---
 id: optimizing-your-workflow
-layout: show-single
+layout: shows/show-single
 collection: cds-2013
 title: "Optimizing your Workflow for a Cross-Device World"
 description: ""

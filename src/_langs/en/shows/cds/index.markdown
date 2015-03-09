@@ -1,6 +1,6 @@
 ---
 id: cds
-layout: show-index
+layout: shows/show-index
 collection: shows
 title: "Chrome Dev Summit"
 description: ""
