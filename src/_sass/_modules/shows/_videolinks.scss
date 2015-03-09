@@ -1,0 +1,27 @@
+$padding: 8px !default;
+
+.videolinks {
+	margin: (2 * $padding) 0;
+}
+
+.videolinks:after {
+	content: '';
+
+	display: block;
+	clear: both;
+}
+
+.videolinks--prev {
+	float: left;
+}
+
+.videolinks--next {
+	float: right;
+}
+
+.videolinks--description, .content .videolinks--description {
+	margin: 0;
+
+	@include type--medium;
+	text-align: center;
+}

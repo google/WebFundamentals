@@ -36,37 +36,37 @@
       {{ content }}
 
       <div class="videolinks">
-      	<div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
-      		Next Video
-          {% if nextVideo != nil %}
-            <a href="{{site.baseurl}}{{nextVideo.url | canonicalize}}">
-              <div class="lastestEpisode">
-                <div class="lastestEpisode--image">
-                  <img src="http://img.youtube.com/vi/{{ nextVideo.youtubeVideoID }}/0.jpg" />
+      	<div class="videolinks--prev{% if prevVideo == nil %} not-available{% endif %}">
+          {% if prevVideo != nil %}
+            <p class="videolinks--description">Previous video</p>
+            <a href="{{site.baseurl}}{{prevVideo.url | canonicalize}}">
+              <div class="smallvideo">
+                <div class="smallvideo--imagecontainer">
+                  <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ prevVideo.youtubeVideoID }}/0.jpg" />
                 </div>
-                <div class="lastestEpisode--title">
-                  {{ nextVideo.title }}
+                <div class="smallvideo--title-container">
+                  <p class="smallvideo--title">{{ prevVideo.title }}</p>
                 </div>
               </div>
             </a>
           {% endif %}
       	</div>
 
-      	<div class="videolinks--prev{% if prevVideo == nil %} not-available{% endif %}">
-      		Previous video
-          {% if prevVideo != nil %}
-            <a href="{{site.baseurl}}{{prevVideo.url | canonicalize}}">
-              <div class="lastestEpisode">
-                <div class="lastestEpisode--image">
-                  <img src="http://img.youtube.com/vi/{{ prevVideo.youtubeVideoID }}/0.jpg" />
+        <div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
+          {% if nextVideo != nil %}
+            <p class="videolinks--description">Next Video</p>
+            <a href="{{site.baseurl}}{{nextVideo.url | canonicalize}}">
+              <div class="smallvideo">
+                <div class="smallvideo--imagecontainer">
+                  <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ nextVideo.youtubeVideoID }}/0.jpg" />
                 </div>
-                <div class="lastestEpisode--title">
-                  {{ prevVideo.title }}
+                <div class="smallvideo--title-container">
+                  <p class="smallvideo--title">{{ nextVideo.title }}</p>
                 </div>
               </div>
             </a>
           {% endif %}
-      	</div>
+        </div>
       </div>
 
     {% endwrap %}

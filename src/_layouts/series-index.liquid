@@ -22,18 +22,25 @@
 
 	    <h2>Episodes</h2>
 
-	    <ol>
+	    <ol class="blanklist">
 	      {% for show in shows %}
-	      	<a href="{{site.baseurl}}{{show.url | canonicalize}}">
-	      		<div class="lastestEpisode">
-		      		<div class="lastestEpisode--image">
-		      			<img src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+	      <li>
+      		<div class="widevideo">
+	      		<div class="widevideo--imagecontainer">
+	      			<a href="{{site.baseurl}}{{show.url | canonicalize}}">
+	      				<img class="widevideo--image" src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+	      			</a>
+	      		</div>
+	      		<div class="widevideo--details">
+		      		<div class="widevideo--title">
+		      			<a href="{{site.baseurl}}{{show.url | canonicalize}}">{{ show.title }}</a>
 		      		</div>
-		      		<div class="lastestEpisode--title">
-		      			{{ show.title }}
+		      		<div class="widevideo--description">
+		      			{{ show.description }}
 		      		</div>
-		      	</div>
-	      	</a>
+	      		</div>
+	      	</div>
+	      </li>
 		    {% endfor %}
 	    </ol>
 

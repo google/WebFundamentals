@@ -1,0 +1,42 @@
+$colorBlue: #4285f4 !default;
+$padding: 8px !default;
+$lineHeight: 26px !default;
+
+.smallvideo {
+	width: 200px;
+
+	position: relative;
+}
+
+.smallvideo--link {
+	display: block;
+}
+
+.smallvideo--imagecontainer {
+
+}
+
+.smallvideo--image {
+	margin: 0;
+}
+
+.smallvideo--title {
+	width: 100%;
+	height: (2 * $lineHeight);
+
+	padding: 0;
+	margin: 0;
+
+	line-height: $lineHeight;
+	overflow: hidden;
+
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.smallvideo--title-container {
+	width: 100%;
+
+	padding: $padding;
+
+	background: $colorBlue;
+}

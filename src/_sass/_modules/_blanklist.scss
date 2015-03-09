@@ -1,0 +1,15 @@
+.blanklist, .content > .blanklist {
+	list-style: none;
+
+	padding: 0;
+	margin: 0;
+}
+
+.blanklist li {
+	padding: 0;
+	margin: 0;
+}
+
+.blanklist li:before {
+	display: none;
+}
