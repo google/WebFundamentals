@@ -22,7 +22,7 @@ the Google Developer team related to web.
 
 Select a show or video and start exploring.
 
-<ol class="shows--videolist">
+<ol class="shows--videolist blanklist">
   {% for show in shows %}
     <li class="shows--videolistitem">
       <div class="shows--header shows--header-{{ show.id }}">
