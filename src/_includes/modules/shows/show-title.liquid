@@ -1,7 +1,12 @@
 <!-- Title of the show -->
-<div class="show--title-container g-wide--full">
-  <h1 class="show--title show--title-{{ include.showid }} container">
+<div class="showtitle--title-container g-wide--full">
+  <h1 class="showtitle--title showtitle--title-{{ include.showid }} container">
     {{ include.title }}
   </h1>
+  {% if include.subtitle %}
+  <h2 class="showtitle--subtitle showtitle--subtitle-{{ include.showid }} container">
+  	{{ include.subtitle }}
+  </h2>
+  {% endif %}
 </div>
 <div class="clear"></div>

@@ -103,16 +103,7 @@
                 <ol class="showhome--series-flatrowlist flatrowlist">
                   {% for show in seriesShows %}
                     <li>
-                      <a class="smallvideo--link smallvideo--link-{{ page.id }}" href="{{site.baseurl}}{{show.url | canonicalize}}">
-                        <div class="smallvideo smallvideo-{{page.id}}">
-                          <div class="smallvideo--imagecontainer">
-                            <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
-                          </div>
-                          <div class="smallvideo--title-container smallvideo--title-container-{{page.id}}">
-                            <p class="smallvideo--title smallvideo--title-{{page.id}}">{{ show.title }}</p>
-                          </div>
-                        </div>
-                      </a>
+                      {% include modules/shows/small-video.liquid video=show showid=page.id %}
                     </li>
                   {% endfor %}
                 </ol>

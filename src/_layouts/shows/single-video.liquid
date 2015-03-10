@@ -1,19 +1,33 @@
 <!-- Lets plan out the order of videos -->
-{% assign shows = page.articles[page.collection] | sort: 'date' | reverse  %}
+{% assign videos = page.articles[page.collection] | sort: 'date' | reverse  %}
 
 {% assign foundVideo = false %}
-{% for show in shows %}
-  {% if show.youtubeVideoID != page.youtubeVideoID %}
+{% for video in videos %}
+  {% if video.youtubeVideoID != page.youtubeVideoID %}
     {% if foundVideo == false %}
-      {% assign nextVideo = show %}
+      {% assign nextVideo = video %}
     {% else %}
-      {% assign prevVideo = show %}
+      {% assign prevVideo = video %}
       {% break %}
     {% endif %}
   {% else %}
     {% assign foundVideo = true %}
   {% endif %}
 {% endfor %}
+
+{% assign showDetails = page.articles[page.showid] %}
+
+{% assign showDetails = null %}
+{% assign shows = page.articles['shows'] | sort: 'title'  %}
+{% for show in shows %}
+  {% if show.id == page.showid %}
+    {% assign showDetails = show %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+
+  <!-- Template Starts Here -->
 
     {% include head.liquid %}
   </head>
@@ -28,54 +42,57 @@
 
 
 
-
-
-    {% include modules/shows/show-title.liquid title=page.title showid=page.showid %}
+    {% include modules/shows/show-title.liquid title=showDetails.title subtitle=page.title showid=page.showid %}
 
 
 
 
 
     {% wrap content %}
-      {% include modules/breadcrumbs.liquid %}
-      <h1>{{ page.title }}</h1>
-      <h1>{{ page.subtitle }}</h1>
 
-      <!-- The YouTube embed page -->
+
+
+
+
+      {% include modules/breadcrumbs.liquid %}
+
+
+
+
+
+
+      <!-- YouTube embed -->
       {% include modules/video.liquid id=page.youtubeVideoID %}
+
+
+
 
       {{ content }}
 
+
+
+
+
+      <!-- Next and Previous Video Links -->
       <div class="videolinks">
+
+
+
+        <!-- Previous Video -->
       	<div class="videolinks--prev{% if prevVideo == nil %} not-available{% endif %}">
           {% if prevVideo != nil %}
             <p class="videolinks--description">Previous video</p>
-            <a href="{{site.baseurl}}{{prevVideo.url | canonicalize}}">
-              <div class="smallvideo">
-                <div class="smallvideo--imagecontainer">
-                  <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ prevVideo.youtubeVideoID }}/0.jpg" />
-                </div>
-                <div class="smallvideo--title-container">
-                  <p class="smallvideo--title">{{ prevVideo.title }}</p>
-                </div>
-              </div>
-            </a>
+            {% include modules/shows/small-video.liquid video=prevVideo showid=page.showid %}
           {% endif %}
       	</div>
 
+
+
+        <!-- Next Video -->
         <div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
           {% if nextVideo != nil %}
             <p class="videolinks--description">Next Video</p>
-            <a href="{{site.baseurl}}{{nextVideo.url | canonicalize}}">
-              <div class="smallvideo">
-                <div class="smallvideo--imagecontainer">
-                  <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ nextVideo.youtubeVideoID }}/0.jpg" />
-                </div>
-                <div class="smallvideo--title-container">
-                  <p class="smallvideo--title">{{ nextVideo.title }}</p>
-                </div>
-              </div>
-            </a>
+            {% include modules/shows/small-video.liquid video=nextVideo showid=page.showid %}
           {% endif %}
         </div>
       </div>
