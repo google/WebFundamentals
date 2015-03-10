@@ -3725,11 +3725,11 @@ div.related-items-on-spotlight {
 .showhome--series-flatrowlist {
   padding-top: 8px; }
 
-.showhome--title-container {
+.show--title-container {
   padding: 200px 0 50px 0;
   background-color: black; }
 
-.showhome--title-http203 {
+.show--title-http203 {
   font-family: 'Courier New', Courier;
   color: white; }
 
@@ -3737,7 +3737,7 @@ div.related-items-on-spotlight {
   font-family: 'Courier New', Courier;
   color: black; }
 
-.smallvideo--title-container-http203 {
+.smallvideo--title-container-http203, .smallvideo--link {
   font-family: 'Courier New', Courier;
   color: white;
   background-color: black; }

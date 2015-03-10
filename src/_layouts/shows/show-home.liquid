@@ -22,6 +22,11 @@
   {% endfor %}
 {% endif %}
 
+
+
+
+
+  <!-- Template Starts Here -->
     {% include head.liquid %}
   </head>
 
@@ -32,13 +37,15 @@
     {% include header.liquid %}
 
 
-    <!-- Title of the show -->
-    <div class="showhome--title-container g-wide--full">
-      <h1 class="showhome--title showhome--title-{{ page.id }} container">
-        {{ page.title }}
-      </h1>
-    </div>
-    <div class="clear"></div>
+
+
+
+
+    {% include modules/shows/show-title.liquid title=page.title showid=page.showid %}
+
+
+
+
 
 
     {% wrap content %}
@@ -86,7 +93,7 @@
 
                 <!-- Series title -->
                 <h3 class="showhome--series-title showhome--series-title-{{ page.id }} g-wide--full">
-                  <a class="smallvideo--link" href="{{site.baseurl}}{{singleSeries.url | canonicalize}}">{{ singleSeries.title }}</a>
+                  <a href="{{site.baseurl}}{{singleSeries.url | canonicalize}}">{{ singleSeries.title }}</a>
                 </h3>
                 <div class="clear"></div>
 
@@ -96,7 +103,7 @@
                 <ol class="showhome--series-flatrowlist flatrowlist">
                   {% for show in seriesShows %}
                     <li>
-                      <a class="smallvideo--link" href="{{site.baseurl}}{{show.url | canonicalize}}">
+                      <a class="smallvideo--link smallvideo--link-{{ page.id }}" href="{{site.baseurl}}{{show.url | canonicalize}}">
                         <div class="smallvideo smallvideo-{{page.id}}">
                           <div class="smallvideo--imagecontainer">
                             <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />

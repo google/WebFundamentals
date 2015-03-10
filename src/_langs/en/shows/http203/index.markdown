@@ -1,5 +1,6 @@
 ---
 id: http203
+showid: http203
 layout: shows/show-home
 collection: shows
 title: "HTTP 203"
