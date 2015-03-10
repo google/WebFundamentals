@@ -3577,7 +3577,8 @@ div.related-items-on-spotlight {
   position: relative; }
 
 .smallvideo--link {
-  display: block; }
+  display: block;
+  color: white; }
 
 .smallvideo--image {
   margin: 0; }
@@ -3589,7 +3590,7 @@ div.related-items-on-spotlight {
   margin: 0;
   line-height: 26px;
   overflow: hidden;
-  color: white; }
+  color: inherit; }
 
 .smallvideo--title-container {
   width: 100%;
@@ -3704,10 +3705,17 @@ div.related-items-on-spotlight {
   padding-top: 8px; }
 
 .showtitle--title, .showtitle--subtitle {
-  font-family: inherit; }
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: inherit;
+  color: inherit; }
 
 .showtitle--subtitle {
   padding-top: 0; }
+
+.showtitle--title-container {
+  padding-top: 36px;
+  padding-bottom: 36px; }
 
 .showhome--subheading {
   padding-top: 32px; }
@@ -3731,6 +3739,12 @@ div.related-items-on-spotlight {
 .showhome--series-flatrowlist {
   padding-top: 8px; }
 
+.showhome--series {
+  padding-top: 32px; }
+
+.showhome--series-first {
+  padding-top: 0; }
+
 .showtitle--title-container-http203 {
   font-family: 'Courier New', Courier;
   padding: 200px 0 50px 0;
@@ -3746,10 +3760,45 @@ div.related-items-on-spotlight {
   font-family: 'Courier New', Courier;
   color: black; }
 
-.smallvideo--title-container-http203, .smallvideo--link {
+.smallvideo--title-container-http203, .smallvideo--link-http203 {
   font-family: 'Courier New', Courier;
   color: white;
   background-color: black; }
+
+.showtitle--title-container-polycasts {
+  background-color: #687FF6;
+  color: white; }
+
+.showtitle--title-polycasts {
+  font-weight: 500; }
+
+.showtitle--subtitle-polycasts {
+  font-size: 16px;
+  line-height: 1.625em;
+  /* 26px */
+  padding-top: 1.625em;
+  padding-bottom: 0;
+  letter-spacing: 0;
+  padding-top: 0; }
+  @media only screen and (min-width: 800px) {
+    .showtitle--subtitle-polycasts {
+      color: #404040;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.3em;
+      /* 26px */
+      padding-top: 1.3em;
+      padding-bottom: 0;
+      letter-spacing: -0.3px; } }
+
+@media only screen and (min-width: 800px) {
+  .showtitle--subtitle-polycasts {
+    padding-top: 0;
+    color: inherit; }
+ }
+
+.smallvideo--title-container-polycasts, .smallvideo--link {
+  background-color: #687FF6; }
 
 /**
 *

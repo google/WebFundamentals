@@ -1,7 +1,16 @@
 .showtitle--title, .showtitle--subtitle {
+	padding-top: 0;
+	padding-bottom: 0;
+
 	font-family: inherit;
+	color: inherit;
 }
 
 .showtitle--subtitle {
 	padding-top: 0;
+}
+
+.showtitle--title-container {
+	padding-top: 36px;
+	padding-bottom: 36px;
 }

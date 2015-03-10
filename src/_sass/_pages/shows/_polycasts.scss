@@ -1,0 +1,32 @@
+$polycastColor: #687FF6;
+
+.showtitle--title-container-polycasts {
+	background-color: #687FF6;
+	color: white;
+}
+
+.showtitle--title-polycasts {
+	font-weight: 500;
+}
+
+.showtitle--subtitle-polycasts {
+	@include type--medium;
+
+	padding-top: 0;
+}
+
+@include wide {
+  .showtitle--subtitle-polycasts {
+		padding-top: 0;
+
+		color: inherit;
+	}
+}
+
+.showhome--series-title-polycasts, .showhome--series-title-polycasts a {
+
+}
+
+.smallvideo--title-container-polycasts, .smallvideo--link {
+	background-color: $polycastColor;
+}
