@@ -21,3 +21,11 @@ $padding: 8px !default;
 .showhome--series-flatrowlist {
 	padding-top: $padding;
 }
+
+.showhome--series {
+	padding-top: $padding * 4;
+}
+
+.showhome--series-first {
+	padding-top: 0;
+}

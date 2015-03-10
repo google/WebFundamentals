@@ -10,6 +10,7 @@ $lineHeight: 26px !default;
 
 .smallvideo--link {
 	display: block;
+	color: rgba(255, 255, 255, 1.0);
 }
 
 .smallvideo--imagecontainer {
@@ -30,7 +31,7 @@ $lineHeight: 26px !default;
 	line-height: $lineHeight;
 	overflow: hidden;
 
-	color: rgba(255, 255, 255, 1.0);
+	color: inherit;
 }
 
 .smallvideo--title-container {

@@ -4,6 +4,7 @@ showid: polycasts
 layout: shows/show-home
 collection: shows
 title: "Polycasts"
+subtitle: "with Rob Dodson"
 description: ""
 published: true
 
