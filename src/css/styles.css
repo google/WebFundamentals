@@ -3703,6 +3703,12 @@ div.related-items-on-spotlight {
 .widevideo--description {
   padding-top: 8px; }
 
+.showtitle--title, .showtitle--subtitle {
+  font-family: inherit; }
+
+.showtitle--subtitle {
+  padding-top: 0; }
+
 .showhome--subheading {
   padding-top: 32px; }
 
@@ -3725,13 +3731,16 @@ div.related-items-on-spotlight {
 .showhome--series-flatrowlist {
   padding-top: 8px; }
 
-.show--title-container {
+.showtitle--title-container {
+  font-family: 'Courier New', Courier;
   padding: 200px 0 50px 0;
   background-color: black; }
 
-.show--title-http203 {
-  font-family: 'Courier New', Courier;
+.showtitle--title-http203 {
   color: white; }
+
+.showtitle--subtitle-http203 {
+  color: #838283; }
 
 .showhome--series-title-http203, .showhome--series-title-http203 a {
   font-family: 'Courier New', Courier;
