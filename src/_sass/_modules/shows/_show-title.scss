@@ -8,9 +8,19 @@
 
 .showtitle--subtitle {
 	padding-top: 0;
+
+	color: inherit;
 }
 
 .showtitle--title-container {
 	padding-top: 36px;
 	padding-bottom: 36px;
+}
+
+@include wide {
+  .showtitle--subtitle {
+		padding-top: 0;
+
+		color: inherit;
+	}
 }

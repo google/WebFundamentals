@@ -1,7 +1,7 @@
 $polycastColor: #687FF6;
 
 .showtitle--title-container-polycasts {
-	background-color: #687FF6;
+	background-color: $polycastColor;
 	color: white;
 }
 
@@ -13,6 +13,7 @@ $polycastColor: #687FF6;
 	@include type--medium;
 
 	padding-top: 0;
+	color: inherit;
 }
 
 @include wide {
@@ -27,6 +28,6 @@ $polycastColor: #687FF6;
 
 }
 
-.smallvideo--title-container-polycasts, .smallvideo--link {
+.smallvideo--title-container-polycasts, .smallvideo--link-polycasts {
 	background-color: $polycastColor;
 }
