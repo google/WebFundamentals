@@ -1,6 +1,6 @@
 ---
 id: css-triggers
-layout: shows/show-single
+layout: shows/single-video
 collection: http203-series-1
 title: "Frame Timing"
 description: "This is a video description"

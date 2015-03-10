@@ -1,6 +1,7 @@
 ---
 id: css-triggers
-layout: shows/show-single
+showid: http203
+layout: shows/single-video
 collection: http203-series-1
 title: "CSS Triggers"
 description: "In today's episode Jake and Paul discuss the brand spanking new CSSTriggers.com."

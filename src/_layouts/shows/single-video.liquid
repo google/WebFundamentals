@@ -25,6 +25,17 @@
 
     {% include header.liquid %}
 
+
+
+
+
+
+    {% include modules/shows/show-title.liquid title=page.title showid=page.showid %}
+
+
+
+
+
     {% wrap content %}
       {% include modules/breadcrumbs.liquid %}
       <h1>{{ page.title }}</h1>
