@@ -73,12 +73,13 @@
 @import "_modules/_back-to-top";
 @import "_modules/_blanklist";
 
-// Modules for Shows
+// Sass for Shows
 @import "_modules/shows/_small-video";
 @import "_modules/shows/_flat-row-list";
 @import "_modules/shows/_videolinks";
 @import "_modules/shows/_widevideo";
-@import "_pages/_shows-index";
+@import "_pages/shows/_shows-home";
+@import "_pages/shows/_http203";
 
 // Components
 @import "_components/_grid";

@@ -4,7 +4,7 @@ toc:
   home: true
 - title: HTTP 203
   path: /shows/http203/
-- title: Polycast
-  path: /shows/polycast/
+- title: Polycasts
+  path: /shows/polycasts/
 - title: Chrome Dev Summit
   path: /shows/cds/
