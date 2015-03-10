@@ -234,6 +234,8 @@ module.exports = function(grunt) {
 		grunt.log.writeln('Determining latest web-starter-kit version..');
 
 		latest('google', 'web-starter-kit', function(release, err) {
+			grunt.log.writeln('release: ' + JSON.stringify(release));
+			grunt.log.writeln('err: ' + JSON.stringify(err));
 			if (err) {
 				grunt.verbose.or.write('Failed to retrieve latest web-starter-kit release information').error().error(err.message);
 			} else {
@@ -241,6 +243,7 @@ module.exports = function(grunt) {
 				grunt.log.writeln('Saved release information under: ' + out);
 				/*jshint camelcase: false */
 				/*ignore the casing on the variables. These come directly from the Githup API.*/
+
 				grunt.file.write(out,
 					'wsk-tag: ' + release.tag_name + '\n' +
 					'wsk-name: ' + release.name + '\n' +
