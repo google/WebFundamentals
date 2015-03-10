@@ -3597,7 +3597,9 @@ div.related-items-on-spotlight {
   background: #4285f4; }
 
 .flatrowlist {
-  display: block; }
+  display: block;
+  margin: 0;
+  padding: 0; }
 
 .content > .flatrowlist {
   list-style: none;
@@ -3701,69 +3703,44 @@ div.related-items-on-spotlight {
 .widevideo--description {
   padding-top: 8px; }
 
-.shows--videolist {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
+.showhome--subheading {
+  padding-top: 32px; }
 
-.shows--videolistitem {
-  padding: 0; }
-
-.shows--videolistitem:before {
-  display: none; }
-
-.shows--header {
-  color: #404040;
-  font-family: "Roboto Condensed", Helvetica, sans-serif;
-  font-size: 42px;
-  font-weight: 300;
-  line-height: 1.2381em;
-  /* 52px */
-  padding-top: 0.619em;
-  padding-bottom: 0;
-  letter-spacing: -0.3px; }
-  @media only screen and (min-width: 800px) {
-    .shows--header {
-      color: #404040;
-      font-family: "Roboto Condensed", Helvetica, sans-serif;
-      font-size: 68px;
-      font-weight: 300;
-      line-height: 1.1471em;
-      /* 78px */
-      padding-top: 0.3824em;
-      padding-bottom: 0;
-      letter-spacing: -3px; } }
-
-.shows--videoseriestitle {
-  color: #404040;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.3em;
+.showhome--subheading-description {
+  font-size: 13px;
+  line-height: 2em;
   /* 26px */
-  padding-top: 1.3em;
+  padding-top: 2em;
   padding-bottom: 0;
-  letter-spacing: -0.3px;
-  padding-top: 0; }
-  @media only screen and (min-width: 800px) {
-    .shows--videoseriestitle {
-      color: #404040;
-      font-family: "Roboto Condensed", Helvetica, sans-serif;
-      font-size: 26px;
-      font-weight: 300;
-      line-height: 1em;
-      /* 26px */
-      padding-top: 1em;
-      padding-bottom: 0;
-      letter-spacing: -0.3px; } }
+  letter-spacing: 0; }
 
-.series-list {
-  list-style: none; }
-
-.series-list li {
+.showhome--subheading-title, .content .showhome--subheading-title {
+  margin: 0;
   padding: 0; }
 
-.series-list li:before {
-  display: none; }
+.showhome--series-title, .content .showhome--series-title {
+  margin: 0;
+  padding: 0; }
+
+.showhome--series-flatrowlist {
+  padding-top: 8px; }
+
+.showhome--title-container {
+  padding: 200px 0 50px 0;
+  background-color: black; }
+
+.showhome--title-http203 {
+  font-family: 'Courier New', Courier;
+  color: white; }
+
+.showhome--series-title-http203, .showhome--series-title-http203 a {
+  font-family: 'Courier New', Courier;
+  color: black; }
+
+.smallvideo--title-container-http203 {
+  font-family: 'Courier New', Courier;
+  color: white;
+  background-color: black; }
 
 /**
 *

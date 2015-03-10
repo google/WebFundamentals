@@ -2,7 +2,7 @@
 id: http203-series-1
 layout: shows/series-index
 collection: http203
-title: "HTTP 203: Series 1"
+title: "Series 1"
 description: ""
 published: true
 

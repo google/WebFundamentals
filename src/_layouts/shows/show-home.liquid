@@ -1,0 +1,129 @@
+<!-- Lets plan out the order of videos -->
+{% if page.articles[page.id] %}
+  {% assign series = page.articles[page.id] | sort: 'date' | reverse  %}
+  {% assign latestSeries = series | first %}
+  {% if page.articles[latestSeries.id] %}
+    {% assign latestShows = page.articles[latestSeries.id] | sort: 'date' | reverse %}
+    {% assign latestShow = latestShows | first %}
+  {% endif %}
+
+  {% assign totalPreviousShows = 0 %}
+  {% for singleSeries in series %}
+    {% if page.articles[singleSeries.id] %}
+      {% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' | reverse %}
+      {%if seriesShows.size > 0 %}
+        {% for show in seriesShows %}
+          {% if show != latestShow %}
+              {% assign totalPreviousShows = totalPreviousShows | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+    <!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+    {% include header.liquid %}
+
+
+    <!-- Title of the show -->
+    <div class="showhome--title-container g-wide--full">
+      <h1 class="showhome--title showhome--title-{{ page.id }} container">
+        {{ page.title }}
+      </h1>
+    </div>
+    <div class="clear"></div>
+
+
+    {% wrap content %}
+
+
+
+      <!-- Breadcrumb -->
+      {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
+
+
+      <!-- Display content from the markdown -->
+      {{ content }}
+
+
+
+      <!-- Latest Episode -->
+      {% if latestShow %}
+        <div class="showhome--subheading">
+          <p class="showhome--subheading-description">Latest Episode</p>
+          <h2 class="showhome--subheading-title">{{ latestShow.title }}</h2>
+        </div>
+        {% include modules/video.liquid id=latestShow.youtubeVideoID %}
+      {% endif %}
+
+
+
+
+      <!-- Previous Episodes -->
+      {% if totalPreviousShows > 0 %}
+        <div class="showhome--subheading">
+          <p class="showhome--subheading-description">Previous Episodes</p>
+        </div>
+
+        {% for singleSeries in series %}
+          {% if page.articles[singleSeries.id] %}
+            {% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' %}
+            {%if seriesShows.size > 0 %}
+
+
+
+              <!-- We have a series to display -->
+              <div class="showhome--series showhome--series-{{ pageid}}">
+
+
+
+                <!-- Series title -->
+                <h3 class="showhome--series-title showhome--series-title-{{ page.id }} g-wide--full">
+                  <a class="smallvideo--link" href="{{site.baseurl}}{{singleSeries.url | canonicalize}}">{{ singleSeries.title }}</a>
+                </h3>
+                <div class="clear"></div>
+
+
+
+                <!-- List of Videos -->
+                <ol class="showhome--series-flatrowlist flatrowlist">
+                  {% for show in seriesShows %}
+                    <li>
+                      <a class="smallvideo--link" href="{{site.baseurl}}{{show.url | canonicalize}}">
+                        <div class="smallvideo smallvideo-{{page.id}}">
+                          <div class="smallvideo--imagecontainer">
+                            <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+                          </div>
+                          <div class="smallvideo--title-container smallvideo--title-container-{{page.id}}">
+                            <p class="smallvideo--title smallvideo--title-{{page.id}}">{{ show.title }}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ol>
+
+
+
+
+              </div>
+
+
+
+            {% endif %}
+           {% endif %}
+
+          {% assign firstSeries = false %}
+        {% endfor %}
+      {% endif %}
+
+    {% endwrap %}
+
+    {% include footer.liquid %}

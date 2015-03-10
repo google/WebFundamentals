@@ -1,6 +1,6 @@
 ---
 id: polycasts
-layout: shows/show-index
+layout: shows/show-home
 collection: shows
 title: "Polycasts"
 description: ""
@@ -11,7 +11,7 @@ article:
   updated_on: 2015-03-06
 ---
 
-TODO: Intro to Polycast
+TODO: Intro to Polycasts
 
 TODO: Who should watch?
 
