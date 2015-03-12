@@ -1,7 +1,23 @@
 toc:
 - title: "Web <strong>Fundamentals</strong>"
   path: /fundamentals/
+  hasSubNav: true
   home: true
+  section:
+    - title: "<strong>/Web</strong"
+      path: /
+    #- title: "Web <strong>Fundamentals</strong"
+    #  path: /fundamentals/
+    - title: "Web <strong>Starter Kit</strong>"
+      path: /starter-kit/
+    - title: "Web <strong>Shows</strong>"
+      path: /shows/
+    - title: "Web <strong>Primers</strong>"
+      path: /primers/
+    - title: "Tools"
+      path: /tools/
+    - title: "Web <strong>Showcase</strong>"
+      path: /showcase/
 - title: "Get Started"
   path: /fundamentals/getting-started/
 - title: "Documentation"
