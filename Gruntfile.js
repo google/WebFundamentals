@@ -290,7 +290,7 @@ module.exports = function(grunt) {
       });
     }
 
-    var cfgfiles = 'config/wsk-version.json,config/common.yml,config/' + cfgname + '.yml';
+    var cfgfiles = 'config/common.yml,config/' + cfgname + '.yml';
     var args = ['exec', 'jekyll', 'build', '--config', cfgfiles, '-t'];
     var spawnJekyll = function(lang, callback) {
       var opts = {env: process.env, stdio: 'inherit'};
