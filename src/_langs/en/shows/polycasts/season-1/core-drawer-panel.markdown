@@ -6,9 +6,9 @@ collection: polycasts-season-1
 title: "Core Drawer Panel"
 description: ""
 published: true
-youtubeVideoID: GAjpaM4HcCQ
+showYoutubeID: GAjpaM4HcCQ
 
-date: 2014-11-17
+date: 2014-11-17 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

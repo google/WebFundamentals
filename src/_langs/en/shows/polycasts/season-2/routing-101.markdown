@@ -6,14 +6,16 @@ collection: polycasts-season-2
 title: "Routing 101"
 description: ""
 published: true
-youtubeVideoID: iDQqP5Yyczg
+showYoutubeID: iDQqP5Yyczg
 
-date: 2015-02-23
+date: 2015-02-23 00:00:00
 article:
   written_on: 2015-03-06
   updated_on: 2015-03-06
 
 ---
+
+Routing 101
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
 

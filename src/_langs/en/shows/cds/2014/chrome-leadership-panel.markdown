@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Chrome Leadership Panel"
 description: ""
 published: true
-youtubeVideoID: ztHMwIAbZ5M
+showYoutubeID: ztHMwIAbZ5M
 
 date: 2014-11-21 13:00:00
 article:

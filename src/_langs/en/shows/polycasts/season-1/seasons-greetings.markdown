@@ -6,9 +6,9 @@ collection: polycasts-season-1
 title: "Season's greetings!"
 description: ""
 published: true
-youtubeVideoID: aDQUYs-0hxQ
+showYoutubeID: aDQUYs-0hxQ
 
-date: 2014-12-15
+date: 2014-12-15 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

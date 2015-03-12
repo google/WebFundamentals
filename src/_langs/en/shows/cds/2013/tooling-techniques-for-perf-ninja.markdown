@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Tooling Techniques for the Performance Ninja"
 description: ""
 published: true
-youtubeVideoID: 8MMmg3bDOjc
+showYoutubeID: 8MMmg3bDOjc
 
 date: 2013-11-20 11:00:00
 article:

@@ -6,9 +6,9 @@ collection: http203-series-1
 title: "3. Frame Timing API"
 description: "This is a video description"
 published: true
-youtubeVideoID: 4zoC3eaa9z0
+showYoutubeID: 4zoC3eaa9z0
 
-date: 2014-11-18
+date: 2014-11-18 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

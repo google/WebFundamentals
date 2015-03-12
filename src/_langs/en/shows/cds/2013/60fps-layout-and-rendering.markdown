@@ -6,7 +6,7 @@ collection: cds-2013
 title: "60fps Layout and Rendering"
 description: ""
 published: true
-youtubeVideoID: YyQYhhy1dZI
+showYoutubeID: YyQYhhy1dZI
 
 date: 2013-11-20 12:00:00
 article:

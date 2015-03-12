@@ -1,0 +1,56 @@
+{% assign MAX_NUM_OF_VIDEOS = 20 %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+
+	<title>{{include.title}}</title>
+	<description>{{include.description}}</description>
+
+	<link type="text/html" href="{{ include.link }}" rel="alternate"/>
+	<icon>https://developers.google.com/web/favicon.ico</icon>
+	<id>{{include.id}}</id>
+
+	{% assign num = 0 %}
+	{% for video in include.videos %}
+		{% if num > MAX_NUM_OF_VIDEOS %}
+			{% break %}
+		{% endif %}
+
+	<entry>
+		<published>{{ video.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+		<updated>{{ video.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+
+		{% assign seriesPage = video.parent %}
+
+		{% capture title %}{% if include.showSeriesInTitle%}{{ seriesPage.title | xml_escape }} – {% endif %}{{ video.title | xml_escape }}{% endcapture %}
+		<title>{{title}}</title>
+
+
+
+		{% if video.introduction %}
+
+		<content type="html">{{ video.introduction | xml_escape }}</content>
+
+		{% elsif video.description %}
+
+		<content type="html">{{ video.description | xml_escape }}</content>
+
+		{% endif %}
+
+
+
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}" />
+
+		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
+
+		{% if video.authors %}
+			<author><name>
+				{% for author in video.authors %}
+				{% assign contributor = site.data["contributors"][author] %}
+				{{contributor.name.given}} {{contributor.name.family}}
+				{% if forloop.last == false %}, {% endif %}
+				{% endfor %}
+			</name></author>
+		{% endif %}
+	</entry>
+	{% assign num = num | plus: 1 %}
+	{% endfor %}
+</feed>

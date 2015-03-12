@@ -22,8 +22,11 @@
 <link rel="alternate" hreflang="{{translated_page.langcode}}" href="/web{{page.url}}?hl={{translated_page.langcode}}" />
 {% endfor %}
 
+{% if include.feedUrl %}
+<link rel="alternate" type="application/rss+xml" title="{{include.feedName}}" href="{{site.baseurl}}{{include.feedUrl}}">
+{% else %}
 <link rel="alternate" type="application/rss+xml" title="Fundamentals" href="{{site.baseurl}}/fundamentals/feed.xml">
-
+{% endif %}
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />

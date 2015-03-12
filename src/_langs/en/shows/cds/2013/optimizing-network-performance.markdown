@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Optimizing Network Performance"
 description: ""
 published: true
-youtubeVideoID: MOEiQ6sjeaI
+showYoutubeID: MOEiQ6sjeaI
 
 date: 2013-11-20 11:30:00
 article:

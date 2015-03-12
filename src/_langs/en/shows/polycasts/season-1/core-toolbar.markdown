@@ -6,9 +6,9 @@ collection: polycasts-season-1
 title: "Core Toolbar"
 description: ""
 published: true
-youtubeVideoID: qDhHdi8RtwI
+showYoutubeID: qDhHdi8RtwI
 
-date: 2014-10-20
+date: 2014-10-20 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

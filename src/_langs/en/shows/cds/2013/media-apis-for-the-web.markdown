@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Media APIs for the Multi-Platform Web"
 description: ""
 published: true
-youtubeVideoID: l-BA9Ee2XuM
+showYoutubeID: l-BA9Ee2XuM
 
 date: 2013-11-20 10:30:00
 article:

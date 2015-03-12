@@ -27,7 +27,8 @@
 
 
   <!-- Template Starts Here -->
-    {% include head.liquid %}
+    {% capture feedUrl %}/shows/{{page.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedUrl=feedUrl feedName=page.title %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
@@ -67,7 +68,7 @@
           <p class="showhome--subheading-description">Latest Episode</p>
           <h2 class="showhome--subheading-title">{{ latestShow.title }}</h2>
         </div>
-        {% include modules/video.liquid id=latestShow.youtubeVideoID %}
+        {% include modules/video.liquid id=latestShow.showYoutubeID %}
       {% endif %}
 
 

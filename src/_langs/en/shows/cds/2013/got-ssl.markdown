@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Got SSL?"
 description: ""
 published: true
-youtubeVideoID: sJ8EX61fFWQ
+showYoutubeID: sJ8EX61fFWQ
 
 date: 2013-11-20 16:30:00
 article:

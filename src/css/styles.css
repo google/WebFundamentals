@@ -3580,6 +3580,14 @@ div.related-items-on-spotlight {
   display: block;
   color: white; }
 
+.smallvideo--imagecontainer {
+  border-top-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  box-sizing: border-box; }
+
 .smallvideo--image {
   margin: 0; }
 

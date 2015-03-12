@@ -6,7 +6,7 @@ collection: cds-2013
 title: "DevTools for Mobile"
 description: ""
 published: true
-youtubeVideoID: gZH1d2Co1X0
+showYoutubeID: gZH1d2Co1X0
 
 date: 2013-11-20 17:00:00
 article:

@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Network Connectivity: Optional"
 description: ""
 published: true
-youtubeVideoID: Z7sRMg0f5Hk
+showYoutubeID: Z7sRMg0f5Hk
 
 date: 2013-11-20 10:00:00
 article:

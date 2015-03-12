@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Optimizing your Workflow for a Cross-Device World"
 description: ""
 published: true
-youtubeVideoID: bZRPetpUcjQ
+showYoutubeID: bZRPetpUcjQ
 
 date: 2013-11-20 17:30:00
 article:

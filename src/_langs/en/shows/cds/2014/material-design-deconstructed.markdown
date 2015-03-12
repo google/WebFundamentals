@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Material Design Deconstructed"
 description: ""
 published: true
-youtubeVideoID: tfSiXRy1vEw
+showYoutubeID: tfSiXRy1vEw
 
 date: 2014-11-20 11:00:00
 article:
