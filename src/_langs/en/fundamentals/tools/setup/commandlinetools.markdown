@@ -29,7 +29,7 @@ notes:
 
 ## How to Set Them Up
 
-The easiest way create command-line shortcuts is to add aliases for common
+The easiest way to create command-line shortcuts is to add aliases for common
 commands to your bashrc file. On Mac or Linux:
 
 1. From the command line anywhere, type:
