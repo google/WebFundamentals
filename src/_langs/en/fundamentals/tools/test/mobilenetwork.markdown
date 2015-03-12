@@ -40,7 +40,8 @@ you'll be able to test for different network types.
 
 <img src="imgs/network-panel.png" alt="OS X Network Panel" />
 
-On Windows, options also include [Fiddler](http://www.telerik.com/fiddler) and
+On Windows, options also include [Fiddler](http://www.telerik.com/fiddler), 
+[clumsy](https://jagt.github.io/clumsy/), and
 [Charles](http://www.charlesproxy.com/), an HTTP proxy which can throttle your
 connection speeds. These are the network characteristics you can simulate:
 
