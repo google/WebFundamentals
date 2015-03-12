@@ -1,16 +1,14 @@
 ---
 layout: root
-description: "Slash Web"
+description: "Web"
 class: home
-title: Slash Web
+title: "Web"
 id: web
 priority: 0
 ---
 
 <style>
-  .sections {
-    margin-bottom: 52px;
-  }
+
   #potentialAction {
     display: none;
   }
@@ -24,8 +22,27 @@ priority: 0
 </form>
 <div class="home-header centered">
   <div class="container">
-    <h1>Hero</h1>
-    <p>Cool Hero stuff goes here!</p>
+    <h1><b>Web</b></h1>
+    <p>The web FTW, cause anything else is just lame...</p>
+    <a href="choosing-the-web.html" title="Learn why the web may be the right choice." class="button--secondary-variation">Choosing the web</a>
   </div>
 </div>
 
+<div class="container sections">
+  <div class="centered">  
+    <ul class="list-guides-intro guides-list container">
+      {% injectdata content _betterbook-root.yaml %}
+      {% for chapter in page.content.toc %}
+        {% if chapter.published != false and chapter.home != true and (chapter.is_localized != true or page.langcode == chapter.langcode) %}
+          <li class="guides-list__item g--third theme--{{ chapter.id }}" style="margin-right: 0;">
+            <a href="{{site.baseurl}}{{chapter.path | clean }}" title="{{chapter.title}}" class="themed">
+              <span class="icon-circle--large themed--background"><i class="icon icon-{{chapter.id}}"></i></span>
+              <h3 class="large">{{chapter.title}} {{chapter.home}}</h3>
+            </a>
+            <p>{{ chapter.home }}</p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
