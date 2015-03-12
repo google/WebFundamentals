@@ -1,15 +1,16 @@
 toc:
-- title: "/<strong>Web</strong>"
+- title: "<strong>/Web</strong>"
   path: /
   home: true
-- title: Web <strong>Fundamentals</strong>
+- title: "Web <strong>Fundamentals</strong"
   path: /fundamentals/
-- title: Web <strong>Starter Kit</strong>
+- title: "Web <strong>Starter Kit</strong>"
   path: /starter-kit/
-- title: Shows
+- title: "Web <strong>Shows</strong>"
   path: /shows/
-- title: Tools
-  path: /tools/
-- title: Primers
+- title: "Web <strong>Primers</strong>"
   path: /primers/
-
+- title: "Tools"
+  path: /tools/
+- title: "Web <strong>Showcase</strong>"
+  path: /showcase/
