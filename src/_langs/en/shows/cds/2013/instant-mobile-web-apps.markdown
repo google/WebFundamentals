@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Instant Mobile Web Apps"
 description: ""
 published: true
-youtubeVideoID: VKTWdaupft0
+showYoutubeID: VKTWdaupft0
 
 date: 2013-11-20 15:00:00
 article:

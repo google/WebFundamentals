@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Develop Chrome Apps on Desktop/Mobile, Distribute and Profit"
 description: ""
 published: true
-youtubeVideoID: f3NctLbtsNE
+showYoutubeID: f3NctLbtsNE
 
 date: 2013-11-20 13:30:00
 article:

@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Web Components and Polymer Panel"
 description: ""
 published: true
-youtubeVideoID: JuO5AZBrpC8
+showYoutubeID: JuO5AZBrpC8
 
 date: 2014-11-21 09:00:00
 article:

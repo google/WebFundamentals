@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Performance Panel"
 description: ""
 published: true
-youtubeVideoID: ju6oOsFOc3k
+showYoutubeID: ju6oOsFOc3k
 
 date: 2014-11-21 11:00:00
 article:

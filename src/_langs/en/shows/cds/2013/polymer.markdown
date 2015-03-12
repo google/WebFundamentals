@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Polymer"
 description: ""
 published: true
-youtubeVideoID: DH1vTVkqCDQ
+showYoutubeID: DH1vTVkqCDQ
 
 date: 2013-11-20 12:30:00
 article:

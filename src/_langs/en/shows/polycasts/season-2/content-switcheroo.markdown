@@ -6,14 +6,16 @@ collection: polycasts-season-2
 title: "Content Switcheroo with Core-Pages"
 description: ""
 published: true
-youtubeVideoID: 6x2A9UgLqEw
+showYoutubeID: 6x2A9UgLqEw
 
-date: 2015-02-09
+date: 2015-02-09 00:00:00
 article:
   written_on: 2015-03-06
   updated_on: 2015-03-06
 
 ---
+
+Content Switcheroo
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
 

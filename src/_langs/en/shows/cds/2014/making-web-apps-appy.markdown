@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Making Web Apps Appy"
 description: ""
 published: true
-youtubeVideoID: QbuLq4f6DGQ
+showYoutubeID: QbuLq4f6DGQ
 
 date: 2014-11-20 10:00:00
 article:

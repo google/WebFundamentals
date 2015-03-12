@@ -13,6 +13,9 @@ Fundmentals index: for guide in page.articles.[page.id]
 
 {% assign shows = page.articles[page.id] | sort: 'title'  %}
 
+{% assign orderedVideos = site.data.allVideos | sort: 'date' | reverse %}
+{% assign latestVideo = orderedVideos | first %}
+
 {% wrap content %}
 
 # Shows
@@ -22,18 +25,72 @@ the Google Developer team related to web.
 
 Select a show or video and start exploring.
 
+<!-- Latest Episode -->
+{% if latestVideo %}
+
+## Latest Show: {{ latestVideo.title }}
+{% include modules/video.liquid id=latestVideo.showYoutubeID %}
+
+{% endif %}
+
+
+
+
+## Recent Shows
+{% assign NUM_OF_RECENT_SHOWS =  10%}
+{% assign displayedShows = 0 %}
+<ol class="flatrowlist">
+  {% for video in orderedVideos %}
+    {% if displayedShows < NUM_OF_RECENT_SHOWS %}
+    <li>
+      {% include modules/shows/small-video.liquid video=video showid=page.id %}
+    </li>
+    {% endif %}
+    {% assign displayedShows = displayedShows | plus: 1 %}
+  {% endfor %}
+</ol>
+
+
+
+## All Shows
+
+
+
+
 <ol class="shows--videolist blanklist">
+
+
+
+  <!-- Loop Through all Shows -->
   {% for show in shows %}
+
+
+
+    <!-- Create list item -->
     <li class="shows--videolistitem">
+
+
+
+      <!-- Title of Show -->
       <div class="shows--header shows--header-{{ show.id }}">
         {{ show.title }}
       </div>
+
+
+
+      <!-- List of series -->
+      {% assign showSeries = page.articles[show.id]  | sort: 'date' %}
       <div class="shows--videos shows--videos-{{ show.id }}">
-        {% assign showSeries = page.articles[show.id]  | sort: 'date' %}
         <ol class="series-list">
         {% for series in showSeries %}
+
+          <!-- Individual series -->
           <li>
             <div class="shows--videoseriestitle shows--videoseriestitle-{{ series.id }}">{{ series.title }}</div>
+
+
+
+            <!-- Videos in Series -->
             <ol class="flatrowlist">
               {% assign seriesVideos = page.articles[series.id]  | sort: 'date' %}
               {% assign displayedShows = 0 %}
@@ -41,27 +98,23 @@ Select a show or video and start exploring.
               {% for video in seriesVideos %}
                 {% if displayedShows < MAX_DISPLAYED_SHOWS %}
                 <li>
-                  <a class="smallvideo--link" href="{{site.baseurl}}{{video.url | canonicalize}}">
-                    <div class="smallvideo">
-                      <div class="smallvideo--imagecontainer">
-                        <img class="smallvideo--image" src="http://img.youtube.com/vi/{{ video.youtubeVideoID }}/0.jpg" />
-                      </div>
-                      <div class="smallvideo--title-container">
-                        <p class="smallvideo--title">{{ video.title }}</p>
-                      </div>
-                    </div>
-                  </a>
+                  {% include modules/shows/small-video.liquid video=video showid=page.id %}
                 </li>
                 {% endif %}
                 {% assign displayedShows = displayedShows | plus: 1 %}
               {% endfor %}
             </ol>
+
+
+
           </li>
         {% endfor %}
         </ol>
       </div>
+
+
+
     </li>
   {% endfor %}
 </ol>
-
 {% endwrap %}

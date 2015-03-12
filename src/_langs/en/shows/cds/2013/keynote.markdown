@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Keynote"
 description: ""
 published: true
-youtubeVideoID: 20fGtfnxJuo
+showYoutubeID: 20fGtfnxJuo
 
 date: 2013-11-20 09:00:00
 article:

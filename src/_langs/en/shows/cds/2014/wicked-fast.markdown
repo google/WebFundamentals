@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Wicked Fast (Performance Investment)"
 description: ""
 published: true
-youtubeVideoID: v0xRTEf-ytE
+showYoutubeID: v0xRTEf-ytE
 
 date: 2014-11-20 09:30:00
 article:

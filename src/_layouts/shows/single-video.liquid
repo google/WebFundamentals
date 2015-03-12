@@ -3,7 +3,7 @@
 
 {% assign foundVideo = false %}
 {% for video in videos %}
-  {% if video.youtubeVideoID != page.youtubeVideoID %}
+  {% if video.showYoutubeID != page.showYoutubeID %}
     {% if foundVideo == false %}
       {% assign nextVideo = video %}
     {% else %}
@@ -62,7 +62,7 @@
 
 
       <!-- YouTube embed -->
-      {% include modules/video.liquid id=page.youtubeVideoID %}
+      {% include modules/video.liquid id=page.showYoutubeID %}
 
 
 

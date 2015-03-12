@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Polymer: State of the Union"
 description: ""
 published: true
-youtubeVideoID: 0LT6W5QVCJI
+showYoutubeID: 0LT6W5QVCJI
 
 date: 2014-11-20 13:00:00
 article:

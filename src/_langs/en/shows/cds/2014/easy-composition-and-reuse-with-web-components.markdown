@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Easy Composition and Resuse with Web Components"
 description: ""
 published: true
-youtubeVideoID: 6vcQlD-jadk
+showYoutubeID: 6vcQlD-jadk
 
 date: 2014-11-20 12:30:00
 article:

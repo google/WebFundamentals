@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Blink: Behind the Scenes"
 description: ""
 published: true
-youtubeVideoID: 392VTLQyKDc
+showYoutubeID: 392VTLQyKDc
 
 date: 2013-11-20 14:30:00
 article:

@@ -234,8 +234,15 @@ module.exports = function(grunt) {
 		grunt.log.writeln('Determining latest web-starter-kit version..');
 
 		latest('google', 'web-starter-kit', function(release, err) {
+
+			/**
+				These logs are for debugging if Travis behaves oddly.
+				Github may be returning unexpected results and it's
+				causing the build to fail.
+			**/
 			grunt.log.writeln('release: ' + JSON.stringify(release));
 			grunt.log.writeln('err: ' + JSON.stringify(err));
+
 			if (err) {
 				grunt.verbose.or.write('Failed to retrieve latest web-starter-kit release information').error().error(err.message);
 			} else {

@@ -6,9 +6,9 @@ collection: http203-series-1
 title: "4. Font Rendering"
 description: "This is a video description"
 published: true
-youtubeVideoID: GhFR-G42mOA
+showYoutubeID: GhFR-G42mOA
 
-date: 2014-12-04
+date: 2014-12-04 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Dart for the Modern Web Developer"
 description: ""
 published: true
-youtubeVideoID: FqsU3TbUw_s
+showYoutubeID: FqsU3TbUw_s
 
 date: 2013-11-20 13:00:00
 article:

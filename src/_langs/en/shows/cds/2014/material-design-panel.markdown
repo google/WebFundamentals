@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Material Design Panel"
 description: ""
 published: true
-youtubeVideoID: o5vBqG-IQQI
+showYoutubeID: o5vBqG-IQQI
 
 date: 2014-11-21 12:00:00
 article:

@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Build Mobile Apps with the Chrome WebView"
 description: ""
 published: true
-youtubeVideoID: BTlzw5UAjQs
+showYoutubeID: BTlzw5UAjQs
 
 date: 2013-11-20 09:30:00
 article:

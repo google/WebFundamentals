@@ -1,20 +1,11 @@
-{% assign pages = site.pages | deepsort: 'article', 'written_on' | reverse %}<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<?xml version="1.0" encoding="UTF-8"?>
 
-	<title>/web – Shows</title>
-	<icon>https://developers.google.com/web/favicon.ico</icon>
-	<id>https://developers.google.com{{ site.url }}/shows/shows.xml</id>
-	<link type="text/html" href="https://developers.google.com{{ site.url }}/shows/" rel="alternate"/>
-	<description>All of the shows to keep up to date with the web.</description>
-{% assign num = 0 %}{% for post in pages %}{% if num < 10 and post.article %}{% if post.collection == "shows" or post.layout == "show-single" or post.layout == "series-index" %}
-	<entry>
-		<published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
-		<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>	
-		<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
-		{% if post.introduction %}<content type="html">{{ post.introduction | xml_escape }}</content>{% elsif post.description %}<content type="html">{{ post.description | xml_escape }}</content>{% endif %}
-		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}" />
-		<id>https://developers.google.com{{ site.url }}{{ post.url }}</id>
-		{% if post.authors %}<author><name>{% for author in post.authors %}{% assign contributor = site.data["contributors"][author] %}{{contributor.name.given}} {{contributor.name.family}}{% if forloop.last == false %}, {% endif %}{% endfor %}</name></author>{% endif %}	
-	</entry>{% assign num = num | plus: 1 %}{% endif %}{% endif %}{% endfor %}
+{% assign orderedVideos = site.data.allVideos | sort: 'date' | reverse %}
 
-</feed>
+{% assign title = '/web – Shows at Google' %}
+{% assign description = 'All of the shows to keep up to date with the web.' %}
+{% capture link %}https://developers.google.com{{ site.baseurl }}/shows/{% endcapture %}
+{% assign id = link %}
+{% assign showSeriesInTitle = true %}
+
+{% include modules/shows/show-feed.liquid videos=orderedVideos title=title description=description link=link id=id showSeriesInTitle=showSeriesInTitle %}

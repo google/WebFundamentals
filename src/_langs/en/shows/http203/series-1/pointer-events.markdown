@@ -6,9 +6,9 @@ collection: http203-series-1
 title: "2. Pointer Events"
 description: "A discussion on PointerEvents and what is happening with them in Chrome."
 published: true
-youtubeVideoID: ngBy0H_q-GY
+showYoutubeID: ngBy0H_q-GY
 
-date: 2014-10-09
+date: 2014-10-09 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

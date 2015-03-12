@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Future of Apps Panel"
 description: ""
 published: true
-youtubeVideoID: rKzmcKh5Zkk
+showYoutubeID: rKzmcKh5Zkk
 
 date: 2014-11-21 10:00:00
 article:

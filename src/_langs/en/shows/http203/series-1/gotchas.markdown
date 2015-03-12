@@ -6,9 +6,9 @@ collection: http203-series-1
 title: "5. Gotchas"
 description: "This is a video description"
 published: true
-youtubeVideoID: VJQtNxyKJhQ
+showYoutubeID: VJQtNxyKJhQ
 
-date: 2015-01-12
+date: 2015-01-12 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

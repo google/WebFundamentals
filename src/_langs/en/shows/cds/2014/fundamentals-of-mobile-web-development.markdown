@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Fundamentals of Mobile Web Development"
 description: ""
 published: true
-youtubeVideoID: z6dg_V22wV0
+showYoutubeID: z6dg_V22wV0
 
 date: 2014-11-20 14:00:00
 article:

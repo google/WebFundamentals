@@ -6,9 +6,9 @@ collection: polycasts-season-1
 title: "Core Icons"
 description: ""
 published: true
-youtubeVideoID: jrt7sMq9lO0
+showYoutubeID: jrt7sMq9lO0
 
-date: 2014-09-22
+date: 2014-09-22 00:00:00
 article:
   written_on: 2015-02-24
   updated_on: 2015-02-24

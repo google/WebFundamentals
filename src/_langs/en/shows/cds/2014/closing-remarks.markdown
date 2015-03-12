@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Closing Remarks"
 description: ""
 published: true
-youtubeVideoID: BVWAk661NL8
+showYoutubeID: BVWAk661NL8
 
 date: 2014-11-20 14:30:00
 article:
