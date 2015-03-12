@@ -243,23 +243,34 @@ module.exports = function(grunt) {
       **/
       grunt.log.writeln('release: ' + JSON.stringify(release));
       grunt.log.writeln('err: ' + JSON.stringify(err));
-
-      if (err) {
-        grunt.verbose.or.write('Failed to retrieve latest web-starter-kit release information').error().error(err.message);
-      } else {
-        grunt.log.writeln('Latest version is: ' + release.name);
-        grunt.log.writeln('Saved release information under: ' + out);
-        /*jshint camelcase: false */
-        /*ignore the casing on the variables. These come directly from the Githup API.*/
-
-        grunt.file.write(out,
-          'wsk-tag: ' + release.tag_name + '\n' +
-          'wsk-name: ' + release.name + '\n' +
-          'wsk-zip-url: ' + release.zipball_url + '\n'
-          );
-        /*jshint camelcase: true */
-        done();
+      if (((release === undefined) && (err === undefined)) || (err)) {
+        if (err) {
+          grunt.log.writeln('Failed to retrieve latest web-starter-kit release information');
+          grunt.log.writeln(' - ', err.message);
+        } else {
+          grunt.log.writeln('WARNING - wsk-latest returned undefined');
+        }
+        grunt.log.writeln('Using safe (0.5.2) WSK Version Info');
+        release = {
+          'name': 'Web Starter Kit 0.5.2',
+          'tag_name': 'v0.5.2',
+          'zipball_url': 'https://api.github.com/repos/google/web-starter-kit/zipball/v0.5.2'
+        };
       }
+
+
+      grunt.log.writeln('Latest version is: ' + release.name);
+      grunt.log.writeln('Saved release information under: ' + out);
+      /*jshint camelcase: false */
+      /*ignore the casing on the variables. These come directly from the Githup API.*/
+
+      grunt.file.write(out,
+        'wsk-tag: ' + release.tag_name + '\n' +
+        'wsk-name: ' + release.name + '\n' +
+        'wsk-zip-url: ' + release.zipball_url + '\n'
+        );
+      /*jshint camelcase: true */
+      done();
     });
   });
 
