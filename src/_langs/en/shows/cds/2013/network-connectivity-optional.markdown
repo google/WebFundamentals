@@ -15,8 +15,16 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+We learnt many things from this talk: Jake doesn’t wear shoes when presenting; [Business Kinlan](https://twitter.com/Business_Kinlan/status/403231878246715392) has a new book coming out soon; Offline is being taken seriously by browser vendors and you will soon have the tools in your hands that help you build great experiences that work well when you are offline.
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+[ServiceWorker](https://github.com/slightlyoff/ServiceWorker) will give us the flexibility that we need to build compelling offline first experiences with ease and not suffer the pains inflicted by AppCache.  You can even [experiment with the API using a Polyfill](https://github.com/phuu/serviceworker-demo).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+[Slides: Network connectivity: optional](https://speakerdeck.com/jaffathecake/network-optional)
+
+{% video //www.youtube.com/embed/Z7sRMg0f5Hk %} {% endvideo %}
+
+## ServiceWorker to the rescue
+
++ In the next generation of progressive enhancement, we treat the network as a potential enhancement
++ ServiceWorker gives you full, scriptable, debuggable control over network requests
++ If you have an offline experience, don’t wait for the network to fail before you show it, as this can take ages

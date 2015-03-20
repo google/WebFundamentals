@@ -15,8 +15,15 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+Users will be accessing your sites and services from a multitude of devices with a wide range of different accessibility requirements.  By using the correct semantic elements and correct ARIA roles you help give the browser and assistive technology a much improved understanding of your page.
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+[Slides: Multi-device Accessibility](https://docs.google.com/a/google.com/presentation/d/1xKlQZRHyLPXvrTdGkGIumc24bT4_kxRmdqIC_b7fngo/pub?start=false&loop=false&delayms=3000#slide=id.p)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+## Key ways to understand and address a11y issues
+
++ Ensure you have a good keyboard-only user experience
++ Express the semantics of your interface with correct element choice and ARIA
++ Use [ChromeVox](http://www.chromevox.com/) on desktop and TalkBack on Android to test.
++ Try the [Accessibility Developer Tools Chrome extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)
++  A more diverse audience is getting online, which further amplifies the need of making your sites accessible
+
