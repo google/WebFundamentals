@@ -15,8 +15,14 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful?  There's a solid multi-device approach for quick iteration with LiveReload, Grunt, Yeoman, and the newly-unveiled [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab). Lastly, if you don't have the physical hardware you want to test, some providers make it available through the cloud.
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+[Slides: Optimizing your Workflow for a Cross-device world](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/cross-device-workflow/#1)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+## Key points
+
++  The number of devices that we are going to have to cater for is only going to increase
++  Getting your workflow with the right with [Grunt](http://gruntjs.com/) and [Yeoman](http://yeoman.io/)
++  Simplify cross browser and cross device testing with [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab)
++  Be smart with your emulation choice using Chrome DevTools Emulation, Stock Emulators, Cloud Based Emulators like [Saucelabs](https://saucelabs.com/), [Browserstack](http://www.browserstack.com/) and [Device Anywhere](http://www.deviceanywhere.com/) and third party emulator [Genymotion](http://www.genymotion.com/)
++ Mobile testing means more than just testing on your wifi connection, use a proxy to simulate slower network speeds
