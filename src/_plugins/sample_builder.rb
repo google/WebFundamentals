@@ -115,7 +115,7 @@ module SampleBuilder
     end
 
     def contents()
-      contents = File.read(@sourcepath)
+      contents = File.read(@sourcepath).force_encoding('UTF-8')
       contents.gsub!(/<!-- \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] -->\s*\n?/m, "\n")
       contents.gsub!(/\/\* \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] \*\/\s*\n?/m, "\n")
       contents.gsub!(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches|
