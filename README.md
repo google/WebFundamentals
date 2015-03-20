@@ -75,6 +75,9 @@ Mac
     * `npm install`
 1. Install fontforge if required for grunt-webfont on your OS.  See [grunt-webfont installation instructions](https://github.com/sapegin/grunt-webfont/blob/master/Readme.md#installation) for details.
 
+**Note:** On OS X, you may see an error about *Warning: EMFILE, too many open files*. If so you will need to 
+increase the maximum number of open file handles.  Use `ulimit -n 1024` to increase the maximum number of open files to 2048 from the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc` or `.zshrc`.
+
 
 Running the site
 ================
@@ -86,8 +89,6 @@ grunt develop
 ```
 
 This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at [http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
-
-On Mac, due to the number of files in the project, you will likely need to increase the maximum number of open file handles.  Use `ulimit -n 1024` to increase the maximum number of open files to 1024 from the default of 256.
 
 If you want to build a single language then run this: `grunt develop --lang=en`.
 
