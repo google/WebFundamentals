@@ -21,8 +21,6 @@ We learnt many things from this talk: Jake doesn’t wear shoes when presenting;
 
 [Slides: Network connectivity: optional](https://speakerdeck.com/jaffathecake/network-optional)
 
-{% video //www.youtube.com/embed/Z7sRMg0f5Hk %} {% endvideo %}
-
 ## ServiceWorker to the rescue
 
 + In the next generation of progressive enhancement, we treat the network as a potential enhancement
