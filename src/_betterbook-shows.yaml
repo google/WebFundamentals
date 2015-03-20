@@ -1,17 +1,8 @@
 toc:
-- title: "/Web"
-  path: /
 - title: "<strong>Shows</strong>"
   path: /shows/
   hasSubNav: true
   home: true
-  section:
-    - title: "<strong>Fundamentals</strong>"
-      path: /fundamentals/
-    - title: "<strong>Starter Kit</strong>"
-      path: /starter-kit/
-    - title: "<strong>Showcase</strong>"
-      path: /showcase/
 - title: HTTP 203
   path: /shows/http203/
 - title: Polycasts

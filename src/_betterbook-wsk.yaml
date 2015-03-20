@@ -1,17 +1,7 @@
 toc:
-- title: "/Web"
-  path: /
 - title: "<strong>Starter Kit</strong>"
   path: /starter-kit/
-  hasSubNav: true
   home: true
-  section:
-    - title: "<strong>Fundamentals</strong>"
-      path: /fundamentals/
-    - title: "<strong>Shows</strong>"
-      path: /shows/
-    - title: "<strong>Showcase</strong>"
-      path: /showcase/
 - title: "Download"
   path: https://github.com/google/web-starter-kit/releases/tag/v0.5.2
   external: true
