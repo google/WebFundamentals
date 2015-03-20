@@ -1,5 +1,5 @@
 ---
-layout: root
+layout: root/homepage
 description: "Web"
 class: home
 title: "Web"
@@ -13,7 +13,7 @@ priority: 0
     display: none;
   }
 
-  .pete {
+  #solid-line {
     border-top: 2px solid #e0e0e0;
   }
 
@@ -30,43 +30,27 @@ priority: 0
   <img src="/web/imgs/placeholder--device-landscape.png" style="max-height: 350px; margin-left: auto; margin-right: auto;">
 </div>
 
-{% assign pages = site.pages | deepsort: 'article', 'written_on' | reverse %}
-
 <div class="container related-items clear" style="margin-top: 2em;">
-  <h3 class="related-items__title g-wide--1 g-medium--full">What's new?</h3>
+  <h3 class="related-items__title g-wide--1 g-medium--full">New Here?</h3>
   <div class="related-items__section clear">
     <ul class="related-items-list list-reset">
-      {% assign num = 0 %}{% for post in pages %}{% if num < 3 and post.article  and post.collection != "shows" and post.layout != "show-single" and post.layout != "series-index" and post.layout != "spotlight" and post.layout != "deep-dive" and post.layout != "case-study" %}
-      <li class="g-medium--1 g-wide--1 {% if num == 2 %}g-wide--last{% endif %}">
-        <p>
-          <a class="tag themed" href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source=feed&utm_medium=feed&utm_campaign=asdf" title="Layout basics">{% assign category = post.ancestors %}{{ category[1].title }}</a>
-        </p>
-        <p class="medium">
-          <a href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source=feed&utm_medium=feed&utm_campaign=asdf">
-            {{post.title}}</a></p>
-        <!-- art {{ post.article }} -->
-        <!-- col {{ post.collection }} -->
-        <!-- lay {{ post.layout }} -->
-        <!-- {% assign category = post.ancestors %}{{ category[1].title | xml_escape }} -->
-        <!-- {{ num }} -->
-        <!-- {{ post }} -->
+      <li class="g-medium--1 g-wide--1 root--dark">
+        <p><a class="tag themed" href="/web/fundamentals/" title="Web Fundamentals">Web&nbsp;<strong>Fundamentals</strong></a></p>
+        <p class="medium"><a href="/web/fundamentals/">Get started with Web <strong>Fundamentals</strong></a></p>
       </li>
-      {% assign num = num | plus: 1 %}{% endif %}{% endfor %}
-      <!--
-      <li class="g-medium--1 g-wide--1 theme--introduction-to-media">
-        <p><a class="tag themed" href="#" title="Media">Introduction To Media</a></p>
-        <p class="medium"><a href="#">Another funky cool title</a></p>
+      <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last root--dark">
+        <p><a class="tag themed" href="/web/starter-kit/" title="Web Starter Kit">Web Starter Kit</a></p>
+        <p class="medium"><a href="/web/starter-kit/">Start a new project with Web&nbsp;<strong>Starter Kit</strong></a></p>
       </li>
-      <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last theme--performance">
-        <p><a class="tag themed" href="#" title="Performance">Performance</a></p>
-        <p class="medium"><a href="#">Elasticated jeans are the bomb</a></p>
+      <li class="g-medium--1 g-wide--1 root--dark">
+        <p><a class="tag themed" href="/web/shows/" title="Shows">Shows</a></p>
+        <p class="medium"><a href="/web/shows/">Dive deeper with our shows</a></p>
       </li>
-      -->
     </ul>
   </div>
 </div>
 
-<div class="pete">
+<div id="solid-line">
 </div>
 
 
@@ -83,57 +67,57 @@ priority: 0
   <div class="centered">  
     <ul class="list-guides-intro guides-list container">
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#everywhere" title="Everywhere" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Everywhere</h3>
         </a>
         <p>Built once, be on all platforms and devices.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#searchable" title="Searchable" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Searchable</h3>
         </a>
         <p>Deep indexing of your content opens entry points from search engines.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#always-up-to-date" title="Always up to date" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Always up to date</h3>
         </a>
         <p>Web apps and sites are remotely hosted and up to date for 100% of your visitors by default.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#instant-load" title="Instant load" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Instant load</h3>
         </a>
         <p>The web can deliver apps and sites that aren’t preloaded in less than a second.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#independent" title="Independent" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Independent</h3>
         </a>
         <p>The web does not censor content or disallow different payment providers and is an even playing field for all.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#ephemeral" title="Ephemeral" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Ephemeral</h3>
         </a>
         <p>Clicking on a link is effortless compared to installing a native app.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#viral" title="Viral" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Viral</h3>
         </a>
         <p>The web has the best sharing mechanism in the world, built in.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web" title="" class="themed">
-          <span class="icon-circle--large themed--background"><i class="icon icon-"></i></span>
+        <a href="/web/choosing-the-web#long-lasting" title="Long lasting" class="themed">
+          <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Long lasting</h3>
         </a>
         <p>Your web app will still run 20 years from now, even if you abandon its development.</p>
