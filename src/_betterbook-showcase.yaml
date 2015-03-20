@@ -1,17 +1,7 @@
 toc:
-- title: "/Web"
-  path: /
 - title: "<strong>Showcase</strong>"
   path: /showcase/
-  hasSubNav: true
   home: true
-  section:
-    - title: "<strong>Fundamentals</strong>"
-      path: /fundamentals/
-    - title: "<strong>Starter Kit</strong>"
-      path: /starter-kit/
-    - title: "<strong>Shows</strong>"
-      path: /shows/
 - title: "Case Studies"
   path: /showcase/case-study/
 - title: "Spotlights"
