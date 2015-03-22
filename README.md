@@ -95,6 +95,41 @@ This will have Jekyll build the site, run a static server to listen on port 8081
 If you want to build a single language then run this: `grunt develop --lang=en`.
 
 
+Alternative dev workflow based on Docker
+========================================
+
+In this configuration the only requirement is [Docker](https://docs.docker.com/installation/).
+
+Once you clone this repo, start building the site right away:
+
+```sh
+tools/docker.sh grunt build
+```
+
+or run a local dev server:
+
+```sh
+tools/docker.sh grunt develop
+# then point your browser to http://localhost:8081/web/fundamentals
+```
+
+Essentially, prefix `grunt` command with `tools/docker.sh` and it will run inside a Docker container,
+which includes all the dependencies needed to build the site.
+
+If you want to experiment with your own Docker image instead of using `google/webfundamentals-dev`,
+modify `Dockerfile` in the root of this repo and build your image:
+
+```sh
+docker build -t myimage .
+```
+
+Once the image is built, use it with `tools/docker.sh`:
+
+```sh
+WF_DOCKER_IMAGE=myimage tools/docker.sh grunt develop
+```
+
+
 Using project-level meta data
 =============================
 

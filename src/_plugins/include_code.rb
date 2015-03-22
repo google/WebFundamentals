@@ -96,7 +96,7 @@ module Jekyll
           filepath.sub!("_langs/" + lang + "/", "_langs/en/")
         end
         String file = File.join(path, filepath)
-        contents = File.read(file)
+        contents = File.read(file).force_encoding('UTF-8')
         snippet = getmatch(contents, @lang, @section)
         @@comment_formats.each do |lang, parms|
             match = getmatcher_tag(lang, "[^\\]]+", "\\w+")
