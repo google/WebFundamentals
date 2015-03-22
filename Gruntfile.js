@@ -4,6 +4,7 @@
 'use strict';
 
 var LIVERELOAD_PORT = 35729;
+var SERVER_HOST = process.env.DOCKER ? '0.0.0.0' : 'localhost';
 
 module.exports = function(grunt) {
 
@@ -74,6 +75,7 @@ module.exports = function(grunt) {
       }
     },
 
+    /*jshint camelcase: false */
     gae: {
       options: {
         path: 'appengine',
@@ -88,7 +90,9 @@ module.exports = function(grunt) {
           async: true,
           asyncOutput: true,
           args: {
-            port: config.port
+            host: SERVER_HOST,
+            port: config.port,
+            skip_sdk_update_check: true
           }
         }
       },
@@ -96,6 +100,7 @@ module.exports = function(grunt) {
         action: 'kill'
       }
     },
+    /*jshint camelcase: true */
 
     htmlmin: {
       all: {
@@ -246,7 +251,7 @@ module.exports = function(grunt) {
       if (((release === undefined) && (err === undefined)) || (err)) {
         grunt.log.write('Failed to retrieve latest web-starter-kit release ');
         grunt.log.writeln('information - using wsk-version.json.');
-        
+
         release = grunt.file.readJSON(out, {'encoding': 'utf8'});
       } else {
         grunt.file.write(out, JSON.stringify(release, null, 2));
@@ -338,6 +343,13 @@ module.exports = function(grunt) {
     'build',   // Build the site with Jekyll
     'gae:local',
     'open:local',
+    'watch'
+  ]);
+
+  // Develop task for docker-based env
+  grunt.registerTask('develop-no-open', 'The default task for developers.\nRuns the tests, builds the minimum required, serves the content and watches for changes.\nDoes not open URL.', [
+    'build',   // Build the site with Jekyll
+    'gae:local',
     'watch'
   ]);
 
