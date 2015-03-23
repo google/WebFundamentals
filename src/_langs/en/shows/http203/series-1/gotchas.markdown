@@ -4,7 +4,7 @@ showid: http203
 layout: shows/single-video
 collection: http203-series-1
 title: "5. Gotchas"
-description: "This is a video description"
+description: "Building for the web is awesome, but sometimes you can find yourself baffled by gotchas. Check out the latest episode of HTTP 203, where Paul tells Jake about three he recently discovered!"
 published: true
 showYoutubeID: VJQtNxyKJhQ
 
