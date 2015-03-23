@@ -31,44 +31,46 @@ User perception of performance is different in these four stages of the lifecycl
 {% include modules/takeaway.liquid list=page.key-takeaways.rail %}
 
 ## Response
-If a user clicks on a button you have **100ms** in which to respond to their click before they’ll notice any lag.
 
-<img src="images/intro/response.png" class="center" alt="User interacting with a website.">
+If a user clicks on a button you have **100ms** in which to respond to their click before they’ll notice any lag.
 
 You can use this window of time to do calculations or other expensive work, like layout and paint, so that any animations you do in response to the user’s interaction require far less per-frame work.
 
 <img src="images/use-the-rail-performance-model/interaction-pattern.jpg" class="center" alt="A user interaction pattern with 100ms grace period at the start.">
 
-There is also a corresponding window of around 50 - 100ms at the end of the animation where you can do similar kinds of work, typically to clean up or finish the animation.
+There is also a corresponding window of around 50-100ms at the end of the animation where you can do similar kinds of work, typically to clean up or finish the animation.
 
-## Animate
-Only an animation itself needs to run at 60fps, and you should do everything in our power to make sure that it can. Often that means being judicious with what you try and animate, in some cases it means dropping animations altogether. It’s often better to do nothing than to do something badly!
+## Animation
+
+Only an animation itself needs to run at 60fps. Often that means being judicious with what you try and animate, in some cases it means dropping animations altogether. It’s often better to do nothing than to do something badly!
 
 Most of the performance issues we will look at in the coming sections will be most acutely felt during animations, since it has the lowest time threshold of around **10ms**, and users will notice if you go over this budget and the frame rate varies.
 
 {% include modules/remember.liquid title="Remember" list=page.notes.scrolling %}
 
-If you want to take a shortcut and get to the “how can I make my animations run at 60fps more reliably?” bit, read the section on changing compositor-only properties.
+If you want to take a shortcut and get to the “how can I make my animations run at 60fps more reliably?” bit, read the section on [changing compositor-only properties](stick-to-compositor-only-properties-and-manage-layer-count).
 
 ## Idle
-Whenever the app is waiting for user interaction, it is idle, and this is a great time to do additional work, like loading assets or non-critical functionality. The work should be grouped into buckets of about **50ms**, though, because if a user begins interacting then the highest priority is to respond to that, and defer the idle work until later.
 
-A very solid approach for loading content and processing it off the main thread is to use Web Workers. Without DOM access, however, they are of limited use if your Idle work is to manipulate the elements on the page in some way. However, for load-centric work they are ideal because any callbacks won’t obstruct other main thread tasks like any JavaScript, style calculations, or painting.
+Whenever the app is waiting for user interaction, it's idle, and this is a great time to do additional work, like loading assets or bootstrapping non-critical functionality. The work should be grouped into buckets of about **50ms**, though, because if a user begins interacting then the highest priority is to respond to that, and defer the idle work until later.
+
+A very solid approach for loading content and processing it off the main thread is to use Web Workers. Without DOM access, however, they are of limited use if your Idle work is to manipulate the elements on the page in some way. For load-centric work they are ideal because any callbacks won’t obstruct other main thread tasks like style calculations, layout, or painting.
 
 ## Load
+
 Loading comes into two forms:
 
 1. Bootstrapping the app, making it ready for interactions.
-2. Continued loading in idle periods through fetch, XHRs, or Web Sockets.
+2. Continued loading in idle periods through [fetch](http://updates.html5rocks.com/2015/03/introduction-to-fetch), XHRs, or Web Sockets.
 
-For the former, a upper limit of **1000ms**, or 1 second, should be the goal. Reaching this goal requires prioritizing the Critical Rendering Path, and often deferring subsequent, non-essential loads to periods of idle time (or lazy loading them on demand).
+For the former, a upper limit of **1000ms**, or 1 second, should be the goal. Beyond this and the user's attention starts to wander. Reaching this goal requires prioritizing the [Critical Rendering Path](../critical-rendering-path), and often deferring subsequent, non-essential loads to periods of idle time (or lazy loading them on demand).
 
-A significant improvement to the load time, and therefore to the user’s experience, can be achieved through use of Service Workers. Using a Service Worker will allow you to both load in an app shell quickly, but also allow your app to run even when the user is offline, which is a significantly better experience for you user than the default offline browser page.
+A significant improvement to the load time, and therefore to the user’s experience, can be achieved through use of [Service Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/). Using a Service Worker will allow you to both load in an app shell quickly, but also allow your app to run even when the user is offline, which is a significantly better experience for your user than the default offline browser page.
 
-The latter loading should be done judiciously in your app, ideally during periods of idle time. You should avoid long-running callbacks for XHRs, images, and so on, because they potentially reduce your apps’ ability to respond to user input. If you opt to load functionality on demand then you may need a heap or queue to allow you to load items in priority order.
+Any loading done after the initial bootstrapping should be done judiciously in your app, ideally during periods of idle time. You should avoid long-running callbacks for XHRs, images, and so on, because they potentially reduce your apps’ ability to respond to user input. If you opt to load functionality on demand then you may need [a heap](http://en.wikipedia.org/wiki/Heap_%28data_structure%29) or queue to allow you to load items in priority order.
 
 ## Threshold Reference
-There are many parts to the pipeline, and deriving adequate thresholds for each part of RAIL against the pipeline can be challenging. The table below, however, aims to do just that. You can adjust the numbers given to a specific task to suit your project, of course, but you should leave the thresholds the same.
+There are many parts to the pipeline, and deriving adequate thresholds for each part of RAIL against the pipeline can be challenging. The table below, however, aims to do just that. You can adjust the numbers given to a specific task to suit your project, but the thresholds should remain same: they're based on user perception of performance at each point in the lifecycle.
 
 <table class="table-5">
     <colgroup>
