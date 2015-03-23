@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - No abuses de la compresión de imágenes, ya que su descodificación requiere más memoria.  El cambio de tamaño de las imágenes grandes para adaptarlas a pantallas pequeñas es caro y puede resultar especialmente complejo en dispositivos de gama baja con memoria y procesador limitados.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,10 +48,6 @@ remember:
   }
 </style>
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
 ### Imágenes adaptables
 
 Al usar un diseño adaptable, no solo puede cambiar el diseño según las características del dispositivo, sino que el contenido también puede cambiar.  Por ejemplo, en pantallas de alta resolución (con el doble de píxeles), los gráficos de alta resolución son necesarios para garantizar la nitidez de las imágenes.  Una imagen con un ancho del 50% podría funcionar correctamente cuando la ventana del navegador tenga 800 píxeles de ancho, pero usará demasiado espacio para un teléfono estrecho y, aun así, utilizará el mismo ancho de banda al reducir su tamaño para encajar en una pantalla más pequeña.
@@ -57,6 +58,8 @@ Al usar un diseño adaptable, no solo puede cambiar el diseño según las caract
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Otras veces, la imagen puede necesitar cambios más drásticos: modificar las proporciones, recortarla e incluso sustituirla por otra.  En este caso, el cambio en la imagen suele denominarse `dirección artística`.  Consulta [responsiveimages.org/demos/](http://responsiveimages.org/demos/) para ver más ejemplos.
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

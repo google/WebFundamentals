@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - توخ الحذر بشأن الأسلوب المضغوط نظرًا للتكاليف الزائدة التي يتسبب فيها بسبب الذاكرة وإلغاء الترميز.  يعد تغيير حجم الصور الكبيرة لتناسب الشاشات الصغيرة أمرًا مكلفًا وقد يتسبب في إزعاج خاصة على الأجهزة محدودة التكلفة حيث يكون كل من الذاكرة والمعالج محدودين.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,9 +48,11 @@ remember:
   }
 </style>
 
+{% comment %}
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
 </div>
+{% endcomment %}
 
 ### الصور سريعة الاستجابة
 
@@ -57,6 +64,8 @@ remember:
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 المرات الأخرى التي قد تحتاج الصورة فيها إلى تغيير جذري: تغيير النسب والاقتصاص واستبدال الصورة بالكامل.  وفي هذه الحالة، يُشار إلى تغيير الصورة عادة باسم الإخراج الفني.  يمكنك الاطلاع على  [responsiveimages.org/demos/](http://responsiveimages.org/demos/) للحصول على مزيد من الأمثلة.
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

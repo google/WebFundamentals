@@ -1,25 +1,19 @@
-{% if page.title == 'Critical Rendering Path' %}
 
-<div class="container-medium">
-<div>
   <div class="featured-spotlight" style="background-color: #297ea9">
     <div class="container-medium">
       <div class="featured-spotlight__container g--pull-half">
         <div class="featured-spotlight__img">
-          <a href="https://www.udacity.com/course/ud884?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index">
-            <img src="images/crp-udacity.png" alt="{{"udacity_course" | localize_string}}">
+          <a href="https://www.udacity.com/course/{{ include.uid }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index">
+            <img src="{{include.image}}" alt="{{ include.title }}">
           </a>
         </div>
 
         <div class="container-small">
-          <h3>{{"udacity_course" | localize_string}}</h3>
-          <p>{{"udacity_course_description_crp" | localize_string}}</p>
-          <a href="https://www.udacity.com/course/ud884?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index" class="cta--primary">{{"view_course" | localize_string}}</a>
+          <h3>Udacity: {{include.title}}</h3>
+          <p>{{include.description}}</p>
+          <a href="https://www.udacity.com/course/{{ include.uid }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index" class="cta--primary">{{"view_course" | localize_string}}</a>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
-{% endif %}

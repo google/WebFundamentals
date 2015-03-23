@@ -12,7 +12,12 @@ collection: performance
 authors:
   - ilyagrigorik
 translators:
-    - jeokrang
+  - jeokrang
+udacity:
+  id: ud884
+  title: Website Performance Optimization
+  description: "Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages."
+  image: images/crp-udacity.png
 ---
 {% wrap content%}
 
@@ -23,5 +28,7 @@ translators:
 <img src="images/progressive-rendering.png" class="center" alt="progressive page rendering">
 
 크리티컬 렌더링 패스를 최적화하면 페이지 최초 렌더링 시간을 크게 향상시킬 수 있습니다. 게다가, 크리티컬 렌더링 패스에 대한 이해를 토대로 좋은 인터랙션을 가진 애플리케이션을 만들 수도 있습니다. 대화식 업데이트 처리과정은 단지 이상적인 초당 60프레임으로 작업을 계속해서 반복하는 것과 같습니다. 하지만 아직 결론 내리기에는 이릅니다. 먼저 브라우저가 어떻게 간단한 페이지를 화면에 그리는지 간략한 개요를 살펴봅시다.
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title image=page.udacity.image description=page.udacity.description %}
 
 {% endwrap%}

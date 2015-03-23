@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - 請謹慎使用壓縮技術，因為這樣會增加記憶體和解碼時的資源成本。縮小大型圖片以符合較小的螢幕非常耗費系統資源。對於記憶體和處理能力有限的低階裝置來說，這麼做的影響更加嚴重。
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -57,6 +62,8 @@ remember:
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 有時候，我們需要對圖片做出大幅變動，例如變更比例、進行裁剪，甚至是替換整個圖片。在這種情況下，變更圖片的動作一般稱為美學指導。如要查看更多示例，請前往 [responsiveimages.org/demos/](http://responsiveimages.org/demos/)。
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 
