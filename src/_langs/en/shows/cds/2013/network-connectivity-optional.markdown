@@ -4,7 +4,7 @@ showid: cds
 layout: shows/single-video
 collection: cds-2013
 title: "Network Connectivity: Optional"
-description: ""
+description: "Offline is being taken seriously by browser vendors and you will soon have the tools in your hands that help you build great experiences that work well when you are offline."
 published: true
 showYoutubeID: Z7sRMg0f5Hk
 
