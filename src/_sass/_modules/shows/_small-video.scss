@@ -3,13 +3,17 @@ $padding: 8px !default;
 $lineHeight: 26px !default;
 
 .smallvideo {
-	width: 200px;
+	display: inline-block;
+	width: 100%;
+	max-width: 200px;
 
 	position: relative;
 }
 
 .smallvideo--link {
 	display: block;
+
+	text-align: center;
 	color: rgba(255, 255, 255, 1.0);
 }
 
@@ -38,6 +42,7 @@ $lineHeight: 26px !default;
 	overflow: hidden;
 
 	color: inherit;
+	text-align: left;
 }
 
 .smallvideo--title-container {

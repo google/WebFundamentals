@@ -3573,11 +3573,14 @@ div.related-items-on-spotlight {
   display: none; }
 
 .smallvideo {
-  width: 200px;
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
   position: relative; }
 
 .smallvideo--link {
   display: block;
+  text-align: center;
   color: white; }
 
 .smallvideo--imagecontainer {
@@ -3598,7 +3601,8 @@ div.related-items-on-spotlight {
   margin: 0;
   line-height: 26px;
   overflow: hidden;
-  color: inherit; }
+  color: inherit;
+  text-align: left; }
 
 .smallvideo--title-container {
   width: 100%;
@@ -3628,39 +3632,19 @@ div.related-items-on-spotlight {
 .flatrowlist li:before {
   display: none; }
 
-.videolinks {
-  margin: 16px 0; }
-
-.videolinks:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-.videolinks--prev {
-  float: left; }
-
-.videolinks--next {
-  float: right; }
-
+/*
+  The type--medium is used to make sure the padding between the
+  text on the left and the videos on the right are consistent
+ */
 .videolinks--description, .content .videolinks--description {
-  margin: 0;
   font-size: 16px;
   line-height: 1.625em;
   /* 26px */
   padding-top: 1.625em;
   padding-bottom: 0;
   letter-spacing: 0;
+  margin: 0;
   text-align: center; }
-  @media only screen and (min-width: 800px) {
-    .videolinks--description, .content .videolinks--description {
-      color: #404040;
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 1.3em;
-      /* 26px */
-      padding-top: 1.3em;
-      padding-bottom: 0;
-      letter-spacing: -0.3px; } }
 
 .widevideo {
   margin-bottom: 16px; }
@@ -3788,6 +3772,9 @@ div.related-items-on-spotlight {
       padding-bottom: 0;
       letter-spacing: -0.3px; } }
 
+.singlevideo-content-container, .singevideo-next-prev-container {
+  margin-bottom: 16px; }
+
 .showtitle--title-container-http203 {
   font-family: 'Courier New', Courier;
   background-color: black; }
@@ -3802,7 +3789,7 @@ div.related-items-on-spotlight {
   font-family: 'Courier New', Courier;
   color: black; }
 
-.smallvideo--title-container-http203, .smallvideo--link-http203 {
+.smallvideo--title-container-http203, .smallvideo-http203 {
   font-family: 'Courier New', Courier;
   color: white;
   background-color: black; }
