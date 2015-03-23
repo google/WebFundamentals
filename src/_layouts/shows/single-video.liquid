@@ -15,8 +15,6 @@
   {% endif %}
 {% endfor %}
 
-{% assign showDetails = page.articles[page.showid] %}
-
 {% assign showDetails = null %}
 {% assign shows = page.articles['shows'] | sort: 'title'  %}
 {% for show in shows %}
@@ -29,7 +27,8 @@
 
   <!-- Template Starts Here -->
 
-    {% include head.liquid %}
+    {% capture feedUrl %}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedUrl=feedUrl feedName=showDetails.title %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
