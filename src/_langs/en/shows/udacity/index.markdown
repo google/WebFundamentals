@@ -5,7 +5,6 @@ collection: udacity
 title: "Udacity Courses"
 description: ""
 published: true
-
 date: 2014-10-02
 article:
   written_on: 2015-02-24
