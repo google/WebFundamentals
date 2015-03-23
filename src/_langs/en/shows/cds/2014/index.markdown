@@ -1,5 +1,6 @@
 ---
 id: cds-2014
+showid: cds
 layout: shows/series-index
 collection: cds
 title: "Chrome Dev Summit: 2014"
