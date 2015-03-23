@@ -232,37 +232,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('wsk-version', 'Uses the Github API to determine the latest web-starter-kit version, and writes it to ./config/wsk-version.json', function() {
-    var latest = require('latest-release');
-    var done = this.async();
-    var out = './config/wsk-version.json';
-
-    grunt.log.writeln('Determining latest web-starter-kit version..');
-
-    latest('google', 'web-starter-kit', function(release, err) {
-
-      /**
-        These logs are for debugging if Travis behaves oddly.
-        Github may be returning unexpected results and it's
-        causing the build to fail.
-      **/
-      grunt.log.writeln('release: ' + JSON.stringify(release));
-      grunt.log.writeln('err: ' + JSON.stringify(err));
-      if (((release === undefined) && (err === undefined)) || (err)) {
-        grunt.log.write('Failed to retrieve latest web-starter-kit release ');
-        grunt.log.writeln('information - using wsk-version.json.');
-
-        release = grunt.file.readJSON(out, {'encoding': 'utf8'});
-      } else {
-        grunt.file.write(out, JSON.stringify(release, null, 2));
-      }
-
-      grunt.log.writeln('Latest version is: ' + release.name);
-      grunt.log.writeln('Saved release information under: ' + out);
-      done();
-    });
-  });
-
   // jekyll:target [--lang <lang_code,lang_code,...|all>]
   // where 'target' is config/target.yml file.
   // defaults to '--lang all'.
@@ -330,7 +299,7 @@ module.exports = function(grunt) {
   // Test task
   grunt.registerTask('test', 'Lints all javascript and CSS sources.', 'jshint:source');
 
-  grunt.registerTask('prepare', ['wsk-version', 'test', 'clean:destination', 'sass', 'cssmin']);
+  grunt.registerTask('prepare', ['test', 'clean:destination', 'sass', 'cssmin']);
 
   // Build task
   grunt.registerTask('build', 'Runs the "test" task, then builds the website.', [
