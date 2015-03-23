@@ -29,10 +29,6 @@ class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect("/web/", permanent=True)
 
-class WSKDownload(webapp2.RequestHandler):
-    def get(self):
-        self.redirect("https://github.com/google/web-starter-kit/releases", permanent=True)
-
 class AllPages(webapp2.RequestHandler):
     def get(self, path):
         lang = self.request.get("hl", "en")
@@ -69,8 +65,6 @@ class AllPages(webapp2.RequestHandler):
         self.response.out.write(text)
 
 app = webapp2.WSGIApplication([
-    ('/web/starter-kit/download', WSKDownload),
-    ('/web/starter-kit/download/', WSKDownload),
     ('/web', HomePage),
     ('/web/(.+)/', AllPages),
     ('/web/(.*)', AllPages)
