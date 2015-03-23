@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - Zachowaj ostrożność przy korzystaniu z technik kompresji, bo dekodowanie wymaga większej ilości pamięci i obciąża procesor. Zmiana rozmiaru dużych obrazów, by zmieściły się na mniejszym ekranie, wymaga znacznych zasobów i jest szczególnie uciążliwa na słabszych urządzeniach z niewielką pamięcią i mocą procesora.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,10 +48,6 @@ remember:
   }
 </style>
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
 ### Elastyczne obrazy
 
 Elastyczne projektowanie witryn oznacza, że na podstawie cech urządzenia może zmieniać się nie tylko układ strony, ale też jej zawartość. Na przykład wyświetlacze o wysokiej rozdzielczości (2x) wymagają grafiki o wysokiej rozdzielczości, by zagwarantować ostrość. Obraz przy szerokości 50% może wyglądać dobrze w przeglądarce szerokiej na 800&nbsp;pikseli, ale zajmuje za dużo miejsca na wąskim telefonie i wciąż tak samo obciąża łącze, mimo przeskalowania i dopasowania do mniejszego ekranu.
@@ -57,6 +58,8 @@ Elastyczne projektowanie witryn oznacza, że na podstawie cech urządzenia może
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Czasami obraz trzeba zmienić w większym stopniu &ndash; dopasować proporcje, przyciąć, a nawet zastąpić innym. W takiej sytuacji zmianę obrazu określa się zwykle jako dostosowywanie grafiki. Więcej przykładów znajdziesz na [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

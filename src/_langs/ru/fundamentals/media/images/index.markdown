@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - С осторожностью используйте техники сжатия, так как они занимают больше памяти и требуют затрат на декодирование.  Адаптация крупных изображений для небольших экранов - ресурсоемкий процесс. Он может вызвать проблемы в работе низкопроизводительных устройств с небольшим объемом памяти и ограниченными возможностями обработки данных.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,10 +48,6 @@ remember:
   }
 </style>
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
 ### Отзывчивые изображения
 
 Отзывчивый веб-дизайн предполагает, что в зависимости от параметров устройства могут меняться не только шаблоны страниц, но и контент.  Например, чтобы на экранах с высоким разрешением (2x) не страдала четкость изображения, требуется графика высокого разрешения.  Изображение с заданной шириной 50% будет корректно отображаться на экране при ширине браузера не менее 800 пикс. Однако на узком экране смартфона это же изображение будет занимать слишком много полезного пространства. При масштабировании такого изображения количество потребляемых им ресурсов не изменится.
@@ -57,6 +58,8 @@ remember:
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 В некоторых случаях вам может понадобится радикально оптимизировать изображение: изменить его пропорции, обрезать по краям или даже заменить целиком.  Здесь вам поможет техника art direction.  Больше примеров вы найдете на этом сайте: [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

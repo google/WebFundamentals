@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - Bei der Nutzung der Komprimierung ist aufgrund der erhöhten Speicherbelastung und des erhöhten Aufwands beim Codieren Vorsicht geboten. Die Änderung der Größe für kleinere Bildschirme ist rechenintensiv und kann besonders auf Low-End-Geräten mit wenig Speicher und geringer Rechenkapazität Probleme verursachen.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,10 +48,6 @@ remember:
   }
 </style>
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
 ### Responsive Bilder
 
 Mit responsivem Webdesign können sich nicht nur unsere Layouts Gerätecharakteristiken anpassen, sondern ebenso die Inhalte. So sind zum Beispiel auf Anzeigen mit hoher Auflösung (2x) Grafiken mit hoher Auflösung nötig, um eine scharfe Darstellung zu gewährleisten. Ein Bild, das 50 % der Breite einnimmt, ist gut geeignet, wenn der Browser 800 Pixel in der Breite aufweist. So ein Bild belegt auf einem Telefon mit kleinem Display jedoch zu viel Platz und verursacht darüber hinaus die gleiche Belastung der Bandbreite, wenn es zur Anzeige auf kleineren Bildschirmen herunterskaliert wird.
@@ -57,6 +58,8 @@ Mit responsivem Webdesign können sich nicht nur unsere Layouts Gerätecharakter
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 In anderen Fällen sind möglicherweise noch drastischere Änderungen erforderlich: Änderung der Proportionen, Zuschneiden und sogar der Austausch des gesamten Bilds. In solchen Fällen wir der Prozess zur Änderung des Bilds in der Regel als Art Direction bezeichnet. Weitere Beispiele finden Sie unter [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

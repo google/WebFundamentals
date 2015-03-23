@@ -35,6 +35,11 @@ remember:
 shortlinks: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19
+udacity:
+  id: ud893
+  title: Responsive Web Design Fundamentals
+  description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
+  image: imgs/udacity-rwd.png
 ---
 {% wrap content %}
 
@@ -57,9 +62,14 @@ shortlinks:
   }
 </style>
 
+{% comment %}
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/oK09n_PGhTo?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
 </div>
+{% endcomment %}
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+
 
 Существует множество различных устройств с экранами всевозможных размеров: телефоны, `фаблеты`, планшетные и домашние ПК, игровые консоли, телевизоры и даже электронные аксессуары, которые можно носить прямо на себе.  Размеры экранов постоянно меняются, поэтому важно, чтобы сайт мог адаптироваться к любому из них - не только сейчас, но и в будущем.
 
