@@ -57,7 +57,7 @@ related-guides:
         id: images
         title: "Afbeeldingen"
         href: media/images/
-    - 
+    -
       title: "Mediaquery's gebruiken om afbeeldingen met hoge resolutie of art direction te bieden"
       href: fundamentals/media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
       section:
@@ -105,7 +105,7 @@ We doen dit door te bepalen waar we onze breekpunten (een punt waar de lay-out e
 
 {% include modules/takeaway.liquid list=page.key-takeaways.make-responsive %}
 
-## Voeg een viewport 
+## Voeg een viewport in
 
 Zelfs voor een basispagina **moet** u altijd een viewport-metatag invoegen.
 De viewport is het belangrijkste onderdeel dat u nodig heeft om ervaringen op meerdere apparaten te bouwen.
@@ -119,7 +119,7 @@ De viewport bevindt zich in de kop van het document en moet slechts eenmaal word
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
-## Solliciteer eenvoudige stijl
+## Pas eenvoudige stijl toe
 
 Ons product en bedrijf heeft al erg specifieke richtlijnen voor merk en lettertype die in een stijlgids zijn opgenomen.
 
@@ -164,7 +164,7 @@ We hebben een eenvoudige achtergrondafbeelding gekozen die wazig is zodat de aan
 
 <br style="clear: both;">
 
-## Stel uw eerste breekpunt 
+## Stel uw eerste breekpunt in
 
 Het ontwerp ziet er pas slecht uit vanaf een breedte van 600 pixels. In ons voorbeeld is de regel langer dan 10 woorden (de optimale leeslengte) en dat willen we aanpassen.
 
@@ -204,7 +204,7 @@ We hebben gekozen voor slechts twee hoofdlay-outs: een smalle viewport en een br
 
 We hebben ook beslist om aflopende gedeelten te maken in de smalle viewport die ook aflopend blijven in het brede viewport. Dit betekent dat we de maximale breedte van het scherm moeten beperken zodat de tekst en alinea`s op heel brede schermen niet één lange regel worden. We hebben ervoor gekozen dat dit punt op ongeveer 800 pixels ligt.
 
-Om dit te bereiken moeten we de breedte beperken en de elementen centreren. We moeten rond elk groot gedeelte een container maken en een `marge: 
+Om dit te bereiken moeten we de breedte beperken en de elementen centreren. We moeten rond elk groot gedeelte een container maken en een `marge:
 auto` toepassen. Hierdoor kan het scherm groter worden maar blijft de inhoud gecentreerd en op een maximumgrootte van 800 pixels.
 
 De container is een eenvoudige `div` in het volgende formulier:
