@@ -12,6 +12,54 @@
 
 .themed {
 
+  .root--dark & {
+    color: $colorText;
+
+    &.divider-icon:before {
+      color: $colorText;
+    }
+
+    &.divider-icon:after {
+      color: $colorMuted;
+    }
+  }
+
+  .root--web-fundamentals & {
+    color: $colorBlue;
+
+    &.divider-icon:before {
+      color: $colorBlue;
+    }
+
+    &.divider-icon:after {
+      color: $colorBlueSecondary;
+    }
+  }
+
+  .root--web-starter-kit & {
+    color: $colorTools;
+
+    &.divider-icon:before {
+      color: $colorTools;
+    }
+
+    &.divider-icon:after {
+      color: $colorToolsSecondary;
+    }
+  }
+
+  .root--shows & {
+    color: $colorBlue;
+
+    &.divider-icon:before {
+      color: $colorBlue;
+    }
+
+    &.divider-icon:after {
+      color: $colorBlueSecondary;
+    }
+  }
+
   .theme--multi-device-layouts & {
     color: $colorLayouts;
 

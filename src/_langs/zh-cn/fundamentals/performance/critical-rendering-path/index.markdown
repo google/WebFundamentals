@@ -11,6 +11,11 @@ id: critical-rendering-path
 collection: performance
 authors:
   - ilyagrigorik
+udacity:
+  id: ud884
+  title: Website Performance Optimization
+  description: "Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages."
+  image: images/crp-udacity.png
 ---
 {% wrap content%}
 
@@ -21,6 +26,8 @@ authors:
 <img src="images/progressive-rendering.png" class="center" alt="渐进式网页呈现">
 
 通过优化关键呈现路径，可以大大缩短首次呈现网页的时间. 另外，了解关键呈现路径还可以为构建高性能交互式应用程序打下基础。其实，处理交互式更新的过程是相同的，只是在连续循环中完成，理想情况下每秒可以处理 60 个帧！ 但是，我们还是按部就班来学习吧。首先，我们从头开始快速介绍一下浏览器如何显示简单网页。
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title image=page.udacity.image description=page.udacity.description %}
 
 {% endwrap%}
 

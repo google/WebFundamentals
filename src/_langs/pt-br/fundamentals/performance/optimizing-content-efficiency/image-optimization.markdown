@@ -99,12 +99,12 @@ Depois de decidir que o uso de uma imagem é a melhor maneira de alcançar o efe
 
 <div class="clear">
   <div class="g--half">
-    <b>Vetor<b>
+    <b>Vetor</b>
     <img class="center" src="images/vector-zoom.png" alt="Imagem vetorial ampliada">
   </div>
 
   <div class="g--half g--last">
-    <b>Varredura<b>
+    <b>Varredura</b>
     <img src="images/raster-zoom.png" alt="Imagem de varredura ampliada">
   </div>
 </div>

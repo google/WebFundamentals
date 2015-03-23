@@ -75,6 +75,11 @@ Mac
     * `npm install`
 1. Install fontforge if required for grunt-webfont on your OS.  See [grunt-webfont installation instructions](https://github.com/sapegin/grunt-webfont/blob/master/Readme.md#installation) for details.
 
+**Note:** On OSX, you may see an error about *Warning: EMFILE, too many open files*. If so you will need to 
+increase the maximum number of open file handles.  Use `ulimit -n 1024` to increase the maximum number of open files to 2048 from the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc` or `.zshrc`.
+
+**Note:** On OSX, you may also see an error about *Allow dev_appserver to check for updates on startup? (Y/n)* and, many lines below it, *EOFError: EOF when reading a line*. If so you need to run dev_appserver once in a GAE project to allow `dev_appserver` to ask you about checking for updates. Choose whichever answer you like; this just clears the prompt for future runs of `dev_appserver` and you should be good to go.
+
 
 Running the site
 ================
@@ -87,9 +92,42 @@ grunt develop
 
 This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at [http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
 
-On Mac, due to the number of files in the project, you will likely need to increase the maximum number of open file handles.  Use `ulimit -n 1024` to increase the maximum number of open files to 1024 from the default of 256.
-
 If you want to build a single language then run this: `grunt develop --lang=en`.
+
+
+Alternative dev workflow based on Docker
+========================================
+
+In this configuration the only requirement is [Docker](https://docs.docker.com/installation/).
+
+Once you clone this repo, start building the site right away:
+
+```sh
+tools/docker.sh grunt build
+```
+
+or run a local dev server:
+
+```sh
+tools/docker.sh grunt develop
+# then point your browser to http://localhost:8081/web/fundamentals
+```
+
+Essentially, prefix `grunt` command with `tools/docker.sh` and it will run inside a Docker container,
+which includes all the dependencies needed to build the site.
+
+If you want to experiment with your own Docker image instead of using `google/webfundamentals-dev`,
+modify `Dockerfile` in the root of this repo and build your image:
+
+```sh
+docker build -t myimage .
+```
+
+Once the image is built, use it with `tools/docker.sh`:
+
+```sh
+WF_DOCKER_IMAGE=myimage tools/docker.sh grunt develop
+```
 
 
 Using project-level meta data

@@ -15,8 +15,18 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+After an analysis of the mobile-friendliness of the top 1000 sites we found some problem areas: _53%_ still only provide a desktop-only experience, _82%_ of sites have issues with interactivity on a mobile device and _64%_ of sites have text that users will have issues reading.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+## Quick hits to dramatically improve your mobile web experience:
+
++  Always define a viewport
++  Fit content inside the viewport
++  Keep font sized at a readable level
++  Limit use of Web Fonts
++  Size and space out tap targets appropriately
++  Use the semantic types for input elements
+
+PageSpeed Insights just launched a [UX analysis for determining how mobile-friendly](https://developers.google.com/speed/pagespeed/insights/) your site is. It will help you [find common problems](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fnews.google.com) with your sites mobile UX. Try it out!
+
+[Slides: Best UX patterns for mobile web apps](http://mobile-ux.appspot.com/)

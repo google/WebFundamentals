@@ -5372,6 +5372,30 @@ figcaption {
 * @author Antoine Grelard
 *
 **/
+.root--dark .themed {
+  color: #404040; }
+  .root--dark .themed.divider-icon:before {
+    color: #404040; }
+  .root--dark .themed.divider-icon:after {
+    color: #737373; }
+.root--web-fundamentals .themed {
+  color: #4285f4; }
+  .root--web-fundamentals .themed.divider-icon:before {
+    color: #4285f4; }
+  .root--web-fundamentals .themed.divider-icon:after {
+    color: #a0c3ff; }
+.root--web-starter-kit .themed {
+  color: #CF3A8C; }
+  .root--web-starter-kit .themed.divider-icon:before {
+    color: #CF3A8C; }
+  .root--web-starter-kit .themed.divider-icon:after {
+    color: #edb5d4; }
+.root--shows .themed {
+  color: #4285f4; }
+  .root--shows .themed.divider-icon:before {
+    color: #4285f4; }
+  .root--shows .themed.divider-icon:after {
+    color: #a0c3ff; }
 .theme--multi-device-layouts .themed {
   color: #297ea9; }
   .theme--multi-device-layouts .themed.divider-icon:before {
