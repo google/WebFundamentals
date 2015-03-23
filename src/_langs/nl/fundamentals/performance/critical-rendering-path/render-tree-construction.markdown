@@ -73,7 +73,7 @@ Heeft u dit allemaal kunnen volgen? Voor elke stap moest de browser een flinke h
 <img src="images/layout-timeline.png" alt="De opmaak meten in DevTools" class="center">
 
 * De opbouw van de weergaveboomstructuur en de berekening van de positie en grootte worden vastgelegd in de gebeurtenis 'Layout' (Opmaak) in de Timeline (Tijdlijn).
-* Zodra de opmaak is voltooid, geeft de browser de gebeurtenissen 'Paint setup' (Instelling kleuren) en 'Paint' (Kleuren) vrij waardoor de weergaveboomstructuur wordt geconverteerd naar pixels op het scherm.
+* Zodra de opmaak is voltooid, geeft de browser de gebeurtenissen 'Paint setup' (Instelling kleuren) en 'Paint' (Schilderen) vrij waardoor de weergaveboomstructuur wordt geconverteerd naar pixels op het scherm.
 
 De tijd die nodig is voor de opbouw van de weergaveboomstructuur, de opmaak en het kleuren kan verschillen op basis van de grootte van het document, de toegepaste stijlen en natuurlijk het apparaat waarop de pagina wordt weergegeven: hoe groter het document, hoe meer de browser moet doen; hoe ingewikkelder de stijlen, hoe meer tijd wordt ingenomen door het kleuren (een massieve kleur is eenvoudig te kleuren, maar een klein beetje schaduw is veel 'zwaarder' te berekenen en weer te geven).
 
