@@ -40,6 +40,11 @@ remember:
 shortlinks: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19
+udacity:
+  id: ud893
+  title: Responsive Web Design Fundamentals
+  description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
+  image: imgs/udacity-rwd.png
 ---
 {% wrap content %}
 
@@ -62,21 +67,28 @@ shortlinks:
   }
 </style>
 
+{% comment %}
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/oK09n_PGhTo?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
 </div>
+{% endcomment %}
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+
 
 There is a multitude of different screen sizes across phones, "phablets",
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
 be changing, so it's important that your site can adapt to any screen size,
 today or in the future.
 
+{% comment %}
 {% link_sample _code/weather.html %}
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
 {% endlink_sample %}
+{% endcomment %}
 
 Responsive web design, originally defined by [Ethan Marcotte in A List
 Apart](http://alistapart.com/article/responsive-web-design/) responds to the
