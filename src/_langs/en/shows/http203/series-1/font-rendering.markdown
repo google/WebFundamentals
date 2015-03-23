@@ -4,7 +4,7 @@ showid: http203
 layout: shows/single-video
 collection: http203-series-1
 title: "4. Font Rendering"
-description: "This is a video description"
+description: "There's nothing more annoying than visiting a site and just seeing white space where the text should be, just because the web font is taking an age to load. Jake brings Paul news of a potential improvement to the web that could help."
 published: true
 showYoutubeID: GhFR-G42mOA
 
@@ -15,8 +15,8 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+There's nothing more annoying than visiting a site and just seeing white space where the text should be, just because the web font is taking an age to load. [Jake](https://twitter.com/jaffathecake) brings [Paul](https://twitter.com/aerotwist) news of a potential improvement to the web that could help, and he also discovers that conferences are incredibly dangerous places to frequent!
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+## Read more
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+* [css-font-rendering on GitHub](https://github.com/KenjiBaheux/css-font-rendering)

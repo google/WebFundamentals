@@ -1,0 +1,22 @@
+$padding: 8px !default;
+
+.showblock {
+
+}
+
+.showblock-container {
+	margin-bottom: $padding * 2;
+}
+
+.showblock-link, .showblock-link:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.showblock--imagecontainer {
+
+}
+
+.showblock--title {
+	@include type--large;
+}

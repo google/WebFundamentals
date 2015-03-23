@@ -1,5 +1,6 @@
 ---
 id: http203-series-1
+showid: http203
 layout: shows/series-index
 collection: http203
 title: "Series 1"

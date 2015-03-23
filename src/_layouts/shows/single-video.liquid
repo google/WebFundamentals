@@ -15,8 +15,6 @@
   {% endif %}
 {% endfor %}
 
-{% assign showDetails = page.articles[page.showid] %}
-
 {% assign showDetails = null %}
 {% assign shows = page.articles['shows'] | sort: 'title'  %}
 {% for show in shows %}
@@ -29,7 +27,8 @@
 
   <!-- Template Starts Here -->
 
-    {% include head.liquid %}
+    {% capture feedUrl %}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedUrl=feedUrl feedName=showDetails.title %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
@@ -66,17 +65,24 @@
 
 
 
-
-      {{ content }}
+      <div class="g-wide--3 g-medium--half singlevideo-content-container">
+        {{ content }}
+      </div>
 
 
 
 
 
       <!-- Next and Previous Video Links -->
-      <div class="videolinks">
+      <div class="videolinks g-wide--1 g-wide--last g-medium--half g--last singevideo-next-prev-container">
 
-
+        <!-- Next Video -->
+        <div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
+          {% if nextVideo != nil %}
+            <p class="videolinks--description">Next Video</p>
+            {% include modules/shows/small-video.liquid video=nextVideo showid=page.showid %}
+          {% endif %}
+        </div>
 
         <!-- Previous Video -->
       	<div class="videolinks--prev{% if prevVideo == nil %} not-available{% endif %}">
@@ -86,16 +92,9 @@
           {% endif %}
       	</div>
 
-
-
-        <!-- Next Video -->
-        <div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
-          {% if nextVideo != nil %}
-            <p class="videolinks--description">Next Video</p>
-            {% include modules/shows/small-video.liquid video=nextVideo showid=page.showid %}
-          {% endif %}
-        </div>
       </div>
+
+      <div class="clear"></div>
 
     {% endwrap %}
 

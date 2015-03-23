@@ -1,6 +1,12 @@
 <!-- Lets plan out the order of videos -->
+<!-- {{ page.articles[page.id] }} -->
 {% if page.articles[page.id] %}
+<<<<<<< HEAD
+  <!-- PETE WAS HERE -->
+	{% assign shows = page.articles[page.id] | sort: 'date' | reverse  %}
+=======
 	{% assign videosInSeries = page.articles[page.id] | sort: 'date'  %}
+>>>>>>> f2464cad5d0ded59836e34fc45f5944418493c5c
 {% endif %}
 
 {% assign showDetails = null %}
@@ -30,13 +36,33 @@
 	    <!-- Display content from the markdown -->
 	    {{ content }}
 
+<<<<<<< HEAD
+      {% if page.id == 'udacity-courses' %}
+  	    <h2>Courses</h2>
+      {% else %}
+        <h2>Episodes</h2>
+      {% endif %}
+
+=======
+>>>>>>> f2464cad5d0ded59836e34fc45f5944418493c5c
 	    <ol class="blanklist">
 	      {% for videoInSeries in videosInSeries %}
 	      <li>
       		<div class="widevideo">
+<<<<<<< HEAD
+	      		<div class="widevideo--imagecontainer">
+	      			<a href="{{site.baseurl}}{{show.url | canonicalize}}">
+                {% if show.youtubeVideoID %}
+  	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+                {% endif %}
+                {% if show.udacityID %}
+                  <img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.youtubeTrailerID }}/0.jpg" />
+                {% endif %}
+=======
 	      		<div class="widevideo--imagecontainer g--half">
 	      			<a href="{{site.baseurl}}{{videoInSeries.url | canonicalize}}">
 	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.showYoutubeID }}/0.jpg" />
+>>>>>>> f2464cad5d0ded59836e34fc45f5944418493c5c
 	      			</a>
 	      		</div>
 	      		<div class="widevideo--details g--half g--last">

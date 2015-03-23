@@ -4,7 +4,7 @@ showid: polycasts
 layout: shows/single-video
 collection: polycasts-season-1
 title: "Season's greetings!"
-description: ""
+description: "Hey there Polycasters! We wanted to take a moment to wish you all very happy holidays and thank you so much for checking out the first season. In today's episode we have highlights from the Chrome Dev Summit and a survey so *you* can let us know what content you'd like to see in the second season."
 published: true
 showYoutubeID: aDQUYs-0hxQ
 
@@ -15,8 +15,10 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+Hey there Polycasters! We wanted to take a moment to wish you all very happy holidays and thank you so much for checking out the first season. In today's episode we have highlights from the Chrome Dev Summit and a survey so *you* can let us know what content you'd like to see in the second season.
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+## Read More
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+- [Easy composition and reuse with Web Components](http://goo.gl/Jq2b3l)
+- [Polymer: State of the Union](http://goo.gl/ZnsHMO)
+- [Let's build some apps with Polymer!](http://goo.gl/Uf0DfQ)
