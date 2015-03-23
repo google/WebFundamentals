@@ -3760,6 +3760,13 @@ div.related-items-on-spotlight {
 .showhome--series-first {
   padding-top: 0; }
 
+.showblock-container {
+  margin-bottom: 16px; }
+
+.showblock-link, .showblock-link:hover {
+  text-decoration: none;
+  color: inherit; }
+
 .showblock--title {
   color: #404040;
   font-size: 20px;
