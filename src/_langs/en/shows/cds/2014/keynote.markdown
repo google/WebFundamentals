@@ -3,7 +3,7 @@ id: keynote
 showid: cds
 layout: shows/single-video
 collection: cds-2014
-title: "keynote"
+title: "Keynote"
 description: ""
 published: true
 showYoutubeID: lboyR-A1woU
