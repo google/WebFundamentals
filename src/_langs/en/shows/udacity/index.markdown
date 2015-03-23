@@ -3,7 +3,8 @@ id: udacity-courses
 layout: shows/series-index
 collection: udacity
 title: "Udacity Courses"
-description: ""
+description: "Get started or build your web design and development skills with these
+free Udacity courses taught by your friends at Google."
 published: true
 date: 2014-10-02
 article:
@@ -12,4 +13,4 @@ article:
 ---
 
 Get started or build your web design and development skills with these
-**free** Udacity courses taught by your friends at Google. 
+**free** Udacity courses taught by your friends at Google.
