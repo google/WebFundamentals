@@ -1,12 +1,12 @@
 {
-  "url": "https://api.github.com/repos/google/web-starter-kit/releases/571166",
-  "assets_url": "https://api.github.com/repos/google/web-starter-kit/releases/571166/assets",
-  "upload_url": "https://uploads.github.com/repos/google/web-starter-kit/releases/571166/assets{?name}",
-  "html_url": "https://github.com/google/web-starter-kit/releases/tag/v0.5.2",
-  "id": 571166,
-  "tag_name": "v0.5.2",
+  "url": "https://api.github.com/repos/google/web-starter-kit/releases/1075877",
+  "assets_url": "https://api.github.com/repos/google/web-starter-kit/releases/1075877/assets",
+  "upload_url": "https://uploads.github.com/repos/google/web-starter-kit/releases/1075877/assets{?name}",
+  "html_url": "https://github.com/google/web-starter-kit/releases/tag/v0.5.3",
+  "id": 1075877,
+  "tag_name": "v0.5.3",
   "target_commitish": "master",
-  "name": "Web Starter Kit 0.5.2",
+  "name": "0.5.3",
   "draft": false,
   "author": {
     "login": "addyosmani",
@@ -28,10 +28,10 @@
     "site_admin": false
   },
   "prerelease": false,
-  "created_at": "2014-09-20T11:29:24Z",
-  "published_at": "2014-09-20T11:31:21Z",
+  "created_at": "2015-01-23T14:46:21Z",
+  "published_at": "2015-03-21T16:18:33Z",
   "assets": [],
-  "tarball_url": "https://api.github.com/repos/google/web-starter-kit/tarball/v0.5.2",
-  "zipball_url": "https://api.github.com/repos/google/web-starter-kit/zipball/v0.5.2",
-  "body": "This is a minor patch release that primarily bumps our dependencies to the latest versions.\r\n\r\n* a4ddfca bump dependencies\r\n* f8cfdff gulpfile - fix indentation\r\n* a50b72c bump gulp-autoprefixer\r\n* 0def5a8 Use correct ordering in installation instructions"
+  "tarball_url": "https://api.github.com/repos/google/web-starter-kit/tarball/v0.5.3",
+  "zipball_url": "https://api.github.com/repos/google/web-starter-kit/zipball/v0.5.3",
+  "body": "Notes forthcoming."
 }

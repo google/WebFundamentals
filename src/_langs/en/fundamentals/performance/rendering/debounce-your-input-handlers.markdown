@@ -28,7 +28,8 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-Avoid long-running input handlers
+## Avoid long-running input handlers
+
 In the fastest possible case, when a user interacts with the page, the page’s compositor thread can take the user’s touch input and simply move the content around. This requires no work by the main thread, where JavaScript, layout, styles, or paint are done.
 
 <img src="images/debounce-your-input-handlers/compositor-scroll.jpg" class="center" alt="Lightweight scrolling; compositor only.">
@@ -37,14 +38,15 @@ If, however, you attach an input handler, like `touchstart`, `touchmove`, or `to
 
 <img src="images/debounce-your-input-handlers/ontouchmove.jpg" class="center" alt="Heavy scrolling; compositor is blocked on JavaScript.">
 
-In short, you should make sure that any input handlers you run should execute quickly and allow the compositor to do its work.
+In short, you should make sure that any input handlers you run should execute quickly and allow the compositor to do its job.
 
 ## Avoid style changes in input handlers
+
 Input handlers, like those for scroll and touch, are scheduled to run just before any `requestAnimationFrame` callbacks.
 
-If you make a visual change inside one of those handlers, then at the start of the `requestAnimationFrame`, there will be style changes pending. If you then read visual properties at the start of the requestAnimationFrame callback, as the advice in “[Avoid large, complex layouts and layout thrashing](avoid-large-complex-layouts-and-layout-thrashing)” suggests, you will trigger a forced synchronous layout!
+If you make a visual change inside one of those handlers, then at the start of the `requestAnimationFrame`, there will be style changes pending. If you _then_ read visual properties at the start of the requestAnimationFrame callback, as the advice in “[Avoid large, complex layouts and layout thrashing](avoid-large-complex-layouts-and-layout-thrashing)” suggests, you will trigger a forced synchronous layout!
 
-<img src="images/debounce-your-input-handlers/frame-with-input.png" class="center" alt="Heavy scrolling; compositor is blocked on JavaScript.">
+<img src="images/debounce-your-input-handlers/frame-with-input.jpg" class="center" alt="Heavy scrolling; compositor is blocked on JavaScript.">
 
 ## Debounce your scroll handlers
 
