@@ -18,7 +18,7 @@ key-takeaways:
     - De Timeline (Tijdlijn) in Chrome DevTools biedt ons de mogelijkheid om de opbouw en verwerking van het DOM en CCSOM vast te leggen en te controleren.
 notes:
   devtools:
-    - We gaan ervan uit dat u beschikt over de basisvaardigheden voor Chrome DevTools, dat wil zeggen dat u weet hoe u een netwerkwaterval moet vastleggen of een tijdlijn moet opnemen. Als u uw kennis snel wilt opfrissen, kunt u de cursus <a href="https://developer.chrome.com/devtools">Chrome DevTools documentation</a>, or if you`re new to DevTools, we recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Chrome DevTools ontdekken</a> bekijken.
+    - We gaan ervan uit dat u beschikt over de basisvaardigheden voor Chrome DevTools, dat wil zeggen dat u weet hoe u een netwerkwaterval moet vastleggen of een tijdlijn moet opnemen. Als u uw kennis snel wilt opfrissen, kunt u de cursus <a href="https://developer.chrome.com/devtools">Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Chrome DevTools ontdekken</a> bekijken.
 ---
 {% wrap content%}
 
@@ -48,7 +48,7 @@ Laten we beginnen met het meest eenvoudige geval: een platte HTML-pagina met een
 
 <img src="images/full-process.png" alt="DOM-opbouwproces">
 
-1. **Conversie:** de browser leest de raw bytes van de HTML van de schijf of van het netwerk en vertaalt deze naar individuele tekens op basis van de codering die in het bestand wordt opgegeven (bijvoorbeeld UTF-8).
+1. **Conversie:** de browser leest de onbewerkte bytes van de HTML van de schijf of van het netwerk en vertaalt deze naar individuele tekens op basis van de codering die in het bestand wordt opgegeven (bijvoorbeeld UTF-8).
 1. **Tokens maken:** de browser converteert tekenstrings naar specifieke tokens, zoals deze door de [W3C HTML5-standaard](http://www.w3.org/TR/html5/) worden voorgeschreven (bijvoorbeeld `<html>`, `<body>` en andere strings in `punthaken`). Elke token heeft een speciale betekenis en een eigen set met regels.
 1. **Lexeren:** de ontstane tokens worden geconverteerd in `objecten` waarmee de eigenschappen en regels worden gedefinieerd.
 1. **DOM-opbouw:** omdat de HTML-opmaak de relatie tussen de verschillende tags (bepaalde tags staan binnen andere tags) definieert, worden tot slot de gemaakte objecten aan elkaar verbonden in een boomstructuur waarin ook de ouder-kindrelatie van de oorspronkelijke opmaak wordt gedefinieerd: het object _HTML_ is een ouder van het object _body_, _body_ is een ouder van het object _paragraph_ enzovoorts.
