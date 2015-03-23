@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "App Bar"
-description: "Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
+description: "Users have learned to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
 thumbnail: images/appbar.png
 article:
   written_on: 2014-01-01
@@ -46,7 +46,7 @@ The App Bar consists of three elements.
 - Primary actions
 - (Optional) Menu button
 
-Nearly every site on the internet will have actions they enable their users to perform, search for example. Place buttons to perform these actions in the App Bar, giving your user a common to find out what the current actions are available on that page.
+Nearly every site on the internet will have actions they enable their users to perform, search for example. Place buttons to perform these actions in the App Bar, giving your user a common way to find out what the current actions are available on that page.
 
 If you have a menu, use the hamburger icon (three horizontal lines) and place it on the far left or far right. Once you have selected a side, don't move it, always keep it in the same position meaning the user only needs to learn where it is once.
 
