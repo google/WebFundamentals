@@ -97,6 +97,6 @@ toc:
         path: /fundamentals/resources/styleguide/
       - title: 文章范例
         path: /fundamentals/resources/example-article/
-  - title: "Web <strong>Starter Kit</strong>"
+  - title: "Web <strong>启步套装</strong>"
     path: /starter-kit/
     in_header: false
