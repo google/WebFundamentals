@@ -25,96 +25,32 @@ the Google Developer team related to web.
 
 Select a show or video and start exploring.
 
-<!-- Latest Episode -->
-{% if latestVideo %}
-
-## Latest Show: {{ latestVideo.title }}
-{% include modules/video.liquid id=latestVideo.showYoutubeID %}
-
-{% endif %}
 
 
+<div class="g--third showblock showblock-cds">
+	<div class="showblock--imagecontainer">
+		<img src="imgs/cds_circle.png" alt="Chrome Dev Summit Hero Image">
+	</div>
+	<h1 class="showblock--title">Chrome Dev Summit</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices cursus elit sed mollis. Donec laoreet vehicula pretium. Fusce interdum mollis nulla et lobortis. Proin quis nunc tincidunt libero varius molestie.</p>
+</div>
 
+<div class="g--third showblock showblock-http203">
+	<div class="showblock--imagecontainer">
+		<img src="imgs/http203_circle.png" alt="HTTP203 Hero Image">
+	</div>
+	<h1 class="showblock--title">HTTP203</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices cursus elit sed mollis. Donec laoreet vehicula pretium. Fusce interdum mollis nulla et lobortis. Proin quis nunc tincidunt libero varius molestie.</p>
+</div>
 
-## Recent Shows
-{% assign NUM_OF_RECENT_SHOWS =  10%}
-{% assign displayedShows = 0 %}
-<ol class="flatrowlist">
-  {% for video in orderedVideos %}
-    {% if displayedShows < NUM_OF_RECENT_SHOWS %}
-    <li>
-      {% include modules/shows/small-video.liquid video=video showid=page.id %}
-    </li>
-    {% endif %}
-    {% assign displayedShows = displayedShows | plus: 1 %}
-  {% endfor %}
-</ol>
+<div class="g--third g--last showblock showblock-polycasts">
+	<div class="showblock--imagecontainer">
+		<img src="imgs/polycasts_circle.png" alt="Polycasts Hero Image">
+	</div>
+	<h1 class="showblock--title">Polycasts</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices cursus elit sed mollis. Donec laoreet vehicula pretium. Fusce interdum mollis nulla et lobortis. Proin quis nunc tincidunt libero varius molestie.</p>
+</div>
 
+<div class="clear"></div>
 
-
-## All Shows
-
-
-
-
-<ol class="shows--videolist blanklist">
-
-
-
-  <!-- Loop Through all Shows -->
-  {% for show in shows %}
-
-
-
-    <!-- Create list item -->
-    <li class="shows--videolistitem">
-
-
-
-      <!-- Title of Show -->
-      <div class="shows--header shows--header-{{ show.id }}">
-        {{ show.title }}
-      </div>
-
-
-
-      <!-- List of series -->
-      {% assign showSeries = page.articles[show.id]  | sort: 'date' %}
-      <div class="shows--videos shows--videos-{{ show.id }}">
-        <ol class="series-list">
-        {% for series in showSeries %}
-
-          <!-- Individual series -->
-          <li>
-            <div class="shows--videoseriestitle shows--videoseriestitle-{{ series.id }}">{{ series.title }}</div>
-
-
-
-            <!-- Videos in Series -->
-            <ol class="flatrowlist">
-              {% assign seriesVideos = page.articles[series.id]  | sort: 'date' %}
-              {% assign displayedShows = 0 %}
-              {% assign MAX_DISPLAYED_SHOWS = 5 %}
-              {% for video in seriesVideos %}
-                {% if displayedShows < MAX_DISPLAYED_SHOWS %}
-                <li>
-                  {% include modules/shows/small-video.liquid video=video showid=page.id %}
-                </li>
-                {% endif %}
-                {% assign displayedShows = displayedShows | plus: 1 %}
-              {% endfor %}
-            </ol>
-
-
-
-          </li>
-        {% endfor %}
-        </ol>
-      </div>
-
-
-
-    </li>
-  {% endfor %}
-</ol>
 {% endwrap %}
