@@ -16,6 +16,21 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign orderedVideos = site.data.allVideos | sort: 'date' | reverse %}
 {% assign latestVideo = orderedVideos | first %}
 
+{% assign cdsShow = null %}
+{% assign http203Show = null %}
+{% assign polycastsShows = null %}
+{% for show in shows %}
+  {% if show.id == 'cds' %}
+    {% assign cdsShow = show %}
+  {% endif %}
+  {% if show.id == 'http203' %}
+    {% assign http203Show = show %}
+  {% endif %}
+  {% if show.id == 'polycasts' %}
+    {% assign polycastsShows = show %}
+  {% endif %}
+{% endfor %}
+
 {% wrap content %}
 
 # Shows
@@ -25,6 +40,8 @@ the Google Developer team related to web.
 
 Select a show or video and start exploring.
 
+{{ page.article['shows'][0].description }}
+
 <div class="showblock-container">
 	<a class="g--third showblock-link" href="{{site.baseurl}}/shows/cds/">
 		<div class="showblock showblock-cds">
@@ -32,7 +49,8 @@ Select a show or video and start exploring.
 				<img src="imgs/cds_circle.png" alt="Chrome Dev Summit Hero Image">
 			</div>
 			<h1 class="showblock--title">Chrome Dev Summit</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices cursus elit sed mollis. Donec laoreet vehicula pretium. Fusce interdum mollis nulla et lobortis. Proin quis nunc tincidunt libero varius molestie.</p>
+
+			<p>{{ cdsShow.description }}</p>
 		</div>
 	</a>
 
@@ -42,7 +60,8 @@ Select a show or video and start exploring.
 				<img src="imgs/http203_circle.png" alt="HTTP203 Hero Image">
 			</div>
 			<h1 class="showblock--title">HTTP203</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices cursus elit sed mollis. Donec laoreet vehicula pretium. Fusce interdum mollis nulla et lobortis. Proin quis nunc tincidunt libero varius molestie.</p>
+
+			<p>{{ http203Show.description }}</p>
 		</div>
 	</a>
 
@@ -52,7 +71,8 @@ Select a show or video and start exploring.
 				<img src="imgs/polycasts_circle.png" alt="Polycasts Hero Image">
 			</div>
 			<h1 class="showblock--title">Polycasts</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices cursus elit sed mollis. Donec laoreet vehicula pretium. Fusce interdum mollis nulla et lobortis. Proin quis nunc tincidunt libero varius molestie.</p>
+
+			<p>{{ polycastsShows.description }}</p>
 		</div>
 	</a>
 
