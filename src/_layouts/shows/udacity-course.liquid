@@ -1,0 +1,51 @@
+<!-- Lets plan out the order of videos -->
+
+
+  <!-- Template Starts Here -->
+
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+    <!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    <!-- Title of the show -->
+    <div class="showtitle--title-container showtitle--title-container-{{ page.showid }} g-wide--full">
+      <h1 class="showtitle--title showtitle--title-{{ page.showid }} container">
+        {{ page.title }}
+      </h1>
+      {% if page.subtitle %}
+      <h2 class="showtitle--subtitle showtitle--subtitle-{{ page.showid }} container">
+        {{ page.subtitle }}
+      </h2>
+      {% endif %}
+    </div>
+    <div class="clear"></div>
+
+
+
+
+    {% wrap content %}
+
+
+      {% if page.youtubeTrailerID %}
+        <!-- YouTube embed -->
+        {% include modules/video.liquid id=page.youtubeTrailerID %}
+      {% endif %}
+      <div>
+        <a href="https://www.udacity.com/course/{{ page.udacityID }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index" class="cta--primary">
+          {{"view_course" | localize_string}}
+        </a>
+      </div>
+
+
+      {{ content }}
+
+
+    {% endwrap %}
+
+    {% include footer.liquid %}

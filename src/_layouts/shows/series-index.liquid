@@ -1,5 +1,7 @@
 <!-- Lets plan out the order of videos -->
+<!-- {{ page.articles[page.id] }} -->
 {% if page.articles[page.id] %}
+  <!-- PETE WAS HERE -->
 	{% assign shows = page.articles[page.id] | sort: 'date' | reverse  %}
 {% endif %}
 
@@ -20,7 +22,11 @@
 	    <!-- Display content from the markdown -->
 	    {{ content }}
 
-	    <h2>Episodes</h2>
+      {% if page.id == 'udacity-courses' %}
+  	    <h2>Courses</h2>
+      {% else %}
+        <h2>Episodes</h2>
+      {% endif %}
 
 	    <ol class="blanklist">
 	      {% for show in shows %}
@@ -28,7 +34,12 @@
       		<div class="widevideo">
 	      		<div class="widevideo--imagecontainer">
 	      			<a href="{{site.baseurl}}{{show.url | canonicalize}}">
-	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+                {% if show.youtubeVideoID %}
+  	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+                {% endif %}
+                {% if show.udacityID %}
+                  <img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.youtubeTrailerID }}/0.jpg" />
+                {% endif %}
 	      			</a>
 	      		</div>
 	      		<div class="widevideo--details">
