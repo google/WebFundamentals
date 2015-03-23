@@ -13,7 +13,7 @@ notes:
     Consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this page</a> for a more robust solution.
 article:
   written_on: 2014-04-17
-  updated_on: 2014-11-20
+  updated_on: 2015-03-20
   order: 1
 id: setting-up-wsk
 collection: web-starter-kit
