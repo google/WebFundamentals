@@ -3562,7 +3562,9 @@ div.related-items-on-spotlight {
 
 .blanklist, .content > .blanklist {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   margin: 0; }
 
 .blanklist li {
