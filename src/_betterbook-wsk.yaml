@@ -3,8 +3,7 @@ toc:
   path: /starter-kit/
   home: true
 - title: "Download"
-  path: https://github.com/google/web-starter-kit/releases/tag/v0.5.2
-  external: true
+  path: /starter-kit/download/
 - title: "Getting Started"
   path: /fundamentals/getting-started/web-starter-kit/
 - title: "Docs"
