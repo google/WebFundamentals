@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - Soyez prudent lorsque vous utilisez la technique de compression, en raison des exigences supplémentaires sur le plan de la mémoire et du décodage. Le redimensionnement d'images sur des écrans de petite taille est une opération exigeante qui peut se révéler particulièrement laborieuse sur des appareils d'entrée de gamme disposant d'une mémoire et d'une puissance de traitement limitées.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,10 +48,6 @@ remember:
   }
 </style>
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
 ### Images adaptatives
 
 Grâce à la conception de sites Web adaptatifs, il est possible d'adapter non seulement les dispositions aux caractéristiques de l'appareil, mais aussi les images. Par exemple, sur des écrans haute résolution (2x), des graphiques haute résolution sont nécessaires pour garantir la netteté des détails. Une image d'une largeur de 50 % donnera de bons résultats avec un navigateur de 800 pixels de large, mais occupera trop d'espace sur un téléphone à écran étroit. Cependant, elle utilisera toujours autant de bande passante lorsqu'elle sera adaptée à un écran plus petit.
@@ -57,6 +58,8 @@ Grâce à la conception de sites Web adaptatifs, il est possible d'adapter non s
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Dans d'autres cas, il se peut que l'image doive subir des modifications plus importantes : changement des proportions, recadrage, voire remplacement de toute l'image. On parle alors d''art direction'. Pour consulter d'autres exemples, rendez-vous sur [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

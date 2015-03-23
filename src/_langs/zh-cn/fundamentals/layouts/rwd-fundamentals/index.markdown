@@ -35,6 +35,11 @@ remember:
 shortlinks: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19
+udacity:
+  id: ud893
+  title: Responsive Web Design Fundamentals
+  description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
+  image: imgs/udacity-rwd.png
 ---
 {% wrap content %}
 
@@ -57,9 +62,14 @@ shortlinks:
   }
 </style>
 
+{% comment %}
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/oK09n_PGhTo?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
 </div>
+{% endcomment %}
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+
 
 手机、"超大屏智能手机"、平板电脑、桌面设备、游戏机、电视和穿戴式设备的屏幕尺寸各异。屏幕尺寸将会不断变化，因此您的网站应能够适应当今或未来的所有屏幕尺寸，这一点很重要。
 

@@ -27,6 +27,11 @@ key-takeaways:
 remember:
   compressive:
     - Ga verstandig om met de compressietechniek omdat deze hogere geheugen- en decoderingskosten met zich meebrengt. Het aanpassen van het formaat van grote afbeeldingen zodat ze op een kleiner scherm passen is duur en kan vooral op low-end apparaten lastig zijn omdat zowel het geheugen als de verwerkingsmogelijkheden hierop beperkt zijn.
+udacity:
+  id: ud882
+  title: Responsive Images
+  description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
+  image: img/udacity-ri.jpg
 ---
 
 {% wrap content%}
@@ -43,9 +48,6 @@ remember:
   }
 </style>
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/vpRsLPI400U?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen=""></iframe>
-</div>
 
 ### Responsieve afbeeldingen
 
@@ -57,6 +59,8 @@ Responsive webdesign houdt in dat niet alleen lay-outs kunnen veranderen op basi
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporties wijzigen, bijsnijden of zelfs de afbeelding geheel vervangen. Het wijzigen van afbeeldingen wordt dan meestal `art direction` genoemd.  Zie [responsiveimages.org/demos/](http://responsiveimages.org/demos/) voor meer voorbeelden.
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 {% include modules/nextarticle.liquid %}
 

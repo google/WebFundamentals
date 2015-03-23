@@ -2,11 +2,12 @@
 </div>
 <div class="udacity-player">
   <div class="udacity-player-container">
-  <div class="udacity-player-content">
-	  <h2><a href="{{include.link}}">{{include.title}} @ Udacity</a></h2>
-	  <p>{% if include.description %}{{include.description}}{% else %}{{"udacity_description" | localize_string}}{% endif %}</p>
-	  <div class="udacity--video">
-	  <iframe frameborder="0" src="//embeddable-player-dot-udacity-extras.appspot.com/embeddable-player/embeddable-player.html?videos={{include.videos}}"></iframe></div>
+    <div class="udacity-player-content">
+      <h2><a href="{{include.link}}">{{include.title}} @ Udacity</a></h2>
+	    <p>{% if include.description %}{{include.description}}{% else %}{{"udacity_description" | localize_string}}{% endif %}</p>
+	    <div class="udacity--video">
+	      <iframe frameborder="0" src="//embeddable-player-dot-udacity-extras.appspot.com/embeddable-player/embeddable-player.html?videos={{include.videos}}"></iframe>
+      </div>
 	  </div>
   </div>
 </div>
