@@ -1,7 +1,6 @@
 toc:
 - title: "<strong>Shows</strong>"
   path: /shows/
-  hasSubNav: true
   home: true
 - title: HTTP 203
   path: /shows/http203/
