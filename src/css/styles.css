@@ -3647,24 +3647,15 @@ div.related-items-on-spotlight {
   text-align: center; }
 
 .widevideo {
-  margin-bottom: 16px; }
+  margin-bottom: 48px; }
 
 .widevideo:after {
   content: '';
   display: block;
   clear: both; }
 
-.widevideo--imagecontainer {
-  width: 55%;
-  float: left; }
-
 .widevideo--image {
   margin: 0; }
-
-.widevideo--details {
-  width: 44%;
-  float: left;
-  padding-left: 8px; }
 
 .widevideo--title {
   color: #404040;
@@ -3674,8 +3665,7 @@ div.related-items-on-spotlight {
   /* 26px */
   padding-top: 1.3em;
   padding-bottom: 0;
-  letter-spacing: -0.3px;
-  padding-top: 0; }
+  letter-spacing: -0.3px; }
   @media only screen and (min-width: 800px) {
     .widevideo--title {
       color: #404040;
@@ -3687,6 +3677,11 @@ div.related-items-on-spotlight {
       padding-top: 1em;
       padding-bottom: 0;
       letter-spacing: -0.3px; } }
+
+@media only screen and (min-width: 620px) {
+  .widevideo--title {
+    padding-top: 0; }
+ }
 
 @media only screen and (min-width: 800px) {
   .widevideo--title {

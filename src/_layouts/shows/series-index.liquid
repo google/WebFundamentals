@@ -1,6 +1,6 @@
 <!-- Lets plan out the order of videos -->
 {% if page.articles[page.id] %}
-	{% assign shows = page.articles[page.id] | sort: 'date' | reverse  %}
+	{% assign shows = page.articles[page.id] | sort: 'date'  %}
 {% endif %}
 
     {% include head.liquid %}
@@ -20,18 +20,16 @@
 	    <!-- Display content from the markdown -->
 	    {{ content }}
 
-	    <h2>Episodes</h2>
-
 	    <ol class="blanklist">
 	      {% for show in shows %}
 	      <li>
       		<div class="widevideo">
-	      		<div class="widevideo--imagecontainer">
+	      		<div class="widevideo--imagecontainer g--half">
 	      			<a href="{{site.baseurl}}{{show.url | canonicalize}}">
-	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.youtubeVideoID }}/0.jpg" />
+	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ show.showYoutubeID }}/0.jpg" />
 	      			</a>
 	      		</div>
-	      		<div class="widevideo--details">
+	      		<div class="widevideo--details g--half g--last">
 		      		<div class="widevideo--title">
 		      			<a href="{{site.baseurl}}{{show.url | canonicalize}}">{{ show.title }}</a>
 		      		</div>

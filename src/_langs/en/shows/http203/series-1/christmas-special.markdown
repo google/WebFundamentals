@@ -4,7 +4,7 @@ showid: http203
 layout: shows/single-video
 collection: http203-series-1
 title: "Christmas Special"
-description: "This is a video description"
+description: "Ho ho ho! 2014 has been a great year for the web, and Paul and Jake thought a roundup would be just the ticket for finishing the year in festive style! Don’t miss out on the duo’s web Xmas jokes after the credits!"
 published: true
 showYoutubeID: tNgBQC9qMP4
 

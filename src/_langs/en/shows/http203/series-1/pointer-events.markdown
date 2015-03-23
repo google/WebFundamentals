@@ -4,7 +4,7 @@ showid: http203
 layout: shows/single-video
 collection: http203-series-1
 title: "2. Pointer Events"
-description: "A discussion on PointerEvents and what is happening with them in Chrome."
+description: "Pointer Events (no, not the CSS ones, the other ones!) are set to unite input across devices. Jake has a little bit of news for Paul about them."
 published: true
 showYoutubeID: ngBy0H_q-GY
 

@@ -4,7 +4,7 @@ showid: http203
 layout: shows/single-video
 collection: http203-series-1
 title: "3. Frame Timing API"
-description: "This is a video description"
+description: "Tracking rendering performance and frames per second out in the wild is a challenge for developers, but it looks like Paul wants to tell Jake about a proposed API that could help out."
 published: true
 showYoutubeID: 4zoC3eaa9z0
 
