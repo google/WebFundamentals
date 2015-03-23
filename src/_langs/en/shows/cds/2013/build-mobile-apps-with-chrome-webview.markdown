@@ -4,7 +4,7 @@ showid: cds
 layout: shows/single-video
 collection: cds-2013
 title: "Build Mobile Apps with the Chrome WebView"
-description: ""
+description: "With the introduction of a Chromium powered WebView in Android 4.4 (KitKat) developers now have a huge range of new tools at their disposal to build great native apps using the WebView."
 published: true
 showYoutubeID: BTlzw5UAjQs
 

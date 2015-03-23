@@ -4,7 +4,7 @@ showid: cds
 layout: shows/single-video
 collection: cds-2013
 title: "Optimizing your Workflow for a Cross-Device World"
-description: ""
+description: "If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful?"
 published: true
 showYoutubeID: bZRPetpUcjQ
 
@@ -15,7 +15,7 @@ article:
 
 ---
 
-If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful?  There's a solid multi-device approach for quick iteration with LiveReload, Grunt, Yeoman, and the newly-unveiled [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab). Lastly, if you don't have the physical hardware you want to test, some providers make it available through the cloud.
+If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful? There's a solid multi-device approach for quick iteration with LiveReload, Grunt, Yeoman, and the newly-unveiled [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab). Lastly, if you don't have the physical hardware you want to test, some providers make it available through the cloud.
 
 [Slides: Optimizing your Workflow for a Cross-device world](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/cross-device-workflow/#1)
 

@@ -4,7 +4,7 @@ showid: cds
 layout: shows/single-video
 collection: cds-2013
 title: "Develop Chrome Apps on Desktop/Mobile, Distribute and Profit"
-description: ""
+description: "Chrome Apps provide the power and user experience of native apps with the development simplicity and security of the Web, and integrate seamlessly with Google services like Drive. Chrome Apps run on Mac, Windows, Linux, and ChromeOS, as well as iOS and Android, right out of the box."
 published: true
 showYoutubeID: f3NctLbtsNE
 
