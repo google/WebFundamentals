@@ -4,7 +4,7 @@ showid: polycasts
 layout: shows/single-video
 collection: polycasts-season-1
 title: "Core Header Panel"
-description: ""
+description: "The core-header-panel is a great next step after you've mastered some of the other elements like core-icon and core-toolbar. With core-header-panel we can control the scroll behavior of our page and combine it with other elements, like core-toolbar, to compose app-like UIs. In this video we'll not only get a core-header-panel to show up, but we'll also discuss the power of composition and how Web Components make it super easy."
 published: true
 showYoutubeID: ZAc51_0Xa_M
 
@@ -15,8 +15,9 @@ article:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+The core-header-panel is a great next step after you've mastered some of the other elements like core-icon and core-toolbar. With core-header-panel we can control the scroll behavior of our page and combine it with other elements, like core-toolbar, to compose app-like UIs. In this video we'll not only get a core-header-panel to show up, but we'll also discuss the power of composition and how Web Components make it super easy.
 
-Phasellus placerat facilisis justo, et interdum mauris ultricies vitae. Integer molestie, purus vitae imperdiet vestibulum, dui arcu volutpat dui, et ultrices turpis metus eget metus. Donec nec consectetur nulla. In dictum maximus ante, et vehicula mauris elementum ut. Nullam risus enim, ullamcorper sit amet aliquet vel, rutrum id eros. Ut ipsum eros, suscipit ac pharetra facilisis, dictum ac justo. Phasellus ullamcorper interdum risus, eget auctor augue varius vel. Etiam felis neque, varius id ante pretium, posuere sagittis mi.
+## Read More
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu facilisis purus. Cras egestas mauris sed justo tempor, id rhoncus urna accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce varius velit sed diam egestas, in sodales enim feugiat. Duis sed turpis erat. Nullam suscipit sit amet sapien vitae elementum. Quisque pellentesque nec arcu rhoncus porta. Vivamus ornare ac sem eu placerat.
+- [Guide](https://www.polymer-project.org/0.5/docs/elements/layout-elements.html)
+- [Element Reference](https://www.polymer-project.org/0.5/docs/elements/#core-header-panel)

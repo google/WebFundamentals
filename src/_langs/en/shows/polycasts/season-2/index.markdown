@@ -1,5 +1,6 @@
 ---
 id: polycasts-season-2
+showid: polycasts
 layout: shows/series-index
 collection: polycasts
 title: "Polycasts: Season 2"
