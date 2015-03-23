@@ -36,7 +36,12 @@
       		<div class="widevideo">
 	      		<div class="widevideo--imagecontainer g--half">
 	      			<a href="{{site.baseurl}}{{videoInSeries.url | canonicalize}}">
+                {% if videoInSeries.showYoutubeID %}
 	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.showYoutubeID }}/0.jpg" />
+                {% endif %}
+                {% if videoInSeries.youtubeTrailerID %}
+                <img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.youtubeTrailerID }}/0.jpg" />
+                {% endif %}
 	      			</a>
 	      		</div>
 	      		<div class="widevideo--details g--half g--last">
