@@ -16,3 +16,11 @@ article:
 ---
 
 Routing in Polymer, revealed! Get on the path to single page app goodness with this nugget of wisdom.
+
+## Read More
+
+- [Page.js, JavaScript router](https://github.com/visionmedia/page.js)
+- [Content Switcheroo with Core-Pages]({{site.baseurl}}/shows/polycasts/season-2/content-switcheroo)
+- [The Awesome Power of Auto-Binding Templates]({{site.baseurl}}/shows/polycasts/season-2/awesome-power-of-auto-binding)
+- [Core Drawer Panel]({{site.baseurl}}/shows/polycasts/season-1/core-drawer-panel)
+

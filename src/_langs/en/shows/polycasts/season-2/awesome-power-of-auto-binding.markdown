@@ -16,3 +16,9 @@ article:
 ---
 
 Super charge your app with Polymer data bindings.
+
+## Read More
+
+- [Polycasts: Core Drawer Panel]({{site.baseurl}}/shows/polycasts/season-1/core-drawer-panel)
+- [Polycasts: Core Header Panel]({{site.baseurl}}/shows/polycasts/season-1/core-header-panel)
+- [Polycasts: Core Toolbar]({{site.baseurl}}/shows/polycasts/season-1/core-toolbar)
