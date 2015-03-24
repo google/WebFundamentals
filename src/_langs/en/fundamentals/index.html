@@ -24,34 +24,21 @@ priority: 0
   <input itemprop="query-input" type="text" name="search_term_string" required/>
   <input type="submit"/>
 </form>
+
 <div class="home-header centered">
   <div class="container">
     <h1>Web <b>Fundamentals</b></h1>
-    <p>Best practices for modern web development</p>
-    <a href="{{site.fundamentals}}/getting-started/your-first-multi-screen-site/" title="Get started with Web Fundamentals" class="button--secondary-variation">Get started</a>
-  </div>
-</div>
-
-<div class="container">
-  <div class="centered">
-    <h3 id="toc" class="g-wide--2 g--centered xlarge">Build great multi-device web experiences</h3>
-    <p class="g-wide--3 g--centered">
-      Web Fundamentals is a comprehensive resource for multi-device web
-      development.  We're just getting started and want your help, if you
-      see something amiss or have a suggestion
-      <a href="{{site.github.root}}/issues" title="File an issue on GitHub">file an issue</a> or
-      <a href="{{site.github.root}}/pulls" title="Submit a pull request on GitHub">submit a pull request</a>.
-    </p>
-    <p class="g-wide--3 g--centered">
-      You can use <a href="/web/starter-kit/">Google Web Starter Kit</a> to start creating new sites in minutes that follow all of our best practice guidance.
-    </p>
+    <h2>Best practices for great multi-device web experiences</h2>
+    
+    <a href="/web/shows/udacity/courses/responsive-web-design/" title="Learn with Udacity" class="button--secondary-variation">Learn with Udacity</a>
+    <a href="{{site.fundamentals}}/getting-started/" title="Get started with Web Fundamentals" class="button--secondary-variation">Tutorials</a>
+    
   </div>
 </div>
 
 <div class="container sections">
   <div class="centered">  
     <ul class="list-guides-intro guides-list container">
-
       {% for guide in page.articles.[page.id] %}
       {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
       <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
@@ -63,9 +50,24 @@ priority: 0
       </li>
       {% endif %}
       {% endfor %}
-
     </ul>
     </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h3 class="xlarge">Web <strong>Fundamentals</strong>?</h3>
+    <div class="divider">
+      <span class="themed divider-icon"></span>
+    </div>
+    <p class="">
+      Web Fundamentals is a comprehensive resource for multi-device web
+      development.  We're just getting started and want your help, if you
+      see something amiss or have a suggestion
+      <a href="{{site.github.root}}/issues" title="File an issue on GitHub">file an issue</a> or
+      <a href="{{site.github.root}}/pulls" title="Submit a pull request on GitHub">submit a pull request</a>.
+    </p>
   </div>
 </div>
 
@@ -113,3 +115,5 @@ priority: 0
   </div>
 </div>
 {% endcomment %}
+
+{% include cc.liquid %}
