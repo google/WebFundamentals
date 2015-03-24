@@ -48,3 +48,26 @@
     }
   }
 }
+
+.quote__content-icononly {
+  position: relative;
+
+  &:before {
+    content: open-quote;
+    display: none;
+    position: absolute;
+    font-family: $fontHighlight;
+    font-weight: 700;
+    color: $colorGrayBackground;
+    top: 90px;
+    left: $lineHeight;
+    font-size: 260px;
+
+    @include medium {
+      top: 225px;
+      left: -210px;
+      font-size: 540px;
+        display: block;
+    }
+  }
+}

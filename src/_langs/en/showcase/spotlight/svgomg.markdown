@@ -21,8 +21,8 @@ scores:
       speed: 73
       ux: 100
   webpagetest:
-      value: 7393
-      result: http://www.webpagetest.org/result/150205_MS_RZ0/
+      value: 2032
+      result: http://www.webpagetest.org/result/150319_0G_RA9/
 
 related:
 -
@@ -47,4 +47,15 @@ related:
 
 <h3>Possible improvements</h3>
 
-<p>SVGO is really a tool that is predestined to be installed, but it's missing the <a href="{{site.baseurl}}/{{page.related[0].href}}">manifest</a>. In addition, the initial UX is confusing due to the main UI missing.</p>
+<p>The only real nitpick we'd have to offer is that the initial UX is confusing due to the main UI missing. Other than that, job well done!</p>
+
+<h3 class="quote__content-icononly">Q&amp;A with Jake Archibald</h3>
+
+<dl>
+  <dt>Why the web?</dt>
+  <dd>Lorem Ipsum</dd>
+  <dt>What worked really well during development?</dt>
+  <dd>Lorem Ipsum</dd>
+  <dt>If you could have any API to improve your app, what would it be?</dt>
+  <dd>Lorem Ipsum</dd>
+</dl>

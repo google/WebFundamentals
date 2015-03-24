@@ -72,13 +72,17 @@
   }
 
   h3 {
-    margin-top: inherit;
+    margin-top: 26px;
   }
 
   @include wide {
     h2,h3,p {
       margin-right: 11.9%;
     }
+  }
+
+  dl {
+    padding-left: 0;
   }
 
 }
