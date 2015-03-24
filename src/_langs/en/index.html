@@ -17,6 +17,12 @@ priority: 0
     border-top: 2px solid #e0e0e0;
   }
 
+  #heroImage {
+    max-height: 350px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 </style>
 <meta itemprop="url" content="https://developers.google.com/web/fundamentals"/>
 <form id="potentialAction" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
@@ -27,7 +33,11 @@ priority: 0
 
 
 <div class="container clear">
-  <img src="/web/imgs/placeholder--device-landscape.png" style="max-height: 350px; margin-left: auto; margin-right: auto;">
+  <picture>
+    <source media="(max-width:399px)" srcset="/web/imgs/dgc-web-n1x.jpg, /web/imgs/dgc-web-w1x.jpg 2x">
+    <source media="(min-width:400px)" srcset="/web/imgs/dgc-web-w1x.jpg, /web/imgs/dgc-web-w2x.jpg 2x">
+    <img src="/web/imgs/dgc-web-w1x.jpg" id="heroImage"> 
+  </picture>
 </div>
 
 <div class="container related-items clear" style="margin-top: 2em;">
