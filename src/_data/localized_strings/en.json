@@ -66,6 +66,8 @@
   "@updated_on": {"description": "Text - When the article was last updated"},
   "view_case_study": "View case study",
   "@view_case_study": {"description": "Link - to view a specific case study"},
+  "take_course": "Take course",
+  "@view_course": {"description": "Link - to take a specific online training course."},
   "view_course": "View course",
   "@view_course": {"description": "Link - to view a specific online training course."},
   "view_source": "View Source",
