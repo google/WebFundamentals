@@ -6,7 +6,7 @@
 	<id>https://developers.google.com{{ site.url }}/showcase/feed.xml</id>
 	<link type="text/html" href="https://developers.google.com{{ site.url }}/showcase/" rel="alternate"/>
 	<description>The best the web has to offer. Learn from proven success on the web.</description>
-{% assign num = 0 %}{% for post in pages %}{% if num < 10 and post.article %}{% if post.collection == "case-study" or post.layout == "deep-dive" or post.layout == "spotlight" %}
+{% assign num = 0 %}{% for post in pages %}{% if num < 10 and post.article %}{% if post.collection == "case-study" or post.layout == "spotlight" %}
 	<entry>
 		<published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
 		<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>	
