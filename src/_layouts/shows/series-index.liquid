@@ -39,8 +39,10 @@
                 {% if videoInSeries.showYoutubeID %}
 	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.showYoutubeID }}/0.jpg" />
                 {% endif %}
-                {% if videoInSeries.youtubeTrailerID %}
-                <img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.youtubeTrailerID }}/0.jpg" />
+                {% if videoInSeries.udacity %}
+                  {% if videoInSeries.udacity.preview.youtube %}
+                    <img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.udacity.preview.youtube }}/0.jpg" />
+                  {% endif %}
                 {% endif %}
 	      			</a>
 	      		</div>

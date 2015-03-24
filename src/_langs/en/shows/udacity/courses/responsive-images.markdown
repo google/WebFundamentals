@@ -6,8 +6,13 @@ collection: udacity-courses
 title: "Responsive Images"
 description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device."
 published: true
-udacityID: ud882
-youtubeTrailerID: 1Pxj9955I2c
+udacity:
+  id: ud882
+  level: Intermediate
+  est_time: Approx 2 weeks
+  instructor: samdutton
+  preview:
+    youtube: 1Pxj9955I2c
 date: 2015-03-12 00:00:00
 article:
   written_on: 2015-03-12

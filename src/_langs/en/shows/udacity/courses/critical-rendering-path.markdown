@@ -6,8 +6,13 @@ collection: udacity-courses
 title: "Critical Rendering Path"
 description: "Learn about the Critical Rendering Path, or the set of steps browsers must take to convert HTML, CSS and JavaScript into living, breathing websites."
 published: true
-udacityID: ud884
-youtubeTrailerID: v5us0j3QmW4
+udacity:
+  id: ud884
+  level: Intermediate
+  est_time: Approx 1 week
+  instructor: ilyagrigorik
+  preview:
+    youtube: v5us0j3QmW4
 date: 2014-10-10 00:00:00
 article:
   written_on: 2014-10-10
