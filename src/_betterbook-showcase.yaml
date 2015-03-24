@@ -6,34 +6,6 @@ toc:
   path: /showcase/case-study/
 - title: "Spotlights"
   path: /showcase/spotlight/
-- title: "Deep Dives"
-  path: /showcase/deep-dive/
-- title: "Nested 1"
-  path: /fundamentals/
-  hasSubNav: true
-  section:
-    - title: "Case Studies"
-      path: /showcase/case-study
-      id: "case-studies"
-    - title: "Spotlights"
-      path: /showcase/spotlight
-      id: "spotlights"
-    - title: "Deep Dives"
-      path: /showcase/deep-dive
-      id: "deep-dives"
-- title: "Nested 2"
-  path: /fundamentals/
-  hasSubNav: true
-  section:
-    - title: "Something"
-      path: /showcase/case-study
-      id: "case-studies"
-    - title: "Entirely"
-      path: /showcase/spotlight
-      id: "spotlights"
-    - title: "Different"
-      path: /showcase/deep-dive
-      id: "deep-dives"
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false

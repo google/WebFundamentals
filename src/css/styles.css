@@ -2190,11 +2190,13 @@ body[dir=rtl] .editorial-header .container:before {
   .spotlight-wrapper__content {
     min-height: 310px; } }
 .spotlight-wrapper__content h3 {
-  margin-top: inherit; }
+  margin-top: 26px; }
 @media only screen and (min-width: 800px) {
   .spotlight-wrapper__content h2, .spotlight-wrapper__content h3, .spotlight-wrapper__content p {
     margin-right: 11.9%; }
  }
+.spotlight-wrapper__content dl {
+  padding-left: 0; }
 
 .spotlight-tags {
   padding-top: 0.5em; }
@@ -2608,6 +2610,25 @@ div.related-items-on-spotlight {
         top: 225px;
         left: -210px;
         font-size: 540px; } }
+
+.quote__content-icononly {
+  position: relative; }
+  .quote__content-icononly:before {
+    content: open-quote;
+    display: none;
+    position: absolute;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-weight: 700;
+    color: #f0f0f0;
+    top: 90px;
+    left: 26px;
+    font-size: 260px; }
+    @media only screen and (min-width: 620px) {
+      .quote__content-icononly:before {
+        top: 225px;
+        left: -210px;
+        font-size: 540px;
+        display: block; } }
 
 /**
 *
