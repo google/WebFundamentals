@@ -1,6 +1,6 @@
 $padding: 8px !default;
 
-.showblock {
+/**.showblock {
 
 }
 
@@ -19,4 +19,38 @@ $padding: 8px !default;
 
 .showblock--title {
 	@include type--large;
+}**/
+
+.show-root--image-container {
+	flex: 0 1 auto;
+
+	min-height: initial;
+	max-height: initial;
+
+	img {
+		margin: 0;
+	}
+}
+
+@include medium {
+	.guides-list__item .primary-content.show-root--image-container {
+		flex: 0 1 auto;
+
+		min-height: initial;
+		max-height: initial;
+	}
+}
+
+@include wide {
+	.guides-list__item .primary-content.show-root--image-container {
+		flex: 0 1 auto;
+
+		min-height: initial;
+		max-height: initial;
+	}
+}
+
+.guides-list__item .secondary-content.show-root--info {
+	margin-top: 0;
+	padding-bottom: 26px;
 }
