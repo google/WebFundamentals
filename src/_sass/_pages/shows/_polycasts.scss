@@ -5,14 +5,14 @@ $polycastColor: #687FF6;
 	color: white;
 }
 
-.showtitle--title-polycasts {
+.showtitle--title-polycasts, .showtitle--title-container-show-home .showtitle--subtitle-polycasts {
 	@include type--small;
 	font-weight: 500;
 	padding-top: 0;
 	color: inherit;
 }
 
-.showtitle--subtitle-polycasts {
+.showtitle--subtitle-polycasts, .showtitle--title-container-show-home .showtitle--title-polycasts {
 	@include type--xlarge;
 
 	padding-top: 0;
@@ -20,19 +20,19 @@ $polycastColor: #687FF6;
 }
 
 @include small-only {
-	.showtitle--title-polycasts {
+	.showtitle--title-container-single-video .showtitle--title-polycasts {
 		display: none;
 	}
 }
 
 @include wide {
-	.showtitle--title-polycasts {
+	.showtitle--title-polycasts, .showtitle--title-container-show-home .showtitle--subtitle-polycasts {
 		padding-top: 0;
 
 		color: inherit;
 	}
 
-  .showtitle--subtitle-polycasts {
+  .showtitle--subtitle-polycasts, .showtitle--title-container-show-home .showtitle--title-polycasts  {
 		padding-top: 0;
 
 		color: inherit;
