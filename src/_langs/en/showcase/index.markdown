@@ -69,7 +69,7 @@ NOTE: the spotlight header required a modifier to render properly
   </div>
 </div>
 
-
+<!--
 <div class="featured-section case-study-previous">
   <div class="container">
 
@@ -114,5 +114,6 @@ NOTE: the spotlight header required a modifier to render properly
     
   </div>
 </div>
+-->
 
 {% include modules/more_casestudies.liquid %}
