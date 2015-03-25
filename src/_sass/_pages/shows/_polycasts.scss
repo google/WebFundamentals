@@ -6,17 +6,32 @@ $polycastColor: #687FF6;
 }
 
 .showtitle--title-polycasts {
+	@include type--small;
 	font-weight: 500;
+	padding-top: 0;
+	color: inherit;
 }
 
 .showtitle--subtitle-polycasts {
-	@include type--medium;
+	@include type--xlarge;
 
 	padding-top: 0;
 	color: inherit;
 }
 
+@include small-only {
+	.showtitle--title-polycasts {
+		display: none;
+	}
+}
+
 @include wide {
+	.showtitle--title-polycasts {
+		padding-top: 0;
+
+		color: inherit;
+	}
+
   .showtitle--subtitle-polycasts {
 		padding-top: 0;
 
