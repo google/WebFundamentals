@@ -483,7 +483,7 @@ body[dir=rtl] .list-anchor {
 /*==========  GUIDES INTO - used on homepage  ==========*/
 .list-guides-intro {
   margin-bottom: ($lineHeight*2) - 1;
-  padding-top: $lineHeight*2;
+  padding-top: $lineHeight*1;
 
   & li {
     border-bottom: 1px solid $colorGrayKeyline;
@@ -574,7 +574,7 @@ body[dir=rtl] .list-anchor {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 
-    padding-top: $lineHeight*2;
+    padding-top: $lineHeight*1;
   }
 }
 
