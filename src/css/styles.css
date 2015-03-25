@@ -2179,6 +2179,11 @@ body[dir=rtl] .editorial-header .container:before {
   .spotlight-wrapper .related-items-list a {
     overflow: visible; }
 
+.spotlight-interview-wrapper {
+  padding-top: 52px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #eee; }
+
 .spotlight-listing .related-items {
   margin-top: 0;
   border: 0; }
@@ -2219,7 +2224,7 @@ body[dir=rtl] .editorial-header .container:before {
         display: block;
         margin-top: 0; } }
   .spotlight-scores span {
-    font-size: 28px;
+    font-size: 26px;
     display: inline-block;
     border-radius: 100px;
     width: 100px; }
