@@ -33,7 +33,7 @@ $udacityColor: #607D8B;
   background-color: $udacityColor;
 }
 
-a.cta--primary {
+.show-udacity a.cta--primary {
   display: block;
   width: 100%;
   padding: 1em;
@@ -41,6 +41,6 @@ a.cta--primary {
   color:white;
 }
 
-a.cta--primary:hover {
+.show-udacity a.cta--primary:hover {
   color: white;
 }

@@ -42,7 +42,7 @@
 
 
 
-    {% include modules/shows/show-title.liquid title=page.title subtitle=page.subtitle showid=page.showid %}
+    {% include modules/shows/show-title.liquid title=page.title subtitle=page.subtitle showid=page.showid classname="show-home" %}
 
 
 
@@ -50,17 +50,6 @@
 
 
     {% wrap content %}
-
-
-
-      <!-- Breadcrumb -->
-      {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
-
-      <p>{{ page.description }}</p>
-
-      <!-- Display content from the markdown -->
-      {{ content }}
-
 
 
       <!-- Latest Episode -->
@@ -72,6 +61,13 @@
         {% include modules/video.liquid id=latestShow.showYoutubeID %}
       {% endif %}
 
+
+      <h3>{{ page.intro-title }}</h3>
+
+      <p>{{ page.description }}</p>
+
+      <!-- Display content from the markdown -->
+      {{ content }}
 
 
 
