@@ -5859,6 +5859,12 @@ figcaption {
 .case-study .case-study-link {
   display: block;
   text-align: center; }
+.case-study .team-member {
+  text-align: center; }
+  .case-study .team-member h3 {
+    margin-right: auto;
+    margin-top: 0;
+    padding-top: 12px; }
 
 /**
 *
