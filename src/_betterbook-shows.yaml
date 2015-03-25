@@ -6,7 +6,7 @@ toc:
   path: /shows/http203/
 - title: Polycasts
   path: /shows/polycasts/
-- title: Chrome Dev Summit
-  path: /shows/cds/
-- title: Udacity Courses
+- title: Udacity
   path: /shows/udacity/
+- title: CDS
+  path: /shows/cds/
