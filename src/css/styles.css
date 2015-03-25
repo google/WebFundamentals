@@ -2619,7 +2619,7 @@ div.related-items-on-spotlight {
 .quote__content-icononly {
   position: relative; }
   .quote__content-icononly:before {
-    content: open-quote;
+    content: "“";
     display: none;
     position: absolute;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
