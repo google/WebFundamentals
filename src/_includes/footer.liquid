@@ -9,7 +9,7 @@
 
         {% if site.spotlights == true or checkTitle != 'spotlights' %}
         <li class="sitemap__item sitemap__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} sitemap__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} sitemap__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} sitemap__item--current{% endif %} {% if section.hasSubNav %} sitemap__item--has-child{% endif %}">
-          <a class="sitemap-list__link sitemap-list__link--parent" href="{% if section.external != true %}{{site.baseurl}}{% endif %}{{ section.path }}" title="Go to {{ stripTitle }}">
+          <a class="sitemap-list__link sitemap-list__link--parent" href="{% if section.external != true %}{{site.baseurl}}{% endif %}{{ section.path }}?hl={{page.langcode}}" title="Go to {{ stripTitle }}">
             {{ section.title }}
           </a>
         </li>

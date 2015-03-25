@@ -50,6 +50,9 @@
 				{% endfor %}
 			</name></author>
 		{% endif %}
+    {% if video.showYoutubeID %}
+    <enclosure url="https://img.youtube.com/vi/{{ video.showYoutubeID }}/0.jpg" type="image/jpg"/>
+    {% endif %}
 	</entry>
 	{% assign num = num | plus: 1 %}
 	{% endfor %}

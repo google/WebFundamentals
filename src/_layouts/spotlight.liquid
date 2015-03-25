@@ -22,11 +22,11 @@
           <div class="spotlight-scores clear">
             <div class="g--third">
               <span class="{% if page.scores.pagespeed.ux < 60 %}low{% elsif page.scores.pagespeed.ux < 71 %}med{% else %}high{% endif %}"><strong>{{page.scores.pagespeed.ux}}</strong>/100</span>
-              <a href="https://developers.google.com/speed/pagespeed/insights/?url=digg.com">PageSpeed UX</a>
+              <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed UX</a>
             </div>
             <div class="g--third">
               <span class="{% if page.scores.pagespeed.speed < 60 %}low{% elsif page.scores.pagespeed.speed < 71 %}med{% else %}high{% endif %}"><strong>{{page.scores.pagespeed.speed}}</strong>/100</span>
-              <a href="https://developers.google.com/speed/pagespeed/insights/?url=digg.com">PageSpeed</a>
+              <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed</a>
             </div>
             <div class="g--third g--last">
               <span class="{% if page.scores.webpagetest.value > 5000 %}low{% elsif page.scores.webpagetest.value > 3000 %}med{% else %}high{% endif %}"><strong>{{page.scores.webpagetest.value}}</strong></span>
