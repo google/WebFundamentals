@@ -50,6 +50,9 @@
 				{% endfor %}
 			</name></author>
 		{% endif %}
+    {% if video.showYoutubeID %}
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://img.youtube.com/vi/{{ video.showYoutubeID }}/0.jpg" />
+    {% endif %}
 	</entry>
 	{% assign num = num | plus: 1 %}
 	{% endfor %}
