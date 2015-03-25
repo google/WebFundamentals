@@ -3847,7 +3847,7 @@ div.related-items-on-spotlight {
   background-color: #687FF6;
   color: white; }
 
-.showtitle--title-polycasts {
+.showtitle--title-polycasts, .showtitle--title-container-show-home .showtitle--subtitle-polycasts {
   font-size: 13px;
   line-height: 2em;
   /* 26px */
@@ -3858,7 +3858,7 @@ div.related-items-on-spotlight {
   padding-top: 0;
   color: inherit; }
 
-.showtitle--subtitle-polycasts {
+.showtitle--subtitle-polycasts, .showtitle--title-container-show-home .showtitle--title-polycasts {
   color: #404040;
   font-family: "Roboto Condensed", Helvetica, sans-serif;
   font-size: 26px;
@@ -3871,7 +3871,7 @@ div.related-items-on-spotlight {
   padding-top: 0;
   color: inherit; }
   @media only screen and (min-width: 800px) {
-    .showtitle--subtitle-polycasts {
+    .showtitle--subtitle-polycasts, .showtitle--title-container-show-home .showtitle--title-polycasts {
       color: #404040;
       font-family: "Roboto Condensed", Helvetica, sans-serif;
       font-size: 42px;
@@ -3883,16 +3883,16 @@ div.related-items-on-spotlight {
       letter-spacing: -0.3px; } }
 
 @media only screen and (max-width: 619px) {
-  .showtitle--title-polycasts {
+  .showtitle--title-container-single-video .showtitle--title-polycasts {
     display: none; }
  }
 
 @media only screen and (min-width: 800px) {
-  .showtitle--title-polycasts {
+  .showtitle--title-polycasts, .showtitle--title-container-show-home .showtitle--subtitle-polycasts {
     padding-top: 0;
     color: inherit; }
 
-  .showtitle--subtitle-polycasts {
+  .showtitle--subtitle-polycasts, .showtitle--title-container-show-home .showtitle--title-polycasts {
     padding-top: 0;
     color: inherit; }
  }
