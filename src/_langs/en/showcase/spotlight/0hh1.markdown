@@ -13,7 +13,7 @@ authors:
 
 title: "0h h1"
 link: http://0hh1.com/
-introduction: "A beautiful (and addictive) game that just feels right on mobile."
+introduction: "A fun (and addictive) game that just feels right on mobile."
 tags: 
 - games
 scores:
@@ -43,7 +43,7 @@ related:
 
       <h3>What we like</h3>
 
-      <p>A beautiful (and addictive) game by Q42.nl that just feels right on mobile and desktop with smooth animations and a very polished look and feel. It is installable as it uses the <a href="{{site.baseurl}}/{{page.related[0].href}}">Web App Manifest</a> and once installed it looks and feels like any native game.</p>
+      <p>A fun (and addictive) game by Q42.nl that just feels right on mobile and desktop with smooth animations and a very polished look and feel. It is installable as it uses the <a href="{{site.baseurl}}/{{page.related[0].href}}">Web App Manifest</a> and once installed it looks and feels like any native game.</p>
 
       <h3>Possible improvements</h3>
 
