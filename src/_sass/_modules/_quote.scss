@@ -53,7 +53,7 @@
   position: relative;
 
   &:before {
-    content: open-quote;
+    content: "“";
     display: none;
     position: absolute;
     font-family: $fontHighlight;
