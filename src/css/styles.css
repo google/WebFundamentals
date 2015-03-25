@@ -3752,10 +3752,14 @@ div.related-items-on-spotlight {
   color: inherit; }
 
 .showtitle--title-container {
-  padding-top: 36px;
-  padding-bottom: 36px; }
+  padding-top: 16px;
+  padding-bottom: 16px; }
 
 @media only screen and (min-width: 800px) {
+  .showtitle--title-container {
+    padding-top: 36px;
+    padding-bottom: 36px; }
+
   .showtitle--subtitle {
     padding-top: 0;
     color: inherit; }
@@ -3844,29 +3848,50 @@ div.related-items-on-spotlight {
   color: white; }
 
 .showtitle--title-polycasts {
-  font-weight: 500; }
-
-.showtitle--subtitle-polycasts {
-  font-size: 16px;
-  line-height: 1.625em;
+  font-size: 13px;
+  line-height: 2em;
   /* 26px */
-  padding-top: 1.625em;
+  padding-top: 2em;
   padding-bottom: 0;
   letter-spacing: 0;
+  font-weight: 500;
+  padding-top: 0;
+  color: inherit; }
+
+.showtitle--subtitle-polycasts {
+  color: #404040;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1em;
+  /* 26px */
+  padding-top: 1em;
+  padding-bottom: 0;
+  letter-spacing: -0.3px;
   padding-top: 0;
   color: inherit; }
   @media only screen and (min-width: 800px) {
     .showtitle--subtitle-polycasts {
       color: #404040;
-      font-size: 20px;
+      font-family: "Roboto Condensed", Helvetica, sans-serif;
+      font-size: 42px;
       font-weight: 300;
-      line-height: 1.3em;
-      /* 26px */
-      padding-top: 1.3em;
+      line-height: 1.2381em;
+      /* 52px */
+      padding-top: 0.619em;
       padding-bottom: 0;
       letter-spacing: -0.3px; } }
 
+@media only screen and (max-width: 619px) {
+  .showtitle--title-polycasts {
+    display: none; }
+ }
+
 @media only screen and (min-width: 800px) {
+  .showtitle--title-polycasts {
+    padding-top: 0;
+    color: inherit; }
+
   .showtitle--subtitle-polycasts {
     padding-top: 0;
     color: inherit; }
