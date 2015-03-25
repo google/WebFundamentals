@@ -52,17 +52,6 @@
     {% wrap content %}
 
 
-
-      <!-- Breadcrumb -->
-      {% comment %}{% include modules/breadcrumbs.liquid %}{% endcomment %}
-
-      <p>{{ page.description }}</p>
-
-      <!-- Display content from the markdown -->
-      {{ content }}
-
-
-
       <!-- Latest Episode -->
       {% if latestShow %}
         <div class="showhome--subheading">
@@ -72,6 +61,13 @@
         {% include modules/video.liquid id=latestShow.showYoutubeID %}
       {% endif %}
 
+
+      <h3>What is {{ page.title }}?</h3>
+
+      <p>{{ page.description }}</p>
+
+      <!-- Display content from the markdown -->
+      {{ content }}
 
 
 
