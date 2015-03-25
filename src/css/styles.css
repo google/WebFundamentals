@@ -3948,14 +3948,14 @@ div.related-items-on-spotlight {
 .smallvideo--title-container-udacity, .smallvideo-udacity {
   background-color: #607D8B; }
 
-a.cta--primary {
+.show-udacity a.cta--primary {
   display: block;
   width: 100%;
   padding: 1em;
   background-color: #607D8B;
   color: white; }
 
-a.cta--primary:hover {
+.show-udacity a.cta--primary:hover {
   color: white; }
 
 /**
