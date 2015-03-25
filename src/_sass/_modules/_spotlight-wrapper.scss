@@ -56,6 +56,12 @@
 
 }
 
+.spotlight-interview-wrapper {
+  padding-top: $lineHeight*2;
+  padding-bottom: $lineHeight;
+  border-bottom: 1px solid #eee;
+}
+
 .spotlight-listing .related-items {
   margin-top: 0;
   border: 0;
@@ -115,7 +121,7 @@
   }
 
   span {
-    font-size: 28px;
+    font-size: 26px;
     display: inline-block;
     border-radius: 100px;
     width: 100px;

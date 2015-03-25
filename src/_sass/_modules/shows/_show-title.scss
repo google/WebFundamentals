@@ -13,11 +13,16 @@
 }
 
 .showtitle--title-container {
-	padding-top: 36px;
-	padding-bottom: 36px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 
 @include wide {
+	.showtitle--title-container {
+		padding-top: 36px;
+		padding-bottom: 36px;
+	}
+
   .showtitle--subtitle {
 		padding-top: 0;
 

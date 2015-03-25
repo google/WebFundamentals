@@ -76,27 +76,16 @@
     @include color-inherit;
   }
 
-  & p {
-    @include type--base;
-    margin-top: 1.2em;
-    @include medium {
-      padding-top: 0;
-    }
-    @include color-inherit;
-  }
+  & .cta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 
-  & a:not(.button--secondary-variation) {
-    color: #cccccc;
-  }
-
-  & a.button--secondary-variation {
-    margin-top: $lineHeight + $lineHeight/2;
-    width: 200px;
-  }
-
-  & a.button--secondary-variation:first-of-type {
-    @include medium {
-      margin-right: 3em;
+    & a.button--secondary-variation {
+      margin-top: $lineHeight + $lineHeight/2;
+      flex-basis: 200px;
+      white-space: nowrap;
     }
   }
+
 }
