@@ -43,19 +43,10 @@
       </div>
     </header>
 
-    <div class="spotlight-wrapper">
-      <div class="container clear">
-        <div class="content spotlight-wrapper__content g--half">
-          <h2>Our thoughts</h2>
-          <p>{{ page.introduction }}</p>
-          {{ content }}
-        </div>
-        {% include modules/related_spotlight_guides.liquid list=page.related %}
-      </div>
-      
-    </div>
+    {{content}}
 
     {% include modules/more_spotlights.liquid on-spotlight=true %}
 
     {% include cc.liquid %}
     {% include footer.liquid %}
+      }
