@@ -3495,7 +3495,12 @@ div.related-items-on-spotlight {
         padding-bottom: 208px; } }
   .case-study-wrapper h2 {
     margin-top: 0;
-    padding-top: 0; }
+    padding-top: 0;
+    white-space: nowrap; }
+  .case-study-wrapper a {
+    color: #C3811A; }
+  .case-study-wrapper .case-study-inverted a {
+    color: #FFE951; }
 
 .case-study__dl ul {
   padding-top: 0; }
@@ -5834,6 +5839,9 @@ figcaption {
   .case-study .spotlight-header--landscape .spotlight-header__copy p {
     margin-bottom: 0; }
  }
+.case-study .case-study-link {
+  display: block;
+  text-align: center; }
 
 /**
 *
