@@ -77,25 +77,12 @@ sections:
 
       That being said said, I think Paul did a tremendous job of transporting the Material Design spec to a content site. and I’m really pleased with the visuals and motion. It has that unique Material Design feel to it, and the information and look encourages interaction and hierarchy.
   - title: Success
-    left_column:
-      classes: "indented-medium"
-      content: |
-        ### Success metrics
+    content: |
+      * Successfully released the entire site on [Github](https://github.com/googlechrome/devsummit) to serve as **boilerplate and inspiration to web developers**.
+      * Incorporated the latest and greatest of the web platform: **Service Worker, Web Manifest and dynamic theme colors**. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s homescreen, it feels very much like an app they would use, and that’s really cool.
+      * **~14000 page visits** to the site meant that people actually used and engaged with it, much more than expected.
 
-        * Successfully released the entire site is on [Github](https://github.com/googlechrome/devsummit) to serve as boilerplate and inspiration to web developers.
-        * Incorporated the latest and greatest of the web platform: Service Worker, Web Manifest and dynamic theme colors. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s homescreen, it feels very much like an app they would use, and that’s really cool.
-        * XXXXX page visits to the site meant that people actually used and engaged with it, much more than expected.
-
-        All in all, a great inspiration for today's web developers and a very successful conference website.
-    right_column:
-      classes: "centered"
-      content: |
-        <h3>Key users</h3>
-        <figure class="case-study__img-wrapper contained">
-          <img src="../../../../imgs/placeholder--square.png" alt="image placeholder" class="fluid">
-          <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, porro eius.</figcaption>
-        </figure>  
-
+      All in all, a great inspiration for today's web developers and a very successful conference website.
 
 our_views:
   good:
