@@ -17,12 +17,9 @@ key-takeaways:
 
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways %}
+This section discusses concerns operators may have about migrating to HTTPS.
 
 {% include modules/toc.liquid %}
-
-
-This section discusses concerns operators may have about migrating to HTTPS.
 
 ## Search Ranking
 
@@ -47,8 +44,8 @@ Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)_ and _[Bulletproof
 SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_.
 
 In some cases, TLS can _improve_ performance, mostly as a result of making
-HTTP/2 possible. I gave [a talk on HTTPS and HTTP/2 performance at Chrome Dev
-Summit 2014](https://www.youtube.com/watch?v=ayD0LiZkWLQ).
+HTTP/2 possible. Chris Palmer gave [a talk on HTTPS and HTTP/2 performance at Chrome Dev
+Summit 2014]({{site.baseurl}}/shows/cds/2014/tls-all-the-things).
 
 ## Referer Headers
 
@@ -57,7 +54,7 @@ HTTPS site to other HTTP sites. If that is a problem, there are several ways to
 solve it:
 
 * The other sites should migrate to HTTPS. Perhaps they might find this guide
-  useful! :) If referee sites can complete Step 2 of this guide, you can change
+  useful! :) If referee sites can complete "Enable HTTPS On Your Servers" section of this guide, you can change
   links in your site to theirs from http:// to https://, or you can use
   protocol-relative links.
 * You can use the new [Referrer Policy
@@ -67,10 +64,7 @@ solve it:
 Because search engines are migrating to HTTPS, you are likely see _more_ Referer
 headers when you migrate to HTTPS than you are now.
 
-[According to the HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3):
-
-> Clients SHOULD NOT include a Referer header field in a (non-secure) HTTP
-> request if the referring page was transferred with a secure protocol.
+<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Clients SHOULD NOT include a Referer header field in a (non-secure) HTTP request if the referring page was transferred with a secure protocol.<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">According to the HTTP RFC</a></p></blockquote>
 
 ## Ad Revenue
 
@@ -82,8 +76,8 @@ site operators cannot migrate to HTTPS without losing ad revenue; but until site
 operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 
 Advertisers should at least offer ad service via HTTPS (such as by completing
-Step 2 in this guide). Many already do. You should ask advertisers that do not
-serve HTTPS at all to at least start. You may wish to defer completing Step 4 in
+the "Enable HTTPS On Your Servers" in this guide). Many already do. You should ask advertisers that do not
+serve HTTPS at all to at least start. You may wish to defer completing "Make Intra-Site URLs Relative" in
 this guide until enough advertisers interoperate properly.
 
 {% endwrap %}
