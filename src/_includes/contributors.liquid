@@ -3,7 +3,7 @@
     {% if page.authors %}
 		<h4>{{"authors" | localize_string}}</h4>
 
-	    <ul class="container sitewide-authors">
+	    <ul class="container sitewide-authors clear">
 	    	{% for author in page.authors %}
 	    	{% assign contributor = site.data["contributors"][author] %}
 		      <li class="g--third">
@@ -21,7 +21,7 @@
     {% if page.translators %}
 		<h4>{{"translators" | localize_string}}</h4>
 
-	    <ul class="container sitewide-authors">
+	    <ul class="container sitewide-authors clear">
 	    	{% for author in page.translators %}
 	    	{% assign contributor = site.data["contributors"][author] %}
 		      <li class="g--third">
