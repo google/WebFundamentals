@@ -12,7 +12,8 @@ article:
   updated_on: 2015-02-11
   order: 6
 key-takeaways:
-  -
+  - You need to use HTTP Strict Transport Security (HSTS) to avoid the cost of the 301 redirect.
+  - Ensure you always set the Secure flag on cookies.
 ---
 
 {% wrap content %}
@@ -27,9 +28,9 @@ Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) to tell
 clients that they should always connect to your server via HTTPS, even when
 following an http:// reference. This defeats attacks such as [SSL
 Stripping](http://www.thoughtcrime.org/software/sslstrip/), and also avoids the
-round-trip cost of the 301 redirect we enabled in Step 4.
+round-trip cost of the 301 redirect we enabled in "Redirect HTTP to HTTPS".
 
-**NOTE:** Clients that have noted your site as a Known HSTS Host are likely to
+**NOTE:** Clients that have noted your site as a known HSTS Host are likely to
 _[hard-fail](https://tools.ietf.org/html/rfc6797#section-12.1)_[ if your
 ](https://tools.ietf.org/html/rfc6797#section-12.1)[site ever has an error in
 its TLS configuration](https://tools.ietf.org/html/rfc6797#section-12.1) (such
@@ -39,7 +40,7 @@ site without HTTPS. Do not enable HSTS until you are certain that your site
 operation is robust enough to avoid ever deploying HTTPS with certificate
 validation errors.
 
-Turn on HTTP Strict Transport Security by setting the Strict-Transport-Security
+Turn on HTTP Strict Transport Security (HSTS) by setting the Strict-Transport-Security
 header. [OWASP's HSTS page has links to
 instructions](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
 for various server software.

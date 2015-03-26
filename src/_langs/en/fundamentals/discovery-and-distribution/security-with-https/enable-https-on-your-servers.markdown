@@ -12,7 +12,8 @@ article:
   updated_on: 2015-02-11
   order: 3
 key-takeaways:
-  -
+  - Use Mozillas Server Configuration tool to set up your server for HTTPS support.
+  - Regularly test your site with the Qualys' handy SSL Server Test and ensure you get at least an A or A+.
 ---
 
 {% wrap content %}
@@ -24,7 +25,7 @@ key-takeaways:
 At this step, you must make a crucial operations decision:
 
 * dedicate a distinct IP address to each hostname your web server serves content
-  for; or
+  from; or
 * use name-based virtual hosting.
 
 If you have been using distinct IP addresses for each hostname, great! You can
@@ -51,14 +52,14 @@ useful.
 If you have many hostnames/subdomains, they'll each need to use the right
 certificate.
 
-**NOTE:** Many site operators have already completed Steps 1 and 2, but are
+**NOTE:** Many site operators have already completed the steps we've covered, but are
 using HTTPS for the sole purpose of redirecting clients back to HTTP. If you
-are doing that, stop doing that now. See Step 3 to make sure HTTPS and HTTP
+are doing that, stop doing that now. See the next section to make sure HTTPS and HTTP
 work smoothly.
 
-**NOTE:** Ultimately you should redirect HTTP requests to HTTPS and use Strict
-Transport Security. This is not the right stage in the migration process to do
-that; see Steps 4 and 5.
+**NOTE:** Ultimately you should redirect HTTP requests to HTTPS and use HTTP Strict
+Transport Security (HSTS). This is not the right stage in the migration process to do
+that; see "Redirect HTTP To HTTPS" and "Turn On Strict Transport Security And Secure Cookies".
 
 Now, and throughout your site's lifetime, check your HTTPS configuration with
 [Qualys' handy SSL Server Test](https://www.ssllabs.com/ssltest/). Your site

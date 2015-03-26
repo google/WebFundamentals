@@ -3,7 +3,7 @@ layout: article
 title: "Make Intra-Site URLs Relative"
 description: "Now that you are serving your site on both HTTP and HTTPS, it should work as
 smoothly as possible regardless of protocol."
-introduction: "Now that you are serving your site on both HTTP and HTTPS, it should work as
+introduction: "Now that you are serving your site on both HTTP and HTTPS, it needs to work as
 smoothly as possible regardless of protocol."
 id: make-intra-site-urls-relative
 collection: security-with-tls
@@ -14,7 +14,7 @@ article:
   updated_on: 2015-02-11
   order: 4
 key-takeaways:
-  -
+  - Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js
 ---
 
 {% wrap content %}
@@ -23,29 +23,29 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-But, if a problem arises: [mixed
-content](http://www.w3.org/TR/mixed-content/). When you serve a page via HTTPS
-that includes HTTP resources, browsers will warn the user that the full strength
+But, a problem arises when you serve a page via HTTPS
+that includes HTTP resources: [mixed
+content](http://www.w3.org/TR/mixed-content/), browsers will warn the user that the full strength
 of HTTPS has been lost.
 
 In fact, in the case of active mixed content (script, plug-ins, CSS, iframes),
 browsers often simply won't load or execute the content at all — resulting in a
 broken page.
 
-*NOTE:* It is perfectly OK to include HTTPS resources in an HTTP page.
+**NOTE:** It is perfectly OK to include HTTPS resources in an HTTP page.
 
 Additionally, when you link to other pages in your site, users could get
 downgraded from HTTPS to HTTP.
 
 These problems happen when your pages include fully-qualified, intra-site URLs
-that use the http:// scheme. You should change content like this:
+that use the *http://* scheme. You should change content like this:
 
 		<h1>Welcome To Example.com</h1>
 		<script src="http://example.com/jquery.js"></script>
 		<link rel="stylesheet" href="http://assets.example.com/style.css"/>
 		<img src="http://img.example.com/logo.png"/>;
 		<p>Read this nice <a href="http://example.com/2014/12/24/">new
-		post on cats!</a&></p>
+		post on cats!</a></p>
 		<p>Check out this <a href="http://foo.com/">other cool
 		site.</a></p>
 
@@ -56,7 +56,7 @@ to something like this:
 		<link rel="stylesheet" href="//assets.example.com/style.css"/>
 		<img src="//img.example.com/logo.png"/>;
 		<p>Read this nice <a href="//example.com/2014/12/24/">new
-		post on cats!</a&></p>
+		post on cats!</a></p>
 		<p>Check out this <a href="http://foo.com/">other cool
 		site.</a></p>
 
@@ -67,7 +67,7 @@ or this:
 		<link rel="stylesheet" href="//assets.example.com/style.css"/>
 		<img src="//img.example.com/logo.png"/>;
 		<p>Read this nice <a href="/2014/12/24/">new
-		post on cats!</a&></p>
+		post on cats!</a></p>
 		<p>Check out this <a href="http://foo.com/">other cool
 		site.</a></p>
 
@@ -92,7 +92,7 @@ large sites. If you are not sure you can fully deploy HTTPS yet, forcing your
 site to use HTTPS for all sub-resources may backfire. There is likely to be a
 period of time in which HTTPS is new and weird for you, and the HTTP site must
 still work as well as ever. Over time, you'll complete the migration and can
-lock in HTTPS (see Steps 4 and 5).
+lock in HTTPS (see the next two sections).
 
 If your site depends on script, image, or other resources served from a third
 party, such as a CDN, jquery.com, or the like, you have 2 options:

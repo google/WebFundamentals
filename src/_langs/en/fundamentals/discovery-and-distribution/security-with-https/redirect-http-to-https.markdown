@@ -12,20 +12,18 @@ article:
   updated_on: 2015-02-11
   order: 5
 key-takeaways:
-  -
+  - You need to put a canonical link in the head of your page to tell search engines https is the best way to get to your site.
 ---
 
 {% wrap content %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-{% include modules/toc.liquid %}
-
 Set &lt;link rel="canonical" href="https://…"/&gt; tags in your pages. [This
 helps search engines](https://support.google.com/webmasters/answer/139066?hl=en)
 know the best way to get to your site.
 
 Most web servers offer a simple redirect feature. Use 301 (Moved Permanently) to
-indicate to search engines and browsers that the HTTPS version is canonical.
+indicate to search engines and browsers that the HTTPS version is canonical and redirect your users to the HTTPS version of your site from HTTP.
 
 {% endwrap %}
