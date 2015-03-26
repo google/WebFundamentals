@@ -7,6 +7,8 @@ date: 2015-01-09
 article:
   written_on: 2015-01-09
   updated_on: 2015-01-09
+authors:
+  - pbakaus
 
 id: chrome-dev-summit
 title: "Chrome Dev Summit 2014"
@@ -50,146 +52,58 @@ behind_the_scenes:
     - title: Service Worker Cache Polyfill
       link: https://github.com/coonsta/cache-polyfill
 
+sections:
+  - title: Development
+    content: |
+      When Paul set out to built the site, a key priority was to embrace [Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement). Instead of designing for desktop, he built it for for small screens first, then build up to larger screens – progressively enhancing, instead of gracefully degrading. That required a bunch of media queries, but but also a fair bit of freedom to eyeball small changes between the key breakpoints. Tracking back and forth between screen sizes gave him a sense of where content would break, so he could quickly fix it.
+
+      Another important aspect of PE is being as backwards-compatible as possible. Paul chose to use floats over Flexbox because he felt it would increase the number of browsers that the site would work on. For the specific layout of the site, this turned out to be no problem at all. If he needed Flexbox he would’ve used PE to add it on.
+
+      <div class="image-wrapper"><img class="full-width" src="/web/showcase/case-study/images/chrome-dev-summit/flip.jpg"><span>FLIP is taking advantage of user's perception by prioritizing the animation.</span></div> A major challenge of the site was the card expand and collapse feature, which required thinking up a whole new way to do the animations work. Paul came up with a strategy he calls [FLIP](http://aerotwist.com/blog/flip-your-animations), which involves **setting animating elements to their final state**. From there, you apply compositor-friendly properties like transforms and opacity to invert the changes and return the element to its start position. Finally, with that done, enable transitions on transforms and opacity, and remove those changes. This causes the elements to move to their final positions once more! Paul admits it’s a little crazy, but it works super well and gives you a performance boost.
+  - title: Performance
+    content: |
+      Knowing Paul Lewis as the performance guru he is, I wasn't surprised to find out that powerformance was a super important consideration when building the site. He heavily relied on [WebPageTest](http://webpagetest.org) to get the *Speed Index* value as low as he could. Without the YouTube embed, Paul managed to get it to **less than 1,000 on a cable connection**, which meant that most of the users would get an initial render in **under a second**.
+
+      Most of the work to achieve this was done in Grunt tasks to concatenate, minify, and compress images as much as possible. The site also defers non-essential images to after page load so that actual content is rendered to screen more quickly.
+
+      To make the page load time even better, Paul dropped in a [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction).  With it, whether you are online or not, a page visit can be served up from cache, ensuring that you get to the content even on spotty connectivity (extremely important when on conference WiFi!). The CDS site is one of the first production sites to use the new feature, which had Paul run into a bunch of “early adopter issues”, but the crazy performance boost, he told me, made up for it. In fact, he's now taking it to every site he builds! 
+
+      Performance, of course, isn’t just how well a site loads, but also how well it runs. Paul knew the animations were going to be a challenge, which is why he came up with [FLIP](http://aerotwist.com/blog/flip-your-animations). Besides that, he went out of his way to ensure that nothing got in the way of touch input or scrolling. Despite the fact that the site isn’t a hugely complex one, he adopted a modified [RAIL methodology](https://developers.google.com/web/fundamentals/performance/rendering/use-the-rail-performance-model?hl=en) for the build (he didn’t really need much Idle time), and it helped a bunch!
+  - title: Design
+    content: |
+      Since the site was forged by a single person, it meant that Paul was both the designer and developer on the project, resulting in unprecedented levels of understanding regarding each others’ concerns in the two 'teams'. He likes to design desktop down (the opposite of progressive enhancement, which he used during development), because it gives him a sense of what needs to go into the project. Afterwards Paul drops down to the mobile view, which allows him to refine things significantly, and make sure that the most important things are getting the most attention. That then informs the Desktop version, because invariably information architecture and priority will need updating.
+
+      ![Design Problem](/web/showcase/case-study/images/chrome-dev-summit/design_problem.jpg) Not all of it went smoothly. The [Material Design guidelines](http://www.google.com/design/spec/material-design/introduction.html) at the time weren’t clear about how to make a content site, so there were areas where he fell short. The design also failed to account for the schedule and session information being related, and in the end, the UX meant that people would go to the schedule and be frustrated that they couldn’t get straight to the session information.
+
+      That being said said, I think Paul did a tremendous job of transporting the Material Design spec to a content site. and I’m really pleased with the visuals and motion. It has that unique Material Design feel to it, and the information and look encourages interaction and hierarchy.
+  - title: Success
+    left_column:
+      classes: "indented-medium"
+      content: |
+        ### Success metrics
+
+        * Successfully released the entire site is on [Github](https://github.com/googlechrome/devsummit) to serve as boilerplate and inspiration to web developers.
+        * Incorporated the latest and greatest of the web platform: Service Worker, Web Manifest and dynamic theme colors. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s homescreen, it feels very much like an app they would use, and that’s really cool.
+        * XXXXX page visits to the site meant that people actually used and engaged with it, much more than expected.
+
+        All in all, a great inspiration for today's web developers and a very successful conference website.
+    right_column:
+      classes: "centered"
+      content: |
+        <h3>Key users</h3>
+        <figure class="case-study__img-wrapper contained">
+          <img src="../../../../imgs/placeholder--square.png" alt="image placeholder" class="fluid">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, porro eius.</figcaption>
+        </figure>  
+
+
 our_views:
   good:
-    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
+    - Beatifully Material, yet website. The best of both worlds!
+    - Extremely efficient animations create a smooth experience on all devices
+    - Entire code is open source to inspire developers
   bad:
-    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-    - Showcase nunc nec urna fermentum fermentum. Curabitur a interdum lacus.
-other_case_studies:
-  - title: Case study number one
-    description: Case study title
-    link: /spotlights/example-showcase/
-    image: ../../../imgs/image-example-2.jpg
-  - title: Case study number two
-    description: Case study title
-    link: /spotlights/example-showcase/
-    image: ../../../imgs/image-example-3.jpg
-  - title: Case study number three
-    description: Case study title
-    link: /spotlights/example-showcase/
-    image: ../../../imgs/image-example-4.jpg
-
+    - Session information and schedule aren't linked, making for a slightly confusing experience
+    - YouTube embed slows down site load and could have been further deferred
 ---
 
-<div class="container clear">
-
-  <div class="content">
-  <h2>Development</h2>
-    <div class="divider divider--secondary">
-      <span class="themed divider-icon"></span>
-    </div>
-
-    <div class="team-member">
-      <a href="http://aerotwist.com/" target="_blank" title="Paul Lewis" class="themed">
-        <span class="icon-circle--large themed--background" style="background-image: url(/web/imgs/contributors/paullewis.jpg); background-size: contain;"></span>
-        <h3 class="large">Paul Lewis</h3>
-      </a>
-      <span>Primary developer</span>
-    </div>
-
-    <p class="quote__content-icononly">There were some key areas for me as I was building the site. Firstly, I wanted to build for small screens first, and build up to larger screens. Overall I found that requires just a bunch of media queries, but also a fair bit of freedom to eyeball small changes between the key breakpoints. Tracking back and forth between screen sizes gave me a sense of where content would break, and then I went about fixing it.</p>
-
-    <p>I’m a big believer in Progressive Enhancement, but also being as backwards-compatible as possible. I chose to use floats over Flexbox because I felt it would increase the number of browsers that the site would work on, and actually for the layout of the site, it was no problem at all. If I needed Flexbox I would’ve use PE to add it on.</p>
-
-    <p>A major challenge of the site was the card expand and collapse feature, which required thinking up a whole new way to do my animations work. I came up with a strategy I call <a href="http://aerotwist.com/blog/flip-your-animations">FLIP</a> which involves setting animating elements to their final state. From there you apply compositor-friendly properties like transforms and opacity to invert the changes and return the element to its start position. Finally, with that done, enable transitions on transforms and opacity, and remove those changes. This causes the elements to move to their final positions once more! It’s a little crazy, but it works super well, and it gives you a performance boost.</p>
-
-  </div>
-
-  <div class="content">
-    <h2>Performance</h2>
-
-    <div class="divider divider--secondary">
-      <span class="themed divider-icon"></span>
-    </div>
-
-    <div class="team-member">
-      <a href="http://aerotwist.com/" target="_blank" title="Paul Lewis" class="themed">
-        <span class="icon-circle--large themed--background" style="background-image: url(/web/imgs/contributors/paullewis.jpg); background-size: contain;"></span>
-        <h3 class="large">Paul Lewis</h3>
-      </a>
-      <span>Primary developer</span>
-    </div>
-
-    <p class="quote__content-icononly">I’d say that performance was a super important consideration for me.  I used <a href="http://webpagetest.org">WebPageTest</a> to get my Speed Index value as low as I could. I managed to get it less than 1,000, which meant that most of the users would get an initial render in under 1 second. Most of the work was in Grunt tasks to concatenate, minify, and compress images as much as possible. I also deferred non-essential images to after page load so that I could get content to screen more quickly.</p>
-
-    <p>To make the page load time better, I dropped in a Service Worker, which meant that whether you were online or not, page visits could be served up from a cache, ensuring that you get to the content super fast! It was one of the first production sites to use Service Worker, which kind of meant I ran into a bunch of “early adopter issues”, but on balance I wouldn’t change a thing; it’s such a performance boost I’d personally love to have it on every site I build!</p>
-
-    <p>Performance isn’t just how well a site loads, but also how well it runs. I knew the animations were going to be a challenge, which is why I came up with FLIP. Besides that I went out of my way to ensure that nothing got in the way of touch input or scrolling. Despite the fact that the site isn’t a hugely complex one, I adopted a modified <a href="https://developers.google.com/web/fundamentals/performance/rendering/use-the-rail-performance-model?hl=en">RAIL methodology</a> for the build (I didn’t really need much Idle time), and it helped a bunch!</p>
-
-  </div>
-
-  <div class="content">
-    <h2>Design</h2>
-    <div class="divider divider--secondary">
-      <span class="themed divider-icon"></span>
-    </div>
-
-    <div class="team-member">
-      <a href="http://aerotwist.com/" target="_blank" title="Paul Lewis" class="themed">
-        <span class="icon-circle--large themed--background" style="background-image: url(/web/imgs/contributors/paullewis.jpg); background-size: contain;"></span>
-        <h3 class="large">Paul Lewis</h3>
-      </a>
-      <span>Primary developer</span>
-    </div>
-
-    <p class="quote__content-icononly">I was lucky enough to be both the designer and developer on the project, which meant that both teams had unprecedented levels of understanding regarding each others’ concerns!</p>
-
-    <p>I like to design desktop down, because it gives me a sense of what needs to go into the project, then I drop down to the mobile view, which allows me to refine things significantly, and make sure that the most important things are getting the most attention. That then informs the desktop version, because invariably information architecture and priority will need updating.</p>
-
-    <p>I did make some mistakes here, though. The Material Design guidelines weren’t so clear about how to make a content site at the time I was designing, so I think there were definitely areas where I fell short. I also failed to account for the schedule and session information being related, and in the end the UX meant that people would go to the schedule and be frustrated that they couldn’t get straight to the session information. Ultimately neither of these problems were show-stoppers, but I’d say that if I had another go I would have done a much more thorough wireframing process up front to really ensure I was designing the right things.</p>
-
-    <p>With all that said, I’m really pleased with the visuals and motion in the final site. I feel like it has a Material Design feel to it, and the information and look encourages interaction and hierarchy that I wanted from the outset.</p>
-
-  </div>
-
-  <div class="content">
-    <h2>Success</h2>
-    <div class="divider divider--secondary">
-      <span class="themed divider-icon"></span>
-    </div>
-
-    <div class="team-member">
-      <a href="http://aerotwist.com/" target="_blank" title="Paul Lewis" class="themed">
-        <span class="icon-circle--large themed--background" style="background-image: url(/web/imgs/contributors/paullewis.jpg); background-size: contain;"></span>
-        <h3 class="large">Paul Lewis</h3>
-      </a>
-      <span>Primary developer</span>
-    </div>
-
-    <p class="quote__content-icononly">This project had a bunch of success metrics attached to it.</p>
-
-    <p>We wanted the source code to be shared with a much wider audience, and that worked out: the entire site is on 
-    <a href="https://github.com/googlechrome/devsummit">GitHub</a> for everyone to benefit from. That includes the build tasks, the assets, everything.</p>
-
-    <p>More than that we wanted it to be a place where we could include the latest and greatest from the web platform, so not only did the site have a Service Worker, but it also had a Web Manifest file and dynamic theme colors. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s homescreen, it feels very much like an app they would use, and that’s really cool.</p>
-
-    <p>Last, but by no means least, we of course wanted people to use the site! And we got that in spades. There were x thousand page visits on the site, many of course during the conference itself.</p>
-
-  </div>
-
-  <div class="spotlight-content clear">
-    <div class="indented-medium g--half">
-      <h3>Data examples</h3>
-
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, deleniti nemo inventore autem? Velit, laboriosam, voluptatibus, officia inventore.</li>
-      </ul>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, nostrum, a culpa sed perspiciatis voluptas alias eos quis. Quos, laboriosam, modi aliquam odit illo quam ut veritatis obcaecati autem reiciendis?</p>
-
-    </div>
-
-    <div class="centered g--half g--last">
-      <h3>Key users</h3>
-      <figure class="case-study__img-wrapper contained">
-        <img src="../../../imgs/placeholder--square.png" alt="image placeholder" class="fluid">
-        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, porro eius.</figcaption>
-      </figure>
-    </div>
-  </div>
-
-</div>
