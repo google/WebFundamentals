@@ -13,13 +13,14 @@ udacity:
   instructor: samdutton
   preview:
     youtube: 1Pxj9955I2c
+nofeed: true
 date: 2015-03-12 00:00:00
 article:
   written_on: 2015-03-12
   updated_on: 2015-03-12
 ---
 
-Did you know that images account for more than **60%** of the bytes on average 
+Did you know that images account for more than **60%** of the bytes on average
 needed to load a web page?
 
 In this course you will learn how to work with images on the modern web, so
