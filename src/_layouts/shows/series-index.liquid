@@ -12,7 +12,10 @@
   {% endif %}
 {% endfor %}
 
-    {% capture feedUrl %}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+		{% if page.nofeed != true %}
+			{% capture feedUrl %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+		{% endif %}
+
     {% include head.liquid feedUrl=feedUrl feedName=showDetails.title %}
   </head>
 
@@ -60,6 +63,8 @@
 	    </ol>
 
     {% endwrap %}
+
+    {% include modules/shows/feedlink.liquid feedUrl=feedUrl %}
 
     {% include cc.liquid %}
     {% include footer.liquid %}

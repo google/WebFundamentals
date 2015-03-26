@@ -1,0 +1,7 @@
+{% if include.feedUrl %}
+<p class="container feedlink-container">
+  <a href="{{ include.feedUrl }}">
+    <img src="{{site.baseurl}}/shows/imgs/rss-icon.svg" alt="RSS Feed Icon" class="feedlink-icon" />
+  </a>
+</p>
+{% endif %}

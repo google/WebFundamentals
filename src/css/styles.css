@@ -3755,6 +3755,12 @@ div.related-items-on-spotlight {
     color: inherit; }
  }
 
+.feedlink-icon {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  margin: 0; }
+
 .showhome--subheading {
   padding-top: 32px; }
 

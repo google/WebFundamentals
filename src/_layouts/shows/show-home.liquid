@@ -27,7 +27,7 @@
 
 
   <!-- Template Starts Here -->
-    {% capture feedUrl %}/shows/{{page.id}}/feed.xml{% endcapture %}
+    {% capture feedUrl %}{{site.baseurl}}/shows/{{page.id}}/feed.xml{% endcapture %}
     {% include head.liquid feedUrl=feedUrl feedName=page.title %}
   </head>
 
@@ -122,6 +122,8 @@
       {% endif %}
 
     {% endwrap %}
+
+    {% include modules/shows/feedlink.liquid feedUrl=feedUrl %}
 
     {% include cc.liquid %}
     {% include footer.liquid %}

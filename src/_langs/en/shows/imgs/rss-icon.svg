@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>rss-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="rss-icon" sketch:type="MSArtboardGroup" fill="#D8D8D8">
+            <path d="M11,85 L11,110.991722 C11,115.414572 14.5881712,119 19.0070969,119 L48.9708492,119 C43.7813186,101.652338 29.1468054,88.3515825 11,85 Z" id="Rectangle-2" sketch:type="MSShapeGroup"></path>
+            <path d="M10.052556,52.0832111 C10.0178405,52.3863633 10,52.6946884 10,53.0072221 L10,79.2519705 L10,79.2519705 C31.7190295,81.4531892 49.2467399,97.8384882 53.1752636,119 L80.6271732,119 C76.9821756,82.5370867 47.0457206,53.8199079 10.052556,52.0832111 Z" id="Rectangle-3" sketch:type="MSShapeGroup"></path>
+            <path d="M11,16.0404867 L11,46.2161674 L11,46.2161674 C50.4996028,49.07264 82.2441153,79.9078487 86.5117441,119 L116.837661,119 C113.776886,62.5813016 67.8118746,17.5756688 11.0000106,16.040487 Z" id="Rectangle-4" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
