@@ -55,13 +55,31 @@
 		text-align: center;
 	}
 
-	.team-member {
-		text-align: center;
+	.content p > img {
+		display: inline-block;
+		float: left;
+		width: 33%;
+		margin-top: 0;
+		margin-right: $lineHeight*2;
+	}
 
-		h3 {
-			margin-right: auto;
-			margin-top: 0;
-			padding-top: 12px;
+	.content .image-wrapper {
+
+		text-align: center;
+		padding-top: 1.625em;
+
+		img {
+			margin: 0 auto;
+		}
+
+		span {
+			display: block;
+			color: #404040;
+			font-family: "Roboto Condensed",Helvetica,sans-serif;
+			font-weight: 400;
+			letter-spacing: .5px;
+			border-top: 1px solid #e0e0e0;
+			padding-top: 8px;
 		}
 	}
 
