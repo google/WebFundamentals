@@ -28,7 +28,7 @@
               <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed</a>
             </div>
             <div class="g--third g--last">
-              <span class="{% if page.scores.webpagetest.value > 5000 %}low{% elsif page.scores.webpagetest.value > 3000 %}med{% else %}high{% endif %}"><strong>{{page.scores.webpagetest.value}}</strong></span>
+              <span class="{% if page.scores.webpagetest.value > 6000 %}low{% elsif page.scores.webpagetest.value > 3000 %}med{% else %}high{% endif %}"><strong>{{page.scores.webpagetest.value}}</strong></span>
               <a href="{{page.scores.webpagetest.result}}">Speed Index</a>
             </div>
           </div>
