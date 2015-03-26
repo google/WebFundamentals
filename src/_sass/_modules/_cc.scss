@@ -11,3 +11,28 @@
 
   }
 }
+
+.sitewide-authors {
+	padding-left: 0;
+
+	li {
+		text-align: center;
+		padding-left: 0;
+	}
+
+	a {
+		color: #3372df;
+	}
+
+	h3 {
+		color: inherit;
+	}
+
+	li::before {
+		content: '';
+	}
+
+	p {
+		font-size: 16px;
+	}
+}
