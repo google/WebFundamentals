@@ -1,4 +1,4 @@
-{% assign MAX_NUM_OF_VIDEOS = 100 %}
+{% assign MAX_NUM_OF_VIDEOS = 50 %}
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 
 	<title>{{include.title}}</title>
@@ -15,17 +15,20 @@
 		{% endif %}
 
 		{% assign seriesPage = video.parent %}
-		{% capture title %}{% if include.showSeriesInTitle%}{{ seriesPage.title | xml_escape }} – {% endif %}{{ video.title | xml_escape }}{% endcapture %}
+		{% capture title %}{% if include.showSeriesInTitle%}{{ seriesPage.title }} – {% endif %}{{ video.title }}{% endcapture %}
 		{% capture videocontent %}
 		{% include modules/video.liquid id=video.showYoutubeID width=560 height=315 %}
 		{{ video.content | markdownify }}
+		{% endcapture %}
+		{% capture screenshotTitle %}
+		YouTube screenshot of {{ seriesPage.title }} Video titled {{ video.title }}
 		{% endcapture %}
 	<entry>
 		<published>{{ video.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
 		<updated>{{ video.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 
 		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
-		<title>{{title}}</title>
+		<title>{{title | xml_escape}}</title>
 		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}" />
 
 		{% if video.authors %}
@@ -37,7 +40,7 @@
     <enclosure url="https://img.youtube.com/vi/{{ video.showYoutubeID }}/0.jpg" type="image/jpg"/>
     <image>
   		<link>https://developers.google.com{{ site.baseurl }}{{ video.url }}</link>
-  		<title>YouTube screenshot of {{ seriesPage.title }} Video titled {{ video.title }}</title>
+  		<title>{{ screenshotTitle | xml_escape }}</title>
   		<url>https://img.youtube.com/vi/{{ video.showYoutubeID }}/0.jpg</url>
 		</image>
     {% endif %}
