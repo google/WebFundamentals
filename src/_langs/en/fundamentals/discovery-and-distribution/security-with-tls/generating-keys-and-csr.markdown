@@ -21,17 +21,6 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## Get Certificates
-
-The first step is to get a set of certifcates.
-
-Most certificate providers will give you two options, a standard certificate or a wildcard certificate.
-
-A standard certificate will only work for one url, for example, www.foobar.com and foobar.com.
-
-A wildcard certifcate will work for subdomains as well, for example, blog.foobar.com, social.foobar.com.
-
-<!--
 ## Generate A Public/Private Key Pair
 
 In this example, we'll generate a 2,048-bit RSA key pair. (A smaller key, such
@@ -49,14 +38,12 @@ This will give you the following output:
     .+++
     .......................................................................................+++
     e is 65537 (0x10001)
--->
 
 ## Generate A CSR
 
-Once you've got your certificates from a certificate vendor you'll need to  embed your public key and information about your organization
-and web site into a certificate signing request.
-
-openssl will interactively ask your for that metadata.
+In this step, you embed your public key and information about your organization
+and your web site into a certificate signing request. openssl will interactively
+ask your for that metadata.
 
 Running the following command:
 
@@ -138,9 +125,9 @@ subdomains; otherwise, you can just buy 1 or more single-name certificates. (If
 you have more than, say, 5 subdomains, you might find a wildcard certificate
 more convenient when you get to Step 2.)
 
-> **NOTE:** Keep in mind that in wildcard certificates the wildcard applies to
-> only 1 DNS label. A certificate good for \*.example.com will work for
-> foo.example.com and bar.example.com, but _not_ for foo.bar.example.com.
+**NOTE:** Keep in mind that in wildcard certificates the wildcard applies to
+only 1 DNS label. A certificate good for \*.example.com will work for
+foo.example.com and bar.example.com, but _not_ for foo.bar.example.com.
 
 Copy the certificates to all your front-end servers in a non-web-accessible
 place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
