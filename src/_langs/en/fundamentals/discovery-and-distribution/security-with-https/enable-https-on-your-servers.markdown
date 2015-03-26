@@ -12,7 +12,7 @@ article:
   updated_on: 2015-02-11
   order: 3
 key-takeaways:
-  - Use Mozillas Server Configuration tool to set up your server for HTTPS support.
+  - Use Mozilla's Server Configuration tool to set up your server for HTTPS support.
   - Regularly test your site with the Qualys' handy SSL Server Test and ensure you get at least an A or A+.
 ---
 
