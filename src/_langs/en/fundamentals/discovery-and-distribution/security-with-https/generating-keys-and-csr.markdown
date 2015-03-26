@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Generating Keys and Certificate Signing Requests"
-description: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems."
-introduction: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems."
+description: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems, to generate private / public keys and a CSR."
+introduction: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems, to generate private / public keys and a CSR."
 id: generating-keys-and-csr
 collection: security-with-tls
 authors:
@@ -12,7 +12,10 @@ article:
   updated_on: 2015-02-11
   order: 2
 key-takeaways:
-  -
+  - You need to create a 2048-bit RSA public and private key pair.
+  - Generate a certificate signing request (CSR) which embeds your public key.
+  - Share your CSR with your Cerfticate Authority (CA) to receive a final certificate or certificate chain.
+  - Install your final certificate in a non-web-accessible place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
 ---
 
 {% wrap content %}
@@ -42,7 +45,7 @@ This will give you the following output:
 ## Generate A CSR
 
 In this step, you embed your public key and information about your organization
-and your web site into a certificate signing request. openssl will interactively
+and your web site into a certificate signing request. *openssl* will interactively
 ask your for that metadata.
 
 Running the following command:
@@ -74,29 +77,32 @@ Will output the following:
     A challenge password []:
     An optional company name []:
 
-Now, make sure the CSR looks right:
+Now, make sure the CSR looks right which you can do with this command:
 
-> $ **openssl req -text -in www.example.com.csr -noout**
-> Certificate Request:
->     Data:
->         Version: 0 (0x0)
->         Subject: C=CA, ST=California, L=Mountain View, O=Google, Inc.,
-> OU=Webmaster Help Center Example Team,
-> CN=www.example.com/emailAddress=webmaster@example.com
->         Subject Public Key Info:
->             Public Key Algorithm: rsaEncryption
->                 Public-Key: (2048 bit)
->                 Modulus:
->                     00:ad:fc:58:e0:da:f2:0b:73:51:93:29:a5:d3:9e:
->                     f8:f1:14:13:64:cc:e0:bc:be:26:5d:04:e1:58:dc:
->                     ...
->                 Exponent: 65537 (0x10001)
->         Attributes:
->             a0:00
->     Signature Algorithm: sha256WithRSAEncryption
->          5f:05:f3:71:d5:f7:b7:b6:dc:17:cc:88:03:b8:87:29:f6:87:
->          2f:7f:00:49:08:0a:20:41:0b:70:03:04:7d:94:af:69:3d:f4:
->          ...
+    openssl req -text -in www.example.com.csr -noout
+
+And the response should look like the following:
+
+    Certificate Request:
+        Data:
+            Version: 0 (0x0)
+            Subject: C=CA, ST=California, L=Mountain View, O=Google, Inc.,
+    OU=Webmaster Help Center Example Team,
+    CN=www.example.com/emailAddress=webmaster@example.com
+            Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    Public-Key: (2048 bit)
+                    Modulus:
+                        00:ad:fc:58:e0:da:f2:0b:73:51:93:29:a5:d3:9e:
+                        f8:f1:14:13:64:cc:e0:bc:be:26:5d:04:e1:58:dc:
+                        ...
+                    Exponent: 65537 (0x10001)
+            Attributes:
+                a0:00
+        Signature Algorithm: sha256WithRSAEncryption
+             5f:05:f3:71:d5:f7:b7:b6:dc:17:cc:88:03:b8:87:29:f6:87:
+             2f:7f:00:49:08:0a:20:41:0b:70:03:04:7d:94:af:69:3d:f4:
+             ...
 
 ## Submit Your CSR To A CA
 
@@ -123,7 +129,7 @@ For example, 1 CA currently offers these prices:
 At these prices, wildcard certificates are economical when you have more than 9
 subdomains; otherwise, you can just buy 1 or more single-name certificates. (If
 you have more than, say, 5 subdomains, you might find a wildcard certificate
-more convenient when you get to Step 2.)
+more convenient when you come to enable HTTPS on your servers.)
 
 **NOTE:** Keep in mind that in wildcard certificates the wildcard applies to
 only 1 DNS label. A certificate good for \*.example.com will work for
