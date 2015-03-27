@@ -4,7 +4,7 @@
 	<title>{{include.title}}</title>
 	<description>{{include.description}}</description>
 
-	<link type="text/html" href="{{ include.link }}" rel="alternate"/>
+	<link type="text/html" href="{{ include.link }}{{ include.utm }}" rel="alternate"/>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
 	<id>{{include.id}}</id>
 
@@ -29,7 +29,7 @@
 
 		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
 		<title>{{title | xml_escape}}</title>
-		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}" />
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}{{ include.utm }}" />
 
 		{% if video.authors %}
 		<author>
