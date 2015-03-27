@@ -23,10 +23,10 @@
 {% endfor %}
 
 {% if page.nofeed != true %}
-	{% if include.feedUrl %}
-	<link rel="alternate" type="application/rss+xml" title="{{include.feedName}}" href="{{include.feedUrl}}">
+	{% if page.feedUrl %}
+<link rel="alternate" type="application/rss+xml" title="{{page.feedName}}" href="{{site.baseurl}}/{{page.feedUrl}}">
 	{% else %}
-	<link rel="alternate" type="application/rss+xml" title="Fundamentals" href="{{site.baseurl}}/fundamentals/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Fundamentals" href="{{site.baseurl}}/fundamentals/feed.xml">
 	{% endif %}
 {% endif %}
 
