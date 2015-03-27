@@ -120,7 +120,7 @@ tools/docker.sh grunt develop
 Essentially, prefix `grunt` command with `tools/docker.sh` and it will run inside a Docker container,
 which includes all the dependencies needed to build the site.
 
-If you want to experiment with your own Docker image instead of using `google/webfundamentals-dev`,
+If you want to experiment with your own Docker image instead of using `gcr.io/web-central/wf-dev`,
 modify `Dockerfile` in the root of this repo and build your image:
 
 ```sh
