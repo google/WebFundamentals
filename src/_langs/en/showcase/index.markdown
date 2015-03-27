@@ -5,6 +5,8 @@ collection: web
 title: "Showcases"
 description: ""
 published: true
+feedName: Web Showcase - Google Developers
+feedPath: showcase/feed.xml
 ---
 {% comment %}
 NOTE: the spotlight header required a modifier to render properly
