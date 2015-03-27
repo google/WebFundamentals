@@ -3,11 +3,10 @@
 
 	<title>{{include.title}}</title>
 	<description>{{include.description}}</description>
-
 	<link type="text/html" href="{{ include.link }}{{ include.utm }}" rel="alternate"/>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
 	<id>{{include.id}}</id>
-
+  <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 	{% assign num = 0 %}
 	{% for video in include.videos %}
 		{% if num > MAX_NUM_OF_VIDEOS %}
