@@ -21,7 +21,9 @@ article:
 
 ## Everywhere
 
-Do you want your app to be everywhere? The web is everywhere. No, really. 
+**Built once, be on all platforms and devices.**
+
+Do you want your app to be everywhere? The web is everywhere. No, *really*. 
 It’s available in almost every country of the world. It’s on TVs, PCs,
 laptops, smartphones, smartwatches, tablets, refrigerators and toasters. OK,
 maybe not toasters, but you get the point.
@@ -35,8 +37,10 @@ and porting apps to multiple languages is a lengthy maintenance nightmare.
 
 ## Searchable
 
+**Deep indexing of your content opens entry points from search engines.**
+
 While native apps currently provide much more discoverability than the web
-through custom App Stores, the web has an unbeatable ability to be found,
+through custom App Stores, the web has an unbeatable ability to be *found*,
 especially if content heavy: Provided your site is freely accessible, search
 engines index all of your content within your app or site and make it all
 available for their users. The more content and sub pages, the more doors open
@@ -44,20 +48,25 @@ for your visitors. A native app usually only has a single point of entry.
 
 ## Always up to date
 
-By default, a web site or web app is always up to date. You are able to freely
+**Web apps and sites are remotely hosted and up to date for 100% of your visitors by default.**
+
+By default, a web site or web app is *always* up to date. You are able to freely
 choose how often you’d like to roll out individual updates and you can be
 selective to whom you roll out certain new features. Updates happen
-transparently to the user without the your visitors having to approve them,
-making A/B testing new version trivial, but most importantly makes getting
-100% of your users upgraded to the latest and hottest is an actual reality.
+transparently to the user without your visitors having to approve them –
+making A/B testing new versions trivial – but most importantly makes getting
+100% of your users upgraded to the latest and hottest an actual reality.
+
 In stark contrast, native apps are bound to update delays and reviews that
-often take up to two weeks depending on the vendor and when the update
+often take up to two weeks depending on the vendor, and when the update
 arrives, it often requires the explicit agreement of the user.
 
 It’s no coincidence that many news sites embrace the mobile web – If your app
 demands to be fresh at all times for all of your users, choose the web.
 
 ## Instant load
+
+**The web can deliver apps and sites that are preloaded in less than a second.**
 
 While it is very difficult to build native apps that stream and lazy load
 content and logic when needed, web apps and sites are naturally able to amend
@@ -72,12 +81,14 @@ cannot be beaten if your goal is the immediate availability of your app.
 
 ## Independent
 
+**The web does not censor content or disallow different payment providers and is an even playing field for all.**
+
 Corporate controlled App Stores, for all their advantages, come with strings
 attached. Their offerings are controlled and shaped to match the culture of
 the platform organization, thus excluding or severely restricting whole
 categories of apps that are perfectly legal but not wanted. Other restrictions
-apply when your app competes with a OS provided app or when your app wants to
-use a different payment provider. In fact, the App Stores approval process is
+can apply when your app competes with a OS provided app or when your app wants to
+use a different payment provider. The App Store's approval process is
 often a black box and there is little room for discussion or dealing with
 ambiguously rejected apps.
 
@@ -87,6 +98,8 @@ or prefer PayPal as payment method, go web.
 
 ## Ephemeral
 
+**Clicking on a link is effortless compared to installing a native app.**
+
 Web apps and sites open with the help of a single click on a link, with the
 implicit guarantee to the visitor that nothing terribly bad will happen.
 Native apps in comparison need to be installed, a conscious process that
@@ -94,7 +107,7 @@ involves friction (click throughs, heavy download sizes, passwords), and often
 constant risk assessment from the user.
 
 The point of entry for web sites and apps is entirely effortless, and is not
-only relevant for security considerations: What if your app belongs to a
+only important for security considerations: What if your app belongs to a
 category that is only used twice a year? Even if you get somebody to install
 these types of apps, the stickyness of the home screen isn’t any help. Studies
 show that there’s a clear upper limit for individual app usage per month, and
@@ -104,12 +117,14 @@ it, gone when you don’t? That’s the concept of ephemeral apps.
 
 Finally, install free also means risk free tryouts! Few native app stores
 offer a way to trial an app before buying it, and the web allows exactly that:
-Trial the app without any effort, then decide to keep it.
+Trial the app without any effort, then decide if you want to keep it.
 
 ## Viral
 
+**The web has the best sharing mechanism in the world, built in.**
+
 Why are social games so much more popular than native games? There’s a
-powerful messaging concept build into the web that make up its core: Hyperlink.
+powerful messaging concept build into the web that make up its core: Hyperlinks!
 Social games take the concept of sharing links and the ability of multiple
 entry points into your app and take it to the next level: Viral ways of
 playing a game through nothing but link sharing!
@@ -127,10 +142,15 @@ that a click on a link that opens a page that promotes you walking into a
 store to buy the game and put it into your console doesn’t have the same
 impact.
 
+Of course, all of this applies to more than just games – almost all web apps
+and sites profit from links that interconnect them and make the web flow.
+
 ## Long lasting
 
+**Your web app will still run 20 years from now, even if you abandon its development.**
+
 Native platform providers boast with the large new feature set they add every
-year in comparison to the web platform, but they’re conveniently missing the
+year when compared to the web, but they’re conveniently leaving out the
 simple fact that they can do so only for the lack of standardization.
 Corporate platforms come and go and a rarely lasting longer than a decade.
 
