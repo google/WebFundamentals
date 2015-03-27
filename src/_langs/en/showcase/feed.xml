@@ -4,7 +4,7 @@
   <icon>https://developers.google.com/web/favicon.ico</icon>
   <id>https://developers.google.com{{ site.url }}/showcase/</id>
   <link type="text/html" href="https://developers.google.com{{ site.url }}/showcase/?utm_source%3Dfeed%26utm_medium%3Dfeed%26utm_campaign%3Dshowcase_feed" rel="alternate"/>
-	<description>The best the web has to offer. Learn from proven success on the web.</description>
+	<subtitle>The best the web has to offer. Learn from proven success on the web.</subtitle>
   <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 {% assign num = 0 %}{% for post in pages %}{% if num < 10 and post.article and post.published != false %}{% if post.collection == "case-study" or post.layout == "spotlight" %}
 	<entry>
