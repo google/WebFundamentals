@@ -16,6 +16,8 @@
             <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
             <h2 class="editorial-header__subtitle" itemprop="name">{{page.title}}</h2>
 
+            {% include modules/author_header.liquid %}
+
             <p class="editorial-header__excerpt" itemprop="headline">{{page.introduction}}</p>
 
           </div>
