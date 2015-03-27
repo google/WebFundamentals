@@ -1,7 +1,7 @@
 {% assign pages = site.pages | deepsort: 'article', 'written_on' | reverse %}<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 
-	<title>/web at Google</title>
+	<title>Web - Google Developers</title>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
 	<id>https://developers.google.com{{ site.url }}/feed.xml</id>
 	<link type="text/html" href="https://developers.google.com{{ site.url }}/" rel="alternate"/>
