@@ -7,14 +7,15 @@
       <ul class="related-items-list list-reset">
 
         {% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
-        {% for spotlight in spotlights limit:6 %}
-
+        {% for spotlight in spotlights limit:7 %}
+          {% if page.id != spotlight.id %}
           <li class="g-medium--1 g-wide--1{% cycle 'more-spotlights': '', '', ' g-medium--last g-wide--last' %}">
             <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}">
               <img src="{{site.baseurl}}/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="{{spotlight.title}}">
               <p class="medium">{{spotlight.title}}</p>
             </a>
           </li>
+          {% endif %}
 
         {% endfor %}
 
