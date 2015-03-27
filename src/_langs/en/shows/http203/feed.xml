@@ -7,7 +7,7 @@
 {% capture link %}https://developers.google.com{{ site.baseurl }}/shows/https203/{% endcapture %}
 {% assign id = link %}
 {% assign showSeriesInTitle = true %}
-{% assign utm = '?utm_source=feed&utm_medium=feed&utm_campaign=shows_http203_feed' %}
+{% assign utm = '?utm_source%3Dfeed%26utm_medium%3Dfeed%26utm_campaign%3Dshows_http203_feed' %}
 
 
 {% include modules/shows/show-feed.liquid utm=utm videos=orderedVideos title=title description=description link=link id=id showSeriesInTitle=showSeriesInTitle %}
