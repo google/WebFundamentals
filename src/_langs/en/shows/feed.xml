@@ -2,7 +2,7 @@
 
 {% assign orderedVideos = site.data.allVideos | sort: 'date' | reverse %}
 
-{% assign title = '/web – Shows at Google' %}
+{% assign title = 'Web Shows - Google Developers' %}
 {% assign description = 'All of the shows to keep up to date with the web.' %}
 {% capture link %}https://developers.google.com{{ site.baseurl }}/shows/{% endcapture %}
 {% assign id = link %}
