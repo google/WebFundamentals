@@ -4,10 +4,10 @@ layout: spotlight
 collection: spotlight
 published: true
 
-date: 2015-02-05
+date: 2015-03-24
 article:
-  written_on: 2015-02-05
-  updated_on: 2015-02-05
+  written_on: 2015-03-24
+  updated_on: 2015-03-24
 authors:
   - pbakaus
 
