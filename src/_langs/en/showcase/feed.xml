@@ -3,7 +3,7 @@
 	<title>Web Showcase - Google Developers</title>
   <icon>https://developers.google.com/web/favicon.ico</icon>
   <id>https://developers.google.com{{ site.url }}/showcase/</id>
-  <link type="text/html" href="https://developers.google.com{{ site.url }}/showcase/?utm_source%3Dfeed%26utm_medium%3Dfeed%26utm_campaign%3Dshowcase_feed" rel="alternate"/>
+  <link type="text/html" href="https://developers.google.com{{ site.url }}/showcase/?utm_source=feed&utm_medium=feed&utm_campaign=showcase_feed" rel="alternate"/>
 	<subtitle>The best the web has to offer. Learn from proven success on the web.</subtitle>
   <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 {% assign num = 0 %}{% for post in pages %}{% if num < 10 and post.article and post.published != false %}{% if post.collection == "case-study" or post.layout == "spotlight" %}
@@ -12,7 +12,7 @@
 		{% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}	
 		<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
 		{% if post.introduction %}<content type="html">{{ post.introduction | xml_escape }}</content>{% elsif post.description %}<content type="html">{{ post.description | xml_escape }}</content>{% endif %}
-		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source%3Dfeed%26utm_medium%3Dfeed%26utm_campaign%3Dshowcase_feed" />
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source=feed&utm_medium=feed&utm_campaign=showcase_feed" />
 		<id>https://developers.google.com{{ post.url }}</id>
 		{% if post.authors %}<author><name>{% for author in post.authors %}{% assign contributor = site.data["contributors"][author] %}{{contributor.name.given}} {{contributor.name.family}}{% if forloop.last == false %}, {% endif %}{% endfor %}</name></author>{% endif %}	
 	</entry>{% assign num = num | plus: 1 %}{% endif %}{% endif %}{% endfor %}
