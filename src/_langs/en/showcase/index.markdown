@@ -5,7 +5,7 @@ collection: web
 title: "Showcases"
 description: ""
 published: true
-feedName: Google Developers - Web Showcase
+feedName: Web Showcase - Google Developers
 feedPath: showcase/feed.xml
 ---
 {% comment %}
