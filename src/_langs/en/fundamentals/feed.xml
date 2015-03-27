@@ -5,10 +5,11 @@
   <id>https://developers.google.com{{ site.url }}/fundamentals/</id>
   <link type="text/html" href="https://developers.google.com{{ site.url }}/fundamentals/?utm_source%3Dfeed%26utm_medium%3Dfeed%26utm_campaign%3Dfundamentals_feed" rel="alternate"/>
 	<description>Best practices for building great multi-device web experiences.</description>
+  <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 {% assign num = 0 %}{% for post in pages %}{% if num < 25 and post.article and post.published != false %}{% if post.layout == "article" or post.layout == "section" %}
 	<entry>
 		<published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
-		<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>	
+		{% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
 		<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
 		{% if post.introduction %}<content type="html">{{ post.introduction | xml_escape }}</content>{% elsif post.description %}<content type="html">{{ post.description | xml_escape }}</content>{% endif %}
 		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source%3Dfeed%26utm_medium%3Dfeed%26utm_campaign%3Dfundamentals_feed" />
