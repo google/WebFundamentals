@@ -8,8 +8,8 @@ collection: security-with-tls
 authors:
   - mattgaunt
 article:
-  written_on: 2015-02-11
-  updated_on: 2015-02-11
+  written_on: 2015-03-27
+  updated_on: 2015-03-27
   order: 3
 key-takeaways:
   - Use Mozilla's Server Configuration tool to set up your server for HTTPS support.

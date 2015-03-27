@@ -10,8 +10,8 @@ collection: security-with-tls
 authors:
   - mattgaunt
 article:
-  written_on: 2015-02-11
-  updated_on: 2015-02-11
+  written_on: 2015-03-27
+  updated_on: 2015-03-27
   order: 4
 key-takeaways:
   - Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js
