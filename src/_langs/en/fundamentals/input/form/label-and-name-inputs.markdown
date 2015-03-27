@@ -23,8 +23,10 @@ remember:
       they are not a replacement for labels.  They should be used as an aid
       to help guide users on the required format and content.
   recommend-input:
-    - Use either only <code>street-address</code> or both <code>address-line1</code> and <code>address-line2</code>
-    - Auto-complete only works when the form method is post.
+    - Use either only <code>street-address</code> or both <code>address-line1</code>
+      and <code>address-line2</code>
+    - <code>address-level1</code> and <code>address-level2</code> are only 
+      necessary if they're required for your address format.
   use-datalist:
     - The <code>datalist</code> values are provided as suggestions, and users
       are not restricted to the suggestions provided.
