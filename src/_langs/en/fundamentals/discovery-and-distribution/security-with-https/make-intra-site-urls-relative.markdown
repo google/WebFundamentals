@@ -8,6 +8,7 @@ smoothly as possible regardless of protocol."
 id: make-intra-site-urls-relative
 collection: security-with-tls
 authors:
+  - chrispalmer
   - mattgaunt
 article:
   written_on: 2015-03-27

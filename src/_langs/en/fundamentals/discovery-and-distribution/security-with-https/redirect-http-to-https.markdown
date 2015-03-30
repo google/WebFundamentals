@@ -6,6 +6,7 @@ introduction: ""
 id: redirect-http-to-https
 collection: security-with-tls
 authors:
+  - chrispalmer
   - mattgaunt
 article:
   written_on: 2015-03-27

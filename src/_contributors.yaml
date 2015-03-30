@@ -286,6 +286,15 @@ jacquerie:
   email: jacopo.notarstefano@gmail.com
   description: "Jacopo is a Full Stack Developer"
 
+chrispalmer:
+  name:
+    given: Chris
+    family: Palmer
+  country: US
+  role:
+    - contributor
+  description: "Chris is a security engineer on the Chrome Security Team, focusing on secure usability."
+
 jasonpark:
   name:
     given: Jason
