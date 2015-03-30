@@ -5,7 +5,7 @@ description: "Choose the appropriate easing for your project, whether that's eas
 introduction: "Having discussed the various options available for easing in animations, what kind should you use in your projects, and what kind of durations should your animations have?"
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-10-21
   order: 5
 id: choosing-the-right-easing
 collection: animations

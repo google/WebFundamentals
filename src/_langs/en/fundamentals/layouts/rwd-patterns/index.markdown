@@ -11,7 +11,7 @@ authors:
   - petelepage
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-10-21
   order: 2
 id: rwd-patterns
 priority: 1
