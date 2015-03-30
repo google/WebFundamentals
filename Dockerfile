@@ -1,26 +1,22 @@
 FROM node:0.10
 
-RUN apt-get update && apt-get install -y ruby ruby-dev bundler fontforge ttfautohint
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y unzip ruby bundler fontforge ttfautohint
 
-ENV CLOUDSDK_CORE_DISABLE_PROMPTS=1
-ENV CLOUDSDK_PYTHON_SITEPACKAGES=1
+RUN echo $(curl -sS https://appengine.google.com/api/updatecheck) | \
+	sed -E 's/release: \"(.+)\".*/\1/g' > /gae_sdk_version
+RUN curl -sS -o /gae_sdk.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_`cat /gae_sdk_version`.zip
+RUN unzip -q /gae_sdk.zip && rm -rf /google_appengine/lib/django-*
 
-ADD https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz /
-RUN tar xzf google-cloud-sdk.tar.gz
-
-RUN /google-cloud-sdk/install.sh
-RUN /google-cloud-sdk/bin/gcloud config set component_manager/fixed_sdk_version 0.9.48
-RUN /google-cloud-sdk/bin/gcloud components update app -q
+ENV PATH=/google_appengine:$PATH
+ENV DOCKER=1
 
 ADD . /wf/
 WORKDIR /wf
 
-RUN bundle install
-RUN npm install || ( cat /wf/npm-debug.log && exit 1 )
-RUN npm install -g grunt-cli
-
-ENV PATH=/google-cloud-sdk/platform/google_appengine:$PATH
-ENV DOCKER=1
+RUN bundle install --quiet
+RUN npm install --loglevel error || ( cat /wf/npm-debug.log && exit 1 )
+RUN npm install --loglevel error -g grunt-cli
 
 VOLUME /wf/src
 VOLUME /wf/appengine/build

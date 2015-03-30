@@ -2,12 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 
 	<title>{{include.title}}</title>
-	<description>{{include.description}}</description>
-
-	<link type="text/html" href="{{ include.link }}" rel="alternate"/>
+	<subtitle>{{include.description}}</subtitle>
+	<link type="text/html" href="{{ include.link }}{{ include.utm }}" rel="alternate"/>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
 	<id>{{include.id}}</id>
-
+  <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 	{% assign num = 0 %}
 	{% for video in include.videos %}
 		{% if num > MAX_NUM_OF_VIDEOS %}
@@ -29,7 +28,7 @@
 
 		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
 		<title>{{title | xml_escape}}</title>
-		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}" />
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}{{ include.utm }}" />
 
 		{% if video.authors %}
 		<author>
