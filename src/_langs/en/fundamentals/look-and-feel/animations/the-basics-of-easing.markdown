@@ -5,7 +5,7 @@ description: "Learn how to soften and give weighting to your animations."
 introduction: "Nothing in nature moves linearly from one point to another. In reality things tend to accelerate or decelerate as they move. Our brains are wired to expect this kind of motion, so when animating you should use this to your advantage. Natural motion will make your users feel more comfortable with your apps, which in turn leads to a better overall experience."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-09-19
+  updated_on: 2014-10-21
   order: 3
 id: the-basics-of-easing
 collection: animations

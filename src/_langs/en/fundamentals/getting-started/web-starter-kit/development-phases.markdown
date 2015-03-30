@@ -10,7 +10,7 @@ introduction: "During development, there are 3 particular commands that
 notes:
 article:
   written_on: 2014-04-17
-  updated_on: 2014-10-02
+  updated_on: 2014-10-21
   order: 2
 id: development-phases
 priority: 1
