@@ -12,6 +12,7 @@ article:
   written_on: 2015-03-27
   updated_on: 2015-03-27
   order: 7
+priority: 0
 key-takeaways:
   -
 ---

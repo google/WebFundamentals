@@ -13,6 +13,7 @@ article:
   written_on: 2014-06-17
   updated_on: 2014-09-18
   order: 1
+priority: 1
 id: device-orientation
 authors:
   - petelepage

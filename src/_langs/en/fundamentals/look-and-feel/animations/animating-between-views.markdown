@@ -9,6 +9,7 @@ article:
   order: 5
 collection: animations
 id: animating-between-views
+priority: 0
 key-takeaways:
   code:
     - Use transitions to move between views; avoid using `left`, `top` or any other property that triggers layout.

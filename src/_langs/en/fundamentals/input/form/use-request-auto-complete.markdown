@@ -9,6 +9,7 @@ article:
   order: 5
 authors:
   - petelepage
+priority: 0
 collection: form-input
 key-takeaways:
   use-request-auto-complete:

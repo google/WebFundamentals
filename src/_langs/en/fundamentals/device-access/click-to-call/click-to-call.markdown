@@ -15,6 +15,7 @@ id: click-to-call
 authors:
   - petelepage
 collection: click-to-call
+priority: 1
 key-takeaways:
   c2c: 
     -  Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.

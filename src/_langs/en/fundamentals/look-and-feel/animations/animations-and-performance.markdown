@@ -9,6 +9,7 @@ article:
   order: 9
 id: animations-and-performance
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Take care that your animations don’t cause performance issues; ensure you know the impact of animating a given CSS property.

@@ -13,6 +13,7 @@ id: device-orientation
 collection: device-access
 authors:
   - petelepage
+priority: 1
 remember:
   not-stable:
     - Use <b>extreme</b> caution when deciding to use device motion or

@@ -13,6 +13,7 @@ article:
   updated_on: 2014-10-02
   order: 2
 id: development-phases
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt

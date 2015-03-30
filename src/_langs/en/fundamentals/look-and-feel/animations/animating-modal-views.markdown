@@ -9,6 +9,7 @@ article:
   order: 6
 collection: animations
 id: animating-modal-views
+priority: 0
 key-takeaways:
   code:
     - Modal views should be used sparingly; users will get frustrated if you interrupt their experience unnecessarily.

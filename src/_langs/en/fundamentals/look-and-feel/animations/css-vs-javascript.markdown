@@ -9,6 +9,7 @@ article:
   order: 2
 id: css-vs-javascript-animations
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Use CSS animations for simpler “one-shot” transitions, like toggling UI element states.
