@@ -3,7 +3,7 @@
 	<title>Web - Google Developers</title>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
 	<id>https://developers.google.com{{ site.url }}/</id>
-	<link type="text/html" href="https://developers.google.com{{ site.url }}/?utm_source=feed&utm_medium=feed&utm_campaign=web_feed" rel="alternate"/>
+	<link type="text/html" href="https://developers.google.com{{ site.url }}/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=web_feed" rel="alternate"/>
 	<subtitle>All articles, tutorials, shows and case studies. Best practices for modern web development.</subtitle>
   <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 {% assign num = 0 %}{% for post in pages %}{% if num < 100 and post.article and post.published != false %}
@@ -12,7 +12,7 @@
 		{% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
 		<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
 		{% if post.introduction %}<content type="html">{{ post.introduction | xml_escape }}</content>{% elsif post.description %}<content type="html">{{ post.description | xml_escape }}</content>{% endif %}
-		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source=feed&utm_medium=feed&utm_campaign=web_feed" />
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.url }}{{ post.url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=web_feed" />
 		<id>https://developers.google.com{{ site.url }}{{ post.url }}</id>
 		{% if post.authors %}<author><name>{% for author in post.authors %}{% assign contributor = site.data["contributors"][author] %}{{contributor.name.given}} {{contributor.name.family}}{% if forloop.last == false %}, {% endif %}{% endfor %}</name></author>{% endif %}	
 	</entry>{% assign num = num | plus: 1 %}{% endif %}{% endfor %}
