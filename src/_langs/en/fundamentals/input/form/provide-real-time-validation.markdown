@@ -9,6 +9,7 @@ article:
   order: 4
 authors:
   - petelepage
+priority: 0
 collection: form-input
 key-takeaways:
   provide-real-time-validation:

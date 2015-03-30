@@ -12,6 +12,7 @@ article:
 id: device-orientation
 authors:
   - petelepage
+priority: 1
 collection: device-orientation
 key-takeaways:
   devmotion: 

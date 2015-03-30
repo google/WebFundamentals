@@ -11,6 +11,7 @@ article:
   updated_on: 2014-07-17
   order: 3
 id: web-starter-kit
+priority: 1
 collection: getting-started
 ---
 

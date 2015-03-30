@@ -9,6 +9,7 @@ article:
   order: 1
 id: animations
 collection: look-and-feel
+priority: 0
 key-takeaways:
   code:
     - Use animations as a way to add life to your projects.

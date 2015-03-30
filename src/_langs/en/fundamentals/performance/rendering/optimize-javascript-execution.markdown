@@ -8,7 +8,7 @@ article:
   updated_on: 2015-03-20
   order: 1
 collection: rendering-performance
-priority: 7
+priority: 0
 authors:
   - paullewis
 notes:

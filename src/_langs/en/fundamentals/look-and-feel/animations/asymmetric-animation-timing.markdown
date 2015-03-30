@@ -9,6 +9,7 @@ article:
   order: 8
 id: asymmetric-animation-timing
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Use asymmetric animation timing to add personality and contrast to your work.

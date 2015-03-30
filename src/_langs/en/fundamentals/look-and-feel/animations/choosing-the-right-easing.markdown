@@ -9,6 +9,7 @@ article:
   order: 5
 id: choosing-the-right-easing
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Use ease-out animations for UI elements; a Quintic ease-out is a very nice, albeit snappy, ease.

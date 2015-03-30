@@ -12,6 +12,7 @@ article:
   written_on: 2015-03-27
   updated_on: 2015-03-27
   order: 6
+priority: 0
 key-takeaways:
   - You need to use HTTP Strict Transport Security (HSTS) to avoid the cost of the 301 redirect.
   - Ensure you always set the Secure flag on cookies.

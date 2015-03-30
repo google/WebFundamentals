@@ -14,6 +14,7 @@ article:
   updated_on: 2014-04-30
   order: 2
 id: rwd-patterns
+priority: 1
 collection: multi-device-layouts
 ---
 

@@ -9,6 +9,7 @@ article:
   order: 4
 id: custom-easing
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Custom easing will allow you to give more personality to your projects.

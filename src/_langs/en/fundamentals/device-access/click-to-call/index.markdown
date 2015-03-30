@@ -12,6 +12,7 @@ article:
   updated_on: 2014-06-17
   order: 3
 id: click-to-call
+priority: 1
 collection: device-access
 ---
 

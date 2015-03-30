@@ -9,6 +9,7 @@ article:
   order: 3
 id: the-basics-of-easing
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Easing makes your animations feel more natural.

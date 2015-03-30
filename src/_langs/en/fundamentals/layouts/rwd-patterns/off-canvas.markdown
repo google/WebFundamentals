@@ -14,6 +14,7 @@ article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
   order: 5
+priority: 1
 collection: rwd-patterns
 ---
 

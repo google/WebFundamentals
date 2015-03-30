@@ -9,6 +9,7 @@ article:
   order: 2
 authors:
   - petelepage
+priority: 0
 collection: form-input
 key-takeaways:
   choose-best-input-type:

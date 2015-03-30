@@ -9,6 +9,7 @@ article:
   order: 1
 authors:
   - petelepage
+priority: 0
 collection: user-input
 id: form-input
 ---
