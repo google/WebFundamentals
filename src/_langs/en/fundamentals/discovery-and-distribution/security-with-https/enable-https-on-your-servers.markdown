@@ -6,6 +6,7 @@ introduction: "You are ready for the all important step of enabling HTTPS on you
 id: generating-keys-and-csr
 collection: security-with-tls
 authors:
+  - chrispalmer
   - mattgaunt
 article:
   written_on: 2015-03-27
