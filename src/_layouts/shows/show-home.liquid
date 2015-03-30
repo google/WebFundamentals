@@ -1,25 +1,11 @@
 <!-- Lets plan out the order of videos -->
 {% if page.articles[page.id] %}
   {% assign series = page.articles[page.id] | sort: 'date' | reverse %}
-  {% assign latestSeries = series | last %}
+  {% assign latestSeries = series | first %}
   {% if page.articles[latestSeries.id] %}
     {% assign latestShows = page.articles[latestSeries.id] | sort: 'date' | reverse %}
     {% assign latestShow = latestShows | first %}
   {% endif %}
-
-  {% assign totalPreviousShows = 0 %}
-  {% for singleSeries in series %}
-    {% if page.articles[singleSeries.id] %}
-      {% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' | reverse %}
-      {%if seriesShows.size > 0 %}
-        {% for show in seriesShows %}
-          {% if show != latestShow %}
-              {% assign totalPreviousShows = totalPreviousShows | plus: 1 %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
 {% endif %}
 
 
