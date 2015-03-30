@@ -1,6 +1,6 @@
 ---
 layout: showcase
-title: "All spotlights"
+title: "Spotlights"
 description: "Listing of all spotlights."
 id: spotlight
 collection: showcase

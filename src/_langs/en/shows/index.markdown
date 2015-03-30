@@ -5,6 +5,8 @@ title: "Shows"
 description: ""
 collection: web
 published: true
+feedName: Web Shows - Google Developers
+feedPath: shows/feed.xml
 ---
 {% comment %}
 NOTE: Testing: collection: home
