@@ -1,47 +1,7 @@
-
-
-
-/****************************************************
- *
- *
- * Everything below is temporary for placeholder page
- *
- *
- ***************************************************/
-
-
-/** Custom Fonts **/
-@font-face {
-  font-family: 'CMOD Subotron';
-  font-style: normal;
-  src: local('CMOD Subotron'), url(/fonts/ttt/CMODSubotron.otf) format('opentype')
-}
-
-@font-face {
-  font-family: 'M38';
-  src: url('/fonts/ttt/m38-webfont.eot');
-  src: url('/fonts/ttt/m38-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ttt/m38-webfont.woff2') format('woff2'),
-  url('/fonts/ttt/m38-webfont.woff') format('woff'),
-  url('/fonts/ttt/m38-webfont.ttf') format('truetype'),
-  url('/fonts/ttt/m38-webfont.svg#m38_gorillaregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'M30';
-  src: url('/fonts/ttt/m30-webfont.eot');
-  src: local('M30_SHOPLIFTER'), url('/fonts/ttt/m30-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ttt/m30-webfont.woff2') format('woff2'),
-  url('/fonts/ttt/m30-webfont.woff') format('woff'),
-  url('/fonts/ttt/m30-webfont.ttf') format('truetype'),
-  url('/fonts/ttt/m30-webfont.svg#m30_shoplifterregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
 
 $font-color: #ffffff;
 $background-color: #000000;
@@ -90,21 +50,21 @@ body {
   overflow: auto;
 }
 
-.tempintro {
+.page--ttt {
   position: relative;
 
   width: 100%;
   height: 100%;
 
   background-color: $background-color;
-  background-image: url('../images/stars.png'),
+  background-image: url('../imgs/shows/ttt/stars.png'),
     linear-gradient(45deg, $bottom-left-gradient-color 0%,rgba(0,0,0,0) 60%),
     linear-gradient(135deg, rgba(0,0,0,0) 40%, $bottom-right-gradient-color 100%);
 
   overflow: hidden;
 }
 
-.title {
+.ttt-title {
   position: absolute;
 
   top: 50%;
@@ -121,8 +81,10 @@ body {
   text-align: center;
 }
 
-.header--main {
+.ttt-header--main {
   position: relative;
+
+  width: 80%;
 
   display:inline-block;
   box-sizing: border-box;
@@ -135,9 +97,16 @@ body {
   border-width: $header-border-width;
   border-style: solid;
   border-color: $header-border-color;
+
+  background-image: url('../imgs/shows/ttt/ttt-logo.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  text-indent: -99999999px;
 }
 
-.header--main:before {
+.ttt-header--main:before {
   content: " ";
   position: absolute;
   z-index: 0;
@@ -150,47 +119,44 @@ body {
   border-color: $header-border-color;
 }
 
-.header__title--main {
+.ttt-header__title--main {
   margin: 0;
-
-  line-height: 1.2em;
-
-  font-family: 'M30';
-  font-weight: normal;
-  font-size: 3.4em;
-  color: $font-color;
-  text-align: center;
 }
 
-@media screen and (min-width: 600px) {
-  .header__title--main {
-    font-size: 4.4em;
+@media screen and (min-width: 500px) {
+  .ttt-header--main {
+    width: auto;
+  }
+
+  .ttt-header__title--main {
+    min-width: 320px;
+    min-height: 130px;
   }
 }
 
-@media screen and (min-width: 800px) {
-  .header__title--main {
-    font-size: 5.4em;
+@media screen and (min-width: 700px) {
+  .ttt-header--main {
+    min-width: 500px;
+    min-height: 160px;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .header__title--main {
-    font-size: 6.4em;
+  .ttt-header__title--main {
+    min-height: 200px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header__title--main {
-    font-size: 7.4em;
+  .ttt-header__title--main {
+    min-width: 600px;
   }
 }
 
-.hosts {
+.ttt-hosts {
   display:block;
   width:100%;
 
-  font-family: 'M38';
   font-weight: normal;
   font-size: 0.8em;
   color: $font-color;
@@ -198,31 +164,31 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  .hosts {
+  .ttt-hosts {
     font-size: 0.9em;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .hosts {
+  .ttt-hosts {
     font-size: 1.0em;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .hosts {
+  .ttt-hosts {
     font-size: 1.1em;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .hosts {
+  .ttt-hosts {
     font-size: 1.2em;
   }
 }
 
 // Original Image from: https://flic.kr/p/aXHTdn
-.galaxy--blue {
+.ttt-galaxy--blue {
   position:absolute;
   bottom: 0px;
   right: 0px;
@@ -231,14 +197,14 @@ body {
   width: (404px * 0.6);
   height: (414px * 0.6);
 
-  background-image: url('../images/galaxy-blue.png');
+  background-image: url('../imgs/shows/ttt/galaxy-blue.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50px 30px;
 }
 
 // Original Image from: https://flic.kr/p/aXHTdn
-.planet--orange {
+.ttt-planet--orange {
   position:absolute;
   top: -40px;
   left: -(80px);
@@ -247,13 +213,12 @@ body {
   width: (431px * 0.45);
   height: (430px * 0.45);
 
-  background-image: url('../images/planet-orange.png');
+  background-image: url('../imgs/shows/ttt/planet-orange.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-// Original Image from: https://flic.kr/p/n97BaM
-.planet--purple {
+.ttt-planet--purple {
   position:absolute;
   top: 50%;
   left: 50%;
@@ -265,12 +230,12 @@ body {
   margin-left: -(213px * 0.3) - 100px;
   margin-top: (221px * 0.3);
 
-  background-image: url('../images/planet-purple.png');
+  background-image: url('../imgs/shows/ttt/planet-purple.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.characters {
+.ttt-characters {
   position: relative;
 
   height: $character-size;
@@ -280,7 +245,7 @@ body {
   z-index: 5;
 }
 
-.addy--jumping {
+.ttt-addy--jumping {
   position: absolute;
 
   right: 50%;
@@ -290,11 +255,11 @@ body {
 
   margin-right: -$jumping-character-horizontal-offset;
 
-  background-image: url('../images/addy_1x.svg');
+  background-image: url('../imgs/shows/ttt/addy_1x.svg');
   background-size: contain;
 }
 
-.matt--jumping {
+.ttt-matt--jumping {
   position: absolute;
 
   left: 50%;
@@ -304,17 +269,17 @@ body {
 
   margin-left: -$jumping-character-horizontal-offset;
 
-  background-image: url('../images/matt_1x.svg');
+  background-image: url('../imgs/shows/ttt/matt_1x.svg');
   background-size: contain;
 }
 
 @media screen and (min-width: 600px) {
   $new-character-size: $character-size + 20px;
-  .characters {
+  .ttt-characters {
     height: $new-character-size;
   }
 
-  .addy--jumping, .matt--jumping {
+  .ttt-addy--jumping, .ttt-matt--jumping {
     width: $new-character-size;
     height: $new-character-size;
   }
@@ -322,11 +287,11 @@ body {
 
 @media screen and (min-width: 800px) {
   $new-character-size: $character-size + 30px;
-  .characters {
+  .ttt-characters {
     height: $new-character-size;
   }
 
-  .addy--jumping, .matt--jumping {
+  .ttt-addy--jumping, .ttt-matt--jumping {
     width: $new-character-size;
     height: $new-character-size;
   }
@@ -334,11 +299,11 @@ body {
 
 @media screen and (min-width: 1000px) {
   $new-character-size: $character-size + 40px;
-  .characters {
+  .ttt-characters {
     height: $new-character-size;
   }
 
-  .addy--jumping, .matt--jumping {
+  .ttt-addy--jumping, .ttt-matt--jumping {
     width: $new-character-size;
     height: $new-character-size;
   }
@@ -346,98 +311,12 @@ body {
 
 @media screen and (min-width: 1200px) {
   $new-character-size: $character-size + 50px;
-  .characters {
+  .ttt-characters {
     height: $new-character-size;
   }
 
-  .addy--jumping, .matt--jumping {
+  .ttt-addy--jumping, .ttt-matt--jumping {
     width: $new-character-size;
     height: $new-character-size;
   }
-}
-
-.tempfooter {
-  position: absolute;
-
-  bottom: 0;
-
-  width: 100%;
-  text-align: center;
-  z-index: $z-footer;
-
-  a {
-    color: $footer-font-color;
-    text-decoration: none;
-  }
-
-}
-
-
-$font-color: #000000;
-$header-border-color: $font-color;
-
-/**
-* Dimensions
-*/
-$base-lineheight: 8px;
-
-$header-inner-border-spacing: 4px;
-$header-border-width: 2px;
-$header-vertial-padding: $base-lineheight;
-
-p, ul {
-  max-width: 600px;
-
-  margin: 0 auto;
-}
-
-.header {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
-
-  margin: 0 auto;
-  margin-bottom: $base-lineheight * 2;
-  padding: $header-inner-border-spacing;
-  padding-top: $header-vertial-padding + $header-inner-border-spacing;
-  padding-bottom: $header-vertial-padding + $header-inner-border-spacing;
-
-  border-width: $header-border-width;
-  border-style: solid;
-  border-color: $header-border-color;
-}
-
-.header:before {
-  content: " ";
-  position: absolute;
-  top: $header-inner-border-spacing;
-  left: $header-inner-border-spacing;
-  right: $header-inner-border-spacing;
-  bottom: $header-inner-border-spacing;
-  border-width: $header-border-width;
-  border-style: solid;
-  border-color: $header-border-color;
-}
-
-.header__title {
-  margin: 0;
-
-  line-height: 1.2em;
-
-  font-family: 'M30';
-  font-weight: normal;
-  font-size: 3.4em;
-  color: $font-color;
-  text-align: center;
-}
-
-.list--blank {
-
-}
-
-a {
-  color: $font-color;
-  text-decoration: none;
-  font-weight: bold;
 }
