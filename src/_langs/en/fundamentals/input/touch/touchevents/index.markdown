@@ -162,7 +162,7 @@ remove the mouse event listeners to the document.
 
 {% include_code ../_code/touch-demo-2.html handle-gestures javascript %}
 
-## 60fps while Using Touch
+## Responding to Touch Efficiently
 
 Now that we have the start and end events taken care of we can actually respond to the touch events.
 
