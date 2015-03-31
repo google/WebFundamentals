@@ -1,11 +1,16 @@
 {% assign MAX_NUM_OF_VIDEOS = 50 %}
+
+{% capture utm %}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=shows_{% if include.seriesId %}{{ include.seriesId }}_{% endif %}feed{% endcapture %}
+
+{% capture link %}https://developers.google.com{{ site.baseurl }}/shows/{% if include.seriesId %}{{ include.seriesId }}/{% endif %}{% endcapture %}
+
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 
 	<title>{{include.title}}</title>
 	<subtitle>{{include.description}}</subtitle>
-	<link type="text/html" href="{{ include.link }}{{ include.utm }}" rel="alternate"/>
+	<link type="text/html" href="{{ link }}{{ utm }}" rel="alternate"/>
 	<icon>https://developers.google.com/web/favicon.ico</icon>
-	<id>{{include.id}}</id>
+	<id>{{ link }}</id>
   <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 	{% assign num = 0 %}
 	{% for video in include.videos %}
@@ -28,7 +33,8 @@
 
 		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
 		<title>{{title | xml_escape}}</title>
-		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}{{ include.utm }}" />
+
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}{{ utm }}" />
 
 		{% if video.authors %}
 		<author>

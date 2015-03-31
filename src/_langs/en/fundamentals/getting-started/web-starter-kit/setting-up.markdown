@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Set Up Web Starter Kit"
-description: "If you are new to Web Starter Kit, then this guide is for you. 
-  It steps through how to get up and running with Web Starter Kit as quickly 
+description: "If you are new to Web Starter Kit, then this guide is for you.
+  It steps through how to get up and running with Web Starter Kit as quickly
   as possible."
 introduction: "Web Starter Kit relies on NodeJS, NPM, & Sass to work, once
   you've got these on your machine, you'll have everything you need to start
@@ -48,10 +48,10 @@ automatically.
 
 ### Sass
 
-Web Starter Kit uses Sass to make our style guide nice and modular. For those 
-new to Sass, the project describes itself as a “CSS extension language”. 
-Essentially it’s CSS with some extra features. For example, it adds support for 
-variables and functions, which help you structure your CSS in a modular and 
+Web Starter Kit uses Sass to make our style guide nice and modular. For those
+new to Sass, the project describes itself as a “CSS extension language”.
+Essentially it’s CSS with some extra features. For example, it adds support for
+variables and functions, which help you structure your CSS in a modular and
 reusable fashion.
 
 Once you have installed the NPM packages, along with Gulp (globally), install Sass
@@ -60,13 +60,13 @@ by running the following Ruby command to make Sass available to you: `gem instal
 ## Set Up Your Web Starter Kit Project
 
 The first step is to go to [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
-and download and extract the zip.
+and download and extract the zip. This will be the basis for your project so rename the folder and put it somewhere relevant on your machine. For the rest of this guide we'll call the folder `my-project.`
 
 Next, you need to install the local dependencies for Web Starter Kit. Open a
 command prompt, change directory into your project folder and run the following npm
 install scripts.
 
-    $ cd web-starter-kit
+    $ cd my-project
     $ npm install
     $ npm install gulp -g
 

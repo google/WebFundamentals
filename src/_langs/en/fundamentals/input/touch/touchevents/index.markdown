@@ -73,7 +73,7 @@ interaction as well; which you can do with the mouse events:
 For Windows Touch devices, you need to support Pointer Events which are a
 new set of events. Pointer Events merge mouse and touch events into one set of
 callbacks. This is currently only supported in Internet Explorer 10+ with
-the prefixed events `MSPointerDown`, `MSPointerMove`, and `MSPointerUp` and 
+the prefixed events `MSPointerDown`, `MSPointerMove`, and `MSPointerUp` and
 in IE 11+ the unprefixed events `pointerdown`, `pointermove`, and `pointerup`.
 
 Touch, mouse and Pointer Events are the building blocks for adding new
@@ -89,13 +89,13 @@ before other elements).
 
 This code first checks to see if Pointer Events are supported by testing for
 `window.PointerEventsSupport`, if Pointer Events aren’t supported, we add listeners for
-touch and mouse events instead. 
+touch and mouse events instead.
 
-The value `window.PointerEventSupport` is determined by looking for the 
-existence of `window.PointerEvent` or the now deprecated 
-`window.navigator.msPointerEnabled` objects. If they are supported we use 
-varibles for event names, which use the prefixed or unprefixed versions depending 
-on the existence of `window.PointerEvent`. 
+The value `window.PointerEventSupport` is determined by looking for the
+existence of `window.PointerEvent` or the now deprecated
+`window.navigator.msPointerEnabled` objects. If they are supported we use
+varibles for event names, which use the prefixed or unprefixed versions depending
+on the existence of `window.PointerEvent`.
 
 {% include_code ../_code/touch-demo-1.html pointereventsupport javascript %}
 
@@ -162,7 +162,7 @@ remove the mouse event listeners to the document.
 
 {% include_code ../_code/touch-demo-2.html handle-gestures javascript %}
 
-## 60fps while Using Touch
+## Responding to Touch Efficiently
 
 Now that we have the start and end events taken care of we can actually respond to the touch events.
 
@@ -193,6 +193,8 @@ preventing jank.
 Use `requestAnimationFrame` to change the UI in response to
 an event. This gives you an opportunity to update the UI when the browser is intending to draw a frame and will help you move some work out of your callback.
 
+If you are unfamiliar with request animation frames, you can [learn more here]({{ site.baseurl }}/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes).
+
 A typical implementation is to save the `x` and `y` coordinates from the
 start and move events and request an animation frame in the move event
 callback.
@@ -221,15 +223,15 @@ the next touch event will request a new animation frame.
 ## Control Gestures using Touch Actions
 
 The CSS property `touch-action` allows you to control the default touch
-behavior of an element. In our examples, we use `touch-action: none` to 
-prevent the browser from doing anything with a users' touch, allowing us 
+behavior of an element. In our examples, we use `touch-action: none` to
+prevent the browser from doing anything with a users' touch, allowing us
 to intercept all of the touch events.
 
 {%include_code ../_code/touch-demo-1.html touch-action-example css %}
 
-`touch-action` allows you to disable gestures implemented by a browser. 
-For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action 
-of `pan-x | pan-y | manipulation` you prevent the default double-tap 
+`touch-action` allows you to disable gestures implemented by a browser.
+For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action
+of `pan-x | pan-y | manipulation` you prevent the default double-tap
 behavior.
 
 This allows you to implement a double-tap gesture yourself.
