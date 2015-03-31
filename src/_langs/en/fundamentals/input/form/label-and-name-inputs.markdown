@@ -9,6 +9,7 @@ article:
   order: 3
 authors:
   - petelepage
+priority: 0
 collection: form-input
 key-takeaways:
   label-and-name:

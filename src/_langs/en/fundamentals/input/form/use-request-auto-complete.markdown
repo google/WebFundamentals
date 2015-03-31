@@ -5,10 +5,11 @@ description: "While <code>requestAutocomplete</code> was designed to help users 
 introduction: "While <code>requestAutocomplete</code> was designed to help users fill out any form, today its most common use is in eCommerce where shopping cart abandonment on the mobile web <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>. Imagine 97% of people in a supermarket, with a cart brimming full of things that they want, flipping their cart over and walking out."
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-10-21
   order: 5
 authors:
   - petelepage
+priority: 0
 collection: form-input
 key-takeaways:
   use-request-auto-complete:

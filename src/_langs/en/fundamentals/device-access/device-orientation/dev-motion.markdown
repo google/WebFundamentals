@@ -7,11 +7,12 @@ introduction: "Device motion provides information about force of acceleration
   being applied to the device at a given moment, and the rate of rotation."
 article:
   written_on: 2014-06-17
-  updated_on: 2014-06-17
+  updated_on: 2014-10-21
   order: 1
 id: device-orientation
 authors:
   - petelepage
+priority: 1
 collection: device-orientation
 key-takeaways:
   devmotion: 

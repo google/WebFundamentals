@@ -6,11 +6,13 @@ introduction: "When migrating to HTTPS, one of the hurdles site operators face i
 id: intro-to-security-terminology
 collection: security-with-tls
 authors:
+  - chrispalmer
   - mattgaunt
 article:
   written_on: 2015-03-27
   updated_on: 2015-03-27
   order: 1
+priority: 0
 key-takeaways:
   - Public / Private keys are used to sign and decrypt messages between the browser and the server
   - A certificate authority (CA) is an organization that vouches for the mapping between the public keys and public DNS names (such as "www.foobar.com")

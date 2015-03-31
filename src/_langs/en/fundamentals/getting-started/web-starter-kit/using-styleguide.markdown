@@ -16,6 +16,7 @@ article:
   updated_on: 2014-11-23
   order: 3
 id: using-wsk-styleguide
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt

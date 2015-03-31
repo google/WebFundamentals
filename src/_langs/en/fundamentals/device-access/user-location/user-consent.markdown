@@ -4,8 +4,9 @@ title: "Getting the user to consent to location sharing"
 description: ""
 article:
   written_on: 2014-01-01
-  updated_on: 2014-09-18
+  updated_on: 2014-10-21
   order: 2
+priority: 1
 authors:
   - paulkinlan
 collection: user-location

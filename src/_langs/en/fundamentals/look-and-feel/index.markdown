@@ -6,7 +6,7 @@ introduction: "How your project looks and feels matters to your users. Learn how
 snippet: "Make your projects look great and interact beautifully."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-09-19
+  updated_on: 2014-10-21
   order: 0
 id: look-and-feel
 collection: fundamentals
