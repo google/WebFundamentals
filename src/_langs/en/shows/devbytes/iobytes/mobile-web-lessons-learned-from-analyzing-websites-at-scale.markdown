@@ -4,7 +4,7 @@ showid: devbytes
 layout: shows/single-video
 collection: iobytes
 title: "Mobile web lessons learned from analyzing websites at scale"
-description: "We've analyzed tens of thousands of mobile websites to figure out what works and what doesn't when it comes to performance and user experience on mobile devices. Here's our list of best practices and dos and don'ts, with insight from engineers into the algorithms we use to determine what is a \"good\" mobile website."
+description: "We've analyzed tens of thousands of mobile websites to figure out what works and what doesn't when it comes to performance and user experience on mobile devices. Here's our list of best practices and dos and don'ts, with insight from engineers into the algorithms we use to determine what is a 'good' mobile website."
 published: true
 showYoutubeID: UEfZ3aeCjoY
 
@@ -14,4 +14,8 @@ article:
   updated_on: 2015-03-30
 ---
 
-We've analyzed tens of thousands of mobile websites to figure out what works and what doesn't when it comes to performance and user experience on mobile devices. Here's our list of best practices and dos and don'ts, with insight from engineers into the algorithms we use to determine what is a "good" mobile website.
+We've analyzed tens of thousands of mobile websites to figure out what works
+and what doesn't when it comes to performance and user experience on mobile
+devices. Here's our list of best practices and dos and don'ts, with insight
+from engineers into the algorithms we use to determine what is a "good"
+mobile website.
