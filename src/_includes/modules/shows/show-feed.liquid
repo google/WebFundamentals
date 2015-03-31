@@ -50,7 +50,11 @@
 		</image>
     {% endif %}
 
-		<content type="html">{{ videocontent | xml_escape }}</content>
+		<content type="html">
+			<![CDATA[
+			{{ videocontent }}
+			]]>
+		</content>
 	</entry>
 	{% assign num = num | plus: 1 %}
 	{% endfor %}

@@ -20,6 +20,6 @@ Last week you learned how to use a router in your Polymer app. This week we're d
 ## Read More
 
 - [more-routing element](https://github.com/polymore/more-routing)
-- [Routing 101]({{site.baseurl}}/shows/polycasts/season-2/routing-101)
-- [Content Switcheroo with Core-Pages]({{site.baseurl}}/shows/polycasts/season-2/content-switcheroo)
-- [The Awesome Power of Auto-Binding Templates]({{site.baseurl}}/shows/polycasts/season-2/awesome-power-of-auto-binding)
+- [Routing 101](https://developers.google.com/web/shows/polycasts/season-2/routing-101)
+- [Content Switcheroo with Core-Pages](https://developers.google.com/web/shows/polycasts/season-2/content-switcheroo)
+- [The Awesome Power of Auto-Binding Templates](https://developers.google.com/web/shows/polycasts/season-2/awesome-power-of-auto-binding)
