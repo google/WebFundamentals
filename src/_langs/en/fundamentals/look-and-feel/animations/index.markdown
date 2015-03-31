@@ -5,10 +5,11 @@ description: "Get a better understanding of animations and their use in modern a
 introduction: "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?"
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-10-21
   order: 1
 id: animations
 collection: look-and-feel
+priority: 0
 key-takeaways:
   code:
     - Use animations as a way to add life to your projects.

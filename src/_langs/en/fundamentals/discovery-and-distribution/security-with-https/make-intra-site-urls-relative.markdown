@@ -1,18 +1,18 @@
 ---
 layout: article
 title: "Make Intra-Site URLs Relative"
-description: "Now that you are serving your site on both HTTP and HTTPS, it should work as
-smoothly as possible regardless of protocol."
-introduction: "Now that you are serving your site on both HTTP and HTTPS, it needs to work as
-smoothly as possible regardless of protocol."
+description: "Now that you are serving your site on both HTTP and HTTPS, it should work as smoothly as possible regardless of protocol."
+introduction: "Now that you are serving your site on both HTTP and HTTPS, it needs to work as smoothly as possible regardless of protocol."
 id: make-intra-site-urls-relative
 collection: security-with-tls
 authors:
+  - chrispalmer
   - mattgaunt
 article:
   written_on: 2015-03-27
   updated_on: 2015-03-27
   order: 4
+priority: 0
 key-takeaways:
   - Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js
 ---

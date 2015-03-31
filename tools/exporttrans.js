@@ -152,7 +152,7 @@ function main() {
       } else {
         console.log(colors.red('\u2718 %s'), file);
         iFailed++;
-        detailLog += result.file + '\n';
+        detailLog += result.source + '\n';
         detailLog += '  ' + result.message + '\n';
         if (result.ex) {
           detailLog += '  ' + result.ex.message;
@@ -167,19 +167,28 @@ function main() {
   common.writeArbs(arbsFile, _arbs);
 
   // Get the template localization file and add it to the ZIP
-  var stringsFile = '../_data/localized_strings/en.json';
+  var stringsFile = '../../_data/localized_strings/en.json';
   stringsFile = path.join(commander.args[0], stringsFile);
   var templateStringsArb = common.readArbs(stringsFile);
   var templateStringsFileName = path.join(commander.temp, 'templates-strings.arb');
   common.writeArbs(templateStringsFileName, templateStringsArb);
 
 
-  // Get the _betterbook.yaml file, convert it to an ARB file and add it to the ZIP
-  var bbFile = path.join(commander.args[0], '..', '_betterbook.yaml');
-  var bBookYaml = YAML.load(fs.readFileSync(bbFile));
-  var bBookArb = common.extractStringsFromYaml(bBookYaml);
-  var bbArbFile = path.join(commander.temp, 'betterbook.arb');
-  common.writeArbs(bbArbFile, bBookArb);
+  // Get the _betterbook-*.yaml files, convert them to ARB files and add them
+  // to the ZIP
+  var bbYamlFiles = fs.readdirSync(path.join(commander.args[0], '../..'));
+  for (var i = 0; i < bbYamlFiles.length; i++) {
+    var bbFile = bbYamlFiles[i];
+    if ((bbFile.indexOf('_betterbook-') === 0) && (bbFile.endsWith('.yaml'))) {
+      var bbFileWithPath = path.join(commander.args[0], '../..', bbFile);
+      var bBookYaml = YAML.load(fs.readFileSync(bbFileWithPath));
+      var bBookArb = common.extractStringsFromYaml(bBookYaml);
+      var arbFile = bbFile.replace('.yaml', '.arb');
+      var bbArbFile = path.join(commander.temp, arbFile);
+      common.writeArbs(bbArbFile, bBookArb);
+    }
+  }
+
 
   // Create the ZIP file with the necessary files.
   var zip = new AdmZip();

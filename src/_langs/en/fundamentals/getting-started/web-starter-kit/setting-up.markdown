@@ -16,6 +16,7 @@ article:
   updated_on: 2015-03-20
   order: 1
 id: setting-up-wsk
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt

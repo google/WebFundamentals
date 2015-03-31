@@ -5,10 +5,11 @@ description: "Design efficient forms by avoiding repeated actions, asking for on
 introduction: "Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms."
 article:
   written_on: 2014-08-11
-  updated_on: 2014-08-11
+  updated_on: 2014-10-21
   order: 1
 authors:
   - petelepage
+priority: 0
 collection: form-input
 key-takeaways:
   tldr:

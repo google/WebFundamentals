@@ -13,6 +13,7 @@ authors:
   - mattgaunt
   - paulkinlan
 collection: stickyness
+priority: 1
 key-takeaways:
   manifest:
     - Define a range of icons so that they work across all device form factors
