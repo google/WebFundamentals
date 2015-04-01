@@ -89,16 +89,6 @@ that way your CSS stays lean and you don't need to remember to hit
 
 <img src="imgs/sublime-autoprefixer.gif" alt="Sublime Autoprefixer Plugin Example" />
 
-### Gutter Color
-
-Gutter Color shows you a small color sample next to your CSS.
-
-<img src="imgs/sublime-gutter-color.png" alt="Sublime Gutter Color Screenshot" />
-
-The plugin requires ImageMagick. If you are on Mac OS X, we recommend trying the
-installer from [CactusLabs](http://cactuslab.com/imagemagick/) (you may need to
-restart your machine to get it working).
-
 #### ColorPicker
 
 Pick any color from the palette and add it to your CSS with `ctrl+shift+c`.
@@ -122,11 +112,21 @@ prettify your files whenever your save a file.
 
 #### Git Gutter
 
-**Note:** This is only available in Sublime Text 3
-
 Add a marker in the gutter wherever there is a change made to a file.
 
 <img src="imgs/sublime-git-gutter.png" alt="Screenshot of the Sublime Git Gutter Plugin" />
+
+### Gutter Color
+
+**Note:** This is only available in Sublime Text 3
+
+Gutter Color shows you a small color sample next to your CSS.
+
+<img src="imgs/sublime-gutter-color.png" alt="Sublime Gutter Color Screenshot" />
+
+The plugin requires ImageMagick. If you are on Mac OS X, we recommend trying the
+installer from [CactusLabs](http://cactuslab.com/imagemagick/) (you may need to
+restart your machine to get it working).
 
 {% include modules/nextarticle.liquid %}
 
