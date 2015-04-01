@@ -50,6 +50,14 @@ If you don't complete these steps, we won't be able to accept your pull request,
 Installing Dependencies
 =======================
 
+Docker (recommended)
+--------------------
+1. Download and install [Docker](https://docs.docker.com/installation/) for your platform.
+1. That's it! The Docker container has all of the dependencies and already installed so that you don't need to do anything!
+
+**Note:** Googlers - You may need to complete a [few extra steps](http://goo.gl/eXYTSi). 
+
+
 Mac
 ---
 
@@ -82,11 +90,41 @@ the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc`
 or `.zshrc`. See [https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files](https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files)
 for further details.
 
-**Note:** On OSX, you may also see an error about *Allow dev_appserver to check for updates on startup? (Y/n)* and, many lines below it, *EOFError: EOF when reading a line*. If so you need to run dev_appserver once in a GAE project to allow `dev_appserver` to ask you about checking for updates. Choose whichever answer you like; this just clears the prompt for future runs of `dev_appserver` and you should be good to go.
+**Note:** On OSX, you may also see an error about *Allow dev_appserver to check 
+for updates on startup? (Y/n)* and, many lines below it, *EOFError: EOF when 
+reading a line*. If so you need to run dev_appserver once in a GAE project to 
+allow `dev_appserver` to ask you about checking for updates. Choose whichever 
+answer you like; this just clears the prompt for future runs of `dev_appserver`
+and you should be good to go.
 
 
 Running the site
 ================
+
+With Docker (recommended)
+-------------------------
+
+Prefixing a command with `tools/docker.sh` will run it inside the Docker container,
+which includes all the dependencies needed to build the site.
+
+
+Build the project:
+
+```sh
+tools/docker.sh grunt build
+```
+
+Run a local dev server:
+
+```sh
+tools/docker.sh grunt develop
+```
+Then point your browser to http://localhost:8081/web/fundamentals or the
+IP address of your Docker instance
+
+
+Without Docker
+--------------
 
 Once you have all the dependencies installed go to the root of the checked out repo and type:
 
@@ -94,44 +132,14 @@ Once you have all the dependencies installed go to the root of the checked out r
 grunt develop
 ```
 
-This will have Jekyll build the site, run a static server to listen on port 8081 (which you can now reach at [http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)), and watch for changes to site files. Every change will cause Jekyll to rebuild the affected files.
+This will have Jekyll build the site, run a static server to listen on 
+port 8081 (which you can now reach at 
+[http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)), 
+and watch for changes to site files. Every change will cause Jekyll to rebuild 
+the affected files.
 
 If you want to build a single language then run this: `grunt develop --lang=en`.
 
-
-Alternative dev workflow based on Docker
-========================================
-
-In this configuration the only requirement is [Docker](https://docs.docker.com/installation/).
-
-Once you clone this repo, start building the site right away:
-
-```sh
-tools/docker.sh grunt build
-```
-
-or run a local dev server:
-
-```sh
-tools/docker.sh grunt develop
-# then point your browser to http://localhost:8081/web/fundamentals
-```
-
-Essentially, prefix `grunt` command with `tools/docker.sh` and it will run inside a Docker container,
-which includes all the dependencies needed to build the site.
-
-If you want to experiment with your own Docker image instead of using `gcr.io/web-central/wf-dev`,
-modify `Dockerfile` in the root of this repo and build your image:
-
-```sh
-docker build -t myimage .
-```
-
-Once the image is built, use it with `tools/docker.sh`:
-
-```sh
-WF_DOCKER_IMAGE=myimage tools/docker.sh grunt develop
-```
 
 
 Using project-level meta data
