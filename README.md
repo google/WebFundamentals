@@ -55,7 +55,7 @@ Docker (recommended)
 1. Download and install [Docker](https://docs.docker.com/installation/) for your platform.
 1. That's it! The Docker container has all of the dependencies and already installed so that you don't need to do anything!
 
-**Note:** Googlers - You may need to complete a [few extra steps](http://goo.gl/eXYTSi). 
+**Note:** Googlers - You may need to complete a few extra steps, ask for more details. 
 
 
 Mac
