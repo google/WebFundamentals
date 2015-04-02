@@ -90,7 +90,7 @@
 
     {% endwrap %}
 
-    {% include modules/shows/feedlink.liquid feedUrl=feedUrl %}
+    {% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink=showDetails.emailSubscriptionLink %}
 
     {% include cc.liquid %}
     {% include footer.liquid %}

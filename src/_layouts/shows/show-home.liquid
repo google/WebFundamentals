@@ -13,6 +13,7 @@
 
 
   <!-- Template Starts Here -->
+    {% capture feedUrl %}{{site.baseurl}}/shows/{{page.id}}/feed.xml{% endcapture %}
     {% include head.liquid feedUrl=feedUrl feedName=page.title %}
   </head>
 
@@ -106,7 +107,9 @@
 
     {% endwrap %}
 
-    {% include modules/shows/feedlink.liquid feedUrl=feedUrl %}
+    <!-- BEFORE -->
+    {% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink=page.emailSubscriptionLink %}
+    <!-- AFTER -->
 
     {% include cc.liquid %}
     {% include footer.liquid %}

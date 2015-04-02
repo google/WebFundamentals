@@ -104,4 +104,4 @@ Fundmentals index: for guide in page.articles.[page.id]
 </div>
 
 {% capture feedUrl %}{{site.baseurl}}/shows/feed.xml{% endcapture %}
-{% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink="https://feedburner.google.com/fb/a/mailverify?uri=ChromeDevSummit&amp;loc=en_US" %}
+{% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink="https://feedburner.google.com/fb/a/mailverify?uri=GoogleDeveloperWebShows&amp;loc=en_US" %}
