@@ -1,6 +1,6 @@
 #!/bin/sh
 
-image=${WF_DOCKER_IMAGE:-gcr.io/web-central/wf-dev}
+image=${WF_DOCKER_IMAGE:-google/webfundamentals}
 cmd=$1
 action=$2
 if [[ "$cmd" = "grunt" && "$action" = "develop" ]]; then
