@@ -32,7 +32,9 @@ notes:
 of functionality which makes writing code a pleasure. You can install a package
 manager that makes it easy to install plugins and add new functionality.
 
-**Note**  
+There are currently two download options for Sublime Text, either [version 2](http://www.sublimetext.com/2) or [version 3](http://www.sublimetext.com/3). Version 3 is pretty stable and will give you access to packages not available in Sublime Text 2, however you may find version 2 more reliable.
+
+**Note**
 Rob Dodson's [blog
 post](http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/) on
 how to get to know and love Sublime is a great reference for getting the most
@@ -87,16 +89,6 @@ that way your CSS stays lean and you don't need to remember to hit
 
 <img src="imgs/sublime-autoprefixer.gif" alt="Sublime Autoprefixer Plugin Example" />
 
-### Gutter Color
-
-Gutter Color shows you a small color sample next to your CSS.
-
-<img src="imgs/sublime-gutter-color.png" alt="Sublime Gutter Color Screenshot" />
-
-The plugin requires ImageMagick. If you are on Mac OS X, we recommend trying the
-installer from [CactusLabs](http://cactuslab.com/imagemagick/) (you may need to
-restart your machine to get it working).
-
 #### ColorPicker
 
 Pick any color from the palette and add it to your CSS with `ctrl+shift+c`.
@@ -111,18 +103,30 @@ personal favorite is the 'Toggle Comment' command).
 
 <img src="imgs/emmet-io-example.gif" alt="Demo of the Emmet.io Plugin" />
 
-#### Git Gutter
-
-Add a marker in the gutter wherever there is a change made to a file.
-
-<img src="imgs/sublime-git-gutter.png" alt="Screenshot of the Sublime Git Gutter Plugin" />
-
 #### HTML-CSS-JS Prettify
 
 This extension gives you a command to format your HTML, CSS and JS. You can even
 prettify your files whenever your save a file.
 
 <img src="imgs/sublime-prettify.gif" alt="Gif of the Sublime Prettify Plugin" />
+
+#### Git Gutter
+
+Add a marker in the gutter wherever there is a change made to a file.
+
+<img src="imgs/sublime-git-gutter.png" alt="Screenshot of the Sublime Git Gutter Plugin" />
+
+### Gutter Color
+
+**Note:** This is only available in Sublime Text 3
+
+Gutter Color shows you a small color sample next to your CSS.
+
+<img src="imgs/sublime-gutter-color.png" alt="Sublime Gutter Color Screenshot" />
+
+The plugin requires ImageMagick. If you are on Mac OS X, we recommend trying the
+installer from [CactusLabs](http://cactuslab.com/imagemagick/) (you may need to
+restart your machine to get it working).
 
 {% include modules/nextarticle.liquid %}
 

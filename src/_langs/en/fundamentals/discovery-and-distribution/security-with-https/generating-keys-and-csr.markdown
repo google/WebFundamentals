@@ -6,11 +6,12 @@ introduction: "This section uses the openssl command-line program, which comes w
 id: generating-keys-and-csr
 collection: security-with-tls
 authors:
-  - mattgaunt
+  - chrispalmer
 article:
-  written_on: 2015-02-11
-  updated_on: 2015-02-11
+  written_on: 2015-03-27
+  updated_on: 2015-03-27
   order: 2
+priority: 0
 key-takeaways:
   - You need to create a 2048-bit RSA public and private key pair.
   - Generate a certificate signing request (CSR) which embeds your public key.

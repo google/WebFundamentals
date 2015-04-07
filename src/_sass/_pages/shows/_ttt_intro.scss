@@ -1,0 +1,322 @@
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+
+$font-color: #ffffff;
+$background-color: #000000;
+$bottom-left-gradient-color: #0e1a54;
+$bottom-right-gradient-color: #5c0020;
+$header-border-color: $font-color;
+$footer-font-color: #878787;
+
+/**
+ * Dimensions
+ */
+$base-lineheight: 8px;
+
+$header-inner-border-spacing: 4px;
+$header-border-width: 2px;
+$header-horizontal-padding: $base-lineheight * 2;
+$header-vertial-padding: $base-lineheight * 3;
+$character-size: 120px;
+$character-height: 164px;
+$jumping-character-horizontal-offset: 10px;
+$jumping-character-vertical-offset: 15px;
+
+/**
+ * Z-Indexing
+ */
+
+$z-galaxy-blue: 1;
+$z-title: 2;
+$z-hosts: 2;
+$z-footer: 2;
+$z-matt-jumping: 3;
+$z-addy-jumping: 3;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  overflow: auto;
+}
+
+.page--ttt {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $background-color;
+  background-image: url('../imgs/shows/ttt/stars.png'),
+    linear-gradient(45deg, $bottom-left-gradient-color 0%,rgba(0,0,0,0) 60%),
+    linear-gradient(135deg, rgba(0,0,0,0) 40%, $bottom-right-gradient-color 100%);
+
+  overflow: hidden;
+}
+
+.ttt-title {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  box-sizing: border-box;
+
+  padding: $header-horizontal-padding;
+
+  transform: translate(-50%, -50%);
+  z-index: $z-title;
+
+  width: 100%;
+  text-align: center;
+}
+
+.ttt-header--main {
+  position: relative;
+
+  width: 80%;
+
+  display:inline-block;
+  box-sizing: border-box;
+
+  padding: ($header-vertial-padding + $header-inner-border-spacing)
+    ($header-horizontal-padding + $header-inner-border-spacing);
+  padding-top: $header-vertial-padding + $header-inner-border-spacing;
+  padding-bottom: $header-vertial-padding + $header-inner-border-spacing;
+
+  border-width: $header-border-width;
+  border-style: solid;
+  border-color: $header-border-color;
+
+  background-image: url('../imgs/shows/ttt/ttt-logo.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  text-indent: -99999999px;
+}
+
+.ttt-header--main:before {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  top: $header-inner-border-spacing;
+  left: $header-inner-border-spacing;
+  right: $header-inner-border-spacing;
+  bottom: $header-inner-border-spacing;
+  border-width: $header-border-width;
+  border-style: solid;
+  border-color: $header-border-color;
+}
+
+.ttt-header__title--main {
+  margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .ttt-header--main {
+    width: auto;
+  }
+
+  .ttt-header__title--main {
+    min-width: 320px;
+    min-height: 130px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .ttt-header--main {
+    min-width: 500px;
+    min-height: 160px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .ttt-header__title--main {
+    min-height: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ttt-header__title--main {
+    min-width: 600px;
+  }
+}
+
+.ttt-hosts {
+  display:block;
+  width:100%;
+
+  font-weight: normal;
+  font-size: 0.8em;
+  color: $font-color;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .ttt-hosts {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .ttt-hosts {
+    font-size: 1.0em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .ttt-hosts {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ttt-hosts {
+    font-size: 1.2em;
+  }
+}
+
+// Original Image from: https://flic.kr/p/aXHTdn
+.ttt-galaxy--blue {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: $z-galaxy-blue;
+
+  width: (404px * 0.6);
+  height: (414px * 0.6);
+
+  background-image: url('../imgs/shows/ttt/galaxy-blue.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50px 30px;
+}
+
+// Original Image from: https://flic.kr/p/aXHTdn
+.ttt-planet--orange {
+  position:absolute;
+  top: -40px;
+  left: -(80px);
+  z-index: $z-galaxy-blue;
+
+  width: (431px * 0.45);
+  height: (430px * 0.45);
+
+  background-image: url('../imgs/shows/ttt/planet-orange.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ttt-planet--purple {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: $z-galaxy-blue;
+
+  width: (213px * 0.3);
+  height: (221px * 0.3);
+
+  margin-left: -(213px * 0.3) - 100px;
+  margin-top: (221px * 0.3);
+
+  background-image: url('../imgs/shows/ttt/planet-purple.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ttt-characters {
+  position: relative;
+
+  height: $character-size;
+
+  margin-top: -$jumping-character-vertical-offset;
+
+  z-index: 5;
+}
+
+.ttt-addy--jumping {
+  position: absolute;
+
+  right: 50%;
+
+  width: $character-size;
+  height: $character-size;
+
+  margin-right: -$jumping-character-horizontal-offset;
+
+  background-image: url('../imgs/shows/ttt/addy_1x.svg');
+  background-size: contain;
+}
+
+.ttt-matt--jumping {
+  position: absolute;
+
+  left: 50%;
+
+  width: $character-size;
+  height: $character-size;
+
+  margin-left: -$jumping-character-horizontal-offset;
+
+  background-image: url('../imgs/shows/ttt/matt_1x.svg');
+  background-size: contain;
+}
+
+@media screen and (min-width: 600px) {
+  $new-character-size: $character-size + 20px;
+  .ttt-characters {
+    height: $new-character-size;
+  }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: $new-character-size;
+    height: $new-character-size;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  $new-character-size: $character-size + 30px;
+  .ttt-characters {
+    height: $new-character-size;
+  }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: $new-character-size;
+    height: $new-character-size;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  $new-character-size: $character-size + 40px;
+  .ttt-characters {
+    height: $new-character-size;
+  }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: $new-character-size;
+    height: $new-character-size;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  $new-character-size: $character-size + 50px;
+  .ttt-characters {
+    height: $new-character-size;
+  }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: $new-character-size;
+    height: $new-character-size;
+  }
+}

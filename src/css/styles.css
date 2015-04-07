@@ -3759,6 +3759,9 @@ div.related-items-on-spotlight {
   padding-top: 16px;
   padding-bottom: 16px; }
 
+.showhome--subheading-description {
+  margin: 0; }
+
 @media only screen and (min-width: 800px) {
   .showtitle--title-container {
     padding-top: 36px;
@@ -3774,6 +3777,9 @@ div.related-items-on-spotlight {
   width: 24px;
   height: 24px;
   margin: 0; }
+
+.feedlink-emailsubcribe {
+  margin-left: 16px; }
 
 .showhome--subheading {
   padding-top: 32px; }
@@ -4009,6 +4015,227 @@ div.related-items-on-spotlight {
 
 .show-udacity a.cta--primary:hover {
   color: white; }
+
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+/**
+ * Dimensions
+ */
+/**
+ * Z-Indexing
+ */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow: auto; }
+
+.page--ttt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url('../imgs/shows/ttt/stars.png'), linear-gradient(45deg, #0e1a54 0%, rgba(0, 0, 0, 0) 60%), linear-gradient(135deg, rgba(0, 0, 0, 0) 40%, #5c0020 100%);
+  overflow: hidden; }
+
+.ttt-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  padding: 16px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  text-align: center; }
+
+.ttt-header--main {
+  position: relative;
+  width: 80%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 28px 20px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff;
+  background-image: url('../imgs/shows/ttt/ttt-logo.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -99999999px; }
+
+.ttt-header--main:before {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff; }
+
+.ttt-header__title--main {
+  margin: 0; }
+
+@media screen and (min-width: 500px) {
+  .ttt-header--main {
+    width: auto; }
+
+  .ttt-header__title--main {
+    min-width: 320px;
+    min-height: 130px; }
+ }
+
+@media screen and (min-width: 700px) {
+  .ttt-header--main {
+    min-width: 500px;
+    min-height: 160px; }
+ }
+
+@media screen and (min-width: 1000px) {
+  .ttt-header__title--main {
+    min-height: 200px; }
+ }
+
+@media screen and (min-width: 1200px) {
+  .ttt-header__title--main {
+    min-width: 600px; }
+ }
+
+.ttt-hosts {
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #ffffff;
+  text-align: center; }
+
+@media screen and (min-width: 600px) {
+  .ttt-hosts {
+    font-size: 0.9em; }
+ }
+
+@media screen and (min-width: 800px) {
+  .ttt-hosts {
+    font-size: 1em; }
+ }
+
+@media screen and (min-width: 1000px) {
+  .ttt-hosts {
+    font-size: 1.1em; }
+ }
+
+@media screen and (min-width: 1200px) {
+  .ttt-hosts {
+    font-size: 1.2em; }
+ }
+
+.ttt-galaxy--blue {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+  width: 242.4px;
+  height: 248.4px;
+  background-image: url('../imgs/shows/ttt/galaxy-blue.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50px 30px; }
+
+.ttt-planet--orange {
+  position: absolute;
+  top: -40px;
+  left: -80px;
+  z-index: 1;
+  width: 193.95px;
+  height: 193.5px;
+  background-image: url('../imgs/shows/ttt/planet-orange.png');
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.ttt-planet--purple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 63.9px;
+  height: 66.3px;
+  margin-left: -163.9px;
+  margin-top: 66.3px;
+  background-image: url('../imgs/shows/ttt/planet-purple.png');
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.ttt-characters {
+  position: relative;
+  height: 120px;
+  margin-top: -15px;
+  z-index: 5; }
+
+.ttt-addy--jumping {
+  position: absolute;
+  right: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: -10px;
+  background-image: url('../imgs/shows/ttt/addy_1x.svg');
+  background-size: contain; }
+
+.ttt-matt--jumping {
+  position: absolute;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: -10px;
+  background-image: url('../imgs/shows/ttt/matt_1x.svg');
+  background-size: contain; }
+
+@media screen and (min-width: 600px) {
+  .ttt-characters {
+    height: 140px; }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: 140px;
+    height: 140px; }
+ }
+
+@media screen and (min-width: 800px) {
+  .ttt-characters {
+    height: 150px; }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: 150px;
+    height: 150px; }
+ }
+
+@media screen and (min-width: 1000px) {
+  .ttt-characters {
+    height: 160px; }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: 160px;
+    height: 160px; }
+ }
+
+@media screen and (min-width: 1200px) {
+  .ttt-characters {
+    height: 170px; }
+
+  .ttt-addy--jumping, .ttt-matt--jumping {
+    width: 170px;
+    height: 170px; }
+ }
 
 /**
 *

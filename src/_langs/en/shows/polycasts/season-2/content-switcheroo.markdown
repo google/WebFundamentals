@@ -19,7 +19,7 @@ Presto Change-O! Update the sections in your single page app using core-pages.
 
 ## Read More
 
-- [The Awesome Power of Auto-Binding Templates]({{site.baseurl}}/shows/polycasts/season-2/awesome-power-of-auto-binding)
-- [Core Drawer Panel]({{site.baseurl}}/shows/polycasts/season-1/core-drawer-panel)
-- [Core Header Panel]({{site.baseurl}}/shows/polycasts/season-1/core-header-panel)
-- [Core Toolbar]({{site.baseurl}}/shows/polycasts/season-1/core-toolbar)
+- [The Awesome Power of Auto-Binding Templates](https://developers.google.com/web/shows/polycasts/season-2/awesome-power-of-auto-binding)
+- [Core Drawer Panel](https://developers.google.com/web/shows/polycasts/season-1/core-drawer-panel)
+- [Core Header Panel](https://developers.google.com/web/shows/polycasts/season-1/core-header-panel)
+- [Core Toolbar](https://developers.google.com/web/shows/polycasts/season-1/core-toolbar)

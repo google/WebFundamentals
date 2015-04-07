@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+{% assign seriesId = 'polycasts' %}
 {% assign orderedVideos = site.data.videoGroups['polycasts'] | sort: 'date' | reverse %}
 
 {% assign title = 'Polycasts' %}
 {% assign description = '' %}
-{% capture link %}https://developers.google.com{{ site.baseurl }}/shows/polycasts/{% endcapture %}
-{% assign id = link %}
 {% assign showSeriesInTitle = true %}
 
-
-{% include modules/shows/show-feed.liquid videos=orderedVideos title=title description=description link=link id=id showSeriesInTitle=showSeriesInTitle %}
+{% include modules/shows/show-feed.liquid seriesId=seriesId videos=orderedVideos title=title description=description showSeriesInTitle=showSeriesInTitle %}

@@ -5,7 +5,7 @@ title: "Shows"
 description: ""
 collection: web
 published: true
-feedName: Web Shows - Google Developers
+feedName: Google Developers Web Shows
 feedPath: shows/feed.xml
 ---
 {% comment %}
@@ -104,4 +104,4 @@ Fundmentals index: for guide in page.articles.[page.id]
 </div>
 
 {% capture feedUrl %}{{site.baseurl}}/shows/feed.xml{% endcapture %}
-{% include modules/shows/feedlink.liquid feedUrl=feedUrl %}
+{% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink="https://feedburner.google.com/fb/a/mailverify?uri=GoogleDeveloperWebShows&amp;loc=en_US" %}
