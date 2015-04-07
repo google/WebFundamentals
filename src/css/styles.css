@@ -2100,9 +2100,6 @@ body[dir=rtl] .editorial-header .container:before {
   .spotlight-header--portrait {
     min-height: 520px; } }
 
-.spotlight-header--portrait.actual-spotlight {
-  min-height: inherit; }
-
 .spotlight-header__container {
   position: relative; }
 
