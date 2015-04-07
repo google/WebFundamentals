@@ -6,11 +6,12 @@ introduction: ""
 id: redirect-http-to-https
 collection: security-with-tls
 authors:
-  - mattgaunt
+  - chrispalmer
 article:
-  written_on: 2015-02-11
-  updated_on: 2015-02-11
+  written_on: 2015-03-27
+  updated_on: 2015-03-27
   order: 5
+priority: 0
 key-takeaways:
   - You need to put a canonical link in the head of your page to tell search engines https is the best way to get to your site.
 ---

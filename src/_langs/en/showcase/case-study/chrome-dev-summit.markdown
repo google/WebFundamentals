@@ -3,10 +3,10 @@ layout: case-study
 collection: case-study
 published: true
 
-date: 2015-01-09
+date: 2015-03-27
 article:
-  written_on: 2015-01-09
-  updated_on: 2015-01-09
+  written_on: 2015-03-27
+  updated_on: 2015-03-27
 authors:
   - pbakaus
 

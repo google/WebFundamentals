@@ -9,9 +9,10 @@ introduction: "The Geolocation API lets you find out where the user is, always w
   taken."
 article:
   written_on: 2014-01-01
-  updated_on: 2014-01-06
+  updated_on: 2014-10-21
   order: 2
 id: user-location
+priority: 1
 collection: device-access
 authors:
   - paulkinlan

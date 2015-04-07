@@ -6,11 +6,12 @@ introduction: "You are ready for the all important step of enabling HTTPS on you
 id: generating-keys-and-csr
 collection: security-with-tls
 authors:
-  - mattgaunt
+  - chrispalmer
 article:
-  written_on: 2015-02-11
-  updated_on: 2015-02-11
+  written_on: 2015-03-27
+  updated_on: 2015-03-27
   order: 3
+priority: 0
 key-takeaways:
   - Use Mozilla's Server Configuration tool to set up your server for HTTPS support.
   - Regularly test your site with the Qualys' handy SSL Server Test and ensure you get at least an A or A+.

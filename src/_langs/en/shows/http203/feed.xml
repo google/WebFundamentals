@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+{% assign seriesId = 'http203' %}
 {% assign orderedVideos = site.data.videoGroups['http203'] | sort: 'date' | reverse %}
 
-{% assign title = 'HTTP203' %}
+{% assign title = 'HTTP 203' %}
 {% assign description = '' %}
-{% capture link %}https://developers.google.com{{ site.baseurl }}/shows/https203/{% endcapture %}
-{% assign id = link %}
 {% assign showSeriesInTitle = true %}
 
-
-{% include modules/shows/show-feed.liquid videos=orderedVideos title=title description=description link=link id=id showSeriesInTitle=showSeriesInTitle %}
+{% include modules/shows/show-feed.liquid seriesId=seriesId videos=orderedVideos title=title description=description showSeriesInTitle=showSeriesInTitle %}

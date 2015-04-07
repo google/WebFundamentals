@@ -1,18 +1,19 @@
 ---
 layout: article
 title: "Development Phases"
-description: "Every developer will go through various phases during the 
-  development of a project. Web Starter Kit makes you more productive and 
+description: "Every developer will go through various phases during the
+  development of a project. Web Starter Kit makes you more productive and
   simplifies a range of tasks for each phase."
-introduction: "During development, there are 3 particular commands that 
-  you'll use on a regular basis: gulp serve, gulp serve:dist, and gulp. 
+introduction: "During development, there are 3 particular commands that
+  you'll use on a regular basis: gulp serve, gulp and gulp serve:dist.
   Let’s look at how each task helps you develop your site."
 notes:
 article:
   written_on: 2014-04-17
-  updated_on: 2014-10-02
+  updated_on: 2014-10-21
   order: 2
 id: development-phases
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt
@@ -116,7 +117,7 @@ in a modular and reusable fashion.
 
 ## Build a Production Version of Your Site
 
-You can build a production ready version of your site with the simple gulp
+You can build a production ready version of your site with the simple `gulp`
 command. This command runs some of the tasks we’ve seen already, with additional
 tasks aimed at making your site load faster and more efficiently.
 
@@ -154,11 +155,12 @@ and concatenate together. Let’s look at a sample build block:
     <script src="scripts/example-2.js"></script>
     <!-- endbuild -->
 
-As you can see, a build block is nothing more than a specially formatted comment.
-The first line indicates the build block is for JavaScript and the final
-filename and path should be scripts/main.min.js. The last line closes the block.
-Everything in-between is the list of JavaScript files we want to minify and
-concatenate, in this case *example-1.js* and *example-2.js*.
+A build block is nothing more than a specially formatted comment.
+All of your javascript files between the build block will be merged
+(concatenated) and minified into one file named main.min.js and
+the the final build will replace these scripts with the script tag:
+
+    <script src="scripts/main.min.js"></script>
 
 ### Optimize any image assets
 
@@ -182,8 +184,8 @@ them over into the final build as well.
 
 Before you push anything into production, you need to make sure everything works
 as you'd expect. The `gulp serve:dist` command builds a production version of your site,
-starts a server, and opens a browser for you. This doesn’t have Live Reload or
-Browser Sync, but it’s a reliable way of testing your site before deploying it.
+starts a server, and opens a browser for you. This **doesn’t have Live Reload or
+Browser Sync**, but it’s a reliable way of testing your site before deploying it.
 
 {% include modules/nextarticle.liquid %}
 

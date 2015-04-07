@@ -11,6 +11,7 @@ id: stickyness
 collection: device-access
 authors:
   - pbakaus
+priority: 1
 ---
 {% wrap content%}
 

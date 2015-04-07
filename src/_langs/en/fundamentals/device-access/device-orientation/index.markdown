@@ -7,12 +7,13 @@ introduction: "Device motion and orientation events provide access to the built 
   accelerometer, gyroscope and compass in mobile devices."
 article:
   written_on: 2014-06-17
-  updated_on: 2014-06-17
+  updated_on: 2014-10-21
   order: 4
 id: device-orientation
 collection: device-access
 authors:
   - petelepage
+priority: 1
 remember:
   not-stable:
     - Use <b>extreme</b> caution when deciding to use device motion or

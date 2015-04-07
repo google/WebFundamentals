@@ -5,10 +5,11 @@ description: "Go offroad and create totally custom animations for your projects.
 introduction: "Sometimes you won't want to use the easing keywords that are included with CSS, or you will be using a JavaScript-based animation library. In both cases you can typically define your own curves (or equations), and this gives you a lot of control over the feel of your project's animations."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-08-08
+  updated_on: 2014-10-21
   order: 4
 id: custom-easing
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Custom easing will allow you to give more personality to your projects.

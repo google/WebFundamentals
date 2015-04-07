@@ -9,9 +9,10 @@ introduction: "On devices with phone capabilities, make it easy for users to
   known as click to call."
 article:
   written_on: 2014-06-17
-  updated_on: 2014-06-17
+  updated_on: 2014-10-21
   order: 3
 id: click-to-call
+priority: 1
 collection: device-access
 ---
 

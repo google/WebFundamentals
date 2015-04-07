@@ -5,10 +5,11 @@ description: "Animations must perform well, otherwise they will negatively impac
 introduction: "Care must be taken to maintain 60fps whenever you are animating, because any stutters or stalls will be noticeable to your users and negatively impact their experiences."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-09-19
+  updated_on: 2014-10-21
   order: 9
 id: animations-and-performance
 collection: animations
+priority: 0
 key-takeaways:
   code:
     - Take care that your animations don’t cause performance issues; ensure you know the impact of animating a given CSS property.

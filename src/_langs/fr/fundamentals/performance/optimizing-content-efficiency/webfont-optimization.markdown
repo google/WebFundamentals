@@ -277,7 +277,7 @@ Le chargement inactif de polices comporte une importante implication cachée qui
 2. Le navigateur commence à analyser la réponse HTML et à construire le modèle DOM.
 3. Le navigateur découvre le code CSS, JS et autres ressources, et transmet les requêtes.
 4. Le navigateur construit le modèle CSSOM une fois que tout le contenu du code CSS est reçu, et le combine avec l'arborescence du modèle DOM pour construire l'arborescence d'affichage.
-  * Les demandes de police sont envoyées une fois que l'arborescence d'affichage indique quelles variantes de la police sont nécessaires pour affiché le texte spécifié sur la page.
+  * Les demandes de police sont envoyées une fois que l'arborescence d'affichage indique quelles variantes de la police sont nécessaires pour afficher le texte spécifié sur la page.
 5. Le navigateur effectue la mise en page et peint le contenu sur l'écran.
   * Si la police n'est pas encore disponible, le navigateur ne peut pas afficher les pixels de texte.
   * Une fois que la police est disponible, le navigateur peint les pixels de texte.
