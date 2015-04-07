@@ -27,7 +27,7 @@ developer: Jake Archibald
 
 introduction: "A beautiful, material responsive frontend for SVGO."
 pros: |
-  Built by our own [Jake Archibald](http://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, and the transitions are smooth on mobile.
+  Built by our own [Jake Archibald](http://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, ServiceWorker ensures that the app loads quickly and is available offline, and the transitions are smooth on mobile.
 cons: |
   The only real nitpick we'd have to offer is that the initial UX is confusing due to the main UI missing. Other than that, job well done!
 
