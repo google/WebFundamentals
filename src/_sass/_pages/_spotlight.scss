@@ -5,3 +5,27 @@
     }
   }
 }
+
+.spotlight-listing {
+	.related-items {
+		padding-top: 0;
+	}
+}
+
+.spotlight-list {
+
+  @include medium {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+	p {
+		color: inherit;
+		padding-top: 1em;
+	}
+
+  p:last-child {
+	color: #404040;
+  }
+
+}
