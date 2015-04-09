@@ -22,14 +22,14 @@ NOTE: the spotlight header required a modifier to render properly
   <div class="spotlight-header__container container">
     <div class="spotlight-header__copy g--half">
       <div class="spotlight-explainer" style="margin-top: 52px;">
-        Every month, we talk with the engineering team behind a successful mobile web offering to share with you what worked, what didn't and how you can follow their footsteps.
+        Every so often, we talk with the engineering team behind a successful mobile web offering to share with you what worked, what didn't and how you can follow their footsteps.
       </div> 
       <div class="divider divider--fluid">
         <span class="divider-icon divider-icon--secondary"></span>
       </div>
       <h2 class="xlarge">
-        <strong class="subsection-number">{{caseStudies[0].article.written_on | date:"%B" }} case study</strong>
-        {{caseStudies[0].title}}
+        <strong class="subsection-number">{{caseStudies[0].title }}</strong>
+        {{caseStudies[0].subtitle}}
       </h2>
       <p>{{caseStudies[0].introduction}}</p>
       <a href="{{site.baseurl}}{{caseStudies[0].url | canonicalize}}" class="spotlight-header__cta cta--primary">Read the case study</a>
@@ -91,8 +91,8 @@ NOTE: the spotlight header required a modifier to render properly
           <div class="container-small">
             <div class="featured-list__content g--half">
               <h3 class="xlarge">
-                <strong class="subsection-number">{{caseStudy.article.written_on | date:"%B" }} case study</strong>
-                {{caseStudy.title}}
+                <strong class="subsection-number">{{caseStudy.title }}</strong>
+                {{caseStudy.subtitle}}
               </h3>
               <p>{{caseStudy.introduction}}</p>
               <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}" class="cta--primary">Read the case study</a>

@@ -5,7 +5,7 @@ id: case-study
 published: true
 
 title: "Case studies"
-description: "This is an example of a showcase page"
+description: "All case studies."
 
 showcase:
   written_on: 2014-01-01
@@ -16,7 +16,7 @@ showcase:
   <div class="container">
     {% include modules/breadcrumbs.liquid %}
     <header class="clear">
-      <h3 class="xxlarge">All case studies</h3>
+      <h3 class="xxlarge">Case studies</h3>
       <div class="divider">
         <span class="themed divider-icon"></span>
       </div>
@@ -37,8 +37,8 @@ showcase:
           <div class="container-small">
             <div class="featured-list__content g--half">
               <h3 class="xlarge">
-                <strong class="subsection-number">{{caseStudy.article.written_on | date:"%B" }} case study</strong>
-                {{caseStudy.title}}
+                <strong class="subsection-number">{{caseStudy.title }}</strong>
+                {{caseStudy.subtitle}}
               </h3>
               <p>{{caseStudy.introduction}}</p>
               <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}" class="cta--primary">Read the case study</a>
