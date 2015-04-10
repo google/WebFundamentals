@@ -20,7 +20,9 @@ showcase:
       <div class="divider">
         <span class="themed divider-icon"></span>
       </div>
-      <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">Every month, we talk with the engineering team behind a successful mobile web offering to share with you what worked, what didn't and how you can follow their footsteps.</p>
+      <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered">Every so often, we talk with the engineering team behind a successful mobile web offering to share with you what worked, what didn't and how you can follow their footsteps.</p>
+
+      <p><a href="https://docs.google.com/forms/d/1928U45GIS1-Opi7SG-FczCwRkwnTbXDzF2X5Pe6Q6gU/viewform?usp=send_form" class="button--secondary">Have an idea for a case study? Let us know!</a></p>
     </header>
   </div>
 </div>
