@@ -23,6 +23,8 @@ published: true
           <a href="{{site.baseurl}}/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
         {% endfor %}
       </p>
+
+      <p class="page-header__excerpt g-medium--2 g-wide--3 g--centered"><a href="https://docs.google.com/forms/d/1928U45GIS1-Opi7SG-FczCwRkwnTbXDzF2X5Pe6Q6gU/viewform?usp=send_form" class="button--secondary">Have an idea for a spotlight? Let us know!</a></p>
     </header>
   </div>
 </div>
