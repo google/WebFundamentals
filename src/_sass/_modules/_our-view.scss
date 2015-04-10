@@ -28,7 +28,7 @@
 
   @include medium {
     &:after {
-      background: $colorYellowSecondary;
+      background: #FDD835;
       content: "";
       height: 100%;
       position: absolute;
@@ -48,7 +48,7 @@
   padding-bottom: $lineHeight*2;
 
   @include small-only {
-    background: $colorYellowSecondary;
+    background: #FDD835;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: $lineHeight;
