@@ -1,0 +1,65 @@
+$lazyWebColor: #27B2DA;
+
+.showtitle--title-container-lazyweb {
+  background-color: $lazyWebColor;
+  color: white;
+}
+
+.showtitle--title-lazyweb, .showtitle--title-container-show-home .showtitle--subtitle-lazyweb {
+  @include type--small;
+  font-weight: 500;
+  padding-top: 0;
+  color: inherit;
+}
+
+.showtitle--subtitle-lazyweb, .showtitle--title-container-show-home .showtitle--title-lazyweb {
+  @include type--xlarge;
+
+  padding-top: 0;
+  color: inherit;
+}
+
+.lazyweb-title-timestamp {
+  @include type--medium;
+  color: $lazyWebColor;
+}
+
+@include small-only {
+  .showtitle--title-container-single-video .showtitle--title-lazyweb {
+    display: none;
+  }
+
+  .lazyweb-title-timestamp {
+    color: $lazyWebColor;
+  }
+}
+
+@include wide {
+  .showtitle--title-lazyweb, .showtitle--title-container-show-home .showtitle--subtitle-lazyweb {
+    padding-top: 0;
+
+    color: inherit;
+  }
+
+  .showtitle--subtitle-lazyweb, .showtitle--title-container-show-home .showtitle--title-lazyweb  {
+    padding-top: 0;
+
+    color: inherit;
+  }
+
+  .lazyweb-title-timestamp {
+    color: $lazyWebColor;
+  }
+}
+
+.showhome--series-title-lazyweb, .showhome--series-title-lazyweb a {
+  color: $lazyWebColor;
+}
+
+.smallvideo--title-container-lazyweb, .smallvideo-lazyweb {
+  background-color: $lazyWebColor;
+}
+
+.page--lazyweb .content a {
+  color: $lazyWebColor;
+}
