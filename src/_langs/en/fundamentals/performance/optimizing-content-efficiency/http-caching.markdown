@@ -53,7 +53,7 @@ Great news, every browser ships with an implementation of an HTTP cache! All we 
 
 <img src="images/http-request.png" class="center" alt="HTTP request">
 
-When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (“x234dff”) that can be used after the response has expired to check if the resource has been modified.
+When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in the above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (“x234dff”) that can be used after the response has expired to check if the resource has been modified.
 
 
 ## Validating cached responses with ETags
@@ -68,7 +68,7 @@ That’s the problem that validation tokens, as specified in the ETag header, ar
 
 In above example the client automatically provides the ETag token within the “If-None-Match” HTTP request header, the server checks the token against the current resource, and if it has not changed returns a “304 Not Modified” response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
-As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf: it will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. **The only thing that’s left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.**
+As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf. It will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. **The only thing that’s left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.**
 
 {% include modules/remember.liquid list=page.notes.boilerplate-configs %}
 
