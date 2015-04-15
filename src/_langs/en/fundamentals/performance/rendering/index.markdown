@@ -18,7 +18,7 @@ notes:
   rasterize:
     "Sometimes you may hear the term \"rasterize\" used in conjunction with paint. This is because painting is actually two tasks: 1) creating a list of draw calls, and 2) filling in the pixels.
 
-    The latter is called \"rasterization\" and so whenever you see \"paint\", you should think of it as including \"rasterization\". (In some architectures creating the list of draw calls and rasterizing are done in different threads, but that isn't something under developer control.)"
+    The latter is called \"rasterization\" and so whenever you see paint records in DevTools, you should think of it as including rasterization. (In some architectures creating the list of draw calls and rasterizing are done in different threads, but that isn't something under developer control.)"
 ---
 {% wrap content%}
 
