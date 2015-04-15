@@ -1,0 +1,40 @@
+---
+layout: default
+description: "Web Developer Tools provides a set of instructions and tools to help you build your website."
+title: Web Developer Tools
+id: devtools
+collection: web
+priority: 0
+feedName: Web Developer Tools - Google Developers
+feedPath: devtools/feed.xml
+---
+
+<meta itemprop="url" content="https://developers.google.com/web/devtools"/>
+
+<div class="home-header centered">
+  <div class="container">
+    <h1>Web <b>Developer Tools</b></h1>
+    <h2>Get the tools you need to build your sites.</h2>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered">  
+    <ul class="list-guides-intro guides-list container">
+      {% for guide in page.articles.[page.id] %}
+      {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
+        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}" class="themed">
+            <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
+            <h3 class="large">{{guide.title}}</h3>
+          </a>
+          <p>{{ guide.snippet }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
+
+{% include cc.liquid %}
