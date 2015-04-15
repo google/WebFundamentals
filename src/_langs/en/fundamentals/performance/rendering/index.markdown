@@ -14,9 +14,11 @@ authors:
   - paullewis
 notes:
   csstriggers:
-    If you want to know which of the three versions above changing any given CSS property will trigger head to <a href="http://csstriggers.com">CSS Triggers</a>. And if you want the fast track to high performance animations, read the section on changing compositor-only properties.
-  pipelinecosts:
-    Performance is the art of avoiding work, and making any work you do as efficient as possible. In many cases it's about working with the browser, not against it. It’s worth bearing in mind that the work listed above in the pipeline differ in terms of computational cost; some tasks are more expensive than others!
+    If you want to know which of the three versions above changing any given CSS property will trigger head to <a href="http://csstriggers.com">CSS Triggers</a>. And if you want the fast track to high performance animations, read the section on <a href="stick-to-compositor-only-properties-and-manage-layer-count">changing compositor-only properties</a>.
+  rasterize:
+    "Sometimes you may hear the term \"rasterize\" used in conjunction with paint. This is because painting is actually two tasks: 1) creating a list of draw calls, and 2) filling in the pixels.
+
+    The latter is called \"rasterization\" and so whenever you see \"paint\", you should think of it as including \"rasterization\". (In some architectures creating the list of draw calls and rasterizing are done in different threads, but that isn't something under developer control.)"
 ---
 {% wrap content%}
 
@@ -41,7 +43,9 @@ There are five major areas that you need to know about and be mindful of when yo
 * **Paint**. Painting is the process of filling in pixels. It involves drawing out text, colors, images, borders, and shadows, essentially every visual part of the elements. The drawing is typically done onto multiple surfaces, often called layers.
 * **Compositing**. Since the parts of the page were drawn into potentially multiple layers they need to be drawn to the screen in the correct order so that the page renders correctly. This is especially important for elements that overlap another, since a mistake could result in one element appearing over the top of another incorrectly.
 
-{% include modules/remember.liquid title="Remember" list=page.notes.pipelinecosts %}
+Each of these parts of the pipeline represents an opportunity to introduce jank, so it's important to understand exactly what parts of the pipeline your code triggers.
+
+{% include modules/remember.liquid title="Note" list=page.notes.rasterize %}
 
 You won’t always necessarily touch every part of the pipeline on every frame. In fact, there are three ways the pipeline _normally_ plays out for a given frame when you make a visual change, either with JavaScript, CSS, or Web Animations:
 
@@ -66,6 +70,8 @@ If you change a property that requires neither layout nor paint, and the browser
 This final version is the cheapest and most desirable for high pressure points in an app's lifecycle, like animations or scrolling.
 
 {% include modules/remember.liquid title="Note" list=page.notes.csstriggers %}
+
+Performance is the art of avoiding work, and making any work you do as efficient as possible. In many cases it's about working with the browser, not against it. It’s worth bearing in mind that the work listed above in the pipeline differ in terms of computational cost; some tasks are more expensive than others!
 
 Let’s take a dive into the different parts of the pipeline. We’ll take a look at the common issues, as well how to diagnose and fix them.
 
