@@ -8,7 +8,7 @@ article:
   written_on: 2015-04-13
   updated_on: 2015-04-13
   order: 3
-id: performance
+id: profile-performance
 collection: devtools
 priority: 0
 ---
