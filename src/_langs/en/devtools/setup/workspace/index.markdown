@@ -16,6 +16,10 @@ collection: setup
 Guide list content will be output by the landing layout passed on the article collection matching page.id
 {% endcomment %}
 
+{% wrap content %}
+
 Time is a huge factor in staying productive. Your development environment is where you spend most of yours.
 
 Set yourself up for success by including a strong, extensible editor and powerful debugging & development tools.
+
+{% endwrap %}
