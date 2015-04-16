@@ -20,7 +20,7 @@ key-takeaways:
 
 TBD. Developers must test on real devices be it in your hand or in the cloud. But they should also test on device emulators. This doc is a discussion on the pros and cons of both.
 
-TBD. This article might be helpful, at least in framing the different options (for sure, give out props to the article, if we paraphrase).
+TBD. This article might be helpful, at least in framing the different options (for sure, give out props to the article, if we paraphrase): http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging/
 
 {% include modules/nextarticle.liquid %}
 
