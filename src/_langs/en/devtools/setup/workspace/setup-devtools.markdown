@@ -5,7 +5,7 @@ seotitle: "Set Up Chrome Developer Tools (DevTools)"
 description: "Developer tools provide web developers deep access into the internals of the browser and their web application. Use the Chrome Developer Tools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization."
 introduction: "Developer tools provide web developers deep access into the internals of the browser and their web application."
 authors:
-  - mkearney
+  - megginkearney
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
@@ -18,13 +18,13 @@ key-takeaways:
 
 {% wrap content%}
 
-{% include modules/toc.liquid %}
-
-{% include modules/takeaway.liquid list=page.key-takeaways.devtools %}
-
 The Chrome Developer Tools (DevTools for short), are a set of web authoring and debugging tools built into Google Chrome. You will use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.
 
 Learn what's in the Chrome Developer Tools, how to access them, and the basics on how to use them.
+
+{% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.devtools %}
 
 ## What's in the Chrome Developer Tools
 
