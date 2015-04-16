@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Set Up Device Testing"
-title: "Set Up Device Testing Using Remote Debugging and the Device Emulator"
+seotitle: "Set Up Device Testing Using Remote Debugging and the Device Emulator"
 description: "Check your site's responsive layouts and performance on real and virtual devices."
 introduction: "Check your site's responsive layouts and performance on real and virtual devices."
 article:
