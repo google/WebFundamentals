@@ -19,6 +19,11 @@ notes:
     "Sometimes you may hear the term \"rasterize\" used in conjunction with paint. This is because painting is actually two tasks: 1) creating a list of draw calls, and 2) filling in the pixels.
 
     The latter is called \"rasterization\" and so whenever you see paint records in DevTools, you should think of it as including rasterization. (In some architectures creating the list of draw calls and rasterizing are done in different threads, but that isn't something under developer control.)"
+udacity:
+  id: ud860
+  title: Browser Rendering Optimization
+  description: "Interested in taking a deep dive into Rendering Performance? Check out the companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the rendering of your pages."
+  image: images/rp-udacity.jpg
 ---
 {% wrap content%}
 
@@ -74,5 +79,7 @@ This final version is the cheapest and most desirable for high pressure points i
 Performance is the art of avoiding work, and making any work you do as efficient as possible. In many cases it's about working with the browser, not against it. It’s worth bearing in mind that the work listed above in the pipeline differ in terms of computational cost; some tasks are more expensive than others!
 
 Let’s take a dive into the different parts of the pipeline. We’ll take a look at the common issues, as well how to diagnose and fix them.
+
+{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title image=page.udacity.image description=page.udacity.description %}
 
 {% endwrap%}
