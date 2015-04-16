@@ -1,6 +1,6 @@
 <!-- Lets plan out the order of videos -->
 {% if page.articles[page.id] %}
-	{% assign videosInSeries = page.articles[page.id] | sort: 'date'  %}
+	{% assign videosInSeries = page.articles[page.id] | sort: 'date' | reverse  %}
 {% endif %}
 
 {% assign showDetails = null %}
