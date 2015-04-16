@@ -1,8 +1,8 @@
 ---
 layout: landing
 title: "Set Up "
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Device capabilities and network availability vary greatly. Learn what you need in your development toolkit to build an experience that works great on any device."
+introduction: "Device capabilities and network availability vary greatly. Learn what you need in your development toolkit to build an experience that works great on any device."
 snippet: "Set up your development environment."
 article:
   written_on: 2015-04-13
