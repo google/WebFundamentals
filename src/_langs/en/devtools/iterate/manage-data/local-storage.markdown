@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Inspect and Manage Your Local Storage APIs"
-title: "Inspect and Manage Local Storage APIs in the Chrome DevTools Resources Panel"
+seotitle: "Inspect and Manage Local Storage APIs in the Chrome DevTools Resources Panel"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
