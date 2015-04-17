@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Inspect and Manage Offline Storage"
+seotitle: "Inspect and Manage Offline Storage"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 4
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: manage-data
 key-takeaways:
@@ -20,9 +21,11 @@ remember:
 ---
 {% wrap content %}
 
+TBD. Cover viewing cache data. Also, be sure to cross-reference service worker stuff as part of debugging asynchronous JavaScript.
+
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-### TBD
+## TBD
 
 TBD.
 
