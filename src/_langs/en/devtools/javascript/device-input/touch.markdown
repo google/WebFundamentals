@@ -1,17 +1,17 @@
 ---
 layout: article
-title: "Monitor Events"
-seotitle: "Monitor Events Using the Chrome DevTools Command Line API"
+title: "Test Touch Input"
+title: "Test Device Input using Chrome DevTools Device Sensors"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
-  order: 2
+  order: 1
 authors:
   - megginkearney
 priority: 0
-collection: command-line
+collection: readability
 key-takeaways:
   tldr-tbd:
     - TBD tldr.
@@ -21,12 +21,7 @@ remember:
 ---
 {% wrap content %}
 
-TBD. Specified parts of this doc: https://developer.chrome.com/devtools/docs/console
-
-TBD. Includes:
-
-** Monitoring events
-** View event listeners registered on objects
+TBD. Starting point for testing touch tools in here:  https://developer.chrome.com/devtools/docs/device-mode#device-sensors
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

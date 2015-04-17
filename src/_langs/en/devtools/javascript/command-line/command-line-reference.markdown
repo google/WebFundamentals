@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Command Line API Reference"
+seotitle: "Command Line API Reference for Chrome DevTools"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: command-line
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Doc: https://developer.chrome.com/devtools/docs/commandline-api 
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
