@@ -23,6 +23,8 @@ remember:
 
 TBD. Timeline docs focusing on frames mode (not events mode): https://developer.chrome.com/devtools/docs/timeline#frames-mode
 
+TBD. There's an entire set of rendering docs that will go into depth here-- this is just an intro to analyzing rendering problems.
+
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
 ### TBD
