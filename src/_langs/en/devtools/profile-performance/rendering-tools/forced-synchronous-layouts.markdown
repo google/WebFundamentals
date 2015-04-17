@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Diagnose Forced Synchronous Layouts"
+seotitle: "Diagnose Forced Synchronous Layouts"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: rendering-tools
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Use this doc: https://developer.chrome.com/devtools/docs/demos/too-much-layout
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Ways to Decrease Page Load Time"
+seotitle: "Ways to Decrease Page Load Time"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 2
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: rendering-tools
 key-takeaways:
@@ -22,9 +23,13 @@ remember:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-### TBD
+## Improve CSS performance
 
-TBD.
+TBD. Improve CSS performance: CSS Selector Profiler? What is this? Has this been renamed? Does it still exist, does it have docs?
+
+## Compress Text
+
+TBD. Compress text: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip 
 
 {% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
 
