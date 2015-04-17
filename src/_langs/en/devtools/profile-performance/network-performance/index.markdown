@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Improve Network Performance"
+seotitle: "Improve Network Performance Using Chrome DevTools Network Panel and Resource Timing API"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: profile-performance
 id: network-performance
@@ -16,6 +17,6 @@ id: network-performance
 
 {% wrap content %}
 
-TBD.
+TBD. Doc: https://developer.chrome.com/devtools/docs/network
 
 {% endwrap %}

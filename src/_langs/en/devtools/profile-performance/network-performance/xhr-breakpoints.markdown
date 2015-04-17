@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Set Breakpoints for Network Calls"
+seotitle: "Set XHR Breakpoints for Network Calls"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 2
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: network-performance
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. There’s a limited amount of content on this in https://developer.chrome.com/devtools/docs/javascript-debugging#breakpoints-on-xhr
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
