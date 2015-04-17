@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Log Diagnostics to Console"
+seotitle: "Log Diagnostics to Console in Chrome DevTools"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 2
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: javascript
 id: console

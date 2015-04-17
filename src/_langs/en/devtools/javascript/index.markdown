@@ -1,6 +1,7 @@
 ---
 layout: landing
 title: "Debug"
+seotitle: "Debug Your JavaScript Using Chrome DevTools breakpoints, console, and the command line API"
 description: "TBD description."
 introduction: "TBD introduction."
 snippet: "Debug the JavaScript."

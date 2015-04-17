@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "View Structured Data in Console"
+seotitle: "View Structured Data in Chrome DevTools Console"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: console
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Doc: https://developer.chrome.com/devtools/docs/console#viewing-structured-data
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

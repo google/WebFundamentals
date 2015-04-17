@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "Inspect and Manage Offline Storage"
-seotitle: "Inspect and Manage Offline Storage"
+title: "Offline Storage: Inspect and Manage the Cache"
+seotitle: "Offline Storage: Inspect and Manage Offline Storage"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
