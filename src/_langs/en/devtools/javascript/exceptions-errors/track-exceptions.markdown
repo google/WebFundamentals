@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Track Exceptions"
+seotitle: "Track Exceptions"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 1
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: exceptions-errors
 key-takeaways:
@@ -20,11 +21,19 @@ remember:
 ---
 {% wrap content %}
 
+TBD. Include:
+
+** Everything in “Tracking Exceptions” section: https://developer.chrome.com/devtools/docs/javascript-debugging#tracking-exceptions
+
+** Printing stack traces: https://developer.chrome.com/devtools/docs/javascript-debugging#printing-stack-traces
+
+** Finding the source of an exception
+
+** Diagnosing execution flow issues”
+
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-### TBD
-
-TBD.
+## TBD
 
 {% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
 
