@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Make JavaScript Look Pretty"
+title: "Make JavaScript Look Pretty with PrettyPrint"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Doc: https://developer.chrome.com/devtools/docs/javascript-debugging#pretty-print
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

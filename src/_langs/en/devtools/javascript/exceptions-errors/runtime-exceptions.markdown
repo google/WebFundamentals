@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Handle Exceptions at Runtime"
+seotitle: "Handle Exceptions at Runtime"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 2
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: exceptions-errors
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Doc: https://developer.chrome.com/devtools/docs/javascript-debugging#handling-exceptions-runtime
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
