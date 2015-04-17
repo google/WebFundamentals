@@ -1,6 +1,7 @@
 ---
 layout: landing
 title: "Set Up "
+seotitle: "Set Up Your Developer Tools"
 description: "Device capabilities and network availability vary greatly. Learn what you need in your development toolkit to build an experience that works great on any device."
 introduction: "Device capabilities and network availability vary greatly. Learn what you need in your development toolkit to build an experience that works great on any device."
 snippet: "Set up your development environment."

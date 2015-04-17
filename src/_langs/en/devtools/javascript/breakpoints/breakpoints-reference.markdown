@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Breakpoints Reference"
+title: "Breakpoints Reference"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 4
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: breakpoints
 key-takeaways:
@@ -20,9 +21,13 @@ remember:
 ---
 {% wrap content %}
 
+TBD. Very quick run through of the low-level breakpoint details in table format. This should make the top docs more focused, as not every detail has to be covered.
+
+TBD. Suggestion to combine breakpoint types and add/remove breakpoints. This then becomes a handy quick-reference.
+
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-### TBD
+## TBD
 
 TBD.
 
