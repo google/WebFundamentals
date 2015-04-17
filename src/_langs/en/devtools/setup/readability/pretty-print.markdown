@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Make JavaScript Look Pretty"
-title: "Make JavaScript Look Pretty with PrettyPrint"
+seotitle: "Make JavaScript Look Pretty with PrettyPrint"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
