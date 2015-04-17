@@ -11,7 +11,7 @@ article:
 authors:
   - megginkearney
 priority: 0
-collection: readability
+collection: device-input
 key-takeaways:
   tldr-tbd:
     - TBD tldr.
