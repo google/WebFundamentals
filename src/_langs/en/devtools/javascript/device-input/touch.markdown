@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Test Touch Input"
-title: "Test Device Input using Chrome DevTools Device Sensors"
+seotitle: "Test Device Input using Chrome DevTools Device Sensors"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
