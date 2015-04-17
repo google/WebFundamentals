@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "How to Debug Service Workers"
+seotitle: "How to Debug Service Workers"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 2
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: asynchronous-js
 key-takeaways:
@@ -19,6 +20,13 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Cover offline, install to
+homescreen and manifest, network pageload optimization.
+
+TBD. Also cover promises
+
+Note: This stuff needs to be written from scratch. Would be good to get started on this earlier rather than later, and iterate reviews. Best resource?
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

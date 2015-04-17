@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Use Live Error Script Reporting"
+seotitle: "Use Live Error Script Reporting"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: asynchronous-js
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Cover live error script reporting https://github.com/GoogleChrome/devtools-docs/issues/230
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

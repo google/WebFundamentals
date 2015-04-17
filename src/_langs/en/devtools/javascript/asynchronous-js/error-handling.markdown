@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Error Handling for Asynchronous Programs"
+seotitle: "Error Handling for Asynchronous Programs"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 4
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: asynchronous-js
 key-takeaways:
@@ -19,6 +20,10 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Covers v8's better error messages.
+
+TBD. Closest existing docs to the topic, but best to check with V8 engineers: https://developers.google.com/v8/embed
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
