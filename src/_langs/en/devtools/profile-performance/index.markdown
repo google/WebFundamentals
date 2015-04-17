@@ -1,6 +1,7 @@
 ---
 layout: landing
 title: "Profile"
+seotitle: "Profile Performance"
 description: "TBD description."
 introduction: "TBD introduction."
 snippet: "Profile performance."
