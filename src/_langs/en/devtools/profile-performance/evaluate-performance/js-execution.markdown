@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Speed Up JavaScript Execution"
+seotitle: "Speed Up JavaScript Execution Using DevTools Profiles Panel"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: evaluate-performance
 key-takeaways:
@@ -19,6 +20,17 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Profiling JavaScript performance doc: https://developer.chrome.com/devtools/docs/cpu-profiling
+
+TBD. Includes Profiling JavaScript execution:
+
+** General execution profiles panel
+** Execution profilne over time using timelines and flame chart 
+
+TBD. Measuring how long something takes using console.time()
+
+TBD. Profiling CPU using CPU profiler. CPU profiler shows where execution time is spent in your page’s JavaScript Controlling the CPU profiler section currently in Debugging Your JavaScrip: https://developer.chrome.com/devtools/docs/console#controlling-the-cpu-profiler 
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

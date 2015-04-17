@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Analyze Rendering Performance"
+seotitle: "Analyze Rendering Performance Using Chrome DevTools Frames Mode"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 2
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: evaluate-performance
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Timeline docs focusing on frames mode (not events mode): https://developer.chrome.com/devtools/docs/timeline#frames-mode
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

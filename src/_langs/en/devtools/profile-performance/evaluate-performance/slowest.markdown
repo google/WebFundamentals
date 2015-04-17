@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Determine Slowest Events"
+seotitle: "Determine Slowest Events Using Chrome DevTools Events Mode"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 1
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: evaluate-performance
 key-takeaways:
@@ -19,6 +20,14 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Timeline docs focusing on events mode (not frames mode), figuring out which events are the slowest: https://developer.chrome.com/devtools/docs/timeline#events-mode
+
+TBD. Analyze time take by each category of events and child events Demo: https://developer.chrome.com/devtools/docs/demos/memory/example10
+
+** How much CPU time the recorded event took
+** Duration
+** Used Heap Size
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

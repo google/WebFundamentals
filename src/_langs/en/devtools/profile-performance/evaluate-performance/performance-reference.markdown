@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Performance Events Reference"
+seotitle: "Performance Events Reference"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -8,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 4
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: evaluate-performance
 key-takeaways:
@@ -19,6 +20,8 @@ remember:
     - TBD note.
 ---
 {% wrap content %}
+
+TBD. Doc: https://developer.chrome.com/devtools/docs/timeline#timeline-event-reference
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
