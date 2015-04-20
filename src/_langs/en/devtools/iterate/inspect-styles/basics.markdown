@@ -23,7 +23,7 @@ remember:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-TBD. There's a working draft in progress as a Google doc for this (dgash@google.com is the owner).
+TBD.
 
 TBD. This page is a much simpler version of the content in this doc: https://developer.chrome.com/devtools/docs/dom-and-styles  and this doc: https://developer.chrome.com/devtools/docs/elements-styles
 
