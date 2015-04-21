@@ -23,6 +23,8 @@ remember:
 
 TBD. Cover viewing cache data. Also, be sure to cross-reference service worker stuff as part of debugging asynchronous JavaScript.
 
+Cache storage inspection now available on all frames: https://codereview.chromium.org/1044203004. Need to suss out what tooling is available to help with inspection, particularly for an individual frame.
+
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
 ## TBD
