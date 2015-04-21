@@ -292,7 +292,7 @@ chrispalmer:
     family: Palmer
   country: US
   role:
-    - contributor
+    - author
   description: "Chris is a security engineer on the Chrome Security Team, focusing on secure usability."
 
 jasonpark:
