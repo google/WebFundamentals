@@ -37,7 +37,7 @@ cons: |
 interview:
   - question: Why the web?
     answer: |
-      At Tokyo, we’ve long been advocates of the responsive and mobile web, rather than native for the sake of it. Pixmas was a result of HTML5 & CSS3 experimentation during down time in-between projects. We are always trying out new things to keep our knowledge current; so naturally, for our team of front-end developers, any research would have been web focused as opposed to a native platform.
+      At [Tokyo](https://tokyo.uk/), we’ve long been advocates of the responsive and mobile web, rather than native for the sake of it. Pixmas was a result of HTML5 & CSS3 experimentation during down time in-between projects. We are always trying out new things to keep our knowledge current; so naturally, for our team of front-end developers, any research would have been web focused as opposed to a native platform.
 
       As browsers continue to mature we are seeing more native-like functionality; functions that were only ever available through native development such as geolocation, camera access, local database storage etc which all contribute to an overall native-like experience for the user but with the benefits of cross-platform and fast iteration development. Of course native development still has its advantages and when tackling a new project, a lot of consideration is taken for both web & native options. It probably sounds obvious, but for our clients, it’s important we recommend the best platform for the job, rather than shoehorn every project into whichever we prefer to code for.
   - question: What worked really well during development?
