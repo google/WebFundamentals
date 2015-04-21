@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Optiize JavaScript Using Hidden Classes"
+title: "Optimize JavaScript Using Hidden Classes"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
