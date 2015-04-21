@@ -10,7 +10,7 @@ article:
   updated_on: 2015-04-13
   order: 0
 id: setup
-collection: devtools
+collection: tools
 priority: 0
 ---
 
