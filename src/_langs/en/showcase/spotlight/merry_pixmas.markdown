@@ -23,7 +23,7 @@ scores:
 
 title: Merry Pixmas
 link: http://merrypixmas.com
-developer: Bartek Drozdz
+developer: Jim Savage
 
 
 introduction: Christmas fun with 3D CSS Transforms.
