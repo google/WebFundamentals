@@ -2,13 +2,13 @@
 layout: article
 title: "Access WebView Content in Your Development Workspace"
 seotitle: "Access WebView Content in Native Android App in Your Development Workspace"
-description: "TBD."
-introduction: "TBD."
+description: "Debug WebViews in your native Android apps using Chrome Developer Tools."
+introduction: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 authors:
   - megginkearney
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-04-22
   order: 4
 collection: device-testing
 key-takeaways:
@@ -54,7 +54,7 @@ The gray graphics listed with the WebView represent its size and position relati
 
 Can't see your WebViews on the **chrome://inspect page**?
 
-* Verify that [WebView debugging is [enabled](#debugging-webviews) for your app.
+* Verify that WebView debugging is [enabled](#debugging-webviews) for your app.
 * On your device, open the app with the WebView you want to debug. Then, refresh the **chrome://inspect** page.
 
 {% include modules/nextarticle.liquid %}
