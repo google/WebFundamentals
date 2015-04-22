@@ -17,6 +17,9 @@ id: readability
 
 {% wrap content %}
 
-TBD. Originally this doc set was in Debug collection, but it makes more sense to set up code readability at the start, and use it as you go, rather than come to it as part of debugging process.
+Don't minify your source files. Keep your source code as readable as possible. Use server-side or build processes to automatically compress your code.
+
+Make your JavaScript pretty. Use source maps to debug readable code,
+even when that code is being served minified and compressed.
 
 {% endwrap %}
