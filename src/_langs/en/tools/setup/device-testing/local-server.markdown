@@ -12,7 +12,7 @@ article:
   order: 3
 collection: device-testing
 key-takeaways:
-  real: 
+  local-server: 
     - There's no substitute for running your site on a real device. You must try your site on real devices.
     - Something on local server connection (and port forwarding).
     - BrowserSync allows you to synchronise user interactions across a number of devices at the same time.
@@ -21,7 +21,7 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.real %}
+{% include modules/takeaway.liquid list=page.key-takeaways.local-server %}
 
 TBD. Merge port-forwaring content in remote-debugging docs with the content below.
 
@@ -36,7 +36,9 @@ local IP address.
 OS X and Ubuntu users can always run `ifconfig` from a command prompt; Windows
 users can run `ipconfig` from the command prompt.
 
-### What to Do When Development Site and Device Are on Different Networks
+python -m SimpleHTTPServe
+
+## What to Do When Development Site and Device Are on Different Networks
 
 It's often easier and more flexible to test your site using Chromes Port Forwarding
 feature. This shares localhost sites from your computer, to your phone over
