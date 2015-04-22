@@ -2,13 +2,13 @@
 layout: article
 title: "Access Your Site From Devices Using Remote Debugging"
 seotitle: "Access Your Development Site From Devices Using Remote Debugging"
-description: "Web content behaves differntly on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
-introduction: "Web content behaves differntly on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
+description: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
+introduction: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
 authors:
   - megginkearney
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-04-22
   order: 2
 collection: device-testing
 key-takeaways:
@@ -19,17 +19,17 @@ key-takeaways:
 ---
 {% wrap content%}
 
-TBD. What to do with webview content? Mostly we need to make sure Android docs cover webview content! We should cover this in-line with remote debugging in the simplest fashion with a link to Android docs. Android docs need to be the go-to destination for webview content: https://developer.chrome.com/devtools/docs/remote-debugging#debugging-webviews
+![Debugging Chrome for Android using the Chrome Developer Tools](imgs/remote-debug-banner.png)
 
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.real %}
 
+## Access Site on Android Device
+
 Learn how to use the Chrome DevTools to debug your site live on your Android device.
 
-![Debugging Chrome for Android using the Chrome Developer Tools](/imgs/remote-debug-banner.png)
-
-## Requirements
+### 3 Requirements
 
 To begin remote debugging, you need:
 
@@ -41,7 +41,7 @@ To begin remote debugging, you need:
 
 If at any time you encounter problems with remote debugging, refer to the [Troubleshooting](#troubleshooting) section.
 
-## Set up your Android device
+### Set up your Android device
 
 On your Android device, select **Settings > Developer options**.
 
@@ -59,7 +59,7 @@ An alert prompts you to allow USB debugging. Tap **OK**.
 
 ![allow USB debugging message](imgs/allow-usb-debugging.png)
 
-## Connect and discover your device
+### Connect and discover your device
 
 Connect the Android device to your development machine using a USB cable.
 
@@ -106,12 +106,6 @@ For example, you can use DevTools to inspect web page elements on your device:
 
 **Note**: The version of Chrome on your device determines the version of DevTools used during remote debugging. For this reason, the remote debugging DevTools might differ from the version that you normally use.
 
-## Screencast From Device to Development Machine
-
-TBD. This covers https://developer.chrome.com/devtools/docs/remote-debugging#screencasting
-
-TBD. I think I'm going to make this it's own doc in the same section, but just to break up content a bit-- and besides, this is slightly away from main topic of accessing the content.
-
 ## Access Site on iOS or Windows Device
 
 To debug Safari for iOS, follow these steps:
@@ -128,6 +122,12 @@ Unfortunately there is no way to debug a site on Windows Phone, but you can
 [emulate a mobile browser on the desktop version of IE
 11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
 We'll cover this in the [next article](device-emulators.markdown).
+
+## Screencast From Android Device to Development Machine
+
+TBD. This covers https://developer.chrome.com/devtools/docs/remote-debugging#screencasting
+
+TBD. I think I'm going to make this it's own doc in the same section, but just to break up content a bit-- and besides, this is slightly away from main topic of accessing the content.
 
 {% include modules/nextarticle.liquid %}
 
