@@ -1,9 +1,9 @@
 ---
 layout: article
-title: "Access Your Site Through Local Server Connection"
-seotitle: "Access Your Development Site Through Local Server Connection Using Port Forwarding"
-description: "TBD."
-introduction: "TBD."
+title: "Access Your Site Through Web Server"
+seotitle: "Access Your Development Site Through Web Server Using Port Forwarding"
+description: "Instead of physically connecting the devices to your development server, run a web server and point your device to the address."
+introduction: "Instead of physically connecting the devices to your development server, run a web server and point your device to the address."
 authors:
   - megginkearney
 article:
@@ -13,9 +13,9 @@ article:
 collection: device-testing
 key-takeaways:
   local-server: 
-    - 
-    - Something on local server connection (and port forwarding).
-    - BrowserSync allows you to synchronise user interactions across a number of devices at the same time.
+    - You don't have to connect every device to your development server to test it. Run your site in a web server and point your device to the IP address.
+    - Use port forwarding when your device can't access your development server's network.
+    - To reach content on a customized domain, use port forwarding in combination with a proxy server.
 ---
 {% wrap content%}
 
@@ -46,7 +46,7 @@ To start the server, run:
 
 ## Use port-forwarding when site and device on different networks
 
-Your phone can't always reach the content on your development server. They might be on different networks. Moreover, you might be developing on a restricted corporate network.
+Your phone can't always reach the content on your development server. They might be on different networks. Moreover, you might be developing on a restricted corporate network. Use port forwarding when your development server and device are on different networks.
 
 Port forwarding on Chrome for Android makes it easy to test your development site on mobile. It works by creating a listening TCP port on your mobile device that maps to a particular TCP port on your development machine. Traffic between these ports travels through USB, so the connection doesn't depend on your network configuration.
 
@@ -141,9 +141,12 @@ If interested in running unit tests across browsers/devices, you’ll need a tes
 
 ### Help, I need lots of devices!
 
-Device Anywhere
-(commercial)](http://www.keynote.com/solutions/testing/mobile-testing) lets you control any number of real devices remotely,
+You might get by with testing your site on one or two personal devices, but if you really want to be sure your site works on a large user base, you are going to need a lot of devices.
+If you've got the budget, you should definitely invest in a device collection.
+
+If you don't have the budget, or you want access to any device, [Device Anywhere](http://www.keynote.com/solutions/testing/mobile-testing) lets you control any number of real devices remotely,
 without having to actual own those devices outright.
+
 True, you pay for the service, but it's a lot less expensive
 and easier than manually setting up connections to
 hundreds of devices.
