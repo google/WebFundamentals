@@ -25,7 +25,7 @@ key-takeaways:
 
 ## Open local version in device browser
 
-One of the simplest ways to test on a real device, is to run your web server, find the IP address of your computer, and then point your mobile devices to your computer's IP address.
+One of the simplest ways to test on a real device is to run your web server, find the IP address of your computer, and then point your mobile devices to your computer's IP address.
 
 ### Find IP address
 
@@ -114,11 +114,11 @@ Now you can load local domains on Chrome for Android just as you would on the ho
 
 ## How to test site on lots of devices
 
-Even if you test your site on a device as you iterate on the code,
-at some point, you are going to need to see how the site behaves across
-all different types of devices.
+Most likely one device isn't enough.
+Eventually you will need to test how your site behaves
+on different types of devices.
 
-### How to simplify testing across all those devices.
+### Synchronize testing across devices.
 
 If you have a large number of devices to test against, you may find it
 overwhelming to do a basic test across all of the devices. [Browser
@@ -146,10 +146,6 @@ If you've got the budget, you should definitely invest in a device collection.
 
 If you don't have the budget, or you want access to any device, [Device Anywhere](http://www.keynote.com/solutions/testing/mobile-testing) lets you control any number of real devices remotely,
 without having to actual own those devices outright.
-
-True, you pay for the service, but it's a lot less expensive
-and easier than manually setting up connections to
-hundreds of devices.
 
 {% include modules/nextarticle.liquid %}
 
