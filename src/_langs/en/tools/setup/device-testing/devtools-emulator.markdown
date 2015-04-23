@@ -55,7 +55,7 @@ You can use Chrome DevTools device mode to:
 Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png)icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
 
 You can also toggle device mode on and off using the keyboard shortcut:  
- <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> on Mac).
+ Ctrl + Shift + M (or Cmd + Shift + M on Mac).
 
 ![Initial start for device mode](imgs/device-mode-initial-view.png)
 
@@ -89,14 +89,14 @@ To emulate a custom screen size, manually set the CSS pixel dimensions of the de
 
 If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png)field. The **device pixel ratio** (DPR) is the ratio between logical pixels and physical pixels. Devices with Retina displays, such as the iPhone 5, have higher pixel density than standard devices, which can affect the sharpness and size of visual content.
 
-Some examples of <abbr title="Device Pixel Ratio">DPR</abbr>-sensitivity on the web are:
+Some examples of "Device Pixel Ratio" (DPR) sensitivity on the web are:
 
 * CSS media queries such as `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { ... }`
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) rules.
 * The [srcset](http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-srcset) attribute on images.
 * The `window.devicePixelRatio` property.
 
-**Note:** If you have a native Retina display, you'll notice that low <abbr title="Dots Per Inch">dpi</abbr> assets look pixelated while higher-dpi assets are sharp. To simulate this effect on a standard display, set the <abbr title="Device Pixel Ratio">DPR</abbr> to 2 and scale the viewport by zooming. A 2x asset will continue to look sharp, while a 1x one will look pixelated.
+**Note:** If you have a native Retina display, you'll notice that low "Dots Per Inch" (dpi) assets look pixelated while higher-dpi assets are sharp. To simulate this effect on a standard display, set the DPR to 2 and scale the viewport by zooming. A 2x asset will continue to look sharp, while a 1x one will look pixelated.
 
 ### Save custom presets
 
