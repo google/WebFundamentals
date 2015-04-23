@@ -9,7 +9,7 @@ authors:
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-22
-  order: 4
+  order: 3
 collection: device-testing
 key-takeaways:
   webview: 
