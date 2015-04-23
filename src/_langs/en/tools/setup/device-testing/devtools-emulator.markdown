@@ -5,7 +5,7 @@ seotitle: "Mimic Development Site in Production Using Chrome DevTools Device Mod
 description: "Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices."
 introduction: "As your mobile audience grows,
 responsive mobile-friendly web design becomes all the more important.
-Web content needs to look and feel great across a wide variety of devices and network conditions. But testing the quality of your mobile experiences takes longer and makes debugging more complex."
+Web content needs to look and feel great across a wide variety of devices and network conditions. But testing the quality of your mobile experiences takes longer and makes debugging more complex. Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices."
 authors:
   - megginkearney
 article:
@@ -31,8 +31,6 @@ key-takeaways:
 ---
 
 {% wrap content%}
-
-Bring the insights of mobile testing to your browser tab through the power of mobile emulation.Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices.
 
 <object width="425" height="355"><param name="movie" value="https://www.youtube.com/v/FrAZWiMWRa4"><param name="wmode" value="transparent"><embed src="https://www.youtube.com/v/FrAZWiMWRa4" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></object>
 
@@ -116,7 +114,7 @@ In the device pane of the emulation drawer, click **Save as** and give your pres
 
 Now you can quickly select your custom screen emulation from the device preset dropdown.
 
-## Custom Devices
+## Custom devices
 
 Device Mode offers a wide array of devices for emulation. You can add a custom device if you find an edge-case or niche device that isn't covered. To add a custom device do the following:
 
