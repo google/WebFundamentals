@@ -9,7 +9,7 @@ article:
   updated_on: 2015-04-22
   order: 1
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: readability
 key-takeaways:
