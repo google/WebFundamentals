@@ -3,7 +3,9 @@ layout: article
 title: "Mimic Development Site in Production Using Chrome DevTools Device Mode"
 seotitle: "Mimic Development Site in Production Using Chrome DevTools Device Mode"
 description: "Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices."
-introduction: "Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices. Bring the insights of mobile testing to your browser tab through the power of mobile emulation."
+introduction: "As your mobile audience grows,
+responsive mobile-friendly web design becomes all the more important.
+Web content needs to look and feel great across a wide variety of devices and network conditions. But testing the quality of your mobile experiences takes longer and makes debugging more complex."
 authors:
   - megginkearney
 article:
@@ -21,10 +23,16 @@ related-guides:
         href: tools/setup/device-testing/device-emulators
 key-takeaways:
   device-mode: 
-    - TBD.
+    - Enable device mode and turn your viewport into a device emulator.
+    - Test your site's responsiveness using the device mode's screen emulator.
+    - Save custom presets so you can easily access them later.
+    - Device mode isn't a replacement for real device testing. Be aware of it's limitations.
+
 ---
 
 {% wrap content%}
+
+Bring the insights of mobile testing to your browser tab through the power of mobile emulation.Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices.
 
 <object width="425" height="355"><param name="movie" value="https://www.youtube.com/v/FrAZWiMWRa4"><param name="wmode" value="transparent"><embed src="https://www.youtube.com/v/FrAZWiMWRa4" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></object>
 
@@ -33,10 +41,6 @@ key-takeaways:
 {% include modules/takeaway.liquid list=page.key-takeaways.device-mode %}
 
 ## About device mode
-
-As your mobile audience grows,
-responsive mobile-friendly web design becomes all the more important.
-Web content needs to look and feel great across a wide variety of devices and network conditions. But testing the quality of your mobile experiences takes longer and makes debugging more complex.
 
 You can use Chrome DevTools device mode to:
 
@@ -71,7 +75,7 @@ To jump-start your debugging process, device mode has a variety of emulation pre
 
 Each preset automatically configures device emulation in the following ways:
 
-* Specifies the <abbr title="User Agent">UA</abbr> string for requests.
+* Specifies the "User Agent" (UA) string for requests.
 * Sets the device resolution and pixel ratio.
 * Enables touch emulation (if applicable).
 * Emulates mobile scrollbar overlays and meta viewport.
