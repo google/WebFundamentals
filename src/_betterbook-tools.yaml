@@ -2,14 +2,21 @@ toc:
 - title: "<strong>Tools</strong>"
   path: /tools/
   home: true
-- title: "Set Up"
-  path: /tools/setup/
-- title: "Iterate"
-  path: /tools/iterate/
-- title: "Debug"
-  path: /tools/javascript/
-- title: "Profile"
-  path: /tools/profile-performance/
+- title: Documentation
+  hasSubNav: true
+  section:
+  - title: "Set Up"
+    path: /tools/setup/
+  - title: "Iterate"
+    path: /tools/iterate/
+  - title: "Debug"
+    path: /tools/javascript/
+  - title: "Profile"
+    path: /tools/profile-performance/
+- title: "Chrome DevTools"
+  path: /tools/devtools/
+- title: "Web Starter Kit"
+  path: /tools/web-starter-kit/
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
