@@ -44,7 +44,7 @@
     {% assign stripTitle = section.title | strip_html %}
     {% assign currentPath = section.path | append:"index.html" %}
     {% if section.in_header != false  %}
-    <li class="main-nav__item main-nav__item--{% if section.en_title %}{{ section.en_title | downcase | replace:' ','-' }}{% else %}{{ section.title | downcase | replace:' ','-' }}{% endif %} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}{% if section.home and page.url == currentPath %} main-nav__item--current{% endif %} {% if section.hasSubNav %} main-nav__item--has-child{% endif %}">
+    <li class="main-nav__item main-nav__item--{% if section.en_title %}{{ section.en_title | downcase | replace:' ','-' }}{% else %}{{ section.title | strip_html | downcase | replace:' ','-' }}{% endif %} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}{% if section.home and page.url == currentPath %} main-nav__item--current{% endif %} {% if section.hasSubNav %} main-nav__item--has-child{% endif %}">
       <a class="main-nav__link main-nav__link--parent" href="{% if section.external != true %}{{site.baseurl}}{% endif %}{{ section.path }}?hl={{page.langcode}}" title="Go to {{ stripTitle }}">
 
         {{ section.title }}
@@ -68,9 +68,9 @@
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
                     <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.baseurl}}{{ subsection.path }}?hl={{page.langcode}}">
                       {% if subsection.id %}
-                      <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span> 
+                      <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span>
                       {% endif %}
-                      {{ subsection.title }} 
+                      {{ subsection.title }}
                       <i class="main-nav__icon icon icon-chevron-right"></i>
                     </a>
                   </li>
