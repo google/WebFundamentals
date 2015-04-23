@@ -18,23 +18,74 @@ feedPath: tools/feed.xml
   </div>
 </div>
 
-<div class="container sections">
-  <div class="centered">  
-    <ul class="list-guides-intro guides-list container">
-      {% for guide in page.articles.[page.id] %}
-      {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
-      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
-        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}" class="themed">
-            <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
-            <h3 class="large">{{guide.title}}</h3>
-          </a>
-          <p>{{ guide.snippet }}</p>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-    </div>
+<div class="tools-home">
+
+  <div class="container tools-docs-header">
+    <h2>Documentation &amp; Tutorials</h2>
+
+    <h3>By Action or Problem</h3>
   </div>
+
+  <div class="tools-docs-divider"></div>
+
+  <div class="container tools-docs-listing">
+    <ul>
+        {% for guide in page.articles.[page.id] %}
+        {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+        <li class="theme--{{ guide.id }}">
+          <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
+            <h4>{{guide.title}}</h4>
+          </a>
+          <ul>
+            {% for subguide in page.articles.[guide.id] %}
+            {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
+            <li>
+              <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
+                {{subguide.title}}
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+  </div>
+
+  <div class="container tools-docs-header">
+    <h3>By Category</h3>
+  </div>
+
+  <div class="tools-docs-divider"></div>
+
+  <div class="container tools-docs-listing">
+    <ul>
+        <li>
+          <a href="#">
+            <h4>Advanced JavaScript</h4>
+            <ul>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h4>DevTools Madness</h4>
+            <ul>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+            </ul>
+          </a>
+        </li>
+    </ul>
+  </div>
+
 </div>
+
+
 
 {% include cc.liquid %}
