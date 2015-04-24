@@ -85,6 +85,7 @@ By including the following special comment in your code, which will be evaled, y
 
 Navigate to this
 **[demo](http://www.thecssninja.com/demo/source_mapping/compile.html)**, then:
+
 * Open the DevTools and go to the **Sources** panel.
 * Enter in a filename into the _Name your code:_ input field.
 * Click on the **compile** button.
