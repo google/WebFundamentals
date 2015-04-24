@@ -56,7 +56,7 @@ Sourcemaps are enabled by default (as of Chrome 39), but if you'd like to double
 
 [Enable source maps](imgs/source-maps.png)
 
-## Make the Source Map Accessible
+## Make the source map accessible
 
 To tell DevTools that a source map is available, verify the following line is at the end of the minified file.
 
@@ -75,17 +75,16 @@ Like the comment, this tells DevTools where to look for the source map associate
 Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your source maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](http://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
 
 
-## @sourceURL and displayName in action
+## Demo showing @sourceURL and displayName in action
 
-While not part of the source map spec, the following convention allows you to make development much easier when working with evals.
+While not part of the source map spec, the `@sourceURL` allows you to make development much easier when working with evals. This helper looks very similar to the `//# sourceMappingURL` property and is actually mentioned in the source map V3 specifications.
 
-This helper looks very similar to the `//# sourceMappingURL` property and is actually mentioned in the source map V3 specifications. By including the following special comment in your code, which will be evaled, you can name evals and inline scripts and styles so they appear as more logical names in your dev tools.
+By including the following special comment in your code, which will be evaled, you can name evals and inline scripts and styles so they appear as more logical names in your dev tools.
 
 `//# sourceURL=source.coffee`
 
-## Working with sourceURL
-
-* Navigate to the **[demo](http://www.thecssninja.com/demo/source_mapping/compile.html)**
+Navigate to this
+**[demo](http://www.thecssninja.com/demo/source_mapping/compile.html)**, then:
 * Open the DevTools and go to the **Sources** panel.
 * Enter in a filename into the _Name your code:_ input field.
 * Click on the **compile** button.
