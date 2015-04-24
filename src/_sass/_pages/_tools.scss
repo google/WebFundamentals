@@ -7,13 +7,17 @@
     letter-spacing: 0;
   }
 
+  margin-top: 2em;
+
   h2 {
     color: #4B8EDD;
+    font-size: 2em;
   }
 
   h3 {
     opacity: 0.5;
     margin-top: 1em;
+    font-size: 1.3em;
   }
 
   h4 {
@@ -58,6 +62,128 @@
 
     }
 
+  }
+
+}
+
+.tools-header {
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  background-image: url(/web/tools/landing-placeholder.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right 10%;
+  padding-bottom: 3em;
+
+  .headliner {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  
+  .desc {
+
+    width: 50%;
+
+    h1 {
+      font-size: 1em;
+      display: inline;
+      line-height: normal;
+      padding-top: 0;
+      padding-bottom: 0;
+      letter-spacing: 0;
+    }
+
+    margin-bottom: 1em;
+
+  }
+
+  a {
+      background-color: #4285f4;
+      color: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      text-align: center;
+
+      display: inline-block;
+      position: relative;
+      width: 120px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 0.9em;
+
+      &:hover {
+        text-decoration: none;
+      }
+  }
+
+}
+
+.tools-products {
+
+  padding-bottom: 2em;
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  background: #7DBCFA;
+  color: #fff;
+
+  h2 {
+    color: #fff;
+    font-size: 2em;
+    padding-top: 1em;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 0;
+  }
+
+  .tools-docs-divider {
+    border-bottom: 1px solid #66ADF4;
+    margin-top: 1em;
+  }
+
+  ul {
+  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0;
+      padding: 0;
+      width: 250px;
+      margin-right: 3em;
+
+      p {
+        font-size: 14px;
+        margin-top: 1em;
+      }
+
+      img {
+        background: rgba(63, 134, 203, 1);
+        border-radius: 2px;
+        min-height: 70px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
 }
