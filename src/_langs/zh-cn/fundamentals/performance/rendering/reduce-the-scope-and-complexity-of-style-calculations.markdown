@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Reduce the scope and complexity of style calculations"
-description: "Changing the DOM, through adding and removing elements, changing attributes, classes, or through animation, will all cause the browser to recalculate element styles and, in many cases, layout (or reflow) the page, or parts of it. This process is called computed style calculation."
-introduction: "Changing the DOM, through adding and removing elements, changing attributes, classes, or through animation, will all cause the browser to recalculate element styles and, in many cases, layout (or reflow) the page, or parts of it. This process is called <em>computed style calculation</em>."
+title: "降低样式计算的范围的复杂度"
+description: "添加或移除一个DOM元素、修改元素属性和样式类、应用动画效果等操作，都会引起DOM结构的改变，从而导致浏览器需要重新计算每个元素的样式、对页面或其一部分重新布局（多数情况下）。这就是所谓的样式计算。"
+introduction: "添加或移除一个DOM元素、修改元素属性和样式类、应用动画效果等操作，都会引起DOM结构的改变，从而导致浏览器需要重新计算每个元素的样式、对页面或其一部分重新布局（多数情况下）。这就是所谓的样式计算。"
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,22 +13,22 @@ authors:
   - paullewis
 notes:
   components:
-    - "If you’re into Web Components it’s worth noting that style calculations here are a little different, since by default styles do not cross the Shadow DOM boundary, and are scoped to individual components rather than the tree as a whole. Overall, however, the same concept still applies: smaller trees with simpler rules are more efficiently processed than large trees or complex rules."
+    - "如果你对Web Components很感兴趣，那这篇文章对你就没什么意义了。因为Web Components中的样式计算不会跨越Shadow DOM范围，仅在单个的Web Component中进行，而不是在整个页面的DOM树上进行。但从整体上看，本质是一样的：对于样式计算来说，范围越小、规则越简单的话，处理效率越高。"
   bodystylechange:
-    - "It used to be the case that if you changed a class on -- say -- the body element, that all the children in the page would need to have their computed styles recalculated. Thankfully that is no longer the case; some browsers instead maintain a small collection of rules unique to each element that, if changed, cause the element’s styles to be recalculated. That means that an element may or may not need to be recalculated depending on where it is in the tree, and what specifically got changed."
+    - "在过去，如果你修改了body元素的class属性，那么页面里所有元素都要重新计算样式。幸运的是，现代的浏览器中不再这样做了。他们会对每个DOM元素维护若干个规则集合，如果这个集合发生改变，才重新计算该元素的样式。也就是说，样式的改变不一定会导致重新计算样式，得看这个元素在DOM树中的位置、具体是什么样式发生改变。"
 
 key-takeaways:
-  - Reduce the complexity of your selectors; use a class-centric methodology like BEM.
-  - Reduce the number of elements on which style calculation must be calculated.
+  - 降低样式选择器的复杂度；使用基于class的方式，比如BEM。
+  - 减少需要执行样式计算的元素的个数。
 
 ---
 {% wrap content%}
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-The first part of computing styles is to create a set of matching selectors, which is essentially the browser figuring out which classes, pseudo-selectors and IDs apply to any given element.
+计算样式的第一步是创建一套匹配的样式选择器，浏览器就是靠它们来对一个元素应用样式的。
 
-The second part of the process involves taking all the style rules from the matching selectors and figuring out what final styles the element has. In Blink (Chrome and Opera's rendering engine) these processes are, today at least, roughly equivalent in cost:
+第二步是根据匹配的样式选择器来获取对应的具体样式规则，计算出元素最终要应用在DOM元素上的具体样式有哪些。在Blink（Chrome和Opera的渲染引擎）中，至少从现在来看，这两步在时间消耗上是差不多的。
 
 <div class="quote" style="margin-top: 30px;">
   <div class="container">
@@ -39,9 +39,9 @@ The second part of the process involves taking all the style rules from the matc
 </div>
 
 
-## Reduce the complexity of your selectors
+## 降低样式选择器的复杂度
 
-In the simplest case you reference an element in your CSS with just a class:
+最简单的情况是，你在CSS中仅使用一个class来引用一个DOM元素：
 
 {% highlight css %}
 .title {
@@ -49,7 +49,7 @@ In the simplest case you reference an element in your CSS with just a class:
 }
 {% endhighlight %}
 
-But, as any project grows, it will likely result in more complex CSS, such that you may end up with selectors that look like this:
+但是，随着项目的发展，很可能会有越来越复杂的CSS，最终你可能写出这样的样式选择器：
 
 {% highlight css %}
 .box:nth-last-child(-n+1) .title {
@@ -57,7 +57,7 @@ But, as any project grows, it will likely result in more complex CSS, such that 
 }
 {% endhighlight %}
 
-In order to know that the styles need to apply the browser has to effectively ask “is this an element with a class of title which has a parent who happens to be the minus nth child plus 1 element with a class of box?” Figuring this out _can_ take a lot of time, depending on the selector used and the browser in question. The intended behavior of the selector could instead be changed to a class:
+对于这种样式选择器，为了弄清楚究竟要不要对一个DOM元素使用这个样式，浏览器必须要确认“这个元素是不是有一个值为title的class属性？同时该元素还有一个父元素，这个父元素正好是一个值为box属性的元素的倒数第（-n+1）个子元素？”。看上去都觉得纠结，真正计算起来也非常耗时间。换个方式，我们应该这样定义这个样式选择器，效果一样，却效率更高：
 
 {% highlight css %}
 .final-box-title {
@@ -65,57 +65,58 @@ In order to know that the styles need to apply the browser has to effectively as
 }
 {% endhighlight %}
 
-You can take issue with the name of the class, but the job just got a lot simpler for the browser. In the previous version, in order to know, for example, that the element is the last of its type, the browser must first know everything about all the other elements and whether the are any elements that come after it that would be the nth-last-child, which is potentially a lot more expensive than simply matching up the selector to the element because its class matches.
+你可以用个更好的class名字，但不管怎么说，这样做之后能大大减轻浏览器的负担。在之前的版本中，浏览器为了确认该元素是某个元素的倒数某位的子元素，需要先检查那个元素的所有子元素，然后再检查次序。这比直接匹配class名要复杂得多。
 
-## Reduce the number of elements being styled
-Another performance consideration, which is typically _the more important factor for many style updates_, is the sheer volume of work that needs to be carried out when an element changes.
+## 减少需要执行样式计算的元素的个数
+另一个性能问题，也是_更重要的因素_，就是元素样式发生改变时的样式计算量。
 
-In general terms, the worst case cost of calculating the computed style of elements is the number of elements multiplied by the selector count, because each element needs to be at least checked once against every style to see if it matches.
+一般来说在最坏的情况下，样式计算量 = 元素个数 x 样式选择器个数。因为对每个元素最少需要检查一次所有的样式，以确认是否匹配。
 
 {% include modules/remember.liquid title="Note" list=page.notes.bodystylechange %}
 
-Style calculations can often be targeted to a few elements directly rather than invalidating the page as a whole. In modern browsers this tends to be much less of an issue, because the browser doesn’t necessarily need to check all the elements potentially affected by a change. Older browsers, on the other hand, aren’t necessarily as optimized for such tasks. Where you can you should **reduce the number of invalidated elements**.
+样式计算一般是直接对那些目标元素执行，而不是对整个页面执行。在现代浏览器中，样式计算进一步被优化，因为浏览器不会检查所有受到样式变化影响的元素。而以前的浏览器对于这种情况的处理没有进行这种优化。因此，你最好尽可能**减少需要执行样式计算的元素的个数**。
 
 {% include modules/remember.liquid title="Note" list=page.notes.components %}
 
-## Measure your Style Recalculation Cost
-The easiest and best way to measure the cost of style recalculations is to use Chrome DevTools’ Timeline mode. To begin, open DevTools, go to the Timeline tab, hit record and interact with your site. When you stop recording you’ll see something like the image below.
+## 评估样式计算的成本
+最简单最好的评估样式计算成本的方式就是使用Chrome DevTools的Timeline功能。打开DevTools，选择Timeline标签，点击左上角红色record按钮，然后在页面上做一些互动操作。再点击一次那个红色按钮结束记录，你就会看到类似下图的画面：
 
 <img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="DevTools showing long-running style calculations.">
 
-The strip at the top indicates frames per second, and if you see bars going above the lower line, the 60fps line, then you have long running frames.
+顶部的横线表示每秒显示的帧数，如果你看到有柱状条超过了下面的那条横线，也就是表示60fps的那条线，那就说明你的页面里有运行时间过长的帧。
 
 <img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Zooming in on a trouble area in Chrome DevTools.">
 
-If you have a long running frame during some interaction like scrolling, or some other interaction, then it bears further scrutiny.
+如果页面在与用户交互的过程中就运行时间过长的帧，比如页面滚动，那么我们就得对这些帧好好分析一下了。
 
-If you have a large purple block, as in the case the above, click on the record and you’ll get more details.
+如果你看到了很高的紫色柱状条，就像下图所示，那么点击那个紫色条，你会看到更多细节信息。
 
 <img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="Getting the details of long-running style calculations.">
 
-In this grab there is a long-running Recalculate Style event that is taking just over 18ms, and it happens to be taking place during a scroll, causing a noticeable judder in the experience.
+在细节信息中，我们可以看到一个耗时很长的样式计算事件，耗时超过了18毫秒。不巧的是，它正好是在页面滚动过程中发生的，也就给用户带来了一个很明显的卡顿效果。
 
-If you click on the event itself you are given a call stack, which pinpoints the place in your JavaScript that is responsible for triggering the style change. In addition to that, you also get the number of elements that have been affected by the change (in this case just over 400 elements), and how long it took to perform the style calculations. You can use this information to start trying to find a fix in your code.
+再点击一下JavaScript事件，你就会看到一个事件调用栈。在这个栈中你能准确找到是哪个JavaScript事件触发了样式改动。另外，你还能看到这个样式改动影响到的元素个数（在本示例中这个数字超过400）、样式计算耗时多久。这些信息有助于你寻找改进代码的方法。
 
-## Use Block, Element, Modifier
-Approaches to coding like [BEM (Block, Element, Modifier)](https://bem.info/) actually bake in the selector matching performance benefits above, because it recommends that everything has a single class, and, where you need hierarchy, that gets baked into the name of the class as well:
+## 使用块、元素、修饰语
+以[BEM (Block, Element, Modifier)](https://bem.info/)的方式编写代码，能达到最好的样式计算的性能，因为这种方式建议对每个DOM元素都只使用一个样式class。对于需要层级结构的情况，只需要把层级信息合并到class名里面：
 
 {% highlight css %}
 .list { }
 .list__list-item { }
 {% endhighlight %}
 
-If you need some modifier, like in the above where we want to do something special for the last child, you can add that like so:
+如果你需要用修饰语，比如前面那个需要获取最后一个子元素的例子，你可以这样处理：
 
 {% highlight css %}
 .list__list-item--last-child {}
 {% endhighlight %}
 
+如果你想更好的组织CSS代码，BEM是一个很好的选择，不管是代码结构还是样式查找速度都是很棒的。
 If you’re looking for a good way to organize your CSS, BEM is a really good starting point, both from a structure point-of-view, but also because of the simplifications of style lookup.
 
-If you don’t like BEM, there are other ways to approach your CSS, but the performance considerations should be assessed alongside the ergonomics of the approach.
+如果你不喜欢用BEM，当然还有其他编写CSS的方式可用，不过在使用它之前，你得好好评估一下它在性能方面的表现。
 
-## Resources
+## 参考链接
 
 * [Style invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
 * [BEM (Block, Element, Modifier)](https://bem.info/)
