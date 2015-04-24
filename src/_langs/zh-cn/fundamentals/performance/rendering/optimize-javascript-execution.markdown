@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Optimize JavaScript Execution"
-description: "JavaScript is often the trigger for visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that will result in visual changes, like searching or sorting some data. Badly-timed or long-running JavaScript can be a common cause of performance issues, and you should look to minimize its impact where you can."
-introduction: "JavaScript is often the trigger for visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that will result in visual changes, like searching or sorting some data. Badly-timed or long-running JavaScript can be a common cause of performance issues, and you should look to minimize its impact where you can."
+title: "优化JavaScript的执行"
+description: "页面的视觉变动大多是通过JavaScript触发的。有些是由直接修改样式属性而产生的，有些则是由数据计算而产生的，比如搜索或排序。错误的执行时机和太长的时间消耗，是常见的导致JavaScript性能低下的原因。你需要尽力减少它们对JavaScript执行性能的影响。"
+introduction: "页面的视觉变动大多是通过JavaScript触发的。有些是由直接修改样式属性而产生的，有些则是由数据计算而产生的，比如搜索或排序。错误的执行时机和太长的时间消耗，是常见的导致JavaScript性能低下的原因。你需要尽力减少它们对JavaScript执行性能的影响。"
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,28 +13,28 @@ authors:
   - paullewis
 notes:
   jit:
-    - If you really want to see JIT in action you should check out <a href="http://mrale.ph/irhydra/2/">IRHydra<sup>2</sup> by Vyacheslav Egorov</a>. It shows the intermediate state of JavaScript code when Chrome’s JavaScript engine, V8, is optimizing it.
+    - 如果你想看看JIT到底长什么样，请参考：<a href="http://mrale.ph/irhydra/2/">IRHydra<sup>2</sup> by Vyacheslav Egorov</a>。这篇文章讲解了页面中的JavaScript代码在Chrome的V8引擎中被优化时的中间状态。
 
 key-takeaways:
-  - Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
-  - Move long-running JavaScript off the main thread to Web Workers.
-  - Use micro-tasks to make DOM changes over several frames.
-  - Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.
+  - 对于视觉更新的实现，避免使用setTimeout或setInterval，请使用requestAnimationFrame。
+  - 把耗时长的JavaScript代码放到Web Workers中去做。
+  - 把DOM元素的更新划分为多个小任务，分别在多个frame中去完成。
+  - 使用Chrome DevTools的Timeline和JavaScript Profiler来分析JavaScript的性能。
 
 ---
 {% wrap content%}
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-JavaScript performance profiling can be something of an art, because the JavaScript you write is nothing like the code that is actually executed. Modern browsers use JIT compilers and all manner of optimizations and tricks to try and give you the fastest possible execution, and this substantially changes the dynamics of the code.
+JavaScript性能分析是一件艺术活，因为你所写的JavaScript代码跟实际执行的代码完全是两回事。现代浏览器都会使用JIT编译器和其他优化手段来使你的JavaScript代码能尽可能执行得更快，这个编译和优化的过程会对代码产生极大的改动。
 
 {% include modules/remember.liquid title="Note" list=page.notes.jit %}
 
-With all that said, however, there are some things you can definitely do to help your apps execute JavaScript well.
+尽管如此，在优化JavaScript程序的执行速度方面，当然还是有一些你能做的事。
 
-## Use requestAnimationFrame for visual changes
+## 使用requestAnimationFrame
 
-When visual changes are happening on screen you want to do your work at the right time for the browser, which is right at the start of the frame. The only way to guarantee that your JavaScript will run at the start of a frame is to use `requestAnimationFrame`.
+假设页面上有一个视觉变化效果，你想在变化刚刚发生的那一刻的时候做点什么，比如运行一段JavaScript程序。那么唯一能保证这个运行时机的，就是`requestAnimationFrame`。
 
 {% highlight javascript %}
 /**
@@ -48,19 +48,19 @@ function updateScreen(time) {
 requestAnimationFrame(updateScreen);
 {% endhighlight %}
 
-Frameworks or samples may use `setTimeout` or `setInterval` to do visual changes like animations, but the problem with this is that the callback will run at _some point_ in the frame, possibly right at the end, and that can often have the effect of causing us to miss a frame, resulting in jank.
+很多框架和示例代码都是用`setTimeout`或`setInterval`来实现页面中的动画效果。这种实现方式的问题是，你在`setTimeout`或`setInterval`中指定的回调函数的执行时机是无法保证的。它将在这一帧动画的_某个时间点_被执行，很可能是在帧结束的时候。这就意味这我们可能失去这一帧的信息，也就是发生jank。
 
 <img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="setTimeout causing the browser to miss a frame.">
 
-In fact, jQuery’s default `animate` behavior today is to use `setTimeout`! You can [patch it to use `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), which is strongly advised.
+事实上，jQuery中`animate`函数就是用`setTimeout`来实现的动画的！我建议你去给它打个补丁，用[`requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame)来取代`setTimeout`。
 
-## Reduce complexity or use Web Workers
+## 降低复杂度或者使用Web Workers
 
-JavaScript runs on the browser’s main thread, right alongside style calculations, layout, and, in many cases, paint. If your JavaScript runs for a long time, it will block these other tasks, potentially causing frames to be missed.
+JavaScript代码是运行在浏览器的主线程上的，与此同时，浏览器的主线程还负责样式计算、布局，甚至描绘（多数情况下）的工作。可以想象，如果JavaScript代码运行时间过长，就会阻塞主线程上其他的渲染工作，很可能就会导致帧丢失。
 
-You should be tactical about when JavaScript runs, and for how long. For example, if you’re in an animation like scrolling, you should ideally be looking to keep your JavaScript to something in the region of **3-4ms**. Any longer than that and you risk taking up too much time. If you’re in an idle period, you can afford to be more relaxed about the time taken.
+你需要认真规划JavaScript程序的运行时机和运行耗时。比如，如果你要在一个动画（比如页面滚动）执行过程中运行JavaScript程序，那么理想情况是把这段JavaScript程序的运行耗时控制在3-4毫秒以内。如果长于这个时间，那么就有帧丢失的风险。另一方面，在浏览器空闲期间，你就可以有更多时间来运行JavaScript程序。
 
-In many cases you can move pure computational work to [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/basic_usage), if, for example, the it doesn’t require DOM access. Data manipulation or traversal, like sorting or searching, are often good fits for this model, as are loading and model generation.
+大多数情况下，你可以把纯计算工作放到[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/basic_usage)中做，如果这些计算工作不会涉及DOM元素的存取。数据处理工作，比如排序或搜索，一般都适合这种处理方式。
 
 {% highlight javascript %}
 var dataSortWorker = new Worker("sort-worker.js");
@@ -75,7 +75,7 @@ dataSortWorker.addEventListener('message', function(evt) {
 
 {% endhighlight %}
 
-Not all work can fit this model: Web Workers do not have DOM access. Where your work must be on the main thread, consider a batching approach, where you segment the larger task into micro-tasks, each taking no longer than a few milliseconds, and run inside of `requestAnimationFrame` handlers across each frame.
+并不是所有的JavaScript代码都适合这种方式，因为Web Workers无法访问DOM元素。如果你的JavaScript代码需要存取DOM元素，必须要在主线程上运行，那么可以考虑批处理的方式：把任务细分，每个小任务耗时很少，各自放在一个`requestAnimationFrame`中回调运行。
 
 {% highlight javascript %}
 var taskList = breakBigTaskIntoMicroTasks(monsterTaskList);
@@ -101,33 +101,33 @@ function processTaskList(taskStartTime) {
 }
 {% endhighlight %}
 
-There are UX and UI consequences to this approach, and you will need to ensure that the user knows that a task is being processed, either by [using a progress or activity indicator](http://www.google.com/design/spec/components/progress-activity.html). In any case this approach will keep your app's main thread free, helping it to stay responsive to user interactions.
+如果采用划分任务的方式，那么你需要确保给用户呈现一个好的UX/UI，使得他能知道当前浏览器在处理一个任务，比如[使用一个进度条或者指示器](http://www.google.com/design/spec/components/progress-activity.html)。不管怎样，这种方式能使释放主线程，使你的web应用总能对用户交互保持响应。
 
-## Know your JavaScript’s “frame tax”
+## 了解JavaScript的“帧税”
 
-When assessing a framework, library, or your own code, it’s important to assess how much it costs to run the JavaScript code on a frame-by-frame basis. This is especially important when doing performance-critical animation work like transitioning or scrolling.
+当我们评价一个框架、库或者自己写的JavaScript代码时，很重要的一点就是要分析每一帧中JavaScript代码运行的消耗。对于性能很敏感的动画效果（比如渐变或滚动）来说，这一点尤其重要。
 
-The best way to measure your JavaScript’s cost and performance profile is to use Chrome DevTools. Typically you will get low detail records that look like this:
+对于分析JavaScript代码的性能，最好的方式就是使用Chrom的DevTools。一般来说，通过它你能获取到这些细节：
 
 <img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="Chrome DevTools' Timeline providing low JS execution detail.">
 
-If you discover that you have long-running JavaScript, you can enable the JavaScript profiler at the top of the DevTools user interface:
+如果你发现了运行时间很长的JavaScript代码，那么你可以开启DevTools中顶部的JavaScript profiler选项：
 
 <img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="Enabling the JS profiler in DevTools.">
 
-There is an overhead to profiling JavaScript in this way, so be sure to only enable it when you want more insight into JavaScript runtime characteristics. With the checkbox enabled you can now perform the same actions and you’ll get significantly more information on which functions were called in your JavaScript:
+但是，这个选项本身的运行也会有一些消耗。因此，确保只有在你需要查看更多运行时细节的时候才开启它。开启这个选项之后，再执行一次页面分析动作，你会看到更多细节：
 
 <img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="Chrome DevTools' Timeline providing high JS execution detail.">
 
-Armed with this information you can assess the performance impact of the JavaScript on your application, and begin to find and fix any hotspots where functions are taking too long to execute. As mentioned earlier you should seek to either remove long-running JavaScript, or, if that’s not possible, move it to a Web Worker freeing up the main thread to continue on with other tasks.
+有了这些信息，你就能分析出JavaScript代码对于页面渲染性能的影响了，从而发现并修复JavaScript代码中性能低下的部分。至于如何修复，就像前面说的，你可以删除或者把它放到Web Worker中去，以释放主线程来响应其他任务。
 
-## Avoid micro-optimizing your JavaScript
+## 避免微优化你的JavaScript代码
 
-It may be cool to know that the browser can execute one version of a thing 100 times faster than another thing, like that requesting and element’s `offsetTop` is faster than computing `getBoundingClientRect()`, but it’s almost always true that you’ll only be calling functions like these a small number of times per frame, so it’s normally wasted effort to focus on this aspect of JavaScript’s performance. You'll typically only save fractions of milliseconds.
+对于一个任务，如果换一种实现方式，浏览器的执行速度可以快100倍的话，是非常酷的。比如，读取一个元素的`offsetTop`属性就比计算它的`getBoundingClientRect()`要快。但一般来说，对于每一帧中运行的JavaScript代码来说，调用这些函数的次数都是有限的。因此，在这些微优化上花再大的精力，整体上JavaScript代码的性能可能也就获得若干毫秒的提升。这是不值当的。
 
-If you’re making a game, or a computationally expensive application, then you’re likely an exception to this guidance, as you’ll be typically fitting a lot of computation into a single frame, and in that case everything helps.
+但是，如果你是做一个游戏，或者计算密集型的web应用，那么这个建议可能不适合你。因为你很可能要在一帧中执行很多计算工作，这种情况下需要争取做一切可能的性能优化。
 
-In short, you should be very wary of micro-optimizations because they won’t typically map to the kind of application you’re building.
+简而言之：慎用微优化。因为一般来说它对你的web应用效果不大。
 
 {% include modules/nextarticle.liquid %}
 
