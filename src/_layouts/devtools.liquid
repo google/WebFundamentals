@@ -1,0 +1,12 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/Article">
+    {% injectdata content _betterbook-devtools.yaml %}
+
+    {% include header.liquid %}
+
+    {{ content }}
+
+
+    {% include footer.liquid %}
