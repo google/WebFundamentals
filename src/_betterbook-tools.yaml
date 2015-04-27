@@ -18,7 +18,7 @@ toc:
 - title: "Chrome DevTools"
   path: /tools/devtools/
 - title: "Web Starter Kit"
-  path: /tools/web-starter-kit/
+  path: /tools/starter-kit/
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
