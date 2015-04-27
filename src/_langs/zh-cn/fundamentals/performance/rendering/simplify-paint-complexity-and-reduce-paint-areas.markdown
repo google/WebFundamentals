@@ -13,13 +13,13 @@ authors:
   - paullewis
 notes:
   highdpi:
-    - "在DPI较高的屏幕上，固定定位的元素会自动地被提升到一个它自有的渲染层中。但在DPI较低的设备上却并非如此，因为这个渲染层的提升会使得字体渲染方式由子像素变为灰阶（请参考：[Text Rendering](http://www.html5rocks.com/en/tutorials/internals/antialiasing-101/?redirect_from_locale=zh#toc-text-rendering)），我们需要手动实现渲染层的提升。"
+    - "在DPI较高的屏幕上，固定定位的元素会自动地被提升到一个它自有的渲染层中。但在DPI较低的设备上却并非如此，因为这个渲染层的提升会使得字体渲染方式由子像素变为灰阶（详细内容请参考：[Text Rendering](http://www.html5rocks.com/en/tutorials/internals/antialiasing-101/?redirect_from_locale=zh#toc-text-rendering)），我们需要手动实现渲染层的提升。"
 
 key-takeaways:
-  - Changing any property apart from transforms or opacity always triggers paint.
-  - Paint is often the most expensive part of the pixel pipeline; avoid it where you can.
-  - Reduce paint areas through layer promotion and orchestration of animations.
-  - Use the Chrome DevTools paint profiler to assess paint complexity and cost; reduce where you can.
+  - 除了transform和opacity之外，修改任何属性都会触发描绘
+  - 一般情况下，描绘是整个渲染流水线中代价最高的环节，要尽可能避免它
+  - 通过渲染层提升和仔细规划动画渲染来减小描绘区域
+  - 使用Chrome DevTools的来检测描绘复杂度和时间消耗；尽可能降低这些指标
 
 
 ---
@@ -27,47 +27,47 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-If you trigger layout, you will _always trigger paint_, since changing the geometry of any element means its pixels need fixing!
+如果布局被触发，那么描绘_一定_会被触发。因为改变一个元素的几何属性就意味着该元素的所有像素都需要重新渲染！
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg" class="g--centered" alt="The full pixel pipeline.">
 
-You can also trigger paint if you change non-geometric properties, like backgrounds, text color, or shadows. In those cases layout won’t be needed and the pipeline will look like this:
+除此之外，改变元素的非几何属性，也可能触发描绘。比如背景、文字颜色或者阴影效果。这些属性的改变不会触发布局，整个渲染流水线会像下图所示：
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg" class="g--centered" alt="The pixel pipeline without layout.">
 
-## Use Chrome DevTools to quickly identify paint bottlenecks
+## 使用Chrome DevTools来迅速定位描绘瓶颈
 
-You can use Chrome DevTools to quickly identify areas that are being painted. Go to DevTools and hit the escape key on your keyboard. Go to the rendering tab in the panel that appears and choose “Show paint rectangles”:
+使用Chrome DevTools能够迅速定位出当前页面中正在进行描绘的区域。打开DevTools，按下键盘的ESC键。在弹出的面板中，选中rendering选项卡，然后选中“Show paint rectangles”：
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg" class="g--centered" alt="The show paint rectangles option in DevTools.">
 
-With this option switched on Chrome will flash the screen green whenever painting happens. If you’re seeing the whole screen flash green, or areas of the screen that you didn’t think should be painted, then you should dig in a little further.
+打开了Chrome的这个选项之后，每当页面中有描绘发生时，屏幕上就会闪现绿色的方框。如果你看到绿色方框覆盖了整个屏幕，或者覆盖了一些你觉得不应该发生描绘的区域，那么很可能这次描绘是可以被优化的，你就需要看看这次描绘的更多细节了。
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg" class="g--centered" alt="The page flashing green whenever painting occurs.">
 
-There’s an option in the Chrome DevTools timeline which will give you more information: a paint profiler. To enable it, go to the Timeline and check the “Paint” box at the top. It’s important to _only have this switched on when trying to profile paint issues_, as it carries an overhead and will skew your performance profiling. It’s best used when you want more insight into what exactly is being painted.
+Chrome DevTools中有一个选项能让你看到更多关于描绘的细节：描绘分析器。打开DevTools的Timeline选项卡，选中面板顶部的“Paint”选项，你就开启了描绘分析器。需要注意的是，请_仅在需要分析描绘问题的时候开启该选项_。因为运行描绘分析器本身也会耗费浏览器的资源，对页面性能分析结果多少会有点影响。最好是按需启用它，而不是一直让它开启着。
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg" class="g--centered" alt="The toggle to enable paint profiling in Chrome DevTools.">
 
-From here you can now run a Timeline recording, and paint records will carry significantly more detail. By clicking on a paint record in a frame you will now get access to the Paint Profiler for that frame:
+完成了上述设置之后，你就可以对页面进行性能分析了。运行Timeline记录功能，你就会记录到相当详细的描绘记录信息。在某一帧的记录上点击paint记录，你就会看到这一帧的描绘分析结果：
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg" class="g--centered" alt="The button to bring up the paint profiler.">
 
-Clicking on the paint profiler brings up a view where you can see what got painted, how long it took, and the individual paint calls that were required:
+点击paint profiler，会打开一个视图，里面会显示描绘了哪些元素、花了多长时间、以及每个具体的paint调用：
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools Paint Profiler.">
 
-This profiler lets you know both the area and the complexity (which is really the time it takes to paint), and both of these are areas you can look to fix if avoiding paint is not an option.
+这个分析器能让你了解描绘区域和描绘复杂度（体现为花费了多长时间），这两个方面正好是你可以对描绘做优化的地方（当然我们首先得努力避免描绘的发生，在无法避免的情况下才对描绘做优化）。
 
-## Promote elements that move or fade
+## 提升移动或渐变元素的描绘层
 
-Painting is not always done into a single image in memory. In fact, it’s possible for the browser to paint into multiple images, or compositor layers, if necessary.
+描绘不总是在内存中的单张图片里完成的。实际上，浏览器在必要时将会把一帧描绘成多张图片，然后将这些图片组合成一张图片显示到屏幕上。
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg" class="g--centered" alt="A representation of compositor layers.">
 
-The benefit of this approach is that elements that are regularly repainted, or are moving on screen with transforms, can be handled without affecting other elements. This is the same as with art packages like Sketch, GIMP, or Photoshop, where individual layers can be handled and composited on top of each other to create the final image.
+这种描绘方式的好处是，使用tranforms来实现移动效果的元素将会被正常描绘，同时还不会导致其他元素也被描绘。这种处理方式和思想跟图像处理软件（比如Sketch/GIMP/Photoshop）是一致的，它们都是可以在单个图层上做操作，最后合并所有图层得到最终的图像。
 
-The best way to create a new layer is to use the `will-change` CSS property. This will work in Chrome, Opera and Firefox, and, with a value of `transform`, will create a new compositor layer:
+在页面中创建一个新的渲染层的最好方式就是使用CSS属性`will-change`，Chrome/Opera/Firefox都支持该属性。同时再与`transform`属性一起使用，就会创建一个新的组合层：
 
 {% highlight css %}
 .moving-element {
@@ -75,7 +75,7 @@ The best way to create a new layer is to use the `will-change` CSS property. Thi
 }
 {% endhighlight %}
 
-For browsers that don’t support `will-change`, but benefit from layer creation, such as Safari and Mobile Safari, you need to (mis)use a 3D transform to force a new layer:
+对于那些目前还不支持`will-change`属性、但支持创建渲染层的浏览器，比如Safari和Mobile Safari，你可以使用一个3D transform属性来强制浏览器创建一个新的渲染层：
 
 {% highlight css %}
 .moving-element {
@@ -83,26 +83,26 @@ For browsers that don’t support `will-change`, but benefit from layer creation
 }
 {% endhighlight %}
 
-Care must be taken not to create too many layers, however, as each layer requires both memory and management. There is more information on this in the [Stick to compositor-only properties and manage layer count](stick-to-compositor-only-properties-and-manage-layer-count) section.
+但需要注意的是，不要创建太多的渲染层，因为每创建一个新的渲染层，以为着新的内存分配和层的管理变复杂。关于这方面的更多信息，请参考[Stick to compositor-only properties and manage layer count](stick-to-compositor-only-properties-and-manage-layer-count)。
 
-If you have promoted an element to a new layer, use DevTools to confirm that doing so has given you a performance benefit. **Don't promote elements without profiling.**
+如果你已经把一个元素放到一个新的渲染层里，使用DevTools来确认这么做是否真的改进了渲染性能。**别盲目创建渲染层，一定要分析其实际性能表现**。
 
-## Reduce paint areas
+## 减少描绘区域
 
-Sometimes, however, despite promoting elements, paint work is still necessary. A large challenge of paint issues is that browsers union together two areas that need painting, and that can result in the entire screen being repainted. So, for example, if you have a fixed header at the top of the page, and something being painted at the bottom the screen, the entire screen may end up being repainted.
+有时候尽管把元素提升到了一个单独的渲染层，渲染工作依然是必须的。渲染问题中一个比较有挑战的问题是，浏览器会把两个相邻区域的渲染任务合并在一起进行，这将导致整个屏幕区域都会被描绘。比如，你的页面顶部有一个固定位置的header，而此时屏幕底部有某个区域正在发生描绘的话，整个屏幕都将会被描绘。
 
 {% include modules/remember.liquid title="Note" list=page.notes.highdpi %}
 
-Reducing paint areas is often a case of orchestrating your animations and transitions to not overlap as much, or finding ways to avoid animating certain parts of the page.
+减少描绘区域通常需要对动画和转移效果进行精密设计，以保证各自区域之间不会有太多重叠，或者想办法避免对页面中某些区域执行动画效果。
 
-## Simplify paint complexity
-When it comes to painting, some things are more expensive than others. For example, anything that involves a blur (like a shadow, for example) is going to take longer to paint than -- say -- drawing a red box. In terms of CSS, however, this isn’t always obvious: `background: red;` and `box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);` don’t necessarily look like they have vastly different performance characteristics, but they do.
+## 简化描绘的复杂度
+在描绘所涉及的一些问题中，有些问题是相对更耗费昂贵的。比如，描绘一个blur效果（比如阴影）就比描绘其他效果（比如一个红色方框）更费时。然而，在CSS方面，这些问题并非都是显而易见的：`background: red`和`box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);`可能看上去在性能方面没有太大的差别，但事实却并非如此。
 
 <img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg" class="g--centered" alt="The time taken to paint part of the screen.">
 
-The paint profiler above will allow you to determine if you need to look at other ways to achieve effects. Ask yourself if it’s possible to use a cheaper set of styles or alternative means to get to your end result.
+上面提到的描绘分析器能让你意识到是否该问问自己：有没有其他的方式（比如其他的样式修改方案）来实现同样的效果，却能达到更好的性能。
 
-Where you can you always want to avoid paint during animations in particular, as the **10ms** you have per frame is normally not long enough to get paint work done, especially on mobile devices.
+你应该要尽可能的避免描绘的发生，特别是在动画效果中。因为每帧**10毫秒**的预算一般来说是不足以完成描绘工作的，尤其是在移动设备上。
 
 {% include modules/nextarticle.liquid %}
 
