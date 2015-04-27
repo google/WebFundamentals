@@ -16,6 +16,33 @@ feedPath: tools/feed.xml
     <p class="headliner">Get productive.</p>
     <div class="desc">Discover our <h1>tools</h1> and learn how to kickstart your development cycle.</div>
     <a href="/web/tools/setup/index.html">GET STARTED</a>
+    <a href="/web/tools/updates/index.html">WHAT'S NEW</a>
+  </div>
+</div>
+
+<div class="tools-updates">
+  <div class="container">
+    <ul class="updates">
+      <li>
+        <div class="tags">#DEVTOOLS #TIPS</div>
+        <h4>Something fancy has happened.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, nihil cupiditate! Dicta accusamus sunt at iusto doloremque sit, error ducimus?</p>
+      </li>
+      <li>
+        <div class="tags">#WEBSTARTERKIT</div>
+        <h4>Something else.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa incidunt voluptate laboriosam, dicta hic quibusdam architecto! Maxime quam culpa nemo.</p>
+      </li>
+    </ul>    
+  </div>
+  <div class="more">
+    <div class="container">
+      <ul>
+        <li><a href="https://twitter.com/ChromeDevTools"><strong>@ChromeDevTools</strong></a><a href="https://twitter.com/ChromeDevTools/status/591285586717118464">When debugging JS, DevTools now highlights the exact column as opposed to the entire line. Useful with minified code!</a></li>
+        <li><a href="https://twitter.com/ChromiumDev"><strong>@ChromiumDev</strong></a><a href="https://twitter.com/ChromiumDev/status/591642019543449600">Conferencing done right. Read our case study on the Chrome Dev Summit site. https://developers.google.com/web/showcase/case-study/chrome-dev-summit/ #serviceworker</a></li>
+      </ul>
+      <a href="updates/">ALL UPDATES</a>
+    </div>
   </div>
 </div>
 
@@ -73,7 +100,7 @@ feedPath: tools/feed.xml
   <div class="tools-docs-divider"></div>
 
   <div class="container tools-docs-listing">
-    <ul>
+    <ul class="doclist">
         {% for guide in page.articles.[page.id] %}
         {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
         <li class="theme--{{ guide.id }}">
@@ -104,7 +131,7 @@ feedPath: tools/feed.xml
   <div class="tools-docs-divider"></div>
 
   <div class="container tools-docs-listing">
-    <ul>
+    <ul class="doclist">
         <li>
           <a href="#">
             <h4>Advanced JavaScript</h4>

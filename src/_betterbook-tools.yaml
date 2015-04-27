@@ -2,6 +2,8 @@ toc:
 - title: "<strong>Tools</strong>"
   path: /tools/
   home: true
+- title: "What's new"
+  path: /tools/devtools/updates
 - title: Documentation
   hasSubNav: true
   section:
