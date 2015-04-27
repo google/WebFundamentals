@@ -13,43 +13,21 @@ feedPath: showcase/feed.xml
 {% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
 {% assign combined = caseStudies | wfconcat: spotlights | sort: 'date' | reverse  %}
 
-
-<p style="float: right; margin-top: -40px; margin-right: 20px;"><a href="https://docs.google.com/forms/d/1928U45GIS1-Opi7SG-FczCwRkwnTbXDzF2X5Pe6Q6gU/viewform?usp=send_form" class="button--secondary">Have an idea for the showcase? Let us know!</a></p>
-
-<header class="clear" style="margin-bottom: 60px; margin-top: 70px;">
+<header class="tools-updates-header clear" style="margin-bottom: 6px; margin-top: 70px;">
   <div class="container">
-    <h2 class="xxlarge">Get inspired.</h2>
-    <div class="g--half">
-      <p>
-        Take a deep look at sites and web apps that have achieved success and learn from their mistakes, discoveries and technical advancements. Immerse yourself in <a href="{{site.baseurl}}/showcase/case-study/">case studies</a>, get inspired via lightweight <a href="{{site.baseurl}}/showcase/spotlight/">spotlights</a> and dive deep with technical deep dives.
-      </p>
-    </div>
+    <h2 class="xxlarge">What's New</h2>
+    <p>
+      in Tooling
+    </p>
   </div>
 </header>
 
-<div class="latest-spotlights">
-  <div class="container clear">
-
-  <div class="g--half">
-    <h2 class="xlarge">
-    <strong class="subsection-number">{{caseStudies[0].title }}</strong>
-    {{caseStudies[0].subtitle}}
-    </h2>
-    <p>{{caseStudies[0].introduction}}</p>
-    <a href="{{site.baseurl}}{{caseStudies[0].url | canonicalize}}" class="spotlight-header__cta cta--primary">Read the case study</a>    
+<div class="tools-listing-more">
+  <div class="container">
+    <a href="{{site.baseurl}}/updates/" class="cta--primary">All news</a>
+    <a href="{{site.baseurl}}/tools/updates/" class="cta--primary">Just tooling</a>
+    <a href="{{site.baseurl}}/edge/updates/" class="cta--primary">Just the edge</a>
   </div>
-
-  <div class="spotlight-header__media g--half g--last" style="position: relative;">
-    <img src="{{site.baseurl}}/showcase/case-study/images/{{ caseStudies[0].id }}/device-portrait.png" class="spotlight-header__image" style="top: -370px;">
-  </div>
-
-  </div>
-</div>
-
-<div class="showcase-listing-more">
-  <a href="{{site.baseurl}}/showcase/case-study/" class="cta--primary">All case studies</a>
-  <a href="{{site.baseurl}}/showcase/spotlight/" class="cta--primary">All spotlights</a>
-  <a href="#" class="cta--primary disabled">All deep dives</a>
 </div>
 
 <div class="showcase-listing-list">
