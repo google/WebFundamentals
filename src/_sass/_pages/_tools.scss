@@ -30,16 +30,24 @@
     margin-top: 1em;
   }
 
-  ul {
+  ul.doclist {
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
 
-    li {
+    > li {
       margin: 0;
       padding: 0;
       width: 216px;
+      margin-right: 2em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      flex: 1 1 19%;
+      min-width: 165px;
 
       &::before {
         display: none;
@@ -51,8 +59,13 @@
       display: block;
 
       li {
+        margin: 0;
+        padding: 0;
         padding-bottom: 8px;
-        width: auto;
+        line-height: 1.4;
+        &::before {
+          display: none;
+        }
       }
 
       a {
@@ -75,11 +88,15 @@
     letter-spacing: 0;
   }
 
-  background-image: url(/web/tools/landing-placeholder.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom right 10%;
-  padding-bottom: 3em;
+  margin-top: 1em;
+
+  > div {
+    background-image: url(/web/tools/landing-placeholder.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right 10%;
+    padding-bottom: 3em;
+  }
 
   .headliner {
     font-size: 3em;
@@ -120,6 +137,11 @@
       &:hover {
         text-decoration: none;
       }
+
+      &:last-child {
+        margin-left: 0.5em;
+        background-color: #C5246E;
+      }
   }
 
 }
@@ -127,6 +149,7 @@
 .tools-products {
 
   padding-bottom: 2em;
+  padding-top: 1em;
 
   font-family: Roboto;
   * {
@@ -135,24 +158,20 @@
     letter-spacing: 0;
   }
 
-  background: #7DBCFA;
-  color: #fff;
-
   h2 {
-    color: #fff;
     font-size: 2em;
     padding-top: 1em;
+    color: #4B8EDD;
   }
 
   h3 {
-    color: #fff;
     font-size: 16px;
     font-weight: 500;
     padding-top: 0;
   }
 
   .tools-docs-divider {
-    border-bottom: 1px solid #66ADF4;
+    border-bottom: 1px solid #E8E8E8;
     margin-top: 1em;
   }
 
@@ -167,7 +186,11 @@
       margin: 0;
       padding: 0;
       width: 250px;
-      margin-right: 3em;
+      margin-right: 2em;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       flex: 1 1 19%;
       min-width: 165px;
@@ -178,7 +201,7 @@
       }
 
       img {
-        background: rgba(63, 134, 203, 1);
+        background: #E8E8E8;
         border-radius: 2px;
         min-height: 70px;
       }
@@ -189,4 +212,170 @@
     }
   }
 
+}
+
+.tools-updates {
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  background: #53A1ED;
+  color: #fff;
+
+  ul.updates {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1.5em;
+
+    div.tags {
+      margin-top: 1em;
+      font-size: 14px;
+      color: #095FB2;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      width: 50%;
+      flex: 0 1 auto;
+      padding-right: 0.5em;
+
+      &:last-child {
+        padding-left: 0.5em;
+        padding-right: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      h4 {
+        color: #fff;
+        padding-bottom: 0.5em;
+        padding-top: 0;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+    }
+  }
+
+  .more {
+
+    background: #B9DCFF;
+    font-size: 14px;
+    border-top: 1px solid #D1E8FF;
+    border-bottom: 1px solid #A2D1FF;
+    color: #3C8EDF;
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    ul {
+
+      margin: 0;
+      padding: 0;
+      flex: 1 1 auto;
+      width: 100%;
+      position: relative;
+      height: 3em;
+
+      li {
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        line-height: 49px;
+        opacity: 0;
+
+        animation: rotateWords 10s linear infinite 0s;
+        -webkit-animation: rotateWords 10s linear infinite 0s;
+        -moz-animation: rotateWords 10s linear infinite 0s;
+        -ms-animation: rotateWords 10s linear infinite 0s;
+
+        &:nth-child(2) {
+          animation-delay: 5s;
+          -webkit-animation-delay: 5s;
+          -moz-animation-delay: 5s;
+          -ms-animation-delay: 5s;
+        }
+
+        strong {
+          display: inline-block;
+          margin-right: 0.5em;
+          font-weight: 500;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        a {
+          margin-left: 0;
+          margin-right: 0;
+          font-weight: normal;
+        }
+
+      }
+    } 
+
+    a {
+      flex: 1 0 auto;
+      margin-left: 2em;
+      color: #2B83D8;
+      font-weight: 500;
+    }
+
+  }
+
+}
+
+@keyframes rotateWords {
+    0% { opacity: 1; }
+    8% { opacity: 1; }
+    19% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes rotateWords {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes rotateWords {
+    0% { opacity: 1; }
+    8% { opacity: 1; }
+    19% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes rotateWords {
+    0% { opacity: 1; }
+    8% { opacity: 1; }
+    19% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
 }
