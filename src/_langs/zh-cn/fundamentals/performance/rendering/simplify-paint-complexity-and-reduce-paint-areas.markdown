@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Simplify paint complexity and reduce paint areas"
-description: "Paint is the process of filling in pixels that eventually get composited to the users' screens. It is often the longest-running of all tasks in the pipeline, and one to avoid if at all possible."
-introduction: "Paint is the process of filling in pixels that eventually get composited to the users' screens. It is often the longest-running of all tasks in the pipeline, and one to avoid if at all possible."
+title: "简化描绘的复杂度、减小描绘区域"
+description: "描绘，是填充像素的过程，这些像素将最终显示在用户的屏幕上。通常，这个过程是整个渲染流水线中耗时最长的一环，因此也是最需要避免发生的一环。"
+introduction: "描绘，是填充像素的过程，这些像素将最终显示在用户的屏幕上。通常，这个过程是整个渲染流水线中耗时最长的一环，因此也是最需要避免发生的一环。"
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,7 +13,7 @@ authors:
   - paullewis
 notes:
   highdpi:
-    - "On High DPI screens elements that are fixed position are automatically promoted to their own compositor layer. This is not the case on low DPI devices because the promotion changes text rendering from subpixel to grayscale, and layer promotion needs to be done manually."
+    - "在DPI较高的屏幕上，固定定位的元素会自动地被提升到一个它自有的渲染层中。但在DPI较低的设备上却并非如此，因为这个渲染层的提升会使得字体渲染方式由子像素变为灰阶（请参考：[Text Rendering](http://www.html5rocks.com/en/tutorials/internals/antialiasing-101/?redirect_from_locale=zh#toc-text-rendering)），我们需要手动实现渲染层的提升。"
 
 key-takeaways:
   - Changing any property apart from transforms or opacity always triggers paint.
