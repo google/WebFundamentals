@@ -2,8 +2,8 @@
 layout: article
 title: "Inspect and Tweak Your Pages: the Basics"
 seotitle: "Inspect and Tweak Your Pages in the Chrome DevTools Elements Panel"
-description: "Use the Chrome DevTools Elements panel and Styles pane to inspect and live-edit the HTML & CSS of a web page."
-introduction: "Use the Chrome DevTools Elements panel and Styles pane to inspect and live-edit the HTML & CSS of a web page."
+description: "Inspect and live-edit the HTML & CSS of a web page using the Chrome DevTools Elements panel. View locals changes in the Sources panel."
+introduction: "Inspect and live-edit the HTML & CSS of a web page using the Chrome DevTools Elements panel. View local changes in the Sources panel."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-28
@@ -31,16 +31,17 @@ key-takeaways:
   dom-styles:
     - The Elements panel lets you see everything in one DOM tree, and allows inspection and on-the-fly editing of DOM elements.
     - The Styles pane shows the CSS rules that apply to the selected element, from highest priority to lowest.
+    - The Sources panel lets you inspect local changes made to your page.
     - This doc covers only the very basics of inspecting and tweaking your pages. See the related guides to learn all there is to know about editing your pages.
 remember:
-  note-tbd:
-    - TBD note.
+  new-rule:
+    - tbd
 ---
 {% wrap content %}
 
-Having a real-time representation of the page can be a powerful tool when debugging and authoring web pages. The **Elements panel** lets you view structured information about the current page; the **Styles pane** within the Elements panel shows the CSS rules applied to the individual elements in the page structure.
+Having a real-time representation of the page can be a powerful tool when debugging and authoring web pages. The Chrome DevTools Elements panel lets you view structured information about the current page.
 
-For example, here's a heading element selected in the Elements panel, with the styles applied to that element in the Styles pane:
+The Styles pane within the Elements panel shows the CSS rules applied to the individual elements in the page structure. For example, here's a heading element selected in the Elements panel showing the styles applied to that element in the Styles pane:
 
 ![Viewing a heading element in the DOM](imgs/elements-panel.png)
 
@@ -79,11 +80,27 @@ The labels on the image below correspond with the numbered items below.
 4. The **cascade** dictates that author styles have more weight than user agent styles, so the user-defined style of `display: inline-block;` overrides the user-agent defined style of `display: block`.
 5. **Inherited** styles are displayed as a group under the "Inherited from [node]" header. Click the DOM node in the header to navigate to its position in the DOM tree view. (The [CSS 2.1 properties table](http://www.w3.org/TR/CSS21/propidx.html) shows which properties are inheritable.)
 6. The selector `:root body` has a higher **specificity** than just `body`, therefore its style declarations take precedence.
-7. `font-family` on the body is **overridden**. It is also a similar case for the `font-size` property (overridden due to [selector specificity](http://www.w3.org/TR/css3-selectors/#specificity))
+7. `font-family` on the body is **overridden**. It is also a similar case for the `font-size` property (overridden due to [selector specificity](http://www.w3.org/TR/css3-selectors/#specificity)).
+
+## CSS visibility
+
+Comma separated selectors are colored differently depending on whether or not they match the selected DOM node.
+
+![Selector visibility](imgs/selector-visibility.png)
+
+Greyed out selectors like `audio` and `video` do not apply to the selected node. The rules shown above corresponds to the following CSS source:
+
+`video, audio, div, .message, body *, time {
+  /* visibility: hidden */
+  margin-top: 10px;
+}
+`
+
+Since the visibility declaration is commented out, the Styles pane shows it as disabled.
 
 ## How to live-edit a DOM node
 
-To live-edit a DOM node, simply double-click on a [selected element](#inspect-an-element) and make changles. For example, double-click on the opening **Element tag** (`h2, section, img`). The field is now editable and can be renamed, the closing tag is automatically updated after renaming.
+To live-edit a DOM node, simply double-click on a [selected element](#inspect-an-element) and make changes. For example, double-click on the opening Element tag (`nav`). The field is now editable and can be renamed, the closing tag is automatically updated after renaming.
 
 ![Editable DOM node](imgs/editable-dom-node.png)
 
@@ -104,6 +121,31 @@ To edit the property's value, click on that value, edit it, and press Tab or Ent
 By default, your CSS modifications are not permanent, changes are lost when you reload the page. To customize the behaviour, see [Set Up Persistent Authoring](tools/setup/workspace/setup-workflow).
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.edit-styles %}
+
+## View local changes
+
+To view a history of live-edits made to your page:
+
+* Open the **Sources** panel.
+* Right-click (or **Ctrl + Click** on Mac) on a source file in the sidebar.
+* Select **Local modifications**.
+
+** Todo: image showing local modifications made to css. There's currently an animation for this.
+
+To explore the changes made:
+
+* Expand top-level file names to view the time ![time modification occurred](imgs/image_25.png)a modification occurred.
+* Expand second-level items to view a [diff](http://en.wikipedia.org/wiki/Diff) (before and after) corresponding to the modification. A line with a pink background signifies a removal while a line with a green background signifies an addition.
+
+** Todo: image showing more local modification stuff. There's currently an animation for this.
+
+To undo all local modifications, select **revert** next to filename.
+
+## Undo changes
+
+Use **Ctrl + Z** (or **Ctrl + Z** on Mac) to quickly undo minor changes to the DOM or styles via the Elements panel.
+
+To undo all local modifications made to a file, open the **Sources** panel and select **revert** next to the filename.
 
 {% include modules/nextarticle.liquid %}
 
