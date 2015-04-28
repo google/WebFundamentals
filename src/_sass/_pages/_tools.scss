@@ -223,7 +223,7 @@
     letter-spacing: 0;
   }
 
-  background: #53A1ED;
+  background: #4B8BFA;
   color: #fff;
 
   ul.updates {
@@ -235,9 +235,10 @@
     padding-bottom: 1.5em;
 
     div.tags {
-      margin-top: 1em;
+      margin-top: 0.5em;
       font-size: 14px;
       color: #095FB2;
+      text-transform: uppercase;
     }
 
     li {
@@ -246,6 +247,15 @@
       width: 50%;
       flex: 0 1 auto;
       padding-right: 0.5em;
+      padding-top: 1.5em;
+
+      a {
+        color: inherit;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
 
       &:last-child {
         padding-left: 0.5em;
@@ -260,10 +270,13 @@
         color: #fff;
         padding-bottom: 0.5em;
         padding-top: 0;
+        font-size: 18px;
+        font-weight: 500;
       }
 
       p {
         font-size: 14px;
+        padding-top: 0;
       }
 
     }
@@ -271,11 +284,10 @@
 
   .more {
 
-    background: #B9DCFF;
+    background: #457FE5;
     font-size: 14px;
-    border-top: 1px solid #D1E8FF;
-    border-bottom: 1px solid #A2D1FF;
-    color: #3C8EDF;
+    border-top: 1px solid #5497DA;
+    color: #D1E2FF;
 
     .container {
       display: flex;
@@ -340,7 +352,7 @@
     a {
       flex: 1 0 auto;
       margin-left: 2em;
-      color: #2B83D8;
+      color: #D1E2FF;
       font-weight: 500;
     }
 
@@ -378,97 +390,4 @@
     19% { opacity: 1; }
     25% { opacity: 0; }
     100% { opacity: 0; }
-}
-
-
-.tools-listing-more {
-  background: #4897FF;
-  padding: 1em 0;
-  border-bottom: 1px solid #3081DD;
-
-  a {
-    margin: 0 20px;
-    color: #fff;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  .disabled {
-    color: rgba(255,255,255,0.2);
-  }
-
-}
-
-.tools-updates-header {
-  .container {
-    background-image: none;
-  }
-}
-
-.tools-listing-list {
-
-  background: #f9f9f9;
-  padding: 0 0 0 20px;
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    li {
-      padding: 0 0 26px 0;
-      margin: 0;
-      flex: 2 1 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    li::before {
-      display: none;
-    }
-
-    h3 {
-      padding-top: 0;
-
-      a {
-        color: inherit;
-      }
-    }
-
-    .latest-spotlights__link img {
-      max-height: 13em;
-    }
-
-    .cta--primary {
-      margin-top: 1em;
-    }
-
-    li.half {
-
-      flex: 1 1 50%;
-
-      .featured-list__img-wrapper {
-        padding-top: 0;
-        margin: 0;
-      }
-
-      .g--half {
-        float: left;
-        margin-right: 3.7%;
-        width: 48.15%;
-      }
-
-      .g--last {
-        margin-right: 0;
-      }
-
-    }
-
-    figure {
-      text-align: right;
-    }
-
-  }
-
 }

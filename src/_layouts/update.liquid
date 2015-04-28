@@ -1,0 +1,23 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+    {% injectdata content _betterbook-root.yaml %}
+
+    {% include header.liquid %}
+
+
+	<header class="tools-header updates-header">
+	  <div class="container">
+	    <p class="headliner">{{page.title}}</p>
+	    <div class="desc">{{page.description}}</div>
+	  </div>
+	</header>
+
+	<div class="update-container container">
+	  	{{ content | markdownify }}
+	</div>
+
+    
+
+    {% include footer.liquid %}

@@ -1,0 +1,174 @@
+.update-container {
+
+  padding-bottom: 2em;
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a:link {
+    color: #3372df;
+    text-decoration: none;
+  }
+
+  a:link:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    width: auto;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;  	
+  }
+
+  .video-container {
+    margin-top: 1em;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+.updates-header {
+  margin-top: 0;
+  background: #4B8BFA;
+  color: #fff;
+  .container {
+    background-image: none;
+  }
+  > div {
+    padding-bottom: 2em;
+  }
+}
+
+.updates-list {
+
+  background: #fafafa;
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  ul {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      padding: 1em;
+      padding-bottom: 5em;
+      margin: 0;
+      margin-bottom: 32px;
+      flex: 0 1 calc(50% - 20px);
+      margin-right: 20px;
+      position: relative;
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21);
+      min-width: 410px;
+    }
+
+    li::before {
+      display: none;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.5em;
+      background: #4B8BFA;
+      margin-top: -16px;
+      margin-left: -16px;
+      margin-right: -16px;
+      padding: 16px;
+    }
+
+    p {
+      color: #333;
+      padding-top: 1em;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .tags {
+      padding-top: 0.5em;
+      font-size: 0.9em;
+    }
+
+    .tags span {
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-right: 1em;
+      font-weight: 500;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 1em 1em 0em;
+      border-top: 1px solid #eee;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      div {
+        margin-left: 1em;
+      }
+
+      .icon-circle {
+        display: inline;
+        vertical-align: middle;
+        margin: 0 8px 0 0;
+        padding: 18px;
+      }
+    }
+
+    .latest-spotlights__link img {
+      max-height: 13em;
+    }
+
+    .cta--primary {
+      margin-top: 1em;
+    }
+
+    figure {
+      text-align: right;
+    }
+
+  }
+
+}
