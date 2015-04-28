@@ -23,16 +23,26 @@ feedPath: tools/feed.xml
 <div class="tools-updates">
   <div class="container">
     <ul class="updates">
-      <li>
-        <div class="tags">#DEVTOOLS #TIPS</div>
-        <h4>Something fancy has happened.</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, nihil cupiditate! Dicta accusamus sunt at iusto doloremque sit, error ducimus?</p>
-      </li>
-      <li>
-        <div class="tags">#WEBSTARTERKIT</div>
-        <h4>Something else.</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa incidunt voluptate laboriosam, dicta hic quibusdam architecto! Maxime quam culpa nemo.</p>
-      </li>
+      {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
+      {% for article in updates %}
+      {% if article.category == 'tools' %}
+
+        <li>
+          <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+          <h4>{{article.title}}</h4>
+          <p>{{article.description}}</p>
+          {% if article.tags %}
+          <div class="tags">
+            {% for tag in article.tags %}
+            <span>#{{tag}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          </a>
+        </li>
+
+      {% endif %}
+      {% endfor %}
     </ul>    
   </div>
   <div class="more">
@@ -65,7 +75,7 @@ feedPath: tools/feed.xml
       </li>
       <li>
         <a href="/web/tools/starter-kit/">
-          <img src="https://cloud.githubusercontent.com/assets/170270/3343034/ceef6e92-f899-11e3-96b9-5d9d69d97a00.png" alt="Web Starter Kit">
+          <img src="/web/tools/starter-kit/images/thumb.jpg" alt="Web Starter Kit">
           <h3>Web Starter Kit</h3>
         </a>
         <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
@@ -79,7 +89,7 @@ feedPath: tools/feed.xml
       </li>
       <li>
         <a href="/web/tools/material-design-lite/">
-          <img src="" alt="Material Design Lite">
+          <img src="/web/tools/material-design-lite/images/mdl.jpg" alt="Material Design Lite">
           <h3>Material Design Lite</h3>
         </a>
         <p>A fancy description of the Material Design Lite belongs here. Please add one Addy.</p>
