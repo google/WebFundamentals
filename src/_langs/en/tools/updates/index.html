@@ -1,6 +1,6 @@
 ---
 id: tools-updates
-layout: showcase
+layout: updates-tools
 collection: web
 title: "Updates"
 description: ""
@@ -13,12 +13,12 @@ feedPath: showcase/feed.xml
 {% assign spotlights = page.articles.spotlight | sort: 'date' | reverse  %}
 {% assign combined = caseStudies | wfconcat: spotlights | sort: 'date' | reverse  %}
 
-<header class="tools-updates-header clear" style="margin-bottom: 6px; margin-top: 70px;">
+<header class="tools-header tools-updates-header">
   <div class="container">
-    <h2 class="xxlarge">What's New</h2>
-    <p>
-      in Tooling
-    </p>
+    <p class="headliner">Tooling Updates</p>
+    <div class="desc">Discover what's happening with DevTools, Web Starter Kit and the rest of the gang. Check back often for useful tips.</div>
+    <a href="/web/tools/setup/index.html">GET STARTED</a>
+    <a href="/web/tools/updates/index.html">WHAT'S NEW</a>
   </div>
 </header>
 
@@ -30,8 +30,8 @@ feedPath: showcase/feed.xml
   </div>
 </div>
 
-<div class="showcase-listing-list">
-  <ul>
+<div class="tools-listing-list">
+  <ul class="container">
 
     {% for article in combined %}
 

@@ -2,16 +2,6 @@ toc:
 - title: "<strong>Material Design Lite</strong>"
   path: /tools/material-design-lite/
   home: true
-- title: "Download"
-  path: https://github.com/google/material-design-lite/releases/latest
-  external: true
-- title: "Getting Started"
-  path: /tools/setup/material-design-lite/
-- title: "Docs"
-  path: /tools/
-- title: "GitHub"
-  path: https://github.com/google/material-design-lite
-  external: true
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
