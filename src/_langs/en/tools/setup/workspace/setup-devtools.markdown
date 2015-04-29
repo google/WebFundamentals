@@ -14,6 +14,9 @@ collection: workspace
 key-takeaways:
   devtools: 
     - TBD.
+remember:
+  workspace:
+    - To make better use of screen real estate, collapse any panes you are not actively using and resize the divider between the DOM tree and the sidebar containing the panes.
 ---
 
 {% wrap content%}
@@ -39,6 +42,8 @@ TBD. Content to cover: accessing instructions in https://developer.chrome.com/de
 ## Basics on How to Use Them
 
 TBD. This is an overview on how to use the tools based on a simplification of what's in: https://developer.chrome.com/devtools/docs/authoring-development-workflow
+
+{% include modules/remember.liquid title="Remember" list=page.remember.workspace %}
 
 {% include modules/nextarticle.liquid %}
 
