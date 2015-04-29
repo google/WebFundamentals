@@ -10,6 +10,7 @@ article:
   order: 2
 id: device-testing
 collection: setup
+panel: device mode
 ---
 
 {% comment %}

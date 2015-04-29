@@ -11,6 +11,7 @@ authors:
   - mkearney
 priority: 0
 collection: iterate
+panel: resources
 id: manage-data
 ---
 

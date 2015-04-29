@@ -12,6 +12,7 @@ authors:
   - megginkearney
 priority: 0
 collection: profile-performance
+panel: timeline
 id: rendering-tools
 ---
 

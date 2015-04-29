@@ -12,6 +12,7 @@ authors:
   - mkearney
 priority: 0
 collection: iterate
+panel: elements
 id: inspect-styles
 ---
 
