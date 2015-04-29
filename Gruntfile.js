@@ -158,10 +158,10 @@ module.exports = function(grunt) {
 
     open: {
       local: {
-        path: 'http://localhost:<%=config.port%>/web/fundamentals'
+        path: 'http://localhost:<%=config.port%>/web'
       },
       staging: {
-        path: 'http://web-central.appspot.com/web/fundamentals'
+        path: 'http://web-central.appspot.com/web'
       },
     },
 
