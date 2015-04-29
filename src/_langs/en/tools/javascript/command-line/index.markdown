@@ -12,6 +12,7 @@ authors:
   - megginkearney
 priority: 0
 collection: javascript
+panel: console
 id: command-line
 ---
 

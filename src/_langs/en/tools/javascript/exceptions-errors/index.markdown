@@ -12,6 +12,7 @@ authors:
   - megginkearney
 priority: 0
 collection: javascript
+panel: sources
 id: exceptions-errors
 ---
 

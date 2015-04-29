@@ -39,14 +39,9 @@
     > li {
       margin: 0;
       padding: 0;
-      width: 216px;
-      margin-right: 2em;
+      padding-right: 2em;
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      flex: 1 1 19%;
+      flex: 1 1 25%;
       min-width: 165px;
 
       &::before {
@@ -390,4 +385,140 @@
     19% { opacity: 1; }
     25% { opacity: 0; }
     100% { opacity: 0; }
+}
+
+.devtools {
+
+  font-family: Roboto;
+  font-size: 15px;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+  p, li {
+    font-size: 15px;
+  }
+
+  header {
+    font-size: 16px;
+    border-bottom: 1px solid #E8E8E8;
+    overflow: hidden;
+    padding-top: 1em;
+    a {
+      margin-left: 0;
+      color: #333;
+      background-color: rgb(249, 249, 249);
+
+      &.new {
+        background-color: rgb(63, 127, 237);
+        color: #fff;
+        margin-left: 0.5em;
+      }
+    }
+    .headliner {
+      padding-top: 1em;
+      margin-bottom: 0;
+    }
+
+    .card {
+      position: absolute;
+      top: -1em;
+      left: 50%; 
+
+      span {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.13);
+        padding: 0 0.5em;
+        margin-right: 0.5em;
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-size: 0.9em;        
+      }    
+    }
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      flex: 1 1 50%;
+      min-width: 280px;
+    }
+  }
+
+  h1, h2, h3 {
+    font-weight: 300;
+  }
+
+  .devtools-overview {
+    padding-right: 18px;
+
+    h3 {
+      background-image: url(https://google.github.io/material-design-icons/action/svg/ic_help_24px.svg);
+      background-repeat: no-repeat;
+      background-position: left -2px bottom -2px;
+      padding-left: 1.3em;
+      background-size: 32px;      
+    }
+  }
+
+  .devtools-access {
+    padding-left: 18px;
+
+    h3 {
+      background-image: url(https://google.github.io/material-design-icons/action/svg/ic_info_24px.svg);
+      background-repeat: no-repeat;
+      background-position: left -2px bottom -2px;
+      padding-left: 1.3em;
+      background-size: 32px;      
+    }
+  }
+
+  .note {
+    padding: 1em;
+    background: #F7F7F7;
+    margin-top: 1em;    
+  }
+
+  .tools-home {
+    background: #fafafa;
+
+    ul.doclist.by-panel > li {
+      flex: 0 1 50%;
+      ul, img {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+        margin-top: 0;
+      }
+
+      ul {
+        padding-left: 16px;
+      }
+    }
+
+    .doclist img {
+      height: 118px;
+      width: 100%;
+    }
+
+  }
+
+}
+
+.kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 11px;
+  line-height: 1.4;
+  text-shadow: 0 1px 0 #fff;
+  font-family: Arial,Helvetica,sans-serif;
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  margin: 0 0.1em;
+  white-space: nowrap;
+  box-shadow: 0 1px 0px rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  border-radius: 3px; 
 }
