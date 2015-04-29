@@ -35,7 +35,7 @@ key-takeaways:
     - This doc covers only the very basics of inspecting and tweaking your pages. See the related guides to learn all there is to know about editing your pages.
 remember:
   cascade-inheritance:
-    - Understanding how cascading and inheritance works is essential to debugging your styles. The cascade relates to how CSS declarations are given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit CSS properties from their containing elements (ancestors). See the <a href="http://www.w3.org/TR/CSS2/cascade.html">W3C documentation on cascading and inheritance for more information</a>.
+    - Understanding how cascading and inheritance works is essential to debugging your styles. The cascade relates to how CSS declarations are given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit CSS properties from their containing elements (ancestors). For more, see <a href="http://www.w3.org/TR/CSS2/cascade.html">W3C documentation on cascading</a>.
 ---
 {% wrap content %}
 
@@ -56,10 +56,6 @@ Use the **Elements panel** to inspect all elements in your page in one DOM tree.
 ![Inspect element animation](animations/inspect-element.png)
 
 ### Inspect an element
-
-Inspecting an element shows you the DOM nodes for a rendered element in the browser. 
-
-![Inspect DOM nodes for an element animation](animations/console-inspect.png)
 
 There are several ways to inspect an element:
 
