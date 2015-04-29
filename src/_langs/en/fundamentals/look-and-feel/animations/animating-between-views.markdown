@@ -12,7 +12,7 @@ id: animating-between-views
 priority: 0
 key-takeaways:
   code:
-    - Use transitions to move between views; avoid using `left`, `top` or any other property that triggers layout.
+    - Use translations to move between views; avoid using `left`, `top` or any other property that triggers layout.
     - Ensure any animations you use are snappy and the durations are kept short.
     - Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when  used in a desktop context.
 notes:
