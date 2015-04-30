@@ -88,7 +88,7 @@ Once you reach the last attribute value, pressing tab again creates a new attrib
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.basics %}
 
-### Edit DOM node and it's children as HTLM
+### Edit DOM node and it's children as HTML
 
 To edit a DOM node and its children as HTML:
 
@@ -126,7 +126,7 @@ Remove DOM nodes by using any of the following techniques:
 
 You can also remove an element by deleting its tag when using **Edit as HTML**.
 
-{% include modules/remember.liquid title="Note" list=page.remember.undo-delete %}
+{% include modules/remember.liquid title="Note" list=page.remember.delete-node %}
 
 ## Scroll into view
 
@@ -204,7 +204,7 @@ that have registered listeners.
 
 Click the expander arrow next to the event type (for example `click`) to see a list of registered event handlers. Each handler is identified by a CSS-selector like element identifier, such as "`document`" or "`button#call-to-action`". If more than one handler is registered for the same element, the element is listed repeatedly.
 
-![Element event listeners](animtations/event-listener-resize.png)
+![Element event listeners](animations/event-listener-resize.png)
 
 Click the expander arrow next to an element identifier to see the properties of the event handler. The Event Listeners pane lists the following properties for each listener:
 
@@ -222,7 +222,7 @@ Click the expander arrow next to an element identifier to see the properties of 
     </tr>
     <tr>
       <td data-th="Value"><code>isAttribute</code></td>
-      <td data-th="Description">True if the event is registered through a DOM attribute (for example, `onclick`).</td>
+      <td data-th="Description">True if the event is registered through a DOM attribute (for example, <code>onclick</code>).</td>
     </tr>
     <tr>
       <td data-th="Value"><code>lineNumber</code></td>
