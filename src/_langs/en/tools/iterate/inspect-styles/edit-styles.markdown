@@ -69,11 +69,12 @@ Paste CSS into the Styles pane using **Ctrl + V** (or **Cmd + V** on Mac). Prope
 
 ### Add a style rule
 
-You may find it preferable to add styles along with a **new selector**. Click **New Style Rule** ![plus](imgs/plus.png)within the styles pane header bar to generate a new CSS rule.
+You may find it preferable to add styles along with a **new selector**.
+Click **New Style Rule** within the styles pane header bar to generate a new CSS rule.
 
 ![Add new style rule](animations/new-style-rule.png)
 
-{% include modules/remember.liquid title="Remember" list=page.remember.new-rule %}
+{% include modules/remember.liquid title="Note" list=page.remember.new-rule %}
 
 ### How to add dynamic styles for page elements
 
@@ -83,15 +84,37 @@ You can provide dynamic styling for your UI elements using pseudo-class selector
 
 Trigger any combination of the following four pseudo-classes:
 
-* **:active** - Applies to a link in the process of activation (for example, upon click).
-* **:hover** - Applies to an element while a mouse cursor is over it.
-* **:focus** - Applies to an element which gains focus (for example, through pressing **Tab**).
-* **:visited** - Applies to a link previously visited in the browser.
+<table class="table-2">
+  <thead>
+    <tr>
+      <th>Pseudo-class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Value"><code>**:active** </code></td>
+      <td data-th="Description">Applies to a link in the process of activation (for example, upon click).</td>
+    </tr>
+    <tr>
+      <td data-th="Value"><code>**:hover**</code></td>
+      <td data-th="Description">Applies to an element while a mouse cursor is over it.</td>
+    </tr>
+    <tr>
+      <td data-th="Value"><code>**:focus**</code></td>
+      <td data-th="Description">Applies to an element which gains focus (for example, through pressing **Tab**).</td>
+    </tr>
+    <tr>
+      <td data-th="Value"><code>**:visited**</code></td>
+      <td data-th="Description">Applies to a link previously visited in the browser.</td>
+    </tr>
+  </tbody>
+</table>
 
 To set an element's state:
 
-* Click **Toggle Element State**![attributes](imgs/attributes-icon.png) next to **New Style Rule** ![plus](imgs/plus.png)within the styles pane header.
-* Right-click a DOM node in the Elements panel and select **Force Element State**.
+1. Click **Toggle Element State**![attributes](imgs/attributes-icon.png) next to **New Style Rule** ![plus](imgs/plus.png)within the styles pane header.
+2. Right-click a DOM node in the Elements panel and select **Force Element State**.
 
 ## Edit preprocessor source files
 
@@ -105,8 +128,8 @@ When you inspect an element whose styles are provided by a generated CSS file, t
 
 To jump to the source file:
 
-* Click the link to open the (editable) source file in the Sources panel.
-* **Control+click** (or **Command+click**) on any CSS property name or value to open the source file and jump to the appropriate line.
+1. Click the link to open the (editable) source file in the Sources panel.
+2. **Control+click** (or **Command+click**) on any CSS property name or value to open the source file and jump to the appropriate line.
 
 ![Sources panel showing .scss file](imgs/sass-sources.png)
 
@@ -121,11 +144,8 @@ If you're using Workspaces, you'll need to make sure the generated CSS file is a
 There are a few requirements to note when working with a CSS preprocessor:
 
 * To use this workflow, your CSS preprocessor must support CSS source maps, specifically the Source Map v3 proposal. The CSS source maps must be built along with the CSS files, so DevTools can map each CSS property to the correct location in the original source file (for example, .scss file).
-
 * For the DevTools to automatically reload styles when you change the source file, your preprocessor must be set up to regenerate CSS files whenever a source file changes. Otherwise, you must regenerate CSS files manually and reload the page to see your changes.
-
 * You must be accessing your site or app from a web server (not a **file://** URL), and the server must serve the CSS files as well as the source maps (.css.map) and source files (.scss, etc.).
-
 * If you are _not_ using the Workspaces feature, the web server must also supply the `Last-Modified` header. The Python `SimpleHTTPServer` module provides this header by default. You can start a web server to serve the contents of the current directory like this:
 
   `python -m SimpleHTTPServer`
@@ -135,7 +155,7 @@ There are a few requirements to note when working with a CSS preprocessor:
 CSS source maps are enabled by default. You can choose to enable automatic reloading of generated CSS files. To enable CSS source maps and CSS reload:
 
 1. Open DevTools Settings and click **General**.
-2. Turn on **Enable CSS source maps** and **Auto-reload generated CSS.
+2. Turn on **Enable CSS source maps** and **Auto-reload generated CSS**.
 
 ## Using Sass with CSS source maps
 
@@ -158,13 +178,11 @@ For instance, given an SCSS file named **styles.scss**:
 `$textSize: 26px;
 $fontColor: red;
 $bgColor: whitesmoke;
-
 h2 {
     font-size: $textSize;
     color: $fontColor;
     background: $bgColor;
-}
-`
+}`
 
 Sass generates a CSS file, **styles.css**, with the sourceMappingURL annotation:
 
