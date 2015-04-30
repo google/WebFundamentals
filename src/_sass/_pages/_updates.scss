@@ -62,10 +62,75 @@
   color: #fff;
   .container {
     background-image: none;
+    h1.headliner {
+      font-size: 3em;
+      padding-top: 1em;
+      margin-bottom: .5em;
+      color: #fff;   
+    }
+
+    a {
+      box-shadow: none;
+      text-align: left;
+      display: inline;
+      width: auto;
+      height: auto;
+      line-height: 0;
+      border-radius: 0;
+      font-size: inherit;
+      background-color: transparent;
+      color: inherit;
+
+      &:last-child {
+        margin-left: 0;
+      }      
+    }
   }
   > div {
     padding-bottom: 2em;
   }
+
+  .desc {
+    width: auto;
+  }
+
+  .details {
+
+    margin-top: 0px;
+    color: #000;
+    opacity: 0.5;
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: invert(100%);
+
+    div {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 15px;
+      background-size: 15px;
+      background-repeat: no-repeat;
+      padding-left: 1.3em;
+      margin-right: 0.5em;
+
+      &.date {
+        background-image: url(/web/tools/devtools/images/clock.svg);
+      }
+
+      &.author {
+        background-image: url(/web/tools/devtools/images/account.svg);
+      }
+
+      &.tags {
+        background-image: url(/web/tools/devtools/images/tag.svg);
+        margin-top: 0;
+        text-transform: none;
+        color: #000;
+      }
+    }
+
+  }
+
 }
 
 .updates-list {

@@ -7,7 +7,7 @@ article:
   written_on: 2015-03-24
   updated_on: 2015-03-24
 authors:
-  - pbakaus
+  - heathermahan
 
 collection: updates
 category: tools
@@ -18,6 +18,7 @@ tags:
 
 title: "DevTools Timeline: Now Providing the Full Story"
 description: "We've upgraded the Timeline panel for Chrome DevTools to give developers more insight on their site’s runtime performance."
+featured-image: /web/updates/images/2015-04-20-DevTools-Timeline/draw-calls.png
 permalink: /updates/2015/04/devtools-timeline-improvements
 ---
 

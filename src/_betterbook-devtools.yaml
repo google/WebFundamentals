@@ -2,8 +2,11 @@ toc:
 - title: "<strong>DevTools</strong>"
   path: /tools/devtools/
   home: true
-- title: "NAV TBD"
-  path: /tools/devtools/
+- title: "What's new"
+  path: /tools/updates/
+- title: "Reference"
+  path: https://developer.chrome.com/devtools/docs/console-api
+  external: true
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
