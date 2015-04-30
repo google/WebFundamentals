@@ -24,7 +24,7 @@ related-guides:
       href: web/tools/javascript/breakpoints/add-breakpoints
       section:
         title: "Breakpoint on a DOM mutation event"
-        href: web/tools/javascript/breakpoints/add-breakpoints#breakpoint-on-dom-mutation-event
+        href: web/tools/javascript/breakpoints/add-breakpoints
 priority: 0
 collection: inspect-styles
 key-takeaways:
@@ -35,8 +35,7 @@ key-takeaways:
     - Watch for changes to the DOM using DOM breakpoints.
 remember:
   current-tree:
-    - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM tree.
-  undo-delete
+    - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM:
     - If you delete a node by accident, use <strong>Ctrl + Z</strong> (or <strong>Cmd + Z</strong> on Mac) to undo your last action.
   chrome-extensions
     - Many Chrome extensions add their own event listeners onto the DOM. If you see a number of event listeners that aren't set by your code, you may want to reopen your page in an Incognito window. Incognito windows prevent extensions from running by default.
@@ -150,25 +149,25 @@ Set a DOM breakpoint in the Sources panel and choose on of the following DOM mod
 
 A subtree modification breakpoint is triggered when a child element is added, removed, or moved. For example, if you set a subtree modification breakpoint on the 'main-content' element, the following code triggers the breakpoint:
 
-<pre>var element = document.getElementById('main-content');
+`var element = document.getElementById('main-content');
 
 //modify the element's subtree
 
 var mySpan = document.createElement('span');
 
 element.appendChild( mySpan );
-</pre>
+`
 
 ### Attributes Modifications
 
 An attribute modification occurs when the attribute of an element (`class, id, name`) is changed dynamically:
 
-<pre>var element = document.getElementById('main-content');
+`var element = document.getElementById('main-content');
 
 // class attribute of element has been modified
 
 element.className = 'active';
-</pre>
+`
 
 ### Node Removal
 
@@ -214,6 +213,8 @@ that have registered listeners.
 ![Breakpoint reason](imgs/view-event-listeners.png)
 
 Click the expander arrow next to the event type (for example `click`) to see a list of registered event handlers. Each handler is identified by a CSS-selector like element identifier, such as "`document`" or "`button#call-to-action`". If more than one handler is registered for the same element, the element is listed repeatedly.
+
+![Element event listeners](animtations/element-event-listener.png)
 
 Click the expander arrow next to an element identifier to see the properties of the event handler. The Event Listeners pane lists the following properties for each listener:
 
