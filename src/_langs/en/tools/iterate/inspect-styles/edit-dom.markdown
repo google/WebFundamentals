@@ -37,7 +37,7 @@ remember:
   current-tree:
     - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM:
     - If you delete a node by accident, use <strong>Ctrl + Z</strong> (or <strong>Cmd + Z</strong> on Mac) to undo your last action.
-  chrome-extensions
+  chrome-extensions:
     - Many Chrome extensions add their own event listeners onto the DOM. If you see a number of event listeners that aren't set by your code, you may want to reopen your page in an Incognito window. Incognito windows prevent extensions from running by default.
 ---
 {% wrap content %}
