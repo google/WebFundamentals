@@ -36,6 +36,8 @@ key-takeaways:
 remember:
   cascade-inheritance:
     - Understanding how cascading and inheritance works is essential to debugging your styles. The cascade relates to how CSS declarations are given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit CSS properties from their containing elements (ancestors). For more, see <a href="http://www.w3.org/TR/CSS2/cascade.html">W3C documentation on cascading</a>.
+  current-tree:
+    - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM:
 ---
 {% wrap content %}
 
@@ -91,6 +93,8 @@ The labels on the image below correspond with the numbered items below.
 To live-edit a DOM node, simply double-click on a [selected element](#inspect-an-element) and make changes:
 
 ![Editable DOM node](animations/edit-element-name.png)
+
+{% include modules/remember.liquid title="Note" list=page.remember.current-tree %}
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.edit-dom %}
 
