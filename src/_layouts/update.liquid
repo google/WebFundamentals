@@ -9,7 +9,27 @@
 
 	<header class="tools-header updates-header">
 	  <div class="container">
-	    <p class="headliner">{{page.title}}</p>
+	    <h1 class="headliner">{{page.title}}</h1>
+	    <div class="details">
+          <div class="date">{{ page.article.written_on | date: '%B %d, %Y' }}</div>
+          {% if page.authors %}
+          <div class="author">
+          {% for author in page.authors %}
+          {% assign contributor = site.data["contributors"][author] %}
+              <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+                {{contributor.name.given}} {{contributor.name.family}}
+              </a>
+          {% endfor %}
+          </div>
+          {% endif %}
+          {% if page.tags %}
+          <div class="tags">
+            {% for tag in page.tags %}
+            <span>#{{tag}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
 	    <div class="desc">{{page.description}}</div>
 	  </div>
 	</header>

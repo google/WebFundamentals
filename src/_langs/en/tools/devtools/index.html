@@ -35,7 +35,13 @@ panels:
 			<p class="headliner">Chrome DevTools</p>
 			<div class="desc">Chrome's built-in authoring and debugging tool.</div>
 			<a href="/web/tools/setup/workspace/setup-devtools">GET STARTED</a>
-      <a class="new" href="/web/tools/updates">WHAT'S NEW</a>
+      <div class="social">
+        <a href="#"><img src="/web/tools/devtools/images/github-circle.svg" alt="Github"></a>
+        <a href="#"><img src="/web/tools/devtools/images/google-plus-box.svg" alt="Google+"></a>
+        <a href="#"><img src="/web/tools/devtools/images/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="/web/tools/devtools/images/stackoverflow.svg" alt="Stack Overflow"></a>
+        <a href="#"><img src="/web/tools/devtools/images/youtube-play.svg" alt="YouTube"></a>
+      </div>
 
       <div class="card">
         <p><span>Tip</span>With DevTools opened, click and hold the reload button to see more options.</p>
@@ -43,6 +49,48 @@ panels:
       </div>
 		</div>
 	</header>
+
+  <div class="tools-updates devtools-updates">
+    <div class="container">
+      <h3><a href="/web/tools/updates">What's new <span>All tips &amp; updates</span></a></h3>
+      <ul class="updates">
+        {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
+        {% for article in updates %}
+        {% if article.category == 'tools' %}
+
+          <li>
+            <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+            <h4>{{article.title}}</h4>
+            </a>
+            <div class="details">
+              <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+              {% if article.authors %}
+              <div class="author">
+              {% for author in article.authors %}
+              {% assign contributor = site.data["contributors"][author] %}
+                  <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+                    {{contributor.name.given}} {{contributor.name.family}}
+                  </a>
+              {% endfor %}
+              </div>
+              {% endif %}
+              {% if article.tags %}
+              <div class="tags">
+                {% for tag in article.tags %}
+                <span>#{{tag}}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+            <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{{article.description}}</a></p>
+            
+          </li>
+
+        {% endif %}
+        {% endfor %}
+      </ul>    
+    </div>
+  </div>
 
 	<div class="container flex" style="margin-top: 1em; margin-bottom: 3em;">
 
