@@ -71,11 +71,15 @@ Paste CSS into the Styles pane using **Ctrl + V** (or **Cmd + V** on Mac). Prope
 
 You may find it preferable to add styles along with a **new selector**. Click **New Style Rule** ![plus](imgs/plus.png)within the styles pane header bar to generate a new CSS rule.
 
+![Add new style rule](animations/new-style-rule.png)
+
 {% include modules/remember.liquid title="Remember" list=page.remember.new-rule %}
 
 ### How to add dynamic styles for page elements
 
 You can provide dynamic styling for your UI elements using pseudo-class selectors such as `:hover`. However, these dynamic states can be hard to debug. So DevTools lets you manually set pseudo-classes on individual elements.
+
+![Add new style rule](animations/pseudo-triggers.png)
 
 Trigger any combination of the following four pseudo-classes:
 
