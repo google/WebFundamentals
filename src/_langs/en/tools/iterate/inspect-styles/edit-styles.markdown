@@ -93,19 +93,19 @@ Trigger any combination of the following four pseudo-classes:
   </thead>
   <tbody>
     <tr>
-      <td data-th="Value"><code>**:active** </code></td>
+      <td data-th="Value"><code>:active</code></td>
       <td data-th="Description">Applies to a link in the process of activation (for example, upon click).</td>
     </tr>
     <tr>
-      <td data-th="Value"><code>**:hover**</code></td>
+      <td data-th="Value"><code>:hover</code></td>
       <td data-th="Description">Applies to an element while a mouse cursor is over it.</td>
     </tr>
     <tr>
-      <td data-th="Value"><code>**:focus**</code></td>
-      <td data-th="Description">Applies to an element which gains focus (for example, through pressing **Tab**).</td>
+      <td data-th="Value"><code>:focus</code></td>
+      <td data-th="Description">Applies to an element which gains focus (for example, through pressing Tab).</td>
     </tr>
     <tr>
-      <td data-th="Value"><code>**:visited**</code></td>
+      <td data-th="Value"><code>:visited</code></td>
       <td data-th="Description">Applies to a link previously visited in the browser.</td>
     </tr>
   </tbody>
