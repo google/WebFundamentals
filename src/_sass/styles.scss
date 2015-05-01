@@ -87,7 +87,7 @@
 @import "_pages/shows/_polycasts";
 @import "_pages/shows/_cds";
 @import "_pages/shows/_udacity";
-@import "_pages/shows/_ttt_intro";
+@import "_pages/shows/_lazyweb";
 
 // Components
 @import "_components/_grid";
@@ -109,6 +109,9 @@
 @import "_pages/_resources";
 @import "_pages/_spotlight";
 @import "_pages/_case-study";
+@import "_pages/_tools";
+@import "_pages/_tools-mdl";
+@import "_pages/_updates";
 
 // Make sure this is last to override anything else :)
 @import "_helper";

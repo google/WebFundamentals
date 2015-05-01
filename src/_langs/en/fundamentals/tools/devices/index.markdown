@@ -7,7 +7,7 @@ article:
   written_on: 2014-05-29
   updated_on: 2014-05-29
   order: 4
-collection: tools
+collection: wf-tools
 id: devices
 ---
 

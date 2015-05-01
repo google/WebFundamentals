@@ -107,7 +107,9 @@
 
     {% endwrap %}
 
-    {% include modules/shows/feedlink.liquid feedUrl=feedUrl %}
+    <!-- BEFORE -->
+    {% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink=page.emailSubscriptionLink %}
+    <!-- AFTER -->
 
     {% include cc.liquid %}
     {% include footer.liquid %}

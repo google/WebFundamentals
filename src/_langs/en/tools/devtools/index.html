@@ -1,0 +1,188 @@
+---
+layout: devtools
+description: "TDB Description."
+class: starter-kit
+title: DevTools
+id: devtools
+collection: web
+permalink: /chrome-devtools
+
+panels:
+  - title: Elements
+    img: https://developer.chrome.com/devtools/images/elements-panel.png
+  - title: Network
+    img: https://developer.chrome.com/devtools/images/network-panel.png
+  - title: Sources
+    img: https://developer.chrome.com/devtools/images/js-debugging.png
+  - title: Timeline
+    img: https://developer.chrome.com/devtools/images/timeline-panel.png
+  - title: Profiles
+    img: https://developer.chrome.com/devtools/images/profiles-panel.png
+  - title: Resources
+    img: https://developer.chrome.com/devtools/images/resources-panel.png
+  - title: Audits
+    img: https://developer.chrome.com/devtools/images/audits-panel.png
+  - title: Console
+    img: https://developer.chrome.com/devtools/docs/console-files/expression-evaluation.png
+  - title: Device Mode
+    img: https://developer.chrome.com/devtools/docs/device-mode-files/device-mode-initial-view.png
+---
+
+<div class="devtools">
+
+	<header class="tools-header updates-header">
+		<div class="container">
+			<p class="headliner">Chrome DevTools</p>
+			<div class="desc">Chrome's built-in authoring and debugging tool.</div>
+			<a href="/web/tools/setup/workspace/setup-devtools">GET STARTED</a>
+      <div class="social">
+        <a href="#"><img src="/web/tools/devtools/images/github-circle.svg" alt="Github"></a>
+        <a href="#"><img src="/web/tools/devtools/images/google-plus-box.svg" alt="Google+"></a>
+        <a href="#"><img src="/web/tools/devtools/images/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="/web/tools/devtools/images/stackoverflow.svg" alt="Stack Overflow"></a>
+        <a href="#"><img src="/web/tools/devtools/images/youtube-play.svg" alt="YouTube"></a>
+      </div>
+
+      <div class="card">
+        <p><span>Tip</span>With DevTools opened, click and hold the reload button to see more options.</p>
+        <img src="https://31.media.tumblr.com/tumblr_nn9hzvsWHs1qak298_frame1.jpg" alt="">
+      </div>
+		</div>
+	</header>
+
+  <div class="tools-updates devtools-updates">
+    <div class="container">
+      <h3><a href="/web/tools/updates">What's new <span>All tips &amp; updates</span></a></h3>
+      <ul class="updates">
+        {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
+        {% for article in updates %}
+        {% if article.category == 'tools' %}
+
+          <li>
+            <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+            <h4>{{article.title}}</h4>
+            </a>
+            <div class="details">
+              <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+              {% if article.authors %}
+              <div class="author">
+              {% for author in article.authors %}
+              {% assign contributor = site.data["contributors"][author] %}
+                  <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+                    {{contributor.name.given}} {{contributor.name.family}}
+                  </a>
+              {% endfor %}
+              </div>
+              {% endif %}
+              {% if article.tags %}
+              <div class="tags">
+                {% for tag in article.tags %}
+                <span>#{{tag}}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+            <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{{article.description}}</a></p>
+            
+          </li>
+
+        {% endif %}
+        {% endfor %}
+      </ul>    
+    </div>
+  </div>
+
+	<div class="container flex" style="margin-top: 1em; margin-bottom: 3em;">
+
+		<div class="devtools-overview">
+			<h3>What's it all about?</h3>
+			<p>The Chrome Developer Tools (DevTools for short), are a set of web authoring and debugging tools built into Google Chrome. The DevTools provide web developers deep access into the internals of the browser and their web application. Use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.</p>
+			<div class="note">Note: If you are a web developer and want to get the latest version of DevTools, you should use <a href="https://tools.google.com/dlpage/chromesxs">Google Chrome Canary</a>.</div>
+		</div>
+
+		<div class="devtools-access">
+			<h3>How to access</h3>
+			<p>To access the DevTools, open a web page or web app in Google Chrome. Either:</p>
+			<ul>
+				<li>Select the <strong>Chrome menu</strong> at the top-right of your browser window, then select <strong>Tools > Developer Tools</strong>.</li>
+				<li>Right-click on any page element and select Inspect Element.</li>
+				<li>Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac) (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
+			</ul>
+			<p>The DevTools window will open at the right side of your Chrome browser.</p>
+		</div>
+
+	</div>
+
+	<div class="tools-home">
+
+	  <div class="container tools-docs-header">
+	    <h2>Documentation &amp; Tutorials</h2>
+
+	    <h3>By Action or Problem</h3>
+	  </div>
+
+	  <div class="tools-docs-divider"></div>
+
+	  <div class="container tools-docs-listing">
+	    <ul class="doclist">
+	        {% for guide in page.articles.tools %}
+	        {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+	        <li class="theme--{{ guide.id }}">
+	          <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
+	            <h4>{{guide.title}}</h4>
+	          </a>
+	          <ul>
+	            {% for subguide in page.articles.[guide.id] %}
+	            {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
+	            <li>
+	              <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
+	                {{subguide.title}}
+	              </a>
+	            </li>
+	            {% endif %}
+	            {% endfor %}
+	          </ul>
+	        </li>
+	        {% endif %}
+	        {% endfor %}
+	    </ul>
+	  </div>
+
+	  <div class="container tools-docs-header">
+	    <h3>By Panel</h3>
+	  </div>
+
+{% assign guides1 = page.articles.setup  %}
+{% assign guides2 = page.articles.iterate  %}
+{% assign guides3 = page.articles.javascript  %}
+{% assign guides4 = page.articles.profile-performance  %}
+{% assign combined = guides1 | wfconcat: guides2 | wfconcat: guides3 | wfconcat: guides4  %}
+
+	  <div class="tools-docs-divider"></div>
+
+	  <div class="container tools-docs-listing">
+	    <ul class="doclist by-panel">
+        {% for panel in page.panels %}
+        {% capture lowerPanelTitle %}{{ panel.title | downcase }}{% endcapture %}
+        <li>
+          <h4>{{panel.title}}</h4>
+          <img src="{{panel.img}}">
+          <ul>
+            {% for guide in combined %}
+            {% if guide.panel == lowerPanelTitle and guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+            <li>
+              <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
+                {{guide.title}}
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </li>        
+        {% endfor %}
+	    </ul>
+	  </div>
+
+	</div>
+	
+</div>

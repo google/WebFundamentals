@@ -1,0 +1,172 @@
+---
+layout: tools
+description: "Web Developer Tools provides a set of instructions and tools to help you build your website."
+title: Web Developer Tools
+id: tools
+collection: web
+priority: 0
+feedName: Web Developer Tools - Google Developers
+feedPath: tools/feed.xml
+---
+
+<meta itemprop="url" content="https://developers.google.com/web/tools"/>
+
+<div class="tools-header">
+  <div class="container">
+    <p class="headliner">Get productive.</p>
+    <div class="desc">Discover our <h1>tools</h1> and learn how to kickstart your development cycle.</div>
+    <a href="/web/tools/setup/index.html">GET STARTED</a>
+    <a href="/web/tools/updates/index.html">WHAT'S NEW</a>
+  </div>
+</div>
+
+<div class="tools-updates">
+  <div class="container">
+    <ul class="updates">
+      {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
+      {% for article in updates %}
+      {% if article.category == 'tools' %}
+
+        <li>
+          <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+          <h4>{{article.title}}</h4>
+          <p>{{article.description}}</p>
+          {% if article.tags %}
+          <div class="tags">
+            {% for tag in article.tags %}
+            <span>#{{tag}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          </a>
+        </li>
+
+      {% endif %}
+      {% endfor %}
+    </ul>    
+  </div>
+  <div class="more">
+    <div class="container">
+      <ul>
+        <li><a href="https://twitter.com/ChromeDevTools"><strong>@ChromeDevTools</strong></a><a href="https://twitter.com/ChromeDevTools/status/591285586717118464">When debugging JS, DevTools now highlights the exact column as opposed to the entire line. Useful with minified code!</a></li>
+        <li><a href="https://twitter.com/ChromiumDev"><strong>@ChromiumDev</strong></a><a href="https://twitter.com/ChromiumDev/status/591642019543449600">Conferencing done right. Read our case study on the Chrome Dev Summit site. https://developers.google.com/web/showcase/case-study/chrome-dev-summit/ #serviceworker</a></li>
+      </ul>
+      <a href="updates/">ALL UPDATES</a>
+    </div>
+  </div>
+</div>
+
+<div class="tools-products">
+
+  <div class="container">
+    <h2>All you can tool.</h2>
+  </div>
+
+  <div class="tools-docs-divider"></div>
+
+  <div class="container">
+    <ul>
+      <li>
+        <a href="/web/chrome-devtools/">
+          <img src="https://developer.chrome.com/devtools/images/devtools-window.png" alt="DevTools">
+          <h3>Chrome DevTools</h3>
+        </a>
+        <p>Our web authoring and debugging tools built into Google Chrome.</p>
+      </li>
+      <li>
+        <a href="/web/web-starter-kit/">
+          <img src="/web/tools/starter-kit/images/thumb.jpg" alt="Web Starter Kit">
+          <h3>Web Starter Kit</h3>
+        </a>
+        <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
+      </li>
+      <li>
+        <a href="/web/polymer-starter-kit/">
+          <img src="" alt="Polymer Starter Kit">
+          <h3>Polymer Starter Kit</h3>
+        </a>
+        <p>A fancy description of the Polymer Starter Kit belongs here. Please add one Addy.</p>
+      </li>
+      <li>
+        <a href="/web/material-design-lite/">
+          <img src="/web/tools/material-design-lite/images/mdl.jpg" alt="Material Design Lite">
+          <h3>Material Design Lite</h3>
+        </a>
+        <p>A fancy description of the Material Design Lite belongs here. Please add one Addy.</p>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="tools-home">
+
+  <div class="container tools-docs-header">
+    <h2>Documentation &amp; Tutorials</h2>
+
+    <h3>By Action or Problem</h3>
+  </div>
+
+  <div class="tools-docs-divider"></div>
+
+  <div class="container tools-docs-listing">
+    <ul class="doclist">
+        {% for guide in page.articles.[page.id] %}
+        {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+        <li class="theme--{{ guide.id }}">
+          <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
+            <h4>{{guide.title}}</h4>
+          </a>
+          <ul>
+            {% for subguide in page.articles.[guide.id] %}
+            {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
+            <li>
+              <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
+                {{subguide.title}}
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+  </div>
+
+  <div class="container tools-docs-header">
+    <h3>By Category</h3>
+  </div>
+
+  <div class="tools-docs-divider"></div>
+
+  <div class="container tools-docs-listing">
+    <ul class="doclist">
+        <li>
+          <a href="#">
+            <h4>Advanced JavaScript</h4>
+            <ul>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h4>DevTools Madness</h4>
+            <ul>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+              <li><a href="#">To be done</a></li>
+            </ul>
+          </a>
+        </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+{% include cc.liquid %}

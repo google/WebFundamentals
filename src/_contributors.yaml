@@ -292,7 +292,7 @@ chrispalmer:
     family: Palmer
   country: US
   role:
-    - contributor
+    - author
   description: "Chris is a security engineer on the Chrome Security Team, focusing on secure usability."
 
 jasonpark:
@@ -306,3 +306,19 @@ jasonpark:
   twitter: hyunjO_on
   email: jpar225@gmail.com
   description: "Jason is a Node.js Developer"
+
+heathermahan:
+  name:
+    given: Heather
+    family: Mahan
+  org:
+    name: Independent
+    unit: Developer
+  country: US
+  role:
+    - author
+  homepage: https://github.com/heatheramahan
+  google: 108335678119817391642
+  twitter: heatheramahan
+  email: heatheramahan@gmail.com
+  description: "Heather Mahan is a developer."

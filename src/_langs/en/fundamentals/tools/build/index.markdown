@@ -7,7 +7,7 @@ article:
   written_on: 2014-05-29
   updated_on: 2014-09-25
   order: 2
-collection: tools
+collection: wf-tools
 id: build-your-site
 authors:
   - megginkearney
