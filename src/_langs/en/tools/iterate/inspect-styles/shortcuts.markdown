@@ -2,8 +2,8 @@
 layout: article
 title: "Keyboard Shortcuts Reference"
 seotitle: "Chrome DevTools Keyboard Shortcuts Reference"
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. "
+introduction: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow."
 article:
   written_on: 2015-04-30
   updated_on: 2015-04-30
@@ -21,71 +21,56 @@ remember:
 ---
 {% wrap content %}
 
-
-The DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. Outlined below is each shortcut and the corresponding key for each on Windows/Linux and Mac. While some shortcuts are globally available across all of the DevTools, others are specific to a single panel, and are broken up based on where it can be used.
+This guide provides a quick reference to each DevTools shortcut and the corresponding key for each on Windows/Linux and Mac. While some shortcuts are globally available across all of the DevTools, others are specific to a single panel, and are broken up based on where it can be used.
 
 {% include modules/toc.liquid %}
 
-## Opening DevTools
+## Open DevTools
 
-To access the DevTools, on any web page or app in Google Chrome you can use one of these options:
+To access the DevTools, on any web page or app in Google Chrome, you can use one of these options:
 
-*   Open the **Chrome menu** ![Chrome menu](../images/chrome-menu.png)at the top-right of your browser window, then select **Tools** > **Developer Tools**.
-*   Right-click on any page element and select **Inspect Element**.
+* Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png) at the top-right of your browser window, then select **Tools > Developer Tools**.
+* Right-click on any page element and select **Inspect Element**.
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
+Additonal shortcuts to launch DevTools:
 
-<th>Mac</th>
+<table class="table-3">
+  <thead>
+      <th>Launch DevTools</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Launch DevTools">Open Developer Tools</td>
+	  <td data-th="Windows"><span class="kbd">F12</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
+	  <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
+    </tr>
+    <tr>
+      <td data-th="Attribute"><code>poster</code></td>
+      <td data-th="Availability">All browsers</td>
+      <td data-th="Description">Address (URL) of an image file that the browser can show as soon as the video element is displayed, without downloading video content.</td>
 
-</tr>
-
-<tr>
-<td>Open Developer Tools</td>
-
-<td><span class="kbd">F12</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
-
-</tr>
-
-<tr>
-<td>Open / switch from inspect element mode and browser window</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
-
-</tr>
-
-<tr>
-<td>Open Developer Tools and bring focus to the console</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">J</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">J</span></td>
-
-</tr>
-
-<tr>
-<td>Inspect the Inspector (_undock first one and press_)</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
-
-</tr>
-
-</tbody>
-
+      <td data-th="Launch DevTools">Open / switch from inspect element mode and browser window</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+    </tr>
+    <tr>
+      <td data-th="Launch DevTools">Open Developer Tools and bring focus to the console</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">J</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">J</span></td>
+    </tr>
+    <tr>
+      <td data-th="Launch DevTools">Inspect the Inspector (_undock first one and press_)</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
-
-<div class="collapsible">
 ## All Panels
+
+Shortcuts available on all DevTools panels:
 
 <table>
 <tbody>
