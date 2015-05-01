@@ -47,10 +47,6 @@ Additonal shortcuts to launch DevTools:
 	  <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
     </tr>
     <tr>
-      <td data-th="Attribute"><code>poster</code></td>
-      <td data-th="Availability">All browsers</td>
-      <td data-th="Description">Address (URL) of an image file that the browser can show as soon as the video element is displayed, without downloading video content.</td>
-
       <td data-th="Launch DevTools">Open / switch from inspect element mode and browser window</td>
       <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
       <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
