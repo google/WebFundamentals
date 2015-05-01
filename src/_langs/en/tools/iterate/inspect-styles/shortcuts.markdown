@@ -25,7 +25,7 @@ This guide provides a quick reference to each DevTools shortcut and the correspo
 
 {% include modules/toc.liquid %}
 
-## Open DevTools
+## Short-cuts to open DevTools
 
 To access the DevTools, on any web page or app in Google Chrome, you can use one of these options:
 
@@ -64,7 +64,7 @@ Additonal shortcuts to launch DevTools:
   </tbody>
 </table>
 
-## All Panels
+## Shortcuts in all panels
 
 Shortcuts available in all DevTools panels:
 
@@ -163,7 +163,7 @@ Shortcuts available in all DevTools panels:
   </tbody>
 </table>
 
-## Elements Panel
+## Shortcuts in Elements panel
 
 Right-clicking an element you can:
 
@@ -228,7 +228,7 @@ Shortcuts available in the Elements panel:
   </tbody>
 </table>
 
-## Styles Sidebar
+## Shortcuts in Styles sidebar
 
 Shortcuts available in the Styles sidebar:
 
@@ -302,6 +302,12 @@ Shortcuts available in the Styles sidebar:
 ![Adding style selectors](imgs/plus.png)Add new style selectors
 
 ## Sources Panel
+
+![Pause on Exception Button](imgs/pause-gray.png)Don't pause on exceptions
+
+![Pause on All Exceptions](imgs/pause-blue.png)Pause on All exceptions (including those caught within try/catch blocks)
+
+![Pause on Uncaught Exceptions](imgs/pause-purple.png)Pause on uncaught exceptions (usually the one you want)
 
 Shortcuts available in the Sources panel:
 
@@ -409,12 +415,6 @@ Shortcuts available in the Sources panel:
     </tr>
   </tbody>
 </table>
-
-![Pause on Exception Button](imgs/pause-gray.png)Don't pause on exceptions
-
-![Pause on All Exceptions](imgs/pause-blue.png)Pause on All exceptions (including those caught within try/catch blocks)
-
-![Pause on Uncaught Exceptions](imgs/pause-purple.png)Pause on uncaught exceptions (usually the one you want)
 
 ## Code Editor Shortcuts
 
