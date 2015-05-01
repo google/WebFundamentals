@@ -36,6 +36,8 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.avoid-images %}
 
+{% include modules/udacity_player.liquid title="Learn about including images and graphics without external files" link="" videos="%5B%7B%22id%22%3A+%22xqXQ7nMpzIk%22%7D%2C+%7B%22id%22%3A%22UUJCCEVTe-Q%22%7D%2C+%7B%22id%22%3A+%22Wi8EpUqMnjc%22%7D%2C+%7B%22id%22%3A%22eMtcF7f9PUU%22%7D%2C+%7B%22id%22%3A%22eF_YtTvwDlM%22%7D%2C+%7B%22id%22%3A%22s0_LgpQ9z60%22%7D%2C+%7B%22id%22%3A%22FJ_Dq6FQVwg%22%7D%2C+%7B%22id%22%3A%22Ne-kAmJX9zM%22%7D%2C+%7B%22id%22%3A%22tbia1AIIoBs%22%7D%5D" %}
+
 ## Place text in markup, instead of embedded in images
 
 Wherever possible, text should be text, and not embedded into images, for
@@ -63,17 +65,17 @@ required images.  For examples, complex gradients can be created using the
     box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);
     background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
   }
-  
+
   p#noImage code {
     color: rgb(64, 64, 64);
   }
 </style>
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 

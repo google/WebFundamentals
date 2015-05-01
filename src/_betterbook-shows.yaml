@@ -2,6 +2,8 @@ toc:
 - title: "<strong>Shows</strong>"
   path: /shows/
   home: true
+- title: Lazy Web
+  path: /shows/lazyweb/
 - title: HTTP 203
   path: /shows/http203/
 - title: Polycasts

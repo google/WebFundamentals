@@ -29,7 +29,7 @@
 		YouTube screenshot of {{ seriesPage.title }} Video titled {{ video.title }}
 		{% endcapture %}
 	<entry>
-		<published>{{ video.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+		<published>{{ video.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
 		<updated>{{ video.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
 
 		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
