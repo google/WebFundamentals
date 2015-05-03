@@ -94,13 +94,13 @@ Analizziamo alcuni esempi pratici:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * La prima dichiarazione blocca il rendering e corrisponde a tutte le condizioni.
-* Anche la seconda dichiarazione blocca il rendering: `screen` è il tipo predefinito e se non specifichi alcun tipo, sarà implicitamente impostato su `screen`. Dunque, la prima e la seconda dichiarazione sono effettivamente equivalenti.
+* Anche la seconda dichiarazione blocca il rendering: `all` è il tipo predefinito e se non specifichi alcun tipo, sarà implicitamente impostato su `all`. Dunque, la prima e la seconda dichiarazione sono effettivamente equivalenti.
 * La terza dichiarazione presenta una query supporti dinamica che verrà valutata quando viene caricata la pagina. A seconda dell'orientamento del dispositivo quando la pagina viene caricata, portrait.css potrebbe bloccare il rendering o meno.
 * L'ultima dichiarazione viene applicata solo quando la pagina viene stampata, dunque non blocca il rendering quando la pagina viene caricata per la prima volta nel browser.
 
