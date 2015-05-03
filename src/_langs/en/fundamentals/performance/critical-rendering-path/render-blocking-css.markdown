@@ -102,7 +102,6 @@ Let's consider some hands-on examples:
 
 * The first declaration is render blocking and matches in all conditions.
 * The second declaration is also render blocking: "all" is the default type and if you don’t specify any type, it’s implicitly set to "all". Hence, the first and second declarations are actually equivalent.
-ucs.vm,192.168.5.119 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/65AZM1ozInuU45TAajlZKuil3cD7+Fvv7x/n8xmD22vGUK7S9UCsPvqKkchE/nCR3X8WFKvTw/H4xXSQIdvbpg/yR89BRx8vYxBUwTbNlRQVa4ZHI8QbvKIRBkQAVYXt13aY7mDnhm+QJ2iEHiZI3LeIXGxRXqmFF/I1VwMvCkChgmRw2xEIQl/Nbj3ap+dxwdcnd7FVvvK4xynyG8coyHOuHmxksSa0xXYjsBWBTx0WrgBStpioq6IjyM/CJk0XAZMMt+yuIuqxGfgJwOy080eQeyfTXaWPP/F88RLa+X/k+mOcl9fKiV87VX6bAIbYJ6mbTX78sMi/qdkatg11
 * The third declaration has a dynamic media query which will be evaluated when the page is being loaded. Depending on the orientation of the device when the page is being loaded, portrait.css may or may not be render blocking.
 * The last declaration is only applied when the page is being printed, hence it is not render blocking when the page is first loaded in the browser.
 
