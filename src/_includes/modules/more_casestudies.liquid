@@ -7,7 +7,7 @@
       <ul class="related-items-list list-reset">
 
         {% assign caseStudies = page.articles.case-study | sort: 'date' | reverse  %}
-        {% for caseStudy in caseStudies limit:6 %}
+        {% for caseStudy in caseStudies limit:3 %}
 
           <li class="g-medium--1 g-wide--1{% cycle 'all-case-studies': '', '', ' g-medium--last g-wide--last' %}">
             <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}">
