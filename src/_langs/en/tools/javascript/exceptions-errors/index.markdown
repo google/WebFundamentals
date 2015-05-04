@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Exception and Error Handling"
 seotitle: "Exception and Error Handling"

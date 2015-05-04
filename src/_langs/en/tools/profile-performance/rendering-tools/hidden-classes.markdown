@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Optimize JavaScript Using Hidden Classes"
 description: "TBD description."

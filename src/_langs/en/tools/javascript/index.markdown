@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: landing
 title: "Debug"
 seotitle: "Debug Your JavaScript Using Chrome DevTools breakpoints, console, and the command line API"

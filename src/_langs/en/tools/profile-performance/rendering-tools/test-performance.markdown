@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Test Your Deployed Site's Rendering Performance"
 seotitle: "Test Your Deployed Site's Rendering Performance"

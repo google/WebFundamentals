@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Set Up Your Editor"
 seotitle: "Set Up Your Editor"

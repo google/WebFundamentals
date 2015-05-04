@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Inspect Your Page Resources"
 seotitle: "Inspect Your Page Resources in the Chrome DevTools Resources Panel"

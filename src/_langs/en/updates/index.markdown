@@ -1,4 +1,5 @@
 ---
+rss: false
 id: updates
 layout: updates
 collection: web

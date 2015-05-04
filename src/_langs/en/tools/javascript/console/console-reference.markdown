@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Console API Reference"
 seotitle: "Console API Reference"
