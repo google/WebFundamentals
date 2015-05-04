@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Map Minified Code to Source Code"
 seotitle: "Map Minified Code to Source Code Using Source Maps"

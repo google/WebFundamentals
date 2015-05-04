@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Determine Slowest Events"
 seotitle: "Determine Slowest Events Using Chrome DevTools Events Mode"

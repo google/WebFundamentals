@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Command Line API Reference"
 seotitle: "Command Line API Reference for Chrome DevTools"

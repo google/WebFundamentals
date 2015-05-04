@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Monitor Events"
 seotitle: "Monitor Events Using the Chrome DevTools Command Line API"

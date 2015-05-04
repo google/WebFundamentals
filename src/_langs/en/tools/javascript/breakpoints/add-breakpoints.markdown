@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "How to Add or Remove Breakpoints"
 seotitle: "How to Add or Remove Breakpoints"

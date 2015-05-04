@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Visualize CSS Media Queries"
 seotitle: ""

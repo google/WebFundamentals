@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Optimize Performance Under Varying Network Conditions"
 seotitle: "Optimize Performance Under Varying Network Conditions Using Chrome DevTools Network Panel"

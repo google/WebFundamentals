@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Improve Rendering Performance"
 seotitle: "Improve Rendering Performance"

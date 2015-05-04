@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Test Device Hardware Performance"
 seotitle: "Test Device Harware Performance"

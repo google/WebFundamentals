@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Types of Device Emulators and Simulators"
 seotitle: "Types of Device Emulators and Simulators"

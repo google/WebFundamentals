@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Keyboard Shortcuts Reference"
 seotitle: "Chrome DevTools Keyboard Shortcuts Reference"

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Determine Garbage Collection Frequency"
 seotitle: "Determine Garbage Collection Frequency Using Chrome DevTools Timeline Memory View"

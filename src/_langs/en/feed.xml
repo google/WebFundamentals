@@ -6,7 +6,7 @@
 	<link type="text/html" href="https://developers.google.com{{ site.url }}/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=web_feed" rel="alternate"/>
 	<subtitle>All articles, tutorials, shows and case studies. Best practices for modern web development.</subtitle>
   <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
-{% assign num = 0 %}{% for post in pages %}{% if num < 100 and post.article and post.published != false %}
+{% assign num = 0 %}{% for post in pages %}{% if num < 100 and post.article and post.published != false and post.rss != false %}
 	<entry>
 		<published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
 		{% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Ways to Decrease Page Load Time"
 seotitle: "Ways to Decrease Page Load Time"

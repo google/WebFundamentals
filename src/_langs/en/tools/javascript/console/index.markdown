@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Log Diagnostics to Console"
 seotitle: "Log Diagnostics to Console in Chrome DevTools"

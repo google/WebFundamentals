@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Set Up Code Readability"
 seotitle: "Set Up Code Readability"
