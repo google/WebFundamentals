@@ -49,6 +49,8 @@
         background-color: rgba(0, 0, 0, 0.03);
         padding-left: 2em;
         padding-right: 2em;
+        padding-bottom: 2em;
+        margin-top: 1em;
 
         h4 {
           color: #333;
@@ -444,6 +446,17 @@
     .headliner {
       padding-top: 1em;
       margin-bottom: 0;
+      max-width: 50%;
+      @include small-only {
+        max-width: 100%;
+        font-size: 2em;
+      }
+    }
+
+    .desc {
+      @include small-only {
+        width: auto;
+      }     
     }
 
     .social {
@@ -477,6 +490,7 @@
           display: inline-block;
           margin: 0;
           padding: 0;
+          width: auto;
         }     
       }
     }
@@ -484,7 +498,11 @@
     .card {
       position: absolute;
       top: -1em;
-      left: 50%; 
+      left: 50%;
+
+      @include small-only {
+        display: none;
+      }
 
       span {
         display: inline-block;
@@ -527,7 +545,10 @@
   }
 
   .devtools-access {
-    padding-left: 18px;
+
+    @include medium {
+      padding-left: 18px;
+    }
 
     h3 {
       background-image: url(https://google.github.io/material-design-icons/action/svg/ic_info_24px.svg);
@@ -550,21 +571,30 @@
     background: #fafafa;
 
     ul.doclist.by-panel > li {
-      flex: 0 1 50%;
+
+      flex: 1 1 50%;
+      @include medium {
+        flex: 0 1 50%;
+      }
+
       ul, img {
         display: inline-block;
-        width: 49%;
+        @include medium {
+          width: 49%;
+        }
+        
         vertical-align: top;
         margin-top: 0;
       }
 
       ul {
-        padding-left: 16px;
+        @include medium {
+          padding-left: 16px;
+        }
       }
     }
 
     .doclist img {
-      height: 118px;
       width: 100%;
     }
 
@@ -613,6 +643,9 @@
     ul.updates li {
 
       padding-top: 1em;
+      @include small-only {
+        width: 100%;
+      }
 
       &:last-child {
         padding-left: inherit;
@@ -620,8 +653,10 @@
       }
 
       &:nth-child(2) {
-        padding-left: 20px;
-        padding-right: 0;        
+        @include medium {
+          padding-left: 20px;
+          padding-right: 0;
+        }      
       }
 
       h4 {
