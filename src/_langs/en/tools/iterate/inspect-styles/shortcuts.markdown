@@ -22,7 +22,7 @@ remember:
 ---
 {% wrap content %}
 
-This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are globally available across all of the DevTools, others are specific to a single panel, and are broken up based on where it can be used.
+This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.
 
 {% include modules/toc.liquid %}
 
@@ -298,9 +298,11 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-![Element Pseudostates](imgs/attributes-icon.png)Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
+![Element Pseudostates](imgs/attributes-icon.png)
+Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
 
-![Adding style selectors](imgs/plus.png)Add new style selectors.
+![Adding style selectors](imgs/plus.png)
+Add new style selectors.
 
 ## Shortcuts in Sources panel
 
@@ -411,11 +413,14 @@ Shortcuts available in the Sources panel:
   </tbody>
 </table>
 
-![Pause on Exception Button](imgs/pause-gray.png)Don't pause on exceptions.
+![Pause on Exception Button](imgs/pause-gray.png)
+Don't pause on exceptions.
 
-![Pause on All Exceptions](imgs/pause-blue.png)Pause on All exceptions (including those caught within try/catch blocks).
+![Pause on All Exceptions](imgs/pause-blue.png)
+Pause on All exceptions (including those caught within try/catch blocks).
 
-![Pause on Uncaught Exceptions](imgs/pause-purple.png)Pause on uncaught exceptions (usually the one you want).
+![Pause on Uncaught Exceptions](imgs/pause-purple.png)
+Pause on uncaught exceptions (usually the one you want).
 
 ## Code editor shortcuts
 
