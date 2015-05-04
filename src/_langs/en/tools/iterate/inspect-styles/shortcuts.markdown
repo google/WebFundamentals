@@ -22,24 +22,24 @@ remember:
 ---
 {% wrap content %}
 
-This guide provides a quick reference to each DevTools shortcut and the corresponding key for each on Windows/Linux and Mac. While some shortcuts are globally available across all of the DevTools, others are specific to a single panel, and are broken up based on where it can be used.
+This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are globally available across all of the DevTools, others are specific to a single panel, and are broken up based on where it can be used.
 
 {% include modules/toc.liquid %}
 
-## Short-cuts to open DevTools
+## Access DevTools using these shortcuts
 
-To access the DevTools, on any web page or app in Google Chrome, you can use one of these options:
+To access the DevTools, on any web page or app in Google Chrome:
 
 * Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png) at the top-right of your browser window, then select **Tools > Developer Tools**.
 * Right-click on any page element and select **Inspect Element**.
 
-Additonal shortcuts to launch DevTools:
+Additonal shortcuts to access DevTools:
 
 <table class="table-3">
   <thead>
-      <th>Launch DevTools</th>
-      <th>Windows</th>
-      <th>Mac</th>
+      <th>Access DevTools</th>
+      <th>On Windows</th>
+      <th>On Mac</th>
   </thead>
   <tbody>
     <tr>
@@ -71,7 +71,7 @@ Shortcuts available in all DevTools panels:
 
 <table class="table-3">
   <thead>
-      <th>Global Shortcuts</th>
+      <th>Global Shortcut</th>
       <th>Windows</th>
       <th>Mac</th>
   </thead>
@@ -224,7 +224,7 @@ Shortcuts available in the Elements panel:
     <tr>
       <td data-th="Elements Panel">Toggle edit as HTML</td>
       <td data-th="Windows"><span class="kbd">F2</span></td>
-      <td data-th="Mac"><span class="kbd"></span></td>
+      <td data-th="Mac"></td>
     </tr>
   </tbody>
 </table>
@@ -298,17 +298,11 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-![Element Pseudostates](imgs/attributes-icon.png)Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`)
+![Element Pseudostates](imgs/attributes-icon.png)Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
 
-![Adding style selectors](imgs/plus.png)Add new style selectors
+![Adding style selectors](imgs/plus.png)Add new style selectors.
 
-## Sources Panel
-
-![Pause on Exception Button](imgs/pause-gray.png)Don't pause on exceptions
-
-![Pause on All Exceptions](imgs/pause-blue.png)Pause on All exceptions (including those caught within try/catch blocks)
-
-![Pause on Uncaught Exceptions](imgs/pause-purple.png)Pause on uncaught exceptions (usually the one you want)
+## Shortcuts in Sources panel
 
 Shortcuts available in the Sources panel:
 
@@ -417,9 +411,15 @@ Shortcuts available in the Sources panel:
   </tbody>
 </table>
 
-## Code Editor Shortcuts
+![Pause on Exception Button](imgs/pause-gray.png)Don't pause on exceptions.
 
-Code Editor shortcuts:
+![Pause on All Exceptions](imgs/pause-blue.png)Pause on All exceptions (including those caught within try/catch blocks).
+
+![Pause on Uncaught Exceptions](imgs/pause-purple.png)Pause on uncaught exceptions (usually the one you want).
+
+## Code editor shortcuts
+
+Code editor shortcuts:
 
 <table class="table-3">
   <thead>
@@ -461,7 +461,7 @@ Code Editor shortcuts:
   </tbody>
 </table>
 
-## Timeline Panel
+## Shortcuts in Timeline panel
 
 Shortcuts available in the Timeline panel:
 
@@ -490,7 +490,7 @@ Shortcuts available in the Timeline panel:
   </tbody>
 </table>
 
-## Profiles Panel
+## Shortcuts in Profiles panel
 
 Shortcuts available in the Profiles panel:
 
@@ -509,7 +509,7 @@ Shortcuts available in the Profiles panel:
   </tbody>
 </table>
 
-## Console
+## Console shortcuts
 
 Shortcuts available in the Console:
 
@@ -565,7 +565,7 @@ Right-clicking on console:
 * Filter: Hide and unhide messages from script files.
 * Clear console: Clear all console messages.
 
-## Screencasting
+## Screencasting shortcuts
 
 Screencasting shortcuts:
 
@@ -589,7 +589,7 @@ Screencasting shortcuts:
   </tbody>
 </table>
 
-## Emulation
+## Emulation shortcuts
 
 Emulation shortcuts:
 
@@ -608,7 +608,7 @@ Emulation shortcuts:
   </tbody>
 </table>
 
-## More Chrome Shortcuts
+## More Chrome shortcuts
 
 Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](http://goo.gl/PsTNm) for Windows, Mac, and Linux:
 
