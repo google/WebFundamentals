@@ -44,6 +44,17 @@
       flex: 1 1 25%;
       min-width: 165px;
 
+      &.note-why {
+        flex: 1 1 50%;
+        background-color: rgba(0, 0, 0, 0.03);
+        padding-left: 2em;
+        padding-right: 2em;
+
+        h4 {
+          color: #333;
+        }
+      }
+
       &::before {
         display: none;
       }
@@ -401,10 +412,24 @@
   }
 
   header {
+
     font-size: 16px;
     border-bottom: 1px solid #E8E8E8;
     overflow: hidden;
-    padding-top: 1em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    margin-top: 0;
+    background: #4B8BFA;
+    color: #fff;
+
+    .container {
+      background-image: none;
+    }
+
+    > div {
+      padding-bottom: 2em;
+    }
+
     a {
       margin-left: 0;
       color: #333;

@@ -1,6 +1,6 @@
 toc:
 - title: "<strong>DevTools</strong>"
-  path: /tools/devtools/
+  path: /chrome-devtools/
   home: true
 - title: "What's new"
   path: /tools/updates/

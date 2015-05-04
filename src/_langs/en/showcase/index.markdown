@@ -20,7 +20,7 @@ NOTE: the spotlight header required a modifier to render properly
 {% assign combined = caseStudies | wfconcat: spotlights | sort: 'date' | reverse  %}
 
 
-<p style="float: right; margin-top: -40px; margin-right: 20px;"><a href="https://docs.google.com/forms/d/1928U45GIS1-Opi7SG-FczCwRkwnTbXDzF2X5Pe6Q6gU/viewform?usp=send_form" class="button--secondary">Have an idea for the showcase? Let us know!</a></p>
+<p style="float: right; margin-top: -40px; margin-right: 20px;"><a href="https://services.google.com/fb/forms/webshowcase/" class="button--secondary">Have an idea for the showcase? Let us know!</a></p>
 
 <header class="clear" style="margin-bottom: 60px; margin-top: 70px;">
   <div class="container">
