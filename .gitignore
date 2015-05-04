@@ -2,7 +2,6 @@
 *.pyc
 *.swp
 .idea
-*.DS_Store
 build
 .DS_Store
 .sass-cache/
