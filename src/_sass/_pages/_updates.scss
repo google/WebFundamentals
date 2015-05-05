@@ -57,16 +57,33 @@
 }
 
 .updates-header {
+
   margin-top: 0;
-  background: #4B8BFA;
-  color: #fff;
+  background: #fff;
+  color: #444;
+
   .container {
+
     background-image: none;
+
     h1.headliner {
       font-size: 3em;
       padding-top: 1em;
       margin-bottom: .5em;
-      color: #fff;   
+      color: #fff;
+
+      span {
+        background-color: rgba(0,0,0,0.1);
+        font-size: 0.7em;
+        padding: 0px 7px;
+        margin-right: 6px;
+        border-radius: 2px;
+        color: rgba(255, 255, 255, 0.66);
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.8em;
+        vertical-align: middle;
+      }
     }
 
     a {
@@ -85,7 +102,9 @@
         margin-left: 0;
       }      
     }
+
   }
+
   > div {
     padding-bottom: 2em;
   }
@@ -133,9 +152,13 @@
 
 }
 
+.updates-header-tip {
+  background-color: #43A047;
+}
+
 .updates-list {
 
-  background: #fafafa;
+  background: #f5f5f5;
 
   font-family: Roboto;
   * {
@@ -144,23 +167,78 @@
     letter-spacing: 0;
   }
 
-  ul {
+  .container {
+    @include medium {
+      display: flex;
+    }
+  }
+
+  .filters {
+
+    min-width: 150px;
+
+    ul {
+      padding: 0;
+      padding-top: 2em;
+
+      li {
+        font-weight: 500;
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+        @include small-only {
+          display: inline-block;
+          padding-right: 0.3em;
+        }
+      }
+
+      ul {
+        padding: 0;
+        padding-bottom: 1em;
+        font-size: 0.9em;
+
+        li {
+          font-weight: 300;
+        }
+
+        .selected {
+          color: inherit;
+          font-weight: 500;
+          cursor: default;
+          &:hover {
+            cursor: default;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+  }
+
+  > div > ul {
 
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    padding-top: 2em;
 
     li {
       padding: 1em;
       padding-bottom: 5em;
       margin: 0;
       margin-bottom: 32px;
-      flex: 0 1 calc(50% - 20px);
+      flex: 1 1 calc(50% - 20px);
       margin-right: 20px;
       position: relative;
       background: #fff;
       border-radius: 2px;
       box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21);
-      min-width: 410px;
+      min-width: 290px;
+
+      &.tip h3 {
+        background-color: #43A047;
+      }
     }
 
     li::before {
@@ -176,6 +254,19 @@
       margin-left: -16px;
       margin-right: -16px;
       padding: 16px;
+
+      span {
+        background-color: rgba(0,0,0,0.1);
+        font-size: 0.7em;
+        padding: 0px 7px;
+        margin-right: 6px;
+        border-radius: 2px;
+        color: rgba(255, 255, 255, 0.66);
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.8em;
+        vertical-align: middle;
+      }
     }
 
     p {
@@ -212,6 +303,7 @@
 
       div {
         margin-left: 1em;
+        white-space: nowrap;
       }
 
       .icon-circle {

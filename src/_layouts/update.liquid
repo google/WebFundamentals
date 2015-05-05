@@ -7,9 +7,9 @@
     {% include header.liquid %}
 
 
-	<header class="tools-header updates-header">
+	<header class="tools-header updates-header updates-header-{{page.type}}">
 	  <div class="container">
-	    <h1 class="headliner">{{page.title}}</h1>
+	    <h1 class="headliner"><span>{{page.type}}</span>{{page.title}}</h1>
 	    <div class="details">
           <div class="date">{{ page.article.written_on | date: '%B %d, %Y' }}</div>
           {% if page.authors %}

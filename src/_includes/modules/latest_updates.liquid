@@ -1,0 +1,36 @@
+<ul class="updates">
+  {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
+  {% for article in updates limit: include.limit %}
+  {% if article.category == 'tools' %}
+
+    <li class="{{article.type}}">
+      <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+      <h4><span>{{article.type}}</span>{{article.title}}</h4>
+      </a>
+      <div class="details">
+        <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+        {% if article.authors %}
+        <div class="author">
+        {% for author in article.authors %}
+        {% assign contributor = site.data["contributors"][author] %}
+            <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+              {{contributor.name.given}} {{contributor.name.family}}
+            </a>
+        {% endfor %}
+        </div>
+        {% endif %}
+        {% if article.tags %}
+        <div class="tags">
+          {% for tag in article.tags %}
+          <span>#{{tag}}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{% if article.description %}{{article.description}}{% else %}{{article.content}}{% endif %}</a></p>
+      
+    </li>
+
+  {% endif %}
+  {% endfor %}
+</ul>
