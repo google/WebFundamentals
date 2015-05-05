@@ -1,12 +1,13 @@
 ---
 rss: false
-id: updates
 layout: updates
 collection: web
-title: "Updates"
+title: "All Tips"
 description: ""
 published: true
 feedName: Updates
 feedPath: updates/feed.xml
+
+permalink: /updates/tips/
 ---
-{% include_relative updates.liquid category="all" product="all" %}
+{% include_relative updates.liquid category="tip" product="all" %}

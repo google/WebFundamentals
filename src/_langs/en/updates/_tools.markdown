@@ -1,12 +1,13 @@
 ---
 rss: false
-id: updates
 layout: updates
 collection: web
-title: "Updates"
+title: "Tooling Updates"
 description: ""
 published: true
 feedName: Updates
 feedPath: updates/feed.xml
+
+permalink: /updates/tools/
 ---
-{% include_relative updates.liquid category="all" product="all" %}
+{% include_relative updates.liquid category="all" product="tools" %}

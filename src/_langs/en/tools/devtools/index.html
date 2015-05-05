@@ -44,52 +44,19 @@ panels:
         <a href="https://www.youtube.com/user/ChromeDevelopers"><img src="/web/tools/devtools/images/youtube-play.svg" alt="YouTube"></a>
       </div>
 
+      <!--
       <div class="card">
         <p><span>Tip</span>With DevTools opened, click and hold the reload button to see more options.</p>
         <img src="https://31.media.tumblr.com/tumblr_nn9hzvsWHs1qak298_frame1.jpg" alt="">
       </div>
+      -->
 		</div>
 	</header>
 
   <div class="tools-updates devtools-updates">
     <div class="container">
-      <h3><a href="/web/tools/updates">What's new <span>All tips &amp; updates</span></a></h3>
-      <ul class="updates">
-        {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
-        {% for article in updates %}
-        {% if article.category == 'tools' %}
-
-          <li>
-            <a href="{{site.baseurl}}{{article.url | canonicalize}}">
-            <h4>{{article.title}}</h4>
-            </a>
-            <div class="details">
-              <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
-              {% if article.authors %}
-              <div class="author">
-              {% for author in article.authors %}
-              {% assign contributor = site.data["contributors"][author] %}
-                  <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
-                    {{contributor.name.given}} {{contributor.name.family}}
-                  </a>
-              {% endfor %}
-              </div>
-              {% endif %}
-              {% if article.tags %}
-              <div class="tags">
-                {% for tag in article.tags %}
-                <span>#{{tag}}</span>
-                {% endfor %}
-              </div>
-              {% endif %}
-            </div>
-            <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{{article.description}}</a></p>
-            
-          </li>
-
-        {% endif %}
-        {% endfor %}
-      </ul>    
+      <h3><a href="/web/updates">What's hot <span>All tips &amp; updates</span></a></h3>
+      {% include modules/latest_updates.liquid limit=2 %}
     </div>
   </div>
 
@@ -117,7 +84,7 @@ panels:
 	<div class="tools-home">
 
 	  <div class="container tools-docs-header">
-	    <h2>Documentation &amp; Tutorials</h2>
+	    <h2><a name="docs">Documentation &amp; Tutorials</a></h2>
 
 	    <h3>Reference / Configuration</h3>
 	  </div>
@@ -154,7 +121,7 @@ panels:
     </div>
 
     <div class="container tools-docs-header">
-      <h3>By Action or Problem</h3>
+      <h3>By Action or Challenge</h3>
     </div>
 
 	  <div class="tools-docs-divider"></div>
