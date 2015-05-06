@@ -1,16 +1,33 @@
 .update-container {
 
   padding-bottom: 2em;
+  @include medium {
+    display: flex;
+  }
 
   font-family: Roboto;
   * {
     font-family: Roboto;
-    font-weight: normal;
     letter-spacing: 0;
   }
 
-  p {
-    font-weight: 300;
+  > div {
+    padding-top: 6px;
+  }
+
+  .filters a {
+    color: #3372df;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+    padding-top: 1em;   
+  }
+
+  p, li {
+    font-weight: 400;
   }
 
   a {
@@ -56,6 +73,26 @@
 
 }
 
+.update-comments {
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 1em;
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+    font-weight: 400;
+    vertical-align: top;
+  }
+}
+
 .updates-header {
 
   margin-top: 0;
@@ -73,16 +110,17 @@
       color: #fff;
 
       span {
-        background-color: rgba(0,0,0,0.1);
-        font-size: 0.7em;
-        padding: 0px 7px;
-        margin-right: 6px;
+        background-color: rgba(0,0,0,.1);
+        font-size: .5em;
+        padding: 0 10px;
+        margin-right: 10px;
         border-radius: 2px;
-        color: rgba(255, 255, 255, 0.66);
+        color: rgba(255,255,255,.66);
         text-transform: uppercase;
-        display: inline-block;
-        line-height: 1.8em;
-        vertical-align: middle;
+        display: block;
+        line-height: 1.6em;
+        width: 86px;
+        text-align: center;
       }
     }
 
@@ -156,26 +194,17 @@
   background-color: #43A047;
 }
 
-.updates-list {
-
-  background: #f5f5f5;
-
-  font-family: Roboto;
-  * {
-    font-family: Roboto;
-    font-weight: normal;
-    letter-spacing: 0;
+.updates-header-news {
+  background-color: #4B8BFA;
+  .desc {
+    color: #fff;
   }
+}
 
-  .container {
-    @include medium {
-      display: flex;
-    }
-  }
-
-  .filters {
+.updates-list .filters, .update-container .filters {
 
     min-width: 150px;
+    padding-top: 0;
 
     ul {
       padding: 0;
@@ -214,6 +243,23 @@
       }
     }
 
+}
+
+.updates-list {
+
+  background: #f5f5f5;
+
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  .container {
+    @include medium {
+      display: flex;
+    }
   }
 
   > div > ul {
