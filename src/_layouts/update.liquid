@@ -35,8 +35,39 @@
 	</header>
 
 	<div class="update-container container">
-	  	{{ content | markdownify }}
+
+      <div class="filters">
+        <ul>
+          <li>Category
+            <ul>
+              <li><a href="/web/updates/{% if page.product %}{{page.product}}/{% endif %}"{% if page.type == null %} class="selected"{% endif %}>All</a></li>
+              <li><a href="/web/updates/{% if page.product %}{{page.product}}/{% endif %}news/"{% if page.type == "news" %} class="selected"{% endif %}>News</a></li>
+              <li><a href="/web/updates/{% if page.product %}{{page.product}}/{% endif %}tips/"{% if page.type == "tip" %} class="selected"{% endif %}>Tips &amp; Tricks</a></li>
+            </ul>
+          </li>
+          <li>Product
+            <ul>
+              <li><a href="/web/updates/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == null %} class="selected"{% endif %}>All</a></li>
+              <li><a href="/web/updates/tools/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == "tools" %} class="selected"{% endif %}>All Tools</a></li>
+              <li><a href="/web/updates/chrome/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == "chrome" %} class="selected"{% endif %}>Chrome</a></li>
+              <li><a href="/web/updates/chrome-devtools/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == "chrome-devtools" %} class="selected"{% endif %}>DevTools</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        {{ content | markdownify }}
+      </div>
+	  	
 	</div>
+
+  <div class="update-comments">
+    <div id="gplus-comment-container" class="container">
+      <h2>Comments (<span id="gplus-comment-counter"></span>)</h2>
+      <div id="gplus-comments" data-url="https://developers.google.com{{page.url}}"></div>
+    </div>   
+  </div>
 
     
 
