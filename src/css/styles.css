@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
 /**
 *
 * Main Stylesheet
@@ -6145,6 +6146,771 @@ figcaption {
     letter-spacing: 0.5px;
     border-top: 1px solid #e0e0e0;
     padding-top: 8px; }
+
+.tools-home {
+  font-family: Roboto;
+  margin-top: 2em; }
+  .tools-home * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .tools-home h2 {
+    font-size: 2em; }
+  .tools-home h3 {
+    opacity: 0.5;
+    margin-top: 1em;
+    font-size: 1.3em; }
+  .tools-home h4 {
+    color: #4B8EDD;
+    margin-bottom: 1em; }
+  .tools-home .tools-docs-divider {
+    border-bottom: 1px solid #E8E8E8;
+    margin-top: 1em; }
+  .tools-home ul.doclist {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; }
+    .tools-home ul.doclist > li {
+      margin: 0;
+      padding: 0;
+      padding-right: 2em;
+      flex: 1 1 25%;
+      min-width: 165px; }
+      .tools-home ul.doclist > li.note-why {
+        flex: 1 1 50%;
+        background-color: rgba(0, 0, 0, 0.03);
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+        margin-top: 1em; }
+        .tools-home ul.doclist > li.note-why h4 {
+          color: #333; }
+      .tools-home ul.doclist > li::before {
+        display: none; }
+    .tools-home ul.doclist ul {
+      display: block; }
+      .tools-home ul.doclist ul li {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 8px;
+        line-height: 1.4; }
+        .tools-home ul.doclist ul li::before {
+          display: none; }
+      .tools-home ul.doclist ul a {
+        color: #333;
+        font-size: 15px; }
+
+.tools-header {
+  font-family: Roboto;
+  margin-top: 1em; }
+  .tools-header * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .tools-header > div {
+    background-image: url(/web/tools/landing-placeholder.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right 10%;
+    padding-bottom: 3em; }
+  .tools-header .headliner {
+    font-size: 3em;
+    margin-bottom: 0.5em; }
+  .tools-header .desc {
+    width: 50%;
+    margin-bottom: 1em; }
+    .tools-header .desc h1 {
+      font-size: 1em;
+      display: inline;
+      line-height: normal;
+      padding-top: 0;
+      padding-bottom: 0;
+      letter-spacing: 0; }
+  .tools-header a {
+    background-color: #4285f4;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 2px;
+    font-size: 0.9em; }
+    .tools-header a:hover {
+      text-decoration: none; }
+    .tools-header a:last-child {
+      margin-left: 0.5em;
+      background-color: #C5246E; }
+
+.tools-products {
+  padding-bottom: 3em;
+  padding-top: 1em;
+  background: #4B8BFA;
+  color: #fff;
+  font-family: Roboto; }
+  .tools-products * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .tools-products h2 {
+    font-size: 2em;
+    padding-top: 1em;
+    color: #fff; }
+  .tools-products h3 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 0;
+    color: #fff; }
+  .tools-products .tools-docs-divider {
+    border-bottom: 1px solid #2F75F0;
+    margin-top: 1em; }
+  .tools-products ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; }
+    .tools-products ul li {
+      margin: 0;
+      padding: 0;
+      width: 250px;
+      margin-right: 2em;
+      flex: 1 1 19%;
+      min-width: 165px; }
+      .tools-products ul li:last-child {
+        margin-right: 0; }
+      .tools-products ul li p {
+        font-size: 14px;
+        margin-top: 1em; }
+      .tools-products ul li img {
+        background: #E8E8E8;
+        border-radius: 2px;
+        height: 70px; }
+      .tools-products ul li::before {
+        display: none; }
+
+.tools-updates {
+  font-family: Roboto;
+  background: #fafafa;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  .tools-updates * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .tools-updates h3 {
+    font-size: 26px;
+    position: relative;
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 14px; }
+    .tools-updates h3 a {
+      color: #555;
+      font-weight: 400; }
+      .tools-updates h3 a span {
+        position: absolute;
+        top: 22px;
+        right: 0;
+        /*background-color: #4285f4;
+        color: #fff;*/
+        background-color: #FFFFFF;
+        color: #4B8BFA;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        text-align: center;
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 2px;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 0 1em; }
+
+.devtools {
+  font-family: Roboto;
+  font-size: 15px; }
+  .devtools * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .devtools p, .devtools li {
+    font-size: 15px; }
+  .devtools header {
+    font-size: 16px;
+    border-bottom: 1px solid #E8E8E8;
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    margin-top: 0;
+    background: #4B8BFA;
+    color: #fff; }
+    .devtools header .container {
+      background-image: none; }
+    .devtools header > div {
+      padding-bottom: 2em; }
+    .devtools header a {
+      margin-left: 0;
+      color: #333;
+      background-color: #f9f9f9; }
+      .devtools header a.new {
+        background-color: #3f7fed;
+        color: #fff;
+        margin-left: 0.5em; }
+    .devtools header .headliner {
+      padding-top: 1em;
+      margin-bottom: 0;
+      max-width: 50%; }
+      @media only screen and (max-width: 619px) {
+        .devtools header .headliner {
+          max-width: 100%;
+          font-size: 2em; } }
+    @media only screen and (max-width: 619px) {
+      .devtools header .desc {
+        width: auto; } }
+    .devtools header .social {
+      margin-left: 1em;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 0; }
+      .devtools header .social a {
+        box-shadow: none;
+        text-align: left;
+        display: inline;
+        width: auto;
+        height: auto;
+        line-height: 0;
+        border-radius: 0;
+        font-size: inherit;
+        background-color: transparent;
+        margin-right: 0.2em;
+        opacity: 0.3; }
+        .devtools header .social a:hover {
+          opacity: 1; }
+        .devtools header .social a:last-child {
+          margin-left: 0; }
+        .devtools header .social a img {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          width: auto; }
+    .devtools header .card {
+      position: absolute;
+      top: -1em;
+      left: 50%; }
+      @media only screen and (max-width: 619px) {
+        .devtools header .card {
+          display: none; } }
+      .devtools header .card span {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.13);
+        padding: 0 0.5em;
+        margin-right: 0.5em;
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-size: 0.9em; }
+  .devtools .flex {
+    display: flex;
+    flex-wrap: wrap; }
+    .devtools .flex > * {
+      flex: 1 1 50%;
+      min-width: 280px; }
+  .devtools h1, .devtools h2, .devtools h3 {
+    font-weight: 300; }
+  .devtools .devtools-overview {
+    padding-right: 18px;
+    position: relative;
+    padding-bottom: 9em; }
+    .devtools .devtools-overview h3 {
+      background-image: url(https://google.github.io/material-design-icons/action/svg/ic_help_24px.svg);
+      background-repeat: no-repeat;
+      background-position: left -2px bottom -2px;
+      padding-left: 1.4em;
+      background-size: 32px;
+      font-size: 26px; }
+  @media only screen and (min-width: 620px) {
+    .devtools .devtools-access {
+      padding-left: 18px; } }
+  .devtools .devtools-access h3 {
+    background-image: url(https://google.github.io/material-design-icons/action/svg/ic_info_24px.svg);
+    background-repeat: no-repeat;
+    background-position: left -2px bottom -2px;
+    padding-left: 1.4em;
+    background-size: 32px;
+    font-size: 26px; }
+  .devtools .note {
+    padding: 1em;
+    background: #F7F7F7;
+    position: absolute;
+    bottom: 0; }
+  .devtools .tools-home {
+    background: #fafafa; }
+    .devtools .tools-home ul.doclist.by-panel > li {
+      flex: 1 1 50%; }
+      @media only screen and (min-width: 620px) {
+        .devtools .tools-home ul.doclist.by-panel > li {
+          flex: 0 1 50%; } }
+      .devtools .tools-home ul.doclist.by-panel > li ul, .devtools .tools-home ul.doclist.by-panel > li img {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0; }
+        @media only screen and (min-width: 620px) {
+          .devtools .tools-home ul.doclist.by-panel > li ul, .devtools .tools-home ul.doclist.by-panel > li img {
+            width: 49%; } }
+      @media only screen and (min-width: 620px) {
+        .devtools .tools-home ul.doclist.by-panel > li ul {
+          padding-left: 16px; } }
+    .devtools .tools-home .doclist img {
+      width: 100%; }
+    .devtools .tools-home h2, .devtools .tools-home h2 a, .devtools .tools-home h2 a:hover {
+      color: inherit;
+      text-decoration: none; }
+  .devtools .devtools-updates {
+    color: #555;
+    background-color: #fafafa; }
+    .devtools .devtools-updates h3 {
+      font-size: 26px;
+      position: relative;
+      border-bottom: 1px solid #E8E8E8;
+      padding-bottom: 14px; }
+      .devtools .devtools-updates h3 a {
+        color: inherit;
+        font-weight: 300; }
+        .devtools .devtools-updates h3 a span {
+          position: absolute;
+          top: 22px;
+          right: 0;
+          /*background-color: #4285f4;
+          color: #fff;*/
+          background-color: #FFFFFF;
+          color: #4B8BFA;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+          text-align: center;
+          display: inline-block;
+          height: 32px;
+          line-height: 32px;
+          border-radius: 2px;
+          font-size: 15px;
+          text-transform: uppercase;
+          padding: 0 1em; }
+
+.kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 11px;
+  line-height: 1.4;
+  text-shadow: 0 1px 0 #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  margin: 0 0.1em;
+  white-space: nowrap;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  border-radius: 3px; }
+
+.mdl-header {
+  font-family: Roboto;
+  font-weight: normal;
+  height: 60vh;
+  background-color: #1a1a1f;
+  background-image: url(/web/tools/material-design-lite/images/header.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .mdl-header * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .mdl-header h1 {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-top: 42px;
+    color: #f0f0f0;
+    font-size: 15px;
+    font-weight: 500;
+    width: 120px;
+    line-height: 1.35em; }
+  .mdl-header a {
+    background-color: #f3ff2d;
+    width: 56px;
+    height: 56px;
+    display: block;
+    border-radius: 56px;
+    margin-top: 42px;
+    margin-right: 40px; }
+    .mdl-header a span {
+      font-size: 0;
+      color: transparent;
+      display: block;
+      width: 56px;
+      height: 56px;
+      background-image: url(/web/tools/material-design-lite/images/share.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0.6; }
+  .mdl-header img {
+    height: 30%;
+    width: auto;
+    align-self: center; }
+
+.mdl-coming-soon {
+  height: 340px;
+  background: #fafafa;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 142px; }
+
+.mdl-footer .main-footer {
+  background: #f5f5f5; }
+  .mdl-footer .main-footer a {
+    color: rgba(0, 0, 0, 0.54); }
+  .mdl-footer .main-footer .main-footer__google-section a {
+    color: rgba(0, 0, 0, 0.49); }
+  .mdl-footer .main-footer .main-footer__list-group:after {
+    background: #e5e5e5; }
+
+.update-container {
+  padding-bottom: 2em;
+  font-family: Roboto; }
+  @media only screen and (min-width: 620px) {
+    .update-container {
+      display: flex; } }
+  .update-container * {
+    font-family: Roboto;
+    letter-spacing: 0; }
+  .update-container > div {
+    padding-top: 6px; }
+  .update-container .filters a {
+    color: #3372df;
+    font-weight: 400; }
+  .update-container h2 {
+    font-size: 2em;
+    font-weight: 400;
+    padding-top: 1em; }
+  .update-container p, .update-container li {
+    font-weight: 400; }
+  .update-container a {
+    color: inherit; }
+  .update-container a:hover {
+    text-decoration: none; }
+  .update-container a:link {
+    color: #3372df;
+    text-decoration: none; }
+  .update-container a:link:hover {
+    text-decoration: underline; }
+  .update-container img {
+    width: auto;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .update-container .video-container {
+    margin-top: 1em;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden; }
+    .update-container .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+.update-comments {
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 1em;
+  font-family: Roboto; }
+  .update-comments * {
+    font-family: Roboto;
+    letter-spacing: 0; }
+  .update-comments h2 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+    font-weight: 400;
+    vertical-align: top; }
+
+.updates-header {
+  margin-top: 0;
+  background: #fff;
+  color: #444; }
+  .updates-header .container {
+    background-image: none; }
+    .updates-header .container h1.headliner {
+      font-size: 3em;
+      padding-top: 1em;
+      margin-bottom: 0.5em;
+      color: #fff; }
+      .updates-header .container h1.headliner span {
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 0.5em;
+        padding: 0 10px;
+        margin-right: 10px;
+        border-radius: 2px;
+        color: rgba(255, 255, 255, 0.66);
+        text-transform: uppercase;
+        display: block;
+        line-height: 1.6em;
+        width: 86px;
+        text-align: center; }
+    .updates-header .container a {
+      box-shadow: none;
+      text-align: left;
+      display: inline;
+      width: auto;
+      height: auto;
+      line-height: 0;
+      border-radius: 0;
+      font-size: inherit;
+      background-color: transparent;
+      color: inherit; }
+      .updates-header .container a:last-child {
+        margin-left: 0; }
+  .updates-header > div {
+    padding-bottom: 2em; }
+  .updates-header .desc {
+    width: auto; }
+  .updates-header .details {
+    margin-top: 0px;
+    color: #000;
+    opacity: 0.5;
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: invert(100%); }
+    .updates-header .details div {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 15px;
+      background-size: 15px;
+      background-repeat: no-repeat;
+      padding-left: 1.3em;
+      margin-right: 0.5em; }
+      .updates-header .details div.date {
+        background-image: url(/web/tools/devtools/images/clock.svg); }
+      .updates-header .details div.author {
+        background-image: url(/web/tools/devtools/images/account.svg); }
+      .updates-header .details div.tags {
+        background-image: url(/web/tools/devtools/images/tag.svg);
+        margin-top: 0;
+        text-transform: none;
+        color: #000; }
+
+.updates-header-tip {
+  background-color: #43A047; }
+
+.updates-header-news {
+  background-color: #4B8BFA; }
+  .updates-header-news .desc {
+    color: #fff; }
+
+.updates-list .filters, .update-container .filters {
+  min-width: 150px;
+  padding-top: 0; }
+  .updates-list .filters ul, .update-container .filters ul {
+    padding: 0;
+    padding-top: 2em; }
+    .updates-list .filters ul li, .update-container .filters ul li {
+      font-weight: 500;
+      padding-left: 0; }
+      .updates-list .filters ul li::before, .update-container .filters ul li::before {
+        display: none; }
+      @media only screen and (max-width: 619px) {
+        .updates-list .filters ul li, .update-container .filters ul li {
+          display: inline-block;
+          padding-right: 0.3em; } }
+    .updates-list .filters ul ul, .update-container .filters ul ul {
+      padding: 0;
+      padding-bottom: 1em;
+      font-size: 0.9em; }
+      .updates-list .filters ul ul li, .update-container .filters ul ul li {
+        font-weight: 300; }
+      .updates-list .filters ul ul .selected, .update-container .filters ul ul .selected {
+        color: inherit;
+        font-weight: 500;
+        cursor: default; }
+        .updates-list .filters ul ul .selected:hover, .update-container .filters ul ul .selected:hover {
+          cursor: default;
+          text-decoration: none; }
+
+.updates-list {
+  background: #f5f5f5;
+  font-family: Roboto; }
+  .updates-list * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0; }
+  @media only screen and (min-width: 620px) {
+    .updates-list .container {
+      display: flex; } }
+  .updates-list > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 2em; }
+    .updates-list > div > ul li {
+      padding: 1em;
+      padding-bottom: 5em;
+      margin: 0;
+      margin-bottom: 32px;
+      flex: 1 1 calc(50% - 20px);
+      margin-right: 20px;
+      position: relative;
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21);
+      min-width: 290px; }
+      .updates-list > div > ul li.tip h3 {
+        background-color: #43A047; }
+    .updates-list > div > ul li::before {
+      display: none; }
+    .updates-list > div > ul h3 {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.5em;
+      background: #4B8BFA;
+      margin-top: -16px;
+      margin-left: -16px;
+      margin-right: -16px;
+      padding: 16px; }
+      .updates-list > div > ul h3 span {
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 0.7em;
+        padding: 0px 7px;
+        margin-right: 6px;
+        border-radius: 2px;
+        color: rgba(255, 255, 255, 0.66);
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.8em;
+        vertical-align: middle; }
+    .updates-list > div > ul p {
+      color: #333;
+      padding-top: 1em; }
+    .updates-list > div > ul a:hover {
+      text-decoration: none; }
+    .updates-list > div > ul .tags {
+      padding-top: 0.5em;
+      font-size: 0.9em; }
+    .updates-list > div > ul .tags span {
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-right: 1em;
+      font-weight: 500; }
+    .updates-list > div > ul footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 1em 1em 0em;
+      border-top: 1px solid #eee;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      .updates-list > div > ul footer div {
+        margin-left: 1em;
+        white-space: nowrap; }
+      .updates-list > div > ul footer .icon-circle {
+        display: inline;
+        vertical-align: middle;
+        margin: 0 8px 0 0;
+        padding: 18px; }
+    .updates-list > div > ul .latest-spotlights__link img {
+      max-height: 13em; }
+    .updates-list > div > ul .cta--primary {
+      margin-top: 1em; }
+    .updates-list > div > ul figure {
+      text-align: right; }
+
+ul.short-updates {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1.5em; }
+  ul.short-updates div.tags {
+    margin-top: 0.5em;
+    font-size: 14px;
+    color: #095FB2;
+    text-transform: uppercase; }
+  ul.short-updates .details {
+    margin-top: -10px;
+    margin-bottom: 0px;
+    color: #000;
+    opacity: 0.4; }
+    ul.short-updates .details div {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 13px;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      padding-left: 1.3em;
+      margin-right: 0.5em; }
+      ul.short-updates .details div.date {
+        background-image: url(/web/tools/devtools/images/clock.svg); }
+      ul.short-updates .details div.author {
+        background-image: url(/web/tools/devtools/images/account.svg); }
+      ul.short-updates .details div.tags {
+        background-image: url(/web/tools/devtools/images/tag.svg);
+        margin-top: 0;
+        text-transform: none;
+        color: #000; }
+  ul.short-updates li {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    flex: 0 1 auto;
+    padding-right: 0.5em;
+    padding-top: 1em; }
+    @media only screen and (max-width: 619px) {
+      ul.short-updates li {
+        width: 100%; } }
+    ul.short-updates li a {
+      color: inherit; }
+    ul.short-updates li a:hover {
+      text-decoration: none; }
+    ul.short-updates li::before {
+      display: none; }
+    @media only screen and (min-width: 620px) {
+      ul.short-updates li:nth-child(2) {
+        padding-left: 20px;
+        padding-right: 0; } }
+    ul.short-updates li h4 {
+      color: #4B8EDD;
+      padding-bottom: 0.5em;
+      padding-top: 0;
+      font-size: 18px;
+      font-weight: 500; }
+      ul.short-updates li h4 span {
+        background-color: #4b8bfa;
+        font-size: 0.7em;
+        padding: 0 7px;
+        margin-right: 6px;
+        border-radius: 2px;
+        color: rgba(255, 255, 255, 0.89);
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.8em;
+        vertical-align: middle; }
+    ul.short-updates li p {
+      font-size: 14px;
+      padding-top: 10px; }
+      ul.short-updates li p img {
+        display: inline-block;
+        margin: 0;
+        width: auto;
+        align: left;
+        max-width: 130px;
+        margin-right: 10px; }
+    ul.short-updates li video {
+      width: 100%;
+      margin-bottom: 0; }
 
 /**
 *
