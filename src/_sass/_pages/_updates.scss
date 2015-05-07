@@ -375,3 +375,126 @@
   }
 
 }
+
+ul.short-updates {
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1.5em;
+
+  div.tags {
+    margin-top: 0.5em;
+    font-size: 14px;
+    color: #095FB2;
+    text-transform: uppercase;
+  }
+
+  .details {
+
+    margin-top: -10px;
+    margin-bottom: 0px;
+    color: #000;
+    opacity: 0.4;
+
+    div {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 13px;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      padding-left: 1.3em;
+      margin-right: 0.5em;
+
+      &.date {
+        background-image: url(/web/tools/devtools/images/clock.svg);
+      }
+
+      &.author {
+        background-image: url(/web/tools/devtools/images/account.svg);
+      }
+
+      &.tags {
+        background-image: url(/web/tools/devtools/images/tag.svg);
+        margin-top: 0;
+        text-transform: none;
+        color: #000;
+      }
+    }
+
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    flex: 0 1 auto;
+    padding-right: 0.5em;
+    padding-top: 1em;
+
+    @include small-only {
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      @include medium {
+        padding-left: 20px;
+        padding-right: 0;
+      }
+    }
+
+    h4 {
+      color: #4B8EDD;
+      padding-bottom: 0.5em;
+      padding-top: 0;
+      font-size: 18px;
+      font-weight: 500;
+
+      span {
+        background-color: rgba(75, 139, 250, 1);
+        font-size: .7em;
+        padding: 0 7px;
+        margin-right: 6px;
+        border-radius: 2px;
+        color: rgba(255, 255, 255, 0.89);
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.8em;
+        vertical-align: middle;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      padding-top: 10px;
+
+      img {
+        display: inline-block;
+        margin: 0;
+        width: auto;
+        align: left;
+        max-width: 130px;
+        margin-right: 10px;
+      }
+    }
+
+    video {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+  }
+}
