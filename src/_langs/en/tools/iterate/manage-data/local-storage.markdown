@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Inspect and Manage Your Local Storage APIs"
 seotitle: "Inspect and Manage Local Storage APIs in the Chrome DevTools Resources Panel"

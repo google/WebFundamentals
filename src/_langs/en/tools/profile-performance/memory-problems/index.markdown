@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Identify and Fix Memory Problems"
 seotitle: "Identify and Fix Memory Problems Using Chrome DevTools Memory Profiling"

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Does Page Use Too Much Memory?"
 seotitle: "Does Page Use Too Much Memory?"

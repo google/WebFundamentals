@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Different Breakpoint Types"
 seotitle: "Different Breakpoint Types in Chrome DevTools Sources Panel"

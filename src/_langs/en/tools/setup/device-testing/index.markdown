@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Set Up Device Testing"
 seotitle: "Set Up Device Testing Using Remote Debugging and the Device Emulator"

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "View Structured Data in Console"
 seotitle: "View Structured Data in Chrome DevTools Console"

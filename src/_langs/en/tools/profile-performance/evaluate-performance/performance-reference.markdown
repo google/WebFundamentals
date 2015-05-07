@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Performance Events Reference"
 seotitle: "Performance Events Reference"

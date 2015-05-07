@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Set Up Command Line Shortcuts"
 seotitle: "Set Up Command Line Shortcuts"

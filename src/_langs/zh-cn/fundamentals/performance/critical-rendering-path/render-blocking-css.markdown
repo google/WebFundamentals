@@ -95,13 +95,13 @@ key-takeaways:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * 第一个声明是阻止呈现的，并且符合所有条件。
-* 第二个声明也是阻止呈现的：'screen'是默认的类型，如果未指定任何类型，则默认设置为'screen'。因此，第一个声明和第二个声明实际上是一样的。
+* 第二个声明也是阻止呈现的：'all'是默认的类型，如果未指定任何类型，则默认设置为'all'。因此，第一个声明和第二个声明实际上是一样的。
 * 第三个声明包含动态媒体查询，在加载网页时将评估该查询。根据加载网页时设备的方向，决定 portrait.css 是否阻止呈现。
 * 最后一个声明只适用于打印网页时，因此，在浏览器中首次加载网页时，不会阻止呈现。
 

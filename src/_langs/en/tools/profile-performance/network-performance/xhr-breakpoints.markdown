@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Set Breakpoints for Network Calls"
 seotitle: "Set XHR Breakpoints for Network Calls"

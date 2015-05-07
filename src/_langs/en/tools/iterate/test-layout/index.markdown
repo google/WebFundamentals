@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Test Your Site's Responsive Layout"
 description: "TBD description."

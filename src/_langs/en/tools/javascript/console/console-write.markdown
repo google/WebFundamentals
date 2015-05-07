@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Write to Console"
 seotitle: "Write to Console in Chrome DevTools"

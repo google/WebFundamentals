@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Use Live Error Script Reporting"
 seotitle: "Use Live Error Script Reporting"

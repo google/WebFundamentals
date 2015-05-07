@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: devtools
 description: "TDB Description."
 class: starter-kit
@@ -30,65 +31,32 @@ panels:
 
 <div class="devtools">
 
-	<header class="tools-header updates-header">
+	<header class="tools-header">
 		<div class="container">
 			<p class="headliner">Chrome DevTools</p>
 			<div class="desc">Chrome's built-in authoring and debugging tool.</div>
 			<a href="/web/tools/setup/workspace/setup-devtools">GET STARTED</a>
       <div class="social">
-        <a href="#"><img src="/web/tools/devtools/images/github-circle.svg" alt="Github"></a>
-        <a href="#"><img src="/web/tools/devtools/images/google-plus-box.svg" alt="Google+"></a>
-        <a href="#"><img src="/web/tools/devtools/images/twitter.svg" alt="Twitter"></a>
-        <a href="#"><img src="/web/tools/devtools/images/stackoverflow.svg" alt="Stack Overflow"></a>
-        <a href="#"><img src="/web/tools/devtools/images/youtube-play.svg" alt="YouTube"></a>
+        <a href="https://github.com/GoogleChrome"><img src="/web/tools/devtools/images/github-circle.svg" alt="Github"></a>
+        <a href="https://plus.google.com/+GoogleChromeDevelopers"><img src="/web/tools/devtools/images/google-plus-box.svg" alt="Google+"></a>
+        <a href="https://twitter.com/ChromeDevTools"><img src="/web/tools/devtools/images/twitter.svg" alt="Twitter"></a>
+        <a href="http://stackoverflow.com/questions/tagged/google-chrome-devtools"><img src="/web/tools/devtools/images/stackoverflow.svg" alt="Stack Overflow"></a>
+        <a href="https://www.youtube.com/user/ChromeDevelopers"><img src="/web/tools/devtools/images/youtube-play.svg" alt="YouTube"></a>
       </div>
 
+      <!--
       <div class="card">
         <p><span>Tip</span>With DevTools opened, click and hold the reload button to see more options.</p>
         <img src="https://31.media.tumblr.com/tumblr_nn9hzvsWHs1qak298_frame1.jpg" alt="">
       </div>
+      -->
 		</div>
 	</header>
 
   <div class="tools-updates devtools-updates">
     <div class="container">
-      <h3><a href="/web/tools/updates">What's new <span>All tips &amp; updates</span></a></h3>
-      <ul class="updates">
-        {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
-        {% for article in updates %}
-        {% if article.category == 'tools' %}
-
-          <li>
-            <a href="{{site.baseurl}}{{article.url | canonicalize}}">
-            <h4>{{article.title}}</h4>
-            </a>
-            <div class="details">
-              <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
-              {% if article.authors %}
-              <div class="author">
-              {% for author in article.authors %}
-              {% assign contributor = site.data["contributors"][author] %}
-                  <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
-                    {{contributor.name.given}} {{contributor.name.family}}
-                  </a>
-              {% endfor %}
-              </div>
-              {% endif %}
-              {% if article.tags %}
-              <div class="tags">
-                {% for tag in article.tags %}
-                <span>#{{tag}}</span>
-                {% endfor %}
-              </div>
-              {% endif %}
-            </div>
-            <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{{article.description}}</a></p>
-            
-          </li>
-
-        {% endif %}
-        {% endfor %}
-      </ul>    
+      <h3><a href="/web/updates/chrome-devtools">What's hot <span>All tips &amp; updates</span></a></h3>
+      {% include modules/latest_updates.liquid limit=2 product="chrome-devtools" %}
     </div>
   </div>
 
@@ -116,10 +84,45 @@ panels:
 	<div class="tools-home">
 
 	  <div class="container tools-docs-header">
-	    <h2>Documentation &amp; Tutorials</h2>
+	    <h2><a name="docs">Documentation &amp; Tutorials</a></h2>
 
-	    <h3>By Action or Problem</h3>
+	    <h3>Reference / Configuration</h3>
 	  </div>
+
+    <div class="tools-docs-divider"></div>
+
+    <div class="container tools-docs-listing">
+      <ul class="doclist">
+
+          <li>
+            <h4>Settings &amp; Commands</h4>
+            <ul>
+              <li><a href="https://developer.chrome.com/devtools/docs/commandline-api">Command Line API</a></li>
+              <li><a href="https://developer.chrome.com/devtools/docs/shortcuts">Keyboard Shortcuts</a></li>
+              <li><a href="https://developer.chrome.com/devtools/docs/settings">Settings</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Extending DevTools</h4>
+            <ul>
+              <li><a href="https://developer.chrome.com/devtools/docs/integrating">Integrating with DevTools &amp; Chrome</a></li>
+              <li><a href="https://developer.chrome.com/extensions/devtools">DevTools Extensions API</a></li>
+              <li><a href="https://developer.chrome.com/devtools/docs/debugger-protocol">Remote Debugging Protocol</a></li>
+            </ul>
+          </li>
+
+          <li class="note-why">
+            <h4>Why are these docs on another site?</h4>
+            <p>While you'll get plenty of information of how to use DevTools here, our old home will stay around for a bit and provide you with info on DevTools itself (settings, configuration and development).</p>
+          </li>
+          
+      </ul>
+    </div>
+
+    <div class="container tools-docs-header">
+      <h3>By Action or Challenge</h3>
+    </div>
 
 	  <div class="tools-docs-divider"></div>
 

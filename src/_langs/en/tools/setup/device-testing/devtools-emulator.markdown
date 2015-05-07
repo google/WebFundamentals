@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Mimic Development Site in Production Using Chrome DevTools Device Mode"
 seotitle: "Mimic Development Site in Production Using Chrome DevTools Device Mode"

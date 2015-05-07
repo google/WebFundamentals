@@ -1,9 +1,10 @@
 ---
+rss: false
 layout: article
 title: "Keyboard Shortcuts Reference"
 seotitle: "Chrome DevTools Keyboard Shortcuts Reference"
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. "
+introduction: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow."
 article:
   written_on: 2015-04-30
   updated_on: 2015-04-30
@@ -21,1059 +22,664 @@ remember:
 ---
 {% wrap content %}
 
-
-The DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. Outlined below is each shortcut and the corresponding key for each on Windows/Linux and Mac. While some shortcuts are globally available across all of the DevTools, others are specific to a single panel, and are broken up based on where it can be used.
+This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.
 
 {% include modules/toc.liquid %}
 
-## Opening DevTools
+## Access DevTools using these shortcuts
 
-To access the DevTools, on any web page or app in Google Chrome you can use one of these options:
+To access the DevTools, on any web page or app in Google Chrome:
 
-*   Open the **Chrome menu** ![Chrome menu](../images/chrome-menu.png)at the top-right of your browser window, then select **Tools** > **Developer Tools**.
-*   Right-click on any page element and select **Inspect Element**.
+* Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png) at the top-right of your browser window, then select **Tools > Developer Tools**.
+* Right-click on any page element and select **Inspect Element**.
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
+Additonal shortcuts to access DevTools:
 
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Open Developer Tools</td>
-
-<td><span class="kbd">F12</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
-
-</tr>
-
-<tr>
-<td>Open / switch from inspect element mode and browser window</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
-
-</tr>
-
-<tr>
-<td>Open Developer Tools and bring focus to the console</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">J</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">J</span></td>
-
-</tr>
-
-<tr>
-<td>Inspect the Inspector (_undock first one and press_)</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Access DevTools</th>
+      <th>On Windows</th>
+      <th>On Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Launch DevTools">Open Developer Tools</td>
+	  <td data-th="Windows"><span class="kbd">F12</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
+	  <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
+    </tr>
+    <tr>
+      <td data-th="Launch DevTools">Open / switch from inspect element mode and browser window</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+    </tr>
+    <tr>
+      <td data-th="Launch DevTools">Open Developer Tools and bring focus to the console</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">J</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">J</span></td>
+    </tr>
+    <tr>
+      <td data-th="Launch DevTools">Inspect the Inspector (_undock first one and press_)</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
-
-<div class="collapsible">
-## All Panels
-
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Show General Settings dialog</td>
-
-<td><span class="kbd">?</span>, <span class="kbd">F1</span></td>
-
-<td><span class="kbd">?</span></td>
-
-</tr>
-
-<tr>
-<td>Next panel</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">]</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">]</span></td>
-
-</tr>
-
-<tr>
-<td>Previous panel</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">[</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">[</span></td>
-
-</tr>
-
-<tr>
-<td>Backward in panel History</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">[</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">[</span></td>
-
-</tr>
-
-<tr>
-<td>Forward in panel history</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">]</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">]</span></td>
-
-</tr>
-
-<tr>
-<td>Change docking location</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">D</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">D</span></td>
-
-</tr>
-
-<tr>
-<td>Open Device Mode</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">M</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">M</span></td>
-
-</tr>
-
-<tr>
-<td>Toggle Console / close settings dialog when open</td>
-
-<td><span class="kbd">Esc</span></td>
-
-<td><span class="kbd">Esc</span></td>
-
-</tr>
-
-<tr>
-<td>Refresh the page</td>
-
-<td><span class="kbd">F5</span>, <span class="kbd">Ctrl</span> + <span class="kbd">R</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">R</span></td>
-
-</tr>
-
-<tr>
-<td>Refresh the page ignoring cached content</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">F5</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">R</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">R</span></td>
-
-</tr>
-
-<tr>
-<td>Text search within current file or panel</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">F</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">F</span></td>
-
-</tr>
-
-<tr>
-<td>Text search across all sources</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">F</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">F</span></td>
-
-</tr>
-
-<tr>
-<td>Search by filename (_except on Timeline_)</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">O</span>, <span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">O</span>, <span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
-
-</tr>
-
-<tr>
-<td>Zoom in (while focused in DevTools)</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">+</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">+</span></td>
-
-</tr>
-
-<tr>
-<td>Zoom out</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">-</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">-</span></td>
-
-</tr>
-
-<tr>
-<td>Restore default text size</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">0</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">0</span></td>
-
-</tr>
-
-</tbody>
-
+## Shortcuts in all panels
+
+Shortcuts available in all DevTools panels:
+
+<table class="table-3">
+  <thead>
+      <th>Global Shortcut</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Global Shortcuts">Show General Settings dialog</td>
+      <td data-th="Windows"><span class="kbd">?</span>, <span class="kbd">F1</span></td>
+      <td data-th="Mac"><span class="kbd">?</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Show General Settings dialog</td>
+      <td data-th="Windows"><span class="kbd">?</span>, <span class="kbd">F1</span></td>
+      <td data-th="Mac"><span class="kbd">?</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Next panel</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">]</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">]</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Previous panel</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">[</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">[</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Backward in panel History</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">[</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">[</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Forward in panel history</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">]</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">]</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Change docking location</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">D</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">D</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Open Device Mode</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">M</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">M</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Toggle Console / close settings dialog when open</td>
+      <td data-th="Windows"><span class="kbd">Esc</span></td>
+      <td data-th="Mac"><span class="kbd">Esc</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Refresh the page</td>
+      <td data-th="Windows"><span class="kbd">F5</span>, <span class="kbd">Ctrl</span> + <span class="kbd">R</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">R</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Refresh the page ignoring cached content</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">F5</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">R</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">R</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Text search within current file or panel</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">F</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">F</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Text search across all sources</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">F</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">F</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Search by filename (_except on Timeline_)</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span>, <span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span>, <span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Zoom in (while focused in DevTools)</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">+</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">+</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Zoom out</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">-</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">-</span></td>
+    </tr>
+    <tr>
+      <td data-th="Global Shortcuts">Restore default text size</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">0</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">0</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
-
-<div class="collapsible">
-## Elements Panel
-
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Undo change</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Z</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Z</span></td>
-
-</tr>
-
-<tr>
-<td>Redo change</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Y</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Y</span>, <span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">Z</span></td>
-
-</tr>
-
-<tr>
-<td>Navigate</td>
-
-<td><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
-
-<td><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
-
-</tr>
-
-<tr>
-<td>Expand / collapse node</td>
-
-<td><span class="kbd">Right</span>, <span class="kbd">Left</span></td>
-
-<td><span class="kbd">Right</span>, <span class="kbd">Left</span></td>
-
-</tr>
-
-<tr>
-<td>Expand node</td>
-
-<td><span class="kbd">Single-click on arrow</span></td>
-
-<td><span class="kbd">Single-click on arrow</span></td>
-
-</tr>
-
-<tr>
-<td>Expand / collapse node and all its children</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">Click on arrow icon</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">Click on arrow icon</span></td>
-
-</tr>
-
-<tr>
-<td>Edit attribute</td>
-
-<td><span class="kbd">Enter</span>, <span class="kbd">Double-click on attribute</span></td>
-
-<td><span class="kbd">Enter</span>, <span class="kbd">Double-click on attribute</span></td>
-
-</tr>
-
-<tr>
-<td>Hide element</td>
-
-<td><span class="kbd">H</span></td>
-
-<td><span class="kbd">H</span></td>
-
-</tr>
-
-<tr>
-<td>Toggle edit as HTML</td>
-
-<td><span class="kbd">F2</span></td>
-
-</tr>
-
-</tbody>
-
-</table>
+## Shortcuts in Elements panel
 
 Right-clicking an element you can:
 
-*   Force element pseudo states: (`:active`, `:hover`, `:focus`, `:visited`)
-*   Set breakpoints on the elements: (Subtree modifications, Attribute modification, Node removal)
-*   Clear console
+* Force element pseudo states: (`:active`, `:hover`, `:focus`, `:visited`).
+* Set breakpoints on the elements: (Subtree modifications, Attribute modification, Node removal).
+* Clear console.
 
-</div>
+Shortcuts available in the Elements panel:
 
-<div class="collapsible">
-## Styles Sidebar
-
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Edit rule</td>
-
-<td><span class="kbd">Single-click</span></td>
-
-<td><span class="kbd">Single-click</span></td>
-
-</tr>
-
-<tr>
-<td>Insert new property</td>
-
-<td><span class="kbd">Single-click on whitespace</span></td>
-
-<td><span class="kbd">Single-click on whitespace</span></td>
-
-</tr>
-
-<tr>
-<td>Go to line of style rule property declaration in source</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Click on property</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Click on property</span></td>
-
-</tr>
-
-<tr>
-<td>Go to line of property value declaration in source</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Click on property value</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Click on property value</span></td>
-
-</tr>
-
-<tr>
-<td>Cycle through the color definition value</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Click on color picker box</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Click on color picker box</span></td>
-
-</tr>
-
-<tr>
-<td>Edit next / previous property</td>
-
-<td><span class="kbd">Tab</span>, <span class="kbd">Shift</span> + <span class="kbd">Tab</span></td>
-
-<td><span class="kbd">Tab</span>, <span class="kbd">Shift</span> + <span class="kbd">Tab</span></td>
-
-</tr>
-
-<tr>
-<td>Increment / decrement value</td>
-
-<td><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
-
-<td><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
-
-</tr>
-
-<tr>
-<td>Increment / decrement value by 10</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Up</span>, <span class="kbd">Shift</span> + <span class="kbd">Down</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Up</span>, <span class="kbd">Shift</span> + <span class="kbd">Down</span></td>
-
-</tr>
-
-<tr>
-<td>Increment / decrement value by 10</td>
-
-<td><span class="kbd">PgUp</span>, <span class="kbd">PgDown</span></td>
-
-<td><span class="kbd">PgUp</span>, <span class="kbd">PgDown</span></td>
-
-</tr>
-
-<tr>
-<td>Increment / decrement value by 100</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">PgUp</span>, <span class="kbd">Shift</span> + <span class="kbd">PgDown</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">PgUp</span>, <span class="kbd">Shift</span> + <span class="kbd">PgDown</span></td>
-
-</tr>
-
-<tr>
-<td>Increment / decrement value by 0.1</td>
-
-<td><span class="kbd">Alt</span> + <span class="kbd">Up</span>, <span class="kbd">Alt</span> + <span class="kbd">Down</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">Up</span>, <span class="kbd">Opt</span> + <span class="kbd">Down</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Elements Panel</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Elements Panel">Undo change</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Z</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Z</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Redo change</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Y</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Y</span>, <span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">Z</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Navigate</td>
+      <td data-th="Windows"><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
+      <td data-th="Mac"><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Expand / collapse node</td>
+      <td data-th="Windows"><span class="kbd">Right</span>, <span class="kbd">Left</span></td>
+      <td data-th="Mac"><span class="kbd">Right</span>, <span class="kbd">Left</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Expand node</td>
+      <td data-th="Windows"><span class="kbd">Single-click on arrow</span></td>
+      <td data-th="Mac"><span class="kbd">Single-click on arrow</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Expand / collapse node and all its children</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">Click on arrow icon</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">Click on arrow icon</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Edit attribute</td>
+      <td data-th="Windows"><span class="kbd">Enter</span>, <span class="kbd">Double-click on attribute</span></td>
+      <td data-th="Mac"><span class="kbd">Enter</span>, <span class="kbd">Double-click on attribute</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Hide element</td>
+      <td data-th="Windows"><span class="kbd">H</span></td>
+      <td data-th="Mac"><span class="kbd">H</span></td>
+    </tr>
+    <tr>
+      <td data-th="Elements Panel">Toggle edit as HTML</td>
+      <td data-th="Windows"><span class="kbd">F2</span></td>
+      <td data-th="Mac"></td>
+    </tr>
+  </tbody>
 </table>
 
-![Element Pseudostates](../images/attributes-icon.png)Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`)
-
-![Adding style selectors](../images/plus.png)Add new style selectors
-
-</div>
-
-<div class="collapsible">
-## Sources Panel
-
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Pause / resume script execution</td>
-
-<td><span class="kbd">F8</span>, <span class="kbd">Ctrl</span> + <span class="kbd">\</span></td>
-
-<td><span class="kbd">F8</span>, <span class="kbd">Cmd</span> + <span class="kbd">\</span></td>
-
-</tr>
-
-<tr>
-<td>Step over next function call</td>
-
-<td><span class="kbd">F10</span>, <span class="kbd">Ctrl</span> + <span class="kbd">'</span></td>
-
-<td><span class="kbd">F10</span>, <span class="kbd">Cmd</span> + <span class="kbd">'</span></td>
-
-</tr>
-
-<tr>
-<td>Step into next function call</td>
-
-<td><span class="kbd">F11</span>, <span class="kbd">Ctrl</span> + <span class="kbd">;</span></td>
-
-<td><span class="kbd">F11</span>, <span class="kbd">Cmd</span> + <span class="kbd">;</span></td>
-
-</tr>
-
-<tr>
-<td>Step out of current function</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">F11</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">;</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">F11</span>, <span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">;</span></td>
-
-</tr>
-
-<tr>
-<td>Select next call frame</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">.</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">.</span></td>
-
-</tr>
-
-<tr>
-<td>Select previous call frame</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">,</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">,</span></td>
-
-</tr>
-
-<tr>
-<td>Toggle breakpoint condition</td>
-
-<td><span class="kbd">Click on line number</span>, <span class="kbd">Ctrl</span> + <span class="kbd">B</span></td>
-
-<td><span class="kbd">Click on line number</span>, <span class="kbd">Cmd</span> + <span class="kbd">B</span></td>
-
-</tr>
-
-<tr>
-<td>Edit breakpoint condition</td>
-
-<td><span class="kbd">Right-click on line number</span></td>
-
-<td><span class="kbd">Right-click on line number</span></td>
-
-</tr>
-
-<tr>
-<td>Delete individual words</td>
-
-<td><span class="kbd">Alt</span> + <span class="kbd">Delete</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">Delete</span></td>
-
-</tr>
-
-<tr>
-<td>Comment a line or selected text</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">/</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">/</span></td>
-
-</tr>
-
-<tr>
-<td>Save changes to local modifications</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">S</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">S</span></td>
-
-</tr>
-
-<tr>
-<td>Save all changes</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">S</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">S</span></td>
-
-</tr>
-
-<tr>
-<td>Go to line</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
-
-</tr>
-
-<tr>
-<td>Search by filename</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
-
-</tr>
-
-<tr>
-<td>Jump to line number</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
-
-</tr>
-
-<tr>
-<td>Jump to column</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
-
-</tr>
-
-<tr>
-<td>Go to member</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">O</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">O</span></td>
-
-</tr>
-
-<tr>
-<td>Close active tab</td>
-
-<td><span class="kbd">Alt</span> + <span class="kbd">W</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">W</span></td>
-
-</tr>
-
-<tr>
-<td>Run snippet</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Enter</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Enter</span></td>
-
-</tr>
-
-</tbody>
-
+## Shortcuts in Styles sidebar
+
+Shortcuts available in the Styles sidebar:
+
+<table class="table-3">
+  <thead>
+      <th>Styles Sidebar</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Styles Sidebar">Edit rule</td>
+      <td data-th="Windows"><span class="kbd">Single-click</span></td>
+      <td data-th="Mac"><span class="kbd">Single-click</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Insert new property</td>
+      <td data-th="Windows"><span class="kbd">Single-click on whitespace</span></td>
+      <td data-th="Mac"><span class="kbd">Single-click on whitespace</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Go to line of style rule property declaration in source</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Click on property</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Click on property</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Go to line of property value declaration in source</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Click on property value</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Click on property value</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Cycle through the color definition value</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">Click on color picker box</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">Click on color picker box</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Edit next / previous property</td>
+      <td data-th="Windows"><span class="kbd">Tab</span>, <span class="kbd">Shift</span> + <span class="kbd">Tab</span></td>
+      <td data-th="Mac"><span class="kbd">Tab</span>, <span class="kbd">Shift</span> + <span class="kbd">Tab</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Increment / decrement value</td>
+      <td data-th="Windows"><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
+      <td data-th="Mac"><span class="kbd">Up</span>, <span class="kbd">Down</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Increment / decrement value by 10</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">Up</span>, <span class="kbd">Shift</span> + <span class="kbd">Down</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">Up</span>, <span class="kbd">Shift</span> + <span class="kbd">Down</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Increment / decrement value by 10</td>
+      <td data-th="Windows"><span class="kbd">PgUp</span>, <span class="kbd">PgDown</span></td>
+      <td data-th="Mac"><span class="kbd">PgUp</span>, <span class="kbd">PgDown</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Increment / decrement value by 100</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">PgUp</span>, <span class="kbd">Shift</span> + <span class="kbd">PgDown</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">PgUp</span>, <span class="kbd">Shift</span> + <span class="kbd">PgDown</span></td>
+    </tr>
+    <tr>
+      <td data-th="Styles Sidebar">Increment / decrement value by 0.1</td>
+      <td data-th="Windows"><span class="kbd">Alt</span> + <span class="kbd">Up</span>, <span class="kbd">Alt</span> + <span class="kbd">Down</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">Up</span>, <span class="kbd">Opt</span> + <span class="kbd">Down</span></td>
+    </tr>
+  </tbody>
 </table>
 
-![Pause on Exception Button](../images/pause-gray.png)Don't pause on exceptions
+![Element Pseudostates](imgs/attributes-icon.png)
+Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
 
-![Pause on All Exceptions](../images/pause-blue.png)Pause on All exceptions (including those caught within try/catch blocks)
+![Adding style selectors](imgs/plus.png)
+Add new style selectors.
 
-![Pause on Uncaught Exceptions](../images/pause-purple.png)Pause on uncaught exceptions (usually the one you want)
+## Shortcuts in Sources panel
 
-</div>
+Shortcuts available in the Sources panel:
 
-<div class="collapsible">
-## Code Editor Shortcuts
-
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Go to matching bracket</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">M</span></td>
-
-</tr>
-
-<tr>
-<td>Jump to line number</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
-
-</tr>
-
-<tr>
-<td>Jump to column</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
-
-</tr>
-
-<tr>
-<td>Toggle comment</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">/</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">/</span></td>
-
-</tr>
-
-<tr>
-<td>Select next occurrence</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">D</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">D</span></td>
-
-</tr>
-
-<tr>
-<td>Undo last selection</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">U</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">U</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Sources Panel</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Sources Panel">Pause / resume script execution</td>
+      <td data-th="Windows"><span class="kbd">F8</span>, <span class="kbd">Ctrl</span> + <span class="kbd">\</span></td>
+      <td data-th="Mac"><span class="kbd">F8</span>, <span class="kbd">Cmd</span> + <span class="kbd">\</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Step over next function call</td>
+      <td data-th="Windows"><span class="kbd">F10</span>, <span class="kbd">Ctrl</span> + <span class="kbd">'</span></td>
+      <td data-th="Mac"><span class="kbd">F10</span>, <span class="kbd">Cmd</span> + <span class="kbd">'</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Step into next function call</td>
+      <td data-th="Windows"><span class="kbd">F11</span>, <span class="kbd">Ctrl</span> + <span class="kbd">;</span></td>
+      <td data-th="Mac"><span class="kbd">F11</span>, <span class="kbd">Cmd</span> + <span class="kbd">;</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Step out of current function</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">F11</span>, <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">;</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">F11</span>, <span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">;</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Select next call frame</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">.</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">.</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Select previous call frame</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">,</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">,</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Toggle breakpoint condition</td>
+      <td data-th="Windows"><span class="kbd">Click on line number</span>, <span class="kbd">Ctrl</span> + <span class="kbd">B</span></td>
+      <td data-th="Mac"><span class="kbd">Click on line number</span>, <span class="kbd">Cmd</span> + <span class="kbd">B</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Edit breakpoint condition</td>
+      <td data-th="Windows"><span class="kbd">Right-click on line number</span></td>
+      <td data-th="Mac"><span class="kbd">Right-click on line number</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Delete individual words</td>
+      <td data-th="Windows"><span class="kbd">Alt</span> + <span class="kbd">Delete</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">Delete</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Comment a line or selected text</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">/</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">/</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Save changes to local modifications</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">S</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">S</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Save all changes</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Alt</span> + <span class="kbd">S</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">S</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Go to line</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
+      <td data-th="Mac"><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Search by filename</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Jump to line number</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Jump to column</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Go to member</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">O</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">O</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Close active tab</td>
+      <td data-th="Windows"><span class="kbd">Alt</span> + <span class="kbd">W</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">W</span></td>
+    </tr>
+    <tr>
+      <td data-th="Sources Panel">Run snippet</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Enter</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Enter</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
+![Pause on Exception Button](imgs/pause-gray.png)
+Don't pause on exceptions.
 
-<div class="collapsible">
-## Timeline Panel
+![Pause on All Exceptions](imgs/pause-blue.png)
+Pause on All exceptions (including those caught within try/catch blocks).
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
+![Pause on Uncaught Exceptions](imgs/pause-purple.png)
+Pause on uncaught exceptions (usually the one you want).
 
-<th>Mac</th>
+## Code editor shortcuts
 
-</tr>
+Code editor shortcuts:
 
-<tr>
-<td>Start / stop recording</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">E</span></td>
-
-</tr>
-
-<tr>
-<td>Save timeline data</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">S</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">S</span></td>
-
-</tr>
-
-<tr>
-<td>Load timeline data</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Code Editor</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Code Editor">Go to matching bracket</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">M</span></td>
+      <td data-th="Mac"><span class="kbd"></span></td>
+    </tr>
+    <tr>
+      <td data-th="Code Editor">Jump to line number</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
+    </tr>
+    <tr>
+      <td data-th="Code Editor">Jump to column</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
+    </tr>
+    <tr>
+      <td data-th="Code Editor">Toggle comment</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">/</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">/</span></td>
+    </tr>
+    <tr>
+      <td data-th="Code Editor">Select next occurrence</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">D</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">D</span></td>
+    </tr>
+    <tr>
+      <td data-th="Code Editor">Undo last selection</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">U</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">U</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
+## Shortcuts in Timeline panel
 
-<div class="collapsible">
-## Profiles Panel
+Shortcuts available in the Timeline panel:
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Start / stop recording</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">E</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Timeline Panel</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Timeline Panel">Start / stop recording</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">E</span></td>
+    </tr>
+    <tr>
+      <td data-th="Timeline Panel">Save timeline data</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">S</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">S</span></td>
+    </tr>
+    <tr>
+      <td data-th="Timeline Panel">Load timeline data</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
+## Shortcuts in Profiles panel
 
-<div class="collapsible">
-## Console
+Shortcuts available in the Profiles panel:
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
+<table class="table-3">
+  <thead>
+      <th>Profiles Panel</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Profiles Panel">Start / stop recording</td>
+	  <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
+	  <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">E</span></td>
+    </tr>
+  </tbody>
+</table>
 
-<th>Mac</th>
+## Console shortcuts
 
-</tr>
+Shortcuts available in the Console:
 
-<tr>
-<td>Accept suggestion</td>
-
-<td><span class="kbd">Right</span></td>
-
-<td><span class="kbd">Right</span></td>
-
-</tr>
-
-<tr>
-<td>Previous command / line</td>
-
-<td><span class="kbd">Up</span></td>
-
-<td><span class="kbd">Up</span></td>
-
-</tr>
-
-<tr>
-<td>Next command / line</td>
-
-<td><span class="kbd">Down</span></td>
-
-<td><span class="kbd">Down</span></td>
-
-</tr>
-
-<tr>
-<td>Focus the Console</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">`</span></td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">`</span></td>
-
-</tr>
-
-<tr>
-<td>Clear Console</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">L</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">K</span>, <span class="kbd">Opt</span> + <span class="kbd">L</span></td>
-
-</tr>
-
-<tr>
-<td>Multi-line entry</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Enter</span></td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Return</span></td>
-
-</tr>
-
-<tr>
-<td>Execute</td>
-
-<td><span class="kbd">Enter</span></td>
-
-<td><span class="kbd">Return</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Console Shortcuts</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Console Shortcuts">Accept suggestion</td>
+      <td data-th="Windows"><span class="kbd">Right</span></td>
+      <td data-th="Mac"><span class="kbd">Right</span></td>
+    </tr>
+    <tr>
+      <td data-th="Console Shortcuts">Previous command / line</td>
+      <td data-th="Windows"><span class="kbd">Up</span></td>
+      <td data-th="Mac"><span class="kbd">Up</span></td>
+    </tr>
+    <tr>
+      <td data-th="Console Shortcuts">Next command / line</td>
+      <td data-th="Windows"><span class="kbd">Down</span></td>
+      <td data-th="Mac"><span class="kbd">Down</span></td>
+    </tr>
+    <tr>
+      <td data-th="Console Shortcuts">Focus the Console</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">`</span></td>
+      <td data-th="Mac"><span class="kbd">Ctrl</span> + <span class="kbd">`</span></td>
+    </tr>
+    <tr>
+      <td data-th="Console Shortcuts">Clear Console</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">L</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">K</span>, <span class="kbd">Opt</span> + <span class="kbd">L</span></td>
+    </tr>
+    <tr>
+      <td data-th="Console Shortcuts">Multi-line entry</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">Enter</span></td>
+      <td data-th="Mac"><span class="kbd">Ctrl</span> + <span class="kbd">Return</span></td>
+    </tr>
+    <tr>
+      <td data-th="Console Shortcuts">Execute</td>
+      <td data-th="Windows"><span class="kbd">Enter</span></td>
+      <td data-th="Mac"><span class="kbd">Return</span></td>
+    </tr>
+  </tbody>
 </table>
 
 Right-clicking on console:
 
-*   XMLHttpRequest logging: Turn on to view the XHR log
-*   Preserve log upon navigation
-*   Filter: Hide and unhide messages from script files
-*   Clear console: Clear all console messages
+* XMLHttpRequest logging: Turn on to view the XHR log.
+* Preserve log upon navigation.
+* Filter: Hide and unhide messages from script files.
+* Clear console: Clear all console messages.
 
-</div>
+## Screencasting shortcuts
 
-<div class="collapsible">
-## Screencasting
+Screencasting shortcuts:
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Pinch zoom in and out</td>
-
-<td><span class="kbd">Alt</span> + <span class="kbd">Scroll</span>,<span class="kbd">Ctrl</span> + <span class="kbd">Click and drag with two fingers</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">Scroll</span>, <span class="kbd">Cmd</span> + <span class="kbd">Click and drag with two fingers</span></td>
-
-</tr>
-
-<tr>
-<td>Inspect element tool</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Screencasting Shortcuts</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Screencasting Shortcuts">Pinch zoom in and out</td>
+      <td data-th="Windows"><span class="kbd">Alt</span> + <span class="kbd">Scroll</span>,<span class="kbd">Ctrl</span> + <span class="kbd">Click and drag with two fingers</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">Scroll</span>, <span class="kbd">Cmd</span> + <span class="kbd">Click and drag with two fingers</span></td>
+    </tr>
+    <tr>
+      <td data-th="Screencasting Shortcuts">Inspect element tool</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
+## Emulation shortcuts
 
-<div class="collapsible">
-## Emulation
+Emulation shortcuts:
 
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Pinch zoom in and out</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>Emulation Shortcuts</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Emulation Shortcuts">Pinch zoom in and out</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
+    </tr>
+  </tbody>
 </table>
 
-</div>
+## More Chrome shortcuts
 
-<div class="collapsible">
-## Other Chrome Shortcuts
+Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](http://goo.gl/PsTNm) for Windows, Mac, and Linux:
 
-Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](http://goo.gl/PsTNm) for Windows, Mac, and Linux.
-
-<table>
-<tbody>
-<tr>
-<th>Windows / Linux</th>
-
-<th>Mac</th>
-
-</tr>
-
-<tr>
-<td>Find next</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">G</span></td>
-
-</tr>
-
-<tr>
-<td>Find previous</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">G</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">G</span></td>
-
-</tr>
-
-<tr>
-<td>Open a new window in Incognito mode</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">N</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">N</span></td>
-
-</tr>
-
-<tr>
-<td>Toggle Bookmarks bar on and off</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">B</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">B</span></td>
-
-</tr>
-
-<tr>
-<td>View the History page</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">H</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Y</span></td>
-
-</tr>
-
-<tr>
-<td>View the Downloads page</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">J</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">J</span></td>
-
-</tr>
-
-<tr>
-<td>View the Task Manager</td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">ESC</span></td>
-
-<td><span class="kbd">Shift</span> + <span class="kbd">ESC</span></td>
-
-</tr>
-
-<tr>
-<td>Next page in a tabs browsing history</td>
-
-<td><span class="kbd">Alt</span> + <span class="kbd">Right</span></td>
-
-<td><span class="kbd">Opt</span> + <span class="kbd">Right</span></td>
-
-</tr>
-
-<tr>
-<td>Previous page in a tabs browsing history</td>
-
-<td><span class="kbd">Backspace</span>, <span class="kbd">Alt</span> + <span class="kbd">Left</span></td>
-
-<td><span class="kbd">Backspace</span>, <span class="kbd">Opt</span> + <span class="kbd">Left</span></td>
-
-</tr>
-
-<tr>
-<td>Highlight content in the web address area</td>
-
-<td><span class="kbd">F6</span>, <span class="kbd">Ctrl</span> + <span class="kbd">L</span>, <span class="kbd">Alt</span> + <span class="kbd">D</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">L</span>, <span class="kbd">Opt</span> + <span class="kbd">D</span></td>
-
-</tr>
-
-<tr>
-<td>Places a ? in the address bar for performing a keyword   
-search using your default search engine</td>
-
-<td><span class="kbd">Ctrl</span> + <span class="kbd">K</span>, <span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
-
-<td><span class="kbd">Cmd</span> + <span class="kbd">K</span>, <span class="kbd">Cmd</span> + <span class="kbd">E</span></td>
-
-</tr>
-
-</tbody>
-
+<table class="table-3">
+  <thead>
+      <th>More Chrome Shortcuts</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Find next</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">G</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Find previous</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">G</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">G</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Open a new window in Incognito mode</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">N</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">N</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Toggle Bookmarks bar on and off</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">B</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">B</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">View the History page</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">H</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Y</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">View the Downloads page</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">J</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">J</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">View the Task Manager</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">ESC</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">ESC</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Next page in a tabs browsing history</td>
+      <td data-th="Windows"><span class="kbd">Alt</span> + <span class="kbd">Right</span></td>
+      <td data-th="Mac"><span class="kbd">Opt</span> + <span class="kbd">Right</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Previous page in a tabs browsing history</td>
+      <td data-th="Windows"><span class="kbd">Backspace</span>, <span class="kbd">Alt</span> + <span class="kbd">Left</span></td>
+      <td data-th="Mac"><span class="kbd">Backspace</span>, <span class="kbd">Opt</span> + <span class="kbd">Left</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Highlight content in the web address area</td>
+      <td data-th="Windows"><span class="kbd">F6</span>, <span class="kbd">Ctrl</span> + <span class="kbd">L</span>, <span class="kbd">Alt</span> + <span class="kbd">D</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">L</span>, <span class="kbd">Opt</span> + <span class="kbd">D</span></td>
+    </tr>
+    <tr>
+      <td data-th="More Chrome Shortcuts">Places a ? in the address bar for performing a keyword search using your default search engine</td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">K</span>, <span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">K</span>, <span class="kbd">Cmd</span> + <span class="kbd">E</span></td>
+    </tr>
+  </tbody>
 </table>
 
 {% endwrap %}

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Edit Styles"
 seotitle: "Edit Styles in the Chrome DevTools Styles pane."

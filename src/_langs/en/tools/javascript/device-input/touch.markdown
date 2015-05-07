@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Test Touch Input"
 seotitle: "Test Device Input using Chrome DevTools Device Sensors"

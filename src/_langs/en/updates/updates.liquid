@@ -1,0 +1,88 @@
+
+{% assign updates = page.articles.updates | sort: 'date' | reverse  %}
+
+<header class="tools-header updates-header">
+  <div class="container">
+    <p class="headliner">Web Updates</p>
+    <div class="desc">The artist formerly known as HTML5Rocks. Discover what's happening in Chrome, our tools and the web platform.</div>
+  </div>
+</header>
+
+<div class="updates-list">
+  <div class="container">
+
+    <div class="filters">
+      <ul>
+        <li>Category
+          <ul>
+            <li><a href="/web/updates/{% if include.product != "all" %}{{include.product}}/{% endif %}"{% if include.category == "all" %} class="selected"{% endif %}>All</a></li>
+            <li><a href="/web/updates/{% if include.product != "all" %}{{include.product}}/{% endif %}news/"{% if include.category == "news" %} class="selected"{% endif %}>News</a></li>
+            <li><a href="/web/updates/{% if include.product != "all" %}{{include.product}}/{% endif %}tips/"{% if include.category == "tip" %} class="selected"{% endif %}>Tips &amp; Tricks</a></li>
+          </ul>
+        </li>
+        <li>Product
+          <ul>
+            <li><a href="/web/updates/{% if include.category != "all" %}{{include.category}}/{% endif %}"{% if include.product == "all" %} class="selected"{% endif %}>All</a></li>
+            <li><a href="/web/updates/tools/{% if include.category != "all" %}{{include.category}}/{% endif %}"{% if include.product == "tools" %} class="selected"{% endif %}>All Tools</a></li>
+            <li><a href="/web/updates/chrome/{% if include.category != "all" %}{{include.category}}/{% endif %}"{% if include.product == "chrome" %} class="selected"{% endif %}>Chrome</a></li>
+            <li><a href="/web/updates/chrome-devtools/{% if include.category != "all" %}{{include.category}}/{% endif %}"{% if include.product == "chrome-devtools" %} class="selected"{% endif %}>DevTools</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <ul>
+
+      {% for article in updates %}
+
+        {% if include.category == "all" or article.type == include.category  %}
+
+        {% if include.product == "all" or article.product == include.product or article.category == include.product %}
+
+        <li class="clear {{article.type}}">
+
+          <div>
+            <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+            <h3><span>{{article.type}}</span>{% if article.title %}{{article.title}}{% else %}Tip!{% endif %}</h3>
+            <p>{% if article.description %}{{article.description}}{% else %}{{article.content}}{% endif %}</p>
+            {% if article.tags %}
+            <div class="tags">
+              {% for tag in article.tags %}
+              <span>{{tag}}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            </a>
+          </div>
+
+          <footer>
+
+            {% if article.authors %}
+            <div>
+            {% for author in article.authors %}
+            {% assign contributor = site.data["contributors"][author] %}
+                <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+                  <span class="icon-circle" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+                  {{contributor.name.given}} {{contributor.name.family}}
+                </a>
+            {% endfor %}
+
+            </div>
+            {% endif %}
+
+            <div>{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+
+          </footer>
+          
+        </li>
+
+        {% endif %}
+
+        {% endif %}
+
+      {% endfor %}
+
+    </ul> 
+
+  </div>
+</div>

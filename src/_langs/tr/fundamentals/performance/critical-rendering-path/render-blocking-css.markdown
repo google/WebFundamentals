@@ -94,13 +94,13 @@ Simdi biraz uygulama örneklerine bakalim:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * Ilk bildirim olusturmayi engeller ve tüm kosullarla eslesir.
-* Ikinci bildirim de olusturmayi engeller: 'ekran' varsayilan türdür ve herhangi bir tür belirtmezseniz dolayli olarak 'ekran'a ayarlanir. Dolayisiyla, birinci ve ikinci bildirimler aslinda esdegerdir.
+* Ikinci bildirim de olusturmayi engeller: 'all' varsayilan türdür ve herhangi bir tür belirtmezseniz dolayli olarak 'all'a ayarlanir. Dolayisiyla, birinci ve ikinci bildirimler aslinda esdegerdir.
 * Üçüncü bildirim bir dinamik medya sorgusudur ve sayfa yüklenirken degerlendirilir. Sayfa yüklenirken cihazin yönüne bagli olarak portrait.css olusturmayi engelleyebilir veya engellemeyebilir.
 * Son bildirim yalnizca sayfa yazdirilirken uygulanir, dolayisiyla sayfa tarayiciya ilk kez yüklenirken olusturmayi engellemez.
 

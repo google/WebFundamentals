@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Set Up Developer Tools"
+rss: false
 seotitle: "Set Up Chrome Developer Tools (DevTools)"
 description: "Developer tools provide web developers deep access into the internals of the browser and their web application. Use the Chrome Developer Tools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization."
 introduction: "Developer tools provide web developers deep access into the internals of the browser and their web application."

@@ -1,6 +1,7 @@
 ---
 layout: section
 title: "Set Up Your Workspace"
+rss: false
 seotitle: "Set Up Your Workspace"
 description: "Set up your workspace to include a good editor, debugging, and build tools for the multi-device web."
 introduction: "Set up your workspace to include a good editor, debugging, and build tools for the multi-device web."

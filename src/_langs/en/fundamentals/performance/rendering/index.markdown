@@ -1,7 +1,7 @@
 ---
 layout: section
 title: "Rendering Performance"
-description: "Users notice if sites and apps don't run well, so optimizing rendering performance is crucia!"
+description: "Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!"
 introduction: "Users of today’s web <a href=\"http://paul.kinlan.me/what-news-readers-want/\">expect that the pages they visit will be interactive and smooth</a> and that’s where you need to increasingly focus your time and effort. Pages should not only load quickly, but also run well; scrolling should be stick-to-finger fast, and animations and interactions should be silky smooth."
 article:
   written_on: 2015-03-20

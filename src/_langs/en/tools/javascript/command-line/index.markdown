@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Interact with Document from Command Line"
 seotitle: "Interact with Document from Command Line in Chrome DevTools"
