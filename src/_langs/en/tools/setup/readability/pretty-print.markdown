@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Make JavaScript Look Pretty"
 seotitle: "Make JavaScript Look Pretty with PrettyPrint"

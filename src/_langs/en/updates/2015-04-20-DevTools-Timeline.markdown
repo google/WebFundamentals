@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: update
 published: true
 
@@ -11,7 +12,8 @@ authors:
 
 collection: updates
 category: tools
-type: tip
+product: chrome-devtools
+type: news
 tags: 
 - devtools
 - timeline

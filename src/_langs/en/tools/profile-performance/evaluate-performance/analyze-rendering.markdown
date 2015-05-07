@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Analyze Rendering Performance"
 seotitle: "Analyze Rendering Performance Using Chrome DevTools Frames Mode"

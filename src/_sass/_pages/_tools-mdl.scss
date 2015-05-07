@@ -8,11 +8,15 @@
 		letter-spacing: 0;		
 	}
 
-	height: 640px;
+	height: 60vh;
 	background-color: #1a1a1f;
 	background-image: url(/web/tools/material-design-lite/images/header.jpg);
 	background-size: cover;
-	position: relative;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
 
 	h1 {
 		margin: 0;
@@ -32,9 +36,8 @@
 		height: 56px;
 		display: block;
 		border-radius: 56px;
-		position: absolute;
-		top: 42px;
-		right: 40px;
+		margin-top: 42px;
+		margin-right: 40px;
 
 		span {
 			font-size: 0;
@@ -42,7 +45,7 @@
 			display: block;
 			width: 56px;
 			height: 56px;
-			background-image: url(https://google.github.io/material-design-icons/communication/svg/ic_email_24px.svg);
+			background-image: url(/web/tools/material-design-lite/images/share.svg);
 			background-repeat: no-repeat;
 			background-position: center center;
 			opacity: 0.6;
@@ -50,12 +53,9 @@
 	}
 
 	img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -58px;
-		margin-top: -58px;
-
+		height: 30%;
+		width: auto;
+		align-self: center;
 	}
 
 }

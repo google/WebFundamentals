@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Improve Network Performance"
 seotitle: "Improve Network Performance Using Chrome DevTools Network Panel and Resource Timing API"

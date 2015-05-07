@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "How to Use Console UI"
 seotitle: "How to Use Console UI in Chrome DevTools"

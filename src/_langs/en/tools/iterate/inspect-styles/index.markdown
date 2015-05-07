@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Inspect and Edit Pages and Styles"
 seotitle: "Inspect and Edit Pages and Styles Using the Chrome DevTools Elements Panel"

@@ -94,13 +94,13 @@ Analisaremos alguns exemplos práticos:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * A primeira declaração é de um bloqueador de renderização e se encaixa em todas as descrições.
-* A segunda declaração também é um bloqueador de renderização: `tela` é o tipo padrão e, se você não especificar um tipo, fica configurado automaticamente como `tela`. Portanto, a primeira e a segunda declarações são equivalentes.
+* A segunda declaração também é um bloqueador de renderização: `all` é o tipo padrão e, se você não especificar um tipo, fica configurado automaticamente como `all`. Portanto, a primeira e a segunda declarações são equivalentes.
 * A terceira declaração tem uma consulta de mídia dinâmica que será avaliada quando a página estiver sendo carregada. Dependendo da orientação do dispositivo quando a página estiver sendo carregada, portrait.css pode ser bloqueador de renderização (ou não).
 * A última declaração se aplica apenas quando a página está sendo impressa, portanto, não bloqueia a renderização quando a página é carregada no navegador pela primeira vez.
 

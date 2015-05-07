@@ -2,12 +2,12 @@
 id: adsy_me
 layout: spotlight
 collection: spotlight
-published: false
+published: true
 
-date: 2015-04-07
+date: 2015-05-04
 article:
-  written_on: 2015-04-07
-  updated_on: 2015-04-07
+  written_on: 2015-05-04
+  updated_on: 2015-05-04
 authors:
   - pbakaus
 

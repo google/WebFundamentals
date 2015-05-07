@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Set Up Persistent Authoring"
 seotitle: "Set Up Persistent Authoring in the DevTools by Mapping Source Files to Workspaces"

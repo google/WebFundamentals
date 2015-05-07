@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Edit the DOM"
 seotitle: "Edit the DOM in the Chrome DevTools Elements panel."

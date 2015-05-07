@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Speed Up JavaScript Execution"
 seotitle: "Speed Up JavaScript Execution Using DevTools Profiles Panel"

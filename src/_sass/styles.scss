@@ -29,6 +29,9 @@
   src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(//themes.googleusercontent.com/static/fonts/robotocondensed/v9/b9QBgL0iMZfDSpmcXcE8nPZRQUbYfRc-1FWT9T9EE8M.woff) format('woff');
 }
 
+// We'll need Roboto after MD redesign, and for showcase/tools section.
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
 @import "_utils";
 @import "_normalize";
 @import "_global";

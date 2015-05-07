@@ -94,13 +94,13 @@ Veamos algunos ejemplos prácticos:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * La primera declaración puede bloquear la visualización del contenido y se da en todas las condiciones.
-* La segunda declaración también puede bloquear la visualización del contenido: `screen` es el tipo predeterminado y, si no especificas ningún tipo, se aplicará `screen` de forma predeterminada. Por lo tanto, la primera y la segunda declaración son en realidad equivalentes.
+* La segunda declaración también puede bloquear la visualización del contenido: `all` es el tipo predeterminado y, si no especificas ningún tipo, se aplicará `all` de forma predeterminada. Por lo tanto, la primera y la segunda declaración son en realidad equivalentes.
 * La tercera declaración tiene una consulta de medios dinámica que se evaluará al cargar la página. En función de la orientación del dispositivo al cargar la página, portrait.css podría o no bloquear la visualización de la página.
 * La última declaración solo se aplica cuando la página se imprime, por lo que no impide la visualización del contenido por primera vez en el navegador.
 

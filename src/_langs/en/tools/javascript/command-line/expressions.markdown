@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Evaluate Expressions"
 seotitle: "Evaluation Expressions from the Command Line"

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Test Different Layouts"
 seotitle: "Test Different Layouts using the Chrome DevTools Device Emulator."

@@ -94,13 +94,13 @@ CSS の「メディアタイプ」や「メディアクエリ」は、このよ�
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * 1 番目の宣言はレンダリング ブロックで、あらゆる条件に合致します。
-* 2 番目の宣言もレンダリング ブロックです。「screen」はデフォルト タイプであり、タイプを指定しなかった場合、自動的に「screen」に設定されます。したがって、1 番目と 2 番目の宣言は実質的に同じものです。
+* 2 番目の宣言もレンダリング ブロックです。「all」はデフォルト タイプであり、タイプを指定しなかった場合、自動的に「all」に設定されます。したがって、1 番目と 2 番目の宣言は実質的に同じものです。
 * 3 番目の宣言は、動的メディアクエリを含んでおり、ページが読み込まれる際に評価されます。ページが読み込まれたときのデバイスの方向に応じて、portrait.css がレンダリング ブロックになるかどうかが決まります。
 * 4 番目の宣言は、ページが印刷される場合にのみ適用されます。そのため、ページが最初にブラウザに読み込まれる際にはレンダリング ブロックとはなりません。
 

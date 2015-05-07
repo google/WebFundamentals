@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Manage Your Local Data Resources"
 description: "TBD description."

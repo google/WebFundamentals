@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Inspect and Tweak Your Pages: the Basics"
 seotitle: "Inspect and Tweak Your Pages in the Chrome DevTools Elements Panel"

@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Set Up Your Build Tools"
+rss: false
 seotitle: "Set Up Your Build Tools"
 description: "Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools."
 introduction: "Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools. Every site should have a development version and a production version.<br /><br />The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.<br /><br />A production version will take these files, minify them, concatenate / merge them and optimise files like images."

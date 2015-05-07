@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Measure Resource Loading Times"
 seotitle: "Measure Resource Loading Times Using Chrome DevTools Network Panel"

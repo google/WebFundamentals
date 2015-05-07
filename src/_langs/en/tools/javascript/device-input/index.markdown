@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: section
 title: "Test Device Input"
 seotitle: "Test Device Input"

@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: landing
 title: "Set Up "
 seotitle: "Set Up Your Developer Tools"

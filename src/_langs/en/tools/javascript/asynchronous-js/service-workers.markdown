@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "How to Debug Service Workers"
 seotitle: "How to Debug Service Workers"

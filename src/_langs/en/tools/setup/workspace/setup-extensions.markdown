@@ -1,4 +1,5 @@
 ---
+rss: false
 layout: article
 title: "Set Up Browser Extensions"
 seotitle: "Set Up Browser Extensions"
