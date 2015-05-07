@@ -94,13 +94,13 @@ Prenons quelques exemples concrets :
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * La première déclaration empêche l'affichage et respecte toutes les conditions.
-* La seconde déclaration empêche également l'affichage : 'écran' est le type par défaut, et si vous ne précisez pas le type, il sera implicitement défini sur 'écran'. La première et la deuxième déclaration sont donc en fait équivalentes.
+* La seconde déclaration empêche également l'affichage : 'all' est le type par défaut, et si vous ne précisez pas le type, il sera implicitement défini sur 'all'. La première et la deuxième déclaration sont donc en fait équivalentes.
 * La troisième déclaration a une requête média dynamique qui sera évaluée lors du chargement de la page. En fonction de l'orientation de l'appareil lors du chargement de la page, portrait.css peut empêcher ou non l'affichage.
 * La dernière déclaration n'est appliquée que lorsque la page est imprimée. Elle n'empêche donc pas l'affichage lors du premier chargement de la page dans le navigateur.
 

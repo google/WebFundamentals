@@ -94,13 +94,13 @@ key-takeaways:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * 第一個聲明是禁止轉譯的，並且符合所有條件。
-* 第二個聲明也是禁止轉譯的：「screen」是預設的類型，如果未指定任何類型，則預設設定為「screen」。因此，第一個聲明和第二個聲明實際上是一樣的。
+* 第二個聲明也是禁止轉譯的：「all」是預設的類型，如果未指定任何類型，則預設設定為「all」。因此，第一個聲明和第二個聲明實際上是一樣的。
 * 第三個聲明包含動態媒體查詢，在網頁載入時將評估該查詢。根據載入網頁時裝置的方向，決定 portrait.css 是否禁止轉譯。
 * 最後一個聲明只適用於列印網頁，因此在瀏覽器中初次載入網頁時，不會禁止轉譯。
 
