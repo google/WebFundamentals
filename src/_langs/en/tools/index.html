@@ -20,42 +20,6 @@ feedPath: tools/feed.xml
   </div>
 </div>
 
-<div class="tools-updates">
-  <div class="container">
-    <ul class="updates">
-      {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
-      {% for article in updates %}
-      {% if article.category == 'tools' %}
-
-        <li>
-          <a href="{{site.baseurl}}{{article.url | canonicalize}}">
-          <h4>{{article.title}}</h4>
-          <p>{{article.description}}</p>
-          {% if article.tags %}
-          <div class="tags">
-            {% for tag in article.tags %}
-            <span>#{{tag}}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-          </a>
-        </li>
-
-      {% endif %}
-      {% endfor %}
-    </ul>    
-  </div>
-  <div class="more">
-    <div class="container">
-      <ul>
-        <li><a href="https://twitter.com/ChromeDevTools"><strong>@ChromeDevTools</strong></a><a href="https://twitter.com/ChromeDevTools/status/591285586717118464">When debugging JS, DevTools now highlights the exact column as opposed to the entire line. Useful with minified code!</a></li>
-        <li><a href="https://twitter.com/ChromiumDev"><strong>@ChromiumDev</strong></a><a href="https://twitter.com/ChromiumDev/status/591642019543449600">Conferencing done right. Read our case study on the Chrome Dev Summit site. https://developers.google.com/web/showcase/case-study/chrome-dev-summit/ #serviceworker</a></li>
-      </ul>
-      <a href="updates/">ALL UPDATES</a>
-    </div>
-  </div>
-</div>
-
 <div class="tools-products">
 
   <div class="container">
@@ -97,6 +61,13 @@ feedPath: tools/feed.xml
     </ul>
   </div>
 
+</div>
+
+<div class="tools-updates">
+  <div class="container">
+    <h3><a href="/web/updates/">What's hot <span>All tips &amp; updates</span></a></h3>
+    {% include modules/latest_updates.liquid limit=2 category="tools" %}   
+  </div>
 </div>
 
 <div class="tools-home">

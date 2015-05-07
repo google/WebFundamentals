@@ -1,7 +1,8 @@
-<ul class="updates">
+<ul class="short-updates">
   {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
   {% for article in updates limit: include.limit %}
-  {% if article.category == 'tools' %}
+  {% if include.category == null or article.category == include.category %}
+  {% if include.product == null or article.product == include.product %}
 
     <li class="{{article.type}}">
       <a href="{{site.baseurl}}{{article.url | canonicalize}}">
@@ -30,7 +31,8 @@
       <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{% if article.description %}{{article.description}}{% else %}{{article.content}}{% endif %}</a></p>
       
     </li>
-
+  
+  {% endif %}
   {% endif %}
   {% endfor %}
 </ul>
