@@ -3,7 +3,7 @@
 {% assign seriesId = 'lazyweb' %}
 {% assign orderedVideos = site.data.videoGroups['lazyweb'] | sort: 'date' | reverse %}
 
-{% assign title = 'Lazy Web' %}
+{% assign title = 'LazyWeb' %}
 {% assign description = 'The LazyWeb Show is a recap of the past week’s current events on the web platform.' %}
 {% assign showSeriesInTitle = true %}
 
