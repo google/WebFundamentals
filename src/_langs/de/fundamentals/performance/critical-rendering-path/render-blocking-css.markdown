@@ -94,13 +94,13 @@ Sehen wir uns nun einige praktische Beispiele an:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * Die erste Deklaration blockiert das Rendern und trifft auf alle Bedingungen zu.
-* Die zweite Deklaration blockiert ebenfalls das Rendern: `screen` ist der Standardtyp und ist voreingestellt, wenn Sie keinen Typ vorgeben. Aus diesem Grund wirken sich die erste und die zweite Deklaration gleich aus.
+* Die zweite Deklaration blockiert ebenfalls das Rendern: `all` ist der Standardtyp und ist voreingestellt, wenn Sie keinen Typ vorgeben. Aus diesem Grund wirken sich die erste und die zweite Deklaration gleich aus.
 * Die dritte Deklaration beinhaltet eine dynamische Medienabfrage, die beim Laden der Seite ausgewertet wird. Je nach Ausrichtung des Geräts beim Laden der Seite kann portrait.css das Rendern ggf. blockieren.
 * Die letzte Deklaration wird nur angewendet, wenn die Seite gedruckt wird, deshalb blockiert sie das Rendern beim erstmaligen Laden der Seite im Browser nicht.
 

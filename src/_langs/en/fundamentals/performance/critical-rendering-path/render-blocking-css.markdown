@@ -95,13 +95,13 @@ Let's consider some hands-on examples:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * The first declaration is render blocking and matches in all conditions.
-* The second declaration is also render blocking: "screen" is the default type and if you don’t specify any type, it’s implicitly set to "screen". Hence, the first and second declarations are actually equivalent.
+* The second declaration is also render blocking: "all" is the default type and if you don’t specify any type, it’s implicitly set to "all". Hence, the first and second declarations are actually equivalent.
 * The third declaration has a dynamic media query which will be evaluated when the page is being loaded. Depending on the orientation of the device when the page is being loaded, portrait.css may or may not be render blocking.
 * The last declaration is only applied when the page is being printed, hence it is not render blocking when the page is first loaded in the browser.
 
