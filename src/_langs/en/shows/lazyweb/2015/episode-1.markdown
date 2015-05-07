@@ -4,7 +4,7 @@ showid: lazyweb
 class: lazyweb
 layout: shows/single-video
 collection: lazyweb-2015
-title: "Episode 1"
+title: "The physical web is all around us"
 description: "Microsoft shows off Project Spartan, Beacons by Blesh connect the physical world to your phone, React Native goes open source, a11y-wins.tumblr.com catalogs great accessibility, Polymer 0.8 hits the airwaves, and preload links get an intent to implemnt"
 published: true
 showYoutubeID: REAnmF5FHUA
@@ -17,6 +17,8 @@ article:
 ---
 
 # In this Weeks Episode
+
+Microsoft shows off Project Spartan, Beacons by Blesh connect the physical world to your phone, React Native goes open source, a11y-wins.tumblr.com catalogs great accessibility, Polymer 0.8 hits the airwaves, and preload links get an intent to implemnt
 
 ## React Native <span class="lazyweb-title-timestamp">0:13</span>
 
