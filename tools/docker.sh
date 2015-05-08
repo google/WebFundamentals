@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 image=${WF_DOCKER_IMAGE:-google/webfundamentals}
 cmd=$1
