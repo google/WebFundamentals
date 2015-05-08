@@ -3,7 +3,7 @@ toc:
   path: /tools/
   home: true
 - title: "What's new"
-  path: /tools/updates/
+  path: /updates/tools/
 - title: Documentation
   hasSubNav: true
   section:
