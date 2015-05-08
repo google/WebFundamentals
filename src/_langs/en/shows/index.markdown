@@ -22,6 +22,7 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign http203Show = null %}
 {% assign polycastsShows = null %}
 {% assign udacityShow = null %}
+{% assign lazywebShow = null %}
 {% for show in shows %}
   {% if show.id == 'cds' %}
     {% assign cdsShow = show %}
@@ -34,6 +35,9 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% endif %}
   {% if show.id == 'udacity-courses' %}
     {% assign udacityShow = show %}
+  {% endif %}
+  {% if show.id == 'lazyweb' %}
+    {% assign lazywebShow = show %}
   {% endif %}
 {% endfor %}
 
@@ -61,6 +65,18 @@ Fundmentals index: for guide in page.articles.[page.id]
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{http203Show.url | canonicalize}}" title="Go to {{http203Show.title}}" class="themed">{{http203Show.title}}</a></h3>
         <p>{{http203Show.description}}</p>
+      </div>
+    </li>
+    
+    <li class="guides-list__item g--half theme--{{ lazywebShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+      	<a href="{{site.baseurl}}{{lazywebShow.url | canonicalize}}" title="Go to {{lazywebShow.title}}">
+					<img src="{{site.baseurl}}/shows/imgs/lazyweb_rect.jpg" alt="{{lazywebShow.title}} Hero Image">
+				</a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{lazywebShow.url | canonicalize}}" title="Go to {{lazywebShow.title}}" class="themed">{{lazywebShow.title}}</a></h3>
+        <p>{{lazywebShow.description}}</p>
       </div>
     </li>
 

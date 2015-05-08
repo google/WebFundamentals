@@ -22,7 +22,7 @@ scores:
       value: 3565
       result: http://www.webpagetest.org/result/150401_3F_JSY/
 
-title: "HN Premii"
+title: "Hacker News Reader"
 link: http://hn.premii.com/
 developer: Dharmesh Patel
 
@@ -31,7 +31,7 @@ introduction: "An amazing optimized reader for Hacker News."
 pros: |
   A beautiful and highly optimized reading experience for Hacker News. Works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it is installable as it uses the [Web App Manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like a native HN news reader app.
 cons: |
-  None.
+  The app does a huge number of things very well, it loads quickly and is fast and smooth to use. If there was one thing the app could do it would be that adding support for offline experiences, this could be a simple error page or a more complex view of cached content.
 
 interview:
   - question: Why the web?
@@ -48,11 +48,11 @@ interview:
       Like everyone else, I thought 60FPS was not possible on mobile webapp, specially gestures. I was able to implement pull to refresh, and swipe to go back with little learning; and was able to make it work on all major browsers. With that knowledge, I was able to implement Flipboard webapp style story navigation in few hours. 
   - question: If you could have any API to improve your app, what would it be?
     answer: |
-      Intent: Should be able to launch Android native share intent or iOS share from my webapp. This will allow user to choose the service of their choice instead of my app's limited options. 
+      **Intent**: Should be able to launch Android native share intent or iOS share from my webapp. This will allow user to choose the service of their choice instead of my app's limited options. 
 
-      Persistent local storage: Like to see better support for localstorage. 5MB/2.5MB is not enough. Not only that, there is no way to figure out how much space is available. My app can manage storage properly if I knew how much space is left. 
+      **Persistent local storage**: Like to see better support for localstorage. 5MB/2.5MB is not enough. Not only that, there is no way to figure out how much space is available. My app can manage storage properly if I knew how much space is left. 
 
-      Native/standalone webapp: Better option to deploy/install my webapp on iOS, Android and WP as a standalone app. I use Cordova but its painful to update to the latest version. Chrome on Android is moving in right direction, but iOS and Windows Phone is not providing enough support for standalone app.
+      **Native/standalone webapp**: Better option to deploy/install my webapp on iOS, Android and WP as a standalone app. I use Cordova but its painful to update to the latest version. Chrome on Android is moving in right direction, but iOS and Windows Phone is not providing enough support for standalone app.
 
 related:
 -

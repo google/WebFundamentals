@@ -20,10 +20,10 @@ handlers:
   static_dir: build/imgs
   expiration: 1d
 
-- url: /web/(.*\.(png|gif|jpg|svg|xml))
+- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4))
   static_files: build/_langs/en/\1
   expiration: 1d
-  upload: build/_langs/en/(.*\.(png|gif|jpg|svg|xml))
+  upload: build/_langs/en/(.*\.(png|gif|jpg|svg|xml|mp4))
 
 - url: /web/(.*\.ico)
   static_files: build/_langs/en/\1

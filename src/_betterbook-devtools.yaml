@@ -3,7 +3,10 @@ toc:
   path: /chrome-devtools/
   home: true
 - title: "What's new"
-  path: /tools/updates/
+  path: /updates/chrome-devtools/
+- title: "Documentation"
+  path: "#docs"
+  external: true
 - title: "Reference"
   path: https://developer.chrome.com/devtools/docs/console-api
   external: true
