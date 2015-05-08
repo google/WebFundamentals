@@ -94,13 +94,13 @@ Laten we een aantal praktijkvoorbeelden bekijken:
 
 {% highlight html %}
 <link href="style.css"    rel="stylesheet">
-<link href="style.css"    rel="stylesheet" media="screen">
+<link href="style.css"    rel="stylesheet" media="all">
 <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
 <link href="print.css"    rel="stylesheet" media="print">
 {% endhighlight %}
 
 * De eerste definiëring is weergaveblokkerend en wordt onder alle voorwaarden toegepast.
-* De tweede definiëring is ook weergaveblokkerend: `screen` is het standaardtype en als u geen type opgeeft, wordt dit onvoorwaardelijk ingesteld op `screen`. Dus de eerste en de tweede definiëringen zijn feitelijk hetzelfde.
+* De tweede definiëring is ook weergaveblokkerend: `all` is het standaardtype en als u geen type opgeeft, wordt dit onvoorwaardelijk ingesteld op `all`. Dus de eerste en de tweede definiëringen zijn feitelijk hetzelfde.
 * De derde definiëring heeft een dynamische mediaquery, die wordt beoordeeld wanneer de pagina wordt geladen. Afhankelijk van de stand van het apparaat wanneer de pagina wordt geladen, kan portrait.css wel of niet weergaveblokkerend zijn.
 * De laatste definiëring wordt alleen toegepast wanneer de pagina wordt afgedrukt, dus is dit niet weergaveblokkerend wanneer de pagina voor het eerst wordt geladen in de browser.
 
