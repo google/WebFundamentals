@@ -296,6 +296,17 @@ agektmr:
   email: agektmr@google.com
   description: "Eiji is a Developer Advocate"
 
+ilmariheikkinen:
+  name:
+    given: Ilmari
+    family: Heikkinen
+  country: UK
+  homepage: http://fhtr.org
+  google: 115293744081058969329
+  twitter: ilmarihei
+  role:
+    - author
+
 jeokrang:
   name:
     given: Hunmin
@@ -503,7 +514,7 @@ glenshires:
   twitter:
   email: gshires@google.com
 
-smus:
+borissmus:
   name:
     given: Boris
     family: Smus
@@ -562,3 +573,15 @@ chriswilson:
   google: 106422711035746240826
   twitter: cwilso
   email: cwilso@google.com
+  
+tomwiltzius:
+  name:
+    given: Tom
+    family: Wiltzius
+  country: USA
+  homepage:
+  google: 103238735625031210015
+  twitter:
+  email:
+  role:
+    - author

@@ -15,7 +15,7 @@ article:
   written_on: 2012-07-05
   updated_on: 2012-07-05
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - gpu
   - canvas

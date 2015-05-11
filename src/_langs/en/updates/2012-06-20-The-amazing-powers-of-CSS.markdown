@@ -15,7 +15,7 @@ article:
   written_on: 2012-06-20
   updated_on: 2012-06-20
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - fun
   - code

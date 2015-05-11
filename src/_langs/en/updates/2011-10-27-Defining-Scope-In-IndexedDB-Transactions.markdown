@@ -15,7 +15,7 @@ article:
   written_on: 2011-10-27
   updated_on: 2011-10-27
 authors:
-  - idogreen
+  - greenido
 tags:
   - indexeddb
   - chrome

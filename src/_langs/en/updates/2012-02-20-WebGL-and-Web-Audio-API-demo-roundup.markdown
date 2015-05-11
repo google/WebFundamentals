@@ -15,7 +15,7 @@ article:
   written_on: 2012-02-20
   updated_on: 2012-02-20
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - webaudio
   - webgl
