@@ -3,7 +3,7 @@ rss: false
 layout: section
 title: "Test Your Site's Responsive Layout"
 seotitle: "Test Your Site's Responsive Layout using Chrome DevTools device emulator"
-description: "Want to know how your site's layout behaves across a range of devices? The Chrome DevTools device emulator lets you test your site's responsiveness across different devices without leaving the browser."
+description: "Test your site's responsiveness across devices without leaving the browser."
 introduction: "Want to know how your site's layout behaves across a range of devices? The Chrome DevTools device emulator lets you test your site's responsiveness across different devices without leaving the browser."
 article:
   written_on: 2015-04-14
@@ -19,6 +19,6 @@ id: test-layout
 
 {% wrap content %}
 
-Don't just check how your layout looks across devices; measure how it performs. Learn about common layout problems and the tools to find and fix them.
+Don't just test how your site looks across devices. Measure and improve page layout speed. Learn about common layout problems and the tools to find and fix them.
 
 {% endwrap %}
