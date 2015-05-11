@@ -31,6 +31,8 @@ remember:
 
 If you haven't already, familiarize yourself on the [basics of inspecting and tweaking your pages](tools/iterate/inspect-styles/basics). This guide dives deeper into editing and creating styles, including working with css preprocessor source files.
 
+{% include modules/toc.liquid %}
+
 {% include modules/takeaway.liquid list=page.key-takeaways.edit-styles %}
 
 ## Edit and create styles
