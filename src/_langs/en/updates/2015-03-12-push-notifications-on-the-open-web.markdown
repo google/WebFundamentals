@@ -102,7 +102,7 @@ for our site.
 ## Set Up the Initial State
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/enabled-disabled-push-ux-chrome.png %}" alt="Example of enabled and disabled push messaging UX in Chrome" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/enabled-disabled-push-ux-chrome.png" alt="Example of enabled and disabled push messaging UX in Chrome" />
 </p>
 
 Once the service worker is registered, we need to set up our UI's state.
@@ -120,7 +120,7 @@ enabled or disabled. There are however some other states surrounding
 notifications which you need to take into account.  
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/push-messaging-states-diagram-ux.png %}" alt="A diagram highlighting the different considerations and state of push in Chrome" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/push-messaging-states-diagram-ux.png" alt="A diagram highlighting the different considerations and state of push in Chrome" />
 </p>
 
 There are a number of things we need to check before we enable our button, and 
@@ -235,11 +235,11 @@ messages. We'll discuss how this would work in other browsers later on in the ar
 Below are screenshots highlighting where the project number and API keys are.  
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/google-developer-console-project-number.png %}" alt="Highlighting where the project number is in the Google Developer Console" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/google-developer-console-project-number.png" alt="Highlighting where the project number is in the Google Developer Console" />
 </p>
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/google-developer-console-api-key.png %}" alt="Highlighting where the API key is in the Google Developer Console" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/google-developer-console-api-key.png" alt="Highlighting where the API key is in the Google Developer Console" />
 </p>
 
 The project number will be used in the Web App Manifest (see the next section) 
@@ -452,7 +452,7 @@ notification:
     "{\"registration_ids\":[\"<YOUR_SUBSCRIPTION_ID>\"]}"
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/push-message.gif %}" alt="Example of a push message from Chrome for Android" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/push-message.gif" alt="Example of a push message from Chrome for Android" />
 </p>
 
 When developing your backend logic, remember that the Authorization header and 
@@ -715,7 +715,7 @@ resume or step through your service worker script and see if you hit any
 problems.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/sw-internals-pause-checkbox.png %}" alt="Screenshot showing where the pause execution checkbox is on serviceworker-internals" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/sw-internals-pause-checkbox.png" alt="Screenshot showing where the pause execution checkbox is on serviceworker-internals" />
 </p>
 
 If there seems to be an issue between GCM and your service worker's push event, 
@@ -738,7 +738,7 @@ list item with the name "Worker pid:...." which has the URL of your service
 worker.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-04-push-on-the-open-web/service-worker-on-chrome-for-android.png %}" alt="Screenshot showing where service workers live in chrome inspect" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/service-worker-on-chrome-for-android.png" alt="Screenshot showing where service workers live in chrome inspect" />
 </p>
 
 # UX for Push Notifications

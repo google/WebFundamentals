@@ -22,7 +22,7 @@ tags:
   - css
   - filters
   - graphics
-permalink: /2011/12/CSS-Filter-Effects-Landing-in-WebKit
+permalink: /updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit
 ---
 ### Background
 
@@ -47,7 +47,7 @@ Enabling filters directly in CSS means that nearly any DOM element can take adva
 
 #### Demo
 
-<figure><a href="http://html5-demos.appspot.com/static/css/filters/index.html"><img src="{% asset_path 2011-12-22-css-filter-effects-landing-in-webkit/filter-effects-demo.jpg %}" style="border-radius:3px;border:1px solid #ccc;"></a></figure>
+<figure><a href="http://html5-demos.appspot.com/static/css/filters/index.html"><img src="{{site.baseurl}}/updates/2011-12-22-css-filter-effects-landing-in-webkit/filter-effects-demo.jpg" style="border-radius:3px;border:1px solid #ccc;"></a></figure>
 
 [Try it out!](http://html5-demos.appspot.com/static/css/filters/index.html) (works in Chrome Canary and WebKit nightlies)
 

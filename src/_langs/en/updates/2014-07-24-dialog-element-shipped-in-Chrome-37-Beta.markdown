@@ -9,8 +9,8 @@ product: chrome
 type: news
 date: 2014-07-24
 
-title: "dialog element: shipped in Chrome 37 Beta"
-description: "Chrome Beta has landed its native support for <dialog> element"
+title: "dialog element shipped in Chrome 37 Beta"
+description: "Chrome Beta has landed its native support for &lt;dialog&gt; element"
 article:
   written_on: 2014-07-24
   updated_on: 2014-07-24
@@ -23,7 +23,9 @@ permalink: /updates/2014/07/dialog-element-shipped-in-Chrome-37-Beta
 ---
 Chrome Beta has landed its native support for &lt;dialog&gt; element without needing "Enable experimental Web Platform features." flag turned on.
 
+{% comment %}
 {% include_code dialog code-block %}
+{% endcomment %}
 
 Check out more sample codes and how it works in detail with [a live demo](http://demo.agektmr.com/dialog/).
 

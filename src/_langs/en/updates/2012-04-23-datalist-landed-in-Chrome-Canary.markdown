@@ -21,7 +21,7 @@ tags:
   - forms
   - semantics
   - nuts_and_bolts
-permalink: /2012/04/datalist-landed-in-Chrome-Canary
+permalink: /updates/2012/04/datalist-landed-in-Chrome-Canary
 ---
 Filling out forms sometimes feel like cumbersome thing. Giving users multiple choice yet enabling them to type freely is important. The `datalist` element (which just landed on Chrome Canary (M20) makes this a breeze.
 

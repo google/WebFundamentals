@@ -20,7 +20,7 @@ tags:
   - nuts_and_bolts
   - internals
   - performance
-permalink: /2012/04/Round-up-of-Web-Browser-Internals-Resources
+permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
 ---
 <style>
 .da-thumbs {

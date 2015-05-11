@@ -29,7 +29,9 @@ There’s a [host](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 With the basics out of the way, let’s go in-depth with a JavaScript sample that covers some of the gotchas, or “gnarly bits”, of working with generators. There are extensive comments throughout, and you can play around with the [live version](https://googlechrome.github.io/samples/generators/index.html) of the code before reading through it:
 
+{% comment %}
 {% include_code generators code-block %}
+{% endcomment %}
 
 So what are some big takeaways from the code?
 

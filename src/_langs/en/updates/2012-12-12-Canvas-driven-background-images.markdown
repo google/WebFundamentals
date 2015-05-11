@@ -49,7 +49,7 @@ There are two problems with this:
 ### Using 2d canvas as a background
 
 <figure style="text-align: center;font-weight:bold;font-size:20px">
-<a href="http://html5-demos.appspot.com/static/css/webkit-canvas.html"><img src="{% asset_path 2012-12-12-canvas-driven-background-images/canvas-demo.jpg %}"></a>
+<a href="http://html5-demos.appspot.com/static/css/webkit-canvas.html"><img src="{{site.baseurl}}/updates/2012-12-12-canvas-driven-background-images/canvas-demo.jpg"></a>
 <figcaption><a href="http://html5-demos.appspot.com/static/css/webkit-canvas.html">DEMO</a></figcaption>
 </figure>
 

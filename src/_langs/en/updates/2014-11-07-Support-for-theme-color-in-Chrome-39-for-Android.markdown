@@ -29,7 +29,7 @@ page’s `<head>` with the `name="theme-color"`, and set the `content` to any
 valid CSS color.  
 
 <p style="text-align: center;">
-  <img src="{% asset_path theme-color-ss.png %}" alt="Screenshot of phone showing theme-color" />
+  <img src="{{site.baseurl}}/updates/theme-color-ss.png" alt="Screenshot of phone showing theme-color" />
 </p>
 
 For example, to set the background to your favorite color or HTML5Rocks orange:

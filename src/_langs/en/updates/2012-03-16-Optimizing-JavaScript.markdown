@@ -19,7 +19,7 @@ authors:
 tags:
   - performance
   - javascript
-permalink: /2012/03/Optimizing-JavaScript
+permalink: /updates/2012/03/Optimizing-JavaScript
 ---
 JavaScript is relatively fast, but it can always go faster. Read more about how to optimize your JavaScript for performance.
 

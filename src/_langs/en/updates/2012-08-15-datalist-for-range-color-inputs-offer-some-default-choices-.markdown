@@ -27,7 +27,7 @@ Chrome started to support `datalist` for `input[type=text]` in Chrome 20. `datal
 
 `datalist` for `input[type=range]` introduces the ability for developers to show indicators beside the slider as shown below:
 
-![range datalist]({% asset_path 2012-08-15-datalist-for-range-color-inputs-offer-some-default-choices/input-range.jpg %})
+![range datalist]({{site.baseurl}}/updates/2012-08-15-datalist-for-range-color-inputs-offer-some-default-choices/input-range.jpg)
 
 {% highlight HTML %}
 <input type="range" value="0" min="0" max="100" list="numbers" />
@@ -48,7 +48,7 @@ Moving the slider thumb on the input snaps to each of the ticks so that users ca
 
 By adding `datalist` to `input[type=color]`, users can now pick a color from developer selected color swatches as well as choosing arbitrary color from a color picker by themselves.
 
-![color datalist]({% asset_path 2012-08-15-datalist-for-range-color-inputs-offer-some-default-choices/input-color.jpg %})
+![color datalist]({{site.baseurl}}/updates/2012-08-15-datalist-for-range-color-inputs-offer-some-default-choices/input-color.jpg)
 
 {% highlight HTML %}
 <input type="color" value="#000000" list="colors" />

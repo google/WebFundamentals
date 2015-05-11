@@ -38,13 +38,13 @@ First, what is Polymer exactly?
 Polymer is a library that helps you build elements and apps out of web components. Web Components are a cutting edge set of new standards that allow developers to extend the HTML vocabulary with their own custom elements.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/polymer-better.jpg %}" alt="Polymer helps developers build applications faster" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/polymer-better.jpg" alt="Polymer helps developers build applications faster" width="640" />
 </p>
 
 Because Web Components are designed to be a new primitive for the browser, it means that they're very powerful but also very low level and working with them requires a fair bit of code.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/sweeter.jpg %}" alt="Polymer makes Web Components sweeter" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/sweeter.jpg" alt="Polymer makes Web Components sweeter" width="640" />
 </p>
 
 Polymer makes it easier to work Web Components by "sugaring" the syntax. It reduces the amount of boilerplate code you need to write, and adds a declarative style so creating Web Components is as easy as writing HTML.
@@ -54,7 +54,7 @@ Polymer makes it easier to work Web Components by "sugaring" the syntax. It redu
 Polymer began as an experiment to see if we could polyfill the Web Component standards and get feedback from developers before these technologies had shipped in all browsers. As more developers began using Polymer, it changed from being just polyfills, to an actual library full of productivity features (data binding, attribute change watchers, automatic node finding, etc). But all experiments have results, so how did we do?
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/report-card.jpg %}" alt="Polymer report card needs improvement" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/report-card.jpg" alt="Polymer report card needs improvement" width="640" />
 </p>
 
 While many developer said they liked the expressiveness and productivity gains of working with Web Components in Polymer, they also expressed concerns around performance and overall complexity.
@@ -70,7 +70,7 @@ The Polymer team has taken a hard look at every feature of the library with the 
 Polymer has been refactored into a series of layers. The core features are fast and lean, while the more advanced features will be opt-in. For the majority of use cases, the core features should cover developers' needs.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/layers.jpg %}" alt="Polymer has been refactored into layers" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/layers.jpg" alt="Polymer has been refactored into layers" width="640" />
 </p>
 
 ### Simplified Data Binding
@@ -78,7 +78,7 @@ Polymer has been refactored into a series of layers. The core features are fast 
 Polymer's data binding system has also been significantly optimized for performance. Following the layered approach, two-way binding is now opt-in, with the default being one-way bindings. Also, published property types have been made explicit and a property change now fires an event to help elements from different libraries more easily communicate.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/data-binding.jpg %}" alt="Data binding has been simplified" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/data-binding.jpg" alt="Data binding has been simplified" width="640" />
 </p>
 
 ### Leaner Shadow DOM
@@ -88,7 +88,7 @@ The Shadow DOM polyfill is an amazing feat of engineering. It was designed to be
 The next release of Polymer will take a different approach, employing a shim-style layer that only polyfills what Polymer needs.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/shim-shadowdom.jpg %}" alt="Shim shadowdom is much faster" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/shim-shadowdom.jpg" alt="Shim shadowdom is much faster" width="640" />
 </p>
 
 The existing polyfill will live on for generic, non-Polymer web components.
@@ -100,7 +100,7 @@ Speaking of polyfills, those are getting a new home as well. At present many dev
 To make this distinction more clear, the polyfills are being moved to the webcomponents.org and they have now been renamed to `webcomponents.js`.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/wc-org.jpg %}" alt="Polyfills moving to webcomponents.org" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/wc-org.jpg" alt="Polyfills moving to webcomponents.org" width="640" />
 </p>
 
 This move is designed to help other library authors take advantage of the polyfills without any confusion. The Polymer team will continue to contribute to the polyfills, but the hope is that this change makes them into more of a shared resource for the community.
@@ -114,7 +114,7 @@ So what are the results from all these changes?
 On Chrome, Polymer is now **5x faster**, and on Safari there has been an **8x speed up**.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/safari-perf.jpg %}" alt="Polymer is now 8x faster in Safari" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/safari-perf.jpg" alt="Polymer is now 8x faster in Safari" width="640" />
 </p>
 
 ### File Size
@@ -122,7 +122,7 @@ On Chrome, Polymer is now **5x faster**, and on Safari there has been an **8x sp
 The file size has also been reduced by 87%, from 123KB down to 15KB (6KB gzipped).
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/reduced-payload.jpg %}" alt="Polymer is now 87% smaller" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/reduced-payload.jpg" alt="Polymer is now 87% smaller" width="640" />
 </p>
 
 ## Roadmap
@@ -132,7 +132,7 @@ There will be some API breaking changes in the next release, signified by the ne
 The Polymer team has also outlined a roadmap to give developers more clarity around upcoming releases.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-06-polymer-state-of-the-union/roadmap.jpg %}" alt="Polymer roadmap, beta in q1, 1.0 in q2" width="640" />
+  <img src="{{site.baseurl}}/updates/2015-01-06-polymer-state-of-the-union/roadmap.jpg" alt="Polymer roadmap, beta in q1, 1.0 in q2" width="640" />
 </p>
 
 The 0.8 preview is available now as a branch on GitHub (though it's still being very actively developed and is lacking in documentation). The 0.9 official beta is planned for Q1 2015, with 1.0 happening sometime in Q2.

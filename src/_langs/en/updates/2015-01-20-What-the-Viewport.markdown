@@ -47,11 +47,11 @@ The top devices are Chrome M39, which doesn't have a virtual viewport
 and the bottom 3 are from Chrome M40, which has a virtual viewport.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-01-19-virtual-viewport/image00.png %}" alt="pixelated rendering" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-01-19-virtual-viewport/image00.png" alt="pixelated rendering" />
 </p>
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-01-19-virtual-viewport/image01.png %}" alt="pixelated rendering" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-01-19-virtual-viewport/image01.png" alt="pixelated rendering" />
 </p>
   
 In Chrome M39, you will see the appbar after you zoom in, 

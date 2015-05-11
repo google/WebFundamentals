@@ -20,7 +20,7 @@ tags:
   - webaudio
   - faq
   - multimedia
-permalink: /2012/01/Web-Audio-FAQ
+permalink: /updates/2012/01/Web-Audio-FAQ
 ---
 Over the past few months, the WebKit [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) has emerged as a compelling platform for games and audio applications on the web. As developers familiarize themselves with it, I hear similar questions creep up repeatedly. This quick update is an attempt to address some of the more frequently asked questions to make your experience with the Web Audio API more pleasant.
 

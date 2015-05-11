@@ -1,5 +1,14 @@
 ---
-layout: post
+rss: false
+layout: update
+published: true
+
+collection: updates
+category: chrome
+product: chrome
+type: news
+date: 2011-06-28
+
 title: "Page Visibility API: Have I got your attention? "
 description: ""
 article:
@@ -11,7 +20,7 @@ tags:
   - nuts_and_bolts
   - api
   - PageVisibility
-permalink: /2011/06/Page-Visibility-API-Have-I-got-your-attention
+permalink: /updates/2011/06/Page-Visibility-API-Have-I-got-your-attention
 ---
 Multi-tab browsing is now the norm, so you can't assume the user is watching your app just because it's running. Fortunately, the new "Page Visibility API": <a href="http://code.google.com/chrome/whitepapers/pagevisibility.html" target="_blank">http://code.google.com/chrome/whitepapers/pagevisibility.html</a> lets your app discover if it's visible or not. You could use the API to cut down on unnecessary network activity and computation.
 

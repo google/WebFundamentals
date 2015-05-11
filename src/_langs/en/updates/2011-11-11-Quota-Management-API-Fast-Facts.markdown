@@ -21,7 +21,7 @@ tags:
   - quota
   - business
   - filesystem
-permalink: /2011/11/Quota-Management-API-Fast-Facts
+permalink: /updates/2011/11/Quota-Management-API-Fast-Facts
 ---
 There’s various offline related features introduced to modern browsers through HTML5. While offline is convenient, its concept of quota has been left untouched for a long time. The latest version of Chrome browser has the first concept and its implementation of *Quota Management API*. It handles quota for AppCache, IndexedDB, WebSQL and File System API. Here’s a list of things you should keep in mind when working with Quota Management API in the latest Chrome.
 

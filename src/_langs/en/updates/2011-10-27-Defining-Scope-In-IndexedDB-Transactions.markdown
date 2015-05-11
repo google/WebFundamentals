@@ -21,7 +21,7 @@ tags:
   - chrome
   - offline
   - business
-permalink: /2011/10/Defining-Scope-In-IndexedDB-Transactions
+permalink: /updates/2011/10/Defining-Scope-In-IndexedDB-Transactions
 ---
 What is IndexedDB?
 IndexedDB is an evolving web standard for storage of significant amounts of structured data in the browser and for high performance searches on this data using indexes. In other words, IndexedDB is an object store. It is not the same as a relational database, which has tables with collections rows and columns. It is an important and fundamental difference that affects the way that you design and build your applications (more on the - <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">basic concepts</a>).

@@ -28,7 +28,7 @@ Late last year I built the [Chrome Dev Summit](https://developer.chrome.com/devs
 One aspect of the site that was particularly challenging to create was the  “takeover” effect when you click on a card.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-05-01/takeover.gif %}" alt="The card takeover effect" />
+  <img src="{{site.baseurl}}/updates/2015-05-01/takeover.gif" alt="The card takeover effect" />
 </p>
 
 Getting an effect like this to run at 60fps took some thinking, prototyping, and a few interesting compromises. At Chrome Dev Summit, I spoke about this effect and explained in gory detail how I went about building it.
@@ -52,7 +52,7 @@ Getting an effect like this to run at 60fps took some thinking, prototyping, and
 All of this might sound expensive, but there is a window of 100ms from the moment a user interacts before the animation must start. Any more than this and the user will perceive a delay. You can use this time to do expensive preparatory work so that you can run more cheaply during the animation itself. There is also a window at the end of about 50-100ms to do tidy up work, which may be handy depending on what you’re trying to do.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-05-01/100ms-vs-60fps.png %}" alt="Perception window for animations." />
+  <img src="{{site.baseurl}}/updates/2015-05-01/100ms-vs-60fps.png" alt="Perception window for animations." />
 </p>
 
 The expensive work to do the animation is done inside that first 100ms and, on a Nexus 5 the work takes something in the region of 70ms, so there’s room to spare.
