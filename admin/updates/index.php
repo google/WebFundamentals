@@ -5,9 +5,9 @@ include('_header.php');
 <table>
 	<tr>
 		<th>&nbsp;</th>
-		<th>Type</th>
 		<th>Title</th>
 		<th>Author</th>
+		<th>Type</th>
 		<th>Date</th>
 		<th>Category</th>
 		<th>Product</th>
@@ -15,8 +15,6 @@ include('_header.php');
 	</tr>
 
 	<?php
-
-
 
 	foreach ($updates as $key => $update) {
 		
@@ -28,9 +26,9 @@ include('_header.php');
 
 		echo "<tr>";
 		echo "<td><span class='" . ( $published ? "published" : "not-published" ) . "'></span></td>";
-		echo "<td class='type'><span class='" . $update['page']->fetch('type') . "'>" . $update['page']->fetch('type') . "</span></td>";
 		echo "<td><a href='update.php?file=" . $update['url'] . "'>" . $update['page']->fetch('title') . "</a></td>";
 		echo "<td>" . implode(', ', $update['page']->fetch('authors')) . "</td>";
+		echo "<td class='type'><span class='" . $update['page']->fetch('type') . "'>" . $update['page']->fetch('type') . "</span></td>";
 		echo "<td>" . $update['page']->fetch('date') . "</td>";
 		
 		echo "<td>" . $update['page']->fetch('category') . "</td>";
@@ -39,7 +37,6 @@ include('_header.php');
 		echo "</tr>";
 
 	}
-
 
 	?>
 </table>

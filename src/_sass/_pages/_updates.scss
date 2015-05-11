@@ -269,7 +269,7 @@
     padding: 0;
     padding-top: 2em;
 
-    li {
+    > li {
       padding: 1em;
       padding-bottom: 5em;
       margin: 0;
@@ -287,7 +287,7 @@
       }
     }
 
-    li::before {
+    > li::before {
       display: none;
     }
 

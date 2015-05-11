@@ -4,7 +4,7 @@ include('_header.php');
 if($_POST) {
 
 	$file = buildFile();
-	$newFileName = getFileNameFromPerma();
+	$newFileName = getFileName($_POST['date'], $_POST['title']);
 
 	if(file_exists($updates_dir . $newFileName)) {
 
@@ -75,6 +75,14 @@ if($_POST) {
 		<div>
 			<label for="tags">Tags (Comma separated)</label>
 			<input type="text" id="tags" name="tags" value="">
+		</div>
+		<div>
+			<label for="tags">Source Name (i.e. A List Apart)</label>
+			<input type="text" id="source_name" name="source_name" value="">
+		</div>
+		<div>
+			<label for="tags">Source URL</label>
+			<input type="text" id="source_url" name="source_url" value="">
 		</div>
 
 	</fieldset>

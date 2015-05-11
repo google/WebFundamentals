@@ -75,7 +75,15 @@ td {
 }
 
 td span.published {
-	background: rgb(139, 218, 139);
+	background: #0AE85E;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+}
+
+td span.not-published {
+	background: #FDD411;
 	display: block;
 	width: 20px;
 	height: 20px;
@@ -112,8 +120,7 @@ td.type span.tip {
 	padding: 5px;
 }
 
-.menu ul li.new a, #submit  {
-	margin-top: 10px;
+.menu ul li.new a, #submit, a.button  {
 	background-color: #4285f4;
 	color: #fff;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
@@ -125,4 +132,8 @@ td.type span.tip {
 	line-height: 32px;
 	border-radius: 2px;
 	font-size: .9em;
+}
+
+.menu ul li.new a, #submit {
+	margin-top: 10px;
 }
