@@ -15,7 +15,9 @@ priority: 0
 collection: test-layout
 key-takeaways:
   layout:
-    - Enable device mode, pick a device, and see how your site's layout responds to the device's dimensions.
+    - Enabling device mode in Chrome DevTools is as simple as pressing <strong>Toggle device mode</strong>.
+    - Quickly emulate a device by selecting a model from the device mode's emulation presets. 
+    - Screen emulation is a great way to test your layout's responsiveness, but it doesn't cover everything. Know the limitations.
     - Test your site on any screen size: create your own custom device settings in device mode.
 remember:
   native-retina:
@@ -28,6 +30,12 @@ Quickly emulate a particular device by selecting a model from the preset drop-do
 
 ![device presets](imgs/device-and-network-tools.png)
 
+{% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.layout %}
+
+## Screen emulation features and limitations
+
 The screen emulator automatically:
 
 * Specifies the User Agent (UA) string for requests.
@@ -36,9 +44,12 @@ The screen emulator automatically:
 * Emulates mobile scrollbar overlays and meta viewport.
 * Autosizes (boosts) text for pages without a defined viewport.
 
-{% include modules/toc.liquid %}
+Although Chrome's device mode offers many powerful emulation tools,
+it does have some limitations (see also the [complete list of limitations](#limitations):
 
-{% include modules/takeaway.liquid list=page.key-takeaways.layout %}
+* GPU and CPU behavior are not emulated.
+* System displays, such as the address bar, are not emulated.
+* Native displays, such as `<select>` elements, are not emulated as a modal list.
 
 ## Enable device mode
 
@@ -86,6 +97,28 @@ In the device pane of the emulation drawer, click **Save as** and give your pres
 ![sensors pane in the DevTools emulation drawer](imgs/emulation-drawer-device.png)
 
 Now you can quickly select your custom screen emulation from the device preset dropdown.
+
+## Complete list of device mode limitations
+
+Complete list of known limitations and issues in Chrome DevTools device mode described below:
+
+* **Device hardware**
+  * GPU and CPU behavior are not emulated.
+* **Browser UI**
+  * System displays, such as the address bar, are not emulated.
+  * Native displays, such as `<select>` elements, are not emulated as a modal list.
+  * Some enhancements, such as number inputs opening a keypad, might vary from actual device behavior.
+* **Browser functionality**
+  * WebGL operates in the emulator, but is not supported on iOS 7 devices.
+  * MathML is not supported in Chrome, but is supported on iOS 7 devices.
+  * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
+  * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
+  * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
+* **AppCache**
+  * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
+
+Despite these limitations, the device mode emulators are robust enough for most tasks.
+When you need to test on a real device, use [Chrome DevToools remote debugging](tools/setup/device-testing/remote-debugging).
 
 {% include modules/nextarticle.liquid %}
 
