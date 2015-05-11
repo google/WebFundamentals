@@ -15,9 +15,8 @@ article:
   written_on: 2011-06-28
   updated_on: 2011-06-28
 authors:
-  - mahemoff
+  - mikemahemoff
 tags:
-  - nuts_and_bolts
   - api
   - PageVisibility
 permalink: /updates/2011/06/Page-Visibility-API-Have-I-got-your-attention

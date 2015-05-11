@@ -18,7 +18,6 @@ authors:
   - tomwiltzius
 tags:
   - stacking
-  - nuts_and_bolts
   - CSS
 permalink: /updates/2012/09/Stacking-Changes-Coming-to-position-fixed-elements
 ---

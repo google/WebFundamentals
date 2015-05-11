@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - file_access
-  - nuts_and_bolts
   - code
 permalink: /updates/2011/08/Downloading-resources-in-HTML5-a-download
 ---

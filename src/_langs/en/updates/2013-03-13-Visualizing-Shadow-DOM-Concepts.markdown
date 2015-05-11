@@ -20,7 +20,6 @@ tags:
   - shadowdom
   - webcomponents
   - semantics
-  - nuts_and_bolts
 permalink: /updates/2013/03/Visualizing-Shadow-DOM-Concepts
 ---
 Shadow DOM is a difficult topic to wrap your head around. It's just complex. It introduces unfamiliar concepts that we're not used to on the web. Shadow boundaries, styling scoping, event retargeting, insertion points, shadow insertion points, host nodes, distributed nodes,...the lingo goes on and on.

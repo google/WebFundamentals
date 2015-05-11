@@ -17,7 +17,6 @@ article:
 authors:
   - paulirish
 tags:
-  - nuts_and_bolts
   - api
   - business
 permalink: /updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler
