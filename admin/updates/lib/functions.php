@@ -1,6 +1,7 @@
 <?php
 
 include('frontmatter.php');
+include('Net/URL2.php');
 
 date_default_timezone_set('America/Los_Angeles');
 
@@ -79,6 +80,14 @@ function buildFile() {
 		$content['featured-image'] = $_POST['featured-image'];
 	}
 
+	if($_POST['source_name']) {
+		$content['source_name'] = $_POST['source_name'];
+	}
+
+	if($_POST['source_url']) {
+		$content['source_url'] = $_POST['source_url'];
+	}
+
 	$content['permalink'] = '/updates/' . str_replace('-', '/', $_POST['date']) . '/' . slugify($_POST['title']);
 
 	$file = yaml_emit($content, YAML_UTF8_ENCODING);
@@ -94,8 +103,8 @@ function buildFile() {
 
 }
 
-function getFileNameFromPerma() {
-	return $_POST['date'] . '-' . slugify($_POST['title']) . '.markdown';
+function getFileName($date, $title) {
+	return $date . '-' . slugify($title) . '.markdown';
 }
 
 function slugify($text) { 

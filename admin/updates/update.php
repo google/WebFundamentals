@@ -6,7 +6,7 @@ $update = getUpdate($_GET['file']);
 if($_POST) {
 
 	$file = buildFile();
-	$newFileName = getFileNameFromPerma();
+	$newFileName = getFileName($_POST['date'], $_POST['title']);
 
 	// delete current Markdown file
 	unlink($updates_dir . $_GET['file']);
@@ -76,6 +76,14 @@ if($_POST) {
 		<div>
 			<label for="tags">Tags (Comma separated)</label>
 			<input type="text" id="tags" name="tags" value="<?= $update['page']->keyExists('tags') ? implode(', ', $update['page']->fetch('tags')) : '' ?>">
+		</div>
+		<div>
+			<label for="tags">Source Name (i.e. A List Apart)</label>
+			<input type="text" id="source_name" name="source_name" value="<?= $update['page']->keyExists('source_name') ? $update['page']->fetch('source_name') : '' ?>">
+		</div>
+		<div>
+			<label for="tags">Source URL</label>
+			<input type="text" id="source_url" name="source_url" value="<?= $update['page']->keyExists('source_url') ? $update['page']->fetch('source_url') : '' ?>">
 		</div>
 
 	</fieldset>
