@@ -15,7 +15,7 @@ article:
   written_on: 2012-04-18
   updated_on: 2012-04-18
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - webrtc
 permalink: /updates/2012/04/WebRTC-Protothon

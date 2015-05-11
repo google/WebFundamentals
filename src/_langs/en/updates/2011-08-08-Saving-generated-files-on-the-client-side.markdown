@@ -18,7 +18,6 @@ authors:
   - paulkinlan
 tags:
   - file_access
-  - nuts_and_bolts
   - code
   - filesystem
 permalink: /updates/2011/08/Saving-generated-files-on-the-client-side

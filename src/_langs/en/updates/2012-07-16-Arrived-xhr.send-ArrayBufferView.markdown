@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - xhr2
-  - nuts_and_bolts
   - binary
   - announcement
 permalink: /updates/2012/07/Arrived-xhr-send-ArrayBufferViews

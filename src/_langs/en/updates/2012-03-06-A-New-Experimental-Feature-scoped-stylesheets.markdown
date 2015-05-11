@@ -17,7 +17,6 @@ article:
 authors:
   - alexdanilo
 tags:
-  - nuts_and_bolts
   - css
   - dom
 permalink: /updates/2012/03/A-New-Experimental-Feature-style-scoped

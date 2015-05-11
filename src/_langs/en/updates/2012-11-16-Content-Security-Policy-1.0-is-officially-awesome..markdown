@@ -20,7 +20,6 @@ tags:
   - announcement
   - contentsecuritypolicy
   - security
-  - nuts_and_bolts
 permalink: /updates/2012/11/Content-Security-Policy-1-0-is-officially-awesome
 ---
 It's official! The W3C has advanced the [Content Security Policy 1.0 specification][csp10] from Working Draft to Candidate Recommendation, and [issued a call for implementations][impl]. Cross-site scripting attacks are one step closer to being (mostly) a thing of the past.

@@ -15,7 +15,7 @@ article:
   written_on: 2012-02-18
   updated_on: 2012-02-18
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - swiftshader
   - webgl

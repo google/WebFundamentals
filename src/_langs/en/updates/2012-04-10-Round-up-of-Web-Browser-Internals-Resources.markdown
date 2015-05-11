@@ -17,7 +17,6 @@ article:
 authors:
   - paulirish
 tags:
-  - nuts_and_bolts
   - internals
   - performance
 permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources

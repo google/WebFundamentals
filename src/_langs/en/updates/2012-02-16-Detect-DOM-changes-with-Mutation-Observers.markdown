@@ -15,9 +15,8 @@ article:
   written_on: 2012-02-16
   updated_on: 2012-02-16
 authors:
-  - ernestd
+  - paulkinlan
 tags:
-  - nuts_and_bolts
   - api
   - mutation observers
   - dom

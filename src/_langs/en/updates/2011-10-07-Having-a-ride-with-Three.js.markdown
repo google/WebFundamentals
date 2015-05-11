@@ -15,7 +15,7 @@ article:
   written_on: 2011-10-07
   updated_on: 2011-10-07
 authors:
-  - ernestd
+  - paulkinlan
 tags:
   - webgl
   - canvas

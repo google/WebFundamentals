@@ -19,7 +19,6 @@ authors:
   - ericbidelman
 tags:
   - code
-  - nuts_and_bolts
   - api
   - business
 permalink: /updates/2011/06/Registering-a-custom-protocol-handler
