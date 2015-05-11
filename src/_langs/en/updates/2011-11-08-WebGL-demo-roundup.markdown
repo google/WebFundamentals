@@ -16,7 +16,7 @@ article:
   written_on: 2011-11-08
   updated_on: 2011-11-08
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - webgl
   - three.js

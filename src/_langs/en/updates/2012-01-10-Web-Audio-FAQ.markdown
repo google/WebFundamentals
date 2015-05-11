@@ -15,7 +15,7 @@ article:
   written_on: 2012-01-10
   updated_on: 2012-01-10
 authors:
-  - smus
+  - borissmus
 tags:
   - webaudio
   - faq

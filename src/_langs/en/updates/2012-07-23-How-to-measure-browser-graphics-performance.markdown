@@ -15,7 +15,7 @@ article:
   written_on: 2012-07-23
   updated_on: 2012-07-23
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - benchmark
   - graphics

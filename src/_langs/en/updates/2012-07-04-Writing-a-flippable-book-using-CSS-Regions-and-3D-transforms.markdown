@@ -15,7 +15,7 @@ article:
   written_on: 2012-07-04
   updated_on: 2012-07-04
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - regions
   - 3D
