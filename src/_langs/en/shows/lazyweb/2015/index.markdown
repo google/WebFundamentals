@@ -3,7 +3,7 @@ id: lazyweb-2015
 showid: lazyweb
 layout: shows/series-index
 collection: lazyweb
-title: "Lazy Web: 2015"
+title: "LazyWeb: 2015"
 description: ""
 published: true
 
