@@ -62,7 +62,7 @@ function buildFile() {
 		'authors' => array($_POST['author']),
 		'collection' => 'updates',
 		'type' => $_POST['type'],
-		'category' => $_POST['product'] == 'none' ? 'generic' : 'tools',
+		'category' => ($_POST['product'] == 'none' || $_POST['product'] == 'chrome') ? 'generic' : 'tools',
 	);
 
 	$content['product'] = $_POST['product'];
