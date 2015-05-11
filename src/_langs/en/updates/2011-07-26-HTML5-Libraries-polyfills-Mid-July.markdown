@@ -18,7 +18,7 @@ authors:
 tags:
   - polyfill
   - library
-permalink: /2011/07/HTML5-Libraries-Pollyfills---Mid-July
+permalink: /updates/2011/07/HTML5-Libraries-Pollyfills---Mid-July
 ---
 More awesome libraries popping up all over the place:
 

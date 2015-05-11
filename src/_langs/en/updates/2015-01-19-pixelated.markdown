@@ -33,7 +33,7 @@ Imagine you had an image that was 2×2 pixels and you scaled it up to 100×100 p
 would render it in a way that didn't make it look blocky. Something like:
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-19-pixelated/smooth.png %}" alt="smooth rendering" />
+  <img src="{{site.baseurl}}/updates/2015-01-19-pixelated/smooth.png" alt="smooth rendering" />
 </p>
 
 There are many cases where you would not want this smoothing behavior and instead use
@@ -47,7 +47,7 @@ To get this effect, you simply apply `image-rendering: pixelated;` to your image
          src="data:image/png;base64,iVBORw0KGgoAAAA....Ik2kAAAAASUVORK5CYII=">
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-19-pixelated/pixelated.png %}" alt="pixelated rendering" />
+  <img src="{{site.baseurl}}/updates/2015-01-19-pixelated/pixelated.png" alt="pixelated rendering" />
 </p>
 
 [Try the Demo](https://googlechrome.github.io/samples/image-rendering-pixelated/index.html).  As you can

@@ -21,7 +21,7 @@ tags:
   - mobileu
   - android
   - announcement
-permalink: /2012/02/Chrome-for-Android-Accelerating-the-Mobile-Web
+permalink: /updates/2012/02/Chrome-for-Android-Accelerating-the-Mobile-Web
 ---
 You've probably already heard that Chrome for Android Beta launched today. This
 new browser is based on the Chromium open source project, and brings with it

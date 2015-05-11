@@ -20,7 +20,7 @@ tags:
   - offline
   - business
   - filesystem
-permalink: /2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
+permalink: /updates/2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
 ---
 Let's face it, AppCache is annoying and has problems [[1](http://paul.kinlan.me/app-cache-and-html5-history/), [2](http://www.w3.org/2011/web-apps-ws/papers/Facebook.html), [3](http://paul.kinlan.me/dear-appcache/)]. One big limitation is the fact that it's impossible to dynamically cache assets on demand. Essentially, this makes it an all or nothing thing when it comes to taking an app offline. Either everything in the manifest is cached up front, or nothing is cached.
 

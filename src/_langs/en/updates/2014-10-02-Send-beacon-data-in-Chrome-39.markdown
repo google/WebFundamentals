@@ -54,8 +54,9 @@ https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop
 If we add a `sendBeacon()` method in the `pagehide` event handler,
 the endpoint will receive the data when the user navigates away from the page:
 
+{% comment %}
 {% include_code beacon code-block %}
-
+{% endcomment %}
 
 If you inspect the network tab in Chrome Dev Tools with the
 **preserve logs** checkbox ticked, you’ll see an HTTP POST request

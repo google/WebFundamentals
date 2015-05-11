@@ -1,5 +1,14 @@
 ---
-layout: post
+rss: false
+layout: update
+published: true
+
+collection: updates
+category: chrome
+product: chrome
+type: news
+date: 2011-06-23
+
 title: "Welcome to updates.html5rocks.com!"
 description: ""
 article:
@@ -9,7 +18,7 @@ authors:
   - ericbidelman
 tags:
   - announcement
-permalink: /2011/06/Welcome-to-updates-html5rocks-com-1
+permalink: /updates/2011/06/Welcome-to-updates-html5rocks-com-1
 ---
 The open web platform is changing at an ever increasing rate. Many developers find it hard to keep up with the pace the browsers are implementing new HTML5 features, including ourselves. There are a ton of new APIs, demos, libraries, and announcements, every day. 
 

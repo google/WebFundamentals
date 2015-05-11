@@ -43,13 +43,13 @@ For Chrome Dev Summit, I tried to answer these questions by building a small con
 Breaking an application into modular pieces that can be combined and reused is a central tenant of Web Components. Polymer's core-\* and paper-\* elements make it easy to start with small pieces, like [core-toolbar](https://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar) and [paper-icon-button](https://www.polymer-project.org/docs/elements/paper-elements.html#paper-icon-button)...
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/core-toolbar.jpg %}" alt="Polymer helps developers build applications faster" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/core-toolbar.jpg" alt="Polymer helps developers build applications faster" width="800" />
 </p>
 
 ...and through the power of composition, combine them with any number of elements to create an application scaffold.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/anatomy.jpg %}" alt="Polymer makes Web Components sweeter" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/anatomy.jpg" alt="Polymer makes Web Components sweeter" width="800" />
 </p>
 
 Once you have a generic scaffold in place, you can apply your own CSS styles to transform it into an experience unique to your brand. The beauty of doing this with components is that it enables you to create very different experiences while leveraging the same app building primitives. With a scaffold in place you can move on to thinking about content.
@@ -57,7 +57,7 @@ Once you have a generic scaffold in place, you can apply your own CSS styles to 
 One element that is especially well suited for dealing with lots of content is the `core-list`.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/core-list.jpg %}" alt="Polymer makes Web Components sweeter" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/core-list.jpg" alt="Polymer makes Web Components sweeter" width="800" />
 </p>
 
 The `core-list` can be connected to a data source (basically an array of objects), and for each item in the array, it will stamp out a template instance. Within the template you can leverage the power of Polymer's data binding system to quickly wire up your content.
@@ -69,7 +69,7 @@ With the various sections of your app designed and implemented, the next task is
 Although still an experimental element, `core-animated-pages` provides a pluggable animation system that can be used to transition between different states in your application.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/core-animated-pages.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/core-animated-pages.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 But animation is only half of the puzzle, an application needs to combine those animations with a router to properly manage its URLs.
@@ -79,7 +79,7 @@ In the world of Web Components routing comes in two flavors: imperative and decl
 An imperative router (such as [Flatiron's Director](https://github.com/flatiron/director)) can listen for a matching route, and then instruct `core-animated-pages` to update its selected item.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/imperative-router.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/imperative-router.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 This can be useful if you need to do some work after a route matches and before the next section has transitioned in.
@@ -87,7 +87,7 @@ This can be useful if you need to do some work after a route matches and before 
 On the other hand, a declarative router (like [app-router](https://github.com/erikringsmuth/app-router)) can actually combine routing and `core-animated-pages` into a single element, so managing the two becomes more streamlined.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/app-router.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/app-router.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 If you'd like more fine grained control, you can look at a library like [more-routing](https://github.com/Polymore/more-routing), which can be combined with `core-animated-pages` using data binding and possibly give you the best of both worlds.
@@ -100,7 +100,7 @@ As your application is taking shape, you have to keep a watchful eye on performa
 An easy performance win comes from conditionally loading the Web Components polyfills.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/conditional-polyfills.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/conditional-polyfills.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 There's no reason to incur all that cost if the platform already has full support! In [every release of the new webcomponents.js repo](https://github.com/webcomponents/webcomponentsjs/tree/0.5.2), the polyfills have also been broken out into standalone files. This is helpful if you want to conditionally load a subset of the polyfills.
@@ -118,7 +118,7 @@ There's no reason to incur all that cost if the platform already has full suppor
 There are also significant network gains to be had from running all of your HTML Imports through a tool like Vulcanize.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/vulcanize.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/vulcanize.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 Vulcanize will concatenate your imports into a single bundle, *significantly* reducing the number of HTTP requests that your app makes.
@@ -132,7 +132,7 @@ Jake Archibald has recently published [an amazing cookbook of Service Worker pat
 Installing a Service Worker is quit easy. Create a `worker.js` file, and register it when your application boots up.
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/service-worker.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/service-worker.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 It's important that you locate your `worker.js` in the root of your application, this allows it to intercept requests from any path in your app.
@@ -140,7 +140,7 @@ It's important that you locate your `worker.js` in the root of your application,
 In the worker's install handler, I cache a boatload of resources (including the data that powers the app).
 
 <p style="text-align: center;">
-  <img src="{% asset_path 2015-01-20-lets-build-some-apps-with-polymer/sw-install.jpg %}" alt="Polymer report card needs improvement" width="800" />
+  <img src="{{site.baseurl}}/updates/2015-01-20-lets-build-some-apps-with-polymer/sw-install.jpg" alt="Polymer report card needs improvement" width="800" />
 </p>
 
 This allows my app to provide at least a fallback experience to the user if they're accessing it offline.

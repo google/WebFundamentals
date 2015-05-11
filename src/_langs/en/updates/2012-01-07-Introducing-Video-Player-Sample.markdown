@@ -1,5 +1,14 @@
 ---
-layout: post
+rss: false
+layout: update
+published: true
+
+collection: updates
+category: chrome
+product: chrome
+type: news
+date: 2012-01-07
+
 title: "Introducing Video Player Sample"
 description: ""
 article:
@@ -13,7 +22,7 @@ tags:
   - chrome web store
   - open source
   - multimedia
-permalink: /2012/01/Introducing-Video-Player-Sample
+permalink: /updates/2012/01/Introducing-Video-Player-Sample
 ---
 Have you ever wanted a fun and beautiful way to publish videos on your own site like the new [60 Minutes](https://chrome.google.com/webstore/detail/imjhdahelgojehmfmkmdfjcpfbglbfmj) or [RedBull.tv](https://chrome.google.com/webstore/category/home) apps from the Chrome Web Store? I'm excited to announce the release of [The Video Player Sample](http://code.google.com/p/video-player-sample/) web app! The Video Player Sample is an open source video player web app built using the same architecture as the 60 Minutes and RedBull.tv apps. It can be customized, extended, or just used out of the box and populated with your own content.
 

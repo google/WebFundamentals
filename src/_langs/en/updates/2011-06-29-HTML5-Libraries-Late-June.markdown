@@ -21,7 +21,7 @@ tags:
   - canvas
   - library
   - css
-permalink: /2011/06/HTML5-Libraries---Late-June
+permalink: /updates/2011/06/HTML5-Libraries---Late-June
 ---
 Some exciting libraries have cropped up lately:
 

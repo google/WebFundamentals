@@ -19,7 +19,7 @@ authors:
 tags:
   - offline
   - appcache
-permalink: /2011/10/App-Cache-Tools-and-Auto-Generators
+permalink: /updates/2011/10/App-Cache-Tools-and-Auto-Generators
 ---
 As you know, the Application Cache helps you run your web app offline, significantly speeds up startup time, and reduces bandwidth bills.  All good things to the HTML5 developer!
 

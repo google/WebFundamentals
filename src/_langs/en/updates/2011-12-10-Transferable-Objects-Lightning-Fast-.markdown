@@ -22,7 +22,7 @@ tags:
   - workers
   - code
   - announcement
-permalink: /2011/12/Transferable-Objects-Lightning-Fast
+permalink: /updates/2011/12/Transferable-Objects-Lightning-Fast
 ---
 Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](http://updates.html5rocks.com/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.
 
@@ -48,7 +48,7 @@ To see the performance gains of transferrables, I've put together [a demo](http:
 
 The demo sends a 32MB `ArrayBuffer` to a worker and back using `webkitPostMessage()`. If your browser doesn't support transferables, the sample falls back to structured cloning. Averaging 5 runs in different browsers, here's what I got:
 
-<a href="http://html5-demos.appspot.com/static/workers/transferables/index.html"><img src="{% asset_path 2011-12-10-transferable-objects-lightning-fast/transferable.jpg %}" style="width: 100%"></a>
+<a href="http://html5-demos.appspot.com/static/workers/transferables/index.html"><img src="{{site.baseurl}}/updates/2011-12-10-transferable-objects-lightning-fast/transferable.jpg" style="width: 100%"></a>
 
 On a MacBook Pro/10.6.8/2.53 GHz/Intel Core 2 Duo, FF was the fastest using structured cloning. On average, it took 302ms to send the 32MB `ArrayBuffer` to a worker and post it back to the main thread (RRT - Round Trip Time). Comparing that with transferables, the same test took 6.6ms. That is a huge perf boost!
 

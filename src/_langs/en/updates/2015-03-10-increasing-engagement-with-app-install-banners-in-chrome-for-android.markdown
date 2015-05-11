@@ -44,7 +44,7 @@ and seamlessly install your Web App as per the images below.
 
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{% asset_path 2015-03-03/add-to-home-screen.gif %}" alt="IO Site with install banner" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
 </p>
 
 <span id="criteria">"This looks great, I want it on my site"</span> I hear you shout. "Please tell me how 

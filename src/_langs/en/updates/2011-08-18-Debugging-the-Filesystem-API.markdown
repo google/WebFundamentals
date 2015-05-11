@@ -21,7 +21,7 @@ tags:
   - storage
   - tip
   - filesystem
-permalink: /2011/08/Debugging-the-Filesystem-API
+permalink: /updates/2011/08/Debugging-the-Filesystem-API
 ---
 The [HTML5 Filesystem](http://www.html5rocks.com/tutorials/file/filesystem/) is a powerful API. With power, comes complexity. With complexity, comes more debugging frustrations. It's an unfortunate fact that the Chrome [DevTools](http://code.google.com/chrome/devtools/) currently do not have support for the Filesystem API. It makes debugging it more difficult than it should be. By difficult, I mean being required to write code to list/remove files in the filesystem.
 

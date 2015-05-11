@@ -27,7 +27,7 @@ Shadow DOM is a difficult topic to wrap your head around. It's just complex. It 
 
 <figure style="text-align:center;">
 <a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html" target="_blank">
-<img src="{% asset_path 2013-03-13-visualizing-shadow-dom-concepts/visualizing-shadow-demo.gif %}" style="width:600px;height:362px;"></a>
+<img src="{{site.baseurl}}/updates/2013-03-13-visualizing-shadow-dom-concepts/visualizing-shadow-demo.gif" style="width:600px;height:362px;"></a>
 <figcaption><a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html">DEMO</a></figcaption>
 </figure>
 

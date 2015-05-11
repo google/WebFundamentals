@@ -20,7 +20,7 @@ tags:
   - webgl
   - canvas
   - 3D
-permalink: /2011/10/Having-a-ride-with-Three-js
+permalink: /updates/2011/10/Having-a-ride-with-Three-js
 ---
 If your browser supports WebGL try this <a href="http://alteredqualia.com/three/examples/webgl_cars.html">awesome demo</a> so you can drive a car in 3D with no plugins at all. We are seeing more and more developers coming up with new 3D demos whether they were OpenGL experts already or new adventurers that <a href="http://www.html5rocks.com/en/tutorials/three/intro/">started</a> <a href="http://learningthreejs.com/">playing</a> with it.
 

@@ -32,7 +32,7 @@ You can try it out now in [Chrome Canary](https://tools.google.com/dlpage/chrome
 
 To experiment with this feature, you need to enable the *Enable Experimental JavaScript* flag in Chrome Canary and restart the browser. The flag can be found under 'about:flags' as shown in the image below:
 
-<img src="{% asset_path 2012-11-28-respond-to-change-with-object.observe/chrome-flags.jpg %}"/>
+<img src="{{site.baseurl}}/updates/2012-11-28-respond-to-change-with-object.observe/chrome-flags.jpg"/>
 
 
 Here's a simple example of how to set up an observer on an object:

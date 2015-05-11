@@ -20,7 +20,7 @@ authors:
 tags:
   - chrome
   - devtools
-permalink: /2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
+permalink: /updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
 ---
 <p>I recently recorded some videos from the comfy red chair in our office. Probably some useful things here to learn.</p>
 

@@ -32,7 +32,7 @@ Copying entire CSS rules in the Styles pane will now include styles you toggled 
 
 ‘Copy as CSS path’ is now available as a menu item for DOM nodes in the Elements panel (similar to the Copy XPath menu item).
 
-![copy css path]({% asset_path 2013-12-19-devtools-digest-december-2013/copy-css-path.jpg %})
+![copy css path]({{site.baseurl}}/updates/2013-12-19-devtools-digest-december-2013/copy-css-path.jpg)
 
 Generation of CSS selectors do not have to be limited to your stylesheets/JavaScript, they can also be alternatives for locator strategies in [WebDriver](http://www.seleniumhq.org/docs/03_webdriver.jsp#by-css) tests. [[crbug.com/277286](http://crbug.com/277286)]
 
@@ -58,7 +58,7 @@ Those "*Invalid CSS property value*"-style warnings you might have seen are now 
 
 ### Timeline operations summarized in pie chart
 
-<img src="{% asset_path 2013-12-19-devtools-digest-december-2013/timeline-operations-chart.jpg %}" style="float:right">The Timeline panel now contains a pie chart in the Details pane which visually shows the source of your rendering costs - this helps you identify your bottlenecks at a glance.
+<img src="{{site.baseurl}}/updates/2013-12-19-devtools-digest-december-2013/timeline-operations-chart.jpg" style="float:right">The Timeline panel now contains a pie chart in the Details pane which visually shows the source of your rendering costs - this helps you identify your bottlenecks at a glance.
 
 You’ll find that much of the information which used to be displayed in popovers has now been promoted to its own pane. To view, start a Timeline recording and select a frame, take note of the new Details pane which contains a pie chart. When in Frames view, you’ll get interesting stats like average FPS (`1000ms/frame duration`) for the selected frame(s). [[crbug.com/247786](https://code.google.com/p/chromium/issues/detail?id=247786)]
 
@@ -66,7 +66,7 @@ You’ll find that much of the information which used to be displayed in popover
 
 Image resize and decode events in the Timeline panel now contain a link to the DOM node in the Elements panel.
 
-![image resize]({% asset_path 2013-12-19-devtools-digest-december-2013/image-resize.jpg %})
+![image resize]({{site.baseurl}}/updates/2013-12-19-devtools-digest-december-2013/image-resize.jpg)
 
 The Image URL link takes you to the corresponding resource in the Resources Panel.  [[crbug.com/244159](http://crbug.com/244159)]
 
@@ -84,15 +84,15 @@ Opening the drawer now presents a number of panes, one of which is the Rendering
 
 ### Copy image as data URL
 
-<img src="{% asset_path 2013-12-19-devtools-digest-december-2013/copy-image-as-data-url.jpg %}"  style="float:right"> Image assets in the Resources panel can now have their contents copied as a [data URI](http://en.wikipedia.org/wiki/Data_URI_scheme#HTML) (`data:image/png;base64,iVBO...`).
+<img src="{{site.baseurl}}/updates/2013-12-19-devtools-digest-december-2013/copy-image-as-data-url.jpg"  style="float:right"> Image assets in the Resources panel can now have their contents copied as a [data URI](http://en.wikipedia.org/wiki/Data_URI_scheme#HTML) (`data:image/png;base64,iVBO...`).
 
 To try this out, find the image resource within Frames > [Resource] > Images and right click on the image preview to access the context menu, then select ‘Copy Image as Data URL’. [[crbug.com/321132](http://crbug.com/321132)]
 
 <h3 style="clear:both">Data URI filtering</h3>
 
-If you've never thought they belong, Data URIs can now be filtered out of the Network tab. Select the Filter icon ![filter icon]({% asset_path 2013-12-19-devtools-digest-december-2013/filter-icon.jpg %}) to view other resource filter types. [[crbug.com/313845](http://crbug.com/313845)]
+If you've never thought they belong, Data URIs can now be filtered out of the Network tab. Select the Filter icon ![filter icon]({{site.baseurl}}/updates/2013-12-19-devtools-digest-december-2013/filter-icon.jpg) to view other resource filter types. [[crbug.com/313845](http://crbug.com/313845)]
 
-![Data URI filtering]({% asset_path 2013-12-19-devtools-digest-december-2013/data-uri-filtering.jpg %})
+![Data URI filtering]({{site.baseurl}}/updates/2013-12-19-devtools-digest-december-2013/data-uri-filtering.jpg)
 
 ### Network Timing bugs fixed
 

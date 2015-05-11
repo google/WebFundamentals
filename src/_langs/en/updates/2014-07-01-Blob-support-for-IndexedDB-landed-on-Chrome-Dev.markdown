@@ -19,7 +19,7 @@ authors:
 tags:
   - indexeddb
   - blob
-permalink: /2014/07/Blob-support-for-IndexedDB-landed-on-Chrome-Dev
+permalink: /updates/2014/07/Blob-support-for-IndexedDB-landed-on-Chrome-Dev
 ---
 Chrome Dev has landed support for Blob on IndexedDB.
 
