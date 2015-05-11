@@ -1,40 +1,55 @@
 ---
 rss: false
 layout: article
-title: "Visualize CSS Media Queries"
+title: "Inspect CSS Media Queries"
 seotitle: ""
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Preview styles for targeted screen sizes using the Chrome DevTools media query inspector."
+introduction: "Preview styles for targeted screen sizes using the Chrome DevTools media query inspector."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-05-11
   order: 2
 authors:
   - megginkearney
+related-guides:
+  extensions:
+    -
+      title: Edit Styles
+      href: tools/setup/workspace/setup-extensions
+      section:
+        title: "Set Up Browser Extensions"
+        href: tools/setup/workspace/setup-extensions
 priority: 0
 collection: test-layout
 key-takeaways:
-  tldr-tbd:
-    - TBD tldr.
+  media-query:
+    - The media query inspector detects media queries in your site and lets you preview styles for targeted screen sizes.
+    - Similar to device emulation, you can view how your site responds to different screen dimensions.
+    - To avoid confusion, disable mobile emulation while inspecting media queries.
 remember:
-  note-tbd:
-    - TBD note.
+  disable-emulator:
+    - TBD.
 ---
 {% wrap content %}
-
-TBD. Cover content in here: https://developer.chrome.com/devtools/docs/device-mode#media-queries 
-
-TBD. Reminder to check on extensions in existing web/fundamentals/tools that relate to media queries. Might make sense to move the content here, or else at least cross-reference.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
 [Media queries](fundamentals/layouts/rwd-fundamentals/use-media-queries)
 are an essential part of responsive web design.
-Device mode makes media queries readily accessible and easy for you to inspect.
+They let you apply styles to your site based on device characteristics.
+For example, different styles sheets get applied to the site content
+based on the device's screen dimensions.
+
+The Chrome DevTools media query inspector makes it easy for you to inspect your site's
+media queries.
 
 <style>video { width: 100%; }</style>
 
 <video class="gfyVid" controls="" autoplay="" loop="" muted="" style="display: block;" poster="//thumbs.gfycat.com/OilyHarmlessAffenpinscher-poster.jpg"><source id="webmsource" src="//zippy.gfycat.com/OilyHarmlessAffenpinscher.webm" type="video/webm"><source id="mp4source" src="//fat.gfycat.com/OilyHarmlessAffenpinscher.mp4" type="video/mp4">![Inspecting media queries.](http://zippy.gfycat.com/OilyHarmlessAffenpinscher.gif)</video>
+
+{% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.media-query %}
 
 ## View media query inspector
 
@@ -47,42 +62,32 @@ Media queries are color-coded as follows:
 <style>#colortable { width: 60%; border: none; } #colortable td { border: none; } .max-width { background: #327ff2; width: 10%; } .max-and-min { background: #3b9903; width: 10%; } .min-width { background: #d4731f; width: 10%; }</style>
 
 <table id="colortable">
-
-<tbody>
-
-<tr>
-
-<td>Queries targeting a maximum width.</td>
-
-</tr>
-
-<tr>
-
-<td>Queries targeting widths within a range.</td>
-
-</tr>
-
-<tr>
-
-<td>Queries targeting a minimum width.</td>
-
-</tr>
-
-</tbody>
-
+	<tbody>
+		<tr>
+			<td>Queries targeting a maximum width.</td>
+		</tr>
+		<tr>
+			<td>Queries targeting widths within a range.</td>
+		</tr>
+		<tr>
+			<td>Queries targeting a minimum width.</td>
+		</tr>
+	</tbody>
 </table>
 
 ## Preview screen styles
 
 Click a media query bar to adjust the emulator resolution and preview styles for the targeted screen sizes.
 
+As you work with the media query inspector, you might find that you don't always want to use the mobile emulator. To turn off mobile emulation without exiting device mode, click **Reset all overrides** ![reset all overrides](device-mode-files/icon-reset-overrides.png)icon and refresh the page.
+
+{% include modules/related_guides.liquid inline=true list=page.related-guides.extensions %}
+
 ## View CSS
 
 Right-click a bar to view where the media query is defined in CSS and jump to the definition in source code.
 
 ![web fundamentals media queries view](imgs/reveal-source-code.png)
-
-**Tip:** As you work with the media query inspector, you might find that you don't always want to use the mobile emulator. To turn off mobile emulation without exiting device mode, click the **Reset all overrides** ![reset all overrides](device-mode-files/icon-reset-overrides.png)icon and refresh the page.
 
 ## Preview styles for more media types
 
