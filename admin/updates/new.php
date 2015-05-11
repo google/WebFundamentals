@@ -24,90 +24,90 @@ if($_POST) {
 
 ?>
 
-			<form action="" method="post">
-				<fieldset>
-					<legend>Metadata</legend>
-					<div>
-						<label for="published">Published *</label>
-						<div>
-							<input type="radio" name="published" value="true"> True
-							<input type="radio" name="published" value="false" checked> False
-						</div>
-					</div>
-					<div>
-						<label for="type">Type *</label>
-						<div>
-							<input type="radio" name="type" id="type-news" value="news" checked> News
-							<input type="radio" name="type" id="type-tip" value="tip"> Tip
-						</div>
-					</div>
-					<div>
-						<label for="product">Product *</label>
-						<div>
-							<input type="radio" name="product" value="none" checked> None
-							<input type="radio" name="product" value="chrome"> Chrome
-							<input type="radio" name="product" value="chrome-devtools"> DevTools
-							<input type="radio" name="product" value="web-starter-kit"> WSK
-							<input type="radio" name="product" value="polymer-starter-kit"> PSK
-							<input type="radio" name="product" value="material-design-lite"> MDL
-						</div>
-					</div>
-					<div>
-						<label for="title">Title *</label>
-						<input type="text" id="title" name="title" value="">
-					</div>
-					<div id="description-block">
-						<label for="description">Description *</label>
-						<input type="text" id="description" name="description" value="">
-					</div>
-					<div id="featured-image-block">
-						<label for="featured-image">Featured Image</label>
-						<input type="text" id="featured-image" name="featured-image" value="">
-					</div>
-					<div>
-						<label for="author">Author *</label>
-						<input type="text" id="author" name="author" value="">
-					</div>
-					<div>
-						<label for="date">Date *</label>
-						<input type="date" id="date" name="date" value="">
-					</div>
-					<div>
-						<label for="tags">Tags (Comma separated)</label>
-						<input type="text" id="tags" name="tags" value="">
-					</div>
+<form action="" method="post">
+	<fieldset>
+		<legend>Metadata</legend>
+		<div>
+			<label for="published">Published *</label>
+			<div>
+				<input type="radio" name="published" value="true"> True
+				<input type="radio" name="published" value="false" checked> False
+			</div>
+		</div>
+		<div>
+			<label for="type">Type *</label>
+			<div>
+				<input type="radio" name="type" id="type-news" value="news" checked> News
+				<input type="radio" name="type" id="type-tip" value="tip"> Tip
+			</div>
+		</div>
+		<div>
+			<label for="product">Product *</label>
+			<div>
+				<input type="radio" name="product" value="none" checked> None
+				<input type="radio" name="product" value="chrome"> Chrome
+				<input type="radio" name="product" value="chrome-devtools"> DevTools
+				<input type="radio" name="product" value="web-starter-kit"> WSK
+				<input type="radio" name="product" value="polymer-starter-kit"> PSK
+				<input type="radio" name="product" value="material-design-lite"> MDL
+			</div>
+		</div>
+		<div>
+			<label for="title">Title *</label>
+			<input type="text" id="title" name="title" value="">
+		</div>
+		<div id="description-block">
+			<label for="description">Description *</label>
+			<input type="text" id="description" name="description" value="">
+		</div>
+		<div id="featured-image-block">
+			<label for="featured-image">Featured Image</label>
+			<input type="text" id="featured-image" name="featured-image" value="">
+		</div>
+		<div>
+			<label for="author">Author *</label>
+			<input type="text" id="author" name="author" value="">
+		</div>
+		<div>
+			<label for="date">Date *</label>
+			<input type="date" id="date" name="date" value="">
+		</div>
+		<div>
+			<label for="tags">Tags (Comma separated)</label>
+			<input type="text" id="tags" name="tags" value="">
+		</div>
 
-				</fieldset>
+	</fieldset>
 
-				<fieldset>
-					<legend>Content</legend>
-					<textarea name="content" id="content"></textarea>
-				</fieldset>
+	<fieldset>
+		<legend>Content</legend>
+		<textarea name="content" id="content"></textarea>
+	</fieldset>
 
-				<input id="submit" type="submit" value="Save Changes">
-			</form>
+	<input id="submit" type="submit" value="Save Changes">
+</form>
 
-			<script>
-			function typeChange() {
-				if(document.getElementById('type-tip').checked) {
-					document.getElementById('description-block').style.display = 'none';
-					document.getElementById('featured-image-block').style.display = 'none';
-				} else {
-					document.getElementById('description-block').style.display = '';
-					document.getElementById('featured-image-block').style.display = '';
-				}
-			}
+<script>
+function typeChange() {
+	if(document.getElementById('type-tip').checked) {
+		document.getElementById('description-block').style.display = 'none';
+		document.getElementById('featured-image-block').style.display = 'none';
+	} else {
+		document.getElementById('description-block').style.display = '';
+		document.getElementById('featured-image-block').style.display = '';
+	}
+}
 
-			document.getElementById('type-tip').onchange = function() {
-				typeChange();
-			};
+document.getElementById('type-tip').onchange = function() {
+	typeChange();
+};
 
-			document.getElementById('type-news').onchange = function() {
-				typeChange();
-			};
+document.getElementById('type-news').onchange = function() {
+	typeChange();
+};
 
-			typeChange();
-			</script>
+typeChange();
+</script>
 
 
 <?php
