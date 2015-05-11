@@ -15,7 +15,7 @@ article:
   written_on: 2014-11-07
   updated_on: 2014-11-07
 authors:
-  - petele
+  - petelepage
 tags:
   - mobile
   - front-end

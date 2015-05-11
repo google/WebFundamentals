@@ -15,7 +15,7 @@ article:
   written_on: 2012-12-10
   updated_on: 2012-12-10
 authors:
-  - dutton
+  - samdutton
 tags:
   - media
   - RTCPeerConnection

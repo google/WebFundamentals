@@ -21,6 +21,22 @@ jbnicolai:
   email: me@jbnicolai.com
   description: "Open source contributor and software consultant"
 
+jakearchibald:
+  name:
+    given: Jake
+    family: Archibald
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage: http://jakearchibald.com/
+  google: 116237864387312784020
+  twitter: jaffathecake
+  email: jakearchibald@google.com
+  lanyrd: true
+
 pbakaus:
   name:
     given: Paul
@@ -68,7 +84,6 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
 
-
 陈三:
   name:
     given: Sam
@@ -84,6 +99,36 @@ ericbidelman:
   twitter: chenxsan
   email: chenxsan@google.com
   description: "Sam is a Front End Developer"
+
+alexdanilo:
+  name:
+    given: Alex
+    family: Danilo
+  org:
+    name: Google
+    unit: Developer Relations
+  country: Australia
+  role:
+    - author
+  homepage:
+  google: 113205278198625312096
+  twitter: alexanderdanilo
+  email: adanilo@google.com
+
+robdodson:
+  name:
+    given: Rob
+    family: Dodson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://robdodson.me
+  google: 118271135596408598424
+  twitter: rob_dodson
+  email: robdodson@google.com
 
 cwdoh:
   name:
@@ -203,6 +248,20 @@ megginkearney:
   google: 110573989653316535297
   email: mkearney@google.com
   description: "Meggin is a Tech Writer"
+
+brendankenny:
+  name:
+    given: Brendan
+    family: Kenny
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://twitter.com/brendankenny
+  twitter: brendankenny
+  email: bckenny@google.com
 
 paulkinlan:
   name:
@@ -333,6 +392,37 @@ heathermahan:
   email: heatheramahan@gmail.com
   description: "Heather Mahan is a developer."
 
+mikemahemoff:
+  name:
+    given: Michael
+    family: Mahemoff
+  org:
+    name: Freelance
+    unit: Web Developer
+  country: UK
+  role:
+    - author
+  homepage: http://mahemoff.com
+  google: 106413090159067280619
+  twitter: mahemoff
+  email: mahemoff@google.com
+  lanyrd: true
+  
+renatomangini:
+  name:
+    given: Renato
+    family: Mangini
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: http://renatomangini.com/
+  google: 102180419759627664875
+  twitter: renatomangini
+  email: mangini@google.com
+
 jacquerie:
   name:
     given: Jacopo
@@ -346,6 +436,21 @@ jacquerie:
   twitter: Jaconotar
   email: jacopo.notarstefano@gmail.com
   description: "Jacopo is a Full Stack Developer"
+
+addyosmani:
+  name:
+    given: Addy
+    family: Osmani
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage:
+  google: 115133653231679625609
+  twitter: addyosmani
+  email: addyo@google.com
 
 chrispalmer:
   name:
@@ -368,8 +473,52 @@ jasonpark:
   email: jpar225@gmail.com
   description: "Jason is a Node.js Developer"
 
-  
-  samthorogood:
+jeffposnick:
+  name:
+    given: Jeff
+    family: Posnick
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage:
+  google: 117780118136555864520
+  twitter: jeffposnick
+  email: jeffy@google.com
+
+glenshires:
+  name:
+    given: Glen
+    family: Shires
+  org:
+    name: Google
+    unit: Software Engineer
+  country: USA
+  homepage:
+  role:
+    - author
+  google: 110477083701772758618
+  twitter:
+  email: gshires@google.com
+
+smus:
+  name:
+    given: Boris
+    family: Smus
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: http://smus.com
+  google: 115694705577863745195
+  twitter: borismus
+  role:
+    - author
+  email: smus@google.com
+
+samthorogood:
   name:
     given: Sam
     family: Thorogood
@@ -377,7 +526,39 @@ jasonpark:
     name: Google
     unit: Developer Relations
   country: Australia
+  role:
+    - author
   homepage: http://whistlr.info
   google: 118404069988837396840
   twitter: samthor
   email: thorogood@google.com
+  
+mikewest:
+  name:
+    given: Mike
+    family: West
+  org:
+    name: Google
+    unit: Developer Relations
+  country: DE
+  role:
+    - author
+  homepage: https://mikewest.org/
+  google: 104437754419996754779
+  twitter: mikewest
+  email: mkwst@google.com
+
+chriswilson:
+  name:
+    given: Chris
+    family: Wilson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage:
+  google: 106422711035746240826
+  twitter: cwilso
+  email: cwilso@google.com

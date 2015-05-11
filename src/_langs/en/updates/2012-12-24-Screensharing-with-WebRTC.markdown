@@ -15,7 +15,7 @@ article:
   written_on: 2012-12-24
   updated_on: 2012-12-24
 authors:
-  - dutton
+  - samdutton
 tags:
   - chrome APIs
   - getusermedia

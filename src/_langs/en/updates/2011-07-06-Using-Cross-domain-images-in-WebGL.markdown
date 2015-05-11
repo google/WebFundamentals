@@ -16,7 +16,7 @@ article:
   written_on: 2011-07-06
   updated_on: 2011-07-06
 authors:
-  - ernestd
+  - paulkinlan
 tags:
   - announcement
   - webgl
