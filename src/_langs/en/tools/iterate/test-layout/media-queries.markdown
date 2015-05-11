@@ -32,8 +32,6 @@ remember:
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
-
 [Media queries](fundamentals/layouts/rwd-fundamentals/use-media-queries)
 are an essential part of responsive web design.
 They let you apply styles to your site based on device characteristics.
@@ -53,7 +51,7 @@ media queries.
 
 ## View media query inspector
 
-To view the media query inspector, click the **Media queries** ![media queries icon](device-mode-files/icon-media-query.png)icon in the upper left corner of the viewport. The DevTools detect media queries in your stylesheets and display them as colored bars in the top ruler.
+To view the media query inspector, click the **Media queries** ![media queries icon](imgs/icon-media-query.png)icon in the upper left corner of the viewport. The DevTools detect media queries in your stylesheets and display them as colored bars in the top ruler.
 
 ![media query inspector](imgs/media-query-inspector-ruler.png)
 
@@ -79,7 +77,7 @@ Media queries are color-coded as follows:
 
 Click a media query bar to adjust the emulator resolution and preview styles for the targeted screen sizes.
 
-As you work with the media query inspector, you might find that you don't always want to use the mobile emulator. To turn off mobile emulation without exiting device mode, click **Reset all overrides** ![reset all overrides](device-mode-files/icon-reset-overrides.png)icon and refresh the page.
+As you work with the media query inspector, you might find that you don't always want to use the mobile emulator. To turn off mobile emulation without exiting device mode, click **Reset all overrides** ![reset all overrides](imgs/icon-reset-overrides.png)icon and refresh the page.
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.extensions %}
 
@@ -93,7 +91,7 @@ Right-click a bar to view where the media query is defined in CSS and jump to th
 
 The media query inspector targets styles intended for screens. If you want to preview styles for other media types, such as print, you can do so in the media pane of the emulation drawer.
 
-Open the DevTools emulation drawer by clicking the **More overrides** ![more overrides](device-mode-files/icon-open-emulator-drawer.png)icon in the top right corner of the browser viewport. Then, select **Media** in the emulation drawer.
+Open the DevTools emulation drawer by clicking the **More overrides** ![more overrides](imgs/icon-open-emulator-drawer.png)icon in the top right corner of the browser viewport. Then, select **Media** in the emulation drawer.
 
 ![media pane in the DevTools emulation drawer](imgs/emulation-drawer-media.png)
 
