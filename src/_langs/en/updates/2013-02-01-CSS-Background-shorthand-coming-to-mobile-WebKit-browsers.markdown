@@ -18,7 +18,6 @@ authors:
   - petelepage
 tags:
   - mobile
-  - nuts_and_bolts
   - graphics
   - css
   - announcements

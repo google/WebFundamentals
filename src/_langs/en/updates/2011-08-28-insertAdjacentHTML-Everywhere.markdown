@@ -20,7 +20,6 @@ tags:
   - announcement
   - code
   - dom
-  - nuts_and_bolts
 permalink: /updates/2011/08/insertAdjacentHTML-Everywhere
 ---
 <p>If we want to insert content in a HTML document we have three ways to do it:</p>

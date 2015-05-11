@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - file_access
-  - nuts_and_bolts
   - file
 permalink: /updates/2012/06/Don-t-Build-Blobs-Construct-Them
 ---
