@@ -2,14 +2,15 @@
 rss: false
 layout: section
 title: "Test Your Site's Responsive Layout"
-description: "TBD description."
-introduction: "TBD introduction."
+seotitle: "Test Your Site's Responsive Layout using Chrome DevTools device emulator"
+description: "Want to know how your site's layout behaves across a range of devices? The Chrome DevTools device emulator lets you test your site's responsiveness across different devices without leaving the browser."
+introduction: "Want to know how your site's layout behaves across a range of devices? The Chrome DevTools device emulator lets you test your site's responsiveness across different devices without leaving the browser."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-05-08
   order: 1
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: iterate
 panel: device mode
@@ -18,6 +19,6 @@ id: test-layout
 
 {% wrap content %}
 
-TBD.
+Don't just check how your layout looks across devices; measure how it performs. Learn about common layout problems and the tools to find and fix them.
 
 {% endwrap %}
