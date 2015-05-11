@@ -15,7 +15,7 @@ article:
   written_on: 2012-02-06
   updated_on: 2012-02-06
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - pointer lock
   - fullscreen

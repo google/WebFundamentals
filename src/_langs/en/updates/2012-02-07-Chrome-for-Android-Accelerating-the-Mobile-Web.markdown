@@ -15,7 +15,7 @@ article:
   written_on: 2012-02-07
   updated_on: 2012-02-07
 authors:
-  - smus
+  - borissmus
 tags:
   - chrome
   - mobileu

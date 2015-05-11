@@ -21,7 +21,6 @@ tags:
   - binary
   - workers
   - code
-  - nuts_and_bolts
   - announcement
 permalink: /updates/2011/09/Workers-ArrayBuffer
 ---

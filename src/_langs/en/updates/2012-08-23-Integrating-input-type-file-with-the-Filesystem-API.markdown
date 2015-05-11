@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - file_access
-  - nuts_and_bolts
   - file
 permalink: /updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
 ---

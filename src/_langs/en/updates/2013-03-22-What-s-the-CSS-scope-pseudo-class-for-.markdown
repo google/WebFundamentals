@@ -17,7 +17,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - nuts_and_bolts
   - api
   - dom
   - semantics

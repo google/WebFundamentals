@@ -15,7 +15,7 @@ article:
   written_on: 2013-07-26
   updated_on: 2013-07-26
 authors:
-  - dutton
+  - samdutton
 tags:
   - video
   - webm

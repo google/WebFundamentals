@@ -15,10 +15,9 @@ article:
   written_on: 2013-02-01
   updated_on: 2013-02-01
 authors:
-  - petele
+  - petelepage
 tags:
   - mobile
-  - nuts_and_bolts
   - graphics
   - css
   - announcements

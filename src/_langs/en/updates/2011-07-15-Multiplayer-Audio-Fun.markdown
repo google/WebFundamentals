@@ -15,7 +15,7 @@ article:
   written_on: 2011-07-15
   updated_on: 2011-07-15
 authors:
-  - ernestd
+  - paulkinlan
 tags:
   - webaudio
   - demo

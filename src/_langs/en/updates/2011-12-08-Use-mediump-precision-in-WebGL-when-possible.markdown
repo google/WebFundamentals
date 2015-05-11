@@ -15,7 +15,7 @@ article:
   written_on: 2011-12-08
   updated_on: 2011-12-08
 authors:
-  - ilmari
+  - ilmariheikkinen
 tags:
   - mobile
   - performance

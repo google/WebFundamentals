@@ -15,7 +15,7 @@ article:
   written_on: 2013-02-06
   updated_on: 2013-02-06
 authors:
-  - dutton
+  - samdutton
 tags:
   - Firefox
   - RTCDataChannel

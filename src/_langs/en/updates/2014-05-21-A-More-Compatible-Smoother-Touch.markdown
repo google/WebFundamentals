@@ -18,7 +18,7 @@ article:
   written_on: 2014-05-21
   updated_on: 2014-05-21
 authors:
-  - viviancromwell
+  - paulkinlan
 tags:
   - mobile
   - Touch
