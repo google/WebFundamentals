@@ -32,6 +32,7 @@ key-takeaways:
   dom-styles:
     - The Elements panel lets you see everything in one DOM tree, and allows inspection and on-the-fly editing of DOM elements.
     - The Styles pane shows the CSS rules that apply to the selected element, from highest priority to lowest.
+    - The Metrics pane below the styles pane shows the current element's box model.
     - The Sources panel lets you see the changes you've made to your page locally.
     - This doc covers only the very basics of inspecting and tweaking your pages. See the related guides to learn all there is to know about editing your pages.
 remember:
@@ -115,6 +116,20 @@ By default, your CSS modifications are not permanent, changes are lost when you 
 We recommend [setting up persistent authoring](tools/setup/workspace/setup-workflow) so your changes aren't lost.
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.edit-styles %}
+
+## Visualize an element's box model parameters
+
+Examine and edit the current element's box model parameters using the Metrics pane.
+The Metrics pane resides just below the Styles pane.
+
+The concentric rectangles contain the values for the **padding**, **border**, and **margin** properties (top, right, bottom, and left values for each of them.)
+
+For non-statically positioned elements, a **position** rectangle will be additionally displayed in the pane, containing the values of the **top**, **right**, **bottom**, and **left** properties.
+
+![Metrics pane](imgs/metrics.png)
+
+For `position: fixed` and `position: absolute` elements, the central field contains the actual **offsetWidth × offsetHeight** pixel dimensions of the selected element.
+All values can be modified by double-clicking them, like property values in the Styles pane (the changes are not, however, guaranteed to take effect, as this is subject to the concrete element positioning specifics.)
 
 ## View local changes
 
