@@ -26,7 +26,6 @@ TBD. Cover the content here: https://developer.chrome.com/devtools/docs/resource
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-
 You can view detailed information about cookies that have been created by an HTTP header or with JavaScript. You can also clear individual cookies, groups of cookies from the same origin, or clear all cookies from a specific domain.
 
 <img src="resources-files/cookies.png" />
