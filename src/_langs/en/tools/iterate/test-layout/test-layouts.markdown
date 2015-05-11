@@ -18,7 +18,7 @@ key-takeaways:
     - Enabling device mode in Chrome DevTools is as simple as pressing <strong>Toggle device mode</strong>.
     - Quickly emulate a device by selecting a model from the device mode's emulation presets. 
     - Screen emulation is a great way to test your layout's responsiveness, but it doesn't cover everything. Know the limitations.
-    - Test your site on any screen size: create your own custom device settings in device mode.
+    - Test your site on any screen size by creating your own custom device settings.
 remember:
   native-retina:
     - If you have a native Retina display, you'll notice that low dpi assets look pixelated while higher-dpi assets are sharp. To simulate this effect on a standard display, set the DPR to 2 and scale the viewport by zooming. A 2x asset will continue to look sharp, while a 1x one will look pixelated.
@@ -45,7 +45,7 @@ The screen emulator automatically:
 * Autosizes (boosts) text for pages without a defined viewport.
 
 Although Chrome's device mode offers many powerful emulation tools,
-it does have some limitations (see also the [complete list of limitations](#limitations):
+it does have some limitations (see the [complete list of limitations](#limitations)):
 
 * GPU and CPU behavior are not emulated.
 * System displays, such as the address bar, are not emulated.
