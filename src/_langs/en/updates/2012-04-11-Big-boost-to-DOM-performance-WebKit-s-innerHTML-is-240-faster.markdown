@@ -15,7 +15,7 @@ article:
   written_on: 2012-04-11
   updated_on: 2012-04-11
 authors:
-  - dutton
+  - samdutton
 tags:
   - performance
   - innerHTML

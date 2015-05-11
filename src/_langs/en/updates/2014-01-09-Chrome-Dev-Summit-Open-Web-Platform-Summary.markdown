@@ -16,7 +16,7 @@ article:
   written_on: 2014-01-09
   updated_on: 2014-01-09
 authors:
-  - dutton
+  - samdutton
 tags:
   - media
   - open web platform

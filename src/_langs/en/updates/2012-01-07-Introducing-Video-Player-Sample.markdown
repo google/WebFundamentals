@@ -15,7 +15,7 @@ article:
   written_on: 2012-01-07
   updated_on: 2012-01-07
 authors:
-  - petele
+  - petelepage
 tags:
   - closure
   - video

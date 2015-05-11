@@ -15,7 +15,7 @@ article:
   written_on: 2011-08-28
   updated_on: 2011-08-28
 authors:
-  - ernestd
+  - paulkinlan
 tags:
   - announcement
   - code
