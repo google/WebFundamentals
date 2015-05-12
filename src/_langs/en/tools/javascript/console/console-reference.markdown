@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Console API Reference"
 seotitle: "Console API Reference"
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Write to the console, reate JavaScript profiles, and start debugging sessions with the console API."
+introduction: "Write to the console, reate JavaScript profiles, and start debugging sessions with the console API."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
@@ -19,7 +19,7 @@ key-takeaways:
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
+{% include modules/takeaway.liquid list=page.key-takeaways.console %}
 
 ## Console API Reference
 
@@ -41,9 +41,9 @@ Clears the console.
 
     console.clear();
 
-Also see [Clearing the console](console.md#clearing-console-history).
+If Preserve Logs is on, `console.clear()` will not do anything in case there's an iframe that calls `console.clear()` since this would make your debugging process harder. In this case, "Clear console" in the context menu will still work, and actually clear the console.
 
-However, if Preserve Logs is on, console.clear() will not do anything in case there's some iframe which calls console.clear() and can make your debugging process harder. "Clear console" in the context menu will still work, and actually clear the console.
+See also [Clearing the console](console.md#clearing-console-history).
 
 
 ### console.count(label)
@@ -76,7 +76,7 @@ This method is identical to [`console.log()`](#consolelogobject-object).
 
 ### console.dir(object)
 
-Prints a JavaScript representation of the specified object. If the object being logged is an HTML element, then the properties of its DOM representation are displayed, as shown below:
+Prints a JavaScript representation of the specified object. If the object being logged is an HTML element, then the properties of its DOM representation are printed, as shown below:
 
     console.dir(document.body);
 
@@ -88,30 +88,30 @@ You can also use the object formatter (`%O`) in a `console.log()` statement to p
 
 ![Using the object formatter on a DOM element](images/consolelog-object-formatter.png)
 
-Calling `console.dir()` on a JavaScript object is equivalent to calling `console.log()` on the same object&mdash;they both print out the object's JavaScript properties in a tree format.
+Calling `console.dir()` on a JavaScript object is equivalent to calling `console.log()` on the same object.  They both print the object's JavaScript properties in a tree format.
 
-Compare this with the behavior of `console.log()`, which displays the element in an XML format as it would appear in the Elements panel:
+Compare this with the behavior of `console.log()`, which displays the element in XML format as it would appear in the Elements panel:
 
     console.log(document.body);
 
 ![Using console.log() on an element](images/consolelog-body.png)
 
+`%O` is a shortcut for dir.
 
 ### console.dirxml(object)
 
-Prints an XML representation of the specified object, as it would appear in the Elements panel. For HTML elements, calling this method is equivalent to calling `console.log()`.
+Prints an XML representation of the specified object as it would appear in the Elements panel. For HTML elements, calling this method is equivalent to calling `console.log()`.
 
     var list = document.querySelector("#myList");
-
+  
     console.dirxml();
 
-* `%O` is a shortcut for dir
-* `%o` acts either as dir or dirxml depending on the object type (non-dom or dom)
+`%o` acts either as dir or dirxml depending on the object type (non-dom or dom).
 
 
 ### console.error(object [, object, ...])
 
-Similar to [`console.log()`](#consolelog), `console.error()` and also includes a stack trace from where the method was called.
+Similar to [`console.log()`](#consolelog), `console.error()` also includes a stack trace from where the method was called.
 
     function connectToServer() {
         var errorCode = 1;
@@ -163,7 +163,7 @@ Creates a new logging group that is initially collapsed instead of open, as with
 
 ### console.groupEnd()
 
-Closes the most recently created logging group that previously created with `console.group()` or `console.groupCollapsed()`. See [console.group()](#consolegroupobject-object) and [console.groupCollapsed()](#consolegroupcollapsedobject-object) for examples.
+Closes the logging group that was most recently created with `console.group()` or `console.groupCollapsed()`. See [console.group()](#consolegroupobject-object) and [console.groupCollapsed()](#consolegroupcollapsedobject-object) for examples.
 
 
 ### console.info(object [, object, ...])
@@ -180,7 +180,7 @@ Dev Tools supports the following format specifiers:
 Format Specifier|Description
 ----------------|------------
 `%s`            |Formats the value as a string.
-`%d` or `%i`   |Formats the value as an integer.
+`%d` or `%i`    |Formats the value as an integer.
 `%f`            |Formats the value as a floating point value.
 `%o`            |Formats the value as an expandable DOM element (as in the Elements panel).
 `%O`            |Formats the value as an expandable JavaScript object.
@@ -190,19 +190,19 @@ Basic example:
 
     console.log("App started");
 
-An example that uses string (`%s`) and integer (`%d`) format specifiers to insert the values contained by the variables `userName` and `userPoints`:
+The following example uses the string (`%s`) and integer (`%d`) format specifiers to insert the values contained by the variables `userName` and `userPoints`:
 
     console.log("User %s has %d points", userName, userPoints);
 
 ![Console output styled with %c](console-files/log-format-specifier.png)
 
-An example of using the element formatter (`%o`) and object formatter (`%O`) on the same DOM element:
+The following example uses the element formatter (`%o`) and object formatter (`%O`) on the same DOM element:
 
     console.log("%o, %O", document.body, document.body);
 
 ![Console output styled with %c](images/log-object-element.png)
 
-The following example uses the **`%c`** format specifier to colorize the output string:
+The following example uses the `%c` format specifier to colorize the output string:
 
     console.log("%cUser %s has %d points", "color:orange; background:blue; font-size: 16pt", userName, userPoints);
 
@@ -211,9 +211,9 @@ The following example uses the **`%c`** format specifier to colorize the output 
 
 ### console.profile([label])
 
-When the Chrome DevTools is open, calling this function starts a JavaScript CPU profile with an optional label.To complete the profile, call `console.profileEnd()`. Each profile is added to the Profiles tab.
+Starts a JavaScript CPU profile with an optional label. To complete the profile, call `console.profileEnd()`. Each profile is added to the Profiles tab.
 
-In the following example a CPU profile is started at the entry to a function that is suspected to consume excessive CPU resources, and ended when the function exits.
+In the following example a CPU profile is used in a function that we suspect consumes excessive CPU resources.
 
     function processPixels() {
       console.profile("Processing pixels");
@@ -224,7 +224,7 @@ In the following example a CPU profile is started at the entry to a function tha
 
 ### console.profileEnd()
 
-Stops the current JavaScript CPU profiling session, if one is in progress, and prints the report to the Profiles panel.
+Stops the current JavaScript CPU profiling session if one is in progress and prints the report to the Profiles panel.
 
     console.profileEnd()
 
@@ -233,7 +233,7 @@ See [console.profile()](#consoleprofilelabel) for example use.
 
 ### console.time(label)
 
-Starts a new timer with an associated label. When `console.timeEnd()` is called with the same label, the timer is stopped the elapsed time displayed in the Console. Timer values are accurate to the sub-millisecond.
+Starts a new timer with an associated label. When `console.timeEnd()` is called with the same label, the timer is stopped and the elapsed time displayed in the console. Timer values are accurate to the sub-millisecond.
 
     console.time("Array initialize");
     var array= new Array(1000000);
@@ -244,7 +244,7 @@ Starts a new timer with an associated label. When `console.timeEnd()` is called 
 
 ![Example of using console.time() and timeEnd()](images/time-duration.png)
 
-Note: The string you pass to the `time()` and `timeEnd()` methods must match for the timer to finish as expected.
+Note: The strings you pass to the `time()` and `timeEnd()` methods must match or the timer will not finish.
 
 
 ### console.timeEnd(label)
@@ -256,7 +256,7 @@ For example usage, see [console.time()](#consoletimelabel).
 
 ### console.timeStamp([label])
 
-This method adds an event to the Timeline during a recording session. This lets you visually correlate your code generated time stamp to other events, such as screen layout and paints, that are automatically added to the Timeline.
+Adds an event to the Timeline during a recording session. This lets you visually correlate your code-generated time stamp to events that are automatically added to the Timeline, like layout and point, for example.
 
 See [Marking the Timeline](console.md#marking-the-timeline) for an example of using `console.timeStamp()`.
 
@@ -274,7 +274,7 @@ It is also possible to pass in arguments to trace(). For example:
 
 ### console.warn(object [, object, ...])
 
-This method is like [`console.log()`](#consolelogobject-object) but also displays a yellow warning icon along with the logged message.
+This method is like [`console.log()`](#consolelogobject-object) but also displays a yellow warning icon next to the logged message.
 
     console.warn("User limit reached! (%d)", userPoints);
 
