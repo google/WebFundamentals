@@ -69,7 +69,7 @@ In this example, `count()` is invoked with different labels, each of which is in
 ![Example of using console.count() with different string](images/count-unique.png)
 
 
-## console.debug(object [, object, ...]) ##
+### console.debug(object [, object, ...])
 
 This method is identical to [`console.log()`](#consolelogobject-object).
 
@@ -163,7 +163,7 @@ Creates a new logging group that is initially collapsed instead of open, as with
 
 ### console.groupEnd()
 
-Closes the logging group that was most recently created with `console.group()` or `console.groupCollapsed()`. See [console.group()](#consolegroupobject-object) and [console.groupCollapsed()](#consolegroupcollapsedobject-object) for examples.
+Closes the logging group that was most recently created with `console.group()` or `console.groupCollapsed()`. See `[console.group()](#consolegroupobject-object)` and `[console.groupCollapsed()](#consolegroupcollapsedobject-object)` for examples.
 
 
 ### console.info(object [, object, ...])
@@ -194,7 +194,7 @@ The following example uses the string (`%s`) and integer (`%d`) format specifier
 
     console.log("User %s has %d points", userName, userPoints);
 
-![Console output styled with %c](console-files/log-format-specifier.png)
+![Console output styled with %c](images/log-format-specifier.png)
 
 The following example uses the element formatter (`%o`) and object formatter (`%O`) on the same DOM element:
 
@@ -228,7 +228,7 @@ Stops the current JavaScript CPU profiling session if one is in progress and pri
 
     console.profileEnd()
 
-See [console.profile()](#consoleprofilelabel) for example use.
+See `[console.profile()](#consoleprofilelabel)` for an example.
 
 
 ### console.time(label)
@@ -251,7 +251,7 @@ Note: The strings you pass to the `time()` and `timeEnd()` methods must match or
 
 Stops the timer with the specified label and prints the elapsed time.
 
-For example usage, see [console.time()](#consoletimelabel).
+For example usage, see `[console.time()](#consoletimelabel)`.
 
 
 ### console.timeStamp([label])
@@ -269,7 +269,7 @@ Prints a stack trace from the point where the method was called, including links
 
 It is also possible to pass in arguments to trace(). For example:
 
-![Example of a stack trace with arguments](console-files/console-trace-args.png)
+![Example of a stack trace with arguments](images/console-trace-args.png)
 
 
 ### console.warn(object [, object, ...])
