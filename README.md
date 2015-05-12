@@ -81,6 +81,7 @@ Mac
 1. Install [npm](https://www.npmjs.org) dependencies
     * `npm install`
 1. Install fontforge if required for grunt-webfont on your OS.  See [grunt-webfont installation instructions](https://github.com/sapegin/grunt-webfont/blob/master/Readme.md#installation) for details.
+1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
 
 **Note:** On OSX, you may see an error about *Warning: EMFILE, too many open files*. 
 If so you will need to increase the maximum number of open file handles.  
