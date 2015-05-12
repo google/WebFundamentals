@@ -38,7 +38,7 @@ Example code:
   
 The output of the example code:
 
-![console table display](imgs/table-arrays.png)
+![console table display](images/table-arrays.png)
 
 The second parameter to table() is optional. You may define an array containing the property strings you wish to display.
 
@@ -62,7 +62,7 @@ Example code:
 
 The output of the example code:
 
-![console output with table objects](imgs/table-people-objects.png)
+![console output with table objects](images/table-people-objects.png)
 
 {% include modules/nextarticle.liquid %}
 
