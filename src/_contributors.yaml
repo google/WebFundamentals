@@ -605,3 +605,18 @@ flaviocopes:
   twitter: flaviocopes
   email: copesc@gmail.com
   description: "Flavio is a Full Stack Developer"
+
+  jorgefelico:
+  name:
+    given: Jorge
+    family: Felico
+  org:
+    name: Independent
+    unit: Developer
+  country: USA
+  role:
+    - contributor
+  homepage: http://www.jorgefelico.com
+  twitter: jorgefelico
+  email: jorgefelico@gmail.com
+  description: "Full Stack Web Developer located in Louisville, KY"
