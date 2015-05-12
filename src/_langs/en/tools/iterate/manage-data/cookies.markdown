@@ -114,7 +114,7 @@ Note the following about this operation:
 
 You can also refresh the table to reflect any changes to the page's cookies.
 
-**To refresh the cookies table**, click the refresh button ![Refresh button](imgs/refresh.png") at the bottom of the Resources panel. 
+**To refresh the cookies table**, click the refresh button ![Refresh button](imgs/refresh.png) at the bottom of the Resources panel. 
 
 {% include modules/nextarticle.liquid %}
 
