@@ -22,7 +22,7 @@ remember:
 ---
 {% wrap content %}
 
-![Cookies](imgs/resources-files/cookies.png)
+![Cookies](imgs/cookies.png)
 
 ## View cookies
 
