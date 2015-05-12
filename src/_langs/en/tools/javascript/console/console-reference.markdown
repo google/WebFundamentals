@@ -13,13 +13,8 @@ authors:
   - megginkearney
 priority: 0
 collection: console
-key-takeaways:
-  console:
-    - TBD tldr.
 ---
 {% wrap content %}
-
-{% include modules/takeaway.liquid list=page.key-takeaways.console %}
 
 ## Console API Reference
 
