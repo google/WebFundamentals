@@ -56,30 +56,30 @@ The return value is an object that contains an array for each registered event t
 
     getEventListeners(document);
 
-![Alt text](images/events-call-geteventlisteners.png)
+![Output of using getEventListeners()](images/events-call-geteventlisteners.png)
 
 If more than one listener is registered on the specified object, then the array contains a member for each listener. For instance, in the following example there are two event listeners registered on the #scrollingList element for the `mousedown` event:
 
-![Alt text](images/events-geteventlisteners_multiple.png)
+![View of the event listeners attached to mousedown](images/events-geteventlisteners_multiple.png)
 
 
 You can further expand each of these objects to explore their properties:
 
-![Alt text](images/events-geteventlisteners_expanded.png)
+![Expanded view of listener object](images/events-geteventlisteners_expanded.png)
 
 
 ## View event listeners registered on DOM Elements using the Elements Inspector
 
 The *Event Listeners* panel in the Elements Inspector by default shows all the events attached to a page:
 
-![Alt text](images/events-eventlisteners_panel.png)
+![Event listeners panel](images/events-eventlisteners_panel.png)
 
 The filter can limit the events just to the selected node:
 
-![Alt text](images/events-eventlisteners_panel_filtered.png)
+![Event listeners panel, filtered by selected node only](images/events-eventlisteners_panel_filtered.png)
 
 By expanding the object, the panel shows the event listener details. In this case the page has two event listeners attached via jQuery:
 
-![Alt text](images/events-eventlisteners_panel_details.png)
+![Expanded view of the event listeners](images/events-eventlisteners_panel_details.png)
 
 {% endwrap %}

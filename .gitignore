@@ -9,3 +9,4 @@ node_modules/
 .ruby-gemset
 .rvmrc
 .grunt-gae-pid
+google_appengine
