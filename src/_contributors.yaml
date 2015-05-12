@@ -322,3 +322,17 @@ heathermahan:
   twitter: heatheramahan
   email: heatheramahan@gmail.com
   description: "Heather Mahan is a developer."
+flaviocopes:
+  name:
+    given: Flavio
+    family: Copes
+  org:
+    name: Independent
+    unit: Developer
+  country: Italy
+  role:
+    - contributor
+  homepage: http://flaviocopes.com
+  twitter: flaviocopes
+  email: copesc@gmail.com
+  description: "Flavio is a Full Stack Developer"
