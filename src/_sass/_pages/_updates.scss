@@ -255,10 +255,6 @@
 
 }
 
-.updates-list-header {
-  max-width: none;
-}
-
 .updates-list {
 
   background: #f5f5f5;
@@ -271,7 +267,6 @@
   }
 
   .container {
-    max-width: none;
     @include medium {
       display: flex;
       padding-right: 15px;
