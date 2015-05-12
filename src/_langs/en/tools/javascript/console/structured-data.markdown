@@ -7,7 +7,7 @@ description: "Compare data objects using the `table()` method."
 introduction: "Compare data objects using the `table()` method."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-05-12
   order: 3
 authors:
   - megginkearney
@@ -17,9 +17,6 @@ key-takeaways:
   console:
     - Compare similar data objects using `table()`.
     - Build an array to define property strings.
-remember:
-  note-tbd:
-    - TBD note.
 ---
 {% wrap content %}
 
