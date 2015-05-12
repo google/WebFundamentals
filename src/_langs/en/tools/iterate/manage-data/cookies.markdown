@@ -24,6 +24,8 @@ remember:
 
 ![Cookies](imgs/cookies.png)
 
+{% include modules/toc.liquid %}
+
 ## View cookies
 
 View detailed information about cookies that have been created by an HTTP header or with JavaScript. 
