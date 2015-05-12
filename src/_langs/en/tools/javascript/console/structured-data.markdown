@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "View Structured Data in Console"
 seotitle: "View Structured Data in Chrome DevTools Console"
-description: "Use the `table()` method to compare data objects."
-introduction: "Use the `table()` method to compare data objects. "
+description: "Compare data objects using the `table()` method."
+introduction: "Compare data objects using the `table()` method."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
@@ -14,22 +14,22 @@ authors:
 priority: 0
 collection: console
 key-takeaways:
-  tldr-tbd:
+  console:
     - Compare similar data objects using `table()`.
-    - Build an array to define property strings
+    - Build an array to define property strings.
 remember:
   note-tbd:
     - TBD note.
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
+{% include modules/takeaway.liquid list=page.key-takeaways.console %}
 
-### Viewing Structured Data
+## Viewing Structured Data
 
 The `table()` method provides an easy way to view similar data objects. This will take the properties of an object and create a header. Row data comes from each indexes' properties value.
 
-#### A table in the console using two arrays.
+### A table in the console using two arrays.
 
 Example code:
 
@@ -38,11 +38,11 @@ Example code:
   
 The output of the example code:
 
-<img src="imgs/table-arrays.png" class="center" alt="console table display"/>
+![console table display](imgs/table-arrays.png)
 
 The second parameter to table() is optional. You may define an array containing the property strings you wish to display.
 
-#### A console table using a collection of objects.
+### A console table using a collection of objects.
 
 Example code:
 
@@ -62,9 +62,7 @@ Example code:
 
 The output of the example code:
 
-<img src="imgs/table-people-objects.png" class="center" alt="console output with table objects"/>
-
-{% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
+![console output with table objects](imgs/table-people-objects.png)
 
 {% include modules/nextarticle.liquid %}
 
