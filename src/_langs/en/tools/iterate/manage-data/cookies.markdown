@@ -93,7 +93,7 @@ You can clear (delete) a single cookies, all cookies in the selected frame group
 
 **To clear all cookies from the selected frame group:**
 
-* Click the Clear button <img src="../images/clear.png" /> at the bottom of the Resources panel.
+* Click the Clear button ![Clear button](imgs/clear.png) at the bottom of the Resources panel.
 * Right-click on the frame group and select **Clear** from the context menu.
 * Right-click on a cookie row in the table and select **Clear All**.
 
