@@ -4,7 +4,7 @@ layout: article
 title: "Monitor Events"
 seotitle: "Monitor Events Using the Chrome DevTools Command Line API"
 description: "The Chrome DevTools Command Line API offers various ways to observe and inspect Event Listeners"
-introduction: "The Chrome DevTools Command Line API offers various ways to observe and inspect Event Listeners"
+introduction: "The Chrome DevTools Command Line API offers various ways to observe and inspect Event Listeners. JavaScript plays a central role in interactive pages, and the Browser provides you some useful tools to debug events and event handlers."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-11
@@ -23,10 +23,10 @@ key-takeaways:
 ---
 {% wrap content %}
 
+{% include modules/takeaway.liquid list=page.key-takeaways.command-line %}
 
 ## Monitor Events
 
-JavaScript plays a central role in interactive pages, and the Browser can provides you some useful tools to debug events and event handlers.
 
 The [monitorEvents()](https://developer.chrome.com/devtools/docs/commandline-api#monitoreventsobject-events) method instructs the DevTools to log information on the specified targets.
 
@@ -81,8 +81,5 @@ The filter can limit the events just to the selected node:
 By expanding the object, the panel shows the event listener details. In this case the page has two event listeners attached via jQuery:
 
 ![Alt text](images/events-eventlisteners_panel_details.png)
-
-
-{% include modules/takeaway.liquid list=page.key-takeaways.command-line %}
 
 {% endwrap %}
