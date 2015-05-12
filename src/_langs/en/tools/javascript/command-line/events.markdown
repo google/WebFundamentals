@@ -15,7 +15,7 @@ authors:
 priority: 0
 collection: command-line
 key-takeaways:
-  tldr:
+  command-line:
     - Use monitorEvents() to listen to events of a certain type
     - Use unmonitorEvents() to stop listening
     - Use getEventListeners() to get the event listeners of a DOM element
@@ -24,11 +24,9 @@ key-takeaways:
 {% wrap content %}
 
 
-# Monitor Events
+## Monitor Events
 
 JavaScript plays a central role in interactive pages, and the Browser can provides you some useful tools to debug events and event handlers.
-
-## Monitoring events
 
 The [monitorEvents()](https://developer.chrome.com/devtools/docs/commandline-api#monitoreventsobject-events) method instructs the DevTools to log information on the specified targets.
 
@@ -58,38 +56,33 @@ The return value is an object that contains an array for each registered event t
 
     getEventListeners(document);
 
-![Alt text](./images/events-call-geteventlisteners.png)
+![Alt text](images/events-call-geteventlisteners.png)
 
 If more than one listener is registered on the specified object, then the array contains a member for each listener. For instance, in the following example there are two event listeners registered on the #scrollingList element for the `mousedown` event:
 
-![Alt text](./images/events-geteventlisteners_multiple.png)
+![Alt text](images/events-geteventlisteners_multiple.png)
 
 
 You can further expand each of these objects to explore their properties:
 
-![Alt text](./images/events-geteventlisteners_expanded.png)
+![Alt text](images/events-geteventlisteners_expanded.png)
 
 
 ## View event listeners registered on DOM Elements using the Elements Inspector
 
 The *Event Listeners* panel in the Elements Inspector by default shows all the events attached to a page:
 
-![Alt text](./images/events-eventlisteners_panel.png)
+![Alt text](images/events-eventlisteners_panel.png)
 
 The filter can limit the events just to the selected node:
 
-![Alt text](./images/events-eventlisteners_panel_filtered.png)
+![Alt text](images/events-eventlisteners_panel_filtered.png)
 
 By expanding the object, the panel shows the event listener details. In this case the page has two event listeners attached via jQuery:
 
-![Alt text](./images/events-eventlisteners_panel_details.png)
+![Alt text](images/events-eventlisteners_panel_details.png)
 
 
-{% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
-
-
-{% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
-
-{% include modules/nextarticle.liquid %}
+{% include modules/takeaway.liquid list=page.key-takeaways.command-line %}
 
 {% endwrap %}
