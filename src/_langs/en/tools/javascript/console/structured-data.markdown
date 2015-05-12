@@ -60,7 +60,7 @@ Example code:
   
     console.table(family, ["firstName", "lastName", "age"]);
 
-The output of the example code.
+The output of the example code:
 
 <img src="imgs/table-people-objects.png" class="center" alt="console output with table objects"/>
 
