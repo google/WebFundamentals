@@ -92,7 +92,7 @@ CSSOM 为什么采用树状结构？ 在给页面上的一切对象计算最终�
 
 此外，请注意，上面的树不是完整的 CSSOM 树，它只显示了我们决定在样式表中覆盖的样式。每个浏览器都会提供一套默认的样式，也称为「用户代理样式」 -- 即我们不提供任何自定义样式时看到的样式 -- 我们的样式只是覆盖这些默认样式集（例如 [默认 IE 样式](http://www.iecss.com/)）。如果您曾在 Chrome DevTools 中检查过「计算的样式」，并且想知道所有样式从何来，现在您应该知道答案了！
 
-好奇 CSS 处理需要的时间？ 在 DevTools 中录制时间轴，并查找 "Recalculate Style" 事件：与 DOM 解析不同，timeline 不显示单独的 "Parse CSS" 条目，而是捕获解析与 CSSOM 树的构建，以及这一事件下计算的样式的递归计算。
+好奇 CSS 处理需要的时间？ 在 DevTools 中录制时间轴，并查找 "Recalculate Style" 事件：与 DOM 解析不同，timeline 不显示单独的 "Parse CSS" 条目，而是在 "Recalculate Style" 这一个事件下一同捕获解析、CSSOM 树的构建及计算的样式的递归计算。
 
 <img src="images/cssom-timeline.png" class="center" alt="在 DevTools 中跟踪 CSSOM 的构建">
 
