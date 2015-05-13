@@ -605,3 +605,16 @@ flaviocopes:
   twitter: flaviocopes
   email: copesc@gmail.com
   description: "Flavio is a Full Stack Developer"
+
+龚振华:
+  name:
+    given: Zhenhua
+    family: Gong
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  homepage: http://allmyverse.com
+  email: simon.gong64@gmail.com
