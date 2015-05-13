@@ -26,8 +26,6 @@ You may find it convenient to set an error handler that would collect informatio
 Example of using window.onerror:
 ![Example of window.onerror handler](images/runtime-exceptions-window-onerror.jpg)
 
-{% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
-
 {% include modules/nextarticle.liquid %}
 
 {% endwrap %}
