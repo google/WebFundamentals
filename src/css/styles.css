@@ -6532,7 +6532,8 @@ figcaption {
     font-size: 15px;
     font-weight: 500;
     width: 120px;
-    line-height: 1.35em; }
+    line-height: 1.35em;
+    text-transform: uppercase; }
   .mdl-header a {
     background-color: #f3ff2d;
     width: 56px;
@@ -6563,7 +6564,8 @@ figcaption {
   font-family: Roboto;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
-  padding-top: 142px; }
+  padding-top: 142px;
+  text-transform: uppercase; }
 
 .mdl-footer .main-footer {
   background: #f5f5f5; }
@@ -6573,6 +6575,11 @@ figcaption {
     color: rgba(0, 0, 0, 0.49); }
   .mdl-footer .main-footer .main-footer__list-group:after {
     background: #e5e5e5; }
+
+@media only screen and (min-resolution: 2dppx) {
+  .mdl-header {
+    background-image: url(/web/tools/material-design-lite/images/header_2x.jpg); }
+ }
 
 .update-container {
   padding-bottom: 2em;
@@ -6647,19 +6654,11 @@ figcaption {
       font-size: 3em;
       padding-top: 1em;
       margin-bottom: 0.5em;
-      color: #fff; }
-      .updates-header .container h1.headliner span {
-        background-color: rgba(0, 0, 0, 0.1);
-        font-size: 0.5em;
-        padding: 0 10px;
-        margin-right: 10px;
-        border-radius: 2px;
-        color: rgba(255, 255, 255, 0.66);
-        text-transform: uppercase;
-        display: block;
-        line-height: 1.6em;
-        width: 86px;
-        text-align: center; }
+      color: #fff;
+      font-weight: 300; }
+    .updates-header .container p.headliner {
+      font-weight: 300;
+      margin-bottom: 0; }
     .updates-header .container a {
       box-shadow: none;
       text-align: left;
@@ -6676,7 +6675,12 @@ figcaption {
   .updates-header > div {
     padding-bottom: 2em; }
   .updates-header .desc {
-    width: auto; }
+    width: auto;
+    color: #939393; }
+  .updates-header .details-wrapper {
+    display: flex; }
+    .updates-header .details-wrapper > a {
+      margin-right: 20px; }
   .updates-header .details {
     margin-top: 0px;
     color: #000;
@@ -6693,6 +6697,14 @@ figcaption {
       background-repeat: no-repeat;
       padding-left: 1.3em;
       margin-right: 0.5em; }
+      .updates-header .details div.type {
+        background-color: rgba(255, 255, 255, 0.18);
+        padding: 0 8px;
+        border-radius: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5em; }
       .updates-header .details div.date {
         background-image: url(/web/tools/devtools/images/clock.svg); }
       .updates-header .details div.author {
@@ -6740,6 +6752,40 @@ figcaption {
           cursor: default;
           text-decoration: none; }
 
+.updates-list .updates-pagination.container {
+  border-top: 1px solid #E5E5E5;
+  text-align: center;
+  display: block; }
+  .updates-list .updates-pagination.container ul {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center; }
+    .updates-list .updates-pagination.container ul li {
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+      margin: 0 6px;
+      line-height: 2em; }
+      @media only screen and (min-width: 620px) {
+        .updates-list .updates-pagination.container ul li {
+          background-color: #fff;
+          border-radius: 50px;
+          width: 2em;
+          height: 2em;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21); } }
+      @media only screen and (min-width: 620px) {
+        .updates-list .updates-pagination.container ul li.current {
+          background-color: #4B8BFA; }
+          .updates-list .updates-pagination.container ul li.current a {
+            color: #fff; } }
+      @media only screen and (max-width: 619px) {
+        .updates-list .updates-pagination.container ul li.current a {
+          text-decoration: underline;
+          font-weight: 500; }
+ }
+      .updates-list .updates-pagination.container ul li::before {
+        display: none; }
+
 .updates-list {
   background: #f5f5f5;
   font-family: Roboto; }
@@ -6749,29 +6795,41 @@ figcaption {
     letter-spacing: 0; }
   @media only screen and (min-width: 620px) {
     .updates-list .container {
-      display: flex; } }
-  .updates-list > div > ul {
+      display: flex;
+      padding-right: 15px; } }
+  .updates-list > div.updates-list-header > ul {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     padding-top: 2em; }
-    .updates-list > div > ul li {
+    .updates-list > div.updates-list-header > ul > li {
       padding: 1em;
       padding-bottom: 5em;
       margin: 0;
       margin-bottom: 32px;
-      flex: 1 1 calc(50% - 20px);
+      flex: 1 1 calc(33% - 20px);
       margin-right: 20px;
       position: relative;
       background: #fff;
       border-radius: 2px;
       box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21);
       min-width: 290px; }
-      .updates-list > div > ul li.tip h3 {
+      .updates-list > div.updates-list-header > ul > li.tip h3 {
         background-color: #43A047; }
-    .updates-list > div > ul li::before {
+      .updates-list > div.updates-list-header > ul > li.news img {
+        max-width: 40%;
+        margin-right: 15px; }
+      .updates-list > div.updates-list-header > ul > li img {
+        margin-bottom: 0; }
+      .updates-list > div.updates-list-header > ul > li ol, .updates-list > div.updates-list-header > ul > li ul {
+        padding-top: 1em;
+        color: #333; }
+      .updates-list > div.updates-list-header > ul > li p {
+        color: #333;
+        padding-top: 1em; }
+    .updates-list > div.updates-list-header > ul > li::before {
       display: none; }
-    .updates-list > div > ul h3 {
+    .updates-list > div.updates-list-header > ul h3 {
       color: #fff;
       font-size: 20px;
       line-height: 1.5em;
@@ -6780,7 +6838,7 @@ figcaption {
       margin-left: -16px;
       margin-right: -16px;
       padding: 16px; }
-      .updates-list > div > ul h3 span {
+      .updates-list > div.updates-list-header > ul h3 span {
         background-color: rgba(0, 0, 0, 0.1);
         font-size: 0.7em;
         padding: 0px 7px;
@@ -6791,20 +6849,17 @@ figcaption {
         display: inline-block;
         line-height: 1.8em;
         vertical-align: middle; }
-    .updates-list > div > ul p {
-      color: #333;
-      padding-top: 1em; }
-    .updates-list > div > ul a:hover {
+    .updates-list > div.updates-list-header > ul a:hover {
       text-decoration: none; }
-    .updates-list > div > ul .tags {
+    .updates-list > div.updates-list-header > ul .tags {
       padding-top: 0.5em;
       font-size: 0.9em; }
-    .updates-list > div > ul .tags span {
+    .updates-list > div.updates-list-header > ul .tags a {
       text-transform: uppercase;
       text-decoration: none;
       margin-right: 1em;
       font-weight: 500; }
-    .updates-list > div > ul footer {
+    .updates-list > div.updates-list-header > ul footer {
       display: flex;
       justify-content: space-between;
       padding: 1em 1em 1em 0em;
@@ -6813,19 +6868,19 @@ figcaption {
       bottom: 0;
       left: 0;
       right: 0; }
-      .updates-list > div > ul footer div {
+      .updates-list > div.updates-list-header > ul footer div {
         margin-left: 1em;
         white-space: nowrap; }
-      .updates-list > div > ul footer .icon-circle {
+      .updates-list > div.updates-list-header > ul footer .icon-circle {
         display: inline;
         vertical-align: middle;
         margin: 0 8px 0 0;
         padding: 18px; }
-    .updates-list > div > ul .latest-spotlights__link img {
+    .updates-list > div.updates-list-header > ul .latest-spotlights__link img {
       max-height: 13em; }
-    .updates-list > div > ul .cta--primary {
+    .updates-list > div.updates-list-header > ul .cta--primary {
       margin-top: 1em; }
-    .updates-list > div > ul figure {
+    .updates-list > div.updates-list-header > ul figure {
       text-align: right; }
 
 ul.short-updates {
@@ -6861,33 +6916,44 @@ ul.short-updates {
         margin-top: 0;
         text-transform: none;
         color: #000; }
-  ul.short-updates li {
+  ul.short-updates > li.news p img {
+    display: inline-block;
+    margin: 0;
+    width: auto;
+    align: left;
+    max-width: 130px;
+    margin-right: 10px; }
+  ul.short-updates > li.tip img {
+    margin-bottom: 0;
+    max-height: 150px; }
+  ul.short-updates > li {
     margin: 0;
     padding: 0;
     width: 50%;
     flex: 0 1 auto;
     padding-right: 0.5em;
-    padding-top: 1em; }
+    padding-top: 1em;
+    font-size: 14px; }
     @media only screen and (max-width: 619px) {
-      ul.short-updates li {
+      ul.short-updates > li {
         width: 100%; } }
-    ul.short-updates li a {
+    ul.short-updates > li a {
       color: inherit; }
-    ul.short-updates li a:hover {
+    ul.short-updates > li a:hover {
       text-decoration: none; }
-    ul.short-updates li::before {
+    ul.short-updates > li::before {
       display: none; }
     @media only screen and (min-width: 620px) {
-      ul.short-updates li:nth-child(2) {
+      ul.short-updates > li:nth-child(2) {
         padding-left: 20px;
         padding-right: 0; } }
-    ul.short-updates li h4 {
+    ul.short-updates > li h4 {
       color: #4B8EDD;
       padding-bottom: 0.5em;
       padding-top: 0;
       font-size: 18px;
       font-weight: 500; }
-      ul.short-updates li h4 span {
+      ul.short-updates > li h4 span {
         background-color: #4b8bfa;
         font-size: 0.7em;
         padding: 0 7px;
@@ -6898,19 +6964,19 @@ ul.short-updates {
         display: inline-block;
         line-height: 1.8em;
         vertical-align: middle; }
-    ul.short-updates li p {
+    ul.short-updates > li p {
       font-size: 14px;
       padding-top: 10px; }
-      ul.short-updates li p img {
-        display: inline-block;
-        margin: 0;
-        width: auto;
-        align: left;
-        max-width: 130px;
-        margin-right: 10px; }
-    ul.short-updates li video {
+    ul.short-updates > li video {
       width: 100%;
       margin-bottom: 0; }
+    ul.short-updates > li ol {
+      list-style-type: decimal;
+      margin-left: 1.5em;
+      font-size: 14px; }
+      ul.short-updates > li ol li {
+        font-size: 14px;
+        padding-left: 0; }
 
 /**
 *

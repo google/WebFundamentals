@@ -5,14 +5,14 @@
 	* {
 		font-family: Roboto;
 		font-weight: normal;
-		letter-spacing: 0;		
+		letter-spacing: 0;
 	}
 
 	height: 60vh;
 	background-color: #1a1a1f;
 	background-image: url(/web/tools/material-design-lite/images/header.jpg);
 	background-size: cover;
-	
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -28,6 +28,7 @@
 		font-weight: 500;
 		width: 120px;
 		line-height: 1.35em;
+		text-transform: uppercase;
 	}
 
 	a {
@@ -68,6 +69,7 @@
 	font-weight: 500;
 	color: rgba(0,0,0,0.5);
 	padding-top: 142px;
+	text-transform: uppercase;
 }
 
 .mdl-footer {
@@ -85,5 +87,11 @@
 	  .main-footer__list-group:after {
 	  	background: #e5e5e5;
 	  }
+	}
+}
+
+@media only screen and (min-resolution: 2dppx) {
+	.mdl-header {
+			background-image: url(/web/tools/material-design-lite/images/header_2x.jpg);
 	}
 }

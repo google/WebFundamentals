@@ -11,9 +11,9 @@ permalink: /material-design-lite
 ---
 
 <div class="mdl-header">
-  <h1>MATERIAL DESIGN LITE</h1>
+  <h1>Material Design Lite</h1>
   <img src="/web/tools/material-design-lite/images/logo.svg">
   <a href="#"><span>Subscribe</span></a>
 </div>
 
-<div class="mdl-coming-soon">COMING SOON</div>
+<div class="mdl-coming-soon">Coming Soon</div>
