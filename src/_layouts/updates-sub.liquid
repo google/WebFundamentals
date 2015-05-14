@@ -5,6 +5,10 @@ published: true
 product: all
 category: all
 title: Web Updates
+
+rss: false
+feedName: Updates
+feedPath: updates/feed.xml
 ---
 
 {% if page.updates %}
@@ -40,23 +44,12 @@ title: Web Updates
             <li><a href="/web/updates/chrome-devtools/{% if page.category != "all" %}{{page.category}}/{% endif %}"{% if page.product == "chrome-devtools" %} class="selected"{% endif %}>DevTools</a></li>
           </ul>
         </li>
-        <li>Tags
-          <ul>
-            {% for tag in site.data['tags_updates'] %}
-              <li><a href="/web/updates/tags/{{tag}}">{{tag}}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
       </ul>
     </div>
 
     <ul>
 
       {% for article in updates %}
-
-        {% if page.category == "all" or article.type == page.category  %}
-
-        {% if page.product == "all" or article.product == page.product or article.category == page.product %}
 
         <li class="clear {{article.type}}">
 
@@ -96,13 +89,56 @@ title: Web Updates
           
         </li>
 
-        {% endif %}
-
-        {% endif %}
-
       {% endfor %}
 
     </ul> 
 
   </div>
+
+  {% if page.pagination_total > 1 %}
+  <div class="container updates-pagination">
+    <ul>
+
+      <li class="prev">
+      {% if page.pagination_current == 1 %}
+      &lt;
+      {% else %}
+      <a href="/web/{{ page.pagination_root }}{% if page.pagination_current != 2 %}/{{ page.pagination_current | minus: 1 }}{% endif %}">&lt;</a>
+      {% endif %}
+      </li>
+
+      {% if page.pagination_total < 8 %}
+
+        {% for i in (1..page.pagination_total) %}
+          <li{% if i == page.pagination_current %} class="current"{% endif %}>
+          <a href="/web/{{ page.pagination_root }}{% if i != 1 %}/{{i}}{% endif %}">{{ i }}</a>
+          </li>
+        {% endfor %}
+
+      {% else %}
+
+        {% for i in (1..5) %}
+          <li{% if i == page.pagination_current %} class="current"{% endif %}>
+          <a href="/web/{{ page.pagination_root }}{% if i != 1 %}/{{i}}{% endif %}">{{ i }}</a>
+          </li>
+        {% endfor %}
+        <li class="truncated">...</li>
+        <li{% if page.pagination_total == page.pagination_current %} class="current"{% endif %}>
+        <a href="/web/{{ page.pagination_root }}/{{page.pagination_total}}">{{ page.pagination_total }}</a>
+        </li>
+
+      {% endif %}
+
+      <li class="next">
+      {% if page.pagination_current == page.pagination_total %}
+      &gt;
+      {% else %}
+      <a href="/web/{{ page.pagination_root }}/{{ page.pagination_current | plus: 1 }}">&gt;</a>
+      {% endif %}
+      </li>
+
+    </ul>
+  </div>
+  {% endif %}
+
 </div>

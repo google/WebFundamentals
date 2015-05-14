@@ -49,29 +49,64 @@ module Jekyll
 
       # generate /category and /product/category
       categories.each do |category|
-        site.pages << UpdatesSubPage.new(site, site.source, File.join('_langs', site.data['curr_lang'], 'updates'), category, "all")
+        generatePaginatedPage(site, site.source, File.join('updates', category), category, "all")
         products.each do |product|
-          site.pages << UpdatesSubPage.new(site, site.source, File.join('_langs', site.data['curr_lang'], 'updates', product), category, product)
+          generatePaginatedPage(site, site.source, File.join('updates', product, category), category, product)
         end
       end
 
       # generate /product
       products.each do |product|
-        site.pages << UpdatesSubPage.new(site, site.source, File.join('_langs', site.data['curr_lang'], 'updates'), "all", product)
+        generatePaginatedPage(site, site.source, File.join('updates', product), "all", product)
       end
+
+      # generate main page
+      generatePaginatedPage(site, site.source, File.join('updates'), "all", "all")
 
       site.data['tags_updates'] = tags
     end
+
+    def generatePaginatedPage(site, base, dir, category, product)
+
+      pag_root = dir
+      dir = File.join('_langs', site.data['curr_lang'], dir)
+      per_page = 10
+
+      # filter array so it only contains what we need
+      updates = site.data['articles']['updates']
+      updates = updates.select do |update|
+        (category == "all" || update["type"] == category) && (product == "all" || update["product"] == product || update["category"] == product)
+      end
+      updates = updates.sort { |x,y| y["date"] <=> x["date"] }
+
+      page_count = updates.count <= per_page ? 1 : calculatePages(updates, per_page)
+      (1..page_count).each do |num_page|
+        # generate first page
+        site.pages << UpdatesSubPage.new(site, base, dir, category, product, updates[0..per_page-1], page_count, 1, pag_root)
+        if num_page > 1
+          # generate all other paginated pages
+          start = (num_page - 1) * per_page
+          num = (start + per_page - 1) >= updates.size ? updates.size : (start + per_page - 1)
+          site.pages << UpdatesSubPage.new(site, base, File.join(dir, num_page.to_s), category, product, updates[start..num], page_count, num_page, pag_root)
+        end
+      end
+      
+    end
+
+    def calculatePages(updates, per_page)
+      (updates.size.to_f / per_page.to_i).ceil
+    end
+
   end
 
   class UpdatesSubPage < Page
     attr_accessor :tag
 
-    def initialize(site, base, dir, category, product)
+    def initialize(site, base, dir, category, product, updates, pag_total, pag_current, pag_root)
         @site = site
         @base = base
         @dir  = dir
-        @name = category == "all" ? "#{product}.html" : "#{category}.html"
+        @name = "index.html"
         @langcode = site.data['curr_lang']
 
         self.process(@name)
@@ -80,7 +115,10 @@ module Jekyll
 
         self.data['category'] = category
         self.data['product'] = product
-        self.data['updates'] = site.data['articles']['updates']
+        self.data['updates'] = updates
+        self.data['pagination_total'] = pag_total
+        self.data['pagination_current'] = pag_current
+        self.data['pagination_root'] = pag_root
 
         self.data['langcode'] = @langcode
         if site.data["language_names"][@langcode].key?('rtl')
