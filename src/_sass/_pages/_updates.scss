@@ -255,6 +255,56 @@
 
 }
 
+.updates-list .updates-pagination.container {
+  border-top: 1px solid #E5E5E5;
+  text-align: center;
+  display: block;
+
+  ul {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+      margin: 0 6px;
+      line-height: 2em;
+
+      @include medium {
+        background-color: #fff;
+        border-radius: 50px;
+        width: 2em;
+        height: 2em;
+        box-shadow: 0 1px 2px rgba(0,0,0,.21);
+      }
+
+      &.current {
+
+          @include medium {
+            background-color: #4B8BFA;
+            a {
+              color: #fff;
+            }
+          }
+
+          @include small-only {
+            a {
+              text-decoration: underline;
+              font-weight: 500;
+            }
+          }
+
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
 .updates-list {
 
   background: #f5f5f5;
@@ -273,7 +323,7 @@
     }
   }
 
-  > div > ul {
+  > div.updates-list-header > ul {
 
     display: flex;
     flex-wrap: wrap;
