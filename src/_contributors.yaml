@@ -608,7 +608,7 @@ flaviocopes:
 
 龚振华:
   name:
-    given: Zhenhua
+    given: Simon
     family: Gong
   org:
     name: Independent
@@ -617,4 +617,6 @@ flaviocopes:
   role:
     - translator
   homepage: http://allmyverse.com
+  google: 113525015220376733647
   email: simon.gong64@gmail.com
+  description: "Simon is a Full Stack Developer"

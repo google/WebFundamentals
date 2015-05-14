@@ -17,7 +17,7 @@ notes:
   highdpi:
     - "在DPI较高的屏幕上，固定定位的元素会自动地被提升到一个它自有的渲染层中。但在DPI较低的设备上却并非如此，因为这个渲染层的提升会使得字体渲染方式由子像素变为灰阶（详细内容请参考：[Text Rendering](http://www.html5rocks.com/en/tutorials/internals/antialiasing-101/?redirect_from_locale=zh#toc-text-rendering)），我们需要手动实现渲染层的提升。"
   csstriggers:
-    - 想要一份详细的能触发布局、描绘或组合的CSS属性清单？去<a href="http://csstriggers.com/">CSS Triggers</a>看看吧。
+    - 想要一份详细的能触发布局、绘制或组合的CSS属性清单？去<a href="http://csstriggers.com/">CSS Triggers</a>看看吧。
 
 key-takeaways:
   - 避免使用运行时间过长的输入事件处理函数，它们会阻塞页面的滚动
@@ -32,7 +32,7 @@ key-takeaways:
 
 ## 避免使用运行时间过长的输入事件处理函数
 
-在理想情况下，当用户在设备屏幕上触摸了页面上某个位置时，页面的渲染层合并线程将接收到这个触摸事件并作出响应，比如移动页面元素。这个响应过程是不需要浏览器主线程的参与的，也就是说，不会导致JavaScript、布局和描绘过程的发生。
+在理想情况下，当用户在设备屏幕上触摸了页面上某个位置时，页面的渲染层合并线程将接收到这个触摸事件并作出响应，比如移动页面元素。这个响应过程是不需要浏览器主线程的参与的，也就是说，不会导致JavaScript、布局和绘制过程的发生。
 
 <img src="images/debounce-your-input-handlers/compositor-scroll.jpg" class="center" alt="Lightweight scrolling; compositor only.">
 

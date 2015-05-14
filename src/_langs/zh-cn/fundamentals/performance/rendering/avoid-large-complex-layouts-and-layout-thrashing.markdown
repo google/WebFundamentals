@@ -17,7 +17,7 @@ notes:
   tree:
     - "在浏览器内部执行渲染流水线的过程中，有一棵渲染树，它是基于DOM树生成的。这棵树上的元素，都是最终会被显示到设备屏幕上的元素。它包含了元素的所有可视信息：颜色、维度、位置等等。但是，如果一个元素含有`display: none`属性，那么它将不会出现这棵渲染树中。同样的，如果一个元素含有一个pseudo子元素（:after, :before），这些pseudo子元素不会出现在DOM树中，但却会出现在渲染树中。"
   csstriggers:
-    - 想要一份详细的能触发布局、描绘或渲染层合并的CSS属性清单？去<a href="http://csstriggers.com/">CSS Triggers</a>看看吧。
+    - 想要一份详细的能触发布局、绘制或渲染层合并的CSS属性清单？去<a href="http://csstriggers.com/">CSS Triggers</a>看看吧。
 
 key-takeaways:
   - 布局通常是在整个文档范围内发生。
