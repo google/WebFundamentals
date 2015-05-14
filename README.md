@@ -122,6 +122,12 @@ tools/docker.sh grunt develop
 Then point your browser to http://localhost:8081/web/fundamentals or the
 IP address of your Docker instance
 
+To build only a single language *FASTER*:
+
+```sh
+tools/docker.sh grunt develop --lang=en
+```
+
 
 Without Docker
 --------------

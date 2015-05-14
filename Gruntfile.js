@@ -194,9 +194,9 @@ module.exports = function(grunt) {
       jekyll: {
         files: [
           '<%= config.source %>/**/*.liquid',
-          '<%= config.source %>/**/*.markdown',
+          '<%= config.source %>/**/**/*.markdown',
           '<%= config.source %>/**/*.rb',
-          '<%= config.source %>/**/*.md',
+          '<%= config.source %>/**/**/*.md',
           '<%= config.source %>/**/*.xml',
           '<%= config.source %>/**/*.yaml'
         ],
