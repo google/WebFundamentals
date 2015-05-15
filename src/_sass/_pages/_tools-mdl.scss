@@ -39,6 +39,7 @@
 		border-radius: 56px;
 		margin-top: 42px;
 		margin-right: 40px;
+		flex-shrink: 0;
 
 		span {
 			font-size: 0;
@@ -54,21 +55,22 @@
 	}
 
 	img {
-		height: 30%;
-		width: auto;
+		height: 116px;
+		width: 117px;
 		align-self: center;
+		flex-shrink: 0;
 	}
 
 }
 
 .mdl-coming-soon {
-	height: 340px;
+	height: 28vh;
 	background: #fafafa;
 	text-align: center;
 	font-family: Roboto;
 	font-weight: 500;
 	color: rgba(0,0,0,0.5);
-	padding-top: 142px;
+	padding-top: 12vh;
 	text-transform: uppercase;
 }
 
