@@ -55,6 +55,16 @@
     margin-bottom: 0;  	
   }
 
+  .update-content {
+
+    img.block {
+      display: block;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+  }
+
   .video-container {
     margin-top: 1em;
     position: relative;
@@ -158,7 +168,9 @@
     margin-top: 0px;
     color: #000;
     opacity: 0.5;
-    @include prefixr(filter invert(100%));
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
 
     div {
       display: inline-block;
@@ -180,15 +192,15 @@
       }
 
       &.date {
-        background-image: url(/web/tools/chrome-devtools/images/clock.svg);
+        background-image: url(/web/imgs/icons/clock.svg);
       }
 
       &.author {
-        background-image: url(/web/tools/chrome-devtools/images/account.svg);
+        background-image: url(/web/imgs/icons/account.svg);
       }
 
       &.tags {
-        background-image: url(/web/tools/chrome-devtools/images/tag.svg);
+        background-image: url(/web/imgs/icons/tag.svg);
         margin-top: 0;
         text-transform: none;
         color: #000;
@@ -333,8 +345,8 @@
     padding-top: 2em;
 
     > li {
-      padding: 1em;
-      padding-bottom: 5em;
+      padding: 0;
+      padding-bottom: 66px;
       margin: 0;
       margin-bottom: 32px;
       flex: 1 1 calc(50% - 20px);
@@ -346,19 +358,50 @@
       box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21);
       min-width: 290px;
 
-      &.tip h3 {
-        background-color: #43A047;
+      .center {
+        text-align: center;
+        position: absolute;
+        bottom: 72px;
+        right: 0;
+        left: 0;
+        .button {
+          box-shadow: 0 2px 19px 0 rgba(0,0,0,.56);
+        }
+      }
+
+      .button {
+        background-color: #4285f4;
+        color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        padding: 0 1em;
+        line-height: 32px;
+        border-radius: 2px;
+        font-size: .9em;          
+      }
+
+      &.tip {
+        h3 {
+          background-color: #43A047;
+        }
+        .button {
+          background-color: #43A047;
+        }
       }
 
       &.news {
         img {
           max-width: 40%;
           margin-right: 15px;
+          margin-top: 0;
         }
       }
 
       img {
         margin-bottom: 0;
+        margin-top: 0;
       }
 
       ol, ul {
@@ -368,7 +411,8 @@
 
       p {
         color: #333;
-        padding-top: 1em;
+        padding: 1em;
+        padding-bottom: 0.5em;
       }
 
     }
@@ -379,13 +423,12 @@
 
     h3 {
       color: #fff;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1.5em;
       background: #4B8BFA;
-      margin-top: -16px;
-      margin-left: -16px;
-      margin-right: -16px;
       padding: 16px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
 
       span {
         background-color: rgba(0,0,0,0.1);
@@ -406,8 +449,12 @@
     }
 
     .tags {
+      margin: 16px;
       padding-top: 0.5em;
-      font-size: 0.9em;
+      font-size: 0.8em;
+      border-top: 1px solid #EDEDED;
+      margin-top: 0.5em;
+      margin-bottom: 0;
     }
 
     .tags a {
@@ -493,15 +540,15 @@ ul.short-updates {
       margin-right: 0.5em;
 
       &.date {
-        background-image: url(/web/tools/chrome-devtools/images/clock.svg);
+        background-image: url(/web/imgs/icons/clock.svg);
       }
 
       &.author {
-        background-image: url(/web/tools/chrome-devtools/images/account.svg);
+        background-image: url(/web/imgs/icons/account.svg);
       }
 
       &.tags {
-        background-image: url(/web/tools/chrome-devtools/images/tag.svg);
+        background-image: url(/web/imgs/icons/tag.svg);
         margin-top: 0;
         text-transform: none;
         color: #000;

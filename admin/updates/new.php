@@ -99,10 +99,8 @@ if($_POST) {
 function typeChange() {
 	if(document.getElementById('type-tip').checked) {
 		document.getElementById('description-block').style.display = 'none';
-		document.getElementById('featured-image-block').style.display = 'none';
 	} else {
 		document.getElementById('description-block').style.display = '';
-		document.getElementById('featured-image-block').style.display = '';
 	}
 }
 
