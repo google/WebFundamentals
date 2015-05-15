@@ -277,19 +277,20 @@ module.exports = function(grunt) {
 
       // if a section has been passed, move other folders temporarily out of the
       // src folder
-      if(section != 'all') {
+      if(section !== 'all') {
         var srcDir = 'src/_langs/' + lang + '/';
         var tmpDir = '.tmp' + lang + '/';
         var otherSections = [];
 
         // create tmp folder
-        if(!fs.existsSync(tmpDir))
+        if(!fs.existsSync(tmpDir)) {
           fs.mkdirSync(tmpDir);
+        }
 
         // move other sections out of the src folder temporarily
         var dir = fs.readdirSync(srcDir);
         for (var i = 0; i < dir.length; i++) {
-          if(fs.statSync(srcDir + dir[i]).isDirectory() && dir[i] != section && !(dir[i] == "updates" && section == "tools")) {
+          if(fs.statSync(srcDir + dir[i]).isDirectory() && dir[i] !== section && !(dir[i] === 'updates' && section === 'tools')) {
             otherSections.push(dir[i]);
             fs.renameSync(srcDir + dir[i], tmpDir + dir[i]);
           }
@@ -305,13 +306,14 @@ module.exports = function(grunt) {
         }
 
         // remove tmp folder
-        if(fs.existsSync(tmpDir))
+        if(fs.existsSync(tmpDir)) {
           fs.rmdirSync(tmpDir);
+        }
 
         callback(err, res, code);
       };
 
-      grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, section != 'all' ? sectionCallback : callback);
+      grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, section !== 'all' ? sectionCallback : callback);
     };
 
     var done = this.async();
