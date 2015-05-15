@@ -11,7 +11,9 @@ feedURL: https://github.com/google/material-design-lite/releases.atom
 
 <div class="mdl-header">
   <h1>Material Design Lite</h1>
-  <img src="/web/tools/material-design-lite/images/logo.svg">
+  <img src="images/logo1x.png" 
+      alt="MDL Logo" 
+      srcset="images/logo2x.png 2x">
   <a href="#"><span>Subscribe</span></a>
 </div>
 
