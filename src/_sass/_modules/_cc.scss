@@ -42,6 +42,7 @@
 	border-left: 1px solid #e0e0e0;
 	padding-left: 16px;
 	display: flex;
+	display: -webkit-flex;
 
 	@include wide {
 		margin-right: 25.9%;

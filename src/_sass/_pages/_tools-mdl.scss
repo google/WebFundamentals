@@ -14,9 +14,13 @@
 	background-size: cover;
 
 	display: flex;
+	display: -webkit-flex;
 	flex-direction: row;
+	-webkit-flex-direction: row;
 	justify-content: space-between;
+	-webkit-justify-content: space-between;
 	align-items: flex-start;
+	-webkit-align-items: flex-start;
 
 	h1 {
 		margin: 0;
@@ -40,6 +44,7 @@
 		margin-top: 42px;
 		margin-right: 40px;
 		flex-shrink: 0;
+		-webkit-flex-shrink: 0;
 
 		span {
 			font-size: 0;
@@ -58,7 +63,9 @@
 		height: 116px;
 		width: 117px;
 		align-self: center;
+		-webkit-align-self: center;
 		flex-shrink: 0;
+		-webkit-flex-shrink: 0;
 	}
 
 }

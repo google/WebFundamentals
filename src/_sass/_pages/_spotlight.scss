@@ -16,7 +16,9 @@
 
   @include medium {
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
   }
 
 	p {
@@ -39,7 +41,9 @@
     padding-left: 0;
     display: flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     max-width: 1700px;
     margin: 0 auto;
 
@@ -47,8 +51,11 @@
       padding: 0 0 26px 0;
       margin: 0;
       flex: 2 1 940px;
+      -webkit-flex: 2 1 940px;
       display: flex;
+      display: -webkit-flex;
       flex-direction: column;
+      -webkit-flex-direction: column;
     }
 
     li::before {
@@ -74,6 +81,7 @@
     li.half {
 
       flex: 1 1 470px;
+      -webkit-flex: 1 1 470px;
 
       .featured-list__img-wrapper {
         padding-top: 0;
@@ -107,6 +115,7 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   padding: 2em;
   flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
   position: relative;
 
   > * {
@@ -115,6 +124,7 @@
 
   footer {
     display: flex;
+    display: -webkit-flex;
     background: #fafafa;
     padding: 1em;
     border-bottom-left-radius: 2px;

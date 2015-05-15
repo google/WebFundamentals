@@ -23,6 +23,7 @@ $padding: 8px !default;
 
 .show-root--image-container {
 	flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
 
 	min-height: initial;
 	max-height: initial;
@@ -35,6 +36,7 @@ $padding: 8px !default;
 @include medium {
 	.guides-list__item .primary-content.show-root--image-container {
 		flex: 0 1 auto;
+		-webkit-flex: 0 1 auto;
 
 		min-height: initial;
 		max-height: initial;
@@ -44,6 +46,7 @@ $padding: 8px !default;
 @include wide {
 	.guides-list__item .primary-content.show-root--image-container {
 		flex: 0 1 auto;
+		-webkit-flex: 0 1 auto;
 
 		min-height: initial;
 		max-height: initial;

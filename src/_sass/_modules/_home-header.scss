@@ -78,12 +78,16 @@
 
   & .cta {
     display: flex;
+    display: -webkit-flex;
     flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
     justify-content: space-around;
+    -webkit-justify-content: space-around;
 
     & a.button--secondary-variation {
       margin-top: $lineHeight + $lineHeight/2;
       flex-basis: 200px;
+      -webkit-flex-basis: 200px;
       white-space: nowrap;
     }
   }
