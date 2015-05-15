@@ -199,7 +199,8 @@ module.exports = function(grunt) {
           '<%= config.source %>/**/*.rb',
           '<%= config.source %>/**/**/*.md',
           '<%= config.source %>/**/*.xml',
-          '<%= config.source %>/**/*.yaml'
+          '<%= config.source %>/**/*.yaml',
+          '<%= config.source %>/**/*.html'
         ],
         tasks: ['jekyll:appengine']
       },
