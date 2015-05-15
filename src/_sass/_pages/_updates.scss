@@ -574,9 +574,35 @@ ul.short-updates {
 
   > li.tip {
 
-      img {
-        margin-bottom: 0;
-        max-height: 150px;
+      position: relative;
+
+      .featured-img {
+        height: 144px;
+        background-size: cover;
+      }
+
+      .center {
+        text-align: center;
+        position: absolute;
+        bottom: 42px;
+        right: 0;
+        left: 0;
+        .button {
+          box-shadow: 0 2px 19px 0 rgba(0,0,0,.56);
+        }
+      }
+
+      .button {
+        background-color: #4285f4;
+        color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        padding: 0 1em;
+        line-height: 32px;
+        border-radius: 2px;
+        font-size: .9em;          
       }
 
   }
@@ -584,10 +610,10 @@ ul.short-updates {
   > li {
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 33%;
     flex: 0 1 auto;
     -webkit-flex: 0 1 auto;
-    padding-right: 0.5em;
+    padding-right: 0;
     padding-top: 1em;
     font-size: 14px;
 
@@ -607,7 +633,7 @@ ul.short-updates {
       display: none;
     }
 
-    &:nth-child(2) {
+    &:nth-child(2), &:nth-child(3) {
       @include medium {
         padding-left: 20px;
         padding-right: 0;
