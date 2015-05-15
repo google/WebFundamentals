@@ -22,6 +22,10 @@ module Jekyll
     def generate(site)
       updates = site.data['articles']['updates']
 
+      if updates.nil?
+        return
+      end
+
       tags = []
       tag_updates = {}
 
