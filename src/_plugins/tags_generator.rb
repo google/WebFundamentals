@@ -22,6 +22,10 @@ module Jekyll
     def generate(site)
       spotlights = site.data['articles']['spotlight']
 
+      if spotlights.nil?
+        return
+      end
+
       tags = []
       tag_spotlights = {}
 
