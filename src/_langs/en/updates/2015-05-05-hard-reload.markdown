@@ -1,7 +1,7 @@
 ---
 rss: false
 layout: update
-published: true
+published: false
 title: Hard reload
 date: 2015-05-05
 article:

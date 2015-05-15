@@ -1,8 +1,10 @@
 <ul class="short-updates">
+  {% assign count = '' %}
   {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
-  {% for article in updates limit: include.limit %}
-  {% if include.category == null or article.category == include.category %}
-  {% if include.product == null or article.product == include.product %}
+  {% for article in updates limit: 20 %}
+  {% if count.size < include.limit %}
+  {% if include.type == null or include.type == "all" or article.type == include.type  %}
+  {% if include.product == null or include.product == "all" or article.product == include.product or article.category == include.product %}
 
     <li class="{{article.type}}">
       <a href="{{site.baseurl}}{{article.url | canonicalize}}">
@@ -28,14 +30,14 @@
         </div>
         {% endif %}
       </div>
-      <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">
-        {% include modules/update_excerpt.liquid article=article %}
-      </a></p>
-
-      
+      <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+        {% include modules/update_excerpt.liquid article=article contain=true %}
+      </a>
       
     </li>
-  
+    {% capture count %}{{ count }}*{% endcapture %}
+
+  {% endif %}
   {% endif %}
   {% endif %}
   {% endfor %}
