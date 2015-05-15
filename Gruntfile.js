@@ -243,6 +243,22 @@ module.exports = function(grunt) {
     var langs = grunt.option('lang') || 'all';
     var section = grunt.option('section') || 'all';
 
+    // configure the watcher so it only watches the current section, otherwise it'll create and endless loop
+    if(section !== 'all') {
+      var watchConfig = grunt.config.get('watch');
+      watchConfig.jekyll.files = [
+        'src/_langs/*/' + section + '/**/*.liquid',
+        'src/_langs/*/' + section + '/**/*.markdown',
+        'src/_langs/*/' + section + '/**/*.xml',
+        'src/_langs/*/' + section + '/**/*.yaml',
+        'src/_langs/*/' + section + '/**/*.html',
+        'src/**/*.rb',
+        'src/_includes/**/*.liquid',
+        'src/_layouts/**/*.liquid'
+      ];
+      grunt.config.set('watch', watchConfig);
+    }
+
     var cfgname = this.args[0] || 'appengine';
 
     // read langs from config/target.yml
