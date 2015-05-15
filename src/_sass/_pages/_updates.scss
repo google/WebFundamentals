@@ -3,6 +3,7 @@
   padding-bottom: 2em;
   @include medium {
     display: flex;
+    display: -webkit-flex;
   }
 
   font-family: Roboto;
@@ -146,6 +147,7 @@
 
   .details-wrapper {
     display: flex;
+    display: -webkit-flex;
     > a {
       margin-right: 20px;
     }
@@ -156,10 +158,7 @@
     margin-top: 0px;
     color: #000;
     opacity: 0.5;
-    -webkit-filter: invert(100%);
-    -moz-filter: invert(100%);
-    -ms-filter: invert(100%);
-    filter: invert(100%);
+    @include prefixr(filter invert(100%));
 
     div {
       display: inline-block;
@@ -181,15 +180,15 @@
       }
 
       &.date {
-        background-image: url(/web/tools/devtools/images/clock.svg);
+        background-image: url(/web/tools/chrome-devtools/images/clock.svg);
       }
 
       &.author {
-        background-image: url(/web/tools/devtools/images/account.svg);
+        background-image: url(/web/tools/chrome-devtools/images/account.svg);
       }
 
       &.tags {
-        background-image: url(/web/tools/devtools/images/tag.svg);
+        background-image: url(/web/tools/chrome-devtools/images/tag.svg);
         margin-top: 0;
         text-transform: none;
         color: #000;
@@ -319,6 +318,7 @@
   .container {
     @include medium {
       display: flex;
+      display: -webkit-flex;
       padding-right: 15px;
     }
   }
@@ -326,7 +326,9 @@
   > div.updates-list-header > ul {
 
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     padding: 0;
     padding-top: 2em;
 
@@ -335,7 +337,8 @@
       padding-bottom: 5em;
       margin: 0;
       margin-bottom: 32px;
-      flex: 1 1 calc(33% - 20px);
+      flex: 1 1 calc(50% - 20px);
+      -webkit-flex: 1 1 calc(50% - 20px);
       margin-right: 20px;
       position: relative;
       background: #fff;
@@ -416,7 +419,9 @@
 
     footer {
       display: flex;
+      display: -webkit-flex;
       justify-content: space-between;
+      -webkit-justify-content: space-between;
       padding: 1em 1em 1em 0em;
       border-top: 1px solid #eee;
 
@@ -459,7 +464,9 @@ ul.short-updates {
   margin: 0;
   padding: 0;
   display: flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   padding-bottom: 1.5em;
 
   div.tags {
@@ -486,15 +493,15 @@ ul.short-updates {
       margin-right: 0.5em;
 
       &.date {
-        background-image: url(/web/tools/devtools/images/clock.svg);
+        background-image: url(/web/tools/chrome-devtools/images/clock.svg);
       }
 
       &.author {
-        background-image: url(/web/tools/devtools/images/account.svg);
+        background-image: url(/web/tools/chrome-devtools/images/account.svg);
       }
 
       &.tags {
-        background-image: url(/web/tools/devtools/images/tag.svg);
+        background-image: url(/web/tools/chrome-devtools/images/tag.svg);
         margin-top: 0;
         text-transform: none;
         color: #000;
@@ -532,6 +539,7 @@ ul.short-updates {
     padding: 0;
     width: 50%;
     flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
     padding-right: 0.5em;
     padding-top: 1em;
     font-size: 14px;

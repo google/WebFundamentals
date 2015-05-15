@@ -33,7 +33,9 @@
     margin: 0;
     padding: 0;
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 
     > li {
       margin: 0;
@@ -41,10 +43,12 @@
       padding-right: 2em;
 
       flex: 1 1 25%;
+      -webkit-flex: 1 1 25%;
       min-width: 165px;
 
       &.note-why {
         flex: 1 1 50%;
+        -webkit-flex: 1 1 50%;
         background-color: rgba(0, 0, 0, 0.03);
         padding-left: 2em;
         padding-right: 2em;
@@ -190,7 +194,9 @@
     margin: 0;
     padding: 0;
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 
     li {
       margin: 0;
@@ -203,6 +209,7 @@
       }
 
       flex: 1 1 19%;
+      -webkit-flex: 1 1 19%;
       min-width: 165px;
 
       p {
@@ -388,9 +395,12 @@
 
   .flex {
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     > * {
       flex: 1 1 50%;
+      -webkit-flex: 1 1 50%;
       min-width: 280px;
     }
   }
@@ -443,8 +453,10 @@
     ul.doclist.by-panel > li {
 
       flex: 1 1 50%;
+      -webkit-flex: 1 1 50%;
       @include medium {
         flex: 0 1 50%;
+        -webkit-flex: 0 1 50%;
       }
 
       ul, img {
