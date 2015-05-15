@@ -1,0 +1,10 @@
+{% if include.article.type == 'tip' %}
+{% if include.article.featured-image %}<img src="{{include.article.featured-image}}">{% endif %}
+<div class="center"><a class="button" href="{{site.baseurl}}{{include.article.url | canonicalize}}">VIEW TIP</a></div>
+{% else %}
+<p>
+{% if include.article.featured-image %}<img src="{{include.article.featured-image}}" align="left">{% endif %}
+{% if include.article.description %}{{include.article.description}}{% endif %}
+</p>
+{% endif %}
+

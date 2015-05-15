@@ -55,10 +55,11 @@ feedPath: updates/feed.xml
 
           <div>
             <a href="{{site.baseurl}}{{article.url | canonicalize}}">
-            <h3><span>{{article.type}}</span>{% if article.title %}{{article.title}}{% else %}Tip!{% endif %}</h3></a>
-            {% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}
-            {% if article.description %}<p>{{article.description}}</p>{% else %}{{article.content}}{% endif %}
-            {% if article.tags %}
+            <h3><span>{% if article.product == 'chrome-devtools' %}devtools{% else %}{{article.product}}{% endif %} {{article.type}}</span>{% if article.title %}{{article.title}}{% else %}Tip!{% endif %}</h3></a>
+            
+            {% include modules/update_excerpt.liquid article=article %}
+
+            {% if article.tags and article.type != "tip" %}
             <div class="tags">
               {% for tag in article.tags %}
               <a href="/web/updates/tags/{{tag}}">{{tag}}</a>

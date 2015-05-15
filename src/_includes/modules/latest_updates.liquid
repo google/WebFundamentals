@@ -28,7 +28,11 @@
         </div>
         {% endif %}
       </div>
-      <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{% if article.description %}{{article.description}}{% else %}{{article.content}}{% endif %}</a></p>
+      <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">
+        {% include modules/update_excerpt.liquid article=article %}
+      </a></p>
+
+      
       
     </li>
   

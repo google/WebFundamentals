@@ -6,13 +6,14 @@ title: Hard reload
 date: 2015-05-05
 article:
   written_on: 2015-05-05
-  updated_on: 2015-05-08
+  updated_on: 2015-05-15
 authors:
 - pbakaus
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
+featured-image: /web/updates/images/2015-05-05-hard-reload/screenshot.png
 permalink: /updates/2015/05/05/hard-reload
 ---
 With DevTools opened, click and hold the reload button to see more options.

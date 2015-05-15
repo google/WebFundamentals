@@ -62,7 +62,7 @@ if($_POST) {
 			<input type="text" id="description" name="description" value="<?= $update['page']->keyExists('description') ? $update['page']->fetch('description') : '' ?>">
 		</div>
 		<div id="featured-image-block">
-			<label for="featured-image">Featured Image</label>
+			<label for="featured-image">Featured Image (required for tips)</label>
 			<input type="text" id="featured-image" name="featured-image" value="<?= $update['page']->keyExists('featured-image') ? $update['page']->fetch('featured-image') : '' ?>">
 		</div>
 		<div>
@@ -107,10 +107,8 @@ if($_POST) {
 			function typeChange() {
 				if(document.getElementById('type-tip').checked) {
 					document.getElementById('description-block').style.display = 'none';
-					document.getElementById('featured-image-block').style.display = 'none';
 				} else {
 					document.getElementById('description-block').style.display = '';
-					document.getElementById('featured-image-block').style.display = '';
 				}
 			}
 
