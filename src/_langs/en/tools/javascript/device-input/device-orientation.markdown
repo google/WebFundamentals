@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Simulate Device Orientation"
 seotitle: "Simulate Device Orientation using Chrome DevTools Device Sensors"
-description: "Test accelerometer data used with the <a href="http://www.w3.org/TR/screen-orientation/">Orientation API</a>."
-introduction: "Test accelerometer data used with the <a href="http://www.w3.org/TR/screen-orientation/">Orientation API</a>."
+description: "Test accelerometer data used with the <a href='ttp://www.w3.org/TR/screen-orientation/'>Orientation API</a>."
+introduction: "Test accelerometer data used with the <a href='http://www.w3.org/TR/screen-orientation/'>Orientation API</a>."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-18
