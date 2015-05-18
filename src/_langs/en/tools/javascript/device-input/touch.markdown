@@ -35,7 +35,7 @@ Because mouse events can still fire on touch devices, the touch emulator does no
 
 {% include modules/remember.liquid title="Note" list=page.remember.ontouch-handlers %}
 
-![Emulating pinch to zoom](http://zippy.gfycat.com/DiligentEducatedAfricanhornbill.gif)
+![Emulating pinch to zoom](https://zippy.gfycat.com/DiligentEducatedAfricanhornbill.webm)
 
 ## Simulate multi-touch
 
