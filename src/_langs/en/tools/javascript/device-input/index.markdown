@@ -1,25 +1,30 @@
 ---
 rss: false
 layout: section
-title: "Test Device Input"
+title: "Test Device Input."
 seotitle: "Test Device Input"
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors."
+introduction: "Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-05-18
   order: 4
 authors:
   - megginkearney
 priority: 0
 collection: javascript
 id: device-input
+remember:
+  sensors:
+    - If your app detects sensors onload using JavaScript (such as Modernizr), make sure that you reload the page after enabling sensor emulators.
 ---
 
 {% wrap content %}
 
-TBD. Introduce content related to doc: https://developer.chrome.com/devtools/docs/device-mode#device-sensors but do it in a generic way.
+To access the Chrome DevTools sensor controls, open the DevTools emulation drawer by clicking the **More overrides** ![open emulation drawer](imgs/icon-open-emulator-drawer.png)icon in the top right corner of the browser viewport. Then, select **Sensors** in the emulation drawer.
 
-TBD. This doc set will hopefully grow over time! And won't necessarily be exclusive to DevTools device input tools.
+![sensors pane in the DevTools emulation drawer](imgs/emulation-drawer-sensors.png)
+
+{% include modules/remember.liquid title="Remember" list=page.remember.sensors %}
 
 {% endwrap %}
