@@ -6,7 +6,7 @@ collection: ttt-series-1
 title: "Sublime Text Plugins"
 description: ""
 published: true
-showYoutubeID: tNgBQC9qMP4
+showYoutubeID:
 
 date: 2015-05-20 00:00:00
 article:
