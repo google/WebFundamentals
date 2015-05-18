@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "优先使用渲染层合并属性、控制层数量"
-description: "渲染层的合并，就是把页面中完成了描绘过程的部分合并成一层，然后显示在屏幕上。"
-introduction: "渲染层的合并，就是把页面中完成了描绘过程的部分合并成一层，然后显示在屏幕上。"
+description: "渲染层的合并，就是把页面中完成了绘制过程的部分合并成一层，然后显示在屏幕上。"
+introduction: "渲染层的合并，就是把页面中完成了绘制过程的部分合并成一层，然后显示在屏幕上。"
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -30,7 +30,7 @@ key-takeaways:
 在这部分内容中有两个关键点：需要管理的渲染层的数量、实现动画效果的样式属性。
 
 ## 使用transform/opacity实现动画效果
-从性能方面考虑，最理想的渲染流水线是没有布局和描绘环节的，只需要做渲染层的合并即可：
+从性能方面考虑，最理想的渲染流水线是没有布局和绘制环节的，只需要做渲染层的合并即可：
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg" class="g--centered" alt="The pixel pipeline with no layout or paint.">
 
@@ -44,7 +44,7 @@ key-takeaways:
 
 ## 提升动画效果中的元素
 
-在本系列中的“[简化描绘的复杂度、减小描绘区域](simplify-paint-complexity-and-reduce-paint-areas)”中我们曾经提到过， 你应该把动画效果中的元素提升到其自有的渲染层中（但不要滥用）：
+在本系列中的“[简化绘制的复杂度、减小绘制区域](simplify-paint-complexity-and-reduce-paint-areas)”中我们曾经提到过， 你应该把动画效果中的元素提升到其自有的渲染层中（但不要滥用）：
 
 {% highlight css %}
 .moving-element {
