@@ -24,7 +24,7 @@ remember:
 
 Enable the geolocation emulator by selecting the **Emulate geolocation coordinates** checkbox in the sensors pane of the emulation drawer.
 
-![geolocation emulator enabled](device-mode-files/emulation-drawer-geolocation.png)
+![geolocation emulator enabled](imgs/emulation-drawer-geolocation.png)
 
 You can use this emulator to override position values for `navigator.geolocation`, as well as simulate cases when geolocation data is unavailable.
 
