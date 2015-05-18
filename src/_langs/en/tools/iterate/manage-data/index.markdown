@@ -2,8 +2,8 @@
 rss: false
 layout: section
 title: "Manage Your Local Data Resources"
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Inspect and manage your application’s local data resources using the Chrome Developer Tools Resources panel."
+introduction: "Inspect and manage your application’s local daata resources using the Chrome Developer Tools Resources panel."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
@@ -18,6 +18,14 @@ id: manage-data
 
 {% wrap content %}
 
-TBD.
+The Resources panel lets you access data sources like IndexedDB and Web SQL databases, cookies, the Application Cache, and local and session storage, as well as page resources like images, fonts, and style sheets.
+
+To access the Resources panel:
+
+* Open the Chrome menu ![Chrome menu](imgs/chrome-menu.png).
+* Choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu.
+* Selet the **Resources** panel.
+
+![Resources panel](imgs/resources_panel.png)
 
 {% endwrap %}
