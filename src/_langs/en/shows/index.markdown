@@ -23,6 +23,7 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign polycastsShows = null %}
 {% assign udacityShow = null %}
 {% assign lazywebShow = null %}
+{% assign tttShow = null %}
 {% for show in shows %}
   {% if show.id == 'cds' %}
     {% assign cdsShow = show %}
@@ -38,6 +39,9 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% endif %}
   {% if show.id == 'lazyweb' %}
     {% assign lazywebShow = show %}
+  {% endif %}
+  {% if show.id == 'ttt' %}
+    {% assign tttShow = show %}
   {% endif %}
 {% endfor %}
 
@@ -67,7 +71,7 @@ Fundmentals index: for guide in page.articles.[page.id]
         <p>{{http203Show.description}}</p>
       </div>
     </li>
-    
+
     <li class="guides-list__item g--half theme--{{ lazywebShow.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
       	<a href="{{site.baseurl}}{{lazywebShow.url | canonicalize}}" title="Go to {{lazywebShow.title}}">
