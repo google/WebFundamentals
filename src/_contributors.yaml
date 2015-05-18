@@ -68,7 +68,7 @@ ianbarber:
   twitter: ianbarber
   email: ianbarber@google.com
   description: "Ian is a DRE"
-  
+
 ericbidelman:
   name:
     given: Eric
@@ -89,8 +89,8 @@ ericbidelman:
     given: Sam
     family: Chen
   org:
-    name: 
-    unit: 
+    name:
+    unit:
   country: China
   role:
     - translator
@@ -418,7 +418,7 @@ mikemahemoff:
   twitter: mahemoff
   email: mahemoff@google.com
   lanyrd: true
-  
+
 renatomangini:
   name:
     given: Renato
@@ -514,6 +514,21 @@ glenshires:
   twitter:
   email: gshires@google.com
 
+andismith:
+  name:
+    given: Andi
+    family: Smith
+  org:
+    name: AKQA
+    unit: Director of Web Development
+  country: UK
+  homepage: http://www.andismith.com
+  google: +AndiSmithUK
+  twitter: AndiSmith
+  role:
+    - author
+  email: andi.smith.uk+gdocs@gmail.com
+
 borissmus:
   name:
     given: Boris
@@ -543,7 +558,7 @@ samthorogood:
   google: 118404069988837396840
   twitter: samthor
   email: thorogood@google.com
-  
+
 mikewest:
   name:
     given: Mike
@@ -573,7 +588,7 @@ chriswilson:
   google: 106422711035746240826
   twitter: cwilso
   email: cwilso@google.com
-  
+
 tomwiltzius:
   name:
     given: Tom
