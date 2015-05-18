@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Override Geolocation Data"
 seotitle: "Override Geolocation Data from Chrome DevTools Device Sensors"
-description: "Unlike desktops, mobile devices commonly use GPS hardware to detect location. In device mode, you can simulate geolocation coordinates to use with the <a href="http://www.w3.org/TR/geolocation-API/">Geolocation API</a>."
-introduction: "Unlike desktops, mobile devices commonly use GPS hardware to detect location. In device mode, you can simulate geolocation coordinates to use with the <a href="http://www.w3.org/TR/geolocation-API/">Geolocation API</a>."
+description: "Unlike desktops, mobile devices commonly use GPS hardware to detect location. In device mode, you can simulate geolocation coordinates to use with the <a href='http://www.w3.org/TR/geolocation-API/'>Geolocation API</a>."
+introduction: "Unlike desktops, mobile devices commonly use GPS hardware to detect location. In device mode, you can simulate geolocation coordinates to use with the <a href='http://www.w3.org/TR/geolocation-API/'>Geolocation API</a>."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-18
