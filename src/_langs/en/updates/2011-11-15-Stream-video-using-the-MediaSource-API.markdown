@@ -16,10 +16,6 @@ article:
   updated_on: 2011-11-15
 authors:
   - ericbidelman
-tags:
-  - code
-  - multimedia
-  - media source
 permalink: /updates/2011/11/Stream-video-using-the-MediaSource-API
 ---
 The [MediaSource API](http://html5-mediasource-api.googlecode.com/svn/trunk/draft-spec/mediasource-draft-spec.html) extends the `HTMLMediaElement` to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.

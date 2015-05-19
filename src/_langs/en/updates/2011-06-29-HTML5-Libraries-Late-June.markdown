@@ -19,7 +19,6 @@ authors:
   - paulirish
 tags:
   - canvas
-  - library
   - css
 permalink: /updates/2011/06/HTML5-Libraries---Late-June
 ---
