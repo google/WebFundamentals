@@ -18,7 +18,7 @@ call_user_func($_GET['source'] . '_extract', $post);
 				
 	<input type="hidden" id="title" name="title" value="<?= $post->get('title') ?>">	
 	<input type="hidden" id="description" name="description" value="<?= $post->get('description') ?>">
-	<input type="hidden" id="featured-image" name="featured-image" value="">
+	<input type="hidden" id="featured-image" name="featured-image" value="<?= $post->get('featured-image') ?>">
 	<input type="hidden" id="author" name="author" value="<?= $post->get('author') ?>">
 	<input type="hidden" id="date" name="date" value="<?= $post->get('date') ?>">
 	<input type="hidden" id="tags" name="tags" value="">

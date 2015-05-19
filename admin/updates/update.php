@@ -13,7 +13,7 @@ if($_POST) {
 
 	// write new Markdown file
 	file_put_contents($updates_dir . $newFileName, $file);
-	chmod($updates_dir . $newFileName, 0755);
+	chmod($updates_dir . $newFileName, 0777);
 
 	//echo "<textarea style='width: 100%; height: 500px;'>";
 	//echo $file;
@@ -59,10 +59,10 @@ if($_POST) {
 		</div>
 		<div id="description-block">
 			<label for="description">Description *</label>
-			<input type="text" id="description" name="description" value="<?= $update['page']->keyExists('description') ? $update['page']->fetch('description') : '' ?>">
+			<input type="text" id="description" name="description" value="<?= $update['page']->keyExists('description') ? htmlentities($update['page']->fetch('description'), ENT_QUOTES, 'UTF-8') : '' ?>">
 		</div>
 		<div id="featured-image-block">
-			<label for="featured-image">Featured Image</label>
+			<label for="featured-image">Featured Image (required for tips)</label>
 			<input type="text" id="featured-image" name="featured-image" value="<?= $update['page']->keyExists('featured-image') ? $update['page']->fetch('featured-image') : '' ?>">
 		</div>
 		<div>
@@ -102,28 +102,6 @@ if($_POST) {
 
 	<input id="submit" type="submit" value="Save Changes">
 </form>
-
-			<script>
-			function typeChange() {
-				if(document.getElementById('type-tip').checked) {
-					document.getElementById('description-block').style.display = 'none';
-					document.getElementById('featured-image-block').style.display = 'none';
-				} else {
-					document.getElementById('description-block').style.display = '';
-					document.getElementById('featured-image-block').style.display = '';
-				}
-			}
-
-			document.getElementById('type-tip').onchange = function() {
-				typeChange();
-			};
-
-			document.getElementById('type-news').onchange = function() {
-				typeChange();
-			};
-
-			typeChange();
-			</script>
 
 <?php
 include('_footer.php');

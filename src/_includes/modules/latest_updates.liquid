@@ -1,10 +1,17 @@
 <ul class="short-updates">
+  {% assign count = '' %}
   {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
-  {% for article in updates limit: include.limit %}
-  {% if include.category == null or article.category == include.category %}
-  {% if include.product == null or article.product == include.product %}
+  {% for article in updates limit: 20 %}
+  {% if count.size < include.limit %}
+  {% if include.type == null or include.type == "all" or article.type == include.type  %}
+  {% if include.product == null or include.product == "all" or article.product == include.product or article.category == include.product %}
 
     <li class="{{article.type}}">
+
+      {% if article.featured-image %}
+      <div class="featured-img" style="background-image: url({{article.featured-image}});"></div>
+      {% endif %}
+
       <a href="{{site.baseurl}}{{article.url | canonicalize}}">
       <h4><span>{{article.type}}</span>{{article.title}}</h4>
       </a>
@@ -28,10 +35,16 @@
         </div>
         {% endif %}
       </div>
-      <p><a href="{{site.baseurl}}{{article.url | canonicalize}}">{% if article.featured-image %}<img src="{{article.featured-image}}" align="left">{% endif %}{% if article.description %}{{article.description}}{% else %}{{article.content}}{% endif %}</a></p>
+
+      {% if article.description %}
+      <div class="description">{{article.description}}</div>
+      {% endif %}
+
       
     </li>
-  
+    {% capture count %}{{ count }}*{% endcapture %}
+
+  {% endif %}
   {% endif %}
   {% endif %}
   {% endfor %}

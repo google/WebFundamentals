@@ -13,7 +13,7 @@ authors:
 - mattgaunt
 collection: updates
 type: news
-category: tools
+category: chrome
 product: chrome
 permalink: /updates/2015/05/permissions-api-for-the-web
 ---

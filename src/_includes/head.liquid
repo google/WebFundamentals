@@ -1,6 +1,25 @@
 <meta name="google-site-verification" content="zFM_etMkM6oOvH6CNip7QxEbslAw6kJ2kiGJBYYBIcA" />
-{% capture page_title %}{% if page.id != "home" %}{{ page.title }} — Web Fundamentals{%else%}Web Fundamentals — Google Developers{%endif%}{% endcapture %}
-<title>{{ page_title }}</title>
+{% capture page_title %}
+{% if page.meta_title %}
+	{{ page.meta_title }}
+{% else %}
+
+	{% case page.collection %}
+	{% when 'updates' %}
+		{{ page.title }} — Web Updates
+	{% when 'showcase' %}
+		{{ page.title }} — Web Showcase
+	{% when 'case-study' %}
+		{{ page.title }} — Web Showcase
+	{% when 'spotlight' %}
+		{{ page.title }} — Web Showcase
+	{% else %}
+		{{ page.title }} — Web Fundamentals
+	{% endcase %}
+
+{% endif %}
+{% endcapture %}
+<title>{{ page_title | trim }}</title>
 
 {% assign author = page.authors[0] %}
 {% assign main_author = site.data["contributors"][author]%}
@@ -10,7 +29,7 @@
 {% endif %}
 
 {% if page.description %}
-<meta name="description" content="{{ page.description }}" />
+<meta name="description" content="{{ page.description | strip_html }}" />
 {% else %}
 <meta name="description" content="Google Web Fundamentals" />
 {% endif %}
@@ -39,7 +58,7 @@
 {% if page.thumbnail %}<meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
 <meta name="twitter:account_id" content="@chromiumdev" />
 <meta name="twitter:site" content="@chromiumdev" />
-<meta name="twitter:description" content="{{page.description}}" />
+<meta name="twitter:description" content="{{ page.description | strip_html }}" />
 {% if main_author.twitter %}<meta name="twitter:creator" content="{{ main_author.twitter }}" />{% else %}<meta name="twitter:creator" content="@chromiumdev" />{% endif%}
 {% if page.thumbnail %}<meta name="twitter:image:src" content="https://developers.google.com/{{site.baseurl}}{{ page.filepath }}/{{ page.thumbnail }}" />
 {% else %}<meta name="twitter:image:src" content="https://developers.google.com/web/imgs/logo.png" />{% endif %}
@@ -50,7 +69,7 @@
 
 <meta itemprop="name" content="{{ page_title }}">
 {% if page.thumbnail %}<link itemprop="image" href="https://developers.google.com/{{site.baseurl}}{{ page.filepath }}/{{ page.thumbnail }}">{% else %}<link itemprop="image" href="https://developers.google.com/web/imgs/logo.png">{% endif %}
-<meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}Google Web Fundamentals{% endif %}">
+<meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}Google Web Fundamentals{% endif %}">
 
 <meta property="og:site_name" content="Web Fundamentals" />
 <meta property="og:title" content="{{ page_title }}" />

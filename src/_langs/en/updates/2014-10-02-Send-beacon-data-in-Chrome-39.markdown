@@ -65,6 +65,3 @@ Alternatively, you can visit the
 to see if the beacon data was received.
 
 There is also a [Polymer](http://www.polymer-project.org/) custom element that lets you send beacon data - `<beacon-send>`. Check it out at [ebidel.github.io/beacon-send](http://ebidel.github.io/beacon-send/components/beacon-send/).
-
-
-

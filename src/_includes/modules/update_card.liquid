@@ -1,0 +1,43 @@
+{% assign article = include.article %}
+<a href="{{site.baseurl}}{{article.url | canonicalize}}">
+{% if article.featured-image %}
+<div class="featured-img" style="background-image: url({{include.article.featured-image}});"></div>
+{% endif %}
+
+<h4>{% if article.product == 'chrome-devtools' %}DevTools{% else %}{{article.product}}{% endif %} {{article.type}}</h4>
+<h3>{{article.title}}</h3>
+
+{% if article.description %}
+<div class="description">
+  {{article.description}}
+</div>
+{% endif %}
+ </a>
+{% if article.tags and article.type != "tip" %}
+<div class="tags">
+  {% for tag in article.tags %}
+  <a href="/web/updates/tags/{{tag}}">#{{tag}}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
+<footer>
+
+  {% if article.authors %}
+  <div>
+  {% for author in article.authors %}
+  {% assign contributor = site.data["contributors"][author] %}
+      <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+        <span class="icon-circle" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+        {{contributor.name.given}} {{contributor.name.family}}
+      </a>
+  {% endfor %}
+
+  </div>
+  {% endif %}
+
+  <div>{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+
+</footer>
+
+

@@ -11,6 +11,7 @@ module.exports = function(grunt) {
   // Loads all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   require('time-grunt')(grunt);
+  var fs = require('fs');
 
   // App configuration
   var config = grunt.file.readYAML('config/common.yml');
@@ -194,11 +195,12 @@ module.exports = function(grunt) {
       jekyll: {
         files: [
           '<%= config.source %>/**/*.liquid',
-          '<%= config.source %>/**/*.markdown',
+          '<%= config.source %>/**/**/*.markdown',
           '<%= config.source %>/**/*.rb',
-          '<%= config.source %>/**/*.md',
+          '<%= config.source %>/**/**/*.md',
           '<%= config.source %>/**/*.xml',
-          '<%= config.source %>/**/*.yaml'
+          '<%= config.source %>/**/*.yaml',
+          '<%= config.source %>/**/*.html'
         ],
         tasks: ['jekyll:appengine']
       },
@@ -237,8 +239,25 @@ module.exports = function(grunt) {
   // defaults to '--lang all'.
   // 'all' builds for all languages specified in config.yml/langs_available + 'en'.
   // builds w/o multilang support if config.yml is missing langs_available.
-  grunt.registerTask('jekyll', 'Run jekyll build.\nOptions:\n  [--lang]: list of languages or "all"', function() {
+  grunt.registerTask('jekyll', 'Run jekyll build.\nOptions:\n  [--lang]: list of languages or "all"\n  [--section]: optional subfolder. If passed, only rebuilds that section', function() {
     var langs = grunt.option('lang') || 'all';
+    var section = grunt.option('section') || 'all';
+
+    // configure the watcher so it only watches the current section, otherwise it'll create and endless loop
+    if(section !== 'all') {
+      var watchConfig = grunt.config.get('watch');
+      watchConfig.jekyll.files = [
+        'src/_langs/*/' + section + '/**/*.liquid',
+        'src/_langs/*/' + section + '/**/*.markdown',
+        'src/_langs/*/' + section + '/**/*.xml',
+        'src/_langs/*/' + section + '/**/*.yaml',
+        'src/_langs/*/' + section + '/**/*.html',
+        'src/**/*.rb',
+        'src/_includes/**/*.liquid',
+        'src/_layouts/**/*.liquid'
+      ];
+      grunt.config.set('watch', watchConfig);
+    }
 
     var cfgname = this.args[0] || 'appengine';
 
@@ -272,7 +291,46 @@ module.exports = function(grunt) {
         opts.env.TRANS_LANG = lang;
         // opts.env.MENTOS_TIMEOUT = 32;
       }
-      grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, callback);
+
+      // if a section has been passed, move other folders temporarily out of the
+      // src folder
+      if(section !== 'all') {
+        var srcDir = 'src/_langs/' + lang + '/';
+        var tmpDir = '.tmp' + lang + '/';
+        var otherSections = [];
+
+        // create tmp folder
+        if(!fs.existsSync(tmpDir)) {
+          fs.mkdirSync(tmpDir);
+        }
+
+        // move other sections out of the src folder temporarily
+        var dir = fs.readdirSync(srcDir);
+        for (var i = 0; i < dir.length; i++) {
+          if(fs.statSync(srcDir + dir[i]).isDirectory() && dir[i] !== section && !(dir[i] === 'updates' && section === 'tools')) {
+            otherSections.push(dir[i]);
+            fs.renameSync(srcDir + dir[i], tmpDir + dir[i]);
+          }
+        }
+
+      }
+
+      var sectionCallback = function(err, res, code) {
+
+        // move other sections back to where they belong
+        for (var i = 0; i < otherSections.length; i++) {
+          fs.renameSync(tmpDir + otherSections[i], srcDir + otherSections[i]);
+        }
+
+        // remove tmp folder
+        if(fs.existsSync(tmpDir)) {
+          fs.rmdirSync(tmpDir);
+        }
+
+        callback(err, res, code);
+      };
+
+      grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, section !== 'all' ? sectionCallback : callback);
     };
 
     var done = this.async();
