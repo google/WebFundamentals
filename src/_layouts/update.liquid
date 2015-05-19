@@ -2,37 +2,60 @@
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
-    {% injectdata content _betterbook-root.yaml %}
+    {% injectdata content _betterbook-updates.yaml %}
 
     {% include header.liquid %}
 
 
-	<header class="tools-header updates-header updates-header-{{page.type}}">
+	<header class="updates-header updates-header-{{page.type}} updates-header-single">
 	  <div class="container">
-	    <h1 class="headliner"><span>{{page.type}}</span>{{page.title}}</h1>
-	    <div class="details">
-          <div class="date">{{ page.article.written_on | date: '%B %d, %Y' }}</div>
-          {% if page.authors %}
-          <div class="author">
-          {% for author in page.authors %}
-          {% assign contributor = site.data["contributors"][author] %}
-              <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
-                {{contributor.name.given}} {{contributor.name.family}}
-              </a>
-          {% endfor %}
-          </div>
-          {% endif %}
-          {% if page.tags %}
-          <div class="tags">
-            {% for tag in page.tags %}
-            <span>#{{tag}}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
+	    <h1 class="headliner">{{page.title}}</h1>
+	    
+      <div class="details-wrapper">
+ 
+        {% for author in page.authors %}
+        {% assign contributor = site.data["contributors"][author] %}
+            <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+              <span class="icon-circle--large" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+            </a>
+        {% endfor %}
+
+        <div>
+          <div class="details">
+              <div class="type">{{page.type}}</div>
+              <div class="date">{{ page.article.written_on | date: '%B %d, %Y' }}</div>
+              {% if page.authors %}
+              <div class="author">
+              {% for author in page.authors %}
+              {% assign contributor = site.data["contributors"][author] %}
+                  <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+                    {{contributor.name.given}} {{contributor.name.family}}
+                  </a>
+              {% endfor %}
+              </div>
+              {% endif %}
+              {% if page.tags %}
+              <div class="tags">
+                {% for tag in page.tags %}
+                <span>#{{tag}}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+          <div class="desc">{{page.description}}</div>          
         </div>
-	    <div class="desc">{{page.description}}</div>
+
+      </div>
+
+
 	  </div>
 	</header>
+
+  {% if page.source_name %}
+  <div class="external-source">
+    This article originally appeared on <a href="{{page.source_url}}">{{page.source_name}}</a>.
+  </div>
+  {% endif %}
 
 	<div class="update-container container">
 
@@ -56,7 +79,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="update-content">
         {{ content | markdownify }}
       </div>
 	  	

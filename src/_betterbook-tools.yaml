@@ -16,14 +16,14 @@ toc:
   - title: "Profile"
     path: /tools/profile-performance/
 - title: "Chrome DevTools"
-  path: /chrome-devtools/
+  path: /tools/chrome-devtools/
 - title: "Web Starter Kit"
   path: /tools/starter-kit/
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false
 - title: Web <strong>Starter Kit</strong>
-  path: /starter-kit/
+  path: /tools/starter-kit/
   in_header: false
 - title: Web <strong>Showcase</strong>
   path: /showcase/

@@ -53,9 +53,9 @@ Installing Dependencies
 Docker (recommended)
 --------------------
 1. Download and install [Docker](https://docs.docker.com/installation/) for your platform.
-1. That's it! The Docker container has all of the dependencies and already installed so that you don't need to do anything!
+1. Now it's installed check out the [Running the site section for Docker](https://github.com/google/webfundamentals#running-the-site) below.
 
-**Note:** Googlers - You may need to complete a few extra steps, ask for more details. 
+**Note:** Googlers - You may need to complete a few extra steps, ask for more details.
 
 
 Mac
@@ -81,18 +81,19 @@ Mac
 1. Install [npm](https://www.npmjs.org) dependencies
     * `npm install`
 1. Install fontforge if required for grunt-webfont on your OS.  See [grunt-webfont installation instructions](https://github.com/sapegin/grunt-webfont/blob/master/Readme.md#installation) for details.
+1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
 
-**Note:** On OSX, you may see an error about *Warning: EMFILE, too many open files*. 
+**Note:** On OSX, you may see an error about *Warning: EMFILE, too many open files*.
 If so you will need to increase the maximum number of open file handles.  
-Use `ulimit -n 1024` to increase the maximum number of open files to 2048 from 
-the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc` 
+Use `ulimit -n 1024` to increase the maximum number of open files to 2048 from
+the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc`
 or `.zshrc`. See [https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files](https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files)
 for further details.
 
-**Note:** On OSX, you may also see an error about *Allow dev_appserver to check 
-for updates on startup? (Y/n)* and, many lines below it, *EOFError: EOF when 
-reading a line*. If so you need to run dev_appserver once in a GAE project to 
-allow `dev_appserver` to ask you about checking for updates. Choose whichever 
+**Note:** On OSX, you may also see an error about *Allow dev_appserver to check
+for updates on startup? (Y/n)* and, many lines below it, *EOFError: EOF when
+reading a line*. If so you need to run dev_appserver once in a GAE project to
+allow `dev_appserver` to ask you about checking for updates. Choose whichever
 answer you like; this just clears the prompt for future runs of `dev_appserver`
 and you should be good to go.
 
@@ -121,6 +122,12 @@ tools/docker.sh grunt develop
 Then point your browser to http://localhost:8081/web/fundamentals or the
 IP address of your Docker instance
 
+To build only a single language *FASTER*:
+
+```sh
+tools/docker.sh grunt develop --lang=en
+```
+
 
 Without Docker
 --------------
@@ -131,10 +138,10 @@ Once you have all the dependencies installed go to the root of the checked out r
 grunt develop
 ```
 
-This will have Jekyll build the site, run a static server to listen on 
-port 8081 (which you can now reach at 
-[http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)), 
-and watch for changes to site files. Every change will cause Jekyll to rebuild 
+This will have Jekyll build the site, run a static server to listen on
+port 8081 (which you can now reach at
+[http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)),
+and watch for changes to site files. Every change will cause Jekyll to rebuild
 the affected files.
 
 If you want to build a single language then run this: `grunt develop --lang=en`.
@@ -172,4 +179,3 @@ Translations
 ============
 
 See [our translations guide](TRANSLATION.md)
-
