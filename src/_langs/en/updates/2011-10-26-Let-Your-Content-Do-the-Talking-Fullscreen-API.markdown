@@ -17,7 +17,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - demo
   - gaming
   - code
   - multimedia

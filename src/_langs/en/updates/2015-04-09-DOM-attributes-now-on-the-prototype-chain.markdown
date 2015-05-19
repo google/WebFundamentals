@@ -18,7 +18,6 @@ authors:
   - paulkinlan
 tags:
   - DOM
-  - API change
 permalink: /updates/2015/04/DOM-attributes-now-on-the-prototype
 ---
 

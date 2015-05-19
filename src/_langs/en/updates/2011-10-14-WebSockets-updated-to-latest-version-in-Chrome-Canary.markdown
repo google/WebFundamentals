@@ -17,7 +17,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - announcement
   - websockets
 permalink: /updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
 ---

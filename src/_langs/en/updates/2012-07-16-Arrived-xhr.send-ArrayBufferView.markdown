@@ -19,7 +19,6 @@ authors:
 tags:
   - xhr2
   - binary
-  - announcement
 permalink: /updates/2012/07/Arrived-xhr-send-ArrayBufferViews
 ---
 And here you thought we were done improving XHR!

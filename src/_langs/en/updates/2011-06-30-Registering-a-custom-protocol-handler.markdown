@@ -17,10 +17,6 @@ article:
   updated_on: 2011-06-30
 authors:
   - ericbidelman
-tags:
-  - code
-  - api
-  - business
 permalink: /updates/2011/06/Registering-a-custom-protocol-handler
 ---
 Chrome 13 finally includes `navigator.registerProtocolHandler`. This API allows web apps to register themselves as possible handlers for particular protocols. For example, users could select your application to handle "mailto" links.

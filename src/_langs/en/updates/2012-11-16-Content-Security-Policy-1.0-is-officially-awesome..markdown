@@ -17,7 +17,6 @@ article:
 authors:
   - mikewest
 tags:
-  - announcement
   - contentsecuritypolicy
   - security
 permalink: /updates/2012/11/Content-Security-Policy-1-0-is-officially-awesome
