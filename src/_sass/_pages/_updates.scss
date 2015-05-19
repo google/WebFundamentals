@@ -457,41 +457,6 @@ ul.short-updates {
 
   }
 
-  > li.tip {
-
-      position: relative;
-
-      .featured-img {
-        height: 144px;
-        background-size: cover;
-      }
-
-      .center {
-        text-align: center;
-        position: absolute;
-        bottom: 42px;
-        right: 0;
-        left: 0;
-        .button {
-          box-shadow: 0 2px 19px 0 rgba(0,0,0,.56);
-        }
-      }
-
-      .button {
-        background-color: #4285f4;
-        color: #fff;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        padding: 0 1em;
-        line-height: 32px;
-        border-radius: 2px;
-        font-size: .9em;          
-      }
-
-  }
-
   > li {
     margin: 0;
     padding: 0;
@@ -501,6 +466,12 @@ ul.short-updates {
     padding-right: 0;
     padding-top: 1em;
     font-size: 14px;
+
+    .featured-img {
+      height: 144px;
+      background-size: cover;
+      margin-bottom: 24px;
+    }
 
     @include small-only {
       width: 100%;
