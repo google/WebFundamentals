@@ -7,6 +7,11 @@
   {% if include.product == null or include.product == "all" or article.product == include.product or article.category == include.product %}
 
     <li class="{{article.type}}">
+
+      {% if article.featured-image %}
+      <div class="featured-img" style="background-image: url({{article.featured-image}});"></div>
+      {% endif %}
+
       <a href="{{site.baseurl}}{{article.url | canonicalize}}">
       <h4><span>{{article.type}}</span>{{article.title}}</h4>
       </a>
@@ -30,9 +35,11 @@
         </div>
         {% endif %}
       </div>
-      <a href="{{site.baseurl}}{{article.url | canonicalize}}">
-        {% include modules/update_excerpt.liquid article=article contain=true %}
-      </a>
+
+      {% if article.description %}
+      <div class="description">{{article.description}}</div>
+      {% endif %}
+
       
     </li>
     {% capture count %}{{ count }}*{% endcapture %}
