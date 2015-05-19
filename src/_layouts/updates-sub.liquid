@@ -51,43 +51,8 @@ feedPath: updates/feed.xml
 
       {% for article in updates %}
 
-        <li class="clear {{article.type}}">
-
-          <div>
-            <a href="{{site.baseurl}}{{article.url | canonicalize}}">
-            <h3><span>{% if article.product == 'chrome-devtools' %}devtools{% else %}{{article.product}}{% endif %} {{article.type}}</span>{% if article.title %}{{article.title}}{% else %}Tip!{% endif %}</h3></a>
-            
-            {% include modules/update_excerpt.liquid article=article %}
-
-            {% if article.tags and article.type != "tip" %}
-            <div class="tags">
-              {% for tag in article.tags %}
-              <a href="/web/updates/tags/{{tag}}">{{tag}}</a>
-              {% endfor %}
-            </div>
-            {% endif %}
-            
-          </div>
-
-          <footer>
-
-            {% if article.authors %}
-            <div>
-            {% for author in article.authors %}
-            {% assign contributor = site.data["contributors"][author] %}
-                <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
-                  <span class="icon-circle" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
-                  {{contributor.name.given}} {{contributor.name.family}}
-                </a>
-            {% endfor %}
-
-            </div>
-            {% endif %}
-
-            <div>{{ article.article.written_on | date: '%B %d, %Y' }}</div>
-
-          </footer>
-          
+        <li class="clear {{article.type}} update-card">
+          {% include modules/update_card.liquid article=article %}
         </li>
 
       {% endfor %}
