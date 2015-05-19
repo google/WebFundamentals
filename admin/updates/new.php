@@ -14,7 +14,7 @@ if($_POST) {
 
 		// write new Markdown file
 		file_put_contents($updates_dir . $newFileName, $file);
-		chmod($updates_dir . $newFileName, 0755);
+		chmod($updates_dir . $newFileName, 0777);
 
 		echo "<script>location.href = 'update.php?file=". $newFileName ."';</script>";
 
@@ -94,26 +94,6 @@ if($_POST) {
 
 	<input id="submit" type="submit" value="Save Changes">
 </form>
-
-<script>
-function typeChange() {
-	if(document.getElementById('type-tip').checked) {
-		document.getElementById('description-block').style.display = 'none';
-	} else {
-		document.getElementById('description-block').style.display = '';
-	}
-}
-
-document.getElementById('type-tip').onchange = function() {
-	typeChange();
-};
-
-document.getElementById('type-news').onchange = function() {
-	typeChange();
-};
-
-typeChange();
-</script>
 
 
 <?php

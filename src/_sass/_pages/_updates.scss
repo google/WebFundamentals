@@ -50,9 +50,10 @@
 
   img {
     width: auto;
+    max-width: 100%;
     display: inline-block;
     margin-top: 0;
-    margin-bottom: 0;  	
+    margin-bottom: 0;
   }
 
   .update-content {
@@ -109,6 +110,12 @@
   margin-top: 0;
   background: #fff;
   color: #444;
+  font-family: Roboto;
+  * {
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
 
   .container {
 
@@ -152,7 +159,7 @@
 
   .desc {
     width: auto;
-    color: #939393;
+    color: #888;
   }
 
   .details-wrapper {
@@ -160,6 +167,7 @@
     display: -webkit-flex;
     > a {
       margin-right: 20px;
+      flex: 1 0 auto;
     }
   }
 
@@ -209,6 +217,10 @@
 
   }
 
+}
+
+.updates-header-single .desc {
+  color: #FFFFFF;
 }
 
 .updates-header-tip {
@@ -345,75 +357,13 @@
     padding-top: 2em;
 
     > li {
-      padding: 0;
-      padding-bottom: 66px;
       margin: 0;
       margin-bottom: 32px;
       flex: 1 1 calc(50% - 20px);
       -webkit-flex: 1 1 calc(50% - 20px);
       margin-right: 20px;
       position: relative;
-      background: #fff;
-      border-radius: 2px;
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21);
       min-width: 290px;
-
-      .center {
-        text-align: center;
-        position: absolute;
-        bottom: 72px;
-        right: 0;
-        left: 0;
-        .button {
-          box-shadow: 0 2px 19px 0 rgba(0,0,0,.56);
-        }
-      }
-
-      .button {
-        background-color: #4285f4;
-        color: #fff;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        padding: 0 1em;
-        line-height: 32px;
-        border-radius: 2px;
-        font-size: .9em;          
-      }
-
-      &.tip {
-        h3 {
-          background-color: #43A047;
-        }
-        .button {
-          background-color: #43A047;
-        }
-      }
-
-      &.news {
-        img {
-          max-width: 40%;
-          margin-right: 15px;
-          margin-top: 0;
-        }
-      }
-
-      img {
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-
-      ol, ul {
-        padding-top: 1em;
-        color: #333;
-      }
-
-      p {
-        color: #333;
-        padding: 1em;
-        padding-bottom: 0.5em;
-      }
 
     }
 
@@ -421,73 +371,8 @@
       display: none;
     }
 
-    h3 {
-      color: #fff;
-      font-size: 18px;
-      line-height: 1.5em;
-      background: #4B8BFA;
-      padding: 16px;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
-
-      span {
-        background-color: rgba(0,0,0,0.1);
-        font-size: 0.7em;
-        padding: 0px 7px;
-        margin-right: 6px;
-        border-radius: 2px;
-        color: rgba(255, 255, 255, 0.66);
-        text-transform: uppercase;
-        display: inline-block;
-        line-height: 1.8em;
-        vertical-align: middle;
-      }
-    }
-
     a:hover {
       text-decoration: none;
-    }
-
-    .tags {
-      margin: 16px;
-      padding-top: 0.5em;
-      font-size: 0.8em;
-      border-top: 1px solid #EDEDED;
-      margin-top: 0.5em;
-      margin-bottom: 0;
-    }
-
-    .tags a {
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-right: 1em;
-      font-weight: 500;
-    }
-
-    footer {
-      display: flex;
-      display: -webkit-flex;
-      justify-content: space-between;
-      -webkit-justify-content: space-between;
-      padding: 1em 1em 1em 0em;
-      border-top: 1px solid #eee;
-
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      div {
-        margin-left: 1em;
-        white-space: nowrap;
-      }
-
-      .icon-circle {
-        display: inline;
-        vertical-align: middle;
-        margin: 0 8px 0 0;
-        padding: 18px;
-      }
     }
 
     .latest-spotlights__link img {
@@ -682,4 +567,144 @@ ul.short-updates {
     }
 
   }
+}
+
+/*
+ * Update cards
+ */
+.update-card {
+  padding: 0;
+  padding-bottom: 66px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+  .featured-img {
+    padding-top: 56%;
+    background-size: cover;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  &.tip {
+    h3 span {
+      background-color: #43A047;
+    }
+    .button {
+      background-color: #43A047;
+    }
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #888;
+
+    padding: 16px;
+    padding-top: 24px;
+    padding-bottom: 0;
+    text-transform: capitalize;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.5em;
+
+    padding: 16px;
+    padding-bottom: 16px;
+    padding-top: 0;
+  }
+
+  .description {
+    padding: 16px;
+    padding-top: 0;
+    font-size: 14px;
+    color: #333;
+
+    span {
+      background: #4B8BFA;
+      font-size: 0.7em;
+      padding: 0px 7px;
+      margin-right: 6px;
+      border-radius: 2px;
+      color: rgba(255, 255, 255, 0.9);
+      text-transform: uppercase;
+      display: inline-block;
+      line-height: 1.8em;
+      vertical-align: middle;
+    }
+  }
+
+  .tags {
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .tags a {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 1em;
+    font-weight: 500;
+  }
+
+  footer {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    padding: 1em 1em 1em 0em;
+    border-top: 1px solid #eee;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    div {
+      margin-left: 1em;
+      white-space: nowrap;
+    }
+
+    .icon-circle {
+      display: inline;
+      vertical-align: middle;
+      margin: 0 8px 0 0;
+      padding: 18px;
+    }
+  }
+
+  .center {
+    text-align: center;
+    position: absolute;
+    bottom: 72px;
+    right: 0;
+    left: 0;
+    .button {
+      box-shadow: 0 2px 19px 0 rgba(0,0,0,.56);
+    }
+  }
+
+  .button {
+    background-color: #4285f4;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding: 0 1em;
+    line-height: 32px;
+    border-radius: 2px;
+    font-size: .9em;          
+  }
+
+}
+
+.external-source {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  color: rgba(0,0,0,0.4);
+  background-color: rgb(249, 249, 249); 
 }

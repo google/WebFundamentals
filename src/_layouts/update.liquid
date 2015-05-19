@@ -2,12 +2,12 @@
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
-    {% injectdata content _betterbook-root.yaml %}
+    {% injectdata content _betterbook-updates.yaml %}
 
     {% include header.liquid %}
 
 
-	<header class="tools-header updates-header updates-header-{{page.type}}">
+	<header class="updates-header updates-header-{{page.type}} updates-header-single">
 	  <div class="container">
 	    <h1 class="headliner">{{page.title}}</h1>
 	    
@@ -50,6 +50,12 @@
 
 	  </div>
 	</header>
+
+  {% if page.source_name %}
+  <div class="external-source">
+    This article originally appeared on <a href="{{page.source_url}}">{{page.source_name}}</a>.
+  </div>
+  {% endif %}
 
 	<div class="update-container container">
 

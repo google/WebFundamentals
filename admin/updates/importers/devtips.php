@@ -39,10 +39,12 @@ function devtips_extract(DevTip $tip) {
 	# create new asset directory based on new filename
 	if(!file_exists($updates_dir . 'images/' . $assetPath)) {
 		mkdir($updates_dir . 'images/' . $assetPath);
+		chmod($updates_dir . 'images/' . $assetPath, 0777);
 	}
 
 	# Download and store each asset
 	$assets = $tip->get('assets');
+	$featured = null;
 	foreach ($assets as $key => $url) {
 		
 		$base = new Net_URL2('https://umaar.com/dev-tips/');
@@ -51,10 +53,14 @@ function devtips_extract(DevTip $tip) {
 
 		$tip->set('content', str_replace($url, '/web/updates/images/' . $assetPath . '/' . pathinfo($url)['basename'], $content));
 
+		if(!$featured) {
+			$tip->set('featured-image', '/web/updates/images/' . $assetPath . '/' . pathinfo($url)['basename']);
+		}
+
 		if(!file_exists($dest)) {
 
 			set_time_limit(0);
-			$fp = fopen ($dest, 'w+');//This is the file where we save the    information
+			$fp = fopen ($dest, 'w+');//This is the file where we save the information
 			$ch = curl_init(str_replace(" ","%20",$abs));//Here is the file we are downloading, replace spaces with %20
 			curl_setopt($ch, CURLOPT_TIMEOUT, 50);
 			curl_setopt($ch, CURLOPT_FILE, $fp); // write curl response to file
@@ -62,6 +68,9 @@ function devtips_extract(DevTip $tip) {
 			curl_exec($ch); // get curl response
 			curl_close($ch);
 			fclose($fp);
+
+			// set proper chmod
+			chmod($dest, 0777);
 
 		}
 
@@ -81,8 +90,12 @@ function devtips_get($url) {
 	$crawler
 		->filter('div.dt-content')
 		->each(function ($node) use (&$tip) {
-			$tip->set('content', trim($node->html()));
+			$html = trim($node->html());
+			$html = str_replace("><", ">\r\n<", $html);
+			$tip->set('content', $html);
 		});
+
+		
 
 	$crawler
 		->filter('h3')
@@ -108,7 +121,8 @@ class DevTip {
 		"category" => "tools",
 		"product" => "chrome-devtools",
 		"source" => "devtips",
-		"description" => ""
+		"description" => "",
+		"featured-image" => ""
 	);
 
 	function DevTip($data) {
