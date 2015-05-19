@@ -8,7 +8,7 @@ introduction: "TBD introduction."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
-  order: 2
+  order: 3
 authors:
   - megginkearney
 priority: 0

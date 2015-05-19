@@ -17,10 +17,8 @@ article:
 authors:
   - ericbidelman
 tags:
-  - api
   - dom
   - semantics
-  - announcement
 permalink: /updates/2013/03/What-s-the-CSS-scope-pseudo-class-for
 ---
 `:scope` is defined in [CSS Selectors 4](http://www.w3.org/TR/selectors4/#scope-pseudo) as:

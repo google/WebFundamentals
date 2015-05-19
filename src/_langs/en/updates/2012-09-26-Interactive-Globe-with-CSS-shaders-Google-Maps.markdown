@@ -20,7 +20,6 @@ tags:
   - graphics
   - shaders
   - CSS
-  - 3D
 permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps
 ---
 <script>

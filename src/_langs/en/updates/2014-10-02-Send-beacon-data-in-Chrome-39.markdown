@@ -17,8 +17,6 @@ article:
   updated_on: 2014-10-02
 authors:
   - ewagasperowicz
-tags:
-  - api
 permalink: /updates/2014/10/Send-beacon-data-in-Chrome-39
 ---
 Sometimes it is handy to send some data from a web page to a web server
@@ -67,6 +65,3 @@ Alternatively, you can visit the
 to see if the beacon data was received.
 
 There is also a [Polymer](http://www.polymer-project.org/) custom element that lets you send beacon data - `<beacon-send>`. Check it out at [ebidel.github.io/beacon-send](http://ebidel.github.io/beacon-send/components/beacon-send/).
-
-
-

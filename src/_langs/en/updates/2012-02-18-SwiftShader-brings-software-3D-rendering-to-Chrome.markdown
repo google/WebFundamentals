@@ -17,9 +17,7 @@ article:
 authors:
   - ilmariheikkinen
 tags:
-  - swiftshader
   - webgl
-  - 3d
   - graphics
 permalink: /updates/2012/02/SwiftShader-brings-software-3D-rendering-to-Chrome
 ---

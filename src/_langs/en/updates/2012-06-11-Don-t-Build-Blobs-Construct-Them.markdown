@@ -17,7 +17,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - file_access
   - file
 permalink: /updates/2012/06/Don-t-Build-Blobs-Construct-Them
 ---

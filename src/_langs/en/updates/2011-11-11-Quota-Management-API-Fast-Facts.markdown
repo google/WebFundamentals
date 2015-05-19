@@ -19,7 +19,6 @@ authors:
 tags:
   - offline
   - quota
-  - business
   - filesystem
 permalink: /updates/2011/11/Quota-Management-API-Fast-Facts
 ---

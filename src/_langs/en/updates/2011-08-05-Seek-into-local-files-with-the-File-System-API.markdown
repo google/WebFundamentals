@@ -17,9 +17,7 @@ article:
 authors:
   - sethladd
 tags:
-  - file_access
   - offline
-  - code
   - filesystem
 permalink: /updates/2011/08/Seek-into-local-files-with-the-File-System-API
 ---

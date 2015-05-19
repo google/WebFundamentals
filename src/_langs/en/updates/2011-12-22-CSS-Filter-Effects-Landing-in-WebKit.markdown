@@ -17,7 +17,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - announcement
   - presentation
   - css
   - filters

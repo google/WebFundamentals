@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - webaudio
-  - announcement
   - multimedia
   - audio
 permalink: /updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs

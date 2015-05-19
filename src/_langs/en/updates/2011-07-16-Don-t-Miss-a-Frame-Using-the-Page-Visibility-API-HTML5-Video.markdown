@@ -16,7 +16,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - demo
   - PageVisibility
 permalink: /updates/2011/07/Don-t-Miss-a-Frame-Using-the-Page-Visibility-API-HTML5-Video
 ---

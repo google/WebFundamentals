@@ -18,8 +18,6 @@ authors:
   - ericbidelman
 tags:
   - webaudio
-  - demo
-  - api
 permalink: /updates/2011/06/Contra-in-HTML5-Web-Audio-API
 ---
 Thanks to the power of GWT, HTML5, and the [Web Audio API](http://chromium.googlecode.com/svn/trunk/samples/audio/specification/specification.html) we can build the originator of everyone's favorite cheat code, Contra: [http://nes-sound.brad-rydzewski.appspot.com/](http://nes-sound.brad-rydzewski.appspot.com/)

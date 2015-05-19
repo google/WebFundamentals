@@ -17,7 +17,6 @@ article:
 authors:
   - agektmr
 tags:
-  - announcement
   - websockets
   - connectivity
 permalink: /updates/2011/08/What-s-different-in-the-new-WebSocket-protocol

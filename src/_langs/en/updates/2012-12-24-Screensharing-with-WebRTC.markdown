@@ -17,9 +17,7 @@ article:
 authors:
   - samdutton
 tags:
-  - chrome APIs
   - getusermedia
-  - Chrome extensions
   - screenshare
   - webrtc
 permalink: /updates/2012/12/Screensharing-with-WebRTC

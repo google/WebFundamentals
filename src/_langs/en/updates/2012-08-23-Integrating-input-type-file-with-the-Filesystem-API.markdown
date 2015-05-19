@@ -17,7 +17,6 @@ article:
 authors:
   - ericbidelman
 tags:
-  - file_access
   - file
 permalink: /updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
 ---

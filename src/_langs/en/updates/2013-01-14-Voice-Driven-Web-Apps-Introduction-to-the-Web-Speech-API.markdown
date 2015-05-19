@@ -17,8 +17,6 @@ article:
 authors:
   - glenshires
 tags:
-  - announcement
-  - input
   - voice
   - multimedia
   - webspeech

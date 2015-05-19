@@ -20,7 +20,6 @@ authors:
 tags:
   - webgl
   - three.js
-  - 3d
   - graphics
 permalink: /updates/2011/11/WebGL-demo-roundup
 ---

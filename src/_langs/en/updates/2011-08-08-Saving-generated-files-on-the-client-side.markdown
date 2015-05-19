@@ -17,8 +17,6 @@ article:
 authors:
   - paulkinlan
 tags:
-  - file_access
-  - code
   - filesystem
 permalink: /updates/2011/08/Saving-generated-files-on-the-client-side
 ---

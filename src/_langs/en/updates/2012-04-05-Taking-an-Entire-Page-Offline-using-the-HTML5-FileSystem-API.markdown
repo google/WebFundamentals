@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - offline
-  - business
   - filesystem
 permalink: /updates/2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
 ---

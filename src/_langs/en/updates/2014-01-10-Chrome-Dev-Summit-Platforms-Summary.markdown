@@ -19,7 +19,6 @@ authors:
 tags:
   - platforms
   - pnacl
-  - chrome apps
   - dart
 permalink: /updates/2014/01/Chrome-Dev-Summit-Platforms-Summary
 ---

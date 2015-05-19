@@ -18,8 +18,6 @@ article:
 authors:
   - samdutton
 tags:
-  - media
-  - open web platform
   - owp
   - webrtc
   - blink
