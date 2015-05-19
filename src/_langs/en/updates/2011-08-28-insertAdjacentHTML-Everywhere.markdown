@@ -17,8 +17,6 @@ article:
 authors:
   - paulkinlan
 tags:
-  - announcement
-  - code
   - dom
 permalink: /updates/2011/08/insertAdjacentHTML-Everywhere
 ---

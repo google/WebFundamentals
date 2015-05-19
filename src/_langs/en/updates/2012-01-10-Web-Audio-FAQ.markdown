@@ -18,7 +18,6 @@ authors:
   - borissmus
 tags:
   - webaudio
-  - faq
   - multimedia
 permalink: /updates/2012/01/Web-Audio-FAQ
 ---

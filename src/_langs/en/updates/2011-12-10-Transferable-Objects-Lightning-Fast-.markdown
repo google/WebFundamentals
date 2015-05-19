@@ -20,8 +20,6 @@ tags:
   - binary
   - performance
   - workers
-  - code
-  - announcement
 permalink: /updates/2011/12/Transferable-Objects-Lightning-Fast
 ---
 Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](http://updates.html5rocks.com/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.

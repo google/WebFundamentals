@@ -17,9 +17,7 @@ article:
 authors:
   - ericbidelman
 tags:
-  - file_access
   - storage
-  - tip
   - filesystem
 permalink: /updates/2011/08/Debugging-the-Filesystem-API
 ---

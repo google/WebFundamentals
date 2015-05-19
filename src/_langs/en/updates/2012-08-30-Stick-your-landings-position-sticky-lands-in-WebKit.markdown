@@ -18,7 +18,6 @@ authors:
   - ericbidelman
 tags:
   - performance
-  - announcement
   - CSS
 permalink: /updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
 ---

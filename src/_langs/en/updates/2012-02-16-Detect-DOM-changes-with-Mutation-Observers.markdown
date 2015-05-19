@@ -17,7 +17,6 @@ article:
 authors:
   - paulkinlan
 tags:
-  - api
   - mutation observers
   - dom
 permalink: /updates/2012/02/Detect-DOM-changes-with-Mutation-Observers

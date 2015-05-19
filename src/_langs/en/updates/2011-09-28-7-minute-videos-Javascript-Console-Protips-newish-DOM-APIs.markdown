@@ -18,7 +18,6 @@ article:
 authors:
   - paulirish
 tags:
-  - chrome
   - devtools
 permalink: /updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
 ---

@@ -18,7 +18,6 @@ authors:
   - paulkinlan
 tags:
   - webaudio
-  - demo
   - websockets
   - connectivity
 permalink: /updates/2011/07/Multiplayer-Audio-Fun

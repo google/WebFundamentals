@@ -18,9 +18,7 @@ authors:
   - greenido
 tags:
   - indexeddb
-  - chrome
   - offline
-  - business
 permalink: /updates/2011/10/Defining-Scope-In-IndexedDB-Transactions
 ---
 What is IndexedDB?
