@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Memory Terminology and Fundamentals"
 seotitle: "Memory Terminology and Fundamentals"
-description: "Learn the common terms used in memory analysis."
-introduction: "Learn the common terms used in memory analysis."
+description: "This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages."
+introduction: "This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages."
 article:
   written_on: 2015-05-19
   updated_on: 2015-05-19
@@ -24,7 +24,7 @@ remember:
 ---
 {% wrap content %}
 
-This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages. The terms and notions described here refer to the [Chrome DevTools Heap Profiler]((tools/profile-performance/memory-problems/memory-leaks). If you have ever worked with either the Java, .NET, or some other memory profiler, then this may be a refresher.
+The terms and notions described here refer to the [Chrome DevTools Heap Profiler](tools/profile-performance/memory-problems/memory-leaks). If you have ever worked with either the Java, .NET, or some other memory profiler, then this may be a refresher.
 
 {% include modules/toc.liquid %}
 
@@ -66,7 +66,7 @@ There are lots of internal GC roots most of which are not interesting for the us
 
 * Sometimes objects may be retained by debugger context and DevTools console (e.g. after console evaluation).
 
-{% include modules/remember.liquid title="Remember" list=page.remember.heap %}
+{% include modules/remember.liquid title="Note" list=page.remember.heap %}
 
 The memory graph starts with a root, which may be the `window` object of the browser or the `Global` object of a Node.js module. You don't control how this root object is GC'd.
 
@@ -74,7 +74,7 @@ The memory graph starts with a root, which may be the `window` object of the bro
 
 Whatever is not reachable from the root gets GC.
 
-{% include modules/remember.liquid title="Remember" list=page.remember.bytes %}
+{% include modules/remember.liquid title="Note" list=page.remember.bytes %}
 
 ## Object's Retaining Tree
 
