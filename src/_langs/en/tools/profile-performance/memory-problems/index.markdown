@@ -19,7 +19,7 @@ id: memory-problems
 
 {% wrap content %}
 
-Check for these three main memory problems:
+New to memory management, learn the [terminology and fundamentals](tools/profile-performance/memory-problems/memory-101) first. Once familiar, check for these three key memory problems:
 
 [Does page use too much memory?](tools/profile-performance/memory-problems/too-much-memory)
 
