@@ -17,7 +17,6 @@ article:
 authors:
   - agektmr
 tags:
-  - file_access
   - dnd
   - filesystem
 permalink: /updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available
