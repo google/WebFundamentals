@@ -17,11 +17,9 @@ article:
 authors:
   - chriswilson
 tags:
-  - announcement
   - webaudio
   - multimedia
   - getusermedia
-  - input
   - audio
 permalink: /updates/2012/09/Live-Web-Audio-Input-Enabled
 ---

@@ -17,7 +17,6 @@ article:
 authors:
   - sethladd
 tags:
-  - announcement
   - gaming
 permalink: /updates/2011/07/Announcing-New-Game-the-conference-for-HTML5-game-developers
 ---

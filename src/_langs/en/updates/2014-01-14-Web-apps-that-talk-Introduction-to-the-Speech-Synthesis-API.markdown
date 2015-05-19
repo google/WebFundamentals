@@ -17,9 +17,7 @@ article:
 authors:
   - ericbidelman
 tags:
-  - announcement
   - multimedia
-  - api
   - voice
   - webspeech
   - synthesis

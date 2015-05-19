@@ -18,7 +18,6 @@ article:
 authors:
   - paulkinlan
 tags:
-  - announcement
   - webgl
   - cors
 permalink: /updates/2011/07/Using-Cross-domain-images-in-WebGL

@@ -17,8 +17,6 @@ article:
   updated_on: 2014-10-02
 authors:
   - ewagasperowicz
-tags:
-  - api
 permalink: /updates/2014/10/Send-beacon-data-in-Chrome-39
 ---
 Sometimes it is handy to send some data from a web page to a web server

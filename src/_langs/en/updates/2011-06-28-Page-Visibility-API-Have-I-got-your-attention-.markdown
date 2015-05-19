@@ -17,7 +17,6 @@ article:
 authors:
   - mikemahemoff
 tags:
-  - api
   - PageVisibility
 permalink: /updates/2011/06/Page-Visibility-API-Have-I-got-your-attention
 ---

@@ -17,10 +17,7 @@ article:
 authors:
   - borissmus
 tags:
-  - chrome
-  - mobileu
   - android
-  - announcement
 permalink: /updates/2012/02/Chrome-for-Android-Accelerating-the-Mobile-Web
 ---
 You've probably already heard that Chrome for Android Beta launched today. This

@@ -17,10 +17,7 @@ article:
 authors:
   - petelepage
 tags:
-  - closure
   - video
-  - chrome web store
-  - open source
   - multimedia
 permalink: /updates/2012/01/Introducing-Video-Player-Sample
 ---
