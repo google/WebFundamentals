@@ -22,7 +22,7 @@ key-takeaways:
 ---
 {% wrap content %}
 
-Breakpoint types allow you to control exactly what conditions can trigger a pause in script execution.You can view existing breakpoints at any time in the Sources panel:
+Breakpoint types allow you to control exactly what conditions can trigger a pause in script execution. You can view existing breakpoints at any time in the Sources panel:
 
 * Open the Chrome menu ![Chrome menu](imgs/image_0.png).
 * Choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu.
