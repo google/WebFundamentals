@@ -22,6 +22,12 @@ remember:
 ---
 {% wrap content %}
 
+TBD. Main doc: https://developer.chrome.com/devtools/docs/javascript-memory-profiling
+
+TBD. Good introduction to memory: https://developer.chrome.com/devtools/docs/memory-analysis-101
+
+TBD. This is also covered a little bit in “Memory mode” section in https://developer.chrome.com/devtools/docs/timeline#timeline-event-reference.
+
 TBD. Possible TL;DR:
 
 ** Check and nullify variables that contain references to DOM elements.
