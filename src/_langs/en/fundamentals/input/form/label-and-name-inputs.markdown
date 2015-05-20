@@ -239,6 +239,29 @@ The `autocomplete` attributes can be accompanied with a section name, such as **
         </ul>
       </td>
     </tr>
+    <tr>
+      <td data-th="Content type">Usernames</td>
+      <td data-th="name attribute">
+        <code>username</code>
+      </td>
+      <td data-th="autocomplete attribute">
+        <ul>
+          <li><code>username</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Content type">Passwords</td>
+      <td data-th="name attribute">
+        <code>password</code>
+      </td>
+      <td data-th="autocomplete attribute">
+        <ul>
+          <li><code>current-password</code> (for sign-in forms)</li>
+          <li><code>new-password</code> (for sign-up and password-change forms)</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 
