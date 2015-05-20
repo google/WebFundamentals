@@ -20,7 +20,6 @@ tags:
   - frontend
   - productivity
   - tools
-  - tooling
 permalink: /updates/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides
 ---
 <script async class="speakerdeck-embed" data-id="9e4370b01fb901312c650a36078c81b4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>

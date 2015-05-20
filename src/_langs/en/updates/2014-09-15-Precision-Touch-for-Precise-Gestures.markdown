@@ -17,7 +17,8 @@ article:
 authors:
   - mattgaunt
 tags:
-  - touchevents
+  - touch
+  - touchevent
 permalink: /updates/2014/09/Precision-Touch-for-Precise-Gestures
 ---
 A [change landed](https://code.google.com/p/chromium/issues/detail?id=323935) in
