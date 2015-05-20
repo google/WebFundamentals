@@ -6648,6 +6648,31 @@ figcaption {
     background-image: url(/web/tools/material-design-lite/images/header_2x.jpg); }
  }
 
+.mdl-comingsoon-topics {
+  background-color: RGB(250, 250, 250);
+  padding-bottom: 12vh; }
+  .mdl-comingsoon-topics:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.mdl-comingsoon-single-topic {
+  margin: 0 auto 32px auto;
+  text-align: center;
+  text-transform: uppercase; }
+  .mdl-comingsoon-single-topic img {
+    width: 40%;
+    margin: 0 auto 16px auto; }
+
+.mdl-comingsoon-single-topic:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 620px) {
+  .mdl-comingsoon-single-topic {
+    float: left;
+    width: 33%; }
+ }
+
 .update-container {
   padding-bottom: 2em;
   font-family: Roboto; }
