@@ -239,6 +239,10 @@
     min-width: 150px;
     padding-top: 0;
 
+    @media screen and (min-width: 1230px) {
+      margin-left: -158px;
+    }
+
     ul {
       padding: 0;
       padding-top: 2em;
@@ -359,11 +363,11 @@
     > li {
       margin: 0;
       margin-bottom: 32px;
-      flex: 1 1 calc(50% - 20px);
-      -webkit-flex: 1 1 calc(50% - 20px);
+      flex: 1 1 calc(33% - 20px);
+      -webkit-flex: 1 1 calc(33% - 20px);
       margin-right: 20px;
       position: relative;
-      min-width: 290px;
+      min-width: 280px;
 
     }
 
