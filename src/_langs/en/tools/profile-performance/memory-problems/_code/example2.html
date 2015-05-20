@@ -1,0 +1,77 @@
+{{+bindTo:partials.standard_devtools_article}}
+<!DOCTYPE html>
+<h1>Example 2</h1>
+
+  <h1>Example 2: Watching the GC work.</h1>
+
+  <p>Look at the time spent by the GC.</p>
+
+  <p><button onclick="start()">Start creating chunks</button></p>
+
+  <p><button onclick="stop()">Stop!</button></p>
+  <script>
+  'use strict';
+
+var intervalId = null, params;
+
+function createChunks() {
+    var div, foo, i, str;
+    for (i = 0; i < 20; i++) {
+        div = document.createElement('div');
+        str = new Array(1000000).join('x');
+        foo = {
+            str: str,
+            div: div
+        };
+        div.foo = foo;
+    }
+}
+
+function start() {
+    if (intervalId) {
+        return;
+    }
+    intervalId = setInterval(createChunks, 1000);
+}
+
+function stop() {
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+    intervalId = null;
+}
+</script>
+  <hr>
+  <pre>
+'use strict';
+
+var intervalId = null, params;
+
+function createChunks() {
+    var div, foo, i, str;
+    for (i = 0; i &lt; 20; i++) {
+        div = document.createElement("div");
+        str = new Array(1000000).join('x');
+        foo = {
+            str: str,
+            div: div
+        };
+        div.foo = foo;
+    }
+}
+
+function start() {
+    if (intervalId) {
+        return;
+    }
+    intervalId = setInterval(createChunks, 1000);
+}
+
+function stop() {
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+    intervalId = null;
+}
+</pre>
+{{/partials.standard_devtools_article}}

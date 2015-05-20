@@ -22,18 +22,13 @@ tags:
   - webspeech
 permalink: /updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API.html
 ---
-<script>
-var scripts = document.querySelectorAll('script');
-var thisscript = scripts[scripts.length-1];
-thisscript.parentNode.parentNode.id = 'webspeechapi';
-</script>
 <style>
-#webspeechapi figure {
+figure {
 text-align: center;
 display: inline-block;
 vertical-align: top;
 }
-#webspeechapi .demopreview {
+.demopreview {
   width: 480px;
   height: 219px;
   border: 1px solid #ccc;

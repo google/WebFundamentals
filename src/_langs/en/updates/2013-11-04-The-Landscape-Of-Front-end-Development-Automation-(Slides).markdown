@@ -22,7 +22,7 @@ tags:
   - tools
 permalink: /updates/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides.html
 ---
-<script async class="speakerdeck-embed" data-id="9e4370b01fb901312c650a36078c81b4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+Note: Speaker deck preso moved.
 
 Writing a modern web app these days can sometimes feel like a tedious process; frameworks, boilerplates, abstractions, dependency management, build processes..the list of requirements for a front-end workflow appears to grow each year. What if however, you could **automate** a lot of this? 
 
