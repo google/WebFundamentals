@@ -20,15 +20,20 @@ tags:
   - voice
   - multimedia
   - webspeech
-permalink: /updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API.html
+permalink: /updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
 ---
+<script>
+var scripts = document.querySelectorAll('script');
+var thisscript = scripts[scripts.length-1];
+thisscript.parentNode.parentNode.id = 'webspeechapi';
+</script>
 <style>
-figure {
+#webspeechapi figure {
 text-align: center;
 display: inline-block;
 vertical-align: top;
 }
-.demopreview {
+#webspeechapi .demopreview {
   width: 480px;
   height: 219px;
   border: 1px solid #ccc;

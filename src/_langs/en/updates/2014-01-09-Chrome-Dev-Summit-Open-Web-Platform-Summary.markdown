@@ -21,7 +21,7 @@ tags:
   - owp
   - webrtc
   - blink
-permalink: /updates/2014/01/Chrome-Dev-Summit-Open-Web-Platform-Summary.html
+permalink: /updates/2014/01/Chrome-Dev-Summit-Open-Web-Platform-Summary
 ---
 # Blink
 

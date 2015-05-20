@@ -18,7 +18,7 @@ authors:
   - paulirish
 tags:
   - devtools
-permalink: /updates/2012/05/Websocket-Frame-Inspection-now-in-Chrome-DevTools.html
+permalink: /updates/2012/05/Websocket-Frame-Inspection-now-in-Chrome-DevTools
 ---
 While before we could see sockets being established, we haven't had inspection ability into the data going over the wire in websockets. Thanks to a [WebKit patch](http://trac.webkit.org/changeset/115427) from RIM, we can now see the frame data, along with small unicode arrows indicating which direction the data is going. 
 

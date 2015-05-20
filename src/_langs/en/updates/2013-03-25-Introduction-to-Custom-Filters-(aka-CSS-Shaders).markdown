@@ -21,7 +21,7 @@ tags:
   - shaders
   - css
   - filters
-permalink: /updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders.html
+permalink: /updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders
 ---
 <h1>TL;DR</h1>
 

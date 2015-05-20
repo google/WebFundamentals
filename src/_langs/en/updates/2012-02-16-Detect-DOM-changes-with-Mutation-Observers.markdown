@@ -17,9 +17,9 @@ article:
 authors:
   - paulkinlan
 tags:
-  - mutationobserver
+  - mutation observers
   - dom
-permalink: /updates/2012/02/Detect-DOM-changes-with-Mutation-Observers.html
+permalink: /updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
 ---
 Back in 2000, the [Mutation Events API was specified](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings-mutationevents) to make it easy for developers to react to changes in a DOM (e.g. DOMNodeRemoved, DOMAttrModified, etc).
 

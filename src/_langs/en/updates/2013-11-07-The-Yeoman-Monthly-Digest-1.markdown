@@ -17,11 +17,11 @@ article:
 authors:
   - addyosmani
 tags:
-  - frontend
-  - tools
+  - front-end
+  - tooling
   - yeoman
   - automation
-permalink: /updates/2013/11/The-Yeoman-Monthly-Digest-1.html
+permalink: /updates/2013/11/The-Yeoman-Monthly-Digest-1
 ---
 <style>.external-domain{color:#ccc;}</style>
 

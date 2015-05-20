@@ -17,10 +17,10 @@ article:
 authors:
   - robdodson
 tags:
-  - webcomponents
+  - web components
   - polymer
-  - chromedevsummit
-permalink: /updates/2015/01/polymer-state-of-the-union.html
+  - chrome dev summit
+permalink: /updates/2015/01/polymer-state-of-the-union
 ---
 
 # Polymer: State of the Union

@@ -17,10 +17,10 @@ article:
 authors:
   - paulkinlan
 tags:
-  - addtohomescreen
+  - add to homescreen
   - webapp
   - install
-permalink: /updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android.html
+permalink: /updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
 ---
 We recently enhanced the Add to Homescreen function in Chrome which allows users 
 to add your Web App to their home screen with the addition of the 

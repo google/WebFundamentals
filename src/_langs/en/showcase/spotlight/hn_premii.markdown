@@ -2,7 +2,6 @@
 id: hn_premii
 layout: spotlight
 collection: spotlight
-type: spotlight
 published: true
 
 date: 2015-04-01
@@ -28,7 +27,7 @@ link: http://hn.premii.com/
 developer: Dharmesh Patel
 
 
-description: "An amazing optimized reader for Hacker News."
+introduction: "An amazing optimized reader for Hacker News."
 pros: |
   A beautiful and highly optimized reading experience for Hacker News. Works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it is installable as it uses the [Web App Manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like a native HN news reader app.
 cons: |

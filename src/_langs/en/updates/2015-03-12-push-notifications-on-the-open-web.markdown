@@ -17,10 +17,10 @@ article:
 authors:
   - mattgaunt
 tags:
-  - pushmessaging
+  - push messaging
   - notifications
-  - serviceworker
-permalink: /updates/2015/03/push-notificatons-on-the-open-web.html
+  - service worker
+permalink: /updates/2015/03/push-notificatons-on-the-open-web
 ---
 
 If you ask a room of developers what mobile device features are missing from the 

@@ -18,9 +18,9 @@ authors:
   - ericbidelman
 tags:
   - canvas
-  - css
+  - CSS
   - graphics
-permalink: /updates/2012/12/Canvas-driven-background-images.html
+permalink: /updates/2012/12/Canvas-driven-background-images
 ---
 ### Programmatically animating background images
 

@@ -15,7 +15,7 @@ collection: updates
 type: news
 category: chrome
 product: chrome
-permalink: /updates/2015/05/permissions-api-for-the-web.html
+permalink: /updates/2015/05/permissions-api-for-the-web
 ---
 
 If you've worked with the [Geolocation 

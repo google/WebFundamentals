@@ -19,8 +19,13 @@ authors:
 tags:
   - performance
   - devtools
-permalink: /updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode.html
+permalink: /updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode
 ---
+<script>(function(){
+var scripts = document.querySelectorAll('script');
+var thisscript = scripts[scripts.length-1];
+thisscript.parentNode.parentNode.id = 'continuouspaint';
+})();</script>
 
 <p><strong>Continuous painting mode</strong> for paint profiling is now available in<a href="https://www.google.com/intl/en/chrome/browser/canary.html">
 </a><a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome
@@ -207,8 +212,8 @@ Click below for a demo where Paul Irish uses continuous painting to identify a u
 {% video //www.youtube.com/embed/FY5iiuQRyEE?start=683&end=788 %} {% endvideo %}
 
 <style>
-.time-author a:before { content: "Eberhard Gräther ";}
-.time-author a { display: inline-block;
+section#continuouspaint .time-author a:before { content: "Eberhard Gräther ";}
+section#continuouspaint .time-author a { display: inline-block;
 width: 102px;
 overflow: hidden;
 height: 23px;

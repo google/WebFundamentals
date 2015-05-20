@@ -18,9 +18,9 @@ authors:
   - alexdanilo
 tags:
   - layout
-  - css
+  - CSS
   - grids
-permalink: /updates/2014/03/Get-on-the-CSS-Grid.html
+permalink: /updates/2014/03/Get-on-the-CSS-Grid
 ---
 When building a Web Application, one of the first things that's needed is a way to lay out the content of your app.
 

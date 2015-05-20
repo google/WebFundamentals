@@ -18,7 +18,7 @@ description: How to set a breakpoint and navigate through the call stack with ke
 featured-image: /web/updates/images/2015-05-19-set-a-breakpoint-and-navigate-through-the-call-stack-with-keyboard-shortcuts/debugger-shortcuts.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/23-debugger-shortcuts
-permalink: /updates/2015/05/19/use-keyboard-to-navigate-through-callstack.html
+permalink: /updates/2015/05/19/use-keyboard-to-navigate-through-callstack
 ---
 <img src="/web/updates/images/2015-05-19-set-a-breakpoint-and-navigate-through-the-call-stack-with-keyboard-shortcuts/debugger-shortcuts.gif" alt="Set a breakpoint and navigate through the call stack with keyboard shortcuts">
 

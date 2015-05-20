@@ -17,11 +17,11 @@ article:
 authors:
   - jeffposnick
 tags:
-  - serviceworker
+  - service worker
   - offline
   - caching
   - performance
-permalink: /updates/2015/02/offline-first-with-sw-precache.html
+permalink: /updates/2015/02/offline-first-with-sw-precache
 ---
 
 You can’t [read about service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)

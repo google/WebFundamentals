@@ -18,8 +18,8 @@ article:
 authors:
   - sethladd
 tags:
-  - games
-permalink: /updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon.html
+  - gaming
+permalink: /updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
 ---
 <p>
 Oh, I didn't see you there! I was too busy playing awesome HTML5 games.

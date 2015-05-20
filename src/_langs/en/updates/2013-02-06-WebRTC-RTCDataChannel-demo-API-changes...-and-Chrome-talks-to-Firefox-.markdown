@@ -19,7 +19,7 @@ authors:
 tags:
   - webrtc
   - webaudio
-permalink: /updates/2013/02/WebRTC-data-channels-API-changes-and-Chrome-talks-to-Firefox.html
+permalink: /updates/2013/02/WebRTC-data-channels-API-changes-and-Chrome-talks-to-Firefox
 ---
 <p>More good news from our old friend <a href="http://www.webrtc.org" title="webrtc.org website">WebRTC</a>...</p>
 

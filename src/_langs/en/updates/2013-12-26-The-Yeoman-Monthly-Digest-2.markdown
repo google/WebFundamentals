@@ -17,11 +17,11 @@ article:
 authors:
   - addyosmani
 tags:
-  - frontend
+  - front-end
   - workflow
-  - tools
+  - tooling
   - yeoman
-permalink: /updates/2013/12/The-Yeoman-Monthly-Digest-2.html
+permalink: /updates/2013/12/The-Yeoman-Monthly-Digest-2
 ---
 Allo’ Allo’ and Happy Holidays! Welcome to the second issue of the [Yeoman](http://yeoman.io) monthly digest – our regular round-up of articles, tips, generators and videos to help you stay on top of what’s new with your favourite man-in-a-hat. We hope you find the updates below helpful!
 

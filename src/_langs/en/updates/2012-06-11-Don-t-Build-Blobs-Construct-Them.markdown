@@ -18,7 +18,7 @@ authors:
   - ericbidelman
 tags:
   - file
-permalink: /updates/2012/06/Don-t-Build-Blobs-Construct-Them.html
+permalink: /updates/2012/06/Don-t-Build-Blobs-Construct-Them
 ---
 Here's a heads up to all you [BlobBuilder](https://developer.mozilla.org/en/DOM/BlobBuilder) fans...it's going bye bye!
 

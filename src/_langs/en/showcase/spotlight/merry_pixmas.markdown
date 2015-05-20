@@ -2,7 +2,6 @@
 id: merry_pixmas
 layout: spotlight
 collection: spotlight
-type: spotlight
 published: true
 
 date: 2015-03-27
@@ -27,7 +26,7 @@ link: http://merrypixmas.com
 developer: Jim Savage
 
 
-description: Christmas fun with 3D CSS Transforms.
+introduction: Christmas fun with 3D CSS Transforms.
 pros: |
   A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a Web manifest for a homescreen experience that launches full screen.
 

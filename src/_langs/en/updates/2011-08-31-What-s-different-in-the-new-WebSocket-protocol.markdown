@@ -19,7 +19,7 @@ authors:
 tags:
   - websockets
   - connectivity
-permalink: /updates/2011/08/What-s-different-in-the-new-WebSocket-protocol.html
+permalink: /updates/2011/08/What-s-different-in-the-new-WebSocket-protocol
 ---
 The WebSocket protocol specification has recently been updated to solve previous security concerns and is largely stable. Below is a summary of the changes involved, along with some notes on current implementations.
 
