@@ -21,7 +21,7 @@ tags:
   - performance
   - pagespeed
   - node
-  - build-process
+  - buildprocess
 permalink: /updates/2014/06/Automating-Web-Performance-Measurement
 ---
 Web performance can have a huge impact on your [entire](http://programming.oreilly.com/2014/01/web-performance-is-user-experience.html) user experience. If you’ve been looking at improving your own site’s perf lately, you’ve probably heard of [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - a tool that analyzes pages and offers advice on how to make them faster based on best practices for mobile and desktop web performance.

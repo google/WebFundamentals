@@ -21,8 +21,8 @@ authors:
   - paulkinlan
 tags:
   - mobile
-  - Touch
-  - TouchEvent
+  - touch
+  - touchevent
 permalink: /updates/2014/05/A-More-Compatible-Smoother-Touch
 ---
 You and your users want mobile web apps that react and scroll smoothly to the 
