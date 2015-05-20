@@ -22,29 +22,6 @@ tags:
   - css
 permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps.html
 ---
-<script>
-var scripts = document.querySelectorAll('script');
-var thisscript = scripts[scripts.length-1];
-thisscript.parentNode.parentNode.id = 'shaderglobe';
-</script>
-<style>
-#shaderglobe .time-author a:before { content: "Avaz Bokiev ";}
-#shaderglobe .time-author a { display: inline-block;
-width: 102px;
-overflow: hidden;
-height: 23px;
-line-height: 21px;
-text-decoration: none;
-vertical-align: middle;
-}
-.globe{
-  width: 550px;
-  height: 550px;
-  border: 0;
-  -webkit-filter: contrast(1.4)
-custom(url(http://is.gd/spherifyvs) mix(url(http://is.gd/spherifyfs) multiply source-atop), 50 50 border-box, amount 1, sphereRadius 0.5, sphereAxis -0.41 1 0.19, sphereRotation 43.5, ambientLight 0.15, lightPosition 1 0.87 0.25, lightColor 1 1 1 1, transform perspective(500));
-}
-</style>
 
 <p>Recently, I have read <a href="http://www.webmonkey.com/2012/09/adobes-css-shaders-now-an-official-web-standard/" title="" target="_blank">news on Webmonkey</a> that Adobe’s CSS Shaders proposal, which will bring high-quality cinematic effects to the web through some new CSS tools, has been accepted by the W3C. If you haven't seen it yet, watch the video below:</p>
 
