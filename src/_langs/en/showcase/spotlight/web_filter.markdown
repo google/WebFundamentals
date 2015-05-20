@@ -2,6 +2,7 @@
 id: web_filter
 layout: spotlight
 collection: spotlight
+type: spotlight
 published: false
 
 date: 2015-03-27
@@ -27,7 +28,7 @@ link: http://exp.bartekdrozdz.com/app/webfilter/
 developer: Bartek Drozdz
 
 
-introduction: Fast, quick and dirty camera filters.
+description: Fast, quick and dirty camera filters.
 pros: |
   A rather awesome web based camera app that lets you apply filters in real time.  It automatically saves the image to your local device, which means it usually gets synchronized to your cloud storage provider of choice (i.e. G+), making it trivial to share the autcome.
 cons: |
