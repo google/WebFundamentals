@@ -17,7 +17,6 @@ article:
 authors:
   - mattgaunt
 tags:
-  - touch
   - touchevent
 permalink: /updates/2014/09/Precision-Touch-for-Precise-Gestures
 ---
