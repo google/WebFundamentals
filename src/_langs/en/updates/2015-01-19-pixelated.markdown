@@ -17,7 +17,7 @@ article:
 authors:
   - paulkinlan
 tags:
-permalink: /updates/2015/01/pixelated
+permalink: /updates/2015/01/pixelated.html
 ---
 
 As web developers we play with images all the time and in most cases browsers are great 
@@ -72,7 +72,6 @@ A great use-case is games, you frequently have to scale up the canvas to make it
 </style>
 
 <blockquote class="twitter-tweet" data-partner="tweetdeck" data-align="center"><p>Oh wow, <a href="https://twitter.com/ChromiumDev">@ChromiumDev</a> Canary finally landed `image-resizing: pixelated` for &lt;canvas&gt;! Before &amp; after: <a href="http://t.co/QcPDtHu3s5">pic.twitter.com/QcPDtHu3s5</a></p>&mdash; Thomas Boyt (@thomasABoyt) <a href="https://twitter.com/thomasABoyt/status/555990806272946176">January 16, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 If you are building an airline ticketing tool, or an app that displays [QR codes](https://twitter.com/andreasbovens/status/556696829421953024) then frequently the user will want it to be full screen so that it is easier to scan, so controlling the image-rendering is critical.

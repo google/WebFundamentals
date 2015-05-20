@@ -2,9 +2,13 @@
 <a href="{{site.baseurl}}{{article.url | canonicalize}}">
 {% if article.featured-image %}
 <div class="featured-img" style="background-image: url({{include.article.featured-image}});"></div>
+{% elsif article.type == "spotlight" %}
+<div class="featured-img" style=" background-color: #516EA3; background-image: url(/web/showcase/spotlight/images/{{include.article.id}}/screenshot.png);"></div>
+{% elsif article.type == "case-study" %}
+<div class="featured-img" style="background-image: url(/web/showcase/case-study/images/{{include.article.id}}/thumbnail-medium.jpg);"></div>
 {% endif %}
 
-<h4>{% if article.product == 'chrome-devtools' %}DevTools{% else %}{{article.product}}{% endif %} {{article.type}}</h4>
+<h4>{% if site.data.updates.products[article.product].short_title %}{{ site.data.updates.products[article.product].short_title }}{% else %}{{ site.data.updates.products[article.product].title }}{% endif %} {{ site.data.updates.types[article.type].title_singular }}</h4>
 <h3>{{article.title}}</h3>
 
 {% if article.description %}
@@ -13,7 +17,7 @@
 </div>
 {% endif %}
  </a>
-{% if article.tags and article.type != "tip" %}
+{% if article.tags %}
 <div class="tags">
   {% for tag in article.tags %}
   <a href="/web/updates/tags/{{tag}}">#{{tag}}</a>

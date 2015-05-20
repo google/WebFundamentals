@@ -104,3 +104,39 @@
 			background-image: url(/web/tools/material-design-lite/images/header_2x.jpg);
 	}
 }
+
+.mdl-comingsoon-topics {
+	background-color: RGB(250, 250, 250);
+	padding-bottom: 12vh;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.mdl-comingsoon-single-topic {
+	margin: 0 auto ($padding * 4) auto;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	img {
+		width: 40%;
+		margin: 0 auto ($padding * 2) auto;
+	}
+}
+
+.mdl-comingsoon-single-topic:last-child {
+	margin-bottom: 0;
+}
+
+@include medium {
+	.mdl-comingsoon-single-topic {
+		float: left;
+		width: 33%;
+
+
+	}
+}

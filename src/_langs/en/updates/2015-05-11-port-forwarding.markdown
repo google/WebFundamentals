@@ -19,7 +19,7 @@ description: ' DevTools'' port forwarding enables even localhost URLs to work on
 featured-image: /web/updates/images/2015-05-11-devtools-port-forwarding-allows-localhost-urls-to-work-on-mobile/port-forward.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/1-port-forward
-permalink: /updates/2015/05/11/port-forwarding
+permalink: /updates/2015/05/11/port-forwarding.html
 ---
 <img src="/web/updates/images/2015-05-11-devtools-port-forwarding-allows-localhost-urls-to-work-on-mobile/port-forward.gif">
 

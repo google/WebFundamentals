@@ -20,7 +20,7 @@ authors:
 tags:
   - autocapitalize
   - mobile
-permalink: /updates/2015/04/autocapitalize
+permalink: /updates/2015/04/autocapitalize.html
 ---
 
 This may look like the most unimpressive feature in existence, but I think it is important because everyone dislikes typing on mobile: You hate it, I loathe it. In Chrome for Android (prior to Chrome 43 -  Beta as of April 2015) a developer has little control over how the browser can  help the user enter text. If you are typing on a device today, it might look  like:
