@@ -18,11 +18,11 @@ authors:
   - jeffposnick
 tags:
   - iterators
-  - ES6
+  - es6
   - sets
   - collections
   - maps
-permalink: /updates/2014/08/Collecting-and-Iterating-the-ES6-Way
+permalink: /updates/2014/08/Collecting-and-Iterating-the-ES6-Way.html
 ---
 The [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript) 6 specification, while still in [draft form](http://people.mozilla.org/~jorendorff/es6-draft.html), brings the promise of many exciting new tools to add to the JavaScript programmer’s belt. New classes such as [Set](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects) and [Map](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects) offer native solutions to working with specific types of collections, and the [for...of](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-iteration-statements) statement provides an elegant alternative to traditional ways of iterating over data.
 

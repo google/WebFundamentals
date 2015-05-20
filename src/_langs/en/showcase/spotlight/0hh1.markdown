@@ -2,6 +2,7 @@
 id: 0hh1
 layout: spotlight
 collection: spotlight
+type: spotlight
 published: true
 
 date: 2015-03-24
@@ -26,7 +27,7 @@ link: http://0hh1.com/
 developer: Martin Kool
 
 
-introduction: "A fun (and addictive) game that just feels right on mobile."
+description: "A fun (and addictive) game that just feels right on mobile."
 pros: |
   A fun (and addictive) game by Q42.nl that just feels right on mobile and desktop with smooth animations and a very polished look and feel. It is installable as it uses the [Web App Manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like any native game.
 cons: |

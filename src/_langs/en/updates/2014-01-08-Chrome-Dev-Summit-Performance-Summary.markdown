@@ -19,7 +19,7 @@ authors:
 tags:
   - mobile
   - performance
-permalink: /updates/2014/01/Chrome-Dev-Summit-Performance-Summary
+permalink: /updates/2014/01/Chrome-Dev-Summit-Performance-Summary.html
 ---
  <h2>#perfmatters: Tooling techniques for the performance ninja</h2>
 

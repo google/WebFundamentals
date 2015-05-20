@@ -18,8 +18,8 @@ authors:
   - petelepage
 tags:
   - mobile
-  - front-end
-permalink: /updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  - frontend
+permalink: /updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android.html
 ---
 
 Starting in version 39 of Chrome for Android on Lollipop, you’ll now be able 
