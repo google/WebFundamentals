@@ -18,7 +18,7 @@ authors:
   - ericbidelman
 tags:
   - file
-permalink: /updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
+permalink: /updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API.html
 ---
 Let's say you have a photo editing app and you'd like users to be able to drag in hundreds of photos and copy them into your app. Ok, what do you do?
 

@@ -1,0 +1,26 @@
+{% assign article = include.article %}
+<div class="filters">
+  <ul>
+    <li>Category
+      <ul>
+        <li><a href="/web/updates/{% if article.product and article.product != "all" %}{{article.product}}/{% endif %}"{% if article.type == null or article.category == "all" %} class="selected"{% endif %}>All</a></li>
+
+        {% for item in site.data.updates.types %}
+          <li><a href="/web/updates/{% if article.product and article.product != "all" %}{{article.product}}/{% endif %}{{ item[0] }}/"{% if article.type == item[0] or article.category == item[0] %} class="selected"{% endif %}>{{ item[1].title_plural }}</a></li>
+        {% endfor %}
+
+      </ul>
+    </li>
+    <li>Product
+      <ul>
+        {% capture type %}{% if article.type %}{{article.type}}{% else %}{{article.category}}{% endif %}{% endcapture %}
+        <li><a href="/web/updates/{% if article.type or article.category != "all" %}{{type}}/{% endif %}"{% if article.product == null or article.product == "all" %} class="selected"{% endif %}>All</a></li>
+
+        {% for item in site.data.updates.products %}
+          <li><a href="/web/updates/{{ item[0] }}/{% if article.type or article.category != "all" %}{{type}}/{% endif %}"{% if article.product == item[0] %} class="selected"{% endif %}>{{ item[1].title }}</a></li>
+        {% endfor %}
+
+      </ul>
+    </li>
+  </ul>
+</div>

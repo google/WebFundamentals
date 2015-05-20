@@ -5,7 +5,7 @@ toc:
 - title: "News"
   path: /updates/news/
 - title: "Tips & Tricks"
-  path: /updates/tips/
+  path: /updates/tip/
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/
   in_header: false

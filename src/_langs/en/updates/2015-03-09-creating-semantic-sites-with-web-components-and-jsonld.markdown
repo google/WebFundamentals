@@ -17,10 +17,9 @@ article:
 authors:
   - ewagasperowicz
 tags:
-  - schema.org
-  - web components
+  - webcomponents
   - json-ld
-permalink: /updates/2015/03/creating-semantic-sites-with-web-components-and-jsonld
+permalink: /updates/2015/03/creating-semantic-sites-with-web-components-and-jsonld.html
 ---
 With the rising popularity of [web components](http://webcomponents.org/) and supporting libraries like [Polymer](https://www.polymer-project.org/), [custom elements](http://w3c.github.io/webcomponents/spec/custom/) become an attractive way to build UI features. The default encapsulation of custom elements makes them especially useful for creating independent widgets.
 

@@ -1,6 +1,7 @@
 ---
 layout: case-study
 collection: case-study
+type: case-study
 published: true
 
 date: 2015-03-27
@@ -13,7 +14,7 @@ authors:
 id: chrome-dev-summit
 title: "Chrome Dev Summit 2014"
 subtitle: "Conferencing done right."
-introduction: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
+description: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
 link: https://developer.chrome.com/devsummit/
 
 scores:

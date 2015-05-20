@@ -2,15 +2,17 @@ toc:
 - title: "<strong>Shows</strong>"
   path: /shows/
   home: true
+- title: TTT
+  path: /shows/ttt/
 - title: Lazy Web
   path: /shows/lazyweb/
 - title: HTTP 203
   path: /shows/http203/
-- title: Polycasts
-  path: /shows/polycasts/
 - title: More
   hasSubNav: true
   section:
+  - title: Polycasts
+    path: /shows/polycasts/
   - title: Udacity Courses
     path: /shows/udacity/
   - title: Chrome Dev Summit

@@ -19,7 +19,7 @@ tags:
 description: We've upgraded the Timeline panel for Chrome DevTools to give developers
   more insight on their site’s runtime performance.
 featured-image: /web/updates/images/2015-04-20-DevTools-Timeline/draw-calls.png
-permalink: /updates/2015/03/24/devtools-timeline-now-providing-the-full-story
+permalink: /updates/2015/03/24/devtools-timeline-now-providing-the-full-story.html
 ---
 The DevTools [Timeline panel](https://developer.chrome.com/devtools/docs/timeline) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance. 
 
