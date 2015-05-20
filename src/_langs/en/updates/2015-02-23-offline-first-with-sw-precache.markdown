@@ -17,7 +17,7 @@ article:
 authors:
   - jeffposnick
 tags:
-  - service worker
+  - serviceworker
   - offline
   - caching
   - performance

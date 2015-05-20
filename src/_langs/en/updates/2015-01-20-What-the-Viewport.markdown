@@ -17,7 +17,7 @@ article:
 authors:
   - mattgaunt
 tags:
-  - virtual viewport
+  - virtualviewport
 permalink: /updates/2015/01/virtual-viewport
 ---
 

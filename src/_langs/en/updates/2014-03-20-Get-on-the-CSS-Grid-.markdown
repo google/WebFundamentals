@@ -18,7 +18,7 @@ authors:
   - alexdanilo
 tags:
   - layout
-  - CSS
+  - css
   - grids
 permalink: /updates/2014/03/Get-on-the-CSS-Grid
 ---

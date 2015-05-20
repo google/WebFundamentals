@@ -17,8 +17,7 @@ article:
 authors:
   - ewagasperowicz
 tags:
-  - schema.org
-  - web components
+  - webcomponents
   - json-ld
 permalink: /updates/2015/03/creating-semantic-sites-with-web-components-and-jsonld
 ---

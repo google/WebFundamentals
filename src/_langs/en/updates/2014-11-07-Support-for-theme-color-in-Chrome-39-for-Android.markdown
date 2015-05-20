@@ -18,7 +18,7 @@ authors:
   - petelepage
 tags:
   - mobile
-  - front-end
+  - frontend
 permalink: /updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
 ---
 

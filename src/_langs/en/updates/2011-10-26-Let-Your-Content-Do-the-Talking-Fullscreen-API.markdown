@@ -17,9 +17,9 @@ article:
 authors:
   - ericbidelman
 tags:
-  - gaming
+  - games
   - multimedia
-  - fullscreeen
+  - fullscreen
 permalink: /updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
 ---
 Most browsers have the ability to enter a fullscreen or kiosk mode for a while now. Basically, the browser's chrome UI gets out of the way, and the content takes over. For apps installed from the Chrome Web Store, it's even been possible for users to [manually configure](http://code.google.com/chrome/webstore/faq.html#faq-app-18) an app to run fullscreen when it's opened from the New Tab Page. Manual fullscreen is good. Programmatic fullscreen is better!
