@@ -44,7 +44,7 @@ published: true
             <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}">
               <img src="{{site.baseurl}}/showcase/spotlight/images/{{ spotlight.id }}/screenshot-small.png" alt="{{spotlight.title}}">
               <p class="medium">{{spotlight.title}}</p>
-              <p class="color--text">{{spotlight.introduction}}</p>
+              <p class="color--text">{{spotlight.description}}</p>
             </a>
           </li>
 

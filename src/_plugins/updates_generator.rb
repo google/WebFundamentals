@@ -20,7 +20,7 @@ module Jekyll
     priority :low
 
     def generate(site)
-      updates = site.data['articles']['updates']
+      updates = getUpdates(site)
 
       if updates.nil?
         return
@@ -48,19 +48,19 @@ module Jekyll
       end
 
       # Generate category/product pages
-      categories = ["news", "tip"]
-      products = ["tools", "chrome", "chrome-devtools"]
+      categories = site.data['updates']['types']
+      products = site.data['updates']['products']
 
       # generate /category and /product/category
-      categories.each do |category|
+      categories.each do |category, val1|
         generatePaginatedPage(site, site.source, File.join('updates', category), category, "all")
-        products.each do |product|
+        products.each do |product, val2|
           generatePaginatedPage(site, site.source, File.join('updates', product, category), category, product)
         end
       end
 
       # generate /product
-      products.each do |product|
+      products.each do |product, val|
         generatePaginatedPage(site, site.source, File.join('updates', product), "all", product)
       end
 
@@ -70,6 +70,10 @@ module Jekyll
       site.data['tags_updates'] = tags
     end
 
+    def getUpdates(site)
+      return site.data['articles']['updates'] + site.data['articles']['spotlight'] + site.data['articles']['case-study']
+    end
+
     def generatePaginatedPage(site, base, dir, category, product)
 
       pag_root = dir
@@ -77,7 +81,7 @@ module Jekyll
       per_page = 10
 
       # filter array so it only contains what we need
-      updates = site.data['articles']['updates']
+      updates = getUpdates(site)
       updates = updates.select do |update|
         (category == "all" || update["type"] == category) && (product == "all" || update["product"] == product || update["category"] == product)
       end
@@ -115,7 +119,7 @@ module Jekyll
 
         self.process(@name)
 
-        self.read_yaml(File.join(base, '_layouts'), 'updates-sub.liquid')
+        self.read_yaml(File.join(base, '_layouts'), 'updates.liquid')
 
         self.data['category'] = category
         self.data['product'] = product
@@ -147,7 +151,7 @@ module Jekyll
 
         self.process(@name)
 
-        self.read_yaml(File.join(base, '_layouts'), 'updates-sub.liquid')
+        self.read_yaml(File.join(base, '_layouts'), 'updates.liquid')
 
         title_text = "All updates tagged '%s'"
         description_text = "Tag page for updates tagged %s."
