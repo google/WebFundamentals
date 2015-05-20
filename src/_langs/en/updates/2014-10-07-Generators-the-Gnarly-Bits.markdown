@@ -19,7 +19,7 @@ authors:
 tags:
   - iterators
   - generators
-  - ES6
+  - es6
 permalink: /updates/2014/10/Generators-the-Gnarly-Bits
 ---
 

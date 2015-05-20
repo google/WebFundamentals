@@ -18,7 +18,7 @@ article:
 authors:
   - sethladd
 tags:
-  - gaming
+  - games
 permalink: /updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
 ---
 <p>

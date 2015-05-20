@@ -17,9 +17,9 @@ article:
 authors:
   - robdodson
 tags:
-  - web components
+  - webcomponents
   - polymer
-  - chrome dev summit
+  - chromedevsummit
 permalink: /updates/2015/01/polymer-state-of-the-union
 ---
 

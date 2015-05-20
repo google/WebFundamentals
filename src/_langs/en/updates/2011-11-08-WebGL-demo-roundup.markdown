@@ -19,7 +19,6 @@ authors:
   - ilmariheikkinen
 tags:
   - webgl
-  - three.js
   - graphics
 permalink: /updates/2011/11/WebGL-demo-roundup
 ---

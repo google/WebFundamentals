@@ -19,7 +19,7 @@ authors:
 tags:
   - fundamentals
   - mobile
-  - front-end
+  - frontend
 permalink: /updates/2014/12/fundamental-of-web-dev
 ---
 

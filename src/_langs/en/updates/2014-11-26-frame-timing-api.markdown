@@ -19,7 +19,7 @@ authors:
 tags:
   - performance
   - testing
-  - front-end
+  - frontend
 permalink: /updates/2014/11/frame-timing-api
 ---
 

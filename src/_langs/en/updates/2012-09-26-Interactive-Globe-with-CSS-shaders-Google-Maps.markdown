@@ -19,7 +19,7 @@ authors:
 tags:
   - graphics
   - shaders
-  - CSS
+  - css
 permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps
 ---
 <script>

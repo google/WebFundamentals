@@ -17,9 +17,9 @@ article:
 authors:
   - ilmariheikkinen
 tags:
-  - pointer lock
+  - pointerlock
   - fullscreen
-  - gaming
+  - games
 permalink: /updates/2012/02/Pointer-Lock-API-Brings-FPS-Games-to-the-Browser
 ---
 The [Pointer Lock API](http://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html) recently landed in Chrome Canary and the Dev channel, all rejoice! Wait, what? You haven't heard of the Pointer Lock API? Well, in a nutshell, the Pointer Lock API makes it possible to write proper first-person shooters for the web.
