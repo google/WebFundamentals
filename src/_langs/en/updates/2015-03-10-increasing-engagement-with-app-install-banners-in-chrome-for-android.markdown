@@ -17,7 +17,7 @@ article:
 authors:
   - paulkinlan
 tags:
-  - add to homescreen
+  - addtohomescreen
   - webapp
   - install
 permalink: /updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android

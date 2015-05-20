@@ -17,10 +17,10 @@ article:
 authors:
   - jeffposnick
 tags:
-  - ArrayBuffer
+  - arraybuffer
   - decoding
   - strings
-  - Unicode
+  - unicode
   - encoding
 permalink: /updates/2014/08/Easier-ArrayBuffer---String-conversion-with-the-Encoding-API
 ---

@@ -19,7 +19,7 @@ authors:
 tags:
   - mobile
   - apps
-  - front-end
+  - frontend
 permalink: /updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
 ---
 

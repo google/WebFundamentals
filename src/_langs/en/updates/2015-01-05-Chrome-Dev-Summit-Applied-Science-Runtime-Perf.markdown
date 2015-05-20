@@ -18,8 +18,8 @@ authors:
   - paullewis
 tags:
   - performance
-  - chrome dev summit
-  - front-end
+  - chromedevsummit
+  - frontend
 permalink: /updates/2015/01/applied-science-runtime-performance
 ---
 

@@ -18,8 +18,7 @@ authors:
   - samdutton
 tags:
   - performance
-  - innerHTML
-  - DOM
+  - dom
 permalink: /updates/2012/04/Big-boost-to-DOM-performance---WebKit-s-innerHTML-is-240-faster
 ---
 <p>We're very happy to see that some common DOM operations have just skyrocketed in speed. The changes were at the WebKit level, boosting performance for both Safari (JavaScriptCore) and Chrome (V8).</p>

@@ -17,7 +17,7 @@ article:
 authors:
   - ilmariheikkinen
 tags:
-  - pointer lock
+  - pointerlock
   - fullscreen
   - gaming
 permalink: /updates/2012/02/Pointer-Lock-API-Brings-FPS-Games-to-the-Browser

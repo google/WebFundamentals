@@ -17,7 +17,7 @@ article:
 authors:
   - addyosmani
 tags:
-  - front-end
+  - frontend
   - tooling
   - yeoman
   - automation

@@ -17,9 +17,9 @@ article:
 authors:
   - addyosmani
 tags:
-  - front-end
+  - frontend
   - polymer
-  - web components
+  - webcomponents
   - tooling
 permalink: /updates/2014/01/Yo-Polymer-A-Whirlwind-Tour-Of-Web-Component-Tooling
 ---

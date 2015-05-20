@@ -18,7 +18,7 @@ authors:
   - jeffposnick
 tags:
   - iterators
-  - ES6
+  - es6
   - sets
   - collections
   - maps

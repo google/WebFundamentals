@@ -18,7 +18,7 @@ authors:
   - ericbidelman
 tags:
   - canvas
-  - CSS
+  - css
   - graphics
 permalink: /updates/2012/12/Canvas-driven-background-images
 ---

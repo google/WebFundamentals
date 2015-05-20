@@ -17,8 +17,8 @@ article:
 authors:
   - brendankenny
 tags:
-  - element.animate
-  - Web Animations
+  - elementanimate
+  - webanimations
   - animations
 permalink: /updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36
 ---

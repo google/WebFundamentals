@@ -16,7 +16,7 @@ article:
 authors:
   - ericbidelman
 tags:
-  - PageVisibility
+  - pagevisibility
 permalink: /updates/2011/07/Don-t-Miss-a-Frame-Using-the-Page-Visibility-API-HTML5-Video
 ---
 The [Page Visibility API](http://updates.html5rocks.com/2011/06/Page-Visibility-API-Have-I-got-your-attention) can be used to check if the current tab is visible or not. [Sam Dutton](http://twitter.com/@sw12) has thrown together a nice demo highlighting one great use case for the API: pausing a playing HTML5 video if the user switches tabs.

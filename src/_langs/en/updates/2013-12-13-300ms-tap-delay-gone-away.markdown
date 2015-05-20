@@ -19,7 +19,6 @@ authors:
 tags:
   - mobile
   - performance
-  - events
   - touch
 permalink: /updates/2013/12/300ms-tap-delay-gone-away
 ---
