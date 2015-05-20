@@ -21,7 +21,6 @@ authors:
   - paulkinlan
 tags:
   - mobile
-  - touch
   - touchevent
 permalink: /updates/2014/05/A-More-Compatible-Smoother-Touch
 ---

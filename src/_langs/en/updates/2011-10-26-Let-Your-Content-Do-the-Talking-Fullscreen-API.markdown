@@ -17,7 +17,7 @@ article:
 authors:
   - ericbidelman
 tags:
-  - gaming
+  - games
   - multimedia
   - fullscreen
 permalink: /updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API

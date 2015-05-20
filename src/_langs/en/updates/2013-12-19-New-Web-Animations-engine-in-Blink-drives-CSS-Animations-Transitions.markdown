@@ -17,7 +17,7 @@ article:
 authors:
   - alexdanilo
 tags:
-  - animation
+  - animations
   - css
 permalink: /updates/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions
 ---
