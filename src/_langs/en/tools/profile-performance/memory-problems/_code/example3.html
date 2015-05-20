@@ -1,0 +1,61 @@
+{{+bindTo:partials.standard_devtools_article}}
+<!DOCTYPE html>
+<h1>Example 3</h1>
+
+  <h1>Example 3: Scattered objects</h1>
+  <p><button onclick="init()">Create scattered objects</button></p>
+  <script>
+  function Item(x) {
+  this.x = x;
+}
+
+function numbers() {
+  var result = new Array(10000);
+  for (var i = 0, l = result.length; i < l; ++i)
+    result[i] = new Item(i);
+  return new Item(result);
+}
+
+function strings() {
+  var result = new Array(10000);
+  for (var i = 0, l = result.length; i < l; ++i)
+    result[i] = new Item(i.toString());
+  return new Item(result);
+}
+
+function init() {
+  numberCache = numbers();
+  stringCache = strings();
+  documentCache = new Item(document.body.textContent.toLowerCase());
+}
+
+</script>
+
+  <p>Take a heap stapshot and watch the objects (Item) allocations.</p>
+  <hr>
+  <pre>
+function Item(x) {
+  this.x = x;
+}
+
+function numbers() {
+  var result = new Array(10000);
+  for (var i = 0, l = result.length; i &lt; l; ++i)
+    result[i] = new Item(i);
+  return new Item(result);
+}
+
+function strings() {
+  var result = new Array(10000);
+  for (var i = 0, l = result.length; i &lt; l; ++i)
+    result[i] = new Item(i.toString());
+  return new Item(result);
+}
+
+function init() {
+  numberCache = numbers();
+  stringCache = strings();
+  documentCache = new Item(document.body.textContent.toLowerCase());
+}
+</pre>
+{{/partials.standard_devtools_article}}
