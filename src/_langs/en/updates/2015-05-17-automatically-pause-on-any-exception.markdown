@@ -18,7 +18,7 @@ description: In the DevTools, you can automatically pause on any exception (espe
 featured-image: /web/updates/images/2015-05-20-automatically-pause-on-any-exception/pause-on-exception.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/32-pause-on-exception
-permalink: /updates/2015/05/17/automatically-pause-on-any-exception
+permalink: /updates/2015/05/17/automatically-pause-on-any-exception.html
 ---
 <img src="/web/updates/images/2015-05-20-automatically-pause-on-any-exception/pause-on-exception.gif" alt="Automatically pause on any exception">
 

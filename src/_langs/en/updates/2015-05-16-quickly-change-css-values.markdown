@@ -17,7 +17,7 @@ description: Quickly change CSS values with the keyboard or mousewheel
 featured-image: /web/updates/images/2015-05-20-quickly-change-css-values-with-the-keyboard-or-mousewheel/quick-change-css-values.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/37-quick-change-css-values
-permalink: /updates/2015/05/16/quickly-change-css-values
+permalink: /updates/2015/05/16/quickly-change-css-values.html
 ---
 <img src="/web/updates/images/2015-05-20-quickly-change-css-values-with-the-keyboard-or-mousewheel/quick-change-css-values.gif" alt="Quickly change CSS values with the keyboard or mousewheel">
 

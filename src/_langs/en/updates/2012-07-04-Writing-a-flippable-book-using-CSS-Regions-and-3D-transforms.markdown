@@ -19,7 +19,7 @@ authors:
 tags:
   - regions
   - css
-permalink: /updates/2012/07/Writing-a-flippable-book-using-CSS-Regions-and-3D-transforms
+permalink: /updates/2012/07/Writing-a-flippable-book-using-CSS-Regions-and-3D-transforms.html
 ---
 So. The day has come. You have finally grown bored of long scrolls of text and are looking for a new format. Something elegant. Something compact. Something that takes the long scroll, cuts it into neat little rectangles and binds them together. I call this invention the "book".
 

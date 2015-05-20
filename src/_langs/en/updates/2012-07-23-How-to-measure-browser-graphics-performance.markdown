@@ -19,7 +19,7 @@ authors:
 tags:
   - benchmark
   - graphics
-permalink: /updates/2012/07/How-to-measure-browser-graphics-performance
+permalink: /updates/2012/07/How-to-measure-browser-graphics-performance.html
 ---
 Benchmarking browser graphics in a nutshell: draw as much as you can while maintaining a smooth frame rate. Once your framerate drops, you know how much you can draw per frame. End of post. ...No? Ok, I'll explain some more.
 

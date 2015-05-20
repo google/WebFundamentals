@@ -19,7 +19,7 @@ authors:
 tags:
   - performance
   - devtools
-permalink: /updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode
+permalink: /updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode.html
 ---
 <script>(function(){
 var scripts = document.querySelectorAll('script');

@@ -20,7 +20,7 @@ tags:
   - webaudio
   - webgl
   - multimedia
-permalink: /updates/2012/02/WebGL-and-Web-Audio-API-demo-roundup
+permalink: /updates/2012/02/WebGL-and-Web-Audio-API-demo-roundup.html
 ---
 Here's a look at some cool WebGL and Web Audio API demos that I've seen over the past couple weeks.
 

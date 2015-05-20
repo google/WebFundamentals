@@ -19,7 +19,7 @@ authors:
 tags:
   - xhr2
   - binary
-permalink: /updates/2012/04/Processing-XHR2-file-uploads-in-PHP
+permalink: /updates/2012/04/Processing-XHR2-file-uploads-in-PHP.html
 ---
 My article "[New Tricks in XMLHttpRequest2](http://www.html5rocks.com/tutorials/file/xhr2/)" has many fine examples, but what it doesn't have is any server code to illustrate how to handle files. If you're curious how to process a file upload using `xhr.send(FormData)`, here's a quick example of an image upload in PHP.
 

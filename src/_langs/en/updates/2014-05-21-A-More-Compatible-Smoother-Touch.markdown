@@ -22,7 +22,7 @@ authors:
 tags:
   - mobile
   - touchevent
-permalink: /updates/2014/05/A-More-Compatible-Smoother-Touch
+permalink: /updates/2014/05/A-More-Compatible-Smoother-Touch.html
 ---
 You and your users want mobile web apps that react and scroll smoothly to the 
 touch. Developing them [should be easy](https://developers.google.com/web/fundamentals/documentation/user-input/touch-input/) but, unfortunately, how mobile web 

@@ -20,7 +20,7 @@ tags:
   - pushmessaging
   - notifications
   - serviceworker
-permalink: /updates/2015/03/push-notificatons-on-the-open-web
+permalink: /updates/2015/03/push-notificatons-on-the-open-web.html
 ---
 
 If you ask a room of developers what mobile device features are missing from the 

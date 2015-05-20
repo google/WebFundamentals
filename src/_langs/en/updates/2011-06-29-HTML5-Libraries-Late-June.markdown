@@ -20,7 +20,7 @@ authors:
 tags:
   - canvas
   - css
-permalink: /updates/2011/06/HTML5-Libraries---Late-June
+permalink: /updates/2011/06/HTML5-Libraries---Late-June.html
 ---
 Some exciting libraries have cropped up lately:
 

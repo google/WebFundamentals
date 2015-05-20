@@ -18,7 +18,7 @@ description: Try undocking DevTools to a separate window so the record button is
 featured-image: /web/updates/images/2015-05-19-devtools-easy-timeline-recording/record-timeline-undocked.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/6-record-timeline-undocked
-permalink: /updates/2015/05/09/easy-timeline-recording
+permalink: /updates/2015/05/09/easy-timeline-recording.html
 ---
 <img src="/web/updates/images/2015-05-19-devtools-easy-timeline-recording/record-timeline-undocked.gif" alt="DevTools - Easy timeline recording">
 

@@ -20,7 +20,7 @@ tags:
   - gpu
   - canvas
   - graphics
-permalink: /updates/2012/07/Taking-advantage-of-GPU-acceleration-in-the-2D-canvas
+permalink: /updates/2012/07/Taking-advantage-of-GPU-acceleration-in-the-2D-canvas.html
 ---
 The 2D canvas in Chrome got some hardware acceleration love back in February. The acceleration makes drawing 2D sprites really fast, as the implementation is using the GPU to do drawImage.
 

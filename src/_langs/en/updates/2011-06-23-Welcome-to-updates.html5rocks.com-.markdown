@@ -16,7 +16,7 @@ article:
   updated_on: 2011-06-23
 authors:
   - ericbidelman
-permalink: /updates/2011/06/Welcome-to-updates-html5rocks-com-1
+permalink: /updates/2011/06/Welcome-to-updates-html5rocks-com-1.html
 ---
 The open web platform is changing at an ever increasing rate. Many developers find it hard to keep up with the pace the browsers are implementing new HTML5 features, including ourselves. There are a ton of new APIs, demos, libraries, and announcements, every day. 
 

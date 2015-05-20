@@ -18,7 +18,7 @@ description: Learn how to trigger pseudo classes such as :active to properly deb
 featured-image: /web/updates/images/2015-05-12-devtools-triggering-of-pseudo-classes/pseudo-trigger.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/2-pseudo-trigger
-permalink: /updates/2015/05/12/triggering-of-pseudo-classes
+permalink: /updates/2015/05/12/triggering-of-pseudo-classes.html
 ---
 <img src="/web/updates/images/2015-05-12-devtools-triggering-of-pseudo-classes/pseudo-trigger.gif">
 

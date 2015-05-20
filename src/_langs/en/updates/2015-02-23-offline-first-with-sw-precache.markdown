@@ -21,7 +21,7 @@ tags:
   - offline
   - caching
   - performance
-permalink: /updates/2015/02/offline-first-with-sw-precache
+permalink: /updates/2015/02/offline-first-with-sw-precache.html
 ---
 
 You can’t [read about service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)

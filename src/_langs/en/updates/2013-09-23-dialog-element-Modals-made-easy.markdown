@@ -19,7 +19,7 @@ authors:
 tags:
   - dialog
   - semantics
-permalink: /updates/2013/09/dialog-element-Modals-made-easy
+permalink: /updates/2013/09/dialog-element-Modals-made-easy.html
 ---
 Chrome Canary has landed support for the [dialog element](http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element) behind a flag. The `dialog` element can be used for popups in a web page.
 

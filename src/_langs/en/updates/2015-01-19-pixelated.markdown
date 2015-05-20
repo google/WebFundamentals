@@ -17,7 +17,7 @@ article:
 authors:
   - paulkinlan
 tags:
-permalink: /updates/2015/01/pixelated
+permalink: /updates/2015/01/pixelated.html
 ---
 
 As web developers we play with images all the time and in most cases browsers are great 
