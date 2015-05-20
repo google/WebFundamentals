@@ -18,7 +18,7 @@ authors:
   - samthorogood
 tags:
   - animation
-  - web-animation
+  - webanimation
 permalink: /updates/2014/12/web-animation-playback
 ---
 
