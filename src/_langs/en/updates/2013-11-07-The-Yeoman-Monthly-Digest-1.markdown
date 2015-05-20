@@ -18,7 +18,7 @@ authors:
   - addyosmani
 tags:
   - frontend
-  - tooling
+  - tools
   - yeoman
   - automation
 permalink: /updates/2013/11/The-Yeoman-Monthly-Digest-1
