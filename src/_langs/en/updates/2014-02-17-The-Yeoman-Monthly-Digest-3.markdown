@@ -147,6 +147,5 @@ If you’ve written an article, given a talk or created a generator you think wo
 Until the next time we run `yo digest`, happy scaffolding and don't be afraid - Yeoman is here to help, not replace you :D 
 
 <blockquote class="twitter-tweet" lang="en"><p>I’m genuinely scared that one day I’m going to be replaced by a <a href="https://twitter.com/yeoman">@yeoman</a> generator.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/statuses/431764751610548225">February 7, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 *With thanks for the rest of the Yeoman team for their reviews*
