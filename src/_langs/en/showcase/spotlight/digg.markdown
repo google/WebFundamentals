@@ -2,6 +2,7 @@
 id: digg
 layout: spotlight
 collection: spotlight
+type: spotlight
 published: false
 
 date: 2015-03-24
@@ -26,7 +27,7 @@ title: "Digg.com"
 link: http://digg.com
 developer: Digg
 
-introduction: "Featuring a fast hamburger menu and a clean layout, Digg works amazingly well on mobile."
+description: "Featuring a fast hamburger menu and a clean layout, Digg works amazingly well on mobile."
 pros: |
   Digg's mobile presentation is really what one could call "no fuzz". They focus on their core experience, and while the layout is clean and simple, they got all of their basic functionality covered. The reduction makes the layout blazing fast, as well as the expandable Hamburger menu.
 cons: |
