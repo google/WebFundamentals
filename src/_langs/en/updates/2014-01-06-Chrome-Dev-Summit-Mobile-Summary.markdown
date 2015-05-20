@@ -22,8 +22,8 @@ tags:
   - mobile
   - webview
   - grunt
-  - service worker
-permalink: /updates/2014/01/Chrome-Dev-Summit-Mobile-Summary
+  - serviceworker
+permalink: /updates/2014/01/Chrome-Dev-Summit-Mobile-Summary.html
 ---
 The [Chrome Dev Summit](http://developer.chrome.com/devsummit‎) finished a couple of weeks ago, and here's the first in a series of reports from the event. There was a strong emphasis on Mobile and Cross-device development, so we'll kick off with that!
 

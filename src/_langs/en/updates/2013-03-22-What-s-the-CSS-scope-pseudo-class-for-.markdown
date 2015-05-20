@@ -19,7 +19,7 @@ authors:
 tags:
   - dom
   - semantics
-permalink: /updates/2013/03/What-s-the-CSS-scope-pseudo-class-for
+permalink: /updates/2013/03/What-s-the-CSS-scope-pseudo-class-for.html
 ---
 `:scope` is defined in [CSS Selectors 4](http://www.w3.org/TR/selectors4/#scope-pseudo) as:
 

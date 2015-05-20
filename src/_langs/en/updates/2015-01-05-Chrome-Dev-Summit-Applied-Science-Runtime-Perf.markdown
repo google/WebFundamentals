@@ -18,9 +18,9 @@ authors:
   - paullewis
 tags:
   - performance
-  - chrome dev summit
-  - front-end
-permalink: /updates/2015/01/applied-science-runtime-performance
+  - chromedevsummit
+  - frontend
+permalink: /updates/2015/01/applied-science-runtime-performance.html
 ---
 
 Late last year I built the [Chrome Dev Summit](https://developer.chrome.com/devsummit/) site. I wanted it to have a [Material Design](http://www.google.com/design/spec/) look and feel, since it’s a great design language, and I felt it would be a great fit for the kind of site I wanted to create. But, as with any new design language, there are questions, challenges, and decisions to take, and especially so when dealing with the conventions of the web.

@@ -307,7 +307,7 @@ module.exports = function(grunt) {
         // move other sections out of the src folder temporarily
         var dir = fs.readdirSync(srcDir);
         for (var i = 0; i < dir.length; i++) {
-          if(fs.statSync(srcDir + dir[i]).isDirectory() && dir[i] !== section && !(dir[i] === 'updates' && section === 'tools')) {
+          if(fs.statSync(srcDir + dir[i]).isDirectory() && dir[i] !== section && !(section === 'updates' && (dir[i] === 'showcase')) && !(section === 'tools' && (dir[i] === 'updates' || dir[i] === 'showcase'))) {
             otherSections.push(dir[i]);
             fs.renameSync(srcDir + dir[i], tmpDir + dir[i]);
           }

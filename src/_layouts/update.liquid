@@ -22,7 +22,7 @@
 
         <div>
           <div class="details">
-              <div class="type">{{page.type}}</div>
+              <div class="type">{% if site.data.updates.products[page.product].short_title %}{{ site.data.updates.products[page.product].short_title }}{% else %}{{ site.data.updates.products[page.product].title }}{% endif %} {{ site.data.updates.types[page.type].title_singular }}</div>
               <div class="date">{{ page.article.written_on | date: '%B %d, %Y' }}</div>
               {% if page.authors %}
               <div class="author">
@@ -59,25 +59,7 @@
 
 	<div class="update-container container">
 
-      <div class="filters">
-        <ul>
-          <li>Category
-            <ul>
-              <li><a href="/web/updates/{% if page.product %}{{page.product}}/{% endif %}"{% if page.type == null %} class="selected"{% endif %}>All</a></li>
-              <li><a href="/web/updates/{% if page.product %}{{page.product}}/{% endif %}news/"{% if page.type == "news" %} class="selected"{% endif %}>News</a></li>
-              <li><a href="/web/updates/{% if page.product %}{{page.product}}/{% endif %}tips/"{% if page.type == "tip" %} class="selected"{% endif %}>Tips &amp; Tricks</a></li>
-            </ul>
-          </li>
-          <li>Product
-            <ul>
-              <li><a href="/web/updates/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == null %} class="selected"{% endif %}>All</a></li>
-              <li><a href="/web/updates/tools/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == "tools" %} class="selected"{% endif %}>All Tools</a></li>
-              <li><a href="/web/updates/chrome/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == "chrome" %} class="selected"{% endif %}>Chrome</a></li>
-              <li><a href="/web/updates/chrome-devtools/{% if page.type %}{{page.type}}/{% endif %}"{% if page.product == "chrome-devtools" %} class="selected"{% endif %}>DevTools</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      {% include modules/update_filters.liquid article=page %}
 
       <div class="update-content">
         {{ content | markdownify }}

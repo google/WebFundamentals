@@ -41,7 +41,7 @@ NOTE: the spotlight header required a modifier to render properly
     <strong class="subsection-number">{{caseStudies[0].title }}</strong>
     {{caseStudies[0].subtitle}}
     </h2>
-    <p>{{caseStudies[0].introduction}}</p>
+    <p>{{caseStudies[0].description}}</p>
     <a href="{{site.baseurl}}{{caseStudies[0].url | canonicalize}}" class="spotlight-header__cta cta--primary">Read the case study</a>    
   </div>
 
@@ -72,7 +72,7 @@ NOTE: the spotlight header required a modifier to render properly
                 <strong class="subsection-number">{{article.title }}</strong>
                 <a href="{{site.baseurl}}{{article.url | canonicalize}}">{{article.subtitle}}</a>
               </h3>
-              <p>{{article.introduction}}</p>
+              <p>{{article.description}}</p>
               <a href="{{site.baseurl}}{{article.url | canonicalize}}" class="cta--primary">View case-study</a>
             </div>
             <figure class="featured-list__img-wrapper g--half g--last">
@@ -115,7 +115,7 @@ NOTE: the spotlight header required a modifier to render properly
                 <strong class="subsection-number">In the spotlight</strong>
                 <a href="{{site.baseurl}}{{article.url | canonicalize}}">{{article.title}}</a>
               </h3>
-              <p>{{article.introduction}}</p>
+              <p>{{article.description}}</p>
               <a href="{{site.baseurl}}{{article.url | canonicalize}}" class="cta--primary">View spotlight</a>
             </div>
             <figure class="featured-list__img-wrapper g--half g--last">

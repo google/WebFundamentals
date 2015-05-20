@@ -20,7 +20,7 @@ tags:
   - platforms
   - pnacl
   - dart
-permalink: /updates/2014/01/Chrome-Dev-Summit-Platforms-Summary
+permalink: /updates/2014/01/Chrome-Dev-Summit-Platforms-Summary.html
 ---
 # Dart
 
