@@ -25,4 +25,4 @@ My article "[New Tricks in XMLHttpRequest2](http://www.html5rocks.com/tutorials/
 
 This server is trivial but it demonstrates two things. The first is sending a file and extra payload at the same time. The second is how to grab the file (and other data) in PHP. Lastly, the image is encoded into a `data:` URL and included in a JSON response sent back to the client.
 
-<script src="https://gist.github.com/2410898.js"> </script>
+Note: the sample has been removed.

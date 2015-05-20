@@ -34,16 +34,6 @@ The most basic use of the synthesis API is to pass the `speechSynthesis.speak()`
     window.speechSynthesis.speak(msg);
 {% endhighlight %}
 
-Try it!
-<a id="speech-btn">What am I reading?</a>
-<script>
-var button = document.getElementById('speech-btn').addEventListener('click',
-function onSpeechClick() {
-  var msg = new SpeechSynthesisUtterance('You are reading ' + document.title);
-  window.speechSynthesis.speak(msg);
-});
-</script>
-
 However, you can also alter parameters to effect the volume, speech rate, pitch, voice, and language:
 
 {% highlight javascript %}
