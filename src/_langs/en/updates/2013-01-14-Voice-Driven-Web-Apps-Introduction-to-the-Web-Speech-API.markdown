@@ -20,7 +20,7 @@ tags:
   - voice
   - multimedia
   - webspeech
-permalink: /updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
+permalink: /updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API.html
 ---
 <script>
 var scripts = document.querySelectorAll('script');

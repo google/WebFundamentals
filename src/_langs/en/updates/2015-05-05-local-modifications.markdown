@@ -18,7 +18,7 @@ description: Local modifications lets you see what changes have been made (via D
 featured-image: /web/updates/images/2015-05-19-devtools-local-modifications/local-mods.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/5-local-mods
-permalink: /updates/2015/05/05/local-modifications
+permalink: /updates/2015/05/05/local-modifications.html
 ---
 <img src="/web/updates/images/2015-05-19-devtools-local-modifications/local-mods.gif" alt="DevTools - Local Modifications">
 

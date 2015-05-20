@@ -19,7 +19,7 @@ authors:
 tags:
   - xhr2
   - binary
-permalink: /updates/2012/01/Getting-Rid-of-Synchronous-XHRs
+permalink: /updates/2012/01/Getting-Rid-of-Synchronous-XHRs.html
 ---
 Heads up! The [XMLHttpRequest2 spec](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#the-open-method) was recently changed to prohibit sending a synchronous request when `xhr.responseType` is set.
 The idea behind the change is to help mitigate further usage of synchronous xhrs wherever possible.

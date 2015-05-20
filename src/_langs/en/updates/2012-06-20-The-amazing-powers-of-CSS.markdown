@@ -18,7 +18,7 @@ authors:
   - ilmariheikkinen
 tags:
   - css
-permalink: /updates/2012/06/The-amazing-powers-of-CSS
+permalink: /updates/2012/06/The-amazing-powers-of-CSS.html
 ---
 Yesterday at the office, we were coming up with strange and magical CSS tricks. Take this one for instance, it makes empty links very visible:
 

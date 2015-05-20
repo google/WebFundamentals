@@ -19,7 +19,7 @@ authors:
 tags:
   - internals
   - performance
-permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
+permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources.html
 ---
 <style>
 .da-thumbs {

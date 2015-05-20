@@ -18,7 +18,7 @@ description: Learn how to show the function definition of a registered event lis
 featured-image: /web/updates/images/2015-05-19-show-the-function-definition-of-a-registered-event-listener-on-any-node/view-event-listeners.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/24-view-event-listeners
-permalink: /updates/2015/05/07/easily-jump-to-event-listeners
+permalink: /updates/2015/05/07/easily-jump-to-event-listeners.html
 ---
 <img src="/web/updates/images/2015-05-19-show-the-function-definition-of-a-registered-event-listener-on-any-node/view-event-listeners.gif" alt="Show the function definition of a registered event listener on any node">
 

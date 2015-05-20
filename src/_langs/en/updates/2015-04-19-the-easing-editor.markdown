@@ -18,7 +18,7 @@ description: Select an easing CSS property to get a visual animated preview for 
 featured-image: /web/updates/images/2015-05-19-select-an-easing-to-get-a-visual-animated-preview-for-how-it-behaves/easing-preview.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/27-easing-preview
-permalink: /updates/2015/04/19/the-easing-editor
+permalink: /updates/2015/04/19/the-easing-editor.html
 ---
 <img src="/web/updates/images/2015-05-19-select-an-easing-to-get-a-visual-animated-preview-for-how-it-behaves/easing-preview.gif" alt="Select an easing to get a visual animated preview for how it behaves">
 

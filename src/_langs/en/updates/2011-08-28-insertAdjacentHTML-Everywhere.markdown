@@ -18,7 +18,7 @@ authors:
   - paulkinlan
 tags:
   - dom
-permalink: /updates/2011/08/insertAdjacentHTML-Everywhere
+permalink: /updates/2011/08/insertAdjacentHTML-Everywhere.html
 ---
 <p>If we want to insert content in a HTML document we have three ways to do it:</p>
 <ul>

@@ -18,7 +18,7 @@ description: How to view and change your DOM breakpoints with the Breakpoints pa
 featured-image: /web/updates/images/2015-05-20-view-and-change-your-dom-breakpoints-with-the-breakpoints-pane/dom-breakpoint-pane.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/28-dom-breakpoint-pane
-permalink: /updates/2015/05/14/view-and-change-your-dom-breakpoints
+permalink: /updates/2015/05/14/view-and-change-your-dom-breakpoints.html
 ---
 <img src="/web/updates/images/2015-05-20-view-and-change-your-dom-breakpoints-with-the-breakpoints-pane/dom-breakpoint-pane.gif" alt="View and change your DOM breakpoints with the breakpoints pane">
 

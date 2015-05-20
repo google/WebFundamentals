@@ -17,7 +17,7 @@ description: Did you know you can autocomplete bracket notation in the Sources p
 featured-image: /web/updates/images/2015-05-20-console-panel-autocomplete-with-properties-bracket-or-dot-notation/console-autocomplete.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/30-console-autocomplete
-permalink: /updates/2015/05/15/autocomplete-for-bracket-notation
+permalink: /updates/2015/05/15/autocomplete-for-bracket-notation.html
 ---
 <img src="/web/updates/images/2015-05-20-console-panel-autocomplete-with-properties-bracket-or-dot-notation/console-autocomplete.gif" alt="Console Panel autocomplete with properties (bracket or dot notation)">
 

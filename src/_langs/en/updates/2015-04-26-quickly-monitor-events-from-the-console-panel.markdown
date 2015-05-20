@@ -18,7 +18,7 @@ description: You can log all the events dispatched to an object using the Comman
 featured-image: /web/updates/images/2015-05-19-devtools-quickly-monitor-events-from-the-console-panel/monitor-events.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/14-monitor-events
-permalink: /updates/2015/04/26/quickly-monitor-events-from-the-console-panel
+permalink: /updates/2015/04/26/quickly-monitor-events-from-the-console-panel.html
 ---
 <img src="/web/updates/images/2015-05-19-devtools-quickly-monitor-events-from-the-console-panel/monitor-events.gif" alt="DevTools Quickly monitor events from the Console Panel">
 

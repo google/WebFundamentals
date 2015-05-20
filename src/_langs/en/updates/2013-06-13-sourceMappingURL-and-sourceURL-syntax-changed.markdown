@@ -18,7 +18,7 @@ authors:
   - paulirish
 tags:
   - devtools
-permalink: /updates/2013/06/sourceMappingURL-and-sourceURL-syntax-changed
+permalink: /updates/2013/06/sourceMappingURL-and-sourceURL-syntax-changed.html
 ---
 If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
 

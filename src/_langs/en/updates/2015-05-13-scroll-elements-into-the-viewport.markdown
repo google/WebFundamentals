@@ -18,7 +18,7 @@ description: If an element you're inspecting is out of view, here's how to bring
 featured-image: /web/updates/images/2015-05-20-scroll-elements-into-the-viewport/scroll-into-view.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/38-scroll-into-view
-permalink: /updates/2015/05/13/scroll-elements-into-the-viewport
+permalink: /updates/2015/05/13/scroll-elements-into-the-viewport.html
 ---
 <img src="/web/updates/images/2015-05-20-scroll-elements-into-the-viewport/scroll-into-view.gif" alt="Scroll elements into the viewport">
 If an element you're inspecting is out of view, bring it into the viewport:

@@ -20,7 +20,7 @@ tags:
   - fundamentals
   - mobile
   - frontend
-permalink: /updates/2014/12/fundamental-of-web-dev
+permalink: /updates/2014/12/fundamental-of-web-dev.html
 ---
 
 At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/) there was a

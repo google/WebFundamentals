@@ -20,7 +20,7 @@ tags:
   - graphics
   - shaders
   - css
-permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps
+permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps.html
 ---
 <script>
 var scripts = document.querySelectorAll('script');

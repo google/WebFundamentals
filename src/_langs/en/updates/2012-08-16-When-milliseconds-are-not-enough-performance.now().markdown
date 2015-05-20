@@ -19,7 +19,7 @@ authors:
 tags:
   - internals
   - performance
-permalink: /updates/2012/08/When-milliseconds-are-not-enough-performance-now
+permalink: /updates/2012/08/When-milliseconds-are-not-enough-performance-now.html
 ---
 The [High Resolution Timer](http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HighResolutionTime/Overview.html) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform that's more precise than what we've had with `+new Date` and the newer `Date.now()`.
 
