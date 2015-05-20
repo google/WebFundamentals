@@ -17,10 +17,10 @@ article:
 authors:
   - robdodson
 tags:
-  - webcomponents
+  - web components
   - polymer
-  - chromedevsummit
-permalink: /updates/2015/01/lets-build-some-apps-with-polymer.html
+  - chrome dev summit
+permalink: /updates/2015/01/lets-build-some-apps-with-polymer
 ---
 
 # Let's build some apps with Polymer!

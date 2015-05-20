@@ -42,7 +42,7 @@ showcase:
                 <strong class="subsection-number">{{caseStudy.title }}</strong>
                 {{caseStudy.subtitle}}
               </h3>
-              <p>{{caseStudy.description}}</p>
+              <p>{{caseStudy.introduction}}</p>
               <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}" class="cta--primary">Read the case study</a>
             </div>
             <figure class="featured-list__img-wrapper g--half g--last">

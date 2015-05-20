@@ -17,7 +17,7 @@ description: Learn how to debug a network request from the command line.
 featured-image: /web/updates/images/2015-05-15-devtools-replay-a-network-request-in-curl/copy-as-curl.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/3-copy-as-curl
-permalink: /updates/2015/05/15/replay-a-network-request-in-curl.html
+permalink: /updates/2015/05/15/replay-a-network-request-in-curl
 ---
 <img src="/web/updates/images/2015-05-15-devtools-replay-a-network-request-in-curl/copy-as-curl.gif">
 

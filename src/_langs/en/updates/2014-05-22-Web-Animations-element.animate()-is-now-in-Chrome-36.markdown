@@ -17,10 +17,10 @@ article:
 authors:
   - brendankenny
 tags:
-  - elementanimate
-  - webanimations
+  - element.animate
+  - Web Animations
   - animations
-permalink: /updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36.html
+permalink: /updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36
 ---
 Animation on the web was once the province of JavaScript, but as the world moved to mobile, animations moved to CSS for the declarative syntax and the optimizations browsers were able to make with it. With 60fps on mobile always your goal, it makes sense to never step outside of what browsers know how to efficiently display.
 

@@ -19,7 +19,7 @@ authors:
 tags:
   - internals
   - performance
-permalink: /updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision.html
+permalink: /updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision
 ---
 If you've been using `requestAnimationFrame` you've enjoyed seeing your paints synchronized to the refresh rate of the screen, resulting in the most high-fidelity animations possible. Plus, you're saving your users CPU fan noise and battery-power when they switch to another tab.
 

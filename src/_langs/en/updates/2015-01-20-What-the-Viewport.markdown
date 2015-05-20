@@ -17,8 +17,8 @@ article:
 authors:
   - mattgaunt
 tags:
-  - virtualviewport
-permalink: /updates/2015/01/virtual-viewport.html
+  - virtual viewport
+permalink: /updates/2015/01/virtual-viewport
 ---
 
 In [Chrome M40](https://code.google.com/p/chromium/issues/detail?id=148816) 

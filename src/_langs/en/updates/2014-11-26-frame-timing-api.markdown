@@ -19,8 +19,8 @@ authors:
 tags:
   - performance
   - testing
-  - frontend
-permalink: /updates/2014/11/frame-timing-api.html
+  - front-end
+permalink: /updates/2014/11/frame-timing-api
 ---
 
 **Please note: this API is not yet implemented; we want [feedback from developers](https://github.com/w3c/frame-timing/issues).**

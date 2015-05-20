@@ -18,7 +18,7 @@ authors:
   - umarhansa
 tags:
   - devtools
-permalink: /updates/2013/12/DevTools-Digest-December-2013.html
+permalink: /updates/2013/12/DevTools-Digest-December-2013
 ---
 A number of updated features have made it into the Chrome DevTools recently, some small, some big. We'll start out with the Element panel's updates and move on to talk about Console, Timeline, and more.
 

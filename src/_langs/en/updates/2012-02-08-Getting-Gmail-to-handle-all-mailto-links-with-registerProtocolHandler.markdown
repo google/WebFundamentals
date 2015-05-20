@@ -16,7 +16,7 @@ article:
   updated_on: 2012-02-08
 authors:
   - paulirish
-permalink: /updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler.html
+permalink: /updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler
 ---
 <p>If you use Gmail you may become frustrated when you click a <code>mailto:</code> link by accident and now your desktop client of Outlook or Mail starts up.
 

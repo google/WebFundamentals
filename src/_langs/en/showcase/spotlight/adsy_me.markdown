@@ -2,7 +2,6 @@
 id: adsy_me
 layout: spotlight
 collection: spotlight
-type: spotlight
 published: true
 
 date: 2015-05-04
@@ -27,7 +26,7 @@ title: "Adsy.me"
 link: http://adsy.me/
 developer: Frederick Tubiermont
 
-description: "A super quick and easy way to build mobile micro sites."
+introduction: "A super quick and easy way to build mobile micro sites."
 pros: |
   Adsy.me is a tool that allows anyone to create a mobile (micro-) website, and the immediately gained my trust by eating their own dogfood: The whole tool is a fantastic mobile web app that feels very responsive and intuitive.
 cons: |

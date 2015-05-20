@@ -18,7 +18,7 @@ authors:
   - sethladd
 tags:
   - html5
-permalink: /updates/2011/10/Keeping-up-with-HTML5-and-browser-support.html
+permalink: /updates/2011/10/Keeping-up-with-HTML5-and-browser-support
 ---
 
 

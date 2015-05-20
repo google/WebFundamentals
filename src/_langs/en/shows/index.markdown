@@ -60,18 +60,6 @@ Fundmentals index: for guide in page.articles.[page.id]
 
   <ul class="guides-list container">
 
-    <li class="guides-list__item g--half theme--{{ tttShow.id }} {% cycle '', 'g--last' %}">
-      <div class="primary-content show-root--image-container">
-        <a href="{{site.baseurl}}{{tttShow.url | canonicalize}}" title="Go to {{tttShow.title}}">
-          <img src="{{site.baseurl}}/shows/imgs/ttt_rect.png" alt="{{tttShow.title}} Hero Image">
-        </a>
-      </div>
-      <div class="secondary-content show-root--info">
-        <h3 class="xlarge"><a href="{{site.baseurl}}{{tttShow.url | canonicalize}}" title="Go to {{tttShow.title}}" class="themed">{{tttShow.title}}</a></h3>
-        <p>{{tttShow.description}}</p>
-      </div>
-    </li>
-
     <li class="guides-list__item g--half theme--{{ http203Show.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
       	<a href="{{site.baseurl}}{{http203Show.url | canonicalize}}" title="Go to {{http203Show.title}}">

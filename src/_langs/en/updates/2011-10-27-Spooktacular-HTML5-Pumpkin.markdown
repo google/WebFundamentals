@@ -18,7 +18,7 @@ authors:
   - sethladd
 tags:
   - halloween
-permalink: /updates/2011/10/Spooktacular-HTML5-Pumpkin.html
+permalink: /updates/2011/10/Spooktacular-HTML5-Pumpkin
 ---
 <p>A fun Halloween treat.</p>
 

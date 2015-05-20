@@ -18,7 +18,7 @@ authors:
   - chriswilson
 tags:
   - webaudio
-permalink: /updates/2014/07/Web-Audio-Changes-in-m36.html
+permalink: /updates/2014/07/Web-Audio-Changes-in-m36
 ---
 Web Audio changes
 --------------------

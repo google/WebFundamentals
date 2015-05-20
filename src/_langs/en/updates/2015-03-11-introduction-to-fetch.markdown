@@ -19,7 +19,7 @@ authors:
 tags:
   - fetch
   - xhr
-permalink: /updates/2015/03/introduction-to-fetch.html
+permalink: /updates/2015/03/introduction-to-fetch
 ---
 
 ## So long XMLHttpRequest

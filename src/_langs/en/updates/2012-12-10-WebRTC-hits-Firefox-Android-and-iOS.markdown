@@ -20,7 +20,7 @@ tags:
   - video
   - webrtc
   - getusermedia
-permalink: /updates/2012/12/WebRTC-hits-Firefox-Android-and-iOS.html
+permalink: /updates/2012/12/WebRTC-hits-Firefox-Android-and-iOS
 ---
 <p>A <strong>lot</strong> has happened with WebRTC over the last few weeks. Time for an update!</p>
 

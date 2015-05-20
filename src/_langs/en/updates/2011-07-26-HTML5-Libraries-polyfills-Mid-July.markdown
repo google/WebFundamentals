@@ -15,7 +15,7 @@ article:
   updated_on: 2011-07-26
 authors:
   - ericbidelman
-permalink: /updates/2011/07/HTML5-Libraries-Pollyfills---Mid-July.html
+permalink: /updates/2011/07/HTML5-Libraries-Pollyfills---Mid-July
 ---
 More awesome libraries popping up all over the place:
 

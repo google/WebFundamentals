@@ -18,7 +18,7 @@ description: When browsing the DOM with the Elements panel, try searching for no
 featured-image: /web/updates/images/2015-05-11-devtools-dom-tree-search-by-css-selector/dom-search-by-selector.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/7-dom-search-by-selector
-permalink: /updates/2015/05/11/search-dom-tree-by-css-selector.html
+permalink: /updates/2015/05/11/search-dom-tree-by-css-selector
 ---
 When browsing the DOM with the Elements panel, try searching for nodes via <kbd class="kbd">CMD/Ctrl+F</kbd> by their CSS selectors.
 

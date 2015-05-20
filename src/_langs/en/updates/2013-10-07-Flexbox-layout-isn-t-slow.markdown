@@ -20,7 +20,7 @@ tags:
   - performance
   - layout
   - css
-permalink: /updates/2013/10/Flexbox-layout-isn-t-slow.html
+permalink: /updates/2013/10/Flexbox-layout-isn-t-slow
 ---
 **TL;DR:** Old flexbox (display: box) is 2.3x slower than new flexbox (display: flex). 
 

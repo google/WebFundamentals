@@ -20,7 +20,7 @@ module Jekyll
     priority :low
 
     def generate(site)
-      updates = getUpdates(site)
+      updates = site.data['articles']['updates']
 
       if updates.nil?
         return
@@ -48,33 +48,26 @@ module Jekyll
       end
 
       # Generate category/product pages
-      categories = site.data['updates']['types']
-      products = site.data['updates']['products']
+      categories = ["news", "tip"]
+      products = ["tools", "chrome", "chrome-devtools"]
 
       # generate /category and /product/category
-      categories.each do |category, val1|
+      categories.each do |category|
         generatePaginatedPage(site, site.source, File.join('updates', category), category, "all")
-        products.each do |product, val2|
+        products.each do |product|
           generatePaginatedPage(site, site.source, File.join('updates', product, category), category, product)
         end
       end
 
       # generate /product
-      products.each do |product, val|
+      products.each do |product|
         generatePaginatedPage(site, site.source, File.join('updates', product), "all", product)
       end
 
       # generate main page
       generatePaginatedPage(site, site.source, File.join('updates'), "all", "all")
 
-      # generate feed
-      site.pages << UpdatesFeedPage.new(site, site.source, File.join('_langs', site.data['curr_lang'], 'updates'), updates)
-
       site.data['tags_updates'] = tags
-    end
-
-    def getUpdates(site)
-      return site.data['articles']['updates'] + site.data['articles']['spotlight'] + site.data['articles']['case-study']
     end
 
     def generatePaginatedPage(site, base, dir, category, product)
@@ -84,7 +77,7 @@ module Jekyll
       per_page = 10
 
       # filter array so it only contains what we need
-      updates = getUpdates(site)
+      updates = site.data['articles']['updates']
       updates = updates.select do |update|
         (category == "all" || update["type"] == category) && (product == "all" || update["product"] == product || update["category"] == product)
       end
@@ -122,7 +115,7 @@ module Jekyll
 
         self.process(@name)
 
-        self.read_yaml(File.join(base, '_layouts'), 'updates.liquid')
+        self.read_yaml(File.join(base, '_layouts'), 'updates-sub.liquid')
 
         self.data['category'] = category
         self.data['product'] = product
@@ -154,7 +147,7 @@ module Jekyll
 
         self.process(@name)
 
-        self.read_yaml(File.join(base, '_layouts'), 'updates.liquid')
+        self.read_yaml(File.join(base, '_layouts'), 'updates-sub.liquid')
 
         title_text = "All updates tagged '%s'"
         description_text = "Tag page for updates tagged %s."
@@ -163,38 +156,6 @@ module Jekyll
         self.data['description'] = sprintf description_text, tag
         self.data['tag'] = @tag
         self.data['updates'] = @updates
-        self.data['langcode'] = @langcode
-        if site.data["language_names"][@langcode].key?('rtl')
-          self.data['rtl'] = site.data["language_names"][@langcode]['rtl'];
-        end
-        self.data['is_localized'] = false
-    end
-
-  end
-
-  class UpdatesFeedPage < Page
-    attr_accessor :tag
-
-    def initialize(site, base, dir, updates)
-        @site = site
-        @base = base
-        @dir  = dir
-        @name = "feed.xml"
-        @tag = tag
-        @updates = updates
-        @langcode = site.data['curr_lang']
-
-        self.process(@name)
-
-        self.read_yaml(File.join(base, '_layouts'), 'feed.liquid')
-
-        title_text = "All updates tagged '%s'"
-        description_text = "Tag page for updates tagged %s."
-
-        self.data['title'] = 'Web Updates'
-        self.data['description'] = 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.'
-        self.data['section'] = 'updates'
-        self.data['items'] = @updates
         self.data['langcode'] = @langcode
         if site.data["language_names"][@langcode].key?('rtl')
           self.data['rtl'] = site.data["language_names"][@langcode]['rtl'];

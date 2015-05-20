@@ -2,7 +2,6 @@
 id: svgomg
 layout: spotlight
 collection: spotlight
-type: spotlight
 published: true
 
 date: 2015-03-24
@@ -26,7 +25,7 @@ title: SVGOMG
 link: https://jakearchibald.github.io/svgomg/
 developer: Jake Archibald
 
-description: "A beautiful, material responsive frontend for SVGO."
+introduction: "A beautiful, material responsive frontend for SVGO."
 pros: |
   Built by our own [Jake Archibald](http://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, ServiceWorker ensures that the app loads quickly and is available offline, and the transitions are smooth on mobile.
 cons: |

@@ -19,7 +19,7 @@ authors:
 tags:
   - video
   - webm
-permalink: /updates/2013/07/Alpha-transparency-in-Chrome-video.html
+permalink: /updates/2013/07/Alpha-transparency-in-Chrome-video
 ---
 # Alpha transparency in Chrome video
 

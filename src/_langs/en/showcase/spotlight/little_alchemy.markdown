@@ -2,8 +2,7 @@
 id: little_alchemy
 layout: spotlight
 collection: spotlight
-type: spotlight
-published: true
+published: false
 
 date: 2015-04-08
 article:
@@ -27,7 +26,8 @@ title: "Little Alchemy"
 link: http://littlealchemy.com/
 developer: Jakub Koziol
 
-description: "A fun, mobile-friendly combination game inspired by its bigger brother Alchemy."
+
+introduction: "A fun, mobile-friendly combination game inspired by its bigger brother Alchemy."
 pros: |
   Little Alchemy is a prime example of using all of the web platform's latest abilities to its full advantage. It uses the [web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) to launch fullscreen when installed and blends in with Android with the help of [theme-color](/web/fundamentals/device-access/stickyness/additional-customizations.html).
 
