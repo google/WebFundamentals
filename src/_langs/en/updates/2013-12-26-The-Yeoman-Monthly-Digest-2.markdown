@@ -19,7 +19,7 @@ authors:
 tags:
   - frontend
   - workflow
-  - tooling
+  - tools
   - yeoman
 permalink: /updates/2013/12/The-Yeoman-Monthly-Digest-2
 ---

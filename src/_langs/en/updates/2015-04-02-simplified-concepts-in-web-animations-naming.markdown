@@ -18,7 +18,7 @@ authors:
   - samthorogood
 tags:
   - animation
-  - web-animation
+  - webanimation
 permalink: /updates/2015/04/web-animations-naming
 ---
 

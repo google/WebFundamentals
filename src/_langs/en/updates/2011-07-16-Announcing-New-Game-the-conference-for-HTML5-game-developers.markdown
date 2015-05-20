@@ -17,7 +17,7 @@ article:
 authors:
   - sethladd
 tags:
-  - gaming
+  - games
 permalink: /updates/2011/07/Announcing-New-Game-the-conference-for-HTML5-game-developers
 ---
 Please join us at "New Game":http://newgameconf.com , to be held November 1-2, 2011 in San Francisco, CA.  New Game is the first HTML5 game conference for North America.

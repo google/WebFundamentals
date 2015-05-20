@@ -17,9 +17,9 @@ article:
 authors:
   - mattgaunt
 tags:
-  - push messaging
+  - pushmessaging
   - notifications
-  - service worker
+  - serviceworker
 permalink: /updates/2015/03/push-notificatons-on-the-open-web
 ---
 

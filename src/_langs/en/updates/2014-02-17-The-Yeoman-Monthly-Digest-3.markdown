@@ -20,7 +20,7 @@ tags:
   - front-end
   - scaffolding
   - yeoman
-  - tooling
+  - tools
 permalink: /updates/2014/02/The-Yeoman-Monthly-Digest-3
 ---
 Allo! Allo! This past month saw the Yeoman community grow to [472](http://yeoman.io/community-generators.html) generators. We’re excited to see so much passion for project scaffolding and are working on some new features to enable generators to extend and build on top of each other. 
