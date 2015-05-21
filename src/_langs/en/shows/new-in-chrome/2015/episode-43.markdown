@@ -6,7 +6,7 @@ layout: shows/single-video
 collection: newinchrome-2015
 title: "Chrome 43 - Cut and Copy, changes to DOM attributes and WebMIDI"
 description: "Chrome 43 includes Cut and Copy, changes to DOM attributes & WebMIDI. Pete LePage will tell you how you can use these features to create magical moments for your users!"
-published: false
+published: true
 showYoutubeID: dQw4w9WgXcQ
 
 date: 2015-05-19 00:00:00

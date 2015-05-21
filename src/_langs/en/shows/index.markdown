@@ -24,6 +24,7 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign udacityShow = null %}
 {% assign lazywebShow = null %}
 {% assign tttShow = null %}
+{% assign nicShow = null %}
 {% for show in shows %}
   {% if show.id == 'cds' %}
     {% assign cdsShow = show %}
@@ -42,6 +43,9 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% endif %}
   {% if show.id == 'ttt' %}
     {% assign tttShow = show %}
+  {% endif %}
+  {% if show.id == 'newinchrome' %}
+    {% assign nicShow = show %}
   {% endif %}
 {% endfor %}
 
@@ -93,6 +97,18 @@ Fundmentals index: for guide in page.articles.[page.id]
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{lazywebShow.url | canonicalize}}" title="Go to {{lazywebShow.title}}" class="themed">{{lazywebShow.title}}</a></h3>
         <p>{{lazywebShow.description}}</p>
+      </div>
+    </li>
+
+    <li class="guides-list__item g--half theme--{{ nicShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+        <a href="{{site.baseurl}}{{nicShow.url | canonicalize}}" title="Go to {{nicShow.title}}">
+          <img src="{{site.baseurl}}/shows/imgs/nic_rect.png" alt="{{nicShow.title}} Hero Image">
+        </a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{nicShow.url | canonicalize}}" title="Go to {{nicShow.title}}" class="themed">{{nicShow.title}}</a></h3>
+        <p>{{nicShow.description}}</p>
       </div>
     </li>
 
