@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Quickly monitor events from the Console Panel

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Command click to add multiple cursors in the Sources Panel

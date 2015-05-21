@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: 'DevTools Timeline: Now Providing the Full Story'
