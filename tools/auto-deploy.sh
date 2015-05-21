@@ -27,6 +27,7 @@ openssl aes-256-cbc -d -K $encrypted_29722e8fb5df_key -iv $encrypted_29722e8fb5d
         -in tools/web-central-44673aab0806.json.enc \
         -out tools/web-central-44673aab0806.json
 $GCLOUD auth activate-service-account $SERVICE_ACCOUNT \
-        --key-file tools/web-central-44673aab0806.json
+        --key-file tools/web-central-44673aab0806.json \
+        --quiet
 $GCLOUD preview app deploy ./appengine/app.yaml --version travis-master --project web-central
 
