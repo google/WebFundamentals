@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: false
 title: Some UI and feature enhancements to the Colour Picker tool

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Autocomplete for bracket notation

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Go to a line number at a specific column

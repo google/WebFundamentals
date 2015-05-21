@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Copy the response of a network resource to your clipboard

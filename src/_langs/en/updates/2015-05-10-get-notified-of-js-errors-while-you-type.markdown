@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Get notified of JS errors while you type
