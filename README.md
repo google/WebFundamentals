@@ -1,4 +1,4 @@
-Web Fundamentals [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
+Web Fundamentals [![Build Status](https://drone.io/github.com/google/WebFundamentals/status.png)](https://drone.io/github.com/google/WebFundamentals/latest)
 ================
 
 Web Fundamentals is a technical documentation center for multi-device web
@@ -84,7 +84,7 @@ Mac
 1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
 
 **Note:** On OSX, you may see an error about *Warning: EMFILE, too many open files*.
-If so you will need to increase the maximum number of open file handles.  
+If so you will need to increase the maximum number of open file handles.
 Use `ulimit -n 1024` to increase the maximum number of open files to 2048 from
 the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc`
 or `.zshrc`. See [https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files](https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files)
