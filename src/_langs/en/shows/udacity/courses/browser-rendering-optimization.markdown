@@ -12,7 +12,7 @@ udacity:
   est_time: Approx 1 month
   instructor: paullewis
   preview:
-    youtube: NNcY8HZjXz0
+    youtube: yJo9lZAEqb0
 nofeed: true
 date: 2015-04-15 00:00:00
 article:
