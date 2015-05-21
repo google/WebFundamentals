@@ -5,9 +5,9 @@ published: true
 title: "Permissions API for the Web"
 description: "The Permissions API gives you a central place to check the permission status of an API."
 
-date: 2015-05-05
+date: 2015-04-05
 article:
-  written_on: 2015-05-05
+  written_on: 2015-04-05
   updated_on: 2015-05-08
 authors:
 - mattgaunt
@@ -15,7 +15,7 @@ collection: updates
 type: news
 category: chrome
 product: chrome
-permalink: /updates/2015/05/permissions-api-for-the-web.html
+permalink: /updates/2015/04/permissions-api-for-the-web.html
 ---
 
 If you've worked with the [Geolocation 
