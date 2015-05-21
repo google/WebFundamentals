@@ -17,5 +17,7 @@ toc:
     path: /shows/udacity/
   - title: Chrome Dev Summit
     path: /shows/cds/
+  - title: "New In Chrome"
+    path: /shows/new-in-chrome/
   - title: DevBytes
     path: /shows/devbytes/
