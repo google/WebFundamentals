@@ -9,3 +9,5 @@ node_modules/
 .ruby-gemset
 .rvmrc
 .grunt-gae-pid
+src/css/styles.css
+src/css/styles.min.css
