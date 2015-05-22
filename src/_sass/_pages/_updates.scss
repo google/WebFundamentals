@@ -587,7 +587,7 @@ ul.short-updates {
 
   h3 {
     font-size: 24px;
-    line-height: 1.5em;
+    line-height: 1.3em;
 
     padding: 16px;
     padding-bottom: 16px;
@@ -597,8 +597,8 @@ ul.short-updates {
   .description {
     padding: 16px;
     padding-top: 0;
-    font-size: 14px;
-    color: #333;
+    line-height: 1.3;
+    color: #666;
 
     span {
       background: #4B8BFA;
@@ -615,8 +615,8 @@ ul.short-updates {
   }
 
   .tags {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 16px;
+    padding-right: 16px;
     font-size: 14px;
     margin-bottom: 8px;
   }
