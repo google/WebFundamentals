@@ -150,5 +150,57 @@
 
     })();
     </script>
+
+    {% comment %}
+      This helper script checks if a G+ comment block should be loaded and loads it if needed.
+    {% endcomment %}
+    <script>
+    (function() {
+
+      var getElementTop = function(elem) {
+        var top = elem.offsetTop;
+        var offsetParent = elem.offsetParent;
+
+        while ( offsetParent != null ) {
+          top += offsetParent.offsetTop;
+          offsetParent = offsetParent.offsetParent;
+        }
+
+        return top;
+      }
+
+      var videoElements = document.querySelectorAll("video.autoplay-animation");
+      if(!videoElements.length) {
+        return;
+      }
+
+      var items = [];
+      for (var i = 0; i < videoElements.length; i++) {
+        items.push({
+          element: videoElements[i],
+          top: getElementTop(videoElements[i]),
+          height: videoElements[i].offsetHeight,
+          playing: false
+        });
+      }
+
+      window.addEventListener('scroll', function(e) {
+        var scrollY = window.scrollY;
+        for (var i = 0, item; i < items.length; i++) {
+          item = items[i];
+          if(-scrollY + item.top > -item.height && window.innerHeight - (-scrollY + item.top) > 0) {
+            if(item.element.paused) {
+              item.element.play();
+            }
+          } else {
+            if(!item.element.paused) {
+              item.element.pause();
+            }
+          }
+        }
+      }, false);
+
+    })();
+    </script>
   </body>
 </html>
