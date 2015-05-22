@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -17,7 +17,7 @@ article:
   updated_on: 2014-10-02
 authors:
   - ewagasperowicz
-permalink: /updates/2014/10/Send-beacon-data-in-Chrome-39
+permalink: /updates/2014/10/Send-beacon-data-in-Chrome-39.html
 ---
 Sometimes it is handy to send some data from a web page to a web server
 without the need to wait for a reply. For example, we might want

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - getusermedia
   - screenshare
   - webrtc
-permalink: /updates/2012/12/Screensharing-with-WebRTC
+permalink: /updates/2012/12/Screensharing-with-WebRTC.html
 ---
 <p><a href="http://updates.html5rocks.com/2012/12/WebRTC-hits-Firefox-Android-and-iOS">As we reported last week</a>, there's been a <strong>lot</strong> happening lately with our old friend <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">WebRTC</a>.</p>
 

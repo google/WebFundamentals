@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,7 +19,7 @@ authors:
 tags:
   - css
   - dom
-permalink: /updates/2012/03/A-New-Experimental-Feature-style-scoped
+permalink: /updates/2012/03/A-New-Experimental-Feature-style-scoped.html
 ---
 Chromium recently implemented a new feature from HTML5: scoped stylesheets, aka.
 `<style scoped>`. A web author can limit style rules to only apply to a part of a page by setting the ‘scoped’ attribute on a `<style>` element that is the direct child of the root element of the subtree you want the styles to be applied to. This limits the styles to affect just the element that is the parent of the `<style>` element and all of its descendants.

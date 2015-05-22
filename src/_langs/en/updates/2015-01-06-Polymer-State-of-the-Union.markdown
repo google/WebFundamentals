@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - webcomponents
   - polymer
   - chromedevsummit
-permalink: /updates/2015/01/polymer-state-of-the-union
+permalink: /updates/2015/01/polymer-state-of-the-union.html
 ---
 
 # Polymer: State of the Union

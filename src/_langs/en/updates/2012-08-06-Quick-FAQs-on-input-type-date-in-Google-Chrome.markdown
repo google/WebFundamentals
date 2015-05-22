@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,7 +18,7 @@ authors:
   - agektmr
 tags:
   - forms
-permalink: /updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome
+permalink: /updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome.html
 ---
 * This article is written by a Chrome software engineer [Kent Tamura](https://plus.google.com/104770450049736549185/about).
 

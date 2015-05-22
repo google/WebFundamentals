@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - mobile
   - performance
   - touchevent
-permalink: /updates/2013/12/300ms-tap-delay-gone-away
+permalink: /updates/2013/12/300ms-tap-delay-gone-away.html
 ---
 <style>
   .tag {

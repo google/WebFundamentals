@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,7 +18,7 @@ authors:
   - chriswilson
 tags:
   - webaudio
-permalink: /updates/2014/07/Web-Audio-Changes-in-m36
+permalink: /updates/2014/07/Web-Audio-Changes-in-m36.html
 ---
 Web Audio changes
 --------------------

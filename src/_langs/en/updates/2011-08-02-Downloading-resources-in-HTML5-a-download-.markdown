@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -16,7 +16,7 @@ article:
   updated_on: 2011-08-02
 authors:
   - ericbidelman
-permalink: /updates/2011/08/Downloading-resources-in-HTML5-a-download
+permalink: /updates/2011/08/Downloading-resources-in-HTML5-a-download.html
 ---
 Chrome now supports the HTML spec's new `download` attribute to `a` elements. When used, this attribute signifies that the resource it points to should be downloaded by the browser rather than navigating to it.
 
