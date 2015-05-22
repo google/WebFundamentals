@@ -57,7 +57,7 @@ The Styles pane within the Elements panel shows the CSS rules applied to the ind
 
 Use the **Elements panel** to inspect all elements in your page in one DOM tree. Select any element and inspect the styles applied to it.
 
-![Inspect element animation](animations/inspect-element.png)
+{% animation animations/inspect-element.mp4 %}
 
 ### Inspect an element
 
