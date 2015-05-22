@@ -44,6 +44,8 @@
 {% if page.nofeed != true %}
 	{% if page.feedPath %}
 <link rel="alternate" type="application/rss+xml" title="{{page.feedName}}" href="{{site.baseurl}}/{{page.feedPath}}">
+	{% elsif include.feedURL %}
+<link rel="alternate" type="application/rss+xml" title="{{include.feedName}}" href="{{include.feedURL}}">
   {% elsif page.feedURL %}
 <link rel="alternate" type="application/rss+xml" title="{{page.feedName}}" href="{{page.feedURL}}">
 	{% else %}

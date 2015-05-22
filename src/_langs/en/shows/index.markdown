@@ -135,5 +135,5 @@ Fundmentals index: for guide in page.articles.[page.id]
   </ul>
 </div>
 
-{% capture feedUrl %}{{site.baseurl}}/shows/feed.xml{% endcapture %}
-{% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink="https://feedburner.google.com/fb/a/mailverify?uri=GoogleDeveloperWebShows&amp;loc=en_US" %}
+{% capture feedURL %}{{site.baseurl}}/shows/feed.xml{% endcapture %}
+{% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink="https://feedburner.google.com/fb/a/mailverify?uri=GoogleDeveloperWebShows&amp;loc=en_US" %}
