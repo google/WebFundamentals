@@ -6,7 +6,7 @@ CLOUDSDK_URL=https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
 SDK_DIR=google-cloud-sdk
 
 # deploy only master builds
-if [ "$DRONE_BRANCH" != "master" ]; then
+if [ "$TRAVIS_BRANCH" != "master" ] || [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   echo "Skip deploy."
   exit 0
 fi
