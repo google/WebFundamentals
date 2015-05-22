@@ -1,5 +1,5 @@
-    {% capture feedUrl %}/shows/feed.xml{% endcapture %}
-    {% include head.liquid feedUrl=feedUrl feedName='Web Shows' %}
+    {% capture feedURL %}/shows/feed.xml{% endcapture %}
+    {% include head.liquid feedURL=feedURL feedName='Web Shows' %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">

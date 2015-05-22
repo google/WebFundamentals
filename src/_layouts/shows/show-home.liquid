@@ -13,8 +13,8 @@
 
 
   <!-- Template Starts Here -->
-    {% capture feedUrl %}{{site.baseurl}}/shows/{{page.id}}/feed.xml{% endcapture %}
-    {% include head.liquid feedUrl=feedUrl feedName=page.title %}
+    {% capture feedURL %}{{site.baseurl}}/shows/{{page.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedURL=feedURL feedName=page.title %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
@@ -108,7 +108,7 @@
     {% endwrap %}
 
     <!-- BEFORE -->
-    {% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink=page.emailSubscriptionLink %}
+    {% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink=page.emailSubscriptionLink %}
     <!-- AFTER -->
 
     {% include cc.liquid %}
