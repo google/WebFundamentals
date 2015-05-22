@@ -3,7 +3,7 @@ id: episode-16
 showid: polycast
 class: polycast
 layout: shows/single-video
-collection: lazyweb-2015
+collection: polycasts-season-2
 title: "Episode 16"
 description: "Today I'm going to show you how to add public properties and methods to a Polymer element. This will give your tag a programmable interface so it can be manipulated with JavaScript."
 published: true
