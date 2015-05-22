@@ -107,8 +107,11 @@
 
     @include medium {
       display: flex;
+      display: -webkit-flex;
       align-items: flex-start;
+      -webkit-align-items: flex-start;
       justify-content: space-between;
+      -webkit-justify-content: space-between;
     }
 
   }

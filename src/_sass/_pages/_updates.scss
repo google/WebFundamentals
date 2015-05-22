@@ -120,6 +120,8 @@
   .container {
 
     background-image: none;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
 
     h1.headliner {
       font-size: 3em;
@@ -132,6 +134,12 @@
     p.headliner {
       font-weight: 300;
       margin-bottom: 0;
+      small {
+        font-size: 0.7em;
+        line-height: 1;
+        /* font-style: italic; */
+        font-weight: 300;
+      }
     }
 
     a {
@@ -238,10 +246,6 @@
 
     min-width: 150px;
     padding-top: 0;
-
-    @media screen and (min-width: 1230px) {
-      margin-left: -158px;
-    }
 
     ul {
       padding: 0;
