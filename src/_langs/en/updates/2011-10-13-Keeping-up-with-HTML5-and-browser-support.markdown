@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,7 +18,7 @@ authors:
   - sethladd
 tags:
   - html5
-permalink: /updates/2011/10/Keeping-up-with-HTML5-and-browser-support
+permalink: /updates/2011/10/Keeping-up-with-HTML5-and-browser-support.html
 ---
 
 

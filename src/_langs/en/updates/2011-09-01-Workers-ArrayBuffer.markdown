@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,7 +19,7 @@ authors:
 tags:
   - binary
   - workers
-permalink: /updates/2011/09/Workers-ArrayBuffer
+permalink: /updates/2011/09/Workers-ArrayBuffer.html
 ---
 As of <strike>[crbug.com/73313](http://crbug.com/73313)</strike>, Chrome 13 and FF5 support sending an `ArrayBuffer` (or Typed Array) to/from a Web Worker. For example:
 

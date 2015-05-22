@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - webcomponents
   - polymer
   - chromedevsummit
-permalink: /updates/2015/01/lets-build-some-apps-with-polymer
+permalink: /updates/2015/01/lets-build-some-apps-with-polymer.html
 ---
 
 # Let's build some apps with Polymer!

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - layout
   - css
   - grids
-permalink: /updates/2014/03/Get-on-the-CSS-Grid
+permalink: /updates/2014/03/Get-on-the-CSS-Grid.html
 ---
 When building a Web Application, one of the first things that's needed is a way to lay out the content of your app.
 

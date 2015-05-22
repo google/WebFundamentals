@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -21,7 +21,7 @@ tags:
   - multimedia
   - getusermedia
   - audio
-permalink: /updates/2012/09/Live-Web-Audio-Input-Enabled
+permalink: /updates/2012/09/Live-Web-Audio-Input-Enabled.html
 ---
 <p>I'm really excited by a new feature that went in to yesterday's Chrome Canary build (23.0.1270.0) - the ability to get low-latency access to live audio from a microphone or other audio input on OSX!  (This has not yet been enabled on Windows - but don't worry, we're working on it!)</p>
 

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -21,7 +21,7 @@ tags:
   - polymer
   - webcomponents
   - tools
-permalink: /updates/2014/01/Yo-Polymer-A-Whirlwind-Tour-Of-Web-Component-Tooling
+permalink: /updates/2014/01/Yo-Polymer-A-Whirlwind-Tour-Of-Web-Component-Tooling.html
 ---
 [Web Components](http://www.w3.org/TR/components-intro/) are going to change everything you think you know about building for the web. For the first time, the web will have low level APIs allowing us to not only create our own HTML tags but also encapsulate logic and CSS. No more global stylesheet soup or boilerplate code! It’s a brave new world where everything is an element.
 

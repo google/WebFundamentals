@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,7 +19,7 @@ authors:
 tags:
   - dnd
   - filesystem
-permalink: /updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available
+permalink: /updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available.html
 ---
 As web apps evolve, you might have found it handy to let users drag and drop files from the desktop onto the browser to edit, upload, share, etc. But unfortunately, we’ve been unable to drag and drop folders onto web pages. Luckily, beginning with Chrome 21, this issue will be addressed (already available in the Chrome dev channel).
 

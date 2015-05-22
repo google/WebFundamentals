@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -22,7 +22,7 @@ tags:
   - android
   - audio
   - beta
-permalink: /updates/2013/10/Web-Audio-live-audio-input---now-on-Android
+permalink: /updates/2013/10/Web-Audio-live-audio-input---now-on-Android.html
 ---
 One of the consistent questions I keep fielding over on [Stack Overflow](http://stackoverflow.com/questions/tagged/web-audio) is "why doesn't audio input work?" - to which the answer kept turning out to be "because you're testing on Android, and we don't have it hooked up yet."
 

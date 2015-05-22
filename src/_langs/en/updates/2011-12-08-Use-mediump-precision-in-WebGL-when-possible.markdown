@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -21,7 +21,7 @@ tags:
   - performance
   - webgl
   - graphics
-permalink: /updates/2011/12/Use-mediump-precision-in-WebGL-when-possible
+permalink: /updates/2011/12/Use-mediump-precision-in-WebGL-when-possible.html
 ---
 Heads-up from our friends at Opera, who have been testing WebGL on actual OpenGL ES 2.0 hardware: many demos and applications use highp precision in fragment shaders when it's not really warranted.
 

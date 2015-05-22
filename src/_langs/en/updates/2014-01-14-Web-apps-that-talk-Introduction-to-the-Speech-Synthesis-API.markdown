@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -21,7 +21,7 @@ tags:
   - voice
   - webspeech
   - synthesis
-permalink: /updates/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API
+permalink: /updates/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API.html
 ---
 The [Web Speech API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html) adds [voice recognition](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#speechreco-section) (speech to text) and [speech synthesis](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#tts-section) (text to speech) to JavaScript. The post briefly covers the latter, as the API recently landed in Chrome 33 (mobile and desktop). If you're interested in speech recognition, [Glen Shires](http://www.html5rocks.com/en/profiles/#glenshires) had a great writeup a while back on the voice recognition feature, "[Voice Driven Web Apps: Introduction to the Web Speech API](http://updates.html5rocks.com/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API)".
 
@@ -33,16 +33,6 @@ The most basic use of the synthesis API is to pass the `speechSynthesis.speak()`
     var msg = new SpeechSynthesisUtterance('Hello World');
     window.speechSynthesis.speak(msg);
 {% endhighlight %}
-
-Try it!
-<a id="speech-btn">What am I reading?</a>
-<script>
-var button = document.getElementById('speech-btn').addEventListener('click',
-function onSpeechClick() {
-  var msg = new SpeechSynthesisUtterance('You are reading ' + document.title);
-  window.speechSynthesis.speak(msg);
-});
-</script>
 
 However, you can also alter parameters to effect the volume, speech rate, pitch, voice, and language:
 

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -21,7 +21,7 @@ tags:
   - scaffolding
   - yeoman
   - tools
-permalink: /updates/2014/02/The-Yeoman-Monthly-Digest-3
+permalink: /updates/2014/02/The-Yeoman-Monthly-Digest-3.html
 ---
 Allo! Allo! This past month saw the Yeoman community grow to [472](http://yeoman.io/community-generators.html) generators. We’re excited to see so much passion for project scaffolding and are working on some new features to enable generators to extend and build on top of each other. 
 
@@ -147,6 +147,5 @@ If you’ve written an article, given a talk or created a generator you think wo
 Until the next time we run `yo digest`, happy scaffolding and don't be afraid - Yeoman is here to help, not replace you :D 
 
 <blockquote class="twitter-tweet" lang="en"><p>I’m genuinely scared that one day I’m going to be replaced by a <a href="https://twitter.com/yeoman">@yeoman</a> generator.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/statuses/431764751610548225">February 7, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 *With thanks for the rest of the Yeoman team for their reviews*

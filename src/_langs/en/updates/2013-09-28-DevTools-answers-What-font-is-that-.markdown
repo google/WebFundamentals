@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - devtools
   - webfonts
   - tools
-permalink: /updates/2013/09/DevTools-answers-What-font-is-that
+permalink: /updates/2013/09/DevTools-answers-What-font-is-that.html
 ---
 Chrome DevTools can [now](http://crbug.com/135489) tell you **exactly what typeface is being used to render text**. 
 
