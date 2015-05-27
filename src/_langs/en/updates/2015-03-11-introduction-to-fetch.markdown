@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,7 +19,7 @@ authors:
 tags:
   - fetch
   - xhr
-permalink: /updates/2015/03/introduction-to-fetch
+permalink: /updates/2015/03/introduction-to-fetch.html
 ---
 
 ## So long XMLHttpRequest

@@ -65,7 +65,7 @@ module Jekyll
       end
 
       # generate main page
-      generatePaginatedPage(site, site.source, File.join('updates'), "all", "all")
+      generatePaginatedPage(site, site.source, File.join('updates'), "all", "all", true)
 
       # generate feed
       site.pages << UpdatesFeedPage.new(site, site.source, File.join('_langs', site.data['curr_lang'], 'updates'), updates)
@@ -77,7 +77,7 @@ module Jekyll
       return site.data['articles']['updates'] + site.data['articles']['spotlight'] + site.data['articles']['case-study']
     end
 
-    def generatePaginatedPage(site, base, dir, category, product)
+    def generatePaginatedPage(site, base, dir, category, product, notools=nil)
 
       pag_root = dir
       dir = File.join('_langs', site.data['curr_lang'], dir)
@@ -86,7 +86,9 @@ module Jekyll
       # filter array so it only contains what we need
       updates = getUpdates(site)
       updates = updates.select do |update|
-        (category == "all" || update["type"] == category) && (product == "all" || update["product"] == product || update["category"] == product)
+        (category == "all" || update["type"] == category) \
+        && (product == "all" || update["product"] == product || update["category"] == product) \
+        && (notools.nil? || update['category'] != 'tools')
       end
       updates = updates.sort { |x,y| y["date"] <=> x["date"] }
 

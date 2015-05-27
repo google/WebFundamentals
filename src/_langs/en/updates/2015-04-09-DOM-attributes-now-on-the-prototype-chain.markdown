@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -17,8 +17,8 @@ article:
 authors:
   - paulkinlan
 tags:
-  - DOM
-permalink: /updates/2015/04/DOM-attributes-now-on-the-prototype
+  - dom
+permalink: /updates/2015/04/DOM-attributes-now-on-the-prototype.html
 ---
 
 The Chrome team recently [announced that we are moving DOM properties to the prototype chain](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4).  This change, implemented in [Chrome 43](https://www.chromestatus.com/feature/6052436003258368) - (Beta as of mid April 2015) -  brings Chrome more in line with the [Web IDL Spec](https://heycam.github.io/webidl/#es-attributes ) and other browsers’ implementations, such as IE and Firefox.  *Edit: clarified* &nbsp; Older WebKit based browsers, are currently not compatible with the spec, however Safari now is. 

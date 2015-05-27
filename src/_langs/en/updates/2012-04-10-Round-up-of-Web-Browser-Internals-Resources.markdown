@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,97 +19,8 @@ authors:
 tags:
   - internals
   - performance
-permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
+permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources.html
 ---
-<style>
-.da-thumbs {
-	list-style: none;
-	width: 690px;
-	min-height: 600px;
-	position: relative;
-	margin: 20px auto;
-	padding: 0;
-
-
-}
-.da-thumbs li {
-	float: left;
-	margin: 5px;
-	background: #fff;
-	padding: 8px;
-	position: relative;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-.da-thumbs li a,
-.da-thumbs li a img {
-	display: block;
-	position: relative;
-}
-.da-thumbs li a {
-	overflow: hidden;
-}
-.da-thumbs li a div {
-	position: absolute;
-	background: rgba(75,75,75,0.7);
-	width: 100%;
-	height: 100%;
-}
-.da-thumbs li a div.da-animate {
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-/* Initial state classes: */
-.da-slideFromTop {
-	left: 0px;
-	top: -100%;
-}
-.da-slideFromBottom {
-	left: 0px;
-	top: 100%;
-}
-.da-slideFromLeft {
-	top: 0px;
-	left: -100%;
-}
-.da-slideFromRight {
-	top: 0px;
-	left: 100%;
-}
-/* Final state classes: */
-.da-slideTop {
-	top: 0px;
-}
-.da-slideLeft {
-	left: 0px;
-}
-.da-thumbs li a div span {
-	display: block;
-	padding: 10px 0;
-	margin: 25px 20px 20px 20px;
-	font-weight: normal;
-	color: rgba(255,255,255,0.9);
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-	border-bottom: 1px solid rgba(255,255,255,0.5);
-	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
-	font-size: 20px;
-   line-height: 1.2;
-}
-
-
-.da-thumbs li a img {
-	width: 200px;
-}
-
-
-.da-thumbs li a img.big {
-	width: 432px;
-}
-
-
-</style>
 
 <p>In many cases, we treat web browsers as a black box. But as we gain a better understanding of how they work, we not only recognize where to make smart optimizations but also we push them farther. </p>
 
@@ -213,20 +124,3 @@ permalink: /updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
 <p>
 If you know of other browser internals posts to capture, link them in the comments!
 </p>
-
-
-		<script>
-		(function(b,c){b.HoverDir=function(d,e){this.$el=b(e);this._init(d)};b.HoverDir.defaults={hoverDelay:0,reverse:false};b.HoverDir.prototype={_init:function(d){this.options=b.extend(true,{},b.HoverDir.defaults,d);this._loadEvents()},_loadEvents:function(){var d=this;this.$el.on("mouseenter.hoverdir, mouseleave.hoverdir",function(i){var g=b(this),h=i.type,e=g.find("div"),j=d._getDir(g,{x:i.pageX,y:i.pageY}),f=d._getClasses(j);e.removeClass();if(h==="mouseenter"){e.hide().addClass(f.from);clearTimeout(d.tmhover);d.tmhover=setTimeout(function(){e.show(0,function(){b(this).addClass("da-animate").addClass(f.to)})},d.options.hoverDelay)}else{e.addClass("da-animate");clearTimeout(d.tmhover);e.addClass(f.from)}})},_getDir:function(f,j){var e=f.width(),g=f.height(),d=(j.x-f.offset().left-(e/2))*(e>g?(g/e):1),k=(j.y-f.offset().top-(g/2))*(g>e?(e/g):1),i=Math.round((((Math.atan2(k,d)*(180/Math.PI))+180)/90)+3)%4;return i},_getClasses:function(e){var f,d;switch(e){case 0:(!this.options.reverse)?f="da-slideFromTop":f="da-slideFromBottom";d="da-slideTop";break;case 1:(!this.options.reverse)?f="da-slideFromRight":f="da-slideFromLeft";d="da-slideLeft";break;case 2:(!this.options.reverse)?f="da-slideFromBottom":f="da-slideFromTop";d="da-slideTop";break;case 3:(!this.options.reverse)?f="da-slideFromLeft":f="da-slideFromRight";d="da-slideLeft";break}return{from:f,to:d}}};var a=function(d){if(this.console){console.error(d)}};b.fn.hoverdir=function(e){if(typeof e==="string"){var d=Array.prototype.slice.call(arguments,1);this.each(function(){var f=b.data(this,"hoverdir");if(!f){a("cannot call methods on hoverdir prior to initialization; attempted to call method '"+e+"'");return}if(!b.isFunction(f[e])||e.charAt(0)==="_"){a("no such method '"+e+"' for hoverdir instance");return}f[e].apply(f,d)})}else{this.each(function(){var f=b.data(this,"hoverdir");if(!f){b.data(this,"hoverdir",new b.HoverDir(e,this))}})}return this}})(jQuery);
-		</script>
-
-		<script type="text/javascript">
-			$(function() {
-				$('#da-thumbs > li').hoverdir();
-				$('a div').addClass('da-slideFromLeft da-slideLeft da-animate')
-			});
-			$(window).load(function(){
-				setTimeout(function(){
-					$('a div').removeClass(' da-slideLeft');
-				}, 1700);
-			})
-		</script>

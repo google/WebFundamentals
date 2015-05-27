@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
 
 title: "A new home for DevTools"
 description: "We've moved into a shiny new home at developer.google.com/web have great new tutorials and tips for you."
-permalink: /updates/2015/04/devtools-new-home
+permalink: /updates/2015/04/devtools-new-home.html
 ---
 
 When you're reading this, you're probably already close to our new home at http://developers.google.com/web, Google's new one-stop destination for everything web-related.

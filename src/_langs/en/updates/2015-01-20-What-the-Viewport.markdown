@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -17,8 +17,8 @@ article:
 authors:
   - mattgaunt
 tags:
-  - virtual viewport
-permalink: /updates/2015/01/virtual-viewport
+  - virtualviewport
+permalink: /updates/2015/01/virtual-viewport.html
 ---
 
 In [Chrome M40](https://code.google.com/p/chromium/issues/detail?id=148816) 

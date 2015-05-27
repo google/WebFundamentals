@@ -27,8 +27,8 @@
 
   <!-- Template Starts Here -->
 
-    {% capture feedUrl %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
-    {% include head.liquid feedUrl=feedUrl feedName=showDetails.title %}
+    {% capture feedURL %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedURL=feedURL feedName=showDetails.title %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
@@ -90,7 +90,7 @@
 
     {% endwrap %}
 
-    {% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink=showDetails.emailSubscriptionLink %}
+    {% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink=showDetails.emailSubscriptionLink %}
 
     {% include cc.liquid %}
     {% include footer.liquid %}

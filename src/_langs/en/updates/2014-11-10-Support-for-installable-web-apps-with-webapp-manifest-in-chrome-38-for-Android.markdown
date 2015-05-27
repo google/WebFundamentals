@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,8 +19,8 @@ authors:
 tags:
   - mobile
   - apps
-  - front-end
-permalink: /updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
+  - frontend
+permalink: /updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android.html
 ---
 
 For Web Apps to be successful they need to work how the user would expect an native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.  

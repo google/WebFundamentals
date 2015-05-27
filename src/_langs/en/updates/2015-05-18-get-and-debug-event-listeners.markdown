@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Get and debug event listeners
@@ -17,7 +17,7 @@ description: Get and debug event listeners in DevTools with these console comman
 featured-image: /web/updates/images/2015-05-20-get-and-debug-event-listeners/get-debug-event-listeners.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/31-get-debug-event-listeners
-permalink: /updates/2015/05/18/get-and-debug-event-listeners
+permalink: /updates/2015/05/18/get-and-debug-event-listeners.html
 ---
 <img src="/web/updates/images/2015-05-20-get-and-debug-event-listeners/get-debug-event-listeners.gif" alt="Get and debug event listeners">
 

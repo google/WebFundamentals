@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,7 +18,7 @@ authors:
   - ericbidelman
 tags:
   - offline
-permalink: /updates/2011/06/navigator-onLine-in-Chrome-Dev-channel-1
+permalink: /updates/2011/06/navigator-onLine-in-Chrome-Dev-channel-1.html
 ---
 With the [offline APIs](http://www.html5rocks.com/features/offline) in HTML5, there's no excuse not to provide a flawless offline experience for users. One thing that can help this story is the `navigator.onLine` property; a feature that recently landed in Chrome dev channel. This property returns `true` or `false` depending on whether or not the app has network connectivity:
 

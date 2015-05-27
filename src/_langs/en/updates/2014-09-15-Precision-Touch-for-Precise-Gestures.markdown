@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -17,8 +17,8 @@ article:
 authors:
   - mattgaunt
 tags:
-  - TouchEvents
-permalink: /updates/2014/09/Precision-Touch-for-Precise-Gestures
+  - touchevent
+permalink: /updates/2014/09/Precision-Touch-for-Precise-Gestures.html
 ---
 A [change landed](https://code.google.com/p/chromium/issues/detail?id=323935) in
 the implementation of Chrome's [TouchEvents](https://dvcs.w3.org/hg/webevents/raw-file/v1-errata/touchevents.html#attributes)

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -21,7 +21,7 @@ tags:
   - css
   - filters
   - graphics
-permalink: /updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit
+permalink: /updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit.html
 ---
 ### Background
 

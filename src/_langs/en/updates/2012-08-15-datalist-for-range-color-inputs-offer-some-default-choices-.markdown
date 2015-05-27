@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,7 +19,7 @@ authors:
 tags:
   - forms
   - datalist
-permalink: /updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices
+permalink: /updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices.html
 ---
 Chrome started to support `datalist` for `input[type=text]` in Chrome 20. `datalist` helps developers provide recommended values, while allowing users the liberty to write arbitrary values at the same time. Beginning with Chrome 23, you can use `datalist` for `input[type=range]` and `input[type=color]` as well!
 
