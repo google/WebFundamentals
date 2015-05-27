@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,7 +18,7 @@ authors:
   - alexdanilo
 tags:
   - javascript
-permalink: /updates/2012/11/Respond-to-change-with-Object-observe
+permalink: /updates/2012/11/Respond-to-change-with-Object-observe.html
 ---
 Lots of JavaScript frameworks using MVC or MDV need to respond to changes to the objects that model the state inside a web application. This capability is a fundamental part of a data-binding model.
 

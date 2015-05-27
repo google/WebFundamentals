@@ -14,9 +14,13 @@ feedPath: tools/feed.xml
 <div class="tools-header">
   <div class="container">
     <p class="headliner">Get productive.</p>
-    <div class="desc">Discover our <h1>tools</h1> and learn how to kickstart your development cycle.</div>
-    <a href="/web/tools/setup/index.html">GET STARTED</a>
-    <a href="/web/updates/index.html">WHAT'S NEW</a>
+    <div class="desc">
+      Discover our <h1>tools</h1> and learn how to kickstart your development cycle.
+      <div>
+        <a href="/web/tools/setup/index.html">GET STARTED</a>
+        <a href="/web/updates/index.html">WHAT'S NEW</a>        
+      </div>
+    </div>
   </div>
 </div>
 
@@ -31,7 +35,7 @@ feedPath: tools/feed.xml
   <div class="container">
     <ul>
       <li>
-        <a href="/web/tools/chrome-devtools/">
+        <a href="https://developer.chrome.com/devtools">
           <img src="https://developer.chrome.com/devtools/images/devtools-window.png" alt="DevTools">
           <h3>Chrome DevTools</h3>
         </a>
@@ -53,7 +57,7 @@ feedPath: tools/feed.xml
       </li>
       <li>
         <a href="/web/tools/material-design-lite/">
-          <img src="/web/tools/material-design-lite/images/mdl.jpg" alt="Material Design Lite">
+          <img src="/web/tools/material-design-lite/images/thumb.png" alt="Material Design Lite">
           <h3>Material Design Lite</h3>
         </a>
         <p>A fancy description of the Material Design Lite belongs here. Please add one Addy.</p>
@@ -66,10 +70,11 @@ feedPath: tools/feed.xml
 <div class="tools-updates">
   <div class="container">
     <h3><a href="/web/updates/tools">What's hot <span>All tips &amp; updates</span></a></h3>
-    {% include modules/latest_updates.liquid limit=3 product="tools" %}   
+    {% include modules/latest_updates.liquid limit=3 product="tools" %}
   </div>
 </div>
 
+{% comment %}
 <div class="tools-home">
 
   <div class="container tools-docs-header">
@@ -79,7 +84,7 @@ feedPath: tools/feed.xml
   </div>
 
   <div class="tools-docs-divider"></div>
-
+  
   <div class="container tools-docs-listing">
     <ul class="doclist">
         {% for guide in page.articles.[page.id] %}
@@ -106,7 +111,7 @@ feedPath: tools/feed.xml
   </div>
 
 </div>
-
+{% endcomment %}
 
 
 {% include cc.liquid %}

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Granular statement highlights
@@ -17,7 +17,7 @@ description: See the exact executed statement with granular highlighting.
 featured-image: /web/updates/images/2015-05-19-see-the-exact-statement-which-executed-with-granular-highlighting/highlight-paused-statement.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/21-highlight-paused-statement
-permalink: /updates/2015/05/06/granular-statement-highlights
+permalink: /updates/2015/05/06/granular-statement-highlights.html
 ---
 <img src="/web/updates/images/2015-05-19-see-the-exact-statement-which-executed-with-granular-highlighting/highlight-paused-statement.gif" alt="See the exact statement which executed with granular highlighting">
 

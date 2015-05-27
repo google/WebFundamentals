@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Expand CSS shorthand properties
@@ -19,7 +19,7 @@ description: In the styles pane, you can expand CSS shorthand properties like <c
 featured-image: /web/updates/images/2015-05-19-expand-css-shorthand-properties/expand-shorthand-properties.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/33-expand-shorthand-properties
-permalink: /updates/2015/05/11/expand-css-shorthand-properties
+permalink: /updates/2015/05/11/expand-css-shorthand-properties.html
 ---
 <img src="/web/updates/images/2015-05-19-expand-css-shorthand-properties/expand-shorthand-properties.gif" alt="Expand CSS shorthand properties">
 

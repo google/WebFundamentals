@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,8 +19,8 @@ authors:
 tags:
   - fundamentals
   - mobile
-  - front-end
-permalink: /updates/2014/12/fundamental-of-web-dev
+  - frontend
+permalink: /updates/2014/12/fundamental-of-web-dev.html
 ---
 
 At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/) there was a

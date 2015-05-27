@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: false
 title: Some UI and feature enhancements to the Colour Picker tool
@@ -16,7 +16,7 @@ product: chrome-devtools
 featured-image: /web/updates/images/2015-05-19-some-ui-and-feature-enhancements-to-the-colour-picker-tool/colour-picker-upgrade.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/22-colour-picker-upgrade
-permalink: /updates/2015/05/19/some-ui-and-feature-enhancements-to-the-colour-picker-tool
+permalink: /updates/2015/05/19/some-ui-and-feature-enhancements-to-the-colour-picker-tool.html
 ---
 <img src="/web/updates/images/2015-05-19-some-ui-and-feature-enhancements-to-the-colour-picker-tool/colour-picker-upgrade.gif" alt="Some UI and feature enhancements to the Colour Picker tool">
 <p>The colour picker tool in DevTools is getting an upgrade.</p>

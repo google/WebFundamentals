@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ tags:
   - webaudio
   - multimedia
   - audio
-permalink: /updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
+permalink: /updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs.html
 ---
 <figure><a href="http://html5-demos.appspot.com/static/webaudio/createMediaSourceElement.html"><img src="{{site.baseurl}}/updates/2012-02-03-html5-audio-and-the-web-audio-api-are-bffs/media-source-element-demo.jpg" style="max-width:100%"></a><figcaption><a href="http://html5-demos.appspot.com/static/webaudio/createMediaSourceElement.html">DEMO</a></figcaption></figure>
 

@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Hard reload
@@ -15,7 +15,7 @@ category: tools
 product: chrome-devtools
 description: With DevTools opened, click and hold the reload button to see more options.
 featured-image: /web/updates/images/2015-05-05-hard-reload/screenshot.png
-permalink: /updates/2015/05/05/hard-reload
+permalink: /updates/2015/05/05/hard-reload.html
 ---
 With DevTools opened, click and hold the reload button to see more options.
 <video src="/web/updates/videos/hold_refresh.mp4" autoplay loop muted></video>

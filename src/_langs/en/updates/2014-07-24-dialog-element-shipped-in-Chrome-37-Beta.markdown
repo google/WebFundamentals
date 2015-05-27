@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -19,7 +19,7 @@ authors:
 tags:
   - dialog
   - semantics
-permalink: /updates/2014/07/dialog-element-shipped-in-Chrome-37-Beta
+permalink: /updates/2014/07/dialog-element-shipped-in-Chrome-37-Beta.html
 ---
 Chrome Beta has landed its native support for &lt;dialog&gt; element without needing "Enable experimental Web Platform features." flag turned on.
 

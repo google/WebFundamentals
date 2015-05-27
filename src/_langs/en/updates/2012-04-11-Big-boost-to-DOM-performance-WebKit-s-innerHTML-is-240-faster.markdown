@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,9 +18,8 @@ authors:
   - samdutton
 tags:
   - performance
-  - innerHTML
-  - DOM
-permalink: /updates/2012/04/Big-boost-to-DOM-performance---WebKit-s-innerHTML-is-240-faster
+  - dom
+permalink: /updates/2012/04/Big-boost-to-DOM-performance---WebKit-s-innerHTML-is-240-faster.html
 ---
 <p>We're very happy to see that some common DOM operations have just skyrocketed in speed. The changes were at the WebKit level, boosting performance for both Safari (JavaScriptCore) and Chrome (V8).</p>
 
@@ -107,34 +106,4 @@ for (var i = 0; i < 1000000; i++) {
 
 <p>Kudos to Haraken and the rest of the team.</p>
 
-
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Test');
-    data.addColumn('number', 'Chrome 17');
-    data.addColumn('number', 'Chrome 19');
-    data.addRows([
-    ['div.innerHTML', 2060.8, 1037.8],
-    ['div.outerHTML', 4120.8, 2928.4],
-    ['body.innerHTML', 834.2, 315.8],
-    ['body.outerHTML', 861.2, 311.8],
-    ['div.classList', 20046, 9500],
-    ['div.classList.foo = 123', 20253, 10183],
-    ['div.dataset', 24913, 10507],
-    ['div.dataset.foo = 123', 64115, 57941],
-    ['div.attributes', 25840, 9521]
-    ]);
-
-    var options = {
-    title: 'Time taken for DOM access tests (ms: shorter is better)',
-    vAxis: {title: '',  titleTextStyle: {color: 'green'}}
-};
-
-var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-chart.draw(data, options);
-}
-</script>
+Note: Demo removed

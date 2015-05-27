@@ -13,10 +13,10 @@
 {% endfor %}
 
 		{% if page.nofeed != true %}
-			{% capture feedUrl %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+			{% capture feedURL %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
 		{% endif %}
 
-    {% include head.liquid feedUrl=feedUrl feedName=showDetails.title %}
+    {% include head.liquid feedURL=feedURL feedName=showDetails.title %}
   </head>
 
   <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
@@ -64,7 +64,7 @@
 
     {% endwrap %}
 
-    {% include modules/shows/feedlink.liquid feedUrl=feedUrl emailSubscriptionLink=showDetails.emailSubscriptionLink %}
+    {% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink=showDetails.emailSubscriptionLink %}
 
     {% include cc.liquid %}
     {% include footer.liquid %}

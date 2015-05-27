@@ -4,7 +4,6 @@ set -e
 
 CLOUDSDK_URL=https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
 SDK_DIR=google-cloud-sdk
-GCLOUD=$SDK_DIR/bin/gcloud
 
 # deploy only master builds
 if [ "$TRAVIS_BRANCH" != "master" ] || [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
@@ -22,11 +21,12 @@ if [ ! -d $SDK_DIR ]; then
   $SDK_DIR/install.sh
 fi
 
-$GCLOUD components update app -q
-openssl aes-256-cbc -d -K $encrypted_29722e8fb5df_key -iv $encrypted_29722e8fb5df_iv \
+openssl aes-256-cbc -d -k $KEY_PASSPHRASE \
         -in tools/web-central-44673aab0806.json.enc \
         -out tools/web-central-44673aab0806.json
-$GCLOUD auth activate-service-account $SERVICE_ACCOUNT \
-        --key-file tools/web-central-44673aab0806.json
-$GCLOUD preview app deploy ./appengine/app.yaml --version travis-master --project web-central
 
+$SDK_DIR/bin/gcloud components update gae-python -q
+$SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
+        --key-file tools/web-central-44673aab0806.json \
+				--quiet
+$SDK_DIR/bin/appcfg.py -A web-central -V master update ./appengine

@@ -1,6 +1,6 @@
 ---
 
-rss: false
+
 layout: update
 published: true
 
@@ -20,7 +20,7 @@ authors:
 tags:
   - webgl
   - cors
-permalink: /updates/2011/07/Using-Cross-domain-images-in-WebGL
+permalink: /updates/2011/07/Using-Cross-domain-images-in-WebGL.html
 ---
 <p>WebGL specification has an important update on how to request images, cross-domain. The feature has already been implemented in Chrome 13 and is coming soon to Firefox 5.</p>
 

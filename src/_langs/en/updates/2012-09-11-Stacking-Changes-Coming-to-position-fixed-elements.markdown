@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,8 +18,8 @@ authors:
   - tomwiltzius
 tags:
   - stacking
-  - CSS
-permalink: /updates/2012/09/Stacking-Changes-Coming-to-position-fixed-elements
+  - css
+permalink: /updates/2012/09/Stacking-Changes-Coming-to-position-fixed-elements.html
 ---
 In Chrome 22 the layout behavior of `position:fixed` elements is slightly different than previous versions. All `position:fixed` elements now form new stacking contexts. This will change the stacking order of some pages, which has the potential to break page layouts. The new behavior matches the behavior of WebKit browsers on mobile devices (iOS Safari and Chrome for Android).
 

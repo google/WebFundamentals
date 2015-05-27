@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 title: Predefined snippets
@@ -17,7 +17,7 @@ description: How to run predefined snippets of code on any web page.
 featured-image: /web/updates/images/2015-05-19-devtools-run-predefined-snippets-of-code-on-any-web-page/snippets.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/4-snippets
-permalink: /updates/2015/05/01/predefined-snippets
+permalink: /updates/2015/05/01/predefined-snippets.html
 ---
 <img src="/web/updates/images/2015-05-19-devtools-run-predefined-snippets-of-code-on-any-web-page/snippets.gif" alt="DevTools - Run predefined snippets of code on any web page">
 

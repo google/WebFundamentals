@@ -1,5 +1,5 @@
 ---
-rss: false
+
 layout: update
 published: true
 
@@ -18,8 +18,8 @@ authors:
   - ericbidelman
 tags:
   - performance
-  - CSS
-permalink: /updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
+  - css
+permalink: /updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit.html
 ---
 `position: sticky` is a new way to position elements and is conceptually similar to `position: fixed`. The difference is that an element with `position: sticky` behaves like `position: relative`  within its parent, until a given offset threshold is met in the viewport.
 
