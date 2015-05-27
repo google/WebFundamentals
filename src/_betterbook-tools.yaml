@@ -4,19 +4,9 @@ toc:
   home: true
 - title: "What's new"
   path: /updates/tools/
-- title: Documentation
-  hasSubNav: true
-  section:
-  - title: "Set Up"
-    path: /tools/setup/
-  - title: "Iterate"
-    path: /tools/iterate/
-  - title: "Debug"
-    path: /tools/javascript/
-  - title: "Profile"
-    path: /tools/profile-performance/
 - title: "Chrome DevTools"
-  path: /tools/chrome-devtools/
+  path: https://developer.chrome.com/devtools
+  external: true
 - title: "Web Starter Kit"
   path: /tools/starter-kit/
 - title: Web <strong>Fundamentals</strong>
