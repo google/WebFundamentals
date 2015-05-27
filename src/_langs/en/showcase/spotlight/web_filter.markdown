@@ -3,7 +3,7 @@ id: web_filter
 layout: spotlight
 collection: spotlight
 type: spotlight
-published: false
+published: true
 
 date: 2015-03-27
 article:
