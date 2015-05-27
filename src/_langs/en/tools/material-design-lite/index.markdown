@@ -18,8 +18,7 @@ feedURL: https://github.com/google/material-design-lite/releases.atom
 </div>
 
 <div class="mdl-coming-soon">
-  <p>Coming Soon</p>
-  <p><a href="https://events.google.com/io2015/schedule?sid=18667bad-8be4-e411-b87f-00155d5066d7#day2/18667bad-8be4-e411-b87f-00155d5066d7">Previewing at I/O</a></p>
+  <p>Coming Soon - <a href="https://events.google.com/io2015/schedule?sid=18667bad-8be4-e411-b87f-00155d5066d7#day2/18667bad-8be4-e411-b87f-00155d5066d7">Previewing at I/O</a></p>
 </div>
 
 <div class="mdl-comingsoon-topics">
