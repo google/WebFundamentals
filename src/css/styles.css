@@ -1843,8 +1843,6 @@ body[dir=rtl] ul.main-footer__list > li:before {
     @media only screen and (min-width: 800px) {
       .highlight-module--code .highlight-module__container {
         min-height: 0; } }
-  .highlight-module--code .highlight-module__cta {
-    position: absolute; }
 
 /*==========  LEFT  ==========*/
 @media only screen and (min-width: 800px) {
@@ -6632,7 +6630,13 @@ figcaption {
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
   padding-top: 12vh;
+  padding-bottom: 12vh;
   text-transform: uppercase; }
+
+.mdl-comingsoon-single-topic p {
+  font-family: Roboto;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5); }
 
 .mdl-footer .main-footer {
   background: #f5f5f5; }
@@ -6785,7 +6789,7 @@ figcaption {
     display: -webkit-flex; }
     .updates-header .details-wrapper > a {
       margin-right: 20px;
-      flex: 1 0 auto; }
+      flex: 0 0 auto; }
   .updates-header .details {
     margin-top: 0px;
     color: #000;
@@ -6833,6 +6837,9 @@ figcaption {
 .updates-list .filters, .update-container .filters {
   min-width: 150px;
   padding-top: 0; }
+  @media screen and (min-width: 1230px) {
+    .updates-list .filters, .update-container .filters {
+      margin-left: -158px; } }
   .updates-list .filters ul, .update-container .filters ul {
     padding: 0;
     padding-top: 2em; }
@@ -6915,11 +6922,11 @@ figcaption {
     .updates-list > div.updates-list-header > ul > li {
       margin: 0;
       margin-bottom: 32px;
-      flex: 1 1 calc(50% - 20px);
-      -webkit-flex: 1 1 calc(50% - 20px);
+      flex: 1 1 calc(33% - 20px);
+      -webkit-flex: 1 1 calc(33% - 20px);
       margin-right: 20px;
       position: relative;
-      min-width: 290px; }
+      min-width: 280px; }
     .updates-list > div.updates-list-header > ul > li::before {
       display: none; }
     .updates-list > div.updates-list-header > ul a:hover {
