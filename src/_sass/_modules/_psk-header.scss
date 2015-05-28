@@ -20,13 +20,13 @@
 
   @include medium {
     background-image: url(../imgs/psk.png);
-    background-size: 1200px;
-    background-position: center 30%;
+    background-size: cover;
     padding-bottom: $lineHeight*4;
+    padding-left: 32%;
   }
 
-  @include wide {
-    background-size: 1560px;
+  > .container {
+    padding-top: 95px;
   }
 
   &:after {
