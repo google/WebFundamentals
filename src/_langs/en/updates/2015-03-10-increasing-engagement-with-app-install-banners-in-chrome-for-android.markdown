@@ -94,6 +94,86 @@ the
 [Cr-UI-Browser-AppShortcuts](https://code.google.com/p/chromium/issues/list?q=label:Cr-UI-Browser-AppShortcuts) 
 label. 
 
+
+## <span id="cancel">Cancelling the prompt</span>
+
+Chrome manages when to trigger the prompt and for some sites this might not be ideal.
+
+As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforinstallprompt` event and preventing default on the event.
+
+{% highlight javascript %}
+ window.addEventListener('beforeinstallprompt', function(e) {
+  console.log('beforeinstallprompt Event fired');
+  e.preventDefault();
+  return false;
+});
+{% endhighlight %}
+
+I would say though, I am not sure why you would do this... But you can.
+
+A more interesting future update will the ability to defer the prompt until later in the page lifecycle,
+i.e, just after a user has performed an action, or hit the bottom of the page (something to indicate
+that they are engaging with your site).
+
+## <span id="action">Did a user install our web app</span>
+
+A recetent addtion in Chrome 43 (Beta as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+
+The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
+actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
+attribute or `accepted` if the user added the web page to the homescreen.
+
+{% highlight javascript %}
+window.addEventListener('beforeinstallprompt', function(e) {
+  // beforeinstallprompt Event fired
+  
+  // e.userChoice will return a Promise. 
+  // For more details read: http://www.html5rocks.com/en/tutorials/es6/promises/
+  e.userChoice.then(function(choiceResult) {
+    
+    console.log(choiceResult.outcome);
+    
+    if(choiceResult.outcome == 'dismissed') {
+      console.log('User cancelled homescreen install');
+    }
+    else {
+      console.log('User added to homescreen');
+    }
+  });
+});
+{% endhighlight %}
+
+This is a good tool for understanding how your users interact with your app install prompt.
+
+## <span id="native">Native app install banner</span>
+
+A new powerful feature for native app developers also landed in Chrome 43 Beta.  Native App isntall banners are similar to Web app install banners, but instead of adding to the Homescreen will let the user inline install your native app.
+
+The criteria is similar to the Web App install banner except for the need of a Serivce Worker:
+
+* You have a [web app manifest 
+  file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
+  - The manifest defines how your app appears on the user's system and how it 
+  should be launched - and you are required to have a \`short\_name\` and a 
+  \`144x144\` png icon
+  - Your icon declarations should include a mime type of `image/png`
+* Your site is served over 
+  [HTTPS](https://docs.google.com/document/d/1oRXJUIttqQxuxmjj2tgYjj096IKw4Zcw6eAoIKWZ2oQ/edit)
+* The user has visited your site twice over two separate days during the course 
+  of two weeks.
+
+It is simple to integrate into any manifest.  Just add a `related_applications` array with the platforms of `play` (for Google Play) and the App Id, and then add `"prefer_related_applications": true` to always show the native app banner before the Web App Install banner.
+
+{% highlight javascript %}
+"prefer_related_applications": true,
+"related_applications": [
+  {
+    "platform": "play",
+    "id": "com.google.samples.apps.iosched"
+  }
+],
+{% endhighlight %}
+
 ## <span id="criteria-faq">Frequently Asked Questions</span>
 
 **My app meets all the criteria, but I don't want the banner to display. Can I control this?**  
