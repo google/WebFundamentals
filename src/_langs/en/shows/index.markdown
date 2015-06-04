@@ -26,6 +26,7 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign lazywebShow = null %}
 {% assign tttShow = null %}
 {% assign nicShow = null %}
+{% assign googleioShow = null %}
 {% for show in shows %}
   {% if show.id == 'cds' %}
     {% assign cdsShow = show %}
@@ -50,6 +51,9 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% endif %}
   {% if show.id == 'newinchrome' %}
     {% assign nicShow = show %}
+  {% endif %}
+  {% if show.id == 'googleio' %}
+    {% assign googleioShow = show %}
   {% endif %}
 {% endfor %}
 
@@ -115,6 +119,18 @@ Fundmentals index: for guide in page.articles.[page.id]
         <p>{{nicShow.description}}</p>
       </div>
     </li>
+    
+    <li class="guides-list__item g--half theme--{{ googleioShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+        <a href="{{site.baseurl}}{{googleioShow.url | canonicalize}}" title="Go to {{googleioShow.title}}">
+          <img src="{{site.baseurl}}/shows/imgs/googleio_rect.png" alt="{{googleioShow.title}} Hero Image">
+        </a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{googleioShow.url | canonicalize}}" title="Go to {{googleioShow.title}}" class="themed">{{googleioShow.title}}</a></h3>
+        <p>{{googleioShow.description}}</p>
+      </div>
+    </li>
 
     <li class="guides-list__item g--half theme--{{ polycastsShows.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
@@ -160,7 +176,7 @@ Fundmentals index: for guide in page.articles.[page.id]
       </div>
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}" class="themed">{{blinkonShow.title}}</a></h3>
-        <p>{{cdsShow.description}}</p>
+        <p>{{blinkonShow.description}}</p>
       </div>
     </li>
 
