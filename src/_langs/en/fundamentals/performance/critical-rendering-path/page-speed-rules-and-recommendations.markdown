@@ -82,6 +82,7 @@ fetch(url, {
   body: 'foo=bar&lorem=ipsum'  
 }).then(function() { // Aditional code });
 </script>
+
 {% endhighlight %}
 
 ### **Defer parsing JavaScript**
