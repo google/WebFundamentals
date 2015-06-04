@@ -46,7 +46,7 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% if show.id == 'ttt' %}
     {% assign tttShow = show %}
   {% endif %}
-  {% if show.id == 'blink-on' %}
+  {% if show.id == 'blinkon' %}
     {% assign blinkonShow = show %}
   {% endif %}
   {% if show.id == 'newinchrome' %}
