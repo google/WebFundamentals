@@ -1,5 +1,5 @@
 ---
-id: blink-4--allocator
+id: blink-4-allocator
 showid: blinkon
 layout: shows/single-video
 collection: blinkon-4
