@@ -19,6 +19,7 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign latestVideo = orderedVideos | first %}
 
 {% assign cdsShow = null %}
+{% assign blinkonShow = null %}
 {% assign http203Show = null %}
 {% assign polycastsShows = null %}
 {% assign udacityShow = null %}
@@ -43,6 +44,9 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% endif %}
   {% if show.id == 'ttt' %}
     {% assign tttShow = show %}
+  {% endif %}
+  {% if show.id == 'blink-on' %}
+    {% assign blinkonShow = show %}
   {% endif %}
   {% if show.id == 'newinchrome' %}
     {% assign nicShow = show %}
@@ -144,6 +148,18 @@ Fundmentals index: for guide in page.articles.[page.id]
       </div>
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{cdsShow.url | canonicalize}}" title="Go to {{cdsShow.title}}" class="themed">{{cdsShow.title}}</a></h3>
+        <p>{{cdsShow.description}}</p>
+      </div>
+    </li>
+    
+     <li class="guides-list__item g--half theme--{{ blinkonShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+      	<a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}">
+					<img src="{{site.baseurl}}/shows/imgs/blinkon_rect.png" alt="{{blinkonShow.title}} Hero Image">
+				</a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}" class="themed">{{blinkonShow.title}}</a></h3>
         <p>{{cdsShow.description}}</p>
       </div>
     </li>
