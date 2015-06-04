@@ -5,6 +5,8 @@ from apiclient.errors import HttpError
 
 import logging
 import httplib2
+import argparse
+import sys
 from string import Template
 
 
@@ -52,18 +54,23 @@ class ShowPage():
 	def save(self):
 		pass
 	
+if __name__ == "__main__":
 	
-yt_api = YouTube()
-
-playlist_items = yt_api.GetPlayListItems("PLOU2XLYxmsII8L540LbY5hdC23cmoZMhV")
-
-show_template = read_file("show.tmpl")
-
-
-for item in playlist_items["items"]:
-	show_page = ShowPage(item, show_template)
-	show_page.generate()
-	print show_page.content
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--show", required=True)
+	parser.add_argument("--collection", required=True)
+	args = parser.parse_args()
+	
+	yt_api = YouTube()
+	
+	playlist_items = yt_api.GetPlayListItems("PLOU2XLYxmsII8L540LbY5hdC23cmoZMhV")
+	
+	show_template = read_file("show.tmpl")
+	
+	for item in playlist_items["items"]:
+		show_page = ShowPage(item, show_template, show=args.show, collection=args.collection)
+		show_page.generate()
+		print show_page.content
 	
 
 	
