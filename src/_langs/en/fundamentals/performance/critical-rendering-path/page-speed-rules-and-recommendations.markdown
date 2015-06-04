@@ -5,7 +5,7 @@ description: "PageSpeed Insights rules in context: what to pay attention to when
 introduction: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-10-16
+  updated_on: 2015-06-04
   order: 8
 collection: critical-rendering-path
 priority: 0
@@ -45,6 +45,39 @@ code shows how to use `navigator.sendBeacon()` to send data to the server in the
     }
   }();
 </script>
+{% endhighlight %}
+
+Use the `fetch()` method to request data asynchronously. This method processes responses with Promises rather than multiple event handlers. Unlike the response to an XMLHttpRequest, a fetch response is a stream object which means that a call to `json()` also returns a Promise. 
+
+{% highlight html %}
+fetch('./api/some.json')  
+  .then(  
+    function(response) {  
+      if (response.status !== 200) {  
+        console.log('Looks like there was a problem. Status Code: ' +  response.status);  
+        return;  
+      }
+      // Examine the text in the response  
+      response.json().then(function(data) {  
+        console.log(data);  
+      });  
+    }  
+  )  
+  .catch(function(err) {  
+    console.log('Fetch Error :-S', err);  
+  });
+{% endhighlight %}
+
+The `fetch()` method can also handle POST requests.
+
+{% highlight html %}
+fetch(url, {
+  method: 'post',
+  headers: {  
+    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+  },  
+  body: 'foo=bar&lorem=ipsum'  
+}).then(function() { // Aditional code });
 {% endhighlight %}
 
 ### **Defer parsing JavaScript**
