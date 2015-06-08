@@ -40,9 +40,10 @@
     bottom: -10px;
 
     @include medium {
-      font-size: $fontMedium;
+      font-size: $fontXXLarge;
       line-height: 1px;
       bottom: 4px;
+      margin: 0 auto 0 -33%;
     }
 
     font-weight: 500;
