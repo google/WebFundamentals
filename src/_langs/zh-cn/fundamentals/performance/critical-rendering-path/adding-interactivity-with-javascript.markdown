@@ -11,7 +11,7 @@ collection: critical-rendering-path
 authors:
   - ilyagrigorik
 translators:
-  - 陈三
+  - samchen
 key-takeaways:
   adding-interactivity:
     - JavaScript 能够查询、修改 DOM 与 CSSOM。

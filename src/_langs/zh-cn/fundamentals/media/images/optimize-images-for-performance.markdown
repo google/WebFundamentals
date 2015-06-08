@@ -6,7 +6,7 @@ introduction: "图片通常占了下载字节的多数，在页面上一般也�
 authors:
   - petelepage
 translators:
-  - 陈三
+  - samchen
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
