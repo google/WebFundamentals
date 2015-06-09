@@ -11,7 +11,7 @@ collection: critical-rendering-path
 authors:
   - ilyagrigorik
 translators:
-  - 陈三
+  - samchen
 related-guides:
   media-queries:
     -

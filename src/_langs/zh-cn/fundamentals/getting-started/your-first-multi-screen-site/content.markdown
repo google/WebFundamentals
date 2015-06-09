@@ -15,7 +15,7 @@ collection: multi-screen
 authors:
   - paulkinlan
 translators:
-  - 陈三
+  - samchen
 related-guides:
   create-amazing-forms:
     -
