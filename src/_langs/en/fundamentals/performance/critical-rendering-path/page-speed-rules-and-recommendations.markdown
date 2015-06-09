@@ -47,7 +47,7 @@ code shows how to use `navigator.sendBeacon()` to send data to the server in the
 </script>
 {% endhighlight %}
 
-Use the `fetch()` method to request data asynchronously. This method processes responses with Promises rather than multiple event handlers. Unlike the response to an XMLHttpRequest, a fetch response is a stream object which means that a call to `json()` also returns a Promise. 
+If you're on Chrome 42 or later, you can use the `fetch()` method to request data asynchronously. This method processes responses with Promises rather than multiple event handlers. Unlike the response to an XMLHttpRequest, a fetch response is a stream object starting in Chrome 43. This means that a call to `json()` also returns a Promise. 
 
 {% highlight html %}
 <script>
