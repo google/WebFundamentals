@@ -5,7 +5,7 @@ description: "PageSpeed Insights rules in context: what to pay attention to when
 introduction: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
 article:
   written_on: 2014-04-01
-  updated_on: 2015-06-04
+  updated_on: 2015-06-09
   order: 8
 collection: critical-rendering-path
 priority: 0
