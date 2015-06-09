@@ -11,7 +11,7 @@ collection: critical-rendering-path
 authors:
   - ilyagrigorik
 translators:
-  - 陈三
+  - samchen
 key-takeaways:
   构建对象模型：
     - 字节 → 字符 → 符号 → 节点 → 对象模型。

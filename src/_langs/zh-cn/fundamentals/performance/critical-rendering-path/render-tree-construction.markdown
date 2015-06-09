@@ -11,7 +11,7 @@ collection: critical-rendering-path
 authors:
   - ilyagrigorik
 translators:
-  - 陈三
+  - samchen
 key-takeaways:
   render-tree-construction:
     - DOM 树与 CSSOM 树融合成渲染树。

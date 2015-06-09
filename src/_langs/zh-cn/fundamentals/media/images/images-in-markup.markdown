@@ -6,7 +6,7 @@ introduction: "<code>img</code> 元素是强大的 - 它下载、解码然后渲
 authors:
   - petelepage
 translators:
-  - 陈三
+  - samchen
 article:
   written_on: 2014-04-30
   updated_on: 2014-09-30

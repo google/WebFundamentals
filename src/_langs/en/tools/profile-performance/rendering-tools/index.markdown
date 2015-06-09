@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: section
-title: "Improve Rendering Performance"
-seotitle: "Improve Rendering Performance"
+title: "Improve Runtime Performance"
+seotitle: "Improve Runtime Performance"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
