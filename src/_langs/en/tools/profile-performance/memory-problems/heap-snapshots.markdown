@@ -1,18 +1,18 @@
 ---
 rss: false
 layout: article
-title: "Analyze Rendering Performance"
-seotitle: "Analyze Rendering Performance Using Chrome DevTools Frames Mode"
+title: "How to Record Heap Snapshots"
+seotitle: "How to Record Heap Snapshots"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
-  written_on: 2015-04-14
-  updated_on: 2015-04-14
+  written_on: 2015-06-09
+  updated_on: 2015-06-09
   order: 4
 authors:
   - megginkearney
 priority: 0
-collection: evaluate-performance
+collection: memory-problems
 key-takeaways:
   tldr-tbd:
     - TBD tldr.
@@ -22,9 +22,9 @@ remember:
 ---
 {% wrap content %}
 
-TBD. Timeline docs focusing on frames mode (not events mode): https://developer.chrome.com/devtools/docs/timeline#frames-mode
+TBD. Include heap snapshot content in here.
 
-TBD. There's an entire set of rendering docs that will go into depth here-- this is just an intro to analyzing rendering problems.
+TBD. Check for demos and FAQs that could also be included.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
