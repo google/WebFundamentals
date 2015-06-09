@@ -6,7 +6,7 @@ introduction: "在给页面添加图标时，尽可能使用 SVG 图标，某些
 authors:
   - petelepage
 translators:
-  - 陈三
+  - samchen
 article:
   written_on: 2014-06-10
   updated_on: 2014-06-10

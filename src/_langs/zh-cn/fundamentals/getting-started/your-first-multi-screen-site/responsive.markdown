@@ -12,7 +12,7 @@ key-takeaways:
 authors:
   - paulkinlan
 translators:
-  - 陈三
+  - samchen
 related-guides:
   responsive:
     -

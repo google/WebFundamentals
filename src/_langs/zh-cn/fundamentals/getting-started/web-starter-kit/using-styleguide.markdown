@@ -13,7 +13,7 @@ collection: web-starter-kit
 authors:
   - mattgaunt
 translators:
-  - 陈三
+  - samchen
 key-takeaways:
 ---
 

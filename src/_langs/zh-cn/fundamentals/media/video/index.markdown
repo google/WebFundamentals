@@ -12,7 +12,7 @@ id: videos
 authors:
   - samdutton
 translators:
-  - 陈三
+  - samchen
 key-takeaways:
   add-a-video:
     - 在你的网站上使用 video 元素加载、解码然后播放视频。
