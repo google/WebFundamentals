@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: article
-title: "Testing for RAIL"
-seotitle: "Testing for RAIL"
+title: "Steps to Evaluate RAIL"
+seotitle: "Steps to Evaluate RAIL"
 description: "TBD."
 introduction: "TBD."
 article:
@@ -18,7 +18,7 @@ key-takeaways:
     - TBD.
 remember:
   animation:
-    - Respond to user's touchmoves and scrolling under 16 ms (see <a href="">Animation: render frames every 16 ms</a>).
+    - TBD.
 ---
 {% wrap content %}
 

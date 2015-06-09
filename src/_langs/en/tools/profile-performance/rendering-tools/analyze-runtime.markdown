@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: article
-title: "Test Your Deployed Site's Rendering Performance"
-seotitle: "Test Your Deployed Site's Rendering Performance"
+title: "Analyze Runtime Performance"
+seotitle: "Analyze Runtime Performance Using Chrome DevTools Frames Mode"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
@@ -22,15 +22,17 @@ remember:
 ---
 {% wrap content %}
 
-TBD. Mainly covering Frames mode in doc: https://developer.chrome.com/devtools/docs/timeline#frames-mode
+TBD. Timeline docs focusing on frames mode (not events mode): https://developer.chrome.com/devtools/docs/timeline#frames-mode
 
 TBD. https://developers.google.com/web/fundamentals/tools/test/deployed?hl=en 
 
-Note: testing rendering performance seems about exactly the same as analyzing rendering performance, so might not need the doc in the evaluate performance set?
+TBD. Bring in layout issues potentially here.
+
+TBD. Borrow from Paul Lewis' blog post on runtime performance.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
-## TBD
+### TBD
 
 TBD.
 

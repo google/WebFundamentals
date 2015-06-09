@@ -1,18 +1,18 @@
 ---
 rss: false
 layout: article
-title: "Determine Garbage Collection Frequency"
-seotitle: "Determine Garbage Collection Frequency Using Chrome DevTools Timeline Memory View"
+title: "How to Use the Timeline Tool"
+seotitle: "How to Use the Timeline Tool"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
-  written_on: 2015-04-14
-  updated_on: 2015-04-14
-  order: 4
+  written_on: 2015-06-09
+  updated_on: 2015-06-09
+  order: 3
 authors:
   - megginkearney
 priority: 0
-collection: memory-problems
+collection: evaluate-performance
 key-takeaways:
   tldr-tbd:
     - TBD tldr.
@@ -22,9 +22,12 @@ remember:
 ---
 {% wrap content %}
 
-TBD. If you are GCing frequently, you may be allocating too frequently. The Timeline memory view can help you identify pauses of interest.
+TBD. Move simple intro to Timeline tool into the Steps to Evaluate RAIL doc.
 
-TBD. Demo: Garbage Collection: https://developer.chrome.com/devtools/docs/demos/memory/example2
+Organize content in Timeline docs to align better with additional cards:
+runtime, page load, and memory.
+
+Link up more to RAILs.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 

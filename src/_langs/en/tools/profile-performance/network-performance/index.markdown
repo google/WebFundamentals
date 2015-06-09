@@ -1,10 +1,10 @@
 ---
 rss: false
 layout: section
-title: "Improve Page Load Performance"
-seotitle: "Improve Page Load Performance Using Chrome DevTools Network Panel and Resource Timing API"
-description: "Users may not even consciously realize that they are having a negative experience. Chrome's DevTools provide you with the ability to verify network issues."
-introduction: "Delivering information to users as fast as possible is critical to the success of a web site."
+title: "Page Load Performance"
+seotitle: "Page Load Performance Using Chrome DevTools Network Panel and Resource Timing API"
+description: "Test how your pages load in varying network conditions. Offer users the best possible experience despite network connectivity."
+introduction: "Test how your pages load in varying network conditions. Offer users the best possible experience despite network connectivity."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14

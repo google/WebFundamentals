@@ -1,14 +1,14 @@
 ---
 rss: false
 layout: article
-title: "Performance Events Reference"
-seotitle: "Performance Events Reference"
+title: "Timeline Reference"
+seotitle: "Timeline Reference"
 description: "This article lists and describes the individual types of records that are generated during a recording, organized by type, and their properties."
 introduction: "This article lists and describes the individual types of records that are generated during a recording, organized by type, and their properties."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
-  order: 6
+  order: 4
 authors:
   - megginkearney
   - flaviocopes

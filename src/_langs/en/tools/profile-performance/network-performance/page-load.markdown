@@ -12,7 +12,7 @@ article:
 authors:
   - megginkearney
 priority: 0
-collection: rendering-tools
+collection: network-performance
 key-takeaways:
   tldr-tbd:
     - TBD tldr.
