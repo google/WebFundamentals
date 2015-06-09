@@ -1,13 +1,13 @@
 ---
 rss: false
 layout: section
-title: "Evaluate Site Performance in Production"
-seotitle: "Evaluate Site Performance in Production"
-description: "TBD description."
-introduction: "TBD introduction."
+title: "How to Look at Performance"
+seotitle: "How to Look at Performance: RAIL"
+description: "Focus on the user first. How users perceive delays far outweighs any performance guidelines."
+introduction: "Don't assume performance is as simple as following a simple set of do's and don't. Rules can change, and it's easy to use rules incorrectly. Focus on the user first. How users perceive delays far outweighs any performance guidelines."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-06-08
   order: 1
 authors:
   - megginkearney
@@ -19,10 +19,6 @@ id: evaluate-performance
 
 {% wrap content %}
 
-TBD. Great doc for improving JavaScript performance: http://www.smashingmagazine.com/2012/06/12/javascript-profiling-chrome-developer-tools/ 
-
-TBD. Cross-reference Pagespeed. This is more about testing in production, not live, so this is more a cross-reference.
-
-TBD. Doc: developer.chrome.com/devtools/docs/timeline. The doc describes performance profiling with Timeline as the best place to start investigating perceived performance issues, so seems like this might be at the top.
+RAIL is a user-centric performance model and stands for Response, Animation, Idle, and Load. Learn how to test performance following the RAIL model and using your browser profiling tools.
 
 {% endwrap %}

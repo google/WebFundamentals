@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: section
-title: "Improve Network Performance"
-seotitle: "Improve Network Performance Using Chrome DevTools Network Panel and Resource Timing API"
+title: "Improve Page Load Performance"
+seotitle: "Improve Page Load Performance Using Chrome DevTools Network Panel and Resource Timing API"
 description: "TBD description."
 introduction: "TBD introduction."
 article:
