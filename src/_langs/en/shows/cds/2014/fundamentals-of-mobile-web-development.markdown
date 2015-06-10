@@ -29,7 +29,7 @@ address these problems from the Chrome Developer Platform team.
 ## Learn.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image00.png" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image00.jpg" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
 </p>
 
 [Web Fundamentals](https://developers.google.com/web/fundamentals/) is a set of
@@ -48,7 +48,7 @@ Github](https://github.com/Google/WebFundamentals/issues/new?title=Feedback%20fo
 ## Build.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image01.png" alt="Web Starter Kit on a Range Devices" width="464" height="252" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image01.jpg" alt="Web Starter Kit on a Range Devices" width="464" height="252" style="max-width: 100%; height: auto;" />
 </p>
 
 To help you kick off a new web project we created [Web Starter
@@ -90,13 +90,13 @@ the lines between the platform and your site, so we've added support for [add to
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image03.png" alt="Example of Web Starter Kit Add to Homescreen" width="313" height="274" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image03.jpg" alt="Example of Web Starter Kit Add to Homescreen" width="313" height="274" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Styleguide
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image04.png" alt="Web Starter Kit Styleguide on Chromebook Pixel" width="624" height="416" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image04.jpg" alt="Web Starter Kit Styleguide on Chromebook Pixel" width="624" height="416" style="max-width: 100%; height: auto;" />
 </p>
 
 The final piece of Web Starter Kit is it's Styleguide.
@@ -111,7 +111,7 @@ feel. [Matt ](http://youtu.be/z6dg_V22wV0?t=15m5s)[showed an](http://youtu.be/z6
 Dev Summit and you can see an example below.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image05.png" alt="Web Starter Kit's Material Design Styleguide Mock" width="624" height="416"  style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image05.jpg" alt="Web Starter Kit's Material Design Styleguide Mock" width="624" height="416"  style="max-width: 100%; height: auto;" />
 </p>
 
 ## Iterate.
@@ -151,7 +151,7 @@ Paint profiler no gives you more information on what exactly the browser is
 doing during that paint.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image08.png" alt="Screenshot of the Paint Profiler in Chrome DevTools" width="624" height="348" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image08.jpg" alt="Screenshot of the Paint Profiler in Chrome DevTools" width="624" height="348" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Invalidation Tracking
@@ -171,7 +171,7 @@ timeline. This makes it much easier to see how tasks overlap and what browser
 behaviour happened as a result of other tasks.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image10.png" alt="Screenshot of Flame Chart View in Chrome DevTools" width="624" height="384" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image10.jpg" alt="Screenshot of Flame Chart View in Chrome DevTools" width="624" height="384" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Frame Viewer
@@ -181,7 +181,7 @@ you'll be able to explore which elements in the page had been promoted to a
 composite layer as well as why they've been promoted.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image11.png" alt="Screenshot of Frame Viewer in Chrome DevTools" width="624" height="537" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image11.jpg" alt="Screenshot of Frame Viewer in Chrome DevTools" width="624" height="537" style="max-width: 100%; height: auto;" />
 </p>
 
 ## Learn. Build. Iterate.
