@@ -87,7 +87,7 @@ Fundmentals index: for guide in page.articles.[page.id]
     <li class="guides-list__item g--half theme--{{ http203Show.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
       	<a href="{{site.baseurl}}{{http203Show.url | canonicalize}}" title="Go to {{http203Show.title}}">
-					<img src="{{site.baseurl}}/shows/imgs/http203_rect.png" alt="{{http203Show.title}} Hero Image">
+					<img src="{{site.baseurl}}/shows/imgs/http203_rect.jpg" alt="{{http203Show.title}} Hero Image">
 				</a>
       </div>
       <div class="secondary-content show-root--info">
@@ -123,7 +123,7 @@ Fundmentals index: for guide in page.articles.[page.id]
     <li class="guides-list__item g--half theme--{{ googleioShow.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
         <a href="{{site.baseurl}}{{googleioShow.url | canonicalize}}" title="Go to {{googleioShow.title}}">
-          <img src="{{site.baseurl}}/shows/imgs/googleio_rect.png" alt="{{googleioShow.title}} Hero Image">
+          <img src="{{site.baseurl}}/shows/imgs/googleio_rect.jpg" alt="{{googleioShow.title}} Hero Image">
         </a>
       </div>
       <div class="secondary-content show-root--info">
@@ -171,7 +171,7 @@ Fundmentals index: for guide in page.articles.[page.id]
      <li class="guides-list__item g--half theme--{{ blinkonShow.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
       	<a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}">
-					<img src="{{site.baseurl}}/shows/imgs/blinkon_rect.png" alt="{{blinkonShow.title}} Hero Image">
+					<img src="{{site.baseurl}}/shows/imgs/blinkon_rect.jpg" alt="{{blinkonShow.title}} Hero Image">
 				</a>
       </div>
       <div class="secondary-content show-root--info">
