@@ -35,7 +35,7 @@ as follows: the idea of the virtual viewport is to split the notion of "the
 viewport" into two, "the layout viewport" (where fixed position items are attached) 
 and "the visual viewport" (What the users actually see).
 
-# **Super Simple Example**
+## **Super Simple Example**
 
 The website videojs.com is a good example because it's appbar is fixed to the 
 top and has links on both the left and right side of the appbar.  
@@ -65,11 +65,11 @@ you to view the links on the right.
 Internet Explorer already has this behaviour and these changes bring us more 
 closely inline with them.
 
-# html { overflow: hidden; }
+### html { overflow: hidden; }
 
 The only major developer facing change that comes with this is that in M39, you could apply overflow: hidden to the html element and your page would still scroll, in M40, this is no longer supported, the page will simply not scroll.
 
-# **More Solid Info**
+### **More Solid Info**
 
 You want to learn more huh?  
 
@@ -80,6 +80,3 @@ should do since he's much better at this stuff than me ;)
 <p style="text-align: center;">
   <iframe src="https://docs.google.com/presentation/embed?id=1nJvJqL2dw5STi5FFpR6tP371vSpDWWs5Beksbfitpzc&amp;start=false&amp;loop=false&amp;" frameborder="0" style="max-width: 600px; width: 100%; height: 400px;"></iframe>
 </p>
-
-
-
