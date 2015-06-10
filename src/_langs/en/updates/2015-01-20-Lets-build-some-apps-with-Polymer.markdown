@@ -23,8 +23,6 @@ tags:
 permalink: /updates/2015/01/lets-build-some-apps-with-polymer.html
 ---
 
-# Let's build some apps with Polymer!
-
 Over the previous year, the Polymer team has spent a lot of time teaching developers how to create their own elements. This has lead to a rapidly growing ecosystem, buoyed in large part by Polymer's Core and Paper elements, and the Brick elements created by the team at Mozilla.
 
 As developers become more familiar with creating their own elements and start to think about building applications, it opens up a number of questions:
