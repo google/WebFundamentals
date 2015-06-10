@@ -23,7 +23,6 @@ tags:
 permalink: /updates/2015/01/polymer-state-of-the-union.html
 ---
 
-# Polymer: State of the Union
 
 Polymer and Web Components are very hot topics as of late, and since this ecosystem is evolving rapidly, it can often be difficult for developers to stay abreast of all the latest changes.
 

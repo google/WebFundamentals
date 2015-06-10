@@ -37,7 +37,7 @@ Getting an effect like this to run at 60fps took some thinking, prototyping, and
 {% video //www.youtube.com/embed/RCFQu0hK6bU %} {% endvideo %}
 
 
-# Building a high performance animation
+## Building a high performance animation
 
 [High performance animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/), today at least, are those that favor the browser’s compositor. If you’re able to stick to changing transform and opacity properties, typically you’ll see great performance. The general approach I took to the card animation does just that:
 
@@ -57,7 +57,7 @@ All of this might sound expensive, but there is a window of 100ms from the momen
 
 The expensive work to do the animation is done inside that first 100ms and, on a Nexus 5 the work takes something in the region of 70ms, so there’s room to spare.
 
-# Get the code
+## Get the code
 
 If you’re interested in looking at the site in more detail you’ll be pleased to hear that [the code has been released on GitHub](https://github.com/GoogleChrome/devsummit), so go and take a look!
 
