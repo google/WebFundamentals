@@ -22,7 +22,7 @@ tags:
 permalink: /updates/2015/03/introduction-to-fetch.html
 ---
 
-## So long XMLHttpRequest
+*So long XMLHttpRequest*
 
 **fetch()** allows you to make network requests similar to XMLHttpRequest 
 (XHR). The main difference is that the Fetch API uses Promises, which enables a 
@@ -39,13 +39,13 @@ If you've never used
 before, [check out this great article](http://www.html5rocks.com/en/tutorials/es6/promises/) by Jake 
 Archibald.
 
-# Basic Fetch Request
+## Basic Fetch Request
 
 Let's start by comparing a simple example implemented with an **XMLHttpRequest** 
 and then with **fetch**. We just want to request a URL, get a response and parse 
 it as JSON.
 
-## XMLHttpRequest
+### XMLHttpRequest
 
 An **XMLHttpRequest** would need two listeners to be set to handle the success 
 and error cases and a call to **open()** and **send()**. _[Example from MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)_.
@@ -67,7 +67,7 @@ oReq.open('get', './api/some.json', true);
 oReq.send();
 {% endhighlight %}
 
-## Fetch
+### Fetch
 
 Our fetch request looks a little like this:
 
@@ -100,7 +100,7 @@ The response of a fetch() request is a
 object, which means that when we call the json() method, a Promise is returned 
 since the reading of the stream will happen asynchronously.
 
-# Response Metadata
+## Response Metadata
 
 In the previous example we looked at the status of the 
 [Response](https://fetch.spec.whatwg.org/#responses) object as well as how to 
@@ -119,7 +119,7 @@ fetch('users.json').then(function(response) {
 });
 {% endhighlight %}
 
-# Response Types
+## Response Types
 
 When we make a fetch request, the response will be given a **response.type** 
 of "[basic](https://fetch.spec.whatwg.org/#concept-filtered-response-basic)", 
@@ -176,7 +176,7 @@ fetch('http://some-site.com/cors-enabled/some.json', {mode: 'cors'})
   });
  {% endhighlight %}
 
-# Chaining Promises
+## Chaining Promises
 
 One of the great features of promises is the ability to chain them together. For 
 fetch, this allows you to share logic across fetch requests.
@@ -223,7 +223,7 @@ rejected and the catch statement executes.
 The great thing with this is that you can share the logic across all of your 
 fetch requests, making code easier to maintain, read and test.
 
-# POST Request
+## POST Request
 
 It's not uncommon for web apps to want to call an API with a POST method and 
 supply some parameters in the body of the request.
@@ -248,7 +248,7 @@ fetch(url, {
   });
  {% endhighlight %}
 
-# Sending Credentials with a Fetch Request
+## Sending Credentials with a Fetch Request
 
 Should you want to make a fetch request with credentials such as cookies, you 
 should set the **credentials** of the request to **"include"**.
@@ -259,20 +259,20 @@ fetch(url, {
 })
 {% endhighlight %}
 
-# FAQ
+## FAQ
 
-## How do I cancel a fetch() request?
+### How do I cancel a fetch() request?
 
 At the moment there is no way to cancel a fetch, but this is being 
 [discussed on GitHub ](https://github.com/whatwg/fetch/issues/20). 
 H/T [@jaffathecake](https://twitter.com/jaffathecake) for this link.
 
-## Is there a polyfill?
+### Is there a polyfill?
 
 [GitHub has a polyfill for fetch](https://github.com/github/fetch). 
 H/T [@Nexii](https://twitter.com/Nexii) for pointing this out.
 
-## Why is "no-cors" supported in service workers but not the window?
+### Why is "no-cors" supported in service workers but not the window?
 
 This is due to a security concern, you can [learn more here](https://code.google.com/p/chromium/issues/detail?id=457157&q=fetch%20no-cors&colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified).
 
