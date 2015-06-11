@@ -151,19 +151,19 @@
 
 
   @mixin keyframes($animation-name){
-    @-webkit-keyframes $animation-name{
+    @-webkit-keyframes #{$animation-name}{
       @content;
     }
 
-    @-moz-keyframes $animation-name{
+    @-moz-keyframes #{$animation-name}{
       @content;
     }
 
-    @-ms-keyframes $animation-name{
+    @-ms-keyframes #{$animation-name}{
       @content;
     }
 
-    @keyframes $animation-name{
+    @keyframes #{$animation-name}{
       @content;
     }
   }
