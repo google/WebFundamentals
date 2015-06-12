@@ -154,7 +154,7 @@ You can enforce a specific orientation, which is really useful for some use case
 
 <div class="clear"></div>
 
-## Is it safe to use today. A.K.A Browser Support
+## Is it safe to use today? A.K.A Browser Support
 
 Yes.  This is a progressive feature that if you support, users of browsers that can handle this feature will
 get a better experience.  If the browser doesn't support the manifest then users are not stopped from using the

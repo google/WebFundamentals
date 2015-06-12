@@ -46,12 +46,12 @@ please check out the links above.
 We will also look at what will be added to the API in future versions of Chrome, 
 and finally we'll have an FAQ.
 
-# Implementing Push Messaging for Chrome
+## Implementing Push Messaging for Chrome
 
 This section describes each step you need to complete in order to support push 
 messaging in your web app.
 
-## Register a Service Worker
+### Register a Service Worker
 
 There is a dependency of having a service worker to implement push messages for 
 the web. The reason for this is that when a push message is received, the 
@@ -99,10 +99,10 @@ file which has the logic for handling a push message. Here we
 are simply telling the browser that this JavaScript file is the service worker 
 for our site.
 
-## Set Up the Initial State
+### Set Up the Initial State
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/enabled-disabled-push-ux-chrome.png" alt="Example of enabled and disabled push messaging UX in Chrome" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/enabled-disabled-push-ux-chrome.png" alt="Example of enabled and disabled push messaging UX in Chrome" />
 </p>
 
 Once the service worker is registered, we need to set up our UI's state.
@@ -120,7 +120,7 @@ enabled or disabled. There are however some other states surrounding
 notifications which you need to take into account.  
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/push-messaging-states-diagram-ux.png" alt="A diagram highlighting the different considerations and state of push in Chrome" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/push-messaging-states-diagram-ux.png" alt="A diagram highlighting the different considerations and state of push in Chrome" />
 </p>
 
 There are a number of things we need to check before we enable our button, and 
@@ -219,7 +219,7 @@ before we can do this, we need to set up a Google Developer Console project
 and add some parameters to our manifest to 
 use [Google Cloud Messaging (GCM)](https://developer.android.com/google/gcm/index.html).
 
-## Make a Project on the Google Developer Console
+### Make a Project on the Google Developer Console
 
 Chrome uses GCM to handle the sending and delivery of push messages, however, to 
 use the GCM API, you need to set up a project on the Google Developer Console. 
@@ -235,18 +235,18 @@ messages. We'll discuss how this would work in other browsers later on in the ar
 Below are screenshots highlighting where the project number and API keys are.  
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/google-developer-console-project-number.png" alt="Highlighting where the project number is in the Google Developer Console" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/google-developer-console-project-number.png" alt="Highlighting where the project number is in the Google Developer Console" />
 </p>
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/google-developer-console-api-key.png" alt="Highlighting where the API key is in the Google Developer Console" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/google-developer-console-api-key.png" alt="Highlighting where the API key is in the Google Developer Console" />
 </p>
 
 The project number will be used in the Web App Manifest (see the next section) 
 as the **gcm\_sender\_id** parameter, and the **API Key** will be needed on your 
 server when you use GCM's restful API.
 
-## Add a Web App Manifest
+### Add a Web App Manifest
 
 For push, we need to add a manifest file with two fields, **gcm\_sender\_id** and **gcm\_user\_visible\_only**, to get the push subscription to succeed. These parameters 
 are only required by Chrome to use GCM.
@@ -297,7 +297,7 @@ when you attempt to subscribe the user to push messages, with the error
 "Registration failed - no sender id provided" or "Registration failed - 
 permission denied". 
 
-## Subscribe to Push Messaging
+### Subscribe to Push Messaging
 
 To subscribe, we just have to call the **subscribe()** method on the 
 [PushManager](http://w3c.github.io/push-api/#pushmanager-interface) object, 
@@ -366,7 +366,7 @@ function subscribe() {
 At this point your web app is ready to receive a push message, although nothing 
 will happen until we add a push event listener to our service worker file.
 
-## Service Worker Push Event Listener
+### Service Worker Push Event Listener
 
 When a push message is received (we'll talk more about how to send a push 
 message from your server in the next section), a **push event** 
@@ -414,7 +414,7 @@ We'll look at a more complete example of showing a notification later on in this
 post. For now, let's keep things simple and see if sending a push message shows 
 this notification.
 
-## Sending a Push Message
+### Sending a Push Message
 
 We've subscribed to push messages and our service worker is ready to show a 
 notification, so it's time to send a push message through GCM.  
@@ -452,7 +452,7 @@ notification:
     "{\"registration_ids\":[\"<YOUR_SUBSCRIPTION_ID>\"]}"
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/push-message.gif" alt="Example of a push message from Chrome for Android" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/push-message.gif" alt="Example of a push message from Chrome for Android" />
 </p>
 
 When developing your backend logic, remember that the Authorization header and 
@@ -470,7 +470,7 @@ server and the push provider. However, this encryption isn't supported yet, so
 in the meantime you'll need to perform a fetch to get information needed to 
 populate a notification.
 
-## A More Complete Push Event Example
+### A More Complete Push Event Example
 
 The notification we've seen so far is pretty basic and as far as samples go, 
 it's pretty poor at covering a real world use case.
@@ -544,7 +544,7 @@ You'll notice that we show a notification even when there is an error, that is
 because if we don't, Chrome will show it's own generic 
 notification.
 
-## Opening a URL when the User Clicks a Notification
+### Opening a URL when the User Clicks a Notification
 
 When the user clicks a notification, a **notificationclick** event is dispatched 
 in your service worker. Within your handler, you can take appropriate action, 
@@ -606,7 +606,7 @@ for this idea.)
 The simplest way to overcome the temporary issue of only being able to open URLs 
 on the same origin, is to have a page on your domain which performs a redirect.
 
-## Unsubscribe a User's Device
+### Unsubscribe a User's Device
 
 You've subscribed a user's device and they're receiving push messages, but how can you  
 unsubscribe them?
@@ -665,7 +665,7 @@ function unsubscribe() {
 }
 {% endhighlight %}
 
-## Keeping the Subscription Up to Date
+### Keeping the Subscription Up to Date
 
 Subscriptions may get out of sync between GCM and your server. Make sure
 your server parses the response body of the GCM API's send POST, looking for
@@ -692,7 +692,7 @@ web in Chrome 42. There are still spec'd features that will make things easier
 (like notifications having data tied to them), but this release enables you to 
 start building push messaging into your web apps today.
 
-## How to Debug Your Web App
+### How to Debug Your Web App
 
 While implementing push messages, bugs will live in one of two places: your page 
 or your service worker.  
@@ -715,7 +715,7 @@ resume or step through your service worker script and see if you hit any
 problems.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/sw-internals-pause-checkbox.png" alt="Screenshot showing where the pause execution checkbox is on serviceworker-internals" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/sw-internals-pause-checkbox.png" alt="Screenshot showing where the pause execution checkbox is on serviceworker-internals" />
 </p>
 
 If there seems to be an issue between GCM and your service worker's push event, 
@@ -730,7 +730,7 @@ Notice the "success": 1 response. If you see a failure instead, then that
 suggests that something isn't right with the GCM subscription and the push 
 message isn't getting sent to Chrome.
 
-## Debugging Service Workers on Chrome for Android
+### Debugging Service Workers on Chrome for Android
 
 At the moment debugging service workers on Chrome for Android is not obvious. 
 You need to navigate to **chrome://inspect**, find your device and look for a 
@@ -738,10 +738,10 @@ list item with the name "Worker pid:...." which has the URL of your service
 worker.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/2015-03-04-push-on-the-open-web/service-worker-on-chrome-for-android.png" alt="Screenshot showing where service workers live in chrome inspect" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/service-worker-on-chrome-for-android.png" alt="Screenshot showing where service workers live in chrome inspect" />
 </p>
 
-# UX for Push Notifications
+## UX for Push Notifications
 
 The Chrome team has been putting together a document of best practices
 for push notifications UX as well as a document covering some
@@ -750,13 +750,13 @@ of the edge cases when working with push notifications.
 - [Best Practices for Push Notifications Permissions UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit?usp=sharing)
 - [Push Notifications Edge Cases and Mitigations](https://docs.google.com/document/d/1KbmuByY7mJsTtqS-Mh6cDBt463hmDdp-67rTcN-Gmn8/edit?usp=sharing)
 
-# Future of Push Messaging on Chrome and the Open Web
+## Future of Push Messaging on Chrome and the Open Web
 
 This section goes into a little bit of detail surrounding some of the Chrome 
 specific parts of this implementation that you should be aware of and how it 
 will differ from other browser implementations.
 
-## Web Push Protocol and Endpoints
+### Web Push Protocol and Endpoints
 
 The beauty of the Push API standard is that you should be able to take the 
 **subscriptionId** and **endpoint**,  pass them to your server and send push 
@@ -780,21 +780,21 @@ Until then, you need to detect the endpoint
 and handle it separately from other endpoints, i.e. format the payload data in a 
 specific way and add the Authorization key.
 
-## How to Implement the Web Push Protocol?
+### How to Implement the Web Push Protocol?
 
 At the moment there is no push service which implements the Web Push Protocol 
 meaning there is no sample to give on how to send a push message on your server 
 for anything other than GCM.
 
-# FAQs
+## FAQs
 
-## Where are the specs?
+### Where are the specs?
 
 [https://slightlyoff.github.io/ServiceWorker/spec/service\_worker/](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/)  
 [https://w3c.github.io/push-api/](https://w3c.github.io/push-api/)  
 [https://notifications.spec.whatwg.org/](https://notifications.spec.whatwg.org/)
 
-## Can I prevent duplicate notifications if my web presence has multiple origins, or if I have both a web and native presence?
+### Can I prevent duplicate notifications if my web presence has multiple origins, or if I have both a web and native presence?
 
 There isn't a solution to this at the moment, but you can follow progress [on Chromium](https://crbug.com/402223).
 
@@ -804,43 +804,43 @@ decide which one to send a push message to. You could do this via screen size,
 device model, sharing a generated key between the web app and native app, but 
 each approach has pro's and con's.
 
-## Why do I need a gcm\_sender\_id?
+### Why do I need a gcm\_sender\_id?
 
 This is required so that Chrome can make use of the Google Cloud Messaging (GCM) 
 API. The goal is to use the Web Push Protocol when the standard is finalised and 
 GCM can support it.
 
-## Why not use Web Sockets or [Server-Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (EventSource)?
+### Why not use Web Sockets or [Server-Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (EventSource)?
 
 The advantage of using push messages is that even if your page is closed, your 
 service worker will be woken up and be able to show a notification. Web Sockets 
 and EventSource have their connection closed when the page or browser is closed.
 
-## What if I don't need background event delivery?
+### What if I don't need background event delivery?
 
 If you don't need background delivery then Web Sockets are a great option.
 
-## When can I use push without showing notifications (i.e. silent background push)?
+### When can I use push without showing notifications (i.e. silent background push)?
 
 There is no timeline for when this will be available yet, but there is an 
 [intent to implement background sync](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/iaAyTxWmx7o) 
 and while it's not decided or spec'd, there is some discussion of enabling 
 silent push with background sync.
 
-## Why does this require HTTPS? How do I work around this during development?
+### Why does this require HTTPS? How do I work around this during development?
 
 Service workers require secure origins to ensure that the service worker script 
 is from the intended origin and hasn't come about from a man-in-the-middle 
 attack. Currently, that means using HTTPS on live sites, though localhost will 
 work during development.
 
-## What does browser support look like?
+### What does browser support look like?
 
 At the moment Chrome is the only browser to implement this standard, but Mozilla 
 have begun work on [implementing the Push API](https://bugzilla.mozilla.org/show_bug.cgi?id=1038811) and you can track 
 [their Notification implementation here](https://bugzilla.mozilla.org/show_bug.cgi?id=1114554).
 
-## Can I remove a notification after a certain time period?
+### Can I remove a notification after a certain time period?
 
 At the moment this isn't possible but we are planning on adding support to get a 
 list of currently visible notifications. If you have a use case to set an 
@@ -852,7 +852,7 @@ after a certain time period, and don't care how long the notification stays
 visible, then you can use GCM's time to live (ttl) parameter, 
 [learn more here](https://developer.android.com/google/gcm/server.html#ttl).
 
-## What are the limitations of push messaging in Chrome 42?
+### What are the limitations of push messaging in Chrome 42?
 
 There are a few limitations outlined in this post:
 
@@ -867,19 +867,19 @@ There are a few limitations outlined in this post:
   won't be received. This differs from Chrome OS and Android where push messages 
   will always be received. This is something we hope to resolve in the future.
 
-## Shouldn't we be using the Permissions API?
+### Shouldn't we be using the Permissions API?
 
 The 
 [Permission API](https://w3c.github.io/permissions/) is still being spec'd and isn't 
 implemented in Chrome yet. When it is available in Chrome, you should move away 
 from using Notifications.permission and use the Permissions API instead.
 
-## Why doesn't Chrome open up the previous tab when I click a notification?
+### Why doesn't Chrome open up the previous tab when I click a notification?
 
 This issue only affects pages which aren't currently controlled by a service 
 worker. You can [learn more here](https://code.google.com/p/chromium/issues/detail?id=460903).
 
-## What if a notification is out of date by the time the users device received the push?
+### What if a notification is out of date by the time the users device received the push?
 
 You always have to show a notification when you receive a push message. 
 In the scenario where you want to send a notification but it's only useful
@@ -888,7 +888,7 @@ so that GCM won't send the push message if it passes the expiry time.
 
 [More details can be found here](https://developer.android.com/google/gcm/server.html#ttl).
 
-## What happens if I send 10 push messages but only want the device to receive one?
+### What happens if I send 10 push messages but only want the device to receive one?
 
 GCM has a 'collapse_key' parameter you can use to tell GCM to replace any pending
 message which has the same 'collapse_key', with the new message.

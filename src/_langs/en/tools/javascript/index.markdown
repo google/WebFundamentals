@@ -3,7 +3,7 @@ rss: false
 layout: landing
 title: "Debug"
 seotitle: "Debug Your JavaScript Using Chrome DevTools breakpoints, console, and the command line API"
-description: "TBD description."
+description: "It's often said that the best code is code that doesn't do what you expect, because you always learn something from it. Chrome DevTools offers a comprehensive set of debugging features to help you find, fix -- and learn from -- unexpected results."
 introduction: "TBD introduction."
 snippet: "Debug the JavaScript."
 article:

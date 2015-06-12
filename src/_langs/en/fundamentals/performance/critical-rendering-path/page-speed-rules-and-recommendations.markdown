@@ -5,7 +5,7 @@ description: "PageSpeed Insights rules in context: what to pay attention to when
 introduction: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-10-16
+  updated_on: 2015-06-10
   order: 8
 collection: critical-rendering-path
 priority: 0
@@ -44,6 +44,43 @@ code shows how to use `navigator.sendBeacon()` to send data to the server in the
         'Sent by a beacon!');
     }
   }();
+</script>
+{% endhighlight %}
+
+The new `fetch()` method provides an easy way to asynchronously request data. Because it is not available everywhere yet, you should use feature detection to test for its presence before use. This method processes responses with Promises rather than multiple event handlers. Unlike the response to an XMLHttpRequest, a fetch response is a stream object starting in Chrome 43. This means that a call to `json()` also returns a Promise. 
+
+{% highlight html %}
+<script>
+fetch('./api/some.json')  
+  .then(  
+    function(response) {  
+      if (response.status !== 200) {  
+        console.log('Looks like there was a problem. Status Code: ' +  response.status);  
+        return;  
+      }
+      // Examine the text in the response  
+      response.json().then(function(data) {  
+        console.log(data);  
+      });  
+    }  
+  )  
+  .catch(function(err) {  
+    console.log('Fetch Error :-S', err);  
+  });
+</script>
+{% endhighlight %}
+
+The `fetch()` method can also handle POST requests.
+
+{% highlight html %}
+<script>
+fetch(url, {
+  method: 'post',
+  headers: {  
+    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+  },  
+  body: 'foo=bar&lorem=ipsum'  
+}).then(function() { // Aditional code });
 </script>
 {% endhighlight %}
 

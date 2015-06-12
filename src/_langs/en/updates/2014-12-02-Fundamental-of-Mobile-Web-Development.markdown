@@ -39,10 +39,10 @@ address these problems from the Chrome Developer Platform team.
 <iframe  src="//www.youtube.com/embed/z6dg_V22wV0?controls=2&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
 </div>
 
-# Learn.
+## Learn.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image00.png" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image00.png" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
 </p>
 
 [Web Fundamentals](https://developers.google.com/web/fundamentals/) is a set of
@@ -60,10 +60,10 @@ Fundamentals to cover a particular topic, then please do let us know by
 [submitting feedback on
 Github](https://github.com/Google/WebFundamentals/issues/new?title=Feedback%20for:%20/fundamentals/index.html).
 
-# Build.
+## Build.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image01.png" alt="Web Starter Kit on a Range Devices" width="464" height="252" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image01.png" alt="Web Starter Kit on a Range Devices" width="464" height="252" style="max-width: 100%; height: auto;" />
 </p>
 
 To help you kick off a new web project we created [Web Starter
@@ -74,7 +74,7 @@ need:
 * Boilerplate HTML
 * Styleguide
 
-## The Build Process
+### The Build Process
 
 For those of you who are new to build processes, the easiest way to think of a
 build process is to view it as a program which takes a set of files and performs
@@ -85,7 +85,7 @@ handle tasks that can be automated.
 In Web Starter Kit we have the following processes:
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image02.png" alt="Diagram of Web Starter Kits Build Process" width="624" height="470" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image02.png" alt="Diagram of Web Starter Kits Build Process" width="624" height="470" style="max-width: 100%; height: auto;" />
 </p>
 
 We minify and concatenate CSS and Javascript so that the browser can fetch the
@@ -94,7 +94,7 @@ best practices and common coding mistakes. Images are minified with imagemin and
 you can get **huge** reductions in file size by using this. We also have a
 process to create the styleguides CSS.
 
-## Boilerplate for Multi-Device HTML
+### Boilerplate for Multi-Device HTML
 
 The first set of HTML you write for a new page is pretty bog standard and
 chances are you'll have some way of quickly getting hold a stock HTML file that
@@ -106,13 +106,13 @@ homescreen](https://developers.google.com/web/fundamentals/device-access/stickyn
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image03.png" alt="Example of Web Starter Kit Add to Homescreen" width="313" height="274" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image03.png" alt="Example of Web Starter Kit Add to Homescreen" width="313" height="274" style="max-width: 100%; height: auto;" />
 </p>
 
-## Styleguide
+### Styleguide
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image04.png" alt="Web Starter Kit Styleguide on Chromebook Pixel" width="624" height="416" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image04.png" alt="Web Starter Kit Styleguide on Chromebook Pixel" width="624" height="416" style="max-width: 100%; height: auto;" />
 </p>
 
 The final piece of Web Starter Kit is it's Styleguide.
@@ -130,10 +130,10 @@ mock](http://youtu.be/z6dg_V22wV0?t=15m5s) of what this may look like at Chrome
 Dev Summit and you can see an example below.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image05.png" alt="Web Starter Kit's Material Design Styleguide Mock" width="624" height="416"  style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image05.png" alt="Web Starter Kit's Material Design Styleguide Mock" width="624" height="416"  style="max-width: 100%; height: auto;" />
 </p>
 
-# Iterate.
+## Iterate.
 
 Once you've started to put your new knowledge into practice, you'll want to use
 DevTools to debug, improve and maintain your work.
@@ -141,14 +141,14 @@ DevTools to debug, improve and maintain your work.
 There are some huge new features landing in DevTools and Matt takes a look at
 the following new features.
 
-## Device Mode
+### Device Mode
 
 Device mode is a new section in DevTools which allows you to quickly see how
 your site works across different mobile devices, while viewing the media queries
 in your CSS.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image06.gif" alt="Screenshot of Device Mode Feature in Chrome DevTools" width="532" height="297" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image06.gif" alt="Screenshot of Device Mode Feature in Chrome DevTools" width="532" height="297" style="max-width: 100%; height: auto;" />
 </p>
 
 One of the great features of Device Mode is the ability to throttle the network
@@ -156,10 +156,10 @@ speeds, allowing you simulate the experience of a user on a GPRS, EDGE, 3G, DSL
 or Wifi connection.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image07.png" alt="Screenshot of Network Throttling in Chrome DevTools" width="624" height="336" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image07.png" alt="Screenshot of Network Throttling in Chrome DevTools" width="624" height="336" style="max-width: 100%; height: auto;" />
 </p>
 
-## Paint Profiler
+### Paint Profiler
 
 If you've ever opened up the timeline tab and hit the record button, you've
 probably seen some paint events happen in the waterfall. Normally this would be
@@ -170,40 +170,40 @@ Paint profiler no gives you more information on what exactly the browser is
 doing during that paint.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image08.png" alt="Screenshot of the Paint Profiler in Chrome DevTools" width="624" height="348" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image08.png" alt="Screenshot of the Paint Profiler in Chrome DevTools" width="624" height="348" style="max-width: 100%; height: auto;" />
 </p>
 
-## Invalidation Tracking
+### Invalidation Tracking
 
 DevTools now gives a reason why a paint or layout occurred whenever it can, this
 is useful for anyone learning about the timeline, the browser behaviours and
 allows you to optimise your code to prevent performance issues.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome Devtools" width="624" height="396" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome Devtools" width="624" height="396" style="max-width: 100%; height: auto;" />
 </p>
 
-## Flame Chart View
+### Flame Chart View
 
 This is a very different way of viewing the information available in the
 timeline. This makes it much easier to see how tasks overlap and what browser
 behaviour happened as a result of other tasks.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image10.png" alt="Screenshot of Flame Chart View in Chrome DevTools" width="624" height="384" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image10.png" alt="Screenshot of Flame Chart View in Chrome DevTools" width="624" height="384" style="max-width: 100%; height: auto;" />
 </p>
 
-## Frame Viewer
+### Frame Viewer
 
 While in Flame Chart view, you can select a specific frame and within this,
 you'll be able to explore which elements in the page had been promoted to a
 composite layer as well as why they've been promoted.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/2014-12-02-fundamentals-of-web-dev/image11.png" alt="Screenshot of Frame Viewer in Chrome DevTools" width="624" height="537" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image11.png" alt="Screenshot of Frame Viewer in Chrome DevTools" width="624" height="537" style="max-width: 100%; height: auto;" />
 </p>
 
-# Learn. Build. Iterate.
+## Learn. Build. Iterate.
 
 These are some of the efforts from the Chrome team to help developers get up to
 speed with web development, so be sure to check out [Web
