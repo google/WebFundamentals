@@ -1,14 +1,15 @@
 ---
 layout: section
-title: "Web Starter Kit ではじめよう"
-description: "新しいプロジェクトをはじめるのに、最も大変なのが最初の一歩です。
-Web Starter Kit は様々なツールと共に、あなたの開発プロセスをサポートする基礎となります。"
-introduction: "このガイドは、Web Starter Kit を使って新しいサイトを構築するプロセスをステップバイステップで案内し、提供されるツールの効力を最大限引き出すお手伝いをします。"
+title: "Web Starter Kit でサイトをスタート"
+description: "新しいプロジェクトの最も難しい部分は、開始時であることがよくあります。Web Starter Kit は、開発プロセスに沿って支援するための
+さまざまなツールの確かな情報を提供します。"
+introduction: "このガイドでは、Web Starter Kit で新しいサイトを構築するプロセスを手順ごとに説明し、提供されるツールを最大限に活用できるようにします。"
 article:
   written_on: 2014-07-17
-  updated_on: 2014-07-17
+  updated_on: 2014-10-21
   order: 3
 id: web-starter-kit
+priority: 1
 collection: getting-started
 ---
 
