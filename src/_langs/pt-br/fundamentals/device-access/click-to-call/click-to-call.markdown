@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Click to call"
-description: “Em dispositivos com a função telefone, facilita que usuários
+description: "Em dispositivos com a função telefone, facilita que usuários
  liguem diretamente para você apenas tocando em um número de telefone, comumente
  conhecido como clique para chamar."
-introduction: “Em dispositivos com a função telefone, facilita que usuários
+introduction: "Em dispositivos com a função telefone, facilita que usuários
  liguem diretamente para você apenas tocando em um número de telefone, comumente
  conhecido como clique para chamar."
 article:
