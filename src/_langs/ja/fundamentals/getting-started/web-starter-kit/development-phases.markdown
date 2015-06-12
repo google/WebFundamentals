@@ -1,19 +1,17 @@
 ---
 layout: article
-title: "開発フェーズ"
-description: "プロジェクト開発において、すべての開発者は様々なフェーズを経験します。Web Starter Kit は各フェーズにおいて、作業をより効率的かつシンプルにします。"
-introduction: "開発中、特に使うコマンドが 3 つあります：gulp serve、gulp serve:dist、そして gulp です。各タスクがサイト構築でどのような役割を果たすのか見て行きましょう。"
-notes:
+title: "開発のフェーズ"
+description: "すべての開発者は、さまざまな段階を経て プロジェクトを開発します。 Web Starter Kit は、開発の生産性を高め、 各フェーズのタスクの範囲を簡素化します。"
+introduction: "開発では、定期的に使用する 3 つのコマンドがあります。gulp serve、gulp、および gulp serve:dist です。  それぞれのタスクがサイトを開発にどのように役立つかを見てみましょう。"
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2014-10-21
   order: 2
 id: development-phases
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt
-translators:
-  - agektmr
 key-takeaways:
 ---
 
@@ -21,46 +19,46 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## Start a Local Server
+## ローカル サーバーの起動
 
-The first task we’ll look at is: `$ gulp serve`.
+最初は次のタスクです: `$ gulp serve`。
 
-On the surface, this task starts a local HTTP server so you can view your site
-in a browser, but behind the scenes there are some extra tools at work.
+表面上、このタスクはローカル HTTP サーバーを起動するためブラウザで
+サイトを表示できますが、背後でいくつかのツールが動作しています。
 
 ### Live Reload
 
-Live reload eliminates the traditional refresh dance of making a change in the
-editor, switching to the browser, hitting CTRL-R, and then waiting for the page
-to reload.
+Live Reload は、エディタで変更を行うの際に旧来のリフレッシュ ダンスを
+排除します。先ずブラウザに切り替え、CTRL-R を押し、ページが再読み込み
+されるのを待機します。
 
-With Live Reload, you can make changes in your editor and see them take effect
-immediately in any browser with your site open.
+Live Reload では、エディタで変更を行い、その結果を任意のブラウザで開いたサイトで
+すぐに確認できます。
 
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-### Testing Across Devices
+### 端末間でのテスト
 
-Browser Sync helps you test your site across multiple devices. Any scrolls,
-taps, or keyboard presses will be shared across any connected browser.
+Browser Sync は、複数の端末間でサイトをテストするのに役立ちます。 任意のスクロール、
+タップ、またはキーボードの操作が、接続されているすべてのブラウザ間で共有されます。
 
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-This only works when you run your site with `gulp serve`. Try it out by running
-`gulp serve`, open the URL in two browser windows side by side and scroll
-one of the pages.
+`gulp serve` でサイトを実行する場合にのみ機能します。 `gulp serve` 
+を実行してこれを試してください。隣り合った 2 つのブラウザ ウィンドウで URL を開き、
+1 つのページをスクロールします。
 
-### Automate Prefixing
+### プレフィックスの自動生成
 
-When targeting a range of browsers, you’ll need to use vendor prefixes to
-ensure you can use features in each of them. Web Starter Kit automates all of
-the prefixing for you.
+ブラウザの範囲をターゲットにする場合、ベンダーのプレフィックスを使用して、
+それぞれで機能を使用できることを確認する必要があります。 Web Starter Kit は、
+すべてのプレフィックスを自動生成します。
 
-Our example CSS (below) doesn’t include any vendor prefixes:
+下の例の CSS は、どのベンダーのプレフィックスも含まれていません。
 
     .app-bar-container {
       display: flex;
@@ -74,8 +72,8 @@ Our example CSS (below) doesn’t include any vendor prefixes:
       margin: 0 auto;
     }
 
-The build process runs the CSS through the autoprefixer which produces the
-final output below:
+ビルド プロセスは、自動プレフィックス変換を介して CSS を実行し、次の
+最終出力を生成します。
 
     .app-bar-container {
       display: -webkit-flex;
@@ -93,95 +91,96 @@ final output below:
       margin: 0 auto;
     }
 
-### Check Your Javascript
+### Javascript を確認する
 
-JSHint is a tool which scans your JavaScript code to check for possible problems
-with your JavaScript logic and [enforces coding best practices](http://www.jshint.com/docs/).
+JSHint は、JavaScript コードをスキャンするツールです。これを使用して、JavaScript のロジックで発生する可能性のある
+問題および [enforces coding best practices](http://www.jshint.com/docs/) をチェックします。
 
-The tool runs whenever you build the project or, if you are running gulp server,
-whenever you make a change to a JavaScript file.
+プロジェクトをビルドするたびにツールが実行されます。また、gulp サーバーを実行している場合は、
+JavaScript ファイルに変更を加える度に実行されます。
 
-### Compile Your Sass
+### Sass のコンパイル
 
-While you are running the serve command, any changes made to any of the Sass
-files in your project will get compiled into CSS and prefixed, after which your
-page will be reloaded with Live Reload.
+サーバー コマンドを実行している間、プロジェクトの中の Sass 
+ファイルに加えた変更はすべて、CSS にコンパイルされ、接頭語が付けられます。その後、
+ページは Live Reload にリロードされます。
 
-For those new to Sass, the project describes itself as a “CSS
-extension language”. Essentially it’s CSS with some extra features. For example,
-it adds support for variables and functions, which help you structure your CSS
-in a modular and reusable fashion.
+Sass に馴染みがない場合、プロジェクトそのものが「CSS 
+の拡張言語」として説明されます。 基本的には、いくつかの追加機能を備えた CSS です。 たとえば、
+変数および関数のサポートが追加されています。これによって、モジュラー内で再利用可能な方法で 
+CSS を構築できます。
 
-## Build a Production Version of Your Site
+## サイトの実稼働向けのバージョンをビルドする
 
-You can build a production ready version of your site with the simple gulp
-command. This command runs some the tasks we’ve seen already, with additional
-tasks aimed at making your site load faster and more efficiently.
+単純な `gulp`
+コマンドで、サイトの実稼働向けのバージョンをビルドすることができます。 このコマンドは、これまでに見てきたいくつかのタスクを実行するとともに、サイトの負荷をより速く、
+より効率的にするためのタスクも実行します。
 
-The main tasks the production build performs are:
+実稼働向けビルドの主なタスクは次のとおりです。
 
-### Build Styles
+### スタイルのビルド
 
-First the build will compile the Sass in your project. After the Sass has been
-compiled, the Autoprefixer runs over all the CSS.
+最初のビルドは、プロジェクト内の Sass をコンパイルします。 Sass がコンパイルされた後、
+Autoprefixer がすべての CSS で実行されます。
 
-### Check your JavaScript for problems
+### Javascript の問題を確認する
 
-The second build step runs JSHint over your JavaScript.
+第 2 のビルド ステップは、JavaScript で JSHint を実行することです。
 
-### Build the HTML Pages
+###HTML ページのビルド
 
-The next step examines your HTML files, looking for build blocks to concatenate
-and minify JavaScript. After the JavaScript is taken care of, the build process
-minifies the HTML page.
+次のステップは、HTML ファイルを検査することです。ビルド ブロックを検索して連結し、
+JavaScript を圧縮します。 JavaScript が処理されたら、ビルド プロセスは、HTML ページを
+圧縮します。
 
-Minification reduces the number of characters in the final JavaScript file by
-removing comments or space characters that aren’t actually needed, as well as
-some other techniques. This reduces the final file size, speeding up your
-site’s load time.
+圧縮によって、実際には必要のないコメントや空白文字を削除したり、
+他の手法を用いて、最終の JavaScript ファイル内の
+文字の数を減少させます。 これにより最終的なファイル サイズが小さくなり、サイトの読み込み時間
+が高速化されます。
 
-Concatenation means pasting the contents of multiple files into one. The reason
-we do this is so that the browser only has to make one request to a server
-rather than many, which is faster for your users.
+連結は複数のファイルの内容を 1 つに貼り付けることを意味します。 これを行う目的は、
+ブラウザがサーバーに多くのリクエストを送信せずに、1 つのリクエストだけで済むようにすることであり、
+これによって高速化を実現できます。
 
-A build block has everything needed to manage which JavaScript files we minify
-and concatenate together. Let’s look at a sample build block:
+ビルド ブロックは、圧縮して共に連結する JavaScript ファイルを管理するために
+必要なすべてを備えています。 ビルド ブロックのサンプルを見てみましょう。
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/example-1.js"></script>
     <script src="scripts/example-2.js"></script>
     <!-- endbuild -->
 
-As you can see, a build block is nothing more than a specially formatted comment.
-The first line indicates the build block is for JavaScript and the final
-filename and path should be scripts/main.min.js. The last line closes the block.
-Everything in-between is the list of JavaScript files we want to minify and
-concatenate, in this case *example-1.js* and *example-2.js*.
+ビルド ブロックは、特別な形式のコメントにすぎません。
+ビルド ブロックとの間の JavaScript ファイルのすべてが統合
+ (結合) され、main.min.js という名前のファイルに圧縮されます。そして、
+最終ビルドがこれらのスクリプトをスクリプト タグで置き換えます。
 
-### Optimize any image assets
+    <script src="scripts/main.min.js"></script>
 
-For JPEGs and PNGs, the meta data in the image is stripped out; it isn’t needed
-to render the image. The meta data includes information such as the camera used
-to take the photo.
+### 任意の画像アセットの最適化
 
-For SVGs, it’ll remove any attributes which aren’t needed or any whitespace and
-comments that exist.
+JPEG および PNG 画像の場合、画像内のメタデータは取り除かれます。画像のレンダリングには
+必要がないためです。 メタデータは、写真を撮るためのカメラに
+使用されるような情報が含まれます。
 
-### Copy Fonts
+SVG の場合、存在していても必要のない属性や空白、
+コメントを削除します。
 
-This simple task copies our fonts from the app to the the final build directory.
+### フォントのコピー
 
-### Copy over Any Files from the Root Directory
+この単純なタスクでは、アプリからのフォントを、最終的なビルド ディレクトリへコピーします。
 
-If the build finds any files in the root directory of the project, it will copy
-them over into the final build as well.
+### ルート ディレクトリから任意のファイルをコピーする
 
-## Test Your Production Build
+プロジェクトのルート ディレクトリ内のファイルをビルドが検出した場合、
+それらは最終ビルドにもコピーされます。
 
-Before you push anything into production, you need to make sure everything works
-as you'd expect. The `gulp serve:dist` command builds a production version of your site,
-starts a server, and opens a browser for you. This doesn’t have Live Reload or
-Browser Sync, but it’s a reliable way of testing your site before deploying it.
+## 実稼働向けビルドのテスト
+
+実稼働に何をプッシュする前に、すべてが期待どおりに
+動作することを確認する必要があります。 `gulp serve:dist` コマンドは、サイトの実稼働向けのバージョンをビルドし、
+サーバーを起動し、ブラウザを開きます。 これは **Live Reload または 
+Browser Sync** を備えていませんが、サイトを展開する前にテストするための信頼性の高い方法です。
 
 {% include modules/nextarticle.liquid %}
 
