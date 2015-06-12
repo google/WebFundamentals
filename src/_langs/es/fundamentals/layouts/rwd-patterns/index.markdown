@@ -20,10 +20,10 @@ collection: multi-device-layouts
 
 {% wrap content%}
 
-
-La mayoría de los diseños que se utilizan en las páginas web receptivas se pueden categorizar dentro de uno de cinco patrones
-: Mostly fluid, Column drop, Layout shifter, Tiny tweaks y Off canvas.
-En algunos casos, en una página, se puede utilizar una combinación de patrones; por ejemplo, Column drop
+La mayoría de los diseños que se utilizan en las páginas web receptivas se
+pueden categorizar dentro de uno de cinco patrones: Mostly fluid, Column drop,
+Layout shifter, Tiny tweaks y Off canvas. En algunos casos, en una página, se
+puede utilizar una combinación de patrones; por ejemplo, Column drop
 y Off canvas.  Estos patrones, originalmente identificados por [Luke
 Wroblewski](http://www.lukew.com/ff/entry.asp?1514), son un punto de partida sólido
 para cualquier página receptiva.
