@@ -1,13 +1,14 @@
 ---
 layout: section
-title: "从 Web 新手开发包开始你的站点"
-description: "有时候，新项目最难的地方就在开始。Web 新手开发包为你夯好基础，给你提供一套工具，在开发过程中给予你帮助。"
-introduction: "本指南逐步引导你使用 Web 新手开发包创建新站点，帮助你充分利用 Web 新手开发包提供的工具。"
+title: "使用 Web Starter Kit 开始制作您的网站"
+description: "有时，新项目的最难部分是开头。 Web Starter Kit 为您提供一个坚实的基础，提供一系列工具来帮助您 完成开发过程。"
+introduction: "本指南引导您完成使用 Web Starter Kit 来构建新网站的过程，并帮助您充分利用它提供的工具。"
 article:
   written_on: 2014-07-17
-  updated_on: 2014-07-17
+  updated_on: 2014-10-21
   order: 3
 id: web-starter-kit
+priority: 1
 collection: getting-started
 ---
 

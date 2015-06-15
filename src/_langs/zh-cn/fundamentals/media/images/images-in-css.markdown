@@ -6,7 +6,7 @@ introduction: "CSS 的 'background' 属性是一个强大的工具，用于给�
 authors:
   - petelepage
 translators:
-  - 陈三
+  - samchen
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

@@ -6,7 +6,7 @@ introduction: "一图胜千言，另外图片也是每个页面不可或缺的�
 authors:
   - petelepage
 translators:
-  - 陈三
+  - samchen
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30

@@ -1,14 +1,14 @@
 ---
 rss: false
 layout: article
-title: "Memory Terminology and Fundamentals"
-seotitle: "Memory Terminology and Fundamentals"
+title: "Memory Terminology"
+seotitle: "Memory Terminology"
 description: "This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages."
 introduction: "This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages."
 article:
   written_on: 2015-05-19
   updated_on: 2015-05-19
-  order: 1
+  order: 2
 authors:
   - megginkearney
 priority: 0

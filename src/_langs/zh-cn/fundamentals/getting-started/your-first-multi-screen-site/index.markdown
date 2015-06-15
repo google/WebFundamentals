@@ -12,7 +12,7 @@ collection: getting-started
 authors:
   - paulkinlan
 translators:
-  - 陈三
+  - samchen
 ---
 
 {% wrap content%}
