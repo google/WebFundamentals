@@ -155,7 +155,8 @@
       This helper script checks if a G+ comment block should be loaded and loads it if needed.
     {% endcomment %}
     <script>
-    (function() {
+
+    window.addEventListener('load', function() {
 
       var getElementTop = function(elem) {
         var top = elem.offsetTop;
@@ -174,33 +175,44 @@
         return;
       }
 
-      var items = [];
-      for (var i = 0; i < videoElements.length; i++) {
-        items.push({
-          element: videoElements[i],
-          top: getElementTop(videoElements[i]),
-          height: videoElements[i].offsetHeight,
-          playing: false
-        });
-      }
+      if("ontouchstart" in window) {
 
-      window.addEventListener('scroll', function(e) {
-        var scrollY = window.scrollY;
-        for (var i = 0, item; i < items.length; i++) {
-          item = items[i];
-          if(-scrollY + item.top > -item.height && window.innerHeight - (-scrollY + item.top) > 0) {
-            if(item.element.paused) {
-              item.element.play();
-            }
-          } else {
-            if(!item.element.paused) {
-              item.element.pause();
+        for (var i = 0; i < videoElements.length; i++) {
+          videoElements[i].setAttribute('controls', 1);
+        }
+
+      } else {
+
+        var items = [];
+        for (var i = 0; i < videoElements.length; i++) {
+          items.push({
+            element: videoElements[i],
+            top: getElementTop(videoElements[i]),
+            height: videoElements[i].offsetHeight,
+            playing: false
+          });
+        }
+
+        window.addEventListener('scroll', function(e) {
+          var scrollY = window.scrollY;
+          for (var i = 0, item; i < items.length; i++) {
+            item = items[i];
+            if(-scrollY + item.top > -item.height && window.innerHeight - (-scrollY + item.top) > 0) {
+              if(item.element.paused) {
+                item.element.play();
+              }
+            } else {
+              if(!item.element.paused) {
+                item.element.pause();
+              }
             }
           }
-        }
-      }, false);
+        }, false);
 
-    })();
+      }
+
+    }, false);
+
     </script>
   </body>
 </html>
