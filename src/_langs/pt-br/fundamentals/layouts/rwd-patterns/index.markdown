@@ -1,10 +1,10 @@
 ---
 layout: section
 title: "Responsive Web Design Patterns"
-description: “Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
+description: "Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem em
               dispositivos móveis e desktop"
-introduction: “Padrões de design da Web responsivos estão evoluindo rapidamente, mas
+introduction: "Padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem entre os
               dispositivos móveis e desktop."
 authors:

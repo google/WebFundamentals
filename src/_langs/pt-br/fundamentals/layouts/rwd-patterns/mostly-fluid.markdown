@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Mostly fluid"
-description: “Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
+description: "Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem em
               dispositivos móveis e desktop"
-introduction: “O padrão mais fluido consiste principalmente em uma grade fluida.  Em telas grandes ou
+introduction: "O padrão mais fluido consiste principalmente em uma grade fluida.  Em telas grandes ou
   médias, geralmente permanece do mesmo tamanho, apenas ajustando as margens em telas
   maiores."
 authors:

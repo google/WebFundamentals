@@ -10,7 +10,7 @@ priority: 1
 authors:
   - paulkinlan
 collection: user-location
-introduction: “Como desenvolvedor da Web, ter acesso à localização do usuário abre um grande número de possibilidades como filtragem avançada, indicação do usuário em um mapa e oferta de sugestões proativas sobre coisas que o usuário pode fazer com base na sua posição atual."
+introduction: "Como desenvolvedor da Web, ter acesso à localização do usuário abre um grande número de possibilidades como filtragem avançada, indicação do usuário em um mapa e oferta de sugestões proativas sobre coisas que o usuário pode fazer com base na sua posição atual."
 key-takeaways:
   geo: 
     - Assuma que os usuários não fornecerão a você sua localização.

@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Stick to compositor-only properties and manage layer count"
-description: “Composição é onde as partes pintadas da página são agrupadas para exibição na tela."
-introduction: “Composição é onde as partes pintadas da página são agrupadas para exibição na tela."
+description: "Composição é onde as partes pintadas da página são agrupadas para exibição na tela."
+introduction: "Composição é onde as partes pintadas da página são agrupadas para exibição na tela."
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,7 +13,7 @@ authors:
   - paullewis
 notes:
   flip:
-    - “Se você está preocupado que não poderá limitar suas animações apenas para essas propriedades, veja o <a href=\"http://aerotwist.com/blog/flip-your-animations\">Princípio FLIP</a>, que pode ajudá-lo a remapear animações para mudanças de transforms e opacity de propriedades mais caras."
+    - "Se você está preocupado que não poderá limitar suas animações apenas para essas propriedades, veja o <a href=\"http://aerotwist.com/blog/flip-your-animations\">Princípio FLIP</a>, que pode ajudá-lo a remapear animações para mudanças de transforms e opacity de propriedades mais caras."
 
 key-takeaways:
   - Atenha-se à mudanças de transforms e opacity para suas animações.

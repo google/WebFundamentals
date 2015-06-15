@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Specify an Icon"
-description: “Para que seu site se destaque, certifique-se de fornecer um ícone grande e bonito. Caso contrário, o favicon ou uma captura de tela de baixa qualidade pode ser usada."
-introduction: “Para que seu site se destaque, certifique-se de fornecer um ícone grande e bonito. Caso contrário, o favicon ou uma captura de tela de baixa qualidade pode ser usada."
+description: "Para que seu site se destaque, certifique-se de fornecer um ícone grande e bonito. Caso contrário, o favicon ou uma captura de tela de baixa qualidade pode ser usada."
+introduction: "Para que seu site se destaque, certifique-se de fornecer um ícone grande e bonito. Caso contrário, o favicon ou uma captura de tela de baixa qualidade pode ser usada."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-17

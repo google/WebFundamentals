@@ -1,8 +1,8 @@
 ---
 layout: landing
 title: "Device Access & Integration"
-description: “Surpreendentemente, há várias formas de se integrar e acessar os recursos no dispositivo do usuário, da geolocalização e orientação do dispositivo, acesso à pilha de comunicação como o discador e SMS, até a fixação de aplicativos na tela inicial. Saiba como tirar vantagem de recursos que seus usuários irão amar.”
-introduction: “Surpreendentemente, há várias formas de se integrar e acessar os recursos no dispositivo do usuário, da geolocalização e orientação do dispositivo, acesso à pilha de comunicação como o discador e SMS, até a fixação de aplicativos na tela inicial. Saiba como tirar vantagem de recursos que seus usuários irão amar.”
+description: "Surpreendentemente, há várias formas de se integrar e acessar os recursos no dispositivo do usuário, da geolocalização e orientação do dispositivo, acesso à pilha de comunicação como o discador e SMS, até a fixação de aplicativos na tela inicial. Saiba como tirar vantagem de recursos que seus usuários irão amar."
+introduction: "Surpreendentemente, há várias formas de se integrar e acessar os recursos no dispositivo do usuário, da geolocalização e orientação do dispositivo, acesso à pilha de comunicação como o discador e SMS, até a fixação de aplicativos na tela inicial. Saiba como tirar vantagem de recursos que seus usuários irão amar."
 snippet: “Localizar, chamar e ajustar."
 id: device-access
 collection: fundamentals

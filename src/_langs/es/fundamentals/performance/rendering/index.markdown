@@ -1,6 +1,6 @@
 ---
 layout: section
-title: «Rendimiento de la representación"
+title: "Rendimiento de la representación"
 description: "Los usuarios notan si los sitios y las aplicaciones no funcionan correctamente, por eso es fundamental optimizar el rendimiento de la representación."
 introduction: "Los usuarios que utilizan la web actual <a href=\"http://paul.kinlan.me/what-news-readers-want/\">esperan que las páginas que visitan sean interactivas y funcionen correctamente</a>, y es justo allí donde debe concentrar más su tiempo y esfuerzo. Las páginas no solo deben cargarse rápidamente, sino que también deben funcionar bien; el desplazamiento debe ser tan rápido como el movimiento de los dedos, y las animaciones y las interacciones deben ejecutarse suavemente."
 article:

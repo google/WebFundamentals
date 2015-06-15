@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Sincronización asimétrica de las animaciones"
-description: «Romper la simetría les proporciona contraste a sus proyectos y los hace atractivos. Aprenda cuándo y cómo aplicarlo en sus proyectos."
+description: "Romper la simetría les proporciona contraste a sus proyectos y los hace atractivos. Aprenda cuándo y cómo aplicarlo en sus proyectos."
 introduction: "Gracias a la asimetría de la duración de las animaciones, se mejora la experiencia del usuario, ya que esto le permite expresar su personalidad y, al mismo tiempo, responder rápidamente a las interacciones del usuario. Además, se genera un contraste en la apariencia, lo que hace que la interfaz sea más atractiva."
 article:
   written_on: 2014-08-08

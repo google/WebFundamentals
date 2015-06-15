@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Hide the Browser UI"
-description: “Seus usuários podem adicionar seu site à tela inicial sem qualquer código especial, mas recomendamos que você crie sua tela de aplicativo da Web sem a interface do usuário do navegador quando acessado pela tela inicial (ficando efetivamente em tela cheia)."
-introduction: “Seus usuários podem adicionar seu site à tela inicial sem qualquer código especial, mas recomendamos que você crie sua tela de aplicativo da Web sem a interface do usuário do navegador quando acessado pela tela inicial (ficando efetivamente em tela cheia)."
+description: "Seus usuários podem adicionar seu site à tela inicial sem qualquer código especial, mas recomendamos que você crie sua tela de aplicativo da Web sem a interface do usuário do navegador quando acessado pela tela inicial (ficando efetivamente em tela cheia)."
+introduction: "Seus usuários podem adicionar seu site à tela inicial sem qualquer código especial, mas recomendamos que você crie sua tela de aplicativo da Web sem a interface do usuário do navegador quando acessado pela tela inicial (ficando efetivamente em tela cheia)."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-17

@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "The Basics of Easing"
-description: “Aprenda a suavizar e dar peso às suas animações."
-introduction: “Nada na natureza se move linearmente de um ponto para o outro. Na realidade, as coisas tendem a acelerar ou desacelerar conforme se movem. Nossos cérebros esperam esse tipo de movimento, portanto, ao criar uma animação, isso essa informação a seu favor. O movimento natural fará com que o usuário se sinta mais confortável com seus aplicativos, que por sua vez levará a uma melhor experiência geral.”
+description: "Aprenda a suavizar e dar peso às suas animações."
+introduction: "Nada na natureza se move linearmente de um ponto para o outro. Na realidade, as coisas tendem a acelerar ou desacelerar conforme se movem. Nossos cérebros esperam esse tipo de movimento, portanto, ao criar uma animação, isso essa informação a seu favor. O movimento natural fará com que o usuário se sinta mais confortável com seus aplicativos, que por sua vez levará a uma melhor experiência geral."
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-21

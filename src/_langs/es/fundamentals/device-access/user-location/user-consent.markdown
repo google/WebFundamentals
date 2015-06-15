@@ -1,6 +1,6 @@
 ---
 layout: article
-title: «Cómo lograr que el usuario dé su consentimiento para que se comparta su ubicación"
+title: "Cómo lograr que el usuario dé su consentimiento para que se comparta su ubicación"
 description: ""
 article:
   written_on: 2014-01-01
