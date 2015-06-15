@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Putting It All Together"
-description: “Vamos pegar tudo que discutimos e colocar em um grande formulário."
-introduction: “Vamos pegar tudo que discutimos e colocar em um grande formulário."
+description: "Vamos pegar tudo que discutimos e colocar em um grande formulário."
+introduction: "Vamos pegar tudo que discutimos e colocar em um grande formulário."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-18

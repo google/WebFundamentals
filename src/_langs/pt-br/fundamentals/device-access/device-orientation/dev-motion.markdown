@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Device motion"
-description: “A movimentação do dispositivo fornece informações sobre a força de aceleração
+description: "A movimentação do dispositivo fornece informações sobre a força de aceleração
  aplicada no dispositivo em um determinado momento e a taxa de rotação."
-introduction: “A movimentação do dispositivo fornece informações sobre a força de aceleração
+introduction: "A movimentação do dispositivo fornece informações sobre a força de aceleração
  aplicada no dispositivo em um determinado momento e a taxa de rotação."
 article:
   written_on: 2014-06-17

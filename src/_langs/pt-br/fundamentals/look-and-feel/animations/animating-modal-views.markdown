@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Animating Modal Views"
-description: “Aprenda como animar visualizações modais em seus aplicativos."
-introduction: “As visualizações modais são para mensagens importantes e, por isso, você tem bons motivos para bloquear a interface do usuário. Deve-se tomar cuidado ao usá-las pois elas incomodam podem e facilmente arruinar a experiência do usuário se utilizadas em excesso. Mas, em algumas situações, são a alternativa correta e um pouco de animação dará vida às visualizações.”
+description: "Aprenda como animar visualizações modais em seus aplicativos."
+introduction: "As visualizações modais são para mensagens importantes e, por isso, você tem bons motivos para bloquear a interface do usuário. Deve-se tomar cuidado ao usá-las pois elas incomodam podem e facilmente arruinar a experiência do usuário se utilizadas em excesso. Mas, em algumas situações, são a alternativa correta e um pouco de animação dará vida às visualizações."
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-21

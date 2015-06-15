@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Add To Home Screen"
-description: “Quase todos os grandes fornecedores de navegadores permitem que os usuários fixem ou instalem seus aplicativos da Web. A chamada “fixação” é um argumento comum para aplicativos nativos mas que pode ser obtida com apenas alguns ajustes em sua marcação."
-introduction: “Quase todos os grandes fornecedores de navegadores permitem que os usuários fixem ou instalem seus aplicativos da Web. A chamada “fixação” é um argumento comum para aplicativos nativos mas que pode ser obtida com apenas alguns ajustes em sua marcação."
+description: "Quase todos os grandes fornecedores de navegadores permitem que os usuários fixem ou instalem seus aplicativos da Web. A chamada “fixação” é um argumento comum para aplicativos nativos mas que pode ser obtida com apenas alguns ajustes em sua marcação."
+introduction: "Quase todos os grandes fornecedores de navegadores permitem que os usuários fixem ou instalem seus aplicativos da Web. A chamada “fixação” é um argumento comum para aplicativos nativos mas que pode ser obtida com apenas alguns ajustes em sua marcação."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-17

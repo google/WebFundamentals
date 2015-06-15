@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Animations and Performance"
-description: “Animações devem ter um bom desempenho, caso contrário, impactarão negativamente a experiência do usuário."
-introduction: “Deve-se ter cuidado para manter 60 fps sempre que você estiver animando, porque qualquer salto ou tremida será observada pelos seus usuários e impactará negativamente a experiência."
+description: "Animações devem ter um bom desempenho, caso contrário, impactarão negativamente a experiência do usuário."
+introduction: "Deve-se ter cuidado para manter 60 fps sempre que você estiver animando, porque qualquer salto ou tremida será observada pelos seus usuários e impactará negativamente a experiência."
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-21

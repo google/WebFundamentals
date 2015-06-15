@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Simplify checkout with requestAutocomplete API"
-description: “Embora o <code>requestAutocomplete</code> tenha sido criado para ajudar o usuário a preencher qualquer formulário, seu uso mais comum nos dias de hoje é no eCommerce, onde o abandono do carrinho de compras na Web móvel <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>pode ser de até 97%</a>."
-introduction: “Embora o <code>requestAutocomplete</code> tenha sido criado para ajudar o usuário a preencher qualquer formulário, seu uso mais comum nos dias de hoje é no eCommerce, onde o abandono do carrinho de compras na Web móvel <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>pode ser de até 97%</a>. Imagine 97% das pessoas em um supermercado, com um carrinho cheio de coisas, deixando-o e indo embora."
+description: "Embora o <code>requestAutocomplete</code> tenha sido criado para ajudar o usuário a preencher qualquer formulário, seu uso mais comum nos dias de hoje é no eCommerce, onde o abandono do carrinho de compras na Web móvel <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>pode ser de até 97%</a>."
+introduction: "Embora o <code>requestAutocomplete</code> tenha sido criado para ajudar o usuário a preencher qualquer formulário, seu uso mais comum nos dias de hoje é no eCommerce, onde o abandono do carrinho de compras na Web móvel <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>pode ser de até 97%</a>. Imagine 97% das pessoas em um supermercado, com um carrinho cheio de coisas, deixando-o e indo embora."
 article:
   written_on: 2014-04-30
   updated_on: 2014-10-21

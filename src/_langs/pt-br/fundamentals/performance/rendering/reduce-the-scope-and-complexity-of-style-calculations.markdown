@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Reduce the scope and complexity of style calculations"
-description: “Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de cálculo de estilo computado.”
-introduction: “Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de <em>cálculo de estilo computado</em>.”
+description: "Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de cálculo de estilo computado."
+introduction: "Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de <em>cálculo de estilo computado</em>."
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,9 +13,9 @@ authors:
   - paullewis
 notes:
   components:
-    - “Se estiver utilizando o Web Components, note que os cálculos de estilo são um pouco diferentes, pois os estilos padrões não cruzam o limite do Shadow DOM e são planejados para componentes individuais em vez da árvore como um todo. Em linhas gerais, contudo, o mesmo conceito é aplicado: árvores menores com regras mais simples são processadas de forma mais eficaz do que árvores grandes ou regras complexas.”
+    - "Se estiver utilizando o Web Components, note que os cálculos de estilo são um pouco diferentes, pois os estilos padrões não cruzam o limite do Shadow DOM e são planejados para componentes individuais em vez da árvore como um todo. Em linhas gerais, contudo, o mesmo conceito é aplicado: árvores menores com regras mais simples são processadas de forma mais eficaz do que árvores grandes ou regras complexas."
   bodystylechange:
-    - “Anteriormente, se fosse feita uma mudança de classe no elemento do corpo, todos os estilos computados dos filhos na página precisavam ser recalculados. Felizmente, esse não é mais o caso. Alguns navegadores mantêm uma pequena coleção de regras exclusivas para cada elemento que, se mudada, efetua o recálculo dos estilos do elemento. Isso significa que um elemento pode ou não precisar ser recalculado dependendo de onde ele está na árvore e do que foi mudado especificamente.”
+    - "Anteriormente, se fosse feita uma mudança de classe no elemento do corpo, todos os estilos computados dos filhos na página precisavam ser recalculados. Felizmente, esse não é mais o caso. Alguns navegadores mantêm uma pequena coleção de regras exclusivas para cada elemento que, se mudada, efetua o recálculo dos estilos do elemento. Isso significa que um elemento pode ou não precisar ser recalculado dependendo de onde ele está na árvore e do que foi mudado especificamente."
 
 key-takeaways:
   - Reduza a complexidade dos seus seletores; use uma metodologia orientada para classe, como o BEM.

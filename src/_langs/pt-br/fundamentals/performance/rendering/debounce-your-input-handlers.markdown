@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Debounce your input handlers"
-description: “Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.”
-introduction: “Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.”
+description: "Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout."
+introduction: "Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout."
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,7 +13,7 @@ authors:
   - paullewis
 notes:
   highdpi:
-    - “Em telas de alto DPI, elementos com posição fixa são promovidos automaticamente para sua própria camada de compositor. Esse não é o caso em dispositivos de DPI baixo porque a promoção altera a renderização do texto de subpixel para escala de cinza e a promoção da camada precisa ser realizada manualmente.”
+    - "Em telas de alto DPI, elementos com posição fixa são promovidos automaticamente para sua própria camada de compositor. Esse não é o caso em dispositivos de DPI baixo porque a promoção altera a renderização do texto de subpixel para escala de cinza e a promoção da camada precisa ser realizada manualmente."
   csstriggers:
     - Deseja uma lista definitiva de quais propriedades CSS acionam o layout, pintura ou composição? Veja <a href="http://csstriggers.com/">Acionadores CSS</a>.
 

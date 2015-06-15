@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Off canvas"
-description: “Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
+description: "Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem em
               dispositivos móveis e desktop"
-introduction: “Em vez de empilhar o conteúdo verticalmente, o padrão off canvas remove o
+introduction: "Em vez de empilhar o conteúdo verticalmente, o padrão off canvas remove o
   conteúdo usado com menos frequência, como menus de navegação ou de aplicativo, mostrando-os
   apenas quando o tamanho da tela for suficiente. Em telas menores, o conteúdo
   pode ser visto com um clique apenas."

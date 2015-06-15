@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Custom Easing"
-description: “Vá além e crie animações totalmente personalizadas para os seus projetos."
-introduction: “Algumas vezes você não deseja usar as palavras-chave de easing incluídas com o CSS ou usa uma biblioteca de animação baseada em JavaScript. Em ambos os casos, você geralmente pode definir suas próprias curvas (ou equações) o que proporciona maior controle sobre as animações do seu projeto.”
+description: "Vá além e crie animações totalmente personalizadas para os seus projetos."
+introduction: "Algumas vezes você não deseja usar as palavras-chave de easing incluídas com o CSS ou usa uma biblioteca de animação baseada em JavaScript. Em ambos os casos, você geralmente pode definir suas próprias curvas (ou equações) o que proporciona maior controle sobre as animações do seu projeto."
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-21

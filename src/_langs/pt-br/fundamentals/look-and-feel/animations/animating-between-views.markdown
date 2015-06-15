@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Animating Between Views"
-description: “Aprenda como animar entre duas visualizações em seus aplicativos."
-introduction: “Muitas vezes os usuários deverão passar por diferentes visualizações no seu aplicativo, seja uma lista para uma visualização de detalhes ou mostrar uma navegação de barra lateral. Animações entre essas visualizações são ótimas para prender a atenção do usuário e dar ainda mais vida aos seus projetos.”
+description: "Aprenda como animar entre duas visualizações em seus aplicativos."
+introduction: "Muitas vezes os usuários deverão passar por diferentes visualizações no seu aplicativo, seja uma lista para uma visualização de detalhes ou mostrar uma navegação de barra lateral. Animações entre essas visualizações são ótimas para prender a atenção do usuário e dar ainda mais vida aos seus projetos."
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-22

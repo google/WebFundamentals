@@ -1,11 +1,10 @@
 ---
 layout: article
 title: "Column Drop"
-description: “Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
+description: "Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem em
               dispositivos móveis e desktop"
-introduction: “Para layouts de várias colunas de largura completa, a queda da coluna simplesmente empilha as colunas
-  verticalmente conforme a largura da janela fica estreita demais para o conteúdo.  "
+introduction: "Para layouts de várias colunas de largura completa, a queda da coluna simplesmente empilha as colunas verticalmente conforme a largura da janela fica estreita demais para o conteúdo.  "
 authors:
   - petelepage
 article:

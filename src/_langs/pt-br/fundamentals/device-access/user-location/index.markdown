@@ -1,12 +1,8 @@
 ---
 layout: section
 title: "User Location"
-description: “A maioria dos navegadores e dispositivos tem acesso à localização geográfica do usuário. Saiba como trabalhar com a localização do usuário em seu site e aplicativos."
-introduction: “O API de Geolocalização permite que você descubra onde o usuário está, sempre com a
- permissão do usuário. Essa funcionalidade pode ser usada como parte das consultas do usuário, por exemplo,
- para orientar alguém até um ponto de destino. Também pode ser usada para marcar
- geograficamente algum conteúdo que o usuário tenha criado, como por exemplo,  para marcar onde uma foto foi
- tirada.”
+description: "A maioria dos navegadores e dispositivos tem acesso à localização geográfica do usuário. Saiba como trabalhar com a localização do usuário em seu site e aplicativos."
+introduction: "O API de Geolocalização permite que você descubra onde o usuário está, sempre com a permissão do usuário. Essa funcionalidade pode ser usada como parte das consultas do usuário, por exemplo, para orientar alguém até um ponto de destino. Também pode ser usada para marcar  geograficamente algum conteúdo que o usuário tenha criado, como por exemplo,  para marcar onde uma foto foi tirada."
 article:
   written_on: 2014-01-01
   updated_on: 2014-10-21
