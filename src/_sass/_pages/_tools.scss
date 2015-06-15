@@ -329,6 +329,10 @@
 
     > div {
       padding-bottom: 2em;
+      @include medium {
+        -webkit-align-items: center;
+        align-items: center;
+      }
     }
 
     a {
@@ -342,20 +346,26 @@
         margin-left: 0.5em;
       }
     }
+
     .headliner {
-      padding-top: 1em;
       margin-bottom: 0;
       max-width: 50%;
       @include small-only {
+        padding-top: 1em;
         max-width: 100%;
         font-size: 2em;
       }
     }
 
+    .sideliner {
+      width: 50%;
+      padding-left: 20px;
+    }
+
     .desc {
-      @include small-only {
-        width: auto;
-      }     
+      width: auto;
+      padding-left: 0;
+      padding-bottom: 10px;
     }
 
     .social {
@@ -437,7 +447,7 @@
     padding-bottom: 9em;
 
     h3 {
-      background-image: url(https://google.github.io/material-design-icons/action/svg/ic_help_24px.svg);
+      background-image: url(/web/imgs/icons/help-circle.svg);
       background-repeat: no-repeat;
       background-position: left -2px bottom -2px;
       padding-left: 1.4em;
@@ -453,7 +463,7 @@
     }
 
     h3 {
-      background-image: url(https://google.github.io/material-design-icons/action/svg/ic_info_24px.svg);
+      background-image: url(/web/imgs/icons/information.svg);
       background-repeat: no-repeat;
       background-position: left -2px bottom -2px;
       padding-left: 1.4em;
