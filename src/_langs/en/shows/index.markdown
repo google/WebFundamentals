@@ -19,12 +19,14 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign latestVideo = orderedVideos | first %}
 
 {% assign cdsShow = null %}
+{% assign blinkonShow = null %}
 {% assign http203Show = null %}
 {% assign polycastsShows = null %}
 {% assign udacityShow = null %}
 {% assign lazywebShow = null %}
 {% assign tttShow = null %}
 {% assign nicShow = null %}
+{% assign googleioShow = null %}
 {% for show in shows %}
   {% if show.id == 'cds' %}
     {% assign cdsShow = show %}
@@ -44,8 +46,14 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% if show.id == 'ttt' %}
     {% assign tttShow = show %}
   {% endif %}
+  {% if show.id == 'blinkon' %}
+    {% assign blinkonShow = show %}
+  {% endif %}
   {% if show.id == 'newinchrome' %}
     {% assign nicShow = show %}
+  {% endif %}
+  {% if show.id == 'googleio' %}
+    {% assign googleioShow = show %}
   {% endif %}
 {% endfor %}
 
@@ -79,7 +87,7 @@ Fundmentals index: for guide in page.articles.[page.id]
     <li class="guides-list__item g--half theme--{{ http203Show.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
       	<a href="{{site.baseurl}}{{http203Show.url | canonicalize}}" title="Go to {{http203Show.title}}">
-					<img src="{{site.baseurl}}/shows/imgs/http203_rect.png" alt="{{http203Show.title}} Hero Image">
+					<img src="{{site.baseurl}}/shows/imgs/http203_rect.jpg" alt="{{http203Show.title}} Hero Image">
 				</a>
       </div>
       <div class="secondary-content show-root--info">
@@ -109,6 +117,18 @@ Fundmentals index: for guide in page.articles.[page.id]
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{nicShow.url | canonicalize}}" title="Go to {{nicShow.title}}" class="themed">{{nicShow.title}}</a></h3>
         <p>{{nicShow.description}}</p>
+      </div>
+    </li>
+    
+    <li class="guides-list__item g--half theme--{{ googleioShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+        <a href="{{site.baseurl}}{{googleioShow.url | canonicalize}}" title="Go to {{googleioShow.title}}">
+          <img src="{{site.baseurl}}/shows/imgs/googleio_rect.jpg" alt="{{googleioShow.title}} Hero Image">
+        </a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{googleioShow.url | canonicalize}}" title="Go to {{googleioShow.title}}" class="themed">{{googleioShow.title}}</a></h3>
+        <p>{{googleioShow.description}}</p>
       </div>
     </li>
 
@@ -145,6 +165,18 @@ Fundmentals index: for guide in page.articles.[page.id]
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{cdsShow.url | canonicalize}}" title="Go to {{cdsShow.title}}" class="themed">{{cdsShow.title}}</a></h3>
         <p>{{cdsShow.description}}</p>
+      </div>
+    </li>
+    
+     <li class="guides-list__item g--half theme--{{ blinkonShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+      	<a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}">
+					<img src="{{site.baseurl}}/shows/imgs/blinkon_rect.jpg" alt="{{blinkonShow.title}} Hero Image">
+				</a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}" class="themed">{{blinkonShow.title}}</a></h3>
+        <p>{{blinkonShow.description}}</p>
       </div>
     </li>
 

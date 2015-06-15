@@ -223,6 +223,7 @@ module.exports = function(grunt) {
         dest: '<%= config.source %>/icons/',
         destCss: '<%= config.source %>/_sass/_components/',
         options: {
+          autoHint: false,
           hashes: false,
           stylesheet: 'scss',
           relativeFontPath: '../icons',

@@ -24,6 +24,10 @@ remember:
 
 TBD. Use this doc: https://developer.chrome.com/devtools/docs/demos/too-much-layout
 
+TBD. Move timeline content about this to here.
+
+TBD. Move content from layout issues doc to here.
+
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
 ### TBD

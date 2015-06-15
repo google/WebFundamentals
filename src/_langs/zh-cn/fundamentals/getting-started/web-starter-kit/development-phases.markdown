@@ -1,19 +1,20 @@
 ---
 layout: article
 title: "开发阶段"
-description: "每个开发者在项目的开发过程中，都会经历不同的阶段。Web 新手开发包提高你的效率，并简化各阶段的许多工作。"
-introduction: "在开发过程中，有三个特别的命令你会经常用到：gulp serve，gulp serve:dist，和 gulp。让我们看看这每一个任务都是怎样帮助你开发站点的。"
+description: "在项目的开发过程中，每个开发者 都将经历各种阶段。 Web Starter Kit 可帮助您提高效率并 简化每个阶段的各种任务。"
+introduction: "在开发期间，有 3 个您将经常使用的 特定命令：gulp serve、gulp 和 gulp serve:dist。我们看看每项任务如何帮助您开发网站。"
 notes:
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2014-10-21
   order: 2
 id: development-phases
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt
 translators:
-  - 陈三
+  - samchen
 key-takeaways:
 ---
 
@@ -21,17 +22,21 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## 启动一个本地服务器
+## 启动本地服务器
 
-我们要看的第一个任务是： `$ gulp serve`。
+我们要看的第一个任务是: `$ gulp serve`。
 
-表面上看，这个任务启动了一个本地 HTTP 服务器，让你可以在浏览器中查看你的站点，但幕后其实有一些其他工具在运作。
+表面上，此任务启动本地 HTTP 服务器，以便您在浏览器中查看
+您的网站，但在后台有一些其他工具在运行。
 
-### 实时刷新
+### 实时重载
 
-传统的刷新过程是，编辑器中修改，切换到浏览器，按 CTRL-R，等待页面重载，实时刷新则消去这一步。
+实时重载消除了传统刷新机制，即在编辑器中进行更改
+，切换到浏览器，点击 CTRL-R，然后等待页面
+重载。
 
-有了实时刷新，你可以一边在编辑器中修改，一边看它们在打开的浏览器中即时生效。
+通过实时重载，您可以在编辑器中进行更改，并在任何打开您网站的浏览器中
+看到更改立即生效。
 
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
@@ -39,20 +44,24 @@ key-takeaways:
 
 ### 跨设备测试
 
-Browser Sync 帮你跨设备测试站点。任何的滚动，轻拍，或按键都将同步给所有连接着的浏览器。
+Browser Sync 帮助您在多种设备上测试您的网站。 任何滚动、
+点击或键盘按键将在所连接的所有浏览器上共享。
 
 <div class="media media--video">
   <iframe src="https://www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-这只有在你执行 `gulp serve` 命令运行网站后才能起作用。试着运行 `gulp serve`，在两个并排的浏览器窗口中打开 URL，然后滚动其中一个页面。
+此功能仅在您通过 `gulp serve` 运行网站时才起作用。 通过运行
+`gulp serve`可尝试此功能，在两个并排的浏览器窗口中打开 URL，然后滚动
+其中一个页面。
 
+### 自动添加前缀
 
-### 自动化添加前缀
+当针对一系列浏览器时，您将使用供应商前缀，
+以确保可以使用其中每种浏览器的功能。 Web Starter Kit 将为您自动
+添加所有前缀。
 
-在面向诸多浏览器时，你需要使用浏览器厂商前缀来确保你能够使用它们的特性。Web 新手开发包为你自动化所有的添加前缀的工作。
-
-我们的示例 CSS (下面) 不包含任何浏览器厂商前缀：
+我们的示例 CSS（下面）不包括任何供应商前缀：
 
     .app-bar-container {
       display: flex;
@@ -66,7 +75,8 @@ Browser Sync 帮你跨设备测试站点。任何的滚动，轻拍，或按键�
       margin: 0 auto;
     }
 
-构建过程会让 autoprefixer 过一遍 CSS，输出的最终结果如下：
+构建过程通过前缀自动添加器来运行 CSS，从而产生
+以下最终输出：
 
     .app-bar-container {
       display: -webkit-flex;
@@ -84,66 +94,96 @@ Browser Sync 帮你跨设备测试站点。任何的滚动，轻拍，或按键�
       margin: 0 auto;
     }
 
-### 检查你的 JavaScript
+### 检查 Javascript
 
-JSHint 是一个扫描 JavaScript 代码的工具，用于检查你 JavaScript 逻辑中的可能问题，而且能[强化编码的最佳实践](http://www.jshint.com/docs/)。
+JSHint 工具可扫描您的 JavaScript 代码，以检查
+JavaScript 逻辑的潜在问题，并[实施代码最佳做法](http://www.jshint.com/docs/)。
 
-在你构建项目时，或是你运行 gulp server 然后对一个 JavaScript 文件做了修改，JSHint 都会运行。
+每当建立项目时，或如果正在运行 gulp 服务器，
+只要您对 JavaScript 文件进行更改，此工具就将运行。
 
-### 编译你的 Sass
+### 编译 Sass
 
-在你运行 serve 命令后，项目中任何针对 Sass 文件的修改都会被编译成 CSS 并且添加浏览器厂商前缀，随后页面由实时刷新功能来重载。
+在运行 serve 命令时，对项目中任何 Sass
+文件的更改将被编译为 CSS 并添加前缀，之后页面将通过
+实时重载进行重载。
 
-给不知道 Sass 的介绍一下，Sass 项目把自身描述为一种“CSS 扩展语言”。基本上它就是 CSS 加一些额外特性。比如，它添加了变量和函数的支持，可以帮你模块化、复用 CSS，更好地组织 CSS。
+对于 Sass 新手，此项目将自身描述为“CSS
+扩展语言”。 它基本上是有一些附加功能的 CSS。 例如，
+它增加对变量和函数的支持，这可帮助您以模块化和可重复利用的方式来设计 CSS
+。
 
 ## 构建网站的生产版本
 
-只要 gulp 命令，你就可以给你的网站构建一个可立即部署的版本。这个命令运行一些我们前面已经见过的任务，以及其它致力于让你的网站加载更快、更高效的任务。
+可以通过简单的 `gulp`
+命令来建立网站的生产就绪版本。 此命令运行我们已看过的一些任务，还有额外的
+任务可以使您的网站加载更快、更高效。
 
-构建生产版本执行的主要任务有：
+生产构建执行的主要任务有：
 
 ### 构建样式
 
-构建首先会先编译项目中的 Sass。Sass 编译完成后，Autoprefixer 过一遍所有的 CSS。
+首先，构建过程编译您项目中的 Sass。 在 Sass 已编译
+之后，将对所有 CSS 运行前缀自动添加器。
 
-### 检查 JavaScript 中的问题
+### 检查 JavaScript 的问题
 
-第二步运行 JSHint 检查 JavaScript。
+第二个构建步骤是对 JavaScript 运行 JSHint。
 
 ### 构建 HTML 页面
 
-下一步就是检查你的 HTML 文件，查找构建块，合并、压缩 JavaScript。处理完 JavaScript 后，构建会压缩 HTML 页面。
+下一步是检查 HTML 文件，查找构造块来串联
+和缩小 JavaScript。 在处理 JavaScript 之后，构建过程
+将缩小 HTML 页面。
 
-通过移除并非真正需要的注释或空格符，配合其它技术，压缩减小了最终 JavaScript 文件的字符数。这就减小了最终的文件大小，加快站点加载时间。
+缩小是通过删除实际不需要的注释或空格字符，
+以及一些其他技术来减少
+最终 JavaScript 文件中的字符数。 这样可减少最终文件的大小，加快
+网站的加载时间。
 
-合并意味着把多个文件的内容并成一个。之所以这样做是因为浏览器可以因此只发送一个请求给服务器，而不是多个，对你的用户来说，这会更快。
+串联是指将多个文件的内容粘贴到一个文件。 这样做的
+目的是浏览器只需向服务器提出一次请求，
+而非多次，这样让用户感觉更快。
 
-关于哪些 JavaScript 文件需要我们合并、压缩到一起，构建块中都有。且让我们看一个构建块示例：
+构建块具有管理我们将 JavaScript 文件缩小
+和串联在一起时所需的所有功能。 我们来看一个示例构建块。
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/example-1.js"></script>
     <script src="scripts/example-2.js"></script>
     <!-- endbuild -->
 
-如你所见，一个构建块不过是一个格式特殊的注释，第一行表示该构建块是针对 JavaScript 的，最终文件的名称及路径应该是 scripts/main.min.js。最后一行关闭了块。两行之间则是我们要压缩、合并的 JavaScript 文件，在这个例子中是指 *example-1.js* 和 *example-2.js*。
+构建块无非是一个特殊格式化的注释。
+各构建块之间的所有 javascript 文件将合并
+（串联）并缩小为一个名为 main.min.js 的文件，并且
+最终文件将这些脚本替换为以下脚本标签：
 
-### 优化图片资源
+    <script src="scripts/main.min.js"></script>
 
-JPEGs 和 PNGs 格式的图片的元数据被剔除；对渲染图片来说这些是多余的。元数据包括了诸如拍照所用的相机等信息。
+### 优化任何图像资产
 
-至于 SVGs，构建会移除所有不需要的属性或空白，以及存在的注释。
+JPEG 和 PNG 图像中的元数据被去掉；呈现图像并
+不需要此信息。 元数据包括各种信息，例如用于
+拍摄照片的相机。
 
-### 拷贝字体
+它将去掉 SVG 图像中不需要的任何属性，或者存在的
+任何空白和注释。
 
-这个简单工作就是把我们的字体从 app 目录拷贝到最终的构建目录里。
+### 复制字体
 
-### 拷贝根目录下所有文件
+这个简单任务将我们的字体从应用复制到最终文件目录中。
 
-如果项目根目录下存在任何文件，则构建也会将它们拷入最终的构建目录中。
+### 从根目录中复制所有文件
 
-## 测试你的生成
+如果构建过程发现项目根目录中的任何文件，它会
+将其复制到最终文件中。
 
-在你推送任何东西到生产环境前，你需要确保一切如你所预料的一样正常工作。`gulp serve:dist`命令构建出一个网站的生产版本，然后启动一个服务器，再为你打开一个浏览器。它没有实时刷新或 Browser Sync，但在部署你的站点前，它是个可靠的测试站点的方法。
+## 测试生产构建
+
+在将任何程序推进到生产之前，需要确保所有组件
+如预期运行。 `gulp serve:dist` 命令为您构建网站的生产版本，
+启动服务器，并打开浏览器。 这**并没有实时重载或
+Browser Sync**，但它是在部署网站之前进行测试的可靠方式。
 
 {% include modules/nextarticle.liquid %}
 
