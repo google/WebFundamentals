@@ -43,55 +43,6 @@ remember:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.rail-metrics %}
 
-## Test key performance metrics 
-
-The following table is affectively a user test plan for checking that your site meets key performance metrics. Use the Chrome DevTools [Timeline tool](#timeline-tool) to record user actions. Then check the recording times in the Timeline against the key metrics:
-
-<table class="table-3">
-  <thead>
-      <th>RAIL Step</th>
-      <th>Key Metric</th>
-      <th>User Actions</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="RAIL Step"><strong>Response</strong></td>
-      <td data-th="Key Metric">Input latency (from tap to paint) < 100ms.</td>
-      <td data-th="User Test">User taps on an icon or button (for example, opening the nav menu, tapping Compose).</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Response</strong></td>
-      <td data-th="Key Metric">Input latency (from tap to paint) < 16ms.</td>
-      <td data-th="User Test">User drags their finger and app's response is bound to the finger position (for example, pull to refresh, swiping a carousel).</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Animation</strong></td>
-      <td data-th="Key Metric">Input latency (from tap to paint) < 100ms for initial response.</td>
-      <td data-th="User Test">User initiates page scroll or animation initiates.</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Animation</strong></td>
-      <td data-th="Key Metric">Each frame's work (JS to paint) completes < 16ms.</td>
-      <td data-th="User Test">User scrolls the page or sees an animation.</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Idle</strong></td>
-      <td data-th="Key Metric">Main thread JS work chunked no larger than 50ms.</td>
-      <td data-th="User Test">User isn't interacting with the page, but main thread should be available enough to handle the next user input.</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Load</strong></td>
-      <td data-th="Key Metric">Page considered ready to use in 1000ms.</td>
-      <td data-th="User Test">User loads the page and sees the critical path content.</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Load</strong></td>
-      <td data-th="Key Metric">Satisfy the Response goals during the full page load process.</td>
-      <td data-th="User Test">User loads the page and starts interacting (for example, scroll or open navigation).</td>
-    </tr>
-  </tbody>
-</table> 
-
 ## Fix slow page loads
 
 If your users wait longer than 1 second for a page load,

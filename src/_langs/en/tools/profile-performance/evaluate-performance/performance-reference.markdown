@@ -8,7 +8,7 @@ introduction: "The timeline events mode displays all events triggered while maki
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
-  order: 4
+  order: 3
 authors:
   - megginkearney
   - flaviocopes
