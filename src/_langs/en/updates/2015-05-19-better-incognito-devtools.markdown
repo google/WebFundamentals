@@ -17,7 +17,7 @@ description: Some appearance preferences are now persisted through to incognito 
 featured-image: /web/updates/images/2015-05-19-some-appearance-preferences-are-now-persisted-through-to-incognito-windows/incognito-preference-persist.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/26-incognito-preference-persist
-permalink: /updates/2015/05/19/better-incognito-devtools
+permalink: /updates/2015/05/19/better-incognito-devtools.html
 ---
 <img src="/web/updates/images/2015-05-19-some-appearance-preferences-are-now-persisted-through-to-incognito-windows/incognito-preference-persist.gif" alt="Some appearance preferences are now persisted through to incognito windows">
 

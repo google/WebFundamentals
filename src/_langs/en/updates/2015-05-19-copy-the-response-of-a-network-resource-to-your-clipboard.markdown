@@ -18,7 +18,7 @@ description: "In addition to copying the <strong>request/response</strong> heade
 featured-image: /web/updates/images/2015-05-19-devtools-copy-the-response-of-a-network-resource-to-your-clipboard/copy-response.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/11-copy-response
-permalink: /updates/2015/05/19/copy-the-response-of-a-network-resource-to-your-clipboard
+permalink: /updates/2015/05/19/copy-the-response-of-a-network-resource-to-your-clipboard.html
 ---
 <img src="/web/updates/images/2015-05-19-devtools-copy-the-response-of-a-network-resource-to-your-clipboard/copy-response.gif" alt="DevTools - Copy the response of a network resource to your clipboard">
 
