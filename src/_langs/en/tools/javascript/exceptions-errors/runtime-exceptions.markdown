@@ -21,7 +21,7 @@ collection: exceptions-errors
 
 Chrome supports setting a handler function to window.onerror. Whenever a JavaScript exception is thrown in the window context and is not caught by a try/catch block, the function is invoked with the exception's message, the URL of the file where the exception was thrown, and the line number in that file, passed as three arguments in that order.
 
-You may find it convenient to set an error handler that would collect information about uncaught exceptions and report it back to your server using an AJAX POST call, for example. In this way you can log all the errors happening on the user's browser, and be notified about them.
+You may find it convenient to set an error handler that would collect information about uncaught exceptions and report it back to your server using an AJAX POST call, for example. In this way you can log all the errors happening in the user's browser, and be notified about them.
 
 Example of using window.onerror:
 ![Example of window.onerror handler](images/runtime-exceptions-window-onerror.jpg)
