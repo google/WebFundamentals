@@ -79,7 +79,11 @@ module Jekyll
     end
 
     def getUpdates(site)
-      return site.data['articles']['updates'] + site.data['articles']['spotlight'] + site.data['articles']['case-study']
+      if site.data['articles']['updates'].nil?
+        return nil
+      else
+        return site.data['articles']['updates'] + site.data['articles']['spotlight'] + site.data['articles']['case-study']
+      end
     end
 
     def generatePaginatedPage(site, base, dir, category, product, notools=nil)
