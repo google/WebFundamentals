@@ -8,7 +8,7 @@ introduction: "The Chrome DevTools Timeline tool lets you record and analyze all
 article:
   written_on: 2015-06-09
   updated_on: 2015-06-09
-  order: 3
+  order: 2
 authors:
   - megginkearney
 priority: 0

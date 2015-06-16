@@ -3,11 +3,11 @@ rss: false
 layout: section
 title: "Runtime Performance"
 seotitle: "Runtime Performance"
-description: "TBD description."
-introduction: "TBD introduction."
+description: "Make your site look great and load fast on any device. Understand the common problems that occur when the browser renders elements on a page. Use tools to help you identify and fix these problems."
+introduction: "Make your site look great and load fast on any device. Understand the common problems that occur when the browser renders elements on a page. Use tools to help you identify and fix these problems."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-06-15
   order: 2
 authors:
   - megginkearney
@@ -19,8 +19,9 @@ id: rendering-tools
 
 {% wrap content %}
 
-Borrow an easy sentence from Paul Lewis' runtime performance checklist blog?
+New to rendering performance? Check out these great resources:
 
-We recommend learning as much as you can about rendering optimization. If you are completely unfamiliar with rendering performance in general, try Udacity's [Browser Rendering Optimization course](https://www.udacity.com/course/browser-rendering-optimization--ud860). Need a refresher? Check out the [Rendering Performance fundamentals](fundamentals/performance/rendering/index)
+* [Udacity's Browser Rendering Optimization course](https://www.udacity.com/course/browser-rendering-optimization--ud860)
+* [Rendering Performance in Web Fundamentals](fundamentals/performance/rendering/index)
 
 {% endwrap %}
