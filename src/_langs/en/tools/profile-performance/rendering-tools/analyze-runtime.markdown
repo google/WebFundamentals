@@ -51,11 +51,6 @@ remember:
 Identifying and fixing runtime performance isn't something that can be covered in one short-guide.
 The guide briefly introduces the tools that you can use to identify the problems, outlines possible solutions, and links off to more detailed guides for fixing the problems.
 
-New to runtime performance? Check out these great resources:
-
-* [Udacity's Browser Rendering Optimization course](https://www.udacity.com/course/browser-rendering-optimization--ud860)
-* [Rendering Performance in Web Fundamentals](fundamentals/performance/rendering/index)
-
 {% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.layout-issues %}
@@ -64,8 +59,8 @@ New to runtime performance? Check out these great resources:
 
 JavaScript calculations can not only trigger visual changes,
 they can also stall application performance all together.
-Users get particularly annoying when they are trying to interact with your application
-and badly-timed or long-running JavaScrit causes delays.
+Don't let badly-timed or long-running JavaScript interfere
+with users interacting with your site.
 
 ### Tools
 
@@ -101,7 +96,7 @@ The following table describes common JavaScript problems:
   <tbody>
     <tr>
       <td data-th="Problem">Expensive input handlers affecting response or animation.</td>
-      <td data-th="Example">Touch, parallax scrolling</td>
+      <td data-th="Example">Touch, parallax scrolling.</td>
       <td data-th="Solution">Let the browser handle touch and scrolls, or else bind the listener as late as possible (see <a href="http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/">Expensive Input Handlers in Paul Lewis' runtime performance checklist</a>).</td>
     </tr>
     <tr>
@@ -139,15 +134,16 @@ View more details for these events. If the style changes are taking a long time,
 that's a performance hit. Also, if the style calculations are impacting a large number of elements,
 that's also a sign there's room for improvement:
 
-![Style details](style-details.jpg)
+![Style details](imgs/style-details.jpg)
 
-Another easy way to reduce style changes is to avoid CSS properties that have the most impact on rendering performance. Use [CSS Triggers tool]](http://csstriggers.com/) to determine whether or not a CSS property triggers layout, paint, and/or composite:
+Another easy way to reduce style changes is to avoid CSS properties
+that have the most impact on rendering performance.
+Use [CSS Triggers tool](http://csstriggers.com/)
+to determine whether or not a CSS property triggers layout, paint, and/or composite:
 
 ![csstriggers.com](imgs/csstriggers.png)
 
 If your using CSS properties that trigger everything, consider switching to a CSS property with less impact (see also [Stick to compositor-only properties and manage layer count](fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)).
-
-{% include modules/remember.liquid title="Note" list=page.remember.css-triggers %}
 
 ### Problems
 
@@ -163,7 +159,7 @@ The following table describes common style problems:
     <tr>
       <td data-th="Problem">Expensive style calculations affecting response or animation.</td>
       <td data-th="Example">Any CSS property that changes an element's geometry, like it's width, height, or position; the browser has to check all other elements and redo the layout.</td>
-      <td data-th="Solution"><a href="fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing">Avoid CSS that triggers layouts</a></td>
+      <td data-th="Solution"><a href="fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing">Avoid CSS that triggers layouts.</a></td>
     </tr>
     <tr>
       <td data-th="Problem">Complex selectors affecting response or animation.</td>
@@ -177,21 +173,23 @@ The following table describes common style problems:
 
 ## How to identify layout bottlenecks
 
-Layout (or reflow in Firefox) is the process by which the browser calculates the positions and sizes of all the elements on a page. The web’s layout model means that one element can affect others, for example, the width of the `<body>`element typically affects its children’s widths and so on all the way up and down the tree. The process can be quite involved for the browser.
+Layout (or reflow in Firefox) is the process by which the browser calculates the positions and sizes of all the elements on a page. The web’s layout model means that one element can affect others, for example,
+the width of the `<body>` element typically affects its children’s widths and so on
+all the way up and down the tree. The process can be quite involved for the browser.
 
-Avoid layout as much as possible. General rule of thumb-- if you ask a geometric value back from the DOM before a frame is complete, you are going to find yourself with forced synchronous layouts. These so called "forced synchronous layouts" can be a big performance bottleneck if repeated frequently or performed for large DOM tree. 
+General rule of thumb-- if you ask a geometric value back from the DOM before a frame is complete, you are going to find yourself with forced synchronous layouts. These so called "forced synchronous layouts" can be a big performance bottleneck if repeated frequently or performed for large DOM tree. 
 
 ### Tools
 
-The Chrome DevTools Timeline identifies when your application causes a forced asynchronous layout and marks such records with yellow warning icon: ![Forced synchronous layout warning](imgs/forced-synchronous.png)). 
+The Chrome DevTools Timeline identifies when your application causes a forced asynchronous layout and marks such records with yellow warning icon: ![Forced synchronous layout warning](imgs/forced-synchronous.png). 
 
 Layout thrashing is a forced-synchronous layout broken-record. JavaScript writes and then Reads from the DOM, multiple-times repeating, forcing the browser to re-calculate layout over and over again.
 
-Layout thrashing is easy to spot using a Timeline recording. Look for pattern-like multiple forced synchronous warnings:
+Layout thrashing is easy to spot using a Timeline recording.
+Learn more in [Diagnose Forced Synchronous Layouts](tools/profile-performance/rendering-tools/forced-synchronous-layouts).
+Look for pattern-like multiple forced synchronous warnings:
 
 ![Layout thrashing](imgs/layout-thrashing.png)
-
-Learn more in [Diagnose Forced Synchronous Layouts](tools/profile-performance/rendering-tools/forced-synchronous-layouts).
 
 ### Problems
 
@@ -207,7 +205,7 @@ The following table describes common layout problems:
     <tr>
       <td data-th="Problem">Forced synchronous layout affecting response or animation.</td>
       <td data-th="Example">Forcing the browser to perform layout earlier in the pixel pipeline, resulting in repeating steps in the rendering process.</td>
-      <td data-th="Solution">Batch your style reads first, then do any writes (see also [Avoid large, complex layouts and layout thrashing](fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)).</td>
+      <td data-th="Solution">Batch your style reads first, then do any writes (see also <a href="fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing">Avoid large, complex layouts and layout thrashing</a>).</td>
     </tr>
   </tbody>
     <tr>
@@ -220,8 +218,7 @@ The following table describes common layout problems:
 
 ## How to identify paint and composite bottlenecks
 
-Paint is the process of filling in pixels and is often the most costly part of the rendering process. Trigger layout, and you trigger paint, since the browser will need to create pixels for the new geometry.
-
+Paint is the process of filling in pixels and is often the most costly part of the rendering process.
 If you've noticed that your page is janky in anyway, for example, scrolling isn't smooth, then more likely than not, you've got paint problems.
 
 Compositing is where the painted parts of the page are put together for displaying on screen.
@@ -241,7 +238,9 @@ Diagnose the paint problems further by enabling <strong>Show paint rectangles</s
 
 When you enable continuous paint mode, the page continuously repaints, showing a counter of how much painting work is happening. You can hide elements and mutate styles, watching the counter, in order to figure out what is slow.
 
-Paul Irish's post [Profiling Long Paint Times with DevTools Continuous Painting Mode](http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode), explains how to use Chrome DevTools to track paint issues.
+Paul Irish's post,
+[Profiling Long Paint Times with DevTools Continuous Painting Mode](http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode),
+explains how to use Chrome DevTools to track paint issues.
 
 ### Problems
 
@@ -256,7 +255,7 @@ The following table describes common paint and composite problems:
   <tbody>
     <tr>
       <td data-th="Problem">Paint storms affecting response or animation.</td>
-      <td data-th="Example">Big paint areas or expensive paints affecting response or animation</td>
+      <td data-th="Example">Big paint areas or expensive paints affecting response or animation.</td>
       <td data-th="Solution">Avoid paint, promote elements that are moving to their own layer, use transforms and opacity (see <a href="fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas">Simplify paint complexity and reduce paint areas</a>).</td>
     </tr>
         <tr>
