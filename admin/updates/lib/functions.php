@@ -88,7 +88,7 @@ function buildFile() {
 		$content['source_url'] = $_POST['source_url'];
 	}
 
-	$content['permalink'] = '/updates/' . str_replace('-', '/', $_POST['date']) . '/' . slugify($_POST['title']);
+	$content['permalink'] = '/updates/' . str_replace('-', '/', $_POST['date']) . '/' . slugify($_POST['title']) . '.html';
 
 	$file = yaml_emit($content, YAML_UTF8_ENCODING);
 
