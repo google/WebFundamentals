@@ -74,13 +74,13 @@ notes:
 
 {% include modules/toc.liquid %}
 
-Image optimization is both an art and science: an art because there is no one definitive answer for how best to compress an individual image, and a science because there are many well developed techniques and algorithms that can significantly reduce the size of an image. Finding the optimal settings for your image requires careful analysis along many dimensions: format capabilities, content of encoded data, quality, pixel dimensions, and more.
+Image optimization is both an art and science: An art because there is no one definitive answer for how best to compress an individual image, and a science because there are many well developed techniques and algorithms that can significantly reduce the size of an image. Finding the optimal settings for your image requires careful analysis along many dimensions: Format capabilities, content of encoded data, quality, pixel dimensions, and more.
 
 ## Eliminating and replacing images
 
 {% include modules/takeaway.liquid list=page.key-takeaways.replace %}
 
-The very first question you should ask yourself is whether an image is, in fact, required to achieve the effect you are after. Good design is simple and will also always yield the best performance. If you can eliminate an image resource, which often requires a large number of bytes relative to HTML, CSS, JavaScript and other assets on the page, then that is always the best optimization strategy. That said, a well-placed image can also communicate more  information than a thousand words, so it is up to you to find that balance.
+The very first question you should ask yourself is whether an image is, in fact, required to achieve the effect you are after. A good design that is simple will also yield the best performance. If you can eliminate an image resource, which often requires a large number of bytes relative to HTML, CSS, JavaScript and other assets on the page, then that is always the best optimization strategy. That said, a well-placed image can also communicate more  information than a thousand words, so it is up to you to find that balance.
 
 Next, you should consider if there is an alternative technology that could deliver the desired results, but in a more efficient manner:
 
