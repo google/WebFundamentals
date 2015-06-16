@@ -20,6 +20,11 @@ module Jekyll
     priority :low
 
     def generate(site)
+      # don't generate updates in other languages than english
+      if site.data['curr_lang'] != 'en'
+        return
+      end
+
       updates = getUpdates(site)
 
       if updates.nil?
