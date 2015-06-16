@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Obtain the user's current location"
-introduction: “O API da Geolocalização permite que você descubra onde o usuário está, sempre com a permissão do usuário. Essa funcionalidade pode ser usada como parte das consultas do usuário, por exemplo, para orientar alguém até um ponto de destino. Também pode ser usada para marcar geograficamente algum conteúdo que o usuário tenha criado para, por exemplo, marcar onde uma foto foi tirada.”
-description: “O API da Geolocalização permite que você descubra onde o usuário está, sempre com a permissão do usuário.”
+introduction: "O API da Geolocalização permite que você descubra onde o usuário está, sempre com a permissão do usuário. Essa funcionalidade pode ser usada como parte das consultas do usuário, por exemplo, para orientar alguém até um ponto de destino. Também pode ser usada para marcar geograficamente algum conteúdo que o usuário tenha criado para, por exemplo, marcar onde uma foto foi tirada."
+description: "O API da Geolocalização permite que você descubra onde o usuário está, sempre com a permissão do usuário."
 article:
   written_on: 2014-06-06
   updated_on: 2014-10-21

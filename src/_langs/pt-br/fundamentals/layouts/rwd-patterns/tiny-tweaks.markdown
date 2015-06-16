@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Tiny tweaks"
-description: “Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
+description: "Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem em
               dispositivos móveis e desktop"
-introduction: “Pequenos ajustes simples fazem pequenas mudanças no layout, como ajustar o tamanho da
+introduction: "Pequenos ajustes simples fazem pequenas mudanças no layout, como ajustar o tamanho da
   fonte, redimensionar imagens ou mover conteúdo em espaços bem pequenos.  "
 authors:
   - petelepage

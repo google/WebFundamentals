@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Asymmetric Animation Timing"
-description: “A quebra de simetria proporciona contraste e atração aos seus projetos. Saiba quando e como aplicar isso aos seus projetos.”
-introduction: “A assimetria da duração da sua animação ajuda a experiência do usuário permitindo que você expresse personalidade enquanto ao mesmo tempo responde rapidamente às interações do usuário. Também proporciona um sensação de contraste, o que torna a interface mais visualmente atraente.”
+description: "A quebra de simetria proporciona contraste e atração aos seus projetos. Saiba quando e como aplicar isso aos seus projetos."
+introduction: "A assimetria da duração da sua animação ajuda a experiência do usuário permitindo que você expresse personalidade enquanto ao mesmo tempo responde rapidamente às interações do usuário. Também proporciona um sensação de contraste, o que torna a interface mais visualmente atraente."
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-21

@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Choosing the Right Easing"
-description: “Selecione o easing adequado para seu projeto, seja easing in, out ou ambos. Pode até mesmo ficar saltitante para obter manobras extras!"
-introduction: “Já discutimos as várias opções disponíveis para easing em animações, então qual o tipo ideal para seus projetos e qual será a duração das animações?"
+description: "Selecione o easing adequado para seu projeto, seja easing in, out ou ambos. Pode até mesmo ficar saltitante para obter manobras extras!"
+introduction: "Já discutimos as várias opções disponíveis para easing em animações, então qual o tipo ideal para seus projetos e qual será a duração das animações?"
 article:
   written_on: 2014-08-08
   updated_on: 2014-10-21

@@ -1,14 +1,9 @@
 ---
 layout: article
 title: "Device orientation"
-description: “O evento de orientação do dispositivo retorna dados de rotação, 
- que inclui quanto o dispositivo está inclinando de frente para trás, 
- lado a lado e, se o telefone ou laptop tiver um compasso, a direção 
- do dispositivo."
-introduction: “O evento de orientação do dispositivo retorna dados de rotação, 
- que inclui quanto o dispositivo está inclinando de frente para trás, 
- lado a lado e, se o telefone ou laptop tiver um compasso, a direção 
- do dispositivo."
+description: "O evento de orientação do dispositivo retorna dados de rotação, 
+ que inclui quanto o dispositivo está inclinando de frente para trás, lado a lado e, se o telefone ou laptop tiver um compasso, a direção do dispositivo."
+introduction: "O evento de orientação do dispositivo retorna dados de rotação, que inclui quanto o dispositivo está inclinando de frente para trás, lado a lado e, se o telefone ou laptop tiver um compasso, a direção do dispositivo."
 article:
   written_on: 2014-06-17
   updated_on: 2014-10-21

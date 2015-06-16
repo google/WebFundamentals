@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Security with HTTPS"
-description: “Segurança é uma parte importante da Web para proteger os usuários e para usar as novas e incríveis APIs no futuro será necessário avançar com o suporte TLS."
-introduction: “Segurança é uma parte importante da Web para proteger os usuários e para usar as novas e incríveis APIs no futuro será necessário avançar com o suporte TLS."
+description: "Segurança é uma parte importante da Web para proteger os usuários e para usar as novas e incríveis APIs no futuro será necessário avançar com o suporte TLS."
+introduction: "Segurança é uma parte importante da Web para proteger os usuários e para usar as novas e incríveis APIs no futuro será necessário avançar com o suporte TLS."
 id: security-with-tls
 collection: discovery-and-distribution
 authors:

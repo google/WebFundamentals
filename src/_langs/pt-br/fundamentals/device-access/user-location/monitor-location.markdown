@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Monitor the user's location"
-description: “O API da Geolocalização permite que você veja onde o usuário está e mantenha marcações nele conforme se move, sempre com a permissão do usuário.”
+description: "O API da Geolocalização permite que você veja onde o usuário está e mantenha marcações nele conforme se move, sempre com a permissão do usuário."
 article:
   written_on: 2014-01-01
   updated_on: 2014-10-21
@@ -10,7 +10,7 @@ priority: 1
 authors:
   - paulkinlan
 collection: user-location
-introduction:  “O API da Geolocalização permite que você veja onde o usuário está e mantenha marcações nele conforme se move, sempre com a permissão do usuário.”
+introduction:  "O API da Geolocalização permite que você veja onde o usuário está e mantenha marcações nele conforme se move, sempre com a permissão do usuário."
 key-takeaways:
   geo: 
     - Verifique a compatibilidade antes de usar a API.
