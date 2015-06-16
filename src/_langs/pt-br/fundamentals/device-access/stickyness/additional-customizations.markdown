@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Additional Customizations"
-description: “A seguir estão personalizações muito úteis, mas que funcionam apenas em um subconjunto de navegadores. Todas são opcionais, mas muito recomendadas, pois deixam a experiência do aplicativo ainda melhor."
-introduction: “A seguir estão personalizações muito úteis, mas que funcionam apenas em um subconjunto de navegadores. Todas são opcionais, mas muito recomendadas, pois deixam a experiência do aplicativo ainda melhor."
+description: "A seguir estão personalizações muito úteis, mas que funcionam apenas em um subconjunto de navegadores. Todas são opcionais, mas muito recomendadas, pois deixam a experiência do aplicativo ainda melhor."
+introduction: "A seguir estão personalizações muito úteis, mas que funcionam apenas em um subconjunto de navegadores. Todas são opcionais, mas muito recomendadas, pois deixam a experiência do aplicativo ainda melhor."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-17

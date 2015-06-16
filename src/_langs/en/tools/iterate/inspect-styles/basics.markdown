@@ -57,7 +57,7 @@ The Styles pane within the Elements panel shows the CSS rules applied to the ind
 
 Use the **Elements panel** to inspect all elements in your page in one DOM tree. Select any element and inspect the styles applied to it.
 
-![Inspect element animation](animations/inspect-element.png)
+{% animation animations/inspect-element.mp4 %}
 
 ### Inspect an element
 
@@ -94,7 +94,7 @@ The labels on the image below correspond with the numbered items below.
 
 To live-edit a DOM node, simply double-click on a [selected element](#inspect-an-element) and make changes:
 
-![Editable DOM node](animations/edit-element-name.png)
+{% animation animations/edit-element-name.mp4 %}
 
 {% include modules/remember.liquid title="Note" list=page.remember.current-tree %}
 
@@ -139,14 +139,12 @@ To view a history of live-edits made to your page:
 * Right-click (or **Ctrl + Click** on Mac) on a source file in the sidebar.
 * Select **Local modifications**.
 
-![How to get to local modifications](animations/revisions.png)
-
 To explore the changes made:
 
 * Expand top-level file names to view the time ![time modification occurred](imgs/image_25.png)a modification occurred.
 * Expand second-level items to view a [diff](http://en.wikipedia.org/wiki/Diff) (before and after) corresponding to the modification. A line with a pink background signifies a removal while a line with a green background signifies an addition.
 
-![View diffs based on local edits](animations/revision-apply-original.png)
+{% animation animations/revisions.mp4 %}
 
 ## Undo changes
 

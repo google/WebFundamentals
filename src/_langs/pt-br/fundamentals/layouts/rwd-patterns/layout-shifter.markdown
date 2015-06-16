@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Layout shifter"
-description: “Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
+description: "Os padrões de design da Web responsivos estão evoluindo rapidamente, mas
               há muitos padrões estabelecidos que funcionam bem em
               dispositivos móveis e desktop"
-introduction: “O padrão de mudança de layout é o padrão mais responsivo, com 
+introduction: "O padrão de mudança de layout é o padrão mais responsivo, com 
                vários pontos de interrupção em várias larguras de tela."
 authors:
   - petelepage

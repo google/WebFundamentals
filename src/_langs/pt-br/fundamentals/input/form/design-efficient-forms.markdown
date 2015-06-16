@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Design efficient forms"
-description: “Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessária e oriente o usuário mostrando o ponto em que se encontra em formulários de várias partes."
-introduction: “Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessária e oriente o usuário mostrando o ponto em que se encontra em formulários de várias partes."
+description: "Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessária e oriente o usuário mostrando o ponto em que se encontra em formulários de várias partes."
+introduction: "Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessária e oriente o usuário mostrando o ponto em que se encontra em formulários de várias partes."
 article:
   written_on: 2014-08-11
   updated_on: 2014-10-21

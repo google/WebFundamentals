@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Make Intra-Site URLs Relative"
-description: “Agora que você está disponibilizando seu site em HTTP e HTTPS, ele deve funcionar o mais tranquilamente possível independente do protocolo."
-introduction: “Agora que você está disponibilizando seu site em HTTP e HTTPS, ele precisa funcionar o mais tranquilamente possível independente do protocolo."
+description: "Agora que você está disponibilizando seu site em HTTP e HTTPS, ele deve funcionar o mais tranquilamente possível independente do protocolo."
+introduction: "Agora que você está disponibilizando seu site em HTTP e HTTPS, ele precisa funcionar o mais tranquilamente possível independente do protocolo."
 id: make-intra-site-urls-relative
 collection: security-with-tls
 authors:

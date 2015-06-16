@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Simplify paint complexity and reduce paint areas"
-description: “A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível.”
-introduction: “A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível.”
+description: "A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível."
+introduction: "A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível."
 article:
   written_on: 2015-03-20
   updated_on: 2015-03-20
@@ -13,7 +13,7 @@ authors:
   - paullewis
 notes:
   highdpi:
-    - “Em telas de alto DPI, elementos com posição fixa são promovidos automaticamente para sua própria camada de compositor. Esse não é o caso em dispositivos de DPI baixo porque a promoção altera a renderização do texto de subpixel para escala de cinza e a promoção da camada precisa ser realizada manualmente.”
+    - "Em telas de alto DPI, elementos com posição fixa são promovidos automaticamente para sua própria camada de compositor. Esse não é o caso em dispositivos de DPI baixo porque a promoção altera a renderização do texto de subpixel para escala de cinza e a promoção da camada precisa ser realizada manualmente."
 
 key-takeaways:
   - Alterar qualquer propriedade além de transforms ou opacity sempre aciona a pintura.

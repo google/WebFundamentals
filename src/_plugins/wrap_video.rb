@@ -48,3 +48,30 @@ module VideoWrapper
 end
 
 Liquid::Template.register_tag('video', VideoWrapper::Tag)
+
+module AnimationWrapper
+
+  # Renders an autoplaying, muted and looped video that only autoplays
+  # when it comes into the viewport.
+  #
+  # Example usage:
+  #
+  # {% animation /some/video.mp4 %}
+  #
+  class Tag < Liquid::Tag
+
+    def initialize(tag_name, src, tokens)
+      super
+      @src = src
+    end
+
+    def render(context)
+      out = "<p class='autoplay-animation-container'>"
+      out += '<video class="autoplay-animation" src="' + @src + '" loop muted></video>'
+      out += " </p>"
+    end
+
+  end
+end
+
+Liquid::Template.register_tag('animation', AnimationWrapper::Tag)

@@ -1,10 +1,9 @@
 ---
 layout: article
 title: "Set Up Web Starter Kit"
-description: “Este guia é para iniciantes no Web Starter Kit.
-  Ele explica como trabalhar com o Web Starter Kit o mais rapidamente
- possível."
-introduction: “O Web Starter Kit depende do NodeJS, NPM e Sass para funcionar. Com
+description: "Este guia é para iniciantes no Web Starter Kit.
+  Ele explica como trabalhar com o Web Starter Kit o mais rapidamente possível."
+introduction: "O Web Starter Kit depende do NodeJS, NPM e Sass para funcionar. Com
  eles em seu computador, você terá tudo que precisa para começar
  a usar o Web Starter Kit em seus projetos."
 notes:

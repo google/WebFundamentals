@@ -35,7 +35,6 @@ En Chrome, Firefox OS, Safari, Internet Explorer y Opera Coast, es posible defin
 <div class="clear g-wide--full">
     <figure class="fluid">
         <img src="images/theme-color.png" alt="Ejemplo de un sitio en el que se utiliza la etiqueta META tema-color">
-
         <figcaption>Ejemplo de un sitio en el que se utiliza la etiqueta META tema-color</figcaption>
     </figure>
 </div>
@@ -56,8 +55,7 @@ indicarle a Safari que le muestre una imagen de inicio en particular. Para ello,
 {% endhighlight %}
 
 La imagen debe tener el tamaño específico de la pantalla del dispositivo de destino; de lo contrario,
-no se podrá utilizar. Consulte
-[Directrices sobre el contenido web de Safari](//developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+no se podrá utilizar. Consulte [Directrices sobre el contenido web de Safari](//developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 para obtener más información.
 
 Aunque la documentación de Apple es dispersa con respecto a este tema, la comunidad de desarrolladores
@@ -145,8 +143,7 @@ Y aquí se muestra una vista previa de la apariencia de los diferentes modos:
 
 Los "sitios anclados" de Microsoft y sus "iconos dinámicos" giratorios van mucho más allá que otras
 implementaciones, y si tratamos este tema aquí nos alejaremos mucho del tema de esta guía. Si desea
-conocer más,
-[en MSDN (Microsoft Developer Network) podrá obtener más información sobre cómo crear iconos dinámicos].(//msdn.microsoft.com/en-us/library/ie/dn455115(v=vs.85).aspx).
+conocer más, [en MSDN (Microsoft Developer Network) podrá obtener más información sobre cómo crear iconos dinámicos].(//msdn.microsoft.com/en-us/library/ie/dn455115(v=vs.85).aspx).
 
 {% include modules/nextarticle.liquid %}
 

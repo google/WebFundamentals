@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Choose the best input type"
-description: “Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou quando os campos avançam automaticamente conforme são preenchidos. Procure por oportunidades de eliminar toques desnecessários em seus formulários.”
-introduction: “Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou quando os campos avançam automaticamente conforme são preenchidos. Procure por oportunidades de eliminar toques desnecessários em seus formulários.”
+description: "Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou quando os campos avançam automaticamente conforme são preenchidos. Procure por oportunidades de eliminar toques desnecessários em seus formulários."
+introduction: "Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou quando os campos avançam automaticamente conforme são preenchidos. Procure por oportunidades de eliminar toques desnecessários em seus formulários."
 article:
   written_on: 2014-04-30
   updated_on: 2014-10-21

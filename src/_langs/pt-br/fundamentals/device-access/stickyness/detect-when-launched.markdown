@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Detect When Launched From The Home Screen"
-description: “Algumas vezes é útil saber se o aplicativo é lançado a partir da tela inicial ou do navegador da Web."
-introduction: “Algumas vezes é útil saber se o aplicativo é lançado a partir da tela inicial ou do navegador da Web."
+description: "Algumas vezes é útil saber se o aplicativo é lançado a partir da tela inicial ou do navegador da Web."
+introduction: "Algumas vezes é útil saber se o aplicativo é lançado a partir da tela inicial ou do navegador da Web."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-17

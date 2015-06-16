@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Add a WebApp Manifest"
-description: “O aplicativo Manifest for Web é um arquivo JSON simples que proporciona a você, desenvolvedor, a capacidade de controlar a aparência do seu aplicativo para o usuário nas áreas onde podem ver aplicativos (por exemplo, na tela inicial móvel), direcionar o que esses usuários podem acessar e, mais importante, como podem acessar. No futuro, o manifesto irá proporcionar ainda mais controle sobre seu aplicativo, mas no momento estamos apenas nos concentrando em como o seu aplicativo pode ser iniciado."
-introduction: “O aplicativo Manifest for Web é um arquivo JSON simples que proporciona a você, desenvolvedor, a capacidade de controlar a aparência do seu aplicativo para o usuário nas áreas onde podem ver aplicativos (por exemplo, na tela inicial móvel), direcionar o que esses usuários podem acessar e, mais importante, como podem acessar. No futuro, o manifesto irá proporcionar ainda mais controle sobre seu aplicativo, mas no momento estamos apenas nos concentrando em como o seu aplicativo pode ser iniciado."
+description: "O aplicativo Manifest for Web é um arquivo JSON simples que proporciona a você, desenvolvedor, a capacidade de controlar a aparência do seu aplicativo para o usuário nas áreas onde podem ver aplicativos (por exemplo, na tela inicial móvel), direcionar o que esses usuários podem acessar e, mais importante, como podem acessar. No futuro, o manifesto irá proporcionar ainda mais controle sobre seu aplicativo, mas no momento estamos apenas nos concentrando em como o seu aplicativo pode ser iniciado."
+introduction: "O aplicativo Manifest for Web é um arquivo JSON simples que proporciona a você, desenvolvedor, a capacidade de controlar a aparência do seu aplicativo para o usuário nas áreas onde podem ver aplicativos (por exemplo, na tela inicial móvel), direcionar o que esses usuários podem acessar e, mais importante, como podem acessar. No futuro, o manifesto irá proporcionar ainda mais controle sobre seu aplicativo, mas no momento estamos apenas nos concentrando em como o seu aplicativo pode ser iniciado."
 article:
   written_on: 2014-12-17
   updated_on: 2014-12-17

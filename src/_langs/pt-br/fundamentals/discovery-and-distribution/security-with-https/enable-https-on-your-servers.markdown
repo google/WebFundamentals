@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Enable HTTPS On Your Servers"
-description: “Você está pronto para todas as etapas importantes da habilitação do HTTPS em seus servidores."
-introduction: “Você está pronto para todas as etapas importantes da habilitação do HTTPS em seus servidores."
+description: "Você está pronto para todas as etapas importantes da habilitação do HTTPS em seus servidores."
+introduction: "Você está pronto para todas as etapas importantes da habilitação do HTTPS em seus servidores."
 id: generating-keys-and-csr
 collection: security-with-tls
 authors:
