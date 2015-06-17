@@ -62,6 +62,8 @@ The time to render a frame is displayed atop of the Records view. If you hover o
 
 ![Frames mode](imgs/frames_mode.png)
 
+Learn more about how to test and fix rendering problems in [Analyze Runtime Performance](tools/profile-performance/rendering-tools/analyze-runtime).
+
 ### Clear or light-gray frames
 
 You may notice regions of a frame that are light-gray or clear (hollow). These regions indicate, respectively:
