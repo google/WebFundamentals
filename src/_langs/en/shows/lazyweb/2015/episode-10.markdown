@@ -12,7 +12,7 @@ showYoutubeID: 6YtvbitnQdw
 date: 2015-06-16 00:00:00
 article:
   written_on: 2015-06-16
-  updated_on: 2015-06-16
+  updated_on: 2015-06-17
 
 ---
 
