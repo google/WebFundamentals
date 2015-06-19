@@ -28,7 +28,7 @@ key-takeaways:
 
 ## Writing to the console
 
-The <a href="console-api#consolelogobject-object">console.log()</a> method takes one or more expressions as parameters and writes their current values to the console.
+The <a href="https://developer.chrome.com/devtools/docs/console-api#consolelogobject-object">console.log()</a> method takes one or more expressions as parameters and writes their current values to the console.
 
 A simple write to the console:
 
@@ -183,11 +183,11 @@ How an assertion failure displays in the console:
 
 The first parameter passed to any of the logging methods may contain one or more format specifiers. A format specifier consists of a `%` symbol followed by a letter that indicates the formatting that applies to the value. The parameters following the string apply to the placeholders in order.
 
-The following example uses the string and digit formatters to insert values into the output string. You will see Sam has 100 points in the console.
+The following example uses the string and digit formatters to insert values into the output string. You will see "Sam has 100 points" in the console.
 
     console.log("%s has %d points", "Sam", 100);
 
-The full list of format specifiers are as follows:
+The full list of format specifiers is:
 
 | Specifier | Output                                                                            |
 |-----------|:----------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ The output of the previous code sample:
 ![Example subsitution output](images/console-write-log-multiple.png)
 
 
-TBD. Not sure what to do with “Formatting DOM elements as JavaScript objects”. It seems a little bit out of place in this page, and yet it’s not enough to get it’s own page. Gonna wait to figure this out while writing the doc.
+TBD. Not sure what to do with “Formatting DOM elements as JavaScript objects”. It seems a little bit out of place in this page, and yet it’s not enough to get its own page. Gonna wait to figure this out while writing the doc.
 
 {% include modules/nextarticle.liquid %}
 
