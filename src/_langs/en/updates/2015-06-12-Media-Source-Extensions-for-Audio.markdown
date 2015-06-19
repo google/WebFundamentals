@@ -12,8 +12,8 @@ date: 2015-06-12
 title: "Media Source Extensions for Audio"
 description: "Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback."
 article:
-  written_on: 2015-06-12
-  updated_on: 2015-06-12
+  written_on: 2015-06-19
+  updated_on: 2015-06-19
 
 authors:
   - dalecurtis
@@ -70,7 +70,7 @@ mediaSource.addEventListener('sourceopen', function() {
 audio.src = window.URL.createObjectURL(mediaSource);
 {% endhighlight %}
 
-Once the MediaSource object is connected, it will perform some initialization and eventually fire a "sourceopen" event; at which point we can create a [SourceBuffer](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an "audio/mpeg" one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
+Once the MediaSource object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [SourceBuffer](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
 
 ## Anomalous Waveforms
 
@@ -94,7 +94,7 @@ In addition to the padding at the end, each file also had padding added to the b
 </p>
 
 
-The sections of silence at the beginning and end of each file are what causes the "glitches" between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with MediaSource! Below, we'll modify our _onAudioLoaded()_ method to use an [append window](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#definitions) and a [timestamp offset](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-timestampOffset) to remove this silence.
+The sections of silence at the beginning and end of each file are what causes the 'glitches' between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with MediaSource! Below, we'll modify our _onAudioLoaded()_ method to use an [append window](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#definitions) and a [timestamp offset](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-timestampOffset) to remove this silence.
 
 ## Example Code
 
@@ -133,7 +133,7 @@ function onAudioLoaded(data, index) {
   sourceBuffer.timestampOffset =
       appendTime - gaplessMetadata.frontPaddingDuration;
 
-  // When appendBuffer() completes, it will fire an "updateend" event signaling
+  // When appendBuffer() completes, it will fire an updateend event signaling
   // that it's okay to append another segment of media.  Here, we'll chain the
   // append for the next segment to the completion of our current append.
   if (index == 0) {
@@ -248,7 +248,7 @@ MP4Box -dash 1000 sintel_4.m4a && mv sintel_4_dashinit.mp4 sintel_4.mp4
 rm sintel_{0,1,2,3,4}_dash.mpd
 {% endhighlight %}
 
-That's it! We now have fragmented MP4 and MP3 files with the correct metadata necessary for gapless playback. See <a href="">appendix b</a> for more details on just what that metadata looks like.
+That's it! We now have fragmented MP4 and MP3 files with the correct metadata necessary for gapless playback. See Appendix B for more details on just what that metadata looks like.
 
 ## Appendix B: Parsing Gapless Metadata
 
@@ -283,7 +283,7 @@ We'll cover Apple's iTunes metadata format first since it's the easiest to parse
 iTunSMPB[ 26 bytes ]0000000 00000840 000001C0 0000000000046E00
 {% endhighlight %}
 
-This is written inside an ID3 tag within the MP3 container and within a metadata atom inside the MP4 container. For our purposes, we can ignore the first "0000000" token. The next three tokens are the front padding, end padding, and total non-padding sample count. Dividing each of these by the sample rate of the audio gives us the duration for each.
+This is written inside an ID3 tag within the MP3 container and within a metadata atom inside the MP4 container. For our purposes, we can ignore the first `0000000` token. The next three tokens are the front padding, end padding, and total non-padding sample count. Dividing each of these by the sample rate of the audio gives us the duration for each.
 
 {% highlight javascript %}
   // iTunes encodes the gapless data as hex strings like so:
@@ -364,7 +364,7 @@ Memory belonging to SourceBuffers is actively [garbage collected](http://en.wiki
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
-Ranges can be removed via the [remove()](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end) method on each SourceBuffer; which takes a [start, end] range in seconds. Similar to appendBuffer(), each remove() will fire an "updateend" event once it completes. Other removes or appends should not be issued until the event fires.
+Ranges can be removed via the [remove()](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end) method on each SourceBuffer; which takes a [start, end] range in seconds. Similar to appendBuffer(), each remove() will fire an `updateend` event once it completes. Other removes or appends should not be issued until the event fires.
 
 On desktop Chrome, you can keep approximately 12 megabytes of audio content and 150 megabytes of video content in memory at once. You should not rely on these values across browsers or platforms; e.g., they are most certainly not representative of mobile devices.
 
