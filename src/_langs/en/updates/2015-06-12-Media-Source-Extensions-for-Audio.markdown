@@ -23,7 +23,7 @@ tags:
   - codecs
   - media source extensions
   - MSE
-permalink: /2015/06/High-performance-video-with-hardware-decoding
+permalink: /2015/06/mse-gapless_audio
 ---
 
 # Media Source Extensions for Audio: Eliminating the Gap
