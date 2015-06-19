@@ -30,11 +30,11 @@ Enable the accelerometer emulator by selecting the **Accelerometer** checkbox in
 
 You can manipulate the following orientation parameters:
 
-<dl>
+<dl compact>
 
 <dt><abbr title="alpha">α</abbr></dt>
 
-<dd>Rotation around the _z_-axis.</dd>
+<dd>Rotation around the z-axis.</dd>
 
 <dt><abbr title="beta">β</abbr></dt>
 
