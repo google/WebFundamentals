@@ -43,7 +43,7 @@ Example code and output for timing JavaScript execution:
 Output in the console:
 ![Time elapsed](images/track-executions-time-duration.png)
 
-When a [Timeline](https://developer.chrome.com/devtools/docs/timeline) recording is taking place during a `time()` operation it will annotate the timeline as well.
+When a [Timeline](https://developer.chrome.com/devtools/docs/timeline) recording is taking place during a `time()` operation, it annotates the timeline as well.
 This is useful when tracing what your application does and where it comes from.
 
 How an annotation on the timeline looks from `time()`:
@@ -75,9 +75,9 @@ Timestamps in the timeline:
 
 ## Counting statement executions
 
-The `count()` method will log the provided string along with the number of times the same string has been provided.
+The `count()` method logs the provided string along with the number of times the same string has been provided.
 The string may have dynamic content.
-When the exact statement is given to `count()` on the same line the number will increment.
+When the exact statement is given to `count()` on the same line, the number is incremented.
 
 Example code of using `count()` with some dynamic content:
 
