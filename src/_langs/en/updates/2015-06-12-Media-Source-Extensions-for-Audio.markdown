@@ -7,13 +7,13 @@ collection: updates
 category: chrome
 product: chrome
 type: news
-date: 2015-06-12
+date: 2015-06-22
 
 title: "Media Source Extensions for Audio"
 description: "Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback."
 article:
-  written_on: 2015-06-19
-  updated_on: 2015-06-19
+  written_on: 2015-06-22
+  updated_on: 2015-06-22
 
 authors:
   - dalecurtis
@@ -36,11 +36,19 @@ You've likely listened to a music album where songs flowed seamlessly across tra
 
 We'll get into the details of why below, but for now lets start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
-<iframe seamless style="border: 0; height: 335px; width: 100%" src="https://simpl.info/mse/audio/gap"></iframe>
+{% link_sample_button _code/mse-gapless-audio/demos/gap/index.html %}
+  Demo
+{% endlink_sample_button %}
+
+<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless-audio/demos/gap/"></iframe> -->
 
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
-<iframe seamless style="border: 0; height: 335px; width: 100%" src="https://simpl.info/mse/audio/gapless"></iframe>
+{% link_sample_button _code/mse-gapless-audio/demos/gapless/index.html %}
+  Demo
+{% endlink_sample_button %}
+
+<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless-audio/demos/gapless/index.html"></iframe> -->
 
 There are a [variety of ways to create gapless content](#creating-gapless-content). For the purposes of this demo, we'll focus on the type of files a normal user might have lying around. Where each file has been encoded separately without regard for the audio segments before or after it.
 
@@ -171,9 +179,13 @@ Lets see what our shiny new code has accomplished by taking another look at the 
 
 ## Conclusion
 
-With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our _onAudioLoaded()_ method has no consideration for containers or codecs... Which means all of these techniques will work irrespective of the container or codec type; below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
+With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our _onAudioLoaded()_ method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
-<iframe seamless style="border: 0; height: 335px; width: 100%" src="https://simpl.info/mse/audio/mp4gapless"></iframe>
+{% link_sample_button _code/mse-gapless-audio/demos/mp4gapless/index.html %}
+  Demo
+{% endlink_sample_button %}
+
+<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless-audio/demos/mp4gapless/index.html"></iframe> -->
 
 If you'd like to know more check the appendices below for a deeper look at gapless content creation and metadata parsing. You can also explore [_gapless.js_](gapless.js) for a closer look at the code powering this demo.
 
@@ -186,7 +198,7 @@ Creating gapless content can be hard to get right. Below we'll walk through how 
 {% highlight bash %}
 unzip Jan_Morgenstern-Sintel-FLAC.zip
 sha1sum 1-Snow_Fight.flac
-# 0535ca207ccba70d538f7324916a3f1a3d550194  1-Snow_Fight.flac
+\# 0535ca207ccba70d538f7324916a3f1a3d550194  1-Snow_Fight.flac
 {% endhighlight %}
 
 First, we'll split out the first 31.5 seconds the _1-Snow_Fight.flac_ track. We also want to add a 2.5 second fade out starting at 28 seconds in to avoid any clicks once playback finishes. Using the FFmpeg command line below we can accomplish all of this and put the results in _sintel.flac_.
@@ -360,7 +372,7 @@ With that we have a complete function for parsing the vast majority of gapless c
 
 ## Appendix C: On Garbage Collection
 
-Memory belonging to SourceBuffers is actively [garbage collected](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
+Memory belonging to `SourceBuffers` is actively [garbage collected](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
