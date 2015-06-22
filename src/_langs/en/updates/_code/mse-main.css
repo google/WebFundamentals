@@ -17,7 +17,7 @@
 }
 
 .play-overlay {
-  background: url(../images/yt_play.png);
+  background: url(yt_play.png);
   background-size: 80px 60px;
   background-repeat: no-repeat;
   background-position:center;
