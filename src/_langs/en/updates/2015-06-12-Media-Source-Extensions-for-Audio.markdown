@@ -23,7 +23,7 @@ tags:
   - codecs
   - media source extensions
   - MSE
-permalink: /2015/06/mse-gapless-audio
+permalink: /2015/06/mse-gapless-audio.html
 ---
 
 # Media Source Extensions for Audio: Eliminating the Gap
@@ -36,19 +36,19 @@ You've likely listened to a music album where songs flowed seamlessly across tra
 
 We'll get into the details of why below, but for now lets start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
-{% link_sample_button _code/mse-gapless-audio/demos/gap/index.html %}
+{% link_sample_button _code/mse-gap.html %}
   Demo
 {% endlink_sample_button %}
 
-<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless-audio/demos/gap/"></iframe> -->
+<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gap.html"></iframe> -->
 
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
-{% link_sample_button _code/mse-gapless-audio/demos/gapless/index.html %}
+{% link_sample_button _code/mse-gapless.html %}
   Demo
 {% endlink_sample_button %}
 
-<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless-audio/demos/gapless/index.html"></iframe> -->
+<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless.html"></iframe> -->
 
 There are a [variety of ways to create gapless content](#creating-gapless-content). For the purposes of this demo, we'll focus on the type of files a normal user might have lying around. Where each file has been encoded separately without regard for the audio segments before or after it.
 
@@ -181,11 +181,11 @@ Lets see what our shiny new code has accomplished by taking another look at the 
 
 With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our _onAudioLoaded()_ method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
-{% link_sample_button _code/mse-gapless-audio/demos/mp4gapless/index.html %}
+{% link_sample_button _code/mse-mp4gapless.html %}
   Demo
 {% endlink_sample_button %}
 
-<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless-audio/demos/mp4gapless/index.html"></iframe> -->
+<!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-mp4gapless.html"></iframe> -->
 
 If you'd like to know more check the appendices below for a deeper look at gapless content creation and metadata parsing. You can also explore [_gapless.js_](gapless.js) for a closer look at the code powering this demo.
 
