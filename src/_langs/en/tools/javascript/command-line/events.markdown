@@ -4,7 +4,7 @@ layout: article
 title: "Monitor Events"
 seotitle: "Monitor Events Using the Chrome DevTools Command Line API"
 description: "The Chrome DevTools Command Line API offers various ways to observe and inspect Event Listeners"
-introduction: "The Chrome DevTools Command Line API offers various ways to observe and inspect Event Listeners. JavaScript plays a central role in interactive pages, and the Browser provides you some useful tools to debug events and event handlers."
+introduction: "The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners. JavaScript plays a central role in interactive pages, and the browser provides you some useful tools to debug events and event handlers."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-11
@@ -39,7 +39,7 @@ Listen to click events on the body of the page.
 
     monitorEvents(document.body, "click");
 
-If a supported *event type* that the DevTools maps to a set of standard event names then it will listen to the events for that type.
+If the monitored event is a supported *event type* that the DevTools maps to a set of standard event names, then it will listen to the events for that type.
 The [Command Line API](https://developer.chrome.com/devtools/docs/commandline-api#monitoreventsobject-events) has a full mapping of *event types* to the events they cover.
 
 To stop monitoring events you call the `unmonitorEvents()` method and give it the object to stop monitoring.

@@ -40,15 +40,15 @@ There might be several execution paths that lead to the error and it's not alway
 
 ### Pause on JavaScript exceptions
 
-You may also want to pause JavaScript execution next time exception is thrown
-and inspect its call stack, scope variables and state of your app. A tri-state
-stop button at the bottom of the Scripts panel enables you to switch between
+You may also want to pause JavaScript execution the next time an exception is thrown
+and inspect its call stack, scope variables, and state of your app. A tri-state
+stop button at the bottom of the Scripts panel enables you to switch among 
 different exception handling modes:
 
 ![Pause button](images/track-exceptions-pause-gray.png)
 
 You can choose to either pause on all
-exception or only on the uncaught ones or you can ignore exceptions altogether.
+exceptions or only on the uncaught ones or you can ignore exceptions altogether.
 
 Pause execution:
 ![Pause execution](images/track-exceptions-pause-execution.jpg)
@@ -68,7 +68,7 @@ You can instrument your code with console.trace() calls that would print current
 ![console.trace() example](images/track-exceptions-console-trace.jpg)
 
 ### console.assert()
-There is also a way to place assertion in your JavaScript code. Just call console.assert() with the error condition as the first parameter. Whenever this expression evaluates to false you will see a corresponding console record:
+There is also a way to place assertions in your JavaScript code. Just call console.assert() with the error condition as the first parameter. When this expression evaluates to false you will see a corresponding console record:
 
 ![console.assert() example](images/track-exceptions-console-assert.jpg)
 
@@ -90,7 +90,7 @@ By clicking the arrow you can expand the error message:
 
 The Console tells you the error was triggered in lib.js, line 4, which was called by script.js in the addEventListener callback, which is an anonymous function, in line 3.
 
-This is a very simple example but even the most complicated log trace debugging follow the same process.
+This is a very simple example, but even the most complicated log trace debugging follows the same process.
 
 {% include modules/nextarticle.liquid %}
 

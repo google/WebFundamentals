@@ -1,0 +1,197 @@
+<!DOCTYPE html> <html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <style>
+
+      /* // [START invalidstyle] */
+      input.dirty:not(:focus):invalid {
+        background-color: #FFD9D9;
+      }
+      input.dirty:not(:focus):valid {
+        background-color: #D9FFD9;
+      }
+      /* // [END invalidstyle] */
+
+    </style>
+    <title>Создание потрясающих форм: Образец формы заказа</title>
+  </head>
+  <body>
+    <div role="main">
+      <form method="post" id="usrForm">
+        <fieldset>
+          <legend>Контактная информация</legend>
+          <!-- // [START autocomplete] -->
+          <label for="frmNameA">Имя</label>
+          <input type="text" name="name" id="frmNameA" placeholder="Полное имя" required autocomplete="name">
+
+          <label for="frmEmailA">Адрес эл. почты</label>
+          <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
+
+          <label for="frmEmailC">Подтвердить адрес эл. почты</label>
+          <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required autocomplete="email">
+
+          <label for="frmPhoneNumA">Телефон</label>
+          <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-555-555-1212" required autocomplete="tel">
+          <!-- // [END autocomplete] -->
+
+          <label for="frmShoeSize">Размер обуви</label>
+          <input type="number" name="shoe-size" id="frmShoeSize"
+            min="1" max="18" step="0.5">
+
+          <!-- // [START datalist] -->
+          <label for="frmFavChocolate">Любимая марка шоколада</label>
+          <input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
+          <datalist id="chocType">
+            <option value="white">
+            <option value="milk">
+            <option value="dark">
+          </datalist>
+          <!-- // [END datalist] -->
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Доставка</legend>
+          <!-- // [START labels] -->
+          <label for="frmAddressS">Адрес</label>
+          <input type="text" name="ship-address" required id="frmAddressS" placeholder="Любая улица 123" autocomplete="shipping street-address">
+          <!-- // [END labels] -->
+
+          <label for="frmCityS">Город</label>
+          <input type="text" name="ship-city" required id="frmCityS" placeholder="Нью-Йорк" autocomplete="shipping locality">
+
+          <label for="frmStateS">Штат</label>
+          <input type="text" name="ship-state" required id="frmStateS" placeholder="Нью-Йорк" autocomplete="shipping region">
+
+          <label for="frmZipS">Почтовый индекс</label>
+          <input type="text" name="ship-zip" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code">
+
+          <label for="frmCountryS">Страна</label>
+          <input type="text" name="ship-country" required id="frmCountryS" placeholder="США" autocomplete="shipping country">
+
+          <label>
+            <input type="checkbox" name="billAndShip" id="cbBillAndShip">
+            Выслать счет на этот адрес.
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Выставление счета</legend>
+
+          <label for="frmAddressB">Адрес</label>
+          <input type="text" name="bill-address" id="frmAddressB" required placeholder="Любая улица 123" autocomplete="billing street-address">
+
+          <label for="frmCityB">Город</label>
+          <input type="text" name="bill-city" id="frmCityB" required placeholder="Нью-Йорк" autocomplete="billing locality">
+
+          <label for="frmStateB">Штат</label>
+          <input type="text" name="bill-state" id="frmStateB" required placeholder="Нью-Йорк" autocomplete="billing region">
+
+          <label for="frmZipB">Почтовый индекс</label>
+          <input type="text" name="bill-zip" id="frmZipB" required placeholder="10011" autocomplete="billing postal-code">
+
+          <label for="frmCountryB">Страна</label>
+          <input type="text" name="bill-country" id="frmCountryB" required placeholder="США" autocomplete="billing country">
+        </fieldset>
+
+        <fieldset>
+          <legend>Оплата</legend>
+          <p><b>НЕ</b> указывайте в этом поле реальные данные кредитной карты.</p>
+          <label for="frmNameCC">Имя на карте</label>
+          <input type="text" name="ccname" id="frmNameCC" required placeholder="Полное имя" autocomplete="cc-name">
+
+          <label for="frmCCNum">Номер карты</label>
+          <input type="text" name="cardnumber" id="frmCCNum"
+            required autocomplete="cc-number">
+
+          <label for="frmCCCVC">CVC</label>
+          <input type="text" name="cvc" id="frmCCCVC" required
+            autocomplete="cc-csc">
+
+          <label for="frmCCExp">Действует до</label>
+          <!-- // [START placeholder] -->
+          <input type="text" name="cc-exp" id="frmCCExp" required placeholder="ММ-ГГГГ" autocomplete="cc-exp">
+          <!-- // [END placeholder] -->
+        </fieldset>
+        <div>
+          <button class="btn" id="butCheckout">Оформить</button>
+        </div>
+      </form>
+    </div>
+
+
+    <script type="text/javascript">
+      var form;
+
+      function initForm() {
+        form = document.getElementById("usrForm")
+        /* // [START preventsubmission] */
+        form.addEventListener("submit", function(evt) {
+          if (form.checkValidity() === false) {
+            evt.preventDefault();
+            alert("Form is invalid - submission prevented!");
+            return false;
+          } else {
+            // To prevent data from being sent, we've prevented submission
+            // here, but normally this code block would not exist.
+            evt.preventDefault();
+            alert("Form is valid - submission prevented to protect privacy.");
+            return false;
+          }
+        });
+        /* // [END preventsubmission] */
+      }
+
+      function initConfirmEmail() {
+        var elem = document.getElementById("frmEmailC");
+        elem.addEventListener("blur", verifyEmail);
+        function verifyEmail(input) {
+          input = input.srcElement;
+          sampleCompleted("Forms-orderConfirm");
+          var primaryEmail = document.getElementById('frmEmailA').value
+          /* // [START customvalidation] */
+          if (input.value != primaryEmail) {
+            // the provided value doesn't match the primary email address
+            input.setCustomValidity('The two email addresses must match.');
+            console.log("E-mail addresses do not match", primaryEmail, input.value);
+          } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+          }
+          /* // [END customvalidation] */
+        }
+      }
+
+      function initInputs() {
+        /* // [START initinputs] */
+        var inputs = document.getElementsByTagName("input");
+        var inputs_len = inputs.length;
+        var addDirtyClass = function(evt) {
+          sampleCompleted("Forms-order-dirty");
+          evt.srcElement.classList.toggle("dirty", true);
+        };
+        for (var i = 0; i < inputs_len; i++) {
+          var input = inputs[i];
+          input.addEventListener("blur", addDirtyClass);
+          input.addEventListener("invalid", addDirtyClass);
+          input.addEventListener("valid", addDirtyClass);
+        }
+        /* // [END initinputs] */
+      }
+
+      function initNoSubmit() {
+        form.addEventListener("submit", function(evt) {
+          evt.preventDefault();
+          alert("Submission of this form is prevented.");
+        });
+      }
+
+      initForm();
+      initInputs();
+      initConfirmEmail();
+
+
+    </script>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html> 

@@ -1,19 +1,22 @@
 ---
 layout: article
 title: "Web Starter Kit のセットアップ"
-description: "Web Starter Kit の初心者の方は、まずはここを見て下さい。Web Starter Kit を使いはじめるための近道はここにあります。"
-introduction: "Web Starter Kit は NodeJS、NPM、および Sass に依存しています。一度マシンにセットアップしてしまえば、Web Starter Kit に必要な環境は整ったと言えます。"
+description: "Web Starter Kit を初めて使用する場合は、このガイドが役立ちます。Web Starter Kit をできるだけ迅速に起動して、有効活用する
+方法を紹介します。"
+introduction: "Web Starter Kit は NodeJS、NPM、および Sass で動作します。お使いのマシンでにこれらを導入したら、プロジェクトで Web Starter Kit を使用する環境が整ったことになります。"
 notes:
+  nosudo: 許可または <code>EPERM</code>、
+    <code>EACCESS</code> のようなアクセス エラーが表示された場合は、<code>sudo</code> を回避策として使用しないでください。
+    このページ <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">に問い合わせて、</a> より堅牢な解決策を入手してください。
 article:
   written_on: 2014-04-17
-  updated_on: 2014-04-23
+  updated_on: 2015-04-01
   order: 1
 id: setting-up-wsk
+priority: 1
 collection: web-starter-kit
 authors:
   - mattgaunt
-translators:
-  - agektmr
 key-takeaways:
 ---
 
@@ -21,53 +24,45 @@ key-takeaways:
 
 {% include modules/toc.liquid %}
 
-## Install These One Time Dependencies
+## これらのワンタイムの依存関係をインストールします。
 
-There are two tool sets you need to install on your machine before you can build
-sites with Web Starter Kit: NodeJS & NPM, Ruby & Sass.
+Web Starter Kit を使用しているサイトを構築する前に、
+マシンに 2 つのツール·セットをインストールする必要があります。NodeJS、NPM、および Sass です。
 
-### NodeJS & NPM
+### NodeJS および NPM
 
-Web Starter Kit’s build tools need Node and NPM. Node is used to run Gulp, the
-task runner. NPM is used to download the modules needed to perform certain tasks
-in Gulp.
+Web Starter Kit のビルドツールでは、Node および NPM が必要です。 Node は Gulp を起動する
+タスクランナーです。 NPM は Gulp で特定のタスクを実行するために必要なモジュールを
+ダウンロードするために使用されます。
 
-If you aren’t sure if you have NodeJS and NPM, check by opening a terminal and
-running `node -v`. If Node responds, check the version matches the current version
-on NodeJS.org.
+NodeJS や NPM を所有しているかどうか分からない場合は、コマンドプロンプトを開き、`node -v` を
+実行して確認します。 Node から応答があった場合は、バージョンがNodeJS.org の現在のバージョンと
+一致していることを確認してください。
 
-If you don’t get a response or have an old version then go to NodeJS.org and
-click on the big green Install button. NPM will be installed with NodeJS
-automatically.
+応答がなかったり古いバージョンである場合は、NodeJS.org に移動し、大きな緑の [インストール] ボタンを
+クリックしてください。 NPM は NodeJS で自動的に
+インストールされます。
 
-### Sass
+## Your Web Starter Kit プロジェクトの設定
 
-Web Starter Kit uses Sass to make our style guide nice and modular. For those 
-new to Sass, the project describes itself as a “CSS extension language”. 
-Essentially it’s CSS with some extra features. For example, it adds support for 
-variables and functions, which help you structure your CSS in a modular and 
-reusable fashion.
+最初に [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
+に移動し、zip ファイルをダウンロードし、解凍します。 これはプロジェクトのための基礎となるため、フォルダ名を変更し、マシン上の関連する場所に置きます。 このガイドの残りの部分では、このフォルダを `my-project` と呼びます
 
-Once you have installed the NPM packages, along with Gulp (globally), Sass will 
-be available to you.
+次に、Web Starter Kit のローカル依存関係をインストールする必要があります。 コマンド プロンプトを開き、
+プロジェクト フォルダでディレクトリを変更して、
+次の NPM インストール スクリプトを実行します。
 
-## Set Up Your Web Starter Kit Project
+    cd my-project
+    npm install
+    npm install gulp -g
 
-The first step is to go to [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
-and download and extract the zip.
+そうです!これで Web Starter 
+Kit で Gulp ツールを使用する準備が整いました。
 
-Next, you need to install the local dependencies for Web Starter Kit. Open a
-terminal, change directory into your project folder and run npm install.
+{% include modules/remember.liquid title="Errors?" list=page.notes.nosudo %}
 
-    $ cd web-starter-kit
-    $ npm install
-    $ npm install gulp -g
-
-That’s it! You now have everything that's needed to use the Gulp tools in Web Starter
-Kit.
-
-The next section of this guide covers how to use Gulp, but if you want to see
-how things look, try running the local server by typing `gulp serve`.
+このガイドの次のセクションでは、Gulp を使用する方法について説明しますが、どのように見えるか確認したい場合は、
+`gulp serve` を入力して、ローカル サーバーを実行してください。
 
 <img src="images/wsk-on-pixel-n5.png">
 

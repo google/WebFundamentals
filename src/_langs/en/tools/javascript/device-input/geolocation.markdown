@@ -26,7 +26,7 @@ Enable the geolocation emulator by selecting the **Emulate geolocation coordinat
 
 ![geolocation emulator enabled](imgs/emulation-drawer-geolocation.png)
 
-You can use this emulator to override position values for `navigator.geolocation`, as well as simulate cases when geolocation data is unavailable.
+You can use this emulator to override position values for `navigator.geolocation`, as well as to simulate cases when geolocation data is unavailable.
 
 Try out the geolocation emulator using this [maps demo](http://html5demos.com/geo).
 

@@ -12,7 +12,7 @@ showYoutubeID: s12cZ7UAKFQ
 date: 2015-05-19 00:00:00
 article:
   written_on: 2015-05-19
-  updated_on: 2015-05-19
+  updated_on: 2015-06-17
 
 ---
 
@@ -80,11 +80,11 @@ Chrome on Android now has a Dev channel. Detailed on the Chromium blog, the new 
 ## COPY PASTA
 Programmatic copy and paste is coming to Firefox. A recent intent to implement and ship thread indicates that Firefox will add support for copy and paste via the execCommand method in response to a user action. Similar behavior is already supported in Chrome 43, IE 10, and Opera 29. To learn more about copy and paste you can check out this article on HTML 5 Rocks.
 
-https://bugzilla.mozilla.org/show_bug.cgi?id=1012662
+<https://bugzilla.mozilla.org/show_bug.cgi?id=1012662>
 
-https://groups.google.com/forum/#!msg/mozilla.dev.platform/oWhmLMvGAD0/3eXWSRjJAZsJ
+<https://groups.google.com/forum/#!msg/mozilla.dev.platform/oWhmLMvGAD0/3eXWSRjJAZsJ>
 
-http://updates.html5rocks.com/2015/04/cut-and-copy-commands
+<http://updates.html5rocks.com/2015/04/cut-and-copy-commands>
 
 
 Let us know what you think on Twitter #LazyWebShow

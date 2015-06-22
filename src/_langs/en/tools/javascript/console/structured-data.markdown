@@ -4,7 +4,7 @@ layout: article
 title: "View Structured Data in Console"
 seotitle: "View Structured Data in Chrome DevTools Console"
 description: "Compare data objects using the `table()` method."
-introduction: "Compare data objects using the `table()` method."
+introduction: "View structured data and compare data objects using the table() method."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
@@ -15,7 +15,7 @@ priority: 0
 collection: console
 key-takeaways:
   console:
-    - Compare similar data objects using `table()`.
+    - Compare similar data objects using table().
     - Build an array to define property strings.
 ---
 {% wrap content %}
@@ -24,7 +24,7 @@ key-takeaways:
 
 ## Viewing Structured Data
 
-The `table()` method provides an easy way to view similar data objects. This will take the properties of an object and create a header. Row data comes from each indexes' properties value.
+The `table()` method provides an easy way to view similar data objects. This will take the properties of an object and create a header. Row data comes from each index's properties value.
 
 ### A table in the console using two arrays.
 
