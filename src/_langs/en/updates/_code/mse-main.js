@@ -46,7 +46,7 @@ var SECONDS_PER_SAMPLE = 1 / 44100.0;
 var SEGMENTS = 5;
 
 // Base path for Sintel audio segments.
-var SINTEL_BASE_PATH = '../../audio/sintel_';
+var SINTEL_BASE_PATH = 'sintel_';
 
 var llama = {};
 
