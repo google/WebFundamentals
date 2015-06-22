@@ -1,0 +1,33 @@
+/*
+ * Copyright 2014 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+#main {
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 800px;
+}
+
+.play-overlay, .waveform, .waveform-container {
+  min-height: 300px;
+  margin: auto;
+  width: 750px;
+}
+
+.play-overlay {
+  background: url(../images/yt_play.png);
+  background-size: 80px 60px;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-color: #eee;
+  opacity: .3;
+  z-index: 10;
+  position: absolute;
+}
+
+.play-overlay:hover {
+  opacity: .6;
+  cursor: pointer;
+}
