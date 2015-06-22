@@ -20,6 +20,10 @@ handlers:
   static_dir: build/imgs
   expiration: 1d
 
+- url: /web/fundamentals/resources/samples
+  static_dir: build/_langs/en/fundamentals/resources/samples
+  expiration: 1d
+
 - url: /web/(.*\.(png|gif|jpg|svg|xml|mp4))
   static_files: build/_langs/en/\1
   expiration: 1d

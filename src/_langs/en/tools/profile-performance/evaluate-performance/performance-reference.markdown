@@ -1,14 +1,14 @@
 ---
 rss: false
 layout: article
-title: "Timeline Reference"
-seotitle: "Timeline Reference"
-description: "This article lists and describes the individual types of records that are generated during a recording, organized by type, and their properties."
-introduction: "This article lists and describes the individual types of records that are generated during a recording, organized by type, and their properties."
+title: "Timeline Event Reference"
+seotitle: "Timeline Event Reference"
+description: "The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type."
+introduction: "The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
-  order: 4
+  order: 3
 authors:
   - megginkearney
   - flaviocopes
@@ -17,7 +17,9 @@ collection: evaluate-performance
 ---
 {% wrap content %}
 
-## Common event properties
+{% include modules/toc.liquid %}
+
+## Common timeline event properties
 
 Certain details are present in events of all types, while some only apply to certain event types. This section lists properties common to different event types. Properties specific to certain event types are listed in the references for those event types that follow.
 
@@ -67,7 +69,7 @@ This section lists events that belong to the Scripting category and their proper
 |Evaluate Script| A script was evaluated.|
 |Event| A JavaScript event ("mousedown", or "key", for example).|
 |Function Call| A top-level JavaScript function call was made (only appears when browser enters JavaScript engine).|
-|Install Timer| A timer was created with [setInterval()](http://docs.webplatform.org/wiki/dom/methods/setInterval) or [setTimeout()](http://docs.webplatform.org/wiki/dom/methods/setTimeout).|
+|Install Timer| A timer was created with [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) or [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout).|
 |Request Animation Frame| A requestAnimationFrame() call scheduled a new frame|
 |Remove Timer|  A previously created timer was cleared.|
 |Time|  A script called [console.time()](https://developer.chrome.com/devtools/docs/console-api.md#consoletimelabel)|

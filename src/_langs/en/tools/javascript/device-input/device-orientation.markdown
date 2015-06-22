@@ -32,15 +32,15 @@ You can manipulate the following orientation parameters:
 
 <dl>
 
-<dt>**<abbr title="alpha">α</abbr>**</dt>
+<dt><abbr title="alpha">α</abbr></dt>
 
-<dd>Rotation around the _z_-axis.</dd>
+<dd>Rotation around the z-axis.</dd>
 
-<dt>**<abbr title="beta">β</abbr>**</dt>
+<dt><abbr title="beta">β</abbr></dt>
 
 <dd>Left-to-right tilt.</dd>
 
-<dt>**<abbr title="gamma">γ</abbr>**</dt>
+<dt><abbr title="gamma">γ</abbr></dt>
 
 <dd>Front-to-back tilt.</dd>
 

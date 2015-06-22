@@ -22,19 +22,13 @@ remember:
 ---
 {% wrap content %}
 
-TBD. Use this doc: https://developer.chrome.com/devtools/docs/demos/too-much-layout
 
-TBD. Move timeline content about this to here.
-
-TBD. Move content from layout issues doc to here.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
 
 ### TBD
 
-TBD.
-
-{% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
+{% include_code _code/forcedsync.html forcedsync javascript %}
 
 {% include modules/nextarticle.liquid %}
 

@@ -19,7 +19,7 @@ key-takeaways:
     - As well as showing logging and debug information, the console can be used to enter JavaScript commands and interact with the page.
     - The console can be opened as a Drawer from any panel using the <kbd class="kbd">Esc</kbd> key shortcut.
     - Consecutive repeated messages will be stacked.
-    - Use `clear()` to clear your console.
+    - Use clear() to clear the console.
     - You can persist your console output by selecting 'Preserve Log'.
 remember:
   note-tbd:
@@ -36,7 +36,7 @@ The console is accessible either from the dedicated Chrome DevTools 'Console' pa
 
 #### The Console Panel
 
-To open the dedicated 'Console' panel either:
+To open the dedicated 'Console' panel, either:
 
 * Use the keyboard shortcuts
   * On Windows and Linux: <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">J</kbd>
@@ -48,7 +48,7 @@ To open the dedicated 'Console' panel either:
 
 #### The Console Drawer
 
-To open the drawer from within another panel either:
+To open the drawer from within another panel, either:
 
 * Press the <kbd class="kbd">Esc</kbd> key when the Chrome DevTools are in focus.
 * Or click the 'Show Drawer' icon <img src="images/drawer.gif" alt="drawer" style="display:inline-block;margin:0;width:15px" /> found in the upper right corner of the Chrome DevTools.
@@ -57,7 +57,7 @@ To open the drawer from within another panel either:
 
 ### Message Stacking
 
-The console keeps a record of every message and interaction made on any given page until either the page is either closed, navigated away from or refreshed. If the same message is repeated consecutive times, the console will stack them to keep the information provided as concise as possible. When messages are stacked, the number in the left margin shows how many times this particular message has been repeated.
+The console keeps a record of every message and interaction made on any given page until the page is closed, navigated away from, or refreshed. If the same message is repeated consecutive times, the console stacks them to keep the information provided as concise as possible. When messages are stacked, the number in the left margin shows how many times a particular message has been repeated.
 
 For example, the following code outputs the message 'Hello There' for numbers not divisible by 5 without a remainder, causing console message stacking:
 
@@ -106,13 +106,13 @@ For more information on filtering see [Organizing Console Output](https://web-ce
 
 ### Settings
 
-There are a number of other Console customisation options available from the 'Settings' menu <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> under the 'Console' heading.
+There are a number of other Console customization options available from the 'Settings' menu <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> under the 'Console' heading.
 
 ![The Console settings dialog](images/console-settings.png)
 
 #### Hide network messages
 
-By default, the console will report network issues. Turning this on instructs the console to not show logs from these errors. For example, 404 and 500 series errors will not be logged.
+By default, the console reports network issues. Turning this on instructs the console to not show logs from these errors. For example, 404 and 500 series errors will not be logged.
 
 #### Log XMLHttpRequests
 
