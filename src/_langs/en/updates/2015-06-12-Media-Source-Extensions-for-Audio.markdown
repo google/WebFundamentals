@@ -23,7 +23,7 @@ tags:
   - codecs
   - media source extensions
   - MSE
-permalink: /2015/06/mse-gapless-audio.html
+permalink: /updates/2015/06/mse-gapless-audio.html
 ---
 
 # Media Source Extensions for Audio: Eliminating the Gap
