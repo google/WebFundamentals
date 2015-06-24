@@ -113,14 +113,14 @@ To debug Safari for iOS, follow these steps:
 1. Open Safari on your iOS device.
 2. Connect it to your computer via USB.
 3. Open Safari on your computer.
-4. In Safari's menu, go to `Develop` and, look for your devices name.
+4. In Safari's menu, go to `Develop` and, look for your device's name.
 5. Select the tab you want to debug.
 
 ![Safari iOS Debugging Menu](imgs/ios-safari-debugging.png)
 
 Unfortunately there is no way to debug a site on Windows Phone, but you can  
 [emulate a mobile browser on the desktop version of IE
-11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx) (see also [Mimic Development Site in Production](device-emulators.markdown).
+11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx). See also [Mimic Development Site in Production](https://web-central.appspot.com/web/tools/setup/device-testing/devtools-emulator?hl=en).
 
 ## Screencast From Android Device to Development Machine
 
