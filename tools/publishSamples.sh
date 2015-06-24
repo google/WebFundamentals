@@ -18,7 +18,7 @@ echo "----- Getting latest sources from GitHub"
 
 # Git pull
 git checkout master
-git pull https://github.com/Google/WebFundamentals master
+git pull
 
 # Checks the exit code, if it is Not Equal to zero, fail.
 if [ $? -ne 0 ]; then
@@ -33,7 +33,7 @@ LASTCOMMIT=$(git rev-list HEAD --max-count=1)
 echo "----- Building WebFundamentals (en only)"
 
 # Make devsite
-grunt devsite --lang=en
+grunt samples --lang=en
 
 # Checks the exit code, if it is Not Equal to zero, fail.
 if [ $? -ne 0 ]; then
@@ -59,12 +59,13 @@ git pull
 cp -r $WEBDIR/appengine/build/_langs/en/fundamentals/resources/samples/* $GHSAMPLESDIR/samples
 
 # Commit and push changes up to repo
+git add .
 git commit -a -m "Updating Web Fundamentals Samples to $LASTCOMMIT"
 git push origin gh-pages
 
 popd
 
-echo "----- Samples pushed live.
+echo "----- Samples pushed live to https://github.com/googlesamples/web-fundamentals/tree/gh-pages
   View the samples at: https://googlesamples.github.io/web-fundamentals/samples/
   To clean up after yourself, run:
   rm -rf $GHSAMPLESDIR"
