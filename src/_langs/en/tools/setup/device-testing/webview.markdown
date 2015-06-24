@@ -45,7 +45,7 @@ This setting applies to all of the application's WebViews.
 
 The **chrome://inspect** page displays a list of debug-enabled WebViews on your device.
 
-To start debugging, click **inspect** below the WebView you want to debug. Use DevTools as you would for a [remote browser tab](#debugging-tabs).
+To start debugging, click **inspect** below the WebView you want to debug. Use DevTools as you would for a remote browser tab.
 
 ![Inspecting elements in a WebView](imgs/webview-debugging.png)
 
@@ -55,7 +55,7 @@ The gray graphics listed with the WebView represent its size and position relati
 
 Can't see your WebViews on the **chrome://inspect page**?
 
-* Verify that WebView debugging is [enabled](#debugging-webviews) for your app.
+* Verify that WebView debugging is enabled for your app.
 * On your device, open the app with the WebView you want to debug. Then, refresh the **chrome://inspect** page.
 
 {% include modules/nextarticle.liquid %}
