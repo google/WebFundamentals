@@ -27,8 +27,8 @@ There are a few different ways that you can view your site on different devices.
 The one thing you need to keep in mind at all times is that nothing replaces
 the real thing.
 
-Simulators and emulators pretend to act like a real device, they are great for
-exploring layouts locally, but they will be much faster (or slower) and won’t
-always have the same behaviour as a real device.
+Simulators and emulators display content like the real device would; they are great for
+exploring layouts locally, but they are often much faster (or slower) and they won’t
+always have the same behavior as a real device.
 
 {% endwrap %}
