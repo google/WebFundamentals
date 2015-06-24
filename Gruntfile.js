@@ -390,6 +390,12 @@ module.exports = function(grunt) {
     'htmlmin:all'         // Minify the final HTML
   ]);
 
+  // Devsite task
+  grunt.registerTask('samples', 'Builds the samples to publish to GH Pages', [
+    'prepare',
+    'jekyll:devsite',     // Build the site with Jekyll
+  ]);
+
   // Default task
   grunt.registerTask('default', 'develop');
 
