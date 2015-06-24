@@ -15,9 +15,9 @@ priority: 0
 collection: readability
 key-takeaways:
   source-maps:
-    - Use source maps to map minified code to source code. You can then read and debug compiled code in it's original source.
+    - Use source maps to map minified code to source code. You can then read and debug compiled code in its original source.
     - Only use minifiers capable of creating source maps, for example, ClosureCompiler, SASS.
-    - Verify your web server can server source maps.
+    - Verify that your web server can serve source maps.
 remember:
   note-tbd:
     - TBD note.
@@ -30,7 +30,7 @@ remember:
 
 ## What are source maps?
 
-A [source maps](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&pli=1&pli=1) is a JSON-based mapping format that creates a relationship between a minified file and its sources. When you build for production, along with minifying and combining your JavaScript files, you generate a source map that holds information about your original files. 
+A [source map](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&pli=1&pli=1) is a JSON-based mapping format that creates a relationship between a minified file and its sources. When you build for production, along with minifying and combining your JavaScript files, you generate a source map that holds information about your original files. 
 
 The source map causes DevTools to load your original files in addition to your minified ones. You then use the originals to set breakpoints and step through code. Meanwhile, Chrome is actually running your minified code. This gives you the illusion of running a development site in production.
 
@@ -55,7 +55,7 @@ You need to use a minifier that's capable of creating source maps. Closure Compi
 
 Sourcemaps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable them, first open DevTools and click the settings cog ![gear](imgs/gear.png). Under **Sources**, check **Enable JavaScript source maps**. You might also check **Enable CSS source maps**.
 
-[Enable source maps](imgs/source-maps.png)
+[Enable source maps](imgs/source-maps.jpg)
 
 ## Make the source map accessible
 
