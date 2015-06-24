@@ -100,6 +100,17 @@ samchen:
   email: chenxsan@google.com
   description: "Sam is a Front End Developer"
 
+dalecurtis:
+  name:
+    given: Dale
+    family: Curtis
+  org:
+    name:
+    unit:
+  role:
+    - author
+  description: "Dale."
+
 alexdanilo:
   name:
     given: Alex

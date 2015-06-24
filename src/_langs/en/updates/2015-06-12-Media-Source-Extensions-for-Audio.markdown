@@ -20,17 +20,21 @@ authors:
 tags:
   - audio
   - codec
-  - codecs
-  - media source extensions
+  - MediaSourceExtensions
   - MSE
 permalink: /updates/2015/06/mse-gapless-audio.html
 ---
+<style type="text/css" media="screen">
+a.button--primary {
+  color: white !important;
+}
+</style>
 
 # Media Source Extensions for Audio: Eliminating the Gap
 
 ## Introduction
 
-[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 <audio> and <video> elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/mpeg-dash/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
+[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/mpeg-dash/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
 
 You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](http://en.wikipedia.org/wiki/Gramophone_record) and [CDs](http://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](http://en.wikipedia.org/wiki/MP3) and [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
 
@@ -54,7 +58,7 @@ There are a [variety of ways to create gapless content](#creating-gapless-conten
 
 ## Basic Setup
 
-First, lets backtrack and cover the basic setup of a MediaSource instance. Media Source Extensions, as the name implies, are just extensions to the existing media elements. Below, we're assigning an [Object URL](https://developer.mozilla.org/en-US/docs/Web/API/URL.createObjectURL), representing our MediaSource instance, to the source attribute of an audio element; just like you would set a standard URL.
+First, lets backtrack and cover the basic setup of a `MediaSource` instance. Media Source Extensions, as the name implies, are just extensions to the existing media elements. Below, we're assigning an [`Object URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL.createObjectURL), representing our `MediaSource` instance, to the source attribute of an audio element; just like you would set a standard URL.
 
 {% highlight javascript %}
 var audio = document.createElement('audio');
@@ -78,12 +82,11 @@ mediaSource.addEventListener('sourceopen', function() {
 audio.src = window.URL.createObjectURL(mediaSource);
 {% endhighlight %}
 
-Once the MediaSource object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [SourceBuffer](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
+Once the `MediaSource` object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [`SourceBuffer`](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
 
 ## Anomalous Waveforms
 
-We'll come back to the code in a moment, but lets now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the _[sintel_0.mp3](sintel/sintel_0.mp3)_ track. Each pixel on the red line is a [floating point sample](http://en.wikipedia.org/wiki/Audio_bit_depth) in the range of [-1.0, 1.0].
-
+We'll come back to the code in a moment, but lets now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](http://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3" style="max-width: 60%; height: auto;">
@@ -92,25 +95,21 @@ We'll come back to the code in a moment, but lets now look more closely at the f
 
 What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](http://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/) added exactly 576 padding samples to the end of the file.
 
-In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the _[sintel_1.mp3](sintel/sintel_1.mp3)_ track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [metadata](#parsing-gapless-metadata) included within each file.
-
-<div class="waveform-container">
-
+In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#parsing-gapless-metadata) included within each file.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3" style="max-width: 60%; height: auto;">
 </p>
 
-
-The sections of silence at the beginning and end of each file are what causes the 'glitches' between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with MediaSource! Below, we'll modify our _onAudioLoaded()_ method to use an [append window](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#definitions) and a [timestamp offset](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-timestampOffset) to remove this silence.
+The sections of silence at the beginning and end of each file are what causes the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`! Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#definitions) and a [timestamp offset](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-timestampOffset) to remove this silence.
 
 ## Example Code
 
 {% highlight javascript %}
 function onAudioLoaded(data, index) {
   // Parsing gapless metadata is unfortunately non trivial and a bit messy, so
-  // we'll glaze over it here; see the [appendix](#parsing-gapless-metadata) for details.  ParseGaplessData()
-  // will return a dictionary with two elements:
+  // we'll glaze over it here; see the appendix for details.  
+  // ParseGaplessData() will return a dictionary with two elements:
   //
   //    audioDuration: Duration in seconds of all non-padding audio.
   //    frontPaddingDuration: Duration in seconds of the front padding.
@@ -161,7 +160,7 @@ function onAudioLoaded(data, index) {
   // to filter and timestamp the data we're appending.
   //
   // Note: While this demo uses very little memory, more complex use cases need
-  // to be careful about memory usage or [garbage collection](#garbage-collection) may remove ranges of
+  // to be careful about memory usage or garbage collection may remove ranges of
   // media in unexpected places.
   sourceBuffer.appendBuffer(data);
 }
@@ -169,9 +168,7 @@ function onAudioLoaded(data, index) {
 
 ## A Seamless Waveform
 
-Lets see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of _[sintel_0.mp3](sintel/sintel_0.mp3)_ (in red) and the silent section at the beginning of _[sintel_1.mp3](sintel/sintel_1.mp3)_ (in blue) have been removed; leaving us with a seamless transition between segments.
-
-<div class="waveform-container">
+Lets see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3" style="max-width: 60%; height: auto;">
@@ -179,7 +176,7 @@ Lets see what our shiny new code has accomplished by taking another look at the 
 
 ## Conclusion
 
-With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our _onAudioLoaded()_ method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
+With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
 {% link_sample_button _code/mse-mp4gapless.html %}
   Demo
@@ -187,7 +184,7 @@ With that we've stitched all five segments seamlessly into one and have subseque
 
 <!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-mp4gapless.html"></iframe> -->
 
-If you'd like to know more check the appendices below for a deeper look at gapless content creation and metadata parsing. You can also explore [_gapless.js_](gapless.js) for a closer look at the code powering this demo.
+If you'd like to know more check the appendices below for a deeper look at gapless content creation and metadata parsing. You can also explore [`mse-main.js`](https://googlesamples.github.io/web-fundamentals/samples/updates/mse-main.js) for a closer look at the code powering this demo.
 
 Thanks for reading!
 
@@ -198,23 +195,23 @@ Creating gapless content can be hard to get right. Below we'll walk through how 
 {% highlight bash %}
 unzip Jan_Morgenstern-Sintel-FLAC.zip
 sha1sum 1-Snow_Fight.flac
-\# 0535ca207ccba70d538f7324916a3f1a3d550194  1-Snow_Fight.flac
+# 0535ca207ccba70d538f7324916a3f1a3d550194  1-Snow_Fight.flac
 {% endhighlight %}
 
-First, we'll split out the first 31.5 seconds the _1-Snow_Fight.flac_ track. We also want to add a 2.5 second fade out starting at 28 seconds in to avoid any clicks once playback finishes. Using the FFmpeg command line below we can accomplish all of this and put the results in _sintel.flac_.
+First, we'll split out the first 31.5 seconds the `1-Snow_Fight.flac` track. We also want to add a 2.5 second fade out starting at 28 seconds in to avoid any clicks once playback finishes. Using the FFmpeg command line below we can accomplish all of this and put the results in `sintel.flac`.
 
 {% highlight bash %}
 ffmpeg -i 1-Snow_Fight.flac -t 31.5 -af "afade=t=out:st=28:d=2.5" sintel.flac
 {% endhighlight %}
 
-Next, we'll split the file into 5 [wave](http://en.wikipedia.org/wiki/WAV) files of 6.5 seconds each; it's easiest to use wave since almost every encoder supports ingestion of it. Again, we can do this precisely with FFmpeg, after which we'll have: _sintel_0.wav_, _sintel_1.wav_, _sintel_2.wav_, _sintel_3.wav_, and _sintel_4.wav_.
+Next, we'll split the file into 5 [wave](http://en.wikipedia.org/wiki/WAV) files of 6.5 seconds each; it's easiest to use wave since almost every encoder supports ingestion of it. Again, we can do this precisely with FFmpeg, after which we'll have: `sintel_0.wav`, `sintel_1.wav`, `sintel_2.wav`, `sintel_3.wav`, and `sintel_4.wav`.
 
 {% highlight bash %}
 ffmpeg -i sintel.flac -acodec pcm_f32le -map 0 -f segment \
        -segment_list out.list -segment_time 6.5 sintel_%d.wav
 {% endhighlight %}
 
-Next, lets create the MP3 files. LAME has several options for creating gapless content. If you're in control of the content you might consider using --nogap with a batch encoding of all files to avoid padding between segments altogether. For the purposes of this demo though, we want that padding so we'll use a standard high quality VBR encoding of the wave files.
+Next, lets create the MP3 files. LAME has several options for creating gapless content. If you're in control of the content you might consider using `--nogap` with a batch encoding of all files to avoid padding between segments altogether. For the purposes of this demo though, we want that padding so we'll use a standard high quality VBR encoding of the wave files.
 
 {% highlight bash %}
 lame -V=2 sintel_0.wav sintel_0.mp3
@@ -249,7 +246,7 @@ afconvert sintel_4_intermediate.caf -d aac -f m4af -u pgcm 2 --soundcheck-read \
           -b 256000 -q 127 -s 2 sintel_4.m4a
 {% endhighlight %}
 
-We now have several M4A files which we need to [fragment](http://gpac.wp.mines-telecom.fr/mp4box/dash/) appropriately before they can be used with MediaSource. For our purposes, we'll use a fragment size of one second. MP4Box will write out each fragmented MP4 as _sintel_#_dashinit.mp4_ along with an MPEG-DASH manifest (_sintel_#_dash.mpd_) which can be discarded.
+We now have several M4A files which we need to [fragment](http://gpac.wp.mines-telecom.fr/mp4box/dash/) appropriately before they can be used with `MediaSource`. For our purposes, we'll use a fragment size of one second. MP4Box will write out each fragmented MP4 as `sintel_#_dashinit.mp4` along with an MPEG-DASH manifest (`sintel_#_dash.mpd`) which can be discarded.
 
 {% highlight bash %}
 MP4Box -dash 1000 sintel_0.m4a && mv sintel_0_dashinit.mp4 sintel_0.mp4
@@ -260,11 +257,11 @@ MP4Box -dash 1000 sintel_4.m4a && mv sintel_4_dashinit.mp4 sintel_4.mp4
 rm sintel_{0,1,2,3,4}_dash.mpd
 {% endhighlight %}
 
-That's it! We now have fragmented MP4 and MP3 files with the correct metadata necessary for gapless playback. See Appendix B for more details on just what that metadata looks like.
+That's it! We now have fragmented MP4 and MP3 files with the correct metadata necessary for gapless playback. See [Appendix B](#appendix-b-parsing-gapless-metadata) for more details on just what that metadata looks like.
 
 ## Appendix B: Parsing Gapless Metadata
 
-Just like creating gapless content, parsing the gapless metadata can be tricky since there's no standard method for storage. Below we'll cover how the two most common encoders, LAME and iTunes, store their gapless metadata. Lets start by setting up some helper methods and an outline for the _ParseGaplessData()_ used above.
+Just like creating gapless content, parsing the gapless metadata can be tricky since there's no standard method for storage. Below we'll cover how the two most common encoders, LAME and iTunes, store their gapless metadata. Lets start by setting up some helper methods and an outline for the `ParseGaplessData()` used above.
 
 {% highlight javascript %}
 // Since most MP3 encoders store the gapless metadata in binary, we'll need a
@@ -320,13 +317,13 @@ This is written inside an ID3 tag within the MP3 container and within a metadata
 
 On the flip side, most open source MP3 encoders will store the gapless metadata within a special [Xing header](http://gabriel.mp3-tech.org/mp3infotag.html) placed inside of a silent MPEG frame (it's silent so decoders which don't understand the Xing header will simply play silence). Sadly this tag is not always present and has a number of optional fields. For the purposes of this demo, we have control over the media, but in practice some additional sanity checks will be required to know when gapless metadata is actually available.
 
-First we'll parse the total sample count. For simplicity we'll read this from the Xing header, but it could be constructed from the normal [MPEG audio header](http://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header). Xing headers can be marked by either a 'Xing' or 'Info' tag. Exactly 4 bytes after this tag there are 32-bits representing the total number of frames in the file; multiplying this value by the number of samples per frame will give us the total samples in the file.
+First we'll parse the total sample count. For simplicity we'll read this from the Xing header, but it could be constructed from the normal [MPEG audio header](http://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header). Xing headers can be marked by either a `Xing` or `Info` tag. Exactly 4 bytes after this tag there are 32-bits representing the total number of frames in the file; multiplying this value by the number of samples per frame will give us the total samples in the file.
 
 {% highlight javascript %}
   // Xing padding is encoded as 24bits within the header.  Note: This code will
   // only work for Layer3 Version 1 and Layer2 MP3 files with XING frame counts
   // and gapless information.  See the following document for more details:
-  // [http://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header](http://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header)
+  // http://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header
   var xingDataIndex = byteStr.indexOf('Xing');
   if (xingDataIndex == -1) xingDataIndex = byteStr.indexOf('Info');
   if (xingDataIndex != -1) {
@@ -342,13 +339,13 @@ First we'll parse the total sample count. For simplicity we'll read this from th
     // ... we'll cover this below.
 {% endhighlight %}
 
-Now that we have the total number of samples we can move on to reading out the number of padding samples. Depending on your encoder this may be written under a 'LAME' or 'Lavf' tag nested in the Xing header. Exactly 17 bytes after this header there are 3 bytes representing the front and end padding in 12-bits each respectively.
+Now that we have the total number of samples we can move on to reading out the number of padding samples. Depending on your encoder this may be written under a LAME or Lavf tag nested in the Xing header. Exactly 17 bytes after this header there are 3 bytes representing the front and end padding in 12-bits each respectively.
 
 {% highlight javascript %}
     xingDataIndex = byteStr.indexOf('LAME');
     if (xingDataIndex == -1) xingDataIndex = byteStr.indexOf('Lavf');
     if (xingDataIndex != -1) {
-      // See [http://gabriel.mp3-tech.org/mp3infotag.html#delays](http://gabriel.mp3-tech.org/mp3infotag.html#delays) for details of
+      // See http://gabriel.mp3-tech.org/mp3infotag.html#delays for details of
       // how this information is encoded and parsed.
       var gaplessDataIndex = xingDataIndex + 21;
       var gaplessBits = ReadInt(byteStr.substr(gaplessDataIndex, 3));
@@ -372,11 +369,11 @@ With that we have a complete function for parsing the vast majority of gapless c
 
 ## Appendix C: On Garbage Collection
 
-Memory belonging to `SourceBuffers` is actively [garbage collected](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
+Memory belonging to `SourceBuffer`s is actively [garbage collected](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
-Ranges can be removed via the [remove()](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end) method on each SourceBuffer; which takes a [start, end] range in seconds. Similar to appendBuffer(), each remove() will fire an `updateend` event once it completes. Other removes or appends should not be issued until the event fires.
+Ranges can be removed via the [`remove()`](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end) method on each `SourceBuffer`; which takes a `[start, end]` range in seconds. Similar to `appendBuffer()`, each `remove()` will fire an `updateend` event once it completes. Other removes or appends should not be issued until the event fires.
 
 On desktop Chrome, you can keep approximately 12 megabytes of audio content and 150 megabytes of video content in memory at once. You should not rely on these values across browsers or platforms; e.g., they are most certainly not representative of mobile devices.
 
