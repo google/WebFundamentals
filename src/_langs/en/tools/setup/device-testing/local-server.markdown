@@ -138,7 +138,7 @@ check out the gulp file for how to integrate it in your own workflow.
 If you aren't using Gulp, head on over to the [BrowserSync
 site](http://www.browsersync.io/) for alternative approaches to using it.
 
-If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include [Karma](http://karma-runner.github.io/0.12/index.html), [Yeti](http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/) and [Thrill](http://thrilljs.com/).
+If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include [Karma](http://karma-runner.github.io/0.12/index.html) and [Yeti](http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/).
 
 ### Help, I need lots of devices!
 
@@ -146,7 +146,7 @@ You might get by with testing your site on one or two personal devices, but if y
 If you've got the budget, you should definitely invest in a device collection.
 
 If you don't have the budget, or you want access to any device, [Device Anywhere](http://www.keynote.com/solutions/testing/mobile-testing) lets you control any number of real devices remotely,
-without having to actual own those devices outright.
+without having to actually own those devices.
 
 {% include modules/nextarticle.liquid %}
 
