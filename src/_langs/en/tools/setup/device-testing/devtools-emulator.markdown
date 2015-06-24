@@ -27,7 +27,7 @@ key-takeaways:
     - Enable device mode and turn your viewport into a device emulator.
     - Test your site's responsiveness using the device mode's screen emulator.
     - Save custom presets so you can easily access them later.
-    - Device mode isn't a replacement for real device testing. Be aware of it's limitations.
+    - Device mode isn't a replacement for real device testing. Be aware of its limitations.
 
 ---
 
@@ -43,10 +43,10 @@ key-takeaways:
 
 You can use Chrome DevTools device mode to:
 
-* Test your responsive designs by [emulating different screen sizes and resolutions](tools/iterate/test-layout/test-layouts), including Retina displays.
-* Visualize and [inspect CSS media queries](tools/iterate/test-layout/media-queries).
-* Evaluate your site's performance using the [network emulator](tools/profile-performance/network-performance/network-conditions), without affecting traffic to other tabs.
-* Accurately [simulate device input](tools/javascript/device-input/index) for touch events, geolocation, and device orientation.
+* Test your responsive designs by [emulating different screen sizes and resolutions](https://web-central.appspot.com/web/tools/iterate/test-layout/test-layouts), including Retina displays.
+* Visualize and [inspect CSS media queries](https://web-central.appspot.com/web/tools/iterate/test-layout/media-queries).
+* Evaluate your site's performance using the [network emulator](https://web-central.appspot.com/web/tools/profile-performance/network-performance/network-conditions), without affecting traffic to other tabs.
+* Accurately [simulate device input](https://web-central.appspot.com/web/tools/javascript/device-input/index) for touch events, geolocation, and device orientation.
 * Enhance your current debugging workflow by combining device mode with the existing DevTools.
 
 **Note**: Some of this documentation might be ahead of the stable version of Chrome. If you are unable to locate a feature, try using [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html), which contains the latest version of the DevTools.
@@ -147,7 +147,7 @@ Although Chrome's device mode offers many powerful emulation tools, it does have
 * **AppCache**
   * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
-Despite these limitations, the device mode emulators are robust enough for most tasks. When you need to test on a real device, you can use the [remote debugging](tools/setup/device-testing/remote-debugging) DevTools for additional insight.
+Despite these limitations, the device mode emulators are robust enough for most tasks. When you need to test on a real device, you can use the [remote debugging](https://web-central.appspot.com/web/tools/setup/device-testing/remote-debugging) DevTools for additional insight.
 
 {% include modules/nextarticle.liquid %}
 
