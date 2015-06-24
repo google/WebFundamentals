@@ -39,7 +39,7 @@ remember:
   cascade-inheritance:
     - Understanding how cascading and inheritance works is essential to debugging your styles. The cascade relates to how CSS declarations are given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit CSS properties from their containing elements (ancestors). For more, see <a href="http://www.w3.org/TR/CSS2/cascade.html">W3C documentation on cascading</a>.
   current-tree:
-    - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM:
+    - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM.
 ---
 {% wrap content %}
 
@@ -66,7 +66,7 @@ There are several ways to inspect an element:
 * Right-click any element on the page the page and select **Inspect Element**.
 * Press **Ctrl + Shift + C** (or **Cmd + Shift + C** on Mac) to open DevTools in Inspect Element mode, then click on an element.
 * Click the **Inspect Element button** ![Inspect icon](imgs/inspect-icon.png) at the top of the DevTools window to go into Inspect Element Mode, then click on an element.
-* Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](tools/javascript/command-line/command-line-reference) for information on using inspect.
+* Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](https://developer.chrome.com/devtools/docs/commandline-api) for information on using inspect.
 
 ### Inspect styles applied to an element
 
@@ -92,7 +92,7 @@ The labels on the image below correspond with the numbered items below.
 
 ## How to live-edit a DOM node
 
-To live-edit a DOM node, simply double-click on a [selected element](#inspect-an-element) and make changes:
+To live-edit a DOM node, simply double-click a [selected element](#inspect-an-element) and make changes:
 
 {% animation animations/edit-element-name.mp4 %}
 
