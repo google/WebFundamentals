@@ -25,7 +25,7 @@ related-guides:
       href: tools/iterate/inspect-styles/edit-dom
       section:
         title: "Edit the DOM"
-        href: tools/iterate/inspect-styles/edit-styles
+        href: tools/iterate/inspect-styles/edit-dom
 priority: 0
 collection: inspect-styles
 key-takeaways:
@@ -113,7 +113,7 @@ To edit the property's value, click on that value, edit, and press Tab or Enter:
 ![Edit property value](imgs/image_21.png)
 
 By default, your CSS modifications are not permanent, changes are lost when you reload the page.
-We recommend [setting up persistent authoring](tools/setup/workspace/setup-workflow) so your changes aren't lost.
+We recommend [setting up persistent authoring](https://web-central.appspot.com/web/tools/setup/workspace/setup-workflow) so your changes aren't lost.
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.edit-styles %}
 
@@ -148,7 +148,7 @@ To explore the changes made:
 
 ## Undo changes
 
-As mentioned earlier in this guide, if you haven't set up persistent authoring, any time you reload the page, all live-edits are lost. So [set up persistent authoring](tools/setup/workspace/setup-workflow).
+As mentioned earlier in this guide, if you haven't set up persistent authoring, then any time you reload the page all live-edits are lost. So first, [set up persistent authoring](https://web-central.appspot.com/web/tools/setup/workspace/setup-workflow).
 
 Assuming you've set up persistent authoring, to undo changes:
 
