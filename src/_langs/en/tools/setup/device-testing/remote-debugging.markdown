@@ -15,7 +15,7 @@ collection: device-testing
 key-takeaways:
   real: 
     - There's no substitute for debugging your site on a real device. Debug browser tabs on your device from your development workspace using remote debugging.
-    - You don't have to shift attention betwen your device and development screens. Use screencasting to display your device's screen along side your developer tools.
+    - You don't have to shift attention between your device and development screens. Use screencasting to display your device's screen along side your developer tools.
 ---
 {% wrap content%}
 
