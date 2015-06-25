@@ -4,7 +4,7 @@ layout: section
 title: "How to Look at Performance"
 seotitle: "How to Look at Performance: RAIL"
 description: "Focus on the user first. How users perceive delays far outweighs any performance guidelines."
-introduction: "Don't assume performance is as simple as following a simple set of do's and don't. Rules can change, and it's easy to use rules incorrectly. Focus on the user first. How users perceive delays far outweighs any performance guidelines."
+introduction: "Don't assume performance is as simple as following a simple set of dos and don'ts. Rules can change, and it's easy to use rules incorrectly. Focus on the user first. How users perceive delays far outweighs any performance guidelines."
 article:
   written_on: 2015-04-14
   updated_on: 2015-06-08
