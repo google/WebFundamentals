@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Memory Terminology"
 seotitle: "Memory Terminology"
-description: "This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages."
-introduction: "This section describes common terms used in **memory analysis**, and is applicable to a variety of memory profiling tools for different languages."
+description: "This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages."
+introduction: "This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages."
 article:
   written_on: 2015-05-19
   updated_on: 2015-05-19
@@ -76,11 +76,11 @@ Whatever is not reachable from the root gets GC.
 
 {% include modules/remember.liquid title="Note" list=page.remember.bytes %}
 
-## Object's Retaining Tree
+## Objects Retaining Tree
 
 As we introduced earlier, the heap is a network of interconnected objects. In the mathematical world, this structure is called a *graph* or memory graph. A graph is constructed from *nodes* connected by means of *edges*, both of which are given labels.
 
-* **Nodes** (*or objects*) are labelled using the name of the *constructor *function that was used to build them
+* **Nodes** (*or objects*) are labelled using the name of the *constructor* function that was used to build them
 
 * **Edges** are labelled using the names of *properties*.
 
@@ -90,7 +90,7 @@ Later in this guide you will learn how to record a profile using the Heap Profil
 
 ## Dominators
 
-Dominator objects are comprised of a tree structure because each object has exactly one dominator. A dominator of an object may lack direct references to an object it dominates, that is, the dominators tree is not a spanning tree of the graph.
+Dominator objects are comprised of a tree structure because each object has exactly one dominator. A dominator of an object may lack direct references to an object it dominates; that is, the dominator's tree is not a spanning tree of the graph.
 
 In the diagram below:
 
@@ -108,15 +108,15 @@ In the example below, node `#3` is the dominator of `#10`, but `#7` also exists 
 
 ## V8 Specifics
 
-When profiling memory, it is helpful to understand why heap snapshots look a certain way. This section describes some memory-related topics specifically corresponding to the **V8 JavaScript virtual machine **(V8 VM or VM).
+When profiling memory, it is helpful to understand why heap snapshots look a certain way. This section describes some memory-related topics specifically corresponding to the **V8 JavaScript virtual machine** (V8 VM or VM).
 
 ### JavaScript Object Representation
 
 There are three primitive types:
 
-* Numbers (e.g 3.14159..)
+* Numbers (e.g., 3.14159..)
 * Booleans (true or false)
-* Strings (e.g 'Werner Heisenberg')
+* Strings (e.g., 'Werner Heisenberg')
 
 They cannot reference other values and are always leafs or terminating nodes.
 
@@ -134,9 +134,9 @@ They cannot reference other values and are always leafs or terminating nodes.
 
 Memory for new JavaScript objects is allocated from a dedicated JavaScript heap (or **VM heap**). These objects are managed by V8's garbage collector and therefore, will stay alive as long as there is at least one strong reference to them.
 
-**Native objects **are everything else which is not in the JavaScript heap. Native object, in contrast to heap object, is not managed by the V8 garbage collector throughout it’s lifetime, and can only be accessed from JavaScript using its JavaScript wrapper object.
+**Native objects** are everything else which is not in the JavaScript heap. Native object, in contrast to heap object, is not managed by the V8 garbage collector throughout its lifetime, and can only be accessed from JavaScript using its JavaScript wrapper object.
 
-**Cons string **is an object that consists of pairs of strings stored then joined, and is a result of concatenation. The joining of the *cons string* contents occurs only as needed. An example would be when a substring of a joined string needs to be constructed.
+**Cons string** is an object that consists of pairs of strings stored then joined, and is a result of concatenation. The joining of the *cons string* contents occurs only as needed. An example would be when a substring of a joined string needs to be constructed.
 
 For example, if you concatenate **a** and **b**, you get a string (a, b) which represents the result of concatenation. If you later concatenated **d** with that result, you get another cons string ((a, b), d).
 
@@ -154,7 +154,7 @@ In cases where there is a very small number of properties, they can be stored in
 
 ### Object Groups
 
-Each native objects group is made up from objects that hold mutual references to each other. Consider for example a DOM subtree, where every node has a link to its parent and links to the next child and next sibling, thus forming a connected graph. Note that native objects are not represented in the JavaScript heap — that's why they have zero size. Instead, wrapper objects are created.
+Each native objects group is made up of objects that hold mutual references to each other. Consider, for example, a DOM subtree where every node has a link to its parent and links to the next child and next sibling, thus forming a connected graph. Note that native objects are not represented in the JavaScript heap — that's why they have zero size. Instead, wrapper objects are created.
 
 Each wrapper object holds a reference to the corresponding native object, for redirecting commands to it. In its own turn, an object group holds wrapper objects. However, this doesn't create an uncollectable cycle, as GC is smart enough to release object groups whose wrappers are no longer referenced. But forgetting to release a single wrapper will hold the whole group and associated wrappers.
 
