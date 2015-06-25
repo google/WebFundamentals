@@ -7,12 +7,12 @@ collection: updates
 category: chrome
 product: chrome
 type: news
-date: 2015-06-22
+date: 2015-06-12
 
 title: "Media Source Extensions for Audio"
 description: "Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback."
 article:
-  written_on: 2015-06-22
+  written_on: 2015-06-12
   updated_on: 2015-06-22
 
 authors:
@@ -28,17 +28,27 @@ permalink: /updates/2015/06/mse-gapless-audio.html
 a.button--primary {
   color: white !important;
 }
+img, video {
+  max-width: 100%;
+}
 </style>
 
 # Media Source Extensions for Audio: Eliminating the Gap
 
 ## Introduction
 
-[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/mpeg-dash/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
+[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
 
 You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](http://en.wikipedia.org/wiki/Gramophone_record) and [CDs](http://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](http://en.wikipedia.org/wiki/MP3) and [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
 
 We'll get into the details of why below, but for now lets start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
+
+<p style="text-align: center;">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.webm" type="video/webm" />
+    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.mp4" type="video/mp4" />
+  </video>
+</p>
 
 {% link_sample_button _code/mse-gap.html %}
   Demo
@@ -48,13 +58,20 @@ We'll get into the details of why below, but for now lets start with a demonstra
 
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
+<p style="text-align: center;">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.webm" type="video/webm" />
+    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.mp4" type="video/mp4" />
+  </video>
+</p>
+
 {% link_sample_button _code/mse-gapless.html %}
   Demo
 {% endlink_sample_button %}
 
 <!-- <iframe seamless style="border: 0; height: 335px; width: 100%" src="_code/mse-gapless.html"></iframe> -->
 
-There are a [variety of ways to create gapless content](#creating-gapless-content). For the purposes of this demo, we'll focus on the type of files a normal user might have lying around. Where each file has been encoded separately without regard for the audio segments before or after it.
+There are a [variety of ways to create gapless content](#appendix-a-creating-gapless-content). For the purposes of this demo, we'll focus on the type of files a normal user might have lying around. Where each file has been encoded separately without regard for the audio segments before or after it.
 
 ## Basic Setup
 
@@ -89,26 +106,26 @@ Once the `MediaSource` object is connected, it will perform some initialization 
 We'll come back to the code in a moment, but lets now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](http://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
 
 <p style="text-align: center;">
-  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3" style="max-width: 60%; height: auto;">
+  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3">
 </p>
 
 
 What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](http://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/) added exactly 576 padding samples to the end of the file.
 
-In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#parsing-gapless-metadata) included within each file.
+In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
 
 <p style="text-align: center;">
-  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3" style="max-width: 60%; height: auto;">
+  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3">
 </p>
 
-The sections of silence at the beginning and end of each file are what causes the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`! Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#definitions) and a [timestamp offset](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-timestampOffset) to remove this silence.
+The sections of silence at the beginning and end of each file are what causes the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`! Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
 
 ## Example Code
 
 {% highlight javascript %}
 function onAudioLoaded(data, index) {
   // Parsing gapless metadata is unfortunately non trivial and a bit messy, so
-  // we'll glaze over it here; see the appendix for details.  
+  // we'll glaze over it here; see the appendix for details.
   // ParseGaplessData() will return a dictionary with two elements:
   //
   //    audioDuration: Duration in seconds of all non-padding audio.
@@ -171,12 +188,19 @@ function onAudioLoaded(data, index) {
 Lets see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
 
 <p style="text-align: center;">
-  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3" style="max-width: 60%; height: auto;">
+  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3">
 </p>
 
 ## Conclusion
 
 With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
+
+<p style="text-align: center;">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/mp4gapless.webm" type="video/webm" />
+    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/mp4gapless.mp4" type="video/mp4" />
+  </video>
+</p>
 
 {% link_sample_button _code/mse-mp4gapless.html %}
   Demo
@@ -257,7 +281,7 @@ MP4Box -dash 1000 sintel_4.m4a && mv sintel_4_dashinit.mp4 sintel_4.mp4
 rm sintel_{0,1,2,3,4}_dash.mpd
 {% endhighlight %}
 
-That's it! We now have fragmented MP4 and MP3 files with the correct metadata necessary for gapless playback. See [Appendix B](#appendix-b-parsing-gapless-metadata) for more details on just what that metadata looks like.
+That's it! We now have fragmented MP4 and MP3 files with the correct metadata necessary for gapless playback. See Appendix B for more details on just what that metadata looks like.
 
 ## Appendix B: Parsing Gapless Metadata
 
@@ -373,7 +397,7 @@ Memory belonging to `SourceBuffer`s is actively [garbage collected](http://en.wi
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
-Ranges can be removed via the [`remove()`](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end) method on each `SourceBuffer`; which takes a `[start, end]` range in seconds. Similar to `appendBuffer()`, each `remove()` will fire an `updateend` event once it completes. Other removes or appends should not be issued until the event fires.
+Ranges can be removed via the [`remove()`](https://w3c.github.io/media-source/#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end) method on each `SourceBuffer`; which takes a `[start, end]` range in seconds. Similar to `appendBuffer()`, each `remove()` will fire an `updateend` event once it completes. Other removes or appends should not be issued until the event fires.
 
 On desktop Chrome, you can keep approximately 12 megabytes of audio content and 150 megabytes of video content in memory at once. You should not rely on these values across browsers or platforms; e.g., they are most certainly not representative of mobile devices.
 
