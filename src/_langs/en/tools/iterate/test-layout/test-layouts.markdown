@@ -45,7 +45,7 @@ The screen emulator automatically:
 * Autosizes (boosts) text for pages without a defined viewport.
 
 Although Chrome's device mode offers many powerful emulation tools,
-it does have some limitations (see the [complete list of limitations](#limitations)):
+it does have some limitations (see the [complete list of limitations](#complete-list-of-device-mode-limitations)):
 
 * GPU and CPU behavior are not emulated.
 * System displays, such as the address bar, are not emulated.
@@ -118,7 +118,7 @@ Complete list of known limitations and issues in Chrome DevTools device mode des
   * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
 Despite these limitations, the device mode emulators are robust enough for most tasks.
-When you need to test on a real device, use [Chrome DevToools remote debugging](tools/setup/device-testing/remote-debugging).
+When you need to test on a real device, use [Chrome DevTools remote debugging](https://web-central.appspot.com/web/tools/setup/device-testing/remote-debugging).
 
 {% include modules/nextarticle.liquid %}
 
