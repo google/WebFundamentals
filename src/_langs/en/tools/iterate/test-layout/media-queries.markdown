@@ -14,7 +14,7 @@ authors:
 related-guides:
   extensions:
     -
-      title: Edit Styles
+      title: Set Up Browser Extensions
       href: tools/setup/workspace/setup-extensions
       section:
         title: "Set Up Browser Extensions"
@@ -32,7 +32,7 @@ remember:
 ---
 {% wrap content %}
 
-[Media queries](fundamentals/layouts/rwd-fundamentals/use-media-queries)
+[Media queries](https://web-central.appspot.com/web/tools/iterate/test-layout/media-queries)
 are an essential part of responsive web design.
 They let you apply styles to your site based on device characteristics.
 For example, different styles sheets get applied to the site content
@@ -62,13 +62,13 @@ Media queries are color-coded as follows:
 <table id="colortable">
 	<tbody>
 		<tr>
-			<td>Queries targeting a maximum width.</td>
+			<td class="max-width">Queries targeting a maximum width.</td>
 		</tr>
 		<tr>
-			<td>Queries targeting widths within a range.</td>
+			<td class="max-and-min">Queries targeting widths within a range.</td>
 		</tr>
 		<tr>
-			<td>Queries targeting a minimum width.</td>
+			<td class="min-width">Queries targeting a minimum width.</td>
 		</tr>
 	</tbody>
 </table>
