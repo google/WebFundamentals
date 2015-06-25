@@ -22,10 +22,10 @@ related-guides:
   breakpoints:
     -
       title: How to Add or Remove Breakpoints
-      href: web/tools/javascript/breakpoints/add-breakpoints
+      href: https://web-central.appspot.com/web/tools/javascript/breakpoints/add-breakpoints
       section:
         title: "Breakpoint on a DOM mutation event"
-        href: web/tools/javascript/breakpoints/add-breakpoints
+        href: https://web-central.appspot.com/web/tools/javascript/breakpoints/add-breakpoints
 priority: 0
 collection: inspect-styles
 key-takeaways:
@@ -42,7 +42,7 @@ remember:
 ---
 {% wrap content %}
 
-[Inspecting an element](tools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) shows you the DOM nodes for a rendered element in the browser. 
+[Inspecting an element](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) shows you the DOM nodes for a rendered element in the browser. 
 
 ![Inspect DOM nodes for an element animation](animations/right-click-inspect-element.png)
 
@@ -76,11 +76,11 @@ If the entire trail doesn't fit in the status bar, an ellipsis (...) shows where
 
 ![Breadcrumb ellipsis](imgs/breadcrumb-ellipsis.png)
 
-Take a look at the [complete list of keyboard shortcuts](tools/iterate/inspect-styles/shortcuts).
+Take a look at the [complete list of keyboard shortcuts](https://web-central.appspot.com/web/tools/iterate/inspect-styles/shortcuts?hl=en).
 
 ## Edit DOM nodes and attributes
 
-The simplest way to [edit DOM nodes](tools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node) is to double-click the DOM node opening **Element tag** and edit. The closing tag is automatically updated after renaming. 
+The simplest way to [edit DOM nodes](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node) is to double-click the DOM node opening **Element tag** and edit. The closing tag is automatically updated after renaming. 
 
 The simplest way to edit DOM attributes is to double-click on the attribute name or value.
 When edit mode is active,
@@ -89,7 +89,7 @@ Once you reach the last attribute value, pressing tab again creates a new attrib
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.basics %}
 
-### Edit DOM node and it's children as HTML
+### Edit DOM node and its children as HTML
 
 To edit a DOM node and its children as HTML:
 
@@ -109,7 +109,7 @@ Edit and add attributes using the DOM node context menu:
 ![Edit DOM from Context Menu](imgs/context-menu-add-edit-attribute.png)
 
 * Select **Add Attribute** to create a new field at the end of the opening tag.
-* Select **Edit Attribute** to modify an existing attribute. This action is context-sensitive, the portion you **Right-click** on determines the editable portion of the node.
+* Select **Edit Attribute** to modify an existing attribute. This action is context-sensitive; the portion you **Right-click** on determines the editable portion of the node.
 
 ## Move DOM elements
 
@@ -203,7 +203,7 @@ that have registered listeners.
 
 ![Event types that have event listeners](imgs/view-event-listeners.png)
 
-Click the expander arrow next to the event type (for example `click`) to see a list of registered event handlers. Each handler is identified by a CSS-selector like element identifier, such as "`document`" or "`button#call-to-action`". If more than one handler is registered for the same element, the element is listed repeatedly.
+Click the expander arrow next to the event type (for example `click`) to see a list of registered event handlers. Each handler is identified by a CSS selector-like element identifier, such as "`document`" or "`button#call-to-action`". If more than one handler is registered for the same element, the element is listed repeatedly.
 
 ![Element event listeners](animations/event-listener-resize.png)
 
