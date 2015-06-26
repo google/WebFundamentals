@@ -84,7 +84,7 @@ The following fields are displayed for each cookie in the selected frame group:
 
 ## Clear cookies
 
-You can clear (delete) a single cookies, all cookies in the selected frame group, or cookies from a specific domain. Recall the same cookie may appear in more than one frame group. If the same cookie for a given domain is referenced in two frame groups, deleting all cookies for that domain will affect both groups.
+You can clear (delete) a single cookie, all cookies in the selected frame group, or cookies from a specific domain. Recall the same cookie may appear in more than one frame group. If the same cookie for a given domain is referenced in two frame groups, deleting all cookies for that domain will affect both groups.
 
 **To clear a single cookie:**
 
