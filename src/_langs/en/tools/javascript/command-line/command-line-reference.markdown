@@ -65,7 +65,7 @@ The following example returns a reference to the currently selected element and 
 
 ![Example of $('img').src](images/selector-img-src.png)
 
-*Please note:* If you are using a library such as jQuery that uses `$`, this will functionality will be overwritten, and `$` will correspond to that libraries implementation.
+*Please note:* If you are using a library such as jQuery that uses `$`, this functionality will be overwritten, and `$` will correspond to that library's implementation.
 
 ### $$(selector)
 
@@ -262,7 +262,7 @@ Profiles can also be nested. For example, this will work in any order:
 
 ### table(data[, columns])
 
-Log object data with table by passing in a data object in with optional column headings. For example, to display a list of names using a table in the console you would do:
+Log object data with table formatting by passing in a data object in with optional column headings. For example, to display a list of names using a table in the console you would do:
 
 		var names = {
 			0: { firstName: "John", lastName: "Smith" },
@@ -292,7 +292,7 @@ Stops monitoring events for the specified object and events. For example, the fo
 
 		unmonitorEvents(window);
 
-You can also selectively stop monitoring specific events on an object. For example, following code starts monitoring all mouse events on the currently selected element, and then stops monitoring "mousemove" events (perhaps to reduce noise in the console output).
+You can also selectively stop monitoring specific events on an object. For example, the following code starts monitoring all mouse events on the currently selected element, and then stops monitoring "mousemove" events (perhaps to reduce noise in the console output).
 
 		monitorEvents($0, "mouse");
 		unmonitorEvents($0, "mousemove");
