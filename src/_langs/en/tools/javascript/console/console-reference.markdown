@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Console API Reference"
 seotitle: "Console API Reference"
-description: "Write to the console, reate JavaScript profiles, and start debugging sessions with the console API."
-introduction: "Write to the console, reate JavaScript profiles, and start debugging sessions with the console API."
+description: "Write to the console, create JavaScript profiles, and start debugging sessions with the console API."
+introduction: "Write to the console, create JavaScript profiles, and start debugging sessions with the console API."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
@@ -199,7 +199,7 @@ The following example uses the element formatter (`%o`) and object formatter (`%
 
 The following example uses the `%c` format specifier to colorize the output string:
 
-    console.log("%cUser %s has %d points", "color:orange; background:blue; font-size: 16pt", userName, userPoints);
+    console.log("%cUser %s has %d points", "color:yellow; background:red; font-size: 16pt", userName, userPoints);
 
 ![Console output styled with %c](images/log-format-styling.png)
 
