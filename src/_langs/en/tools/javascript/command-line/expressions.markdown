@@ -27,7 +27,7 @@ key-takeaways:
 
 ## Evaluate expressions
 
-The DevTools console allows you learn the state of items in your page in an ad-hoc manner.  Evaluate any expression you can type using a combination of your knowlege of JavaScript and several features that support it.
+The DevTools console allows you to learn the state of items in your page in an ad-hoc manner.  Evaluate any expression you can type using a combination of your knowlege of JavaScript and several features that support it.
 
 ### Evaluating expressions
 
@@ -41,15 +41,15 @@ There are a few shortcuts for selecting elements. These save you valuable time w
 
 <table>
   <tr>
-    <td>`$()`</td>
+    <td>$()</td>
     <td>Returns the first element that matches the specified CSS selector. It is a shortcut for document.querySelector().</td>
   </tr>
   <tr>
-    <td>`$$()`</td>
+    <td>$$()</td>
     <td>Returns an array of all the elements that match the specified CSS selector. This is an alias for document.querySelectorAll().</td>
   </tr>
   <tr>
-    <td>`$x()`</td>
+    <td>$x()</td>
     <td>Returns an array of elements that match the specified XPath.</td>
   </tr>
 </table>
