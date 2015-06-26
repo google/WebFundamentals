@@ -30,13 +30,13 @@ key-takeaways:
 
 remember:
   css-triggers:
-    - Learn how Paul Lewis built [CSS Triggers](https://aerotwist.com/blog/css-triggers/).
+    - Learn how Paul Lewis built CSS Triggers at https://aerotwist.com/blog/css-triggers/.
 ---
 {% wrap content %}
 
 Layout (or reflow in Firefox) is the process by which the browser calculates the positions and sizes of all the elements on a page. The web’s layout model means that one element can affect others, for example, the width of the `<body>`element typically affects its children’s widths and so on all the way up and down the tree. The process can be quite involved for the browser.
 
-Learn about four key layout problems: a brief introduction on what causes them, the tools available to track them down, some quick fixes, and links off to more detailed tutorials on how to fix them. Know about these problems already and want to dive deeper into fixes, see [Improve Rendering Performance](tools/profile-performance/rendering-tools/index).
+Learn about four key layout problems: a brief introduction on what causes them, the tools available to track them down, some quick fixes, and links off to more detailed tutorials on how to fix them. Know about these problems already and want to dive deeper into fixes? See [Improve Rendering Performance](https://web-central.appspot.com/web/tools/profile-performance/rendering-tools/index).
 
 {% include modules/toc.liquid %}
 
@@ -50,7 +50,7 @@ Style changes are costly, especially if those changes affect more than one eleme
 
 ### Tool
 
-Know which CSS properties cost more in terms of rendering performance than others. [CSS Triggers](http://csstriggers.com/) lets you filter by CSS property, shows whether or not each CSS property affects layout, paint, and or composite, and provides a detailed description of that properties impact on renderng performance:
+Know which CSS properties cost more in terms of rendering performance than others. [CSS Triggers](http://csstriggers.com/) lets you filter by CSS property, shows whether each CSS property affects layout, paint, or composite, and provides a detailed description of that property's impact on renderng performance:
 
 ![csstriggers.com](imgs/csstriggers.png)
 
@@ -92,8 +92,7 @@ General rule of thumb-- if you ask a geometric value back from the DOM before a 
 Both Wilson Page and Paul Lewis recommend separating reading styles from changing styles, and reading styles first. They also recommend using `requestAnimationFrame` to ensure that your JavaScript runs at the start of a frame. When visual changes are happening on screen you want to do your work at the right time for the browser, which is right at the start of the frame.
 
 See also 
-
-[Optimize JavaScript Execution])(fundamentals/performance/rendering/optimize-javascript-execution)
+[Optimize JavaScript Execution](https://web-central.appspot.com/web/fundamentals/performance/rendering/optimize-javascript-execution)
 
 Wilson Page's blog post on  provides quick fixes to forced synchronous layouts, including batching the DOM reads and DOM writes together so that the layout is calculated just once. This post also
 
@@ -103,7 +102,7 @@ The Chrome DevTools Timeline identifies when your application causes a forced as
 
 ![Timeline with forced synchronous layout warning](imgs/forced_layout.png)
 
-Learning to use the Timeline tool effectively requires some practice. For detailed information on how to use the Timeline tool, see [Analyze Rendering Performance](tools/profile-performance/evaluate-performance/analyze-rendering).
+Learning to use the Timeline tool effectively requires some practice. For detailed information on how to use the Timeline tool, see [Analyze Rendering Performance](https://web-central.appspot.com/web/tools/profile-performance/rendering-tools/analyze-runtime?hl=en).
 
 ### Fixes
 
@@ -131,7 +130,7 @@ Learning to use the Timeline tool effectively requires some practice. For detail
 
 ## Problem 3: Layout thrashing
 
-Layout thrashing is a forced-synchronous layout broken-record. JavaScript writes and then Reads from the DOM, multiple-times repeating, forcing the browser to re-calculate layout over and over again. The most common cause of layout thrashing: a loop that puts the browser into a read-write-read-write cycle:
+Layout thrashing is a forced-synchronous layout broken-record. JavaScript writes and then reads from the DOM multiple times, forcing the browser to re-calculate layout over and over again. The most common cause of layout thrashing: a loop that puts the browser into a read-write-read-write cycle:
 
 <pre>
 function resizeAllParagraphsToMatchBlockWidth() {
@@ -172,13 +171,13 @@ The same fixes for individual forced synchronous layous apply to layout thrashin
 
 Paint is the process of filling in pixels and is often the most costly part of the rendering process. Trigger layout, and you trigger paint, since the browser will need to create pixels for the new geometry.
 
-If you've noticed that your page is janky in anyway, for example, scrolling isn't smooth, then more likely than not, you've got pain problems.
+If you've noticed that your page is janky in any way, for example, scrolling isn't smooth, then more likely than not you've got paint problems.
 
 The first step to fixing paint problems is identifying them. Paul Irish's post [Profiling Long Paint Times with DevTools Continuous Painting Mode](http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode), explains how to use Chrome DevTools to track paint issues.
 
-Once you've identified the problems, you can start to fix them. Paul Lewis' article,[Simplify paint complexity and reduce paint areas](fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas), describes in detail what you can do to avoid too much paint. 
+Once you've identified the problems, you can start to fix them. Paul Lewis' article, [Simplify paint complexity and reduce paint areas](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas?hl=en), describes in detail what you can do to avoid too much paint. 
 
-The main gist of both of these articles are summarized here.
+The main gist of both of these articles is summarized here.
 
 ### Tool
 
@@ -188,7 +187,7 @@ Want to know how long painting takes or how often painting occurs? Enable the Pa
 
 Diagnose the paint problems further by enabling <strong>Show paint rectangles</strong> and <strong>Enable continuous page repainting</strong> in the Timeline Rendering settings:
 
-![Chrome DevTools rendering settings](rendering-settings-files/rendering-settings.png)</div>
+![Chrome DevTools rendering settings](rendering-settings-files/rendering-settings.png)
 
 Seeing the regions where Chrome paints helps diagnose and ultimately [avoid unnecessary paints](http://www.html5rocks.com/en/tutorials/speed/unnecessary-paints/) on a page. You can also use this to [study painting behaviors](http://www.paulirish.com/2011/viewing-chromes-paint-cycle/) just by hovering over links, popups, or some content which dynamically updates.
 
