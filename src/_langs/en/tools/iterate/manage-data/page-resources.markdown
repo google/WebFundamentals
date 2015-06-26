@@ -42,7 +42,7 @@ Image previews include the dimensions, file size, MIME type, and URL of the imag
 
 ## Open resource in Network panel
 
-To open a resource in the Network panel**, right-click or control-click the resource and select **Reveal In Resources Panel. 
+To open a resource in the Network panel, right-click or control-click the resource and select **Reveal In Resources Panel**. 
 
 From the same menu you can copy the resource's URL to the system clipboard, or open it in a new browser tab. 
 
