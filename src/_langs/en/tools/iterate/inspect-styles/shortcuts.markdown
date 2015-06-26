@@ -58,7 +58,7 @@ Additonal shortcuts to access DevTools:
       <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">J</span></td>
     </tr>
     <tr>
-      <td data-th="Launch DevTools">Inspect the Inspector (_undock first one and press_)</td>
+      <td data-th="Launch DevTools">Inspect the Inspector (undock first one and press)</td>
       <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">I</span></td>
       <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">I</span></td>
     </tr>
@@ -142,7 +142,7 @@ Shortcuts available in all DevTools panels:
       <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span class="kbd">F</span></td>
     </tr>
     <tr>
-      <td data-th="Global Shortcuts">Search by filename (_except on Timeline_)</td>
+      <td data-th="Global Shortcuts">Search by filename (except on Timeline)</td>
       <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span>, <span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
       <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span>, <span class="kbd">Cmd</span> + <span class="kbd">O</span></td>
     </tr>
@@ -166,7 +166,7 @@ Shortcuts available in all DevTools panels:
 
 ## Shortcuts in Elements panel
 
-Right-clicking an element you can:
+By right-clicking an element you can:
 
 * Force element pseudo states: (`:active`, `:hover`, `:focus`, `:visited`).
 * Set breakpoints on the elements: (Subtree modifications, Attribute modification, Node removal).
