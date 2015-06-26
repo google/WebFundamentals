@@ -27,14 +27,14 @@ key-takeaways:
 
 ## Browser emulation
 
-Browser emulation is great for testing a sites responsiveness, but they don’t
-emulate differences in API, CSS support and certain behaviors that you'd see
+Browser emulators are great for testing a site's responsiveness, but they don’t
+emulate differences in API, CSS support, and certain behaviors that you'd see
 on a mobile browser. Test your site on browsers running on real devices to be
 certain everything behaves as expected.
 
 ### Chrome DevTools emulation
 
-Chome DevTools has a [Device emulation tool](tools/setup/device-testing/devtools-emulator) which will create a viewport with the right width and height to match a selected device and account for the screen density.
+Chome DevTools has a [Device emulation tool](https://web-central.appspot.com/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
 
 You can activate device emulation by following these four steps:
 
@@ -48,7 +48,7 @@ You can activate device emulation by following these four steps:
 ### Firefox responsive view
 
 Firefox has a [responsive design view](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View)
-which encourages you stop thinking in terms of specific devices and instead
+that encourages you to stop thinking in terms of specific devices and instead
 explore how your design changes at common screen sizes or your own size by
 dragging the edges.
 
@@ -177,7 +177,7 @@ otherwise click `Launch`.
 
 <img src="imgs/android-avd-launch.png" alt="Android AVD Launch Dialog" />
 
-Once you're emulator is booted, click on the Browser icon and you'll be able to
+Once your emulator is booted, click on the Browser icon and you'll be able to
 test your site on the old Stock Browser for Android.
 
 <img src="imgs/android-emulator-stock-browser.png" alt="Android Emulator Stock Browser Screenshot" />
@@ -202,7 +202,7 @@ the emulator.
 
 Open the URL below, select the right language and download the  .apk file.
 
-[https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/](https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/)
+[https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/](https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/)
 
 From here, you can install the file onto an open emulator or connected Android
 device with the following command:
@@ -244,7 +244,7 @@ versions of IE by changing the `Document Mode`, see [this section for more info.
 
 ## Cloud-based emulators and simulators
 
-If you can’t use the emulators for whatever reason and don't have access to real devices, then cloud based emulators are the next best thing.
+If you can’t use the emulators for whatever reason and don't have access to real devices, then cloud-based emulators are the next best thing.
 
 The one big advantage of cloud-based emulators over real devices and local
 emulators is that you can automate unit tests for your site across different
@@ -262,7 +262,7 @@ your app looks and feels across multiple devices at the same time.
 
 ### SauceLabs
 
-[SauceLabs (Commercial)](https://saucelabs.com/) allows you to run unit tests
+[SauceLabs (commercial)](https://saucelabs.com/) allows you to run unit tests
 inside of an emulator, which can be really useful for scripting a flow through
 your site and watch the video recording of this afterwards on various devices.
 
