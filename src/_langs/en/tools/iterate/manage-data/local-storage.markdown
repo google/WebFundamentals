@@ -64,7 +64,7 @@ You can inspect IndexedDB databases and object stores, page through an object st
 
 **To clear the object store**, do one of the following:
 
-* Click the **Clear object store** button <img src="../images/clear.png" /> at the bottom of the panel.
+* Click the **Clear object store** button ![Clear](imgs/clear.png) at the bottom of the panel.
 * Right-click or Control-click the object store and select **Clear** from the context menu.
 
 **To view properties of a database**, select it from the list of databases.
@@ -78,8 +78,8 @@ their contents.
 
 * **To view the available Web SQL databases**, expand the Web SQL item in the tree control.
 * **To view available tables in a database**, expand the database tree item.
-* **To view a table's records**, select the table. It's properties appear in the right-hand pane.
-* **To refresh the view of the database**, click the Refresh button ![Refresh button](refresh.png) at the bottom of the panel. 
+* **To view a table's records**, select the table. Its properties appear in the right-hand pane.
+* **To refresh the view of the database**, click the Refresh button ![Refresh button](imgs/refresh.png) at the bottom of the panel. 
 
 You can query a Web SQL database's tables with SQL commands and view 
 query results in a tabular format. As you type out a command or table name, code hints are provided for the names of supported SQL commands and clauses, and the names of tables that the database contains.
@@ -103,7 +103,7 @@ The table of cached resources includes the following properties for each resourc
 * **Resource** — The URL of the resource.
 * **Type** — The type of cached resource, which can have one of the following 
   values:
-    * **Master** — The resource was added to the cache because it's 
+    * **Master** — The resource was added to the cache because its 
       [manifest](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-html-manifest) 
       attribute indicated that this was its cache.
     * **Explicit** — The resource was explicitly listed in the application's 
