@@ -646,3 +646,20 @@ flaviocopes:
   google: 113525015220376733647
   email: simon.gong64@gmail.com
   description: "Simon is a Full Stack Developer"
+
+dalecurtis:
+  name:
+    given: Dale
+    family: Curtis
+  org:
+    name: Google
+    unit: Chrome Media
+  country: US
+  role:
+    - author
+  google: +DaleCurtis
+  twitter: DaleCurtis
+  email: dalecurtis@google.com
+  homepage: https://github.com/dalecurtis
+  description: "Dale is a Senior Software Engineer"
+
