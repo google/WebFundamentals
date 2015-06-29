@@ -34,7 +34,7 @@ remember:
 ---
 {% wrap content %}
 
-Layout (or reflow in Firefox) is the process by which the browser calculates the positions and sizes of all the elements on a page. The web’s layout model means that one element can affect others, for example, the width of the `<body>`element typically affects its children’s widths and so on all the way up and down the tree. The process can be quite involved for the browser.
+Layout (or reflow in Firefox) is the process by which the browser calculates the positions and sizes of all the elements on a page. The web’s layout model means that one element can affect others; for example, the width of the `<body>` element typically affects its children’s widths and so on all the way up and down the tree. The process can be quite involved for the browser.
 
 Learn about four key layout problems: a brief introduction on what causes them, the tools available to track them down, some quick fixes, and links off to more detailed tutorials on how to fix them. Know about these problems already and want to dive deeper into fixes? See [Improve Rendering Performance](https://web-central.appspot.com/web/tools/profile-performance/rendering-tools/index).
 
@@ -68,17 +68,17 @@ Know which CSS properties cost more in terms of rendering performance than other
     <tr>
       <td data-th="Fix">Use less CSS</td>
 	  <td data-th="Description">Less CSS, means less work for the browser to calculate layout.</td>
-	  <td data-th="Learn More">[Reduce the scope and complexity of style calculations](fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)</td>
+	  <td data-th="Learn More"><a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations">Reduce the scope and complexity of style calculations</a></td>
     </tr>
     <tr>
       <td data-th="Fix">Keep CSS Selectors simple</td>
 	  <td data-th="Description">Reference an element in your CSS with a simple class. Create new classes instead of building complex CSS selector families.</td>
-	  <td data-th="Learn More">[Reduce the scope and complexity of style calculations](fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)</td>
+	  <td data-th="Learn More"><a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations">Reduce the scope and complexity of style calculations</a></td>
     </tr>
     <tr>
       <td data-th="Fix">Avoid CSS that triggers layout</td>
-	  <td data-th="Description">If you change an element's geometry, like it's width, height, or position, the browser has to check all other elements and redo the layout.</td>
-	  <td data-th="Learn More">[Avoid large, complex layouts and layout thrashing](fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)</td>
+	  <td data-th="Description">If you change an element's geometry, like its width, height, or position, the browser has to check all other elements and redo the layout.</td>
+	  <td data-th="Learn More"><a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing">Avoid large, complex layouts and layout thrashing</a></td>
     </tr>
   </tbody>
 </table>
@@ -87,12 +87,12 @@ Know which CSS properties cost more in terms of rendering performance than other
 
 Normally, Chrome performs layouts "lazily" in response to CSS or DOM updates from your application. This allows Chrome to batch style and layout changes rather than reacting to each on demand. However, your JavaScript can force Chrome to perform a layout immediately and synchronously by querying the value of certain layout-dependent element properties such as `element.offsetWidth`.
 
-General rule of thumb-- if you ask a geometric value back from the DOM before a frame is complete, you are going to find yourself with forced synchronous layouts. These so called "forced synchronous layouts" can be a big performance bottleneck if repeated frequently or performed for large DOM tree. 
+A general rule of thumb: if you ask for a geometric value back from the DOM before a frame is complete, you are going to find yourself with forced synchronous layouts. These so called "forced synchronous layouts" can be a big performance bottleneck if repeated frequently or performed for large DOM trees. 
 
 Both Wilson Page and Paul Lewis recommend separating reading styles from changing styles, and reading styles first. They also recommend using `requestAnimationFrame` to ensure that your JavaScript runs at the start of a frame. When visual changes are happening on screen you want to do your work at the right time for the browser, which is right at the start of the frame.
 
 See also 
-[Optimize JavaScript Execution](https://web-central.appspot.com/web/fundamentals/performance/rendering/optimize-javascript-execution)
+[Optimize JavaScript Execution](https://web-central.appspot.com/web/fundamentals/performance/rendering/optimize-javascript-execution).
 
 Wilson Page's blog post on  provides quick fixes to forced synchronous layouts, including batching the DOM reads and DOM writes together so that the layout is calculated just once. This post also
 
@@ -116,14 +116,14 @@ Learning to use the Timeline tool effectively requires some practice. For detail
     <tr>
       <td data-th="Fix">Read styles first.</td>
 	  <td data-th="Description">Batch DOM reads and DOM writers together and read the DOM first so taht layout is calculated just once.</td>
-	  <td data-th="Learn More">[Layout thrashing](http://wilsonpage.co.uk/preventing-layout-thrashing/);</br>
-	  [Avoid large, complex layouts and layout thrashing](fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing))</td>
+	  <td data-th="Learn More"><a href="http://wilsonpage.co.uk/preventing-layout-thrashing/">Layout thrashing</a>;</br>
+	  <a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing">Avoid large, complex layouts and layout thrashing</a></td>
     </tr>
     <tr>
       <td data-th="Fix">Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a>.</td>
-	  <td data-th="Description">This method requests that the browser call a specified function to update an animation before the next repaint. Use this method to guarantee that your JavaScript works at the start of the frame. Wilson Page recommends using this method to improve performance of existing code, without having to totally refacotr it. Schedule a write function to be executed in the next frame; DOM reads can happen in the current frame.</td>
-	  <td data-th="Learn More">Wilson Page's blog posthttps://github.com/udacity/news-aggregator/blob/master/scripts/app.js, [Layout thrashing](http://wilsonpage.co.uk/preventing-layout-thrashing/);</br>
-	  [Optimize JavaScript Execution](fundamentals/performance/rendering/optimize-javascript-execution))</td>
+	  <td data-th="Description">This method requests that the browser call a specified function to update an animation before the next repaint. Use this method to guarantee that your JavaScript works at the start of the frame. Wilson Page recommends using this method to improve performance of existing code, without having to totally refactor it. Schedule a write function to be executed in the next frame; DOM reads can happen in the current frame.</td>
+	  <td data-th="Learn More"><a href="https://github.com/udacity/news-aggregator/blob/master/scripts/app.js">Wilson Page's blog</a></br>; <a href="http://wilsonpage.co.uk/preventing-layout-thrashing/">Layout thrashing</a>;</br>
+	  <a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashingfundamentals/performance/rendering/optimize-javascript-execution">Optimize JavaScript Execution</a></td>
     </tr>
   </tbody>
 </table>
@@ -162,16 +162,16 @@ The same fixes for individual forced synchronous layous apply to layout thrashin
     <tr>
       <td data-th="Fix"><a href="https://github.com/wilsonpage/fastdom">FastDom library</a></td>
 	  <td data-th="Description">Eliminates layout thrashing by batching read/write operations.</td>
-	  <td data-th="Learn More">Introduction to FastDom in [Layout thrashing](http://wilsonpage.co.uk/preventing-layout-thrashing/);</br> <a href="https://github.com/wilsonpage/fastdom">FastDom library</a></td>
+	  <td data-th="Learn More">Introduction to FastDom in <a href="http://wilsonpage.co.uk/preventing-layout-thrashing/">Layout thrashing</a>;</br> <a href="https://github.com/wilsonpage/fastdom">FastDom library</a>.</td>
     </tr>
   </tbody>
 </table>
 
 ## Problem 4: Long paint times
 
-Paint is the process of filling in pixels and is often the most costly part of the rendering process. Trigger layout, and you trigger paint, since the browser will need to create pixels for the new geometry.
+Paint is the process of filling in pixels and is often the most costly part of the rendering process. Trigger layout, and you trigger paint, because the browser has to create pixels for the new geometry.
 
-If you've noticed that your page is janky in any way, for example, scrolling isn't smooth, then more likely than not you've got paint problems.
+If you've noticed that your page is janky in any way -- for example, scrolling isn't smooth -- then more likely than not you've got paint problems.
 
 The first step to fixing paint problems is identifying them. Paul Irish's post [Profiling Long Paint Times with DevTools Continuous Painting Mode](http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode), explains how to use Chrome DevTools to track paint issues.
 
@@ -187,7 +187,7 @@ Want to know how long painting takes or how often painting occurs? Enable the Pa
 
 Diagnose the paint problems further by enabling <strong>Show paint rectangles</strong> and <strong>Enable continuous page repainting</strong> in the Timeline Rendering settings:
 
-![Chrome DevTools rendering settings](rendering-settings-files/rendering-settings.png)
+![Chrome DevTools rendering settings](imgs/rendering-settings.png)
 
 Seeing the regions where Chrome paints helps diagnose and ultimately [avoid unnecessary paints](http://www.html5rocks.com/en/tutorials/speed/unnecessary-paints/) on a page. You can also use this to [study painting behaviors](http://www.paulirish.com/2011/viewing-chromes-paint-cycle/) just by hovering over links, popups, or some content which dynamically updates.
 
@@ -204,13 +204,13 @@ When you enable continuous paint mode, the page continuously repaints, showing a
   <tbody>
     <tr>
       <td data-th="Fix">Promote elements that move or fade</td>
-	  <td data-th="Description">Use `will-change: transform` CSS property to create a new composite layer for elements that are regularly repainted.</td>
-	  <td data-th="Learn More">[Simplify paint complexity and reduce paint areas](fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)</td>
+	  <td data-th="Description">Use the <i>will-change: transform</i> CSS property to create a new composite layer for elements that are regularly repainted.</td>
+	  <td data-th="Learn More"><a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas">Simplify paint complexity and reduce paint areas</a></td>
     </tr>
     <tr>
       <td data-th="Fix">Avoid paint during animations in particular</td>
 	  <td data-th="Description">The 10ms you have per frame in an animation is normally not long enough to get paint work done.</td>
-	  <td data-th="Learn More">[Simplify paint complexity and reduce paint areas](fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)</td>
+	  <td data-th="Learn More"><a href="https://web-central.appspot.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areasfundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas">Simplify paint complexity and reduce paint areas</a></td>
     </tr>
   </tbody>
 </table>
