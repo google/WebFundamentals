@@ -1,8 +1,8 @@
 ---
 
 layout: update
-published: false
-rss: false
+published: true
+rss: true
 collection: updates
 category: chrome
 product: chrome
