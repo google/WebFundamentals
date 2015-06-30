@@ -1,0 +1,10 @@
+<a class="smallvideo--link smallvideo--link-{{ include.showid }}" href="{{site.baseurl}}{{include.video.url | canonicalize}}">
+  <div class="smallvideo smallvideo-{{include.showid}}">
+    <div class="smallvideo--imagecontainer">
+      <img class="smallvideo--image" src="https://img.youtube.com/vi/{{ include.video.showYoutubeID }}/mqdefault.jpg" />
+    </div>
+    <div class="smallvideo--title-container smallvideo--title-container-{{include.showid}}">
+      <p class="smallvideo--title smallvideo--title-{{include.showid}}">{{ include.video.title }}</p>
+    </div>
+  </div>
+</a>

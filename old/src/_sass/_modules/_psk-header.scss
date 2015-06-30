@@ -1,0 +1,101 @@
+/**
+*
+* Home header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.psk-header {
+  background: #3F51B5 no-repeat center center;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: $lineHeight*3;
+  margin-bottom: $lineHeight*1;
+  font-family: Roboto;
+
+  @include medium {
+    background-image: url(../imgs/psk.png);
+    background-size: cover;
+    padding-bottom: $lineHeight*4;
+    padding-left: 32%;
+  }
+
+  > .container {
+    padding-top: 95px;
+  }
+
+  &:after {
+    @extend .icon-tools:before;
+    font-family: $fontIcon;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 50px;
+    bottom: -10px;
+
+    @include medium {
+      font-size: $fontXXLarge;
+      line-height: 1px;
+      bottom: 4px;
+      margin: 0 auto 0 -33%;
+    }
+
+    font-weight: 500;
+    color: $colorToolsSecondary;
+  }
+
+
+  & h1 {
+
+    @include small-only {
+      @include type--xlarge(true);
+      padding-top: $lineHeight*2;
+      @include color-inherit;
+    }
+
+    @include medium {
+      padding-top: $lineHeight*3;
+    }
+
+    letter-spacing: 0;
+    font-size: 60px;
+    font-family: Roboto;
+    font-weight: 400;
+
+    @include color-inherit;
+  }
+
+  & p {
+   
+    color: #A4C4ED;
+    font-weight: 400;
+
+    @include medium {
+      padding-top: 5px;
+    }
+
+    padding-top: 5px;
+    font-size: 1.1em;
+
+  }
+
+  & a {
+    margin-top: 50px;
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+}
+
+.psk-screenshots {
+  img {
+    margin-bottom: 0;
+  }
+}

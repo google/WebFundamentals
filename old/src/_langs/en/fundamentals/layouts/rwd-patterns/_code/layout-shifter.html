@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header] -->
+    <link rel="stylesheet" href="layouts-common.css">
+    <style>
+
+      /* // [START lshifter] */
+      .container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+      }
+
+      .c1, .c2, .c3, .c4 {
+        width: 100%;
+      }
+
+      @media (min-width: 600px) {
+        .c1 {
+          width: 25%;
+        }
+
+        .c4 {
+          width: 75%;
+        }
+
+      }
+
+      @media (min-width: 800px) {
+        .container {
+          width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      /* // [END lshifter] */
+
+
+    </style>
+    <title>Responsive Web Design Pattern: Layout Shifter</title>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="c1"></div>
+      <div class="c4">
+        <div class="c2"></div>
+        <div class="c3"></div>
+      </div>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-LayoutShifter");
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

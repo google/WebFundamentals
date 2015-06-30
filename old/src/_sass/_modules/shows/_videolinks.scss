@@ -1,0 +1,24 @@
+$padding: 8px !default;
+
+/*
+  The type--medium is used to make sure the padding between the
+  text on the left and the videos on the right are consistent
+ */
+.videolinks {
+}
+
+.videolinks--prev {
+
+}
+
+.videolinks--next {
+
+}
+
+.videolinks--description, .content .videolinks--description {
+	@include type--base;
+
+	margin: 0;
+
+	text-align: center;
+}

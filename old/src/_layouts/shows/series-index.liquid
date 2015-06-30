@@ -1,0 +1,70 @@
+<!-- Lets plan out the order of videos -->
+{% if page.articles[page.id] %}
+	{% assign videosInSeries = page.articles[page.id] | sort: 'date' | reverse  %}
+{% endif %}
+
+{% assign showDetails = null %}
+{% assign shows = page.articles['shows'] | sort: 'title'  %}
+{% for show in shows %}
+  {% if show.id == page.showid %}
+    {% assign showDetails = show %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+		{% if page.nofeed != true %}
+			{% capture feedURL %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+		{% endif %}
+
+    {% include head.liquid feedURL=feedURL feedName=showDetails.title %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+  	<!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    {% wrap content %}
+
+	    <h1>{{ page.title }}</h1>
+
+	    <!-- Display content from the markdown -->
+	    {{ content }}
+
+	    <ol class="blanklist">
+	      {% for videoInSeries in videosInSeries %}
+	      <li>
+      		<div class="widevideo">
+	      		<div class="widevideo--imagecontainer g--half">
+	      			<a href="{{site.baseurl}}{{videoInSeries.url | canonicalize}}">
+                {% if videoInSeries.showYoutubeID %}
+	      				<img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.showYoutubeID }}/0.jpg" />
+                {% endif %}
+                {% if videoInSeries.udacity %}
+                  {% if videoInSeries.udacity.preview.youtube %}
+                    <img class="widevideo--image" src="https://img.youtube.com/vi/{{ videoInSeries.udacity.preview.youtube }}/0.jpg" />
+                  {% endif %}
+                {% endif %}
+	      			</a>
+	      		</div>
+	      		<div class="widevideo--details g--half g--last">
+		      		<div class="widevideo--title">
+		      			<a href="{{site.baseurl}}{{videoInSeries.url | canonicalize}}">{{ videoInSeries.title }}</a>
+		      		</div>
+		      		<div class="widevideo--description">
+		      			{{ videoInSeries.description }}
+		      		</div>
+	      		</div>
+	      	</div>
+	      </li>
+		    {% endfor %}
+	    </ol>
+
+    {% endwrap %}
+
+    {% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink=showDetails.emailSubscriptionLink %}
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

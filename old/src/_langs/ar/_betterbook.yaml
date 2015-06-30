@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: الخطوات الأولى
+    path: /fundamentals/getting-started/
+  - title: الوثائق
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: مبادئ تصميم مواقع الويب
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: التنسيقات المناسبة لعدة أجهزة
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: أساسيات تصميم الويب سريع الاستجابة
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: أنماط تصميم الويب سريع الاستجابة
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: أنماط التنسيق
+            path: /fundamentals/layouts/layout-patterns/
+          - title: عناصر واجهة المستخدم
+            path: /fundamentals/layouts/ui-elements/
+      - title: النماذج وإدخال المستخدم
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: الإدخال باللمس
+            path: /fundamentals/input/touch/
+          - title: إدخال النماذج
+            path: /fundamentals/input/form/
+      - title: المظهر والتصميم
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: التعريف بالرسوم المتحركة
+            path: /fundamentals/look-and-feel/animations/
+      - title: الصور والفيديو والصوت
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: الصور
+            path: /fundamentals/media/images/
+          - title: الفيديو
+            path: /fundamentals/media/video/
+          - title: الصوت
+            path: /fundamentals/media/audio/
+      - title: تحقيق الدخل
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: تحقيق الدخل من الإعلانات
+            path: /fundamentals/monetization/ad-monetization/
+      - title: اكتشاف والتوزيع
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: الدخول إلى الجهاز
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: الموقع الجغرافي للمستخدم
+            path: /fundamentals/device-access/user-location
+          - title: Click to call
+            path: /fundamentals/device-access/click-to-call
+      - title: الأداء
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: عرض المسار الحرج
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: تحسين كفاءة المحتوى
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: تحسين الشبكات
+            path: /fundamentals/performance/optimizing-networking/
+          - title: تحسين التفاعلية
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: قياس مستوى الأداء
+            path: /fundamentals/performance/measuring-performance/
+  - title: الأدوات
+    path: /fundamentals/tools/
+  - title: الموارد
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: مسرد المصطلحات
+        path: /fundamentals/resources/glossary/
+      - title: نماذج
+        path: /fundamentals/resources/samples/
+      - title: دليل الأسلوب
+        path: /fundamentals/resources/styleguide/
+      - title: نموذج مقالة
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false

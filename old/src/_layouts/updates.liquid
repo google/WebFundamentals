@@ -1,0 +1,92 @@
+---
+collection: updates
+published: true
+product: all
+category: all
+title: Web Updates
+
+rss: false
+feedName: Updates
+feedPath: updates/feed.xml
+---
+  {% include head.liquid %}
+</head>
+
+<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+  {% injectdata content _betterbook-updates.yaml %}
+
+  {% include header.liquid %}
+
+  {% assign updates = page.updates | sort: 'date' | reverse  %}
+
+  <header class="tools-header updates-header">
+    <div class="container updates-list-header">
+      <p class="headliner"><small>Web</small> Updates{% if page.tag %} tagged #{{ page.tag }}{% endif %}</p>
+      <div class="desc">The artist formerly known as HTML5Rocks. Discover what's happening in Chrome, our tools and the web platform.</div>
+    </div>
+  </header>
+
+  <div class="updates-list">
+    <div class="container updates-list-header">
+
+      {% include modules/update_filters.liquid article=page %}
+
+      <ul>
+        {% for article in updates %}
+          <li class="clear {{article.type}} update-card">
+            {% include modules/update_card.liquid article=article %}
+          </li>
+        {% endfor %}
+      </ul> 
+
+    </div>
+
+    {% if page.pagination_total > 1 %}
+    <div class="container updates-pagination">
+      <ul>
+
+        <li class="prev">
+        {% if page.pagination_current == 1 %}
+        &lt;
+        {% else %}
+        <a href="/web/{{ page.pagination_root }}{% if page.pagination_current != 2 %}/{{ page.pagination_current | minus: 1 }}{% endif %}">&lt;</a>
+        {% endif %}
+        </li>
+
+        {% if page.pagination_total < 8 %}
+
+          {% for i in (1..page.pagination_total) %}
+            <li{% if i == page.pagination_current %} class="current"{% endif %}>
+            <a href="/web/{{ page.pagination_root }}{% if i != 1 %}/{{i}}{% endif %}">{{ i }}</a>
+            </li>
+          {% endfor %}
+
+        {% else %}
+
+          {% for i in (1..5) %}
+            <li{% if i == page.pagination_current %} class="current"{% endif %}>
+            <a href="/web/{{ page.pagination_root }}{% if i != 1 %}/{{i}}{% endif %}">{{ i }}</a>
+            </li>
+          {% endfor %}
+          <li class="truncated">...</li>
+          <li{% if page.pagination_total == page.pagination_current %} class="current"{% endif %}>
+          <a href="/web/{{ page.pagination_root }}/{{page.pagination_total}}">{{ page.pagination_total }}</a>
+          </li>
+
+        {% endif %}
+
+        <li class="next">
+        {% if page.pagination_current == page.pagination_total %}
+        &gt;
+        {% else %}
+        <a href="/web/{{ page.pagination_root }}/{{ page.pagination_current | plus: 1 }}">&gt;</a>
+        {% endif %}
+        </li>
+
+      </ul>
+    </div>
+    {% endif %}
+
+  </div>
+
+  {% include footer.liquid %}

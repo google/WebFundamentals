@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: 制作指南
+    path: /fundamentals/getting-started/
+  - title: 文档
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: 网站设计原理
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: 多设备布局
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: 自适应网页设计基础知识
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: 自适应网页设计模式
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: 布局模式
+            path: /fundamentals/layouts/layout-patterns/
+          - title: 界面元素
+            path: /fundamentals/layouts/ui-elements/
+      - title: 表单和用户输入
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: 触摸输入
+            path: /fundamentals/input/touch/
+          - title: 表单输入
+            path: /fundamentals/input/form/
+      - title: 外观和风格
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: 动画简介
+            path: /fundamentals/look-and-feel/animations/
+      - title: 图片、视频和音频
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: 图片
+            path: /fundamentals/media/images/
+          - title: 视频
+            path: /fundamentals/media/video/
+          - title: 音频
+            path: /fundamentals/media/audio/
+      - title: 获利
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: 广告获利
+            path: /fundamentals/monetization/ad-monetization/
+      - title: 发现和分销
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: 设备相关权限
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: 用户位置信息
+            path: /fundamentals/device-access/user-location
+          - title: 点击通话
+            path: /fundamentals/device-access/click-to-call
+      - title: 性能
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: 关键路径呈现
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: 优化内容效率
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: 优化网络
+            path: /fundamentals/performance/optimizing-networking/
+          - title: 优化互动功能
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: 评估性能
+            path: /fundamentals/performance/measuring-performance/
+  - title: 工具
+    path: /fundamentals/tools/
+  - title: 资源
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: 术语表
+        path: /fundamentals/resources/glossary/
+      - title: 范例
+        path: /fundamentals/resources/samples/
+      - title: 风格指南
+        path: /fundamentals/resources/styleguide/
+      - title: 文章范例
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false

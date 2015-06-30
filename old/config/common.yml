@@ -1,0 +1,24 @@
+safe: false
+port: 8081
+source: src
+destination: appengine/build
+markdown: kramdown
+permalink: /articles/:title.html
+baseurl: /web
+fundamentals: /web/fundamentals
+url: /web
+highlighter: pygments
+spotlights: false
+github:
+  root: https://github.com/Google/WebFundamentals
+  content: tree/master/src
+custom:
+kramdown:
+  toc_levels: "2"
+  entity_output: :as_input
+include: ['.htaccess']
+exclude: ['README.md', '*.rb', '*.psd', 'js/*', '*.pxm', 'npm-debug.log']
+keep_files: ['_langs\/[a-z\-]+']
+langs_available: ['ar', 'de', 'es', 'fr', 'he', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
+# primary language, source of translations.
+prime_lang: en

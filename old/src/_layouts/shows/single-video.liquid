@@ -1,0 +1,96 @@
+<!-- Lets plan out the order of videos -->
+{% assign videos = page.articles[page.collection] | sort: 'date' | reverse  %}
+
+{% assign foundVideo = false %}
+{% for video in videos %}
+  {% if video.showYoutubeID != page.showYoutubeID %}
+    {% if foundVideo == false %}
+      {% assign nextVideo = video %}
+    {% else %}
+      {% assign prevVideo = video %}
+      {% break %}
+    {% endif %}
+  {% else %}
+    {% assign foundVideo = true %}
+  {% endif %}
+{% endfor %}
+
+{% assign showDetails = null %}
+{% assign shows = page.articles['shows'] | sort: 'title'  %}
+{% for show in shows %}
+  {% if show.id == page.showid %}
+    {% assign showDetails = show %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+
+  <!-- Template Starts Here -->
+
+    {% capture feedURL %}{{site.baseurl}}/shows/{{showDetails.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedURL=feedURL feedName=showDetails.title %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+  	<!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+
+
+
+    {% include modules/shows/show-title.liquid title=showDetails.title subtitle=page.title showid=page.showid classname="single-video" %}
+
+
+
+
+
+    {% wrap content %}
+
+
+
+
+      <!-- YouTube embed -->
+      {% include modules/video.liquid id=page.showYoutubeID %}
+
+
+
+      <div class="g-wide--3 g-medium--half singlevideo-content-container">
+        {{ content }}
+      </div>
+
+
+
+
+
+      <!-- Next and Previous Video Links -->
+      <div class="videolinks g-wide--1 g-wide--last g-medium--half g--last singevideo-next-prev-container">
+
+        <!-- Next Video -->
+        <div class="videolinks--next{% if nextVideo == nil %} not-available{% endif %}">
+          {% if nextVideo != nil %}
+            <p class="videolinks--description">Next Video</p>
+            {% include modules/shows/small-video.liquid video=nextVideo showid=page.showid %}
+          {% endif %}
+        </div>
+
+        <!-- Previous Video -->
+      	<div class="videolinks--prev{% if prevVideo == nil %} not-available{% endif %}">
+          {% if prevVideo != nil %}
+            <p class="videolinks--description">Previous video</p>
+            {% include modules/shows/small-video.liquid video=prevVideo showid=page.showid %}
+          {% endif %}
+      	</div>
+
+      </div>
+
+      <div class="clear"></div>
+
+    {% endwrap %}
+
+    {% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink=showDetails.emailSubscriptionLink %}
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

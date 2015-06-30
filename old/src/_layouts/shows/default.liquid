@@ -1,0 +1,13 @@
+    {% capture feedURL %}/shows/feed.xml{% endcapture %}
+    {% include head.liquid feedURL=feedURL feedName='Web Shows' %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    {{ content }}
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

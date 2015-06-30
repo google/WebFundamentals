@@ -1,0 +1,79 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+    {% injectdata content _betterbook-updates.yaml %}
+
+    {% include header.liquid %}
+
+
+	<header class="updates-header updates-header-{{page.type}} updates-header-single">
+	  <div class="container">
+	    <h1 class="headliner">{{page.title}}</h1>
+	    
+      <div class="details-wrapper">
+ 
+        {% for author in page.authors %}
+        {% assign contributor = site.data["contributors"][author] %}
+            <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+              <span class="icon-circle--large" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+            </a>
+        {% endfor %}
+
+        <div>
+          <div class="details">
+              <div class="type">{% if site.data.updates.products[page.product].short_title %}{{ site.data.updates.products[page.product].short_title }}{% else %}{{ site.data.updates.products[page.product].title }}{% endif %} {{ site.data.updates.types[page.type].title_singular }}</div>
+              <div class="date">{{ page.article.written_on | date: '%B %d, %Y' }}</div>
+              {% if page.authors %}
+              <div class="author">
+              {% for author in page.authors %}
+              {% assign contributor = site.data["contributors"][author] %}
+                  <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+                    {{contributor.name.given}} {{contributor.name.family}}
+                  </a>
+              {% endfor %}
+              </div>
+              {% endif %}
+              {% if page.tags %}
+              <div class="tags">
+                {% for tag in page.tags %}
+                <span>#{{tag}}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+          <div class="desc">{{page.description}}</div>          
+        </div>
+
+      </div>
+
+
+	  </div>
+	</header>
+
+  {% if page.source_name %}
+  <div class="external-source">
+    This article originally appeared on <a href="{{page.source_url}}">{{page.source_name}}</a>.
+  </div>
+  {% endif %}
+
+	<div class="update-container container">
+
+      {% include modules/update_filters.liquid article=page %}
+
+      <div class="update-content">
+        {{ content | markdownify }}
+      </div>
+	  	
+	</div>
+
+  <div class="update-comments">
+    <div id="gplus-comment-container" class="container">
+      <h2>Comments (<span id="gplus-comment-counter"></span>)</h2>
+      <div id="gplus-comments" data-url="https://developers.google.com/web{{page.url}}"></div>
+    </div>   
+  </div>
+
+    
+
+    {% include footer.liquid %}

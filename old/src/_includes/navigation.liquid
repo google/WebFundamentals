@@ -1,0 +1,95 @@
+{% assign superSection = page.title %}
+{% for section in page.content.toc %}
+{% unless section.home %}{% if page.url contains section.path %}{% assign superSection = section.title%}{% endif %}{% endunless %}
+{% if section.home and page.url == '/index.html' %}{% assign superSection = 'Web <strong>Fundamentals</strong>'%}{% endif %}
+{% endfor %}
+
+<nav class="main-nav">
+
+  <header class="main-nav__header">
+    <span class="main-nav__current-label">{{superSection}}</span>
+  </header>
+
+  <ul class="main-nav__list clear">
+
+    <li class="main-nav__item main-nav__item--has-child">
+      <a class="main-nav__link main-nav__link--parent" href="/web/?hl={{page.langcode}}" title="Go to /web">
+        /Web
+        <i class="main-nav__icon icon icon-custom"></i>
+      </a>
+      <div class="main-nav__secondary-nav">
+        <div class="main-nav__secondary-content">
+          <div class="clear">
+            {% injectdata rootnav _betterbook-root.yaml %}
+            <ul class="main-nav__list--child g-medium--2 g-wide--2">
+              {% for nav in page.rootnav.toc %}
+                {% unless page.url contains nav.path and nav.home != true %}
+                  <li class="main-nav__item--child">
+                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{nav.title}}" href="/web{{ nav.path }}?hl={{page.langcode}}">
+                      {{ nav.title }}
+                      <i class="main-nav__icon icon icon-chevron-right"></i>
+                    </a>
+                  </li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+  {% for section in page.content.toc %}
+    {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
+    {% assign stripTitle = section.title | strip_html %}
+    {% assign currentPath = section.path | append:"index.html" %}
+    {% if section.in_header != false  %}
+    <li class="main-nav__item main-nav__item--{% if section.en_title %}{{ section.en_title | downcase | replace:' ','-' }}{% else %}{{ section.title | strip_html | downcase | replace:' ','-' }}{% endif %} {% if section.home %} main-nav__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} main-nav__item--current{% endif %}{% endunless %}{% if section.home and page.url == currentPath %} main-nav__item--current{% endif %} {% if section.hasSubNav %} main-nav__item--has-child{% endif %}">
+      <a class="main-nav__link main-nav__link--parent" href="{% if section.external != true %}{{site.baseurl}}{% endif %}{{ section.path }}{% if section.external != true %}?hl={{page.langcode}}{% endif %}" title="Go to {{ stripTitle }}">
+
+        {{ section.title }}
+
+        {% if section.hasSubNav %}
+        <i class="main-nav__icon icon icon-custom"></i>
+        {% else %}
+        <i class="main-nav__icon icon icon-chevron-right"></i>
+        {% endif %}
+      </a>
+
+      {% if section.hasSubNav %}
+
+        <div class="main-nav__secondary-nav">
+
+          <div class="main-nav__secondary-content">
+
+            <div class="clear">
+              <ul class="main-nav__list--child g-medium--2 g-wide--2">
+                {% for subsection in section.section %}
+                  <li class="main-nav__item--child nav-theme--{{subsection.id}}">
+                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.title }}" href="{{site.baseurl}}{{ subsection.path }}?hl={{page.langcode}}">
+                      {% if subsection.id %}
+                      <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span>
+                      {% endif %}
+                      {{ subsection.title }}
+                      <i class="main-nav__icon icon icon-chevron-right"></i>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      {% endif %}
+
+    </li>
+    {% endif %}
+  {% endfor %}
+
+  </ul>
+  <button class="main-nav__btn btn--toggle-nav">
+    <i class="icon icon-menu"></i>
+  </button>
+
+</nav>

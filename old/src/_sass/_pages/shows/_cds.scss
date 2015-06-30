@@ -1,0 +1,33 @@
+$cdsColor: #0BB9D1;
+
+.showtitle--title-container-cds {
+	background-color: $cdsColor;
+	color: white;
+}
+
+.showtitle--title-cds {
+	font-weight: 500;
+}
+
+.showtitle--subtitle-cds {
+	@include type--medium;
+
+	padding-top: 0;
+	color: inherit;
+}
+
+@include wide {
+  .showtitle--subtitle-cds {
+		padding-top: 0;
+
+		color: inherit;
+	}
+}
+
+.showhome--series-title-cds, .showhome--series-title-cds a {
+
+}
+
+.smallvideo--title-container-cds, .smallvideo-cds {
+	background-color: $cdsColor;
+}

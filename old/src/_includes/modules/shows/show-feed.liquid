@@ -1,0 +1,62 @@
+{% assign MAX_NUM_OF_VIDEOS = 50 %}
+
+{% capture utm %}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=shows_{% if include.seriesId %}{{ include.seriesId }}_{% endif %}feed{% endcapture %}
+
+{% capture link %}https://developers.google.com{{ site.baseurl }}/shows/{% if include.seriesId %}{{ include.seriesId }}/{% endif %}{% endcapture %}
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+
+	<title>{{include.title}}</title>
+	<subtitle>{{include.description}}</subtitle>
+	<link type="text/html" href="{{ link }}{{ utm }}" rel="alternate"/>
+	<icon>https://developers.google.com/web/favicon.ico</icon>
+	<id>{{ link }}</id>
+  <updated>{{site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+	{% assign num = 0 %}
+	{% for video in include.videos %}
+		{% if num > MAX_NUM_OF_VIDEOS %}
+			{% break %}
+		{% endif %}
+
+		{% assign seriesPage = video.parent %}
+		{% capture title %}{% if include.showSeriesInTitle%}{{ seriesPage.title }} – {% endif %}{{ video.title }}{% endcapture %}
+		{% capture videocontent %}
+		{% include modules/video.liquid id=video.showYoutubeID width=560 height=315 %}
+		{{ video.content | markdownify }}
+    <img src="https://ga-beacon.appspot.com/UA-52746336-1/feed{{ video.url }}?pixel">
+		{% endcapture %}
+		{% capture screenshotTitle %}
+		YouTube screenshot of {{ seriesPage.title }} Video titled {{ video.title }}
+		{% endcapture %}
+	<entry>
+		<published>{{ video.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+		<updated>{{ video.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+
+		<id>https://developers.google.com{{ site.baseurl }}{{ video.url }}</id>
+		<title>{{title | xml_escape}}</title>
+
+		<link rel="alternate" type="text/html" href="https://developers.google.com{{ site.baseurl }}{{ video.url }}{{ utm }}" />
+
+		{% if video.authors %}
+		<author>
+			<name>{% for author in video.authors %}{% assign contributor = site.data["contributors"][author] %}{{contributor.name.given}} {{contributor.name.family}}{% if forloop.last == false %}, {% endif %}{% endfor %}</name>
+		</author>
+		{% endif %}
+    {% if video.showYoutubeID %}
+    <enclosure url="https://img.youtube.com/vi/{{ video.showYoutubeID }}/0.jpg" type="image/jpg"/>
+    <image>
+  		<link>https://developers.google.com{{ site.baseurl }}{{ video.url }}</link>
+  		<title>{{ screenshotTitle | xml_escape }}</title>
+  		<url>https://img.youtube.com/vi/{{ video.showYoutubeID }}/0.jpg</url>
+		</image>
+    {% endif %}
+
+		<content type="html">
+			<![CDATA[
+			{{ videocontent }}
+			]]>
+		</content>
+	</entry>
+	{% assign num = num | plus: 1 %}
+	{% endfor %}
+</feed>

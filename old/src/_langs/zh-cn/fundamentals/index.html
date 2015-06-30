@@ -1,0 +1,100 @@
+---
+layout: default
+description: "Web 基本法则是一份详尽的多设备 web 开发资料。"
+class: home
+title: Web 基本法则
+id: home
+---
+
+<style>
+  .sections {
+    margin-bottom: 52px;
+  }
+
+</style>
+
+<div class="home-header centered">
+  <div class="container">
+    <h1>Web <b>基本法则</b></h1>
+    <p>现代 web 开发最佳实践</p>
+    <a href="{{site.fundamentals}}/getting-started/your-first-multi-screen-site/?hl={{page.langcode}}" title="开始学习 Web 基本法则" class="button--secondary-variation">开始</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="centered">
+    <h3 class="g-wide--2 g--centered xlarge">构建美妙的多设备 web 体验</h3>
+    <p class="g-wide--3 g--centered">
+      Web 基本法则是一份详尽的多设备 web 开发资料。我们才刚开始，需要你的帮助，如果你发现错误，欢迎<a href="{{site.github.root}}/issues" title="在 GitHub 上报告问题">报告问题</a>，或是有所建议，请<a href="{{site.github.root}}/pulls" title="在 GitHub 上提交 pull 请求">提交 pull 请求</a>。
+    </p>
+    <p class="g-wide--3 g--centered">
+      基于 <a href="/web/starter-kit/">Google Web 新手开发包</a>，你可以在数分钟内创建出完全遵循我们所有最佳实践的新站点。
+    </p>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered">  
+    <ul class="list-guides-intro guides-list container">
+
+      {% for guide in page.articles.[page.id] %}
+      {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
+        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}" class="themed">
+            <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
+            <h3 class="large">{{guide.title}}</h3>
+          </a>
+          <p>{{ guide.snippet }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+    </div>
+  </div>
+</div>
+
+{% if site.spotlights == true %}
+
+{% featured_showcase showcase %}
+
+<div class="featured-section">
+  <div class="container-medium">
+    <ul class="featured-list">
+      <li class="featured-list__item clear">
+        <div class="container-small">
+          <div class="featured-list__content g--half">
+            <h3>Case study</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+            <a href="#" class="cta--primary">View Google</a>
+          </div>
+          <figure class="featured-list__img-wrapper g--half g--last">
+            <img src="../../imgs/placeholder--medium.png" alt="image example">
+          </figure>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% comment %}
+<div class="recommended-section">
+  <div class="container-medium">
+    <ul class="recommended-list">
+      <li class="recommended-list__item clear theme--multi-device-layouts">
+        <div class="recommanded-list__content g--half">
+          <h4 class="themed large">Multi-device layouts</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#" class="cta--primary">Get started</a>
+        </div>
+        <div class="recommanded-list__content g--half g--last">
+          <h4 class="large">Resources</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+          <a href="#" class="cta--primary">View</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcomment %}

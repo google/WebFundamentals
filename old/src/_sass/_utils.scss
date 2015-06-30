@@ -1,0 +1,531 @@
+/**
+*
+* Utils
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+/*==========  VARIABLES  ==========*/
+
+  // Defining breakpoints
+  $medium: 620px;
+  $wide: 800px;
+  $huge: 1600px;
+  $mediumContainer: 688px;
+  $wideContainer: 864px;
+
+  $containerBleed: 16px;
+  $mediumContainerBleed: 30px;
+  $wideContainerBleed: 35px;
+
+  // Defining grid sizes
+  $mediumColCount: 3;
+  $mediumColWidth: 30.3%;
+  $mediumGutterWidth: 4.5%;
+  $wideColCount: 4;
+  $wideColWidth: 22.2%;
+  $wideGutterWidth: 3.7%;
+
+  // Defining colors
+  $colorBlue: #4285f4;
+  $colorBlueSecondary: #a0c3ff;
+  $colorGreen: #0f9d58;
+  $colorGreenSecondary: #78cfa9;
+  $colorRed: #cb4437;
+  $colorRedSecondary: #ed9d97;
+  $colorYellow: #f4b400;
+  $colorYellowSecondary: #ffe168;
+
+  $colorRemember: #09829a;
+  $colorLearning: #da2e75;
+
+  $colorGrayBackground: #f0f0f0;
+  $colorGrayKeyline: #e0e0e0;
+  $colorGray: #737373;
+  $colorGrayMedium: #bababa;
+  $colorGrayDark: #404040;
+
+  $colorText: $colorGrayDark;
+  $colorHighlight: #3372df;
+  $colorWarning: $colorYellowSecondary;
+  $colorMuted: $colorGray;
+  $colorDanger: $colorRed;
+
+  // Note - these colors are also hard coded in _includes/head.liquid so
+  // that we can include the meta theme-color.  If you update any of these
+  // you'll also need to update them in that file as well.
+  $colorLayouts: #297ea9;
+  $colorLayoutsSecondary: lighten($colorLayouts, 30%);
+  $colorDevice: #29A8A8;
+  $colorDeviceSecondary: lighten($colorLayouts, 30%);
+  $colorTools: #CF3A8C;
+  $colorToolsSecondary: lighten($colorTools, 30%);
+  $colorUser: #2c8566;
+  $colorUserSecondary: lighten($colorUser, 30%);
+  $colorMonetization: #056f00;
+  $colorMonetizationSecondary: lighten($colorMonetization, 30%);
+  $colorMedia: #cf423a;
+  $colorMediaSecondary: lighten($colorMedia, 30%);
+  $colorPerformance: #7b5294;
+  $colorPerformanceSecondary: lighten($colorPerformance, 30%);
+  $colorLookAndFeel: #404040;
+  $colorLookAndFeelSecondary: lighten($colorLookAndFeel, 30%);
+  $colorPrinciples: #ff5722;
+  $colorPrinciplesSecondary: lighten($colorPrinciples, 30%);
+  $colorDiscoveryAndDistribution: #3f51b5;
+  $colorDiscoveryAndDistributionSecondary: lighten($colorDiscoveryAndDistribution, 30%);
+
+  // Defining font family
+  $fontDefault: Helvetica, Arial, sans-serif;
+  $fontHighlight: "Roboto Condensed", Helvetica, sans-serif;
+  $fontIcon: "icons";
+
+  // Defining font sizes
+  $fontSmall: 13px;
+  $fontBase: 16px;
+  $fontMedium: 20px;
+  $fontLarge: 26px;
+  $fontXLarge: 42px;
+  $fontXXLarge: 68px;
+  $fontHuge: 110px;
+
+  // Defining baseline line height
+  $lineHeight: 26px;
+
+  // Defining animation easings
+  $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+	// Defining sidebar stuff
+	$sidebarWidth: 280px;
+
+
+/*==========  FUNCTIONS  ==========*/
+
+  @function leading($size, $context: $lineHeight) {
+    @return  $context / $size + em;
+  }
+
+
+/*==========  MIXINS  ==========*/
+
+  @mixin prefixr($property, $value...) {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+            #{$property}: $value;
+  }
+
+  @mixin media-query($media-query) {
+    @if $media-query == small {
+      @media only screen and (max-width:$medium - 1) { @content; }
+    }
+
+    @if $media-query == medium {
+      @media only screen and (min-width:$medium) { @content; }
+    }
+
+    @if $media-query == medium-only {
+      @media only screen and (min-width:$medium) and (max-width: $wide - 1) { @content; }
+    }
+
+    @if $media-query == wide {
+      @media only screen and (min-width:$wide) { @content; }
+    }
+
+    @if $media-query == huge {
+      @media only screen and (min-width:$huge) { @content; }
+    }
+  }
+
+  // Just some helpers...
+  @mixin small-only { @include media-query(small) { @content }; }
+  @mixin medium { @include media-query(medium) { @content }; }
+  @mixin medium-only { @include media-query(medium-only) { @content }; }
+  @mixin wide { @include media-query(wide) { @content }; }
+  @mixin huge { @include media-query(huge) { @content }; }
+
+
+  @mixin keyframes($animation-name){
+    @-webkit-keyframes #{$animation-name}{
+      @content;
+    }
+
+    @-moz-keyframes #{$animation-name}{
+      @content;
+    }
+
+    @-ms-keyframes #{$animation-name}{
+      @content;
+    }
+
+    @keyframes #{$animation-name}{
+      @content;
+    }
+  }
+
+  // Mixin to constrain elements
+  @mixin container($isRelative: false, $ignoreMobile: false) {
+    @include prefixr(box-sizing, content-box);
+
+    @if $isRelative {
+      position: relative;
+    }
+
+    @if $ignoreMobile == false {
+      padding-left: $containerBleed;
+      padding-right: $containerBleed;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-query(medium) {
+      padding-left: $mediumContainerBleed;
+      padding-right: $mediumContainerBleed;
+      max-width: $mediumContainer;
+    }
+
+    @include media-query(wide) {
+      padding-left: $wideContainerBleed;
+      padding-right: $wideContainerBleed;
+    	max-width: $wideContainer;
+    }
+  }
+
+  // Mixin to show a baseline grid
+  // only visible when body has 'debug' class
+  @mixin baseline-grid() {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      z-index: 9;
+
+      display: none;
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15)));
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.15) 100%);
+      background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+      background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.15) 100%);
+      background-image: linear-gradient(top, rgba(0,0,0,0.15) 95%,rgba(0,0,0,0.15) 100%);
+
+      @include prefixr(background-size, 100% 26px);
+    }
+
+    &.debug:after {
+      display: block;
+      pointer-events: none;
+    }
+  }
+
+  // Mixins simply to store CSS rules
+  @mixin rule--small {
+    font-size: $fontSmall;
+    line-height: 2.0000em; /* 26px */
+    padding-top: 2.0000em;
+    padding-bottom: 0;
+    letter-spacing: 0;
+  }
+
+  @mixin rule--base {
+    font-size: $fontBase;
+    line-height: 1.6250em; /* 26px */
+    padding-top: 1.6250em;
+    padding-bottom: 0;
+    letter-spacing: 0;
+  }
+
+  @mixin rule--medium {
+    color: $colorGrayDark;
+    font-size: $fontMedium;
+    font-weight: 300;
+    line-height: 1.3000em; /* 26px */
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+    letter-spacing: -0.3px;
+  }
+
+  @mixin rule--large {
+    color: $colorGrayDark;
+    font-family: $fontHighlight;
+    font-size: $fontLarge;
+    font-weight: 300;
+    line-height: 1.0000em; /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+    letter-spacing: -0.3px;
+  }
+
+  @mixin rule--xlarge {
+    color: $colorGrayDark;
+    font-family: $fontHighlight;
+    font-size: $fontXLarge;
+    font-weight: 300;
+    line-height: 1.2381em; /* 52px */
+    padding-top: 0.6190em;
+    padding-bottom: 0;
+    letter-spacing: -0.3px;
+  }
+
+  @mixin rule--xxlarge {
+    color: $colorGrayDark;
+    font-family: $fontHighlight;
+    font-size: $fontXXLarge;
+    font-weight: 300;
+    line-height: 1.1471em; /* 78px */
+    padding-top: 0.3824em;
+    padding-bottom: 0;
+    letter-spacing: -3px;
+  }
+
+  @mixin rule--huge {
+    color: $colorGrayDark;
+    font-family: $fontHighlight;
+    font-size: $fontHuge;
+    font-weight: 300;
+    line-height: 1.19em; /* 130px */
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+    letter-spacing: -5px;
+  }
+
+
+
+  // Mixins to determine which rule to use at which breakpoint
+  @mixin type--small($isFromMixin: false) {
+    @include rule--small;
+  }
+
+  @mixin type--base($isFromMixin: false) {
+    @include rule--base;
+  }
+
+  @mixin type--medium($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--base(true);
+      @include wide {
+        @include rule--medium;
+      }
+    }
+    @else {
+      @include rule--medium;
+    }
+  }
+
+  @mixin type--large($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--medium(true);
+      @include wide {
+        @include rule--large;
+      }
+    }
+    @else {
+      @include rule--large;
+    }
+  }
+
+  @mixin type--xlarge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--large(true);
+      @include wide {
+        @include rule--xlarge;
+      }
+    }
+    @else {
+      @include rule--xlarge;
+    }
+  }
+
+  @mixin type--xxlarge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--xlarge(true);
+      @include wide {
+        @include rule--xxlarge;
+      }
+    }
+    @else {
+      @include rule--xxlarge;
+    }
+  }
+
+  @mixin type--huge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--xxlarge(true);
+      @include wide {
+        @include rule--huge;
+      }
+    }
+    @else {
+      @include rule--huge;
+    }
+  }
+
+  // Creating a mixing to inherit color from parent
+  // this is because we also need to reset it from
+  // the media query. More manageable like this.
+  @mixin color-inherit {
+    color: inherit;
+
+    @include medium {
+      color: inherit;
+    }
+  }
+
+
+  // LISTS
+  @mixin bullet($side: "left", $icon: $icon-bullet, $fontSize: 4px) {
+    &:before {
+      content: $icon;
+      font-family: $fontIcon;
+      font-size: $fontSize;
+
+      display: block;
+      width: 16px; // Same width as padding-left on the items
+      text-align: left;
+      font-weight: 400;
+      line-height: $lineHeight;
+
+      position: absolute;
+      top: 0;
+      @if $side == "left" {
+        left: 0px;
+      }
+      @if $side == "right" {
+        right: 0px;
+      }
+    }
+  }
+
+  @mixin numbered-list($side: "left") {
+    &:before {
+      counter-increment: list;
+      content: "0" counter(list);
+      color: inherit;
+      font-weight: 400;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      @if $side == "left" {
+        left: 0px;
+        right: auto;
+      }
+      @if $side == "right" {
+        right: 0px;
+        left: auto;
+      }
+    }
+  }
+
+  // Mixin to create buttons
+  @mixin style-button($color, $textColor, $isInverted: false) {
+    background: $color;
+    color: $textColor;
+    border: 1px solid darken($color, 10%);
+    @if $isInverted { border-color: transparent; }
+  }
+
+  // Mixin to create links
+  @mixin style-cta($textColor, $linkIcon: false, $fontWeight: 400) {
+    font-family: $fontHighlight;
+    color: $textColor;
+    font-weight: $fontWeight;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $colorGrayDark;
+    }
+
+    @if $linkIcon {
+      text-decoration: none;
+      &:before {
+        display: inline-block;
+        padding-right: 10px;
+        font-family: $fontIcon;
+        line-height: ($lineHeight) - 1; // remove 1px from line-height to fix baseline alignment
+        font-size: $fontSmall;
+        content: $linkIcon;
+      }
+    }
+  }
+
+  // Mixin to create highlight modules
+  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 35px, $fontSize: 130px) {
+    position: relative;
+
+    &:before {
+      display: none;
+
+      @include medium {
+        display: block;
+        position: absolute;
+        top: 106px;
+        right: 32px;
+
+        font-family: $fontIcon;
+        font-size: $fontSize;
+        line-height: 1px;
+        text-align: center;
+        height: 100%;
+        width: 27.5%;
+        color: #ffffff;
+      }
+
+      .highlight-module--left & {
+        right: auto;
+        left: 32px;
+      }
+
+      @include wide {
+        top: 134px;
+        right: $horizontalOffset;
+        width: 20.5%;
+        font-size: $fontSize + 50;
+
+        .highlight-module--left & {
+          left: $horizontalOffset;
+        }
+
+        .highlight-module--large & {
+          font-size: $fontSize + 300;
+        }
+      }
+    }
+  }
+
+  // Grid CSS rules
+  @mixin rule--col($mediaQuery) {
+    @if $mediaQuery == medium {
+      float: left;
+      margin-right: $mediumGutterWidth;
+    }
+
+    @if $mediaQuery == wide {
+      float: left;
+      margin-right: $wideGutterWidth;
+    }
+  }
+
+  // Mixin for flexbox
+  @mixin flexbox {
+    display: -webkit-flex;
+    display: flex;
+
+    // If browser doens't support this - fallback to display block! Amazing!!!
+    @supports not (flex-wrap: wrap) {
+      display: block;
+    }
+
+  }

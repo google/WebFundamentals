@@ -1,0 +1,41 @@
+$ttt-bg-color: #323232;
+$ttt-white-font-color: #ECEDEE;
+
+.showtitle--title-container-ttt {
+  background-color: $ttt-bg-color;
+  text-indent: -99999px;
+
+  padding: ($padding * 6) 0 0 0;
+}
+
+.showtitle--title.showtitle--title-ttt {
+  height: 200px;
+  background-image: url(/web/shows/ttt/imgs/ttt_header.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+
+  box-sizing: border-box;
+}
+
+.showtitle--subtitle.showtitle--subtitle-ttt {
+  height: 0;
+}
+
+.showtitle--title-ttt {
+  color: $ttt-white-font-color;
+}
+
+.showtitle--subtitle-ttt {
+  color: $ttt-white-font-color;
+}
+
+.showhome--series-title-ttt, .showhome--series-title-ttt a {
+  color: $ttt-bg-color;
+}
+
+.smallvideo--title-container-ttt, .smallvideo-ttt {
+  color: $ttt-white-font-color;
+
+  background-color: $ttt-bg-color;
+}

@@ -1,0 +1,201 @@
+/**
+*
+* Spotlight wrapper
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Paul Bakaus
+*
+**/
+
+.spotlight-wrapper {
+  padding-top: $lineHeight;
+
+  background: $colorGrayBackground;
+
+  @include medium {
+    padding-top: $lineHeight*3;
+    padding-bottom: $lineHeight*2;
+    background: $colorYellowSecondary;
+  }
+
+  @include wide {
+    min-height: 470px;
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .related-items {
+
+    margin-top: 38px;
+    padding-top: 24px;
+
+    @include medium {
+      margin-top: 218px;
+      padding-top: 50px;
+      border-color: #EAC017;
+    }
+
+    @include wide {
+      margin-top: 408px;
+    }
+
+  }
+
+  .related-items-list {
+    padding-top: 26px;
+  }
+
+  .related-items-list a {
+    overflow: visible;
+  }
+
+}
+
+.spotlight-interview-wrapper {
+  padding-top: $lineHeight*2;
+  padding-bottom: $lineHeight;
+  border-bottom: 1px solid #eee;
+}
+
+.spotlight-listing .related-items {
+  margin-top: 0;
+  border: 0;
+}
+
+.spotlight-listing .related-items-list li:nth-child(3n+4) {
+  margin-left: auto;
+}
+
+.spotlight-wrapper__content {
+
+  @include wide {
+    min-height: 310px;
+  }
+
+  h3 {
+    margin-top: 26px;
+  }
+
+  @include wide {
+    h2,h3,p {
+      margin-right: 11.9%;
+    }
+  }
+
+  dl {
+    padding-left: 0;
+  }
+
+}
+
+.spotlight-tags {
+  padding-top: 0.5em;
+}
+
+.spotlight-scores {
+
+  text-align: center;
+  margin-top: 30px;
+
+  @include medium {
+    margin-top: 50px;
+  }
+
+  @include wide {
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+
+  div {
+    display: inline-block;
+    margin-top: 18px;
+    @include medium {
+      display: block;
+      margin-top: 0;
+    }
+  }
+
+  span {
+    font-size: 26px;
+    display: inline-block;
+    border-radius: 100px;
+    width: 100px;
+
+    @include medium {
+      color: #fff;
+    }
+
+    @include medium {
+      line-height: 107px;
+      height: 100px;
+    }    
+
+    &.low {
+
+      strong {
+        color: $colorRed;
+      }
+
+      @include medium {
+        background: $colorRed;
+        strong {
+          color: #fff;
+        }
+      }
+
+    }
+
+    &.med {
+
+      strong {
+        color: $colorYellow;
+      }
+
+      @include medium {
+        background: $colorYellow;
+        strong {
+          color: #fff;
+        }
+      }
+
+    }
+
+    &.high {
+
+      strong {
+        color: $colorGreen;
+      }
+
+      @include medium {
+        background: $colorGreen;
+        strong {
+          color: #fff;
+        }
+      }
+
+    }
+
+  }
+
+  a {
+    display: block;
+    @include medium {
+      margin-top: 12px;
+    }
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+}
+
+div.related-items-on-spotlight {
+  margin-top: 0;
+  border: 0;
+}
