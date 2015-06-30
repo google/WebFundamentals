@@ -1,8 +1,9 @@
 *~
 *.pyc
 *.swp
+*.csv
 .idea
-build
+/build
 .DS_Store
 .sass-cache/
 node_modules/
@@ -11,3 +12,5 @@ node_modules/
 .grunt-gae-pid
 src/css/styles.css
 src/css/styles.min.css
+jekyll/content
+/new/src/static/styles/*
