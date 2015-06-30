@@ -1,0 +1,14 @@
+toc:
+- title: "<strong>Showcase</strong>"
+  path: /showcase/
+  home: true
+- title: "Case Studies"
+  path: /showcase/case-study/
+- title: "Spotlights"
+  path: /showcase/spotlight/
+- title: Web <strong>Fundamentals</strong>
+  path: /fundamentals/
+  in_header: false
+- title: Web <strong>Starter Kit</strong>
+  path: /starter-kit/
+  in_header: false
