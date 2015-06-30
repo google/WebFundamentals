@@ -1,0 +1,13 @@
+    {% include page-structure/html-head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/Article">
+    {% injectdata content _betterbook-mdl.yaml %}
+
+    {% include page-structure/page-header-and-nav.liquid %}
+
+    {{ content }}
+
+    <div class="mdl-footer">
+    {% include page-structure/page-footer.liquid %}
+    </div>

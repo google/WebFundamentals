@@ -1,0 +1,41 @@
+  {% include page-structure/html-head.liquid %}
+</head>
+
+<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }} debug-enabled" itemscope itemtype="http://schema.org/WebSite">
+
+  {% include page-structure/page-header-and-nav.liquid %}
+
+  <header class="tools-header updates-header">
+    <h1>Web Updates</h1>
+    <p>Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and
+    check out the latest features in DevTools.</p>
+  </header>
+
+  <div class="container updates-list-header">
+    <ul>
+      {% for article in page.updates %}
+        <li class="clear {{article.type}} update-card">
+          {% include updates/update_card.liquid article=article %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="container updates-pagination">
+    <ul>
+      {% if page.prev_url %}
+      <li class="prev">
+        <a href="{{page.prev_url}}">&lt;</a>
+      </li>
+      {% endif %}
+
+      {% if page.next_url %}
+      <li class="next">
+        <a href="{{page.next_url}}">&gt;</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+
+
+  {% include page-structure/page-footer.liquid %}
