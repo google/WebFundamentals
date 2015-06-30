@@ -1,0 +1,33 @@
+    {% include page-structure/html-head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--article article--{{page.collection}} theme--{{page.collection}}" itemscope itemtype="http://schema.org/TechArticle">
+
+    {% include page-structure/page-header-and-nav.liquid %}
+
+    <div class="article-container" itemprop="text">
+      <div class="editorial-header">
+        <div class="container">
+          <div class="content">
+
+            {% include components/breadcrumbs.liquid %}
+
+            <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
+            <h2 class="editorial-header__subtitle" itemprop="name">{{page.title}}</h2>
+
+            {% include components/author_header.liquid %}
+
+            <p class="editorial-header__excerpt" itemprop="headline">{{page.introduction}}</p>
+
+          </div>
+        </div>
+      </div>
+
+      {{ content }}
+
+      {% if page.lessonsToc != false %}
+        {% include components/lessons_toc.liquid %}
+      {% endif %}
+    </div> <!-- /.article-container -->
+    {% include components/license.liquid %}
+    {% include page-structure/page-footer.liquid %}

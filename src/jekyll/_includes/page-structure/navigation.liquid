@@ -1,0 +1,66 @@
+<ul class="main-nav__list clear">
+
+  <!-- This Section displays the Root Navigation for /web -->
+  <li class="main-nav__item main-nav__item--has-child">
+    <a class="main-nav__link main-nav__link--parent" href="/web/?hl={{page.langcode}}" title="Go to /web">
+      /Web
+      <i class="main-nav__icon icon icon-custom"></i>
+    </a>
+  </li>
+  {% for rootNavTocItem in page.rootnav.toc %}
+  <li class="main-nav__item--child">
+    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{rootNavTocItem.strippedTitle}}" href="/web{{ rootNavTocItem.path }}?hl={{page.langcode}}">
+      {{ rootNavTocItem.title }}
+      <i class="main-nav__icon icon icon-chevron-right"></i>
+    </a>
+  </li>
+  {% if rootNavTocItem.isInCurrentSection %}
+  <li>
+    <ul>
+      <!-- This Section displays the Navigation for current section -->
+      {% for contentnavTocItem in page.contentnav.toc %}
+        {% assign currentPath = contentnavTocItem.path | append:"index.html" %}
+
+        <li class="main-nav__item main-nav__item--{{ contentnavTocItem.strippedTitle | downcase | replace:' ','-' }} {% if contentnavTocItem.home %} main-nav__item--home {% else %}{% if page.url contains contentnavTocItem.path %} main-nav__item--current{% endif %}{% endif %}{% if contentnavTocItem.home and page.url == currentPath %} main-nav__item--current{% endif %} {% if contentnavTocItem.hasSubNav %} main-nav__item--has-child{% endif %}">
+          <a class="main-nav__link main-nav__link--parent" href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
+            {{ contentnavTocItem.title }}
+
+            {% if contentnavTocItem.hasSubNav %}
+            <i class="main-nav__icon icon icon-custom"></i>
+            {% else %}
+            <i class="main-nav__icon icon icon-chevron-right"></i>
+            {% endif %}
+          </a>
+
+          {% if contentnavTocItem.hasSubNav %}
+            <div class="main-nav__secondary-nav">
+              <div class="main-nav__secondary-content">
+
+                <div class="clear">
+                  <ul class="main-nav__list--child g-medium--2 g-wide--2">
+                    {% for subsection in contentnavTocItem.section %}
+                      <li class="main-nav__item--child nav-theme--{{subsection.id}}">
+                        <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.strippedTitle }}" href="{{ subsection.path }}">
+                          {% if subsection.id %}
+                          <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span>
+                          {% endif %}
+                          {{ subsection.title }}
+                          <i class="main-nav__icon icon icon-chevron-right"></i>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          {% endif %}
+
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

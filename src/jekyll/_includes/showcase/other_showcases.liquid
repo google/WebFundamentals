@@ -1,0 +1,22 @@
+{% if page.other_showcases %}
+<div class="related-items related-items--showcases {% if include.minimal %} related-items--minimal {% endif %} clear">
+  <h3 class="related-items__title g-wide--1 g-medium--full">{{include.title | localize_string}}</h3>
+  <div class="related-items__section clear">
+
+    <ul class="related-items-list list-reset">
+    {% for showcase in page.other_showcases %}
+      <li class="g-medium--1 g-wide--1 {% cycle '','','g-medium--last g-wide--last' %}">
+
+        <p class="medium">
+          <a href="{{showcase.link}}">
+            <img src="{{showcase.image}}" alt="{{showcase.title}}">
+            {{showcase.description}}
+          </a>
+        </p>
+
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
