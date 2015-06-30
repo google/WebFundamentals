@@ -1,0 +1,102 @@
+---
+layout: default
+description: "Web Fundamentals - המקור המקיף לפיתוחי רשת על מגוון מכשירים "
+class: home
+title: Web Fundamentals
+id: home
+---
+
+<style>
+  .sections {
+    margin-bottom: 52px;
+  }
+
+</style>
+
+<div class="home-header centered">
+  <div class="container">
+    <h1>Web <b>Fundamentals</b></h1>
+    <p>שיטות עבודה מומלצות לפיתוחי רשת</p>
+    <a href="{{site.fundamentals}}/getting-started/your-first-multi-screen-site/" title="Get started with Web Fundamentals" class="button--secondary-variation">התחל</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="centered">
+    <h3 class="g-wide--2 g--centered xlarge">בנה חווית משתמש מעולה על מגוון מכשירים</h3>
+    <p class="g-wide--3 g--centered">
+      יסודות אינטרנט הוא משאב מקיף עבור פיתוח לאינטרנט רב מכשירי. אנחנו רק בתחילת הדרך ורוצים את העזרה שלך, אם אתה  רואה שמשהו אינו כשורה או שיש לי הצעה
+      <a href="{{site.github.root}}/issues" title="File an issue on GitHub">פתח סוגיה</a><br>
+      <a href="{{site.github.root}}/pulls" title="Submit a pull request on GitHub">Pull Request או שלח לנו</a>.
+    </p>
+    <p class="g-wide--3 g--centered">
+      אתה יכול להשתמש <a href="/web/starter-kit/">Google Web Starter Kit</a> כדי להתחיל ליצור אתרים חדשים בדקות הבאות על פי ההדרכה שנתאר בהמשך.<br>זה הולך להיות כייף גדול אז קדימה לעבודה.
+    </p>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered">  
+    <ul class="list-guides-intro guides-list container">
+
+      {% for guide in page.articles.[page.id] %}
+      {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;">
+        <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}" class="themed">
+            <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
+            <h3 class="large">{{guide.title}}</h3>
+          </a>
+          <p>{{ guide.snippet }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+    </div>
+  </div>
+</div>
+
+{% if site.spotlights == true %}
+
+{% featured_showcase showcase %}
+
+<div class="featured-section">
+  <div class="container-medium">
+    <ul class="featured-list">
+      <li class="featured-list__item clear">
+        <div class="container-small">
+          <div class="featured-list__content g--half">
+            <h3>Case Study</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+            <a href="#" class="cta--primary">View Google</a>
+          </div>
+          <figure class="featured-list__img-wrapper g--half g--last">
+            <img src="../../imgs/placeholder--medium.png" alt="image example">
+          </figure>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% comment %}
+<div class="recommended-section">
+  <div class="container-medium">
+    <ul class="recommended-list">
+      <li class="recommended-list__item clear theme--multi-device-layouts">
+        <div class="recommanded-list__content g--half">
+          <h4 class="themed large">Multi-device layouts</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#" class="cta--primary">Get started</a>
+        </div>
+        <div class="recommanded-list__content g--half g--last">
+          <h4 class="large">Resources</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+          <a href="#" class="cta--primary">View</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcomment %}

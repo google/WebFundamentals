@@ -1,0 +1,100 @@
+/**
+*
+* Editorial Header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.editorial-header {
+
+  .breadcrumbs {
+    color: $colorBlue;
+
+    a {
+      color: $colorBlue;
+    }
+  }
+
+  .container {
+
+    @include medium {
+      position: relative;
+
+      // Pseudo elements to add the background characters
+      &:before {
+        content: $icon-chevron-large;
+        font-family: $fontIcon;
+        font-size: 1000px;
+        line-height: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        color: $colorGrayBackground;
+        margin: 168px -35px 0 0;
+      }
+    }
+  }
+
+  // Also adding subtitle here due to specifity
+  // but also be more generic about it
+  h2 {
+    margin-top: 0;
+    position: relative;
+  }
+
+}
+
+body[dir=rtl] .editorial-header .container:before {
+  right: auto;
+  left: 100%;
+  content: $icon-chevron-left;
+  margin: 168px 0 0 -35px;
+}
+
+.editorial-header__excerpt {
+  @include type--medium(true);
+  font-family: $fontHighlight;
+}
+
+.editorial-header .tag{
+  padding-top: $lineHeight*2;
+}
+
+.editorial-header__subtitle {
+  @include type--xxlarge;
+  padding-top: 0;
+
+  @include medium {
+    padding-top: 0;
+    padding-bottom: $lineHeight;
+    margin-top: 0;
+  }
+
+  color: $colorBlue;
+}
+
+.editorial-header__toc {
+  margin-top: $lineHeight;
+
+  ol {
+    padding-top: 0;
+
+    @include medium {
+      padding-top: 0;
+    }
+  }
+}
+
+.editorial-header__toc-title {
+  font-family: $fontHighlight;
+  border-bottom: 1px solid $colorGrayKeyline;
+  margin-bottom: 13px;
+  padding-bottom: 13px !important;
+  color: $colorBlue;
+}

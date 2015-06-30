@@ -1,0 +1,11 @@
+toc:
+- title: "<strong>Updates</strong>"
+  path: /updates/
+  home: true
+- title: "News"
+  path: /updates/news/
+- title: "Tips & Tricks"
+  path: /updates/tip/
+- title: Web <strong>Fundamentals</strong>
+  path: /fundamentals/
+  in_header: false

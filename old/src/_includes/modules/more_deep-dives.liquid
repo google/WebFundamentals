@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="related-items clear {% if include.on-deep-dive %}related-items-on-spotlight{% endif %}">
+    <h3 class="related-items__title g-wide--1 g-medium--full">More deep dives</h3>
+    <div class="related-items__section clear">
+
+      <ul class="related-items-list list-reset">
+
+        {% assign count = '' %}
+        {% assign spotlights = page.articles.deep-dive | sort: 'date' | reverse  %}
+        {% for spotlight in spotlights limit:3 %}
+          {% if page.id != spotlight.id and count.size < 3 %}
+          <li class="g-medium--1 g-wide--1{% cycle 'more-spotlights': '', '', ' g-medium--last g-wide--last' %}">
+            <a href="{{site.baseurl}}{{spotlight.url | canonicalize}}">
+              <img src="{{site.baseurl}}/showcase/deep-dive/images/{{ spotlight.id }}/screenshot-small.png" alt="{{spotlight.title}}">
+              <p class="medium">{{spotlight.title}}</p>
+            </a>
+          </li>
+          {% capture count %}{{ count }}*{% endcapture %}
+          {% endif %}
+        {% endfor %}
+
+      </ul>
+
+    </div>
+  </div>
+
+</div>

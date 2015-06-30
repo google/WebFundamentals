@@ -1,0 +1,13 @@
+toc:
+- title: "<strong>Polymer Starter Kit</strong>"
+  path: /tools/polymer-starter-kit/
+  home: true
+- title: "Download"
+  path: https://github.com/polymerelements/polymer-starter-kit/releases
+  external: true
+- title: "GitHub"
+  path: https://github.com/polymerelements/polymer-starter-kit
+  external: true
+- title: Web <strong>Fundamentals</strong>
+  path: /fundamentals/
+  in_header: false

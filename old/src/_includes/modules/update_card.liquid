@@ -1,0 +1,47 @@
+{% assign article = include.article %}
+<a href="{{site.baseurl}}{{article.url | canonicalize}}">
+{% if article.featured-image %}
+<div class="featured-img" style="background-image: url({{include.article.featured-image}});"></div>
+{% elsif article.type == "spotlight" %}
+<div class="featured-img" style=" background-color: #516EA3; background-image: url(/web/showcase/spotlight/images/{{include.article.id}}/screenshot.png);"></div>
+{% elsif article.type == "case-study" %}
+<div class="featured-img" style="background-image: url(/web/showcase/case-study/images/{{include.article.id}}/thumbnail-medium.jpg);"></div>
+{% endif %}
+
+<h4>{% if site.data.updates.products[article.product].short_title %}{{ site.data.updates.products[article.product].short_title }}{% else %}{{ site.data.updates.products[article.product].title }}{% endif %} {{ site.data.updates.types[article.type].title_singular }}</h4>
+<h3>{{article.title}}</h3>
+
+{% if article.description %}
+<div class="description">
+  {{article.description}}
+</div>
+{% endif %}
+ </a>
+{% if article.tags %}
+<div class="tags">
+  {% for tag in article.tags %}
+  <a href="/web/updates/tags/{{tag}}">#{{tag}}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
+<footer>
+
+  {% if article.authors %}
+  <div>
+  {% for author in article.authors %}
+  {% assign contributor = site.data["contributors"][author] %}
+      <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+        <span class="icon-circle" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+        {{contributor.name.given}} {{contributor.name.family}}
+      </a>
+  {% endfor %}
+
+  </div>
+  {% endif %}
+
+  <div>{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+
+</footer>
+
+

@@ -1,0 +1,48 @@
+/**
+*
+* Global
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+* {
+  @include prefixr(box-sizing, border-box);
+}
+
+html, body, button {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body {
+  font-family: $fontDefault;
+  font-size: $fontBase;
+  line-height: 1.6250em; /* 26px */
+  font-weight: 300; // to thicken it a bit, we need to remove font-smoothing
+  color: $colorText;
+
+  @include baseline-grid();
+}
+
+.main-container {
+  @include container(true);
+}
+
+.container {
+  @include container(true);
+}
+
+.container-medium {
+  @include container(true, true); // second parameter is to ignore mobile rules - so it only applies from medium up
+}
+
+.container-small {
+  @include small-only {
+    @include container(true);
+  }
+}

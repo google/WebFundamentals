@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="related-items clear">
+    <h3 class="related-items__title g-wide--1 g-medium--full">More case studies</h3>
+    <div class="related-items__section clear">
+
+      <ul class="related-items-list list-reset">
+
+        {% assign caseStudies = page.articles.case-study | sort: 'date' | reverse  %}
+        {% for caseStudy in caseStudies limit:3 %}
+
+          <li class="g-medium--1 g-wide--1{% cycle 'all-case-studies': '', '', ' g-medium--last g-wide--last' %}">
+            <a href="{{site.baseurl}}{{caseStudy.url | canonicalize}}">
+              <img src="{{site.baseurl}}/showcase/case-study/images/{{ caseStudy.id }}/thumbnail-small.jpg" alt="{{caseStudy.title}}">
+              <p class="medium">{{caseStudy.title}}</p>
+            </a>
+          </li>
+
+        {% endfor %}
+
+      </ul>
+
+    </div>
+  </div>
+
+</div>

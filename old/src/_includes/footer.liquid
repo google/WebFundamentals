@@ -1,0 +1,33 @@
+<footer class="main-footer">
+  <div class="main-footer__container container clear">
+    <div class="main-footer__list-group">
+      <ul class="main-footer__list main-footer__list--primary">
+      {% for section in page.content.toc %}
+
+        {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
+        {% assign stripTitle = section.title | strip_html %}
+
+        {% if site.spotlights == true or checkTitle != 'spotlights' %}
+        <li class="sitemap__item sitemap__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} sitemap__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} sitemap__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} sitemap__item--current{% endif %} {% if section.hasSubNav %} sitemap__item--has-child{% endif %}">
+          <a class="sitemap-list__link sitemap-list__link--parent" href="{% if section.external != true %}{{site.baseurl}}{% endif %}{{ section.path }}?hl={{page.langcode}}" title="Go to {{ stripTitle }}">
+            {{ section.title }}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+
+      <div class="main-footer__google-section">
+        <h3 class="main-footer__title"><a href="https://developers.google.com/">
+          <img id="developers-logo-footer" src="{{site.baseurl}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
+        </a></h3>
+        <ul class="main-footer__list main-footer__list--secondary google-list">
+          <li><a href="http://www.google.com/">Google</a></li>
+          <li><a href="http://developers.google.com/site-terms">{{"terms_of_service" | localize_string}}</a></li>
+          <li><a href="http://www.google.com/intl/en/privacy/">{{"privacy_policy" | localize_string}}</a></li>
+          <li><a href="http://developers.google.com/careers">{{"careers" | localize_string}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,24 @@
+types:
+  news:
+    title_singular: News
+    title_plural: News
+  tip:
+    title_singular: 'Tip'
+    title_plural: 'Tips & Tricks'
+  case-study:
+    title_singular: 'Case Study'
+    title_plural: 'Case Studies'
+  spotlight:
+    title_singular: 'Spotlight'
+    title_plural: 'Spotlights'
+products:
+  'tools':
+    title: All Tools
+    tool: false
+  'chrome':
+    title: Chrome
+    tool: false
+  'chrome-devtools':
+    title: 'Chrome DevTools'
+    short_title: 'DevTools'
+    tool: true

@@ -1,0 +1,34 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--article article--{{page.collection}} theme--{{page.collection}}" itemscope itemtype="http://schema.org/TechArticle">
+    {% injectdata content _betterbook-root.yaml %}
+
+    {% include header.liquid %}
+
+    <div class="article-container" itemprop="text">
+      <div class="editorial-header">
+        <div class="container">
+          <div class="content">
+
+            {% include modules/breadcrumbs.liquid %}
+
+            <h1 class="tag editorial-header__title">{{ page.parent.title }}</h1>
+            <h2 class="editorial-header__subtitle" itemprop="name">{{page.title}}</h2>
+
+            {% include modules/author_header.liquid %}
+
+            <p class="editorial-header__excerpt" itemprop="headline">{{page.introduction}}</p>
+
+          </div>
+        </div>
+      </div>
+
+      {{ content }}
+
+      {% if page.lessonsToc != false %}
+        {% include modules/lessons_toc.liquid %}
+      {% endif %}
+    </div> <!-- /.article-container -->
+    {% include cc.liquid %}
+    {% include footer.liquid %}

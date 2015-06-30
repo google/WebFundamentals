@@ -1,0 +1,39 @@
+<div class="container clear">
+
+    {% if page.authors %}
+		<h4>{{"authors" | localize_string}}</h4>
+
+	    <ul class="container sitewide-authors clear">
+	    	{% for author in page.authors %}
+	    	{% assign contributor = site.data["contributors"][author] %}
+		      <li class="g--third">
+		        <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+		            <span class="icon-circle--large" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+		            <h3 class="large">{{contributor.name.given}} {{contributor.name.family}}</h3>
+		          </a>
+		          <p>{{ contributor.description }}</p>
+		      </li>
+		    {% endfor %}
+	    </ul>
+
+    {% endif %}
+
+    {% if page.translators %}
+		<h4>{{"translators" | localize_string}}</h4>
+
+	    <ul class="container sitewide-authors clear">
+	    	{% for author in page.translators %}
+	    	{% assign contributor = site.data["contributors"][author] %}
+		      <li class="g--third">
+		        <a href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+		            <span class="icon-circle--large" style="background-image: url({{site.url}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
+		            <h3 class="large">{{contributor.name.given}} {{contributor.name.family}}</h3>
+		          </a>
+		          <p>{{ contributor.description }}</p>
+		      </li>
+		    {% endfor %}
+	    </ul>
+
+    {% endif %}
+
+</div>

@@ -1,0 +1,139 @@
+body {
+	font-family: Roboto;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,h2,h3,h4,h5 {
+	font-weight: 300;
+}
+
+header {
+	background: #4B8BFA;
+	color: #fff;
+}
+
+.main {
+	padding-top: 20px;
+	flex: 1 1 auto;
+}
+
+fieldset {
+	margin-top: 10px;
+}
+
+fieldset > div {
+	display: flex;
+	margin: 10px 0;
+}
+
+fieldset > div > * {
+	width: 50%;
+	display: inline-block;
+}
+
+fieldset > div > textarea {
+	height: 600px;
+	margin-left: 10px;
+}
+
+fieldset > textarea {
+	height: 600px;
+	width: 100%;
+}
+
+#submit {
+	border: 0;
+	padding: 0;
+	float: right;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+}
+
+table {
+	text-align: left;
+}
+
+tr {
+
+}
+
+th {
+	padding: 0.5em;
+}
+
+td {
+	padding: 0.5em;
+	border-top: 1px solid #eee;
+}
+
+td span.published {
+	background: #0AE85E;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+}
+
+td span.not-published {
+	background: #FDD411;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+}
+
+td.type span {
+	display: inline-block;
+	background: #eee;
+	padding: 0.2em 0.5em;
+	border-radius: 2px;
+	background-color: rgb(75, 139, 250);
+	color: #fff;
+}
+
+td.type span.tip {
+	background-color: #43A047;
+}
+
+.menu {
+	min-width: 150px;
+	border-right: 1px solid #eee;
+	margin-right: 20px;
+}
+
+.menu ul {
+	padding: 0;
+	margin-top: 25px;
+	list-style: none;
+
+}
+
+.menu ul li {
+	padding: 5px;
+}
+
+.menu ul li.new a, #submit, a.button  {
+	background-color: #4285f4;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	width: 120px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 2px;
+	font-size: .9em;
+}
+
+.menu ul li.new a, #submit {
+	margin-top: 10px;
+}

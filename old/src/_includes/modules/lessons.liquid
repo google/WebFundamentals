@@ -1,0 +1,7 @@
+<div class="container-medium">
+  <div class="guides" data-current-lesson="0{{articleIndex}}">
+    <h3><i class="icon icon-lessons"></i> {{"guides" | localize_string}}</h3>
+    <ol class="list-guides list-links">
+ {% for guide in page.articles.[page.id] %}{% if guide.is_localized != true or guide.langcode == page.langcode %}<li title="{{guide.title}}"><a href="{{site.baseurl}}{{guide.url | canonicalize | localize_link:guide }}{{}}">{{guide.title}}</a></li>{% endif %}{% endfor %}</ol>
+  </div>
+</div>

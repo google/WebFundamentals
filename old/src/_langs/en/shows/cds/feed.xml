@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+{% assign seriesId = 'cds' %}
+{% assign orderedVideos = site.data.videoGroups['cds'] | sort: 'date' | reverse %}
+
+{% assign title = 'Chrome Dev Summit' %}
+{% assign description = '' %}
+{% assign showSeriesInTitle = true %}
+
+{% include modules/shows/show-feed.liquid seriesId=seriesId videos=orderedVideos title=title description=description showSeriesInTitle=showSeriesInTitle %}

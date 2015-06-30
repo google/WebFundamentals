@@ -1,0 +1,88 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/Article">
+    {% injectdata content _betterbook-showcase.yaml %}
+
+    {% include header.liquid %}
+
+    <header class="spotlight-header spotlight-header--detail spotlight-header--portrait actual-spotlight clear">
+      <div class="spotlight-header__container container">
+        {% include modules/breadcrumbs.liquid %}
+        <div class="spotlight-header__copy g--half">
+          <h1 class="xxlarge">{{ page.title }}</h1>
+
+          <p class="spotlight-tags">
+          <a href="{{page.link}}" target="_blank">{{page.link}}</a> – 
+          {% for tag in page.tags %}
+          <a href="{{site.baseurl}}/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
+          {% endfor %}
+          </p>
+
+          <div class="spotlight-scores clear">
+            <div class="g--third">
+              <span class="{% if page.scores.pagespeed.ux < 60 %}low{% elsif page.scores.pagespeed.ux < 71 %}med{% else %}high{% endif %}"><strong>{{page.scores.pagespeed.ux}}</strong>/100</span>
+              <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed UX</a>
+            </div>
+            <div class="g--third">
+              <span class="{% if page.scores.pagespeed.speed < 60 %}low{% elsif page.scores.pagespeed.speed < 71 %}med{% else %}high{% endif %}"><strong>{{page.scores.pagespeed.speed}}</strong>/100</span>
+              <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed</a>
+            </div>
+            <div class="g--third g--last">
+              <span class="{% if page.scores.webpagetest.value > 6000 %}low{% elsif page.scores.webpagetest.value > 3000 %}med{% else %}high{% endif %}"><strong>{{page.scores.webpagetest.value}}</strong></span>
+              <a href="{{page.scores.webpagetest.result}}">Speed Index (3G)</a>
+            </div>
+          </div>
+          
+
+
+        </div>
+        <div class="spotlight-header__media g--half g--last">
+          <a href="{{page.link}}" target="_blank"><img src="{{site.baseurl}}/showcase/spotlight/images/{{ page.id }}/screenshot.png" class="spotlight-header__image"></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="spotlight-wrapper">
+
+      <div class="container clear">
+        <div class="content spotlight-wrapper__content g--half">
+          <h2>Our thoughts</h2>
+          {{ page.description | markdownify }}
+
+          <h3>What we like</h3>
+
+          {{ page.pros | markdownify }}
+
+          <h3>Possible improvements</h3>
+
+          {{ page.cons | markdownify }}
+
+        </div>
+        {% include modules/related_spotlight_guides.liquid list=page.related %}
+      </div>
+
+    </div>
+
+    {% if page.interview %}
+    <div class="spotlight-interview-wrapper">
+      <div class="container clear">
+
+        <h2 class="quote__content-icononly">Q&amp;A with {{ page.developer }}</h2>
+
+        <dl>
+          {% for question in page.interview %}
+          {% capture answer %}{{ question.answer }}{% endcapture %}
+          <dt>{{ question.question }}</dt>
+          <dd>{{ answer | markdownify }}</dd>
+          {% endfor %}
+        </dl>
+
+      </div>
+    </div>
+    {% endif %}
+
+    {% include modules/more_spotlights.liquid on-spotlight=true %}
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

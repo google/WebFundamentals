@@ -1,0 +1,19 @@
+<nav class="breadcrumbs">
+  <p>
+  {% for p in page.ancestors %}
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="{{site.baseurl}}{{ p.url | canonicalize | localize_link:page }}" title="{{ p.title }}" {% if forloop.first %}rel="home"{%endif%} itemprop="url"><span itemprop="title">{{ p.title }}</span></a>
+    </span>
+    /
+  {% endfor %}
+  </p>
+</nav>
+{% if page.translations.size > 1 %}
+<nav class="translatelinks">
+  <p>
+  {% for t in page.translations %}
+    <a href="{{site.baseurl}}{{ t.url | canonicalize | localize_link:t }}">{{  t.langcode | lang_name }}</a> {% if forloop.last == false %} | {% endif %}
+  {% endfor %}
+  </p>
+</nav>
+{% endif %}

@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: 시작하기
+    path: /fundamentals/getting-started/
+  - title: 문서
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: 사이트 디자인 정책
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: 여러 기기 레이아웃
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: 반응형 웹 디자인 기초
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: 반응형 웹 디자인 패턴
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: 레이아웃 패턴
+            path: /fundamentals/layouts/layout-patterns/
+          - title: UI 요소
+            path: /fundamentals/layouts/ui-elements/
+      - title: 양식 및 사용자 입력
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: 터치 입력
+            path: /fundamentals/input/touch/
+          - title: 양식 입력
+            path: /fundamentals/input/form/
+      - title: 디자인과 분위기
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: 애니메이션 소개
+            path: /fundamentals/look-and-feel/animations/
+      - title: "이미지, 동영상, 오디오"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: 이미지
+            path: /fundamentals/media/images/
+          - title: 동영상
+            path: /fundamentals/media/video/
+          - title: 오디오
+            path: /fundamentals/media/audio/
+      - title: 수익 창출
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: 광고를 통한 수익 창출
+            path: /fundamentals/monetization/ad-monetization/
+      - title: 검색 및 배포
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: 기기 액세스
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: 사용자 위치
+            path: /fundamentals/device-access/user-location
+          - title: 클릭 투 콜
+            path: /fundamentals/device-access/click-to-call
+      - title: 성능
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: 최상 렌더링 경로
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: 콘텐츠 효율성 최적화
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: 네트워킹 최적화
+            path: /fundamentals/performance/optimizing-networking/
+          - title: 상호작용 기능 최적화
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: 성과 측정
+            path: /fundamentals/performance/measuring-performance/
+  - title: 도구
+    path: /fundamentals/tools/
+  - title: 리소스
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: 용어집
+        path: /fundamentals/resources/glossary/
+      - title: 샘플
+        path: /fundamentals/resources/samples/
+      - title: 스타일가이드
+        path: /fundamentals/resources/styleguide/
+      - title: 예제 도움말
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false

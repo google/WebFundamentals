@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Per iniziare
+    path: /fundamentals/getting-started/
+  - title: Documentazione
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Princìpi di progettazione dei siti
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Layout multidispositivo
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Nozioni di base sul Responsive Web Design
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Modelli di Responsive Web Design
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Modelli di layout
+            path: /fundamentals/layouts/layout-patterns/
+          - title: "Elementi dell'interfaccia utente"
+            path: /fundamentals/layouts/ui-elements/
+      - title: "Moduli e input dell'utente"
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Input tocco
+            path: /fundamentals/input/touch/
+          - title: Input nei moduli
+            path: /fundamentals/input/form/
+      - title: Aspetto e design
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Introduzione alle animazioni
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Immagini, video e audio"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Immagini
+            path: /fundamentals/media/images/
+          - title: Video
+            path: /fundamentals/media/video/
+          - title: Audio
+            path: /fundamentals/media/audio/
+      - title: Monetizzazione
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Monetizzazione degli annunci
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Scoperta e distribuzione
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Accesso dispositivo
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: "Località dell'utente"
+            path: /fundamentals/device-access/user-location
+          - title: Click-to-call
+            path: /fundamentals/device-access/click-to-call
+      - title: Rendimento
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Percorso di rendering essenziale
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: "Ottimizzazione dell'efficacia dei contenuti"
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Ottimizzazione del networking
+            path: /fundamentals/performance/optimizing-networking/
+          - title: "Ottimizzazione dell'interattività"
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Valutazione del rendimento
+            path: /fundamentals/performance/measuring-performance/
+  - title: Strumenti
+    path: /fundamentals/tools/
+  - title: Risorse
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Glossario
+        path: /fundamentals/resources/glossary/
+      - title: Esempi
+        path: /fundamentals/resources/samples/
+      - title: Guida di stile
+        path: /fundamentals/resources/styleguide/
+      - title: Articolo di esempio
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false

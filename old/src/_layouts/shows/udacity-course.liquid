@@ -1,0 +1,77 @@
+<!-- Lets plan out the order of videos -->
+
+
+  <!-- Template Starts Here -->
+
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+    <!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+
+    {% include header.liquid %}
+
+    <!-- Title of the show -->
+    <div class="showtitle--title-container showtitle--title-container-{{ page.showid }} g-wide--full">
+      <h1 class="showtitle--title showtitle--title-{{ page.showid }} container">
+        {{ page.title }}
+      </h1>
+      {% if page.subtitle %}
+      <h2 class="showtitle--subtitle showtitle--subtitle-{{ page.showid }} container">
+        {{ page.subtitle }}
+      </h2>
+      {% endif %}
+    </div>
+    <div class="clear"></div>
+
+    <div class="container">
+      <div class="content show-udacity">
+        
+        <div class="clear" id="preview-block">
+          <div class="g--half">
+            {% if page.udacity.preview.youtube %}
+            <div class="media media--video">
+              <iframe src="https://www.youtube.com/embed/{{ page.udacity.preview.youtube }}?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+          </div>
+          <div class="g--half g--last">
+            <p>
+              {% if page.udacity.level %}
+                <strong>Level</strong> {{ page.udacity.level }}<br>
+              {% endif %}
+              {% if page.udacity.est_time %}
+              <strong>Est. Time</strong> {{page.udacity.est_time}}<br>
+              {% endif %}
+              <strong>Cost</strong> FREE<br>
+              {% assign contributor = site.data["contributors"][page.udacity.instructor] %}
+              {% if contributor %}
+              <strong>Instructor</strong> 
+                <a href="{{site.url}}/fundamentals/resources/contributors/index.html#{{page.udacity.instructor}}">
+                  {{contributor.name.given}} {{contributor.name.family}}</a><br>
+              {% endif %}
+              <strong>What you get</strong>
+              <ul style="padding-top:0">
+                <li>Instructor lead videos</li>
+                <li>Learn by doing exercises and view project instructions</li>
+              </ul>  
+            </p>
+          </div>
+        </div>
+        <a href="https://www.udacity.com/course/viewer#!/c-{{ page.udacity.id }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index" class="cta--primary">{{"take_course" | localize_string}}</a>
+        
+        
+        {{ content }}
+
+        <p>
+          <a href="https://www.udacity.com/course/{{page.udacity.id}}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index">Learn more at <strong>Udacity.com</strong></a>
+        </p>
+
+      </div>
+    </div>
+
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

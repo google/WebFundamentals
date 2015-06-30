@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Images: Using media queries for conditional loading</title>
+    <style>
+      /* // [START conditional] */
+      .example {
+        height: 400px;
+        background-image: url(small.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+      }
+
+      @media (min-width: 500px) {
+        body {
+          background-image: url(body.png);
+        }
+        .example {
+          background-image: url(large.png);
+        }
+      }
+      /* // [END conditional] */
+
+      .desc {
+        margin-top: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body role="main">
+    <div class="example"></div>
+    <div class="desc">
+      On viewports less than 500px, only the image of a phone will appear,
+      while on viewports larger than 500px, a tablet will be visible with
+      a checkboard background.
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 500px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("Images-Conditional");
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,115 @@
+<!-- Lets plan out the order of videos -->
+{% if page.articles[page.id] %}
+  {% assign series = page.articles[page.id] | sort: 'date' | reverse %}
+  {% assign latestSeries = series | first %}
+  {% if page.articles[latestSeries.id] %}
+    {% assign latestShows = page.articles[latestSeries.id] | sort: 'date' | reverse %}
+    {% assign latestShow = latestShows | first %}
+  {% endif %}
+{% endif %}
+
+
+
+
+
+  <!-- Template Starts Here -->
+    {% capture feedURL %}{{site.baseurl}}/shows/{{page.id}}/feed.xml{% endcapture %}
+    {% include head.liquid feedURL=feedURL feedName=page.title %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+    <!-- Select Appropriate betterbook -->
+    {% injectdata content _betterbook-shows.yaml %}
+    {% include header.liquid %}
+
+
+
+
+
+
+    {% include modules/shows/show-title.liquid title=page.title subtitle=page.subtitle showid=page.showid classname="show-home" %}
+
+
+
+
+
+
+    {% wrap content %}
+
+
+      <!-- Latest Episode -->
+      {% if latestShow %}
+        <div class="showhome--subheading">
+          <p class="showhome--subheading-description">Latest Episode</p>
+          <h2 class="showhome--subheading-title">{{ latestShow.title }}</h2>
+        </div>
+        {% include modules/video.liquid id=latestShow.showYoutubeID %}
+      {% endif %}
+
+
+      <h3>{{ page.intro-title }}</h3>
+
+      <p>{{ page.description }}</p>
+
+      <!-- Display content from the markdown -->
+      {{ content }}
+
+
+
+      <!-- Previous Series -->
+      <div class="showhome--subheading">
+        <p class="showhome--subheading-description">Previous Series &amp Shows</p>
+      </div>
+
+      {% assign count = 0 %}
+      {% for singleSeries in series %}
+        {% if page.articles[singleSeries.id] %}
+          {% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' %}
+          {%if seriesShows.size > 0 %}
+
+
+
+            <!-- We have a series to display -->
+            <div class="showhome--series showhome--series-{{ page.id }}{% if count == 0 %} showhome--series-first{% endif %}">
+
+
+
+              <!-- Series title -->
+              <h3 class="showhome--series-title showhome--series-title-{{ page.id }} g-wide--full">
+                <a href="{{site.baseurl}}{{singleSeries.url | canonicalize}}">{{ singleSeries.title }}</a>
+              </h3>
+              <div class="clear"></div>
+
+
+
+              <!-- List of Videos -->
+              <ol class="showhome--series-flatrowlist flatrowlist">
+                {% for show in seriesShows %}
+                  <li>
+                    {% include modules/shows/small-video.liquid video=show showid=page.id %}
+                  </li>
+                {% endfor %}
+              </ol>
+
+
+
+
+            </div>
+
+
+
+          {% endif %}
+         {% endif %}
+
+        {% assign count = = count | plus: 1 %}
+      {% endfor %}
+
+    {% endwrap %}
+
+    <!-- BEFORE -->
+    {% include modules/shows/feedlink.liquid feedURL=feedURL emailSubscriptionLink=page.emailSubscriptionLink %}
+    <!-- AFTER -->
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

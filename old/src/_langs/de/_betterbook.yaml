@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Erste Schritte
+    path: /fundamentals/getting-started/
+  - title: Dokumentation
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Grundlagen des Websitedesigns
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Layouts für mehrere Geräte
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: "Responsive Webdesign\_– Grundlagen"
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: "Responsive Webdesign\_– Muster"
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Layoutmuster
+            path: /fundamentals/layouts/layout-patterns/
+          - title: Elemente der Nutzeroberfläche
+            path: /fundamentals/layouts/ui-elements/
+      - title: Formulare und Nutzereingabe
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Berührungseingabe
+            path: /fundamentals/input/touch/
+          - title: Formeneingabe
+            path: /fundamentals/input/form/
+      - title: Erscheinungsbild
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Einführung zu Animationen
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Bilder, Video und Audio"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Bilder
+            path: /fundamentals/media/images/
+          - title: Video
+            path: /fundamentals/media/video/
+          - title: Audio
+            path: /fundamentals/media/audio/
+      - title: Monetarisierung
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Anzeigenmonetarisierung
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Entdeckung und Vertrieb
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Gerätezugriff
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Nutzerstandort
+            path: /fundamentals/device-access/user-location
+          - title: Click-to-Call
+            path: /fundamentals/device-access/click-to-call
+      - title: Leistung
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Kritischer Rendering-Pfad
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: Inhaltseffizienz optimieren
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Netzwerke optimieren
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Interaktivität optimieren
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Leistung messen
+            path: /fundamentals/performance/measuring-performance/
+  - title: Tools
+    path: /fundamentals/tools/
+  - title: Ressourcen
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Glossar
+        path: /fundamentals/resources/glossary/
+      - title: Beispiele
+        path: /fundamentals/resources/samples/
+      - title: Gestaltungsrichtlinien
+        path: /fundamentals/resources/styleguide/
+      - title: Beispielartikel
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false

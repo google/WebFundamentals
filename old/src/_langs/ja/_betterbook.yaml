@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: さあ、はじめよう
+    path: /fundamentals/getting-started/
+  - title: ドキュメント
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: サイトデザインの原則
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: マルチデバイス対応のレイアウト
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: レスポンシブ ウェブデザインの基礎
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: レスポンシブ ウェブデザインのパターン
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: レイアウトのパターン
+            path: /fundamentals/layouts/layout-patterns/
+          - title: UI 要素
+            path: /fundamentals/layouts/ui-elements/
+      - title: フォームとユーザー入力
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: タップ入力
+            path: /fundamentals/input/touch/
+          - title: フォーム入力
+            path: /fundamentals/input/form/
+      - title: デザイン
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: アニメーション入門
+            path: /fundamentals/look-and-feel/animations/
+      - title: 画像、動画、音声
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: 画像
+            path: /fundamentals/media/images/
+          - title: 動画
+            path: /fundamentals/media/video/
+          - title: 音声
+            path: /fundamentals/media/audio/
+      - title: 収益化
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: 広告収益化
+            path: /fundamentals/monetization/ad-monetization/
+      - title: ディスカバリーおよび配布
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: デバイス アクセス
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: ユーザーの所在地
+            path: /fundamentals/device-access/user-location
+          - title: Click-to-Call
+            path: /fundamentals/device-access/click-to-call
+      - title: パフォーマンス
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: クリティカル パス レンダリング
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: コンテンツ効率の最適化
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: ネットワークの最適化
+            path: /fundamentals/performance/optimizing-networking/
+          - title: インタラクティビティの最適化
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: パフォーマンスの測定
+            path: /fundamentals/performance/measuring-performance/
+  - title: ツール
+    path: /fundamentals/tools/
+  - title: リソース
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: 用語集
+        path: /fundamentals/resources/glossary/
+      - title: サンプル
+        path: /fundamentals/resources/samples/
+      - title: スタイルガイド
+        path: /fundamentals/resources/styleguide/
+      - title: サンプルの記事
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false

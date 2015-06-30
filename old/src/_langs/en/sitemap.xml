@@ -1,0 +1,17 @@
+---
+sitemap:
+  changefreq: hourly
+  priority: 0.9
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}{% if page.rss != false and page.published == true %}
+    <url>
+      <loc>https://developers.google.com{{ site.baseurl }}{{ page.url | canonical_url }}</loc>
+      <lastmod>{% if page.article.updated_on %}{{ page.article.updated_on }}{% elsif page.article.written_on %}{{ page.article.written_on }}{% else %}2014-05-22{% endif %}</lastmod>
+      <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}weekly{% endif %}</changefreq>
+      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.5{% endif %}</priority>
+    </url>
+  {% endif %}{% endfor %}
+</urlset>

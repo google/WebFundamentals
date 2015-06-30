@@ -1,0 +1,207 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }} case-study" itemscope itemtype="http://schema.org/Article">
+    {% injectdata content _betterbook-showcase.yaml %}
+
+    {% include header.liquid %}
+
+    <header class="spotlight-header spotlight-header--detail spotlight-header--landscape clear">
+      <div class="spotlight-header__container container">
+        {% include modules/breadcrumbs.liquid %}
+        <h1 class="xxlarge"><strong class="subsection-number">{{page.article.written_on | date:"%B" }} case study</strong>{{ page.title }}</h1>
+        <a class="case-study-link" href="{{page.link}}" target="_blank">{{page.link}}</a>
+        <div class="divider divider--secondary">
+          <span class="themed divider-icon"></span>
+        </div>
+        <div class="spotlight-header__copy g--half">
+          <h2 class="large">TL;DR</h2>
+          <p>{{ page.description }}</p>
+
+          <div class="spotlight-scores clear">
+            <div class="g--third">
+              <span class="{% if page.scores.pagespeed.ux < 60 %}low{% elsif page.scores.pagespeed.ux < 71 %}med{% else %}high{% endif %}"><strong>{{page.scores.pagespeed.ux}}</strong>/100</span>
+              <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed UX</a>
+            </div>
+            <div class="g--third">
+              <span class="{% if page.scores.pagespeed.speed < 60 %}low{% elsif page.scores.pagespeed.speed < 71 %}med{% else %}high{% endif %}"><strong>{{page.scores.pagespeed.speed}}</strong>/100</span>
+              <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed</a>
+            </div>
+            <div class="g--third g--last">
+              <span class="{% if page.scores.webpagetest.value > 6000 %}low{% elsif page.scores.webpagetest.value > 3000 %}med{% else %}high{% endif %}"><strong>{{page.scores.webpagetest.value}}</strong></span>
+              <a href="{{page.scores.webpagetest.result}}">Speed Index (3G)</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="spotlight-header__media g--half g--last">
+          {% if page.interview %}
+          <h2 class="large">The Interview</h2>
+          {% include modules/video.liquid id=page.interview %}
+          {% else %}
+          <img src="{{site.baseurl}}/showcase/case-study/images/{{ page.id }}/device-landscape.jpg" class="spotlight-header__image">
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <div class="case-study-wrapper">
+      <div class="container clear">
+        <div class="g--third">
+          <h2>Overview</h2>
+          <p>{{page.overview.description}}</p>
+          <dl class="case-study__dl">
+            <dt>Target audience</dt>
+            <dd>{{page.overview.audience}}</dd>
+
+            {% if page.overview.features %}
+              <dt>Features</dt>
+              <dd>
+                <ul>
+                {% for feature in page.overview.features %}
+                  <li>
+                    {{feature}}
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+            {% if page.overview.webbyness %}
+              <dt>Webbyness</dt>
+              <dd>
+                <ul>
+                {% for advantage in page.overview.webbyness %}
+                  <li>
+                    <a href="{{advantage.link}}">{{advantage.title}}</a>
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+          </dl>
+        </div>
+
+        <figure class="case-study__img-wrapper g--third">
+          <img src="{{site.baseurl}}/showcase/case-study/images/{{ page.id }}/screenshot-portrait.png" alt="{{page.title}} on Nexus 5" class="fluid">
+        </figure>
+
+        <div class="g--third g--last case-study-inverted">
+          <h2>Behind the scenes</h2>
+          <p>{{page.behind_the_scenes.description}}</p>
+          <dl class="case-study__dl">
+
+            {% if page.behind_the_scenes.owp %}
+              <dt>New web platform features</dt>
+              <dd>
+                <ul>
+                {% for owp in page.behind_the_scenes.owp %}
+                  <li>
+                    {{owp}}
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+            {% if page.behind_the_scenes.patterns %}
+              <dt>Patterns</dt>
+              <dd>
+                <ul>
+                {% for pattern in page.behind_the_scenes.patterns %}
+                  <li>
+                    {{pattern}}
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+            {% if page.behind_the_scenes.samples %}
+              <dt>Forkable samples</dt>
+              <dd>
+                <ul>
+                {% for sample in page.behind_the_scenes.samples %}
+                  <li>
+                    {{sample}}
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+            {% if page.behind_the_scenes.source_code %}
+              <dt>Source Code</dt>
+              <dd>
+                <ul>
+                {% for source_code in page.behind_the_scenes.source_code %}
+                  <li>
+                    <a href="{{source_code.link}}">{{source_code.title}}</a>
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+            {% if page.behind_the_scenes.oss %}
+              <dt>Used Open Source</dt>
+              <dd>
+                <ul>
+                {% for oss in page.behind_the_scenes.oss %}
+                  <li>
+                    <a href="{{oss.link}}">{{oss.title}}</a>
+                  </li>
+                {% endfor %}
+                </ul>
+              </dd> 
+            {% endif %}
+
+          </dl>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="spotlight-content container clear">
+
+      {% for section in page.sections %}
+      {% capture scontent %}{{ section.content }}{% endcapture %}
+      <div class="content clear">
+      <h2>{{ section.title }}</h2>
+        <div class="divider divider--secondary">
+          <span class="themed divider-icon"></span>
+        </div>
+        {{ scontent | markdownify }}
+
+        {% if section.left_column %}
+          {% capture lcontent %}{{ section.left_column.content }}{% endcapture %}
+          <div class="{{section.left_column.classes}} g--half">
+            {{ lcontent | markdownify }}
+          </div>
+        {% endif %}
+        {% if section.right_column %}
+          {% capture rcontent %}{{ section.right_column.content }}{% endcapture %}
+          <div class="{{section.right_column.classes}} g--half g--last">
+            {{ rcontent | markdownify }}
+          </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      {{ content }}
+
+    </div>
+
+    {% include modules/showcase_opinions.liquid %}
+
+    <div class="container">
+      <div class="related-items-group">
+        {% include modules/other_showcases.liquid title="more_case_studies" minimal=true %}
+        {% include modules/related_guides.liquid %}
+      </div>
+
+    </div>
+
+    {% include cc.liquid %}
+    {% include footer.liquid %}

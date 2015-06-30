@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+{% assign seriesId = 'devbytes' %}
+{% assign orderedVideos = site.data.videoGroups['devbytes'] | sort: 'date' | reverse %}
+
+{% assign title = 'DevBytes' %}
+{% assign description = '' %}
+{% assign showSeriesInTitle = true %}
+
+{% include modules/shows/show-feed.liquid seriesId=seriesId videos=orderedVideos title=title description=description showSeriesInTitle=showSeriesInTitle %}

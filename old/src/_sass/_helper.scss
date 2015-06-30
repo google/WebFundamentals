@@ -1,0 +1,217 @@
+/**
+*
+* Helper
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+
+.clear {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+
+/*==========  COLORS  ==========*/
+
+.color--blue { color: $colorBlue; }
+.color--red { color: $colorRed; }
+.color--green { color: $colorGreen; }
+.color--yellow { color: $colorYellow; }
+.color--blue-secondary { color: $colorBlueSecondary; }
+.color--red-secondary { color: $colorRedSecondary; }
+.color--green-secondary { color: $colorGreenSecondary; }
+.color--yellow-secondary { color: $colorYellowSecondary; }
+
+.color--gray-background { color: $colorGrayBackground; }
+.color--gray-keyline { color: $colorGrayKeyline; }
+.color--gray { color: $colorGray; }
+.color--gray-medium { color: $colorGrayMedium; }
+.color--gray-dark { color: $colorGrayDark; }
+
+.color--text { color: $colorText; }
+.color--highlight { color: $colorHighlight; }
+.color--warning { color: $colorWarning; }
+.color--danger { color: $colorDanger; }
+.color--muted { color: $colorMuted; }
+
+.color--remember { color: $colorRemember; }
+.color--learning { color: $colorLearning; }
+
+.color--layouts { color: $colorLayouts; }
+.color--device { color: $colorDevice; }
+.color--tools { color: $colorTools; }
+.color--user { color: $colorUser; }
+.color--media { color: $colorMedia; }
+.color--monetization { color: $colorMonetization; }
+.color--performance { color: $colorPerformance; }
+.color--discovery-and-distribution { color: $colorDiscoveryAndDistribution; }
+.color--tools-secondary { color: $colorToolsSecondary; }
+.color--layouts-secondary { color: $colorLayoutsSecondary; }
+.color--user-secondary { color: $colorUserSecondary; }
+.color--media-secondary { color: $colorMediaSecondary; }
+.color--monetization-secondary { color: $colorMonetizationSecondary; }
+.color--performance-secondary { color: $colorPerformanceSecondary; }
+.color--discovery-and-distribution-secondary { color: $colorDiscoveryAndDistributionSecondary; }
+
+
+/*==========  TEXT DIVIDER  ==========*/
+.divider {
+  width: 80%;
+  margin: $lineHeight auto;
+  margin-top: $lineHeight;
+  margin-bottom: $lineHeight - 1;
+  border: 0;
+  height: 1px;
+  color: $colorGrayKeyline;
+  background-color: $colorGrayKeyline;
+
+  @include medium {
+    width: 40%;
+  }
+
+  &.divider--short {
+    width: 70%;
+
+    @include medium {
+      width: 25%;
+    }
+
+  }
+
+  &.divider--fluid {
+
+    @include medium {
+      width: 100%;
+    }
+
+  }
+
+  &.divider--spaced {
+
+    @include medium {
+      margin-top: $lineHeight*2;
+      margin-bottom: $lineHeight*2 - 1;
+    }
+
+  }
+
+  & span {
+    background: #ffffff;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 35px;
+    height: 1px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      font-family: $fontIcon;
+      top: -12px;
+      color: $colorBlue;
+    }
+
+    &:before {
+      content: $icon-chevron-left;
+      left: 8px;
+    }
+
+    &:after {
+      color: $colorBlueSecondary;
+      content: $icon-chevron-right;
+      right: 6px;
+    }
+  }
+
+  & .divider-icon--secondary {
+    width: 23px;
+
+    &:before {
+      content: "*";
+      font-family: $fontHighlight;
+      font-size: $fontXLarge;
+      font-weight: 700;
+      color: $colorGrayKeyline;
+      top: -9px;
+      left: 3px;
+    }
+
+    &:after {
+      display: none;
+    }
+
+  }
+
+}
+
+.divider--secondary {
+  & span {
+    background-color: $colorGrayBackground;
+  }
+}
+
+/*==========  GENERIC  ==========*/
+.centered {
+  text-align: center;
+}
+
+.text-highlight {
+  font-family: $fontHighlight;
+}
+
+
+/*==========  TAG  ==========*/
+.tag {
+  @include type--small;
+  font-family: $fontHighlight;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorGrayDark;
+  }
+
+  &:before {
+    content: "# ";
+    display: inline-block;
+  }
+}
+
+/*==========  INDENTED CONTENT  ==========*/
+
+.indented {
+  padding-left: 32px;
+
+  & ul,
+  & ol,
+  & dl {
+    padding-left: 0;
+  }
+}
+
+.indented-medium {
+
+  @include medium {
+    padding-left: 32px;
+
+    & ul,
+    & ol,
+    & dl {
+      padding-left: 0;
+    }
+  }
+}

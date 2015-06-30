@@ -1,0 +1,126 @@
+/**
+*
+* Next Lessons
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.next-lessons {
+  background: $colorGrayDark;
+  padding: $lineHeight $lineHeight $lineHeight*2;
+  margin-top: $lineHeight*3;
+  color: #ffffff;
+  position: relative;
+
+  h3 {
+    @include color-inherit;
+
+    i {
+      vertical-align: middle;
+      @include medium {
+        display: none;
+      }
+    }
+  }
+
+  // &:before,
+  &:after {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    vertical-align: top;
+    line-height: 0;
+
+    display: none;
+
+    @include medium {
+      display: block;
+    }
+  }
+
+  // This element represents the lesson number
+  // NOTE: Removing the number as it is causing
+  // alignment issues in ie.
+  // Tried everything to fix it, but it's the way the different
+  // font formats are generated or the way IE render fonts.
+  // https://github.com/PaulKinlan/WebDocs/issues/175
+
+  /* &:before {
+    @include medium {
+      content: attr(data-current-lesson);
+
+      font-family: $fontHighlight;
+      font-size: $fontBase;
+      font-weight: 400;
+
+      background: $colorGrayDark;
+      display: inline-block;
+      padding: 13px 7px;
+
+      right: 127px;
+      top: 143px;
+
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @include wide {
+      font-size: $fontMedium;
+      padding-left: 15px;
+      padding-right: 15px;
+      top: 126px;
+      right: 230px;
+    }
+
+  } */
+
+  // This element represents the lesson icon
+  &:after {
+    @include medium {
+      content: $icon-lessons;
+      font-family: $fontIcon;
+      font-size: 150px;
+
+
+      right: 40px;
+      top: 197px;
+    }
+
+    @include wide {
+      font-size: 218px;
+      right: 120px;
+    }
+
+  }
+
+  & .list-lessons {
+    @include medium {
+      margin-right: 173px;
+    }
+
+    @include wide {
+      margin-right: 306px;
+    }
+  }
+}
+
+.next-lessons--minimal {
+  margin-bottom: $lineHeight*3;
+
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  & ol {
+    padding-left: 0;
+  }
+
+  & a {
+    color: #ffffff;
+  }
+}

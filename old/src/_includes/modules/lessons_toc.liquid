@@ -1,0 +1,22 @@
+{% assign articleIndex = '0' %}
+{% assign incrementIndex = true %}
+{% for p in page.parent.parent.articles[page.parent.parent.id] %}
+{% if p.id == page.collection %}
+{% for guide in page.articles[page.collection] %}
+{% if incrementIndex == true %}
+{% assign articleIndex = articleIndex | plus: 1 %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% if articleIndex != '0'%}{% if articleIndex != 1 %}
+<div class="container-medium">
+  <div class="next-lessons themed--background" data-current-lesson="0{{articleIndex}}">
+    <h3><i class="icon icon-lessons"></i> {{"next_sections" | localize_string}}</h3>
+    <ol class="list-lessons list-links">
+  {% for p in page.parent.parent.articles[page.parent.parent.id] %}{% if p.id == page.collection and p.langcode == page.langcode %}{% for guide in page.articles[page.collection] %}{% if guide.is_localized != true or guide.langcode == page.langcode %}<li{% if guide.url == page.url %} class="current"{% endif %} title="{{guide.title}}"><a {% if guide.url != page.url %} href="{{site.baseurl}}{{guide.url | canonicalize | localize_link:guide}}"{% endif %}>{{guide.title}} {% if guide.url == page.url %} <i class="icon icon-tick"></i>{% endif %}</a></li>{%endif%}
+  {% endfor %}{% endif %}{% endfor %}</ol>
+  </div>
+</div>
+{% endif %}{% endif %}
