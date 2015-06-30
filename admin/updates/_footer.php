@@ -1,7 +1,0 @@
-		</div>
-	
-	</div>
-
-	
-	</body>
-</html>
