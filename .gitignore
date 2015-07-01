@@ -14,3 +14,4 @@ src/css/styles.css
 src/css/styles.min.css
 jekyll/content
 /new/src/static/styles/*
+vendor/
