@@ -22,9 +22,17 @@ gulp.task('rm-content-from-jekyll-dir', function() {
   return del([GLOBAL.WF.jekyll.tmpContentDir], {dot: true});
 });
 
+/**
+ * This is a gotcha with this command!
+ *
+ * Because we are using RVM to define and lock
+ * versions of GEMs we are using, we can use
+ * 'bundle exec' to execute commands againsts
+ * these gems. The reason we do it is to ensure
+ * travis uses it's local gems in vendor/bundle.
+ */
 gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
   // Handle OS differences in executable name
-  console.log('Starting to spawn jekyll');
   var jekyllCommand = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
   var params = ['exec', jekyllCommand, 'build'];
   params.push('--config');
@@ -33,10 +41,6 @@ gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
     GLOBAL.WF.src.jekyllConfigs + '/appengine.yml');
   params.push('--trace');
 
-  console.log('jekyllCommand = ', jekyllCommand);
-  console.log('params = ', JSON.stringify(params));
-
-  // process.env is required to make travis work.
   var jekyllProcess = spawn('bundle', params, {env: process.env, stdio: 'inherit'});
   jekyllProcess.on('close', cb);
 });
