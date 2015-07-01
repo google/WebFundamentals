@@ -24,6 +24,7 @@ gulp.task('rm-content-from-jekyll-dir', function() {
 
 gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
   // Handle OS differences in executable name
+  console.log('Starting to spawn jekyll');
   var jekyllCommand = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
   var params = ['build'];
   params.push('--config');
@@ -31,6 +32,9 @@ gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
     GLOBAL.WF.src.jekyllConfigs + '/common.yml,' +
     GLOBAL.WF.src.jekyllConfigs + '/appengine.yml');
   params.push('--trace');
+
+  console.log('jekyllCommand = ', jekyllCommand);
+  console.log('params = ', JSON.stringify(params));
 
   var jekyllProcess = spawn(jekyllCommand, params, {stdio: 'inherit'});
   jekyllProcess.on('close', cb);
