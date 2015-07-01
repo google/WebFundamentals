@@ -26,7 +26,7 @@ gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
   // Handle OS differences in executable name
   console.log('Starting to spawn jekyll');
   var jekyllCommand = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-  var params = ['build'];
+  var params = ['exec', jekyllCommand, 'build'];
   params.push('--config');
   params.push(
     GLOBAL.WF.src.jekyllConfigs + '/common.yml,' +
@@ -37,7 +37,7 @@ gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
   console.log('params = ', JSON.stringify(params));
 
   // process.env is required to make travis work.
-  var jekyllProcess = spawn(jekyllCommand, params, {env: process.env, stdio: 'inherit'});
+  var jekyllProcess = spawn('bundle', params, {env: process.env, stdio: 'inherit'});
   jekyllProcess.on('close', cb);
 });
 
