@@ -6,7 +6,7 @@ CLOUDSDK_URL=https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
 SDK_DIR=google-cloud-sdk
 
 # deploy only master builds
-if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+if [ "$TRAVIS_BRANCH" != "material-branch" ] || [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   echo "Skip deploy."
   exit 0
 fi
@@ -21,12 +21,12 @@ if [ ! -d $SDK_DIR ]; then
   $SDK_DIR/install.sh
 fi
 
-openssl aes-256-cbc -d -k $MATERIAL_KEY_PASSPHRASE \
-        -in tools/web-central-material-c424a92b8bfa.json.enc \
-        -out tools/web-central-material-c424a92b8bfa.json
+openssl aes-256-cbc -d -k $KEY_PASSPHRASE \
+        -in tools/web-central-44673aab0806.json.enc \
+        -out tools/web-central-44673aab0806.json
 
 $SDK_DIR/bin/gcloud components update gae-python -q
-$SDK_DIR/bin/gcloud auth activate-service-account $MATERIAL_SERVICE_ACCOUNT \
-        --key-file tools/web-central-material-c424a92b8bfa.json \
+$SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
+        --key-file tools/web-central-44673aab0806.json \
 				--quiet
-$SDK_DIR/bin/appcfg.py -A web-central-material -V $TRAVIS_BRANCH update ./build
+$SDK_DIR/bin/appcfg.py -A web-central -V 'material' update ./build
