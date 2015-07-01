@@ -6,10 +6,7 @@ cache:
     - node_modules
 install:
   - bundle install --deployment --jobs=3 --retry=3
-  - npm install -g grunt-cli
+  - npm install -g gulp
   - npm install
 script:
-  - grunt build
-after_success:
-  - tools/auto-deploy.sh
-
+  - gulp build
