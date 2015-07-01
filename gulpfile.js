@@ -57,7 +57,8 @@ gulp.task('build', function(cb) {
       'generate-prod-css',
       'cp-images',
       'cp-fonts',
-      'cp-third-party-style-scripts'
+      'cp-third-party-style-scripts',
+      'copy-appengine-config'
     ],
     'compile-jekyll',
     cb);
