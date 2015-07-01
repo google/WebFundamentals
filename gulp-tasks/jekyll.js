@@ -36,7 +36,8 @@ gulp.task('spawn-jekyll-command', ['rm-jekyll-build-directory'], function(cb) {
   console.log('jekyllCommand = ', jekyllCommand);
   console.log('params = ', JSON.stringify(params));
 
-  var jekyllProcess = spawn(jekyllCommand, params, {stdio: 'inherit'});
+  // process.env is required to make travis work.
+  var jekyllProcess = spawn(jekyllCommand, params, {env: process.env, stdio: 'inherit'});
   jekyllProcess.on('close', cb);
 });
 
