@@ -9,7 +9,7 @@
   </li>
   {% for rootNavTocItem in page.rootnav.toc %}
   <li class="main-nav__item--child">
-    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{rootNavTocItem.strippedTitle}}" href="/web{{ rootNavTocItem.path }}?hl={{page.langcode}}">
+    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{rootNavTocItem.strippedTitle}}" href="{{ rootNavTocItem.path }}">
       {{ rootNavTocItem.title }}
       <i class="main-nav__icon icon icon-chevron-right"></i>
     </a>
