@@ -53,7 +53,12 @@ gulp.task('develop', function(cb) {
 
 gulp.task('build', function(cb) {
   runSequence(
-    'generate-prod-css',
+    [
+      'generate-prod-css',
+      'cp-images',
+      'cp-fonts',
+      'cp-third-party-style-scripts'
+    ],
     'compile-jekyll',
     cb);
 });
