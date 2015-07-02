@@ -13,7 +13,7 @@ collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-featured-image: /web/updates/images/2015-05-19-what-would-you-like-to-see-next-in-dev-tips-daily/network-filmstrip.gif
+featured-image: /web/updates/images/2015-06-18-quickly-view-edit-css-or-javascript-resources-from-the-elements-panel/open-in-sources-from-elements.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/40-open-in-sources-from-elements
 permalink: /updates/2015/06/18/quickly-edit-view-resources-from-the-elements-panel.html
