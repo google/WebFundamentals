@@ -635,3 +635,17 @@ flaviocopes:
   google: 113525015220376733647
   email: simon.gong64@gmail.com
   description: "Simon is a Full Stack Developer"
+
+sethladd:
+  name:
+    given: Seth
+    family: Ladd
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: http://www.sethladd.com/
+  google: +SethLadd
+  twitter: sethladd
+  role:
+    - author
