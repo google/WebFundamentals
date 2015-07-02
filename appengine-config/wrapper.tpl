@@ -6,6 +6,8 @@
     {% include content %}
 
 
+    <script src="/web/scripts/third_party/mdl/mdlComponentHandler.js"></script>
+    <script src="/web/scripts/third_party/mdl/layout/layout.js"></script>
     {% comment %}
       Simple navigation enhancement JS
 
@@ -14,7 +16,7 @@
       but this is all we should need really
 
       Most of the code is just some helper functions.
-    {% endcomment %}
+
 
     <script>
       (function() {
@@ -107,6 +109,7 @@
 
           })(document);
     </script>
+    {% endcomment %}
 
     {% comment %}
       This helper script checks if a G+ comment block should be loaded and loads it if needed.

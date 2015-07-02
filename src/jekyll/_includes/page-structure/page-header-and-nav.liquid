@@ -1,30 +1,31 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button has-drawer">
-  <header class="mdl-layout__header mdl-layout__header--scroll is-casting-shadow">
-    <!-- Icon -->
-    <div class="mdl-layout-icon demo-app-icon"></div>
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">
-        <a class="wf-header__dev-logo" href="https://developers.google.com/">
-          <img src="{{site.WFBaseUrl}}/imgs/developers-logo.svg" alt="Google Developers Homepage">
-        </a>
-      </span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        {% include page-structure/github-header-links.liquid %}
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">{{page.mobileTitleText}}</span>
-    <nav class="mdl-navigation">
-      {% include page-structure/navigation.liquid %}
-    </nav>
-    {% include page-structure/github-header-links.liquid %}
-  </div>
+<header class="mdl-layout__header">
   <div class="mdl-layout__drawer-button">
-    <img src="./../imgs/menu.svg" alt="Menu" />
+    <img src="{{ site.WFBaseUrl }}/imgs/menu.svg" alt="Menu" />
   </div>
-  <main class="mdl-layout__content">
+  
+  <div class="mdl-layout__header-row">
+    <!-- Title -->
+    <span class="mdl-layout-title">
+
+    </span>
+    <!-- Add spacer, to align navigation to the right -->
+    <div class="mdl-layout-spacer"></div>
+    <!-- Navigation -->
+    <nav class="mdl-navigation">
+      <a class="wf-header__dev-logo" href="https://developers.google.com/">
+        <!-- Inlined SVG for GDS Logo -->
+        {% include svgs/gds-logo-grey.svg %}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">{{page.mobileTitleText}}</span>
+  <nav class="mdl-navigation">
+    {% include page-structure/navigation.liquid %}
+  </nav>
+  {% include page-structure/github-header-links.liquid %}
+</div>
+
+<main>

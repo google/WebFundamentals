@@ -140,6 +140,16 @@ module Jekyll
       if not self.data['authors'].nil?
         firstAuthor = self.data['authors'][0]
         author = site.data['contributors'][firstAuthor]
+
+        # Check if the author is actually in the contributors list
+        if author.nil?
+          puts "WFPage.rb: Author '" + firstAuthor + "' isn't in the contributors list."
+          puts "WFPage.rb: Defined in: " + self.name
+          puts ""
+        else
+          author['id'] = firstAuthor
+          author['imgUrl'] = site.config['WFBaseUrl'] + '/imgs/contributors/' + firstAuthor + '.jpg';
+        end
       end
 
       if defined? author['twitter']

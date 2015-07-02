@@ -5,36 +5,38 @@
 
   {% include page-structure/page-header-and-nav.liquid %}
 
-  <header class="tools-header updates-header">
-    <h1>Web Updates</h1>
-    <p>Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and
+  <header class="updates-header">
+    <h1 class="mdl-typography--display-2 updates-header__title">Web Updates</h1>
+    <p class="mdl-typography--title updates-header__description">Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and
     check out the latest features in DevTools.</p>
   </header>
 
-  <div class="container updates-list-header">
-    <ul>
-      {% for article in page.updates %}
-        <li class="clear {{article.type}} update-card">
-          {% include updates/update_card.liquid article=article %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="container updates-pagination">
-    <ul>
-      {% if page.prev_url %}
-      <li class="prev">
-        <a href="{{page.prev_url}}">&lt;</a>
+  <ul class="updates-pages__list">
+    {% for article in page.updates %}
+      <li class="updates-pages__list-item">
+        {% include updates/update_list_item_content.liquid article=article %}
       </li>
-      {% endif %}
+    {% endfor %}
+  </ul>
 
-      {% if page.next_url %}
-      <li class="next">
-        <a href="{{page.next_url}}">&gt;</a>
-      </li>
-      {% endif %}
-    </ul>
+  <div class="updates-next-prev">
+    {% if page.prev_url %}
+      <a class="updates-next-prev__prev-anchor" href="{{page.prev_url}}">
+        <div class="updates-next-prev__prev-btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+        </div>
+        Newer
+      </a>
+    {% endif %}
+
+    {% if page.next_url %}
+    <a class="updates-next-prev__next-anchor" href="{{page.next_url}}">
+      Older
+      <div class="updates-next-prev__next-btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+      </div>
+    </a>
+    {% endif %}
   </div>
 
 
