@@ -18,7 +18,7 @@ source_name: DevTips
 source_url: https://umaar.com/dev-tips/40-open-in-sources-from-elements
 permalink: /updates/2015/06/18/quickly-edit-view-resources-from-the-elements-panel.html
 ---
-<img src="/web/updates/images/2015-05-19-what-would-you-like-to-see-next-in-dev-tips-daily/network-filmstrip.gif" alt="Quickly view/edit CSS or JavaScript resources from the Elements panel.">
+<img src="/web/updates/images/2015-06-18-quickly-view-edit-css-or-javascript-resources-from-the-elements-panel/open-in-sources-from-elements.gif" alt="Quickly view/edit CSS or JavaScript resources from the Elements panel.">
 
 If you see resources in the Elements Panel DOM tree, e.g.
 
