@@ -1,0 +1,93 @@
+/**
+*
+* Related items
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.related-items {
+  margin-top: $lineHeight*3;
+  padding-top: ($lineHeight*2) - 2;
+  border: 2px solid $colorGrayKeyline;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+
+  & img {
+    margin: 0;
+    @include prefixr(transition, opacity .2s ease-in-out);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  }
+
+  & a:hover {
+    & img {
+      opacity: .8;
+    }
+  }
+}
+
+// Use the minimal modifier when this module
+// is included after a full bleed colored module
+// Example usage: https://web-central.appspot.com/web/fundamentals/spotlights/
+.related-items--minimal {
+  border-top: none;
+  padding-top: 0;
+  margin-top: $lineHeight*2;
+  margin-bottom: 2px;
+}
+
+// Use this inline modifier when this module
+// is included in the middle of content blocks
+// Example usage: http://localhost:8081/resources/example-article/
+.related-items--inline {
+  margin-top: $lineHeight - 1;
+  padding-bottom: $lineHeight - 1;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-top: 0;
+}
+
+.related-items__title {
+  @include type--xlarge;
+  padding-top: 0;
+
+  @include medium {
+    padding-top: 0;
+  }
+
+  .related-items--inline & {
+    @include type--large;
+  }
+}
+
+.related-items__main-link {
+  text-transform: uppercase;
+
+  &:before {
+    content: "#";
+    display: inline-block;
+    padding-right: 2px;
+  }
+}
+
+
+.related-items-group {
+
+  & .related-items {
+
+    &:first-child {
+      padding-top: ($lineHeight*3) - 2;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+}

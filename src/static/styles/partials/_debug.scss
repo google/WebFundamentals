@@ -1,0 +1,23 @@
+body.debug-enabled .mdl-layout__content {
+    position: relative;
+}
+
+body.debug-enabled .mdl-layout__content:after {
+  content: '';
+
+  width: 100%;
+  height: 10000px;
+
+  display: block;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+
+  background-image: url(../imgs/debug/debug-lines-dark.png);
+
+  z-index: 10;
+}

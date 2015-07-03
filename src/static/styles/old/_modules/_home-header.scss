@@ -1,0 +1,95 @@
+/**
+*
+* Home header
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.home-header {
+  background: $colorBlue no-repeat center center;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: $lineHeight*3;
+  margin-bottom: $lineHeight*1;
+
+  @include medium {
+    background-image: url(../imgs/devices.svg);
+    background-size: 1200px;
+    background-position: center 30%;
+    padding-bottom: $lineHeight*3;
+  }
+
+  @include wide {
+    background-size: 1560px;
+  }
+
+  &:after {
+    @extend .icon-star:before;
+    font-family: $fontIcon;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 50px;
+    bottom: -10px;
+
+    @include medium {
+      font-size: $fontXXLarge;
+      line-height: 1px;
+      bottom: 4px;
+    }
+
+    font-weight: 500;
+    color: $colorBlueSecondary;
+  }
+
+
+  & h1 {
+    @include type--xxlarge;
+
+    @include small-only {
+      @include type--xlarge(true);
+      padding-top: $lineHeight*2;
+      @include color-inherit;
+    }
+
+    @include medium {
+      padding-top: $lineHeight*2;
+    }
+
+    @include color-inherit;
+  }
+
+  & h2 {
+    @include type--large;
+
+    @include medium {
+      padding-top: 0;
+    }
+    margin-top: 0;
+
+    @include color-inherit;
+  }
+
+  & .cta {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+
+    & a.button--secondary-variation {
+      margin-top: $lineHeight + $lineHeight/2;
+      flex-basis: 200px;
+      -webkit-flex-basis: 200px;
+      white-space: nowrap;
+    }
+  }
+
+}

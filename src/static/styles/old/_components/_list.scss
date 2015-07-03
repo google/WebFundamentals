@@ -1,0 +1,887 @@
+/**
+*
+* List
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+ul,
+ol,
+dl {
+  list-style: none;
+  margin: 0;
+  padding-left: 32px;
+
+  @include small-only {
+    padding-left: 0;
+  }
+
+  & ul,
+  & ol {
+    padding-left: 0;
+  }
+}
+
+li,
+dt {
+  position: relative;
+  padding-left: 16px;
+}
+
+body[dir=rtl] li,
+body[dir=rtl] dt {
+  position: relative;
+  padding-left: 0px;
+  padding-right: 32px;
+}
+
+ul {
+  > li {
+    @include bullet();
+  }
+}
+
+body[dir=rtl] ul {
+  > li {
+    @include bullet("right");
+  }
+}
+
+ol {
+  counter-reset: list;
+
+  > li {
+    @include numbered-list;
+    padding-left: 32px;
+
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
+    &:nth-child(10n) ~ li:before,
+    &:nth-child(10n):before {
+      content: counter(list);
+    }
+
+  }
+}
+
+body[dir=rtl] ol {
+  counter-reset: list;
+
+  > li {
+    @include numbered-list("right");
+    padding-left: 0px;
+    padding-right: 32px;
+  }
+}
+
+// Find nested lists
+ul ol,
+ol ul,
+ul ul,
+ol ol {
+  padding-top: 0;
+}
+
+/*==========  DEFINITION LIST  ==========*/
+
+
+dt {
+  @include bullet("left", $icon-hash, $fontSmall);
+
+  font-family: $fontHighlight;
+  font-weight: 400;
+
+  @include medium {
+    font-weight: 700;
+  }
+}
+
+body[dir=rtl] dt {
+  @include bullet("right", $icon-hash, $fontSmall);
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: $lineHeight;
+}
+
+
+
+/*==========  LIST LINKS  ==========*/
+
+ul.list-links {
+  li:before {
+    display: none;
+  }
+
+  a {
+    @include bullet();
+
+    &:before {
+      font-size: 4px;
+    }
+
+    font-weight: 400;
+  }
+
+  &.list-links--primary {
+    letter-spacing: 1px;
+
+    & a {
+      @include bullet("left", $icon-chevron-right, $fontSmall);
+      font-weight: 400;
+      font-family: $fontHighlight;
+      line-height: 1; // fixes baseline grid alignment
+      text-decoration: none;
+    }
+  }
+}
+
+body[dir=rtl] ul.list-links {
+  a {
+    @include bullet("right");
+  }
+  &.list-links--primary {
+    letter-spacing: 1px;
+
+    & a {
+      @include bullet("right", $icon-chevron-right, $fontSmall);
+    }
+  }
+}
+
+ol.list-links {
+  li {
+    &:before {
+      display: none;
+    }
+
+    & a {
+      display: inline-block;
+      @include numbered-list;
+      font-weight: 300;
+    }
+
+    // This selected every adjacent <li>
+    // from the 10th and overrides the
+    // content property of each
+    &:nth-child(10n) ~ li a:before,
+    &:nth-child(10n) a:before {
+      content: counter(list);
+    }
+  }
+
+  &.list-links--secondary {
+    a:before {
+      display: none;
+    }
+  }
+}
+
+body[dir=rtl] ol.list-links {
+  li {
+    a:before {
+        display: none;
+    }
+
+    @include numbered-list("right");
+  }
+}
+
+.list-links--secondary {
+  @include type--base;
+  padding-left: 0;
+
+  & li {
+    padding-left: 0;
+  }
+}
+
+/*==========  ANCHOR LIST  ==========*/
+
+.list-anchor {
+  padding-left: 0;
+
+  li {
+    @include type--base;
+    padding-top: 0;
+    padding-left: 0;
+
+    &:before {
+      display: none
+    }
+
+  }
+
+  a {
+    @include bullet();
+    display: inline-block;
+    padding-left: 16px;
+
+    &:before {
+      font-size: 4px;
+    }
+  }
+}
+
+body[dir=rtl] .list-anchor {
+  li {
+    @include type--base;
+    padding-top: 0;
+    padding-left: 0;
+
+    &:before {
+      display: none
+    }
+  }
+  a {
+    @include bullet("right");
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 32px;
+  }
+}
+
+
+/*==========  SMALL LIST  ==========*/
+
+.list-small {
+
+  & li {
+    @include medium {
+      @include type--small;
+      padding-top: 0;
+    }
+  }
+}
+
+/*==========  CENTERED LIST  ==========*/
+
+.list-centered {
+  text-align: center;
+  padding-left: 0;
+}
+
+/*==========  FEATURED LIST  ==========*/
+
+.featured-list {
+  padding-top: $lineHeight * 2;
+  padding-left: 0;
+}
+
+.featured-list__item {
+  padding: $lineHeight 0;
+
+  & h3 {
+    padding-top: 0;
+  }
+
+  & p {
+    margin-bottom: $lineHeight;
+  }
+}
+
+.featured-list__img-wrapper {
+  position: relative;
+  padding-top: $lineHeight;
+
+  @include medium {
+    padding-top: 0;
+    margin: 0;
+  }
+
+  & img {
+    margin : 0;
+  }
+}
+
+.featured-list__img {
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @include medium {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+/*==========  RELATED ITEMS LIST  ==========*/
+.related-items-list {
+  font-family: $fontHighlight;
+  padding-top: 0;
+  padding-left: 0;
+
+  @include medium {
+    padding-top: $lineHeight
+  }
+
+  @include wide {
+    padding-top: 0
+  }
+
+  & li {
+    padding-top: $lineHeight;
+    padding-bottom: $lineHeight - 1;
+    border-bottom: 1px solid $colorGrayKeyline;
+    overflow: hidden;
+
+    &:last-child {
+      border-color: transparent;
+    }
+
+    // Selecting the 4th element and then every 3rd adjacent one
+    &:nth-child(3n + 4) {
+      @include wide {
+        margin-left: 25.9%;
+      }
+    }
+
+    @include medium {
+      padding-top: 0;
+      margin-bottom: 0;
+      border-color: transparent;
+    }
+  }
+
+  & p {
+    padding-top: 0;
+    color: $colorHighlight;
+  }
+
+  & a {
+    @include small-only {
+      overflow: hidden;
+    }
+
+    display: block;
+  }
+
+  & img {
+    @include small-only {
+      width: 50%;
+      float: left;
+      margin-right: $lineHeight/2;
+    }
+
+    @include medium {
+      margin-bottom: $lineHeight/2 + 2;
+    }
+  }
+
+  & .tag {
+    padding-top: 0;
+    display: block; // fixes baseline
+    max-width: 0; // fixes baseline
+    white-space: nowrap;
+  }
+}
+
+.related-items-list--inline {
+  & li {
+    padding-top: $lineHeight;
+    border: none;
+    padding-bottom: 0;
+  }
+
+  & a {
+    @include medium {
+      display: inline-block;
+    }
+  }
+}
+
+/*==========  LIST RESET  ==========*/
+
+.list-reset {
+  padding-left: 0;
+
+  li {
+    
+  }
+
+  &.list-links a:before,
+  & li:before {
+    display: none !important; // Fine to use !important when we are forcing an override
+  }
+}
+
+
+/*==========  LESSONS  ==========*/
+.list-lessons {
+  padding-left: 0;
+
+  & a {
+    color: #ffffff;
+  }
+
+  & .current {
+    &,
+    a {
+      text-decoration: none;
+      cursor: default;
+    }
+
+    & .icon {
+      font-size: 10px;
+      display: inline-block;
+      background: rgba(#000000, .2);
+      border-radius: 100%;
+      width: $lineHeight;
+      line-height: $lineHeight;
+      text-align: center;
+      margin-left: 7px;
+    }
+  }
+
+}
+
+/*==========  LESSONS  ==========*/
+.list-guides {
+  padding-left: 0;
+
+  & a {
+    color: #ffffff;
+  }
+
+  & .current {
+    &,
+    a {
+      text-decoration: none;
+      cursor: default;
+    }
+
+    & .icon {
+      font-size: 10px;
+      display: inline-block;
+      background: rgba(#000000, .2);
+      border-radius: 100%;
+      width: $lineHeight;
+      line-height: $lineHeight;
+      text-align: center;
+      margin-left: 7px;
+    }
+  }
+
+}
+
+
+
+/*==========  GUIDES INTO - used on homepage  ==========*/
+.list-guides-intro {
+  margin-bottom: ($lineHeight*2) - 1;
+  padding-top: $lineHeight*1;
+
+  & li {
+    border-bottom: 1px solid $colorGrayKeyline;
+    padding-bottom: ($lineHeight*2) - 1;
+    margin-bottom: ($lineHeight*2);
+
+    @include medium {
+      border-color: transparent;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      border-bottom: transparent;
+      margin-bottom: 0;
+    }
+  }
+
+  & h3 {
+    margin-bottom: $lineHeight;
+    @include color-inherit;
+  }
+}
+
+/*==========  ARTICLE LIST  ==========*/
+.articles-list {
+  padding: (($lineHeight * 2) - 1) 0 ($lineHeight * 2 + 1);
+
+  .divider {
+
+    &:last-child {
+      display: none;
+    }
+
+  }
+
+}
+
+.articles-list__item {
+  padding-left: 0;
+  margin-bottom: $lineHeight*2;
+  position: relative;
+
+  &:before {
+    display: none;
+  }
+
+  & a {
+    display: block;
+    text-decoration: none !important;
+    padding-bottom: 0px;
+
+    h3 {
+      display: inline;
+      @include medium {
+        border-bottom: none;
+      }
+    }
+
+    .no-touch &:hover h3 {
+      text-decoration: underline;
+
+      @include medium {
+        border-bottom: 1px solid;
+      }
+    }
+
+  }
+
+  & h3 {
+    color: $colorHighlight;
+
+  }
+
+  & p {
+    margin-top: $lineHeight;
+  }
+
+}
+
+/*==========  GUIDES LIST  ==========*/
+.guides-list {
+  overflow: hidden;
+
+  @include medium {
+    @include flexbox;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    padding-top: $lineHeight*1;
+  }
+}
+
+.guides-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: $lineHeight;
+  margin-bottom: 0;
+
+  @include medium {
+    @include flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  & h3 {
+    margin: 0 32px;
+
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: none;
+        padding-bottom: 1px;
+
+        &:hover {
+          border-bottom: 1px solid;
+        }
+      }
+    }
+
+  }
+
+  & p {
+    margin: $lineHeight 32px 0;
+  }
+
+  & .primary-content {
+    @include medium {
+      flex: 1 1 auto;
+      -webkit-flex: 1;
+      min-height: 300px;
+      max-height: 300px;
+    }
+  }
+
+  & .secondary-content {
+    position: relative;
+    margin-top: ($lineHeight);
+    border-top: 1px solid $colorGrayKeyline;
+    flex: 1 1 auto;
+
+    @include medium {
+      width: 100%; // needed due to parent being flex
+    }
+
+    & .icon-circle {
+      position: absolute;
+      top: -$lineHeight - 2;
+      left: 50%;
+      margin-left: -21px;
+      border: 2px solid #ffffff;
+
+      & i {
+        font-size: 23px;
+      }
+    }
+  }
+
+  & ol {
+    margin: $lineHeight 32px 0;
+    padding: $lineHeight*2 0px;
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+
+    & li {
+      list-style: none;
+      padding-left: 32px;
+
+      &:before {
+        counter-increment: list;
+        content: counter(list, decimal-leading-zero);
+        color: inherit;
+        font-weight: 400;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+      }
+
+      & a {
+        vertical-align: top;
+      }
+    }
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+body[dir=rtl] .guides-list__item {
+  &:before {
+    display: none;
+  }
+}
+
+/*==========  CONTRIBUTORS LIST  ==========*/
+.contributors-list {
+  overflow: hidden;
+
+  @include medium {
+    @include flexbox;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    padding-top: $lineHeight*2;
+  }
+}
+
+.no-touch {
+  .icon-circle--large {
+    border: none !important;
+  }
+
+  a:hover .icon-circle--large {
+    -webkit-transform: none !important;
+  }
+
+}
+
+
+.contributors-list__item {
+  padding: 0;
+  background: #ffffff;
+  margin-top: $lineHeight;
+  margin-bottom: 0;
+
+  @include medium {
+    @include flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  & h3 {
+    margin: 0 32px;
+
+    @include medium {
+      & a {
+        text-decoration: none;
+        border-bottom: none;
+        padding-bottom: 1px;
+
+        &:hover {
+          border-bottom: 1px solid;
+        }
+      }
+    }
+
+  }
+
+  & p {
+    margin: $lineHeight 32px 0;
+  }
+
+  & .primary-content {
+    @include medium {
+      flex: 1 1 auto;
+      -webkit-flex: 1;
+      min-height: 300px;
+      max-height: 300px;
+    }
+  }
+
+  & .secondary-content {
+    position: relative;
+    margin-top: ($lineHeight);
+    border-top: 1px solid $colorGrayKeyline;
+    flex: 1 1 auto;
+
+    @include medium {
+      width: 100%; // needed due to parent being flex
+    }
+
+    & .icon-circle {
+      position: absolute;
+      top: -$lineHeight - 2;
+      left: 50%;
+      margin-left: -21px;
+      border: 2px solid #ffffff;
+
+      & i {
+        font-size: 23px;
+      }
+    }
+  }
+
+  & ol {
+    margin: $lineHeight 32px 0;
+    padding: $lineHeight*2 0px;
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+
+    & li {
+      list-style: none;
+      padding-left: 32px;
+
+      &:before {
+        counter-increment: list;
+        content: counter(list, decimal-leading-zero);
+        color: inherit;
+        font-weight: 400;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+      }
+
+      & a {
+        vertical-align: top;
+      }
+    }
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+/*==========  recommended LIST  ==========*/
+
+.recommended-list {
+  padding: 0;
+
+  & .recommended-list__item {
+
+    @include small-only {
+      margin: 0 5%;
+    }
+
+    @include medium {
+      @include flexbox;
+    }
+
+    margin-top: $lineHeight;
+    padding-left: 0;
+
+    & .recommanded-list__content {
+
+      background: #ffffff;
+      padding: ($lineHeight + $lineHeight/2) 32px;
+
+      @include small-only {
+        border-top: $lineHeight solid $colorGrayBackground;
+        margin-bottom: -26px;
+
+        &:first-child {
+          border: none;
+          margin-bottom: 0;
+        }
+      }
+
+      @include medium {
+        @include flexbox;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+
+      &>h4 {
+        padding-top: 0;
+        font-family: $fontHighlight;
+      }
+
+      & p {
+        padding-bottom: $lineHeight;
+      }
+
+      & .cta--primary {
+        margin-top: auto;
+      }
+
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & .icon-circle {
+      display: none;
+
+      @include medium {
+        display: inline-block;
+        padding: 13px;
+        vertical-align: top;
+        margin: 0;
+      }
+    }
+
+    & .icon {
+      font-size: $fontBase;
+    }
+  }
+}

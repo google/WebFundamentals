@@ -1,0 +1,105 @@
+/**
+*
+* Typography
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+// Just normalizing text
+// Recommend using padding instead of margin
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+// Definitions
+.small,
+small {
+  @include type--small;
+}
+
+.base,
+p,
+ul,
+ol,
+dl {
+  @include type--base;
+}
+
+.medium,
+h4 {
+  @include type--medium;
+}
+
+.large,
+h3 {
+  @include type--large;
+}
+.xlarge,
+h2 {
+  @include type--xlarge;
+}
+
+.xxlarge,
+h1 {
+  @include type--xxlarge;
+}
+
+.huge {
+  @include type--huge;
+}
+
+li > p {
+  padding-top: 0;
+}
+
+
+// Below are all the rules for content based pages (articles)
+.content {
+
+  // We don't want our content to use the full width of our container
+  // because the lines of text get too long and therefore hard to read
+  // This is selecting all the content elements needed so far and
+  // setting it to use 3 columns
+  h1, h2, h3, h4, h5, h6, p, & > ul, & > ol {
+    @include wide {
+      margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+    }
+  }
+
+  h1 > code, h2 > code, h3 > code {
+    font-size: inherit;
+  }
+  
+  // Remove the indentation from any text elements that are inside a grid...
+  // Needs refactoring.
+  [class*="g-"] {
+    h1, h2, h3, h4, h5, h6, p, ul, ol {
+      margin-right: 0;
+    }
+  }
+
+  // This element is used when we have copy and image next to each other
+  // refer to _media.scss and example-article.html for all the info
+  .media-subsection {
+    p {
+      padding-top: 0;
+    }
+  }
+
+  h2 {
+    margin-top: $lineHeight*3;
+  }
+
+  h3 {
+    margin-top: $lineHeight*2;
+  }
+
+  h4 {
+    margin-top: $lineHeight;
+  }
+}

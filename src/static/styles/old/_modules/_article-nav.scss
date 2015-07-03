@@ -1,0 +1,96 @@
+/**
+*
+* Article nav
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.article-nav {
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    border-left: 2px solid $colorGrayKeyline;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+}
+
+.article-nav-link {
+  padding: $lineHeight 32px;
+  float: left;
+  width: 50%;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    top: 21px;
+    font-family: $fontHighlight;
+    font-size: $fontMedium;
+    font-weight: 400;
+
+    @include medium {
+      top: 25px;
+      font-size: $fontLarge;
+      display: block;
+      padding: 13px 10px;
+      color: #ffffff;
+      background: $colorBlue;
+    }
+  }
+}
+
+.article-nav p {
+  padding: 0;
+  margin: 0;
+}
+
+.article-nav-link--prev {
+  text-align: right;
+
+  &:before {
+    content: $icon-chevron-left;
+    font-family: $fontIcon;
+    left: 0;
+  }
+
+  p {
+    @include medium {
+      padding-left: 52px;
+    }
+  }
+}
+
+.article-nav-link--next {
+  &:before {
+    content: $icon-chevron-right;
+    font-family: $fontIcon;
+    right: 0;
+  }
+
+  p {
+    @include medium {
+      padding-right: 52px;
+    }
+  }
+}
+
+.article-nav-count {
+  @include type--large;
+  font-weight: 700;
+
+  @include medium {
+    font-weight: 400;
+  }
+
+  @include color-inherit;
+}
+
