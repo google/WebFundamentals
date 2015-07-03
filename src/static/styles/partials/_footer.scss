@@ -1,0 +1,38 @@
+@import "third_party/mdl/footer/mini_footer";
+@import "partials/colors";
+
+.wf-footer-section {
+  color: $footer-text-color;
+}
+
+.wf-footer__list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  & li {
+    margin-bottom: $base-line-height / 2;
+    padding-left: 0;
+  }
+}
+
+.wf-footer__list--primary {
+
+}
+
+.wf-footer__list--secondary {
+
+  a {
+    color: $footer-text-color;
+    text-decoration: none;
+  }
+}
+
+.wf-footer__title--link {
+  display: inline-block;
+
+  img {
+    height: $footer-heading-line-height;
+  }
+}

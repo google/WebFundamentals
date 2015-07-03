@@ -1,0 +1,32 @@
+/**
+*
+* Articles section
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.articles-section {
+  background: $colorGrayBackground;
+  text-align: center;
+
+  .article-section__icon {
+    margin-top: 0;
+    margin-bottom: 8px; // by default, icon-circle has margin-top/bottom of 4px to fix baseline issues, in this specific case, we need to remove margin-top, so in order to normalize baseline again, we add it to margin-bottom
+    top: -23px;
+    box-shadow: 0 0 0 2px white;
+  }
+}
+
+.articles-count {
+  color: $colorGray;
+  font-family: $fontHighlight;
+  display: block;
+  position: relative;
+  top: -($lineHeight);
+  font-weight: 400;
+}

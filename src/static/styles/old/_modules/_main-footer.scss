@@ -1,0 +1,141 @@
+/**
+*
+* Main Footer
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.main-footer {
+  background: $colorGrayDark;
+  padding: $lineHeight 0 $lineHeight * 2; // remove half because our li's have half lineHeight margin-bottom
+
+  @include medium {
+    padding-top: $lineHeight*2;
+  }
+
+  &,
+  & a {
+    color: #ffffff;
+  }
+
+  & h3 {
+    @include color-inherit;
+  }
+
+}
+
+.main-footer__list-group {
+  position: relative;
+  overflow: hidden;
+
+  @include medium {
+    &:after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: $colorGray;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+  }
+}
+
+.main-footer__title {
+  @include type--large(true);
+
+  // font-family: $fontHighlight;
+  font-weight: 400;
+
+
+  @include medium {
+    padding-top: 0;
+  }
+
+  & span {
+    display: block;
+    font-weight: 300;
+
+  }
+
+  & img {
+    margin: 0;
+    height: 26px;
+    width: auto;
+    display: block;
+  }
+}
+
+.main-footer__list {
+  padding: $lineHeight 0 0 0;
+
+  & li {
+    margin-bottom: $lineHeight/2;
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+body[dir=rtl] ul.main-footer__list>li:before {
+ display: none;
+}
+
+.main-footer__list--primary {
+  font-family: $fontHighlight;
+  font-size: $fontBase;
+  font-weight: 400;
+
+  @include small-only {
+    border-bottom: 1px solid $colorGray;
+    padding-bottom: $lineHeight*2 + 1;
+    margin-bottom: $lineHeight;
+  }
+
+  @include medium {
+    padding-top: 0;
+    float: left;
+    width: 50%;
+    padding-right: 7.4%;
+    text-align: right;
+  }
+}
+
+.main-footer__list--secondary {
+  font-size: $fontSmall;
+  line-height: $lineHeight;
+  padding-top: $lineHeight/2;
+}
+
+
+.main-footer__google-section {
+
+  & a {
+    color: $colorGrayKeyline;
+  }
+
+  @include medium {
+    float: left;
+    width: 50%;
+    padding-left: $mediumGutterWidth*2;
+  }
+
+  @include wide {
+    padding-left: $wideGutterWidth*2;
+  }
+}
+
+body[dir=rtl] .main-footer__google-section {
+  @include wide {
+    padding-left: 0px;
+    padding-right: $wideGutterWidth*2;
+  }
+}

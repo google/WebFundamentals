@@ -1,0 +1,149 @@
+.mdl-header {
+
+	font-family: Roboto;
+	font-weight: normal;
+	* {
+		font-family: Roboto;
+		font-weight: normal;
+		letter-spacing: 0;
+	}
+
+	height: 60vh;
+	background-color: #1a1a1f;
+	background-image: url(/web/tools/material-design-lite/images/header.jpg);
+	background-size: cover;
+
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		padding-left: 40px;
+		padding-top: 42px;
+		color: #f0f0f0;
+		font-size: 15px;
+		font-weight: 500;
+		width: 120px;
+		line-height: 1.35em;
+		text-transform: uppercase;
+	}
+
+	a {
+		background-color: #f3ff2d;
+		width: 56px;
+		height: 56px;
+		display: block;
+		border-radius: 56px;
+		margin-top: 42px;
+		margin-right: 40px;
+		flex-shrink: 0;
+		-webkit-flex-shrink: 0;
+
+		span {
+			font-size: 0;
+			color: transparent;
+			display: block;
+			width: 56px;
+			height: 56px;
+			background-image: url(/web/tools/material-design-lite/images/share.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			opacity: 0.6;
+		}
+	}
+
+	img {
+		height: 117px;
+		width: 117px;
+		align-self: center;
+		-webkit-align-self: center;
+		flex-shrink: 0;
+		-webkit-flex-shrink: 0;
+	}
+
+}
+
+.mdl-coming-soon {
+	height: 28vh;
+	background: #fafafa;
+	text-align: center;
+	font-family: Roboto;
+	font-weight: 500;
+	color: rgba(0,0,0,0.5);
+	padding-top: 12vh;
+	padding-bottom: 12vh;
+	text-transform: uppercase;
+}
+
+.mdl-comingsoon-single-topic p {
+	font-family: Roboto;
+	font-weight: 500;
+	color: rgba(0,0,0,0.5);
+}
+
+.mdl-footer {
+	.main-footer {
+	  background: #f5f5f5;
+
+	  a {
+	  	color: rgba(0, 0, 0, 0.54);
+	  }
+
+	  .main-footer__google-section a {
+	  	color: rgba(0, 0, 0, 0.49);
+	  }
+
+	  .main-footer__list-group:after {
+	  	background: #e5e5e5;
+	  }
+	}
+}
+
+@media only screen and (min-resolution: 2dppx) {
+	.mdl-header {
+			background-image: url(/web/tools/material-design-lite/images/header_2x.jpg);
+	}
+}
+
+.mdl-comingsoon-topics {
+	background-color: RGB(250, 250, 250);
+	padding-bottom: 12vh;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.mdl-comingsoon-single-topic {
+	margin: 0 auto ($padding * 4) auto;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	img {
+		width: 40%;
+		margin: 0 auto ($padding * 2) auto;
+	}
+}
+
+.mdl-comingsoon-single-topic:last-child {
+	margin-bottom: 0;
+}
+
+@include medium {
+	.mdl-comingsoon-single-topic {
+		float: left;
+		width: 33%;
+
+
+	}
+}

@@ -1,0 +1,125 @@
+@import "third_party/mdl/mixins";
+@import "third_party/mdl/variables";
+@import "third_party/mdl/resets/resets";
+@import "third_party/mdl/typography/typography";
+@import "third_party/mdl/layout/layout";
+@import "third_party/mdl/grid/grid";
+@import "third_party/mdl/button/button";
+@import "partials/google-fonts";
+@import "partials/debug";
+@import "partials/base";
+@import "partials/header";
+@import "partials/footer";
+
+$base-line: 16px;
+
+.mdl-layout__header {
+  height: 280px;
+
+  background-color: #03a9f4;
+}
+
+.updates-header {
+  margin: ($base-line * 2) ($base-line * 5) ($base-line * 3) ($base-line * 5);
+}
+
+.updates-header__title {
+  margin: 0 0 $base-line 0;
+}
+
+.updates-header__description {
+
+}
+
+.updates-pages__list {
+    display: block;
+
+    padding: 0;
+    margin: 0 ($base-line * 5);
+
+    list-style: none;
+}
+
+.updates-pages__list-item {
+  margin-bottom: $base-line * 2;
+}
+
+.update-list-item__link-wrapper {
+  display: block;
+
+  text-decoration: none;
+  color: $text-color-primary;
+}
+
+.update-list-item__title {
+  margin: 0 0 ($base-line / 2) 0;
+}
+
+.update-list-item__description {
+  margin: 0 0 ($base-line / 2) 0;
+}
+
+.update-list-item__profile-photo {
+  width: $base-line * 3;
+  height: auto;
+  border-radius: 100%;
+}
+
+.update-list-item__post-details {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+}
+
+.update-list-item__author-date-container {
+  flex: 1;
+
+  margin-left: $base-line / 2;
+}
+
+.update-list-item__author {
+}
+
+.update-list-item__date {
+
+}
+
+.updates-next-prev {
+  margin: 0 ($base-line * 5);
+}
+
+.updates-next-prev::after {
+  content: '';
+
+  display: block;
+
+  clear: both;
+}
+
+.updates-next-prev__next-anchor, .updates-next-prev__prev-anchor {
+  color: $text-color-primary;
+  text-decoration: none;
+}
+
+.updates-next-prev__next-anchor {
+  float: right;
+}
+
+.updates-next-prev__prev-anchor {
+  float: left;
+}
+
+.updates-next-prev__next-btn, .updates-next-prev__prev-btn {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.updates-next-prev__next-btn {
+  background-image: url(./../imgs/arrow-forwards.svg);
+}
+
+.updates-next-prev__prev-btn {
+  background-image: url(./../imgs/arrow-backwards.svg);
+}

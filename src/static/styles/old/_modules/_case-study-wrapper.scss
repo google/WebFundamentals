@@ -1,0 +1,70 @@
+/**
+*
+* Case study wrapper
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.case-study-wrapper {
+  padding-top: $lineHeight;
+  padding-bottom: $lineHeight*2;
+
+  background: $colorGrayBackground;
+
+  @include medium {
+    margin-top: - $lineHeight*2;
+    padding-top: $lineHeight*3;
+    background: linear-gradient(to right,#FDD835 50%, #FBC02D 50%);
+
+    &.has-video-after {
+      margin-bottom: - $lineHeight*7;
+      padding-bottom: $lineHeight*8;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
+    white-space: nowrap;
+  }
+
+  a {
+    color: #C3811A;
+  }
+
+  .case-study-inverted a {
+    color: #FFE951;
+  }
+
+}
+
+.case-study__dl ul {
+  padding-top: 0;
+}
+
+.case-study-inverted {
+  @include medium {
+    color: #fff;
+    h2 {
+      color: #fff;
+    }
+  }
+}
+
+.case-study-previous {
+  padding-top: 26px;
+
+  .case-study-previous__desc {
+
+  }
+
+}
+
+.case-study__img-wrapper img {
+  margin-left: 2%;
+}
