@@ -146,7 +146,7 @@ This is a good tool for understanding how your users interact with your app inst
 
 ## <span id="native">Native app install banner</span>
 
-A new powerful feature for native app developers also landed in Chrome 43 Beta.  Native App isntall banners are similar to Web app install banners, but instead of adding to the Homescreen will let the user inline install your native app.
+A new powerful feature for native app developers also landed in Chrome 44 Beta.  Native App install banners are similar to Web app install banners, but instead of adding to the Homescreen will let the user inline install your native app.
 
 <p style="text-align: center;">
   <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
