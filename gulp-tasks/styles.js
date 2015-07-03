@@ -22,7 +22,8 @@ gulp.task('inline-fonts', function() {
   return gulp.src(GLOBAL.WF.src.styles + '/partials/_google-fonts.scss')
     .pipe(googleWebFonts({
       fontsurl: 'http://fonts.googleapis.com/css?family=Roboto',
-      replaceAll: true
+      replaceAll: true,
+      sassVariant: true
     }))
     .pipe(gulp.dest(GLOBAL.WF.src.styles + '/partials/'));
 });

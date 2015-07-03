@@ -118,7 +118,14 @@ function produceCSS(config) {
     var finalCSS = arrayOfResults[0].replace(srcStringToReplace, srcString);
 
     var chromeResponse = arrayOfResults[arrayOfResults.length - 1];
-    finalCSS += '\n\n@supports (unicode-range: U+0) {\n\n' +
+
+    var supportsCSS = '\n\n@supports (unicode-range: U+0) {\n\n';
+    if (config.sassVariant) {
+      supportsCSS = '\n\n$unicodeVariable: \'U+0\';\n' +
+        '@supports (unicode-range: #{$unicodeVariable}) {\n\n';
+    }
+
+    finalCSS += supportsCSS +
       chromeResponse +
       '\n}';
     return finalCSS;
