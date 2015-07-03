@@ -13,5 +13,5 @@ node_modules/
 src/css/styles.css
 src/css/styles.min.css
 jekyll/content
-/new/src/static/styles/*
+/src/static/styles/third_party/mdl/*
 vendor/
