@@ -1,5 +1,7 @@
 sudo: false
 language: ruby
+node_js:
+  - "0.12"
 cache:
   directories:
     - vendor/bundle
