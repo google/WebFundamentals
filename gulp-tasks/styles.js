@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var plugins = require('gulp-load-plugins')();
+var googleWebFonts = require('./custom-plugins/gulp-google-web-fonts');
 
 // Browser support for autoprefix
 var AUTOPREFIXER_BROWSERS = [
@@ -16,6 +17,15 @@ var AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10'
 ];
+
+gulp.task('inline-fonts', function() {
+  return gulp.src(GLOBAL.WF.src.styles + '/partials/_google-fonts.scss')
+    .pipe(googleWebFonts({
+      fontsurl: 'http://fonts.googleapis.com/css?family=Roboto',
+      replaceAll: true
+    }))
+    .pipe(gulp.dest(GLOBAL.WF.src.styles + '/partials/'));
+});
 
 // This function is used by generate-dev-css and generate-prod-css
 function compileSassAutoprefix(genSourceMaps) {
@@ -37,7 +47,7 @@ function compileSassAutoprefix(genSourceMaps) {
 
 // generate-dev-css simply pipes the compiled sass to the build directory
 // and writes the sourcemaps
-gulp.task('generate-dev-css', ['styles:clean'], function() {
+gulp.task('generate-dev-css', ['styles:clean', 'inline-fonts'], function() {
   return compileSassAutoprefix(true)
     .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest(GLOBAL.WF.build.styles))
@@ -48,7 +58,7 @@ gulp.task('generate-dev-css', ['styles:clean'], function() {
 // except it minifies and optimises the CSS and
 // skips generating the sourcemaps which account for
 // a lot of weight
-gulp.task('generate-prod-css', ['styles:clean'], function() {
+gulp.task('generate-prod-css', ['styles:clean', 'inline-fonts'], function() {
   return compileSassAutoprefix(false)
     .pipe(plugins.if('*.css', plugins.csso()))
     .pipe(gulp.dest(GLOBAL.WF.build.styles))

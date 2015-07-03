@@ -34,6 +34,8 @@
     "gulp-copy": "0.0.2",
     "gulp-imagemin": "^2.2.1",
     "gulp-minify-html": "^1.0.3",
-    "gulp-watch": "^4.2.4"
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.2.4",
+    "through2": "^2.0.0"
   }
 }
