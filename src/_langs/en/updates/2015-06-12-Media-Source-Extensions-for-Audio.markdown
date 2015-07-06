@@ -41,7 +41,7 @@ img, video {
 
 You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](http://en.wikipedia.org/wiki/Gramophone_record) and [CDs](http://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](http://en.wikipedia.org/wiki/MP3) and [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
 
-We'll get into the details of why below, but for now lets start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
+We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
@@ -75,7 +75,7 @@ There are a [variety of ways to create gapless content](#appendix-a-creating-gap
 
 ## Basic Setup
 
-First, lets backtrack and cover the basic setup of a `MediaSource` instance. Media Source Extensions, as the name implies, are just extensions to the existing media elements. Below, we're assigning an [`Object URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL.createObjectURL), representing our `MediaSource` instance, to the source attribute of an audio element; just like you would set a standard URL.
+First, let's backtrack and cover the basic setup of a `MediaSource` instance. Media Source Extensions, as the name implies, are just extensions to the existing media elements. Below, we're assigning an [`Object URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL.createObjectURL), representing our `MediaSource` instance, to the source attribute of an audio element; just like you would set a standard URL.
 
 {% highlight javascript %}
 var audio = document.createElement('audio');
@@ -103,7 +103,7 @@ Once the `MediaSource` object is connected, it will perform some initialization 
 
 ## Anomalous Waveforms
 
-We'll come back to the code in a moment, but lets now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](http://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
+We'll come back to the code in a moment, but let's now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](http://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3">
@@ -185,7 +185,7 @@ function onAudioLoaded(data, index) {
 
 ## A Seamless Waveform
 
-Lets see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
+Let's see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3">
@@ -235,7 +235,7 @@ ffmpeg -i sintel.flac -acodec pcm_f32le -map 0 -f segment \
        -segment_list out.list -segment_time 6.5 sintel_%d.wav
 {% endhighlight %}
 
-Next, lets create the MP3 files. LAME has several options for creating gapless content. If you're in control of the content you might consider using `--nogap` with a batch encoding of all files to avoid padding between segments altogether. For the purposes of this demo though, we want that padding so we'll use a standard high quality VBR encoding of the wave files.
+Next, let's create the MP3 files. LAME has several options for creating gapless content. If you're in control of the content you might consider using `--nogap` with a batch encoding of all files to avoid padding between segments altogether. For the purposes of this demo though, we want that padding so we'll use a standard high quality VBR encoding of the wave files.
 
 {% highlight bash %}
 lame -V=2 sintel_0.wav sintel_0.mp3
@@ -245,7 +245,7 @@ lame -V=2 sintel_3.wav sintel_3.mp3
 lame -V=2 sintel_4.wav sintel_4.mp3
 {% endhighlight %}
 
-That's all that's necessary to create the MP3 files. Now lets cover the creation of the fragmented MP4 files. We'll follow Apple's directions for creating media which is [mastered for iTunes](http://www.apple.com/itunes/mastered-for-itunes/). Below, we'll convert the wave files into intermediate [CAF](http://en.wikipedia.org/wiki/Core_Audio_Format) files, per the instructions, before encoding them as [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) in an [MP4](http://en.wikipedia.org/wiki/MP4) container using the recommended parameters.
+That's all that's necessary to create the MP3 files. Now let's cover the creation of the fragmented MP4 files. We'll follow Apple's directions for creating media which is [mastered for iTunes](http://www.apple.com/itunes/mastered-for-itunes/). Below, we'll convert the wave files into intermediate [CAF](http://en.wikipedia.org/wiki/Core_Audio_Format) files, per the instructions, before encoding them as [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) in an [MP4](http://en.wikipedia.org/wiki/MP4) container using the recommended parameters.
 
 {% highlight bash %}
 afconvert sintel_0.wav sintel_0_intermediate.caf -d 0 -f caff \
@@ -285,7 +285,7 @@ That's it! We now have fragmented MP4 and MP3 files with the correct metadata ne
 
 ## Appendix B: Parsing Gapless Metadata
 
-Just like creating gapless content, parsing the gapless metadata can be tricky since there's no standard method for storage. Below we'll cover how the two most common encoders, LAME and iTunes, store their gapless metadata. Lets start by setting up some helper methods and an outline for the `ParseGaplessData()` used above.
+Just like creating gapless content, parsing the gapless metadata can be tricky since there's no standard method for storage. Below we'll cover how the two most common encoders, LAME and iTunes, store their gapless metadata. Let's start by setting up some helper methods and an outline for the `ParseGaplessData()` used above.
 
 {% highlight javascript %}
 // Since most MP3 encoders store the gapless metadata in binary, we'll need a
