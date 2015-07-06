@@ -22,12 +22,24 @@
 
 </header>
 
-<div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">{{page.mobileTitleText}}</span>
-  <nav class="mdl-navigation">
+<div class="wf-nav-drawer mdl-layout__drawer">
+  <header class="wf-header">
+    <div class="wf-header__top-row">
+    </div>
+    <div class="wf-header__bottom-row">
+      <h1 class="wf-header__title">Web Updates</h1>
+    </div>
+  </header>
+
+  <nav class="wf-nav-drawer__navigation">
     {% include page-structure/navigation.liquid %}
   </nav>
-  {% include page-structure/github-header-links.liquid %}
+
+  <div class="mdl-layout-spacer"></div>
+
+  <div class="wf-navdrawer__github-links">
+    <a href="{{site.github.root}}/tree/master/src/{{page.path| uri_escape }}" target="_blank">{{"view_source" | localize_string}}</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.url| uri_escape }}" target="_blank">{{"submit_feedback" | localize_string}}</a>
+  </div>
 </div>
 
 <main>

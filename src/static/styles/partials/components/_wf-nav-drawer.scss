@@ -1,0 +1,44 @@
+.wf-nav-drawer {
+  display: flex;
+  position: fixed;
+
+  flex-direction: column;
+}
+
+.wf-navdrawer__github-links {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: $base-line 0;
+  }
+}
+
+.mdl-layout__obfuscator {
+  position: fixed;
+}
+
+.wf-nav__list {
+  padding: $base-line 0 0 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.wf-main-nav__list {
+  padding-bottom: $base-line;
+  border-bottom: 1px solid $grey-border-color;
+}
+
+.wf-main-nav__item {
+  padding: $base-line;
+}
+
+.wf-main-nav__link, .wf-main-nav__sub-link {
+  text-decoration: none;
+  color: $text-color-primary;
+}
+
+.wf-main-nav__sub-link {
+  padding-left: $base-line;
+}
