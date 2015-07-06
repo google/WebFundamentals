@@ -6,8 +6,8 @@
     {% include content %}
 
 
-    <script src="/web/scripts/third_party/mdl/mdlComponentHandler.js"></script>
-    <script src="/web/scripts/third_party/mdl/layout/layout.js"></script>
+    <script src="/web/scripts/nav-drawer.js"></script>
+
     {% comment %}
       Simple navigation enhancement JS
 
@@ -135,15 +135,17 @@
           });
 
           var counterElement = document.getElementById("gplus-comment-counter");
-          var counterComputedStyle = getComputedStyle(counterElement);
+          if (counterElement) {
+            var counterComputedStyle = getComputedStyle(counterElement);
 
-          gapi.commentcount.render(counterElement, {
-            count_only: 'true',
-            href: commentElement.dataset.url,
-            'font-family': counterComputedStyle.fontFamily,
-            'font-size': counterComputedStyle.fontSize,
-            color: "#404040"
-          });
+            gapi.commentcount.render(counterElement, {
+              count_only: 'true',
+              href: commentElement.dataset.url,
+              'font-family': counterComputedStyle.fontFamily,
+              'font-size': counterComputedStyle.fontSize,
+              color: "#404040"
+            });
+          }
 
         };
         script.src = "https://apis.google.com/js/plusone.js";

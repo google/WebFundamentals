@@ -11,6 +11,7 @@ GLOBAL.WF = {
     imgs: 'src/static/imgs',
     styles: 'src/static/styles',
     fonts: 'src/static/fonts',
+    scripts: 'src/static/scripts',
   },
   jekyll: {
     tmpContentDir: 'src/jekyll/content'
@@ -43,7 +44,7 @@ gulp.task('develop', function(cb) {
       'generate-dev-css',
       'cp-images',
       'cp-fonts',
-      'cp-third-party-style-scripts'
+      'cp-scripts',
     ],
     'compile-jekyll',
     'start-gae-dev-server',
@@ -57,7 +58,7 @@ gulp.task('build', function(cb) {
       'generate-prod-css',
       'cp-images',
       'cp-fonts',
-      'cp-third-party-style-scripts',
+      'cp-scripts',
       'copy-appengine-config'
     ],
     'compile-jekyll',
