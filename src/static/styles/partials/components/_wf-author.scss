@@ -1,0 +1,29 @@
+.wf-author__post-details {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 $base-line;
+  margin: $base-line 0;
+}
+
+.wf-author__profile-photo {
+  width: $base-line * 3;
+  height: auto;
+
+  margin-right: ($base-line / 2);
+  border-radius: 100%;
+}
+
+.wf-author__author-date-container {
+  flex: 1;
+}
+
+.wf-author__author {
+
+}
+
+.wf-author__date {
+
+}

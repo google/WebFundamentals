@@ -6,14 +6,5 @@
       {{article.description}}
     </div>
 
-    {% if article.main_author %}
-    <footer class="update-list-item__post-details">
-      <img class="update-list-item__profile-photo" src="{{article.main_author.imgUrl}}" alt="Profile photo of {{article.main_author.name.given}} {{article.main_author.name.family}}" />
-
-      <div class="update-list-item__author-date-container">
-        <div class="update-list-item__author">{{article.main_author.name.given}} {{article.main_author.name.family}}</div>
-        <div class="mdl-typography--caption update-list-item__date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
-      </div>
-    </footer>
-    {% endif %}
+    {% include updates/author.liquid author=article.main_author written_on=article.article.written_on %}
 </a>

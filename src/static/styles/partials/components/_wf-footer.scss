@@ -1,5 +1,6 @@
-@import "third_party/mdl/footer/mini_footer";
-@import "partials/colors";
+@import "../../third_party/mdl/footer/mini_footer";
+@import "../dimens";
+@import "../colors";
 
 .wf-footer-section {
   color: $footer-text-color;
@@ -12,7 +13,7 @@
   margin: 0;
 
   & li {
-    margin-bottom: $base-line-height / 2;
+    margin-bottom: $base-line / 2;
     padding-left: 0;
   }
 }
@@ -33,6 +34,6 @@
   display: inline-block;
 
   img {
-    height: $footer-heading-line-height;
+    //height: $footer-heading-line;
   }
 }

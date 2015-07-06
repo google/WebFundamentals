@@ -1,0 +1,64 @@
+@import "../dimens";
+@import "../colors";
+
+$header-svg-icon-size: 24px;
+
+.wf-header {
+  width: 100%;
+
+  padding: $base-line;
+  box-sizing: border-box;
+
+  background-color: $header-bg-color;
+}
+
+.wf-header__top-row {
+  display: flex;
+
+  flex-direction: row;
+  align-items: flex-start;
+
+  margin-bottom: $base-line * 2;
+}
+
+.wf-header__menu-btn {
+  width: $base-line * 2;
+  height: $base-line * 2;
+
+  background: transparent;
+  border: none;
+
+  padding: 0;
+}
+
+.wf-menu-svg {
+  width: $header-svg-icon-size;
+  height: $header-svg-icon-size;
+
+  fill: #010101;
+  opacity: 0.5;
+}
+
+.wf-header__dev-logo {
+    display: inline-block;
+
+    width: $base-line * 2;
+    height: $base-line * 2;
+
+    line-height: $base-line * 2;
+    text-align: center;
+}
+
+.wf-gds-dev-logo {
+  width: $header-svg-icon-size;
+  height: $header-svg-icon-size;
+
+  fill: white;
+}
+
+.wf-header__title {
+  margin: 0;
+
+  font-size: $base-line * 1.5;
+  color: white;
+}

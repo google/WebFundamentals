@@ -1,23 +1,25 @@
-<header class="mdl-layout__header">
-  <div class="mdl-layout__drawer-button">
-    <img src="{{ site.WFBaseUrl }}/imgs/menu.svg" alt="Menu" />
-  </div>
-  
-  <div class="mdl-layout__header-row">
-    <!-- Title -->
-    <span class="mdl-layout-title">
+<header class="wf-header">
 
-    </span>
+  <!-- Top Row contains buttons and links -->
+  <div class="wf-header__top-row">
+    <button class="wf-header__menu-btn">
+      {% include svgs/menu.svg %}
+    </button>
+
     <!-- Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer"></div>
-    <!-- Navigation -->
-    <nav class="mdl-navigation">
-      <a class="wf-header__dev-logo" href="https://developers.google.com/">
-        <!-- Inlined SVG for GDS Logo -->
-        {% include svgs/gds-logo-grey.svg %}
-      </a>
-    </nav>
+
+    <a class="wf-header__dev-logo" href="https://developers.google.com/">
+      <!-- Inlined SVG for GDS Logo -->
+      {% include svgs/gds-logo-grey.svg %}
+    </a>
   </div>
+
+  <!-- Bottom Row contains buttons and links -->
+  <div class="wf-header__bottom-row">
+    <h1 class="wf-header__title">{{ include.title }}</h1>
+  </div>
+
 </header>
 
 <div class="mdl-layout__drawer">
