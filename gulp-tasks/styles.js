@@ -56,7 +56,6 @@ gulp.task('compile-dev-css', function() {
 
 gulp.task('compile-prod-css', function() {
   return compileSassAutoprefix(false)
-    .pipe(plugins.if('*.css', plugins.csso()))
     .pipe(gulp.dest(GLOBAL.WF.build.styles))
     .pipe(plugins.size({title: 'compile-prod-css'}));
 });
