@@ -1,0 +1,25 @@
+@import "third_party/mdl/mixins";
+@import "third_party/mdl/variables";
+@import "third_party/mdl/resets/resets";
+@import "third_party/mdl/typography/typography";
+@import "third_party/mdl/layout/layout";
+@import "partials/google-fonts";
+@import "partials/debug";
+@import "partials/base";
+@import "partials/components/wf-header";
+@import "partials/components/wf-footer";
+@import "partials/components/wf-author";
+
+.update-post__content-container {
+  padding: 0 $base-line;
+  margin: $base-line 0;
+}
+
+a {
+  color: $highlight-color;
+}
+
+.highlight pre {
+  margin-left: - $base-line;
+  margin-right: - $base-line;
+}

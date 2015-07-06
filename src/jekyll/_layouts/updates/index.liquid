@@ -1,15 +1,12 @@
   {% include page-structure/html-head.liquid %}
 </head>
 
-<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }} debug-enabled" itemscope itemtype="http://schema.org/WebSite">
+<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
 
-  {% include page-structure/page-header-and-nav.liquid %}
+  {% include page-structure/page-header-and-nav.liquid title="Web Updates" %}
 
-  <header class="updates-header">
-    <h1 class="mdl-typography--display-2 updates-header__title">Web Updates</h1>
-    <p class="mdl-typography--title updates-header__description">Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and
+  <p class="mdl-typography--title updates-header__description">Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and
     check out the latest features in DevTools.</p>
-  </header>
 
   <ul class="updates-pages__list">
     {% for article in page.updates %}

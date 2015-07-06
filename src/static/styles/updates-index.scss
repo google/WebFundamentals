@@ -8,40 +8,29 @@
 @import "partials/google-fonts";
 @import "partials/debug";
 @import "partials/base";
-@import "partials/header";
-@import "partials/footer";
-
-$base-line: 16px;
-
-.mdl-layout__header {
-  height: 280px;
-
-  background-color: #03a9f4;
-}
-
-.updates-header {
-  margin: ($base-line * 2) ($base-line * 5) ($base-line * 3) ($base-line * 5);
-}
-
-.updates-header__title {
-  margin: 0 0 $base-line 0;
-}
+@import "partials/components/wf-header";
+@import "partials/components/wf-footer";
+@import "partials/components/wf-author";
 
 .updates-header__description {
-
+  padding: 0 $base-line;
+  margin: $base-line 0;
 }
 
 .updates-pages__list {
     display: block;
 
     padding: 0;
-    margin: 0 ($base-line * 5);
+    margin: 0;
 
     list-style: none;
 }
 
 .updates-pages__list-item {
-  margin-bottom: $base-line * 2;
+  padding: $base-line;
+  margin-bottom: $base-line;
+
+  border-bottom: 1px solid rgba(0,0,0,0.12);
 }
 
 .update-list-item__link-wrapper {
@@ -52,41 +41,16 @@ $base-line: 16px;
 }
 
 .update-list-item__title {
-  margin: 0 0 ($base-line / 2) 0;
+  margin-top: 0;
+  margin-bottom: ($base-line / 2);
 }
 
 .update-list-item__description {
-  margin: 0 0 ($base-line / 2) 0;
-}
-
-.update-list-item__profile-photo {
-  width: $base-line * 3;
-  height: auto;
-  border-radius: 100%;
-}
-
-.update-list-item__post-details {
-  display: flex;
-
-  flex-direction: row;
-  align-items: center;
-}
-
-.update-list-item__author-date-container {
-  flex: 1;
-
-  margin-left: $base-line / 2;
-}
-
-.update-list-item__author {
-}
-
-.update-list-item__date {
-
+  margin-bottom: ($base-line / 2);
 }
 
 .updates-next-prev {
-  margin: 0 ($base-line * 5);
+  padding: $base-line;
 }
 
 .updates-next-prev::after {

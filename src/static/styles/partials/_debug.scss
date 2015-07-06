@@ -1,8 +1,8 @@
-body.debug-enabled .mdl-layout__content {
+body.debug-enabled {
     position: relative;
 }
 
-body.debug-enabled .mdl-layout__content:after {
+body.debug-enabled:after {
   content: '';
 
   width: 100%;

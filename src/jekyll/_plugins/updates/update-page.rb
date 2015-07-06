@@ -24,7 +24,7 @@ module Jekyll
       self.data['html_head_description'] = 'Google Developers Web Updates ' +
         'contains the latest news from the Chrome, looking at new features ' +
         'on the open web and in Chrome DevTools.'
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/update-post.css';
 
       self.data['feed_name'] = 'Web Updates - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/updates/feed.xml'

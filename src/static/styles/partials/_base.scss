@@ -1,4 +1,5 @@
 @import "dimens";
+@import "colors";
 
 html {
   width: 100%;
@@ -8,7 +9,7 @@ html {
 body {
   width: 100%;
   min-height: 100%;
-  
+
   font-family: Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 0;
@@ -20,5 +21,14 @@ img {
 }
 
 li {
-  line-height: $base-line-height;
+  line-height: $base-line;
+}
+
+pre {
+  padding: $base-line;
+
+  overflow-x: auto;
+
+  background-color: $code-bg-color;
+  font-family: 'Inconsolata', 'monospace';
 }

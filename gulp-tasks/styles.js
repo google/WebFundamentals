@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var plugins = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');
 var googleWebFonts = require('./custom-plugins/gulp-google-web-fonts');
 
 // Browser support for autoprefix
@@ -46,24 +47,44 @@ function compileSassAutoprefix(genSourceMaps) {
     .pipe(plugins.autoprefixer(AUTOPREFIXER_BROWSERS));
 }
 
-// generate-dev-css simply pipes the compiled sass to the build directory
-// and writes the sourcemaps
-gulp.task('generate-dev-css', ['styles:clean', 'inline-fonts'], function() {
+gulp.task('compile-dev-css', function() {
   return compileSassAutoprefix(true)
     .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest(GLOBAL.WF.build.styles))
-    .pipe(plugins.size({title: 'generate-dev-css'}));
+    .pipe(plugins.size({title: 'compile-dev-css'}));
+});
+
+gulp.task('compile-prod-css', function() {
+  return compileSassAutoprefix(false)
+    .pipe(plugins.if('*.css', plugins.csso()))
+    .pipe(gulp.dest(GLOBAL.WF.build.styles))
+    .pipe(plugins.size({title: 'compile-prod-css'}));
+});
+
+// generate-dev-css simply pipes the compiled sass to the build directory
+// and writes the sourcemaps
+gulp.task('generate-dev-css', function(cb) {
+  runSequence(
+    'styles:clean',
+    [
+      'inline-fonts',
+      'compile-dev-css',
+    ],
+    cb);
 });
 
 // generate-prod-css is the same as generate-dev-css
 // except it minifies and optimises the CSS and
 // skips generating the sourcemaps which account for
 // a lot of weight
-gulp.task('generate-prod-css', ['styles:clean', 'inline-fonts'], function() {
-  return compileSassAutoprefix(false)
-    .pipe(plugins.if('*.css', plugins.csso()))
-    .pipe(gulp.dest(GLOBAL.WF.build.styles))
-    .pipe(plugins.size({title: 'generate-css'}));
+gulp.task('generate-prod-css', ['styles:clean'], function(cb) {
+  runSequence(
+    'styles:clean',
+    [
+      'inline-fonts',
+      'compile-prod-css',
+    ],
+    cb);
 });
 
 gulp.task('styles:clean', del.bind(null,
