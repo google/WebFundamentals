@@ -122,6 +122,8 @@ module Jekyll
       tocItem['strippedTitle'] = Sanitize.fragment(tocItem['title'])
       if tocItem['external'].nil? || tocItem['external'] != true
         tocItem['isInCurrentSection'] = self.url.include? tocItem['path']
+      else
+        tocItem['isInCurrentSection'] = false
       end
 
       tocItem['path'] = site.config['WFBaseUrl'] + tocItem['path'] + '?hl=' + @langcode
