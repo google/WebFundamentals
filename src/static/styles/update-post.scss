@@ -23,3 +23,8 @@ a {
   margin-left: - $base-line;
   margin-right: - $base-line;
 }
+
+// This is display flex to remove an odd gap under the comments on mobile
+.update-post__comment-container {
+  display: flex;
+}
