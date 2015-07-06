@@ -143,7 +143,7 @@ module Jekyll
       end
 
       relpath = filepath.sub("_langs/en/fundamentals/", "")
-      relpath = filepath.sub("_langs/en/tools/", "tools/")
+      relpath = relpath.sub("_langs/en/tools/", "tools/")
 
       page = context.environments.first["page"]
       site = context.registers[:site]
