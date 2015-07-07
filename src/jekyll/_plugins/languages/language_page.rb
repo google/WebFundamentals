@@ -31,6 +31,8 @@ module Jekyll
       # TODO mattgaunt is this needed since it's a member variable
       self.data['langcode'] = @langcode
 
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
+
       # Give the page data so it knows the text direction
       if site.data["language_names"][langcode].key?('rtl')
         self.data['rtl'] = site.data["language_names"][langcode]['rtl'];
