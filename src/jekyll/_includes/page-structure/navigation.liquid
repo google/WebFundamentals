@@ -1,3 +1,7 @@
+{% comment %}
+We don't have a content nav for the root of /web/ so for this we just skip
+{% endcomment %}
+{% if page.contentnav %}
 <ul class="wf-main-nav__list wf-nav__list clear">
 
   <!-- This Section displays the Navigation for current section -->
@@ -41,13 +45,14 @@
     </li>
   {% endfor %}
 </ul>
+{% endif %}
 
 <ul class="wf-secondary-nav__list wf-nav__list">
   {% for rootNavTocItem in page.rootnav.toc %}
   {% if rootNavTocItem.isInCurrentSection == true %}
     {% continue %}
   {% endif %}
-  
+
   <li class="wf-main-nav__item">
     <a class="wf-main-nav__link" title="Go to {{rootNavTocItem.strippedTitle}}" href="{{ rootNavTocItem.path }}">
       {{ rootNavTocItem.title }}
