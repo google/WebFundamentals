@@ -5,7 +5,7 @@ class: lazyweb
 layout: shows/single-video
 collection: lazyweb-2015
 title: "Episode 12"
-description: "The LazyWeb Show is a recap of the past week’s current events on the web platform. This week: ES6 Generators will take the pain out of asynchronous programming, and what happens when you ask a neural network what it sees?"
+description: "The LazyWeb Show is a recap of the past week’s current events on the web platform. This week: Jafar Husain explains the power of ES6 Generators and async functions, Marcy Sutton shows off semi-automated and fully automated tools for testing accessibility, Chris Coyier teaches the rainbow of awesome that is SVG, the Google Research Blog runs a neural network BACKWARDS, and Jake Archibald records a silent film about background sync."
 published: false
 showYoutubeID: gYBqrFnF2IU
 
@@ -18,7 +18,7 @@ article:
 
 # In this Week's Episode
 
-ES6 Generators will take the pain out of asynchronous programming, and what happens when you ask a neural network what it sees?
+Jafar Husain explains the power of ES6 Generators and async functions, Marcy Sutton shows off semi-automated and fully automated tools for testing accessibility, Chris Coyier teaches the rainbow of awesome that is SVG, the Google Research Blog runs a neural network BACKWARDS, and Jake Archibald records a silent film about background sync.
 
 ##GROKKING GENERATORS
 <https://www.youtube.com/watch?v=lil4YCCXRYc>
