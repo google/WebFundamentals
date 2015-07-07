@@ -53,7 +53,6 @@ module Jekyll
 
       # This is the default better book
       loadBetterBook('rootnav', '_betterbook-root.yaml')
-      loadBetterBook('contentnav', '_betterbook-root.yaml')
 
       # This could be given a better name - Used in navigation liquid
       # displayed on mobile screens
