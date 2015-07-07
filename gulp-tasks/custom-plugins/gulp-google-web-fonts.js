@@ -174,7 +174,7 @@ function makeRequest(uri, useragent) {
       });
     }
 
-    if (uri.secure) {
+    if (uri.secure || uri.protocol === 'https:') {
       request = https.request(options, handleResponse);
     } else {
       request = http.request(options, handleResponse);

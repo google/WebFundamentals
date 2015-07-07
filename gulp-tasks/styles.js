@@ -22,7 +22,7 @@ var AUTOPREFIXER_BROWSERS = [
 gulp.task('inline-fonts', function() {
   return gulp.src(GLOBAL.WF.src.styles + '/partials/_google-fonts.scss')
     .pipe(googleWebFonts({
-      fontsurl: 'http://fonts.googleapis.com/css?family=Roboto',
+      fontsurl: 'https://fonts.googleapis.com/css?family=Roboto',
       replaceAll: true,
       sassVariant: true
     }))
