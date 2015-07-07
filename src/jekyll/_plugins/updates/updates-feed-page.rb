@@ -23,9 +23,9 @@ module Jekyll
 
       self.data['feed_title'] = 'Web Updates - Google Developers'
       self.data['feed_description'] = 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.'
-      self.data['feed_icon'] = 'https://developers.google.com/web/favicon.ico'
-      self.data['feed_id'] = 'https://developers.google.com' + site.config['WFBaseUrl'] + '/updates'
-      self.data['feed_link'] = 'https://developers.google.com' + site.config['WFBaseUrl'] + '/updates/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=updates_feed'
+      self.data['feed_icon'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + 'favicon.ico'
+      self.data['feed_id'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/updates'
+      self.data['feed_link'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/updates/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=updates_feed'
       self.data['feed_update'] = site.time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
       maxNumberOfResults = 10

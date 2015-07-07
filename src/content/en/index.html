@@ -27,7 +27,7 @@ feedPath: feed.xml
   }
 
 </style>
-<meta itemprop="url" content="https://developers.google.com/web/fundamentals"/>
+<meta itemprop="url" content="{{site.WFAbsoluteUrl}}{{site.WFBaseUrl}}/fundamentals"/>
 <form id="potentialAction" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
   <meta itemprop="target" content="https://developers.google.com/s/results?p=%2Fweb%2Ffundamentals&q={search_term_string}"/>
   <input itemprop="query-input" type="text" name="search_term_string" required/>
@@ -37,9 +37,9 @@ feedPath: feed.xml
 
 <div class="container clear">
   <picture>
-    <source media="(max-width:399px)" srcset="/web/imgs/dgc-web-n1x.jpg, /web/imgs/dgc-web-w1x.jpg 2x">
-    <source media="(min-width:400px)" srcset="/web/imgs/dgc-web-w1x.jpg, /web/imgs/dgc-web-w2x.jpg 2x">
-    <img src="/web/imgs/dgc-web-w1x.jpg" id="heroImage">
+    <source media="(max-width:399px)" srcset="{{site.WFBaseUrl}}/imgs/dgc-web-n1x.jpg, {{site.WFBaseUrl}}/imgs/dgc-web-w1x.jpg 2x">
+    <source media="(min-width:400px)" srcset="{{site.WFBaseUrl}}/imgs/dgc-web-w1x.jpg, {{site.WFBaseUrl}}/imgs/dgc-web-w2x.jpg 2x">
+    <img src="{{site.WFBaseUrl}}/imgs/dgc-web-w1x.jpg" id="heroImage">
   </picture>
 </div>
 
@@ -48,16 +48,16 @@ feedPath: feed.xml
   <div class="related-items__section clear">
     <ul class="related-items-list list-reset">
       <li class="g-medium--1 g-wide--1 root--dark">
-        <p><a class="tag themed" href="/web/fundamentals/?hl={{page.langcode}}" title="Web Fundamentals">Web&nbsp;<strong>Fundamentals</strong></a></p>
-        <p class="medium"><a href="/web/fundamentals/?hl={{page.langcode}}">Get started with Web <strong>Fundamentals</strong></a></p>
+        <p><a class="tag themed" href="{{site.WFBaseUrl}}/fundamentals/?hl={{page.langcode}}" title="Web Fundamentals">Web&nbsp;<strong>Fundamentals</strong></a></p>
+        <p class="medium"><a href="{{site.WFBaseUrl}}/fundamentals/?hl={{page.langcode}}">Get started with Web <strong>Fundamentals</strong></a></p>
       </li>
       <li class="g-medium--1 g-medium--last g-wide--1 g-wide--last root--dark">
-        <p><a class="tag themed" href="/web/starter-kit/?hl={{page.langcode}}" title="Web Starter Kit">Web Starter Kit</a></p>
-        <p class="medium"><a href="/web/starter-kit/?hl={{page.langcode}}">Start a new project with Web&nbsp;<strong>Starter Kit</strong></a></p>
+        <p><a class="tag themed" href="{{site.WFBaseUrl}}/starter-kit/?hl={{page.langcode}}" title="Web Starter Kit">Web Starter Kit</a></p>
+        <p class="medium"><a href="{{site.WFBaseUrl}}/starter-kit/?hl={{page.langcode}}">Start a new project with Web&nbsp;<strong>Starter Kit</strong></a></p>
       </li>
       <li class="g-medium--1 g-wide--1 root--dark">
-        <p><a class="tag themed" href="/web/shows/?hl={{page.langcode}}" title="Shows">Shows</a></p>
-        <p class="medium"><a href="/web/shows/?hl={{page.langcode}}">Dive deeper with our shows</a></p>
+        <p><a class="tag themed" href="{{site.WFBaseUrl}}/shows/?hl={{page.langcode}}" title="Shows">Shows</a></p>
+        <p class="medium"><a href="{{site.WFBaseUrl}}/shows/?hl={{page.langcode}}">Dive deeper with our shows</a></p>
       </li>
     </ul>
   </div>
@@ -83,56 +83,56 @@ feedPath: feed.xml
   <div class="centered">
     <ul class="list-guides-intro guides-list container">
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#everywhere" title="Everywhere" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#everywhere" title="Everywhere" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Everywhere</h3>
         </a>
         <p>Built once, be on all platforms and devices.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#searchable" title="Searchable" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#searchable" title="Searchable" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Searchable</h3>
         </a>
         <p>Deep indexing of your content opens entry points from search engines.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#always-up-to-date" title="Always up to date" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#always-up-to-date" title="Always up to date" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Always up to date</h3>
         </a>
         <p>Web apps and sites are remotely hosted and up to date for 100% of your visitors by default.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#instant-load" title="Instant load" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#instant-load" title="Instant load" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Instant load</h3>
         </a>
         <p>The web can deliver apps and sites that are preloaded in less than a second.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#independent" title="Independent" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#independent" title="Independent" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Independent</h3>
         </a>
         <p>The web does not censor content or disallow different payment providers and is an even playing field for all.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#ephemeral" title="Ephemeral" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#ephemeral" title="Ephemeral" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Ephemeral</h3>
         </a>
         <p>Clicking on a link is effortless compared to installing a native app.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#viral" title="Viral" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#viral" title="Viral" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Viral</h3>
         </a>
         <p>The web has the best sharing mechanism in the world, built in.</p>
       </li>
       <li class="guides-list__item g--third theme--" style="margin-right: 0;">
-        <a href="/web/choosing-the-web/?hl={{page.langcode}}#long-lasting" title="Long lasting" class="themed">
+        <a href="{{site.WFBaseUrl}}/choosing-the-web/?hl={{page.langcode}}#long-lasting" title="Long lasting" class="themed">
           <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span>
           <h3 class="large">Long lasting</h3>
         </a>
