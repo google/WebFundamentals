@@ -21,7 +21,7 @@
 
 <!-- Translated Page -->
 {% for translated_page in page.translations %}
-<link rel="alternate" hreflang="{{translated_page.langcode}}" href="{{site.WFBaseUrl}}{{page.url}}?hl={{translated_page.langcode}}" />
+<link rel="alternate" hreflang="{{translated_page.langcode}}" href="{{site.WFBaseUrl}}{{page.canonical_url}}?hl={{translated_page.langcode}}" />
 {% endfor %}
 
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
@@ -29,7 +29,7 @@
 
 <meta property="og:site_name" content="{{ page.html_head_title }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{site.WFBaseUrl}}{{page.url}}" />
+<meta property="og:url" content="{{site.WFBaseUrl}}{{page.canonical_url}}" />
 <meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
 <meta property="og:image" content="{{ page.html_head_social_img }}" />
 {% if main_author.facebook %}
