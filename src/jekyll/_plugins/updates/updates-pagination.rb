@@ -27,7 +27,7 @@ module Jekyll
       super(site, dir, name, langcode)
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
-      
+
       self.data['title'] = 'Web Updates'
       self.data['rss'] = false
       self.data['updates'] = pages.sort {|a,b| b.data['date'] <=> a.data['date'] }
