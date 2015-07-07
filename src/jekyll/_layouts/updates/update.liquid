@@ -7,12 +7,12 @@
 
     {% include updates/author.liquid author=page.main_author linkauthor=true written_on=page.article.written_on%}
 
-	  <div class="update-post__content-container">
+    <div class="update-post__content-container">
         {{ content }}
-	  </div>
+    </div>
 
     <div id="gplus-comment-container" class="update-post__comment-container">
-      <div id="gplus-comments" data-url="https://developers.google.com/web{{page.url}}"></div>
+      <div id="gplus-comments" data-url="{{ site.WFAbsoluteUrl }}{{ site.WFBaseUrl }}{{page.url}}"></div>
     </div>
 
     {% include page-structure/page-footer.liquid %}

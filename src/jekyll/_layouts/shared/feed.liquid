@@ -22,7 +22,7 @@
       &lt;img src=&quot;https://ga-beacon.appspot.com/UA-52746336-1/feed{{ post.url }}?pixel&quot;&gt;
     </content>
 
-    <id>https://developers.google.com{{ post.url }}</id>
+    <id>{{ site.WFAbsoluteUrl }}{{ post.url }}</id>
     {% if post.authors %}
       <author><name>
       {% for author in post.authors %}
