@@ -128,6 +128,24 @@ To build only a single language *FASTER*:
 tools/docker.sh grunt develop --lang=en
 ```
 
+Using boot2docker and Mac OS X
+==============================
+
+After running ``tools/docker.sh grunt develop``, the Web Fundamentals 
+website will be running on your local Docker instance.
+However, to view the website from a browser, you need to get the 
+IP address of **boot2docker** (NOT your Docker instance):
+
+```sh
+$ boot2docker ip
+192.168.59.103
+```
+
+From this IP you can access the website.
+
+```
+http://192.168.59.103:8081/web/fundamentals
+```
 
 Without Docker
 --------------
