@@ -24,6 +24,13 @@ module Jekyll
         return
       end
 
+      @absoluteUrl = site.config['WFAbsoluteUrl']
+      if @absoluteUrl.nil?
+        Jekyll.logger.info "WFAbsoluteUrl is not defined in the config yaml"
+        raise Exception.new("WFAbsoluteUrl is not defined in the config yaml")
+        return
+      end
+
       # Because AnyLanuage is priority high and we are
       # setting a global variable - set it here
       contributorsFilepath = File.join(site.config['WFContributors'])

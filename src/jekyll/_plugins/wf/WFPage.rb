@@ -206,7 +206,7 @@ module Jekyll
     end
 
     def canonical_url
-      fullUrl = site.config['WFBaseUrl'] + @url
+      fullUrl = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + @url
       fullUrl = fullUrl.sub('index.html', '')
       fullUrl = fullUrl.sub('.html', '')
       fullUrl

@@ -11,6 +11,6 @@ install:
   - npm install -g gulp
   - npm install
 script:
-  - gulp build
+  - gulp build:staging
 after_success:
   - tools/auto-deploy.sh

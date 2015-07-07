@@ -13,9 +13,6 @@ GLOBAL.WF = {
     fonts: 'src/static/fonts',
     scripts: 'src/static/scripts',
   },
-  jekyll: {
-    tmpContentDir: 'src/jekyll/content'
-  },
   build: {
     root: 'build',
     jekyll: 'build/jekyll',
@@ -46,9 +43,22 @@ gulp.task('develop', function(cb) {
       'cp-fonts',
       'cp-scripts',
     ],
-    'compile-jekyll',
+    'compile-jekyll:localhost',
     'start-gae-dev-server',
     'dev-watch-tasks',
+    cb);
+});
+
+gulp.task('build:staging', function(cb) {
+  runSequence(
+    [
+      'generate-prod-css',
+      'cp-images',
+      'cp-fonts',
+      'cp-scripts',
+      'copy-appengine-config'
+    ],
+    'compile-jekyll:staging',
     cb);
 });
 
@@ -61,7 +71,7 @@ gulp.task('build', function(cb) {
       'cp-scripts',
       'copy-appengine-config'
     ],
-    'compile-jekyll',
+    'compile-jekyll:devsite',
     cb);
 });
 
