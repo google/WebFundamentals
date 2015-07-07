@@ -1,5 +1,11 @@
 'use strict';
 
+var gulp = require('gulp');
+var del = require('del');
+var spawn = require('child_process').spawn;
+var chalk = require('chalk');
+var plugins = require('gulp-load-plugins')();
+
 /**
 
 The port number allows you to configure what port to launch the
@@ -12,12 +18,6 @@ Change this to false if you want to see logs form app engine.
 
 var PORT_NUMBER = 7331;
 var SILENCE_OUTPUT = true;
-
-var gulp = require('gulp');
-var del = require('del');
-var spawn = require('child_process').spawn;
-var chalk = require('chalk');
-var plugins = require('gulp-load-plugins')();
 
 // These define the build locations
 var WF = {
