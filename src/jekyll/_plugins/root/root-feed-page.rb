@@ -16,20 +16,20 @@ module Jekyll
 
   require File.expand_path('../../wf/WFFeedPage.rb', __FILE__)
 
-  class UpdatesFeedPage < WFFeedPage
+  class RootFeedPage < WFFeedPage
 
     def initialize(site, langcode, pages)
-      super(site, File.join('updates'), langcode, pages)
+      super(site, File.join(''), langcode, pages)
 
       self.data = self.data ? self.data : {}
 
-      self.data['feed_title'] = 'Web Updates - Google Developers'
-      self.data['feed_description'] = 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.'
-      self.data['feed_id'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/updates'
-      self.data['feed_link'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/updates/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=updates_feed'
+      self.data['feed_title'] = 'Web - Google Developers'
+      self.data['feed_description'] = 'All articles, tutorials, shows and case studies. Best practices for modern web development.'
+      self.data['feed_id'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/'
+      self.data['feed_link'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=web_feed'
 
       # The section is used in the UTM_Campaign for tracking
-      self.data['feed_section'] = 'updates'
+      self.data['feed_section'] = 'web'
     end
 
   end
