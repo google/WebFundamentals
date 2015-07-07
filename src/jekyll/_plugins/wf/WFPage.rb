@@ -19,7 +19,7 @@ module Jekyll
   class WFPage < Page
 
     alias superdest destination
-    alias superurl url
+    alias superpath path
 
     attr_reader :canonical_url
 
@@ -201,6 +201,14 @@ module Jekyll
       base = Pathname.new dest
       relativePath = original_target.relative_path_from base
       path = File.join(base, @langcode, relativePath)
+      path
+    end
+
+    def path
+      path = File.join(site.config['WFContentSource'], @langcode, @dir, @name)
+      if !File.exist?(path)
+        return nil
+      end
       path
     end
 
