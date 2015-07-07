@@ -20,6 +20,7 @@ module Jekyll
     def initialize(site, relativeDir, filename, langcode)
       super(site, relativeDir, filename, langcode)
 
+      self.data['drawerTitleText'] = 'Web Updates'
       self.data['html_head_title'] = 'Web Updates - Google Developers'
       self.data['html_head_description'] = 'Google Developers Web Updates ' +
         'contains the latest news from the Chrome, looking at new features ' +

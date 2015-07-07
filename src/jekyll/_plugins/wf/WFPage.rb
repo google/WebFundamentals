@@ -56,7 +56,7 @@ module Jekyll
 
       # This could be given a better name - Used in navigation liquid
       # displayed on mobile screens
-      self.data['mobileTitleText'] = self.data['title']
+      self.data['drawerTitleText'] = self.data['title']
 
       self.data['html_head_title'] = 'Web - Google Developers'
       self.data['html_head_description'] = 'Google Developers - Web Fundamentals'
