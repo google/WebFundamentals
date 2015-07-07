@@ -19,6 +19,9 @@ module Jekyll
   class WFPage < Page
 
     alias superdest destination
+    alias superurl url
+
+    attr_reader :canonical_url
 
     def initialize(site, relativeDir, filename)
       @contentSource = site.config['WFContentSource']
@@ -201,5 +204,21 @@ module Jekyll
       path = File.join(base, @langcode, relativePath)
       path
     end
+
+    def canonical_url
+      fullUrl = site.config['WFBaseUrl'] + @url
+      fullUrl = fullUrl.sub('index.html', '')
+      fullUrl = fullUrl.sub('.html', '')
+      fullUrl
+    end
+
+    # Convert this post into a Hash for use in Liquid templates.
+  #
+  # Returns <Hash>
+  def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
+    super(attrs + %w[
+      canonical_url
+    ])
+  end
   end
 end
