@@ -20,25 +20,20 @@ handlers:
   static_dir: imgs
   expiration: 1d
 
-- url: /web/updates/(.*\.(png|gif|jpg|svg|mp4|webm|js))
-  static_files: langs/en/updates/\1
+- url: /web/(.*\.(png|gif|jpg|svg|mp4|webm))
+  static_files: langs/en/\1
   expiration: 1d
-  upload: langs/en/updates/(.*\.(png|gif|jpg|svg|mp4|js))
-
-- url: /web/(.*\.(png|gif|jpg|svg|mp4|js))
-  static_files: \1
-  expiration: 1d
-  upload: (.*\.(png|gif|jpg|svg|mp4|js))
+  upload: langs/en/(.*\.(png|gif|jpg|svg|mp4))
 
 - url: /web/(.*\.ico)
   static_files: langs/en/\1
   expiration: 7d
   upload: langs/en/(.*\.ico)
 
-- url: /web/(.*\.css)
+- url: /web/(.*\.(js|css))
   static_files: \1
   expiration: 1d
-  upload: (.*\.css)
+  upload: (.*\.(js|css))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
 

@@ -5,9 +5,9 @@
 
     {% include page-structure/page-header-and-nav.liquid title=page.title %}
 
-    {% include updates/author.liquid author=page.main_author linkauthor=true written_on=page.article.written_on%}
-
     <div class="update-post__content-container">
+      {% include updates/author.liquid author=page.main_author linkauthor=true written_on=page.article.written_on%}
+
         {{ content }}
     </div>
 

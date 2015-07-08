@@ -3,4 +3,11 @@ $footer-text-color: #e0e0e0 !default;
 
 $highlight-color: $header-bg-color !default;
 $code-bg-color: #EEEEEE !default;
-$grey-border-color: rgba(0,0,0,0.12)
+$grey-border-color: rgba(0,0,0,0.12);
+$table-bg-color: $code-bg-color;
+
+ //Used for syntax highlights
+
+$colorGray: #737373;
+$colorLearning: #da2e75;
+$colorRemember: #09829a;
