@@ -42,7 +42,7 @@ For example, the recording below is of an HTML page being loaded into Chrome. Th
 When you hover over a Timeline record, a pop-up appears with details
 about the associated event. For example, the screenshot below shows
 details for a Finish Loading record associated with an image resource.
-The [Timeline Event Reference](tools/profile-performance/evaluate-performance/performance-reference)
+The [Timeline Event Reference](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/performance-reference?hl=en)
 explains the details that are available for each record type.
 
 ![Pop-up showing event details](imgs/event-details.png)
@@ -62,7 +62,7 @@ The time to render a frame is displayed above of the Records view. If you hover 
 
 ![Frames mode](imgs/frames_mode.png)
 
-You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](tools/profile-performance/rendering-tools/analyze-runtime).
+You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](https://web-central.appspot.com/web/tools/profile-performance/rendering-tools/analyze-runtime).
 
 ### Clear or light-gray frames
 
@@ -117,7 +117,7 @@ haven’t been garbage collected).
 ![Memory view](imgs/memory-usage.png)
 
 Memory mode can't show you exactly what is causing a memory leak, but it can help you identify what events in your application may be leading to a memory leak.
-Learn more about memory problems in [Memory Diagnosis](tools/profile-performance/memory-problems/).
+Learn more about memory problems in [Memory Diagnosis](https://web-central.appspot.com/web/tools/profile-performance/memory-problems/).
 
 ## Make a recording
 
@@ -151,7 +151,7 @@ A common task is to record a page load from initial network request to completio
 
 **To record a page load**:
 
-1.  Open any [web page](http://www.jankfree.com) in a new tab or window.
+1.  Open any web page ([this one](http://www.jankfree.com), for example) in a new tab or window.
 2.  Open the Timeline and press Cmd+E (Mac) or Ctrl+E (Windows/Linux) to start recording.
 3.  Quickly press Cmd+R or Ctrl+R to reload the browser page.
 4.  Stop the recording as soon as the page has finished loading (look for the red event marker).
@@ -163,7 +163,7 @@ record (Send Request) is Chrome's HTTP request for the page, followed by a Recei
 
 ![Page load recording](imgs/page-load.png)
 
-See the [Timeline event reference](#timeline-event-reference) for details on each record type.
+See the [Timeline event reference](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/performance-reference?hl=en) for details on each record type.
 
 ## View recording details
 
@@ -172,7 +172,7 @@ the Details pane displays additional information about the event.
 
 ![Event details pane](imgs/frames_mode_event_selected.png)
 
-Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. For information on what details each kind of record contains, see the [Timeline Event Reference](tools/profile-performance/evaluate-performance/performance-reference).
+Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/performance-reference?hl=en) for details on each record type.
 
 When you select a Paint record, DevTools highlights the region of the screen that was updated with a blue semi-transparent rectangle, as shown below.
 
