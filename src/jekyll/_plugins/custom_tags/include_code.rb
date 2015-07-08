@@ -44,7 +44,7 @@ module Jekyll
         String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
         url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
         out = super(context)
-        "<a class=\"button--primary\" href=\"#{url}\">#{out}</a>"
+        "<a class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" href=\"#{url}\">#{out}</a>"
     end
   end
 
@@ -155,7 +155,7 @@ module Jekyll
   </div>
   <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
-      <code class='html'>#{highlighted_code.strip}</code>                                                     
+      <code class='html'>#{highlighted_code.strip}</code>
       <a class="highlight-module__cta button--primary" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">#{link_text}</a>
     </div>
   </div>

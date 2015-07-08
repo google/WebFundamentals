@@ -1,6 +1,30 @@
 @import "dimens";
 @import "colors";
 
+$typecsset-base-font-size:      16px !default;
+$typecsset-base-line-height:    $base-line !default;
+
+// Heading sizes
+$typecsset-h1-size:             24px !default;
+$typecsset-h2-size:             20px !default;
+$typecsset-h3-size:             16px !default;
+$typecsset-h4-size:             16px !default;
+$typecsset-h5-size:             12px !default;
+$typecsset-h6-size:             8px !default;
+
+// Would you like indented (rather than spaced) paragraph delimiting?
+$typecsset-indented-paragraphs: false !default;
+
+// Would you like to show a baseline grid? This is handy during development.
+$typecsset-show-baseline:       true !default;
+
+// Do not modify these variables; they are internal settings upon which the
+// library depends.
+$typecsset-magic-number:        $typecsset-base-line-height;
+$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
+
+@import "../third_party/typecsset/typecsset";
+
 html {
   width: 100%;
   height: 100%;
@@ -15,7 +39,7 @@ body {
   padding: 0;
 }
 
-img {
+img, video {
   max-width: 100%;
   height: auto;
 }
