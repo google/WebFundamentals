@@ -84,7 +84,7 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
 
-陈三:
+samchen:
   name:
     given: Sam
     family: Chen
@@ -95,10 +95,21 @@ ericbidelman:
   role:
     - translator
   homepage: http://www.zfanw.com/blog/
-  google: +陈三
+  google: +samchen
   twitter: chenxsan
   email: chenxsan@google.com
   description: "Sam is a Front End Developer"
+
+dalecurtis:
+  name:
+    given: Dale
+    family: Curtis
+  org:
+    name:
+    unit:
+  role:
+    - author
+  description: "Dale."
 
 alexdanilo:
   name:
@@ -636,6 +647,22 @@ flaviocopes:
   email: simon.gong64@gmail.com
   description: "Simon is a Full Stack Developer"
 
+dalecurtis:
+  name:
+    given: Dale
+    family: Curtis
+  org:
+    name: Google
+    unit: Chrome Media
+  country: US
+  role:
+    - author
+  google: +DaleCurtis
+  twitter: DaleCurtis
+  email: dalecurtis@google.com
+  homepage: https://github.com/dalecurtis
+  description: "Dale is a Senior Software Engineer"
+
 sethladd:
   name:
     given: Seth
@@ -649,3 +676,4 @@ sethladd:
   twitter: sethladd
   role:
     - author
+    

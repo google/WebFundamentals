@@ -16,7 +16,7 @@ product: chrome-devtools
 featured-image: /web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/18-alt-click-expand-node
-permalink: /updates/2015/05/19/alt-click-to-expand-all-child-nodes
+permalink: /updates/2015/05/19/alt-click-to-expand-all-child-nodes.html
 ---
 <img src="/web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif" alt="Alt + Click to expand all child nodes">
 

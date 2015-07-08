@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Toggle the DevTools dock state with a keyboard shortcut
 date: 2015-04-21

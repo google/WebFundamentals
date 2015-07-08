@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 rss: true
 collection: updates

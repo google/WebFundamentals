@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Perform a column selection by by dragging
 date: 2015-05-02

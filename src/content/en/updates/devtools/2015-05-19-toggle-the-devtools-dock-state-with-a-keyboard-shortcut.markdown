@@ -18,7 +18,7 @@ description: Use <kbd class="kbd">Cmd + Shift + D</kbd> to toggle the DevTools d
 featured-image: /web/updates/images/2015-05-19-toggle-the-devtools-dock-state-with-a-keyboard-shortcut/dock-undock-shortcut.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/19-dock-undock-shortcut
-permalink: /updates/2015/05/19/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
+permalink: /updates/2015/05/19/toggle-the-devtools-dock-state-with-a-keyboard-shortcut.html
 ---
 <img src="/web/updates/images/2015-05-19-toggle-the-devtools-dock-state-with-a-keyboard-shortcut/dock-undock-shortcut.gif" alt="Toggle the DevTools dock state with a keyboard shortcut">
 

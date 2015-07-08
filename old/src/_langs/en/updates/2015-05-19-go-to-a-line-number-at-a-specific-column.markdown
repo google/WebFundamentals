@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Go to a line number at a specific column
 date: 2015-05-19

@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Easily jump to event listeners
 date: 2015-05-19

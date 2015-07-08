@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Command click to add multiple cursors in the Sources Panel
 date: 2015-05-19

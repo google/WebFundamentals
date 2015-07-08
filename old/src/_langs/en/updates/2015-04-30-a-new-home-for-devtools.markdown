@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 
 date: 2015-03-30

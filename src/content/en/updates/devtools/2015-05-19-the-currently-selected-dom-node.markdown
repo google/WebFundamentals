@@ -17,7 +17,7 @@ description: Learn the quick console shortcut to get the currently selected DOM 
 featured-image: /web/updates/images/2015-05-19-console-shortcut-to-get-the-currently-selected-dom-node/dollar-zero.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/15-dollar-zero
-permalink: /updates/2015/05/19/the-currently-selected-dom-node
+permalink: /updates/2015/05/19/the-currently-selected-dom-node.html
 ---
 <img src="/web/updates/images/2015-05-19-console-shortcut-to-get-the-currently-selected-dom-node/dollar-zero.gif" alt="Console shortcut to get the currently selected DOM node">
 
