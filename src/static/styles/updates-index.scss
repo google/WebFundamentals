@@ -13,6 +13,8 @@
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
 
+$border-width: 1px;
+
 .updates-header__description {
   padding: 0 $base-line;
   margin: $base-line 0;
@@ -29,9 +31,9 @@
 
 .updates-pages__list-item {
   padding: $base-line;
-  margin-bottom: $base-line;
+  margin-bottom: $base-line - $border-width;
 
-  border-bottom: 1px solid $grey-border-color;;
+  border-bottom: $border-width solid $grey-border-color;
 }
 
 .update-list-item__link-wrapper {

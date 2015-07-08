@@ -1,3 +1,6 @@
+$vertical-padding: $base-line / 2;
+$horizontal-padding: $base-line;
+
 .wf-nav-drawer {
   display: flex;
   position: fixed;
@@ -10,7 +13,7 @@
 
   a {
     display: inline-block;
-    padding: $base-line 0;
+    padding: $vertical-padding 0;
   }
 }
 
@@ -19,19 +22,19 @@
 }
 
 .wf-nav__list {
-  padding: $base-line 0 0 0;
+  padding: $vertical-padding 0 0 0;
   margin: 0;
 
   list-style: none;
 }
 
 .wf-main-nav__list {
-  padding-bottom: $base-line;
+  padding-bottom: $vertical-padding;
   border-bottom: 1px solid $grey-border-color;
 }
 
 .wf-main-nav__item {
-  padding: $base-line;
+  padding: $vertical-padding $horizontal-padding;
 }
 
 .wf-main-nav__link, .wf-main-nav__sub-link {
@@ -40,5 +43,5 @@
 }
 
 .wf-main-nav__sub-link {
-  padding-left: $base-line;
+  padding-left: $vertical-padding;
 }

@@ -26,41 +26,36 @@ permalink: /updates/2015/06/checkout-faster-autofill.html
 ---
 
 <style type="text/css">
-td {
-  padding-left: 0.7em;
-  padding-right: 0.7em;
-  background: rgba(162, 186, 194, 0.58);
-}
 .highlight .err {
   color: #E28964;
   background-color: #333333;
 }
 </style>
-People hate filling out web forms, especially on mobile devices. They can be 
-slow and frustrating to complete and often contain multi-page steps and 
-validation issues. This leads to high user drop-off and frustration. To help 
-make things easier for users, browsers have long been able to autocomplete 
-fields on behalf of the user. Chrome took this a step further in 2011 by 
-introducing [Autofill](https://support.google.com/chrome/answer/142893?hl=en), 
+People hate filling out web forms, especially on mobile devices. They can be
+slow and frustrating to complete and often contain multi-page steps and
+validation issues. This leads to high user drop-off and frustration. To help
+make things easier for users, browsers have long been able to autocomplete
+fields on behalf of the user. Chrome took this a step further in 2011 by
+introducing [Autofill](https://support.google.com/chrome/answer/142893?hl=en),
 which fills in entire forms based on a user's Autofill profile.
 
-Starting in the next major version of Chrome (M43), we're taking yet another 
-step to help users fill out forms faster by expanding our support for credit 
-cards and addresses in Google. This means that the same information users use to 
-purchase things inside of the Google Play store are now available to them on 
-websites. By using the standard _autocomplete_ attributes, you can ensure your 
-users' happiness by helping Chrome autofill your checkout forms with 100% 
+Starting in the next major version of Chrome (M43), we're taking yet another
+step to help users fill out forms faster by expanding our support for credit
+cards and addresses in Google. This means that the same information users use to
+purchase things inside of the Google Play store are now available to them on
+websites. By using the standard _autocomplete_ attributes, you can ensure your
+users' happiness by helping Chrome autofill your checkout forms with 100%
 accuracy.
 
-Autocomplete attributes are a way for you, the developer, to control how the 
-browser should populate a given form field.  For example, if you are expecting a 
-street address you can hint to the browser that you are expecting it by using 
-`autocomplete="address-line1"`. This prevents the browser from incorrectly 
+Autocomplete attributes are a way for you, the developer, to control how the
+browser should populate a given form field.  For example, if you are expecting a
+street address you can hint to the browser that you are expecting it by using
+`autocomplete="address-line1"`. This prevents the browser from incorrectly
 guessing form fields on your website which can result in a poor user experience.
 
-We've found that by correctly using autocomplete attributes on your forms, users 
-complete them up to 30% faster. And since _autocomplete_ is part of the [WHATWG 
-](https://html.spec.whatwg.org/multipage/forms.html#autofill)[HTML](https://html.spec.whatwg.org/multipage/forms.html#autofill) 
+We've found that by correctly using autocomplete attributes on your forms, users
+complete them up to 30% faster. And since _autocomplete_ is part of the [WHATWG
+](https://html.spec.whatwg.org/multipage/forms.html#autofill)[HTML](https://html.spec.whatwg.org/multipage/forms.html#autofill)
 standard, we hope that other browsers will support it in the near future.  
 
 <p style="text-align: center;">
@@ -68,16 +63,16 @@ standard, we hope that other browsers will support it in the near future.
 
 </p>
 
-In the past, many developers would add _autocomplete="off"_ to their form fields 
-to prevent the browser from performing any kind of autocomplete functionality. 
-While Chrome will still respect this tag for autocomplete data, it will not 
-respect it for autofill data. So when should you use _autocomplete="off"_? One 
-example is when you've implemented your own version of autocomplete for search. 
-Another example is any form field where users will input and submit different 
-kinds of information where it would not be useful to have the browser remember 
+In the past, many developers would add _autocomplete="off"_ to their form fields
+to prevent the browser from performing any kind of autocomplete functionality.
+While Chrome will still respect this tag for autocomplete data, it will not
+respect it for autofill data. So when should you use _autocomplete="off"_? One
+example is when you've implemented your own version of autocomplete for search.
+Another example is any form field where users will input and submit different
+kinds of information where it would not be useful to have the browser remember
 what was submitted previously.
 
-The most common _autocomplete_ attributes are shown in the table below and are 
+The most common _autocomplete_ attributes are shown in the table below and are
 documented in [Web Fundamentals](https://developers.google.com/web/fundamentals/input/?hl=en).
 
 ### Common Attributes
@@ -85,45 +80,50 @@ documented in [Web Fundamentals](https://developers.google.com/web/fundamentals/
 #### Credit Card
 
 <table>
-<tr>
-<td markdown="block">
-**name attribute**
-</td>
-<td markdown="block">
-**autocomplete attribute**
-</td>
-</tr>
-<tr>
-<td markdown="block">
-ccname<br>
-cardnumber  
-cvc  
-ccmonth  
-ccyear  
-exp-date  
-card-type
-</td>
-<td markdown="block">
-cc-name  
-cc-number  
-cc-csc  
-cc-exp-month  
-cc-exp-year  
-cc-exp  
-cc-type
-</td>
-</tr>
+  <thead>
+    <tr>
+      <th>
+        name attribute
+      </th>
+      <th>
+        autocomplete attribute
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ccname<br>
+        cardnumber  
+        cvc  
+        ccmonth  
+        ccyear  
+        exp-date  
+        card-type
+      </td>
+      <td>
+        cc-name<br>
+        cc-number  
+        cc-csc  
+        cc-exp-month  
+        cc-exp-year  
+        cc-exp  
+        cc-type
+      </td>
+    </tr>
+  </tbody>
 </table>
+
 {% highlight javascript %}
 <label for="frmNameCC">Name on card</label>
-<input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">    
+<input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
 
 <label for="frmCCNum">Card Number</label>
-<input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">    
+<input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
 
 <label for="frmCCCVC">CVC</label>
-<input name="cvc" id="frmCCCVC" required autocomplete="cc-csc"> 
-  
+<input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
+
 <label for="frmCCExp">Expiry</label>
 <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
 {% endhighlight %}
@@ -155,11 +155,11 @@ family-name (last name)
 </tr>
 </table>
 
-{% highlight javascript %} 
+{% highlight javascript %}
 <label for="frmNameA">Name</label>
 <input name="name" id="frmNameA" placeholder="Full name" required autocomplete="name">
 {% endhighlight %}
-     
+
 #### Email
 
 <table>
@@ -273,14 +273,14 @@ tel
 <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-650-450-1212" required autocomplete="tel">
 {% endhighlight %}
 
-   
+
 The autocomplete attributes can be accompanied with a section name, such as:
 
 * **shipping** - given-name
 * **billing**  - street-address<br/>
 
-It is recommended because it will make your markup easier to parse and 
-understand. The browser will autofill different sections separately and not as a 
+It is recommended because it will make your markup easier to parse and
+understand. The browser will autofill different sections separately and not as a
 continuous form.
 
 ### An example of a payment form
@@ -294,36 +294,35 @@ continuous form.
 
 <label for="frmCCCVC">CVC</label>
 <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
-  
+
 <label for="frmCCExp">Expiry</label>
 <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
 {% endhighlight %}
 
 **Forms best practices**
 
-1. **Use _labels_on form inputs**, and ensure they're visible when the 
-   field is in focus. The label element provides direction to the user, telling 
-   them what information is needed in a form element. Each label is associated 
-   with an input element by placing it inside the label element. Applying labels 
-   to form elements also helps to improve the touch target size: the user can 
-   touch either the label or the input in order to place focus on the input 
+1. **Use _labels_on form inputs**, and ensure they're visible when the
+   field is in focus. The label element provides direction to the user, telling
+   them what information is needed in a form element. Each label is associated
+   with an input element by placing it inside the label element. Applying labels
+   to form elements also helps to improve the touch target size: the user can
+   touch either the label or the input in order to place focus on the input
    element.
-1. **Use placeholder to provide guidance** about what you expect. The 
-   placeholder attribute provides a hint to the user about what's expected in 
-   the input, typically by displaying the value as light text until the the user 
-   starts typing in the element. Placeholders disappear as soon as the user 
-   starts typing in an element, thus they are not a replacement for labels. They 
-   should be used as an aid to help guide users on the required format and 
+1. **Use placeholder to provide guidance** about what you expect. The
+   placeholder attribute provides a hint to the user about what's expected in
+   the input, typically by displaying the value as light text until the the user
+   starts typing in the element. Placeholders disappear as soon as the user
+   starts typing in an element, thus they are not a replacement for labels. They
+   should be used as an aid to help guide users on the required format and
    content.
 
 ### Demo
 
-You can see it in action over at: 
+You can see it in action over at:
 [greenido.github.io/Product-Site-101/form-cc-example.html](https://greenido.github.io/Product-Site-101/form-cc-example.html)  
-Or check the code: 
+Or check the code:
 [https://github.com/greenido/Product-Site-101](https://github.com/greenido/Product-Site-101)
 
 <p style="text-align: center;">
     <img src="/web/updates/images/2015-06-05-checkout-faster-with-autofill/autofill-1.gif" alt="An example to a form that use autocomplete tags" style="max-width: 60%; height: auto;" >
 </p>
-
