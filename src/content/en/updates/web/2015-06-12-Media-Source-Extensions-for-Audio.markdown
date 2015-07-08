@@ -28,14 +28,9 @@ permalink: /updates/2015/06/mse-gapless-audio.html
 a.button--primary {
   color: white !important;
 }
-img, video {
-  max-width: 100%;
-}
 </style>
 
-# Media Source Extensions for Audio: Eliminating the Gap
-
-## Introduction
+# Introduction
 
 [Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
 
