@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Unfinished network requests
 date: 2015-04-20

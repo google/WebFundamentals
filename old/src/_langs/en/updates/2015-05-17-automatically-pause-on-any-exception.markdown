@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Automatically pause on any exception
 date: 2015-05-17

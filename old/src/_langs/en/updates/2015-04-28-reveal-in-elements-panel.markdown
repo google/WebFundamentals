@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Reveal in Elements panel
 date: 2015-04-28

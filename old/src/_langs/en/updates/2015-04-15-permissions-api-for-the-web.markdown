@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: "Permissions API for the Web"
 description: "The Permissions API gives you a central place to check the permission status of an API."

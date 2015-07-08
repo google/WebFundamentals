@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Alt + Click to expand all child nodes
 date: 2015-04-22

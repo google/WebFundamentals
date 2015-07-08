@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Quickly monitor events from the Console Panel
 date: 2015-05-19

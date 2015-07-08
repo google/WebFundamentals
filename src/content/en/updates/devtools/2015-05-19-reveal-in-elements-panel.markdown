@@ -17,7 +17,7 @@ description: Reveal DOM nodes in the Elements panel from the Console.
 featured-image: /web/updates/images/2015-05-19-reveal-dom-nodes-in-the-elements-panel-from-the-console/reveal-in-elements.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/20-reveal-in-elements
-permalink: /updates/2015/05/19/reveal-in-elements-panel
+permalink: /updates/2015/05/19/reveal-in-elements-panel.html
 ---
 <img src="/web/updates/images/2015-05-19-reveal-dom-nodes-in-the-elements-panel-from-the-console/reveal-in-elements.gif" alt="Reveal DOM nodes in the Elements panel from the Console">
 

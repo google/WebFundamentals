@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Search DOM tree by CSS selector
 date: 2015-05-11

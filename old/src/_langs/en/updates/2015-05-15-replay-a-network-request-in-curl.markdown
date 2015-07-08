@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Replay a network request in cURL
 date: 2015-05-15

@@ -19,7 +19,7 @@ description: When you are viewing a selector in the Styles Pane, comma separated
 featured-image: /web/updates/images/2015-05-19-see-matching-selectors-based-on-the-color/selector-matching.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/34-selector-matching
-permalink: /updates/2015/05/19/see-matching-selectors
+permalink: /updates/2015/05/19/see-matching-selectors.html
 ---
 <img src="/web/updates/images/2015-05-19-see-matching-selectors-based-on-the-color/selector-matching.gif" alt="See matching selectors based on the color">
 

@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Use keyboard to navigate through callstack
 date: 2015-05-19

@@ -1,6 +1,6 @@
 ---
 
-layout: update
+layout: updates/update
 published: true
 title: Better Incognito DevTools
 date: 2015-04-24

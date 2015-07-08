@@ -43,7 +43,7 @@ Banners".  App Install Banners give you the ability to have your users quickly
 and seamlessly install your Web App as per the images below.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
 </p>
 
 <span id="criteria">"This looks great, I want it on my site"</span> I hear you shout. "Please tell me how 
@@ -146,10 +146,10 @@ This is a good tool for understanding how your users interact with your app inst
 
 ## <span id="native">Native app install banner</span>
 
-A new powerful feature for native app developers also landed in Chrome 43 Beta.  Native App isntall banners are similar to Web app install banners, but instead of adding to the Homescreen will let the user inline install your native app.
+A new powerful feature for native app developers also landed in Chrome 44 Beta.  Native App install banners are similar to Web app install banners, but instead of adding to the Homescreen will let the user inline install your native app.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
 </p>
 
 The criteria is similar to the Web App install banner except for the need of a Serivce Worker:
@@ -178,20 +178,17 @@ It is simple to integrate into any manifest.  Just add a `related_applications` 
 {% endhighlight %}
 
 ## <span id="criteria-faq">Frequently Asked Questions</span>
-
 **My app meets all the criteria, but I don't want the banner to display. Can I control this?**  
-Not right now. We are working on ways to give developers the ability to cancel 
-the display of the prompt. Follow our "[Intent to Implement](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/HSSqpbYd8W8)" on blink-dev mailing list.
+Yes, you can prevent the banner from displaying.  See "[Cancelling the prompt](#cancel)".
 
 **Can I detect if a user tapped "Add" at the prompt and added to home screen?**  
-Not right now. We are working on ways to give developers the ability to 
-understand whether the user has gestured Install or Cancel.
+Yes you can, see "[Did a user install our web app](#action)".
 
 **If a user dismisses the banner, will it appear again?**  
 No.  Not unless the user clears their history.  We want to make sure users have 
 a good experience.  We will likely be changing all the heuristics over time.
 
-**Can I decide when to prompt the user?**  
+**Can I decide when to prompt the user****?**  
 No, we are not letting developers actively prompt the user to Add to Homescreen.
 
 **You said that I will only get the banner if I visit the site on two different 
@@ -206,7 +203,7 @@ We believe that when you add to the user's home screen you should be providing
 an app-like experience.  A service worker, especially one that supports push 
 messaging or offline, is a strong indicator that you are developing a first 
 class device experience.  We recommend the following [simple Service Worker as a 
-starting point](https://github.com/GoogleChrome/samples/blob/gh-pages/app-install-banner/service-worker.js). 
+starting point](https://github.com/GoogleChrome/samples/blob/gh-pages/app-install-banner/basic-banner/service-worker.js). 
 
 **Will the criteria for App Banner activation change over time?**
 Yes.
