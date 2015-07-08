@@ -127,12 +127,11 @@ Focus on
 [optimizing the critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/)
 to unblock rendering.
 
-You don't have to load everything in under 1 second to produce the perception of a complete load. Enable progressive rendering and do some work in the background. Defer non-essentioal loads to periods of idle time (see the [Website Performance Optimization Udacity course](
-(https://www.udacity.com/course/ud884)).
+You don't have to load everything in under 1 second to produce the perception of a complete load. Enable progressive rendering and do some work in the background. Defer non-essentioal loads to periods of idle time (see this [Website Performance Optimization Udacity course]((https://www.udacity.com/course/website-performance-optimization--ud884) for more information).
 
 ## Summary of key rail metrics
 
-To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline tool](#timeline-tool) to record user actions. Then check the recording times in the Timeline against these key rail metrics:
+To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline tool](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/timeline-tool?hl=en) to record user actions. Then check the recording times in the Timeline against these key rail metrics:
 
 <table class="table-3">
   <thead>
