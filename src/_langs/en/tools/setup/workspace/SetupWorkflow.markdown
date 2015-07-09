@@ -19,7 +19,11 @@ key-takeaways:
     - TBD
 ---
 
+{% wrap content %}
+
 ## Set Up a DevTools Persistent Workflow
+
+{% include modules/toc.liquid %}
 
 ### Introduction
 
@@ -81,3 +85,4 @@ There is also a mechanism for searching through the text of multiple files, so y
 
 To search for a string across files, either click the **Show Drawer** button ![Show drawer](image_2.png) to open the Console drawer and then click the **Search** tab, or press **Ctrl+Shift+F** (Windows) or **Cmd+Opt+F** (Mac) to open the Search window. Type a string into the search field and press **Enter**. If the string is a regular expression or needs to be case-insensitive, click the appropriate box. The search results are shown in the Console drawer, listed by file name, with the number of matches in each file indicated. Use the **Expand** ![Expand](image_3.png) and **Collapse** ![Collapse](image_4.png) arrows to expand or collapse the results for a given file.
 
+{% endwrap %}
