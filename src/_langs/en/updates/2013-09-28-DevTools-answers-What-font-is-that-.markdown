@@ -29,7 +29,7 @@ Font stacks are a funny thing, more of a suggestion than a demand. Because the f
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 
 As a developer, you want to know **what font is *actually* being used**.  Here's how it works:    
-![](http://i.imgur.com/DVsqB4V.png)
+![](//i.imgur.com/DVsqB4V.png)
 
 
 Under **Computed Styles**, you'll now see a summary of the typeface(s) used for that element. There's a few things to note here:
