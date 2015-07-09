@@ -1,10 +1,20 @@
-  <footer class="mdl-mini-footer mdl-grid">
-    <div class="mdl-mini-footer--left-section mdl-cell mdl-cell--6-col wf-footer-section">
-      <ul class="wf-footer__list wf-footer__list--primary">
-      {% for section in page.content.toc %}
+<!-- Close MDL content -->
+</main>
 
-        {% assign checkTitle = section.title | downcase | trim | replace:' ','-' %}
-        {% assign stripTitle = section.title | strip_html %}
+<footer class="wf-footer">
+  <div class="wf-footer__section-container">
+    <div class="wf-footer-section">
+      <ul class="wf-footer__list wf-footer__list--primary">
+      {% for contentnavTocItem in page.contentnav.toc %}
+        {% if contentnavTocItem.home %}
+        <a href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
+          <strong>{{ contentnavTocItem.title }}</strong>
+        </a>
+        {% else %}
+        <a href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
+          {{ contentnavTocItem.title }}
+        </a>
+        {% endif %}
 
         {% if site.spotlights == true or checkTitle != 'spotlights' %}
         <li class="sitemap__item sitemap__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} sitemap__item--home {% endif %}{% unless section.home %}{% if page.url contains section.path %} sitemap__item--current{% endif %}{% endunless %}{% if section.home and page.url == '/index.html' %} sitemap__item--current{% endif %} {% if section.hasSubNav %} sitemap__item--has-child{% endif %}">
@@ -16,7 +26,7 @@
       {% endfor %}
       </ul>
     </div>
-    <div class="mdl-mini-footer--right-section mdl-cell mdl-cell--6-col wf-footer-section">
+    <div class="wf-footer-section">
       <h3 class="wf-footer__title"><a href="https://developers.google.com/" class="wf-footer__title--link">
         <img id="developers-logo-footer" src="{{site.WFBaseUrl}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
       </a></h3>
@@ -27,9 +37,7 @@
         <li><a href="http://developers.google.com/careers">{{"careers" | localize_string}}</a></li>
       </ul>
     </div>
-  </footer>
-
-<!-- Close MDL content -->
-</main>
+  </div>
+</footer>
 
 <div class="mdl-layout__obfuscator"></div>

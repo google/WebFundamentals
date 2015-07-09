@@ -16,7 +16,7 @@
 $border-width: 1px;
 
 .updates-header__description {
-  padding: 0 $base-line;
+  padding: 0;
   margin: $base-line 0;
 }
 
@@ -30,7 +30,7 @@ $border-width: 1px;
 }
 
 .updates-pages__list-item {
-  padding: $base-line;
+  padding: $base-line 0;
   margin-bottom: $base-line - $border-width;
 
   border-bottom: $border-width solid $grey-border-color;
@@ -78,6 +78,7 @@ $border-width: 1px;
 }
 
 .updates-next-prev__next-btn, .updates-next-prev__prev-btn {
+  height: $base-line;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
