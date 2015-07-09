@@ -69,12 +69,12 @@
 {% if main_author.google %}<link rel="author" href="https://plus.google.com/{{ main_author.google }}/posts">{% endif %}
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
 
-<meta itemprop="name" content="{{ page_title }}">
+<meta itemprop="name" content="{{ page_title | trim }}">
 {% if page.thumbnail %}<link itemprop="image" href="https://developers.google.com/{{site.baseurl}}{{ page.filepath }}/{{ page.thumbnail }}">{% else %}<link itemprop="image" href="https://developers.google.com/web/imgs/logo.png">{% endif %}
 <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}Google Web Fundamentals{% endif %}">
 
 <meta property="og:site_name" content="Web Fundamentals" />
-<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:title" content="{{ page_title | trim }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://developers.google.com/web/fundamentals/" />
 {% if page.snippet_img %}<meta property="og:image" content="https://developers.google.com/{{site.fundamentals}}{{ page.filepath }}/{{ page.thumbnail }}" />
@@ -111,6 +111,6 @@ Adds themed colors for web site stickiness.
 <meta name="theme-color" content="#4285f4">
 {% endif %}
 
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="{{site.baseurl}}/manifest.json">
 
 <link rel="stylesheet" media="screen" href="{{site.baseurl}}/css/styles.min.css" />
