@@ -86,7 +86,7 @@ http://h3manth.com/new/blog/2013/publish-packages-to-npm-with-yeoman/)
 
 yo [1.0.7-pre](https://npmjs.org/package/yo) is now available for testing on npm and we look forward to talking more about our roadmap for 2014 in the coming weeks. In the mean time, there's lots of **juicy** new updates to both our official generators and those you've been authoring below.
 
-![](http://i.imgur.com/KY2KVeX.jpg)
+![](//i.imgur.com/KY2KVeX.jpg)
 
 ### Official generator updates
 
