@@ -44,7 +44,7 @@ permalink: /updates/2012/12/WebRTC-hits-Firefox-Android-and-iOS.html
 
 <p>Here's a screenshot of DataChannel running in Firefox:</p>
 
-<img src="http://simpl.info/images/Firefox_DataChannel_screenshot.png" title="Firefox DataChannel screenshot" />
+<img src="//simpl.info/images/Firefox_DataChannel_screenshot.png" title="Firefox DataChannel screenshot" />
 
 <p>This demo is at <a href="http://mozilla.github.com/webrtc-landing/data_test.html" title="Mozilla DataChannel example">http://mozilla.github.com/webrtc-landing/data_test.html</a>. Here's a code snippet:</p>
 

@@ -91,7 +91,7 @@ The latest sources for the app shown in both talks are now up on [GitHub](https:
 
 Preview of the app:
 
-<img src="http://i.imgur.com/RzEgWhd.png" width="90%"/>
+<img src="//i.imgur.com/RzEgWhd.png" width="90%"/>
 
 ## Further reading
 

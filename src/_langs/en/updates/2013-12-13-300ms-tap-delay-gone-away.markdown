@@ -112,7 +112,7 @@ permalink: /updates/2013/12/300ms-tap-delay-gone-away.html
 </style>
 
 <p class="mob-a11y-screenshots">
-  <a href="http://www.html5rocks.com/static/images/updates/300ms/chrome-a11y.png"><img src="http://www.html5rocks.com/static/images/updates/300ms/chrome-a11y.png" alt="Chrome accessibility settings"></a><a href="http://www.html5rocks.com/static/images/updates/300ms/android-magnification.png"><img src="http://www.html5rocks.com/static/images/updates/300ms/android-magnification.png" alt="Android screen magnification"></a>
+  <a href="http://www.html5rocks.com/static/images/updates/300ms/chrome-a11y.png"><img src="{{site.baseurl}}/updates/images/misc/chrome-a11y.png" alt="Chrome accessibility settings"></a><a href="http://www.html5rocks.com/static/images/updates/300ms/android-magnification.png"><img src="{{site.baseurl}}/updates/images/misc/android-magnification.png" alt="Android screen magnification"></a>
 </p>
 
 <p>However, we may have missed something, so if you are affected by this change, or know someone who is, let us know in the comments or <a href="https://code.google.com/p/chromium/issues/list">file a ticket</a>.</p>
