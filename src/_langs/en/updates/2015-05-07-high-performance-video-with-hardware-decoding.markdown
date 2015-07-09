@@ -20,10 +20,10 @@ authors:
 tags:
   - video
   - flash
-  - shaka player
+  - shaka-player
   - EME
   - MSE
-  - hardware decoding
+  - hardware-decoding
   - codec
 
 permalink: /updates/2015/05/High-performance-video-with-hardware-decoding.html
