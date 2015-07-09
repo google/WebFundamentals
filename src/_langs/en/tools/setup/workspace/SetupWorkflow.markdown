@@ -1,3 +1,24 @@
+---
+rss: false
+layout: article
+title: "Set Up a Persistent Workflow"
+seotitle: "Set Up Persistent Authoring in Chrome DevTools by Mapping Source Files to Workspaces"
+description: "Set up persistent authoring in your developer tools so that you can see your changes immediately and automatically save those changes to disk."
+introduction: "Set up persistent authoring in your developer tools so that you can see your changes immediately and automatically save those changes to disk."
+authors:
+  - megginkearney
+  - davegash
+  - kaycebasques
+article:
+  written_on: 2015-07-09
+  updated_on: 2015-07-09
+  order: 3
+collection: workspace
+key-takeaways:
+  workflows:
+    - TBD
+---
+
 ## Set Up a DevTools Persistent Workflow
 
 ### Introduction
