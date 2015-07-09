@@ -30,7 +30,7 @@ canvas.toBlob(function(blob) {
 
 <p>I have created a <a href="http://oftn.org/projects/FileSaver.js/demo/">demo</a> of FileSaver.js in action that demonstrates saving a canvas doodle, plain text, and rich text. Please note that saving with custom filenames is only supported in browsers that either natively support <code>FileSaver</code> or browsers like <a href="http://www.chromium.org/getting-involved/dev-channel">Google Chrome 14 dev</a> and <a href="http://tools.google.com/dlpage/chromesxs">Google Chrome Canary</a>, that support <a href="http://developers.whatwg.org/links.html#downloading-resources">&lt;a&gt;.download</a> or web filesystems via <a href="http://www.w3.org/TR/file-system-api/#using-localfilesystem"><code>LocalFileSystem</code></a>.</p>
 
-<figure><a href="http://eligrey.com/demos/FileSaver.js/"><img style="border:1px solid #ccc;max-width: 100%;" src="http://dl.dropbox.com/u/39519/filesaverss.png">
+<figure><a href="http://eligrey.com/demos/FileSaver.js/"><img style="border:1px solid #ccc;max-width: 100%;" src="//dl.dropbox.com/u/39519/filesaverss.png">
 <figcaption>View FileSaver.js demo</figcaption></a></figure>
 
 <h2>How to construct files for saving</h2>

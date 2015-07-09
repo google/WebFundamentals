@@ -36,7 +36,7 @@ permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps.html
 {% highlight HTML %}
 <iframe
   class="globe"
-  src="http://maps.google.com/?ie=UTF8&amp;amp;ll=14.597042,-15.625&amp;amp;spn=158.47027,316.054688&amp;amp;t=h&amp;amp;z=2&amp;amp;output=embed"
+  src="//maps.google.com/?ie=UTF8&amp;amp;ll=14.597042,-15.625&amp;amp;spn=158.47027,316.054688&amp;amp;t=h&amp;amp;z=2&amp;amp;output=embed"
   scrolling="no"></iframe>
 {% endhighlight %}
 {% highlight CSS %}
@@ -71,7 +71,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 
 {% video //www.youtube.com/embed/5TG6TK2nueo %} {% endvideo %}
 
-<iframe class="globe" src="http://maps.google.com/?ie=UTF8&amp;ll=14.597042,-15.625&amp;spn=158.47027,316.054688&amp;t=h&amp;z=2&amp;output=embed" scrolling="no"></iframe>
+<iframe class="globe" src="//maps.google.com/?ie=UTF8&amp;ll=14.597042,-15.625&amp;spn=158.47027,316.054688&amp;t=h&amp;z=2&amp;output=embed" scrolling="no"></iframe>
 
 <p><small>If you just see a flat google maps above, you can enable it with the instructions below</small></p>
 
@@ -96,7 +96,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 <aside class="bio clearfix" style="border: 3px double #CCC;
 padding: 10px;">
 
-<img src="http://api.twitter.com/1/users/profile_image/samarkandiy?size=normal" align=left style="margin: 0 10px 0 0; border: 1px solid gray; border-radius:2px">
+<img src="//api.twitter.com/1/users/profile_image/samarkandiy?size=normal" align=left style="margin: 0 10px 0 0; border: 1px solid gray; border-radius:2px">
 
 
 Avaz Bokiev is a web developer in NYC. <a href="https://twitter.com/samarkandiy">Follow him at @samarkandiy</a>, check out his recent experiments (including CSS Shader ones) at <a href="http://codepen.io/html5web">codepen.io/html5web</a> and his blog at <a href="http://azik.me/">azik.me</a>.
