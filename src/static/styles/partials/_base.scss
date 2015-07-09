@@ -16,14 +16,24 @@ $typecsset-h6-size:             8px !default;
 $typecsset-indented-paragraphs: false !default;
 
 // Would you like to show a baseline grid? This is handy during development.
-$typecsset-show-baseline:       true !default;
-
-// Do not modify these variables; they are internal settings upon which the
-// library depends.
-$typecsset-magic-number:        $typecsset-base-line-height;
-$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
+$typecsset-show-baseline:       false !default;
 
 @import "../third_party/typecsset/typecsset";
+
+@media (min-width: $max-content-width) {
+  $typecsset-base-font-size:      18px;
+  $typecsset-base-line-height:    $base-line;
+
+  // Heading sizes
+  $typecsset-h1-size:             34px;
+  $typecsset-h2-size:             30px;
+  $typecsset-h3-size:             26px;
+  $typecsset-h4-size:             22px;
+  $typecsset-h5-size:             20px;
+  $typecsset-h6-size:             18px;
+
+  @import "../third_party/typecsset/typecsset";
+}
 
 html {
   width: 100%;
@@ -59,4 +69,13 @@ pre {
 
 a {
   color: $highlight-color;
+}
+
+main {
+  max-width: $max-content-width;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: $base-line / 2;
 }
