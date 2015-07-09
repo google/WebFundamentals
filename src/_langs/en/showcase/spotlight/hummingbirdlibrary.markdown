@@ -20,8 +20,8 @@ scores:
       speed: 46
       ux: 98
   webpagetest:
-      value: 5000
-      result: http://www.webpagetest.org/result/150708_M8_1KHT/
+      value: 4206
+      result: http://www.webpagetest.org/result/150709_8S_1D5R/
 
 title: "Hummingbird Library"
 link: http://hummingbirdlibrary.com/
@@ -35,7 +35,7 @@ pros: |
 cons: |
   **Performance**: The app would benefit greatly from utilizing a Service Worker to offline cache results and UI after initial page load, enabling gzip compression would dramatically improve load time and having a static, initial barebone layout in the HTML would improve perceived performance.
 
-  **UX**: The flex box model used to display the list of shows works well with bigger screens but looses its appeal on smaller ones. A non centered, tighter version of the tiles would work much better on mobile devices.
+  **UX**: The flex box model used to display the list of shows works well with bigger screens but loses its appeal on smaller ones. A non centered, tighter version of the tiles would work much better on mobile devices.
 
 interview:
   - question: Why the web?
