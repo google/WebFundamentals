@@ -14,9 +14,10 @@ article:
   updated_on: 2015-07-09
   order: 3
 collection: workspace
-key-takeaways:
-  workflows:
-    - TBD
+takeaways:
+  - first takeaway
+  - second takeaway
+  - third takeaway
 ---
 
 {% wrap content %}
@@ -24,6 +25,8 @@ key-takeaways:
 ## Set Up a DevTools Persistent Workflow
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.takeaways.workflows %}
 
 ### Introduction
 
