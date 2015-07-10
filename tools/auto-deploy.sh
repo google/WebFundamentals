@@ -25,8 +25,9 @@ openssl aes-256-cbc -d -k $KEY_PASSPHRASE \
         -in tools/web-central-44673aab0806.json.enc \
         -out tools/web-central-44673aab0806.json
 
-$SDK_DIR/bin/gcloud components update gae-python -q
+$SDK_DIR/bin/gcloud components update app -q
 $SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
         --key-file tools/web-central-44673aab0806.json \
 				--quiet
-$SDK_DIR/bin/appcfg.py -A web-central -V master update ./appengine
+$SDK_DIR/bin/gcloud config set project web-central
+$SDK_DIR/bin/gcloud --verbosity info preview app deploy --version master ./appengine/app.yaml
