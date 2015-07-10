@@ -3,12 +3,10 @@ rss: false
 layout: article
 title: "Set Up a Persistent Workflow"
 seotitle: "Set Up Persistent Authoring in Chrome DevTools by Mapping Source Files to Workspaces"
-description: "Set up persistent authoring in your developer tools so that you can see your changes immediately and automatically save those changes to disk."
-introduction: "Set up persistent authoring in your developer tools so that you can see your changes immediately and automatically save those changes to disk."
+description: "Set up persistent authoring in Chrome DevTools so that you can see your changes immediately and automatically save those changes to disk."
+introduction: "Set up persistent authoring in Chrome DevTools so that you can see your changes immediately and automatically save those changes to disk."
 authors:
   - megginkearney
-  - davegash
-  - kaycebasques
 article:
   written_on: 2015-07-09
   updated_on: 2015-07-09
@@ -18,26 +16,29 @@ takeaways:
   - first takeaway
   - second takeaway
   - third takeaway
+notes:
+  - Bug: inline images aren't inline?
+  - To-Do: Add authors.
 ---
 
 {% wrap content %}
 
-## Set Up a DevTools Persistent Workflow
+As we've seen, Chrome DevTools lets you make changes to a 
+server-delivered site's resource files -- HTML, CSS, JavaScript, and more -- and 
+immediately see those changes reflected in the browser. Of course, such changes are 
+only temporary; if you want to save them, you have to manually copy and paste the 
+code into local files… or do you?
 
-{% include modules/toc.liquid %}
+DevTools offers a feature called Workspaces that lets you *map* (associate) the 
+remote in-memory resources to real local files on your hard drive. Using a 
+workspace, DevTools can save your changes to the mapped files and persist them 
+across sessions, thus eliminating the need to copy and paste.
 
-{% include modules/takeaway.liquid list=page.takeaways.workflows %}
-
-### Introduction
-
-As we've seen, Chrome DevTools lets you make changes to a server-delivered site's resource files -- HTML, CSS, JavaScript, and more -- and immediately see those changes reflected in the browser. Of course, such changes are only temporary; if you want to save them, you have to manually copy and paste the code into local files… or do you?
-
-DevTools offers a feature called Workspaces that lets you *map* (associate) the remote in-memory resources to real local files on your hard drive. Using a workspace, DevTools can save your changes to the mapped files and persist them across sessions, thus eliminating the need to copy and paste.
+{% include modules/takeaway.liquid list=page.takeaways %}
 
 ### Initialize a development workspace
 
 Before you can map individual remote resources to local files, you must initialize a workspace for the project. This simple process specifies a local folder for the workspace to use. To set up the workspace, right-click in an empty area of the left pane of the Sources tab and choose **Add folder to workspace**, choose a folder to use as the local file location, and click **Allow** to give Chrome access to the folder. 
-
 Typically, the local folder contains the site's original source files that were used to populate the site on the server. If you do not want to change those original files via the workspace, make a copy of the folder and specify it as the workspace folder instead.
 
 ### Map remote resources to local files (staging)
@@ -64,7 +65,7 @@ As powerful as Workspaces are, there are some limitations you should be aware of
 
 And, so you don't have to reload and map sites to folders each time, you can add *custom directories* (folders) to your workspace that will persist across sessions. Once added, you can view, edit, and save changes to files in the folder(s) directly from the Sources panel.
 
-To add a custom folder, click the **Settings** button ![Settings](image_0.png) and choose **Workspace** at the far left. Under the Folders list, click **Add folder…**. In the browse dialog, navigate to the folder you want to add and click **OK**, and click **Allow** to give Chrome access to the folder; the folder is added to the Folders list. Click the **Close** button ![Close](image_1.png) to return to the main DevTools panel; the folder you added will be shown in the Sources tab, and files in it will be accessible in the DevTools editor. 
+To add a custom folder, click the **Settings** button ![Settings](imgs/settings_button.png) and choose **Workspace** at the far left. Under the Folders list, click **Add folder…**. In the browse dialog, navigate to the folder you want to add and click **OK**, and click **Allow** to give Chrome access to the folder; the folder is added to the Folders list. Click the **Close** button ![Close](imgs/close_button.png) to return to the main DevTools panel; the folder you added will be shown in the Sources tab, and files in it will be accessible in the DevTools editor. 
 
 #### Local file management
 
@@ -86,6 +87,8 @@ To search for a loaded file in DevTools, press **Ctrl+O** (Windows) or **Cmd+O**
 
 There is also a mechanism for searching through the text of multiple files, so you can search for strings across all of the files in your Workspaces as well as all of the files loaded into DevTools. You can search using either a specific string or a regular expression; every occurrence in every file or page will be located.
 
-To search for a string across files, either click the **Show Drawer** button ![Show drawer](image_2.png) to open the Console drawer and then click the **Search** tab, or press **Ctrl+Shift+F** (Windows) or **Cmd+Opt+F** (Mac) to open the Search window. Type a string into the search field and press **Enter**. If the string is a regular expression or needs to be case-insensitive, click the appropriate box. The search results are shown in the Console drawer, listed by file name, with the number of matches in each file indicated. Use the **Expand** ![Expand](image_3.png) and **Collapse** ![Collapse](image_4.png) arrows to expand or collapse the results for a given file.
+To search for a string across files, either click the **Show Drawer** button ![Show drawer](imgs/show_drawer_button.png) to open the Console drawer and then click the **Search** tab, or press **Ctrl+Shift+F** (Windows) or **Cmd+Opt+F** (Mac) to open the Search window. Type a string into the search field and press **Enter**. If the string is a regular expression or needs to be case-insensitive, click the appropriate box. The search results are shown in the Console drawer, listed by file name, with the number of matches in each file indicated. Use the **Expand** ![Expand](imgs/expand_button.png) and **Collapse** ![Collapse](imgs/collapse_button.png) arrows to expand or collapse the results for a given file.
+
+{% include modules/nextarticle.liquid %}
 
 {% endwrap %}
