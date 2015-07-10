@@ -13,9 +13,10 @@ article:
   order: 3
 collection: workspace
 takeaways:
-  - first takeaway
-  - second takeaway
-  - third takeaway
+  - Use workspaces to associate remote resources to local files instead of manually
+    copy-pasting code into local files.
+  - Once a workspace is set up, you can edit files and save changes directly from Chrome, 
+    instead of switching back and forth between Chrome and an external editor. 
 notes:
   - Bug: inline images aren't inline?
   - To-Do: Add authors.
