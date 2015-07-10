@@ -663,3 +663,16 @@ dalecurtis:
   homepage: https://github.com/dalecurtis
   description: "Dale is a Senior Software Engineer"
 
+kaycebasques:
+  name:
+    given: Kayce
+    family: Basques
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  google: +KayceBasques
+  email: kayce@google.com
+  description: "Technical Writer Ordinaire"
