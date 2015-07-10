@@ -6,7 +6,8 @@ seotitle: "Set Up Persistent Authoring in Chrome DevTools by Mapping Source File
 description: "Set up persistent authoring in Chrome DevTools so that you can see your changes immediately and automatically save those changes to disk."
 introduction: "Set up persistent authoring in Chrome DevTools so that you can see your changes immediately and automatically save those changes to disk."
 authors:
-  - megginkearney
+  - dgash
+  - kaycebasques
 article:
   written_on: 2015-07-09
   updated_on: 2015-07-09
