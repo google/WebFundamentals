@@ -676,3 +676,15 @@ kaycebasques:
   google: +KayceBasques
   email: kayce@google.com
   description: "Technical Writer Ordinaire"
+
+dgash:
+    given: Dave
+    family: Gash
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  email: dgash@google.com
+  description: "Dave is a Tech Writer"
