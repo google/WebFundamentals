@@ -59,6 +59,10 @@ class AllPages(webapp2.RequestHandler):
           text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
 
         if text is None:
+          logging.warning("--- Requested file not found")
+          logging.warning(" - lang: " + lang)
+          logging.warning(" - path: " + path)
+          logging.warning(" - file_path: " + file_path)
           text = "404 - Requested file not found."
           self.response.set_status(404)
 
