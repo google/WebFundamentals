@@ -10,7 +10,7 @@ and get insights for code optimization."
 introduction: "Chrome DevTools provides web developers deep access into the 
 internals of the browser and their web application."
 authors:
-  - megginkearney
+  - dgash
   - kaycebasques
 article:
   written_on: 2015-07-10
