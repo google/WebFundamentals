@@ -445,6 +445,19 @@ renatomangini:
   twitter: renatomangini
   email: mangini@google.com
 
+josephmedley:
+  name:
+    give: Joseph
+    family: Medley
+  country: USA
+  role:
+    - author
+  homepage:
+  google: jmedley@google.com
+  twitter:
+  email:
+  description: "Technical Writer"
+
 jacquerie:
   name:
     given: Jacopo
