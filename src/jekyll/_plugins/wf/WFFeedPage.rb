@@ -18,16 +18,14 @@ module Jekyll
 
     def initialize(site, relative_dir, langcode, pages)
       super(site, relative_dir, 'feed.xml', langcode)
-
       self.data = self.data ? self.data : {}
-
       self.data['feed_icon'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + 'favicon.ico'
       self.data['feed_update'] = site.time.strftime("%Y-%m-%dT%H:%M:%SZ")
-
       maxNumberOfResults = 10
       counter = 0;
       feedPages = pages.reject { |page|
         reject = false
+
         if page.data['published'] != true
           reject = true
         elsif counter >= maxNumberOfResults

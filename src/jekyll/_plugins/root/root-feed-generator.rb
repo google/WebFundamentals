@@ -28,6 +28,7 @@ module Jekyll
       if site.pages.nil?
         return
       end
+
       # generate feed
       generateFeedPage(site, site.pages)
     end
