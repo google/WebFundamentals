@@ -150,12 +150,14 @@ module Jekyll
         case rootFolderName
         when 'updates'
           page = UpdatePage.new(site, relative_dir, file_name, langcode)
+        when 'fundamentals'
+            page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
         when '.'
           page = LanguagePage.new(site, relative_dir, file_name, langcode)
         else
           Jekyll.logger.info "Unsure what Page to use for markdown files in the \"" +
             rootFolderName + "\" directory."
-          raise Exception.new("Unsure what Page to use for markdown files in the \"" +
+          raise Exception.new("main-generator.rb: Unsure what Page to use for markdown files in the \"" +
             rootFolderName + "\" directory.")
         end
 

@@ -74,7 +74,7 @@ module Jekyll
       if sectionPages.nil?
         return []
       end
-      
+
       return sectionPages.sort {|a,b| b.data['date'] <=> a.data['date'] }
     end
   end

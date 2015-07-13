@@ -95,13 +95,13 @@ module Jekyll
         if lang != "en"
           filepath.sub!("_langs/" + lang + "/", "_langs/en/")
         end
-        String file = File.join(path, filepath)
-        contents = File.read(file).force_encoding('UTF-8')
+        contents = File.read(filepath).force_encoding('UTF-8')
         snippet = getmatch(contents, @lang, @section)
         @@comment_formats.each do |lang, parms|
             match = getmatcher_tag(lang, "[^\\]]+", "\\w+")
             snippet.gsub!(/#{match}/mi, "")
         end
+
         snippet = Liquid::Template.parse(snippet).render({
           "baseurl" => site.config["sample_link_base"]})
         render_codehighlighter(context, snippet, filepath)
