@@ -691,6 +691,7 @@ kaycebasques:
   description: "Technical Writer Ordinaire"
 
 dgash:
+  name:
     given: Dave
     family: Gash
   org:
