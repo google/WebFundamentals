@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Keep Calls To Action Front and Center"
-description: "Desc"
+description: "Keep calls to action front and center, where your users will easily see them."
 introduction: "It can be easy for mobile users to miss menu items, so always put your key calls-to-action where you know users will see them."
 authors:
   - petelepage
