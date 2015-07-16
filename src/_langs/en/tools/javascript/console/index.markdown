@@ -3,7 +3,7 @@ rss: false
 layout: section
 title: "Log Diagnostics to Console"
 seotitle: "Log Diagnostics to Console in Chrome DevTools"
-description: "TBD description."
+description: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."
 introduction: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."
 article:
   written_on: 2015-04-14
