@@ -16,7 +16,7 @@ collection: memory-problems
 key-takeaways:
   too-much-memory:
     - Quickly see if a page is consuming too much memory by monitoring memory columns in the Chrome Task Manager.
-    - Determine if memory usage is growing using the memory view in the Chrome DevTools Timeline panel.
+    - Determine if memory usage is growing using the memory view in the [Chrome DevTools Timeline](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/timeline-tool).
     - Identify detached nodes still retaining memory using the Chrome DevTools heap profiler.
     - Watch out for frequent garbage collection and garbage collection pauses. Both frequent garbage collection and garbage collection pauses can impact performance.
 remember:
@@ -41,13 +41,25 @@ follow these investigative steps to find out more:
 
 ## Check if page uses too much memory
 
-Quickly see if a page is consuming a lot of memory using the Chrome Task Manager.
-Determine if memory usage is growing using the memory view in the Chrome DevTools Timeline panel.
+To check if a page uses too much memory, the first thing to do is identify a sequence of actions you suspect is leaking memory. 
+This could be anything from navigating around a site, hovering, clicking, or otherwise somehow interacting with page in a way that seems to negatively impact performance more over time.
+
+Once you suspect memory performance issues,
+use the Chrome DevTools Timeline to diagnose excessive memory usage
+when you first notice your page has slowed down after extended use.
+
+Slowdown was once a classic symptom of a memory leak but it could also be something else.
+Maybe you have a paint or network bottleneck in your page,
+so make sure to fix the real issue in your page.
+
+You can also quickly see if a page is consuming a lot of memory using the Chrome Task Manager.
 
 ### Monitor memory using Chrome task manager
 
 Monitor a page's live memory usage using the Chrome task manager.
+
 Access the Task Manager from the Chrome menu > Tools > Task Manager or by pressing <span class="kbd">Shift</span> + <span class="kbd">Esc</span>.
+
 Once open, right-click on the heading area of the columns and enable the JavaScript memory column.
 Performing actions that may use too much memory and monitor how the live memory usage changes:
 
@@ -55,27 +67,30 @@ Performing actions that may use too much memory and monitor how the live memory 
 
 ### Determine if memory usage is growing using memory view
 
-To check if a page uses too much memory, the first thing to do is identify a sequence of actions you suspect is leaking memory. 
+To diagnose whether memory is the issue,
+go to the Timeline panel and Memory view.
+Hit the record button and interact with your application,
+repeating any steps you feel may be causing a leak. Stop the recording.
+The graph you see will display the memory allocated to your application. If it happens to be consuming an increasing amount of this over time (without ever dropping), it’s an indication you may have a memory leak.
 
-This could be anything from navigating around a site, hovering, clicking, or otherwise somehow interacting with page in a way that seems to negatively impact performance more over time.
+The profile for a healthy application should look more like a sawtooth curve
+as memory is allocated then freed when the garbage collector comes in.
+There’s nothing to worry about here – there’s always going to be a cost of doing business in JavaScript
+and even an empty `requestAnimationFrame` will cause this type of sawtooth, you can’t avoid it.
+Just ensure it’s not sharp as that’s an indication a lot of allocations are being made,
+which can equate to a lot of garbage on the other side.
 
-On the Timeline panel,
-start recording (<span class="kbd">Ctrl</span> + <span class="kbd">E</span> or <span class="kbd">Cmd</span> + <span class="kbd">E</span>) and perform the sequence of actions you want to test.
-To force a full garbage collection,
-click the trash icon (![Trash icon](imgs/collect-garbage.png)) at the bottom.
+![Healthy profile](imgs/normal-sawtooth.png)
 
-If after a few iterations,
-you see a [sawtooth](http://en.wikipedia.org/wiki/Sawtooth_wave) shaped graph (in the memory pane at the top),
-you are allocating lots of shortly lived objects.
-But if the sequence of actions is not expected to result in any retained memory,
-and the DOM node count does not drop down back to the baseline where you began,
-you have good reason to suspect there is a leak.
+It's the rate of increase in the steepness of this curve that you need to keep an eye on.
+There is also a DOM node counter, Document counter and Event listener count in the Memory view
+which can be useful during diagnosis.
+DOM nodes use native memory and do not directly affect the JavaScript memory graph.
 
-![Sawtooth-shaped graph](imgs/sawtooth.png)
+![Sawtooth-shaped graph](imgs/steep-sawtooth.png)
 
-Once you’ve confirmed that the problem exists,
-you can narrow down the cause of the memory leaks
-using the Chrome DevTools heap profiler and object allocation tracker.
+Once you suspect you have a memory leak, use the heap profiler and object allocation tracker
+to discover the source of the leak.
 
 <p class="note">
     <strong>Example:</strong>
@@ -94,17 +109,38 @@ due to forgotten detached DOM subtrees floating around.
 Use the heap profiler to take JS heap snapshots, analyze memory graphs, compare snapshots, and detect DOM leaks
 (see [How to Record Heap Snapshots](heap-snapshots)).
 
-In the following heap snapshot,
-watch out for yellow and red objects.
-Yellow objects have JavaScript references on them;
-red objects are detached nodes which are referenced from one with a yellow background.
-Detached nodes still retaining memory may indicate a DOM leak.
+There can be a lot of data in the constructor and retained view.
+The object retained with the shortest distance is usually your first candidate for causing a memory leak.
+Begin investigation for memory leaks from the first object retained in your tree
+as retainers are sorted by distance to the window.
 
-![Detached nodes](imgs/yellow-red-objects.png)
+![First retained object](imgs/first-retained.jpg)
+
+Also watch out for yellow and red objects in your heap snapshots.
+Red nodes (which have a darker background) do not have direct references from JavaScript to them,
+but are alive because they’re part of a detached DOM tree.
+There may be a node in the tree referenced from JavaScript (maybe as a closure or variable)
+but is coincidentally preventing the entire DOM tree from being garbage collected.
+
+![Red and yellow node objects](imgs/red-yellow-objects.jpg)
+
+Yellow nodes (with a yellow background) however do have direct references from JavaScript.
+Look for yellow nodes in the same detached DOM tree to locate references from your JavaScript.
+There should be a chain of properties leading from the DOM window to the element (e.g `window.foo.bar[2].baz`).
+
+Watch this animation to understand where detached notes fit
+into the overall picture:
+
+![](animations/detached-nodes.gif)
+
+<p class="note">
+    <strong>Example:</strong>
+    Try out this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example4">detached nodes</a> where you can watch node evolution in the Timeline then take heap snapshots to find detached nodes.
+</p>
 
 ## Narrow down causes of memory leaks
 
-Narrow down the cause of these leaks by looking at JS object allocation in real-time using the object allocation tracker. The **object tracker** combines the detailed snapshot information of the heap profiler with the incremental updating and tracking of the Timeline panel. 
+Narrow down the cause of memory leaks by looking at JS object allocation in real-time using the object allocation tracker. The **object tracker** combines the detailed snapshot information of the heap profiler with the incremental updating and tracking of the Timeline panel. 
 
 Tracking objects’ heap allocation involves starting a recording, performing a sequence of actions, then stop the recording for analysis. The object tracker takes heap snapshots periodically throughout the recording (as frequently as every 50 ms) and one final snapshot at the end of the recording. The heap allocation profile shows where objects are being created and identifies the retaining path:
 
