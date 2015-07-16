@@ -31,12 +31,12 @@ description: "A clever promotion for Madeon's new album that is a fun drum machi
 pros: |
   The Adventure Machine is a really simple app, but it does its job quite well. By utilizing Web Audio and optionally Web Midi (yes – you can connect your own synthesizer!), the newly created loops that appear by the touch of a button sync perfectly, and the interface works well on mobile, especially when installed to homescreen.
 cons: |
-  Due to the precaching of all beats and loops, the load time on mobile 3G is abysmal (see WebPageTest score), ignoring gzip compression is lazy, and the touch targets are slightly too small for smaller screens.
+  The load time (see WebPageTest score) on mobile 3G could be significantly improved if the the precaching of all beats and loops was removed or done in a smarter way. Gzip compression on assets is missing and and easy fix, and the touch targets are slightly too small for smaller screens.
 
 interview:
   - question: Why the web?
     answer: |
-      We wanted the project to available to as many people as possible all around the world. We also wanted as many people to interact with it as possible, so needed to remove every potential barrier to entry.
+      We wanted the project to be available to as many people as possible around the world. We also wanted as many people to interact with it as possible, so we needed to remove every potential barrier to entry.
   - question: What worked really well during development?
     answer: |
       We used the Web MIDI API for the first time for this project. Interacting with a website using a MIDI instrument is an amazing feeling.
@@ -47,5 +47,5 @@ interview:
   - question: |
       What happened after launch?
     answer: |
-      It got to #2 on the front page of reddit, and had almost half a million users within the first month. It also generated a substantial number of album sales and tour ticket purchases. It exceeded all hopes and expectations.
+      It exceeded all hopes and expectations. It got to #2 on the front page of reddit, and had almost half a million users within the first month. It also generated a substantial number of album sales and tour ticket purchases.
 ---

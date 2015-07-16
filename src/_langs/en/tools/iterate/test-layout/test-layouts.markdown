@@ -53,7 +53,7 @@ it does have some limitations (see the [complete list of limitations](#complete-
 
 ## Enable device mode
 
-Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png)icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
+Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png){:.inline} icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
 
 You can also toggle device mode on and off using the keyboard shortcut: **Ctrl + M** (or **Cmd + Shift + M** on Mac).
 
