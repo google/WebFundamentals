@@ -19,8 +19,7 @@ takeaways:
   - Once a workspace is set up, you can edit files and save changes directly from Chrome, 
     instead of switching back and forth between Chrome and an external editor. 
 notes:
-  - Bug: inline images aren't inline?
-  - To-Do: Add authors.
+  - inline images aren't inline?
 ---
 
 {% wrap content %}
@@ -47,7 +46,7 @@ Typically, the local folder contains the site's original source files that were 
 
 After the workspace is initialized, you can map the site's resources. This establishes a persistent connection between each resource and its local counterpart, effectively making the local folder a staging area from which you can later permanently update the server files.
 
-To map a resource to a local file, right-click a file in the left pane of the Sources tab and choose **Map to file system resource** from the context menu; a dialog opens showing the files in the local folder designated in the initialization step. Choose the local file that matches the one you right-clicked, e.g., index.html. Chrome will ask you to let it restart the inspector; click **Yes**, and DevTools will reopen with your *local* folder and files shown in the Sources tab. The resource you choose will be mapped to its local file counterpart, as will all remote resources that match local files.
+To map a resource to a local file, right-click a file in the left pane of the Sources tab and choose **Map to file system resource** from the context menu; a dialog opens showing the files in the local folder designated in the initialization step. Choose the local file that matches the one you right-clicked, e.g., `index.html`. Chrome will ask you to let it restart the inspector; click **Yes**, and DevTools will reopen with your *local* folder and files shown in the Sources tab. The resource you choose will be mapped to its local file counterpart, as will all remote resources that match local files.
 
 Reload the page in Chrome. Thereafter, when Chrome loads the mapped URL, it displays the workspace folder contents instead of the network folder contents. You can then work directly in the local files without having to repeatedly switch between Chrome and an external editor.
 
@@ -73,11 +72,11 @@ To add a custom folder, click the **Settings** button ![Settings](imgs/settings_
 
 In addition to editing existing files, you can also add and delete files in the local mapped directory you’re using for Workspaces.
 
-To add a file, right-click a folder in the left Sources pane and choose **New file** from the context menu; a new file name field appears in place. Type a name for the new file including its extension (e.g., newscripts.js) and press **Enter**; the file is added to the local folder.
+To add a file, right-click a folder in the left Sources pane and choose **New file** from the context menu; a new file name field appears in place. Type a name for the new file including its extension (e.g., `newscripts.js`) and press **Enter**; the file is added to the local folder.
 
 To delete a file, right-click its name in the left Sources pane and choose **Delete** from the context menu. Chrome offers a confirmation dialog; click **Yes** to delete the file or **No** to keep it.
 
-Before making substantial changes to a file, it is often useful to make a duplicate of the original for backup purposes. You can do this directly from DevTools. To duplicate a file, right-click its name in the left Sources pane and choose **Make a copy...** from the context menu. The file's contents are copied to a new file and a new file name field appears in place. Type a name for the file including its extension (e.g., mystyles-org.css) and press **Enter**; the copied file is added to the local folder.
+Before making substantial changes to a file, it is often useful to make a duplicate of the original for backup purposes. You can do this directly from DevTools. To duplicate a file, right-click its name in the left Sources pane and choose **Make a copy...** from the context menu. The file's contents are copied to a new file and a new file name field appears in place. Type a name for the file including its extension (e.g., `mystyles-org.css`) and press **Enter**; the copied file is added to the local folder.
 
 When you create or delete files directly in Workspaces, the Sources directory automatically refreshes to show the file changes. To force a refresh at any time, right-click a folder and choose **Refresh** from the context menu.
 
