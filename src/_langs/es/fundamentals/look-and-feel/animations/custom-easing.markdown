@@ -1,6 +1,6 @@
 ---
 layout: article
-title: «Aceleración personalizada"
+title: "Aceleración personalizada"
 description: "Desvíese de lo común y cree animaciones totalmente personalizadas para sus proyectos."
 introduction: "En algunos casos, no querrá utilizar las palabras clave de aceleración que se incluyen con CSS, o bien utilizará una biblioteca de animaciones basadas en JavaScript. Generalmente, en ambos casos puede definir sus propias curvas (o ecuaciones), y esto le proporcionará mucho control sobre el aspecto de las animaciones de su proyecto."
 article:
@@ -12,13 +12,14 @@ collection: animations
 priority: 0
 key-takeaways:
   code:
-    - La aceleración personalizada le permitirá darle más personalidad a sus proyectos.
-    - Puede crear curvas Bézier cúbicas similares a las curvas de animación predeterminadas (salida lenta, entrada lenta, etc.), pero con énfasis en diferentes lugares.
-    - Utilice JavaScript cuando necesite tener más control sobre la sincronización y el comportamiento de las animaciones; p. ej., animaciones elásticas o de rebote.
+    - "La aceleración personalizada le permitirá darle más personalidad a sus proyectos."
+    - "Puede crear curvas Bézier cúbicas similares a las curvas de animación predeterminadas (salida lenta, entrada lenta, etc.), pero con énfasis en diferentes lugares."
+    - "Utilice JavaScript cuando necesite tener más control sobre la sincronización y el comportamiento de las animaciones; p. ej., animaciones elásticas o de rebote."
 
 authors:
   - paullewis
----related:
+---
+
 {% wrap content %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
