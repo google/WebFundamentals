@@ -3,8 +3,8 @@ rss: false
 layout: article
 title: "Speed Up JavaScript Execution"
 seotitle: "Speed Up JavaScript Execution Using DevTools Profiles Panel"
-description: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 engine optimization checks."
-introduction: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 engine optimization checks."
+description: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 optimization checks."
+introduction: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 optimization checks."
 article:
   written_on: 2015-04-14
   updated_on: 2015-07-16
@@ -20,32 +20,28 @@ key-takeaways:
     - Identify specific functions that the V8 engine can't optimize and why as a next step to making these functions better.
 remember:
   absolute-times:
-    - Click the **Percentage** button to view absolute times.
+    - Click the <strong>Percentage</strong> button to view absolute times.
   closing-order:
     - Multiple CPU profiles can operate at once and you aren't required to close them out in creation order.
   high-resolution:
-    - For increased accuracy, enable **High resolution CPU profiling** in the DevTools flame-chart under Profiling. When enabled, you can zoom into the graph to view it by a tenth of a millisecond.
+    - For increased accuracy, enable <strong>High resolution CPU profiling</strong> in the DevTools flame-chart under Profiling. When enabled, you can zoom into the graph to view it by a tenth of a millisecond.
 ---
 {% wrap content %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.javascript-performance %}
+
+## Visualize JavaScript performance in a CPU profile
 
 If you’re noticing jank in your JavaScript,
 collect a JavaScript CPU profile.
 CPU profiles show where execution time is spent in your page’s functions.
+
 The sidebar on the left lists your recorded profiles,
 the tree view on the right shows the information gathered for the selected profile:
 
 ![Sample CPU profile](imgs/cpu-profile.png)
 
-Identifying expensive functions is just the first step.
-The next step is to understand why they are expensive,
-and learn how to speed them up.
-[Performance Tips for JavaScript in V8](http://www.html5rocks.com/en/tutorials/speed/v8/) provides a high-level overview
-of how the V8 works and simple examples on how to write
-JavaScript that the V8 engine is better able to optimize.
-
-{% include modules/takeaway.liquid list=page.key-takeaways.javascript-performance %}
-
-## How to use the CPU profiler
+### How to use the CPU profiler
 
 First verify the CPU profiler is enabled:
 
@@ -64,9 +60,8 @@ The following **Bottom Up** view lists functions by impact on performance. It al
 
 ![Bottom-up view of CPU profile](imgs/heavy-bottom-up.png)
 
-Now select the **Top Down** view by clicking the Bottom Up / Top Down selection button.
-Then click the small arrow to the left of **(program)** in the **Function** column.
 The **Top Down** view shows an overall picture of the calling structure, starting at the top of the call stack.
+Select the **Top Down** view by clicking the Bottom Up / Top Down selection button. Then click the small arrow to the left of **(program)** in the **Function** column.
 
 {% include modules/remember.liquid title="Note" list=page.remember.absolute-times %}
 
@@ -76,26 +71,32 @@ This filters the profile to show only the selected function and its callers:
 
 ![Focus on selected function](imgs/focus-selected-function.png)
 
-Click the **Reload** button at the bottom-right of the window to restore the profile to its original state.
-Select one of the functions in the **Function** column, then click the **Exclude selected function** button (the X icon). 
+The **Exclude selected function** button removes the selected function from the profile and charges its callers with the excluded function's total time.
 
-The **Exclude selected function** button removes the selected function from the profile and charges its callers with the excluded function's total time. Depending on the function you selected, you should see something like this:
+1. Click the **Reload** button at the bottom-right of the window to restore the profile to its original state.
+2. Select one of the functions in the **Function** column.
+3. Click the **Exclude selected function** button (the X icon). 
+
+Depending on the function you selected, you should see something like this:
 
 ![Exclude selected function](imgs/tree-top-down.png)
 
-## How to customize the CPU profiler
+### How to customize the CPU profiler
 
 Use the [Chrome DevTools Console](tools/javascript/console/console-ui)
 to customize and control CPU profiles.
 
-## Create profile from console
+### Create profile from console
 
-The `profile()` function begins a JavaScript CPU profile. You may pass in a string to name the profile as well. To stop a profile call `profileEnd()` in the same way you called the initializer.
+The `profile()` function begins a JavaScript CPU profile.
+Pass in a string to name the profile.
+To stop a profile,
+call `profileEnd()` in the same way you called the initializer.
 
 {% highlight JavaScript %}
 
-    profile()
-    profileEnd()
+profile()
+profileEnd()
 
 {% endhighlight %}
 
@@ -105,10 +106,10 @@ Group profiles together simply by creating multiple profiles with the same label
 
 {% highlight JavaScript %}
 
-    profile("init")
-    profileEnd("init")
-    profile("init")
-    profileEnd("init")
+profile("init")
+profileEnd("init")
+profile("init")
+profileEnd("init")
 
 {% endhighlight %}
 
@@ -121,11 +122,10 @@ Result in the profiles panel:
 ## How to profile JavaScript performance over time
 
 The Flame Chart view provides a visual representation
-of JavaScript processing that is aggregated _over_time_,
-similar to those found in the Timeline and Network panels.
-When you see events happen,
-you can drill into the time scale of them and
-really get some perspective on execution of JavaScript.
+of JavaScript processing aggregated _over_time_,
+similar to those found in the
+[Timeline](tools/profile-performance/evaluate-performance/timeline-tool) and 
+[Network](tools/profile-performance/network-performance/resource-loading) panels.
 
 ![Flamechart view](imgs/flamechart.png)
 
@@ -158,6 +158,7 @@ select the Flame Chart visualization from the select menu at the bottom of the D
 Across the top of the panel is an overview that shows the entire recording.
 Zoom in on a specific region of the overview
 by selecting it with your mouse as shown below.
+
 You can also pan left and right by clicking on the white area and
 dragging your mouse.
 The Details view timescale shrinks accordingly.
@@ -188,7 +189,15 @@ Clicking a function block opens its containing JavaScript file in the Sources pa
 
 ## How to test for optimized functions
 
-The [standalone "d8" version](https://developers.google.com/v8/build) includes two tools that help you identify functions that aren't getting optimized, and why.
+Identifying expensive functions is a good first step.
+But what you really need to know is why these functions are slow,
+and how to speed them up.
+
+[Performance Tips for JavaScript in V8](http://www.html5rocks.com/en/tutorials/speed/v8/) provides a set of simple examples
+on how to write JavaScript that the V8 engine can optimize.
+
+Identify functions that the V8 engine can and can't optimize, and why
+using tools in the [standalone "d8" version](https://developers.google.com/v8/build).
 
 ### List optimized functions
 
