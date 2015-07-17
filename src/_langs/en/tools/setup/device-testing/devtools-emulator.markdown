@@ -55,7 +55,7 @@ You can use Chrome DevTools device mode to:
 
 ## Enable device mode
 
-Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png)icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
+Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png){:.inline} icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
 
 You can also toggle device mode on and off using the keyboard shortcut:  
  Ctrl + Shift + M (or Cmd + Shift + M on Mac).
@@ -80,7 +80,7 @@ Each preset automatically configures device emulation in the following ways:
 * Emulates mobile scrollbar overlays and meta viewport.
 * Autosizes (boosts) text for pages without a defined viewport.
 
-**Tips:** Toggle the screen resolution emulator on and off using the **Emulate screen resolution** ![emulate resolution icon](imgs/icon-emulate-resolution.png)checkbox. Alternate between portrait and landscape views by clicking the **Swap dimensions** ![swap dimensions icon](imgs/icon-swap-dimensions.png)icon. Select the **Fit** checkbox to ensure that the emulated screen remains fully visible inside your browser viewport, shrinking to fit if necessary. (This setting is for convenience and does not emulate the device differently.)
+**Tips:** Toggle the screen resolution emulator on and off using the **Emulate screen resolution** ![emulate resolution icon](imgs/icon-emulate-resolution.png){:.inline} checkbox. Alternate between portrait and landscape views by clicking the **Swap dimensions** ![swap dimensions icon](imgs/icon-swap-dimensions.png){:.inline} icon. Select the **Fit** checkbox to ensure that the emulated screen remains fully visible inside your browser viewport, shrinking to fit if necessary. (This setting is for convenience and does not emulate the device differently.)
 
 ### Customize the screen settings
 
@@ -90,7 +90,7 @@ To get more granular control over the screen emulator, you can tune the resoluti
 
 To emulate a custom screen size, manually set the CSS pixel dimensions of the device in the width and height fields.
 
-If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png)field. The **device pixel ratio** (DPR) is the ratio between logical pixels and physical pixels. Devices with Retina displays, such as the iPhone 5, have higher pixel density than standard devices, which can affect the sharpness and size of visual content.
+If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png){:.inline} field. The **device pixel ratio** (DPR) is the ratio between logical pixels and physical pixels. Devices with Retina displays, such as the iPhone 5, have higher pixel density than standard devices, which can affect the sharpness and size of visual content.
 
 Some examples of "Device Pixel Ratio" (DPR) sensitivity on the web are:
 
@@ -105,7 +105,7 @@ Some examples of "Device Pixel Ratio" (DPR) sensitivity on the web are:
 
 Save custom emulations as presets so that you can easily return to them later.
 
-To save your current screen settings as a preset, open the DevTools emulation drawer by clicking the **More overrides** ![more overrides icon](imgs/icon-open-emulator-drawer.png)icon in the top right corner of the browser viewport.
+To save your current screen settings as a preset, open the DevTools emulation drawer by clicking the **More overrides** ![more overrides icon](imgs/icon-open-emulator-drawer.png){:.inline} icon in the top right corner of the browser viewport.
 
 ![opening the emulation drawer](imgs/emulation-drawer-UI-location.png)
 

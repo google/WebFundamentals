@@ -54,8 +54,8 @@ remember:
 
 Navigate through the DOM structure using either mouse or keyboard.
 
-* To expand a collapsed node: ![Expand node](imgs/collapsed-div.png), double-click the node or press **Right arrow**.
-* To collapse an expanded node: ![Collapse node](imgs/expanded-body.png), double-click the node or press **Left arrow**.
+* To expand a collapsed node: ![Expand node](imgs/collapsed-div.png){:.inline}, double-click the node or press **Right arrow**.
+* To collapse an expanded node: ![Collapse node](imgs/expanded-body.png){:.inline}, double-click the node or press **Left arrow**.
 
 Expanding a node automatically selects its first child, so you can expand a deeply-nested structure by pressing the **Right arrow** repeatedly.
 

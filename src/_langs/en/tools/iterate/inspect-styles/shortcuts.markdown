@@ -30,7 +30,7 @@ This guide provides a quick reference to each shortcut availabe in Chrome DevToo
 
 To access the DevTools, on any web page or app in Google Chrome:
 
-* Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png) at the top-right of your browser window, then select **Tools > Developer Tools**.
+* Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png){:.inline} at the top-right of your browser window, then select **Tools > Developer Tools**.
 * Right-click on any page element and select **Inspect Element**.
 
 Additonal shortcuts to access DevTools:
