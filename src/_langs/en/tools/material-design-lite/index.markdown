@@ -14,11 +14,11 @@ feedURL: https://github.com/google/material-design-lite/releases.atom
   <img src="/web/tools/material-design-lite/images/logo1x.png"
       alt="MDL Logo"
       srcset="/web/tools/material-design-lite/images/logo2x.png 2x">
-  <a href="#"><span>Subscribe</span></a>
+  <a href="http://getmdl.io"><span>Subscribe</span></a>
 </div>
 
 <div class="mdl-coming-soon">
-  <p>Coming Soon - <a href="https://events.google.com/io2015/schedule?sid=18667bad-8be4-e411-b87f-00155d5066d7#day2/18667bad-8be4-e411-b87f-00155d5066d7">Previewing at I/O</a></p>
+  <p>Now available to download at <a href="http://getmdl.io">getmdl.io</a></p>
 </div>
 
 <div class="mdl-comingsoon-topics">
