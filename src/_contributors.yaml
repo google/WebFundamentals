@@ -702,3 +702,17 @@ dgash:
     - author
   email: dgash@google.com
   description: "Dave is a Tech Writer"
+
+
+beaufortfrancois:
+  name:
+    given: François
+    family: beaufort
+  org:
+    name: Google
+    unit: Developer Relations
+  country: FR
+  role:
+    - author
+  homepage:
+  google: +FrancoisBeaufort
