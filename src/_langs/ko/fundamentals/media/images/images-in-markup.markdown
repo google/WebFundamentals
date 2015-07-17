@@ -62,9 +62,9 @@ shortlinks:
 {% include modules/takeaway.liquid list=page.key-takeaways.img-in-markup %}
 
 
-## 이미지에 가변 사이즈를 사용하세요.
+## 이미지에 가변 사이즈를 적사용하세요.
 
-의도치않게 뷰포트를 넘어가는 경우를 방지하기 위해 이미지의 넓이는 가변값을 사용해야
+의도하지 않게 뷰포트를 넘어가는 경우를 방지하기 위해 이미지의 넓이는 가변값을 사용해야
 한다는 것을 기억하세요. 예를 들면 'width: 50%;'처럼 작성하면 이미지 넓이를 (뷰포트나
 픽셀 사이즈가 아닌)콘테이너 넓이의 50%로 만들어줄 것입니다.
 
@@ -81,19 +81,17 @@ img, embed, object, video {
 'img'의 'alt'속성을 이용해서 의미있는 설명을 제공해야만 합니다. 그래야만 스크린
 리더나 다른 보조 기술들에 컨텍스트가 제공되어 사이트의 접근성이 높아집니다.
 
-## Enhance `img`'s with `srcset` for high DPI devices
+##  고해상도 기기들을 위해 `img`의 `srcset`를 사용하세요.
 
 <div class="clear">
   <div class="g--half">
     <p>
-      The <code>srcset</code> attribute enhances the behavior of the 
-      <code>img</code> element, making it easy to provide multiple image files 
-      for different device characteristics. Similar to the <code>image-set</code>
-      <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS function</a>
-      native to CSS, <code>srcset</code> allows the browser to choose the best 
-      image depending on the characteristics of the device, for example using 
-      a 2x image on a 2x display, and potentially in the future, a 1x image on 
-      a 2x device when on a limited bandwidth network.
+      <code>srcset</code> 속성은 다양한 기기들의 특성에 맞게 여러 이미지를 
+      제공함으로써 <code>img</code>엘리먼트의 성능을 향상시켜 줍니다.
+      CSS에 내재된 <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS function</a> 처럼, <code>srcset</code>은 브라우저가 기기의 특성에 맞는
+      최적의 이미지를 선택할 수 있도록 도와준다. 예를 들면 2x 디스플레이에서는 
+      2x 이미지를 보여주고, 더 나아가 2x 기기라고 해도 네트워크 대역폭이 
+      제한될 경우에는 1x image를 보여주는 것도 가능해질 것입니다.
     </p>
   </div>
 
@@ -106,26 +104,22 @@ img, embed, object, video {
 <img src="photo.png" srcset="photo@2x.png 2x" ...>
 {% endhighlight %}
 
-On browsers that don't support `srcset`, the browser simply uses the default
-image file specified by the `src` attribute.  This is why it is important to
-always include a 1x image that can be displayed on any device, regardless of
-capabilities.  When `srcset` is supported, the  comma-separated list of
-image/conditions is parsed prior to making any requests, and only the most
-appropriate image is downloaded and displayed.
+`srcset`을 지원하지 않는 브라우저에서는 단순하게 `src` 속성에 정의된 기본 이미지를 
+사용할 것입니다. 이것이 기능에 관계없이 어떤 기기라도 이미지를 보여줄 수 있도록
+1x 이미지를 포함시키는 것이 중요한 이유입니다. `srcset`이 지원되는 브라우저에서는 
+컴마로 나뉜 이미지나 조건 리스트가 어떤 요청보다도 먼저 필요한 이미지만 선택해서
+다운받은 후 보여줄 것입니다.
 
-While the conditions can include everything from pixel density to width and 
-height, only pixel density is well supported today.  To balance current
-behavior with future features, stick with simply providing the 2x image in
-the attribute.
+조건문에는 화소밀도에서 넓이, 높이까지 모든 것이 포함될 수 있지만, 현재 화소밀도만
+모든 경우에서 잘 지원되고 있습니다. 단순히 속성에 2x 이미지를 제공하는 것만으로도 
+미래의 기능과 잘 조화되게 할 수 있습니다.
 
-## Art direction in responsive images with `picture`
+## `picture`를 이용한 반응형 이미지의 아트디렉션
 
-Changing images based on device characteristics, also known as art
-direction can be accomplished using the picture element.  The 
-<code>picture</code> element defines a declarative solution for 
-providing multiple versions of an image based on different 
-characteristics, like device size, device resolution, orientation,
-and more.
+아트디렉션이라고도 알려진 기기의 특성에 맞게 이미지를 교체하는 기술은 
+picture 엘리먼트를 이용하여 수행할 수 있습니다. <code>picture</code> 엘리먼트는 
+기기의 사이즈, 해상도, 방향등의 다른 특성들에 따라 여러 버전의 이미지를 
+제공하는 솔루션입니다.
 
 <img class="center" src="img/art-direction.png" alt="Art direction example"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
@@ -135,12 +129,10 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 <div class="clear">
   <div class="g--half">
     <p>
-      The <code>picture</code> element should be used when an image source 
-      exists in multiple densities, or when a responsive design dictates a 
-      somewhat different image on some types of screens.  Similar to the 
-      <code>video</code> element, multiple <code>source</code> elements can 
-      be included, making it possible to specify different image files
-      depending on media queries or image format.
+      <code>picture</code> 엘리먼트는 이미지 소스가 여러 화소로 존재할 경우나 
+      반응형 디자인이 화면에 따라 다른 이미지를 나타나게 할 때 사용됩니다.
+      <code>video</code> 엘리먼트나 여러 <code>source</code> 엘리먼트가 포함될 수 있고,
+      미디어 쿼리나 이미지 포맷에 따라 다른 이미지 파일들을 사용할 수 있게 해줍니다.
     </p>
   </div>
   <div class="g--half g--last">
@@ -150,13 +142,12 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 {% include_code _code/media.html picture html %}
 
-In the above example, if the browser width is at least 800px, then either
-`head.jpg` or `head-2x.jpg` will be used, depending on the device resolution. 
-If the browser is between 450px and 800px, then either `head-small.jpg` or 
-`head-small-2x.jpg` will be used, again, depending on the device resolution.
-For screen widths less than 450px and backwards compatibility where the 
-`picture` element isn’t supported, the browser will render the `img` element 
-instead, and should always be included.
+위의 예제와 같이, 브라우저 넓이가 적어도 800px일경우, 기기 해상도에 따라
+`head.jpg`나 `head-2x.jpg`가 사용될 것입니다. 만약 브라우저가 450px에서 
+800px 사이라면, 역시 기기 해상도에 따라 `head-small.jpg`나 `head-small-2x.jpg`
+가 사용될 것입니다. 450px보다 좁은 스크린과 `picture`가 지원되지 않는 브라우저
+호환성 문제를 위해서는, 반드시 포함되어야 하는 `img` 엘리먼트를 제공하면
+문제없이 이미지를 보여줄 것입니다.
 
 ### Relative sized images
 
