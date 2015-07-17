@@ -36,7 +36,7 @@ Chrome Developer Tools (DevTools) is a set of debugging features built into the 
 
 ### Accessing DevTools
 
-Open the Chrome menu ![Chrome menu](imgs/chrome_menu_button.png) and choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu. The DevTools panel typically opens at the bottom of the main window, but you can change its position with the **Layout** button. Click the Dock to Main button ![Dock to main](imgs/dock_to_main_button.png) to dock the panel on the right side of the main window, click ![Dock to bottom](imgs/dock_to_bottom_button.png) to dock the panel at the bottom of the main window, or click and hold the button and click ![Undock](imgs/undock_button.png) to undock the panel from the main window and open it in a separate window (useful when you need to see more of your page at once).
+Open the Chrome menu ![Chrome menu](imgs/chrome_menu_button.png){:.inline} and choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu. The DevTools panel typically opens at the bottom of the main window, but you can change its position with the **Layout** button. Click the Dock to Main button ![Dock to main](imgs/dock_to_main_button.png){:.inline} to dock the panel on the right side of the main window, click ![Dock to bottom](imgs/dock_to_bottom_button.png){:.inline} to dock the panel at the bottom of the main window, or click and hold the button and click ![Undock](imgs/undock_button.png){:.inline} to undock the panel from the main window and open it in a separate window (useful when you need to see more of your page at once).
 
 You can also open and manage DevTools with a variety of keyboard shortcuts. See [this reference page](https://web-central.appspot.com/web/tools/iterate/inspect-styles/shortcuts?hl=en) for a full list of shortcuts and their actions.
 
@@ -62,7 +62,7 @@ As you can see, using DevTools even in the most basic ways gives you a rich set 
 
 DevTools has many powerful and flexible capabilities that help you debug your pages. 
 
-Click the **Device Mode** button ![Device mode](imgs/device_mode_button.png) to toggle the page display between full-screen and mobile. In mobile mode, you can change the size of the display to simulate a variety of existing devices, or set it to a size of your own choosing.
+Click the **Device Mode** button ![Device mode](imgs/device_mode_button.png){:.inline} to toggle the page display between full-screen and mobile. In mobile mode, you can change the size of the display to simulate a variety of existing devices, or set it to a size of your own choosing.
 
 The DevTools panel contains a set of tabs, each of which accesses a DevTools section. In the table below, click a section name to open a description page for that section.
 

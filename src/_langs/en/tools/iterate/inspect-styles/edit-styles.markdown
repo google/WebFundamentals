@@ -116,7 +116,7 @@ Trigger any combination of the following four pseudo-classes:
 
 To set an element's state:
 
-1. Click **Toggle Element State**![attributes](imgs/attributes-icon.png) next to **New Style Rule** ![plus](imgs/plus.png)within the styles pane header.
+1. Click **Toggle Element State**![attributes](imgs/attributes-icon.png){:.inline} next to **New Style Rule** ![plus](imgs/plus.png){:.inline} within the styles pane header.
 2. Right-click a DOM node in the Elements panel and select **Force Element State**.
 
 ## Edit preprocessor source files

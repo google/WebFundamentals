@@ -53,7 +53,7 @@ You need to use a minifier that's capable of creating source maps. Closure Compi
 
 ## Enable source maps
 
-Source maps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable them, first open DevTools and click the settings cog ![gear](imgs/gear.png). Under **Sources**, check **Enable JavaScript source maps**. You might also check **Enable CSS source maps**.
+Source maps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable them, first open DevTools and click the settings cog ![gear](imgs/gear.png){:.inline}. Under **Sources**, check **Enable JavaScript source maps**. You might also check **Enable CSS source maps**.
 
 ![Enable source maps](imgs/source-maps.jpg)
 

@@ -28,7 +28,7 @@ Here is how a minified script displayed in the tools might look prior to being d
 
 ![Minified script](imgs/pretty-print-off.jpg)
 
-By clicking the curly braces ![Pretty print icon](imgs/prettyprint-icon.png) icon in the bottom left corner, the JavaScript is transformed into a more human readable form. This is also easier for debugging and setting breakpoints.
+By clicking the curly braces ![Pretty print icon](imgs/prettyprint-icon.png){:.inline} icon in the bottom left corner, the JavaScript is transformed into a more human readable form. This is also easier for debugging and setting breakpoints.
 
 ![Pretty print JavaScript](imgs/pretty-print-on.jpg)
 

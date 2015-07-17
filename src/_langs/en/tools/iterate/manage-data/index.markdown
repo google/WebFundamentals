@@ -9,7 +9,7 @@ article:
   updated_on: 2015-04-14
   order: 3
 authors:
-  - mkearney
+  - megginkearney
 priority: 0
 collection: iterate
 panel: resources
@@ -22,7 +22,7 @@ The Resources panel lets you access data sources like IndexedDB and Web SQL data
 
 To access the Resources panel:
 
-* Open the Chrome menu ![Chrome menu](imgs/chrome-menu.png).
+* Open the Chrome menu ![Chrome menu](imgs/chrome-menu.png){:.inline}.
 * Choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu.
 * Select the **Resources** panel.
 

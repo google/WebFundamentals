@@ -65,7 +65,7 @@ There are several ways to inspect an element:
 
 * Right-click any element on the page the page and select **Inspect Element**.
 * Press **Ctrl + Shift + C** (or **Cmd + Shift + C** on Mac) to open DevTools in Inspect Element mode, then click on an element.
-* Click the **Inspect Element button** ![Inspect icon](imgs/inspect-icon.png) at the top of the DevTools window to go into Inspect Element Mode, then click on an element.
+* Click the **Inspect Element button** ![Inspect icon](imgs/inspect-icon.png){:.inline} at the top of the DevTools window to go into Inspect Element Mode, then click on an element.
 * Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](https://developer.chrome.com/devtools/docs/commandline-api) for information on using inspect.
 
 ### Inspect styles applied to an element
@@ -141,7 +141,7 @@ To view a history of live-edits made to your page:
 
 To explore the changes made:
 
-* Expand top-level file names to view the time ![time modification occurred](imgs/image_25.png)a modification occurred.
+* Expand top-level file names to view the time ![time modification occurred](imgs/image_25.png){:.inline} a modification occurred.
 * Expand second-level items to view a [diff](http://en.wikipedia.org/wiki/Diff) (before and after) corresponding to the modification. A line with a pink background signifies a removal while a line with a green background signifies an addition.
 
 {% animation animations/revisions.mp4 %}
