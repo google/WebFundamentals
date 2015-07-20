@@ -63,11 +63,11 @@ Note that:
 
 * The lock screen notification is currently only shown in Android L and later. Support for J and K devices is in progress.
 * Notifications are only shown for media over five seconds in length.
-• There is no notification for audio from the Web Audio API unless it is played back via an audio element.
+* There is no notification for audio from the Web Audio API unless it is played back via an audio element.
 
 We are currently working on implementing the <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dLWDxYgxzQ8" title="MediaSession Intent to Implement">MediaSession API</a>. Although this looks like a simple addition to Chrome, it will be the basis for implementation of future media control APIs. MediaSession will enable control over media in a web page, such as the ability to move between tracks or display extra metadata about the currently playing track. You could imagine that this API might be integrated with platforms such as Android Wear, or even enable remote controls on Bluetooth devices to extend the reach of web experiences.
 
-We welcome your feedback on the MediaSession API. You can follow the <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dLWDxYgxzQ8" title="Intent to Implement thread on Google Groups">Intent to Implement discussion</a>, comment on the <a href="https://mediasession.spec.whatwg.org/" title="WHATWG Media Session spec">WHATWG standard</a> and track our <a href="https://crbug.com/497735" title="Implementation bug on crbug.com">implementation bug</a>.
+We welcome your feedback on the MediaSession API. You can follow the <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dLWDxYgxzQ8" title="Intent to Implement thread on Google Groups">Intent to Implement discussion</a>, comment on the <a href="https://mediasession.spec.whatwg.org/" title="WHATWG Media Session spec">WHATWG standard</a>, or track our <a href="https://crbug.com/497735" title="Implementation bug on crbug.com">implementation bug</a>.
 
 
 
