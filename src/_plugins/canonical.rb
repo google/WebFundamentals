@@ -21,6 +21,7 @@ module Jekyll
     def canonicalize(url)
       url = url.sub('index.html', '')
       url = url.sub('.html', '')
+      url = url.sub('_langs/en/', '')
     end
   end
 end

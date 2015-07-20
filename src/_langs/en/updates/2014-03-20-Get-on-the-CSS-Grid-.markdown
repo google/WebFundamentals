@@ -47,11 +47,11 @@ Using CSS Grid Layout in Chrome now is easy. First thing you need to do is turn 
 
 First load the _chrome://flags_ URL and scroll down to the option to _Enable experimental Web Platform features_ as shown below:
 
-<img src="http://sydcss-grid.appspot.com/images/enable-flag.png" alt="Image of experimental flag option"/>
+<img src="//sydcss-grid.appspot.com/images/enable-flag.png" alt="Image of experimental flag option"/>
 
 Just click _Enable_ to turn the flag on, and you should see a prompt to restart the browser that looks like this:
 
-<img src="http://sydcss-grid.appspot.com/images/enable-relaunch.png" alt="Image of Relaunch button"/>
+<img src="//sydcss-grid.appspot.com/images/enable-relaunch.png" alt="Image of Relaunch button"/>
 
 Now just click the _Relaunch Now_ button to restart your browser and you'll be all set to try out CSS Grid Layout.
 

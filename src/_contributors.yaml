@@ -445,6 +445,19 @@ renatomangini:
   twitter: renatomangini
   email: mangini@google.com
 
+josephmedley:
+  name:
+    give: Joseph
+    family: Medley
+  country: USA
+  role:
+    - author
+  homepage:
+  google: jmedley@google.com
+  twitter:
+  email:
+  description: "Technical Writer"
+
 jacquerie:
   name:
     given: Jacopo
@@ -663,3 +676,29 @@ dalecurtis:
   homepage: https://github.com/dalecurtis
   description: "Dale is a Senior Software Engineer"
 
+kaycebasques:
+  name:
+    given: Kayce
+    family: Basques
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  google: +KayceBasques
+  email: kayce@google.com
+  description: "Technical Writer Ordinaire"
+
+dgash:
+  name:
+    given: Dave
+    family: Gash
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  email: dgash@google.com
+  description: "Dave is a Tech Writer"

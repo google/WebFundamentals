@@ -3,7 +3,7 @@ rss: false
 layout: section
 title: "Exception and Error Handling"
 seotitle: "Exception and Error Handling"
-description: "TBD description."
+description: "The Chrome DevTools Console panel exposes a wealth of information about your page's exceptions and errors."
 introduction: "The Chrome DevTools Console panel exposes a wealth of information about your page's exceptions and errors."
 article:
   written_on: 2015-04-14

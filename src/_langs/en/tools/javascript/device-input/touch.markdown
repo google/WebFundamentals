@@ -18,7 +18,7 @@ key-takeaways:
     - TBD tldr.
 remember:
   ontouch-handlers:
-    - To trigger elem.ontouch_*_ handlers, you must run Chrome with the ‑‑touch‑event` <a href="http://www.chromium.org/developers/how-tos/run-chromium-with-flags">command line flag</a>. Touch emulation currently <a href="https://code.google.com/p/chromium/issues/detail?id=133915">does not trigger</a> these handlers by default.
+    - To trigger elem.ontouch handlers, you must run Chrome with the ‑‑touch‑event <a href="http://www.chromium.org/developers/how-tos/run-chromium-with-flags">command line flag</a>. Touch emulation currently <a href="https://code.google.com/p/chromium/issues/detail?id=133915">does not trigger</a> these handlers by default.
 ---
 {% wrap content %}
 

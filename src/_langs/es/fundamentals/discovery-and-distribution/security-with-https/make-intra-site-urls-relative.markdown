@@ -13,8 +13,8 @@ article:
   order: 4
 priority: 0
 key-takeaways:
-  - Asegúrese de que las URL dentro del sitio y las URL externas sean independientes del protocolo; es decir, asegúrese de utilizar rutas relativas o de omitir el protocolo como //example.com/something.js
----.
+  - "Asegúrese de que las URL dentro del sitio y las URL externas sean independientes del protocolo; es decir, asegúrese de utilizar rutas relativas o de omitir el protocolo como //example.com/something.js"
+---
 
 {% wrap content %}
 
