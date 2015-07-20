@@ -31,7 +31,6 @@ function devtips_list() {
 function devtips_extract(DevTip $tip) {
 
 	global $updates_dir;
-	$content = $tip->get('content');
 
 	$assetPath = getFileName($tip->get('date'), $tip->get('title'));
 	$assetPath = str_replace(".markdown", "", $assetPath);
@@ -47,10 +46,16 @@ function devtips_extract(DevTip $tip) {
 	$featured = null;
 	foreach ($assets as $key => $url) {
 		
+
+		if(strpos($url, "/sponsor/") !== false) {
+			continue;
+		}
+
 		$base = new Net_URL2('https://umaar.com/dev-tips/');
 		$abs = $base->resolve($url);
 		$dest = $updates_dir . 'images/' . $assetPath . '/' . pathinfo($url)['basename'];
 
+		$content = $tip->get('content');
 		$tip->set('content', str_replace($url, '/web/updates/images/' . $assetPath . '/' . pathinfo($url)['basename'], $content));
 
 		if(!$featured) {
@@ -91,7 +96,20 @@ function devtips_get($url) {
 		->filter('div.dt-content')
 		->each(function ($node) use (&$tip) {
 			$html = trim($node->html());
+
+			// add line breaks
 			$html = str_replace("><", ">\r\n<", $html);
+
+			// remove aside
+			$pos = strpos($html, "<aside");
+			if($pos !== false) {
+				$html = substr($html, 0, $pos);
+			}
+
+			// convert <p>'s to just line breaks
+			$html = str_replace("<p>", "\r\n", $html);
+			$html = str_replace("</p>", "\r\n", $html);
+
 			$tip->set('content', $html);
 		});
 

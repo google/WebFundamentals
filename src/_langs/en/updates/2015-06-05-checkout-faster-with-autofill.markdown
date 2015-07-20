@@ -22,7 +22,7 @@ tags:
   - autofill
   - monetization
   - mobile
-permalink: /updates/2015/06/checkout-faster-autofill.html
+permalink: /updates/2015/06/checkout-faster-with-autofill.html
 ---
 
 <style type="text/css">

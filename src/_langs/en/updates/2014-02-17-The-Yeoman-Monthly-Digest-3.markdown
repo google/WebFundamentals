@@ -41,7 +41,7 @@ We’ll talk more about this soon, but for now here’s this month’s round-up 
 
 Sindre Sorhus also created [envcheck](https://github.com/sindresorhus/envcheck/) - a useful environment checker that will double-check you have everything needed to run Yeoman smoothly.
 
-<img src="http://i.imgur.com/jyAbtYg.png"/>
+<img src="//i.imgur.com/jyAbtYg.png"/>
 
 ## Articles
 

@@ -29,7 +29,7 @@ page’s `<head>` with the `name="theme-color"`, and set the `content` to any
 valid CSS color.  
 
 <p style="text-align: center;">
-  <img src="{{site.baseurl}}/updates/images/theme-color-ss.png" alt="Screenshot of phone showing theme-color" />
+  <img src="{{site.baseurl}}/updates/images/2014-11-07-Support-for-theme-color-in-Chrome-39-for-Android/theme-color-ss.png" alt="Screenshot of phone showing theme-color" />
 </p>
 
 For example, to set the background to your favorite color or HTML5Rocks orange:

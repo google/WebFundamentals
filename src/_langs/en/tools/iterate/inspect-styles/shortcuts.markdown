@@ -387,13 +387,13 @@ Shortcuts available in the Sources panel:
     </tr>
     <tr>
       <td data-th="Sources Panel">Jump to line number</td>
-      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
-      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<i>number</i></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<i>number</i></span></td>
     </tr>
     <tr>
       <td data-th="Sources Panel">Jump to column</td>
-      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
-      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<i>number</i></span> + <span class="kbd">:<i>number</i></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<i>number</i></span> + <span class="kbd">:<i>number</i></span></td>
     </tr>
     <tr>
       <td data-th="Sources Panel">Go to member</td>
@@ -417,7 +417,7 @@ Shortcuts available in the Sources panel:
 Don't pause on exceptions.
 
 ![Pause on All Exceptions](imgs/pause-blue.png)
-Pause on All exceptions (including those caught within try/catch blocks).
+Pause on all exceptions (including those caught within try/catch blocks).
 
 ![Pause on Uncaught Exceptions](imgs/pause-purple.png)
 Pause on uncaught exceptions (usually the one you want).
@@ -440,13 +440,13 @@ Code editor shortcuts:
     </tr>
     <tr>
       <td data-th="Code Editor">Jump to line number</td>
-      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
-      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<number></span></td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">P</span> + <span class="kbd">:<i>number</i></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">P</span> + <span class="kbd">:<i>number</i></span></td>
     </tr>
     <tr>
       <td data-th="Code Editor">Jump to column</td>
-      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
-      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<number></span> + <span class="kbd">:<number></span></td>
+      <td data-th="Windows"><span class="kbd">Ctrl</span> + <span class="kbd">O</span> + <span class="kbd">:<i>number</i></span> + <span class="kbd">:<i>number</i></span></td>
+      <td data-th="Mac"><span class="kbd">Cmd</span> + <span class="kbd">O</span> + <span class="kbd">:<i>number</i></span> + <span class="kbd">:<i>number</i></span></td>
     </tr>
     <tr>
       <td data-th="Code Editor">Toggle comment</td>
