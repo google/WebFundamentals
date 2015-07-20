@@ -7,7 +7,7 @@ collection: updates
 category: chrome
 product: chrome
 type: news
-date: 2015-06-12
+date: 2015-07-21
 
 title: "Media playback notifications for Chrome on Android"
 description: "When audio or video is playing on a web page, a notification showing the page title and a play/pause button is displayed in the notification tray and on the lock screen. The notification can be used to pause/resume play or return to the page playing the media."
