@@ -16,7 +16,7 @@ article:
   updated_on: 2015-07-21
 
 authors:
-  - samdutton
+  - dutton
 tags:
   - audio
   - video
@@ -50,7 +50,7 @@ This animation shows a notification over the Android lock screen:
   <img src="/web/updates/images/2015-07-21-media-notifications/notification-over-lock-screen.gif" alt="Notification displayed over the Android lock screen">
 </p>
 
-The screencast below shows the process of displaying a notification and controlling video playback on a web page:
+This screencast shows the process of displaying a notification nad controlling video playback on a web page:
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-07-21-media-notifications/poster.jpg">
@@ -60,15 +60,9 @@ The screencast below shows the process of displaying a notification and controll
 </p>
 
 Note that:
-
-* The lock screen notification is currently only shown in Android L and later. Support for J and K devices is in progress.
+* The lock screen notification is currently only shown in Android L and later (support for J and K devices is in progress).
 * Notifications are only shown for media over five seconds in length.
-• There is no notification for audio from the Web Audio API unless it is played back via an audio element.
 
-We are currently working on implementing the <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dLWDxYgxzQ8" title="MediaSession Intent to Implement">MediaSession API</a>. Although this looks like a simple addition to Chrome, it will be the basis for implementation of future media control APIs. MediaSession will enable control over media in a web page, such as the ability to move between tracks or display extra metadata about the currently playing track. You could imagine that this API might be integrated with platforms such as Android Wear, or even enable remote controls on Bluetooth devices to extend the reach of web experiences.
-
-We welcome your feedback on the MediaSession API. You can follow the <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dLWDxYgxzQ8" title="Intent to Implement thread on Google Groups">Intent to Implement discussion</a>, comment on the <a href="https://mediasession.spec.whatwg.org/" title="WHATWG Media Session spec">WHATWG standard</a> and track our <a href="https://crbug.com/497735" title="Implementation bug on crbug.com">implementation bug</a>.
-
-
+We are currently working on implementing the MediaSession API and although this looks like a simple addition to Chrome it will be the basis for the implementation of future media control APIs. MediaSession will enable control over media in a web page, such as the ability to move between tracks or display extra metadata about the currently playing track. We are also considering better system integration, such as support for Android Wear and remote controls on bluetooth devices.
 
 
