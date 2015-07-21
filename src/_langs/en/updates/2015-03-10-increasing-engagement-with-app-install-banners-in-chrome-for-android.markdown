@@ -174,7 +174,7 @@ btnSave.addEventListener('click', function() {
     // has tried to prompt previously, so let's show the prompt.
     deferredPrompt.prompt();
   
-    // Follow what   
+    // Follow what the user has done with the prompt.
     deferredPrompt.userChoice.then(function(choiceResult) {
   
       console.log(choiceResult.outcome);
