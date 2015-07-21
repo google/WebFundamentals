@@ -69,6 +69,20 @@ ianbarber:
   email: ianbarber@google.com
   description: "Ian is a DRE"
 
+beaufortfrancois:
+  name:
+    given: François
+    family: Beaufort
+  org:
+    name: Google
+    unit: Developer Relations
+  country: France
+  role:
+    - author
+  homepage: https://plus.google.com/+FrancoisBeaufort
+  google: +FrancoisBeaufort
+  description: "Dives into Chromium source code"
+
 ericbidelman:
   name:
     given: Eric
@@ -702,17 +716,3 @@ dgash:
     - author
   email: dgash@google.com
   description: "Dave is a Tech Writer"
-
-
-beaufortfrancois:
-  name:
-    given: François
-    family: beaufort
-  org:
-    name: Google
-    unit: Developer Relations
-  country: FR
-  role:
-    - author
-  homepage:
-  google: +FrancoisBeaufort
