@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: fundamentals/page-pete
 title: "Optimizations for Crawlers"
 description: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
 introduction: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
@@ -17,3 +17,5 @@ article:
 {% comment %}
 Guide list content will be output by the landing layout based on the article collection matching page.id
 {% endcomment %}
+
+content

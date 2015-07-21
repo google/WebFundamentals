@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: fundamentals/page-pete
 title: "Intro to Security Terminology"
 description: "When migrating to HTTPS, one of the hurdles site operators face is conceptual: What, exactly, is going on? What does all the crypto terminology mean? In this section, we’ll give a very brief overview."
 introduction: "When migrating to HTTPS, one of the hurdles site operators face is conceptual: What, exactly, is going on? What does all the crypto terminology mean? In this section, we’ll give a very brief overview."

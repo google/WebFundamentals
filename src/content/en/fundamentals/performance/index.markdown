@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/landing
+layout: fundamentals/page-pete
 title: "Performance"
 description: "TODO: Description"
 introduction: "TODO: Introduction"

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: fundamentals/page-pete
 title: "Migration Concerns"
 description: ""
 introduction: ""

@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/landing
+layout: fundamentals/page-pete
 title: "Design and UI"
 description: "TODO: Description"
 introduction: "TODO: Introduction"

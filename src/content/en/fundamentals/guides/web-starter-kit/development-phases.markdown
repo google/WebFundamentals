@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: fundamentals/page-pete
 title: "Development Phases"
 description: "Every developer will go through various phases during the
   development of a project. Web Starter Kit makes you more productive and

@@ -51,7 +51,7 @@ toc:
   hasSubNav: true
   section:
     - title: "Encrypting data in transit"
-      path: /fundamentals/security/encryption/
+      path: /fundamentals/security/security-with-https/
     - title: "Understanding and preventing XSS"
       path: /fundamentals/security/xss/
     - title: "Permission awareness"

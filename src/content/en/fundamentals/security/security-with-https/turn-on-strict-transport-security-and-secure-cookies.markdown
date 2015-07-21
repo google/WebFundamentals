@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: fundamentals/page-pete
 title: "Turn On Strict Transport Security And Secure Cookies"
 description: ""
 introduction: ""

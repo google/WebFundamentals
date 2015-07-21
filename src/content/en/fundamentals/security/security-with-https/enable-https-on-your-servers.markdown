@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: fundamentals/page-pete
 title: "Enable HTTPS On Your Servers"
 description: "You are ready for the all important step of enabling HTTPS on your servers."
 introduction: "You are ready for the all important step of enabling HTTPS on your servers."

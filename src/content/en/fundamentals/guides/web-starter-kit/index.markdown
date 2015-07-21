@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: fundamentals/page-pete
 title: "Start Your Site with Web Starter Kit"
 description: "Sometimes the hardest part of a new project is getting started.
   Web Starter Kit gives you a solid base with a range of tools to help you
