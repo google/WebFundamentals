@@ -45,9 +45,7 @@ You can view and edit local and session storage key/value pairs you've created u
 * Double-click in the cell you want to edit.
 * Right-click or Control-click the cell you want to edit and choose Edit from the context menu.
 
-**To refresh the table with new storage data**, click the Refresh button at the bottom of the panel.
-
-![Refresh](imgs/refresh.png)
+**To refresh the table with new storage data**, click the Refresh button ![Refresh](imgs/refresh.png){:.inline} at the bottom of the panel.
 
 ## IndexedDB
 
@@ -64,7 +62,7 @@ You can inspect IndexedDB databases and object stores, page through an object st
 
 **To clear the object store**, do one of the following:
 
-* Click the **Clear object store** button ![Clear](imgs/clear.png) at the bottom of the panel.
+* Click the **Clear object store** button ![Clear](imgs/clear.png){:.inline} at the bottom of the panel.
 * Right-click or Control-click the object store and select **Clear** from the context menu.
 
 **To view properties of a database**, select it from the list of databases.
@@ -79,7 +77,7 @@ their contents.
 * **To view the available Web SQL databases**, expand the Web SQL item in the tree control.
 * **To view available tables in a database**, expand the database tree item.
 * **To view a table's records**, select the table. Its properties appear in the right-hand pane.
-* **To refresh the view of the database**, click the Refresh button ![Refresh button](imgs/refresh.png) at the bottom of the panel. 
+* **To refresh the view of the database**, click the Refresh button ![Refresh button](imgs/refresh.png){:.inline} at the bottom of the panel. 
 
 You can query a Web SQL database's tables with SQL commands and view 
 query results in a tabular format. As you type out a command or table name, code hints are provided for the names of supported SQL commands and clauses, and the names of tables that the database contains.
@@ -123,23 +121,23 @@ of the application cache along with a colored status icon (green, yellow, or red
 <td>Description</td>
 </tr>
 <tr>
-<td><img src="imgs/green.png"/> IDLE </td>
+<td><img src="imgs/green.png" class="inline"/>IDLE </td>
 <td>The application cache is idle.</td>
 </tr>
 <tr>
-<td><img src="imgs/yellow.png"/>CHECKING </td>
+<td><img src="imgs/yellow.png" class="inline"/>CHECKING </td>
 <td>The manifest is being fetched and checked for updates.</td>
 </tr>
 <tr>
-<td><img src="imgs/yellow.png"/>DOWNLOADING </td>
+<td><img src="imgs/yellow.png" class="inline"/>DOWNLOADING </td>
 <td>Resources are being downloaded to be added to the cache, due to a changed resource manifest.</td>
 </tr>
 <tr>
-<td><img src="imgs/green.png"/>UPDATEREADY </td>
+<td><img src="imgs/green.png" class="inline"/>UPDATEREADY </td>
 <td>There is a new version of the application cache available. </td>
 </tr>
 <tr>
-<td><img src="imgs/red.png"/>OBSOLETE </td>
+<td><img src="imgs/red.png" class="inline"/>OBSOLETE </td>
 <td>The application cache group is obsolete.</td>
 </tr>
 </table>

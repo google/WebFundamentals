@@ -93,7 +93,7 @@ You can clear (delete) a single cookie, all cookies in the selected frame group,
 
 **To clear all cookies from the selected frame group:**
 
-* Click the Clear button ![Clear button](imgs/clear.png) at the bottom of the Resources panel.
+* Click the Clear button ![Clear button](imgs/clear.png){:.inline} at the bottom of the Resources panel.
 * Right-click on the frame group and select **Clear** from the context menu.
 * Right-click on a cookie row in the table and select **Clear All**.
 
@@ -114,7 +114,7 @@ Note the following about this operation:
 
 You can also refresh the table to reflect any changes to the page's cookies.
 
-**To refresh the cookies table**, click the refresh button ![Refresh button](imgs/refresh.png) at the bottom of the Resources panel. 
+**To refresh the cookies table**, click the refresh button ![Refresh button](imgs/refresh.png){:.inline} at the bottom of the Resources panel. 
 
 {% include modules/nextarticle.liquid %}
 

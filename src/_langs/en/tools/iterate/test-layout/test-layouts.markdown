@@ -59,9 +59,9 @@ You can also toggle device mode on and off using the keyboard shortcut: **Ctrl +
 
 ![Initial start for device mode](imgs/device-mode-initial-view.png)
 
-Toggle the screen resolution emulator on and off using the **Emulate screen resolution** ![emulate resolution icon](imgs/icon-emulate-resolution.png)checkbox.
+Toggle the screen resolution emulator on and off using the **Emulate screen resolution** ![emulate resolution icon](imgs/icon-emulate-resolution.png){:.inline} checkbox.
 
-Alternate between portrait and landscape views by clicking the **Swap dimensions** ![swap dimensions icon](imgs/icon-swap-dimensions.png)icon. 
+Alternate between portrait and landscape views by clicking the **Swap dimensions** ![swap dimensions icon](imgs/icon-swap-dimensions.png){:.inline} icon. 
 
 Select the **Fit** checkbox to ensure that the emulated screen remains fully visible inside your browser viewport, shrinking to fit if necessary. (This setting is for convenience and does not emulate the device differently.)
 
@@ -73,7 +73,7 @@ To get more granular control over the screen emulator, you can tune the resoluti
 
 To emulate a custom screen size, manually set the CSS pixel dimensions of the device in the width and height fields.
 
-If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png)field. The **device pixel ratio** (DPR) is the ratio between logical pixels and physical pixels. Devices with Retina displays, such as the iPhone 5, have higher pixel density than standard devices, which can affect the sharpness and size of visual content.
+If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png){:.inline} field. The **device pixel ratio** (DPR) is the ratio between logical pixels and physical pixels. Devices with Retina displays, such as the iPhone 5, have higher pixel density than standard devices, which can affect the sharpness and size of visual content.
 
 Some examples of Device Pixel Ration (DPR) sensitivity on the web are:
 
@@ -88,7 +88,7 @@ Some examples of Device Pixel Ration (DPR) sensitivity on the web are:
 
 Save custom emulations as presets so that you can easily return to them later.
 
-To save your current screen settings as a preset, open the DevTools emulation drawer by clicking the **More overrides** ![more overrides icon](imgs/icon-open-emulator-drawer.png)icon in the top right corner of the browser viewport (or use the keyboard shortcut, **Esc**).
+To save your current screen settings as a preset, open the DevTools emulation drawer by clicking the **More overrides** ![more overrides icon](imgs/icon-open-emulator-drawer.png){:.inline} icon in the top right corner of the browser viewport (or use the keyboard shortcut, **Esc**).
 
 ![opening the emulation drawer](imgs/emulation-drawer-UI-location.png)
 
