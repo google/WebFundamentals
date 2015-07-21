@@ -102,7 +102,7 @@ A new instance of Chrome DevTools launches on your computer. From this instance,
 For example, you can use DevTools to inspect web page elements on your device:
 
 * When you mouse over an element in the **Elements** panel, DevTools highlights the element on your device.
-* You can also click the **Inspect Element** ![inspect element icon](imgs/inspect-icon.png)icon in DevTools and tap your device screen. DevTools highlights the tapped element in the **Elements** panel.
+* You can also click the **Inspect Element** ![inspect element icon](imgs/inspect-icon.png){:.inline} icon in DevTools and tap your device screen. DevTools highlights the tapped element in the **Elements** panel.
 
 **Note**: The version of Chrome on your device determines the version of DevTools used during remote debugging. For this reason, the remote debugging DevTools might differ from the version that you normally use.
 
@@ -128,7 +128,7 @@ Shifting your attention between screens isn’t always convenient. Screencast di
 
 ### Start a screencast session
 
-To start screencasting, click the **Screencast** ![screencast icon](imgs/icon-screencast.png)icon in the upper right corner of your remote debugging DevTools window.
+To start screencasting, click the **Screencast** ![screencast icon](imgs/icon-screencast.png){:.inline} icon in the upper right corner of your remote debugging DevTools window.
 
 ![screencast location in DevTools](imgs/screencast-icon-location.png)
 
@@ -144,7 +144,7 @@ Screencast only displays page content. Transparent portions of the screencast ar
 
 When you interact with the screencast, clicks are translated into taps, firing proper touch events on the device. Keystrokes from your computer are sent to the device, so you can avoid typing with your thumbs.
 
-Other DevTools work with the screencast too. For example, to inspect an element, click the **Inspect Element** ![inspect element icon](imgs/inspect-icon.png)icon and then click inside the screencast.
+Other DevTools work with the screencast too. For example, to inspect an element, click the **Inspect Element** ![inspect element icon](imgs/inspect-icon.png){:.inline} icon and then click inside the screencast.
 
 **Tips**: To simulate a pinch gesture, hold **Shift** while dragging. To scroll, use your trackpad or mouse wheel or fling with your pointer.
 

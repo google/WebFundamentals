@@ -8,13 +8,23 @@
 
     <li class="{{article.type}}">
 
+      {% if include.headingontop == "true" %}
+      <a href="{{site.baseurl}}{{article.url | canonicalize}}">
+      <h4><span>{{article.type}}</span>{{article.title}}</h4>
+      </a>
+      {% endif %}
+
       {% if article.featured-image %}
       <div class="featured-img" style="background-image: url({{article.featured-image}});"></div>
       {% endif %}
 
+      {% if include.headingontop != "true" %}
       <a href="{{site.baseurl}}{{article.url | canonicalize}}">
       <h4><span>{{article.type}}</span>{{article.title}}</h4>
       </a>
+      {% endif %}
+
+      {% if include.details != "false" %}
       <div class="details">
         <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
         {% if article.authors %}
@@ -39,7 +49,7 @@
       {% if article.description %}
       <div class="description">{{article.description}}</div>
       {% endif %}
-
+      {% endif %}
       
     </li>
     {% capture count %}{{ count }}*{% endcapture %}
