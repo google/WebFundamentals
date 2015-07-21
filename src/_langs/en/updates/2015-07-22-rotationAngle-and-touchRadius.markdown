@@ -107,7 +107,9 @@ user:
 No. It is not hugely common... yet.  If you have a Nexus 10 you will 
 see something like the following,
 
+<img style="max-width: 100%; height: auto;" src="/web/updates/images/2015-07-22-using-rotationAngle-and-touchRadius/image1.png">
 
+Image credit to [Rick Byers](https://twitter.com/rickbyers/status/525031138218110976).
 
 When a device can't understand angle of rotation of a touch, the 
 `rotationAngle` will be 0 and the `radiusX` and `radiusY` values will be 
