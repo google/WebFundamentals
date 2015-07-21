@@ -67,7 +67,28 @@ great example is to look directly at
 [Rick Byers paint example](http://rbyers.github.io/paint.html). Not to be outdone 
 though here is a way to use it without canvas.
 
-DEMO. TODO.
+{% highlight javascript %}
+var touchHandler = function(e) {
+  e.preventDefault();
+  var touches = e.changedTouches;
+  var touch = touches[0]; // only concerned about first touch.
+  
+  var rotationAngle = touch.rotationAngle || touch.webkitRotationAngle || 0;
+  var radiusX = touch.radiusX || touch.webkitRadiusX || 1;
+  var radiusY = touch.radiusY || touch.webkitRadiusY || 1;
+  var force = touch.force || touch.webkitForce || 0;
+  
+  // Use the rotationAngle to rotate the 'p' element.
+  
+  p.style.width = radiusX * 2 + 'px';
+  p.style.height = radiusY * 2 + 'px';
+  p.style.transform = "rotate(" + rotationAngle + "deg)";
+};
+
+document.documentElement.ontouchstart = touchHandler;
+document.documentElement.ontouchend = touchHandler;
+document.documentElement.ontouchmove = touchHandler;
+{% endhighlight %}
 
 ## Where would you use this in practice?
 
@@ -83,14 +104,10 @@ user:
 
 ## Does every device support this?
 
-No. Actually it is not hugely common... yet.  If you have a Nexus 10 you will 
+No. It is not hugely common... yet.  If you have a Nexus 10 you will 
 see something like the following,
 
-TODO: image.
 
- yet on a Nexus 6 you will see the following.
-
-TODO: image.
 
 When a device can't understand angle of rotation of a touch, the 
 `rotationAngle` will be 0 and the `radiusX` and `radiusY` values will be 
@@ -109,7 +126,8 @@ applications will take advantage of it.
 This is really just about making sure we have a fully fleshed out touch event 
 API for the developers who rely on it. See how I dodged the question a bit... More
 seriously though, if you are interested in following along Blink's PointerEvent
-implementation you can star [Issue 471824](https://code.google.com/p/chromium/issues/detail?id=471824).
+implementation you can star [Issue 471824](https://code.google.com/p/chromium/issues/detail?id=471824) and 
+read [Rick Byers' tracking doc](https://docs.google.com/document/d/1keeTmtqTEFS6aQJuEDNpWwsR9qdBfYl8teE35fiTvqU/edit).
 
 ## See Also
 
