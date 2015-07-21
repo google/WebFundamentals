@@ -28,7 +28,9 @@ falling off, he made a strong case that intelligently using Service Worker you
 can drastically improve the performance of your site or app. Watch the video for 
 an overview.
 
-[https://www.youtube.com/watch?v=d5\_6yHixpsQ](https://www.youtube.com/watch?v=d5_6yHixpsQ)
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/d5_6yHixpsQ?controls=2&modestbranding=1&showinfo=0&utm-source=crdev-wf" frameborder="0" allowfullscreen{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %}></iframe>
+</div>
 
 If you are going to Supercharge your Page load time as Jake suggests, you really 
 need to be able to understand how Service Workers affect your page's requests.
@@ -139,8 +141,6 @@ self.addEventListener("install", function() {
         return;
       })
   );
-};
-
 });
 {% endhighlight %}
 
