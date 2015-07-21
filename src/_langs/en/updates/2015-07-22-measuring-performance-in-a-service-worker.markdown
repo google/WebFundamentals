@@ -33,11 +33,11 @@ an overview.
 If you are going to Supercharge your Page load time as Jake suggests, you really 
 need to be able to understand how Service Workers affect your page's requests.
 
-The [Resource Timing API](http://w3c.github.io/resource-timing/#widl-PerformanceResourceTiming-workerStart)
-is a critcial component in many sites RUM (Real User Monitoring)
+The [Resource Timing](http://w3c.github.io/resource-timing/) and the [User Timing](http://w3c.github.io/user-timing/) API
+are critcial components in many sites RUM (Real User Monitoring)
 infrastructure because it lets you understand holistically how all of your users see
 the performance of your site ([Another use-case is detecting content injection](https://paul.kinlan.me/detecting-injected-content/)).  In short, it lets you 
-understand nearly every aspect of every web request made from your site, well, unless you have a Service Worker.
+understand nearly every aspect of every web request made from your site, well, unless you have a Service Worker or a Web worker.
 
 Here is a quick example of how it can be used in to get a list of all requests that were made
 to a domain that is not the current domain.
@@ -63,21 +63,21 @@ var getThirdPartyRequests = function() {
 };
 {% endhighlight %}
  
-The Resource Timing API was created and implemented before Service Worker was a twinkle in
+The Resource Timing and User Timing APIs were created and implemented before Service Worker was a twinkle in
 an engineers eye and the above code would not be able to understand how the Service Woker
-impacted it.  This is where a recent set of changes in Chrome 45 (Beta in July 2015) will help 
-you by introducing the ability for all forms of Workers (Web and Service Worker) 
-to have access to the Resource Timing API and thus be able to let you keep on top of 
-the network performance for all your users.
+impacted it.  
 
-Note: There are futher changes coming down the pipe in later versions of Chrome so 
-this article will be kept up to date.
+A recent set of changes in Chrome 45 (Beta in July 2015) will help 
+you by introducing the ability for all forms of Workers (Web and Service Worker) 
+to have access to the Resource Timing and User Timing APIs and thus be able to let you keep on top of 
+the network performance for all your users.
 
 ## Accessing Performance Metrics from a Service Worker
 
 The biggest change is the addition of the `performance` object into a Workers context (Web 
 and ServiceWorkers) that will now let you understand the performance timings of all 
-the requests that are made in the context of the worker. If you can only see 
+the requests that are made in the context of the worker and will also let you set your
+own marks for measurment of JS execution. If you can only see 
 what happens from the context of the current window you would miss critical 
 timing information from:
 
@@ -136,7 +136,6 @@ self.addEventListener("install", function() {
         var requests = window.performance.getEntriesByType("resource");
         
         // Loop across all the requests and save the timing data.
-        
         return;
       })
   );
@@ -159,4 +158,4 @@ Timing API but will need to be updated to include performance analysis from a Wo
 ## I am interested in the discussion and specs:
 
 * [https://groups.google.com/a/chromium.org/forum/\#!topic/blink-dev/htsW078UcFA](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/htsW078UcFA)   
-* [http://w3c.github.io/resource-timing/\#widl-PerformanceResourceTiming-workerStart](http://w3c.github.io/resource-timing/#widl-PerformanceResourceTiming-workerStart) 
+* [http://w3c.github.io/resource-timing/](http://w3c.github.io/resource-timing/) 
