@@ -23,20 +23,20 @@ tags:
 permalink: /updates/2015/07/using-rotationAngle-and-touchRadius.html
 ---
 
-A relatively small change to the Touch API in Chrome landed in [Chrome 
-39](https://code.google.com/p/chromium/issues/detail?id=493199), which 
+A relatively small change to the Touch API in Chrome landed in
+[Chrome 39](https://code.google.com/p/chromium/issues/detail?id=493199), which 
 introduced a working version of the `webkitRotationAngle` attribute on the 
 TouchEvent object. Now in Chrome 45 (Beta in July 2015), it is unprefixed as `rotationAngle`, 
 bringing our implementation more inline with the 
 [TouchEvent](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle) 
 Spec and Firefox.
 
-While it's been around for a while, it is worth explaining what 
-`rotationAngle` is, as it opens up some more interesting usage of touch 
+Although it's been around for a while, it is worth explaining what 
+`rotationAngle` is as it opens up some more interesting usage of touch 
 gestures especially on mobile devices.   
 
-Technically, the rotation angle is the number of degrees (a number in degrees 
-between 0 and 90) of the contact area ellipse defined by 
+Technically, the rotation angle is the number of degrees (between 0 and 90) of
+ the contact area ellipse defined by 
 [Touch.radiusX](https://developer.mozilla.org/en-US/docs/Web/API/Touch/radiusX) 
 and 
 [Touch.radiusY](https://developer.mozilla.org/en-US/docs/Web/API/Touch/radiusY). 
@@ -51,11 +51,11 @@ the user's finger on a screen.  Users don't always tap the screen with the nib
 of their fingertip, but rather frequently press the screen like they are giving 
 the police a fingerprint.  Without the `rotationAngle` you would simple get 
 how wide and how tall the touch gesture was.  With the `rotationAngle`, you 
-get 90 degrees of rotation (0 being vertical and 90 being horizontal).Why only 
+get 90 degrees of rotation (0 being vertical and 90 being horizontal). Why only 
 90 degrees? You only need the 90 degrees because as you move past those angles 
 the `radiusX` and `radiusY` will change to accomodate. 
 
-The cool thing about this is that the contact area of the user's finger changes 
+Another cool thing about this is that the contact area of the user's finger changes 
 as they vary the degree of pressure of their finger on the screen.  It is not a 
 direct replacement for `force`, but you can distinguish between light brushes 
 on the screen because they will have a smaller surface area than a harder press.
@@ -63,9 +63,9 @@ on the screen because they will have a smaller surface area than a harder press.
 ## How can I use it?
 
 Firstly you need a device that can detect this. A Nexus 10 will work fine. A 
-great example is to look directly at [Rick Byers paint 
-example](http://rbyers.github.io/paint.html). Not to be outdone though here is a 
-way to use it without canvas.
+great example is to look directly at 
+[Rick Byers paint example](http://rbyers.github.io/paint.html). Not to be outdone 
+though here is a way to use it without canvas.
 
 DEMO. TODO.
 
@@ -84,7 +84,11 @@ user:
 ## Does every device support this?
 
 No. Actually it is not hugely common... yet.  If you have a Nexus 10 you will 
-see something like the following, yet on a Nexus 6 you will see the following.
+see something like the following,
+
+TODO: image.
+
+ yet on a Nexus 6 you will see the following.
 
 TODO: image.
 
@@ -103,10 +107,11 @@ applications will take advantage of it.
 ## What about Pointer Events?
 
 This is really just about making sure we have a fully fleshed out touch event 
-API for the developers who rely on it.  See how I dodged the question a bit.
+API for the developers who rely on it. See how I dodged the question a bit... More
+seriously though, if you are interested in following along Blink's PointerEvent
+implementation you can star [Issue 471824](https://code.google.com/p/chromium/issues/detail?id=471824).
 
 ## See Also
 
-* Precision Touch Getures 
-  [https://developers.google.com/web/updates/2014/09/Precision-Touch-for-Precise-Gestures?hl=en](https://developers.google.com/web/updates/2014/09/Precision-Touch-for-Precise-Gestures?hl=en) 
-* TouchEvent spec
+* [Precision Touch Getures](https://developers.google.com/web/updates/2014/09/Precision-Touch-for-Precise-Gestures?hl=en) 
+* [TouchEvent spec with rotationAngle](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle)
