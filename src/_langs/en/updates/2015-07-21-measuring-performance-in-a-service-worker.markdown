@@ -7,13 +7,13 @@ collection: updates
 category: chrome
 product: chrome
 type: news
-date: 2015-07-22
+date: 2015-07-21
 
 title: "Measuring Performance in a Service Worker"
 description: "If you can't measure the performance of your requests in a service worker, how can you say it improves performance? Now you can answer that question with recent changes in Chrome."
 article:
-  written_on: 2015-07-22
-  updated_on: 2015-07-22
+  written_on: 2015-07-21
+  updated_on: 2015-07-21
 
 authors:
   - paulkinlan
