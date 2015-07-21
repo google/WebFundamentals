@@ -1,10 +1,10 @@
 ---
 layout: fundamentals/landing
-title: "Discovery and Distribution"
+title: "Security"
 description: "TODO: Description"
 introduction: "TODO: Introduction"
 snippet: "TODO: Snippet"
-id: discovery-and-distribution
+id: security
 collection: fundamentals
 
 article:
