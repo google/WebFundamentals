@@ -141,8 +141,6 @@ self.addEventListener("install", function() {
         return;
       })
   );
-};
-
 });
 {% endhighlight %}
 
