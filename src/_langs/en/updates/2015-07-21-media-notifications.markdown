@@ -30,8 +30,6 @@ img, video {
 }
 </style>
 
-# Media playback notifications for Chrome on Android
-
 Chrome 45 Beta introduces a handy new feature for controlling audio and video playback.
 
 When an audio or video element is playing on a web page, a notification showing the page title and a play/pause button is displayed in the notification tray and on the lock screen. The notification can be used to pause or resume play, and to quickly return to the page that is playing the media.
