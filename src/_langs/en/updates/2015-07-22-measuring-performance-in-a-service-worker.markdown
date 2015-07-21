@@ -149,6 +149,14 @@ how the majority of their users experience their site.  Tools like Google Analyt
 already [report site speed data](https://support.google.com/analytics/answer/1205784?hl=en) using the Navigation
 Timing API but will need to be updated to include performance analysis from a Worker context.
 
+## Will the Navigation Timing API arrive to Service Workers
+
+Right now there are no plans to add the Navigation Timing API to the Service Worker context, 
+because there are no traditional navigations in a service worker.  The interesting thing is that to 
+the Service Worker, every navigation in the Service Worker's controlled set of pages looks like a 
+resource fetch.  This alone makes Service Workers an incredibly compelling way to centralize the
+majority of your performance logic in your web app.
+
 ## Can I see what changed?
 
 * [crbug.com/465640](http://crbug.com/465640)  
