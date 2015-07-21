@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: fundamentals/page-pete
 title: "Redirect HTTP to HTTPS"
 description: ""
 introduction: ""

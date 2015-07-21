@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/landing
+layout: fundamentals/page-pete
 title: "Discovery and Distribution"
 description: "TODO: Description"
 introduction: "TODO: Introduction"

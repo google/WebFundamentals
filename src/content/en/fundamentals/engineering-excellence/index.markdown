@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/landing
+layout: fundamentals/page-pete
 title: "Engineering Excellence"
 description: "TODO: Description"
 introduction: "TODO: Introduction"
