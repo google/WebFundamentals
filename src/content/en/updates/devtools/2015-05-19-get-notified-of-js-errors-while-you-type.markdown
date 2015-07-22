@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Get notified of JS errors while you type
 date: 2015-05-19

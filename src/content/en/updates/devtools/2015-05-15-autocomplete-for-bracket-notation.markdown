@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Autocomplete for bracket notation
 date: 2015-05-15

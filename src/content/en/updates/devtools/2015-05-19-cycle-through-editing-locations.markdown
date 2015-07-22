@@ -1,5 +1,5 @@
 ---
-layout: updates/update
+layout: updates/post
 published: true
 title: Cycle through editing locations
 date: 2015-05-19

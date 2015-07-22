@@ -52,6 +52,7 @@ WFBaseUrl: /web
 WFContentSource: src/content
 WFLangNames: src/content/_langnames.yaml
 WFContributors: src/content/_contributors.yaml
+WFStyleguideLocation: resources/styleguide/
 
 
 

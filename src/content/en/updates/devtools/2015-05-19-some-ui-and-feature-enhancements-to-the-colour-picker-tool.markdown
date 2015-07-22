@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: false
 title: Some UI and feature enhancements to the Colour Picker tool
 date: 2015-05-19

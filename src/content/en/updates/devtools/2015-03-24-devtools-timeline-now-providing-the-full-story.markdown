@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: 'DevTools Timeline: Now Providing the Full Story'
 date: 2015-03-24

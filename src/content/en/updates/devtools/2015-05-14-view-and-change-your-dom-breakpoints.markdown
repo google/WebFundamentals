@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: View and change your DOM breakpoints
 date: 2015-05-14
