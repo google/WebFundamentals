@@ -18,8 +18,6 @@ authors:
 translators:
 ---
 
-{% wrap content%}
-
 <img src="images/finaloutput-2x.jpg" alt="many devices showing the final project">
 
 Building for multiple devices with differing capabilities, vastly different
@@ -33,4 +31,4 @@ simple steps:
 1.  Defining the information architecture (commonly known as IA) and structure of the page,
 2.  Adding design elements to make it responsive and look good across all devices.
 
-{% endwrap %}
+{% include fundamentals/guide_contents.liquid %}
