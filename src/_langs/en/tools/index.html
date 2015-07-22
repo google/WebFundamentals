@@ -1,0 +1,123 @@
+---
+layout: tools
+description: "Web Developer Tools provides a set of instructions and tools to help you build your website."
+title: Web Developer Tools
+id: tools
+collection: web
+priority: 0
+feedName: Web Developer Tools - Google Developers
+feedPath: tools/feed.xml
+---
+
+<meta itemprop="url" content="https://developers.google.com/web/tools"/>
+
+<div class="tools-header">
+  <div class="container">
+    <p class="headliner">Get productive.</p>
+    <div class="desc">
+      Discover our <h1>tools</h1> and learn how to kickstart your development cycle.
+      <div>
+        <a href="/web/fundamentals/tools/">GET STARTED</a>
+        <a href="/web/updates/">WHAT'S NEW</a>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tools-products">
+
+  <div class="container">
+    <h2>All you can tool.</h2>
+  </div>
+
+  <div class="tools-docs-divider"></div>
+
+  <div class="container">
+    <ul>
+      <li>
+        <a href="https://developer.chrome.com/devtools">
+          <img src="/web/imgs/chrome-devtools.jpg" alt="DevTools">
+          <h3>Chrome DevTools</h3>
+        </a>
+        <p>Our web authoring and debugging tools built into Google Chrome.</p>
+      </li>
+      <li>
+        <a href="/web/tools/starter-kit/">
+          <img src="/web/tools/starter-kit/images/thumb.jpg" alt="Web Starter Kit">
+          <h3>Web Starter Kit</h3>
+        </a>
+        <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
+      </li>
+      <li>
+        <a href="/web/tools/polymer-starter-kit/">
+          <img src="/web/tools/polymer-starter-kit/thumb.jpg" alt="Polymer Starter Kit">
+          <h3>Polymer Starter Kit</h3>
+        </a>
+        <p>
+          An opinionated starting point for building Polymer 1.0 web apps that
+          work great across different devices.
+        </p>
+      </li>
+      <li>
+        <a href="/web/tools/material-design-lite/">
+          <img src="/web/tools/material-design-lite/images/thumb.png" alt="Material Design Lite">
+          <h3>Material Design Lite</h3>
+        </a>
+        <p>
+          A light-weight implementation of Material Design, targeted at legacy
+          browsers and static content sites.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="tools-updates">
+  <div class="container">
+    <h3><a href="/web/updates/tools">What's hot <span>All tips &amp; updates</span></a></h3>
+    {% include modules/latest_updates.liquid limit=3 product="tools" %}
+  </div>
+</div>
+
+{% comment %}
+<div class="tools-home">
+
+  <div class="container tools-docs-header">
+    <h2>Documentation &amp; Tutorials</h2>
+
+    <h3>By Action or Problem</h3>
+  </div>
+
+  <div class="tools-docs-divider"></div>
+  
+  <div class="container tools-docs-listing">
+    <ul class="doclist">
+        {% for guide in page.articles.[page.id] %}
+        {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+        <li class="theme--{{ guide.id }}">
+          <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
+            <h4>{{guide.title}}</h4>
+          </a>
+          <ul>
+            {% for subguide in page.articles.[guide.id] %}
+            {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
+            <li>
+              <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
+                {{subguide.title}}
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+  </div>
+
+</div>
+{% endcomment %}
+
+
+{% include cc.liquid %}

@@ -1,0 +1,119 @@
+---
+layout: default
+description: "Thank you to everyone who has helped create this site."
+class: home
+title: Contributors
+id: contributors
+article:
+  written_on: 2014-08-08
+  updated_on: 2014-08-08
+  order: 1
+collection: resources
+priority: 0
+---
+
+<style>
+  .sections {
+    margin-bottom: 52px;
+  }
+
+</style>
+
+<div class="home-header centered">
+  <div class="container">
+    <h1>Web <b>Fundamentals</b></h1>
+    <p>Was created by</p>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered"> 
+    <h2>Authors</h2>
+    <ul class="list-guides-intro contributors-list container">
+    {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
+      {% assign cid = contributor[1] %}
+      {% if cid.role contains "author" %}
+      
+      <li class="contributors-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;" id="{{cindex}}">
+        <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
+            <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
+          </a>
+          <p>{{ cid.description }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered"> 
+    <h2>Translators</h2>
+    <ul class="list-guides-intro contributors-list container">
+    {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
+      {% assign cid = contributor[1] %}
+      {% if cid.role contains "translator" %}
+      
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;" id="{{cindex}}">
+        <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
+            <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
+          </a>
+          <p>{{ cid.description }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered"> 
+    <h2>Engineers</h2>
+    <ul class="list-guides-intro contributors-list container">
+    {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
+      {% assign cid = contributor[1] %}
+      {% if cid.role contains "engineer" %}
+      
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;" id="{{cindex}}">
+        <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
+            <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
+          </a>
+          <p>{{ cid.description }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container sections">
+  <div class="centered"> 
+    <h2>External Contributors</h2>
+    <ul class="list-guides-intro contributors-list container">
+    {% for contributor in site.data["contributors"] %}
+      {% assign cindex = contributor[0] %}
+      {% assign cid = contributor[1] %}
+      {% if cid.role contains "contributor" %}
+      
+      <li class="guides-list__item g--third theme--{{ guide.id }}" style="margin-right: 0;" id="{{cindex}}">
+        <a href="{{cid.homepage}}" target="_blank" title="{{cid.name.given}} {{cid.name.family}}" class="themed">
+            <span class="icon-circle--large themed--background" style="background-image: url({{site.url}}/imgs/contributors/{{cindex}}.jpg); background-size: contain;"></span>
+            <h3 class="large">{{cid.name.given}} {{cid.name.family}}</h3>
+          </a>
+          <p>{{ cid.description }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
