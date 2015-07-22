@@ -180,7 +180,7 @@ is useful for anyone learning about the timeline, the browser behaviours and
 allows you to optimise your code to prevent performance issues.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome Devtools" width="624" height="396" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome DevTools" width="624" height="396" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Flame Chart View
