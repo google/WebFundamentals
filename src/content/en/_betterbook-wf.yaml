@@ -103,11 +103,5 @@ toc:
     - title: "Checklists"
       path: /fundamentals/engineering-excellence/checklists/
 
-- title: "Resources"
-  path: /fundamentals/resources/
-  hasSubNav: true
-  section:
-    - title: "Samples"
-      path: /fundamentals/resources/samples/
-    - title: "API Primers"
-      path: /fundamentals/resources/primers/
+- title: "Primers"
+  path: /fundamentals/primers/
