@@ -10,7 +10,7 @@ type: news
 date: 2015-07-22
 
 title: "MediaStream deprecations"
-description: "The MediaStream API represents synchronized streams of media. For example, a stream taken from a camera and a microphone has synchronized video and audio tracks. MediaStream.ended, MediaStream.label and MediaStream.stop() are being deprecated. Use MediaStream.active, MediaStreamTrack.label and MediaStreamTrack.stop() instead."
+description: "The MediaStream API represents synchronized streams of audio or video. MediaStream.ended, MediaStream.label and MediaStream.stop() are being deprecated. Use MediaStream.active, MediaStreamTrack.label and MediaStreamTrack.stop() instead."
 article:
   written_on: 2015-07-22
   updated_on: 2015-07-22
