@@ -13,9 +13,9 @@ authors:
 collection: rwd-fundamentals
 key-takeaways:
   size-content-to-vp:
-    - Do not use large fixed width elements.
-    - Content should not rely on a particular viewport width to render well.
-    - Use CSS media queries to apply different styling for small and large screens.
+    - "Do not use large fixed width elements."
+    - "Content should not rely on a particular viewport width to render well."
+    - "Use CSS media queries to apply different styling for small and large screens."
 ---
 
 {% include shared/takeaway.liquid list=page.key-takeaways.size-content-to-vp %}

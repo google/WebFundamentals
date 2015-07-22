@@ -13,9 +13,9 @@ authors:
 collection: rwd-fundamentals
 key-takeaways:
   media-queries:
-    - Media queries can be used to apply styles based on device characteristics.
-    - Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience.
-    - Use relative sizes for elements to avoid breaking layout.
+    - "Media queries can be used to apply styles based on device characteristics."
+    - "Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience."
+    - "Use relative sizes for elements to avoid breaking layout."
 ---
 
 {% include shared/toc.liquid %}
