@@ -44,8 +44,6 @@ module Jekyll
       contributesData = YAML.load_file(contributorsFilepath)
       site.data["contributors"] = contributesData
 
-      site.config['primary_lang'] ||= 'en'
-
       lang = ENV['TRANS_LANG'] || site.config['primary_lang']
       site.data['curr_lang'] = lang
       generate_multilang(site)

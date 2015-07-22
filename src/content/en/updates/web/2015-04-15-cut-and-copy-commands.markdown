@@ -1,7 +1,7 @@
 ---
 
 
-layout: updates/update
+layout: updates/post
 published: true
 
 collection: updates

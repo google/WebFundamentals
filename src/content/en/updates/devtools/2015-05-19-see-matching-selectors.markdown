@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: See matching selectors
 date: 2015-05-19

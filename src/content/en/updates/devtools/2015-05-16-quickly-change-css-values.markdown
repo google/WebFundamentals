@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Quickly change CSS values
 date: 2015-05-16

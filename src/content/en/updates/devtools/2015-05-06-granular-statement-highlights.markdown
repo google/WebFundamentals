@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Granular statement highlights
 date: 2015-05-06

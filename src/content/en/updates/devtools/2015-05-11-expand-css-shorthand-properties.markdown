@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Expand CSS shorthand properties
 date: 2015-05-11

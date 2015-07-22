@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Copy the response of a network resource to your clipboard
 date: 2015-05-03

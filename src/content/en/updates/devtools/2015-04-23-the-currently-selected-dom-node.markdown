@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: The currently selected DOM node
 date: 2015-04-23

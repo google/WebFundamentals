@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Scroll elements into the viewport
 date: 2015-05-13

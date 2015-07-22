@@ -1,6 +1,6 @@
 ---
 
-layout: updates/update
+layout: updates/post
 published: true
 title: Triggering of pseudo classes
 date: 2015-05-12

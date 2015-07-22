@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: updates/update
+layout: updates/post
 published: true
 title: Quickly edit/view resources from the Elements panel
 date: 2015-06-18

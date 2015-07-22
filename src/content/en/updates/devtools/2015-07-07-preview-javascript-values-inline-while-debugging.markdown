@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: updates/update
+layout: updates/post
 published: true
 title: Preview JavaScript values inline while debugging
 date: 2015-07-07
