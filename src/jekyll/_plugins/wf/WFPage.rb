@@ -189,7 +189,6 @@ module Jekyll
     # http://www.rubydoc.info/github/mojombo/jekyll/master/Jekyll/Page
     def relative_path
       relativePath = File.join(@dir, @name)
-      #puts "P Relative_Path: " + relativePath
       relativePath
     end
 

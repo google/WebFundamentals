@@ -25,8 +25,7 @@ We don't have a content nav for the root of /web/ so for this we just skip
               <ul class="main-nav__list--child g-medium--2 g-wide--2">
                 {% for subsection in contentnavTocItem.section %}
                   <li class="main-nav__item--child nav-theme--{{subsection.id}}">
-                    <!-- TODO: remove hard coded /web from URL below  -->
-                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.strippedTitle }}" href="/web{{ subsection.path }}">
+                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.strippedTitle }}" href="{{ subsection.path }}">
                       {% if subsection.id %}
                       <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span>
                       {% endif %}

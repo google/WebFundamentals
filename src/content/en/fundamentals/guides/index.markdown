@@ -1,9 +1,9 @@
 ---
-layout: fundamentals/page-pete
+layout: shared/plain
 title: "Guides"
-description: "TODO: Description"
-introduction: "TODO: Introduction"
-snippet: "TODO: Snippet"
+description: ""
+introduction: ""
+snippet: ""
 id: guides
 collection: fundamentals
 
@@ -13,10 +13,4 @@ article:
 priority: 0
 ---
 
-{% comment %}
-Note - these files should not be auto-generated any more, and should contain
-REAL content!!
-{% endcomment %}
-
-TODO: Content goes here
-
+Guides Home Page

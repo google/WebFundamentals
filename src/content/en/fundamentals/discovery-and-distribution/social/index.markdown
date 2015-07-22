@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/page-pete
+layout: shared/plain
 title: "Control Appearance on Social Sites"
 description: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."
 introduction: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."

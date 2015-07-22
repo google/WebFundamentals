@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/page-pete
+layout: shared/plain
 title: "Security with HTTPS"
 description: "Security is an important part of the web to protect users and moving forward TLS support will be required to use new and exciting APIs in the future."
 introduction: "Security is an important part of the web to protect users and moving forward TLS support will be required to use new and exciting APIs in the future."

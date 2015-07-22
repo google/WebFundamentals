@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/page-pete
+layout: shared/plain
 title: "Redirect HTTP to HTTPS"
 description: ""
 introduction: ""
