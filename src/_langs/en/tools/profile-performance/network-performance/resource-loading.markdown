@@ -17,7 +17,8 @@ priority: 0
 collection: network-performance
 key-takeaways:
   network:
-    - Use the network waterfall in the Network panel to view how much time was spent in the various network phases for a particular resource.
+    - View how much time was spent in the various network phases for each resoure in the Network panel's Timeline waterfall.
+    - Watch out for the blue and red vertical lines. The blue line indicates when the main document loaded; the red line indicates when the page fully loaded.
     - View which resource has the slowest time to first byte by selecting the Latency filter in the Timeline column.
     - View which resources took the longest time to load by selecting the Duration filter in the Timeline column.
 remember:
@@ -37,63 +38,117 @@ including detailed timing data, HTTP request and response headers, cookies, WebS
 
 {% include modules/remember.liquid title="Note" list=page.remember.resource-timing %}
 
-The first time you open the panel it may be empty. Reload the page to start recording, or simply wait for network activity to occur in your application.
+Reload the page to start recording, or simply wait for network activity to occur in your application.
 
 ![Network panel](imgs/network-panel.png)
 
 Each requested resource is added as a row to the Network table, which contains the columns listed below:
 
-<dl class="table-2">
-  <dt>Name and Path</dt>
-  <dd>The name and URL path of the resource, respectively.</dd>
-
-  <dt>Method</dt>
-  <dd>The HTTP method used for the request. For example: GET or POST.</dd>
-
-  <dt>Status and Text</dt>
-  <dd>The HTTP status code and text message.</dd>
-
-  <dt>Domain</dt>
-  <dd>The domain of the resource request.</dd>
-
-  <dt>Type</dt>
-  <dd>The MIME type of the requested resource.</dd>
-
-  <dt>Initiator</dt>
-  <dd>
-    The object or process that initiated the request. It can have one of the following values:
-    <ul>
-      <li>Parser - Chrome's HTML parser initiated the request.</li>
-      <li>Redirect - A HTTP redirect initiated the request.</li>
-      <li>Script - A script initiated the request.</li>
-      <li>Other - Some other process or action initiated the request, such as the user navigating to a page via a link, or by entering a URL in the address bar.</li>
-    </ul>
-  </dd>
-
-  <dt>Cookies</dt>
-  <dd>The number of cookies transferred in the request. These correspond to the cookies shown in the <a href="#cookies">Cookies tab</a> when viewing details for a given resource.</dd>
-
-  <dt>Set-Cookies</dt>
-  <dd>The number of cookies set in the HTTP request.</dd>
-
-  <dt>Size and Content</dt>
-  <dd>
-    Size is the combined size of the response headers (usually a few hundred bytes) plus the response body, as delivered by the server.
-    Content is the size of the resource's decoded content.
-    If the resource was loaded from the browser's cache rather than over the network, this field will contain the text (from cache).
-  </dd>
-
-  <dt>Time and Latency</dt>
-  <dd>
-    Time is total duration, from the start of the request to the receipt of the final byte in the response.
-    Latency is the time to load the first byte in the response.
-  </dd>
-
-  <dt>Timeline</dt>
-  <dd>
-    The Timeline column displays a visual waterfall of all network requests. Clicking the header of this column reveals a menu of additional <a href="#sorting-and-filtering">sorting fields</a>.
-  </dd>
-</dl>
+<table class="table-2">
+  <thead>
+    <tr>
+      <th data-th="Column">Column</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Column">
+      	Name and Path
+      </td>
+      <td data-th="Description">
+      	The name and URL path of the resource, respectively.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Method
+      </td>
+      <td data-th="Description">
+      	The HTTP method used for the request. For example: GET or POST.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Status and Text
+      </td>
+      <td data-th="Description">
+      	The HTTP status code and text message.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Domain
+      </td>
+      <td data-th="Description">
+      	The domain of the resource request.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Type
+      </td>
+      <td data-th="Description">
+      	The MIME type of the requested resource.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Initiator
+      </td>
+      <td data-th="Description">
+      	The object or process that initiated the request. It can have one of the following values:
+      	<ul>
+      		<li>Parser - Chrome's HTML parser initiated the request.</li>
+      		<li>Redirect - A HTTP redirect initiated the request.</li>
+      		<li>Script - A script initiated the request.</li>
+      		<li>Other - Some other process or action initiated the request, such as the user navigating to a page via a link, or by entering a URL in the address bar.</li>
+    	</ul>
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Cookies
+      </td>
+      <td data-th="Description">
+      	The number of cookies transferred in the request. These correspond to the cookies shown in the <a href="#cookies">Cookies tab</a> when viewing details for a given resource.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Set-Cookies
+      </td>
+      <td data-th="Description">
+      	The number of cookies set in the HTTP request.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Size and Content
+      </td>
+      <td data-th="Description">
+      	Size is the combined size of the response headers (usually a few hundred bytes) plus the response body, as delivered by the server. Content is the size of the resource's decoded content.
+      	If the resource was loaded from the browser's cache rather than over the network, this field will contain the text (from cache).
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Time and Latency
+      </td>
+      <td data-th="Description">
+      	Time is total duration, from the start of the request to the receipt of the final byte in the response. Latency is the time to load the first byte in the response.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Timeline
+      </td>
+      <td data-th="Description">
+      	The Timeline column displays a visual waterfall of all network requests. Clicking the header of this column reveals a menu of additional <a href="#how-to-filter-and-sort-results">sorting fields</a>.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Determine performance by resource type 
 
@@ -171,7 +226,7 @@ the `load` event will fire.
 
 ![DOM event lines](imgs/dom-lines.png)
 
-## View performance details for a specific resource type
+## View network timing details for a specific resource
 
 Hover your mouse over a color-coded bar in the Network waterfall view,
 or click on a resource name in the Network panel table
@@ -215,58 +270,126 @@ resource's HTTP request and response headers. You can also clear all cookies.
 
 The Cookies table contain the following columns:
 
-<dl class="table-2">
-  <dt>Name</dt>
-  <dd>The cookie's name.</dd>
-
-  <dt>Value</dt>
-  <dd>The value of the cookie.</dd>
-
-  <dt>Domain</dt>
-  <dd>The domain the cookie belongs to.</dd>
-
-  <dt>Path</dt>
-  <dd>The URL path the cookie came from.</dd>
-
-  <dt>Expires / Max-Age</dt>
-  <dd>The value of the cookie's expires or max-age properties.</dd>
-
-  <dt>Size</dt>
-  <dd>The size of the cookie in bytes.</dd>
-
-  <dt>HTTP</dt>
-  <dd>This indicates that the cookie should only be set by the browser in the HTTP request, and cannot be accessed with JavaScript.</dd>
-
-  <dt>Secure</dt>
-  <dd>The presence of this attribute indicates that the cookie should only be transmitted over a secure connection.</dd>
-</dl>
+<table class="table-2">
+  <thead>
+    <tr>
+      <th data-th="Column">Column</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Column">
+      	Name
+      </td>
+      <td data-th="Description">
+      	The cookie's name.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Value
+      </td>
+      <td data-th="Description">
+      	The cookie's value.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Domain
+      </td>
+      <td data-th="Description">
+      	The domain the cookie belongs to.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Path
+      </td>
+      <td data-th="Description">
+      	The URL path the cookie came from.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Expires / Max-Age
+      </td>
+      <td data-th="Description">
+      	The value of the cookie's expires or max-age properties.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Size
+      </td>
+      <td data-th="Description">
+      	The size of the cookie in bytes.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	HTTP
+      </td>
+      <td data-th="Description">
+      	This indicates that the cookie should only be set by the browser in the HTTP request, and cannot be accessed with JavaScript.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Secure
+      </td>
+      <td data-th="Description">
+      	The presence of this attribute indicates that the cookie should only be transmitted over a secure connection.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### WebSocket frames
 
 The Frames tab shows messages sent or received over a WebSocket connection. This tab is only visible when the selected resource initiated a WebSocket connection. The table contains the following columns:
 
-<dl class="table-2">
-  <dt>Data</dt>
-  <dd>
-    The message payload.
-    If the message is plain text, it's displayed here.
-    For binary opcodes, this field displays the opcode's name and code.
-    The following opcodes are supported:
-    <ul>
-      <li>Continuation Frame</li>
-      <li>Binary Frame</li>
-      <li>Connection Close Frame</li>
-      <li>Ping Frame</li>
-      <li>Pong Frame</li>
-    </ul>
-  </dd>
-
-  <dt>Length</dt>
-  <dd>The length of the message payload in bytes.</dd>
-
-  <dt>Time</dt>
-  <dd>The time stamp when the message was created.</dd>
-</dl>
+<table class="table-2">
+  <thead>
+    <tr>
+      <th data-th="Column">Column</th>
+      <th data-th="Description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Column">
+      	Data
+      </td>
+      <td data-th="Description">
+      	The message payload. If the message is plain text, it's displayed here. For binary opcodes, this field displays the opcode's name and code. The following opcodes are supported:
+      	<ul>
+      		<li>Continuation Frame</li>
+            <li>Binary Frame</li>
+            <li>Connection Close Frame</li>
+            <li>Ping Frame</li>
+            <li>Pong Frame</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Length
+      </td>
+      <td data-th="Description">
+      	The length of the message payload in bytes.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Column">
+      	Time
+      </td>
+      <td data-th="Description">
+      	The time stamp when the message was created.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 Messages are color-coded according to their type.
 Outgoing text messages are color-coded light-green;
@@ -289,7 +412,7 @@ Errors are light-red.
 
 The Timing tab graphs the time spent on the various network phases involved loading the resource
 
-![Resource network timing graph](timing.png)
+![Resource network timing graph](imgs/timing.png)
 
 <style>
 dt:before {
@@ -314,41 +437,41 @@ dt.content-download:before {
 </style>
 
 <dl class="table-2">
-  <dt class="stalled"><strong>Stalled/Blocking</strong></dt>
+  <dt class="stalled"> <strong>Stalled/Blocking</strong></dt>
   <dd>
     Time the request spent waiting before it could be sent.
     This time is inclusive of any time spent in proxy negotiation.
     Additionally, this time will include when the browser is waiting for an already established connection to become available for re-use, obeying Chrome's <a href="https://code.google.com/p/chromium/issues/detail?id=12066">maximum six</a> <abbr title="Transmission Control Protocol">TCP</abbr> connection per origin rule.
   </dd>
 
-  <dt class="proxy-negotiation"><strong>Proxy Negotiation</strong></dt>
+  <dt class="proxy-negotiation"> <strong>Proxy Negotiation</strong></dt>
   <dd>Time spent negotiating with a proxy server connection.</dd>
 
-  <dt class="dns-lookup"><strong><abbr title="Domain Name System">DNS</abbr> Lookup</strong></dt>
+  <dt class="dns-lookup"> <strong><abbr title="Domain Name System">DNS</abbr> Lookup</strong></dt>
   <dd>
     Time spent performing the DNS lookup.
     Every new domain on a page requires a full roundtrip to do the DNS lookup.
   </dd>
 
-  <dt class="initial-connection"><strong>Initial Connection / Connecting</strong></dt>
+  <dt class="initial-connection"> <strong>Initial Connection / Connecting</strong></dt>
   <dd>Time it took to establish a connection, including <abbr title="Transmission Control Protocol">TCP</abbr> handshakes/retries and negotiating a <abbr title="Secure Sockets Layer">SSL</abbr>.</dd>
 
-  <dt class="ssl"><strong>SSL</strong></dt>
+  <dt class="ssl"> <strong>SSL</strong></dt>
   <dd>Time spent completing a SSL handshake.</dd>
 
-  <dt class="request-sent"><strong>Request Sent / Sending</strong></dt>
+  <dt class="request-sent"> <strong>Request Sent / Sending</strong></dt>
   <dd>
     Time spent issuing the network request.
     Typically a fraction of a millisecond.
   </dd>
 
-  <dt class="ttfb"><strong>Waiting (<abbr title="Time To First Byte">TTFB</abbr>)</strong></dt>
+  <dt class="ttfb"> <strong>Waiting (<abbr title="Time To First Byte">TTFB</abbr>)</strong></dt>
   <dd>
     Time spent waiting for the initial response, also known as the Time To First Byte.
     This time captures the latency of a round trip to the server in addition to the time spent waiting for the server to deliver the response.
   </dd>
 
-  <dt class="content-download"><strong>Content Download / Downloading</strong></dt>
+  <dt class="content-download"> <strong>Content Download / Downloading</strong></dt>
   <dd>Time spent receiving the response data.</dd>
 </dl>
 
@@ -369,7 +492,7 @@ The menu contains the following sorting options:
 * **Response Time** — Sorts by each request's response time.
 * **End Time** — Sorts by the time when each request completed.
 * **Duration** — Sorts by the total time of each request. Select this filter to determine which resource takes the longest time to load.
-* **Latency** — Sorts by the time between the start of the request and the beginning of the response (also known as the "time to first byte"). Select this filter to determine which resource takes the longest time to first byte.
+* **Latency** — Sorts by the time between the start of the request and the beginning of the response. Select this filter to determine which resource takes the longest time to first byte.
 
 To filter the Network table to only show certain types of resources, click one of the content types along the bottom of the panel: **Documents**, **Stylesheets**, **Images**, **Scripts**, **XHR**, **Fonts**, **WebSockets**, and **Other**. In the following screenshot only CSS resources are shown. To view all content types, click the **All** filter button.
 
@@ -406,7 +529,7 @@ Save the data from a network recording as a HAR ([HTTP Archive](http://www.softw
 
 **To save a recording:**
 
-1. Right+click or Control+click on the Network table.
+1. <span class="kbd">Right-click</span> or <span class="kbd">Ctrl</span> + <span class="kbd">Click</span> (Mac only) on the Network table.
 2. In the context menu that appears, choose one of the following actions:
     * **Copy All as HAR** — Copies the network recording to the system clipboard in the HAR format.
     * **Save as HAR with Content** — Saves all network data to a HAR file along with each page resource. Binary resources, including images, are encoded as Base64-encoded text.
@@ -425,7 +548,7 @@ Large rows enable some columns to display two text fields: a primary field and a
 
 Change the default set of columns displayed by the Network table.
 To show or hide a column,
-Right+click or Control+click (Mac only) in the table header and select or deselect column names from the list.
+<span class="kbd">Right-click</span> or <span class="kbd">Ctrl</span> + <span class="kbd">Click</span> (Mac only) in the table header and select or deselect column names from the list.
 
 ![Add or remove columns](imgs/add-remove-columns.png)
 
@@ -449,7 +572,7 @@ provides detailed network timing data for each loaded resource.
 For example, the API can tell you precisely when the HTTP request for an image started, and when the image's final byte was received.
 The following illustration shows the network timing data points that the Resource Timing API provides.
 
-[Resource Timing API](imgs/resource-timing-api.png)
+![Resource Timing API](imgs/resource-timing-api.png)
 
 The API is available to any web page, not just DevTools. In Chrome, it's exposed as methods on the global `window.performance` object.
 The `performance.getEntries()` method returns an array of "resource timing objects", one for each requested resource on the page.
@@ -460,7 +583,7 @@ Try this: open the JavaScript console on the current page, enter the following a
 
 This evaluates the first element in the array of resource timing objects and displays its properties in the console, as shown below.
 
-[getEntries() method](imgs/getentries.png)
+![getEntries() method](imgs/getentries.png)
 
 Each timestamp is in microseconds, following the [High Resolution
 Time](http://www.w3.org/TR/hr-time/#sec-high-resolution-time) specification. This API is [available in
