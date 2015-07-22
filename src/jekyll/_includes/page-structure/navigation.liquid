@@ -17,7 +17,7 @@ We don't have a content nav for the root of /web/ so for this we just skip
         {{ contentnavTocItem.title }}
       </a>
       {% endif %}
-      {% if contentnavTocItem.hasSubNav %}
+      {% if contentnavTocItem.hasSubNav == true and contentnavTocItem.isInCurrentSection == true %}
         <div class="main-nav__secondary-nav">
           <div class="main-nav__secondary-content">
 
