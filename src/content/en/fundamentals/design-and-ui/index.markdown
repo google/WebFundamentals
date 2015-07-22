@@ -1,10 +1,10 @@
 ---
 layout: fundamentals/page-pete
-title: "Discovery and Distribution"
+title: "Design and UI"
 description: "TODO: Description"
 introduction: "TODO: Introduction"
 snippet: "TODO: Snippet"
-id: discovery-and-distribution
+id: design-and-ui
 collection: fundamentals
 
 article:
