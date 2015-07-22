@@ -42,7 +42,10 @@
 {% endfor %}
 
 {% if page.nofeed != true %}
-	{% if page.feedPath %}
+  {% if page.filepath contains "updates"%}
+<link rel="alternate" type="application/rss+xml" title="Updates RSS" href="{{site.baseurl}}/updates/rss.xml">
+<link rel="alternate" type="application/atom+xml" title="Updates RSS" href="{{site.baseurl}}/updates/atom.xml">	
+  {% elsif page.feedPath %}
 <link rel="alternate" type="application/rss+xml" title="{{page.feedName}}" href="{{site.baseurl}}/{{page.feedPath}}">
 	{% elsif include.feedURL %}
 <link rel="alternate" type="application/rss+xml" title="{{include.feedName}}" href="{{include.feedURL}}">

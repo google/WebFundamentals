@@ -5,7 +5,7 @@ class: lazyweb
 layout: shows/single-video
 collection: lazyweb-2015
 title: "A quest to save the universe with JavaScript"
-description: "Service Workers hit Firefox Nightly, daily devtools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan."
+description: "Service Workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan."
 published: true
 showYoutubeID: j9i4Eq9_S5Y
 
@@ -18,11 +18,11 @@ article:
 
 # In this week's Episode
 
-Service Workers hit Firefox Nightly, daily devtools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan.
+Service Workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan.
 
 ## DEVTOOLS DAILY
 
-Speed up your workflow with these helpful tips delivered daily to your inbox. Umar Hansa demonstrates one dev tools tip a day in animated Gif format. Examples include jumping to a line number in the sources panel and replaying network requests in cURL.
+Speed up your workflow with these helpful tips delivered daily to your inbox. Umar Hansa demonstrates one DevTools tip a day in animated Gif format. Examples include jumping to a line number in the sources panel and replaying network requests in cURL.
 
 [https://www.google.com/url?q=https%3A%2F%2Fumaar.com%2Fdev-tips%2F&sa=D&sntz=1&usg=AFQjCNGgWKnyERWpWflwl-7sk6qV4gngmg](https://www.google.com/url?q=https%3A%2F%2Fumaar.com%2Fdev-tips%2F&sa=D&sntz=1&usg=AFQjCNGgWKnyERWpWflwl-7sk6qV4gngmg)
 

@@ -1002,9 +1002,10 @@ There are a few limitations outlined in this post:
 
 * In Chrome 43+, you can open any URL with clients.openWindow(),
   however in Chrome 42 you could only open URL on the same origin
-* In Chrome 44 [Notification.data and Notification.get()](https://www.chromestatus.com/feature/5736434757533696) were implemented. The lack of Notification.data
-  required the use of IndexDB or hacks to get around it and there
-  is no alternative for Notification.get() before Chrome version 44.
+* In Chrome 44 [Notification.data and ServiceWorkerRegistration.getNotifications()](https://www.chromestatus.com/feature/5736434757533696) 
+  were implemented. The lack of Notification.data required the use of IndexDB 
+  or hacks to get around it and there is no alternative for 
+  ServiceWorkerRegistration.getNotifications() before Chrome version 44.
 * In Chrome 42 the PushSubscription object had a subscriptionId variable
   on it. In Chrome 44+, the subscriptionId (a.k.a the GCM registration ID),
   is appended to the PushSubscription.endpoint. In Chrome 44 a warning is shown 
