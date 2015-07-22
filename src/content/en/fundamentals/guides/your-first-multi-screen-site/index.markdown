@@ -12,7 +12,7 @@ article:
   order: 2
 id: multi-screen
 priority: 0
-collection: getting-started
+collection: guides
 authors:
   - paulkinlan
 translators:
