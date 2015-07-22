@@ -135,7 +135,7 @@ serve multiple files.
 Using your browser developer tools,
 check for `Accept-Ranges: bytes` in the response headers:
 
-<img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome DevTools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ## Include a poster image
 
