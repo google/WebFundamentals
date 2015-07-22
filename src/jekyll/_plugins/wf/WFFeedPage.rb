@@ -15,7 +15,8 @@
 module Jekyll
 
   class WFFeedPage < LanguagePage
-
+    ## TODO: Handle both atom.liquid and rss.liquid
+    ## TODO: Remove support for feed.liquid
     def initialize(site, relative_dir, langcode, pages)
       super(site, relative_dir, 'feed.xml', langcode)
       self.data = self.data ? self.data : {}
