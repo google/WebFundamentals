@@ -2,6 +2,7 @@
 *.pyc
 *.swp
 .idea
+build
 .DS_Store
 .sass-cache/
 node_modules/
