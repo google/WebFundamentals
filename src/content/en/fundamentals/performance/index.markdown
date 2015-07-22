@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/page-pete
+layout: shared/plain
 title: "Performance"
 description: "TODO: Description"
 introduction: "TODO: Introduction"
@@ -13,10 +13,4 @@ article:
 priority: 0
 ---
 
-{% comment %}
-Note - these files should not be auto-generated any more, and should contain
-REAL content!!
-{% endcomment %}
-
-TODO: Content goes here
-
+Performance Home Page
