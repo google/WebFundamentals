@@ -9,7 +9,7 @@ product: chrome
 type: news
 date: 2015-07-22
 
-title: "MediaStream deprecations"
+title: "MediaStream Deprecations"
 description: "The MediaStream API represents synchronized streams of audio or video. MediaStream.ended, MediaStream.label and MediaStream.stop() are being deprecated. Use MediaStream.active, MediaStreamTrack.label and MediaStreamTrack.stop() instead."
 article:
   written_on: 2015-07-22
@@ -50,42 +50,35 @@ There are three `MediaStream` deprecations in Chrome 45:
 * `MediaStream.label`
 * `MediaStream.stop()`
 
-In parallel are two new additions:
+In parallel are two additions:
 
 * `MediaStream.active`
 * `MediaStreamTrack.stop()`
 
 These require the following changes:
 
-* Use `MediaStream.active` to check if a `MediaStream` is actually
-  streaming, not `MediaStream.ended`.
+* Use `MediaStream.active` to check if a `MediaStream` is streaming, not `MediaStream.ended`.
 * Use `MediaStreamTrack.stop()` to stop streaming, not `MediaStream.stop()`.
-* As ever, `MediaStream.id` provides a unique identifier for a `MediaStream`
-  (no change there) and `MediaStreamTrack.label` provides a human-readable
-  label for the source device for a stream, e.g. _FaceTime HD Camera (Built-in)
-  (05ac:8510)_.
+* If you need a unique identifier for a `MediaStream` use `MediaStream.id` instead of `MediaStream.label`. `MediaStreamTrack.label` provides a human-readable name for the source device for a stream, e.g. _FaceTime HD Camera (Built-in) (05ac:8510)_.
 
 You can see these in action: open [simpl.info/gum](https://simpl.info/gum) in
-Chrome (on a device with a camera) and view the Chrome Dev Tools console. The
+Chrome (on a device with a camera) and view the Chrome DevTools console. The
 MediaStream object `stream` passed to the `getUserMedia()` callback in this
 demo is in global scope, so you can inspect it from the console.  Call
 `stream.getTracks()[0]` to view the `MediaStreamTrack` for this stream.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-07-22-mediastream-deprecations/mediastream-screenshot.png"
-  alt="Screenshot showing MediaStream and MediaStreamTrack in the Chrome Dev Tools console">
+  alt="Screenshot showing MediaStream and MediaStreamTrack in the Chrome DevTools console">
 </p>
 
-## Stop(), ended, active
+## Stop(), ended and active
 
-When the [W3C Working Group](http://w3c.github.io/mediacapture-main/getusermedia.html)
-looked at the problem of what happens when you add new tracks to a `MediaStream`,
-and whether an empty `MediaStream` is ended or not, they realized that there was
-no way to do `ended` (as in 'will never start again') on a `MediaStream` in
-a sensible way. In other parts of HTML5 'ended' means 'this has ended and will
+When the [Media Capture and Streams](http://w3c.github.io/mediacapture-main/getusermedia.html) W3C Working Group looked at the problem of what happens when you add new tracks to a `MediaStream`,
+and whether an empty `MediaStream` is ended, they realized that there was
+no sensible way to implement `ended` on a `MediaStream` (as in 'will never start again'). In other parts of HTML5 'ended' means 'this has ended and will
 never resume'. 'Active' carries no such implication: an inactive stream can
-become active again, for instance if a new track is added to it. Rather than try
-to maintain a confusing attribute and function, the Working Group decided to
+become active again, for instance if a new track is added to it. Rather than maintain a confusing attribute and function, the Working Group decided to
 remove it.
 
 Here's an example of how to use 'MediaStream.active' to check the status of a
@@ -125,20 +118,17 @@ processes for detaching source devices and so on have to be done on
 
 ## label
 
-Turns out that nobody could quite figure out a use for this property!
+It turns out that nobody could quite figure out a use for this property!
 
-It had been added to the very first version of the spec, but nobody really knew
-what it was for, and it was completely unclear what happened to it when a stream
+`MediaStream.label` had been added to the first version of the spec, but nobody really knew
+what `label` was for. It was also unclear what happened to `label` when a stream
 was sent via `RTCPeerConnection`.
 
-The W3C Working Group [asked around](http://lists.w3.org/Archives/Public/public-html-media/2015Apr/0025.html),
-and nobody wanted it, so they removed it. Less things to support.
+The W3C Working Group [asked around](http://lists.w3.org/Archives/Public/public-html-media/2015Apr/0025.html), and nobody wanted it, so they removed it.
 
 To reiterate: `MediaStream.id` provides a unique identifier for a
 `MediaStream` and `MediaStreamTrack.label` provides the name of the source
 of a stream, such as the type of camera or microphone.
-
-- - -
 
 More information about `MediaStream` and `MediaStreamTrack` is available
 from [Mozilla Developer
@@ -147,9 +137,6 @@ HTML5 Rocks provides an excellent introduction to `getUserMedia()` in
 [Capturing Audio &
 Video](http://www.html5rocks.com/en/tutorials/getusermedia/intro/).
 
-As ever, we appreciate your feedback on changes to Chrome. You can follow
-[the](https://code.google.com/p/chromium/issues/detail?id=407039)
-[bugs](https://code.google.com/p/chromium/issues/detail?id=338500) for these
-deprecations and find more discussion and detail in the [Intent to
+As ever, we appreciate your feedback on changes to Chrome. You can follow the bugs for these deprecations ([here](https://code.google.com/p/chromium/issues/detail?id=407039) and [here](https://code.google.com/p/chromium/issues/detail?id=338500)) and find more discussion and detail in the [Intent to
 Implement](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/m4jiqG67Mvo/j3W-jGLxmQgJ).
 
