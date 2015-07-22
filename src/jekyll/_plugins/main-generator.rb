@@ -31,6 +31,13 @@ module Jekyll
         return
       end
 
+      primaryLang = site.config['primary_lang']
+      if primaryLang.nil?
+        Jekyll.logger.info "primary_lang is not defined in the config yaml"
+        raise Exception.new("primary_lang is not defined in the config yaml")
+        return
+      end
+
       # Because AnyLanuage is priority high and we are
       # setting a global variable - set it here
       contributorsFilepath = File.join(site.config['WFContributors'])
@@ -110,8 +117,14 @@ module Jekyll
 
           # Inner loop over known single page translations from the manifest
           (supportedLocales || []).each do |hl|
-            hl_file = File.join site.source, contentFilename, hl, relativeFilePath
-            page = create_page(site, hl_file, relativeDirectory, filename, hl, hl == lang)
+            hl_file = File.join @contentSource, hl, relativeFilePath
+            is_localization = hl == primary_lang;
+            page = create_page(
+              site,
+              relativeDirectory,
+              filename,
+              hl,
+              !is_localization)
             page.data.merge!('is_localized' => true, 'is_localization' => true)
             translated_pages << page
           end

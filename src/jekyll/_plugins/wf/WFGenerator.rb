@@ -36,14 +36,18 @@ module Jekyll
           next
         end
 
-        #requiredYamlFields = ['wf-section']
-        #if (requiredYamlFields - page.data.keys).empty? == false
-        #  next
-        #end
+        requiredYamlFields = ['date']
+        if (requiredYamlFields - page.data.keys).empty? == false
+          next
+        end
 
         #if not (page.data['wf-section'] == sectionName)
         #  next
         #end
+
+        if sections.nil?
+          next page.data['translations'].find { |p| p.langcode == curr_lang } || page
+        end
 
         # This checks whether the relative path
         # is within the current section
@@ -75,7 +79,9 @@ module Jekyll
         return []
       end
 
-      return sectionPages.sort {|a,b| b.data['date'] <=> a.data['date'] }
+      return sectionPages.sort {|a,b|
+        b.data['date'] <=> a.data['date']
+      }
     end
   end
 end

@@ -64,6 +64,9 @@ module Jekyll
       if @lang.nil?
         @lang = "html"
       end
+      puts "file " + @file
+      puts "section " + @section
+      puts "lang " + @lang
       if @@comment_formats[@lang].nil?
         Jekyll.logger.warn "Include_code doesn't know #{@lang}"
       end
@@ -93,7 +96,12 @@ module Jekyll
         end
         String filepath = Pathname.new(File.join(File.dirname(page["path"]), @file)).cleanpath.to_s
         if lang != "en"
-          filepath.sub!("_langs/" + lang + "/", "_langs/en/")
+          puts "before sub filepath = " + filepath
+          contentSource = site.config['WFContentSource'];
+          replacementPath = File.join(contentSource, site.config['primary_lang']);
+          puts "subbing = " + File.join(contentSource, lang) + " with " + replacementPath
+          filepath.sub!(File.join(contentSource, lang), replacementPath)
+          puts "after sub filepath = " + filepath
         end
         contents = File.read(filepath).force_encoding('UTF-8')
         snippet = getmatch(contents, @lang, @section)
