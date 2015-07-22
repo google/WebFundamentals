@@ -61,6 +61,9 @@ Docker (recommended)
 Mac
 ---
 
+1. Install submodules with
+    git submodule init
+    git submodule update
 1. Install [XCode Command Line Tools](https://developer.apple.com/xcode/downloads/)
 1. Install [NVM](https://github.com/creationix/nvm)
     * `curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash`

@@ -83,7 +83,7 @@ module Jekyll
 
       # Check if there is a language specific version, and load that.
       if @langcode && @langcode != "en"
-        lang_file = File.join(contentSource, @langcode, betterBookFilename)
+        lang_file = File.join(@contentSource, @langcode, betterBookFilename)
         if File.exists?(lang_file)
           lang_book = YAML.load_file(lang_file)
           merge(yamlData["toc"], get_path_titles(lang_book["toc"]))
@@ -122,7 +122,7 @@ module Jekyll
 
     def sanitizeTocItem(tocItem)
       tocItem['strippedTitle'] = Sanitize.fragment(tocItem['title'])
-      if tocItem['external'].nil? || tocItem['external'] != true
+      if tocItem['external'].nil? || tocItem['external'] == false
         tocItem['isInCurrentSection'] = self.url.include? tocItem['path']
       else
         tocItem['isInCurrentSection'] = false
@@ -130,8 +130,8 @@ module Jekyll
 
       tocItem['path'] = site.config['WFBaseUrl'] + tocItem['path'] + '?hl=' + @langcode
 
-      if not tocItem['subsection'].nil?
-        tocItem['subsection'] = tocItem['subsection'].each { |subsectionItem|
+      if not tocItem['section'].nil?
+        tocItem['section'] = tocItem['section'].each { |subsectionItem|
           sanitizeTocItem(subsectionItem)
         }
       end
