@@ -1,0 +1,10 @@
+<h3><i class="icon icon-lessons"></i> {{"guides" | localize_string}}</h3>
+<ol class="list-guides list-links">
+{% for guide in page.articles.[page.id] %}
+  {% if guide.is_localized != true or guide.langcode == page.langcode %}
+    <li title="{{guide.title}}">
+      <a href="{{site.WFBaseUrl}}{{guide.url}}">{{guide.title}}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ol>

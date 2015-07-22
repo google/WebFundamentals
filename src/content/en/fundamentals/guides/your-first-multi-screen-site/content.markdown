@@ -92,8 +92,6 @@ key-takeaways:
     - Create a skeleton view of the page with content but without styling.
 ---
 
-{% wrap content %}
-
 {% include shared/toc.liquid %}
 
 ## Create the page structure
@@ -253,5 +251,3 @@ had a good solid information architecture and density. This guide has given us
 an excellent base to build upon. We will style our content in the next guide.
 
 {% include shared/nextarticle.liquid %}
-
-{% endwrap %}
