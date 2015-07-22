@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+{% assign seriesId = 'lazyweb' %}
+{% assign orderedVideos = site.data.videoGroups['lazyweb'] | sort: 'date' | reverse %}
+
+{% assign title = 'LazyWeb' %}
+{% assign description = 'The LazyWeb Show is a recap of the past week’s current events on the web platform.' %}
+{% assign showSeriesInTitle = true %}
+
+{% include modules/shows/show-feed.liquid seriesId=seriesId videos=orderedVideos title=title description=description showSeriesInTitle=showSeriesInTitle %}

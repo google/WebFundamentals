@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- // [TEMPLATE header_full] -->
+  <title>Images: srcset and the sizes attribute</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/picturefill/2.0.0/picturefill.min.js" async></script>
+  <link rel="stylesheet" type="text/css" href="margins.css">
+</head>
+<body role="main">
+  <div class="add_margin">
+    <h1>Specifying sizes for the <code>&lt;picture&gt;</code> element</h1>
+    <p>
+      <b>Note:</b> this sample uses the <a href="http://scottjehl.github.io/picturefill/">
+      picturefill</a> polyfill to provide backwards compatibility for browsers 
+      that do not support the &lt;picture&gt; element.
+    </p>
+  </div>
+  <!-- // [START picture] -->
+  <img src="lighthouse-200.jpg" sizes="50vw"
+       srcset="lighthouse-100.jpg 100w, lighthouse-200.jpg 200w,
+               lighthouse-400.jpg 400w, lighthouse-800.jpg 800w,
+               lighthouse-1000.jpg 1000w, lighthouse-1400.jpg 1400w,
+               lighthouse-1800.jpg 1800w">
+  <!-- // [END picture] -->
+  <p class="add_margin">The image should always be 50% of the viewport width and show at
+    the correct pixel density.
+  </p>
+  <!-- // [TEMPLATE footer] -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+{% assign orderedVideos = site.data.allVideos | sort: 'date' | reverse %}
+
+{% assign title = 'Web Shows - Google Developers' %}
+{% assign description = 'All of the shows to keep up to date with the web.' %}
+{% assign showSeriesInTitle = true %}
+
+{% include modules/shows/show-feed.liquid videos=orderedVideos title=title description=description showSeriesInTitle=showSeriesInTitle %}

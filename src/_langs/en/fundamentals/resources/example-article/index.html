@@ -1,0 +1,262 @@
+---
+layout: default
+title: "Article Example"
+description: "Sample article to demonstrate a simple article."
+class: "page--example-article"
+learning-list:
+  - Lorem ipsum dolor sit amet
+  - Fugit itaque sapiente earum quo expedita
+  - labore aliquam cupiditate veritatis nihil
+  - Lorem ipsum dolor sit amet
+  - Fugit itaque sapiente earum quo expedita
+related-guides:
+  create-amazing-forms:
+    -
+      title: Create amazing forms
+      href: fundamentals/input/form/
+      section:
+        id: user-input
+        title: "Forms"
+        href: input/form/
+    -
+      title: Label and name inputs correctly
+      href: fundamentals/input/form/#label-and-name-inputs-properly
+      section:
+        id: user-input
+        title: "Forms"
+        href: input/form/
+    -
+      title: Choose the best input type
+      href: fundamentals/input/form/#choose-the-best-input-type
+      section:
+        id: user-input
+        title: Forms
+        href: input/form/
+article:
+  written_on: 2014-01-01
+  updated_on: 2014-10-29
+  order: 4
+collection: resources
+authors:
+  - petelepage
+---
+{% comment %}
+
+This is an example of how an article page should be laid out.
+The purpose of this page, is to help authors when structuring articles.
+
+Notes:
+  Any sort of "article content" should always be wrapped in <div class="content"></div>
+  it's important to remember this, because all html text elements (h1-h6, p, ul, ol...)
+  are set to seat in 3 columns on desktop. Please refer to _typography.scss for details
+
+  If modules are going to be included in the middle of an article, it's important
+  to exit <div class="container"></div> then re-open it
+
+  Takeaway module to be only added once
+
+  Related Guides to be added at the bottom of an article
+
+{% endcomment %}
+
+
+<div class="editorial-header">
+  <div class="container">
+    <div class="content">
+      <nav class="breadcrumbs">
+        <p><a class="breadcrumbs__link" href="{{site.fundamentals}}/">Home</a>/ <a href="{{site.fundamentals}}/resources/" class="breadcrumbs__link">Resources</a> /</p>
+      </nav>
+
+      <h1 class="tag editorial-header__title">Layout Basics</h1>
+      <h2 class="editorial-header__subtitle">Lesson title</h2>
+      <p class="editorial-header__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Sed vitae varius augue, eu varius dolor. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae varius augue, eu varius dolor. Donec augue diam, scelerisque eget lectus in, posuere aliquet mi. Pellentesque suscipit nisl gravida sem tincidunt, id blandit turpis commodo.</p>
+
+      <div class="toc">
+        <h3 class="toc__title">In this lesson</h3>
+        <ol class="toc__list list-anchor">
+          <li><a href="#subtitle-one">Subtitle One</a></li>
+          <li><a href="#subtitle-two">Subtitle Two</a></li>
+          <li><a href="#media-elements">Media elements</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <h2 id="subtitle-one" class="subsection-title"><strong class="subsection-number">#1</strong> Subtitle one</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, perferendis error voluptatem quo porro? Labore, obcaecati, alias, officiis exercitationem minus quam vero expedita nulla cumque quia qui quos explicabo quibusdam.</p>
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+      </li>
+      <li>Lorem ipsum dolor sit amet</li>
+    </ol>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, asperiores, possimus eius in sint earum deleniti quos commodi esse atque nesciunt odio cum facilis ipsam ullam. Magni natus ut nulla! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis voluptate eveniet ipsam itaque iusto labore aut repudiandae reiciendis quae iste libero? Laudantium, maiores, natus quia voluptates accusamus dolore voluptatem!</p>
+
+    {% include modules/remember.liquid text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusantium, quo, corporis nemo possimus iste impedit numquam reiciendis eaque similique perspiciatis nam illo error consequuntur beatae fuga blanditiis asperiores iusto?" %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, voluptatum, a qui numquam optio nulla aliquam distinctio tempore quae asperiores necessitatibus nobis ab debitis amet obcaecati cum hic dolore officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, laborum, excepturi, earum, nesciunt maiores quas quisquam corrupti magni quasi deserunt vitae odit. Assumenda, reprehenderit quia eum beatae deleniti dolor laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, beatae, ipsum fugiat quam corporis magni aliquam modi autem dignissimos minima non fuga esse. Eum, eveniet unde quis sint natus perspiciatis.</p>
+
+    {% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms inline=true %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, quos perferendis neque fuga laudantium temporibus expedita officiis consectetur delectus ab sint rem maiores placeat commodi ducimus aliquid atque! Ipsa, similique.</p>
+
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Dicta optio cumque dolore hic ea facilis</li>
+      <li>Minus, possimus, veniam, incidunt eligendi</li>
+    </ul>
+
+
+    <h2 id="subtitle-two" class="subsection-title"><strong class="subsection-number">#2</strong> Subtitle two</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, sequi, iusto, totam, non nam omnis minima modi ab sint atque eaque et ratione quaerat amet ex maxime temporibus adipisci hic.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, fugiat provident soluta alias nulla porro consectetur sapiente aliquid sunt facilis corrupti temporibus reiciendis debitis velit voluptates eum odio ratione illum.</p>
+
+    {% include modules/remember.liquid list=page.learning-list inline=true %}
+
+    <h3>Apply media queries based on viewport size</h3>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, magnam, veritatis, error necessitatibus tenetur consequatur mollitia debitis enim possimus non modi adipisci aliquam illum porro ratione beatae quod soluta commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, reprehenderit, necessitatibus voluptatem labore sit pariatur delectus mollitia culpa in obcaecati numquam dolor recusandae possimus provident id ipsa odio nobis laboriosam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ad, adipisci, aliquam commodi quo minima numquam facere quos dolore earum dolores dolorum amet molestias quisquam voluptatibus illum itaque quasi debitis?</p>
+
+    {% include_code _code/test.html somehtml html %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, numquam, sapiente.</p>
+
+    {% highlight html %}
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endhighlight %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, tenetur esse id dolorem reprehenderit quidem facilis quod autem error dignissimos. Dolorem, fugit, dignissimos vitae dicta minima eaque quis voluptates minus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, voluptatem, reprehenderit, soluta vel eligendi assumenda ipsam ex voluptatibus sunt est minima hic impedit porro corrupti laudantium magni natus beatae deserunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, aspernatur, asperiores, repudiandae eaque velit tempora veniam illo vitae earum vero amet dolore atque sequi temporibus modi labore fugit accusamus.</p>
+
+
+    <h2 id="media-elements" class="subsection-title"><strong class="subsection-number">#3</strong> Media elements</h2>
+
+    <p>Below are a bunch of different ways in which media should be used within articles.</p>
+
+    <p>This is just an image in a <code>figure</code> element, followed by a <code>figcaption</code> element. No classes needed. The way this markup works is that it won't stretch the image to fit within any grid.</p>
+
+    <figure>
+      <img src="/web/imgs/placeholder--wide.png" alt="Image example">
+      <figcaption>Figure caption</figcaption>
+    </figure>
+
+    <p><strong>Following an image, it's recommended to add some copy.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, numquam.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, pariatur, accusantium, sunt assumenda officia quas placeat sed exercitationem neque nisi minus enim labore temporibus modi ea numquam laboriosam rerum nobis.</p>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, quasi perferendis suscipit hic ea facilis deserunt inventore nulla alias aliquam sequi vero dicta voluptatem accusamus cupiditate quibusdam sed reprehenderit praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, minima, magnam sed excepturi commodi.</p>
+
+    <p>This example has a <code>fluid</code> class added to the <code>figure</code> element. The <code>fluid</code> class forces the images to be full width.</p>
+
+    <figure class="fluid">
+      <img src="/web/imgs/placeholder--medium.png" alt="Image example">
+    </figure>
+
+    <div class="media-subsection clear">
+      <div class="g--half">
+        <figure class="fluid">
+          <img src="/web/imgs/placeholder--medium.png" alt="Image example">
+        </figure>
+      </div>
+      <div class="g--half g--last">
+        <h4>Two column image</h4>
+        <p>This is demonstrating how copy and imagery can be used next to each other. Wrapped in a <code>.media-subsection</code> element.</p>
+      </div>
+    </div>
+
+    <div class="clear">
+      <div class="g--half">
+        <figure class="fluid">
+          <img src="/web/imgs/placeholder--medium.png" alt="Image example">
+          <figcaption>Figure caption <a href="#">with link</a></figcaption>
+        </figure>
+      </div>
+      <div class="g--half g--last">
+        <figure class="fluid">
+          <img src="/web/imgs/placeholder--medium.png" alt="Image example">
+          <figcaption>Figure caption <a href="#">with link</a></figcaption>
+          </figure>
+      </div>
+    </div>
+
+    <div class="clear g-wide--pull-1">
+      <div class="g--half">
+        <figure class="fluid">
+          <img src="/web/imgs/placeholder--side-by-side.png" alt="Image example">
+          <figcaption>Figure caption <a href="#">with link</a></figcaption>
+        </figure>
+      </div>
+      <div class="g--half g--last">
+        <figure class="fluid">
+          <img src="/web/imgs/placeholder--side-by-side.png" alt="Image example">
+          <figcaption>Figure caption <a href="#">with link</a></figcaption>
+          </figure>
+      </div>
+    </div>
+
+    <div class="g-wide--push-1">
+      <figure class="fluid">
+        <img src="/web/imgs/placeholder--medium.png" alt="Image example">
+      </figure>
+      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quibusdam, vitae possimus optio laudantium error laborum molestias repellat sequi fugit exercitationem repellendus sint culpa ipsum animi expedita aliquid odit eum.</p>
+    </div>
+
+    <div class="g-wide--pull-1">
+      <figure class="fluid">
+        <img src="/web/imgs/placeholder--medium.png" alt="Image example">
+      </figure>
+      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quibusdam, vitae possimus optio laudantium error laborum molestias repellat sequi fugit exercitationem repellendus sint culpa ipsum animi expedita aliquid odit eum.</p>
+    </div>
+
+    <div class="clear">
+      <div class="">
+        <figure>
+          <img src="/web/imgs/image-portrait.png" alt="Image example" class="g-medium--1 g-wide--1">
+          <img src="/web/imgs/image-landscape.png" alt="Image example" class="g-medium--2 g-medium--last g-wide--3 g-wide--last">
+          <figcaption>Fig caption for two images</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p>Example of adding video to your article.</p>
+
+    {% include modules/video.liquid id="D7TB8b2t3QE" %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sed, reprehenderit, saepe animi assumenda voluptatem labore corporis odit magnam officiis tempora fugiat totam molestias.</p>
+
+    {% include modules/takeaway.liquid list=page.learning-list inline=true %}
+
+    <p>Laudantium dicta nemo ea nulla dolores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, quam, et aut in esse aliquam sapiente ab qui incidunt consequatur consequuntur non odio atque dolore cumque hic soluta perferendis natus.</p>
+
+    {% include modules/takeaway.liquid list=page.learning-list %}
+
+  </div>
+</div>
+
+<div class="container-medium">
+  <div class="next-lessons" data-current-lesson="03">
+    <h3><i class="icon icon-lessons"></i> Next Lessons</h3>
+    <ol class="list-lessons list-links">
+      <li><a href="#">Lesson title one</a></li>
+      <li><a href="#">Lesson title two</a></li>
+      <li class="current"><a>Lesson title three <i class="icon icon-tick"></i></a></li>
+      <li><a href="#">Lesson title four</a></li>
+      <li><a href="#">This is a very very very very very very very very long article title</a></li>
+    </ol>
+  </div>
+</div>
+
+
+{% include modules/related_guides.liquid list=page.related-guides.create-amazing-forms %}
