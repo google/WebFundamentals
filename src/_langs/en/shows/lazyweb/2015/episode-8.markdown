@@ -5,7 +5,7 @@ class: lazyweb
 layout: shows/single-video
 collection: lazyweb-2015
 title: "Episode 8"
-description: "Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome Devtools."
+description: "Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome DevTools."
 published: true
 showYoutubeID: u1RjWga2ks4
 
@@ -18,7 +18,7 @@ article:
 
 # In this Week's Episode
 
-Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome Devtools.
+Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome DevTools.
 
 ## YOUR OWN BOOTSTRAP
 <http://rizzo.lonelyplanet.com/styleguide/ui-components/buttons>
