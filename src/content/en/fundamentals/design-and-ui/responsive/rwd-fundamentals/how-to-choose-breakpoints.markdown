@@ -13,12 +13,12 @@ authors:
 collection: rwd-fundamentals
 key-takeaways:
   choose-breakpoints:
-    - Create breakpoints based on content, never on specific devices, products or brands.
-    - Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
-    - Keep lines of text to a maximum of around 70 or 80 characters.
+    - "Create breakpoints based on content, never on specific devices, products or brands."
+    - "Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available."
+    - "Keep lines of text to a maximum of around 70 or 80 characters."
 remember:
   use-commas:
-    - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
+    - "Use a comma to separate attributes to ensure older browsers can properly parse the attributes."
 ---
 
 {% include shared/toc.liquid %}

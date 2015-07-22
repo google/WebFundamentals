@@ -14,7 +14,7 @@ id: rwd-fundamentals
 collection: responsive
 udacity:
   id: ud893
-  title: Responsive Web Design Fundamentals
+  title: "Responsive Web Design Fundamentals"
   description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
   image: imgs/udacity-rwd.png
 ---

@@ -13,13 +13,13 @@ authors:
 collection: rwd-fundamentals
 key-takeaways:
   set-viewport:
-    - Use meta viewport tag to control the width and scaling of the browsers viewport.
-    - Include <code>width=device-width</code> to match the screen's width in device independent pixels.
-    - Include <code>initial-scale=1</code> to establish a 1:1 relationship between CSS pixels and device independent pixels.
-    - Ensure your page is accessible by not disabling user scaling.
+    - "Use meta viewport tag to control the width and scaling of the browsers viewport."
+    - "Include <code>width=device-width</code> to match the screen's width in device independent pixels."
+    - "Include <code>initial-scale=1</code> to establish a 1:1 relationship between CSS pixels and device independent pixels."
+    - "Ensure your page is accessible by not disabling user scaling."
 remember:
   use-commas:
-    - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
+    - "Use a comma to separate attributes to ensure older browsers can properly parse the attributes."
 ---
 
 {% include shared/toc.liquid %}
