@@ -5,7 +5,7 @@ description: "Websites are not only browsed by humans but also examined by crawl
 introduction: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
 snippet: "Spread your work to the world"
 id: optimizations-for-crawlers
-collection: discovery-and-distribution
+collection: search
 authors:
   - agektmr
 article:
