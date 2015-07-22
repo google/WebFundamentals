@@ -131,9 +131,7 @@ It had been added to the very first version of the spec, but nobody really knew
 what it was for, and it was completely unclear what happened to it when a stream
 was sent via `RTCPeerConnection`.
 
-The W3C Working Group
-[asked](http://lists.w3.org/Archives/Public/public-html-media/2015Apr/0025.html)[
-around](http://lists.w3.org/Archives/Public/public-html-media/2015Apr/0025.html),
+The W3C Working Group [asked around](http://lists.w3.org/Archives/Public/public-html-media/2015Apr/0025.html),
 and nobody wanted it, so they removed it. Less things to support.
 
 To reiterate: `MediaStream.id` provides a unique identifier for a
