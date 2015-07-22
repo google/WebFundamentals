@@ -80,7 +80,7 @@ Some web servers, like Google App Engine for example, require explicit configura
 
 While not part of the source map spec, the `@sourceURL` allows you to make development much easier when working with evals. This helper looks very similar to the `//# sourceMappingURL` property and is actually mentioned in the source map V3 specifications.
 
-By including the following special comment in your code, which will be evaled, you can name evals and inline scripts and styles so they appear as more logical names in your dev tools.
+By including the following special comment in your code, which will be evaled, you can name evals and inline scripts and styles so they appear as more logical names in your DevTools.
 
 `//# sourceURL=source.coffee`
 
