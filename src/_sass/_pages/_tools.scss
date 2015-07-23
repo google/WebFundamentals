@@ -172,7 +172,10 @@
     letter-spacing: 0;
   }
 
-  margin-top: 1em;
+  margin-top: 0;
+  border-bottom: 1px solid #E8E8E8;
+  background: #4B8BFA;
+  color: #fff;
 
   > div {
     padding-bottom: 3em;
@@ -193,6 +196,7 @@
     font-size: 3em;
     padding-top: 0;
     line-height: 1;
+    font-weight: 300;
   }
   
   .desc {
@@ -216,13 +220,14 @@
       padding-top: 0;
       padding-bottom: 0;
       letter-spacing: 0;
+      color: #fff;
     }
 
   }
 
   a {
-      background-color: #4285f4;
-      color: #fff;
+      background-color: rgb(249, 249, 249);
+      color: #333;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
       text-align: center;
 
@@ -234,14 +239,16 @@
       border-radius: 2px;
       font-size: 0.9em;
 
+      &.new, &:last-child {
+        background-color: rgb(63, 127, 237);
+        color: #fff;
+        margin-left: 0.5em;
+      }
+
       &:hover {
         text-decoration: none;
       }
 
-      &:last-child {
-        margin-left: 0.5em;
-        background-color: #C5246E;
-      }
   }
 
 }
@@ -252,8 +259,7 @@
     padding-top: 2em;
   }
   padding-bottom: 1em;
-  background: #4B8BFA;
-  color: #fff;
+  border-bottom: 1px solid #eee;
   counter-reset: tools-steps;
 
   font-family: Roboto;
@@ -267,14 +273,12 @@
     font-weight: 300;
     font-size: 2em;
     padding-top: 1em;
-    color: #fff;
   }
 
   h3 {
     font-weight: 300;
     padding-top: 1em;
     padding-bottom: 1em;
-    color: #fff;
     &::before {
       counter-increment: tools-steps;
       content: counter(tools-steps);
@@ -287,6 +291,8 @@
       text-align: center;
       line-height: 2em;
       margin-right: 0.5em;
+      background: #4B8BFA;
+      color: #fff;
     }
   }
 
@@ -294,7 +300,6 @@
     font-size: 16px;
     font-weight: 500;
     padding-top: 0;
-    color: #fff;
   }
 
   .tools-docs-divider {
@@ -303,8 +308,6 @@
   }
 
   .tools-product-headings {
-    background-color: rgba(0,0,0,0.1);
-    margin-bottom: 2em;
     @include small-only {
       display: none;
     }
@@ -432,13 +435,11 @@
   header {
 
     font-size: 16px;
-    border-bottom: 1px solid #E8E8E8;
+    
     overflow: hidden;
     padding-top: 2em;
     padding-bottom: 1em;
     margin-top: 0;
-    background: #4B8BFA;
-    color: #fff;
 
     .container {
       background-image: none;
@@ -454,14 +455,6 @@
 
     a {
       margin-left: 0;
-      color: #333;
-      background-color: rgb(249, 249, 249);
-
-      &.new {
-        background-color: rgb(63, 127, 237);
-        color: #fff;
-        margin-left: 0.5em;
-      }
     }
 
     .headliner {
