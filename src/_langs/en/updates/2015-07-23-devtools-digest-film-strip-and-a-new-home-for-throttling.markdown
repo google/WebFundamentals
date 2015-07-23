@@ -2,7 +2,7 @@
 rss: false
 layout: update
 published: true
-title: 'DevTools Bi-Weekly: Film strip and a new home for throttling'
+title: 'DevTools Digest: Film strip and a new home for throttling'
 date: 2015-07-23
 article:
   written_on: 2015-07-23
@@ -14,17 +14,17 @@ type: news
 category: tools
 product: chrome-devtools
 tags:
-- bi-weekly
+- digest
 - update
 description: Discover the new film strip functionality and more in this first of many
-  bi-weekly DevTools updates.
+  DevTools Digest updates.
 featured-image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/featured.png
-permalink: /updates/2015/07/23/devtools-bi-weekly-film-strip-and-a-new-home-for-throttling.html
+permalink: /updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling.html
 ---
-## Bi-Weekly DevTools news, as fresh as it gets
+## DevTools news, as fresh as it gets
 
-The biggest news in this bi-weekly update is a little meta – it's this update 
-itself! Every two weeks, I'll summarize what's happening in the world of Chrome 
+The first news item in this post is a little meta – it's this update 
+itself! Every now and then but at least once a month, I'll summarize what's happening in the world of Chrome 
 DevTools, fresh off the press.
 
 And when I say fresh, I mean it: I'll talk about new features that have just 
