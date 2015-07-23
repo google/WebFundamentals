@@ -19,7 +19,7 @@ udacity:
   image: imgs/udacity-rwd.png
 ---
 
-{% include shared/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+{% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 
 There is a multitude of different screen sizes across phones, "phablets",
