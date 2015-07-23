@@ -135,5 +135,5 @@ proportions.
 What do you think? Is the DevTools IDE a pipe-dream or could you see it work 
 out? How should it looks like? Let us know in the comments!
 
-See you in two weeks!  
+See you soon!  
 Paul Bakaus & the DevTools team
