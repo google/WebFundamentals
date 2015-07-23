@@ -54,7 +54,7 @@ nearby Bluetooth devices and
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
 Bluetooth characteristics.
 
-<img width="723" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/web-bluetooth-flag.png" alt="Web Bluetooth Flag highlighted in chrome://flags"/>
+<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/web-bluetooth-flag.png" alt="Web Bluetooth Flag highlighted in chrome://flags"/>
 
 ## Security Requirements
 
@@ -243,7 +243,7 @@ Alt ] [ T ] to open a browser tab terminal and use the `bt_console` command to
 start poking around your bluetooth settings. The `help` command will give you a
 list of all available commands.
 
-<img width="723" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-developer-console.png" alt="Bluetooth Developer Console screenshot"/>
+<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-developer-console.png" alt="Bluetooth Developer Console screenshot"/>
 
 Resetting the first device resolved by `navigator.bluetooth.requestDevice` can
 be done in two ways:
