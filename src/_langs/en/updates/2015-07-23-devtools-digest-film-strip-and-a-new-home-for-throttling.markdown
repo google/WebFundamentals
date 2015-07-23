@@ -1,5 +1,5 @@
 ---
-rss: false
+rss: true
 layout: update
 published: true
 title: 'DevTools Digest: Film strip and a new home for throttling'
