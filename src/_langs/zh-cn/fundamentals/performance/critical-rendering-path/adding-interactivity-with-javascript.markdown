@@ -14,9 +14,9 @@ translators:
   - samchen
 key-takeaways:
   adding-interactivity:
-    - JavaScript 能够查询、修改 DOM 与 CSSOM。
-    - JavaScript 的执行会阻塞 CSSOM。
-    - 除非明确声明为异步，否则 JavaScript 会阻塞 DOM 构建。
+    - JavaScript 可以查询和修改 DOM 和 CSSOM。
+    - JavaScript 的执行因 CSSOM 而阻塞。
+    - 除非明确声明 DOM 构建为异步，否则 JavaScript 会阻止这一流程。
 ---
 {% wrap content %}
 
