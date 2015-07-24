@@ -127,8 +127,9 @@ form.
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({
   filters: [{
-    services: [0x1234, 0x12345678, '99999999-0000-1000-8000-00805f9b34fb'],
+    services: [0x1234, 0x12345678, '99999999-0000-1000-8000-00805f9b34fb']
   }]
+})
 .then(device => {...})
 .catch(error => { console.log(error); });
 {% endhighlight %}
@@ -193,7 +194,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
 {% endhighlight %}
 
 If you use a custom Bluetooth GATT characteristic, you may provide either the
-full Bluetooth UUID or a short 16 or 32 bit form to `service.getCharacteristic`.
+full Bluetooth UUID or a short 16- or 32-bit form to `service.getCharacteristic`.
 
 ### Write to a Bluetooth Characteristic
 
