@@ -55,6 +55,11 @@
 
   .update-content {
 
+    max-width: 100%;
+    @include medium {
+      width: -moz-calc(100% - 150px);
+    }
+
     img.block {
       display: block;
       margin-top: 1em;
@@ -78,6 +83,10 @@
     hr + h4,
     hr + h5 {
       padding-top: 0.3em;
+    }
+    
+    p, li {
+        max-width: 100%;
     }
 
   }
