@@ -1,7 +1,8 @@
 <?php
 include('_header.php');
 
-$update = getUpdate($_GET['file']);	
+$update = getUpdate($_GET['file']);
+$teaserblocks = $update['page']->keyExists('teaserblocks') ? $update['page']->fetch('teaserblocks') : null;
 
 if($_POST) {
 
@@ -86,6 +87,57 @@ if($_POST) {
 			<input type="text" id="source_url" name="source_url" value="<?= $update['page']->keyExists('source_url') ? $update['page']->fetch('source_url') : '' ?>">
 		</div>
 
+	</fieldset>
+
+	<fieldset>
+		<legend>Teaser Blocks (Optional, used for DevTools digests)</legend>
+		<div>
+			<strong>Block 1</strong>
+		</div>
+		<div>
+			<label for="tb1_heading">Heading</label>
+			<input type="text" id="tb1_heading" name="tb1_heading" value="<?= $teaserblocks ? $teaserblocks[0]['heading'] : '' ?>">
+		</div>
+		<div>
+			<label for="tb1_description">Description</label>
+			<input type="text" id="tb1_description" name="tb1_description" value="<?= $teaserblocks ? htmlentities($teaserblocks[0]['description'], ENT_QUOTES, 'UTF-8') : '' ?>">
+		</div>
+		<div>
+			<label for="tb1_image">Image</label>
+			<input type="text" id="tb1_image" name="tb1_image" value="<?= $teaserblocks ? htmlentities($teaserblocks[0]['image'], ENT_QUOTES, 'UTF-8') : '' ?>">
+		</div>
+		<hr>
+		<div>
+			<strong>Block 2</strong>
+		</div>
+		<div>
+			<label for="tb2_heading">Heading</label>
+			<input type="text" id="tb2_heading" name="tb2_heading" value="<?= $teaserblocks ? $teaserblocks[1]['heading'] : '' ?>">
+		</div>
+		<div>
+			<label for="tb2_description">Description</label>
+			<input type="text" id="tb2_description" name="tb2_description" value="<?= $teaserblocks ? htmlentities($teaserblocks[1]['description'], ENT_QUOTES, 'UTF-8') : '' ?>">
+		</div>
+		<div>
+			<label for="tb2_image">Image</label>
+			<input type="text" id="tb2_image" name="tb2_image" value="<?= $teaserblocks ? htmlentities($teaserblocks[1]['image'], ENT_QUOTES, 'UTF-8') : '' ?>">
+		</div>
+		<hr>
+		<div>
+			<strong>Block 3</strong>
+		</div>
+		<div>
+			<label for="tb3_heading">Heading</label>
+			<input type="text" id="tb3_heading" name="tb3_heading" value="<?= $teaserblocks ? $teaserblocks[2]['heading'] : '' ?>">
+		</div>
+		<div>
+			<label for="tb3_description">Description</label>
+			<input type="text" id="tb3_description" name="tb3_description" value="<?= $teaserblocks ? htmlentities($teaserblocks[2]['description'], ENT_QUOTES, 'UTF-8') : '' ?>">
+		</div>
+		<div>
+			<label for="tb3_image">Image</label>
+			<input type="text" id="tb3_image" name="tb3_image" value="<?= $teaserblocks ? htmlentities($teaserblocks[2]['image'], ENT_QUOTES, 'UTF-8') : '' ?>">
+		</div>
 	</fieldset>
 
 	<fieldset>

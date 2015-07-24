@@ -432,12 +432,16 @@
     font-size: 15px;
   }
 
+  a {
+    color: #4B8EDD;
+  }
+
   header {
 
     font-size: 16px;
     
     overflow: hidden;
-    padding-top: 2em;
+    padding-top: 0em;
     padding-bottom: 1em;
     margin-top: 0;
 
@@ -460,9 +464,19 @@
     .headliner {
       margin-bottom: 0;
       max-width: 50%;
+      font-size: 2em;
       @include small-only {
         max-width: 100%;
-        font-size: 2em;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+        background-size: contain;
+        background-image: url(/web/tools/chrome-devtools/images/chrome.svg);
+        vertical-align: top;
+        margin-right: 0.2em;
       }
     }
 
@@ -555,15 +569,14 @@
   .devtools-overview {
     padding-right: 18px;
     position: relative;
-    padding-bottom: 9em;
 
     h3 {
       background-image: url(/web/imgs/icons/help-circle.svg);
       background-repeat: no-repeat;
       background-position: left -2px bottom -2px;
       padding-left: 1.4em;
-      background-size: 32px; 
-      font-size: 26px;     
+      background-size: 26px; 
+      font-size: 1.5em;     
     }
   }
 
@@ -578,16 +591,15 @@
       background-repeat: no-repeat;
       background-position: left -2px bottom -2px;
       padding-left: 1.4em;
-      background-size: 32px;
-      font-size: 26px;     
+      background-size: 26px;
+      font-size: 1.5em;     
     }
   }
 
   .note {
     padding: 1em;
     background: #F7F7F7;
-    position: absolute;
-    bottom: 0;   
+    margin-top: 1em; 
   }
 
   .tools-home {
@@ -633,25 +645,64 @@
 
     color: #555;
     background-color: #fafafa;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+      display: flex;
+      > ul {
+        flex: 1 1 75%;
+      }
+
+      ul.short-updates {
+        > li {
+
+          padding-left: 19.5px;
+          padding-top: 26px;
+          font-size: 13px;
+          line-height: 1.625em;
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            padding-left: 19.5px;
+          }
+
+          .featured-img {
+            height: 112px;
+          }
+
+          .details {
+            display: none;
+          }
+
+          h4 {
+            font-size: 13px;
+            font-weight: 400;
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
 
     h3 {
-      font-size: 26px;
       position: relative;
-      border-bottom: 1px solid #E8E8E8;
-      padding-bottom: 14px;
+      flex: 1 1 25%;
+      font-size: 1.5em;
+      padding-top: 26px;
+      border-bottom: 0px;
 
       a {
         color: inherit;
         font-weight: 300;
 
         span {
-          position: absolute;
-          top: 22px;
-          right: 0;
-          /*background-color: #4285f4;
-          color: #fff;*/
-          background-color: #FFFFFF;
-          color: #4B8BFA;
+          margin-top: 1em;
+          position: static;
+          background-color: #4285f4;
+          color: #fff;
+
           box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
           text-align: center;
           display: inline-block;
@@ -665,6 +716,66 @@
       }    
     }
 
+  }
+
+  .devtools-news-teaser {
+
+    background-color: #F9F9F9;
+    padding-bottom: 26px;
+
+    .container {
+      > div {
+        flex: 1 1 25%;
+        min-width: initial;
+        padding-left: 1.3em;
+
+        .explainer {
+          margin-top: 16px;
+          font-size: 13px;
+          background-color: #FFFFFF;
+          color: #656565;
+          padding: 6px;
+          border-radius: 3px;
+          line-height: 1.625em;        
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        h4 {
+          font-size: 1.5em;
+          padding-top: 26px;
+        }
+
+        h5 {
+          font-size: 13px;
+        }
+
+        img {
+          margin-bottom: 1em;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          color: #A7A7A7;
+          font-size: 13px;
+        }
+
+        a:hover {
+          text-decoration: none;
+          p {
+            color: #666;
+            text-decoration: none;
+          }
+          h5 {
+            color: #164494;
+          }
+        }
+
+      }
+    }
   }
 
 }

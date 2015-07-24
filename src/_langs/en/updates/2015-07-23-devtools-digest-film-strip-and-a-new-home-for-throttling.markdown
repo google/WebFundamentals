@@ -1,12 +1,12 @@
 ---
-rss: true
+rss: false
 layout: update
 published: true
 title: 'DevTools Digest: Film strip and a new home for throttling'
 date: 2015-07-23
 article:
   written_on: 2015-07-23
-  updated_on: 2015-07-23
+  updated_on: 2015-07-24
 authors:
 - pbakaus
 collection: updates
@@ -19,6 +19,16 @@ tags:
 description: Discover the new film strip functionality and more in this first of many
   DevTools Digest updates.
 featured-image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/featured.png
+teaserblocks:
+- heading: Film strip
+  description: Capture screenshots of the page in both Network and Timeline.
+  image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser1.jpg
+- heading: Network Throttling in Network
+  description: We've made network throttling easier to use and locate.
+  image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser2.jpg
+- heading: Community Heartbeat
+  description: Down and Dirty with Chrome DevTools, and a DevTools IDE?!
+  image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser3.jpg
 permalink: /updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling.html
 ---
 ## DevTools news, as fresh as it gets
