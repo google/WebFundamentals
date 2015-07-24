@@ -103,7 +103,7 @@ module Jekyll
       end
     end
 
-    def generatePaginatedPage(site, base, dir, category, product, notools=nil)
+    def generatePaginatedPage(site, base, dir, category, product, notips=nil)
 
       pag_root = dir
       dir = File.join('_langs', site.data['curr_lang'], dir)
@@ -114,7 +114,7 @@ module Jekyll
       updates = updates.select do |update|
         (category == "all" || update["type"] == category) \
         && (product == "all" || update["product"] == product || update["category"] == product) \
-        && (notools.nil? || update['category'] != 'tools')
+        && (notips.nil? || update['type'] != 'tip')
       end
       updates = updates.sort { |x,y| y["date"] <=> x["date"] }
 
