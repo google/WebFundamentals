@@ -23,8 +23,8 @@
     padding-top: 1em;   
   }
 
-  p, li {
-    font-weight: 300;
+  b, strong {
+    font-weight: 500;
   }
 
   a {
@@ -55,12 +55,47 @@
 
   .update-content {
 
+    max-width: 100%;
+    @include medium {
+      width: -moz-calc(100% - 150px);
+    }
+
     img.block {
       display: block;
       margin-top: 1em;
       margin-bottom: 1em;
     }
 
+    h2,h3,h4,h5 {
+      padding-top: 1.3em;
+    }
+
+    hr {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 2em 0em;      
+    }
+
+    hr + h2,
+    hr + h3,
+    hr + h4,
+    hr + h5 {
+      padding-top: 0.3em;
+    }
+    
+    p, li {
+        max-width: 100%;
+    }
+
+  }
+
+  .update-content,
+  .update-content p,
+  .update-content li {
+    font-size: 15px;
+    font-weight: 400;    
   }
 
   .video-container {
