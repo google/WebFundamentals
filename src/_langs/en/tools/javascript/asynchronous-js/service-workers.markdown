@@ -23,7 +23,7 @@ remember:
 {% wrap content %}
 
 TBD. Cover offline, install to
-homescreen and manifest, network pageload optimization.
+home screen and manifest, network pageload optimization.
 
 TBD. Also cover promises
 

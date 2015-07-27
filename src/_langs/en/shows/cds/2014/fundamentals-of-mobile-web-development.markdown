@@ -86,11 +86,11 @@ chances are you'll have some way of quickly getting hold a stock HTML file that
 works well across multiple devices and screen sizes.
 
 In Web Starter Kit we wanted to add in support for any features which blurred
-the lines between the platform and your site, so we've added support for [add to homescreen](https://developers.google.com/web/fundamentals/device-access/stickyness/)
+the lines between the platform and your site, so we've added support for [add to home screen](https://developers.google.com/web/fundamentals/device-access/stickyness/)
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image03.jpg" alt="Example of Web Starter Kit Add to Homescreen" width="313" height="274" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image03.jpg" alt="Example of Web Starter Kit Add to Home Screen" width="313" height="274" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Styleguide
