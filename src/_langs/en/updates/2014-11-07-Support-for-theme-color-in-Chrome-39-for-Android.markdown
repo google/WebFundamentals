@@ -45,6 +45,6 @@ and we recommend providing a 192&times;192px PNG file. For example:
 Check out the theme-color here on HTML5Rocks as well as on the [Web
 Fundamentals](https://developers.google.com/web/fundamentals/) site, and be sure 
 to check out the
-[Add to Homescreen docs](https://developer.chrome.com/multidevice/android/installtohomescreen)
+[Add to Home Screen docs](https://developer.chrome.com/multidevice/android/installtohomescreen)
 for more ways to make your site stand out.
 
