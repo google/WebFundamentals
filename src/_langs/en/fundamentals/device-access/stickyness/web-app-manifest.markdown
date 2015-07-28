@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Add a WebApp Manifest"
-description: "The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile homescreen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
-introduction: "The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile homescreen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
+description: "The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
+introduction: "The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
 article:
   written_on: 2014-12-17
   updated_on: 2014-12-17
@@ -82,7 +82,7 @@ Once you have the manifest created and and on your site, all you need to do is a
 
 ## Create great app icons for the device
 
-When a user adds your site to their homescreen, you can define a set of icons for the browser to use.
+When a user adds your site to their home screen, you can define a set of icons for the browser to use.
 
 The icons for your web app can be defined as above, with a type, size and density, but you don't have to define all of these, you can define just sizes and the image src.
 
@@ -104,9 +104,9 @@ The icons for your web app can be defined as above, with a type, size and densit
 
 <div class="clear g-wide--full">
     <figure>
-        <img src="images/homescreen-icon.png" alt="Add to Homescreen Icon">
+        <img src="images/homescreen-icon.png" alt="Add to Home screen Icon">
 
-        <figcaption>Add to Homescreen Icon</figcaption>
+        <figcaption>Add to Home screen Icon</figcaption>
     </figure>
 </div>
 
