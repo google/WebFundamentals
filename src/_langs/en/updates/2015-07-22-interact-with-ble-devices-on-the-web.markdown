@@ -13,6 +13,7 @@ title: "Interact with BLE devices on the Web"
 description: "A Web API has been added to Chrome OS M45 that
 makes it possible for websites to discover and communicate with devices over
 the Bluetooth 4 wireless standard using GATT."
+featured-image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 article:
   written_on: 2015-07-22
   updated_on: 2015-07-22
@@ -127,8 +128,9 @@ form.
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({
   filters: [{
-    services: [0x1234, 0x12345678, '99999999-0000-1000-8000-00805f9b34fb'],
+    services: [0x1234, 0x12345678, '99999999-0000-1000-8000-00805f9b34fb']
   }]
+})
 .then(device => {...})
 .catch(error => { console.log(error); });
 {% endhighlight %}
@@ -193,7 +195,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
 {% endhighlight %}
 
 If you use a custom Bluetooth GATT characteristic, you may provide either the
-full Bluetooth UUID or a short 16 or 32 bit form to `service.getCharacteristic`.
+full Bluetooth UUID or a short 16- or 32-bit form to `service.getCharacteristic`.
 
 ### Write to a Bluetooth Characteristic
 
