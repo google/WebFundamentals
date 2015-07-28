@@ -40,7 +40,7 @@
     > li {
       margin: 0;
       padding: 0;
-      padding-right: 2em;
+      padding-right: 1.3em;
 
       flex: 1 1 25%;
       -webkit-flex: 1 1 25%;
@@ -225,7 +225,7 @@
 
   }
 
-  a {
+  a.toolbutton {
       background-color: rgb(249, 249, 249);
       color: #333;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -449,7 +449,7 @@
       background-image: none;
     }
 
-    > div {
+    > div:first-child {
       padding-bottom: 2em;
       @include medium {
         -webkit-align-items: center;
@@ -457,8 +457,17 @@
       }
     }
 
-    a {
+    a.toolbutton {
       margin-left: 0;
+      color: #4B8EDD;
+    }
+
+    a.toolbutton.continue {
+      margin: 0 auto;
+      margin-top: 1em;
+      width: 11em;
+      text-decoration: none;
+      display: block;
     }
 
     .headliner {
@@ -483,7 +492,7 @@
     .sideliner {
       @include medium {
         width: 50%;
-        padding-left: 20px;
+        padding-left: 0;
       }
     }
 
@@ -566,43 +575,45 @@
     font-weight: 300;
   }
 
-  .devtools-overview {
-    padding-right: 18px;
-    position: relative;
+  .devtools-learnmore {
+    border-top: 1px solid #fff;
+    padding-top: 0;
+    padding-bottom: 1em;
+    display: none;
 
-    h3 {
-      background-image: url(/web/imgs/icons/help-circle.svg);
-      background-repeat: no-repeat;
-      background-position: left -2px bottom -2px;
-      padding-left: 1.4em;
-      background-size: 26px; 
-      font-size: 1.5em;     
-    }
-  }
-
-  .devtools-access {
-
-    @include medium {
-      padding-left: 18px;
+    &:target {
+      display: -webkit-flex;
+      display: flex;
     }
 
-    h3 {
-      background-image: url(/web/imgs/icons/information.svg);
-      background-repeat: no-repeat;
-      background-position: left -2px bottom -2px;
-      padding-left: 1.4em;
-      background-size: 26px;
-      font-size: 1.5em;     
+    .devtools-overview {
+      padding-right: 18px;
+      position: relative;
     }
+
+    .devtools-access {
+      @include medium {
+        padding-left: 18px;
+      }
+    }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
   }
 
   .note {
     padding: 1em;
-    background: #F7F7F7;
+    background: rgba(0, 0, 0, 0.09);
     margin-top: 1em; 
   }
 
   .tools-home {
+
+    margin-top: 0;
+    margin-bottom: 1em;
 
     ul.doclist.by-panel > li {
 
@@ -657,14 +668,15 @@
       ul.short-updates {
         > li {
 
-          padding-left: 19.5px;
+          padding-right: 1.3em;
           padding-top: 26px;
           font-size: 13px;
           line-height: 1.625em;
 
           &:nth-child(2),
           &:nth-child(3) {
-            padding-left: 19.5px;
+            padding-right: 1.3em;
+            padding-left: 0;
           }
 
           .featured-img {
@@ -727,7 +739,7 @@
       > div {
         flex: 1 1 25%;
         min-width: initial;
-        padding-left: 1.3em;
+        padding-right: 1.3em;
 
         .explainer {
           margin-top: 16px;
@@ -737,10 +749,6 @@
           padding: 6px;
           border-radius: 3px;
           line-height: 1.625em;        
-        }
-
-        &:first-child {
-          padding-left: 0;
         }
 
         h4 {
