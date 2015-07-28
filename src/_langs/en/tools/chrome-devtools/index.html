@@ -32,26 +32,41 @@ panels:
 
 	<header class="tools-header">
 		<div class="container">
+
 			<p class="headliner">Chrome DevTools</p>
+
       <div class="sideliner">
         <div class="desc">Chrome's built-in authoring and debugging tool.</div>
-        <a href="/web/tools/setup/workspace/setup-devtools">GET STARTED</a>
+        <a class="toolbutton" href="#learnmore">LEARN MORE ▾</a>
         <div class="social">
           <a href="https://github.com/GoogleChrome"><img src="/web/imgs/icons/github-circle.svg" alt="Github"></a>
           <a href="https://plus.google.com/+GoogleChromeDevelopers"><img src="/web/imgs/icons/google-plus-box.svg" alt="Google+"></a>
           <a href="https://twitter.com/ChromeDevTools"><img src="/web/imgs/icons/twitter.svg" alt="Twitter"></a>
           <a href="http://stackoverflow.com/questions/tagged/google-chrome-devtools"><img src="/web/imgs/icons/stackoverflow.svg" alt="Stack Overflow"></a>
-          <!-- <a href="https://www.youtube.com/user/ChromeDevelopers"><img src="/web/imgs/icons/youtube-play.svg" alt="YouTube"></a> -->
+          <a href="https://www.youtube.com/user/ChromeDevelopers"><img src="/web/imgs/icons/youtube-play.svg" alt="YouTube"></a>
         </div>       
       </div>
 
-      <!--
-      <div class="card">
-        <p><span>Tip</span>With DevTools opened, click and hold the reload button to see more options.</p>
-        <img src="https://31.media.tumblr.com/tumblr_nn9hzvsWHs1qak298_frame1.jpg" alt="">
-      </div>
-      -->
 		</div>
+
+    <div id="learnmore" class="container flex devtools-learnmore">
+
+      <div class="devtools-overview">
+        <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. They provide web developers deep access into the internals of the browser and their web application. Use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.</p>
+        <div class="note">Note: If you are a web developer and want to get the latest version of DevTools, you should use <a href="https://tools.google.com/dlpage/chromesxs">Google Chrome Canary</a>.</div>
+      </div>
+
+      <div class="devtools-access">
+        <p>To open the DevTools, open a site or app in Chrome, then:</p>
+        <ul>
+          <li>Select the <strong>Chrome menu</strong> at the top-right of your browser window, then select <strong>Tools > Developer Tools</strong>.</li>
+          <li>Right-click on any page element and select Inspect Element.</li>
+          <li>Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac) (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
+        </ul>
+        <a class="toolbutton continue" href="/web/tools/setup/workspace/setup-devtools">CONTINUE READING</a>
+      </div>
+
+    </div>
 	</header>
 
   {% assign count = '' %}
@@ -92,71 +107,36 @@ panels:
   {% endif %}
   {% endif %}
   {% endfor %}
+<a name="docs"></a>
+  <div class="tools-home">
 
-	<div class="container flex" style="margin-top: 1em; margin-bottom: 3em;">
-
-		<div class="devtools-overview">
-			<h3>New here?</h3>
-			<p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. They provide web developers deep access into the internals of the browser and their web application. Use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.</p>
-			<div class="note">Note: If you are a web developer and want to get the latest version of DevTools, you should use <a href="https://tools.google.com/dlpage/chromesxs">Google Chrome Canary</a>.</div>
-		</div>
-
-		<div class="devtools-access">
-			<h3>How to access</h3>
-			<p>To open the DevTools, open a site or app in Chrome, then:</p>
-			<ul>
-				<li>Select the <strong>Chrome menu</strong> at the top-right of your browser window, then select <strong>Tools > Developer Tools</strong>.</li>
-				<li>Right-click on any page element and select Inspect Element.</li>
-				<li>Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac) (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
-			</ul>
-		</div>
-
-	</div>
-
-  <div class="tools-updates devtools-updates">
-    <div class="container">
-      <h3><a href="/web/updates/chrome-devtools">Tips &amp; Tricks <span>All tips &amp; updates</span></a></h3>
-      {% include modules/latest_updates.liquid limit=3 product="chrome-devtools" type="tip" %}
+    <div class="container tools-docs-listing">
+      <ul class="doclist">
+          {% for guide in page.articles.tools %}
+          {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
+          <li class="theme--{{ guide.id }}">
+            <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
+              <h4>{{guide.title}}</h4>
+            </a>
+            <ul>
+              {% for subguide in page.articles.[guide.id] %}
+              {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
+              <li>
+                <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
+                  {{subguide.title}}
+                </a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+          {% endfor %}
+      </ul>
     </div>
-  </div>
-
-	<div class="tools-home">
 
 	  <div class="container tools-docs-header">
-	    <h2><a name="docs">Documentation &amp; Tutorials</a></h2>
-
-	    <h3>By Action or Challenge</h3>
-	  </div>
-
-	  <div class="tools-docs-divider"></div>
-
-	  <div class="container tools-docs-listing">
-	    <ul class="doclist">
-	        {% for guide in page.articles.tools %}
-	        {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
-	        <li class="theme--{{ guide.id }}">
-	          <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
-	            <h4>{{guide.title}}</h4>
-	          </a>
-	          <ul>
-	            {% for subguide in page.articles.[guide.id] %}
-	            {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
-	            <li>
-	              <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
-	                {{subguide.title}}
-	              </a>
-	            </li>
-	            {% endif %}
-	            {% endfor %}
-	          </ul>
-	        </li>
-	        {% endif %}
-	        {% endfor %}
-	    </ul>
-	  </div>
-
-	  <div class="container tools-docs-header">
-	    <h3>By Panel</h3>
+	    <h3>Per-Panel Documentation</h3>
 	  </div>
 
 {% assign guides1 = page.articles.setup  %}
@@ -226,5 +206,12 @@ panels:
     </div>
 
 	</div>
+
+  <div class="tools-updates devtools-updates">
+    <div class="container">
+      <h3><a href="/web/updates/chrome-devtools">Tips &amp; Tricks <span>All tips &amp; updates</span></a></h3>
+      {% include modules/latest_updates.liquid limit=3 product="chrome-devtools" type="tip" %}
+    </div>
+  </div>
 	
 </div>
