@@ -437,41 +437,41 @@ dt.content-download:before {
 </style>
 
 <dl class="table-2">
-  <dt class="stalled"> <strong>Stalled/Blocking</strong></dt>
+  <dt class="stalled"><strong> Stalled/Blocking</strong></dt>
   <dd>
     Time the request spent waiting before it could be sent.
     This time is inclusive of any time spent in proxy negotiation.
     Additionally, this time will include when the browser is waiting for an already established connection to become available for re-use, obeying Chrome's <a href="https://code.google.com/p/chromium/issues/detail?id=12066">maximum six</a> <abbr title="Transmission Control Protocol">TCP</abbr> connection per origin rule.
   </dd>
 
-  <dt class="proxy-negotiation"> <strong>Proxy Negotiation</strong></dt>
+  <dt class="proxy-negotiation"><strong> Proxy Negotiation</strong></dt>
   <dd>Time spent negotiating with a proxy server connection.</dd>
 
-  <dt class="dns-lookup"> <strong><abbr title="Domain Name System">DNS</abbr> Lookup</strong></dt>
+  <dt class="dns-lookup"><strong><abbr title="Domain Name System"> DNS</abbr> Lookup</strong></dt>
   <dd>
     Time spent performing the DNS lookup.
     Every new domain on a page requires a full roundtrip to do the DNS lookup.
   </dd>
 
-  <dt class="initial-connection"> <strong>Initial Connection / Connecting</strong></dt>
+  <dt class="initial-connection"><strong> Initial Connection / Connecting</strong></dt>
   <dd>Time it took to establish a connection, including <abbr title="Transmission Control Protocol">TCP</abbr> handshakes/retries and negotiating a <abbr title="Secure Sockets Layer">SSL</abbr>.</dd>
 
-  <dt class="ssl"> <strong>SSL</strong></dt>
+  <dt class="ssl"><strong> SSL</strong></dt>
   <dd>Time spent completing a SSL handshake.</dd>
 
-  <dt class="request-sent"> <strong>Request Sent / Sending</strong></dt>
+  <dt class="request-sent"><strong> Request Sent / Sending</strong></dt>
   <dd>
     Time spent issuing the network request.
     Typically a fraction of a millisecond.
   </dd>
 
-  <dt class="ttfb"> <strong>Waiting (<abbr title="Time To First Byte">TTFB</abbr>)</strong></dt>
+  <dt class="ttfb"><strong> Waiting (<abbr title="Time To First Byte">TTFB</abbr>)</strong></dt>
   <dd>
     Time spent waiting for the initial response, also known as the Time To First Byte.
     This time captures the latency of a round trip to the server in addition to the time spent waiting for the server to deliver the response.
   </dd>
 
-  <dt class="content-download"> <strong>Content Download / Downloading</strong></dt>
+  <dt class="content-download"><strong> Content Download / Downloading</strong></dt>
   <dd>Time spent receiving the response data.</dd>
 </dl>
 
@@ -536,7 +536,7 @@ Save the data from a network recording as a HAR ([HTTP Archive](http://www.softw
 
 For more information, [Web Performance Power Tool: HTTP Archive (HAR)](http://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/).
 
-## Customize the Network Panel
+## Customize the Network panel
 
 You can view the Network table with large resource rows (the default), or small resource rows. Click the blue **Use small resource rows** toggle button ![Small resource rows](imgs/small-resource-rows.png){:.inline} at the bottom of the panel to view small rows. Click the same button (now gray) to view large resource rows again. 
 
