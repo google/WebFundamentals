@@ -18,7 +18,7 @@ key-takeaways:
     - Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code.
     - Make use of the package manager to make it easier to discover, install, and update plugins.
     - Install plugins that help keep you productive during development; start with the recommendations in this guide.
-notes:
+remember:
   blog:
     - Rob Dodson's <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> on how to get to know and love Sublime is a great reference for getting the most out of your editor. The concepts are relevant to any text editor, not just Sublime.
 ---
@@ -36,12 +36,7 @@ manager that makes it easy to install plugins and add new functionality.
 
 There are currently two download options for Sublime Text, either [version 2](http://www.sublimetext.com/2) or [version 3](http://www.sublimetext.com/3). Version 3 is pretty stable and will give you access to packages not available in Sublime Text 2, however you may find version 2 more reliable.
 
-**Note**
-Rob Dodson's [blog
-post](http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/) on
-how to get to know and love Sublime is a great reference for getting the most
-out of your editor. The concepts are relevant to any text editor, not just
-Sublime.
+{% include modules/remember.liquid title="Note" list=page.remember.blog %}
 
 ## Why Use a Package Manager?
 
