@@ -102,11 +102,11 @@ works well across multiple devices and screen sizes.
 
 In Web Starter Kit we wanted to add in support for any features which blurred
 the lines between the platform and your site, so we've added support for [add to
-homescreen](https://developers.google.com/web/fundamentals/device-access/stickyness/)
+home screen](https://developers.google.com/web/fundamentals/device-access/stickyness/)
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image03.png" alt="Example of Web Starter Kit Add to Homescreen" width="313" height="274" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image03.png" alt="Example of Web Starter Kit Add to Home Screen" width="313" height="274" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Styleguide
@@ -180,7 +180,7 @@ is useful for anyone learning about the timeline, the browser behaviours and
 allows you to optimise your code to prevent performance issues.
 
 <p style="text-align: center;">
-<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome Devtools" width="624" height="396" style="max-width: 100%; height: auto;" />
+<img src="{{site.baseurl}}/updates/images/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome DevTools" width="624" height="396" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Flame Chart View

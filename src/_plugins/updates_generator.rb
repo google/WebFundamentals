@@ -72,8 +72,25 @@ module Jekyll
       # generate main page
       generatePaginatedPage(site, site.source, File.join('updates'), "all", "all", true)
 
-      # generate feed
-      site.pages << UpdatesFeedPage.new(site, site.source, File.join('_langs', site.data['curr_lang'], 'updates'), updates)
+      # generate feed from a cleaned list of updates
+      cur_dir = File.join('_langs', site.data['curr_lang'], 'updates')
+      posts = []
+      updates.each do |post|
+        if post['published'] == false || post['rss'] == false
+          # NoOp - ignore these posts
+        else
+          posts.push(post)
+        end
+      end
+      # Generate the ATOM feed
+      site.pages << UpdatesFeedPage.new(site, site.source, cur_dir, 'atom.liquid', 'atom.xml', posts)
+
+      # Generate the RSS feed
+      site.pages << UpdatesFeedPage.new(site, site.source, cur_dir, 'rss.liquid', 'rss.xml', posts)
+
+      # Generate the old feed for backwards compatibility
+      site.pages << UpdatesFeedPage.new(site, site.source, cur_dir, 'feed.liquid', 'feed.xml', posts)
+
 
       site.data['tags_updates'] = tags
     end
@@ -86,7 +103,7 @@ module Jekyll
       end
     end
 
-    def generatePaginatedPage(site, base, dir, category, product, notools=nil)
+    def generatePaginatedPage(site, base, dir, category, product, notips=nil)
 
       pag_root = dir
       dir = File.join('_langs', site.data['curr_lang'], dir)
@@ -97,7 +114,7 @@ module Jekyll
       updates = updates.select do |update|
         (category == "all" || update["type"] == category) \
         && (product == "all" || update["product"] == product || update["category"] == product) \
-        && (notools.nil? || update['category'] != 'tools')
+        && (notips.nil? || update['type'] != 'tip')
       end
       updates = updates.sort { |x,y| y["date"] <=> x["date"] }
 
@@ -186,21 +203,19 @@ module Jekyll
   class UpdatesFeedPage < Page
     attr_accessor :tag
 
-    def initialize(site, base, dir, updates)
+    def initialize(site, base, dir, template, fname, updates)
         @site = site
         @base = base
         @dir  = dir
-        @name = "feed.xml"
+        @name = fname
+        @template = template
         @tag = tag
         @updates = updates
         @langcode = site.data['curr_lang']
 
         self.process(@name)
 
-        self.read_yaml(File.join(base, '_layouts'), 'feed.liquid')
-
-        title_text = "All updates tagged '%s'"
-        description_text = "Tag page for updates tagged %s."
+        self.read_yaml(File.join(base, '_layouts'), @template)
 
         self.data['title'] = 'Web Updates'
         self.data['description'] = 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.'

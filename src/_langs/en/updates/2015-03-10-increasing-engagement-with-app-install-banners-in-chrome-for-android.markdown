@@ -10,10 +10,10 @@ type: news
 date: 2015-03-12
 
 title: "Increasing engagement with Web App install banners"
-description: "Web App Manifest ✔︎, Service Worker✔.Get ready for Web App Install banners "
+description: "Web App Manifest ✔︎, Service Worker✔. Get ready for Web App Install banners"
 article:
   written_on: 2015-03-12
-  updated_on: 2015-03-12
+  updated_on: 2015-07-21
 authors:
   - paulkinlan
 tags:
@@ -22,19 +22,19 @@ tags:
   - install
 permalink: /updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android.html
 ---
-We recently enhanced the Add to Homescreen function in Chrome which allows users 
+We recently enhanced the Add to Home Screen function in Chrome which allows users 
 to add your Web App to their home screen with the addition of the 
 standards-based "[web app manifest](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)". 
-The manifest gives you extra control over the Add to Homescreen experience, 
+The manifest gives you extra control over the Add to Home Screen experience, 
 allowing you to tell the browser what to launch, how to launch your app 
 (fullscreen or in a browser window) and how it should appear to users on the 
 home screen.
 
-This improved things for users, but the ability to Add to Homescreen is still 
+This improved things for users, but the ability to Add to Home Screen is still 
 hidden behind a menu, meaning that your apps still aren't as discoverable as 
 they should be.  To increase the chance of a user adding their app to the home 
 screen a developer would have to try and guess if the site was already running 
-as an Added to Homescreen app and if not, then tactically decide to give them an 
+as an Added to Home Screen app and if not, then tactically decide to give them an 
 overlay that asked them to work around our poor UX.  This isn't great for users, 
 and it is not good for developers.
 
@@ -93,7 +93,6 @@ the
 [Cr-UI-Browser-AppShortcuts](https://code.google.com/p/chromium/issues/list?q=label:Cr-UI-Browser-AppShortcuts) 
 label. 
 
-
 ## <span id="cancel">Cancelling the prompt</span>
 
 Chrome manages when to trigger the prompt and for some sites this might not be ideal.
@@ -101,7 +100,7 @@ Chrome manages when to trigger the prompt and for some sites this might not be i
 As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforinstallprompt` event and preventing default on the event.
 
 {% highlight javascript %}
- window.addEventListener('beforeinstallprompt', function(e) {
+window.addEventListener('beforeinstallprompt', function(e) {
   console.log('beforeinstallprompt Event fired');
   e.preventDefault();
   return false;
@@ -116,11 +115,11 @@ that they are engaging with your site).
 
 ## <span id="action">Did a user install our web app</span>
 
-A recetent addtion in Chrome 43 (Beta as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+A recent addtion in Chrome 43 (Beta as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
 
 The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
 actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
-attribute or `accepted` if the user added the web page to the homescreen.
+attribute or `accepted` if the user added the web page to the home screen.
 
 {% highlight javascript %}
 window.addEventListener('beforeinstallprompt', function(e) {
@@ -133,10 +132,10 @@ window.addEventListener('beforeinstallprompt', function(e) {
     console.log(choiceResult.outcome);
     
     if(choiceResult.outcome == 'dismissed') {
-      console.log('User cancelled homescreen install');
+      console.log('User cancelled home screen install');
     }
     else {
-      console.log('User added to homescreen');
+      console.log('User added to home screen');
     }
   });
 });
@@ -144,9 +143,64 @@ window.addEventListener('beforeinstallprompt', function(e) {
 
 This is a good tool for understanding how your users interact with your app install prompt.
 
+
+## <span id="prompt">Invoking the prompt</span>
+
+A new addition in Chrome 45 (Beta on July 21 2015) is the ability for you to defer the prompt to
+a later time in the apps usage. When Chrome decides to prompt the user to install the app
+you can prevent the default action and store the event for later.  Then when the user
+has a postive interaction with your site you can then re-trigger the prompt by calling
+`prompt()` on the stored event.  This will then cause Chrome to show the Add to Home Screen 
+banner and all the Promise attributes such as `userChoice` will be available to bind to so
+that you can understand what action the user took.
+
+{% highlight javascript %}
+
+var deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', function(e) {
+  console.log('beforeinstallprompt Event fired');
+  e.preventDefault();
+  
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  
+  return false;
+});
+
+btnSave.addEventListener('click', function() {
+  if(deferredPrompt !== undefined) {
+    // The user has had a postive interaction with our app and Chrome
+    // has tried to prompt previously, so let's show the prompt.
+    deferredPrompt.prompt();
+  
+    // Follow what the user has done with the prompt.
+    deferredPrompt.userChoice.then(function(choiceResult) {
+  
+      console.log(choiceResult.outcome);
+      
+      if(choiceResult.outcome == 'dismissed') {
+        console.log('User cancelled home screen install');
+      }
+      else {
+        console.log('User added to home screen');
+      }
+      
+      // We no longer need the prompt.  Clear it up.
+      deferredPrompt = null;
+    });
+    
+    
+  }
+});
+{% endhighlight %}
+
+This is a very powerful feature and finally gives the developer a lot more control over how and when
+to prompt the user to install the app and we think it will provide a better experience for users.
+
 ## <span id="native">Native app install banner</span>
 
-A new powerful feature for native app developers also landed in Chrome 44 Beta.  Native App install banners are similar to Web app install banners, but instead of adding to the Homescreen will let the user inline install your native app.
+A new powerful feature for native app developers also landed in Chrome 44 Beta.  Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user inline install your native app.
 
 <p style="text-align: center;">
   <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
@@ -188,8 +242,11 @@ Yes you can, see "[Did a user install our web app](#action)".
 No.  Not unless the user clears their history.  We want to make sure users have 
 a good experience.  We will likely be changing all the heuristics over time.
 
-**Can I decide when to prompt the user****?**  
-No, we are not letting developers actively prompt the user to Add to Homescreen.
+**Can I decide when to prompt the user to install my app?**  
+Yes, however you will not be able to actively invoke the prompt whenever you want (i.e, you 
+can not prompt on first load of the page). Chrome will decide when to first prompt 
+the user to install the web app and as of Chrome 45 you can choose to defer the prompt 
+to a future time in your app (such as a positive interaction in your site). 
 
 **You said that I will only get the banner if I visit the site on two different 
 days.  How on earth do I test it?**  

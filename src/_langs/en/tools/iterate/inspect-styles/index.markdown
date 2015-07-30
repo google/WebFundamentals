@@ -4,7 +4,7 @@ layout: section
 title: "Inspect and Edit Pages and Styles"
 seotitle: "Inspect and Edit Pages and Styles Using the Chrome DevTools Elements Panel"
 description: "Inspect the HTML & CSS of your pages, test different layouts, and live-edit CSS."
-introduction: "Inspect the HTML & CSS of your pages, test different layouts, and live-edit CSS using the Chrome Dev Tools Elements panel."
+introduction: "Inspect the HTML & CSS of your pages, test different layouts, and live-edit CSS using the Chrome DevTools Elements panel."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-22

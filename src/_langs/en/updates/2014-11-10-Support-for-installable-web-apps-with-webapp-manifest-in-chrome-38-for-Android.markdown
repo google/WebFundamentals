@@ -25,9 +25,9 @@ permalink: /updates/2014/11/Support-for-installable-web-apps-with-webapp-manifes
 
 For Web Apps to be successful they need to work how the user would expect an native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.  
 
-The [Manifest for Web applications](https://w3c.github.io/manifest/) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile homescreen), direct what the user can launch and more importantly *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
+The [Manifest for Web applications](https://w3c.github.io/manifest/) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
 
-Chrome has had support for Manifests since version 38 for Android (October 2014) and it gives you the control over how your web app appears when it is installed to the homescreen via the `short_name`, `name` and `icons` properties and how it should be launched when the user clicks on the launch icon with the `start_url`, `display` and `orientation`.  Check out [our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/web-application-manifest) to see this in action.
+Chrome has had support for Manifests since version 38 for Android (October 2014) and it gives you the control over how your web app appears when it is installed to the home screen via the `short_name`, `name` and `icons` properties and how it should be launched when the user clicks on the launch icon with the `start_url`, `display` and `orientation`.  Check out [our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/web-application-manifest) to see this in action.
 
 # Deploying the manifest
 
@@ -87,7 +87,7 @@ That's it.
 
 This feature is entirely progressive and allows you create better, more integrated experiences for users that are using a browser that supports the feature.  As of Nov 2014 Chrome has implemented the manifest, Mozilla are implementing and [IE is exploring the area](https://status.modern.ie/webapplicationmanifest?term=manifest).
 
-When a user adds your site or app to the homescreen there is an intent by the user to treat it like an app.  This means you should aim to direct the user to the functionality of your app rather than a product landing page, for example if the user is required to sign-in to your app then that is a good page to launch in to.
+When a user adds your site or app to the home screen there is an intent by the user to treat it like an app.  This means you should aim to direct the user to the functionality of your app rather than a product landing page, for example if the user is required to sign-in to your app then that is a good page to launch in to.
 
 For every type of app you are always going to do the following:
 
@@ -137,17 +137,17 @@ Taking a look at native apps, the majority of News based apps treat their experi
 "display": "standalone"
 {% endhighlight %}
 
-# Detecting if you are launched from the homescreen
+# Detecting if you are launched from the home screen
 
 A question that keeps popping up about Chrome's implementation of "mobile-web-app-capable" is: How can I tell if
-I am running as launched from the homescreen?  On iOS you can use `navigator.standalone` to see if it is running
+I am running as launched from the home screen?  On iOS you can use `navigator.standalone` to see if it is running
 like a native app, but we don't have this on Chrome for Android.
 
 A naive approach is: Because you can now define how your app is launched, add a query string parameter to your `start_url` that indicates how it was launched.  For example `start_url: /index.html?homescreen=1`.  This will help in some cases but it is not infallible.
 
 # Learning More
 
-Check out Chrome's guidance for [Add to homescreen](https://developer.chrome.com/multidevice/android/installtohomescreen#supporting) the [HTML5Doctor](http://html5doctor.com/web-manifest-specification/) for a deeper dive in 
+Check out Chrome's guidance for [Add to home screen](https://developer.chrome.com/multidevice/android/installtohomescreen#supporting) the [HTML5Doctor](http://html5doctor.com/web-manifest-specification/) for a deeper dive in 
 to where the future of the spec and implementations will be
 
 ## Diving deep
@@ -158,7 +158,7 @@ If like me your are interested about how this is implemented in Chrome here are 
 
 *  The [logic for extracting the data](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&sq=package:chromium&q=file:shortcut_helper.cc&l=1) from the manifest and managing how to use the fallback
 *  Check [OnDidGetManifest](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=233) - This is where Chrome does all the grunt work and you can see what parameters are supported.
-*  The code for showing the [Add to homescreen UI](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/android/java/src/org/chromium/chrome/browser/webapps/AddToHomescreenDialog.java&sq=package:chromium)
+*  The code for showing the [Add to home screen UI](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/android/java/src/org/chromium/chrome/browser/webapps/AddToHomescreenDialog.java&sq=package:chromium)
 
 # We crave feedback
 

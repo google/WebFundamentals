@@ -39,7 +39,7 @@ include('_header.php');
 	foreach ($posts as $key => $value) {
 
 		foreach ($updates as $key2 => $update) {
-			if($update['page']->keyExists('source_url') && $update['page']->fetch('source_url') == $value->get('url')) {
+			if($update['page']->keyExists('source_url') && ($update['page']->fetch('source_url') == $value->get('url') || $update['page']->fetch('source_url') . "/" == $value->get('url'))) {
 				continue 2;
 			}
 		}

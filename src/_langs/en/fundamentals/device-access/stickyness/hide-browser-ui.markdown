@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Hide the Browser UI"
-description: "Your users can add your site to the homescreen without any special code, but we recommend that you make your web app display without the browser UI when launched from the homescreen (effectively going fullscreen)."
-introduction: "Your users can add your site to the homescreen without any special code, but we recommend that you make your web app display without the browser UI when launched from the homescreen (effectively going fullscreen)."
+description: "Your users can add your site to the home screen without any special code, but we recommend that you make your web app display without the browser UI when launched from the home screen (effectively going fullscreen)."
+introduction: "Your users can add your site to the home screen without any special code, but we recommend that you make your web app display without the browser UI when launched from the home screen (effectively going fullscreen)."
 article:
   written_on: 2014-09-22
   updated_on: 2014-12-17
