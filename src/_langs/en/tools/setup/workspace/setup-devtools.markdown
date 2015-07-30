@@ -1,108 +1,159 @@
 ---
 layout: article
-title: "Set Up DevTools"
+title: "Set Up Chrome DevTools"
 rss: false
 seotitle: "Set Up Chrome Developer Tools (DevTools)"
-description: "DevTools provides web developers deep access into the 
-internals of the Chrome browser and their web applications. Use Chrome DevTools
- to efficiently track down layout issues, set JavaScript breakpoints, 
-and get insights for code optimization."
-introduction: "Chrome DevTools provides web developers deep access into the 
-internals of the browser and their web application."
+description: "Chrome Developer Tools (DevTools) helps you develop, test, and debug your web sites and applications directly from the Google Chrome browser."
+introduction: "Chrome Developer Tools (DevTools) helps you develop, test, and debug your web sites and applications directly from the Google Chrome browser."
 authors:
   - dgash
   - kaycebasques
+  - megginkearney
 article:
   written_on: 2015-07-10
-  updated_on: 2015-07-10
+  updated_on: 2015-07-30
   order: 1
 collection: workspace
 takeaways:
-    - Chrome Developer Tools (DevTools) helps you develop, test, and debug your web sites and applications 
-      directly from the Google Chrome browser.
-    - Use DevTools to view and modify source code, search across files with regular expressions, set breakpoints, 
-      inspect elements, monitor network usage, and analyze web page performance.
-notes:
-  - fix URLs
+    - Inspect DOM and styles in the Elements panel.
+    - Debug Javascript with breakpoints in the Sources panel.
+    - Interact with your page in the Console.
+    - Interact with a page and record performance using the Timeline tool.
+    - Test your pages on mobile; work in device mode.
+remember:
+  canary:
+    - Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Google Chrome Canary</a> to get the latest version of DevTools.
 ---
 
 {% wrap content %}
 
-Most good software development environments include features that help developers find and fix bugs, but those features usually focus on one development language, such as C#, Java, or Python. Web developers, however, face a unique challenge in that a working page or app is not coded with a single language, but typically comprises at least three discrete but highly interconnected languages -- HTML, CSS, and JavaScript -- and maybe more. Thus, an integrated debugging environment that covers all the bases is very desirable.
+As you develop web pages and applications, the DevTools are essential tools to efficiently track down layout issues, set JavaScript breakpoints, and profile performance.
 
-Chrome Developer Tools (DevTools) is a set of debugging features built into the Google Chrome browser. As you develop web pages and applications, DevTools can help you identify and correct HTML, CSS, and JavaScript problems, as well as help you test content, style, and script changes.
+{% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.takeaways %}
 
-### Accessing DevTools
+## Access DevTools
 
-Open the Chrome menu ![Chrome menu](imgs/chrome_menu_button.png){:.inline} and choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu. The DevTools panel typically opens at the bottom of the main window, but you can change its position with the **Layout** button. Click the Dock to Main button ![Dock to main](imgs/dock_to_main_button.png){:.inline} to dock the panel on the right side of the main window, click ![Dock to bottom](imgs/dock_to_bottom_button.png){:.inline} to dock the panel at the bottom of the main window, or click and hold the button and click ![Undock](imgs/undock_button.png){:.inline} to undock the panel from the main window and open it in a separate window (useful when you need to see more of your page at once).
+Access the DevTools from any web page in Google Chrome:
 
-You can also open and manage DevTools with a variety of keyboard shortcuts. See [this reference page](https://web-central.appspot.com/web/tools/iterate/inspect-styles/shortcuts?hl=en) for a full list of shortcuts and their actions.
+* Select the Chrome menu ![Chrome menu](imgs/chrome_menu_button.png){:.inline} and choose **More tools** > **Developer tools**.
 
-### Using DevTools
+* Right-click a page element and choose **Inspect element** from the context menu.
 
-Working with DevTools can be complex, but generally follows a workflow of identify, change, and test. Here is how you might use the tools in a typical situation.
+* [Keyboard shortcut](tools/iterate/inspect-styles/shortcuts): <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac).
 
-1. While viewing your web page, open DevTools and position the tools panel as desired.
+DevTols are organized into task-orientated panels.
+Access each panel from the toolbar
+at the top of the DevTools window.
 
-2. Examine the Sources tab to see the files that make up the site: HTML, CSS, JavaScript, and others.
+{% include modules/remember.liquid title="Note" list=page.remember.canary %}
 
-3. Choose a file and make changes in the DevTools panel; content and style changes are immediately reflected in the web page panel, while script changes are reflected the next time the script runs.
+## Elements panel: inspect DOM and styles
 
-4. You can use powerful features like search and replace, which is supported (even using regular expressions) both within and across files. In scripts, watch expressions, breakpoints, and other debugging features are available.
+The Elements panel lets you see everything in one DOM tree,
+and allows inspection and on-the-fly editing of DOM elements.
+Use the Elements panel to identify the
+<abbr title="HyperText Markup Language">HTML</abbr> snippet for some aspect of the page.
 
-5. You can also find code that you want to change by approaching from the page elements; begin by inspecting an element, then examine the styles and scripts that apply to it, and backtrack to the rule or function that affects the element.
+For example, view the styles applied to a heading element in the DOM:
 
-6. You can save local copies of your changed files for later use, and can even compare saved local files to their original online versions; also, you can revert all or part of your changes at any time.
+![Viewing a heading element in the DOM](imgs/elements-panel.png)
 
-As you can see, using DevTools even in the most basic ways gives you a rich set of features for examining, changing, and testing your web page's structure, appearance, and behavior.
+[Read more about inspecting the DOM and styles »](tools/iterate/inspect-styles/basics)
 
-### What's in DevTools
+## Network panel: monitor network performance
 
-DevTools has many powerful and flexible capabilities that help you debug your pages. 
+The Network panel provides insights into resources that are requested and downloaded over the network in real time.
+Identify requests taking longer than expected
+to optimize your page.
 
-Click the **Device Mode** button ![Device mode](imgs/device_mode_button.png){:.inline} to toggle the page display between full-screen and mobile. In mobile mode, you can change the size of the display to simulate a variety of existing devices, or set it to a size of your own choosing.
+![Context menu for network requests](imgs/network-panel.png)
 
-The DevTools panel contains a set of tabs, each of which accesses a DevTools section. In the table below, click a section name to open a description page for that section.
+[Read more about how to improve your network performance »](tools/profile-performance/network-performance/resource-loading)
 
-<table>
-  <tr>
-    <th>[Section]()</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>[Elements]()</td>
-    <td>Explores the real-time page structure (DOM) and all current elements.</td>
-  </tr>
-  <tr>
-    <td>[Network]()</td>
-    <td>Displays information about the network operations of the page, including timing data, HTTP request and response headers, cookies, WebSocket data, and more.</td>
-  </tr>
-  <tr>
-    <td>[Sources]()</td>
-    <td>Explores the source files -- domains, HTML, JavaScript, and CSS -- from which the page is constructed.</td>
-  </tr>
-  <tr>
-    <td>[Timeline]()</td>
-    <td>Chronologically records, displays, and analyzes the page's activity as it occurs.</td>
-  </tr>
-  <tr>
-    <td>[Profiles]()</td>
-    <td>Allows you to profile the page's execution time and memory usage to indicate where resources are being used.</td>
-  </tr>
-  <tr>
-    <td>[Resources]()</td>
-    <td>Allows you to inspect the page's IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and style sheets.</td>
-  </tr>
-  <tr>
-    <td>[Audits]()</td>
-    <td>Allows you to run network and performance audits on the page, either on its current state or on a fresh reloaded state.</td>
-  </tr>
-  <tr>
-    <td>[Console]()</td>
-    <td>Allows you to log diagnostic information about the page to aid in debugging, and to execute direct commands that interact with the document and DevTools.</td>
-  </tr>
-</table>
+## Sources panel: debug JavaScript with breakpoints
+
+The Sources panel lets you debug your JavaScript code 
+using breakpoints.
+As the **complexity** of JavaScript applications increase,
+developers need powerful debugging tools to help quickly discover the cause of an issue and fix it efficiently.
+
+![Conditional breakpoint which logs to the console](imgs/js-debugging.png)
+
+[Read more about how to debug JavaScript with breakpoints »](tools/javascript/breakpoints)
+
+## Timeline panel: record and analyze page activity
+
+The **Timeline** panel gives you a complete overview
+of where time is spent when loading and using your web app or page.
+All events, from loading resources to parsing JavaScript,
+calculating styles, and repainting are plotted on a timeline.
+
+![Example timeline with various events](imgs/timeline-panel.png)
+
+[Read more about how to use the timeline tool »](tools/profile-performance/evaluate-performance/timeline-tool)
+
+## Profiles panel: profile execution time and memory usage
+
+Allows you to profile the page's execution time and memory usage to indicate where resources are being used.
+
+The **Profiles** panel lets you profile the execution time and
+memory usage of a web app or page.
+
+The provided profilers are:
+
+* The **CPU profiler** shows where execution time is spent in your page's JavaScript functions.
+* The **Heap profiler** shows memory distribution by your page's JavaScript objects and related DOM nodes.
+* The **JavaScript** profile shows where execution time is spent in your scripts.
+
+![Example heap snapshot](imgs/profiles-panel.png)
+
+[Read more about how to speed up JavaScript execution »](tools/profile-performance/rendering-tools/js-execution)
+
+## Resources panel: inspect storage
+
+The **Resources** panel lets you inspect resources that are loaded in the inspected page including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and style sheets.
+
+![JavaScript file in resources panel](imgs/resources-panel.png)
+
+[Read more about inspecting storage resources »](tools/iterate/manage-data/index)
+
+## Console panel: interact with page
+
+The **Console** panel provides two primary functions:
+
+* Log diagnostic information in the development process.
+* Provide a shell prompt which can be used to interact with the document and DevTools.
+
+![Evaluating commands in JS Console](imgs/expression-evaluation.png)
+
+[Read more about working with the console »](tools/javascript/console/)
+
+## Work in device mode
+
+Device mode lets you can change the size of the display to simulate a variety of existing devices, or set it to a size of your own choosing.
+
+![DevTools device mode](imgs/device-mode-initial-view.png)
+
+Change from device mode to full-screen,
+and vice versa, by clicking the **Device Mode** button
+![Device mode](imgs/device_mode_button.png){:.inline}. 
+
+[Read more about device mode »](tools/setup/device-testing/devtools-emulator)
+
+## How to re-position tools
+
+Use the **Layout** button to re-position DevTools:
+
+* Click the Dock to Main button ![Dock to main](imgs/dock_to_main_button.png){:.inline} to dock the panel on the right side of the main window.
+
+* Click ![Dock to bottom](imgs/dock_to_bottom_button.png){:.inline} to dock the panel at the bottom of the main window.
+
+* Click and hold the button and click
+![Undock](imgs/undock_button.png){:.inline}
+to undock the panel from the main window and
+open it in a separate window
+(useful when you need to see more of your page at once).
 
 {% endwrap %}
