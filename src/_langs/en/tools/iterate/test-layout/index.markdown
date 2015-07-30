@@ -17,8 +17,6 @@ panel: device mode
 id: test-layout
 ---
 
-{% wrap content %}
-
-Don't just test how your site looks across devices. Measure and improve page layout speed. Learn about common layout problems and the tools to find and fix them.
-
-{% endwrap %}
+{% comment %}
+Page content will be output by the section layout passed on the article collection matching page.id
+{% endcomment %}
