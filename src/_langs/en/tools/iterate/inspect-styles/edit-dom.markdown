@@ -44,7 +44,7 @@ remember:
 
 [Inspecting an element](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) shows you the DOM nodes for a rendered element in the browser. 
 
-![Inspect DOM nodes for an element animation](animations/right-click-inspect-element.png)
+{% animation animations/right-click-inspect-element.mp4 %}
 
 {% include modules/toc.liquid %}
 
@@ -99,7 +99,7 @@ To edit a DOM node and its children as HTML:
 3. Click outside the editable field to update the DOM.
 4. Press **Esc** to stop editing without modifying the DOM.
 
-![Edit DOM as HTML](animations/tab-switch-html-attr.png)
+{% animation animations/edit-as-html.mp4 %}
 
 ### Edit node attributes using context menu
 
@@ -116,7 +116,7 @@ Edit and add attributes using the DOM node context menu:
 Test out different page structures by rearranging the elements in the DOM tree.
 Drag a node within the Elements panel to move it to a new position in the DOM tree.
 
-![Edit DOM as HTML](animations/rearrange-nodes.png)
+{% animation animations/rearrange-nodes.mp4 %}
 
 ## Delete DOM elements
 
@@ -135,7 +135,7 @@ When you hover over or select a DOM node, the rendered element is highlighted in
 
 To scroll the page so the element appears in the viewport, **Right-click** the element and select **Scroll into View**.
 
-![Scroll the page](animations/scroll-into-view.png)
+{% animation animations/scroll-into-view.mp4 %}
 
 ## Set DOM breakpoints
 
@@ -189,7 +189,7 @@ For example, in the following animation:
 * Type in the search box, triggering the breakpoint and pausing execution.
 * Hovers over a JavaScript variable, displaying a popover with more details.
 
-![Interact with DOM breakpoint](animations/dom-breakpoint.png)
+{% animation animations/dom-breakpoint.mp4 %}
 
 When you trigger a DOM breakpoint, the breakpoint is highlighted in the DOM Breakpoints pane. The **Call Stack** pane displays the **reason** for a debugger pause:
 
@@ -205,7 +205,7 @@ that have registered listeners.
 
 Click the expander arrow next to the event type (for example `click`) to see a list of registered event handlers. Each handler is identified by a CSS selector-like element identifier, such as "`document`" or "`button#call-to-action`". If more than one handler is registered for the same element, the element is listed repeatedly.
 
-![Element event listeners](animations/event-listener-resize.png)
+{% animation animations/event-listeners.mp4 %}
 
 Click the expander arrow next to an element identifier to see the properties of the event handler. The Event Listeners pane lists the following properties for each listener:
 

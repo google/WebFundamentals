@@ -66,7 +66,7 @@ Learning git can be tough. A look at StackOverflow reveals over 53000 git relate
 
 ## OPTIMIZING RAIL
 
-60 frames per second is the target for a smooth web experience, but it’s easy to fall off the fast path. Paul Lewis and Cameron Pittman show you how to optimize the 4 major areas of your app Response, Animate, Idle, and Load aka RAIL in this FREE 6 part Udacity course. Blast jank invaders and master dev tools all while learning the secrets to a faster web app.
+60 frames per second is the target for a smooth web experience, but it’s easy to fall off the fast path. Paul Lewis and Cameron Pittman show you how to optimize the 4 major areas of your app Response, Animate, Idle, and Load aka RAIL in this FREE 6 part Udacity course. Blast jank invaders and master DevTools all while learning the secrets to a faster web app.
 
 [https://www.udacity.com/course/ud860](https://www.udacity.com/course/ud860)
 

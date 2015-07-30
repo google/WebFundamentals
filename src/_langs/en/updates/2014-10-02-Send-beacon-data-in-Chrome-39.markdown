@@ -56,7 +56,7 @@ the endpoint will receive the data when the user navigates away from the page:
 {% include_code beacon code-block %}
 {% endcomment %}
 
-If you inspect the network tab in Chrome Dev Tools with the
+If you inspect the network tab in Chrome DevTools with the
 **preserve logs** checkbox ticked, you’ll see an HTTP POST request
 to the above endpoint being sent when you navigate away from the page.
 

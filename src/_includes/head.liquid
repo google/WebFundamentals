@@ -6,13 +6,15 @@
 
 	{% case page.collection %}
 	{% when 'updates' %}
-		{{ page.title }} — Web Updates
+		{{ page.title }} — Google Web Updates
 	{% when 'showcase' %}
-		{{ page.title }} — Web Showcase
+		{{ page.title }} — Google Web Showcase
 	{% when 'case-study' %}
-		{{ page.title }} — Web Showcase
+		{{ page.title }} — Google Web Showcase
 	{% when 'spotlight' %}
-		{{ page.title }} — Web Showcase
+		{{ page.title }} — Google Web Showcase
+	{% when 'tools' %}
+		{{ page.title }} — Google Web Tools
 	{% else %}
 		{{ page.title }} — Web Fundamentals
 	{% endcase %}
@@ -42,7 +44,10 @@
 {% endfor %}
 
 {% if page.nofeed != true %}
-	{% if page.feedPath %}
+  {% if page.filepath contains "updates"%}
+<link rel="alternate" type="application/rss+xml" title="Updates RSS" href="{{site.baseurl}}/updates/rss.xml">
+<link rel="alternate" type="application/atom+xml" title="Updates RSS" href="{{site.baseurl}}/updates/atom.xml">	
+  {% elsif page.feedPath %}
 <link rel="alternate" type="application/rss+xml" title="{{page.feedName}}" href="{{site.baseurl}}/{{page.feedPath}}">
 	{% elsif include.feedURL %}
 <link rel="alternate" type="application/rss+xml" title="{{include.feedName}}" href="{{include.feedURL}}">

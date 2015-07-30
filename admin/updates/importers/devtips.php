@@ -98,7 +98,7 @@ function devtips_get($url) {
 			$html = trim($node->html());
 
 			// add line breaks
-			$html = str_replace("><", ">\r\n<", $html);
+			$html = str_replace("><", ">\n<", $html);
 
 			// remove aside
 			$pos = strpos($html, "<aside");
@@ -107,8 +107,8 @@ function devtips_get($url) {
 			}
 
 			// convert <p>'s to just line breaks
-			$html = str_replace("<p>", "\r\n", $html);
-			$html = str_replace("</p>", "\r\n", $html);
+			$html = str_replace("<p>", "\n", $html);
+			$html = str_replace("</p>", "\n", $html);
 
 			$tip->set('content', $html);
 		});

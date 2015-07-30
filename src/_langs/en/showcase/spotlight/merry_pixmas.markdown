@@ -29,7 +29,7 @@ developer: Jim Savage
 
 description: Christmas fun with 3D CSS Transforms.
 pros: |
-  A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a Web manifest for a homescreen experience that launches full screen.
+  A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a Web manifest for a home screen experience that launches full screen.
 
   Pro tip: Shake your phone to make it snow!
 cons: |

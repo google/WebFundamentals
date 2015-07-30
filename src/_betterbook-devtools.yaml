@@ -2,8 +2,10 @@ toc:
 - title: "<strong>DevTools</strong>"
   path: /chrome-devtools/
   home: true
-- title: "What's new"
-  path: /updates/chrome-devtools/
+- title: "Updates"
+  path: /updates/chrome-devtools/news
+- title: "Tips"
+  path: /updates/chrome-devtools/tip
 - title: "Documentation"
   path: "#docs"
   external: true
