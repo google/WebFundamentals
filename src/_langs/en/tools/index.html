@@ -16,9 +16,8 @@ feedPath: tools/feed.xml
   <div class="container">
     <p class="headliner">Get productive.</p>
     <div class="desc">
-      Discover our <h1>tools</h1> and learn how to kickstart your development cycle.
+      Discover our <h1>tools</h1> and kickstart your development.
       <div>
-        <a class="toolbutton" href="/web/tools/setup">GET STARTED</a>
         <a class="toolbutton" href="/web/updates/tools">WHAT'S NEW</a>        
       </div>
     </div>
@@ -95,7 +94,7 @@ feedPath: tools/feed.xml
           <div>
             <a href="https://www.polymer-project.org"><h4>Polymer</h4></a>
             <p>
-              Polymer is a library that makes it easier than ever to make fast, beautiful, and interoperable web components.
+              Polymer makes it easier than ever to make fast, beautiful, and interoperable web components.
             </p>
           </div>
         </li>
@@ -140,11 +139,15 @@ feedPath: tools/feed.xml
       </ul>
     </div>
 
+{% if page.articles.updates %}
+
     <div class="tools-updates">
       <h3><a href="/web/updates/tools/tip">Latest Tips</a></h3>
       {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
     </div>
-    
+ 
+{% endif %}
+
   </div>
 
 </div>
