@@ -1,7 +1,7 @@
 ---
 rss: false
 layout: article
-title: "Access Your Site From Devices Using Remote Debugging"
+title: "Access Your Site From Devices"
 seotitle: "Access Your Development Site From Devices Using Remote Debugging"
 description: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
 introduction: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
@@ -11,7 +11,7 @@ article:
   written_on: 2015-04-14
   updated_on: 2015-04-22
   order: 1
-collection: device-testing
+collection: remote-debugging
 key-takeaways:
   real: 
     - There's no substitute for debugging your site on a real device. Debug browser tabs on your device from your development workspace using remote debugging.
@@ -87,7 +87,7 @@ If you have problems finding your device on the **chrome://inspect page**, see t
 
 ### Ready to Debug your site in a browser tab!
 
-On your computer, the **chrome://inspect** page displays every connected device, along with its open tabs and debug-enabled [WebViews](webview.markdown).
+On your computer, the **chrome://inspect** page displays every connected device, along with its open tabs and debug-enabled [WebViews](tools/setup/remote-debugging/local-server).
 
 ![The chrome://inspect page.](imgs/chrome-inspect-devices.png)
 
@@ -120,7 +120,8 @@ To debug Safari for iOS, follow these steps:
 
 Unfortunately there is no way to debug a site on Windows Phone, but you can  
 [emulate a mobile browser on the desktop version of IE
-11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx). See also [Mimic Development Site in Production](https://web-central.appspot.com/web/tools/setup/device-testing/devtools-emulator?hl=en).
+11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
+See also [Mimic Development Site in Production](tools/setup/device-testing/devtools-emulator).
 
 ## Screencast From Android Device to Development Machine
 
@@ -158,7 +159,7 @@ Other DevTools work with the screencast too. For example, to inspect an element,
 * On your desktop browser, navigate to **chrome://inspect** and verify that **Discover USB devices** is checked.
 * Remote debugging requires your version of desktop Chrome to be newer than the version of Chrome for Android on your device. Try using [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) (Mac/Windows) or the Chrome [Dev channel](http://www.chromium.org/getting-involved/dev-channel) release (Linux) on desktop.
 
-If you still can't see your device, unplug it. On your device, select **Settings > Developer options**. Tap **Revoke USB debugging authorizations**. Then, retry the [device setup](#setting-up-device) and [discovery processes](#discovering-devices).
+If you still can't see your device, unplug it. On your device, select **Settings > Developer options**. Tap **Revoke USB debugging authorizations**. Then, retry the [device setup and discovery process](#access-site-on-android-device).
 
 ### I can't see my browser tabs on the **chrome://inspect** page.
 

@@ -8,7 +8,7 @@ introduction: "The Chrome DevTools Console panel exposes a wealth of information
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
-  order: 6
+  order: 5
 authors:
   - megginkearney
 priority: 0
