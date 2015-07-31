@@ -54,6 +54,7 @@
         padding-right: 2em;
         padding-bottom: 2em;
         margin-top: 1em;
+        margin-right: 2em;
 
         h4 {
           color: #333;
@@ -106,9 +107,6 @@
       -webkit-flex: 1 1 75%;
     }
   }
-
-
-
 
   h3 {
     border-bottom: 1px solid #E8E8E8;
@@ -595,10 +593,30 @@
     margin-top: 1em; 
   }
 
+  .tools-docs-listing {
+    display: -webkit-flex;
+    display: flex;
+    > div {
+      flex: 1 1 50%;
+    }
+  }
+
   .tools-home {
 
     margin-top: 0;
     margin-bottom: 1em;
+
+    .tools-docs-listing {
+      h3 {
+        border-bottom: 1px solid #C5C5C5;
+        padding-bottom: 0.5em;
+        margin-right: 1em;
+      }
+    }
+
+    ul.doclist.by-panel {
+      margin-top: 2em;
+    }
 
     ul.doclist.by-panel > li {
 
@@ -609,21 +627,27 @@
         -webkit-flex: 0 1 50%;
       }
 
-      ul, img {
-        display: inline-block;
-        @include medium {
-          width: 49%;
-        }
-        
-        vertical-align: top;
-        margin-top: 0;
+      img {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      h4 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        top: -1em;
+        color: #fff;
+        background-color: rgba(0,0,0, 0.36);
       }
 
       ul {
-        @include medium {
-          padding-left: 16px;
-        }
+        margin-top: -0.5em;
+        margin-bottom: 0.5em;
       }
+
     }
 
     .doclist img {
