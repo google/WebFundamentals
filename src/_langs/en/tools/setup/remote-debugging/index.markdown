@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Set Up Remote Debugging"
 seotitle: "Set Up Remote Debugging"
 description: "Check your site's responsive layouts and performance on real devices."

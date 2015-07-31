@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Speed Up JavaScript Execution"
 seotitle: "Speed Up JavaScript Execution Using DevTools Profiles Panel"
 description: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 optimization checks."

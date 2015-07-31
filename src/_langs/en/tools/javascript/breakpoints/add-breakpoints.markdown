@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "How to Add or Remove Breakpoints"
 seotitle: "How to Add or Remove Breakpoints"
 description: "DevTools provides four types of breakpoints that you use in different circumstances. Each breakpoint type is added or removed differently."

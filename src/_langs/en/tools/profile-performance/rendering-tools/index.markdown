@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Runtime Performance"
 seotitle: "Runtime Performance"
 description: "Make your site look great and load fast on any device. Understand the common problems that occur when the browser renders elements on a page. Use tools to help you identify and fix these problems."

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect and Manage Your Cookies"
 seotitle: "Inspect and Manage Your Cookies in the Chrome DevTools Resources Panel"
 description: "Inspect and manage your site's cookies by expanding the Cookies category in the Chrome DevTools Resources panel."

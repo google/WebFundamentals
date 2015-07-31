@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Map Minified Code to Source Code"
 seotitle: "Map Minified Code to Source Code Using Source Maps"
 description: "Keep your client-side code readable and debuggable even after you've combined and minified it."

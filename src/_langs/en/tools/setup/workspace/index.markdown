@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: tools-section
 title: "Set Up Your Workspace"
 rss: false
 seotitle: "Set Up Your Workspace"
