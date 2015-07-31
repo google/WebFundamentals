@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Measure Resource Loading Times"
 seotitle: "Measure Resource Loading Times Using Chrome DevTools Network Panel"
 description: "Measure the network performance of your web application

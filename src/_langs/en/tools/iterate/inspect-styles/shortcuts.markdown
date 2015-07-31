@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Keyboard Shortcuts Reference"
 seotitle: "Chrome DevTools Keyboard Shortcuts Reference"
 description: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. "

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect and Tweak Your Pages: the Basics"
 seotitle: "Inspect and Tweak Your Pages in the Chrome DevTools Elements Panel"
 description: "Inspect and live-edit the HTML & CSS of a web page using the Chrome DevTools Elements panel."

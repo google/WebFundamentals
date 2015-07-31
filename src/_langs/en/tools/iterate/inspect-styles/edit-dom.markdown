@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Edit the DOM"
 seotitle: "Edit the DOM in the Chrome DevTools Elements panel."
 description: "The DOM defines your page structure. Each DOM node is a page element, for example, a header node, paragraph node. View and modify your page structure in the Elements panel."

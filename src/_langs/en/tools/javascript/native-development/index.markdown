@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Debug Web Pages in Native Apps"
 seotitle: "Debug Web Pages in Native Apps"
 description: "Debug web pages in your native apps using Chrome Developer Tools."

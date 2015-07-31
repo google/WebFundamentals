@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Set Up Persistent Workflow"
 seotitle: "Set Up Persistent Authoring in Chrome DevTools by Mapping Source Files to Workspaces"
 description: "Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk."

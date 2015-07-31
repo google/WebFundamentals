@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Test Different Layouts"
 seotitle: "Test Different Layouts using the Chrome DevTools Device Emulator."
 description: "See how your site renders across different devices without ever leaving the browser."

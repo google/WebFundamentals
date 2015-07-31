@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Debug WebView Content in Your Development Workspace"
 seotitle: "Debug WebView Content in Native Android App in Your Development Workspace"
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."

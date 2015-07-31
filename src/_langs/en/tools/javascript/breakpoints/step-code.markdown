@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "How to Step Through the Code"
 seotitle: "How to Step Through the Code Using Chrome DevTools Breakpoints"
 description: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening."

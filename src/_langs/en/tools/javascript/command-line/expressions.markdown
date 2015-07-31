@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Evaluate Expressions"
 seotitle: "Evaluation Expressions from the Command Line"
 description: "Expore the state of any item on your page from the DevTools console."

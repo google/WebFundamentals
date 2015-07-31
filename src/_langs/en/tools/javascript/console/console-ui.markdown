@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "How to Use Console UI"
 seotitle: "How to Use Console UI in Chrome DevTools"
 description: "Learn how to use the JavaScript Console UI within Chrome DevTools."
