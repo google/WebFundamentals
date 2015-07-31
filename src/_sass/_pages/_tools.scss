@@ -88,6 +88,34 @@
     font-weight: normal;
   }
 
+  .guides-section {
+    .xxlarge {
+      margin-top: 1em;
+      font-size: 2em;
+      font-family: Roboto Condensed;
+      @include medium {
+        font-size: 4em;
+        font-weight: 300;
+      }
+    }
+    .xlarge {
+      @include wide {
+        font-weight: 300;
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  .guides-list {
+    h3 {
+      margin-top: 0;
+      padding-top: 1em;
+    }
+    .primary-content p {
+      margin-top: 0;
+    }
+  }
+
   /*
    * Section page
    */
