@@ -3,18 +3,17 @@ rss: false
 layout: article
 title: "Access Your Site Through Web Server"
 seotitle: "Access Your Development Site Through Web Server Using Port Forwarding"
-description: "Instead of physically connecting the devices to your development server, run a web server and point your device to the address."
-introduction: "Instead of physically connecting the devices to your development server, run a web server and point your device to the address."
+description: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."
+introduction: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."
 authors:
   - megginkearney
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
   order: 2
-collection: device-testing
+collection: remote-debugging
 key-takeaways:
   local-server: 
-    - You don't have to connect every device to your development server to test it. Run your site in a web server and point your device to the IP address.
     - Use port forwarding when your device can't access your development server's network.
     - To reach content on a customized domain, use port forwarding in combination with a proxy server.
 ---
@@ -26,7 +25,7 @@ key-takeaways:
 
 ## Open local version in device browser
 
-One of the simplest ways to test on a real device is to run your web server, find the IP address of your computer, and then point your mobile devices to your computer's IP address.
+Run your site in a web server, find the IP address of your computer, and then point your mobile devices to your computer's IP address.
 
 ### Find IP address
 

@@ -9,9 +9,9 @@ authors:
   - megginkearney
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-22
-  order: 3
-collection: device-testing
+  updated_on: 2015-07-30
+  order: 1
+collection: native-development
 key-takeaways:
   webview: 
     - Debug WebViews in native Android apps.

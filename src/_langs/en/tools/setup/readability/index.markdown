@@ -8,7 +8,7 @@ introduction: "Don't minify your source files. Keep your source code as readable
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
-  order: 3
+  order: 5
 authors:
   - megginkearney
 priority: 0

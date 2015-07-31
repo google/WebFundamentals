@@ -96,12 +96,8 @@ calculating styles, and repainting are plotted on a timeline.
 
 ## Profiles panel: profile execution time and memory usage
 
-Allows you to profile the page's execution time and memory usage to indicate where resources are being used.
-
 The **Profiles** panel lets you profile the execution time and
-memory usage of a web app or page.
-
-The provided profilers are:
+memory usage of a web app or page. The provided profilers are:
 
 * The **CPU profiler** shows where execution time is spent in your page's JavaScript functions.
 * The **Heap profiler** shows memory distribution by your page's JavaScript objects and related DOM nodes.
