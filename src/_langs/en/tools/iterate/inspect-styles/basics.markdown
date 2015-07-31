@@ -30,22 +30,15 @@ priority: 0
 collection: inspect-styles
 key-takeaways:
   dom-styles:
-    - The Elements panel lets you see everything in one DOM tree, and allows inspection and on-the-fly editing of DOM elements.
-    - The Styles pane shows the CSS rules that apply to the selected element, from highest priority to lowest.
-    - The Metrics pane below the styles pane shows the current element's box model.
-    - The Sources panel lets you see the changes you've made to your page locally.
-    - This doc covers only the very basics of inspecting and tweaking your pages. See the related guides to learn all there is to know about editing your pages.
+    - Inspect and edit on the fly any element in the DOM tree in the Elements panel.
+    - View and change the CSS rules applied to any selected element in the Styles pane.
+    - View and edit a selected element's box model in the Metrics pane.
+    - View any changes made to your page locally in the Sources panel.
 remember:
-  cascade-inheritance:
-    - Understanding how cascading and inheritance works is essential to debugging your styles. The cascade relates to how CSS declarations are given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit CSS properties from their containing elements (ancestors). For more, see <a href="http://www.w3.org/TR/CSS2/cascade.html">W3C documentation on cascading</a>.
   current-tree:
     - The DOM tree view shows the current state of the tree; it may not match the HTML that was originally loaded for different reasons. For example, you can modify the DOM tree using JavaScript; the browser engine can try to correct invalid author markup and produce an unexpected DOM.
 ---
 {% wrap content %}
-
-Having a real-time representation of the page can be a powerful tool when debugging and authoring web pages. The Chrome DevTools Elements panel lets you view structured information about the current page and make live-edits. 
-
-The Styles pane within the Elements panel shows the CSS rules applied to the individual elements in the page structure. For example, here’s a heading element selected in the Elements panel showing the styles applied to that element in the Styles pane:
 
 ![Viewing a heading element in the DOM](imgs/elements-panel.png)
 
@@ -64,9 +57,9 @@ Use the **Elements panel** to inspect all elements in your page in one DOM tree.
 There are several ways to inspect an element:
 
 * Right-click any element on the page the page and select **Inspect Element**.
-* Press **Ctrl + Shift + C** (or **Cmd + Shift + C** on Mac) to open DevTools in Inspect Element mode, then click on an element.
+* Press <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">C</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">C</kbd> on Mac) to open DevTools in Inspect Element mode, then click on an element.
 * Click the **Inspect Element button** ![Inspect icon](imgs/inspect-icon.png){:.inline} at the top of the DevTools window to go into Inspect Element Mode, then click on an element.
-* Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](https://developer.chrome.com/devtools/docs/commandline-api) for information on using inspect.
+* Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](tools/javascript/command-line/command-line-reference) for information on using inspect.
 
 ### Inspect styles applied to an element
 
@@ -88,7 +81,7 @@ The labels on the image below correspond with the numbered items below.
 6. The selector `:root body` has a higher **specificity** than just `body`, therefore its style declarations take precedence.
 7. `font-family` on the body is **overridden**. It is also a similar case for the `font-size` property (overridden due to [selector specificity](http://www.w3.org/TR/css3-selectors/#specificity)).
 
-{% include modules/remember.liquid title="Note" list=page.remember.cascade-inheritance %}
+Understanding how cascading and inheritance works is essential to debugging your styles. The cascade relates to how CSS declarations are given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit CSS properties from their containing elements (ancestors). For more, see [W3C documentation on cascading](http://www.w3.org/TR/CSS2/cascade.html).
 
 ## How to live-edit a DOM node
 
@@ -104,16 +97,12 @@ To live-edit a DOM node, simply double-click a [selected element](#inspect-an-el
 
 Live-edit styles within the **Styles pane** in the Elements panel. Unless the area containing the styling information is greyed out (as is the case with user agent stylesheets), all styles are editable.
 
-To edit a property name, click on it, edit, and press Tab or Enter:
+To edit a property name, click on it, edit, and press Tab or Enter: ![Edit property name](imgs/image_20.png){:.inline}
 
-![Edit property name](imgs/image_20.png)
-
-To edit the property's value, click on that value, edit, and press Tab or Enter:
-
-![Edit property value](imgs/image_21.png)
+To edit the property's value, click on that value, edit, and press Tab or Enter: ![Edit property value](imgs/image_21.png){:.inline} 
 
 By default, your CSS modifications are not permanent, changes are lost when you reload the page.
-We recommend [setting up persistent authoring](https://web-central.appspot.com/web/tools/setup/workspace/setup-workflow) so your changes aren't lost.
+We recommend [setting up persistent authoring](tools/setup/workspace/setup-workflow) so your changes aren't lost.
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.edit-styles %}
 
@@ -136,7 +125,7 @@ All values can be modified by double-clicking them, like property values in the 
 To view a history of live-edits made to your page:
 
 * Open the **Sources** panel.
-* Right-click (or **Ctrl + Click** on Mac) on a source file in the sidebar.
+* Right-click **Ctrl + Click** on a source file in the sidebar.
 * Select **Local modifications**.
 
 To explore the changes made:
@@ -148,11 +137,11 @@ To explore the changes made:
 
 ## Undo changes
 
-As mentioned earlier in this guide, if you haven't set up persistent authoring, then any time you reload the page all live-edits are lost. So first, [set up persistent authoring](https://web-central.appspot.com/web/tools/setup/workspace/setup-workflow).
+If you haven't [set up persistent authoring](tools/setup/workspace/setup-workflow), any time you reload the page, all live-edits are lost.
 
 Assuming you've set up persistent authoring, to undo changes:
 
-* Use **Ctrl + Z** (or **Ctrl + Z** on Mac) to quickly undo minor changes to the DOM or styles via the Elements panel.
+* Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Z</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Z</kbd> on Mac) to quickly undo minor changes to the DOM or styles via the Elements panel.
 
 * To undo all local modifications made to a file, open the **Sources** panel and select **revert** next to the filename.
 
