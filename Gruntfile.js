@@ -241,22 +241,65 @@ module.exports = function(grunt) {
   // 'all' builds for all languages specified in config.yml/langs_available + 'en'.
   // builds w/o multilang support if config.yml is missing langs_available.
   grunt.registerTask('jekyll', 'Run jekyll build.\nOptions:\n  [--lang]: list of languages or "all"\n  [--section]: optional subfolder. If passed, only rebuilds that section', function() {
-    var langs = grunt.option('lang') || 'all';
-    var section = grunt.option('section') || 'all';
 
-    // configure the watcher so it only watches the current section, otherwise it'll create and endless loop
-    if(section !== 'all') {
+    var langs = grunt.option('lang') || 'all';
+    var sections = grunt.option('section') || false;
+    var sectionTmpDir = '.sectiontmp';
+
+    // if sections were used previously and grunt crashed,
+    // we might still have some left overs. Repair them.
+    function repairMovedSections() {
+
+        if(fs.existsSync(sectionTmpDir)) {
+
+          var langFolders = fs.readdirSync(sectionTmpDir);
+          var sectionFolders;
+
+          for (var i = 0; i < langFolders.length; i++) {
+            sectionFolders = fs.readdirSync(sectionTmpDir + '/' + langFolders[i]);
+
+            for (var j = 0; j < sectionFolders.length; j++) {
+              // move this section folder back to its original place
+              fs.renameSync(sectionTmpDir + '/' + langFolders[i] + '/' + sectionFolders[j], 'src/_langs/' + langFolders[i] + '/' + sectionFolders[j]);
+            }
+
+            // remove the temp lang folder
+            fs.rmdirSync(sectionTmpDir + '/' + langFolders[i]);
+
+          }
+
+          // remove the section temp folder
+          fs.rmdirSync(sectionTmpDir);
+
+        }
+
+    }
+
+    // call this during launch to fix remainders from last crash
+    repairMovedSections();
+
+    // turn sections into an array
+    sections = sections ? sections.split(',') : sections;
+
+    // configure the watcher so it only watches the right sections, otherwise it'll create and endless loop
+    if(sections) {
       var watchConfig = grunt.config.get('watch');
       watchConfig.jekyll.files = [
-        'src/_langs/*/' + section + '/**/*.liquid',
-        'src/_langs/*/' + section + '/**/*.markdown',
-        'src/_langs/*/' + section + '/**/*.xml',
-        'src/_langs/*/' + section + '/**/*.yaml',
-        'src/_langs/*/' + section + '/**/*.html',
         'src/**/*.rb',
         'src/_includes/**/*.liquid',
         'src/_layouts/**/*.liquid'
       ];
+
+      for (var s = 0; s < sections.length; s++) {
+        watchConfig.jekyll.files = watchConfig.jekyll.files.concat([
+          'src/_langs/*/' + sections[s] + '/**/*.liquid',
+          'src/_langs/*/' + sections[s] + '/**/*.markdown',
+          'src/_langs/*/' + sections[s] + '/**/*.xml',
+          'src/_langs/*/' + sections[s] + '/**/*.yaml',
+          'src/_langs/*/' + sections[s] + '/**/*.html'
+        ]);
+      }
+
       grunt.config.set('watch', watchConfig);
     }
 
@@ -287,51 +330,44 @@ module.exports = function(grunt) {
     var cfgfiles = 'config/common.yml,config/' + cfgname + '.yml';
     var args = ['exec', 'jekyll', 'build', '--config', cfgfiles, '-t'];
     var spawnJekyll = function(lang, callback) {
+
       var opts = {env: process.env, stdio: 'inherit'};
       if (lang !== null) {
         opts.env.TRANS_LANG = lang;
         // opts.env.MENTOS_TIMEOUT = 32;
       }
 
-      // if a section has been passed, move other folders temporarily out of the
+      // if sections have been passed, move other folders temporarily out of the
       // src folder
-      if(section !== 'all') {
+      if(sections) {
         var srcDir = 'src/_langs/' + lang + '/';
-        var tmpDir = '.tmp' + lang + '/';
-        var otherSections = [];
 
-        // create tmp folder
-        if(!fs.existsSync(tmpDir)) {
-          fs.mkdirSync(tmpDir);
+        // create tmp folder(s)
+        if(!fs.existsSync(sectionTmpDir)) {
+          fs.mkdirSync(sectionTmpDir);
+        }
+        if(!fs.existsSync(sectionTmpDir + '/' + lang)) {
+          fs.mkdirSync(sectionTmpDir + '/' + lang);
         }
 
         // move other sections out of the src folder temporarily
         var dir = fs.readdirSync(srcDir);
         for (var i = 0; i < dir.length; i++) {
-          if(fs.statSync(srcDir + dir[i]).isDirectory() && dir[i] !== section && !(section === 'updates' && (dir[i] === 'showcase')) && !(section === 'tools' && (dir[i] === 'updates' || dir[i] === 'showcase'))) {
-            otherSections.push(dir[i]);
-            fs.renameSync(srcDir + dir[i], tmpDir + dir[i]);
+          if(fs.statSync(srcDir + dir[i]).isDirectory() && sections.indexOf(dir[i]) === -1) {
+            fs.renameSync(srcDir + dir[i], sectionTmpDir + '/' + lang + '/' + dir[i]);
           }
         }
 
       }
 
       var sectionCallback = function(err, res, code) {
-
-        // move other sections back to where they belong
-        for (var i = 0; i < otherSections.length; i++) {
-          fs.renameSync(tmpDir + otherSections[i], srcDir + otherSections[i]);
-        }
-
-        // remove tmp folder
-        if(fs.existsSync(tmpDir)) {
-          fs.rmdirSync(tmpDir);
-        }
-
+        repairMovedSections();
         callback(err, res, code);
       };
 
-      grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, section !== 'all' ? sectionCallback : callback);
+      // run Jekyll
+      grunt.util.spawn({cmd: 'bundle', args: args, opts: opts}, sections ? sectionCallback : callback);
+
     };
 
     var done = this.async();
