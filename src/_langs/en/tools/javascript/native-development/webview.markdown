@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: article
-title: "Access WebView Content in Your Development Workspace"
-seotitle: "Access WebView Content in Native Android App in Your Development Workspace"
+title: "Debug WebView Content in Your Development Workspace"
+seotitle: "Debug WebView Content in Native Android App in Your Development Workspace"
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 introduction: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 authors:
@@ -14,11 +14,14 @@ article:
 collection: native-development
 key-takeaways:
   webview: 
-    - Debug WebViews in native Android apps.
+    - Enable WebView debugging in your native Android app; debug WebViews in Chrome DevTools.
+    - Access list of debug-enabled WebViews via <strong>chrome://inspect</strong>.
+    - Debugging WebViews is the same as debugging a web page through <a href="tools/setup/remote-debugging">remote debugging</a>.
 ---
 {% wrap content%}
 
-On Android 4.4 (KitKat) or later, you can use DevTools to debug WebView content in native Android applications.
+On Android 4.4 (KitKat) or later,
+use DevTools to debug WebView content in native Android applications.
 
 {% include modules/toc.liquid %}
 
