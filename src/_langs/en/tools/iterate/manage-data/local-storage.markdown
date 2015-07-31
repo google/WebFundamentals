@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect and Manage Your Local Storage APIs"
 seotitle: "Inspect and Manage Local Storage APIs in the Chrome DevTools Resources Panel"
 description: "Inspect and edit local storage APIs including local and session storage, IndexedDB and Web SQL databases, and the Application Cache in the Chrome DevTools Resources panel."

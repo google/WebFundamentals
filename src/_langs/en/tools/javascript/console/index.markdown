@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Log Diagnostics to Console"
 seotitle: "Log Diagnostics to Console in Chrome DevTools"
 description: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."

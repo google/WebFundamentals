@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: landing
+layout: tools-landing
 title: "Profile"
 seotitle: "Profile Performance"
 description: "Don't focus too much on device performance. Remember the end goal is to make users happy. Understand how users perceive performance."

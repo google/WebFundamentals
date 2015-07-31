@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Memory Terminology"
 seotitle: "Memory Terminology"
 description: "This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages."

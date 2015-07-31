@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Optimize Performance Under Varying Network Conditions"
 seotitle: "Optimize Performance Under Varying Network Conditions Using Chrome DevTools Device Mode"
 description: "It’s easy to overlook the network conditions your users will face on mobile. Use tools to emulate different network conditions, fix up any load time issues and your users will thank you."

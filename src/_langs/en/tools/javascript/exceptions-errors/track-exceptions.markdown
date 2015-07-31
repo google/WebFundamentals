@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Track Exceptions"
 seotitle: "Track Exceptions"
 description: "Chrome provides useful tools that can help you debug a Web Page when it's throwing exceptions or some JavaScript code gives an error."

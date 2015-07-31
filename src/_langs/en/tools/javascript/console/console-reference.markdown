@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Console API Reference"
 seotitle: "Console API Reference"
 description: "Write to the console, create JavaScript profiles, and start debugging sessions with the console API."

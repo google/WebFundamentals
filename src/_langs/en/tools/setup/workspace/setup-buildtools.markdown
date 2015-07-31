@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: tools-article
 title: "Set Up Your Build Tools"
 rss: false
 seotitle: "Set Up Your Build Tools"

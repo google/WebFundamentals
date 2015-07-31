@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Timeline Event Reference"
 seotitle: "Timeline Event Reference"
 description: "The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type."

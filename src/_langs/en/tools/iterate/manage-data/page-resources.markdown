@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect Your Page Resources"
 seotitle: "Inspect Your Page Resources in the Chrome DevTools Resources Panel"
 description: "View all of your main document's resources including images, scripts, and fonts, and those of any loaded frames in the Chrome DevTools Resources panel."

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Track Executions in Console"
 seotitle: "Track Executions in Chrome DevTools Console"
 description: "You can take advantage of the Console API to measure execution times and count statement executions."

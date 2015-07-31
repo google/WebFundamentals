@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Monitor Events"
 seotitle: "Monitor Events Using the Chrome DevTools Command Line API"
 description: "The Chrome DevTools Command Line API offers various ways to observe and inspect Event Listeners"

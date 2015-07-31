@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Handle Exceptions at Runtime"
 seotitle: "Handle Exceptions at Runtime"
 description: "Chrome exposes the window.onerror handler function, called whenever an error happens in the JavaScript code execution."

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Set Up Command Line Shortcuts"
 seotitle: "Set Up Command Line Shortcuts"
 description: "Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that."

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Interact with Documents from a Command Line"
 seotitle: "Interact with Documents from a Command Line in Chrome DevTools"
 description: "The console does much more than print your JavaScript's log statements."

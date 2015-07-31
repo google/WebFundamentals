@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Exception and Error Handling"
 seotitle: "Exception and Error Handling"
 description: "The Chrome DevTools Console panel exposes a wealth of information about your page's exceptions and errors."
