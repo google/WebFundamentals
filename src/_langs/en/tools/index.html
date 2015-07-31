@@ -140,11 +140,15 @@ feedPath: tools/feed.xml
       </ul>
     </div>
 
+{% if page.articles.updates %}
+
     <div class="tools-updates">
       <h3><a href="/web/updates/tools/tip">Latest Tips</a></h3>
       {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
     </div>
-    
+ 
+{% endif %}
+
   </div>
 
 </div>
