@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Make JavaScript Look Pretty"
 seotitle: "Make JavaScript Look Pretty with PrettyPrint"
 description: "Transform your JavaScript into a more readable form by clicking the Pretty Print icon in Chrome DevTools."

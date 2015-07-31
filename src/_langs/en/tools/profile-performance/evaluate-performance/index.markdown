@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "How to Look at Performance"
 seotitle: "How to Look at Performance: RAIL"
 description: "Focus on the user first. How users perceive delays far outweighs any performance guidelines."

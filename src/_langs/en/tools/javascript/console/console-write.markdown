@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Write to Console"
 seotitle: "Write to Console in Chrome DevTools"
 description: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage."

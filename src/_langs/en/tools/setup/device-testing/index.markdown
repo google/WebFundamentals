@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Set Up Virtual Device Testing"
 seotitle: "Set Up Device Testing Using the Device Emulator"
 description: "Check your site's responsive layouts and performance on virtual devices."

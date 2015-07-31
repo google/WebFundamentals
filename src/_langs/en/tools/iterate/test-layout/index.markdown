@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Test Your Site's Responsive Layout"
 seotitle: "Test Your Site's Responsive Layout using Chrome DevTools device emulator"
 description: "Test your site's responsiveness across devices without leaving the browser."

@@ -1,0 +1,40 @@
+    {% include head.liquid %}
+  </head>
+
+  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{page.id}} theme--{{page.id}}" itemscope itemtype="http://schema.org/Article">
+    {% injectdata content _betterbook-tools.yaml %}
+
+    {% include header.liquid %}
+    <div class="tools-content">
+    <div class="guides-section">
+      <header class="container">
+          <h2 class="xxlarge">{{ page.title }}</h2>
+          <div class="divider divider--secondary">
+            <span class="themed divider-icon"></span>
+          </div>
+          <p>{{ page.description }}</p>
+      </header>
+
+      <ul class="guides-list container">
+
+      {% for guide in page.articles[page.id] %}
+        <li class="guides-list__item g--half theme--{{ guide.id }} {% cycle '', 'g--last' %}">
+          <div class="primary-content">
+            <h3 class="xlarge"><a href="{{site.baseurl}}{{guide.url | canonicalize | localize_link:guide}}" title="Go to {{guide.title}}" class="themed">{{guide.title}}</a></h3>
+            <p>{{guide.description}}</p>
+          </div>
+          <div class="secondary-content">
+            <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+            <ol class="list-links list-links--secondary">
+            {% for article in page.articles[guide.id] %}
+              <li><a href="{{site.baseurl}}{{article.url | canonicalize | localize_link:article}}" title="{{"read_the_lesson" | localize_string}} {{article.title}}">{{article.title}}</a></li>
+            {% endfor %}
+            </ol>
+          </div>
+        </li>
+      {% endfor %}
+
+      </ul>
+    </div>
+    </div>
+    {% include footer.liquid %}

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Command Line API Reference"
 seotitle: "Command Line API Reference for Chrome DevTools"
 description: "TBD description."

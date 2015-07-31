@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Breakpoints Reference"
 title: "Breakpoints Reference"
 description: "Use this quick reference table to get just the basics of the DevTools breakpoints."

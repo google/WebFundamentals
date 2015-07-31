@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Access Your Site From Devices"
 seotitle: "Access Your Development Site From Devices Using Remote Debugging"
 description: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."

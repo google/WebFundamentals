@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Set Up Your Editor"
 seotitle: "Set Up Your Editor"
 description: "Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins."
@@ -86,13 +86,13 @@ that way your CSS stays lean and you don't need to remember to hit
 
 <img src="imgs/sublime-autoprefixer.gif" alt="Sublime Autoprefixer Plugin Example" />
 
-#### ColorPicker
+### ColorPicker
 
 Pick any color from the palette and add it to your CSS with `ctrl+shift+c`.
 
 <img src="imgs/sublime-color-picker.png" alt="Sublime Color Picker Plugin" />
 
-#### Emmet
+### Emmet
 
 Add some useful keyboard shortcuts and snippets to your text editor. Check out
 the video on [Emmet.io](http://emmet.io/) for an intro into what it can do (a
@@ -100,14 +100,14 @@ personal favorite is the 'Toggle Comment' command).
 
 <img src="imgs/emmet-io-example.gif" alt="Demo of the Emmet.io Plugin" />
 
-#### HTML-CSS-JS Prettify
+### HTML-CSS-JS Prettify
 
 This extension gives you a command to format your HTML, CSS and JS. You can even
 prettify your files whenever your save a file.
 
 <img src="imgs/sublime-prettify.gif" alt="Gif of the Sublime Prettify Plugin" />
 
-#### Git Gutter
+### Git Gutter
 
 Add a marker in the gutter wherever there is a change made to a file.
 

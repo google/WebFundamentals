@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Fix Memory Problems"
 seotitle: "Fix Memory Problems Using Chrome DevTools Memory Profiling"
 description: "Memory loss occurs when a program repeatedly fails to return memory it has obtained for temporary use. Watch out for memory leaks, bloat, and forced garbage collection."

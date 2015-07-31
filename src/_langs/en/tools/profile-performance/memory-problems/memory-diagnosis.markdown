@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Memory Diagnosis"
 seotitle: "Memory Diagnosis"
 description: "Effective memory management is crucial for performance. Similar to native applications, web apps can suffer from memory leaks and bloat, but they also have to deal with garbage collection pauses."

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect CSS Media Queries"
 seotitle: ""
 description: "Preview styles for targeted screen sizes using the Chrome DevTools media query inspector."

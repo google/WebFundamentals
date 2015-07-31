@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Edit Styles"
 seotitle: "Edit Styles in the Chrome DevTools Styles pane."
 description: "CSS defines the presentation layer of your page. View and modify any CSS declaration that affects an element on the current page using the Chrome DevTools Styles pane."

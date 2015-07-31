@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: tools-article
 title: "Set Up Chrome DevTools"
 rss: false
 seotitle: "Set Up Chrome Developer Tools (DevTools)"
