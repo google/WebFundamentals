@@ -69,6 +69,8 @@ panels:
     </div>
 	</header>
 
+{% if page.articles.updates %}
+
   {% assign count = '' %}
   {% assign updates = page.articles.updates | sort: 'date' | reverse  %}
   {% for article in updates limit: 20 %}
@@ -107,6 +109,9 @@ panels:
   {% endif %}
   {% endif %}
   {% endfor %}
+
+{% endif %}
+
 <a name="docs"></a>
   <div class="tools-home">
 
@@ -207,11 +212,15 @@ panels:
 
 	</div>
 
+{% if page.articles.updates %}
+
   <div class="tools-updates devtools-updates">
     <div class="container">
       <h3><a href="/web/updates/chrome-devtools">Tips &amp; Tricks <span>All tips &amp; updates</span></a></h3>
       {% include modules/latest_updates.liquid limit=3 product="chrome-devtools" type="tip" %}
     </div>
   </div>
+
+{% endif %}
 	
 </div>
