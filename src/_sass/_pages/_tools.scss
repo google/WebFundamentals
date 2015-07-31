@@ -178,7 +178,7 @@
   color: #fff;
 
   > div {
-    padding-bottom: 3em;
+    padding-bottom: 2em;
     padding-top: 3em;
 
     @include medium {
@@ -239,7 +239,7 @@
       border-radius: 2px;
       font-size: 0.9em;
 
-      &.new, &:last-child {
+      &.new {
         background-color: rgb(63, 127, 237);
         color: #fff;
         margin-left: 0.5em;
@@ -279,21 +279,6 @@
     font-weight: 300;
     padding-top: 1em;
     padding-bottom: 1em;
-    &::before {
-      counter-increment: tools-steps;
-      content: counter(tools-steps);
-      background-color: rgba(0,0,0,0.2);
-      border-radius: 5em;
-      height: 2em;
-      width: 2em;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      line-height: 2em;
-      margin-right: 0.5em;
-      background: #4B8BFA;
-      color: #fff;
-    }
   }
 
   h4 {
