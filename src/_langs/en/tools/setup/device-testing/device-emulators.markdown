@@ -34,11 +34,12 @@ certain everything behaves as expected.
 
 ### Chrome DevTools emulation
 
-Chome DevTools has a [Device emulation tool](https://web-central.appspot.com/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
+Chome DevTools has a [Device emulation tool](tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
 
 You can activate device emulation by following these four steps:
 
-1. With Chrome DevTools open, click the arrow icon with three horizontal lines
+1. With Chrome DevTools open,
+click the arrow icon with three horizontal lines.
 2. Click the mobile device in the top left.
 3. Select the `Emulation` tab at the bottom.
 4. Then select the device you want to test against from the drop down.
