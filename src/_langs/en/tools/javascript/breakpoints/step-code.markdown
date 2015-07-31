@@ -38,17 +38,17 @@ Let's look at the options for stepping through the paused code, represented by a
 
 *The breakpoints button bar*
 
-To resume execution up to the next breakpoint, click **Resume** ![Resume](imgs/image_8.png). If no breakpoint is encountered, normal execution is resumed.
+To resume execution up to the next breakpoint, click **Resume** ![Resume](imgs/image_8.png){: .inline}. If no breakpoint is encountered, normal execution is resumed.
 
-To resume execution with breakpoints disabled for 500ms (one-half second), click and hold **Resume** until it expands, then click **Long resume** ![Long resume](imgs/image_9.png). This action is convenient for momentarily skipping breakpoints that would otherwise continually pause the code, e.g., a breakpoint inside a loop.
+To resume execution with breakpoints disabled for 500ms (one-half second), click and hold **Resume** until it expands, then click **Long resume** ![Long resume](imgs/image_9.png){: .inline}. This action is convenient for momentarily skipping breakpoints that would otherwise continually pause the code, e.g., a breakpoint inside a loop.
 
-To step over a function call, click **Step over** ![Step over](imgs/image_10.png); or, to step into a function call, click **Step into** ![Step into](imgs/image_11.png). These actions differ only if the next line of code to be executed contains a function call. If so, **Step over** executes the complete function and then pauses at the next statement outside the called function, while **Step into** executes only the function call and then pauses at the first statement inside the called function. If the next line of code to be executed does not contain a function call, these actions are identical. **Step into** is the typical "one line at a time" action.
+To step over a function call, click **Step over** ![Step over](imgs/image_10.png){: .inline}; or, to step into a function call, click **Step into** ![Step into](imgs/image_11.png){: .inline}. These actions differ only if the next line of code to be executed contains a function call. If so, **Step over** executes the complete function and then pauses at the next statement outside the called function, while **Step into** executes only the function call and then pauses at the first statement inside the called function. If the next line of code to be executed does not contain a function call, these actions are identical. **Step into** is the typical "one line at a time" action.
 
-To step out of a function, click **Step out** ![Step out](imgs/image_12.png). This action executes the remainder of the current function and then pauses at the next statement after the function call.
+To step out of a function, click **Step out** ![Step out](imgs/image_12.png){: .inline}. This action executes the remainder of the current function and then pauses at the next statement after the function call.
 
-To temporarily disable all breakpoints, click **Deactivate breakpoints** ![Deactivate breakpoints](imgs/image_13.png). This action is convenient when you want to resume full execution without actually removing your breakpoints. Click the button again to reactivate the breakpoints.
+To temporarily disable all breakpoints, click **Deactivate breakpoints** ![Deactivate breakpoints](imgs/image_13.png){: .inline}. This action is convenient when you want to resume full execution without actually removing your breakpoints. Click the button again to reactivate the breakpoints.
 
-To automatically pause when an exception (such as an undefined variable) occurs, click **Pause on exceptions** ![Pause on exceptions](imgs/image_14.png). This action is useful when you suspect a non-fatal exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs. 
+To automatically pause when an exception (such as an undefined variable) occurs, click **Pause on exceptions** ![Pause on exceptions](imgs/image_14.png){: .inline}. This action is useful when you suspect a non-fatal exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs. 
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the Call Stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is now, but how it got there, an important factor in debugging. 
 
@@ -60,7 +60,7 @@ In this Call Stack example, an initial onclick event at line 50 in the *index.ht
 
 ## Data manipulation
 
-While at a breakpoint, you can not only examine the code, but you can observe and modify the data it is processing. This is crucial when trying to track down a variable that seems to have the wrong value or a passed parameter that isn't received as expected. These actions are taken in the Console Drawer; click **Show/Hide drawer** ![Show/Hide drawer](imgs/image_16.png) to open or close the drawer.
+While at a breakpoint, you can not only examine the code, but you can observe and modify the data it is processing. This is crucial when trying to track down a variable that seems to have the wrong value or a passed parameter that isn't received as expected. These actions are taken in the Console Drawer; click **Show/Hide drawer** ![Show/Hide drawer](imgs/image_16.png){: .inline} to open or close the drawer.
 
 In the Console Drawer, you can simply type the name of a variable or parameter to see its current value. You can also type a JavaScript assignment statement to change the value, and then continue executing the script to observe the effect. In this way you can force variables to hold certain values in order to see whether your code behaves as you expect. 
 
