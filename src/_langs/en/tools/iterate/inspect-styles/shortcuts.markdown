@@ -8,7 +8,7 @@ introduction: "Chrome DevTools has several built-in shortcut keys that developer
 article:
   written_on: 2015-04-30
   updated_on: 2015-04-30
-  order: 4
+  order: 5
 authors:
   - megginkearney
 priority: 0
