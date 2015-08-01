@@ -7,8 +7,8 @@ description: "Preview styles for targeted screen sizes using the Chrome DevTools
 introduction: "Preview styles for targeted screen sizes using the Chrome DevTools media query inspector."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-05-11
-  order: 2
+  updated_on: 2015-07-31
+  order: 4
 authors:
   - megginkearney
 related-guides:
@@ -20,7 +20,7 @@ related-guides:
         title: "Set Up Browser Extensions"
         href: tools/setup/workspace/setup-extensions
 priority: 0
-collection: test-layout
+collection: inspect-styles
 key-takeaways:
   media-query:
     - The media query inspector detects media queries in your site and lets you preview styles for targeted screen sizes.
@@ -32,7 +32,7 @@ remember:
 ---
 {% wrap content %}
 
-[Media queries](https://web-central.appspot.com/web/tools/iterate/test-layout/media-queries)
+[Media queries](fundamentals/layouts/rwd-fundamentals/use-media-queries)
 are an essential part of responsive web design.
 They let you apply styles to your site based on device characteristics.
 For example, different styles sheets get applied to the site content
