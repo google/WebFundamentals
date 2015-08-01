@@ -11,14 +11,6 @@ article:
   order: 4
 authors:
   - megginkearney
-related-guides:
-  extensions:
-    -
-      title: Set Up Browser Extensions
-      href: tools/setup/workspace/setup-extensions
-      section:
-        title: "Set Up Browser Extensions"
-        href: tools/setup/workspace/setup-extensions
 priority: 0
 collection: inspect-styles
 key-takeaways:
@@ -35,15 +27,9 @@ remember:
 [Media queries](fundamentals/layouts/rwd-fundamentals/use-media-queries)
 are an essential part of responsive web design.
 They let you apply styles to your site based on device characteristics.
-For example, different styles sheets get applied to the site content
-based on the device's screen dimensions.
-
-The Chrome DevTools media query inspector makes it easy for you to inspect your site's
-media queries.
-
-<style>video { width: 100%; }</style>
-
-<video class="gfyVid" controls="" autoplay="" loop="" muted="" style="display: block;" poster="//thumbs.gfycat.com/OilyHarmlessAffenpinscher-poster.jpg"><source id="webmsource" src="//zippy.gfycat.com/OilyHarmlessAffenpinscher.webm" type="video/webm"><source id="mp4source" src="//fat.gfycat.com/OilyHarmlessAffenpinscher.mp4" type="video/mp4">![Inspecting media queries.](http://zippy.gfycat.com/OilyHarmlessAffenpinscher.gif)</video>
+For example,
+media queries control the style sheets applied to the site content
+based on the device dimensions.
 
 {% include modules/toc.liquid %}
 
@@ -55,6 +41,10 @@ To view the media query inspector, click the **Media queries** ![media queries i
 
 ![media query inspector](imgs/media-query-inspector-ruler.png)
 
+To avoid confusion and maximize media query views in device mode,
+turn off mobile emulation:
+click **Reset all overrides** ![reset all overrides](imgs/icon-reset-overrides.png){:.inline} icon and refresh the page.
+
 Media queries are color-coded as follows:
 
 <style>#colortable { width: 60%; border: none; } #colortable td { border: none; } .max-width { background: #327ff2; width: 10%; } .max-and-min { background: #3b9903; width: 10%; } .min-width { background: #d4731f; width: 10%; }</style>
@@ -62,24 +52,27 @@ Media queries are color-coded as follows:
 <table id="colortable">
 	<tbody>
 		<tr>
-			<td class="max-width">Queries targeting a maximum width.</td>
+			<td class="max-width"></td>
+      <td>Queries targeting a maximum width.</td>
 		</tr>
 		<tr>
-			<td class="max-and-min">Queries targeting widths within a range.</td>
+			<td class="max-and-min"></td>
+      <td>Queries targeting widths within a range.</td>
 		</tr>
 		<tr>
-			<td class="min-width">Queries targeting a minimum width.</td>
+			<td class="min-width"></td>
+      <td>Queries targeting a minimum width.</td>
 		</tr>
 	</tbody>
 </table>
 
 ## Preview screen styles
 
-Click a media query bar to adjust the emulator resolution and preview styles for the targeted screen sizes.
+Click a media query bar to adjust the emulator resolution and preview styles for the targeted screen sizes:
 
-As you work with the media query inspector, you might find that you don't always want to use the mobile emulator. To turn off mobile emulation without exiting device mode, click **Reset all overrides** ![reset all overrides](imgs/icon-reset-overrides.png){:.inline} icon and refresh the page.
-
-{% include modules/related_guides.liquid inline=true list=page.related-guides.extensions %}
+<style>video { width: 100%; }</style>
+<br>    
+<video class="gfyVid" controls="" autoplay="" loop="" muted="" style="display: block;" poster="//thumbs.gfycat.com/OilyHarmlessAffenpinscher-poster.jpg"><source id="webmsource" src="//zippy.gfycat.com/OilyHarmlessAffenpinscher.webm" type="video/webm"><source id="mp4source" src="//fat.gfycat.com/OilyHarmlessAffenpinscher.mp4" type="video/mp4">![Inspecting media queries.](http://zippy.gfycat.com/OilyHarmlessAffenpinscher.gif)</video>
 
 ## View CSS
 
