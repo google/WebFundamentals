@@ -15,6 +15,22 @@
     font-weight: normal;
   }
 
+  td {
+    font-weight: normal;
+    @include medium {
+      padding: 1em 1em;
+      min-height: auto;
+    }
+  }
+
+  th {
+    @include medium {
+      padding: 1em 1em;
+      font-size: inherit;
+      font-weight: 400;
+    }
+  }
+
   b, strong {
     font-weight: 500;
   }

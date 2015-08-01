@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-article
-title: "Keyboard Shortcuts Reference"
-seotitle: "Chrome DevTools Keyboard Shortcuts Reference"
+title: "Keyboard & UI Shortcuts Reference"
+seotitle: "Chrome DevTools Keyboard & UI Shortcuts Reference"
 description: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. "
 introduction: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow."
 article:
@@ -26,14 +26,14 @@ This guide provides a quick reference to each shortcut availabe in Chrome DevToo
 
 {% include modules/toc.liquid %}
 
-## Access DevTools using these shortcuts
+## Accessing DevTools
 
 To access the DevTools, on any web page or app in Google Chrome:
 
 * Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png){:.inline} at the top-right of your browser window, then select **Tools > Developer Tools**.
 * Right-click on any page element and select **Inspect Element**.
 
-Additonal shortcuts to access DevTools:
+On the keyboard:
 
 <table class="table-3">
   <thead>
@@ -65,9 +65,9 @@ Additonal shortcuts to access DevTools:
   </tbody>
 </table>
 
-## Shortcuts in all panels
+## Global keyboard shortcuts
 
-Shortcuts available in all DevTools panels:
+The following keyboard shortcuts are available in all DevTools panels:
 
 <table class="table-3">
   <thead>
@@ -164,7 +164,9 @@ Shortcuts available in all DevTools panels:
   </tbody>
 </table>
 
-## Shortcuts in Elements panel
+## Mouse shortcuts by Panel
+
+### Elements
 
 By right-clicking an element you can:
 
@@ -172,7 +174,37 @@ By right-clicking an element you can:
 * Set breakpoints on the elements: (Subtree modifications, Attribute modification, Node removal).
 * Clear console.
 
-Shortcuts available in the Elements panel:
+#### In the styles sidebar
+
+![Element Pseudostates](imgs/attributes-icon.png)
+Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
+
+![Adding style selectors](imgs/plus.png)
+Add new style selectors.
+
+### Sources
+
+![Pause on Exception Button](imgs/pause-gray.png)
+Don't pause on exceptions.
+
+![Pause on All Exceptions](imgs/pause-blue.png)
+Pause on all exceptions (including those caught within try/catch blocks).
+
+![Pause on Uncaught Exceptions](imgs/pause-purple.png)
+Pause on uncaught exceptions (usually the one you want).
+
+### Console
+
+Right-clicking on console:
+
+* XMLHttpRequest logging: Turn on to view the XHR log.
+* Preserve log upon navigation.
+* Filter: Hide and unhide messages from script files.
+* Clear console: Clear all console messages.
+
+## Keyboard shortcuts by Panel
+
+### Elements
 
 <table class="table-3">
   <thead>
@@ -229,7 +261,7 @@ Shortcuts available in the Elements panel:
   </tbody>
 </table>
 
-## Shortcuts in Styles sidebar
+#### Styles sidebar
 
 Shortcuts available in the Styles sidebar:
 
@@ -298,15 +330,7 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-![Element Pseudostates](imgs/attributes-icon.png)
-Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
-
-![Adding style selectors](imgs/plus.png)
-Add new style selectors.
-
-## Shortcuts in Sources panel
-
-Shortcuts available in the Sources panel:
+### Sources
 
 <table class="table-3">
   <thead>
@@ -413,18 +437,7 @@ Shortcuts available in the Sources panel:
   </tbody>
 </table>
 
-![Pause on Exception Button](imgs/pause-gray.png)
-Don't pause on exceptions.
-
-![Pause on All Exceptions](imgs/pause-blue.png)
-Pause on all exceptions (including those caught within try/catch blocks).
-
-![Pause on Uncaught Exceptions](imgs/pause-purple.png)
-Pause on uncaught exceptions (usually the one you want).
-
-## Code editor shortcuts
-
-Code editor shortcuts:
+#### Within the Code Editor
 
 <table class="table-3">
   <thead>
@@ -466,9 +479,7 @@ Code editor shortcuts:
   </tbody>
 </table>
 
-## Shortcuts in Timeline panel
-
-Shortcuts available in the Timeline panel:
+### Timeline
 
 <table class="table-3">
   <thead>
@@ -495,9 +506,7 @@ Shortcuts available in the Timeline panel:
   </tbody>
 </table>
 
-## Shortcuts in Profiles panel
-
-Shortcuts available in the Profiles panel:
+### Profiles
 
 <table class="table-3">
   <thead>
@@ -514,9 +523,7 @@ Shortcuts available in the Profiles panel:
   </tbody>
 </table>
 
-## Console shortcuts
-
-Shortcuts available in the Console:
+### Console
 
 <table class="table-3">
   <thead>
@@ -563,16 +570,24 @@ Shortcuts available in the Console:
   </tbody>
 </table>
 
-Right-clicking on console:
+### Device Mode
 
-* XMLHttpRequest logging: Turn on to view the XHR log.
-* Preserve log upon navigation.
-* Filter: Hide and unhide messages from script files.
-* Clear console: Clear all console messages.
+<table class="table-3">
+  <thead>
+      <th>Device Mode Shortcuts</th>
+      <th>Windows</th>
+      <th>Mac</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Emulation Shortcuts">Pinch zoom in and out</td>
+      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
+      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
+    </tr>
+  </tbody>
+</table>
 
-## Screencasting shortcuts
-
-Screencasting shortcuts:
+#### When Screencasting
 
 <table class="table-3">
   <thead>
@@ -594,26 +609,7 @@ Screencasting shortcuts:
   </tbody>
 </table>
 
-## Emulation shortcuts
-
-Emulation shortcuts:
-
-<table class="table-3">
-  <thead>
-      <th>Emulation Shortcuts</th>
-      <th>Windows</th>
-      <th>Mac</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="Emulation Shortcuts">Pinch zoom in and out</td>
-      <td data-th="Windows"><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
-      <td data-th="Mac"><span class="kbd">Shift</span> + <span class="kbd">Scroll</span></td>
-    </tr>
-  </tbody>
-</table>
-
-## More Chrome shortcuts
+## Bonus: Useful Chrome shortcuts
 
 Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](http://goo.gl/PsTNm) for Windows, Mac, and Linux:
 
