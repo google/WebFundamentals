@@ -18,13 +18,7 @@ id: manage-data
 
 {% wrap content %}
 
-The Resources panel lets you access data sources like IndexedDB and Web SQL databases, cookies, the Application Cache, and local and session storage, as well as page resources like images, fonts, and style sheets.
-
-To access the Resources panel:
-
-* Open the Chrome menu ![Chrome menu](imgs/chrome-menu.png){:.inline}.
-* Choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu.
-* Select the **Resources** panel.
+The Resources panel lets you access data sources like IndexedDB and Web SQL databases, cookies, the Application Cache, and local and session storage, as well as page resources like images, fonts, style sheets, and the actual pages, as shown here:
 
 ![Resources panel](imgs/resources_panel.png)
 
