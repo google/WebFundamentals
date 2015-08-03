@@ -41,7 +41,7 @@ Access the DevTools from any web page in Google Chrome:
 
 * Right-click a page element and choose **Inspect element** from the context menu.
 
-* [Keyboard shortcut](tools/iterate/inspect-styles/shortcuts): <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac).
+* [Keyboard shortcut](/web/tools/iterate/inspect-styles/shortcuts): <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac).
 
 DevTols are organized into task-orientated panels.
 Access each panel from the toolbar
@@ -60,7 +60,7 @@ For example, view the styles applied to a heading element in the DOM:
 
 ![Viewing a heading element in the DOM](imgs/elements-panel.png)
 
-[Read more about inspecting the DOM and styles »](tools/iterate/inspect-styles/basics)
+[Read more about inspecting the DOM and styles »](/web/tools/iterate/inspect-styles/basics)
 
 ## Network panel: monitor network performance
 
@@ -70,7 +70,7 @@ to optimize your page.
 
 ![Context menu for network requests](imgs/network-panel.png)
 
-[Read more about how to improve your network performance »](tools/profile-performance/network-performance/resource-loading)
+[Read more about how to improve your network performance »](/web/tools/profile-performance/network-performance/resource-loading)
 
 ## Sources panel: debug JavaScript with breakpoints
 
@@ -81,7 +81,7 @@ developers need powerful debugging tools to help quickly discover the cause of a
 
 ![Conditional breakpoint which logs to the console](imgs/js-debugging.png)
 
-[Read more about how to debug JavaScript with breakpoints »](tools/javascript/breakpoints)
+[Read more about how to debug JavaScript with breakpoints »](/web/tools/javascript/breakpoints)
 
 ## Timeline panel: record and analyze page activity
 
@@ -92,7 +92,7 @@ calculating styles, and repainting are plotted on a timeline.
 
 ![Example timeline with various events](imgs/timeline-panel.png)
 
-[Read more about how to use the timeline tool »](tools/profile-performance/evaluate-performance/timeline-tool)
+[Read more about how to use the timeline tool »](/web/tools/profile-performance/evaluate-performance/timeline-tool)
 
 ## Profiles panel: profile execution time and memory usage
 
@@ -105,7 +105,7 @@ memory usage of a web app or page. The provided profilers are:
 
 ![Example heap snapshot](imgs/profiles-panel.png)
 
-[Read more about how to speed up JavaScript execution »](tools/profile-performance/rendering-tools/js-execution)
+[Read more about how to speed up JavaScript execution »](/web/tools/profile-performance/rendering-tools/js-execution)
 
 ## Resources panel: inspect storage
 
@@ -113,7 +113,7 @@ The **Resources** panel lets you inspect resources that are loaded in the inspec
 
 ![JavaScript file in resources panel](imgs/resources-panel.png)
 
-[Read more about inspecting storage resources »](tools/iterate/manage-data/index)
+[Read more about inspecting storage resources »](/web/tools/iterate/manage-data/index)
 
 ## Console panel: interact with page
 
@@ -124,7 +124,7 @@ The **Console** panel provides two primary functions:
 
 ![Evaluating commands in JS Console](imgs/expression-evaluation.png)
 
-[Read more about working with the console »](tools/javascript/console/)
+[Read more about working with the console »](/web/tools/javascript/console/)
 
 ## Work in device mode
 
@@ -136,7 +136,7 @@ Change from device mode to full-screen,
 and vice versa, by clicking the **Device Mode** button
 ![Device mode](imgs/device_mode_button.png){:.inline}. 
 
-[Read more about device mode »](tools/setup/device-testing/devtools-emulator)
+[Read more about device mode »](/web/tools/setup/device-testing/devtools-emulator)
 
 ## How to re-position tools
 
