@@ -19,6 +19,6 @@ id: console
 
 {% wrap content %}
 
-The Console lets you use standard JavaScript statements and Console-specific commands while a page is live in the browser to help you debug the page. You can view diagnostic messages, display both raw and structured data, control and filter output, examine and modify page elements, measure execution time, and more. In the Console you can run scripts, group results, compare data structures, change element properties, and track code execution, all without leaving the page.
+The Console lets you use standard JavaScript statements and Console-specific commands while a page is live in the browser to help you debug the page. View diagnostic messages, display both raw and structured data, control and filter output, examine and modify page elements, measure execution time, and more.
 
 {% endwrap %}
