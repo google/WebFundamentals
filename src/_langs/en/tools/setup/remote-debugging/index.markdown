@@ -11,6 +11,7 @@ article:
   order: 2
 id: remote-debugging
 collection: setup
+panel: device mode
 ---
 
 {% comment %}
