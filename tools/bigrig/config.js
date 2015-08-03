@@ -27,7 +27,7 @@ module.exports = {
     },
     'Updates Article (3G, Motorola G)': {
       'url': rootUrl + 'updates/2015/06/mse-gapless-audio.html',
-      'labels': 'updates-home-page-3g-motorola-g',
+      'labels': 'updates-article-page-3g-motorola-g',
       'location': 'Dulles_MotoG:Motorola G - Chrome Dev',
       'connectivity': '3G'
     },
