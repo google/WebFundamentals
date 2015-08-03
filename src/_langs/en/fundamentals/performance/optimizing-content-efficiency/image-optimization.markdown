@@ -450,7 +450,7 @@ Some tips and techniques to keep in mind as you work on optimizing your images:
 * **Pick best raster image format:** determine your functional requirements and select the one that suits each particular asset.
 * **Experiment with optimal quality settings for raster formats:** don't be afraid to dial down the "quality" settings, the results are often very good and byte savings are significant.
 * **Remove unnecessary image metadata:** many raster images contain unnecessary metadata about the asset: geo information, camera information, and so on. Use appropriate tools to strip this data.
-* **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size size of the image. Pay close to attention to large images in particular, as they account for largest overhead when resized!
+* **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size of the image. Pay close to attention to large images in particular, as they account for largest overhead when resized!
 * **Automate, automate, automate:** invest into automated tools and infrastructure that will ensure that all of your image assets are always optimized.
 
 
