@@ -25,7 +25,9 @@
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.2",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.0"
+    "run-sequence": "^1.1.0",
+    "request": "^2.60.0",
+    "webpagetest": "^0.3.3"
   },
   "private": true,
   "dependencies": {
@@ -37,5 +39,8 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.2.4",
     "through2": "^2.0.0"
+  },
+  "scripts": {
+    "test": "node tools/bigrig/bigrig.js"
   }
 }
