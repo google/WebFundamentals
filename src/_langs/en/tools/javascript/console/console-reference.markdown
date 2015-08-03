@@ -8,7 +8,7 @@ introduction: "Write to the console, create JavaScript profiles, and start debug
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
-  order: 5
+  order: 6
 authors:
   - megginkearney
 priority: 0
