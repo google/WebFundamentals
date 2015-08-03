@@ -34,7 +34,7 @@ certain everything behaves as expected.
 
 ### Chrome DevTools emulation
 
-Chome DevTools has a [Device emulation tool](tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
+Chome DevTools has a [Device emulation tool](/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
 
 You can activate device emulation by following these four steps:
 

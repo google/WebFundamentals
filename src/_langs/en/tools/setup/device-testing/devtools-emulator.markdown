@@ -47,10 +47,10 @@ But testing the quality of your mobile experiences takes longer and makes debugg
 
 You can use Chrome DevTools device mode to:
 
-* Test your responsive designs by [emulating different screen sizes and resolutions](tools/iterate/test-layout/test-layouts), including Retina displays.
-* Visualize and [inspect CSS media queries](tools/iterate/test-layout/media-queries).
-* Evaluate your site's performance using the [network emulator](tools/profile-performance/network-performance/network-conditions), without affecting traffic to other tabs.
-* Accurately [simulate device input](tools/javascript/device-input/index) for touch events, geolocation, and device orientation.
+* Test your responsive designs by [emulating different screen sizes and resolutions](/web/tools/iterate/test-layout/test-layouts), including Retina displays.
+* Visualize and [inspect CSS media queries](/web/tools/iterate/test-layout/media-queries).
+* Evaluate your site's performance using the [network emulator](/web/tools/profile-performance/network-performance/network-conditions), without affecting traffic to other tabs.
+* Accurately [simulate device input](/web/tools/javascript/device-input/index) for touch events, geolocation, and device orientation.
 * Enhance your current debugging workflow by combining device mode with the existing DevTools.
 
 {% include modules/remember.liquid title="Note" list=page.remember.canary %}
@@ -155,7 +155,7 @@ Although Chrome's device mode offers many powerful emulation tools, it does have
 * **AppCache**
   * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
-Despite these limitations, the device mode emulators are robust enough for most tasks. When you need to test on a real device, you can use the [remote debugging](tools/setup/device-testing/remote-debugging) DevTools for additional insight.
+Despite these limitations, the device mode emulators are robust enough for most tasks. When you need to test on a real device, you can use the [remote debugging](/web/tools/setup/device-testing/remote-debugging) DevTools for additional insight.
 
 {% include modules/nextarticle.liquid %}
 
