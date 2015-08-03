@@ -11,6 +11,7 @@ article:
   order: 3
 id: device-testing
 collection: setup
+panel: device mode
 ---
 
 {% comment %}
