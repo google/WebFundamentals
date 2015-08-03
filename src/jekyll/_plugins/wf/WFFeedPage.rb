@@ -15,10 +15,18 @@
 module Jekyll
 
   class WFFeedPage < LanguagePage
-    ## TODO: Handle both atom.liquid and rss.liquid
-    ## TODO: Remove support for feed.liquid
-    def initialize(site, relative_dir, langcode, pages)
-      super(site, relative_dir, 'feed.xml', langcode)
+    @@FEED_TYPE_RSS = 0
+    @@FEED_TYPE_ATOM = 1
+
+    def initialize(site, relative_dir, langcode, pages, feedType)
+      feedLayout = 'shared/rss.liquid';
+      feedFilename = 'rss.xml';
+      if feedType == @@FEED_TYPE_ATOM
+        feedLayout = 'shared/atom.liquid';
+        feedFilename = 'atom.xml';
+      end
+
+      super(site, relative_dir, feedFilename, langcode)
       self.data = self.data ? self.data : {}
       self.data['feed_icon'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + 'favicon.ico'
       self.data['feed_update'] = site.time.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -41,7 +49,15 @@ module Jekyll
       self.data['feed_pages'] = feedPages
 
       # This will read the liquid file and asign the page the appropriate content
-      self.read_yaml(File.join(site.source, '_layouts'), 'shared/feed.liquid')
+      self.read_yaml(File.join(site.source, '_layouts'), feedLayout)
+    end
+
+    def WFFeedPage.FEED_TYPE_RSS
+        return @@FEED_TYPE_RSS
+    end
+
+    def WFFeedPage.FEED_TYPE_ATOM
+        return @@FEED_TYPE_ATOM
     end
 
   end
