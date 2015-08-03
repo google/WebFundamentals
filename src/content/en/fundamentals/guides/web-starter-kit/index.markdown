@@ -12,7 +12,7 @@ article:
   order: 3
 id: web-starter-kit
 priority: 1
-collection: getting-started
+collection: guides
 ---
 
 {% wrap content%}
