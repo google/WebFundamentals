@@ -42,7 +42,7 @@ remember:
 ---
 {% wrap content %}
 
-[Inspecting an element](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) shows you the DOM nodes for a rendered element in the browser. 
+[Inspecting an element](/web/tools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) shows you the DOM nodes for a rendered element in the browser. 
 
 {% animation animations/right-click-inspect-element.mp4 %}
 
@@ -76,11 +76,11 @@ If the entire trail doesn't fit in the status bar, an ellipsis (...) shows where
 
 ![Breadcrumb ellipsis](imgs/breadcrumb-ellipsis.png)
 
-Take a look at the [complete list of keyboard shortcuts](https://web-central.appspot.com/web/tools/iterate/inspect-styles/shortcuts?hl=en).
+Take a look at the [complete list of keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts?hl=en).
 
 ## Edit DOM nodes and attributes
 
-The simplest way to [edit DOM nodes](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node) is to double-click the DOM node opening **Element tag** and edit. The closing tag is automatically updated after renaming. 
+The simplest way to [edit DOM nodes](/web/tools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node) is to double-click the DOM node opening **Element tag** and edit. The closing tag is automatically updated after renaming. 
 
 The simplest way to edit DOM attributes is to double-click on the attribute name or value.
 When edit mode is active,

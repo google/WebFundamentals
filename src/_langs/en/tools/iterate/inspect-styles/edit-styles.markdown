@@ -29,7 +29,7 @@ remember:
 ---
 {% wrap content %}
 
-If you haven't already, familiarize yourself on the [basics of inspecting and tweaking your pages](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics). This guide dives deeper into editing and creating styles, including working with css preprocessor source files.
+If you haven't already, familiarize yourself on the [basics of inspecting and tweaking your pages](/web/tools/iterate/inspect-styles/basics). This guide dives deeper into editing and creating styles, including working with css preprocessor source files.
 
 {% include modules/toc.liquid %}
 
@@ -45,7 +45,7 @@ You can add or edit styles within the **Styles pane** in the Elements panel in t
 
 ### Edit an existing property name or value
 
-Click on a CSS property name or property value to edit; press Tab or Enter to change the name or value (see also [How to live-edit a style](https://web-central.appspot.com/web/tools/iterate/inspect-styles/basics?hl=en#how-to-live-edit-a-style)).
+Click on a CSS property name or property value to edit; press Tab or Enter to change the name or value (see also [How to live-edit a style](/web/tools/iterate/inspect-styles/basics?hl=en#how-to-live-edit-a-style)).
 
 When editing a numeric CSS property value, increment and decrement numeric CSS property values using the following shortcuts:
 
