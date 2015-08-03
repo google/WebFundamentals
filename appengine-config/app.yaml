@@ -20,10 +20,10 @@ handlers:
   static_dir: imgs
   expiration: 1d
 
-- url: /web/(.*\.(png|gif|jpg|svg|mp4|webm))
+- url: /web/(.*\.(png|gif|jpg|svg||xml|mp4|webm))
   static_files: langs/en/\1
   expiration: 1d
-  upload: langs/en/(.*\.(png|gif|jpg|svg|mp4))
+  upload: langs/en/(.*\.(png|gif|jpg|svg||xml|mp4))
 
 - url: /web/(.*\.ico)
   static_files: langs/en/\1

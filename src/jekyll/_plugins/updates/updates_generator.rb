@@ -127,7 +127,8 @@ module Jekyll
     def generateFeedPage(site, pages)
       pagesToInclude = pages
 
-      site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude)
+      site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
     end
 
   end
