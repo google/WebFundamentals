@@ -24,7 +24,7 @@ remember:
 ---
 {% wrap content %}
 
-[Media queries](fundamentals/layouts/rwd-fundamentals/use-media-queries)
+[Media queries](/web/fundamentals/layouts/rwd-fundamentals/use-media-queries)
 are an essential part of responsive web design.
 They let you apply styles to your site based on device characteristics.
 For example,

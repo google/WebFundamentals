@@ -45,7 +45,7 @@ Image previews include the dimensions, file size, MIME type, and URL of the imag
 
 ## Open resource in Network panel
 
-The [Network panel](tools/profile-performance/network-performance/resource-loading)
+The [Network panel](/web/tools/profile-performance/network-performance/resource-loading)
 provides detailed information about the time it took
 each resource to load, from the start of the HTTP request
 to the receipt of the final byte of the response.
