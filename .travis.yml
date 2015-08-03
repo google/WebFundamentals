@@ -16,6 +16,7 @@ script:
 - gulp build:staging
 after_success:
 - tools/auto-deploy.sh
+- npm test
 env:
   global:
   - secure: TXsic34YPF7vEha+lgAjMYIE2tqDaqVxW5UjQEu39CNzf1b+Y/+WkIB696zuLj4u3xrtjHd5KqzDmAbA2oSUukbih/UlPHBZjbHVS/hP2c9PPcxDdil9Ajmh1f2QdlboiiSa80IQ/C/cx3ZoIO6+cj8Fo1EKbiYLvokK6G39USo=
