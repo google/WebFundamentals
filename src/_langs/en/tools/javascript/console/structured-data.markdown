@@ -1,7 +1,7 @@
 ---
 rss: false
 layout: tools-article
-title: "View Structured Data in Console"
+title: "View Structured Data"
 seotitle: "View Structured Data in Chrome DevTools Console"
 description: "Compare data objects using the `table()` method."
 introduction: "View structured data and compare data objects using the table() method."
