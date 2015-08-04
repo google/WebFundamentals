@@ -37,7 +37,7 @@ All events return if the second parameter is not provided.
 To specify the events to listen to,
 pass either a string or an array of strings as the second parameter.
 
-Listen to click events on the body of the page.
+Listen to click events on the body of the page:
 
     monitorEvents(document.body, "click");
 

@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-article
-title: "Diagnose and log to Console"
-seotitle: "Diagnose and log to Console in Chrome DevTools"
+title: "Diagnose and Log to Console"
+seotitle: "Diagnose and Log to Console in Chrome DevTools"
 description: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage."
 introduction: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage."
 article:
