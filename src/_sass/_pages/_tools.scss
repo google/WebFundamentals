@@ -6,6 +6,18 @@
     letter-spacing: 0;
   }
 
+  pre {
+    line-height: 1.4;
+  }
+
+  code {
+    font-family: monospace;
+    font-size: 13px;
+    * {
+      font-family: monospace;
+    }
+  }
+
   p {
     font-weight: normal;
     padding-top: 1.3em;

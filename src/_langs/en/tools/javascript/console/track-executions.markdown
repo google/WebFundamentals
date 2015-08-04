@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-article
-title: "Track Executions"
-seotitle: "Track Executions in Chrome DevTools Console"
+title: "Measure and count executions"
+seotitle: "Measure and count executions in Chrome DevTools Console"
 description: "Take advantage of the Console API to measure execution times and count statement executions."
 introduction: "Take advantage of the Console API to measure execution times and count statement executions."
 article:
@@ -28,9 +28,9 @@ key-takeaways:
 
 ## Measure execution times
 
-The [`time()`](https://developer.chrome.com/devtools/docs/console-api#consoletimelabel) method starts a new timer and is very useful to measure how long something took. Pass a string to the method to give the marker a name.
+The [`time()`](./console-api#consoletimelabel) method starts a new timer and is very useful to measure how long something took. Pass a string to the method to give the marker a name.
 
-When you want to stop the timer, call [`timeEnd()`](https://developer.chrome.com/devtools/docs/console-api#consoletimeendlabel) and pass it the same string passed to the initializer.
+When you want to stop the timer, call [`timeEnd()`](./console-api#consoletimeendlabel) and pass it the same string passed to the initializer.
 
 The console then logs the label and time elapsed when the `timeEnd()` method fires.
 
@@ -52,7 +52,7 @@ Which outputs the following in the Console:
 
 ### Timers on the Timeline
 
-When a [Timeline](https://developer.chrome.com/devtools/docs/timeline) recording is taking place during a `time()` operation, it annotates the timeline as well. Use it when you want to trace what your application does and where it comes from.
+When a [Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool) recording is taking place during a `time()` operation, it annotates the timeline as well. Use it when you want to trace what your application does and where it comes from.
 
 How an annotation on the timeline looks from `time()`:
 
@@ -63,7 +63,7 @@ How an annotation on the timeline looks from `time()`:
 *Note: The `timeStamp()` method only functions while a Timeline recording is in progress.*
 
 The [Timeline panel](/web/tools/profile-performance/evaluate-performance/timeline-tool) provides a complete overview of where the engine spends time.
-You can add a mark to the timeline from the console with the [`timeStamp()`](https://developer.chrome.com/devtools/docs/console-api#consoletimestamplabel). This is a simple way to correlate events in your application with other events.
+You can add a mark to the timeline from the console with the [`timeStamp()`](./console-api#consoletimestamplabel). This is a simple way to correlate events in your application with other events.
 
 The `timeStamp()` annotates the Timeline in the following places:
 
