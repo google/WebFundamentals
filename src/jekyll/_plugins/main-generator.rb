@@ -38,6 +38,8 @@ module Jekyll
         return
       end
 
+      @pagesTree = {}
+
       # Because AnyLanuage is priority high and we are
       # setting a global variable - set it here
       contributorsFilepath = File.join(site.config['WFContributors'])
@@ -155,7 +157,8 @@ module Jekyll
 
       case file_name
       when /\.(markdown|md|html)|sitemap\.xml|feed\.xml/
-        rootFolderName = relative_dir.split(File::SEPARATOR)[0]
+        directories = relative_dir.split(File::SEPARATOR)
+        rootFolderName = directories[0]
 
         page = nil
         case rootFolderName
