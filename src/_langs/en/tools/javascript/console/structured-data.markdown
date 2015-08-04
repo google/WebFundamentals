@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-article
-title: "Compare similar data objects"
-seotitle: "Compare similar data objects in the Chrome DevTools Console"
+title: "Compare Similar Data Objects"
+seotitle: "Compare Similar Data Objects in the Chrome DevTools Console"
 description: "Compare similar data objects using the `table()` method."
 introduction: "View structured data and compare data objects using the table() method."
 article:
