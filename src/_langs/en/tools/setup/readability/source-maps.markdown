@@ -1,22 +1,23 @@
 ---
 rss: false
 layout: tools-article
-title: "Map Minified Code to Source Code"
-seotitle: "Map Minified Code to Source Code Using Source Maps"
-description: "Keep your client-side code readable and debuggable even after you've combined and minified it."
-introduction: "Keep your client-side code readable and debuggable even after you've combined and minified it. Use source maps to map your source code to your minified code."
+title: "Map Preprocessed Code to Source Code"
+seotitle: "Map Preprocessed Code to Source Code Using Source Maps"
+description: "Keep your client-side code readable and debuggable even after you've combined, minified or compiled it."
+introduction: "Keep your client-side code readable and debuggable even after you've combined, minified or compiled it. Use source maps to map your source code to your compiled code."
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-22
   order: 2
 authors:
   - megginkearney
+  - pbakaus
 priority: 0
 collection: readability
 key-takeaways:
   source-maps:
     - Use source maps to map minified code to source code. You can then read and debug compiled code in its original source.
-    - Only use minifiers capable of creating source maps, for example, ClosureCompiler, SASS.
+    - Only use <a href="/web/tools/setup/workspace/setup-preprocessors?#supported-preprocessors">preprocessors capable of producing source maps</a>.
     - Verify that your web server can serve source maps.
 remember:
   note-tbd:
@@ -28,55 +29,40 @@ remember:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.source-maps %}
 
-## What are source maps?
+## Get started with Preprocessors
 
-A [source map](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&pli=1&pli=1) is a JSON-based mapping format that creates a relationship between a minified file and its sources. When you build for production, along with minifying and combining your JavaScript files, you generate a source map that holds information about your original files. 
+This article explains how to interact with JavaScript source maps in the DevTools Sources Panel. For a first overview of what preprocessors are, how they can help and how Source Maps work, head over to [Set Up CSS & JS Preprocessors](/web/tools/setup/workspace/setup-preprocessors?#debugging-and-editing-preprocessed-content).
 
-The source map causes DevTools to load your original files in addition to your minified ones. You then use the originals to set breakpoints and step through code. Meanwhile, Chrome is actually running your minified code. This gives you the illusion of running a development site in production.
+## Use a supported preprocessor
 
-Here's an example of a simple source map:
+You need to use a minifier that's capable of creating source maps. For the most popular options, [see our preprocessor support section](/web/tools/setup/workspace/setup-preprocessors?#supported-preprocessors). For an extended view, see the [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) wiki page.
 
-`{
-    version : 3,
-    file: "out.min.js",
-    sourceRoot : "",
-    sources: ["foo.js", "bar.js"],
-    names: ["src", "maps", "are", "fun"],
-    mappings: "AAgBC,SAAQ,CAAEA"
-}`
+The following types of preprocessors are commonly used in combination with Source Maps:
 
-Also take a look at the special build of the [font dragr tool](http://dev.fontdragr.com) in Chrome, with source mapping enabled, and you'll notice that the JavaScript isn't compiled and you can see all the individual JavaScript files it references. This is using source mapping, but behind the scenes actually running the compiled code. Any errors, logs and breakpoints will map to the dev code for awesome debugging! So in effect it gives you the illusion that you're running a dev site in production.
+* Transpilers (i.e. Babel, Traceur)
+* Compilers (i.e. CoffeeScript, Dart, TypeScript)
+* Minifiers (i.e. UglifyJS)
 
-## Use a minifier capable of creating source maps
+## Source maps in DevTools' Sources Panel
 
-You need to use a minifier that's capable of creating source maps. Closure Compiler and UglifyJS 2.0 are two such tools but there are also tools available that create source maps for CoffeeScript, SASS and many others. See the [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) wiki page.
+Source maps from preprocessors cause DevTools to load your original files in addition to your minified ones. You then use the originals to set breakpoints and step through code. Meanwhile, Chrome is actually running your minified code. This gives you the illusion of running a development site in production.
 
-## Enable source maps
+When running source maps in DevTools, you'll notice that the JavaScript isn't compiled and you can see all the individual JavaScript files it references. This is using source mapping, but behind the scenes actually runs the compiled code. Any errors, logs and breakpoints will map to the dev code for awesome debugging! So in effect it gives you the illusion that you're running a dev site in production.
+
+### Enable source maps in settings
 
 Source maps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable them, first open DevTools and click the settings cog ![gear](imgs/gear.png){:.inline}. Under **Sources**, check **Enable JavaScript source maps**. You might also check **Enable CSS source maps**.
 
 ![Enable source maps](imgs/source-maps.jpg)
 
-## Make the source map accessible
+### Debugging with source maps
 
-To tell DevTools that a source map is available, verify the following line is at the end of the minified file.
+When [debugging your code](/web/tools/javascript/breakpoints/step-code) and source maps enabled, source maps will show in two places:
 
-`//# sourceMappingURL=/path/to/file.js.map`
+1. In the console (the link to source should be the original file, not the generated one)
+2. When stepping through code (the links in the call stack should open the original source file)
 
-This line, usually added by whatever tool generated the map, is what enables DevTools to associate minified with unminified files. In CSS, the line would look like `/*# sourceMappingURL=style.css.map */`.
-
-If you don't want an extra comment in your file, use an HTTP header field on the minified JavaScript file to tell DevTools where to find the source map. This requires configuration or customization of your web server and is beyond the scope of this document.
-
-`X-SourceMap: /path/to/file.js.map`
-
-Like the comment, this tells DevTools where to look for the source map associated with a JavaScript file. This header also gets around the issue of referencing source maps in languages that don't support single-line comments.
-
-## Verify web server can serve source maps
-
-Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your source maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](http://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
-
-
-## Demo showing @sourceURL and displayName in action
+## @sourceURL and displayName
 
 While not part of the source map spec, the `@sourceURL` allows you to make development much easier when working with evals. This helper looks very similar to the `//# sourceMappingURL` property and is actually mentioned in the source map V3 specifications.
 
@@ -95,18 +81,6 @@ Navigate to this
 If you expand the _Sources_ sub-panel you will now see a new file with the custom filename you entered earlier. If you double-click to view this file it will contain the compiled JavaScript for our original source. On the last line, however, will be a `// @sourceURL` comment indicating what the original source file was. This can greatly help with debugging when working with language abstractions.
 
 ![Working with sourceURL](imgs/coffeescript.jpg)
-
-## Additional source maps resources
-
-* Conditional breakpoints
-* [Breakpoint actions in JavaScript](http://www.randomthink.net/blog/2012/11/breakpoint-actions-in-javascript/)
-* Working With Source Maps
-* [The Breakpoint: Source maps spectacular](https://www.youtube.com/watch?feature=player_embedded&v=HijZNR6kc9A)
-* [HTML5 Rocks: An Introduction To JavaScript Source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
-* [NetTuts: Source Maps 101](http://net.tutsplus.com/tutorials/tools-and-tips/source-maps-101/)
-* [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps%3A-languages%2C-tools-and-other-info)
-* [CSS Ninja: Multi-level Source maps](http://www.thecssninja.com/javascript/multi-level-sourcemaps)
-* [Source maps for CoffeeScript](http://www.coffeescriptlove.com/2012/04/source-maps-for-coffeescript.html)
 
 {% include modules/nextarticle.liquid %}
 
