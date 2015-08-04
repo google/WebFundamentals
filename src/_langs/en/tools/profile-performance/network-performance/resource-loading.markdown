@@ -36,12 +36,9 @@ remember:
 The Network panel records information about each network operation in your application,
 including detailed timing data, HTTP request and response headers, cookies, WebSocket data, and more.
 
-{% include modules/remember.liquid title="Note" list=page.remember.resource-timing %}
-
-Reload the page to start recording, or simply wait for network activity to occur in your application.
-
 ![Network panel](imgs/network-panel.png)
 
+Reload the page to start recording, or simply wait for network activity to occur in your application.
 Each requested resource is added as a row to the Network table, which contains the columns listed below:
 
 <table class="table-2">
@@ -149,6 +146,8 @@ Each requested resource is added as a row to the Network table, which contains t
     </tr>
   </tbody>
 </table>
+
+{% include modules/remember.liquid title="Note" list=page.remember.resource-timing %}
 
 ## Determine performance by resource type 
 
@@ -417,7 +416,9 @@ The Timing tab graphs the time spent on the various network phases involved load
 <style>
 dt:before {
   content: "\00a0\00a0\00a0";
-  margin-right: 5px;
+}
+dt strong {
+  margin-left: 5px;
 }
 dt.stalled:before, dt.proxy-negotiation:before {
   background-color: #cdcdcd;
