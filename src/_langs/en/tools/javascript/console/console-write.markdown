@@ -45,9 +45,9 @@ Will output this in the Console:
 
 ### Group messages together
 
-You can group related output together with the group commands. The [`console.group()`](https://developer.chrome.com/devtools/docs/console-api#consolegroupobject-object) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
+You can group related output together with the group commands. The [`console.group()`](./console-api#consolegroupobject-object-) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
 
-To end the grouping you only need to call [`console.groupEnd()`](https://developer.chrome.com/devtools/docs/console-api#consolegroupobject-object) when you're done.
+To end the grouping you only need to call [`console.groupEnd()`](./console-api#consolegroupend) when you're done.
 
 Example input:
 
@@ -95,7 +95,7 @@ And here's the nested groups output in the console:
 
 #### Auto-collapsing groups
 
-When using groups heavily, it can be very useful to not see everything as it happens. For these times you can automatically collapse groups by calling [`console.groupCollapsed()`](https://developer.chrome.com/devtools/docs/console-api#consolegroupcollapsed) instead of `console.group()`:
+When using groups heavily, it can be very useful to not see everything as it happens. For these times you can automatically collapse groups by calling [`console.groupCollapsed()`](./console-api#consolegroupcollapsedobject-object-) instead of `console.group()`:
 
 {% highlight js %}
 console.groupCollapsed("Authenticating user '%s'", user);
@@ -114,7 +114,7 @@ Errors and warnings act the same way as normal logging. The only difference is `
 
 ### console.error()
 
-The [`console.error()`](https://developer.chrome.com/devtools/docs/console-api#consoleerrorobject-object) method displays a red icon along with red message text:
+The [`console.error()`](./console-api#consoleerrorobject--object-) method displays a red icon along with red message text:
 
 {% highlight js %}
 function connectToServer() {
@@ -129,7 +129,7 @@ turns into
 
 ### console.warn()
 
-The [`console.warn()`](https://developer.chrome.com/devtools/docs/console-api#consolewarnobject-object) method displays a yellow warning icon with the message text:
+The [`console.warn()`](./console-api#consolewarnobject--object-) method displays a yellow warning icon with the message text:
 
 {% highlight js %}
 if(a.childNodes.length < 3 ) {
@@ -143,7 +143,7 @@ turns into
 
 ## Assertions
 
-The [`console.assert()`](https://developer.chrome.com/devtools/docs/console-api#consoleassertexpression-object) method conditionally displays an error string (its second parameter) only if its first parameter evaluates to `false`.
+The [`console.assert()`](./console-api#consoleassertexpression-object) method conditionally displays an error string (its second parameter) only if its first parameter evaluates to `false`.
 
 ### A simple assertion and how it displays
 
