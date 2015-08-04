@@ -27,7 +27,9 @@ The API includes functions for selecting and inspecting elements in the DOM; dis
 
 *Please note:* The API is only available from within the console itself. It is not possible to access the Command Line API from scripts on the page.
 
-### $_
+{% include modules/toc.liquid %}
+
+## $_
 
 Returns the value of the most recently evaluated expression.
 
@@ -39,7 +41,7 @@ In the next example, the evaluated expression initially contains an array of nam
 
 ![$_ changes when new commands are evaluated](images/recently-evaluated-expression-2.png)
 
-### $0 - $4
+## $0 - $4
 
 The `$0`, `$1`, `$2`, `$3` and `$4` commands work as a historical reference to the last five DOM elements inspected within the 'Elements' panel or the last five JavaScript heap objects selected in the 'Profiles' panel. So `$0` returns the most recently selected element or JavaScript object, `$1` returns the second most recently selected one, and so on.
 
@@ -51,7 +53,7 @@ The image below shows a different element selected in the same page. The $0 now 
 
 ![Example of $1](images/element-1.png)
 
-### $(selector)
+## $(selector)
 
 Returns reference to the first DOM element with the specified CSS selector. This function is an alias for the [document.querySelector()](http://docs.webplatform.org/wiki/css/selectors_api/querySelector) function.
 
@@ -67,7 +69,7 @@ The following example returns a reference to the currently selected element and 
 
 *Please note:* If you are using a library such as jQuery that uses `$`, this functionality will be overwritten, and `$` will correspond to that library's implementation.
 
-### $$(selector)
+## $$(selector)
 
 Returns an array of elements that match the given CSS selector. This command is equivalent to calling [document.querySelectorAll()](http://docs.webplatform.org/wiki/css/selectors_api/querySelectorAll)).
 
@@ -82,7 +84,7 @@ The following example uses `$$()` to create an array of all `<img>` elements in 
 
 *Please note:* Press <kbd class="kbd">Shift</kbd> + <kbd class="kbd">Enter</kbd> in the console to start a new line without executing the script.
 
-### $x(path)
+## $x(path)
 
 Returns an array of DOM elements that match the given XPath expression.
 
@@ -98,7 +100,7 @@ While the following example returns all the `<p>` elements that contain `<a>` el
 
 ![Example of using a more complicated XPath selector](images/xpath-p-a-example.png)
 
-### clear()
+## clear()
 
 Clears the console of its history.
 
@@ -110,7 +112,7 @@ Copies a string representation of the specified object to the clipboard.
 
 		copy($0);
 
-### debug(function)
+## debug(function)
 
 When the function specified is called, the debugger will be invoked and will break inside the function on the Sources panel allowing you to be able to step through the code and debug it.
 
@@ -120,7 +122,7 @@ When the function specified is called, the debugger will be invoked and will bre
 
 Use undebug(fn) to stop breaking on the function, or use the UI to disable all breakpoints.
 
-### dir(object)
+## dir(object)
 Displays an object-style listing of all the properties of the specified object. This method is an alias for the Console API's `console.dir()` method.
 
 The following example shows the difference between evaluating `document.body` directly in the command line, and using `dir()` to display the same element.
@@ -132,11 +134,11 @@ The following example shows the difference between evaluating `document.body` di
 
 For more information, see the `console.dir()` entry in the Console API.
 
-### dirxml(object)
+## dirxml(object)
 
 Prints an XML representation of the specified object, as seen in the Elements tab. This method is equivalent to the `console.dirxml()` method.
 
-### inspect(object/function)
+## inspect(object/function)
 
 Opens and selects the specified element or object in the appropriate panel: either the Elements panel for DOM elements and the Profiles panel for JavaScript heap objects.
 
@@ -149,7 +151,7 @@ The following example opens the `document.body` in the 'Elements' panel:
 
 When passing a function to inspect, when the function is called it will open it up in the Sources panel for you to inspect.
 
-### getEventListeners(object)
+## getEventListeners(object)
 
 Returns the event listeners registered on the specified object. The return value is an object that contains an array for each registered event type ("click" or "keydown", for example). The members of each array are objects that describe the listener registered for each type. For example, the following lists all the event listeners registered on the document object.
 
@@ -165,7 +167,7 @@ You can further expand each of these objects to explore their properties:
 
 ![Expanded view of listener object](images/scrolling-list-expanded.png)
 
-### keys(object)
+## keys(object)
 
 Returns an array containing the names of the properties belonging to the specified object. To get the associated values of the same properties, use values().
 
@@ -177,7 +179,7 @@ Assuming `player1` was defined in the global namespace (for simplicity), typing 
 
 ![Example of keys() and values() methods](images/keys-values.png)
 
-### monitor(function)
+## monitor(function)
 
 When the function specified is called, a message is logged to the console that indicates the function name along with the arguments that are passed to the function when it was called.
 
@@ -190,7 +192,7 @@ When the function specified is called, a message is logged to the console that i
 
 Use unmonitor(function) to cease monitoring.
 
-### monitorEvents(object[, events])
+## monitorEvents(object[, events])
 
 When one of the specified events occurs on the specified object, the Event object is logged to the console. You can specify a single event to monitor, an array of events, or one of the generic events "types" that are mapped to a predefined collection of events. See examples below.
 
@@ -241,7 +243,7 @@ Below is sample output after typing a characters in the text field:
 
 ![Monitoring key events](images/monitor-key.png)
 
-### profile([name]) and profileEnd([name])
+## profile([name]) and profileEnd([name])
 
 `profile()` starts a JavaScript CPU profiling session with an optional name. `profileEnd()` will complete the profile and display the results in the 'Profile' panel.
 
@@ -260,7 +262,7 @@ Profiles can also be nested. For example, this will work in any order:
 		profileEnd('A');
 		profileEnd('B');
 
-### table(data[, columns])
+## table(data[, columns])
 
 Log object data with table formatting by passing in a data object in with optional column headings. For example, to display a list of names using a table in the console you would do:
 
@@ -272,21 +274,21 @@ Log object data with table formatting by passing in a data object in with option
 
 ![Example of table() method](images/table.png)
 
-### undebug(function)
+## undebug(function)
 
 Stops the debugging of the specified function so that when the function is called the debugger will no longer be invoked.
 
 		undebug(getData);
 
 
-### unmonitor(function)
+## unmonitor(function)
 
 Stops the monitoring of the specified function. Used in concert with monitor(fn).
 
 		unmonitor(getData);
 
 
-### unmonitorEvents(object[, events])
+## unmonitorEvents(object[, events])
 
 Stops monitoring events for the specified object and events. For example, the following stops all event monitoring on the window object:
 
@@ -297,19 +299,11 @@ You can also selectively stop monitoring specific events on an object. For examp
 		monitorEvents($0, "mouse");
 		unmonitorEvents($0, "mousemove");
 
-### values(object)
+## values(object)
 
 Returns an array containing the values of all properties belonging to the specified object.
 
 		values(object);
-
-{% include modules/takeaway.liquid list=page.key-takeaways.tldr-tbd %}
-
-### TBD
-
-TBD.
-
-{% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
 
 {% include modules/nextarticle.liquid %}
 

@@ -3,55 +3,75 @@ rss: false
 layout: tools-article
 title: "Evaluate Expressions"
 seotitle: "Evaluation Expressions from the Command Line"
-description: "Expore the state of any item on your page from the DevTools console."
-introduction: "Expore the state of any item on your page from the DevTools console using one of its evaluation capabilities."
+description: "Explore the state of any item on your page from the DevTools console."
+introduction: "Explore the state of any item on your page from the DevTools console using one of its evaluation capabilities."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
   order: 1
 authors:
   - megginkearney
-  - jpmedley
+  - josesphmedley
 priority: 0
 collection: command-line
 key-takeaways:
   command-line:
     - Evaluate an expression just by typing it.
     - Select elements using one of the shortcuts.
-    - Inspect DOM elements and JavaScript heap objects using inspect().
-    - Access recently selected elements and objects.
+    - Inspect DOM elements and JavaScript heap objects using <code>inspect()</code>.
+    - Access recently selected elements and objects using $0 - 4.
 ---
 {% wrap content %}
 
+The DevTools console allows you to learn the state of items
+in your page in an ad-hoc manner.
+Evaluate any expression you can type using a combination
+of your knowlege of JavaScript and several features that support it.
+
+{% include modules/toc.liquid %}
+
 {% include modules/takeaway.liquid list=page.key-takeaways.command-line %}
 
-## Evaluate expressions
+## Navigate expressions
 
-The DevTools console allows you to learn the state of items in your page in an ad-hoc manner.  Evaluate any expression you can type using a combination of your knowlege of JavaScript and several features that support it.
+The console evaluates any JavaScript expression you provide
+when pressing <kbd class="kbd">Enter</kbd>.
+As you type an expression,
+property name suggestions appear;
+the console also provides auto-completion and tab-completion.
 
-### Evaluating expressions
-
-The console will evaluate any JavaScript expression you provide when pressing <kbd class="kbd">Enter</kbd>. It provides auto-completion and tab-completion. As you type an expression, property name suggestions appear. If there are multiple matches <kbd class="kbd">↑</kbd> and <kbd class="kbd">↓</kbd> will cycle through them. Pressing <kbd class="kbd">→</kbd> will select the current suggestion. If there is a single suggestion <kbd class="kbd">Tab</kbd> will select it.
+If there are multiple matches,
+<kbd class="kbd">↑</kbd> and <kbd class="kbd">↓</kbd> cycles through them. Pressing <kbd class="kbd">→</kbd> selects the current suggestion.
+If there's a single suggestion,
+<kbd class="kbd">Tab</kbd> selectd it.
 
 ![Simple expressions in the console.](images/evaluate-expressions.png)
 
-### Selecting Elements
+## Select elements
 
-There are a few shortcuts for selecting elements. These save you valuable time when compared to typing out their standard counterparts.
+Use the following shortcuts to select elements:
 
-<table>
-  <tr>
-    <td>$()</td>
-    <td>Returns the first element that matches the specified CSS selector. It is a shortcut for document.querySelector().</td>
-  </tr>
-  <tr>
-    <td>$$()</td>
-    <td>Returns an array of all the elements that match the specified CSS selector. This is an alias for document.querySelectorAll().</td>
-  </tr>
-  <tr>
-    <td>$x()</td>
-    <td>Returns an array of elements that match the specified XPath.</td>
-  </tr>
+<table class="table-2">
+  <thead>
+    <tr>
+      <th>Shortcut</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Shortcut">$()</td>
+      <td data-th="Description">Returns the first element that matches the specified CSS selector. Shortcut for <code>document.querySelector()</code>.</td>
+    </tr>
+    <tr>
+      <td data-th="Shortcut">$$()</td>
+      <td data-th="Description">Returns an array of all the elements that match the specified CSS selector. Alias for <code>document.querySelectorAll()</code>.</td>
+    </tr>
+    <tr>
+      <td data-th="Shortcut">$x()</td>
+      <td data-th="Description">Returns an array of elements that match the specified XPath.</td>
+    </tr>
+  </tbody>
 </table>
 
 Examples of target selection:
@@ -60,20 +80,31 @@ Examples of target selection:
     $$('figure') // Returns an array of all figure elements in the document.
     $x('html/body/p') // Returns an array of all paragraphs in the document body.
 
-### Inspecting DOM elements and JavaScript heap objects
+## Inspect DOM elements and JavaScript heap objects
 
-The `inspect()` function takes a DOM element or JavaScript reference as a parameter. If you provide a DOM element the DevTools will go to the Elements panel and display that element. If you provide a JavaScript reference then it will go to the Profile panel.
+The `inspect()` function takes a DOM element or JavaScript reference
+as a parameter.
+If you provide a DOM element,
+the DevTools goes to the Elements panel and displays that element.
+If you provide a JavaScript reference,
+then it goes to the Profile panel.
 
-When this code executes in your console on this page, it will grab this figure and display it on the Elements panel. This takes advantage of the `$_` property to get the output of the last evaluated expression.
+When this code executes in your console on this page,
+it grabs this figure and displays it on the Elements panel.
+This takes advantage of the `$_` property
+to get the output of the last evaluated expression.
 
     $('[data-target="inspecting-dom-elements-example"]')
     inspect($_)
 
-### Accessing recently selected elements and objects
+## Access recently selected elements and objects
 
-The console stores the last five element and object selections. As you select an element in the Elements panel or an object in the Profiles panel, that pushes onto the history stack. $x provides access to the history stack. Remember computers begin counting from 0; this means the latest item is $0 and the oldest item is $4.
-
-{% include modules/remember.liquid title="Remember" list=page.remember.note-tbd %}
+The console stores the last five used elements and objects
+in variables for easy access.
+Use $0 - 4,
+to access these elements from within the console.
+Remember computers begin counting from 0;
+this means the latest item is $0 and the oldest item is $4.
 
 {% include modules/nextarticle.liquid %}
 
