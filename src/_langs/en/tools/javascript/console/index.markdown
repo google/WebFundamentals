@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-section
-title: "Log Diagnostics to Console"
-seotitle: "Log Diagnostics to Console in Chrome DevTools"
+title: "Using the Console"
+seotitle: "Using the Console in Chrome DevTools"
 description: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."
 introduction: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."
 article:
