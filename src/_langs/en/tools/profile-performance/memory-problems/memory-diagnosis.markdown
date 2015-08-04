@@ -7,7 +7,7 @@ description: "Effective memory management is crucial for performance. Similar to
 introduction: "Effective memory management is crucial for performance. Similar to native applications, web apps can suffer from memory leaks and bloat, but they also have to deal with garbage collection pauses."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-04-14
+  updated_on: 2015-08-04
   order: 1
 authors:
   - megginkearney
@@ -16,24 +16,19 @@ collection: memory-problems
 key-takeaways:
   too-much-memory:
     - Quickly see if a page is consuming too much memory by monitoring memory columns in the Chrome Task Manager.
-    - Determine if memory usage is growing using the memory view in the [Chrome DevTools Timeline](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/timeline-tool).
+    - Determine if memory usage is growing using the memory view in the <a href="/web/tools/profile-performance/evaluate-performance/timeline-tool">Chrome DevTools Timeline</a>.
     - Identify detached nodes still retaining memory using the Chrome DevTools heap profiler.
     - Watch out for frequent garbage collection and garbage collection pauses. Both frequent garbage collection and garbage collection pauses can impact performance.
 remember:
-  tbd:
-    - tbd.
+  memory-terminology:
+    - New to memory management? Get started with the basics in <a href="/web/tools/profile-performance/memory-problems/memory-101">Memory Terminology</a>.
 ---
 {% wrap content %}
 
 A memory leak is a gradual loss of available computer memory.
 It occurs when a program repeatedly fails to return memory it has obtained for temporary use.
 When you think you have a memory leak,
-follow these investigative steps to find out more:
-
-* Check if page uses too much memory.
-* Discover objects not being cleaned up by garbage collection.
-* Narrow down causes of the memory leak.
-* Determine if garbage collection is happening too frequently.
+follow the investigative steps outlined in the table of contents.
 
 {% include modules/toc.liquid %}
 
@@ -45,14 +40,12 @@ To check if a page uses too much memory, the first thing to do is identify a seq
 This could be anything from navigating around a site, hovering, clicking, or otherwise somehow interacting with page in a way that seems to negatively impact performance more over time.
 
 Once you suspect memory performance issues,
-use the Chrome DevTools Timeline to diagnose excessive memory usage
+use the
+[Chrome DevTools Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool)
+to diagnose excessive memory usage
 when you first notice your page has slowed down after extended use.
 
-Slowdown was once a classic symptom of a memory leak but it could also be something else.
-Maybe you have a paint or network bottleneck in your page,
-so make sure to fix the real issue in your page.
-
-You can also quickly see if a page is consuming a lot of memory using the Chrome Task Manager.
+{% include modules/remember.liquid title="Note" list=page.remember.memory-terminology %}
 
 ### Monitor memory using Chrome task manager
 
@@ -61,7 +54,7 @@ Monitor a page's live memory usage using the Chrome task manager.
 Access the Task Manager from the Chrome menu > Tools > Task Manager or by pressing <span class="kbd">Shift</span> + <span class="kbd">Esc</span>.
 
 Once open, right-click on the heading area of the columns and enable the JavaScript memory column.
-Performing actions that may use too much memory and monitor how the live memory usage changes:
+Perform actions that may use too much memory and monitor how the live memory usage changes:
 
 ![JavaScript Memory profiling in task manager](imgs/task-manager.png)
 
@@ -71,30 +64,32 @@ To diagnose whether memory is the issue,
 go to the Timeline panel and Memory view.
 Hit the record button and interact with your application,
 repeating any steps you feel may be causing a leak. Stop the recording.
-The graph you see will display the memory allocated to your application. If it happens to be consuming an increasing amount of this over time (without ever dropping), it’s an indication you may have a memory leak.
+
+The graph you see will display the memory allocated to your application. If it happens to be consuming an increasing amount of this over time (without ever dropping), it’s an indication you may have a memory leak:
+
+![Healthy profile](imgs/normal-sawtooth.png)
 
 The profile for a healthy application should look more like a sawtooth curve
 as memory is allocated then freed when the garbage collector comes in.
 There’s nothing to worry about here – there’s always going to be a cost of doing business in JavaScript
 and even an empty `requestAnimationFrame` will cause this type of sawtooth, you can’t avoid it.
+
 Just ensure it’s not sharp as that’s an indication a lot of allocations are being made,
 which can equate to a lot of garbage on the other side.
-
-![Healthy profile](imgs/normal-sawtooth.png)
-
 It's the rate of increase in the steepness of this curve that you need to keep an eye on.
+
+![Sawtooth-shaped graph](imgs/steep-sawtooth.png)
+
 There is also a DOM node counter, Document counter and Event listener count in the Memory view
 which can be useful during diagnosis.
 DOM nodes use native memory and do not directly affect the JavaScript memory graph.
-
-![Sawtooth-shaped graph](imgs/steep-sawtooth.png)
 
 Once you suspect you have a memory leak, use the heap profiler and object allocation tracker
 to discover the source of the leak.
 
 <p class="note">
     <strong>Example:</strong>
-    Try out this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example1">memory growth</a> where you can practice how to effectively use Timeline memory mode.
+    Try out this example of <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example1.html">memory growth</a> where you can practice how to effectively use Timeline memory mode.
 </p>
 
 ## Discover objects not cleaned up by garbage collection
@@ -107,7 +102,7 @@ This helps to discover otherwise invisible leaks happening
 due to forgotten detached DOM subtrees floating around.
 
 Use the heap profiler to take JS heap snapshots, analyze memory graphs, compare snapshots, and detect DOM leaks
-(see [How to Record Heap Snapshots](heap-snapshots)).
+(see [How to Record Heap Snapshots](/web/tools/profile-performance/memory-problems/heap-snapshots)).
 
 There can be a lot of data in the constructor and retained view.
 The object retained with the shortest distance is usually your first candidate for causing a memory leak.
@@ -135,7 +130,7 @@ into the overall picture:
 
 <p class="note">
     <strong>Example:</strong>
-    Try out this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example4">detached nodes</a> where you can watch node evolution in the Timeline then take heap snapshots to find detached nodes.
+    Try out this example of <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example4.html">detached nodes</a> where you can watch node evolution in the Timeline then take heap snapshots to find detached nodes.
 </p>
 
 ## Narrow down causes of memory leaks
@@ -146,13 +141,13 @@ Tracking objects’ heap allocation involves starting a recording, performing a 
 
 ![Object allocation tracker](imgs/allocation-tracker.png)
 
-Learn how to use this tool in [How to Use the Allocation Profiler Tool](allocation-profiler).
+Learn how to use this tool in [How to Use the Allocation Profiler Tool](/web/tools/profile-performance/memory-problems/allocation-profiler).
 
 ## Determine garbage collection frequency
 
 A *garbage collector* (such as the one in V8) needs to be able to locate objects in your application which are *live*, as well as, those which are considered *dead* (garbage*)* and are *unreachable*. If you are GCing frequently, you may be allocating too frequently. 
 
-Also watch out for garbage collection pauses of interest. If **garbage collection** (GC) misses any dead objects due to logical errors in your JavaScript then the memory consumed by these objects cannot be reclaimed. Situations like this can end up slowing down your application over time (see [How to Use the Allocation Profiler Tool](allocation-profiler)).
+Also watch out for garbage collection pauses of interest. If **garbage collection** (GC) misses any dead objects due to logical errors in your JavaScript then the memory consumed by these objects cannot be reclaimed. Situations like this can end up slowing down your application over time (see [How to Use the Allocation Profiler Tool](/web/tools/profile-performance/memory-problems/allocation-profiler)).
 
 This often happens when you’ve written your code in such a way that variables and event listeners you don’t require are still referenced by some code. While these references are maintained, the objects cannot be correctly cleaned up by GC.
 
@@ -163,16 +158,16 @@ Remember to check and nullify variables that contain references to DOM elements 
 A good set of end-to-end examples for testing various memory issues,
 ranging from growing memory leaking DOM nodes are summarized below:
 
-*   [Example 1: Growing memory](https://developer.chrome.com/devtools/docs/demos/memory/example1)
-*   [Example 2: Garbage collection in action](https://developer.chrome.com/devtools/docs/demos/memory/example2)
-*   [Example 3: Scattered objects](https://developer.chrome.com/devtools/docs/demos/memory/example3)
-*   [Example 4: Detached nodes](https://developer.chrome.com/devtools/docs/demos/memory/example4)
-*   [Example 5: Memory and hidden classes](https://developer.chrome.com/devtools/docs/demos/memory/example5)
-*   [Example 6: Leaking DOM nodes](https://developer.chrome.com/devtools/docs/demos/memory/example6)
-*   [Example 7: Eval is evil (almost always)](https://developer.chrome.com/devtools/docs/demos/memory/example7)
-*   [Example 8: Recording heap allocations](https://developer.chrome.com/devtools/docs/demos/memory/example8)
-*   [Example 9: DOM leaks bigger than expected](https://developer.chrome.com/devtools/docs/demos/memory/example9)
-*   [Example 10: Retaining path](https://developer.chrome.com/devtools/docs/demos/memory/example10)
+*   [Example 1: Growing memory](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example1.html)
+*   [Example 2: Garbage collection in action](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example2.html)
+*   [Example 3: Scattered objects](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html)
+*   [Example 4: Detached nodes](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example4.html)
+*   [Example 5: Memory and hidden classes](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example5.html)
+*   [Example 6: Leaking DOM nodes](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example6.html)
+*   [Example 7: Eval is evil (almost always)](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example7.html)
+*   [Example 8: Recording heap allocations](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example8.html)
+*   [Example 9: DOM leaks bigger than expected](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example9.html)
+*   [Example 10: Retaining path](https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html)
 
 Additional demos are available for:
 
