@@ -7,7 +7,7 @@ description: "Learn how to record heap snapshots with the Chrome DevTools heap p
 introduction: "Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks."
 article:
   written_on: 2015-06-09
-  updated_on: 2015-06-09
+  updated_on: 2015-08-04
   order: 3
 authors:
   - megginkearney
@@ -24,13 +24,17 @@ remember:
 ---
 {% wrap content %}
 
-The Chrome DevTools heap profiler shows memory distribution by your page's JavaScript objects and related DOM nodes. Use it to take JS heap snapshots, analyze memory graphs, compare snapshots, and find memory leaks.
+The Chrome DevTools heap profiler shows memory distribution
+by your page's JavaScript objects and related DOM nodes
+(see also [Objects retaining tree](/web/tools/profile-performance/memory-problems/memory-101#objects-retaining-tree)).
+Use it to take JS heap snapshots, analyze memory graphs,
+compare snapshots, and find memory leaks.
 
 {% include modules/toc.liquid %}
 
 ## Take a snapshot
 
-On the Profiles panel, choose ** *Take Heap Snapshot* **, then click **Start** or press <span class="kbd">Cmd</span> + <span class="kbd">E</span> or <span class="kbd">Ctrl</span> + <span class="kbd">E</span>:
+On the Profiles panel, choose **Take Heap Snapshot**, then click **Start** or press <span class="kbd">Cmd</span> + <span class="kbd">E</span> or <span class="kbd">Ctrl</span> + <span class="kbd">E</span>:
 
 ![Select profiling type](imgs/profiling-type.png)
 
@@ -39,7 +43,7 @@ They are transferred to the DevTools on demand, when you click on the snapshot i
 
 After the snapshot has been loaded into DevTools and has been parsed,
 the number below the snapshot title appears and shows the total size of the
-[reachable](memory-101#object-sizes) JavaScript objects:
+[reachable JavaScript objects](/web/tools/profile-performance/memory-problems/memory-101#object-sizes):
 
 ![Total size of reachable objects](imgs/total-size.png)
 
@@ -53,19 +57,23 @@ Remove snapshots (both from DevTools and renderers memory) by pressing the Clear
 
 Closing the DevTools window will not delete profiles from the renderers memory. When reopening DevTools, all previously taken snapshots will reappear in the list of snapshots.
 
-<p class="note"><strong>Example:</strong> Try out this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example3">scattered objects</a> and profile it using the Heap Profiler. You should see a number of (object) item allocations.</p>
+<p class="note"><strong>Example:</strong> Try out this example of <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">scattered objects</a> and profile it using the Heap Profiler. You should see a number of (object) item allocations.</p>
 
 ## View snapshots
 
 View snapshots from different perspectives for different tasks.
 
-**Summary view** shows objects grouped by the constructor name. Use it to hunt down objects (and their memory use) based on type grouped by constructor name. It's particularly helpful for tracking down DOM leaks.
+**Summary view** shows objects grouped by the constructor name. Use it to hunt down objects (and their memory use) based on type grouped by constructor name. It's particularly helpful for
+[tracking down DOM leaks](/web/tools/profile-performance/memory-problems/memory-diagnosis#narrow-down-causes-of-memory-leaks).
 
 **Comparison view** displays difference between two snapshots. Use it to compare two (or more) memory snapshots of before and after an operation. Inspecting the delta in freed memory and reference count lets you confirm the presence and cause of a memory leak.
 
 **Containment view** allows exploration of heap contents. It provides a better view of object structure, helping analyze objects referenced in the global namespace (window) to find out what is keeping them around. Use it to analyse closures and dive into your objects at a low level.
 
-**Dominators view** shows the [dominators tree](memory-101#dominators) and can be useful to find accumulation points. This view helps confirm that no unexpected references to objects are still hanging around and that deletion/garbage collection is actually working.
+**Dominators view** shows the
+[dominators tree](/web/tools/profile-performance/memory-problems/memory-101#dominators)
+and can be useful to find accumulation points.
+This view helps confirm that no unexpected references to objects are still hanging around and that deletion/garbage collection is actually working.
 
 To switch between views, use the selector at the bottom of the view:
 
@@ -85,9 +93,9 @@ Top-level entries are "total" lines. They display:
 
 * **Number of object instances** is displayed in the # column.
 
-* **Shallow size** column displays the sum of shallow sizes of all objects created by a certain constructor function. The shallow size is the size of memory held by an object itself (generally, arrays and strings have larger shallow sizes).
+* **Shallow size** column displays the sum of shallow sizes of all objects created by a certain constructor function. The shallow size is the size of memory held by an object itself (generally, arrays and strings have larger shallow sizes). See also [Object sizes](/web/tools/profile-performance/memory-problems/memory-101#object-sizes).
 
-* **Retained size** column displays the maximum retained size among the same set of objects. The size of memory that can be freed once an object is deleted (and this its dependents made no longer reachable) is called the retained size.
+* **Retained size** column displays the maximum retained size among the same set of objects. The size of memory that can be freed once an object is deleted (and this its dependents made no longer reachable) is called the retained size. See also [Object sizes](/web/tools/profile-performance/memory-problems/memory-101#object-sizes).
 
 * **Distance** displays the distance to the root using the shortest simple path of nodes.
 
@@ -97,7 +105,7 @@ Remember that yellow objects have JavaScript references on them and red objects 
 
 **What do the various constructor (group) entries in the Heap profiler correspond to?**
 
-![Constructor groups](imgs/constructor-groups.png)
+![Constructor groups](imgs/constructor-groups.jpg)
 
 * **(global property)** – intermediate objects between a global object (like 'window') and an object referenced by it. If an object is created using a constructor Person and is held by a global object, the retaining path would look like [global] > (global property) > Person. This contrasts with the norm, where objects directly reference each other. We have intermediate objects for performance reasons. Globals are modified regularly and property access optimisations do a good job for non-global objects aren't applicable for globals.
 
@@ -117,7 +125,7 @@ Remember that yellow objects have JavaScript references on them and red objects 
 * **HTMLDivElement**, **HTMLAnchorElement**, **DocumentFragment** etc – references to elements or document objects of a particular type referenced by your code.
 
 
-<p class="note"><strong>Example:</strong> Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">demo page</a> (opens in a new tab) to understand how the Summary view can be used.</p>
+<p class="note"><strong>Example:</strong> Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">demo page</a> to understand how the Summary view can be used.</p>
 
 ### Comparison view
 
@@ -135,7 +143,7 @@ In the Comparison view, the difference between two snapshots is displayed. When 
 
 ![Comparison view](imgs/comparison-view.png)
 
-<p class="note"><strong>Example:</strong> Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-comparison">demo page</a> (opens in a new tab) to get an idea how to use snapshot comparison for detecting leaks.</p>
+<p class="note"><strong>Example:</strong> Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-comparison">demo page</a> to get an idea how to use snapshot comparison for detecting leaks.</p>
 
 ### Containment view
 
@@ -143,7 +151,7 @@ The Containment view is essentially a "bird's eye view" of your application's ob
 
 The view provides several entry points:
 
-* **DOMWindow**** objects** are objects considered as "global" objects for JavaScript code.
+* **DOMWindow objects** are objects considered as "global" objects for JavaScript code.
 
 * **GC roots** are the actual GC roots used by VM's garbage. GC roots can be comprised of built-in object maps, symbol tables, VM thread stacks, compilation caches, handle scopes, global handles.
 
@@ -152,7 +160,7 @@ The view provides several entry points:
 ![Containment view](imgs/containment-view.png)
 
 <p class="note">
-  <strong>Example:</strong> Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">demo page</a> (opens in a new tab) for finding out how to explore closures and event handlers using the view.
+  <strong>Example:</strong> Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">demo page</a> for finding out how to explore closures and event handlers using the view.
 </p>
 
 <strong>A tip about closures</strong>
@@ -189,12 +197,12 @@ function createLargeClosure() {
 
 <p class="note">
     <strong>Examples:</strong>
-    Try out this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example7">why eval is evil</a> to analyze the impact of closures on memory. You may also be interested in following it up with this example that takes you through recording <a href="https://developer.chrome.com/devtools/docs/demos/memory/example8">heap allocations</a>.
+    Try out this example of <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example7.html">why eval is evil</a> to analyze the impact of closures on memory. You may also be interested in following it up with this example that takes you through recording <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example8.html">heap allocations</a>.
 </p>
 
 ### Dominators view
 
-The Dominators view shows the dominators tree for the heap graph.
+The [Dominators](/web/tools/profile-performance/memory-problems/memory-101#dominators) view shows the dominators tree for the heap graph.
 It looks similar to the Containment view, but lacks property names.
 This is because a dominator of an object may lack direct references to it;
 the dominators tree is not a spanning tree of the graph.
@@ -207,7 +215,7 @@ as helps us to identify memory accumulation points quickly.
 
 <p class="note">
     <strong>Examples:</strong>
-    Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-dominators">demo</a> (opens in a new tab) to train yourself in finding accumulation points. Follow it up with this example of running into <a href="https://developer.chrome.com/devtools/docs/demos/memory/example10">retaining paths and dominators</a>.
+    Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-dominators">demo</a> to train yourself in finding accumulation points. Follow it up with this example of running into <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html">retaining paths and dominators</a>.
 </p>
 
 ## Look up color coding
@@ -215,13 +223,13 @@ as helps us to identify memory accumulation points quickly.
 Properties and property values of objects have different types and
 are colored accordingly. Each property has one of four types:
 
-* **a: property — **a regular property with a name, accessed via the . (dot) operator, or via [ ] (brackets) notation, e.g. ["foo bar"];
+* **a: property** — regular property with a name, accessed via the . (dot) operator, or via [ ] (brackets) notation, e.g. ["foo bar"];
 
-* **0: element — **a regular property with a numeric index, accessed via [ ] (brackets) notation;
+* **0: element** — regular property with a numeric index, accessed via [ ] (brackets) notation;
 
-* **a:**** context var — **a variable in a function context, accessible by its name from inside a function closure;
+* **a: context var** - variable in a function context, accessible by its name from inside a function closure;
 
-* **a:**** system prop — **property added by the JavaScript VM, not accessible from JavaScript code.
+* **a: system prop** - property added by the JavaScript VM, not accessible from JavaScript code.
 
 Objects designated as `System `do not have a corresponding JavaScript type. They are part of JavaScript VM's object system implementation. V8 allocates most of its internal objects in the same heap as the user's JS objects. So these are just v8 internals.
 
@@ -263,7 +271,7 @@ Consider the following sample - when is the #tree GC?
 
 <p class="note">
     <strong>Examples:</strong>
-    Try out this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example6">leaking DOM nodes</a> to understand where DOM nodes can leak and how to detect them. You can follow it up by also looking at this example of <a href="https://developer.chrome.com/devtools/docs/demos/memory/example9">DOM leaks being bigger than expected</a>.
+    Try out this example of <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example6.html">leaking DOM nodes</a> to understand where DOM nodes can leak and how to detect them. You can follow it up by also looking at this example of <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example9.html">DOM leaks being bigger than expected</a>.
 </p>
 
 To read more about DOM leaks and memory analysis fundamentals checkout
@@ -271,7 +279,7 @@ To read more about DOM leaks and memory analysis fundamentals checkout
 
 <p class="note">
     <strong>Example:</strong>
-    Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-dom-leaks">demo</a> (opens in a new tab) to play with detached DOM trees.
+    Try this <a href="https://developer.chrome.com/devtools/docs/heap-profiling-dom-leaks">demo</a> to play with detached DOM trees.
 </p>
 
 {% include modules/nextarticle.liquid %}

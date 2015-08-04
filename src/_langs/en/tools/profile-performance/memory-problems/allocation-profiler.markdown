@@ -22,19 +22,22 @@ remember:
 ---
 {% wrap content %}
 
+{% include modules/toc.liquid %}
+
+## How the tool works
+
 The **allocation profiler** combines the detailed snapshot information of the
-[heap profiler](heap-snapshots)
-with the incremental updating and tracking of the Timeline panel.
+[heap profiler](/web/tools/profile-performance/memory-problems/heap-snapshots)
+with the incremental updating and tracking of the
+[Timeline panel](/web/tools/profile-performance/evaluate-performance/timeline-tool).
 Similar to these tools, tracking objects’ heap allocation involves starting a recording,
 performing a sequence of actions, then stop the recording for analysis.
 
-The allocation profiler takes heap snapshots periodically throughout the recording (as frequently as every 50 ms!) and one final snapshot at the end of the recording. The heap allocation profile shows where objects are being created and identifies the retaining path.
+The tool takes heap snapshots periodically throughout the recording (as frequently as every 50 ms!) and one final snapshot at the end of the recording.
 
 ![Allocation profiler](imgs/object-tracker.png)
 
 {% include modules/remember.liquid title="Note" list=page.remember.object-ID %}
-
-{% include modules/toc.liquid %}
 
 ## Enable allocation profiler
 
@@ -50,10 +53,11 @@ To begin using the allocation profiler:
 
 ## Read a heap allocation profile
 
+The heap allocation profile shows where objects are being created and identifies the retaining path.
 In the snapshot below, the bars at the top indicate when new objects are found in the heap.
+
 The height of each bar corresponds to the size of the recently allocated objects,
 and the color of the bars indicate whether or not those objects are still live in the final heap snapshot.
-
 Blue bars indicate objects that are still live at the end of the timeline,
 Gray bars indicate objects that were allocated during the timeline,
 but have since been garbage collected:
