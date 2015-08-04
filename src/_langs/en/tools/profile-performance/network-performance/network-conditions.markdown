@@ -31,7 +31,7 @@ remember:
 ## Emulate network connectivity on Chrome
 
 Network conditioning in
-[Chrome DevTools Device mode](tools/setup/device-testing/devtools-emulator)
+[Chrome DevTools Device mode](/web/tools/setup/device-testing/devtools-emulator)
 allows you to test your site on a variety of network connections, including Edge, 3G, and even offline. Select a connection from the preset dropdown to apply network throttling and latency manipulation.
 
 ![Device mode network controls](imgs/network-throttling.png)
@@ -43,8 +43,8 @@ Network throttling artificially limits the maximum download throughput (rate of 
 Try out the Network Link Conditioner tool found in the Lion
 Developer Tools. This can be installed by doing the following:
 
-1. Open Xcode
-2. Select the following from the menu: `XCode > Open Developer Tool > More Developer Tools`
+1. Open Xcode.
+2. Select the following from the menu: `XCode > Open Developer Tool > More Developer Tools`.
 3. When the Apple Developer site opens, go to `Hardware IO Tools for Xcode` and
 download the Network Link Conditioner dmg file.
 4. Once the dmg is downloaded, double click the file and then select the Network
