@@ -28,6 +28,8 @@ remember:
 ---
 {% wrap content %}
 
+{% include modules/toc.liquid %}
+
 {% include modules/takeaway.liquid list=page.key-takeaways.javascript-performance %}
 
 ## Visualize JavaScript performance in a CPU profile
@@ -83,7 +85,7 @@ Depending on the function you selected, you should see something like this:
 
 ### How to customize the CPU profiler
 
-Use the [Chrome DevTools Console](tools/javascript/console/console-ui)
+Use the [Chrome DevTools Console](/web/tools/javascript/console/console-ui)
 to customize and control CPU profiles.
 
 ### Create profile from console
@@ -124,8 +126,8 @@ Result in the profiles panel:
 The Flame Chart view provides a visual representation
 of JavaScript processing aggregated _over_time_,
 similar to those found in the
-[Timeline](tools/profile-performance/evaluate-performance/timeline-tool) and 
-[Network](tools/profile-performance/network-performance/resource-loading) panels.
+[Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool) and 
+[Network](/web/tools/profile-performance/network-performance/resource-loading) panels.
 
 ![Flamechart view](imgs/flamechart.png)
 
