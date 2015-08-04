@@ -11,6 +11,7 @@ article:
   order: 1
 id: workspace
 collection: setup
+panel: sources
 ---
 
 {% comment %}
