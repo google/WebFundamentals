@@ -21,7 +21,7 @@ module Jekyll
     alias superdest destination
     alias superpath path
 
-    attr_reader :canonical_url
+    attr_reader :canonical_url, :directories
 
     def initialize(site, relativeDir, filename)
       @contentSource = site.config['WFContentSource']
@@ -41,6 +41,7 @@ module Jekyll
       @base = File.join Dir.pwd, site.config['WFContentSource']
       @dir  = relativeDir
       @name = filename
+      @directories = relativeDir.split(File::SEPARATOR);
 
       self.process(filename)
 

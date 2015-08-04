@@ -19,14 +19,15 @@ module Jekyll
   require File.expand_path('../wf/WFGenerator.rb', __FILE__)
 
   class CollectionGenerator < WFGenerator
+    # We want this to run early in the process.
+    priority :lowest
     def generate(site)
-      pages = getPages(site, nil)
+      @pagesTree = {}
 
-      collections = pages.map { |page|
-        if (['collection'] - page.data.keys).empty? == false
-          next
-        end
+      allPages = getPages(site, nil)
 
+      # Filter the pages to just include the primary language page
+      primaryLangPages = allPages.map { |page|
         curr_lang = site.data['curr_lang']
         primary_lang = site.data['primary_lang']
 
@@ -34,66 +35,101 @@ module Jekyll
         if curr_lang == primary_lang
           next page
         end
+
         # find localized page or default to prime
         page.data['translations'].find { |p| p.langcode == curr_lang } || page
       }.compact
 
-      # aggregate all the article into categories
-      pageCollections = collections.inject({}) { |cats, page|
-        pageCollection = page.data['collection']
-        if pageCollection.nil?
-          next cats
+      # Performing grouping of each page
+      #primaryLangPages.each { |page|
+      #  rootFolderName = page.directories[0]
+
+      #  case rootFolderName
+      #  when 'updates'
+
+      #  when 'fundamentals'
+      #    handleFundamentalsPageCollection(page)
+      #  when '.'
+
+      #  else
+      #    Jekyll.logger.info "Unsure how to handle collections in the \"" +
+      #      rootFolderName + "\" directory."
+      #    raise Exception.new("collection-generator.rb: Unsure how to handle collections for markdown files in the \"" +
+      #      rootFolderName + "\" directory.")
+      #  end
+      #}
+
+      collections = primaryLangPages.inject({}) { |cumulativeCollections, page|
+        collectionName = page.directories[page.directories.length - 1];
+        cumulativeCollections[collectionName] ||= {'id' => collectionName}
+        cumulativeCollections[collectionName]['pages'] ||= []
+        cumulativeCollections[collectionName]['pages'] << page
+
+        if page.directories.length > 1
+          # If it's greater than one, then it's a subdirectory
+          parentName = page.directories[page.directories.length - 2]
+          cumulativeCollections[parentName] ||= {'id' => parentName}
+          cumulativeCollections[parentName]['pages'] ||= []
+          cumulativeCollections[parentName]['subdirectories'] ||= {}
+          cumulativeCollections[parentName]['subdirectories'][collectionName] ||= cumulativeCollections[collectionName]
         end
 
-        if pageCollection.kind_of?(Array) == false
-          next cats
-        end
-
-        pageCollection.each { |collectionItem|
-          # puts collectionItem
-          if collectionItem['name'].nil?
-            # puts "collection doesn't have a name attribute"
-            next cats
-          end
-
-          cats[collectionItem['name']] ||= []
-          cats[collectionItem['name']] << page
-        }
-
-        cats
+        cumulativeCollections
       }
-      # sort articles by 'order' value from Front Matter
-      pageCollections.keys.each do |collectionName|
-        # puts "collectionName: " + collectionName
 
-        pageCollections[collectionName] = pageCollections[collectionName].sort do |a, b|
-          a_order = a.data['collection'][collectionName]['order'] || 0
-          b_order = b.data['collection'][collectionName]['order'] || 0
+      # sort articles by 'order' value from Front Matter
+      collections.keys.each do |collectionName|
+        collections[collectionName]['pages'] = collections[collectionName]['pages'].sort do |a, b|
+          a_order = a.data['order'] || 0
+          b_order = b.data['order'] || 0
           a_order <=> b_order
         end
 
-        pageCollections[collectionName].each_with_index { |page, i|
-          # puts page.data['collection']
-          # puts '======================'
-          page.data['collection'].each_with_index { |collectionItem, i|
-            page.data['collection'][i]['nextPage'] = pageCollections[collectionName][i+1]
-            page.data['collection'][i]['previousPage'] = pageCollections[collectionName][i-1] if i > 0
-          }
-          #page.data['collection'][collectionName]
-          #page.data['collection'][collectionName]['previousPage'] = pageCollections[collectionName][i-1] if i > 0
+        collections[collectionName]['pages'].each_with_index { |a, i|
+          a.data['next'] = collections[collectionName]['pages'][i+1]
+          a.data['previous'] = collections[collectionName]['pages'][i-1] if i > 0
         }
       end
 
-      #site.data['articles'] = articles
+      primaryLangPages.each { |page|
+        rootFolderName = page.directories[0]
 
-      # Add all the pages per category to each page.
-      #site.pages.each do |page|
-      #  page.data['articles'] = articles
-      #end
-      #site.data['primes'].values.each do |page|
-      #  page.data['articles'] = articles
-      #end if curr_lang != prime_lang
+        case rootFolderName
+        when 'updates'
+
+        when 'fundamentals'
+          #handleFundamentalsPageCollection(page, collections)
+          page.data['pages'] = collections[page.directories[page.directories.length - 1]]
+        when '.'
+
+        else
+          Jekyll.logger.info "Unsure how to handle collections in the \"" +
+            rootFolderName + "\" directory."
+          raise Exception.new("collection-generator.rb: Unsure how to handle collections for markdown files in the \"" +
+            rootFolderName + "\" directory.")
+        end
+      }
+
     end
+
+    #def handleFundamentalsPageCollection(page, collections)
+    #  rootBranch = []
+    #  currentBranch = rootBranch
+    #  puts 'Handling: ' + page.relative_path
+    #  page.directories.each_with_index { |folderName, index|
+    #    newDirectory = {}
+    #    newDirectory['id'] = folderName
+    #    newDirectory['siblings'] = collections[folderName]
+    #    newDirectory['subdirectories'] = []
+    #    currentBranch << newDirectory
+    #    currentBranch = newDirectory['subdirectories']
+#
+#        if index + 1 == page.directories.length
+#          page.data['pages'] = rootBranch
+#        end
+#      }
+#      puts '================================='
+#    end
   end
 
 end

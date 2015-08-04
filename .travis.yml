@@ -19,6 +19,3 @@ after_success:
 - npm test
 env:
   global:
-  - secure: TXsic34YPF7vEha+lgAjMYIE2tqDaqVxW5UjQEu39CNzf1b+Y/+WkIB696zuLj4u3xrtjHd5KqzDmAbA2oSUukbih/UlPHBZjbHVS/hP2c9PPcxDdil9Ajmh1f2QdlboiiSa80IQ/C/cx3ZoIO6+cj8Fo1EKbiYLvokK6G39USo=
-  - secure: Z86A/qbjrFk99tigi8aNNWmpNJgqbTOZTHZAyG1QxlvwVNbNfQS3/HzpxIelA6lGnUHI6ciGE2ddtbs5VoLwV02Buza5ErWmum9ToASK/hScrzmLFGFRCR5PR6MjKVaxUKxuWw5LQcx3HRRS7Lx4T/1goPWLqtTtBqLd7vrssVU=
-  - secure: ZQmd6VYjPzjgGgQ+nQYcaGJG/nJ7/B791TFdUfpN9WeZNkd/IQPTY1gs+H4j/z94r8+pGIPELlqlKtg/KqAdGlXMnciT1IyXpw0bAylIHOi32oDE+9aXBuyCPD+N+eb5oR7CHOwb4R5VifDMoDdx/dQXUVkU0v2gUWBGifPWvO4=

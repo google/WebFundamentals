@@ -14,3 +14,5 @@ priority: 0
 ---
 
 Guides Home Page
+
+<pre>{{page.pages}}</pre>

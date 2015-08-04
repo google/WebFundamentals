@@ -32,6 +32,7 @@ module Jekyll
 
       chromeUpdatePages = getPages(site, ['updates', 'web'])
       if chromeUpdatePages.nil?
+        puts "No update posts found to generate any updates pagination pages."
         return
       end
 
@@ -104,6 +105,19 @@ module Jekyll
 # This is the end of the old untested stuff
 
     def generatePaginationPages(site, pages)
+      # Filter out pages with dates only
+      pages = pages.map { |page|
+        requiredYamlFields = ['date']
+        if (requiredYamlFields - page.data.keys).empty? == false
+          puts "Found an update page without a date - this is surely wrong?"
+          throw new PluginError(PLUGIN_NAME, 'Update page found without a date field. ' +
+            page.name);
+          next
+        end
+
+        page
+      }
+
       pages = pages.sort { |x,y| y["date"] <=> x["date"] }
       numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
 
