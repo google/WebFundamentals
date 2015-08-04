@@ -24,6 +24,8 @@ remember:
     - If you are using a library such as jQuery that uses <code>$</code>, this functionality will be overwritten, and <code>$</code> will correspond to that library's implementation.
   new-line:
     - Press <kbd class="kbd">Shift</kbd> + <kbd class="kbd">Enter</kbd> in the console to start a new line without executing the script.
+  closing-order:
+    - Multiple CPU profiles can operate at once and you aren't required to close them out in creation order.
 ---
 {% wrap content %}
 
@@ -342,6 +344,12 @@ Profiles can also be nested. For example, this will work in any order:
 		profile('B');
 		profileEnd('A');
 		profileEnd('B');
+
+Result in the profiles panel:
+
+![Grouped profiles](images/grouped-profiles.png)
+
+{% include modules/remember.liquid title="Note" list=page.remember.closing-order %}
 
 ## table(data[, columns])
 

@@ -21,10 +21,10 @@ key-takeaways:
 remember:
   absolute-times:
     - Click the <strong>Percentage</strong> button to view absolute times.
-  closing-order:
-    - Multiple CPU profiles can operate at once and you aren't required to close them out in creation order.
   high-resolution:
     - For increased accuracy, enable <strong>High resolution CPU profiling</strong> in the DevTools flame-chart under Profiling. When enabled, you can zoom into the graph to view it by a tenth of a millisecond.
+  optimize:
+    - Learn more about how to write JavaScript the V8 engine can optimize in <a href="http://www.html5rocks.com/en/tutorials/speed/v8/">Performance Tips for JavaScript in V8</a>.
 ---
 {% wrap content %}
 
@@ -43,7 +43,7 @@ the tree view on the right shows the information gathered for the selected profi
 
 ![Sample CPU profile](imgs/cpu-profile.png)
 
-### How to use the CPU profiler
+### Record a CPU profile
 
 First verify the CPU profiler is enabled:
 
@@ -57,6 +57,8 @@ For example, let's profile the [Google Chrome V8 Benchmark Suite](http://v8.goog
 2. Open the Chrome DevTools Profiles panel and click the **Start** button or press <span class="kbd">Cmd</span> + <span class="kbd">E</span>.
 3. Refresh the V8 Benchmark Suite page. When the page has completed reloading, a score for the benchmark tests is shown.
 4. Return to the Profiles panel and stop the recording by clicking the Stop button or by pressing <span class="kbd">Cmd</span> + <span class="kbd">E</span> again.
+
+### View CPU profile
 
 The following **Bottom Up** view lists functions by impact on performance. It also enables you to examine the calling paths to those functions.
 
@@ -73,6 +75,8 @@ This filters the profile to show only the selected function and its callers:
 
 ![Focus on selected function](imgs/focus-selected-function.png)
 
+### Exclude functions from CPU profile
+
 The **Exclude selected function** button removes the selected function from the profile and charges its callers with the excluded function's total time.
 
 1. Click the **Reload** button at the bottom-right of the window to restore the profile to its original state.
@@ -83,43 +87,13 @@ Depending on the function you selected, you should see something like this:
 
 ![Exclude selected function](imgs/tree-top-down.png)
 
-### How to customize the CPU profiler
+### Customize the CPU profiler
 
-Use the [Chrome DevTools Console](/web/tools/javascript/console/console-ui)
-to customize and control CPU profiles.
+Use the [Chrome DevTools Console](/web/tools/javascript/console/console-ui) and [Command Line API](/web/tools/javascript/command-line/)
+to customize and control CPU profiles:
 
-### Create profile from console
-
-The `profile()` function begins a JavaScript CPU profile.
-Pass in a string to name the profile.
-To stop a profile,
-call `profileEnd()` in the same way you called the initializer.
-
-{% highlight JavaScript %}
-
-profile()
-profileEnd()
-
-{% endhighlight %}
-
-## Group profiles
-
-Group profiles together simply by creating multiple profiles with the same label:
-
-{% highlight JavaScript %}
-
-profile("init")
-profileEnd("init")
-profile("init")
-profileEnd("init")
-
-{% endhighlight %}
-
-Result in the profiles panel:
-
-![Grouped profiles](imgs/grouped-profiles.png)
-
-{% include modules/remember.liquid title="Note" list=page.remember.closing-order %}
+* Create profiles from console using [profile() and profileEnd()](/web/tools/javascript/command-line/command-line-reference?hl=en#profilename-and-profileendname).
+* [Group profiles](/web/tools/javascript/command-line/command-line-reference?hl=en#profilename-and-profileendnam) from console by using the same label.
 
 ## How to profile JavaScript performance over time
 
@@ -129,7 +103,7 @@ similar to those found in the
 [Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool) and 
 [Network](/web/tools/profile-performance/network-performance/resource-loading) panels.
 
-![Flamechart view](imgs/flamechart.png)
+### Read the Flame Chart
 
 The horizontal axis is time and vertical axis is the call stack.
 Expensive functions are wide.
@@ -137,6 +111,8 @@ Call stacks are represented on the Y axis,
 so a tall flame is not necessarily significant.
 Pay close attention to wide bars,
 no matter their position in the call stack.
+
+![Flamechart view](imgs/flamechart.png)
 
 Identify outlier functions with color coding.
 When zoomed out you can identify repetitive patterns that could be optimized,
@@ -157,6 +133,8 @@ select the Flame Chart visualization from the select menu at the bottom of the D
 
 {% include modules/remember.liquid title="Note" list=page.remember.high-resolution %}
 
+### Zoom in on specific parts of recording
+
 Across the top of the panel is an overview that shows the entire recording.
 Zoom in on a specific region of the overview
 by selecting it with your mouse as shown below.
@@ -166,6 +144,8 @@ dragging your mouse.
 The Details view timescale shrinks accordingly.
 
 ![Flamechart zoom](imgs/flamechart-zoom.png)
+
+### View call stacks
 
 In the Details view,
 a **call stack** is represented as a stack of function "blocks".
@@ -180,6 +160,8 @@ Hovering over a given block displays its function name and timing data:
 *  **Aggregated self time** — Aggregate time for all invocations of the function across the recording, not including functions called by this function.
 *  **Aggregated total time** — Aggregate total time for all invocations of the function, including functions called by this function.
 
+### Open function in Sources panel
+
 The colors in the Flame Chart are random;
 however, functions will always be colored the same across invocations.
 This allows you to see a pattern of execution and spot outliers easier.
@@ -189,36 +171,36 @@ Clicking a function block opens its containing JavaScript file in the Sources pa
 
 ![Function block](imgs/function-block.png)
 
-## How to test for optimized functions
+## Test for optimized functions
 
-Identifying expensive functions is a good first step.
-But what you really need to know is why these functions are slow,
-and how to speed them up.
+The [standalone "d8" version](https://developers.google.com/v8/build)
+provides tools to test whether or not your JavaScript
+can be optimized by the V8 engine.
 
-[Performance Tips for JavaScript in V8](http://www.html5rocks.com/en/tutorials/speed/v8/) provides a set of simple examples
-on how to write JavaScript that the V8 engine can optimize.
-
-Identify functions that the V8 engine can and can't optimize, and why
-using tools in the [standalone "d8" version](https://developers.google.com/v8/build).
+Two tools worth calling out are `d8 --trace-opt primes.js`,
+which lists all optimized functions, and
+`d8 --trace-deopt primes.js`,
+which lists functions that the V8 engine can't optimize.
 
 ### List optimized functions
-
-V8 re-compiles "hot" functions (that is, functions that are run many times) with an optimizing compiler. This compiler uses type feedback to make the compiled code faster.
-
-In the optimizing compiler, operations get speculatively inlined (directly placed where they are called). This speeds execution (at the cost of memory footprint), but also enables other optimizations. Monomorphic functions and constructors can be inlined entirely.
 
 Log what gets optimized using the
 [standalone "d8" version](https://developers.google.com/v8/build)
 of the V8 engine:
 `d8 --trace-opt primes.js`. This logs names of optimized functions to stdout.
 
+V8 re-compiles "hot" functions (that is, functions that are run many times) with an optimizing compiler. This compiler uses type feedback to make the compiled code faster.
+
+In the optimizing compiler, operations get speculatively inlined (directly placed where they are called). This speeds execution (at the cost of memory footprint), but also enables other optimizations. Monomorphic functions and constructors can be inlined entirely.
+
 Not all functions can be optimized.
-Some features prevent the optimizing compiler from running on a given function (a "bail-out"). The "--trace-opt" option above gives you more information on which functions were bailed out.
+Some features prevent the optimizing compiler from running on a given function (a "bail-out"). The `--trace-opt` option above gives you more information on which functions were bailed out.
 
 ### List de-optimized functions
 
 Sometimes optimization doesn't work out.
 The process of "deoptimization" throws away optimized code, and resumes execution at the right place in "full" compiler code.
+
 Reoptimization might be triggered again later,
 but for the short term, execution slows down.
 In particular, causing changes in the hidden classes of variables after the functions have been optimized will cause this deoptimization to occur.
@@ -228,6 +210,8 @@ Therefore:
 Avoid hidden class changes in functions after they are optimized.
 Get a log of functions that V8 had to deoptimize with a logging flag:
 `d8 --trace-deopt primes.js`.
+
+{% include modules/remember.liquid title="Note" list=page.remember.optimize %}
 
 {% include modules/nextarticle.liquid %}
 
