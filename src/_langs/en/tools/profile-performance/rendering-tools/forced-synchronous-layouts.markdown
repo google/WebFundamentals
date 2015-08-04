@@ -19,7 +19,13 @@ key-takeaways:
 ---
 {% wrap content %}
 
-This demo shows how you can use the Timeline to identify a kind of performance bottleneck called "forced synchronous layouts". The demo application animates images using [requestAnimationFrame()](http://docs.webplatform.org/wiki/apis/timing/methods/requestAnimationFrame), the [recommended approach](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision) for performing frame-based animation, but there is a considerable amount of stuttering and "jank" as the animation runs. This guide then shows you how to identify the problem and apply a fix with DevTools.
+Follow this demo to learn how to use the Timeline tool to identify
+[forced synchronous layouts](/web/tools/profile-performance/rendering-tools/analyze-runtime#how-to-identify-layout-bottlenecks)
+and apply a fix with DevTools.
+
+The demo animates images using
+[requestAnimationFrame()](http://docs.webplatform.org/wiki/apis/timing/methods/requestAnimationFrame), the [recommended approach](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision) for frame-based animation,
+but there's a considerable amount of stuttering and "jank" as the animation runs.
 
 {% include modules/toc.liquid %}
 
