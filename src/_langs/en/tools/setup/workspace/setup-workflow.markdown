@@ -1,7 +1,7 @@
 ---
 rss: false
 layout: tools-article
-title: "Set Up Persistent Workflow with DevTools Workspaces"
+title: "Set Up Persistence with DevTools Workspaces"
 seotitle: "Set Up Persistent Authoring in Chrome DevTools by Mapping Source Files to Workspaces"
 description: "Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk."
 introduction: "Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk."
@@ -80,7 +80,8 @@ As powerful as Workspaces are, there are some limitations you should be aware of
 
 * Only styles defined in an external CSS file can be saved. Changes to `element.style` or to inline styles are not persisted. (If you have inline styles, they can be changed on the Sources panel.)
 
-* Style changes in the Elements panel are persisted immediately without an explicit save -- **Ctrl+S** (Windows) or **Cmd+S** (Mac) -- if you have the CSS resource mapped to a local file.
+* Style changes in the Elements panel are persisted immediately without an explicit save -- 
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> (Mac) -- if you have the CSS resource mapped to a local file.
 
 * If you are mapping files from a remote server instead of a local server, when you refresh the page, Chrome reloads the page from the remote server. Your changes still persist to disk and are reapplied if you continue editing in Workspaces.
 
@@ -129,11 +130,16 @@ This is also useful if you change files that are concurrently open in an externa
 ### Search for files or text
 
 To search for a loaded file in DevTools,
-press **Ctrl+O** (Windows) or **Cmd+O** (Mac) to open a search dialog. You can still do this in Workspaces, but the search is expanded to both the remote loaded files and the local files in your Workspace folder.
+press <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd> or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd> (Mac)
+to open a search dialog.
+You can still do this in Workspaces,
+but the search is expanded to both the remote loaded files
+and the local files in your Workspace folder.
 
 To search for a string across files:
 
-1. Open the search window: click the **Show Drawer** button ![Show drawer](imgs/show_drawer_button.png){:.inline} and then click the **Search**; or press **Ctrl+Shift+F** (Windows) or **Cmd+Opt+F** (Mac).
+1. Open the search window: click the **Show Drawer** button ![Show drawer](imgs/show_drawer_button.png){:.inline} and then click the **Search**; or press
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">F</kbd> or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">F</kbd> (Mac).
 2. Type a string into the search field and press **Enter**.
 3. If the string is a regular expression or needs to be case-insensitive, click the appropriate box.
 

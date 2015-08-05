@@ -25,7 +25,7 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.real %}
 
-## Access Site on Android Device
+## Access site on Android device
 
 Learn how to use the Chrome DevTools to debug your site live on your Android device.
 
@@ -85,7 +85,7 @@ The message **USB debugging connected** displays in the device's notification dr
 
 If you have problems finding your device on the **chrome://inspect page**, see the [Troubleshooting](#troubleshooting) section.
 
-### Ready to Debug your site in a browser tab!
+### Ready to debug your site in a browser tab!
 
 On your computer, the **chrome://inspect** page displays every connected device, along with its open tabs and debug-enabled [WebViews](/web/tools/setup/remote-debugging/local-server).
 
@@ -106,7 +106,7 @@ For example, you can use DevTools to inspect web page elements on your device:
 
 **Note**: The version of Chrome on your device determines the version of DevTools used during remote debugging. For this reason, the remote debugging DevTools might differ from the version that you normally use.
 
-## Access Site on iOS or Windows Device
+## Access site on iOS or Windows device
 
 To debug Safari for iOS, follow these steps:
 
@@ -123,7 +123,7 @@ Unfortunately there is no way to debug a site on Windows Phone, but you can
 11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
 See also [Mimic Development Site in Production](/web/tools/setup/device-testing/devtools-emulator).
 
-## Screencast From Android Device to Development Machine
+## Screencast from Android device to development machine
 
 Shifting your attention between screens isn’t always convenient. Screencast displays your device's screen right alongside DevTools on your development machine. You can interact with the content on your device from the screencast too.
 

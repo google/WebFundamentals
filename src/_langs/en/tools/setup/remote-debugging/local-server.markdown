@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-article
-title: "Access Your Site Through Web Server"
-seotitle: "Access Your Development Site Through Web Server Using Port Forwarding"
+title: "Access Your Site Through a Web Server"
+seotitle: "Access Your Development Site Through a Web Server Using Port Forwarding"
 description: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."
 introduction: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."
 authors:

@@ -28,7 +28,7 @@ remember:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.editor %}
 
-## Install Sublime Text Editor
+## Install Sublime text editor
 
 [Sublime](http://www.sublimetext.com/) is a great editor with a solid base level
 of functionality which makes writing code a pleasure. You can install a package
@@ -38,7 +38,7 @@ There are currently two download options for Sublime Text, either [version 2](ht
 
 {% include modules/remember.liquid title="Note" list=page.remember.blog %}
 
-## Why Use a Package Manager?
+## Why use a package manager?
 
 Package managers make it easy to find, install, and keep packages & plugins
 up-to-date.
@@ -51,7 +51,7 @@ You can install a Package Manager for Sublime  by following these instructions
 You only need to do this once, after which see below for our recommended list of
 plugins.
 
-## Install Plugins
+## Install plugins
 
 Plugins help you stay more productive. What are the things you keep having to go
 back out to other tools to do?
@@ -100,7 +100,7 @@ personal favorite is the 'Toggle Comment' command).
 
 <img src="imgs/emmet-io-example.gif" alt="Demo of the Emmet.io Plugin" />
 
-### HTML-CSS-JS Prettify
+### HTML-CSS-JS prettify
 
 This extension gives you a command to format your HTML, CSS and JS. You can even
 prettify your files whenever your save a file.

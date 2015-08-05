@@ -202,7 +202,7 @@ Right-clicking on console:
 * Filter: Hide and unhide messages from script files.
 * Clear console: Clear all console messages.
 
-## Keyboard shortcuts by Panel
+## Keyboard shortcuts by panel
 
 ### Elements
 
@@ -437,7 +437,7 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-#### Within the Code Editor
+#### Within the code editor
 
 <table class="table-3">
   <thead>
@@ -570,7 +570,7 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-### Device Mode
+### Device mode
 
 <table class="table-3">
   <thead>
@@ -587,7 +587,7 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-#### When Screencasting
+#### When screencasting
 
 <table class="table-3">
   <thead>
@@ -609,7 +609,7 @@ Shortcuts available in the Styles sidebar:
   </tbody>
 </table>
 
-## Bonus: Useful Chrome shortcuts
+## Bonus: useful Chrome shortcuts
 
 Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](http://goo.gl/PsTNm) for Windows, Mac, and Linux:
 

@@ -29,7 +29,7 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.commandlinetools %}
 
-## How to Set Them Up
+## How to set them up
 
 The easiest way to create command-line shortcuts is to add aliases for common
 commands to your bashrc file. On Mac or Linux:
@@ -48,7 +48,7 @@ commands to your bashrc file. On Mac or Linux:
 Note: See these instructions for [setting up Windows
 aliases](http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx).
 
-## Shortcuts We Recommend
+## Shortcuts we recommend
 
 These are a few commands that you may find useful.
 
@@ -80,7 +80,7 @@ These are a few commands that you may find useful.
 </table>
 
 
-## Save, Share and Sync Your Shortcuts
+## Save, share and sync your shortcuts
 
 Store your shortcuts and dot files on Github. The major gain with this is
 your shortcuts can be shared across devices and they are always backed up.
