@@ -190,8 +190,7 @@ For concatentation, use the following:
   </tbody>
 </table>
 
-**Note**  
-You can use Sass by taking advantage of the 'import' feature ([See Web Starter
+**Note**: You can use Sass by taking advantage of the 'import' feature ([See Web Starter
 Kit for an example](https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss)).
 
 ### Optimise Your Images

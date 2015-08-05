@@ -1,10 +1,6 @@
 .tools-content {
 
   font-family: Roboto;
-  * {
-    font-family: Roboto;
-    letter-spacing: 0;
-  }
 
   pre {
     line-height: 1.4;
@@ -30,14 +26,14 @@
   td {
     font-weight: normal;
     @include medium {
-      padding: 1em 1em;
+      padding: 0.5em 1em;
       min-height: auto;
     }
   }
 
   th {
     @include medium {
-      padding: 1em 1em;
+      padding: 0.5em 1em;
       font-size: inherit;
       font-weight: 400;
     }
