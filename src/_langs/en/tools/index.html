@@ -26,17 +26,6 @@ feedPath: tools/feed.xml
 
 <div class="tools-products">
 
-  <div class="tools-product-headings">
-    <div class="container">
-      <div class="get-started">
-        <h3>Build &amp; Iterate</h3>
-      </div>
-      <div class="power-up">
-        <h3>Power up</h3>
-      </div>
-    </div>
-  </div>
-
   <div class="container tools-products-wrapper">
 
     <div class="get-started">
@@ -69,11 +58,6 @@ feedPath: tools/feed.xml
             work great across different devices.</p>
           </div>
         </li>
-      </ul>
-    </div>
-
-    <div class="power-up">
-      <ul>
         <li>
           <a href="http://www.getmdl.io/">
             <img src="/web/tools/material-design-lite/images/thumb.png" alt="Material Design Lite">
@@ -85,7 +69,6 @@ feedPath: tools/feed.xml
               browsers and static content sites.
             </p>            
           </div>
-          
         </li>        
         <li>
           <a href="https://www.polymer-project.org">
@@ -106,14 +89,12 @@ feedPath: tools/feed.xml
 </div>
 
 <div class="tools-home tools-home-front container">
-
-  <h2>Documentation &amp; Tutorials</h2>
   
   <div class="tools-home-front-wrapper">
 
     <div class="tools-docs-listing">
 
-      <h3>Action-oriented guides</h3>
+      <h2>Action-oriented guides</h2>
 
       <ul class="doclist">
           {% for guide in page.articles.[page.id] %}
@@ -142,7 +123,7 @@ feedPath: tools/feed.xml
 {% if page.articles.updates %}
 
     <div class="tools-updates">
-      <h3><a href="/web/updates/tools/tip">Latest Tips</a></h3>
+      <h2><a href="/web/updates/tools/tip">Tips &amp; Tricks</a></h2>
       {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
     </div>
  

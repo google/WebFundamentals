@@ -71,13 +71,13 @@ Each Error object has a string property named stack that contains the stack trac
 
 ### console.trace()
 
-Instrument your code with `console.trace()` calls that print current JavaScript call stacks:
+Instrument your code with [`console.trace()`](./console-reference#consoletraceobject) calls that print current JavaScript call stacks:
 
 ![console.trace() example](images/track-exceptions-console-trace.jpg)
 
 ### console.assert()
 
-Place assertions in your JavaScript code by calling `console.assert()`
+Place assertions in your JavaScript code by calling [`console.assert()`](./console-reference#consoleassertexpression-object)
 with the error condition as the first parameter.
 When this expression evaluates to false,
 you will see a corresponding console record:

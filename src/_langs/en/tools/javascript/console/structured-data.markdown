@@ -16,7 +16,7 @@ priority: 0
 collection: console
 key-takeaways:
   console:
-    - Compare similar data objects using table().
+    - Compare similar data objects using <code>table()</code>.
     - Build an array to define property strings.
 ---
 {% wrap content %}
@@ -25,7 +25,7 @@ The `table()` method provides an easy way to view objects and arrays that includ
 
 {% include modules/toc.liquid %}
 
-## Basic example: Logging an Array of Objects
+## Basic example: Logging an array of objects
 
 In it's most basic form, all you need is an array with a bunch of objects that have the same properties, and the `table()` command will do the rest:
 
@@ -40,7 +40,7 @@ This will output:
 
 ## Advanced example: Logging specific properties
 
-The second parameter to table() can be used to log more advanced objects. Define an array containing the property strings you wish to display, like so:
+The second parameter to `table()` can be used to log more advanced objects. Define an array containing the property strings you wish to display, like so:
 
 {% highlight js %}
 function Person(firstName, lastName, age) {
