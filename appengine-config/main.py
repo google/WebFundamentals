@@ -35,30 +35,23 @@ class AllPages(webapp2.RequestHandler):
     def get(self, path):
         lang = self.request.get("hl", "en")
 
+        fileLocations = [
+          os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, path),
+          os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, path) + ".html",
+          os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, path, "index.html"),
+          os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path),
+          os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path) + ".html",
+          os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path, "index.html")
+        ]
         text = None
-        file_path = os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, path)
-        if os.path.isfile(file_path):
-          text = render("wrapper.tpl", {"content": file_path, "lang": lang})
+        filePath = None
+        for fileLocation in fileLocations:
+          if os.path.isfile(fileLocation):
+            filePath = fileLocation
+            text = render("wrapper.tpl", {"content": fileLocation, "lang": lang})
+            break
 
-        file_path = os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, path) + ".html"
-        if text is None and os.path.isfile(file_path):
-          text = render("wrapper.tpl", {"content": file_path, "lang": lang})
-
-        file_path = os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, path, "index.html")
-        if text is None and os.path.isfile(file_path):
-          text = render("wrapper.tpl", {"content": file_path, "lang": lang})
-
-        file_path = os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path)
-        if text is None and os.path.isfile(file_path):
-          text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
-
-        file_path = os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path) + ".html"
-        if text is None and os.path.isfile(file_path):
-          text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
-
-        file_path = os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path, "index.html")
-        if text is None and os.path.isfile(file_path):
-          text = render("wrapper.tpl", {"content": file_path, "lang": "en"})
+        print "Rendering: " + filePath
 
         if text is None:
           text = "404 - Requested file not found."
