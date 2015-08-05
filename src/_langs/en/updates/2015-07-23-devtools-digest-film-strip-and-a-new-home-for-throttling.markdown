@@ -23,7 +23,7 @@ teaserblocks:
 - heading: Film strip
   description: Capture screenshots of the page in both Network and Timeline.
   image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser1.jpg
-- heading: Network Throttling in Network
+- heading: Network Throttling
   description: We've made network throttling easier to use and locate.
   image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser2.jpg
 - heading: Community Heartbeat
