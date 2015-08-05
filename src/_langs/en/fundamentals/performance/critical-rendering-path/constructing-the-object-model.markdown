@@ -19,7 +19,7 @@ key-takeaways:
     - Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM.
 notes:
   devtools:
-    - We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href="https://developer.chrome.com/devtools">Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> course.
+    - We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href="/web/tools/chrome-devtools">Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> course.
 ---
 {% wrap content%}
 
