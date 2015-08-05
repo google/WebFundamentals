@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: fundamentals/list-subdirectories
 title: "API Primers"
 description: ""
 introduction: ""
