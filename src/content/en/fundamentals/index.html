@@ -11,4 +11,12 @@ feedName: Web Fundamentals - Google Developers
 feedPath: fundamentals/feed.xml
 ---
 
-Web Fundamentals Home Page
+<h1>Web Fundamentals Home Page</h1>
+
+<!-- Loop through each sub directory and generate some navigation -->
+{% for subdirectory in page.pages.subdirectories %}
+  <h2>{{subdirectory[1].pages[0].title}}</h2>
+  <!-- To view the format of the date, uncomment the following line -->
+  <!--<pre>{{subdirectory[1].pages[0]}}</pre>-->
+  <p><a href="{{subdirectory[1].pages[0].relative_url}}">View content here</a></p>
+{% endfor %}

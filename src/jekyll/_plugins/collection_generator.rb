@@ -40,25 +40,6 @@ module Jekyll
         page.data['translations'].find { |p| p.langcode == curr_lang } || page
       }.compact
 
-      # Performing grouping of each page
-      #primaryLangPages.each { |page|
-      #  rootFolderName = page.directories[0]
-
-      #  case rootFolderName
-      #  when 'updates'
-
-      #  when 'fundamentals'
-      #    handleFundamentalsPageCollection(page)
-      #  when '.'
-
-      #  else
-      #    Jekyll.logger.info "Unsure how to handle collections in the \"" +
-      #      rootFolderName + "\" directory."
-      #    raise Exception.new("collection-generator.rb: Unsure how to handle collections for markdown files in the \"" +
-      #      rootFolderName + "\" directory.")
-      #  end
-      #}
-
       collections = primaryLangPages.inject({}) { |cumulativeCollections, page|
         collectionName = page.directories[page.directories.length - 1];
         cumulativeCollections[collectionName] ||= {'id' => collectionName}
@@ -98,7 +79,6 @@ module Jekyll
         when 'updates'
 
         when 'fundamentals'
-          #handleFundamentalsPageCollection(page, collections)
           page.data['pages'] = collections[page.directories[page.directories.length - 1]]
         when '.'
 
@@ -111,25 +91,6 @@ module Jekyll
       }
 
     end
-
-    #def handleFundamentalsPageCollection(page, collections)
-    #  rootBranch = []
-    #  currentBranch = rootBranch
-    #  puts 'Handling: ' + page.relative_path
-    #  page.directories.each_with_index { |folderName, index|
-    #    newDirectory = {}
-    #    newDirectory['id'] = folderName
-    #    newDirectory['siblings'] = collections[folderName]
-    #    newDirectory['subdirectories'] = []
-    #    currentBranch << newDirectory
-    #    currentBranch = newDirectory['subdirectories']
-#
-#        if index + 1 == page.directories.length
-#          page.data['pages'] = rootBranch
-#        end
-#      }
-#      puts '================================='
-#    end
   end
 
 end
