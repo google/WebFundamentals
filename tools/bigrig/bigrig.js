@@ -1,8 +1,27 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+'use strict';
+
 var config = require('./config');
 
 config.rigUrl = process.env.RIG_URL;
 config.apiKey = process.env.WPT_API_KEY;
 config.secret = process.env.SECRET;
+config.repo = process.env.TRAVIS_REPO_SLUG;
+config.commit = process.env.TRAVIS_COMMIT;
 
 if (typeof config.apiKey === 'undefined') {
   console.error ('No WebPagetest API key provided');
@@ -76,13 +95,14 @@ function onWebPageTestResult (err, data) {
   var firstView = data.data.runs['1'].firstView;
   var speedIndex = firstView.SpeedIndex;
 
-  // console.log(this.labels, id);
+  console.log('Test ID: ' + id);
 
   if (!this.results) {
     this.results = {
       "speedIndex": speedIndex,
       "completed": results.completed,
-      "commit": process.env.TRAVIS_COMMIT
+      "commit": process.env.TRAVIS_COMMIT,
+      "id": id
     };
   }
 
@@ -144,11 +164,20 @@ function onUploadRequestComplete () {
     var submissionData = {
       "secret": this.secret,
       "labels": this.labels.split(','),
-      "datetime": (new Date(this.results.completed * 1000).toString())
+      "datetime": (new Date(this.results.completed * 1000).toUTCString()),
+      "webpagetest-id": this.results.id
     }
 
     if (typeof this.results.speedIndex !== 'undefined')
       submissionData["speed-index"] = this.results.speedIndex.toString();
+
+    if (typeof config.repo !== 'undefined' &&
+        typeof config.commit !== 'undefined') {
+      var commitURL =
+          'https://github.com/' + config.repo +
+          '/commit/' + config.commit;
+      submissionData["commit"] = commitURL;
+    }
 
     var formData = {
       "data": JSON.stringify(submissionData),
