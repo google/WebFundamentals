@@ -94,7 +94,7 @@ Near the top of the sidebar is the **Call Stack** section. When the code is paus
 
 #### Example
 
-<p><img src="imgs/image_15.png" alt="Call stack" style="float: left;margin-right: 1em;margin-bottom: 1em;">An initial onclick event at line 50 in the *index.html* file called the `setone()` function at line 18 in the *dgjs.js* JavaScript file, which then called the `setall()` function at line 4 in the same file, where execution is paused at the current breakpoint.</p>
+<p><img src="imgs/image_15.png" alt="Call stack" style="float: left;margin-right: 1em;margin-bottom: 1em;">An initial onclick event at line 50 in the <strong>index.html</strong> file called the <code>setone()</code> function at line 18 in the <strong>dgjs.js</strong> JavaScript file, which then called the <code>setall()</code> function at line 4 in the same file, where execution is paused at the current breakpoint.</p>
 
 ## Data manipulation
 
@@ -119,7 +119,7 @@ To live edit a script, simply click into the editor part of the Sources panel wh
 
 #### Example
 
-<p class="clear"><img src="imgs/image_18.png" alt="Live Editing" style="max-width:300px;float: left;margin-right: 1em;margin-bottom: 1em;">We suspect that the parameter `dow` is, in every case, off by +1 when it is passed to the function setone() – that is, the value of `dow`, as received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly test whether decrementing the passed value confirms that this is the problem, we add line 17 at the beginning of the function and resume.</p>
+<p class="clear"><img src="imgs/image_18.png" alt="Live Editing" style="max-width:300px;float: left;margin-right: 1em;margin-bottom: 1em;">We suspect that the parameter <code>dow</code> is, in every case, off by +1 when it is passed to the function <code>setone()</code> – that is, the value of <code>dow</code>, as received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly test whether decrementing the passed value confirms that this is the problem, we add line 17 at the beginning of the function and resume.</p>
 
 {% include modules/nextarticle.liquid %}
 

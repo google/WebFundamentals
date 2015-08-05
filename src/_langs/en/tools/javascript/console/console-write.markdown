@@ -17,10 +17,10 @@ priority: 0
 collection: console
 key-takeaways:
   console-write:
-    - Use console.log() for basic logging
-    - Use console.error() and console.warn() for eye-catching stuff
-    - Use console.group() and console.groupEnd() to group related messages and avoid clutter
-    - Use console.assert() to show conditional error messages
+    - Use <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a> for basic logging
+    - Use <a href="/web/tools/javascript/console/console-reference#consoleerrorobject--object-">console.error()</a> and <a href="/web/tools/javascript/console/console-reference#consolewarnobject--object-">console.warn()</a> for eye-catching stuff
+    - Use <a href="/web/tools/javascript/console/console-reference#consolegroupobject-object-">console.group()</a> and <a href="/web/tools/javascript/console/console-reference#consolegroupend">console.groupEnd()</a> to group related messages and avoid clutter
+    - Use <a href="/web/tools/javascript/console/console-reference#consoleassertexpression-object">console.assert()</a> to show conditional error messages
 ---
 {% wrap content %}
 
@@ -30,7 +30,7 @@ key-takeaways:
 
 ## Writing to the console
 
-Use the <a href="https://developer.chrome.com/devtools/docs/console-api#consolelogobject-object">console.log()</a> method for any basic logging to the console. It takes one or more expressions as parameters and writes their current values to the console, concatenating multiple parameters into a space-delimited line.
+Use the <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a> method for any basic logging to the console. It takes one or more expressions as parameters and writes their current values to the console, concatenating multiple parameters into a space-delimited line.
 
 Executing this line of code in your JavaScript:
 
@@ -41,7 +41,7 @@ console.log("Node count:", a.childNodes.length, "and the current time is:", Date
 Will output this in the Console:
 ![Log Multiple](images/console-write-log-multiple.png)
 
-## Organizing Console Output
+## Organizing Console output
 
 ### Group messages together
 
@@ -108,7 +108,7 @@ console.groupEnd();
 groupCollapsed() output:
 ![Initially collapsed group](images/console-write-groupcollapsed.png)
 
-## Errors and Warnings
+## Errors and warnings
 
 Errors and warnings act the same way as normal logging. The only difference is `error()` and `warn()` have styles to bring attention to them.
 

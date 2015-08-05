@@ -33,7 +33,7 @@ key-takeaways:
 
 Access the Console full screen as dedicated panel or from a Drawer that opens next to any open panel.
 
-### The Console Panel
+### The Console panel
 
 To open the dedicated 'Console' panel, either:
 
@@ -54,7 +54,7 @@ To open the Drawer from within another panel, either:
 
 ![The Console Drawer while on the 'Sources' panel](images/console-drawer.png)
 
-## Message Stacking
+## Message stacking
 
 ![Example of messages stacking within the console](images/message-stacking.png)
 
@@ -62,7 +62,7 @@ The console keeps a record of every message posted to it on any given page until
 
 If you prefer a unique line entry for every log, enable **Show timestamps** from the Settings menu  <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> found in the upper right corner to give every message a unique timestamp.
 
-## Working with the Console History
+## Working with the Console history
 
 ### Clearing the history
 
@@ -91,7 +91,7 @@ By default, logging and error output from frames or extensions contained within 
 
 ![Example of frame selection](images/frame-selection.png)
 
-## Filtering the Console Output
+## Filtering the Console output
 
 ![Filtering errors](images/console-write-filter-errors.png)
 
@@ -113,28 +113,28 @@ The following filter options are available:
   </tr>
   <tr>
     <td>Errors</td>
-    <td>Only show output from `console.error()`</td>
+    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consoleerrorobject--object-">console.error()</a>.</td>
   </tr>
   <tr>
     <td>Warnings</td>
-    <td>Only show output from `console.warn()`.</td>
+    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consolewarnobject--object-">console.warn()</a>.</td>
   </tr>
   <tr>
     <td>Info</td>
-    <td>Only show output from `console.info()`</td>
+    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consoleinfoobject--object-">console.info()</a>.</td>
   </tr>
   <tr>
     <td>Logs</td>
-    <td>Only show output from `console.log()` </td>
+    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a>.</td>
   </tr>
   <tr>
     <td>Debug</td>
-    <td>Only show output from `console.timeEnd()` and `console.debug()`</td>
+    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consoletimeendlabel">console.timeEnd()</a> and <a href="/web/tools/javascript/console/console-reference#consoledebugobject--object-">console.debug()</a>.</td>
   </tr>
   </tbody>
 </table>
 
-## Additional Settings
+## Additional settings
 
 You can customize the Console further from the 'Settings' menu <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> in the upper right corner of DevTools.
 
