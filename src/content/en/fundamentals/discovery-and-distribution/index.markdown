@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: fundamentals/list-subdirectories
 title: "Discovery and Distribution"
 description: ""
 introduction: ""

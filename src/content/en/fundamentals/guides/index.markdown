@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: fundamentals/list-subdirectories
 title: "Guides"
 description: ""
 introduction: ""
@@ -14,5 +14,3 @@ priority: 0
 ---
 
 Guides Home Page
-
-<pre>{{page.pages}}</pre>
