@@ -1,0 +1,6 @@
+{% include page-structure/html-head.liquid %}
+</head>
+
+<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+{% include page-structure/page-header-and-nav.liquid title=page.title %}

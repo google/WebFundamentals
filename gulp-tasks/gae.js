@@ -17,7 +17,7 @@ Change this to false if you want to see logs form app engine.
 **/
 
 var PORT_NUMBER = 7331;
-var SILENCE_OUTPUT = true;
+var SILENCE_OUTPUT = false;
 
 // These define the build locations
 var WF = {
