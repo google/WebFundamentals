@@ -238,29 +238,28 @@
   ul.doclist {
     margin: 0;
     padding: 0;
-    display: flex;
     display: -webkit-flex;
-    flex-wrap: wrap;
+    display: flex;
     -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 
     > li {
       margin: 0;
       padding: 0;
       padding-right: 1.3em;
-
-      flex: 1 1 25%;
-      -webkit-flex: 1 1 25%;
+      -webkit-flex: 1 1 50%;
+      flex: 1 1 50%;
       min-width: 165px;
 
       &.note-why {
-        flex: 1 1 50%;
         -webkit-flex: 1 1 50%;
-        background-color: rgba(0, 0, 0, 0.03);
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-bottom: 2em;
+        flex: 1 1 50%;
+        border-top: 1px solid #E2E2E2;
+        margin-right: 1.3em;
+        padding-right: 0;
+        opacity: 0.7;
+        margin-bottom: 1em;
         margin-top: 1em;
-        margin-right: 2em;
 
         h4 {
           color: #333;
@@ -297,48 +296,53 @@
 
 }
 
+.tools-home-front {
+  background-color: #F5F5F5;
+  margin-top: 0;
+  padding-top: 2em;
+}
+
 .tools-home-front-wrapper {
 
   @include medium {
-    display: flex;
     display: -webkit-flex;
+    display: flex;
 
     > div {
-      flex: 1 1 50%;
       -webkit-flex: 1 1 50%;
+      flex: 1 1 50%;
     }
 
     .tools-docs-listing {
-      flex: 1 1 75%;
       -webkit-flex: 1 1 75%;
+      flex: 1 1 75%;
     }
   }
 
-  h3 {
+  h2 {
     border-bottom: 1px solid #E8E8E8;
     padding-bottom: 0.3em;
-  }
-
-  ul.doclist {
-    > li {
-      flex: 1 1 50%;
-      -webkit-flex: 1 1 50%;
-    }
+    font-size: 1.3em;
+    margin-top: 0;
   }
 
   .tools-updates {
 
     padding-top: 0;
-    margin-left: 20px;
+    @include medium {
+      margin-left: 20px;
+    }
     background: transparent;
-    flex: 1 1 25%;
     -webkit-flex: 1 1 25%;
+    flex: 1 1 25%;
 
-    h3 {
-      opacity: .5;
-      margin-top: 1em;
+    h2 {
+      margin-top: 0;
       font-size: 1.3em;
       padding-bottom: 0.3em;
+      a {
+        color: inherit;
+      }
     }
   
     ul.short-updates {
@@ -386,12 +390,12 @@
     padding-top: 3em;
 
     @include medium {
-      display: flex;
       display: -webkit-flex;
-      align-items: flex-start;
+      display: flex;
       -webkit-align-items: flex-start;
-      justify-content: space-between;
+      align-items: flex-start;
       -webkit-justify-content: space-between;
+      justify-content: space-between;
     }
 
   }
@@ -459,12 +463,9 @@
 
 .tools-products {
 
-  @include small-only {
-    padding-top: 2em;
-  }
-  padding-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   border-bottom: 1px solid #eee;
-  counter-reset: tools-steps;
 
   font-family: Roboto;
   * {
@@ -473,22 +474,10 @@
     letter-spacing: 0;
   }
 
-  h2 {
-    font-weight: 300;
-    font-size: 2em;
-    padding-top: 1em;
-  }
-
-  h3 {
-    font-weight: 300;
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-
   h4 {
     font-size: 16px;
     font-weight: 500;
-    padding-top: 0;
+    padding-top: 1em;
   }
 
   .tools-docs-divider {
@@ -496,50 +485,38 @@
     margin-top: 1em;
   }
 
-  .tools-product-headings {
-    @include small-only {
-      display: none;
-    }
-  }
-
-  .tools-products-wrapper,
-  .tools-product-headings > div {
-
-    @include medium {
-      display: flex;
-      display: -webkit-flex;
-
-      > div {
-        flex: 1 1 50%;
-      }
-
-      > div.get-started {
-        padding-right: 20px;
-      }
-
-      > div.power-up {
-        padding-left: 20px;
-      }     
-    }
-
+  .tools-products-wrapper {
   }
 
   ul {
   
     margin: 0;
     padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
 
     li {
-      margin: 0;
-      margin-bottom: 1em;
       padding: 0;
-      display: -webkit-flex;
-      display: flex;
 
-      > a {
-        flex: 1 0 50%;
-        margin-right: 1em;
+      -webkit-flex: 0 1 50%;
+      flex: 0 1 50%;
+
+      @include medium {
+        -webkit-flex: 0 1 33%;
+        flex: 0 1 33%;
       }
+
+      @include wide {
+        -webkit-flex: 1 1 20%;
+        flex: 1 1 20%;        
+      }
+
+
+      padding: 0.5em;
 
       p {
         font-size: 14px;
@@ -550,7 +527,6 @@
       img {
         background: #E8E8E8;
         border-radius: 2px;
-        float: left;
         margin: 0;
       }
 
@@ -749,13 +725,13 @@
   }
 
   .flex {
-    display: flex;
     display: -webkit-flex;
-    flex-wrap: wrap;
+    display: flex;
     -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
     > * {
-      flex: 1 1 50%;
       -webkit-flex: 1 1 50%;
+      flex: 1 1 50%;
       min-width: 280px;
     }
   }
@@ -803,6 +779,7 @@
     display: -webkit-flex;
     display: flex;
     > div {
+      -webkit-flex: 1 1 50%;
       flex: 1 1 50%;
     }
   }
@@ -826,11 +803,11 @@
 
     ul.doclist.by-panel > li {
 
-      flex: 1 1 50%;
       -webkit-flex: 1 1 50%;
+      flex: 1 1 50%;
       @include medium {
-        flex: 0 1 50%;
         -webkit-flex: 0 1 50%;
+        flex: 0 1 50%;
       }
 
       img {
@@ -847,6 +824,9 @@
         top: -1em;
         color: #fff;
         background-color: rgba(0,0,0, 0.36);
+        a {
+          color: #fff;
+        }
       }
 
       ul {
@@ -875,8 +855,10 @@
     padding-bottom: 0;
 
     .container {
+      display: -webkit-flex;
       display: flex;
       > ul {
+        -webkit-flex: 1 1 75%;
         flex: 1 1 75%;
       }
 
@@ -915,6 +897,7 @@
 
     h3 {
       position: relative;
+      -webkit-flex: 1 1 25%;
       flex: 1 1 25%;
       font-size: 1.5em;
       padding-top: 26px;
@@ -952,8 +935,10 @@
 
     .container {
       > div {
+        -webkit-flex: 1 1 50%;
         flex: 1 1 50%;
         @include medium {
+          -webkit-flex: 1 1 25%;
           flex: 1 1 25%;
         }
         min-width: initial;

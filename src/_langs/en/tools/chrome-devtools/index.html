@@ -10,20 +10,28 @@ collection: tools
 panels:
   - title: Elements
     img: /web/tools/chrome-devtools/images/elements.jpg
+    anchor: elements-panel-inspect-dom-and-styles
   - title: Network
     img: /web/tools/chrome-devtools/images/network.jpg
+    anchor: network-panel-monitor-network-performance
   - title: Sources
     img: /web/tools/chrome-devtools/images/sources.jpg
+    anchor: sources-panel-debug-javascript-with-breakpoints
   - title: Timeline
     img: /web/tools/chrome-devtools/images/timeline.jpg
+    anchor: timeline-panel-record-and-analyze-page-activity
   - title: Profiles
     img: /web/tools/chrome-devtools/images/profiles.jpg
+    anchor: profiles-panel-profile-execution-time-and-memory-usage
   - title: Resources
     img: /web/tools/chrome-devtools/images/resources.jpg
+    anchor: resources-panel-inspect-storage
   - title: Console
     img: /web/tools/chrome-devtools/images/console.jpg
+    anchor: console-panel-interact-with-page
   - title: Device Mode
     img: /web/tools/chrome-devtools/images/devicemode.jpg
+    anchor: work-in-device-mode
 ---
 
 <div class="devtools">
@@ -187,8 +195,8 @@ panels:
           {% for panel in page.panels %}
           {% capture lowerPanelTitle %}{{ panel.title | downcase }}{% endcapture %}
           <li>
-            <img src="{{panel.img}}">
-            <h4>{{panel.title}}</h4>
+            <a href="/web/tools/setup/workspace/setup-devtools#{{panel.anchor}}"><img src="{{panel.img}}"></a>
+            <h4><a href="/web/tools/setup/workspace/setup-devtools#{{panel.anchor}}">{{panel.title}}</a></h4>
             <ul>
               {% for guide in combined %}
               {% if guide.panel == lowerPanelTitle and guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}

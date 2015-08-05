@@ -232,7 +232,7 @@ See [Marking the Timeline](./track-executions/#marking-the-timeline) for an exam
 
 Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `trace()` method was invoked at that point, as shown in the screen shot below.
 
-![Example of a stack trace with counter](images/console-trace.png)
+![Example of a stack trace with counter](images/track-exceptions-console-trace.jpg)
 
 It is also possible to pass in arguments to trace(). For example:
 
