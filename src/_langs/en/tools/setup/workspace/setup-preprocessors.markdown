@@ -14,7 +14,10 @@ article:
   order: 4
 collection: workspace
 takeaways:
-    - tbd
+    - Preprocessors let you use features in CSS and JavaScript that your browser doesn't support natively, for example, CSS variables.
+    - If you're using preprocessors, map your original source files to the rendered output using Source Maps.
+    - Make sure your web server can serve Source Maps.
+    - Use a supported preprocessor to automatically generate Source Maps.
 remember:
   canary:
     - tbd
@@ -36,7 +39,7 @@ With JavaScript as output, they either convert (compile) from a completely diffe
 
 ## Debugging and editing preprocessed content
 
-As soon as you are in the browser and use DevTools to [edit your CSS](/web/tools/iterate/inspect-styles/edit-styles) or debug your JavaScript, one issue becomes very apparent: What you are looking at does not reflect your source, and doesn't really help you fix your problem.
+As soon as you are in the browser and use DevTools to [edit your CSS](/web/tools/iterate/inspect-styles/edit-styles) or debug your JavaScript, one issue becomes very apparent: what you are looking at does not reflect your source, and doesn't really help you fix your problem.
 
 In order to work around, most modern preprocessors support a feature called <b>Source Maps</b>.
 
@@ -82,9 +85,9 @@ Below is an example source map file:
   "file": "styles.css"
 }`
 
-## Verify web server can serve source maps
+## Verify web server can serve Source Maps
 
-Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your source maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](http://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
+Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your Source Maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](http://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
 
 ### Bonus: Source mapping via custom header 
 
@@ -92,11 +95,11 @@ If you don't want an extra comment in your file, use an HTTP header field on the
 
 `X-SourceMap: /path/to/file.js.map`
 
-Like the comment, this tells DevTools and other tools where to look for the source map associated with a JavaScript file. This header also gets around the issue of referencing source maps in languages that don't support single-line comments.
+Like the comment, this tells DevTools and other tools where to look for the source map associated with a JavaScript file. This header also gets around the issue of referencing Source Maps in languages that don't support single-line comments.
 
 ## Supported preprocessors
 
-Just about any compiled to JavaScript language has an option to generate source maps today – including Coffeescript, TypeScript, JSX and many more. You can additionally use source maps on the server side within Node, in our CSS with via Sass, Less and more, using browserify which gives you node-style require abilities, and through minification tools like uglify-js which also adds the neat ability to generate multi-level source maps.
+Just about any compiled to JavaScript language has an option to generate Source Maps today – including Coffeescript, TypeScript, JSX and many more. You can additionally use Source Maps on the server side within Node, in our CSS with via Sass, Less and more, using browserify which gives you node-style require abilities, and through minification tools like uglify-js which also adds the neat ability to generate multi-level Source Maps.
 
 ### JavaScript
 
@@ -127,7 +130,7 @@ Just about any compiled to JavaScript language has an option to generate source 
     <tr>
       <td data-th="Compiler"><a href="https://babeljs.io/docs/usage/cli/#compile-with-source-maps">Babel</a></td>
       <td data-th="Command"><code>$ babel script.js --out-file script-compiled.js --source-maps</code></td>
-      <td data-th="Instructions">Use --source-maps or -s to generate source maps. Use <code>--source-maps inline</code> for inline source maps.</td>
+      <td data-th="Instructions">Use --source-maps or -s to generate Source Maps. Use <code>--source-maps inline</code> for inline Source Maps.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a></td>
@@ -178,7 +181,7 @@ Just about any compiled to JavaScript language has an option to generate source 
 
 ## Source Maps and DevTools
 
-Now that you've got source maps properly set up, you might be happy to learn that DevTools has built-in support for both CSS and JS based source maps.
+Now that you've got Source Maps properly set up, you might be happy to learn that DevTools has built-in support for both CSS and JS based Source Maps.
 
 ### Editing preprocessed CSS
 

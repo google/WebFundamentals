@@ -45,7 +45,7 @@ prevents any nasty surprises at the end of the project and you can add tools
 into your workflow that speed up your development, doing the monotonous tasks
 for you.
 
-## What Is a Build Process
+## What is a build process?
 
 A build process is a set of tasks which run over your projects files, compiling
 and testing code during development and used to create the deployment version of
@@ -93,7 +93,7 @@ will be less flexible.
 </table>
 
 
-## What Tasks Should be in a Build Process
+## What tasks should be in a build process?
 
 In the following sections, we're going to look at the most common tasks you
 should have in your build process and recommend tasks for Grunt and Gulp.
@@ -115,7 +115,7 @@ and running your first build process:
 * [Gulp Getting
   Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
 
-### Use Concatenation & Minification for a Faster Site
+### Use concatenation & minification for a faster site
 
 For those unfamiliar with the terms concatenation and minification,
 concatenation means simply merging multiple files together, i.e. copying and
@@ -194,14 +194,14 @@ For concatentation, use the following:
 You can use Sass by taking advantage of the 'import' feature ([See Web Starter
 Kit for an example](https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss)).
 
-### Optimise Your Images
+### Optimize your images
 
-Image optimisation is an important step to help speed up your site; you'd be
+Image optimization is an important step to help speed up your site; you'd be
 surprised how much smaller you can make an image without losing quality. Meta
 data is removed from the image as it's not needed by the browser to display the
 image, for example, information about the camera used to take the photo.
 
-For optimising images you can use these modules.
+For optimizing images, you can use these modules.
 
 <table class="table-2 tc-heavyright">
   <colgroup>
@@ -222,7 +222,7 @@ For optimising images you can use these modules.
   </tbody>
 </table>
 
-### Don't Trip Up with Vendor Prefixes
+### Don't trip up with vendor prefixes
 
 It can often become a bit tedious to include all the vendor prefixes for the CSS
 you use. Use an auto-prefixer to automatically add the prefixes you need to
@@ -251,7 +251,7 @@ include:
 If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.baseurl}}/fundamentals/tools/setup/editor.html#autoprefixer) for
 you.
 
-### Never Leave Your Text Editor with Live Reloading
+### Never leave your text editor with live reloading
 
 Live reloading updates your site in your browser each time your make a change.
 After using it once, you won't be able to live without it.

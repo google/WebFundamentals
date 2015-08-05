@@ -28,9 +28,6 @@ key-takeaways:
     - Test your site's responsiveness using the device mode's screen emulator.
     - Save custom presets so you can easily access them later.
     - Device mode isn't a replacement for real device testing. Be aware of its limitations.
-remember:
-  canary:
-    - Some of this documentation might be ahead of the stable version of Chrome. Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a>.
 ---
 
 {% wrap content%}
@@ -53,7 +50,7 @@ You can use Chrome DevTools device mode to:
 * Accurately [simulate device input](/web/tools/javascript/device-input/index) for touch events, geolocation, and device orientation.
 * Enhance your current debugging workflow by combining device mode with the existing DevTools.
 
-{% include modules/remember.liquid title="Note" list=page.remember.canary %}
+Some of this documentation might be ahead of the stable version of Chrome. Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a>.
 
 ## Enable device mode
 
