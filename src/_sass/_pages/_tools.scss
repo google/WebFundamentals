@@ -952,7 +952,10 @@
 
     .container {
       > div {
-        flex: 1 1 25%;
+        flex: 1 1 50%;
+        @include medium {
+          flex: 1 1 25%;
+        }
         min-width: initial;
         padding-right: 1.3em;
 
