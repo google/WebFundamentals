@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: fundamentals/list-subdirectories
 title: "Engineering Excellence"
 description: ""
 introduction: ""

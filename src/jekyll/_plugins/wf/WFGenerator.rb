@@ -36,10 +36,11 @@ module Jekyll
           next
         end
 
-        requiredYamlFields = ['date']
-        if (requiredYamlFields - page.data.keys).empty? == false
-          next
-        end
+        #requiredYamlFields = ['date']
+        #if (requiredYamlFields - page.data.keys).empty? == false
+        #  puts "No Date found in YAML " + page.name
+        #  next
+        #end
 
         #if not (page.data['wf-section'] == sectionName)
         #  next
@@ -56,14 +57,16 @@ module Jekyll
           next
         end
 
-        shouldSkipPage = false
+        # This is weird because next in the context of sections.each_with_index
+        # Isn't the right level to skip this level
+        isInSection = true;
         sections.each_with_index { |sectionName, index|
-          if not (directories[index] == sectionName)
-            shouldSkipPage = true
-            break
+          if directories[index] != sectionName
+            isInSection = false
+            next
           end
         }
-        if shouldSkipPage
+        if not isInSection
           next
         end
 
@@ -79,9 +82,11 @@ module Jekyll
         return []
       end
 
-      return sectionPages.sort {|a,b|
-        b.data['date'] <=> a.data['date']
-      }
+      return sectionPages
+
+      #return sectionPages.sort {|a,b|
+      #  b.data['date'] <=> a.data['date']
+      #}
     end
   end
 end

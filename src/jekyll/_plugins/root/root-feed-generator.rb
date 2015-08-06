@@ -34,7 +34,7 @@ module Jekyll
     end
 
     def generateFeedPage(site, pages)
-      site.pages << RootFeedPage.new(site, site.data['curr_lang'], pages)
+      site.pages << RootFeedPage.new(site, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_RSS)
     end
   end
 

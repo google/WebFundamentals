@@ -1,0 +1,12 @@
+{% include page-structure/open-page.liquid %}
+
+{{ content }}
+
+<!-- Loop through each sub directory and generate some navigation -->
+{% for subdirectory in page.pages.subdirectories %}
+  <h2>{{subdirectory[1].pages[0].title}}</h2>
+  <!-- To view the format of the date, uncomment the following line -->
+  <p><a href="{{subdirectory[1].pages[0].relative_url}}">View content here</a></p>
+{% endfor %}
+
+{% include page-structure/close-page.liquid %}

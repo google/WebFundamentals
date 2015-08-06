@@ -1,10 +1,10 @@
 ---
-layout: shared/plain
-title: "Resources"
+layout: fundamentals/list-subdirectories
+title: "API Primers"
 description: ""
 introduction: ""
 snippet: ""
-id: resources
+id: primers
 collection: fundamentals
 
 article:
@@ -13,4 +13,4 @@ article:
 priority: 0
 ---
 
-Resources Home Page
+API Primer Home Page
