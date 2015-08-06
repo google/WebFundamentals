@@ -7,6 +7,7 @@ id: make-intra-site-urls-relative
 collection: security-with-tls
 authors:
   - chrispalmer
+  - mattgaunt
 article:
   written_on: 2015-03-27
   updated_on: 2015-03-27
@@ -39,36 +40,36 @@ downgraded from HTTPS to HTTP.
 These problems happen when your pages include fully-qualified, intra-site URLs
 that use the *http://* scheme. You should change content like this:
 
-		<h1>Welcome To Example.com</h1>
-		<script src="http://example.com/jquery.js"></script>
-		<link rel="stylesheet" href="http://assets.example.com/style.css"/>
-		<img src="http://img.example.com/logo.png"/>;
-		<p>Read this nice <a href="http://example.com/2014/12/24/">new
-		post on cats!</a></p>
-		<p>Check out this <a href="http://foo.com/">other cool
-		site.</a></p>
+    <h1>Welcome To Example.com</h1>
+    <script src="http://example.com/jquery.js"></script>
+    <link rel="stylesheet" href="http://assets.example.com/style.css"/>
+    <img src="http://img.example.com/logo.png"/>;
+    <p>Read this nice <a href="http://example.com/2014/12/24/">new
+    post on cats!</a></p>
+    <p>Check out this <a href="http://foo.com/">other cool
+    site.</a></p>
 
 to something like this:
 
-		<h1>Welcome To Example.com</h1>
-		<script src="//example.com/jquery.js"></script>
-		<link rel="stylesheet" href="//assets.example.com/style.css"/>
-		<img src="//img.example.com/logo.png"/>;
-		<p>Read this nice <a href="//example.com/2014/12/24/">new
-		post on cats!</a></p>
-		<p>Check out this <a href="http://foo.com/">other cool
-		site.</a></p>
+    <h1>Welcome To Example.com</h1>
+    <script src="//example.com/jquery.js"></script>
+    <link rel="stylesheet" href="//assets.example.com/style.css"/>
+    <img src="//img.example.com/logo.png"/>;
+    <p>Read this nice <a href="//example.com/2014/12/24/">new
+    post on cats!</a></p>
+    <p>Check out this <a href="http://foo.com/">other cool
+    site.</a></p>
 
 or this:
 
-		<h1>Welcome To Example.com</h1>
-		<script src="/jquery.js"></script>
-		<link rel="stylesheet" href="//assets.example.com/style.css"/>
-		<img src="//img.example.com/logo.png"/>;
-		<p>Read this nice <a href="/2014/12/24/">new
-		post on cats!</a></p>
-		<p>Check out this <a href="http://foo.com/">other cool
-		site.</a></p>
+    <h1>Welcome To Example.com</h1>
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="//assets.example.com/style.css"/>
+    <img src="//img.example.com/logo.png"/>;
+    <p>Read this nice <a href="/2014/12/24/">new
+    post on cats!</a></p>
+    <p>Check out this <a href="http://foo.com/">other cool
+    site.</a></p>
 
 That is, make intra-site URLs as relative as possible: either protocol-relative
 (lacking a protocol, starting with //example.com) or host-relative (starting
