@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Types of Device Emulators and Simulators"
 seotitle: "Types of Device Emulators and Simulators"
 description: "Device emulators and simulators let you mimic your development site on a range of devices from your workstation. Learn about the different types of device emulators and simulators available."
@@ -10,7 +10,7 @@ authors:
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
-  order: 5
+  order: 2
 collection: device-testing
 key-takeaways:
   emulator: 
@@ -34,11 +34,12 @@ certain everything behaves as expected.
 
 ### Chrome DevTools emulation
 
-Chome DevTools has a [Device emulation tool](https://web-central.appspot.com/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
+Chome DevTools has a [Device emulation tool](/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
 
 You can activate device emulation by following these four steps:
 
-1. With Chrome DevTools open, click the arrow icon with three horizontal lines
+1. With Chrome DevTools open,
+click the arrow icon with three horizontal lines.
 2. Click the mobile device in the top left.
 3. Select the `Emulation` tab at the bottom.
 4. Then select the device you want to test against from the drop down.

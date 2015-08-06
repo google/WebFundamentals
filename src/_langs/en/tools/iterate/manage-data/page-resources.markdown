@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect Your Page Resources"
 seotitle: "Inspect Your Page Resources in the Chrome DevTools Resources Panel"
 description: "View all of your main document's resources including images, scripts, and fonts, and those of any loaded frames in the Chrome DevTools Resources panel."
@@ -14,8 +14,9 @@ authors:
 priority: 0
 collection: manage-data
 key-takeaways:
-  tldr-tbd:
-    - TBD tldr.
+  page-resources:
+    - Preview page resources, including visual previews of fonts and images.
+    - Open a page resource in the Network panel to profile the time it took for the resource to load.
 remember:
   note-tbd:
     - TBD note.
@@ -27,6 +28,8 @@ The top level category of page resources are the document's frames, which includ
 ![Page resources top level category](imgs/frame-resources.png)
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.page-resources %}
 
 ## Preview a resource
 
@@ -42,9 +45,14 @@ Image previews include the dimensions, file size, MIME type, and URL of the imag
 
 ## Open resource in Network panel
 
+The [Network panel](/web/tools/profile-performance/network-performance/resource-loading)
+provides detailed information about the time it took
+each resource to load, from the start of the HTTP request
+to the receipt of the final byte of the response.
+
 To open a resource in the Network panel, right-click or control-click the resource and select **Reveal In Resources Panel**. 
 
-From the same menu you can copy the resource's URL to the system clipboard, or open it in a new browser tab. 
+From the same menu, you can copy the resource's URL to the system clipboard, or open it in a new browser tab. 
 
 ![Open resources in Network panel](imgs/reveal-in-network.png)
 
