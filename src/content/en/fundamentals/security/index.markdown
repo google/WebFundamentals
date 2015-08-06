@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: fundamentals/list-subdirectories
 title: "Security"
 description: ""
 introduction: ""
