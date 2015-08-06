@@ -33,7 +33,7 @@ pros: |
 
   Yet, [Hummingbird Library](http://hummingbirdlibrary.com/), which sits on top of the existing Hummingbird API, goes one step further, built from scratch with Angular and Material Design. [Theme color](/web/fundamentals/device-access/stickyness/additional-customizations.html) and [manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) make it look super integrated and installable on the home screen, and the whole experience feels very snappy, focussing on the core functionality of the main site.
 cons: |
-  **Performance**: The app would benefit greatly from utilizing a Service Worker to offline cache results and UI after initial page load, enabling gzip compression would dramatically improve load time and having a static, initial barebone layout in the HTML would improve perceived performance.
+  **Performance**: The app would benefit greatly from utilizing a service worker to offline cache results and UI after initial page load, enabling gzip compression would dramatically improve load time and having a static, initial barebone layout in the HTML would improve perceived performance.
 
   **UX**: The flex box model used to display the list of shows works well with bigger screens but loses its appeal on smaller ones. A non centered, tighter version of the tiles would work much better on mobile devices.
 

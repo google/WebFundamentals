@@ -17,6 +17,6 @@ article:
 Addy Osmani; Eric Bidelman; Matthew McNulty; Taylor Savage
 
 The latest version of Polymer is fast and lean. Learn how teams at Google have successfully 
-launched sites using Polymer and the latest platform APIs: Web Animations, Service Workers 
+launched sites using Polymer and the latest platform APIs: Web Animations, service workers 
 for offline and push notifications, and material design. And if you're new to Polymer we'll 
 show you how to get started building mobile-first apps.
