@@ -5,7 +5,7 @@ class: lazyweb
 layout: shows/single-video
 collection: lazyweb-2015
 title: "A quest to save the universe with JavaScript"
-description: "Service Workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan."
+description: "Service workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan."
 published: true
 showYoutubeID: j9i4Eq9_S5Y
 
@@ -18,7 +18,7 @@ article:
 
 # In this week's Episode
 
-Service Workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan.
+Service workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan.
 
 ## DEVTOOLS DAILY
 
@@ -34,7 +34,7 @@ What if you could debug Internet Explorer in Chrome? Recently open sourced by th
 
 ## SERVICE WORKERS
 
-Building offline experiences may be getting easier because Service Workers are coming to Firefox Nightly. Based on a W3C spec, Service Workers give developers increased control over a page, allowing them to reroute network requests, serve resources from the cache, and even send push notifications. Service Workers are already shipping in Chrome, and the team at Firefox estimates they may land in version 41.
+Building offline experiences may be getting easier because service workers are coming to Firefox Nightly. Based on a W3C spec, service workers give developers increased control over a page, allowing them to reroute network requests, serve resources from the cache, and even send push notifications. Service workers are already shipping in Chrome, and the team at Firefox estimates they may land in version 41.
 
 [https://blog.wanderview.com/blog/2015/03/24/service-workers-in-firefox-nightly](https://blog.wanderview.com/blog/2015/03/24/service-workers-in-firefox-nightly)
 

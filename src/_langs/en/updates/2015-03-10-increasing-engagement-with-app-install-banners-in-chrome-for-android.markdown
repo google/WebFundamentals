@@ -259,7 +259,7 @@ service worker.
 We believe that when you add to the user's home screen you should be providing 
 an app-like experience.  A service worker, especially one that supports push 
 messaging or offline, is a strong indicator that you are developing a first 
-class device experience.  We recommend the following [simple Service Worker as a 
+class device experience.  We recommend the following [simple service worker as a 
 starting point](https://github.com/GoogleChrome/samples/blob/gh-pages/app-install-banner/basic-banner/service-worker.js). 
 
 **Will the criteria for App Banner activation change over time?**
