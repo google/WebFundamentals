@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Diagnose Forced Synchronous Layouts"
 seotitle: "Diagnose Forced Synchronous Layouts"
 description: "Learn how to use the Timeline tool to diagnose forced synchronous layouts in an animation."
@@ -19,7 +19,13 @@ key-takeaways:
 ---
 {% wrap content %}
 
-This demo shows how you can use the Timeline to identify a kind of performance bottleneck called "forced synchronous layouts". The demo application animates images using [requestAnimationFrame()](http://docs.webplatform.org/wiki/apis/timing/methods/requestAnimationFrame), the [recommended approach](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision) for performing frame-based animation, but there is a considerable amount of stuttering and "jank" as the animation runs. This guide then shows you how to identify the problem and apply a fix with DevTools.
+Follow this demo to learn how to use the Timeline tool to identify
+[forced synchronous layouts](/web/tools/profile-performance/rendering-tools/analyze-runtime#how-to-identify-layout-bottlenecks)
+and apply a fix with DevTools.
+
+The demo animates images using
+[requestAnimationFrame()](http://docs.webplatform.org/wiki/apis/timing/methods/requestAnimationFrame), the [recommended approach](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision) for frame-based animation,
+but there's a considerable amount of stuttering and "jank" as the animation runs.
 
 {% include modules/toc.liquid %}
 
@@ -60,7 +66,7 @@ Now that we have an idea what's causing the performance issues, we can modify th
 1. In the Sources panel that was opened previously, find the line
 `movers[m].style.left = ((Math.sin(movers[m].offsetTop + timestamp / 1000) + 1) * 500) + 'px';` and comment it out.
 2. Uncomment the commented line below it: `//movers[m].style.left = ((Math.sin(m + timestamp/1000)+1) * 500) + 'px';`. This version computes each image's `left` style property on its index in the holding array instead of on the layout-dependent property `offsetTop`.
-3. Save your changes by pressing Cmd-S or Ctrl-S.
+3. Save your changes by pressing <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> or <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>.
 
 ## Verify with another recording
 

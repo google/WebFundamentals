@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: section
+layout: tools-section
 title: "Page Load Performance"
 seotitle: "Page Load Performance Using Chrome DevTools Network Panel and Resource Timing API"
 description: "Test how your pages load in varying network conditions. Offer users the best possible experience despite network connectivity."

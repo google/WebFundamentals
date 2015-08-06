@@ -48,7 +48,7 @@ using Google AdSense and the Web Starter Kit:
   alt="Sample website with ads on desktop and mobile">
 
 If you're unfamiliar with the Web Start Kit, refer to the
-[Set Up Web Starter Kit]({{site.fundamentals}}/tools/setup/setup_kit.html) documentation.
+[Set Up Web Starter Kit]({{site.fundamentals}}/getting-started/web-starter-kit/setting-up) documentation.
 
 In order to include ads in your site and get paid, you'll need to follow these simple steps:
 

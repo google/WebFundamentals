@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: landing
+layout: tools-landing
 title: "Set Up "
 seotitle: "Set Up Your Developer Tools"
 description: "Device capabilities and network availability vary greatly. Learn what you need in your development toolkit to build an experience that works great on any device."

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect and Manage Your Local Storage APIs"
 seotitle: "Inspect and Manage Local Storage APIs in the Chrome DevTools Resources Panel"
 description: "Inspect and edit local storage APIs including local and session storage, IndexedDB and Web SQL databases, and the Application Cache in the Chrome DevTools Resources panel."
@@ -14,8 +14,10 @@ authors:
 priority: 0
 collection: manage-data
 key-takeaways:
-  tldr-tbd:
-    - TBD tldr.
+  local-storage:
+    - View and edit local and session storage.
+    - Inspect IndexedDB databases and object stores.
+    - View resources cached according to the Application Cache manifest file.
 remember:
   note-tbd:
     - TBD note.
@@ -24,67 +26,83 @@ remember:
 
 {% include modules/toc.liquid %}
 
+{% include modules/takeaway.liquid list=page.key-takeaways.local-storage %}
+
 ## Local and session storage
 
-You can view and edit local and session storage key/value pairs you've created using the [Web Storage APIs](http://www.w3.org/TR/webstorage/). You can edit, delete, and create both local and session storage data.
+View and edit local and session storage key/value pairs created using the [Web Storage APIs](http://www.w3.org/TR/webstorage/).
 
-**To delete a key/value pair**, do one of the following:
+### Add key/value pair
 
-* Select the item in the data table and do one of the following:
-    2. Click the Delete button.
-    3. Press the Delete key on your keyboard.
-* Right-click or Control-click on the data item and choose Delete from the context menu.
-
-**To add a new key/value pair:**
+To add a new key/value pair:
 
 1. Double-click inside an empty Key table cell and enter the key name.
 2. Double-click inside the corresponding Value table cell and enter the key's value.
 
-**To edit an existing key/value pair**, do one of the following:
+### Edit key/value pair
+
+To edit an existing key/value pair, do one of the following:
 
 * Double-click in the cell you want to edit.
 * Right-click or Control-click the cell you want to edit and choose Edit from the context menu.
 
-**To refresh the table with new storage data**, click the Refresh button at the bottom of the panel.
+### Refresh table
 
-![Refresh](imgs/refresh.png)
+To refresh the table with new storage data, click the Refresh button ![Refresh](imgs/refresh.png){:.inline} at the bottom of the panel.
+
+### Delete key/value pair
+
+To delete a key/value pair,
+
+1. Select the item in the data table and click the Delete button, or press the Delete key on your keyboard.
+2. Right-click or Control-click on the data item and choose Delete from the context menu.
 
 ## IndexedDB
 
-You can inspect IndexedDB databases and object stores, page through an object store's records, and clear an object store of its records.
+Inspect IndexedDB databases and object stores, page through an object store's records, and clear an object store of its records.
 
-* **To view a list of available database**, expand the IndexedDB category.
-* **To view a database's object stores**, select it from the list of available databases.
+### View IndexedDB databases and object stores
 
-![IndexedDB](imgs/indexeddb.png) 
+* To view a list of available database, expand the IndexedDB category.
+* To view a database's object stores, select it from the list of available databases.
 
-**To page through records in the object store**, click the Previous and Next page buttons. You can also specify the record where paging starts by specifying the record's key.
+![IndexedDB](imgs/indexeddb.png)
 
-![Next-previous page](imgs/next-previous-page.png)
-
-**To clear the object store**, do one of the following:
-
-* Click the **Clear object store** button ![Clear](imgs/clear.png) at the bottom of the panel.
-* Right-click or Control-click the object store and select **Clear** from the context menu.
-
-**To view properties of a database**, select it from the list of databases.
+To view properties of a database, select it from the list of databases.
 
 ![Database properties](imgs/database-properties.png)
 
+### Page through records
+
+To page through records in the object store, click the Previous and Next page buttons. You can also specify the record where paging starts by specifying the record's key.
+
+![Next-previous page](imgs/next-previous-page.png)
+
+### Clear object store
+
+To clear the object store, do one of the following:
+
+* Click the **Clear object store** button ![Clear](imgs/clear.png){:.inline} at the bottom of the panel.
+* Right-click or Control-click the object store and select **Clear** from the context menu.
+
 ## Web SQL
 
-You can inspect the content of Web SQL databases, and run SQL commands against 
+Inspect the content of Web SQL databases, and run SQL commands against 
 their contents.
 
-* **To view the available Web SQL databases**, expand the Web SQL item in the tree control.
-* **To view available tables in a database**, expand the database tree item.
-* **To view a table's records**, select the table. Its properties appear in the right-hand pane.
-* **To refresh the view of the database**, click the Refresh button ![Refresh button](imgs/refresh.png) at the bottom of the panel. 
+### Inspect content
 
-You can query a Web SQL database's tables with SQL commands and view 
+* To view the available Web SQL databases, expand the Web SQL item in the tree control.
+* To view available tables in a database, expand the database tree item.
+* To view a table's records, select the table. Its properties appear in the right-hand pane.
+* To refresh the view of the database, click the Refresh button ![Refresh button](imgs/refresh.png){:.inline} at the bottom of the panel. 
+
+### Query content
+
+Query a Web SQL database's tables with SQL commands and view 
 query results in a tabular format. As you type out a command or table name, code hints are provided for the names of supported SQL commands and clauses, and the names of tables that the database contains.
 
-**To run a SQL command against a database**:
+To run a SQL command against a database:
 
 1. Select the database containing the table you want to query.
 2. At the prompt that appears in the right-hand panel, enter the SQL statement you want to execute.
@@ -93,7 +111,7 @@ query results in a tabular format. As you type out a command or table name, code
 
 ## Application Cache
 
-You can examine resources that Chrome has cached according to the Application Cache manifest file specified by the current document. You can view the current status of the Application Cache (idle or downloading, for 
+The Resources panel shows the resources Chrome has cached according to the Application Cache manifest file specified by the current document. You can view the current status of the Application Cache (idle or downloading, for 
 example), and the browser's connection status (online or offline).<br/>
 
 ![Application Cache](imgs/app-cache.png) 
@@ -116,32 +134,35 @@ The table of cached resources includes the following properties for each resourc
 The Resources panel displays the current [status](http://www.whatwg.org/specs/web-apps/current-work/#dom-appcache-status) 
 of the application cache along with a colored status icon (green, yellow, or red). The following are the possible status values and their descriptions:
 
-<!-- TODO: Fix formatting of cells -->
-<table>
-<tr>
-<td>Status</td>
-<td>Description</td>
-</tr>
-<tr>
-<td><img src="imgs/green.png"/> IDLE </td>
-<td>The application cache is idle.</td>
-</tr>
-<tr>
-<td><img src="imgs/yellow.png"/>CHECKING </td>
-<td>The manifest is being fetched and checked for updates.</td>
-</tr>
-<tr>
-<td><img src="imgs/yellow.png"/>DOWNLOADING </td>
-<td>Resources are being downloaded to be added to the cache, due to a changed resource manifest.</td>
-</tr>
-<tr>
-<td><img src="imgs/green.png"/>UPDATEREADY </td>
-<td>There is a new version of the application cache available. </td>
-</tr>
-<tr>
-<td><img src="imgs/red.png"/>OBSOLETE </td>
-<td>The application cache group is obsolete.</td>
-</tr>
+<table class="table-2">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Status"><img src="imgs/green.png" class="inline"/>IDLE </td>
+      <td data-th="Description">The application cache is idle.</td>
+    </tr>
+    <tr>
+      <td data-th="Status"><img src="imgs/yellow.png" class="inline"/>CHECKING </td>
+      <td data-th="Description">The manifest is being fetched and checked for updates.</td>
+    </tr>
+    <tr>
+      <td data-th="Status"><img src="imgs/yellow.png" class="inline"/>DOWNLOADING </td>
+      <td data-th="Description">Resources are being downloaded to be added to the cache, due to a changed resource manifest.</td>
+    </tr>
+    <tr>
+      <td data-th="Status"><img src="imgs/green.png" class="inline"/>UPDATEREADY </td>
+      <td data-th="Description">There is a new version of the application cache available. </td>
+    </tr>
+    <tr>
+      <td data-th="Status"><img src="imgs/red.png" class="inline"/>OBSOLETE </td>
+      <td data-th="Description">The application cache group is obsolete.</td>
+    </tr>
+  </tbody>
 </table>
 
 {% include modules/nextarticle.liquid %}

@@ -1,13 +1,13 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Inspect and Manage Your Cookies"
 seotitle: "Inspect and Manage Your Cookies in the Chrome DevTools Resources Panel"
 description: "Inspect and manage your site's cookies by expanding the Cookies category in the Chrome DevTools Resources panel."
 introduction: "Inspect and manage your site's cookies by expanding the Cookies category in the Chrome DevTools Resources panel."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-05-12
+  updated_on: 2015-08-03
   order: 2
 authors:
   - megginkearney
@@ -15,7 +15,9 @@ priority: 0
 collection: manage-data
 key-takeaways:
   cookies:
-    - TBD tldr.
+    - View detailed information about cookies created by an HTTP header or with JavaScript.
+    - Clear a single cookie, cookies in a selected frame, or cookies in a specified domain.
+    - Refresh the cookie's table.
 remember:
   note-tbd:
     - TBD note.
@@ -25,6 +27,8 @@ remember:
 ![Cookies](imgs/cookies.png)
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.cookies %}
 
 ## View cookies
 
@@ -86,18 +90,24 @@ The following fields are displayed for each cookie in the selected frame group:
 
 You can clear (delete) a single cookie, all cookies in the selected frame group, or cookies from a specific domain. Recall the same cookie may appear in more than one frame group. If the same cookie for a given domain is referenced in two frame groups, deleting all cookies for that domain will affect both groups.
 
-**To clear a single cookie:**
+### Clear a single cookie
+
+To clear a single cookie:
 
 * Select a cookie in the table and click the Delete button at the bottom of the panel.
 * Right-click on a cookie and select Delete.
 
-**To clear all cookies from the selected frame group:**
+### Clear all cookies from selected frame group
 
-* Click the Clear button ![Clear button](imgs/clear.png) at the bottom of the Resources panel.
+To clear all cookies from the selected frame group:
+
+* Click the Clear button ![Clear button](imgs/clear.png){:.inline} at the bottom of the Resources panel.
 * Right-click on the frame group and select **Clear** from the context menu.
 * Right-click on a cookie row in the table and select **Clear All**.
 
-**To clear all cookies from a specific domain:**
+### Clear all cookies from specific domain
+
+To clear all cookies from a specific domain:
 
 1. Right+click (or Ctrl+click) a cookie in the table from the target domain.
 2. From the context menu, select **Clear All from _domain_**, where
@@ -114,7 +124,7 @@ Note the following about this operation:
 
 You can also refresh the table to reflect any changes to the page's cookies.
 
-**To refresh the cookies table**, click the refresh button ![Refresh button](imgs/refresh.png) at the bottom of the Resources panel. 
+To refresh the cookies table, click the refresh button ![Refresh button](imgs/refresh.png){:.inline} at the bottom of the Resources panel. 
 
 {% include modules/nextarticle.liquid %}
 

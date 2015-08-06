@@ -1,180 +1,157 @@
 ---
 rss: false
-layout: article
-title: "Write to Console"
-seotitle: "Write to Console in Chrome DevTools"
+layout: tools-article
+title: "Diagnose and Log to Console"
+seotitle: "Diagnose and Log to Console in Chrome DevTools"
 description: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage."
-introduction: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage"
+introduction: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage."
 article:
   written_on: 2015-04-14
   updated_on: 2015-05-12
   order: 2
 authors:
+  - pbakaus
   - megginkearney
   - flaviocopes
 priority: 0
 collection: console
 key-takeaways:
   console-write:
-    - console.log() is the main console writing function, and has pretty useful options
-    - use console.error() and console.warn() too
-    - filter the console messages by message type (error, warning, info..) in the Console
-    - can use console.group() and console.groupEnd() to group related messages and avoid clutter
-    - use console.assert() to show conditional error messages
+    - Use <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a> for basic logging
+    - Use <a href="/web/tools/javascript/console/console-reference#consoleerrorobject--object-">console.error()</a> and <a href="/web/tools/javascript/console/console-reference#consolewarnobject--object-">console.warn()</a> for eye-catching stuff
+    - Use <a href="/web/tools/javascript/console/console-reference#consolegroupobject-object-">console.group()</a> and <a href="/web/tools/javascript/console/console-reference#consolegroupend">console.groupEnd()</a> to group related messages and avoid clutter
+    - Use <a href="/web/tools/javascript/console/console-reference#consoleassertexpression-object">console.assert()</a> to show conditional error messages
 ---
 {% wrap content %}
+
+{% include modules/toc.liquid %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.console-write %}
 
 ## Writing to the console
 
-The <a href="https://developer.chrome.com/devtools/docs/console-api#consolelogobject-object">console.log()</a> method takes one or more expressions as parameters and writes their current values to the console.
+Use the <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a> method for any basic logging to the console. It takes one or more expressions as parameters and writes their current values to the console, concatenating multiple parameters into a space-delimited line.
 
-A simple write to the console:
+Executing this line of code in your JavaScript:
 
-    var a = document.createElement('p');
-    a.appendChild(document.createTextNode('foo'));
-    a.appendChild(document.createTextNode('bar'));
-    console.log("Node count: " + a.childNodes.length);
+{% highlight js %}
+console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
+{% endhighlight %}
 
-Display of the example code in the console:
-![Basic log](images/console-write-log-basic.png)
-
-Multiple parameters will concatenate into a space-delimited line.
-
-`console.log()` with multiple parameters:
-
-    console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
-
-Output of multiple parameter `console.log()`:
+Will output this in the Console:
 ![Log Multiple](images/console-write-log-multiple.png)
-
-### Styling console output with CSS
-
-The CSS format specifier allows you to customize the display in the console.
-Start the string with the specifier and give the style you wish to apply as the second parameter.
-
-Styling log information example code:
-
-    console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
-
-Example code output:
-![Formatted string](images/console-write-format-string.png)
 
 ## Organizing Console output
 
-### Filtering console output
+### Group messages together
 
-You can filter console output by its severity level by selecting one of the filter options.
-Activate filters under the filter funnel icon located in the upper-left corner of the console panel.
-The following filter options are available:
+You can group related output together with the group commands. The [`console.group()`](./console-api#consolegroupobject-object-) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
 
+To end the grouping you only need to call [`console.groupEnd()`](./console-api#consolegroupend) when you're done.
 
-| Option   |      Shows                                                       |
-|----------|:-----------------------------------------------------------------|
-| All      | Shows all console output                                         |
-| Errors   | Only show output from `console.error()`                          |
-| Warnings | Only show output from `console.warn()`.                          |
-| Info     | Only show output from `console.info()`                           |
-| Logs     | Only show output from `console.log()`                            |
-| Debug    | Only show output from `console.timeEnd()` and `console.debug()`. |
+Example input:
 
-Filter enabled for showing only errors:
-![Filtering errors](images/console-write-filter-errors.png)
-
-### Grouping Output
-
-You can group related output together with the group commands.
-The [`group()`](https://developer.chrome.com/devtools/docs/console-api#consolegroupobject-object) command takes a single string parameter to set the name of the group.
-The console will begin to group all subsequent output together.
-To end the grouping you only need to call [`groupEnd()`](https://developer.chrome.com/devtools/docs/console-api#consolegroupobject-object).
-
-Simple grouping example code:
-
-    var user = "jsmith", authenticated = false;
-    console.group("Authentication phase");
-    console.log("Authenticating user '%s'", user);
-    // authentication code here...
-    if (!authenticated) {
-        console.log("User '%s' not authenticated.", user)
-    }
-    console.groupEnd();
+{% highlight js %}
+var user = "jsmith", authenticated = false;
+console.group("Authentication phase");
+console.log("Authenticating user '%s'", user);
+// authentication code here...
+if (!authenticated) {
+    console.log("User '%s' not authenticated.", user)
+}
+console.groupEnd();
+{% endhighlight %}
 
 Example output:
 ![Simple console group output](images/console-write-group.png)
+
+#### Nested groups
 
 Log groups may also nest within each other. This is useful to see a large group in smaller pieces at a time.
 
 This example shows a log group for the authentication phase of a login process:
 
-    var user = "jsmith", authenticated = true, authorized = true;
-    // Top-level group
-    console.group("Authenticating user '%s'", user);
-    if (authenticated) {
-        console.log("User '%s' was authenticated", user);
-        // Start nested group
-        console.group("Authorizing user '%s'", user);
-        if (authorized) {
-            console.log("User '%s' was authorized.", user);
-        }
-        // End nested group
-        console.groupEnd();
+{% highlight js %}
+var user = "jsmith", authenticated = true, authorized = true;
+// Top-level group
+console.group("Authenticating user '%s'", user);
+if (authenticated) {
+    console.log("User '%s' was authenticated", user);
+    // Start nested group
+    console.group("Authorizing user '%s'", user);
+    if (authorized) {
+        console.log("User '%s' was authorized.", user);
     }
-    // End top-level group
+    // End nested group
     console.groupEnd();
-    console.log("A group-less log trace.");
+}
+// End top-level group
+console.groupEnd();
+console.log("A group-less log trace.");
+{% endhighlight %}
 
-Nested groups output in the console:
+And here's the nested groups output in the console:
 ![Simple console group output](images/console-write-nestedgroup.png)
 
-When you are using groups heavily it can be very useful to not see everything as it happens. For these times you can automatically collapse groups by calling [`groupCollapsed()`](https://developer.chrome.com/devtools/docs/console-api#consolegroupcollapsed) instead of `group()`.
+#### Auto-collapsing groups
 
-console.groupCollapsed() usage example:
+When using groups heavily, it can be very useful to not see everything as it happens. For these times you can automatically collapse groups by calling [`console.groupCollapsed()`](./console-api#consolegroupcollapsedobject-object-) instead of `console.group()`:
 
-    console.groupCollapsed("Authenticating user '%s'", user);
-    if (authenticated) {
-        ...
-    }
-    console.groupEnd();
+{% highlight js %}
+console.groupCollapsed("Authenticating user '%s'", user);
+if (authenticated) {
+    ...
+}
+console.groupEnd();
+{% endhighlight %}
 
 groupCollapsed() output:
 ![Initially collapsed group](images/console-write-groupcollapsed.png)
 
-## Errors and Warnings
+## Errors and warnings
 
-Errors and warnings act the same way as normal logging. The difference is `error()` and `warn()` have styles to bring attention to them. The [`console.error()`](https://developer.chrome.com/devtools/docs/console-api#consoleerrorobject-object) method displays a red icon along with red message text. The [`console.warn()`](https://developer.chrome.com/devtools/docs/console-api#consolewarnobject-object) method displays a yellow warning icon with the message text.
+Errors and warnings act the same way as normal logging. The only difference is `error()` and `warn()` have styles to bring attention to them.
 
-### Using console warn and error methods.
+### console.error()
 
-Using the `error()` method:
+The [`console.error()`](./console-api#consoleerrorobject--object-) method displays a red icon along with red message text:
 
-    function connectToServer() {
-        console.error("Error: %s (%i)", "Server is  not responding",500);
-    }
-    connectToServer();
+{% highlight js %}
+function connectToServer() {
+    console.error("Error: %s (%i)", "Server is  not responding",500);
+}
+connectToServer();
+{% endhighlight %}
 
-How `connectToServer()` displays in the console:
+turns into
+
 ![Error example output](images/console-write-error-server-not-resp.png)
 
-Using the `warn()` method:
+### console.warn()
 
-    if(a.childNodes.length < 3 ) {
-        console.warn('Warning! Too few nodes (%d)', a.childNodes.length);
-    }
+The [`console.warn()`](./console-api#consolewarnobject--object-) method displays a yellow warning icon with the message text:
 
-Example warning output:
+{% highlight js %}
+if(a.childNodes.length < 3 ) {
+    console.warn('Warning! Too few nodes (%d)', a.childNodes.length);
+}
+{% endhighlight %}
+
+turns into
+
 ![Warn example](images/console-write-warning-too-few-nodes.png)
-
 
 ## Assertions
 
-The [`console.assert()`](https://developer.chrome.com/devtools/docs/console-api#consoleassertexpression-object) method conditionally displays an error string (its second parameter) only if its first parameter evaluates to `false`.
+The [`console.assert()`](./console-api#consoleassertexpression-object) method conditionally displays an error string (its second parameter) only if its first parameter evaluates to `false`.
 
 ### A simple assertion and how it displays
 
 The following code will cause an error message in the console only if the number of child nodes belonging to the `list` element is greater than 500.
 
-    console.assert(list.childNodes.length < 500, "Node count is > 500");
+{% highlight js %}
+console.assert(list.childNodes.length < 500, "Node count is > 500");
+{% endhighlight %}
 
 How an assertion failure displays in the console:
 ![Assertion failed](images/console-write-assert-failed.png)
@@ -202,13 +179,33 @@ This example uses the digit specifier to format the value of `document.childNode
 
 The code:
 
-    console.log("Node count: %d, and the time is %f.", document.childNodes.length, Date.now());
+{% highlight js %}
+console.log("Node count: %d, and the time is %f.", document.childNodes.length, Date.now());
+{% endhighlight %}
 
 The output of the previous code sample:
 ![Example subsitution output](images/console-write-log-multiple.png)
 
+### Styling console output with CSS
 
-TBD. Not sure what to do with “Formatting DOM elements as JavaScript objects”. It seems a little bit out of place in this page, and yet it’s not enough to get its own page. Gonna wait to figure this out while writing the doc.
+The CSS format specifier allows you to customize the display in the console.
+Start the string with the specifier and give the style you wish to apply as the second parameter.
+
+Try this code:
+
+{% highlight js %}
+console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
+{% endhighlight %}
+
+..to make your log output large and blue:
+
+![Formatted string](images/console-write-format-string.png)
+
+### Formatting DOM elements as JavaScript objects
+
+By default, DOM elements are logged into the console as representation of their HTML, but sometimes you want to access the DOM element as JavaScript object and inspect its properties. You can use the `%o` string specifier to do that (see above), or use `console.dir` to achieve the same: 
+
+![Logging an element using dir()](images/dir-element.png)
 
 {% include modules/nextarticle.liquid %}
 

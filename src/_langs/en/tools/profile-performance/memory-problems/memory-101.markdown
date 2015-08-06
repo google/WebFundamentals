@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Memory Terminology"
 seotitle: "Memory Terminology"
 description: "This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages."
@@ -24,7 +24,9 @@ remember:
 ---
 {% wrap content %}
 
-The terms and notions described here refer to the [Chrome DevTools Heap Profiler](tools/profile-performance/memory-problems/memory-leaks). If you have ever worked with either the Java, .NET, or some other memory profiler, then this may be a refresher.
+The terms and notions described here refer to the
+[Chrome DevTools Heap Profiler](/web/tools/profile-performance/memory-problems/heap-snapshots).
+If you have ever worked with either the Java, .NET, or some other memory profiler, then this may be a refresher.
 
 {% include modules/toc.liquid %}
 
@@ -36,7 +38,7 @@ Think of memory as a graph with primitive types (like numbers and strings) and o
 
 An object can hold memory in two ways:
 
-* Directly by the object itself
+* Directly by the object itself.
 
 * Implicitly by holding references to other objects, and therefore preventing those objects from being automatically disposed by a garbage collector (**GC** for short).
 
@@ -64,9 +66,7 @@ There are lots of internal GC roots most of which are not interesting for the us
 
 * Document DOM tree consisting of all native DOM nodes reachable by traversing the document. Not all of them may have JS wrappers but if they have the wrappers will be alive while the document is alive.
 
-* Sometimes objects may be retained by debugger context and DevTools console (e.g. after console evaluation).
-
-{% include modules/remember.liquid title="Note" list=page.remember.heap %}
+* Sometimes objects may be retained by debugger context and DevTools console (e.g. after console evaluation). Create heap snapshots with clear console and no active breakpoints in the debugger.
 
 The memory graph starts with a root, which may be the `window` object of the browser or the `Global` object of a Node.js module. You don't control how this root object is GC'd.
 
@@ -76,15 +76,20 @@ Whatever is not reachable from the root gets GC.
 
 {% include modules/remember.liquid title="Note" list=page.remember.bytes %}
 
-## Objects Retaining Tree
+## Objects retaining tree
 
-As we introduced earlier, the heap is a network of interconnected objects. In the mathematical world, this structure is called a *graph* or memory graph. A graph is constructed from *nodes* connected by means of *edges*, both of which are given labels.
+The heap is a network of interconnected objects. In the mathematical world, this structure is called a *graph* or memory graph. A graph is constructed from *nodes* connected by means of *edges*, both of which are given labels.
 
-* **Nodes** (*or objects*) are labelled using the name of the *constructor* function that was used to build them
+* **Nodes** (*or objects*) are labelled using the name of the *constructor* function that was used to build them.
 
 * **Edges** are labelled using the names of *properties*.
 
-Later in this guide you will learn how to record a profile using the Heap Profiler. Some of the eye-catching things we can see in the Heap Profiler recording below include distance: the distance from the GC root. If almost all the objects of the same type are at the same distance, and a few are at a bigger distance, that's something worth investigating.
+Learn [how to record a profile using the Heap Profiler](/web/tools/profile-performance/memory-problems/heap-snapshots).
+Some of the eye-catching things we can see
+in the Heap Profiler recording below include distance:
+the distance from the GC root.
+If almost all the objects of the same type are at the same distance,
+and a few are at a bigger distance, that's something worth investigating.
 
 ![Distance from root](imgs/root.png)
 
@@ -106,11 +111,11 @@ In the example below, node `#3` is the dominator of `#10`, but `#7` also exists 
 
 ![Animated dominator illustration](imgs/dominators.gif)
 
-## V8 Specifics
+## V8 specifics
 
 When profiling memory, it is helpful to understand why heap snapshots look a certain way. This section describes some memory-related topics specifically corresponding to the **V8 JavaScript virtual machine** (V8 VM or VM).
 
-### JavaScript Object Representation
+### JavaScript object representation
 
 There are three primitive types:
 
@@ -152,7 +157,7 @@ In cases where there is a very small number of properties, they can be stored in
 
 **Map** - an object that describes the kind of object and its layout. For example, maps are used to describe implicit object hierarchies for [fast property access](https://developers.google.com/v8/design.html#prop_access).
 
-### Object Groups
+### Object groups
 
 Each native objects group is made up of objects that hold mutual references to each other. Consider, for example, a DOM subtree where every node has a link to its parent and links to the next child and next sibling, thus forming a connected graph. Note that native objects are not represented in the JavaScript heap — that's why they have zero size. Instead, wrapper objects are created.
 
