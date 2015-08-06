@@ -5,7 +5,7 @@ class: lazyweb
 layout: shows/single-video
 collection: lazyweb-2015
 title: "Episode 9"
-description: "Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with Service Worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64."
+description: "Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with service worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64."
 published: true
 showYoutubeID: oRcxExzWlc0
 
@@ -18,7 +18,7 @@ article:
 
 # In this Week's Episode
 
-Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with Service Worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64.
+Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with service worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64.
 
 ## SUPERCHARGING PAGE LOAD
 <https://youtu.be/d5_6yHixpsQ?t=10m07s>

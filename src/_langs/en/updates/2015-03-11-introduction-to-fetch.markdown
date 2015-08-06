@@ -30,7 +30,7 @@ simpler and cleaner API, avoiding callback hell and having to remember the compl
 XMLHttpRequest.
 
 The [Fetch API](https://fetch.spec.whatwg.org/) has been available in the 
-[Service Worker](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/) global 
+[service worker](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/) global 
 scope since Chrome 40, but it'll be enabled in the window scope in Chrome 42. 
 There is also a rather fetching [polyfill by GitHub](https://github.com/github/fetch) that you can use today.
 
