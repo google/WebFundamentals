@@ -835,7 +835,7 @@ issues, you have two options:
 
 One of the best tips I can give to anyone who is new to service workers is make 
 use of the checkbox called "Open DevTools window and pause JavaScript execution 
-on Service Worker startup for debugging." on 
+on service worker startup for debugging." on 
 **chrome://serviceworker-internals**. This checkbox will add a breakpoint at 
 the start of your service worker and **pause execution**, this allows you to 
 resume or step through your service worker script and see if you hit any 

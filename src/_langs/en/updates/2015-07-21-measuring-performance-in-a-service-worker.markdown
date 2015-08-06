@@ -24,7 +24,7 @@ permalink: /updates/2015/07/measuring-performance-in-a-service-worker.html
 ---
 
 Other than Jake Archibald worrying about his Developer skills rotting and 
-falling off, he made a strong case that intelligently using Service Worker you 
+falling off, he made a strong case that by intelligently using service worker you 
 can drastically improve the performance of your site or app. Watch the video for 
 an overview.
 
@@ -33,13 +33,13 @@ an overview.
 </div>
 
 If you are going to Supercharge your Page load time as Jake suggests, you really 
-need to be able to understand how Service Workers affect your page's requests.
+need to be able to understand how service workers affect your page's requests.
 
 The [Resource Timing](http://w3c.github.io/resource-timing/) and the [User Timing](http://w3c.github.io/user-timing/) API
 are critcial components in many sites RUM (Real User Monitoring)
 infrastructure because it lets you understand holistically how all of your users see
 the performance of your site ([Another use-case is detecting content injection](https://paul.kinlan.me/detecting-injected-content/)).  In short, it lets you 
-understand nearly every aspect of every web request made from your site, well, unless you have a Service Worker or a Web worker.
+understand nearly every aspect of every web request made from your site, well, unless you have a service worker or a Web worker.
 
 Here is a quick example of how it can be used in to get a list of all requests that were made
 to a domain that is not the current domain.
@@ -65,12 +65,12 @@ var getThirdPartyRequests = function() {
 };
 {% endhighlight %}
  
-The Resource Timing and User Timing APIs were created and implemented before Service Worker was a twinkle in
+The Resource Timing and User Timing APIs were created and implemented before service worker was a twinkle in
 an engineers eye and the above code would not be able to understand how the Service Woker
 impacted it.  
 
 A recent set of changes in Chrome 45 (Beta in July 2015) will help 
-you by introducing the ability for all forms of Workers (Web and Service Worker) 
+you by introducing the ability for all forms of workers (Web and service worker) 
 to have access to the Resource Timing and User Timing APIs and thus be able to let you keep on top of 
 the network performance for all your users.
 
@@ -89,10 +89,10 @@ timing information from:
 * finally, `fetch()` request that are made and intercepted by the `onfetch` 
   handler.
 
-The last point is important. One way to think of a Service Worker is as a proxy 
+The last point is important. One way to think of a service worker is as a proxy 
 that sits between the web UI and the network.  The `performance` object on the 
 `window` only sees the timings and information for the part of the request that it 
-invokes, it has no knowledge of the Service Worker sitting in between the client 
+invokes, it has no knowledge of the service worker sitting in between the client 
 and the network so it can't understand the impact of the service worker.
 
 ## How can I use this?
@@ -151,10 +151,10 @@ Timing API but will need to be updated to include performance analysis from a Wo
 
 ## Will the Navigation Timing API arrive to Service Workers
 
-Right now there are no plans to add the Navigation Timing API to the Service Worker context, 
+Right now there are no plans to add the Navigation Timing API to the service worker context, 
 because there are no traditional navigations in a service worker.  The interesting thing is that to 
-the Service Worker, every navigation in the Service Worker's controlled set of pages looks like a 
-resource fetch.  This alone makes Service Workers an incredibly compelling way to centralize the
+the service worker, every navigation in the service worker's controlled set of pages looks like a 
+resource fetch.  This alone makes service workers an incredibly compelling way to centralize the
 majority of your performance logic in your web app.
 
 ## Can I see what changed?
