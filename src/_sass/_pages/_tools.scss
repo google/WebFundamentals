@@ -646,9 +646,10 @@
         content: "";
         display: inline-block;
         height: 1em;
-        width: 1em;
+        width: 1.25em;
         background-size: contain;
-        background-image: url(/web/tools/chrome-devtools/images/chrome.svg);
+        background-image: url(/web/tools/chrome-devtools/images/chrome-devtools-logo.png);
+        background-repeat: no-repeat;
         vertical-align: top;
         margin-right: 0.2em;
       }
