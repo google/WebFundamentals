@@ -30,17 +30,17 @@ The DevTools homepage – along with all documentation – moved from [https://d
 
 ## Action-oriented tutorials
 
-The DevTools docs that show you how to use DevTools are now goal- or action-oriented, similar to how [Web Fundamentals](http://developers.google.com/web/fundamentals) structures its pages. So instead of "Learn everything about the network panel", you'll get ["Measure Resource Loading Times"](/web/tools/profile-performance/network-performance/resource-loading).
+The docs that show you how to use DevTools are now goal- or action-oriented, similar to how [Web Fundamentals](http://developers.google.com/web/fundamentals) structures its pages. So instead of "Learn everything about the network panel", you'll get ["Measure Resource Loading Times"](/web/tools/profile-performance/network-performance/resource-loading).
 
-Going forward, our tutorials and guides will tell an overarching tooling story independent of any specific tool. What matters is that you're productive and efficient, and sometimes the combination of multiple tools gets you there. Tutorials from the old Tools section in Web Fundamentals have already been moved over and we'll work on adding more non-DevTools related content in the future to give you a full picture of developer productivity.
+Going forward, our tutorials and guides will tell an overarching tooling story independent of any specific tool. What matters is that you're productive and efficient, and sometimes the combination of multiple tools gets you there. Tutorials from the old Tools section in Web Fundamentals have already been moved and we'll work on adding more non-DevTools related content in the future.
 
 Head over to the [Setup section](/web/tools/setup/) to get started.
 
-## Updates, news and useful tips
+## Updates, news, and useful tips
 
-[![Tips and tricks](/web/updates/images/2015-08-07-google-web-tools/tips.png)](/web/updates/tools)
+[![Tips](/web/updates/images/2015-08-07-google-web-tools/tips.png)](/web/updates/tools)
 
-Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/) and [Umar's DevTips](https://umaar.com/dev-tips/), and with the help and support of Umar, we've launched a new [updates section](/web/updates/tools) that features the latest DevTools news, tips and useful advice – as well as news from all of our other tooling projects.
+Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/) and [Umar's DevTips](https://umaar.com/dev-tips/), and with the help and support of Umar, we've launched a new [updates section](/web/updates/tools) that features the latest DevTools news, tips, and useful advice – as well as news from all of our other tooling projects.
 
 ## All you can tool
 
