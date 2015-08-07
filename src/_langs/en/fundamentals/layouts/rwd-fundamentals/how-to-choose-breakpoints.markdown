@@ -31,7 +31,7 @@ key-takeaways:
     - Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience.
     - Use relative sizes for elements to avoid breaking layout.
   choose-breakpoints:
-    - Create breakpoints based on content, never on specific devices, products or brands.
+    - Create breakpoints based on content, never on specific devices, products, or brands.
     - Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
     - Keep lines of text to a maximum of around 70 or 80 characters.
 remember:
@@ -66,7 +66,7 @@ remember:
 ## Pick major breakpoints by starting small, then working up
 
 Design the content to fit on a small screen size first, then expand the screen
-until a breakpoint becomes necessary.  This will allow you to optimize
+until a breakpoint becomes necessary.  This allows you to optimize
 breakpoints based on content and maintain the fewest number of breakpoints
 possible.
 
@@ -139,7 +139,7 @@ forecast panel so it doesn't consume the whole screen width.
 ## Optimize text for reading
 
 Classic readability theory suggests that an ideal column should contain 70 to 80
-characters per line (about  8 to 10 words in English), thus each time the width
+characters per line (about  8 to 10 words in English). Thus each time the width
 of a text block grows past about 10 words, a breakpoint should be considered.
 
 <div class="clear">
