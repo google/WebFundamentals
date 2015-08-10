@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8" />
 
-    {% include content %}
+    {% comment %}
+      The autoescape off means the content is printed as is - no filtering
+      of HTML characters (i.e. '<' gets turned to '&lt;')
+    {% endcomment %}
+    {% autoescape off %}
+      {{ content }}
+    {% endautoescape %}
 
 
     <script src="/web/scripts/nav-drawer.js"></script>

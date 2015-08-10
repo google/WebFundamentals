@@ -44,15 +44,14 @@ class AllPages(webapp2.RequestHandler):
           os.path.join(os.path.dirname(__file__), JekyllOutputFile, "en", path, "index.html")
         ]
         text = None
-        filePath = None
         for fileLocation in fileLocations:
           if os.path.isfile(fileLocation):
-            filePath = fileLocation
-            text = render("wrapper.tpl", {"content": fileLocation, "lang": lang})
+            # Read the file and pass in the contents - avoids issues in the
+            # file contains {%%} <- this breaks pythons templating
+            fileContents = open(fileLocation, 'r').read()
+            text = render("wrapper.tpl", {"content": fileContents, "lang": lang})
             break
-
-        print "Rendering: " + filePath
-
+        
         if text is None:
           text = "404 - Requested file not found."
           self.response.set_status(404)
