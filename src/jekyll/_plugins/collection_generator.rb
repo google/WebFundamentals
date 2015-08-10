@@ -76,17 +76,8 @@ module Jekyll
         rootFolderName = page.directories[0]
 
         case rootFolderName
-        when 'updates'
-
         when 'fundamentals'
           page.data['pages'] = collections[page.directories[page.directories.length - 1]]
-        when '.'
-
-        else
-          Jekyll.logger.info "Unsure how to handle collections in the \"" +
-            rootFolderName + "\" directory."
-          raise Exception.new("collection-generator.rb: Unsure how to handle collections for markdown files in the \"" +
-            rootFolderName + "\" directory.")
         end
       }
 

@@ -165,7 +165,9 @@ module Jekyll
         when 'updates'
           page = UpdatePage.new(site, relative_dir, file_name, langcode)
         when 'fundamentals'
-            page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
+          page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
+        when 'styleguide'
+          page = LanguagePage.new(site, relative_dir, file_name, langcode)
         when '.'
           page = LanguagePage.new(site, relative_dir, file_name, langcode)
         else
