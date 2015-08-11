@@ -35,14 +35,14 @@ of the file.
 
 The snippet is defined in example.html like so:
 
-<pre>
+{% highlight html %}
 <!-- // [START examplesnippet] -->
 <header>
   <h1>Mobile Web Development</h1>
   <p>Building Mobile Web Experiences</p>
 </header>
 <!-- // [END examplesnippet] -->
-</pre>
+{% endhighlight %}
 
 These snippets are removed from all occurrences of the code in the final docs.
 
@@ -61,13 +61,9 @@ appropriate link to the sample based on the current environment (development,
 This is the same as the link sample button except it's styled as a normal
 link rather than a button.
 
-<pre>
-{% raw %}
-  {% link_sample _code/mse-gap.html %}
-    Demo
-  {% endlink_sample %}
-{% endraw %}
-</pre>
+<pre>{% raw %}{% link_sample _code/mse-gap.html %}
+  Demo
+{% endlink_sample %}{% endraw %}</pre>
 
 {% link_sample _code/mse-gap.html %}Demo{% endlink_sample %}
 
@@ -81,13 +77,9 @@ appropriate link to the sample based on the current environment (development,
 This is the same as the link sample except it's styled as a button rather than
 a link.
 
-<pre>
-{% raw %}
-  {% link_sample_button _code/mse-gap.html %}
-    Demo
-  {% endlink_sample_button %}
-{% endraw %}
-</pre>
+<pre>{% raw %}{% link_sample_button _code/mse-gap.html %}
+  Demo
+{% endlink_sample_button %}{% endraw %}</pre>
 
 {% link_sample_button _code/mse-gap.html %}
   Demo
