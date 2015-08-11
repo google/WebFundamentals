@@ -29,7 +29,7 @@ developer: Martin Kool
 
 description: "A fun (and addictive) game that just feels right on mobile."
 pros: |
-  A fun (and addictive) game by Q42.nl that just feels right on mobile and desktop with smooth animations and a very polished look and feel. It is installable as it uses the [Web App Manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like any native game.
+  A fun (and addictive) game by Q42.nl that just feels right on mobile and desktop with smooth animations and a very polished look and feel. It is installable as it uses the [Web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like any native game.
 cons: |
   A lot of render-blocking JavaScript could be prevented and would dramatically improve the perceived performance. Flush out the preloader quickly, then load anything else.
 
