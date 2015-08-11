@@ -151,12 +151,13 @@ module Jekyll
       # Indenter
       # TODO(ianbarber): Look for multiples of original offset rather than absolute spaces.
       # paulk edit: updated logic.  gets first line, works out indent. then uses that as initial offset
-      code.each_line {|s|
+      code.each_line {|codeLine|
 
         #Jekyll.logger.warn " #{initial} #{offset} #{(initial + offset)} #{s.lstrip.rstrip}"
-        if s.size >= initial
-          snippet += (" " * 4)
-          snippet += s.slice(initial..s.size).rstrip
+        if codeLine.size >= initial
+          # TODO(mattgaunt): Why do we add 4 spaces? Just use the spacing in the original doc.
+          #snippet += (" " * 4)
+          snippet += codeLine.slice(initial..codeLine.size).rstrip
         end
         snippet += "\n"
       }
@@ -187,7 +188,9 @@ module Jekyll
   <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
     <div class="highlight-module__container">
       <code class='html'>#{highlighted_code.strip}</code>
-      <a class="highlight-module__cta button--primary" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">#{link_text}</a>
+      <p>
+        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">#{link_text}</a>
+      </p>
     </div>
   </div>
 

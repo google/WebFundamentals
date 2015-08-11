@@ -70,6 +70,10 @@ pre {
   font-family: 'Inconsolata', 'monospace';
 }
 
+pre, code {
+  word-wrap: normal;
+}
+
 a {
   color: $highlight-color;
 }
