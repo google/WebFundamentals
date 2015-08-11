@@ -71,7 +71,16 @@ Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
 *  If you don't supply a `start_url` it will use the current page's url.
-*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=182) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42) first, if none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the [`density` member](http://w3c.github.io/manifest/#display-member). The `density` member takes a number. When you don't declare `density`, it just defaults to "1", which means "use this icon for screen densities 1.0 and up", which is normally what you want. 
+*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/manifest/manifest_icon_selector.cc&l=68) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_data_fetcher.cc&l=35) first, if none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the optional [`density` member](http://w3c.github.io/manifest/#density-member) which takes a number. When you don't declare `density`, it just defaults to `1.0`. It means "use this icon for screen densities 1.0 and up", which is normally what you want.
+
+{% highlight json %}
+{
+  "src": "launcher-icon-2x.png",
+  "sizes": "96x96",
+  "type": "image/png",
+  "density": 2
+}
+{% endhighlight %}
 
 ## Telling the browser about your manifest
 
