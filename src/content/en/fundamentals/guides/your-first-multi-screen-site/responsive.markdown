@@ -88,12 +88,12 @@ Information Architecture of the page and created a basic structure.
 In this guide, we will take our basic structure with content and turn it into
 a beautiful page that is responsive across a large number of screen sizes.
 
-<div class="clear">
-  <figure class="g-wide--2 g-medium--half">
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
     <img  src="images/content.png" alt="Content" style="max-width: 100%;">
     <figcaption>{% link_sample _code/content-without-styles.html %} Content and structure {% endlink_sample %} </figcaption>
   </figure>
-  <figure class="g-wide--2 g-wide--last g-medium--half g--last">
+  <figure class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
     <figcaption>{% link_sample _code/content-with-styles.html %} Final site {% endlink_sample %} </figcaption>
   </figure>
@@ -128,7 +128,7 @@ your viewport to control the display of the page.  As a default, we recommend:
 
 The viewport lives in the head of the document and only needs to be declared once.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{% include shared/related_guides.liquid inline=false list=page.related-guides.responsive %}
 
 ## Apply simple styling
 

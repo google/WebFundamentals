@@ -1,42 +1,35 @@
 {% if include.list %}
 
-  {% if include.inline %}
-  </div>
-  {% else %}
-  <div class="container">
-  {% endif %}
+<div class="wf-related-guides{% if include.minimal %} wf-related-guides--minimal{% endif %} clear">
+  <div class="wf-related-guides__content clear">
+    <h3 class="wf-related-guides__title">{{"related_guides" | localize_string}}</h3>
+    <ul class="wf-related-guides__list">
+    {% for listItem in include.list %}
+      <li class="wf-related-guides__list-item">
+        {% if listItem.section %}
+          <p class="wf-related-guides__section-title">
+            <a
+              class="tag themed"
+              href="{{site.WFBaseUrl}}/{{listItem.section.href}}"
+              title="{{listItem.section.title}}">
+              {{listItem.section.title}}
+            </a>
+          </p>
+        {% endif %}
 
-    <div class="related-items {% if include.inline %} related-items--inline g-wide--pull-1{% endif %} {% if include.minimal %} related-items--minimal {% endif %} clear">
-      <h3 class="related-items__title {% unless include.inline %} g-wide--1 g-medium--full{% endunless %}">{{"related_guides" | localize_string}}</h3>
-      <div class="related-items__section clear">
-
-        <ul class="related-items-list {% if include.inline %} related-items-list--inline{% endif %} list-reset">
-        {% for guide in include.list %}
-          <li class="{% unless include.inline %}g-medium--1 g-wide--1 {% endunless %} {% cycle '','','g-medium--last g-wide--last' %} theme--{{guide.section.id | downcase | replace:' ','-'}}">
-            {% if guide.section %}
-              <p><a class="tag themed" href="{{site.WFBaseUrl}}/{{guide.section.href}}" title="{{guide.section.title}}">{{guide.section.title}}</a></p>
+        <p class="wf-related-guides__guide-title">
+          <a href="{{site.WFBaseUrl}}/{{listItem.href}}">
+            {% if listItem.thumbnail %}
+            <img src="{{ listItem.thumbnail }}" alt="{{ listItem.title }}">
             {% endif %}
+            {{listItem.title}}
+          </a>
+        </p>
+      </li>
+    {% endfor %}
+    </ul>
 
-            <p class="medium">
-              <a href="{{site.WFBaseUrl}}/{{guide.href}}">
-                {% if guide.thumbnail %}
-                <img src="{{ guide.thumbnail }}" alt="{{ guide.title }}">
-                {% endif %}
-                {{guide.title}}
-              </a>
-            </p>
-          </li>
-        {% endfor %}
-        </ul>
-
-      </div>
-    </div>
-
-  {% if include.inline %}
-  <div class="content" markdown="1">
-  {% else %}
   </div>
-  {% endif %}
+</div>
 
 {% endif %}
-

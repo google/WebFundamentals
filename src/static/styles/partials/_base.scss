@@ -2,7 +2,7 @@
 @import "colors";
 @import "embed";
 
-$typecsset-base-font-size:      16px !default;
+$typecsset-base-font-size:      $mobile-base-font-size !default;
 $typecsset-base-line-height:    $base-line !default;
 
 // Heading sizes
@@ -22,7 +22,7 @@ $typecsset-show-baseline:       false !default;
 @import "../third_party/typecsset/typecsset";
 
 @media (min-width: $max-content-width) {
-  $typecsset-base-font-size:      18px;
+  $typecsset-base-font-size:      $tablet-base-font-size;
   $typecsset-base-line-height:    $base-line;
 
   // Heading sizes
@@ -85,4 +85,24 @@ main {
   margin-right: auto;
 
   padding: $base-line / 2;
+}
+
+figure > img {
+  margin-bottom: $base-line / 2;
+}
+
+figcaption {
+  @include typecsset-font-size($mobile-base-font-size - 4px);
+  color: $text-grey-color;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@media (min-width: $max-content-width) {
+  figcaption {
+    @include typecsset-font-size($tablet-base-font-size - 4px);
+  }
 }
