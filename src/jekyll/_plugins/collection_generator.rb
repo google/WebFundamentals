@@ -81,11 +81,15 @@ module Jekyll
         when 'fundamentals', 'styleguide'
           # Before adding the data to the page, this filters out the
           # page itself
+
           pageData = collections[page.directories[page.directories.length - 1]].clone
+
           pageData['pages'] = pageData['pages'].inject([]) { |pagesArray, pageTest|
-            if pageTest != page
+            # Remove index from the pages
+            if ! pageTest.name.start_with?("index")
               pagesArray << pageTest
             end
+
 
             pagesArray
           }

@@ -161,8 +161,8 @@ or help guide the user's attention to a specific piece of content.
 A good example of this is a headline image for the 'above the fold' content.  It
 is often used to entice the user to read more about the product.
 
-<div class="g-wide--2 g-wide--last g-medium--half g--last">
-  <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+<div class="center">
+  <img  src="images/narrowsite.png" alt="Designed site" />
 </div>
 
 They can be very simple to include. In our case, it will be the background to the
@@ -384,4 +384,4 @@ If you follow these guidelines, you will be off to a good start:
    until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
 
-{% include shared/nextarticle.liquid %}
+{% include fundamentals/lessons_toc.liquid %}
