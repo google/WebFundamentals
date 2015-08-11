@@ -115,7 +115,7 @@ that they are engaging with your site).
 
 ## <span id="action">Did a user install our web app</span>
 
-A recent addtion in Chrome 43 (Stable as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+A recent addtion in Chrome 43 (Stable as of June 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
 
 The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
 actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
