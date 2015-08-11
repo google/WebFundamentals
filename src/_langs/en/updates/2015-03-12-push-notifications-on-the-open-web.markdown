@@ -38,8 +38,8 @@ As of Chrome version 42, the [Push API](http://w3c.github.io/push-api/) and
 developers.  
   
 The Push API in Chrome relies on a few different pieces of technology, including 
-[Web App 
-Manifests](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
+[Web app 
+manifests](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
 and [Service 
 Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/). 
 In this post we'll look at each of these technologies, but only the bare minimum 
@@ -268,7 +268,7 @@ Below are screenshots highlighting where the project number and API keys are.
   <img src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/google-developer-console-api-key.png" alt="Highlighting where the API key is in the Google Developer Console" />
 </p>
 
-The project number will be used in the Web App Manifest (see the next section) 
+The project number will be used in the Web App manifest (see the next section) 
 as the **gcm\_sender\_id** parameter, and the **Public API Key** will be 
 needed on your server when you use GCM's restful API.
 
