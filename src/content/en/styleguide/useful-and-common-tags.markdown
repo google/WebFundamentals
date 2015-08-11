@@ -2,6 +2,36 @@
 layout: shared/plain
 title: "Useful and Common Tags"
 description: "This is a list of tags that should be useful or are commonly used."
+key-takeaways:
+  example:
+    - Always use a viewport.
+    - Always start with a narrow viewport first and scale out.
+    - Base your breakpoints off when you need to adapt the content.
+    - Create a high-level vision of your layout across major breakpoints.
+
+related-guides:
+  example:
+    -
+      title: Using Media Queries
+      href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+      section:
+        id: rwd-fundamentals
+        title: "Responsive Web design"
+        href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+    -
+      title: Layout patterns
+      href: fundamentals/layouts/rwd-patterns/
+      section:
+        id: rwd-patterns
+        title: "Layout Patterns"
+        href: fundamentals/layouts/rwd-patterns/
+    -
+      title: Mostly Fluid layout
+      href: fundamentals/layouts/rwd-patterns/mostly-fluid
+      section:
+        id: rwd-patterns
+        title: "Responsive Web design"
+        href: fundamentals/layouts/rwd-patterns/mostly-fluid
 ---
 
 ## Table of Contents
@@ -45,3 +75,28 @@ if (navigator.onLine) {
 - css
 - http
 - bash
+
+## Takeaways
+
+The takeaway include is used to highlight important parts of a doc
+
+<pre>{% raw %}{% include shared/takeaway.liquid list=page.key-takeaways.example %}{% endraw %}</pre>
+
+{% include shared/takeaway.liquid list=page.key-takeaways.example %}
+
+You can define what is printed by adding varaibles to the YAML of the page like so:
+
+{% highlight text %}
+key-takeaways:
+  example:
+    - Always use a viewport.
+    - Always start with a narrow viewport first and scale out.
+    - Base your breakpoints off when you need to adapt the content.
+    - Create a high-level vision of your layout across major breakpoints.
+{% endhighlight %}
+
+## Related Guides
+
+<pre>{% raw %}{% include shared/related_guides.liquid list=page.related-guides.example %}{% endraw %}</pre>
+
+{% include shared/related_guides.liquid list=page.related-guides.example %}

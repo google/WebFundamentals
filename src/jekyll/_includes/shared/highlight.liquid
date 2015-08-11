@@ -4,19 +4,19 @@ TODO: Apply and clean up styles
 TODO: Verify all strings are localized
 {% endcomment %}
 
-<div class="highlight-module {% if include.position %} highlight-module--{{ include.position }} {% endif %} {% if include.type %} highlight-module--{{ include.type }} {% endif %} {% if include.inline %} highlight-module--inline {% endif %}">
-  <div class="highlight-module__container {% if include.type == 'learning' %} icon-star {% else %} icon-exclamation {% endif %}">
-    <div class="highlight-module__content  {% if include.inline == false %} g-wide--push-1 g-wide--pull-1 {% if include.position == 'left' %} g-medium--push-1 {% else %} g-medium--pull-1 {% endif %} {% else %} g-wide--pull-1 highlight-module__inline{% endif %} ">
-      <p class="highlight-module__title"> {{ include.title }}</p>
+<div class="wf-highlight{% if include.position %} wf-highlight--{{ include.position }}{% endif %}{% if include.type %} wf-highlight--{{ include.type }}{% endif %}">
+  <div class="wf-highlight__container">
+    <div class="wf-highlight__content">
+      <p class="wf-highlight__title"> {{ include.title }}</p>
 
       {% if include.text %}
-        <p class="highlight-module__text"> {{ include.text }} </p>
+        <p class="wf-highlight__text"> {{ include.text }} </p>
       {% endif %}
 
       {% if include.list %}
-        <ul class="highlight-module__list">
+        <ul class="wf-highlight__list">
         {% for item in include.list %}
-          <li>{{ item }}</li>
+          <li class="wf-highlight__list-item">{{ item }}</li>
         {% endfor %}
         </ul>
       {% endif %}
