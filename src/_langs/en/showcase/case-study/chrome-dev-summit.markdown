@@ -81,7 +81,7 @@ sections:
   - title: Success
     content: |
       * Successfully released the entire site on [Github](https://github.com/googlechrome/devsummit) (**&gt; 200 stars**) to serve as **boilerplate and inspiration to web developers**.
-      * Incorporated the latest and greatest of the web platform: **service worker, Web Manifest and dynamic theme colors**. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s home screen, it feels very much like an app they would use, and that’s really cool.
+      * Incorporated the latest and greatest of the web platform: **service worker, Web manifest and dynamic theme colors**. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s home screen, it feels very much like an app they would use, and that’s really cool.
       * **~73.7k** page views, **180k** clicks to site subsections meant that people actually used and engaged with it, much more than expected.
 
       All in all, a great inspiration for today's web developers and a very successful conference website.
