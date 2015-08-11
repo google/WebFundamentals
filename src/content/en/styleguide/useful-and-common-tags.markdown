@@ -4,7 +4,15 @@ title: "Useful and Common Tags"
 description: "This is a list of tags that should be useful or are commonly used."
 ---
 
-# Highlight
+## Table of Contents
+
+This publishes a table of contents for the current page
+
+<pre>{% raw %}{% include shared/toc.liquid %}{% endraw %}</pre>
+
+{% include shared/toc.liquid %}
+
+## Highlight
 
 The highlight tag will simply run the code inside the tag through Pygments, a
 code highlighter.
@@ -29,7 +37,7 @@ if (navigator.onLine) {
 }
 {% endhighlight %}
 
-### Supported Language Inputs
+#### Supported Language Inputs
 
 - text
 - javascript

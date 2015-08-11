@@ -78,8 +78,7 @@ module Jekyll
         case rootFolderName
         when 'updates'
 
-        when 'fundamentals'
-        when 'styleguide'
+        when 'fundamentals', 'styleguide'
           # Before adding the data to the page, this filters out the
           # page itself
           pageData = collections[page.directories[page.directories.length - 1]].clone

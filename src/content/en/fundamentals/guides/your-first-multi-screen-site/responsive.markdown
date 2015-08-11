@@ -79,9 +79,6 @@ collection: multi-screen
 id: multi-screen-responsive
 ---
 
-<div class="container">
-<div class="content">
-
 {% include shared/toc.liquid %}
 
 We are building a site that works across multiple screen sizes and device
@@ -388,6 +385,3 @@ If you follow these guidelines, you will be off to a good start:
 5.  Keep iterating.
 
 {% include shared/nextarticle.liquid %}
-
-</div>
-</div>
