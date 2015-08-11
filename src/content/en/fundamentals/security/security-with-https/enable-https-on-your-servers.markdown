@@ -17,7 +17,8 @@ key-takeaways:
   - Regularly test your site with the Qualys' handy SSL Server Test and ensure you get at least an A or A+.
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
@@ -68,4 +69,5 @@ should score an A or A+; treat anything that causes a lower grade as a bug.
 (Today's A is tomorrow's B, because attacks against algorithms and protocols
 always get better!)
 
-{% endwrap %}
+</div>
+</div>

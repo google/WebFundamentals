@@ -18,7 +18,8 @@ key-takeaways:
   - Use <code>rel="canonical"</code> + <code>rel="alternate"</code> for separate desktop/mobile sites
   - Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
 ---
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -46,7 +47,7 @@ ex) Desktop and Mobile: http://www.example.com/
 The best approach we recommend is to use responsive web design, but a lot of
 websites already serve mobile specific version. Some serves mobile version using
 the same URL as desktop.
-  
+
 Determine which URL structure suits your webpage. Then try respective best
 practices to optimize it for search engines.
 
@@ -65,7 +66,7 @@ By making it responsive:
 * Easier for users to access or share your webpage
 * No need to redirect users depending on user agent so it is faster
 * Maintenance cost is lower for both website and crawlers
-  
+
 Learn how to build your website with responsive web design at [Multi-Device
 Layouts](https://developers.google.com/web/fundamentals/layouts/) section.
 
@@ -106,7 +107,7 @@ version URL with `href`.
 <title>...</title>
 <link rel="canonical" href="http://www.example.com/">
 {% endhighlight %}
-  
+
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
 
 ## Use `Vary HTTP` header for device oriented serving site
@@ -145,4 +146,6 @@ index to treat desktop version and mobile version separately, intermediate
 proxies to cache those contents gracefully.
 
 To learn more about building URL structure across desktop and mobile, read [Building Smartphone-Optimized Websites](https://developers.google.com/webmasters/smartphone-sites/).
-{% endwrap %}
+
+</div>
+</div>

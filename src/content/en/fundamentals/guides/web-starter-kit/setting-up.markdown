@@ -23,7 +23,8 @@ authors:
 key-takeaways:
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -71,4 +72,5 @@ how things look, try running the local server by typing `gulp serve`.
 
 {% include shared/nextarticle.liquid %}
 
-{% endwrap %}
+</div>
+</div>

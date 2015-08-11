@@ -16,7 +16,8 @@ key-takeaways:
   - Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
@@ -107,4 +108,5 @@ Keep in mind also that you will need to change intra-site URLs in your
 stylesheets, JavaScript, redirect rules, &lt;link …&gt; tags, and CSP
 declarations as well — not just the HTML pages!
 
-{% endwrap %}
+</div>
+</div>

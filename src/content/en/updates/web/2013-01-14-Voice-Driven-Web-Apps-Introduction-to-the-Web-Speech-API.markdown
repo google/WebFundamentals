@@ -39,7 +39,7 @@ vertical-align: top;
 <p>The new JavaScript <a href="http://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">Web Speech API</a> makes it easy to add speech recognition to your web pages. This API allows fine control and flexibility over the speech recognition capabilities in Chrome version 25 and later. Here's an example with the recognized text appearing almost immediately while speaking.</p>
 
 
-{% video //www.youtube.com/embed/qRolXPWqCSo %} {% endvideo %}
+{% ytvideo qRolXPWqCSo %} 
 
 <figure>
 <a href="https://www.google.com/intl/en/chrome/demos/speech.html"><img src="{{site.baseurl}}/updates/images/2013-01-14-voice-driven-web-apps-introduction-to-the-web-speech-api/web-speech-api-demo.jpg" alt="Web Speech API demo" class="demopreview" /></a>

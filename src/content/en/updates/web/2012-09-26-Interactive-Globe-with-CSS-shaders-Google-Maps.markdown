@@ -25,7 +25,7 @@ permalink: /updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps.html
 
 <p>Recently, I have read <a href="http://www.webmonkey.com/2012/09/adobes-css-shaders-now-an-official-web-standard/" title="" target="_blank">news on Webmonkey</a> that Adobe’s CSS Shaders proposal, which will bring high-quality cinematic effects to the web through some new CSS tools, has been accepted by the W3C. If you haven't seen it yet, watch the video below:</p>
 
-{% video //www.youtube.com/embed/NZRqnohI3m4 %} {% endvideo %}
+{% ytvideo NZRqnohI3m4 %} 
 
 <!--The Web is developing so quickly, it surprises me.-->
 
@@ -69,7 +69,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 <p>Below is a video of the effect. If you've got shaders enabled you can play with the real thing right below!</p>
 
 
-{% video //www.youtube.com/embed/5TG6TK2nueo %} {% endvideo %}
+{% ytvideo 5TG6TK2nueo %}
 
 <iframe class="globe" src="http://maps.google.com/?ie=UTF8&amp;ll=14.597042,-15.625&amp;spn=158.47027,316.054688&amp;t=h&amp;z=2&amp;output=embed" scrolling="no"></iframe>
 

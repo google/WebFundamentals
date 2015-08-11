@@ -39,7 +39,7 @@ This feature is available to try out in Chrome behind an experimental flag. It's
 
 Here's an overview video that explains a lot about how CSS Grid Layout works ([slides are here](http://sydcss-grid.appspot.com/""):
 
-{% video //www.youtube.com/embed/hy7IMGVUHps %} {% endvideo %}
+{% ytvideo hy7IMGVUHps %} 
 
 ### Try it out
 

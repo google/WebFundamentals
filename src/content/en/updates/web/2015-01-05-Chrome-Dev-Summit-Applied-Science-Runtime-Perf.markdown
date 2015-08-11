@@ -34,7 +34,7 @@ One aspect of the site that was particularly challenging to create was the  “t
 Getting an effect like this to run at 60fps took some thinking, prototyping, and a few interesting compromises. At Chrome Dev Summit, I spoke about this effect and explained in gory detail how I went about building it.
 
 
-{% video //www.youtube.com/embed/RCFQu0hK6bU %} {% endvideo %}
+{% ytvideo RCFQu0hK6bU %} 
 
 
 ## Building a high performance animation

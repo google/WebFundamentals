@@ -18,7 +18,8 @@ key-takeaways:
   - Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -73,7 +74,7 @@ engines better understand the contents of the page.
 
 Here's an example:
 
-{% include_code _code/social-sites.html microdata %}
+{% include_code src=_code/social-sites.html snippet=microdata %}
 
 While most metadata are embedded in the head section of a webpage, microdata
 lives where the context exists.
@@ -117,7 +118,7 @@ The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
 metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
 
-{% include_code _code/social-sites.html ogp %}
+{% include_code src=_code/social-sites.html snippet=ogp %}
 
 When included in the head section of your page, this metadata is used for rich
 snippet information when the page is shared.
@@ -191,7 +192,7 @@ contain a meta tag that has `twitter:card` as the `name` attribute instead of
 
 Here's a quick example:
 
-{% include_code _code/social-sites.html twitter %}
+{% include_code src=_code/social-sites.html snippet=twitter %}
 
 By assigning the Twitter id to the value of twitter:site, Twitter embeds this
 information in the shared post so that people can easily engage with the page
@@ -213,7 +214,7 @@ In order to validate your markup, Twitter provides:
 Given all three options, the best thing you can do is to include them all in
 your webpage. Here's an example:
 
-{% include_code _code/social-sites2.html best_practice %}
+{% include_code src=_code/social-sites2.html snippet=best_practice %}
 
 Notice that microdata and OGP share some markup:
 
@@ -225,4 +226,5 @@ reusing `meta` tag with `property="og:image"`
 Lastly, make sure to validate that your webpage appears as expected on each
 social sites before publishing.
 
-{% endwrap %}
+</div>
+</div>

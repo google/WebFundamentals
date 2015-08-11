@@ -20,7 +20,8 @@ authors:
 key-takeaways:
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -189,4 +190,5 @@ Browser Sync**, but it’s a reliable way of testing your site before deploying 
 
 {% include shared/nextarticle.liquid %}
 
-{% endwrap %}
+</div>
+</div>

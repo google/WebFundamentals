@@ -56,7 +56,7 @@ very easy for web developers to debug their application as it's running live on
 their mobile device, without having to resort to clever hacks such as Weinre.
 Here's a quick screencast showing this feature in action:
 
-{% video //www.youtube.com/embed/s4zpL4VBbuU %} {% endvideo %}
+{% ytvideo s4zpL4VBbuU %}
 
 For more information about remote debugging, see this [remote debugging
 article][debugging].

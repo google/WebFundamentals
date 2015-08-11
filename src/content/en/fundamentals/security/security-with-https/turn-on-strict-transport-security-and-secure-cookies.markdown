@@ -17,7 +17,8 @@ key-takeaways:
   - Ensure you always set the Secure flag on cookies.
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
@@ -63,4 +64,5 @@ that it sets. [This OWASP page explains how to set the Secure
 flag](https://www.owasp.org/index.php/SecureFlag) in several application
 frameworks. Every application framework has some way to set the flag.
 
-{% endwrap %}
+</div>
+</div>

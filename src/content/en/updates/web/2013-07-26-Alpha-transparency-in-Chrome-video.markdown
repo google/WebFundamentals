@@ -34,7 +34,7 @@ There's a demo at
 
 Here's a screencast:
 
-{% video //www.youtube.com/embed/LIH_myX3Zp0 %} {% endvideo %}
+{% ytvideo LIH_myX3Zp0 %} 
 
 # How to make alpha videos
 

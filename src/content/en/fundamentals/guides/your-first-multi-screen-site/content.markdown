@@ -117,7 +117,7 @@ the narrow and wide viewports.
 This can be converted easily into the rough sections of a skeleton page that
 we will use for the rest of this project.
 
-{% include_code _code/addstructure.html structure %}
+{% include_code src=_code/addstructure.html snippet=structure %}
 
 ## Add content to the page
 
@@ -134,7 +134,7 @@ our page. These must be presented to the user immediately.
 
 In the headline, add simple text to describe the course:
 
-{% include_code _code/addheadline.html headline %}
+{% include_code src=_code/addheadline.html snippet=headline %}
 
 We need to also fill out the form.
 It will be a simple form that collects the users' names,
@@ -150,7 +150,7 @@ We will add semantic types to make it quick and simple for users to be able to
 enter content on a mobile device.  For example, when entering a telephone
 number, the user should just see a dial pad.
 
-{% include_code _code/addform.html form %}
+{% include_code src=_code/addform.html snippet=form %}
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
@@ -160,7 +160,7 @@ The Video and Information section of content will contain a little more depth.
 It will have a bulleted list of features of our products and will also contain
 a video placeholder that shows our product working for the user.
 
-{% include_code _code/addcontent.html section1 %}
+{% include_code src=_code/addcontent.html snippet=section1 %}
 
 Videos are often used to describe content in a more interactive manner and are
 frequently used to show a demonstration of a product or a concept.
@@ -172,7 +172,7 @@ By following the best practices, you can easily integrate video into your site:
 *  Add multiple `<source>` elements based on supported video formats.
 *  Add fall-back text to let people download the video if they can't play it in the window.
 
-{% include_code _code/addvideo.html video html %}
+{% include_code src=_code/addvideo.html snippet=video lang=html %}
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
 
@@ -193,7 +193,7 @@ them like the images used in newspaper articles.  The images we are using are
 pictures of the tutors on the project:  Chris Wilson, Peter Lubbers and Sean
 Bennet.
 
-{% include_code _code/addimages.html images html %}
+{% include_code src=_code/addimages.html snippet=images lang=html %}
 
 The images are set to scale to 100% of the width of the screen. This works
 well on devices with a narrow vieport, but less well on those with a
@@ -221,7 +221,7 @@ about the product.
 
 Tables should only be used for tabular data, i.e, matrices of information.
 
-{% include_code _code/addcontent.html section3 %}
+{% include_code src=_code/addcontent.html snippet=section3 %}
 
 ### Add a Footer
 
@@ -232,7 +232,7 @@ or in the main content area of the page.
 In our site, we will just link to Terms and Conditions, a Contact page, and
 our social media profiles.
 
-{% include_code _code/addcontent.html footer %}
+{% include_code src=_code/addcontent.html snippet=footer %}
 
 ## Summary
 

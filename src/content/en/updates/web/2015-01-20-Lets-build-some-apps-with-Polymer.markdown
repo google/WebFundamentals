@@ -34,7 +34,7 @@ As developers become more familiar with creating their own elements and start to
 
 For Chrome Dev Summit, I tried to answer these questions by building a small contacts application and analyzing the process I went through to build it. Here's what I came up with:
 
-{% video //www.youtube.com/embed/kV0hgdMpH28 %} {% endvideo %}
+{% ytvideo kV0hgdMpH28 %}
 
 ## Structure
 

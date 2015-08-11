@@ -16,7 +16,8 @@ key-takeaways:
   -
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 This section discusses concerns operators may have about migrating to HTTPS.
 
@@ -81,4 +82,5 @@ the "Enable HTTPS On Your Servers" in this guide). Many already do. You should a
 serve HTTPS at all to at least start. You may wish to defer completing "Make Intra-Site URLs Relative" in
 this guide until enough advertisers interoperate properly.
 
-{% endwrap %}
+</div>
+</div>

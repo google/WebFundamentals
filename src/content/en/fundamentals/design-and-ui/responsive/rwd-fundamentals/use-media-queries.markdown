@@ -111,7 +111,7 @@ Let's take a look an example:
   {% endlink_sample %}
 </figure>
 
-{% include_code _code/media-queries.html mqueries %}
+{% include_code src=_code/media-queries.html snippet=mqueries %}
 
 * When the browser is between <b>0px</b> and <b>640px</b> wide, `max-640px.css` will be applied.
 * When the browser is between <b>500px</b> and <b>600px</b> wide, styles within the `@media` will be applied.
@@ -179,4 +179,3 @@ page.
 </div>
 
 {% include shared/nextarticle.liquid %}
-

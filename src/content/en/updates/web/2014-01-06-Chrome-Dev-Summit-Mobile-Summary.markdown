@@ -44,7 +44,7 @@ PageSpeed Insights just launched a [UX analysis for determining how mobile-frien
 
 [Slides: Best UX patterns for mobile web apps](http://mobile-ux.appspot.com/)
 
-{% video //www.youtube.com/embed/j3YbNHtnYo4 %} {% endvideo %}
+{% ytvideo j3YbNHtnYo4 %} 
 
 <hr>
 
@@ -54,7 +54,7 @@ Users will be accessing your sites and services from a multitude of devices with
 
 [Slides: Multi-device Accessibility](https://docs.google.com/a/google.com/presentation/d/1xKlQZRHyLPXvrTdGkGIumc24bT4_kxRmdqIC_b7fngo/pub?start=false&loop=false&delayms=3000#slide=id.p)
 
-{% video //www.youtube.com/embed/E0ojKLzXoZ4 %} {% endvideo %}
+{% ytvideo E0ojKLzXoZ4 %} 
 
 ## Key ways to understand and address a11y issues
 
@@ -74,7 +74,7 @@ The WebView supports full [remote debugging](https://developers.google.com/chrom
 
 [Slides: Build Mobile Apps using the Chrome WebView](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/chrome-webview/)
 
-{% video //www.youtube.com/embed/BTlzw5UAjQs %} {% endvideo %}
+{% ytvideo BTlzw5UAjQs %} 
 
 ## Effective WebView development takeaways
 
@@ -90,7 +90,7 @@ If we have to develop for Desktop, Mobile, Tablet, wearables and other form fact
 
 [Slides: Optimizing your Workflow for a Cross-device world](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/cross-device-workflow/#1)
 
-{% video //www.youtube.com/embed/bZRPetpUcjQ %} {% endvideo %}
+{% ytvideo bZRPetpUcjQ %} 
 
 ## Key points
 
@@ -110,7 +110,7 @@ We learnt many things from this talk: Jake doesn’t wear shoes when presenting;
 
 [Slides: Network connectivity: optional](https://speakerdeck.com/jaffathecake/network-optional)
 
-{% video //www.youtube.com/embed/Z7sRMg0f5Hk %} {% endvideo %}
+{% ytvideo Z7sRMg0f5Hk %} 
 
 ## ServiceWorker to the rescue
 
