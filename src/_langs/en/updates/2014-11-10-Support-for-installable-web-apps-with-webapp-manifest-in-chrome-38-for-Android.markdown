@@ -23,9 +23,9 @@ tags:
 permalink: /updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android.html
 ---
 
-For Web Apps to be successful they need to work how the user would expect an native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.  
+For Web Apps to be successful they need to work as the user would expect an native application to work. The ability for the developer to control how their web app is launched is just one part of the UX that needs to be solved.  
 
-The [Manifest for Web applications](https://w3c.github.io/manifest/) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
+The [Manifest for Web applications](https://w3c.github.io/manifest/) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
 
 Chrome has had support for Manifests since version 38 for Android (October 2014) and it gives you the control over how your web app appears when it is installed to the home screen via the `short_name`, `name` and `icons` properties and how it should be launched when the user clicks on the launch icon with the `start_url`, `display` and `orientation`.  Check out [our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/web-application-manifest) to see this in action.
 
@@ -71,7 +71,7 @@ Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
 *  If you don't supply a `start_url` it will use the current page's url.
-*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/manifest/manifest_icon_selector.cc&l=68) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_data_fetcher.cc&l=35) first, if none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the optional [`density` member](http://w3c.github.io/manifest/#density-member) which takes a number. When you don't declare `density`, it just defaults to `1.0`. It means "use this icon for screen densities 1.0 and up", which is normally what you want.
+*  Chrome [first looks for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/manifest/manifest_icon_selector.cc&l=68) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_data_fetcher.cc&l=35). If none are found it searches for the icon that most closely matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the optional [`density` member](http://w3c.github.io/manifest/#density-member) which takes a number. When you don't declare `density`, it defaults to `1.0`. This means "use this icon for screen densities 1.0 and up", which is normally what you want.
 
 {% highlight json %}
 {
