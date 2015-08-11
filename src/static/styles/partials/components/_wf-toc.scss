@@ -1,0 +1,34 @@
+.wf-toc {
+  padding-left: $base-line;
+  margin-bottom: $base-line;
+
+  border-left-color: #b2ebf2;
+  border-left-style: solid;
+  border-left-width: 4px;
+}
+
+.wf-toc__title {
+  @include typecsset-font-size($typecsset-base-font-size - 2px);
+  margin: 0;
+  color: #757575;
+}
+
+.wf-toc__list {
+  margin: 0;
+
+  list-style: none;
+}
+
+.wf-toc__list li {
+  @include typecsset-font-size($typecsset-base-font-size + 2px);
+
+  margin: ($base-line / 2) 0;
+
+  & > a {
+    text-decoration: none;
+  }
+}
+
+.wf-toc__list li:last-child {
+  margin-bottom: 0;
+}
