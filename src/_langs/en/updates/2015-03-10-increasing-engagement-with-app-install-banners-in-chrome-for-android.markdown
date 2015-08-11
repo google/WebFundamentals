@@ -38,7 +38,7 @@ as an Added to Home Screen app and if not, then tactically decide to give them a
 overlay that asked them to work around our poor UX.  This isn't great for users, 
 and it is not good for developers.
 
-In Chrome 42 (M42 - that is now in Beta) we are introducing "App Install 
+In Chrome 42 (Stable in March 2015) we are introducing "App Install 
 Banners".  App Install Banners give you the ability to have your users quickly 
 and seamlessly install your Web App as per the images below.
 
@@ -97,7 +97,7 @@ label.
 
 Chrome manages when to trigger the prompt and for some sites this might not be ideal.
 
-As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforinstallprompt` event and preventing default on the event.
+As of Chrome 43 (Stable as of June 2015), you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforinstallprompt` event and preventing default on the event.
 
 {% highlight javascript %}
 window.addEventListener('beforeinstallprompt', function(e) {
@@ -115,7 +115,7 @@ that they are engaging with your site).
 
 ## <span id="action">Did a user install our web app</span>
 
-A recent addtion in Chrome 43 (Beta as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+A recent addtion in Chrome 43 (Stable as of June 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
 
 The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
 actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
@@ -200,7 +200,7 @@ to prompt the user to install the app and we think it will provide a better expe
 
 ## <span id="native">Native app install banner</span>
 
-A new powerful feature for native app developers also landed in Chrome 44 Beta.  Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user inline install your native app.
+A new powerful feature for native app developers also landed in Chrome 44 &mdash; [Stable as of July 2015](http://googlechromereleases.blogspot.nl/2015/07/stable-channel-update_21.html).  Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user inline install your native app.
 
 <p style="text-align: center;">
   <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
