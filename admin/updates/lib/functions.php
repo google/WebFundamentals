@@ -88,7 +88,7 @@ function buildFile() {
 		$content['source_url'] = $_POST['source_url'];
 	}
 
-	if($_POST['tb1_heading']) {
+	if(isset($_POST['tb1_heading'])) {
 		$content['teaserblocks'] = array(
 			array(
 				'heading' => $_POST['tb1_heading'],
