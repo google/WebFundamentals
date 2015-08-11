@@ -30,11 +30,11 @@ permalink: /updates/2015/08/10/edit-html-in-the-console-panel.html
 ---
 <img src="/web/updates/images/2015-08-10-edit-html-in-the-console-panel-of-devtools/console-edit-html.gif" alt="Edit HTML in the Console Panel of DevTools">
 
-The DOM node context menu you may be familiar with from the Elements panel is present in the Console Panel also.
+The DOM node context menu, which you may recognize from the elements panel, is also present in the console panel.
 
 <ol>
 <li>Log a DOM node to the console.</li>
 <li>Right click on it.</li>
 <li>Select Edit as HTML or Edit Text.</li>
-<li>Notice the DOM is updated on the page and also the Elements Panel.</li>
+<li>Notice the DOM is updated on the page and also in the Elements Panel.</li>
 </ol>
