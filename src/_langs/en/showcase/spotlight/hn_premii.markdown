@@ -30,7 +30,7 @@ developer: Dharmesh Patel
 
 description: "An amazing optimized reader for Hacker News."
 pros: |
-  A beautiful and highly optimized reading experience for Hacker News. Works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it is installable as it uses the [Web App Manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like a native HN news reader app.
+  A beautiful and highly optimized reading experience for Hacker News. Works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it is installable as it uses the [Web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like a native HN news reader app.
 cons: |
   The app does a huge number of things very well, it loads quickly and is fast and smooth to use. If there was one thing the app could do it would be that adding support for offline experiences, this could be a simple error page or a more complex view of cached content.
 
