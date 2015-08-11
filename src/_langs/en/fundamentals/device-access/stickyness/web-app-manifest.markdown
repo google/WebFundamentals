@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Add a WebApp Manifest"
-description: "The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
-introduction: "The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
+description: "The manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
+introduction: "The manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched."
 article:
   written_on: 2014-12-17
   updated_on: 2014-12-17
