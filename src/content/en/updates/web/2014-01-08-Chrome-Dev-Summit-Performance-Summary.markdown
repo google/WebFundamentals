@@ -27,7 +27,7 @@ Knowing your way around your development tools is key to becoming a performance 
 
 [Slides](https://docs.google.com/a/google.com/presentation/d/1Aa9dn8S4su_8mrm8Pb3CDlWvrWiJU_3AB6HKp3zaJUs/edit)
 
-{% video //www.youtube.com/embed/8MMmg3bDOjc %} {% endvideo %}
+{% ytvideo 8MMmg3bDOjc %} 
 
 + You can now profile Chrome on Android with the DevTools you know and love from desktop.
 + The iteration loop for performance work is: gather data, achieve insight, take action.
@@ -41,7 +41,7 @@ Network and latency typically accounts for 70% of a site’s total page load tim
 
 [Slides](http://bit.ly/cds-network)
 
-{% video //www.youtube.com/embed/MOEiQ6sjeaI %} {% endvideo %}
+{% ytvideo MOEiQ6sjeaI %} 
 
 + Chrome M27 has a new and improved resource scheduler.
 + Chrome M28 has made SPDY sites (even) faster.
@@ -56,7 +56,7 @@ Hitting 60fps in your projects directly correlates to user engagement and is cru
 
 [Slides](https://docs.google.com/a/google.com/presentation/d/1CH8ifryioHDLT1Oryyy8amusUmq2FytpCPCpk0G3E4o/edit#slide=id.g175f55166_010)
 
-{% video //www.youtube.com/embed/YyQYhhy1dZI %} {% endvideo %}
+{% ytvideo YyQYhhy1dZI %} 
 
 + A frame is 16ms long. It contains JavaScript, style calculations, painting and compositing.
 + Painting is _extremely_ expensive. A Paint Storm is where you unnecessarily repeat expensive paint work.
@@ -69,7 +69,7 @@ The Critical Rendering Path refers to anything (JavaScript, HTML, CSS, images) t
 
 [Slides](https://docs.google.com/a/google.com/presentation/d/1z49qp03iXAJIkbXaMtCmWW_Pnnq-MzXGW139Xw8-paM/edit#slide=id.g1764b26cd_043)
 
-{% video //www.youtube.com/embed/VKTWdaupft0 %} {% endvideo %}
+{% ytvideo VKTWdaupft0 %} 
 
 + Eliminate render-blocking JavaScript and CSS.
 + Prioritize visible content.

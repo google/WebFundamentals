@@ -28,7 +28,8 @@ notes:
 
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -217,4 +218,5 @@ Check out concrete steps at respective search engines' help pages:
 * [Bing](http://www.bing.com/webmaster/help/which-crawlers-does-bing-use-8c184ec0)
 * [Yandex](https://help.yandex.com/search/robots/logs.xml)
 
-{% endwrap %}
+</div>
+</div>

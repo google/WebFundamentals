@@ -3,51 +3,113 @@ layout: shared/plain
 title: "Custom Tags"
 description: "This is a list of custom tags currently in use on /web on Google Developers"
 ---
+# Include Code
 
-{% raw %}
-  {% articles %}
-{% endraw %}
+There are three variables you can set with the include_code element:
 
-{% raw %}
-  {% class %}
-{% endraw %}
+- src
+  - This is the relative path of the code file
+- snippet
+  - This is the name of the code snippet you wish to use
+- lang
+  - This is to define the language of the snippet
 
-{% raw %}
-  {% featured_content %}
-{% endraw %}
+We'll look at each of these in more detail below.
 
-{% raw %}
-  {% features_showcase %}
-{% endraw %}
+### Basic Example
 
-{% raw %}
-  {% include_code %}
-{% endraw %}
+Includes the entire contents of a file
 
-{% raw %}
-  {% link_sample %}
-{% endraw %}
+<pre>{% raw %}{% include_code src=_code/example.js %}{% endraw %}</pre>
 
-{% raw %}
-  {% link_sample_button %}
-{% endraw %}
+{% include_code src=_code/example.js %}
 
-{% raw %}
-  {% injectdata %}
-{% endraw %}
+### Defining a Snippet
 
-{% raw %}
-  {% nav_link %}
-{% endraw %}
+You can define a snippet to extract a particular portion
+of the file.
 
-{% raw %}
-  {% showcases %}
-{% endraw %}
+<pre>{% raw %}{% include_code src=_code/example.html snippet=examplesnippet %}{% endraw %}</pre>
 
-{% raw %}
-  {% wrap %}
-{% endraw %}
+{% include_code src=_code/example.html snippet=examplesnippet %}
 
+The snippet is defined in example.html like so:
+
+<pre>
+<!-- // [START examplesnippet] -->
+<header>
+  <h1>Mobile Web Development</h1>
+  <p>Building Mobile Web Experiences</p>
+</header>
+<!-- // [END examplesnippet] -->
+</pre>
+
+These snippets are removed from all occurrences of the code in the final docs.
+
+### Defining the Language of Code
+
+<pre>{% raw %}{% include_code src=_code/example.js snippet=classdefinition lang=javascript %}{% endraw %}</pre>
+
+{% include_code src=_code/example.js snippet=classdefinition lang=javascript %}
+
+## Link Sample
+
+The link sample takes a code sample and creates an anchor with the
+appropriate link to the sample based on the current environment (development,
+  staging or production).
+
+This is the same as the link sample button except it's styled as a normal
+link rather than a button.
+
+<pre>
 {% raw %}
-  {% video %}
+  {% link_sample _code/mse-gap.html %}
+    Demo
+  {% endlink_sample %}
 {% endraw %}
+</pre>
+
+{% link_sample _code/mse-gap.html %}Demo{% endlink_sample %}
+
+
+# Link Sample button
+
+The link sample button takes a code sample and creates an anchor with the
+appropriate link to the sample based on the current environment (development,
+  staging or production).
+
+This is the same as the link sample except it's styled as a button rather than
+a link.
+
+<pre>
+{% raw %}
+  {% link_sample_button _code/mse-gap.html %}
+    Demo
+  {% endlink_sample_button %}
+{% endraw %}
+</pre>
+
+{% link_sample_button _code/mse-gap.html %}
+  Demo
+{% endlink_sample_button %}
+
+
+
+# YouTube Video
+
+The ytvideo tag should always be used when adding a youtube video to
+a markdown page. This provides a standard size / look and feel to YouTube
+embeds.
+
+### Tag usage
+
+<pre>{% raw %}{% ytvideo 2eu23_if6Lw %}{% endraw %}</pre>
+
+{% ytvideo 2eu23_if6Lw %}
+
+You can add additional arguments to the end of the youtube embed by adding
+them to the end of the tag.
+
+<pre>{% raw %}{% ytvideo 2eu23_if6Lw start=41 %}{% endraw %}</pre>
+
+{% ytvideo 2eu23_if6Lw start=41 %}

@@ -31,7 +31,7 @@ For most of us, though, there's a disconnect between what we can reasonably test
 
 [Jake Archibald](http://jakearchibald.com/) and I recently recorded a video overview of the API, so if you prefer watching over reading take a look:
 
-{% video //www.youtube.com/embed/4zoC3eaa9z0 %} {% endvideo %}
+{% ytvideo 4zoC3eaa9z0 %}
 
 # Uses of the Frame Timing API
 

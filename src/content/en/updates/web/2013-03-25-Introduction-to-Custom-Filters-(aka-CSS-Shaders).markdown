@@ -27,7 +27,7 @@ permalink: /updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders.html
 
 <p>Custom Filters, or CSS Shaders as they used to be called, allow you to use the power of WebGL's shaders with your DOM content. Since in the current implementation the shaders used are virtually the same as those in WebGL, you need to take a step back and understand some 3D terminology and a little bit of the graphics pipeline.</p>
 
-{% video //www.youtube.com/embed/WmwZqVFLRoA?feature=player_detailpage %} {% endvideo %}
+{% ytvideo WmwZqVFLRoA?feature=player_detailpage %} 
 
 <p>I've included a recorded version of a presentation I recently delivered to LondonJS. In the video I step through an overview of the 3D terminology you need to understand, what the different variable types are that you'll encounter, and how you can start playing with Custom Filters today. You should also <a href="http://goo.gl/e3KMp">grab the slides</a> so you can play with the demos yourself.</p>
 

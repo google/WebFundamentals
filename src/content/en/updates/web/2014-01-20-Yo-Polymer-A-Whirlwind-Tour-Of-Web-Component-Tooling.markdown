@@ -27,7 +27,7 @@ permalink: /updates/2014/01/Yo-Polymer-A-Whirlwind-Tour-Of-Web-Component-Tooling
 
 In my talk from [DotJS](http://dotjs.eu), I walk through what Web Components have to offer and how to build them using modern tooling. I’ll show you [Yeoman](http://yeoman.io), a workflow of tools to streamline creating web-apps using [Polymer](http://dotjs.eu), a library of polyfills and sugar for developing apps using Web Components in modern browsers today.
 
-{% video //www.youtube.com/embed/booRxAJblwM %} {% endvideo %}
+{% ytvideo booRxAJblwM %} 
 
 ## Create custom elements & install elements created by others
 
@@ -69,7 +69,7 @@ yo polymer
 
 I also recorded a 30 minute bonus walkthrough of the Polymer Jukebox app I show in the talk.
 
-{% video //www.youtube.com/embed/Yd6Q4Wwvpd0 %} {% endvideo %}
+{% ytvideo Yd6Q4Wwvpd0 %} 
 
 **Covered in the bonus video:**
 

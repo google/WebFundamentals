@@ -28,7 +28,7 @@ Polymer and Web Components are very hot topics as of late, and since this ecosys
 
 In his talk at Chrome Dev Summit, Matt McNulty, engineering manager for the Polymer team, explained what Polymer is, and also outlined the roadmap to Polymer 1.0.
 
-{% video //www.youtube.com/embed/0LT6W5QVCJI %} {% endvideo %}
+{% ytvideo 0LT6W5QVCJI %}
 
 ## What is Polymer?
 

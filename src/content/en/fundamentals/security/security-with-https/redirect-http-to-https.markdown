@@ -16,7 +16,8 @@ key-takeaways:
   - You need to put a canonical link in the head of your page to tell search engines https is the best way to get to your site.
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
@@ -27,4 +28,5 @@ know the best way to get to your site.
 Most web servers offer a simple redirect feature. Use 301 (Moved Permanently) to
 indicate to search engines and browsers that the HTTPS version is canonical and redirect your users to the HTTPS version of your site from HTTP.
 
-{% endwrap %}
+</div>
+</div>

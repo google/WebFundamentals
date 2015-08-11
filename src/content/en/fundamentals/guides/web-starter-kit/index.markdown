@@ -15,8 +15,10 @@ priority: 1
 collection: guides
 ---
 
-{% wrap content%}
+<div class="container">
+<div class="content">
 
 <img src="images/wsk-on-pixel-n5.png">
 
-{% endwrap %}
+</div>
+</div>

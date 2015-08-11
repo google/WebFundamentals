@@ -18,7 +18,8 @@ key-takeaways:
   - A certificate signing request (CSR) is a data format that bundles a public key together with some metadata about the entity that owns the key
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
@@ -71,4 +72,5 @@ CA validates the information in the CSR, and uses it to generate a certificate.
 They then send you the final certificate, and you install that certificate (or,
 more likely, a certificate chain) and your private key on your web server.
 
-{% endwrap %}
+</div>
+</div>

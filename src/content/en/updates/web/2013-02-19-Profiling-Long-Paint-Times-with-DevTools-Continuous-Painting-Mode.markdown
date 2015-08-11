@@ -204,7 +204,7 @@ Eberhard Gräther is student of <a href="http://multimediatechnology.at/in-engli
 <p>
 Click below for a demo where Paul Irish uses continuous painting to identify a uniquely expensive paint operation.</p>
 
-{% video //www.youtube.com/embed/FY5iiuQRyEE?start=683&end=788 %} {% endvideo %}
+{% ytvideo FY5iiuQRyEE?start=683&end=788 %} 
 
 <style>
 .time-author a:before { content: "Eberhard Gräther ";}

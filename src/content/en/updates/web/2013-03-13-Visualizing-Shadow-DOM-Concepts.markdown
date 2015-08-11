@@ -40,6 +40,6 @@ Mouse over the nodes in the graph to highlight the relevant markup on the left. 
 between the two worlds. Because they're logically in the Shadow DOM, they're colored yellow. Their blue border indicates that they invite blue host nodes into the rendering party.
 
 
-{% video //www.youtube.com/embed/qnJ_s58ubxg %} {% endvideo %}
+{% ytvideo qnJ_s58ubxg %} 
 
 Shadow DOM is available in Chrome 25 and the `<template>` element is available in Chrome 26 (although you only need the first to try the demo).

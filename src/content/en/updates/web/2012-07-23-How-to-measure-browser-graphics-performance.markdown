@@ -73,4 +73,4 @@ Different graphics applications have different needs, so you should write your b
 
 To see how to write high-performance web graphics code, check out this Google I/O 2012 talk by Nat Duca and Tom Wiltzius from the Chrome GPU team:
 
-{% video //www.youtube.com/embed/hAzhayTnhEI %} {% endvideo %}
+{% ytvideo hAzhayTnhEI %}

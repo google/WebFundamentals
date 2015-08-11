@@ -19,7 +19,8 @@ key-takeaways:
   - Install your final certificate in a non-web-accessible place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
 ---
 
-{% wrap content %}
+<div class="container">
+<div class="content">
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
@@ -139,4 +140,5 @@ foo.example.com and bar.example.com, but _not_ for foo.bar.example.com.
 Copy the certificates to all your front-end servers in a non-web-accessible
 place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
 
-{% endwrap %}
+</div>
+</div>

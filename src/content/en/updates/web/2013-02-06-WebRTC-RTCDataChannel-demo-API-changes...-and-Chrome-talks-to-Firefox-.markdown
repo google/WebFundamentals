@@ -54,7 +54,7 @@ permalink: /updates/2013/02/WebRTC-data-channels-API-changes-and-Chrome-talks-to
 
 <p>Tip of the hat to those at Mozilla and Google who made it all happen.</p>
 
-{% video //www.youtube.com/embed/MsAWR_rJ5n8 %} {% endvideo %}
+{% ytvideo MsAWR_rJ5n8 %} 
 
 <p>Happy coding! And please let us know of any bugs, either by commenting on this post, or at <a href="http://crbug.com/new" title="File a Chrome bug">crbug.com/new</a>.</p>
 

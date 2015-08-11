@@ -55,7 +55,7 @@ subjective, but above 600px is certainly too wide.
 To insert a breakpoint at 600px, create two new stylesheets, one to use when the
 browser is 600px and below, and one for when it is wider than 600px.
 
-{% include_code _code/weather-2.html mqweather2 %}
+{% include_code src=_code/weather-2.html snippet=mqweather2 %}
 
 Finally, refactor the CSS.  In this example, we've placed the common styles such
 as fonts, icons, basic positioning, colors in `weather.css`.  Specific layouts
@@ -81,7 +81,7 @@ enough space, we can separate the high and low temperature so they're on the
 same line, instead of on top of each other.  And let's also make the weather
 icons a bit larger.
 
-{% include_code _code/weather-small.css mqsmallbpsm css %}
+{% include_code src=_code/weather-small.css snippet=mqsmallbpsm lang=css %}
 
 <div class="clear">
   <div class="g--half">
@@ -96,7 +96,7 @@ icons a bit larger.
 Similarly, for the large screens, it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
 
-{% include_code _code/weather-large.css mqsmallbplg css %}
+{% include_code src=_code/weather-large.css snippet=mqsmallbplg lang=css %}
 
 ## Optimize text for reading
 
@@ -119,7 +119,7 @@ the Roboto font at 1em works perfectly giving 10 words per line, but larger
 screens will require a breakpoint. In this case, if the browser width is greater
 than 575px, the ideal content width is 550px.
 
-{% include_code _code/reading.html mqreading css %}
+{% include_code src=_code/reading.html snippet=mqreading lang=css %}
 
 ## Never completely hide content
 
@@ -132,5 +132,3 @@ can go outside or not.
 
 
 {% include shared/nextarticle.liquid %}
-
-

@@ -59,8 +59,26 @@ module Jekyll
 
     def initialize(tag_name, markup, tokens)
       super
+
       @options = {}
-      @file, @section, @lang = markup.strip.split(' ', 3)
+      variables = markup.strip.split(' ', 3)
+      variablesObject = variables.inject({}) { |results, variable|
+        key, value = variable.strip.split('=', 2)
+        if not results[key].nil?
+          raise ArgumentError, 'Found two \'' + key + '\' definitions. "' +
+            markup.strip + '"', caller
+        end
+        results[key] = value.strip
+        results
+      }
+      @file = variablesObject['src']
+      @section = variablesObject['snippet']
+      @lang = variablesObject['lang']
+      if @file.nil?
+        raise ArgumentError, 'Unable to get file from mark up. ' +
+          tag_name, caller
+      end
+
       if @lang.nil?
         @lang = "html"
       end
@@ -76,9 +94,18 @@ module Jekyll
     end
 
     def getmatch(contents, lang, section)
+      if @section.nil?
+        return contents
+      end
+
       start = getmatcher_tag(lang, section, "START")
       endt = getmatcher_tag(lang, section, "END")
-      contents.match(/#{start}(.*)#{endt}/im)[1]
+      begin
+        contents.match(/#{start}(.*)#{endt}/im)[1]
+      rescue
+        raise ArgumentError, 'Unable to get specified section. Ensure you are using the corrent ' +
+          'comment format for your language (' + lang + ').', caller
+      end
     end
 
     def render(context)
@@ -97,6 +124,7 @@ module Jekyll
           replacementPath = File.join(contentSource, site.config['primary_lang']);
           filepath.sub!(File.join(contentSource, lang), replacementPath)
         end
+
         contents = File.read(filepath).force_encoding('UTF-8')
         snippet = getmatch(contents, @lang, @section)
         @@comment_formats.each do |lang, parms|
