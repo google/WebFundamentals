@@ -78,6 +78,10 @@ a {
   color: $highlight-color;
 }
 
+video {
+  margin-bottom: $base-line;
+}
+
 main {
   max-width: $max-content-width;
 
@@ -85,6 +89,10 @@ main {
   margin-right: auto;
 
   padding: $base-line / 2;
+
+  & > div {
+    margin-bottom: $base-line;
+  }
 }
 
 figure > img {
