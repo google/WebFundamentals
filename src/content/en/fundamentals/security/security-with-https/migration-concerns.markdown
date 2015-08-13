@@ -3,21 +3,18 @@ layout: shared/plain
 title: "Migration Concerns"
 description: ""
 introduction: ""
-id: migration-concerns
-collection: security-with-tls
+
 authors:
   - chrispalmer
-article:
-  written_on: 2015-03-27
-  updated_on: 2015-03-27
-  order: 7
-priority: 0
+
+written_on: 2015-03-27
+updated_on: 2015-03-27
+order: 7
+
+translation_priority: 0
 key-takeaways:
   -
 ---
-
-<div class="container">
-<div class="content">
 
 This section discusses concerns operators may have about migrating to HTTPS.
 
@@ -82,5 +79,4 @@ the "Enable HTTPS On Your Servers" in this guide). Many already do. You should a
 serve HTTPS at all to at least start. You may wish to defer completing "Make Intra-Site URLs Relative" in
 this guide until enough advertisers interoperate properly.
 
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}

@@ -52,6 +52,31 @@ module Jekyll
         self.read_yaml(fullFilePath, @name)
       end
 
+      validKeys = [
+        'date', 'tags',
+        'layout', 'title', 'description', 'translation_priority',
+        'written_on', 'updated_on', 'authors', 'translators', 'introduction',
+        'permalink', 'published'
+      ]
+      invalidKeys = []
+      self.data.each do |key, value|
+        if not validKeys.include? key
+          invalidKeys << key
+        end
+      end
+
+      if invalidKeys.length > 0
+          puts "Found " + invalidKeys.length.to_s + " invalid keys in " + self.relative_path + '/' + self.name
+
+          invalidKeysString = ''
+          invalidKeys.each { |key|
+            invalidKeysString += key + ' '
+          }
+
+          puts invalidKeysString
+          puts ''
+      end
+
       # This is the default better book
       loadBetterBook('rootnav', '_betterbook-root.yaml')
 

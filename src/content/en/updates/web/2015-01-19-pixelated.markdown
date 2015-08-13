@@ -3,30 +3,27 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-01-18
 
 title: "image-rendering: pixelated"
 description: "Pixelation of the nation. Now in Chrome 41"
-article:
-  written_on: 2015-01-18
-  updated_on: 2015-01-18
+
+written_on: 2015-01-18
+updated_on: 2015-01-18
+
 authors:
   - paulkinlan
 tags:
 permalink: /updates/2015/01/pixelated.html
 ---
 
-As web developers we play with images all the time and in most cases browsers are great 
-at scaling images to fit the boundaries of our site designs whilst keeping the images pretty. But what happens when you want to control how the browser scales the images on your page? 
+As web developers we play with images all the time and in most cases browsers are great
+at scaling images to fit the boundaries of our site designs whilst keeping the images pretty. But what happens when you want to control how the browser scales the images on your page?
 
 Chrome 41 (Beta in January 2015) introduces a new CSS property [`image-rendering: pixelated`](https://developer.mozilla.org/en/docs/Web/CSS/image-rendering) ([Spec](http://dev.w3.org/csswg/css-images-3/#the-image-rendering)) that gives you a little more control over how the browser renders a scaled up image.
 
-The CSS property `image-rendering` and the value `pixelated` are interesting because they turn off the 
-browser's standard smooth scaling (normally bi-linear interpolation) and replaces it with another 
+The CSS property `image-rendering` and the value `pixelated` are interesting because they turn off the
+browser's standard smooth scaling (normally bi-linear interpolation) and replaces it with another
 scaling algorithm (nearest neighbor in most cases) when resizing the images.
 
 Imagine you had an image that was 2×2 pixels and you scaled it up to 100×100 pixels, the browser
@@ -61,7 +58,7 @@ This property can be applied in many places:
 
 ## I still don't get it.  Where should I use this?
 
-If you are just showing photos on your site, then you probably don't want this. 
+If you are just showing photos on your site, then you probably don't want this.
 
 A great use-case is games, you frequently have to scale up the canvas to make it fit the screen size correctly. Prior to this CSS property the browser would interpolate the canvas in such a way that it would look blurry (see below [sic]).
 
@@ -90,4 +87,3 @@ If you are building an airline ticketing tool, or an app that displays [QR codes
 </figure>
 
 If you are interested in seeing the implementation, checkout [Issue 317991](https://code.google.com/p/chromium/issues/detail?id=317991) (it is left open for the implementation of the crisp-edges value. Star the issue to track the implementation).
-

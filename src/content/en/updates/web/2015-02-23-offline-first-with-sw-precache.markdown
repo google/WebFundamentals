@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-02-23
 
 title: "Offline-first, fast, with the sw-precache module"
 description: "Add service worker-powered offline capabilities to your site with the sw-precache module."
-article:
-  written_on: 2015-02-23
-  updated_on: 2015-02-23
+
+written_on: 2015-02-23
+updated_on: 2015-02-23
+
 authors:
   - jeffposnick
 tags:

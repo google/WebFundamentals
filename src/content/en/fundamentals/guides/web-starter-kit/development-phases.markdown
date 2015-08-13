@@ -8,20 +8,17 @@ introduction: "During development, there are 3 particular commands that
   you'll use on a regular basis: gulp serve, gulp and gulp serve:dist.
   Let’s look at how each task helps you develop your site."
 notes:
-article:
-  written_on: 2014-04-17
-  updated_on: 2014-10-21
-  order: 2
-id: development-phases
-priority: 1
-collection: web-starter-kit
+
+written_on: 2014-04-17
+updated_on: 2014-10-21
+order: 2
+
+translation_priority: 1
+
 authors:
   - mattgaunt
 key-takeaways:
 ---
-
-<div class="container">
-<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -41,18 +38,14 @@ to reload.
 With Live Reload, you can make changes in your editor and see them take effect
 immediately in any browser with your site open.
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/JE-ejS8N3YI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
+{% ytvideo JE-ejS8N3YI %}
 
 ### Testing Across Devices
 
 Browser Sync helps you test your site across multiple devices. Any scrolls,
 taps, or keyboard presses will be shared across any connected browser.
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
+{% ytvideo RKKBIs_3svM %}
 
 This only works when you run your site with `gulp serve`. Try it out by running
 `gulp serve`, open the URL in two browser windows side by side and scroll
@@ -188,7 +181,4 @@ as you'd expect. The `gulp serve:dist` command builds a production version of yo
 starts a server, and opens a browser for you. This **doesn’t have Live Reload or
 Browser Sync**, but it’s a reliable way of testing your site before deploying it.
 
-{% include shared/nextarticle.liquid %}
-
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}

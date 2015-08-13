@@ -3,25 +3,22 @@ layout: shared/plain
 title: "Make Intra-Site URLs Relative"
 description: "Now that you are serving your site on both HTTP and HTTPS, it should work as smoothly as possible regardless of protocol."
 introduction: "Now that you are serving your site on both HTTP and HTTPS, it needs to work as smoothly as possible regardless of protocol."
-id: make-intra-site-urls-relative
-collection: security-with-tls
+
 authors:
   - chrispalmer
-article:
-  written_on: 2015-03-27
-  updated_on: 2015-03-27
-  order: 4
-priority: 0
+
+written_on: 2015-03-27
+updated_on: 2015-03-27
+order: 4
+
+translation_priority: 0
 key-takeaways:
   - Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js
 ---
 
-<div class="container">
-<div class="content">
+{% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
-
-{% include shared/toc.liquid %}
 
 But, a problem arises when you serve a page via HTTPS
 that includes HTTP resources: [mixed
@@ -40,36 +37,36 @@ downgraded from HTTPS to HTTP.
 These problems happen when your pages include fully-qualified, intra-site URLs
 that use the *http://* scheme. You should change content like this:
 
-		<h1>Welcome To Example.com</h1>
-		<script src="http://example.com/jquery.js"></script>
-		<link rel="stylesheet" href="http://assets.example.com/style.css"/>
-		<img src="http://img.example.com/logo.png"/>;
-		<p>Read this nice <a href="http://example.com/2014/12/24/">new
-		post on cats!</a></p>
-		<p>Check out this <a href="http://foo.com/">other cool
-		site.</a></p>
+    <h1>Welcome To Example.com</h1>
+    <script src="http://example.com/jquery.js"></script>
+    <link rel="stylesheet" href="http://assets.example.com/style.css"/>
+    <img src="http://img.example.com/logo.png"/>;
+    <p>Read this nice <a href="http://example.com/2014/12/24/">new
+    post on cats!</a></p>
+    <p>Check out this <a href="http://foo.com/">other cool
+    site.</a></p>
 
 to something like this:
 
-		<h1>Welcome To Example.com</h1>
-		<script src="//example.com/jquery.js"></script>
-		<link rel="stylesheet" href="//assets.example.com/style.css"/>
-		<img src="//img.example.com/logo.png"/>;
-		<p>Read this nice <a href="//example.com/2014/12/24/">new
-		post on cats!</a></p>
-		<p>Check out this <a href="http://foo.com/">other cool
-		site.</a></p>
+    <h1>Welcome To Example.com</h1>
+    <script src="//example.com/jquery.js"></script>
+    <link rel="stylesheet" href="//assets.example.com/style.css"/>
+    <img src="//img.example.com/logo.png"/>;
+    <p>Read this nice <a href="//example.com/2014/12/24/">new
+    post on cats!</a></p>
+    <p>Check out this <a href="http://foo.com/">other cool
+    site.</a></p>
 
 or this:
 
-		<h1>Welcome To Example.com</h1>
-		<script src="/jquery.js"></script>
-		<link rel="stylesheet" href="//assets.example.com/style.css"/>
-		<img src="//img.example.com/logo.png"/>;
-		<p>Read this nice <a href="/2014/12/24/">new
-		post on cats!</a></p>
-		<p>Check out this <a href="http://foo.com/">other cool
-		site.</a></p>
+    <h1>Welcome To Example.com</h1>
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="//assets.example.com/style.css"/>
+    <img src="//img.example.com/logo.png"/>;
+    <p>Read this nice <a href="/2014/12/24/">new
+    post on cats!</a></p>
+    <p>Check out this <a href="http://foo.com/">other cool
+    site.</a></p>
 
 That is, make intra-site URLs as relative as possible: either protocol-relative
 (lacking a protocol, starting with //example.com) or host-relative (starting
@@ -108,5 +105,4 @@ Keep in mind also that you will need to change intra-site URLs in your
 stylesheets, JavaScript, redirect rules, &lt;link …&gt; tags, and CSP
 declarations as well — not just the HTML pages!
 
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}

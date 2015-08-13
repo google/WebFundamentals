@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-01-20
 
 title: "Getting Literal With ES6 Template Strings"
 description: "Template String literals with embedded expressions. We've been waiting for this for ages. Literally"
-article:
-  written_on: 2015-01-20
-  updated_on: 2015-01-20
+
+written_on: 2015-01-20
+updated_on: 2015-01-20
+
 authors:
   - addyosmani
 tags:
@@ -174,18 +171,18 @@ Our tagged template solution could thus be written as follows:
         }
       });
     }());
-     
+
     // Tagged template function
     function html(pieces) {
         var result = pieces[0];
-        var substitutions = [].slice.call(arguments, 1); 
+        var substitutions = [].slice.call(arguments, 1);
         for (var i = 0; i < substitutions.length; ++i) {
             result += util.escape(substitutions[i]) + pieces[i + 1];
         }
-     
+
         return result;
     }
-     
+
     var username = "Domenic Denicola";
     var tag = "& is a fun tag";
     console.log(html`<b>${username} says</b>: "${tag}"`);
@@ -221,5 +218,3 @@ One of the most significant features they bring are tagged templates - a critica
 * [https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates](https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates)
 * [http://jaysoo.ca/2014/03/20/i18n-with-es6-template-strings/](http://jaysoo.ca/2014/03/20/i18n-with-es6-template-strings/)
 * [http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
-
-

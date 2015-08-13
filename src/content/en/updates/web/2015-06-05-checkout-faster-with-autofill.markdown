@@ -3,17 +3,13 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-06-10
 
 title: "Help users checkout faster with Autofill"
 description: "Help users checkout faster with Autofill. We’ve found that by correctly using autocomplete attributes on your forms, users complete them up to 30% faster!"
-article:
-  written_on: 2015-06-06
-  updated_on: 2015-06-06
+
+written_on: 2015-06-06
+updated_on: 2015-06-06
 
 authors:
   - greenido

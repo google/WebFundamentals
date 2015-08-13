@@ -1,19 +1,15 @@
 ---
-
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2014-11-10
 
 title: "Installable Web Apps with the WebApp Manifest in Chrome for Android"
 description: "Use the WebApp manifest to control how your web app launches"
-article:
-  written_on: 2014-11-10
-  updated_on: 2014-11-10
+
+written_on: 2014-11-10
+updated_on: 2014-11-10
+
 authors:
   - paulkinlan
 tags:
@@ -71,7 +67,7 @@ Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
 *  If you don't supply a `start_url` it will use the current page's url.
-*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=182) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42) first, if none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the [`density` member](http://w3c.github.io/manifest/#display-member). The `density` member takes a number. When you don't declare `density`, it just defaults to "1", which means "use this icon for screen densities 1.0 and up", which is normally what you want. 
+*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=182) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42) first, if none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the [`density` member](http://w3c.github.io/manifest/#display-member). The `density` member takes a number. When you don't declare `density`, it just defaults to "1", which means "use this icon for screen densities 1.0 and up", which is normally what you want.
 
 ## Telling the browser about your manifest
 
@@ -103,7 +99,7 @@ The majority of utility apps will benefit from this immediately.  You are more t
 "display": "standalone"
 {% endhighlight %}
 
-## Games 
+## Games
 
 The majority of games will benefit from a manifest immediately.  The vast majority of games will want to launch full-screen straight away and be forced into a [specific orientation](https://w3c.github.io/screen-orientation/#idl-def-OrientationLockType).
 
@@ -147,7 +143,7 @@ A naive approach is: Because you can now define how your app is launched, add a 
 
 # Learning More
 
-Check out Chrome's guidance for [Add to homescreen](https://developer.chrome.com/multidevice/android/installtohomescreen#supporting) the [HTML5Doctor](http://html5doctor.com/web-manifest-specification/) for a deeper dive in 
+Check out Chrome's guidance for [Add to homescreen](https://developer.chrome.com/multidevice/android/installtohomescreen#supporting) the [HTML5Doctor](http://html5doctor.com/web-manifest-specification/) for a deeper dive in
 to where the future of the spec and implementations will be
 
 ## Diving deep

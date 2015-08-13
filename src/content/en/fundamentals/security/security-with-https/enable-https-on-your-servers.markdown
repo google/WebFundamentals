@@ -3,26 +3,23 @@ layout: shared/plain
 title: "Enable HTTPS On Your Servers"
 description: "You are ready for the all important step of enabling HTTPS on your servers."
 introduction: "You are ready for the all important step of enabling HTTPS on your servers."
-id: generating-keys-and-csr
-collection: security-with-tls
+
 authors:
   - chrispalmer
-article:
-  written_on: 2015-03-27
-  updated_on: 2015-03-27
-  order: 3
-priority: 0
+
+written_on: 2015-03-27
+updated_on: 2015-03-27
+order: 3
+
+translation_priority: 0
 key-takeaways:
   - Use Mozilla's Server Configuration tool to set up your server for HTTPS support.
   - Regularly test your site with the Qualys' handy SSL Server Test and ensure you get at least an A or A+.
 ---
 
-<div class="container">
-<div class="content">
+{% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
-
-{% include shared/toc.liquid %}
 
 At this step, you must make a crucial operations decision:
 
@@ -69,5 +66,4 @@ should score an A or A+; treat anything that causes a lower grade as a bug.
 (Today's A is tomorrow's B, because attacks against algorithms and protocols
 always get better!)
 
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}

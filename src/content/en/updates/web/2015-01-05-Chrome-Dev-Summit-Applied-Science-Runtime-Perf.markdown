@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-01-05
 
 title: "Chrome Dev Summit 2014: The Applied Science of Runtime Performance"
 description: "The story of building the Chrome Dev Summit site."
-article:
-  written_on: 2015-01-05
-  updated_on: 2015-01-05
+
+written_on: 2015-01-05
+updated_on: 2015-01-05
+
 authors:
   - paullewis
 tags:
@@ -34,7 +31,7 @@ One aspect of the site that was particularly challenging to create was the  “t
 Getting an effect like this to run at 60fps took some thinking, prototyping, and a few interesting compromises. At Chrome Dev Summit, I spoke about this effect and explained in gory detail how I went about building it.
 
 
-{% ytvideo RCFQu0hK6bU %} 
+{% ytvideo RCFQu0hK6bU %}
 
 
 ## Building a high performance animation
@@ -60,4 +57,3 @@ The expensive work to do the animation is done inside that first 100ms and, on a
 ## Get the code
 
 If you’re interested in looking at the site in more detail you’ll be pleased to hear that [the code has been released on GitHub](https://github.com/GoogleChrome/devsummit), so go and take a look!
-

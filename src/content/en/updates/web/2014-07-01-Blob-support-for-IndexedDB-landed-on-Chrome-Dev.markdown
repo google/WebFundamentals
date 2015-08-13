@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2014-07-01
 
 title: "Blob support for IndexedDB landed on Chrome Dev"
 description: "Long awaited feature for Chrome, Blob support on IndexedDB landed in Chrome Dev."
-article:
-  written_on: 2014-07-01
-  updated_on: 2014-07-01
+
+written_on: 2014-07-01
+updated_on: 2014-07-01
+
 authors:
   - agektmr
 tags:

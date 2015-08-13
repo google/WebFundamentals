@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2014-06-06
 
 title: "Automating Web Performance Measurement"
 description: "Use PSI to get web performance metrics into your build process."
-article:
-  written_on: 2014-06-06
-  updated_on: 2014-06-06
+
+written_on: 2014-06-06
+updated_on: 2014-06-06
+
 authors:
   - addyosmani
 tags:
@@ -73,11 +70,11 @@ Then define a Gulp task for it in your gulpfile as follows (also covered in our 
 {% highlight javascript %}
 var psi = require('psi');
 gulp.task('psi', function (cb) {
-	psi({
-	    nokey: 'true', // or use key: ‘YOUR_API_KEY’
-	    url: site,
-	    strategy: 'mobile',
-	}, cb);
+  psi({
+      nokey: 'true', // or use key: ‘YOUR_API_KEY’
+      url: site,
+      strategy: 'mobile',
+  }, cb);
 });
 {% endhighlight %}
 

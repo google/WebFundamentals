@@ -1,19 +1,15 @@
 ---
-
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2014-08-28
 
 title: "Collecting and Iterating, the ES6 Way"
 description: "Maps, Sets, and for...of iteration are ES6 features that can change the way you work with collections of data."
-article:
-  written_on: 2014-08-28
-  updated_on: 2014-08-28
+
+written_on: 2014-08-28
+updated_on: 2014-08-28
+
 authors:
   - jeffposnick
 tags:

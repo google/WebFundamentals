@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-01-06
 
 title: "Chrome Dev Summit 2014: Polymer - State of the Union"
 description: "The state of the Polymer Union."
-article:
-  written_on: 2015-01-06
-  updated_on: 2015-01-06
+
+written_on: 2015-01-06
+updated_on: 2015-01-06
+
 authors:
   - robdodson
 tags:
