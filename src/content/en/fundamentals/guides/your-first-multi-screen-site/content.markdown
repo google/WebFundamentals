@@ -7,13 +7,13 @@ introduction: "Content is the most important aspect of any site. So let’s desi
 notes:
   styling:
     - Styling will come later
-article:
-  written_on: 2014-04-17
-  updated_on: 2014-04-23
-  order: 1
-priority: 0
-id: multi-screen-content
-collection: multi-screen
+
+written_on: 2014-04-17
+updated_on: 2014-04-23
+order: 1
+
+translation_priority: 0
+
 authors:
   - paulkinlan
 translators:
@@ -250,4 +250,4 @@ Content is the most important aspect of any site and we needed to make sure we
 had a good solid information architecture and density. This guide has given us
 an excellent base to build upon. We will style our content in the next guide.
 
-{% include shared/nextarticle.liquid %}
+{% include fundamentals/lessons_toc.liquid %}

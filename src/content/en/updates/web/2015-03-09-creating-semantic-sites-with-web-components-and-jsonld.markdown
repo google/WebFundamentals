@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-03-09
 
 title: "Creating semantic sites with Web Components and JSON-LD"
 description: "Add schema.org markup to your components and make them search engine friendly."
-article:
-  written_on: 2015-03-09
-  updated_on: 2015-03-09
+
+written_on: 2015-03-09
+updated_on: 2015-03-09
+
 authors:
   - ewagasperowicz
 tags:

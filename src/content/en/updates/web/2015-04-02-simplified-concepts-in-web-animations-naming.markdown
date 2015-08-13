@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-04-02
 
 title: "Simplified Concepts in Web Animations Naming"
 description: "In response to developer feedback, some upcoming features of Web Animations are being renamed."
-article:
-  written_on: 2015-04-02
-  updated_on: 2015-04-02
+
+written_on: 2015-04-02
+updated_on: 2015-04-02
+
 authors:
   - samthorogood
 tags:

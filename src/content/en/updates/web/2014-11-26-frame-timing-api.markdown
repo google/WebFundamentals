@@ -1,19 +1,15 @@
 ---
-
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2014-11-26
 
 title: "Developer feedback needed: Frame Timing API"
 description: "A brand new API is in the works to help measure frames per second in the wild, but it needs your feedback."
-article:
-  written_on: 2014-11-26
-  updated_on: 2014-11-26
+
+written_on: 2014-11-26
+updated_on: 2014-11-26
+
 authors:
   - paullewis
 tags:

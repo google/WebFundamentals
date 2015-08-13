@@ -11,20 +11,17 @@ notes:
   nosudo: If you see permission or access errors such as <code>EPERM</code>
     or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around.
     Consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this page</a> for a more robust solution.
-article:
-  written_on: 2014-04-17
-  updated_on: 2015-04-01
-  order: 1
-id: setting-up-wsk
-priority: 1
-collection: web-starter-kit
+
+written_on: 2014-04-17
+updated_on: 2015-04-01
+order: 1
+
+translation_priority: 1
+
 authors:
   - mattgaunt
 key-takeaways:
 ---
-
-<div class="container">
-<div class="content">
 
 {% include shared/toc.liquid %}
 
@@ -70,7 +67,4 @@ how things look, try running the local server by typing `gulp serve`.
 
 <img src="images/wsk-on-pixel-n5.png">
 
-{% include shared/nextarticle.liquid %}
-
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}

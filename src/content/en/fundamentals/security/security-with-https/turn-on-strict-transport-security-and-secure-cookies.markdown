@@ -3,26 +3,23 @@ layout: shared/plain
 title: "Turn On Strict Transport Security And Secure Cookies"
 description: ""
 introduction: ""
-id: turn-on-strict-transport-security-and-secure-cookies
-collection: security-with-tls
+
 authors:
   - chrispalmer
-article:
-  written_on: 2015-03-27
-  updated_on: 2015-03-27
-  order: 6
-priority: 0
+
+written_on: 2015-03-27
+updated_on: 2015-03-27
+order: 6
+
+translation_priority: 0
 key-takeaways:
   - You need to use HTTP Strict Transport Security (HSTS) to avoid the cost of the 301 redirect.
   - Ensure you always set the Secure flag on cookies.
 ---
 
-<div class="container">
-<div class="content">
+{% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
-
-{% include shared/toc.liquid %}
 
 At this point, you are ready to "lock in" the use of HTTPS. First, use [Strict
 Transport
@@ -64,5 +61,4 @@ that it sets. [This OWASP page explains how to set the Secure
 flag](https://www.owasp.org/index.php/SecureFlag) in several application
 frameworks. Every application framework has some way to set the flag.
 
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}

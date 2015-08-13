@@ -3,17 +3,14 @@
 layout: updates/post
 published: true
 
-collection: updates
-category: chrome
-product: chrome
-type: news
 date: 2015-04-14
 
 title: "DOM Attributes now on the prototype chain"
 description: "Chrome is becoming in line with the spec. Check your sites if you are assuming the WebKit logic for attribute propagation"
-article:
-  written_on: 2015-04-14
-  updated_on: 2015-04-14
+
+written_on: 2015-04-14
+updated_on: 2015-04-14
+
 authors:
   - paulkinlan
 tags:
@@ -21,15 +18,15 @@ tags:
 permalink: /updates/2015/04/DOM-attributes-now-on-the-prototype.html
 ---
 
-The Chrome team recently [announced that we are moving DOM properties to the prototype chain](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4).  This change, implemented in [Chrome 43](https://www.chromestatus.com/feature/6052436003258368) - (Beta as of mid April 2015) -  brings Chrome more in line with the [Web IDL Spec](https://heycam.github.io/webidl/#es-attributes ) and other browsers’ implementations, such as IE and Firefox.  *Edit: clarified* &nbsp; Older WebKit based browsers, are currently not compatible with the spec, however Safari now is. 
+The Chrome team recently [announced that we are moving DOM properties to the prototype chain](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4).  This change, implemented in [Chrome 43](https://www.chromestatus.com/feature/6052436003258368) - (Beta as of mid April 2015) -  brings Chrome more in line with the [Web IDL Spec](https://heycam.github.io/webidl/#es-attributes ) and other browsers’ implementations, such as IE and Firefox.  *Edit: clarified* &nbsp; Older WebKit based browsers, are currently not compatible with the spec, however Safari now is.
 
-*Clarification*: The use of the word Attribute and Property are used interchangeably in this post, the ECMA Script spec defines 'Properties' that have 'Attributes'.  A JS property _is_ a 'WebIDL Attribute'.  An Attribute in this article is not an HTML Attribute such as `class` on an image element. 
+*Clarification*: The use of the word Attribute and Property are used interchangeably in this post, the ECMA Script spec defines 'Properties' that have 'Attributes'.  A JS property _is_ a 'WebIDL Attribute'.  An Attribute in this article is not an HTML Attribute such as `class` on an image element.
 
 The new behavior is positive in many ways. It:
 
 * Improves compatibility across the web (IE and Firefox do this already) via compliance with the spec.
-* Allows you to consistently and efficiently create getters/setters on every DOM Object. 
-* Increases the hackability of DOM programming. For example, it will enable you to implement polyfills that allow you to efficiently emulate functionality missing in some browsers and JavaScript libraries that override default DOM attribute behaviors. 
+* Allows you to consistently and efficiently create getters/setters on every DOM Object.
+* Increases the hackability of DOM programming. For example, it will enable you to implement polyfills that allow you to efficiently emulate functionality missing in some browsers and JavaScript libraries that override default DOM attribute behaviors.
 
 For example, a hypothetical W3C specification includes some new functionality called `isSuperContentEditable` and the Chrome Browser doesn't implement it, but it is possible to "polyfill" or emulate the feature with a library.  As the library developer, you would naturally want to use the `prototype` as follows to create an efficient polyfill:
 
@@ -202,4 +199,3 @@ Great question.  Most issues with sites will be based on the fact a site has cho
 
 * Original bug from 2010: [https://code.google.com/p/chromium/issues/detail?id=43394](https://code.google.com/p/chromium/issues/detail?id=43394) - note: has most of the work on it.
 * [Code Review](https://codereview.chromium.org/984523003/) for commit
-

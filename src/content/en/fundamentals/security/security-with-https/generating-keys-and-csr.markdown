@@ -3,15 +3,15 @@ layout: shared/plain
 title: "Generating Keys and Certificate Signing Requests"
 description: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems, to generate private / public keys and a CSR."
 introduction: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems, to generate private / public keys and a CSR."
-id: generating-keys-and-csr
-collection: security-with-tls
+
 authors:
   - chrispalmer
-article:
-  written_on: 2015-03-27
-  updated_on: 2015-03-27
-  order: 2
-priority: 0
+
+written_on: 2015-03-27
+updated_on: 2015-03-27
+order: 2
+
+translation_priority: 0
 key-takeaways:
   - You need to create a 2048-bit RSA public and private key pair.
   - Generate a certificate signing request (CSR) which embeds your public key.
@@ -19,12 +19,9 @@ key-takeaways:
   - Install your final certificate in a non-web-accessible place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
 ---
 
-<div class="container">
-<div class="content">
+{% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
-
-{% include shared/toc.liquid %}
 
 ## Generate A Public/Private Key Pair
 
@@ -140,5 +137,4 @@ foo.example.com and bar.example.com, but _not_ for foo.bar.example.com.
 Copy the certificates to all your front-end servers in a non-web-accessible
 place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
 
-</div>
-</div>
+{% include fundamentals/lessons_toc.liquid %}
