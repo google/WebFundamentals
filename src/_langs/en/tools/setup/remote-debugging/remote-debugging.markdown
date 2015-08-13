@@ -1,8 +1,8 @@
 ---
 rss: false
 layout: tools-article
-title: "Access Your Site From Devices"
-seotitle: "Access Your Development Site From Devices Using Remote Debugging"
+title: "Remote Debugging Devices"
+seotitle: "Remote debugging devices on Android and iOS with Chrome and Safari"
 description: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
 introduction: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
 authors:
@@ -25,7 +25,7 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.real %}
 
-## Access site on Android device
+## Remote debugging on Android with Chrome DevTools
 
 Learn how to use the Chrome DevTools to debug your site live on your Android device.
 
@@ -106,7 +106,7 @@ For example, you can use DevTools to inspect web page elements on your device:
 
 **Note**: The version of Chrome on your device determines the version of DevTools used during remote debugging. For this reason, the remote debugging DevTools might differ from the version that you normally use.
 
-## Access site on iOS or Windows device
+## Remote debugging on iOS with Safari Web Inspector
 
 To debug Safari for iOS, follow these steps:
 
