@@ -30,9 +30,9 @@ developer: Dharmesh Patel
 
 description: "An amazing optimized reader for Hacker News."
 pros: |
-  A beautiful and highly optimized reading experience for Hacker News. Works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it is installable as it uses the [Web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and once installed it looks and feels like a native HN news reader app.
+  A beautiful and highly optimized reading experience for Hacker News, this app works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it's installable as it uses the [Web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html). Once installed it looks and feels like a native HN news reader app.
 cons: |
-  The app does a huge number of things very well, it loads quickly and is fast and smooth to use. If there was one thing the app could do it would be that adding support for offline experiences, this could be a simple error page or a more complex view of cached content.
+  The app does a huge number of things very well. It loads quickly and is fast and smooth to use. If there were one thing the app could do it would be to add support for offline experiences. This could be a simple error page or a more complex view of cached content.
 
 interview:
   - question: Why the web?
@@ -41,7 +41,7 @@ interview:
 
       Open web is the only platform that allows me to reach all kinds of users. I can easily develop and deploy new features and fixes for my app without depending on third party. It allows me to push new features and bug fixes anytime. 
 
-      User can try my app without downloading, and can use same app on different platforms. As of today, my app works on latest HTML5 capable browsers including but not limited to Firefox OS, Windows Phone, blackberry, iOS and Android; and its available to download on different app stores. This app is also available on the Chrome web store. I am a sole developer and I work on this few hours per week. I don't think that any other technology would have allowed me to support different platform.
+      User can try my app without downloading, and can use same app on different platforms. As of today, my app works on latest HTML5 capable browsers including but not limited to Firefox OS, Windows Phone, blackberry, iOS and Android; and its available to download on different app stores. This app is also available on the Chrome Web Store. I am a sole developer and I work on this few hours per week. I don't think that any other technology would have allowed me to support different platforms.
   - question: What worked really well during development?
     answer: |
       I was surprised how well all latest browsers support major HTML5 features. I started my webapp as a prototype to see what I can build using Open Web (HTML5, CSS, Javascript). I only tested my app on iOS Safari and Android browser during development, and it worked on Firefox and with little changes, I was able to support IE mobile. 
