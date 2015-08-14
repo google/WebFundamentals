@@ -141,17 +141,17 @@ module Jekyll
             Dir.entries( File.join(rootPath, nextRelativePath) )
             )
         else
+          page = create_page(
+              site,
+              relativePath,
+              fileEntry,
+              'en',
+              false)
           if @acceptedExtensions.include? File.extname(fileEntry)
-            page = create_page(
-                site,
-                relativePath,
-                fileEntry,
-                'en',
-                false)
-
             if site.data['primes'].key?(page.url)
               raise "Two pages at the same URL #{page.url}"
             end
+
             page.data['pages'] = pagesTrees
             supportedTranslations = site.config['langs_available'].select { |languageId|
               if languageId == site.config['primary_lang']
@@ -208,8 +208,6 @@ module Jekyll
         when 'updates'
           page = UpdatePage.new(site, relative_dir, file_name, langcode)
         when 'fundamentals'
-          puts "Creating Fundamentals: " + file_name
-          puts "Path: " + relative_dir
           page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
         when 'styleguide', 'shows'
           page = LanguagePage.new(site, relative_dir, file_name, langcode)
@@ -227,9 +225,12 @@ module Jekyll
         end
         page
       when /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
+        puts "Creating Fundamentals: " + file_name
+        puts "Path: " + relative_dir
         # Copy across other assets.
         asset = LanguageAsset.new(site, relative_dir, file_name, langcode)
-        site.static_files << asset if process
+        # TODO: Move to outside of this def
+        site.static_files << asset
         nil
       end
     end
