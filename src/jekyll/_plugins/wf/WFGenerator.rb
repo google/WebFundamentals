@@ -28,7 +28,7 @@ module Jekyll
       pages = site.data['primes']
 
       # This gives us access to the data of each page
-      pages = pages ? pages.values : site.pages
+      pages = site.pages
 
       # Get a list of published update pages
       sectionPages = pages.map { |page|
@@ -47,7 +47,7 @@ module Jekyll
         #end
 
         if sections.nil?
-          next page.data['translations'].find { |p| p.langcode == curr_lang } || page
+          next page
         end
 
         # This checks whether the relative path
