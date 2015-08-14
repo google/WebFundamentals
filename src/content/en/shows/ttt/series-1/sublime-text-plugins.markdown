@@ -1,18 +1,14 @@
 ---
-id: sublime-text-plugins
-showid: ttt
 layout: shows/single-video
-collection: ttt-series-1
 title: "Sublime Text Plugins"
 description: ""
 published: true
-showYoutubeID: 2eu23_if6Lw
+youtubeID: 2eu23_if6Lw
 
 date: 2015-05-20 00:00:00
-article:
-  written_on: 2015-05-20
-  updated_on: 2015-05-20
 
+written_on: 2015-05-20
+updated_on: 2015-05-20
 ---
 
 The minute you start developing a site, the first tool you'll use

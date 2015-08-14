@@ -38,17 +38,9 @@ module Jekyll
         return
       end
 
-      @pagesTree = {}
-
-      # Because AnyLanuage is priority high and we are
-      # setting a global variable - set it here
-      contributorsFilepath = File.join(site.config['WFContributors'])
-      contributesData = YAML.load_file(contributorsFilepath)
-      site.data["contributors"] = contributesData
-
       lang = ENV['TRANS_LANG'] || site.config['primary_lang']
       site.data['curr_lang'] = lang
-      generate_multilang(site)
+      #generate_multilang(site)
     end
 
     # Generates with multi language support for a single language specified
@@ -63,10 +55,10 @@ module Jekyll
 
       # Hack to skip processing regular content
       # if we're building a translation.
-      if is_localization
-        site.static_files = []
-        site.pages = []
-      end
+      #if is_localization
+      #  site.static_files = []
+      #  site.pages = []
+      #end
 
       Jekyll.logger.info "Generating translation in '#{currentLang}'"
 
@@ -90,7 +82,7 @@ module Jekyll
           primary_lang,
           !is_localization)
 
-        # Skip if the page was generated
+        # Skip if the page wasn't generated
         if not primaryLangPage
           next
         end
