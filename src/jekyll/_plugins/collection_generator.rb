@@ -77,8 +77,8 @@ module Jekyll
 
         case rootFolderName
         when 'updates'
-
-        when 'fundamentals', 'styleguide'
+          # These don't need the collections
+        when 'fundamentals', 'styleguide', 'shows'
           # Before adding the data to the page, this filters out the
           # page itself
 
