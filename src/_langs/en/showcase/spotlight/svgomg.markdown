@@ -38,7 +38,7 @@ interview:
       Laziness. Total laziness. I'm not an expert in developing Windows native apps, I'm not an expert in OSX native apps, nor am I an expert in creating native apps for iOS, Android, Windows Phone or Linux. I can however do the web, and that one skill set let me build something *once* that worked on all those platforms.
   - question: What worked really well during development?
     answer: |
-      I'm really happy with the performance of it. I ensure the page renders before JS is available. In fact, it gets to first render with only 5k of HTML with some inlined CSS and SVG, the main scripts and CSS are all loaded in the background. This means the site appears to load in 1.5s even on 3G with an empty cache, and most of that is DNS and SSL.
+      I'm really happy with the performance of it. I ensure the page renders before JS is available. In fact, it gets to first render with only 5k of HTML with some inlined CSS and SVG. The main scripts and CSS are all loaded in the background. This means the site appears to load in 1.5s even on 3G with an empty cache, and most of that is DNS and SSL.
 
       The opening screen is really simple, so doing that in 5k wasn’t a challenge. It really bothers me that so many sites wait on JS for their first render, some even require their JS to make further requests before rendering. This pushes 3G render time towards 10s – as a mobile user I know I wouldn’t put up with that.
 
