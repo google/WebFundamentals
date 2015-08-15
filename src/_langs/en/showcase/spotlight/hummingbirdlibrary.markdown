@@ -3,12 +3,12 @@ id: hummingbirdlibrary
 layout: spotlight
 collection: spotlight
 type: spotlight
-published: false
+published: true
 
-date: 2015-07-08
+date: 2015-08-14
 article:
-  written_on: 2015-07-08
-  updated_on: 2015-07-08
+  written_on: 2015-08-14
+  updated_on: 2015-08-14
 authors:
   - pbakaus
 

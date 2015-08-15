@@ -3,12 +3,12 @@ id: adventuremachine
 layout: spotlight
 collection: spotlight
 type: spotlight
-published: false
+published: true
 
-date: 2015-07-16
+date: 2015-08-14
 article:
-  written_on: 2015-07-16
-  updated_on: 2015-07-16
+  written_on: 2015-08-14
+  updated_on: 2015-08-14
 authors:
   - pbakaus
 
@@ -25,7 +25,7 @@ scores:
 
 title: "Madeon Adventure Machine"
 link: http://www.madeon.fr/adventuremachine/
-developer: ??? ???
+developer: Syd Lawrence
 
 description: "A clever promotion for Madeon's new album that is a fun drum machine."
 pros: |
