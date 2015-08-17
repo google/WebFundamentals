@@ -30,7 +30,7 @@
 
 {{ content }}
 
-{% for subdirectory in page.pages.subdirectories %}
+{% for subdirectory in page.context.subdirectories %}
   <div class="showhome--series showhome--series-{{ page.id }}{% if count == 0 %} showhome--series-first{% endif %}">
     <h3 class="showhome--series-title showhome--series-title-{{ page.id }} g-wide--full">
       <a href="{{subdirectory[1].index.relative_url}}">{{subdirectory[1].index.title}}</a>
