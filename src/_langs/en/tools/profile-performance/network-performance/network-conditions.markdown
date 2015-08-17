@@ -44,7 +44,7 @@ Try out the Network Link Conditioner tool found in the Lion
 Developer Tools. This can be installed by doing the following:
 
 1. Open Xcode.
-2. Select the following from the menu: `XCode > Open Developer Tool > More Developer Tools`.
+2. Select the following from the menu: `Xcode > Open Developer Tool > More Developer Tools`.
 3. When the Apple Developer site opens, go to `Hardware IO Tools for Xcode` and
 download the Network Link Conditioner dmg file.
 4. Once the dmg is downloaded, double click the file and then select the Network
