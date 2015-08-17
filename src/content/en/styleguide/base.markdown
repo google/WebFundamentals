@@ -2,6 +2,7 @@
 layout: shared/plain
 title: "Base Styleguide"
 description: "This is a base styleguide for /web on Google Developers"
+order: 0
 ---
 
 <h1>Title H1 Text</h1>
