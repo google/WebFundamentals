@@ -2,6 +2,7 @@
 layout: shared/plain
 title: "Custom Tags"
 description: "This is a list of custom tags currently in use on /web on Google Developers"
+order: 3
 ---
 # Include Code
 

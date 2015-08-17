@@ -2,6 +2,7 @@
 layout: shared/plain
 title: "Useful and Common Tags"
 description: "This is a list of tags that should be useful or are commonly used."
+order: 1
 key-takeaways:
   example:
     - Always use a viewport.
