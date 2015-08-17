@@ -94,6 +94,8 @@ key-takeaways:
 
 {% include shared/toc.liquid %}
 
+{{page.context}}
+
 ## Create the page structure
 
 We have identified we need:
