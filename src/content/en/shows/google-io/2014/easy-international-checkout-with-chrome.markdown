@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Easy International Checkout with Chrome"
 description: "Chrome's requestAutocomplete can help web and mobile web developers breeze through the process of creating a truly internationalized checkout experience for their users. Find out why it matters and see it in action."
 published: true
-showYoutubeID: ljYeHwGgzQk
+youtubeID: ljYeHwGgzQk
 
 date: 2014-07-07 18:10:25
 article:

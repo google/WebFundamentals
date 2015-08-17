@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Go Offline"
 description: "Take your Polymer app offline, without writing a single line of JavaScript! Behold the power of service worker!"
 published: true
-showYoutubeID: BucGrYACJdQ
+youtubeID: BucGrYACJdQ
 date: 2015-06-29 00:00:00
 
 article:

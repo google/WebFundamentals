@@ -6,7 +6,7 @@ collection: polycasts-season-1
 title: "What's new in Polymer 0.5.1"
 description: "In today's video we take a look at the current stable release of Polymer, v0.5.1, and cover some of the changes that this update brings with it."
 published: true
-showYoutubeID: Iq8TdPJSQMI
+youtubeID: Iq8TdPJSQMI
 
 date: 2014-12-01 00:00:00
 article:

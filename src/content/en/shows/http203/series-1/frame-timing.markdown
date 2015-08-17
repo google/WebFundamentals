@@ -6,7 +6,7 @@ collection: http203-series-1
 title: "3. Frame Timing API"
 description: "Tracking rendering performance and frames per second out in the wild is a challenge for developers, but it looks like Paul wants to tell Jake about a proposed API that could help out."
 published: true
-showYoutubeID: 4zoC3eaa9z0
+youtubeID: 4zoC3eaa9z0
 
 date: 2014-11-18 00:00:00
 article:

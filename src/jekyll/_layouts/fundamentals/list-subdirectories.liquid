@@ -4,9 +4,9 @@
 
 <!-- Loop through each sub directory and generate some navigation -->
 {% for subdirectory in page.context.subdirectories %}
-  <h2>{{subdirectory[1].index.title}}</h2>
+  <h2>{{subdirectory.index.title}}</h2>
   <!-- To view the format of the date, uncomment the following line -->
-  <p><a href="{{subdirectory[1].index.relative_url}}">View content here</a></p>
+  <p><a href="{{subdirectory.index.relative_url}}">View content here</a></p>
 {% endfor %}
 
 {% include page-structure/close-page.liquid %}

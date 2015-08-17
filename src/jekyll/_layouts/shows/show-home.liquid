@@ -1,30 +1,18 @@
-{% if page.articles[page.id] %}
-  {% assign series = page.articles[page.id] | sort: 'date' | reverse %}
-  {% assign latestSeries = series | first %}
-  {% if page.articles[latestSeries.id] %}
-    {% assign latestShows = page.articles[latestSeries.id] | sort: 'date' | reverse %}
-    {% assign latestShow = latestShows | first %}
-  {% endif %}
-{% endif %}
-
-{% capture feedURL %}{{site.baseurl}}/shows/{{page.id}}/feed.xml{% endcapture %}
-
-
-
-
-
 {% include page-structure/open-page.liquid %}
 
 <!-- Latest Episode -->
-{% if latestShow %}
+{% if page.context.subdirectories.size > 0 %}
+<p>{{page.context.subdirectories}}</p>
+
+<p>{{page.context.subdirectories[0]}}</p>
+
 <div class="showhome--subheading">
   <p class="showhome--subheading-description">Latest Episode</p>
-  <h2 class="showhome--subheading-title">{{ latestShow.title }}</h2>
+  <h2 class="showhome--subheading-title">{{ page.context.subdirectories[0].pages[0].title }}</h2>
 </div>
-{% include modules/video.liquid id=latestShow.showYoutubeID %}
-{% endif %}
 
-<h3>{{ page.intro-title }}</h3>
+{% ytvideo page.context.subdirectories[0].pages[0].youtubeID %}
+{% endif %}
 
 <p>{{ page.description }}</p>
 
@@ -33,27 +21,18 @@
 {% for subdirectory in page.context.subdirectories %}
   <div class="showhome--series showhome--series-{{ page.id }}{% if count == 0 %} showhome--series-first{% endif %}">
     <h3 class="showhome--series-title showhome--series-title-{{ page.id }} g-wide--full">
-      <a href="{{subdirectory[1].index.relative_url}}">{{subdirectory[1].index.title}}</a>
+      <a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a>
     </h3>
 
     <!-- List of Videos -->
     <ol class="showhome--series-flatrowlist flatrowlist">
-      {% for showPage in subdirectory[1].pages %}
+      {% for showPage in subdirectory.pages %}
       <li>
         {% include shows/video-thumbnail.liquid videoPage=showPage %}
       </li>
       {% endfor %}
     </ol>
   </div>
-
-
-
-  {% if page.articles[singleSeries.id] %}
-    {% assign seriesShows = page.articles[singleSeries.id] | sort: 'date' %}
-    {%if seriesShows.size > 0 %}
-
-    {% endif %}
-  {% endif %}
 {% endfor %}
 
 <p class="container feedlink-container">

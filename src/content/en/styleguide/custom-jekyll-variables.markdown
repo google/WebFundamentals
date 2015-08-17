@@ -31,10 +31,9 @@ following variables:
 - pages
     This is the list of pages inside this directory (Excluding the index)
 - subdirectories
-    This is a list of subdirectories from the current directory. This is a
-    hash map where the key is the directory name and the value is the same
-    structure as page.context (i.e. a subdirectory has id, index, pages
-    and subdirectories variables).
+    This is an array of subdirectories from the current directory. Each
+    subdirectory has the same structure as page.context (i.e. a subdirectory
+    has an id, index, pages and subdirectories variable).
 
 The current pages context is:
 
@@ -66,9 +65,7 @@ To display all the pages title you can use liquid like so:
 </ol>
 
 To display titles for all the subdirectories you could do something
-like the following, which iterates over each key, value pair ub the
-subdirectories hash and use the value (hence the `subdirectory[1]`) to
-get the index page for that directory and display the title.
+like the following:
 
 
 {% highlight text %}
@@ -76,7 +73,7 @@ get the index page for that directory and display the title.
 <ol>
   {% for subdirectory in page.context.subdirectories %}
     <li>
-    {{subdirectory[1].index.title}}
+    {{subdirectory.index.title}}
     </li>
   {% endfor %}
 </ol>

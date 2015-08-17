@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Skia Update"
 description: ""
 published: true
-showYoutubeID: f7jz75yJlac
+youtubeID: f7jz75yJlac
 
 date: 2015-05-13 16:30:00
 article:

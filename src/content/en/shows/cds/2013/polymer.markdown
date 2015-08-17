@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Polymer declarative, encapsulated, reusable components"
 description: "Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit"
 published: true
-showYoutubeID: DH1vTVkqCDQ
+youtubeID: DH1vTVkqCDQ
 
 date: 2013-11-20 12:30:00
 article:

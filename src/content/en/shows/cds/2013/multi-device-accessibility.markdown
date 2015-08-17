@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Multi-Device Accessibility"
 description: "Users will be accessing your sites and services from a multitude of devices with a wide range of different accessibility requirements.  By using the correct semantic elements and correct ARIA roles you help give the browser and assistive technology a much improved understanding of your page."
 published: true
-showYoutubeID: E0ojKLzXoZ4
+youtubeID: E0ojKLzXoZ4
 
 date: 2013-11-20 16:00:00
 article:

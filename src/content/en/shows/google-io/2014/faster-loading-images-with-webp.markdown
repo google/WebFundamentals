@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Faster Loading Images with WebP"
 description: "Learn how WebP can help reduce the load time of images through better image compression"
 published: true
-showYoutubeID: rqXMwLbYEE4
+youtubeID: rqXMwLbYEE4
 
 date: 2014-06-25 21:18:23
 article:

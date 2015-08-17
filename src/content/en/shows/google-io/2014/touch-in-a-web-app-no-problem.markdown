@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Touch in a Web App? No Problem"
 description: "Tap Target Size, Touch Feedback, and Touch Events; everything you need to know to build touch support into your web app."
 published: true
-showYoutubeID: Rwc4fHUnGuU
+youtubeID: Rwc4fHUnGuU
 
 date: 2014-06-25 21:17:01
 article:

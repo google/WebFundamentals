@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Moar routing with... more-routing"
 description: "Last week you learned how to use a router in your Polymer app. This week we're doing it again, using nothing but HTML!"
 published: true
-showYoutubeID: -67kb7poIT8
+youtubeID: -67kb7poIT8
 
 date: 2015-03-09 00:00:00
 article:

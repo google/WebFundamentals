@@ -6,7 +6,7 @@ collection: polycasts-season-1
 title: "Core Icons"
 description: "Creating your own icon set in Polymer is a breeze! In this video we'll look at how to combine different iconsets with the core-icon elements, and I'll show you how to create your own custom iconsets using SVG images."
 published: true
-showYoutubeID: jrt7sMq9lO0
+youtubeID: jrt7sMq9lO0
 
 date: 2014-09-22 00:00:00
 article:

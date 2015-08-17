@@ -6,7 +6,7 @@ collection: cds-2014
 title: "Asking for Superpowsers: Chrome's Permission Model"
 description: ""
 published: true
-showYoutubeID: 3dAwZVsS8wo
+youtubeID: 3dAwZVsS8wo
 
 date: 2014-11-20 10:30:00
 article:

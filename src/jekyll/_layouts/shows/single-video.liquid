@@ -1,0 +1,19 @@
+{% include page-structure/open-page.liquid %}
+
+{% ytvideo page.youtubeID %}
+
+{{ content }}
+
+<ol>
+{% for showPage in page.context.pages %}
+  {% if showPage.url == page.url %}
+  <li class="currentVideo">
+  {% else %}
+  <li>
+  {% endif %}
+    {% include shows/video-thumbnail.liquid videoPage=showPage %}
+  </li>
+{% endfor %}
+</ol>
+
+{% include page-structure/close-page.liquid %}

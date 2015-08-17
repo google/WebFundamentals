@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Optimizing Network Performance"
 description: "In this talk Ilya stepped through recent changes in Chrome that will improve loading time, as well as a few changes you can make in your environment to help keep network load to an absolute minimum."
 published: true
-showYoutubeID: MOEiQ6sjeaI
+youtubeID: MOEiQ6sjeaI
 
 date: 2013-11-20 11:30:00
 article:

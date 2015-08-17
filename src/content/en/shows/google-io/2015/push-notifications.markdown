@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "Push Notifications on the Open Web to increase engagement"
 description: ""
 published: true
-showYoutubeID: Z_K8QPQe6oM
+youtubeID: Z_K8QPQe6oM
 
 date: 2015-05-28 00:00:00
 article:

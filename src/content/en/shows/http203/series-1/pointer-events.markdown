@@ -6,7 +6,7 @@ collection: http203-series-1
 title: "2. Pointer Events"
 description: "Pointer Events (no, not the CSS ones, the other ones!) are set to unite input across devices. Jake has a little bit of news for Paul about them."
 published: true
-showYoutubeID: ngBy0H_q-GY
+youtubeID: ngBy0H_q-GY
 
 date: 2014-10-09 00:00:00
 article:

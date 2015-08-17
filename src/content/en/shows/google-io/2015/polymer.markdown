@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "Polymer and modern web APIs: In production at Google scale"
 description: ""
 published: true
-showYoutubeID: fD2As5RmM8Q
+youtubeID: fD2As5RmM8Q
 
 date: 2015-05-28 00:00:00
 article:

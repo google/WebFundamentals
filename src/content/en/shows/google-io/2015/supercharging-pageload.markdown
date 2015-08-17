@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "Supercharging page load"
 description: ""
 published: true
-showYoutubeID: d5_6yHixpsQ
+youtubeID: d5_6yHixpsQ
 
 date: 2015-05-28 00:00:00
 article:

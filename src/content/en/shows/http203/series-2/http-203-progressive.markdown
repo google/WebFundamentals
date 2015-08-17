@@ -6,7 +6,7 @@ collection: http203-series-2
 title: "2.4. Progressive Loading"
 description: "Paul and Jake talk about the importance of progressive rendering on the web. Unfortunately, Jake can’t figure out how to say 'isomorphic'."
 published: true
-showYoutubeID: miLnRHNj7nQ
+youtubeID: miLnRHNj7nQ
 
 date: 2015-06-30 00:00:00
 article:

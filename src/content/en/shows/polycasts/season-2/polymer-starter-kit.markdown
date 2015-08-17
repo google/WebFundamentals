@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Polymer Starter Kit"
 description: "Polymer Starter Kit is full of amazing tricks! Let’s do a quick introduction and see how to update the theme with custom properties."
 published: true
-showYoutubeID: xz-yixRxZN8
+youtubeID: xz-yixRxZN8
 date: 2015-06-15 00:00:00
 
 article:

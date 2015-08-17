@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Moving OWP Security Forward"
 description: ""
 published: true
-showYoutubeID: O0xEnPLWKvQ
+youtubeID: O0xEnPLWKvQ
 
 date: 2015-05-13 15:30:00
 article:

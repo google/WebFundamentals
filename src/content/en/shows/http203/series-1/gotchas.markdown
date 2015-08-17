@@ -6,7 +6,7 @@ collection: http203-series-1
 title: "5. Gotchas"
 description: "Building for the web is awesome, but sometimes you can find yourself baffled by gotchas. Check out the latest episode of HTTP 203, where Paul tells Jake about three he recently discovered!"
 published: true
-showYoutubeID: VJQtNxyKJhQ
+youtubeID: VJQtNxyKJhQ
 
 date: 2015-01-12 00:00:00
 article:

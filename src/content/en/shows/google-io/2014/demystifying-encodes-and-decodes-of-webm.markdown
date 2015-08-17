@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Demystifying encodes and decodes of WebM"
 description: "Tips, tricks and practices to encode a video into WebM using VPx codecs for delivery across the web and on Android."
 published: true
-showYoutubeID: o-TAyIQBOuA
+youtubeID: o-TAyIQBOuA
 
 date: 2014-06-25 21:19:23
 article:
