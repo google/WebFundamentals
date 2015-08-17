@@ -75,6 +75,8 @@ module Jekyll
 
       handleFileEntries(allPages, pagesTree, site, primaryLangFilepath, '.', fileEntries)
 
+      organisePageTree(pagesTree)
+
       allPages
       # This maps all the files in the primary language directory
       # to any of the available translations files
@@ -152,7 +154,8 @@ module Jekyll
               raise "Two pages at the same URL #{page.url}"
             end
 
-            page.data['pages'] = pagesTrees
+            page.data['context'] = pagesTrees
+            
             supportedTranslations = site.config['langs_available'].select { |languageId|
               if languageId == site.config['primary_lang']
                 return false
@@ -233,6 +236,23 @@ module Jekyll
         site.static_files << asset
         nil
       end
+    end
+
+    def organisePageTree(tree)
+      tree['pages'] = tree['pages'].sort do |a, b|
+        a_order = a.data['order'] || 0
+        b_order = b.data['order'] || 0
+        a_order <=> b_order
+      end
+
+      tree['pages'].each_with_index { |a, i|
+        a.data['nextPage'] = tree['pages'][i+1]
+        a.data['previousPage'] = tree['pages'][i-1] if i > 0
+      }
+
+      tree['subdirectories'].each { |key, value|
+        organisePageTree(value)
+      }
     end
   end
 

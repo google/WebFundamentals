@@ -2,7 +2,7 @@
   <div class="wf-lessons-toc__container">
     <h3 class="wf-lessons-toc__title">{{"next_sections" | localize_string}}</h3>
     <ol class="wf-lessons-toc__list">
-      {% for pageInSection in page.pages.pages %}
+      {% for pageInSection in page.context.pages %}
         {% if pageInSection.url == page.url %}
           <li class="wf-lessons-toc__list-item wf-lessons-toc--isCurrentPage">
           <span class="wf-lessons-toc__icon">{% include svgs/done.svg %}</span>{{pageInSection.title}}

@@ -3,7 +3,7 @@
 {{ content }}
 
 <!-- Loop through each page and generate some navigation -->
-{% for page in page.pages.pages %}
+{% for page in page.context.pages %}
   <h2>{{page.title}}</h2>
   <p>{{page.description}}</p>
   <!-- To view the format of the date, uncomment the following line -->
