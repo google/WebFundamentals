@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Content Switcheroo with Core-Pages"
 description: "Presto Change-O! Update the sections in your single page app using core-pages."
 published: true
-showYoutubeID: 6x2A9UgLqEw
+youtubeID: 6x2A9UgLqEw
 
 date: 2015-02-09 00:00:00
 article:

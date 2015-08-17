@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "Web Bluetooth"
 description: ""
 published: true
-showYoutubeID: I3obFcCw8mk
+youtubeID: I3obFcCw8mk
 
 date: 2015-07-06 00:00:00
 article:

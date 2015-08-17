@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Polymer: Interacting with Google Services using nothing but HTML"
 description: "Google has over 250 APIs and services. Every API is different! Eric Bidelman shows you how you can interact with Google services without writing code!"
 published: true
-showYoutubeID: eORqFaf_QzM
+youtubeID: eORqFaf_QzM
 
 date: 2014-06-25 21:19:23
 article:

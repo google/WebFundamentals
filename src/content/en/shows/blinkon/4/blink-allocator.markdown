@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Allocator"
 description: ""
 published: true
-showYoutubeID: U8TFBVPF9UQ
+youtubeID: U8TFBVPF9UQ
 
 date: 2015-05-13 12:30:00
 article:

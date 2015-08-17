@@ -6,7 +6,7 @@ collection: http203-series-2
 title: "2.5. Performance Matters"
 description: "From talking vDOM to lying to users, Paul & Jake are all about ensuring users get blazing fast sites."
 published: true
-showYoutubeID: 6Zgp_G5o6Oc
+youtubeID: 6Zgp_G5o6Oc
 
 date: 2015-07-13 09:05:03
 article:

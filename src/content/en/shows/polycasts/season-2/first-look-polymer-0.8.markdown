@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Polymer 0.8: First Look"
 description: "Polymer 0.8 has landed and with it come some major changes and performance improvements!"
 published: true
-showYoutubeID: cyf-17lWkYE
+youtubeID: cyf-17lWkYE
 
 date: 2015-04-16 00:00:00
 article:

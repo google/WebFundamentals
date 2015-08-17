@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Service Worker"
 description: ""
 published: true
-showYoutubeID: HjECqtW9_Co
+youtubeID: HjECqtW9_Co
 
 date: 2015-05-13 16:30:00
 article:

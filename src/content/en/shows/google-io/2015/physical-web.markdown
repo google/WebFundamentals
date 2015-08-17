@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "Introduction to the Physical Web"
 description: ""
 published: true
-showYoutubeID: 1yaLPRgtlR0
+youtubeID: 1yaLPRgtlR0
 
 date: 2015-07-18 00:00:00
 article:

@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Lightning talks"
 description: ""
 published: true
-showYoutubeID: uMjSEW_TE18
+youtubeID: uMjSEW_TE18
 
 date: 2015-05-13 14:30:00
 article:

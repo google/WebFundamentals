@@ -7,7 +7,7 @@ collection: lazyweb-2015
 title: "How is TCP like the 7th grade?"
 description: "Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TCP and how it’s a lot like junior high, sitespeed.io releases an open source perf dashboard, Sky lets you write Dart apps for mobile, Scott Jehl demonstrates how to load pages quickly (even if they’re heavy), and Chrome’s new scheduler let’s priority tasks jump the queue."
 published: true
-showYoutubeID: ZY_zpMlpqLM
+youtubeID: ZY_zpMlpqLM
 
 date: 2015-05-05 00:00:00
 article:

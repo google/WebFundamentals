@@ -7,7 +7,7 @@ collection: lazyweb-2015
 title: "Episode 6"
 description: "Ember ships Glimmer into Canary, Senongo Akpem explores non-linear narratives, Web Pages break the 2mb limit, Firefox 38 is released, Chrome gets a developer channel on Android, and programmatic copy/paste is coming to Firefox."
 published: true
-showYoutubeID: s12cZ7UAKFQ
+youtubeID: s12cZ7UAKFQ
 
 date: 2015-05-19 00:00:00
 article:

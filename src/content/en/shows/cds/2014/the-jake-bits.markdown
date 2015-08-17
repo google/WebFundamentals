@@ -6,7 +6,7 @@ collection: cds-2014
 title: "The Jake Bits"
 description: ""
 published: true
-showYoutubeID: mky3ejiGrog
+youtubeID: mky3ejiGrog
 
 date: 2014-11-20 19:00:00
 article:

@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "The next generation mobile web"
 description: ""
 published: true
-showYoutubeID: iZZdhTUP5qg
+youtubeID: iZZdhTUP5qg
 
 date: 2015-05-28 00:00:00
 article:

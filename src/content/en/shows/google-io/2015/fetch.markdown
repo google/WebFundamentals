@@ -6,7 +6,7 @@ collection: googleio-2015
 title: "Introduction to the Fetch API"
 description: ""
 published: true
-showYoutubeID: g6-ZwZmRncs
+youtubeID: g6-ZwZmRncs
 
 date: 2015-05-28 00:00:00
 article:

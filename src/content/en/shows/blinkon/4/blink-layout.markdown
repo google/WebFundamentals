@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Layout"
 description: ""
 published: true
-showYoutubeID: Q2diuftFJKo
+youtubeID: Q2diuftFJKo
 
 date: 2015-05-13 11:30:00
 article:

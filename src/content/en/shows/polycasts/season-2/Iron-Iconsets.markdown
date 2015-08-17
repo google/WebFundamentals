@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Custom icons with Iron Iconsets"
 description: "Today we’re traveling back in time to update one of our old episodes. The iron-iconset-svg element lets you build your own custom icon sets which can be SUPER important if you want to make sure your site is as small and performant as possible."
 published: true
-showYoutubeID: https://youtu.be/tjmRUgUca1g
+youtubeID: https://youtu.be/tjmRUgUca1g
 
 date: 2015-07-29 00:00:00
 article:

@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Portable Native Client"
 description: "Portable Native Client is a technology that enables portable, secure execution of native applications in Chrome. This extension of the Native Client project brings the performance and low-level control of native code to modern web browsers without sacrificing the security and portability of the web."
 published: true
-showYoutubeID: hfs5p1BKpxQ
+youtubeID: hfs5p1BKpxQ
 
 date: 2013-11-20 14:00:00
 article:

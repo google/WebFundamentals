@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "The Awesome Power of Auto-Binding Templates"
 description: "Super charge your app with Polymer data bindings."
 published: true
-showYoutubeID: 82LfXCeuaOo
+youtubeID: 82LfXCeuaOo
 
 date: 2015-01-28 00:00:00
 article:

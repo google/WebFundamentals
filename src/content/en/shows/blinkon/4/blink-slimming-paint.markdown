@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Slimming Paint"
 description: ""
 published: true
-showYoutubeID: Sc-vQDHAFtU
+youtubeID: Sc-vQDHAFtU
 
 date: 2015-05-13 15:30:00
 article:

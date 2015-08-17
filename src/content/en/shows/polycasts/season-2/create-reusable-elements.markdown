@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Create reusable elements with ease"
 description: "Creating reusable components doesn't have to be so tricky! Use the polyserve tool to make element authoring a breeze."
 published: true
-showYoutubeID: p7Q1mQtFGM8
+youtubeID: p7Q1mQtFGM8
 
 date: 2015-04-21 00:00:00
 article:

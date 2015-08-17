@@ -45,6 +45,9 @@ module VideoWrapper
       # If the video source is empty then this tag shouldn't be used
       raise "Missing source for video tag" if @videoId.empty?
 
+      if not context[@videoId].nil?
+        @videoId = context[@videoId]
+      end
       iframeSrcUrl = 'https://www.youtube.com/embed/' + @videoId + '?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf';
       @videoArguments.each do |argument|
         iframeSrcUrl += '&amp;' + argument

@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink Houdini"
 description: ""
 published: true
-showYoutubeID: Ajts5feJ0YA
+youtubeID: Ajts5feJ0YA
 
 date: 2015-05-13 14:30:00
 article:

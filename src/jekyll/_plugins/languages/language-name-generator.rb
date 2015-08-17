@@ -71,9 +71,9 @@ module Jekyll
       fileEntries = Dir.entries( primaryLangFilepath )
       site.data['primes'] = {}
       allPages = []
-      pagesTree = {"id" => "root", "pages" => [], "subdirectories" => {}}
+      pagesTree = {"id" => "root", "pages" => [], "subdirectories" => []}
 
-      handleFileEntries(allPages, pagesTree, site, primaryLangFilepath, '.', fileEntries)
+      handleFileEntries(allPages, nil, pagesTree, site, primaryLangFilepath, '.', fileEntries)
 
       organisePageTree(pagesTree)
 
@@ -111,7 +111,7 @@ module Jekyll
       #}
     end
 
-    def handleFileEntries(allPages, pagesTrees, site, rootPath, relativePath, fileEntries)
+    def handleFileEntries(allPages, treeParent, pagesTrees, site, rootPath, relativePath, fileEntries)
       fileEntries.each { |fileEntry|
         if File.directory?(File.join(rootPath, relativePath, fileEntry))
           if fileEntry =~ /^_/
@@ -123,11 +123,12 @@ module Jekyll
           if fileEntry == "." || fileEntry == ".."
             next
           end
-          pagesTrees['subdirectories'][fileEntry] = {
+          newDirectory = {
             "id" => fileEntry,
             "pages" => [],
-            "subdirectories" => {}
+            "subdirectories" => []
           }
+          pagesTrees['subdirectories'] << newDirectory
 
           if relativePath == '.'
             nextRelativePath = fileEntry
@@ -136,7 +137,8 @@ module Jekyll
           end
           handleFileEntries(
             allPages,
-            pagesTrees['subdirectories'][fileEntry],
+            pagesTrees,
+            newDirectory,
             site,
             rootPath,
             nextRelativePath,
@@ -155,7 +157,7 @@ module Jekyll
             end
 
             page.data['context'] = pagesTrees
-            
+
             supportedTranslations = site.config['langs_available'].select { |languageId|
               if languageId == site.config['primary_lang']
                 return false
@@ -190,6 +192,13 @@ module Jekyll
           end
         end
       }
+
+      if pagesTrees['pages'].length == 0 &&
+        pagesTrees['subdirectories'].length == 0 &&
+        pagesTrees['index'].nil?
+        treeParent['subdirectories'].delete(pagesTrees)
+      end
+
     end
 
     # Creates a new LanguagePage or a LanguageAsset, and adds it to site.pages
@@ -223,13 +232,9 @@ module Jekyll
             rootFolderName + "\" directory.")
         end
 
-        if process
 
-        end
         page
       when /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
-        puts "Creating Fundamentals: " + file_name
-        puts "Path: " + relative_dir
         # Copy across other assets.
         asset = LanguageAsset.new(site, relative_dir, file_name, langcode)
         # TODO: Move to outside of this def
@@ -240,8 +245,8 @@ module Jekyll
 
     def organisePageTree(tree)
       tree['pages'] = tree['pages'].sort do |a, b|
-        a_order = a.data['order'] || 0
-        b_order = b.data['order'] || 0
+        a_order = a.data['order'] || a.data['date'] || 0
+        b_order = b.data['order'] || b.data['date'] || 0
         a_order <=> b_order
       end
 
@@ -250,7 +255,7 @@ module Jekyll
         a.data['previousPage'] = tree['pages'][i-1] if i > 0
       }
 
-      tree['subdirectories'].each { |key, value|
+      tree['subdirectories'].each { |value|
         organisePageTree(value)
       }
     end

@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Testing multi-screen web pages"
 description: "So you need to build a responsive site. We'll look at how you set up your dev environment to best test across multiple devices and screen sizes."
 published: true
-showYoutubeID: vsmU09PoYy4
+youtubeID: vsmU09PoYy4
 
 date: 2014-06-25 21:17:01
 article:

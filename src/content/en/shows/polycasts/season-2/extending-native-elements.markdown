@@ -6,7 +6,7 @@ collection: polycasts-season-2
 title: "Extending Native Elements"
 description: "Inheritance in HTML?! Yep! Not only is it possible with Web Components, it's super useful for working with forms and accessibility."
 published: true
-showYoutubeID: OV8BvxpNQOs
+youtubeID: OV8BvxpNQOs
 
 date: 2015-05-04 00:00:00
 article:

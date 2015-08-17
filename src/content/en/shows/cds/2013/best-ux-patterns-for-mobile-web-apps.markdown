@@ -6,7 +6,7 @@ collection: cds-2013
 title: "Best UX patterns for Mobile Web Apps"
 description: "After an analysis of the mobile-friendliness of the top 1000 sites we found some problem areas: 53% still only provide a desktop-only experience, 82% of sites have issues with interactivity on a mobile device and 64% of sites have text that users will have issues reading."
 published: true
-showYoutubeID: j3YbNHtnYo4
+youtubeID: j3YbNHtnYo4
 
 date: 2013-11-20 15:30:00
 article:

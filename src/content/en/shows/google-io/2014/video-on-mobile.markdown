@@ -6,7 +6,7 @@ collection: googleio-2014
 title: "Video on mobile"
 description: "Making the most of media APIs across platforms, with an emphasis on practical advice for web devs."
 published: true
-showYoutubeID: j5fYOYrsocs
+youtubeID: j5fYOYrsocs
 
 date: 2014-06-25 21:13:23
 article:

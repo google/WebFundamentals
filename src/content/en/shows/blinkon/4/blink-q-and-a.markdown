@@ -6,7 +6,7 @@ collection: blinkon-4
 title: "Blink 4 Q & A"
 description: ""
 published: true
-showYoutubeID: d_8UvfFc6Rk
+youtubeID: d_8UvfFc6Rk
 
 date: 2015-05-13 19:30:00
 article:

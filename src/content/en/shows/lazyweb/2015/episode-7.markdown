@@ -7,7 +7,7 @@ collection: lazyweb-2015
 title: "Episode 7"
 description: "Building your first app in Angular 2, Addy Osmani and Matt Gaunt show off Subime Text plugins, Time Travel debugging in Microsoft Edge, a voice recorder for the mobile web, filmstrip view in Chrome DevTools, and HTTP203 with Paul Lewis and Jake Archibald is back."
 published: true
-showYoutubeID: M6ZRJX-3Exw
+youtubeID: M6ZRJX-3Exw
 
 date: 2015-05-27 00:00:00
 article:
