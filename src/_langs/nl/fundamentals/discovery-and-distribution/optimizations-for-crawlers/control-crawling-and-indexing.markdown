@@ -19,7 +19,7 @@ key-takeaways:
   - Gebruik authenticatie manieren voor pagina's die prive moeten zijn
 remember:
   crawlers:
-    - "Veel mensen halen doorzoeken (crawling) en indexeren door elkaar. Het verbieden van doorzoeken betekent niet dat de pagina niet in de zoekresultaten komt. Bijvoorbeeld als een derde linkt naar een webpagina die is geblokkeerd voor doorzoeken, kan de pagina alsnog in de zoekresulateteb komen (in dat geval zal het zoek resultaat geen uitgebreide beschrijving hebben)."
+    - "Veel mensen halen doorzoeken (crawling) en indexeren door elkaar. Het verbieden van doorzoeken betekent niet dat de pagina niet in de zoekresultaten komt. Bijvoorbeeld als een derde linkt naar een webpagina die is geblokkeerd voor doorzoeken, kan de pagina alsnog in de zoekresutaten komen (in dat geval zal het zoek resultaat geen uitgebreide beschrijving hebben)."
 notes:
   robots:
     - "Je kan prima zonder een robots.txt bestand kunnen als je geen doorzoek controle nodig hebt. Gebruik nooit een 500 server antwoord voor <code>/robots.txt</code>. Dat kan alle toekomstige doorzoek acties stop zetten wat tot beperkte zoek resultaten details kan leiden."
@@ -36,7 +36,7 @@ notes:
 
 Het delen van informatie aan de wereld kent geen betere plek dan met web. Zodra u een document publiceren op het web, zal het onmiddellijk beschikbaar zijn voor de rest van de wereld. De pagina wordt zichtbaar voor iedereen, zolang ze de URL weten, dat en dat is waar de zoekmachines bij komen kijken. Zodra zoekmachines weten over uw website, zal uw documenten doorzoekbaar en toegankelijk zijn voor van mensen over de hele wereld.
 
-Echter, er zijn enkele gevallen waar je niet wilt dat mensen bepaalde documenten vinden, ookal al heb je ze zelf op het web gezet. Bijvoorbeeld, een blog admin pagina is iets wat alleen beperkt mensen moeten toegang hebben. Er is waarde om deze pagina's te doorzoeken met zoekmachines.
+Echter, er zijn enkele gevallen waar je niet wilt dat mensen bepaalde documenten vinden, ook al heb je ze zelf op het web gezet. Bijvoorbeeld, een blog admin pagina is iets wat alleen beperkt mensen moeten toegang hebben. Er is waarde om deze pagina's te doorzoeken met zoekmachines.
 
 In dit document leert u hoe u zoekmachines kan instrueren bepaalde pagina's niet in de zoekresultaten toe te laten. 
 
@@ -47,7 +47,7 @@ Voordat we leren hoe je de zoekmachine robots kunt beinvloeden, is het belangrij
 
 "Crawling" is wanneer een zoekmachine uw webpagina ophaalt en de inhoud ervan analyseert. De inhoud zal worden opgeslagen in de database van de zoekmachine en kan worden gebruikt voor het vullen van zoekresultaat gegevens, de rangschikking ervan en het ontdekken van nieuwe pagina's door de links te volgen.
 
-"Indexeren" is wanneer een zoekmachine de website URL en alle andere geassocieerde informatie opslaat in zijn database, om te gebruiken in de zoek resulaten.
+"Indexeren" is wanneer een zoekmachine de website URL en alle andere geassocieerde informatie opslaat in zijn database, om te gebruiken in de zoek resultaten.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.crawlers %}
 
@@ -57,7 +57,7 @@ Je kan controle hebben op de zoekmachine robots ("Crawlers") die komen op je web
 ### Hoe robots.txt te gebruiken
 Robots.txt is een simpel tekst bestand dat beschrijft hoe je wilt dat zoekmachine bots je site doorzoeken.
 
-Place robots.txt at the root directory of your website's host: If your site's host is [http://pages.example.com/](http://pages.example.com/), robots.txt file should be located at [http://pages.example.com/robots.txt](http://pages.example.com/robots.txt). If the domain has different schema, subdomains or other ports, they will be considered as different hosts and you should have robots.txt for each of their root directories.  
+Plaats robots.txt in de publieke root map van je website server. Als de site domein [http://pages.example.com/](http://pages.example.com/) is, moet het robots.txt bestand toegankelijk zijn via [http://pages.example.com/robots.txt](http://pages.example.com/robots.txt). Als je domein verschillende sub-domeinen of poorten heeft, zullen deze niet vallen onder deze robots.txt, maar moet je het bestand ook plaatsen voor iedere subdomein.
 
 Hier is een kort voorbeeld:
 
@@ -75,7 +75,7 @@ User-agent: Googlebot
 Disallow: /nogooglebot/
 {% endhighlight %}
 
-Je kan het gedrag ook specificeren per zoekmachine robots (user agent) door de user-agent naam te zetten achter `User-Agent:`. In het bovensaande geval, laat je `Googlebot` niet toe `/nogooglebot/` te doorzoeken, inclusief alle onderliggende content van die map. 
+Je kan het gedrag ook specificeren per zoekmachine robots (user agent) door de user-agent naam te zetten achter `User-Agent:`. In het bovenstaande geval, laat je `Googlebot` niet toe `/nogooglebot/` te doorzoeken, inclusief alle onderliggende content van die map. 
 
 Je kan verder leren hoe je een robotx.txt bestand maakt via onderstaande zoekmachine hulp pagina's:  
 
@@ -97,8 +97,7 @@ Yandex heeft ook [een gelijksoortige tool](https://webmaster.yandex.com/robots.x
 Als je niet wilt dat je pagina in de zoek resultaten komt, is robots.txt niet de juiste oplossing. Je moet deze pagina's doorzocht hebben, en explictiet aangeven dat je ze niet wilt indexeren. Er zijn twee oplossingen:
 
 ### Gebruik robots meta tags
-Om aan te geven dat je een bepaalde HTML pagina niet geindexeerd wilt hebben, voeg je een bepaalde `meta` toe. Door de atribuut as `name="robots"` en de `content="noindex"` te zetten, geef je aan dat geen enkele zoekmachine deze pagina mag indexeren.
-In order to indicate you don't want an HTML page to be indexed, insert a specific kind of `meta` tag. By setting its attributes as `name="robots"` and `content="noindex"`, you can indicate that you don't want any search engines to index the page.  
+Om aan te geven dat je een bepaalde HTML pagina niet geindexeerd wilt hebben, voeg je een bepaalde `meta` toe. Door de attribuut as `name="robots"` en de `content="noindex"` te zetten, geef je aan dat geen enkele zoekmachine deze pagina mag indexeren.
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -106,7 +105,7 @@ In order to indicate you don't want an HTML page to be indexed, insert a specifi
 <meta name="robots" content="noindex" />
 {% endhighlight %}
 
-Door het veranderen van de waarde van de `name` atribuut naar een spcifieke user agent kan je deze beperking alleen op hem instellen. Bijvoorbeeld `name="googlebot"` geeft aan dat je niet wilt dat Googlebot je pagina indexeerd (niet hoofdletter gevoelig).  
+Door het veranderen van de waarde van de `name` attribuut naar een spcifieke user agent kan je deze beperking alleen op hem instellen. Bijvoorbeeld `name="googlebot"` geeft aan dat je niet wilt dat Googlebot je pagina indexeerd (niet hoofdletter gevoelig).  
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -147,13 +146,13 @@ Om meer te leren over de X-Robots-Tag:
 
 {% include modules/remember.liquid title="Note" list=page.notes.x-robots-tag %}
 
-Verwacht niet dat robots.txt de zoekindex controleerd.
+Verwacht niet dat robots.txt de zoekindex controleert.
 
 ## Voorbeeld oplossingen per type content
 Wat zijn de beste oplossingen voor controle op doorzoeken en indexering? Bekijk de lijst met voorbeeld oplossingen per type pagina.
 What are the best solutions to control crawling and indexing? Let's have a look at example solutions depending on the types of pages.  
 
-### Volledig toegangkelijk en doorzoekbaar voor iedereen
+### Volledig toegankelijk en doorzoekbaar voor iedereen
 Pagina's waarvan je wilt dat iedereen toegang kan hebben. Meeste van de internetpagina's zijn dit.
 
 #### Oplossingen
@@ -161,14 +160,14 @@ Pagina's waarvan je wilt dat iedereen toegang kan hebben. Meeste van de internet
 * Geen robots.txt nodig.
 * Geen robots meta tags nodig.
 
-### Beperkte toegnag voor alleen mensen die de URL hebben
+### Beperkte toegang voor alleen mensen die de URL hebben
 Niet-vertrouwelijke pagina's waarvan alleen een beperkte groep gebruikers toegang hebben die de URL hebben. Bijvoorbeeld:
 
 * Login pagina voor een blog dasboard
 * Prive gegevens die gemakkelijk voor beginnende gebruikers via een URL toegankelijk is
 
 #### Oplossingen
-Bij dit type pagina's, wil je dat de zoekmachine ze niet indexeerd.
+Bij dit type pagina's, wil je dat de zoekmachine ze niet indexeert.
 
 * Geen robots.txt nodig.
 * Gebruik `noindex` meta tags voor HTML pagina's.
@@ -185,7 +184,7 @@ Vertrouwelijke pagina's waarvan je alleen gebruikers met de juiste permissies to
 #### Oplossingen
 Bij dit type pagina's wil je dat de zoekmachine ze niet doorzoekt of indexeerd.
 
-* Antwoord met code 401 "Unauthorised" voor toegnag zonder de juiste authenticatie (of stuur de bezoeker door naar de inlog pagina).
+* Antwoord met code 401 "Unauthorised" voor toegang zonder de juiste authenticatie (of stuur de bezoeker door naar de inlog pagina).
 * Gebruik niet de robots.txt om deze niet te laten doorzoeken. Zo zou anders de 401 niet worden gedetecteerd.
 
 De beperkingssystemen kunnen zijn IP adres, Cookie, Basic Auth, OAuth, etc. Hoe je deze manieren van authenticatie moet implementeren gaat te ver voor dit artikel.
@@ -202,7 +201,7 @@ De voornaamste zoekmachines hebben een methode om een verzoek te doen om zulke p
     * al verwijderd is van de server en een 404 geeft
     * juist geconfigureerd is om niet te indexeren (ex: noindex)
 
-1. Ga naar de verzoek pagina van de zoekmachines (Google en Bing vereisen dat je eerst valideerd dat je de eigenaar bent.)
+1. Ga naar de verzoek pagina van de zoekmachines (Google en Bing vereisen dat je eerst valideert dat je de eigenaar bent.)
 1. Verstuur het verzoek.
 
 <img src="imgs/remove-urls.png" srcset="imgs/remove-urls-2x.png 2x, imgs/remove-urls.png 1x">

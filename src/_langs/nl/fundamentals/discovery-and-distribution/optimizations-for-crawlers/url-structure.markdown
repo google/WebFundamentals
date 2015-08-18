@@ -1,8 +1,8 @@
 ﻿---
 layout: article
 title: "Instrueer zoekmachines hoe jou pagina verschillende type apparaten ondersteunt"
-description: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresulaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
-introduction: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresulaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
+description: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresultaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
+introduction: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresultaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
 snippet: "Verspreid je werk over de wereld"
 id: url-structure
 collection: optimizations-for-crawlers
@@ -70,7 +70,7 @@ Het serveren van gelijksoortige inhoud op zowel desktop als mobiel op verschille
 Deze informatie kan zoekmachines helpen beter te indexeren, en er voor zorgen dat gebruikers vinden wat ze zochten in het formaat geoptimaliseerd voor hun apparaat.
 
 ### Gebruik `link[rel=alternate]` voor de desktop versie.
-Op de desktop pagina, geef je aan dat er een mobiele versie met een andere URL. Dat doe je door het toevoegen van een `link` tag met `rel="alternate"` die verwijst naar de mobie versie via `href`. Door het toevoegen van een `media` atribuut met de waarde `"only screen and (max-width:
+Op de desktop pagina, geef je aan dat er een mobiele versie met een andere URL. Dat doe je door het toevoegen van een `link` tag met `rel="alternate"` die verwijst naar de mobie versie via `href`. Door het toevoegen van een `media` attribuut met de waarde `"only screen and (max-width:
 640px)"` zal zoekmachines helpen dat dit gericht is op mobiele schermen.
 
 [http://www.example.com/](http://www.example.com/) HTML
@@ -93,7 +93,7 @@ Op de mobiele pagina, geef je aan dat er een desktop (canonical) versie is op ee
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
 
 ## Gebruik `Vary HTTP` wanneer je gegeven het type apparaat andere HTML serveert
-Het serveren van verschillende HTML afhankelijk van het type aparaat kan onnodige verwijzingen beperken, verstuurd altijd de juiste HTML en heeft één URL voor de zoekmachine. Maar het heeft ook nadelen:
+Het serveren van verschillende HTML afhankelijk van het type apparaat kan onnodige verwijzingen beperken, verstuurd altijd de juiste HTML en heeft één URL voor de zoekmachine. Maar het heeft ook nadelen:
 
 * Er kunnen tussenpersonen zijn (proxies). Alleen als de proxy weet dat de inhoud per user agent verschilt kan het de juiste pagina doorgeven.
 * De inhoud veranderen afhankelijk van de user agent geeft een risico om als [cloaking](https://support.google.com/webmasters/answer/66355) te worden aangezien. Een schending van Google’s Webmaster Guidelines.
