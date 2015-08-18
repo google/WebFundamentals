@@ -12,9 +12,8 @@ a particular topic and then a general chin-wag follows."
 emailSubscriptionLink: "https://feedburner.google.com/fb/a/mailverify?uri=TotallyToolingTips&amp;loc=en_US"
 published: true
 
-article:
-  written_on: 2015-05-16
-  updated_on: 2015-05-16
+key-img: ttt_rect.png
+
+written_on: 2015-05-16
+updated_on: 2015-05-16
 ---
-
-

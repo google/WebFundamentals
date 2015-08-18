@@ -9,9 +9,8 @@ description: "BlinkOn is a Blink (The engine behind Chrome) Engineer focused eve
 emailSubscriptionLink: "https://feedburner.google.com/fb/a/mailverify?uri=blinkon&amp;loc=en_US"
 published: true
 
-article:
-  written_on: 2015-06-06
-  updated_on: 2015-06-06
+key-img: blinkon_rect.jpg
+
+written_on: 2015-06-06
+updated_on: 2015-06-06
 ---
-
-

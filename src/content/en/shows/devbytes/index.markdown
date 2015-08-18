@@ -9,9 +9,9 @@ description: "DevBytes are a set of short and sweet videos focusing on a specifi
 emailSubscriptionLink: "https://feedburner.google.com/fb/a/mailverify?uri=webdevbytes&amp;loc=en_US"
 published: true
 
+key-img: devbytes_rect.jpg
+
 article:
   written_on: 2015-03-06
   updated_on: 2015-03-06
 ---
-
-

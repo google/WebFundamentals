@@ -10,9 +10,8 @@ description: "Polycasts with Rob Dodson guide you through web development with P
 emailSubscriptionLink: "https://feedburner.google.com/fb/a/mailverify?uri=Polycasts&amp;loc=en_US"
 published: true
 
-article:
-  written_on: 2015-03-06
-  updated_on: 2015-03-06
+key-img: polycasts_rect.png
+
+written_on: 2015-03-06
+updated_on: 2015-03-06
 ---
-
-

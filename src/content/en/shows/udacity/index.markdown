@@ -8,9 +8,11 @@ description: "Get started or build your web design and development skills with t
 published: true
 nofeed: true
 date: 2014-10-02
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+
+key-img: udacity_rect.png
+
+written_on: 2015-02-24
+updated_on: 2015-02-24
 ---
 
 Get started or build your web design and development skills with these
