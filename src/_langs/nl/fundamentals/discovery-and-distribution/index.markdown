@@ -1,13 +1,15 @@
 ---
 layout: landing
-title: "Discovery and Distribution"
+title: "Ontdekken en Distributie"
 description: ""
 introduction: ""
-snippet: "Spread your website to the world"
+snippet: "Verspreid je website over de wereld"
 id: discovery-and-distribution
 collection: fundamentals
 authors:
   - agektmr
+translators:
+  - yvoschaap
 article:
   written_on: 2014-08-31
   updated_on: 2014-11-05

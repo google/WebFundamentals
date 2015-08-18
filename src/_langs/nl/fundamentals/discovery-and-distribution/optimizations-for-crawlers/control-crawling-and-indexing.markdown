@@ -1,13 +1,15 @@
----
+﻿---
 layout: article
-title: "Control crawling and indexing from search engines"
-description: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
-introduction: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
-snippet: "Keep restricted information safe"
+title: "Controlle over het doorzoeken en indexeren door zoekmachines"
+description: "In de zoekmachines staan is vereist om jouw content te verspreiden over de wereld. Maar verkeerde instellingen kan er toe leiden dat teveel informatie wordt verspreidt. Begrijp hoe Crawlers werken en hoe je website kan beschermen van ongelukken."
+introduction: "In de zoekmachines staan is vereist om jouw content te verspreiden over de wereld. Maar verkeerde instellingen kan er toe leiden dat teveel informatie wordt verspreidt. Begrijp hoe Crawlers werken en hoe je website kan beschermen van ongelukken."
+snippet: "Houdt prive data "
 id: control-crawling-and-indexing
 collection: optimizations-for-crawlers
 authors:
   - agektmr
+translators:
+  - yvoschaap
 article:
   written_on: 2014-12-15
   order: 3

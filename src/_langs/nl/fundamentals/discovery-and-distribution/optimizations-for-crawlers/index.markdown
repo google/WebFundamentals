@@ -1,13 +1,15 @@
 ---
 layout: section
-title: "Optimizations for Crawlers"
-description: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
-introduction: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
-snippet: "Spread your work to the world"
+title: "Optimalisaties voor Crawlers"
+description: "Websites worden niet alleen door mensen bekeken, maar ook door zogenaamde 'Crawlers'. Leer hoe je controle krijgt over hoe je site presenteerd wordt door derden."
+introduction: "Websites worden niet alleen door mensen bekeken, maar ook door zogenaamde 'Crawlers'. Leer hoe je controle krijgt over hoe je site presenteerd wordt door derden."
+snippet: "Verspreid je werk over de wereld"
 id: optimizations-for-crawlers
 collection: discovery-and-distribution
 authors:
   - agektmr
+translators:
+  - yvoschaap
 article:
   written_on: 2014-08-31
   updated_on: 2014-11-05
