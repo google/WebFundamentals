@@ -1,9 +1,9 @@
 ﻿---
 layout: article
-title: "Geef de zoekmachines aan hoe je multi-device pagina is gestructureerd"
-description: "If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures."
-introduction: "If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures."
-snippet: "Spread your work to the world"
+title: "Instrueer zoekmachines hoe jou pagina verschillende type apparaten ondersteunt"
+description: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresulaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
+introduction: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresulaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
+snippet: "Verspreid je werk over de wereld"
 id: url-structure
 collection: optimizations-for-crawlers
 authors:
@@ -15,10 +15,10 @@ article:
   updated_on: 2014-11-05
   order: 2
 key-takeaways:
-  - Determine the URL structure of your webpage
-  - Responsive design is most recommended
-  - Use <code>rel="canonical"</code> + <code>rel="alternate"</code> for separate desktop/mobile sites
-  - Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
+  - Bepaal de URL structuur van je pagina
+  - Responsive design is bij voorkeur aangeraden 
+  - Gebruik <code>rel="canonical"</code> + <code>rel="alternate"</code> om desktop en mobiele pagina's te onderscheiden
+  - Gebruik <code>Vary HTTP</code> header voor een URL die dynamisch de desktop of mobiele html serveert
 ---
 {% wrap content %}
 
@@ -26,69 +26,52 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-Are you planning to build your webpage responsive? Is there a mobile specific
-version with a separate URL? Are you serving both desktop version and mobile
-version from the same URL? You might be able to do a better job optimizing your
-website for search engines.
+Ben je bezig om je website <em>responsive</em> te maken? Is er een mobiele versie met een eigen URL? Of serveer je zowel specifiek voor desktop of mobiel vanaf dezelfde URL? Je zou je werk kunnen verbeteren door het te optimaliseren voor zoekmachines.
 
-## Determine URL structure of your webpage
-There are several ways to serve content to different devices. The three most
-common methods are:
+## Bepaal de URL structuur van je site
+Er zijn verschillende manieren om content te serveren voor verschillende apparaten. De drie meest gangbare zijn:
 
-1. **Responsive Web Design:** serves the same HTML for one URL and uses CSS
-media queries to determine how the content is rendered on the client side.  
-ex) Desktop and Mobile: http://www.example.com/
-1. **Separate mobile site:** redirects users to a different URL depending on the
-user-agent.  
-ex) Desktop: http://www.example.com/ Mobile: http://m.example.com/
-1. **Dynamic serving:** serves different HTML for one URL depending on the user-
-agent.  
-ex) Desktop and Mobile: http://www.example.com/
+1. **Responsive Web Design:** serveer dezelfde HTML voor één URL and gebruik CSS media queries om te bepalen hoe de content moet worden afgebeeld op het apparaat. 
+ex) Desktop en Mobiel: http://www.example.com/
+1. **Aparte mobiele site:** verwijs de gebruiker naar een speciale URL afhankelijk van de user-agent.
+ex) Desktop: http://www.example.com/ Mobiel: http://m.example.com/
+1. **Dynamisch serveren:** serveert verschillende HTML voor dezelfde URL afhankelijk van de user-agent. 
+ex) Desktop en Mobiel: http://www.example.com/
 
-The best approach we recommend is to use responsive web design, but a lot of
-websites already serve mobile specific version. Some serves mobile version using
-the same URL as desktop.
+De beste aanpak die we adviseren is om responsive web design te gebruiken. Maar al veel websites serveren al specifiek voor mobiel gemaakte versies. En enkele serveren mobiel en deskop met dezelfde URL.
+
+Bepaal welke URL structuur het beste past bij jou website. Probeer dan te optimaliseren gegeven jou situatie.
   
-Determine which URL structure suits your webpage. Then try respective best
-practices to optimize it for search engines.
+## Responsive Web Design is de voorkeur
+Als je bezig bent je site responsive te maken, zit je al goed. Het voordeel van een responsive website is:
 
-## Responsive Web Design is recommended
-If you are planning to make your website responsive, you are already good. The
-benefit of making your website responsive is:
-
-* User friendly for sharing
-* Quicker page load without redirects
-* Single point of URL for search results
+* Gebruiksvriendelijk voor delen
+* Snellere laadtijd zonder verwijzingen
+* Eén punt voor de zoekresulaten.
 
 <img src="imgs/responsive-2x.png" srcset="imgs/responsive.png 1x imgs/responsive-2x.png 2x" >
 
-By making it responsive:
+Door het responsive te maken:
 
-* Easier for users to access or share your webpage
-* No need to redirect users depending on user agent so it is faster
-* Maintenance cost is lower for both website and crawlers
-  
-Learn how to build your website with responsive web design at [Multi-Device
-Layouts](https://developers.google.com/web/fundamentals/layouts/) section.
+* Is het makkelijker voor gebruikers om je pagina te delen.
+* Moeten gebruikers niet worden doorgestuurd afhankelijk van de user agent en dus sneller
+* Onderhoudskosten zijn lager voor website en zoekmachine crawler.
+ 
+Leer hoe je jouw website bouwt met responsive web design door middel van de [Multi-Device
+Layouts](https://developers.google.com/web/fundamentals/layouts/) sectie.
 
-## Use `link[rel=canonical]` and `link[rel=alternate]` when serving from separate URLs
-Serving similar contents on a desktop version and a mobile version at different
-URLs may cause confusion for both users and search engines because it's not
-obvious for viewers that they are intended to be identical. You should indicate:
+## Gebruik `link[rel=canonical]` of `link[rel=alternate]` wanneer je meerdere URLs gebruikt
+Het serveren van gelijksoortige inhoud op zowel desktop als mobiel op verschillende URLs kan verwarring veroorzaken voor gebruikers en zoekmachines. Het is niet duidelijk dat de inhoud identiek is. Je moet aangeven:
 
-* Contents of those 2 URLs are identical
-* Which is mobile version
-* Which is desktop (canonical) version
+* Inhoud van de 2 URLs zijn identiek
+* Welke is de mobiele versie
+* Welke is de desktop (canonical) versie
 
-This information can help search engines better index content and ensure users
-find what they're looking for in a format that works for their device.
+Deze informatie kan zoekmachines helpen beter te indexeren, en er voor zorgen dat gebruikers vinden wat ze zochten in het formaat geoptimaliseerd voor hun apparaat.
 
-### Use `link[rel=alternate]` for desktop version
-On desktop page, indicate that there's a mobile version on a different URL by
-adding `link` tag with `rel="alternate"` pointing to mobile version URL with
-`href`. By adding `media` attribute with value of `"only screen and (max-width:
-640px)"` will help search engines understand that this is explicitly targeting
-small screens.
+### Gebruik `link[rel=alternate]` voor de desktop versie.
+Op de desktop pagina, geef je aan dat er een mobiele versie met een andere URL. Dat doe je door het toevoegen van een `link` tag met `rel="alternate"` die verwijst naar de mobie versie via `href`. Door het toevoegen van een `media` atribuut met de waarde `"only screen and (max-width:
+640px)"` zal zoekmachines helpen dat dit gericht is op mobiele schermen.
 
 [http://www.example.com/](http://www.example.com/) HTML
 
@@ -97,10 +80,8 @@ small screens.
 <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.example.com/">
 {% endhighlight %}
 
-### Use `link[rel=canonical]` for mobile version
-On mobile specific pages, indicate that there's a desktop (canonical) version at
-a different URL by adding `link` tag with `rel="canonical"` pointing to desktop
-version URL with `href`.
+### Gebruik `link[rel=canonical]` voor de mobiele versie
+Op de mobiele pagina, geef je aan dat er een desktop (canonical) versie is op een andere URL. Doe dit door een `link` tag met `rel="canonical"` toe te voegen, die verwijst naar de desktop versie via `href`.
 
 [http://m.example.com/](http://m.example.com/) HTML
 
@@ -111,24 +92,16 @@ version URL with `href`.
   
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
 
-## Use `Vary HTTP` header for device oriented serving site
-Serving different HTML based on device type can reduce unnecessary redirects,
-serves optimized HTML, provides single URL for search engines, but it also has
-several disadvantages:
+## Gebruik `Vary HTTP` wanneer je gegeven het type apparaat andere HTML serveert
+Het serveren van verschillende HTML afhankelijk van het type aparaat kan onnodige verwijzingen beperken, verstuurd altijd de juiste HTML en heeft één URL voor de zoekmachine. Maar het heeft ook nadelen:
 
-* There may be intermediate proxies between user's browsers and the server.
-Unless the proxy knows the content varies depending on user agent, it may serve
-unexpected results.
-* Changing contents depending on user agent has a risk to be considered as
-[cloaking](https://support.google.com/webmasters/answer/66355), a violation of
-Google’s Webmaster Guidelines.
+* Er kunnen tussenpersonen zijn (proxies). Alleen als de proxy weet dat de inhoud per user agent verschilt kan het de juiste pagina doorgeven.
+* De inhoud veranderen afhankelijk van de user agent geeft een risico om als [cloaking](https://support.google.com/webmasters/answer/66355) te worden aangezien. Een schending van Google’s Webmaster Guidelines.
 
-By letting search engines know that the content varies depending on user agent,
-they can optimize search results for the user agent that is sending queries.
+Door zoekmachines te laten weten dat de inhoud zich aanpast afhankelijk van de user agent kan het de zoekresultaten optimaliseren voor apparaat waarmee de gebruiker zoekt.
 
-### Use `Vary HTTP` header
-In order to indicate that the URL serves different HTML depending on user agent,
-provide `Vary: User-Agent` in HTTP header.
+### Gebruik `Vary HTTP`
+Om aan te geven dat je URL verschillende inhoud serveerd afhankelijk van de user agent verstuur je een `Vary: User-Agent` in de HTTP header.
 
 [http://www.example.com/](http://www.example.com/) HTTP Header
 
@@ -141,10 +114,7 @@ Content-Length: 5710
 
 <img src="imgs/same_url-2x.png" srcset="imgs/same_url.png 1x imgs/same_url-2x.png 2x" >
 
-By providing `Vary: User-Agent` header, search engines and proxies understand
-the transferred content may vary depending on user agent. This allows search
-index to treat desktop version and mobile version separately, intermediate
-proxies to cache those contents gracefully.
+Door de `Vary: User-Agent` header, weten de zoekmachines en proxies dat de inhoud afhankelijk is van de user agent. Dit zorgt ervoor dat de zoekmachine begrijpt dat de HTML voor de desktop of mobiel anders kan zijn.
 
-To learn more about building URL structure across desktop and mobile, read [Building Smartphone-Optimized Websites](https://developers.google.com/webmasters/smartphone-sites/).
+Wil je meer over URL structuur voor mobiel en desktop te leren, lees [Building Smartphone-Optimized Websites](https://developers.google.com/webmasters/smartphone-sites/).
 {% endwrap %}

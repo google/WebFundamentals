@@ -1,9 +1,9 @@
 ---
 layout: article
-title: "Controlle over je weergave op sociale media"
-description: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."
-introduction: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."
-snippet: "Boost discoverability of your webpage"
+title: "Controle over je weergave op sociale media"
+description: "Je kan beinvloeden hoe jou site wordt weergegeven wanneer het gedeeld wordt via social media door middel van he plaatsen van een aantal regels html op iedere pagina. Dit kan meer bezoekers naar je site trekken door het voorbeeld te voorzien van meer gegevens."
+introduction: "Je kan beinvloeden hoe jou site wordt weergegeven wanneer het gedeeld wordt via social media door middel van he plaatsen van een aantal regels html op iedere pagina. Dit kan meer bezoekers naar je site trekken door het voorbeeld te voorzien van meer gegevens.."
+snippet: "Vergroot de zichtbaarheid van je pagina"
 id: social-sites
 collection: optimizations-for-crawlers
 authors:
@@ -15,9 +15,9 @@ article:
   updated_on: 2014-11-09
   order: 1
 key-takeaways:
-  - Use schema.org microdata to provide page title, description and an image for Google+.
-  - Use Open Graph Protocol (OGP) to provide page title, description and an image for Facebook.
-  - Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.
+  - Gebruik schema.org microdata om pagina title, beschrijving en afbeelding te specificeren voor Google+.
+  - Gebruik Open Graph Protocol (OGP) om pagina title, beschrijving en afbeelding te specificeren voor Facebook.
+  - Gebruik Twitter Cards om pagina title, beschrijving, afbeelding en twitter gebruikersnaame te specificeren voor Twitter.
 ---
 
 {% wrap content %}
@@ -26,85 +26,58 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-You can influence the way your site appears when shared via social media by
-adding a few lines of code to each page. This can help increase engagement by
-providing previews with richer information than would otherwise be available.
-Without it, social sites will provide only basic information, without images or
-other helpful information. 
+Je kan beinvloeden hoe jou site wordt weergegeven wanneer het gedeeld wordt via social media door middel van he plaatsen van een aantal regels html op iedere pagina. Dit kan leiden tot betere toegankelijkheid door het voorbeeld rijkere informatie te bieden. Zonder dit, zullen sociale media website alleen de basis informatie tonen, zonder afbeeldingen of andere handige informatie.
 
-Which one do you think is more likely to be clicked? People are drawn to images
-and feel more confident they'll like what they find when they have an early
-preview.
+Welke zou vaker worden aangeklikt? Gebruikers zijn aangetrokken tot afbeeldingen en zijn beter overtuigd dat ze vinden wat ze zoeken als er een voorbeeld vooraf is.
 
 <div class="clear g-wide--pull-1">
   <div class="g--half">
     <figure class="fluid">
       <img src="imgs/gplus-snippet-1.png" srcset="imgs/gplus-snippet-1.png 1x,
        imgs/gplus-snippet-1-2x.png 2x" />
-      <figcaption>Without the proper mark up, only the page title is
-       included.</figcaption>
+      <figcaption>Zonder de juiste opmaak, is alleen de titel zichtbaar.</figcaption>
     </figure>
   </div>
   <div class="g--half g--last">
     <figure class="fluid">
       <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
        imgs/gplus-snippet-2-2x.png 2x" />
-      <figcaption>With the appropriate markup, the correct title, a short
-       description and an image are included. Adding these items can help
-       increase engagement.</figcaption>
+      <figcaption>Met de juiste opmaak, is de titel correct, een korte beschrijving en een afbeelding bijgevoegd.</figcaption>
     </figure>
   </div>
 </div>
 
-When someone on a social network wants to share your website with his friends,
-he would probably add some notes explaining how awesome it is, and share it.
-But describing your website tends be cumbersome and can miss the point from the
-page owners aspect. Some services restrict the number of characters users can
-put in the note.
+Wanneer iemand op een sociaal netwerk jou website wilt delen met zijn vrienden, zal hij waarschijnlijk zelf toevoegen hoe cool het is, en dat delen. Maar jouw website omschrijven is tijdrovend en kan het punt missen, vanuit het standpunt van de eigenaar gezien. Ook zijn er diensten die het aantal characters beperken die gebruikers kunnen toevoegen.
 
-By adding the appropriate metadata to your pages, you can simplify the sharing
-process for users by providing the title, a description and an attractive
-image. This means they don't have to spend valuable time (or characters)
-describing the link.
+Door geschikte metadata toe te voegen aan jou pagina's, maak je het delen makkelijker: de titel, omschrijving en een relevante afbeelding zijn dan voorgeselecteerd. Dat betekent dat gebruikers geen waardevolle tijd (en characters) hoeven te besteden om de link te omschrijven.
 
-## Use schema.org + microdata to provide rich snippets on Google+
-Crawlers use many methods to parse a page and understand its content. By using
-[microdata](http://www.w3.org/TR/microdata/), and
-[schema.org](https://schema.org/) vocabulary, you help social sites and search
-engines better understand the contents of the page.
+## Gebruik schema.org + microdata voor rich snippets op Google+
+Crawlers gebruiken meerdere methoden om een pagina te kunnen lezen en begrijpen. Door [microdata](http://www.w3.org/TR/microdata/) en
+[schema.org](https://schema.org/) vocabulaire te gebruiken help je de sociale media sites en zoekmachines beter de inhoud te begrijpen.
 
-Here's an example:
+Hier is een voorbeeld:
 
 {% include_code _code/social-sites.html microdata %}
 
-While most metadata are embedded in the head section of a webpage, microdata
-lives where the context exists.
+De meeste metadata wordt geplaatst in de head van een pagina, maar microdata zit waar de context bestaat.
 
-### Add `itemscope` to define microdata scope
-By adding `itemscope`, you can specify the tag as a block of contents about a
-particular item.
+### Voeg `itemscope` toe voor de microdata scope
+Door de`itemscope` toe te voegen kan je de tag speciferen als een blok van content over een bepaald item.
 
-### Add `itemtype` to define type of your website
-The type of item can be specified using the `itemtype` attribute along with the
-`itemscope`. The value of an `itemtype` can be determined according to the type
-of the content on your webpage. You should be able to find one that is relevant
-in [this page](http://schema.org/docs/full.html).
+### Voeg `itemtype` toe om de soort website te defineren
+De type van een een item kan worden gespecificeerd met het `itemtype` attribuut samen met de `itemscope`. De waarde van `itemtype` wordt bepaald door het type content op de pagina. Je kan de relevante informatie vinden op [deze pagina](http://schema.org/docs/full.html).
 
-### Add `itemprop` to describe each item using schema.org vocaburary
-`itemprop`s define properties for `itemtype`s in the scope. For providing
-metadata to social sites, typical `itemprop` values are `name`, `description`
-and `image`.
+### Voeg `itemprop` toe om ieder item te beschrijven volgens het schema.org vocabulaire
+`itemprop`s defineren eigenschappen voor `itemtype`s in de scope. Voor social media metadata is voornamelijk de`itemprop` waardes van `name`, `description` and `image` meest relevant.
 
-### Learn more
-These microdata provides semantic information to crawlers, typically for
-[Google+](https://plus.google.com/) and Google Search. To learn more about
-snippets and rendering on Google+, read the following documents:
+### Leer meer
+Deze microdat levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/) en Google Search. Om meer te leren over snieppets en redering op Google+, lees de volgende documenten:
 
 * [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
 * [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
 
-### Validate rich snippets
-In order to validate rich snippets on Google+, you can use tools such as:
+### Valideer rich snippets
+Om rich snippets te valideren op Google+ kan je deze tools gebruiken:
 
 * [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
 
@@ -114,19 +87,15 @@ In order to validate rich snippets on Google+, you can use tools such as:
 
 <img src="imgs/semantic-inspector.png" srcset="imgs/semantic-inspector.png 1x, imgs/semantic-inspector-2x.png 2x" />
 
-## Use Open Graph Protocol (OGP) to provide rich snippets on Facebook
-The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
-metadata necessary to allow web pages to have the same functionality as other
-Facebook objects.
+## Gebruik Open Graph Protocol (OGP) voor rich snippets op Facebook
+De [Open Graph Protocol (OGP)](http://ogp.me/) levert Facebook de nodige metadata om web pagina's dezelfde functionaliteit te geven als andere Facebook objecten.
 
 {% include_code _code/social-sites.html ogp %}
 
-When included in the head section of your page, this metadata is used for rich
-snippet information when the page is shared.
+Wanneer dit in de head sectie van jou pagina zit, wordt deze metadata gebruikt voor rich snippet informatie waneer de pagina wordt gedeeld.
 
-### Use `og:` namespaced `meta` tags to describe metadata
-A `meta` tag consists of a `property` attribute and a `content` attribute.
-Properties and contents may take the following values:
+### Gebruik `og:` namespaced `meta` tags om metadata te omschrijven
+Een `meta` tag bevat een `property` atribuut en een `content` atribuut.
 
 <table class="table-2">
   <colgroup>
@@ -135,96 +104,81 @@ Properties and contents may take the following values:
   </colgroup>
   <thead>
     <tr>
-      <th data-th="Property">Property</th>
-      <th data-th="Content">Content</th>
+      <th data-th="Property">Waarde</th>
+      <th data-th="Content">Eigenschap</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-th="Property"><code>og:title</code></td>
-      <td data-th="Content">The title of the webpage.</td>
+      <td data-th="Content">De titel van de pagina</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:description</code></td>
-      <td data-th="Content">The description of the webpage.</td>
+      <td data-th="Content">De beschrijving van de pagina.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:url</code></td>
-      <td data-th="Content">The canonical url of the webpage.</td>
+      <td data-th="Content">De canonical url van de webpagina.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:image</code></td>
-      <td data-th="Content">URL to an image attached to the shared post.</td>
+      <td data-th="Content">URL naar een afbeelding van de pagina.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:type</code></td>
-      <td data-th="Content">A string that indicates the type of the webpage. You can find one that is suitable for your webpage <a href="https://developers.facebook.com/docs/reference/opengraph/">here</a>.</td>
+      <td data-th="Content">Geeft het type pagina aan. Kies er een die het meest relevant is voor jou pagina <a href="https://developers.facebook.com/docs/reference/opengraph/">hier</a>.</td>
     </tr>
   </tbody>
 </table>
 
-These meta tags provide semantic information to crawlers from social sites,
-typically from [Google+](https://plus.google.com/) and
-[Facebook](https://www.facebook.com/).
+Deze meta tags bevatten semantische informatie voor social media crawlers, voornamelijk van Google+](https://plus.google.com/) en [Facebook](https://www.facebook.com/).
 
-### Learn more
-To learn more about things you can attach to the post on Facebook, visit the
-official Open Graph Protocol site.
+### Leer meer
+Om meer te leren over wat je kan toevoegen aan een Facebook post, bezoek de officieele Open Graph Protocol site:
 
 * [ogp.me](http://ogp.me/)
 
-### Validate rich snippets
-In order to validate your markup on Facebook, you can use tools such as:
+### Valideer rich snippets
+Om de markup te valideren kan je deze tool van Facebook gebruiken:
 
 * [Debugger](https://developers.facebook.com/tools/debug/)
 
-## Use Twitter Cards to provide rich snippets on Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
-Open [Graph Protocol applicable for Twitter](https://twitter.com/). They allow
-you to add media attachments like images and video to Tweets with a link to
-your webpage. By adding the appropriate metadata, Tweets with links to your
-page will have a card added that includes the rich detail you've added.
+## Gebruik Twitter Cards voor rich snippets op Twitter
+[Twitter Cards](https://dev.twitter.com/docs/cards) zijn een uitbreiding op het [Open Graph Protocol applicable for Twitter](https://twitter.com/). Het geeft de mogelijkheid om media zoals photos en videos toe te voegen aan een Tweet met een link naar jou site. Door de passende metadata toe te voegen, zullen Tweets met een link naar jou site een card hebben met deze rich media.
 
-### Use `twitter:` namespaced meta tags to describe metadata
-In order to get a Twitter Card working, [your domain must be
-approved](https://dev.twitter.com/docs/cards/validation/validator) and must
-contain a meta tag that has `twitter:card` as the `name` attribute instead of
-`property` attribute.
+### Gebruik `twitter:` namespaced meta tags om metadata te omschrijven
+Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev.twitter.com/docs/cards/validation/validator) en moet de meta tag `twitter:card` met een `name` atribuut hebben.
   
-Here's a quick example:
+Hier is een kort voorbeeld:
 
 {% include_code _code/social-sites.html twitter %}
 
-By assigning the Twitter id to the value of twitter:site, Twitter embeds this
-information in the shared post so that people can easily engage with the page
-owner.
+Door het toevoegen van de Twitter id aan twitter:site, zal Twitter deze informatie implementeren bij een gedeelde link.
 
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
-### Learn more
-To learn more about Twitter Cards, visit:
+### Leer meer
+Om meer te leren over Twitter Cards, bezoek:
 
 * [Twitter's developer site](https://dev.twitter.com/docs/cards)
 
-### Validate rich snippets
-In order to validate your markup, Twitter provides:
+### Valideer rich snippets
+Om je opmaak te valideren levert Twitter:
 
 * [Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
 
-## The Best Practice
-Given all three options, the best thing you can do is to include them all in
-your webpage. Here's an example:
+## In de praktijk
+Gegeven deze drie opties is het beste om ook alle drie te gebruiken in je webpagina. Hier is een voorbeeld:
 
 {% include_code _code/social-sites2.html best_practice %}
 
-Notice that microdata and OGP share some markup:
+Merk op dat microdata en OGP bepaalde opmaak delen:
 
-* `itemscope` is located at `head` tag
-* `title` and `description` are shared between microdata and OGP
-* `itemprop="image"` is using `link` tag with `href` attribute instead of
-reusing `meta` tag with `property="og:image"`
-  
-Lastly, make sure to validate that your webpage appears as expected on each
-social sites before publishing.
+* `itemscope` staat in de `head` tag
+* `title` en `description` zijn hetzelfde voor microdata en OGP
+* `itemprop="image"` gebruikt de `link` tag met een `href` atribuut in plaats van het hergebruiken van `meta` tag met `property="og:image"` 
+
+Als laatste, valideer dat je pagina eruit ziet zoals verwacht op ieder social media website voordat je publiceerd.
 
 {% endwrap %}
