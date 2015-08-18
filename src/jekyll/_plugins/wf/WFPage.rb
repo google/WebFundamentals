@@ -148,13 +148,15 @@ module Jekyll
 
     def sanitizeTocItem(tocItem)
       tocItem['strippedTitle'] = Sanitize.fragment(tocItem['title'])
-      if tocItem['external'].nil? || tocItem['external'] == false
-        tocItem['isInCurrentSection'] = self.url.include? tocItem['path']
-      else
-        tocItem['isInCurrentSection'] = false
-      end
+      if not tocItem['path'].nil?
+        if tocItem['external'].nil? || tocItem['external'] == false
+          tocItem['isInCurrentSection'] = self.url.include? tocItem['path']
+        else
+          tocItem['isInCurrentSection'] = false
+        end
 
-      tocItem['path'] = site.config['WFBaseUrl'] + tocItem['path'] + '?hl=' + @langcode
+        tocItem['path'] = site.config['WFBaseUrl'] + tocItem['path'] + '?hl=' + @langcode
+      end
 
       if not tocItem['section'].nil?
         tocItem['section'] = tocItem['section'].each { |subsectionItem|

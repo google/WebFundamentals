@@ -9,7 +9,8 @@ description: "HTTP 203 - Where do we start. In each show Jake and Paul pick a ho
 emailSubscriptionLink: "https://feedburner.google.com/fb/a/mailverify?uri=http203&amp;loc=en_US"
 published: true
 
-article:
-  written_on: 2015-03-06
-  updated_on: 2015-03-06
+key-img: http203_rect.jpg
+
+written_on: 2015-03-06
+updated_on: 2015-03-06
 ---

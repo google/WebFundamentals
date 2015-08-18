@@ -14,7 +14,7 @@ module.exports = {
 
     // Tools
 
-    // Shows
+
 
     // Showcase
 
@@ -31,6 +31,8 @@ module.exports = {
       //'location': 'Dulles_MotoG:Motorola G - Chrome Dev',
       //'connectivity': '3G'
     },
+
+    // Shows
     'Show Index': {
       'url': rootUrl + 'shows',
       'labels': 'show-index',
