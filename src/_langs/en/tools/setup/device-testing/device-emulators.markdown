@@ -214,10 +214,10 @@ device with the following command:
 
 ### iOS Simulator
 
-The iOS simulator for Mac OS X comes with XCode, which you can [install from the
+The iOS simulator for Mac OS X comes with Xcode, which you can [install from the
 App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
 
-To use the iOS Simulator, open XCode, in the top menu go to `XCode >
+To use the iOS Simulator, open Xcode, in the top menu go to `Xcode >
  Open Developer Tool` and select `iOS Simulator`.
 
 <img src="imgs/xcode-ios-simulator.png" alt="Xcode Menu for iOS Simulator" />
@@ -227,7 +227,7 @@ Once the simulator is open you can fire up Safari and you're good to go.
 <img src="imgs/ios-simulator.png" alt="iOS Simulator Screenshot" />
 
 **Tip**  
-To avoid having to open XCode every time you want to use the iOS
+To avoid having to open Xcode every time you want to use the iOS
 Simulator, open the iOS simulator once, as above, then right click the iOS Simulator
 icon in your dock and select `Keep in Dock`. Just click this icon whenever you
 need it.
