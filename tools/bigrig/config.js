@@ -31,6 +31,24 @@ module.exports = {
       //'location': 'Dulles_MotoG:Motorola G - Chrome Dev',
       //'connectivity': '3G'
     },
+    'Show Index': {
+      'url': rootUrl + 'shows',
+      'labels': 'show-index',
+      //'location': 'Dulles_MotoG:Motorola G - Chrome Dev',
+      //'connectivity': '3G'
+    },
+    'Show Home': {
+      'url': rootUrl + 'shows/ttt',
+      'labels': 'show-home',
+      //'location': 'Dulles_MotoG:Motorola G - Chrome Dev',
+      //'connectivity': '3G'
+    },
+    'Show Episode': {
+      'url': rootUrl + 'shows/ttt/series-1/sublime-text-plugins',
+      'labels': 'show-episode',
+      //'location': 'Dulles_MotoG:Motorola G - Chrome Dev',
+      //'connectivity': '3G'
+    },
 
   }
 };
