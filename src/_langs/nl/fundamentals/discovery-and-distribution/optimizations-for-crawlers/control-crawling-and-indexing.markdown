@@ -1,4 +1,4 @@
-﻿---
+---
 layout: article
 title: "Controle over het doorzoeken en indexeren van zoekmachines"
 description: "In de zoekmachines staan is vereist om jouw content te verspreiden over de wereld. Maar verkeerde instellingen kan er toe leiden dat teveel informatie wordt verspreid. Begrijp hoe Crawlers werken en hoe je website kan beschermen van ongelukken."
@@ -38,7 +38,7 @@ Het delen van informatie aan de wereld kent geen betere plek dan met web. Zodra 
 
 Echter, er zijn enkele gevallen waar je niet wilt dat mensen bepaalde documenten vinden, ook al heb je ze zelf op het web gezet. Bijvoorbeeld, een blog admin pagina is iets wat alleen beperkt mensen moeten toegang hebben. Er is waarde om deze pagina's te doorzoeken met zoekmachines.
 
-In dit document leert u hoe u zoekmachines kan instrueren bepaalde pagina's niet in de zoekresultaten toe te laten. 
+In dit document leert u hoe u zoekmachines kan instrueren bepaalde pagina's niet in de zoekresultaten toe te laten.
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
@@ -52,7 +52,7 @@ Voordat we leren hoe je de zoekmachine robots kunt beinvloeden, is het belangrij
 {% include modules/remember.liquid title="Remember" list=page.remember.crawlers %}
 
 ## Controle op het doorzoeken van zoekmachine robots
-Je kan controle hebben op de zoekmachine robots ("Crawlers") die komen op je webpagina's door gebruik te maken van een bestand genaamd robots.txt. (Niet alle crawlers respecteren jou wensen uit het robots.txt bestand. Houdt in je achterhoofd dat iedereen een crawler kan starten.) 
+Je kan controle hebben op de zoekmachine robots ("Crawlers") die komen op je webpagina's door gebruik te maken van een bestand genaamd robots.txt. (Niet alle crawlers respecteren jou wensen uit het robots.txt bestand. Houdt in je achterhoofd dat iedereen een crawler kan starten.)
 
 ### Hoe robots.txt te gebruiken
 Robots.txt is een simpel tekst bestand dat beschrijft hoe je wilt dat zoekmachine bots je site doorzoeken.
@@ -75,7 +75,7 @@ User-agent: Googlebot
 Disallow: /nogooglebot/
 {% endhighlight %}
 
-Je kan het gedrag ook specificeren per zoekmachine robots (user agent) door de user-agent naam te zetten achter `User-Agent:`. In het bovenstaande geval, laat je `Googlebot` niet toe `/nogooglebot/` te doorzoeken, inclusief alle onderliggende content van die map. 
+Je kan het gedrag ook specificeren per zoekmachine robots (user agent) door de user-agent naam te zetten achter `User-Agent:`. In het bovenstaande geval, laat je `Googlebot` niet toe `/nogooglebot/` te doorzoeken, inclusief alle onderliggende content van die map.
 
 Je kan verder leren hoe je een robotx.txt bestand maakt via onderstaande zoekmachine hulp pagina's:  
 
@@ -122,7 +122,7 @@ Andere opties voor de robots meta tag kan je hier vinden:
 [Lijst met user agent namen](#appendix-list-of-crawler-user-agents).
 
 ### X-Robots-Tag
-Om aan te geven dat je objecten die geen HTML zijn, zoals afbeeldingen, stylesheets of script files, niet geindexeerd wilt hebben, voeg `X-Robots-Tag: noindex` in de HTTP header.   
+Om aan te geven dat je objecten die geen HTML zijn, zoals afbeeldingen, stylesheets of script files, niet geindexeerd wilt hebben, voeg `X-Robots-Tag: noindex` in de HTTP header.
 
 {% highlight http %}
 HTTP/1.1 200 OK

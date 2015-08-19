@@ -149,7 +149,7 @@ Om de markup te valideren kan je deze tool van Facebook gebruiken:
 
 ### Gebruik `twitter:` namespaced meta tags om metadata te omschrijven
 Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev.twitter.com/docs/cards/validation/validator) en moet de meta tag `twitter:card` met een `name` attribuut hebben.
-  
+
 Hier is een kort voorbeeld:
 
 {% include_code _code/social-sites.html twitter %}
@@ -177,7 +177,7 @@ Merk op dat microdata en OGP bepaalde opmaak delen:
 
 * `itemscope` staat in de `head` tag
 * `title` en `description` zijn hetzelfde voor microdata en OGP
-* `itemprop="image"` gebruikt de `link` tag met een `href` attribuut in plaats van het hergebruiken van `meta` tag met `property="og:image"` 
+* `itemprop="image"` gebruikt de `link` tag met een `href` attribuut in plaats van het hergebruiken van `meta` tag met `property="og:image"`
 
 Als laatste, valideer dat je pagina eruit ziet zoals verwacht op ieder sociale media website voordat je publiceert.
 

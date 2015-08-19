@@ -1,4 +1,4 @@
-﻿---
+---
 layout: article
 title: "Instrueer zoekmachines hoe jou pagina verschillende type apparaten ondersteunt"
 description: "Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresultaten wordt weergeven een belangrijk onderdeel van jou site's ontwerp. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur."
@@ -16,7 +16,7 @@ article:
   order: 2
 key-takeaways:
   - Bepaal de URL structuur van je pagina
-  - Responsive design is bij voorkeur aangeraden 
+  - Responsive design is bij voorkeur aangeraden
   - Gebruik <code>rel="canonical"</code> + <code>rel="alternate"</code> om desktop en mobiele pagina's te onderscheiden
   - Gebruik <code>Vary HTTP</code> header voor een URL die dynamisch de desktop of mobiele html serveert
 ---
@@ -31,17 +31,17 @@ Ben je bezig om je website <em>responsive</em> te maken? Is er een mobiele versi
 ## Bepaal de URL structuur van je site
 Er zijn verschillende manieren om content te serveren voor verschillende apparaten. De drie meest gangbare zijn:
 
-1. **Responsive Web Design:** serveer dezelfde HTML voor één URL and gebruik CSS media queries om te bepalen hoe de content moet worden afgebeeld op het apparaat. 
+1. **Responsive Web Design:** serveer dezelfde HTML voor één URL and gebruik CSS media queries om te bepalen hoe de content moet worden afgebeeld op het apparaat.
 ex) Desktop en Mobiel: http://www.example.com/
 1. **Aparte mobiele site:** verwijs de gebruiker naar een speciale URL afhankelijk van de user-agent.
 ex) Desktop: http://www.example.com/ Mobiel: http://m.example.com/
-1. **Dynamisch serveren:** serveert verschillende HTML voor dezelfde URL afhankelijk van de user-agent. 
+1. **Dynamisch serveren:** serveert verschillende HTML voor dezelfde URL afhankelijk van de user-agent.
 ex) Desktop en Mobiel: http://www.example.com/
 
 De beste aanpak die we adviseren is om responsive web design te gebruiken. Maar al veel websites serveren al specifiek voor mobiel gemaakte versies. En enkele serveren mobiel en deskop met dezelfde URL.
 
 Bepaal welke URL structuur het beste past bij jou website. Probeer dan te optimaliseren gegeven jou situatie.
-  
+
 ## Responsive Web Design is de voorkeur
 Als je bezig bent je site responsive te maken, zit je al goed. Het voordeel van een responsive website is:
 
@@ -56,7 +56,7 @@ Door het responsive te maken:
 * Is het makkelijker voor gebruikers om je pagina te delen.
 * Moeten gebruikers niet worden doorgestuurd afhankelijk van de user agent en dus sneller
 * Onderhoudskosten zijn lager voor website en zoekmachine crawler.
- 
+
 Leer hoe je jouw website bouwt met responsive web design door middel van de [Multi-Device
 Layouts](https://developers.google.com/web/fundamentals/layouts/) sectie.
 
@@ -89,7 +89,7 @@ Op de mobiele pagina, geef je aan dat er een desktop (canonical) versie is op ee
 <title>...</title>
 <link rel="canonical" href="http://www.example.com/">
 {% endhighlight %}
-  
+
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
 
 ## Gebruik `Vary HTTP` wanneer je gegeven het type apparaat andere HTML serveert
