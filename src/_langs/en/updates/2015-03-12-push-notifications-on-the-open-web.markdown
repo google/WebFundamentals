@@ -247,8 +247,7 @@ Chrome uses GCM to handle the sending and delivery of push messages, however, to
 use the GCM restful API, you need to set up a project on the Google Developer Console. 
 Follow the instructions in the [getting started 
 guide](https://developer.android.com/google/gcm/gs.html), making sure you 
-enable both "Google Cloud Messaging for Android" and "Google Cloud Messaging for 
-Chrome", and make a note of the **project number** and **API key** as you'll 
+enable both "Google Cloud Messaging for Android" and make a note of the **project number** and **API key** as you'll 
 need to use them later on.
 
 This step is **specific to Chrome** since it relies on GCM's restful API
