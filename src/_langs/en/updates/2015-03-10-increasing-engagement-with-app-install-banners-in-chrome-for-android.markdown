@@ -203,7 +203,7 @@ to prompt the user to install the app and we think it will provide a better expe
 A new powerful feature for native app developers also landed in Chrome 44 &mdash; [Stable as of July 2015](http://googlechromereleases.blogspot.nl/2015/07/stable-channel-update_21.html).  Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user inline install your native app.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
+  <img style="max-width: 50%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
 </p>
 
 The criteria is similar to the Web App install banner except for the need of a Serivce Worker:
