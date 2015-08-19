@@ -1,8 +1,8 @@
 ---
 layout: section
 title: "Optimalisaties voor Crawlers"
-description: "Websites worden niet alleen door mensen bekeken, maar ook door zogenaamde 'Crawlers'. Leer hoe je controle krijgt over hoe je site presenteerd wordt door derden."
-introduction: "Websites worden niet alleen door mensen bekeken, maar ook door zogenaamde 'Crawlers'. Leer hoe je controle krijgt over hoe je site presenteerd wordt door derden."
+description: "Websites worden niet alleen door mensen bekeken, maar ook door zogenaamde 'crawlers'. Leer hoe je controle krijgt over hoe je site presenteerd wordt door derden."
+introduction: "Websites worden niet alleen door mensen bekeken, maar ook door zogenaamde 'crawlers'. Leer hoe je controle krijgt over hoe je site presenteerd wordt door derden."
 snippet: "Verspreid je werk over de wereld"
 id: optimizations-for-crawlers
 collection: discovery-and-distribution

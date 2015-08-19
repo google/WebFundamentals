@@ -1,8 +1,8 @@
 ---
 layout: article
 title: "Controle over je weergave op sociale media"
-description: "Je kan beinvloeden hoe jou site wordt weergegeven wanneer het gedeeld wordt via sociale media door middel van he plaatsen van een aantal regels html op iedere pagina. Dit kan meer bezoekers naar je site trekken door het voorbeeld te voorzien van meer gegevens."
-introduction: "Je kan beinvloeden hoe jou site wordt weergegeven wanneer het gedeeld wordt via sociale media door middel van he plaatsen van een aantal regels html op iedere pagina. Dit kan meer bezoekers naar je site trekken door het voorbeeld te voorzien van meer gegevens.."
+description: "Je kan beinvloeden hoe jouw site wordt weergegeven wanneer het gedeeld wordt via sociale media door het plaatsen van een aantal regels HTML op iedere pagina. Dit kan meer bezoekers naar je site trekken door het voorbeeld te voorzien van meer gegevens."
+introduction: "Je kan beinvloeden hoe jouw site wordt weergegeven wanneer het gedeeld wordt via sociale media door het plaatsen van een aantal regels HTML op iedere pagina. Dit kan meer bezoekers naar je site trekken door het voorbeeld te voorzien van meer gegevens."
 snippet: "Vergroot de zichtbaarheid van je pagina"
 id: social-sites
 collection: optimizations-for-crawlers
@@ -26,7 +26,7 @@ key-takeaways:
 
 {% include modules/takeaway.liquid list=page.key-takeaways %}
 
-Je kan beinvloeden hoe jou site wordt weergegeven wanneer het gedeeld wordt via sociale media door middel van he plaatsen van een aantal regels html op iedere pagina. Dit kan leiden tot betere toegankelijkheid door het voorbeeld rijkere informatie te bieden. Zonder dit, zullen sociale media website alleen de basis informatie tonen, zonder afbeeldingen of andere handige informatie.
+Je kan beinvloeden hoe jouw site wordt weergegeven wanneer het gedeeld wordt via sociale media door het plaatsen van een aantal regels HTML op iedere pagina. Dit kan leiden tot betere toegankelijkheid door het voorbeeld rijkere informatie te bieden. Zonder dit, zullen sociale media website alleen de basis informatie tonen, zonder afbeeldingen of andere handige informatie.
 
 Welke zou vaker worden aangeklikt? Gebruikers zijn aangetrokken tot afbeeldingen en zijn beter overtuigd dat ze vinden wat ze zoeken als er een voorbeeld vooraf is.
 
@@ -35,21 +35,21 @@ Welke zou vaker worden aangeklikt? Gebruikers zijn aangetrokken tot afbeeldingen
     <figure class="fluid">
       <img src="imgs/gplus-snippet-1.png" srcset="imgs/gplus-snippet-1.png 1x,
        imgs/gplus-snippet-1-2x.png 2x" />
-      <figcaption>Zonder de juiste opmaak, is alleen de titel zichtbaar.</figcaption>
+      <figcaption>Zonder de juiste opmaak is alleen de titel zichtbaar.</figcaption>
     </figure>
   </div>
   <div class="g--half g--last">
     <figure class="fluid">
       <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
        imgs/gplus-snippet-2-2x.png 2x" />
-      <figcaption>Met de juiste opmaak, is de titel correct, een korte beschrijving en een afbeelding bijgevoegd.</figcaption>
+      <figcaption>Met de juiste opmaak is de titel correct en zijn een korte beschrijving en afbeelding bijgevoegd.</figcaption>
     </figure>
   </div>
 </div>
 
-Wanneer iemand op een sociaal netwerk jou website wilt delen met zijn vrienden, zal hij waarschijnlijk zelf toevoegen hoe cool het is, en dat delen. Maar jouw website omschrijven is tijdrovend en kan het punt missen, vanuit het standpunt van de eigenaar gezien. Ook zijn er diensten die het aantal karakters beperken die gebruikers kunnen toevoegen.
+Wanneer iemand op een sociaal netwerk jouw website wilt delen met zijn vrienden, zal hij waarschijnlijk zelf toevoegen hoe cool het is, en dat delen. Maar jouw website omschrijven is tijdrovend werk en kan de plank mislaan vanuit het standpunt van de eigenaar gezien. Ook zijn er diensten die het aantal karakters beperken die gebruikers kunnen toevoegen.
 
-Door geschikte metadata toe te voegen aan jou pagina's, maak je het delen makkelijker: de titel, omschrijving en een relevante afbeelding zijn dan voorgeselecteerd. Dat betekent dat gebruikers geen waardevolle tijd (en karakters) hoeven te besteden om de link te omschrijven.
+Door geschikte metadata toe te voegen aan jouw pagina's, maak je het delen makkelijker: de titel, omschrijving en een relevante afbeelding zijn dan voorgeselecteerd. Dat betekent dat gebruikers geen waardevolle tijd (en karakters) hoeven te besteden om de link te omschrijven.
 
 ## Gebruik schema.org + microdata voor rich snippets op Google+
 Crawlers gebruiken meerdere methoden om een pagina te kunnen lezen en begrijpen. Door [microdata](http://www.w3.org/TR/microdata/) en
@@ -62,16 +62,16 @@ Hier is een voorbeeld:
 De meeste metadata wordt geplaatst in de head van een pagina, maar microdata zit waar de context bestaat.
 
 ### Voeg `itemscope` toe voor de microdata scope
-Door de`itemscope` toe te voegen kan je de tag specificeren als een blok van content over een bepaald item.
+Door de`itemscope` toe te voegen kan je de tag specificeren als een blok content over een bepaald item.
 
 ### Voeg `itemtype` toe om de soort website te definiëren
-De type van een een item kan worden gespecificeerd met het `itemtype` attribuut samen met de `itemscope`. De waarde van `itemtype` wordt bepaald door het type content op de pagina. Je kan de relevante informatie vinden op [deze pagina](http://schema.org/docs/full.html).
+De type van een item kan worden gespecificeerd met het `itemtype` attribuut samen met de `itemscope`. De waarde van `itemtype` wordt bepaald door het soort content op de pagina. Je kan de relevante informatie vinden op [deze pagina](http://schema.org/docs/full.html).
 
 ### Voeg `itemprop` toe om ieder item te beschrijven volgens het schema.org vocabulaire
-`itemprop`s defineren eigenschappen voor `itemtype`s in de scope. Voor sociale media metadata is voornamelijk de`itemprop` waardes van `name`, `description` and `image` meest relevant.
+`itemprop`s defineren eigenschappen voor `itemtype`s in de scope. Voor sociale media metadata is voornamelijk de `itemprop` waardes van `name`, `description` and `image` het meest relevant.
 
 ### Leer meer
-Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/) en Google Search. Om meer te leren over snippets en redering op Google+, lees de volgende documenten:
+Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/) en Google Search. Om meer te leren over snippets en rendering op Google+ lees de volgende documenten:
 
 * [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
 * [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
@@ -92,7 +92,7 @@ De [Open Graph Protocol (OGP)](http://ogp.me/) levert Facebook de nodige metadat
 
 {% include_code _code/social-sites.html ogp %}
 
-Wanneer dit in de head sectie van jou pagina zit, wordt deze metadata gebruikt voor rich snippet informatie wanneer de pagina wordt gedeeld.
+Wanneer dit in de <em>head</em> sectie van jouw pagina zit, wordt deze metadata gebruikt voor rich snippet informatie wanneer de pagina wordt gedeeld.
 
 ### Gebruik `og:` namespaced `meta` tags om metadata te omschrijven
 Een `meta` tag bevat een `property` attribuut en een `content` attribuut.
@@ -127,7 +127,7 @@ Een `meta` tag bevat een `property` attribuut en een `content` attribuut.
     </tr>
     <tr>
       <td data-th="Property"><code>og:type</code></td>
-      <td data-th="Content">Geeft het type pagina aan. Kies er een die het meest relevant is voor jou pagina <a href="https://developers.facebook.com/docs/reference/opengraph/">hier</a>.</td>
+      <td data-th="Content">Geeft het type pagina aan. Kies er een die het meest relevant is voor jouw pagina <a href="https://developers.facebook.com/docs/reference/opengraph/">hier</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -145,7 +145,7 @@ Om de markup te valideren kan je deze tool van Facebook gebruiken:
 * [Debugger](https://developers.facebook.com/tools/debug/)
 
 ## Gebruik Twitter Cards voor rich snippets op Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) zijn een uitbreiding op het [Open Graph Protocol applicable for Twitter](https://twitter.com/). Het geeft de mogelijkheid om media zoals afbeeldingen en video's toe te voegen aan een Tweet met een link naar jou site. Door de passende metadata toe te voegen, zullen Tweets met een link naar jou site een card hebben met deze rich media.
+[Twitter Cards](https://dev.twitter.com/docs/cards) zijn een uitbreiding op het [Open Graph Protocol toegespitst voor Twitter](https://twitter.com/). Het geeft de mogelijkheid om media zoals afbeeldingen en video's toe te voegen aan een tweet met een link naar jouw site. Door de passende metadata toe te voegen, zullen tweets met een link naar jouw site een zogenaamde card hebben met deze rich media.
 
 ### Gebruik `twitter:` namespaced meta tags om metadata te omschrijven
 Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev.twitter.com/docs/cards/validation/validator) en moet de meta tag `twitter:card` met een `name` attribuut hebben.
@@ -159,7 +159,7 @@ Door het toevoegen van de Twitter id aan twitter:site, zal Twitter deze informat
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
 ### Leer meer
-Om meer te leren over Twitter Cards, bezoek:
+Om meer te leren over Twitter Cards bezoek:
 
 * [Twitter's developer site](https://dev.twitter.com/docs/cards)
 
@@ -169,7 +169,7 @@ Om je opmaak te valideren levert Twitter:
 * [Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
 
 ## In de praktijk
-Gegeven deze drie opties is het beste om ook alle drie te gebruiken in je webpagina. Hier is een voorbeeld:
+Gegeven deze drie opties wordt in de praktijk meestal alle drie tegelijk geintegreerd in de webpagina. Hier is een voorbeeld:
 
 {% include_code _code/social-sites2.html best_practice %}
 
