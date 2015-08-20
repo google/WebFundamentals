@@ -6,14 +6,16 @@ title: Easily duplicate DOM nodes
 date: 2015-08-10
 article:
   written_on: 2015-08-10
-  updated_on: 2015-08-10
+  updated_on: 2015-08-20
 authors:
 - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-featured-image: /web/updates/images/2015-08-10-duplicate-dom-nodes/gplus-8f4a2ba4.png
+description: You can easily change the DOM without having to edit the HTML as a giant
+  string.
+featured-image: /web/updates/images/2015-08-10-duplicate-dom-nodes/duplicate-dom.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/58-duplicate-dom/
 teaserblocks:
