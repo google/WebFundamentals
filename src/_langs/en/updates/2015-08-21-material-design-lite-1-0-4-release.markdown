@@ -18,7 +18,7 @@ tags:
  - mdl
  - release
 
-permalink: /updates/2015/08/new-release-of-material-design-lite
+permalink: /updates/2015/08/new-release-of-material-design-lite.html
 ---
 ![](/web/updates/images/2015-08-21-new-mdl-release/mdlsite.jpg)
 
