@@ -14,8 +14,10 @@ collection: updates
 category: chrome
 product: chrome
 type: news
-
-
+tags:
+ - poster
+ - flash
+ - performance
 
 permalink: /updates/2015/08/using-poster-images-on-plugin-content
 ---
