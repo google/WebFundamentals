@@ -21,8 +21,8 @@ permalink: /updates/2015/08/using-poster-images-on-plugin-content
 ---
 
 Several weeks ago, [Chrome announced a new content setting that automatically pauses plugin content](http://chrome.blogspot.com/2015/06/better-battery-life-for-your-laptop.html) 
-that it detects to be peripheral to the main content of the site. This is a win for your users in 
-terms of CPU usage and power consumption, but may result in their not seeing the full content 
+that it detects to be peripheral to the main content of the site will go live to all users of Chrome 45 onwards (Stable September 2015). 
+This is a win for your users in terms of CPU usage and power consumption, but may result in their not seeing the full content 
 that your website provides.
 
 Luckily, the setting also respects the poster parameter in a similar way that video elements do. 
