@@ -6,14 +6,16 @@ title: Edit HTML in the Console Panel
 date: 2015-08-10
 article:
   written_on: 2015-08-10
-  updated_on: 2015-08-10
+  updated_on: 2015-08-20
 authors:
 - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-featured-image: /web/updates/images/2015-08-10-edit-html-in-the-console-panel-of-devtools/gplus-8f4a2ba4.png
+description: The DOM node context menu, which you may recognize from the elements
+  panel, is also present in the console panel.
+featured-image: /web/updates/images/2015-08-10-edit-html-in-the-console-panel-of-devtools/console-edit-html.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/60-console-edit-html/
 teaserblocks:
