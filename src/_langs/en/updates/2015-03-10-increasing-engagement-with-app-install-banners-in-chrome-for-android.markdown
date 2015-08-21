@@ -55,7 +55,7 @@ manage the prompting of users:
   - The manifest defines how your app appears on the user's system and how it 
   should be launched - and you are required to have a \`short\_name\` and a 
   \`144x144\` png icon
-  - Your icon declartion's should include a mime type of `image/png`
+  - Your icon declaration's should include a mime type of `image/png`
 * You have a [service 
   worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) 
   registered on your site. We recommend a [simple custom offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) 
@@ -109,13 +109,13 @@ window.addEventListener('beforeinstallprompt', function(e) {
 
 I would say though, I am not sure why you would do this... But you can.
 
-A more interesting future update will the ability to defer the prompt until later in the page lifecycle,
+A more interesting future update will the ability to defer the prompt until later in the page life-cycle,
 i.e, just after a user has performed an action, or hit the bottom of the page (something to indicate
 that they are engaging with your site).
 
 ## <span id="action">Did a user install our web app</span>
 
-A recent addtion in Chrome 43 (Stable as of June 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+A recent addition in Chrome 43 (Stable as of June 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
 
 The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
 actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
@@ -149,7 +149,7 @@ This is a good tool for understanding how your users interact with your app inst
 A new addition in Chrome 45 (Beta on July 21 2015) is the ability for you to defer the prompt to
 a later time in the apps usage. When Chrome decides to prompt the user to install the app
 you can prevent the default action and store the event for later.  Then when the user
-has a postive interaction with your site you can then re-trigger the prompt by calling
+has a positive interaction with your site you can then re-trigger the prompt by calling
 `prompt()` on the stored event.  This will then cause Chrome to show the Add to Home Screen 
 banner and all the Promise attributes such as `userChoice` will be available to bind to so
 that you can understand what action the user took.
@@ -206,7 +206,7 @@ A new powerful feature for native app developers also landed in Chrome 44 &mdash
   <img style="max-width: 50%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
 </p>
 
-The criteria is similar to the Web App install banner except for the need of a Serivce Worker:
+The criteria is similar to the Web App install banner except for the need of a Service Worker:
 
 * You have a [web app manifest 
   file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
@@ -233,7 +233,7 @@ It is simple to integrate into any manifest.  Just add a `related_applications` 
 
 ## <span id="criteria-faq">Frequently Asked Questions</span>
 **My app meets all the criteria, but I don't want the banner to display. Can I control this?**  
-Yes, you can prevent the banner from displaying.  See "[Cancelling the prompt](#cancel)".
+Yes, you can prevent the banner from displaying.  See "[Canceling the prompt](#cancel)".
 
 **Can I detect if a user tapped "Add" at the prompt and added to home screen?**  
 Yes you can, see "[Did a user install our web app](#action)".
@@ -268,8 +268,8 @@ Yes.
 **How will the criteria for App Banner activation change over time?**
 We can't say specifics right now but as we better understand what makes an experience the user will want to install we will want to make sure the criteria are updated and also well understood for developers. 
 
-**What could one of the critria for App Banner activation be?**
-Again, it is hard to say.  One example could be: supporting offline scenarios in your app could indicate that your app is more resiliant to connectivity issues and therefore would offer a better launchable experience.
+**What could one of the criteria for App Banner activation be?**
+Again, it is hard to say.  One example could be: supporting offline scenarios in your app could indicate that your app is more resilient to connectivity issues and therefore would offer a better launch experience.
 
 **Why do I need SSL?**  
 Because you need a service worker, and we believe it is the best option for the future of the platform.
