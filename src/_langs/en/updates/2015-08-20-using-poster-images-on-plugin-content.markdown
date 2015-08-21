@@ -19,7 +19,7 @@ tags:
  - flash
  - performance
 
-permalink: /updates/2015/08/using-poster-images-on-plugin-content
+permalink: /updates/2015/08/using-poster-images-on-plugin-content.html
 ---
 
 Several weeks ago, [Chrome announced a new content setting that automatically pauses plugin content](http://chrome.blogspot.com/2015/06/better-battery-life-for-your-laptop.html) 
