@@ -109,7 +109,7 @@ window.addEventListener('beforeinstallprompt', function(e) {
 
 I would say though, I am not sure why you would do this... But you can.
 
-A more interesting future update will the ability to defer the prompt until later in the page life-cycle,
+A more interesting future update will the ability to defer the prompt until later in the page life cycle,
 i.e, just after a user has performed an action, or hit the bottom of the page (something to indicate
 that they are engaging with your site).
 
