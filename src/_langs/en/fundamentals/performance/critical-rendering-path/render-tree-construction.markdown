@@ -19,7 +19,7 @@ key-takeaways:
     - Paint is the last step that takes in the final render tree and renders the pixels to the screen.
 notes:
   hidden:
-    - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element is still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
+    - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
 ---
 {% wrap content%}
 
