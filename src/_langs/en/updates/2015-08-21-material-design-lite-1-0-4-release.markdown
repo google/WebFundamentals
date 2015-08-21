@@ -51,11 +51,11 @@ available on [npm](http://npmjs.org/package/material-design-lite) as well.
 
 After you’ve reviewed the changelog, update your CDN paths to the following:
 
-```html
+{% highlight html %}
 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons”>
-```
+{% endhighlight %}
 
 **Built with MDL**
 
