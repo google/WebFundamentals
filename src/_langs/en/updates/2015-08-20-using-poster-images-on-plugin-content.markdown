@@ -2,6 +2,7 @@
 layout: update
 published: true
 title: Using poster images on plugin content
+description: Chrome can now add custom poster images to object elements to improve percieved loading performance of plugins such as Flash.
 date: 2015-08-20
 article:
   written_on: 2015-08-20
@@ -13,6 +14,8 @@ collection: updates
 category: chrome
 product: chrome
 type: news
+
+
 
 permalink: /updates/2015/08/using-poster-images-on-plugin-content
 ---
