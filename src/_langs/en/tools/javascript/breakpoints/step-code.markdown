@@ -110,9 +110,7 @@ is expanded, there is only one call in the stack. The user then enables the
 call stack, resumes script execution, triggers the breakpoint, and then
 expands the call stack. This time, there are four functions in the call stack.
 
-<video loop autoplay controls>
-  <source src="imgs/async-call-stack-demo.mp4" type="video/mp4">
-</video>
+{% animation videos/async-call-stack-demo.mp4 %}
 
 #### Tip: name functions to improve call stack readability
 
