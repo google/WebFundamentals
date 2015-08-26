@@ -117,13 +117,17 @@ expands the call stack. This time, there are four functions in the call stack.
 Anonymous functions make the call stack difficult to read. Name your functions
 to improve readability.
 
-The code in the two screenshots below are functionally equivalent. The code in 
-the first uses anonymous functions. Two of the functions are simply titled 
-`(anonymous function)`. The code in the second screenshot uses named functions.
-Each function in the call stack contains a descriptive title and it is easier
-for the user to understand program flow at a glance.
+The code in the two screenshots below are functionally equivalent. Compare the
+call stacks. In the first screenshot, the top two functions are just titled
+`(anonymous function)`. In the second screenshot, the top two functions
+are named, which makes it easier to understand the program flow at a glance.
+
+Call stack with anonymous functions:
 
 ![Call stack with hard-to-read anonymous functions](imgs/anon.png)
+
+Call stack with named functions: 
+
 ![Call stack with easier-to-read named function](imgs/named.png)
 
 ### Blackbox third-party code
