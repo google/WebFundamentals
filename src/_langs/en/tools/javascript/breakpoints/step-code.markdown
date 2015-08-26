@@ -96,6 +96,65 @@ Near the top of the sidebar is the **Call Stack** section. When the code is paus
 
 <p><img src="imgs/image_15.png" alt="Call stack" style="float: left;margin-right: 1em;margin-bottom: 1em;">An initial onclick event at line 50 in the <strong>index.html</strong> file called the <code>setone()</code> function at line 18 in the <strong>dgjs.js</strong> JavaScript file, which then called the <code>setall()</code> function at line 4 in the same file, where execution is paused at the current breakpoint.</p>
 
+### Enable the async call stack
+
+Enable the async call stack feature to gain more visibiliy into the execution
+of your asynchronous function calls.
+
+1. Open the *Sources* panel of DevTools.
+
+2. On the *Call Stack* pane, enable the *Async* checkbox.
+
+In the video below, the first time that the code is paused and the call stack
+is expanded, there is only one call in the stack. The user then enables the
+call stack, resumes script execution, triggers the breakpoint, and then
+expands the call stack. This time, there are four functions in the call stack.
+
+<video loop autoplay controls>
+  <source src="imgs/async-call-stack-demo.mp4" type="video/mp4">
+</video>
+
+#### Tip: name functions to improve call stack readability
+
+Anonymous functions make the call stack difficult to read. Name your functions
+to improve readability.
+
+The code in the two screenshots below are functionally equivalent. The code in 
+the first uses anonymous functions. Two of the functions are simply titled 
+`(anonymous function)`. The code in the second screenshot uses named functions.
+Each function in the call stack contains a descriptive title and it is easier
+for the user to understand program flow at a glance.
+
+<!-- re-do screenshots so code is clean -->
+
+### Blackbox third-party code
+
+A lot of the time, you may not care to step through the internal functions
+of third-party libraries and frameworks which you use in your project.
+Use the *Blackbox Third-Party Code* feature of DevTools to omit 
+third-party files from your call stacks.
+
+To blackbox a file:
+
+1. Open the *Sources* panel of DevTools.
+
+1. Right-click on the file you wish to blackbox.
+
+1. Select *Blackbox Script*.
+
+In the video below, the user triggers a breakpoint on a line of code (the 
+breakpoint was set beforehand). The user then expands the call stack, and you can 
+see two functions from jQuery in the call stack. The user then blackboxes
+the jQuery script file, runs the script again, triggers the breakpoint, and
+then expands the call stack. This time, the jQuery functions are omitted
+from the call stack. 
+
+<video loop autoplay controls>
+  <source src="imgs/blackbox.mp4" type="video/mp4">
+</video>
+
+To remove a blackbox, right-click on the file again and select *Stop Blackboxing*.
+
 ## Data manipulation
 
 When code execution is paused, you can observe and modify the data it is processing. This is crucial when trying to track down a variable that seems to have the wrong value or a passed parameter that isn't received as expected.
