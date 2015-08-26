@@ -127,7 +127,7 @@ for the user to understand program flow at a glance.
 
 ### Blackbox third-party code
 
-A lot of the time, you may not care to step through the internal functions
+You may not care to step through the internal functions
 of third-party libraries and frameworks which you use in your project.
 Use the *Blackbox Third-Party Code* feature of DevTools to omit 
 third-party files from your call stacks.
@@ -140,16 +140,12 @@ To blackbox a file:
 
 1. Select *Blackbox Script*.
 
-In the video below, the user triggers a breakpoint on a line of code (the 
-breakpoint was set beforehand). The user then expands the call stack, and you can 
-see two functions from jQuery in the call stack. The user then blackboxes
-the jQuery script file, runs the script again, triggers the breakpoint, and
-then expands the call stack. This time, the jQuery functions are omitted
-from the call stack. 
+In the animation below, the user triggers a breakpoint. The call stack
+populates, and you can see a couple of third-party functions in the 
+call stack. The user then blackboxes the third-party script, and you
+see that the third-party functions are now hidden from the call stack.
 
-<video loop autoplay controls>
-  <source src="imgs/blackbox.mp4" type="video/mp4">
-</video>
+{% animations animations/blackbox.mp4 %}
 
 To remove a blackbox, right-click on the file again and select *Stop Blackboxing*.
 
