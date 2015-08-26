@@ -123,7 +123,8 @@ the first uses anonymous functions. Two of the functions are simply titled
 Each function in the call stack contains a descriptive title and it is easier
 for the user to understand program flow at a glance.
 
-<!-- re-do screenshots so code is clean -->
+![Call stack with hard-to-read anonymous functions](imgs/anon.png)
+![Call stack with easier-to-read named function](imgs/named.png)
 
 ### Blackbox third-party code
 
