@@ -5,7 +5,7 @@ description: "You can animate with CSS or JavaScript. Which should you use, and 
 introduction: "There are two primary ways to create animations on the web: with CSS and with JavaScript. Which one you choose really depends on the other dependencies of your project, and what kinds of effects you're trying to achieve."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-10-21
+  updated_on: 2015-08-26
   order: 2
 id: css-vs-javascript-animations
 collection: animations
@@ -14,13 +14,13 @@ key-takeaways:
   code:
     - Use CSS animations for simpler “one-shot” transitions, like toggling UI element states.
     - Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind or slow-down.
-    - If you choose to animate with JavaScript, go with TweenMax or, if you want a lighter-weight solution, TweenLite.
+    - If you choose to animate with JavaScript, go with the Web Animations API or a modern framework you are comfortable with.
 
 notes:
   keyframes:
     - If you’re new to animations, keyframes are an old term from hand-drawn animations. Animators would create specific frames for a piece of action, called key frames, which would capture things like the most extreme part of some motion, and then they would set about drawing all the individual frames in between the keyframes. We have a similar process today with CSS animations, where we instruct the browser what values CSS properties need to have at given points, and it fills in the gaps.
   setinterval:
-    - You may see code around the web that uses setInterval or setTimeout for animations. This is a terrible idea, as the animation will not be synchronized to the refresh rate of the screen, and it’s highly likely to judder and skip. You should always avoid such code, and use requestAnimationFrame, which is synchronized properly, instead.
+    - You may see code around the web that uses `setInterval` or `setTimeout` for animations. This is a terrible idea, as the animation will not be synchronized to the refresh rate of the screen, and it’s highly likely to judder and skip. You should always avoid such code, and use `requestAnimationFrame`, which is synchronized properly, instead.
 
 authors:
   - paullewis
@@ -33,12 +33,17 @@ Most basic animations can be created with either CSS or JavaScript, but the amou
 
 * **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves will be in your CSS.
 * **Use JavaScript when you need significant control over your animations.** Something that dynamically tracks a touch position, or an animation that you need to stop, pause, slow-down or reverse typically require you to use JavaScript.
+* **Use `requestAnimationFrame` directly when you want to orchestrate an entire scene by hand.** This is an advanced JavaScript approach, but can be useful if you're building a game or drawing to a HTML canvas.
 
-If you're already using jQuery or a JavaScript framework that includes animation functionality then you may find it more convenient overall to stick with that for your animations rather than switching to CSS.
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/WaNoqBAp8NI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+Alternatively, if you're already using a JavaScript framework that includes animation functionality, such as via jQuery's [`.animate()`](http://api.jquery.com/animate/) method or [GreenSock's TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), then you may find it more convenient overall to stick with that for your animations.
 
 ### Animate with CSS
 
-There’s no doubt that animating with CSS is the simplest way to get something moving on screen.
+There’s no doubt that animating with CSS is the simplest way to get something moving on screen. This approach is described as *declarative*, because you specify what you'd like to happen.
 
 Below is some CSS that will move an element 100px in both the X & Y axes. It's done by using a CSS transitions that's set to take 500ms. When the `move` class is added the `transform` value is changed and the transition begins.
 
@@ -135,51 +140,38 @@ You  can, for example, animate the box in the same way with transitions, but hav
 
 With CSS animations you define the animation itself independently of the target element, and use the animation-name property to choose the required animation.
 
-CSS Animations are still mostly vendor prefixed, with `-webkit-` being used in Chrome, Safari, Opera, Safari Mobile, and Android Browser. Internet Explorer and Firefox both ship without prefixes. Many tools will aid you in creating the prefixed versions of the CSS you need, allowing you to write the unprefixed version in your source files.
+CSS Animations are still somewhat vendor prefixed, with `-webkit-` being used in Safari, Safari Mobile, and Android Browser. Chrome, Opera, Internet Explorer and Firefox all ship without prefixes. Many tools will aid you in creating the prefixed versions of the CSS you need, allowing you to write the unprefixed version in your source files.
 
-### Animate with JavaScript
+### Animate with JavaScript and the Web Animations API
 
-Creating animations with JavaScript is, by comparison, more complex than writing CSS transitions or animations, but it does typically provide significantly more power to you as the developer. The general approach is to use `requestAnimationFrame` and, on each frame of the animation, manually determine the value of each property of the element that is animating.
+Creating animations with JavaScript is, by comparison, more complex than writing CSS transitions or animations, but it does typically provide significantly more power to you as the developer. You can use the [Web Animations API](http://w3c.github.io/web-animations/) to either animate specific CSS properties, or build composable effect objects.
 
-{% include modules/remember.liquid title="Note" list=page.notes.setinterval %}
-
-Below is the JavaScript that you would need to write to recreate the CSS transition we discussed earlier.
+JavaScript animations are *imperative*, as you write them inline as part of your code. You can also encapsulate them inside other objects. Below is the JavaScript that you would need to write to recreate the CSS transition we discussed earlier.
 
 {% highlight javascript %}
-function Box () {
-
-  var animationStartTime = 0;
-  var animationDuration = 500;
-  var target = document.querySelector('.box');
-
-  this.startAnimation = function() {
-    animationStartTime = Date.now();
-    requestAnimationFrame(update);
-  };
-
-  function update() {
-    var currentTime = Date.now();
-    var positionInAnimation = (currentTime - animationStartTime) / animationDuration;
-
-    var xPosition = positionInAnimation * 100;
-    var yPosition = positionInAnimation * 100;
-
-    target.style.transform = 'translate(' + xPosition + 'px, ' + yPosition + 'px)';
-
-    if (positionInAnimation <= 1)
-      requestAnimationFrame(update);
-  }
-}
-
-var box = new Box();
-box.startAnimation();
+var target = document.querySelector('.box');
+var player = target.animate([
+  {transform: 'translate(0)'},
+  {transform: 'translate(100px, 100px)'}
+], 500);
+player.addEventListener('finish', function() {
+  target.style.transform = 'translate(100px, 100px)';
+});
 {% endhighlight %}
 
-{% link_sample _code/box-move-js.html %}See sample{% endlink_sample %}
+By default, Web Animations only modify the presentation of an element. If you'd like to have your object remain at the location it has moved to, then you should modify its underlying styles when the animation has finished, as per our sample.
 
-This code starts to become very complex and difficult to manage as you try to expand it to cover more cases, so generally speaking you will benefit from choosing one of the many JavaScript libraries available for animation. If you are using jQuery in your project already, you will likely benefit from sticking with it and using the [`.animate()`](http://api.jquery.com/animate/) functions. If, on the other hand, you’re in need of a dedicated library then look at [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), which is  very powerful. There is a lightweight form of it, called TweenLite, which is friendlier from a file size point of view.
+{% link_sample _code/box-move-wa.html %}See sample{% endlink_sample %}
 
-Since with JavaScript animations you are in total control of the elements styles at every step you can slow down the animation, pause it, stop it, reverse it and manipulate it as you see fit.
+The Web Animations API is a new standard from the W3C. It is supported in Chrome, Opera, and in Firefox behind a flag. This API is built into the browser, and as such, is more performant than a framework-based solution.
+
+For other modern browsers, [there is a polyfill](https://github.com/web-animations/web-animations-js). It's safe to include even where Web Animations are already supported, like this-
+
+{% highlight html %}
+<script src="//cdn.rawgit.com/web-animations/web-animations-js/2.1.2/web-animations.min.js"></script>
+{% endhighlight %}
+
+Since with JavaScript animations you are in total control of the element's styles at every step you can slow down the animation, pause it, stop it, reverse it and manipulate it as you see fit.
 
 {% include modules/nextarticle.liquid %}
 
