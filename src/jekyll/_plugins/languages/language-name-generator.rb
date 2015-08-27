@@ -260,6 +260,26 @@ module Jekyll
       tree['subdirectories'].each { |value|
         organisePageTree(value)
       }
+
+      tree['subdirectories'] = tree['subdirectories'].sort do |a, b|
+        a_order = 0
+        b_order = 0
+        
+        if !a['index'].nil?
+          a_order = a['index'].data['order'] || a['index'].data['date'] || 0
+        end
+        if !b['index'].nil?
+          b_order = b['index'].data['order'] || b['index'].data['date'] || 0
+        end
+
+        if a_order.is_a?(Integer) & b_order.is_a?(Integer)
+            a_order <=> b_order
+        elsif a_order.is_a?(String) & b_order.is_a?(String)
+            a_order <=> b_order
+        else
+          0 <=> 0
+        end
+      end
     end
   end
 
