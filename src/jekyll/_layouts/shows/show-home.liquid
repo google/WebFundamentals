@@ -1,45 +1,54 @@
 {% include page-structure/open-page.liquid %}
 
+<p>{{ page.description }}</p>
+
 <!-- Latest Episode -->
 {% if page.context.subdirectories.size > 0 %}
-<div class="showhome--subheading">
-  <p class="showhome--subheading-description">Latest Episode</p>
-  <h2 class="showhome--subheading-title">{{ page.context.subdirectories[0].pages[0].title }}</h2>
-</div>
+  <div class="showhome-subheading">
+    <p class="showhome-subheading__description">Latest Episode</p>
+    <h3 class="showhome-subheading__title">{{ page.context.subdirectories[0].pages[0].title }}</h3>
+  </div>
 
-{% ytvideo page.context.subdirectories[0].pages[0].youtubeID %}
+  {% ytvideo page.context.subdirectories[0].pages[0].youtubeID %}
 {% endif %}
-
-<p>{{ page.description }}</p>
 
 {{ content }}
 
+<div class="shows-feeds">
+  <h5 class="shows-feeds__title">Follow {{ page.title }}!</h5>
+  <a class="shows-feeds__link" href="{{ feedURL }}">
+    <img src="{{site.WFBaseUrl}}/imgs/shows/rss-icon.svg" alt="RSS Feed Icon" class="shows-feeds__btn" />
+  </a>
+  {% if include.emailSubscriptionLink %}
+  <a class="feedlink-emailsubcribe" href="{{ include.emailSubscriptionLink }}">
+    <img src="{{site.WFBaseUrl}}/imgs/shows/mail-icon.svg" alt="Mail Subscription Icon" class="feedmail-icon" />
+  </a>
+  {% endif %}
+</div>
+
 {% for subdirectory in page.context.subdirectories %}
   <div class="showhome--series showhome--series-{{ page.id }}{% if count == 0 %} showhome--series-first{% endif %}">
-    <h3 class="showhome--series-title showhome--series-title-{{ page.id }} g-wide--full">
-      <a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a>
-    </h3>
+    <h4 class="showhome-series-list__title showhome--series-title-{{ page.id }} g-wide--full">
+      {{subdirectory.index.title}}
+    </h4>
 
     <!-- List of Videos -->
-    <ol class="showhome--series-flatrowlist flatrowlist">
+    <ol class="showhome-series-list">
       {% for showPage in subdirectory.pages %}
       <li>
-        {% include shows/video-thumbnail.liquid videoPage=showPage %}
+        <a class="showhome-series-list__link" href="{{ showPage.relative_url }}">
+          <div class="showhome-series-list__item">
+            <img class="showhome-series-list__item-img" src="https://img.youtube.com/vi/{{ showPage.youtubeID }}/mqdefault.jpg" />
+            <div class="showhome-series-list__item-info">
+              <h1 class="showhome-series-list__item-title">{{ showPage.title }}</h1>
+              <p class="showhome-series-list__item-description">{{ showPage.description }}</p>
+            </div>
+          </div>
+        </a>
       </li>
       {% endfor %}
     </ol>
   </div>
 {% endfor %}
-
-<p class="container feedlink-container">
-  <a href="{{ feedURL }}">
-    <img src="{{site.WFBaseUrl}}/imgs/shows/rss-icon.svg" alt="RSS Feed Icon" class="feedlink-icon" />
-  </a>
-  {% if include.emailSubscriptionLink %}
-  <a class="feedlink-emailsubcribe" href="{{ include.emailSubscriptionLink }}">
-    Subscribe by Email
-  </a>
-  {% endif %}
-</p>
 
 {% include page-structure/close-page.liquid %}

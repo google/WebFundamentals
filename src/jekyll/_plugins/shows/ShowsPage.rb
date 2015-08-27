@@ -26,7 +26,12 @@ module Jekyll
       self.data['html_head_description'] = 'Google Developer web shows are ' +
         'a set of video series that help web developers learn about the ' +
         'latest news and technologies on the web platform.'
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/shows-index.css';
+
+      $css = 'shows-index.css'
+      if self.data['layout'] == 'shows/show-home'
+        $css = 'show-home.css'
+      end
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/' + $css;
 
       #self.data['feed_name'] = 'Web Fundamentals - Google Developers'
       #self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundmentals/feed.xml'
