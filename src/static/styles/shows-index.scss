@@ -30,7 +30,7 @@ $header-bg-color: $color-primary;
 .layout-lss {
   display: flex;
 
-  flex-direction: row;
+  flex-direction: column;
 }
 
 $large-width: 70%;
@@ -41,17 +41,27 @@ $large-width: 70%;
 }
 
 .layout-lss__large {
-  width: $large-width;
+  width: 100%;
+
+  margin-bottom: $base-line / 2;
 }
 
 .layout-lss__ss-container {
   display: flex;
 
-  width: 100% - $large-width;
+  width: 100%;
 
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .layout-lss__small {
   flex: 1;
+}
+
+.layout-lss__small:first-child {
+  margin-right: $base-line / 4;
+}
+
+.layout-lss__small:nth-child(2) {
+  margin-left: $base-line / 4;
 }
