@@ -18,6 +18,7 @@ Change this to false if you want to see logs form app engine.
 
 var PORT_NUMBER = 7331;
 var SILENCE_OUTPUT = true;
+var GAE_SPAWNED_TASK = null;
 
 // These define the build locations
 var WF = {
@@ -40,7 +41,7 @@ gulp.task('spawn-gae-dev-command', function() {
 
   var stdioOption = SILENCE_OUTPUT ? 'ignore' : 'inherit';
 
-  spawn(gaeCommand, params, {stdio: stdioOption});
+  GAE_SPAWNED_TASK = spawn(gaeCommand, params, {stdio: stdioOption});
 });
 
 gulp.task('pretty-print-gae-info', function() {
