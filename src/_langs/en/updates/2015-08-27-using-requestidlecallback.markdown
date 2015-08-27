@@ -14,9 +14,9 @@ category: chrome
 product: chrome
 type: news
 tags:
-- digest
+- performance
 - update
-description: Find out which third-party scripts cause perf issues with the Aggregated Details in Timeline, how to choose consistent colors with the new color palette and much more.
+description: requestIdleCallback is new performance API for scheduling work when the user is idle.
 featured-image: /web/updates/images/2015-08-27-using-requestidlecallback/featured.jpg
 permalink: /updates/2015/08/27/using-requestidlecallback.html
 ---
