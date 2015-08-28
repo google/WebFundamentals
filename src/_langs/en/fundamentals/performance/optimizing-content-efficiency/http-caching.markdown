@@ -149,7 +149,7 @@ Once the response is cached by the browser, the cached version will be used unti
 
 The ability to define per-resource caching policies allows us to define “cache hierarchies” that allow us to control not only how long each is cached for, but also how quickly new versions are seen by visitor. For example, let’s analyze the above example:
 
-* The HTML is marked with “no-cache”, which means that the browser will always revalidate the document on each request and fetch the latest version if the contents change. Also, within the HTML markup we embed fingerprints in the URLs for CSS and JavaScript assets: if the contents of those files change, than the HTML of the page will change as well and new copy of the HTML response will be downloaded.
+* The HTML is marked with “no-cache”, which means that the browser will always revalidate the document on each request and fetch the latest version if the contents change. Also, within the HTML markup we embed fingerprints in the URLs for CSS and JavaScript assets: if the contents of those files change, then the HTML of the page will change as well and new copy of the HTML response will be downloaded.
 * The CSS is allowed to be cached by browsers and intermediate caches (e.g. a CDN), and is set to expire in 1 year. Note that we can use the “far future expires” of 1 year safely because we embed the file fingerprint its filename: if the CSS is updated, the URL will change as well.
 * The JavaScript is also set to expire in 1 year, but is marked as private, perhaps because it contains some private user data that the CDN shouldn’t cache.
 * The image is cached without a version or unique fingerprint and is set to expire in 1 day.
