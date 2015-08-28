@@ -19,7 +19,7 @@ description: Improve your perceived loading performance for web apps launched fr
 permalink: /updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-screen.html
 ---
 
-When you launch your web app from the homescreen a number of things happen behind the
+When you launch your web app from the home screen a number of things happen behind the
 scenes:
 
 1. Chrome needs to launch,
@@ -34,7 +34,7 @@ visible on the homepage.
 To provide a better user experience from Chrome 46 (Beta in September 2015) you can control the color
 of the screen by adding a `background_color` to your manifest and giving it an HTML 
 color value. The color will be used by Chrome the instant the web app is launched from the
-homescreen and will remain on the screen until the web apps first render.
+home screen and will remain on the screen until the web apps first render.
 
 Simply set the following in your manifest.
 
@@ -42,10 +42,10 @@ Simply set the following in your manifest.
 "background_color": "#2196F3",
 {% endhighlight %}
 
-There will now be no white screen as your site is launched from the homescreen.
+There will now be no white screen as your site is launched from the home screen.
 
 A good suggested value for this property is the background color of the load page.  Using the 
-same colors as the background page will allow for a smooth looking transistion from this
+same colors as the background page will allow for a smooth looking transition from this
 splashscreen to the homepage.
 
 It is strongly suggested that you add the `background_color` in to your manifest.
@@ -61,4 +61,4 @@ It is strongly suggested that you add the `background_color` in to your manifest
 <div class="clear"></div>
 
 To see this in action, visit <a href="https://airhorner.com">Airhorner &mdash; the worlds best airhorn</a> 
-and add it to your homescreen and then launch it. Or look at the <a href="https://airhorner.com/manifest.json">sites manifest</a>.
+and add it to your homescreen and then launch it. Or look at the <a href="https://airhorner.com/manifest.json">site's manifest</a>.
