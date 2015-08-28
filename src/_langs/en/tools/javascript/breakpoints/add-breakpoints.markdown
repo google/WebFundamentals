@@ -75,9 +75,15 @@ To add/remove a DOM mutation breakpoint:
 
 ## Breakpoint on an XMLHttpRequest
 
-Use the XMLHttpRequest breakpoint when the script communicates with the server via XHR and you want to examine the request’s data before it is transmitted. Execution pauses when an XMLHttpRequest is to be sent to a URL, before the request is sent.
+There are two different ways you can break on an `XMLHttpRequest`:
 
-To add/remove an XMLHttpRequest (XHR) breakpoint:
+* When a request URL contains a substring. DevTools breaks before the request is sent.
+* At a given stage in the `XMLHttpRequest` event lifecycle. DevTools breaks at the 
+  specified stage for all requests.
+
+### Break when XMLHttpRequest contains specific URL
+
+To break when an `XMLHttpRequest` URL contains a specific string:
 
 1. Click the **Add XHR breakpoint** button ![Add XHR breakpoint](imgs/image_4.png){:.inline} in the sidebar. 
 
@@ -89,7 +95,22 @@ To add/remove an XMLHttpRequest (XHR) breakpoint:
 
 *An XMLHttpRequest breakpoint*
 
-## Breakpoint on a JavaScript Event Listener
+### Break all XMLHttpRequests at given stage in event lifecycle
+
+To break at a given stage in the `XMLHttpRequest` event lifecycle:
+
+1. Open the **Sources** pane.
+
+2. Go to the **Event Listeners** panel.
+
+3. Expand the **XHR** dropdown menu.
+
+4. Select the stage in the event lifecycle which you want to break at.
+   DevTools breaks whenever that event occurs in any `XMLHttpRequest`.
+
+![Available breakpoints for XMLHttpRequest events](imgs/xhr-events.png)
+
+*XHR* is short for `XMLHttpRequest`.
 
 Use the JavaScript event listener breakpoint
 when you want to see how a certain event
