@@ -110,7 +110,7 @@ To break at a given stage in the `XMLHttpRequest` event lifecycle:
 
 ![Available breakpoints for XMLHttpRequest events](imgs/xhr-events.png)
 
-*XHR* is short for `XMLHttpRequest`.
+## Breakpoint on a JavaScript event listener 
 
 Use the JavaScript event listener breakpoint
 when you want to see how a certain event
