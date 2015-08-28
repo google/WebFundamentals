@@ -2,7 +2,7 @@
 rss: true
 layout: update
 published: true
-title: 'Using the web app manifest to create a solid color loading screen'
+title: 'Using the web app manifest to specify a site wide theme colour'
 date: 2015-08-29
 article:
   written_on: 2015-08-29
