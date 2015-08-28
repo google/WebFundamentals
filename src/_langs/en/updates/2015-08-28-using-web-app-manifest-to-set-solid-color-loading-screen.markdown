@@ -62,3 +62,12 @@ It is strongly suggested that you add the `background_color` in to your manifest
 
 To see this in action, visit <a href="https://airhorner.com">Airhorner &mdash; the worlds best airhorn</a> 
 and add it to your homescreen and then launch it. Or look at the <a href="https://airhorner.com/manifest.json">site's manifest</a>.
+
+### FAQ
+
+* <strong>Does this apply if my site is not launched from the homescreen?</strong>
+  No. The user will only see this when they launch it from the homescreen.
+* <strong>Will it ever apply to my entire site, say when they user is just browsing?</strong>
+  Unlikely at the moment, to do that it would mean that the browser would have to download the manifest
+  a lot more frequently and currently it is low priority asset. This is intended to be parsed when 
+  the user adds the site to the homescreen.
