@@ -3,15 +3,16 @@ rss: false
 layout: tools-article
 title: "How to Add or Remove Breakpoints"
 seotitle: "How to Add or Remove Breakpoints"
-description: "DevTools provides four types of breakpoints that you use in different circumstances: line, DOM mutation, XMLHttpRequest, event listener. Each breakpoint type is added or removed differently."
-introduction: "DevTools provides four types of breakpoints that you use in different circumstances. Each breakpoint type is added or removed differently."
+description: "DevTools provides five types of breakpoints that you use in different circumstances: line, DOM mutation, XMLHttpRequest, event listener, exception. Each breakpoint type is added or removed differently."
+introduction: "DevTools provides five types of breakpoints that you use in different circumstances. Each breakpoint type is added or removed differently."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-08-03
+  updated_on: 2015-08-28
   order: 2
 authors:
   - megginkearney
   - dgash
+  - kaycebasques
 priority: 0
 collection: breakpoints
 key-takeaways:
@@ -20,6 +21,7 @@ key-takeaways:
     - Breakpoint on a DOM mutation event to observe DOM changes.
     - Breakpoint on XMLHttpRequest to examine request data before it is transmitted. 
     - Breakpoint on a JavaScript event listener to see how a certain event (such as keypress or doubleclick) is processed by the script.
+    - Breakpoint on uncaught exceptions to pause before an exception is thrown.
 ---
 {% wrap content %}
 
@@ -29,7 +31,7 @@ Breakpoint types allow you to control exactly what conditions can trigger a paus
 
 {% include modules/takeaway.liquid list=page.key-takeaways.breakpoint %}
 
-## View breakpoints
+## Create, view, and delete breakpoints
 
 View existing breakpoints at any time in the Sources panel:
 
@@ -81,7 +83,7 @@ There are two different ways you can break on an `XMLHttpRequest`:
 * At a given stage in the `XMLHttpRequest` event lifecycle. DevTools breaks at the 
   specified stage for all requests.
 
-### Break when XMLHttpRequest contains specific URL
+### Break when XMLHttpRequest contains specific string
 
 To break when an `XMLHttpRequest` URL contains a specific string:
 
@@ -99,14 +101,12 @@ To break when an `XMLHttpRequest` URL contains a specific string:
 
 To break at a given stage in the `XMLHttpRequest` event lifecycle:
 
-1. Open the **Sources** pane.
+1. Go to the **Event Listener Breakpoints** panel.
 
-2. Go to the **Event Listeners** panel.
+2. Expand the **XHR** dropdown menu.
 
-3. Expand the **XHR** dropdown menu.
-
-4. Select the stage in the event lifecycle which you want to break at.
-   DevTools breaks whenever that event occurs in any `XMLHttpRequest`.
+3. Select the stage in the event lifecycle which you want to break at.
+   DevTools breaks at that stage for all `XMLHttpRequest` events.
 
 ![Available breakpoints for XMLHttpRequest events](imgs/xhr-events.png)
 
@@ -139,14 +139,10 @@ DevTools pauses at the statement where the exception is thrown. From there,
 you can use the call stack to investigate the program flow leading up
 to the exception.
 
-1. Go to the **Sources** panel of DevTools.
-
-<!-- crop and shrink screenshot -->
-
-1. Click on the **Pause on Exceptions** button:
-   !["pause on exceptions" button](imgs/pause-on-exception-button.png){:.inline}
-  
-
+1. Click on the **Pause on Exceptions** button 
+   (!["pause on exceptions" button](imgs/pause-on-exception-button.png){:.inline})
+   in the **Sources** panel of DevTools.
+   
 In the animation below, the user clicks on the *Pause on Exceptions* button
 and then triggers an uncaught exception in the script. DevTools automatically
 breaks at the line where the exception is thrown.
@@ -154,12 +150,11 @@ breaks at the line where the exception is thrown.
 {% animation animations/pause-on-uncaught-exception.mp4 %}
 
 You can also view the call stack leading up to an uncaught exception 
-by clicking the dropdown carat next to the uncaught exception 
-message (in the DevTools console). 
+in the DevTools console.
 
 In the animation below, the user triggers an uncaught exception and
-then view the call stack leading up to the exception in the DevTools
-console.
+then clicks the carat next to the uncaught exception message (`Uncaught 0`)
+in order to display the call stack leading up to the exception.
 
 {% animation animations/exception-in-console.mp4 %}
 
@@ -195,6 +190,13 @@ The following briefly summarizes the breakpoint types:
     <td data-th="Breakpoint type">Event listener</td>
     <td data-th="Breaks before">Listener is fired.</td>
     <td data-th="Use to">Follow how an event is processed.</td>
+  </tr>
+  <tr>
+    <td data-th="Breakpoint type">Exception</td>
+    <td data-th="Breaks before">Uncaught exception is thrown</td>
+    <td data-th="Use to">
+      Examine the context leading up to an uncaught exception.
+    </td>
   </tr>
   </tbody>
 </table>
