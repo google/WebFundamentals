@@ -32,43 +32,16 @@ $header-bg-color: $color-primary;
   fill: white;
 }
 
-.showhome-subheading {
-  margin-top: $base-line * 2;
-}
-
-.showhome-subheading__title {
-  margin-top: 0;
-
-  @include typo-title();
-}
-
-.showhome-subheading__description {
-  margin-bottom: 0;
-
-  @include typo-subhead();
-}
-
-.shows-feeds {
-  margin-top: $base-line * 2;
-  margin-bottom: $base-line * 2;
-}
-
-.shows-feeds__title {
-  @include typo-caption();
-
-  text-align: center;
-
-  margin: 0;
-  margin-bottom: $base-line / 4;
-}
-
-.shows-feeds__link {
+.show-index-item {
   display: flex;
+
   flex-direction: column;
-  align-items: center;
 }
 
-.shows-feeds__btn {
-  width: $base-line * 2;
-  height: $base-line * 2;
+.show-index-item__img {
+  margin-bottom: $base-line / 2;
+}
+
+.show-index-item__description a {
+  text-decoration: none;
 }

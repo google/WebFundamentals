@@ -35,25 +35,18 @@ gulp.task('clean', del.bind(null,
   ], {dot: true}));
 
 gulp.task('develop', function(cb) {
-  try {
-    runSequence(
-      'clean',
-      [
-        'generate-dev-css',
-        'cp-images',
-        'cp-fonts',
-        'cp-scripts',
-      ],
-      'compile-jekyll:localhost',
-      'start-gae-dev-server',
-      'dev-watch-tasks',
-      function() {
-        console.log('<----------------HERE 2 ZOMG ONE');
-        cb();
-      });
-  } catch (exception) {
-    console.log('<----------------HERE ZOMG ONE');
-  }
+  runSequence(
+    'clean',
+    [
+      'generate-dev-css',
+      'cp-images',
+      'cp-fonts',
+      'cp-scripts',
+    ],
+    'compile-jekyll:localhost',
+    'start-gae-dev-server',
+    'dev-watch-tasks',
+    cb);
 });
 
 gulp.task('build:staging', function(cb) {

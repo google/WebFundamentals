@@ -27,6 +27,10 @@ $header-bg-color: $color-primary;
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
 
+.wf-menu-svg {
+  fill: white;
+}
+
 .show-index-item {
   display: flex;
 
@@ -37,6 +41,39 @@ $header-bg-color: $color-primary;
   margin-bottom: $base-line / 2;
 }
 
-.show-index-item__description a {
+.show-index-item__info a {
   text-decoration: none;
+}
+
+.show-index-item__title {
+  display: none;
+
+  @include typo-title();
+}
+
+@media (min-width: 440px) {
+  .show-index-item {
+    flex-direction: row;
+  }
+
+  $description-flex: 6;
+
+  .show-index-item__img {
+    width: 0;
+    max-width: 300px;
+
+    flex: 10 - $description-flex;
+
+    margin: 0 ($base-line / 2) 0 0;
+  }
+
+  .show-index-item__info {
+    width: 0;
+
+    flex: $description-flex;
+  }
+
+  .show-index-item__title {
+    display: block;
+  }
 }
