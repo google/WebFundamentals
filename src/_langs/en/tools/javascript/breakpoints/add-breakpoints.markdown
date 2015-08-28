@@ -131,6 +131,38 @@ To add/remove a JavaScript event listener breakpoint:
 
 *An event listener breakpoint* 
 
+## Break on uncaught exceptions
+
+Use the **Pause on Uncaught Exceptions** DevTools feature to pause script
+execution on any uncaught exception. When an uncaught exception is encountered,
+DevTools pauses at the statement where the exception is thrown. From there,
+you can use the call stack to investigate the program flow leading up
+to the exception.
+
+1. Go to the **Sources** panel of DevTools.
+
+<!-- crop and shrink screenshot -->
+
+1. Click on the **Pause on Exceptions** button:
+   !["pause on exceptions" button](imgs/pause-on-exception-button.png){:.inline}
+  
+
+In the animation below, the user clicks on the *Pause on Exceptions* button
+and then triggers an uncaught exception in the script. DevTools automatically
+breaks at the line where the exception is thrown.
+
+{% animation animations/pause-on-uncaught-exception.mp4 %}
+
+You can also view the call stack leading up to an uncaught exception 
+by clicking the dropdown carat next to the uncaught exception 
+message (in the DevTools console). 
+
+In the animation below, the user triggers an uncaught exception and
+then view the call stack leading up to the exception in the DevTools
+console.
+
+{% animation animations/exception-in-console.mp4 %}
+
 ## Summary of breakpoint types
 
 The following briefly summarizes the breakpoint types:
