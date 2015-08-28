@@ -30,6 +30,8 @@ module Jekyll
       $css = 'shows-index.css'
       if self.data['layout'] == 'shows/show-home'
         $css = 'show-home.css'
+      elsif self.data['layout'] == 'shows/single-video'
+        $css = 'show-single-video.css'
       end
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/' + $css;
 
