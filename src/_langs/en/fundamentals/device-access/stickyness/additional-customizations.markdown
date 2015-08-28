@@ -20,7 +20,8 @@ collection: stickyness
 
 ## Color the browser elements
 
-Chrome, Firefox OS, Safari, Internet Explorer and Opera Coast allow you to define colors for elements of the browser and / or platform using meta tags.
+Chrome, Firefox OS, Safari, Internet Explorer and Opera Coast allow you to define colors for 
+elements of the browser and / or platform using meta tags.
 
 {% highlight html %}
 <!-- Chrome & Firefox OS -->
