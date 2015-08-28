@@ -36,8 +36,8 @@ is a hint from your web page that tells the browser what color to tint
 
 <div class="clear"></div>
 
-The problem is, you have to define the theme color on every single page, and if 
-you have a large site or legacy site, making a lot of site wide changes is not feasible.
+The problem is, you have to define the theme color on every single page and if 
+you have a large site or legacy site then making a lot of site wide changes is not feasible.
 
 Starting in Chrome 46 (Beta September 2015), adding in a `theme_color` attribute 
 to your manifest will have the effect of applying the colour automatically 
