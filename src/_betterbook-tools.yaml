@@ -5,7 +5,7 @@ toc:
 - title: "What's new"
   path: /updates/tools/
 - title: "Chrome DevTools"
-  path: /web/tools/chrome-devtools
+  path: /tools/chrome-devtools
   external: true
 - title: "Web Starter Kit"
   path: /tools/starter-kit/
