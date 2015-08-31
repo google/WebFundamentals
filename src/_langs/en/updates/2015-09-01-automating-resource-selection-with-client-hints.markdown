@@ -9,7 +9,7 @@ article:
   updated_on: 2015-09-01
 authors:
 - ilyagrigorik
-collection: update
+collection: updates
 category: chrome
 product: chrome
 type: news
