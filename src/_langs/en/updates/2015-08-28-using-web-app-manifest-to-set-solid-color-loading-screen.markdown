@@ -15,6 +15,7 @@ product: chrome
 type: news
 tags:
 - manifest
+- webapp
 description: Improve your perceived loading performance for web apps launched from the homescreen.
 permalink: /updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-screen.html
 ---

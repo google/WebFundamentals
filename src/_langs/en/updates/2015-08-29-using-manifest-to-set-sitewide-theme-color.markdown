@@ -14,11 +14,10 @@ category: chrome
 product: chrome
 type: news
 tags:
-- performance
-- update
+- webapp
+- manifest
 description: "Set a theme-color in the manifest and have it available to all pages on your
              site when launched from the home screen."
-featured-image: /web/updates/images/2015-08-27-using-requestidlecallback/featured.jpg
 permalink: /updates/2015/09/using-manifest-to-set-sitewide-theme-color.html
 ---
 
