@@ -50,8 +50,7 @@ and seamlessly install your Web App as per the images below.
 to add it!".  The good news is if you currently meet the following criteria Chrome will 
 manage the prompting of users:
 
-* You have a [web app manifest 
-  file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
+* You have a [web app manifest file](/web/fundamentals/devce-access/stickyness/web-app-manifest.html) 
   - The manifest defines how your app appears on the user's system and how it 
   should be launched - and you are required to have a \`short\_name\` and a 
   \`144x144\` png icon
@@ -189,8 +188,6 @@ btnSave.addEventListener('click', function() {
       // We no longer need the prompt.  Clear it up.
       deferredPrompt = null;
     });
-    
-    
   }
 });
 {% endhighlight %}
@@ -208,8 +205,7 @@ A new powerful feature for native app developers also landed in Chrome 44 &mdash
 
 The criteria is similar to the Web App install banner except for the need of a Service Worker:
 
-* You have a [web app manifest 
-  file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
+* You have a [web app manifest file](/web/fundamentals/devce-access/stickyness/web-app-manifest.html) 
   - The manifest defines how your app appears on the user's system and how it 
   should be launched - and you are required to have a \`short\_name\` and a 
   \`144x144\` png icon

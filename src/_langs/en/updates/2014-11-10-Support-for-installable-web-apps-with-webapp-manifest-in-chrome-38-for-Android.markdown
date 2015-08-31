@@ -13,7 +13,7 @@ title: "Installable Web Apps with the WebApp Manifest in Chrome for Android"
 description: "Use the WebApp manifest to control how your web app launches"
 article:
   written_on: 2014-11-10
-  updated_on: 2014-11-10
+  updated_on: 2015-08-28
 authors:
   - paulkinlan
 tags:
@@ -22,6 +22,9 @@ tags:
   - frontend
 permalink: /updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android.html
 ---
+
+*Note:* This article is pretty old now and a deeper version of the guidance is available in our
+[Device Access section](/web/fundamentals/device-access/stickness/web-app-manifest.html).
 
 For Web Apps to be successful they need to work as the user would expect an native application to work. The ability for the developer to control how their web app is launched is just one part of the UX that needs to be solved.  
 
