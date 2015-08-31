@@ -18,13 +18,13 @@ tags:
 - hpkp
 description: "Chrome 46 ships with a feature called HPKP reporting, which can help you roll 
 out a stricter form of SSL for your site."
-permalink: /updates/2015/09/HPKP-peporting-with-chrome-46.html
+permalink: /updates/2015/09/HPKP-reporting-with-chrome-46.html
 ---
 
 Chrome 46 ships with a feature called HPKP reporting, which can help you roll 
 out a stricter form of SSL for your site.
 
-##@ What do all these acronyms mean?
+### What do all these acronyms mean?
 
 Security on the web today relies on SSL certificates: cryptographic signatures 
 proving that a website is who it says who it is. When your browser sends a 
@@ -47,12 +47,12 @@ certificate chain. The browser will then refuse subsequent connections that
 don't match the pins that it has previously received. Here's an example of an 
 HPKP header:
 
-```
+{% highlight %}
 Public-Key-Pins:  
        pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM=";  
        pin-sha256="LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=";  
        max-age=259200
-```
+{% endhighlight %}
 
 This header specifies two certificate hashes as pins. One is a hash of a 
 certificate in the site's certificate chain, and the other is a backup pin, or a 
@@ -60,10 +60,9 @@ hash of a certificate that the site can use in the event that it needs to rotate
 its certificate. The header also includes a `max-age` value. After that number of 
 seconds elapses, the browser will forget about the pin.
 
-For more about HPKP in general, check out [the 
-spec](http://tools.ietf.org/html/rfc7469) or fellow Chrome developer Chris 
-Palmer's excellent [blog 
-post](https://noncombatant.org/2015/05/01/about-http-public-key-pinning/).
+For more about HPKP in general, check out [the spec](http://tools.ietf.org/html/rfc7469) 
+or fellow Chrome developer Chris Palmer's excellent 
+[blog post](https://noncombatant.org/2015/05/01/about-http-public-key-pinning/).
 
 ### Should I go turn on HPKP right now?
 
@@ -86,13 +85,13 @@ misconfigurations as you're rolling out HPKP.
 First, you can start by sending the `Public-Key-Pins-Report-Only` header instead 
 of the Public-Key-Pins header:
 
-```
+{% highlight %}
 Public-Key-Pins-**Report-Only**: 
        max-age=2592000;  
        pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=";  
        pin-sha256="LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=";  
 report-uri="https://example.net/pkp-report"
-```
+{% endhighlight %}
 
 When your site sends such a header, Chrome will verify if the current connection 
 matches the pins, and sends a report to the `report-uri` if not. Chrome will never 
