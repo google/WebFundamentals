@@ -32,12 +32,20 @@ it has stalled. This becomes especially apparent if you are loading your web pag
 network where frequently many pages take more than 1 or 2 seconds to get any content
 visible on the homepage.
 
+<div class="clear g-wide--full">
+    <figure class="fluid">
+        <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/white.png" alt="no background color = white screen">
+
+        <figcaption>White screen when launching app == bad</figcaption>
+    </figure>
+</div>
+
 To provide a better user experience from Chrome 46 (Beta in September 2015) you can control the color
 of the screen by adding a `background_color` to your manifest and giving it an HTML 
 color value. The color will be used by Chrome the instant the web app is launched from the
 home screen and will remain on the screen until the web app's first render.
 
-Simply set the following in your manifest.
+Simply set the following in your manifest:
 
 {% highlight json %}
 "background_color": "#2196F3",
@@ -53,9 +61,9 @@ It is strongly suggested that you add the `background_color` in to your manifest
 
 <div class="clear g-wide--full">
     <figure class="fluid">
-        <img src="images/background-color.png" alt="backgroud color">
+        <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/blue.png" alt="background color = blue loading screen">
 
-        <figcaption>Background color for launch screen</figcaption>
+        <figcaption>Blue screen when launching app == success</figcaption>
     </figure>
 </div>
 
@@ -66,9 +74,9 @@ and add it to your homescreen and then launch it. Or look at the <a href="https:
 
 ### FAQ
 
-* <strong>Does this apply if my site is not launched from the homescreen?</strong>
+* **Does this apply if my site is not launched from the homescreen?** <br>
   No. The user will only see this when they launch it from the homescreen.
-* <strong>Will it ever apply to my entire site, say when they user is just browsing?</strong>
+* **Will it ever apply to my entire site, say when they user is just browsing?** <br>
   Unlikely at the moment, to do that it would mean that the browser would have to download the manifest
   a lot more frequently and currently it is low priority asset. This is intended to be parsed when 
   the user adds the site to the homescreen.
