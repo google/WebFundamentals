@@ -184,8 +184,8 @@ example:
 <meta http-equiv="CH-Accept" value="DPR, Viewport-Width, Width">
 ...
 <picture>
-	<source media="(min-width: 50em)" sizes="50vw" srcset="/image/thing">
-	<img sizes="100vw" src="/image/thing-crop">
+  <source media="(min-width: 50em)" sizes="50vw" srcset="/image/thing">
+  <img sizes="100vw" src="/image/thing-crop">
 </picture>
 {% endhighlight %}
 
@@ -198,7 +198,7 @@ and tells the browser to advertise the device pixel ratio (DPR), the layout
 viewport width (Viewport-Width), and the intended display width (Width) of the 
 resources to the server. 
 
-	_Note:_ _Client-Hints support is enabled by default in Chrome 46._
+>	_Note: Client-Hints support is enabled by default in Chrome 46._
 
 **With Client-Hints enabled, the resulting client-side markup retains just the 
 presentation requirements**. The designer does not have to worry about image 
