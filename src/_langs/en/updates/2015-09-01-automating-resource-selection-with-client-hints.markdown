@@ -103,49 +103,49 @@ fetch conditional on viewport size. Have I mentioned this stuff is hard? Well,
 ok, let's get to it. The picture element will [get us pretty far](https://dev.opera.com/articles/responsive-images/):
 
 {% highlight html %}
-<picture>;
+<picture>
   <!-- serve WebP to Chrome and Opera -->
-	<source
-		media="(min-width: 50em)"
-		sizes="50vw"
-		srcset="/image/thing-200.webp 200w, /image/thing-400.webp 400w,
-				/image/thing-800.webp 800w, /image/thing-1200.webp 1200w,
-				/image/thing-1600.webp 1600w, /image/thing-2000.webp 2000w"
-		type="image/webp">
-	<source
-		sizes="(min-width: 30em) 100vw"
-		srcset="/image/thing-crop-200.webp 200w, /image/thing-crop-400.webp 400w,
-				/image/thing-crop-800.webp 800w, /image/thing-crop-1200.webp 1200w,
-				/image/thing-crop-1600.webp 1600w, /image/thing-crop-2000.webp 2000w"
-		type="image/webp">
-	<!-- serve JPEGXR to Edge -->
-	<source
-		media="(min-width: 50em)"
-		sizes="50vw"
-		srcset="/image/thing-200.jpgxr 200w, /image/thing-400.jpgxr 400w,
-				/image/thing-800.jpgxr 800w, /image/thing-1200.jpgxr 1200w,
-				/image/thing-1600.jpgxr 1600w, /image/thing-2000.jpgxr 2000w"
-		type="image/vnd.ms-photo">
-	<source
-		sizes="(min-width: 30em) 100vw"
-		srcset="/image/thing-crop-200.jpgxr 200w, /image/thing-crop-400.jpgxr 400w,
-				/image/thing-crop-800.jpgxr 800w, /image/thing-crop-1200.jpgxr 1200w,
-				/image/thing-crop-1600.jpgxr 1600w, /image/thing-crop-2000.jpgxr 2000w"
-		type="image/vnd.ms-photo">
-	<!-- serve JPEG to others -->
-	<source
-		media="(min-width: 50em)"
-		sizes="50vw"
-		srcset="/image/thing-200.jpg 200w, /image/thing-400.jpg 400w,
-				/image/thing-800.jpg 800w, /image/thing-1200.jpg 1200w,
-				/image/thing-1600.jpg 1600w, /image/thing-2000.jpg 2000w">
-	<source
-		sizes="(min-width: 30em) 100vw"
-		srcset="/image/thing-crop-200.jpg 200w, /image/thing-crop-400.jpg 400w,
-				/image/thing-crop-800.jpg 800w, /image/thing-crop-1200.jpg 1200w,
-				/image/thing-crop-1600.jpg 1600w, /image/thing-crop-2000.jpg 2000w">
-	<!-- fallback for browsers that don't support picture -->
-	<img src="/image/thing.jpg" width="50%">
+  <source
+    media="(min-width: 50em)"
+    sizes="50vw"
+    srcset="/image/thing-200.webp 200w, /image/thing-400.webp 400w,
+        /image/thing-800.webp 800w, /image/thing-1200.webp 1200w,
+        /image/thing-1600.webp 1600w, /image/thing-2000.webp 2000w"
+    type="image/webp">
+  <source
+    sizes="(min-width: 30em) 100vw"
+    srcset="/image/thing-crop-200.webp 200w, /image/thing-crop-400.webp 400w,
+        /image/thing-crop-800.webp 800w, /image/thing-crop-1200.webp 1200w,
+        /image/thing-crop-1600.webp 1600w, /image/thing-crop-2000.webp 2000w"
+    type="image/webp">
+  <!-- serve JPEGXR to Edge -->
+  <source
+    media="(min-width: 50em)"
+    sizes="50vw"
+    srcset="/image/thing-200.jpgxr 200w, /image/thing-400.jpgxr 400w,
+        /image/thing-800.jpgxr 800w, /image/thing-1200.jpgxr 1200w,
+        /image/thing-1600.jpgxr 1600w, /image/thing-2000.jpgxr 2000w"
+    type="image/vnd.ms-photo">
+  <source
+    sizes="(min-width: 30em) 100vw"
+    srcset="/image/thing-crop-200.jpgxr 200w, /image/thing-crop-400.jpgxr 400w,
+        /image/thing-crop-800.jpgxr 800w, /image/thing-crop-1200.jpgxr 1200w,
+        /image/thing-crop-1600.jpgxr 1600w, /image/thing-crop-2000.jpgxr 2000w"
+    type="image/vnd.ms-photo">
+  <!-- serve JPEG to others -->
+  <source
+    media="(min-width: 50em)"
+    sizes="50vw"
+    srcset="/image/thing-200.jpg 200w, /image/thing-400.jpg 400w,
+        /image/thing-800.jpg 800w, /image/thing-1200.jpg 1200w,
+        /image/thing-1600.jpg 1600w, /image/thing-2000.jpg 2000w">
+  <source
+    sizes="(min-width: 30em) 100vw"
+    srcset="/image/thing-crop-200.jpg 200w, /image/thing-crop-400.jpg 400w,
+        /image/thing-crop-800.jpg 800w, /image/thing-crop-1200.jpg 1200w,
+        /image/thing-crop-1600.jpg 1600w, /image/thing-crop-2000.jpg 2000w">
+  <!-- fallback for browsers that don't support picture -->
+  <img src="/image/thing.jpg" width="50%">
 </picture>
 {% endhighlight %}
 
@@ -306,8 +306,8 @@ management capabilities on the client. This is the extensible web in action.
 
 ### The Client-Hints FAQ
 
-1. **Where are Client-Hints available? <br/>
-   **Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
+1. **Where are Client-Hints available?** <br/>
+   Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
    consideration [in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216) and 
    [Edge](https://dev.modern.ie/platform/status/httpclienthints/). 
 
@@ -320,8 +320,8 @@ management capabilities on the client. This is the extensible web in action.
    mechanism to persist this preference for a particular origin, which will 
    allow the same hints to be delivered on navigation requests.
 
-1. **Why do we need Client-Hints if we have ServiceWorker?<br/>
-   **ServiceWorker does not have access to layout, resource and viewport width 
+1. **Why do we need Client-Hints if we have ServiceWorker?** <br/>
+   ServiceWorker does not have access to layout, resource and viewport width 
    information. At least, not without introducing costly roundtrips and 
    significantly delaying the image request - e.g. when an image request is 
    initiated by the preload parser. Client-Hints integrates with the browser to 
@@ -334,8 +334,8 @@ management capabilities on the client. This is the extensible web in action.
    also get the same information and can be used to optimize those resources as 
    well.
 
-1. **Some image requests do not report Width, why?<br/>
-   **The browser may not know the intended display width because the site is 
+1. **Some image requests do not report Width, why?** <br/>
+   The browser may not know the intended display width because the site is 
    relying on the intrinsic size of the image. As a result, the Width hint is 
    omitted for such requests, and for requests that don't have "display width" - 
    e.g. a JavaScript resource. To receive Width hints make sure to specify a 
