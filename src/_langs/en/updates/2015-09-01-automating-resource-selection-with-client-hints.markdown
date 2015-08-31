@@ -2,7 +2,7 @@
 rss: true
 layout: update
 published: true
-title: 'Automating resource selection with Client-Hints'
+title: 'Automating resource selection with Client Hints'
 date: 2015-09-01
 article:
   written_on: 2015-09-01
@@ -21,8 +21,8 @@ permalink: /updates/2015/09/automating-resource-selection-with-client-hints.html
 ---
 
 Building for the web gives you unparalleled reach. Your web application is a 
-click away and available on most every connected device -- smartphone, tablet, 
-laptop and desktop, TV, and more -- regardless of the brand or the platform. To 
+click away and available on most every connected device&mdash;smartphone, tablet, 
+laptop and desktop, TV, and more&mdash;regardless of the brand or the platform. To 
 deliver the best experience you've, of course, built a 
 [responsive site](https://developers.google.com/web/fundamentals/layouts/index?hl=en) that 
 adapts the presentation and functionality for each form-factor, and now you're 
@@ -40,26 +40,26 @@ is hard**:
 * Determine which metadata should be kept or stripped
 * Make multiple variants of each for each display + DPR resolution
 * ...
-* Account for users network type, speed, and preferences
+* Account for user's network type, speed, and preferences
 
 Individually, these are [well-understood problems](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en). 
 Collectively, they create a large optimization space that we (the developers) 
-often overlook or neglect -- _"ain't nobody got time fo that"_. Humans do a poor 
+often overlook or neglect&mdash;_"ain't nobody got time fo that"_. Humans do a poor 
 job of exploring the same search space repetitively, especially when many steps 
-are involved. Computers, on the other hand, excel at these types of tasks.** **
+are involved. Computers, on the other hand, excel at these types of tasks.
 
 **The answer to a good and sustainable optimization strategy for images, and 
 other resources with similar properties is simple: automation.** If you're 
 hand-tuning your resources, you're doing it wrong: you'll forget, you'll get 
-lazy, or someone else will make these mistake for you - guaranteed.
+lazy, or someone else will make these mistake for you&mdash;guaranteed.
 
 ### The saga of the performance-conscious developer
 
 The search through image optimization space has two distinct phases: build-time 
 and run-time.
 
-* Some optimizations are intrinsic to the resource itself - e.g. selecting the 
-  appropriate format, encoding type, tuning compression settings for each 
+* Some optimizations are intrinsic to the resource itself&mdash;e.g. selecting the 
+  appropriate format and encoding type, tuning compression settings for each 
   encoder, stripping unnecessary metadata and so on. These steps can be 
   performed at "build-time".
 * Other optimizations are determined by the type and properties of the client 
@@ -74,11 +74,12 @@ research. This is an area ripe for innovation, but for the purposes of this post
 I'll leave it at that. Let's focus on the run-time part of the story.
 
 {% highlight html %}
-<img src="/image/thing" sizes="50vw" alt="image thing displayed at 50% of viewport width">
+<img src="/image/thing" sizes="50vw" 
+     alt="image thing displayed at 50% of viewport width">
 {% endhighlight %}
 
 The application intent is very simple: fetch and display the image at 50% of the 
-users viewport. This is where most every designer washes their hands and heads 
+user's viewport. This is where most every designer washes their hands and heads 
 for the bar. Meanwhile, the performance-conscious developer on the team is in 
 for a long night:
 
@@ -88,10 +89,10 @@ for a long night:
    each image at different resolutions: 1x, 1.5x, 2x, 2.5x, 3x, and maybe even a 
    few more in between.
 1. To avoid delivering unnecessary pixels she needs to understand what "50% of 
-   users viewport actually means" -- there are a lot of different viewport 
+   the user's viewport actually means"&mdash;there are a lot of different viewport 
    widths out there! 
 1. Ideally, she also wants to deliver a [resilient experience](https://www.igvita.com/2015/01/26/resilient-networking/) where 
-   users on slower networks will automatically fetch a lower resolution - after 
+   users on slower networks will automatically fetch a lower resolution. After 
    all, it's all about time to glass.
 1. The application also exposes some user controls that affect which image 
    resource ought to be fetched, so there's that to factor in as well.
@@ -100,7 +101,7 @@ Oh, and then the designer realizes that she needs to display a different image
 at 100% width if the viewport size is small to optimize legibility. This means 
 we now have to repeat the same process for one more asset, and then make the 
 fetch conditional on viewport size. Have I mentioned this stuff is hard? Well, 
-ok, let's get to it. The picture element will [get us pretty far](https://dev.opera.com/articles/responsive-images/):
+ok, let's get to it. The `picture` element will [get us pretty far](https://dev.opera.com/articles/responsive-images/):
 
 {% highlight html %}
 <picture>
@@ -151,31 +152,31 @@ ok, let's get to it. The picture element will [get us pretty far](https://dev.op
 
 We've handled the art direction, format selection, and provided six variants of 
 each image to account for variability in DPR and viewport width of the client's 
-device -- impressive!
+device. Impressive!
 
 > _Note: For the courageous, Jason Grigsby has a great 10-part
-> '__[responsive images 101](http://blog.cloudfour.com/responsive-images-part-10-conclusion/)__' 
-> series that goes in-depth on explaining all the in's and out's of the picture 
+> '[__responsive images 101__](http://blog.cloudfour.com/responsive-images-part-10-conclusion/)' 
+> series that explains in depth all the in's and out's of the `picture` 
 > element._
 
-Unfortunately, the picture element does not allow us to define any rules for how 
+Unfortunately, the `picture` element does not allow us to define any rules for how 
 it should behave based on client's connection type or speed. That said, its 
 processing algorithm does allow the user agent to adjust what resource it 
 fetches in some cases. We'll just have to hope that the user agent is smart 
-enough (note: none of the current implementations are). Similarly, there are no 
-hooks in picture to allow for app-specific logic to account for app or user 
+enough. (Note: none of the current implementations are). Similarly, there are no 
+hooks in the `picture` element to allow for app-specific logic that accounts for app or user 
 preferences. To get these last two bits we'd have to move all of the above logic 
 into JavaScript, but that forfeits the preload scanner optimizations offered by 
-picture. Hmm. 
+`picture`. Hmm. 
 
-That said, those limitations aside, it works. Well, at least for this particular 
+Those limitations aside, it works. Well, at least for this particular 
 asset. The real, and the long-term challenge here is that we can't expect the 
-designer or the developer to hand-craft code like this for each and every asset: 
-it's a fun brain puzzle on the first try, and it loses its appeal immediately 
+designer or the developer to hand-craft code like this for each and every asset. 
+It's a fun brain puzzle on the first try, but it loses its appeal immediately 
 after that. **We need automation. **Perhaps the IDE's or other content-transform 
 tooling can save us and automatically generate the boilerplate above.
 
-### Automating resource selection with Client-Hints
+### Automating resource selection with client hints
 
 Take a deep breath, suspend your disbelief, and now consider the following 
 example:
@@ -193,22 +194,22 @@ Believe it or not, the above example is sufficient to deliver all the same
 capabilities as the much longer picture markup above plus, as we will see, it 
 enables full developer control over how, which, and when the image resources are 
 fetched. The "magic" is in the first line that 
-[enables Client-Hints reporting](https://github.com/igrigorik/http-client-hints#http-client-hints-internet-draft) 
-and tells the browser to advertise the device pixel ratio (DPR), the layout 
-viewport width (Viewport-Width), and the intended display width (Width) of the 
+[enables client hints reporting](https://github.com/igrigorik/http-client-hints#http-client-hints-internet-draft) 
+and tells the browser to advertise the device pixel ratio (`DPR`), the layout 
+viewport width (`Viewport-Width`), and the intended display width (`Width`) of the 
 resources to the server. 
 
->	_Note: Client-Hints support is enabled by default in Chrome 46._
+>	_Note:_ _Client hints support is enabled by default in Chrome 46._
 
-**With Client-Hints enabled, the resulting client-side markup retains just the 
+**With client hints enabled, the resulting client-side markup retains just the 
 presentation requirements**. The designer does not have to worry about image 
 types, client resolutions, optimal breakpoints to reduce delivered bytes, or 
-other resource selection criteria -- let's face it, they never did, and they 
+other resource selection criteria. Let's face it, they never did, and they 
 shouldn't have to. Better, the developer also does not need to rewrite and 
 expand the above markup because the actual resource selection is negotiated by 
 the client and server.
 
-**Chrome 46 provides native support for the DPR, Width, and Viewport-Width 
+**Chrome 46 provides native support for the `DPR`, `Width`, and `Viewport-Width` 
 hints.** The hints are disabled by default and the `<meta http-equiv="CH-Accept" ...>` 
 above serves as an opt-in signal that tells Chrome to append the specified headers to
 outgoing requests. With that in place, let's examine the request and response headers 
@@ -220,18 +221,18 @@ Chrome advertises its support for the WebP format [via the Accept request header
 the new Edge browser similarly advertises support for JPEG XR via the Accept 
 header.
 
-The next three request headers are the Client-Hints headers advertising the 
+The next three request headers are the client-hint headers advertising the 
 device pixel ratio of the client's device (3x), the layout viewport width 
 (460px), and the intended display width of the resource (230px). This provides 
 all the necessary information to the server to select the optimal image variant 
 based on its own set of policies: availability of pregenerated resources, cost 
 of re-encoding or resizing a resource, popularity of a resource, current server 
-load, and so on. In this particular case, the server uses the DPR and 
-Width hints and returns a WebP resource, as indicated by the Content-Type,
-Content-DPR and Vary headers. 
+load, and so on. In this particular case, the server uses the `DPR` and 
+`Width` hints and returns a WebP resource, as indicated by the `Content-Type`,
+`Content-DPR` and `Vary` headers. 
 
 > _Note: The server uses Content-DPR header to 
-> __[confirm the DPR of the returned asset](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-3.1)__ 
+> [__confirm the DPR of the returned asset__](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-3.1) 
 > to allow the user agent to calculate the correct 'intrinsic size' of the image 
 > resource._
 
@@ -246,16 +247,17 @@ appropriate response: she can use any language or server she likes, or, let a
 third party service or a CDN do this on her behalf.
 
 {% highlight html %}
-<img src="/image/thing" sizes="50vw" alt="image thing displayed at 50% of viewport width">
+<img src="/image/thing" sizes="50vw"
+     alt="image thing displayed at 50% of viewport width">
 {% endhighlight %}
 
-Also, remember this guy above? **With Client-Hints the humble image tag is now 
+Also, remember this guy above? **With client hints the humble image tag is now 
 DPR-, viewport-, and width-aware without any additional markup.** If you need to 
-add art-direction you can use the picture tag, as we illustrated above, but 
+add art-direction you can use the `picture` tag, as we illustrated above, but 
 otherwise all of your existing image tags can get an instant image optimization 
 upgrade. 
 
-In short, Client-Hints enhance existing image and picture elements and give 
+In short, client hints enhance existing image and picture elements and give 
 you necessary tools to enable automation of image optimization and delivery for 
 your application.
 
@@ -263,9 +265,9 @@ your application.
 
 ServiceWorker is, in effect, a client-side proxy running in your browser. It 
 intercepts all outgoing requests and allows you to inspect, rewrite, cache, and 
-even synthesize responses. Images are no different and, with Client-Hints 
+even synthesize responses. Images are no different and, with client hints 
 enabled, the active ServiceWorker can identify the image requests, inspect the 
-provided Client-Hints, and define own processing logic. 
+provided client hints, and define its own processing logic. 
 
 {% highlight javascript %}
 self.onfetch = function(event) {
@@ -281,53 +283,53 @@ self.onfetch = function(event) {
 <img src="/web/updates/images/2015-09-01-automating-resource-selection-with-client-hints/ch-serviceworker.png" />
 
 **ServiceWorker gives you full client-side control over the resource 
-selection**. This is critical, let that sink in, because the possibilities are 
+selection**. This is critical. Let that sink in, because the possibilities are 
 near infinite: 
 
-* You can rewrite the Client-Hints header values set by the user agent
-* You can append new Client-Hints headers values to the request
+* You can rewrite the client hints header values set by the user agent.
+* You can append new client hints headers values to the request.
 * You can rewrite the URL and point the image request at an alternative server 
-  (e.g. CDN)
+  (e.g. CDN).
     * You can even move the hint values from headers and into the URL itself if 
-      that makes things easier to deploy in your infrastructure
-* You can cache responses and define own logic for which resources are served
-* You can adapt your response based on users connectivity
-    * You can [use NetInfo API to query and advertise your 
+      that makes things easier to deploy in your infrastructure.
+* You can cache responses and define own logic for which resources are served.
+* You can adapt your response based on users' connectivity.
+    * You can [use the NetInfo API to query and advertise your 
       preferences](https://www.igvita.com/2014/12/15/capability-reporting-with-service-worker/) 
-      to the server
-    * You can return an alternate response if the fetch is slow
-* You can account for application and user preference overrides
+      to the server.
+    * You can return an alternate response if the fetch is slow.
+* You can account for application and user preference overrides.
 * You can … do anything your heart desires, really
 
-Picture element provides the necessary art-direction control in the HTML markup. 
-Client-Hints provides annotations on resulting image requests that enable 
+The `picture` element provides the necessary art-direction control in the HTML markup. 
+Client hints provide annotations on resulting image requests that enable 
 resource selection automation. ServiceWorker provides full request and response 
 management capabilities on the client. This is the extensible web in action.
 
-### The Client-Hints FAQ
+### The Client Hints FAQ
 
-1. **Where are Client-Hints available?** <br/>
+1. **Where are client hints available?** <br/>
    Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
-   consideration [in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216) and 
+   consideration in [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216) and 
    [Edge](https://dev.modern.ie/platform/status/httpclienthints/). 
 
-1. **Why are the Client-Hints opt-in?** <br/>
-   We want to minimize overhead for sites that won't use Client-Hints. To enable 
-   Client-Hints the site should provide the [Accept-CH header](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-2.2.1) 
+1. **Why are the client hints opt-in?** <br/>
+   We want to minimize overhead for sites that won't use client hints. To enable 
+   client hints the site should provide the [`Accept-CH` header](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-2.2.1) 
    or equivalent `<meta http-equiv>` directive in the page markup. With 
    either of those present, the user agent will append the appropriate hints to 
    all subresource requests. In the future, we may provide an additional 
    mechanism to persist this preference for a particular origin, which will 
    allow the same hints to be delivered on navigation requests.
 
-1. **Why do we need Client-Hints if we have ServiceWorker?** <br/>
-   ServiceWorker does not have access to layout, resource and viewport width 
+1. **Why do we need client hints if we have ServiceWorker?<br/>
+   **ServiceWorker does not have access to layout, resource and viewport width
    information. At least, not without introducing costly roundtrips and 
    significantly delaying the image request - e.g. when an image request is 
-   initiated by the preload parser. Client-Hints integrates with the browser to 
+   initiated by the preload parser. Client hints integrates with the browser to 
    make this data available as part of the request.
 
-1. **Are Client-Hints for image resources only?**<br/>
+1. **Are client hints for image resources only?**<br/>
    The core use case behind DPR, Viewport-Width, and Width hints is to enable 
    resource selection for image assets. However, the same hints are delivered 
    for all subresources regardless of type -- e.g. CSS and JavaScript requests 
