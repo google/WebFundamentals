@@ -247,7 +247,8 @@ appropriate response: she can use any language or server she likes, or, let a
 third party service or a CDN do this on her behalf.
 
 {% highlight html %}
-<img src="/image/thing" sizes="50vw" alt="image thing displayed at 50% of viewport width">
+<img src="/image/thing" sizes="50vw"
+     alt="image thing displayed at 50% of viewport width">
 {% endhighlight %}
 
 Also, remember this guy above? **With Client-Hints the humble image tag is now 
