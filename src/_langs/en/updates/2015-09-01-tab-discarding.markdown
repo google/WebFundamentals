@@ -2,7 +2,7 @@
 rss: true
 layout: update
 published: true
-title: 'Tab Discarding in Chrome: a memory-saving experiment '
+title: 'Tab Discarding in Chrome: a Memory-Saving Experiment '
 date: 2015-09-01
 article:
   written_on: 2015-09-01
@@ -16,26 +16,26 @@ type: news
 tags:
 - performance
 - update
-description: Reducing Chrome's memory footprint is one of the team's top priorities for this year.
+description: Reducing Chrome's memory footprint is one of the team's top priorities this year.
 featured-image: /web/updates/images/2015-09-01-tab-discarding/image09.png
 permalink: /updates/2015/09/tab-discarding-in-chrome-46.html
 ---
 
-Reducing Chrome's memory footprint is one of the team's top priorities for this 
-year. We've already seen up to a 45% reduction in GMail's memory usage thanks 
+Reducing Chrome's memory footprint is one of the team's top priorities this 
+year. We've already seen up to a 45% reduction in GMail's memory usage thanks to
 improvements in V8's [garbage collection](http://v8project.blogspot.nl/2015/08/getting-garbage-collection-for-free.html) 
-process but we're really just getting started here. One of our next experiments 
-to tackle memory use is aimed at tab hoarders (like myself). It's called **Tab 
-Discarding.**
+process but we're really just getting started. One of our next experiments 
+in memory use is aimed at tab hoarders (like myself). It's called **Tab 
+Discarding**.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image00.png" />  
-_Tab Discarding is available as an experiment in Chrome 46 and above._
+_Tab discarding is available as an experiment in Chrome 46 and above._
 
 ### Background
 
 For every tab you have open our renderer process usually takes around 50MB per 
 tab, even though most people use just a single tab at a time. If you've got 10 
-tabs open simultaneously there's at least 450MB of memory being spent just to 
+tabs open there's at least 450MB of memory being spent just to 
 keep your background tab state. This can get a little unwieldy over time.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image01.png" />
@@ -47,29 +47,29 @@ tabs in the background are unused.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image02.png" />
 
-That's where Tab Discarding can help reduce our memory usage.
+That's where tab discarding can help reduce our memory usage.
 
 ### Discarding unused tabs
 
-Tab Discarding allows Chrome to automatically discard tabs that aren't of great 
+Tab discarding allows Chrome to automatically discard tabs that aren't of great 
 interest to you when it's detected that system memory is running pretty low. 
 What do we mean by discarding? Well, a discarded tab doesn't go anywhere. We 
 kill it but it's still visible on the Chrome tab strip. If you navigate back to 
-a tab that's been discarded, it'll reload if clicked. Form content, scroll 
+a tab that's been discarded, it'll reload when clicked. Form content, scroll 
 position and so on are saved and restored the same way they would be during 
 forward/backward tab navigation.
 
-Note: The current mechanism is similar to how we tackle Tab Discarding on 
-ChromeOS. The renderer process is shut down. When the tab gets reactivated we go 
-back to the network and load it like normal.  
+> Note: The current mechanism is similar to how we tackle tab discarding on 
+> ChromeOS. The renderer process is shut down. When the tab gets reactivated we go 
+> back to the network and load it like normal.  
 
-We also have another new feature that allows caching all tab resources locally, 
-that works nicely with tab discarding when you're offline. When the tab is 
+We also have another new feature that allows caching all tab resources locally 
+which works nicely with tab discarding when you're offline. When the tab is 
 reactivated we offer you the choice to reload the cached version that was 
 previously loaded over the network. To enable page reloading from cache, you can 
-try out another experiment for this under `chrome://flags/#show-saved-copy`.
+try out another experiment under `chrome://flags/#show-saved-copy`.
 
-You can try out Tab Discarding today by enabling it via 
+You can try out tab discarding today by enabling it via 
 `chrome://flags/#enable-tab-discarding` and relaunching Chrome. You can 
 control whether it's enabled or disabled via the same Chrome `chrome://flags` 
 page. 
@@ -92,7 +92,7 @@ clicking its corresponding 'Discard' button. A discarded tab will display with a
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image06.png" />
 
-**Tab Discarding discards tabs in this order:**
+**Tab discarding discards tabs in this order:**
 
 - Internal pages like new tab page, bookmarks, etc.  
 - Tabs selected a long time ago  
@@ -101,20 +101,19 @@ clicking its corresponding 'Discard' button. A discarded tab will display with a
 - Pinned tabs  
 - The selected tab
 
-We've enabled the Tab Discarding experiment in Chrome Canary for Windows and Mac 
+We've enabled the tab discarding experiment in Chrome Canary for Windows and Mac 
 OS, with a Linux implementation coming soon.
 
  ### Inspiration: Hey there, Great Suspender.**
 
-If Tab Discarding sounds familiar, it's because you've probably come across 
+If tab discarding sounds familiar, it's because you've probably come across 
 useful Chrome extensions that give you a slightly simpler version of this idea, 
-such as the [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg). 
-The Great Suspender aims to reduce Chrome's memory and GPU footprint by 
+such as the [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg). The Great Suspender aims to reduce Chrome's memory and GPU footprint by 
 suspending tabs after a custom period of inactivity. 
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image07.png"/>
 
-Similar to Tab Discarding, tabs can be un-suspended when you need to interact 
+Similar to tab discarding, tabs can be un-suspended when you need to interact 
 with them again. Great Suspender maintains each tab's title and favicon, showing 
 suspended tabs in a dimmed state, making it straight-forward to navigate back to 
 them any time. 
@@ -125,14 +124,14 @@ on memory. Tabs I am still actively using (GitHub and YouTube) are however still
 running as normal._
 
 We actually had a great chat with the author of the Great Suspender extension 
-while developing Tab Discarding and they're glad to see us natively tackling 
+while developing tab discarding and they're glad to see us natively tackling 
 this problem in ways that are more efficient than an extension might be able to, 
 such as losing the state of your user inactions.
 
-### Future improvements: The Tab Serializer
+### Future improvements: the tab serializer
 
-The Tab Serializer is a future piece of work we think may lead to significant 
-improvements on our current approach to Tab Discarding. It takes the contents of 
+The tab serializer is a future piece of work we think may lead to significant 
+improvements on our current approach to tab discarding. It takes the contents of 
 a Chrome tab and serializes its \*current\* state into a binary blob. This 
 binary blob can later be deserialized into a tab.
 
@@ -144,20 +143,20 @@ the state of the V8 JavaScript VM.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image09.png" />
 
-If you use Android or ChromeOS, you may know that (similar to the Tab Discarding 
+If you use Android or ChromeOS, you may know that (similar to the tab discarding 
 experiment covered in this post) we kill background tabs aggressively in order 
 to ensure memory usage is low. The issue with the way we tackle this was that 
 your tab would lose \*all\* of its state. 
 
 When you showed interest in the tab again, we would have to reload it and all 
-your interaction with it would be lost. The Tab Serializer just approaches this 
-problem in a way that gets you back to almost exactly what you were looking at 
+your interaction with it would be lost. The tab serializer just approaches this 
+problem in a way that gets you back to almost exactly what you were 
 without requiring going back to the network. We look forward to sharing more 
 information about this work at a later date.
 
-### Try Tab Discarding out and let us know what you think
+### Try out tab discarding and let us know what you think
 
 We'd love to know whether this feature is useful to you and how it could be 
 improved. Try it out, play around with it (especially if you're a tab hoarder!) 
-and let us know what you think in the comments :) We'd also appreciate any bugs 
-you run into filed on [crbug.com](https://crbug.com)!
+and let us know what you think in the comments. :) We'd also appreciate it if you 
+file tickets for any bugs you encounter on [crbug.com](https://crbug.com).
