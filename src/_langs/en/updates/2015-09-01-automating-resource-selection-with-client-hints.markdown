@@ -74,7 +74,8 @@ research. This is an area ripe for innovation, but for the purposes of this post
 I'll leave it at that. Let's focus on the run-time part of the story.
 
 {% highlight html %}
-<img src="/image/thing" sizes="50vw" alt="image thing displayed at 50% of viewport width">
+<img src="/image/thing" sizes="50vw" 
+     alt="image thing displayed at 50% of viewport width">
 {% endhighlight %}
 
 The application intent is very simple: fetch and display the image at 50% of the 
