@@ -47,12 +47,11 @@ certificate chain. The browser will then refuse subsequent connections that
 don't match the pins that it has previously received. Here's an example of an 
 HPKP header:
 
-{% highlight %}
-Public-Key-Pins:  
+<pre><code>Public-Key-Pins:  
        pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM=";  
        pin-sha256="LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=";  
        max-age=259200
-{% endhighlight %}
+</code></pre>
 
 This header specifies two certificate hashes as pins. One is a hash of a 
 certificate in the site's certificate chain, and the other is a backup pin, or a 
@@ -85,13 +84,13 @@ misconfigurations as you're rolling out HPKP.
 First, you can start by sending the `Public-Key-Pins-Report-Only` header instead 
 of the Public-Key-Pins header:
 
-{% highlight %}
+<pre><code>
 Public-Key-Pins-**Report-Only**: 
        max-age=2592000;  
        pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=";  
        pin-sha256="LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=";  
 report-uri="https://example.net/pkp-report"
-{% endhighlight %}
+</code></pre>
 
 When your site sends such a header, Chrome will verify if the current connection 
 matches the pins, and sends a report to the `report-uri` if not. Chrome will never 
