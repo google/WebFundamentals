@@ -185,7 +185,7 @@ example:
 ...
 <picture>
 	<source media="(min-width: 50em)" sizes="50vw" srcset="/image/thing">
-	<img sizes="(min-width: 30em) 100vw" src="/image/thing-crop">
+	<img sizes="100vw" src="/image/thing-crop">
 </picture>
 {% endhighlight %}
 
@@ -221,14 +221,14 @@ the new Edge browser similarly advertises support for JPEG XR via the Accept
 header.
 
 The next three request headers are the Client-Hints headers advertising the 
-device pixel ratio of the client's device (2x), the layout viewport width 
-(375px), and the intended display width of the resource (314px). This provides 
+device pixel ratio of the client's device (3x), the layout viewport width 
+(460px), and the intended display width of the resource (230px). This provides 
 all the necessary information to the server to select the optimal image variant 
 based on its own set of policies: availability of pregenerated resources, cost 
 of re-encoding or resizing a resource, popularity of a resource, current server 
 load, and so on. In this particular case, the server uses the DPR and 
-Viewport-Width hints and returns a PNG resource, as indicated by the 
-Content-Type and Vary headers. 
+Width hints and returns a WebP resource, as indicated by the Content-Type,
+Content-DPR and Vary headers. 
 
 > _Note: The server uses Content-DPR header to 
 > __[confirm the DPR of the returned asset](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-3.1)__ 
@@ -305,7 +305,7 @@ management capabilities on the client. This is the extensible web in action.
 1. **Where are Client-Hints available? <br/>
    **Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
    consideration [in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216), 
-   [Edge](https://dev.modern.ie/platform/status/httpclienthints/), and webkit. 
+   [Edge](https://dev.modern.ie/platform/status/httpclienthints/), and Webkit. 
 
 1. **Why are the Client-Hints opt-in?** <br/>
    We want to minimize overhead for sites that won't use Client-Hints. To enable 
