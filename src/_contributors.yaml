@@ -581,6 +581,20 @@ borissmus:
   role:
     - author
   email: smus@google.com
+  
+emilystark:
+  name:
+    given: Emily
+    family: Stark
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  homepage: https://www.emilymstark.com/
+  twitter: estark37
+  email: estark@chromium.org
 
 samthorogood:
   name:
