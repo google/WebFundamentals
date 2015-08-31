@@ -320,8 +320,8 @@ management capabilities on the client. This is the extensible web in action.
    mechanism to persist this preference for a particular origin, which will 
    allow the same hints to be delivered on navigation requests.
 
-1. **Why do we need client hints if we have ServiceWorker?**<br/>
-   ServiceWorker does not have access to layout, resource and viewport width
+1. **Why do we need client hints if we have ServiceWorker?<br/>
+   **ServiceWorker does not have access to layout, resource and viewport width
    information. At least, not without introducing costly roundtrips and 
    significantly delaying the image request - e.g. when an image request is 
    initiated by the preload parser. Client hints integrates with the browser to 
