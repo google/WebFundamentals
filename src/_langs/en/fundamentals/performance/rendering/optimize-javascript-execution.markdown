@@ -69,7 +69,7 @@ dataSortWorker.postMesssage(dataToSort);
 // The main thread is now free to continue working on other things...
 
 dataSortWorker.addEventListener('message', function(evt) {
-   var sortedData = e.data;
+   var sortedData = evt.data;
    // Update data on screen...
 });
 
