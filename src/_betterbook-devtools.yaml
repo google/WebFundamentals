@@ -1,6 +1,6 @@
 toc:
 - title: "<strong>DevTools</strong>"
-  path: /web/tools/chrome-devtools/
+  path: /tools/chrome-devtools/
   home: true
 - title: "Documentation"
   path: "#docs"
