@@ -253,7 +253,11 @@ Also, remember this guy above? **With Client-Hints the humble image tag is now
 DPR-, viewport-, and width-aware without any additional markup.** If you need to 
 add art-direction you can use the picture tag, as we illustrated above, but 
 otherwise all of your existing image tags can get an instant image optimization 
-upgrade. Client-Hints enhance existing image and picture elements.
+upgrade. 
+
+In short, Client-Hints enhance existing image and picture elements and give 
+you necessary tools to enable automation of image optimization and delivery for 
+your application.
 
 ### Taking control over resource selection with ServiceWorker
 
@@ -304,8 +308,8 @@ management capabilities on the client. This is the extensible web in action.
 
 1. **Where are Client-Hints available? <br/>
    **Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
-   consideration [in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216), 
-   [Edge](https://dev.modern.ie/platform/status/httpclienthints/), and Webkit. 
+   consideration [in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216) and 
+   [Edge](https://dev.modern.ie/platform/status/httpclienthints/). 
 
 1. **Why are the Client-Hints opt-in?** <br/>
    We want to minimize overhead for sites that won't use Client-Hints. To enable 
@@ -341,13 +345,13 @@ management capabilities on the client. This is the extensible web in action.
 1. **What about &lt;insert my favorite hint&gt;?**<br/>
    ServiceWorker enables developers to intercept and modify (e.g. add new 
    headers) all outgoing requests. As an example, it is easy to add 
-   NetInfo-based information to indicate current connection type -- see 
+   [NetInfo](https://w3c.github.io/netinfo/)-based information to indicate current connection type -- see 
    "[Capability reporting with ServiceWorker](https://www.igvita.com/2014/12/15/capability-reporting-with-service-worker/)". 
    The "native" hints shipped in Chrome (DPR, Width, Resource-Width) are 
    implemented in the browser because a pure SW-based implementation would delay 
    all image requests.
 
-1. **Where can I learn more, and what about…?** <br/>
+1. **Where can I learn more, see more demos, and what about...?** <br/>
    Check out the [explainer document](https://github.com/igrigorik/http-client-hints#http-client-hints-internet-draft) 
    and feel free to [open an issue on GitHub](https://github.com/igrigorik/http-client-hints/issues) if you have 
    feedback or other questions.
