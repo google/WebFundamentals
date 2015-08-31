@@ -149,18 +149,18 @@ can use the browser display type.
 When you launch your web app from the homescreen a number of things happen behind the
 scenes:
 
-1. Chrome needs to launch,
+1. Chrome needs to launch.
 2. The renderer that displays the page needs to start up.
 3. Your site is loaded from the network (or cache like ServiceWorker).
 
-While this is happening the screen will be white to the user and will look like it has stalled.
+While this is happening the screen will be white and will look like it has stalled.
 This becomes especially apparent if you are loading your web page from the network where
 frequently many pages take more than 1 or 2 seconds to get any content visible on the homepage.
 
 To provide a better user experience you can control the color of the screen by adding a
 `background_color` to your manifest and giving it an HTML color value. The color will be used
 by Chrome the instant the web app is launched and will remain on the screen until the web
-apps first render.
+app's first render.
 
 Simply set the following in your manifest.
 
@@ -224,8 +224,7 @@ It is suggested that you add the `theme_color` in.
 ## Define the initial orientation of the page
 
 You can enforce a specific orientation, which is really useful for some use cases like games,
-which may only work in landscape. However, this should be used with care. Users prefer being
-able to view apps in both orientations.
+which may only work in one orientation. Use this with care. Users prefer selecting the orientation.
 
 {% highlight json %}
 "orientation": "landscape"

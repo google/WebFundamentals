@@ -23,11 +23,11 @@ permalink: /updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-sc
 When you launch your web app from the home screen a number of things happen behind the
 scenes:
 
-1. Chrome needs to launch,
+1. Chrome needs to launch.
 2. The renderer that displays the page needs to start up.
 3. Your site needs to loaded from the network (or from a store like through ServiceWorker).
 
-Up until now, while this is happening the screen will be white to the user and will look like
+Up until now, while this is happening the screen will be white and will look like
 it has stalled. This becomes especially apparent if you are loading your web page from the 
 network where frequently many pages take more than 1 or 2 seconds to get any content
 visible on the homepage.
@@ -35,7 +35,7 @@ visible on the homepage.
 To provide a better user experience from Chrome 46 (Beta in September 2015) you can control the color
 of the screen by adding a `background_color` to your manifest and giving it an HTML 
 color value. The color will be used by Chrome the instant the web app is launched from the
-home screen and will remain on the screen until the web apps first render.
+home screen and will remain on the screen until the web app's first render.
 
 Simply set the following in your manifest.
 
