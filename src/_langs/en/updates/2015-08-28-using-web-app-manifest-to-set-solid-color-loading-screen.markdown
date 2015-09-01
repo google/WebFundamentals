@@ -32,16 +32,6 @@ it has stalled. This becomes especially apparent if you are loading your web pag
 network where frequently many pages take more than 1 or 2 seconds to get any content
 visible on the homepage.
 
-<br>
-
-<div class="clear g-wide--full">
-    <figure class="fluid">
-        <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/white.png" alt="no background color = white screen">
-
-        <figcaption>White screen when launching app == bad</figcaption>
-    </figure>
-</div>
-
 To provide a better user experience from Chrome 46 (Beta in September 2015) you can control the color
 of the screen by adding a `background_color` to your manifest and giving it an HTML 
 color value. The color will be used by Chrome the instant the web app is launched from the
@@ -61,13 +51,9 @@ splashscreen to the homepage.
 
 It is strongly suggested that you add the `background_color` in to your manifest.
 
-<div class="clear g-wide--full">
-    <figure class="fluid">
-        <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/background_color.gif" alt="background color = blue loading screen">
-
-        <figcaption>Blue screen when launching app == success</figcaption>
-    </figure>
-</div>
+<p style="text-align: center;">
+  <img style="max-width: 50%; height: auto;" src="{{site.baseurl}}/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/background_color.gif" alt="background color = blue loading screen">
+</p>
 
 <div class="clear"></div>
 
