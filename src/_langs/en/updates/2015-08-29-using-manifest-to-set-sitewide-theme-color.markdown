@@ -27,7 +27,7 @@ is a hint from your web page that tells the browser what color to tint
 
 <div class="clear g-wide--full">
     <figure class="fluid">
-        <img src="/web/updates/images/2015-08-29-using-manifest-to-set-sitewide-theme-color/images/theme-color.png" alt="theme color">
+        <img src="/web/updates/images/2015-08-29-using-manifest-to-set-sitewide-theme-color/theme-color.png" alt="theme color">
 
         <figcaption>Theme color</figcaption>
     </figure>
