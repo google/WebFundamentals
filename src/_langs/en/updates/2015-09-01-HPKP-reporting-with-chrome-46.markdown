@@ -21,8 +21,13 @@ out a stricter form of SSL for your site."
 permalink: /updates/2015/09/HPKP-reporting-with-chrome-46.html
 ---
 
-Chrome 46 ships with a feature called HPKP reporting, which can help you roll 
-out a stricter form of SSL for your site.
+Using SSL on your site is an important way to preserve security and privacy for your users. 
+But enabling SSL isn’t the end of the story: there are many steps you can take to further
+enhance the security that your site provides, from setting the [Secure attribute](https://www.owasp.org/index.php/SecureFlag) on your 
+cookies to turning on [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) to using [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) to 
+lock down your site’s privileges. Deploying these powerful features can sometimes be 
+tricky, though. To help you roll out a stricter form of SSL, Chrome 46 ships with a feature 
+called HPKP reporting.
 
 ### What do all these acronyms mean?
 
