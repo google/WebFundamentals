@@ -89,7 +89,7 @@ misconfigurations as you're rolling out HPKP.
 First, you can start by sending the `Public-Key-Pins-Report-Only` header instead 
 of the Public-Key-Pins header:
 
-<pre><code>Public-Key-Pins-**Report-Only**: 
+<pre><code>Public-Key-Pins-Report-Only: 
        max-age=2592000;  
        pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=";  
        pin-sha256="LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=";  
