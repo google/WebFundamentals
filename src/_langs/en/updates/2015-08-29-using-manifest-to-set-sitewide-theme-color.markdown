@@ -24,6 +24,8 @@ permalink: /updates/2015/09/using-manifest-to-set-sitewide-theme-color.html
 Chrome introduced the concept of a theme color for your site in 2014. The theme color
 is a hint from your web page that tells the browser what color to tint
  [UI elements such as the address bar](/web/fundamentals/stickyness/additional-customizations.html).  
+ 
+ <br>
 
 <div class="clear g-wide--full">
     <figure class="fluid">
