@@ -32,6 +32,8 @@ it has stalled. This becomes especially apparent if you are loading your web pag
 network where frequently many pages take more than 1 or 2 seconds to get any content
 visible on the homepage.
 
+<br>
+
 <div class="clear g-wide--full">
     <figure class="fluid">
         <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/white.png" alt="no background color = white screen">
