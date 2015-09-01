@@ -61,7 +61,7 @@ It is strongly suggested that you add the `background_color` in to your manifest
 
 <div class="clear g-wide--full">
     <figure class="fluid">
-        <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/background-color.gif" alt="background color = blue loading screen">
+        <img src="/web/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/background_color.gif" alt="background color = blue loading screen">
 
         <figcaption>Blue screen when launching app == success</figcaption>
     </figure>
