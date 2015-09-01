@@ -282,7 +282,9 @@ Because you need a service worker, and we believe it is the best option for the 
 Yes, Glad you asked: 
 
 * [Google I/O 2015 web app](https://events.google.com/io2015/)
-* [Chrome Dev Summit](https://developers.chrome.com/devsummit/)
+* [Chrome Dev Summit](https://developer.chrome.com/devsummit/)
+* [Air Horner](https://airhorner.com)
+  [[Code](https://github.com/GoogleChrome/airhorn)]
 * [SVG OMG](https://jakearchibald.github.io/svgomg/) 
   [[Code](https://github.com/jakearchibald/svgomg)]
 * [QR Snapper](https://qrsnapper.appspot.com) 
