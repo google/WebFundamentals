@@ -20,7 +20,7 @@ description: Chrome 46 brings new methods to caches, as does Chrome 47, and prob
 permalink: /updates/2015/09/updates-to-cache-api.html
 ---
 
-I’vee been asked to write this post on a fairly minor update to the service worker cache API. I didn’t think it warranted its own article, but after a long debate that eventually came down to a game of rock-paper-scissors, I lost, so here it is.
+I’ve been asked to write this post on a fairly minor update to the service worker cache API. I didn’t think it warranted its own article, but after a long debate that eventually came down to a game of rock-paper-scissors, I lost, so here it is.
 
 Are you ready to hear about the updates to Chrome’s implementation of the service worker cache API?
 
