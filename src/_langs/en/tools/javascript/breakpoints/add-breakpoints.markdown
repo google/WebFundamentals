@@ -25,7 +25,20 @@ key-takeaways:
 ---
 {% wrap content %}
 
-Breakpoint types allow you to control exactly what conditions can trigger a pause in script execution.
+Breakpoints enable you to pause script execution and investigate call stacks
+and the value of variables at that moment in time. There are two types 
+of breakpoints at your disposal: manual and conditional.
+
+* Manual breakpoints are individual breakpoints that you set on a 
+  specific line of code. You can set these via the Chrome DevTools GUI, or
+  by inserting the `debugger` keyword in your code.
+* Conditional breakpoints are triggered when a specified condition is 
+  met (e.g. an `onclick` event is fired, an exception is uncaught, and 
+  so on). As a developer, you just enable a type of conditional breakpoint,
+  and then Chrome DevTools automatically breaks whenever
+  the specified condition is met.
+
+Read on to learn how to create both types of breakpoints in Chrome DevTools.
 
 {% include modules/toc.liquid %}
 
