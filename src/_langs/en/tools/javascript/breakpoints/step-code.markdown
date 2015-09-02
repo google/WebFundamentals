@@ -7,7 +7,7 @@ description: "By executing code one line or one function at a time, you can obse
 introduction: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening. You can also modify data values used by the script, and you can even modify the script itself."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-05-18
+  updated_on: 2015-09-02
   order: 3
 authors:
   - dgash
@@ -102,16 +102,18 @@ Near the top of the sidebar is the **Call Stack** section. When the code is paus
 Enable the async call stack feature to gain more visibiliy into the execution
 of your asynchronous function calls.
 
-1. Open the *Sources* panel of DevTools.
+1. Open the **Sources** panel of DevTools.
 
-2. On the *Call Stack* pane, enable the *Async* checkbox.
+2. On the **Call Stack** pane, enable the **Async** checkbox.
 
-In the video below, the first time that the code is paused and the call stack
-is expanded, there is only one call in the stack. The user then enables the
-call stack, resumes script execution, triggers the breakpoint, and then
-expands the call stack. This time, there are four functions in the call stack.
+In the video below, the user triggers a breakpoint and then expands the call
+stack. The call stack only contains one call. The user then enables the
+async call stack feature by enabling the **Async** checkbox, resumes 
+script execution, triggers the breakpoint again,
+and then expands the call stack. This time, the call stack contains four
+calls.
 
-{% animation videos/async-call-stack-demo.mp4 %}
+{% animation animations/async-call-stack-demo.mp4 %}
 
 ### Tip: name functions to improve call stack readability
 
@@ -135,25 +137,26 @@ Call stack with named functions:
 
 You may not care to see in your call stack the internal functions
 of third-party libraries and frameworks which you use in your project.
-Use the *Blackbox Third-Party Code* feature of DevTools to omit 
+Use the **Blackbox Third-Party Code** feature of DevTools to omit 
 third-party files from your call stacks.
 
 To blackbox a file:
 
-1. Open the *Sources* panel of DevTools.
+1. Open the **Sources** panel of DevTools.
 
 1. Right-click on the file you wish to blackbox.
 
-1. Select *Blackbox Script*.
+1. Select **Blackbox Script**.
 
-In the animation below, the user triggers a breakpoint. The call stack
-populates, and you can see a couple of third-party functions in the 
-call stack. The user then blackboxes the third-party script, and you
-see that the third-party functions are now hidden from the call stack.
+In the animation below, the user triggers a breakpoint. DevTools populates
+the call stack. You can see a couple of third-party functions in the 
+call stack. The user then blackboxes the third-party script by right-clicking
+on the script file and selecting **Blackbox Script**.  DevTools automatically
+hides the third-party functions from the call stack. 
 
-{% animations animations/blackbox.mp4 %}
+{% animation animations/blackbox.mp4 %}
 
-To remove a blackbox, right-click on the file again and select *Stop Blackboxing*.
+To remove a blackbox, right-click on the file again and select **Stop Blackboxing**.
 
 ## Data manipulation
 
