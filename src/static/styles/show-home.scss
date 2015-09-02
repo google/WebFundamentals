@@ -1,6 +1,6 @@
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
-$color-primary: "31,30,36";
+$color-primary: #1F1E24;
 //$color-primary-dark: $palette-indigo-700 !default;
 //$color-accent: $palette-pink-A200 !default;
 
@@ -26,54 +26,49 @@ $header-bg-color: $color-primary;
 @import "partials/components/wf-footer";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
+@import "partials/shows-components/series-list";
 
 .wf-menu-svg {
   fill: white;
 }
 
-.show-index-item {
-  display: flex;
-
-  flex-direction: column;
+.showhome-subheading {
+  margin-top: $base-line * 2;
 }
 
-.show-index-item__img {
-  margin-bottom: $base-line / 2;
-}
-
-.show-index-item__info a {
-  text-decoration: none;
-}
-
-.show-index-item__title {
-  display: none;
+.showhome-subheading__title {
+  margin-top: 0;
 
   @include typo-title();
 }
 
-@media (min-width: 440px) {
-  .show-index-item {
-    flex-direction: row;
-  }
+.showhome-subheading__description {
+  margin-bottom: 0;
 
-  $description-flex: 6;
+  @include typo-subhead();
+}
 
-  .show-index-item__img {
-    width: 0;
-    max-width: 300px;
+.shows-feeds {
+  margin-top: $base-line * 2;
+  margin-bottom: $base-line * 2;
+}
 
-    flex: 10 - $description-flex;
+.shows-feeds__title {
+  @include typo-caption();
 
-    margin: 0 ($base-line / 2) 0 0;
-  }
+  text-align: center;
 
-  .show-index-item__info {
-    width: 0;
+  margin: 0;
+  margin-bottom: $base-line / 4;
+}
 
-    flex: $description-flex;
-  }
+.shows-feeds__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .show-index-item__title {
-    display: block;
-  }
+.shows-feeds__btn {
+  width: $base-line * 2;
+  height: $base-line * 2;
 }
