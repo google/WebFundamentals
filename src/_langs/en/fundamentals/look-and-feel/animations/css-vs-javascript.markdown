@@ -24,6 +24,7 @@ notes:
 
 authors:
   - paullewis
+  - samthorogood
 ---
 {% wrap content %}
 
@@ -32,7 +33,7 @@ authors:
 Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time will differ (see also [CSS vs JavaScript Performance]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance)). Each has their pros and cons, but these are good rules-of-thumb:
 
 * **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves will be in your CSS.
-* **Use JavaScript when you need significant control over your animations.** Something that dynamically tracks a touch position, or an animation that you need to stop, pause, slow-down or reverse typically require you to use JavaScript.
+* **Use JavaScript when you need significant control over your animations.** The Web Animations API is the standards-based approach, available today in Chrome and Opera. This provides real objects, ideal for complex object-oriented applications. JavaScript is also useful when you need to stop, pause, slow-down or reverse.
 * **Use `requestAnimationFrame` directly when you want to orchestrate an entire scene by hand.** This is an advanced JavaScript approach, but can be useful if you're building a game or drawing to a HTML canvas.
 
 <div class="media media--video">
@@ -163,15 +164,9 @@ By default, Web Animations only modify the presentation of an element. If you'd 
 
 {% link_sample _code/box-move-wa.html %}See sample{% endlink_sample %}
 
-The Web Animations API is a new standard from the W3C. It is supported in Chrome, Opera, and in Firefox behind a flag. This API is built into the browser, and as such, is more performant than a framework-based solution.
+The Web Animations API is a new standard from the W3C. It is supported natively in Chrome and Opera, and is in [active development for Firefox](https://birtles.github.io/areweanimatedyet/). For other modern browsers, [a polyfill is available](https://github.com/web-animations/web-animations-js).
 
-For other modern browsers, [there is a polyfill](https://github.com/web-animations/web-animations-js). It's safe to include even where Web Animations are already supported, like this-
-
-{% highlight html %}
-<script src="//cdn.rawgit.com/web-animations/web-animations-js/2.1.2/web-animations.min.js"></script>
-{% endhighlight %}
-
-Since with JavaScript animations you are in total control of the element's styles at every step you can slow down the animation, pause it, stop it, reverse it and manipulate it as you see fit.
+With JavaScript animations, you are in total control of an element's styles at every step. This means you can slow down animations, pause them, stop them, reverse them and manipulate elements as you see fit. This is especially useful if you're building complex, object-oriented applications, as you can properly encapsulate your behavior.
 
 {% include modules/nextarticle.liquid %}
 

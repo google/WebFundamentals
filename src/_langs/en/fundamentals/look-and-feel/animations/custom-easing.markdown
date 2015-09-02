@@ -18,6 +18,7 @@ key-takeaways:
 
 authors:
   - paullewis
+  - samthorogood
 ---
 {% wrap content %}
 
