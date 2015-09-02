@@ -44,7 +44,7 @@ Read on to learn how to create both types of breakpoints in Chrome DevTools.
 
 {% include modules/takeaway.liquid list=page.key-takeaways.breakpoint %}
 
-## Create, view, and delete breakpoints
+## View breakpoints
 
 View existing breakpoints at any time in the Sources panel:
 
