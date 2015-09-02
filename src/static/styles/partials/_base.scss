@@ -49,17 +49,13 @@ video {
   margin-bottom: $base-line;
 }
 
-main {
+.page-content {
   max-width: $max-content-width;
 
   margin-left: auto;
   margin-right: auto;
 
   padding: $base-line / 2;
-
-  & > div {
-    margin-bottom: $base-line;
-  }
 }
 
 figure > img {
