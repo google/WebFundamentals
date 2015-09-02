@@ -1,6 +1,6 @@
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
-$color-primary: "31,30,36";
+$color-primary: #1F1E24;
 //$color-primary-dark: $palette-indigo-700 !default;
 //$color-accent: $palette-pink-A200 !default;
 
@@ -26,6 +26,7 @@ $header-bg-color: $color-primary;
 @import "partials/components/wf-footer";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
+@import "partials/shows-components/series-list";
 
 .wf-menu-svg {
   fill: white;
@@ -41,39 +42,6 @@ $header-bg-color: $color-primary;
   margin-bottom: $base-line / 2;
 }
 
-.show-index-item__info a {
+.show-index-item__description a {
   text-decoration: none;
-}
-
-.show-index-item__title {
-  display: none;
-
-  @include typo-title();
-}
-
-@media (min-width: 440px) {
-  .show-index-item {
-    flex-direction: row;
-  }
-
-  $description-flex: 6;
-
-  .show-index-item__img {
-    width: 0;
-    max-width: 300px;
-
-    flex: 10 - $description-flex;
-
-    margin: 0 ($base-line / 2) 0 0;
-  }
-
-  .show-index-item__info {
-    width: 0;
-
-    flex: $description-flex;
-  }
-
-  .show-index-item__title {
-    display: block;
-  }
 }
