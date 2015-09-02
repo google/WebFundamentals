@@ -15,7 +15,7 @@ product: chrome
 type: news
 tags:
 - history
-description: Reducing Chrome's memory footprint is one of the team's top priorities this year.
+description: TBD.
 permalink: /updates/2015/09/History-API-Y-U-no-scroll.html
 ---
 
