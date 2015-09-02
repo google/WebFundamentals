@@ -1,51 +1,55 @@
-<header class="wf-header">
+<!-- Uses a header that contracts as the page scrolls down. -->
+<style>
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+</style>
 
-  <!-- Top Row contains buttons and links -->
-  <div class="wf-header__top-row">
-    <button class="wf-header__menu-btn">
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__drawer-button">
       {% include svgs/menu.svg %}
-    </button>
-
-    <!-- Add spacer, to align navigation to the right -->
-    <div class="mdl-layout-spacer"></div>
-
-    <a class="wf-header__dev-logo" href="https://developers.google.com/">
-      <!-- Inlined SVG for GDS Logo -->
-      {% include svgs/gds-logo-grey.svg %}
-    </a>
-  </div>
-
-  <!-- Bottom Row contains buttons and links -->
-  <div class="wf-header__bottom-row">
-    <h1 class="wf-header__title">{{ include.title }}</h1>
-  </div>
-
-</header>
-
-<div class="wf-nav-drawer mdl-layout__drawer">
-  <header class="wf-header-nav">
-    <div class="wf-header-nav__top-row">
     </div>
-    <div class="wf-header-nav__bottom-row">
-      <h1 class="wf-header-nav__title">{{ page.drawerTitleText }}</h1>
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ include.title }}</span>
+
+      <div class="mdl-layout-spacer"></div>
+
+      <a class="wf-header__dev-logo" href="https://developers.google.com/">
+        {% include svgs/gds-logo-grey.svg %}
+      </a>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
     </div>
   </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">{{ page.drawerTitleText }}</span>
+    <nav class="mdl-navigation">
+      {% include page-structure/navigation.liquid %}
+    </nav>
 
-  <nav class="wf-nav-drawer__navigation">
-    {% include page-structure/navigation.liquid %}
-  </nav>
+    <div class="mdl-layout-spacer"></div>
 
-  <div class="mdl-layout-spacer"></div>
-
-  <div class="wf-navdrawer__github-links">
-    {% if page.path %}
-    <a href="{{site.github.root}}/tree/{{site.WFGithubBranch}}/{{page.path| uri_escape }}" target="_blank">{{"view_source" | localize_string}}</a>
-    {% else %}
-    <a href="{{site.github.root}}/tree/{{site.WFGithubBranch}}/" target="_blank">{{"view_source" | localize_string}}</a>
-    {% endif %}
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.url| uri_escape }}" target="_blank">{{"submit_feedback" | localize_string}}</a>
+    <div class="wf-navdrawer__github-links">
+      {% if page.path %}
+      <a href="{{site.github.root}}/tree/{{site.WFGithubBranch}}/{{page.path| uri_escape }}" target="_blank">{{"view_source" | localize_string}}</a>
+      {% else %}
+      <a href="{{site.github.root}}/tree/{{site.WFGithubBranch}}/" target="_blank">{{"view_source" | localize_string}}</a>
+      {% endif %}
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.url| uri_escape }}" target="_blank">{{"submit_feedback" | localize_string}}</a>
+    </div>
   </div>
-</div>
-
-<main>
+  <main class="mdl-layout__content">
+    <div class="page-content">

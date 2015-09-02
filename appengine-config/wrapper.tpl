@@ -12,7 +12,9 @@
     {% endautoescape %}
 
 
-    <script src="/web/scripts/nav-drawer.js"></script>
+    <!--<script src="/web/scripts/nav-drawer.js"></script>-->
+    <script src="/web/scripts/third_party/mdl/mdlComponentHandler.js"></script>
+    <script src="/web/scripts/third_party/mdl/layout/layout.js"></script>
 
     {% comment %}
       Simple navigation enhancement JS

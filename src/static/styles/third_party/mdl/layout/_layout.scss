@@ -355,7 +355,14 @@
           line-height: $layout-header-mobile-row-height;
           padding: 0 $layout-header-mobile-indent;
         }
-      }    }
+      }
+  }
+
+  @media screen and (min-width: $layout-screen-size-threshold + 1px) {
+    .mdl-layout--fixed-drawer .mdl-layout__header-row {
+      padding-left: $layout-header-desktop-indent;
+    }
+  }
 
   // Obfuscator.
   .mdl-layout__obfuscator {
