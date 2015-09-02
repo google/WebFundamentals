@@ -221,20 +221,6 @@ It is simple to integrate into any manifest. Just add a `related_applications` a
 ]
 {% endhighlight %}
 
-If just want to offer the user the ability to install your Android application, then simply just have the following in your manifest:
-
-{% highlight javascript %}
-{
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-    "platform": "play",
-    "id": "com.google.samples.apps.iosched"
-    }
-  ]
-}
-{% endhighlight %}
-
 ## <span id="criteria-faq">Frequently Asked Questions</span>
 **My app meets all the criteria, but I don't want the banner to display. Can I control this?**  
 Yes, you can prevent the banner from displaying.  See "[Canceling the prompt](#cancel)".
