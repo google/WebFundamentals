@@ -12,6 +12,7 @@ article:
 authors:
   - dgash
   - pbakaus
+  - kaycebasques
 priority: 0
 collection: breakpoints
 key-takeaways:
@@ -92,7 +93,7 @@ Use **step into** as your typical "one line at a time" action, as it ensures tha
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is *now*, but how it got there, an important factor in debugging.
 
-#### Example
+### Example
 
 <p><img src="imgs/image_15.png" alt="Call stack" style="float: left;margin-right: 1em;margin-bottom: 1em;">An initial onclick event at line 50 in the <strong>index.html</strong> file called the <code>setone()</code> function at line 18 in the <strong>dgjs.js</strong> JavaScript file, which then called the <code>setall()</code> function at line 4 in the same file, where execution is paused at the current breakpoint.</p>
 
@@ -112,13 +113,13 @@ expands the call stack. This time, there are four functions in the call stack.
 
 {% animation videos/async-call-stack-demo.mp4 %}
 
-#### Tip: name functions to improve call stack readability
+### Tip: name functions to improve call stack readability
 
 Anonymous functions make the call stack difficult to read. Name your functions
 to improve readability.
 
 The code in the two screenshots below are functionally equivalent. Compare the
-call stacks. In the first screenshot, the top two functions are just titled
+call stacks. In the first screenshot, the top two functions are both just titled
 `(anonymous function)`. In the second screenshot, the top two functions
 are named, which makes it easier to understand the program flow at a glance.
 
@@ -132,7 +133,7 @@ Call stack with named functions:
 
 ### Blackbox third-party code
 
-You may not care to step through the internal functions
+You may not care to see in your call stack the internal functions
 of third-party libraries and frameworks which you use in your project.
 Use the *Blackbox Third-Party Code* feature of DevTools to omit 
 third-party files from your call stacks.
