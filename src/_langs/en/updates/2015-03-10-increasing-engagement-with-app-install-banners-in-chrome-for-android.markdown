@@ -43,15 +43,14 @@ Banners".  App Install Banners give you the ability to have your users quickly
 and seamlessly install your Web App as per the images below.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
+  <img style="max-width: 50%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
 </p>
 
 <span id="criteria">"This looks great, I want it on my site"</span> I hear you shout. "Please tell me how 
 to add it!".  The good news is if you currently meet the following criteria Chrome will 
 manage the prompting of users:
 
-* You have a [web app manifest 
-  file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
+* You have a [web app manifest file](/web/fundamentals/device-access/stickyness/web-app-manifest.html) 
   - The manifest defines how your app appears on the user's system and how it 
   should be launched - and you are required to have a \`short\_name\` and a 
   \`144x144\` png icon
@@ -61,8 +60,7 @@ manage the prompting of users:
   registered on your site. We recommend a [simple custom offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) 
   service worker
 * Your site is served over 
-  [HTTPS](https://docs.google.com/document/d/1oRXJUIttqQxuxmjj2tgYjj096IKw4Zcw6eAoIKWZ2oQ/edit) 
-  (you need a service worker after all)
+  [HTTPS](/web/fundamentals/discovery-and-distribution/security-with-https/) (you need a service worker after all)
 * The user has visited your site twice over two separate days during the course 
   of two weeks.
 
@@ -189,8 +187,6 @@ btnSave.addEventListener('click', function() {
       // We no longer need the prompt.  Clear it up.
       deferredPrompt = null;
     });
-    
-    
   }
 });
 {% endhighlight %}
@@ -208,27 +204,35 @@ A new powerful feature for native app developers also landed in Chrome 44 &mdash
 
 The criteria is similar to the Web App install banner except for the need of a Service Worker:
 
-* You have a [web app manifest 
-  file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
-  - The manifest defines how your app appears on the user's system and how it 
-  should be launched - and you are required to have a \`short\_name\` and a 
-  \`144x144\` png icon
-  - Your icon declarations should include a mime type of `image/png`
-* Your site is served over 
-  [HTTPS](https://docs.google.com/document/d/1oRXJUIttqQxuxmjj2tgYjj096IKw4Zcw6eAoIKWZ2oQ/edit)
-* The user has visited your site twice over two separate days during the course 
-  of two weeks.
+* You have a [web app manifest file](/web/fundamentals/device-access/stickyness/web-app-manifest.html) and it 
+  is linked to from your web page.
+* Your site is served over [HTTPS](/web/fundamentals/discovery-and-distribution/security-with-https/).
+* The user has visited your site twice over two separate days during the course of the last two weeks.
 
-It is simple to integrate into any manifest.  Just add a `related_applications` array with the platforms of `play` (for Google Play) and the App Id, and then add `"prefer_related_applications": true` to always show the native app banner before the Web App Install banner.
+It is simple to integrate into any manifest. Just add a `related_applications` array with the platforms of `play` (for Google Play) and the App Id, and then add `"prefer_related_applications": true` to always show the native app banner before the Web App Install banner.
 
 {% highlight javascript %}
 "prefer_related_applications": true,
 "related_applications": [
   {
+  "platform": "play",
+  "id": "com.google.samples.apps.iosched"
+  }
+]
+{% endhighlight %}
+
+If just want to offer the user the ability to install your Android application, then simply just have the following in your manifest:
+
+{% highlight javascript %}
+{
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
     "platform": "play",
     "id": "com.google.samples.apps.iosched"
-  }
-],
+    }
+  ]
+}
 {% endhighlight %}
 
 ## <span id="criteria-faq">Frequently Asked Questions</span>
@@ -278,7 +282,9 @@ Because you need a service worker, and we believe it is the best option for the 
 Yes, Glad you asked: 
 
 * [Google I/O 2015 web app](https://events.google.com/io2015/)
-* [Chrome Dev Summit](https://developers.chrome.com/devsummit/)
+* [Chrome Dev Summit](https://developer.chrome.com/devsummit/)
+* [Air Horner](https://airhorner.com)
+  [[Code](https://github.com/GoogleChrome/airhorn)]
 * [SVG OMG](https://jakearchibald.github.io/svgomg/) 
   [[Code](https://github.com/jakearchibald/svgomg)]
 * [QR Snapper](https://qrsnapper.appspot.com) 
