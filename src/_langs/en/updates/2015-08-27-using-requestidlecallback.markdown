@@ -25,11 +25,11 @@ Many sites and apps have a lot of scripts to execute. Your JavaScript often need
 
 ![Using requestIdleCallback to schedule non-essential work](/web/updates/images/2015-08-27-using-requestidlecallback/main.png)
 
-The good news is that there’s now an API that can help: **`requestIdleCallback`**. In the same way that adopting `requestAnimationFrame` allowed us to schedule animations properly and maximize our chances of hitting 60fps, `requestIdleCallback` will schedule work when there is free time at the end of a frame, or when the user is inactive. This means that there’s an opportunity to do your work without getting in the user’s way. It’s available in Chrome Canary (M46+) behind a flag (head over to chrome://flags/#enable-experimental-web-platform-features to enable it), so you can give it a whirl today!
+The good news is that there’s now an API that can help: **`requestIdleCallback`**. In the same way that adopting `requestAnimationFrame` allowed us to schedule animations properly and maximize our chances of hitting 60fps, `requestIdleCallback` will schedule work when there is free time at the end of a frame, or when the user is inactive. This means that there’s an opportunity to do your work without getting in the user’s way. It’s available in Chrome Canary (M46+) behind a flag (head over to chrome://flags/#enable-experimental-web-platform-features to enable it), so you can give it a whirl today! Do bear in mind, however, that this is an _experimental feature_, and the spec is still in flux, so things could change at any time.
 
 ## Why should I use requestIdleCallback?
 
-Scheduling non-essential work yourself is very difficult to do. It’s impossible to figure out exactly how much frame time remains because after `requestAnimationFrame` callbacks execute there are style calculations, layout, paint, and other browser internals that need to run. A home-rolled solution can’t account for any of those. In order to be sure that a user isn’t interacting in some way you would also need to attach listeners to every kind of interaction event (scroll, touch, click), even if you don’t need them for functionality, _just_ so that you can be absolutely sure that the user isn’t interacting. The browser, on the other hand, knows how exactly much time is available at the end of the frame, and if the user is interacting, and so through `requestIdleCallback` we gain an API that allows us to make use of any spare time in the most efficient way possible.
+Scheduling non-essential work yourself is very difficult to do. It’s impossible to figure out exactly how much frame time remains because after `requestAnimationFrame` callbacks execute there are style calculations, layout, paint, and other browser internals that need to run. A home-rolled solution can’t account for any of those. In order to be sure that a user _isn’t_ interacting in some way you would also need to attach listeners to every kind of interaction event (`scroll`, `touch`, `click`), even if you don’t need them for functionality, _just_ so that you can be absolutely sure that the user isn’t interacting. The browser, on the other hand, knows exactly how much time is available at the end of the frame, and if the user is interacting, and so through `requestIdleCallback` we gain an API that allows us to make use of any spare time in the most efficient way possible.
 
 Let’s take a look at it in a little more detail and see how we can make use of it.
 
@@ -150,7 +150,7 @@ function schedulePendingEvents() {
 }
 {% endhighlight %}
 
-Here you can see I’ve set a timeout of 2 seconds, but this value would depend on your application. For analytics data, it makes sense that a timeout would be used to ensure data is reported in a reasonable timeframe.
+Here you can see I’ve set a timeout of 2 seconds, but this value would depend on your application. For analytics data, it makes sense that a timeout would be used to ensure data is reported in a reasonable timeframe rather than just at some point in the future.
 
 Finally we need to write the function that `requestIdleCallback` will execute.
 
@@ -257,7 +257,7 @@ All being well we will now see much less jank when appending items to the DOM. E
 ## FAQ
 
 * **Is there a polyfill?**
-    Sadly not. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free space at the end of the frame, so at best you have to make guesses.
+    Sadly not. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free space at the end of the frame, so at best you have to make guesses. APIs like `setTimeout`, `setInterval`, or `setImmediate` can be used to schedule work, but they are not timed to avoid user interaction in the way that `requestIdleCallback` is.
 * **What happens if I overrun the deadline?**
     If `timeRemaining` is zero, but you opt to run for longer, you can do so without fear of the browser halting your work. However, the browser gives you the deadline to try and ensure a smooth experience for your users, so unless there’s a very good reason, you should always adhere to the deadline.
 * **Is there maximum value for timeRemaining?**
@@ -268,6 +268,10 @@ All being well we will now see much less jank when appending items to the DOM. E
     No, not always. The browser will schedule the callback whenever there is free time at the end of a frame, or in periods where the user is inactive. You shouldn’t expect the callback to be called per frame, and if you require it to run within a given timeframe you should make use of the timeout parameter.
 * **Can I have multiple `requestIdleCallback` callbacks?**
     Yes, you can, very much as you can have multiple `requestAnimationFrame` callbacks. It’s worth remembering, though, that if your first callback uses up the time remaining during its callback then there will be no more time left for any other callbacks. The other callbacks will then have to wait until the browser is next idle before they can be run. Depending on the work you’re trying to get done, it may be better to have a single idle callback and divide the work in there. Alternatively you can make use of the timeout parameter to ensure that no callbacks get starved for time.
+* **What happens if I set a new idle callback inside of another?**
+    The new idle callback will be scheduled to run as soon as possible, starting from the _next_ frame (rather than the current one).
 
 ## Idle on!
-`requestIdleCallback` is an awesome way to make sure you can run your code, but without getting in the user’s way. It's simple to use, and very flexible. Switch it on in Chrome Canary, give it a spin for your projects, and let us know how you get on!
+`requestIdleCallback` is an awesome way to make sure you can run your code, but without getting in the user’s way. It's simple to use, and very flexible. It's still early days, though, and the spec isn't fully settled, so any feedback you have is welcome.
+
+Switch it on in Chrome Canary, give it a spin for your projects, and let us know how you get on!
