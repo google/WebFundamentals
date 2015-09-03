@@ -35,7 +35,7 @@ change key-takeaways
 
 {% wrap content %}
 
-Breakpoints are one of the most popular ways to debug code. Breakpoints
+Breakpoints are one of the most common  ways to debug code. Breakpoints
 enable you to pause script execution and then investigate call stacks
 and the variable values at that particular moment in time. There are two types 
 of breakpoints at your disposal: manual and conditional.
@@ -60,24 +60,38 @@ Read on to learn how to create both types of breakpoints in Chrome DevTools.
 View existing breakpoints at any time in the Sources panel:
 
 1. Open the Chrome menu ![Chrome menu](imgs/image_0.png){:.inline}.
-2. Choose **More tools** > **Developer tools**, or right-click a page element and choose **Inspect element** from the context menu.
+2. Choose **More tools** > **Developer tools**, or right-click a page 
+   element and choose **Inspect element** from the context menu.
 3. Select the **Sources** panel. 
 
 Breakpoints are shown in the sidebar, grouped by type.
 
 ![Breakpoints sidebar](imgs/image_1.png)
 
-## Breakpoint on a line of code 
+## Manual breakpoints
 
-Use the line breakpoint when you want to see the effect of a script up to a certain point before it finishes, or when you want to examine the values of variables or parameters the script is processing. Execution pauses at a specific line, before the line is executed.  
+Manual breakpoints are breakpoints that you set on a single line of code. There are two ways 
+to set manual breakpoints, via the DevTools GUI, or by inserting the `debugger` keyword in 
+your code.
+
+Use manual breakpoints when you have a strong suspicion of where your code is failing,
+and you want to inspect the call stack and variable values at that exact moment
+in time.
+
+### Add a manual breakpoint on a single line of code
 
 To add/remove a line breakpoint:
 
-1. Click the line number of the line where you want to set the breakpoint. You can add multiple breakpoints by clicking each line's line number. Alternately, you can include a **debugger;** statement in your code, which is equivalent to setting a line breakpoint at that line.
+1. Click the line number of the line where you want to set the breakpoint. 
+   You can add multiple breakpoints by clicking each line's line number. 
+
+   Alternately, you can include a **debugger;** statement in your code, which is 
+   equivalent to setting a line breakpoint at that line.
 
 2. Temporarily disable a line breakpoint by clearing its checkbox in the sidebar. 
 
-3. Remove a line breakpoint by clicking the line number again; or right-click the breakpoint in the sidebar and choose **Remove breakpoint**.
+3. Remove a line breakpoint by clicking the line number again; or right-click 
+   the breakpoint in the sidebar and choose **Remove breakpoint**.
 
 ![Line breakpoint](imgs/image_2.png)
 
