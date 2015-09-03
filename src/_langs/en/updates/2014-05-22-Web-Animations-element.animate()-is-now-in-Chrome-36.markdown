@@ -13,7 +13,7 @@ title: "Web Animations - element.animate() is now in Chrome 36"
 description: "Web Animations define a model for supporting animation and synchronization on the Web platform. element.animate() is the first of those pieces landing in Chrome."
 article:
   written_on: 2014-05-22
-  updated_on: 2014-10-07
+  updated_on: 2015-09-03
 authors:
   - brendankenny
 tags:
@@ -22,6 +22,9 @@ tags:
   - animations
 permalink: /updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36.html
 ---
+
+*Note:* This article has been updated for the [latest naming in Web Animations](https://developers.google.com/web/updates/2015/04/web-animations-naming).
+
 Animation on the web was once the province of JavaScript, but as the world moved to mobile, animations moved to CSS for the declarative syntax and the optimizations browsers were able to make with it. With 60fps on mobile always your goal, it makes sense to never step outside of what browsers know how to efficiently display.
 
 More tools are appearing to make JavaScript-driven animations more efficient, but the holy grail is a unification of [declarative and imperative animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative) , where the decision of how to write your animations is based on what's the clearest code, not what is possible in one form and not in the other.
@@ -88,11 +91,11 @@ snowFlake.animate([
 {% endhighlight %}
 
 
-<h2>AnimationPlayer</h2>
+<h2>Animation</h2>
 
-<code>element.animate()</code> actually returns an AnimationPlayer object, which will become increasingly important as more of the Web Animations spec is launched. Both JavaScript- and CSS-created animations will have associated AnimationPlayers, allowing them to be seamlessly combined in useful and interesting ways.
+<code>element.animate()</code> actually returns an `Animation` object, which will become increasingly important as more of the Web Animations spec is launched. Both JavaScript- and CSS-created animations will have associated `Animation` players, allowing them to be seamlessly combined in useful and interesting ways.
 
-For now, though, AnimationPlayer only has two pieces of functionality, both very useful. You can cancel an animation at any time by using <code>AnimationPlayer.cancel()</code>:
+For now, though, `Animation` only has two pieces of functionality, both very useful. You can cancel an animation at any time by using <code>Animation.cancel()</code>:
 
 {% highlight javascript %}
 var player = snowFlake.animate([
@@ -116,6 +119,7 @@ player.onfinish = function(e) {
 }
 {% endhighlight %}
 
+*Note:* As of December 2014, [`Animation` has a few more features](https://developers.google.com/web/updates/2014/12/web-animation-playback).
 
 <h2>Try it out</h2>
 
