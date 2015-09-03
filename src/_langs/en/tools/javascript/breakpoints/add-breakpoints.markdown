@@ -1,10 +1,12 @@
 ---
 rss: false
 layout: tools-article
-title: "How to Add or Remove Breakpoints"
-seotitle: "How to Add or Remove Breakpoints"
-description: "DevTools provides five types of breakpoints that you use in different circumstances: line, DOM mutation, XMLHttpRequest, event listener, exception. Each breakpoint type is added or removed differently."
-introduction: "DevTools provides five types of breakpoints that you use in different circumstances. Each breakpoint type is added or removed differently."
+title: "How to Add Manual and Conditional Breakpoints"
+seotitle: "How to Add Manual and Conditional Breakpoints"
+description: "Set manual and conditional breakpoints in Chrome DevTools to quickly 
+and effectively debug problematic code."
+introduction: "Set manual and conditional breakpoints in Chrome DevTools to quickly 
+and effectively debug problematic code."
 article:
   written_on: 2015-04-14
   updated_on: 2015-09-03
@@ -17,26 +19,16 @@ priority: 0
 collection: breakpoints
 key-takeaways:
   breakpoint:
-    - Breakpoint on a line of code to test the code before it finishes, for example, to examine variable values.
-    - Breakpoint on a DOM mutation event to observe DOM changes.
-    - Breakpoint on XMLHttpRequest to examine request data before it is transmitted. 
-    - Breakpoint on a JavaScript event listener to see how a certain event (such as keypress or doubleclick) is processed by the script.
-    - Breakpoint on uncaught exceptions to pause before an exception is thrown.
+    - Use manual breakpoints to pause script execution at a specific line of code
+    - Use conditional breakpoints to pause when a specific condtion is met
+    - You can set conditional breakpoints for when: a DOM node is inserted / modified / deleted,
+      an XMLHttpRequest URL contains substring, a JavaScript event listener is fired,
+      an exception is uncaught
 ---
-
-<!-- to-do:
-change title
-change seotitle
-change description
-change introduction
-change key-takeaways
-change headings
--->
-
 
 {% wrap content %}
 
-Breakpoints are one of the most common  ways to debug code. Breakpoints
+Breakpoints are one of the most effective ways to debug code. Breakpoints
 enable you to pause script execution and then investigate call stacks
 and the variable values at that particular moment in time. There are two types 
 of breakpoints at your disposal: manual and conditional.
@@ -86,7 +78,7 @@ To add/remove a line breakpoint:
 1. Click the line number of the line where you want to set the breakpoint. 
    You can add multiple breakpoints by clicking each line's line number. 
 
-   Alternately, you can include a **debugger;** statement in your code, which is 
+   Alternately, you can include a **debugger** statement in your code, which is 
    equivalent to setting a line breakpoint at that line.
 
 2. Temporarily disable a line breakpoint by clearing its checkbox in the sidebar. 
@@ -110,14 +102,16 @@ Use conditional breakpoints when you need to set many breakpoints at once.
 For example, suppose you are experiencing errors when DOM nodes are removed,
 but there are 20 different places where the error might be originating from. Rather 
 than placing a manual breakpoint before every suspicious statement, you can just 
-set a conditional breakpoint that is triggered on all DOM node deletion events.
+set a conditional breakpoint that is triggered on all DOM node deletion statements.
 
 You might also find it easier and faster to set conditional breakpoints for situations
 in which you would usually use a manual breakpoint. For 
 example, if you want to break before a certain `onclick` event listener is fired,
 you *could* find the event listener in your code and set a manual breakpoint in 
 the function, or you could just set a conditional breakpoint on all `onclick`
-events, and then just click the element for which the event listener is registered.
+events, and then just click the element for which the event listener is registered
+(which will trigger the breakpoint and automatically take you to the relevant
+code).
 
 DevTools provides four types of conditional breakpoints to help you debug 
 your code:
@@ -143,7 +137,7 @@ To add/remove a DOM mutation breakpoint:
 
 *A DOM mutation breakpoint*
 
-### `XMLHttpRequest` conditional breakpoints
+### `XMLHttpRequest` breakpoints
 
 There are two ways you can create conditional breakpoints for an `XMLHttpRequest`:
 
@@ -241,7 +235,8 @@ debug your web applications:
 * Conditional breakpoints: Instruct DevTools to break automatically whenever
   a specific condition is met.
 
-DevTools supports four types of conditional breakpoints: 
+In regards to conditional breakpoints, there are four types of conditions you can
+watch for: 
 
 * DOM mutation events: insertion, modification, deletion
 * `XMLHttpRequest`: break when a request URL contains a specific string,
