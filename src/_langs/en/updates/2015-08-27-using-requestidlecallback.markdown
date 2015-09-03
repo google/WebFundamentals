@@ -57,16 +57,16 @@ When `myNonEssentialWork` is called, it will be given a `deadline` object which 
 
 {% highlight javascript %}
 function myNonEssentialWork (deadline) {
-  while (deadline.timeRemaining > 0)
+  while (deadline.timeRemaining() > 0)
     doWorkIfNeeded();
 }
 {% endhighlight %}
 
-The `timeRemaining` property is updated by the browser, so you can call it as often as needed to get the latest value. When `timeRemaining` reaches zero you can schedule another `requestIdleCallback` if you still have more work to do:
+The `timeRemaining` function can be called to get the latest value. When `timeRemaining()` returns zero you can schedule another `requestIdleCallback` if you still have more work to do:
 
 {% highlight javascript %}
 function myNonEssentialWork (deadline) {
-  while (deadline.timeRemaining > 0 && tasks.length > 0)
+  while (deadline.timeRemaining() > 0 && tasks.length > 0)
     doWorkIfNeeded();
 
   if (tasks.length > 0)
@@ -85,8 +85,8 @@ requestIdleCallback(processPendingAnalyticsEvents, 2000);
 
 If your callback is executed because of the timeout firing you’ll notice two things:
 
-* The timeRemaining value will be zero.
-* The second property of the `deadline` object, `didTimeout`, will be true.
+* `timeRemaining()` will return zero.
+* The `didTimeout` property of the `deadline` object will be true.
 
 If you see that the `didTimeout` is true, you will most likely just want to run the work and be done with it:
 
@@ -94,7 +94,7 @@ If you see that the `didTimeout` is true, you will most likely just want to run 
 function myNonEssentialWork (deadline) {
 
   // Use any remaining time, or, if timed out, just run through the tasks.
-  while ((deadline.timeRemaining > 0 || deadline.didTimeout) &&
+  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) &&
          tasks.length > 0)
     doWorkIfNeeded();
 
@@ -163,10 +163,10 @@ function processPendingAnalyticsEvents (deadline) {
   // If there is no deadline, just run as long as necessary.
   // This will be the case if requestIdleCallback doesn’t exist.
   if (typeof deadline === 'undefined')
-    deadline = { timeRemaining: Number.MAX_VALUE };
+    deadline = { timeRemaining: function () { return Number.MAX_VALUE } };
 
   // Go for as long as there is time remaining and work to do.
-  while (deadline.timeRemaining > 0 && eventsToSend.length > 0) {
+  while (deadline.timeRemaining() > 0 && eventsToSend.length > 0) {
     var evt = eventsToSend.pop();
 
     ga('send', 'event',
@@ -205,13 +205,13 @@ function processPendingElements (deadline) {
 
   // If there is no deadline, just run as long as necessary.
   if (typeof deadline === 'undefined')
-    deadline = { timeRemaining: Number.MAX_VALUE };
+    deadline = { timeRemaining: function () { return Number.MAX_VALUE } };
 
   if (!documentFragment)
     documentFragment = document.createDocumentFragment();
 
   // Go for as long as there is time remaining and work to do.
-  while (deadline.timeRemaining > 0 && elementsToAdd.length > 0) {
+  while (deadline.timeRemaining() > 0 && elementsToAdd.length > 0) {
 
     // Create the element.
     var elToAdd = elementsToAdd.pop();
@@ -259,8 +259,8 @@ All being well we will now see much less jank when appending items to the DOM. E
 * **Is there a polyfill?**
     Sadly not. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free space at the end of the frame, so at best you have to make guesses. APIs like `setTimeout`, `setInterval`, or `setImmediate` can be used to schedule work, but they are not timed to avoid user interaction in the way that `requestIdleCallback` is.
 * **What happens if I overrun the deadline?**
-    If `timeRemaining` is zero, but you opt to run for longer, you can do so without fear of the browser halting your work. However, the browser gives you the deadline to try and ensure a smooth experience for your users, so unless there’s a very good reason, you should always adhere to the deadline.
-* **Is there maximum value for timeRemaining?**
+    If `timeRemaining()` returns zero, but you opt to run for longer, you can do so without fear of the browser halting your work. However, the browser gives you the deadline to try and ensure a smooth experience for your users, so unless there’s a very good reason, you should always adhere to the deadline.
+* **Is there maximum value that `timeRemaining()` will return?**
     Yes, it’s currently 50ms. When trying to maintain a responsive application, all responses to user interactions should be kept under 100ms. Should the user interact the 50ms window should, in most cases, allow for the idle callback to complete, and for the browser to respond to the user’s interactions. You may get multiple idle callbacks scheduled back-to-back (if the browser determines that there’s enough time to run them).
 * **Is there any kind of work I shouldn’t do in a requestIdleCallback?**
     Ideally the work you do should be in small chunks (microtasks) that have relatively predictable characteristics. For example, changing the DOM in particular will have unpredictable execution times, since it will trigger style calculations, layout, painting, and compositing. As such you should only make DOM changes in a `requestAnimationFrame` callback as suggested above. Another thing to be wary of is resolving (or rejecting) Promises, as the callbacks will execute immediately after the idle callback has finished, even if there is no more time remaining.
