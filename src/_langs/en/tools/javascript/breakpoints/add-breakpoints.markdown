@@ -30,6 +30,7 @@ change seotitle
 change description
 change introduction
 change key-takeaways
+change headings
 -->
 
 
@@ -97,7 +98,9 @@ To add/remove a line breakpoint:
 
 *A line breakpoint*
 
-## Breakpoint on a DOM mutation event 
+## Conditional breakpoints
+
+### DOM mutation event 
 
 Use the DOM mutation event breakpoint when the script is about to insert, change, or delete a DOM node and you want to isolate and observe the change as it happens. Execution pauses when a specific DOM node is to be modified, before the modification is applied (see also [Edit the DOM](/web/tools/iterate/inspect-styles/edit-dom)).
 
@@ -113,7 +116,7 @@ To add/remove a DOM mutation breakpoint:
 
 *A DOM mutation breakpoint*
 
-## Breakpoint on an XMLHttpRequest
+### XMLHttpRequest
 
 There are two different ways you can break on an `XMLHttpRequest`:
 
@@ -121,7 +124,7 @@ There are two different ways you can break on an `XMLHttpRequest`:
 * At a given stage in the `XMLHttpRequest` event lifecycle. DevTools breaks at the 
   specified stage for all requests.
 
-### Break when XMLHttpRequest contains specific string
+#### Break when XMLHttpRequest contains specific string
 
 To break when an `XMLHttpRequest` URL contains a specific string:
 
@@ -135,7 +138,7 @@ To break when an `XMLHttpRequest` URL contains a specific string:
 
 *An XMLHttpRequest breakpoint*
 
-### Break all XMLHttpRequests at given stage in event lifecycle
+#### Break all XMLHttpRequests at given stage in event lifecycle
 
 To break at a given stage in the `XMLHttpRequest` event lifecycle:
 
@@ -148,7 +151,7 @@ To break at a given stage in the `XMLHttpRequest` event lifecycle:
 
 ![Available breakpoints for XMLHttpRequest events](imgs/xhr-events.png)
 
-## Breakpoint on a JavaScript event listener 
+### JavaScript event listener 
 
 Use the JavaScript event listener breakpoint
 when you want to see how a certain event
@@ -169,7 +172,7 @@ To add/remove a JavaScript event listener breakpoint:
 
 *An event listener breakpoint* 
 
-## Break on uncaught exceptions
+### Uncaught exceptions
 
 Use the **Pause on Uncaught Exceptions** DevTools feature to pause script
 execution on any uncaught exception. When an uncaught exception is encountered,
