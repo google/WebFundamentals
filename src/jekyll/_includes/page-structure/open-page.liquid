@@ -1,6 +1,101 @@
-{% include page-structure/html-head.liquid %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="{{ page.theme_color }}">
+
+<link rel="manifest" href="{{site.WFBaseUrl}}/manifest.json">
+<link rel="canonical" href="{{page.canonical_url}}">
+<link rel="icon" href="{{site.WFBaseUrl}}/favicon.ico" />
+
+<link rel="stylesheet" media="screen" href="{{page.html_css_file}}" />
+
+<meta name="google-site-verification" content="zFM_etMkM6oOvH6CNip7QxEbslAw6kJ2kiGJBYYBIcA" />
+
+<!-- Title -->
+<title>{{ page.html_head_title }}</title>
+<meta itemprop="name" content="{{ page.html_head_title }}">
+<meta property="og:title" content="{{ page.html_head_title }}" />
+
+<!-- Description -->
+<meta name="description" content="{{ page.html_head_description }}" />
+<meta itemprop="description" content="{{ page.html_head_description }}">
+
+<!-- Translated Page -->
+{% for translated_page in page.translations %}
+<link rel="alternate" hreflang="{{translated_page.langcode}}" href="{{site.WFBaseUrl}}{{page.canonical_url}}?hl={{translated_page.langcode}}" />
+{% endfor %}
+
+<link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
+<link itemprop="image" href="{{ page.html_head_social_img }}">
+
+<meta property="og:site_name" content="{{ page.html_head_title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{site.WFBaseUrl}}{{page.canonical_url}}" />
+<meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
+<meta property="og:image" content="{{ page.html_head_social_img }}" />
+{% if main_author.facebook %}
+<meta property="og:author" content="{{ main_author.facebook }}" />
+{% endif %}
+
+<meta name="twitter:creator" content="{{ main_author.twitter }}" />
+<meta name="twitter:account_id" content="@chromiumdev" />
+<meta name="twitter:site" content="@chromiumdev" />
+<meta name="twitter:description" content="{{ page.strippedDescription }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="{{ page.html_head_social_img }}" />
+
+<link rel="alternate" type="application/rss+xml" title="{{page.feed_name}}" href="{{page.feed_url}}">
+
 </head>
 
 <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
 
-{% include page-structure/page-header-and-nav.liquid title=page.title %}
+<!-- Uses a header that contracts as the page scrolls down. -->
+
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__drawer-button">
+      {% include svgs/menu.svg %}
+    </div>
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ page.title }}</span>
+
+      <div class="mdl-layout-spacer"></div>
+
+      <a class="wf-header__dev-logo" href="https://developers.google.com/">
+        {% include svgs/gds-logo-grey.svg %}
+      </a>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">{{ page.drawerTitleText }}</span>
+    <nav class="mdl-navigation">
+      {% include page-structure/navigation.liquid %}
+    </nav>
+
+    <div class="mdl-layout-spacer"></div>
+
+    <div class="wf-navdrawer__github-links">
+      {% if page.path %}
+      <a href="{{site.github.root}}/tree/{{site.WFGithubBranch}}/{{page.path| uri_escape }}" target="_blank">{{"view_source" | localize_string}}</a>
+      {% else %}
+      <a href="{{site.github.root}}/tree/{{site.WFGithubBranch}}/" target="_blank">{{"view_source" | localize_string}}</a>
+      {% endif %}
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.url| uri_escape }}" target="_blank">{{"submit_feedback" | localize_string}}</a>
+    </div>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">

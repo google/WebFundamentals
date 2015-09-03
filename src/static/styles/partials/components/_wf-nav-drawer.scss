@@ -22,14 +22,14 @@ $horizontal-padding: $base-line;
 }
 
 .wf-nav__list {
-  padding: $vertical-padding 0 0 0;
+  padding: 0;
   margin: 0;
 
   list-style: none;
 }
 
 .wf-main-nav__list {
-  padding-bottom: $vertical-padding;
+  padding-bottom: $vertical-padding 0;
   border-bottom: 1px solid $grey-border-color;
 }
 
@@ -37,11 +37,15 @@ $horizontal-padding: $base-line;
   padding: $vertical-padding $horizontal-padding;
 }
 
+.wf-sub-nav__item {
+  padding: $vertical-padding;
+}
+
 .wf-main-nav__link, .wf-main-nav__sub-link {
   text-decoration: none;
   color: $text-color-primary;
 }
 
-.wf-main-nav__sub-link {
-  padding-left: $vertical-padding;
+.wf-sub-nav__sub-link {
+  text-decoration: none;
 }

@@ -1,18 +1,13 @@
-    {% include page-structure/html-head.liquid %}
-  </head>
+{% include page-structure/open-page.liquid %}
 
-  <body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+<div class="update-post__content-container">
+  {% include updates/author.liquid author=page.main_author linkauthor=true written_on=page.article.written_on%}
 
-    {% include page-structure/page-header-and-nav.liquid title=page.title %}
+  {{ content }}
+</div>
 
-    <div class="update-post__content-container">
-      {% include updates/author.liquid author=page.main_author linkauthor=true written_on=page.article.written_on%}
+<div id="gplus-comment-container" class="update-post__comment-container">
+  <div id="gplus-comments" data-url="{{ site.WFAbsoluteUrl }}{{ site.WFBaseUrl }}{{page.url}}"></div>
+</div>
 
-        {{ content }}
-    </div>
-
-    <div id="gplus-comment-container" class="update-post__comment-container">
-      <div id="gplus-comments" data-url="{{ site.WFAbsoluteUrl }}{{ site.WFBaseUrl }}{{page.url}}"></div>
-    </div>
-
-    {% include page-structure/page-footer.liquid %}
+{% include page-structure/close-page.liquid %}

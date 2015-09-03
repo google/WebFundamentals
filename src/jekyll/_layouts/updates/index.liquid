@@ -1,9 +1,4 @@
-  {% include page-structure/html-head.liquid %}
-</head>
-
-<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
-
-  {% include page-structure/page-header-and-nav.liquid title="Web Updates" %}
+{% include page-structure/open-page.liquid %}
 
   <p class="updates-header__description">Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and
     check out the latest features in DevTools.</p>
@@ -36,5 +31,4 @@
     {% endif %}
   </div>
 
-
-  {% include page-structure/page-footer.liquid %}
+{% include page-structure/close-page.liquid %}
