@@ -3,10 +3,10 @@ rss: false
 layout: tools-article
 title: "How to Add Manual and Conditional Breakpoints"
 seotitle: "How to Add Manual and Conditional Breakpoints"
-description: "Set manual and conditional breakpoints in Chrome DevTools to quickly 
-and effectively debug problematic code."
-introduction: "Set manual and conditional breakpoints in Chrome DevTools to quickly 
-and effectively debug problematic code."
+description: "Set manual and conditional breakpoints in Chrome DevTools to 
+quickly and effectively debug problematic code."
+introduction: "Set manual and conditional breakpoints in Chrome DevTools to 
+quickly and effectively debug problematic code."
 article:
   written_on: 2015-04-14
   updated_on: 2015-09-03
@@ -21,16 +21,14 @@ key-takeaways:
   breakpoint:
     - Use manual breakpoints to pause script execution at a specific line of code
     - Use conditional breakpoints to pause when a specific condtion is met
-    - You can set conditional breakpoints for when: a DOM node is inserted / modified / deleted,
-      an XMLHttpRequest URL contains substring, a JavaScript event listener is fired,
-      an exception is uncaught
+    - You can set conditional breakpoints for when: a DOM node is inserted / modified / deleted, an XMLHttpRequest URL contains substring, a JavaScript event listener is fired, an exception is uncaught
 ---
 
 {% wrap content %}
 
 Breakpoints are one of the most effective ways to debug code. Breakpoints
-enable you to pause script execution and then investigate call stacks
-and the variable values at that particular moment in time. There are two types 
+enable you to pause script execution and then investigate the call stack
+and variable values at that particular moment in time. There are two types 
 of breakpoints at your disposal: manual and conditional.
 
 * Manual breakpoints are individual breakpoints that you set on a 
@@ -78,13 +76,14 @@ To add/remove a line breakpoint:
 1. Click the line number of the line where you want to set the breakpoint. 
    You can add multiple breakpoints by clicking each line's line number. 
 
-   Alternately, you can include a **debugger** statement in your code, which is 
+   Alternately, you can include the `debugger` keyword in your code, which is 
    equivalent to setting a line breakpoint at that line.
 
 2. Temporarily disable a line breakpoint by clearing its checkbox in the sidebar. 
 
-3. Remove a line breakpoint by clicking the line number again; or right-click 
-   the breakpoint in the sidebar and choose **Remove breakpoint**.
+3. Remove a line breakpoint by clicking the line number again; or by
+   right-clicking the breakpoint in the sidebar and then selecting 
+    **Remove breakpoint**.
 
 ![Line breakpoint](imgs/image_2.png)
 
@@ -182,9 +181,7 @@ To break before a specified `XMLHttpRequest` event is fired:
 Use the JavaScript event listener breakpoint
 when you want to see how a certain event
 (such as keypress or dblclick) is processed by the script.
-Execution pauses before the specified event listener is fired. 
-before the listener fires
-(see also [View element event listeners](/web/tools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
+Execution pauses before the event listener is fired (see also [View element event listeners](/web/tools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
 
 To add/remove a JavaScript event listener breakpoint:
 
@@ -210,18 +207,17 @@ to the exception.
    (!["pause on exceptions" button](imgs/pause-on-exception-button.png){:.inline})
    in the **Sources** panel of DevTools.
    
-In the animation below, the user clicks on the *Pause on Exceptions* button
+In the animation below, the user clicks on the **Pause on Exceptions** button
 and then triggers an uncaught exception in the script. DevTools automatically
 breaks at the line where the exception is thrown.
 
 {% animation animations/pause-on-uncaught-exception.mp4 %}
 
 You can also view the call stack leading up to an uncaught exception 
-in the DevTools console.
-
-In the animation below, the user triggers an uncaught exception and
-then clicks the carat next to the uncaught exception message (`Uncaught 0`)
-in order to display the call stack leading up to the exception.
+in the DevTools console. In the animation below, the user triggers an 
+uncaught exception and then clicks the carat next to the uncaught 
+exception message (`Uncaught 0`) in order to display the call stack 
+leading up to the exception.
 
 {% animation animations/exception-in-console.mp4 %}
 
