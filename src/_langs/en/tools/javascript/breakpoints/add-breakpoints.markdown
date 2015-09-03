@@ -100,7 +100,34 @@ To add/remove a line breakpoint:
 
 ## Conditional breakpoints
 
-### DOM mutation event 
+Conditional breakpoints are triggered when a specified condition is
+met (e.g. an `onclick` event is fired, an exception is uncaught, and
+so on). You enable these via the DevTools GUI,
+and then DevTools automatically breaks whenever
+the specified condition is met.
+
+Use conditional breakpoints when you need to set many breakpoints at once.
+For example, suppose you are experiencing errors when DOM nodes are removed,
+but there are 20 different places where the error might be originating from. Rather 
+than placing a manual breakpoint before every suspicious statement, you can just 
+set a conditional breakpoint that is triggered on all DOM node deletion events.
+
+You might also find it easier and faster to set conditional breakpoints for situations
+in which you would usually use a manual breakpoint. For 
+example, if you want to break before a certain `onclick` event listener is fired,
+you *could* find the event listener in your code and set a manual breakpoint in 
+the function, or you could just set a conditional breakpoint on all `onclick`
+events, and then just click the element for which the event listener is registered.
+
+DevTools provides four types of conditional breakpoints to help you debug 
+your code:
+
+* DOM mutation events (insertions, modifications, deletions)
+* `XMLHttpRequest`
+* JavaScript event listeners
+* Uncaught exceptions
+
+### Break before DOM mutation event 
 
 Use the DOM mutation event breakpoint when the script is about to insert, change, or delete a DOM node and you want to isolate and observe the change as it happens. Execution pauses when a specific DOM node is to be modified, before the modification is applied (see also [Edit the DOM](/web/tools/iterate/inspect-styles/edit-dom)).
 
@@ -116,47 +143,52 @@ To add/remove a DOM mutation breakpoint:
 
 *A DOM mutation breakpoint*
 
-### XMLHttpRequest
+### `XMLHttpRequest` conditional breakpoints
 
-There are two different ways you can break on an `XMLHttpRequest`:
+There are two ways you can create conditional breakpoints for an `XMLHttpRequest`:
 
-* When a request URL contains a substring. DevTools breaks before the request is sent.
-* At a given stage in the `XMLHttpRequest` event lifecycle. DevTools breaks at the 
-  specified stage for all requests.
+* When the URL of a request contains a specified string. DevTools breaks before 
+  the request is sent.
+* Before a specified `XMLHttpRequest` event (e.g. `load`, `timeout`, `error`). DevTools 
+  breaks right before the specified `XMLHttpRequest` event is fired. 
 
-#### Break when XMLHttpRequest contains specific string
+#### Break when XMLHttpRequest URL contains specified string
 
 To break when an `XMLHttpRequest` URL contains a specific string:
 
-1. Click the **Add XHR breakpoint** button ![Add XHR breakpoint](imgs/image_4.png){:.inline} in the sidebar. 
+1. Click the **Add XHR breakpoint** button 
+   ![Add XHR breakpoint](imgs/image_4.png){:.inline} in the sidebar. 
 
-2. In the **Break when URL contains** field, type a string that the URL should contain when you want the XHR request to break and press **Enter**; or, if you want to break on all XHR requests, leave the field empty. To edit the field, double-click the breakpoint. 
+2. In the **Break when URL contains** field, type the string that the 
+   URL should contain when you want the XHR request to break and press 
+   **Enter**. To edit the field, double-click the breakpoint. 
 
-3. Remove an XHR breakpoint by right-clicking the breakpoint in the sidebar, then choose **Remove breakpoint**.
+3. To remove the breakpoint, right-click the breakpoint in the sidebar, then 
+   choose **Remove breakpoint**.
 
 ![XMLHttpRequest breakpoint](imgs/image_5.png)
 
 *An XMLHttpRequest breakpoint*
 
-#### Break all XMLHttpRequests at given stage in event lifecycle
+#### Break before specified `XMLHttpRequest` event
 
-To break at a given stage in the `XMLHttpRequest` event lifecycle:
+To break before a specified `XMLHttpRequest` event is fired:
 
 1. Go to the **Event Listener Breakpoints** panel.
 
-2. Expand the **XHR** dropdown menu.
+2. Expand the **XHR** dropdown menu. 
 
 3. Select the stage in the event lifecycle which you want to break at.
    DevTools breaks at that stage for all `XMLHttpRequest` events.
 
 ![Available breakpoints for XMLHttpRequest events](imgs/xhr-events.png)
 
-### JavaScript event listener 
+### Break before JavaScript event listener is fired 
 
 Use the JavaScript event listener breakpoint
 when you want to see how a certain event
 (such as keypress or dblclick) is processed by the script.
-Execution pauses when a specific event listener is to be fired,
+Execution pauses before the specified event listener is fired. 
 before the listener fires
 (see also [View element event listeners](/web/tools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
 
@@ -172,7 +204,7 @@ To add/remove a JavaScript event listener breakpoint:
 
 *An event listener breakpoint* 
 
-### Uncaught exceptions
+### Break on uncaught exception
 
 Use the **Pause on Uncaught Exceptions** DevTools feature to pause script
 execution on any uncaught exception. When an uncaught exception is encountered,
@@ -201,45 +233,20 @@ in order to display the call stack leading up to the exception.
 
 ## Summary of breakpoint types
 
-The following briefly summarizes the breakpoint types:
+DevTools provides two main types of breakpoints to help you 
+debug your web applications:
 
-<table class="table-3">
-  <thead>
-    <tr>
-      <th>Breakpoint type</th>
-      <th>Breaks before</th>
-      <th>Use to</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td data-th="Breakpoint type">Line</td>
-    <td data-th="Breaks before">Specified line is executed.</td>
-    <td data-th="Use to">Examine current variable or parameter values.</td>
-  </tr>
-  <tr>
-    <td data-th="Breakpoint type">DOM mutation</td>
-    <td data-th="Breaks before">DOM node is modified.</td>
-    <td data-th="Use to">Isolate and observe the DOM change.</td>
-  </tr>
-  <tr>
-    <td data-th="Breakpoint type">XMLHttpRequest</td>
-    <td data-th="Breaks before">Request is sent.</td>
-    <td data-th="Use to">View the request’s prepared data.</td>
-  </tr>
-  <tr>
-    <td data-th="Breakpoint type">Event listener</td>
-    <td data-th="Breaks before">Listener is fired.</td>
-    <td data-th="Use to">Follow how an event is processed.</td>
-  </tr>
-  <tr>
-    <td data-th="Breakpoint type">Exception</td>
-    <td data-th="Breaks before">Uncaught exception is thrown</td>
-    <td data-th="Use to">
-      Examine the context leading up to an uncaught exception.
-    </td>
-  </tr>
-  </tbody>
-</table>
+* Manual breakpoints: Set a manual breakpoint on a single line of code
+  via the DevTools GUI or by inserting the `debugger` statement in your code.
+* Conditional breakpoints: Instruct DevTools to break automatically whenever
+  a specific condition is met.
+
+DevTools supports four types of conditional breakpoints: 
+
+* DOM mutation events: insertion, modification, deletion
+* `XMLHttpRequest`: break when a request URL contains a specific string,
+  break before a specified `XMLHttpRequest` event (`load`, `error`, etc.)
+* JavaScript event listeners (all `mouse` events, `onclick` specifically, etc.)
+* Uncaught exceptions
 
 {% endwrap %}
