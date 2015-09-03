@@ -1,12 +1,10 @@
 {% comment %}
-We don't have a content nav for the root of /web/ so for this we just skip
+  Content Navigation is the nav for the current position in the site structure.
 {% endcomment %}
+
 {% if page.contentnav %}
 <ul class="wf-main-nav__list wf-nav__list clear">
-
-  <!-- This Section displays the Navigation for current section -->
   {% for contentnavTocItem in page.contentnav.toc %}
-    {% assign currentPath = contentnavTocItem.path | append:"index.html" %}
     <li class="wf-main-nav__item">
       {% if contentnavTocItem.home %}
       <a class="wf-main-nav__link" href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
@@ -17,35 +15,30 @@ We don't have a content nav for the root of /web/ so for this we just skip
         {{ contentnavTocItem.title }}
       </a>
       {% endif %}
+
       {% if contentnavTocItem.hasSubNav == true and contentnavTocItem.isInCurrentSection == true %}
-        <div class="main-nav__secondary-nav">
-          <div class="main-nav__secondary-content">
-
-            <div class="clear">
-              <ul class="main-nav__list--child g-medium--2 g-wide--2">
-                {% for subsection in contentnavTocItem.section %}
-                  <li class="main-nav__item--child nav-theme--{{subsection.id}}">
-                    <a class="main-nav__link main-nav__link--child themed--hover" title="Go to {{ subsection.strippedTitle }}" href="{{ subsection.path }}">
-                      {% if subsection.id %}
-                      <span class="main-nav__guide-icon icon-circle--nav themed--background"><i class="icon icon-{{subsection.id}}"></i></span>
-                      {% endif %}
-                      {{ subsection.title }}
-                      <i class="main-nav__icon icon icon-chevron-right"></i>
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
+      <ul class="wf-sub-nav__list wf-nav__list clear">
+        {% for subsection in contentnavTocItem.section %}
+        <li class="wf-sub-nav__item">
+          <a class="wf-sub-nav__sub-link" href="{{ subsection.path }}" title="Go to {{ subsection.strippedTitle }}">
+            {{ subsection.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
       {% endif %}
 
     </li>
   {% endfor %}
 </ul>
 {% endif %}
+
+
+
+{% comment %}
+  This is the list of main sections of /web/
+  i.e. Fundamentals, Shows, Showcases, Tools
+{% endcomment %}
 
 <ul class="wf-secondary-nav__list wf-nav__list">
   {% for rootNavTocItem in page.rootnav.toc %}

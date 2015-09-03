@@ -1,15 +1,15 @@
+@import "third_party/mdl/color-definitions";
+
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
-$color-primary: #1F1E24;
+$color-primary: $palette-grey-900;
 //$color-primary-dark: $palette-indigo-700 !default;
-//$color-accent: $palette-pink-A200 !default;
+$color-accent: unquote("rgb(#{$palette-grey-600})");
 
 // Our primary is dark, so use $color-dark-contrast for overlaid text.
 //$color-primary-contrast: $color-dark-contrast !default;
 // Our accent is dark, so use $color-dark-contrast for overlaid text.
 //$color-accent-contrast: $color-dark-contrast !default;
-
-$header-bg-color: $color-primary;
 
 @import "third_party/mdl/mixins";
 @import "third_party/mdl/variables";
@@ -22,7 +22,6 @@ $header-bg-color: $color-primary;
 @import "partials/debug";
 @import "partials/base";
 @import "partials/utils";
-@import "partials/components/wf-header";
 @import "partials/components/wf-footer";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";

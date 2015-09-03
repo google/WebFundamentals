@@ -1,3 +1,11 @@
+@import "third_party/mdl/color-definitions";
+
+// Use color primarily for emphasis. Choose colors that fit with
+// your brand and provide good contrast between visual components.
+$color-primary: $palette-pink-500;
+//$color-primary-dark: $palette-indigo-700 !default;
+$color-accent: unquote("rgb(#{$palette-pink-400})");
+
 @import "third_party/mdl/mixins";
 @import "third_party/mdl/variables";
 @import "third_party/mdl/resets/resets";
@@ -10,7 +18,6 @@
 @import "partials/syntax";
 @import "partials/table";
 @import "partials/utils";
-@import "partials/components/wf-header";
 @import "partials/components/wf-footer";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
