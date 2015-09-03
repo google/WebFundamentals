@@ -7,7 +7,7 @@ description: "DevTools provides five types of breakpoints that you use in differ
 introduction: "DevTools provides five types of breakpoints that you use in different circumstances. Each breakpoint type is added or removed differently."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-08-28
+  updated_on: 2015-09-03
   order: 2
 authors:
   - megginkearney
@@ -23,10 +23,21 @@ key-takeaways:
     - Breakpoint on a JavaScript event listener to see how a certain event (such as keypress or doubleclick) is processed by the script.
     - Breakpoint on uncaught exceptions to pause before an exception is thrown.
 ---
+
+<!-- to-do:
+change title
+change seotitle
+change description
+change introduction
+change key-takeaways
+-->
+
+
 {% wrap content %}
 
-Breakpoints enable you to pause script execution and investigate call stacks
-and the value of variables at that moment in time. There are two types 
+Breakpoints are one of the most popular ways to debug code. Breakpoints
+enable you to pause script execution and then investigate call stacks
+and the variable values at that particular moment in time. There are two types 
 of breakpoints at your disposal: manual and conditional.
 
 * Manual breakpoints are individual breakpoints that you set on a 
@@ -34,8 +45,8 @@ of breakpoints at your disposal: manual and conditional.
   by inserting the `debugger` keyword in your code.
 * Conditional breakpoints are triggered when a specified condition is 
   met (e.g. an `onclick` event is fired, an exception is uncaught, and 
-  so on). As a developer, you just enable a type of conditional breakpoint,
-  and then Chrome DevTools automatically breaks whenever
+  so on). You enable these via the DevTools GUI,
+  and then DevTools automatically breaks whenever
   the specified condition is met.
 
 Read on to learn how to create both types of breakpoints in Chrome DevTools.
