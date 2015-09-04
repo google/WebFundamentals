@@ -72,6 +72,23 @@ figcaption {
   }
 }
 
+.wf-header__dev-logo {
+    display: inline-block;
+
+    width: $base-line * 2;
+    height: $base-line * 2;
+
+    line-height: $base-line * 2;
+    text-align: center;
+}
+
+.wf-gds-dev-logo {
+  width: $header-svg-icon-size;
+  height: $header-svg-icon-size;
+
+  fill: white;
+}
+
 @media (min-width: $max-content-width) {
   figcaption {
     //@include typecsset-font-size($tablet-base-font-size - 4px);
