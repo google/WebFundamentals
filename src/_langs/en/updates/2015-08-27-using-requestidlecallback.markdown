@@ -53,7 +53,7 @@ Calling `requestIdleCallback` is very similar to `requestAnimationFrame` in that
 requestIdleCallback(myNonEssentialWork);
 {% endhighlight %}
 
-When `myNonEssentialWork` is called, it will be given a `deadline` object which contains a number indicating how much time remains for your work:
+When `myNonEssentialWork` is called, it will be given a `deadline` object which contains a function which returns a number indicating how much time remains for your work:
 
 {% highlight javascript %}
 function myNonEssentialWork (deadline) {
