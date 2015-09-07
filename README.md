@@ -184,3 +184,12 @@ Translations
 ============
 
 See [our translations guide](TRANSLATION.md)
+
+Building Shows
+==============
+
+You need the python [Google API client](https://developers.google.com/api-client-library/python/start/installation)
+
+For Linux:
+
+    pip install --upgrade google-api-python-client
