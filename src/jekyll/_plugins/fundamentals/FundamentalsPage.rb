@@ -19,10 +19,6 @@ module Jekyll
 
   class FundamentalsPage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      if langcode != 'en'
-        puts filename
-      end
-
       super(site, relativeDir, filename, langcode)
 
       self.data['drawerTitleText'] = 'Web Fundamentals'
