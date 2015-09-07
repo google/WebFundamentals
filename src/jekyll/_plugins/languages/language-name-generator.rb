@@ -184,6 +184,7 @@ module Jekyll
                 true)
               translationPage.data.merge!('is_localized' => true, 'is_localization' => true)
               translated_pages << translationPage
+              site.pages << translationPage
             end
             page.data["translations"] = translated_pages
 
@@ -226,10 +227,6 @@ module Jekyll
         when 'updates'
           page = UpdatePage.new(site, relative_dir, file_name, langcode)
         when 'fundamentals'
-          if file_name == 'responsive.markdown'
-            puts 'Language Name Generator ' + file_name
-            puts '    ' + langcode
-          end
           page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
         when 'shows'
           page = ShowsPage.new(site, relative_dir, file_name, langcode)
