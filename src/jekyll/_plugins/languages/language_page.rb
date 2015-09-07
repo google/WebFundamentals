@@ -24,7 +24,6 @@ module Jekyll
 
     def initialize(site, relativeDir, filename, langcode)
       @langcode = langcode ? langcode : "en"
-
       # This allows WFPage to perform any required work
       super(site, relativeDir, filename)
 

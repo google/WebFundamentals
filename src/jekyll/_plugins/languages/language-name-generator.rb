@@ -34,7 +34,7 @@ module Jekyll
         return
       end
 
-      @acceptedExtensions = [".markdown", ".md", ".html"]
+      @markdownExtensions = [".markdown", ".md", ".html"]
 
       # Load contributors
       # Because this generator is highest priority,
@@ -69,7 +69,7 @@ module Jekyll
 
       # Get files in directory
       fileEntries = Dir.entries( primaryLangFilepath )
-      site.data['primes'] = {}
+      site.data['primes'] = []
       allPages = []
       pagesTree = {"id" => "root", "pages" => [], "subdirectories" => []}
 
@@ -114,6 +114,7 @@ module Jekyll
     def handleFileEntries(allPages, treeParent, pagesTrees, site, rootPath, relativePath, fileEntries)
       fileEntries.each { |fileEntry|
         if File.directory?(File.join(rootPath, relativePath, fileEntry))
+          # We are dealing with a directory
           if fileEntry =~ /^_/
             next
           end
@@ -145,39 +146,44 @@ module Jekyll
             Dir.entries( File.join(rootPath, nextRelativePath) )
             )
         else
+          # We are dealing with a file
           page = create_page(
               site,
               relativePath,
               fileEntry,
               'en',
               false)
-          if @acceptedExtensions.include? File.extname(fileEntry)
-            if site.data['primes'].key?(page.url)
-              raise "Two pages at the same URL #{page.url}"
-            end
+
+          # If the file is a markdown file, it's a Jekyll Page
+          if @markdownExtensions.include? File.extname(fileEntry)
+            # This makes no sense here, the response for translations method
+            # is assigned to site.data['primes']
+            #if site.data['primes'].key?(page.url)
+            #  raise "Two pages at the same URL #{page.url}"
+            #end
 
             page.data['context'] = pagesTrees
 
+            # Check if there are any translations available
             supportedTranslations = site.config['langs_available'].select { |languageId|
               if languageId == site.config['primary_lang']
                 return false
               end
               File.exists? File.join(@contentSource, languageId, relativePath, fileEntry)
             }
-
             page.data['is_localized'] = supportedTranslations.count > 0
             translated_pages = []
             supportedTranslations.each do |languageId|
               translationFilePath = File.join @contentSource, languageId, relativePath
 
-              page = create_page(
+              translationPage = create_page(
                 site,
                 relativePath,
                 fileEntry,
                 languageId,
                 true)
-              page.data.merge!('is_localized' => true, 'is_localization' => true)
-              translated_pages << page
+              translationPage.data.merge!('is_localized' => true, 'is_localization' => true)
+              translated_pages << translationPage
             end
             page.data["translations"] = translated_pages
 
@@ -220,6 +226,10 @@ module Jekyll
         when 'updates'
           page = UpdatePage.new(site, relative_dir, file_name, langcode)
         when 'fundamentals'
+          if file_name == 'responsive.markdown'
+            puts 'Language Name Generator ' + file_name
+            puts '    ' + langcode
+          end
           page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
         when 'shows'
           page = ShowsPage.new(site, relative_dir, file_name, langcode)
@@ -264,7 +274,7 @@ module Jekyll
       tree['subdirectories'] = tree['subdirectories'].sort do |a, b|
         a_order = 0
         b_order = 0
-        
+
         if !a['index'].nil?
           a_order = a['index'].data['order'] || a['index'].data['date'] || 0
         end
