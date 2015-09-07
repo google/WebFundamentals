@@ -15,7 +15,10 @@
   },
   "homepage": "https://github.com/google/WebFundamentals",
   "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.0.1",
     "del": "^1.2.0",
+    "glob": "^5.0.14",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-csso": "^1.0.0",
@@ -24,9 +27,11 @@
     "gulp-sass": "^2.0.1",
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-streamify": "^1.0.2",
+    "request": "^2.60.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.0",
-    "request": "^2.60.0",
+    "vinyl-source-stream": "^1.1.0",
     "webpagetest": "^0.3.3"
   },
   "private": true,
