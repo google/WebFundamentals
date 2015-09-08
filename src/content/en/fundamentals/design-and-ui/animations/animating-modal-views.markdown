@@ -1,9 +1,9 @@
 ---
 layout: shared/plain
 title: "Animating modal views"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: animations-modal-views
 collection: design-and-ui
 article:
@@ -22,7 +22,13 @@ notes:
     - "Older versions of Internet Explorer don’t support the <code>pointer-event</code> property, so for those browsers you will have to manually toggle the display property. The downside there is that it takes a frame for the change to “take hold,” so you must then use a requestAnimationFrame callback to start the animation. If you don’t wait a frame then the modal overlay will simply appear."
 ---
 
-Modal views are for important messages, and for which you have very good reasons to block the user interface. Care must be taken when you use them as they are disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life.
+<div class="intro">
+  Modal views are for important messages, and for which you have very good 
+  reasons to block the user interface. Care must be taken when you use them as 
+  they are disruptive and can easily ruin the user’s experience if overused. 
+  But, in some circumstances, they’re the right views to use, and adding some 
+  animation will bring them to life.
+</div>
 
 {% include shared/toc.liquid %}
 

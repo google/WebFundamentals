@@ -1,9 +1,9 @@
 ---
 layout: shared/plain
 title: "Animations"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: animations
 collection: design-and-ui
 article:
@@ -12,6 +12,20 @@ article:
 authors:
   - paullewis
 priority: 0
+key-takeaways:
+  intro:
+    - "Use animations as a way to add life to your projects."
+    - "Animations should be in support of user interaction."
+    - "Be careful which properties you animate; some are more expensive than others!"
+  css-vs-js:
+    - "Use CSS animations for simpler 'one-shot' transitions, like toggling UI element states."
+    - "Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind or slow-down."
+    - "If you choose to animate with JavaScript, go with the Web Animations API or a modern framework you are comfortable with."
+notes:
+  keyframes:
+    - "If you’re new to animations, keyframes are an old term from hand-drawn animations. Animators would create specific frames for a piece of action, called key frames, which would capture things like the most extreme part of some motion, and then they would set about drawing all the individual frames in between the keyframes. We have a similar process today with CSS animations, where we instruct the browser what values CSS properties need to have at given points, and it fills in the gaps."
+  setinterval:
+    - "You may see code around the web that uses <code>setInterval</code> or <code>setTimeout</code> for animations. This is a terrible idea, as the animation will not be synchronized to the refresh rate of the screen, and it’s highly likely to judder and skip. You should always avoid such code, and use <code>requestAnimationFrame</code>, which is synchronized properly, instead."
 ---
 
 Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?

@@ -1,49 +1,39 @@
 ---
 layout: shared/plain
 title: "Provide real time feedback"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: userinput-realtime-validation
 collection: design-and-ui
 article:
   written_on: 2014-04-30
   updated_on: 2014-10-21
 priority: 0
+authors:
+  - petelepage
 key-takeaways:
   provide-real-time-validation:
     - "Leverage the browser's built-in validation attributes like <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc."
     - "Use JavaScript and the Constraints Validation API for more complex validation requirements."
     - "Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix."
 remember:
-  use-placeholders:
-    - Placeholders disappear as soon as focus is placed in an element, thus
-      they are not a replacement for labels.  They should be used as an aid
-      to help guide users on the required format and content.
-  recommend-input:
-    - Auto-complete only works when the form method is post.
-  use-datalist:
-    - The <code>datalist</code> values are provided as suggestions, and users
-      are not restricted to the suggestions provided.
   provide-real-time-validation:
-    - Even with client-side input validation, it is always important to
-      validate data on the server to ensure consistency and security in your data.
+    - "Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data."
   show-all-errors:
-    - You should show the user all of the issues on the form at once, rather than showing them one at a time.
-  request-auto-complete-flow:
-    - If you're asking for any kind of personal information or credit card
-      data, ensure the page is served via SSL.  Otherwise the dialog will
-      warn the user their information may not be secure.
+    - "You should show the user all of the issues on the form at once, rather than showing them one at a time."
 shortlinks: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple17b
 ---
 
-Real-time data validation doesn't just help to keep your data clean, but it 
-also helps improve the user experience.  Modern browsers have several built-in 
-tools to help provide real-time data validation and may prevent the user from 
-submitting an invalid form.  Visual cues should be used to indicate whether a 
-form has been completed properly.
+<div class="intro">
+  Real-time data validation doesn't just help to keep your data clean, but it 
+  also helps improve the user experience.  Modern browsers have several built-in 
+  tools to help provide real-time data validation and may prevent the user from 
+  submitting an invalid form.  Visual cues should be used to indicate whether a 
+  form has been completed properly.
+</div>
 
 {% include shared/toc.liquid %}
 
