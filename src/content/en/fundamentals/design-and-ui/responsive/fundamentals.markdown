@@ -36,12 +36,12 @@ remember:
     - "Use a comma to separate attributes to ensure older browsers can properly parse the attributes."
 ---
 
-<div class="intro">
+<p class="intro">
   There is a multitude of different screen sizes across phones, "phablets",
   tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
   be changing, so it's important that your site can adapt to any screen size,
   today or in the future.
-</div>
+</p>
 
 Responsive web design, originally defined by [Ethan Marcotte in A List
 Apart](http://alistapart.com/article/responsive-web-design/) responds to the

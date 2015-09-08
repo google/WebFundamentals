@@ -45,12 +45,12 @@ remember:
     - "Use caution with the compressive technique because of the increased memory and decoding costs it requires. Resizing large images to fit on smaller screens is expensive and can be particularly painful on low-end devices where both memory and processing is limited."
 ---
 
-<div class="intro">
+<p class="intro">
   A picture is worth 1000 words, and images play an integral part of every page.
   But they also often account for most of the downloaded bytes.  With responsive
   web design not only can our layouts change based on device characteristics,
   but images as well.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

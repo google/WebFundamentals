@@ -18,12 +18,12 @@ key-takeaways:
     - "Always favor the user's interaction; use shorter durations when responding to taps or clicks, and reserve slower durations for times where you aren't."
 ---
 
-<div class="intro">
+<p class="intro">
   Asymmetry to your animation durations aids your user experience by allowing 
   you to express personality while at the same time responding quickly to user 
   interactions. It also provides contrast to the feel, which makes the interface 
   more visually appealing.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

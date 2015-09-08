@@ -24,12 +24,12 @@ notes:
     - "Making this kind of hierarchy in a cross-browser way can be challenging. For example, iOS requires an additional CSS property, <code>-webkit-overflow-scrolling: touch</code>, to ‘reenable’ fling scrolling, but you don’t get to control which axis that’s for, as you can with the standard overflow property. Be sure to test your implementation across a range of devices!"
 ---
 
-<div class="intro">
+<p class="intro">
   Many times you will want to move users between views in your application, 
   whether that's a list to a details view, or show a sidebar navigation. 
   Animations between these views are great for keeping the user engaged and add
   even more life to your projects.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 
