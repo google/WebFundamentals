@@ -22,13 +22,13 @@ remember:
     - "If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure."
 ---
 
-<div class="intro">
+<p class="intro">
   While <code>requestAutocomplete</code> was designed to help users fill out
   any form, today its most common use is in eCommerce where shopping cart
   abandonment on the mobile web 
   <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>
   can be as high as 97%</a>.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 
