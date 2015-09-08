@@ -1,14 +1,14 @@
 ---
 layout: shared/plain
 title: "Animating modal views"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: animations-asym-animation-timing
 collection: design-and-ui
 article:
   written_on: 2014-08-08
-  updated_on: 2014-10-22
+  updated_on: 2014-10-21
 authors:
   - paullewis
 priority: 0
@@ -18,7 +18,12 @@ key-takeaways:
     - "Always favor the user's interaction; use shorter durations when responding to taps or clicks, and reserve slower durations for times where you aren't."
 ---
 
-Asymmetry to your animation durations aids your user experience by allowing you to express personality while at the same time responding quickly to user interactions. It also provides contrast to the feel, which makes the interface more visually appealing.
+<div class="intro">
+  Asymmetry to your animation durations aids your user experience by allowing 
+  you to express personality while at the same time responding quickly to user 
+  interactions. It also provides contrast to the feel, which makes the interface 
+  more visually appealing.
+</div>
 
 {% include shared/toc.liquid %}
 

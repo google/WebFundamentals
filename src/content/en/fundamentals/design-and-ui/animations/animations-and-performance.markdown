@@ -1,9 +1,9 @@
 ---
 layout: shared/plain
 title: "Animations and performance"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: animations-and-performance
 collection: design-and-ui
 article:
@@ -13,6 +13,12 @@ authors:
   - paullewis
   - samthorogood
 priority: 0
+key-takeaways:
+  code:
+    - "Take care that your animations don’t cause performance issues; ensure you know the impact of animating a given CSS property."
+    - "Animating properties that change the geometry of the page (layout) or cause painting are particularly expensive."
+    - "Where you can, stick to changing transforms and opacity."
+    - "Use <code>will-change</code> to ensure that the browser knows what you plan to animate."
 related:
   blocking-css:
   -
@@ -24,7 +30,11 @@ related:
         href: performance/critical-rendering-path/
 ---
 
-Care must be taken to maintain 60fps whenever you are animating, because any stutters or stalls will be noticeable to your users and negatively impact their experiences.
+<div class="intro">
+  Care must be taken to maintain 60fps whenever you are animating, because any 
+  stutters or stalls will be noticeable to your users and negatively impact 
+  their experiences.
+</div>
 
 {% include shared/toc.liquid %}
 

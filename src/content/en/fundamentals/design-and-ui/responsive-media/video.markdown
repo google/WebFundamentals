@@ -1,22 +1,48 @@
 ---
 layout: shared/plain
 title: "Responsive Video"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: responsive-media-video
 collection: design-and-ui
-
 article:
-  written_on: 2015-07-21
-  updated_on: 2015-07-21
+  written_on: 2014-04-16
+  updated_on: 2014-10-23
 priority: 0
+authors:
+  - samdutton
+key-takeaways:
+  size-matters:
+    - "Don't serve videos with a larger frame size or higher quality than the platform can handle."
+    - "Don't make your videos any longer than they need be."
+    - "Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback."
+  add-a-video:
+    - "Use the video element to load, decode, and play video on your site."
+    - "Produce video in multiple formats to cover a range of mobile platforms."
+    - "Size videos correctly; ensure they don't overflow their containers."
+    - "Accessibility matters; add the track element as a child of the video element."
+remember:
+  media-fragments:
+    - "The Media Fragments API is supported on most platforms, but not on iOS."
+    - "Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off."
+  dont-overflow:
+    - "Don't force element sizing that results in an aspect ratio different from the original video. Squashed or stretched looks bad."
+  accessibility-matters:
+    - "The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href='http://caniuse.com/track' title='Track element support status'>caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>."
+  construct-video-streams:
+    - "MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with support planned for <a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>."
+  optimize:
+    - "<a href='../images/''>Images</a>"
+    - "<a href='../../performance/optimizing-content-efficiency/'>Optimizing content efficiency</a>"
 ---
 
-Users like videos; they can be fun, informative. On mobile devices, videos 
-can be an easier way to consume information. But videos take bandwidth; they 
-don't always work the same across every platform. Users don't like waiting 
-for videos to load, or when they press play and nothing happens. 
+<div class="intro">
+  Users like videos; they can be fun, informative. On mobile devices, videos 
+  can be an easier way to consume information. But videos take bandwidth; they 
+  don't always work the same across every platform. Users don't like waiting 
+  for videos to load, or when they press play and nothing happens. 
+</div>
 
 {% include shared/toc.liquid %}
 
@@ -132,6 +158,9 @@ Here's a side-by-side comparison of videos without and with a poster image
 </div>
 
 ## Provide alternatives for legacy platforms
+
+Not all video formats are supported on all platforms. Check which formats are
+supported on the major platforms and make sure your video works in each of these.
 
 ### Check which formats are supported
 
@@ -372,6 +401,11 @@ Compare the {% link_sample _code/responsive_embed.html %}responsive sample{% end
 
 ## Accessibility matters
 
+Accessibility isn't a feature. Users who can't hear or see won't be able to
+experience a video at all without captions or descriptions. The time it takes
+to add these to your video is much less than the bad experience you are
+delivering to users. Provide at least a base experience for all users.
+
 ### Include captions to improve accessibility
 
 To make media more accessible on mobile, include captions or descriptions
@@ -406,6 +440,8 @@ A track file consists of timed 'cues' in WebVTT format:
     ...
 
 ## Quick Reference
+
+A quick overview of properties on the video element.
 
 ### Video element attributes
 

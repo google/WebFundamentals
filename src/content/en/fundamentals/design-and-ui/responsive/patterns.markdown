@@ -1,12 +1,9 @@
 ---
 layout: shared/plain
 title: "Responsive Web Design Patterns"
-description: "Responsive web design patterns are quickly evolving, but there
-              are a handful of established patterns that work well across the
-              desktop and mobile devices"
-introduction: "Responsive web design patterns are quickly evolving, but there
-              are a handful of established patterns that work well across the
-              desktop and mobile devices."
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 authors:
   - petelepage
 article:
@@ -18,12 +15,14 @@ priority: 1
 collection: multi-device-layouts
 ---
 
-Most layouts used by responsive web pages can be categorized into one of five
-patterns: mostly fluid, column drop, layout shifter, tiny tweaks and off canvas.
-In some cases, a page may use a combination of patterns, for example column drop
-and off canvas.  These patterns, originally identified by [Luke
-Wroblewski](http://www.lukew.com/ff/entry.asp?1514), provide a solid starting
-point for any responsive page.
+<div class="intro">
+  Most layouts used by responsive web pages can be categorized into one of five
+  patterns: mostly fluid, column drop, layout shifter, tiny tweaks and off 
+  canvas. In some cases, a page may use a combination of patterns, for example 
+  column drop and off canvas.  These patterns, originally identified by [Luke
+  Wroblewski](http://www.lukew.com/ff/entry.asp?1514), provide a solid starting
+  point for any responsive page.
+</div>
 
 To create simple, easy-to-understand samples, each the samples
 below were created with real markup using
@@ -37,6 +36,9 @@ still require vendor prefixing for optimal support.
 {% include shared/toc.liquid %}
 
 ## Column Drop
+
+For full-width multi-column layouts, column drop simply stacks the columns 
+vertically as the window width becomes too narrow for the content. 
 
 Eventually this results in all of the columns being stacked vertically.  Choosing
 breakpoints for this layout pattern is dependent on the content and will change
@@ -63,6 +65,9 @@ Sites using this pattern include:
 
 ## Layout Shifter
 
+The layout shifter pattern is the most responsive pattern, with 
+multiple breakpoints across several screen widths.
+
 Key to this layout is the way content moves about, instead of reflowing and
 dropping below other columns.  Due to the significant differences between each
 major breakpoint, it is more complex to maintain and likely involves changes
@@ -87,6 +92,10 @@ Sites using this pattern include:
 {% include_code src=_code/layout-shifter.html %}
 
 ## Mostly Fluid
+
+The mostly fluid pattern consists primarily of a fluid grid.  On large or medium
+screens, it usually remains the same size, simply adjusting the margins on wider
+screens.
 
 On smaller screens, the fluid grid causes the main content to reflow,
 while columns are stacked vertically.  One major advantage of this pattern is
@@ -114,6 +123,11 @@ Sites using this pattern include:
 
 ## Off Canvas
 
+Rather than stacking content vertically, the off canvas pattern places less
+frequently used content, perhaps navigation or app menus off screen, only
+showing it when the screen size is large enough, and on smaller screens, content
+is only a click away.
+
 {% link_sample _code/off-canvas.html %}
   <img src="imgs/off-canvas.svg">
   Try it
@@ -139,6 +153,9 @@ Sites using this pattern include:
 {% include_code src=_code/off-canvas.html %}
 
 ## Tiny Tweaks
+
+Tiny tweaks simply makes small changes to the layout, such as adjusting font
+size, resizing images or moving content around in very minor ways.
 
 It works well on single column layouts such as one page linear websites, text
 heavy articles.

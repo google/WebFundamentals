@@ -1,17 +1,63 @@
 ---
 layout: shared/plain
 title: "Responsive Images"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: responsive-media-images
 collection: design-and-ui
-
 article:
-  written_on: 2015-07-21
-  updated_on: 2015-07-21
+  written_on: 2014-04-30
+  updated_on: 2014-09-30
+authors:
+  - petelepage
 priority: 0
+key-takeaways:
+  img-in-markup:
+    - "Use relative sizes for images to prevent them from accidentally overflowing the container."
+    - "Use the <code>picture</code> element when you want to specify different images depending on device characteristics (a.k.a. art direction)."
+    - "Use <code>srcset</code> and the <code>x</code> descriptor in the <code>img</code> element to give hints to the browser about the best image to use when choosing from different densities."
+  use-right-image:
+    - "Use the best image for the characteristics of the display, consider screen size, device resolution and page layout."
+    - "Change the <code>background-image</code> property in CSS for high DPI displays using media queries with <code>min-resolution</code> and <code>-webkit-min-device-pixel-ratio</code>."
+    - "Use srcset to provide high resolution images in addition to the 1x image in markup."
+    - "Consider the performance costs when using JavaScript image replacement techniques or when serving highly compressed high resolution images to lower resolution devices."
+  avoid-images:
+    - "Avoid images whenever possible, instead, leverage browser capabilities for shadows, gradients, rounded corners and more."
+  optimize-images:
+    - "Don't just randomly choose an image format, understand the different formats available, and use the format best suited."
+    - "Include image optimization and compression tools into your workflow to reduce file sizes."
+    - "Reduce the number of http requests by placing frequently used images into image sprites."
+    - "Consider loading images only after they’ve scrolled into view to improve the initial page load time and reduce the initial page weight."
+related:
+  optimize:
+  -
+      title: "Image optimization"
+      href: fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization
+      section:
+        id: optimizing-content-efficiency
+        title: "Optimizing Content Efficiency"
+        href: fundamentals/performance/optimizing-content-efficiency/
+remember:
+  picture-support:
+    - "The <code>picture</code> element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. See the <a href='http://responsiveimages.org/#implementation'> ResponsiveImages.org</a> site for further details."
+  compressive:
+    - "Use caution with the compressive technique because of the increased memory and decoding costs it requires. Resizing large images to fit on smaller screens is expensive and can be particularly painful on low-end devices where both memory and processing is limited."
 ---
+
+<div class="intro">
+  A picture is worth 1000 words, and images play an integral part of every page.
+  But they also often account for most of the downloaded bytes.  With responsive
+  web design not only can our layouts change based on device characteristics,
+  but images as well.
+</div>
+
+{% include shared/toc.liquid %}
+
+## Types of responsive images
+TODO
+
+### Responsive Images
 
 Responsive web design means that not only can our layouts change based on device
 characteristics, but content as well.  For example, on high resolution (2x)
@@ -19,11 +65,6 @@ displays, high resolution graphics are needed to ensure sharpness.  An image
 that  is 50% width may work just fine when the browser is 800px wide, but will
 use too much real estate on a narrow phone, and still comes at the same
 bandwidth overhead when scaled down to fit on a smaller screen.
-
-{% include shared/toc.liquid %}
-
-## Types of responsive images
-TODO
 
 ### Art direction
 
@@ -37,6 +78,11 @@ changing the image is usually referred to as art direction.  See
 examples.
 
 ## Images in markup
+
+The <code>img</code> element is powerful – it downloads, decodes and renders 
+content – and modern browsers support a range of image  formats.  Including 
+images that work across devices is no different than for desktop, and only 
+requires a few minor tweaks to create a good experience.
 
 ### Use relative sizes for images
 
@@ -273,6 +319,12 @@ images, resulting in increased page weight.
 
 ## Images in CSS
 
+The CSS `background` property is a powerful tool for adding complex images to 
+elements, making it easy to add multiple images, cause them to repeat, and more.
+When combined with media queries, the background property becomes even more 
+powerful, enabling conditional image loading based on screen resolution, 
+viewport size and more.
+
 ### Use media queries for conditional image loading or art direction
 
 Media queries not only affect the page layout, but can also be used to
@@ -354,6 +406,9 @@ downloaded and applied to the `body` if the browser width is 500px or greater:
 
 ## Use SVG for icons
 
+When adding icons to your page, use SVG icons where possible or in some cases,
+unicode characters.
+
 ### Replace simple icons with unicode
 
 Many fonts include support for the myriad of unicode glyphs, which can be used
@@ -424,6 +479,13 @@ the need for the icons. For example, if you only need a handful of icons, it
 may be better to use an image or an image sprite.
 
 ## Optimize images for performance
+
+Images often account for most of the downloaded bytes and also often occupy a 
+significant amount of the visual space on the page. As a result, optimizing 
+images can often yield some of the largest byte savings and performance 
+improvements for your website: the fewer bytes the browser has to download, 
+the less competition there is for client's bandwidth and the faster the browser 
+can download and display all the assets.
 
 ### Choose the right format
 

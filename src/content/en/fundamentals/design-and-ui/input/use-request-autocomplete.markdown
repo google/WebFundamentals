@@ -1,32 +1,34 @@
 ---
 layout: shared/plain
 title: "Simplifying checkout with requestAutocomplete"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: userinput-request-autocomplete
 collection: design-and-ui
 article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-22
+  written_on: 2014-04-30
+  updated_on: 2014-10-21
 authors:
   - petelepage
 priority: 0
 key-takeaways:
   use-request-auto-complete:
-    - <code>requestAutocomplete</code> can greatly simplify the checkout process and
-      improve the user experience.
-    - If <code>requestAutocomplete</code> is available, hide the checkout form and move people
-      directly to the confirmation page.
-    - Ensure input fields include the appropriate autocomplete attribute.
+    - "<code>requestAutocomplete</code> can greatly simplify the checkout process and improve the user experience."
+    - "If <code>requestAutocomplete</code> is available, hide the checkout form and move people directly to the confirmation page."
+    - "Ensure input fields include the appropriate autocomplete attribute."
 remember:
   request-auto-complete-flow:
-    - If you're asking for any kind of personal information or credit card
-      data, ensure the page is served via SSL.  Otherwise the dialog will
-      warn the user their information may not be secure.
+    - "If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure."
 ---
 
-While <code>requestAutocomplete</code> was designed to help users fill out any form, today its most common use is in eCommerce where shopping cart abandonment on the mobile web <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>.
+<div class="intro">
+  While <code>requestAutocomplete</code> was designed to help users fill out
+  any form, today its most common use is in eCommerce where shopping cart
+  abandonment on the mobile web 
+  <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>
+  can be as high as 97%</a>.
+</div>
 
 {% include shared/toc.liquid %}
 

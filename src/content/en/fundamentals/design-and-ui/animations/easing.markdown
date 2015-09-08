@@ -1,21 +1,39 @@
 ---
 layout: shared/plain
 title: "Understanding easing"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: animations-easing
 collection: design-and-ui
 article:
   written_on: 2014-08-08
-  updated_on: 2014-10-22
+  updated_on: 2015-08-26
 authors:
   - paullewis
   - samthorogood
 priority: 0
+key-takeaways:
+  choosing:
+    - "Use ease-out animations for UI elements; a Quintic ease-out is a very nice, albeit snappy, ease."
+    - "Be sure to use the animation duration; ease-outs and ease-ins should be 200ms - 500ms, whereas bounces and elastic eases should clock in a longer duration of 800ms - 1200ms."
+  custom:
+    - "Custom easing will allow you to give more personality to your projects."
+    - "You can create cubic bezier curves that resemble the default animation curves (ease-out, ease-in, etc) but with emphasis in different places."
+    - "Use JavaScript when you need more control over the animation timing and behavior, e.g. elastic or bounce animations."
+  basics:
+    - "Easing makes your animations feel more natural."
+    - "Choose ease-out animations for UI elements."
+    - "Avoid ease-in or ease-in-out animations unless you can keep them short; they tend to feel sluggish to end users."
 ---
 
-Nothing in nature moves linearly from one point to another. In reality things tend to accelerate or decelerate as they move. Our brains are wired to expect this kind of motion, so when animating you should use this to your advantage. Natural motion will make your users feel more comfortable with your apps, which in turn leads to a better overall experience.
+<div class="intro">
+  Nothing in nature moves linearly from one point to another. In reality things
+  tend to accelerate or decelerate as they move. Our brains are wired to expect
+  this kind of motion, so when animating you should use this to your advantage.
+  Natural motion will make your users feel more comfortable with your apps,
+  which in turn leads to a better overall experience.
+</div>
 
 {% include shared/toc.liquid %}
 
@@ -105,6 +123,8 @@ transition: transform 500ms ease-in-out;
 
 ## Custom Easing
 
+Sometimes you won't want to use the easing keywords that are included with CSS, or you will be using Web Animations or a JavaScript framework. In these cases you can typically define your own curves (or equations), and this gives you a lot of control over the feel of your project's animations.
+
 If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined bezier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/) and the [Web Animations specification](http://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve).
 
 These bezier curves take four values, or 2 pairs of numbers, with each pair describing the X and Y coordinates of a cubic bezier curve’s control points.  The starting point of the bezier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much!
@@ -161,6 +181,8 @@ TweenMax.to(box, animationDurationInSeconds, {
 The [TweenMax documentation](http://greensock.com/docs/#/HTML5/GSAP/TweenMax/) highlights all the options you have here, so it's well worth a read.
 
 ## Choosing the right easing
+
+Having discussed the various options available for easing in animations, what kind should you use in your projects, and what kind of durations should your animations have?
 
 Generally speaking an **ease-out** will be the right call, and certainly a good default. It is quick to start, giving your animations a feeling of responsiveness, which is desirable, but with a nice slowdown at the end.
 
