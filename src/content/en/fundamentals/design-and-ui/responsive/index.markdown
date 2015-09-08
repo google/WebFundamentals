@@ -1,6 +1,6 @@
 ---
 layout: shared/plain
-title: "Responsive"
+title: "Building for the multi-device web"
 description: "TODO: Responsive Description"
 introduction: "TODO: Responsive Intro"
 snippet: "TODO: Responsive Snippet"
@@ -13,4 +13,4 @@ article:
 priority: 0
 ---
 
-Responsive Page
+this page shouldn't exist
