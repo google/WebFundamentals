@@ -18,16 +18,27 @@
 
       {% if contentnavTocItem.hasSubNav == true and contentnavTocItem.isInCurrentSection == true %}
       <ul class="wf-sub-nav__list wf-nav__list clear">
-        {% for subsection in contentnavTocItem.section %}
+        {% for subsection in contentnavTocItem.section  %}
         <li class="wf-sub-nav__item">
           <a class="wf-sub-nav__sub-link" href="{{ subsection.path }}" title="Go to {{ subsection.strippedTitle }}">
             {{ subsection.title }}
           </a>
+          {% comment %}and subsection.isInCurrentSection == true{% endcomment %}
+          {% if subsection.hasSubNav == true %}
+            <ul class="wf-sub-nav__list wf-nav__list clear">
+            {% for page in subsection.section %}
+            <li class="wf-sub-nav__item">
+              <a class="wf-sub-nav__sub-link" href="{{ page.path }}" title="Go to {{ x.strippedTitle }}">
+                {{ page.title }}
+              </a>
+            </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
       {% endif %}
-
     </li>
   {% endfor %}
 </ul>

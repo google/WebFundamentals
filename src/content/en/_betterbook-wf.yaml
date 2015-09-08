@@ -22,8 +22,14 @@ toc:
   path: /fundamentals/design-and-ui/
   hasSubNav: true
   section:
-    - title: "Building responsively"
+    - title: "Building for the multi-device web"
       path: /fundamentals/design-and-ui/responsive/
+      hasSubNav: true
+      section: 
+        - title: "RWD Fundamentals"
+          path: /fundamentals/design-and-ui/responsive/fundamentals
+        - title: "RWD Patterns"
+          path: /fundamentals/design-and-ui/responsive/patterns
     - title: "Using responsive images and media"
       path: /fundamentals/design-and-ui/responsive-media/
     - title: "Animations"
