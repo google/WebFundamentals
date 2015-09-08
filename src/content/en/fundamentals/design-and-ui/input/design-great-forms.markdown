@@ -1,20 +1,47 @@
 ---
 layout: shared/plain
 title: "Design great forms"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: userinput-design-efficient
 collection: design-and-ui
 article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-22
+  written_on: 2014-04-30
+  updated_on: 2015-03-27
 authors:
   - petelepage
 priority: 0
+key-takeaways:
+  design-great-forms:
+    - "Use existing data to pre-populate fields and be sure to enable auto-fill."
+    - "Use clearly-labeled progress bars to help users get through multi-part forms."
+    - "Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones."
+  choose-best-input-type:
+    - "Choose the most appropriate input type for your data to simplify input."
+    - "Offer suggestions as the user types with the <code>datalist</code> element."
+  label-and-name:
+    - "Always use <code>label</code>s on form inputs, and ensure they're visible when the field is in focus."
+    - "Use <code>placeholder</code>s to provide guidance about what you expect."
+    - "To help the browser auto-complete the form, use established <code>name</code>'s for elements and include the <code>autocomplete</code> attribute."
+remember:
+  use-placeholders:
+    - "Placeholders disappear as soon as focus is placed in an element, thus they are not a replacement for labels.  They should be used as an aid to help guide users on the required format and content."
+  recommend-input:
+    - "Auto-complete only works when the form method is post."
+  use-datalist:
+    - "The <code>datalist</code> values are provided as suggestions, and users are not restricted to the suggestions provided."
+shortlinks: 
+  # NOTE: If the section titles or URL changes the following shortlinks must be updated
+  - g.co/mobilesiteprinciple14
+  - g.co/mobilesiteprinciple15
 ---
 
-Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms.
+<div class="intro">
+  Design efficient forms by avoiding repeated actions, asking for only the 
+  necessary information and guide users by showing them how far along they are 
+  in multi-part forms.
+</div>
 
 {% include shared/toc.liquid %}
 

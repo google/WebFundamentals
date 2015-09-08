@@ -1,9 +1,9 @@
 ---
 layout: shared/plain
 title: "Building for the multi-device web"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: responsive
 collection: design-and-ui
 

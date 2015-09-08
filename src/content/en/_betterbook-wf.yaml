@@ -64,6 +64,12 @@ toc:
           path: /fundamentals/design-and-ui/input/use-request-autocomplete
     - title: "Customizing the browser"
       path: /fundamentals/design-and-ui/customizing-the-browser/
+      hasSubNav: true
+      section: 
+        - title: "Colors, icons and more"
+          path: /fundamentals/design-and-ui/customizing-the-browser/colors-icons-more
+        - title: "Additional metadata"
+          path: /fundamentals/design-and-ui/customizing-the-browser/metadata 
 
 - title: "Discovery and Distribution"
   path: /fundamentals/discovery-and-distribution/
