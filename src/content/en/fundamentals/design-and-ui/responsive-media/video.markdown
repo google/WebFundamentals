@@ -4,7 +4,7 @@ title: "Responsive Video"
 description: "TODO: Responsive Description"
 introduction: "TODO: Responsive Intro"
 snippet: "TODO: Responsive Snippet"
-id: responsive-video
+id: responsive-media-video
 collection: design-and-ui
 
 article:

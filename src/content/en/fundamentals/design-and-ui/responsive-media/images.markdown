@@ -4,7 +4,7 @@ title: "Responsive Images"
 description: "TODO: Responsive Description"
 introduction: "TODO: Responsive Intro"
 snippet: "TODO: Responsive Snippet"
-id: responsive-images
+id: responsive-media-images
 collection: design-and-ui
 
 article:
