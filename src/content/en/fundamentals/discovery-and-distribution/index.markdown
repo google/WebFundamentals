@@ -1,9 +1,9 @@
 ---
 layout: fundamentals/list-subdirectories
 title: "Discovery and Distribution"
-description: ""
-introduction: ""
-snippet: ""
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: discovery-and-distribution
 collection: fundamentals
 
