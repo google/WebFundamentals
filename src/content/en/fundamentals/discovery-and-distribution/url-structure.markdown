@@ -1,25 +1,29 @@
 ---
 layout: shared/plain
-title: "Instruct Search Engines How Your Multi-Device Page is Structured"
-description: "If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures."
-introduction: "If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures."
-snippet: "Spread your work to the world"
-id: url-structure
-collection: optimizations-for-crawlers
-authors:
-  - agektmr
+title: "URL Structure"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
+id: discovery-and-distribution-url-structure
+collection: fundamentals
 article:
   written_on: 2014-10-08
   updated_on: 2014-11-05
-  order: 2
+priority: 0
+authors:
+  - agektmr
 key-takeaways:
-  - Determine the URL structure of your webpage
-  - Responsive design is most recommended
-  - Use <code>rel="canonical"</code> + <code>rel="alternate"</code> for separate desktop/mobile sites
-  - Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
+  - "Determine the URL structure of your webpage"
+  - "Responsive design is most recommended"
+  - "Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites"
+  - "Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs"
 ---
-<div class="container">
-<div class="content">
+
+<p class="intro">
+  If your website is targeting multi-devices, how it appears on search results
+  is an important aspect of site design. This guide will help you learn how to
+  optimize your website with search engines depending on its URL structures.
+</p>
 
 {% include shared/toc.liquid %}
 
@@ -47,7 +51,7 @@ ex) Desktop and Mobile: http://www.example.com/
 The best approach we recommend is to use responsive web design, but a lot of
 websites already serve mobile specific version. Some serves mobile version using
 the same URL as desktop.
-
+  
 Determine which URL structure suits your webpage. Then try respective best
 practices to optimize it for search engines.
 
@@ -66,7 +70,7 @@ By making it responsive:
 * Easier for users to access or share your webpage
 * No need to redirect users depending on user agent so it is faster
 * Maintenance cost is lower for both website and crawlers
-
+  
 Learn how to build your website with responsive web design at [Multi-Device
 Layouts](https://developers.google.com/web/fundamentals/layouts/) section.
 
@@ -107,7 +111,7 @@ version URL with `href`.
 <title>...</title>
 <link rel="canonical" href="http://www.example.com/">
 {% endhighlight %}
-
+  
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
 
 ## Use `Vary HTTP` header for device oriented serving site
@@ -146,6 +150,3 @@ index to treat desktop version and mobile version separately, intermediate
 proxies to cache those contents gracefully.
 
 To learn more about building URL structure across desktop and mobile, read [Building Smartphone-Optimized Websites](https://developers.google.com/webmasters/smartphone-sites/).
-
-</div>
-</div>

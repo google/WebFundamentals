@@ -1,20 +1,21 @@
 ---
 layout: shared/plain
-title: "Control crawling and indexing from search engines"
-description: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
-introduction: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
-snippet: "Keep restricted information safe"
-id: control-crawling-and-indexing
-collection: optimizations-for-crawlers
-authors:
-  - agektmr
+title: "Optimizing for search"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
+id: discovery-and-distribution-search
+collection: fundamentals
 article:
   written_on: 2014-12-15
-  order: 3
+  updated_on: 2014-12-15
+priority: 0
+authors:
+  - agektmr
 key-takeaways:
-  - No robots.txt, no robots meta tags required for fully accessible pages
-  - Use noindex for pages you want to limit access to those who know the URL
-  - Use relevant authentication mechanism for pages you want to keep private
+  - "No <code>robots.txt</code>, no robots meta tags required for fully accessible pages"
+  - "Use <code>noindex</code> for pages you want to limit access to those who know the URL"
+  - "Use relevant authentication mechanism for pages you want to keep private"
 remember:
   crawlers:
     - "Many people confuses crawling and indexing. Prohibiting crawling doesn't mean the page won't show up in the search results. For example, when a third party website has a link to one of your webpages which is blocked from crawling, the page may still be listed in search results (In that case, the result won't have detailed description)."
@@ -25,78 +26,117 @@ notes:
     - "If you disallow crawls using robots.txt,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your webpages by following links from other websites.</li><li>Search engines can't detect <code>noindex</code> because it can't crawl.</li></ul>"
   searchable:
     - "Wondering if you should prohibit crawling JavaScript and Stylesheet files? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google now try its best to understand them</a> to find contents available through modern technologies such as AJAX. You should definitely allow crawlers to crawl it."
-
 ---
 
-<div class="container">
-<div class="content">
+<p class="intro">
+  Being listed on search engines is inevitable in order to deliver your website
+  content to the world. But incorrect configuration may cause unexpected portion
+  of information to spread all over the web. Uderstand how crawlers work and
+  how it indexes your website to keep away from accidents.
+</p>
 
 {% include shared/toc.liquid %}
 
-Sharing information to the world has no better place than the web. Once you publish a document to the web, it will be immediately available to the rest of the world. The page will be visible to anyone as long as they know the URL and that's where search engines come in. Once search engines learn about your website, your documents will be searchable and accessible from people all around the world.  
+Sharing information to the world has no better place than the web. Once you 
+publish a document to the web, it will be immediately available to the rest of 
+the world. The page will be visible to anyone as long as they know the URL and 
+that's where search engines come in. Once search engines learn about your 
+website, your documents will be searchable and accessible from people all 
+around the world.  
 
-However, there are some cases where you don't want people to find those documents even though you want to put them on the web. For example, a blog's admin page is something only limited people should have access to. There's nothing beneficial for you to let people search those pages through search engines.  
+However, there are some cases where you don't want people to find those 
+documents even though you want to put them on the web. For example, a blog's 
+admin page is something only limited people should have access to. There's 
+nothing beneficial for you to let people search those pages through search 
+engines.  
 
-In this document, you will learn how to inform search engines that you want certain pages not appear in the search results.  
+In this document, you will learn how to inform search engines that you want 
+certain pages not appear in the search results.  
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
-## Understand the difference between "crawl" and "index"
-Before learning how to control search results, understanding how search engines interact with your webpage is important. From your site's point of view, there are roughly 2 things search engines do to your site: "crawling" and "indexing".  
+## Understand the difference between <b>crawl</b> and <b>index</b>
 
-"Crawling" is when a search engine bot accesses your webpage and fetches it and analyses its content. The content will be stored in the search engine's database and may be used for populating search result details, ranking and discovering new pages by following links.  
+Before learning how to control search results, understanding how search engines 
+interact with your webpage is important. From your site's point of view, there 
+are roughly 2 things search engines do to your site: "crawling" and "indexing".  
 
-"Indexing" is when a search engine stores a website's URL and any associated information to their database so it will be ready to be served as a search result.  
+<b>Crawling</b> is when a search engine bot accesses your webpage and fetches it 
+and analyses its content. The content will be stored in the search engine's 
+database and may be used for populating search result details, ranking and 
+discovering new pages by following links.  
+
+<b>Indexing</b> is when a search engine stores a website's URL and any associated 
+information to their database so it will be ready to be served as a search 
+result.  
 
 {% include shared/remember.liquid title="Remember" list=page.remember.crawlers %}
 
 ## Control search bots' crawling
-You can actually control how well-behaved crawlers access your webpage using a text file called robots.txt. (Not all crawlers necessarily respect robots.txt. Imagine that anyone can create their own stray crawlers.)  
 
-### How to use robots.txt
-Robots.txt is a simple text file describing how you want search bots to crawl your site.
+You can actually control how well-behaved crawlers access your webpage using a 
+text file called `robots.txt`. Though not all crawlers necessarily respect
+`robots.txt`, as anyone can create their own crawler.
 
-Place robots.txt at the root directory of your website's host: If your site's host is [http://pages.example.com/](http://pages.example.com/), robots.txt file should be located at [http://pages.example.com/robots.txt](http://pages.example.com/robots.txt). If the domain has different schema, subdomains or other ports, they will be considered as different hosts and you should have robots.txt for each of their root directories.  
+### How to use `robots.txt`
 
-Here's a quick example:  
+`robots.txt` is a simple text file describing how you want search bots to 
+crawl your site.
 
-**http://pages.example.com/robots.txt**
+Place `robots.txt` at the root directory of your website's host: If your 
+site's host is [http://pages.example.com/](http://pages.example.com/), 
+`robots.txt` file should be located at [http://pages.example.com/robots.txt](http://pages.example.com/robots.txt). 
+If the domain has different schema, subdomains or other ports, they will be 
+considered as different hosts and you should have `robots.txt` for each of 
+their root directories.  
+
+For example - http://pages.example.com/robots.txt:
 {% highlight text %}
 User-agent: *
 Disallow: /
 {% endhighlight %}
 
-This indicates that you want to disallow all kind of bots to crawl your entire website.  
+This indicates that you want to **disallow** all bots crawling your entire site.  
 
-**http://pages.example.com/robots.txt**
+Or - http://pages.example.com/robots.txt:
 {% highlight text %}
 User-agent: Googlebot
 Disallow: /nogooglebot/
 {% endhighlight %}
 
-You can specify the behavior per bots (user agents) by indicating a user-agent name after `User-agent:`. In the above case, you are disallowing user agent called `Googlebot` to crawl `/nogooglebot/` and all contents below the directory.  
+You can specify the behavior per bots (user agents) by indicating a `user-agent`
+name after `User-agent:`. In the above case, you are disallowing user agent 
+called `Googlebot` to crawl `/nogooglebot/` and all contents below the directory.  
 
-You can learn how to create robots.txt further on relevant search engines' help pages:  
+You can learn how to create `robots.txt` further on relevant search engines' 
+help pages:  
 
 * [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt)
 * [Bing](http://www.bing.com/webmaster/help/how-to-create-a-robots-txt-file-cb7c31ec)
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
-^
 
 {% include shared/remember.liquid title="Note" list=page.notes.robots %}
 
-### Test robots.txt
-Depending on which crawlers your robots.txt is targeting at, search engine providers may provide a tool to test robots.txt. Taking Google as an example, there's a validator in [Webmaster Tools](https://www.google.com/webmasters/tools/robots-testing-tool). Use it to test by yourself if your robots.txt works as expected.  
+### Test `robots.txt`
+Depending on which crawlers your `robots.txt` is targeting at, search 
+engine providers may provide a tool to test `robots.txt`. Taking Google 
+as an example, there's a validator in [Webmaster Tools](https://www.google.com/webmasters/tools/robots-testing-tool). 
+Use it to test by yourself if your `robots.txt` works as expected.  
 
 <img src="imgs/robots-txt-validator.png" srcset="imgs/robots-txt-validator-2x.png 2x, imgs/robots-txt-validator.png 1x">
 
 Yandex also provides [a similar tool](https://webmaster.yandex.com/robots.xml).  
 
 ## Control search indexing
+
 If you don't want your webpage to show up in the search results, robots.txt isn't the right solution. You need to allow those pages to be crawled, and explicitly indicate that you don't want them to be indexed. There are two solutions:  
 
 ### Use robots meta tags
-In order to indicate you don't want an HTML page to be indexed, insert a specific kind of `meta` tag. By setting its attributes as `name="robots"` and `content="noindex"`, you can indicate that you don't want any search engines to index the page.  
+
+In order to indicate you don't want an HTML page to be indexed, insert a 
+specific kind of `meta` tag. By setting its attributes as `name="robots"` 
+and `content="noindex"`, you can indicate that you don't want any search 
+engines to index the page.  
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -104,7 +144,9 @@ In order to indicate you don't want an HTML page to be indexed, insert a specifi
 <meta name="robots" content="noindex" />
 {% endhighlight %}
 
-By changing the value of the `name` attribute to a specific user agent name, you can narrow the scope. For example, `name="googlebot"` indicates that you don't want Googlebot to index the page (case insensitive).  
+By changing the value of the `name` attribute to a specific user agent 
+name, you can narrow the scope. For example, `name="googlebot"` indicates 
+that you don't want Googlebot to index the page (case insensitive).  
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -121,7 +163,9 @@ Other options for robots meta tag can be found here:
 [Find lists of user agent names](#appendix-list-of-crawler-user-agents).
 
 ### X-Robots-Tag
-In order to indicate you don't want other resources than HTML such as images, stylesheets or script files, to be indexed, add `X-Robots-Tag: noindex` in HTTP header.  
+In order to indicate you don't want other resources than HTML such as images, 
+stylesheets or script files, to be indexed, add 
+`X-Robots-Tag: noindex` in HTTP header.  
 
 {% highlight http %}
 HTTP/1.1 200 OK
@@ -212,11 +256,5 @@ Check out concrete steps at respective search engines' help pages:
 * [Bing](http://www.bing.com/webmaster/help/bing-content-removal-tool-cb6c294d)
 * [Yandex](https://help.yandex.com/webmaster/yandex-indexing/removing-from-index.xml)
 
-## Appendix: List of crawler user agents
 
-* [Google](https://support.google.com/webmasters/answer/1061943)
-* [Bing](http://www.bing.com/webmaster/help/which-crawlers-does-bing-use-8c184ec0)
-* [Yandex](https://help.yandex.com/search/robots/logs.xml)
 
-</div>
-</div>
