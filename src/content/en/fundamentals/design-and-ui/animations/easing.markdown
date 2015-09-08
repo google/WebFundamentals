@@ -27,13 +27,13 @@ key-takeaways:
     - "Avoid ease-in or ease-in-out animations unless you can keep them short; they tend to feel sluggish to end users."
 ---
 
-<div class="intro">
+<p class="intro">
   Nothing in nature moves linearly from one point to another. In reality things
   tend to accelerate or decelerate as they move. Our brains are wired to expect
   this kind of motion, so when animating you should use this to your advantage.
   Natural motion will make your users feel more comfortable with your apps,
   which in turn leads to a better overall experience.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

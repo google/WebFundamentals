@@ -27,13 +27,13 @@ shortlinks:
   - g.co/mobilesiteprinciple17b
 ---
 
-<div class="intro">
+<p class="intro">
   Real-time data validation doesn't just help to keep your data clean, but it 
   also helps improve the user experience.  Modern browsers have several built-in 
   tools to help provide real-time data validation and may prevent the user from 
   submitting an invalid form.  Visual cues should be used to indicate whether a 
   form has been completed properly.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

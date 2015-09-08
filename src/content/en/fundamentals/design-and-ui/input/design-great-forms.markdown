@@ -37,11 +37,11 @@ shortlinks:
   - g.co/mobilesiteprinciple15
 ---
 
-<div class="intro">
+<p class="intro">
   Design efficient forms by avoiding repeated actions, asking for only the 
   necessary information and guide users by showing them how far along they are 
   in multi-part forms.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

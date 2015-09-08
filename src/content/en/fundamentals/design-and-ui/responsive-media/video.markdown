@@ -37,12 +37,12 @@ remember:
     - "<a href='../../performance/optimizing-content-efficiency/'>Optimizing content efficiency</a>"
 ---
 
-<div class="intro">
+<p class="intro">
   Users like videos; they can be fun, informative. On mobile devices, videos 
   can be an easier way to consume information. But videos take bandwidth; they 
   don't always work the same across every platform. Users don't like waiting 
   for videos to load, or when they press play and nothing happens. 
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

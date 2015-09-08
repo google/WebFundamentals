@@ -28,7 +28,12 @@ notes:
     - "You may see code around the web that uses <code>setInterval</code> or <code>setTimeout</code> for animations. This is a terrible idea, as the animation will not be synchronized to the refresh rate of the screen, and it’s highly likely to judder and skip. You should always avoid such code, and use <code>requestAnimationFrame</code>, which is synchronized properly, instead."
 ---
 
-Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?
+<p class="intro">
+  Animations are a huge part of making compelling web applications and sites. 
+  Users have come to expect highly responsive and interactive user interfaces. 
+  Animating your interface, however, is not necessarily straightforward. What 
+  should be animated, when, and what kind of feel should the animation have?
+</p>
 
 {% include shared/toc.liquid %}
 
