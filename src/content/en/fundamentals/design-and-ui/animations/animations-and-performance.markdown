@@ -30,11 +30,11 @@ related:
         href: performance/critical-rendering-path/
 ---
 
-<div class="intro">
+<p class="intro">
   Care must be taken to maintain 60fps whenever you are animating, because any 
   stutters or stalls will be noticeable to your users and negatively impact 
   their experiences.
-</div>
+</p>
 
 {% include shared/toc.liquid %}
 

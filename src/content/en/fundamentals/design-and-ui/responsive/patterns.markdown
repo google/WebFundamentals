@@ -15,14 +15,14 @@ priority: 1
 collection: multi-device-layouts
 ---
 
-<div class="intro">
+<p class="intro">
   Most layouts used by responsive web pages can be categorized into one of five
   patterns: mostly fluid, column drop, layout shifter, tiny tweaks and off 
   canvas. In some cases, a page may use a combination of patterns, for example 
   column drop and off canvas.  These patterns, originally identified by [Luke
   Wroblewski](http://www.lukew.com/ff/entry.asp?1514), provide a solid starting
   point for any responsive page.
-</div>
+</p>
 
 To create simple, easy-to-understand samples, each the samples
 below were created with real markup using
