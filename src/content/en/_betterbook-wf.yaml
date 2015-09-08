@@ -32,6 +32,12 @@ toc:
           path: /fundamentals/design-and-ui/responsive/patterns
     - title: "Using responsive images and media"
       path: /fundamentals/design-and-ui/responsive-media/
+      hasSubNav: true
+      section: 
+        - title: "Responsive images"
+          path: /fundamentals/design-and-ui/responsive-media/images
+        - title: "Responsible video"
+          path: /fundamentals/design-and-ui/responsive-media/video
     - title: "Animations"
       path: /fundamentals/design-and-ui/animations/
     - title: "Handling user input"
