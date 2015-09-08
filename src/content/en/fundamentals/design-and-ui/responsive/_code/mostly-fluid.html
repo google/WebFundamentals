@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header] -->
+    <link rel="stylesheet" href="layouts-common.css">
+    <style>
+
+      /* // [START mfluid] */
+      .container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+      }
+
+      .c1, .c2, .c3, .c4, .c5 {
+        width: 100%;
+      }
+
+      @media (min-width: 600px) {
+        .c2, .c3, .c4, .c5 {
+          width: 50%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        .c1 {
+          width: 60%;
+        }
+        .c2 {
+          width: 40%;
+        }
+        .c3, .c4, .c5 {
+          width: 33.33%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        .container {
+          width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      /* // [END mfluid] */
+      
+
+    </style>
+    <title>Responsive Web Design Pattern: Mostly Fluid</title>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="c1">
+      </div>
+      <div class="c2">
+      </div>
+      <div class="c3">
+      </div>
+      <div class="c4">
+      </div>
+      <div class="c5">
+      </div>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-MostlyFluid");
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

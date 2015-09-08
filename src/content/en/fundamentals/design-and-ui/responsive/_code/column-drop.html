@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header] -->
+    <link rel="stylesheet" href="layouts-common.css">
+    <style>
+
+      /* // [START cdrop] */
+      .container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+      }
+
+      .c1, .c2, .c3 {
+        width: 100%;
+      }
+
+      @media (min-width: 600px) {
+        .c1 {
+          width: 60%;
+          -webkit-order: 2;
+          order: 2;
+        }
+
+        .c2 {
+          width: 40%;
+          -webkit-order: 1;
+          order: 1;
+        }
+
+        .c3 {
+          width: 100%;
+          -webkit-order: 3;
+          order: 3;
+        }
+      }
+
+
+      @media (min-width: 800px) {
+        .c2 {
+          width: 20%;
+        }
+
+        .c3 {
+          width: 20%;
+        }
+      }
+      /* // [END cdrop] */
+
+
+    </style>
+    <title>Responsive Web Design Pattern: Column Drop</title>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="c1"></div>
+      <div class="c2"></div>
+      <div class="c3"></div>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 800px)").addListener(hitMQ);
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDPatterns-ColumnDrop");
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

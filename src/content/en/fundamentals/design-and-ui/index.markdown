@@ -12,5 +12,3 @@ article:
   updated_on: 2015-07-21
 priority: 0
 ---
-
-Design and UI Home Page
