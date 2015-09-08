@@ -10,7 +10,7 @@ article:
 priority: 0
 authors:
   - petelepage
-id: rwd-fundamentals
+id: responsive-fundamentals
 collection: responsive
 key-takeaways:
   choose-breakpoints:

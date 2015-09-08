@@ -40,8 +40,28 @@ toc:
           path: /fundamentals/design-and-ui/responsive-media/video
     - title: "Animations"
       path: /fundamentals/design-and-ui/animations/
+      hasSubNav: true
+      section: 
+        - title: "Understanding easing"
+          path: /fundamentals/design-and-ui/animations/easing
+        - title: "Animating between views"
+          path: /fundamentals/design-and-ui/animations/animating-between-views
+        - title: "Animating modal views"
+          path: /fundamentals/design-and-ui/animations/animating-modal-views
+        - title: "Asymmetric animation timing"
+          path: /fundamentals/design-and-ui/animations/asymmetric-animation-timing
+        - title: "Animations and performance"
+          path: /fundamentals/design-and-ui/animations/animations-and-performance
     - title: "Handling user input"
-      path: /fundamentals/design-and-ui/user-input/
+      path: /fundamentals/design-and-ui/input/
+      hasSubNav: true
+      section: 
+        - title: "Designing great forms"
+          path: /fundamentals/design-and-ui/input/design-great-forms
+        - title: "Providing real time feedback"
+          path: /fundamentals/design-and-ui/input/provide-real-time-validation  
+        - title: "Simplifying checkout with requestAutocomplete"
+          path: /fundamentals/design-and-ui/input/use-request-autocomplete
     - title: "Customizing the browser"
       path: /fundamentals/design-and-ui/customizing-the-browser/
 
