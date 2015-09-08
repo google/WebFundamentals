@@ -1,11 +1,12 @@
 ---
 layout: shared/plain
 title: "Responsive Web Design Fundamentals"
-description: ""
-introduction: ""
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 article:
   written_on: 2014-04-30
-  updated_on: 2014-04-30
+  updated_on: 2014-10-29
   order: 1
 priority: 0
 authors:
@@ -35,10 +36,12 @@ remember:
     - "Use a comma to separate attributes to ensure older browsers can properly parse the attributes."
 ---
 
-There is a multitude of different screen sizes across phones, "phablets",
-tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
-be changing, so it's important that your site can adapt to any screen size,
-today or in the future.
+<div class="intro">
+  There is a multitude of different screen sizes across phones, "phablets",
+  tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
+  be changing, so it's important that your site can adapt to any screen size,
+  today or in the future.
+</div>
 
 Responsive web design, originally defined by [Ethan Marcotte in A List
 Apart](http://alistapart.com/article/responsive-web-design/) responds to the
@@ -50,6 +53,10 @@ in two columns.
 {% include shared/toc.liquid %}
 
 ## Set the viewport
+
+Pages optimized for a variety of devices must include a meta viewport element in
+the head of the document.  A meta viewport tag gives the browser instructions on
+how to control the page's dimensions and scaling.
 
 In order to attempt to provide the best experience, mobile browsers will render
 the page at a desktop screen width (usually about 980px, though this varies
@@ -104,6 +111,10 @@ When set, these can disable the user's ability to zoom the viewport, potentially
 
 ## Size the content to the viewport
 
+On both desktop and mobile devices, users are used to scrolling websites
+vertically but not horizontally, and forcing the user to scroll horizontally or
+to zoom out in order to see the whole page results in a poor user experience.
+
 When developing a mobile site with a `meta viewport` tag, it's easy to
 accidentally create page content that doesn't quite fit within the specified
 viewport. For example, an image that is displayed at a width wider than the
@@ -140,6 +151,11 @@ viewport on small screens.
 {% include shared/takeaway.liquid list=page.key-takeaways.size-content-to-vp %}
 
 ## Use CSS media queries for responsiveness
+
+Media queries are simple filters that can be applied to CSS styles.  They make
+it easy to change styles based on the characteristics of the device rendering
+the content, including the display type, width, height, orientation and even
+resolution.
 
 For example, you could place all styles necessary for printing inside a print media query:
 

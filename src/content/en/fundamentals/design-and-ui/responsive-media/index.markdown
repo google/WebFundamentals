@@ -1,9 +1,9 @@
 ---
 layout: shared/plain
 title: "Responsive Media"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: responsive-media
 collection: design-and-ui
 

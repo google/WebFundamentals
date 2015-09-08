@@ -1,9 +1,9 @@
 ---
 layout: shared/plain
 title: "Animating between views"
-description: "TODO: Responsive Description"
-introduction: "TODO: Responsive Intro"
-snippet: "TODO: Responsive Snippet"
+description: "TODO"
+introduction: "TODO"
+snippet: "TODO"
 id: animations-between-views
 collection: design-and-ui
 article:
@@ -16,7 +16,7 @@ key-takeaways:
   code:
     - "Use translations to move between views; avoid using <code>left</code>, <code>top</code> or any other property that triggers layout."
     - "Ensure any animations you use are snappy and the durations are kept short."
-    - "Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when  used in a desktop context."
+    - "Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when used in a desktop context."
 notes:
   sixtyfps:
     - "You should be aiming to maintain 60fps for all of your animations. That way your users will not experience stuttering animations that pull them out of their experience. Ensure that any animating element has will-change set for anything you plan to change well ahead of the animation starting. For view transitions, it’s highly likely you will want to use <code>will-change: transform</code>."
@@ -24,7 +24,12 @@ notes:
     - "Making this kind of hierarchy in a cross-browser way can be challenging. For example, iOS requires an additional CSS property, <code>-webkit-overflow-scrolling: touch</code>, to ‘reenable’ fling scrolling, but you don’t get to control which axis that’s for, as you can with the standard overflow property. Be sure to test your implementation across a range of devices!"
 ---
 
-Many times you will want to move users between views in your application, whether that's a list to a details view, or show a sidebar navigation. Animations between these views are great for keeping the user engaged and add even more life to your projects.
+<div class="intro">
+  Many times you will want to move users between views in your application, 
+  whether that's a list to a details view, or show a sidebar navigation. 
+  Animations between these views are great for keeping the user engaged and add
+  even more life to your projects.
+</div>
 
 {% include shared/toc.liquid %}
 
