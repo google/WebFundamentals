@@ -76,9 +76,11 @@ toc:
   hasSubNav: true
   section:
     - title: "Optimizing for search"
-      path: /fundamentals/discovery-and-distribution/search/
+      path: /fundamentals/discovery-and-distribution/optimize-for-search
+    - title: "URL Structure"
+      path: /fundamentals/discovery-and-distribution/url-structure
     - title: "Optimizing for social sites"
-      path: /fundamentals/discovery-and-distribution/social/
+      path: /fundamentals/discovery-and-distribution/add-social-metadata
     - title: "Deep App Linking"
       path: /fundamentals/discovery-and-distribution/deep-app-linking/
     - title: "Providing the right metadata"
