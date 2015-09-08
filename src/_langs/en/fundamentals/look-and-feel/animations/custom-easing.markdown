@@ -2,10 +2,10 @@
 layout: article
 title: "Custom Easing"
 description: "Go offroad and create totally custom animations for your projects."
-introduction: "Sometimes you won't want to use the easing keywords that are included with CSS, or you will be using a JavaScript-based animation library. In both cases you can typically define your own curves (or equations), and this gives you a lot of control over the feel of your project's animations."
+introduction: "Sometimes you won't want to use the easing keywords that are included with CSS, or you will be using Web Animations or a JavaScript framework. In these cases you can typically define your own curves (or equations), and this gives you a lot of control over the feel of your project's animations."
 article:
   written_on: 2014-08-08
-  updated_on: 2014-10-21
+  updated_on: 2015-08-26
   order: 4
 id: custom-easing
 collection: animations
@@ -18,14 +18,15 @@ key-takeaways:
 
 authors:
   - paullewis
+  - samthorogood
 ---
 {% wrap content %}
 
 {% include modules/takeaway.liquid list=page.key-takeaways.code %}
 
-If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined bezier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/).
+If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined bezier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/) and the [Web Animations specification](http://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve).
 
-In CSS these bezier curves take four values, or 2 pairs of numbers, with each pair describing the X and Y coordinates of a cubic bezier curve’s control points.  The starting point of the bezier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much!
+These bezier curves take four values, or 2 pairs of numbers, with each pair describing the X and Y coordinates of a cubic bezier curve’s control points.  The starting point of the bezier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much!
 
 Changing the X and Y value of each control point will give you vastly different curve, and therefore a vastly different feel to your animation. For example, if the first control point is in the lower right the animation will be slow to start. If it’s in the top left area it’s going to be fast to start. Conversely, if the second control point is in the bottom right of the grid it’s going to be fast at the end, whereas if it’s in the top left it will be slow to end.
 
@@ -48,16 +49,20 @@ Making a custom curve is a lot of fun, and it gives you significant control over
 
 Experiment with this {% link_sample _code/curve-playground.html %}animation curve tool{% endlink_sample %} and see how the curve affects the feel of an animation.
 
-## Use JavaScript for more control
+## Use JavaScript frameworks for more control
 
-Sometimes you will need even more control than a cubic bezier curve can provide. Perhaps you want an elastic bounce feel, or you want to stop execution of the animation part way through, both of which are far more difficult to achieve with CSS. In such cases you should use JavaScript animation libraries. One of the best libraries is [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (or TweenLite if you want to keep things super lightweight) as you get a lot of control from it in a small JavaScript library, and it’s a very mature codebase.
+Sometimes you will need even more control than a cubic bezier curve can provide. If you wanted an elastic bounce feel, you might consider using a JavaScript framework, as this is a difficult effect to achieve with either CSS or Web Animations.
+
+### TweenMax
+
+One powerful framework is [GreenSock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (or TweenLite if you want to keep things super lightweight) as you get a lot of control from it in a small JavaScript library, and it’s a very mature codebase.
 
 {% link_sample _code/box-move-elastic.html %}See an elastic ease animation.{% endlink_sample %}
 
-To use something like TweenMax include the script in your page:
+To use TweenMax include the script in your page:
 
 {% highlight html %}
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 {% endhighlight %}
 
 Once that’s in place you can call TweenMax against your element and tell it which properties you’d like, along with any easing you’d like. There are a ton of easing options that you can use; the code below uses an elastic ease-out:
