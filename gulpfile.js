@@ -12,6 +12,7 @@ GLOBAL.WF = {
     styles: 'src/static/styles',
     fonts: 'src/static/fonts',
     scripts: 'src/static/scripts',
+    thirdParty: 'src/static/third_party'
   },
   build: {
     root: 'build',
