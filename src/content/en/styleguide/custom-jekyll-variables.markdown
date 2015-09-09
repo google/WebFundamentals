@@ -1,9 +1,8 @@
 ---
 layout: shared/plain
 title: "Custom Jekyll Variables"
-description: "This is a list of custom variables injected into the Jekyll page that can be used to structure your page
-and the links through Web Fundamentals"
-order: 2
+description: "This is a list of custom variables injected into the Jekyll page that can be used to structure your page and the links through Web Fundamentals"
+order: 4
 ---
 
 # page.context

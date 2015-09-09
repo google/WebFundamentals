@@ -4,13 +4,7 @@ description: "TODO"
 title: "Measuring the Critical Rendering Path with Navigation Timing"
 written_on: 2014-04-01
 updated_on: 2014-09-18
-pageNav:
-  next:
-    title: "Analyzing Critical Rendering Path Performance"
-    href: fundamentals/performance/critical-rendering-path/analyzing-crp
-  previous:
-    title: "Adding Interactivity with JavaScript"
-    href: fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
+order: 6
 translation_priority: 0
 authors:
   - ilyagrigorik
@@ -19,6 +13,11 @@ key-takeaways:
     - Navigation Timing provides high resolution timestamps for measuring CRP.
     - Browser emits series of consumable events which capture various stages of the CRP.
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 <p class="intro">
   You can't optimize what you can't measure. Thankfully, the Navigation 

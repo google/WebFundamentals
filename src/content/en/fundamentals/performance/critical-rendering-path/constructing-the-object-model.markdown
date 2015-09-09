@@ -4,13 +4,7 @@ description: "TODO"
 title: "Constructing the Object Model"
 written_on: 2014-04-01
 updated_on: 2014-09-12
-pageNav:
-  next:
-    title: "Render-tree Construction, Layout, and Paint"
-    href: fundamentals/performance/critical-rendering-path/render-tree-construction
-  previous:
-    title: "Critical Rendering Path"
-    href: fundamentals/performance/critical-rendering-path/
+order: 2
 translation_priority: 0
 authors:
   - ilyagrigorik
@@ -24,6 +18,11 @@ notes:
   devtools:
     - "We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href='/web/tools/chrome-devtools'>Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href='http://discover-devtools.codeschool.com/''>Discover DevTools</a> course."
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 <p class="intro">
   Before the browser can render the page it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible.

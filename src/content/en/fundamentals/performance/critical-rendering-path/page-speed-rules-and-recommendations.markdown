@@ -4,14 +4,16 @@ description: "PageSpeed Insights rules in context: what to pay attention to when
 title: "PageSpeed Rules and Recommendations"
 written_on: 2014-04-01
 updated_on: 2015-06-10
-pageNav:
-  previous:
-    title: "Optimizing the Critical Rendering Path"
-    href: fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
+order: 9
 translation_priority: 0
 authors:
   - ilyagrigorik
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 <p class="intro">
   PageSpeed Insights rules in context: what to pay attention to when optimizing
