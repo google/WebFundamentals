@@ -5,5 +5,5 @@ description: "This is the styleguide for Web Fundamentals. Here you'll find
  the custom liquid tags and CSS styles for the site."
 introduction: "This is the styleguide for Web Fundamentals. Here you'll find
  the custom liquid tags and CSS styles for the site."
-priority: 0
+translation_priority: 10
 ---

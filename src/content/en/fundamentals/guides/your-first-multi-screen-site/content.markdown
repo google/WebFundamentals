@@ -1,22 +1,15 @@
 ---
 layout: shared/plain
 title: "Create Your Content and Structure"
-description: "Content is the most important aspect of any site. In this guide,
-  we will show how you can quickly plan to build your first multi-device site."
-introduction: "Content is the most important aspect of any site. So let’s design for the content and not let the design dictate the content. In this guide, we identify the content we need first, create a page structure based on this content, and then present the page in a simple linear layout that works well on narrow and wide viewports."
+description: "Content is the most important aspect of any site. In this guide, we will show how you can quickly plan to build your first multi-device site."
 notes:
   styling:
     - Styling will come later
-
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 1
-
 translation_priority: 0
-
 authors:
   - paulkinlan
-translators:
 related-guides:
   create-amazing-forms:
     -
@@ -84,13 +77,16 @@ related-guides:
         id: introduction-to-media
         title: "Images"
         href: fundamentals/media/
-
 key-takeaways:
   content-critical:
     - Identify the content you need first.
     - Sketch out Information Architecture (IA) for narrow and wide viewports.
     - Create a skeleton view of the page with content but without styling.
 ---
+
+<p class="intro">
+Content is the most important aspect of any site. So let’s design for the content and not let the design dictate the content. In this guide, we identify the content we need first, create a page structure based on this content, and then present the page in a simple linear layout that works well on narrow and wide viewports.
+</p>
 
 {% include shared/toc.liquid %}
 

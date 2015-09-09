@@ -2,16 +2,11 @@
 layout: shared/plain
 title: "Animations"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: animations
-collection: design-and-ui
-article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-22
+written_on: 2014-08-08
+updated_on: 2014-10-22
 authors:
   - paullewis
-priority: 0
+translation_priority: 0
 key-takeaways:
   intro:
     - "Use animations as a way to add life to your projects."
