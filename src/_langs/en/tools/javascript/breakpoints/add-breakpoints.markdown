@@ -114,11 +114,9 @@ or delete a DOM node and you want to isolate and observe the change as it happen
 Execution pauses when a specific DOM node is to be modified, before the modification 
 is applied (see also [Edit the DOM](/web/tools/iterate/inspect-styles/edit-dom)).
 
-To add a DOM mutation breakpoint:
-
-1. Open the Elements panel and right-click an element. 
-   From the context menu, click **Break on…**, then choose one of the options: 
-   **Subtree modifications**, **Attributes modifications**, or **Node removal**. 
+To add a DOM mutation breakpoint, open the Elements panel and right-click an element. 
+From the context menu, click **Break on…**, then choose one of the options: 
+**Subtree modifications**, **Attributes modifications**, or **Node removal**. 
 
 ![DOM mutation breakpoint](imgs/image_3.png)
 
@@ -204,11 +202,12 @@ DevTools automatically breaks at the line where the exception is thrown.
 {% animation animations/pause-on-uncaught-exception.mp4 %}
 
 You can also view the call stack leading up to an uncaught exception 
-in the DevTools console. In the animation below, an uncaught exception is triggered,
-and then the carat next to the uncaught exception message in the 
+in the DevTools console. In the animation below, a button is clicked,
+an uncaught exception is triggered,
+and then the carat next to the uncaught exception message (`Uncaught 0`) in the 
 DevTools console is clicked. The call stack leading up to the exception
 is displayed in the console.
 
 {% animation animations/exception-in-console.mp4 %}
 
-
+{% endwrap %}
