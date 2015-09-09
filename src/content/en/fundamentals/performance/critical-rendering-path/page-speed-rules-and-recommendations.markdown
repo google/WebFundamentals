@@ -1,18 +1,14 @@
 ---
 layout: shared/plain
 description: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
-introduction: "TODO"
-snippet: "TODO"
 title: "PageSpeed Rules and Recommendations"
-description: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
-article:
-  written_on: 2014-04-01
-  updated_on: 2015-06-10
+written_on: 2014-04-01
+updated_on: 2015-06-10
+pageNav:
   previous:
     title: "Optimizing the Critical Rendering Path"
     href: fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
-collection: critical-rendering-path
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 ---

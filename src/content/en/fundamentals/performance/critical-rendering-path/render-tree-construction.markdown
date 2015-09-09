@@ -2,26 +2,24 @@
 layout: shared/plain
 title: "Render-tree construction, Layout, and Paint"
 description: "TODO"
-introduction: "TODO"
-article:
-  written_on: 2014-04-01
-  updated_on: 2015-08-21
+written_on: 2014-04-01
+updated_on: 2015-08-21
+pageNav:
   next:
     title: "Render Blocking CSS"
     href: fundamentals/performance/critical-rendering-path/render-blocking-css
   previous:
     title: "Constructing the Object Model"
     href: fundamentals/performance/critical-rendering-path/constructing-the-object-model
-collection: critical-rendering-path
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 key-takeaways:
   render-tree-construction:
-    - The DOM and CSSOM trees are combined to form the render tree.
-    - Render tree contains only the nodes required to render the page.
-    - Layout computes the exact position and size of each object.
-    - Paint is the last step that takes in the final render tree and renders the pixels to the screen.
+    - "The DOM and CSSOM trees are combined to form the render tree."
+    - "Render tree contains only the nodes required to render the page."
+    - "Layout computes the exact position and size of each object."
+    - "Paint is the last step that takes in the final render tree and renders the pixels to the screen."
 notes:
   hidden:
     - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."

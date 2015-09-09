@@ -1,20 +1,17 @@
 ---
 layout: shared/plain
-description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
 title: "Analyzing Critical Rendering Path Performance"
-article:
-  written_on: 2014-04-01
-  updated_on: 2014-04-28
+description: "TODO"
+written_on: 2014-04-01
+updated_on: 2014-04-28
+pageNav:
   next:
     title: "Optimizing the Critical Rendering Path"
     href: fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
   previous:
     title: "Measuring the Critical Rendering Path with Navigation Timing"
     href: fundamentals/performance/critical-rendering-path/measure-crp
-collection: critical-rendering-path
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 ---

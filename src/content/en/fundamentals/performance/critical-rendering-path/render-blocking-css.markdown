@@ -2,34 +2,31 @@
 layout: shared/plain
 title: "Render Blocking CSS"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-article:
-  written_on: 2014-04-01
-  updated_on: 2014-09-18
+written_on: 2014-04-01
+updated_on: 2014-09-18
+pageNav:
   next:
     title: "Adding Interactivity with JavaScript"
     href: fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
   previous:
     title: "Render-tree Construction, Layout, and Paint"
     href: fundamentals/performance/critical-rendering-path/render-tree-construction
-collection: critical-rendering-path
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 related-guides:
   media-queries:
     -
-      title: Use CSS media queries for responsiveness
+      title: "Use CSS media queries for responsiveness"
       href: fundamentals/layouts/rwd-fundamentals/use-media-queries
       section:
         title: "Responsive Web design"
         href: fundamentals/layouts/rwd-fundamentals/use-media-queries
 key-takeaways:
   render-blocking-css:
-    - By default, CSS is treated as a render blocking resource.
-    - Media types and media queries allow us to mark some CSS resources as non-render blocking.
-    - All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser.
+    - "By default, CSS is treated as a render blocking resource."
+    - "Media types and media queries allow us to mark some CSS resources as non-render blocking."
+    - "All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser."
 ---
 
 <p class="intro">

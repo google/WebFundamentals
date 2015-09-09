@@ -1,24 +1,19 @@
 ---
 layout: shared/plain
-description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
 title: "Adding Interactivity with JavaScript"
 description: "JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance."
-introduction: ""
-article:
-  written_on: 2014-01-01
-  updated_on: 2014-09-18
+written_on: 2014-01-01
+updated_on: 2014-09-18
+pageNav:
   next:
     title: "Measuring the Critical Rendering Path with Navigation Timing"
     href: fundamentals/performance/critical-rendering-path/measure-crp
   previous:
     title: "Render Blocking CSS"
     href: fundamentals/performance/critical-rendering-path/render-blocking-css
-collection: critical-rendering-path
 authors:
   - ilyagrigorik
-priority: 0
+translation_priority: 0
 key-takeaways:
   adding-interactivity:
     - JavaScript can query and modify DOM and CSSOM.
