@@ -1,21 +1,17 @@
 ---
 layout: shared/plain
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
 title: "Measuring the Critical Rendering Path with Navigation Timing"
-article:
-  written_on: 2014-04-01
-  updated_on: 2014-09-18
-  featured: true
+written_on: 2014-04-01
+updated_on: 2014-09-18
+pageNav:
   next:
     title: "Analyzing Critical Rendering Path Performance"
     href: fundamentals/performance/critical-rendering-path/analyzing-crp
   previous:
     title: "Adding Interactivity with JavaScript"
     href: fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
-collection: critical-rendering-path
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 key-takeaways:
