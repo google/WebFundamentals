@@ -180,7 +180,7 @@ Take a deep breath, suspend your disbelief, and now consider the following
 example:
 
 {% highlight html %}
-<meta http-equiv="CH-Accept" value="DPR, Viewport-Width, Width">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 ...
 <picture>
   <source media="(min-width: 50em)" sizes="50vw" srcset="/image/thing">
@@ -208,7 +208,7 @@ expand the above markup because the actual resource selection is negotiated by
 the client and server.
 
 **Chrome 46 provides native support for the `DPR`, `Width`, and `Viewport-Width` 
-hints.** The hints are disabled by default and the `<meta http-equiv="CH-Accept" ...>` 
+hints.** The hints are disabled by default and the `<meta http-equiv="Accept-CH" content="...">` 
 above serves as an opt-in signal that tells Chrome to append the specified headers to
 outgoing requests. With that in place, let's examine the request and response headers 
 for a sample image request:
