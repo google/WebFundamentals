@@ -3,13 +3,7 @@ layout: shared/plain
 title: "Image optimization"
 written_on: 2014-05-07
 updated_on: 2014-05-10
-pageNav:
-  previous:
-    title: "Optimizing encoding and transfer size of text-based assets"
-    href: fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
-  next:
-    title: "Web font optimization"
-    href: fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+order: 4
 translation_priority: 0
 authors:
   - ilyagrigorik

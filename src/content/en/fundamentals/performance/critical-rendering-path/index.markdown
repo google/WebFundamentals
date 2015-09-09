@@ -4,13 +4,11 @@ title: "Critical Rendering Path"
 description: "TODO"
 written_on: 2014-04-01
 updated_on: 2014-04-28
-pageNav:
-  next:
-    title: "Constructing the Object Model"
-    href: fundamentals/performance/critical-rendering-path/constructing-the-object-model
+order: 1
 translation_priority: 0
 authors:
   - ilyagrigorik
+
 udacity:
   id: ud884
   title: Website Performance Optimization
@@ -67,6 +65,11 @@ related-guides:
         title: "Understanding the critical rendering path"
         href: fundamentals/performance/critical-rendering-path/
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 <p class="intro">
   Optimizing the critical rendering path is critical for improving performance 
