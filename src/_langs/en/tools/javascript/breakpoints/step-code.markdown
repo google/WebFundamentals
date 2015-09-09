@@ -108,24 +108,42 @@ of your asynchronous function calls.
 
 2. On the **Call Stack** pane, enable the **Async** checkbox.
 
-In the video below, the user triggers a breakpoint and then expands the call
-stack. The call stack only contains one call. The user then enables the
-async call stack feature by enabling the **Async** checkbox, resumes 
-script execution, triggers the breakpoint again,
-and then expands the call stack. This time, the call stack contains four
-calls.
+The video below contains a simple script to demonstrate the async call 
+stack feature. In the script, a third-party library is used to select a
+DOM element, and a function called `onClick` is registered as the 
+`onclick` event handler for the element. Whenever `onClick` is called,
+it in turn calls a function named `f`, which just forces the script to 
+pause via the `debugger` keyword. This is just a toy example. Watch
+the video below and read on to see the async call stack feature in action.
 
 {% animation animations/async-call-stack-demo.mp4 %}
+
+In the video, a breakpoint is triggered, and the call stack is expanded.
+There is only one call in the stack: `f`. The async call stack feature is then
+enabled, the script resumes, the breakpoint is triggered again, and then the
+call stack is expanded a second time. This time, the call stack contains 
+all of the calls leading up to `f`, including third-party library calls, and
+the call to `onClick`. The first time that the script was called, there 
+was only one call in the call stack. The second time, there were four. In
+short, the async call stack feature provides increased visibility into 
+the full call stack of asynchronous functions.
 
 ### Tip: name functions to improve call stack readability
 
 Anonymous functions make the call stack difficult to read. Name your functions
 to improve readability.
 
-The code in the two screenshots below are functionally equivalent. Compare the
-call stacks. In the first screenshot, the top two functions are both just titled
+The code in the two screenshots below is functionally equivalent. The
+exact functioning of the code is not important, what is important is
+that the code in the first screenshot uses anonymous functions, while
+the second uses named functions.
+
+In the call stack in the first screenshot, the top two functions are both just titled
 `(anonymous function)`. In the second screenshot, the top two functions
 are named, which makes it easier to understand the program flow at a glance.
+When you are working with numerous script files, including third-party
+libraries and frameworks, and your call stack is five or ten calls deep,
+it is much easier to understand the call stack flow when functions are named.
 
 Call stack with anonymous functions:
 
@@ -150,11 +168,10 @@ To blackbox a file:
 
 1. Select **Blackbox Script**.
 
-In the animation below, the user triggers a breakpoint. DevTools populates
-the call stack. You can see a couple of third-party functions in the 
-call stack. The user then blackboxes the third-party script by right-clicking
-on the script file and selecting **Blackbox Script**.  DevTools automatically
-hides the third-party functions from the call stack. 
+In the animation below, a breakpoint is triggered. DevTools populates
+the call stack with the functions leading up to the breakpoint. The call stack
+displays a couple of third-party functions. A third-party script is then blackboxed,
+and the third-party functions are automatically hidden from the call stack.
 
 {% animation animations/blackbox.mp4 %}
 
