@@ -17,7 +17,7 @@ priority: 0
 collection: breakpoints
 key-takeaways:
   tldr:
-    - Stepping through code allows you to observe issues before or while they happen and test out changes through live editing during a pause.
+    - Step through code to observe issues before or while they happen and test out changes through live editing.
     - Prefer stepping over console logging, as logged data is already stale the moment it arrives in the console.
     - Enable the "Async call stack" feature to gain greater visibility into the call stack of asynchronous functions.
     - Blackbox scripts to hide third-party code from your call stacks.
