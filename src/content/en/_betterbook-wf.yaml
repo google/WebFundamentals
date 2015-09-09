@@ -104,7 +104,7 @@ toc:
     - title: "Optimizing content efficiency"
       path: /fundamentals/performance/optimizing-content-efficiency/
     - title: "Optimizing rendering performance"
-      path: /fundamentals/performance/rendering-performance/
+      path: /fundamentals/performance/rendering/
     - title: "RAIL (needs better title)"
       path: /fundamentals/performance/rail/
     - title: "Progressive loading and rendering"
