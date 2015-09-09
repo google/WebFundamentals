@@ -57,7 +57,7 @@ module Jekyll
        'layout', 'title', 'description', 'order', 'translation_priority',
         'written_on', 'updated_on', 'authors', 'translators', 'introduction',
         'permalink', 'published', 'key-takeaways', 'notes', 'related-guides',
-        'udacity'
+        'udacity', 'comments'
       ]
       invalidKeys = []
       self.data.each do |key, value|
