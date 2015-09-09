@@ -5,7 +5,7 @@
       <a
         class="wf-article-nav__link wf-article-nav__link--prev"
         title="{{"previous_article" | localize_string}}"
-        href="{{site.WFBaseUrl}}/{{ page.previousPage.href }}">
+        href="{{site.WFBaseUrl}}{{ page.previousPage.url }}">
         <i class="material-icons arrow-L">arrow_back</i>
         <span class="direction">{{"previous" | localize_string}}</span>
         <div>{{ page.previousPage.title }}</div>
@@ -17,7 +17,7 @@
       <a
         class="wf-article-nav__link wf-article-nav__link--next"
         title="{{"next_article" | localize_string}}"
-        href="{{site.WFBaseUrl}}/{{ page.nextPage.href }}">
+        href="{{site.WFBaseUrl}}{{ page.nextPage.url }}">
         <i class="material-icons arrow-R">arrow_forward</i>
         <span class="direction">{{"next" | localize_string}}</span>
         <div>{{ page.nextPage.title }}</div>
