@@ -102,7 +102,7 @@ toc:
     - title: "Understanding the critical rendering path"
       path: /fundamentals/performance/critical-rendering-path/
     - title: "Optimizing content efficiency"
-      path: /fundamentals/performance/content-efficiency/
+      path: /fundamentals/performance/optimizing-content-efficiency/
     - title: "Optimizing rendering performance"
       path: /fundamentals/performance/rendering-performance/
     - title: "RAIL (needs better title)"
