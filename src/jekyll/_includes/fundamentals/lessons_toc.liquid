@@ -1,4 +1,8 @@
 {% assign className = 'wf-lessons-toc__list-item--completed' %}
+
+{% if page.context.index == page %}
+  {% assign className = 'wf-lessons-toc__list-item--todo' %}
+{% endif %}
 <div class="wf-lessons-toc">
   <h3 class="wf-lessons-toc__title">{{"next_sections" | localize_string}}</h3>
   <ol class="wf-lessons-toc__list">
@@ -18,3 +22,5 @@
     {% endfor %}
   </ol>
 </div>
+
+gsutil setmeta -h "Cache-Control:public, max-age=86400" gs://gauntface-site-uploads/generated/**/*
