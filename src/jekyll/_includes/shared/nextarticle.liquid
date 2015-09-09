@@ -1,21 +1,28 @@
 <div class="wf-article-nav">
   <nav class="wf-article-nav__container">
-  {% if page.article.previous %}
-  <a
-    class="wf-article-nav__link wf-article-nav__link--prev"
-    title="{{"previous_article" | localize_string}}"
-    href="{{site.WFBaseUrl}}{{ page.article.previous.url }}">
-    {{"previous" | localize_string}} '{{ page.article.previous.title }}'
-  </a>
-  {% endif %}
+    <div>
+      {% if page.article.previous %}
+      <a
+        class="wf-article-nav__link wf-article-nav__link--prev"
+        title="{{"previous_article" | localize_string}}"
+        href="{{site.WFBaseUrl}}/{{ page.article.previous.href }}">
+        <i class="material-icons arrow-L">arrow_back</i>
+        <span class="direction">{{"previous" | localize_string}}</span>
+        <div>{{ page.article.previous.title }}</div>
 
-  {% if page.article.next %}
-  <a
-    class="wf-article-nav__link wf-article-nav__link--next"
-    title="{{"next_article" | localize_string}}"
-    href="{{site.WFBaseUrl}}{{ page.article.next.url }}">
-    {{"next" | localize_string}} '{{ page.article.next.title }}'
-  </a>
-  {% endif %}
+      </a>
+      {% endif %}
+    </div><div>
+      {% if page.article.next %}
+      <a
+        class="wf-article-nav__link wf-article-nav__link--next"
+        title="{{"next_article" | localize_string}}"
+        href="{{site.WFBaseUrl}}/{{ page.article.next.href }}">
+        <i class="material-icons arrow-R">arrow_forward</i>
+        <span class="direction">{{"next" | localize_string}}</span>
+        <div>{{ page.article.next.title }}</div>
+      </a>
+      {% endif %}
+    </div>
   </nav>
 </div>
