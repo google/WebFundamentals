@@ -137,10 +137,10 @@ Call stack with named functions:
 
 ### Blackbox third-party code
 
-You may not care to see in your call stack the internal functions
-of third-party libraries and frameworks which you use in your project.
-Use the **Blackbox Third-Party Code** feature of DevTools to omit 
-third-party files from your call stacks.
+Use the **Blackbox Third-Party Code** feature to omit 
+third-party files from your call stacks. For example, you can use
+this to hide third-party library and framework function calls from
+your call stack.
 
 To blackbox a file:
 
