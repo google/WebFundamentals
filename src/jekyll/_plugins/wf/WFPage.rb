@@ -66,15 +66,16 @@ module Jekyll
       end
 
       if invalidKeys.length > 0
-          #puts "Found " + invalidKeys.length.to_s + " invalid keys in " + self.relative_path + '/' + self.name
+          puts "Found " + invalidKeys.length.to_s + " invalid keys in " + self.relative_path + '/' + self.name
 
           invalidKeysString = ''
           invalidKeys.each { |key|
-            invalidKeysString += key + ' '
+            invalidKeysString += key + ', '
           }
 
-          #puts invalidKeysString
-          #puts ''
+          puts 'Invalid keys: ' + invalidKeysString
+          puts '---------------------------------------------------------------'
+          puts ''
       end
 
       # This is the default better book
