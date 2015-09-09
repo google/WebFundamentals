@@ -34,6 +34,20 @@ module Jekyll
         return
       end
 
+      @absoluteUrl = site.config['WFAbsoluteUrl']
+      if @absoluteUrl.nil?
+        Jekyll.logger.info "WFAbsoluteUrl is not defined in the config yaml"
+        raise Exception.new("WFAbsoluteUrl is not defined in the config yaml")
+        return
+      end
+
+      primaryLang = site.config['primary_lang']
+      if primaryLang.nil?
+        Jekyll.logger.info "primary_lang is not defined in the config yaml"
+        raise Exception.new("primary_lang is not defined in the config yaml")
+        return
+      end
+
       @markdownExtensions = [".markdown", ".md", ".html"]
 
       # Load contributors
@@ -42,6 +56,8 @@ module Jekyll
       data = YAML.load_file(site.config['WFContributors'])
       site.data["contributors"] = data
 
+      lang = ENV['TRANS_LANG'] || site.config['primary_lang']
+      site.data["curr_lang"] = lang
 
       contributorsFilepath = File.join(site.config['WFContributors'])
       contributesData = YAML.load_file(contributorsFilepath)
