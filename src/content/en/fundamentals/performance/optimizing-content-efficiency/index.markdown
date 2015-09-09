@@ -3,10 +3,7 @@ layout: shared/plain
 title: "Optimizing Content Efficiency"
 written_on: 2014-04-01
 updated_on: 2014-04-29
-pageNav:
-  next:
-    title: "Eliminating unnecessary downloads"
-    href: fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+order: 0
 translation_priority: 0
 authors:
   - ilyagrigorik

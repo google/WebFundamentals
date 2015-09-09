@@ -4,13 +4,7 @@ title: "Render-tree construction, Layout, and Paint"
 description: "TODO"
 written_on: 2014-04-01
 updated_on: 2015-08-21
-pageNav:
-  next:
-    title: "Render Blocking CSS"
-    href: fundamentals/performance/critical-rendering-path/render-blocking-css
-  previous:
-    title: "Constructing the Object Model"
-    href: fundamentals/performance/critical-rendering-path/constructing-the-object-model
+order: 3
 translation_priority: 0
 authors:
   - ilyagrigorik
@@ -24,6 +18,11 @@ notes:
   hidden:
     - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 <p class="intro">
   The CSSOM and DOM trees are combined into a render tree, which is then used 

@@ -3,13 +3,7 @@ layout: shared/plain
 title: "Optimizing encoding and transfer size of text-based assets"
 written_on: 2014-04-01
 updated_on: 2014-09-12
-pageNav:
-  previous:
-    title: "Eliminating unnecessary downloads"
-    href: fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
-  next:
-    title: "Image optimization"
-    href: fundamentals/performance/optimizing-content-efficiency/image-optimization
+order: 3
 translation_priority: 0
 authors:
   - ilyagrigorik

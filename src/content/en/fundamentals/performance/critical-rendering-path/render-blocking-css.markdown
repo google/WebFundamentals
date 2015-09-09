@@ -4,13 +4,7 @@ title: "Render Blocking CSS"
 description: "TODO"
 written_on: 2014-04-01
 updated_on: 2014-09-18
-pageNav:
-  next:
-    title: "Adding Interactivity with JavaScript"
-    href: fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
-  previous:
-    title: "Render-tree Construction, Layout, and Paint"
-    href: fundamentals/performance/critical-rendering-path/render-tree-construction
+order: 4
 translation_priority: 0
 authors:
   - ilyagrigorik
@@ -28,6 +22,11 @@ key-takeaways:
     - "Media types and media queries allow us to mark some CSS resources as non-render blocking."
     - "All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser."
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 <p class="intro">
   By default CSS is treated as a render blocking resource, which means that the
