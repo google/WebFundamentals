@@ -4,17 +4,17 @@ description: "TODO"
 title: "Optimizing the Critical Rendering Path"
 written_on: 2014-04-01
 updated_on: 2014-04-28
-pageNav:
-  next:
-    title: "PageSpeed Rules and Recommendations"
-    href: fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
-  previous:
-    title: "Analyzing Critical Rendering Path Performance"
-    href: fundamentals/performance/critical-rendering-path/analyzing-crp
+order: 8
+
 translation_priority: 0
 authors:
   - ilyagrigorik
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
 
 {% include shared/toc.liquid %}
 

@@ -3,10 +3,7 @@ layout: shared/plain
 title: "HTTP caching"
 written_on: 2014-01-01
 updated_on: 2014-01-05
-pageNav:
-  previous:
-    title: "Web font optimization"
-    href: fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+order: 6
 translation_priority: 0
 authors:
   - ilyagrigorik

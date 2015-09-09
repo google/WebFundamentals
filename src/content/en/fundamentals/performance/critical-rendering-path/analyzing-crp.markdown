@@ -4,17 +4,17 @@ title: "Analyzing Critical Rendering Path Performance"
 description: "TODO"
 written_on: 2014-04-01
 updated_on: 2014-04-28
-pageNav:
-  next:
-    title: "Optimizing the Critical Rendering Path"
-    href: fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
-  previous:
-    title: "Measuring the Critical Rendering Path with Navigation Timing"
-    href: fundamentals/performance/critical-rendering-path/measure-crp
+order: 7
 translation_priority: 0
 authors:
   - ilyagrigorik
 ---
+
+<div>
+  P: {{ page.previousPage.title }}<br>
+  N: {{ page.nextPage.title }}
+</div>
+
 <p class="intro">
   Identifying and resolving critical rendering path performance bottlenecks 
   requires good knowledge of the common pitfalls. Let's take a hands-on tour 

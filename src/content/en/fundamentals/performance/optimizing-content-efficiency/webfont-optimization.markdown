@@ -3,13 +3,7 @@ layout: shared/plain
 title: "Web Font optimization"
 written_on: 2014-09-20
 updated_on: 2014-09-30
-pageNav:
-  previous:
-    title: "Image optimization"
-    href: fundamentals/performance/optimizing-content-efficiency/image-optimization
-  next:
-    title: "HTTP caching"
-    href: fundamentals/performance/optimizing-content-efficiency/http-caching
+order: 5
 translation_priority: 0
 authors:
   - ilyagrigorik

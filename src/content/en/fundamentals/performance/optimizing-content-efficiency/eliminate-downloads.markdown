@@ -3,13 +3,7 @@ layout: shared/plain
 title: "Eliminating unnecessary downloads"
 written_on: 2014-04-01
 updated_on: 2014-04-29
-pageNav:
-  previous:
-    title: "Optimizing Content Efficiency"
-    href: fundamentals/performance/optimizing-content-efficiency/
-  next:
-    title: "Optimizing encoding and transfer size of text-based assets"
-    href: fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+order: 2
 authors:
   - ilyagrigorik
 key-takeaways:
