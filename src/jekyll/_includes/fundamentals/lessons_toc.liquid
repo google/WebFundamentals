@@ -1,20 +1,20 @@
+{% assign className = 'wf-lessons-toc__list-item--completed' %}
 <div class="wf-lessons-toc">
-  <div class="wf-lessons-toc__container">
-    <h3 class="wf-lessons-toc__title">{{"next_sections" | localize_string}}</h3>
-    <ol class="wf-lessons-toc__list">
-      {% for pageInSection in page.context.pages %}
-        {% if pageInSection.url == page.url %}
-          <li class="wf-lessons-toc__list-item wf-lessons-toc--isCurrentPage">
+  <h3 class="wf-lessons-toc__title">{{"next_sections" | localize_string}}</h3>
+  <ol class="wf-lessons-toc__list">
+    {% for pageInSection in page.context.pages %}
+      {% if pageInSection.url == page.url %}
+        <li class="wf-lessons-toc__list-item wf-lessons-toc__list-item--current">
           <span class="wf-lessons-toc__icon">{% include svgs/done.svg %}</span>{{pageInSection.title}}
-          </li>
-        {% else %}
-          <li class="wf-lessons-toc__list-item">
+        </li>
+        {% assign className = 'wf-lessons-toc__list-item--todo' %}
+      {% else %}
+        <li class="wf-lessons-toc__list-item {{className}}">
           <a href="{{site.WFBaseUrl}}{{pageInSection.url}}">
-          {{pageInSection.title}}
+            <span class="wf-lessons-toc__icon">{% include svgs/done.svg %}</span>{{pageInSection.title}}
           </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ol>
-  </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
 </div>

@@ -1,0 +1,49 @@
+.wf-lessons-toc {
+
+}
+
+.wf-lessons-toc__title {
+
+}
+
+.wf-lessons-toc__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wf-lessons-toc__list-item {
+  padding: 0 ($base-line * 2) 0 0;
+  line-height: $base-line * 2;
+}
+
+.wf-lessons-toc__list-item--completed {
+  opacity: 0.4;
+
+  & a {
+    text-decoration: none;
+    color: $text-color-primary;
+  }
+}
+
+.wf-lessons-toc__list-item--todo {
+  .wf-lessons-toc__icon {
+    visibility: hidden;
+  }
+}
+
+.wf-lessons-toc__list-item--current {
+  padding-left: 0;
+}
+
+.wf-lessons-toc__icon {
+  display: inline-block;
+
+  width: ($base-line * 2);
+  height: ($base-line * 2);
+
+  svg {
+    width: $base-line;
+    height: $base-line;
+  }
+}
