@@ -9,6 +9,8 @@ toc:
   section:
     - title: "Getting started with multi-device development"
       path: /fundamentals/guides/getting-started/
+    - title: "Your first offline web app"
+      path: /fundamentals/guides/your-first-offline-web-app/
     - title: "Using the starter kit"
       path: /fundamentals/guides/web-starter-kit/
     - title: "Your first responsive site"
