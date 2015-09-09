@@ -2,17 +2,12 @@
 layout: shared/plain
 title: "Understanding easing"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: animations-easing
-collection: design-and-ui
-article:
-  written_on: 2014-08-08
-  updated_on: 2015-08-26
+written_on: 2014-08-08
+updated_on: 2015-08-26
 authors:
   - paullewis
   - samthorogood
-priority: 0
+translation_priority: 0
 key-takeaways:
   choosing:
     - "Use ease-out animations for UI elements; a Quintic ease-out is a very nice, albeit snappy, ease."

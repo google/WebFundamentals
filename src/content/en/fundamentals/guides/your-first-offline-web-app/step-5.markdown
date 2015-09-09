@@ -1,23 +1,15 @@
 ---
 layout: shared/plain
 title: "Register a Service Worker on the site"
-description: ""
-introduction: ""
+description: "TODO"
 notes:
   styling:
     - Styling will come later
-
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 5
-
 translation_priority: 0
-
 authors:
   - paulkinlan
-translators:
-related-guides:
-key-takeaways:
 ---
 
 {% include shared/toc.liquid %}

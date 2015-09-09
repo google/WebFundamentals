@@ -2,14 +2,9 @@
 layout: shared/plain
 title: "URL Structure"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: discovery-and-distribution-url-structure
-collection: fundamentals
-article:
-  written_on: 2014-10-08
-  updated_on: 2014-11-05
-priority: 0
+written_on: 2014-10-08
+updated_on: 2014-11-05
+translation_priority: 0
 authors:
   - agektmr
 key-takeaways:

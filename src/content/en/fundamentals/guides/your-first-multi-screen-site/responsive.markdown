@@ -2,8 +2,7 @@
 layout: shared/plain
 title: "Make It Responsive"
 description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
-introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions. Each device presents its own unique benefits and also constraints. As a web developer, you are expected to support all ranges of devices."
-priority: 0
+translation_priority: 0
 key-takeaways:
   make-responsive:
     - Always use a viewport.
@@ -12,7 +11,6 @@ key-takeaways:
     - Create a high-level vision of your layout across major breakpoints.
 authors:
   - paulkinlan
-translators:
 related-guides:
   responsive:
     -
@@ -65,17 +63,21 @@ related-guides:
         id: images
         title: "Images"
         href: media/images/
-
 notes:
   styling:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed.
-
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 2
 ---
+
+<p class="intro">
+  The web is accessible on a huge range of devices from small-screen phones 
+  through to huge-screen televisions. Each device presents its own unique 
+  benefits and also constraints. As a web developer, you are expected to 
+  support all ranges of devices.
+</p>
 
 {% include shared/toc.liquid %}
 

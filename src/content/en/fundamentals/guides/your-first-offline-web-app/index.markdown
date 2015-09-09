@@ -2,12 +2,8 @@
 layout: shared/plain
 title: "Your first offline web app"
 description: "Overview"
-introduction: ""
-
 written_on: 2014-07-17
 updated_on: 2014-10-21
-order: 3
-
 translation_priority: 1
 ---
 

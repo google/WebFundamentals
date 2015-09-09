@@ -2,16 +2,11 @@
 layout: shared/plain
 title: "Responsive Images"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: responsive-media-images
-collection: design-and-ui
-article:
-  written_on: 2014-04-30
-  updated_on: 2014-09-30
+written_on: 2014-04-30
+updated_on: 2014-09-30
 authors:
   - petelepage
-priority: 0
+translation_priority: 0
 key-takeaways:
   img-in-markup:
     - "Use relative sizes for images to prevent them from accidentally overflowing the container."
@@ -29,7 +24,7 @@ key-takeaways:
     - "Include image optimization and compression tools into your workflow to reduce file sizes."
     - "Reduce the number of http requests by placing frequently used images into image sprites."
     - "Consider loading images only after they’ve scrolled into view to improve the initial page load time and reduce the initial page weight."
-related:
+related-guides:
   optimize:
   -
       title: "Image optimization"
@@ -38,7 +33,7 @@ related:
         id: optimizing-content-efficiency
         title: "Optimizing Content Efficiency"
         href: fundamentals/performance/optimizing-content-efficiency/
-remember:
+notes:
   picture-support:
     - "The <code>picture</code> element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. See the <a href='http://responsiveimages.org/#implementation'> ResponsiveImages.org</a> site for further details."
   compressive:
@@ -151,7 +146,7 @@ and more.
 <img class="center" src="img/art-direction.png" alt="Art direction example"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-{% include shared/remember.liquid title="Important" list=page.remember.picture-support %}
+{% include shared/remember.liquid title="Important" list=page.notes.picture-support %}
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
@@ -300,7 +295,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.compressive %}
+{% include shared/remember.liquid title="Important" list=page.notes.compressive %}
 
 #### JavaScript image replacement
 

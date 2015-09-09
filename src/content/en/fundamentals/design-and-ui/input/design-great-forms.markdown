@@ -2,16 +2,11 @@
 layout: shared/plain
 title: "Design great forms"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: userinput-design-efficient
-collection: design-and-ui
-article:
-  written_on: 2014-04-30
-  updated_on: 2015-03-27
+written_on: 2014-04-30
+updated_on: 2015-03-27
 authors:
   - petelepage
-priority: 0
+translation_priority: 0
 key-takeaways:
   design-great-forms:
     - "Use existing data to pre-populate fields and be sure to enable auto-fill."
@@ -24,7 +19,7 @@ key-takeaways:
     - "Always use <code>label</code>s on form inputs, and ensure they're visible when the field is in focus."
     - "Use <code>placeholder</code>s to provide guidance about what you expect."
     - "To help the browser auto-complete the form, use established <code>name</code>'s for elements and include the <code>autocomplete</code> attribute."
-remember:
+notes:
   use-placeholders:
     - "Placeholders disappear as soon as focus is placed in an element, thus they are not a replacement for labels.  They should be used as an aid to help guide users on the required format and content."
   recommend-input:
@@ -235,7 +230,7 @@ lists, `datalist` element provides hints as the user types.
 
 {% include_code src=_code/order.html snippet=datalist %}
 
-{% include shared/remember.liquid title="Remember" list=page.remember.use-datalist %}
+{% include shared/remember.liquid title="Remember" list=page.notes.use-datalist %}
 
 ## Label and name inputs properly
 
@@ -269,7 +264,7 @@ starts typing in the element.
 <input type="text" placeholder="MM-YYYY" ...>
 {% endhighlight %}
 
-{% include shared/remember.liquid title="Remember" list=page.remember.use-placeholders %}
+{% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
 
 ### Use metadata to enable auto-complete
 
@@ -433,7 +428,7 @@ The `autocomplete` attributes can be accompanied with a section name, such as **
   </tbody>
 </table>
 
-{% include shared/remember.liquid title="Remember" list=page.remember.recommend-input %}
+{% include shared/remember.liquid title="Remember" list=page.notes.recommend-input %}
 
 ### The `autofocus` attribute
 
