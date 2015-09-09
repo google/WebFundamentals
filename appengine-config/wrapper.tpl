@@ -12,8 +12,8 @@
     {% endautoescape %}
 
 
-    <script src="/web/scripts/third_party/mdl/mdlComponentHandler.js"></script>
-    <script src="/web/scripts/third_party/mdl/layout/layout.js"></script>
+    <script src="/web/scripts/material-design-lite/src/mdlComponentHandler.js"></script>
+    <script src="/web/scripts/material-design-lite/src/layout/layout.js"></script>
     <script src="/web/scripts/standard-page-controller.es6.js"></script>
 
     {% comment %}

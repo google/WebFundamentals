@@ -5,7 +5,8 @@ require('gulp-watch');
 
 gulp.task('dev-watch-tasks', function() {
   try {
-    gulp.watch([GLOBAL.WF.src.styles + '/**/*.scss'], ['generate-dev-css']);
+    gulp.watch([GLOBAL.WF.src.styles + '/**/*.scss',
+      GLOBAL.WF.src.thirdParty + '/**/*.scss'], ['generate-dev-css']);
     gulp.watch([GLOBAL.WF.src.scripts + '/**/*.js'], ['cp-scripts']);
     gulp.watch([GLOBAL.WF.src.imgs + '/**/*'], ['cp-images']);
     gulp.watch([GLOBAL.WF.gae + '/**/*'], ['copy-appengine-config']);

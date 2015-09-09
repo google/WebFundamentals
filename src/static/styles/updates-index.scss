@@ -1,4 +1,4 @@
-@import "third_party/mdl/color-definitions";
+@import "../third_party/material-design-lite/src/color-definitions";
 
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
@@ -6,13 +6,13 @@ $color-primary: $palette-pink-500;
 //$color-primary-dark: $palette-indigo-700 !default;
 $color-accent: unquote("rgb(#{$palette-pink-400})");
 
-@import "third_party/mdl/mixins";
-@import "third_party/mdl/variables";
-@import "third_party/mdl/resets/resets";
-@import "third_party/mdl/typography/typography";
-@import "third_party/mdl/layout/layout";
-@import "third_party/mdl/grid/grid";
-@import "third_party/mdl/button/button";
+@import "../third_party/material-design-lite/src/mixins";
+@import "../third_party/material-design-lite/src/variables";
+@import "../third_party/material-design-lite/src/resets/resets";
+@import "../third_party/material-design-lite/src/typography/typography";
+@import "../third_party/material-design-lite/src/layout/layout";
+@import "../third_party/material-design-lite/src/grid/grid";
+@import "../third_party/material-design-lite/src/button/button";
 @import "partials/google-fonts";
 @import "partials/debug";
 @import "partials/base";

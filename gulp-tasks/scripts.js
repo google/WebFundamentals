@@ -24,7 +24,7 @@ gulp.task('cp-scripts', function(cb) {
 
 // This task moves content into the jekyll directory
 gulp.task('cp-third-party-style-scripts', function() {
-  return gulp.src([GLOBAL.WF.src.scripts + '/third_party/**/*.js'])
+  return gulp.src([GLOBAL.WF.src.thirdParty + '/**/*.js'])
     .pipe(plugins.copy(GLOBAL.WF.build.scripts, {prefix: 3}));
 });
 
