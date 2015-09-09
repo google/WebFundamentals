@@ -2,24 +2,19 @@
 layout: shared/plain
 title: "Animations and performance"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: animations-and-performance
-collection: design-and-ui
-article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-22
+written_on: 2014-08-08
+updated_on: 2014-10-22
 authors:
   - paullewis
   - samthorogood
-priority: 0
+translation_priority: 0
 key-takeaways:
   code:
     - "Take care that your animations don’t cause performance issues; ensure you know the impact of animating a given CSS property."
     - "Animating properties that change the geometry of the page (layout) or cause painting are particularly expensive."
     - "Where you can, stick to changing transforms and opacity."
     - "Use <code>will-change</code> to ensure that the browser knows what you plan to animate."
-related:
+related-guides:
   blocking-css:
   -
       title: "Render Blocking CSS"
@@ -46,7 +41,7 @@ Where you can, you should avoid animating properties that trigger layout or pain
 
 For a full list of the work triggered by individual CSS properties can be found at [CSS Triggers](http://csstriggers.com), and you can find a full guide on creating [High Performance Animations on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
-{% include shared/related_guides.liquid inline=true list=page.related.blocking-css %}
+{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
 
 ### Using the will-change property
 

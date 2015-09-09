@@ -2,17 +2,11 @@
 layout: shared/plain
 title: "Responsive Web Design Fundamentals"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-article:
-  written_on: 2014-04-30
-  updated_on: 2014-10-29
-  order: 1
-priority: 0
+written_on: 2014-04-30
+updated_on: 2014-10-29
+translation_priority: 0
 authors:
   - petelepage
-id: responsive-fundamentals
-collection: responsive
 key-takeaways:
   choose-breakpoints:
     - "Create breakpoints based on content, never on specific devices, products or brands."
@@ -31,7 +25,7 @@ key-takeaways:
     - "Media queries can be used to apply styles based on device characteristics."
     - "Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience."
     - "Use relative sizes for elements to avoid breaking layout."
-remember:
+notes:
   use-commas:
     - "Use a comma to separate attributes to ensure older browsers can properly parse the attributes."
 ---
@@ -95,7 +89,7 @@ mode, and zoom rather than reflow to fill the screen. Adding the attribute
 pixels and device independent pixels regardless of device orientation, and
 allows the page to take advantage of the full landscape width.
 
-{% include shared/remember.liquid list=page.remember.use-commas %}
+{% include shared/remember.liquid list=page.notes.use-commas %}
 
 ### Ensure an accessible viewport
 

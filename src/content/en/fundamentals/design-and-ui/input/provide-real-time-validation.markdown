@@ -2,14 +2,9 @@
 layout: shared/plain
 title: "Provide real time feedback"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: userinput-realtime-validation
-collection: design-and-ui
-article:
-  written_on: 2014-04-30
-  updated_on: 2014-10-21
-priority: 0
+written_on: 2014-04-30
+updated_on: 2014-10-21
+translation_priority: 0
 authors:
   - petelepage
 key-takeaways:
@@ -17,7 +12,7 @@ key-takeaways:
     - "Leverage the browser's built-in validation attributes like <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc."
     - "Use JavaScript and the Constraints Validation API for more complex validation requirements."
     - "Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix."
-remember:
+notes:
   provide-real-time-validation:
     - "Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data."
   show-all-errors:
@@ -265,4 +260,4 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 {% include_code src=_code/order.html snippet=initinputs lang=javascript %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
+{% include shared/remember.liquid title="Important" list=page.notes.show-all-errors %}

@@ -2,24 +2,18 @@
 layout: shared/plain
 title: "Optimizing for search"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: discovery-and-distribution-search
-collection: fundamentals
-article:
-  written_on: 2014-12-15
-  updated_on: 2014-12-15
-priority: 0
+written_on: 2014-12-15
+updated_on: 2014-12-15
+translation_priority: 0
 authors:
   - agektmr
 key-takeaways:
   - "No <code>robots.txt</code>, no robots meta tags required for fully accessible pages"
   - "Use <code>noindex</code> for pages you want to limit access to those who know the URL"
   - "Use relevant authentication mechanism for pages you want to keep private"
-remember:
+notes:
   crawlers:
     - "Many people confuses crawling and indexing. Prohibiting crawling doesn't mean the page won't show up in the search results. For example, when a third party website has a link to one of your webpages which is blocked from crawling, the page may still be listed in search results (In that case, the result won't have detailed description)."
-notes:
   robots:
     - "You can absolutely do without robots.txt if no crawling control is required. Just keep in mind not to return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details."
   x-robots-tag:
@@ -70,7 +64,7 @@ discovering new pages by following links.
 information to their database so it will be ready to be served as a search 
 result.  
 
-{% include shared/remember.liquid title="Remember" list=page.remember.crawlers %}
+{% include shared/remember.liquid title="Remember" list=page.notes.crawlers %}
 
 ## Control search bots' crawling
 

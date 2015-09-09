@@ -1,27 +1,23 @@
 ---
 layout: shared/plain
 title: "Set Up Web Starter Kit"
-description: "If you are new to Web Starter Kit, then this guide is for you.
-  It steps through how to get up and running with Web Starter Kit as quickly
-  as possible."
-introduction: "Web Starter Kit relies on NodeJS, NPM, & Sass to work, once
-  you've got these on your machine, you'll have everything you need to start
-  using Web Starter Kit in your projects."
+description: "If you are new to Web Starter Kit, then this guide is for you. It steps through how to get up and running with Web Starter Kit as quickly as possible."
+introduction: ""
 notes:
-  nosudo: If you see permission or access errors such as <code>EPERM</code>
-    or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around.
-    Consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this page</a> for a more robust solution.
-
+  nosudo: 
+    - "If you see permission or access errors such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. Consult <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>this page</a> for a more robust solution."
 written_on: 2014-04-17
 updated_on: 2015-04-01
-order: 1
-
 translation_priority: 1
-
 authors:
   - mattgaunt
-key-takeaways:
 ---
+
+<p class="intro">
+  Web Starter Kit relies on NodeJS, NPM, & Sass to work, once you've got these 
+  on your machine, you'll have everything you need to start using Web Starter 
+  Kit in your projects.
+</p>
 
 {% include shared/toc.liquid %}
 

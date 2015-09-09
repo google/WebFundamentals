@@ -2,22 +2,17 @@
 layout: shared/plain
 title: "Simplifying checkout with requestAutocomplete"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: userinput-request-autocomplete
-collection: design-and-ui
-article:
-  written_on: 2014-04-30
-  updated_on: 2014-10-21
+written_on: 2014-04-30
+updated_on: 2014-10-21
 authors:
   - petelepage
-priority: 0
+translation_priority: 0
 key-takeaways:
   use-request-auto-complete:
     - "<code>requestAutocomplete</code> can greatly simplify the checkout process and improve the user experience."
     - "If <code>requestAutocomplete</code> is available, hide the checkout form and move people directly to the confirmation page."
     - "Ensure input fields include the appropriate autocomplete attribute."
-remember:
+notes:
   request-auto-complete-flow:
     - "If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure."
 ---
@@ -69,4 +64,4 @@ it was unable to complete the form.  If it completed successfully and the form
 validates to your needs, simply submit the form and proceed to the final
 confirmation.
 
-{% include shared/remember.liquid title="Remember" list=page.remember.request-auto-complete-flow %}
+{% include shared/remember.liquid title="Remember" list=page.notes.request-auto-complete-flow %}
