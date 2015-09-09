@@ -1,46 +1,5 @@
-{% comment %}
-  Content Navigation is the nav for the current position in the site structure.
-{% endcomment %}
-
 {% if page.contentnav %}
-<ul class="wf-main-nav__list wf-nav__list clear">
-  {% for contentnavTocItem in page.contentnav.toc %}
-    <li class="wf-main-nav__item">
-      {% if contentnavTocItem.home %}
-      <a class="wf-main-nav__link" href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
-        <strong>{{ contentnavTocItem.title }}</strong>
-      </a>
-      {% else %}
-      <a class="wf-main-nav__sub-link" href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
-        {{ contentnavTocItem.title }}
-      </a>
-      {% endif %}
-
-      {% if contentnavTocItem.hasSubNav == true and contentnavTocItem.isInCurrentSection == true %}
-      <ul class="wf-sub-nav__list wf-nav__list clear">
-        {% for subsection in contentnavTocItem.section  %}
-        <li class="wf-sub-nav__item">
-          <a class="wf-sub-nav__sub-link" href="{{ subsection.path }}" title="Go to {{ subsection.strippedTitle }}">
-            {{ subsection.title }}
-          </a>
-          {% if subsection.hasSubNav == true and subsection.isInCurrentSection == true %}
-            <ul class="wf-sub-nav__list wf-nav__list clear">
-            {% for page in subsection.section %}
-            <li class="wf-sub-nav__item">
-              <a class="wf-sub-nav__sub-link" href="{{ page.path }}" title="Go to {{ x.strippedTitle }}">
-                {{ page.title }}
-              </a>
-            </li>
-            {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+  {% include shared/table-of-contents.liquid toc=page.contentnav.toc %}
 {% endif %}
 
 
@@ -50,7 +9,7 @@
   i.e. Fundamentals, Shows, Showcases, Tools
 {% endcomment %}
 
-<ul class="wf-secondary-nav__list wf-nav__list">
+<ul class="wf-main-nav__list-level-1 wf-nav__list">
   {% for rootNavTocItem in page.rootnav.toc %}
   {% if rootNavTocItem.isInCurrentSection == true %}
     {% continue %}
