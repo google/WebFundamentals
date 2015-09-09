@@ -89,7 +89,7 @@ All step options are represented through clickable icons ![Breakpoints button ba
 
 Use **step into** as your typical "one line at a time" action, as it ensures that only one statement gets executed, no matter what functions you step in and out of.
 
-**Pause on exceptions** is useful when you suspect a non-fatal exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs. 
+[Pause on exceptions](add-breakpoints#break-on-uncaught-exception) is useful when you suspect a non-fatal exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs. 
 
 ## The call stack
 
