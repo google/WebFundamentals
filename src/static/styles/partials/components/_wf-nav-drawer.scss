@@ -38,6 +38,10 @@ $horizontal-padding: $base-line;
 
 .wf-main-nav__list-level-1 .wf-main-nav__item {
   padding: $vertical-padding $horizontal-padding;
+}
+
+.wf-main-nav__list-level-1 > .wf-main-nav__item > .wf-main-nav__link,
+.wf-main-nav__list-level-3 > .wf-main-nav__item > .wf-main-nav__link {
   color: $text-color-primary;
 }
 
@@ -47,13 +51,8 @@ $horizontal-padding: $base-line;
 
 .wf-main-nav__list-level-3 .wf-main-nav__item {
   padding: $vertical-padding $vertical-padding;
-  color: $text-color-primary;
 }
 
 .wf-main-nav__link {
   text-decoration: none;
-}
-
-.wf-main-nav__link-bold {
-  font-weight: bold;
 }
