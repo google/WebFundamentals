@@ -17,7 +17,7 @@ notes:
     - "Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data."
   show-all-errors:
     - "You should show the user all of the issues on the form at once, rather than showing them one at a time."
-shortlinks: 
+comments: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple17b
 ---
