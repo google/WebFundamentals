@@ -2,17 +2,13 @@
 layout: shared/plain
 title: "Critical Rendering Path"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-article:
-  written_on: 2014-04-01
-  updated_on: 2014-04-28
+written_on: 2014-04-01
+updated_on: 2014-04-28
+pageNav:
   next:
     title: "Constructing the Object Model"
     href: fundamentals/performance/critical-rendering-path/constructing-the-object-model
-id: performance-critical-rendering-path
-collection: performance
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 udacity:
