@@ -1,21 +1,17 @@
 ---
 layout: shared/plain
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
 title: "Constructing the Object Model"
-article:
-  written_on: 2014-04-01
-  updated_on: 2014-09-12
-  order: 1
+written_on: 2014-04-01
+updated_on: 2014-09-12
+pageNav:
   next:
     title: "Render-tree Construction, Layout, and Paint"
     href: fundamentals/performance/critical-rendering-path/render-tree-construction
   previous:
     title: "Critical Rendering Path"
     href: fundamentals/performance/critical-rendering-path/
-collection: critical-rendering-path
-priority: 0
+translation_priority: 0
 authors:
   - ilyagrigorik
 key-takeaways:

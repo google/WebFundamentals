@@ -2,14 +2,9 @@
 layout: shared/plain
 title: "Encrypt data in transit"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: security-encrypt-data-in-transit
-collection: design-and-ui
-article:
-  written_on: 2015-03-27
-  updated_on: 2015-03-27
-priority: 0
+written_on: 2015-03-27
+updated_on: 2015-03-27
+translation_priority: 0
 authors:
   - chrispalmer
   - mattgaunt
