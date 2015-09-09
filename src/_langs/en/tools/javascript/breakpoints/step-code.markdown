@@ -89,7 +89,9 @@ All step options are represented through clickable icons ![Breakpoints button ba
 
 Use **step into** as your typical "one line at a time" action, as it ensures that only one statement gets executed, no matter what functions you step in and out of.
 
-[Pause on exceptions](add-breakpoints#break-on-uncaught-exception) is useful when you suspect a non-fatal exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs. 
+Use [Pause on exceptions](add-breakpoints#break-on-uncaught-exception) when you suspect an uncaught exception is causing a problem, 
+but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; 
+in this case, execution is paused only when a specifically-handled exception occurs. 
 
 ## The call stack
 
@@ -110,11 +112,10 @@ of your asynchronous function calls.
 
 The video below contains a simple script to demonstrate the async call 
 stack feature. In the script, a third-party library is used to select a
-DOM element, and a function called `onClick` is registered as the 
+DOM element. A function called `onClick` is registered as the 
 `onclick` event handler for the element. Whenever `onClick` is called,
 it in turn calls a function named `f`, which just forces the script to 
-pause via the `debugger` keyword. This is just a toy example. Watch
-the video below and read on to see the async call stack feature in action.
+pause via the `debugger` keyword. 
 
 {% animation animations/async-call-stack-demo.mp4 %}
 
@@ -168,7 +169,7 @@ To blackbox a file:
 
 1. Select **Blackbox Script**.
 
-In the animation below, a breakpoint is triggered. DevTools populates
+In the animation below, a button is clicked and a breakpoint is triggered. DevTools populates
 the call stack with the functions leading up to the breakpoint. The call stack
 displays a couple of third-party functions. A third-party script is then blackboxed,
 and the third-party functions are automatically hidden from the call stack.
