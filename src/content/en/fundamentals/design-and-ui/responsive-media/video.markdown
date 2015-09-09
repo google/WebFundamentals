@@ -2,14 +2,9 @@
 layout: shared/plain
 title: "Responsive Video"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: responsive-media-video
-collection: design-and-ui
-article:
-  written_on: 2014-04-16
-  updated_on: 2014-10-23
-priority: 0
+written_on: 2014-04-16
+updated_on: 2014-10-23
+translation_priority: 0
 authors:
   - samdutton
 key-takeaways:
@@ -22,7 +17,7 @@ key-takeaways:
     - "Produce video in multiple formats to cover a range of mobile platforms."
     - "Size videos correctly; ensure they don't overflow their containers."
     - "Accessibility matters; add the track element as a child of the video element."
-remember:
+notes:
   media-fragments:
     - "The Media Fragments API is supported on most platforms, but not on iOS."
     - "Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off."
@@ -121,7 +116,7 @@ You can also use the Media Fragments API to deliver multiple views on the same
 video &ndash; like cue points in a DVD &ndash; without having to encode and
 serve multiple files.
 
-{% include shared/remember.liquid title="Remember" list=page.remember.media-fragments %}
+{% include shared/remember.liquid title="Remember" list=page.notes.media-fragments %}
 
 Using your browser developer tools,
 check for `Accept-Ranges: bytes` in the response headers:
@@ -387,7 +382,7 @@ Use [CSS media queries](../../layouts/rwd-fundamentals/#use-css-media-queries-fo
 For media content in iframes (such as YouTube videos), try a responsive
 approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
-{% include shared/remember.liquid title="Remember" list=page.remember.dont-overflow %}
+{% include shared/remember.liquid title="Remember" list=page.notes.dont-overflow %}
 
 **CSS:**
 
@@ -411,7 +406,7 @@ delivering to users. Provide at least a base experience for all users.
 To make media more accessible on mobile, include captions or descriptions
 using the track element.
 
-{% include shared/remember.liquid title="Remember" list=page.remember.accessibility-matters %}
+{% include shared/remember.liquid title="Remember" list=page.notes.accessibility-matters %}
 
 Using the track element, captions appear like this:
 

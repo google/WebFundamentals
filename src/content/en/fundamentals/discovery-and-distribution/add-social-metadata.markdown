@@ -2,14 +2,9 @@
 layout: shared/plain
 title: "Controlling appearance on social sites"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: discovery-and-distribution-social
-collection: fundamentals
-article:
-  written_on: 2014-10-08
-  updated_on: 2014-11-09
-priority: 0
+written_on: 2014-10-08
+updated_on: 2014-11-09
+translation_priority: 0
 authors:
   - agektmr
 key-takeaways:

@@ -2,16 +2,11 @@
 layout: shared/plain
 title: "Animating modal views"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: animations-modal-views
-collection: design-and-ui
-article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-22
+written_on: 2014-08-08
+updated_on: 2014-10-22
 authors:
   - paullewis
-priority: 0
+translation_priority: 0
 key-takeaways:
   code:
     - "Modal views should be used sparingly; users will get frustrated if you interrupt their experience unnecessarily."

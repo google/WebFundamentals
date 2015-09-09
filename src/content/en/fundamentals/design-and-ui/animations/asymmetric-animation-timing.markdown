@@ -2,16 +2,11 @@
 layout: shared/plain
 title: "Animating modal views"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: animations-asym-animation-timing
-collection: design-and-ui
-article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-21
+written_on: 2014-08-08
+updated_on: 2014-10-21
 authors:
   - paullewis
-priority: 0
+translation_priority: 0
 key-takeaways:
   code:
     - "Use asymmetric animation timing to add personality and contrast to your work."

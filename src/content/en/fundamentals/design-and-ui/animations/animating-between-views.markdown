@@ -2,16 +2,11 @@
 layout: shared/plain
 title: "Animating between views"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
-id: animations-between-views
-collection: design-and-ui
-article:
-  written_on: 2014-08-08
-  updated_on: 2014-10-22
+written_on: 2014-08-08
+updated_on: 2014-10-22
 authors:
   - paullewis
-priority: 0
+translation_priority: 0
 key-takeaways:
   code:
     - "Use translations to move between views; avoid using <code>left</code>, <code>top</code> or any other property that triggers layout."

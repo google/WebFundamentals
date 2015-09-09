@@ -2,17 +2,11 @@
 layout: shared/plain
 title: "Responsive Web Design Patterns"
 description: "TODO"
-introduction: "TODO"
-snippet: "TODO"
 authors:
   - petelepage
-article:
-  written_on: 2014-04-30
-  updated_on: 2014-10-21
-  order: 2
-id: responsive-patterns
-priority: 1
-collection: multi-device-layouts
+written_on: 2014-04-30
+updated_on: 2014-10-21
+translation_priority: 1
 ---
 
 <p class="intro">
