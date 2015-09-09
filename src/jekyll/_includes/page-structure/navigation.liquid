@@ -23,8 +23,7 @@
           <a class="wf-sub-nav__sub-link" href="{{ subsection.path }}" title="Go to {{ subsection.strippedTitle }}">
             {{ subsection.title }}
           </a>
-          {% comment %}and subsection.isInCurrentSection == true{% endcomment %}
-          {% if subsection.hasSubNav == true %}
+          {% if subsection.hasSubNav == true and subsection.isInCurrentSection == true %}
             <ul class="wf-sub-nav__list wf-nav__list clear">
             {% for page in subsection.section %}
             <li class="wf-sub-nav__item">
