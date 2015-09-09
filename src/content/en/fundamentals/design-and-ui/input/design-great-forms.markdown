@@ -26,7 +26,7 @@ notes:
     - "Auto-complete only works when the form method is post."
   use-datalist:
     - "The <code>datalist</code> values are provided as suggestions, and users are not restricted to the suggestions provided."
-shortlinks: 
+comments: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple14
   - g.co/mobilesiteprinciple15
