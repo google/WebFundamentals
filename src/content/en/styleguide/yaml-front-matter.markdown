@@ -17,7 +17,7 @@ spot them.**
 
 This is *Unknown*
 
-## 'layout'
+## 'layout' (required)
 
 The layout is used by Jekyll to determine the file to use as the layout for the
 current page.
@@ -28,7 +28,7 @@ The layout files have to live in the `_layouts` directory.
 
     src/jekyll/_layouts
 
-## 'title'
+## 'title' (required)
 
 The title of the page is used in a few places.
 
@@ -40,7 +40,7 @@ isn't common
 
     title: "Development Phases"
 
-## 'description'
+## 'description' (optional)
 
 The description of the page is used in a few places.
 
@@ -56,7 +56,7 @@ that you **have** to
       development of a project. Web Starter Kit makes you more productive and
       simplifies a range of tasks for each phase."
 
-## 'translation_priority'
+## 'translation_priority' (optional)
 
 The translation priority is a number a represents how important the document
 is to get translated.
@@ -65,13 +65,13 @@ is to get translated.
 
     translation_priority: 0
 
-## 'written_on'
+## 'written_on' (required)
 
 Written on is the original date the document was written.
 
     written_on: 2015-07-21
 
-## 'updated_on'
+## 'updated_on' (required)
 
 This is the date of the last time the post was updated. This is useful
 for tracking whether a translation is up-to-date with the English doc.
@@ -79,7 +79,7 @@ for tracking whether a translation is up-to-date with the English doc.
 
     updated_on: 2015-07-21
 
-## 'authors'
+## 'authors' (required)
 
 Authors is the list of people who wrote the content / edited.
 
@@ -91,7 +91,7 @@ _contributors.yaml file.
 
     src/content/_contributors.yaml
 
-## 'translators'
+## 'translators' (optional)
 
 Translators defines the list of authors who have translated the original English
 markdown file.
@@ -104,7 +104,7 @@ _contributors.yaml file.
 
     src/content/_contributors.yaml
 
-## 'published'
+## 'published' (optional)
 
 This has to be a boolean.
 
@@ -113,7 +113,7 @@ want be linked to or included in any of the feeds.
 
     published: true
 
-## 'tags'
+## 'tags' (see below)
 
 Used in Updates **ONLY**.
 
@@ -135,6 +135,30 @@ in updates to define the URL of a blog post.
 ## 'introduction'
 
 This is *Unknown*
+
+## 'key-takeaways', 'notes', 'related-guides' (optional)
+
+Used in Web Fundamentals for generating 
+[key takeaways](/web/styleguide/useful-and-common-tags#takeaways), notes 
+(similar to take aways) and 
+[related guides](/web/styleguide/useful-and-common-tags#related-guides)
+sections.
+
+## 'pageNav' (optional)
+
+**NOTE:** This may change!
+
+Some sections are written with a particular reading order in mind. If this 
+is the case you may want to reference the next and previous page which you can 
+do with the `pageNav` variable.
+
+    pageNav:
+      previous:
+        title: "the article before this"
+        href: /path/to/file/you/previous
+      next:
+        title: "the article after this"
+        href: /path/to/file/you/next
 
 # How to Add Front Matter
 
