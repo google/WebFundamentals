@@ -27,26 +27,6 @@ notes:
   optimize:
     - "<a href='../images/'>Images</a>"
     - "<a href='../../performance/optimizing-content-efficiency/'>Optimizing content efficiency</a>"
-related-guides:
-  video:
-    -
-      title: "Add a video"
-      href: fundamentals/design-and-ui/media/video/add-a-video
-    -
-      title: "Provide alternatives for legacy platforms"
-      href: fundamentals/design-and-ui/media/video/provide-alternatives-for-legacy-platforms
-    -
-      title: "Customize the video player"
-      href: fundamentals/design-and-ui/media/video/customize-the-video-player
-    -
-      title: "Size videos correctly"
-      href: fundamentals/design-and-ui/media/video/size-videos-correctly
-    -
-      title: "Accessibility matters"
-      href: fundamentals/design-and-ui/media/video/accessibility-matters
-    -
-      title: "Quick Reference"
-      href: fundamentals/design-and-ui/media/video/quick-reference
 ---
 
 <p class="intro">
@@ -55,5 +35,5 @@ related-guides:
 
 {% ytvideo j5fYOYrsocs %}
 
-{% include shared/related_guides.liquid list=page.related-guides.video %}
+{% include fundamentals/section_toc.liquid %}
 

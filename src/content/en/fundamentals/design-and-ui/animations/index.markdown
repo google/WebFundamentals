@@ -13,56 +13,7 @@ key-takeaways:
     - Be careful which properties you animate; some are more expensive than others!
 authors:
   - paullewis
-related-guides:
-  animations:
-    -
-      title: "CSS vs JavaScript Animations"
-      href: fundamentals/design-and-ui/animations/css-vs-javascript
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "The Basics of Easing"
-      href: fundamentals/design-and-ui/animations/the-basics-of-easing
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "Custom Easing"
-      href: fundamentals/design-and-ui/animations/custom-easing
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "Animating Between Views"
-      href: fundamentals/design-and-ui/animations/animating-between-views
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "Choosing the Right Easing"
-      href: fundamentals/design-and-ui/animations/choosing-the-right-easing
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "Animating Modal Views"
-      href: fundamentals/design-and-ui/animations/animating-modal-views
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "Asymmetric Animation Timing"
-      href: fundamentals/design-and-ui/animations/asymmetric-animation-timing
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
-    -
-      title: "Animations and Performance"
-      href: fundamentals/design-and-ui/animations/animations-and-performance
-      section:
-        title: "Animations"
-        href: fundamentals/design-and-ui/animations/
+
 ---
 <p class="intro">
   Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?"
@@ -88,5 +39,5 @@ Some properties are more expensive to change than others, and are therefore more
 
 You can read more on the performance considerations of animations in the [Animations and Performance](animations-and-performance.html) guide, but if you want the TL;DR stick to transforms and opacity changes, and make use of `will-change`. If you want to know exactly which work is triggered by animating a given property check [CSS Triggers](http://csstriggers.com).
 
-{% include shared/related_guides.liquid list=page.related-guides.animations %}
+{% include fundamentals/section_toc.liquid %}
 

@@ -36,4 +36,4 @@ Open up the site in Chrome and you should see.
 
 <img src="images/image01.png" width="624" height="382" />
   
-{% include fundamentals/lessons_toc.liquid %}
+

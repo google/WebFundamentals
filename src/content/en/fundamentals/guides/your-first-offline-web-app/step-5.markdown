@@ -75,4 +75,4 @@ are on our way.
       for example).  It is unlikely that your pages for your site will live 
       there.
 
-{% include fundamentals/lessons_toc.liquid %}
+

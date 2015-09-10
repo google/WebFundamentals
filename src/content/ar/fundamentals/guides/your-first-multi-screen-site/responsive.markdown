@@ -312,4 +312,4 @@ order: 2
 4.  بعد أن تكون لديك تجربة الجوّال، يمكنك زيادة عرض الشاشة حتى لا تظهر على نحو سليم، ومن ثم يمكنك تعيين نقطة فصل.
 5.  واصل التجربة والتعديل.
 
-{% include fundamentals/lessons_toc.liquid %}
+{% include fundamentals/section_toc.liquid %}
