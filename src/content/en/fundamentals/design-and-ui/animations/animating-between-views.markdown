@@ -1,32 +1,29 @@
 ---
 layout: shared/plain
-title: "Animating between views"
-description: "TODO"
+title: "Animating Between Views"
+description: "Learn how to animate between two views in your apps."
 written_on: 2014-08-08
 updated_on: 2014-10-22
-authors:
-  - paullewis
+order: 5
 translation_priority: 0
 key-takeaways:
   code:
-    - "Use translations to move between views; avoid using <code>left</code>, <code>top</code> or any other property that triggers layout."
+    - "Use translations to move between views; avoid using `left`, `top` or any other property that triggers layout."
     - "Ensure any animations you use are snappy and the durations are kept short."
-    - "Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when used in a desktop context."
+    - "Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when  used in a desktop context."
 notes:
   sixtyfps:
     - "You should be aiming to maintain 60fps for all of your animations. That way your users will not experience stuttering animations that pull them out of their experience. Ensure that any animating element has will-change set for anything you plan to change well ahead of the animation starting. For view transitions, it’s highly likely you will want to use <code>will-change: transform</code>."
   flinging:
     - "Making this kind of hierarchy in a cross-browser way can be challenging. For example, iOS requires an additional CSS property, <code>-webkit-overflow-scrolling: touch</code>, to ‘reenable’ fling scrolling, but you don’t get to control which axis that’s for, as you can with the standard overflow property. Be sure to test your implementation across a range of devices!"
+
+authors:
+  - paullewis
 ---
 
 <p class="intro">
-  Many times you will want to move users between views in your application, 
-  whether that's a list to a details view, or show a sidebar navigation. 
-  Animations between these views are great for keeping the user engaged and add
-  even more life to your projects.
+  Many times you will want to move users between views in your application, whether that's a list to a details view, or show a sidebar navigation. Animations between these views are great for keeping the user engaged and add even more life to your projects.
 </p>
-
-{% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
@@ -141,3 +138,5 @@ In addition to transitioning between views this technique can also be applied to
 For a larger screen you should keep the list view around all the time rather than removing it, and slide on the details view from the right hand side. It’s pretty much the same as dealing with a navigation view.
 
 <img src="imgs/container-two-views-ls.svg" alt="View hierarchy on a large screen." />
+
+

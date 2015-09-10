@@ -1,9 +1,9 @@
 ---
-layout: shared/plain
-title: "Building for the multi-device web"
+layout: fundamentals/list-subdirectories
+title: "Responsive"
 description: "TODO"
-written_on: 2015-07-21
-updated_on: 2015-07-21
+written_on: 2015-09-09
+updated_on: 2015-09-09
 translation_priority: 0
 ---
 

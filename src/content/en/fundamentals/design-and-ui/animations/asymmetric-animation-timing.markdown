@@ -1,26 +1,24 @@
 ---
 layout: shared/plain
-title: "Animating modal views"
-description: "TODO"
+title: "Asymmetric Animation Timing"
+description: "Breaking symmetry provides contrast and appeal to your projects. Learn when and how to apply this to your projects."
 written_on: 2014-08-08
 updated_on: 2014-10-21
-authors:
-  - paullewis
+order: 8
 translation_priority: 0
 key-takeaways:
   code:
     - "Use asymmetric animation timing to add personality and contrast to your work."
     - "Always favor the user's interaction; use shorter durations when responding to taps or clicks, and reserve slower durations for times where you aren't."
+authors:
+  - paullewis
 ---
 
 <p class="intro">
-  Asymmetry to your animation durations aids your user experience by allowing 
-  you to express personality while at the same time responding quickly to user 
-  interactions. It also provides contrast to the feel, which makes the interface 
-  more visually appealing.
+  Asymmetry to your animation durations aids your user experience by allowing you to express personality while at the same time responding quickly to user interactions. It also provides contrast to the feel, which makes the interface more visually appealing.
 </p>
 
-{% include shared/toc.liquid %}
+{% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
 Like most "rules" of animation, you should play around to find out what works for your application, but when it comes to the user experience aspects, users are notoriously impatient. The rule of thumb is to **always respond to a user interaction quickly**. That said, most of the time the user's action is asymmetric, and therefore so can the animation be.
 
@@ -32,3 +30,5 @@ The general rule of thumb, then, is:
 
 * For UI animations triggered by a user’s interaction, such as view transitions or showing an element, have a fast intro (short duration), but a slow outro (longer duration).
 * For UI animations triggered by your code, such as errors or modal views, have a slower intro (longer duration), but a fast outro (short duration).
+
+
