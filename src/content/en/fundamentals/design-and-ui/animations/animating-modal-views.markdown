@@ -1,11 +1,10 @@
 ---
 layout: shared/plain
-title: "Animating modal views"
-description: "TODO"
+title: "Animating Modal Views"
+description: "Learn how to animate modal views in your apps."
 written_on: 2014-08-08
-updated_on: 2014-10-22
-authors:
-  - paullewis
+updated_on: 2014-10-21
+order: 6
 translation_priority: 0
 key-takeaways:
   code:
@@ -14,18 +13,18 @@ key-takeaways:
     - "Be sure to get rid of the modal view quickly when the user dismisses it, but you should bring it on to screen a little more slowly so it doesn't surprise the user."
 notes:
   pointerevents:
-    - "Older versions of Internet Explorer don’t support the <code>pointer-event</code> property, so for those browsers you will have to manually toggle the display property. The downside there is that it takes a frame for the change to “take hold,” so you must then use a requestAnimationFrame callback to start the animation. If you don’t wait a frame then the modal overlay will simply appear."
+    - "Older versions of Internet Explorer don’t support the <code>pointer-event</code> property, so for those browsers you will have to manually toggle the display property. The downside there is that it takes a frame for the change to “take hold,” so you must then use a <code>requestAnimationFrame</code> callback to start the animation. If you don’t wait a frame then the modal overlay will simply appear."
+
+authors:
+  - paullewis
 ---
 
 <p class="intro">
-  Modal views are for important messages, and for which you have very good 
-  reasons to block the user interface. Care must be taken when you use them as 
-  they are disruptive and can easily ruin the user’s experience if overused. 
-  But, in some circumstances, they’re the right views to use, and adding some 
-  animation will bring them to life.
+Modal views are for important messages, and for which you have very good reasons to block the user interface. Care must be taken when you use them as they are disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life."
+
 </p>
 
-{% include shared/toc.liquid %}
+{% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
 <img src="imgs/gifs/dont-press.gif" alt="Animating a modal view." />
 
@@ -106,3 +105,6 @@ The duration is pretty short, though, but it's ideal for when the user dismisses
 {% endhighlight %}
 
 Now the modal view takes 0.3s seconds to come onto the screen, which is a bit less aggressive, but it is dismissed quickly, which the user will appreciate.
+
+
+

@@ -19,11 +19,6 @@ notes:
     - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   The CSSOM and DOM trees are combined into a render tree, which is then used 
   to compute the layout of each visible element and serves as an input to the 
