@@ -15,11 +15,6 @@ key-takeaways:
     - JavaScript blocks DOM construction unless explicitly declared as async.
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   JavaScript allows us to modify just about every aspect of the page: content, 
   styling, and its behavior to user interactions. However, JavaScript can also

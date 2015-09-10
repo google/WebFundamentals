@@ -66,11 +66,6 @@ related-guides:
         href: fundamentals/performance/critical-rendering-path/
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   Optimizing the critical rendering path is critical for improving performance 
   of our pages: our goal is to prioritize and display the content that relates

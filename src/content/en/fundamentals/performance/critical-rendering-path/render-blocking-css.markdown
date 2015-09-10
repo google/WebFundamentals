@@ -23,11 +23,6 @@ key-takeaways:
     - "All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser."
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   By default CSS is treated as a render blocking resource, which means that the
   browser will hold rendering of any processed content until the CSSOM is

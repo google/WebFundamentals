@@ -1,12 +1,10 @@
 ---
 layout: shared/plain
-title: "Animations and performance"
-description: "TODO"
+title: "Animations and Performance"
+description: "Animations must perform well, otherwise they will negatively impact the user experience."
 written_on: 2014-08-08
-updated_on: 2014-10-22
-authors:
-  - paullewis
-  - samthorogood
+updated_on: 2015-08-26
+order: 9
 translation_priority: 0
 key-takeaways:
   code:
@@ -14,6 +12,9 @@ key-takeaways:
     - "Animating properties that change the geometry of the page (layout) or cause painting are particularly expensive."
     - "Where you can, stick to changing transforms and opacity."
     - "Use <code>will-change</code> to ensure that the browser knows what you plan to animate."
+authors:
+  - paullewis
+  - samthorogood
 related-guides:
   blocking-css:
   -
@@ -26,14 +27,10 @@ related-guides:
 ---
 
 <p class="intro">
-  Care must be taken to maintain 60fps whenever you are animating, because any 
-  stutters or stalls will be noticeable to your users and negatively impact 
-  their experiences.
+  Care must be taken to maintain 60fps whenever you are animating, because any stutters or stalls will be noticeable to your users and negatively impact their experiences.
 </p>
 
-{% include shared/toc.liquid %}
-
-## Avoid triggering layout or paint
+{% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
 Animating properties is not free, and some properties are cheaper to animate than others. For example, animating the `width` and `height` of an element changes its geometry and may cause other elements on the page to move or change size. This process is called layout (or reflow in Gecko-based browsers like Firefox), and can be expensive if your page has a lot of elements. Whenever layout is triggered, the page or part of it will normally need to be painted, which is typically even more expensive than the layout operation itself.
 
@@ -68,3 +65,5 @@ There are many pages and comments threads around the web that discuss the relati
 * If any animation triggers paint, layout, or both, the "main thread" will be required to do work. This is true for both CSS- and JavaScript-based animations, and the overhead of layout or paint will likely dwarf any work associated with CSS or JavaScript execution, rendering the question moot.
 
 If you want to know exactly which work is triggered by animating a given property check [CSS Triggers](http://csstriggers.com) for more details.
+
+
