@@ -8,23 +8,6 @@ order: 1
 authors:
   - petelepage
 translation_priority: 0
-related-guides:
-  forms:
-    -
-      title: "Design efficient forms"
-      href: fundamentals/design-and-ui/input/forms/design-efficient-forms
-    -
-      title: "Choose the best input type"
-      href: fundamentals/design-and-ui/input/forms/choose-the-best-input-type
-    -
-      title: "Label and name inputs properly"
-      href: fundamentals/design-and-ui/input/forms/label-and-name-inputs
-    -
-      title: "Provide real-time validation"
-      href: fundamentals/design-and-ui/input/forms/provide-real-time-validation
-    -
-      title: "Simplify checkout with requestAutocomplete API"
-      href: fundamentals/design-and-ui/input/forms/use-request-auto-complete
 ---
 
 <p class="intro">
@@ -35,4 +18,4 @@ For an overview of these guides on creating amazing forms, check out the video b
 
 {% ytvideo iYYHRwLqrKM %}
 
-{% include shared/related_guides.liquid list=page.related-guides.forms %}
+{% include fundamentals/section_toc.liquid %}

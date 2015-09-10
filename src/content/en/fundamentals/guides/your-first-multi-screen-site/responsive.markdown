@@ -384,4 +384,3 @@ If you follow these guidelines, you will be off to a good start:
    until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
 
-{% include fundamentals/lessons_toc.liquid %}

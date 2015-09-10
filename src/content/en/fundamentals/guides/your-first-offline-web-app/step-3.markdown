@@ -27,4 +27,4 @@ with service worker.
 We are now going to remove all offline support and you are going to learn how to 
 use Service Worker offline by adding it back into this application.
 
-{% include fundamentals/lessons_toc.liquid %}
+

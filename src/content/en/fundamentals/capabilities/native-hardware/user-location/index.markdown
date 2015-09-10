@@ -8,17 +8,6 @@ order: 2
 translation_priority: 1
 authors:
   - paulkinlan
-related-guides:
-  loc:
-    -
-      title: "Obtain the user's current location"
-      href: fundamentals/capabilities/native-hardware/user-location/obtain-location
-    -
-      title: "Monitor the user's location"
-      href: fundamentals/capabilities/native-hardware/user-location/monitor-location
-    -
-      title: "Getting the user to consent to location sharing"
-      href: fundamentals/capabilities/native-hardware/user-location/user-consent
 ---
 
 <p class="intro">
@@ -30,4 +19,4 @@ they move around, always with the user's consent (and only whilst the page is op
 
 There are a lot of things that you need to be aware of when using using the Geolocation API and this guide will walk you through the common use-cases and solutions.
 
-{% include shared/related_guides.liquid list=page.related-guides.loc %}
+{% include fundamentals/section_toc.liquid %}

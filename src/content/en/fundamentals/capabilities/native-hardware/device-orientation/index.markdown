@@ -11,14 +11,6 @@ translation_priority: 1
 notes:
   not-stable:
     - "Use <b>extreme</b> caution when deciding to use device motion or device orientation events.  Unfortunately not all browsers use the same coordinate system, and may report different values under identical situations."
-related-guides:
-  devorient:
-    -
-      title: "Device motion"
-      href: fundamentals/capabilities/native-hardware/device-orientation/dev-motion
-    -
-      title: "Device orientation"
-      href: fundamentals/capabilities/native-hardware/device-orientation/dev-orientation
 ---
 <p class="intro">
   Device motion and orientation events provide access to the built in accelerometer, gyroscope and compass in mobile devices.
@@ -108,4 +100,4 @@ frame and the Earth coordinate frame.
   </div>
 </div>
 
-{% include shared/related_guides.liquid list=page.related-guides.devorient %}
+{% include fundamentals/section_toc.liquid %}

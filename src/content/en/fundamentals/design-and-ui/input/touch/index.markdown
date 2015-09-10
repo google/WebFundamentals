@@ -7,14 +7,6 @@ updated_on: 2014-01-06
 order: 2
 authors:
   - mattgaunt
-related-guides:
-  touch:
-    -
-      title: "Stateful Elements Respond to Touch"
-      href: fundamentals/design-and-ui/input/touch/active-states
-    -
-      title: "Implement Custom Gestures"
-      href: fundamentals/design-and-ui/input/touch/touch-events
 ---
 
 <p class="intro">
@@ -28,4 +20,4 @@ This video gives you a brief overview of both these guides.
 
 {% ytvideo Rwc4fHUnGuU %}
 
-{% include shared/related_guides.liquid list=page.related-guides.touch %}
+{% include fundamentals/section_toc.liquid %}

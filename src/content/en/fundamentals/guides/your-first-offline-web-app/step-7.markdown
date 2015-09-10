@@ -90,4 +90,4 @@ This is the simplest case, there are many other caching scenarios.  For example,
 you could incrementally cache all responses for previously uncached requests, so 
 in the future they are all returned from the cache. 
 
-{% include fundamentals/lessons_toc.liquid %}
+

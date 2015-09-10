@@ -176,4 +176,3 @@ as you'd expect. The `gulp serve:dist` command builds a production version of yo
 starts a server, and opens a browser for you. This **doesn’t have Live Reload or
 Browser Sync**, but it’s a reliable way of testing your site before deploying it.
 
-{% include fundamentals/lessons_toc.liquid %}

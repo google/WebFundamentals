@@ -7,38 +7,6 @@ order: 0
 translation_priority: 0
 authors:
   - ilyagrigorik
-related-guides:
-  oce:
-    -
-      title: "Eliminating unnecessary downloads"
-      href: fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
-      section:
-        title: "Optimizing Content Efficiency"
-        href: fundamentals/performance/optimizing-content-efficiency/
-    -
-      title: "Optimizing encoding and transfer size of text-based assets"
-      href: fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
-      section:
-        title: "Optimizing content efficiency"
-        href: fundamentals/performance/optimizing-content-efficiency/
-    -
-      title: "Image optimization"
-      href: fundamentals/performance/optimizing-content-efficiency/image-optimization
-      section:
-        title: "Optimizing Content Efficiency"
-        href: fundamentals/performance/optimizing-content-efficiency/
-    -
-      title: "Web font optimization"
-      href: fundamentals/performance/optimizing-content-efficiency/webfont-optimization
-      section:
-        title: "Optimizing Content Efficiency"
-        href: fundamentals/performance/optimizing-content-efficiency/
-    -
-      title: "HTTP caching"
-      href: fundamentals/performance/optimizing-content-efficiency/http-caching
-      section:
-        title: "Optimizing Content Efficiency"
-        href: fundamentals/performance/optimizing-content-efficiency/
 ---
 
 <p class="intro">
@@ -105,4 +73,4 @@ Unlike their desktop counterparts, web applications do not require a separate in
 
 Achieving an instant web experience in light of these requirements is no small feat, which is why optimizing content efficiency is critical: eliminating unnecessary downloads, optimizing transfer encoding of each resource through various compression techniques, and leveraging caching whenever possible to eliminate redundant downloads.
 
-{% include shared/related_guides.liquid list=page.related-guides.oce %}
+{% include fundamentals/section_toc.liquid %}

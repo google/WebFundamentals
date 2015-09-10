@@ -14,56 +14,6 @@ udacity:
   title: Website Performance Optimization
   description: "Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages."
   image: images/crp-udacity.png
-related-guides:
-  crp:
-    -
-      title: "Constructing the Object Model"
-      href: fundamentals/performance/critical-rendering-path/constructing-the-object-model
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "Render-tree Construction, Layout, and Paint"
-      href: fundamentals/performance/critical-rendering-path/render-tree-construction
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "Render Blocking CSS"
-      href: fundamentals/performance/critical-rendering-path/render-blocking-css
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "Adding Interactivity with JavaScript"
-      href: fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "Measuring the Critical Rendering Path with Navigation Timing"
-      href: fundamentals/performance/critical-rendering-path/measure-crp
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "Analyzing Critical Rendering Path Performance"
-      href: fundamentals/performance/critical-rendering-path/analyzing-crp
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "Optimizing the Critical Rendering Path"
-      href: fundamentals/performance/critical-rendering-path/optimize-crp
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
-    -
-      title: "PageSpeed Rules and Recommendations"
-      href: fundamentals/performance/critical-rendering-path/page-speed-rules-and-recomendations
-      section:
-        title: "Understanding the critical rendering path"
-        href: fundamentals/performance/critical-rendering-path/
 ---
 
 <p class="intro">
@@ -93,4 +43,4 @@ per second! However, let's not get ahead of ourselves just yet. First, let's
 take a quick, ground-up overview of how the browser goes about displaying a
 simple page.
 
-{% include shared/related_guides.liquid list=page.related-guides.crp %}
+{% include fundamentals/section_toc.liquid %}

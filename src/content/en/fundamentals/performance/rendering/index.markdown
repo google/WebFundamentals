@@ -15,44 +15,6 @@ notes:
     "Sometimes you may hear the term \"rasterize\" used in conjunction with paint. This is because painting is actually two tasks: 1) creating a list of draw calls, and 2) filling in the pixels.
 
     The latter is called \"rasterization\" and so whenever you see paint records in DevTools, you should think of it as including rasterization. (In some architectures creating the list of draw calls and rasterizing are done in different threads, but that isn't something under developer control.)"
-related-guides:
-  rendering:
-    -
-      title: "Optimize JavaScript Execution"
-      href: fundamentals/performance/rendering/optimize-javascript-execution
-      section:
-        title: "Rendering Performance"
-        href: fundamentals/performance/rendering/
-    -
-      title: "Reduce the scope and complexity of style calculations"
-      href: fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
-      section:
-        title: "Rendering Performance"
-        href: fundamentals/performance/rendering/
-    -
-      title: "Avoid large, complex layouts and layout thrashing"
-      href: fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
-      section:
-        title: "Rendering Performance"
-        href: fundamentals/performance/rendering/
-    -
-      title: "Simplify pain complexity and reduce pain areas"
-      href: fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
-      section:
-        title: "Rendering Performance"
-        href: fundamentals/performance/rendering/
-    -
-      title: "Stick to compositor only properties and manage layer count"
-      href: fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
-      section:
-        title: "Rendering Performance"
-        href: fundamentals/performance/rendering/
-    -
-      title: "Debouce your input handlers"
-      href: fundamentals/performance/rendering/debounce-your-input-handlers
-      section:
-        title: "Rendering Performance"
-        href: fundamentals/performance/rendering/
 udacity:
   id: ud860
   title: Browser Rendering Optimization
@@ -121,4 +83,4 @@ Performance is the art of avoiding work, and making any work you do as efficient
 
 Let’s take a dive into the different parts of the pipeline. We’ll take a look at the common issues, as well how to diagnose and fix them.
 
-{% include shared/related_guides.liquid list=page.related-guides.rendering %}
+{% include fundamentals/section_toc.liquid %}
