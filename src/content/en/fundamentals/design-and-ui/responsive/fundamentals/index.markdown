@@ -37,33 +37,8 @@ udacity:
   title: Responsive Web Design Fundamentals
   description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
   image: imgs/udacity-rwd.png
-related-guides:
-  rwdf:
-    -
-      title: "Set the viewport"
-      href: fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport
-      section:
-        title: "Responsive Web Design Fundamentals"
-        href: fundamentals/design-and-ui/responsive/fundamentals/
-    -
-      title: "Size content to the viewport"
-      href: fundamentals/design-and-ui/responsive/fundamentals/size-content-to-the-viewport
-      section:
-        title: "Responsive Web Design Fundamentals"
-        href: fundamentals/design-and-ui/responsive/fundamentals/
-    -
-      title: "Use CSS media queries for responsiveness"
-      href: fundamentals/design-and-ui/responsive/fundamentals/use-media-queries
-      section:
-        title: "Responsive Web Design Fundamentals"
-        href: fundamentals/design-and-ui/responsive/fundamentals/
-    -
-      title: "How to choose breakpoints"
-      href: fundamentals/design-and-ui/responsive/fundamentals/how-to-choose-breakpoints
-      section:
-        title: "Responsive Web Design Fundamentals"
-        href: fundamentals/design-and-ui/responsive/fundamentals/
 ---
+
 <p class="intro">
   The use of mobile devices to surf the web is growing at an astronomical pace, but unfortunately much of the web isn't optimized for those mobile devices. Mobile devices are often constrained by display size and require a different approach to how content is laid out on screen.
 </p>
@@ -91,4 +66,4 @@ the size and capabilities of the device.  For example, on a phone, users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
 
-{% include shared/related_guides.liquid list=page.related-guides.rwdf %}
+{% include fundamentals/section_toc.liquid %}

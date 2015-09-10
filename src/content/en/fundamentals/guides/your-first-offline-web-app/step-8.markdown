@@ -41,4 +41,4 @@ offline.
 * [Introduction to service 
   worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
   
-{% include fundamentals/lessons_toc.liquid %}
+

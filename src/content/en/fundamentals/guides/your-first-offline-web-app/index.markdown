@@ -42,4 +42,4 @@ experience is.
 * A text editor
 * Python or a simple local web server
 
-{% include fundamentals/lessons_toc.liquid %}
+{% include fundamentals/section_toc.liquid %}

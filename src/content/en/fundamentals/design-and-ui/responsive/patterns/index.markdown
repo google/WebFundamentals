@@ -8,23 +8,6 @@ written_on: 2014-04-30
 updated_on: 2014-10-21
 order: 2
 translation_priority: 1
-related-guides:
-  patterns:
-    -
-      title: "Mostly fluid"
-      href: fundamentals/design-and-ui/responsive/patterns/mostly-fluid
-    -
-      title: "Column drop"
-      href: fundamentals/design-and-ui/responsive/patterns/column-drop
-    -
-      title: "Layout shifter"
-      href: fundamentals/design-and-ui/responsive/patterns/layout-shifter
-    -
-      title: "Tiny tweaks"
-      href: fundamentals/design-and-ui/responsive/patterns/tiny-tweaks
-    -
-      title: "Off canvas"
-      href: fundamentals/design-and-ui/responsive/patterns/off-canvas
 ---
 
 <p class="intro">
@@ -49,5 +32,5 @@ were added when necessary.  The [flexbox layout mode is well
 supported](http://caniuse.com/#search=flexbox) for modern browsers, though may
 still require vendor prefixing for optimal support.
 
-{% include shared/related_guides.liquid list=page.related-guides.patterns %}
+{% include fundamentals/section_toc.liquid %}
 
