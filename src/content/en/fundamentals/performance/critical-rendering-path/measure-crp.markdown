@@ -14,11 +14,6 @@ key-takeaways:
     - Browser emits series of consumable events which capture various stages of the CRP.
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   You can't optimize what you can't measure. Thankfully, the Navigation 
   Timing API gives us all the necessary tools to measure each step of the 

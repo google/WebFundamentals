@@ -10,11 +10,6 @@ authors:
   - ilyagrigorik
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   PageSpeed Insights rules in context: what to pay attention to when optimizing
   the Critical Rendering Path and why.

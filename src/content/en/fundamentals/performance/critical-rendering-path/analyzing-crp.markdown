@@ -10,11 +10,6 @@ authors:
   - ilyagrigorik
 ---
 
-<div>
-  P: {{ page.previousPage.title }}<br>
-  N: {{ page.nextPage.title }}
-</div>
-
 <p class="intro">
   Identifying and resolving critical rendering path performance bottlenecks 
   requires good knowledge of the common pitfalls. Let's take a hands-on tour 
