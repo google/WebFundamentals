@@ -27,4 +27,4 @@ $ git clone https://github.com/GoogleChrome/airhorn.git
 
 This repository has one main folder "app".  This folder contains the static assets (html, css and javascript) that you will use for this project.
 
-{% include fundamentals/lessons_toc.liquid %}
+

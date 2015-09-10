@@ -14,4 +14,4 @@ Starter Kit and helps you make the most out of the tools it supplies.
 
 <img src="images/wsk-on-pixel-n5.png">
 
-{% include fundamentals/lessons_toc.liquid %}
+{% include fundamentals/section_toc.liquid %}

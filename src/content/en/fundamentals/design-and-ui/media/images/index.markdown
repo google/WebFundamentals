@@ -13,23 +13,6 @@ udacity:
   title: Responsive Images
   description: "Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow."
   image: img/udacity-ri.jpg
-related-guides:
-  images:
-    -
-      title: "Images in Markup"
-      href: fundamentals/design-and-ui/media/images/images-in-markup
-    -
-      title: "Images in CSS"
-      href: fundamentals/design-and-ui/media/images/images-in-css
-    -
-      title: "Use SVG for icons"
-      href: fundamentals/design-and-ui/media/images/use-icons
-    -
-      title: "Optimize images for performance"
-      href: fundamentals/design-and-ui/media/images/optimize-images-for-performance
-    -
-      title: "Avoid images completely"
-      href: fundamentals/design-and-ui/media/images/avoid-images-completely
 ---
 
 <p class="intro">
@@ -59,4 +42,4 @@ examples.
 {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 
-{% include shared/related_guides.liquid list=page.related-guides.images %}
+{% include fundamentals/section_toc.liquid %}

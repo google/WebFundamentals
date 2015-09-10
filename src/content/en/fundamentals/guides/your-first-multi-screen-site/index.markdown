@@ -29,4 +29,4 @@ simple steps:
 1.  Defining the information architecture (commonly known as IA) and structure of the page,
 2.  Adding design elements to make it responsive and look good across all devices.
 
-{% include fundamentals/lessons_toc.liquid %}
+{% include fundamentals/section_toc.liquid %}

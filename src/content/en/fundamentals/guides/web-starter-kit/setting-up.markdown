@@ -63,4 +63,3 @@ how things look, try running the local server by typing `gulp serve`.
 
 <img src="images/wsk-on-pixel-n5.png">
 
-{% include fundamentals/lessons_toc.liquid %}
