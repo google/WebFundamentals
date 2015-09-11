@@ -10,7 +10,7 @@ authors:
 written_on: 2015-07-09
 updated_on: 2015-07-31
 order: 3
-takeaways:
+key-takeaways:
   - "Don't manually copy changes to local files. Use workspaces to persist changes made in DevTools to your local resources."
   - "Stage your local files to your browser. Map files to URLs."
   - "Once persistent workspaces are set-up, style changes made in the Elements panel are persisted automatically; DOM changes aren't. Persist element changes in the Sources panel instead."
@@ -34,7 +34,7 @@ and view changes made to those files as if they were being served.
 
 {% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.takeaways %}
+{% include shared/takeaway.liquid list=page.key-takeaways %}
 
 ## Add local source files to workspace
 

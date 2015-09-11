@@ -178,7 +178,7 @@ module Jekyll
         # Check if the author is actually in the contributors list
         if author.nil?
           puts "WFPage.rb: Author '" + firstAuthor + "' isn't in the contributors list."
-          puts "WFPage.rb: Defined in: " + self.name
+          puts "WFPage.rb: Defined in: " + self.relative_path
           puts ""
         else
           author['id'] = firstAuthor

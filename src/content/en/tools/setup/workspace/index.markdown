@@ -6,6 +6,7 @@ description: "Set up your workspace to include a good editor, debugging, and bui
 written_on: 2015-04-14
 updated_on: 2015-04-14
 order: 1
+panel: sources
 ---
 
 <p class="intro">

@@ -9,6 +9,7 @@ order: 3
 authors:
   - josephmedley
 translation_priority: 0
+panel: console
 ---
 
 <p class="intro">
