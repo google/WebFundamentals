@@ -254,7 +254,7 @@ be done in two ways:
 - Enter `remove 01:23:45:67:89:01` in the Bluetooth Console where
   `01:23:45:67:89:01` is the Bluetooth address of the first device.
 
-I would recommend you check out the official [Bluetooth debug page](https://sites.google.com/a/chromium.org/dev/developers/how-tos/get-bluetooth-logs) as debugging Bluetooth can be hard sometimes. 
+I would recommend you check out the official [Bluetooth debug page](https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs) as debugging Bluetooth can be hard sometimes.
 
 ## What's next
 
