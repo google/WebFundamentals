@@ -22,11 +22,18 @@ function updateFile(filename) {
       // change the layout
       data = data.replace(/^layout: article\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: section\n/m, 'layout: shared/plain\n');
+      data = data.replace(/^layout: devtools\n/m, 'layout: shared/plain\n');
+      data = data.replace(/^layout: tools-article\n/m, 'layout: shared/plain\n');
+      data = data.replace(/^layout: tools-section\n/m, 'layout: shared/plain\n');
 
-      //remove: article, collection, id
+      //remove: class, article, collection, id, feedName, feedPath, seotitle
       data = data.replace(/^article:\n/m, '');
       data = data.replace(/^collection: .+?\n/m, '');
       data = data.replace(/^id: .+?\n/m, '');
+      data = data.replace(/^feedName:\s*.*\n/m, '');
+      data = data.replace(/^feedPath:\s*.*\n/m, '');
+      data = data.replace(/^class:\s*.*\n/m, '');
+      data = data.replace(/^seotitle:.*\n/m, '');
 
       // un-indent written_on, updated_on and order
       data = data.replace(/^\s{2}(written_on: \d{4}-\d{2}-\d{2}\n)/m, '$1');
@@ -75,6 +82,7 @@ function updateFile(filename) {
       if (result && result.length > 0) {
         var intro = result[0];
         intro = intro.replace(/^introduction:[\s'"]{0,2}/m, '');
+        intro = intro.replace('"\n', '');
         data = data.replace(/__XX_INTRO_XX__/m, '  ' + intro);
       }
       data = data.replace(reIntro, '');
