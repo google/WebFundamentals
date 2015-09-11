@@ -113,7 +113,7 @@ High DPI (HiDPI) screens produce beautiful results, but there is one obvious tra
 
 On the other hand, raster images pose a much larger challenge because they encode image data on a per-pixel basis. Hence, the larger the number of pixels, the larger the filesize of a raster image. As an example, let's consider the difference between a photo asset displayed at 100x100 (CSS) pixels:
 
-<table class="table-3">
+<table class="mdl-data-table mdl-js-data-table">
 <colgroup><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
@@ -183,7 +183,7 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
 
 {% include shared/remember.liquid title="Note" list=page.notes.decompressed %}
 
-<table class="table-3">
+<table class="mdl-data-table mdl-js-data-table">
 <colgroup><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
@@ -269,7 +269,7 @@ As a hands-on example, when using a lossy format such as JPEG, the compressor wi
 In addition to different lossy and lossless compression algorithms, different image formats support different features such as animation and transparency (alpha) channels. As a result, the choice of the "right format" for a particular image is a combination of desired visual results and functional requirements.
 
 
-<table class="table-4">
+<table class="mdl-data-table mdl-js-data-table">
 <colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
@@ -341,7 +341,7 @@ Finally, note that if you are using a Webview to render content in your native a
 
 There is no one perfect image format, tool, or a set of optimization parameters that apply to all images. For best results you will have to pick the format and its settings depending on the contents of the image, and its visual and other technical requirements.
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
 <colgroup><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
@@ -387,7 +387,7 @@ As a result, one of the simplest and most effective image optimization technique
 
 The overhead of shipping unnecessary pixels, only to have the browser rescale the image on our behalf, is a big missed opportunity to reduce and optimize the total number of bytes required to render the page. Further, note that resizing is not simply a function of the number of pixels by which the image is reduced by, but also of its natural size.
 
-<table class="table-3">
+<table class="mdl-data-table mdl-js-data-table">
 <colgroup><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>

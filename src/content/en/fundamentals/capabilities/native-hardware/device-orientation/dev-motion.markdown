@@ -57,7 +57,7 @@ which excludes the effects of gravity,
 For example, let's take a look at a phone, lying on a flat table,
 with its screen facing up.
 
-<table class="table-4">
+<table class="mdl-data-table mdl-js-data-table">
   <colgroup>
     <col span="1">
     <col span="1">
@@ -103,7 +103,7 @@ with its screen facing up.
 Conversely, if the phone were held so the screen was perpendicular to the
 ground, and was directly visible to the viewer:
 
-<table class="table-4">
+<table class="mdl-data-table mdl-js-data-table">
   <colgroup>
     <col span="1">
     <col span="1">

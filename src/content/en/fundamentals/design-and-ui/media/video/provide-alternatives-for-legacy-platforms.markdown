@@ -41,7 +41,7 @@ Use `canPlayType()` to find out which video formats are supported. The method
 takes a string argument consistent of a `mime-type` and optional codecs and
 returns one of the following values:
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Return value</th>
@@ -72,7 +72,7 @@ Here are some examples of `canPlayType()` arguments and return values when
 run in Chrome:
 
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Type</th>
