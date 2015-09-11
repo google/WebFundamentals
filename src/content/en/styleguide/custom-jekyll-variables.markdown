@@ -95,7 +95,7 @@ This code:
 
 {% highlight text %}
 {% raw %}
-{{page.prevPage}}
+{{page.previousPage}}
 {% endraw %}
 {% endhighlight %}
 
@@ -108,7 +108,7 @@ Will output the following (Note: you may see 0, 1 or 2 snippets depending
 
 
 {% highlight text %}
-{{page.prevPage}}
+{{page.previousPage}}
 {% endhighlight %}
 
 # URLs
