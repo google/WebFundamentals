@@ -123,7 +123,7 @@ snippet information when the page is shared.
 A `meta` tag consists of a `property` attribute and a `content` attribute.
 Properties and contents may take the following values:
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <colgroup>
     <col span="1">
     <col span="1">

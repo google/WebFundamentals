@@ -82,7 +82,7 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
 `max-height`.
 
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <colgroup>
     <col span="1">
     <col span="1">

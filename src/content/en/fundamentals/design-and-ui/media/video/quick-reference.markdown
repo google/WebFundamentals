@@ -39,7 +39,7 @@ notes:
 For the complete list of video element attributes and their definitions,
 see [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="table-3">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
       <th>Attribute</th>
       <th>Availability</th>
@@ -102,7 +102,7 @@ It defaults to true but a WebView app can choose to disable it.
 The `preload` attribute provides a hint to the browser as to how much
 information or content should be preloaded.
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Value</th>
@@ -140,7 +140,7 @@ updating it with mobile-specific concerns where relevant.
 
 ### Properties
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <th>Property</th>
     <th>Description</th>
@@ -185,7 +185,7 @@ Neither playbackRate ({% link_sample _code/scripted.html %}see demo{% endlink_sa
 
 ### Methods
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <th>Method</th>
     <th>Description</th>
@@ -219,7 +219,7 @@ These are only a subset of the media events that may be fired. Refer to
 the [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events)
 page on the Mozilla Developer Network for a complete listing.
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <th>Event</th>
     <th>Description</th>

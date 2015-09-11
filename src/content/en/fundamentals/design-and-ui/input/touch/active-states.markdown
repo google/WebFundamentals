@@ -154,7 +154,7 @@ user-select: none;
 
 ### Pseudo Classes for Touch States
 
-<table class="table-3">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Class</th>
