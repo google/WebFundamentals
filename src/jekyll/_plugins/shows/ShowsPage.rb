@@ -19,7 +19,14 @@ module Jekyll
 
   class ShowsPage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = ['youtubeID']
+      # TODO Optimize valid yaml keys and remove date
+      # see https://github.com/google/WebFundamentals/issues/1651
+      validKeys = [
+        'youtubeID', 'key_img',
+        'id', 'date', 'showid', 'collection', 'article', 'intro-title',
+        'emailSubscriptionLink', 'class', 'subtitle', 'udacity', 'nofeed',
+        'key-img'
+      ]
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Shows'
