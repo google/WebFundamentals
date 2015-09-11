@@ -22,10 +22,10 @@ module Jekyll
   class LanguagePage < WFPage
     attr_accessor :langcode
 
-    def initialize(site, relativeDir, filename, langcode)
+    def initialize(site, relativeDir, filename, langcode, validKeys=[])
       @langcode = langcode ? langcode : "en"
       # This allows WFPage to perform any required work
-      super(site, relativeDir, filename)
+      super(site, relativeDir, filename, validKeys)
 
       # TODO mattgaunt is this needed since it's a member variable
       self.data['langcode'] = @langcode
