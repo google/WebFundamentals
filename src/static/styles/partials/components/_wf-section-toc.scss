@@ -1,0 +1,37 @@
+.wf-section-toc {
+  margin-top: $base-line * 2;
+}
+
+.wf-section-toc__content-container {
+  padding-top: $base-line * 2;
+  padding-bottom: $base-line;
+  padding-left: $base-line;
+  padding-right: $base-line;
+
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: $grey-border-color;
+}
+
+.wf-section-toc__title {
+  @include typo-subhead();
+  color: $text-grey-color;
+
+  margin-top: 0;
+}
+
+.wf-section-toc__list{
+  margin: 0;
+
+  list-style: none;
+}
+
+.wf-section-toc__list-item {
+  & a {
+    text-decoration: none;
+  }
+}
+
+.wf-section-toc__guide-title {
+  @include typo-headline();
+}
