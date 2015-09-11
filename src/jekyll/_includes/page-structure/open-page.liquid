@@ -68,8 +68,13 @@
       </a>
     </div>
     <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
+    <div class="mdl-layout__header-row wf-header__bottom-row">
+
+      {% include shared/author.liquid author=page.main_author linkauthor=true written_on=page.written_on %}
+
       <div class="mdl-layout-spacer"></div>
+
+      {% comment %}
       <!-- Navigation -->
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">Link</a>
@@ -77,6 +82,7 @@
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
       </nav>
+      {% endcomment %}
     </div>
   </header>
   <div class="mdl-layout__drawer">

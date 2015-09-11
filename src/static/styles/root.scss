@@ -19,6 +19,7 @@ $color-accent: unquote("rgb(#{$palette-light-blue-400})");
 @import "partials/utils";
 @import "partials/syntax";
 @import "partials/components/wf-footer";
+@import "partials/components/wf-header";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
 @import "partials/components/wf-toc";
