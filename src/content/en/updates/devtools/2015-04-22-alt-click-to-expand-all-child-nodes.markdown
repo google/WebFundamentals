@@ -1,19 +1,16 @@
 ---
-
 layout: updates/post
-published: true
-title: Alt + Click to expand all child nodes
+title: "Alt + Click to expand all child nodes"
 date: 2015-04-22
-article:
-  written_on: 2015-04-22
-  updated_on: 2015-05-20
+written_on: 2015-04-22
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-featured-image: /web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif
+featured_image: /web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/18-alt-click-expand-node
 permalink: /updates/2015/04/22/alt-click-to-expand-all-child-nodes.html

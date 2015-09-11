@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Autocomplete for bracket notation
+title: "Autocomplete for bracket notation"
 date: 2015-05-15
-article:
-  written_on: 2015-05-15
-  updated_on: 2015-05-20
+written_on: 2015-05-15
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Did you know you can autocomplete bracket notation in the Sources panel?
-featured-image: /web/updates/images/2015-05-20-console-panel-autocomplete-with-properties-bracket-or-dot-notation/console-autocomplete.gif
+description: "Did you know you can autocomplete bracket notation in the Sources panel?"
+featured_image: /web/updates/images/2015-05-20-console-panel-autocomplete-with-properties-bracket-or-dot-notation/console-autocomplete.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/30-console-autocomplete
 permalink: /updates/2015/05/15/autocomplete-for-bracket-notation.html
