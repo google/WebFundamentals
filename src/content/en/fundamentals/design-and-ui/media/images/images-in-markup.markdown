@@ -150,7 +150,7 @@ pixel ratio, allowing the browser to choose the correct image regardless of
 how large the browser window is.  For example, the table below shows which
 image the browser would choose:
 
-<table class="table-4">
+<table class="mdl-data-table mdl-js-data-table">
   <colgroup>
     <col span="1">
     <col span="1">
