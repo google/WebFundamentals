@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-10-27
-
 title: "Spooktacular HTML5 Pumpkin"
-description: ""
-article:
-  written_on: 2011-10-27
-  updated_on: 2011-10-27
+written_on: 2011-10-27
+updated_on: 2011-10-27
 authors:
   - sethladd
 tags:

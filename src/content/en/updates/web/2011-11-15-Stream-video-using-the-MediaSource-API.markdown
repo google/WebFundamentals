@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-11-15
-
 title: "&quot;Stream&quot; video using the MediaSource API"
-description: ""
-article:
-  written_on: 2011-11-15
-  updated_on: 2011-11-15
+written_on: 2011-11-15
+updated_on: 2011-11-15
 authors:
   - ericbidelman
 permalink: /updates/2011/11/Stream-video-using-the-MediaSource-API.html

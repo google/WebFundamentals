@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-01-14
-
 title: "Web apps that talk - Introduction to the Speech Synthesis API"
 description: "Introduction to the Web Speech API's synthesis feature."
-article:
-  written_on: 2014-01-14
-  updated_on: 2014-01-14
+written_on: 2014-01-14
+updated_on: 2014-01-14
 authors:
   - ericbidelman
 tags:

@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-10-17
-
 title: "Having a ride with Three.js"
-description: ""
-article:
-  written_on: 2011-10-07
-  updated_on: 2011-10-07
+written_on: 2011-10-07
+updated_on: 2011-10-07
 authors:
   - paulkinlan
 tags:

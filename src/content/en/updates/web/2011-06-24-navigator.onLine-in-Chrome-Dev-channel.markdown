@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-06-24
-
 title: "navigator.onLine in Chrome Dev channel"
-description: ""
-article:
-  written_on: 2011-06-24
-  updated_on: 2011-06-24
+written_on: 2011-06-24
+updated_on: 2011-06-24
 authors:
   - ericbidelman
 tags:

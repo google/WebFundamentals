@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-11-17
-
 title: "Chrome Developer Tools for Speed"
-description: ""
-article:
-  written_on: 2011-11-17
-  updated_on: 2011-11-17
+written_on: 2011-11-17
+updated_on: 2011-11-17
 authors:
   - paulirish
 tags:

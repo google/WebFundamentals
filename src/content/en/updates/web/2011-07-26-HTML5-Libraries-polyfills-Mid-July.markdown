@@ -1,18 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-07-26
 title: "HTML5 Libraries/polyfills - Mid July"
-description: ""
-article:
-  written_on: 2011-07-26
-  updated_on: 2011-07-26
+written_on: 2011-07-26
+updated_on: 2011-07-26
 authors:
   - ericbidelman
 permalink: /updates/2011/07/HTML5-Libraries-Pollyfills---Mid-July.html

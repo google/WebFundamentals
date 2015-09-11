@@ -1,20 +1,13 @@
 ---
-
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-09-28
-
 title: "7 minute videos: Javascript Console Protips & newish DOM APIs"
-description: ""
-article:
-  written_on: 2011-09-28
-  updated_on: 2011-09-28
+written_on: 2011-09-28
+updated_on: 2011-09-28
 authors:
   - paulirish
 tags:

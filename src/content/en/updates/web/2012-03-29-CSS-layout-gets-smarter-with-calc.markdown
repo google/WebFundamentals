@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-03-29
-
 title: "CSS layout gets smarter with calc()"
-description: ""
-article:
-  written_on: 2012-03-29
-  updated_on: 2012-03-29
+written_on: 2012-03-29
+updated_on: 2012-03-29
 authors:
   - alexdanilo
 tags:

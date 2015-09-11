@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-05-22
-
 title: "requestAnimationFrame API: now with sub-millisecond precision"
-description: ""
-article:
-  written_on: 2012-05-22
-  updated_on: 2012-05-22
+written_on: 2012-05-22
+updated_on: 2012-05-22
 authors:
   - paulirish
 tags:

@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-02-20
-
 title: "WebGL and Web Audio API demo roundup"
-description: ""
-article:
-  written_on: 2012-02-20
-  updated_on: 2012-02-20
+written_on: 2012-02-20
+updated_on: 2012-02-20
 authors:
   - ilmariheikkinen
 tags:

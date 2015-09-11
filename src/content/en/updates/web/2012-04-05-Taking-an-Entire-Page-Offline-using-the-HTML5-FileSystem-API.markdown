@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-04-05
-
 title: "Taking an Entire Page Offline using the HTML5 FileSystem API"
-description: ""
-article:
-  written_on: 2012-04-05
-  updated_on: 2012-04-05
+written_on: 2012-04-05
+updated_on: 2012-04-05
 authors:
   - ericbidelman
 tags:

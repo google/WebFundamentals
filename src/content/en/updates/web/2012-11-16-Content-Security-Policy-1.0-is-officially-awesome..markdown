@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-11-16
-
 title: "Content Security Policy 1.0 is officially awesome."
-description: ""
-article:
-  written_on: 2012-11-16
-  updated_on: 2012-11-16
+written_on: 2012-11-16
+updated_on: 2012-11-16
 authors:
   - mikewest
 tags:

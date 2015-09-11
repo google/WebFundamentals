@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-02-07
-
 title: "Chrome for Android: Accelerating the Mobile Web"
-description: ""
-article:
-  written_on: 2012-02-07
-  updated_on: 2012-02-07
+written_on: 2012-02-07
+updated_on: 2012-02-07
 authors:
   - borissmus
 tags:

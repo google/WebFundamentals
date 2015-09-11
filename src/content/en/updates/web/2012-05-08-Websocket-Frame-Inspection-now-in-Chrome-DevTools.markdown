@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-05-08
-
 title: "Websocket Frame Inspection now in Chrome DevTools"
-description: ""
-article:
-  written_on: 2012-05-08
-  updated_on: 2012-05-08
+written_on: 2012-05-08
+updated_on: 2012-05-08
 authors:
   - paulirish
 tags:

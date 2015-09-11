@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-09-11
-
 title: "Stacking Changes Coming to position:fixed elements"
-description: ""
-article:
-  written_on: 2012-09-11
-  updated_on: 2012-09-11
+written_on: 2012-09-11
+updated_on: 2012-09-11
 authors:
   - tomwiltzius
 tags:
