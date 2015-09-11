@@ -52,6 +52,8 @@
   "@the_good": {"description": "Heading - Above a list of items that could be improved."},
   "tl_dr": "TL;DR",
   "@tl_dr": {"description": "Heading - Too long; Didn't Read, a very short summary of the key points covered in the article."},
+  "topics": "Topics",
+  "@topics": {"description": "Heading - Topics covered in this guide or section."},
   "translators": "Translators",
   "@translators": {"description": "Heading - a list of people who helped translate this article"},
   "try_sample": "Try full sample",
