@@ -1,21 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Local Modifications
+title: "Local Modifications"
 date: 2015-05-19
-article:
-  written_on: 2015-05-19
-  updated_on: 2015-05-19
+written_on: 2015-05-19
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Local modifications lets you see what changes have been made (via DevTools)
-  to certain source files.
-featured-image: /web/updates/images/2015-05-19-devtools-local-modifications/local-mods.gif
+description: "Local modifications lets you see what changes have been made (via DevTools) to certain source files."
+featured_image: /web/updates/images/2015-05-19-devtools-local-modifications/local-mods.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/5-local-mods
 permalink: /updates/2015/05/19/local-modifications.html

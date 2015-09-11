@@ -1,21 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Scroll elements into the viewport
+title: "Scroll elements into the viewport"
 date: 2015-05-13
-article:
-  written_on: 2015-05-13
-  updated_on: 2015-05-20
+written_on: 2015-05-13
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: If an element you're inspecting is out of view, here's how to bring it
-  into the viewport.
-featured-image: /web/updates/images/2015-05-20-scroll-elements-into-the-viewport/scroll-into-view.gif
+description: "If an element you're inspecting is out of view, here's how to bring it into the viewport."
+featured_image: /web/updates/images/2015-05-20-scroll-elements-into-the-viewport/scroll-into-view.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/38-scroll-into-view
 permalink: /updates/2015/05/13/scroll-elements-into-the-viewport.html

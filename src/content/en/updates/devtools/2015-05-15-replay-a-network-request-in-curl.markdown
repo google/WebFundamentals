@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Replay a network request in cURL
+title: "Replay a network request in cURL"
 date: 2015-05-15
-article:
-  written_on: 2015-05-15
-  updated_on: 2015-05-19
+written_on: 2015-05-15
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Learn how to debug a network request from the command line.
-featured-image: /web/updates/images/2015-05-15-devtools-replay-a-network-request-in-curl/copy-as-curl.gif
+description: "Learn how to debug a network request from the command line."
+featured_image: /web/updates/images/2015-05-15-devtools-replay-a-network-request-in-curl/copy-as-curl.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/3-copy-as-curl
 permalink: /updates/2015/05/15/replay-a-network-request-in-curl.html

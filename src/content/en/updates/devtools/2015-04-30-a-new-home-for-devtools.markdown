@@ -1,23 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2015-03-30
-article:
-  written_on: 2015-03-30
-  updated_on: 2015-03-30
+written_on: 2015-03-30
+updated_on: 2015-03-30
 authors:
   - pbakaus
-
 collection: updates
 category: tools
 product: chrome-devtools
 type: news
 tags:
-- news
-- outreach
-
+  - news
+  - outreach
 title: "A new home for DevTools"
 description: "We've moved into a shiny new home at developer.google.com/web have great new tutorials and tips for you."
 permalink: /updates/2015/04/devtools-new-home.html

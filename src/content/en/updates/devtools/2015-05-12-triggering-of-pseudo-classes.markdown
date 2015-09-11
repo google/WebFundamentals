@@ -1,21 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Triggering of pseudo classes
+title: "Triggering of pseudo classes"
 date: 2015-05-12
-article:
-  written_on: 2015-05-12
-  updated_on: 2015-05-19
+written_on: 2015-05-12
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Learn how to trigger pseudo classes such as :active to properly debug
-  your CSS.
-featured-image: /web/updates/images/2015-05-12-devtools-triggering-of-pseudo-classes/pseudo-trigger.gif
+description: "Learn how to trigger pseudo classes such as :active to properly debug your CSS."
+featured_image: /web/updates/images/2015-05-12-devtools-triggering-of-pseudo-classes/pseudo-trigger.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/2-pseudo-trigger
 permalink: /updates/2015/05/12/triggering-of-pseudo-classes.html

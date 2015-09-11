@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Reveal in Elements panel
+title: "Reveal in Elements panel"
 date: 2015-05-19
-article:
-  written_on: 2015-05-19
-  updated_on: 2015-05-19
+written_on: 2015-05-19
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Reveal DOM nodes in the Elements panel from the Console.
-featured-image: /web/updates/images/2015-05-19-reveal-dom-nodes-in-the-elements-panel-from-the-console/reveal-in-elements.gif
+description: "Reveal DOM nodes in the Elements panel from the Console."
+featured_image: /web/updates/images/2015-05-19-reveal-dom-nodes-in-the-elements-panel-from-the-console/reveal-in-elements.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/20-reveal-in-elements
 permalink: /updates/2015/05/19/reveal-in-elements-panel.html

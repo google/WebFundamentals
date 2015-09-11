@@ -18,7 +18,12 @@ module Jekyll
 
   class UpdatePage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = ['permalink', 'tags']
+      # TODO Optimize valid yaml keys and remove date
+      # see https://github.com/google/WebFundamentals/issues/1649
+      validKeys = [
+        'permalink', 'tags', 'featured_image', 'source_name', 'source_url',
+        'collection', 'category', 'product', 'type', 'date'
+      ]
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Updates'
