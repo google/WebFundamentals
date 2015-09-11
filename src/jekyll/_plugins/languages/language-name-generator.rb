@@ -246,7 +246,9 @@ module Jekyll
           page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
         when 'shows'
           page = ShowsPage.new(site, relative_dir, file_name, langcode)
-        when 'styleguide', 'shows'
+        when 'tools'
+          page = ToolsPage.new(site, relative_dir, file_name, langcode)
+        when 'styleguide'
           page = LanguagePage.new(site, relative_dir, file_name, langcode)
         when '.'
           page = LanguagePage.new(site, relative_dir, file_name, langcode)
