@@ -45,10 +45,10 @@ keyboards.  Users are more easily able to enter the required information without
 having to change their keyboard and only see the appropriate keys for that input
 type.
 
-<table class="table-2 inputtypes">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
-      <th data-th="Input type">Input <code>type</code></th>
+      <th data-th="Input type" style="width:60%;">Input <code>type</code></th>
       <th data-th="Typical keyboard">Typical Keyboard</th>
     </tr>
   </thead>
