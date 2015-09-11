@@ -111,3 +111,18 @@ figcaption {
     //@include typecsset-font-size($tablet-base-font-size - 4px);
   }
 }
+
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 11px;
+  line-height: 1.4;
+  text-shadow: 0 1px 0 #fff;
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  margin: 0 0.1em;
+  white-space: nowrap;
+  box-shadow: 0 1px 0px rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  border-radius: 3px; 
+}
