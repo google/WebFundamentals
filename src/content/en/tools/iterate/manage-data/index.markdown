@@ -9,6 +9,7 @@ order: 3
 authors:
   - megginkearney
 translation_priority: 0
+panel: resources
 ---
 
 <p class="intro">

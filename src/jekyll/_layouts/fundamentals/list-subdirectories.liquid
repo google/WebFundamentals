@@ -1,6 +1,9 @@
 {% include page-structure/open-page.liquid %}
 
+<div class="page-content">
+
 {{ content }}
+
 
 <!-- Loop through each sub directory and generate some navigation -->
 {% for subdirectory in page.context.subdirectories %}
@@ -8,5 +11,8 @@
   <!-- To view the format of the date, uncomment the following line -->
   <p><a href="{{subdirectory.index.relative_url}}">View content here</a></p>
 {% endfor %}
+
+<!-- Close MDL content -->
+</div>
 
 {% include page-structure/close-page.liquid %}

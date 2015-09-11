@@ -10,6 +10,7 @@ authors:
   - megginkearney
   - dgash
 translation_priority: 0
+panel: sources
 ---
 
 <p class="intro">

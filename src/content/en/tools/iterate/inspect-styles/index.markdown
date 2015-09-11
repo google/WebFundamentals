@@ -7,8 +7,9 @@ written_on: 2015-04-14
 updated_on: 2015-04-22
 order: 1
 authors:
-  - mkearney
+  - megginkearney
 translation_priority: 0
+panel: elements
 ---
 
 {% include fundamentals/section_toc.liquid %}

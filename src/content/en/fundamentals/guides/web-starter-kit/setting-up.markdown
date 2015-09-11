@@ -2,7 +2,6 @@
 layout: shared/plain
 title: "Set Up Web Starter Kit"
 description: "If you are new to Web Starter Kit, then this guide is for you. It steps through how to get up and running with Web Starter Kit as quickly as possible."
-introduction: ""
 notes:
   nosudo: 
     - "If you see permission or access errors such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. Consult <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>this page</a> for a more robust solution."

@@ -9,7 +9,7 @@ authors:
 written_on: 2015-08-04
 updated_on: 2015-08-04
 order: 4
-takeaways:
+key-takeaways:
     - "Preprocessors let you use features in CSS and JavaScript that your browser doesn't support natively, for example, CSS variables."
     - "If you're using preprocessors, map your original source files to the rendered output using Source Maps."
     - "Make sure your web server can serve Source Maps."
@@ -25,7 +25,7 @@ notes:
 
 {% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.takeaways %}
+{% include shared/takeaway.liquid list=page.key-takeaways %}
 
 ## What's a preprocessor?
 

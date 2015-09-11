@@ -10,7 +10,7 @@ authors:
 written_on: 2015-07-10
 updated_on: 2015-07-30
 order: 1
-takeaways:
+key-takeaways:
     - "Inspect DOM and styles in the Elements panel."
     - "Debug Javascript with breakpoints in the Sources panel."
     - "Interact with your page in the Console."
@@ -29,7 +29,7 @@ As you develop web pages and applications, the DevTools are essential tools to e
 
 {% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.takeaways %}
+{% include shared/takeaway.liquid list=page.key-takeaways %}
 
 ## Access DevTools
 
