@@ -98,7 +98,7 @@ the users name, email address and phone number, you should use:
 
 The `autocomplete` attributes can be accompanied with a section name, such as **`shipping `**`given-name` or **`billing `**`street-address`. The browser will auto-complete different sections separately, and not as a continuous form.
 
-<table class="table-3 autocompletes">
+<table class="mdl-data-table mdl-js-data-table">
   <colgroup>
     <col span="1">
     <col span="1">

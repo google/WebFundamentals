@@ -229,7 +229,7 @@ In the case of IE10+, it also eliminates the 300ms click delay.
 
 Below is a list of the available parameters for *touch-action*.
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Property</th>
@@ -274,7 +274,7 @@ The definitive touch events reference can be found here:
 These events are the building blocks for adding new gestures into your
 application:
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Touch, Mouse, Pointer Events</th>
@@ -330,7 +330,7 @@ application:
 
 Each touch event includes three list attributes:
 
-<table class="table-2">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
       <th>Attribute</th>
