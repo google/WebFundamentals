@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-09-11
-
 title: "Workers ♥ ArrayBuffer"
-description: ""
-article:
-  written_on: 2011-09-01
-  updated_on: 2011-09-01
+written_on: 2011-09-01
+updated_on: 2011-09-01
 authors:
   - ericbidelman
 tags:

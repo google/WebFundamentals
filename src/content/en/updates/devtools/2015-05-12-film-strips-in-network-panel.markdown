@@ -1,21 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Film strips in Network panel
+title: "Film strips in Network panel"
 date: 2015-05-12
-article:
-  written_on: 2015-05-12
-  updated_on: 2015-05-20
+written_on: 2015-05-12
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Visually navigate the network panel and view captured screenshots during
-  page load
-featured-image: /web/updates/images/2015-05-19-what-would-you-like-to-see-next-in-dev-tips-daily/network-filmstrip.gif
+description: "Visually navigate the network panel and view captured screenshots during page load"
+featured_image: /web/updates/images/2015-05-19-what-would-you-like-to-see-next-in-dev-tips-daily/network-filmstrip.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/35-network-filmstrip
 permalink: /updates/2015/05/12/film-strips-in-network-panel.html

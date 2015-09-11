@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-06-23
-
 title: "Welcome to updates.html5rocks.com!"
-description: ""
-article:
-  written_on: 2011-06-23
-  updated_on: 2011-06-23
+written_on: 2011-06-23
+updated_on: 2011-06-23
 authors:
   - ericbidelman
 permalink: /updates/2011/06/Welcome-to-updates-html5rocks-com-1.html

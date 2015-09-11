@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-10-07
-
 title: "Flexbox layout isn't slow"
 description: "Good news: new flexbox (display: flex) is 2.3x faster than old flexbox (display: box)!"
-article:
-  written_on: 2013-10-07
-  updated_on: 2013-10-07
+written_on: 2013-10-07
+updated_on: 2013-10-07
 authors:
   - paulirish
 tags:

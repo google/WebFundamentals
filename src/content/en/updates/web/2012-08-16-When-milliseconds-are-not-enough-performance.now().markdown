@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-08-16
-
 title: "When milliseconds are not enough: performance.now"
-description: ""
-article:
-  written_on: 2012-08-16
-  updated_on: 2012-08-16
+written_on: 2012-08-16
+updated_on: 2012-08-16
 authors:
   - paulirish
 tags:

@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Predefined snippets
+title: "Predefined snippets"
 date: 2015-05-19
-article:
-  written_on: 2015-05-19
-  updated_on: 2015-05-19
+written_on: 2015-05-19
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: How to run predefined snippets of code on any web page.
-featured-image: /web/updates/images/2015-05-19-devtools-run-predefined-snippets-of-code-on-any-web-page/snippets.gif
+description: "How to run predefined snippets of code on any web page."
+featured_image: /web/updates/images/2015-05-19-devtools-run-predefined-snippets-of-code-on-any-web-page/snippets.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/4-snippets
 permalink: /updates/2015/05/19/predefined-snippets.html

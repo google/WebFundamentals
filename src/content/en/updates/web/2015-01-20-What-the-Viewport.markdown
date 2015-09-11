@@ -1,16 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2015-01-20
-
 title: "What the Virtual Viewport?"
 description: "The virtual viewport seperates layout and viewing of the viewport."
-
 written_on: 2015-01-20
 updated_on: 2015-01-20
-
 authors:
   - mattgaunt
 tags:

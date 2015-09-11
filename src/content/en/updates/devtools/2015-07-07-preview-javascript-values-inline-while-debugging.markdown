@@ -1,21 +1,18 @@
 ---
 rss: false
 layout: updates/post
-published: true
-title: Preview JavaScript values inline while debugging
+title: "Preview JavaScript values inline while debugging"
 date: 2015-07-07
-article:
-  written_on: 2015-07-07
-  updated_on: 2015-07-07
+written_on: 2015-07-07
+updated_on: 2015-07-07
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Learn how to preview the values of JavaScript variables in DevTools while
-  debugging.
-featured-image: /web/updates/images/2015-07-07-preview-javascript-values-inline-while-debugging/inline-js-values.gif
+description: "Learn how to preview the values of JavaScript variables in DevTools while debugging."
+featured_image: /web/updates/images/2015-07-07-preview-javascript-values-inline-while-debugging/inline-js-values.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/41-inline-js-values
 permalink: /updates/2015/07/07/preview-javascript-values-inline-while-debugging.html

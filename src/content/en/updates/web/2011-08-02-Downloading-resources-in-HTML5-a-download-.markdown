@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-08-02
-
 title: "Downloading resources in HTML5: a[download]"
-description: ""
-article:
-  written_on: 2011-08-02
-  updated_on: 2011-08-02
+written_on: 2011-08-02
+updated_on: 2011-08-02
 authors:
   - ericbidelman
 permalink: /updates/2011/08/Downloading-resources-in-HTML5-a-download.html

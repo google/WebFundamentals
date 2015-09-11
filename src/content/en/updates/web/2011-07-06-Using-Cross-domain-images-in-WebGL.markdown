@@ -1,20 +1,13 @@
 ---
-
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-07-06
-
 title: "Using Cross-domain images in WebGL"
-description: ""
-article:
-  written_on: 2011-07-06
-  updated_on: 2011-07-06
+written_on: 2011-07-06
+updated_on: 2011-07-06
 authors:
   - paulkinlan
 tags:

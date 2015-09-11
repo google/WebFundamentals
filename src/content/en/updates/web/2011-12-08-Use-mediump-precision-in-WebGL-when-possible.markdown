@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-12-08
-
 title: "Use mediump precision in WebGL when possible"
-description: ""
-article:
-  written_on: 2011-12-08
-  updated_on: 2011-12-08
+written_on: 2011-12-08
+updated_on: 2011-12-08
 authors:
   - ilmariheikkinen
 tags:

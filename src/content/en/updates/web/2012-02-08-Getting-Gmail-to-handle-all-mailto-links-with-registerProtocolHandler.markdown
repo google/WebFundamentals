@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-02-08
-
 title: "Getting Gmail to handle all mailto: links with registerProtocolHandler"
-description: ""
-article:
-  written_on: 2012-02-08
-  updated_on: 2012-02-08
+written_on: 2012-02-08
+updated_on: 2012-02-08
 authors:
   - paulirish
 permalink: /updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler.html

@@ -1,21 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Quick-edit element tags
+title: "Quick-edit element tags"
 date: 2015-05-19
-article:
-  written_on: 2015-05-19
-  updated_on: 2015-05-19
+written_on: 2015-05-19
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: You can double click on the opening tag name of a node in the Elements
-  Panel to edit it.
-featured-image: /web/updates/images/2015-05-19-quick-edit-the-html-element-tag/quick-edit-element.gif
+description: "You can double click on the opening tag name of a node in the Elements Panel to edit it."
+featured_image: /web/updates/images/2015-05-19-quick-edit-the-html-element-tag/quick-edit-element.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/17-quick-edit-element
 permalink: /updates/2015/05/19/quick-edit-element-tags.html

@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-09-23
-
 title: "dialog element: Modals made easy"
 description: "Have you ever created your own modal dialog box? Soon, you won't need to ever again; dialog boxes are becoming a part of the web platform."
-article:
-  written_on: 2013-09-23
-  updated_on: 2013-09-23
+written_on: 2013-09-23
+updated_on: 2013-09-23
 authors:
   - agektmr
 tags:

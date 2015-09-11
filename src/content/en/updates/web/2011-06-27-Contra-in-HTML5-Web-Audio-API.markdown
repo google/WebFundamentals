@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-06-27
-
 title: "Contra in HTML5 + Web Audio API"
-description: ""
-article:
-  written_on: 2011-06-27
-  updated_on: 2011-06-27
+written_on: 2011-06-27
+updated_on: 2011-06-27
 authors:
   - ericbidelman
 tags:

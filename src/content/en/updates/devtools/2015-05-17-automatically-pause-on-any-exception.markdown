@@ -1,21 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Automatically pause on any exception
+title: "Automatically pause on any exception"
 date: 2015-05-17
-article:
-  written_on: 2015-05-17
-  updated_on: 2015-05-20
+written_on: 2015-05-17
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: In the DevTools, you can automatically pause on any exception (especially
-  useful for <em>uncaught</em> exceptions).
-featured-image: /web/updates/images/2015-05-20-automatically-pause-on-any-exception/pause-on-exception.gif
+description: "In the DevTools, you can automatically pause on any exception (especially useful for <em>uncaught</em> exceptions)."
+featured_image: /web/updates/images/2015-05-20-automatically-pause-on-any-exception/pause-on-exception.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/32-pause-on-exception
 permalink: /updates/2015/05/17/automatically-pause-on-any-exception.html

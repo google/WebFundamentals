@@ -1,16 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2014-08-28
-
 title: "Easier ArrayBuffer <-> String conversion with the Encoding API"
 description: "The native Encoding API offers a straightforward way to convert between raw binary data and JavaScript strings."
-
 written_on: 2014-08-28
 updated_on: 2014-08-28
-
 authors:
   - jeffposnick
 tags:

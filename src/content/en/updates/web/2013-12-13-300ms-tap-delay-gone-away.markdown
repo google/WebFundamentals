@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-12-13
-
 title: "300ms tap delay, gone away"
 description: "Every click interaction in mobile browsers is hampered with a 300ms delay, but that's gone in Chrome 32 for mobile-optimised sites!"
-article:
-  written_on: 2013-12-13
-  updated_on: 2013-12-13
+written_on: 2013-12-13
+updated_on: 2013-12-13
 authors:
   - jakearchibald
 tags:

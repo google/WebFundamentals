@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-04-18
-
 title: "WebRTC Protothon"
-description: ""
-article:
-  written_on: 2012-04-18
-  updated_on: 2012-04-18
+written_on: 2012-04-18
+updated_on: 2012-04-18
 authors:
   - ilmariheikkinen
 tags:

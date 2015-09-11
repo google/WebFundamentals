@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-09-26
-
 title: "Interactive Globe with CSS shaders & Google Maps"
-description: ""
-article:
-  written_on: 2012-09-26
-  updated_on: 2012-09-26
+written_on: 2012-09-26
+updated_on: 2012-09-26
 authors:
   - paulirish
 tags:

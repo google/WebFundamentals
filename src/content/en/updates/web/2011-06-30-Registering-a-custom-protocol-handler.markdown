@@ -1,20 +1,13 @@
 ---
-
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-06-30
-
 title: "Registering a custom protocol handler"
-description: ""
-article:
-  written_on: 2011-06-30
-  updated_on: 2011-06-30
+written_on: 2011-06-30
+updated_on: 2011-06-30
 authors:
   - ericbidelman
 permalink: /updates/2011/06/Registering-a-custom-protocol-handler.html

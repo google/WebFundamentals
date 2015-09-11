@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-03-16
-
 title: "Optimizing JavaScript"
-description: ""
-article:
-  written_on: 2012-03-16
-  updated_on: 2012-03-16
+written_on: 2012-03-16
+updated_on: 2012-03-16
 authors:
   - sethladd
 tags:

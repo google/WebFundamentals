@@ -1,22 +1,19 @@
 ---
-
 layout: updates/post
-published: true
-title: Port forwarding
+title: "Port forwarding"
 date: 2015-05-11
-article:
-  written_on: 2015-05-11
-  updated_on: 2015-05-19
+written_on: 2015-05-11
+updated_on: 2015-05-19
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
 tags:
-- mobile
-description: ' DevTools'' port forwarding enables even localhost URLs to work on mobile.'
-featured-image: /web/updates/images/2015-05-11-devtools-port-forwarding-allows-localhost-urls-to-work-on-mobile/port-forward.gif
+  - mobile
+description: "DevTools port forwarding enables even localhost URLs to work on mobile."
+featured_image: /web/updates/images/2015-05-11-devtools-port-forwarding-allows-localhost-urls-to-work-on-mobile/port-forward.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/1-port-forward
 permalink: /updates/2015/05/11/port-forwarding.html

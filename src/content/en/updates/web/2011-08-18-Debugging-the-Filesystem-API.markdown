@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-08-18
-
 title: "Debugging the Filesystem API"
-description: ""
-article:
-  written_on: 2011-08-18
-  updated_on: 2011-08-18
+written_on: 2011-08-18
+updated_on: 2011-08-18
 authors:
   - ericbidelman
 tags:

@@ -1,16 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2015-01-05
-
 title: "Chrome Dev Summit 2014: The Applied Science of Runtime Performance"
 description: "The story of building the Chrome Dev Summit site."
-
 written_on: 2015-01-05
 updated_on: 2015-01-05
-
 authors:
   - paullewis
 tags:

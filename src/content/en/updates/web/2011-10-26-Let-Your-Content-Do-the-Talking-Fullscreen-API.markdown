@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-10-26
-
 title: "Let Your Content Do the Talking: Fullscreen API"
 description: "Intro to the Full Screen API"
-article:
-  written_on: 2011-10-26
-  updated_on: 2011-10-26
+written_on: 2011-10-26
+updated_on: 2011-10-26
 authors:
   - ericbidelman
 tags:

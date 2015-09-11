@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-09-28
-
 title: "DevTools answers: What font is that? "
 description: "Ever wondered which font is actually being used to render text? Wonder no more as Chrome DevTools reveals all!"
-article:
-  written_on: 2013-09-28
-  updated_on: 2013-09-28
+written_on: 2013-09-28
+updated_on: 2013-09-28
 authors:
   - paulirish
 tags:
