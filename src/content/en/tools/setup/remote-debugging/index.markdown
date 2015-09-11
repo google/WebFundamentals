@@ -6,6 +6,7 @@ description: "Check your site's responsive layouts and performance on real devic
 written_on: 2015-04-14
 updated_on: 2015-07-30
 order: 2
+panel: device mode
 ---
 
 <p class="intro">

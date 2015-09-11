@@ -9,6 +9,7 @@ order: 2
 authors:
   - megginkearney
 translation_priority: 0
+panel: timeline
 ---
 
 <p class="intro">
