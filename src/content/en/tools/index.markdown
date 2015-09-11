@@ -5,123 +5,97 @@ title: Google Web Tools
 translation_priority: 0
 ---
 
-<div class="tools-header">
-  <div class="container">
-    <p class="headliner">Get productive.</p>
-    <div class="desc">
-      Discover our&nbsp;<h1>tools</h1>&nbsp;and kickstart your development.
-      <div>
-        <a class="toolbutton" href="/web/updates/tools">WHAT'S NEW</a>        
-      </div>
-    </div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <h2>Get productive</h2>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <p>Discover our tools and kickstart your development.</p>
+    <p><a class="mdl-button mdl-js-button mdl-button--raised" href="/web/updates/tools/">What's New</a></p>
   </div>
 </div>
 
-<div class="tools-products">
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--1-col">
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="/web/tools/chrome-devtools">
+      <img src="imgs/chrome-devtools.jpg" alt="DevTools">
+    </a>
+    <div>
+      <a href="/web/tools/chrome-devtools"><h5>Chrome DevTools</h5></a>
+      <p>Our web authoring and debugging tools built into Google Chrome.</p>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="/web/tools/starter-kit/">
+      <img src="/web/tools/starter-kit/images/thumb.jpg" alt="Web Starter Kit">
+    </a>
+    <div>
+      <a href="/web/tools/starter-kit/"><h5>Web Starter Kit</h5></a>
+      <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="/web/tools/polymer-starter-kit/">
+      <img src="/web/tools/polymer-starter-kit/thumb.jpg" alt="Polymer Starter Kit">
+    </a>
+    <div>
+      <a href="/web/tools/polymer-starter-kit/"><h5>Polymer Starter Kit</h5></a>
+      <p>An opinionated starting point for building Polymer 1.0 web apps that
+      work great across different devices.</p>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="http://www.getmdl.io/">
+      <img src="imgs/mdl-thumb.png" alt="Material Design Lite">
+    </a>
+    <div>
+      <a href="http://www.getmdl.io/"><h5>Material Design Lite</h5></a>
+      <p>
+        A light-weight implementation of Material Design, targeted at legacy
+        browsers and static content sites.
+      </p>            
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="https://www.polymer-project.org">
+      <img src="/web/tools/polymer-starter-kit/thumb_polymer.jpg" alt="Polymer">
+    </a>
+    <div>
+      <a href="https://www.polymer-project.org"><h5>Polymer</h5></a>
+      <p>
+        Polymer makes it easier than ever to make fast, beautiful, and interoperable web components.
+      </p>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--1-col">
+</div>
 
-  <div class="container tools-products-wrapper">
-
-    <div class="get-started">
+<h2>Action-oriented guides</h2>
+<ul>
+{% for subdirectory in page.context.subdirectories %}
+  <li>
+    <h5><a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a></h5>
+    {% if subdirectory.subdirectories %}
       <ul>
-        <li>
-          <a href="/web/tools/chrome-devtools">
-            <img src="/web/imgs/chrome-devtools.jpg" alt="DevTools">
-          </a>
-          <div>
-            <a href="/web/tools/chrome-devtools"><h4>Chrome DevTools</h4></a>
-            <p>Our web authoring and debugging tools built into Google Chrome.</p>
-          </div>
-        </li>
-        <li>
-          <a href="/web/tools/starter-kit/">
-            <img src="/web/tools/starter-kit/images/thumb.jpg" alt="Web Starter Kit">
-          </a>
-          <div>
-            <a href="/web/tools/starter-kit/"><h4>Web Starter Kit</h4></a>
-            <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
-          </div>
-        </li>
-        <li>
-          <a href="/web/tools/polymer-starter-kit/">
-            <img src="/web/tools/polymer-starter-kit/thumb.jpg" alt="Polymer Starter Kit">
-          </a>
-          <div>
-            <a href="/web/tools/polymer-starter-kit/"><h4>Polymer Starter Kit</h4></a>
-            <p>An opinionated starting point for building Polymer 1.0 web apps that
-            work great across different devices.</p>
-          </div>
-        </li>
-        <li>
-          <a href="http://www.getmdl.io/">
-            <img src="/web/tools/material-design-lite/images/thumb.png" alt="Material Design Lite">
-          </a>
-          <div>
-            <a href="http://www.getmdl.io/"><h4>Material Design Lite</h4></a>
-            <p>
-              A light-weight implementation of Material Design, targeted at legacy
-              browsers and static content sites.
-            </p>            
-          </div>
-        </li>        
-        <li>
-          <a href="https://www.polymer-project.org">
-            <img src="/web/tools/polymer-starter-kit/thumb_polymer.jpg" alt="Polymer">
-          </a>
-          <div>
-            <a href="https://www.polymer-project.org"><h4>Polymer</h4></a>
-            <p>
-              Polymer makes it easier than ever to make fast, beautiful, and interoperable web components.
-            </p>
-          </div>
-        </li>
+        {% for sub in subdirectory.subdirectories %}
+          <li>
+            <h6><a href="{{sub.index.relative_url}}">{{sub.index.title}}</a></h6>
+            <p>{{sub.index.description}}</p>
+            </li>
+        {% endfor %}
       </ul>
-    </div>
-
-  </div>
-
-</div>
-
-<div class="tools-home tools-home-front container">
-  
-  <div class="tools-home-front-wrapper">
-
-    <div class="tools-docs-listing">
-
-      <h2>Action-oriented guides</h2>
-
-      <ul class="doclist">
-          {% for guide in page.articles.[page.id] %}
-          {% if guide.published != false and (guide.is_localized != true or page.langcode == guide.langcode) %}
-          <li class="theme--{{ guide.id }}">
-            <a href="{{site.baseurl}}{{guide.url | clean | localize_link:guide }}" title="{{guide.title}}">
-              <h4>{{guide.title}}</h4>
-            </a>
-            <ul>
-              {% for subguide in page.articles.[guide.id] %}
-              {% if subguide.published != false and (subguide.is_localized != true or page.langcode == subguide.langcode) %}
-              <li>
-                <a href="{{site.baseurl}}{{subguide.url | clean | localize_link:subguide }}" title="{{subguide.title}}">
-                  {{subguide.title}}
-                </a>
-              </li>
-              {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-          {% endif %}
-          {% endfor %}
-      </ul>
-    </div>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
 
 {% if page.articles.updates %}
-
-    <div class="tools-updates">
-      <h2><a href="/web/updates/tools/tip">Tips &amp; Tricks</a></h2>
-      {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
-    </div>
- 
+  <!-- TODO -->
+  <h2><a href="/web/updates/tools/tip">Tips &amp; Tricks</a></h2>
+  {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
 {% endif %}
 
-  </div>
 
-</div>
+
