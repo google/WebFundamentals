@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-10-14
-
 title: "WebSockets updated to latest version in Chrome Canary"
-description: ""
-article:
-  written_on: 2011-10-14
-  updated_on: 2011-10-14
+written_on: 2011-10-14
+updated_on: 2011-10-14
 authors:
   - ericbidelman
 tags:

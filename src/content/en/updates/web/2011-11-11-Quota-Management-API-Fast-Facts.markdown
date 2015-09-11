@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-11-11
-
 title: "Quota Management API : Fast Facts"
-description: ""
-article:
-  written_on: 2011-11-11
-  updated_on: 2011-11-11
+written_on: 2011-11-11
+updated_on: 2011-11-11
 authors:
   - agektmr
 tags:

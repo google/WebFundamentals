@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-06-28
-
 title: "Page Visibility API: Have I got your attention? "
-description: ""
-article:
-  written_on: 2011-06-28
-  updated_on: 2011-06-28
+written_on: 2011-06-28
+updated_on: 2011-06-28
 authors:
   - mikemahemoff
 tags:

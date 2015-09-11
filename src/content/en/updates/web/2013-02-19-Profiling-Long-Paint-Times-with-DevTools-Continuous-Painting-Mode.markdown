@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-02-19
-
 title: "Profiling Long Paint Times with DevTools' Continuous Painting Mode"
-description: ""
-article:
-  written_on: 2013-02-19
-  updated_on: 2013-02-19
+written_on: 2013-02-19
+updated_on: 2013-02-19
 authors:
   - paulirish
 tags:

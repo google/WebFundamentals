@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-08-06
-
 title: "Quick FAQs on input[type=date] in Google Chrome"
-description: ""
-article:
-  written_on: 2012-08-06
-  updated_on: 2012-08-06
+written_on: 2012-08-06
+updated_on: 2012-08-06
 authors:
   - agektmr
 tags:

@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-08-31
-
 title: "What's different in the new WebSocket protocol"
-description: ""
-article:
-  written_on: 2011-08-31
-  updated_on: 2011-08-31
+written_on: 2011-08-31
+updated_on: 2011-08-31
 authors:
   - agektmr
 tags:

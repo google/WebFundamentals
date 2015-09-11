@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-12-10
-
 title: "WebRTC hits Firefox, Android and iOS"
-description: ""
-article:
-  written_on: 2012-12-10
-  updated_on: 2012-12-10
+written_on: 2012-12-10
+updated_on: 2012-12-10
 authors:
   - samdutton
 tags:

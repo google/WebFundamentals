@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-07-23
-
 title: "Drag and drop a folder onto Chrome now available "
-description: ""
-article:
-  written_on: 2012-07-23
-  updated_on: 2012-07-23
+written_on: 2012-07-23
+updated_on: 2012-07-23
 authors:
   - agektmr
 tags:

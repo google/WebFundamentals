@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-06-15
-
 title: "How to convert ArrayBuffer to and from String"
 description: "How to convert ArrayBuffer to and from String"
-article:
-  written_on: 2012-06-15
-  updated_on: 2012-06-15
+written_on: 2012-06-15
+updated_on: 2012-06-15
 authors:
   - renatomangini
 tags:

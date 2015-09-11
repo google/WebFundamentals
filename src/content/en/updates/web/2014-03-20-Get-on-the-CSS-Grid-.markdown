@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-03-20
-
 title: "Get on the CSS Grid!"
 description: "CSS Grid Layout is a new CSS3 module that provides new layout primitives that are ideal for web applications."
-article:
-  written_on: 2014-03-20
-  updated_on: 2014-03-20
+written_on: 2014-03-20
+updated_on: 2014-03-20
 authors:
   - alexdanilo
 tags:

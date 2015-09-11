@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-06-13
-
 title: "sourceMappingURL and sourceURL syntax changed"
-description: ""
-article:
-  written_on: 2013-06-13
-  updated_on: 2013-06-13
+written_on: 2013-06-13
+updated_on: 2013-06-13
 authors:
   - paulirish
 tags:

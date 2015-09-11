@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-07-05
-
 title: "Taking advantage of GPU acceleration in the 2D canvas"
-description: ""
-article:
-  written_on: 2012-07-05
-  updated_on: 2012-07-05
+written_on: 2012-07-05
+updated_on: 2012-07-05
 authors:
   - ilmariheikkinen
 tags:

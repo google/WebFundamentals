@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-11-28
-
 title: "Respond to change with Object.observe"
-description: ""
-article:
-  written_on: 2012-11-28
-  updated_on: 2012-11-28
+written_on: 2012-11-28
+updated_on: 2012-11-28
 authors:
   - alexdanilo
 tags:

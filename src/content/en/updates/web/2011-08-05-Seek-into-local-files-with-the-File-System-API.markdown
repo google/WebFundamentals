@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-08-05
-
 title: "Seek into local files with the File System API"
-description: ""
-article:
-  written_on: 2011-08-05
-  updated_on: 2011-08-05
+written_on: 2011-08-05
+updated_on: 2011-08-05
 authors:
   - sethladd
 tags:

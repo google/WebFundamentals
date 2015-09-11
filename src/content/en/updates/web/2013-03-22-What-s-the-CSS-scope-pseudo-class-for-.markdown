@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-03-22
-
 title: "What's the CSS :scope pseudo-class for?"
-description: ""
-article:
-  written_on: 2013-03-22
-  updated_on: 2013-03-22
+written_on: 2013-03-22
+updated_on: 2013-03-22
 authors:
   - ericbidelman
 tags:

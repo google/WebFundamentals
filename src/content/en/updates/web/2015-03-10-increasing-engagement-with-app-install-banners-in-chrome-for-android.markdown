@@ -1,16 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2015-03-12
-
 title: "Increasing engagement with Web App install banners"
 description: "Web App Manifest ✔︎, Service Worker✔.Get ready for Web App Install banners "
-
 written_on: 2015-03-12
 updated_on: 2015-03-12
-
 authors:
   - paulkinlan
 tags:

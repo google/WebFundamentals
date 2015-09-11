@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-03-06
-
 title: "A New Experimental Feature: scoped stylesheets"
-description: ""
-article:
-  written_on: 2012-03-06
-  updated_on: 2012-03-06
+written_on: 2012-03-06
+updated_on: 2012-03-06
 authors:
   - alexdanilo
 tags:

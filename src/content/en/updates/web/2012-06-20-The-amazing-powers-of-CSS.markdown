@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-06-20
-
 title: "The amazing powers of CSS"
-description: ""
-article:
-  written_on: 2012-06-20
-  updated_on: 2012-06-20
+written_on: 2012-06-20
+updated_on: 2012-06-20
 authors:
   - ilmariheikkinen
 tags:

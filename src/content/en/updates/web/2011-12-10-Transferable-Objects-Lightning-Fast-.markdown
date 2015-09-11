@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-12-10
-
 title: "Transferable Objects: Lightning Fast!"
-description: ""
-article:
-  written_on: 2011-12-10
-  updated_on: 2011-12-10
+written_on: 2011-12-10
+updated_on: 2011-12-10
 authors:
   - ericbidelman
 tags:

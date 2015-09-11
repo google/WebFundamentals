@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-02-03
-
 title: "HTML5 &lt;audio&gt; and the Web Audio API are BFFs!"
-description: ""
-article:
-  written_on: 2012-02-03
-  updated_on: 2012-02-03
+written_on: 2012-02-03
+updated_on: 2012-02-03
 authors:
   - ericbidelman
 tags:

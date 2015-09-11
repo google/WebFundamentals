@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-12-26
-
 title: "The Yeoman Monthly Digest #2"
 description: "A regular round-up of articles, videos and talks authored by the Yeoman community."
-article:
-  written_on: 2013-12-26
-  updated_on: 2013-12-26
+written_on: 2013-12-26
+updated_on: 2013-12-26
 authors:
   - addyosmani
 tags:

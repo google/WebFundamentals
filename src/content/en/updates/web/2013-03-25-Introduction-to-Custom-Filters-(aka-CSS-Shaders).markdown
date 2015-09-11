@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-03-25
-
 title: "Introduction to Custom Filters (aka CSS Shaders)"
-description: ""
-article:
-  written_on: 2013-03-25
-  updated_on: 2013-03-25
+written_on: 2013-03-25
+updated_on: 2013-03-25
 authors:
   - paullewis
 tags:
