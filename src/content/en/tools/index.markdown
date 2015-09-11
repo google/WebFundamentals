@@ -5,13 +5,15 @@ title: Google Web Tools
 translation_priority: 0
 ---
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <h2>Get productive</h2>
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <p>Discover our tools and kickstart your development.</p>
-    <p><a class="mdl-button mdl-js-button mdl-button--raised" href="/web/updates/tools/">What's New</a></p>
+<div class="todo-banner">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <h2>Get productive</h2>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <p>Discover our tools and kickstart your development.</p>
+      <p><a class="mdl-button mdl-js-button mdl-button--raised" href="/web/updates/tools/">What's New</a></p>
+    </div>
   </div>
 </div>
 
