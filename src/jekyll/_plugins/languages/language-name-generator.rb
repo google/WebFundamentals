@@ -277,7 +277,11 @@ module Jekyll
 
       tree['pages'].each_with_index { |a, i|
         a.data['nextPage'] = tree['pages'][i+1]
-        a.data['previousPage'] = tree['pages'][i-1] if i > 0
+        if i > 0
+          a.data['previousPage'] = tree['pages'][i-1]
+        elsif i == 0
+          a.data['previousPage'] = tree['index']
+        end
       }
 
       tree['subdirectories'].each { |value|
