@@ -19,7 +19,8 @@ module Jekyll
 
   class FundamentalsPage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      super(site, relativeDir, filename, langcode)
+      validKeys = ['udacity']
+      super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Fundamentals'
       self.data['html_head_title'] = 'Web Fundamentals - Google Developers'
