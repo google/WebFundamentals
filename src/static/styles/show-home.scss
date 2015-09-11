@@ -23,6 +23,7 @@ $color-accent: unquote("rgb(#{$palette-grey-600})");
 @import "partials/base";
 @import "partials/utils";
 @import "partials/components/wf-footer";
+@import "partials/components/wf-header";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
 @import "partials/shows-components/series-list";

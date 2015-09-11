@@ -19,6 +19,7 @@ $color-accent: unquote("rgb(#{$palette-pink-400})");
 @import "partials/table";
 @import "partials/utils";
 @import "partials/components/wf-footer";
+@import "partials/components/wf-header";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
 

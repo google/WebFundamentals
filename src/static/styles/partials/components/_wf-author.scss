@@ -1,28 +1,62 @@
-.wf-author__post-details {
+@import "../../../third_party/material-design-lite/src/variables";
+@import "../../../third_party/material-design-lite/src/mixins";
+
+$author-img-height: $base-line * 1.5;
+
+.wf-author__container {
+  display: flex;
+
+  flex-direction: column;
+
+  & a {
+    color: $layout-header-text-color;
+    text-decoration: none;
+  }
+}
+
+.wf-author__row {
   display: flex;
 
   flex-direction: row;
-  align-items: center;
+}
 
-  margin: ($base-line / 2) 0;
+.wf-author__img-container, .wf-author__time-icon {
+  width: $author-img-height;
+  height: auto;
+
+  & > svg {
+    fill: $layout-header-text-color;
+  }
 }
 
 .wf-author__profile-photo {
-  width: $base-line * 3;
-  height: auto;
-
-  margin-right: ($base-line / 2);
   border-radius: 100%;
 }
 
-.wf-author__author-date-container {
-  flex: 1;
+.wf-author__name {
+  margin: 0 ($base-line / 2);
+
+  @include typo-title;
+
+  line-height: $author-img-height;
 }
 
-.wf-author__author {
+.wf-author__time-icon {
+  text-align:center;
+}
 
+.wf-author__time-icon > svg {
+  width: $base-line;
+  height: $base-line;
+
+  // This centers the clock vertically with the text
+  margin-top: ($author-img-height - $base-line) / 2;
 }
 
 .wf-author__date {
+  margin: 0 ($base-line / 2);
 
+  @include typo-caption;
+
+  line-height: $author-img-height;
 }
