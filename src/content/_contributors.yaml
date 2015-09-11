@@ -171,6 +171,19 @@ samdutton:
   email: dutton@google.com
   description: "Sam is a Developer Advocate"
 
+dgash:
+  name:
+    given: Dave
+    family: Gash
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  email: dgash@google.com
+  description: "Dave is a Tech Writer"
+
 ewagasperowicz:
   name:
     given: Ewa
@@ -444,6 +457,19 @@ renatomangini:
   google: 102180419759627664875
   twitter: renatomangini
   email: mangini@google.com
+
+josephmedley:
+  name:
+    given: Joseph
+    family: Medley
+  country: USA
+  role:
+    - author
+  homepage:
+  google: jmedley@google.com
+  twitter:
+  email:
+  description: "Technical Writer"
 
 jacquerie:
   name:
