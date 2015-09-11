@@ -28,17 +28,25 @@ function updateFile(filename) {
 
       //remove: class, article, collection, id, feedName, feedPath, seotitle
       data = data.replace(/^article:\n/m, '');
-      data = data.replace(/^collection: .+?\n/m, '');
       data = data.replace(/^id: .+?\n/m, '');
       data = data.replace(/^feedName:\s*.*\n/m, '');
       data = data.replace(/^feedPath:\s*.*\n/m, '');
       data = data.replace(/^class:\s*.*\n/m, '');
       data = data.replace(/^seotitle:.*\n/m, '');
 
+      // remove published: true - it's already published!
+      data = data.replace(/^published:\s*true\n/m, '');
+
       // un-indent written_on, updated_on and order
       data = data.replace(/^\s{2}(written_on: \d{4}-\d{2}-\d{2}\n)/m, '$1');
       data = data.replace(/^\s{2}(updated_on: \d{4}-\d{2}-\d{2}\n)/m, '$1');
       data = data.replace(/^\s{2}(order: \d{1,3}\n)/m, '$1');
+
+      // rename featured-image to featured_image
+      data = data.replace(/^featured-image:/m, 'featured_image:');
+
+      // verify title & description is properly quoted
+      data = data.replace(/^title:\s*([^"].*[^"])\n/m, 'title: "$1"\n');
 
       // change priority to translation_priority
       data = data.replace(/^(priority: \d{1,2}\n)/m, 'translation_$1');
@@ -51,7 +59,7 @@ function updateFile(filename) {
 
       // remove {% wrap content %} and {% endwrap %}
       data = data.replace(/^{%\s*wrap content\s*\%}\n/m, '<p class="intro">\n__XX_INTRO_XX__\n</p>\n');
-      data = data.replace(/^{%\s*endwrap\s*\%}\n/m, '');
+      data = data.replace(/^{%\s*endwrap\s*\%}\s?/m, '');
 
       // Update guides to use shared instead of modules
       data = data.replace(/^{\%\s*include modules\/takeaway.liquid/mg, '{% include shared/takeaway.liquid');
