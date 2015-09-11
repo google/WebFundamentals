@@ -5,16 +5,52 @@ toc:
 - title: "What's new"
   path: /updates/tools/
 - title: "Chrome DevTools"
-  path: https://developer.chrome.com/devtools
-  external: true
+  path: /tools/chrome-devtools/
+- title: "Iterate"
+  path: /tools/iterate/
+  hasSubNav: true
+  section:
+    - title: "Inspect and Edit Pages and Styles"
+      path: /tools/iterate/inspect-styles/
+    - title: "Manage Your Local Data Resources"
+      path: /tools/iterate/manage-data/
+- title: "JavaScript"
+  path: /tools/javascript/
+  hasSubNav: true
+  section:
+    - title: "Debug with breakpoints"
+      path: /tools/javascript/breakpoints/
+    - title: "Using the console"
+      path: /tools/javascript/console/
+    - title: "Interact from command line"
+      path: /tools/javascript/command-line/
+    - title: "Debugging native webviews"
+      path: /tools/javascript/native-development/
+- title: "Polymer Starter Kit"
+  path: /tools/polymer-starter-kit/
+- title: Profile
+  path: /tools/profile-performance/
+  hasSubNav: true
+  section:
+    - title: "How to Look at Performance"
+      path: /tools/profile-performance/evaluate-performance/
+    - title: "Runtime performance"
+      path: /tools/profile-performance/rendering-tools/
+    - title: "Page load performance"
+      path: /tools/profile-performance/network-performance/
+    - title: "Fix memory problems"
+      path: /tools/profile-performance/memory-problems
+- title: "Set up"
+  path: /tools/setup/
+  hasSubNav: true
+  section:
+    - title: "Set Up Your Workspace"
+      path: /tools/setup/workspace/
+    - title: "Set Up Remote Debugging"
+      path: /tools/setup/remote-debugging/
+    - title: "Set Up Virtual Device Testing"
+      path: /tools/setup/device-testing/
+    - title: "Set Up Code Readability"
+      path: /tools/setup/readability/
 - title: "Web Starter Kit"
   path: /tools/starter-kit/
-- title: Web <strong>Fundamentals</strong>
-  path: /fundamentals/
-  in_header: false
-- title: Web <strong>Starter Kit</strong>
-  path: /tools/starter-kit/
-  in_header: false
-- title: Web <strong>Showcase</strong>
-  path: /showcase/
-  in_header: false
