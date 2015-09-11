@@ -151,8 +151,3 @@ The relative url is the relative url for a page from the root of the domain
 {% highlight text %}
 {{page.relative_url}}
 {% endhighlight %}
-
-# is_index_page
-
-If you need to know if the current page is an index page, you can use
-is_index_page variable to determine if that is the case or not.
