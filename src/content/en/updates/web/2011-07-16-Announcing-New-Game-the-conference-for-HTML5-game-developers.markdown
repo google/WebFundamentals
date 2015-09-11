@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-07-16
-
 title: "Announcing New Game, the conference for HTML5 game developers"
-description: ""
-article:
-  written_on: 2011-07-16
-  updated_on: 2011-07-16
+written_on: 2011-07-16
+updated_on: 2011-07-16
 authors:
   - sethladd
 tags:

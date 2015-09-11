@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-12-12
-
 title: "Canvas-driven background images"
 description: "Powering a css background using canvas or webgl"
-article:
-  written_on: 2012-12-12
-  updated_on: 2012-12-12
+written_on: 2012-12-12
+updated_on: 2012-12-12
 authors:
   - ericbidelman
 tags:

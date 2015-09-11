@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-04-11
-
 title: "Big boost to DOM performance - WebKit's innerHTML is 240% faster"
-description: ""
-article:
-  written_on: 2012-04-11
-  updated_on: 2012-04-11
+written_on: 2012-04-11
+updated_on: 2012-04-11
 authors:
   - samdutton
 tags:

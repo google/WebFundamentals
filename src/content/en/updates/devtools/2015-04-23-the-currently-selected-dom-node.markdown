@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: The currently selected DOM node
+title: "The currently selected DOM node"
 date: 2015-04-23
-article:
-  written_on: 2015-04-23
-  updated_on: 2015-05-20
+written_on: 2015-04-23
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Learn the quick console shortcut to get the currently selected DOM node.
-featured-image: /web/updates/images/2015-05-19-console-shortcut-to-get-the-currently-selected-dom-node/dollar-zero.gif
+description: "Learn the quick console shortcut to get the currently selected DOM node."
+featured_image: /web/updates/images/2015-05-19-console-shortcut-to-get-the-currently-selected-dom-node/dollar-zero.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/15-dollar-zero
 permalink: /updates/2015/04/23/the-currently-selected-dom-node.html

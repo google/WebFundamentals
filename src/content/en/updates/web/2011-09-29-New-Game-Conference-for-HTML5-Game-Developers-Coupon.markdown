@@ -1,20 +1,13 @@
 ---
-
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-09-29
-
 title: "New Game Conference for HTML5 Game Developers Coupon"
-description: ""
-article:
-  written_on: 2011-09-29
-  updated_on: 2011-09-29
+written_on: 2011-09-29
+updated_on: 2011-09-29
 authors:
   - sethladd
 tags:

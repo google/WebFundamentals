@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-01-20
-
 title: "Yo Polymer – A Whirlwind Tour Of Web Component Tooling"
 description: "A whirlwind tour of Web Components, Polymer and front-end tooling for them."
-article:
-  written_on: 2014-01-20
-  updated_on: 2014-01-20
+written_on: 2014-01-20
+updated_on: 2014-01-20
 authors:
   - addyosmani
 tags:

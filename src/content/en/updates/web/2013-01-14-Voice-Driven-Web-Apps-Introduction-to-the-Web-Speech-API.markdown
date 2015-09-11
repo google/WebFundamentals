@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-01-14
-
 title: "Voice Driven Web Apps: Introduction to the Web Speech API"
-description: ""
-article:
-  written_on: 2013-01-14
-  updated_on: 2013-01-14
+written_on: 2013-01-14
+updated_on: 2013-01-14
 authors:
   - glenshires
 tags:

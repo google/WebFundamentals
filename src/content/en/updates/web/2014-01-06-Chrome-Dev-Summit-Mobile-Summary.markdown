@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-01-06
-
 title: "Chrome Dev Summit: Mobile Summary"
 description: "Here's the first in a series of reports from Chrome Dev Summit. There was a strong emphasis on Mobile and Cross-device development, so we'll kick off with that!"
-article:
-  written_on: 2014-01-06
-  updated_on: 2014-01-06
+written_on: 2014-01-06
+updated_on: 2014-01-06
 authors:
   - paulkinlan
 tags:

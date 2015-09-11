@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-10-28
-
 title: "App Cache Tools and Auto-Generators"
-description: ""
-article:
-  written_on: 2011-10-28
-  updated_on: 2011-10-28
+written_on: 2011-10-28
+updated_on: 2011-10-28
 authors:
   - sethladd
 tags:

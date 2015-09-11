@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Go to a line number at a specific column
+title: "Go to a line number at a specific column"
 date: 2015-05-08
-article:
-  written_on: 2015-05-08
-  updated_on: 2015-05-20
+written_on: 2015-05-08
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Learn how to jump to specific line numbers in the Sources panel.
-featured-image: /web/updates/images/2015-05-19-devtools-go-to-a-line-number-at-a-specific-column/go-to-column.gif
+description: "Learn how to jump to specific line numbers in the Sources panel."
+featured_image: /web/updates/images/2015-05-19-devtools-go-to-a-line-number-at-a-specific-column/go-to-column.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/9-go-to-column
 permalink: /updates/2015/05/08/go-to-a-line-number-at-a-specific-column.html

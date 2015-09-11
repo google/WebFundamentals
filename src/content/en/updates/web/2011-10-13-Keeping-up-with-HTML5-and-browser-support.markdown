@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-10-13
-
 title: "Keeping up with HTML5 and browser support"
-description: ""
-article:
-  written_on: 2011-10-13
-  updated_on: 2011-10-13
+written_on: 2011-10-13
+updated_on: 2011-10-13
 authors:
   - sethladd
 tags:

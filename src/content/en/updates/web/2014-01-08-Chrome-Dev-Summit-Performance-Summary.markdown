@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-01-08
-
 title: "Chrome Dev Summit: Performance Summary"
 description: "Performance Matters"
-article:
-  written_on: 2014-01-08
-  updated_on: 2014-01-08
+written_on: 2014-01-08
+updated_on: 2014-01-08
 authors:
   - paullewis
 tags:

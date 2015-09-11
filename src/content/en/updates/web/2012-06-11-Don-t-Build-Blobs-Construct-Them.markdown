@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-06-11
-
 title: "Don't Build Blobs, Construct Them"
-description: ""
-article:
-  written_on: 2012-06-11
-  updated_on: 2012-06-11
+written_on: 2012-06-11
+updated_on: 2012-06-11
 authors:
   - ericbidelman
 tags:

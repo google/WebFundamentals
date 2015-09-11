@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-02-17
-
 title: "The Yeoman Monthly Digest #3"
 description: "A monthly digest of high-quality Yeoman articles, generators and project news."
-article:
-  written_on: 2014-02-17
-  updated_on: 2014-02-17
+written_on: 2014-02-17
+updated_on: 2014-02-17
 authors:
   - addyosmani
 tags:

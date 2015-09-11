@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-01-07
-
 title: "Chrome Dev Summit: Polymer declarative, encapsulated, reusable components"
 description: "Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit"
-article:
-  written_on: 2014-01-07
-  updated_on: 2014-01-07
+written_on: 2014-01-07
+updated_on: 2014-01-07
 authors:
   - ericbidelman
 tags:

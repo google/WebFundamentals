@@ -1,20 +1,13 @@
 ---
-
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-06-29
-
 title: "HTML5 Libraries - Late June"
-description: ""
-article:
-  written_on: 2011-06-29
-  updated_on: 2011-06-29
+written_on: 2011-06-29
+updated_on: 2011-06-29
 authors:
   - paulirish
 tags:

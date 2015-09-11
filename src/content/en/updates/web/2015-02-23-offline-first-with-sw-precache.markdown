@@ -1,16 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2015-02-23
-
 title: "Offline-first, fast, with the sw-precache module"
 description: "Add service worker-powered offline capabilities to your site with the sw-precache module."
-
 written_on: 2015-02-23
 updated_on: 2015-02-23
-
 authors:
   - jeffposnick
 tags:

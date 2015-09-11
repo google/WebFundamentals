@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2014-01-10
-
 title: "Chrome Dev Summit: Platforms Summary"
 description: "Platforms"
-article:
-  written_on: 2014-01-10
-  updated_on: 2014-01-10
+written_on: 2014-01-10
+updated_on: 2014-01-10
 authors:
   - sethladd
 tags:

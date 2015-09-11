@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-12-24
-
 title: "Screensharing with WebRTC"
-description: ""
-article:
-  written_on: 2012-12-24
-  updated_on: 2012-12-24
+written_on: 2012-12-24
+updated_on: 2012-12-24
 authors:
   - samdutton
 tags:

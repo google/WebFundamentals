@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-12-22
-
 title: "CSS Filter Effects Landing in WebKit"
-description: ""
-article:
-  written_on: 2011-12-22
-  updated_on: 2011-12-22
+written_on: 2011-12-22
+updated_on: 2011-12-22
 authors:
   - ericbidelman
 tags:

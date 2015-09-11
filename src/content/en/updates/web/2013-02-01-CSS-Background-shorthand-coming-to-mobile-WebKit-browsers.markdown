@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-02-01
-
 title: "CSS Background shorthand coming to mobile WebKit browsers"
-description: ""
-article:
-  written_on: 2013-02-01
-  updated_on: 2013-02-01
+written_on: 2013-02-01
+updated_on: 2013-02-01
 authors:
   - petelepage
 tags:

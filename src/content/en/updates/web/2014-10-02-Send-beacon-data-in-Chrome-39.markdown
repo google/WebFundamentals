@@ -1,17 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2014-10-02
-
 title: "Send beacon data in Chrome 39"
-description: "Chrome 39 implements the Beacon API, which allows to send
-small async HTTP requests during the page unload events."
-
+description: "Chrome 39 implements the Beacon API, which allows to send small async HTTP requests during the page unload events."
 written_on: 2014-10-02
 updated_on: 2014-10-02
-
 authors:
   - ewagasperowicz
 permalink: /updates/2014/10/Send-beacon-data-in-Chrome-39.html

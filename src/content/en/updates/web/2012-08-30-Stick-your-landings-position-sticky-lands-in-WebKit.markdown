@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-08-30
-
 title: "Stick your landings! position: sticky lands in WebKit"
-description: ""
-article:
-  written_on: 2012-08-30
-  updated_on: 2012-08-30
+written_on: 2012-08-30
+updated_on: 2012-08-30
 authors:
   - ericbidelman
 tags:

@@ -1,20 +1,13 @@
 ---
-
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2011-11-08
-
 title: "WebGL demo roundup"
-description: ""
-article:
-  written_on: 2011-11-08
-  updated_on: 2011-11-08
+written_on: 2011-11-08
+updated_on: 2011-11-08
 authors:
   - ilmariheikkinen
 tags:

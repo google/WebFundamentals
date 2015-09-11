@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Better Incognito DevTools
+title: "Better Incognito DevTools"
 date: 2015-04-24
-article:
-  written_on: 2015-04-24
-  updated_on: 2015-05-20
+written_on: 2015-04-24
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Some appearance preferences are now persisted through to incognito windows.
-featured-image: /web/updates/images/2015-05-19-some-appearance-preferences-are-now-persisted-through-to-incognito-windows/incognito-preference-persist.gif
+description: "Some appearance preferences are now persisted through to incognito windows."
+featured_image: /web/updates/images/2015-05-19-some-appearance-preferences-are-now-persisted-through-to-incognito-windows/incognito-preference-persist.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/26-incognito-preference-persist
 permalink: /updates/2015/04/24/better-incognito-devtools.html

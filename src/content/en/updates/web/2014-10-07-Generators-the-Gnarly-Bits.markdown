@@ -1,12 +1,8 @@
 ---
 layout: updates/post
-published: true
-
 date: 2014-10-07
-
 title: "Generators: the Gnarly Bits"
 description: "An exploration of ES6 Generators."
-
 written_on: 2014-10-07
 updated_on: 2014-10-07
 authors:

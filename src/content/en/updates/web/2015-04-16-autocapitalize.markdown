@@ -1,16 +1,10 @@
 ---
-
 layout: updates/post
-published: true
-
 date: 2015-04-16
-
 title: "Autocapitalize for mobile"
 description: "Another text entry frustration for users is being removed."
-
 written_on: 2015-04-16
 updated_on: 2015-04-16
-
 authors:
   - paulkinlan
 tags:

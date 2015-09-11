@@ -1,19 +1,17 @@
 ---
 rss: false
 layout: updates/post
-published: true
-title: Quickly edit/view resources from the Elements panel
+title: "Quickly edit/view resources from the Elements panel"
 date: 2015-06-18
-article:
-  written_on: 2015-06-18
-  updated_on: 2015-06-18
+written_on: 2015-06-18
+updated_on: 2015-06-18
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-featured-image: /web/updates/images/2015-06-18-quickly-view-edit-css-or-javascript-resources-from-the-elements-panel/open-in-sources-from-elements.gif
+featured_image: /web/updates/images/2015-06-18-quickly-view-edit-css-or-javascript-resources-from-the-elements-panel/open-in-sources-from-elements.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/40-open-in-sources-from-elements
 permalink: /updates/2015/06/18/quickly-edit-view-resources-from-the-elements-panel.html

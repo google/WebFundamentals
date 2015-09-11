@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-01-26
-
 title: "Getting Rid of Synchronous XHRs"
-description: ""
-article:
-  written_on: 2012-01-26
-  updated_on: 2012-01-26
+written_on: 2012-01-26
+updated_on: 2012-01-26
 authors:
   - ericbidelman
 tags:

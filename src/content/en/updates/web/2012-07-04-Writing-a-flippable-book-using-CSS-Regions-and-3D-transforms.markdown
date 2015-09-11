@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-07-04
-
 title: "Writing a flippable book using CSS Regions and 3D transforms"
-description: ""
-article:
-  written_on: 2012-07-04
-  updated_on: 2012-07-04
+written_on: 2012-07-04
+updated_on: 2012-07-04
 authors:
   - ilmariheikkinen
 tags:

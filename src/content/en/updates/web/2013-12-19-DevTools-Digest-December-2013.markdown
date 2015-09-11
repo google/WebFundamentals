@@ -1,19 +1,14 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2013-12-19
-
 title: "DevTools Digest December 2013"
 description: "The latest update for changes to the Chrome DevTools."
-article:
-  written_on: 2013-12-19
-  updated_on: 2013-12-19
+written_on: 2013-12-19
+updated_on: 2013-12-19
 authors:
   - umarhansa
 tags:

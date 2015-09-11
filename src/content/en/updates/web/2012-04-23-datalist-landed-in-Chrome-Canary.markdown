@@ -1,19 +1,13 @@
 ---
-
 layout: updates/post
-published: true
-
 collection: updates
 category: chrome
 product: chrome
 type: news
 date: 2012-04-23
-
 title: "datalist landed in Chrome Canary"
-description: ""
-article:
-  written_on: 2012-04-23
-  updated_on: 2012-04-23
+written_on: 2012-04-23
+updated_on: 2012-04-23
 authors:
   - agektmr
 tags:

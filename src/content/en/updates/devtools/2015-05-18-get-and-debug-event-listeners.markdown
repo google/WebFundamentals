@@ -1,20 +1,17 @@
 ---
-
 layout: updates/post
-published: true
-title: Get and debug event listeners
+title: "Get and debug event listeners"
 date: 2015-05-18
-article:
-  written_on: 2015-05-18
-  updated_on: 2015-05-20
+written_on: 2015-05-18
+updated_on: 2015-05-20
 authors:
-- umarhansa
+  - umarhansa
 collection: updates
 type: tip
 category: tools
 product: chrome-devtools
-description: Get and debug event listeners in DevTools with these console commands.
-featured-image: /web/updates/images/2015-05-20-get-and-debug-event-listeners/get-debug-event-listeners.gif
+description: "Get and debug event listeners in DevTools with these console commands."
+featured_image: /web/updates/images/2015-05-20-get-and-debug-event-listeners/get-debug-event-listeners.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/31-get-debug-event-listeners
 permalink: /updates/2015/05/18/get-and-debug-event-listeners.html
