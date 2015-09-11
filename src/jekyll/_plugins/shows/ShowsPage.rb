@@ -19,7 +19,8 @@ module Jekyll
 
   class ShowsPage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      super(site, relativeDir, filename, langcode)
+      validKeys = ['youtubeID']
+      super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Shows'
       self.data['html_head_title'] = 'Web Shows - Google Developers'

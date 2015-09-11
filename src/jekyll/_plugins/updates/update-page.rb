@@ -18,7 +18,8 @@ module Jekyll
 
   class UpdatePage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      super(site, relativeDir, filename, langcode)
+      validKeys = ['permalink', 'tags']
+      super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Updates'
       self.data['html_head_title'] = 'Web Updates - Google Developers'

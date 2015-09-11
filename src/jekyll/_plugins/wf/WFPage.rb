@@ -23,7 +23,7 @@ module Jekyll
 
     attr_reader :canonical_url, :relative_url, :directories
 
-    def initialize(site, relativeDir, filename)
+    def initialize(site, relativeDir, filename, validKeys=[])
       @contentSource = site.config['WFContentSource']
       if @contentSource.nil?
         Jekyll.logger.info "WFContentSource is not defined in the config yaml"
@@ -52,22 +52,22 @@ module Jekyll
         self.read_yaml(fullFilePath, @name)
       end
 
-      validKeys = [
-        'date', 'tags',
-       'layout', 'title', 'description', 'order', 'translation_priority',
-        'written_on', 'updated_on', 'authors', 'translators', 'introduction',
-        'permalink', 'published', 'key-takeaways', 'notes', 'related-guides',
-        'udacity', 'comments'
+      defaultKeys = [
+        'layout', 'title', 'description', 'order', 'translation_priority', 
+        'authors', 'translators', 'comments', 'written_on', 'updated_on',
+        'published', 'rss', 'comments', 'key-takeaways', 'notes',
+        'related-guides'
       ]
+      allowedKeys = defaultKeys + validKeys
       invalidKeys = []
       self.data.each do |key, value|
-        if not validKeys.include? key
+        if not allowedKeys.include? key
           invalidKeys << key
         end
       end
 
       if invalidKeys.length > 0
-          puts "Found " + invalidKeys.length.to_s + " invalid keys in " + self.relative_path + '/' + self.name
+          puts "Found " + invalidKeys.length.to_s + " invalid keys in " + @langcode + '/' + self.relative_path
 
           invalidKeysString = ''
           invalidKeys.each { |key|
