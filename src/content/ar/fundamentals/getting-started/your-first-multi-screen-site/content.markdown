@@ -4,77 +4,69 @@ title: "إنشاء المحتوى والهيكل"
 description: "يعد المحتوى أهم عناصر أي موقع على الويب. وسنستعرض في هذا الدليل كيفية التخطيط لتصميم موقعك على الويب بحيث يتوافق لأول مرة مع عدة أجهزة."
 notes:
   styling:
-    - سيأتي التصميم في وقت لاحق
+    - "سيأتي التصميم في وقت لاحق"
 written_on: 2014-04-17
 updated_on: 2014-04-23
 order: 1
 authors:
   - paulkinlan
+translators:
 related-guides:
   create-amazing-forms:
     -
-      title: إنشاء نماذج رائعة
+      title: "إنشاء نماذج رائعة"
       href: fundamentals/input/form/
       section:
-        id: user-input
         title: "النماذج"
         href: fundamentals/input/form/
     -
-      title: إدخال التصنيف والاسم على نحو سليم
+      title: "إدخال التصنيف والاسم على نحو سليم"
       href: fundamentals/input/form/label-and-name-inputs
       section:
-        id: user-input
         title: "النماذج"
         href: fundamentals/input/form/
     -
-      title: اختيار نوع الإدخال الأفضل
+      title: "اختيار نوع الإدخال الأفضل"
       href: fundamentals/input/form/choose-the-best-input-type
       section:
-        id: user-input
         title: "النماذج"
         href: fundamentals/input/form/
   video:
     -
-      title: الاستخدام الفعال للفيديو
+      title: "الاستخدام الفعال للفيديو"
       href: fundamentals/media/video/
       section:
-        id: introduction-to-media
         title: "الفيديو"
         href: fundamentals/media/
     -
-      title: تغيير موضع البدء
+      title: "تغيير موضع البدء"
       href: fundamentals/media/video/add-a-video#specify-a-start-and-end-time
       section:
-        id: introduction-to-media
         title: "الفيديو"
         href: fundamentals/media/
     -
-      title: تضمين صورة ملصق
+      title: "تضمين صورة ملصق"
       href: fundamentals/media/video/add-a-video#include-a-poster-image
       section:
-        id: introduction-to-media
         title: "الفيديو"
         href: fundamentals/media/
   images:
     -
-      title: الاستخدام الفعال للصور
+      title: "الاستخدام الفعال للصور"
       href: fundamentals/media/images/
       section:
-        id: introduction-to-media
         title: "الصور"
         href: fundamentals/media/
     -
       title:  الاستخدام الصحيح للصور في الترميز
       href: fundamentals/media/images/images-in-markup
       section:
-        id: introduction-to-media
         title: "الصور"
         href: fundamentals/media/
     -
       title: تحسين الصور
       href: fundamentals/performance/optimizing-content-efficiency/image-optimization
       section:
-        id: introduction-to-media
         title: "الصور"
         href: fundamentals/media/
 
@@ -84,6 +76,10 @@ key-takeaways:
     - صمم البنية المعلوماتية (IA) لإطارات العرض الواسعة والضيقة.
     - أنشئ عرضًا هيكليًا للصفحة مع المحتوى ولكن بدون تنسيق.
 ---
+
+<p class="intro">
+   يعد المحتوى أهم عناصر أي موقع على الويب. لذا يجب الاهتمام بالتصميم لصالح المحتوى وعدم الامتثال لإملاءات التصميم على المحتوى. نتناول خلال هذا الدليل المحتوى المطلوب وكيفية إنشاء هيكل للصفحة يتناسب مع المحتوى، كما نعرض الصفحة بتنسيق خطي بسيط يتناسب مع إطارات العرض الواسعة والضيقة.
+</p>
 
 {% include shared/toc.liquid %}
 
@@ -102,7 +98,7 @@ key-takeaways:
 كما توصلنا إلى بنية معلوماتية تقريبية وتنسيق لإطارات العرض الواسعة والضيقة على حد سواء.
 
 <div class="demo clear" style="background-color: white;">
-  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.png" alt="البنية المعلوماتية لإطار العرض الضيق">
+  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="البنية المعلوماتية لإطار العرض الضيق">
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="البنية المعلوماتية لإطار العرض الواسع">
 </div>
 
@@ -201,7 +197,8 @@ key-takeaways:
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
 </div>
 
-ستلاحظ أن الصفحة لا تبدو مطمئنة في الوقت الحالي؛ ولكن هناك غرض من ذلك.
+ستلاحظ أن الصفحة لا تبدو مطمئنة في الوقت الحالي؛ ولكن هناك غرض من ذلك. 
 يعد المحتوى أهم عنصر من عناصر موقع الويب، ويجب أن نتأكد من أن بنية المعلومات المقدمة والكثافة تتميز بالثبات. حصلنا من خلال هذا الدليل على أساس ممتاز يمكن الاعتماد عليه. وسنهتم في الدليل التالي بوضع تنسيق المحتوى.
 
-{% include fundamentals/section_toc.liquid %}
+
+
