@@ -303,7 +303,7 @@ order: 2
 وعند التصميم لجهاز جوّال أولاً، يكون من الصعب التراجع عن الأنماط المستخدمة، ولذلك يجب تقسيم جدول إطار العرض الضيق CSS  من إطار العرض الواسع css.
 وبذلك نحصل على فصل واضح وثابت.
 
-{% include_code _code/content-with-styles.html table-css css %}
+{% include_code src=_code/content-with-styles.html snippet=table-css lang=css %}
 
 ## الملخص
 
