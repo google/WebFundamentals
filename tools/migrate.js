@@ -19,6 +19,8 @@ function updateFile(filename) {
       console.dir(err);
     } else {
       console.log('Migrating ' + filename);
+      data = data.replace(/\r\n/gm, '\n');
+
       // change the layout
       data = data.replace(/^layout: article\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: landing\n/m, 'layout: fundamentals/list-subdirectories\n');
@@ -78,13 +80,17 @@ function updateFile(filename) {
       data = data.replace(/^{\% include_code _code\/([^ ]*) (\w+) (\w+)\s*\%}/gm, '{% include_code src=_code/$1 snippet=$2 lang=$3 %}');
 
       // Update Grids
+      data = data.replace(/class="g-wide--2 g-medium--half"/gm, 'class="mdl-cell mdl-cell--6--col"');
+      data = data.replace(/class="g-wide--2 g-wide--last g-medium--half g--last"/gm, 'class="mdl-cell mdl-cell--6--col"');
       data = data.replace(/class="g-wide--1 g-medium--half"/gm, 'class="mdl-cell mdl-cell--6--col"');
       data = data.replace(/class="g-wide--3 g-wide--last g-medium--half g--last"/gm, 'class="mdl-cell mdl-cell--6--col"');
       data = data.replace(/class="g--half"/gm, 'class="mdl-cell mdl-cell--6--col"');
       data = data.replace(/class="g--half g--last"/gm, 'class="mdl-cell mdl-cell--6--col"');
+      data = data.replace(/^<div class=\"clear\">\n\s*<([\w]+) class="mdl-cell/gm, '<div class="mdl-grid">\n  <$1 class="mdl-cell');
 
       // Use the new YouTube player
       data = data.replace(/{\%\s*include modules\/video\.liquid id="(\w+)"\s*\%}/gm, '{% ytvideo $1 %}');
+      data = data.replace(/<div class="media media--video">\n  <iframe src="https:\/\/www.youtube.com\/embed\/(.*)\?.*<\/iframe>\n<\/div>/gm, '{% ytvideo $1 %}');
 
       // Update tables
       data = data.replace(/<table>/gm, '<table class="mdl-data-table mdl-js-data-table">');
@@ -94,6 +100,7 @@ function updateFile(filename) {
 
       // Remove lone style blocks
       data = data.replace(/<style\b[^>]*>[\w\W]*?^<\/style>\n(?!{%\s*endhighlight %})/gm, '');
+      data = data.replace(/ style="max-width: 100%;"/gm, '');
 
       // Handle the introduction
       var reIntro = /^introduction:[\s'"]{0,2}(.*?)['"]?\n/m;
@@ -106,7 +113,12 @@ function updateFile(filename) {
       }
       data = data.replace(reIntro, '');
 
-      fs.writeFile(filename, data);
+      fs.writeFile(filename, data, function(err) {
+        if (err) {
+          console.error('ERROR: could not write file: ' + filename);
+          console.dir(err);
+        }
+      });
     }
   });
 }
