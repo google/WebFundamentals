@@ -188,7 +188,7 @@ module Jekyll
               File.exists? File.join(@contentSource, languageId, relativePath, fileEntry)
             }
             page.data['is_localized'] = supportedTranslations.count > 0
-            translated_pages = []
+            translated_pages = [page]
             supportedTranslations.each do |languageId|
               translationFilePath = File.join @contentSource, languageId, relativePath
 
@@ -204,6 +204,7 @@ module Jekyll
                 translationPage.data[key] = page.data[key]
               }
               translationPage.data['_context'] = pagesTrees
+              translationPage.data['translations'] = translated_pages
               translated_pages << translationPage
               site.pages << translationPage
             end

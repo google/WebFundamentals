@@ -8,6 +8,17 @@
   display: inline-block;
 }
 
+.wf-translation-link__item:after {
+  content: '|';
+
+  display: inline-block;
+
+}
+
+.wf-translation-link__item:last-child:after {
+  content: none;
+}
+
 .wf-translation-link__link {
   text-decoration: none;
 }

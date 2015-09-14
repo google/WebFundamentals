@@ -1,8 +1,11 @@
-{% if page.translations.size > 0 %}
+{% comment %}
+  The greater > 1 is to account for English language.
+{% endcomment %}
+{% if page.translations.size > 1 %}
 <ul class="wf-translation-links">
   {% for translatedPage in page.translations %}
     <li class="wf-translation-link__item">
-      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPage.canonical_url | localize_link:translatedPage }}">{{  translatedPage.langcode | lang_name }}</a>
+      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPage.canonical_url }}">{{  translatedPage.langcode | lang_name }}</a>
     </li>
   {% endfor %}
 </ul>
