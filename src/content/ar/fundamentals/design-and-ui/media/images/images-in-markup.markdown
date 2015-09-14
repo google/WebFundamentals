@@ -19,7 +19,7 @@ notes:
       راجع موقع <a href="http://responsiveimages.org/#implementation">ResponsiveImages.org</a> للحصول على مزيد من التفاصيل. 
   compressive:
     - توخ الحذر بشأن الأسلوب المضغوط نظرًا للتكاليف الزائدة التي يتسبب فيها بسبب الذاكرة وإلغاء الترميز.  يعد تغيير حجم الصور الكبيرة لتناسب الشاشات الصغيرة أمرًا مكلفًا وقد يتسبب في إزعاج خاصة على الأجهزة محدودة التكلفة حيث يكون كل من الذاكرة والمعالج محدودين.
-shortlinks: 
+comments: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple21
 ---

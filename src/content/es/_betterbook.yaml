@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Empezar
+    path: /fundamentals/getting-started/
+  - title: Documentación
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Principios de diseño del sitio
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Diseños multipantalla
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Conceptos básicos del diseño web adaptable
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Patrones del diseño web adaptable
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Patrones de diseño
+            path: /fundamentals/layouts/layout-patterns/
+          - title: Elementos de IU
+            path: /fundamentals/layouts/ui-elements/
+      - title: Formularios e input de los usuarios
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Entrada táctil
+            path: /fundamentals/input/touch/
+          - title: Entrada de formulario
+            path: /fundamentals/input/form/
+      - title: Apariencia
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Introducción a las animaciones
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Imágenes, vídeos y audio"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Imágenes
+            path: /fundamentals/media/images/
+          - title: Vídeos
+            path: /fundamentals/media/video/
+          - title: Audio
+            path: /fundamentals/media/audio/
+      - title: Monetización
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Monetización de anuncios
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Descubrimiento y distribución
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimización for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Mejora los resultados de las búsquedas"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Acceso del dispositivo
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Ubicación del usuario
+            path: /fundamentals/device-access/user-location
+          - title: Click para llamar
+            path: /fundamentals/device-access/click-to-call
+      - title: Rendimiento
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Visualización de la ruta crítica
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: Optimización de la eficacia del contenido
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Optimización de las redes
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Optimización de la interactividad
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Medición del rendimiento
+            path: /fundamentals/performance/measuring-performance/
+  - title: Herramientas
+    path: /fundamentals/tools/
+  - title: Recursos
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Glosario
+        path: /fundamentals/resources/glossary/
+      - title: Ejemplos
+        path: /fundamentals/resources/samples/
+      - title: Guía de estilo
+        path: /fundamentals/resources/styleguide/
+      - title: Artículo de ejemplo
+        path: /fundamentals/resources/example-article/
+  - title: "<strong>Kit de herramientas</strong> para empezar"
+    path: /starter-kit/
+    in_header: false
