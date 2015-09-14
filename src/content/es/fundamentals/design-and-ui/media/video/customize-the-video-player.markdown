@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Personalizar el reproductor de vídeo"
 description: "Cada plataforma muestra el vídeo de una forma distinta. Las soluciones para móviles deben tener en cuenta la orientación del dispositivo. Usa el API de Fullscreen para controlar el modo de pantalla completa del contenido de vídeo."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 3
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - Usa el elemento de vídeo que se cargará y que descodificará y reproducirá el vídeo en tu sitio.

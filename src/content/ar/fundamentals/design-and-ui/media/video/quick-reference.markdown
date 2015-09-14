@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "مرجع سريع"
 description: "نظرة عامة سريعة حول الخواص على عنصر الفيديو."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 5
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - استخدم عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله.

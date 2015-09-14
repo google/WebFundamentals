@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "SVG für Symbole verwenden"
 description: "Wenn Sie Ihrer Seite Symbole hinzufügen, sollten Sie falls möglich SVG-Symbole oder gegebenenfalls Unicode-Zeichen verwenden."
-authors:
-  - petelepage
 written_on: 2014-06-10
 updated_on: 2014-06-10
-order: 3
 key-takeaways:
   avoid-images:
     - Verwenden Sie anstelle von Rasterbildern SVG oder Unicode für Symbole.

@@ -1,18 +1,14 @@
 ---
-layout: shared/plain
 title: "Principios básicos de la aceleración"
 description: "Aprenda a lograr que sus animaciones sean suaves pero interesantes."
 written_on: 2014-08-08
 updated_on: 2014-10-21
-order: 3
 translation_priority: 0
 key-takeaways:
   code:
     - "Gracias a la aceleración, sus animaciones se ven más naturales."
     - "Seleccione animaciones de salida lenta para los elementos de las IU."
     - "Evite las animaciones de entradas lentas o de entradas y salidas lentas, a menos que sean breves, ya que generalmente les parecen muy lentas a los usuarios finales."
-authors:
-  - paullewis
 ---
 
 <p class="intro">

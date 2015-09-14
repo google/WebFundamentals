@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Bilder nach Möglichkeit vermeiden"
 description: "Manchmal ist es besser, Bilder gar nicht zu nutzen. Verwenden Sie wann immer möglich die nativen Funktionen des Browsers, um gleiche oder ähnliche Funktionalität bereitzustellen."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-06-10
-order: 5
 key-takeaways:
   avoid-images:
     - "Verzichten Sie wann immer möglich auf Bilder und nutzen Sie stattdessen Browserfunktionen für Schatten, Farbverläufe, abgerundete Ecken usw."

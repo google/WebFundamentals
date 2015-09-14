@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Colocación de columnas"
 description: "Los patrones de diseño web receptivos evolucionan rápidamente, pero existe solo un puñado de patrones establecidos que funcionan de forma eficiente en los diferentes escritorios y dispositivos móviles."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-10-21
-order: 2
 translation_priority: 1
 ---
 

@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Video hinzufügen"
 description: "Hier erfahren Sie, wie Sie Videoinhalte ganz einfach zu Ihrer Website hinzufügen und den Nutzern die bestmögliche Nutzererfahrung bieten können - egal auf welchem Gerät."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 1
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - "Verwenden Sie das Videoelement zum Laden, Decodieren und Abspielen von Videos auf Ihrer Website."

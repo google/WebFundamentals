@@ -1,11 +1,7 @@
 ---
-layout: shared/plain
 title: "أساسيات تصميم الموقع"
 written_on: 2014-08-08
 updated_on: 2014-09-17
-order: 1
-authors:
-  - petelepage
 list:
   -
     title: "الصفحة الرئيسية والتنقل داخل الموقع"

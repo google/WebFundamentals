@@ -1,13 +1,9 @@
 ---
-layout: shared/plain
 title: "Orientación del dispositivo"
 description: "En el evento de orientación del dispositivo, se proporcionan datos de la rotación, que incluyen cuánto se está inclinando el dispositivo de la parte frontal a la parte trasera y de lado a lado y, si el teléfono o la computadora portátil poseen una brújula, la dirección hacia la que está orientado el dispositivo."
 written_on: 2014-06-17
 updated_on: 2014-10-21
-order: 1
 translation_priority: 1
-authors:
-  - petelepage
 key-takeaways:
   devorientation: 
     - "Utilícelo con moderación."

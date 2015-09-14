@@ -1,13 +1,9 @@
 ---
-layout: shared/plain
 title: "Limítese solo a las propiedades del compositor y administre el recuento de capas"
 description: "Composición hace referencia al proceso en el que las partes pintadas de la página se unen para mostrarlas en la pantalla."
 written_on: 2015-03-20
 updated_on: 2015-03-20
-order: 6
 translation_priority: 0
-authors:
-  - paullewis
 notes:
   flip:
     - "Si le preocupa no poder limitar las animaciones a estas propiedades, consulte el<a href='http://aerotwist.com/blog/flip-your-animations'>principio FLIP (Primero, Último, Invertir, Reproducir)</a>, que puede ayudarlo a reasignar las animaciones a los cambios de las propiedades transforms y opacity desde propiedades más costosas."

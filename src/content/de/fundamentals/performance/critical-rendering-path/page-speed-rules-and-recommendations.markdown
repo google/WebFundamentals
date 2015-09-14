@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "PageSpeed-Regeln und Empfehlungen"
 description: "PageSpeed Insights-Regeln im Kontext: worauf bei der Optimierung des kritischen Rendering-Pfads zu achten ist und warum"
 written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 8
-authors:
-  - ilyagrigorik
 ---
 
 <p class="intro">

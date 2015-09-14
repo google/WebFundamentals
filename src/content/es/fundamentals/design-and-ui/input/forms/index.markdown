@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Creación de formularios asombrosos"
 description: "Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas."
 written_on: 2014-04-30
 updated_on: 2014-10-21
-order: 1
-authors:
-  - petelepage
 translation_priority: 0
 ---
 

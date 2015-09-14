@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Referencia rápida"
 description: "Un resumen de las propiedades del elemento de vídeo"
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 5
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - Usa el elemento de vídeo que se cargará y que descodificará y reproducirá el vídeo en tu sitio.

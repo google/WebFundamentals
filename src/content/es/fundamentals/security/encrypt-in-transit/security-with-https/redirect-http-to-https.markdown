@@ -1,11 +1,7 @@
 ---
-layout: shared/plain
 title: "Redireccionamiento de HTTP a HTTPS"
-authors:
-  - chrispalmer
 written_on: 2015-03-27
 updated_on: 2015-03-27
-order: 5
 translation_priority: 0
 key-takeaways:
   - "Debe colocar un vínculo canónico en el encabezado de su página para indicarles a los motores de búsqueda que https es la mejor forma de acceder al sitio."
