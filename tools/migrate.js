@@ -21,6 +21,7 @@ function updateFile(filename) {
       console.log('Migrating ' + filename);
       // change the layout
       data = data.replace(/^layout: article\n/m, 'layout: shared/plain\n');
+      data = data.replace(/^layout: landing\n/m, 'layout: fundamentals/list-subdirectories\n');
       data = data.replace(/^layout: section\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: devtools\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: tools-article\n/m, 'layout: shared/plain\n');
@@ -28,11 +29,12 @@ function updateFile(filename) {
 
       //remove: class, article, collection, id, feedName, feedPath, seotitle
       data = data.replace(/^article:\n/m, '');
-      data = data.replace(/^id: .+?\n/m, '');
+      data = data.replace(/^id:\s*.*\n/m, '');
       data = data.replace(/^feedName:\s*.*\n/m, '');
       data = data.replace(/^feedPath:\s*.*\n/m, '');
       data = data.replace(/^class:\s*.*\n/m, '');
-      data = data.replace(/^seotitle:.*\n/m, '');
+      data = data.replace(/^seotitle:\s*.*\n/m, '');
+      data = data.replace(/^collection:\s*.*\n/m, '');
 
       // remove published: true - it's already published!
       data = data.replace(/^published:\s*true\n/m, '');
@@ -44,9 +46,6 @@ function updateFile(filename) {
 
       // rename featured-image to featured_image
       data = data.replace(/^featured-image:/m, 'featured_image:');
-
-      // verify title & description is properly quoted
-      data = data.replace(/^title:\s*([^"].*[^"])\n/m, 'title: "$1"\n');
 
       // change priority to translation_priority
       data = data.replace(/^(priority: \d{1,2}\n)/m, 'translation_$1');
@@ -64,8 +63,11 @@ function updateFile(filename) {
       // Update guides to use shared instead of modules
       data = data.replace(/^{\%\s*include modules\/takeaway.liquid/mg, '{% include shared/takeaway.liquid');
       data = data.replace(/^{\%\s*include modules\/remember.liquid/mg, '{% include shared/remember.liquid');
+      data = data.replace(/^{\%\s*include modules\/highlight.liquid/gm, '{% include shared/remember.liquid');
       data = data.replace(/^{\%\s*include modules\/related_guides.liquid/mg, '{% include shared/related_guides.liquid');
       data = data.replace(/^{\%\s*include modules\/toc.liquid.*}/mg, '{% include shared/toc.liquid %}');
+      data = data.replace(/^{\%\s*include modules\/udacity_player.liquid/gm, '{% include fundamentals/udacity_player.liquid');
+      data = data.replace(/^{\%\s*include modules\/udacity.liquid/gm, '{% include fundamentals/udacity_course.liquid');
 
       // Remove nextarticle.liquid
       data = data.replace(/^{\%.*include modules\/nextarticle.liquid.*}\n/m, '');
@@ -75,7 +77,7 @@ function updateFile(filename) {
       data = data.replace(/^{\% include_code _code\/([^ ]*) (\w+)\s*\%}/gm, '{% include_code src=_code/$1 snippet=$2 %}');
       data = data.replace(/^{\% include_code _code\/([^ ]*) (\w+) (\w+)\s*\%}/gm, '{% include_code src=_code/$1 snippet=$2 lang=$3 %}');
 
-      // Update Tables
+      // Update Grids
       data = data.replace(/class="g-wide--1 g-medium--half"/gm, 'class="mdl-cell mdl-cell--6--col"');
       data = data.replace(/class="g-wide--3 g-wide--last g-medium--half g--last"/gm, 'class="mdl-cell mdl-cell--6--col"');
       data = data.replace(/class="g--half"/gm, 'class="mdl-cell mdl-cell--6--col"');
@@ -83,6 +85,15 @@ function updateFile(filename) {
 
       // Use the new YouTube player
       data = data.replace(/{\%\s*include modules\/video\.liquid id="(\w+)"\s*\%}/gm, '{% ytvideo $1 %}');
+
+      // Update tables
+      data = data.replace(/<table>/gm, '<table class="mdl-data-table mdl-js-data-table">');
+      data = data.replace(/<table class=\"table\">/gm, '<table class="mdl-data-table mdl-js-data-table">');
+      data = data.replace(/<table class=\"table-\d\">/gm, '<table class="mdl-data-table mdl-js-data-table">');
+      data = data.replace(/<colgroup>[\w\W]*?<\/colgroup>\n/gm, '');
+
+      // Remove lone style blocks
+      data = data.replace(/<style\b[^>]*>[\w\W]*?^<\/style>\n(?!{%\s*endhighlight %})/gm, '');
 
       // Handle the introduction
       var reIntro = /^introduction:[\s'"]{0,2}(.*?)['"]?\n/m;
