@@ -1,7 +1,6 @@
 ---
 title: "Videogröße richtig wählen"
 description: "Für die Zufriedenheit der Nutzer spielt die Größe eine wichtige Rolle."
-written_on: 2014-04-16
 updated_on: 2014-09-19
 key-takeaways:
   size-matters:

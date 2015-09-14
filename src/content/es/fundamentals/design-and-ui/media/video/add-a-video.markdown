@@ -1,7 +1,6 @@
 ---
 title: "Añadir un vídeo"
 description: "Aprende los métodos más sencillos para añadir vídeos en tu sitio y asegurarte de que los usuarios disfruten de la mejor experiencia posible en cualquier dispositivo."
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
   add-a-video:

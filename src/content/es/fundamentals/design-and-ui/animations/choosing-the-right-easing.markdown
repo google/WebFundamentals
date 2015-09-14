@@ -1,7 +1,6 @@
 ---
 title: "Elección de la aceleración adecuada"
 description: "Elija la aceleración adecuada para su proyecto, ya sea entrada lenta, salida lenta o ambos. ¡Sea flexible y pruebe nuevos efectos!"
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

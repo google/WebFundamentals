@@ -1,7 +1,6 @@
 ---
 title: "Animación de las vistas modales"
 description: "Aprenda a animar vistas modales en sus aplicaciones."
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

@@ -1,7 +1,6 @@
 ---
 title: "Bildoptimierung"
 description: "Bilder stellen oftmals den größten Teil der heruntergeladenen Bytes auf einer Webseite dar und belegen zudem einen erheblichen Teil des sichtbaren Bereichs. Deshalb lassen sich mit der Optimierung von Bildern häufig die größten Bytemengen einsparen und die bedeutendsten Leistungsverbesserungen für eine Website erzielen. Je weniger Bytes der Browser herunterladen muss, desto weniger umkämpft ist die Bandbreite des Clients und desto schneller kann der Browser nützliche Inhalte herunterladen und auf dem Bildschirm darstellen."
-written_on: 2014-05-07
 updated_on: 2014-05-10
 key-takeaways:
   replace:

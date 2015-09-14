@@ -4,7 +4,6 @@ description: "يعد المحتوى أهم عناصر أي موقع على ال�
 notes:
   styling:
     - "سيأتي التصميم في وقت لاحق"
-written_on: 2014-04-17
 updated_on: 2014-04-23
 translators:
 related-guides:

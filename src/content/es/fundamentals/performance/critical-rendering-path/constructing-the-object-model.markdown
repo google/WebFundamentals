@@ -1,7 +1,6 @@
 ---
 title: "Crear el modelo de objetos"
 description: "Antes de que el navegador pueda publicar contenido en pantalla, tiene que crear los árboles DOM y CSSOM. Por eso, tenemos que asegurarnos de proporcionar tanto el archivo HTML como el CSS al navegador lo antes posible."
-written_on: 2014-04-01
 updated_on: 2014-09-12
 key-takeaways:
   crear-modelo-objetos:

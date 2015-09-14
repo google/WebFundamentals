@@ -1,7 +1,6 @@
 ---
 title: "Anzeigen anpassen"
 description: "Auch bei den besten Anzeigen kann die Nutzerfreundlichkeit noch verbessert werden. Zwar kommen die eigentlichen Anzeigeninhalte von den Werbetreibenden, Sie bestimmen jedoch über die Art des Inhalts sowie Farbe, Größe und Platzierung dieser Anzeigen."
-written_on: 2014-07-31
 updated_on: 2014-08-12
   - petelepage
 key-takeaways:

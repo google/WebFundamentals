@@ -1,7 +1,6 @@
 ---
 title: "Introducción a la terminología de seguridad"
 description: "Cuando se realiza una migración hacia HTTPS, uno de los obstáculos a los que se enfrentan los operadores de sitios es conceptual: ¿Qué está sucediendo exactamente? ¿Qué significa toda la terminología criptográfica? En esta sección, incluimos una descripción general muy breve."
-written_on: 2015-03-27
 updated_on: 2015-03-27
 translation_priority: 0
 key-takeaways:

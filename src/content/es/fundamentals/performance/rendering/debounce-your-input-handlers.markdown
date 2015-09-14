@@ -1,7 +1,6 @@
 ---
 title: "Eliminación de los efectos de rebote en los controladores de entrada"
 description: "Los controladores de entrada son una posible causa de problemas de rendimiento en sus aplicaciones, ya que pueden bloquear la compleción de los marcos y causar trabajo de diseño adicional (e innecesario)."
-written_on: 2015-03-20
 updated_on: 2015-03-20
 translation_priority: 0
 notes:

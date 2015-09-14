@@ -1,7 +1,6 @@
 ---
 title: "Entrega de validación en tiempo real"
 description: "La validación de datos en tiempo real no solo le permite mantener sus datos limpios, sino que también lo ayuda a mejorar la experiencia del usuario.  Los navegadores modernos poseen varias herramientas incorporadas que permiten realizar la validación de datos en tiempo real y que pueden evitar que el usuario envíe un formulario no válido.  Se deben utilizar indicaciones visuales para mostrar si un formulario se completó correctamente."
-written_on: 2014-04-30
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

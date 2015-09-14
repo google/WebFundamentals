@@ -1,7 +1,6 @@
 ---
 title: "الصور في  CSS"
 description: "يعد العنصر `background` في CSS `أداة مفيدة لإضافة صور معقدة إلى العناصر، مما يسهل إضافة عدة صور ويساعد على تكرارها وغير ذلك الكثير."
-written_on: 2014-04-30
 updated_on: 2014-04-30
 key-takeaways:
   use-right-image:

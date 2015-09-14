@@ -1,7 +1,6 @@
 ---
 title: "استخدام SVG مع الرموز"
 description: "عند إضافة رموز إلى الصفحة، يمكنك استخدام رموز SVG قدر الإمكان أو رموز الترميز الموحد في بعض الحالات."
-written_on: 2014-06-10
 updated_on: 2014-06-10
 key-takeaways:
   avoid-images:

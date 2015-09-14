@@ -1,7 +1,6 @@
 ---
 title: "Conversión de las URL dentro del sitio en relativas"
 description: "Ahora que su sitio se ofrece tanto en HTTP como en HTTPS, debe funcionar de la forma más eficiente posible, independientemente del protocolo."
-written_on: 2015-03-27
 updated_on: 2015-03-27
 translation_priority: 0
 key-takeaways:

@@ -1,7 +1,6 @@
 ---
 title: "Anzeigen optimieren"
 description: "Durch die Optimierung Ihrer Website und der darauf geschalteten Anzeigen können Sie die Qualität der geschalteten Anzeigen sowie Ihr Ertragspotenzial steigern."
-written_on: 2014-08-12
 updated_on: 2014-08-12
   - petelepage
 key-takeaways:

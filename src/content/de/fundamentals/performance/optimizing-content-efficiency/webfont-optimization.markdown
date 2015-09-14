@@ -1,7 +1,6 @@
 ---
 title: "Optimierung von Webschriftarten"
 description: "Die Typografie ist eine grundlegende Voraussetzung für gutes Design und Branding sowie Lesbarkeit und Zugänglichkeit. Webschriftarten erfüllen die obigen Bedingungen und bieten noch mehr: Der Text ist skalierbar, kann durchsucht, vergrößert und verkleinert werden und unterstützt hohe DPI-Werte. Außerdem liefern diese Schriftarten eine konstante und scharfe Textdarstellung unabhängig von der Bildschirmgröße und -auflösung. Webschriftarten sind für gutes Design, gute Nutzererfahrung und hohe Leistung erforderlich."
-written_on: 2014-09-20
 updated_on: 2014-09-30
 key-takeaways:
   anatomy:
