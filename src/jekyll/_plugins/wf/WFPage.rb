@@ -18,12 +18,20 @@ module Jekyll
 
   class WFPage < Page
 
+    def self.getPrimaryLangOnlyYamlKeys()
+      return [
+        'order',
+        'layout',
+        'authors'
+      ]
+    end
+
     alias superdest destination
     alias superpath path
 
-    attr_reader :canonical_url, :relative_url, :directories, :context
+    attr_reader :canonical_url, :relative_url, :directories, :context, :main_author
 
-    def initialize(site, relativeDir, filename, validKeys=[])
+    def initialize(site, relativeDir, filename, addtionalYamlKeys=[])
       @contentSource = site.config['WFContentSource']
       if @contentSource.nil?
         Jekyll.logger.info "WFContentSource is not defined in the config yaml"
@@ -41,7 +49,14 @@ module Jekyll
       @base = File.join Dir.pwd, site.config['WFContentSource']
       @dir  = relativeDir
       @name = filename
-      @directories = relativeDir.split(File::SEPARATOR);
+      @directories = relativeDir.split(File::SEPARATOR)
+      @addtionalYamlKeys = addtionalYamlKeys
+      @defaultValidKeys = [
+        'layout', 'title', 'description', 'order', 'translation_priority',
+        'authors', 'translators', 'comments', 'written_on', 'updated_on',
+        'published', 'rss', 'comments', 'key-takeaways', 'notes',
+        'related-guides'
+      ]
 
       self.process(filename)
 
@@ -52,13 +67,38 @@ module Jekyll
         self.read_yaml(fullFilePath, @name)
       end
 
-      defaultKeys = [
-        'layout', 'title', 'description', 'order', 'translation_priority',
-        'authors', 'translators', 'comments', 'written_on', 'updated_on',
-        'published', 'rss', 'comments', 'key-takeaways', 'notes',
-        'related-guides'
-      ]
-      allowedKeys = defaultKeys + validKeys
+      # Check that all the keys in the YAML data is valid
+      validateYamlData()
+
+      # This is the default better book
+      loadBetterBook('rootnav', '_betterbook-root.yaml')
+
+      # This could be given a better name - Used in navigation liquid
+      # displayed on mobile screens
+      self.data['drawerTitleText'] = self.data['title']
+
+      self.data['html_head_title'] = 'Web - Google Developers'
+      self.data['html_head_description'] = 'Google Developers - Web Fundamentals'
+      self.data['html_head_social_img'] = site.config['WFBaseUrl'] + '/imgs/logo.png'
+      self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
+      self.data['theme_color'] = '#4285f4'
+      self.data['feed_name'] = 'Web - Google Developers'
+      self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
+    end
+
+    def validateYamlData()
+      # If this is a translation, we need to remove fields copied over from
+      # english yaml during the jekyll generation
+      if @langcode != site.config['primary_lang']
+        WFPage.getPrimaryLangOnlyYamlKeys().each { |key|
+          if @defaultValidKeys.include?(key)
+            @defaultValidKeys.delete(key)
+          end
+        }
+      end
+
+      allowedKeys = @defaultValidKeys + @addtionalYamlKeys
+
       invalidKeys = []
       self.data.each do |key, value|
         if not allowedKeys.include? key
@@ -78,24 +118,6 @@ module Jekyll
           puts '---------------------------------------------------------------'
           puts ''
       end
-
-      # This is the default better book
-      loadBetterBook('rootnav', '_betterbook-root.yaml')
-
-      # This could be given a better name - Used in navigation liquid
-      # displayed on mobile screens
-      self.data['drawerTitleText'] = self.data['title']
-
-      self.data['html_head_title'] = 'Web - Google Developers'
-      self.data['html_head_description'] = 'Google Developers - Web Fundamentals'
-      self.data['html_head_social_img'] = site.config['WFBaseUrl'] + '/imgs/logo.png'
-      self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
-      self.data['theme_color'] = '#4285f4'
-      self.data['feed_name'] = 'Web - Google Developers'
-      self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
-
-      # Assign Main Author
-      self.data['main_author'] = getMainAuthor()
     end
 
     def loadBetterBook(betterBookDataName, betterBookFilename)
@@ -287,13 +309,17 @@ module Jekyll
       langSpecificContenxt
     end
 
+    def main_author
+      getMainAuthor()
+    end
+
     # Convert this post into a Hash for use in Liquid templates.
   #
   # Returns <Hash>
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
     super(attrs + %w[
       canonical_url
-    ] + %w[ relative_url ] + %w[ context ])
+    ] + %w[ relative_url ] + %w[ context ] + %w[ main_author ])
   end
   end
 end
