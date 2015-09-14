@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Conversión de las URL dentro del sitio en relativas"
 description: "Ahora que su sitio se ofrece tanto en HTTP como en HTTPS, debe funcionar de la forma más eficiente posible, independientemente del protocolo."
-authors:
-  - chrispalmer
 written_on: 2015-03-27
 updated_on: 2015-03-27
-order: 4
 translation_priority: 0
 key-takeaways:
   - "Asegúrese de que las URL dentro del sitio y las URL externas sean independientes del protocolo; es decir, asegúrese de utilizar rutas relativas o de omitir el protocolo como //example.com/something.js"

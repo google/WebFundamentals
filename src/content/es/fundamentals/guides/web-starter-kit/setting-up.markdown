@@ -1,15 +1,11 @@
 ---
-layout: shared/plain
 title: "Configuración de Web Starter Kit"
 description: "Si es la primera vez que utiliza Web Starter Kit, entonces esta guía es ideal para usted. Aquí se explica cómo iniciar y ejecutar el Web Starter Kit lo más rápido posible."
 notes:
   nosudo: "Si el sistema le arroja errores de permiso o acceso, como <code>EPERM</code> o <code>EACCESS</code>, no utilice <code>sudo</code> a modo de solución temporal. Consulte <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>esta página</a> para obtener una solución más eficiente."
 written_on: 2014-04-17
 updated_on: 2015-04-01
-order: 1
 translation_priority: 1
-authors:
-  - mattgaunt
 ---
 
 <p class="intro">

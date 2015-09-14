@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Principios de diseño de sitios web"
 description: ""
 written_on: 2014-08-08
 updated_on: 2014-09-17
-order: 1
-authors:
-  - petelepage
 list:
   -
     title: "Página principal y navegación del sitio"

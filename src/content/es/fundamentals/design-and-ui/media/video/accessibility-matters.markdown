@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Importancia de la accesibilidad"
 description: "La accesibilidad no es una característica."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 4
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - Usa el elemento de vídeo que se cargará y que descodificará y reproducirá el vídeo en tu sitio.

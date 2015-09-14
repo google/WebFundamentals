@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Leistung des kritischen Rendering-Pfads analysieren"
 description: "Zur Erkennung und Behebung von Leistungsengpässen beim kritischen Rendering-Pfad müssen Sie die häufigen Probleme kennen. Bei unserer interaktiven Tour picken wir häufige Leistungsmuster heraus, die Ihnen bei der Optimierung Ihrer Seiten helfen."
 written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 6
-authors:
-  - ilyagrigorik
 ---
 <p class="intro">
   Zur Erkennung und Behebung von Leistungsengpässen beim kritischen Rendering-Pfad müssen Sie die häufigen Probleme kennen. Bei unserer interaktiven Tour picken wir häufige Leistungsmuster heraus, die Ihnen bei der Optimierung Ihrer Seiten helfen.

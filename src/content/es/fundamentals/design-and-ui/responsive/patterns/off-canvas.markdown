@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Off canvas"
 description: "Los patrones de diseño web receptivos evolucionan rápidamente, pero existe una serie de patrones establecidos que funcionan de forma eficiente en los diferentes escritorios y dispositivos móviles."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-10-21
-order: 5
 translation_priority: 1
 ---
 

@@ -1,10 +1,8 @@
 ---
-layout: fundamentals/list-subdirectories
 title: "Optimizar el rendimiento"
 description: "El rendimiento es una característica más. Presenta tu contenido a los usuarios lo más rápido posible. Cuando accedan a tu aplicación, facilita todo lo que puedas la interacción con la página y su procesamiento."
 written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 4
 ---
 
 {% comment %}

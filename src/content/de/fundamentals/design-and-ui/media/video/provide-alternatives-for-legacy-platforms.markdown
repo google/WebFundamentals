@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Alternativen für veraltete Plattformen anbieten"
 description: "Nicht alle Videoformate werden auf allen Plattformen unterstützt. Informieren Sie sich, welche Formate auf den gängigen Plattformen unterstützt werden, und stellen Sie sicher, dass sich Ihr Video dort abspielen lässt."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 2
-authors:
-  - samdutton
 ---
 
 <p class="intro">
