@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "تحسين كفاءة المحتوى"
 description: "لا يزال حجم البيانات التي يتم تنزيلها بواسطة كل تطبيق في تزايد. وللحصول على أداء رائع، يلزمنا تحسين عرض كل بايت على حدة."
 written_on: 2014-04-01
 updated_on: 2014-04-29
-order: 2
-authors:
-  - ilyagrigorik
 ---
 
 <p class="intro">

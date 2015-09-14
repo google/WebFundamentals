@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "استخدام SVG مع الرموز"
 description: "عند إضافة رموز إلى الصفحة، يمكنك استخدام رموز SVG قدر الإمكان أو رموز الترميز الموحد في بعض الحالات."
-authors:
-  - petelepage
 written_on: 2014-06-10
 updated_on: 2014-06-10
-order: 3
 key-takeaways:
   avoid-images:
     - استخدم SVG أو الترميز الموحد مع الرموز بدلاً من الصور النقطية.

@@ -1,10 +1,8 @@
 ---
-layout: shared/plain
 title: "Inicio del sitio con Web Starter Kit"
 description: "A veces, la parte más difícil de un proyecto nuevo es comenzar. Web Starter Kit le proporciona una base sólida con una serie de herramientas que le resultarán útiles a lo largo del proceso de desarrollo."
 written_on: 2014-07-17
 updated_on: 2014-10-21
-order: 3
 translation_priority: 1
 ---
 

@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Clic para llamar"
 description: "En los dispositivos con capacidades de telefonía, permita que los usuarios se comuniquen directamente con usted de una forma fácil que consiste en hacer clic en un número de teléfono. Esta función, a menudo, se conoce como clic para llamar."
 written_on: 2014-06-17
 updated_on: 2014-10-21
-order: 1
-authors:
-  - petelepage
 translation_priority: 1
 key-takeaways:
   c2c: 

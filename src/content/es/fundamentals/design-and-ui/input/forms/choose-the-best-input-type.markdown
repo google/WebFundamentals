@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Elección del mejor tipo de entrada"
 description: "Para optimizar el ingreso de información, use el tipo de entrada adecuado. A los usuarios les encantan los sitios web en los que se muestran automáticamente teclados numéricos para ingresar los números telefónicos o en los que se anticipan automáticamente las respuestas de los campos a medida que se los completa. Busque la manera de eliminar las pulsaciones innecesarias en sus formularios."
 written_on: 2014-04-30
 updated_on: 2014-10-21
-order: 2
-authors:
-  - petelepage
 translation_priority: 0
 key-takeaways:
   choose-best-input-type:

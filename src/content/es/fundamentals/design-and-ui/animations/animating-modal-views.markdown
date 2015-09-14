@@ -1,10 +1,8 @@
 ---
-layout: shared/plain
 title: "Animación de las vistas modales"
 description: "Aprenda a animar vistas modales en sus aplicaciones."
 written_on: 2014-08-08
 updated_on: 2014-10-21
-order: 6
 translation_priority: 0
 key-takeaways:
   code:
@@ -14,8 +12,6 @@ key-takeaways:
 notes:
   pointerevents:
     - "Las versiones anteriores de Internet Explorer no son compatibles con la propiedad <code>pointer-event</code>, por lo que, para estos navegadores, deberá alternar manualmente la propiedad display. El inconveniente es que deberá esperar la duración de un marco para que el cambio se “aplique” y, luego, deberá utilizar la llamada de retorno requestAnimationFrame para iniciar la animación. Si no espera la duración de un marco, entonces simplemente aparecerá la superposición modal."
-authors:
-  - paullewis
 ---
 <p class="intro">
   Las vistas modales se utilizan para mensajes importantes, y se pueden utilizar para bloquear la interfaz del usuario. Se debe tener precaución al utilizarlas, ya que pueden ser perturbadoras y pueden arruinar fácilmente la experiencia del usuario si se las usa en exceso. Sin embargo, en algunos casos son las vistas adecuadas, ya que cobran vida cuando se les agrega algún tipo de animación.

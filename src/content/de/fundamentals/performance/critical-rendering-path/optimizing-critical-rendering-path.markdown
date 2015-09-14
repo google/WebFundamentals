@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Kritischen Rendering-Pfad optimieren"
 description: "Im Sinne der kürzestmöglichen Zeit bis zum ersten Rendern sind drei Variablen zu optimieren. Konkret muss die Anzahl der kritischen Ressourcen, die Zahl der kritischen Bytes und die Länge des kritischen Pfads minimiert werden."
 written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 7
-authors:
-  - ilyagrigorik
 ---
 
 Im Sinne der kürzestmöglichen Zeit bis zum ersten Rendern sind drei Variablen zu optimieren:

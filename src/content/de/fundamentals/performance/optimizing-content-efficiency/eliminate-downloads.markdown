@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Unnötige Downloads vermeiden"
 description: "Die schnellste und am besten optimierte Ressource ist eine Ressource, die gar nicht übertragen wird. Haben Sie Ihre Ressourcen vor Kurzem überprüft? Holen Sie dies ggf. nach und tun Sie es regelmäßig, um dafür zu sorgen, dass jede Ressource zu einer besseren Nutzererfahrung beiträgt."
 written_on: 2014-04-01
 updated_on: 2014-04-29
-order: 1
-authors:
-  - ilyagrigorik
 key-takeaways:
   eliminate-downloads:
     - "Führen Sie eine Bestandsaufnahme aller eigenen und fremden Inhalte auf Ihren Seiten durch."

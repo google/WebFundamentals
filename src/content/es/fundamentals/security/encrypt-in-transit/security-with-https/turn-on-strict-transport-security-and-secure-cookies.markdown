@@ -1,11 +1,7 @@
 ---
-layout: shared/plain
 title: "Activación de la seguridad de transporte estricta y cookies de seguridad"
-authors:
-  - chrispalmer
 written_on: 2015-03-27
 updated_on: 2015-03-27
-order: 6
 translation_priority: 0
 key-takeaways:
   - "Debe utilizar la seguridad de transporte estricta de HTTP (HSTS) para evitar el costo del redireccionamiento mediante el código 301."

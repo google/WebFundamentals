@@ -1,13 +1,9 @@
 ---
-layout: shared/plain
 title: "Rendimiento de la representación"
 description: "Los usuarios notan si los sitios y las aplicaciones no funcionan correctamente, por eso es fundamental optimizar el rendimiento de la representación."
 written_on: 2015-03-20
 updated_on: 2015-03-20
-order: 3
 translation_priority: 0
-authors:
-  - paullewis
 notes:
   csstriggers:
     "Si desea saber cuál de las tres versiones anteriores que cambia cualquier propiedad determinada de las CSS (Hoja de estilos en cascada) se desencadenará, visite<a href='http://csstriggers.com'>Desencadenadores de CSS</a>. Y si desea aprender rápidamente a realizar animaciones de alto rendimiento, lea la sección sobre<a href='stick-to-compositor-only-properties-and-manage-layer-count'>cómo cambiar las propiedades exclusivas del compositor</a>."

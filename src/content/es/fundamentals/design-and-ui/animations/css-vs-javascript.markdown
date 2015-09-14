@@ -1,10 +1,8 @@
 ---
-layout: shared/plain
 title: "Animaciones de CSS en comparación con las de JavaScript"
 description: "Puede realizar animaciones con CSS o con JavaScript. ¿Cuál debe utilizar y por qué?"
 written_on: 2014-08-08
 updated_on: 2014-10-21
-order: 2
 translation_priority: 0
 key-takeaways:
   code:
@@ -16,8 +14,6 @@ notes:
     - "Si es la primera vez que realiza animaciones, le contamos que marcos clave es un nombre que se utilizaba anteriormente en las animaciones realizadas a mano. Los animadores creaban marcos específicos para una parte de la acción, llamados marcos clave, en los que capturaban acciones como la parte más extrema de algún movimiento, y luego dibujaban todos los marcos individuales entre los marcos clave. En la actualidad, tenemos un proceso similar para las animaciones de CSS, en el que le indicamos al navegador los valores de las propiedades de CSS que se deben tener en determinados puntos y, luego, el navegador completa los espacios vacíos."
   setinterval:
     - "Podrá ver un código en la web en el que se utiliza setInterval o setTimeout para las animaciones. Esta no es una buena idea, ya que la animación no se sincronizará a la frecuencia de actualización de la pantalla, y es muy probable que se produzcan sacudidas y saltos. Siempre debe evitar utilizar este código y, en su lugar, utilizar requestAnimationFrame, el cual está sincronizado adecuadamente."
-authors:
-  - paullewis
 ---
 <p class="intro">
   Existen dos formas principales de crear animaciones en la web: CSS y JavaScript. La elección de una u otra dependerá principalmente de las otras dependencias de su proyecto y de los tipos de efectos que intenta lograr.

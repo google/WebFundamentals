@@ -1,5 +1,4 @@
 ---
-layout: shared/plain
 title: "إنشاء المحتوى والهيكل"
 description: "يعد المحتوى أهم عناصر أي موقع على الويب. وسنستعرض في هذا الدليل كيفية التخطيط لتصميم موقعك على الويب بحيث يتوافق لأول مرة مع عدة أجهزة."
 notes:
@@ -7,9 +6,6 @@ notes:
     - "سيأتي التصميم في وقت لاحق"
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 1
-authors:
-  - paulkinlan
 translators:
 related-guides:
   create-amazing-forms:
@@ -99,7 +95,7 @@ key-takeaways:
 
 <div class="demo clear" style="background-color: white;">
   <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="البنية المعلوماتية لإطار العرض الضيق">
-  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="البنية المعلوماتية لإطار العرض الواسع">
+  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="البنية المعلوماتية لإطار العرض الواسع">
 </div>
 
 يمكن تحويل ذلك بسهولة إلى أقسام تقريبية لصفحة الهيكل التي سنستخدمها في الجزء المتبقي من المشروع.
@@ -192,9 +188,9 @@ key-takeaways:
 
 لقد أنشأنا مخططًا لموقع الويب وحددنا جميع العناصر الرئيسية لهيكل الموقع.  كما تأكدنا من أن جميع المحتوى وثيق الصلة قد أصبح جاهزًا لتلبية احتياجات نشاطنا التجاري.
 
-<div class="clear">
-  <img class="g-wide--2 g-medium--half" src="images/content.png" alt="محتوى" style="max-width: 100%;">
-  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
+<div class="mdl-grid">
+  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="محتوى">
+  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
 </div>
 
 ستلاحظ أن الصفحة لا تبدو مطمئنة في الوقت الحالي؛ ولكن هناك غرض من ذلك. 

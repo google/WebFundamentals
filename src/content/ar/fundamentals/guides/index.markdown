@@ -1,9 +1,6 @@
 ---
-layout: fundamentals/list-subdirectories
 title: "البدء"
 description: "قد يبدو أمرًا مزعجًا بدء تصميم مواقع ويب تترك انطباعًا جيدًا على جميع الأجهزة التي يمكنها الدخول إلى الويب."
-authors:
-  - paulkinlan
 ---
 
 <p class="intro">

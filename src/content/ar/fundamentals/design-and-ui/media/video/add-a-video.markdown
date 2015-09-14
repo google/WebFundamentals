@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "إضافة مقطع فيديو"
 description: "تعرف على أسهل طرق إضافة الفيديو إلى موقعك وتأكد من ترك أفضل انطباع لدى المستخدمين على أي جهاز."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 1
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - استخدم عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله.
@@ -115,7 +111,7 @@ notes:
 
 وفي ما يلي مقارنة لمقطعي فيديو جنبًا إلى جنب أحدهما بدون صورة ملصق والآخر مزود بصورة ملصق، وقد وضعنا صورة الملصق على تدرج رمادي للإشارة إلى أنه لا يمثل الفيديو:
 
-<div class="clear">
+<div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     <img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png">
   </div>

@@ -1,10 +1,8 @@
 ---
-layout: shared/plain
 title: "Aceleración personalizada"
 description: "Desvíese de lo común y cree animaciones totalmente personalizadas para sus proyectos."
 written_on: 2014-08-08
 updated_on: 2014-10-21
-order: 4
 translation_priority: 0
 key-takeaways:
   code:
@@ -12,8 +10,6 @@ key-takeaways:
     - "Puede crear curvas Bézier cúbicas similares a las curvas de animación predeterminadas (salida lenta, entrada lenta, etc.), pero con énfasis en diferentes lugares."
     - "Utilice JavaScript cuando necesite tener más control sobre la sincronización y el comportamiento de las animaciones; p. ej., animaciones elásticas o de rebote."
 
-authors:
-  - paullewis
 ---
 
 <p class="intro">
