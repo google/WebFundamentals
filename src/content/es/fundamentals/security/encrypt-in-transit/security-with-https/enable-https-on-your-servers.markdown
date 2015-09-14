@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Habilitación de HTTPS en sus servidores"
 description: "Ya se encuentra preparado para el paso importantísimo de habilitar HTTPS en sus servidores."
-authors:
-  - chrispalmer
 written_on: 2015-03-27
 updated_on: 2015-03-27
-order: 3
 translation_priority: 0
 key-takeaways:
   - "Utilice la herramienta Configuración del servidor de Mozilla para configurar su servidor para que sea compatible con HTTPS."

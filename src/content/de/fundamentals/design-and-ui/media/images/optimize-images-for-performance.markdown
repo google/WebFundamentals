@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Bilder auf Leistung optimieren"
 description: "Bilder belegen in der Regel die meiste Bandbreite und darüber hinaus oft auch einen großen Teil des visuellen Bereichs einer Seite."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 4
 key-takeaways:
   optimize-images:
     - "Verwenden Sie nicht einfach irgendein Bildformat. Setzen Sie sich mit den verschiedenen verfügbaren Formaten auseinander und nutzen Sie das am besten geeignete."

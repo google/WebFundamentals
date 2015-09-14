@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Bilder"
 description: "Ein Bild sagt mehr als 1000 Worte, und Bilder spielen eine sehr wichtige Rolle auf jeder einzelnen Seite. Leider stellen sie aber ebenso einen Großteil des Volumens dar, das heruntergeladen wird. Mit einem responsiven Webdesign können sich nicht nur unsere Layouts Gerätecharakteristiken anpassen, sondern ebenso die Bilder."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 1
 udacity:
   id: ud882
   title: Responsive Images

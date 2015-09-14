@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "تجنب الصور تمامًا"
 description: "أحيانًا تكون أفضل صورة ليست صورة إطلاقًا. ومتى أمكن، استخدم الميزات الأصلية للمتصفح لتوفير الوظائف نفسها أو أخرى شبيهة."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-06-10
-order: 5
 key-takeaways:
   تجنب-images:
     - تجنب الصور قدر الإمكان، وجرب بدلاً من ذلك استغلال إمكانيات المتصفح للحصول على الظلال والتدرجات والجوانب المستديرة وغير ذلك الكثير.
@@ -29,21 +25,6 @@ key-takeaways:
 
 يمكن للمتصفحات الحديثة استخدام ميزات CSS لإنشاء أنماط كانت من قبل تتطلب صورًا.  على سبيل المثال، يمكن إنشاء التدرجات المعقدة باستخدام العنصر <code>background</code>، كما يمكن إنشاء الظلال باستخدام <code>box-shadow</code>، ويمكن إضافة الجوانب المستديرة باستخدام العنصر<code>border-radius</code>.
 
-<style>
-  p#noImage {
-    margin-top: 2em;
-    padding: 1em;
-    padding-bottom: 2em;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);
-    background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
-  }
-  
-  p#noImage code {
-    color: rgb(64, 64, 64);
-  }
-</style>
 
 <p id="noImage">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 

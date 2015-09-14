@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "مسار العرض الحرج"
 description: "تحسين مسار العرض الحرج من خلال وضع عرض المحتوى المتعلق بالإجراء الأساسي الذي يريد المستخدم وضعه على الصفحة في الأولوية."
 written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 1
-authors:
-  - ilyagrigorik
 udacity:
   id: ud884
   title: Website Performance Optimization

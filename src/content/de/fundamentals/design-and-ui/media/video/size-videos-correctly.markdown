@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Videogröße richtig wählen"
 description: "Für die Zufriedenheit der Nutzer spielt die Größe eine wichtige Rolle."
 written_on: 2014-04-16
 updated_on: 2014-09-19
-order: 3
-authors:
-  - samdutton
 key-takeaways:
   size-matters:
     - "Achten Sie darauf, dass Framegröße und Qualität Ihrer Videos nicht die Möglichkeiten der Plattform übersteigen."

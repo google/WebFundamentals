@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Ruta de renderización importante"
 description: "Optimización de la ruta de renderización importante dando prioridad a la visualización de contenido relacionada con la acción principal que el usuario quiere realizar en una página"
 written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 1
-authors:
-  - ilyagrigorik
 udacity:
   id: ud884
   title: Website Performance Optimization

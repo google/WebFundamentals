@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Bilder im Markup"
 description: "Das ''img''-Element erfüllt viele Funktionen. Es lädt Inhalte herunter, decodiert sie und zeigt sie an. Darüber hinaus unterstützen moderne Browser eine große Anzahl an Bildformaten."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-09-30
-order: 1
 key-takeaways:
   img-in-markup:
     - "Nutzen Sie relative Größen für Bilder, um zu verhindern, dass diese sich versehentlich über die Container-Grenzen hinweg erstrecken."
@@ -184,7 +180,7 @@ Bilder](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) stellt 
       Siehe Beispiel
 {% endlink_sample %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.compressive %}
+{% include shared/remember.liquid title="Important" list=page.notes.compressive %}
 
 ### JavaScript-Bildersetzung
 

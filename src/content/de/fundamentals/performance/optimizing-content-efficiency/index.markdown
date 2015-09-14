@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Effizienz der Inhalte optimieren"
 description: "Die Menge der Daten, die von den einzelnen Anwendungen heruntergeladen wird, steigt beständig an. Im Sinne einer hohen Leistungsfähigkeit muss die Bereitstellung eines jeden Bytes optimiert werden!"
 written_on: 2014-04-01
 updated_on: 2014-04-29
-order: 2
-authors:
-  - ilyagrigorik
 ---
 
 <p class="intro">

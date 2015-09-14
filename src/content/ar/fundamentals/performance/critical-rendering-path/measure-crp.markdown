@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "قياس مسار العرض الحرج باستخدام توقيت التنقل"
 description: "لا يمكنك تحسين ما لا يمكنك قياسه. ولكن من حسن الطالع أن واجهة برمجة تطبيقات Navigation Timing تتيح لنا جميع الأدوات اللازمة لقياس كل خطوة في مسار العرض الحرج."
 written_on: 2014-04-01
 updated_on: 2014-09-18
-order: 5
-authors:
-  - ilyagrigorik
 key-takeaways:
   measure-crp:
     - توفر Navigation Timing  طوابع زمنية عالية الدقة لقياس CRP.

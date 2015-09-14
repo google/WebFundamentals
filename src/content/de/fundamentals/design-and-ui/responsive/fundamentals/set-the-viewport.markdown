@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Darstellungsbereich festlegen"
 description: "Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiedenen Geräten optimiert. Erlernen Sie die Grundlagen, mit denen Ihre Website auf Mobilgeräten, Desktopcomputern und jeglichen anderen Geräten mit einem Bildschirm funktioniert."
 written_on: 2014-04-30
 updated_on: 2014-09-12
-order: 1
-authors:
-  - petelepage
 key-takeaways:
   set-viewport:
     - Verwenden Sie das Darstellungsbereich-Meta-Tag zur Steuerung der Breite und Skalierung des Darstellungsbereichs im Browser.

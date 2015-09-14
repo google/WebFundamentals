@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "تخصيص الإعلانات"
 description: "يساعد استخدام أفضل إعلانات في تحسين انطباع المستخدم. لا جدل أن محتوى الإعلان الفعلي مصدره الجهات الإعلانية، ولكن يمكنك التحكم في نوع محتوى هذا الإعلان ولونه وحجمه وموضعه."
 written_on: 2014-07-31
 updated_on: 2014-08-12
-order: 3
-authors:
-  - megginkearney
   - petelepage
 key-takeaways:
   tldr: 
@@ -57,11 +53,6 @@ notes:
 3. عدِّل شفرة الإعلان لتعيين الأحجام الدقيقة للإعلانات بناءً على جهاز المستخدم:
 
 {% highlight html %}
-<style type="text/css">
-  .adslot_1 { width: 320px; height: 50px; }
-  @media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
-  @media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } }
-</style>
 <ins class="adsbygoogle adslot_1"
     style="display:block;"
     data-ad-client="ca-pub-1234"

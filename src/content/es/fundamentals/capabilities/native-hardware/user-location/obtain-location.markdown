@@ -1,13 +1,9 @@
 ---
-layout: shared/plain
 title: "Obtención de la ubicación actual del usuario"
 description: "La API (Interfaz de programación de aplicaciones) de geolocalización le permite averiguar dónde se encuentra el usuario, siempre con su consentimiento."
 written_on: 2014-06-06
 updated_on: 2014-10-21
-order: 1
 translation_priority: 1
-authors:
-  - paulkinlan
 key-takeaways:
   geo: 
     - Verifique la compatibilidad antes de utilizar la API.

@@ -1,5 +1,4 @@
 ---
-layout: shared/plain
 title: "Crear el contenido y la estructura"
 description: "El contenido es lo más importante de cualquier sitio. En esta guía, te indicaremos cómo planear rápidamente la creación de un sitio multidispositivo."
 notes:
@@ -7,9 +6,6 @@ notes:
     - Estilo vendrá después
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 1
-authors:
-  - paulkinlan
 translators:
 related-guides:
   create-amazing-forms:

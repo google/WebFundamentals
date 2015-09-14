@@ -1,13 +1,9 @@
 ---
-layout: shared/plain
 title: "Eliminación de los efectos de rebote en los controladores de entrada"
 description: "Los controladores de entrada son una posible causa de problemas de rendimiento en sus aplicaciones, ya que pueden bloquear la compleción de los marcos y causar trabajo de diseño adicional (e innecesario)."
 written_on: 2015-03-20
 updated_on: 2015-03-20
-order: 7
 translation_priority: 0
-authors:
-  - paullewis
 notes:
   highdpi:
     - "Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente."

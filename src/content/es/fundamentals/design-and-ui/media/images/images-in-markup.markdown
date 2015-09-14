@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Imágenes en el marcado"
 description: "El elemento `img` es muy útil (descarga, descodifica y muestra contenido) y los navegadores modernos son compatibles con una serie de formatos de imagen."
-authors:
-  - petelepage
 written_on: 2014-04-30
 updated_on: 2014-09-30
-order: 1
 key-takeaways:
   img-in-markup:
     - Utiliza tamaños relativos para las imágenes a fin de evitar que se salgan del contenedor por accidente.
@@ -186,7 +182,7 @@ de imagen de compresión](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech
 Mostrar ejemplo
 {% endlink_sample %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.compressive %}
+{% include shared/remember.liquid title="Important" list=page.notes.compressive %}
 
 ### Sustitución de la imagen JavaScript
 

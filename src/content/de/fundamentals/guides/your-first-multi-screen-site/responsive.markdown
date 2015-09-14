@@ -1,5 +1,4 @@
 ---
-layout: shared/plain
 title: "Responsiv machen"
 description: "Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Bildschirmen bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Erfahren Sie, wie Sie eine Website erstellen, die auf allen Geräten gut funktioniert."
 key-takeaways:
@@ -8,8 +7,6 @@ key-takeaways:
     - Immer mit einem schmalen Darstellungsbereich beginnen und nach oben skalieren
     - Übergangspunkte außerhalb platzieren, wenn Inhalte angepasst werden müssen
     - Allgemeinen Entwurf Ihres Layouts über alle primären Übergangspunkte hinweg erstellen
-authors:
-  - paulkinlan
 translators:
 related-guides:
   responsive:
@@ -71,7 +68,6 @@ notes:
     - "Sie müssen nicht alle Elemente auf einmal verschieben, sondern können bei Bedarf kleinere Anpassungen vornehmen."
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 2
 ---
 
 <p class="intro">

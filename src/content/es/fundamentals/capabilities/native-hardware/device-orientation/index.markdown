@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Orientación del dispositivo"
 description: "Los eventos de movimiento y orientación del dispositivo proporcionan acceso al acelerómetro, el giroscopio y la brújula incorporados en los dispositivos móviles."
 written_on: 2014-06-17
 updated_on: 2014-10-21
-order: 4
-authors:
-  - petelepage
 translation_priority: 1
 notes:
   not-stable:

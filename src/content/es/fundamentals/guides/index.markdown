@@ -1,9 +1,6 @@
 ---
-layout: fundamentals/list-subdirectories
 title: "Empezar ahora"
 description: "A veces, parece complicado empezar a crear sitios y experiencias que se adapten a todos los dispositivos con acceso a la Web."
-authors:
-  - paulkinlan
 translators:
 ---
 

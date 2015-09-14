@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "استخدام حجم الفيديو المناسب"
 description: "إذا كان الأمر يتعلق بترك انطباع جيد لدى المستخدمين، فيجب الاهتمام بحجم الفيديو."
 written_on: 2014-04-16
 updated_on: 2014-09-19
-order: 3
-authors:
-  - samdutton
 key-takeaways:
   size-matters:
     - لا تعرض مقاطع فيديو حجم إطارها كبير أو أعلى جودة من الجودة التي يمكن لنظام التشغيل التعامل معها.
@@ -58,7 +54,7 @@ related-guides:
 
 <div class="mdl-grid">
     <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
 يمكنك التحكم في أبعاد الفيديو باستخدام جافا سكريبت أو CSS. تتيح مكتبات جافا سكريبت والمكوِّنات الإضافية أيضًا مثل [FitVids](//fitvidsjs.com/) إمكانية الحفاظ على الحجم ونسبة العرض إلى الارتفاع المناسبة، حتى بالنسبة إلى مقاطع فيديو Flash من YouTube والصادر الأخرى.

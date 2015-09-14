@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "تخصيص مشغِّل الفيديو"
 description: "تعرض أنظمة التشغيل المختلفة مقطع الفيديو على نحو مختلف. ويجب أن تهتم حلول الجوّال باتجاه الجهاز. استخدم واجهة برمجة تطبيقات Fullscreen للتحكم في عرض ملء الشاشة لمحتوى الفيديو."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 3
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - استخدم عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله.
@@ -45,7 +41,7 @@ notes:
 
 <div class="mdl-grid">
     <img class="mdl-cell mdl-cell--6--col" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه العمودي" src="images/iPhone-video-playing-portrait.png">
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه الأفقي" src="images/iPhone-video-playing-landscape.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه الأفقي" src="images/iPhone-video-playing-landscape.png">
 </div>
 
 قد يتسبب اتجاه الجهاز على جهاز iPad وعلى Chrome لجهاز Android في حدوث مشكلات.

@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Dar un tamaño adecuado a los vídeos"
 description: "Cuando se trata de satisfacer a los usuarios, el tamaño de los vídeos es importante."
 written_on: 2014-04-16
 updated_on: 2014-09-19
-order: 3
-authors:
-  - samdutton
 key-takeaways:
   size-matters:
     - No incluyas vídeos con un tamaño de marco superior o con una calidad mayor que los que admite la plataforma.

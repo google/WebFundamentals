@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "Responsives Webdesign: Grundlagen"
 description: "Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiedenen Geräten optimiert. Erlernen Sie die Grundlagen, mit denen Ihre Website auf Mobilgeräten, Desktopcomputern und jeglichen anderen Geräten mit einem Bildschirm funktioniert."
 written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 1
-authors:
-  - petelepage
 comments: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19

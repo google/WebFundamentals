@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "الفيديو"
 description: "تعرف على أسهل طرق إضافة الفيديو إلى موقعك وتأكد من ترك أفضل انطباع لدى المستخدمين على أي جهاز."
 written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 2
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - استخدم عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله.

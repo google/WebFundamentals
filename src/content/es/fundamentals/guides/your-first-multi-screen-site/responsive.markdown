@@ -1,5 +1,4 @@
 ---
-layout: shared/plain
 title: "Ser adaptable"
 description: "Se puede acceder a la Web desde una amplia gama de dispositivos, desde teléfonos de pantalla pequeña a televisores de grandes dimensiones. Obtén más información sobre cómo crear un sitio que funcione bien en todos estos dispositivos."
 key-takeaways:
@@ -8,8 +7,6 @@ key-takeaways:
     - Empieza siempre con una ventana gráfica estrecha y después aumenta el tamaño.
     - Basa los puntos de interrupción en los momentos en los que es necesario adaptar el contenido.
     - Crea una visión de nivel alto de tu diseño con los puntos de interrupción principales.
-authors:
-  - paulkinlan
 translators:
 related-guides:
   responsive:
@@ -70,7 +67,6 @@ notes:
     - "No tienes que mover todos los elementos a la vez, sino que, si es necesario, puedes hacer ajustes menores."
 written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 2
 ---
 
 <p class="intro">

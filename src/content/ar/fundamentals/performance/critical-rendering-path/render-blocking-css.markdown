@@ -1,12 +1,8 @@
 ---
-layout: shared/plain
 title: "CSS الذي يحظر العرض"
 description: "يتم افتراضيًا التعامل مع CSS باعتباره موردًا لحظر العرض، أي أن المتصفح سيمنع عرض أي محتوى تمت معالجته حتى يتم إنشاء CSSOM. تأكد من أن CSS ليِّن، واعرضه في أسرع وقت ممكن، واستخدم أنواع الوسائط والاستعلامات لإلغاء حظر العرض."
 written_on: 2014-04-01
 updated_on: 2014-09-18
-order: 3
-authors:
-  - ilyagrigorik
 related-guides:
   media-queries:
     -
