@@ -1,7 +1,6 @@
 ---
 title: "Establecer la ventana gráfica"
 description: "Gran parte de la Web no está optimizada para varios dispositivos. Adquiere los conocimientos básicos para que tu sitio funcione en móviles, en ordenadores o en cualquier dispositivo con pantalla."
-written_on: 2014-04-30
 updated_on: 2014-09-12
 key-takeaways:
   set-viewport:

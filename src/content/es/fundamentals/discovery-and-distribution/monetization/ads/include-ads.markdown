@@ -1,7 +1,6 @@
 ---
 title: "Incluir anuncios de AdSense en el sitio"
 description: "Sigue los pasos de esta guía para saber cómo incluir anuncios en tu sitio. Crea una cuenta de AdSense, crea bloques de anuncios, coloca los bloques en tu sitio, establece las preferencias de pago y empieza a recibir ingresos."
-written_on: 2014-07-31
 updated_on: 2014-07-31
   - petelepage
 key-takeaways:

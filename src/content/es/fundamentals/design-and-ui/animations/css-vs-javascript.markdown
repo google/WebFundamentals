@@ -1,7 +1,6 @@
 ---
 title: "Animaciones de CSS en comparación con las de JavaScript"
 description: "Puede realizar animaciones con CSS o con JavaScript. ¿Cuál debe utilizar y por qué?"
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

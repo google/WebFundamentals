@@ -1,6 +1,5 @@
 ---
 title: "Inquietudes sobre la migración"
-written_on: 2015-03-27
 updated_on: 2015-03-27
 translation_priority: 0
 

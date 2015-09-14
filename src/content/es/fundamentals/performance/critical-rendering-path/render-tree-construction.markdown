@@ -1,7 +1,6 @@
 ---
 title: "Construcción del árbol de visualización, diseño y representación final"
 description: "Los árboles de CSSOM y de DOM se combinan en el árbol de visualización, que se usa para calcular el diseño de cada elemento visible y sirve como base para la representación final que nos permite ver los píxeles en la pantalla. La optimización de cada uno de estos pasos es fundamental para lograr un buen rendimiento en el procesamiento."
-written_on: 2014-04-01
 updated_on: 2014-09-18
 key-takeaways:
   render-tree-construction:

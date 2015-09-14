@@ -4,7 +4,6 @@ description: "Inhalte sind der wichtigste Aspekt jeder Website. In diesem Leitfa
 notes:
   styling:
     - Styling kommt später
-written_on: 2014-04-17
 updated_on: 2014-04-23
 translators:
 related-guides:

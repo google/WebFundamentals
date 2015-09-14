@@ -1,7 +1,6 @@
 ---
 title: "Kritischer Rendering-Pfad"
 description: "Den kritischen Rendering-Pfad über die Priorisierung der Anzeige von Inhalten optimieren, die sich auf die primäre Aktion beziehen, die der Nutzer auf einer Seite durchführen möchte"
-written_on: 2014-04-01
 updated_on: 2014-04-28
 udacity:
   id: ud884

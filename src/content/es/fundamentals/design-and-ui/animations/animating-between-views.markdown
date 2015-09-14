@@ -1,7 +1,6 @@
 ---
 title: "Animaciones entre vistas"
 description: "Aprenda a colocar animaciones entre dos vistas en sus aplicaciones."
-written_on: 2014-08-08
 updated_on: 2014-10-22
 translation_priority: 0
 key-takeaways:

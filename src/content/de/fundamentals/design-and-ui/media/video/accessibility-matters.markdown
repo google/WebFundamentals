@@ -1,7 +1,6 @@
 ---
 title: "Warum Zugänglichkeit wichtig ist"
 description: "Zugänglichkeit ist keine Funktion."
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
   add-a-video:

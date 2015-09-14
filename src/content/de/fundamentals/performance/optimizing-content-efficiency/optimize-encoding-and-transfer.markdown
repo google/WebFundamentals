@@ -1,7 +1,6 @@
 ---
 title: "Codierung und Übertragungsgröße textbasierter Ressourcen optimieren"
 description: "Nach der Entfernung aller unnötigen Ressourcen besteht der nächste Schritt in der Minimierung der Gesamtgröße der verbleibenden Ressourcen, die der Browser herunterladen muss, d. h. in deren Komprimierung über die Anwendung inhaltstypspezifischer und allgemeiner Komprimierungsalgorithmen (GZip)."
-written_on: 2014-04-01
 updated_on: 2014-09-12
 key-takeaways:
   compression-101:

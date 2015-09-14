@@ -1,7 +1,6 @@
 ---
 title: "Evitar las imágenes por completo"
 description: "A veces, la mejor imagen no es una imagen. Siempre que sea posible, usa la capacidad nativa del navegador para ofrecer las mismas funciones u otras similares."
-written_on: 2014-04-30
 updated_on: 2014-06-10
 key-takeaways:
   avoid-images:

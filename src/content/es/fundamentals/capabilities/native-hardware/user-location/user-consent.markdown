@@ -1,7 +1,6 @@
 ---
 title: "Cómo lograr que el usuario dé su consentimiento para que se comparta su ubicación"
 description: "TODO"
-written_on: 2014-01-01
 updated_on: 2014-10-21
 translation_priority: 1
 key-takeaways:

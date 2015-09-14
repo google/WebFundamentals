@@ -1,7 +1,6 @@
 ---
 title: "Dar un tamaño adecuado a los vídeos"
 description: "Cuando se trata de satisfacer a los usuarios, el tamaño de los vídeos es importante."
-written_on: 2014-04-16
 updated_on: 2014-09-19
 key-takeaways:
   size-matters:

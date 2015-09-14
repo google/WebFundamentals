@@ -1,7 +1,6 @@
 ---
 title: "إنشاء نموذج الهدف"
 description: "حتى يتمكن المتصفح من عرض المحتوى على الشاشة يلزم إنشاء شجرتي DOM وCSSOM. ونتيجة لذلك، يلزم التأكد من توفير كل من HTML وCSS للمتصفح في أقرب وقت ممكن."
-written_on: 2014-04-01
 updated_on: 2014-09-12
 key-takeaways:
   construct-object-model:

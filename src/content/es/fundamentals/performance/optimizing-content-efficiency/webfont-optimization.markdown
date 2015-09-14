@@ -1,7 +1,6 @@
 ---
 title: "Optimizar fuentes web"
 description: "La tipografía es fundamental para un buen diseño, para la inclusión de marca, la legibilidad y la accesibilidad. Las fuentes web permiten hacer todo esto y más: permiten seleccionar el texto, hacer búsquedas y hacer zoom, y admiten muchos puntos por pulgada, con lo que se consigue un texto preciso y coherente que se renderiza independientemente del tamaño de la pantalla y de la resolución. Las fuentes web son básicas para conseguir un diseño, una experiencia de usuario y un rendimiento satisfactorios."
-written_on: 2014-09-20
 updated_on: 2014-09-30
 key-takeaways:
   anatomy:

@@ -1,7 +1,6 @@
 ---
 title: "Diseño de formularios eficientes"
 description: "Para diseñar formularios eficientes, evite las acciones repetidas, solicite solo la información necesaria y oriente a los usuarios al mostrarles en qué instancia se encuentran en los formularios que tienen muchas partes."
-written_on: 2014-11-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:
