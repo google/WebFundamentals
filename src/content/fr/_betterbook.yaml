@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Commencer
+    path: /fundamentals/getting-started/
+  - title: Documentation
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Principes de la conception de sites
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Mises en page pour plusieurs appareils
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: "Notions de base sur le Responsive\_Web\_Design"
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: "Schémas Responsive\_Web\_Design"
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Schémas de mises en page
+            path: /fundamentals/layouts/layout-patterns/
+          - title: "Éléments d'interface utilisateur"
+            path: /fundamentals/layouts/ui-elements/
+      - title: "Formulaires et saisie par l'utilisateur"
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Saisie par pression tactile
+            path: /fundamentals/input/touch/
+          - title: Saisie dans un formulaire
+            path: /fundamentals/input/form/
+      - title: Apparence
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Présentation des animations
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Images, audio et vidéos"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Images
+            path: /fundamentals/media/images/
+          - title: Vidéos
+            path: /fundamentals/media/video/
+          - title: Audio
+            path: /fundamentals/media/audio/
+      - title: Monétisation
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: "Monétisation d'annonces"
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Découverte et distribution
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: "Accès à l'appareil"
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: "Position géographique de l'utilisateur"
+            path: /fundamentals/device-access/user-location
+          - title: Appel Direct
+            path: /fundamentals/device-access/click-to-call
+      - title: Performances
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Chemin de rendu critique
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: "Optimisation de l'efficacité du contenu"
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Optimisation des réseaux
+            path: /fundamentals/performance/optimizing-networking/
+          - title: "Optimisation de l'interactivité"
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Évaluation des performances
+            path: /fundamentals/performance/measuring-performance/
+  - title: Outils
+    path: /fundamentals/tools/
+  - title: Ressources
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Glossaire
+        path: /fundamentals/resources/glossary/
+      - title: Exemples
+        path: /fundamentals/resources/samples/
+      - title: Guide de style
+        path: /fundamentals/resources/styleguide/
+      - title: "Exemple d'article"
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
