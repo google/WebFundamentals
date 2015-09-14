@@ -28,7 +28,7 @@ key-takeaways:
 notes:
   use-commas:
     - استخدم فاصلة لفصل السمات لضمان تمكن المتصفحات القديمة من تحليل السمات تحليلاً سليمًا.
-shortlinks: 
+comments: 
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple20
 ---
