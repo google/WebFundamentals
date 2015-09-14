@@ -22,14 +22,15 @@ module Jekyll
       return [
         'order',
         'layout',
-        'authors'
+        'authors',
+        'written_on'
       ]
     end
 
     alias superdest destination
     alias superpath path
 
-    attr_reader :canonical_url, :relative_url, :directories, :context, :main_author
+    attr_reader :raw_canonical_url, :canonical_url, :relative_url, :directories, :context, :main_author
 
     def initialize(site, relativeDir, filename, addtionalYamlKeys=[])
       @contentSource = site.config['WFContentSource']
@@ -263,22 +264,34 @@ module Jekyll
       path
     end
 
-    def canonical_url
-      fullUrl = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + @url
+    def getFilteredUrl()
+      fullUrl = site.config['WFBaseUrl'] + @url
       fullUrl = fullUrl.sub('index.html', '')
       fullUrl = fullUrl.sub('.html', '')
+    end
 
-      fullUrl = fullUrl + "?hl=" + @langcode || site.config['primary_lang']
+    # WARNING: This is intended for use in the head of the document only
+    # it doesn't include the hl
+    def raw_canonical_url
+      site.config['WFAbsoluteUrl'] + getFilteredUrl()
+    end
+
+    def canonical_url
+      if @langcode == site.config['primary_lang']
+        fullUrl = raw_canonical_url()
+      else
+        fullUrl = raw_canonical_url() + "?hl=" + @langcode || site.config['primary_lang']
+      end
 
       fullUrl
     end
 
     def relative_url
-      relativeUrl = site.config['WFBaseUrl'] + @url
-      relativeUrl = relativeUrl.sub('index.html', '')
-      relativeUrl = relativeUrl.sub('.html', '')
-
-      relativeUrl = relativeUrl + "?hl=" + @langcode || site.config['primary_lang']
+      if @langcode == site.config['primary_lang']
+        relativeUrl = getFilteredUrl()
+      else
+        relativeUrl = getFilteredUrl() + "?hl=" + @langcode || site.config['primary_lang']
+      end
 
       relativeUrl
     end
@@ -317,7 +330,7 @@ module Jekyll
   #
   # Returns <Hash>
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
-    super(attrs + %w[
+    super(attrs + %w[ raw_canonical_url ] + %w[
       canonical_url
     ] + %w[ relative_url ] + %w[ context ] + %w[ main_author ])
   end

@@ -3,7 +3,7 @@
 <meta name="theme-color" content="{{ page.theme_color }}">
 
 <link rel="manifest" href="{{site.WFBaseUrl}}/manifest.json">
-<link rel="canonical" href="{{page.canonical_url}}">
+<link rel="canonical" href="{{page.raw_canonical_url}}">
 <link rel="icon" href="{{site.WFBaseUrl}}/favicon.ico" />
 
 <link rel="stylesheet" media="screen" href="{{page.html_css_file}}" />
@@ -21,7 +21,7 @@
 
 <!-- Translated Page -->
 {% for translated_page in page.translations %}
-<link rel="alternate" hreflang="{{translated_page.langcode}}" href="{{site.WFBaseUrl}}{{page.canonical_url}}?hl={{translated_page.langcode}}" />
+<link rel="alternate" hreflang="{{translated_page.langcode}}" href="{{translated_page.canonical_url}}" />
 {% endfor %}
 
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
