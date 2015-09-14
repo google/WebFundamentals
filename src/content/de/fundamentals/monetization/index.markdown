@@ -1,0 +1,14 @@
+---
+layout: fundamentals/list-subdirectories
+title: "Monetarisierung"
+description: "Erfahren Sie, wie Sie Ihre Einnahmen geräteübergreifend maximieren. Steigern Sie die Nutzerfreundlichkeit und verdienen Sie bares Geld."
+written_on: 2014-05-29
+updated_on: 2014-05-29
+order: 5
+---
+
+{% comment %}
+Page content will be output by the section layout based on the article collection matching page.id
+{% endcomment %}
+
+
