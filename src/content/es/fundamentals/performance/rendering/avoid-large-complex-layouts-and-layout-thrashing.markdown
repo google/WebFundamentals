@@ -1,7 +1,6 @@
 ---
 title: "Evite los diseños grandes y complejos, y la hiperpaginación de diseños"
 description: "El diseño es la parte donde el navegador descifra la información geométrica de los elementos: su tamaño y ubicación en la página. Cada elemento posee información explícita o implícita sobre el tamaño, según la CSS (Hoja de estilos en cascada) que se utilizó, los contenidos del elemento o un elemento principal. Este proceso se denomina Diseño en los navegadores Blink, WebKit e Internet Explorer. En los navegadores basados en Gecko, como Firefox, esto se denomina Redistribución, pero los procesos, en realidad, son los mismos."
-written_on: 2015-03-20
 updated_on: 2015-03-20
 translation_priority: 0
 notes:

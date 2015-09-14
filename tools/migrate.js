@@ -22,6 +22,14 @@ function updateFile(filename) {
       console.log('Migrating ' + filename);
       data = data.replace(/\r\n/gm, '\n');
 
+      if (filename.indexOf('/en/') === -1) {
+        data = data.replace(/^layout:\s*.*\n/m, '');
+        data = data.replace(/^order:\s*.*\n/m, '');
+        data = data.replace(/authors:\n  - [\w\W]+?\n/m, '');
+        data = data.replace(/^\s{2}(written_on: \d{4}-\d{2}-\d{2}\n)/m, '');
+        data = data.replace(/^(written_on: \d{4}-\d{2}-\d{2}\n)/m, '');
+      }
+
       // change the layout
       data = data.replace(/^layout: article\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: landing\n/m, 'layout: fundamentals/list-subdirectories\n');
@@ -40,6 +48,7 @@ function updateFile(filename) {
       data = data.replace(/^seotitle:\s*.*\n/m, '');
       data = data.replace(/^collection:\s*.*\n/m, '');
       data = data.replace(/^snippet:\s*.*\n/m, '');
+      data = data.replace(/^  featured: true\n/m, '');
 
       // remove published: true - it's already published!
       data = data.replace(/^published:\s*true\n/m, '');

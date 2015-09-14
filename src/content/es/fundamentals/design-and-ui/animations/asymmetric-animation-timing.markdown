@@ -1,7 +1,6 @@
 ---
 title: "Sincronización asimétrica de las animaciones"
 description: "Romper la simetría les proporciona contraste a sus proyectos y los hace atractivos. Aprenda cuándo y cómo aplicarlo en sus proyectos."
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

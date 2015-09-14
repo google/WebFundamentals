@@ -65,7 +65,6 @@ notes:
     - "Hemos dado por supuesto un conjunto de estilos que incluyen color, espaciado interno y estilo de fuente que coinciden con nuestras directrices de marca."
   not-all-at-once:
     - "No tienes que mover todos los elementos a la vez, sino que, si es necesario, puedes hacer ajustes menores."
-written_on: 2014-04-17
 updated_on: 2014-04-23
 ---
 

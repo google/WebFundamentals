@@ -1,7 +1,6 @@
 ---
 title: "Fases de desarrollo"
 description: "Todos los desarrolladores pasarán por diferentes fases durante el desarrollo de un proyecto. Con el Web Starter Kit, usted podrá ser más productivo ya que simplifica una serie de tareas para cada fase."
-written_on: 2014-04-17
 updated_on: 2014-10-21
 translation_priority: 1
 key-takeaways:

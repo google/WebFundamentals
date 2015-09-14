@@ -1,7 +1,6 @@
 ---
 title: "Interaktivität dank JavaScript"
 description: "Mit JavaScript lässt sich nahezu jeder Aspekt einer Seite anpassen: vom Inhalt über das Layout und Verhalten bis hin zu Nutzerinteraktionen. JavaScript kann jedoch auch die DOM-Erstellung blockieren und Verzögerungen beim Rendern der Seite verursachen. Machen Sie JavaScript asynchron und entfernen Sie unnötigen Ballast aus dem kritischen Rendering-Pfad, um die Leistung zu optimieren."
-written_on: 2014-01-01
 updated_on: 2014-09-18
 key-takeaways:
   adding-interactivity:

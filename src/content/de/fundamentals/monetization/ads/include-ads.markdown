@@ -1,7 +1,6 @@
 ---
 title: "AdSense-Anzeigen auf Ihrer Website schalten"
 description: "Der folgende Leitfaden bietet Ihnen eine schrittweise Anleitung zur Schaltung von Anzeigen auf Ihrer Website. Erstellen Sie ein AdSense-Konto sowie Anzeigenblöcke, platzieren Sie die Blöcke auf Ihrer Website, konfigurieren Sie die Zahlungseinstellungen und erhalten Sie Zahlungen."
-written_on: 2014-07-31
 updated_on: 2014-07-31
   - petelepage
 key-takeaways:

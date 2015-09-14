@@ -1,7 +1,6 @@
 ---
 title: "Videoplayer anpassen"
 description: "Videos werden je nach Plattform unterschiedlich dargestellt. Bei Lösungen für Mobilgeräte muss die Geräteausrichtung berücksichtigt werden. Verwenden Sie die Fullscreen-API, um die Vollbildansicht von Videoinhalten zu steuern."
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
 notes:

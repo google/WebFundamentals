@@ -1,7 +1,6 @@
 ---
 title: "Importancia de la accesibilidad"
 description: "La accesibilidad no es una característica."
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
   add-a-video:

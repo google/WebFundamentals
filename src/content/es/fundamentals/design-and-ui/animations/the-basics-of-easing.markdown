@@ -1,7 +1,6 @@
 ---
 title: "Principios básicos de la aceleración"
 description: "Aprenda a lograr que sus animaciones sean suaves pero interesantes."
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

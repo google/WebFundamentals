@@ -1,7 +1,6 @@
 ---
 title: "Reducción del alcance y la complejidad de los cálculos de estilo"
 description: "Si se modifica el DOM (Modelo de objetos de documento), mediante la adición y la eliminación de elementos, la modificación de los atributos o las clases, o a través de la animación, el navegador recalculará los estilos de los elementos y, en muchos casos, el diseño (o la redistribución) de la página o partes de esta. Este proceso se denomina cálculo de estilo computarizado."
-written_on: 2015-03-20
 updated_on: 2015-03-20
 translation_priority: 0
 notes:

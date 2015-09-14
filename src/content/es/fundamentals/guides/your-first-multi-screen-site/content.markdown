@@ -4,7 +4,6 @@ description: "El contenido es lo más importante de cualquier sitio. En esta gu�
 notes:
   styling:
     - Estilo vendrá después
-written_on: 2014-04-17
 updated_on: 2014-04-23
 translators:
 related-guides:

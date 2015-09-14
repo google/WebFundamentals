@@ -1,7 +1,6 @@
 ---
 title: "Funktionsweise von Anzeigen"
 description: "Kurz gesagt: Sie bieten Werbefläche, auch Anzeigeninventar genannt, auf Ihrer Website an. Werbetreibende geben Gebote für die Schaltung von Anzeigen auf Ihrer Website ab. Das höchste Gebot gewinnt. Sie werden bezahlt, wenn Nutzer auf die Anzeigen klicken."
-written_on: 2014-07-31
 updated_on: 2014-07-31
   - petelepage
 key-takeaways:

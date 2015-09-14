@@ -1,7 +1,6 @@
 ---
 title: "Optimizar la codificación y el tamaño de transferencia de los recursos basados en texto"
 description: "Una vez eliminados todos los recursos innecesarios, hay que reducir el tamaño total del resto de recursos que el navegador tiene que descargar. Para la compresión se pueden utilizar algoritmos de compresión (GZip) genéricos y específicos del tipo de contenido."
-written_on: 2014-04-01
 updated_on: 2014-09-12
 key-takeaways:
   compression-101:

@@ -1,7 +1,6 @@
 ---
 title: "Aceleración personalizada"
 description: "Desvíese de lo común y cree animaciones totalmente personalizadas para sus proyectos."
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

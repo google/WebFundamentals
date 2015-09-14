@@ -1,7 +1,6 @@
 ---
 title: "HTTP-Caching"
 description: "Der Abruf von Inhalten über das Netzwerk ist sowohl langwierig als auch kostspielig: Umfangreiche Antworten erfordern viele Paketumläufe zwischen Client und Server, was die Verfügbarkeit und Verarbeitung durch den Browser verzögert und zudem zu Datenkosten für den Besucher führt. Aus diesem Grund stellt die Fähigkeit, zuvor abgerufene Ressourcen im Cache zwischenzuspeichern und wiederzuverwenden, einen kritischen Aspekt der Leistungsoptimierung dar."
-written_on: 2014-01-01
 updated_on: 2014-01-05
 key-takeaways:
   validate-etags:

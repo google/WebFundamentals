@@ -1,7 +1,6 @@
 ---
 title: "Animaciones y rendimiento"
 description: "Las animaciones deben funcionar correctamente; de lo contrario, tendrán un impacto negativo en la experiencia del usuario."
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:
