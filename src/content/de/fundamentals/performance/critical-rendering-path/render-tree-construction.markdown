@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Erstellung der Rendering-Baumstruktur, Layout, und Paint"
 description: "Die CSSOM- und DOM-Baumstrukturen werden in einer Rendering-Baumstruktur zusammengefasst, die dann zur Berechnung des Layouts eines jeden sichtbaren Elements verwendet wird und als Eingabe für den Paint-Prozess dient, der die Pixel auf dem Bildschirm darstellt. Die Optimierung jedes einzelnen dieser Schritte ist für die bestmögliche Rendering-Leistung entscheidend."
-written_on: 2014-04-01
 updated_on: 2014-09-18
-order: 2
-authors:
-  - ilyagrigorik
 key-takeaways:
   render-tree-construction:
     - "Die DOM- und CSSOM-Baumstrukturen bilden gemeinsam die Rendering-Baumstruktur."

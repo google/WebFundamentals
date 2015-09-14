@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Usar SVG para iconos"
 description: "Cuando añadas iconos a tu página web, usa iconos SVG en la medida de lo posible o, en algunos casos, caracteres unicode."
-authors:
-  - petelepage
-written_on: 2014-06-10
 updated_on: 2014-06-10
-order: 3
 key-takeaways:
   avoid-images:
     - Usa SVG o caracteres unicode para los iconos en lugar de imágenes de mapa de bits.

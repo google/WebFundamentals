@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Optimizar imágenes para mejorar el rendimiento"
 description: "Las imágenes suelen ser las responsables de la mayoría de los bytes descargados en un sitio y, además, ocupar una gran cantidad de espacio visual en la página."
-authors:
-  - petelepage
-written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 4
 key-takeaways:
   use-right-image:
     - Usa la imagen que mejor se adapte a las características de la pantalla, teniendo en cuenta el tamaño de la pantalla, la resolución del dispositivo y el diseño de la página.

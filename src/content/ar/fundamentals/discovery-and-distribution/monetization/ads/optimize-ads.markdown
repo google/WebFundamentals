@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "تحسين الإعلانات"
 description: "يمكن أن يساعد تحسين موقعك والإعلانات التي تظهر عليه في دعم جودة الإعلانات التي تُعرض وزيادة الأرباح."
-written_on: 2014-08-12
 updated_on: 2014-08-12
-order: 4
-authors:
-  - megginkearney
   - petelepage
 key-takeaways:
   tldr:

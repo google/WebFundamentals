@@ -1,5 +1,4 @@
 ---
-layout: shared/plain
 title: "تصميم موقع ويب سريع الاستجابة"
 description: "أصبح بإمكان عدد هائل من الأجهزة الوصول إلى شبكة الإنترنت بدءًا من الهواتف ذات الشاشة الصغيرة وانتهاءً بأجهزة التلفزيون ذات الشاشة الكبيرة. ويمكنك التعرف على كيفية تصميم موقع ويب يعمل جيدًا على جميع هذه الأجهزة."
 key-takeaways:
@@ -8,8 +7,6 @@ key-takeaways:
     - استخدم إطار عرض ضيقًا في البداية ثم اهتم بضبط الحجم بعد ذلك.
     - ضع نقاط فصل عند الحاجة إلى تكييف المحتوى.
     - ضع رؤية عالية المستوى للتنسيق على مستوى نقاط الفصل الأساسية.
-authors:
-  - paulkinlan
 translators:
 related-guides:
   responsive:
@@ -69,9 +66,7 @@ notes:
     - "افترضنا مجموعة من الأنماط التي تتضمن لونًا ومساحة متروكة ونمطًا للخط يتطابق مع إرشادات العلامة التجارية المتبعة لدينا."
   not-all-at-once:
     - "لن تضطر إلى نقل جميع العناصر مرة واحدة، ويمكنك إجراء تعديلات صغيرة عند اللزوم."
-written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 2
 ---
 
 <p class="intro">
@@ -83,13 +78,13 @@ order: 2
 نحن بصدد تصميم موقع ويب يمكن استعراضه على أحجام شاشات مختلفة وأنواع أجهزة متنوعة. وفي  [المقالة السابقة]({{site.baseurl}}{{page.article.previous.url}})، تمكنا من إعداد البنية المعلوماتية للصفحة وأنشأنا هيكلاً أساسيًا.
 وفي هذا الدليل سنتناول الهيكل الأساسي مع المحتوى ونحوله إلى صفحة رائعة تكون سريعة  الاستجابة على عدد كبير من أحجام الشاشات.
 
-<div class="clear">
-  <figure class="g-wide--2 g-medium--half">
-    <img  src="images/content.png" alt="المحتوى" style="max-width: 100%;">
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6--col">
+    <img  src="images/content.png" alt="المحتوى">
     <figcaption>{% link_sample _code/content-without-styles.html %} المحتوى والهيكل {% endlink_sample %} </figcaption>
   </figure>
-  <figure class="g-wide--2 g-wide--last g-medium--half g--last">
-    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+  <figure class="mdl-cell mdl-cell--6--col">
+    <img  src="images/narrowsite.png" alt="Designed site">
     <figcaption>{% link_sample _code/content-with-styles.html %} موقع الويب النهائي {% endlink_sample %} </figcaption>
   </figure>
 </div>
@@ -142,8 +137,8 @@ order: 2
 
 وهناك مثال معبر عن ذلك وهو صورة العنوان لمحتوى `الجزء المرئي من الصفحة`. هذا المحتوى يُستخدم غالبًا لإثارة المستخدم وتشجيعه على الاطلاع على مزيد من المعلومات حول المنتج.
 
-<div class="g-wide--2 g-wide--last g-medium--half g--last">
-  <img  src="images/narrowsite.png" alt="موقع الويب المصمم" style="max-width: 100%;">
+<div class="mdl-cell mdl-cell--6--col">
+  <img  src="images/narrowsite.png" alt="موقع الويب المصمم">
 </div>
 
 يمكن تضمينه ببساطة شديدة. وفي حالتنا هذه، سنستخدمه خلفية للعنوان ونضعه من خلال محتوى CSS بسيط.

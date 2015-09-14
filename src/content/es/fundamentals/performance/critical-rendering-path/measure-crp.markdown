@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Medir la ruta de renderización importante con el tiempo de navegación"
 description: "No es posible optimizar lo que no podemos medir. Afortunadamente, el API de Navigation Timing proporciona las herramientas necesarias para medir cada paso de la ruta de renderización importante."
-written_on: 2014-04-01
 updated_on: 2014-09-18
-order: 5
-authors:
-  - ilyagrigorik
 key-takeaways:
   measure-crp:
     - "El tiempo de navegación proporciona marcas de tiempo de alta resolución para medir la ruta de renderización importante."

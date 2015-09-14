@@ -1,13 +1,8 @@
 ---
-layout: shared/plain
 title: "Monitoreo de la ubicación del usuario"
 description: "La API (Interfaz de programación de aplicaciones) de geolocalización le permite averiguar dónde se encuentra el usuario y mantenerse informado a medida que este se desplaza, siempre con su consentimiento."
-written_on: 2014-01-01
 updated_on: 2014-10-21
-order: 2
 translation_priority: 1
-authors:
-  - paulkinlan
 key-takeaways:
   geo: 
     - Verifique la compatibilidad antes de utilizar la API.

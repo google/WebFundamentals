@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Añadir interactividad con JavaScript"
 description: "JavaScript nos permite modificar casi cualquier aspecto de la página: el contenido, el estilo y su comportamiento según las interacciones del usuario. Sin embargo, JavaScript también puede bloquear la creación de DOM y retrasar la visualización de la página. Para ofrecer un rendimiento óptimo, define que JavaScript sea asíncrono y elimina todo el contenido JavaScript innecesario de la ruta de publicación importante."
-written_on: 2014-01-01
 updated_on: 2014-09-18
-order: 4
-authors:
-  - ilyagrigorik
 key-takeaways:
   adding-interactivity:
     - JavaScript puede enviar consultas a DOM y CSSOM y modificarlos.

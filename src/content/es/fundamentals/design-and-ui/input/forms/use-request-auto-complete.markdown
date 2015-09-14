@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Simplificación de la finalización del pago con la API requestAutocomplete"
 description: "Aunque <code>requestAutocomplete</code> se diseñó para ayudar a los usuarios a completar cualquier formulario, actualmente, su uso más común es el comercio electrónico, donde el abandono de los carritos de compra en la web móvil <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>puede ser de hasta el 97 %</a>."
-written_on: 2014-04-30
 updated_on: 2014-10-21
-order: 5
-authors:
-  - petelepage
 translation_priority: 0
 key-takeaways:
   use-request-auto-complete:

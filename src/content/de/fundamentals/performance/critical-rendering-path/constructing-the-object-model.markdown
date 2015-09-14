@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Objektmodell erstellen"
 description: "Bevor der Browser Inhalte auf dem Bildschirm darstellen kann, müssen die DOM- und CSSOM-Baumstrukturen erstellt werden. Deshalb sind sowohl die HTML- als auch die CSS-Elemente dem Browser unverzüglich zur Verfügung zu stellen."
-written_on: 2014-04-01
 updated_on: 2014-09-12
-order: 1
-authors:
-  - ilyagrigorik
 key-takeaways:
   Objektmodell erstellen:
     - "Bytes → Zeichen → Token → Knoten → Objektmodell"

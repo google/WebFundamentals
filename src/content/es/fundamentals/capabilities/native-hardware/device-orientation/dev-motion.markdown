@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Movimiento del dispositivo"
 description: "A través de la función Movimiento del dispositivo se proporciona información sobre la fuerza de aceleración que se aplica al dispositivo en un momento determinado, y sobre la velocidad de rotación."
-written_on: 2014-06-17
 updated_on: 2014-10-21
-order: 1
-authors:
-  - petelepage
 translation_priority: 1
 key-takeaways:
   devmotion: 

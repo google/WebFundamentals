@@ -1,15 +1,10 @@
 ---
-layout: shared/plain
 title: "Inhalte und Struktur erstellen"
 description: "Inhalte sind der wichtigste Aspekt jeder Website. In diesem Leitfaden erläutern wir, wie Sie Ihre erste Website für verschiedene Geräte schnell vorbereiten können."
 notes:
   styling:
     - Styling kommt später
-written_on: 2014-04-17
 updated_on: 2014-04-23
-order: 1
-authors:
-  - paulkinlan
 translators:
 related-guides:
   create-amazing-forms:

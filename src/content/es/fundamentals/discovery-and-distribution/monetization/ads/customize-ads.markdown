@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Personalizar los anuncios"
 description: "Los mejores anuncios pueden mejorar la experiencia del usuario. Aunque realmente el contenido del anuncio depende de los anunciantes, puedes controlar el tipo de contenido, el color, el tamaño y la posición de estos anuncios."
-written_on: 2014-07-31
 updated_on: 2014-08-12
-order: 3
-authors:
-  - megginkearney
   - petelepage
 key-takeaways:
   tldr: 

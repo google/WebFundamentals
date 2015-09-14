@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Optimizar la ruta de renderización importante"
 description: "Para acelerar todo lo posible la primera renderización, debemos optimizar tres variables: minimizar el número de recursos importantes, el número de bytes importantes y la longitud de la ruta importante."
-written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 7
-authors:
-  - ilyagrigorik
 ---
 <p class="intro">
   

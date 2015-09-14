@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "المسائل المتعلقة بإمكانية الوصول"
 description: "لا تعد إمكانية الوصول ميزة."
-written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 4
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - استخدم عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله.

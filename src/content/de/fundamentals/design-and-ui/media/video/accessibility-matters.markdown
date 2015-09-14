@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Warum Zugänglichkeit wichtig ist"
 description: "Zugänglichkeit ist keine Funktion."
-written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 4
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - "Verwenden Sie das Videoelement zum Laden, Decodieren und Abspielen von Videos auf Ihrer Website."

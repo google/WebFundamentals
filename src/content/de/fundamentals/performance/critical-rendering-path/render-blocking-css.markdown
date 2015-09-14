@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Rendering-blockierendes CSS"
 description: "CSS wird standardmäßig als rendering-blockierende Ressource behandelt, d. h., der Browser hält das Rendering der verarbeiteten Inhalte zurück, bis das CSSOM erstellt wurde. Halten Sie Ihr CSS so knapp wie möglich, stellen Sie es sobald wie möglich bereit und heben Sie die Blockierung des Renderings mithilfe von Medientypen und Abfragen auf."
-written_on: 2014-04-01
 updated_on: 2014-09-18
-order: 3
-authors:
-  - ilyagrigorik
 related-guides:
   media-queries:
     -

@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "CSS que bloquea la renderización del contenido"
 description: "De forma predeterminada, el código CSS se considera un recurso que puede retrasar la visualización del sitio. Esto quiere decir que el navegador solo mostrará el contenido cuando se haya construido el CSSOM. Asegúrate de reducir al mínimo los estilos CSS, de activarlos lo antes posible y de usar tipos y consultas de medios para acelerar la renderización del contenido."
-written_on: 2014-04-01
 updated_on: 2014-09-18
-order: 3
-authors:
-  - ilyagrigorik
 related-guides:
   media-queries:
     -

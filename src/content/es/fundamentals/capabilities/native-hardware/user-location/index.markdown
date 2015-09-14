@@ -1,13 +1,8 @@
 ---
-layout: shared/plain
 title: "Ubicación del usuario"
 description: "La mayoría de los navegadores y dispositivos tienen acceso a la ubicación geográfica de los usuarios. Aprenda a utilizar la ubicación del usuario en su sitio y sus aplicaciones."
-written_on: 2014-01-01
 updated_on: 2014-10-21
-order: 2
 translation_priority: 1
-authors:
-  - paulkinlan
 ---
 
 <p class="intro">

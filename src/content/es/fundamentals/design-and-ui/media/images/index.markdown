@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Imágenes"
 description: "Una imagen vale más que mil palabras, y juegan un papel importante en cada página. Sin embargo, las imágenes también son la causa de que se descarguen tantos bytes.  Al usar un diseño web adaptable, no solo puede cambiar el diseño según las características del dispositivo, sino que las imágenes también pueden cambiar."
-authors:
-  - petelepage
-written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 1
 key-takeaways:
   use-right-image:
     - Usa la imagen que mejor se adapte a las características de la pantalla, teniendo en cuenta el tamaño de la pantalla, la resolución del dispositivo y el diseño de la página.

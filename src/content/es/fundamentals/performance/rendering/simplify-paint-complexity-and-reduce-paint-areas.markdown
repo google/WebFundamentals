@@ -1,13 +1,8 @@
 ---
-layout: shared/plain
 title: "Simplificación de la complejidad de la pintura y reducción de las áreas de pintura"
 description: "La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible."
-written_on: 2015-03-20
 updated_on: 2015-03-20
-order: 4
 translation_priority: 0
-authors:
-  - paullewis
 notes:
   highdpi:
     - "Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos  de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente."

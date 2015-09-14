@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Videoplayer anpassen"
 description: "Videos werden je nach Plattform unterschiedlich dargestellt. Bei Lösungen für Mobilgeräte muss die Geräteausrichtung berücksichtigt werden. Verwenden Sie die Fullscreen-API, um die Vollbildansicht von Videoinhalten zu steuern."
-written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 3
-authors:
-  - samdutton
 key-takeaways:
 notes:
   media-fragments:
@@ -35,8 +30,8 @@ Bei Desktopmonitoren oder Laptops ist die Geräteausrichtung kein Thema. Anders 
 
 Safari auf dem iPhone schaltet gut zwischen Hoch- und Querformat um:
 
-<div class="clear">
-    <img class="mdl-cell mdl-cell--6--col" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Hochformat" src="images/iPhone-video-playing-portrait.png">
+<div class="mdl-grid">
+  <img class="mdl-cell mdl-cell--6--col" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Hochformat" src="images/iPhone-video-playing-portrait.png">
     <img class="mdl-cell mdl-cell--6--col" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Querformat" src="images/iPhone-video-playing-landscape.png">
 </div>
 

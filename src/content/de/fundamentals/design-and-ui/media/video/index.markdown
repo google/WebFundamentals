@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Video"
 description: "Hier erfahren Sie, wie Sie Videoinhalte ganz einfach zu Ihrer Website hinzufügen und den Nutzern die bestmögliche Nutzererfahrung bieten können - egal auf welchem Gerät."
-written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 2
-authors:
-  - samdutton
 ---
 
 <p class="intro">
