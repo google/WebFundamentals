@@ -21,7 +21,7 @@ module Jekyll
     alias superdest destination
     alias superpath path
 
-    attr_reader :canonical_url, :relative_url, :directories
+    attr_reader :canonical_url, :relative_url, :directories, :context
 
     def initialize(site, relativeDir, filename, validKeys=[])
       @contentSource = site.config['WFContentSource']
@@ -53,7 +53,7 @@ module Jekyll
       end
 
       defaultKeys = [
-        'layout', 'title', 'description', 'order', 'translation_priority', 
+        'layout', 'title', 'description', 'order', 'translation_priority',
         'authors', 'translators', 'comments', 'written_on', 'updated_on',
         'published', 'rss', 'comments', 'key-takeaways', 'notes',
         'related-guides'
@@ -245,6 +245,9 @@ module Jekyll
       fullUrl = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + @url
       fullUrl = fullUrl.sub('index.html', '')
       fullUrl = fullUrl.sub('.html', '')
+
+      fullUrl = fullUrl + "?hl=" + @langcode || site.config['primary_lang']
+
       fullUrl
     end
 
@@ -252,7 +255,36 @@ module Jekyll
       relativeUrl = site.config['WFBaseUrl'] + @url
       relativeUrl = relativeUrl.sub('index.html', '')
       relativeUrl = relativeUrl.sub('.html', '')
+
+      relativeUrl = relativeUrl + "?hl=" + @langcode || site.config['primary_lang']
+
       relativeUrl
+    end
+
+    def context
+      if self.data['_context'].nil?
+        return
+      end
+
+      langSpecificContenxt = {
+        "id" => self.data['_context']['id'],
+        "pages" => [],
+        "subdirectories" => []
+      }
+
+      self.data['_context']['pages'].each { |page|
+        suitablePage = page
+        page.data['translations'].each { |translationPage|
+          if translationPage.langcode == @langcode
+            suitablePage = translationPage
+          end
+        }
+        langSpecificContenxt['pages'] << suitablePage
+      }
+
+      langSpecificContenxt['subdirectories'] = self.data['_context']['subdirectories']
+
+      langSpecificContenxt
     end
 
     # Convert this post into a Hash for use in Liquid templates.
@@ -261,7 +293,7 @@ module Jekyll
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
     super(attrs + %w[
       canonical_url
-    ] + %w[ relative_url ])
+    ] + %w[ relative_url ] + %w[ context ])
   end
   end
 end

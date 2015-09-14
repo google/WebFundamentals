@@ -178,7 +178,7 @@ module Jekyll
             #  raise "Two pages at the same URL #{page.url}"
             #end
 
-            page.data['context'] = pagesTrees
+            page.data['_context'] = pagesTrees
 
             # Check if there are any translations available
             supportedTranslations = site.config['langs_available'].select { |languageId|
@@ -199,6 +199,7 @@ module Jekyll
                 languageId,
                 true)
               translationPage.data.merge!('is_localized' => true, 'is_localization' => true)
+              translationPage.data['_context'] = pagesTrees
               translated_pages << translationPage
               site.pages << translationPage
             end
