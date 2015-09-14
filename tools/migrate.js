@@ -1,5 +1,8 @@
 'use strict';
 
+var fs = require('fs');
+var path = require('path');
+
 console.log('Migration Assistant');
 console.log(' - Helps migrate content to the new Web Fundamentals folder structure');
 console.log('   This file is only meant as a temporary tool and should be removed');
@@ -9,8 +12,6 @@ console.log('');
 if (!process.argv[2]) {
   console.log('Error: no path provided.');
 }
-
-var fs = require('fs');
 
 function updateFile(filename) {
   fs.readFile(filename, {'encoding': 'utf8'}, function(err, data) {
@@ -28,6 +29,7 @@ function updateFile(filename) {
       data = data.replace(/^layout: devtools\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: tools-article\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: tools-section\n/m, 'layout: shared/plain\n');
+      data = data.replace(/^layout: grouped-list\n/m, 'layout: shared/plain\n');
 
       //remove: class, article, collection, id, feedName, feedPath, seotitle
       data = data.replace(/^article:\n/m, '');
@@ -37,6 +39,7 @@ function updateFile(filename) {
       data = data.replace(/^class:\s*.*\n/m, '');
       data = data.replace(/^seotitle:\s*.*\n/m, '');
       data = data.replace(/^collection:\s*.*\n/m, '');
+      data = data.replace(/^snippet:\s*.*\n/m, '');
 
       // remove published: true - it's already published!
       data = data.replace(/^published:\s*true\n/m, '');
@@ -137,10 +140,26 @@ if (!String.prototype.endsWith) {
   });
 }
 
+function recurseDir(dir, rootDir, callback) {
+  if (dir.indexOf('_code') === -1) {
+    var files = fs.readdirSync(dir);
+    for (var i = 0; i < files.length; i++) {
+      var file = path.join(dir, files[i]);
+      var stat = fs.statSync(file);
+      if (stat.isDirectory()) {
+        recurseDir(file, rootDir, callback);
+      } else {
+        if (file.indexOf('DS_Store') === -1) {
+          callback(file);
+        }
+      }
+    }
+  }
+}
+
 var dir = process.argv[2];
-var files = fs.readdirSync(dir);
-files.forEach(function(filename) {
-  if (filename.endsWith('.markdown')) {
-    updateFile(dir + filename);
+recurseDir(dir, dir, function(f) {
+  if (f.endsWith('.markdown')) {
+    updateFile(f);
   }
 });
