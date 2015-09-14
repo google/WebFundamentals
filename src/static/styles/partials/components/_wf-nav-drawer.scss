@@ -28,7 +28,7 @@ $horizontal-padding: $base-line;
   list-style: none;
 }
 
-.wf-main-nav__list {
+.wf-main-nav__list-level-1 {
   display: inline-block;
   width: 100%;
 
@@ -55,4 +55,26 @@ $horizontal-padding: $base-line;
 
 .wf-main-nav__link {
   text-decoration: none;
+}
+
+.wf-navdrawer__bottom-link {
+  text-decoration: none;
+  color: $text-color-primary;
+}
+
+.wf-navdrawer__bottom-link-container {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  padding: $vertical-padding $horizontal-padding;
+}
+
+.wf-navdrawer__bottom-link-container img {
+  width: $base-line;
+  height: auto;
+
+  padding-right: $base-line * 0.5;
 }
