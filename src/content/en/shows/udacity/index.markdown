@@ -1,7 +1,7 @@
 ---
 id: udacity-courses
 showid: udacity
-layout: shows/series-index
+layout: shows/udacity-home
 collection: shows
 title: "Udacity Courses"
 description: "Get started or build your web design and development skills with these free Udacity courses taught by your friends at Google."

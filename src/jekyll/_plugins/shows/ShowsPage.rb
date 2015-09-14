@@ -36,7 +36,7 @@ module Jekyll
         'latest news and technologies on the web platform.'
 
       $css = 'shows-index.css'
-      if self.data['layout'] == 'shows/show-home'
+      if self.data['layout'] == 'shows/show-home' || self.data['layout'] == 'shows/udacity-home'
         $css = 'show-home.css'
       elsif self.data['layout'] == 'shows/single-video'
         $css = 'show-single-video.css'
