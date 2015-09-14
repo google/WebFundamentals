@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Wprowadzenie
+    path: /fundamentals/getting-started/
+  - title: Dokumentacja
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Zasady projektowania witryn
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Układ strony obsługiwany na wielu urządzeniach
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Podstawy elastycznego projektowania witryn
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Sposoby elastycznego projektowania witryn
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Wzory układu strony
+            path: /fundamentals/layouts/layout-patterns/
+          - title: Elementy interfejsu użytkownika
+            path: /fundamentals/layouts/ui-elements/
+      - title: Formularze i obsługa przez użytkownika
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Obsługa dotykowa
+            path: /fundamentals/input/touch/
+          - title: Wpisywanie do formularzy
+            path: /fundamentals/input/form/
+      - title: Wygląd i ogólne wrażenie
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Wprowadzenie do animacji
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Obrazy, wideo i dźwięk"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Obrazy
+            path: /fundamentals/media/images/
+          - title: Wideo
+            path: /fundamentals/media/video/
+          - title: Dźwięk
+            path: /fundamentals/media/audio/
+      - title: Zarabianie
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Zarabianie na reklamach
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Odkrycie i dystrybucja
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Dostęp do urządzenia
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Lokalizacja użytkownika
+            path: /fundamentals/device-access/user-location
+          - title: "Kliknij, aby połączyć"
+            path: /fundamentals/device-access/click-to-call
+      - title: Wydajność
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Krytyczna ścieżka renderowania
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: Optymalizowanie obsługi treści
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Optymalizowanie sieci
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Optymalizowanie obsługi interaktywnej
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Mierzenie wydajności
+            path: /fundamentals/performance/measuring-performance/
+  - title: Narzędzia
+    path: /fundamentals/tools/
+  - title: Zasoby
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Słownik
+        path: /fundamentals/resources/glossary/
+      - title: Przykłady
+        path: /fundamentals/resources/samples/
+      - title: Poradnik dotyczący stylów
+        path: /fundamentals/resources/styleguide/
+      - title: Przykładowy artykuł
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
