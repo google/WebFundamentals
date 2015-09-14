@@ -1,7 +1,6 @@
 ---
 title: "Ofrecer alternativas para plataformas anteriores"
 description: "No todos los formatos vídeo son compatibles con cada plataforma. Comprueba qué formatos son compatibles en las plataformas principales y asegúrate de que el vídeo funcione en cada una de ellas."
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
   add-a-video:

@@ -1,7 +1,6 @@
 ---
 title: "CSS-Medienabfragen für Responsivität verwenden"
 description: "Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiedenen Geräten optimiert. Erlernen Sie die Grundlagen, mit denen Ihre Website auf Mobilgeräten, Desktopcomputern und jeglichen anderen Geräten mit einem Bildschirm funktioniert."
-written_on: 2014-04-30
 updated_on: 2014-09-12
 key-takeaways:
   media-queries:

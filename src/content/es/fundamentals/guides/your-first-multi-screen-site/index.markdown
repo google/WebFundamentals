@@ -1,7 +1,6 @@
 ---
 title: "Tu primer sitio multidispositivo"
 description: "Se puede acceder a la Web desde una amplia gama de dispositivos, desde teléfonos de pantalla pequeña a televisores de pantalla gigante. Aprende a crear un sitio que funcione bien en todos los dispositivos."
-written_on: 2014-01-01
 updated_on: 2014-01-06
 translators:
 ---

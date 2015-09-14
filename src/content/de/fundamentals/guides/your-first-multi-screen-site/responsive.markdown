@@ -66,7 +66,6 @@ notes:
     - "Wir haben eine Anzahl an Stilen für Farben, Abstände und Schriftarten umgesetzt, die unseren Markenrichtlinien entsprechen."
   not-all-at-once:
     - "Sie müssen nicht alle Elemente auf einmal verschieben, sondern können bei Bedarf kleinere Anpassungen vornehmen."
-written_on: 2014-04-17
 updated_on: 2014-04-23
 ---
 

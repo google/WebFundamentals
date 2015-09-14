@@ -1,7 +1,6 @@
 ---
 title: "Rendimiento de la representación"
 description: "Los usuarios notan si los sitios y las aplicaciones no funcionan correctamente, por eso es fundamental optimizar el rendimiento de la representación."
-written_on: 2015-03-20
 updated_on: 2015-03-20
 translation_priority: 0
 notes:

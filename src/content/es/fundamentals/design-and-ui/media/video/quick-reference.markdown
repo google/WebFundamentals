@@ -1,7 +1,6 @@
 ---
 title: "Referencia rápida"
 description: "Un resumen de las propiedades del elemento de vídeo"
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
   add-a-video:

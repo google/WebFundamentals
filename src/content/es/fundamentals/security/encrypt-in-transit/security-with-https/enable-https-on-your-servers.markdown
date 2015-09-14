@@ -1,7 +1,6 @@
 ---
 title: "Habilitación de HTTPS en sus servidores"
 description: "Ya se encuentra preparado para el paso importantísimo de habilitar HTTPS en sus servidores."
-written_on: 2015-03-27
 updated_on: 2015-03-27
 translation_priority: 0
 key-takeaways:

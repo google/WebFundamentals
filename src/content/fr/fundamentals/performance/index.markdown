@@ -1,7 +1,6 @@
 ---
 title: "Optimiser les performances"
 description: "Les performances sont une fonctionnalité. Mettre votre contenu à la disposition des utilisateurs le plus rapidement possible. Une fois que les utilisateurs ont accédé à votre application, rendre les interactions et l'affichage de la page le plus fluide possible."
-written_on: 2014-04-01
 updated_on: 2014-04-28
 ---
 

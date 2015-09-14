@@ -1,7 +1,6 @@
 ---
 title: "Den kritischen Rendering-Pfad mit Navigation Timing messen"
 description: "Sie können nicht optimieren, was Sie nicht messen können. Mit dem Navigation Timing API verfügen wir jedoch über alle notwendigen Tools zum Messen der einzelnen Schritte des kritischen Rendering-Pfads (Critical Rendering Path, CRP)!"
-written_on: 2014-04-01
 updated_on: 2014-09-18
 key-takeaways:
   measure-crp:

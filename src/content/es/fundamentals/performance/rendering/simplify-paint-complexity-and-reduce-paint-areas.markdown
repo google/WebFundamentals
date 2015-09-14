@@ -1,7 +1,6 @@
 ---
 title: "Simplificación de la complejidad de la pintura y reducción de las áreas de pintura"
 description: "La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible."
-written_on: 2015-03-20
 updated_on: 2015-03-20
 translation_priority: 0
 notes:

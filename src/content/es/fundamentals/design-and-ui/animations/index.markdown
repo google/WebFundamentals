@@ -1,7 +1,6 @@
 ---
 title: "Animaciones"
 description: "Obtenga más información sobre las animaciones y su uso en las aplicaciones y los sitios modernos."
-written_on: 2014-08-08
 updated_on: 2014-10-21
 translation_priority: 0
 key-takeaways:

@@ -1,7 +1,6 @@
 ---
 title: "Optimiza tus anuncios"
 description: "La optimización de tu sitio y de los anuncios que aparecen en él puede mejorar la calidad de los anuncios mostrados y generar más ingresos."
-written_on: 2014-08-12
 updated_on: 2014-08-12
   - petelepage
 key-takeaways:

@@ -1,7 +1,6 @@
 ---
 title: "Cómo funcionan los anuncios"
 description: "En resumen, debes crear espacios publicitarios (también denominados `inventario de anuncios`) en tu sitio. Los anunciantes pujan por mostrar sus anuncios en tu sitio y la puja mayor gana la subasta. A continuación, obtendrás ingresos cuando los usuarios hagan clic en los anuncios."
-written_on: 2014-07-31
 updated_on: 2014-07-31
   - petelepage
 key-takeaways:

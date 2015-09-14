@@ -1,7 +1,6 @@
 ---
 title: "Generación de claves y solicitudes de firma de certificados"
 description: "En esta sección, se utiliza el programa de línea de comandos OpenSSL, que se ofrece con la mayoría de los sistemas de Linux, BSD y Mac OS X, para generar claves privadas o públicas, y una CSR (solicitud de firma de certificados)"
-written_on: 2015-03-27
 updated_on: 2015-03-27
 translation_priority: 0
 key-takeaways:

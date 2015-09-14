@@ -1,7 +1,6 @@
 ---
 title: "Optimizar la eficacia del contenido"
 description: "La cantidad de datos descargados por cada aplicación va en aumento. Para ofrecer un buen rendimiento, debemos optimizar el envío de cada byte."
-written_on: 2014-04-01
 updated_on: 2014-04-29
 ---
 

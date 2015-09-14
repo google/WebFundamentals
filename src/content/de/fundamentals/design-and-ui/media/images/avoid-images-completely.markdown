@@ -1,7 +1,6 @@
 ---
 title: "Bilder nach Möglichkeit vermeiden"
 description: "Manchmal ist es besser, Bilder gar nicht zu nutzen. Verwenden Sie wann immer möglich die nativen Funktionen des Browsers, um gleiche oder ähnliche Funktionalität bereitzustellen."
-written_on: 2014-04-30
 updated_on: 2014-06-10
 key-takeaways:
   avoid-images:

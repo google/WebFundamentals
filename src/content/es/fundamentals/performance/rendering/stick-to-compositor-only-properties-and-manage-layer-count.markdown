@@ -1,7 +1,6 @@
 ---
 title: "Limítese solo a las propiedades del compositor y administre el recuento de capas"
 description: "Composición hace referencia al proceso en el que las partes pintadas de la página se unen para mostrarlas en la pantalla."
-written_on: 2015-03-20
 updated_on: 2015-03-20
 translation_priority: 0
 notes:

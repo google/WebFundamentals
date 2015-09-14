@@ -1,7 +1,6 @@
 ---
 title: "المسائل المتعلقة بإمكانية الوصول"
 description: "لا تعد إمكانية الوصول ميزة."
-written_on: 2014-04-16
 updated_on: 2014-04-29
 key-takeaways:
   add-a-video:
