@@ -41,7 +41,7 @@ udacity:
   تتزايد نسبة استخدام أجهزة الجوّال في تصفح الويب بقدر هائل، ولكن للأسف لم يتم تحسين قدر كبير من محتوى الويب بحيث يعمل على أجهزة الجوّال. وتواجه أجهزة الجوّال في بعض الأحيان قيودًا بسبب حجم الشاشة وتتطلب منهجًا مختلفًا لكيفية ظهور المحتوى على الشاشة.
 </p>
 
-{% include modules/udacity.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+{% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 هناك عدد كبير من أحجام الشاشات المختلفة على الهواتف، وما بات يُعرف مؤخرًا باسم `فابلت` والأجهزة اللوحية وأجهزة سطح المكتب ووحدات التحكم في الألعاب وأجهزة التلفزيون والأجهزة القابلة للارتداء.  ستظل أحجام الشاشات في تغير دائم، ولذلك من الضروري أن يكون بإمكان موقعك التوافق مع أي حجم شاشة، اليوم وفي المستقبل.
 
