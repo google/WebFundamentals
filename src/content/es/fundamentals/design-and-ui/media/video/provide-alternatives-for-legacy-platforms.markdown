@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Ofrecer alternativas para plataformas anteriores"
 description: "No todos los formatos vídeo son compatibles con cada plataforma. Comprueba qué formatos son compatibles en las plataformas principales y asegúrate de que el vídeo funcione en cada una de ellas."
-written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 2
-authors:
-  - samdutton
 key-takeaways:
   add-a-video:
     - Usa el elemento de vídeo que se cargará y que descodificará y reproducirá el vídeo en tu sitio.

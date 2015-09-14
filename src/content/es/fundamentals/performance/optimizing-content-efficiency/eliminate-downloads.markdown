@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Eliminar las descargas innecesarias"
 description: "El recurso más rápido y optimizado es el que no se envía. ¿Has supervisado el rendimiento de tus recursos recientemente? Deberías hacerlo cada cierto tiempo para garantizar que cada recurso contribuya a ofrecer la mejor experiencia posible al usuario."
-written_on: 2014-04-01
 updated_on: 2014-04-29
-order: 1
-authors:
-  - ilyagrigorik
 key-takeaways:
   eliminate-downloads:
     - "Hacer un inventario con todos los elementos propios y de terceros en tus páginas"

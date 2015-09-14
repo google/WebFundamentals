@@ -1,13 +1,8 @@
 ---
-layout: shared/plain
 title: "Evite los diseños grandes y complejos, y la hiperpaginación de diseños"
 description: "El diseño es la parte donde el navegador descifra la información geométrica de los elementos: su tamaño y ubicación en la página. Cada elemento posee información explícita o implícita sobre el tamaño, según la CSS (Hoja de estilos en cascada) que se utilizó, los contenidos del elemento o un elemento principal. Este proceso se denomina Diseño en los navegadores Blink, WebKit e Internet Explorer. En los navegadores basados en Gecko, como Firefox, esto se denomina Redistribución, pero los procesos, en realidad, son los mismos."
-written_on: 2015-03-20
 updated_on: 2015-03-20
-order: 3
 translation_priority: 0
-authors:
-  - paullewis
 notes:
   tree:
     - "Internamente, en el navegador, hay un árbol de representaciones que se crea a partir del DOM (Modelo de objetos del documento) y que es una representación de todos los elementos que se deben dibujar en la pantalla del dispositivo. Allí se incluye toda la información visual sobre los elementos: colores, dimensiones, ubicación, etc. Sin embargo, si un elemento posee el estilo display: none, este no se incluirá en el árbol de representación. De manera similar, si un elemento posee un seudoelemento (:after, :before), este no aparecerá en el DOM, pero existirá en el árbol de representación."

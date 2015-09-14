@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "الصور في الترميز"
 description: "يتميز العنصر `img` بأهميته الكبيرة؛ نظرًا لأنه يساعد على التنزيل وفك الترميز وعرض المحتوى، ولذلك تتوافق المتصفحات الحديثة مع عدد مختلف من تنسيقات الصور."
-authors:
-  - petelepage
-written_on: 2014-04-30
 updated_on: 2014-09-30
-order: 1
 key-takeaways:
   img-in-markup:
     - استخدم الأحجام النسبية مع الصور لمنع تجاوز حدود الحاوية بدون قصد.
@@ -185,7 +180,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
       انظر المثال
 {% endlink_sample %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.compressive %}
+{% include shared/remember.liquid title="Important" list=page.notes.compressive %}
 
 ### استبدال صور جافا سكريبت
 

@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Imágenes en CSS"
 description: "La propiedad `background` de CSS es un método eficaz de añadir imágenes complejas en los elementos y, además, permite añadir varias imágenes, hacer que se repitan, etc."
-authors:
-  - petelepage
-written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 2
 key-takeaways:
   use-right-image:
     - Usa la imagen que mejor se adapte a las características de la pantalla, teniendo en cuenta el tamaño de la pantalla, la resolución del dispositivo y el diseño de la página.

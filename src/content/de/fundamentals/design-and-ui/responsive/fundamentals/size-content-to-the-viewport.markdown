@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Größe der Inhalte an Darstellungsbereich anpassen"
 description: "Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiedenen Geräten optimiert. Erlernen Sie die Grundlagen, mit denen Ihre Website auf Mobilgeräten, Desktopcomputern und jeglichen anderen Geräten mit einem Bildschirm funktioniert."
-written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 2
-authors:
-  - petelepage
 key-takeaways:
   size-content-to-vp:
     - "Verwenden Sie keine großen Elemente mit fester Breite."

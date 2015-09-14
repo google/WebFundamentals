@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Kurzübersicht"
 description: "Hier finden Sie eine kurze Übersicht über die Eigenschaften des Videoelements."
-written_on: 2014-04-16
 updated_on: 2014-04-29
-order: 5
-authors:
-  - samdutton
 ---
 
 <p class="intro">

@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Ihre erste Website für verschiedene Geräte"
 description: "Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Displays bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Erfahren Sie, wie Sie eine Website erstellen, die auf allen Geräten gut funktioniert."
-written_on: 2014-01-01
 updated_on: 2014-01-06
-order: 2
-authors:
-  - paulkinlan
 translators:
 ---
 

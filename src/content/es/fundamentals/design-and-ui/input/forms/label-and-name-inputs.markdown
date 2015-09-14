@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Etiquete y nombre las entradas correctamente"
 description: "Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas."
-written_on: 2014-04-30
 updated_on: 2015-03-27
-order: 3
-authors:
-  - petelepage
 translation_priority: 0
 key-takeaways:
   label-and-name:

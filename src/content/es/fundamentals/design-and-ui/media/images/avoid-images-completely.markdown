@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Evitar las imágenes por completo"
 description: "A veces, la mejor imagen no es una imagen. Siempre que sea posible, usa la capacidad nativa del navegador para ofrecer las mismas funciones u otras similares."
-authors:
-  - petelepage
-written_on: 2014-04-30
 updated_on: 2014-06-10
-order: 5
 key-takeaways:
   avoid-images:
     - Evita las imágenes siempre que sea posible y, en su lugar, usa las funciones del navegador para aplicar sombras, gradientes, esquinas redondeadas, etc.

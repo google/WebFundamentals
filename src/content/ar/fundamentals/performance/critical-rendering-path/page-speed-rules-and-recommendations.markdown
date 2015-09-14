@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "قواعد وتوصيات PageSpeed"
 description: "PageSpeed Insights في السياق: ما يجب الانتباه له عند تحسين مسار العرض الحرج وسبب ذلك."
-written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 8
-authors:
-  - ilyagrigorik
 ---
 <p class="intro">
   PageSpeed Insights في السياق: ما يجب الانتباه له عند تحسين مسار العرض الحرج وسبب ذلك.

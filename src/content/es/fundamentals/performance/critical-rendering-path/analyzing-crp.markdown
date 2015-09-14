@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Analizar el rendimiento de la ruta de publicación importante"
 description: "Para identificar y resolver los embudos de rendimiento de la ruta de publicación importante, es necesario conocer a fondo las dificultades habituales. Vamos a realizar un análisis práctico para extraer patrones de rendimiento habituales que te ayudarán a optimizar las páginas."
-written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 6
-authors:
-  - ilyagrigorik
 ---
 <p class="intro">
   Para identificar y resolver los embudos de rendimiento de la ruta de publicación importante, es necesario conocer a fondo las dificultades habituales. Vamos a realizar un análisis práctico para extraer patrones de rendimiento habituales que te ayudarán a optimizar las páginas.

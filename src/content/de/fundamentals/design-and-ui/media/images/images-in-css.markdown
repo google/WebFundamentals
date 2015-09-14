@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Bilder in CSS"
 description: "Die CSS-Eigenschaft `background` ist ein leistungsstarkes Tool für das Hinzufügen von komplexen Bildern zu Elementen. Es können damit mehrere Bilder hinzugefügt und vervielfältigt werden und vieles mehr."
-authors:
-  - petelepage
-written_on: 2014-04-30
 updated_on: 2014-04-30
-order: 2
 key-takeaways:
   use-right-image:
     - "Verwenden Sie das am besten zu den Charakteristiken der Anzeige passende Bild. Berücksichtigen Sie die Bildschirmgröße, die Geräteauflösung und das Seitenlayout."

@@ -1,17 +1,12 @@
 ---
-layout: shared/plain
 title: "Elección de la aceleración adecuada"
 description: "Elija la aceleración adecuada para su proyecto, ya sea entrada lenta, salida lenta o ambos. ¡Sea flexible y pruebe nuevos efectos!"
-written_on: 2014-08-08
 updated_on: 2014-10-21
-order: 5
 translation_priority: 0
 key-takeaways:
   code:
     - "Utilice las animaciones de salida lenta para los elementos de la IU; una salida lenta Quintic es una aceleración muy atractiva, aunque enérgica."
     - "Asegúrese de utilizar la duración de la animación. Las salidas lentas y las entradas lentas deben ser de entre 200 ms y 500 ms, mientras que los rebotes y las aceleraciones elásticas deben tener una duración más prolongada de entre 800 ms y 1.200 ms."
-authors:
-  - paullewis
 ---
 <p class="intro">
   Ahora que ya analizamos las diferentes opciones disponibles para acelerar las animaciones, ¿qué tipo debería utilizar en sus proyectos y qué tipos de duraciones deben tener sus animaciones?

@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Optimizar imágenes"
 description: "A menudo la mayoría de bytes descargados en las páginas web se corresponden a imágenes, que frecuentemente también ocupan una gran cantidad de espacio visual. Por lo tanto, la optimización de las imágenes aporta el máximo ahorro de bytes y permite mejorar al máximo el rendimiento en el sitio web: cuantos menos bytes tenga que descargar el navegador, menos competencia se producirá en el ancho de banda del cliente y más rápidamente podrá el navegador renderizar contenido útil en la pantalla."
-written_on: 2014-05-07
 updated_on: 2014-05-10
-order: 3
-authors:
-  - ilyagrigorik
 key-takeaways:
   replace:
     - "Eliminar recursos de imagen innecesarios"

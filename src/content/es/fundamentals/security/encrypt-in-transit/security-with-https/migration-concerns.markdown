@@ -1,11 +1,6 @@
 ---
-layout: shared/plain
 title: "Inquietudes sobre la migración"
-authors:
-  - chrispalmer
-written_on: 2015-03-27
 updated_on: 2015-03-27
-order: 7
 translation_priority: 0
 
 ---

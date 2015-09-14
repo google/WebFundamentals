@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "تضمين إعلانات AdSense على موقعك"
 description: "اتبع الخطوات الواردة في هذا الدليل للتعرف على كيفية تضمين إعلانات في موقعك على الويب. أنشئ حسابًا في AdSense، وأنشئ وحدات إعلانية، وضع الوحدات في موقعك، واضبط إعدادات الدفع، ومن ثم ستتلقى الدفعات."
-written_on: 2014-07-31
 updated_on: 2014-07-31
-order: 2
-authors:
-  - megginkearney
   - petelepage
 key-takeaways:
   tldr: 

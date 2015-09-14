@@ -1,10 +1,7 @@
 ---
-layout: shared/plain
 title: "Animaciones entre vistas"
 description: "Aprenda a colocar animaciones entre dos vistas en sus aplicaciones."
-written_on: 2014-08-08
 updated_on: 2014-10-22
-order: 5
 translation_priority: 0
 key-takeaways:
   code:
@@ -17,8 +14,6 @@ notes:
   flinging:
     - "El uso de este tipo de jerarquía entre exploradores puede ser todo un desafío. Por ejemplo, en iOS se requiere una propiedad adicional de CSS: <code>-webkit-overflow-scrolling: touch</code> para ‘volver a habilitar’ el desplazamiento, pero esto no permite tener control sobre el eje en el que se aplica, tal como se puede hacer con la propiedad estándar de desbordamiento. Asegúrese de probar la implementación en diferentes dispositivos."
 
-authors:
-  - paullewis
 ---
 
 <p class="intro">

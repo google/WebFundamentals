@@ -1,18 +1,13 @@
 ---
-layout: shared/plain
 title: "Animaciones"
 description: "Obtenga más información sobre las animaciones y su uso en las aplicaciones y los sitios modernos."
-written_on: 2014-08-08
 updated_on: 2014-10-21
-order: 1
 translation_priority: 0
 key-takeaways:
   code:
     - "Utilice las animaciones como una forma de darle vida a sus proyectos."
     - "Las animaciones deben ser coherentes con la interacción del usuario."
     - "Tenga precaución con las propiedades que anima: algunas son más costosas que otras."
-authors:
-  - paullewis
 ---
 <p class="intro">
   Las animaciones son una parte muy importante para lograr que las aplicaciones y los sitios web sean cautivadores. Los usuarios desean utilizar interfaces de usuario altamente receptivas e interactivas. Sin embargo, animar su interfaz no es necesariamente una tarea fácil. ¿Qué se debe animar? ¿Cuándo se debe hacer? ¿Qué tipo de apariencia debe tener la animación?

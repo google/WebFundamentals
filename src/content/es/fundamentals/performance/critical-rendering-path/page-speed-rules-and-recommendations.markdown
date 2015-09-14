@@ -1,12 +1,7 @@
 ---
-layout: shared/plain
 title: "Reglas y recomendaciones de PageSpeed"
 description: "Reglas de PageSpeed Insights en contexto: en qué centrarnos para optimizar la ruta de renderización importante y por qué"
-written_on: 2014-04-01
 updated_on: 2014-04-28
-order: 8
-authors:
-  - ilyagrigorik
 ---
 <p class="intro">
   Reglas de PageSpeed Insights en contexto: en qué centrarnos para optimizar la ruta de renderización importante y por qué
