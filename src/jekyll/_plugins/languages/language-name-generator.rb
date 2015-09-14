@@ -199,6 +199,10 @@ module Jekyll
                 languageId,
                 true)
               translationPage.data.merge!('is_localized' => true, 'is_localization' => true)
+              keysToCopyFromPrimaryLang = WFPage.getPrimaryLangOnlyYamlKeys()
+              keysToCopyFromPrimaryLang.each { |key|
+                translationPage.data[key] = page.data[key]
+              }
               translationPage.data['_context'] = pagesTrees
               translated_pages << translationPage
               site.pages << translationPage
