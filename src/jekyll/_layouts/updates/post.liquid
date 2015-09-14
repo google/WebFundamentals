@@ -1,11 +1,11 @@
 {% include page-structure/open-page.liquid %}
+<div class="page-content">
+  <div class="update-post__content-container">
+    {{ content }}
+  </div>
 
-<div class="update-post__content-container">
-  {{ content }}
+  <div id="gplus-comment-container" class="update-post__comment-container">
+    <div id="gplus-comments" data-url="{{ site.WFAbsoluteUrl }}{{ site.WFBaseUrl }}{{page.url}}"></div>
+  </div>
 </div>
-
-<div id="gplus-comment-container" class="update-post__comment-container">
-  <div id="gplus-comments" data-url="{{ site.WFAbsoluteUrl }}{{ site.WFBaseUrl }}{{page.url}}"></div>
-</div>
-
 {% include page-structure/close-page.liquid %}
