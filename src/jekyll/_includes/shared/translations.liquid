@@ -1,0 +1,9 @@
+{% if page.translations.size > 0 %}
+<ul class="wf-translation-links">
+  {% for translatedPage in page.translations %}
+    <li class="wf-translation-link__item">
+      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPage.canonical_url | localize_link:translatedPage }}">{{  translatedPage.langcode | lang_name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
