@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Timeline Event Reference"
 seotitle: "Timeline Event Reference"
 description: "The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type."
@@ -25,8 +25,8 @@ Certain details are present in events of all types, while some only apply to cer
 
 | Property   |      When is it shown                                                       |
 |----------|:-----------------------------------------------------------------|
-| Aggregated time | For events with [nested events](https://developer.chrome.com/devtools/docs/timeline#about-nested-events), the time taken by each category of events.|
-| Call Stack | For events with [child events](https://developer.chrome.com/devtools/docs/timeline#about-nested-events), the time taken by each category of events.|
+| Aggregated time | For events with [nested events](/web/tools/profile-performance/evaluate-performance/timeline-tool#view-nested-events), the time taken by each category of events.|
+| Call Stack | For events with [child events](/web/tools/profile-performance/evaluate-performance/timeline-tool#view-nested-events), the time taken by each category of events.|
 | CPU time | How much CPU time the recorded event took.|
 | Details | Other details about the event.|
 | Duration (at time-stamp) | How long it took the event with all of its children to complete; timestamp is the time at which the event occurred, relative to when the recording started.|
@@ -52,7 +52,7 @@ This section lists events that belong to Loading category and their properties.
 |Resource|The URL of the requested resource.|
 |Preview|Preview of the requested resource (images only).|
 |Request Method|HTTP method used for the request (GET or POST, for example).|
-|Status Code|HTTP response code|
+|Status Code|HTTP response code.|
 |MIME Type|MIME type of the requested resource.|
 |Encoded Data Length|Length of requested resource in bytes.|
 
@@ -70,13 +70,13 @@ This section lists events that belong to the Scripting category and their proper
 |Event| A JavaScript event ("mousedown", or "key", for example).|
 |Function Call| A top-level JavaScript function call was made (only appears when browser enters JavaScript engine).|
 |Install Timer| A timer was created with [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) or [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout).|
-|Request Animation Frame| A requestAnimationFrame() call scheduled a new frame|
+|Request Animation Frame| A `requestAnimationFrame()` call scheduled a new frame|
 |Remove Timer|  A previously created timer was cleared.|
-|Time|  A script called [console.time()](https://developer.chrome.com/devtools/docs/console-api.md#consoletimelabel)|
-|Time End|  A script called [console.timeEnd()](https://developer.chrome.com/devtools/docs/console-api.md#consoletimeendlabel)|
-|Timer Fired| A timer fired that was scheduled with setInterval() or setTimeout().|
+|Time|  A script called [console.time()](/web/tools/javascript/console/console-reference#consoletimelabel)|
+|Time End|  A script called [console.timeEnd()](/web/tools/javascript/console/console-reference#consoletimeendlabel)|
+|Timer Fired| A timer fired that was scheduled with `setInterval()` or `setTimeout()`.|
 |XHR Ready State Change|  The ready state of an XMLHTTPRequest changed.|
-|XHR Load|  An XMLHTTPRequest finished loading.|
+|XHR Load|  An `XMLHTTPRequest` finished loading.|
 
 ### Scripting event properties
 

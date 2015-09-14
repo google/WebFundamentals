@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Set Up Your Editor"
 seotitle: "Set Up Your Editor"
 description: "Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins."
@@ -18,7 +18,7 @@ key-takeaways:
     - Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code.
     - Make use of the package manager to make it easier to discover, install, and update plugins.
     - Install plugins that help keep you productive during development; start with the recommendations in this guide.
-notes:
+remember:
   blog:
     - Rob Dodson's <a href="http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/">blog post</a> on how to get to know and love Sublime is a great reference for getting the most out of your editor. The concepts are relevant to any text editor, not just Sublime.
 ---
@@ -28,7 +28,7 @@ notes:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.editor %}
 
-## Install Sublime Text Editor
+## Install Sublime text editor
 
 [Sublime](http://www.sublimetext.com/) is a great editor with a solid base level
 of functionality which makes writing code a pleasure. You can install a package
@@ -36,14 +36,9 @@ manager that makes it easy to install plugins and add new functionality.
 
 There are currently two download options for Sublime Text, either [version 2](http://www.sublimetext.com/2) or [version 3](http://www.sublimetext.com/3). Version 3 is pretty stable and will give you access to packages not available in Sublime Text 2, however you may find version 2 more reliable.
 
-**Note**
-Rob Dodson's [blog
-post](http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/) on
-how to get to know and love Sublime is a great reference for getting the most
-out of your editor. The concepts are relevant to any text editor, not just
-Sublime.
+{% include modules/remember.liquid title="Note" list=page.remember.blog %}
 
-## Why Use a Package Manager?
+## Why use a package manager?
 
 Package managers make it easy to find, install, and keep packages & plugins
 up-to-date.
@@ -56,7 +51,7 @@ You can install a Package Manager for Sublime  by following these instructions
 You only need to do this once, after which see below for our recommended list of
 plugins.
 
-## Install Plugins
+## Install plugins
 
 Plugins help you stay more productive. What are the things you keep having to go
 back out to other tools to do?
@@ -91,13 +86,13 @@ that way your CSS stays lean and you don't need to remember to hit
 
 <img src="imgs/sublime-autoprefixer.gif" alt="Sublime Autoprefixer Plugin Example" />
 
-#### ColorPicker
+### ColorPicker
 
 Pick any color from the palette and add it to your CSS with `ctrl+shift+c`.
 
 <img src="imgs/sublime-color-picker.png" alt="Sublime Color Picker Plugin" />
 
-#### Emmet
+### Emmet
 
 Add some useful keyboard shortcuts and snippets to your text editor. Check out
 the video on [Emmet.io](http://emmet.io/) for an intro into what it can do (a
@@ -105,14 +100,14 @@ personal favorite is the 'Toggle Comment' command).
 
 <img src="imgs/emmet-io-example.gif" alt="Demo of the Emmet.io Plugin" />
 
-#### HTML-CSS-JS Prettify
+### HTML-CSS-JS prettify
 
 This extension gives you a command to format your HTML, CSS and JS. You can even
 prettify your files whenever your save a file.
 
 <img src="imgs/sublime-prettify.gif" alt="Gif of the Sublime Prettify Plugin" />
 
-#### Git Gutter
+### Git Gutter
 
 Add a marker in the gutter wherever there is a change made to a file.
 

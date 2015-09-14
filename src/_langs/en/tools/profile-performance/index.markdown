@@ -1,11 +1,10 @@
 ---
 rss: false
-layout: landing
+layout: tools-landing
 title: "Profile"
 seotitle: "Profile Performance"
-description: "Don't focus too much on device performance. Remember the end goal is to make users happy. Understand how users perceive performance."
-introduction: "Don't focus too much on device performance. Remember the end goal is to make users happy. Understand how users perceive performance."
-snippet: "Put the user in the center of performance."
+description: "Especially when it comes to device testing, put the user first."
+introduction: "Especially when it comes to device testing, put the user first."
 article:
   written_on: 2015-04-13
   updated_on: 2015-06-08

@@ -6,13 +6,15 @@
 
 	{% case page.collection %}
 	{% when 'updates' %}
-		{{ page.title }} — Web Updates
+		{{ page.title }} — Google Web Updates
 	{% when 'showcase' %}
-		{{ page.title }} — Web Showcase
+		{{ page.title }} — Google Web Showcase
 	{% when 'case-study' %}
-		{{ page.title }} — Web Showcase
+		{{ page.title }} — Google Web Showcase
 	{% when 'spotlight' %}
-		{{ page.title }} — Web Showcase
+		{{ page.title }} — Google Web Showcase
+	{% when 'tools' %}
+		{{ page.title }}
 	{% else %}
 		{{ page.title }} — Web Fundamentals
 	{% endcase %}

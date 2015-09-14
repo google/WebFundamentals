@@ -6,7 +6,7 @@ title: 'DevTools Digest: Film strip and a new home for throttling'
 date: 2015-07-23
 article:
   written_on: 2015-07-23
-  updated_on: 2015-07-23
+  updated_on: 2015-07-24
 authors:
 - pbakaus
 collection: updates
@@ -19,6 +19,16 @@ tags:
 description: Discover the new film strip functionality and more in this first of many
   DevTools Digest updates.
 featured-image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/featured.png
+teaserblocks:
+- heading: Film strip
+  description: Capture screenshots of the page in both Network and Timeline.
+  image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser1.jpg
+- heading: Network Throttling
+  description: We've made network throttling easier to use and locate.
+  image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser2.jpg
+- heading: Community Heartbeat
+  description: Down and Dirty with Chrome DevTools, and a DevTools IDE?!
+  image: /web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/teaser3.jpg
 permalink: /updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling.html
 ---
 ## DevTools news, as fresh as it gets
@@ -98,11 +108,9 @@ icon** when network throttling is enabled.
 ### Various tidbits
 
 * Hated those weird circles on the network timeline? So did we. These are **the 
-  points in time when a frame** (in the new film strip) **was captured**. Now 
-  they appear as lines when you hover. 
-  (https://src.chromium.org/viewvc/blink?revision=198505&view=revision)
-* **Device Mode** now preserves orientation when you switch between devices 
-  (https://src.chromium.org/viewvc/blink?revision=198513&view=revision)
+  points in time when a frame** (in the new film strip) **was captured**. [Now 
+  they appear as lines when you hover](https://src.chromium.org/viewvc/blink?revision=198505&view=revision). 
+* **Device Mode** [now preserves orientation](https://src.chromium.org/viewvc/blink?revision=198513&view=revision) when you switch between devices
 
 - - -
 
@@ -110,10 +118,10 @@ icon** when network throttling is enabled.
 
 ### Down and dirty with Chrome DevTools
 
-![Network throttling in action](/web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/down_and_dirty.png)
+[![Network throttling in action](/web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/down_and_dirty.png)](http://blittle.github.io/chrome-dev-tools/)
 
-[Bret Little](https://twitter.com/little_bret) released this nice little 
-walkthrough course that acquaints you with basic DevTools functionality but also 
+[Bret Little](https://twitter.com/little_bret) released this [nice little 
+walkthrough course](http://blittle.github.io/chrome-dev-tools/) that acquaints you with basic DevTools functionality but also 
 offers a lot of in-depth tips and tricks. Definitely useful info in there, and 
 more DevTools docs never hurt!
 

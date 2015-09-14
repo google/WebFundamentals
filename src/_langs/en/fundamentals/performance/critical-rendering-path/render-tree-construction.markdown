@@ -5,7 +5,7 @@ description: "The CSSOM and DOM trees are combined into a render tree, which is 
 introduction: "The CSSOM and DOM trees are combined into a render tree, which is then used to compute the layout of each visible element and serves as an input to the paint process which renders the pixels to screen. Optimizing each of these steps is critical to achieve optimal rendering performance."
 article:
   written_on: 2014-04-01
-  updated_on: 2014-09-18
+  updated_on: 2015-08-21
   order: 2
 collection: critical-rendering-path
 priority: 0
@@ -19,7 +19,7 @@ key-takeaways:
     - Paint is the last step that takes in the final render tree and renders the pixels to the screen.
 notes:
   hidden:
-    - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element is still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
+    - "As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout."
 ---
 {% wrap content%}
 

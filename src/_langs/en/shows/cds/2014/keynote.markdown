@@ -15,4 +15,4 @@ article:
 
 ---
 
-Darin Fisher introduces the Chrome Developer Summit. This year the Summit presentation mainly focuses on performance, Polymer, Material Design, and building mobile web apps that work like apps with Service Worker and other technologies. but also features breakouts and panels to discuss what you want to discuss.
+Darin Fisher introduces the Chrome Developer Summit. This year the Summit presentation mainly focuses on performance, Polymer, Material Design, and building mobile web apps that work like apps with service worker and other technologies. but also features breakouts and panels to discuss what you want to discuss.

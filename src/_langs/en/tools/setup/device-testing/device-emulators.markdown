@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Types of Device Emulators and Simulators"
 seotitle: "Types of Device Emulators and Simulators"
 description: "Device emulators and simulators let you mimic your development site on a range of devices from your workstation. Learn about the different types of device emulators and simulators available."
@@ -10,7 +10,7 @@ authors:
 article:
   written_on: 2015-04-14
   updated_on: 2015-04-14
-  order: 5
+  order: 2
 collection: device-testing
 key-takeaways:
   emulator: 
@@ -34,11 +34,12 @@ certain everything behaves as expected.
 
 ### Chrome DevTools emulation
 
-Chome DevTools has a [Device emulation tool](https://web-central.appspot.com/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
+Chome DevTools has a [Device emulation tool](/web/tools/setup/device-testing/devtools-emulator) that creates a viewport with the right width and height to match a selected device and accounts for the screen density.
 
 You can activate device emulation by following these four steps:
 
-1. With Chrome DevTools open, click the arrow icon with three horizontal lines
+1. With Chrome DevTools open,
+click the arrow icon with three horizontal lines.
 2. Click the mobile device in the top left.
 3. Select the `Emulation` tab at the bottom.
 4. Then select the device you want to test against from the drop down.
@@ -213,10 +214,10 @@ device with the following command:
 
 ### iOS Simulator
 
-The iOS simulator for Mac OS X comes with XCode, which you can [install from the
+The iOS simulator for Mac OS X comes with Xcode, which you can [install from the
 App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
 
-To use the iOS Simulator, open XCode, in the top menu go to `XCode >
+To use the iOS Simulator, open Xcode, in the top menu go to `Xcode >
  Open Developer Tool` and select `iOS Simulator`.
 
 <img src="imgs/xcode-ios-simulator.png" alt="Xcode Menu for iOS Simulator" />
@@ -226,7 +227,7 @@ Once the simulator is open you can fire up Safari and you're good to go.
 <img src="imgs/ios-simulator.png" alt="iOS Simulator Screenshot" />
 
 **Tip**  
-To avoid having to open XCode every time you want to use the iOS
+To avoid having to open Xcode every time you want to use the iOS
 Simulator, open the iOS simulator once, as above, then right click the iOS Simulator
 icon in your dock and select `Keep in Dock`. Just click this icon whenever you
 need it.

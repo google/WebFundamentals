@@ -38,8 +38,8 @@ As of Chrome version 42, the [Push API](http://w3c.github.io/push-api/) and
 developers.  
   
 The Push API in Chrome relies on a few different pieces of technology, including 
-[Web App 
-Manifests](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
+[Web app 
+manifests](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) 
 and [Service 
 Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/). 
 In this post we'll look at each of these technologies, but only the bare minimum 
@@ -247,8 +247,7 @@ Chrome uses GCM to handle the sending and delivery of push messages, however, to
 use the GCM restful API, you need to set up a project on the Google Developer Console. 
 Follow the instructions in the [getting started 
 guide](https://developer.android.com/google/gcm/gs.html), making sure you 
-enable both "Google Cloud Messaging for Android" and "Google Cloud Messaging for 
-Chrome", and make a note of the **project number** and **API key** as you'll 
+enable both "Google Cloud Messaging for Android" and make a note of the **project number** and **API key** as you'll 
 need to use them later on.
 
 This step is **specific to Chrome** since it relies on GCM's restful API
@@ -268,7 +267,7 @@ Below are screenshots highlighting where the project number and API keys are.
   <img src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/google-developer-console-api-key.png" alt="Highlighting where the API key is in the Google Developer Console" />
 </p>
 
-The project number will be used in the Web App Manifest (see the next section) 
+The project number will be used in the Web App manifest (see the next section) 
 as the **gcm\_sender\_id** parameter, and the **Public API Key** will be 
 needed on your server when you use GCM's restful API.
 
@@ -835,7 +834,7 @@ issues, you have two options:
 
 One of the best tips I can give to anyone who is new to service workers is make 
 use of the checkbox called "Open DevTools window and pause JavaScript execution 
-on Service Worker startup for debugging." on 
+on service worker startup for debugging." on 
 **chrome://serviceworker-internals**. This checkbox will add a breakpoint at 
 the start of your service worker and **pause execution**, this allows you to 
 resume or step through your service worker script and see if you hit any 

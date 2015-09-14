@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "Set Up Browser Extensions"
 seotitle: "Set Up Browser Extensions"
 description: "Out of the box, every desktop browser comes with a set of developer tools, you can extend and add to these with extensions or plugins for your browser."

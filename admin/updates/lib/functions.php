@@ -88,6 +88,26 @@ function buildFile() {
 		$content['source_url'] = $_POST['source_url'];
 	}
 
+	if(isset($_POST['tb1_heading'])) {
+		$content['teaserblocks'] = array(
+			array(
+				'heading' => $_POST['tb1_heading'],
+				'description' => $_POST['tb1_description'],
+				'image' => $_POST['tb1_image'],
+			),
+			array(
+				'heading' => $_POST['tb2_heading'],
+				'description' => $_POST['tb2_description'],
+				'image' => $_POST['tb2_image'],
+			),
+			array(
+				'heading' => $_POST['tb3_heading'],
+				'description' => $_POST['tb3_description'],
+				'image' => $_POST['tb3_image'],
+			)
+		);
+	}
+
 	$content['permalink'] = '/updates/' . str_replace('-', '/', $_POST['date']) . '/' . slugify($_POST['title']) . '.html';
 
 	$file = yaml_emit($content, YAML_UTF8_ENCODING);

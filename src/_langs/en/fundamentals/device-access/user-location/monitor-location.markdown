@@ -67,7 +67,7 @@ the user's device has for monitoring the user's location and whilst you are watc
 a position you are engaging the device in a lot of extra processing
 
 Once you have no need to track the user's position call `clearWatch` to turn
-of the geolocation systems.
+off the geolocation systems.
 
 ## Always Handle Errors
 

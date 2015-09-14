@@ -68,7 +68,7 @@ sections:
 
       Most of the work to achieve this was done in Grunt tasks to concatenate, minify, and compress images as much as possible. The site also defers non-essential images to after page load so that actual content is rendered to screen more quickly.
 
-      To make the page load time even better, Paul dropped in a [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction).  With it, whether you are online or not, a page visit can be served up from cache, ensuring that you get to the content even on spotty connectivity (extremely important when on conference WiFi!). The CDS site is one of the first production sites to use the new feature, which had Paul run into a bunch of “early adopter issues”, but the crazy performance boost, he told me, made up for it. In fact, he's now taking it to every site he builds! 
+      To make the page load time even better, Paul dropped in a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction).  With it, whether you are online or not, a page visit can be served up from cache, ensuring that you get to the content even on spotty connectivity (extremely important when on conference WiFi!). The CDS site is one of the first production sites to use the new feature, which had Paul run into a bunch of “early adopter issues”, but the crazy performance boost, he told me, made up for it. In fact, he's now taking it to every site he builds! 
 
       Performance, of course, isn’t just how well a site loads, but also how well it runs. Paul knew the animations were going to be a challenge, which is why he came up with [FLIP](http://aerotwist.com/blog/flip-your-animations). Besides that, he went out of his way to ensure that nothing got in the way of touch input or scrolling. Despite the fact that the site isn’t a hugely complex one, he adopted a modified [RAIL methodology](https://developers.google.com/web/fundamentals/performance/rendering/use-the-rail-performance-model?hl=en) for the build (he didn’t really need much Idle time), and it helped a bunch!
   - title: Design
@@ -81,7 +81,7 @@ sections:
   - title: Success
     content: |
       * Successfully released the entire site on [Github](https://github.com/googlechrome/devsummit) (**&gt; 200 stars**) to serve as **boilerplate and inspiration to web developers**.
-      * Incorporated the latest and greatest of the web platform: **Service Worker, Web Manifest and dynamic theme colors**. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s homescreen, it feels very much like an app they would use, and that’s really cool.
+      * Incorporated the latest and greatest of the web platform: **service worker, Web manifest and dynamic theme colors**. The net effect is something that feels really integrated with the platform when run on Android devices. If added to the user’s home screen, it feels very much like an app they would use, and that’s really cool.
       * **~73.7k** page views, **180k** clicks to site subsections meant that people actually used and engaged with it, much more than expected.
 
       All in all, a great inspiration for today's web developers and a very successful conference website.

@@ -220,7 +220,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
   var resetEnergyExpended = new Uint8Array([1]);
   return characteristic.writeValue(resetEnergyExpended);
 })
-.then(value => {
+.then(() => {
   console.log('Energy expended has been reset.');
 })
 .catch(error => { console.log(error); });
@@ -253,6 +253,8 @@ be done in two ways:
 - Restart Chrome OS.
 - Enter `remove 01:23:45:67:89:01` in the Bluetooth Console where
   `01:23:45:67:89:01` is the Bluetooth address of the first device.
+
+I would recommend you check out the official [Bluetooth debug page](https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs) as debugging Bluetooth can be hard sometimes.
 
 ## What's next
 

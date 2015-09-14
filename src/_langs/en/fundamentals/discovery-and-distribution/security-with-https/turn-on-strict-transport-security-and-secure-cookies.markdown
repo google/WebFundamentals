@@ -7,6 +7,7 @@ id: turn-on-strict-transport-security-and-secure-cookies
 collection: security-with-tls
 authors:
   - chrispalmer
+  - mattgaunt
 article:
   written_on: 2015-03-27
   updated_on: 2015-03-27
@@ -32,8 +33,7 @@ Stripping](http://www.thoughtcrime.org/software/sslstrip/), and also avoids the
 round-trip cost of the 301 redirect we enabled in "Redirect HTTP to HTTPS".
 
 **NOTE:** Clients that have noted your site as a known HSTS Host are likely to
-_[hard-fail](https://tools.ietf.org/html/rfc6797#section-12.1)_[ if your
-](https://tools.ietf.org/html/rfc6797#section-12.1)[site ever has an error in
+[_hard-fail_ if your site ever has an error in
 its TLS configuration](https://tools.ietf.org/html/rfc6797#section-12.1) (such
 as an expired certificate). This is an explicit design choice of HSTS; it
 helps ensure that network attackers cannot trick clients into accessing the

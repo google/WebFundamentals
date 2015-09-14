@@ -1,14 +1,16 @@
 toc:
 - title: "<strong>DevTools</strong>"
-  path: /chrome-devtools/
+  path: /tools/chrome-devtools/
   home: true
-- title: "What's new"
-  path: /updates/chrome-devtools/
 - title: "Documentation"
   path: "#docs"
   external: true
-- title: "Reference"
-  path: https://developer.chrome.com/devtools/docs/console-api
+- title: "Updates"
+  path: /updates/chrome-devtools/news
+- title: "Tips"
+  path: /updates/chrome-devtools/tip
+- title: "Twitter"
+  path: https://twitter.com/ChromeDevTools
   external: true
 - title: Web <strong>Fundamentals</strong>
   path: /fundamentals/

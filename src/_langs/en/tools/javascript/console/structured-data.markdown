@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: article
-title: "View Structured Data in Console"
-seotitle: "View Structured Data in Chrome DevTools Console"
-description: "Compare data objects using the `table()` method."
+layout: tools-article
+title: "Compare Similar Data Objects"
+seotitle: "Compare Similar Data Objects in the Chrome DevTools Console"
+description: "Compare similar data objects using the `table()` method."
 introduction: "View structured data and compare data objects using the table() method."
 article:
   written_on: 2015-04-14
@@ -11,53 +11,54 @@ article:
   order: 3
 authors:
   - megginkearney
+  - pbakaus
 priority: 0
 collection: console
 key-takeaways:
   console:
-    - Compare similar data objects using table().
+    - Compare similar data objects using <code>table()</code>.
     - Build an array to define property strings.
 ---
 {% wrap content %}
 
-{% include modules/takeaway.liquid list=page.key-takeaways.console %}
+The `table()` method provides an easy way to view objects and arrays that include similar data. When called, it will take the properties of an object and create a header. The row data then comes from each index's properties value.
 
-## Viewing Structured Data
+{% include modules/toc.liquid %}
 
-The `table()` method provides an easy way to view similar data objects. This will take the properties of an object and create a header. Row data comes from each index's properties value.
+## Basic example: Logging an array of objects
 
-### A table in the console using two arrays.
+In it's most basic form, all you need is an array with a bunch of objects that have the same properties, and the `table()` command will do the rest:
 
-Example code:
-
-    console.table([{a:1, b:2, c:3}, {a:"foo", b:false, c:undefined}]);
-    console.table([[1,2,3], [2,3,4]]);
+{% highlight js %}
+console.table([{a:1, b:2, c:3}, {a:"foo", b:false, c:undefined}]);
+console.table([[1,2,3], [2,3,4]]);
+{% endhighlight %}
   
-The output of the example code:
+This will output:
 
 ![console table display](images/table-arrays.png)
 
-The second parameter to table() is optional. You may define an array containing the property strings you wish to display.
+## Advanced example: Logging specific properties
 
-### A console table using a collection of objects.
+The second parameter to `table()` can be used to log more advanced objects. Define an array containing the property strings you wish to display, like so:
 
-Example code:
+{% highlight js %}
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
 
-    function Person(firstName, lastName, age) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.age = age;
-    }
-    
-    var family = {};
-    family.mother = new Person("Susan", "Doyle", 32);
-    family.father = new Person("John", "Doyle", 33);
-    family.daughter = new Person("Lily", "Doyle", 5);
-    family.son = new Person("Mike", "Doyle", 8);
-  
-    console.table(family, ["firstName", "lastName", "age"]);
+var family = {};
+family.mother = new Person("Susan", "Doyle", 32);
+family.father = new Person("John", "Doyle", 33);
+family.daughter = new Person("Lily", "Doyle", 5);
+family.son = new Person("Mike", "Doyle", 8);
 
-The output of the example code:
+console.table(family, ["firstName", "lastName", "age"]);
+{% endhighlight %}
+
+This will output the following:
 
 ![console output with table objects](images/table-people-objects.png)
 

@@ -1,21 +1,23 @@
 ---
 rss: false
-layout: article
+layout: tools-article
 title: "How to Use the Timeline Tool"
 seotitle: "How to Use the Timeline Tool"
 description: "The Chrome DevTools Timeline tool lets you record and analyze all the activity in your application as it runs. It's the best place to start investigating perceived performance issues in your application."
 introduction: "The Chrome DevTools Timeline tool lets you record and analyze all the activity in your application as it runs. It's the best place to start investigating perceived performance issues in your application."
 article:
   written_on: 2015-06-09
-  updated_on: 2015-06-09
+  updated_on: 2015-08-03
   order: 2
 authors:
   - megginkearney
 priority: 0
 collection: evaluate-performance
 key-takeaways:
-  tldr-tbd:
-    - TBD tldr.
+  timeline:
+    - In the Timeline panel, test runtime performance in events mode; test rendering performance in frames mode.
+    - Check the memory used by your application over time in the memory view.
+    - To make analyzing records easier, zoom in on a section of the timeline overview, which reduces the time scale in the Records view accordingly.
 remember:
   note-tbd:
     - TBD note.
@@ -28,6 +30,8 @@ A timeline recording includes a record for each event that occurred, displayed i
 ![Timeline tool](imgs/timeline-panel.png)
 
 {% include modules/toc.liquid %}
+
+{% include modules/takeaway.liquid list=page.key-takeaways.timeline %}
 
 ## Test runtime performance in events mode
 
@@ -42,7 +46,7 @@ For example, the recording below is of an HTML page being loaded into Chrome. Th
 When you hover over a Timeline record, a pop-up appears with details
 about the associated event. For example, the screenshot below shows
 details for a Finish Loading record associated with an image resource.
-The [Timeline Event Reference](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/performance-reference?hl=en)
+The [Timeline Event Reference](/web/tools/profile-performance/evaluate-performance/performance-reference)
 explains the details that are available for each record type.
 
 ![Pop-up showing event details](imgs/event-details.png)
@@ -54,7 +58,9 @@ The length of each horizontal bar in this view corresponds to the time the event
 
 ## Test rendering performance in frames mode
 
-Frames mode provides insight into the rendering performance of your application. A "frame" represents the work the browser must do to render a single frame of content to the display&mdash;run JavaScript, handle events, update the DOM and change styles, layout and paint the page. The goal is for your app to run at 60 frames per second (fps), which corresponds to the 60Hz refresh rate of most (but not all) video displays. Thus, your application has approximately 16.6ms (1000ms / 60) to prepare for each frame.
+Frames mode provides insight into the rendering performance of your application. A "frame" represents the work the browser must do to render a single frame of content to the display&mdash;run JavaScript, handle events, update the DOM and change styles, layout and paint the page.
+
+The goal is for your app to run at 60 frames per second (fps), which corresponds to the 60Hz refresh rate of most (but not all) video displays. Thus, your application has approximately 16.6ms (1000ms / 60) to prepare for each frame.
 
 Horizontal lines across the Frames view represent frame rate targets for 60fps and 30fps. The height of a frame corresponds to the time it took to render that frame. The colors filling each frame indicate the percentage of time taken on each type of task.
 
@@ -62,13 +68,13 @@ The time to render a frame is displayed above of the Records view. If you hover 
 
 ![Frames mode](imgs/frames_mode.png)
 
-You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](https://web-central.appspot.com/web/tools/profile-performance/rendering-tools/analyze-runtime).
+You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](/web/tools/profile-performance/rendering-tools/analyze-runtime).
 
 ### Clear or light-gray frames
 
 You may notice regions of a frame that are light-gray or clear (hollow). These regions indicate, respectively:
 
-* Activity that was not instrumented by DevTools
+* Activity that was not instrumented by DevTools.
 * Idle time between display refresh cycles.
 
 The frames in the recording below show both un-instrumented activity and idle time.
@@ -81,7 +87,7 @@ The frames in the recording below show both un-instrumented activity and idle ti
 
 Painting is a two-step process that includes draw calls and rasterization.
 
- - **Draw calls**. This is a list of things you'd like to draw, and is derived from the CSS applied to your elements. The list of draw calls is not dissimilar to the Canvas element's methods: moveTo, lineTo, and fillRect. Although they have different names in <a href="https://code.google.com/p/skia/">Skia</a>, Chrome's painting backend, the concepts are similar.
+ - **Draw calls**. This is a list of things you'd like to draw, and is derived from the CSS applied to your elements. The list of draw calls is not dissimilar to the Canvas element's methods: moveTo, lineTo, and fillRect. Although they have different names in <a href="https://skia.org/">Skia</a>, Chrome's painting backend, the concepts are similar.
  - **Rasterization**. The process of stepping through the draw calls and filling out actual pixels into buffers that can be uploaded to the GPU for compositing.
 
 So, with that background, what is the difference between solid green bars and empty green bars?
@@ -98,14 +104,14 @@ Both are painting components, they just represent different sub-tasks of the job
 
 The average frame rate and its standard deviation represented are displayed along the bottom of the Timeline panel for the selected frame range. If you hover over the average frame rate, a pop-up appears with additional information about the frame selection:
 
+![Average frame rate](imgs/average.png)
+
 * **Selected range** -- The selected time range, and the number of frames in the selection.
 * **Minimum Time** -- The lowest time of the selected frames, and the corresponding frame rate in parentheses.
 * **Average Time** -- The average time of the selected frames,  and the corresponding frame rate in parentheses.
 * **Maximum Time** -- The maximum time for the selected range, and the corresponding frame rate in parentheses.
 * **Standard Deviation** -- The amount of variability of the calculated Average Time.
 * **Time by category** -- The amount of time spent on each type of process, color-coded by type.
-
-![Average frame rate](imgs/average.png)
 
 ## Test memory usage in memory mode
 
@@ -117,7 +123,7 @@ haven’t been garbage collected).
 ![Memory view](imgs/memory-usage.png)
 
 Memory mode can't show you exactly what is causing a memory leak, but it can help you identify what events in your application may be leading to a memory leak.
-Learn more about memory problems in [Memory Diagnosis](https://web-central.appspot.com/web/tools/profile-performance/memory-problems/).
+Learn more about memory problems in [Memory Diagnosis](/web/tools/profile-performance/memory-problems/memory-diagnosis).
 
 ## Make a recording
 
@@ -128,7 +134,9 @@ To make a recording, open the page you want to analyze and open the Timeline pan
 Start a recording by doing one of the following:
 
 * Click the round Record button.
-* Press the keyboard shortcut Ctrl+E, or Cmd+E on Mac.
+* Press the keyboard shortcut
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">E</kbd>,
+or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">E</kbd> on Mac.
 
 The Record button turns red during a recording.
 Perform any necessary user actions to record the desired behavior.
@@ -152,18 +160,27 @@ A common task is to record a page load from initial network request to completio
 **To record a page load**:
 
 1.  Open any web page ([this one](http://www.jankfree.com), for example) in a new tab or window.
-2.  Open the Timeline and press Cmd+E (Mac) or Ctrl+E (Windows/Linux) to start recording.
-3.  Quickly press Cmd+R or Ctrl+R to reload the browser page.
+2.  Open the Timeline and press
+<kbd class="kbd">Cmd</kbd> + <kbd class="kbd">E</kbd> or
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">E</kbd> (Windows/Linux)
+to start recording.
+3.  Quickly press
+<kbd class="kbd">Cmd</kbd> + <kbd class="kbd">R</kbd> or
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">R</kbd>
+to reload the browser page.
 4.  Stop the recording as soon as the page has finished loading (look for the red event marker).
 
 The Timeline annotates each recording with blue and red lines that indicate, respectively, when the [DOMContentLoaded](http://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) and [load](http://docs.webplatform.org/wiki/dom/events/load) events were dispatched by the browser. The DOMContentLoaded event is fired when all of the page’s DOM content has been loaded and parsed. The load event is fired once all of the document’s resources (images and CSS files, and so forth) have been fully loaded.
 
-Your recording should look something like the following example. The first
-record (Send Request) is Chrome's HTTP request for the page, followed by a Receive Response record for the corresponding HTTP response, followed by one or more Receive Data records, a Finish Loading record, and a Parse HTML record.
+Your recording should look something like the following example.
+The first record (Send Request) is Chrome's HTTP request for the page,
+followed by a Receive Response record for the corresponding HTTP response,
+followed by one or more Receive Data records, a Finish Loading record,
+and a Parse HTML record.
 
 ![Page load recording](imgs/page-load.png)
 
-See the [Timeline event reference](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/performance-reference?hl=en) for details on each record type.
+See the [Timeline event reference](/web/tools/profile-performance/evaluate-performance/performance-reference) for details on each record type.
 
 ## View recording details
 
@@ -172,7 +189,7 @@ the Details pane displays additional information about the event.
 
 ![Event details pane](imgs/frames_mode_event_selected.png)
 
-Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/performance-reference?hl=en) for details on each record type.
+Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](/web/tools/profile-performance/evaluate-performance/performance-reference) for details on each record type.
 
 When you select a Paint record, DevTools highlights the region of the screen that was updated with a blue semi-transparent rectangle, as shown below.
 
@@ -184,7 +201,15 @@ You can filter the records shown according to their type (only show loading even
 
 ![Filter records](imgs/filters.png)
 
-While looking at the events, you may want to focus on one, but maintain the context of what's around it. In this case, you can perform a Find without filtering. Press Ctrl+F (Window/Linux) or Cmd+F (Mac) while the Timeline has focus to show those events that contain the search term.
+While looking at the events,
+you may want to focus on one,
+but maintain the context of what's around it.
+In this case, you can perform a Find without filtering.
+Press
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">F</kbd> (Window/Linux) or
+<kbd class="kbd">Cmd</kbd> + <kbd class="kbd">F</kbd> (Mac)
+while the Timeline has focus to show those events
+that contain the search term.
 
 ## Zoom in on a Timeline section
 
@@ -241,12 +266,16 @@ You can save a Timeline recording as a JSON file, and open it later in the Timel
 
 **To save a Timeline recording:**
 
-1.  Right+click or Ctrl+click (Mac only) inside the Timeline and select **Save Timeline Data…**, or press the Ctrl+S keyboard shorcut.
+1.  Right+click or Ctrl+click (Mac only) inside the Timeline and select **Save Timeline Data…**,
+or press the
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> keyboard shortcut.
 2. Pick a location to save the file and click Save.
 
 **To open an existing Timeline recording file, do one of the following**:
 
-1. Right-click or Ctrl+click inside the Timeline and select **Load Timeline Data...**, or press the Ctrl+O keyboard shortcut.
+1. Right-click or Ctrl+click inside the Timeline and
+select **Load Timeline Data...**, or press the
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd> keyboard shortcut.
 2. Locate the JSON file and click Open.
 
 ![Save and load timeline data menu](imgs/save.png)
