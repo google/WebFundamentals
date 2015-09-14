@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Aan de slag
+    path: /fundamentals/getting-started/
+  - title: Documentatie
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Principes van site-ontwerp
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Lay-outs voor meerdere apparaten
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Basisprincipes van responsive webdesign
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Patronen voor responsive webdesign
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Lay-outpatronen
+            path: /fundamentals/layouts/layout-patterns/
+          - title: UI-elementen
+            path: /fundamentals/layouts/ui-elements/
+      - title: Formulieren en invoer van gebruikers
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Invoer via aanraking
+            path: /fundamentals/input/touch/
+          - title: Invoer via formulier
+            path: /fundamentals/input/form/
+      - title: Uiterlijk
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Inleiding tot animaties
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Afbeeldingen, video en audio"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Afbeeldingen
+            path: /fundamentals/media/images/
+          - title: Video
+            path: /fundamentals/media/video/
+          - title: Audio
+            path: /fundamentals/media/audio/
+      - title: Inkomsten genereren
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Inkomsten genereren met advertenties
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Discovery en Distributie
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Apparaattoegang
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Locatie van gebruikers
+            path: /fundamentals/device-access/user-location
+          - title: Klikken om te bellen
+            path: /fundamentals/device-access/click-to-call
+      - title: Prestaties
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Weergave kritiek pad
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: Efficiëntie van inhoud optimaliseren
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Netwerken optimaliseren
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Interactiviteit optimaliseren
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Prestaties meten
+            path: /fundamentals/performance/measuring-performance/
+  - title: Tools
+    path: /fundamentals/tools/
+  - title: Bronnen
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Woordenlijst
+        path: /fundamentals/resources/glossary/
+      - title: Voorbeelden
+        path: /fundamentals/resources/samples/
+      - title: Stijlgids
+        path: /fundamentals/resources/styleguide/
+      - title: Voorbeeld van artikel
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
