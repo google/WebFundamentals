@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: התחל בעבודה
+    path: /fundamentals/getting-started/
+  - title: תיעוד
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: עקרונות מנחים לעיצוב אתרים
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: פריסות במכשירים מרובים
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: יסודות עיצוב האינטרנט המותאם
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: תבניות לעיצוב אינטרנט מותאם
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: תבניות פריסה
+            path: /fundamentals/layouts/layout-patterns/
+          - title: רכיבי ממשק משתמש
+            path: /fundamentals/layouts/ui-elements/
+      - title: טפסים וקלט מהמשתמש
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: קלט מגע
+            path: /fundamentals/input/touch/
+          - title: קלט מטופס
+            path: /fundamentals/input/form/
+      - title: מראה ותחושה
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: מבוא להנפשות
+            path: /fundamentals/look-and-feel/animations/
+      - title: "תמונות, וידאו ואודיו"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: תמונות
+            path: /fundamentals/media/images/
+          - title: וידאו
+            path: /fundamentals/media/video/
+          - title: אודיו
+            path: /fundamentals/media/audio/
+      - title: מונטיזציה
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: מונטיזציה של מודעות
+            path: /fundamentals/monetization/ad-monetization/
+      - title: גילוי והפצה
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: גישה למכשיר
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: מיקום משתמש
+            path: /fundamentals/device-access/user-location
+          - title: לחץ להתקשרות
+            path: /fundamentals/device-access/click-to-call
+      - title: ביצועים
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: עיבוד הנתיב הקריטי
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: אופטימיזציה של יעילות התוכן
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: אופטימיזציה של הרשת
+            path: /fundamentals/performance/optimizing-networking/
+          - title: אופטימיזציה של האינטראקטיביות
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: מדידת ביצועים
+            path: /fundamentals/performance/measuring-performance/
+  - title: כלים
+    path: /fundamentals/tools/
+  - title: משאבים
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: מילון מונחים
+        path: /fundamentals/resources/glossary/
+      - title: דוגמאות
+        path: /fundamentals/resources/samples/
+      - title: מדריך סגנון
+        path: /fundamentals/resources/styleguide/
+      - title: מאמר לדוגמה
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
