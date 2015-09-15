@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Primeiros passos
+    path: /fundamentals/getting-started/
+  - title: Documentação
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Princípios do design de sites
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Layouts compatíveis com vários dispositivos
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Noções básicas de Web design responsivo
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Padrões de Web design responsivo
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Padrões de layout
+            path: /fundamentals/layouts/layout-patterns/
+          - title: Elementos da interface
+            path: /fundamentals/layouts/ui-elements/
+      - title: Entrada de formulários e usuários
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Entrada de toque
+            path: /fundamentals/input/touch/
+          - title: Entrada de formulários
+            path: /fundamentals/input/form/
+      - title: Aparência
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Introdução às animações
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Imagens, vídeo e áudio"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Imagens
+            path: /fundamentals/media/images/
+          - title: Vídeo
+            path: /fundamentals/media/video/
+          - title: Áudio
+            path: /fundamentals/media/audio/
+      - title: Monetização
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Monetização de anúncios
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Descoberta e Distribuição
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Acesso ao dispositivo
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Localização do usuário
+            path: /fundamentals/device-access/user-location
+          - title: Clique para ligar
+            path: /fundamentals/device-access/click-to-call
+      - title: Desempenho
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Processamento de caminho essencial
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: Otimização de eficiência de conteúdo
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Otimização de redes
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Otimização de interatividade
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Medição de desempenho
+            path: /fundamentals/performance/measuring-performance/
+  - title: Ferramentas
+    path: /fundamentals/tools/
+  - title: Recursos
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Glossário
+        path: /fundamentals/resources/glossary/
+      - title: Amostras
+        path: /fundamentals/resources/samples/
+      - title: Guia de estilo
+        path: /fundamentals/resources/styleguide/
+      - title: Artigo de exemplo
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
