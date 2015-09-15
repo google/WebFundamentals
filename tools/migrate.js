@@ -6,7 +6,8 @@ var path = require('path');
 var options = {
   cleanupTranslatedYaml: false,
   removeFeedInfo: false,
-  removeCollection: false
+  removeCollection: false,
+  cleanupUpdates: true
 };
 
 console.log('Migration Assistant');
@@ -46,6 +47,15 @@ function updateFile(filename) {
 
       if (options.removeCollection) {
         data = data.replace(/^collection:\s*.*\n/m, '');
+      }
+
+      if (options.cleanupUpdates) {
+        data = data.replace(/^collection:\s*.*\n/gm, '');
+        data = data.replace(/^category:\s*.*\n/gm, '');
+        data = data.replace(/^product:\s*.*\n/gm, '');
+        data = data.replace(/^type:\s*.*\n/gm, '');
+        data = data.replace(/^date:\s*.*\n/gm, '');
+        data = data.replace(/^permalink:\s*.*\.html\n/gm, '');
       }
 
       // change the layout
@@ -129,7 +139,7 @@ function updateFile(filename) {
       data = data.replace(/<colgroup>[\w\W]*?<\/colgroup>\n/gm, '');
 
       // Remove lone style blocks
-      data = data.replace(/<style\b[^>]*>[\w\W]*?^<\/style>\n(?!{%\s*endhighlight %})/gm, '');
+      data = data.replace(/^<style\b[^>]*>[\w\W]*?^<\/style>\n(?!{%\s*endhighlight %})/gm, '');
       data = data.replace(/ style="max-width: 100%;"/gm, '');
 
       // Handle the introduction
