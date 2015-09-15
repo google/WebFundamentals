@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: 開始使用
+    path: /fundamentals/getting-started/
+  - title: 說明文件
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: 網站設計原則
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: 多裝置版面配置
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: 回應式網頁設計基本概念
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: 回應式網頁設計模式
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: 版面配置模式
+            path: /fundamentals/layouts/layout-patterns/
+          - title: 使用者介面元素
+            path: /fundamentals/layouts/ui-elements/
+      - title: 表單和使用者輸入
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: 觸控輸入
+            path: /fundamentals/input/touch/
+          - title: 表單輸入
+            path: /fundamentals/input/form/
+      - title: 外觀和風格
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: 動畫簡介
+            path: /fundamentals/look-and-feel/animations/
+      - title: 圖片、影片和音訊
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: 圖片
+            path: /fundamentals/media/images/
+          - title: 影片
+            path: /fundamentals/media/video/
+          - title: 音訊
+            path: /fundamentals/media/audio/
+      - title: 營利
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: 廣告營利
+            path: /fundamentals/monetization/ad-monetization/
+      - title: 發現和分銷
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: 裝置存取權
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: 使用者位置
+            path: /fundamentals/device-access/user-location
+          - title: 點選通話
+            path: /fundamentals/device-access/click-to-call
+      - title: 效能
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: 關鍵路徑轉譯
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: 最佳化內容效率
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: 最佳化網路連線
+            path: /fundamentals/performance/optimizing-networking/
+          - title: 最佳化互動性
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: 評估效能
+            path: /fundamentals/performance/measuring-performance/
+  - title: 工具
+    path: /fundamentals/tools/
+  - title: 資源
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: 詞彙解釋
+        path: /fundamentals/resources/glossary/
+      - title: 範例
+        path: /fundamentals/resources/samples/
+      - title: 風格指南
+        path: /fundamentals/resources/styleguide/
+      - title: 範例文章
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
