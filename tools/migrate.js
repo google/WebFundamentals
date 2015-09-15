@@ -3,6 +3,12 @@
 var fs = require('fs');
 var path = require('path');
 
+var options = {
+  cleanupTranslatedYaml: false,
+  removeFeedInfo: false,
+  removeCollection: false
+};
+
 console.log('Migration Assistant');
 console.log(' - Helps migrate content to the new Web Fundamentals folder structure');
 console.log('   This file is only meant as a temporary tool and should be removed');
@@ -21,13 +27,25 @@ function updateFile(filename) {
     } else {
       console.log('Migrating ' + filename);
       data = data.replace(/\r\n/gm, '\n');
+      data = data.replace(/\r/gm, '\n');
 
-      if (filename.indexOf('/en/') === -1) {
+      if (options.cleanupTranslatedYaml) {
         data = data.replace(/^layout:\s*.*\n/m, '');
-        data = data.replace(/^order:\s*.*\n/m, '');
+        data = data.replace(/^order:\s*\d+\s*\n/m, '');
+        data = data.replace(/^priority:\s*\d+\s*\n/m, '');
+        data = data.replace(/^translation_priority:\s*\d+\s*\n/m, '');
         data = data.replace(/authors:\n  - [\w\W]+?\n/m, '');
         data = data.replace(/^\s{2}(written_on: \d{4}-\d{2}-\d{2}\n)/m, '');
         data = data.replace(/^(written_on: \d{4}-\d{2}-\d{2}\n)/m, '');
+      }
+
+      if (options.removeFeedInfo) {
+        data = data.replace(/^feedName:\s*.*\n/m, '');
+        data = data.replace(/^feedPath:\s*.*\n/m, '');
+      }
+
+      if (options.removeCollection) {
+        data = data.replace(/^collection:\s*.*\n/m, '');
       }
 
       // change the layout
@@ -42,11 +60,8 @@ function updateFile(filename) {
       //remove: class, article, collection, id, feedName, feedPath, seotitle
       data = data.replace(/^article:\n/m, '');
       data = data.replace(/^id:\s*.*\n/m, '');
-      data = data.replace(/^feedName:\s*.*\n/m, '');
-      data = data.replace(/^feedPath:\s*.*\n/m, '');
       data = data.replace(/^class:\s*.*\n/m, '');
       data = data.replace(/^seotitle:\s*.*\n/m, '');
-      data = data.replace(/^collection:\s*.*\n/m, '');
       data = data.replace(/^snippet:\s*.*\n/m, '');
       data = data.replace(/^  featured: true\n/m, '');
 
@@ -85,6 +100,9 @@ function updateFile(filename) {
 
       // Remove nextarticle.liquid
       data = data.replace(/^{\%.*include modules\/nextarticle.liquid.*}\n/m, '');
+
+      // change shortlinks to comments
+      data = data.replace(/^shortlinks:\s*\n/gm, 'comments:\n');
 
       // Update Snippets
       data = data.replace(/^{\% include_code _code\/([^ ]*)\s*\%}/gm, '{% include_code src=_code/$1 %}');
