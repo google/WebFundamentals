@@ -1,0 +1,11 @@
+{% include page-structure/open-page.liquid %}
+<div class="page-content">
+  <div class="update-post__content-container">
+    <ul>
+      {% for tag in page.tags %}
+        <li><a href="{{site.WFBaseUrl}}/updates/tags/{{tag | canonicalize}}">{{tag}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% include page-structure/close-page.liquid %}
