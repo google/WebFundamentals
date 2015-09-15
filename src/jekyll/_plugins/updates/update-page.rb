@@ -36,7 +36,7 @@ module Jekyll
       self.data['feed_name'] = 'Web Updates - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/updates/feed.xml'
 
-      loadBetterBook('contentnav', '_betterbook-updates.yaml')
+      #loadBetterBook('contentnav', '_betterbook-updates.yaml')
     end
   end
 end

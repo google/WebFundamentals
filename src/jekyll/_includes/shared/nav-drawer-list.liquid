@@ -10,7 +10,7 @@
       {{ tocItem.title }}
     </a>
 
-    {% if tocItem.hasSubNav == true and tocItem.isInCurrentSection == true %}
+    {% if tocItem.hasSubNav == true %}
       {% capture nextListLevel %}{{ listLevel | plus:1 }}{% endcapture %}
       {% include shared/nav-drawer-list.liquid toc=tocItem.section level=nextListLevel  %}
     {% endif %}

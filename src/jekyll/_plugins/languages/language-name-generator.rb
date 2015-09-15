@@ -70,6 +70,14 @@ module Jekyll
       # to all of the site
       site.data["language_names"] = langNamesData
       site.data["primes"] = translations(site)
+
+      site.data["primes"].each { |page|
+        page.onBuildComplete()
+
+        page.data['translations'].each { |transationPage|
+          transationPage.onBuildComplete()
+        }
+      }
     end
 
     # Generate translations manifest.
@@ -83,9 +91,23 @@ module Jekyll
       rootFilepath = [@contentSource, primaryLanguage, ''].join '/'
       filePatternPath = rootFilepath
       buildRelativeDir = '.'
+      parentTree = nil
+      pagesTree = {"id" => "root", "pages" => [], "subdirectories" => []}
+      site.data['_context'] = pagesTree;
+
       if not ENV['WFSection'].nil?
         filePatternPath = File.join rootFilepath, ENV['WFSection']
-        buildRelativeDir = File.join buildRelativeDir, ENV['WFSection']
+        buildRelativeDir = ENV['WFSection']
+
+        newDirectory = {
+          "id" => ENV['WFSection'],
+          "pages" => [],
+          "subdirectories" => []
+        }
+        pagesTree['subdirectories'] << newDirectory
+
+        parentTree = pagesTree
+        pagesTree = newDirectory
       end
       primaryLangFilePattern = File.join filePatternPath, '**', '*.*'
 
@@ -93,9 +115,8 @@ module Jekyll
       fileEntries = Dir.entries( filePatternPath )
       site.data['primes'] = []
       allPages = []
-      pagesTree = {"id" => "root", "pages" => [], "subdirectories" => []}
 
-      handleFileEntries(allPages, nil, pagesTree, site, rootFilepath, buildRelativeDir, fileEntries)
+      handleFileEntries(allPages, parentTree, pagesTree, site, rootFilepath, buildRelativeDir, fileEntries)
 
       organisePageTree(pagesTree)
 
