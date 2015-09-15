@@ -46,6 +46,7 @@ module Jekyll
         'related-guides'
       ]
 
+      # This is a Jekyll::Page method (See: http://www.rubydoc.info/github/mojombo/jekyll/Jekyll/Page#process-instance_method)
       self.process(filename)
 
       # Read the yaml from the markdown file if it exists
@@ -185,20 +186,6 @@ module Jekyll
 
       self.data['contentnav'] = { "toc" => topLevelEntries }
     end
-
-    # TODO: Delete this if nothing appears to be broken. Fairly sure it's redundant code
-    #def get_path_titles(layer)
-    #  path_titles = Hash.new
-    #  layer.each_index do |key|
-    #    if (layer[key].has_key?("path"))
-    #      path_titles[layer[key]["path"]] = layer[key]["title"]
-    #    end
-    #    if layer[key]["section"]
-    #      path_titles.merge!(get_path_titles(layer[key]["section"]))
-    #    end
-    #  end
-    #  path_titles
-    #end
 
     # This method will try and find the translated version of a page
     # If the translation isn't available, it'll return the english version
