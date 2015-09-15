@@ -63,6 +63,19 @@
 
       <div class="mdl-layout-spacer"></div>
 
+      <!-- Search Box -->
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right wf-header__search-container">
+        <form class="devsite-search-form" action="/s/results" method="GET">
+          <label class="mdl-button mdl-js-button mdl-button--icon wf-header__search-btn" for="fixed-header-drawer-exp">
+            {% include svgs/search.svg  %}
+          </label>
+          <div class="mdl-textfield__expandable-holder wf-header__search-expanding-container">
+            <input class="mdl-textfield__input wf-header__search-field devsite-search-field devsite-search-query" type="text" name="q" value="" autocomplete="off" id="fixed-header-drawer-exp" />
+            <input type="hidden" name="p" id="search_project" value="/web" data-project-name="Google APIs for Web" data-project-path="/web" data-query-match="">
+          </div>
+        </form>
+      </div>
+
       <a class="wf-header__dev-logo" href="https://developers.google.com/">
         {% include svgs/gds-logo-grey.svg %}
       </a>
