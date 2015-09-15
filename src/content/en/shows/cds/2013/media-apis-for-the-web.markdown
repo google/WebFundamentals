@@ -1,17 +1,11 @@
 ---
-id: media-apis-for-the-web
-showid: cds
 layout: shows/single-video
-collection: cds-2013
 title: "Media APIs for the Multi-Platform Web"
 description: "Along with a proliferation of new devices and platforms on the web, we're seeing huge growth in audio, video and realtime communication. Online media is transforming the way we consume media of all kinds."
-published: true
 youtubeID: l-BA9Ee2XuM
 
-date: 2013-11-20 10:30:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

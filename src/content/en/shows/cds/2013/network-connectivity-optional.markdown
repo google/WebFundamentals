@@ -1,17 +1,11 @@
 ---
-id: network-connectivity-optional
-showid: cds
 layout: shows/single-video
-collection: cds-2013
 title: "Network Connectivity: Optional"
 description: "Offline is being taken seriously by browser vendors and you will soon have the tools in your hands that help you build great experiences that work well when you are offline."
-published: true
 youtubeID: Z7sRMg0f5Hk
 
-date: 2013-11-20 10:00:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

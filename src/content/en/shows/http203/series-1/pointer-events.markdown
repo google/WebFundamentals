@@ -1,17 +1,11 @@
 ---
-id: css-triggers
-showid: http203
 layout: shows/single-video
-collection: http203-series-1
 title: "2. Pointer Events"
 description: "Pointer Events (no, not the CSS ones, the other ones!) are set to unite input across devices. Jake has a little bit of news for Paul about them."
-published: true
 youtubeID: ngBy0H_q-GY
 
-date: 2014-10-09 00:00:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

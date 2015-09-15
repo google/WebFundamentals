@@ -1,11 +1,7 @@
 ---
-id: ud893
-showid: udacity
 layout: shows/udacity-course
-collection: udacity-courses
 title: "Responsive Web Design"
 description: "Learn the fundamentals of responsive web design with and create your own responsive web page that works well on any device - phone, tablet, desktop."
-published: true
 udacity:
   id: ud893
   level: Intermediate
@@ -13,11 +9,8 @@ udacity:
   instructor: petelepage
   preview:
     youtube: 7DJLa4owtIU
-nofeed: true
-date: 2015-03-18 00:00:00
-article:
-  written_on: 2015-03-18
-  updated_on: 2015-03-18
+written_on: 2015-03-18
+updated_on: 2015-03-18
 ---
 
 In this course you'll learn the fundamentals of responsive web design with

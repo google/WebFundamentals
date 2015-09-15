@@ -1,18 +1,11 @@
 ---
-id: episode-9
-showid: lazyweb
-class: lazyweb
 layout: shows/single-video
-collection: lazyweb-2015
 title: "Episode 9"
 description: "Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with service worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64."
-published: true
 youtubeID: oRcxExzWlc0
 
-date: 2015-06-09 00:00:00
-article:
-  written_on: 2015-06-09
-  updated_on: 2015-06-17
+written_on: 2015-06-09
+updated_on: 2015-06-17
 
 ---
 
