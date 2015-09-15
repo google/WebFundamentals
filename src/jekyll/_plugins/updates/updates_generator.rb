@@ -30,7 +30,7 @@ module Jekyll
         return
       end
 
-      chromeUpdatePages = getPages(site, ['updates', 'web'])
+      chromeUpdatePages = getPages(site, ['updates'])
       if chromeUpdatePages.nil?
         puts "No update posts found to generate any updates pagination pages."
         return
@@ -43,10 +43,8 @@ module Jekyll
       generateFeedPage(site, chromeUpdatePages)
       #site.pages << UpdatesFeedPage.new(site, site.source, File.join(@contentSource, site.data['curr_lang'], 'updates'), updatePages)
 
-      #createTagPages(site, updatePages)
-
-
-
+      # generate tag pages
+      generateTagPages(site, chromeUpdatePages)
 
       # Generate category/product pages
       #categories = site.data['updates']['types']
@@ -68,24 +66,36 @@ module Jekyll
 
     end
 
-    def createTagPages(site, updatePages)
-      contentFilename = site.config['WFcontentFoldername']
-
+    def generateTagPages(site, pages)
+      dir = File.join(site.data['curr_lang'], 'updates', 'tags')
       tags = []
       tagPageMapping = {}
 
-      # Iterate over every page and create an array of tags
-      # and pages which have those tags
-      updatePages.each do |updatePage|
-        # Check if we have no tags
-        if updatePage.data['updates-tags'].nil?
+      # Iterate over every page and create an array of tags + pages that
+      # have those tags.
+      pages.each do |page|
+
+        # If there are no tags, skip this page
+        if page.data['tags'].nil?
           next
         end
 
-        # TODO mattgaunt Should the tags be made lowercase to give better grouping?
-        updatePage.data['updates-tags'].each do |tag|
+        page.data['tags'].each do |tag|
+          # Clean up the tag, strip whitespace and lower case it
+          tag = tag.downcase.strip
+
+          # Error on reserved words or if there is a space in the tag
+          if tag === 'index' || tag === 'index.html'
+            msg = 'Reserved tag name index[.html] (' + page.name + ')' 
+            throw new PluginError("Create Tag Pages", msg);
+          end
+          if tag.index(' ') != nil
+            msg = 'Spaces not permitted in tags: ' + tag + ' (' + page.name + ')' 
+            throw new PluginError("Create Tag Pages", msg);
+          end
+
           tagPageMapping[tag] ||= []
-          tagPageMapping[tag] << updatePage
+          tagPageMapping[tag] << page
           tags << tag
         end
       end
@@ -93,21 +103,22 @@ module Jekyll
       tags.sort!
       tags.uniq!
 
-      # Generate the tag pages
       tags.each do |tag|
         tagPageMapping[tag].uniq!
-
-        # TODO mattgaunt - this looks like it's skipping the language support
-        site.pages << UpdatesTagPage.new(site, site.source, File.join(contentFilename, site.data['curr_lang'], 'updates', 'tags'), tag, tagPageMapping[tag])
+        site.pages << UpdatesTagPage.new(site, site.data['curr_lang'], tag, tagPageMapping[tag])
       end
+
+      site.pages << UpdatesTagsPage.new(site, site.data['curr_lang'], tags)
+
     end
+
 
 # This is the end of the old untested stuff
 
     def generatePaginationPages(site, pages)
       # Filter out pages with dates only
       pages = pages.map { |page|
-        requiredYamlFields = ['date']
+        requiredYamlFields = ['written_on']
         if (requiredYamlFields - page.data.keys).empty? == false
           puts "Found an update page without a date - this is surely wrong?"
           throw new PluginError(PLUGIN_NAME, 'Update page found without a date field. ' +
@@ -118,7 +129,7 @@ module Jekyll
         page
       }
 
-      pages = pages.sort { |x,y| y["date"] <=> x["date"] }
+      pages = pages.sort { |x,y| y["written_on"] <=> x["written_on"] }
       numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
 
       (0..(numberOfPages - 1)).each do |pageIndex|
@@ -143,38 +154,6 @@ module Jekyll
 
       site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
       site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
-    end
-
-  end
-
-  class UpdatesTagPage < Page
-    attr_accessor :tag
-
-    def initialize(site, base, dir, tag, updates)
-        @site = site
-        @base = base
-        @dir  = dir
-        @name = "#{tag}.html"
-        @tag = tag
-        @updates = updates
-        @langcode = site.data['curr_lang']
-
-        self.process(@name)
-
-        self.read_yaml(File.join(base, '_layouts'), 'updates/updates.liquid')
-
-        title_text = "All updates tagged '%s'"
-        description_text = "Tag page for updates tagged %s."
-
-        self.data['title'] = sprintf title_text, tag
-        self.data['description'] = sprintf description_text, tag
-        self.data['tag'] = @tag
-        self.data['updates'] = @updates
-        self.data['langcode'] = @langcode
-        if site.data["language_names"][@langcode].key?('rtl')
-          self.data['rtl'] = site.data["language_names"][@langcode]['rtl'];
-        end
-        self.data['is_localized'] = false
     end
 
   end
