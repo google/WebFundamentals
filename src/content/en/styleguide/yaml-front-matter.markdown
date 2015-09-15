@@ -16,7 +16,7 @@ spot them.**
 
 ## Valid YAML Attributes
 
-### **layout** 
+### **layout**
 
 The layout is used by Jekyll to determine the file to use as the layout for the
 current page.
@@ -55,7 +55,7 @@ that you **have** to
       development of a project. Web Starter Kit makes you more productive and
       simplifies a range of tasks for each phase."
 
-**NOTE:** Do not insert line breaks as this breaks some YAML parsers, leave as 
+**NOTE:** Do not insert line breaks as this breaks some YAML parsers, leave as
 a single line.
 
 ### translation_priority
@@ -135,15 +135,20 @@ in updates to define the URL of a blog post.
 
 ### key-takeaways, notes, related-guides (optional)
 
-Used in Web Fundamentals for generating 
-[key takeaways](/web/styleguide/useful-and-common-tags#takeaways), notes 
-(similar to take aways) and 
+Used in Web Fundamentals for generating
+[key takeaways](/web/styleguide/useful-and-common-tags#takeaways), notes
+(similar to take aways) and
 [related guides](/web/styleguide/useful-and-common-tags#related-guides)
 sections.
 
 ### order
 
-Some sections are written with a particular reading order in mind. 
+Some sections are written with a particular reading order in mind. This
+variable is used to determine the order of pages in the nextPage and
+previousPage.
+
+It's also used to order the navigation drawer items. This is based on the
+order variables in the index pages of sections.
 
     order: 1
 
@@ -153,7 +158,7 @@ Some sections are written with a particular reading order in mind.
 Used to provide comments within the file that may be helpful to future editors,
 translators, etc.
 
-    comments: 
+    comments:
       # blah, blah blah
       # more blah
       # even more blah!

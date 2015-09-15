@@ -14,20 +14,15 @@
 
 module Jekyll
 
-  # This generator will find all the files in the
-  # directory where all the markdown is stored
-  # and create the site.data["translations"] map
-  # which is used to track translations of a Page
-  #
-  # Define the source of the markdown by Setting
-  # 'WFContentSource' in the config.yaml
+  # This generator should be used for final pieces of work once
+  # ALL pages and added to site.pages and to the site.data['_context']
+  # tree data structure.
 
 
   # Create pages for Jekyll to build and handle translations
   class BuildEndGenerator < Generator
     priority :lowest
     def generate(site)
-      puts "Build End Generator"
 
       # This should run as the end of all generators and will give pages a
       # chance to do any final work needed
@@ -47,12 +42,6 @@ module Jekyll
 
           transationPage.onBuildComplete()
         }
-      }
-
-      site.data['_context']['subdirectories'].each { |subdirectory|
-        if subdirectory['id'] == 'updates'
-          #puts subdirectory['index']['title']
-        end
       }
     end
 
