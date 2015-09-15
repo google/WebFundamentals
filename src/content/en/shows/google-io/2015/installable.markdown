@@ -1,17 +1,10 @@
 ---
-id: io-15-installable-webapps
-showid: googleio
 layout: shows/single-video
-collection: googleio-2015
 title: "Installable Web Apps"
-description: ""
-published: true
 youtubeID: N1Bdu7ukN40
 
-date: 2015-05-28 00:00:00
-article:
-  written_on: 2015-05-28
-  updated_on: 2015-05-28
+written_on: 2015-05-28
+updated_on: 2015-05-28
 
 ---
 

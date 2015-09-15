@@ -1,17 +1,10 @@
 ---
-id: io-15-push
-showid: googleio
 layout: shows/single-video
-collection: googleio-2015
 title: "Push Notifications on the Open Web to increase engagement"
-description: ""
-published: true
 youtubeID: Z_K8QPQe6oM
 
-date: 2015-05-28 00:00:00
-article:
-  written_on: 2015-05-28
-  updated_on: 2015-05-28
+written_on: 2015-05-28
+updated_on: 2015-05-28
 
 ---
 Push notifications are now available on the open web through a new set of web APIs and 

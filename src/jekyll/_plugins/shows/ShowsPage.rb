@@ -22,10 +22,8 @@ module Jekyll
       # TODO Optimize valid yaml keys and remove date
       # see https://github.com/google/WebFundamentals/issues/1651
       validKeys = [
-        'youtubeID', 'key_img',
-        'id', 'date', 'showid', 'collection', 'article', 'intro-title',
-        'emailSubscriptionLink', 'class', 'subtitle', 'udacity', 'nofeed',
-        'key-img'
+        'youtubeID', 'key_img', 'published_on', 'subtitle', 'udacity',
+        'emailSubscriptionLink'
       ]
       super(site, relativeDir, filename, langcode, validKeys)
 

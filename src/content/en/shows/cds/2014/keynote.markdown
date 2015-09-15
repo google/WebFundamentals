@@ -1,17 +1,10 @@
 ---
-id: keynote
-showid: cds
 layout: shows/single-video
-collection: cds-2014
 title: "Keynote"
-description: ""
-published: true
 youtubeID: lboyR-A1woU
 
-date: 2014-11-20 09:00:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

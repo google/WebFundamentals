@@ -1,17 +1,11 @@
 ---
-id: behaviors
-showid: polycasts
 layout: shows/single-video
-collection: polycasts-season-2
 title: "Behaviors"
 description: "Behaviors unlock amazing potential by letting you mix functionality into your elements without relying on inheritance."
-published: true
 youtubeID: YrlmieL3Z0k
 
-date: 2015-07-15 00:00:00
-article:
-  written_on: 2015-07-15
-  updated_on: 2015-07-15
+written_on: 2015-07-15
+updated_on: 2015-07-15
 
 ---
 

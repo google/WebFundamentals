@@ -1,17 +1,8 @@
 ---
-id: lazyweb
-showid: lazyweb
 layout: shows/show-home
-collection: shows
 title: "LazyWeb"
 subtitle: "with Rob Dodson"
-intro-title: "What is LazyWeb?"
 description: "The LazyWeb Show is a recap of the past week’s current events on the web platform."
-published: true
-
-key-img: lazyweb_rect.jpg
-
-written_on: 2015-03-06
-updated_on: 2015-03-06
+key_img: lazyweb_rect.jpg
 order: 5
 ---

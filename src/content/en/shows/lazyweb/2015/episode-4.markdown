@@ -1,18 +1,11 @@
 ---
-id: episode-4
-showid: lazyweb
-class: lazyweb
 layout: shows/single-video
-collection: lazyweb-2015
 title: "How hard is it to be a web developer?"
 description: "Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskills to master new information, the WebKit status page goes live, browser makers meet to find consensus on Shadow DOM, Philip Roberts explains the inner workings of JavaScript, and Elevator.js scrolls you back to top in style."
-published: true
 youtubeID: 4Q6Nurtb_9c
 
-date: 2015-05-05 00:00:00
-article:
-  written_on: 2015-05-05
-  updated_on: 2015-05-05
+written_on: 2015-05-05
+updated_on: 2015-05-05
 
 ---
 

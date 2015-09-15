@@ -1,17 +1,11 @@
 ---
-id: scrolling-at-60fps-with-core-list
-showid: polycasts
 layout: shows/single-video
-collection: polycasts-season-2
 title: "Scrolling at 60 frames with core-list "
 description: "Scrolling at 60fps doesn't have to be a feat of engineering! With core-list you can scroll through thousands of items and never miss a beat."
-published: true
 youtubeID: 2UKPRbrw3Kk
 
-date: 2015-03-23 00:00:00
-article:
-  written_on: 2015-03-23
-  updated_on: 2015-03-23
+written_on: 2015-03-23
+updated_on: 2015-03-23
 
 ---
 

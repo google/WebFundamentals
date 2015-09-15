@@ -1,17 +1,11 @@
 ---
-id: theming-elements
-showid: polycasts
 layout: shows/single-video
-collection: polycasts-season-2
 title: "Theming Elements"
 description: "CSS Custom properties are incredibly powerful. Check out how you can use them to style and theme your Polymer elements."
-published: true
 youtubeID: omASiF85JzI
 
-date: 2015-06-02 00:00:00
-article:
-  written_on: 2015-06-02
-  updated_on: 2015-06-02
+written_on: 2015-06-02
+updated_on: 2015-06-02
 
 ---
 

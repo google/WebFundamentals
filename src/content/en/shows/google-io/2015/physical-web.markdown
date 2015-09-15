@@ -1,17 +1,10 @@
 ---
-id: io-15-physical-web
-showid: googleio
 layout: shows/single-video
-collection: googleio-2015
 title: "Introduction to the Physical Web"
-description: ""
-published: true
 youtubeID: 1yaLPRgtlR0
 
-date: 2015-07-18 00:00:00
-article:
-  written_on: 2015-07-18
-  updated_on: 2015-07-18
+written_on: 2015-07-18
+updated_on: 2015-07-18
 
 ---
 
