@@ -1,3 +1,6 @@
+// This might override variables in MDL so import it first
+@import "partials/dimens";
+
 @import "../third_party/material-design-lite/src/color-definitions";
 
 // Use color primarily for emphasis. Choose colors that fit with
