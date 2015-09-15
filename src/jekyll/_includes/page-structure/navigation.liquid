@@ -1,25 +1,3 @@
 {% if page.contentnav %}
   {% include shared/nav-drawer-list.liquid toc=page.contentnav.toc %}
 {% endif %}
-
-
-
-{% comment %}
-  This is the list of main sections of /web/
-  i.e. Fundamentals, Shows, Showcases, Tools
-{% endcomment %}
-
-<ul class="wf-main-nav__list-level-1 wf-nav__list">
-  {% for rootNavTocItem in page.rootnav.toc %}
-  {% if rootNavTocItem.isInCurrentSection == true %}
-    {% continue %}
-  {% endif %}
-
-  <li class="wf-main-nav__item">
-    <a class="wf-main-nav__link" title="Go to {{rootNavTocItem.strippedTitle}}" href="{{ rootNavTocItem.path }}">
-      {{ rootNavTocItem.title }}
-      <i class="main-nav__icon icon icon-chevron-right"></i>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
