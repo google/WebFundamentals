@@ -30,8 +30,16 @@ function spawnkJekyllBuild(buildConfig, cb) {
     GLOBAL.WF.src.jekyllConfigs + '/' + buildConfig);
   params.push('--trace');
 
+  var env = Object.create(process.env);
+  if (GLOBAL.WF.options.lang) {
+    env.WFLang = GLOBAL.WF.options.lang;
+  }
+  if (GLOBAL.WF.options.section) {
+    env.WFSection = GLOBAL.WF.options.section;
+  }
+
   var jekyllProcess = spawn('bundle', params, {
-      env: process.env,
+      env: env,
       stdio: 'inherit'
     });
   jekyllProcess.on('close', cb);
