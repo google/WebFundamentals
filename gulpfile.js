@@ -1,6 +1,16 @@
 'use strict';
 
 var del = require('del');
+var minimist = require('minimist');
+var chalk = require('chalk');
+
+var knownOptions = {
+  string: ['lang', 'section'],
+  default: {
+    lang: null,
+    section: null
+  }
+};
 
 GLOBAL.WF = {
   gae: 'appengine-config',
@@ -23,6 +33,33 @@ GLOBAL.WF = {
     scripts: 'build/scripts'
   }
 };
+GLOBAL.WF.options = minimist(process.argv.slice(2), knownOptions);
+
+console.log('');
+console.log('---------------------------------');
+console.log('');
+if (GLOBAL.WF.options.lang === null) {
+  console.log(chalk.dim('    Building all languages.'));
+  console.log(chalk.white('    Add ') +
+    chalk.magenta('--lang <Language Code>') +
+    chalk.white(' to build a specific language.'));
+} else {
+  console.log(chalk.dim('    Building language: ') +
+    chalk.white(GLOBAL.WF.options.lang));
+}
+console.log('');
+if (GLOBAL.WF.options.section === null) {
+  console.log(chalk.dim('    Building all sections.'));
+  console.log(chalk.white('    Add ') +
+    chalk.magenta('--section <Section Folder Name>') +
+    chalk.white(' to build a specific section.'));
+} else {
+  console.log(chalk.dim('    Building section: ') +
+    chalk.white(GLOBAL.WF.options.section));
+}
+console.log('');
+console.log('---------------------------------');
+console.log('');
 
 var gulp = require('gulp');
 var runSequence = require('run-sequence');

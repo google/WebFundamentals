@@ -80,16 +80,22 @@ module Jekyll
       end
 
       primaryLanguage = site.config['primary_lang'] || 'en'
-      primaryLangFilepath = [@contentSource, primaryLanguage, ''].join '/'
-      primaryLangFilePattern = File.join primaryLangFilepath, '**', '*.*'
+      rootFilepath = [@contentSource, primaryLanguage, ''].join '/'
+      filePatternPath = rootFilepath
+      buildRelativeDir = '.'
+      if not ENV['WFSection'].nil?
+        filePatternPath = File.join rootFilepath, ENV['WFSection']
+        buildRelativeDir = File.join buildRelativeDir, ENV['WFSection']
+      end
+      primaryLangFilePattern = File.join filePatternPath, '**', '*.*'
 
       # Get files in directory
-      fileEntries = Dir.entries( primaryLangFilepath )
+      fileEntries = Dir.entries( filePatternPath )
       site.data['primes'] = []
       allPages = []
       pagesTree = {"id" => "root", "pages" => [], "subdirectories" => []}
 
-      handleFileEntries(allPages, nil, pagesTree, site, primaryLangFilepath, '.', fileEntries)
+      handleFileEntries(allPages, nil, pagesTree, site, rootFilepath, buildRelativeDir, fileEntries)
 
       organisePageTree(pagesTree)
 
@@ -181,13 +187,20 @@ module Jekyll
             page.data['_context'] = pagesTrees
 
             # Check if there are any translations available
-            supportedTranslations = site.config['langs_available'].select { |languageId|
+            availableLanguages = site.config['langs_available']
+            if not ENV['WFLang'].nil?
+              availableLanguages = [ENV['WFLang']]
+            end
+            supportedTranslations = availableLanguages.select { |languageId|
+              isPrimaryLang = false
               if languageId == site.config['primary_lang']
-                return false
+                isPrimaryLang = true
               end
-              File.exists? File.join(@contentSource, languageId, relativePath, fileEntry)
+              (!isPrimaryLang) && (File.exists? File.join(@contentSource, languageId, relativePath, fileEntry))
             }
+
             page.data['is_localized'] = supportedTranslations.count > 0
+
             translated_pages = [page]
             supportedTranslations.each do |languageId|
               translationFilePath = File.join @contentSource, languageId, relativePath
@@ -208,6 +221,7 @@ module Jekyll
               translated_pages << translationPage
               site.pages << translationPage
             end
+
             page.data["translations"] = translated_pages
 
             if page.name.start_with? ('index')
