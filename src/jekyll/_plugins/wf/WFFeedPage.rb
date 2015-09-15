@@ -60,6 +60,9 @@ module Jekyll
         return @@FEED_TYPE_ATOM
     end
 
+    def autogenerateBetterBook()
+      # NOOP - For a feed we need no menu
+    end
   end
 
 end

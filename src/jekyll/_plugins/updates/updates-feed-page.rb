@@ -31,7 +31,6 @@ module Jekyll
       # The section is used in the UTM_Campaign for tracking
       self.data['feed_section'] = 'updates'
     end
-
   end
 
 end

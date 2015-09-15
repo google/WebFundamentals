@@ -14,13 +14,6 @@
 
 module Jekyll
 
-  #module LocalizeLink
-  #  def localize_link(input, page)
-  #    input = input + "?hl=" + page["langcode"] || site.config['primary_lang']
-  #    return input
-  #  end
-  #end
-
   module LocalizeString
     def localize_string(input)
 
@@ -58,6 +51,5 @@ module Jekyll
   end
 end
 
- #Liquid::Template.register_filter(Jekyll::LocalizeLink)
  Liquid::Template.register_filter(Jekyll::LanguageName)
  Liquid::Template.register_filter(Jekyll::LocalizeString)

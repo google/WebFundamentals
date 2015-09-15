@@ -30,6 +30,9 @@ module Jekyll
         return
       end
 
+      updateSection = {'id' => 'updates', "pages" => [], "subdirectories" => []}
+      site.data['_context']['subdirectories'] << updateSection
+
       chromeUpdatePages = getPages(site, ['updates'])
       if chromeUpdatePages.nil?
         puts "No update posts found to generate any updates pagination pages."
@@ -37,36 +40,16 @@ module Jekyll
       end
 
       # generate main page
-      generatePaginationPages(site, chromeUpdatePages)
+      generatePaginationPages(site, updateSection, chromeUpdatePages)
 
       # generate feed
       generateFeedPage(site, chromeUpdatePages)
-      #site.pages << UpdatesFeedPage.new(site, site.source, File.join(@contentSource, site.data['curr_lang'], 'updates'), updatePages)
 
       # generate tag pages
-      generateTagPages(site, chromeUpdatePages)
-
-      # Generate category/product pages
-      #categories = site.data['updates']['types']
-      #products = site.data['updates']['products']
-
-      # generate /category and /product/category
-      #categories.each do |category, val1|
-      #  generatePaginatedPage(site, site.source, File.join('updates', category), category, "all")
-      #  products.each do |product, val2|
-      #    generatePaginatedPage(site, site.source, File.join('updates', product, category), category, product)
-      #  end
-      #end
-
-      # generate /product
-      #products.each do |product, val|
-      #  generatePaginatedPage(site, site.source, File.join('updates', product), "all", product)
-      #end
-
-
+      generateTagPages(site, updateSection, chromeUpdatePages)
     end
 
-    def generateTagPages(site, pages)
+    def generateTagPages(site, updateSection, pages)
       dir = File.join(site.data['curr_lang'], 'updates', 'tags')
       tags = []
       tagPageMapping = {}
@@ -86,11 +69,11 @@ module Jekyll
 
           # Error on reserved words or if there is a space in the tag
           if tag === 'index' || tag === 'index.html'
-            msg = 'Reserved tag name index[.html] (' + page.name + ')' 
+            msg = 'Reserved tag name index[.html] (' + page.name + ')'
             throw new PluginError("Create Tag Pages", msg);
           end
           if tag.index(' ') != nil
-            msg = 'Spaces not permitted in tags: ' + tag + ' (' + page.name + ')' 
+            msg = 'Spaces not permitted in tags: ' + tag + ' (' + page.name + ')'
             throw new PluginError("Create Tag Pages", msg);
           end
 
@@ -105,17 +88,21 @@ module Jekyll
 
       tags.each do |tag|
         tagPageMapping[tag].uniq!
-        site.pages << UpdatesTagPage.new(site, site.data['curr_lang'], tag, tagPageMapping[tag])
+        tagPage = UpdatesTagPage.new(site, site.data['curr_lang'], tag, tagPageMapping[tag])
+        tagPage.data['_context'] = updateSection
+        site.pages << tagPage
       end
 
-      site.pages << UpdatesTagsPage.new(site, site.data['curr_lang'], tags)
+      tagPage = UpdatesTagsPage.new(site, site.data['curr_lang'], tags)
+      tagPage.data['_context'] = updateSection
+      site.pages << tagPage
 
     end
 
 
 # This is the end of the old untested stuff
 
-    def generatePaginationPages(site, pages)
+    def generatePaginationPages(site, updateSection, pages)
       # Filter out pages with dates only
       pages = pages.map { |page|
         requiredYamlFields = ['written_on']
@@ -132,7 +119,7 @@ module Jekyll
       pages = pages.sort { |x,y| y["written_on"] <=> x["written_on"] }
       numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
 
-      (0..(numberOfPages - 1)).each do |pageIndex|
+      (0..(numberOfPages - 1)).each { |pageIndex|
 
         # Creat indices to include in the page results
         # -1 on endPageIndex accounts for zero indexing
@@ -141,8 +128,16 @@ module Jekyll
 
         pagesToInclude = pages[startPageIndex..endPageIndex]
 
-        site.pages << UpdatesPaginationPage.new(site, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
-      end
+        updatePage = UpdatesPaginationPage.new(site, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
+        updatePage.data['_context'] = updateSection
+
+        site.pages << updatePage
+        if pageIndex == 0
+          updateSection['index'] = updatePage
+        else
+          updateSection['pages'] << updatePage
+        end
+      }
     end
 
     def calculatePages(pages, numberOfResultsPerPage)
