@@ -1,3 +1,6 @@
+// This might override variables in MDL so import it first
+@import "partials/dimens";
+
 @import "../third_party/material-design-lite/src/color-definitions";
 
 // Use color primarily for emphasis. Choose colors that fit with
@@ -13,6 +16,7 @@ $color-accent: unquote("rgb(#{$palette-pink-400})");
 @import "../third_party/material-design-lite/src/layout/layout";
 @import "../third_party/material-design-lite/src/grid/grid";
 @import "../third_party/material-design-lite/src/button/button";
+@import "../third_party/material-design-lite/src/textfield/textfield";
 @import "partials/google-fonts";
 @import "partials/debug";
 @import "partials/base";

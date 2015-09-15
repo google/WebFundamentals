@@ -1,13 +1,19 @@
 {% include page-structure/open-page.liquid %}
 
-{{ content }}
+<div class="page-content">
 
-<!-- Loop through each page and generate some navigation -->
-{% for page in page.context.pages %}
-  <h2>{{page.title}}</h2>
-  <p>{{page.description}}</p>
-  <!-- To view the format of the date, uncomment the following line -->
-  <p><a href="{{page.relative_url}}">View content here</a></p>
-{% endfor %}
+  {{ content }}
+
+  <!-- Loop through each page and generate some navigation -->
+  {% for page in page.context.pages %}
+    <h2>{{page.title}}</h2>
+    <p>{{page.description}}</p>
+    <!-- To view the format of the date, uncomment the following line -->
+    <p><a href="{{page.relative_url}}">View content here</a></p>
+  {% endfor %}
+
+</div>
+
+{% include shared/license.liquid %}
 
 {% include page-structure/close-page.liquid %}
