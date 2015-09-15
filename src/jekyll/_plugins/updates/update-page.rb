@@ -21,8 +21,7 @@ module Jekyll
       # TODO Optimize valid yaml keys and remove date
       # see https://github.com/google/WebFundamentals/issues/1649
       validKeys = [
-        'permalink', 'tags', 'featured_image', 'source_name', 'source_url',
-        'collection', 'category', 'product', 'type', 'date'
+        'tags', 'featured_image'
       ]
       super(site, relativeDir, filename, langcode, validKeys)
 
