@@ -75,6 +75,12 @@ module Jekyll
         page.onBuildComplete()
 
         page.data['translations'].each { |transationPage|
+          page.data.each { |key, value|
+            if transationPage.data[key].nil?
+              transationPage.data[key] = value
+            end
+          }
+
           transationPage.onBuildComplete()
         }
       }
@@ -233,10 +239,10 @@ module Jekyll
                 languageId,
                 true)
               translationPage.data.merge!('is_localized' => true, 'is_localization' => true)
-              keysToCopyFromPrimaryLang = WFPage.getPrimaryLangOnlyYamlKeys()
-              keysToCopyFromPrimaryLang.each { |key|
-                translationPage.data[key] = page.data[key]
-              }
+              #keysToCopyFromPrimaryLang = WFPage.getPrimaryLangOnlyYamlKeys()
+              #keysToCopyFromPrimaryLang.each { |key|
+              #  translationPage.data[key] = page.data[key]
+              #}
               translationPage.data['_context'] = pagesTrees
               translationPage.data['translations'] = translated_pages
               translated_pages << translationPage
@@ -319,11 +325,11 @@ module Jekyll
       end
 
       tree['pages'].each_with_index { |a, i|
-        a.data['nextPage'] = tree['pages'][i+1]
+        a.data['_nextPage'] = tree['pages'][i+1]
         if i > 0
-          a.data['previousPage'] = tree['pages'][i-1]
+          a.data['_previousPage'] = tree['pages'][i-1]
         elsif i == 0
-          a.data['previousPage'] = tree['index']
+          a.data['_previousPage'] = tree['index']
         end
       }
 

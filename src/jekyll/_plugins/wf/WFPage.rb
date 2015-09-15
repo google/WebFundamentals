@@ -18,27 +18,14 @@ module Jekyll
 
   class WFPage < Page
 
-    def self.getPrimaryLangOnlyYamlKeys()
-      return [
-        'order',
-        'layout',
-        'authors',
-        'written_on'
-      ]
-    end
-
     alias superdest destination
     alias superpath path
 
-    attr_reader :raw_canonical_url, :canonical_url, :relative_url, :directories, :context, :main_author
+    attr_reader :raw_canonical_url, :canonical_url, :relative_url,
+      :directories, :context, :main_author, :nextPage, :previousPage
 
     def initialize(site, relativeDir, filename, addtionalYamlKeys=[])
       @contentSource = site.config['WFContentSource']
-      if @contentSource.nil?
-        Jekyll.logger.info "WFContentSource is not defined in the config yaml"
-        raise Exception.new("WFContentSource is not defined in the config yaml")
-        return
-      end
 
       self.data = self.data ? self.data : {}
 
@@ -84,23 +71,31 @@ module Jekyll
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
     end
 
+    # This is called when the main generator has finished creating pages
     def onBuildComplete()
-      # This is the default better book
-      # loadBetterBook('rootnav', '_betterbook-root.yaml')
-      autogenerateBetterBook('contentnav', self.data['_context'])
+      autogenerateBetterBook()
     end
 
+    # This method checks for any invalid or disallowed fields in the
+    # YAML of a file
     def validateYamlData()
       # If this is a translation, we need to remove fields copied over from
       # english yaml during the jekyll generation
       if @langcode != site.config['primary_lang']
-        WFPage.getPrimaryLangOnlyYamlKeys().each { |key|
+        primaryLangOnlyKeys = [
+          'order',
+          'layout',
+          'authors',
+          'written_on'
+        ]
+        primaryLangOnlyKeys.each { |key|
           if @defaultValidKeys.include?(key)
             @defaultValidKeys.delete(key)
           end
         }
       end
 
+      # Merge keys from constructor
       allowedKeys = @defaultValidKeys + @addtionalYamlKeys
 
       invalidKeys = []
@@ -111,176 +106,118 @@ module Jekyll
       end
 
       if invalidKeys.length > 0
-          puts "Found " + invalidKeys.length.to_s + " invalid keys in " + @langcode + '/' + self.relative_path
-
-          invalidKeysString = ''
-          invalidKeys.each { |key|
-            invalidKeysString += key + ', '
-          }
-
-          puts 'Invalid keys: ' + invalidKeysString
-          puts '---------------------------------------------------------------'
-          puts ''
+          handleInvalidKeys(invalidKeys)
       end
     end
 
-    #def loadBetterBook(betterBookDataName, betterBookFilename)
-    #  if betterBookFilename.nil?
-    #    return
-    #  end
-    #
-    #  # site.source is the source directory being used by Jekyll
-    #  # File.join gives us a full path to the yaml file
-    #  yamlFilePath = File.join(@contentSource,
-    #    site.config['primary_lang'], betterBookFilename)
-    #  yamlData = YAML.load_file(yamlFilePath)
-    #
-    #  # Check if there is a language specific version, and load that.
-    #  if @langcode && @langcode != "en"
-    #    lang_file = File.join(@contentSource, @langcode, betterBookFilename)
-    #    if File.exists?(lang_file)
-    #      lang_book = YAML.load_file(lang_file)
-    #      merge(yamlData["toc"], get_path_titles(lang_book["toc"]))
-    #    end
-    #  end
-    #
-    #  # Remove any items we aren't going to display
-    #  yamlData['toc'].delete_if do |tocItem|
-    #    if tocItem['in_header'] == false
-    #      # Returning true removes element from toc
-    #      true
-    #    end
-    #  end
-    #
-    #  yamlData['toc'] = yamlData['toc'].each { |tocItem|
-    #    sanitizeTocItem(tocItem)
-    #  }
-    #
-    #  self.data[betterBookDataName] = yamlData
-    #  nil
-    #end
+    # TODO: Change to throwing an error when we get closer to release
+    def handleInvalidKeys(invalidKeys)
+      puts "Found " + invalidKeys.length.to_s + " invalid keys in " + @langcode + '/' + self.relative_path
 
-    def autogenerateBetterBook(dataName, context)
+      invalidKeysString = ''
+      invalidKeys.each { |key|
+        invalidKeysString += key + ', '
+      }
+
+      puts 'Invalid keys: ' + invalidKeysString
+      puts '---------------------------------------------------------------'
+      puts ''
+    end
+
+    def getBetterBookEntry(section, currentLevel)
+      entry = nil
+      if (not section.nil?) && (not section['index'].nil?)
+        indexPage = getAppropriatePage(section['index'])
+        entry = { "title" => indexPage['title'], "path" => indexPage.relative_url}
+
+        if (@directories.size > currentLevel) && (section['id'] == @directories[currentLevel])
+          entry['section'] = getBetterBookSections(section, (currentLevel + 1))
+          entry['hasSubNav'] = entry['section'].size > 0
+        end
+      end
+
+      entry
+    end
+
+    def getBetterBookSections(currentSection, currentLevel)
+      sections = []
+
+      # Iterate over each sub section
+      currentSection['subdirectories'].each { |subdirectory|
+        # Subdirectory entry
+        sections << getBetterBookEntry(subdirectory, currentLevel)
+      }
+
+      sections
+    end
+
+    # Generate the better book used for menus
+    def autogenerateBetterBook()
+      context = self.data['_context']
       if context.nil?
         return
       end
 
       currentLevel = 0;
-      currentSection = nil;
+      rootSection = nil;
       otherSections = []
+
+      # Pick out this pages rootSection and split out other sections
       site.data['_context']['subdirectories'].each { |subdirectory|
-        if subdirectory['id'] == @directories[0]
-          currentSection = subdirectory
+        if subdirectory['id'] == @directories[currentLevel]
+          rootSection = subdirectory
         else
           otherSections << subdirectory
         end
       }
 
-      currentLevel = currentLevel + 1
+      entry = getBetterBookEntry(rootSection, currentLevel)
 
-      if (not currentSection.nil?) && (not currentSection['index'].nil?)
-        entry = { "title" => currentSection['index']['title'], "path" => currentSection['index'].relative_url}
-        entry['section'] = getBetterBookEntry(currentSection, currentLevel)
-        entry['hasSubNav'] = entry['section'].size > 0
+      topLevelEntries = [entry]
 
-        #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
-        #  puts @name
-        #  puts "entry"
-        #  puts entry
-        #  puts ""
-        #end
-      else
-        #betterBook = { "toc" => [{ "title" => self['title'], "path" => self.relative_url, "home" => true }] }
-      end
-
-      #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
-      #  puts relative_path
-      #  puts "betterBook"
-      #  puts betterBook
-      #  puts ""
-      #end
-      entries = [entry]
       otherSections.each { |section|
         if section['index'].nil?
           next
         end
 
-        entries << { "title" => section['index']['title'], "path" => section['index'].relative_url}
-      }
-      betterBook = { "toc" => entries }
-
-      self.data[dataName] = betterBook
-    end
-
-    def getBetterBookEntry(currentSection, currentLevel)
-
-      #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
-      #  puts "Looking for links @ "+currentLevel.to_s
-      #  puts @directories
-      #  puts "...................."
-      #end
-
-      # Add the section title
-      # entry = { "toc" => [{ "title" => currenSection['index']['title'], "path" => currenSection['index'].relative_url}] }
-      entries = []
-
-      # Iterate over each sub section
-      currentSection['subdirectories'].each { |subdirectory|
-        if subdirectory['index'].nil?
-          next
-        end
-
-        #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
-        #  puts "Found Subdirectory "+subdirectory['id']
-        #end
-
-        # Subdirectory entry
-        entry = {"title" => subdirectory['index']['title'], "path" => subdirectory['index'].relative_url}
-
-        # Check if the current page is in the subdirectory path
-        if (@directories.size > currentLevel) && (subdirectory['id'] == @directories[currentLevel])
-          nextLevel = currentLevel + 1
-
-          entry['section'] = getBetterBookEntry(subdirectory, nextLevel)
-          entry['hasSubNav'] = entry['section'].size > 0
-        end
-
-        entries << entry
+        topLevelEntries << getBetterBookEntry(section, currentLevel)
       }
 
-      entries
+      self.data['contentnav'] = { "toc" => topLevelEntries }
     end
 
-    def get_path_titles(layer)
-      path_titles = Hash.new
-      layer.each_index do |key|
-        if (layer[key].has_key?("path"))
-          path_titles[layer[key]["path"]] = layer[key]["title"]
-        end
-        if layer[key]["section"]
-          path_titles.merge!(get_path_titles(layer[key]["section"]))
-        end
-      end
-      path_titles
-    end
+    # TODO: Delete this if nothing appears to be broken. Fairly sure it's redundant code
+    #def get_path_titles(layer)
+    #  path_titles = Hash.new
+    #  layer.each_index do |key|
+    #    if (layer[key].has_key?("path"))
+    #      path_titles[layer[key]["path"]] = layer[key]["title"]
+    #    end
+    #    if layer[key]["section"]
+    #      path_titles.merge!(get_path_titles(layer[key]["section"]))
+    #    end
+    #  end
+    #  path_titles
+    #end
 
-    def sanitizeTocItem(tocItem)
-      tocItem['strippedTitle'] = Sanitize.fragment(tocItem['title'])
-      if not tocItem['path'].nil?
-        if tocItem['external'].nil? || tocItem['external'] == false
-          tocItem['isInCurrentSection'] = self.url.include? tocItem['path']
-        else
-          tocItem['isInCurrentSection'] = false
-        end
-
-        tocItem['path'] = site.config['WFBaseUrl'] + tocItem['path'] + '?hl=' + @langcode
+    # This method will try and find the translated version of a page
+    # If the translation isn't available, it'll return the english version
+    def getAppropriatePage(page)
+      if page.nil?
+        return nil
       end
 
-      if not tocItem['section'].nil?
-        tocItem['section'] = tocItem['section'].each { |subsectionItem|
-          sanitizeTocItem(subsectionItem)
+      bestPage = page
+      if page.langcode != @langcode
+        page.data['translations'].each { |translationPage|
+          if translationPage.langcode == @langcode
+            bestPage = translationPage
+            break
+          end
         }
       end
+
+      bestPage
     end
 
     # This method just gets the first author of authors and assigns
@@ -362,8 +299,6 @@ module Jekyll
       fullUrl = fullUrl.sub('index.html', '')
       fullUrl = fullUrl.sub('.html', '')
 
-      #puts fullUrl
-
       fullUrl
     end
 
@@ -405,13 +340,7 @@ module Jekyll
       }
 
       self.data['_context']['pages'].each { |page|
-        suitablePage = page
-        page.data['translations'].each { |translationPage|
-          if translationPage.langcode == @langcode
-            suitablePage = translationPage
-          end
-        }
-        langSpecificContenxt['pages'] << suitablePage
+        langSpecificContenxt['pages'] << getAppropriatePage(page)
       }
 
       langSpecificContenxt['subdirectories'] = self.data['_context']['subdirectories']
@@ -423,13 +352,21 @@ module Jekyll
       getMainAuthor()
     end
 
+    def nextPage
+      getAppropriatePage(self.data['_nextPage'])
+    end
+
+    def previousPage
+      getAppropriatePage(self.data['_previousPage'])
+    end
+
     # Convert this post into a Hash for use in Liquid templates.
   #
   # Returns <Hash>
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
-    super(attrs + %w[ raw_canonical_url ] + %w[
-      canonical_url
-    ] + %w[ relative_url ] + %w[ context ] + %w[ main_author ])
+    super(attrs + %w[ raw_canonical_url ] + %w[ canonical_url ] +
+      %w[ relative_url ] + %w[ context ] + %w[ main_author ] + %w[ nextPage ] +
+      %w[ previousPage ])
   end
   end
 end
