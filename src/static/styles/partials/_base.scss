@@ -1,6 +1,8 @@
 @import "dimens";
 @import "colors";
 @import "embed";
+@import "../../third_party/material-design-lite/src/variables";
+@import "../../third_party/material-design-lite/src/mixins";
 
 
 html {
@@ -49,7 +51,7 @@ video {
   margin-bottom: $base-line;
 }
 
-.page-content {
+.page-content, .wf-cc-license {
   max-width: $max-content-width;
 
   margin-left: auto;
@@ -58,12 +60,20 @@ video {
   padding: $base-line / 2;
 }
 
+.wf-cc-license {
+  text-align: center;
+  @include typo-caption($colorContrast: true);
+
+  a {
+    text-decoration: none;
+  }
+}
+
 figure > img {
   margin-bottom: $base-line / 2;
 }
 
 figcaption {
-  //@include typecsset-font-size($mobile-base-font-size - 4px);
   color: $text-grey-color;
 
   a {
@@ -106,12 +116,6 @@ figcaption {
   }
 }
 
-@media (min-width: $max-content-width) {
-  figcaption {
-    //@include typecsset-font-size($tablet-base-font-size - 4px);
-  }
-}
-
 kbd {
   background-color: #f7f7f7;
   border: 1px solid #ccc;
@@ -124,5 +128,5 @@ kbd {
   margin: 0 0.1em;
   white-space: nowrap;
   box-shadow: 0 1px 0px rgba(0,0,0,0.2),0 0 0 2px #fff inset;
-  border-radius: 3px; 
+  border-radius: 3px;
 }
