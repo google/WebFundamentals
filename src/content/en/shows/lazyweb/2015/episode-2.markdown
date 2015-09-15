@@ -1,18 +1,11 @@
 ---
-id: episode-2
-showid: lazyweb
-class: lazyweb
 layout: shows/single-video
-collection: lazyweb-2015
 title: "A quest to save the universe with JavaScript"
 description: "Service workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan."
-published: true
 youtubeID: j9i4Eq9_S5Y
 
-date: 2015-04-21 00:00:00
-article:
-  written_on: 2015-04-21
-  updated_on: 2015-04-21
+written_on: 2015-04-21
+updated_on: 2015-04-21
 
 ---
 

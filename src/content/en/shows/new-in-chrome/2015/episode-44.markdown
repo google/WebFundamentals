@@ -1,19 +1,12 @@
 ---
-id: nic-episode-44
-showid: newinchrome
-class: newinchrome
 layout: shows/single-video
-collection: newinchrome-2015
 title: "Chrome 44: Improvements to the App Install Banner & More"
 description: "Chrome 44 includes improvements to the App Install Banner, changes to Push Messaging, and updates to notifications. Pete LePage will tell you how you can use these features new developer features in Chrome 44."
 
-published: true
 youtubeID: ghgx3j3ydwU
 
-date: 2015-07-21 00:00:00
-article:
-  written_on: 2015-07-21
-  updated_on: 2015-07-21
+written_on: 2015-07-21
+updated_on: 2015-07-21
 
 ---
 

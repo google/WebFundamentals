@@ -1,17 +1,11 @@
 ---
-id: optimizing-your-workflow
-showid: cds
 layout: shows/single-video
-collection: cds-2013
 title: "Optimizing your Workflow for a Cross-Device World"
 description: "If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful?"
-published: true
 youtubeID: bZRPetpUcjQ
 
-date: 2013-11-20 17:30:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 
