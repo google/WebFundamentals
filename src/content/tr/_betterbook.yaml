@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Başlarken
+    path: /fundamentals/getting-started/
+  - title: Belgeler
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Site Tasarımının İlkeleri
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: Çok Cihazlı Düzenler
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Duyarlı Web Tasarımının Temelleri
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Duyarlı Web Tasarımı Kalıpları
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Düzen Kalıpları
+            path: /fundamentals/layouts/layout-patterns/
+          - title: Kullanıcı Arayüzü Öğeleri
+            path: /fundamentals/layouts/ui-elements/
+      - title: Formlar ve Kullanıcı Girişi
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: Dokunmatik Giriş
+            path: /fundamentals/input/touch/
+          - title: Form Girişi
+            path: /fundamentals/input/form/
+      - title: Görünüm ve Tarz
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Animasyonlara Giriş
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Resimler, Video ve Ses"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Resimler
+            path: /fundamentals/media/images/
+          - title: Video
+            path: /fundamentals/media/video/
+          - title: Ses
+            path: /fundamentals/media/audio/
+      - title: Para Kazanma
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Reklamdan Para Kazanma
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Keşif ve Dağıtım
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Cihaz Erişimi
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Kullanıcının bulunduğu yer
+            path: /fundamentals/device-access/user-location
+          - title: Tıklayarak arama
+            path: /fundamentals/device-access/click-to-call
+      - title: Performans
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Kritik Yol Oluşturma
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: İçeriğin Verimliliğini Optimize Etme
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Ağ Kullanımını Optimize Etme
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Etkileşimi Optimize Etme
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Performansı Ölçme
+            path: /fundamentals/performance/measuring-performance/
+  - title: Araçlar
+    path: /fundamentals/tools/
+  - title: Kaynaklar
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Sözlük
+        path: /fundamentals/resources/glossary/
+      - title: Örnekler
+        path: /fundamentals/resources/samples/
+      - title: Stil Kılavuzu
+        path: /fundamentals/resources/styleguide/
+      - title: Örnek Makale
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
