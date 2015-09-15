@@ -1,17 +1,10 @@
 ---
-id: chrome-leadership-panel
-showid: cds
 layout: shows/single-video
-collection: cds-2014
 title: "Chrome Leadership Panel"
-description: ""
-published: true
 youtubeID: ztHMwIAbZ5M
 
-date: 2014-11-21 13:00:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

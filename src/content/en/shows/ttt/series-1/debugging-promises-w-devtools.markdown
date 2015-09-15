@@ -2,11 +2,7 @@
 layout: shows/single-video
 title: "Debugging Promises with DevTools"
 description: "In this episode, Addy and Matt walk through how to debug ES6 Promises using the brand new Promises debugger in Chrome DevTools."
-published: true
 youtubeID: o9c3U5_8tGY
-
-date: 2015-06-03 00:00:00
-
 written_on: 2015-06-03
 updated_on: 2015-06-03
 ---

@@ -1,17 +1,10 @@
 ---
-id: blink-4-lightning
-showid: blinkon
 layout: shows/single-video
-collection: blinkon-4
 title: "Blink Lightning talks"
-description: ""
-published: true
 youtubeID: uMjSEW_TE18
 
-date: 2015-05-13 14:30:00
-article:
-  written_on: 2015-05-13
-  updated_on: 2015-05-13
+written_on: 2015-05-13
+updated_on: 2015-05-13
 ---
 Multiple Attendees at the BlinkOn 4 conference gives short talks on topics they are thinking about, interested in or care about. The talks include;
 

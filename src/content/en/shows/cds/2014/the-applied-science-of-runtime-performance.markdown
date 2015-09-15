@@ -1,17 +1,10 @@
 ---
-id: the-applied-science-of-runtime-performance
-showid: cds
 layout: shows/single-video
-collection: cds-2014
 title: "The Applied Science of Runtime Performance"
-description: ""
-published: true
 youtubeID: RCFQu0hK6bU
 
-date: 2014-11-20 11:30:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

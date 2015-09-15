@@ -1,17 +1,11 @@
 ---
-id: content-switcheroo
-showid: polycasts
 layout: shows/single-video
-collection: polycasts-season-2
 title: "Polymer 0.8: First Look"
 description: "Polymer 0.8 has landed and with it come some major changes and performance improvements!"
-published: true
 youtubeID: cyf-17lWkYE
 
-date: 2015-04-16 00:00:00
-article:
-  written_on: 2015-04-16
-  updated_on: 2015-04-16
+written_on: 2015-04-16
+updated_on: 2015-04-16
 
 ---
 

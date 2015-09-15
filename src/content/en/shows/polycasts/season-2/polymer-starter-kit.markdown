@@ -1,17 +1,11 @@
 ---
-id: polymer-starter-kit
-showid: polycasts
 layout: shows/single-video
-collection: polycasts-season-2
 title: "Polymer Starter Kit"
 description: "Polymer Starter Kit is full of amazing tricks! Let’s do a quick introduction and see how to update the theme with custom properties."
-published: true
 youtubeID: xz-yixRxZN8
-date: 2015-06-15 00:00:00
 
-article:
-  written_on: 2015-06-15
-  updated_on: 2015-06-15
+written_on: 2015-06-15
+updated_on: 2015-06-15
 
 ---
 

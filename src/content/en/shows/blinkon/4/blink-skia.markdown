@@ -1,17 +1,10 @@
 ---
-id: blink-4-skia
-showid: blinkon
 layout: shows/single-video
-collection: blinkon-4
 title: "Blink Skia Update"
-description: ""
-published: true
 youtubeID: f7jz75yJlac
 
-date: 2015-05-13 16:30:00
-article:
-  written_on: 2015-05-13
-  updated_on: 2015-05-13
+written_on: 2015-05-13
+updated_on: 2015-05-13
 ---
 Heather Miller gives an update on the Skia project and the cool new things they are working on.
 
