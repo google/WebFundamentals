@@ -292,8 +292,8 @@ module Jekyll
 
     def organisePageTree(tree)
       tree['pages'] = tree['pages'].sort do |a, b|
-        a_order = a.data['order'] || a.data['date'] || 0
-        b_order = b.data['order'] || b.data['date'] || 0
+        a_order = a.data['order'] || a.data['written_on'] || 0
+        b_order = b.data['order'] || b.data['written_on'] || 0
         a_order <=> b_order
       end
 

@@ -1,17 +1,10 @@
 ---
-id: performance-panel
-showid: cds
 layout: shows/single-video
-collection: cds-2014
 title: "Performance Panel"
-description: ""
-published: true
 youtubeID: ju6oOsFOc3k
 
-date: 2014-11-21 11:00:00
-article:
-  written_on: 2015-02-24
-  updated_on: 2015-02-24
+written_on: 2015-02-24
+updated_on: 2015-02-24
 
 ---
 

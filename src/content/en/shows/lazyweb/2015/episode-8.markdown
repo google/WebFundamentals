@@ -1,18 +1,11 @@
 ---
-id: episode-8
-showid: lazyweb
-class: lazyweb
 layout: shows/single-video
-collection: lazyweb-2015
 title: "Episode 8"
 description: "Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome DevTools."
-published: true
 youtubeID: u1RjWga2ks4
 
-date: 2015-06-02 00:00:00
-article:
-  written_on: 2015-06-02
-  updated_on: 2015-06-17
+written_on: 2015-06-02
+updated_on: 2015-06-17
 
 ---
 

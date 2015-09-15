@@ -1,18 +1,11 @@
 ---
-id: episode-10
-showid: lazyweb
-class: lazyweb
 layout: shows/single-video
-collection: lazyweb-2015
 title: "Episode 10"
 description: "Bruce Lawson illustrates that everyone wants the same web, but not all networks are created equal, the a11y cheat sheet makes it easier to build accessible sites, Alex Komoroske and Elisabeth Morant highlight statistics and features of the next generation web, Firefox Developer Edition launches new performance tools, and Ilya Grigorik explains how old best practices are obsolete in HTTP/2."
-published: true
 youtubeID: 6YtvbitnQdw
 
-date: 2015-06-16 00:00:00
-article:
-  written_on: 2015-06-16
-  updated_on: 2015-06-17
+written_on: 2015-06-16
+updated_on: 2015-06-17
 
 ---
 
