@@ -1,17 +1,10 @@
 ---
-id: io-15-mobileweb
-showid: googleio
 layout: shows/single-video
-collection: googleio-2015
 title: "The next generation mobile web"
-description: ""
-published: true
 youtubeID: iZZdhTUP5qg
 
-date: 2015-05-28 00:00:00
-article:
-  written_on: 2015-05-28
-  updated_on: 2015-05-28
+written_on: 2015-05-28
+updated_on: 2015-05-28
 
 ---
 

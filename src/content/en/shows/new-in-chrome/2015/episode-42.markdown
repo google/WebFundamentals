@@ -1,18 +1,11 @@
 ---
-id: nic-episode-42
-showid: newinchrome
-class: newinchrome
 layout: shows/single-video
-collection: newinchrome-2015
 title: "Chrome 42 - Push API, App Install Banners & Fetch"
 description: "Chrome 42 includes Push API, App Install Banners and Fetch. Pete LePage will tell you how these features will make your web experience feel more Appy!"
-published: true
 youtubeID: vl4-WMImj6I
 
-date: 2015-05-11 00:00:00
-article:
-  written_on: 2015-05-11
-  updated_on: 2015-05-11
+written_on: 2015-05-11
+updated_on: 2015-05-11
 
 ---
 

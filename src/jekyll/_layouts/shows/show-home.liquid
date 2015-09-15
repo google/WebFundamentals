@@ -6,12 +6,14 @@
 
 <!-- Latest Episode -->
 {% if page.context.subdirectories.size > 0 %}
+  {% assign latestSeason = page.context.subdirectories.last %}
+  {% assign latestEpisode = latestSeason.pages.last %}
   <div class="showhome-subheading">
     <p class="showhome-subheading__description">Latest Episode</p>
-    <h3 class="showhome-subheading__title">{{ page.context.subdirectories[0].pages[0].title }}</h3>
+    <h3 class="showhome-subheading__title">{{ latestEpisode.title }}</h3>
   </div>
 
-  {% ytvideo page.context.subdirectories[0].pages[0].youtubeID %}
+  {% ytvideo latestEpisode.youtubeID %}
 {% endif %}
 
 {{ content }}
@@ -28,14 +30,14 @@
   {% endif %}
 </div>
 
-{% for subdirectory in page.context.subdirectories %}
+{% for subdirectory in page.context.subdirectories reversed %}
   <h4 class="show-series-list__title showhome--series-title-{{ page.id }} g-wide--full">
     {{subdirectory.index.title}}
   </h4>
 
   <!-- List of Videos -->
   <ol class="show-series-list">
-    {% for showPage in subdirectory.pages %}
+    {% for showPage in subdirectory.pages reversed %}
     <li>
       <a class="show-series-list__link" href="{{ showPage.relative_url }}">
         <div class="show-series-list__item">

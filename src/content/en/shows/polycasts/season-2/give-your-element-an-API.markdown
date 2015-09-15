@@ -1,19 +1,10 @@
 ---
-id: episode-16
-showid: polycast
-class: polycast
 layout: shows/single-video
-collection: polycasts-season-2
 title: "Episode 16"
 description: "Today I'm going to show you how to add public properties and methods to a Polymer element. This will give your tag a programmable interface so it can be manipulated with JavaScript."
-published: true
 youtubeID: 7jolqbtIdiY
-date: 2015-05-19 00:00:00
-
-article: 
-  written_on: 2015-05-19
-  updated_on: 2015-05-19
-
+written_on: 2015-05-19
+updated_on: 2015-05-19
 ---
 
 # In this Week's Episode

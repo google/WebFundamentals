@@ -2,12 +2,8 @@
 layout: shows/single-video
 title: "DevTools Grab Bag of Tricks"
 description: "Matt and Addy dive into a grab bag of DevTools tips and tricks covering everything from working with our new animation tools to pro-tips for the Console."
-published: true
 
 youtubeID: hJdqtBeAUNI
-
-date: 2015-06-18 00:00:00
-
 written_on: 2015-06-18
 updated_on: 2015-06-18
 ---
