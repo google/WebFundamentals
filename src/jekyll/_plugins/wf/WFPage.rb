@@ -67,7 +67,7 @@ module Jekyll
       self.data['html_head_description'] = 'Google Developers - Web Fundamentals'
       self.data['html_head_social_img'] = site.config['WFBaseUrl'] + '/imgs/logo.png'
       self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
-      self.data['theme_color'] = '#4285f4'
+      self.data['theme_color'] = '#03A9F4'
       self.data['feed_name'] = 'Web - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
     end
@@ -156,6 +156,8 @@ module Jekyll
     def autogenerateBetterBook()
       context = self.data['_context']
       if context.nil?
+        msg = 'self.data[\'_context\'] is nil in (' + relative_path + ')'
+        raise Exception.new("Unable to generate better book: " + msg);
         return
       end
 
@@ -185,6 +187,11 @@ module Jekyll
       }
 
       self.data['contentnav'] = { "toc" => topLevelEntries }
+
+      #if @directories[currentLevel] == 'updates'
+      #  puts "HERE"
+      #  puts self.data['contentnav']
+      #end
     end
 
     # This method will try and find the translated version of a page

@@ -34,6 +34,7 @@ module Jekyll
       self.data['html_head_description'] = 'Google Developer web shows are ' +
         'a set of video series that help web developers learn about the ' +
         'latest news and technologies on the web platform.'
+      self.data['theme_color'] = '#212121'
 
       $css = 'shows-index.css'
       if self.data['layout'] == 'shows/show-home' || self.data['layout'] == 'shows/udacity-home'

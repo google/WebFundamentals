@@ -31,11 +31,9 @@ module Jekyll
         'contains the latest news from the Chrome, looking at new features ' +
         'on the open web and in Chrome DevTools.'
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/update-post.css';
-
+      self.data['theme_color'] = '#E91E63'
       self.data['feed_name'] = 'Web Updates - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/updates/feed.xml'
-
-      #loadBetterBook('contentnav', '_betterbook-updates.yaml')
     end
   end
 end

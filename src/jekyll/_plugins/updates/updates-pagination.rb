@@ -17,13 +17,16 @@ module Jekyll
   require File.expand_path('../../wf/WFPage.rb', __FILE__)
 
   class UpdatesPaginationPage < UpdatePage
+
     def initialize(site, langcode, pages, paginationIndex, totalPaginationPages)
       dir = 'updates'
       name = 'index.html'
+
       if paginationIndex != 0
         dir  = File.join('updates', 'pages')
         name = (paginationIndex + 1).to_s + ".html"
       end
+
       super(site, dir, name, langcode)
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
@@ -46,7 +49,7 @@ module Jekyll
 
       if paginationIndex < (totalPaginationPages - 1)
         # Because we are zero indexed and the first result is offset by original_target
-        # we add 2 to the index
+        # we add 2 to the indexs
         self.data['next_url'] = [baseUrl, 'updates', 'pages', (paginationIndex + 2)].join('/')
       end
 

@@ -23,8 +23,8 @@ module Jekyll
   # 'WFContentSource' in the config.yaml
 
 
-  # Extract language code to name mappings.
-  class LanguageNameGenerator < Generator
+  # Create pages for Jekyll to build and handle translations
+  class MainGenerator < Generator
     priority :highest
     def generate(site)
       @contentSource = site.config['WFContentSource']
@@ -70,20 +70,6 @@ module Jekyll
       # to all of the site
       site.data["language_names"] = langNamesData
       site.data["primes"] = translations(site)
-
-      site.data["primes"].each { |page|
-        page.onBuildComplete()
-
-        page.data['translations'].each { |transationPage|
-          page.data.each { |key, value|
-            if transationPage.data[key].nil?
-              transationPage.data[key] = value
-            end
-          }
-
-          transationPage.onBuildComplete()
-        }
-      }
     end
 
     # Generate translations manifest.
