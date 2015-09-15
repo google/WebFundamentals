@@ -71,9 +71,6 @@ module Jekyll
       # Check that all the keys in the YAML data is valid
       validateYamlData()
 
-      # This is the default better book
-      loadBetterBook('rootnav', '_betterbook-root.yaml')
-
       # This could be given a better name - Used in navigation liquid
       # displayed on mobile screens
       self.data['drawerTitleText'] = self.data['title']
@@ -85,6 +82,12 @@ module Jekyll
       self.data['theme_color'] = '#4285f4'
       self.data['feed_name'] = 'Web - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
+    end
+
+    def onBuildComplete()
+      # This is the default better book
+      # loadBetterBook('rootnav', '_betterbook-root.yaml')
+      autogenerateBetterBook('contentnav', self.data['_context'])
     end
 
     def validateYamlData()
@@ -121,41 +124,131 @@ module Jekyll
       end
     end
 
-    def loadBetterBook(betterBookDataName, betterBookFilename)
-      if betterBookFilename.nil?
+    #def loadBetterBook(betterBookDataName, betterBookFilename)
+    #  if betterBookFilename.nil?
+    #    return
+    #  end
+    #
+    #  # site.source is the source directory being used by Jekyll
+    #  # File.join gives us a full path to the yaml file
+    #  yamlFilePath = File.join(@contentSource,
+    #    site.config['primary_lang'], betterBookFilename)
+    #  yamlData = YAML.load_file(yamlFilePath)
+    #
+    #  # Check if there is a language specific version, and load that.
+    #  if @langcode && @langcode != "en"
+    #    lang_file = File.join(@contentSource, @langcode, betterBookFilename)
+    #    if File.exists?(lang_file)
+    #      lang_book = YAML.load_file(lang_file)
+    #      merge(yamlData["toc"], get_path_titles(lang_book["toc"]))
+    #    end
+    #  end
+    #
+    #  # Remove any items we aren't going to display
+    #  yamlData['toc'].delete_if do |tocItem|
+    #    if tocItem['in_header'] == false
+    #      # Returning true removes element from toc
+    #      true
+    #    end
+    #  end
+    #
+    #  yamlData['toc'] = yamlData['toc'].each { |tocItem|
+    #    sanitizeTocItem(tocItem)
+    #  }
+    #
+    #  self.data[betterBookDataName] = yamlData
+    #  nil
+    #end
+
+    def autogenerateBetterBook(dataName, context)
+      if context.nil?
         return
       end
 
-      # site.source is the source directory being used by Jekyll
-      # File.join gives us a full path to the yaml file
-      yamlFilePath = File.join(@contentSource,
-        site.config['primary_lang'], betterBookFilename)
-      yamlData = YAML.load_file(yamlFilePath)
-
-      # Check if there is a language specific version, and load that.
-      if @langcode && @langcode != "en"
-        lang_file = File.join(@contentSource, @langcode, betterBookFilename)
-        if File.exists?(lang_file)
-          lang_book = YAML.load_file(lang_file)
-          merge(yamlData["toc"], get_path_titles(lang_book["toc"]))
+      currentLevel = 0;
+      currentSection = nil;
+      otherSections = []
+      site.data['_context']['subdirectories'].each { |subdirectory|
+        if subdirectory['id'] == @directories[0]
+          currentSection = subdirectory
+        else
+          otherSections << subdirectory
         end
-      end
-
-      # Remove any items we aren't going to display
-      yamlData['toc'].delete_if do |tocItem|
-        if tocItem['in_header'] == false
-          # Returning true removes element from toc
-          true
-        end
-      end
-
-      yamlData['toc'] = yamlData['toc'].each { |tocItem|
-        sanitizeTocItem(tocItem)
       }
 
-      self.data[betterBookDataName] = yamlData
-      #context.environments.first["page"][betterBookFilename] = yamlData
-      nil
+      currentLevel = currentLevel + 1
+
+      if (not currentSection.nil?) && (not currentSection['index'].nil?)
+        entry = { "title" => currentSection['index']['title'], "path" => currentSection['index'].relative_url}
+        entry['section'] = getBetterBookEntry(currentSection, currentLevel)
+        entry['hasSubNav'] = entry['section'].size > 0
+
+        #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
+        #  puts @name
+        #  puts "entry"
+        #  puts entry
+        #  puts ""
+        #end
+      else
+        #betterBook = { "toc" => [{ "title" => self['title'], "path" => self.relative_url, "home" => true }] }
+      end
+
+      #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
+      #  puts relative_path
+      #  puts "betterBook"
+      #  puts betterBook
+      #  puts ""
+      #end
+      entries = [entry]
+      otherSections.each { |section|
+        if section['index'].nil?
+          next
+        end
+
+        entries << { "title" => section['index']['title'], "path" => section['index'].relative_url}
+      }
+      betterBook = { "toc" => entries }
+
+      self.data[dataName] = betterBook
+    end
+
+    def getBetterBookEntry(currentSection, currentLevel)
+
+      #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
+      #  puts "Looking for links @ "+currentLevel.to_s
+      #  puts @directories
+      #  puts "...................."
+      #end
+
+      # Add the section title
+      # entry = { "toc" => [{ "title" => currenSection['index']['title'], "path" => currenSection['index'].relative_url}] }
+      entries = []
+
+      # Iterate over each sub section
+      currentSection['subdirectories'].each { |subdirectory|
+        if subdirectory['index'].nil?
+          next
+        end
+
+        #if (@directories.size > 1) && (@directories[1] == 'guides') && (relative_path == 'fundamentals/guides/index.markdown')
+        #  puts "Found Subdirectory "+subdirectory['id']
+        #end
+
+        # Subdirectory entry
+        entry = {"title" => subdirectory['index']['title'], "path" => subdirectory['index'].relative_url}
+
+        # Check if the current page is in the subdirectory path
+        if (@directories.size > currentLevel) && (subdirectory['id'] == @directories[currentLevel])
+          nextLevel = currentLevel + 1
+
+          entry['section'] = getBetterBookEntry(subdirectory, nextLevel)
+          entry['hasSubNav'] = entry['section'].size > 0
+        end
+
+        entries << entry
+      }
+
+      entries
     end
 
     def get_path_titles(layer)
@@ -265,9 +358,13 @@ module Jekyll
     end
 
     def getFilteredUrl()
-      fullUrl = site.config['WFBaseUrl'] + @url
+      fullUrl = site.config['WFBaseUrl'] + self.url
       fullUrl = fullUrl.sub('index.html', '')
       fullUrl = fullUrl.sub('.html', '')
+
+      #puts fullUrl
+
+      fullUrl
     end
 
     # WARNING: This is intended for use in the head of the document only
