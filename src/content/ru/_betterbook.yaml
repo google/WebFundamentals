@@ -1,0 +1,102 @@
+toc:
+  - title: "Web <strong>Fundamentals</strong>"
+    path: /fundamentals/
+    home: true
+  - title: Начало работы
+    path: /fundamentals/getting-started/
+  - title: Документация
+    path: "/fundamentals/#documentation"
+    hasSubNav: true
+    section:
+      - title: Принципы оформления сайта
+        path: /fundamentals/principles/
+        id: principles-of-site-design
+      - title: "Макеты, оптимизированные для различных устройств"
+        path: /fundamentals/layouts/
+        id: multi-device-layouts
+        section:
+          - title: Основы адаптивного веб-дизайна
+            path: /fundamentals/layouts/rwd-fundamentals/
+          - title: Шаблоны адаптивного веб-дизайна
+            path: /fundamentals/layouts/rwd-patterns/
+          - title: Макеты шаблонов
+            path: /fundamentals/layouts/layout-patterns/
+          - title: Элементы интерфейса
+            path: /fundamentals/layouts/ui-elements/
+      - title: Формы и интерактивные элементы
+        path: /fundamentals/input/
+        id: user-input
+        section:
+          - title: "Элементы, реагирующие на нажатие"
+            path: /fundamentals/input/touch/
+          - title: Формы
+            path: /fundamentals/input/form/
+      - title: Внешний вид
+        path: /fundamentals/look-and-feel/
+        id: look-and-feel
+        section:
+          - title: Обзор элементов анимации
+            path: /fundamentals/look-and-feel/animations/
+      - title: "Изображения, видео и звук"
+        path: /fundamentals/media/
+        id: introduction-to-media
+        section:
+          - title: Изображения
+            path: /fundamentals/media/images/
+          - title: Видео
+            path: /fundamentals/media/video/
+          - title: Звук
+            path: /fundamentals/media/audio/
+      - title: Монетизация
+        path: /fundamentals/monetization/
+        id: monetization
+        section:
+          - title: Размещение рекламы
+            path: /fundamentals/monetization/ad-monetization/
+      - title: Открытие и распространения
+        path: /fundamentals/discovery-and-distribution/
+        id: discovery-and-distribution
+        section:
+          - title: "Optimization for Crawlers"
+            path: /fundamentals/discovery-and-distribution/optimization-for-crawlers/
+          - title: "Enriching Search Results"
+            path: /fundamentals/discovery-and-distribution/enriching-search-results/
+      - title: Доступ к устройству
+        path: /fundamentals/device-access/
+        id: device-access
+        section:
+          - title: Местоположение пользователя
+            path: /fundamentals/device-access/user-location
+          - title: Интерактивный номер телефона
+            path: /fundamentals/device-access/click-to-call
+      - title: Эффективность
+        path: /fundamentals/performance/
+        id: performance
+        section:
+          - title: Процесс загрузки страницы
+            path: /fundamentals/performance/critical-path-rendering/
+          - title: Эффективность оптимизации контента
+            path: /fundamentals/performance/optimizing-content-efficiency/
+          - title: Оптимизация сети
+            path: /fundamentals/performance/optimizing-networking/
+          - title: Оптимизация интерактивных элементов
+            path: /fundamentals/performance/optimizing-interactivity/
+          - title: Измерение эффективности
+            path: /fundamentals/performance/measuring-performance/
+  - title: Инструменты
+    path: /fundamentals/tools/
+  - title: Справочные материалы
+    path: /fundamentals/resources/
+    in_header: false
+    section:
+      - title: Глоссарий
+        path: /fundamentals/resources/glossary/
+      - title: Примеры
+        path: /fundamentals/resources/samples/
+      - title: Руководство по стилю
+        path: /fundamentals/resources/styleguide/
+      - title: Пример статьи
+        path: /fundamentals/resources/example-article/
+  - title: "Web <strong>Starter Kit</strong>"
+    path: /starter-kit/
+    in_header: false
