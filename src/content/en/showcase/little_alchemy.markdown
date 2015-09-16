@@ -19,15 +19,15 @@ showcase:
       result: http://www.webpagetest.org/result/150408_NM_D2H/
   link: http://littlealchemy.com/
   developer: Jakub Koziol
-  pros: |
-    Little Alchemy is a prime example of using all of the web platform's latest abilities to its full advantage. It uses the [web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) to launch fullscreen when installed and blends in with Android with the help of [theme-color](/web/fundamentals/device-access/stickyness/additional-customizations.html).
+  our_views:
+    good: |
+      Little Alchemy is a prime example of using all of the web platform's latest abilities to its full advantage. It uses the [web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) to launch fullscreen when installed and blends in with Android with the help of [theme-color](/web/fundamentals/device-access/stickyness/additional-customizations.html).
 
-    The first time load is extremely responsive and shows the preloader right away. In addition, it can be played entirely offline through its use of AppCache. Well done.
-  cons: |
-    On Desktop, blocking right clicking is usually considered no-no (but it allowed me to find the secret cheat code by mistyping the Chrome DevTools shortcut :)). Not a terribly big deal for a game though.
+      The first time load is extremely responsive and shows the preloader right away. In addition, it can be played entirely offline through its use of AppCache. Well done.
+    bad: |
+      On Desktop, blocking right clicking is usually considered no-no (but it allowed me to find the secret cheat code by mistyping the Chrome DevTools shortcut :)). Not a terribly big deal for a game though.
 
-    UI-wise, a grid might improve the "all-over-the-place" feel, and when dragging elements on mobile, shifting them slightly to the top so that you can see what you're moving below your finger could improve visibility.
-
+      UI-wise, a grid might improve the 'all-over-the-place' feel, and when dragging elements on mobile, shifting them slightly to the top so that you can see what you're moving below your finger could improve visibility.
   interview:
     - question: Why the web?
       answer: |

@@ -8,6 +8,7 @@
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6--col">
       <h1>{{page.title}}</h1>
+      {% if page.subtitle %}<h2>{{page.subtitle}}</h2>{% endif %}
       <p>
         <a href="{{showcase.link}}">{{showcase.link}}</a> - {% for tag in page.tags %}
         <a href="{{site.baseurl}}/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
@@ -36,7 +37,164 @@
   </div>
 </header>
 
-{{ content }}
+<div>
+  <div class="content spotlight-wrapper__content g--half">
+    <h2>Our thoughts</h2>
+    {{ page.description | markdownify }}
+
+    {% if showcase.our_views.good %}
+    <h3>What we like</h3>
+    {{ showcase.our_views.good | markdownify }}
+    {% endif %}
+
+    {% if showcase.our_views.bad %}
+    <h3>Possible improvements</h3>
+    {{ showcase.our_views.bad | markdownify }}
+    {% endif %}
+
+  </div>
+  {% include showcase/related_spotlight_guides.liquid list=page.related %}
+</div>
+
+{% if showcase.overview %}
+<div>
+  <h2>Overview</h2>
+  <p>{{showcase.overview.description | markdownify }}</p>
+  <dl>
+    <dt>Target audience</dt>
+    <dd>{{showcase.overview.audience}}</dd>
+    {% if showcase.overview.features %}
+      <dt>Features</dt>
+      <dd>
+        <ul>
+        {% for feature in showcase.overview.features %}
+          <li>
+            {{feature}}
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+
+    {% if showcase.overview.webbyness %}
+      <dt>Webbyness</dt>
+      <dd>
+        <ul>
+        {% for advantage in showcase.overview.webbyness %}
+          <li>
+            <a href="{{advantage.link}}">{{advantage.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+  </dl>
+</div>
+{% endif %}
+
+{% if showcase.behind_the_scenes %}
+<div>
+  <h2>Behind the scenes</h2>
+  <p>{{showcase.behind_the_scenes.description | markdownify }}</p>
+  <dl class="case-study__dl">
+
+    {% if showcase.behind_the_scenes.owp %}
+      <dt>New web platform features</dt>
+      <dd>
+        <ul>
+        {% for owp in showcase.behind_the_scenes.owp %}
+          <li>
+            {{owp}}
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+
+    {% if showcase.behind_the_scenes.patterns %}
+      <dt>Patterns</dt>
+      <dd>
+        <ul>
+        {% for pattern in showcase.behind_the_scenes.patterns %}
+          <li>
+            {{pattern}}
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+
+    {% if showcase.behind_the_scenes.samples %}
+      <dt>Forkable samples</dt>
+      <dd>
+        <ul>
+        {% for sample in showcase.behind_the_scenes.samples %}
+          <li>
+            {{sample}}
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+
+    {% if showcase.behind_the_scenes.source_code %}
+      <dt>Source Code</dt>
+      <dd>
+        <ul>
+        {% for source_code in showcase.behind_the_scenes.source_code %}
+          <li>
+            <a href="{{source_code.link}}">{{source_code.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+
+    {% if showcase.behind_the_scenes.oss %}
+      <dt>Used Open Source</dt>
+      <dd>
+        <ul>
+        {% for oss in showcase.behind_the_scenes.oss %}
+          <li>
+            <a href="{{oss.link}}">{{oss.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </dd> 
+    {% endif %}
+  </dl>
+</div>
+{% endif %}
+
+{% if showcase.sections %}
+  {% for section in showcase.sections %}
+  <div>
+    <h2>{{section.title}}</h2>
+    {{ section.content || markdownify }}
+  </div>
+  {% endfor %}
+{% endif %}
+
+
+{% if showcase.interview %}
+  <div class="spotlight-interview-wrapper">
+    <div class="container clear">
+
+      <h2 class="quote__content-icononly">Q&amp;A with {{ showcase.developer }}</h2>
+
+      <dl>
+        {% for question in showcase.interview %}
+        {% capture answer %}{{ question.answer }}{% endcapture %}
+        <dt>{{ question.question }}</dt>
+        <dd>{{ answer | markdownify }}</dd>
+        {% endfor %}
+      </dl>
+
+    </div>
+  </div>
+{% endif %}
+
+{% include showcase/more_spotlights.liquid on-spotlight=true %}
 
 {% include shared/license.liquid %}
 
