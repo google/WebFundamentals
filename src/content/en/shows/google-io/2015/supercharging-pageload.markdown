@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Supercharging page load"
 youtubeID: d5_6yHixpsQ
 
-written_on: 2015-05-28
+published_on: 2015-05-28
 updated_on: 2015-05-28
 
 ---

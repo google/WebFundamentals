@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Predefined snippets"
-written_on: 2015-05-01
+published_on: 2015-05-01
 updated_on: 2015-05-20
 authors:
   - umarhansa

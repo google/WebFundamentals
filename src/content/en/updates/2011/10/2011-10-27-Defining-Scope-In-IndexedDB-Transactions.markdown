@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Defining Scope In IndexedDB Transactions"
-written_on: 2011-10-27
+published_on: 2011-10-27
 updated_on: 2011-10-27
 authors:
   - greenido

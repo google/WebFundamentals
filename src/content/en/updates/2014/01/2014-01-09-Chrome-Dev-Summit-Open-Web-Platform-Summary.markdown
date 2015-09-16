@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Chrome Dev Summit: Open Web Platform Summary"
 description: "The capabilities of the Open Web Platform is accelerating at a pace that has never been seen before.  At the Chrome Dev Summit we talked about how we are working on improving Blink, Security and Media for the platform"
-written_on: 2014-01-09
+published_on: 2014-01-09
 updated_on: 2014-01-09
 authors:
   - samdutton

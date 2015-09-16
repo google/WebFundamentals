@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Principles of Site Design"
 description: "TODO"
-written_on: 2014-08-08
+published_on: 2014-08-08
 updated_on: 2014-09-17
 order: 1
 translation_priority: 0

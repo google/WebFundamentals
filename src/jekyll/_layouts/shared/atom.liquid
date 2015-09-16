@@ -11,7 +11,7 @@
   {% for post in page.feed_pages %}
   <entry>{% assign fqPostUrl = site.WFAbsoluteUrl | append: site.WFBaseUrl | append: post.url | canonicalize %}
     <title>{{ post.title | xml_escape }}</title>
-    <published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+    <published>{{ post.article.published_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
     {% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
     <link rel="alternate" type="text/html" href="{{ fqPostUrl }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed" />
     <id>{{ fqPostUrl }}</id>

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "[datalist] for range/color inputs offer some default choices  "
-written_on: 2012-08-15
+published_on: 2012-08-15
 updated_on: 2012-08-15
 authors:
   - agektmr

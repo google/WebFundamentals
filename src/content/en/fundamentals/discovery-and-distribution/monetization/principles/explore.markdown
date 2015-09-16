@@ -1,10 +1,10 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Let users explore before they commit"
 description: "Allow visitors to use your site without registering for an account."
 authors:
   - petelepage
-written_on: 2014-08-07
+published_on: 2014-08-07
 updated_on: 2014-09-19
 order: 1
 comments: 

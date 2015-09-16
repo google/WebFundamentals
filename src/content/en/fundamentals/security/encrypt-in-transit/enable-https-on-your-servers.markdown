@@ -1,11 +1,11 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Enable HTTPS On Your Servers"
 description: "You are ready for the all important step of enabling HTTPS on your servers."
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 3
 translation_priority: 0

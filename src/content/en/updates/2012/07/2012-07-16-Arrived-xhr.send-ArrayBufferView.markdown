@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Arrived! xhr.send(ArrayBufferViews)"
-written_on: 2012-07-16
+published_on: 2012-07-16
 updated_on: 2012-07-16
 authors:
   - ericbidelman

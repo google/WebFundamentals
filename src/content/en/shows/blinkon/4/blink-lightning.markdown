@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink Lightning talks"
 youtubeID: uMjSEW_TE18
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Multiple Attendees at the BlinkOn 4 conference gives short talks on topics they are thinking about, interested in or care about. The talks include;

@@ -2,7 +2,7 @@
 layout: updates/post
 title: "dialog element shipped in Chrome 37 Beta"
 description: "Chrome Beta has landed its native support for &lt;dialog&gt; element"
-written_on: 2014-07-24
+published_on: 2014-07-24
 updated_on: 2014-07-24
 authors:
   - agektmr

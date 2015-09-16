@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Workers ♥ ArrayBuffer"
-written_on: 2011-09-01
+published_on: 2011-09-01
 updated_on: 2011-09-01
 authors:
   - ericbidelman

@@ -1,7 +1,7 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Optimizing Content Efficiency"
-written_on: 2014-04-01
+published_on: 2014-04-01
 updated_on: 2014-04-29
 order: 0
 translation_priority: 0

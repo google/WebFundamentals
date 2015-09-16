@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Keyboard & UI Shortcuts Reference"
 description: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. "
-written_on: 2015-04-30
+published_on: 2015-04-30
 updated_on: 2015-04-30
 order: 5
 authors:

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Saving generated files on the client-side"
-written_on: 2011-08-08
+published_on: 2011-08-08
 updated_on: 2011-08-08
 authors:
   - paulkinlan

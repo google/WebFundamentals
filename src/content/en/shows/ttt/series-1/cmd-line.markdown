@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Totally Tooling Tips: Command Line Tips"
 description: "In this episode of #TotallyToolingTips Matt and Addy enjoy the 'say' command a little too much and look at their command line setups."
 youtubeID: hEMc2aCL6r8
-written_on: 2015-07-01
+published_on: 2015-07-01
 updated_on: 2015-07-01
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "7 minute videos: Javascript Console Protips & newish DOM APIs"
-written_on: 2011-09-28
+published_on: 2011-09-28
 updated_on: 2011-09-28
 authors:
   - paulirish

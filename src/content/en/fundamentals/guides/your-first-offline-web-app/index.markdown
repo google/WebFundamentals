@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Your first offline web app"
 description: "Overview"
-written_on: 2014-07-17
+published_on: 2014-07-17
 updated_on: 2014-10-21
 translation_priority: 1
 ---

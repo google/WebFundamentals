@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink Service Worker"
 youtubeID: HjECqtW9_Co
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Matt Falkenhagen & Tsuyoshi Horo & Kunihiko Sakamoto - The service worker team gives an update on service workers and what is coming next.

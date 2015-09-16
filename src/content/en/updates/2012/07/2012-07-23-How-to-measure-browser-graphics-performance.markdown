@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "How to measure browser graphics performance"
-written_on: 2012-07-23
+published_on: 2012-07-23
 updated_on: 2012-07-23
 authors:
   - ilmariheikkinen

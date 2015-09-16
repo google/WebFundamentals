@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Evaluate Expressions"
 description: "Explore the state of any item on your page from the DevTools console."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-05-12
 order: 1
 authors:

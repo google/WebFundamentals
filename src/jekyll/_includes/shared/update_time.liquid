@@ -2,8 +2,8 @@
 {% if page.article.updated_on %}
   <p>{{"updated_on" | localize_string}} {{ page.article.updated_on }}</p>
 {% else %}
-  {% if page.article.written_on %}
-  <p>{{"written_on" | localize_string}} {{ page.article.written_on }}</p>
+  {% if page.article.published_on %}
+  <p>{{"published_on" | localize_string}} {{ page.article.published_on }}</p>
   {% endif %}
 {% endif %}
 {% endif %}

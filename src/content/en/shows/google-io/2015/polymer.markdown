@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Polymer and modern web APIs: In production at Google scale"
 youtubeID: fD2As5RmM8Q
 
-written_on: 2015-05-28
+published_on: 2015-05-28
 updated_on: 2015-05-28
 
 ---

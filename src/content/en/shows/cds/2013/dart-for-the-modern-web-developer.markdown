@@ -4,7 +4,7 @@ title: "Dart for the Modern Web Developer"
 description: "Watch Dart co-founder Kasper Lund explain how the dart2js compiler performs local and global optimizations to emit fast and semantically correct JavaScript code. With tree shaking, type inference, and minification, Dart can help you optimize your web app."
 youtubeID: FqsU3TbUw_s
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

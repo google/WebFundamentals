@@ -4,7 +4,7 @@ title: "2. Pointer Events"
 description: "Pointer Events (no, not the CSS ones, the other ones!) are set to unite input across devices. Jake has a little bit of news for Paul about them."
 youtubeID: ngBy0H_q-GY
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

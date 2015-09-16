@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "See matching selectors"
-written_on: 2015-04-27
+published_on: 2015-04-27
 updated_on: 2015-05-20
 authors:
   - umarhansa

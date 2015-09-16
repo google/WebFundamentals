@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Animating Between Views"
 description: "Learn how to animate between two views in your apps."
-written_on: 2014-08-08
+published_on: 2014-08-08
 updated_on: 2014-10-22
 order: 5
 translation_priority: 0

@@ -1,12 +1,11 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up CSS & JS Preprocessors"
-rss: false
 description: "Learn how to set up CSS & JS preprocessors to help you code more efficiently."
 authors:
   - pbakaus
   - megginkearney
-written_on: 2015-08-04
+published_on: 2015-08-04
 updated_on: 2015-08-04
 order: 4
 key-takeaways:

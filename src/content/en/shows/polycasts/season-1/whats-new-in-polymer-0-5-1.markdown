@@ -4,7 +4,7 @@ title: "What's new in Polymer 0.5.1"
 description: "In today's video we take a look at the current stable release of Polymer, v0.5.1, and cover some of the changes that this update brings with it."
 youtubeID: Iq8TdPJSQMI
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

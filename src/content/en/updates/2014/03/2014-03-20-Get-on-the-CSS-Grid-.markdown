@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Get on the CSS Grid!"
 description: "CSS Grid Layout is a new CSS3 module that provides new layout primitives that are ideal for web applications."
-written_on: 2014-03-20
+published_on: 2014-03-20
 updated_on: 2014-03-20
 authors:
   - alexdanilo

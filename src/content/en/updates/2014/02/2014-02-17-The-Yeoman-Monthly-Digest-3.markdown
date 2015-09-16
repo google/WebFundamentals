@@ -2,7 +2,7 @@
 layout: updates/post
 title: "The Yeoman Monthly Digest #3"
 description: "A monthly digest of high-quality Yeoman articles, generators and project news."
-written_on: 2014-02-17
+published_on: 2014-02-17
 updated_on: 2014-02-17
 authors:
   - addyosmani

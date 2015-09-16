@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Let’s Build Some Apps with Polymer!"
 youtubeID: kV0hgdMpH28
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

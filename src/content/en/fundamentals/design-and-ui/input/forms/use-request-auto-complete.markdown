@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Simplify checkout with requestAutocomplete API"
 description: "While <code>requestAutocomplete</code> was designed to help users fill out any form, today its most common use is in eCommerce where shopping cart abandonment on the mobile web <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>."
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-10-21
 order: 5
 authors:

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Taking advantage of GPU acceleration in the 2D canvas"
-written_on: 2012-07-05
+published_on: 2012-07-05
 updated_on: 2012-07-05
 authors:
   - ilmariheikkinen

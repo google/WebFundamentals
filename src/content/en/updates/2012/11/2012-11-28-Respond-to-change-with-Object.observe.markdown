@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Respond to change with Object.observe"
-written_on: 2012-11-28
+published_on: 2012-11-28
 updated_on: 2012-11-28
 authors:
   - alexdanilo

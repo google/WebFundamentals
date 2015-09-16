@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Scroll elements into the viewport"
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-20
 authors:
   - umarhansa

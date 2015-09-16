@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Transferable Objects: Lightning Fast!"
-written_on: 2011-12-10
+published_on: 2011-12-10
 updated_on: 2011-12-10
 authors:
   - ericbidelman

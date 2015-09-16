@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Performance Panel"
 youtubeID: ju6oOsFOc3k
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

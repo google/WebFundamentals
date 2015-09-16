@@ -1,10 +1,10 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Let users purchase as a guest"
 description: "Offer the option to check out as a guest, and encourage registration with tangible benefits."
 authors:
   - petelepage
-written_on: 2014-08-07
+published_on: 2014-08-07
 updated_on: 2014-09-19
 order: 2
 comments: 

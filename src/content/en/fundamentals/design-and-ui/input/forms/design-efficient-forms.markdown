@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Design efficient forms"
 description: "Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms."
-written_on: 2014-08-11
+published_on: 2014-08-11
 updated_on: 2014-10-21
 order: 1
 authors:

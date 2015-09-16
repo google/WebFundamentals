@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Announcing New Game, the conference for HTML5 game developers"
-written_on: 2011-07-16
+published_on: 2011-07-16
 updated_on: 2011-07-16
 authors:
   - sethladd

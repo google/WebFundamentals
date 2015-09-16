@@ -1,10 +1,10 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Images in CSS"
 description: "The CSS `background` property is a powerful tool for adding complex images to elements, making it easy to add multiple images, cause them to repeat, and more."
 authors:
   - petelepage
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-04-30
 order: 2
 translation_priority: 0

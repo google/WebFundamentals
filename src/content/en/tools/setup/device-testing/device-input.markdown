@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Test Device Input"
 description: "Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-05-18
 order: 3
 authors:

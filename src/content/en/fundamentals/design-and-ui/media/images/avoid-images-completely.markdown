@@ -1,11 +1,11 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Avoid images completely"
 description: "Sometimes, the best image isn't actually an image at all. Whenever possible, use the native capabilities of the browser to provide the same or similar functionality."
 authors:
   - petelepage
 translation_priority: 0
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-06-10
 order: 5
 key-takeaways:

@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "How to Record Heap Snapshots"
 description: "Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks."
-written_on: 2015-06-09
+published_on: 2015-06-09
 updated_on: 2015-08-04
 order: 3
 authors:

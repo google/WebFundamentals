@@ -1,12 +1,11 @@
 ---
-rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Browser Extensions"
 description: "Out of the box, every desktop browser comes with a set of developer tools, you can extend and add to these with extensions or plugins for your browser."
 authors:
   - megginkearney
   - mattgaunt
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 5
 key-takeaways:

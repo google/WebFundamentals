@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "New Game Conference for HTML5 Game Developers Coupon"
-written_on: 2011-09-29
+published_on: 2011-09-29
 updated_on: 2011-09-29
 authors:
   - sethladd

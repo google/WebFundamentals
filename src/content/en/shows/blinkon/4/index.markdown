@@ -2,7 +2,7 @@
 layout: shows/series-index
 title: "BlinkOn 4"
 
-written_on: 2015-06-06
+published_on: 2015-06-06
 updated_on: 2015-06-06
 ---
 

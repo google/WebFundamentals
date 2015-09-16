@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "WebGL and Web Audio API demo roundup"
-written_on: 2012-02-20
+published_on: 2012-02-20
 updated_on: 2012-02-20
 authors:
   - ilmariheikkinen

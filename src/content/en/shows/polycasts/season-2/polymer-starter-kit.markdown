@@ -4,7 +4,7 @@ title: "Polymer Starter Kit"
 description: "Polymer Starter Kit is full of amazing tricks! Let’s do a quick introduction and see how to update the theme with custom properties."
 youtubeID: xz-yixRxZN8
 
-written_on: 2015-06-15
+published_on: 2015-06-15
 updated_on: 2015-06-15
 
 ---

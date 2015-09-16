@@ -76,5 +76,7 @@
   "where_to_improve": "Where to improve",
   "@where_to_improve": {"description": "Heading - places where an experience can be improved."},
   "written_on": "Written on",
-  "@written_on": {"description": "Text - When the article was written"}
+  "@written_on": {"description": "Text - Date the content was first published (deprecated)"},
+  "published_on": "Published on",
+  "@published_on": {"description": "Text - Date the content was first published"}
 }

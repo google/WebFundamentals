@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "The RAIL Performance Model"
 description: "RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways: Response, Animation, Idle, Load."
-written_on: 2015-06-08
+published_on: 2015-06-08
 updated_on: 2015-06-08
 order: 1
 authors:

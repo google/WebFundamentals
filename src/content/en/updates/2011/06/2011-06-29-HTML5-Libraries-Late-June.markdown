@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "HTML5 Libraries - Late June"
-written_on: 2011-06-29
+published_on: 2011-06-29
 updated_on: 2011-06-29
 authors:
   - paulirish

@@ -1,12 +1,12 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Your Editor"
 description: "Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins."
 authors:
   - megginkearney
   - mattgaunt
-written_on: 2014-05-29
+published_on: 2014-05-29
 updated_on: 2015-04-14
 order: 1
 key-takeaways:
