@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Optimizations search"
 description: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
 authors:
@@ -10,5 +10,3 @@ order: 1
 ---
 
 TODO
-
-{% include fundamentals/section_toc.liquid %}

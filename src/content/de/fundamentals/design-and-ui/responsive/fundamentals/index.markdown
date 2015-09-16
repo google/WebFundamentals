@@ -29,5 +29,3 @@ Telefone, Phablets, Tablets, Desktopcomputer, Spielekonsolen, Fernseher und soga
 {% endlink_sample %}
 
 Responsives Webdesign, ursprünglich von [Ethan Marcotte in A List Apart](http://alistapart.com/article/responsive-web-design/) definiert, reagiert auf die Bedürfnisse der Nutzer und der Geräte, die sie verwenden. Das Layout verändert sich auf Grundlage der Größe und der Funktionen des Geräts. Wenn Nutzer mit einem Telefon Inhalte zum Beispiel in einer einzelnen Spaltenansicht sehen, könnte der gleiche Inhalt auf einem Tablet in zwei Spalten erscheinen.
-
-{% include fundamentals/section_toc.liquid %}

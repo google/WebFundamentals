@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "User Location"
 description: "Most browsers and devices have access to the user's geo-location. Learn how to work with the user's location in your site and apps."
 published_on: 2014-01-01
@@ -18,5 +18,3 @@ The Geolocation API also lets you watch where the user is and keep tabs on them 
 they move around, always with the user's consent (and only whilst the page is open), this opens up a lot of interesting usecases - such as integrating with backend systems to prepare an order for collection if the user is close by.
 
 There are a lot of things that you need to be aware of when using using the Geolocation API and this guide will walk you through the common use-cases and solutions.
-
-{% include fundamentals/section_toc.liquid %}

@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Images"
 description: "A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
 authors:
@@ -40,6 +40,3 @@ changing the image is usually referred to as art direction.  See
 examples.
 
 {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
-
-
-{% include fundamentals/section_toc.liquid %}

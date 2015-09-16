@@ -1,0 +1,18 @@
+.wf-tools-guide {
+
+}
+
+.wf-tools-guide__title {
+
+}
+
+.wf-tools-guide__description {
+  @include typo-body-2($colorContrast: true);
+}
+
+.wf-tools-guide__section-link {
+  a {
+    text-decoration: none;
+    color: $text-color-primary;
+  }
+}

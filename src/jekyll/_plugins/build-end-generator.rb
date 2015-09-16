@@ -66,15 +66,19 @@ module Jekyll
         organisePageTree(value)
       }
 
+      # This value is the default to make pages with no order to pushed to
+      # the bottom allowing pages with an order to be at the top
+      heavy_weight = 9999
+
       tree['subdirectories'] = tree['subdirectories'].sort do |a, b|
         a_order = 0
         b_order = 0
 
         if !a['index'].nil?
-          a_order = a['index'].data['order'] || a['index'].data['date'] || 0
+          a_order = a['index'].data['order'] || a['index'].data['date'] || heavy_weight
         end
         if !b['index'].nil?
-          b_order = b['index'].data['order'] || b['index'].data['date'] || 0
+          b_order = b['index'].data['order'] || b['index'].data['date'] || heavy_weight
         end
 
         if a_order.is_a?(Integer) & b_order.is_a?(Integer)

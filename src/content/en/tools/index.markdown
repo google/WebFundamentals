@@ -1,103 +1,57 @@
 ---
-layout: shared/narrow
+layout: shared/wide
 description: "Web Developer Tools provides a set of instructions and tools to help you build your website."
-title: Google Web Tools
+title: Tools
 translation_priority: 0
 ---
 
-<div class="todo-banner">
+<div class="wf-subheading">
+  <div class="page-content">
+    <h2>Get productive</h2>
+    <p>Discover our tools and kickstart your development.</p>
+  </div>
+</div>
+
+<div class="page-content">
+  <h2>Guides</h2>
+  <p>When you first start developing for the web, you can get going with a basic text editor and a browser to view everything in.</p>
+  <p>As your experience grows, so will the range of tools you'll use on a regular basis. In these guides, we'll walk through the tools
+  that will make you more productive, make development easier and help fix bugs and problems.</p>
+
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <h2>Get productive</h2>
+  {% for subdirectory in page.context.subdirectories %}
+    {% if subdirectory.subdirectories.size > 0 %}
+    <div class="mdl-cell mdl-cell--6-col wf-tools-guide">
+      <h5 class="wf-tools-guide__title"><a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a></h5>
+      <p class="wf-tools-guide__description">{{subdirectory.index.description}}</p>
+      {% if subdirectory.subdirectories %}
+          {% for sub in subdirectory.subdirectories %}
+            <p class="wf-tools-guide__section-link"><a href="{{sub.index.relative_url}}">{{sub.index.title}}</a></p>
+          {% endfor %}
+      {% endif %}
     </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <p>Discover our tools and kickstart your development.</p>
-      <p><a class="mdl-button mdl-js-button mdl-button--raised" href="/web/updates/tools/">What's New</a></p>
-    </div>
-  </div>
-</div>
-
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--1-col">
-  </div>
-  <div class="mdl-cell mdl-cell--2-col">
-    <a href="/web/tools/chrome-devtools">
-      <img src="imgs/chrome-devtools.jpg" alt="DevTools">
-    </a>
-    <div>
-      <a href="/web/tools/chrome-devtools"><h5>Chrome DevTools</h5></a>
-      <p>Our web authoring and debugging tools built into Google Chrome.</p>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--2-col">
-    <a href="/web/tools/starter-kit/">
-      <img src="/web/tools/starter-kit/images/thumb.jpg" alt="Web Starter Kit">
-    </a>
-    <div>
-      <a href="/web/tools/starter-kit/"><h5>Web Starter Kit</h5></a>
-      <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--2-col">
-    <a href="/web/tools/polymer-starter-kit/">
-      <img src="/web/tools/polymer-starter-kit/thumb.jpg" alt="Polymer Starter Kit">
-    </a>
-    <div>
-      <a href="/web/tools/polymer-starter-kit/"><h5>Polymer Starter Kit</h5></a>
-      <p>An opinionated starting point for building Polymer 1.0 web apps that
-      work great across different devices.</p>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--2-col">
-    <a href="http://www.getmdl.io/">
-      <img src="imgs/mdl-thumb.png" alt="Material Design Lite">
-    </a>
-    <div>
-      <a href="http://www.getmdl.io/"><h5>Material Design Lite</h5></a>
-      <p>
-        A light-weight implementation of Material Design, targeted at legacy
-        browsers and static content sites.
-      </p>            
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--2-col">
-    <a href="https://www.polymer-project.org">
-      <img src="/web/tools/polymer-starter-kit/thumb_polymer.jpg" alt="Polymer">
-    </a>
-    <div>
-      <a href="https://www.polymer-project.org"><h5>Polymer</h5></a>
-      <p>
-        Polymer makes it easier than ever to make fast, beautiful, and interoperable web components.
-      </p>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--1-col">
-</div>
-
-<h2>Action-oriented guides</h2>
-<ul>
-{% for subdirectory in page.context.subdirectories %}
-  <li>
-    <h5><a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a></h5>
-    {% if subdirectory.subdirectories %}
-      <ul>
-        {% for sub in subdirectory.subdirectories %}
-          <li>
-            <h6><a href="{{sub.index.relative_url}}">{{sub.index.title}}</a></h6>
-            <p>{{sub.index.description}}</p>
-            </li>
-        {% endfor %}
-      </ul>
     {% endif %}
-  </li>
-{% endfor %}
-</ul>
+  {% endfor %}
+  </div>
+</div>
+
+<div class="page-content mdl-grid">
+  <h2>Projects at Google</h2>
+  <p>There are a number of tools and projects being worked on at Google that you may find useful, find everything you need to know with these links.</p>
+
+  {% include shows/card.liquid title="" text="<strong>Chrome Devtools:</strong> Our web authoring and debugging tools built into Google Chrome." linkHref="/web/tools/chrome-devtools" linkText="Learn More" imgUrl="imgs/chrome-devtools.jpg" %}
+
+  {% include shows/card.liquid title="" text="<strong>Web Starter Kit:</strong> Let us do the bootstrapping, and you focus on what you'd like to build." linkHref="/web/tools/starter-kit/" linkText="Learn More" imgUrl="/web/tools/starter-kit/images/thumb.jpg" %}
+
+  {% include shows/card.liquid title="" text="<strong>Polymer Starter Kit:</strong> An opinionated starting point for building Polymer 1.0 web apps that work great across different devices." linkHref="/web/tools/polymer-starter-kit/" linkText="Learn More" imgUrl="/web/tools/polymer-starter-kit/thumb.jpg" %}
+
+  {% include shows/card.liquid title="" text="<strong>Material Design Lite:</strong> A light-weight implementation of Material Design, targeted at legacy browsers and static content sites." linkHref="http://www.getmdl.io/" linkText="Learn More" imgUrl="imgs/mdl-thumb.png" %}
+
+  {% include shows/card.liquid title="" text="<strong>Polymer:</strong> Polymer makes it easier than ever to make fast, beautiful, and interoperable web components." linkHref="https://www.polymer-project.org" linkText="Learn More" imgUrl="/web/tools/polymer-starter-kit/thumb_polymer.jpg" %}
+</div>
 
 {% if page.articles.updates %}
   <!-- TODO -->
   <h2><a href="/web/updates/tools/tip">Tips &amp; Tricks</a></h2>
   {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
 {% endif %}
-
-
-

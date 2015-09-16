@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Add Touch to Your Site"
 description: "Touchscreens are available on more and more devices,  from phones up to desktop screens. Your app should respond to their touch  in intuitive and beautiful ways."
 published_on: 2014-01-01
@@ -19,5 +19,3 @@ as well as how to add custom gestures to your site.
 This video gives you a brief overview of both these guides.
 
 {% ytvideo Rwc4fHUnGuU %}
-
-{% include fundamentals/section_toc.liquid %}

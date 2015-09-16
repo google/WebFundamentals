@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Your First Multi-device Site"
 description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
 published_on: 2014-01-01
@@ -11,8 +11,8 @@ authors:
 
 <p class="intro">
   Building multi-device experiences is not as hard as it sounds.
-  By following this guide, we will build an example product landing page for 
-  our <a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web 
+  By following this guide, we will build an example product landing page for
+  our <a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web
   Development course</a> that works well across all different device types.
 </p>
 
@@ -28,5 +28,3 @@ simple steps:
 
 1.  Defining the information architecture (commonly known as IA) and structure of the page,
 2.  Adding design elements to make it responsive and look good across all devices.
-
-{% include fundamentals/section_toc.liquid %}

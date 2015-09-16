@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/narrow
+layout: shared/section-index
 title: "Manage Your Local Data Resources"
 description: "Inspect and manage your application’s local data resources using the Chrome Developer Tools Resources panel."
 published_on: 2015-04-14
@@ -19,5 +19,3 @@ panel: resources
 The Resources panel lets you access data sources like IndexedDB and Web SQL databases, cookies, the Application Cache, and local and session storage, as well as page resources like images, fonts, style sheets, and the actual pages, as shown here:
 
 ![Resources panel](imgs/resources_panel.png)
-
-{% include fundamentals/section_toc.liquid %}

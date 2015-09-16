@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Rendering Performance"
 description: "Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!"
 published_on: 2015-03-20
@@ -24,9 +24,9 @@ udacity:
 
 <p class="intro">
   Users of today’s web <a href="http://paul.kinlan.me/what-news-readers-want/">
-  expect that the pages they visit will be interactive and smooth</a> and 
-  that’s where you need to increasingly focus your time and effort. Pages 
-  should not only load quickly, but also run well; scrolling should be 
+  expect that the pages they visit will be interactive and smooth</a> and
+  that’s where you need to increasingly focus your time and effort. Pages
+  should not only load quickly, but also run well; scrolling should be
   stick-to-finger fast, and animations and interactions should be silky smooth.
 </p>
 
@@ -82,5 +82,3 @@ This final version is the cheapest and most desirable for high pressure points i
 Performance is the art of avoiding work, and making any work you do as efficient as possible. In many cases it's about working with the browser, not against it. It’s worth bearing in mind that the work listed above in the pipeline differ in terms of computational cost; some tasks are more expensive than others!
 
 Let’s take a dive into the different parts of the pipeline. We’ll take a look at the common issues, as well how to diagnose and fix them.
-
-{% include fundamentals/section_toc.liquid %}

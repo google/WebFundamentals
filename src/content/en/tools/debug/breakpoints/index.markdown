@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/narrow
+layout: shared/section-index
 title: "Debug with Breakpoints"
 description: "Chrome DevTools includes powerful breakpoint features that help you find and fix logic errors in your JavaScript code."
 published_on: 2015-04-14
@@ -28,5 +28,3 @@ so you can determine its progress or examine its variable values.
 Chrome DevTools breakpoints let you pause your code
 without having to use brute-force statements
 such as `alert("ok so far")` or `alert("x = " + x)`.
-
-{% include fundamentals/section_toc.liquid %}

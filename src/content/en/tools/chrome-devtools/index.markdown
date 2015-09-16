@@ -166,7 +166,7 @@ panels:
               <h4>Why are some docs on another site?</h4>
               <p>While you'll get plenty of information of how to use DevTools here, our old home will stay around for a bit and provide you with info on how to extend DevTools.</p>
             </li>
-            
+
         </ul>
 
       </div>
@@ -205,7 +205,7 @@ panels:
 
     </div>
 
-	</div>
+  </div>
 
 {% if page.articles.updates %}
 
@@ -217,5 +217,5 @@ panels:
   </div>
 
 {% endif %}
-	
+
 </div>
