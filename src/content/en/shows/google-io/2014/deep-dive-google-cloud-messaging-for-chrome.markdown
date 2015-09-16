@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Deep dive: Google Cloud Messaging for Chrome"
 description: "A deep dive into cross-platform messaging, with a focus on Chrome's API and implementations.  [ed: similar talk from android]"
 youtubeID: g_zkOOWsmco

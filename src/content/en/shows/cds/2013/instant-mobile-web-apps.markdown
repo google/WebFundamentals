@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Instant Mobile Web Apps"
 description: "Bryan talked through how the team at Google went through the process of identifying and prioritizing the assets for the PageSpeed Insights website, taking it from a 20 second load time to just over 1 second!"
 youtubeID: VKTWdaupft0

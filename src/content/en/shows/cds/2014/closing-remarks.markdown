@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Closing Remarks"
 youtubeID: BVWAk661NL8
 

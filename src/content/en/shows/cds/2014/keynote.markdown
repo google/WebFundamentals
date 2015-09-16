@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Keynote"
 youtubeID: lboyR-A1woU
 

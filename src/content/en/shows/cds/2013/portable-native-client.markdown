@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Portable Native Client"
 description: "Portable Native Client is a technology that enables portable, secure execution of native applications in Chrome. This extension of the Native Client project brings the performance and low-level control of native code to modern web browsers without sacrificing the security and portability of the web."
 youtubeID: hfs5p1BKpxQ

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Keynote"
 description: "Chrome Dev Summit keynote by Linus Upson—VP of Engineering for Chrome."
 youtubeID: 20fGtfnxJuo

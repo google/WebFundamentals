@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Future of Apps Panel"
 youtubeID: rKzmcKh5Zkk
 

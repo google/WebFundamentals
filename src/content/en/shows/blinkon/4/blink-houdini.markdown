@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Blink Houdini"
 youtubeID: Ajts5feJ0YA
 
