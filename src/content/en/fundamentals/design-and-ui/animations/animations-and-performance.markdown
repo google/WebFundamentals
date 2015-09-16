@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Animations and Performance"
 description: "Animations must perform well, otherwise they will negatively impact the user experience."
 written_on: 2014-08-08

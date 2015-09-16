@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Redirect HTTP to HTTPS"
 description: "TODO"
 authors:

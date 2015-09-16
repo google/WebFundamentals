@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "How to Step Through the Code"
 description: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening."
 written_on: 2015-04-14

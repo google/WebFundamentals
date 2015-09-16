@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Image optimization"
 written_on: 2014-05-07
 updated_on: 2014-05-10

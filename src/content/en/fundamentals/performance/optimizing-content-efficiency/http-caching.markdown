@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "HTTP caching"
 written_on: 2014-01-01
 updated_on: 2014-01-05

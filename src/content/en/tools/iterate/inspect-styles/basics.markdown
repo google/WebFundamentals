@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Inspect and Tweak Your Pages: the Basics"
 description: "Inspect and live-edit the HTML & CSS of a web page using the Chrome DevTools Elements panel."
 written_on: 2015-04-14

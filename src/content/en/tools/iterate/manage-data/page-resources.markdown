@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Inspect Your Page Resources"
 description: "View all of your main document's resources including images, scripts, and fonts, and those of any loaded frames in the Chrome DevTools Resources panel."
 written_on: 2015-04-14

@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Let users purchase as a guest"
 description: "Offer the option to check out as a guest, and encourage registration with tangible benefits."
 authors:

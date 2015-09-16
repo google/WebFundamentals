@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Getting the user to consent to location sharing"
 description: ""
 written_on: 2014-01-01

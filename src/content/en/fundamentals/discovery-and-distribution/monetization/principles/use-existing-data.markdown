@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Use existing information to maximize convenience"
 description: "Take advantage of information you already have, and/or use third-party payment services to make conversion as easy as possible."
 authors:

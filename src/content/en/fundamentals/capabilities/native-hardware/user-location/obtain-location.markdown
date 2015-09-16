@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Obtain the user's current location"
 description: "The Geolocation API lets you find out where the user is, always with the user's consent."
 written_on: 2014-06-06

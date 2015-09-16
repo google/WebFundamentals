@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Useful and Common Tags"
 description: "This is a list of tags that should be useful or are commonly used."
 order: 3

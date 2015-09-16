@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Use SVG for icons"
 description: "When adding icons to your page, use SVG icons where possible or in some cases, unicode characters."
 authors:

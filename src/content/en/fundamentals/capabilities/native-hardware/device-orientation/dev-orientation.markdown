@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Device orientation"
 description: "The device orientation event returns rotation data,  which includes how much the device is leaning front-to-back, side-to-side and if the phone or laptop has a compass, the direction the device is facing."
 written_on: 2014-06-17

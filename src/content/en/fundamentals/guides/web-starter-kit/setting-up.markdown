@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Web Starter Kit"
 description: "If you are new to Web Starter Kit, then this guide is for you. It steps through how to get up and running with Web Starter Kit as quickly as possible."
 notes:

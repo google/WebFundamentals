@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Your Workspace"
 rss: false
 description: "Set up your workspace to include a good editor, debugging, and build tools for the multi-device web."

@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Generating Keys and Certificate Signing Requests"
 description: "This section uses the openssl command-line program, which comes with most Linux, BSD, and Mac OS X systems, to generate private / public keys and a CSR."
 authors:

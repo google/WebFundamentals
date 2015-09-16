@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Command Line API Reference"
 description: "TODO"
 written_on: 2015-04-14
