@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Make Intra-Site URLs Relative"
 description: "Now that you are serving your site on both HTTP and HTTPS, it should work as smoothly as possible regardless of protocol."
 authors:

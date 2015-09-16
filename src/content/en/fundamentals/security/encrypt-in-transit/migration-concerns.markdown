@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Migration Concerns"
 description: "TODO"
 authors:

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Diagnose Forced Synchronous Layouts"
 description: "Learn how to use the Timeline tool to diagnose forced synchronous layouts in an animation."
 written_on: 2015-04-14

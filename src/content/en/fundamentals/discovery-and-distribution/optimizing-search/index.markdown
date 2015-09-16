@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Optimizations search"
 description: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
 authors:

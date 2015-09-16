@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Register a Service Worker on the site"
 description: "TODO"
 notes:

@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Provide real-time validation"
 description: "Real-time data validation doesn't just help to keep your data clean, but it also helps improve the user experience.  Modern browsers have several built-in tools to help provide real-time data validation and may prevent the user from submitting an invalid form.  Visual cues should be used to indicate whether a form has been completed properly."
 written_on: 2014-04-30

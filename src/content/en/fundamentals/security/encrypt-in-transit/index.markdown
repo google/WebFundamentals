@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Encrypting data in transit"
 description: "Security is an important part of the web to protect users and moving forward TLS support will be required to use new and exciting APIs in the future."
 authors:

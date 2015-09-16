@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Edit Styles"
 description: "CSS defines the presentation layer of your page. View and modify any CSS declaration that affects an element on the current page using the Chrome DevTools Styles pane."
 written_on: 2015-04-14

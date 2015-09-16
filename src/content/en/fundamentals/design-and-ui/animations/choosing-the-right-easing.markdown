@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Choosing the Right Easing"
 description: "Choose the appropriate easing for your project, whether that's easing in, out, or both. Maybe even go bouncy for extra shenanigans!"
 written_on: 2014-08-08

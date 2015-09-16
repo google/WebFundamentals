@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Let users explore before they commit"
 description: "Allow visitors to use your site without registering for an account."
 authors:

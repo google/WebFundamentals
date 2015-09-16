@@ -1,6 +1,5 @@
 ---
-rss: false
-layout: shared/plain
+layout: shared/narrow
 description: "Web Starter Kit is boilerplate and tooling for multi-device development"
 title: Web Starter Kit
 feedName: "TODO"

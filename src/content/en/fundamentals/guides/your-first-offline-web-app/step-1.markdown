@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Get the sample code"
 description: "TODO"
 notes:

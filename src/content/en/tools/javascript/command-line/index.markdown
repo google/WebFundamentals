@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Interact from Command Line"
 description: "The console is a full-fledged terminal you can use to interact with your page during development."
 written_on: 2015-04-14

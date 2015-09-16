@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Install the site assets"
 description: "TODO"
 notes:

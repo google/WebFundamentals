@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "TODO"
 title: "Optimizing the Critical Rendering Path"
 written_on: 2014-04-01

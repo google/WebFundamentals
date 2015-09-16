@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Run the sample app"
 description: "TODO"
 notes:

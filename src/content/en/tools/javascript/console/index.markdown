@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Using the Console"
 description: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."
 written_on: 2015-04-14

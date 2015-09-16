@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Optimize your ads"
 description: "Optimizing your site, and the ads that appear on it can improve the quality of ads served and increase your earning potential."
 written_on: 2014-08-12

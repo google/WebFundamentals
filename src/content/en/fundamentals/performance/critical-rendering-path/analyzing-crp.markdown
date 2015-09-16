@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Analyzing Critical Rendering Path Performance"
 description: "TODO"
 written_on: 2014-04-01
