@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Hard reload"
-written_on: 2015-05-05
+published_on: 2015-05-05
 updated_on: 2015-05-19
 authors:
   - pbakaus

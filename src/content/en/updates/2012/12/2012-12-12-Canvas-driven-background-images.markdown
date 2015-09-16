@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Canvas-driven background images"
 description: "Powering a css background using canvas or webgl"
-written_on: 2012-12-12
+published_on: 2012-12-12
 updated_on: 2012-12-12
 authors:
   - ericbidelman

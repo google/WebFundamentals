@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Stick your landings! position: sticky lands in WebKit"
-written_on: 2012-08-30
+published_on: 2012-08-30
 updated_on: 2012-08-30
 authors:
   - ericbidelman

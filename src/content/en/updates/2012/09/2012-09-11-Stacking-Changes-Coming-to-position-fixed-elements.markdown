@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Stacking Changes Coming to position:fixed elements"
-written_on: 2012-09-11
+published_on: 2012-09-11
 updated_on: 2012-09-11
 authors:
   - tomwiltzius

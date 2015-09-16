@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Writing a flippable book using CSS Regions and 3D transforms"
-written_on: 2012-07-04
+published_on: 2012-07-04
 updated_on: 2012-07-04
 authors:
   - ilmariheikkinen

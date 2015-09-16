@@ -4,7 +4,7 @@ title: "Content Switcheroo with Core-Pages"
 description: "Presto Change-O! Update the sections in your single page app using core-pages."
 youtubeID: 6x2A9UgLqEw
 
-written_on: 2015-03-06
+published_on: 2015-03-06
 updated_on: 2015-03-06
 
 ---

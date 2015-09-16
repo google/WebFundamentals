@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Your First Multi-device Site"
 description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
-written_on: 2014-01-01
+published_on: 2014-01-01
 updated_on: 2014-01-06
 translation_priority: 0
 authors:

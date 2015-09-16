@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Port forwarding"
-written_on: 2015-05-11
+published_on: 2015-05-11
 updated_on: 2015-05-19
 authors:
   - umarhansa

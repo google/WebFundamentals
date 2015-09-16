@@ -68,7 +68,7 @@ notes:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed.
-written_on: 2014-04-17
+published_on: 2014-04-17
 updated_on: 2014-04-23
 ---
 

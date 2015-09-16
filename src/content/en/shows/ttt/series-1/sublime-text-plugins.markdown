@@ -2,7 +2,7 @@
 layout: shows/single-video
 title: "Sublime Text Plugins"
 youtubeID: 2eu23_if6Lw
-written_on: 2015-05-20
+published_on: 2015-05-20
 updated_on: 2015-05-20
 ---
 

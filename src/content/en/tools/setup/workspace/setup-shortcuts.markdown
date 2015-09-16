@@ -5,7 +5,7 @@ description: "Set up shortcuts for the command line tasks you use over and over 
 authors:
   - megginkearney
   - mattgaunt
-written_on: 2014-09-25
+published_on: 2014-09-25
 updated_on: 2015-04-14
 order: 4
 key-takeaways:

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "insertAdjacentHTML Everywhere"
-written_on: 2011-08-28
+published_on: 2011-08-28
 updated_on: 2011-08-28
 authors:
   - paulkinlan

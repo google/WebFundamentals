@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "sourceMappingURL and sourceURL syntax changed"
-written_on: 2013-06-13
+published_on: 2013-06-13
 updated_on: 2013-06-13
 authors:
   - paulirish

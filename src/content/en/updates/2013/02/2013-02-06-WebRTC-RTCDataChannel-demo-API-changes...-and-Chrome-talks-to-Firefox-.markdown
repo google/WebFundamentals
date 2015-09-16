@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "WebRTC: RTCDataChannel demo, API changes... and Chrome talks to Firefox!"
-written_on: 2013-02-06
+published_on: 2013-02-06
 updated_on: 2013-02-06
 authors:
   - samdutton

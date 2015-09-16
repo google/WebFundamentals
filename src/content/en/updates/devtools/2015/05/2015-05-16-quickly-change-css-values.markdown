@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Quickly change CSS values"
-written_on: 2015-05-16
+published_on: 2015-05-16
 updated_on: 2015-05-20
 authors:
   - umarhansa

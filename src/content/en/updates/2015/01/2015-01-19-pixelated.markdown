@@ -2,7 +2,7 @@
 layout: updates/post
 title: "image-rendering: pixelated"
 description: "Pixelation of the nation. Now in Chrome 41"
-written_on: 2015-01-18
+published_on: 2015-01-18
 updated_on: 2015-01-18
 authors:
   - paulkinlan

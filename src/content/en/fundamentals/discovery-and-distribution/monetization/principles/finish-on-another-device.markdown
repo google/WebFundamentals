@@ -4,7 +4,7 @@ title: "Make it easy to finish on another device"
 description: "Offer an easy way to save or share information across devices"
 authors:
   - petelepage
-written_on: 2014-08-07
+published_on: 2014-08-07
 updated_on: 2014-09-19
 order: 3
 comments: 

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Perform a column selection by by dragging"
-written_on: 2015-05-19
+published_on: 2015-05-19
 updated_on: 2015-05-19
 authors:
   - umarhansa

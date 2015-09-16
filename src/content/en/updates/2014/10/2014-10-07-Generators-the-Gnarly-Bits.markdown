@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Generators: the Gnarly Bits"
 description: "An exploration of ES6 Generators."
-written_on: 2014-10-07
+published_on: 2014-10-07
 updated_on: 2014-10-07
 authors:
   - jeffposnick

@@ -4,7 +4,7 @@ title: "Episode 6"
 description: "Ember ships Glimmer into Canary, Senongo Akpem explores non-linear narratives, Web Pages break the 2mb limit, Firefox 38 is released, Chrome gets a developer channel on Android, and programmatic copy/paste is coming to Firefox."
 youtubeID: s12cZ7UAKFQ
 
-written_on: 2015-05-19
+published_on: 2015-05-19
 updated_on: 2015-06-17
 
 ---

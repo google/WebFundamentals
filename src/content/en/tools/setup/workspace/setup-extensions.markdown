@@ -5,7 +5,7 @@ description: "Out of the box, every desktop browser comes with a set of develope
 authors:
   - megginkearney
   - mattgaunt
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 5
 key-takeaways:

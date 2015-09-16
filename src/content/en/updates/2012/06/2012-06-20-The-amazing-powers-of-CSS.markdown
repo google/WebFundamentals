@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "The amazing powers of CSS"
-written_on: 2012-06-20
+published_on: 2012-06-20
 updated_on: 2012-06-20
 authors:
   - ilmariheikkinen

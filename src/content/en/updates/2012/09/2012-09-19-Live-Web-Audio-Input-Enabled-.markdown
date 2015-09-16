@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Live Web Audio Input Enabled!"
-written_on: 2012-09-19
+published_on: 2012-09-19
 updated_on: 2012-09-19
 authors:
   - chriswilson

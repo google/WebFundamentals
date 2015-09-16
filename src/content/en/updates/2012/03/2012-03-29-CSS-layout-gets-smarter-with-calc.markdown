@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "CSS layout gets smarter with calc()"
-written_on: 2012-03-29
+published_on: 2012-03-29
 updated_on: 2012-03-29
 authors:
   - alexdanilo

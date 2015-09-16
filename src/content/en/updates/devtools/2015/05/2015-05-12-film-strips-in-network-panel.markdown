@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Film strips in Network panel"
-written_on: 2015-05-12
+published_on: 2015-05-12
 updated_on: 2015-05-20
 authors:
   - umarhansa

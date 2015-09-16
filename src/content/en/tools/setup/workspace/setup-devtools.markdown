@@ -7,7 +7,7 @@ authors:
   - dgash
   - kaycebasques
   - megginkearney
-written_on: 2015-07-10
+published_on: 2015-07-10
 updated_on: 2015-07-30
 order: 1
 key-takeaways:

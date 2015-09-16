@@ -2,7 +2,7 @@
 rss: false
 layout: updates/post
 title: "Quickly edit/view resources from the Elements panel"
-written_on: 2015-06-18
+published_on: 2015-06-18
 updated_on: 2015-06-18
 authors:
   - umarhansa

@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Custom Easing"
 description: "Go offroad and create totally custom animations for your projects."
-written_on: 2014-08-08
+published_on: 2014-08-08
 updated_on: 2015-08-26
 order: 4
 translation_priority: 0

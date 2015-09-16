@@ -4,7 +4,7 @@ title: "Routing 101"
 description: "Routing in Polymer, revealed! Get on the path to single page app goodness with this nugget of wisdom."
 youtubeID: iDQqP5Yyczg
 
-written_on: 2015-03-06
+published_on: 2015-03-06
 updated_on: 2015-03-06
 
 ---

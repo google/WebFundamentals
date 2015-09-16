@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Set Up Remote Debugging"
 description: "Check your site's responsive layouts and performance on real devices."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-07-30
 order: 2
 panel: device mode

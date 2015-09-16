@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Create Amazing Forms"
 description: "Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs."
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-10-21
 order: 1
 authors:

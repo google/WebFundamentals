@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Set Up Your Workspace"
 rss: false
 description: "Set up your workspace to include a good editor, debugging, and build tools for the multi-device web."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 1
 panel: sources

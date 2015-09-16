@@ -4,7 +4,7 @@ title: "Images"
 description: "A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
 authors:
   - petelepage
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-04-30
 order: 1
 translation_priority: 0

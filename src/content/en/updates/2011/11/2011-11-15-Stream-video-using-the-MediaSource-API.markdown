@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "&quot;Stream&quot; video using the MediaSource API"
-written_on: 2011-11-15
+published_on: 2011-11-15
 updated_on: 2011-11-15
 authors:
   - ericbidelman

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Multiplayer Audio Fun"
-written_on: 2011-07-15
+published_on: 2011-07-15
 updated_on: 2011-07-15
 authors:
   - paulkinlan

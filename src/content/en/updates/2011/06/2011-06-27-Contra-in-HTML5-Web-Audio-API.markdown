@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Contra in HTML5 + Web Audio API"
-written_on: 2011-06-27
+published_on: 2011-06-27
 updated_on: 2011-06-27
 authors:
   - ericbidelman

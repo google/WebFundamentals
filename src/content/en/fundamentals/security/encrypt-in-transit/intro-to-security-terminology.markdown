@@ -5,7 +5,7 @@ description: "When migrating to HTTPS, one of the hurdles site operators face is
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 1
 translation_priority: 0

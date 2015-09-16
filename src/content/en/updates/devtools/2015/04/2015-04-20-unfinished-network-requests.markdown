@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Unfinished network requests"
-written_on: 2015-04-20
+published_on: 2015-04-20
 updated_on: 2015-05-20
 authors:
   - umarhansa

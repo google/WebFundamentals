@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Debugging the Filesystem API"
-written_on: 2011-08-18
+published_on: 2011-08-18
 updated_on: 2011-08-18
 authors:
   - ericbidelman

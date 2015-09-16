@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Choosing the Right Easing"
 description: "Choose the appropriate easing for your project, whether that's easing in, out, or both. Maybe even go bouncy for extra shenanigans!"
-written_on: 2014-08-08
+published_on: 2014-08-08
 updated_on: 2014-10-21
 order: 5
 translation_priority: 0

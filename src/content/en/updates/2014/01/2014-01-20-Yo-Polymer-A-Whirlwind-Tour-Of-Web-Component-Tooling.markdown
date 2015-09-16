@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Yo Polymer – A Whirlwind Tour Of Web Component Tooling"
 description: "A whirlwind tour of Web Components, Polymer and front-end tooling for them."
-written_on: 2014-01-20
+published_on: 2014-01-20
 updated_on: 2014-01-20
 authors:
   - addyosmani

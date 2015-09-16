@@ -5,7 +5,7 @@ description: "Chrome Dev Summit is a yearly event held in San Francisco where en
 emailSubscriptionLink: "https://feedburner.google.com/fb/a/mailverify?uri=ChromeDevSummit&amp;loc=en_US"
 
 key_img: cds_rect.png
-written_on: 2015-03-06
+published_on: 2015-03-06
 updated_on: 2015-03-06
 order: 6
 ---

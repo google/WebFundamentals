@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Automatically pause on any exception"
-written_on: 2015-05-17
+published_on: 2015-05-17
 updated_on: 2015-05-20
 authors:
   - umarhansa
