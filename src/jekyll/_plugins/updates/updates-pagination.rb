@@ -32,7 +32,7 @@ module Jekyll
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
 
       if paginationIndex == 0
-        self.data['title'] = 'Updates Home'
+        self.data['title'] = 'Updates'
       else
         self.data['title'] = 'Updates Page ' + (paginationIndex + 1).to_s
       end
