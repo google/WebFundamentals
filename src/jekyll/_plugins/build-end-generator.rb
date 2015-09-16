@@ -29,10 +29,6 @@ module Jekyll
       site.pages.each { |page|
         page.onBuildComplete()
 
-        if page.data['translations'].nil?
-          next
-        end
-
         page.data['translations'].each { |transationPage|
           page.data.each { |key, value|
             if transationPage.data[key].nil?

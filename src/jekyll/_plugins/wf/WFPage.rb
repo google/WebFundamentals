@@ -70,6 +70,7 @@ module Jekyll
       self.data['theme_color'] = '#03A9F4'
       self.data['feed_name'] = 'Web - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
+      self.data['translations'] = []
     end
 
     # This is called when the main generator has finished creating pages
