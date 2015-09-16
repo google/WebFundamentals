@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Exception and Error Handling"
 description: "Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-05-13
 order: 5
 authors:

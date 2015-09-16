@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Introducing Video Player Sample"
-written_on: 2012-01-07
+published_on: 2012-01-07
 updated_on: 2012-01-07
 authors:
   - petelepage

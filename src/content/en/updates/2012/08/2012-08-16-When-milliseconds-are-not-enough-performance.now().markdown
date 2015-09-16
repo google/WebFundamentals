@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "When milliseconds are not enough: performance.now"
-written_on: 2012-08-16
+published_on: 2012-08-16
 updated_on: 2012-08-16
 authors:
   - paulirish

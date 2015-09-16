@@ -4,7 +4,7 @@ title: "Multi-Device Accessibility"
 description: "Users will be accessing your sites and services from a multitude of devices with a wide range of different accessibility requirements.  By using the correct semantic elements and correct ARIA roles you help give the browser and assistive technology a much improved understanding of your page."
 youtubeID: E0ojKLzXoZ4
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

@@ -2,6 +2,6 @@
 layout: shows/series-index
 title: "New In Chrome: 2015"
 
-written_on: 2015-05-18
+published_on: 2015-05-18
 updated_on: 2015-05-18
 ---

@@ -4,7 +4,7 @@ title: "Episode 11"
 description: "JavaScript.com teaches beginners the basics of programming for the web, Progressive Apps may be the next evolution of the mobile web, find the dominant colors in any image with Vibrant.js, Paul Lewis builds a snappy guitar tuner with ES6, Polymer, Web Audio, and Service worker, and Ido Green shows you how to autocomplete checkout forms."
 youtubeID: ozzG1_EY8qg
 
-written_on: 2015-06-23
+published_on: 2015-06-23
 updated_on: 2015-06-23
 
 ---

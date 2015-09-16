@@ -5,7 +5,7 @@ title: "Remote Debugging Devices"
 description: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."
 authors:
   - megginkearney
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-22
 order: 1
 key-takeaways:

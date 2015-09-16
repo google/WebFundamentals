@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "WebGL demo roundup"
-written_on: 2011-11-08
+published_on: 2011-11-08
 updated_on: 2011-11-08
 authors:
   - ilmariheikkinen

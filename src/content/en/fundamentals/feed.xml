@@ -1,4 +1,4 @@
-{% assign pages = site.pages | deepsort: 'article', 'written_on' | reverse %}<?xml version="1.0" encoding="UTF-8"?>
+{% assign pages = site.pages | deepsort: 'article', 'published_on' | reverse %}<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>Web Fundamentals - Google Developers</title>
   <icon>https://developers.google.com/web/favicon.ico</icon>
@@ -9,7 +9,7 @@
 {% assign num = 0 %}{% for post in pages %}
 {% if num < 25 and post.article and post.published != false and post.rss != false %}{% if post.layout == "article" or post.layout == "section" %}
 	<entry>
-		<published>{{ post.article.written_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+		<published>{{ post.article.published_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
 		{% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
 		<title>{% assign category = post.ancestors | last %}{{ category.title | xml_escape }} – {{ post.title | xml_escape }}</title>
 		<content type="html">

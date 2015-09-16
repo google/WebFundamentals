@@ -9,7 +9,7 @@ udacity:
   instructor: samdutton
   preview:
     youtube: 1Pxj9955I2c
-written_on: 2015-03-12
+published_on: 2015-03-12
 updated_on: 2015-03-12
 ---
 

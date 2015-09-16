@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Push Notifications on the Open Web"
 description: "Push messaging and notifications are landing in Chrome 42."
-written_on: 2015-03-12
+published_on: 2015-03-12
 updated_on: 2015-03-12
 authors:
   - mattgaunt

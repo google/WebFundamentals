@@ -4,7 +4,7 @@ title: "Polymer 0.8: First Look"
 description: "Polymer 0.8 has landed and with it come some major changes and performance improvements!"
 youtubeID: cyf-17lWkYE
 
-written_on: 2015-04-16
+published_on: 2015-04-16
 updated_on: 2015-04-16
 
 ---

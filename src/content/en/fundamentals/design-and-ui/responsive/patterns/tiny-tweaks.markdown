@@ -4,7 +4,7 @@ title: "Tiny tweaks"
 description: "Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices"
 authors:
   - petelepage
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-10-21
 order: 4
 translation_priority: 1

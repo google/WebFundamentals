@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Polymer: State of the Union"
 youtubeID: 0LT6W5QVCJI
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

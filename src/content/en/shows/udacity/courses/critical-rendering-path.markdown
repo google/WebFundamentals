@@ -9,7 +9,7 @@ udacity:
   instructor: ilyagrigorik
   preview:
     youtube: v5us0j3QmW4
-written_on: 2014-10-10
+published_on: 2014-10-10
 updated_on: 2014-10-10
 ---
 

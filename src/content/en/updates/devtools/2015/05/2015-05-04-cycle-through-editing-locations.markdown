@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Cycle through editing locations"
-written_on: 2015-05-04
+published_on: 2015-05-04
 updated_on: 2015-05-20
 authors:
   - umarhansa

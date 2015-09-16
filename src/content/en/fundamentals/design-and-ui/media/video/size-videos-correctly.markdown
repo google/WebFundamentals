@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Size videos correctly"
 description: "When it comes to keeping your users happy, size matters."
-written_on: 2014-04-16
+published_on: 2014-04-16
 updated_on: 2014-09-19
 order: 3
 authors:

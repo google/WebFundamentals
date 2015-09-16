@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Screensharing with WebRTC"
-written_on: 2012-12-24
+published_on: 2012-12-24
 updated_on: 2012-12-24
 authors:
   - samdutton

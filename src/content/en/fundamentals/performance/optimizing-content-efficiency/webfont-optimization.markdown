@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Web Font optimization"
-written_on: 2014-09-20
+published_on: 2014-09-20
 updated_on: 2014-09-30
 order: 5
 translation_priority: 0

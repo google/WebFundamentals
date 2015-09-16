@@ -16,7 +16,7 @@ spot them.**
 
 ## Valid YAML Attributes
 
-### **layout**
+### layout
 
 The layout is used by Jekyll to determine the file to use as the layout for the
 current page.
@@ -67,11 +67,11 @@ is to get translated.
 
     translation_priority: 0
 
-### written_on
+### published_on
 
-Written on is the original date the document was written.
+The date that the content was originally published.
 
-    written_on: 2015-07-21
+    published_on: 2015-07-21
 
 ### updated_on
 
@@ -118,7 +118,10 @@ want be linked to or included in any of the feeds.
 
 Used in Updates **ONLY**.
 
-This is used to create a list of tags relevant to the article.
+This is used to create a list of tags relevant to the article. 
+
+Tags should be lower case, must not contain spaces and cannot include the
+reserved word *index*.
 
     tags:
       - audio
@@ -132,6 +135,8 @@ Permalink can be used anywhere on Web Fundamentals, but it's primarily used
 in updates to define the URL of a blog post.
 
     permalink: /updates/2015/06/mse-gapless-audio.html
+
+**AVOID** if at all possible.
 
 ### key-takeaways, notes, related-guides (optional)
 
@@ -152,6 +157,9 @@ order variables in the index pages of sections.
 
     order: 1
 
+### youtubeid
+
+Used for shows to indicate the YouTube video the show refers to.
 
 ### comments
 
@@ -171,6 +179,18 @@ instead.
 * `priority` use `translation_priority` instead
 * `remember` use `notes` instead
 * `related` use `related-guides` instead
+
+## Translated Pages
+
+Translated pages only require a small subset of the typical yaml frontmatter
+as they'll inherit the rest from the English source.
+
+* `title`
+* `description`
+* `updated_on`
+* `translators`
+* `key-takeaways`
+* `notes`
 
 ## Deprecated YAML Attributes
 

@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Accessibility matters"
 description: "Accessibility isn't a feature."
-written_on: 2014-04-16
+published_on: 2014-04-16
 updated_on: 2014-04-29
 order: 4
 authors:

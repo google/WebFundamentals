@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink 4 Q & A"
 youtubeID: d_8UvfFc6Rk
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Leaders within the Blink Community answer questions from the audience.

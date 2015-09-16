@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Local Modifications"
-written_on: 2015-05-05
+published_on: 2015-05-05
 updated_on: 2015-05-20
 authors:
   - umarhansa

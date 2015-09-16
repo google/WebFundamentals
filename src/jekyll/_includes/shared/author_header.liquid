@@ -8,7 +8,7 @@
 	      <li>
 	        <a href="{{site.url}}/fundamentals/resources/contributors/index.html#{{author}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
 	          <span class="icon-circle--large" style="background-image: url({{site.WFBaseURL}}/imgs/contributors/{{author}}.jpg); background-size: contain;"></span>
-	          <h3 class="large">{{contributor.name.given}} {{contributor.name.family}}<span>Published: {{ page.article.written_on | date: '%B %d, %Y' }}</span></h3>
+	          <h3 class="large">{{contributor.name.given}} {{contributor.name.family}}<span>Published: {{ page.article.published_on | date: '%B %d, %Y' }}</span></h3>
 	        </a>
 	      </li>
 	    {% endfor %}

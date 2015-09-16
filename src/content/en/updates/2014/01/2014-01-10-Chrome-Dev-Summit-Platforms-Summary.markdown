@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Chrome Dev Summit: Platforms Summary"
 description: "Platforms"
-written_on: 2014-01-10
+published_on: 2014-01-10
 updated_on: 2014-01-10
 authors:
   - sethladd

@@ -5,7 +5,7 @@ description: "Now that you are serving your site on both HTTP and HTTPS, it shou
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 4
 translation_priority: 0

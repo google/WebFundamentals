@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Spooktacular HTML5 Pumpkin"
-written_on: 2011-10-27
+published_on: 2011-10-27
 updated_on: 2011-10-27
 authors:
   - sethladd

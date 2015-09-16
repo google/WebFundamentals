@@ -5,7 +5,7 @@ title: "Remote Access to Your Local Site"
 description: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."
 authors:
   - megginkearney
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 2
 key-takeaways:

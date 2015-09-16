@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Easy timeline recording"
-written_on: 2015-05-09
+published_on: 2015-05-09
 updated_on: 2015-05-20
 authors:
   - umarhansa

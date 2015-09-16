@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Get and debug event listeners"
-written_on: 2015-05-18
+published_on: 2015-05-18
 updated_on: 2015-05-20
 authors:
   - umarhansa

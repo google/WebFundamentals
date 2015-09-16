@@ -4,7 +4,7 @@ title: "Network Connectivity: Optional"
 description: "Offline is being taken seriously by browser vendors and you will soon have the tools in your hands that help you build great experiences that work well when you are offline."
 youtubeID: Z7sRMg0f5Hk
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

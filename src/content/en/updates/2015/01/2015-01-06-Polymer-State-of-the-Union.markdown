@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Chrome Dev Summit 2014: Polymer - State of the Union"
 description: "The state of the Polymer Union."
-written_on: 2015-01-06
+published_on: 2015-01-06
 updated_on: 2015-01-06
 authors:
   - robdodson

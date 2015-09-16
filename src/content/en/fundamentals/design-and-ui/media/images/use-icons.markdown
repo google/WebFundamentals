@@ -4,7 +4,7 @@ title: "Use SVG for icons"
 description: "When adding icons to your page, use SVG icons where possible or in some cases, unicode characters."
 authors:
   - petelepage
-written_on: 2014-06-10
+published_on: 2014-06-10
 updated_on: 2014-06-10
 order: 3
 translation_priority: 1

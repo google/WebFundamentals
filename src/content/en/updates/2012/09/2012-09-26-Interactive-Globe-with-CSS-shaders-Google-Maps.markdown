@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Interactive Globe with CSS shaders & Google Maps"
-written_on: 2012-09-26
+published_on: 2012-09-26
 updated_on: 2012-09-26
 authors:
   - paulirish

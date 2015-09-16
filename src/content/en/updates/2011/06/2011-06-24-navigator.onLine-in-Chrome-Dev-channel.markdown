@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "navigator.onLine in Chrome Dev channel"
-written_on: 2011-06-24
+published_on: 2011-06-24
 updated_on: 2011-06-24
 authors:
   - ericbidelman

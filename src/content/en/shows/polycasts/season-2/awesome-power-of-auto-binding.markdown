@@ -4,7 +4,7 @@ title: "The Awesome Power of Auto-Binding Templates"
 description: "Super charge your app with Polymer data bindings."
 youtubeID: 82LfXCeuaOo
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

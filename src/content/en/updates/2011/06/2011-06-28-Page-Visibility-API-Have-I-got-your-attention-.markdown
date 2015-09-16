@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Page Visibility API: Have I got your attention? "
-written_on: 2011-06-28
+published_on: 2011-06-28
 updated_on: 2011-06-28
 authors:
   - mikemahemoff

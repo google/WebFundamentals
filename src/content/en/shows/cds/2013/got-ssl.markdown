@@ -4,7 +4,7 @@ title: "Got SSL?"
 description: "We're connected with our laptops, phones and tablets, and probably soon enough with personal devices and accessories. We access the internet from untrusted and sometimes even hostile networks. With so much of our lives moving online, it's imperative we take steps to protect our data and our users' data."
 youtubeID: sJ8EX61fFWQ
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

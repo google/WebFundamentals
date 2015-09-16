@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Replay a network request in cURL"
-written_on: 2015-05-15
+published_on: 2015-05-15
 updated_on: 2015-05-19
 authors:
   - umarhansa

@@ -2,7 +2,7 @@
 layout: shared/narrow
 description: "TODO"
 title: "Measuring the Critical Rendering Path with Navigation Timing"
-written_on: 2014-04-01
+published_on: 2014-04-01
 updated_on: 2014-09-18
 order: 6
 translation_priority: 0

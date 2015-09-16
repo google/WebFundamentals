@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Installable Web Apps"
 youtubeID: N1Bdu7ukN40
 
-written_on: 2015-05-28
+published_on: 2015-05-28
 updated_on: 2015-05-28
 
 ---

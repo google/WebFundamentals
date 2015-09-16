@@ -4,7 +4,7 @@ title: "Episode 12"
 description: "The LazyWeb Show is a recap of the past week’s current events on the web platform. This week: Jafar Husain explains the power of ES6 Generators and async functions, Marcy Sutton shows off semi-automated and fully automated tools for testing accessibility, Chris Coyier teaches the rainbow of awesome that is SVG, the Google Research Blog runs a neural network BACKWARDS, and Jake Archibald records a silent film about background sync."
 youtubeID: gYBqrFnF2IU
 
-written_on: 2015-07-07
+published_on: 2015-07-07
 updated_on: 2015-07-07
 
 ---

@@ -6,7 +6,7 @@ description: "Your code editor is your main development tool; you use it to writ
 authors:
   - megginkearney
   - mattgaunt
-written_on: 2014-05-29
+published_on: 2014-05-29
 updated_on: 2015-04-14
 order: 1
 key-takeaways:

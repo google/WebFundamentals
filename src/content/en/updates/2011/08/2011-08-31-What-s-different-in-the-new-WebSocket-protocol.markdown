@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "What's different in the new WebSocket protocol"
-written_on: 2011-08-31
+published_on: 2011-08-31
 updated_on: 2011-08-31
 authors:
   - agektmr

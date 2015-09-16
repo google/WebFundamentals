@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "WebRTC Protothon"
-written_on: 2012-04-18
+published_on: 2012-04-18
 updated_on: 2012-04-18
 authors:
   - ilmariheikkinen

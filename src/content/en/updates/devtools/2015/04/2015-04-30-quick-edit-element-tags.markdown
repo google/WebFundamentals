@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Quick-edit element tags"
-written_on: 2015-04-30
+published_on: 2015-04-30
 updated_on: 2015-05-20
 authors:
   - umarhansa
