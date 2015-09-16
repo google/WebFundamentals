@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/list-subdirectories
+layout: shared/narrow-subdirectories-list
 title: "Input"
 description: "TODO"
 published_on: 2015-09-09
