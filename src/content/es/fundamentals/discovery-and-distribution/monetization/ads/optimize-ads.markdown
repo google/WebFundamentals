@@ -2,6 +2,7 @@
 title: "Optimiza tus anuncios"
 description: "La optimización de tu sitio y de los anuncios que aparecen en él puede mejorar la calidad de los anuncios mostrados y generar más ingresos."
 updated_on: 2014-08-12
+authors:
   - petelepage
 key-takeaways:
   tldr:
@@ -48,7 +49,7 @@ El cuadro de evaluación se organiza en distintas categorías (optimización de 
 
 
 
-El <b>Cuadro de recomendaciones</b> en la pestaña [Página principal](https://www.google.com/adsense/app#home) ofrece recomendaciones para obtener más ingresos con tu sitio. 
+El <b>Cuadro de recomendaciones</b> en la pestaña [Página principal](https://www.google.com/adsense/app#home) ofrece recomendaciones para obtener más ingresos con tu sitio.
 Estas recomendaciones se basan en el análisis del rendimiento que han obtenido otros editores de AdSense al seguirlas y solo las ofrecemos cuando estamos bastante seguros de que mejorará el rendimiento.
 
 {% include shared/remember.liquid title="Learn more" text="Consulta más información <a href='https://support.google.com/adsense/answer/3006004'>sobre el cuadro de evaluación</a> y sobre el <a href='https://support.google.com/adsense/answer/1725006'>cuadro de recomendaciones</a> en el Centro de ayuda de AdSense." %}
@@ -123,7 +124,3 @@ Para actualizar el archivo `robots.txt` y que permita el acceso del rastreador d
 
     User-agent: Mediapartners-Google
     Disallow: /
-
-
-
-

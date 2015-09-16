@@ -2,9 +2,10 @@
 title: "Personalizar los anuncios"
 description: "Los mejores anuncios pueden mejorar la experiencia del usuario. Aunque realmente el contenido del anuncio depende de los anunciantes, puedes controlar el tipo de contenido, el color, el tamaño y la posición de estos anuncios."
 updated_on: 2014-08-12
+authors:
   - petelepage
 key-takeaways:
-  tldr: 
+  tldr:
     - "Nunca coloques anuncios donde puedan interferir con la experiencia que deseas para el usuario en tu sitio. Procura que los anuncios de la mitad superior de la página no dejen el contenido importante debajo."
     - "Usa siempre bloques de anuncios adaptables. Si la función de tamaño óptimo no es suficiente, cambia al modo avanzado."
     - "Busca oportunidades para integrar anuncios en el contenido y, así, evitar que estos pasen desapercibidos."
@@ -40,12 +41,12 @@ Ejemplo de opciones de ubicación para anuncios para móviles:
 
 <img src="images/mobile_ads_placement.png" class="center" alt="Ejemplo de anuncio de imagen estático para móviles">
 
-Para obtener más información, consulta las 
+Para obtener más información, consulta las
 [prácticas recomendadas para la ubicación de anuncios] (https://support.google.com/adsense/answer/1282097) de AdSense.
 
 
 ## ¿Qué sucede cuando un tamaño adaptable no es suficiente?
-En algunos casos, es posible que necesites un mayor control sobre la visualización de los anuncios y que no baste con usar anuncios adaptables.  En este caso, puedes cambiar al modo avanzado y sobrescribir el tamaño óptimo en el código de tus bloques de anuncios adaptables. 
+En algunos casos, es posible que necesites un mayor control sobre la visualización de los anuncios y que no baste con usar anuncios adaptables.  En este caso, puedes cambiar al modo avanzado y sobrescribir el tamaño óptimo en el código de tus bloques de anuncios adaptables.
 Por ejemplo, puedes controlar el tamaño exacto de los anuncios usando [consultas de medios]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html):
 
 1. Sigue las instrucciones para [crear un bloque de anuncios adaptable]({{site.fundamentals}}/monetization/ads/include-ads.html#create-ad-units).
@@ -92,7 +93,7 @@ Cuando crees un bloque de anuncios, puedes aplicar un estilo distinto a los anun
 
 Todos los anuncios de texto usan el estilo <strong>predeterminado</strong> de Google AdSense.  Puedes usar cualquiera de los estilos predefinidos tal cual, modificarlos ligeramente o crear tu propio estilo personalizado.
 
-Una vez guardado el nuevo estilo, puedes aplicarlo a cualquiera de los bloques de anuncios existentes 
+Una vez guardado el nuevo estilo, puedes aplicarlo a cualquiera de los bloques de anuncios existentes
 o nuevos:
 
 1. Dirígete a [Estilos de anuncio](https://www.google.com/adsense/app#myads-springboard/view=AD_STYLES).
@@ -102,5 +103,3 @@ o nuevos:
 Cuando cambias un estilo de anuncio existente, cualquier bloque de anuncios activo que use ese estilo se actualiza automáticamente.
 
 {% include shared/remember.liquid title="Note" list=page.notes.images %}
-
-

@@ -36,7 +36,7 @@ module Jekyll
         end
 
         # find localized page or default to prime
-        page.data['translations'].find { |p| p.langcode == curr_lang } || page
+        page.data['translations'][curr_lang] || page
       }.compact
 
 

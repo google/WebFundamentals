@@ -22,3 +22,16 @@
 .wf-translation-link__link {
   text-decoration: none;
 }
+
+.wf-translation-warning {
+  border-top-style: solid;
+  border-color: #f44336;
+  border-width: $base-line / 2;
+
+  margin-bottom:$base-line * 2;
+}
+
+.wf-translation-warning__title {
+  color: #f44336;
+  margin: ($base-line / 2) 0;
+}
