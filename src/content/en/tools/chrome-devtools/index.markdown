@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "The Chrome DevTools are Chrome's built-in authoring and debugging tool."
 title: Chrome DevTools
 

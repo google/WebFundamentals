@@ -1,6 +1,5 @@
 ---
-rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Command Line Shortcuts"
 description: "Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that."
 authors:

@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Rendering Performance"
 description: "Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!"
 written_on: 2015-03-20

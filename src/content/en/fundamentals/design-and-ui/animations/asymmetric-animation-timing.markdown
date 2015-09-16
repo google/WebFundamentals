@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Asymmetric Animation Timing"
 description: "Breaking symmetry provides contrast and appeal to your projects. Learn when and how to apply this to your projects."
 written_on: 2014-08-08

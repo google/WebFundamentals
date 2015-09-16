@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Your Build Tools"
 rss: false
 description: "Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools."

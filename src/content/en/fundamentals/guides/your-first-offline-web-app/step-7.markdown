@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Intercept the web page requests"
 description: "TODO"
 notes:

@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "TODO"
 title: "Constructing the Object Model"
 written_on: 2014-04-01

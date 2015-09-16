@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 description: "Polymer Starter Kit."
 title: "Polymer Starter Kit"
 feedName: Polymer Starter Kit Releases

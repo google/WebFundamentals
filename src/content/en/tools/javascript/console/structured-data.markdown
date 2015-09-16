@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Compare Similar Data Objects"
 description: "Compare similar data objects using the <code>table()<code> method."
 written_on: 2015-04-14

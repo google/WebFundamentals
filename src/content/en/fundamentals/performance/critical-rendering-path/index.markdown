@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Critical Rendering Path"
 description: "TODO"
 written_on: 2014-04-01

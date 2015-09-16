@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "PageSpeed Insights rules in context: what to pay attention to when optimizing the Critical Rendering Path and why."
 title: "PageSpeed Rules and Recommendations"
 written_on: 2014-04-01

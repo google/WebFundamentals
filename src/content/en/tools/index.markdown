@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "Web Developer Tools provides a set of instructions and tools to help you build your website."
 title: Google Web Tools
 translation_priority: 0
