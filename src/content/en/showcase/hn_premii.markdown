@@ -19,10 +19,11 @@ showcase:
       result: http://www.webpagetest.org/result/150401_3F_JSY/
   link: http://hn.premii.com/
   developer: Dharmesh Patel
-  pros: |
-    A beautiful and highly optimized reading experience for Hacker News, this app works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it's installable as it uses the [Web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html). Once installed it looks and feels like a native HN news reader app.
-  cons: |
-    The app does a huge number of things very well. It loads quickly and is fast and smooth to use. If there were one thing the app could do it would be to add support for offline experiences. This could be a simple error page or a more complex view of cached content.
+  our_views:
+    good: |
+      A beautiful and highly optimized reading experience for Hacker News, this app works well and looks great across mobile, tablet and desktop. It's fast and testing it on mobile you will see some silky smooth transitions. It has a really nice use of theme-color for integration into Android and it's installable as it uses the [Web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html). Once installed it looks and feels like a native HN news reader app.
+    bad: |
+      The app does a huge number of things very well. It loads quickly and is fast and smooth to use. If there were one thing the app could do it would be to add support for offline experiences. This could be a simple error page or a more complex view of cached content.
   interview:
     - question: Why the web?
       answer: |
