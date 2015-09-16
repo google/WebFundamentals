@@ -1,0 +1,20 @@
+.wf-card {
+  min-height: auto;
+
+  .mdl-card__title {
+    height: $base-line * 7;
+
+    background-color: $color-accent;
+    background-size: cover;
+    
+    color: white;
+  }
+
+  .mdl-card__supporting-text {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+  }
+}

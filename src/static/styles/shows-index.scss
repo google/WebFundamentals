@@ -6,6 +6,7 @@
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
 $color-primary: $palette-grey-900;
+
 //$color-primary-dark: $palette-indigo-700 !default;
 $color-accent: unquote("rgb(#{$palette-grey-600})");
 
@@ -19,9 +20,13 @@ $color-accent: unquote("rgb(#{$palette-grey-600})");
 @import "../third_party/material-design-lite/src/resets/resets";
 @import "../third_party/material-design-lite/src/typography/typography";
 @import "../third_party/material-design-lite/src/layout/layout";
-@import "../third_party/material-design-lite/src/grid/grid";
 @import "../third_party/material-design-lite/src/button/button";
 @import "../third_party/material-design-lite/src/textfield/textfield";
+@import "../third_party/material-design-lite/src/card/card";
+
+// Leave these classes last
+@import "../third_party/material-design-lite/src/shadow/shadow";
+@import "../third_party/material-design-lite/src/grid/grid";
 @import "partials/google-fonts";
 @import "partials/debug";
 @import "partials/base";
@@ -30,6 +35,7 @@ $color-accent: unquote("rgb(#{$palette-grey-600})");
 @import "partials/components/wf-header";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
+@import "partials/components/wf-card";
 
 .wf-menu-svg {
   fill: white;
