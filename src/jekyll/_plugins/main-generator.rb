@@ -281,6 +281,8 @@ module Jekyll
           page = ShowsPage.new(site, relative_dir, file_name, langcode)
         when 'tools'
           page = ToolsPage.new(site, relative_dir, file_name, langcode)
+        when 'showcase'
+          page = ShowcasePage.new(site, relative_dir, file_name, langcode)
         when 'styleguide'
           page = LanguagePage.new(site, relative_dir, file_name, langcode)
         when '.'
