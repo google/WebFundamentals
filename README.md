@@ -15,8 +15,8 @@ Release status
 
 The project was soft launched in late April with a formal v1 launch in June 2014.  We've now moved to a six-week rolling release cycle.
 
-Technology
-----------
+Project Structure
+-----------------
 
 This is a Jekyll build.
 
@@ -35,7 +35,7 @@ This is a Jekyll build.
     /<langcode> - overrides for that language, following the main path structure.
 ```
 
-The site is generated in `/appengine/build`, but is never checked in.
+The site is generated in `/build`, but is never checked in.
 
 
 Contributing
@@ -50,26 +50,14 @@ If you don't complete these steps, we won't be able to accept your pull request,
 Installing Dependencies
 =======================
 
-Docker (recommended)
---------------------
-1. Download and install [Docker](https://docs.docker.com/installation/) for your platform.
-1. Now it's installed check out the [Running the site section for Docker](https://github.com/google/webfundamentals#running-the-site) below.
-
-**Note:** Googlers - You may need to complete a few extra steps, ask for more details.
-
-
 Mac
 ---
 
-1. Install submodules with
-    git submodule init
-    git submodule update
 1. Install [XCode Command Line Tools](https://developer.apple.com/xcode/downloads/)
 1. Install [NVM](https://github.com/creationix/nvm)
     * `curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash`
-1. Install node 0.10.x
-    * `nvm install 0.10`
-    * `nvm use 0.10`
+1. Install node
+    * [https://nodejs.org/en/]()
 1. Install [RVM](https://rvm.io/rubies/default)
     * `curl -sSL https://get.rvm.io | bash`
 1. Set RVM Default to 2.2.0
@@ -81,103 +69,37 @@ Mac
     * `gem install bundler`
 1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/) and [Kramdown](http://kramdown.gettalong.org/))
     * `rvm . do bundle install`
-1. Install the [Grunt CLI](http://gruntjs.com/)
-    * `npm install -g grunt-cli`
+1. Install the [Gulp CLI](http://gulpjs.com/)
+    * `npm install -g gulp`
 1. Install [npm](https://www.npmjs.org) dependencies
     * `npm install`
-1. Install fontforge if required for grunt-webfont on your OS.  See [grunt-webfont installation instructions](https://github.com/sapegin/grunt-webfont/blob/master/Readme.md#installation) for details.
 1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
-
-**Note:** On OSX, you may see an error about *Warning: EMFILE, too many open files*.
-If so you will need to increase the maximum number of open file handles.  
-Use `ulimit -n 1024` to increase the maximum number of open files to 2048 from
-the default of 256, or add `launchctl limit maxfiles 2048 2048 ` to `.bashrc`
-or `.zshrc`. See [https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files](https://github.com/gruntjs/grunt-contrib-watch#how-do-i-fix-the-error-emfile-too-many-opened-files)
-for further details.
-
-**Note:** On OSX, you may also see an error about *Allow dev_appserver to check
-for updates on startup? (Y/n)* and, many lines below it, *EOFError: EOF when
-reading a line*. If so you need to run dev_appserver once in a GAE project to
-allow `dev_appserver` to ask you about checking for updates. Choose whichever
-answer you like; this just clears the prompt for future runs of `dev_appserver`
-and you should be good to go.
-
 
 Running the site
 ================
 
-With Docker (recommended)
--------------------------
-
-Prefixing a command with `tools/docker.sh` will run it inside the Docker container,
-which includes all the dependencies needed to build the site.
-
-
-Build the project:
-
-```sh
-tools/docker.sh grunt build
-```
-
-Run a local dev server:
-
-```sh
-tools/docker.sh grunt develop
-```
-Then point your browser to http://localhost:8081/web/fundamentals or the
-IP address of your Docker instance
-
-To build only a single language *FASTER*:
-
-```sh
-tools/docker.sh grunt develop --lang=en
-```
-
-
-Without Docker
---------------
-
 Once you have all the dependencies installed go to the root of the checked out repo and type:
 
 ```
-grunt develop
+gulp
 ```
 
 This will have Jekyll build the site, run a static server to listen on
-port 8081 (which you can now reach at
-[http://localhost:8081/web/fundamentals/](http://localhost:8081/web/fundamentals/)),
+port 7331 (which you can now reach at
+[http://localhost:7331/web/](http://localhost:7331/web/)),
 and watch for changes to site files. Every change will cause Jekyll to rebuild
 the affected files.
 
-If you want to build a single language then run this: `grunt develop --lang=en`.
+If you want to build a single language then run this: `gulp --lang en`.
 
+If you want to build a specific section then run this: `gulp --section shows`.
 
+These can be combined: `gulp --lang en --section shows`
 
-Using project-level meta data
-=============================
+Learning More About Jekyll and Liquid Used
+-------------------------------------------
 
-The table of contents is generated from `src/_project.yaml`
-
-To parse the `_project.yaml` file, include `{% injectdata content _project.yaml %}` in the page. You then have access to the variables in the page object.
-
-
-Generating Table of Contents
-----------------------------
-
-The table of contents is generated from `src/_book.yaml`
-
-To parse the `_book.yaml` file, include `{% injectdata content _book.yaml %}` in the page and then iterate as follows:
-
-     {% for section in page.content.toc %}
-        SOME MARKUP
-     {% endfor %}
-
-Jekyll Special elements
------------------------
-
-* Code import: `{% highlight javascript %} {% include sample1.js %} {% endhighlight %}`
-* `{{ articles _category_}}` a list of articles in divs, ordered by the "order" preamble.
-* `{{ showcases _category_}}` a list of showcases.
+We have a styleguide which you can access at [http://localhost:7331/web/styleguide/](http://localhost:7331/web/styleguide/) that should get you up and running with a lot of the custom and useful info.
 
 
 Translations
