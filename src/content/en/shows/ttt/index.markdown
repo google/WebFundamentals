@@ -1,5 +1,5 @@
 ---
-layout: shows/show-home
+layout: shows/show-home-cards
 title: "Totally Tooling Tips"
 subtitle: "with Matt and Addy"
 description: "Totally Tooling Tips is a Google Developer show where Matt and Addy

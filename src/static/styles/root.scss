@@ -14,10 +14,14 @@ $color-accent: unquote("rgb(#{$palette-light-blue-400})");
 @import "../third_party/material-design-lite/src/resets/resets";
 @import "../third_party/material-design-lite/src/typography/typography";
 @import "../third_party/material-design-lite/src/layout/layout";
-@import "../third_party/material-design-lite/src/grid/grid";
 @import "../third_party/material-design-lite/src/button/button";
 @import "../third_party/material-design-lite/src/data-table/data-table";
 @import "../third_party/material-design-lite/src/textfield/textfield";
+@import "../third_party/material-design-lite/src/card/card";
+
+// Leave these classes last
+@import "../third_party/material-design-lite/src/shadow/shadow";
+@import "../third_party/material-design-lite/src/grid/grid";
 @import "partials/mdl-overrides";
 @import "partials/google-fonts";
 @import "partials/debug";

@@ -1,6 +1,7 @@
 ---
 layout: shows/single-video
 title: "Sublime Text Plugins"
+description: "The minute you start developing a site, the first tool you’ll use is a text editor, whether it’s as simple as notepad or a full-blown IDE. In this episode, Addy & Matt look at their collection of plugins for Sublime Text and discuss how each one helps with their workflow."
 youtubeID: 2eu23_if6Lw
 written_on: 2015-05-20
 updated_on: 2015-05-20

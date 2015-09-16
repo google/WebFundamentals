@@ -4,6 +4,7 @@
 @import "../../third_party/material-design-lite/src/variables";
 @import "../../third_party/material-design-lite/src/mixins";
 
+$color-primary-works: unquote("rgb(#{$color-primary})");
 
 html {
   width: 100%;
