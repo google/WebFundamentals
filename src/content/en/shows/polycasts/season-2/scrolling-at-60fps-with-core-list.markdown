@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Scrolling at 60 frames with core-list "
 description: "Scrolling at 60fps doesn't have to be a feat of engineering! With core-list you can scroll through thousands of items and never miss a beat."
 youtubeID: 2UKPRbrw3Kk

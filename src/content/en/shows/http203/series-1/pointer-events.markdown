@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "2. Pointer Events"
 description: "Pointer Events (no, not the CSS ones, the other ones!) are set to unite input across devices. Jake has a little bit of news for Paul about them."
 youtubeID: ngBy0H_q-GY

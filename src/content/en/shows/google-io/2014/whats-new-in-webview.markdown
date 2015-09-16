@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "What's new in WebView"
 description: "An overview of the new features of WebView that shipped in the KitKat/L release of Android."
 youtubeID: 0tH-KHvifMk

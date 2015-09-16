@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Polymer declarative, encapsulated, reusable components"
 description: "Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit"
 youtubeID: DH1vTVkqCDQ

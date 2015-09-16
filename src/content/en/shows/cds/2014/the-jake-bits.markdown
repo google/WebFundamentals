@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "The Jake Bits"
 youtubeID: mky3ejiGrog
 

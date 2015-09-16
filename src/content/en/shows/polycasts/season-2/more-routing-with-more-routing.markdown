@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Moar routing with... more-routing"
 description: "Last week you learned how to use a router in your Polymer app. This week we're doing it again, using nothing but HTML!"
 youtubeID: -67kb7poIT8

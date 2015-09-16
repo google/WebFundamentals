@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Asking for Superpowsers: Chrome's Permission Model"
 youtubeID: 3dAwZVsS8wo
 

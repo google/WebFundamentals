@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Theming Elements"
 description: "CSS Custom properties are incredibly powerful. Check out how you can use them to style and theme your Polymer elements."
 youtubeID: omASiF85JzI

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Testing multi-screen web pages"
 description: "So you need to build a responsive site. We'll look at how you set up your dev environment to best test across multiple devices and screen sizes."
 youtubeID: vsmU09PoYy4

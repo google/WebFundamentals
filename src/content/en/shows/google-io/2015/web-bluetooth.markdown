@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Web Bluetooth"
 youtubeID: I3obFcCw8mk
 

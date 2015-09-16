@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Update on WebM/VP9"
 description: "We'll go over what has changed, improvements, what we are working on, and where we're headed next with the VP9 video codec."
 youtubeID: xo_R40C7RTo

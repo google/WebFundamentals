@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Blink Lightning talks"
 youtubeID: uMjSEW_TE18
 

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Let’s Build Some Apps with Polymer!"
 youtubeID: kV0hgdMpH28
 

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Polymer: State of the Union"
 youtubeID: 0LT6W5QVCJI
 

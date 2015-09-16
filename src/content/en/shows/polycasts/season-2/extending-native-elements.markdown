@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Extending Native Elements"
 description: "Inheritance in HTML?! Yep! Not only is it possible with Web Components, it's super useful for working with forms and accessibility."
 youtubeID: OV8BvxpNQOs

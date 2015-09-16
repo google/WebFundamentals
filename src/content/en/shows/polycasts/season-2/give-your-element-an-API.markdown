@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Episode 16"
 description: "Today I'm going to show you how to add public properties and methods to a Polymer element. This will give your tag a programmable interface so it can be manipulated with JavaScript."
 youtubeID: 7jolqbtIdiY

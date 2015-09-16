@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Episode 10"
 description: "Bruce Lawson illustrates that everyone wants the same web, but not all networks are created equal, the a11y cheat sheet makes it easier to build accessible sites, Alex Komoroske and Elisabeth Morant highlight statistics and features of the next generation web, Firefox Developer Edition launches new performance tools, and Ilya Grigorik explains how old best practices are obsolete in HTTP/2."
 youtubeID: 6YtvbitnQdw

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Supercharging page load"
 youtubeID: d5_6yHixpsQ
 

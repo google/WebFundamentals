@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Optimizing your Workflow for a Cross-Device World"
 description: "If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful?"
 youtubeID: bZRPetpUcjQ

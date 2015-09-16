@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Easy Composition and Resuse with Web Components"
 youtubeID: 6vcQlD-jadk
 

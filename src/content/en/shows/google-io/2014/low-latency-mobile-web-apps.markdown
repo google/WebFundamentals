@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Low Latency Mobile Web Apps"
 description: "Cover technical and product challenges in building seamless interactive experience on mobile phones and tablets. Introduce the best practices followed by news team in overcoming browser challenges."
 youtubeID: 5uF3925a974
