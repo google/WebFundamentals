@@ -1,34 +1,3 @@
 .wf-toc {
-  padding-left: $base-line;
-  margin-bottom: $base-line;
-
   border-left-color: $toc-border-color;
-  border-left-style: solid;
-  border-left-width: $left-border-callout-width;
-}
-
-.wf-toc__title {
-  @include typo-subhead();
-  margin: 0;
-  color: $text-grey-color;
-}
-
-.wf-toc__list {
-  margin: 0;
-
-  list-style: none;
-}
-
-.wf-toc__list li {
-  @include typo-title();
-
-  margin: ($base-line / 2) 0;
-
-  & > a {
-    text-decoration: none;
-  }
-}
-
-.wf-toc__list li:last-child {
-  margin-bottom: 0;
 }
