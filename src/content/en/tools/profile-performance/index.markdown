@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: fundamentals/list-subdirectories
+layout: shared/narrow-subdirectories-list
 title: "Profile"
 description: "Especially when it comes to device testing, put the user first."
 published_on: 2015-04-13

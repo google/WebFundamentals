@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/list-subdirectories
+layout: shared/narrow-subdirectories-list
 title: "Monetization"
 description: "Learn how to maximize your revenue on any device. Improve user experience and get paid."
 published_on: 2014-05-29

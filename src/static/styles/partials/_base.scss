@@ -58,13 +58,23 @@ video {
 
   margin-left: auto;
   margin-right: auto;
+}
 
-  padding: $base-line / 2;
+.page-content {
+  margin-bottom: $base-line;
+
+  padding: ($base-line * 2) ($base-line / 2) 0 ($base-line / 2);
 }
 
 .wf-cc-license {
   text-align: center;
   @include typo-caption($colorContrast: true);
+
+  margin-top: $base-line;
+  margin-bottom: $base-line;
+
+  padding-left: ($base-line / 2);
+  padding-right: ($base-line / 2);
 
   a {
     text-decoration: none;

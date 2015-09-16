@@ -21,7 +21,7 @@ spot them.**
 The layout is used by Jekyll to determine the file to use as the layout for the
 current page.
 
-    layout: fundamentals/list-subdirectories
+    layout: shared/narrow-subdirectories-list
 
 The layout files have to live in the `_layouts` directory.
 
