@@ -39,3 +39,6 @@ $color-accent: unquote("rgb(#{$palette-light-blue-400})");
 @import "partials/components/wf-section-toc";
 @import "partials/components/wf-article-nav";
 @import "partials/components/wf-translation";
+@import "partials/components/wf-subheading";
+@import "partials/components/wf-card";
+@import "partials/components/wf-tools-guide";

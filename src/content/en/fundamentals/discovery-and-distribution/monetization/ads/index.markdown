@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Ads"
 description: "Serving advertisements provides a way for web developers to make their content and site free while still earning money. Learn how ads work and how to serve responsive ads on your site."
 published_on: 2014-07-31

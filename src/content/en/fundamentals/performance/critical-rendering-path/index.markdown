@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Critical Rendering Path"
 description: "TODO"
 published_on: 2014-04-01
@@ -17,7 +17,7 @@ udacity:
 ---
 
 <p class="intro">
-  Optimizing the critical rendering path is critical for improving performance 
+  Optimizing the critical rendering path is critical for improving performance
   of our pages: our goal is to prioritize and display the content that relates
   to the primary action the user wants to take on a page.
 </p>
@@ -42,5 +42,3 @@ updates is the same, just done in a continuous loop and ideally at 60 frames
 per second! However, let's not get ahead of ourselves just yet. First, let's
 take a quick, ground-up overview of how the browser goes about displaying a
 simple page.
-
-{% include fundamentals/section_toc.liquid %}

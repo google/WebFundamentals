@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Responsive Web Design Basics"
 description: "Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen."
 published_on: 2014-04-30
@@ -65,5 +65,3 @@ needs of the users and the devices they're using.  The layout changes based on
 the size and capabilities of the device.  For example, on a phone, users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
-
-{% include fundamentals/section_toc.liquid %}

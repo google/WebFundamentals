@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Create Amazing Forms"
 description: "Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs."
 published_on: 2014-04-30
@@ -17,5 +17,3 @@ translation_priority: 0
 For an overview of these guides on creating amazing forms, check out the video below.
 
 {% ytvideo iYYHRwLqrKM %}
-
-{% include fundamentals/section_toc.liquid %}

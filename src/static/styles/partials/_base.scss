@@ -5,6 +5,7 @@
 @import "../../third_party/material-design-lite/src/mixins";
 
 $color-primary-works: unquote("rgb(#{$color-primary})");
+$color-accent-contrast-works: unquote("rgb(#{$color-accent-contrast})");
 
 html {
   width: 100%;

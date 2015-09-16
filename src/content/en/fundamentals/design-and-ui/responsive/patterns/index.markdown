@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Responsive Web Design Patterns"
 description: "Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices"
 authors:
@@ -31,6 +31,3 @@ typically with three content `div`'s contained within a primary container `div`.
 were added when necessary.  The [flexbox layout mode is well
 supported](http://caniuse.com/#search=flexbox) for modern browsers, though may
 still require vendor prefixing for optimal support.
-
-{% include fundamentals/section_toc.liquid %}
-

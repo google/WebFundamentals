@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/narrow
+layout: shared/section-index
 title: "Interact from Command Line"
 description: "The console is a full-fledged terminal you can use to interact with your page during development."
 published_on: 2015-04-14
@@ -18,5 +18,3 @@ panel: console
 
 Using the console's commands,
 you can select DOM elements, profile the CPU, monitor events, and more.
-
-{% include fundamentals/section_toc.liquid %}

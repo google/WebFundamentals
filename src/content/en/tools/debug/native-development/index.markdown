@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/narrow
+layout: shared/section-index
 title: "Debug WebView Content in Your Development Workspace"
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 authors:
@@ -9,7 +9,7 @@ published_on: 2015-04-14
 updated_on: 2015-07-30
 order: 1
 key-takeaways:
-  webview: 
+  webview:
     - "Enable WebView debugging in your native Android app; debug WebViews in Chrome DevTools."
     - "Access list of debug-enabled WebViews via <strong>chrome://inspect</strong>."
     - "Debugging WebViews is the same as debugging a web page through <a href='/web/tools/setup/remote-debugging'>remote debugging</a>."
@@ -53,12 +53,9 @@ To start debugging, click **inspect** below the WebView you want to debug. Use D
 
 The gray graphics listed with the WebView represent its size and position relative to the device's screen. If your WebViews have titles set, the titles are listed as well.
 
-## Troubleshooting 
+## Troubleshooting
 
 Can't see your WebViews on the **chrome://inspect page**?
 
 * Verify that WebView debugging is enabled for your app.
 * On your device, open the app with the WebView you want to debug. Then, refresh the **chrome://inspect** page.
-
-{% include fundamentals/section_toc.liquid %}
-

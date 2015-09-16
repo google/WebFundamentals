@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: fundamentals/list-subdirectories
+layout: shared/section-index
 title: "Debug"
 description: "Chrome DevTools offers a comprehensive set of debugging features to help you find and fix errors in your code."
 published_on: 2015-04-13
@@ -10,5 +10,3 @@ translation_priority: 0
 ---
 
 TODO
-
-{% include fundamentals/section_toc.liquid %}

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/narrow
+layout: shared/section-index
 title: "How to Look at Performance"
 description: "Focus on the user first. How users perceive delays far outweighs any performance guidelines."
 published_on: 2015-04-14
@@ -17,5 +17,3 @@ panel: timeline
 </p>
 
 RAIL is a user-centric performance model and stands for Response, Animation, Idle, and Load. Learn how to test performance following the RAIL model and using your browser profiling tools.
-
-{% include fundamentals/section_toc.liquid %}

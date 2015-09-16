@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/section-index
 title: "Video"
 description: "Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device."
 published_on: 2014-04-16
@@ -34,6 +34,3 @@ notes:
 </p>
 
 {% ytvideo j5fYOYrsocs %}
-
-{% include fundamentals/section_toc.liquid %}
-
