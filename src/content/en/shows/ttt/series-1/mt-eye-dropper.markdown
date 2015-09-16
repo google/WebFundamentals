@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Mini Tip: DevTools Eye Dropper"
 description: "Addy and Matt walk through how to pick colours from a page using the new DevTools Eye Dropper tool."
 youtubeID: NUlztWHP9eE

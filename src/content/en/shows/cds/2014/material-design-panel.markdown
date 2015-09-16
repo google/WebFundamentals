@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Material Design Panel"
 youtubeID: o5vBqG-IQQI
 

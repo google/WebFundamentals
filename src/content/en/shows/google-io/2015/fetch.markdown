@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Introduction to the Fetch API"
 youtubeID: g6-ZwZmRncs
 

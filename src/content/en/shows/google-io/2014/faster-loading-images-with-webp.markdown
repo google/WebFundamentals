@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Faster Loading Images with WebP"
 description: "Learn how WebP can help reduce the load time of images through better image compression"
 youtubeID: rqXMwLbYEE4

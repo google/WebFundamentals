@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "2.1. Web Vs Native"
 description: "Jake has developed an allergic reaction to a vital substance, and Paul brings up the highly contentious topic of Web vs Native. Yep, the boys are back with a bang!"
 youtubeID: SLjuOPXjHno

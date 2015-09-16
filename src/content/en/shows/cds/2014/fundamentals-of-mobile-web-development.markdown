@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Fundamentals of Mobile Web Development"
 youtubeID: z6dg_V22wV0
 

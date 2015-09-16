@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "2.2. Build Tools"
 description: "Jake is settling into his brand new role of Headphone Destroyer, and Paul is concerned that it's just too hard to get past building Hello World in today's web."
 youtubeID: 3i9WFgMuKHs

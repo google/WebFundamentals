@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "The Awesome Power of Auto-Binding Templates"
 description: "Super charge your app with Polymer data bindings."
 youtubeID: 82LfXCeuaOo

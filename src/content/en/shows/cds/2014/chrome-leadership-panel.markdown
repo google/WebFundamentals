@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Chrome Leadership Panel"
 youtubeID: ztHMwIAbZ5M
 

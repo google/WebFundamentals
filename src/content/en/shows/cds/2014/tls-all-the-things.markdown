@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "TLS All the Things! Security with Performance"
 youtubeID: ayD0LiZkWLQ
 

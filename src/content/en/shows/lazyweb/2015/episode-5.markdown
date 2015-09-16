@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "How is TCP like the 7th grade?"
 description: "Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TCP and how it’s a lot like junior high, sitespeed.io releases an open source perf dashboard, Sky lets you write Dart apps for mobile, Scott Jehl demonstrates how to load pages quickly (even if they’re heavy), and Chrome’s new scheduler let’s priority tasks jump the queue."
 youtubeID: ZY_zpMlpqLM

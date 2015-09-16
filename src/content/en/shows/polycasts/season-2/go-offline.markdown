@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Go Offline"
 description: "Take your Polymer app offline, without writing a single line of JavaScript! Behold the power of service worker!"
 youtubeID: BucGrYACJdQ
