@@ -1,7 +1,6 @@
 ---
-layout: shows/series-index
+layout: shows/season
 title: "Chrome Dev Summit: 2014"
-
 published_on: 2015-02-24
 updated_on: 2015-02-24
 ---

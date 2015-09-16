@@ -1,7 +1,6 @@
 ---
-layout: shows/series-index
+layout: shows/season
 title: "BlinkOn 4"
-
 published_on: 2015-06-06
 updated_on: 2015-06-06
 ---

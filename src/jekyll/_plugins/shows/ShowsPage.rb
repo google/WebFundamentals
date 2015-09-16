@@ -34,12 +34,12 @@ module Jekyll
         'latest news and technologies on the web platform.'
       self.data['theme_color'] = '#212121'
 
-      $css = 'shows-index.css'
-      if self.data['layout'] == 'shows/show-home' || self.data['layout'] == 'shows/udacity-home'
-        $css = 'show-home.css'
-      elsif self.data['layout'] == 'shows/single-video'
-        $css = 'show-single-video.css'
-      end
+      $css = 'root.css'
+      # if self.data['layout'] == 'shows/show-home' || self.data['layout'] == 'shows/udacity-home'
+      #   $css = 'show-home.css'
+      # elsif self.data['layout'] == 'shows/single-video'
+      #   $css = 'show-single-video.css'
+      # end
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/' + $css;
 
       #self.data['feed_name'] = 'Web Fundamentals - Google Developers'
