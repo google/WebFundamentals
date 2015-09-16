@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "2.5. Performance Matters"
 description: "From talking vDOM to lying to users, Paul & Jake are all about ensuring users get blazing fast sites."
 youtubeID: 6Zgp_G5o6Oc

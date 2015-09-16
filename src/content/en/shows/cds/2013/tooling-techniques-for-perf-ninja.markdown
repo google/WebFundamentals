@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Tooling Techniques for the Performance Ninja"
 description: "Colt stepped through the three pillars of performance: network, compute and render, providing a tour of the key problem in each area and the tools available for finding and eradicating them."
 youtubeID: 8MMmg3bDOjc

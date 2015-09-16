@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Chrome 42 - Push API, App Install Banners & Fetch"
 description: "Chrome 42 includes Push API, App Install Banners and Fetch. Pete LePage will tell you how these features will make your web experience feel more Appy!"
 youtubeID: vl4-WMImj6I

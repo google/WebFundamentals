@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Installable Web Apps"
 youtubeID: N1Bdu7ukN40
 

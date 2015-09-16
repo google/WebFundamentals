@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Material Design Deconstructed"
 youtubeID: tfSiXRy1vEw
 

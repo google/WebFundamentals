@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Create reusable elements with ease"
 description: "Creating reusable components doesn't have to be so tricky! Use the polyserve tool to make element authoring a breeze."
 youtubeID: p7Q1mQtFGM8

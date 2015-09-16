@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Wicked Fast (Performance Investment)"
 youtubeID: v0xRTEf-ytE
 

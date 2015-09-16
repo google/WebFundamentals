@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Content Switcheroo with Core-Pages"
 description: "Presto Change-O! Update the sections in your single page app using core-pages."
 youtubeID: 6x2A9UgLqEw

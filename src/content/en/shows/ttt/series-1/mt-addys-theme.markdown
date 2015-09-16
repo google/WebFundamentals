@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Mini Tip: What theme is Addy using?"
 description: "It turns out that people love themes and whatever Addy is using for Sublime, people love it!  So you have to ask yourself, do you know what theme he’s using?"
 youtubeID: 0bkjRNHHzg4

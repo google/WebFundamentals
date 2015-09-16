@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Making Web Apps Appy"
 youtubeID: QbuLq4f6DGQ
 

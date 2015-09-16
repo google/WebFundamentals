@@ -1,10 +1,10 @@
 {% include page-structure/open-page.liquid %}
 
-<div class="page-content">
+{{ content }}
 
-  {{ content }}
+{% include shows/shows-in-season.liquid %}
 
-
+{% comment %}
   <!-- List of Videos -->
   <ol class="show-series-list">
     {% for showPage in page.context.pages reverse %}
@@ -25,6 +25,6 @@
     </li>
     {% endfor %}
   </ol>
+{% endcomment %}
 
-</div>
 {% include page-structure/close-page.liquid %}

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Chrome 44: Improvements to the App Install Banner & More"
 description: "Chrome 44 includes improvements to the App Install Banner, changes to Push Messaging, and updates to notifications. Pete LePage will tell you how you can use these features new developer features in Chrome 44."
 

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "2.4. Progressive Loading"
 description: "Paul and Jake talk about the importance of progressive rendering on the web. Unfortunately, Jake can’t figure out how to say 'isomorphic'."
 youtubeID: miLnRHNj7nQ

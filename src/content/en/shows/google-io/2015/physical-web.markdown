@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Introduction to the Physical Web"
 youtubeID: 1yaLPRgtlR0
 

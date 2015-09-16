@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Multi-Device Accessibility"
 description: "Users will be accessing your sites and services from a multitude of devices with a wide range of different accessibility requirements.  By using the correct semantic elements and correct ARIA roles you help give the browser and assistive technology a much improved understanding of your page."
 youtubeID: E0ojKLzXoZ4

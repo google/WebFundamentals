@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Blink Allocator"
 youtubeID: U8TFBVPF9UQ
 

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Blink Layout"
 youtubeID: Q2diuftFJKo
 
