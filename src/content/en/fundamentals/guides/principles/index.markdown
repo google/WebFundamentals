@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Principles of Site Design"
 description: "TODO"
 published_on: 2014-08-08

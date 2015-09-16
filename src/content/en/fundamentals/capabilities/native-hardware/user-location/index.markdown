@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "User Location"
 description: "Most browsers and devices have access to the user's geo-location. Learn how to work with the user's location in your site and apps."
 published_on: 2014-01-01

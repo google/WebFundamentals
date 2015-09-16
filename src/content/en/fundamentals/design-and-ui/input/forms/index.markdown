@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Create Amazing Forms"
 description: "Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs."
 published_on: 2014-04-30

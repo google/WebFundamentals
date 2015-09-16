@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Set Up Code Readability"
 description: "Don't minify your source files. Keep your source code as readable as possible. Use server-side or build processes to automatically compress your code."
 published_on: 2015-04-14

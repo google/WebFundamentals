@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Inspect and Edit Pages and Styles"
 description: "Inspect the HTML & CSS of your pages, test different layouts, and live-edit CSS."
 published_on: 2015-04-14

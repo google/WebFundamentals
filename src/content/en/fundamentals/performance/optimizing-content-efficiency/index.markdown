@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Optimizing Content Efficiency"
 published_on: 2014-04-01
 updated_on: 2014-04-29

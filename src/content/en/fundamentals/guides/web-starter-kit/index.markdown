@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Start Your Site with Web Starter Kit"
 description: "Sometimes the hardest part of a new project is getting started. Web Starter Kit gives you a solid base with a range of tools to help you along the development process."
 published_on: 2014-07-17

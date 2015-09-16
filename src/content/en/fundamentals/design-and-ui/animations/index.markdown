@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Animations"
 description: "Get a better understanding of animations and their use in modern apps and sites."
 published_on: 2014-08-08
