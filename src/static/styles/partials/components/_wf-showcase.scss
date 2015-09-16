@@ -1,0 +1,47 @@
+.spotlight-scores {
+
+  $colorHigh: #0f9d58;
+  $colorMedium: #f4b400;
+  $colorLow: #cb4437;
+
+  text-align: center;
+  margin-top: 30px;
+
+  div {
+    display: inline-block;
+    margin-top: 18px;
+
+  }
+
+  span {
+    font-size: 26px;
+    display: inline-block;
+    border-radius: 100px;
+    width: 100px;
+
+    &.low {
+
+      strong {
+        color: $colorLow;
+      }
+
+    }
+
+    &.med {
+
+      strong {
+        color: $colorMedium;
+      }
+
+    }
+
+    &.high {
+
+      strong {
+        color: $colorHigh;
+      }
+
+
+    }
+  }
+}
