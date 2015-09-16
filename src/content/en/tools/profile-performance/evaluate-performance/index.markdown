@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "How to Look at Performance"
 description: "Focus on the user first. How users perceive delays far outweighs any performance guidelines."
 published_on: 2015-04-14

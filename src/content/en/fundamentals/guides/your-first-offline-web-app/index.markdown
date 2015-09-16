@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Your first offline web app"
 description: "Overview"
 published_on: 2014-07-17

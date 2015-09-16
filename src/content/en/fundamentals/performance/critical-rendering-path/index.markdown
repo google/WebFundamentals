@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Critical Rendering Path"
 description: "TODO"
 published_on: 2014-04-01

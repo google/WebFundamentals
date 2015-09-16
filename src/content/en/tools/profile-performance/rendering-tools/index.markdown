@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Runtime Performance"
 description: "Make your site look great and load fast on any device. Use tools to identify and fix common problems that occur when the browser renders elements on the page."
 published_on: 2015-04-14

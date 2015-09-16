@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Iterate"
 description: "Test and tweak your site design and content iteratively."
 published_on: 2015-04-13

@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Set Up Remote Debugging"
 description: "Check your site's responsive layouts and performance on real devices."
 published_on: 2015-04-14

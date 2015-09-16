@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Key Principles"
 description: "The customer journey is getting more complex, and users expect to convert on their own terms. Put your users in control."
 published_on: 2014-08-07

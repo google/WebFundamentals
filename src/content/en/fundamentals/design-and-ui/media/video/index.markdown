@@ -1,5 +1,5 @@
 ---
-layout: shared/section-index
+layout: shared/narrow-pages-list
 title: "Video"
 description: "Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device."
 published_on: 2014-04-16
