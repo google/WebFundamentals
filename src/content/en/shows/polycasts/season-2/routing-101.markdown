@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Routing 101"
 description: "Routing in Polymer, revealed! Get on the path to single page app goodness with this nugget of wisdom."
 youtubeID: iDQqP5Yyczg

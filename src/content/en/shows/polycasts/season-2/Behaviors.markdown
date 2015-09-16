@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Behaviors"
 description: "Behaviors unlock amazing potential by letting you mix functionality into your elements without relying on inheritance."
 youtubeID: YrlmieL3Z0k

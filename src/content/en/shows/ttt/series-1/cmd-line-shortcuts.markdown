@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Totally Tooling Mini Tip: Command-line Keyboard Shortcuts"
 description: "In this cheeky little mini tip Addy and Matt look at keyboard shortcuts that help you navigate the command line with ease."
 youtubeID: ND-W4e-pqMo

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Blink Skia Update"
 youtubeID: f7jz75yJlac
 

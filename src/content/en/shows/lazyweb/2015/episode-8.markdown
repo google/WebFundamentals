@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Episode 8"
 description: "Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome DevTools."
 youtubeID: u1RjWga2ks4

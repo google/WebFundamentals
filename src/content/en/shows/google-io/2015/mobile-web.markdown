@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "The next generation mobile web"
 youtubeID: iZZdhTUP5qg
 
