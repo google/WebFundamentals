@@ -23,6 +23,7 @@ module Jekyll
   class BuildEndGenerator < Generator
     priority :lowest
     def generate(site)
+      organisePageTree(site.data['_context'])
 
       # This should run as the end of all generators and will give pages a
       # chance to do any final work needed
@@ -39,6 +40,51 @@ module Jekyll
           transationPage.onBuildComplete()
         }
       }
+    end
+
+    def organisePageTree(tree)
+      tree['pages'] = tree['pages'].sort do |a, b|
+        a_order = a.data['order'] || a.data['published_on'] || 0
+        b_order = b.data['order'] || b.data['published_on'] || 0
+        a_order <=> b_order
+      end
+
+      tree['pages'].each_with_index { |a, i|
+        a.data['_nextPage'] = tree['pages'][i+1]
+        if i > 0
+          a.data['_previousPage'] = tree['pages'][i-1]
+        elsif i == 0
+          a.data['_previousPage'] = tree['index']
+        end
+      }
+
+      if (not tree['index'].nil?) && (tree['pages'].size > 0)
+        tree['index'].data['_nextPage'] = tree['pages'][0]
+      end
+
+      tree['subdirectories'].each { |value|
+        organisePageTree(value)
+      }
+
+      tree['subdirectories'] = tree['subdirectories'].sort do |a, b|
+        a_order = 0
+        b_order = 0
+
+        if !a['index'].nil?
+          a_order = a['index'].data['order'] || a['index'].data['date'] || 0
+        end
+        if !b['index'].nil?
+          b_order = b['index'].data['order'] || b['index'].data['date'] || 0
+        end
+
+        if a_order.is_a?(Integer) & b_order.is_a?(Integer)
+            a_order <=> b_order
+        elsif a_order.is_a?(String) & b_order.is_a?(String)
+            a_order <=> b_order
+        else
+          0 <=> 0
+        end
+      end
     end
 
   end

@@ -31,27 +31,33 @@ module Jekyll
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
 
-      self.data['title'] = 'Web Updates'
+      if paginationIndex == 0
+        self.data['title'] = 'Updates Home'
+      else
+        self.data['title'] = 'Updates Page ' + (paginationIndex + 1).to_s
+      end
       self.data['rss'] = false
       self.data['updates'] = pages.sort {|a,b| b.data['date'] <=> a.data['date'] }
       self.data['pagination_total'] = totalPaginationPages
       self.data['pagination_current'] = paginationIndex
 
-      baseUrl = site.config['WFBaseUrl']
-      if paginationIndex > 0
-        prevIndex = paginationIndex - 1;
-        if prevIndex == 0
-          self.data['prev_url'] = [baseUrl, 'updates'].join('/')
-        else
-          self.data['prev_url'] = [baseUrl, 'updates', 'pages', prevIndex].join('/')
-        end
-      end
+      #baseUrl = site.config['WFBaseUrl']
+      #if paginationIndex > 0
+      #  prevIndex = paginationIndex - 1;
+      #  if prevIndex == 0
+      #    self.data['previousPage'] = [baseUrl, 'updates'].join('/')
+      #  else
+      #    # Because we are zero indexed and the first result is offset by original_target
+      #    # we add 1 to the index
+      #    self.data['previousPage'] = [baseUrl, 'updates', 'pages', prevIndex + 1].join('/')
+      #  end
+      #end
 
-      if paginationIndex < (totalPaginationPages - 1)
-        # Because we are zero indexed and the first result is offset by original_target
-        # we add 2 to the indexs
-        self.data['next_url'] = [baseUrl, 'updates', 'pages', (paginationIndex + 2)].join('/')
-      end
+      #if paginationIndex < (totalPaginationPages - 1)
+      #  # Because we are zero indexed and the first result is offset by original_target
+      #  # we add 2 to the indexs
+      #  self.data['nextPage'] = [baseUrl, 'updates', 'pages', (paginationIndex + 2)].join('/')
+      #end
 
       # We do this so that pages content includes the supploed layout file
       self.read_yaml(File.join(site.source, '_layouts'), 'updates/index.liquid')

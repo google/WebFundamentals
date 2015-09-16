@@ -24,6 +24,7 @@ $color-accent: unquote("rgb(#{$palette-pink-400})");
 @import "partials/components/wf-footer";
 @import "partials/components/wf-header";
 @import "partials/components/wf-author";
+@import "partials/components/wf-article-nav";
 @import "partials/components/wf-nav-drawer";
 
 $border-width: 1px;
@@ -47,6 +48,11 @@ $border-width: 1px;
   margin-bottom: $base-line - $border-width;
 
   border-bottom: $border-width solid $grey-border-color;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: none;
+  }
 }
 
 .update-list-item__link-wrapper {

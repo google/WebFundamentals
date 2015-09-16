@@ -30,8 +30,15 @@ module Jekyll
         return
       end
 
-      updateSection = {'id' => 'updates', "pages" => [], "subdirectories" => []}
-      site.data['_context']['subdirectories'] << updateSection
+      updateSection = nil
+      site.data['_context']['subdirectories'].each { |subdirectory|
+        if subdirectory['id'] == 'updates'
+          updateSection = subdirectory
+        end
+      }
+
+      tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
+      updateSection['subdirectories'] << tagsSection
 
       chromeUpdatePages = getPages(site, ['updates'])
       if chromeUpdatePages.nil?
@@ -46,10 +53,47 @@ module Jekyll
       generateFeedPage(site, chromeUpdatePages)
 
       # generate tag pages
-      generateTagPages(site, updateSection, chromeUpdatePages)
+      generateTagPages(site, tagsSection, chromeUpdatePages)
     end
 
-    def generateTagPages(site, updateSection, pages)
+    def generatePaginationPages(site, updateSection, pages)
+      # Filter out pages with dates only
+      pages = pages.map { |page|
+        requiredYamlFields = ['published_on']
+        if (requiredYamlFields - page.data.keys).empty? == false
+          puts "Found an update page without a date - this is surely wrong?"
+          throw new PluginError(PLUGIN_NAME, 'Update page found without a date field. ' +
+            page.name);
+          next
+        end
+
+        page
+      }
+
+      pages = pages.sort { |x,y| y["published_on"] <=> x["published_on"] }
+      numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
+
+      (0..(numberOfPages - 1)).each { |pageIndex|
+        # Creat indices to include in the page results
+        # -1 on endPageIndex accounts for zero indexing
+        startPageIndex = pageIndex * @numberOfResultsPerPage
+        endPageIndex = startPageIndex + @numberOfResultsPerPage - 1
+
+        pagesToInclude = pages[startPageIndex..endPageIndex]
+
+        updatePage = UpdatesPaginationPage.new(site, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
+        updatePage.data['_context'] = updateSection
+
+        site.pages << updatePage
+        if pageIndex == 0
+          updateSection['index'] = updatePage
+        else
+          updateSection['pages'] << updatePage
+        end
+      }
+    end
+
+    def generateTagPages(site, tagsSection, pages)
       dir = File.join(site.data['curr_lang'], 'updates', 'tags')
       tags = []
       tagPageMapping = {}
@@ -89,55 +133,16 @@ module Jekyll
       tags.each do |tag|
         tagPageMapping[tag].uniq!
         tagPage = UpdatesTagPage.new(site, site.data['curr_lang'], tag, tagPageMapping[tag])
-        tagPage.data['_context'] = updateSection
+        tagPage.data['_context'] = tagsSection
         site.pages << tagPage
+        tagsSection['pages'] << tagPage
       end
 
       tagPage = UpdatesTagsPage.new(site, site.data['curr_lang'], tags)
-      tagPage.data['_context'] = updateSection
+      tagPage.data['_context'] = tagsSection
       site.pages << tagPage
+      tagsSection['index'] = tagPage
 
-    end
-
-
-# This is the end of the old untested stuff
-
-    def generatePaginationPages(site, updateSection, pages)
-      # Filter out pages with dates only
-      pages = pages.map { |page|
-        requiredYamlFields = ['published_on']
-        if (requiredYamlFields - page.data.keys).empty? == false
-          puts "Found an update page without a date - this is surely wrong?"
-          throw new PluginError(PLUGIN_NAME, 'Update page found without a date field. ' +
-            page.name);
-          next
-        end
-
-        page
-      }
-
-      pages = pages.sort { |x,y| y["published_on"] <=> x["published_on"] }
-      numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
-
-      (0..(numberOfPages - 1)).each { |pageIndex|
-
-        # Creat indices to include in the page results
-        # -1 on endPageIndex accounts for zero indexing
-        startPageIndex = pageIndex * @numberOfResultsPerPage
-        endPageIndex = startPageIndex + @numberOfResultsPerPage - 1
-
-        pagesToInclude = pages[startPageIndex..endPageIndex]
-
-        updatePage = UpdatesPaginationPage.new(site, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
-        updatePage.data['_context'] = updateSection
-
-        site.pages << updatePage
-        if pageIndex == 0
-          updateSection['index'] = updatePage
-        else
-          updateSection['pages'] << updatePage
-        end
-      }
     end
 
     def calculatePages(pages, numberOfResultsPerPage)
