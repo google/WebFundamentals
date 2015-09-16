@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Render Blocking CSS"
 description: "TODO"
-written_on: 2014-04-01
+published_on: 2014-04-01
 updated_on: 2014-09-18
 order: 4
 translation_priority: 0

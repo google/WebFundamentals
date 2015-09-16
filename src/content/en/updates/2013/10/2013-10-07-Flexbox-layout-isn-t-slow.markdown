@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Flexbox layout isn't slow"
 description: "Good news: new flexbox (display: flex) is 2.3x faster than old flexbox (display: box)!"
-written_on: 2013-10-07
+published_on: 2013-10-07
 updated_on: 2013-10-07
 authors:
   - paulirish

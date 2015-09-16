@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "How to choose breakpoints"
 description: "Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen."
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-09-12
 order: 4
 translation_priority: 0

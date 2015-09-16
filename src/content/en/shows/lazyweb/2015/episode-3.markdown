@@ -4,7 +4,7 @@ title: "Push notifications for the web"
 description: "Chrome 42 lands with Push notifications, Jacob Kaplan-Moss debunks myths about programmers, protocol relative URLs are now anti-patterns, the mobile friendly badge hits Google, git tips with First Aid Git, and optimizing your app with RAIL."
 youtubeID: voo5mxStFKg
 
-written_on: 2015-04-28
+published_on: 2015-04-28
 updated_on: 2015-04-28
 
 ---

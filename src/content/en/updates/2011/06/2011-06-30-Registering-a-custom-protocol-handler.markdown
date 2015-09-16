@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Registering a custom protocol handler"
-written_on: 2011-06-30
+published_on: 2011-06-30
 updated_on: 2011-06-30
 authors:
   - ericbidelman

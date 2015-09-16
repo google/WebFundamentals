@@ -16,12 +16,12 @@
     </div>
   </div>
 
-  {% if include.written_on %}
+  {% if include.published_on %}
   <div class="wf-author__row">
     <div class="wf-author__time-icon">
       {% include svgs/time.svg %}
     </div>
-    <time class="wf-author__date" datetime="{{ include.written_on | date: '%F' }}">{{ include.written_on | date: '%B %-d, %Y' }}</time>
+    <time class="wf-author__date" datetime="{{ include.published_on | date: '%F' }}">{{ include.published_on | date: '%B %-d, %Y' }}</time>
   </div>
   {% endif %}
 </div>

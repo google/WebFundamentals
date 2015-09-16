@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Command click to add multiple cursors in the Sources Panel"
-written_on: 2015-05-19
+published_on: 2015-05-19
 updated_on: 2015-05-19
 authors:
   - umarhansa

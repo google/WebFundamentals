@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "About the Research Study"
 description: "Everyone increasingly relies on the mobile web for research and discovery, and it's vital for companies to have an effective mobile presence. But what makes a good mobile site?"  
-written_on: 2014-08-08
+published_on: 2014-08-08
 updated_on: 2014-08-13
 order: 1
 authors:

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Quota Management API : Fast Facts"
-written_on: 2011-11-11
+published_on: 2011-11-11
 updated_on: 2011-11-11
 authors:
   - agektmr

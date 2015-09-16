@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Better Incognito DevTools"
-written_on: 2015-04-24
+published_on: 2015-04-24
 updated_on: 2015-05-20
 authors:
   - umarhansa

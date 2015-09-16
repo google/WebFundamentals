@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "TODO"
 title: "Optimizing the Critical Rendering Path"
-written_on: 2014-04-01
+published_on: 2014-04-01
 updated_on: 2014-04-28
 order: 8
 

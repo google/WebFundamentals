@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "App Cache Tools and Auto-Generators"
-written_on: 2011-10-28
+published_on: 2011-10-28
 updated_on: 2011-10-28
 authors:
   - sethladd

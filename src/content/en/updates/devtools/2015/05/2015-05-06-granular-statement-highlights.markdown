@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Granular statement highlights"
-written_on: 2015-05-06
+published_on: 2015-05-06
 updated_on: 2015-05-20
 authors:
   - umarhansa

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "requestAnimationFrame API: now with sub-millisecond precision"
-written_on: 2012-05-22
+published_on: 2012-05-22
 updated_on: 2012-05-22
 authors:
   - paulirish

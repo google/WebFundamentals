@@ -2,7 +2,7 @@
 layout: updates/post
 title: "The Yeoman Monthly Digest #1"
 description: "A regular round-up of articles, videos and talks authored by the Yeoman community."
-written_on: 2013-11-07
+published_on: 2013-11-07
 updated_on: 2013-11-07
 authors:
   - addyosmani

@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Inspect CSS Media Queries"
 description: "Preview styles for targeted screen sizes using the Chrome DevTools media query inspector."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-07-31
 order: 4
 authors:

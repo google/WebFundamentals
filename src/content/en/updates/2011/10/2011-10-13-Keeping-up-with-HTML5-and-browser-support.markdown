@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Keeping up with HTML5 and browser support"
-written_on: 2011-10-13
+published_on: 2011-10-13
 updated_on: 2011-10-13
 authors:
   - sethladd

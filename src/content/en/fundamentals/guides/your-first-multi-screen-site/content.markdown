@@ -1,11 +1,11 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Create Your Content and Structure"
 description: "Content is the most important aspect of any site. In this guide, we will show how you can quickly plan to build your first multi-device site."
 notes:
   styling:
     - Styling will come later
-written_on: 2014-04-17
+published_on: 2014-04-17
 updated_on: 2014-04-23
 translation_priority: 0
 authors:

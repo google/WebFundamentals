@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Click to call"
 description: "On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call."
-written_on: 2014-06-17
+published_on: 2014-06-17
 updated_on: 2014-10-21
 order: 1
 authors:

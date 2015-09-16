@@ -1,11 +1,11 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Turn On Strict Transport Security And Secure Cookies"
 description: "TODO"
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 6
 translation_priority: 0

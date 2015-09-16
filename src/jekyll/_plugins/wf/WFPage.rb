@@ -41,7 +41,7 @@ module Jekyll
       @addtionalYamlKeys = addtionalYamlKeys
       @defaultValidKeys = [
         'layout', 'title', 'description', 'order', 'translation_priority',
-        'authors', 'translators', 'comments', 'written_on', 'updated_on',
+        'authors', 'translators', 'comments', 'published_on', 'updated_on',
         'published', 'rss', 'comments', 'key-takeaways', 'notes',
         'related-guides'
       ]
@@ -88,7 +88,7 @@ module Jekyll
           'order',
           'layout',
           'authors',
-          'written_on'
+          'published_on'
         ]
         primaryLangOnlyKeys.each { |key|
           if @defaultValidKeys.include?(key)

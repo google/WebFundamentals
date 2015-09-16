@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Get notified of JS errors while you type"
-written_on: 2015-05-10
+published_on: 2015-05-10
 updated_on: 2015-05-20
 authors:
   - umarhansa

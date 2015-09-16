@@ -1,7 +1,7 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "HTTP caching"
-written_on: 2014-01-01
+published_on: 2014-01-01
 updated_on: 2014-01-05
 order: 6
 translation_priority: 0

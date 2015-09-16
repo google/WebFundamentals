@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Make JavaScript Look Pretty"
 description: "Transform your JavaScript into a more readable form by clicking the Pretty Print icon in Chrome DevTools."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-22
 order: 1
 authors:

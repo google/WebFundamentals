@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Base Styleguide"
 description: "This is a base styleguide for /web on Google Developers"
 order: 2

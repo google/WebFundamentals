@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Toggle the DevTools dock state with a keyboard shortcut"
-written_on: 2015-04-21
+published_on: 2015-04-21
 updated_on: 2015-05-20
 authors:
   - umarhansa

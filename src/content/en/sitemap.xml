@@ -4,7 +4,7 @@
   {% if page.published == true %}
     <url>
       <loc>{{ site.WFAbsoluteUrl }}{{ site.WFBaseUrl }}{{ page.canonical_url }}</loc>
-      <lastmod>{% if page.article.updated_on %}{{ page.article.updated_on }}{% elsif page.article.written_on %}{{ page.article.written_on }}{% else %}2014-05-22{% endif %}</lastmod>
+      <lastmod>{% if page.article.updated_on %}{{ page.article.updated_on }}{% elsif page.article.published_on %}{{ page.article.published_on }}{% else %}2014-05-22{% endif %}</lastmod>
       <changefreq>daily</changefreq>
     </url>
   {% endif %}

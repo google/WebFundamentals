@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "The Chrome DevTools are Chrome's built-in authoring and debugging tool."
 title: Chrome DevTools
 
@@ -78,7 +78,7 @@ panels:
       <div class="container flex">
         <div class="title">
           <h4><a href="{{site.baseurl}}{{article.url | canonicalize}}">DevTools Digest</a></h4>
-          <p class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</p>
+          <p class="date">{{ article.article.published_on | date: '%B %d, %Y' }}</p>
           <div class="explainer">
             The latest features and community updates. Delivered <a href="/web/updates/chrome-devtools/news">every month</a>.
           </div>

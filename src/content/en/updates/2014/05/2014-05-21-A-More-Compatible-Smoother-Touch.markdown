@@ -2,7 +2,7 @@
 layout: updates/post
 title: "A More Compatible, Smoother Touch"
 description: "You and your users want mobile web apps that react and scroll smoothly to the touch. Developing them should be easy but, unfortunately, how mobile web browsers react to touch events during scrolling is left as an implementation detail in the [TouchEvent](http://www.w3.org/TR/touch-events/) specification."
-written_on: 2014-05-21
+published_on: 2014-05-21
 updated_on: 2014-05-21
 authors:
   - paulkinlan

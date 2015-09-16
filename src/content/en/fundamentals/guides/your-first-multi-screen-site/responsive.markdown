@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Make It Responsive"
 description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
 translation_priority: 0
@@ -68,7 +68,7 @@ notes:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed.
-written_on: 2014-04-17
+published_on: 2014-04-17
 updated_on: 2014-04-23
 ---
 

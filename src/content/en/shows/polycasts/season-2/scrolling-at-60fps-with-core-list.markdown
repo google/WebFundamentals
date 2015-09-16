@@ -4,7 +4,7 @@ title: "Scrolling at 60 frames with core-list "
 description: "Scrolling at 60fps doesn't have to be a feat of engineering! With core-list you can scroll through thousands of items and never miss a beat."
 youtubeID: 2UKPRbrw3Kk
 
-written_on: 2015-03-23
+published_on: 2015-03-23
 updated_on: 2015-03-23
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Having a ride with Three.js"
-written_on: 2011-10-07
+published_on: 2011-10-07
 updated_on: 2011-10-07
 authors:
   - paulkinlan

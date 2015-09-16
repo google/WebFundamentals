@@ -4,7 +4,7 @@ title: "Create reusable elements with ease"
 description: "Creating reusable components doesn't have to be so tricky! Use the polyserve tool to make element authoring a breeze."
 youtubeID: p7Q1mQtFGM8
 
-written_on: 2015-03-06
+published_on: 2015-03-06
 updated_on: 2015-03-06
 
 ---

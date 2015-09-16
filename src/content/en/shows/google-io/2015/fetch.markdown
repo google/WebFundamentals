@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Introduction to the Fetch API"
 youtubeID: g6-ZwZmRncs
 
-written_on: 2015-05-28
+published_on: 2015-05-28
 updated_on: 2015-05-28
 
 ---

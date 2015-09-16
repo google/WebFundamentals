@@ -1,13 +1,12 @@
 ---
-rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Persistence with DevTools Workspaces"
 description: "Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk."
 authors:
   - dgash
   - kaycebasques
   - megginkearney
-written_on: 2015-07-09
+published_on: 2015-07-09
 updated_on: 2015-07-31
 order: 3
 key-takeaways:

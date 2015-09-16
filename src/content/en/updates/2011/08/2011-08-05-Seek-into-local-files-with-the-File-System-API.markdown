@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Seek into local files with the File System API"
-written_on: 2011-08-05
+published_on: 2011-08-05
 updated_on: 2011-08-05
 authors:
   - sethladd

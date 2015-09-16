@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Quick FAQs on input[type=date] in Google Chrome"
-written_on: 2012-08-06
+published_on: 2012-08-06
 updated_on: 2012-08-06
 authors:
   - agektmr

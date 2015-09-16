@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "The easing editor"
-written_on: 2015-04-19
+published_on: 2015-04-19
 updated_on: 2015-05-20
 authors:
   - umarhansa

@@ -4,7 +4,7 @@ title: "Go Offline"
 description: "Take your Polymer app offline, without writing a single line of JavaScript! Behold the power of service worker!"
 youtubeID: BucGrYACJdQ
 
-written_on: 2015-06-29
+published_on: 2015-06-29
 updated_on: 2015-06-29
 
 ---

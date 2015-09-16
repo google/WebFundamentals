@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Timeline Event Reference"
 description: "The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-05-12
 order: 3
 authors:

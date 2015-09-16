@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Round-up of Web Browser Internals Resources"
-written_on: 2012-04-10
+published_on: 2012-04-10
 updated_on: 2012-04-10
 authors:
   - paulirish

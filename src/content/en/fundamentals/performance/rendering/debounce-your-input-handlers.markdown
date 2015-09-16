@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Debounce your input handlers"
 description: "Input handlers as a potential cause of performance problems in your apps, as they can block frames completing, and can cause additional (and unnecessary) layout work."
-written_on: 2015-03-20
+published_on: 2015-03-20
 updated_on: 2015-03-20
 order: 7
 translation_priority: 0

@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-written_on: 2015-03-30
+published_on: 2015-03-30
 updated_on: 2015-03-30
 authors:
   - pbakaus

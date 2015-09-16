@@ -1,11 +1,11 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Types of Device Emulators and Simulators"
 description: "Device emulators and simulators let you mimic your development site on a range of devices from your workstation. Learn about the different types of device emulators and simulators available."
 authors:
   - megginkearney
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 2
 key-takeaways:

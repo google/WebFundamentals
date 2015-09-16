@@ -1,11 +1,11 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Intro to Security Terminology"
 description: "When migrating to HTTPS, one of the hurdles site operators face is conceptual: What, exactly, is going on? What does all the crypto terminology mean? In this section, we’ll give a very brief overview."
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 1
 translation_priority: 0

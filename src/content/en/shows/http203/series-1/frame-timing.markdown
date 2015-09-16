@@ -4,7 +4,7 @@ title: "3. Frame Timing API"
 description: "Tracking rendering performance and frames per second out in the wild is a challenge for developers, but it looks like Paul wants to tell Jake about a proposed API that could help out."
 youtubeID: 4zoC3eaa9z0
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

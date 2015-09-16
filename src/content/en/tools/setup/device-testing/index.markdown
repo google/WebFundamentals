@@ -1,9 +1,9 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Virtual Device Testing"
 description: "Check your site's responsive layouts and performance on virtual devices."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 3
 panel: device mode

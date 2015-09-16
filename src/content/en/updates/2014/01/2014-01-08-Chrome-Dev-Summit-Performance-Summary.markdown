@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Chrome Dev Summit: Performance Summary"
 description: "Performance Matters"
-written_on: 2014-01-08
+published_on: 2014-01-08
 updated_on: 2014-01-08
 authors:
   - paullewis

@@ -1,8 +1,8 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Video"
 description: "Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device."
-written_on: 2014-04-16
+published_on: 2014-04-16
 updated_on: 2014-04-29
 order: 2
 translation_priority: 1

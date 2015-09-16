@@ -1,10 +1,10 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Tell users which orientation works best"
 description: "Communicate to users if your site works best in a certain orientation, but ensure your important calls-to-action can be completed regardless of orientation."
 authors:
   - petelepage
-written_on: 2014-09-17
+published_on: 2014-09-17
 updated_on: 2014-09-17
 order: 1
 key-takeaways:

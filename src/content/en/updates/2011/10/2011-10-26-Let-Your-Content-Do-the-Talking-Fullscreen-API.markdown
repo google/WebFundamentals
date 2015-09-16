@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Let Your Content Do the Talking: Fullscreen API"
 description: "Intro to the Full Screen API"
-written_on: 2011-10-26
+published_on: 2011-10-26
 updated_on: 2011-10-26
 authors:
   - ericbidelman

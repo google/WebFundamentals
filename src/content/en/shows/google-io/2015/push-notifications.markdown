@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Push Notifications on the Open Web to increase engagement"
 youtubeID: Z_K8QPQe6oM
 
-written_on: 2015-05-28
+published_on: 2015-05-28
 updated_on: 2015-05-28
 
 ---

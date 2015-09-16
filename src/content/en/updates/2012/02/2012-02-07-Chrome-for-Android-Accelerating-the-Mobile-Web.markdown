@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Chrome for Android: Accelerating the Mobile Web"
-written_on: 2012-02-07
+published_on: 2012-02-07
 updated_on: 2012-02-07
 authors:
   - borissmus
