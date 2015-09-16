@@ -18,7 +18,14 @@ showcase:
       value: 5810
       result: http://www.webpagetest.org/result/150306_X0_PQF/
   link: https://developer.chrome.com/devsummit/
-
+  our_views:
+    good: |
+      - Beatifully Material, yet website. The best of both worlds!
+      - Extremely efficient animations create a smooth experience on all devices
+      - Entire code is open source to inspire developers
+    bad: |
+      - Session information and schedule aren't linked, making for a slightly confusing experience
+      - YouTube embed slows down site load and could have been further deferred
   overview:
     description: "The CDS site was the premier destination to read about all things Chrome Dev Summit, a two-day developer event about Chrome in 2014. It was used by attendees to get infos about the schedule, signup and more."
     audience: Offline and online attendees of the Chrome Dev Summit 2014.
@@ -77,14 +84,5 @@ showcase:
         * **~73.7k** page views, **180k** clicks to site subsections meant that people actually used and engaged with it, much more than expected.
 
         All in all, a great inspiration for today's web developers and a very successful conference website.
-
-  our_views:
-    good:
-      - Beatifully Material, yet website. The best of both worlds!
-      - Extremely efficient animations create a smooth experience on all devices
-      - Entire code is open source to inspire developers
-    bad:
-      - Session information and schedule aren't linked, making for a slightly confusing experience
-      - YouTube embed slows down site load and could have been further deferred
 ---
 
