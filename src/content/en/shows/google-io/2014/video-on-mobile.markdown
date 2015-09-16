@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Video on mobile"
 description: "Making the most of media APIs across platforms, with an emphasis on practical advice for web devs."
 youtubeID: j5fYOYrsocs

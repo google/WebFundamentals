@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Performance Panel"
 youtubeID: ju6oOsFOc3k
 

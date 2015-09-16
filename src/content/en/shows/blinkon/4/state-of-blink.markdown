@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "State of Blink"
 description: "Kent Tamura & Doug Stockwell give an update on the state of Chrome's rendering engine Blink."
 youtubeID: Ap5sWqtCE2o

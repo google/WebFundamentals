@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Push Notifications on the Open Web to increase engagement"
 youtubeID: Z_K8QPQe6oM
 

@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Media APIs for the Multi-Platform Web"
 description: "Along with a proliferation of new devices and platforms on the web, we're seeing huge growth in audio, video and realtime communication. Online media is transforming the way we consume media of all kinds."
 youtubeID: l-BA9Ee2XuM

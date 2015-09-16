@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Demystifying encodes and decodes of WebM"
 description: "Tips, tricks and practices to encode a video into WebM using VPx codecs for delivery across the web and on Android."
 youtubeID: o-TAyIQBOuA

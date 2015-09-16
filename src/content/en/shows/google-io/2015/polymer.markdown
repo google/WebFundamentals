@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Polymer and modern web APIs: In production at Google scale"
 youtubeID: fD2As5RmM8Q
 

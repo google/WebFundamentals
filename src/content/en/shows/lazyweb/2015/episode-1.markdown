@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "The physical web is all around us"
 description: "Microsoft shows off Project Spartan, Beacons by Blesh connect the physical world to your phone, React Native goes open source, a11y-wins.tumblr.com catalogs great accessibility, Polymer 0.8 hits the airwaves, and preload links get an intent to implemnt"
 youtubeID: REAnmF5FHUA

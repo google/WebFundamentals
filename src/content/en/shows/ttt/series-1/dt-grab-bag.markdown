@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "DevTools Grab Bag of Tricks"
 description: "Matt and Addy dive into a grab bag of DevTools tips and tricks covering everything from working with our new animation tools to pro-tips for the Console."
 

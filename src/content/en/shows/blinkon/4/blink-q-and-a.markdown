@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "Blink 4 Q & A"
 youtubeID: d_8UvfFc6Rk
 

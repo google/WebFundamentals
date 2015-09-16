@@ -1,0 +1,13 @@
+{% include page-structure/open-page.liquid %}
+
+<div class="page-content">
+
+  {% ytvideo page.youtubeID %}
+
+  {{ content }}
+
+</div>
+
+{% include shows/shows-in-season.liquid %}
+
+{% include page-structure/close-page.liquid %}

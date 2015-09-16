@@ -1,5 +1,5 @@
 ---
-layout: shows/single-video
+layout: shows/episode
 title: "60fps Layout and Rendering"
 description: "Hitting 60fps in your projects directly correlates to user engagement and is crucial to its success. In this talk Nat and Tom talked about Chrome’s rendering pipeline, some common causes of dropped frames and how to avoid them."
 youtubeID: YyQYhhy1dZI
