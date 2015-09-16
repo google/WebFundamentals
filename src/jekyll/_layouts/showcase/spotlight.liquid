@@ -4,43 +4,54 @@
 
 {% assign showcase = page.showcase %}
 
-<div class="page-content">
-
-  <header>
+<div class="wf-subheading">
+  <div class="page-content">
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--6-col">
-        <h1>{{page.title}}</h1>
-        {% if page.subtitle %}<h2>{{page.subtitle}}</h2>{% endif %}
-        <p>
-          <a href="{{showcase.link}}">{{showcase.link}}</a>
-          {% if page.tags %} -
+        <h2>{{page.title}}</h2>
+        {% if page.subtitle %}<h3>{{page.subtitle}}</h3>{% endif %}
+        <p><a href="{{showcase.link}}">{{showcase.link}}</a></p>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col" style="height:100px;">
+        <img src="{{showcase.key_image}}" class="spotlight-header__image" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col">
+        {% if page.tags %}
+          <p>
             {% for tag in page.tags %}
             <a href="{{site.baseurl}}/showcase/spotlight/tags/{{tag}}">#{{tag}}</a>
             {% endfor %}
-          {% endif %}
-        </p>
-        <div class="spotlight-scores clear">
-          <div class="g--third">
+          </p>
+        {% endif %}
+        <div class="mdl-grid spotlight-scores">
+          <div class="mdl-cell mdl-cell--4-col">
             <span class="{% if showcase.scores.pagespeed.ux < 60 %}low{% elsif showscores.pagespeed.ux < 71 %}med{% else %}high{% endif %}"><strong>{{showcase.scores.pagespeed.ux}}</strong>/100</span>
             <a href="https://developers.google.com/speed/pagespeed/insights/?url={{showcase.link}}">PageSpeed UX</a>
           </div>
-          <div class="g--third">
+          <div class="mdl-cell mdl-cell--4-col">
             <span class="{% if showcase.scores.pagespeed.speed < 60 %}low{% elsif showcase.scores.pagespeed.speed < 71 %}med{% else %}high{% endif %}"><strong>{{showcase.scores.pagespeed.speed}}</strong>/100</span>
             <a href="https://developers.google.com/speed/pagespeed/insights/?url={{page.link}}">PageSpeed</a>
           </div>
-          <div class="g--third g--last">
+          <div class="mdl-cell mdl-cell--4-col">
             <span class="{% if showcase.scores.webpagetest.value > 6000 %}low{% elsif showcase.scores.webpagetest.value > 3000 %}med{% else %}high{% endif %}"><strong>{{showcase.scores.webpagetest.value}}</strong></span>
             <a href="{{showcase.scores.webpagetest.result}}">Speed Index (3G)</a>
           </div>
         </div>
       </div>
       <div class="mdl-cell mdl-cell--6--col">
-        <a href="{{showcase.link}}">
-          <img src="{{showcase.key_image}}" class="spotlight-header__image" alt="">
-        </a>
+
       </div>
     </div>
-  </header>
+
+  <div class="clear"></div>
 
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6-col">
