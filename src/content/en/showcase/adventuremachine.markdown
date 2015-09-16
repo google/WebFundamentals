@@ -19,10 +19,11 @@ showcase:
       result: http://www.webpagetest.org/result/150710_W2_CY/
   link: http://www.madeon.fr/adventuremachine/
   developer: Syd Lawrence
-  pros: |
-    The Adventure Machine is a really simple app, but it does its job quite well. By utilizing Web Audio and optionally Web Midi (yes – you can connect your own synthesizer!), the newly created loops that appear by the touch of a button sync perfectly, and the interface works well on mobile, especially when installed to home screen.
-  cons: |
-    The load time (see WebPageTest score) on mobile 3G could be significantly improved if the the precaching of all beats and loops was removed or done in a smarter way. Gzip compression on assets is missing and and easy fix, and the touch targets are slightly too small for smaller screens.
+  our_views:
+    good: |
+      The Adventure Machine is a really simple app, but it does its job quite well. By utilizing Web Audio and optionally Web Midi (yes – you can connect your own synthesizer!), the newly created loops that appear by the touch of a button sync perfectly, and the interface works well on mobile, especially when installed to home screen.
+    bad: |
+      The load time (see WebPageTest score) on mobile 3G could be significantly improved if the the precaching of all beats and loops was removed or done in a smarter way. Gzip compression on assets is missing and and easy fix, and the touch targets are slightly too small for smaller screens.
 
   interview:
     - question: Why the web?

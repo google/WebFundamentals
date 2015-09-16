@@ -19,13 +19,13 @@ showcase:
       result: http://www.webpagetest.org/result/150327_FT_JNW/
   link: http://merrypixmas.com
   developer: Jim Savage
-  pros: |
-    A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a Web manifest for a home screen experience that launches full screen.
+  our_views:
+    good: |
+      A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a Web manifest for a home screen experience that launches full screen.
 
     Pro tip: Shake your phone to make it snow!
-  cons: |
-    Even though I realize it is a demo, a few specificed cache headers on assets and non-render-blocking JavaScript could have improved the perceived load time quite a bit.
-
+    bad: |
+      Even though I realize it is a demo, a few specificed cache headers on assets and non-render-blocking JavaScript could have improved the perceived load time quite a bit.
   interview:
     - question: Why the web?
       answer: |
