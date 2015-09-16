@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Adding Interactivity with JavaScript"
 description: "JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance."
-written_on: 2014-01-01
+published_on: 2014-01-01
 updated_on: 2014-09-18
 order: 5
 authors:

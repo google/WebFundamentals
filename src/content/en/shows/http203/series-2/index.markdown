@@ -2,6 +2,6 @@
 layout: shows/series-index
 title: "HTTP203: Series 2"
 
-written_on: 2015-05-18
+published_on: 2015-05-18
 updated_on: 2015-05-18
 ---

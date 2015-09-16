@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Web Audio Changes in m36"
 description: "Description of Web Audio standards cleanup work in m36"
-written_on: 2014-07-25
+published_on: 2014-07-25
 updated_on: 2014-07-25
 authors:
   - chriswilson

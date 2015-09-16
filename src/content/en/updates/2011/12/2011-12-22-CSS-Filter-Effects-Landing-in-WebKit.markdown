@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "CSS Filter Effects Landing in WebKit"
-written_on: 2011-12-22
+published_on: 2011-12-22
 updated_on: 2011-12-22
 authors:
   - ericbidelman

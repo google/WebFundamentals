@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Drag and drop a folder onto Chrome now available "
-written_on: 2012-07-23
+published_on: 2012-07-23
 updated_on: 2012-07-23
 authors:
   - agektmr

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Welcome to updates.html5rocks.com!"
-written_on: 2011-06-23
+published_on: 2011-06-23
 updated_on: 2011-06-23
 authors:
   - ericbidelman

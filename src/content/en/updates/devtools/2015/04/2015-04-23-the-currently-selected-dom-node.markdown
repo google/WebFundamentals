@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "The currently selected DOM node"
-written_on: 2015-04-23
+published_on: 2015-04-23
 updated_on: 2015-05-20
 authors:
   - umarhansa

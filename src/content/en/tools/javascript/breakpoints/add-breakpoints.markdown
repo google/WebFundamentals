@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "How to Add or Remove Breakpoints"
 description: "DevTools provides four types of breakpoints that you use in different circumstances: line, DOM mutation, XMLHttpRequest, event listener. Each breakpoint type is added or removed differently."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-08-03
 order: 2
 authors:

@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Speed Up JavaScript Execution"
 description: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 optimization checks."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-07-16
 order: 2
 authors:

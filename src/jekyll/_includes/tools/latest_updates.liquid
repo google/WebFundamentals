@@ -17,7 +17,7 @@
       <h4><span>{{article.type}}</span>{{article.title}}</h4>
       </a>
       <div class="details">
-        <div class="date">{{ article.article.written_on | date: '%B %d, %Y' }}</div>
+        <div class="date">{{ article.article.published_on | date: '%B %d, %Y' }}</div>
         {% if article.authors %}
         <div class="author">
         {% for author in article.authors %}

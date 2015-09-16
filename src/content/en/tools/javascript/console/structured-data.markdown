@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Compare Similar Data Objects"
 description: "Compare similar data objects using the <code>table()<code> method."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-05-12
 order: 3
 authors:

@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "The Jake Bits"
 youtubeID: mky3ejiGrog
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

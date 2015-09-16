@@ -4,7 +4,7 @@ title: "2.5. Performance Matters"
 description: "From talking vDOM to lying to users, Paul & Jake are all about ensuring users get blazing fast sites."
 youtubeID: 6Zgp_G5o6Oc
 
-written_on: 2015-07-13
+published_on: 2015-07-13
 updated_on: 2015-07-13
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Don't Miss a Frame: Using the Page Visibility API + HTML5 Video"
-written_on: 2011-07-16
+published_on: 2011-07-16
 updated_on: 2011-07-16
 authors:
   - ericbidelman

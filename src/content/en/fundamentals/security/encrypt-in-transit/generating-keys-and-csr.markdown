@@ -5,7 +5,7 @@ description: "This section uses the openssl command-line program, which comes wi
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 2
 translation_priority: 0

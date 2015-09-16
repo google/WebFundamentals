@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Image optimization"
-written_on: 2014-05-07
+published_on: 2014-05-07
 updated_on: 2014-05-10
 order: 4
 translation_priority: 0

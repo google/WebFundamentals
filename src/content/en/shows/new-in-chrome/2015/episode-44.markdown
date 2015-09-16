@@ -5,7 +5,7 @@ description: "Chrome 44 includes improvements to the App Install Banner, changes
 
 youtubeID: ghgx3j3ydwU
 
-written_on: 2015-07-21
+published_on: 2015-07-21
 updated_on: 2015-07-21
 
 ---

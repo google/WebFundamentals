@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Label and name inputs properly"
 description: "Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs."
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2015-03-27
 order: 3
 authors:

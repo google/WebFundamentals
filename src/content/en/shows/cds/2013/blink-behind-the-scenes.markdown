@@ -4,7 +4,7 @@ title: "Blink: Behind the Scenes"
 description: "Blink is Chrome's open-source rendering engine. The Blink team is evolving the web and addressing the issues encountered by developers, learn more about how in this video."
 youtubeID: 392VTLQyKDc
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

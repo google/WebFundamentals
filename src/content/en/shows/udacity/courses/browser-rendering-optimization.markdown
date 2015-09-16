@@ -9,7 +9,7 @@ udacity:
   instructor: paullewis
   preview:
     youtube: yJo9lZAEqb0
-written_on: 2015-04-15
+published_on: 2015-04-15
 updated_on: 2015-04-15
 ---
 

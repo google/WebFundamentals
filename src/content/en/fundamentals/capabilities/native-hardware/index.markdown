@@ -2,7 +2,7 @@
 layout: fundamentals/list-subdirectories
 title: "Native Hardware Access"
 description: "TODO: Description"
-written_on: 2015-07-21
+published_on: 2015-07-21
 updated_on: 2015-07-21
 translation_priority: 0
 ---

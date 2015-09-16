@@ -5,7 +5,7 @@ description: "TODO"
 notes:
   styling:
     - Styling will come later
-written_on: 2014-04-17
+published_on: 2014-04-17
 updated_on: 2014-04-23
 translation_priority: 0
 authors:

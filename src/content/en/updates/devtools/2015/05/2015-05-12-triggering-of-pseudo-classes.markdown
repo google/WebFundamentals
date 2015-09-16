@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Triggering of pseudo classes"
-written_on: 2015-05-12
+published_on: 2015-05-12
 updated_on: 2015-05-19
 authors:
   - umarhansa

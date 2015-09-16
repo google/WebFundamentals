@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Material Design Deconstructed"
 youtubeID: tfSiXRy1vEw
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

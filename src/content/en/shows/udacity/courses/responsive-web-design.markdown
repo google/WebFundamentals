@@ -9,7 +9,7 @@ udacity:
   instructor: petelepage
   preview:
     youtube: 7DJLa4owtIU
-written_on: 2015-03-18
+published_on: 2015-03-18
 updated_on: 2015-03-18
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Content Security Policy 1.0 is officially awesome."
-written_on: 2012-11-16
+published_on: 2012-11-16
 updated_on: 2012-11-16
 authors:
   - mikewest

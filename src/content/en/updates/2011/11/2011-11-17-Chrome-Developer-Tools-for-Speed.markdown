@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Chrome Developer Tools for Speed"
-written_on: 2011-11-17
+published_on: 2011-11-17
 updated_on: 2011-11-17
 authors:
   - paulirish

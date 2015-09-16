@@ -4,7 +4,7 @@ title: "Season's greetings!"
 description: "Hey there Polycasters! We wanted to take a moment to wish you all very happy holidays and thank you so much for checking out the first season. In today's episode we have highlights from the Chrome Dev Summit and a survey so *you* can let us know what content you'd like to see in the second season."
 youtubeID: aDQUYs-0hxQ
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

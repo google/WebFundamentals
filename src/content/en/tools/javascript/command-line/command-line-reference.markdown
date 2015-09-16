@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Command Line API Reference"
 description: "TODO"
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-08-03
 order: 3
 authors:

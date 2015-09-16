@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "DevTools Timeline: Now Providing the Full Story"
-written_on: 2015-03-24
+published_on: 2015-03-24
 updated_on: 2015-05-08
 authors:
   - heathermahan

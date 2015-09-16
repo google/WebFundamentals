@@ -4,7 +4,7 @@ title: "Video on mobile"
 description: "Making the most of media APIs across platforms, with an emphasis on practical advice for web devs."
 youtubeID: j5fYOYrsocs
 
-written_on: 2015-03-30
+published_on: 2015-03-30
 updated_on: 2015-03-30
 ---
 

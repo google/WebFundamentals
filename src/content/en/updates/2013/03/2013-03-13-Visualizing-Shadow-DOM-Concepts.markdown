@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Visualizing Shadow DOM Concepts"
-written_on: 2013-03-13
+published_on: 2013-03-13
 updated_on: 2013-03-13
 authors:
   - ericbidelman

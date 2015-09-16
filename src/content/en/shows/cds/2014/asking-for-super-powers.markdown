@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Asking for Superpowsers: Chrome's Permission Model"
 youtubeID: 3dAwZVsS8wo
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

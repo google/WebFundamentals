@@ -4,7 +4,7 @@ title: "Use existing information to maximize convenience"
 description: "Take advantage of information you already have, and/or use third-party payment services to make conversion as easy as possible."
 authors:
   - petelepage
-written_on: 2014-08-07
+published_on: 2014-08-07
 updated_on: 2014-09-19
 order: 4
 comments: 

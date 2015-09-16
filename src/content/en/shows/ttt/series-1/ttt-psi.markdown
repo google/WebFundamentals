@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Totally Tooling Mini Tip: Page Speed Insights"
 description: "A quick tip looking at Page Speed Insights and how it can improve your site's performance."
 youtubeID: bDUDuQy3R7Y
-written_on: 2015-07-08
+published_on: 2015-07-08
 updated_on: 2015-07-08
 ---
 

@@ -3,7 +3,7 @@ rss: false
 layout: fundamentals/list-subdirectories
 title: "Iterate"
 description: "Test and tweak your site design and content iteratively."
-written_on: 2015-04-13
+published_on: 2015-04-13
 updated_on: 2015-04-22
 order: 1
 translation_priority: 0

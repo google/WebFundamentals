@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Page Load Performance"
 description: "Test how your pages load in varying network conditions. Offer users the best possible experience despite network connectivity."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 3
 authors:

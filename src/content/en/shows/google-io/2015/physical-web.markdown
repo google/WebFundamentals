@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Introduction to the Physical Web"
 youtubeID: 1yaLPRgtlR0
 
-written_on: 2015-07-18
+published_on: 2015-07-18
 updated_on: 2015-07-18
 
 ---
