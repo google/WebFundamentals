@@ -151,3 +151,14 @@ The relative url is the relative url for a page from the root of the domain
 {% highlight text %}
 {{page.relative_url}}
 {% endhighlight %}
+
+## page.outOfDate
+
+This variable is defined for every page and will be true if a translation is
+no longer up to date with the primary language version.
+
+{% highlight text %}
+{% raw %}
+{{page.outOfDate}}
+{% endraw %}
+{% endhighlight %}

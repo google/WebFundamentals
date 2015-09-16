@@ -2,6 +2,7 @@
 title: "تحسين الإعلانات"
 description: "يمكن أن يساعد تحسين موقعك والإعلانات التي تظهر عليه في دعم جودة الإعلانات التي تُعرض وزيادة الأرباح."
 updated_on: 2014-08-12
+authors:
   - petelepage
 key-takeaways:
   tldr:
@@ -48,7 +49,7 @@ key-takeaways:
 
 
 
-يوفر <b>مربع التوصيات</b> في علامة التبويب [الرئيسية](https://www.google.com/adsense/app#home) توصيات حول كيفية تغيير الموقع لتحقيق مزيد من الأرباح. 
+يوفر <b>مربع التوصيات</b> في علامة التبويب [الرئيسية](https://www.google.com/adsense/app#home) توصيات حول كيفية تغيير الموقع لتحقيق مزيد من الأرباح.
 تعتمد هذه التوصيات على تحليل أداء التوصيات التي تم مؤخرًا تطبيقها بواسطة ناشرين آخرين على AdSense ولا يتم تقديمها إلا إذا كانت هناك ثقة عالية في زيادة مستوى الأداء.
 
 {% include shared/remember.liquid title="Learn more" text="راجع <a href='https://support.google.com/adsense/answer/3006004'>معلومات حول بطاقة النتائج</a> و <a href='https://support.google.com/adsense/answer/1725006'>مربع التوصيات</a> في مساعدة AdSense." %}
@@ -123,7 +124,3 @@ key-takeaways:
 
     User-agent: Mediapartners-Google
     Disallow: /
-
-
-
-

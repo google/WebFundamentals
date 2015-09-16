@@ -29,7 +29,7 @@ key-takeaways:
 notes:
   use-commas:
     - "Use a comma to separate attributes to ensure older browsers can properly parse the attributes."
-comments: 
+comments:
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19
 udacity:
