@@ -22,7 +22,7 @@ module Jekyll
     alias superpath path
 
     attr_reader :raw_canonical_url, :canonical_url, :relative_url,
-      :directories, :context, :main_author, :nextPage, :previousPage
+      :directories, :context, :main_author, :nextPage, :previousPage, :outOfDate
 
     def initialize(site, relativeDir, filename, addtionalYamlKeys=[])
       @contentSource = site.config['WFContentSource']
@@ -70,7 +70,7 @@ module Jekyll
       self.data['theme_color'] = '#03A9F4'
       self.data['feed_name'] = 'Web - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
-      self.data['translations'] = []
+      self.data['translations'] = {}
     end
 
     # This is called when the main generator has finished creating pages
@@ -208,7 +208,7 @@ module Jekyll
 
       bestPage = page
       if page.langcode != @langcode
-        page.data['translations'].each { |translationPage|
+        page.data['translations'].each { |langcode, translationPage|
           if translationPage.langcode == @langcode
             bestPage = translationPage
             break
@@ -359,13 +359,33 @@ module Jekyll
       getAppropriatePage(self.data['_previousPage'])
     end
 
+    def outOfDate
+      if self.langcode == site.config['primary_lang']
+        # The primary lang should never be out of date
+        return false
+      end
+
+      if (self.data['translations'][site.config['primary_lang']].data['updated_on'].nil?) || (self.data['updated_on'].nil?)
+        if not ((self.data['translations'][site.config['primary_lang']].data['updated_on'].nil?) && (self.data['updated_on'].nil?))
+          raise Exception.new("A translation file has an updated_on while the primary language version doesn't have an updated_on field. Please add one.")
+        end
+        return false
+      end
+
+      if self.data['updated_on'] < self.data['translations'][site.config['primary_lang']].data['updated_on']
+        return true
+      end
+
+      return false
+    end
+
     # Convert this post into a Hash for use in Liquid templates.
   #
   # Returns <Hash>
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
     super(attrs + %w[ raw_canonical_url ] + %w[ canonical_url ] +
       %w[ relative_url ] + %w[ context ] + %w[ main_author ] + %w[ nextPage ] +
-      %w[ previousPage ])
+      %w[ previousPage ] + %w[ outOfDate ])
   end
   end
 end

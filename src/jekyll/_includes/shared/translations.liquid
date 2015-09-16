@@ -1,12 +1,22 @@
 {% comment %}
   The greater > 1 is to account for English language.
 {% endcomment %}
+
 {% if page.translations.size > 1 %}
+
 <ul class="wf-translation-links">
-  {% for translatedPage in page.translations %}
+  {% for translatedPageMap in page.translations %}
     <li class="wf-translation-link__item">
-      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPage.canonical_url }}">{{  translatedPage.langcode | lang_name }}</a>
+      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPageMap[1].canonical_url }}">{{  translatedPageMap[1].langcode | lang_name }}</a>
     </li>
   {% endfor %}
 </ul>
+
+{% if page.outOfDate %}
+<div class="wf-translation-warning">
+  <p class="mdl-typography--caption wf-translation-warning__title">Out of Date!</p>
+  <p class="mdl-typography--caption-color-contrast wf-translation-warning__description">This article's translation is out of date with the <a href="{{page.raw_canonical_url}}">original version</a>.</p>
+</div>
+{% endif%}
+
 {% endif %}

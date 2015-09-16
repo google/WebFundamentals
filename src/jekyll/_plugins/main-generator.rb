@@ -214,7 +214,7 @@ module Jekyll
 
             page.data['is_localized'] = supportedTranslations.count > 0
 
-            translated_pages = [page]
+            translated_pages = {'en' => page}
             supportedTranslations.each do |languageId|
               translationFilePath = File.join @contentSource, languageId, relativePath
 
@@ -224,14 +224,13 @@ module Jekyll
                 fileEntry,
                 languageId,
                 true)
+
               translationPage.data.merge!('is_localized' => true, 'is_localization' => true)
-              #keysToCopyFromPrimaryLang = WFPage.getPrimaryLangOnlyYamlKeys()
-              #keysToCopyFromPrimaryLang.each { |key|
-              #  translationPage.data[key] = page.data[key]
-              #}
+
               translationPage.data['_context'] = pagesTrees
               translationPage.data['translations'] = translated_pages
-              translated_pages << translationPage
+
+              translated_pages[languageId] = translationPage
               site.pages << translationPage
             end
 
@@ -305,46 +304,6 @@ module Jekyll
       end
     end
 
-    def organisePageTree(tree)
-      tree['pages'] = tree['pages'].sort do |a, b|
-        a_order = a.data['order'] || a.data['published_on'] || 0
-        b_order = b.data['order'] || b.data['published_on'] || 0
-        a_order <=> b_order
-      end
-
-      tree['pages'].each_with_index { |a, i|
-        a.data['_nextPage'] = tree['pages'][i+1]
-        if i > 0
-          a.data['_previousPage'] = tree['pages'][i-1]
-        elsif i == 0
-          a.data['_previousPage'] = tree['index']
-        end
-      }
-
-      tree['subdirectories'].each { |value|
-        organisePageTree(value)
-      }
-
-      tree['subdirectories'] = tree['subdirectories'].sort do |a, b|
-        a_order = 0
-        b_order = 0
-
-        if !a['index'].nil?
-          a_order = a['index'].data['order'] || a['index'].data['date'] || 0
-        end
-        if !b['index'].nil?
-          b_order = b['index'].data['order'] || b['index'].data['date'] || 0
-        end
-
-        if a_order.is_a?(Integer) & b_order.is_a?(Integer)
-            a_order <=> b_order
-        elsif a_order.is_a?(String) & b_order.is_a?(String)
-            a_order <=> b_order
-        else
-          0 <=> 0
-        end
-      end
-    end
   end
 
 end

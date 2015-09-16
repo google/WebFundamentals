@@ -2,6 +2,7 @@
 title: "优化广告"
 description: "优化网站，使网站上展示的广告可以提高已投放广告的质量，并提高您的获利能力。"
 updated_on: 2014-08-12
+authors:
   - petelepage
 key-takeaways:
   tldr:
@@ -123,7 +124,3 @@ AdSense 必须能够处理网页内容并将其编入索引，然后使用 AdSen
 
     User-agent: Mediapartners-Google
     Disallow: /
-
-
-
-
