@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Mimic Your Site on a Range of Devices"
 description: "Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices."
 authors:

@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Images in Markup"
 description: "The `img` element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image formats."
 authors:

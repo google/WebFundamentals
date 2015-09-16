@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Debug WebView Content in Your Development Workspace"
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 authors:

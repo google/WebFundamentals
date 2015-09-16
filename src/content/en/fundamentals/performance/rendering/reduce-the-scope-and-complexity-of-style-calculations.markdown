@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Reduce the scope and complexity of style calculations"
 description: "Changing the DOM, through adding and removing elements, changing attributes, classes, or through animation, will all cause the browser to recalculate element styles and, in many cases, layout (or reflow) the page, or parts of it. This process is called computed style calculation."
 written_on: 2015-03-20

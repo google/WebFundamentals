@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Stick to compositor-only properties and manage layer count"
 description: "Compositing is where the painted parts of the page are put together for displaying on screen."
 written_on: 2015-03-20

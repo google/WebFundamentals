@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "CSS vs JavaScript Animations"
 description: "You can animate with CSS or JavaScript. Which should you use, and why?"
 written_on: 2014-08-08

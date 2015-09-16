@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Animations"
 description: "Get a better understanding of animations and their use in modern apps and sites."
 written_on: 2014-08-08

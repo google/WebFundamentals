@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Eliminating unnecessary downloads"
 written_on: 2014-04-01
 updated_on: 2014-04-29

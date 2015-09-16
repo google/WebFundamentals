@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Provide alternatives for legacy platforms"
 description: "Not all video formats are supported on all platforms. Check which formats are supported on the major platforms and make sure your video works in each of these."
 written_on: 2014-04-16

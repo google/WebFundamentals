@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Accessibility matters"
 description: "Accessibility isn't a feature."
 written_on: 2014-04-16

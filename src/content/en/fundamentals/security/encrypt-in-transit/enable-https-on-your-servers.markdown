@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Enable HTTPS On Your Servers"
 description: "You are ready for the all important step of enabling HTTPS on your servers."
 authors:

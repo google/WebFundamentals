@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Set Up Chrome DevTools"
 rss: false
 description: "Chrome Developer Tools (DevTools) helps you develop, test, and debug your web sites and applications directly from the Google Chrome browser."

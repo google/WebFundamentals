@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 description: "TODO"
 title: "Measuring the Critical Rendering Path with Navigation Timing"
 written_on: 2014-04-01

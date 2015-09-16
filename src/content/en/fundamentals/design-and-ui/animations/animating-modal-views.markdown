@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Animating Modal Views"
 description: "Learn how to animate modal views in your apps."
 written_on: 2014-08-08

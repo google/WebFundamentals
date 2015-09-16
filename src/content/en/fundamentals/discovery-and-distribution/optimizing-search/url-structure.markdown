@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Instruct Search Engines How Your Multi-Device Page is Structured"
 description: "If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures."
 authors:

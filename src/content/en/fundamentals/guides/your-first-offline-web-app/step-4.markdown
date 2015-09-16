@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Build the starter app"
 description: "TODO"
 notes:

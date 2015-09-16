@@ -1,6 +1,6 @@
 ---
 rss: false
-layout: shared/plain
+layout: shared/narrow
 title: "Manage Your Local Data Resources"
 description: "Inspect and manage your application’s local data resources using the Chrome Developer Tools Resources panel."
 written_on: 2015-04-14

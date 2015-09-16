@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Custom Tags"
 description: "This is a list of custom tags currently in use on /web on Google Developers"
 order: 5

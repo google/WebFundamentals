@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Optimize images for performance"
 description: "Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page."
 authors:

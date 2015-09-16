@@ -1,5 +1,5 @@
 ---
-layout: shared/plain
+layout: shared/narrow
 title: "Make it easy to finish on another device"
 description: "Offer an easy way to save or share information across devices"
 authors:
