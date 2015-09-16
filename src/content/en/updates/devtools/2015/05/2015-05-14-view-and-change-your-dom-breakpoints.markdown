@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "View and change your DOM breakpoints"
-written_on: 2015-05-14
+published_on: 2015-05-14
 updated_on: 2015-05-20
 authors:
   - umarhansa

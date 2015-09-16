@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink Moving OWP Security Forward"
 youtubeID: O0xEnPLWKvQ
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Joel Weinberger gives an update on improving web security and new policies around delivering new features.

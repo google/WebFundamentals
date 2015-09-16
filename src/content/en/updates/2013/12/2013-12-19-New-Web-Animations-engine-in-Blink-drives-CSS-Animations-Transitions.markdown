@@ -2,7 +2,7 @@
 layout: updates/post
 title: "New Web Animations engine in Blink drives CSS Animations & Transitions"
 description: "An implementation of Web Animations 1.0 has landed in Blink powering CSS Animations and Transitions."
-written_on: 2013-12-19
+published_on: 2013-12-19
 updated_on: 2013-12-19
 authors:
   - alexdanilo

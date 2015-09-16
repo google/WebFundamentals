@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Don't Build Blobs, Construct Them"
-written_on: 2012-06-11
+published_on: 2012-06-11
 updated_on: 2012-06-11
 authors:
   - ericbidelman

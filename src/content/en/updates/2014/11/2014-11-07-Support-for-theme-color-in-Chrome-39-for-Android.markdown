@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Support for theme-color in Chrome 39 for Android"
 description: "Use theme-color to set the toolbar color in Chrome for Android."
-written_on: 2014-11-07
+published_on: 2014-11-07
 updated_on: 2014-11-07
 authors:
   - petelepage

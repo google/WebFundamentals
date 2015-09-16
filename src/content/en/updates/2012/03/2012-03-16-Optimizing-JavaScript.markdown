@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Optimizing JavaScript"
-written_on: 2012-03-16
+published_on: 2012-03-16
 updated_on: 2012-03-16
 authors:
   - sethladd

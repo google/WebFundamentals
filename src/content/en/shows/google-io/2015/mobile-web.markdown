@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "The next generation mobile web"
 youtubeID: iZZdhTUP5qg
 
-written_on: 2015-05-28
+published_on: 2015-05-28
 updated_on: 2015-05-28
 
 ---

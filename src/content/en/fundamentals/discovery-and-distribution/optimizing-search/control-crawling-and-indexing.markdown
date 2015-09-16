@@ -4,7 +4,7 @@ title: "Control crawling and indexing from search engines"
 description: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
 authors:
   - agektmr
-written_on: 2014-12-15
+published_on: 2014-12-15
 updated_on: 2014-12-15
 order: 3
 key-takeaways:

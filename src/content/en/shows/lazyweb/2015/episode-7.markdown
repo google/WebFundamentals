@@ -4,7 +4,7 @@ title: "Episode 7"
 description: "Building your first app in Angular 2, Addy Osmani and Matt Gaunt show off Subime Text plugins, Time Travel debugging in Microsoft Edge, a voice recorder for the mobile web, filmstrip view in Chrome DevTools, and HTTP203 with Paul Lewis and Jake Archibald is back."
 youtubeID: M6ZRJX-3Exw
 
-written_on: 2015-05-27
+published_on: 2015-05-27
 updated_on: 2015-05-27
 
 ---

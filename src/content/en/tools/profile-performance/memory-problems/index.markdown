@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Fix Memory Problems"
 description: "Memory loss occurs when a program repeatedly fails to return memory it has obtained for temporary use. Watch out for memory leaks, bloat, and forced garbage collection."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-07-08
 order: 4
 authors:

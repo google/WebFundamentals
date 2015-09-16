@@ -105,7 +105,7 @@ module Jekyll
     def generatePaginationPages(site, updateSection, pages)
       # Filter out pages with dates only
       pages = pages.map { |page|
-        requiredYamlFields = ['written_on']
+        requiredYamlFields = ['published_on']
         if (requiredYamlFields - page.data.keys).empty? == false
           puts "Found an update page without a date - this is surely wrong?"
           throw new PluginError(PLUGIN_NAME, 'Update page found without a date field. ' +
@@ -116,7 +116,7 @@ module Jekyll
         page
       }
 
-      pages = pages.sort { |x,y| y["written_on"] <=> x["written_on"] }
+      pages = pages.sort { |x,y| y["published_on"] <=> x["published_on"] }
       numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
 
       (0..(numberOfPages - 1)).each { |pageIndex|

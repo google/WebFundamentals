@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink Slimming Paint"
 youtubeID: Sc-vQDHAFtU
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Chris Harrelson gives an update on the Paint team and their current projects. The talk include special attention to the team's progress around the siliming paint project.

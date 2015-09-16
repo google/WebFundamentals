@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink Allocator"
 youtubeID: U8TFBVPF9UQ
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Kentaro Hara gives an update on the Oilpan and PartionAlloc projects for improving memory allocation inside Chrome's rendering engine, Blink.

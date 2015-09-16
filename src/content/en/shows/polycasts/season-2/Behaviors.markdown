@@ -4,7 +4,7 @@ title: "Behaviors"
 description: "Behaviors unlock amazing potential by letting you mix functionality into your elements without relying on inheritance."
 youtubeID: YrlmieL3Z0k
 
-written_on: 2015-07-15
+published_on: 2015-07-15
 updated_on: 2015-07-15
 
 ---

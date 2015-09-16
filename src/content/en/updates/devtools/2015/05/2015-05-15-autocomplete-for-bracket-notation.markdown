@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Autocomplete for bracket notation"
-written_on: 2015-05-15
+published_on: 2015-05-15
 updated_on: 2015-05-20
 authors:
   - umarhansa

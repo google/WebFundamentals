@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "What's the CSS :scope pseudo-class for?"
-written_on: 2013-03-22
+published_on: 2013-03-22
 updated_on: 2013-03-22
 authors:
   - ericbidelman

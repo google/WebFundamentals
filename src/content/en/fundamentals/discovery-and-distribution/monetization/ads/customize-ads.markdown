@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Customize your ads"
 description: "The best ads can improve user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of those ads."
-written_on: 2014-07-31
+published_on: 2014-07-31
 updated_on: 2014-08-12
 order: 3
 translation_priority: 0

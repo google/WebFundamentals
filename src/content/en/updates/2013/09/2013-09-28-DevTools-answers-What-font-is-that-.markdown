@@ -2,7 +2,7 @@
 layout: updates/post
 title: "DevTools answers: What font is that? "
 description: "Ever wondered which font is actually being used to render text? Wonder no more as Chrome DevTools reveals all!"
-written_on: 2013-09-28
+published_on: 2013-09-28
 updated_on: 2013-09-28
 authors:
   - paulirish

@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Expand CSS shorthand properties"
-written_on: 2015-05-11
+published_on: 2015-05-11
 updated_on: 2015-05-20
 authors:
   - umarhansa

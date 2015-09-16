@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Web apps that talk - Introduction to the Speech Synthesis API"
 description: "Introduction to the Web Speech API's synthesis feature."
-written_on: 2014-01-14
+published_on: 2014-01-14
 updated_on: 2014-01-14
 authors:
   - ericbidelman

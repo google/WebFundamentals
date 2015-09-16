@@ -3,7 +3,7 @@ rss: false
 layout: shared/narrow
 title: "Console API Reference"
 description: "Write to the console, create JavaScript profiles, and start debugging sessions with the Console API."
-written_on: 2015-04-14
+published_on: 2015-04-14
 updated_on: 2015-05-12
 order: 6
 authors:

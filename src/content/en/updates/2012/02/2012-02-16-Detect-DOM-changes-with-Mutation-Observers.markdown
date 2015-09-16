@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Detect DOM changes with Mutation Observers"
 description: "An introduction to Mutation Observers."
-written_on: 2012-02-16
+published_on: 2012-02-16
 updated_on: 2012-02-16
 authors:
   - paulkinlan

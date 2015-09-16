@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Alt + Click to expand all child nodes"
-written_on: 2015-04-22
+published_on: 2015-04-22
 updated_on: 2015-05-20
 authors:
   - umarhansa

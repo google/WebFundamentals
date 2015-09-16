@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Fundamentals of Mobile Web Development"
 youtubeID: z6dg_V22wV0
 
-written_on: 2015-02-24
+published_on: 2015-02-24
 updated_on: 2015-02-24
 
 ---

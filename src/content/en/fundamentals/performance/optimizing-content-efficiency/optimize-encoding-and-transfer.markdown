@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Optimizing encoding and transfer size of text-based assets"
-written_on: 2014-04-01
+published_on: 2014-04-01
 updated_on: 2014-09-12
 order: 3
 translation_priority: 0

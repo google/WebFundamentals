@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Web Bluetooth"
 youtubeID: I3obFcCw8mk
 
-written_on: 2015-07-06
+published_on: 2015-07-06
 updated_on: 2015-07-06
 
 ---

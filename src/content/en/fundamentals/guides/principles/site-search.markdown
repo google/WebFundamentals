@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Site Search"
 description: "Site search is vital for helping mobile users find what they're looking for in a hurry."
-written_on: 2014-08-06
+published_on: 2014-08-06
 updated_on: 2014-08-13
 order: 2
 authors:

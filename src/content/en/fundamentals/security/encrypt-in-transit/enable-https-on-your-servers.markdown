@@ -5,7 +5,7 @@ description: "You are ready for the all important step of enabling HTTPS on your
 authors:
   - chrispalmer
   - mattgaunt
-written_on: 2015-03-27
+published_on: 2015-03-27
 updated_on: 2015-03-27
 order: 3
 translation_priority: 0

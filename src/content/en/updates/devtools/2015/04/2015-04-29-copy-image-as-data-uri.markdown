@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Copy image as data URI"
-written_on: 2015-04-29
+published_on: 2015-04-29
 updated_on: 2015-05-20
 authors:
   - umarhansa

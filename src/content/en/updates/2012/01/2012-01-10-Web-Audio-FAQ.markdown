@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Web Audio FAQ"
-written_on: 2012-01-10
+published_on: 2012-01-10
 updated_on: 2012-01-10
 authors:
   - borissmus

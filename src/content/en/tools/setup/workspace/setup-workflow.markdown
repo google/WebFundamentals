@@ -6,7 +6,7 @@ authors:
   - dgash
   - kaycebasques
   - megginkearney
-written_on: 2015-07-09
+published_on: 2015-07-09
 updated_on: 2015-07-31
 order: 3
 key-takeaways:

@@ -3,7 +3,7 @@ layout: shows/single-video
 title: "Blink Skia Update"
 youtubeID: f7jz75yJlac
 
-written_on: 2015-05-13
+published_on: 2015-05-13
 updated_on: 2015-05-13
 ---
 Heather Miller gives an update on the Skia project and the cool new things they are working on.

@@ -4,7 +4,7 @@ title: "Extending Native Elements"
 description: "Inheritance in HTML?! Yep! Not only is it possible with Web Components, it's super useful for working with forms and accessibility."
 youtubeID: OV8BvxpNQOs
 
-written_on: 2015-05-04
+published_on: 2015-05-04
 updated_on: 2015-05-04
 
 ---

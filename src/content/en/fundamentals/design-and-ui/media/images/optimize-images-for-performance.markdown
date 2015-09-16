@@ -4,7 +4,7 @@ title: "Optimize images for performance"
 description: "Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page."
 authors:
   - petelepage
-written_on: 2014-04-30
+published_on: 2014-04-30
 updated_on: 2014-04-30
 order: 4
 translation_priority: 0
