@@ -23,7 +23,7 @@ key-takeaways:
 notes:
   use-commas:
     - استخدم فاصلة لفصل السمات لضمان تمكن المتصفحات القديمة من تحليل السمات تحليلاً سليمًا.
-comments: 
+comments:
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19
 udacity:
@@ -48,6 +48,3 @@ udacity:
 {% endlink_sample %}
 
 وقد ظهر تصميم الويب سريع الاستجابة، الذي وضع تعريفه الأصلي[إيثان ماركوت في مقالة A List Apart](http://alistapart.com/article/responsive-web-design/) ، ليلبي احتياجات المستخدمين والأجهزة التي يستخدمونها.  ويتغير التنسيق بتغير حجم الجهاز وإمكانياته.  على سبيل المثال، يظهر للمستخدمين على الهاتف المحتوى في طريقة عرض عمود واحد، وقد يعرض الجهاز اللوحي المحتوى نفسه في عمودين.
-
-
-

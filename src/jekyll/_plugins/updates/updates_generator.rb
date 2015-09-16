@@ -37,6 +37,11 @@ module Jekyll
         end
       }
 
+      if updateSection.nil?
+        puts "Skipping updates section since there are no existing pages."
+        return;
+      end
+
       tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
       updateSection['subdirectories'] << tagsSection
 

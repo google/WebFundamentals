@@ -33,8 +33,9 @@ module Jekyll
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
 
       # Give the page data so it knows the text direction
-      if site.data["language_names"][langcode].key?('rtl')
-        self.data['rtl'] = site.data["language_names"][langcode]['rtl'];
+      self.data['rtl'] = false
+      if site.data["language_names"][@langcode].key?('rtl')
+        self.data['rtl'] = site.data["language_names"][@langcode]['rtl'];
       end
 
       # TODO mattgaunt is this is alway false - why have it?

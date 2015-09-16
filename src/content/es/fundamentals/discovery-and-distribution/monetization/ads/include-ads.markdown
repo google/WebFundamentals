@@ -2,9 +2,10 @@
 title: "Incluir anuncios de AdSense en el sitio"
 description: "Sigue los pasos de esta guía para saber cómo incluir anuncios en tu sitio. Crea una cuenta de AdSense, crea bloques de anuncios, coloca los bloques en tu sitio, establece las preferencias de pago y empieza a recibir ingresos."
 updated_on: 2014-07-31
+authors:
   - petelepage
 key-takeaways:
-  tldr: 
+  tldr:
     - "Para crear una cuenta de AdSense, debes ser mayor de 18 años y disponer de una cuenta de Google y una dirección postal."
     - "Tu sitio web debe estar activo cuando recibamos la solicitud, y el contenido debe cumplir con las políticas de AdSense."
     - "Crea bloques de anuncios adaptables para garantizar que los anuncios encajen, independientemente del dispositivo en el que se vean."
@@ -31,11 +32,11 @@ notes:
 
 En esta guía, crearás una página sencilla que incluya anuncios adaptables usando Google AdSense y Web Starter Kit:
 
-<img src="images/ad-ss-600.png" sizes="100vw" 
-  srcset="images/ad-ss-1200.png 1200w, 
+<img src="images/ad-ss-600.png" sizes="100vw"
+  srcset="images/ad-ss-1200.png 1200w,
           images/ad-ss-900.png 900w,
-          images/ad-ss-600.png 600w, 
-          images/ad-ss-300.png 300w" 
+          images/ad-ss-600.png 600w,
+          images/ad-ss-300.png 300w"
   alt="Sitio web de ejemplo con anuncios en ordenador y en móvil">
 
 Si no estás familiarizado con Web Starter Kit, consulta la documentación sobre [cómo configurar Web Starter Kit]({{site.fundamentals}}/tools/setup/setup_kit.html).
@@ -59,7 +60,7 @@ Para publicar anuncios en tu sitio, necesitas una cuenta de AdSense activa. Si a
 
 Un bloque de anuncios es un conjunto de anuncios que se muestran en tu página mediante el código JavaScript añadido en esta.  Tienes tres opciones para asignar un tamaño a los bloques de anuncios:
 
-* **[Anuncios adaptables (recomendado)](https://support.google.com/adsense/answer/3213689)** 
+* **[Anuncios adaptables (recomendado)](https://support.google.com/adsense/answer/3213689)**
 * [Anuncios predefinidos](https://support.google.com/adsense/answer/6002621)
 * [Anuncios con tamaño personalizado](https://support.google.com/adsense/answer/3289364)
 
@@ -69,7 +70,7 @@ Los anuncios adaptables pueden mostrarse junto al contenido en un diseño adapta
 
 Si no usas bloques de anuncios adaptables, tendrás que escribir bastante más código para controlar el aspecto de los anuncios según el dispositivo del usuario. Aunque no especifiques el tamaño exacto de los bloques de anuncios, usa bloques de anuncios adaptables en el [modo avanzado]({{site.fundamentals}}/monetization/ads/customize-ads.html#what-if-responsive-sizing-isnt-enough).
 
-Para que tu código sea más sencillo y ahorres tiempo y esfuerzo, el código de anuncio adaptable ajusta automáticamente el tamaño del bloque de anuncios al diseño de tu página. 
+Para que tu código sea más sencillo y ahorres tiempo y esfuerzo, el código de anuncio adaptable ajusta automáticamente el tamaño del bloque de anuncios al diseño de tu página.
 El código calcula el tamaño requerido de forma dinámica, en función del ancho del contenedor principal del bloque de anuncios. A continuación, elige el tamaño de anuncio que mejor encaje en el contenedor.
 Por ejemplo, un sitio optimizado para móviles con un ancho de 360 píxeles podría mostrar un bloque de anuncios de 320 x 50 píxeles.
 
@@ -83,7 +84,7 @@ Supervisa los [tamaños de anuncio más eficaces](https://support.google.com/ads
 4. Selecciona <strong>Adaptable</strong> en el menú desplegable de tamaños de anuncio.
 5. Selecciona <strong>Anuncios de texto y display</strong> en el menú desplegable de tipo de anuncio.
 6. Haz clic en <strong>Guardar y obtener el código</strong>.
-7. En el cuadro <strong>Código de anuncio</strong> que aparece, selecciona <strong>Tamaño óptimo (recomendado)</strong> en el menú desplegable `Modo`. 
+7. En el cuadro <strong>Código de anuncio</strong> que aparece, selecciona <strong>Tamaño óptimo (recomendado)</strong> en el menú desplegable `Modo`.
 Este es el modo recomendado y no requiere realizar ningún cambio en el código del anuncio.
 
 Una vez creado el bloque de anuncios, AdSense facilita un fragmento de código para incluirlo en el sitio, similar al código siguiente:
@@ -115,11 +116,11 @@ Para incluir el anuncio en la página, debes pegar el fragmento de AdSense propo
 
 <div>
   <a href="/web/fundamentals/resources/samples/monetization/ads/">
-    <img src="images/ad-ss-600.png" sizes="100vw" 
-      srcset="images/ad-ss-1200.png 1200w, 
+    <img src="images/ad-ss-600.png" sizes="100vw"
+      srcset="images/ad-ss-1200.png 1200w,
               images/ad-ss-900.png 900w,
-              images/ad-ss-600.png 600w, 
-              images/ad-ss-300.png 300w" 
+              images/ad-ss-600.png 600w,
+              images/ad-ss-300.png 300w"
       alt="Sitio web de ejemplo con anuncios en ordenador y en móvil">
     <br>
     Pruébalo
@@ -130,12 +131,10 @@ Para incluir el anuncio en la página, debes pegar el fragmento de AdSense propo
 
 ¿Te preguntas cuándo llegarán tus pagos de AdSense? ¿Quieres saber si los recibirás este mes o el siguiente? Asegúrate de seguir los pasos que se indican a continuación:
 
-1. Verifica que hayas facilitado la información fiscal correspondiente en el [perfil de beneficiario](https://www.google.com/adsense/app#payments3/h=BILLING_PROFILE). 
+1. Verifica que hayas facilitado la información fiscal correspondiente en el [perfil de beneficiario](https://www.google.com/adsense/app#payments3/h=BILLING_PROFILE).
 2. Confirma que tu nombre de beneficiario y tu dirección sean correctos.
 3. Selecciona tu forma de pago en la página [Configuración de los pagos](https://www.google.com/adsense/app#payments3/h=ACCOUNT_SETTINGS).
 4. Introduce tu [número de identificación personal (PIN)](https://support.google.com/adsense/answer/157667). Este PIN verifica la exactitud de la información de tu cuenta.
-5. Comprueba si el saldo llega al [límite de pago](https://support.google.com/adsense/answer/1709871). 
+5. Comprueba si el saldo llega al [límite de pago](https://support.google.com/adsense/answer/1709871).
 
 Consulta [Introducción a los pagos de AdSense](https://support.google.com/adsense/answer/1709858) si tienes alguna duda.
-
-

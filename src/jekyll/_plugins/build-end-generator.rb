@@ -30,14 +30,14 @@ module Jekyll
       site.pages.each { |page|
         page.onBuildComplete()
 
-        page.data['translations'].each { |transationPage|
+        page.data['translations'].each { |langCode, translationPage|
           page.data.each { |key, value|
-            if transationPage.data[key].nil?
-              transationPage.data[key] = value
+            if translationPage.data[key].nil?
+              translationPage.data[key] = value
             end
           }
 
-          transationPage.onBuildComplete()
+          translationPage.onBuildComplete()
         }
       }
     end
