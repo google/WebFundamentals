@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="related-items clear {% if include.on-spotlight %}related-items-on-spotlight{% endif %}">
+    <h3 class="related-items__title g-wide--1 g-medium--full">Latest spotlights</h3>
+    <div class="related-items__section clear">
+
+      <ul class="related-items-list list-reset">
+
+        {% for pageInSection in page.context.pages | limit:3 %}
+          <li class="wf-section-toc__list-item">
+            <p class="wf-section-toc__guide-title">
+              <a href="{{pageInSection.canonical_url | localize_link:pageInSection }}">
+                {{pageInSection.title}}
+              </a>
+            </p>
+          </li>
+        {% endfor %}
+
+      </ul>
+
+    </div>
+  </div>
+
+</div>

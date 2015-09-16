@@ -19,11 +19,11 @@ showcase:
       result: http://www.webpagetest.org/result/150319_0G_RA9/
   link: https://jakearchibald.github.io/svgomg/
   developer: Jake Archibald
-  pros: |
-    Built by our own [Jake Archibald](http://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, ServiceWorker ensures that the app loads quickly and is available offline, and the transitions are smooth on mobile.
-  cons: |
-    The only real nitpick we'd have to offer is that the initial UX is confusing due to the main UI missing. Other than that, job well done!
-
+  our_views:
+    good: |
+      Built by our own [Jake Archibald](http://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, ServiceWorker ensures that the app loads quickly and is available offline, and the transitions are smooth on mobile.
+    bad: |
+      The only real nitpick we'd have to offer is that the initial UX is confusing due to the main UI missing. Other than that, job well done!
   interview:
     - question: Why the web?
       answer: |

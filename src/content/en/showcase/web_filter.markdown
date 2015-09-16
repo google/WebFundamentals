@@ -20,10 +20,11 @@ showcase:
       result: http://www.webpagetest.org/result/150327_CF_H1X/
   link: http://exp.bartekdrozdz.com/app/webfilter/
   developer: Bartek Drozdz
-  pros: |
-    A rather awesome web based camera app that lets you apply filters in real time.  It automatically saves the image to your local device, which means it usually gets synchronized to your cloud storage provider of choice (i.e. G+), making it trivial to share the autcome.
-  cons: |
-    The app can be installed to the home screen but at least on Android, the user is asked for permission to use the camera every time the app launches. That's obviously not an issue on the developer side but on Chrome/Android, and a memo to ourselves to fix.
+  our_views:
+    good: |
+     A rather awesome web based camera app that lets you apply filters in real time.  It automatically saves the image to your local device, which means it usually gets synchronized to your cloud storage provider of choice (i.e. G+), making it trivial to share the autcome.
+    bad: |
+      The app can be installed to the home screen but at least on Android, the user is asked for permission to use the camera every time the app launches. That's obviously not an issue on the developer side but on Chrome/Android, and a memo to ourselves to fix.
   interview:
     - question: Why the web?
       answer: |

@@ -20,10 +20,11 @@ showcase:
       result: http://www.webpagetest.org/result/150407_TY_ZX5/
   link: http://adsy.me/
   developer: Frederick Tubiermont
-  pros: |
-    Adsy.me is a tool that allows anyone to create a mobile (micro-) website, and they immediately gained my trust by eating their own dogfood: The whole tool is a fantastic mobile web app that feels very responsive and intuitive.
-  cons: |
-    By utilizing more lazy-loading techniques, the app could load even faster, and it would benefit from utilizing the full screen API, as well as a ServiceWorker for going offline.
+  our_views:
+    good: | 
+      Adsy.me is a tool that allows anyone to create a mobile (micro-) website, and they immediately gained my trust by eating their own dogfood: The whole tool is a fantastic mobile web app that feels very responsive and intuitive.
+    bad: |
+      By utilizing more lazy-loading techniques, the app could load even faster, and it would benefit from utilizing the full screen API, as well as a ServiceWorker for going offline.
   interview:
     - question: Why the web?
       answer: |
