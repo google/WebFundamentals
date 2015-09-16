@@ -60,7 +60,7 @@ function updateFile(filename) {
 
       // change the layout
       data = data.replace(/^layout: article\n/m, 'layout: shared/plain\n');
-      data = data.replace(/^layout: landing\n/m, 'layout: fundamentals/list-subdirectories\n');
+      data = data.replace(/^layout: landing\n/m, 'layout: shared/narrow-subdirectories-list\n');
       data = data.replace(/^layout: section\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: devtools\n/m, 'layout: shared/plain\n');
       data = data.replace(/^layout: tools-article\n/m, 'layout: shared/plain\n');

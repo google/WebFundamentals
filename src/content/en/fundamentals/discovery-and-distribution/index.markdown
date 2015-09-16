@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/list-subdirectories
+layout: shared/narrow-subdirectories-list
 title: "Discovery and Distribution"
 description: "TODO"
 published_on: 2015-09-09

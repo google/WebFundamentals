@@ -1,5 +1,5 @@
 ---
-layout: fundamentals/list-subdirectories
+layout: shared/narrow-subdirectories-list
 title: "Capabilities"
 description: ""
 published_on: 2015-07-21
