@@ -1,0 +1,10 @@
+<!-- shows in season -->
+
+<div class="mdl-grid">
+  {% for show in page.context.pages %}
+    {% if show.url != page.url%}
+      {% capture image %}https://img.youtube.com/vi/{{ show.youtubeID }}/mqdefault.jpg{% endcapture %}
+      {% include shows/card.liquid linkHref=show.relative_url title=show.title text=show.description imgUrl=image  %}
+    {% endif %}
+  {% endfor %}
+</div>
