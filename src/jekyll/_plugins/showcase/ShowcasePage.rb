@@ -19,10 +19,7 @@ module Jekyll
 
   class ShowcasePage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = [
-        'tags', 'scores', 'link', 'developer', 'pros', 'cons', 'interview',
-        'subtitle', 'overview', 'behind_the_scenes', 'sections', 'our_view'
-      ]
+      validKeys = ['tags', 'showcase']
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Showcase'
