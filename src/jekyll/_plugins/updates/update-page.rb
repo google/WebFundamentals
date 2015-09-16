@@ -25,7 +25,7 @@ module Jekyll
       ]
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['drawerTitleText'] = 'Web Updates'
+      self.data['drawerTitleText'] = 'Updates'
       self.data['html_head_title'] = 'Web Updates - Google Developers'
       self.data['html_head_description'] = 'Google Developers Web Updates ' +
         'contains the latest news from the Chrome, looking at new features ' +

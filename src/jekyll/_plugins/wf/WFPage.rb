@@ -147,7 +147,11 @@ module Jekyll
       # Iterate over each sub section
       currentSection['subdirectories'].each { |subdirectory|
         # Subdirectory entry
-        sections << getBetterBookEntry(subdirectory, currentLevel)
+        entry = getBetterBookEntry(subdirectory, currentLevel)
+        if entry.nil?
+          next
+        end
+        sections << entry
       }
 
       sections

@@ -11,24 +11,8 @@
     {% endfor %}
   </ul>
 
-  <div class="updates-next-prev">
-    {% if page.prev_url %}
-      <a class="updates-next-prev__prev-anchor" href="{{page.prev_url}}">
-        <div class="updates-next-prev__prev-btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
-          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-        </div>
-        Newer
-      </a>
-    {% endif %}
-
-    {% if page.next_url %}
-    <a class="updates-next-prev__next-anchor" href="{{page.next_url}}">
-      Older
-      <div class="updates-next-prev__next-btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
-        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-      </div>
-    </a>
-    {% endif %}
-  </div>
 </div>
+
+{% include shared/article-nav.liquid %}
+
 {% include page-structure/close-page.liquid %}

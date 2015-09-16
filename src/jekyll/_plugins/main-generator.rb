@@ -110,7 +110,7 @@ module Jekyll
 
       handleFileEntries(allPages, parentTree, pagesTree, site, rootFilepath, buildRelativeDir, fileEntries)
 
-      organisePageTree(pagesTree)
+      #organisePageTree(pagesTree)
 
       allPages
       # This maps all the files in the primary language directory
