@@ -9,6 +9,13 @@
   border-bottom-color: $grey-border-color;
 }
 
+.wf-subdirectory-list:last-child {
+  border-bottom: none;
+
+  padding-bottom: 0;
+  margin-bottom: $base-line * 2;
+}
+
 .wf-subdirectory-list__title {
   margin-top: 0;
 
