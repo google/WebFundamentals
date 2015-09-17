@@ -1,39 +1,37 @@
 {% include page-structure/open-page.liquid %}
 
 <div class="page-content">
-
-  <p>{{ page.description }}</p>
-
+ 
   <!-- Latest Episode -->
   {% if page.context.subdirectories.size > 0 %}
     {% assign latestSeason = page.context.subdirectories.last %}
     {% assign latestEpisode = latestSeason.pages.last %}
-    <h3>Lastest episode: {{ latestEpisode.title }}</h3>
+    <h6>Latest Episode</h6>
+    <h3>{{ latestEpisode.title }}</h3>
 
     {% ytvideo latestEpisode.youtubeID %}
   {% endif %}
 
+  <p>{{ page.description }}</p>
+
   {{ content }}
 
-</div>
 
-{% for subdirectory in page.context.subdirectories reversed %}
-  {% comment %}
-  The sizes of grid:
-
-  Desktop: 12
-  Tablet: 8
-  Phone: 4
-  {% endcomment %}
   <div class="mdl-grid">
-    <h4 class="mdl-cell mdl-cell--12-col show-series-list__title showhome--series-title-{{ page.id }} g-wide--full">
-      {{subdirectory.index.title}}
-    </h4>
-    {% for showPage in subdirectory.pages reversed %}
-      {% capture imgUrl %}https://img.youtube.com/vi/{{showPage.youtubeID}}/mqdefault.jpg {% endcapture %}
-      {% include shows/card.liquid title=showPage.title text=showPage.description linkHref=showPage.relative_url linkText="Watch Now" imgUrl=imgUrl %}
+    <h6 class="mdl-cell mdl-cell--12-col">
+      Previous Seasons &amp; Episodes
+    </h6>
+    {% for subdirectory in page.context.subdirectories reversed %}
+      <h4 class="mdl-cell mdl-cell--12-col">
+        {{subdirectory.index.title}}
+      </h4>
+      {% for showPage in subdirectory.pages reversed %}
+        {% capture imgUrl %}https://img.youtube.com/vi/{{showPage.youtubeID}}/mqdefault.jpg {% endcapture %}
+        {% include shows/card.liquid title=showPage.title text=showPage.description linkHref=showPage.relative_url linkText="Watch Now" imgUrl=imgUrl %}
+      {% endfor %}
     {% endfor %}
   </div>
-{% endfor %}
+
+</div>
 
 {% include page-structure/close-page.liquid %}

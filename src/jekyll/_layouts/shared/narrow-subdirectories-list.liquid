@@ -7,14 +7,23 @@
 {% for subdirectory in page.context.subdirectories %}
 <div class="wf-subdirectory-list mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <h4 class="wf-subdirectory-list__title"><a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a></h4>
+    <h4 class="wf-subdirectory-list__title">{{subdirectory.index.title}}</h4>
     <p>{{subdirectory.index.description}}</p>
   </div>
 
   <ol class="wf-subdirectory-list__pages-list mdl-cell mdl-cell--6-col">
-  {% for page in subdirectory.pages %}
-  <li class="wf-subdirectory-list__pages-list-item"><a href="{{page.relative_url}}">{{page.title}}</a></li>
-  {% endfor %}
+  {% if subdirectory.pages.size == 0 and subdirectory.subdirectories.size > 0 %}
+    {% for subdir in subdirectory.subdirectories %}
+    <li class="wf-subdirectory-list__pages-list-item"><a href="{{subdir.index.relative_url}}">{{subdir.index.title}}</a></li>
+    {% endfor %}
+  {% else %}
+    <li class="wf-subdirectory-list__pages-list-item">
+      <a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a>
+    </li>
+    {% for page in subdirectory.pages %}
+    <li class="wf-subdirectory-list__pages-list-item"><a href="{{page.relative_url}}">{{page.title}}</a></li>
+    {% endfor %}
+  {% endif %}
   </ol>
 </div>
 {% endfor %}
