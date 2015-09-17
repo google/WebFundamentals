@@ -7,7 +7,9 @@ var options = {
   cleanupTranslatedYaml: false,
   removeFeedInfo: false,
   removeCollection: false,
-  cleanupUpdates: true
+  cleanupUpdates: false,
+  cleanupShows: false,
+  cleanupSpotlight: false
 };
 
 console.log('Migration Assistant');
@@ -36,7 +38,7 @@ function updateFile(filename) {
         data = data.replace(/^priority:\s*\d+\s*\n/m, '');
         data = data.replace(/^translation_priority:\s*\d+\s*\n/m, '');
         data = data.replace(/authors:\n  - [\w\W]+?\n/m, '');
-        data = data.replace(/^\s{2}(written_on: \d{4}-\d{2}-\d{2}\n)/m, '');
+        data = data.replace(/^\s{2}written_on: (\d{4}-\d{2}-\d{2}\n)/m, '');
         data = data.replace(/^(written_on: \d{4}-\d{2}-\d{2}\n)/m, '');
       }
 
@@ -58,14 +60,27 @@ function updateFile(filename) {
         data = data.replace(/^permalink:\s*.*\.html\n/gm, '');
       }
 
+      if (options.cleanupShows) {
+        data = data.replace(/^collection:\s*.*\n/gm, '');
+        data = data.replace(/^showid:\s*.*\n/gm, '');
+        data = data.replace(/^date:\s*.*\n/gm, '');
+        data = data.replace(/^key-img:\s*(.*)\n/gm, 'key_img: $1');
+        data = data.replace(/^intro-title:.*\n/gm, '');
+      }
+
+      if (options.cleanupSpotlight) {
+        data = data.replace(/^layout: spotlight\n/m, 'layout: shared/narrow\n');
+        data = data.replace(/^type: spotlight\n/m, '');
+      }
+
       // change the layout
-      data = data.replace(/^layout: article\n/m, 'layout: shared/plain\n');
-      data = data.replace(/^layout: landing\n/m, 'layout: shared/narrow-subdirectories-list\n');
-      data = data.replace(/^layout: section\n/m, 'layout: shared/plain\n');
-      data = data.replace(/^layout: devtools\n/m, 'layout: shared/plain\n');
-      data = data.replace(/^layout: tools-article\n/m, 'layout: shared/plain\n');
-      data = data.replace(/^layout: tools-section\n/m, 'layout: shared/plain\n');
-      data = data.replace(/^layout: grouped-list\n/m, 'layout: shared/plain\n');
+      data = data.replace(/^layout: article\n/m, 'layout: shared/narrow\n');
+      data = data.replace(/^layout: landing\n/m, 'layout: fundamentals/list-subdirectories\n');
+      data = data.replace(/^layout: section\n/m, 'layout: shared/narrow\n');
+      data = data.replace(/^layout: devtools\n/m, 'layout: shared/narrow\n');
+      data = data.replace(/^layout: tools-article\n/m, 'layout: shared/narrow\n');
+      data = data.replace(/^layout: tools-section\n/m, 'layout: shared/narrow\n');
+      data = data.replace(/^layout: grouped-list\n/m, 'layout: shared/narrow\n');
 
       //remove: class, article, collection, id, feedName, feedPath, seotitle
       data = data.replace(/^article:\n/m, '');
@@ -75,11 +90,14 @@ function updateFile(filename) {
       data = data.replace(/^snippet:\s*.*\n/m, '');
       data = data.replace(/^  featured: true\n/m, '');
 
+      // remove an empty description
+      data = data.replace(/^description:\s*\"\"\n/m, '');
+
       // remove published: true - it's already published!
       data = data.replace(/^published:\s*true\n/m, '');
 
       // un-indent written_on, updated_on and order
-      data = data.replace(/^\s{2}(written_on: \d{4}-\d{2}-\d{2}\n)/m, '$1');
+      data = data.replace(/^\s{2}written_on: (\d{4}-\d{2}-\d{2}\n)/m, 'published_on: $1');
       data = data.replace(/^\s{2}(updated_on: \d{4}-\d{2}-\d{2}\n)/m, '$1');
       data = data.replace(/^\s{2}(order: \d{1,3}\n)/m, '$1');
 
