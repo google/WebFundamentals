@@ -8,6 +8,3 @@ translation_priority: 0
 order: 2
 ---
 
-<p class="intro">
-  TODO
-</p>
