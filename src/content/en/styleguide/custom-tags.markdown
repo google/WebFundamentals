@@ -28,11 +28,7 @@ Includes the entire contents of a file
 ### Defining a Snippet
 
 You can define a snippet to extract a particular portion
-of the file.
-
-<pre>{% raw %}{% include_code src=_code/example.html snippet=examplesnippet %}{% endraw %}</pre>
-
-{% include_code src=_code/example.html snippet=examplesnippet %}
+of a code sample.
 
 The snippet is defined in example.html like so:
 
@@ -45,7 +41,15 @@ The snippet is defined in example.html like so:
 <!-- // [END examplesnippet] -->
 {% endhighlight %}
 
-These snippets are removed from all occurrences of the code in the final docs.
+You can then add it to a page with:
+
+<pre>{% raw %}{% include_code src=_code/example.html snippet=examplesnippet %}{% endraw %}</pre>
+
+The result is:
+
+{% include_code src=_code/example.html snippet=examplesnippet %}
+
+The special snippet comments are removed from the code in the final docs.
 
 ### Defining the Language of Code
 

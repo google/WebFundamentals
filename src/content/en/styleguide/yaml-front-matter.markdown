@@ -112,13 +112,15 @@ This has to be a boolean.
 If it's set to false, you'll be able to view the page on the server, but it
 want be linked to or included in any of the feeds.
 
-    published: true
+    published: false
+
+**NOTE:** If no published value is provided, it is assumed to be true.
 
 ### tags
 
 Used in Updates **ONLY**.
 
-This is used to create a list of tags relevant to the article. 
+This is used to create a list of tags relevant to the article.
 
 Tags should be lower case, must not contain spaces and cannot include the
 reserved word *index*.
