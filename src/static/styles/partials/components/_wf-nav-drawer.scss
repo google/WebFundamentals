@@ -1,3 +1,11 @@
+.wf-nav-drawer__title {
+  padding: 0 ($nav-drawer-horizontal-padding);
+}
+
+.mdl-layout__drawer .mdl-navigation.wf-nav-drawer__container {
+  padding-top: 0;
+}
+
 .wf-nav-drawer {
   display: flex;
   position: fixed;
@@ -29,7 +37,8 @@
   display: inline-block;
   width: 100%;
 
-  padding-bottom: $nav-drawer-vertical-padding 0;
+  padding-bottom: ($nav-drawer-vertical-padding * 2);
+  margin-bottom: ($nav-drawer-vertical-padding * 2);
   border-bottom: 1px solid $grey-border-color;
 }
 
@@ -61,6 +70,8 @@
 
 // Top / First item is the current section
 .wf-main-nav__list-level-1 > .wf-main-nav__item:first-child {
+  padding-bottom: ($nav-drawer-vertical-padding * 2);
+  margin-bottom: ($nav-drawer-vertical-padding * 2);
   border-bottom: 1px solid $grey-border-color;
 }
 
@@ -69,6 +80,10 @@
 .wf-navdrawer__bottom-link {
   text-decoration: none;
   color: $text-color-primary;
+}
+
+.wf-navdrawer__bottom-link:last-child {
+  margin-bottom: $nav-drawer-vertical-padding;
 }
 
 .wf-navdrawer__bottom-link-container {
