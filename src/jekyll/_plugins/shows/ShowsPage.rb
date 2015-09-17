@@ -33,18 +33,11 @@ module Jekyll
         'latest news and technologies on the web platform.'
       self.data['theme_color'] = '#212121'
 
-      $css = 'root.css'
-      # if self.data['layout'] == 'shows/show-home' || self.data['layout'] == 'shows/udacity-home'
-      #   $css = 'show-home.css'
-      # elsif self.data['layout'] == 'shows/single-video'
-      #   $css = 'show-single-video.css'
-      # end
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/' + $css;
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
 
       #self.data['feed_name'] = 'Web Fundamentals - Google Developers'
       #self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundmentals/feed.xml'
 
-      #loadBetterBook('contentnav', '_betterbook-shows.yaml')
     end
   end
 end
