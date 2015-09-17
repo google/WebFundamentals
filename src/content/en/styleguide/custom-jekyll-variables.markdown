@@ -113,15 +113,18 @@ Will output the following (Note: you may see 0, 1 or 2 snippets depending
 
 # URLs
 
-Jekyll provides the good old fashioned `page.url` variable, however Web
-Fundamentals does some funky stuff to the structure of pages and docs, so
-for this reason you should use one of the following
+Jekyll provides the `page.url` variable, however this isn't useful for Web
+Fundamentals due to the structure of pages and docs.
 
-For this page, the Jekyll URL is:
+For example, this page has a Jekyll URL of:
 
 {% highlight text %}
 {{page.url}}
 {% endhighlight %}
+
+Notice how there is no /web/ at the beginning of it? Instead of `page.url`,
+use `page.canonical_url` or `page.relative_url`. The big advantage of this
+is that it will also account for language of the current page.
 
 ## page.canonical_url
 
@@ -155,7 +158,7 @@ The relative url is the relative url for a page from the root of the domain
 ## page.outOfDate
 
 This variable is defined for every page and will be true if a translation is
-no longer up to date with the primary language version.
+no longer up to date with the primary language version, otherwise its false.
 
 {% highlight text %}
 {% raw %}

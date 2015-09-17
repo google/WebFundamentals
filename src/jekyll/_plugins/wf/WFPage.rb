@@ -126,16 +126,28 @@ module Jekyll
       puts ''
     end
 
-    def getBetterBookEntry(section, currentLevel)
-      entry = nil
-      if (not section.nil?) && (not section['index'].nil?)
-        indexPage = getAppropriatePage(section['index'])
-        entry = { "title" => indexPage['title'], "path" => indexPage.relative_url}
+    # Force generation is used when you are in a section that isn't published
+    # i.e. styleguide shouldn't be in the menu for fundamentals, but if you
+    # are on /web/styleguide/ the menu should have styleguide at the top level
+    def getBetterBookEntry(section, currentLevel, forceGeneration = false)
+      if section.nil?
+        return nil
+      end
 
-        if (@directories.size > currentLevel) && (section['id'] == @directories[currentLevel])
-          entry['section'] = getBetterBookSections(section, (currentLevel + 1))
-          entry['hasSubNav'] = entry['section'].size > 0
-        end
+      if section['index'].nil?
+        return nil
+      end
+
+      indexPage = getAppropriatePage(section['index'])
+      if (!forceGeneration) && (indexPage['published'] == false)
+        return nil
+      end
+
+      entry = { "title" => indexPage['title'], "path" => indexPage.relative_url}
+
+      if (@directories.size > currentLevel) && (section['id'] == @directories[currentLevel])
+        entry['section'] = getBetterBookSections(section, (currentLevel + 1))
+        entry['hasSubNav'] = entry['section'].size > 0
       end
 
       entry
@@ -151,6 +163,7 @@ module Jekyll
         if entry.nil?
           next
         end
+
         sections << entry
       }
 
@@ -179,7 +192,7 @@ module Jekyll
         end
       }
 
-      entry = getBetterBookEntry(rootSection, currentLevel)
+      entry = getBetterBookEntry(rootSection, currentLevel, true)
 
       topLevelEntries = [entry]
 
@@ -187,8 +200,12 @@ module Jekyll
         if section['index'].nil?
           next
         end
+        entry = getBetterBookEntry(section, currentLevel)
+        if entry.nil?
+          next
+        end
 
-        topLevelEntries << getBetterBookEntry(section, currentLevel)
+        topLevelEntries << entry
       }
 
       self.data['contentnav'] = { "toc" => topLevelEntries }
