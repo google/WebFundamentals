@@ -8,4 +8,3 @@ translation_priority: 0
 order: 7
 ---
 
-Capabilities Home Page
