@@ -19,7 +19,7 @@ module Jekyll
 
   class ToolsPage < LanguagePage
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = ['panel']
+      validKeys = ['panel', 'panels']
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Tools'

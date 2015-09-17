@@ -4,27 +4,4 @@
 
 {% include shows/shows-in-season.liquid %}
 
-{% comment %}
-  <!-- List of Videos -->
-  <ol class="show-series-list">
-    {% for showPage in page.context.pages reverse %}
-    {% if showPage.url == page.url %}
-    <li class="currentVideo">
-    {% else %}
-    <li>
-    {% endif %}
-      <a class="show-series-list__link" href="{{ showPage.relative_url }}">
-        <div class="show-series-list__item">
-          <img class="show-series-list__item-img" src="https://img.youtube.com/vi/{{ showPage.youtubeID }}/mqdefault.jpg" />
-          <div class="show-series-list__item-info">
-            <h1 class="show-series-list__item-title">{{ showPage.title }}</h1>
-            <p class="show-series-list__item-description">{{ showPage.description }}</p>
-          </div>
-        </div>
-      </a>
-    </li>
-    {% endfor %}
-  </ol>
-{% endcomment %}
-
 {% include page-structure/close-page.liquid %}

@@ -8,4 +8,3 @@ translation_priority: 0
 order: 8
 ---
 
-Engineering Excellence Home Page
