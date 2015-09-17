@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-11-decisions
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Decisions and considerations in building your WebRTC app"
+title: "Decisions and considerations in building a WebRTC app"
 description: ""
 published: true
 showYoutubeID: HJU15kH5z3k

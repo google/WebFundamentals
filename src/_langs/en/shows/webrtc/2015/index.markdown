@@ -1,9 +1,9 @@
 ---
-id: webrtc
+id: webrtc-2015
 showid: webrtc
 layout: shows/series-index
 collection: webrtc
-title: "WebRTC 2015"
+title: "Kranky Geek WebRTC Show"
 description: ""
 published: true
 

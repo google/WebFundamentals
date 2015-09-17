@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-01-welcome
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015 Welcome"
+title: "Welcome"
 description: ""
 published: true
 showYoutubeID: Zl650wbirYE
@@ -13,6 +13,6 @@ article:
   written_on: 2015-09-15
   updated_on: 2015-09-15
 ---
-A warm welcome to the Kranky Geek WebRTC Show from WebRTC luminary Tsahi Levent-levi.
+A warm welcome to the Kranky Geek WebRTC Show from industry expert Tsahi Levent-levi.
 
-This session is from an afternoon of talks by WebRTC experts, including updates from Google, Mozilla and Microsoft. The event took place at the Google office in San Francisco. More details at http://krankygeek.com.
+This session is from an afternoon of talks by WebRTC experts including updates from Google, Mozilla and Microsoft. The event took place at the Google office in San Francisco. More details can be found at http://krankygeek.com.

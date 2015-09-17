@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-04-freshdesk
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Application Chats: Freshdesk"
+title: "Application Chats: Freshdesk"
 description: ""
 published: true
 showYoutubeID: d1KBSTaxmtE

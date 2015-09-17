@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-10-billions
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Best practices from billions of calls"
+title: "Best practices from billions of calls"
 description: ""
 published: true
 showYoutubeID: Gr7PJAyMJdU

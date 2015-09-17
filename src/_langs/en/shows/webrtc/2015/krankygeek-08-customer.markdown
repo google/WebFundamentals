@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-08-customer
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Optimizing the customer experience"
+title: "Optimizing the customer experience"
 description: ""
 published: true
 showYoutubeID: NLXWKUDPiDA

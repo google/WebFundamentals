@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-05-wix
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Application Chats: wix.com"
+title: "Application Chats: wix.com"
 description: ""
 published: true
 showYoutubeID: FV9VA4JhZjQ

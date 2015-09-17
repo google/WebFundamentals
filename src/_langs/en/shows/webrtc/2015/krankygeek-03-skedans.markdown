@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-03-skedans
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Application Chats: Skedans"
+title: "Application Chats: Skedans"
 description: ""
 published: true
 showYoutubeID: 7_34WfyOjx4

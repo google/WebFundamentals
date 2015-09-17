@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-07-mozilla
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: What is Mozilla doing with Firefox?"
+title: "What is Mozilla doing with Firefox?"
 description: ""
 published: true
 showYoutubeID: WZhqWvFHGSo

@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-06-bluemix
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: IBM Bluemix: Mixing voice &amp; data"
+title: "IBM Bluemix: Mixing voice &amp; data"
 description: ""
 published: true
 showYoutubeID: xkB0qiU6PGk

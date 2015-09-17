@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-02-ux
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: A closer look at the WebRTC UX/UI API"
+title: "A closer look at WebRTC UX/UI"
 description: ""
 published: true
 showYoutubeID: H7hAapxpsOY

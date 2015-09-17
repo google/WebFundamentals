@@ -187,7 +187,7 @@ Fundmentals index: for guide in page.articles.[page.id]
     <li class="guides-list__item g--half theme--{{ webrtcShow.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
         <a href="{{site.baseurl}}{{webrtcShow.url | canonicalize}}" title="Go to {{webrtcShow.title}}">
-          <img src="{{site.baseurl}}/shows/imgs/webrtc_rect.jpg" alt="{{webrtcShow.title}} Hero Image">
+          <img src="{{site.baseurl}}/shows/imgs/webrtc_rect.png" alt="{{webrtcShow.title}} Hero Image">
         </a>
       </div>
       <div class="secondary-content show-root--info">

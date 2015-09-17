@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-09-routing
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: Beyond P2P: Video Routing in WebRTC"
+title: "Beyond P2P: video routing in WebRTC"
 description: ""
 published: true
 showYoutubeID: cmzERa0bk0Y

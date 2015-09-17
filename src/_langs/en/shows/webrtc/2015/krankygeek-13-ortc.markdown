@@ -3,7 +3,7 @@ id: webrtc-2015-krankygeek-13-ortc
 showid: webrtc
 layout: shows/single-video
 collection: webrtc-2015
-title: "Kranky Geek WebRTC Show 2015: The Future of ORTC with WebRTC"
+title: "The Future of ORTC with WebRTC"
 description: ""
 published: true
 showYoutubeID: nQ_NgkpLyjw
