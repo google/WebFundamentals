@@ -6,7 +6,7 @@ key_img: udacity_rect.png
 published_on: 2015-02-24
 updated_on: 2015-02-24
 order: 10
-courses:
+udacity:
   - title: "Browser Rendering Optimization"
     description: "Google performance guru Paul Lewis is here to help you destroy jank and create web apps that maintain 60 frames per second performance."
     key_img: img/ud860.jpg
@@ -37,7 +37,7 @@ courses:
 
 <div class="page-content">
   <div class="mdl-grid">
-    {% for course in page.courses %}
+    {% for course in page.udacity %}
       {% capture action %}<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://www.udacity.com/course/viewer#!/c-{{ course.udacity_id }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index">{{"take_course" | localize_string}}</a>{% endcapture %}
       {% include shared/base_card.liquid imgUrl=course.key_img title=course.title text=course.description action=action %}
     {% endfor %}
