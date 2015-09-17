@@ -107,9 +107,9 @@
     <div class="mdl-layout-spacer"></div>
 
     {% if page.path %}
-      {% assign githubUrl = "{{site.github.root}}/tree/{{site.WFGithubBranch}}/{{page.path| uri_escape }}" %}
+      {% capture githubUrl %}{{site.github.root}}/tree/{{site.WFGithubBranch}}/{{page.path | uri_escape }}{% endcapture %}
     {% else %}
-      {% assign githubUrl = "{{site.github.root}}/tree/{{site.WFGithubBranch}}/" %}
+      {% capture githubUrl %}{{site.github.root}}/tree/{{site.WFGithubBranch}}/{% endcapture %}
     {% endif %}
 
     <a class="wf-navdrawer__bottom-link" href="{{githubUrl}}" target="_blank">
