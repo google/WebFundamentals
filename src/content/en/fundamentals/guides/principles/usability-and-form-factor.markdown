@@ -9,13 +9,13 @@ updated_on: 2015-09-17
 order: 5
 ---
 
-## 18. Optimize your entire site for mobile
+## 19. Optimize your entire site for mobile
 
-## 19. Don't make users pinch-to-zoom
+## 20. Don't make users pinch-to-zoom
 
-## 20. Make product images expandable
+## 21. Make product images expandable
 
-## 21. Tell users which orientation works best
+## 22. Tell users which orientation works best
 
 Design for both landscape and portrait, or encourage users to switch to the 
 optimal screen orientation - but make sure your important calls-to-action 
@@ -27,10 +27,10 @@ to switch, like trying to read small type or watch a video.
 
 <img src="images/us-orientation.jpg" srcset="images/us-orientation.jpg 1x, images/us-orientation-2x.jpg 2x" alt="Page offering alternate orientation view.">
 
-## 22. Keep your user in a single browser window
+## 23. Keep your user in a single browser window
 
-## 23. Avoid 'full site' labeling
+## 24. Avoid 'full site' labeling
 
-## 24. Be clear why you need a user's location
+## 25. Be clear why you need a user's location
 
 

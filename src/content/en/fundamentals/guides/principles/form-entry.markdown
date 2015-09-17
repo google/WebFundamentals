@@ -9,23 +9,23 @@ updated_on: 2015-09-17
 order: 4
 ---
 
-## 13. Streamline information entry
+## 14. Streamline information entry
 
 blah
 
-## 14. Choose the simplest input
+## 15. Choose the simplest input
 
 blah
 
-## 15. Provide visual calendar for date selection
+## 16. Provide visual calendar for date selection
 
 blah
 
-## 16. Minimize form errors with labeling and real-time validation
+## 17. Minimize form errors with labeling and real-time validation
 
 blah
 
-## 17. Design efficient forms
+## 18. Design efficient forms
 
 blah
 
