@@ -1,7 +1,7 @@
 ---
 layout: shared/wide
-title: "Spotlights"
-description: "Listing of all spotlights."
+title: "Showcase"
+description: "Showcase is a page highlighting some of the great web apps available to day. We look at design, performance and responsiveness."
 ---
 
 <div class="wf-subheading">
@@ -20,4 +20,3 @@ description: "Listing of all spotlights."
     {% endfor %}
   </div>
 </div>
-

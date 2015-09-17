@@ -2,6 +2,13 @@
   background-color: $color-accent;
 
   color: $color-accent-contrast-works;
+
+  .page-content {
+    padding-top: $base-line;
+    padding-bottom: $base-line;
+
+    margin-bottom: 0;
+  }
 }
 
 .wf-subheading a {
