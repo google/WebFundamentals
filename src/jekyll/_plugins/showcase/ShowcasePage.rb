@@ -29,8 +29,6 @@ module Jekyll
 
       self.data['feed_name'] = 'Google Web Showcase - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/showcase/feed.xml'
-
-      #loadBetterBook('contentnav', '_betterbook-tools.yaml')
     end
   end
 end
