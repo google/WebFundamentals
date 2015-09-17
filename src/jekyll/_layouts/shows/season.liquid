@@ -1,7 +1,9 @@
 {% include page-structure/open-page.liquid %}
 
-{{ content }}
+<div class="page-content">
+  {{ content }}
 
-{% include shows/shows-in-season.liquid %}
+  {% include shows/shows-in-season.liquid %}
+</div>
 
 {% include page-structure/close-page.liquid %}
