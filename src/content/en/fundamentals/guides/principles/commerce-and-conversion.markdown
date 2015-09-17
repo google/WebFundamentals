@@ -11,12 +11,12 @@ order: 3
 
 
 
-## 8. Let users explore before they commit
+## 9. Let users explore before they commit
 
-## 9. Let users purchase as a guest
+## 10. Let users purchase as a guest
 
-## 10. Use existing information to maximize convenience
+## 11. Use existing information to maximize convenience
 
-## 11. Use click-to-call buttons for complex tasks
+## 12. Use click-to-call buttons for complex tasks
 
-## 12. Make it easy to finish on another device
+## 13. Make it easy to finish on another device
