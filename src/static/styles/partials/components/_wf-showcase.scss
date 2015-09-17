@@ -1,3 +1,39 @@
+.wf-showcase__title {
+  padding-bottom: $base-line * 6;
+}
+
+.wf-showcase__device-img {
+  margin-left: auto;
+  margin-right: auto;
+
+  // * -7 for the showcase title padding and -2 extra for page content container
+  margin-top: -($base-line * 9);
+
+  padding: $base-line / 2;
+  box-sizing: border-box;
+}
+
+// The media query where the drawer pops open
+@media screen and (min-width: 840px) {
+  .wf-showcase__title {
+    padding-bottom: initial;
+  }
+
+  .wf-showcase__device-img {
+    float: right;
+    margin-left: initial;
+    margin-right: initial;
+    position: relative;
+
+    margin-top: -($base-line * 9);
+  }
+}
+
+.wf-showcase__latest-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .spotlight-scores {
 
   $colorHigh: #0f9d58;
@@ -5,7 +41,6 @@
   $colorLow: #cb4437;
 
   text-align: center;
-  margin-top: 30px;
 
   div {
     display: inline-block;
