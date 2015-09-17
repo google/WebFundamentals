@@ -43,7 +43,7 @@ module Jekyll
         'layout', 'title', 'description', 'order', 'translation_priority',
         'authors', 'translators', 'comments', 'published_on', 'updated_on',
         'published', 'rss', 'comments', 'key-takeaways', 'notes',
-        'related-guides'
+        'related-guides', 'html_head_social_img'
       ]
 
       # This is a Jekyll::Page method (See: http://www.rubydoc.info/github/mojombo/jekyll/Jekyll/Page#process-instance_method)
@@ -65,7 +65,9 @@ module Jekyll
 
       self.data['html_head_title'] = 'Web - Google Developers'
       self.data['html_head_description'] = 'Google Developers - Web Fundamentals'
-      self.data['html_head_social_img'] = site.config['WFBaseUrl'] + '/imgs/logo.png'
+      if self.data['html_head_social_img'].nil?
+        self.data['html_head_social_img'] =  site.config['WFBaseUrl'] + '/imgs/logo.png'
+      end
       self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
       self.data['theme_color'] = '#03A9F4'
       self.data['feed_name'] = 'Web - Google Developers'

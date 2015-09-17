@@ -173,6 +173,11 @@ translators, etc.
       # more blah
       # even more blah!
 
+### html_head_social_img
+
+This tag allows you to define the social image which is referenced in the
+head of the document.
+
 ## Renamed YAML Attributes
 
 Some YAML attributes have been renamed for consistency, please use the new ones
