@@ -2,7 +2,7 @@
 layout: shows/episode
 title: "Custom icons with Iron Iconsets"
 description: "Today we’re traveling back in time to update one of our old episodes. The iron-iconset-svg element lets you build your own custom icon sets which can be SUPER important if you want to make sure your site is as small and performant as possible."
-youtubeID: https://youtu.be/tjmRUgUca1g
+youtubeID: tjmRUgUca1g
 
 published_on: 2015-07-29
 updated_on: 2015-07-29
