@@ -13,24 +13,6 @@ key-takeaways:
     - "Make sure your site search returns the strongest results first, and implement smart-search features like autocomplete and spelling corrections. " 
     - "Offer filters to help users get what they need from search, but make sure users can't filter a search to return zero results." 
     - "If your offerings can be easily narrowed by segment, asking a few questions upfront helps ensure visitors see relevant results."
-list:
-  -
-    title: "Site search"
-    description: "Site search is vital for helping mobile users find what they’re looking for in a hurry."
-    start: 4
-    list:
-    -
-      title: Make site search visible
-      link: /web/fundamentals/principles/site-search.html#make-site-search-visible
-    -
-      title: Ensure site search results are relevant
-      link: /web/fundamentals/principles/site-search.html#ensure-site-search-results-are-relevant
-    -
-      title: Implement filters to narrow results
-      link: /web/fundamentals/principles/site-search.html#implement-filters-to-narrow-results
-    -
-      title: Guide users to better site search results
-      link: /web/fundamentals/principles/site-search.html#guide-users-to-better-site-search-results
 ---
 
 <p class="intro">
@@ -41,7 +23,7 @@ list:
 
 {% include shared/takeaway.liquid list=page.key-takeaways.tldr %}
 
-## 4. Make site search visible
+## 5. Make site search visible
 
 Users looking for specific information usually turn to search - so search should 
 be one of the first things mobile users see on your site, avoid hiding it behind 
@@ -54,7 +36,7 @@ top of a page.
   <figcaption>Ensure that search isn't hidden behind a menu or hard to find place.</figcaption>
 </figure>
 
-## 5. Ensure site search results are relevant
+## 6. Ensure site search results are relevant
 
 Search should be smart, providing users with the best and most relevant results 
 so they don't have to swipe through multiple pages of results. Make life easier 
@@ -81,7 +63,7 @@ bother to swipe through multiple pages of search results. Instead, they
 judged a site's search based on the results it returned first, so make sure 
 your first page of search results are the strongest. 
 
-## 6. Implement filters to narrow results
+## 7. Implement filters to narrow results
 
 Provide easy to use filters to help narrow the search results to more relevant 
 results for users.  [Participants](/web/fundamentals/principles/research-study.html) 
@@ -101,7 +83,7 @@ Don't bury the filters at the bottom of the page where users have to scroll to
 the end of the result set before they can begin to filter what they're looking 
 for.
 
-## 7. Guide users to better site search results
+## 8. Guide users to better site search results
 
 For sites that serve diverse customer segments, it can be helpful to ask users a 
 few questions before they search to ensure they get results from the most 
