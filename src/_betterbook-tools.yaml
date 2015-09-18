@@ -6,7 +6,6 @@ toc:
   path: /updates/tools/
 - title: "Chrome DevTools"
   path: /tools/chrome-devtools
-  external: true
 - title: "Web Starter Kit"
   path: /tools/starter-kit/
 - title: Web <strong>Fundamentals</strong>
