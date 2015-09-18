@@ -5,7 +5,7 @@ description: "Get started or build your web design and development skills with t
 key_img: udacity_rect.png
 published_on: 2015-02-24
 updated_on: 2015-02-24
-order: 10
+order: 11
 udacity:
   - title: "Browser Rendering Optimization"
     description: "Google performance guru Paul Lewis is here to help you destroy jank and create web apps that maintain 60 frames per second performance."
