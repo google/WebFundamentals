@@ -21,3 +21,5 @@ toc:
     path: /shows/new-in-chrome/
   - title: DevBytes
     path: /shows/devbytes/
+  - title: WebRTC
+    path: /shows/webrtc/

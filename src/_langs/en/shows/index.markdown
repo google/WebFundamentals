@@ -27,6 +27,7 @@ Fundmentals index: for guide in page.articles.[page.id]
 {% assign tttShow = null %}
 {% assign nicShow = null %}
 {% assign googleioShow = null %}
+{% assign webrtcShow = null %}
 {% for show in shows %}
   {% if show.id == 'cds' %}
     {% assign cdsShow = show %}
@@ -54,6 +55,9 @@ Fundmentals index: for guide in page.articles.[page.id]
   {% endif %}
   {% if show.id == 'googleio' %}
     {% assign googleioShow = show %}
+  {% endif %}
+  {% if show.id == 'webrtc' %}
+    {% assign webrtcShow = show %}
   {% endif %}
 {% endfor %}
 
@@ -119,7 +123,7 @@ Fundmentals index: for guide in page.articles.[page.id]
         <p>{{nicShow.description}}</p>
       </div>
     </li>
-    
+
     <li class="guides-list__item g--half theme--{{ googleioShow.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
         <a href="{{site.baseurl}}{{googleioShow.url | canonicalize}}" title="Go to {{googleioShow.title}}">
@@ -167,7 +171,7 @@ Fundmentals index: for guide in page.articles.[page.id]
         <p>{{cdsShow.description}}</p>
       </div>
     </li>
-    
+
      <li class="guides-list__item g--half theme--{{ blinkonShow.id }} {% cycle '', 'g--last' %}">
       <div class="primary-content show-root--image-container">
       	<a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}">
@@ -177,6 +181,18 @@ Fundmentals index: for guide in page.articles.[page.id]
       <div class="secondary-content show-root--info">
         <h3 class="xlarge"><a href="{{site.baseurl}}{{blinkonShow.url | canonicalize}}" title="Go to {{blinkonShow.title}}" class="themed">{{blinkonShow.title}}</a></h3>
         <p>{{blinkonShow.description}}</p>
+      </div>
+    </li>
+
+    <li class="guides-list__item g--half theme--{{ webrtcShow.id }} {% cycle '', 'g--last' %}">
+      <div class="primary-content show-root--image-container">
+        <a href="{{site.baseurl}}{{webrtcShow.url | canonicalize}}" title="Go to {{webrtcShow.title}}">
+          <img src="{{site.baseurl}}/shows/imgs/webrtc_rect.png" alt="{{webrtcShow.title}} Hero Image">
+        </a>
+      </div>
+      <div class="secondary-content show-root--info">
+        <h3 class="xlarge"><a href="{{site.baseurl}}{{webrtcShow.url | canonicalize}}" title="Go to {{webrtcShow.title}}" class="themed">{{webrtcShow.title}}</a></h3>
+        <p>{{webrtcShow.description}}</p>
       </div>
     </li>
 
