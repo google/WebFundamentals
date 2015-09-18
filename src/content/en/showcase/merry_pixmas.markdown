@@ -8,7 +8,7 @@ authors:
   - pbakaus
 tags: 
   - demo
-
+featured_image: images/merry_pixmas/card.jpg
 showcase:
   scores:
     pagespeed:

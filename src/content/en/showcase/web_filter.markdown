@@ -9,7 +9,7 @@ authors:
 tags: 
   - utility
   - camera
-
+featured_image: images/web_filter/card.jpg
 showcase:
   scores:
     pagespeed:

@@ -9,7 +9,7 @@ authors:
 tags: 
   - creation
   - developer
-
+featured_image: images/adsy_me/card.jpg
 showcase:
   scores:
     pagespeed:

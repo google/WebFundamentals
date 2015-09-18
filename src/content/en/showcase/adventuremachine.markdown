@@ -9,6 +9,7 @@ authors:
 tags: 
   - music
   - promotion
+featured_image: images/adventuremachine/card.jpg
 showcase:
   scores:
     pagespeed:

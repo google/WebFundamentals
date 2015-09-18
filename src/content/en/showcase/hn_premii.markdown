@@ -8,7 +8,7 @@ authors:
   - paulkinlan
 tags: 
   - reader
-
+featured_image: images/hn_premii/card.jpg
 showcase:
   scores:
     pagespeed:

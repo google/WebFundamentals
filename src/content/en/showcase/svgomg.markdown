@@ -8,7 +8,7 @@ authors:
   - pbakaus
 tags: 
   - tools
-
+featured_image: images/svgomg/card.jpg
 showcase:
   scores:
     pagespeed:
