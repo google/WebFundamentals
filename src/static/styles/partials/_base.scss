@@ -94,21 +94,22 @@ figcaption {
   }
 }
 
-.wf-header__dev-logo {
+.wf-header__small-btn {
     display: inline-block;
 
     width: $base-line * 2;
     height: $base-line * 2;
 
-    line-height: $base-line * 2;
     text-align: center;
-}
 
-.wf-gds-dev-logo {
-  width: $header-svg-icon-size;
-  height: $header-svg-icon-size;
+    svg {
+      width: $header-svg-icon-size;
+      height: $header-svg-icon-size;
 
-  fill: white;
+      padding-top: (($base-line * 2) - $header-svg-icon-size) / 2;
+
+      fill: white;
+    }
 }
 
 .wf-header__menu-btn {
