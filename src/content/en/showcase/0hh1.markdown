@@ -8,7 +8,7 @@ authors:
   - pbakaus
 tags: 
   - games
-key_img: images/0hh1/screenshot.png
+featured_image: images/0hh1/card.jpg
 showcase:
   key_image: images/0hh1/screenshot.png
   scores:
