@@ -2,8 +2,6 @@
 title: "Incluir anuncios de AdSense en el sitio"
 description: "Sigue los pasos de esta guía para saber cómo incluir anuncios en tu sitio. Crea una cuenta de AdSense, crea bloques de anuncios, coloca los bloques en tu sitio, establece las preferencias de pago y empieza a recibir ingresos."
 updated_on: 2014-07-31
-authors:
-  - petelepage
 key-takeaways:
   tldr:
     - "Para crear una cuenta de AdSense, debes ser mayor de 18 años y disponer de una cuenta de Google y una dirección postal."

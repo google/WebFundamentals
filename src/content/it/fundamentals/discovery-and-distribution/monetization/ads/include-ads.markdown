@@ -2,8 +2,6 @@
 title: "Includere annunci AdSense sul tuo sito"
 description: "Per apprendere come includere annunci nel tuo sito, procedi come indicato nella presente guida. Crea un account AdSense, crea unità pubblicitarie, posizionale nel tuo sito, configura le impostazioni di pagamento e riscuoti il pagamento."
 updated_on: 2014-07-31
-authors:
-  - petelepage
 key-takeaways:
   tldr:
     - "Per creare un account AdSense, devi essere maggiorenne, avere un Account Google e un indirizzo."

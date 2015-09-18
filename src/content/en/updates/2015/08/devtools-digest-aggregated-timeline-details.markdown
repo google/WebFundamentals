@@ -11,16 +11,6 @@ tags:
   - update
 description: "Find out which third-party scripts cause perf issues with the Aggregated Details in Timeline, how to choose consistent colors with the new color palette and much more."
 featured_image: /web/updates/images/2015-08-24-devtools-digest/featured.jpg
-teaserblocks:
-  - heading: Aggregated Details
-    description: Find out which third-parties make your site slow.
-    image: /web/updates/images/2015-08-24-devtools-digest/teaser1.png
-  - heading: Color Palettes
-    description: Automatic, Material and custom color palettes in the color picker.
-    image: /web/updates/images/2015-08-24-devtools-digest/teaser2.png
-  - heading: New Main Menu
-    description: Streamlined, easier docking, settings and help access.
-    image: /web/updates/images/2015-08-24-devtools-digest/teaser3.png
 ---
 
 It's been a feature-rich month in Chrome Canary. Read on to learn which third party 
