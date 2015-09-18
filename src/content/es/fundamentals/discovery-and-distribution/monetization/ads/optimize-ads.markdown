@@ -2,8 +2,6 @@
 title: "Optimiza tus anuncios"
 description: "La optimización de tu sitio y de los anuncios que aparecen en él puede mejorar la calidad de los anuncios mostrados y generar más ingresos."
 updated_on: 2014-08-12
-authors:
-  - petelepage
 key-takeaways:
   tldr:
   - "Comprueba periódicamente tu <b>cuadro de evaluación</b> de AdSense y sigue las <b>recomendaciones</b> que encontrarás."

@@ -2,8 +2,6 @@
 title: "优化广告"
 description: "优化网站，使网站上展示的广告可以提高已投放广告的质量，并提高您的获利能力。"
 updated_on: 2014-08-12
-authors:
-  - petelepage
 key-takeaways:
   tldr:
   - 定期查看您的 AdSense <b>评分卡</b>，并执行所有<b>建议做法</b>。

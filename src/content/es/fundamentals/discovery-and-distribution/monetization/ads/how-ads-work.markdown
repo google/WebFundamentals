@@ -2,8 +2,6 @@
 title: "Cómo funcionan los anuncios"
 description: "En resumen, debes crear espacios publicitarios (también denominados `inventario de anuncios`) en tu sitio. Los anunciantes pujan por mostrar sus anuncios en tu sitio y la puja mayor gana la subasta. A continuación, obtendrás ingresos cuando los usuarios hagan clic en los anuncios."
 updated_on: 2014-07-31
-authors:
-  - petelepage
 key-takeaways:
   tldr:
     - "Elige la plataforma publicitaria que mejor encaje con tu sitio. Recomendamos la plataforma <a href='http://www.google.com/adsense/start/'>AdSense</a> para la mayoría de los sitios, y la <a href='http://www.google.com/doubleclick/publishers/'>plataforma DoubleClick</a> para sitios con sus propios equipos publicitarios."
