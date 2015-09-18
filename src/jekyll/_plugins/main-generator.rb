@@ -236,10 +236,13 @@ module Jekyll
 
             page.data["translations"] = translated_pages
 
-            if page.name.start_with? ('index')
-              pagesTrees['index'] = page
-            else
-              pagesTrees['pages'] << page
+            # If published is false, don't include it in the pagesTree
+            if !(page['published'] == false)
+              if page.name.start_with? ('index')
+                pagesTrees['index'] = page
+              else
+                pagesTrees['pages'] << page
+              end
             end
 
             allPages << page
