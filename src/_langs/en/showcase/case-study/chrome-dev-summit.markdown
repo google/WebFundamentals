@@ -16,6 +16,7 @@ title: "Chrome Dev Summit 2014"
 subtitle: "Conferencing done right."
 description: "Built in-house by our own Paul Lewis, the CDS website showed how to build a great mobile web experience for conference visitors."
 link: https://developer.chrome.com/devsummit/
+interview: VjCCwplpLAo
 
 scores:
   pagespeed:
