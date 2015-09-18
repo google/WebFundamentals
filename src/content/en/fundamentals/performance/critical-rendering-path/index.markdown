@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "Critical Rendering Path"
+title: "Critical rendering path"
 description: "TODO"
 published_on: 2014-04-01
 updated_on: 2014-04-28

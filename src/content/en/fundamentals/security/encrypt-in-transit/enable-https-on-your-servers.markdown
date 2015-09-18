@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Enable HTTPS On Your Servers"
+title: "Enable HTTPS on your servers"
 description: "You are ready for the all important step of enabling HTTPS on your servers."
 authors:
   - chrispalmer

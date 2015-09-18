@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-subdirectories-list
-title: "API Primers"
+title: "API primers"
 description: "TODO"
 published_on: 2015-07-21
 updated_on: 2015-07-21

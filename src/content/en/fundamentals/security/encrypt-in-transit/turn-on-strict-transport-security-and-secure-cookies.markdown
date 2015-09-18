@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Turn On Strict Transport Security And Secure Cookies"
+title: "Turn on Strict Transport Security and secure cookies"
 description: "TODO"
 authors:
   - chrispalmer

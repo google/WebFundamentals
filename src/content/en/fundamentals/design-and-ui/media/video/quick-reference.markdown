@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Quick Reference"
+title: "Quick reference"
 description: "A quick overview of properties on the video element."
 published_on: 2014-04-16
 updated_on: 2014-10-23
