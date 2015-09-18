@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Web Font optimization"
+title: "Web font optimization"
 published_on: 2014-09-20
 updated_on: 2014-09-30
 order: 5

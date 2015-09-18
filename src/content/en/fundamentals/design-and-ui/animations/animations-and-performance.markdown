@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Animations and Performance"
+title: "Animations and performance"
 description: "Animations must perform well, otherwise they will negatively impact the user experience."
 published_on: 2014-08-08
 updated_on: 2015-08-26

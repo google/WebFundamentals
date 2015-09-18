@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "Optimizing Content Efficiency"
+title: "Optimizing content efficiency"
 published_on: 2014-04-01
 updated_on: 2014-04-29
 order: 0

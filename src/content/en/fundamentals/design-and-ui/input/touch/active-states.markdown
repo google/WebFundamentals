@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Stateful Elements Respond to Touch"
+title: "Stateful elements respond to touch"
 description: "The simplest way to reassure a user that their touch isn't ignored is to change your UI as they press down. Changing a background color can make all the difference and is simple to do."
 published_on: 2014-01-01
 updated_on: 2014-01-06
