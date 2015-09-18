@@ -2,8 +2,6 @@
 title: "Personalizar los anuncios"
 description: "Los mejores anuncios pueden mejorar la experiencia del usuario. Aunque realmente el contenido del anuncio depende de los anunciantes, puedes controlar el tipo de contenido, el color, el tamaño y la posición de estos anuncios."
 updated_on: 2014-08-12
-authors:
-  - petelepage
 key-takeaways:
   tldr:
     - "Nunca coloques anuncios donde puedan interferir con la experiencia que deseas para el usuario en tu sitio. Procura que los anuncios de la mitad superior de la página no dejen el contenido importante debajo."
