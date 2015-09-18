@@ -9,7 +9,6 @@ category: devtools
 featured_image: /web/updates/images/2015-08-10-5-tricks-to-use-in-the-console-panel/five-console-tricks.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/29-five-console-tricks/
-
 ---
 <img src="/web/updates/images/2015-08-10-5-tricks-to-use-in-the-console-panel/five-console-tricks.gif" alt="Five tricks to use in the Console Panel">
 
