@@ -1,61 +1,16 @@
-Web Fundamentals <material-branch> [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=material-branch)](https://travis-ci.org/google/WebFundamentals)
-================
+# Web Fundamentals <material-branch> [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=material-branch)](https://travis-ci.org/google/WebFundamentals)
 
 Web Fundamentals is a technical documentation center for multi-device web
 development.  Our goal is to build a resource for modern web developers
 that’s as curated and thorough as developer.android.com or iOS Dev Center.
 
-Content plan
-------------
-Content plan for Web Fundamentals is tracked through GitHub Issues and our [Site Structure + Content Inventory](http://goo.gl/nWDD0M) doc
+# Installing Dependencies
 
+To build and run this project you need to have Ruby, Node and NPM.
 
-Release status
---------------
-
-The project was soft launched in late April with a formal v1 launch in June 2014.  We've now moved to a six-week rolling release cycle.
-
-Project Structure
------------------
-
-This is a Jekyll build.
-
-```
-/appengine - the server to host the static content
-/src - the documentation
-  /_langs - the content in each language
-    /en - the base language folder
-      /getting-started - the getting started articles
-      /multi-device-layouts - responsive design guide
-      /introduction-to-media - the guide to using media
-      /optimizing-performance - the perf articles
-      /using-touch - managing touch
-      /showcase - the case-studies
-      ...etc...
-    /<langcode> - overrides for that language, following the main path structure.
-```
-
-The site is generated in `/build`, but is never checked in.
-
-
-Contributing
-------------
-
-Web Fundamentals is an open source project and we welcome your contributions!
-Before submitting a pull request, please review [CONTRIBUTING.md](CONTRIBUTING.md)
-and make sure that there is an issue filed describing the fix or new content.
-If you don't complete these steps, we won't be able to accept your pull request, sorry.
-
-
-Installing Dependencies
-=======================
-
-Mac
----
+## Mac
 
 1. Install [XCode Command Line Tools](https://developer.apple.com/xcode/downloads/)
-1. Install [NVM](https://github.com/creationix/nvm)
-    * `curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash`
 1. Install node
     * [https://nodejs.org/en/]()
 1. Install [RVM](https://rvm.io/rubies/default)
@@ -75,43 +30,97 @@ Mac
     * `npm install`
 1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
 
-Running the site
-================
+# Running the site
 
-Once you have all the dependencies installed go to the root of the checked out repo and type:
+To run the site:
 
-```
-gulp
-```
+    gulp
 
-This will have Jekyll build the site, run a static server to listen on
-port 7331 (which you can now reach at
-[http://localhost:7331/web/](http://localhost:7331/web/)),
-and watch for changes to site files. Every change will cause Jekyll to rebuild
-the affected files.
+This will compile styles & javascript and build the site with Jekyll. If thats
+all working, it will start a server on port 7331 (which you can reach at
+[http://localhost:7331/web/](http://localhost:7331/web/)).
 
-If you want to build a single language then run this: `gulp --lang en`.
 
-If you want to build a specific section then run this: `gulp --section shows`.
+Any changes to files will result in the appropriate tasks be running in gulp.
 
-These can be combined: `gulp --lang en --section shows`
+## Faster Jekyll Builds
 
-Learning More About Jekyll and Liquid Used
--------------------------------------------
+To make the build faster you can define a language and/or section of the site
+be built.
+
+If you want to build a single language then run this:
+
+    gulp --lang en
+
+If you want to build a specific section then run this:
+
+    gulp --section shows
+
+These can be combined like so:
+
+    gulp --lang en --section shows
+
+## Learning More About Jekyll and Liquid Used
 
 We have a styleguide which you can access at [http://localhost:7331/web/styleguide/](http://localhost:7331/web/styleguide/) that should get you up and running with a lot of the custom and useful info.
 
 
-Translations
-============
+# Translations
 
 See [our translations guide](TRANSLATION.md)
 
-Building Shows
-==============
+# Building Shows
 
 You need the python [Google API client](https://developers.google.com/api-client-library/python/start/installation)
 
 For Linux:
 
     pip install --upgrade google-api-python-client
+
+# Content plan
+
+Content plan for Web Fundamentals is tracked through GitHub Issues and our [Site Structure + Content Inventory](http://goo.gl/nWDD0M) doc
+
+
+# Release status
+
+The project was soft launched in late April with a formal v1 launch in June 2014.  We've now moved to a six-week rolling release cycle.
+
+# Project Structure
+
+This is a Jekyll build.
+
+```
+/appengine-config - The server to host the static content
+/gulp-tasks - The tasks available to Gulp split by responsibility (styles, scripts etc.)
+/src - The documentation
+  /content - The content in each language
+    /en - The base language folder. Sub folders are sections of the site
+      /fundamentals
+      /showcase
+      /shows
+      ...etc...
+    /<langcode> - Overrides for that language, following the en structure.
+  /jekyll -
+    /_config - These are files which define specific settings for the setup of the page
+    /_data - These are static strings and their translations
+    /_includes - These a snippets of HTML you can include in a page
+    /_layouts - There are layouts you can reference in the YAML of your doc
+    /_plugins - This is the guts of Web Fundamentals.
+  /static
+    /imgs - Images used in Web Fundamentals
+    /scripts - Javascript - not used in final deployment of WF only local
+    /styles - Sass for web fundamentals
+    /third_party
+  /tests
+  /tools
+```
+
+The site is generated in `/build`, which is never checked in.
+
+# Contributing
+
+Web Fundamentals is an open source project and we welcome your contributions!
+Before submitting a pull request, please review [CONTRIBUTING.md](CONTRIBUTING.md)
+and make sure that there is an issue filed describing the fix or new content.
+If you don't complete these steps, we won't be able to accept your pull request, sorry.
