@@ -8,18 +8,7 @@
 }
 
 .mdl-textfield .mdl-button.wf-header__search-btn {
-  width: $input-text-button-size;
-  height: $input-text-button-size;
-  line-height: $input-text-button-size;
-
   bottom: 0;
-
-  svg {
-    fill: white;
-
-    width: $base-line;
-    height: $base-line;
-  }
 }
 
 .wf-header__search-expanding-container {
