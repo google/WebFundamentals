@@ -8,7 +8,7 @@ authors:
   - pbakaus
 tags: 
   - games
-
+featured_image: images/little_alchemy/card.jpg
 showcase:
   scores:
     pagespeed:
