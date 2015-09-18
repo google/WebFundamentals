@@ -23,10 +23,19 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Fundamentals'
-      self.data['html_head_title'] = 'Web Fundamentals - Google Developers'
-      self.data['html_head_description'] = 'Google Developers Web Updates ' +
-        'contains the latest news from the Chrome, looking at new features ' +
-        'on the open web and in Chrome DevTools.'
+      if self.data['title'].nil?
+        self.data['html_head_title'] = 'Web Fundamentals - Google Developers'
+      else
+        self.data['html_head_title'] = self.data['title'] + 
+          ' | Web Fundamentals - Google Developers'
+      end
+      if self.data['description'].nil?
+        self.data['html_head_description'] = 'Google Developers Web Updates ' +
+          'contains the latest news from the Chrome, looking at new features ' +
+          'on the open web and in Chrome DevTools.'
+      else
+        self.data['html_head_description'] = self.data['description']
+      end
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
 
       self.data['feed_name'] = 'Web Fundamentals - Google Developers'
