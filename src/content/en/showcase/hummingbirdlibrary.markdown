@@ -9,7 +9,7 @@ authors:
 tags: 
 - anime
 - tracker
-
+featured_image: images/hummingbirdlibrary/card.jpg
 showcase:
   scores:
     pagespeed:
