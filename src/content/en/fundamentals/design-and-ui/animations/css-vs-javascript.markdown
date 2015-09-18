@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "CSS vs JavaScript Animations"
+title: "CSS vs JavaScript animations"
 description: "You can animate with CSS or JavaScript. Which should you use, and why?"
 published_on: 2014-08-08
 updated_on: 2015-08-26

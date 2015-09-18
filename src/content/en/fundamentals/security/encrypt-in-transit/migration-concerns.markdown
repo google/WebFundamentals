@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Migration Concerns"
+title: "Migration concerns"
 description: "TODO"
 authors:
   - chrispalmer

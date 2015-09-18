@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Column Drop"
+title: "Column drop"
 description: "Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices"
 authors:
   - petelepage

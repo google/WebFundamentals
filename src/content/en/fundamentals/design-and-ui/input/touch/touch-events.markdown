@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Implement Custom Gestures"
+title: "Implement custom gestures"
 description: "Using touch events, you can create custom interactions for your UI. The question is how can you do this efficiently, keeping your frame rate high and your users happy."
 published_on: 2014-01-01
 updated_on: 2014-09-19

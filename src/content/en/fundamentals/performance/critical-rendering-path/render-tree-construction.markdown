@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Render-tree construction, Layout, and Paint"
+title: "Render-tree construction, layout, and paint"
 description: "TODO"
 published_on: 2014-04-01
 updated_on: 2015-08-21

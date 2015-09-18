@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "The Basics of Easing"
+title: "The basics of easing"
 description: "Learn how to soften and give weighting to your animations."
 published_on: 2014-08-08
 updated_on: 2014-10-21
