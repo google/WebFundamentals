@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "Responsive Web Design Patterns"
+title: "Responsive web design patterns"
 description: "Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices"
 authors:
   - petelepage

@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "Rendering Performance"
+title: "Rendering performance"
 description: "Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!"
 published_on: 2015-03-20
 updated_on: 2015-03-20

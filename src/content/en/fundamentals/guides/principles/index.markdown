@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "Principles of Site Design"
+title: "Principles of site design"
 description: "Google and AnswerLab undertook an intensive research study examining how a range of users interacted with a diverse set of mobile sites. The goal, to answer the question: what makes a good mobile site?"
 published_on: 2014-08-08
 updated_on: 2015-09-17
