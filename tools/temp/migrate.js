@@ -7,7 +7,7 @@ var options = {
   cleanupTranslatedYaml: false,
   removeFeedInfo: false,
   removeCollection: false,
-  cleanupUpdates: false,
+  cleanupUpdates: true,
   cleanupShows: false,
   cleanupSpotlight: false
 };
@@ -52,12 +52,14 @@ function updateFile(filename) {
       }
 
       if (options.cleanupUpdates) {
-        data = data.replace(/^collection:\s*.*\n/gm, '');
-        data = data.replace(/^category:\s*.*\n/gm, '');
-        data = data.replace(/^product:\s*.*\n/gm, '');
-        data = data.replace(/^type:\s*.*\n/gm, '');
-        data = data.replace(/^date:\s*.*\n/gm, '');
-        data = data.replace(/^permalink:\s*.*\.html\n/gm, '');
+        data = data.replace(/^rss: false\n/m, '');
+        data = data.replace(/^collection:\s*.*\n/m, '');
+        data = data.replace(/^product:\s*.*\n/m, '');
+        data = data.replace(/^type:\s*.*\n/m, '');
+        data = data.replace(/^date:\s*.*\n/m, '');
+        data = data.replace(/^permalink:\s*.*\.html\n/m, '');
+        data = data.replace(/^category: tools\n/m, 'category: devtools\n');
+        data = data.replace(/^category: chrome\n/m, 'category: news\n');
       }
 
       if (options.cleanupShows) {
@@ -74,6 +76,7 @@ function updateFile(filename) {
       }
 
       // change the layout
+      data = data.replace(/^layout: update\n/m, 'layout: updates/post\n');
       data = data.replace(/^layout: article\n/m, 'layout: shared/narrow\n');
       data = data.replace(/^layout: landing\n/m, 'layout: fundamentals/list-subdirectories\n');
       data = data.replace(/^layout: section\n/m, 'layout: shared/narrow\n');
@@ -82,7 +85,7 @@ function updateFile(filename) {
       data = data.replace(/^layout: tools-section\n/m, 'layout: shared/narrow\n');
       data = data.replace(/^layout: grouped-list\n/m, 'layout: shared/narrow\n');
 
-      //remove: class, article, collection, id, feedName, feedPath, seotitle
+      //remove old tags
       data = data.replace(/^article:\n/m, '');
       data = data.replace(/^id:\s*.*\n/m, '');
       data = data.replace(/^class:\s*.*\n/m, '');
