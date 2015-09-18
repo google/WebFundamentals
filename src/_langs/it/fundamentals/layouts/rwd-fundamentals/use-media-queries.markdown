@@ -143,7 +143,7 @@ Di seguito viene indicato un esempio:
 * Se il browser ha una dimensione compresa fra <b>500 pixel</b> e <b>600 pixel</b> vengono applicati gli stili in `maxpx.css`.
 * Se il browser ha una dimensione di almeno <b>640 pixel</b> viene applicato `min-640px.css`.
 * Se la larghezza del browser <b>è superiore all'altezza</b> viene applicato `landscape.css`.
-* Se l'altezza del browser <b>è superiore all'altezza</b> viene applicato `portrait.css`.
+* Se l'altezza del browser <b>è superiore all larghezza</b> viene applicato `portrait.css`.
 
 
 ##Nota su `min-device-width`
