@@ -84,6 +84,20 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
 
+beaufortfrancois:
+  name:
+    given: François
+    family: Beaufort
+  org:
+    name: Google
+    unit: Developer Relations
+  country: France
+  role:
+    - author
+  homepage: https://plus.google.com/+FrancoisBeaufort
+  google: +FrancoisBeaufort
+  description: "Dives into Chromium source code"
+
 samchen:
   name:
     given: Sam
@@ -580,6 +594,20 @@ borissmus:
   role:
     - author
   email: smus@google.com
+
+emilystark:
+  name:
+    given: Emily
+    family: Stark
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  homepage: https://www.emilymstark.com/
+  twitter: estark37
+  email: estark@chromium.org
 
 samthorogood:
   name:
