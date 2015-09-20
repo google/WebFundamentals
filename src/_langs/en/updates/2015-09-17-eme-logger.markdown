@@ -28,9 +28,9 @@ img, video {
 }
 </style>
 
-Do you use Encrypted Media Extensions (EME)?
+Do you use Encrypted Media Extensions?
 
-If so, you may be interested in EME Logger: a Chrome extension from Google that logs EME events and calls to the DevTools console along with debugging information to help you investigate issues with EME implementations.
+If so, you may be interested in EME Logger: a Chrome extension from Google that logs EME events and calls to the DevTools console along with debugging information.
 
 You can install the EME Logger extension from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/eme-call-and-event-logger/cniohcjecdcdhgmlofniddfoeokbpbpb).
 
