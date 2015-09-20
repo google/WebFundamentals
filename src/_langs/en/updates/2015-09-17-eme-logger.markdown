@@ -32,7 +32,7 @@ Do you use Encrypted Media Extensions?
 
 If so, you may be interested in EME Logger: a Chrome extension from Google that logs EME events and calls to the DevTools console along with debugging information.
 
-You can install the EME Logger extension from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/eme-call-and-event-logger/cniohcjecdcdhgmlofniddfoeokbpbpb).
+You can install EME Logger from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/eme-call-and-event-logger/cniohcjecdcdhgmlofniddfoeokbpbpb).
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-09-17-eme-logger/screenshot_page.png" alt="Screenshot of protected content playing in a video element on a web page, with the Chrome DevTools console showing logging from the EME Logger extension">
