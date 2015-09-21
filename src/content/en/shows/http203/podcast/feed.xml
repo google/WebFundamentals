@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<channel>
+  <title>HTTP 203 Podcast</title>
+  <link>https://developers.google.com/web/shows/http203/index</link>
+  <language>en</language>
+  <copyright>Google</copyright>
+  <itunes:subtitle>Where Paul and Jake occasionally talk web.</itunes:subtitle>
+  <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+  <itunes:summary>Paul and Jake talk about whatever&#x27;s going on in the world of web development.</itunes:summary>
+  <itunes:owner>
+    <itunes:name>Paul Lewis &amp; Jake Archibald</itunes:name>
+    <itunes:email>jaffathecake@gmail.com</itunes:email>
+  </itunes:owner>
+  <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
+  <itunes:category text="Technology"/>
+
+  <item>
+    <title>Making Burgers and Maintainable Code</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about making burgers and maintainable code.</itunes:subtitle>
+    <itunes:summary>How can writing code be like making a burger? Turns out, by the power of weird segues, it can!</itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
+    <enclosure url="https://developers.google.com/web/shows/http203/podcast/episode-1.mp3" length="32446567" type="audio/mpeg"/>
+    <guid>https://developers.google.com/web/shows/http203/podcast/episode-1.mp3</guid>
+    <pubDate>Mon Sep 21 2015 15:23:55 GMT+0100 (BST)</pubDate>
+    <itunes:duration>00:30:13</itunes:duration>
+  </item>
+
+</channel>
+</rss>
