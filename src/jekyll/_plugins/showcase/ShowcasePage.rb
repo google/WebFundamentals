@@ -18,13 +18,15 @@ module Jekyll
   require File.expand_path('../../languages/language_page.rb', __FILE__)
 
   class ShowcasePage < LanguagePage
+
+    DEFAULT_HEAD_TITLE = 'Google Web Showcase - Google Developers'
+    DEFAULT_HEAD_DESCRIPTION = 'Google Web Showcase - Google Developers'
+
     def initialize(site, relativeDir, filename, langcode)
       validKeys = ['tags', 'showcase']
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Showcase'
-      self.data['html_head_title'] = 'Google Web Showcase - Google Developers'
-      self.data['html_head_description'] = 'Google Web Showcase - Google Developers'
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
 
       self.data['feed_name'] = 'Google Web Showcase - Google Developers'

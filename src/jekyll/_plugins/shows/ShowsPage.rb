@@ -18,6 +18,11 @@ module Jekyll
   require File.expand_path('../../languages/language_page.rb', __FILE__)
 
   class ShowsPage < LanguagePage
+    DEFAULT_HEAD_TITLE = 'Web Shows - Google Developers'
+    DEFAULT_HEAD_DESCRIPTION = 'Google Developer web shows are ' +
+      'a set of video series that help web developers learn about the ' +
+      'latest news and technologies on the web platform.'
+
     def initialize(site, relativeDir, filename, langcode)
       # TODO Optimize valid yaml keys and remove date
       # see https://github.com/google/WebFundamentals/issues/1651
@@ -27,10 +32,6 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Shows'
-      self.data['html_head_title'] = 'Web Shows - Google Developers'
-      self.data['html_head_description'] = 'Google Developer web shows are ' +
-        'a set of video series that help web developers learn about the ' +
-        'latest news and technologies on the web platform.'
       self.data['theme_color'] = '#212121'
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
