@@ -21,7 +21,7 @@
 
 <!-- Translated Page -->
 {% for translated_page in page.translations %}
-<link rel="alternate" hreflang="{{translated_page.langcode}}" href="{{translated_page.canonical_url}}" />
+<link rel="alternate" hreflang="{{translated_page[0]}}" href="{{translated_page[1].canonical_url}}" />
 {% endfor %}
 
 <link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
