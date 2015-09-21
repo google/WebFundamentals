@@ -18,6 +18,9 @@ module Jekyll
 
   class WFPage < Page
 
+    DEFAULT_HEAD_TITLE = 'Web - Google Developers'
+    DEFAULT_HEAD_DESCRIPTION = 'Google Developers - Web Fundamentals';
+
     alias superdest destination
     alias superpath path
 
@@ -59,15 +62,33 @@ module Jekyll
       # Check that all the keys in the YAML data is valid
       validateYamlData()
 
+      if self.data['html_head_title'].nil?
+        # There is no html_head_title defined in the YAML
+        if self.data['title'].nil?
+          self.data['html_head_title'] = self.class::DEFAULT_HEAD_TITLE
+        else
+          self.data['html_head_title'] = self.data['title'] +
+            ' | ' + self.class::DEFAULT_HEAD_TITLE
+        end
+      end
+
+      if self.data['html_head_description'].nil?
+        # There is no html_head_description defined in the YAML
+        if self.data['description'].nil?
+          self.data['html_head_description'] = self.class::DEFAULT_HEAD_DESCRIPTION
+        else
+          self.data['html_head_description'] = self.data['description']
+        end
+      end
+
+      if self.data['html_head_social_img'].nil?
+        self.data['html_head_social_img'] =  site.config['WFBaseUrl'] + '/imgs/logo.png'
+      end
+
       # This could be given a better name - Used in navigation liquid
       # displayed on mobile screens
       self.data['drawerTitleText'] = self.data['title']
 
-      self.data['html_head_title'] = 'Web - Google Developers'
-      self.data['html_head_description'] = 'Google Developers - Web Fundamentals'
-      if self.data['html_head_social_img'].nil?
-        self.data['html_head_social_img'] =  site.config['WFBaseUrl'] + '/imgs/logo.png'
-      end
       self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
       self.data['theme_color'] = '#03A9F4'
       self.data['feed_name'] = 'Web - Google Developers'
