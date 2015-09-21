@@ -13,7 +13,7 @@ tags:
   - media
   - MediaStream
   - MediaStreamTrack
-  - getUserMedia()
+  - getUserMedia
   - RTCPeerConnection
   - WebRTC
 ---
