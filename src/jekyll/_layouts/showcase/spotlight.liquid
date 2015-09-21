@@ -74,7 +74,6 @@
 
   {% include showcase/related_spotlight_guides.liquid list=page.related %}
 
-
   {% if showcase.overview %}
   <h2>Overview</h2>
   <p>{{showcase.overview.description | markdownify }}</p>
@@ -108,6 +107,11 @@
     </dd>
     {% endif %}
   </dl>
+  {% endif %}
+
+  {% if showcase.ytvideo %}
+  <h2>The interview</h2>
+  {% ytvideo showcase.ytvideo %}
   {% endif %}
 
   {% if showcase.behind_the_scenes %}
