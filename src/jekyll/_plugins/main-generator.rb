@@ -108,6 +108,9 @@ module Jekyll
       site.data['primes'] = []
       allPages = []
 
+      puts 'rootFilepath ' + rootFilepath
+      puts 'buildRelativeDir ' + buildRelativeDir
+
       handleFileEntries(allPages, parentTree, pagesTree, site, rootFilepath, buildRelativeDir, fileEntries)
 
       #organisePageTree(pagesTree)
