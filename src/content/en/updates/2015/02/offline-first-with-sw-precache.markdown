@@ -10,7 +10,7 @@ authors:
 tags:
   - serviceworker
   - offline
-  - caching
+  - cache
   - performance
 ---
 
