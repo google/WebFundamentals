@@ -17,6 +17,12 @@ module Jekyll
   require 'sanitize'
 
   class UpdatePage < LanguagePage
+
+    DEFAULT_HEAD_TITLE = 'Web Updates - Google Developers'
+    DEFAULT_HEAD_DESCRIPTION = 'Google Developers Web Updates ' +
+      'contains the latest news from the Chrome, looking at new features ' +
+      'on the open web and in Chrome DevTools.'
+
     def initialize(site, relativeDir, filename, langcode)
       # TODO Optimize valid yaml keys and remove date
       # see https://github.com/google/WebFundamentals/issues/1649
@@ -26,10 +32,6 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Updates'
-      self.data['html_head_title'] = 'Web Updates - Google Developers'
-      self.data['html_head_description'] = 'Google Developers Web Updates ' +
-        'contains the latest news from the Chrome, looking at new features ' +
-        'on the open web and in Chrome DevTools.'
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/update-post.css';
       self.data['theme_color'] = '#E91E63'
       self.data['feed_name'] = 'Web Updates - Google Developers'

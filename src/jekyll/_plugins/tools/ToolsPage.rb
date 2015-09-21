@@ -18,14 +18,17 @@ module Jekyll
   require File.expand_path('../../languages/language_page.rb', __FILE__)
 
   class ToolsPage < LanguagePage
+
+    DEFAULT_HEAD_TITLE = 'Web Tools - Google Developers'
+    DEFAULT_HEAD_DESCRIPTION = 'Web Developer Tools provides a ' +
+      'of instructions and tools to help you build your website.'
+
     def initialize(site, relativeDir, filename, langcode)
       validKeys = ['panel', 'panels']
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Tools'
-      self.data['html_head_title'] = 'Google Web Tools - Google Developers'
-      self.data['html_head_description'] = 'Web Developer Tools provides a ' +
-        'of instructions and tools to help you build your website.'
+      
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
 
       self.data['feed_name'] = 'Google Web Tools - Google Developers'

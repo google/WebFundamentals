@@ -21,9 +21,6 @@ module Jekyll
     def initialize(site, langcode, relativeDirectory, filename)
       super(site, File.join(site.config['WFStyleguideLocation'], relativeDirectory), filename + '.html', langcode)
 
-      puts 'LayoutPage'
-      puts relativeDirectory
-
       # This will read the liquid file and asign the page the appropriate content
       self.read_yaml(site.config['layouts'], File.join(relativeDirectory, filename + '.liquid'))
     end
