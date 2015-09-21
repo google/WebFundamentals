@@ -49,8 +49,6 @@ title: Web Fundamentals
 
 {% if site.spotlights == true %}
 
-{% featured_showcase showcase %}
-
 <div class="featured-section">
   <div class="container-medium">
     <ul class="featured-list">
