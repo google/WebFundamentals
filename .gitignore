@@ -15,3 +15,4 @@ src/css/styles.min.css
 jekyll/content
 vendor/
 appengine/build
+tools/shows-gen/yt-api-key.json
