@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 description: "A place holder for the /web home page on Google Developers"
-title: "Web [Place Holder]"
+title: "Welcome!"
 ---
 
 <div class="container clear">
@@ -12,15 +12,11 @@ title: "Web [Place Holder]"
   </picture>
 </div>
 
-<h1>Welcome</h1>
+
+<h1>Note</h1>
 <p>
-  Most users will never see this page, its replaced by DevSite's custom
+  Users will <b>never</b> see this page, its replaced by DevSite's custom
   index page and is only visible on
   <a href="{{site.WFAbsoluteUrl}}">WebCentral</a> and in 
   development environments.
 </p>
-<ul>
-{% for navitem in page.rootnav.toc %}
-  <li><a href="{{navitem.path}}">{{navitem.title}}</a></li>
-{% endfor %}
-</ul>
