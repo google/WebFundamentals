@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/wide
 description: "The Chrome DevTools are Chrome's built-in authoring and debugging tool."
 title: Chrome DevTools
 
@@ -30,34 +30,36 @@ panels:
     anchor: work-in-device-mode
 ---
 
-<div class="todo-banner">
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <h2>Chrome DevTools</h2>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <p>Chrome's built-in authoring and debugging tool.</p>
-      <p>
-        <a class="mdl-button mdl-js-button mdl-button--raised" href="#TODO">Learn more</a>
-        <a href="https://github.com/GoogleChrome"><img src="/web/imgs/social/github-circle.svg" alt="Github"></a>
-        <a href="https://plus.google.com/+GoogleChromeDevelopers"><img src="/web/imgs/social/google-plus-box.svg" alt="Google+"></a>
-        <a href="https://twitter.com/ChromeDevTools"><img src="/web/imgs/social/twitter.svg" alt="Twitter"></a>
-        <a href="http://stackoverflow.com/questions/tagged/google-chrome-devtools"><img src="/web/imgs/social/stackoverflow.svg" alt="Stack Overflow"></a>
-        <a href="https://www.youtube.com/user/ChromeDevelopers"><img src="/web/imgs/social/youtube-play.svg" alt="YouTube"></a>
-      </p>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. They provide web developers deep access into the internals of the browser and their web application. Use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.</p>
-      <div class="note">Note: If you are a web developer and want to get the latest version of DevTools, you should use <a href="https://tools.google.com/dlpage/chromesxs">Google Chrome Canary</a>.</div>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <p>To open the DevTools, open a site or app in Chrome, then:</p>
-      <ul>
-        <li>Select the <strong>Chrome menu</strong> at the top-right of your browser window, then select <strong>Tools > Developer Tools</strong>.</li>
-        <li>Right-click on any page element and select Inspect Element.</li>
-        <li>Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac) (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
-      </ul>
-      <a class="mdl-button mdl-js-button mdl-button--raised" href="/web/tools/setup/workspace/setup-devtools">CONTINUE READING</a>
+<div class="wf-subheading">
+  <div class="page-content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col">
+        <h2>Chrome DevTools</h2>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col">
+        <p>Chrome's built-in authoring and debugging tool.</p>
+        <p>
+          <a class="mdl-button mdl-js-button mdl-button--raised" href="#TODO">Learn more</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-header__small-btn" href="https://github.com/GoogleChrome">{% include svgs/github-mark.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-header__small-btn" href="https://plus.google.com/+GoogleChromeDevelopers">{% include svgs/gplus.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-header__small-btn" href="https://twitter.com/ChromeDevTools">{% include svgs/twitter.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-header__small-btn" href="http://stackoverflow.com/questions/tagged/google-chrome-devtools">{% include svgs/stackoverflow.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-header__small-btn" href="https://www.youtube.com/user/ChromeDevelopers">{% include svgs/youtube.svg %}</a>
+        </p>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col">
+        <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. They provide web developers deep access into the internals of the browser and their web application. Use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.</p>
+        <div class="note">Note: If you are a web developer and want to get the latest version of DevTools, you should use <a href="https://tools.google.com/dlpage/chromesxs">Google Chrome Canary</a>.</div>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col">
+        <p>To open the DevTools, open a site or app in Chrome, then:</p>
+        <ul>
+          <li>Select the <strong>Chrome menu</strong> at the top-right of your browser window, then select <strong>Tools > Developer Tools</strong>.</li>
+          <li>Right-click on any page element and select Inspect Element.</li>
+          <li>Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac) (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
+        </ul>
+        <a class="mdl-button mdl-js-button mdl-button--raised" href="/web/tools/setup/workspace/setup-devtools">CONTINUE READING</a>
+      </div>
     </div>
   </div>
 </div>
