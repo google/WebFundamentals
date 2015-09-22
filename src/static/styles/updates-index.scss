@@ -17,6 +17,9 @@ $color-accent: unquote("rgb(#{$palette-pink-400})");
 @import "../third_party/material-design-lite/src/grid/grid";
 @import "../third_party/material-design-lite/src/button/button";
 @import "../third_party/material-design-lite/src/textfield/textfield";
+@import "../third_party/material-design-lite/src/card/card";
+@import "../third_party/material-design-lite/src/shadow/shadow";
+@import "../third_party/material-design-lite/src/grid/grid";
 @import "partials/google-fonts";
 @import "partials/debug";
 @import "partials/base";
@@ -27,6 +30,8 @@ $color-accent: unquote("rgb(#{$palette-pink-400})");
 @import "partials/components/wf-article-nav";
 @import "partials/components/wf-nav-drawer";
 @import "partials/components/wf-subheading";
+@import "partials/components/wf-card";
+@import "partials/components/wf-grid";
 
 $border-width: 1px;
 

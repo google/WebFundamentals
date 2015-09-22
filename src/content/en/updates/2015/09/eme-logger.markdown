@@ -12,7 +12,7 @@ tags:
   - video
   - media
   - EME
-featured-image: /web/updates/images/2015-09-17-eme-logger/featured.png
+featured_image: /web/updates/images/2015-09-17-eme-logger/featured.png
 ---
 
 <p class="intro">
