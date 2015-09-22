@@ -6,7 +6,7 @@
 <ul class="wf-main-nav__list-level-{{listLevel}} wf-nav__list clear">
 {% for tocItem in include.toc %}
   <li class="wf-main-nav__item">
-    <a class="wf-main-nav__link" href="{{ tocItem.path }}" title="Go to {{ tocItem.strippedTitle }}">
+    <a class="wf-main-nav__link{% if tocItem.currentPageInThisSection %} page-in-section{% endif %}" href="{{ tocItem.path }}" title="Go to {{ tocItem.strippedTitle }}">
       {{ tocItem.title }}
     </a>
 
