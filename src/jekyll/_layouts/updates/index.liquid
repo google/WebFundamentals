@@ -13,23 +13,10 @@
   <div class="mdl-grid">
     {% for article in page.updates %}
       {% capture action %}<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{article.canonical_url}}">View</a>{% endcapture %}
-      {% include shared/base_card.liquid title=article.title text=article.description action=action imgUrl=article.featured_image %}
+      {% include shared/base_card.liquid title=article.title text=article.description action=action imgUrl=article.featured_image href=article.canonical_url %}
     {% endfor %}
   </div>
 </div>
-
-
-{% comment %}
-<div class="page-content">
-  <ul class="updates-pages__list">
-    {% for article in page.updates %}
-      <li class="updates-pages__list-item">
-        {% include updates/update_list_item_content.liquid article=article %}
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-{% endcomment %}
 
 {% include shared/article-nav.liquid %}
 
