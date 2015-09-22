@@ -11,6 +11,7 @@ tags:
 - tracker
 featured_image: images/hummingbirdlibrary/card.jpg
 showcase:
+  key_image: images/hummingbirdlibrary/screenshot.png
   scores:
     pagespeed:
       speed: 46

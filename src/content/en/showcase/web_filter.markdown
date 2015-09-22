@@ -11,6 +11,7 @@ tags:
   - camera
 featured_image: images/web_filter/card.jpg
 showcase:
+  key_image: images/web_filter/screenshot.png
   scores:
     pagespeed:
       speed: 86

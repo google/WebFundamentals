@@ -11,6 +11,7 @@ tags:
   - developer
 featured_image: images/adsy_me/card.jpg
 showcase:
+  key_image: images/adsy_me/screenshot.png
   scores:
     pagespeed:
       speed: 65

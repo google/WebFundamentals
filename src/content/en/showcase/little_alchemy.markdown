@@ -10,6 +10,7 @@ tags:
   - games
 featured_image: images/little_alchemy/card.jpg
 showcase:
+  key_image: images/little_alchemy/screenshot.png
   scores:
     pagespeed:
       speed: 66
