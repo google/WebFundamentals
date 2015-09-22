@@ -108,45 +108,9 @@ module Jekyll
       site.data['primes'] = []
       allPages = []
 
-      puts 'rootFilepath ' + rootFilepath
-      puts 'buildRelativeDir ' + buildRelativeDir
-
       handleFileEntries(allPages, parentTree, pagesTree, site, rootFilepath, buildRelativeDir, fileEntries)
 
-      #organisePageTree(pagesTree)
-
       allPages
-      # This maps all the files in the primary language directory
-      # to any of the available translations files
-      #Dir.glob(primaryLangFilePattern).inject({}) { |result, fullFilepath|
-      #  # Get the relative directory the file lives in (i.e. where in a
-      #  # language it would live)
-      #  relativeDirectory = File.dirname fullFilepath.sub(primaryLangFilepath, '')
-      #
-      #  # skip underscore directories, _code and _assets
-      #  next result if relativeDirectory =~ /^_/
-      #  next result if relativeDirectory =~ /\/_(code|assets)/
-      #
-      #  # Get just the filename of the file
-      #  filename = File.basename fullFilepath
-      #  # Get the relative directory and filename for the file
-      #  relativePath = File.join relativeDirectory, filename
-      #
-      #  # This method looks for the equivalent translation file for a file
-      #  # by looping over the langs_available array from config
-      #  result[relativePath] = site.config['langs_available'].select { |hl|
-      #    File.exists? File.join(contentSource, hl, relativeDirectory, filename)
-      #  }
-      #
-      #  langPage = create_page(
-      #    site,
-      #    relativeDirectory,
-      #    filename,
-      #    primaryLanguage,
-      #    false)
-
-      #  result
-      #}
     end
 
     def handleFileEntries(allPages, treeParent, pagesTrees, site, rootPath, relativePath, fileEntries)
@@ -185,20 +149,16 @@ module Jekyll
             )
         else
           # We are dealing with a file
-          page = create_page(
-              site,
-              relativePath,
-              fileEntry,
-              'en',
-              false)
-
           # If the file is a markdown file, it's a Jekyll Page
-          if @markdownExtensions.include? File.extname(fileEntry)
-            # This makes no sense here, the response for translations method
-            # is assigned to site.data['primes']
-            #if site.data['primes'].key?(page.url)
-            #  raise "Two pages at the same URL #{page.url}"
-            #end
+          if (@markdownExtensions.include? File.extname(fileEntry)) ||
+            (fileEntry == 'sitemap.xml') || (fileEntry == 'feed.xml')
+
+            page = createPage(
+                site,
+                relativePath,
+                fileEntry,
+                'en',
+                false)
 
             page.data['_context'] = pagesTrees
 
@@ -221,7 +181,7 @@ module Jekyll
             supportedTranslations.each do |languageId|
               translationFilePath = File.join @contentSource, languageId, relativePath
 
-              translationPage = create_page(
+              translationPage = createPage(
                 site,
                 relativePath,
                 fileEntry,
@@ -240,16 +200,25 @@ module Jekyll
             page.data["translations"] = translated_pages
 
             # If published is false, don't include it in the pagesTree
-            if !(page['published'] == false)
-              if page.name.start_with? ('index')
-                pagesTrees['index'] = page
-              else
-                pagesTrees['pages'] << page
+            if (@markdownExtensions.include? File.extname(fileEntry))
+              # If it's a markdown file, add to the page tree
+              if !(page['published'] == false)
+                if page.name.start_with? ('index')
+                  pagesTrees['index'] = page
+                else
+                  pagesTrees['pages'] << page
+                end
               end
             end
 
             allPages << page
             site.pages << page
+          else
+            createAsset(site,
+              relativePath,
+              fileEntry,
+              'en',
+              false)
           end
         end
       }
@@ -262,54 +231,55 @@ module Jekyll
 
     end
 
-    # Creates a new LanguagePage or a LanguageAsset, and adds it to site.pages
-    # unless process is false.
-    # Returns only LanguagePage instance, otherwise nil.
-    def create_page(site, relative_dir, file_name, langcode, process = true)
+    # Creates a new Page which must be a class that inherits from WFPage
+    def createPage(site, relative_dir, file_name, langcode, process = true)
       # Don't process underscore files.
       if relative_dir =~ /^_/
         return nil
       end
 
-      case file_name
-      when /\.(markdown|md|html)|sitemap\.xml|feed\.xml/
-        directories = relative_dir.split(File::SEPARATOR)
-        rootFolderName = directories[0]
+      directories = relative_dir.split(File::SEPARATOR)
+      rootFolderName = directories[0]
 
-        page = nil
-        case rootFolderName
-        when 'updates'
-          page = UpdatePage.new(site, relative_dir, file_name, langcode)
-        when 'fundamentals'
-          page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
-        when 'shows'
-          page = ShowsPage.new(site, relative_dir, file_name, langcode)
-        when 'tools'
-          page = ToolsPage.new(site, relative_dir, file_name, langcode)
-        when 'showcase'
-          page = ShowcasePage.new(site, relative_dir, file_name, langcode)
-        when 'styleguide'
-          page = LanguagePage.new(site, relative_dir, file_name, langcode)
-        when '.'
-          page = LanguagePage.new(site, relative_dir, file_name, langcode)
-        else
-          Jekyll.logger.info "Unsure what Page to use for markdown files in the \"" +
-            rootFolderName + "\" directory."
-          raise Exception.new("main-generator.rb: Unsure what Page to use for markdown files in the \"" +
-            rootFolderName + "\" directory.")
-        end
-
-
-        page
-      when /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
-        # Copy across other assets.
-        asset = LanguageAsset.new(site, relative_dir, file_name, langcode)
-        # TODO: Move to outside of this def
-        site.static_files << asset
-        nil
+      page = nil
+      case rootFolderName
+      when 'updates'
+        page = UpdatePage.new(site, relative_dir, file_name, langcode)
+      when 'fundamentals'
+        page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
+      when 'shows'
+        page = ShowsPage.new(site, relative_dir, file_name, langcode)
+      when 'tools'
+        page = ToolsPage.new(site, relative_dir, file_name, langcode)
+      when 'showcase'
+        page = ShowcasePage.new(site, relative_dir, file_name, langcode)
+      when 'styleguide'
+        page = LanguagePage.new(site, relative_dir, file_name, langcode)
+      when '.'
+        page = LanguagePage.new(site, relative_dir, file_name, langcode)
+      else
+        Jekyll.logger.info "Unsure what Page to use for markdown files in the \"" +
+          rootFolderName + "\" directory."
+        raise Exception.new("main-generator.rb: Unsure what Page to use for markdown files in the \"" +
+          rootFolderName + "\" directory.")
       end
+
+      return page
     end
 
+    # Creates a new Asset
+    def createAsset(site, relative_dir, file_name, langcode, process = true)
+      # Don't process underscore files.
+      if relative_dir =~ /^_/
+        return nil
+      end
+
+      # Copy across other assets.
+      asset = LanguageAsset.new(site, relative_dir, file_name, langcode)
+      site.static_files << asset
+
+      return nil
+    end
   end
 
 end
