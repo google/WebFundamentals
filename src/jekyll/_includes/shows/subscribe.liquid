@@ -1,0 +1,28 @@
+<div class="wf-shows-subscribe">
+  <h3 class="wf-shows-subscribe__title">Keep Up to Date</h3>
+
+  <div class="wf-shows-subscribe__btn-container">
+    <div class="wf-shows-subscribe__yt-btn mdl-button mdl-js-button">
+      <div class="wf-shows-subscribe__icon">
+        {% include svgs/youtube.svg %}
+      </div>
+      <a href="https://www.youtube.com/user/chromedevelopers?sub_confirmation=1">Subscribe to Our Channel</a>
+    </div>
+
+    <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button">
+      <div class="wf-shows-subscribe__icon">
+        {% include svgs/rss-icon.svg %}
+      </div>
+      <a href="{{site.WFBaseUrl}}/shows/feed.xml">Follow our Shows Feed</a>
+    </div>
+
+    {% if page.feedUrl %}
+    <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button">
+      <div class="wf-shows-subscribe__icon">
+        {% include svgs/rss-icon.svg %}
+      </div>
+      <a href="{{page.feedUrl}}">Follow the {{page.feedName}} Feed</a>
+    </div>
+    {% endif %}
+  </div>
+</div>

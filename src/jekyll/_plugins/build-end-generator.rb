@@ -64,8 +64,12 @@ module Jekyll
             end
           end
         elsif i == 0
-          if tree['index']['published'] != 'false'
-            a.data['_previousPage'] = tree['index']
+          if not tree['index'].nil?
+            if tree['index']['published'] != 'false'
+              a.data['_previousPage'] = tree['index']
+            else
+              a.data['_previousPage'] = nil
+            end
           else
             a.data['_previousPage'] = nil
           end
