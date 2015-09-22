@@ -10,6 +10,7 @@ tags:
   - demo
 featured_image: images/merry_pixmas/card.jpg
 showcase:
+  key_image: images/merry_pixmas/screenshot.png
   scores:
     pagespeed:
       speed: 56

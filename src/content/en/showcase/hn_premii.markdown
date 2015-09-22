@@ -10,6 +10,7 @@ tags:
   - reader
 featured_image: images/hn_premii/card.jpg
 showcase:
+  key_image: images/hn_premii/screenshot.png
   scores:
     pagespeed:
       speed: 70
