@@ -44,7 +44,7 @@
 
 // Default color for text (Black)
 .wf-main-nav__list-level-1 > .wf-main-nav__item > .wf-main-nav__link,
-.wf-main-nav__list-level-3 > .wf-main-nav__item > .wf-main-nav__link {
+.wf-main-nav__list-level-3 > .wf-main-nav__item .wf-main-nav__link {
   color: $text-color-primary;
 }
 
@@ -66,6 +66,10 @@
 // Give none of the links underline styling
 .wf-main-nav__link {
   text-decoration: none;
+
+  &.page-in-section {
+    font-weight: bold;
+  }
 }
 
 // Top / First item is the current section

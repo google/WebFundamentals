@@ -166,9 +166,21 @@ module Jekyll
         return nil
       end
 
-      entry = { "title" => indexPage['title'], "path" => indexPage.relative_url}
+      entry = {
+        "title" => indexPage['title'],
+        "path" => indexPage.relative_url,
+        "currentPageInThisSection" => false
+      }
+
+      puts "sectionID: " + section['id']
+      puts "@directories.size = " + @directories.size.to_s
+      puts "currentLevel = " + currentLevel.to_s
+      puts ""
 
       if (@directories.size > currentLevel) && (section['id'] == @directories[currentLevel])
+        if (currentLevel + 1 == @directories.size)
+          entry['currentPageInThisSection'] = true;
+        end
         entry['section'] = getBetterBookSections(section, (currentLevel + 1))
         entry['hasSubNav'] = entry['section'].size > 0
       end
@@ -214,6 +226,10 @@ module Jekyll
           otherSections << subdirectory
         end
       }
+
+      puts ""
+      puts "-----------------*******--------------------"
+      puts "file: " + @dir + '/' + @name
 
       entry = getBetterBookEntry(rootSection, currentLevel, true)
 

@@ -6,7 +6,7 @@ var google = require('googleapis');
 var mkdirp = require('mkdirp');
 
 // Check if api key file exists or not
-if (fs.existsSync('../tools/shows-gen/yt-api-key.json')) {
+if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
   var ytKey = require('../tools/shows-gen/yt-api-key.json');
 
   function selectTypeOfGeneration() {
@@ -310,5 +310,12 @@ if (fs.existsSync('../tools/shows-gen/yt-api-key.json')) {
         console.error(err);
       });
 
+  });
+} else {
+  gulp.task('shows:generate', function(cb) {
+    console.log();
+    console.warn('You need to add your YT API Key to: ' +
+      'tools/shows-gen/yt-api-key.json');
+    console.log();
   });
 }
