@@ -385,7 +385,9 @@ module Jekyll
       }
 
       self.data['_context']['pages'].each { |page|
-        langSpecificContenxt['pages'] << getAppropriatePage(page)
+        if(page.data['published'] != false)
+          langSpecificContenxt['pages'] << getAppropriatePage(page)
+        end
       }
 
       langSpecificContenxt['subdirectories'] = self.data['_context']['subdirectories']
