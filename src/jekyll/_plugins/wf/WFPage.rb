@@ -378,21 +378,41 @@ module Jekyll
         return
       end
 
-      langSpecificContenxt = {
-        "id" => self.data['_context']['id'],
+      langSpecificContenxt = generateValidVersion(self.data['_context'])
+      langSpecificContenxt
+    end
+
+    def generateValidPages(pages)
+      returnedPages = []
+      pages.each { |page|
+        bestPage = getAppropriatePage(page)
+        if(page.data['published'] != false)
+          returnedPages << bestPage
+        end
+      }
+      return returnedPages
+    end
+
+    def generateValidSubdirectories(subdirectories)
+      validSubdirectories = []
+      subdirectories.each { |subdirectory|
+        validSubdirectories << generateValidVersion(subdirectory)
+      }
+      return validSubdirectories
+    end
+
+    def generateValidVersion(sectionObj)
+      validObj = {
+        "id" => sectionObj['id'],
+        "index" => nil,
         "pages" => [],
         "subdirectories" => []
       }
 
-      self.data['_context']['pages'].each { |page|
-        if(page.data['published'] != false)
-          langSpecificContenxt['pages'] << getAppropriatePage(page)
-        end
-      }
-
-      langSpecificContenxt['subdirectories'] = self.data['_context']['subdirectories']
-
-      langSpecificContenxt
+      validObj['index'] = getAppropriatePage(sectionObj['index'])
+      validObj['pages'] = generateValidPages(sectionObj['pages'])
+      validObj['subdirectories'] = generateValidSubdirectories(sectionObj['subdirectories'])
+      return validObj
     end
 
     def main_author
