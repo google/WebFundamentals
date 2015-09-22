@@ -47,9 +47,21 @@ function checkJekyllIssues() {
   ];
 
   var jekyllRegexs = [];
+  var expression;
+  var regex;
   for (var i = 0; i < badJekyllStrings.length; i++) {
-    var expression = '{{.*(' + badJekyllStrings[i] + ').*}}';
-    var regex = new RegExp(expression, 'g');
+    expression = '{{.*(' + badJekyllStrings[i] + ').*}}';
+    regex = new RegExp(expression, 'g');
+    jekyllRegexs.push(regex);
+  }
+
+  var badStrings = [
+    'developers.google.com'
+  ];
+
+  for (i = 0; i < badStrings.length; i++) {
+    expression = badStrings[i];
+    regex = new RegExp(expression, 'g');
     jekyllRegexs.push(regex);
   }
 
@@ -63,7 +75,7 @@ function checkJekyllIssues() {
 gulp.task('tests', function(cb) {
   var errorCount = checkJekyllIssues();
 
-  if(errorCount > 0) {
+  if (errorCount > 0) {
     throw new Error('Found ' + errorCount + ' issues in the Jekyll Markdown.');
   }
 
