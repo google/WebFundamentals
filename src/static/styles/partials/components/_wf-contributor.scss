@@ -1,0 +1,30 @@
+.wf-contributor-list {
+
+}
+
+.wf-contributor {
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.wf-contributor__img {
+  width: $base-line * 4;
+  height: $base-line * 4;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 100%;
+}
+
+.wf-contributor__name {
+}
+
+.wf-contributor__description {
+  color: $text-color-primary;
+}

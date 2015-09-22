@@ -221,6 +221,7 @@ mattgaunt:
   country: UK
   role:
     - author
+    - engineer
   homepage: http://blog.gauntface.com
   google: +MattGuant
   twitter: gauntface
@@ -404,6 +405,7 @@ petelepage:
   country: USA
   role:
     - author
+    - engineer
   homepage: http://petelepage.com
   google: +PeteLePage
   twitter: petele
@@ -730,4 +732,3 @@ sethladd:
   twitter: sethladd
   role:
     - author
-    

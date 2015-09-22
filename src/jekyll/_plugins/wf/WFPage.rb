@@ -172,11 +172,6 @@ module Jekyll
         "currentPageInThisSection" => false
       }
 
-      puts "sectionID: " + section['id']
-      puts "@directories.size = " + @directories.size.to_s
-      puts "currentLevel = " + currentLevel.to_s
-      puts ""
-
       if (@directories.size > currentLevel) && (section['id'] == @directories[currentLevel])
         if (currentLevel + 1 == @directories.size)
           entry['currentPageInThisSection'] = true;
@@ -226,10 +221,6 @@ module Jekyll
           otherSections << subdirectory
         end
       }
-
-      puts ""
-      puts "-----------------*******--------------------"
-      puts "file: " + @dir + '/' + @name
 
       entry = getBetterBookEntry(rootSection, currentLevel, true)
 
@@ -290,7 +281,6 @@ module Jekyll
           puts ""
         else
           author['id'] = firstAuthor
-          author['imgUrl'] = site.config['WFBaseUrl'] + '/imgs/contributors/' + firstAuthor + '.jpg';
         end
       end
 

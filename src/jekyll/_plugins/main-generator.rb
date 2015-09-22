@@ -53,14 +53,19 @@ module Jekyll
       # Load contributors
       # Because this generator is highest priority,
       # set a global variables here
-      data = YAML.load_file(site.config['WFContributors'])
-      site.data["contributors"] = data
 
       lang = ENV['TRANS_LANG'] || site.config['primary_lang']
       site.data["curr_lang"] = lang
 
       contributorsFilepath = File.join(site.config['WFContributors'])
       contributesData = YAML.load_file(contributorsFilepath)
+      contributesData = contributesData.each { |contributerKey, contributorObj|
+        if File.exist?(site.config['WFStaticSource'] + '/imgs/contributors/' + contributerKey + '.jpg')
+          contributorObj['imgUrl'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/imgs/contributors/' + contributerKey + '.jpg'
+        else
+          contributorObj['imgUrl'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/imgs/contributors/' + 'no-photo.jpg'
+        end
+      }
       site.data["contributors"] = contributesData
 
       # Get the contents of _langnames.yaml

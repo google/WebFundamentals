@@ -50,6 +50,7 @@ WFBaseUrl: /web
 # Custom to Web Fundamentals
 # WF is a prefix so we know it's custom
 WFContentSource: src/content
+WFStaticSource: src/static
 WFLangNames: src/content/_langnames.yaml
 WFContributors: src/content/_contributors.yaml
 WFStyleguideLocation: resources/styleguide/
