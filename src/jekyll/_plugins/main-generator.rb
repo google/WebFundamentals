@@ -207,13 +207,13 @@ module Jekyll
             # If published is false, don't include it in the pagesTree
             if (@markdownExtensions.include? File.extname(fileEntry))
               # If it's a markdown file, add to the page tree
-              if !(page['published'] == false)
+              #if !(page['published'] == false)
                 if page.name.start_with? ('index')
                   pagesTrees['index'] = page
                 else
                   pagesTrees['pages'] << page
                 end
-              end
+              #end
             end
 
             allPages << page
@@ -260,7 +260,7 @@ module Jekyll
         page = ShowcasePage.new(site, relative_dir, file_name, langcode)
       when 'styleguide'
         page = LanguagePage.new(site, relative_dir, file_name, langcode)
-      when '.'
+      when '.', 'resources'
         page = LanguagePage.new(site, relative_dir, file_name, langcode)
       else
         Jekyll.logger.info "Unsure what Page to use for markdown files in the \"" +
