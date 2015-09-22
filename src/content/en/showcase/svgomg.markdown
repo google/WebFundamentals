@@ -10,6 +10,7 @@ tags:
   - tools
 featured_image: images/svgomg/card.jpg
 showcase:
+  key_image: images/svgomg/screenshot.png
   scores:
     pagespeed:
       speed: 73
