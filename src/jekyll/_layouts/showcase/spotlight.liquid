@@ -72,7 +72,7 @@
   {{ showcase.our_views.bad | markdownify }}
   {% endif %}
 
-  {% include showcase/related_spotlight_guides.liquid list=page.related %}
+  {% include shared/related_guides.liquid list=page.related-guides %}
 
   {% if showcase.overview %}
   <h2>Overview</h2>
@@ -213,7 +213,7 @@
   <h2 class="wf-showcase__latest-title mdl-cell--12-col">Latest spotlights</h2>
 
   {% for pageInSection in page.context.pages | limit:2 %}
-    {% include showcase/card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.key_img %}
+    {% include showcase/card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image %}
   {% endfor %}
 </div>
 
