@@ -50,16 +50,37 @@ module Jekyll
       end
 
       tree['pages'].each_with_index { |a, i|
-        a.data['_nextPage'] = tree['pages'][i+1]
+        for j in (i+1).upto(tree['pages'].size - 1)
+          if tree['pages'][j]['published'] != false
+            a.data['_nextPage'] = tree['pages'][j]
+            break
+          end
+        end
         if i > 0
-          a.data['_previousPage'] = tree['pages'][i-1]
+          for j in (i-1).downto(0)
+            if tree['pages'][j]['published'] != false
+              a.data['_previousPage'] = tree['pages'][j]
+              break
+            end
+          end
         elsif i == 0
-          a.data['_previousPage'] = tree['index']
+          if tree['index']['published'] != 'false'
+            a.data['_previousPage'] = tree['index']
+          else
+            a.data['_previousPage'] = nil
+          end
+        else
+          a.data['_previousPage'] = nil
         end
       }
 
       if (not tree['index'].nil?) && (tree['pages'].size > 0)
-        tree['index'].data['_nextPage'] = tree['pages'][0]
+        for j in (0).upto(tree['pages'].size - 1)
+          if tree['pages'][j]['published'] != false
+            tree['index'].data['_nextPage'] = tree['pages'][j]
+            break
+          end
+        end
       end
 
       tree['subdirectories'].each { |value|
