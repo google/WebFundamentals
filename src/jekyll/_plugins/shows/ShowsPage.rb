@@ -35,10 +35,6 @@ module Jekyll
       self.data['theme_color'] = '#212121'
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
-
-      #self.data['feed_name'] = 'Web Fundamentals - Google Developers'
-      #self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundmentals/feed.xml'
-
     end
   end
 end
