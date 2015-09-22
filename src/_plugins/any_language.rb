@@ -204,7 +204,7 @@ module Jekyll
         page = LanguagePage.new(site, site.source, relative_dir, file_name, langcode, includelang)
         site.pages << page if process
         page
-      when /\.(png|jpg|gif|css|mp4|webm|vtt|svg)/
+      when /\.(png|jpg|gif|css|mp4|webm|vtt|svg|mp3)/
         # Copy across other assets.
         asset = LanguageAsset.new(site, site.source, relative_dir, file_name, langcode, includelang)
         site.static_files << asset if process
@@ -260,4 +260,3 @@ end
  Liquid::Template.register_filter(Jekyll::LocalizeLink)
  Liquid::Template.register_filter(Jekyll::LanguageName)
  Liquid::Template.register_filter(Jekyll::LocalizeString)
-

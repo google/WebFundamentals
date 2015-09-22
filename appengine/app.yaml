@@ -24,10 +24,10 @@ handlers:
   static_dir: build/_langs/en/fundamentals/resources/samples
   expiration: 1d
 
-- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4))
+- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|mp3))
   static_files: build/_langs/en/\1
   expiration: 1d
-  upload: build/_langs/en/(.*\.(png|gif|jpg|svg|xml|mp4))
+  upload: build/_langs/en/(.*\.(png|gif|jpg|svg|xml|mp4|mp3))
 
 - url: /web/(.*\.ico)
   static_files: build/_langs/en/\1
