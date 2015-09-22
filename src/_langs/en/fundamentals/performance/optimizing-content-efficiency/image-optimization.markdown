@@ -162,7 +162,7 @@ On the other hand, raster images pose a much larger challenge because they encod
 
 When we double the resolution the physical screen the total number of pixels increases by a factor of four: double the number of horizontal pixels, times double the number of vertical pixels. Hence, a "2x" screen not just doubles, but quadruples the number of required pixels!
 
-So, what does this mean in practice? High resolution screens enable us to deliver beautiful images, which can be a great product feature. However, high resolution screens also require high-resolution images: prefer vector images whenever possible as they are resolution independent and always deliver sharp results, and if a raster image is required, deliver and optimize multiple variants of each image - keep reading for further details.
+So, what does this mean in practice? High resolution screens enable us to deliver beautiful images, which can be a great product feature. However, high resolution screens also require high-resolution images: prefer vector images whenever possible as they are resolution independent and always deliver sharp results, and if a raster image is required, deliver and optimize multiple variants of each image with the help of [`srcset` and `picture`](/web/fundamentals/media/images/images-in-markup). 
 
 
 ## Optimizing vector images
@@ -409,35 +409,57 @@ As a result, one of the simplest and most effective image optimization technique
 
 The overhead of shipping unnecessary pixels, only to have the browser rescale the image on our behalf, is a big missed opportunity to reduce and optimize the total number of bytes required to render the page. Further, note that resizing is not simply a function of the number of pixels by which the image is reduced by, but also of its natural size.
 
-<table class="table-3">
-<colgroup><col span="1"><col span="1"><col span="1"></colgroup>
+<table class="table-4">
+<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
+    <th>Screen resolution</th>
     <th>Natural size</th>
-    <th>Display size</th>
+    <th>Display size (CSS px)</th>
     <th>Unnecessary pixels</th>
   </tr>
 </thead>
 <tbody>
 <tr>
+  <td data-th="resolution">1x</td>
   <td data-th="natural">110 x 110</td>
   <td data-th="display">100 x 100</td>
   <td data-th="overhead">110 x 110 - 100 x 100 = 2100</td>
 </tr>
 <tr>
+  <td data-th="resolution">1x</td>
   <td data-th="natural">410 x 410</td>
   <td data-th="display">400 x 400</td>
   <td data-th="overhead">410 x 410 - 400 x 400 = 8100</td>
 </tr>
 <tr>
+  <td data-th="resolution">1x</td>
   <td data-th="natural">810 x 810</td>
   <td data-th="display">800 x 800</td>
   <td data-th="overhead">810 x 810 - 800 x 800 = 16100</td>
 </tr>
+<tr>
+  <td data-th="resolution">2x</td>
+  <td data-th="natural">220 x 220</td>
+  <td data-th="display">100 x 100</td>
+  <td data-th="overhead">210 x 210 - (2 x 100) x (2 x 100) = 8400</td>
+</tr>
+<tr>
+  <td data-th="resolution">2x</td>
+  <td data-th="natural">820 x 820</td>
+  <td data-th="display">400 x 400</td>
+  <td data-th="overhead">820 x 820 - (2 x 400) x (2 x 400) = 32400</td>
+</tr>
+<tr>
+  <td data-th="resolution">2x</td>
+  <td data-th="natural">1620 x 1620</td>
+  <td data-th="display">800 x 800</td>
+  <td data-th="overhead">1620 x 1620 - (2 x 800) x (2 x 800) = 64400</td>
+</tr>
 </tbody>
 </table>
 
-Note that in all three cases above the display size is "only 10 pixels smaller" than the natural size of the image. However, the number of extra pixels that we would have to encode and ship is significantly higher the larger the natural size! As a result, while you may not be able to guarantee that every single asset is delivered at the exact display size, **you should ensure that the number of unnecessary pixels is minimal, and that your large assets in particular are delivered as close as possible to their display size.**
+Note that in all of the cases above the display size is "only 10 CSS pixels smaller" than the required asset for each screen resolution. However, the number of extra pixels, and their associated overhead, rises rapidly as the display dimensions of the image increase! As a result, while you may not be able to guarantee that every single asset is delivered at the exact display size, **you should ensure that the number of unnecessary pixels is minimal, and that your large assets in particular are delivered as close as possible to their display size.**
 
 ## Image optimization checklist
 
