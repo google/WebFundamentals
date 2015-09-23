@@ -8,21 +8,16 @@ feedURL: https://github.com/google/web-starter-kit/releases.atom
 ---
 
 <div class="wf-subheading">
-  <div class="page-content">
-    <p>Boilerplate &amp; Tooling for Multi-Device Development</p>
-    <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/google/web-starter-kit/releases/latest">Download Web Starter Kit (beta)</a>
+  <div class="page-content mdl-typography--text-center mdl-grid">
+    <div class="mdl-cell mdl-cell--1-col"></div>
+    <div class="mdl-cell mdl-cell--10-col">
+      <h3>Your starting point for building great multi-device web experiences</h3>
+      <p>Start your project with the Web Starter Kit and ensure you're following the <a href="/web/fundamentals/">Web Fundamentals</a> guidelines out of the box.</p>
+      <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/google/web-starter-kit/releases/latest">Download Web Starter Kit (beta)</a>
+    </div>
+    <div class="mdl-cell mdl-cell--1-col"></div>
   </div>
 </div>
-
-<div class="page-content mdl-typography--text-center mdl-grid">
-  <div class="mdl-cell mdl-cell--2-col"></div>
-  <div class="mdl-cell mdl-cell--8-col">
-    <h3>Your starting point for building great multi-device web experiences</h3>
-    <p>Start your project with the Web Starter Kit and ensure you're following the <a href="/web/fundamentals/">Web Fundamentals</a> guidelines out of the box.</p>
-  </div>
-  <div class="mdl-cell mdl-cell--2-col"></div>
-</div>
-
 
 <div class="page-content">
   <div class="mdl-grid mdl-typography--text-center">
