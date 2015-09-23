@@ -9,6 +9,15 @@
     background-position: center;
 
     color: white;
+
+    padding: 0;
+  }
+
+  .mdl-card__title-text {
+    width: 100%;
+
+    padding: $base-line;
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0) 100%);
   }
 
   .mdl-card__supporting-text {
