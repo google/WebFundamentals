@@ -24,10 +24,8 @@ module Jekyll
       'on the open web and in Chrome DevTools.'
 
     def initialize(site, relativeDir, filename, langcode)
-      # TODO Optimize valid yaml keys and remove date
-      # see https://github.com/google/WebFundamentals/issues/1649
       validKeys = [
-        'category', 'tags', 'featured_image', 'source_name', 'source_url'
+        'tags', 'featured_image', 'source_name', 'source_url'
       ]
       super(site, relativeDir, filename, langcode, validKeys)
 
