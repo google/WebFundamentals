@@ -6,10 +6,11 @@ published_on: 2015-03-24
 updated_on: 2015-03-24
 authors:
   - pbakaus
-tags: 
+tags:
   - tools
 featured_image: images/svgomg/card.jpg
 showcase:
+  key_image: images/svgomg/screenshot.png
   scores:
     pagespeed:
       speed: 73

@@ -6,11 +6,12 @@ published_on: 2015-08-14
 updated_on: 2015-08-14
 authors:
   - pbakaus
-tags: 
+tags:
 - anime
 - tracker
 featured_image: images/hummingbirdlibrary/card.jpg
 showcase:
+  key_image: images/hummingbirdlibrary/screenshot.png
   scores:
     pagespeed:
       speed: 46
@@ -39,7 +40,7 @@ showcase:
     - question: If you could have any API to improve your app, what would it be?
       answer: |
         At the browser level, I think an API for performing voice searches within my web app could really help it. Android has added a lot of voice commands lately and the ability to use that sort of input on the mobile web would make for a great experience.
-        
+
     - question: |
         Good news, we actually have that already :) Check out the Web Speech API.
 

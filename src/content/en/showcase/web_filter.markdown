@@ -6,11 +6,12 @@ published_on: 2015-03-27
 updated_on: 2015-03-27
 authors:
   - pbakaus
-tags: 
+tags:
   - utility
   - camera
 featured_image: images/web_filter/card.jpg
 showcase:
+  key_image: images/web_filter/screenshot.png
   scores:
     pagespeed:
       speed: 86
@@ -28,13 +29,13 @@ showcase:
   interview:
     - question: Why the web?
       answer: |
-        I work with the web since Netscape 4, so this is a natural choice for any experiment that I do :) 
+        I work with the web since Netscape 4, so this is a natural choice for any experiment that I do :)
     - question: What worked really well during development?
       answer: |
         The mobile browser - Chrome - worked really well. I didn't really have to figure out any hacky workarounds for anything. I'm very impressed with the performance of WebGL on mobile. It tends to be better than on many desktop computers. I think it also was the first time I used WebRTC on mobile. The support here is also pretty solid. Finally, it was nice to see that I can save/download the photo directly to the users gallery. There is a small issue where, if you keep taking photos and downloading them, the browser will issue a warning. I can see why this security feature exists, but it would be nice to be able to work around that.
     - question: If you could have any API to improve your app, what would it be?
       answer: |
-        By the time I was working on this, I think Chrome didn't support orientation lock. This feature is very important for app dev, because being forced to support both portrait and landscape creates a lot extra work, often totally unnecessary. 
+        By the time I was working on this, I think Chrome didn't support orientation lock. This feature is very important for app dev, because being forced to support both portrait and landscape creates a lot extra work, often totally unnecessary.
 
 related-guides:
 -

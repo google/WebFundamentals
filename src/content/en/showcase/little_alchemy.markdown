@@ -6,10 +6,11 @@ published_on: 2015-04-08
 updated_on: 2015-04-08
 authors:
   - pbakaus
-tags: 
+tags:
   - games
 featured_image: images/little_alchemy/card.jpg
 showcase:
+  key_image: images/little_alchemy/screenshot.png
   scores:
     pagespeed:
       speed: 66
@@ -38,7 +39,7 @@ showcase:
       answer: |
         With the current iteration of Little Alchemy we focused a lot on the mobile web. During the development we worked with many physical devices and remote Chrome DevTools helped us to significantly speed up the process.
 
-        We also really enjoyed the work on performance and responsive design. Current set of tools in Chrome allows for very efficient work on these aspects of the app. 
+        We also really enjoyed the work on performance and responsive design. Current set of tools in Chrome allows for very efficient work on these aspects of the app.
     - question: If you could have any API to improve your app, what would it be?
       answer: |
         Games are usually heavily dependent on images. For example we have a library of over 500 images that need to be scalable and for the optimal experience they should be loaded before the player starts the game. It requires different logic than your typical web app where you can lazy load and use atlases. Having a way to deal with that in an efficient way would save us a lot of work and would make for a better experience for our players.
