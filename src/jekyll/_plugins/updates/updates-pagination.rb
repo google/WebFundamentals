@@ -18,12 +18,18 @@ module Jekyll
 
   class UpdatesPaginationPage < UpdatePage
 
-    def initialize(site, langcode, pages, paginationIndex, totalPaginationPages)
-      dir = 'updates'
+    def initialize(site, path, langcode, pages, paginationIndex, totalPaginationPages)
+      if path.nil?
+        dir = 'updates'
+        title = 'Updates'
+      else
+        dir = File.join('updates', path)
+        title = path
+      end
       name = 'index.html'
 
       if paginationIndex != 0
-        dir  = File.join('updates', 'pages')
+        dir  = File.join(dir, 'pages')
         name = (paginationIndex + 1).to_s + ".html"
       end
 
@@ -32,7 +38,7 @@ module Jekyll
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
 
       if paginationIndex == 0
-        self.data['title'] = 'Updates'
+        self.data['title'] = title
       else
         self.data['title'] = 'Updates Page ' + (paginationIndex + 1).to_s
       end
