@@ -12,9 +12,7 @@
     {% endautoescape %}
 
 
-    <script src="/web/scripts/material-design-lite/src/mdlComponentHandler.js"></script>
-    <script src="/web/scripts/material-design-lite/src/layout/layout.js"></script>
-    <script src="/web/scripts/material-design-lite/src/textfield/textfield.js"></script>
+    <script src="/web/scripts/material-design-lite/material-1.0.4.js"></script>
     <script src="/web/scripts/standard-page-controller.es6.js"></script>
 
     {% comment %}
