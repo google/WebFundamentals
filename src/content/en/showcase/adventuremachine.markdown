@@ -6,11 +6,12 @@ published_on: 2015-08-14
 updated_on: 2015-08-14
 authors:
   - pbakaus
-tags: 
+tags:
   - music
   - promotion
 featured_image: images/adventuremachine/card.jpg
 showcase:
+  key_image: images/adventuremachine/screenshot.png
   scores:
     pagespeed:
       speed: 53

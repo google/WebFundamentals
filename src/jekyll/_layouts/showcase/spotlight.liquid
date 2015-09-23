@@ -8,7 +8,7 @@
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col wf-showcase__title">
       <h2>{{page.title}}</h2>
-      {% if page.subtitle %}<h3>{{page.subtitle}}</h3>{% endif %}
+      {% if page.subtitle %}<h5>{{page.subtitle}}</h5>{% endif %}
       <p><a href="{{showcase.link}}">{{showcase.link}}</a></p>
     </div>
   </div>
@@ -58,144 +58,142 @@
     </div>
   </div>
 
-  <h2>Our thoughts</h2>
+  <section class="wf-showcase__section-container">
+    <h3>TL;DR</h3>
 
-  {{ page.description | markdownify }}
-
-  {% if showcase.our_views.good %}
-  <h3>What we like</h3>
-  {{ showcase.our_views.good | markdownify }}
-  {% endif %}
-
-  {% if showcase.our_views.bad %}
-  <h3>Possible improvements</h3>
-  {{ showcase.our_views.bad | markdownify }}
-  {% endif %}
-
-  {% include showcase/related_spotlight_guides.liquid list=page.related %}
-
-  {% if showcase.overview %}
-  <h2>Overview</h2>
-  <p>{{showcase.overview.description | markdownify }}</p>
-
-  <dl>
-    <dt>Target audience</dt>
-    <dd>{{showcase.overview.audience}}</dd>
-    {% if showcase.overview.features %}
-    <dt>Features</dt>
-    <dd>
-      <ul>
-        {% for feature in showcase.overview.features %}
-        <li>
-          {{feature}}
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
-
-    {% if showcase.overview.webbyness %}
-    <dt>Webbyness</dt>
-    <dd>
-      <ul>
-        {% for advantage in showcase.overview.webbyness %}
-        <li>
-          <a href="{{advantage.link}}">{{advantage.title}}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
-  </dl>
-  {% endif %}
+    {{ page.description | markdownify }}
+  </section>
 
   {% if showcase.ytvideo %}
-  <h2>The interview</h2>
-  {% ytvideo showcase.ytvideo %}
+  <section class="wf-showcase__section-container clear">
+    <h3>The Interview</h3>
+    {% ytvideo showcase.ytvideo %}
+  </section>
+  {% endif %}
+
+  {% if showcase.overview %}
+  <section class="wf-showcase__section-container">
+    <h3>Overview</h3>
+    <p>{{showcase.overview.description | markdownify }}</p>
+
+    <dl>
+      <dt>Target audience</dt>
+      <dd>{{showcase.overview.audience}}</dd>
+      {% if showcase.overview.features %}
+      <dt>Features</dt>
+      <dd>
+        <ul>
+          {% for feature in showcase.overview.features %}
+          <li>
+            {{feature}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+
+      {% if showcase.overview.webbyness %}
+      <dt>Webbyness</dt>
+      <dd>
+        <ul>
+          {% for advantage in showcase.overview.webbyness %}
+          <li>
+            <a href="{{advantage.link}}">{{advantage.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+    </dl>
+  </section>
   {% endif %}
 
   {% if showcase.behind_the_scenes %}
-  <h2>Behind the scenes</h2>
-  <p>{{showcase.behind_the_scenes.description | markdownify }}</p>
-  <dl class="case-study__dl">
-    {% if showcase.behind_the_scenes.owp %}
-    <dt>New web platform features</dt>
-    <dd>
-      <ul>
-        {% for owp in showcase.behind_the_scenes.owp %}
-        <li>
-          {{owp}}
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
+  <section class="wf-showcase__section-container">
+    <h3>Behind the scenes</h3>
+    <p>{{showcase.behind_the_scenes.description | markdownify }}</p>
+    <dl class="case-study__dl">
+      {% if showcase.behind_the_scenes.owp %}
+      <dt>New web platform features</dt>
+      <dd>
+        <ul>
+          {% for owp in showcase.behind_the_scenes.owp %}
+          <li>
+            {{owp}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
 
-    {% if showcase.behind_the_scenes.patterns %}
-    <dt>Patterns</dt>
-    <dd>
-      <ul>
-        {% for pattern in showcase.behind_the_scenes.patterns %}
-        <li>
-          {{pattern}}
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
+      {% if showcase.behind_the_scenes.patterns %}
+      <dt>Patterns</dt>
+      <dd>
+        <ul>
+          {% for pattern in showcase.behind_the_scenes.patterns %}
+          <li>
+            {{pattern}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
 
-    {% if showcase.behind_the_scenes.samples %}
-    <dt>Forkable samples</dt>
-    <dd>
-      <ul>
-        {% for sample in showcase.behind_the_scenes.samples %}
-        <li>
-          {{sample}}
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
+      {% if showcase.behind_the_scenes.samples %}
+      <dt>Forkable samples</dt>
+      <dd>
+        <ul>
+          {% for sample in showcase.behind_the_scenes.samples %}
+          <li>
+            {{sample}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
 
-    {% if showcase.behind_the_scenes.source_code %}
-    <dt>Source Code</dt>
-    <dd>
-      <ul>
-        {% for source_code in showcase.behind_the_scenes.source_code %}
-        <li>
-          <a href="{{source_code.link}}">{{source_code.title}}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
+      {% if showcase.behind_the_scenes.source_code %}
+      <dt>Source Code</dt>
+      <dd>
+        <ul>
+          {% for source_code in showcase.behind_the_scenes.source_code %}
+          <li>
+            <a href="{{source_code.link}}">{{source_code.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
 
-    {% if showcase.behind_the_scenes.oss %}
-    <dt>Used Open Source</dt>
-    <dd>
-      <ul>
-        {% for oss in showcase.behind_the_scenes.oss %}
-        <li>
-          <a href="{{oss.link}}">{{oss.title}}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </dd>
-    {% endif %}
-  </dl>
+      {% if showcase.behind_the_scenes.oss %}
+      <dt>Used Open Source</dt>
+      <dd>
+        <ul>
+          {% for oss in showcase.behind_the_scenes.oss %}
+          <li>
+            <a href="{{oss.link}}">{{oss.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+    </dl>
+  </section>
   {% endif %}
 
   {% if showcase.sections %}
     {% for section in showcase.sections %}
-    <h2>{{section.title}}</h2>
-    {{ section.content || markdownify }}
+    <section class="wf-showcase__section-container">
+      <h3>{{section.title}}</h3>
+      {{ section.content || markdownify }}
+    </section>
     {% endfor %}
   {% endif %}
 
 
   {% if showcase.interview %}
-  <div class="spotlight-interview-wrapper">
-    <h2 class="quote__content-icononly">Q&amp;A with {{ showcase.developer }}</h2>
+  <section class="wf-showcase__section-container">
+    <h3 class="quote__content-icononly">Q&amp;A with {{ showcase.developer }}</h3>
 
     <dl>
       {% for question in showcase.interview %}
@@ -204,17 +202,30 @@
         <dd>{{ answer | markdownify }}</dd>
       {% endfor %}
     </dl>
-  </div>
+  </section>
   {% endif %}
 
-</div>
+  {% if showcase.our_views.good %}
+  <section class="wf-showcase__section-container">
+    <h3>What we like</h3>
+    {{ showcase.our_views.good | markdownify }}
+  </section>
+  {% endif %}
 
-<div class="page-content mdl-grid">
-  <h2 class="wf-showcase__latest-title mdl-cell--12-col">Latest spotlights</h2>
+  {% if showcase.our_views.bad %}
+  <section class="wf-showcase__section-container">
+    <h3>Possible improvements</h3>
+    {{ showcase.our_views.bad | markdownify }}
+  </section>
+  {% endif %}
 
-  {% for pageInSection in page.context.pages | limit:2 %}
-    {% include showcase/card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.key_img %}
-  {% endfor %}
+  <div class="mdl-grid">
+    <h3 class="wf-showcase__latest-title mdl-cell--12-col">Latest spotlights</h3>
+
+    {% for pageInSection in page.context.pages | limit:2 %}
+      {% include showcase/card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image %}
+    {% endfor %}
+  </div>
 </div>
 
 {% include shared/license.liquid %}

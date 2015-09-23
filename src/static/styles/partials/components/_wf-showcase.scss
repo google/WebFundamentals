@@ -1,3 +1,40 @@
+dt {
+  padding-top: $base-line / 2;
+  padding-bottom: $base-line / 2;
+}
+
+dd {
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.wf-showcase__image-wrapper {
+  text-align: center;
+  padding-bottom: $base-line;
+
+  img {
+
+  }
+
+  span {
+    display: block;
+
+    text-align: center;
+    opacity: 0.6;
+  }
+}
+
+.wf-showcase__section-container {
+  padding-bottom: $base-line / 2;
+
+  &.clear {
+    clear: both;
+  }
+}
+
 .wf-showcase__title {
   padding-bottom: $base-line * 6;
 }
@@ -9,7 +46,7 @@
   // * -7 for the showcase title padding and -2 extra for page content container
   margin-top: -($base-line * 9);
 
-  padding: $base-line / 2;
+  padding-left: $base-line;
   box-sizing: border-box;
 }
 
@@ -42,8 +79,11 @@ $colorLow: #cb4437;
   display: flex;
 
   flex-direction: row;
+  justify-content: space-between;
 
   text-align: center;
+
+  margin-bottom: $base-line * 2;
 
   a {
     text-decoration: none;
@@ -63,7 +103,7 @@ $colorLow: #cb4437;
 }
 
 .wf-showcase__score-container {
-  flex: 1;
+
 }
 
 .wf-showcase__score {
