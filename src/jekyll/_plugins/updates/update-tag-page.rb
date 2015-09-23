@@ -17,8 +17,12 @@ module Jekyll
   require File.expand_path('../../wf/WFPage.rb', __FILE__)
 
   class UpdatesTagPage < UpdatePage
-    def initialize(site, langcode, tag, updates)
-      dir = File.join('updates', 'tags')
+    def initialize(site, path, langcode, tag, updates)
+      if path.nil?
+        dir = File.join('updates', 'tags')
+      else 
+        dir = File.join('updates', path, 'tags')
+      end
       name = "#{tag}.html"
       super(site, dir, name, langcode)
 
@@ -37,19 +41,24 @@ module Jekyll
   end
 
 
-    class UpdatesTagsPage < UpdatePage
-    def initialize(site, langcode, tags)
-      dir = File.join('updates', 'tags')
+  class UpdatesTagsPage < UpdatePage
+    def initialize(site, path, langcode, tags)
+      if path.nil?
+        dir = File.join('updates', 'tags')
+      else 
+        dir = File.join('updates', path, 'tags')
+      end
       name = "index.html"
       super(site, dir, name, langcode)
 
-      title_text = "All tags"
-      description_text = "All tags"
+      title_text = "By tag"
+      description_text = "By tag"
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
       self.data['title'] = title_text
       self.data['description'] = description_text
       self.data['rss'] = false
+      self.data['tag_path'] = dir
       self.data['tags'] = tags
 
       self.read_yaml(File.join(site.source, '_layouts'), 'updates/tags.liquid')

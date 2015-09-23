@@ -37,31 +37,50 @@ module Jekyll
         end
       }
 
-      if updateSection.nil?
-        puts "Skipping updates section since there are no existing pages."
-        return;
-      end
+      # Generate the updates for root
+      generateSection(site, updateSection)
 
-      tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
-      updateSection['subdirectories'] << tagsSection
+      # Generate updates for subdirectories in the updates folder,
+      # will skipp the tags folder automatically.
+      updateSection['subdirectories'].each { |subdirectory|
+        if subdirectory['id'] == 'tags'
+          return;
+        else
+          generateSection(site, subdirectory)  
+        end
+      }
 
-      chromeUpdatePages = getPages(site, ['updates'])
-      if chromeUpdatePages.nil?
-        puts "No update posts found to generate any updates pagination pages."
-        return
+    end
+
+    # Generates all pages for a section of the updates folder, including
+    # index page, tags pages, and RSS feeds.
+    def generateSection(site, section)
+
+      # Gets the current section
+      path = section['id']
+
+      # Get the pages. It sets path to nil for root updates as we don't need
+      # to add any additional path info.
+      if path == 'updates'
+        pages = getPages(site, ['updates'])
+        path = nil
+      else
+        pages = getPages(site, ['updates', path])
       end
 
       # generate main page
-      generatePaginationPages(site, updateSection, chromeUpdatePages)
+      generatePaginationPages(site, path, section, pages)      
 
       # generate feed
-      generateFeedPage(site, chromeUpdatePages)
+      generateFeedPage(site, path, pages)
 
       # generate tag pages
-      generateTagPages(site, tagsSection, chromeUpdatePages)
+      tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
+      section['subdirectories'] << tagsSection
+      generateTagPages(site, path, tagsSection, pages)
     end
 
-    def generatePaginationPages(site, updateSection, pages)
+    def generatePaginationPages(site, path, updateSection, pages)
       # Filter out pages with dates only
       pages = pages.map { |page|
         requiredYamlFields = ['published_on']
@@ -86,7 +105,7 @@ module Jekyll
 
         pagesToInclude = pages[startPageIndex..endPageIndex]
 
-        updatePage = UpdatesPaginationPage.new(site, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
+        updatePage = UpdatesPaginationPage.new(site, path, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
         updatePage.data['_context'] = updateSection
 
         site.pages << updatePage
@@ -98,8 +117,8 @@ module Jekyll
       }
     end
 
-    def generateTagPages(site, tagsSection, pages)
-      dir = File.join(site.data['curr_lang'], 'updates', 'tags')
+    def generateTagPages(site, path, tagsSection, pages)
+      # dir = File.join(site.data['curr_lang'], 'updates', 'tags')
       tags = []
       tagPageMapping = {}
 
@@ -137,13 +156,13 @@ module Jekyll
 
       tags.each do |tag|
         tagPageMapping[tag].uniq!
-        tagPage = UpdatesTagPage.new(site, site.data['curr_lang'], tag, tagPageMapping[tag])
+        tagPage = UpdatesTagPage.new(site, path, site.data['curr_lang'], tag, tagPageMapping[tag])
         tagPage.data['_context'] = tagsSection
         site.pages << tagPage
         tagsSection['pages'] << tagPage
       end
 
-      tagPage = UpdatesTagsPage.new(site, site.data['curr_lang'], tags)
+      tagPage = UpdatesTagsPage.new(site, path, site.data['curr_lang'], tags)
       tagPage.data['_context'] = tagsSection
       site.pages << tagPage
       tagsSection['index'] = tagPage
@@ -154,11 +173,11 @@ module Jekyll
       (pages.size.to_f / numberOfResultsPerPage).ceil
     end
 
-    def generateFeedPage(site, pages)
+    def generateFeedPage(site, path, pages)
       pagesToInclude = pages
 
-      site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
-      site.pages << UpdatesFeedPage.new(site, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+      site.pages << UpdatesFeedPage.new(site, path, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << UpdatesFeedPage.new(site, path, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
     end
 
   end
