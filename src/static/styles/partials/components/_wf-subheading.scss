@@ -9,8 +9,23 @@
 
     margin-bottom: 0;
   }
+
+  a {
+    color: $color-accent-contrast-works;
+  }
 }
 
-.wf-subheading a {
-  color: $color-accent-contrast-works;
+.wf-secondaryheading {
+  background-color: #f8f8f8;
+
+  .page-content {
+    padding-top: $base-line;
+    padding-bottom: $base-line;
+
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $color-accent;
+  }  
 }
