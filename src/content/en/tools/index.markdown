@@ -6,9 +6,14 @@ translation_priority: 0
 ---
 
 <div class="wf-subheading">
-  <div class="page-content">
-    <h2>Get productive</h2>
-    <p>Discover our tools and kickstart your development.</p>
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <h2>Get productive.</h2>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <p>Discover our tools and kickstart your development.</p>
+      <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" href="/web/updates/devtools/">What's new</a>
+    </div>
   </div>
 </div>
 
@@ -43,11 +48,6 @@ translation_priority: 0
 </div>
 
 <div class="page-content">
-  <h2>Guides</h2>
-  <p>When you first start developing for the web, you can get going with a basic text editor and a browser to view everything in.</p>
-  <p>As your experience grows, so will the range of tools you'll use on a regular basis. In these guides, we'll walk through the tools
-  that will make you more productive, make development easier and help fix bugs and problems.</p>
-
   <div class="mdl-grid">
   {% for subdirectory in page.context.subdirectories %}
     {% if subdirectory.subdirectories.size > 0 %}
@@ -64,9 +64,3 @@ translation_priority: 0
   {% endfor %}
   </div>
 </div>
-
-{% if page.articles.updates %}
-  <!-- TODO -->
-  <h2><a href="/web/updates/tools/tip">Tips &amp; Tricks</a></h2>
-  {% include modules/latest_updates.liquid limit=2 product="tools" type="tip" details="false" headingontop="true" %}
-{% endif %}
