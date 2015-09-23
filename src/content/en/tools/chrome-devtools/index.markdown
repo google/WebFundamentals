@@ -2,7 +2,7 @@
 layout: shared/wide
 description: "The Chrome DevTools are Chrome's built-in authoring and debugging tool."
 title: Chrome DevTools
-
+order: 5
 panels:
   - title: Elements
     img: /web/tools/chrome-devtools/images/elements.jpg
