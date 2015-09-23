@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "The Yeoman Monthly Digest #2"
 description: "A regular round-up of articles, videos and talks authored by the Yeoman community."
 published_on: 2013-12-26

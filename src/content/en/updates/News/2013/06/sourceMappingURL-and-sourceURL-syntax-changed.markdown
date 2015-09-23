@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "sourceMappingURL and sourceURL syntax changed"
 published_on: 2013-06-13
 updated_on: 2013-06-13

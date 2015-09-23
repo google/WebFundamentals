@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "DOM Attributes now on the prototype chain"
 description: "Chrome is becoming in line with the spec. Check your sites if you are assuming the WebKit logic for attribute propagation"
 published_on: 2015-04-14

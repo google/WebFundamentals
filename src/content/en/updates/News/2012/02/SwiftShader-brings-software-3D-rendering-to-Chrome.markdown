@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "SwiftShader brings software 3D rendering to Chrome"
 published_on: 2012-02-18
 updated_on: 2012-02-18

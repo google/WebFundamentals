@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Detect DOM changes with Mutation Observers"
 description: "An introduction to Mutation Observers."
 published_on: 2012-02-16

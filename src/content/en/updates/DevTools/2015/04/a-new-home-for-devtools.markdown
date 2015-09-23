@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 published_on: 2015-03-30
 updated_on: 2015-03-30
 authors:

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "WebGL demo roundup"
 published_on: 2011-11-08
 updated_on: 2011-11-08

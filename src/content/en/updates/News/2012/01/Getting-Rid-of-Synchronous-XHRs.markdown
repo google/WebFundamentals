@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Getting Rid of Synchronous XHRs"
 published_on: 2012-01-26
 updated_on: 2012-01-26

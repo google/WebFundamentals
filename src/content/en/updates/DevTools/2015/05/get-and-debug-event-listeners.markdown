@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Get and debug event listeners"
 published_on: 2015-05-18
 updated_on: 2015-05-20

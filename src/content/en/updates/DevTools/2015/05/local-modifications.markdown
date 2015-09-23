@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Local Modifications"
 published_on: 2015-05-05
 updated_on: 2015-05-20

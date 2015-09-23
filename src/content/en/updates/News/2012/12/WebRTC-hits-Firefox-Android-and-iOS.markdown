@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "WebRTC hits Firefox, Android and iOS"
 published_on: 2012-12-10
 updated_on: 2012-12-10

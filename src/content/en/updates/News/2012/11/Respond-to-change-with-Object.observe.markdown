@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Respond to change with Object.observe"
 published_on: 2012-11-28
 updated_on: 2012-11-28

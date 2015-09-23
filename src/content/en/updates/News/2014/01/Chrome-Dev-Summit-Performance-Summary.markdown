@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Chrome Dev Summit: Performance Summary"
 description: "Performance Matters"
 published_on: 2014-01-08

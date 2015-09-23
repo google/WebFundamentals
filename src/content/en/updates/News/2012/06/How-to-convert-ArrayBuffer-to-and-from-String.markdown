@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "How to convert ArrayBuffer to and from String"
 description: "How to convert ArrayBuffer to and from String"
 published_on: 2012-06-15

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "DevTools Timeline: Now Providing the Full Story"
 published_on: 2015-03-24
 updated_on: 2015-05-08

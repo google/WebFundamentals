@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Saving generated files on the client-side"
 published_on: 2011-08-08
 updated_on: 2011-08-08

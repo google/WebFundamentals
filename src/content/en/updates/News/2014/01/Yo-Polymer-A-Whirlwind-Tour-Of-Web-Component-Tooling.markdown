@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Yo Polymer – A Whirlwind Tour Of Web Component Tooling"
 description: "A whirlwind tour of Web Components, Polymer and front-end tooling for them."
 published_on: 2014-01-20

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Big boost to DOM performance - WebKit's innerHTML is 240% faster"
 published_on: 2012-04-11
 updated_on: 2012-04-11

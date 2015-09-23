@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Automatically pause on any exception"
 published_on: 2015-05-17
 updated_on: 2015-05-20

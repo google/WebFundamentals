@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Granular statement highlights"
 published_on: 2015-05-06
 updated_on: 2015-05-20

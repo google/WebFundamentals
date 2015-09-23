@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Web Audio live audio input - now on Android!"
 description: "Chrome for Android (v31.0.1650+) has just landed support for audio input via the Web Audio API!"
 published_on: 2013-10-15

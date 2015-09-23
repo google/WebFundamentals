@@ -5,7 +5,6 @@ published_on: 2015-07-10
 updated_on: 2015-07-10
 authors:
   - umarhansa
-category: devtools
 description: "Ever tried to debug CSS hover effects but failed keeping the mouse on the element? Here's how to do it."
 featured_image: /web/updates/images/2015-07-10-trigger-a-pseudo-class-like-hover-on-an-element/trigger-pseudo-class.gif
 source_name: DevTips

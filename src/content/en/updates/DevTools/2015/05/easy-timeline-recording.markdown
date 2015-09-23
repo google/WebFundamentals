@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Easy timeline recording"
 published_on: 2015-05-09
 updated_on: 2015-05-20

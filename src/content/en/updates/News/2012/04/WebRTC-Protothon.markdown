@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "WebRTC Protothon"
 published_on: 2012-04-18
 updated_on: 2012-04-18

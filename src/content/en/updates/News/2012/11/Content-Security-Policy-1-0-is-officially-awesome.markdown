@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Content Security Policy 1.0 is officially awesome."
 published_on: 2012-11-16
 updated_on: 2012-11-16

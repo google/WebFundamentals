@@ -5,7 +5,6 @@ published_on: 2015-07-13
 updated_on: 2015-07-13
 authors:
   - umarhansa
-category: devtools
 description: "Did you know you can inspect your DevTools with DevTools?"
 featured_image: /web/updates/images/2015-07-13-perform-inspector-inception-by-inspecting-devtools/inspect-the-inspector.gif
 source_name: DevTips

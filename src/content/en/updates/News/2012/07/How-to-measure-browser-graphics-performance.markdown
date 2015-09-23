@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "How to measure browser graphics performance"
 published_on: 2012-07-23
 updated_on: 2012-07-23

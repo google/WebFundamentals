@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "The easing editor"
 published_on: 2015-05-19
 updated_on: 2015-05-19

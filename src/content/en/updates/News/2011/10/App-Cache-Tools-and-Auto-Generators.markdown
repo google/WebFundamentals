@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "App Cache Tools and Auto-Generators"
 published_on: 2011-10-28
 updated_on: 2011-10-28

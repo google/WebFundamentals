@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Quickly change CSS values"
 published_on: 2015-05-16
 updated_on: 2015-05-20

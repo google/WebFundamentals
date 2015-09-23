@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Help users checkout faster with Autofill"
 description: "Help users checkout faster with Autofill. We’ve found that by correctly using autocomplete attributes on your forms, users complete them up to 30% faster!"
 published_on: 2015-06-06

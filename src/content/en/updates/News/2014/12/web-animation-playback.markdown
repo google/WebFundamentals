@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Web Animations Playback Control in Chrome 39"
 description: "Learn about Web Animation Playback"
 published_on: 2014-12-05

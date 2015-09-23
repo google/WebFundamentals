@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "CSS Background shorthand coming to mobile WebKit browsers"
 published_on: 2013-02-01
 updated_on: 2013-02-01

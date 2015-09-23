@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Round-up of Web Browser Internals Resources"
 published_on: 2012-04-10
 updated_on: 2012-04-10

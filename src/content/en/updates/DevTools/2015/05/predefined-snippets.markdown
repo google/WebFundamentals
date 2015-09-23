@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Predefined snippets"
 published_on: 2015-05-01
 updated_on: 2015-05-20

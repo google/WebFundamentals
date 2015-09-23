@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Optimizing JavaScript"
 published_on: 2012-03-16
 updated_on: 2012-03-16

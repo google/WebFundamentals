@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "dialog element: Modals made easy"
 description: "Have you ever created your own modal dialog box? Soon, you won't need to ever again; dialog boxes are becoming a part of the web platform."
 published_on: 2013-09-23

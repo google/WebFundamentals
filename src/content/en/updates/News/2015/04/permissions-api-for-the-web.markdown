@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Permissions API for the Web"
 description: "The Permissions API gives you a central place to check the permission status of an API."
 published_on: 2015-04-05

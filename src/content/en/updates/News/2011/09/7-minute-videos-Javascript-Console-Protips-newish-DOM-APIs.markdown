@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "7 minute videos: Javascript Console Protips & newish DOM APIs"
 published_on: 2011-09-28
 updated_on: 2011-09-28

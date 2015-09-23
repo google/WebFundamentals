@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Hard reload"
 published_on: 2015-05-05
 updated_on: 2015-05-19

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Quick FAQs on input[type=date] in Google Chrome"
 published_on: 2012-08-06
 updated_on: 2012-08-06

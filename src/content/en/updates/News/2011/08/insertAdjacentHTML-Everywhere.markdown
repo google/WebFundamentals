@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "insertAdjacentHTML Everywhere"
 published_on: 2011-08-28
 updated_on: 2011-08-28

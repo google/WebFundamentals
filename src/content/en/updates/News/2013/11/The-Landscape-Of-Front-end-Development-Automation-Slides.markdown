@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "The Landscape Of Front-end Development Automation (Slides)"
 description: "Learn how to improve your front-end productivity with tools for workflow automation."
 published_on: 2013-11-04

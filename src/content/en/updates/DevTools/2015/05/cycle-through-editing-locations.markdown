@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Cycle through editing locations"
 published_on: 2015-05-04
 updated_on: 2015-05-20

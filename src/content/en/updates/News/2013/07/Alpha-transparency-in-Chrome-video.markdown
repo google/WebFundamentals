@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Alpha transparency in Chrome video"
 description: "WebM just added alpha transparency, and support for it has landed in Chrome Canary."
 published_on: 2013-07-26

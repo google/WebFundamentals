@@ -5,7 +5,6 @@ published_on: 2015-08-10
 updated_on: 2015-08-20
 authors:
   - umarhansa
-category: devtools
 description: "The DOM node context menu, which you may recognize from the elements panel, is also present in the console panel."
 featured_image: /web/updates/images/2015-08-10-edit-html-in-the-console-panel-of-devtools/console-edit-html.gif
 source_name: DevTips

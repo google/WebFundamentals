@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Scroll elements into the viewport"
 published_on: 2015-05-13
 updated_on: 2015-05-20

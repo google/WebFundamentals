@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Pointer Lock API Brings FPS Games to the Browser"
 published_on: 2012-02-06
 updated_on: 2012-02-06

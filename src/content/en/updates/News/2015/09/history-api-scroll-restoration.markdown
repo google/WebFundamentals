@@ -5,7 +5,6 @@ published_on: 2015-09-02
 updated_on: 2015-09-02
 authors:
   - paullewis
-category: news
 tags:
   - history
 featured_image: /web/updates/images/2015-09-02-history-api-scroll-restoration/featured.jpg

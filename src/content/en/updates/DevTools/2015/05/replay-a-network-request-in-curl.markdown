@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Replay a network request in cURL"
 published_on: 2015-05-15
 updated_on: 2015-05-19

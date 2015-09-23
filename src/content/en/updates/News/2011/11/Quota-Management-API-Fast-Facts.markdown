@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Quota Management API : Fast Facts"
 published_on: 2011-11-11
 updated_on: 2011-11-11

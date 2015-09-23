@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "HTML5 Libraries - Late June"
 published_on: 2011-06-29
 updated_on: 2011-06-29

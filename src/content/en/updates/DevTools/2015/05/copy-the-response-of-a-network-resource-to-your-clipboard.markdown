@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Copy the response of a network resource to your clipboard"
 published_on: 2015-05-03
 updated_on: 2015-05-20

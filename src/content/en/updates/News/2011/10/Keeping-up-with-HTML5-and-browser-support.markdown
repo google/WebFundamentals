@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Keeping up with HTML5 and browser support"
 published_on: 2011-10-13
 updated_on: 2011-10-13

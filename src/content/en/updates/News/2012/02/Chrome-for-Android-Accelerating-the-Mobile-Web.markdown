@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Chrome for Android: Accelerating the Mobile Web"
 published_on: 2012-02-07
 updated_on: 2012-02-07

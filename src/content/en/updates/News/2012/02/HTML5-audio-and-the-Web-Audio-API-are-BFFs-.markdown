@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "HTML5 &lt;audio&gt; and the Web Audio API are BFFs!"
 published_on: 2012-02-03
 updated_on: 2012-02-03

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Chrome Dev Summit: Platforms Summary"
 description: "Platforms"
 published_on: 2014-01-10

@@ -6,7 +6,6 @@ published_on: 2015-08-20
 updated_on: 2015-08-20
 authors:
   - paulkinlan
-category: news
 tags:
   - poster
   - flash

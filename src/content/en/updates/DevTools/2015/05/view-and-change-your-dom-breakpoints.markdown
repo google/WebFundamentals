@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "View and change your DOM breakpoints"
 published_on: 2015-05-14
 updated_on: 2015-05-20

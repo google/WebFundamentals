@@ -5,7 +5,6 @@ published_on: 2015-08-27
 updated_on: 2015-08-27
 authors:
   - paullewis
-category: news
 tags:
   - performance
   - update

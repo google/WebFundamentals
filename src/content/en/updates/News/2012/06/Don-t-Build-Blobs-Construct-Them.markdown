@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Don't Build Blobs, Construct Them"
 published_on: 2012-06-11
 updated_on: 2012-06-11

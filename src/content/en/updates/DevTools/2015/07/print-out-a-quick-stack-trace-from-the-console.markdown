@@ -5,7 +5,6 @@ published_on: 2015-07-14
 updated_on: 2015-07-14
 authors:
   - umarhansa
-category: devtools
 description: "You can use console.trace() to get a quick and easy stack trace to better understand code execution flow."
 featured_image: /web/updates/images/2015-07-14-print-out-a-quick-stack-trace-from-the-console/console-trace.gif
 source_name: DevTips

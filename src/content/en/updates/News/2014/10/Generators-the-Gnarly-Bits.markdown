@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Generators: the Gnarly Bits"
 description: "An exploration of ES6 Generators."
 published_on: 2014-10-07

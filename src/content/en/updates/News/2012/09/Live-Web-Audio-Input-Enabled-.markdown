@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Live Web Audio Input Enabled!"
 published_on: 2012-09-19
 updated_on: 2012-09-19

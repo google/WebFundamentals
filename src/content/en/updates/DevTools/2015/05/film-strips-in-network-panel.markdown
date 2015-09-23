@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Film strips in Network panel"
 published_on: 2015-05-12
 updated_on: 2015-05-20

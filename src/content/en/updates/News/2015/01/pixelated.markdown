@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "image-rendering: pixelated"
 description: "Pixelation of the nation. Now in Chrome 41"
 published_on: 2015-01-18

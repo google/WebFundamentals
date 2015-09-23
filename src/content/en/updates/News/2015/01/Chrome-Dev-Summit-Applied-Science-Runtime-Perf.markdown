@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Chrome Dev Summit 2014: The Applied Science of Runtime Performance"
 description: "The story of building the Chrome Dev Summit site."
 published_on: 2015-01-05

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Simplified Concepts in Web Animations Naming"
 description: "In response to developer feedback, some upcoming features of Web Animations are being renamed."
 published_on: 2015-04-02

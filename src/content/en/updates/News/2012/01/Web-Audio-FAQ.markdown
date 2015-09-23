@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Web Audio FAQ"
 published_on: 2012-01-10
 updated_on: 2012-01-10

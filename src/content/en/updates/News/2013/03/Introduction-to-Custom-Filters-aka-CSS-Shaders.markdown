@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Introduction to Custom Filters (aka CSS Shaders)"
 published_on: 2013-03-25
 updated_on: 2013-03-25

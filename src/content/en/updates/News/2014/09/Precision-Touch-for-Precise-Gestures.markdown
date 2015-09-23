@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Precision Touch for Precise Gestures"
 description: "TouchEvents have changed in Chrome to return float values, instead of integers, to account for varying screen densities. This leads to more detailed feedback during slow gestures."
 published_on: 2014-09-15

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Use mediump precision in WebGL when possible"
 published_on: 2011-12-08
 updated_on: 2011-12-08

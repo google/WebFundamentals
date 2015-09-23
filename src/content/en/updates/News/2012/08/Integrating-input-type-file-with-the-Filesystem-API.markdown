@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Integrating input[type=&quot;file&quot;] with the Filesystem API"
 published_on: 2012-08-23
 updated_on: 2012-08-23

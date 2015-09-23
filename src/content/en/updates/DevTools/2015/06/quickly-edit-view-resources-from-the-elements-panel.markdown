@@ -1,7 +1,6 @@
 ---
 rss: false
 layout: updates/post
-category: devtools
 title: "Quickly edit/view resources from the Elements panel"
 published_on: 2015-06-18
 updated_on: 2015-06-18

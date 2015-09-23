@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Easily jump to event listeners"
 published_on: 2015-05-07
 updated_on: 2015-05-20

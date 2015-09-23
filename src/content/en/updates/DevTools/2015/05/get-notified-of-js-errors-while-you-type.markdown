@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Get notified of JS errors while you type"
 published_on: 2015-05-10
 updated_on: 2015-05-20
