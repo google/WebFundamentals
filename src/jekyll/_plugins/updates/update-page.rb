@@ -30,7 +30,7 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Updates'
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/update-post.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
       self.data['theme_color'] = '#E91E63'
       self.data['feed_name'] = 'Web Updates - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/updates/feed.xml'

@@ -29,7 +29,7 @@ module Jekyll
       title_text = "All updates tagged: " + tag
       description_text = "All updates tagged: " + tag
 
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
       self.data['title'] = title_text
       self.data['description'] = description_text
       self.data['rss'] = false
@@ -54,7 +54,7 @@ module Jekyll
       title_text = "By tag"
       description_text = "By tag"
 
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
       self.data['title'] = title_text
       self.data['description'] = description_text
       self.data['rss'] = false
