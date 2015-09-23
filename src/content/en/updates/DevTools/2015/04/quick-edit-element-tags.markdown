@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Quick-edit element tags"
 published_on: 2015-04-30
 updated_on: 2015-05-20

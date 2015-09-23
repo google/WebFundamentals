@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Use keyboard to navigate through callstack"
 published_on: 2015-05-19
 updated_on: 2015-05-19

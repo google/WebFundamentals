@@ -1,7 +1,6 @@
 ---
 rss: false
 layout: updates/post
-category: devtools
 title: "Preview JavaScript values inline while debugging"
 published_on: 2015-07-07
 updated_on: 2015-07-07

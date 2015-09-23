@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "HTML5 Libraries/polyfills - Mid July"
 published_on: 2011-07-26
 updated_on: 2011-07-26

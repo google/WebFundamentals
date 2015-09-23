@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Fundamentals of Mobile Web Development"
 description: "A quick look at some of the efforts the Chrome team are doing to helps developers get started with Web Development and iterate on their sites."
 published_on: 2014-12-02

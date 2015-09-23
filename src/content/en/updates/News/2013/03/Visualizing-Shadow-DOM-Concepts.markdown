@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Visualizing Shadow DOM Concepts"
 published_on: 2013-03-13
 updated_on: 2013-03-13

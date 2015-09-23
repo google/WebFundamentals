@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "The Yeoman Monthly Digest #3"
 description: "A monthly digest of high-quality Yeoman articles, generators and project news."
 published_on: 2014-02-17

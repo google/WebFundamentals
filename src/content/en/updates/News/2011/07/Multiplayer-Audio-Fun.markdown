@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Multiplayer Audio Fun"
 published_on: 2011-07-15
 updated_on: 2011-07-15

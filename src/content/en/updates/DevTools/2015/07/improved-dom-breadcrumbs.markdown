@@ -5,7 +5,6 @@ published_on: 2015-07-24
 updated_on: 2015-07-24
 authors:
   - umarhansa
-category: devtools
 description: "Did you know the Elements Panel has a <em>Breadcrumb trail</em>?"
 featured_image: /web/updates/images/2015-07-24-an-improved-breadcrumb-trail-for-the-dom/better-breadcrumbs.gif
 source_name: DevTips

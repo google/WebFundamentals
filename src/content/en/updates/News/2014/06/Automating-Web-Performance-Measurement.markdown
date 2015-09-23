@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Automating Web Performance Measurement"
 description: "Use PSI to get web performance metrics into your build process."
 published_on: 2014-06-06

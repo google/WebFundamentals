@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Registering a custom protocol handler"
 published_on: 2011-06-30
 updated_on: 2011-06-30

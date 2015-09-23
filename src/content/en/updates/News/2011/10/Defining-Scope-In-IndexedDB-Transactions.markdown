@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Defining Scope In IndexedDB Transactions"
 published_on: 2011-10-27
 updated_on: 2011-10-27

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "[datalist] for range/color inputs offer some default choices  "
 published_on: 2012-08-15
 updated_on: 2012-08-15

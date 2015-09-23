@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Go to a line number at a specific column"
 published_on: 2015-05-08
 updated_on: 2015-05-20

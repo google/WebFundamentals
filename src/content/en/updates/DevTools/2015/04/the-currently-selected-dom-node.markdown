@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "The currently selected DOM node"
 published_on: 2015-04-23
 updated_on: 2015-05-20

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "The amazing powers of CSS"
 published_on: 2012-06-20
 updated_on: 2012-06-20

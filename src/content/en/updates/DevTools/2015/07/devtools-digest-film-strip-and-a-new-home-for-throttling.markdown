@@ -5,7 +5,6 @@ published_on: 2015-07-23
 updated_on: 2015-07-24
 authors:
   - pbakaus
-category: devtools
 tags:
   - digest
   - update

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "navigator.onLine in Chrome Dev channel"
 published_on: 2011-06-24
 updated_on: 2011-06-24

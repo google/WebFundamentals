@@ -5,7 +5,6 @@ published_on: 2015-08-24
 updated_on: 2015-08-24
 authors:
   - umarhansa
-category: devtools
 description: "Learn how to effectively navigate the Styles Pane with a few useful keyboard tricks."
 featured_image: /web/updates/images/2015-08-21-simple-keyboard-tricks-to-use-in-the-styles-pane/styles-pane-keyboard-tricks.gif
 source_name: DevTips

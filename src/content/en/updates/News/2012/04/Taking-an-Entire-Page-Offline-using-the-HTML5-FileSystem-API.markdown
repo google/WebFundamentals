@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Taking an Entire Page Offline using the HTML5 FileSystem API"
 published_on: 2012-04-05
 updated_on: 2012-04-05

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Arrived! xhr.send(ArrayBufferViews)"
 published_on: 2012-07-16
 updated_on: 2012-07-16

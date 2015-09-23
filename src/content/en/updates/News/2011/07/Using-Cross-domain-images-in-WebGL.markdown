@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Using Cross-domain images in WebGL"
 published_on: 2011-07-06
 updated_on: 2011-07-06

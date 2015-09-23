@@ -6,7 +6,6 @@ published_on: 2015-08-21
 updated_on: 2015-08-21
 authors:
   - addyosmani
-category: news
 tags:
  - mdl
  - release

@@ -5,7 +5,6 @@ published_on: 2015-07-24
 updated_on: 2015-07-24
 authors:
   - umarhansa
-category: devtools
 description: "Did you know you can live edit CSS in Sources and have it update the page in real-time?"
 featured_image: /web/updates/images/2015-07-24-live-edit-css-in-sources-and-increment-values-easily/live-edit-css-sources.gif
 source_name: DevTips

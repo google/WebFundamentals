@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Profiling Long Paint Times with DevTools' Continuous Painting Mode"
 published_on: 2013-02-19
 updated_on: 2013-02-19

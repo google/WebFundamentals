@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Getting Literal With ES6 Template Strings"
 description: "Template String literals with embedded expressions. We've been waiting for this for ages. Literally"
 published_on: 2015-01-20

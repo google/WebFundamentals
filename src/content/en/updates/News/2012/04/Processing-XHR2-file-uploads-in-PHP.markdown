@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Processing XHR2 file uploads in PHP"
 published_on: 2012-04-18
 updated_on: 2012-04-18

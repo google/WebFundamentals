@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Announcing New Game, the conference for HTML5 game developers"
 published_on: 2011-07-16
 updated_on: 2011-07-16

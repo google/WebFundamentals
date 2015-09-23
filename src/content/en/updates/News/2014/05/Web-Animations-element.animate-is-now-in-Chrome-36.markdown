@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Web Animations - element.animate() is now in Chrome 36"
 description: "Web Animations define a model for supporting animation and synchronization on the Web platform. element.animate() is the first of those pieces landing in Chrome."
 published_on: 2014-05-22

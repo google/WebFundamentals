@@ -5,7 +5,6 @@ published_on: 2015-07-17
 updated_on: 2015-07-17
 authors:
   - umarhansa
-category: devtools
 description: "When you set a breakpoint, you can make it conditional based on the result of an expression."
 featured_image: /web/updates/images/2015-07-17-set-a-breakpoint-based-on-a-certain-condition/conditional-breakpoint.gif
 source_name: DevTips

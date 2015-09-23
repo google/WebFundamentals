@@ -5,7 +5,6 @@ published_on: 2015-07-09
 updated_on: 2015-07-09
 authors:
   - umarhansa
-category: devtools
 description: "Learn the secret commands to search like a pro in DevTools."
 featured_image: /web/updates/images/2015-07-09-a-project-wide-search-with-an-optional-file-scope/project-search-with-file-scope.gif
 source_name: DevTips

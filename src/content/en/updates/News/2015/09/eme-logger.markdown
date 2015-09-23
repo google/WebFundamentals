@@ -4,7 +4,6 @@ title: "The EME Logger extension"
 description: "EME Logger is a Chrome extension that logs Encrypted Media Extensions (EME) events and calls to the DevTools console."
 published_on: 2015-09-17
 updated_on: 2015-09-17
-category: news
 authors:
   - samdutton
 tags:

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "CSS Filter Effects Landing in WebKit"
 published_on: 2011-12-22
 updated_on: 2011-12-22

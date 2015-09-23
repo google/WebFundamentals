@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Screensharing with WebRTC"
 published_on: 2012-12-24
 updated_on: 2012-12-24

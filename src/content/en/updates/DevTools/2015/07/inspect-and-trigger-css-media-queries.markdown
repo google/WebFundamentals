@@ -5,7 +5,6 @@ published_on: 2015-07-20
 updated_on: 2015-07-20
 authors:
   - umarhansa
-category: devtools
 description: "The Device Mode has a media query inspector built-in that allows for easier responsive design."
 featured_image: /web/updates/images/2015-07-20-inspect-and-trigger-css-media-queries-also-locate-them-in-code/media-query-inspector.gif
 source_name: DevTips

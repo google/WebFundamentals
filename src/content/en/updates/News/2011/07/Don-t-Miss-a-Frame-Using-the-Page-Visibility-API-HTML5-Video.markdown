@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Don't Miss a Frame: Using the Page Visibility API + HTML5 Video"
 published_on: 2011-07-16
 updated_on: 2011-07-16

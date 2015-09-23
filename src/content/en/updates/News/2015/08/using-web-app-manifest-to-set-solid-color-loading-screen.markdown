@@ -5,7 +5,6 @@ published_on: 2015-08-28
 updated_on: 2015-08-28
 authors:
   - paulkinlan
-category: news
 tags:
   - manifest
   - webapp

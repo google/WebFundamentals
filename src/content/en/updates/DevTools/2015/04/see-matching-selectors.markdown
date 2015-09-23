@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "See matching selectors"
 published_on: 2015-04-27
 updated_on: 2015-05-20

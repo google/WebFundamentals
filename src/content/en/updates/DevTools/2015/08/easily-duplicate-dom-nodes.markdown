@@ -5,7 +5,6 @@ published_on: 2015-08-10
 updated_on: 2015-08-20
 authors:
   - umarhansa
-category: devtools
 description: "You can easily change the DOM without having to edit the HTML as a giant string."
 featured_image: /web/updates/images/2015-08-10-duplicate-dom-nodes/duplicate-dom.gif
 source_name: DevTips

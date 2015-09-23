@@ -5,7 +5,6 @@ published_on: 2015-08-10
 updated_on: 2015-08-10
 authors:
   - umarhansa
-category: devtools
 featured_image: /web/updates/images/2015-08-10-5-tricks-to-use-in-the-console-panel/five-console-tricks.gif
 source_name: DevTips
 source_url: https://umaar.com/dev-tips/29-five-console-tricks/

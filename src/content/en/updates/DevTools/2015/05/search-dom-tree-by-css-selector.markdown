@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Search DOM tree by CSS selector"
 published_on: 2015-05-11
 updated_on: 2015-05-19

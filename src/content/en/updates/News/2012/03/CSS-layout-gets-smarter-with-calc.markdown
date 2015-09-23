@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "CSS layout gets smarter with calc()"
 published_on: 2012-03-29
 updated_on: 2012-03-29

@@ -5,7 +5,6 @@ published_on: 2015-08-07
 updated_on: 2015-08-07
 authors:
   - pbakaus
-category: devtools
 tags:
   - announcement
 featured_image: /web/updates/images/2015-08-07-google-web-tools/featured.png

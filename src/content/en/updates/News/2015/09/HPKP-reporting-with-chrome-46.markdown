@@ -5,7 +5,6 @@ published_on: 2015-09-01
 updated_on: 2015-09-01
 authors:
   - emilystark
-category: news
 tags:
   - security
   - hpkp

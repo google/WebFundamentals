@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Expand CSS shorthand properties"
 published_on: 2015-05-11
 updated_on: 2015-05-20

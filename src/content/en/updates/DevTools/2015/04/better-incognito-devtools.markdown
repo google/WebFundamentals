@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Better Incognito DevTools"
 published_on: 2015-04-24
 updated_on: 2015-05-20

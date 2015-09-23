@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Autocomplete for bracket notation"
 published_on: 2015-05-15
 updated_on: 2015-05-20

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "WebGL and Web Audio API demo roundup"
 published_on: 2012-02-20
 updated_on: 2012-02-20

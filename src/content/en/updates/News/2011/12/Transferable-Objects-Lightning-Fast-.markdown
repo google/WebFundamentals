@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Transferable Objects: Lightning Fast!"
 published_on: 2011-12-10
 updated_on: 2011-12-10

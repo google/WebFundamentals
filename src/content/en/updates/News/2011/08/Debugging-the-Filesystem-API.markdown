@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Debugging the Filesystem API"
 published_on: 2011-08-18
 updated_on: 2011-08-18

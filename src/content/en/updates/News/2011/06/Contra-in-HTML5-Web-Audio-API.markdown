@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Contra in HTML5 + Web Audio API"
 published_on: 2011-06-27
 updated_on: 2011-06-27

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Quickly monitor events from the Console Panel"
 published_on: 2015-04-26
 updated_on: 2015-05-20

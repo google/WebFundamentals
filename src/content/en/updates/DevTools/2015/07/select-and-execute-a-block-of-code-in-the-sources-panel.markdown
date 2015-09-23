@@ -5,7 +5,6 @@ published_on: 2015-07-17
 updated_on: 2015-07-17
 authors:
   - umarhansa
-category: devtools
 description: "Use the shortcut <kbd class='kbd'>Ctrl + Shift + E</kbd> to run a blockof highlighted code in the Sources Panel."
 featured_image: /web/updates/images/2015-07-17-select-and-execute-a-block-of-code-in-the-sources-panel/run-highlighted-code-block.gif
 source_name: DevTips

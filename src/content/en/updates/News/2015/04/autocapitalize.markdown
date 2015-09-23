@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Autocapitalize for mobile"
 description: "Another text entry frustration for users is being removed."
 published_on: 2015-04-16

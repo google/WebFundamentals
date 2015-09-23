@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "DevTools Digest December 2013"
 description: "The latest update for changes to the Chrome DevTools."
 published_on: 2013-12-19

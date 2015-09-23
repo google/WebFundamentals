@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Workers ♥ ArrayBuffer"
 published_on: 2011-09-01
 updated_on: 2011-09-01

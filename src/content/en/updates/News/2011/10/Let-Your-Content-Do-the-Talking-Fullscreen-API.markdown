@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Let Your Content Do the Talking: Fullscreen API"
 description: "Intro to the Full Screen API"
 published_on: 2011-10-26

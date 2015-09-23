@@ -5,7 +5,6 @@ published_on: 2015-08-25
 updated_on: 2015-08-25
 authors:
   - umarhansa
-category: devtools
 description: "Did you know that the filter in the Network panel supports a few nifty custom search labels?"
 featured_image: /web/updates/images/2015-08-21-the-larger-than-advanced-network-panel-filter-and-a-few-others/network-advanced-filter.gif
 source_name: DevTips

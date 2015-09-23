@@ -5,7 +5,6 @@ published_on: 2015-09-03
 updated_on: 2015-09-03
 authors:
   - jakearchibald
-category: news
 tags:
   - serviceworker
   - cache

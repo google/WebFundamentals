@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Welcome to updates.html5rocks.com!"
 published_on: 2011-06-23
 updated_on: 2011-06-23

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "datalist landed in Chrome Canary"
 published_on: 2012-04-23
 updated_on: 2012-04-23

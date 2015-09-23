@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Cut and Copy Commands"
 description: "The support for cut and copy commands allows you to programmatically cut and copy selected text to the users clipboard"
 published_on: 2015-04-15

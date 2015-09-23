@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Chrome Dev Summit 2014: Let's build some apps with Polymer!"
 description: "Building apps, the Polymer way."
 published_on: 2015-01-20

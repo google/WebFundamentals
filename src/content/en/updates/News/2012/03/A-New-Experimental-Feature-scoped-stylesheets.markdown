@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "A New Experimental Feature: scoped stylesheets"
 published_on: 2012-03-06
 updated_on: 2012-03-06

@@ -5,7 +5,6 @@ published_on: 2015-07-08
 updated_on: 2015-07-08
 authors:
   - umarhansa
-category: devtools
 description: "Learn about which colors match to which resource type to easy identify resources."
 featured_image: /web/updates/images/2015-07-08-use-network-colour-groups-to-easily-identify-a-resource-type/network-colour-group.gif
 source_name: DevTips

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 published: false
 title: "Some UI and feature enhancements to the Colour Picker tool"
 published_on: 2015-05-19

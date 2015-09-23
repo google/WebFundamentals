@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "What's the CSS :scope pseudo-class for?"
 published_on: 2013-03-22
 updated_on: 2013-03-22

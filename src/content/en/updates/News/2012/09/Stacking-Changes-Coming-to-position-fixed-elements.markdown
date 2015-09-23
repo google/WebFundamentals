@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Stacking Changes Coming to position:fixed elements"
 published_on: 2012-09-11
 updated_on: 2012-09-11

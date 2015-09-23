@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Chrome Developer Tools for Speed"
 published_on: 2011-11-17
 updated_on: 2011-11-17

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Unfinished network requests"
 published_on: 2015-04-20
 updated_on: 2015-05-20

@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Having a ride with Three.js"
 published_on: 2011-10-07
 updated_on: 2011-10-07

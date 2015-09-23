@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: news
 title: "Voice Driven Web Apps: Introduction to the Web Speech API"
 published_on: 2013-01-14
 updated_on: 2013-01-14

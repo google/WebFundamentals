@@ -1,6 +1,5 @@
 ---
 layout: updates/post
-category: devtools
 title: "Copy image as data URI"
 published_on: 2015-04-29
 updated_on: 2015-05-20
