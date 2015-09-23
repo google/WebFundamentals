@@ -37,6 +37,11 @@ module Jekyll
         end
       }
 
+      # Skip out if update section is not there
+      if updateSection.nil? 
+        return;
+      end
+
       # Generate the updates for root
       generateSection(site, updateSection)
 
@@ -55,7 +60,6 @@ module Jekyll
     # Generates all pages for a section of the updates folder, including
     # index page, tags pages, and RSS feeds.
     def generateSection(site, section)
-
       # Gets the current section
       path = section['id']
 
