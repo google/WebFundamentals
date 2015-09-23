@@ -1,92 +1,100 @@
 ---
-layout: shared/narrow
+layout: shared/wide
 description: "Web Starter Kit is boilerplate and tooling for multi-device development"
 title: Web Starter Kit
-feedName: "TODO"
+order: 7
+feedName: Web Starter Kit Releases
 feedURL: https://github.com/google/web-starter-kit/releases.atom
 ---
-<!-- {{ site.wsk-version }} -->
-<div class="wsk-header centered themed--background">
-  <div class="container">
-    <h1>Web <strong>Starter Kit</strong></h1>
+
+<div class="wf-subheading">
+  <div class="page-content">
     <p>Boilerplate &amp; Tooling for Multi-Device Development</p>
-    <a id="download" href="https://github.com/google/web-starter-kit/releases/latest" class="button--secondary-variation themed">Download Web Starter Kit (beta)</a>
+    <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/google/web-starter-kit/releases/latest">Download Web Starter Kit (beta)</a>
   </div>
 </div>
-<div class="container">
-  <div class="centered">
-    <h3 class="g-wide--2 g--centered xlarge">Your starting point for building great multi-device web experiences</h3>
-    <p class="g-wide--3 g--centered">Start your project with the Web Starter Kit and ensure you're following the <a href="/web/fundamentals/">Web Fundamentals</a> guidelines out of the box.</p>
+
+<div class="page-content mdl-typography--text-center mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+    <h3>Your starting point for building great multi-device web experiences</h3>
+    <p>Start your project with the Web Starter Kit and ensure you're following the <a href="/web/fundamentals/">Web Fundamentals</a> guidelines out of the box.</p>
   </div>
-  <ul class="list-guides-intro list-centered list-reset clear">
-    <li class="g-medium--half g-wide--1 theme--tools">
-      <span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span><h3 class="large">Multi-device responsive boilerplate</h3>
+  <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
+
+
+<div class="page-content">
+  <div class="mdl-grid mdl-typography--text-center">
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-multi-device-layouts"></i>
+      <h3 class="mdl-typography--title">Multi-device responsive boilerplate</h3>
       <p>A responsive boilerplate optimized for the multi-screen web, with a high PageSpeed Insights performance score.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools g-medium--last">
-      <span class="icon-circle--large themed--background"><i class="icon icon-user-input"></i></span><h3 class="large">Living component style guide</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-user-input"></i>
+      <h3 class="mdl-typography--title">Living component style guide</h3>
       <p>A visual design system for documenting your site’s components that evolves as Web Starter Kit does.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools">
-      <span class="icon-circle--large themed--background"><i class="icon icon-chevron-up"></i></span><h3 class="large">Cross-device Synchronization</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-chevron-up"></i>
+      <h3 class="mdl-typography--title">Cross-device Synchronization</h3>
       <p>Synchronize clicks, scrolls, forms and live-reload across multiple devices as you edit your project. Powered by BrowserSync.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools g-medium--last g-wide--last">
-      <span class="icon-circle--large themed--background"><i class="icon icon-cog"></i></span><h3 class="large">Live Browser Reloading</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-cog"></i>
+      <h3 class="mdl-typography--title">Live Browser Reloading</h3>
       <p>Reload the browser in real-time anytime an edit is made without the need for an extension.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools g-wide--first">
-      <span class="icon-circle--large themed--background"><i class="icon icon-performance"></i></span><h3 class="large">Performance optimization</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-performance"></i>
+      <h3 class="mdl-typography--title">Performance optimization</h3>
       <p>Minify and concatenate JavaScript, CSS, HTML and Images to help keep your pages lean.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools g-medium--last">
-      <span class="icon-circle--large themed--background"><i class="icon icon-diamond"></i></span><h3 class="large">Built in HTTP Server</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-diamond"></i>
+      <h3 class="mdl-typography--title">Built in HTTP Server</h3>
       <p>A built in server for previewing your site means you can test your pages without messing with other tools.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools">
-      <span class="icon-circle--large themed--background"><i class="icon icon-tick"></i></span><h3 class="large">PageSpeed Insights Reporting</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-tick"></i>
+      <h3 class="mdl-typography--title">PageSpeed Insights Reporting</h3>
       <p>Web performance metrics showing how well your site performs on mobile and desktop.</p>
-    </li>
-    <li class="g-medium--half g-wide--1 theme--tools g-medium--last g-wide--last">
-      <span class="icon-circle--large themed--background"><i class="icon icon-lessons"></i></span><h3 class="large">Sass support</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <i class="icon icon-lessons"></i>
+      <h3 class="mdl-typography--title">Sass support</h3>
       <p>Compile Sass into CSS with ease, bringing support for variables, mixins and more.</p>
-    </li>
-  </ul>
-</div>
-
-<div class="divider divider--secondary">
-  <span class="themed divider-icon"></span>
-</div>
-
-<div class="container"> 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="../../imgs/pixel.png">
+    </div>
   </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="../../imgs/mobile.png">
-  </div>
-  <br style="clear: both">
-</div>
 
-<ul class="guides-list container">
-  <li class="guides-list__item g--half">
-    <div class="primary-content">
-      <h3 class="xlarge">Responsive layout</h3>
-      <p>Responsive layout is included with the kit that adapts to fit the device your user is viewing it on.
-        This helps you hit the ground running with an experience that looks good everywhere. <a href="http://google.github.io/web-starter-kit/hello-world/">Try a sample layout</a>.</p>
+  <div class="mdl-grid">
+    <figure class="mdl-cell mdl-cell--6-col">
+      <img src="../imgs/mobile.png">
+    </figure>
+    <figure class="mdl-cell mdl-cell--6-col">
+      <img src="../imgs/mobile.png">
+    </figure>
+  </div>
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+      <h3>Responsive layout</h3>
+      <p>
+        Responsive layout is included with the kit that adapts to fit the device your user is viewing it on. This helps you hit the ground running with an experience that looks good everywhere. <a href="http://google.github.io/web-starter-kit/hello-world/">Try a sample layout</a>.
+      </p>
     </div>
-  </li>
-  <li class="guides-list__item g--half g--last">
-    <div class="primary-content">
-      <h3 class="xlarge">Performance in mind</h3>
-      <p>Web Starter Kit strives to give you a high performance starting point out of the box and we actively 
-      work on delivering the best <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> score and frame-rate possible.</p>
+    <div class="mdl-cell mdl-cell--4-col">
+      <h3>Performance in mind</h3>
+      <p>
+        Web Starter Kit strives to give you a high performance starting point out of the box and we actively work on delivering the best <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> score and frame-rate possible.
+      </p>
     </div>
-  </li>
-  <li class="guides-list__item g--half">
-    <div class="primary-content">
-      <h3 class="xlarge">Delete-key friendly</h3>
-      <p>Create a tailored starter kit by taking only what you need, and easily deleting anything you don't.</p>
+    <div class="mdl-cell mdl-cell--4-col">
+      <h3>Delete-key friendly</h3>
+      <p>
+        Create a tailored starter kit by taking only what you need, and easily deleting anything you don't.
+      </p>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
