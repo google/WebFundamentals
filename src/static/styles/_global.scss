@@ -1,14 +1,3 @@
-// This might override variables in MDL so import it first
-@import "partials/dimens";
-
-@import "../third_party/material-design-lite/src/color-definitions";
-
-// Use color primarily for emphasis. Choose colors that fit with
-// your brand and provide good contrast between visual components.
-$color-primary: $palette-light-blue-500;
-//$color-primary-dark: $palette-indigo-700 !default;
-$color-accent: unquote("rgb(#{$palette-light-blue-400})");
-
 @import "../third_party/material-design-lite/src/mixins";
 @import "../third_party/material-design-lite/src/variables";
 @import "../third_party/material-design-lite/src/resets/resets";
@@ -41,11 +30,6 @@ $color-accent: unquote("rgb(#{$palette-light-blue-400})");
 @import "partials/components/wf-translation";
 @import "partials/components/wf-subheading";
 @import "partials/components/wf-card";
-@import "partials/components/wf-tools-guide";
-@import "partials/components/wf-showcase";
 @import "partials/components/wf-subdirectory-list";
 @import "partials/components/wf-contributor";
-@import "partials/components/wf-shows-subscribe";
-@import "partials/components/wf-shows";
-@import "partials/components/wf-tools-devtools";
 @import "partials/components/wf-grid";

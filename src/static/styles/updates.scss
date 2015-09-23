@@ -1,0 +1,11 @@
+@import "global-base";
+
+$color-primary: $palette-pink-700;
+$color-accent: unquote("rgb(#{$palette-pink-500})");
+
+@import "global";
+
+@import "partials/components/wf-updates-posts";
+@import "partials/components/wf-updates-index";
+
+
