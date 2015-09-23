@@ -54,8 +54,7 @@ WFStaticSource: src/static
 WFLangNames: src/content/_langnames.yaml
 WFContributors: src/content/_contributors.yaml
 WFStyleguideLocation: resources/styleguide/
-
-
+WFarray: []
 
 
 ## Unknowns
