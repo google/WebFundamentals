@@ -9,6 +9,3 @@ order: 1
 translation_priority: 0
 ---
 
-<p class="intro">
-  {{page.description}}
-</p>
