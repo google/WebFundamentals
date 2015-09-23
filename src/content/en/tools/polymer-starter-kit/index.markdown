@@ -8,22 +8,18 @@ feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
 ---
 
 <div class="wf-subheading">
-  <div class="page-content">
-    <p>Build tools &amp; boilerplate for creating production-quality web apps using Polymer</p>
-    <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/polymerelements/polymer-starter-kit/releases">Download Polymer Starter Kit 1.0</a>
+  <div class="page-content mdl-typography--text-center mdl-grid">
+    <div class="mdl-cell mdl-cell--1-col"></div>
+    <div class="mdl-cell mdl-cell--10-col">
+      <h3>Set up for success using Polymer in production.</h3>
+      <p>
+        Start your project with the Polymer Starter Kit to get the most out of 
+        the library, elements built with Polymer, and Polymer-related tools.
+      </p>
+      <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/polymerelements/polymer-starter-kit/releases">Download Polymer Starter Kit 1.0</a>
+    </div>
+    <div class="mdl-cell mdl-cell--1-col"></div>
   </div>
-</div>
-
-<div class="page-content mdl-typography--text-center mdl-grid">
-  <div class="mdl-cell mdl-cell--2-col"></div>
-  <div class="mdl-cell mdl-cell--8-col">
-    <h3>Set up for success using Polymer in production.</h3>
-    <p>
-      Start your project with the Polymer Starter Kit to get the most out of 
-      the library, elements built with Polymer, and Polymer-related tools.
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--2-col"></div>
 </div>
 
 
