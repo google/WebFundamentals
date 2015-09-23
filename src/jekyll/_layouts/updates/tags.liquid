@@ -3,7 +3,7 @@
   <div class="update-post__content-container">
     <ul>
       {% for tag in page.tags %}
-        <li><a href="{{site.WFBaseUrl}}/updates/tags/{{tag | canonicalize}}">{{tag}}</a></li>
+        <li><a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">{{tag}}</a></li>
       {% endfor %}
     </ul>
   </div>

@@ -18,8 +18,14 @@ module Jekyll
 
   class UpdatesFeedPage < WFFeedPage
 
-    def initialize(site, langcode, pages, feedType)
-      super(site, File.join('updates'), langcode, pages, feedType)
+    def initialize(site, path, langcode, pages, feedType)
+      if path.nil?
+        dir = File.join('updates')
+      else
+        dir = File.join('updates', path)
+      end
+
+      super(site, dir, langcode, pages, feedType)
 
       self.data = self.data ? self.data : {}
 
