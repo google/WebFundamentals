@@ -1,0 +1,9 @@
+@import "global-base";
+
+$color-primary: $palette-blue-500;
+$color-accent: unquote("rgb(#{$palette-blue-300})");
+
+@import "global";
+
+@import "partials/components/wf-tools-devtools";
+@import "partials/components/wf-tools-guide";

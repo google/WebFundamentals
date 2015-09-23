@@ -34,7 +34,7 @@ module Jekyll
       self.data['drawerTitleText'] = 'Shows'
       self.data['theme_color'] = '#212121'
 
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/shows.css';
 
       #self.data['feedUrl'] = 'feedUrl.html'
       #self.data['feedName'] = 'Totally Tooling Tips'

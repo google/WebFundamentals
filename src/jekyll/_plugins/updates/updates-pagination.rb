@@ -35,7 +35,7 @@ module Jekyll
 
       super(site, dir, name, langcode)
 
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates-index.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
 
       if paginationIndex == 0
         self.data['title'] = title
