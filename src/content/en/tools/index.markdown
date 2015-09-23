@@ -12,6 +12,36 @@ translation_priority: 0
   </div>
 </div>
 
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--1-col"></div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="/web/tools/chrome-devtools"><img src="imgs/chrome-devtools.jpg"></a>
+    <h3 class="mdl-typography--title"><a href="/web/tools/chrome-devtools">Chrome Dev Tools</a></h3>
+    <p>Our web authoring and debugging tools built into Google Chrome.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="/web/tools/starter-kit/"><img src="/web/tools/starter-kit/images/thumb.jpg"></a>
+    <h3 class="mdl-typography--title"><a href="/web/tools/starter-kit/">Web Starter Kit</a></h3>
+    <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="/web/tools/polymer-starter-kit/"><img src="/web/tools/polymer-starter-kit/thumb.jpg"></a>
+    <h3 class="mdl-typography--title"><a href="/web/tools/polymer-starter-kit/">Polymer Starter Kit</a></h3>
+    <p>An opinionated starting point for building Polymer 1.0 web apps that work great across different devices.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="http://www.getmdl.io/"><img src="imgs/mdl-thumb.png"></a>
+    <h3 class="mdl-typography--title"><a href="http://www.getmdl.io/">Material Design Lite</a></h3>
+    <p>A light-weight implementation of Material Design, targeted at legacy browsers and static content sites.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <a href="https://www.polymer-project.org"><img src="/web/tools/polymer-starter-kit/thumb_polymer.jpg"></a>
+    <h3 class="mdl-typography--title"><a href="https://www.polymer-project.org">Polymer</a></h3>
+    <p>Polymer makes it easier than ever to make fast, beautiful, and interoperable web components.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--1-col"></div>
+</div>
+
 <div class="page-content">
   <h2>Guides</h2>
   <p>When you first start developing for the web, you can get going with a basic text editor and a browser to view everything in.</p>
@@ -33,21 +63,6 @@ translation_priority: 0
     {% endif %}
   {% endfor %}
   </div>
-</div>
-
-<div class="page-content mdl-grid">
-  <h2>Projects at Google</h2>
-  <p>There are a number of tools and projects being worked on at Google that you may find useful, find everything you need to know with these links.</p>
-
-  {% include shows/card.liquid title="" text="<strong>Chrome Devtools:</strong> Our web authoring and debugging tools built into Google Chrome." linkHref="/web/tools/chrome-devtools" linkText="Learn More" imgUrl="imgs/chrome-devtools.jpg" %}
-
-  {% include shows/card.liquid title="" text="<strong>Web Starter Kit:</strong> Let us do the bootstrapping, and you focus on what you'd like to build." linkHref="/web/tools/starter-kit/" linkText="Learn More" imgUrl="/web/tools/starter-kit/images/thumb.jpg" %}
-
-  {% include shows/card.liquid title="" text="<strong>Polymer Starter Kit:</strong> An opinionated starting point for building Polymer 1.0 web apps that work great across different devices." linkHref="/web/tools/polymer-starter-kit/" linkText="Learn More" imgUrl="/web/tools/polymer-starter-kit/thumb.jpg" %}
-
-  {% include shows/card.liquid title="" text="<strong>Material Design Lite:</strong> A light-weight implementation of Material Design, targeted at legacy browsers and static content sites." linkHref="http://www.getmdl.io/" linkText="Learn More" imgUrl="imgs/mdl-thumb.png" %}
-
-  {% include shows/card.liquid title="" text="<strong>Polymer:</strong> Polymer makes it easier than ever to make fast, beautiful, and interoperable web components." linkHref="https://www.polymer-project.org" linkText="Learn More" imgUrl="/web/tools/polymer-starter-kit/thumb_polymer.jpg" %}
 </div>
 
 {% if page.articles.updates %}
