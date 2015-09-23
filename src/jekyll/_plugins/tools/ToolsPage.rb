@@ -29,7 +29,7 @@ module Jekyll
 
       self.data['drawerTitleText'] = 'Web Tools'
       
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/tools.css';
 
       self.data['feed_name'] = 'Google Web Tools - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/tools/feed.xml'

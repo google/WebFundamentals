@@ -1,0 +1,8 @@
+@import "global-base";
+
+$color-primary: $palette-green-800;
+$color-accent: unquote("rgb(#{$palette-green-600})");
+
+@import "global";
+
+@import "partials/components/wf-showcase";

@@ -1,0 +1,6 @@
+@import "global-base";
+
+$color-primary: $palette-indigo-500;
+$color-accent: unquote("rgb(#{$palette-indigo-300})");
+
+@import "global";
