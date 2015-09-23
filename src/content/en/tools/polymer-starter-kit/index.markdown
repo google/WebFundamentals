@@ -1,8 +1,8 @@
 ---
-rss: false
 layout: shared/wide
 description: "Polymer Starter Kit."
 title: "Polymer Starter Kit"
+order: 6
 feedName: Polymer Starter Kit Releases
 feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
 ---
@@ -14,17 +14,21 @@ feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
   </div>
 </div>
 
-<div class="page-content">
-  <h3 class="">Set up for success using Polymer in production.</h3>
-  <p class="">
-    Start your project with the Polymer Starter Kit to get the most out of 
-    the library, elements built with Polymer, and Polymer-related tools.
-  </p>
+<div class="page-content mdl-typography--text-center mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+    <h3>Set up for success using Polymer in production.</h3>
+    <p>
+      Start your project with the Polymer Starter Kit to get the most out of 
+      the library, elements built with Polymer, and Polymer-related tools.
+    </p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col"></div>
 </div>
 
 
 <div class="page-content">
-  <div class="mdl-grid">
+  <div class="mdl-grid mdl-typography--text-center">
     <div class="mdl-cell mdl-cell--3-col">
       <i class="icon icon-diamond"></i>
       <h3 class="mdl-typography--title">Components for nearly any app, out of the box</h3>
@@ -63,7 +67,7 @@ feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
       <i class="icon icon-tick"></i>
       <h3 class="mdl-typography--title">Material design ready</h3>
       <p>Use the built-in paper elements to create a full material design-style app.</p>
-    </li>
+    </div>
   </div>
 
 
