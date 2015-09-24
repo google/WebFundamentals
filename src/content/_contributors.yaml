@@ -621,10 +621,12 @@ samthorogood:
   country: Australia
   role:
     - author
+    - engineer
   homepage: http://whistlr.info
-  google: 118404069988837396840
+  google: +SamThorogood
   twitter: samthor
   email: thorogood@google.com
+  description: "Evangelises Chrome and the mobile web in the Developer Relations team at Google."
 
 mikewest:
   name:
