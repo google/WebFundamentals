@@ -15,17 +15,38 @@ description: "Showcase is a page highlighting some of the great web apps availab
 {% endfor %}
 {% assign list = list | sort: 'published_on' %}
 
-
 <div class="wf-subheading">
-  <div class="page-content">
-    <h2>Get inspired</h2>
-    <p>
-      Take a deep look at sites and web apps that have achieved success and learn from their mistakes, discoveries and technical advancements. Immerse yourself in <a href="/web/showcase/case-study/">case studies</a>, get inspired via lightweight <a href="/web/showcase/spotlight/">spotlights</a> and dive deep with technical deep dives.
-    </p>
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col wf-showcase__title">
+      <h2>Get inspired</h2>
+      <p>
+        Take a deep look at sites and web apps that have achieved success and learn from their mistakes, discoveries and technical advancements. Immerse yourself in <a href="/web/showcase/case-study/">case studies</a>, get inspired via lightweight <a href="/web/showcase/spotlight/">spotlights</a> and dive deep with technical deep dives.
+      </p>
+    </div>
   </div>
 </div>
 
-<div class="page-content">
+{% assign caseStudyDir = page.context.subdirectories[0] %}
+{% assign caseStudies = caseStudyDir.pages %}
+{% assign caseStudy = caseStudies[0] %}
+
+{% if caseStudy %}
+<div class="wf-showcase__featured-casestudy">
+  <div class="page-content">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet wf-showcase__device-img">
+      <img src="case-study/{{caseStudy.showcase.key_image}}" class="wf-showcase__featured-showcase-img" alt="">
+    </div>
+    <div>
+      <h4>{{caseStudy.title}}</h4>
+      <h5>{{caseStudy.subtitle}}</h5>
+      <p>{{caseStudy.description}}</p>
+      <a href="{{caseStudy.canonical_url}}">Read the case study</a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="page-content" style="clear:both">
   <div class="mdl-grid">
     {% for pageInSection in list reversed %}
       {% capture imageURL %}{{pageInSection.context.id}}/{{pageInSection.featured_image}}{% endcapture %}
