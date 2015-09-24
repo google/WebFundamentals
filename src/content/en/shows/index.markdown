@@ -13,9 +13,8 @@ title: "Shows"
 <div class="page-content">
   <div class="mdl-grid">
     {% for subdirectory in page.context.subdirectories %}
-      {% capture action %}<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a>{% endcapture %}
       {% capture image %}imgs/{{subdirectory.index.key_img}}{% endcapture %}
-      {% include shared/base_card.liquid imgUrl=image text=subdirectory.index.description action=action %}
+      {% include shared/base_card.liquid imgUrl=image text=subdirectory.index.description linkHref=subdirectory.index.relative_url linkText=subdirectory.index.title %}
     {% endfor %}
   </div>
 </div>

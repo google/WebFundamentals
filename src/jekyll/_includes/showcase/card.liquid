@@ -1,4 +1,2 @@
 
-{% capture action %}<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{include.linkHref}}">View</a>{% endcapture %}
-
-{% include shared/base_card.liquid imgUrl=include.imgUrl title=include.title text=include.text action=action %}
+{% include shared/base_card.liquid imgUrl=include.imgUrl title=include.title text=include.text linkHref=include.linkHref linkText="View"%}
