@@ -11,8 +11,11 @@
       {{ content }}
     {% endautoescape %}
 
-
-    <script src="/web/scripts/material-design-lite/material-1.0.4.js"></script>
+    <!-- We need 1.0.5 for the nav drawer to work - working with MDL to fix -->
+    <!--<script src="/web/scripts/material-design-lite/material-1.0.5.js"></script>-->
+    <script src="/web/scripts/material-design-lite/src/mdlComponentHandler.js"></script>
+    <script src="/web/scripts/material-design-lite/src/layout/layout.js"></script>
+    <script src="/web/scripts/material-design-lite/src/textfield/textfield.js"></script>
     <script src="/web/scripts/standard-page-controller.es6.js"></script>
 
     {% comment %}
