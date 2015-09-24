@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "Optimizations search"
+title: "Search optimization"
 description: "Websites are not only browsed by humans but also examined by crawlers. Learn how to get your website better control over a remote site appearance."
 authors:
   - agektmr

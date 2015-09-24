@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Optimizing social discovery"
+title: "Social discovery"
 description: "You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available."
 authors:
   - agektmr
