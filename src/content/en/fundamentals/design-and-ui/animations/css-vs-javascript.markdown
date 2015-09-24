@@ -164,5 +164,3 @@ By default, Web Animations only modify the presentation of an element. If you'd 
 The Web Animations API is a new standard from the W3C. It is supported natively in Chrome and Opera, and is in [active development for Firefox](https://birtles.github.io/areweanimatedyet/). For other modern browsers, [a polyfill is available](https://github.com/web-animations/web-animations-js).
 
 With JavaScript animations, you are in total control of an element's styles at every step. This means you can slow down animations, pause them, stop them, reverse them and manipulate elements as you see fit. This is especially useful if you're building complex, object-oriented applications, as you can properly encapsulate your behavior.
-
-
