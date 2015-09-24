@@ -16,7 +16,6 @@
     <script src="/web/scripts/material-design-lite/src/mdlComponentHandler.js"></script>
     <script src="/web/scripts/material-design-lite/src/layout/layout.js"></script>
     <script src="/web/scripts/material-design-lite/src/textfield/textfield.js"></script>
-    <script src="/web/scripts/standard-page-controller.es6.js"></script>
 
     {% comment %}
       This helper script checks if a G+ comment block should be loaded and loads it if needed.
