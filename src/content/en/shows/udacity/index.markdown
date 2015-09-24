@@ -29,7 +29,7 @@ udacity:
   <div class="page-content">
     <h2>Learn with Udacity</h2>
     <p>
-      Get started or build your web design and development skills with 
+      Get started or build your web design and development skills with
       these <b>free</b> Udacity courses taught by your friends at Google.
     </p>
   </div>
@@ -38,8 +38,9 @@ udacity:
 <div class="page-content">
   <div class="mdl-grid">
     {% for course in page.udacity %}
-      {% capture action %}<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://www.udacity.com/course/viewer#!/c-{{ course.udacity_id }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index">{{"take_course" | localize_string}}</a>{% endcapture %}
-      {% include shared/base_card.liquid imgUrl=course.key_img title=course.title text=course.description action=action %}
+      {% capture linkHref %}https://www.udacity.com/course/viewer#!/c-{{ course.udacity_id }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index{% endcapture %}
+      {% capture linkText %}{{"take_course" | localize_string}}{% endcapture %}
+      {% include shared/base_card.liquid imgUrl=course.key_img title=course.title text=course.description linkHref=linkHref linkText=linkText %}
     {% endfor %}
   </div>
 </div>
