@@ -85,6 +85,9 @@ module Jekyll
         self.data['html_head_social_img'] =  site.config['WFBaseUrl'] + '/imgs/logo.png'
       end
 
+      # Default we expect to be overriden
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/fundamentals.css';
+
       # This could be given a better name - Used in navigation liquid
       # displayed on mobile screens
       self.data['drawerTitleText'] = self.data['title']

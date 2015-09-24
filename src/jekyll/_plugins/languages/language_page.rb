@@ -27,10 +27,8 @@ module Jekyll
       # This allows WFPage to perform any required work
       super(site, relativeDir, filename, validKeys)
 
-      # TODO mattgaunt is this needed since it's a member variable
+      # TODO mattgaunt is this needed since it's a member variable?
       self.data['langcode'] = @langcode
-
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/root.css';
 
       # Give the page data so it knows the text direction
       self.data['rtl'] = false
