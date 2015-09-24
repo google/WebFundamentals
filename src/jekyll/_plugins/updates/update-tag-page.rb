@@ -51,8 +51,8 @@ module Jekyll
       name = "index.html"
       super(site, dir, name, langcode)
 
-      title_text = "By tag"
-      description_text = "By tag"
+      title_text = "Filter by tag"
+      description_text = "Filter posts by tag"
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
       self.data['title'] = title_text
