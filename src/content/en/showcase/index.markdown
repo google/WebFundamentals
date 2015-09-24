@@ -29,7 +29,7 @@ description: "Showcase is a page highlighting some of the great web apps availab
   <div class="mdl-grid">
     {% for pageInSection in list reversed %}
       {% capture imageURL %}{{pageInSection.context.id}}/{{pageInSection.featured_image}}{% endcapture %}
-      {% include showcase/card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=imageURL %}
+      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=imageURL linkText="View" %}
     {% endfor %}
   </div>
 </div>
