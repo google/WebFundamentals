@@ -126,3 +126,24 @@ $colorLow: #cb4437;
   margin-right: auto;
   margin-bottom: $base-line / 2;
 }
+
+
+.wf-showcase__featured-casestudy {
+  background-color: #f8f8f8;
+  padding-bottom: 1em;
+
+  h4 {
+    margin-bottom: 4px;
+  }
+  h5 {
+    margin-top: 4px;
+  }
+}
+
+// The media query where the drawer pops open
+@media screen and (min-width: 840px) {
+  .wf-showcase__featured-showcase-img {
+    max-height: 500px;
+    margin-top: -75px;
+  }
+}
