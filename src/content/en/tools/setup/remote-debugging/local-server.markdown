@@ -9,7 +9,7 @@ published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 2
 key-takeaways:
-  local-server: 
+  local-server:
     - "Use port forwarding when your device can't access your development server's network."
     - "To reach content on a customized domain, use port forwarding in combination with a proxy server."
 ---
@@ -125,9 +125,7 @@ Sync](http://www.browsersync.io/) can help with this by synchronising
 interactions across all of your devices. This includes scrolling, clicking and
 form entry.
 
-<div class="media media--video">
-  <iframe src="//www.youtube.com/embed/RKKBIs_3svM?controls=2&amp;modestbranding=1&showinfo=0&;utm-source=crdev-wf&;rel=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
+{% ytvideo RKKBIs_3svM %}
 
 BrowserSync is enabled out of the box with [Web Starter
 Kit](https://developers.google.com/web/starter-kit/), so try it out there or
@@ -145,5 +143,3 @@ If you've got the budget, you should definitely invest in a device collection.
 
 If you don't have the budget, or you want access to any device, [Device Anywhere](http://www.keynote.com/solutions/testing/mobile-testing) lets you control any number of real devices remotely,
 without having to actually own those devices.
-
-

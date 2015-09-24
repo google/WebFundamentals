@@ -17,7 +17,7 @@ related-guides:
         title: "Types of Device Emulators and Simulators"
         href: tools/setup/device-testing/device-emulators
 key-takeaways:
-  device-mode: 
+  device-mode:
     - "Enable device mode and turn your viewport into a device emulator."
     - "Test your site's responsiveness using the device mode's screen emulator."
     - "Save custom presets so you can easily access them later."
@@ -30,7 +30,7 @@ key-takeaways:
 
 But testing the quality of your mobile experiences takes longer and makes debugging more complex. Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices.
 
-<object width="425" height="355"><param name="movie" value="https://www.youtube.com/v/FrAZWiMWRa4"><param name="wmode" value="transparent"><embed src="https://www.youtube.com/v/FrAZWiMWRa4" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></object>
+{% ytvideo FrAZWiMWRa4 %}
 
 {% include shared/toc.liquid %}
 
@@ -52,7 +52,7 @@ Some of this documentation might be ahead of the stable version of Chrome. Use <
 
 Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png){:.inline} icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
 
-You can also toggle device mode on and off using the keyboard shortcut: 
+You can also toggle device mode on and off using the keyboard shortcut:
 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> on Mac).
 
 ![Initial start for device mode](imgs/device-mode-initial-view.png)
@@ -89,7 +89,7 @@ To get more granular control over the screen emulator, you can tune the resoluti
 
 ![screen controls](imgs/screen-controls.png)
 
-To emulate a custom screen size, manually set the CSS pixel dimensions of the device in the width and height fields. If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png){:.inline} field. 
+To emulate a custom screen size, manually set the CSS pixel dimensions of the device in the width and height fields. If you want to emulate a Retina device from a non-Retina machine or vice versa, adjust the **Device pixel ratio** ![emulate DPR icon](imgs/icon-DPR.png){:.inline} field.
 
 The **device pixel ratio** (DPR) is the ratio between logical pixels and physical pixels. Devices with Retina displays, such as the iPhone 5, have higher pixel density than standard devices, which can affect the sharpness and size of visual content.
 
@@ -149,5 +149,3 @@ Although Chrome's device mode offers many powerful emulation tools, it does have
   * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
 Despite these limitations, the device mode emulators are robust enough for most tasks. When you need to test on a real device, you can use the [remote debugging](/web/tools/setup/device-testing/remote-debugging) DevTools for additional insight.
-
-
