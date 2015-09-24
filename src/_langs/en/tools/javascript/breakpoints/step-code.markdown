@@ -7,18 +7,21 @@ description: "By executing code one line or one function at a time, you can obse
 introduction: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening. You can also modify data values used by the script, and you can even modify the script itself."
 article:
   written_on: 2015-04-14
-  updated_on: 2015-05-18
+  updated_on: 2015-09-02
   order: 3
 authors:
   - dgash
   - pbakaus
+  - kaycebasques
 priority: 0
 collection: breakpoints
 key-takeaways:
   tldr:
-    - Stepping through code allows you to observe issues before or while they happen.
-    - Stepping is superior to console logging, as the data is already stale the moment it arrives in the console.
-    - Stepping allows you to trial changes through live editing during a pause.
+    - Step through code to observe issues before or while they happen and test out changes through live editing.
+    - Prefer stepping over console logging, as logged data is already stale the moment it arrives in the console.
+    - Enable the "Async call stack" feature to gain greater visibility into the call stack of asynchronous functions.
+    - Blackbox scripts to hide third-party code from your call stacks.
+    - Use named functions rather than anonymous ones to improve call stack readability.
 remember:
   note-tbd:
     - TBD note.
@@ -86,15 +89,94 @@ All step options are represented through clickable icons ![Breakpoints button ba
 
 Use **step into** as your typical "one line at a time" action, as it ensures that only one statement gets executed, no matter what functions you step in and out of.
 
-**Pause on exceptions** is useful when you suspect a non-fatal exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs. 
+Use [Pause on exceptions](add-breakpoints#break-on-uncaught-exception) when you suspect an uncaught exception is causing a problem, 
+but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; 
+in this case, execution is paused only when a specifically-handled exception occurs. 
 
 ## The call stack
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is *now*, but how it got there, an important factor in debugging.
 
-#### Example
+### Example
 
 <p><img src="imgs/image_15.png" alt="Call stack" style="float: left;margin-right: 1em;margin-bottom: 1em;">An initial onclick event at line 50 in the <strong>index.html</strong> file called the <code>setone()</code> function at line 18 in the <strong>dgjs.js</strong> JavaScript file, which then called the <code>setall()</code> function at line 4 in the same file, where execution is paused at the current breakpoint.</p>
+
+### Enable the async call stack
+
+Enable the async call stack feature to gain more visibiliy into the execution
+of your asynchronous function calls.
+
+1. Open the **Sources** panel of DevTools.
+
+2. On the **Call Stack** pane, enable the **Async** checkbox.
+
+The video below contains a simple script to demonstrate the async call 
+stack feature. In the script, a third-party library is used to select a
+DOM element. A function called `onClick` is registered as the 
+`onclick` event handler for the element. Whenever `onClick` is called,
+it in turn calls a function named `f`, which just forces the script to 
+pause via the `debugger` keyword. 
+
+{% animation animations/async-call-stack-demo.mp4 %}
+
+In the video, a breakpoint is triggered, and the call stack is expanded.
+There is only one call in the stack: `f`. The async call stack feature is then
+enabled, the script resumes, the breakpoint is triggered again, and then the
+call stack is expanded a second time. This time, the call stack contains 
+all of the calls leading up to `f`, including third-party library calls, and
+the call to `onClick`. The first time that the script was called, there 
+was only one call in the call stack. The second time, there were four. In
+short, the async call stack feature provides increased visibility into 
+the full call stack of asynchronous functions.
+
+### Tip: name functions to improve call stack readability
+
+Anonymous functions make the call stack difficult to read. Name your functions
+to improve readability.
+
+The code in the two screenshots below is functionally equivalent. The
+exact functioning of the code is not important, what is important is
+that the code in the first screenshot uses anonymous functions, while
+the second uses named functions.
+
+In the call stack in the first screenshot, the top two functions are both just titled
+`(anonymous function)`. In the second screenshot, the top two functions
+are named, which makes it easier to understand the program flow at a glance.
+When you are working with numerous script files, including third-party
+libraries and frameworks, and your call stack is five or ten calls deep,
+it is much easier to understand the call stack flow when functions are named.
+
+Call stack with anonymous functions:
+
+![Call stack with hard-to-read anonymous functions](imgs/anon.png)
+
+Call stack with named functions: 
+
+![Call stack with easier-to-read named function](imgs/named.png)
+
+### Blackbox third-party code
+
+Use the **Blackbox Third-Party Code** feature to omit 
+third-party files from your call stacks. For example, you can use
+this to hide third-party library and framework function calls from
+your call stack.
+
+To blackbox a file:
+
+1. Open the **Sources** panel of DevTools.
+
+1. Right-click on the file you wish to blackbox.
+
+1. Select **Blackbox Script**.
+
+In the animation below, a button is clicked and a breakpoint is triggered. DevTools populates
+the call stack with the functions leading up to the breakpoint. The call stack
+displays a couple of third-party functions. A third-party script is then blackboxed,
+and the third-party functions are automatically hidden from the call stack.
+
+{% animation animations/blackbox.mp4 %}
+
+To remove a blackbox, right-click on the file again and select **Stop Blackboxing**.
 
 ## Data manipulation
 
