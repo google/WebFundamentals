@@ -5,4 +5,6 @@ title: Web Fundamentals
 translation_priority: 0
 ---
 
-<h1>Web Fundamentals Home Page</h1>
+{% include shared/work-in-progress.liquid %}
+
+<h1>Web Fundamentals</h1>
