@@ -628,6 +628,18 @@ samthorogood:
   email: thorogood@google.com
   description: "Evangelises Chrome and the mobile web in the Developer Relations team at Google."
 
+joelvanbergen:
+  name:
+    given: Jo-el
+    family: van Bergen
+  org:
+    name: Google
+    unit: Social privacy and security
+  country: USA
+  role:
+    - author
+  email: lowf@google.com
+
 mikewest:
   name:
     given: Mike
