@@ -26,7 +26,7 @@ permalink: /updates/2015/04/cut-and-copy-commands.html
 
 IE10 and above added support for the 'cut' and 'copy' commands through the 
 [Document.execCommand()](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument%2FexecCommand&sa=D&sntz=1&usg=AFQjCNGXS6fCPqMRGr1_NECYZuxIOyVURg) 
-method. As of Chrome version 43, these commands are also supported in Chrome.
+method. These commands are also supported in Chrome, as of version 43, and Firefox, as of version 41.
 
 Any text selected in the browser when one of these commands is executed will be 
 cut or copied to the user's clipboard. This lets you offer the user a simple way 
@@ -145,12 +145,7 @@ will do as expected, otherwise present a message to the user.
 
 # Browser Support
 
-IE 10+, Chrome 43+, and Opera 29+ support these commands.
-
-Firefox supports this but requires a preference change ([See cut and 
-copy commands 
-here](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)). 
-Without this Firefox throws an error.
+IE 10+, Chrome 43+, Opera 29+, and Firefox 41+ support these commands.
 
 Safari does not support these commands.
 
