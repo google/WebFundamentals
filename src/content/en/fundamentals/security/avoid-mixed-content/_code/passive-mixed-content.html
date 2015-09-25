@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Passive mixed content example</title>
+    <style>
+      audio, img, video {
+        display: block;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Passive mixed content!
+    </h1>
+    <p>
+      View page over: <a href="http://localhost:8888/passive-mixed-content.html">HTTP</a> - <a href="https://localhost:4443/passive-mixed-content.html">HTTPS</a>
+    </p>
+    <p>
+      Several examples of passive mixed content. When viewed over HTTPS most browsers do <b>not</b> block this content but instead display warnings in the JavaScript console.
+    </p>
+
+    <!-- // [START snippet1] -->
+    <!-- An insecure audio file loaded on a secure page -->
+    <audio src="http://localhost:8888/symphony-5-beethoven.mp3" type="audio/mp3" controls></audio>
+
+    <!-- An insecure image loaded on a secure page -->
+    <img src="http://localhost:8888/petelepage-thumb.jpg">
+
+    <!-- An insecure video file loaded on a secure page -->
+    <video src="http://developers.google.com/web/fundamentals/media/video/video/chrome.webm" type="video/webm" controls></video>
+    <!-- // [END snippet1] -->
+  </body>
+</html>
