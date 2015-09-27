@@ -94,7 +94,7 @@ The details of HTTPS, TLS, and SSL are beyond the scope of this article, but if
 you want to learn more, these resources are a good place to start:
 
 * [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS) 
-* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) 
+* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 * [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography) 
 * [TLS chapter](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html) in [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) by Ilya Grigorik 
 
