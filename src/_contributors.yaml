@@ -748,3 +748,18 @@ dgash:
     - author
   email: dgash@google.com
   description: "Dave is a Tech Writer"
+
+johyphenel:
+  name:
+    given: Jo-el
+    family: van Bergen
+  org:
+    name: Google
+    unit: Software Engineer
+  country: USA
+  role:
+    - author
+  homepage: https://plus.google.com/+Jo-elvanBergen
+  google: +Jo-elvanBergen
+  twitter: johyphenel
+  email: jo-el@google.com

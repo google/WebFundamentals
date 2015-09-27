@@ -27,7 +27,7 @@
           var jsonData = JSON.parse(request.responseText);
           document.getElementById('output').innerHTML += '<br>' + jsonData.data;
         });
-        request.open('GET', rootUrl + resources.jsonData);
+        request.open('GET', rootUrl + resources.jsonData, true);
         request.send();
       </script>
       <!-- // [END snippet1] -->
