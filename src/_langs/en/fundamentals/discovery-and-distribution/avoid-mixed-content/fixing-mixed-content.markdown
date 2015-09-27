@@ -24,7 +24,7 @@ notes:
 {% wrap content %}
 
 <p class="intro">
-  Finding and fixing <b>mixed content</b> can be time-consuming task; but it is an 
+  Finding and fixing <b>mixed content</b> can be a time-consuming task; but it is an 
   important task nonetheless. Thankfully, there are some tools available to help 
   with this process.
 </p>
@@ -76,7 +76,7 @@ displayed:
 {% endlink_sample_button %}
 
 The `http://` URLs listed in these errors and warnings should be fixed in your 
-sites source, it helps to make a list of these URLs, along with the page you 
+site's source, it helps to make a list of these URLs, along with the page you 
 found them on, to help you fix them later. 
 
 {% include modules/remember.liquid title="Note" list=page.notes.current-page %}
@@ -107,7 +107,7 @@ Assuming you have the following mixed content error in Chrome:
 Which you found in source here:
 
 {% highlight html %}  
-<img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg'"> 
+<img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg"> 
 {% endhighlight %}
 
 #### Step 1

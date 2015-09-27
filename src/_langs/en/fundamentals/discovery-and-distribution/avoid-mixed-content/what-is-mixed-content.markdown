@@ -195,7 +195,7 @@ The two types of mixed content are: active and passive.
 **Passive mixed content** refers to content that doesn't interact with the rest 
 of the page, and thus a man-in-the-middle attack is restricted to what they can 
 do if they intercept or change that content. Passive mixed content includes 
-images, video, and audio content, along with other resource that cannot interact 
+images, video, and audio content, along with other resources that cannot interact 
 with the rest of the page.  
 
 **Active mixed content** interacts with the page as a whole and will allow an 
@@ -267,7 +267,7 @@ Modern browsers follow [mixed content specification](https://w3c.github.io/webap
 
 From the spec, resources qualify as optionally blockable content "when the risk 
 of allowing its usage as mixed content is outweighed by the risk of breaking 
-significant portions of the web", this is a subset of the [passive mixed 
+significant portions of the web"; this is a subset of the [passive mixed 
 content](#passive-mixed-content) category described above. At the time of this writing, images, 
 video, and audio resources, as well as prefetched links, are the only 
 resource types included in optionally blockable content. This category is 
@@ -284,7 +284,7 @@ each behave differently with mixed content. At worst, some browsers and versions
 don't block any mixed content at all, which is very unsafe for the user. 
 
 The exact behaviour of each browser is constantly changing, so we won't include 
-specifics here, if you're interested in how a specific browser behaves, look for 
+specifics here. If you're interested in how a specific browser behaves, look for 
 information published by the vendors directly. 
 
 {% include modules/remember.liquid list=page.notes %}
