@@ -1,7 +1,6 @@
 ---
 layout: article
 title: "Fixing mixed content"
-published: false
 description: "intro doc"
 article:
   written_on: 2015-09-25
