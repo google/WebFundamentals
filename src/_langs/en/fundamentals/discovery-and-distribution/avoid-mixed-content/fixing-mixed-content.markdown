@@ -1,10 +1,10 @@
 ---
 layout: article
 title: "Fixing mixed content"
-description: "intro doc"
+description: "Learn how to find and fix mixed content, keeping your site secure."
 article:
-  written_on: 2015-09-25
-  updated_on: 2015-09-25
+  written_on: 2015-09-28
+  updated_on: 2015-09-28
   order: 2
 authors:
   - johyphenel

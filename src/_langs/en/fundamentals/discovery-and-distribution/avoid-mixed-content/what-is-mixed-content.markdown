@@ -1,14 +1,14 @@
 ---
 layout: article
 title: "What is mixed content?"
-description: "What is mixed content, and why you should care about HTTP resources served over secure connections."
+description: "Mixed content refers to a webpage where the initial HTML content is loaded securely over HTTPS and that content then loads follow-up resources over insecure HTTP."
 article:
-  written_on: 2015-09-25
-  updated_on: 2015-09-25
+  written_on: 2015-09-28
+  updated_on: 2015-09-28
   order: 1
 authors:
   - johyphenel
-id: prevent-mixed-content
+id: what-is-mixed-content
 collection: mixed-content
 translation_priority: 1
 key-takeaways:
