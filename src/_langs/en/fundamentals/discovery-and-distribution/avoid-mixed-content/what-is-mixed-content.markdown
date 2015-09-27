@@ -283,7 +283,7 @@ the most up to date browsers. Different versions from different browser vendors
 each behave differently with mixed content. At worst, some browsers and versions 
 don't block any mixed content at all, which is very unsafe for the user. 
 
-The exact behaviour of each browser is constantly changing, so we won't include 
+The exact behavior of each browser is constantly changing, so we won't include 
 specifics here. If you're interested in how a specific browser behaves, look for 
 information published by the vendors directly. 
 
