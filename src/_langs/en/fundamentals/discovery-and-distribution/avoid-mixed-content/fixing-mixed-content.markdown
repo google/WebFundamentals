@@ -30,7 +30,7 @@ notes:
 </p>
 
 This guide discusses tools and techniques to find and fix mixed content; for 
-more information on mixed content itself, see our [previous guide](#TODO-what is mixed content) on this topic.
+more information on mixed content itself, see our [previous guide](what-is-mixed-content) on this topic.
 
 {% include modules/toc.liquid %}
 
@@ -54,8 +54,7 @@ console can be opened from the View menu, _View_ -&gt; _Developer_ -&gt;
 _JavaScript Console_ or by right-clicking the page, selecting _Inspect Element_ 
 then selecting _Console_.
 
-The passive mixed content example in our [previous guide](#TODO-passive mixed content section) 
-will cause mixed content warnings to be displayed, like the ones below:
+The [passive mixed content example](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html) in our [previous guide](what-is-mixed-content#passive-mixed-content) will cause mixed content warnings to be displayed, like the ones below:
 
 <figure>
   <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure video. This content should also be served over HTTPS.">
@@ -86,7 +85,7 @@ found them on, to help you fix them later.
 
 You can search for mixed content directly in your source code. Search for 
 `http://` in your source and look for tags that include HTTP URL attributes. 
-Specifically, you are looking for the tags listed in the [mixed content types & security threats associated](#TODO) section in the [background on mixed content](#TODO) guide. 
+Specifically, you are looking for the tags listed in the [mixed content types & security threats associated](what-is-mixed-content#mixed-content-types--security-threats-associated) section of our previous guide. 
 Note that having `http://` in the href attribute of anchor tags (`<a>`)
 is often not a mixed content issue, with some notable exceptions discussed later. 
 

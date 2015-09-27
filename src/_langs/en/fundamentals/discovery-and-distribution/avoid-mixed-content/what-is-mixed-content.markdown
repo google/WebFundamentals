@@ -134,7 +134,7 @@ requested by the browser, an attacker can inject code into the returned content
 and take control of the entire page. 
 
 Thankfully, most modern browsers block this type of dangerous content by 
-default. See [browser behaviour with mixed content](#TODO).
+default. See [browser behavior with mixed content](#browser-behavior-with-mixed-content).
 
 <figure>
   <img src="imgs/simple-mixed-content-error.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure script. This request has been blocked; the content must be served over HTTPS.">
@@ -268,7 +268,7 @@ Modern browsers follow [mixed content specification](https://w3c.github.io/webap
 From the spec, resources qualify as optionally blockable content "when the risk 
 of allowing its usage as mixed content is outweighed by the risk of breaking 
 significant portions of the web", this is a subset of the [passive mixed 
-content](#TODO) category described above. At the time of this writing, images, 
+content](#passive-mixed-content) category described above. At the time of this writing, images, 
 video, and audio resources, as well as prefetched links, are the only 
 resource types included in optionally blockable content. This category is 
 likely to get smaller as time goes on.
