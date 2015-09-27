@@ -116,7 +116,7 @@ Check that the URL is available over HTTPS. Open a new tab in
 your browser, enter the URL in the address bar, and change `http://` to `https://`
 
 If the resource displayed is the same over **HTTP** and **HTTPS**, everything is OK, 
-proceed to [step 2](TODO#).
+proceed to [step 2](#step-2).
 
 <figure>
   <img src="imgs/puppy-http.png">
@@ -124,11 +124,10 @@ proceed to [step 2](TODO#).
 </figure>
 <figure>
   <img src="imgs/puppy-https.png">
-  <figcaption>HTTPS image loads without error.</figcaption>
+  <figcaption>HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!</figcaption>
 </figure>
 
-If you see a certificate warning, or if the content can't be displayed at all 
-over **HTTPS**, it means the resource is not available securely. 
+If you see a certificate warning, or if the content can't be displayed over **HTTPS**, it means the resource is not available securely. 
 
 <figure>
   <img src="imgs/https-not-available.png">
@@ -233,7 +232,7 @@ The two caveats to this are:
   that don't get much traffic, it might be some time before you get reports for 
   your entire site.
 
-For more information on CSP header format, see the [Content Security Policy specification](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports). 
+For more information on CSP header format, see the [Content Security Policy specification](https://w3c.github.io/webappsec/specs/content-security-policy/#directives). 
 
 If you don't want to configure a reporting endpoint yourself, 
 [https://report-uri.io/](https://report-uri.io/) is a reasonable 

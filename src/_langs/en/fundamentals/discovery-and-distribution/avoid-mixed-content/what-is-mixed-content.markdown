@@ -123,7 +123,7 @@ It's up to you, the developer, to fix mixed content issues in your application.
 
 Loading an insecure script from an HTTPS page.
 
-Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html) — includes 
+Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html) — includes 
 an **HTTP** script tag which attempts to load mixed content. 
 
 {% include_code _code/simple-example.html snippet1 %}
@@ -145,7 +145,7 @@ default. See [browser behavior with mixed content](#browser-behavior-with-mixed-
 
 Loading insecure data with XMLHttpRequest.
 
-Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html) — 
+Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html) — 
 includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
 {% include_code _code/xmlhttprequest-example.html snippet1 %} 
@@ -167,7 +167,7 @@ Most modern browsers block these dangerous requests as well.
 
 Loading insecure images with jQuery lightbox.
 
-Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html) — 
+Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html) — 
 initially does not have any mixed content problems, however when the thumbnail 
 image is clicked, a full size mixed content image is loaded over **HTTP**. 
 
