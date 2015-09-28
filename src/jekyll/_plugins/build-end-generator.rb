@@ -134,6 +134,8 @@ module Jekyll
 
       site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_RSS)
       site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_ATOM)
+
+      site.pages << WFSitemapPage.new(site, sitemapPages)
     end
 
     def getPages(subdirectory)
