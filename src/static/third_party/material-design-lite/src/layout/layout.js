@@ -32,7 +32,7 @@
     // Initialize instance.
     this.init();
   };
-  window.MaterialLayout = MaterialLayout;
+  window['MaterialLayout'] = MaterialLayout;
 
   /**
    * Store constants in one place so they can be updated easily.
@@ -324,6 +324,8 @@
         // not be present.
         this.element_.classList.add(this.CssClasses_.HAS_DRAWER);
 
+        this.drawer_.addEventListener('mousewheel', eatEvent);
+
         // If we have a fixed header, add the button to the header rather than
         // the layout.
         if (this.element_.classList.contains(this.CssClasses_.FIXED_HEADER)) {
@@ -422,19 +424,6 @@
    * @param {MaterialLayout} layout The MaterialLayout object that owns the tab.
    */
   function MaterialLayoutTab(tab, tabs, panels, layout) {
-
-    /**
-     * Auxiliary method to programmatically select a tab in the UI.
-     */
-    function selectTab() {
-      var href = tab.href.split('#')[1];
-      var panel = layout.content_.querySelector('#' + href);
-      layout.resetTabState_(tabs);
-      layout.resetPanelState_(panels);
-      tab.classList.add(layout.CssClasses_.IS_ACTIVE);
-      panel.classList.add(layout.CssClasses_.IS_ACTIVE);
-    }
-
     if (tab) {
       if (layout.tabBar_.classList.contains(
           layout.CssClasses_.JS_RIPPLE_EFFECT)) {
@@ -448,13 +437,15 @@
       }
 
       tab.addEventListener('click', function(e) {
-        if (tab.getAttribute('href').charAt(0) === '#') {
-          e.preventDefault();
-          selectTab();
-        }
+        e.preventDefault();
+        var href = tab.href.split('#')[1];
+        var panel = layout.content_.querySelector('#' + href);
+        layout.resetTabState_(tabs);
+        layout.resetPanelState_(panels);
+        tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+        panel.classList.add(layout.CssClasses_.IS_ACTIVE);
       });
 
-      tab.show = selectTab;
     }
   }
 

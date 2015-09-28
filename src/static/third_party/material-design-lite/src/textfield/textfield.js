@@ -32,7 +32,7 @@
     // Initialize instance.
     this.init();
   };
-  window.MaterialTextfield = MaterialTextfield;
+  window['MaterialTextfield'] = MaterialTextfield;
 
   /**
    * Store constants in one place so they can be updated easily.
@@ -99,16 +99,6 @@
   };
 
   /**
-   * Handle reset event from out side.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialTextfield.prototype.onReset_ = function(event) {
-    this.updateClasses_();
-  };
-
-  /**
    * Handle class updates.
    *
    * @private
@@ -133,6 +123,8 @@
       this.element_.classList.remove(this.CssClasses_.IS_DISABLED);
     }
   };
+  MaterialTextfield.prototype['checkDisabled'] =
+      MaterialTextfield.prototype.checkDisabled;
 
   /**
    * Check the validity state and update field accordingly.
@@ -146,6 +138,8 @@
       this.element_.classList.add(this.CssClasses_.IS_INVALID);
     }
   };
+  MaterialTextfield.prototype['checkValidity'] =
+      MaterialTextfield.prototype.checkValidity;
 
   /**
    * Check the dirty state and update field accordingly.
@@ -159,6 +153,8 @@
       this.element_.classList.remove(this.CssClasses_.IS_DIRTY);
     }
   };
+  MaterialTextfield.prototype['checkDirty'] =
+      MaterialTextfield.prototype.checkDirty;
 
   /**
    * Disable text field.
@@ -169,6 +165,7 @@
     this.input_.disabled = true;
     this.updateClasses_();
   };
+  MaterialTextfield.prototype['disable'] = MaterialTextfield.prototype.disable;
 
   /**
    * Enable text field.
@@ -179,6 +176,7 @@
     this.input_.disabled = false;
     this.updateClasses_();
   };
+  MaterialTextfield.prototype['enable'] = MaterialTextfield.prototype.enable;
 
   /**
    * Update text field value.
@@ -193,6 +191,7 @@
     }
     this.updateClasses_();
   };
+  MaterialTextfield.prototype['change'] = MaterialTextfield.prototype.change;
 
   /**
    * Initialize element.
@@ -216,11 +215,9 @@
         this.boundUpdateClassesHandler = this.updateClasses_.bind(this);
         this.boundFocusHandler = this.onFocus_.bind(this);
         this.boundBlurHandler = this.onBlur_.bind(this);
-        this.boundResetHandler = this.onReset_.bind(this);
         this.input_.addEventListener('input', this.boundUpdateClassesHandler);
         this.input_.addEventListener('focus', this.boundFocusHandler);
         this.input_.addEventListener('blur', this.boundBlurHandler);
-        this.input_.addEventListener('reset', this.boundResetHandler);
 
         if (this.maxRows !== this.Constant_.NO_MAX_ROWS) {
           // TODO: This should handle pasting multi line text.
@@ -244,7 +241,6 @@
     this.input_.removeEventListener('input', this.boundUpdateClassesHandler);
     this.input_.removeEventListener('focus', this.boundFocusHandler);
     this.input_.removeEventListener('blur', this.boundBlurHandler);
-    this.input_.removeEventListener('reset', this.boundResetHandler);
     if (this.boundKeyDownHandler) {
       this.input_.removeEventListener('keydown', this.boundKeyDownHandler);
     }
