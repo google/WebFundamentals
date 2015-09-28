@@ -12,10 +12,10 @@
     {% endautoescape %}
 
     <!-- We need 1.0.5 for the nav drawer to work - working with MDL to fix -->
-    <!--<script src="/web/scripts/material-design-lite/material-1.0.5.js"></script>-->
-    <script src="/web/scripts/material-design-lite/src/mdlComponentHandler.js"></script>
+    <script src="/web/scripts/material-design-lite/dist/material.js"></script>
+    <!--<script src="/web/scripts/material-design-lite/src/mdlComponentHandler.js"></script>
     <script src="/web/scripts/material-design-lite/src/layout/layout.js"></script>
-    <script src="/web/scripts/material-design-lite/src/textfield/textfield.js"></script>
+    <script src="/web/scripts/material-design-lite/src/textfield/textfield.js"></script>-->
 
     {% comment %}
       This helper script checks if a G+ comment block should be loaded and loads it if needed.

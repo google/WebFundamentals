@@ -34,8 +34,7 @@ function uniffe(contents) {
 
   escodegen.attachComments(ast, comments, tokens);
 
-  if (ast.body[0].expression === undefined ||
-      ast.body[0].expression.callee === undefined) {
+  if (ast.body[0].expression.callee === undefined) {
     return contents;
   }
 
