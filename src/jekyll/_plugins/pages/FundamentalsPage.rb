@@ -33,6 +33,7 @@ module Jekyll
 
       #self.data['feed_name'] = 'Web Fundamentals - Google Developers'
       #self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundmentals/feed.xml'
+      self.data['feed_name'] = 'Web Fundamentals - Google Developers'
     end
   end
 end

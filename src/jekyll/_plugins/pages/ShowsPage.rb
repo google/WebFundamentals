@@ -18,6 +18,8 @@ module Jekyll
   require File.expand_path('../LanguagePage.rb', __FILE__)
 
   class ShowsPage < LanguagePage
+    alias_method :parent_onBuildComplete, :onBuildComplete
+
     DEFAULT_HEAD_TITLE = 'Web Shows - Google Developers'
     DEFAULT_HEAD_DESCRIPTION = 'Google Developer web shows are ' +
       'a set of video series that help web developers learn about the ' +
@@ -36,17 +38,40 @@ module Jekyll
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/shows.css';
 
+      #self.data['feedUrl'] = 'feedUrl.html'
+      #self.data['feedName'] = 'Totally Tooling Tips'
+    end
+
+    def onBuildComplete()
       if @directories.count < 2
         self.data['feed_name'] = "Web Shows - Google Developers";
         self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
         self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
-      elsif
+      else
+        showsContext = nil
+        rootContext = site.data['_context']
+        rootContext['subdirectories'].each { |subdirectory|
+          if subdirectory['id'] == 'shows'
+            showsContext = subdirectory
+            break
+          end
+        }
+        thisShowContext = nil
+        showsContext['subdirectories'].each { |subdirectory|
+          if subdirectory['id'] == @directories[1]
+            thisShowContext = subdirectory
+            break
+          end
+        }
+
+        showTitle = thisShowContext['index']['title']
+        self.data['feed_name'] = showTitle
+
         self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'rss.xml')
         self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'atom.xml')
       end
 
-      #self.data['feedUrl'] = 'feedUrl.html'
-      #self.data['feedName'] = 'Totally Tooling Tips'
+      parent_onBuildComplete()
     end
   end
 end

@@ -25,6 +25,8 @@ module Jekyll
     def generate(site)
       organisePageTree(site.data['_context'])
 
+      generateFeeds(site)
+
       # This should run as the end of all generators and will give pages a
       # chance to do any final work needed
       site.pages.each { |page|
@@ -114,6 +116,14 @@ module Jekyll
           0 <=> 0
         end
       end
+    end
+
+    def generateFeeds(site)
+      rootContext = site.data['_context']
+      # Create a feed for each subdirectory
+      pagesToInclude = []
+      site.pages << WFFeedPage.new(site, 'fundamentals', site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << WFFeedPage.new(site, 'fundamentals', site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
     end
 
   end
