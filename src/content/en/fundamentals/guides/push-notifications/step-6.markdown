@@ -30,7 +30,7 @@ A completed version of this step is in the completed/step6 directory.
        console.log(':^(', error);
      });
    }
-   {% end highlight %}
+   {% endhighlight %}
 
    This code uses the `ServiceWorkerRegistration` object's `pushManager` to subscribe to  messages for the gcm\_sender\_id you added to the manifest in Step 3.
 
@@ -39,26 +39,26 @@ A completed version of this step is in the completed/step6 directory.
 2. **Try it out from localhost**<br>
    <br>
    Open _index.html_ from localhost and open Chrome DevTools to check the
-   console. **<br>
+   console.<br>
    <br>
    You should see something like this:
 
-   <img src="image13.png" width="888" height="590" alt="Web page screenshot: permissions dialog for Push Notifications" />
+   <img src="images/image13.png" width="888" height="590" alt="Web page screenshot: permissions dialog for Push Notifications" />
 
-   Important: Chrome currently does not support the Push API in Incognito Mode.
+   **Important**: Chrome currently does not support the Push API in Incognito Mode.
    If you want to reset push notification permissions preferences at any time,
 click the page icon to the left of the URL:<br>
    <br>
-   <img src="image14.png" width="713" height="672"  alt="Web page screenshot: Push notifications permissions setting dialog" />
+   <img src="images/image14.png" width="713" height="672"  alt="Web page screenshot: Push notifications permissions setting dialog" />
 
 3. From Chrome DevTools, right click on the `endpoint` value and select **Copy Link Address** to copy the value, which should look like this:<br>
    <br>
    _https://android.googleapis.com/gcm/send/**APA91bGdUldXgd4Eu9MD0qNmGd0K6fu0UvhhNGL9FipYzisrRWbc-qsXpKbxocgSXm7lQuaEOwsJcEWWadNYTyqN8OTMrvNA94shns\_BfgFH14wmYw67KZGHsAg74sm1\_H7MF2qoyRCwr6AsbTf5n7Cgp7ZqsBZwl8IXGovAuknubr5gaJWBnDc**_<br>
    <br>
    Make a note of the subscription ID, which is the last part of the URL,
-   highlighted here in bold.**<br>
+   highlighted here in bold.<br>
    <br>
    You'll use that value in Step 5 to tell Google Cloud Messaging where to send
    messages.
 
-   <img src="image15.png" width="774" height="932" alt="Web page screenshot: Chrome DevTools console showing Push Notifications endpoint value" />
+   <img src="images/image15.png" width="774" height="932" alt="Web page screenshot: Chrome DevTools console showing Push Notifications endpoint value" />

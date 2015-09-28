@@ -26,7 +26,7 @@ request that includes the following:
   _AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c_<br>
   <br>
   GCM will match this with the Project Number you got from the Google Developer
-  Console to use as the `gcm\_sender\_id` value in the manifest.
+  Console to use as the `gcm_sender_id` value in the manifest.
 
 * An appropriate **Content-Type header**, such as `application/json`.
 
@@ -51,7 +51,7 @@ If you haven't used cURL before, you may find the following helpful:
 The cURL command to send a request to GCM to issue a push message looks like
 this:
 
-_curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header _ _"Content-Type: application/json" https://android.googleapis.com/gcm/send -d _ _"{\"registration\_ids\":[\"**&lt;SUBSCRIPTION\_ID&gt;**\"]}"_
+_curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"**&lt;SUBSCRIPTION\_ID&gt;**\"]}"
 
  Let's see that in action...
 
@@ -60,25 +60,25 @@ _curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header _ _"Co
    <br>
    {% highlight bash %}
    curl --header "Authorization: key=AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"APA91bE9DAy6\_p9bZ9I58rixOv-ya6PsNMi9Nh5VfV4lpXGw1wS6kxrkQbowwBu17ryjGO0ExDlp-S-mCiwKc5HmVNbyVfylhgwITXBYsmSszpK0LpCxr9Cc3RgxqZD7614SqDokwsc3vIEXkaT8OPIM-mnGMRYG1-hsarEU4coJWNjdFP16gWs\"]}"
-   {% end highlight %}
+   {% endhighlight %}
 
 2. If it all worked out, you will see a response like this in your terminal:<br>
    <br>
-   <img src="image16.png" width="890" height="551" alt="BASH terminal screenshot: successful response to cURL request to GCM to send a push message" /><br>
+   <img src="images/image16.png" width="890" height="551" alt="BASH terminal screenshot: successful response to cURL request to GCM to send a push message" /><br>
    <br>
    If there are authorisation errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
 
 3. Take a look at _chrome://serviceworker-internals_. You should see something
    like this:<br>
    <br>
-   <img src="image17.png" width="1547" height="492" alt="Chrome DevTools screenshot:  Push message received" /><br>
+   <img src="images/image17.png" width="1547" height="492" alt="Chrome DevTools screenshot:  Push message received" /><br>
    <br>
    (If you want, you can try opening your app in Chrome Canary as well as Chrome and requesting a notification for two different endpoints. Make sure to put escaped quotes around each subscription ID.)
 
 4. Try closing or moving focus away from the browser tab that's running your
    app. You should see a notification like this:<br>
    <br>
-   <img src="image18.png" width="373" height="109" alt="Push notification screenshot: 'This site has been updated in the background'" />
+   <img src="images/image18.png" width="373" height="109" alt="Push notification screenshot: 'This site has been updated in the background'" />
 
 **Important**: Each client that subscribes to push messaging will have its own subscription ID. If you're sending requests to GCM for notifications, remember to include subscription IDs for all the clients you want to send messages to! If you build each step of this codelab separately, each step will represent a different endpoint and therefore have a different subscription ID.
 

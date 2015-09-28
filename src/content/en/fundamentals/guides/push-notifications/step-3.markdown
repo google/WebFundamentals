@@ -67,20 +67,21 @@ A completed version of this step is in the completed/step3 directory.
 
    This code checks if Service Worker is supported by your browser, then registers and installs the Service Worker you created at _/sw.js_. — which doesn't do anything (yet!)
 
-4. **Try it out from localhost****<br>
+4. **Try it out from localhost**<br>
    <br>
    Open _index.html_ from localhost and open Chrome DevTools to check the
-   console. **<br>
+   console.<br>
    <br>
-   It should look like this:
-   <img src="image01.png" width="965" height="901" alt="Codelab Step 1 web page open in Chrome, showing ServiceWorkerRegistration in DevTools console" />
+   It should look like this:<br>
+   <br>
+   <img src="images/image01.png" width="965" height="901" alt="Codelab Step 1 web page open in Chrome, showing ServiceWorkerRegistration in DevTools console" />
 
 5. **Try out serviceworker-internals**<br>
    <br>
    The diagnostic page _chrome://serviceworker-internals_ is a good place to
    check that your Service Workers are working:
 
-   <img src="image02.png" width="907" height="641" alt="chrome:serviceworker-internals diagnostic page open in Chrome" />
+   <img src="images/image02.png" width="907" height="641" alt="chrome:serviceworker-internals diagnostic page open in Chrome" />
 
 6. **Add event listeners to your Service Worker**<br>
    <br>
@@ -99,9 +100,9 @@ A completed version of this step is in the completed/step3 directory.
      console.log('Push message received', event);
      // TODO: Step 6
    });
-   {% end highlight %}
+   {% endhighlight %}
 
-   In a Service Worker, **self **refers to the `ServiceWorkerGlobalScope` object: the Service Worker itself.
+   In a Service Worker, `self` refers to the `ServiceWorkerGlobalScope` object: the Service Worker itself.
 
    **TOP TIP!**<br>
    <br>
@@ -111,9 +112,9 @@ A completed version of this step is in the completed/step3 directory.
 
    Handy for debugging!
 
-   Click the **Inspect** button on the chrome://serviceworker-internals page. You should see the following:
+   Click the **Inspect** button on the _chrome://serviceworker-internals_ page. You should see the following:
 
-   <img src="image03.png" width="888" height="845" alt="Chrome DevTools console showing Service Worker Installed and Activated events" />
+   <img src="images/image03.png" width="888" height="845" alt="Chrome DevTools console showing Service Worker Installed and Activated events" />
 
    **Warning**: If there are errors parsing your Service Worker code, it won't be installed and an error will be thrown during the install event.
    This can result in a Service Worker mysteriously not updating when you change the code. Always remember to check and validate your code when you change it!

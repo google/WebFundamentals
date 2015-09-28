@@ -18,44 +18,36 @@ Pat yourself on the back. You built a web app that enables Push Notifications!
 
 ### Frequently Asked Questions
 
-* **My Service Worker didn't update! **<br>
-<br>
+* **My Service Worker didn't update!**<br>
 Are you sure? Check the source tab in _chrome://serviceworker-internals_. If it
 really didn't update, restart Chrome.
 
 * **I tried everything, but my Service Worker's still not updating :^|**<br>
-<br>
 Did you check and validate your code? If your Service Worker code can't be
 parsed, it won't install.
 
 * **My request to GCM is failing**<br>
-<br>
 Check the project on [console.developers.google.com](https://console.developers.google.com/). Make sure that the _gcm\_sender\_id_ matches the Project Number and the Authorization
 key value matches the API key. Make sure you're looking at the right project!
 
 * **The request to GCM is working, but no push event is fired**<br>
-<br>
-Check the subscription ID_ _from the console for _main.js_. Is the subscription
+Check the subscription ID from the console for _main.js_. Is the subscription
 ID in the array of IDs for your request correctly? Make sure you you have the
 messaging API enabled on
 [console.developers.google.com](https://console.developers.google.com/).
 
 * **I'm getting errors I don't understand**<br>
-<br>
 Try using Chrome Canary: this often gives more informative error messages about
 Service Worker woes.
 
 * **I'm not seeing console logs for events in my Service Worker**<br>
-<br>
 You'll only get installed and activated events the first time you use the
 Service Worker or when the code is changed. The started event will only be fired
 once for each Service Worker session.
 
 * **What about Firefox?**<br>
-<br>
 [As of Firefox
-42](https://groups.google.com/forum/#!topic/mozilla.dev.platform/BL6TrHN73dY),
-the Push API will be turned on by default.
+42](https://groups.google.com/forum/#!topic/mozilla.dev.platform/BL6TrHN73dY) the Push API is turned on by default.
 
 ### What we've covered
 

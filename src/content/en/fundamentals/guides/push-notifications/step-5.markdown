@@ -31,7 +31,7 @@ A manifest is a JSON file that provides information about your web app, includin
      "name": "Push Notifications codelab",
      "gcm\_sender\_id": "593836075156"
    }
-   {% end highlight %}
+   {% endhighlight %}
 
    There are lots more useful options for web manifests, such as setting an app icon and enabling Add to homescreen on mobile.
 
@@ -44,4 +44,4 @@ A manifest is a JSON file that provides information about your web app, includin
 
    {% highlight json %}
    &lt;link rel="manifest" href="manifest.json"&gt;
-   {% end highlight %}
+   {% endhighlight %}
