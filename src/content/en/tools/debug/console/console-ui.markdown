@@ -97,7 +97,7 @@ Filter console output by its severity level by selecting one of the filter optio
 Activate filters under the filter icon located in the upper-left corner of the console panel.
 The following filter options are available:
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
      <tr>
       <th>Option</th>
@@ -136,7 +136,7 @@ The following filter options are available:
 
 You can customize the Console further from the 'Settings' menu <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> in the upper right corner of DevTools.
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
      <tr>
       <th>Setting</th>

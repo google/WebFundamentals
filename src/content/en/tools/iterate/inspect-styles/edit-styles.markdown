@@ -84,7 +84,7 @@ You can provide dynamic styling for your UI elements using pseudo-class selector
 
 Trigger any combination of the following four pseudo-classes:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th>Pseudo-class</th>

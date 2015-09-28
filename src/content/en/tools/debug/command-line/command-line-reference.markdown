@@ -283,7 +283,7 @@ strings that map to predefined sets of events.
 The table below lists the available event types and
 their associated event mappings:
 
-<table class="table">
+<table class="mdl-data-table">
 	<thead>
 		<tr>
 			<th>Event type</th>
