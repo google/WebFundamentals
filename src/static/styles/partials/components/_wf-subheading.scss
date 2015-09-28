@@ -13,6 +13,15 @@
   a {
     color: $color-accent-contrast-works;
   }
+
+  .mdl-button--accent.mdl-button--accent {
+    color: $color-accent;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .mdl-button--accent.mdl-button--accent:hover {
+    background-color: rgb(235, 235, 235);
+  }
 }
 
 .wf-secondaryheading {
@@ -27,5 +36,5 @@
 
   a {
     color: $color-accent;
-  }  
+  }
 }
