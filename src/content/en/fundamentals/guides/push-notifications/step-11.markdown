@@ -16,7 +16,9 @@ authors:
 
 A completed version of this step is in the completed/step11 directory.
 
-ENOUGH WITH THE MESSAGES ALREADY! How can you enable your users to unsubscribe and resubscribe?
+**ENOUGH WITH THE MESSAGES ALREADY :^)!** 
+
+How can you enable your users to unsubscribe and resubscribe?
 
 Simple: a client unsubscribes from notifications by calling the `unsubscribe()`
 method of the `PushSubscription` object.
@@ -44,11 +46,12 @@ won't be received.
      &lt;script src="js/main.js"&gt;&lt;/script&gt;
    &lt;/body&gt;
    &lt;/html&gt;
-   {% end highlight %}
+   {% endhighlight %}
 
 2. **Add subscribe/unsubscribe functionality to _main.js_**<br>
    <br>
    Adjust _main.js_ so the code looks like this:<br>
+   <br>
    {% highlight javascript %}
    var reg;
    var sub;
@@ -92,7 +95,8 @@ won't be received.
        subscribeButton.textContent = 'Subscribe';
      });
    }
-   {% end highlight %}<br>
+   {% endhighlight %}
+   <br>
    <br>
    In this code, you set the value of the ServiceWorkerRegistration object reg when the Service Worker installs, which is then used in the subscribe() function to subscribe to push messaging.<br>
    <br>

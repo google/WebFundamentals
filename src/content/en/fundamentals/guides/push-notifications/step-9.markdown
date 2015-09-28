@@ -43,9 +43,9 @@ notification.
        }));
    });
    // TODO: Step 7
-   {% end highlight %}<br>
+   {% endhighlight %}<br>
    <br>
-   The `event.waitUntil() method takes a promise and extends the lifetime of the event handler until, in this case, the promise returned by `showNotification()` is resolved.<br>
+   The `event.waitUntil()` method takes a promise and extends the lifetime of the event handler until, in this case, the promise returned by `showNotification()` is resolved.<br>
    <br>
    One notification will be shown for each tag value: if a new push message is received, the old notification will be replaced. To show multiple notifications, use a different tag value for each showNotification() call, or no tag at all.
 
@@ -55,4 +55,4 @@ notification.
    <br>
    You should see a notification like this:<br>
    <br>
-   <img src="image19.png" width="394" height="114" alt="Screenshot of Push Notification" />
+   <img src="images/image19.png" width="394" height="114" alt="Screenshot of Push Notification" />
