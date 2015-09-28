@@ -30,12 +30,12 @@ module Jekyll
       self.data = self.data ? self.data : {}
       self.data['feed_icon'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + 'favicon.ico'
       self.data['feed_update'] = site.time.strftime("%Y-%m-%dT%H:%M:%SZ")
-      maxNumberOfResults = 10
+      maxNumberOfResults = 25
       counter = 0;
       feedPages = pages.reject { |page|
         reject = false
 
-        if page.data['published'] != true
+        if (!page.data['published'].nil?) && (page.data['published']) != true
           reject = true
         elsif counter >= maxNumberOfResults
           reject = true
@@ -45,6 +45,12 @@ module Jekyll
 
         reject
       }
+
+      feedPages = feedPages.sort do |a, b|
+        a_order = a.data['published_on'] || 0
+        b_order = b.data['published_on'] || 0
+        b_order <=> a_order
+      end
 
       self.data['feed_pages'] = feedPages
 

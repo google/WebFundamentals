@@ -15,7 +15,7 @@
 module Jekyll
 
   require 'sanitize'
-  require File.expand_path('../../languages/language_page.rb', __FILE__)
+  require File.expand_path('../language_page.rb', __FILE__)
 
   class ShowsPage < LanguagePage
     DEFAULT_HEAD_TITLE = 'Web Shows - Google Developers'
@@ -35,6 +35,14 @@ module Jekyll
       self.data['theme_color'] = '#212121'
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/shows.css';
+
+      #if @directories.count < 2
+      #  self.data['rssFeed'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
+      #  self.data['atomFeed'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
+      #elsif
+      #  self.data['rssFeed'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'rss.xml')
+      #  self.data['atomFeed'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'atom.xml')
+      #end
 
       #self.data['feedUrl'] = 'feedUrl.html'
       #self.data['feedName'] = 'Totally Tooling Tips'

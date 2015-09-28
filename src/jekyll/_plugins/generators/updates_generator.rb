@@ -14,7 +14,7 @@
 
 module Jekyll
 
-  require File.expand_path('../../wf/WFGenerator.rb', __FILE__)
+  require File.expand_path('../WFGenerator.rb', __FILE__)
 
   # Generate pagination for update pages
 
@@ -38,7 +38,7 @@ module Jekyll
       }
 
       # Skip out if update section is not there
-      if updateSection.nil? 
+      if updateSection.nil?
         return;
       end
 
@@ -51,7 +51,7 @@ module Jekyll
         if subdirectory['id'] == 'tags'
           return;
         else
-          generateSection(site, subdirectory)  
+          generateSection(site, subdirectory)
         end
       }
 
@@ -73,7 +73,7 @@ module Jekyll
       end
 
       # generate main page
-      generatePaginationPages(site, path, section, pages)      
+      generatePaginationPages(site, path, section, pages)
 
       # generate feed
       generateFeedPage(site, path, pages)
