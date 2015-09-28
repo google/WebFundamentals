@@ -47,9 +47,24 @@ module Jekyll
       }
 
       feedPages = feedPages.sort do |a, b|
-        a_order = a.data['published_on'] || 0
-        b_order = b.data['published_on'] || 0
-        b_order <=> a_order
+        # TODO: this should be a shared method between here and build-end-generator
+        a_order = 0
+        b_order = 0
+
+        if !a['index'].nil?
+          a_order = a['index'].data['order'] || a['index'].data['date'] || heavy_weight
+        end
+        if !b['index'].nil?
+          b_order = b['index'].data['order'] || b['index'].data['date'] || heavy_weight
+        end
+
+        if a_order.is_a?(Integer) & b_order.is_a?(Integer)
+            a_order <=> b_order
+        elsif a_order.is_a?(String) & b_order.is_a?(String)
+            a_order <=> b_order
+        else
+          0 <=> 0
+        end
       end
 
       self.data['feed_pages'] = feedPages
