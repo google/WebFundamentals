@@ -1,21 +1,16 @@
 ---
 layout: shared/narrow-pages-list
 title: "Icons and colors for the browser"
-description: "TODO - icons, theme color - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
+description: "Modern browsers make it easy to customize certain components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site."
 published_on: 2015-09-21
 updated_on: 2015-09-21
 authors:
   - petelepage
 translation_priority: 1
-key-takeaways:
-  todo:
-    - "Oh look, a TL;DR goes here"
-    - "And another TL;DR, whee!"
 ---
 
 <p class="intro">
-  include stuff about icons, theme color,  custom tiles - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock.
+  {{page.description}}
 </p>
 
-{% include shared/takeaway.liquid list=page.key-takeaways.todo %}
 

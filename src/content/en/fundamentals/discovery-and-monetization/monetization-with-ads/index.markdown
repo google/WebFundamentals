@@ -8,6 +8,6 @@ order: 2
 translation_priority: 0
 ---
 
-{% comment %}
-Guide list content will be output by the landing layout based on the article collection matching page.id
-{% endcomment %}
+<p class="intro">
+  {{page.description}}
+</p>
