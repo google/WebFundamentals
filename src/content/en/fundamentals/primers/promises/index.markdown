@@ -50,7 +50,6 @@ This isn't sneezy at all. We get the image, add a couple of listeners, then Java
 
 Unfortunately, in the example above, it's possible that the events happened before we started listening for them, so we need to work around that using the "complete" property of images:
 
-
 {% highlight javascript %}
 var img1 = document.querySelector('.img-1');
 
@@ -125,16 +124,11 @@ This is extremely useful for async success/failure, because you're less interest
 
 A promise can be:
 
-<dl>
-  <dt>fulfilled</dt>
-  <dd>The action relating to the promise succeeded</dd>
-  <dt>rejected</dt>
-  <dd>The action relating to the promise failed</dd>
-  <dt>pending</dt>
-  <dd>Hasn't fulfilled or rejected yet</dd>
-  <dt>settled</dt>
-  <dd>Has fulfilled or rejected</dd>
-</dl>
+* **fulfilled** - The action relating to the promise succeeded
+* **rejected** - The action relating to the promise failed
+* **pending** - Hasn't fulfilled or rejected yet
+* **settled** - Has fulfilled or rejected
+
 
 [The spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects) also uses the term **thenable** to describe an object that is promise-like, in that it has a `then` method. This term reminds me of ex-England Football Manager [Terry Venables](http://en.wikipedia.org/wiki/Terry_Venables) so I'll be using it as little as possible.
 
@@ -185,7 +179,7 @@ promise.then(function(result) {
 
 JavaScript promises started out in the DOM as "Futures", renamed to "Promises", and finally moved into JavaScript. Having them in JavaScript rather than the DOM is great because they'll be available in non-browser JS contexts such as Node.js (whether they make use of them in their core APIs is another question).
 
-Although they're a JavaScript feature, the DOM isn't afraid to use them. In fact, all new DOM APIs with async success/failure methods will use promises. This is happening already with [Streams](https://dvcs.w3.org/hg/quota/raw-file/tip/Overview.html#idl-def-StorageQuota">Quota Management</a>, <a href="http://dev.w3.org/csswg/css-font-loading/#font-face-set-ready">Font Load Events</a>,<a href="https://github.com/slightlyoff/ServiceWorker/blob/cf459d473ae09f6994e8539113d277cbd2bce939/service_worker.ts#L17"> ServiceWorker</a>, <a href="http://webaudio.github.io/web-midi-api/#widl-Navigator-requestMIDIAccess-Promise-MIDIOptions-options">Web MIDI</a>, <a href="https://github.com/whatwg/streams#basereadablestream), and more.
+Although they're a JavaScript feature, the DOM isn't afraid to use them. In fact, all new DOM APIs with async success/failure methods will use promises. This is happening already with [Quota Management](https://dvcs.w3.org/hg/quota/raw-file/tip/Overview.html#idl-def-StorageQuota), [Font Load Events](http://dev.w3.org/csswg/css-font-loading/#font-face-set-ready), [ServiceWorker](https://github.com/slightlyoff/ServiceWorker/blob/cf459d473ae09f6994e8539113d277cbd2bce939/service_worker.ts#L17), [Web MIDI](http://webaudio.github.io/web-midi-api/#widl-Navigator-requestMIDIAccess-Promise-MIDIOptions-options), [Streams](https://github.com/whatwg/streams#basereadablestream), and more.
 
 
 ## Browser support &amp; polyfill
@@ -194,13 +188,12 @@ There are already implementations of promises in browsers today.
 
 As of Chrome 32, Opera 19, Firefox 29, Safari 8 &amp; Microsoft Edge, promises are enabled by default.
 
-
 To bring browsers that lack a complete promises implementation up to spec compliance, or add promises to other browsers and Node.js, check out [the polyfill](https://github.com/jakearchibald/ES6-Promises#readme) (2k gzipped).
 
 
 ## Compatibility with other libraries
 
-The JavaScript promises API will treat anything with a `then` method as promise-like (or <em>thenable</em> in promise-speak <em>*sigh*</em>), so if you use a library that returns a Q promise, that's fine, it'll play nice with the new JavaScript promises.
+The JavaScript promises API will treat anything with a `then` method as promise-like (or `thenable` in promise-speak _sigh_), so if you use a library that returns a Q promise, that's fine, it'll play nice with the new JavaScript promises.
 
 Although, as I mentioned, jQuery's Deferreds are a bit… unhelpful. Thankfully you can cast them to standard promises, which is worth doing as soon as possible:
 
@@ -256,7 +249,6 @@ Of course, you wouldn't use JavaScript to deliver a story, [serving as HTML is f
 
 To start with, let's deal with fetching data from the network:
 
-
 ## Promisifying XMLHttpRequest
 
 Old APIs will be updated to use promises, if it's possible in a backwards compatible way. `XMLHttpRequest` is a prime candidate, but in the mean time let's write a simple function to make a GET request:
@@ -306,7 +298,7 @@ get('story.json').then(function(response) {
 {% endhighlight %}
 
 
-<span class="live-example get-example">[Click here to see that in action](story.json), check the console in DevTools to see the result.</span> Now we can make HTTP requests without manually typing `XMLHttpRequest`, which is great, because the less I have to see the infuriating camel-casing of `XMLHttpRequest`, the happier my life will be.
+[Click here to see that in action](_code/story.json), check the console in DevTools to see the result. Now we can make HTTP requests without manually typing `XMLHttpRequest`, which is great, because the less I have to see the infuriating camel-casing of `XMLHttpRequest`, the happier my life will be.
 
 
 ## Chaining
@@ -342,7 +334,7 @@ get('story.json').then(function(response) {
 {% endhighlight %}
 
 
-The response is JSON, but we're currently receiving it as plain text. We could alter our get function to use the JSON `[responseType](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#responseType)`, but we could also solve it in promises land:
+The response is JSON, but we're currently receiving it as plain text. We could alter our get function to use the JSON [`responseType`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#responseType), but we could also solve it in promises land:
 
 
 {% highlight javascript %}
@@ -356,7 +348,6 @@ get('story.json').then(function(response) {
 
 Since `JSON.parse` takes a single argument and returns a transformed value, we can make a shortcut:
 
-
 {% highlight javascript %}
 get('story.json').then(JSON.parse).then(function(response) {
   console.log("Yey JSON!", response);
@@ -364,7 +355,7 @@ get('story.json').then(JSON.parse).then(function(response) {
 {% endhighlight %}
 
 
-<span class="live-example json-example">[Click here to see that in action](story.json), check the console in DevTools to see the result.</span> In fact, we could make a `getJSON` function really easily:
+[Click here to see that in action](_code/story.json), check the console in DevTools to see the result. In fact, we could make a `getJSON` function really easily:
 
 
 {% highlight javascript %}
@@ -392,7 +383,7 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-Here we make an async request to "story.json", which gives us a set of URLs to request, then we request the first of those. This is when promises really start to stand out from simple callback patterns.
+Here we make an async request to `story.json`, which gives us a set of URLs to request, then we request the first of those. This is when promises really start to stand out from simple callback patterns.
 
 You could even make a shortcut method to get chapters:
 
@@ -418,7 +409,7 @@ getChapter(0).then(function(chapter) {
 {% endhighlight %}
 
 
-We don't download "story.json" until `getChapter` is called, but the next time(s) `getChapter` is called we reuse the story promise, so story.json is only fetched once. Yay Promises!
+We don't download `story.json` until `getChapter` is called, but the next time(s) `getChapter` is called we reuse the story promise, so `story.json` is only fetched once. Yay Promises!
 
 
 ## Error handling
@@ -486,7 +477,6 @@ The flow above is very similar to normal JavaScript try/catch, errors that happe
 <img src="imgs/promise-flow.svg">
 
 Follow the green lines for promises that fulfill, or the red for ones that reject.
-
 
 ### JavaScript exceptions and promises
 Rejections happen when a promise is explicitly rejected, but also implicitly if an error is thrown in the constructor callback:
@@ -604,7 +594,7 @@ document.querySelector('.spinner').style.display = 'none'
 {% endhighlight %}
 
 
-That works ([see example](sync-example.html))! But it's sync and locks up the browser while things download. To make this work async we use "then" to make things happen one after another.
+That works ([see example TODO](sync-example.html))! But it's sync and locks up the browser while things download. To make this work async we use "then" to make things happen one after another.
 
 
 {% highlight javascript %}
@@ -625,7 +615,7 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-But how can we loop through the chapter urls and fetch them in order? This <strong>doesn't work</strong>:
+But how can we loop through the chapter urls and fetch them in order? This **doesn't work**:
 
 
 {% highlight javascript %}
@@ -639,7 +629,7 @@ story.chapterUrls.forEach(function(chapterUrl) {
 {% endhighlight %}
 
 
-"forEach" isn't async-aware, so our chapters would appear in whatever order they download, which is basically how Pulp Fiction was written. This isn't Pulp Fiction, so let's fix it…
+`forEach` isn't async-aware, so our chapters would appear in whatever order they download, which is basically how Pulp Fiction was written. This isn't Pulp Fiction, so let's fix it…
 
 
 ### Creating a sequence
@@ -662,7 +652,7 @@ story.chapterUrls.forEach(function(chapterUrl) {
 {% endhighlight %}
 
 
-This is the first time we've seen `Promise.resolve`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (<strong>note:</strong> this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, eg `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
+This is the first time we've seen `Promise.resolve`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, eg `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
 
 
 There's also `Promise.reject(val)`, which creates a promise that rejects with the value you give it (or undefined).
@@ -715,7 +705,7 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-And there we have it ([see example](async-example.html)), a fully async version of the sync version. But we can do better. At the moment our page is downloading like this:
+And there we have it ([see example TODO](async-example.html)), a fully async version of the sync version. But we can do better. At the moment our page is downloading like this:
 
 
 <figure>
@@ -761,7 +751,7 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-Depending on connection, this can be seconds faster than loading one-by-one ([see example](async-all-example.html)), and it's less code than our first try. The chapters can download in whatever order, but they appear on screen in the right order.
+Depending on connection, this can be seconds faster than loading one-by-one ([see example TODO](async-all-example.html)), and it's less code than our first try. The chapters can download in whatever order, but they appear on screen in the right order.
 
 
 <figure>
@@ -803,7 +793,7 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-And there we go ([see example](async-best-example.html)), the best of both! It takes the same amount of time to deliver all the content, but the user gets the first bit of content sooner.
+And there we go ([see example TODO](async-best-example.html)), the best of both! It takes the same amount of time to deliver all the content, but the user gets the first bit of content sooner.
 
 
 <figure>
@@ -903,7 +893,7 @@ spawn(function *() {
 {% endhighlight %}
 
 
-This works exactly as before, but so much easier to read. This works in Chrome and Opera today ([see example](async-generators-example.html)), and works in Microsoft Edge by going to <strong>about:flags</strong> and turning on the <strong>Enable experimental Javascript features</strong> setting. This will be enabled by default in an upcoming version.
+This works exactly as before, but so much easier to read. This works in Chrome and Opera today ([see example TODO](async-generators-example.html)), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
 
 
 This throws together a lot of new ES6 stuff: promises, generators, let, for-of. When we yield a promise, the spawn helper waits for the promise to resolve and returns the final value. If the promise rejects, spawn causes our yield statement to throw an exception, which we can catch with normal JavaScript try/catch. Amazingly simple async coding!
@@ -914,54 +904,54 @@ This pattern is so useful, it's coming to ES7 in the form of [async functions](h
 
 ## Promise API Reference
 
-
 All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari unless otherwise noted. [The polyfill](https://github.com/jakearchibald/ES6-Promises#readme) provides the below for all browers.
 
 
 ### Static Methods
-<dl>
-  <dt>`Promise.resolve(promise);`</dt>
-  <dd>Returns promise (only if `promise.constructor == Promise`)
-  <dt>`Promise.resolve(thenable);`</dt>
-  <dd>Make a new promise from the thenable. A thenable is promise-like in as far as it has a "then" method.
-  </dd>
-  <dt>`Promise.resolve(obj);`</dt>
-  <dd>Make a promise that fulfills to `obj`.` in this situation.</dd>
-  <dt>`Promise.reject(obj);`</dt>
-  <dd>Make a promise that rejects to `obj`. For consistency and debugging (e.g. stack traces), `obj` should be an `instanceof Error`.</dd>
-  <dt>`Promise.all(array);`</dt>
-  <dd>Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects. Each array item is passed to `Promise.resolve`, so the array can be a mixture of promise-like objects and other objects. The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
-  <dt>`Promise.race(array);`</dt>
-  <dd>Make a Promise that fulfills as soon as any item fulfills, or rejects as soon as any item rejects, whichever happens first.
-  <p class="notice"><b>Note:</b> I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposite of `Promise.all` that only rejects if all items reject.
-</dd>
-</dl>
+
+#### `Promise.resolve(promise);`
+Returns promise (only if `promise.constructor == Promise`)
+
+#### `Promise.resolve(thenable);`
+Make a new promise from the thenable. A thenable is promise-like in as far as it has a "then" method.
+
+
+#### `Promise.resolve(obj);`
+Make a promise that fulfills to `obj`.` in this situation.
+
+#### `Promise.reject(obj);`
+Make a promise that rejects to `obj`. For consistency and debugging (e.g. stack traces), `obj` should be an `instanceof Error`.
+
+#### `Promise.all(array);`
+Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects. Each array item is passed to `Promise.resolve`, so the array can be a mixture of promise-like objects and other objects. The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
+
+#### `Promise.race(array);`
+Make a Promise that fulfills as soon as any item fulfills, or rejects as soon as any item rejects, whichever happens first. 
+
+**Note:** I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposite of `Promise.all` that only rejects if all items reject.
 
 ### Constructor
 {% highlight javascript %}
-new Promise(function(resolve, reject) {})
+new Promise(function(resolve, reject) {});
 {% endhighlight %}
 
-<dl>
-  <dt>`resolve(thenable)`</dt>
-  <dd>Your promise will be fulfilled/rejected with the outcome of `thenable`</dd>
-  <dt>`resolve(obj)`</dt>
-  <dd>Your promise is fulfilled with `obj`</dd>
-  <dt>`reject(obj)`</dt>
-  <dd>Your promise is rejected with `obj`. For consistency and debugging (eg stack traces), obj should be an `instanceof Error`. Any errors thrown in the constructor callback will be implicitly passed to `reject()`.</dd>
-</dl>
+#### `resolve(thenable)`
+Your promise will be fulfilled/rejected with the outcome of `thenable`
+
+#### `resolve(obj)`
+Your promise is fulfilled with `obj`
+
+#### `reject(obj)`
+Your promise is rejected with `obj`. For consistency and debugging (eg stack traces), obj should be an `instanceof Error`. Any errors thrown in the constructor callback will be implicitly passed to `reject()`.
 
 ### Instance Methods
-<dl>
-  <dt>`promise.then(onFulfilled, onRejected)`</dt>
-  <dd>`onFulfilled` is called when/if "promise" resolves.
-  `onRejected` is called when/if "promise" rejects.
-  Both are optional, if either/both are omitted the next `onFulfilled`/`onRejected` in the chain is called.
-  Both callbacks have a single parameter, the fulfillment value or rejection reason.
-  "then" returns a new promise equivalent to the value you return from `onFulfilled`/`onRejected` after being passed through `Promise.resolve`. If an error is thrown in the callback, the returned promise rejects with that error.</dd>
-  <dt>`promise.catch(onRejected)`</dt>
-  <dd>Sugar for `promise.then(undefined, onRejected)`</dd>
-</dl>
+
+#### `promise.then(onFulfilled, onRejected)`
+`onFulfilled` is called when/if "promise" resolves. `onRejected` is called when/if "promise" rejects. Both are optional, if either/both are omitted the next `onFulfilled`/`onRejected` in the chain is called. Both callbacks have a single parameter, the fulfillment value or rejection reason. "then" returns a new promise equivalent to the value you return from `onFulfilled`/`onRejected` after being passed through `Promise.resolve`. If an error is thrown in the callback, the returned promise rejects with that error.
+
+#### `promise.catch(onRejected)`
+Sugar for `promise.then(undefined, onRejected)`
+
 
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp, Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made corrections/recommendations.
 
