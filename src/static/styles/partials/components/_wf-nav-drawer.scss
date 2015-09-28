@@ -41,8 +41,8 @@
 
   padding-top: 0;
   padding-bottom: ($nav-drawer-vertical-padding * 2);
-  margin-bottom: ($nav-drawer-vertical-padding * 2);
-  border-bottom: 1px solid $grey-border-color;
+  //margin-bottom: ($nav-drawer-vertical-padding * 2);
+  //border-bottom: 1px solid $grey-border-color;
 }
 
 // Default color for text (Black)
@@ -76,9 +76,18 @@
 }
 
 // Top / First item is the current section
-.wf-main-nav__list-level-1 > .wf-main-nav__item:first-child {
+/**.wf-main-nav__list-level-1 > .wf-main-nav__item:first-child {
   padding-bottom: ($nav-drawer-vertical-padding * 2);
   margin-bottom: ($nav-drawer-vertical-padding * 2);
+  border-bottom: 1px solid $grey-border-color;
+}**/
+
+.wf-main-nav__item.wf-main-nav__selected {
+  padding-top: ($nav-drawer-vertical-padding * 2);
+  padding-bottom: ($nav-drawer-vertical-padding * 2);
+  margin-top: ($nav-drawer-vertical-padding * 2);
+  margin-bottom: ($nav-drawer-vertical-padding * 2);
+  border-top: 1px solid $grey-border-color;
   border-bottom: 1px solid $grey-border-color;
 }
 
