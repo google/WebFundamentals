@@ -149,16 +149,25 @@ module Jekyll
 
     # TODO: Change to throwing an error when we get closer to release
     def handleInvalidKeys(invalidKeys)
-      puts "Found " + invalidKeys.length.to_s + " invalid keys in " + @langcode + '/' + self.relative_path
-
       invalidKeysString = ''
       invalidKeys.each { |key|
         invalidKeysString += key + ', '
       }
 
-      puts 'Invalid keys: ' + invalidKeysString
+      puts ''
       puts '---------------------------------------------------------------'
       puts ''
+      puts "Found " + invalidKeys.length.to_s + " invalid keys in " + @langcode + '/' + self.relative_path
+      puts 'Invalid keys: ' + invalidKeysString
+      puts ''
+      puts '---------------------------------------------------------------'
+      puts ''
+      Jekyll.logger.error "Error: Invalid Keys found in  " + @langcode + '/' + self.relative_path
+      puts ''
+      puts '---------------------------------------------------------------'
+      puts ''
+
+      raise "Invalid keys in YAML in " + @langcode + '/' + self.relative_path
     end
 
     # Force generation is used when you are in a section that isn't published
