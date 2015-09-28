@@ -8,11 +8,10 @@ order: 3
 authors:
   - samdutton
 key-takeaways:
-  add-a-video:
-    - "Use the video element to load, decode, and play video on your site."
-    - "Produce video in multiple formats to cover a range of mobile platforms."
-    - "Size videos correctly; ensure they don't overflow their containers."
-    - "Accessibility matters; add the track element as a child of the video element."
+  size-matters:
+    - "Don't serve videos with a larger frame size or higher quality than the platform can handle."
+    - "Don't make your videos any longer than they need be."
+    - "Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback."
 notes:
   media-fragments:
     - "The Media Fragments API is supported on most platforms, but not on iOS."
