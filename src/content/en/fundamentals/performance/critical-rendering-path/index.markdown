@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-pages-list
 title: "Critical rendering path"
-description: "TODO - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
+description: "Optimizing the critical rendering path by prioritizing the display of content that relates to the primary action the user wants to take on a page."
 published_on: 2014-04-01
 updated_on: 2014-04-28
 order: 1
@@ -17,9 +17,7 @@ udacity:
 ---
 
 <p class="intro">
-  Optimizing the critical rendering path is critical for improving performance
-  of our pages: our goal is to prioritize and display the content that relates
-  to the primary action the user wants to take on a page.
+  {{page.description}}
 </p>
 
 Delivering a fast web experience requires a lot of work by the browser. Most of
