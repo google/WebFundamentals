@@ -89,13 +89,9 @@ Initially, a snapshot opens in the Summary view, displaying object totals, which
 Top-level entries are "total" lines. They display:
 
 * **Constructor** represents all objects created using this constructor.
-
 * **Number of object instances** is displayed in the # column.
-
 * **Shallow size** column displays the sum of shallow sizes of all objects created by a certain constructor function. The shallow size is the size of memory held by an object itself (generally, arrays and strings have larger shallow sizes). See also [Object sizes](/web/tools/profile-performance/memory-problems/memory-101#object-sizes).
-
 * **Retained size** column displays the maximum retained size among the same set of objects. The size of memory that can be freed once an object is deleted (and this its dependents made no longer reachable) is called the retained size. See also [Object sizes](/web/tools/profile-performance/memory-problems/memory-101#object-sizes).
-
 * **Distance** displays the distance to the root using the shortest simple path of nodes.
 
 After expanding a total line in the upper view, all of its instances are displayed. For each instance, its shallow and retained sizes are displayed in the corresponding columns. The number after the @ character is the objects’ unique ID, allowing you to compare heap snapshots on per-object basis.
@@ -108,18 +104,13 @@ Remember that yellow objects have JavaScript references on them and red objects 
 
 * **(global property)** – intermediate objects between a global object (like 'window') and an object referenced by it. If an object is created using a constructor Person and is held by a global object, the retaining path would look like [global] > (global property) > Person. This contrasts with the norm, where objects directly reference each other. We have intermediate objects for performance reasons. Globals are modified regularly and property access optimisations do a good job for non-global objects aren't applicable for globals.
 
-
 * **(roots)** – The root entries in the retaining tree view are the entities that have references to the selected object. These can also be references created by the engine for its own purposes. The engine has caches which reference objects, but all such references are weak and won't prevent an object from being collected given that there are no truly strong references.
-
 
 * **(closure)** – a count of references to a group of objects through function closures
 
-
 * **(array, string, number, regexp)** – a list of object types with properties which reference an Array, String, Number or regular expression.
 
-
 * **(compiled code)** – simply, everything related to compiled code. Script is similar to a function but corresponds to a &lt;script&gt; body. SharedFunctionInfos (SFI) are objects standing between functions and compiled code. Functions are usually have a context, while SFIs do not.
-
 
 * **HTMLDivElement**, **HTMLAnchorElement**, **DocumentFragment** etc – references to elements or document objects of a particular type referenced by your code.
 
@@ -131,11 +122,8 @@ Remember that yellow objects have JavaScript references on them and red objects 
 Find leaked objects by comparing multiple snapshots to each other. To verify that a certain application operation doesn't create leaks (for example, usually a pair of direct and reverse operations, like opening a document, and then closing it, should not leave any garbage), you may follow the scenario below:
 
 1. Take a heap snapshot before performing an operation.
-
 2. Perform an operation (interact with a page in some way that you believe to be causing a leak).
-
 3. Perform a reverse operation (do the opposite interaction and repeat it a few times).
-
 4. Take a second heap snapshot and change the view of this one to Comparison, comparing it to snapshot 1.
 
 In the Comparison view, the difference between two snapshots is displayed. When expanding a total entry, added and deleted object instances are shown:
@@ -151,9 +139,7 @@ The Containment view is essentially a "bird's eye view" of your application's ob
 The view provides several entry points:
 
 * **DOMWindow objects** are objects considered as "global" objects for JavaScript code.
-
 * **GC roots** are the actual GC roots used by VM's garbage. GC roots can be comprised of built-in object maps, symbol tables, VM thread stacks, compilation caches, handle scopes, global handles.
-
 * **Native objects** are browser objects "pushed" inside the JavaScript virtual machine to allow automation, for example, DOM nodes, CSS rules.
 
 ![Containment view](imgs/containment-view.png)
@@ -166,7 +152,7 @@ The view provides several entry points:
 
 It helps a lot to name the functions so you can easily distinguish between closures in the snapshot. For example, this example does not use named functions:
 
-<pre>
+{% highlight javascript %}
 function createLargeClosure() {
   var largeStr = new Array(1000000).join('x');
 
@@ -176,11 +162,11 @@ function createLargeClosure() {
 
   return lC;
 }
-</pre>
+{% endhighlight %}
 
 Whilst this example does:
 
-<pre>
+{% highlight javascript %}
 function createLargeClosure() {
   var largeStr = new Array(1000000).join('x');
 
@@ -190,7 +176,7 @@ function createLargeClosure() {
 
   return lC;
 }
-</pre>
+{% endhighlight %}
 
 ![Name functions to distinguish between closures](imgs/domleaks.png)
 
@@ -223,11 +209,8 @@ Properties and property values of objects have different types and
 are colored accordingly. Each property has one of four types:
 
 * **a: property** — regular property with a name, accessed via the . (dot) operator, or via [ ] (brackets) notation, e.g. ["foo bar"];
-
 * **0: element** — regular property with a numeric index, accessed via [ ] (brackets) notation;
-
 * **a: context var** - variable in a function context, accessible by its name from inside a function closure;
-
 * **a: system prop** - property added by the JavaScript VM, not accessible from JavaScript code.
 
 Objects designated as `System `do not have a corresponding JavaScript type. They are part of JavaScript VM's object system implementation. V8 allocates most of its internal objects in the same heap as the user's JS objects. So these are just v8 internals.
@@ -246,7 +229,7 @@ due to forgotten detached DOM subtrees floating around.
 DOM leaks can be bigger than you think.
 Consider the following sample - when is the #tree GC?
 
-<pre>
+{% highlight javascript %}
   var select = document.querySelector;
   var treeRef = select("#tree");
   var leafRef = select("#leaf");
@@ -262,7 +245,7 @@ Consider the following sample - when is the #tree GC?
 
   leafRef = null;
   //#NOW can be #tree GC
-</pre>
+{% endhighlight %}
 
 <code>#leaf</code> maintains a reference to it's parent (parentNode) and recursively up to <code>#tree</code>, so only when leafRef is nullified is the WHOLE tree under <code>#tree</code> a candidate for GC.
 

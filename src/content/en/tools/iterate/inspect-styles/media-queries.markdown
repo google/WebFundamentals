@@ -68,8 +68,7 @@ Media queries are color-coded as follows:
 
 Click a media query bar to adjust the emulator resolution and preview styles for the targeted screen sizes:
 
-<style>video { width: 100%; }</style>
-<br>    
+<style>video { width: 100%; }</style>   
 <video class="gfyVid" controls="" autoplay="" loop="" muted="" style="display: block;" poster="//thumbs.gfycat.com/OilyHarmlessAffenpinscher-poster.jpg"><source id="webmsource" src="//zippy.gfycat.com/OilyHarmlessAffenpinscher.webm" type="video/webm"><source id="mp4source" src="//fat.gfycat.com/OilyHarmlessAffenpinscher.mp4" type="video/mp4">![Inspecting media queries.](http://zippy.gfycat.com/OilyHarmlessAffenpinscher.gif)</video>
 
 ## View CSS

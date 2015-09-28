@@ -41,7 +41,7 @@ When you expand the Cookies category, it displays a list of domains of the main 
 
 The following fields are displayed for each cookie in the selected frame group:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th>Cookie Field</th>

@@ -33,6 +33,10 @@ dd {
   &.clear {
     clear: both;
   }
+
+  h3 {
+    clear: none;
+  }
 }
 
 .wf-showcase__title {
@@ -134,9 +138,11 @@ $colorLow: #cb4437;
 
   h4 {
     margin-bottom: 4px;
+    clear: none;
   }
   h5 {
     margin-top: 4px;
+    clear: none;
   }
 }
 

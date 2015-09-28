@@ -36,9 +36,7 @@ As you develop web pages and applications, the DevTools are essential tools to e
 Access the DevTools from any web page in Google Chrome:
 
 * Select the Chrome menu ![Chrome menu](imgs/chrome_menu_button.png){:.inline} and choose **More tools** > **Developer tools**.
-
 * Right-click a page element and choose **Inspect element** from the context menu.
-
 * [Keyboard shortcut](/web/tools/iterate/inspect-styles/shortcuts): <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac).
 
 DevTols are organized into task-orientated panels.
@@ -141,9 +139,7 @@ and vice versa, by clicking the **Device Mode** button
 Use the **Layout** button to re-position DevTools:
 
 * Click the Dock to Main button ![Dock to main](imgs/dock_to_main_button.png){:.inline} to dock the panel on the right side of the main window.
-
 * Click ![Dock to bottom](imgs/dock_to_bottom_button.png){:.inline} to dock the panel at the bottom of the main window.
-
 * Click and hold the button and click
 ![Undock](imgs/undock_button.png){:.inline}
 to undock the panel from the main window and
