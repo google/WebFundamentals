@@ -231,7 +231,7 @@ Click the expander arrow next to the event type (for example `click`) to see a l
 
 Click the expander arrow next to an element identifier to see the properties of the event handler. The Event Listeners pane lists the following properties for each listener:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th>Event Listener Properties</th>

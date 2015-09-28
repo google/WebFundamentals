@@ -67,7 +67,6 @@ To add a line breakpoint:
 * Click the line number of the line where you 
   want to set the breakpoint. You can add multiple breakpoints by clicking 
   each line's line number. 
-
 * Insert the `debugger` keyword in your code, which is 
   equivalent to setting a line breakpoint at that line.
 
@@ -134,7 +133,6 @@ To break when an `XMLHttpRequest` URL contains a specific string:
 
 1. Click the **Add XHR breakpoint** button 
    ![Add XHR breakpoint](imgs/image_4.png){:.inline} in the sidebar. 
-
 2. In the **Break when URL contains** field, type the string that the 
    URL should contain when you want the XHR request to break and press 
    **Enter**. 
@@ -151,9 +149,7 @@ choose **Remove breakpoint**.
 To break before a specified `XMLHttpRequest` event is fired:
 
 1. Go to the **Event Listener Breakpoints** panel.
-
-2. Expand the **XHR** dropdown menu. 
-
+2. Expand the **XHR** dropdown menu.
 3. Select the stage in the event lifecycle which you want to break at.
    DevTools breaks at that stage for all `XMLHttpRequest` events.
 
@@ -171,8 +167,7 @@ To add a JavaScript event listener breakpoint:
 
 1. Expand the **Event Listener Breakpoints** section in the sidebar, 
    then expand the category of listener you want to break on 
-   (**Animation**, **Clipboard**, **Control**, etc.). 
-
+   (**Animation**, **Clipboard**, **Control**, etc.).
 2. Under the expanded category, click the checkbox for the type(s) 
    of listener that should trigger a break. To choose all possible 
    listener types in a category, click the checkbox for the category itself. 

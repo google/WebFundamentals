@@ -50,7 +50,7 @@ aliases](http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.8
 
 These are a few commands that you may find useful.
 
-<table class="table-2 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />

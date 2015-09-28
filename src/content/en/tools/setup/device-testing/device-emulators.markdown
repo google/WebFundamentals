@@ -102,7 +102,7 @@ set-up to emulate a Nexus 5.
 Initially you'll be presented with a somewhat scary form, but most items are
 simple:
 
-<table class="table-2 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />

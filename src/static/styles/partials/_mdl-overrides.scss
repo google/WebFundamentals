@@ -1,7 +1,65 @@
 .mdl-data-table {
   white-space: inherit;
+  font-size: 15px;
+  line-height: 1.625;
+  margin-bottom: 1.625em;
 }
 
 .mdl-data-table td, .mdl-data-table th {
   text-align: left;
+  font-size: 15px;
+  line-height: 1.625em;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 1.3em;
+}
+
+h3 {
+	font-size: 26px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+	padding-top: 0.6em;
+	margin-top: 0;
+	margin-bottom: 0.8em;
+	clear: both;
+}
+
+p, ul, ol, dt {
+	margin-bottom: 1.625em;
+	font-size: 16px;
+	line-height: 1.625em;
+}
+
+dt {
+	margin-bottom: 0em;
+}
+
+ul ul {
+	margin-bottom: 0;
+}
+
+.page-content li {
+	line-height: 1.625em;
+	margin-bottom: 0.3em;
+}
+
+.mdl-card__supporting-text {
+	font-size: 16px;
+    line-height: 1.625em;
+}
+
+.mdl-button {
+	font-size: 16px;
 }
