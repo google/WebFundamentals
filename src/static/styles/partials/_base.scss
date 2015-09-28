@@ -67,7 +67,7 @@ video {
 }
 
 .wf-cc-license {
-  text-align: center;
+  text-align: left;
   @include typo-caption($colorContrast: true);
 
   margin-top: $base-line;
