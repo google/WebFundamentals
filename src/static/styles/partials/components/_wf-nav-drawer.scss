@@ -30,6 +30,8 @@
   padding: 0;
   margin: 0;
 
+  padding-top: $nav-drawer-vertical-padding;
+
   list-style: none;
 }
 
@@ -37,6 +39,7 @@
   display: inline-block;
   width: 100%;
 
+  padding-top: 0;
   padding-bottom: ($nav-drawer-vertical-padding * 2);
   margin-bottom: ($nav-drawer-vertical-padding * 2);
   border-bottom: 1px solid $grey-border-color;
