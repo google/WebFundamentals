@@ -14,7 +14,7 @@
 
 module Jekyll
 
-  require File.expand_path('../../wf/WFPage.rb', __FILE__)
+  require File.expand_path('../WFPage.rb', __FILE__)
 
   class UpdatesPaginationPage < UpdatePage
 

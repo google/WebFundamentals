@@ -14,7 +14,7 @@
 
 module Jekyll
 
-  require File.expand_path('../../wf/WFPage.rb', __FILE__)
+  require File.expand_path('../WFPage.rb', __FILE__)
 
   # Go through the English version of the site, and generate a page for every
   # article. If the language code is not english, then we need to check for a

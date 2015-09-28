@@ -15,7 +15,7 @@
 module Jekyll
 
   require 'sanitize'
-  require File.expand_path('../../languages/language_page.rb', __FILE__)
+  require File.expand_path('../language_page.rb', __FILE__)
 
   class ToolsPage < LanguagePage
 
@@ -28,7 +28,7 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Tools'
-      
+
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/tools.css';
 
       self.data['feed_name'] = 'Google Web Tools - Google Developers'

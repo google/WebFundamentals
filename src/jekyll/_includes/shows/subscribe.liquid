@@ -16,12 +16,12 @@
       <a href="{{site.WFBaseUrl}}/shows/feed.xml">Follow our Shows Feed</a>
     </div>
 
-    {% if page.feedUrl %}
+    {% if page.rssFeed %}
     <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button">
       <div class="wf-shows-subscribe__icon">
         {% include svgs/rss-icon.svg %}
       </div>
-      <a href="{{page.feedUrl}}">Follow the {{page.feedName}} Feed</a>
+      <a href="{{page.rssFeed.canonical_url}}">Follow the {{page.title}} Feed</a>
     </div>
     {% endif %}
   </div>

@@ -15,23 +15,22 @@
 module Jekyll
 
   require 'sanitize'
-  require File.expand_path('../../languages/language_page.rb', __FILE__)
+  require File.expand_path('../language_page.rb', __FILE__)
 
-  class FundamentalsPage < LanguagePage
+  class ShowcasePage < LanguagePage
 
-    DEFAULT_HEAD_TITLE = 'Web Fundamentals - Google Developers'
-    DEFAULT_HEAD_DESCRIPTION = 'Google Developers Web Updates ' +
-      'contains the latest news from the Chrome, looking at new features ' +
-      'on the open web and in Chrome DevTools.'
+    DEFAULT_HEAD_TITLE = 'Google Web Showcase - Google Developers'
+    DEFAULT_HEAD_DESCRIPTION = 'Google Web Showcase - Google Developers'
 
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = ['udacity']
+      validKeys = ['tags', 'showcase']
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['drawerTitleText'] = 'Web Fundamentals'
-      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/fundamentals.css';
-      self.data['feed_name'] = 'Web Fundamentals - Google Developers'
-      self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundmentals/feed.xml'
+      self.data['drawerTitleText'] = 'Web Showcase'
+      self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/showcases.css';
+
+      self.data['feed_name'] = 'Google Web Showcase - Google Developers'
+      self.data['feed_url'] = site.config['WFBaseUrl'] + '/showcase/feed.xml'
     end
   end
 end
