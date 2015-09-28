@@ -30,18 +30,22 @@ use DevTools to debug WebView content in native Android applications.
 
 WebView debugging must be enabled from within your application. To enable WebView debugging, call the static method [setWebContentsDebuggingEnabled](http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)) on the WebView class.
 
-`if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+{% highlight javascript %}
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
     WebView.setWebContentsDebuggingEnabled(true);
-}`
+}
+{% endhighlight %}
 
 This setting applies to all of the application's WebViews.
 
 **Tip**: WebView debugging is **not** affected by the state of the `debuggable` flag in the application's manifest. If you want to enable WebView debugging only when `debuggable` is `true`, test the flag at runtime.
 
-`if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+{% highlight javascript %}
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
     if (0 != (getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE))
     { WebView.setWebContentsDebuggingEnabled(true); }
-}`
+}
+{% endhighlight %}
 
 ## Open a WebView in DevTools
 

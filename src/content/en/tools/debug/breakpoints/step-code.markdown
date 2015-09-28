@@ -35,7 +35,7 @@ After [setting breakpoints](/web/tools/javascript/breakpoints/add-breakpoints), 
 
 All step options are represented through clickable icons ![Breakpoints button bar](imgs/image_7.png){:.inline} in the sidebar, but can also be triggered via shortcut. Here's the rundown:
 
-<table class="table-1">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th data-th="Icon/Button">Icon/Button</th>
@@ -107,7 +107,6 @@ Enable the async call stack feature to gain more visibiliy into the execution
 of your asynchronous function calls.
 
 1. Open the **Sources** panel of DevTools.
-
 2. On the **Call Stack** pane, enable the **Async** checkbox.
 
 The video below contains a simple script to demonstrate the async call 
@@ -164,10 +163,8 @@ your call stack.
 To blackbox a file:
 
 1. Open the **Sources** panel of DevTools.
-
-1. Right-click on the file you wish to blackbox.
-
-1. Select **Blackbox Script**.
+2. Right-click on the file you wish to blackbox.
+3. Select **Blackbox Script**.
 
 In the animation below, a button is clicked and a breakpoint is triggered. DevTools populates
 the call stack with the functions leading up to the breakpoint. The call stack
