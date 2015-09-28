@@ -15,7 +15,7 @@
 module Jekyll
 
   require 'sanitize'
-  require File.expand_path('../language_page.rb', __FILE__)
+  require File.expand_path('../LanguagePage.rb', __FILE__)
 
   class ShowcasePage < LanguagePage
 
