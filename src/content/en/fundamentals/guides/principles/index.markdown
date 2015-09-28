@@ -10,32 +10,13 @@ authors:
   - petelepage
 ---
 
-<p class="intro">
-  Google and AnswerLab undertook an intensive research study examining how a range of users interacted with a diverse set of mobile sites.  The goal, to answer the question: what makes a good mobile site?
-</p>
+### What makes a good mobile site?
 
-The results uncovered a set of design principles, which were grouped into 
-five sections: 
+Google and AnswerLab conducted a [research study](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) to answer this question. 
+The key takeaway: 
 
-* Site-wide Design Considerations
-* Home Page &  Navigation 
-* Site Search 
-* Commerce & Conversions 
-* Form Entry
+Mobile users are very goal-oriented. They expect to be able to get what they need, immediately, and on their own terms. 
 
-The common thread in all sections is that mobile users tend to be very 
-goal-oriented - they expect to be able to get what they need from a mobile 
-site easily, immediately, and on their own terms. 
+The study was held through 119 hour-long, in-person usability sessions with participants in the US. Participants were asked to perform key tasks across a diverse set of mobile sites. iOS and Android users were included, and users tested the sites on their own phones. For each site, participants were asked to voice their thoughts aloud as they completed conversion-focused tasks, like making a purchase or booking a reservation.
 
-## About the study methodology
-
-* The study was held through 119 hour-long in-person usability sessions with 
-  participants in Chicago and San Francisco.
-* Participants were asked to perform key tasks on their own phones. Both Android 
-  and iOS users were included.
-* For each site, we asked the participants to complete a conversion-focused task 
-  like making a purchase, booking a reservation or researching plans/prices. The 
-  participants voiced their thoughts aloud as they conducted their tasks and 
-  then rated their experience with each site.
-* Researchers also provided ratings based on site experience and task success, 
-  and logged errors/site issues by severity.
+The study uncovered 25 mobile site design principles, grouped into five categories.

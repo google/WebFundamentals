@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Promises"
-description: "TODO - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
+description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 published_on: 2013-12-16
 updated_on: 2014-01-29
 authors:
@@ -19,9 +19,9 @@ Promises have arrived natively in JavaScript!
 
 At this point you fall into one of these categories:
 
-* People are cheering around you, but you're not sure what all the fuss is about. Maybe you're not even sure what a "promise" is. You'd shrug, but the weight of glittery paper is weighing down on your shoulders. If so, don't worry about it, it took me ages to work out why I should care about this stuff. You probably want to begin [here](#TODO)
-* You punch the air! About time right? You've used these Promise things before but it bothers you that all implementations have a slightly different API. What's the API for the official JavaScript version? [You probably want to begin here](#TODO)
-* You knew about this already and you scoff at those who are jumping up and down like it's news to them. Take a moment to bask in your own superiority, then head straight to the [API reference](#TODO)
+* People are cheering around you, but you're not sure what all the fuss is about. Maybe you're not even sure what a "promise" is. You'd shrug, but the weight of glittery paper is weighing down on your shoulders. If so, don't worry about it, it took me ages to work out why I should care about this stuff. You probably want to begin at the [beginning](#whats-all-the-fuss-about).
+* You punch the air! About time right? You've used these Promise things before but it bothers you that all implementations have a slightly different API. What's the API for the official JavaScript version? You probably want to begin with the [terminology](#promise-terminology).
+* You knew about this already and you scoff at those who are jumping up and down like it's news to them. Take a moment to bask in your own superiority, then head straight to the [API reference](#promise-api-reference)
 
 {% include shared/toc.liquid %}
 
