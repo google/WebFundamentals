@@ -75,9 +75,6 @@ module Jekyll
       # generate main page
       generatePaginationPages(site, path, section, pages)
 
-      # generate feed
-      generateFeedPage(site, path, pages)
-
       # generate tag pages
       tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
       section['subdirectories'] << tagsSection
@@ -175,13 +172,6 @@ module Jekyll
 
     def calculatePages(pages, numberOfResultsPerPage)
       (pages.size.to_f / numberOfResultsPerPage).ceil
-    end
-
-    def generateFeedPage(site, path, pages)
-      pagesToInclude = pages
-
-      site.pages << UpdatesFeedPage.new(site, path, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
-      site.pages << UpdatesFeedPage.new(site, path, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
     end
 
   end
