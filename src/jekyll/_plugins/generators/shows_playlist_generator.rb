@@ -28,6 +28,10 @@ module Jekyll
       allShows = []
 
       showsContext = getShowsContext(site)
+      if showsContext.nil?
+        return
+      end
+
       showsContext['subdirectories'].each { |subdirectory|
         if subdirectory['index'].nil?
           next
@@ -49,12 +53,10 @@ module Jekyll
 
         site.pages << rssFeedPage
         site.pages << atomFeedPage
-
-        subdirectory['index'].data['rssFeed'] = rssFeedPage;
-        subdirectory['index'].data['atomFeed'] = atomFeedPage;
       }
 
       site.pages << ShowsFeedPage.new(site, nil, site.data['curr_lang'], allShows, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << ShowsFeedPage.new(site, nil, site.data['curr_lang'], allShows, WFFeedPage.FEED_TYPE_ATOM)
     end
 
     def getShowsContext(site)
