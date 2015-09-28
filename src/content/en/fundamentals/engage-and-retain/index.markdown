@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-subdirectories-list
 title: "Engage and retain users"
-description: "intro doc - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
+description: "Connect with your users and keep them coming back."
 published_on: 2015-09-21
 updated_on: 2015-09-21
 authors:
