@@ -86,8 +86,8 @@ module Jekyll
       path = File.join('updates', subdirectory['id'])
       pages = getPages(site, ['updates', subdirectory['id']])
 
-      rssFeedPage = WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_RSS)
-      atomFeedPage = WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_ATOM)
+      site.pages << WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_ATOM)
     end
 
     def generatePaginationPages(site, path, updateSection, pages)
