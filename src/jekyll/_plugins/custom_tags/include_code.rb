@@ -186,12 +186,10 @@ module Jekyll
       <<-HTML
 
   <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-    <div class="highlight-module__container">
-      <code class='html'>#{highlighted_code.strip}</code>
+      #{highlighted_code.strip}
       <p>
         <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">#{link_text}</a>
       </p>
-    </div>
   </div>
 
         HTML
