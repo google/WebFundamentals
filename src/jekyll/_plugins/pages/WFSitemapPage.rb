@@ -38,21 +38,25 @@ module Jekyll
         reject
       }
 
+      # This value is the default to make pages with no order to pushed to
+      # the bottom allowing pages with an order to be at the top
+      heavy_weight = 9999
+
       sitemapPages = sitemapPages.sort do |a, b|
         # TODO: this should be a shared method between here and build-end-generator
         a_order = 0
         b_order = 0
 
-        if !a['index'].nil?
-          a_order = a['index'].data['order'] || a['index'].data['date'] || heavy_weight
+        if !a.nil?
+          a_order = a.data['order'] || a.data['published_on'] || heavy_weight
         end
-        if !b['index'].nil?
-          b_order = b['index'].data['order'] || b['index'].data['date'] || heavy_weight
+        if !b.nil?
+          b_order = b.data['order'] || b.data['published_on'] || heavy_weight
         end
 
         if a_order.is_a?(Integer) & b_order.is_a?(Integer)
             a_order <=> b_order
-        elsif a_order.is_a?(String) & b_order.is_a?(String)
+        elsif a_order.is_a?(Date) & b_order.is_a?(Date)
             a_order <=> b_order
         else
           0 <=> 0
