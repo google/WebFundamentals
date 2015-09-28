@@ -32,18 +32,12 @@ notes:
 comments:
   # NOTE: If the section titles or URL changes the following shortlinks must be updated
   - g.co/mobilesiteprinciple19
-udacity:
-  id: ud893
-  title: Responsive Web Design Fundamentals
-  description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
-  image: imgs/udacity-rwd.png
+
 ---
 
 <p class="intro">
   The use of mobile devices to surf the web is growing at an astronomical pace, but unfortunately much of the web isn't optimized for those mobile devices. Mobile devices are often constrained by display size and require a different approach to how content is laid out on screen.
 </p>
-
-{% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 
 There is a multitude of different screen sizes across phones, "phablets",
 tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
