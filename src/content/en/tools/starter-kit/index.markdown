@@ -74,19 +74,19 @@ feedURL: https://github.com/google/web-starter-kit/releases.atom
 
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col">
-      <h3>Responsive layout</h3>
+      <h3 class="mdl-typography--title">Responsive layout</h3>
       <p>
         Responsive layout is included with the kit that adapts to fit the device your user is viewing it on. This helps you hit the ground running with an experience that looks good everywhere. <a href="http://google.github.io/web-starter-kit/hello-world/">Try a sample layout</a>.
       </p>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <h3>Performance in mind</h3>
+      <h3 class="mdl-typography--title">Performance in mind</h3>
       <p>
         Web Starter Kit strives to give you a high performance starting point out of the box and we actively work on delivering the best <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> score and frame-rate possible.
       </p>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <h3>Delete-key friendly</h3>
+      <h3 class="mdl-typography--title">Delete-key friendly</h3>
       <p>
         Create a tailored starter kit by taking only what you need, and easily deleting anything you don't.
       </p>
