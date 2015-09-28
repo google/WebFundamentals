@@ -23,7 +23,7 @@ module Jekyll
     DEFAULT_HEAD_DESCRIPTION = 'Google Web Showcase - Google Developers'
 
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = ['tags', 'showcase']
+      validKeys = ['tags', 'showcase', 'featured_image', 'subtitle']
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['drawerTitleText'] = 'Web Showcase'

@@ -46,7 +46,7 @@ module Jekyll
         'layout', 'title', 'description', 'order', 'translation_priority',
         'authors', 'translators', 'comments', 'published_on', 'updated_on',
         'published', 'rss', 'comments', 'key-takeaways', 'notes',
-        'related-guides', 'html_head_social_img'
+        'related-guides', 'html_head_social_img', 'feedName', 'feedURL'
       ]
 
       # This is a Jekyll::Page method (See: http://www.rubydoc.info/github/mojombo/jekyll/Jekyll/Page#process-instance_method)
