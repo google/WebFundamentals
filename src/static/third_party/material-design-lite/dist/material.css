@@ -6541,7 +6541,7 @@ input.mdl-button[type="submit"] {
   @media screen and (max-width: 1024px) {
     .mdl-layout__header {
       min-height: 56px; } }
-  .mdl-layout--fixed-drawer:not(.is-small-screen) > .mdl-layout__header {
+  .mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen) > .mdl-layout__header {
     margin-left: 240px;
     width: calc(100% - 240px); }
   @media screen and (min-width: 1025px) {
