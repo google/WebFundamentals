@@ -14,7 +14,7 @@
 
 module Jekyll
 
-  #  Creates an ordered group of articles built around a collection.
+  #  This generator creates the individual feeds for each show
 
   require File.expand_path('../WFGenerator.rb', __FILE__)
 
@@ -54,9 +54,6 @@ module Jekyll
         site.pages << rssFeedPage
         site.pages << atomFeedPage
       }
-
-      site.pages << ShowsFeedPage.new(site, nil, site.data['curr_lang'], allShows, WFFeedPage.FEED_TYPE_RSS)
-      site.pages << ShowsFeedPage.new(site, nil, site.data['curr_lang'], allShows, WFFeedPage.FEED_TYPE_ATOM)
     end
 
     def getShowsContext(site)

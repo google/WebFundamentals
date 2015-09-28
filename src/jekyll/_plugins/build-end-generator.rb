@@ -120,10 +120,34 @@ module Jekyll
 
     def generateFeeds(site)
       rootContext = site.data['_context']
-      # Create a feed for each subdirectory
-      pagesToInclude = []
-      site.pages << WFFeedPage.new(site, 'fundamentals', site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
-      site.pages << WFFeedPage.new(site, 'fundamentals', site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+      sitemapPages = []
+
+      rootContext['subdirectories'].each { |subdirectory|
+        id = subdirectory['id']
+        pagesToInclude = getPages(subdirectory)
+
+        sitemapPages = sitemapPages + pagesToInclude
+
+        site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+        site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+      }
+
+      site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_ATOM)
+    end
+
+    def getPages(subdirectory)
+      array = []
+      array << subdirectory['index']
+      subdirectory['pages'].each { |page|
+        array << page
+      }
+
+      subdirectory['subdirectories'].each { |subdirectory|
+        array = array + getPages(subdirectory)
+      }
+
+      return array
     end
 
   end

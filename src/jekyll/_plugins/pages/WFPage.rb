@@ -96,9 +96,16 @@ module Jekyll
       self.data['theme_color'] = '#03A9F4'
       self.data['translations'] = {}
 
+      # The root of /web/ has an rss feed, this if accounts for that
       self.data['feed_name'] = 'Web - Google Developers'
-      self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
-      self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
+      if @directories.count > 0
+        self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
+        self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
+      else
+        self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], 'rss.xml')
+        self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], 'atom.xml')
+      end
+
     end
 
     # This is called when the main generator has finished creating pages
