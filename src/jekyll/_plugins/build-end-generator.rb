@@ -102,15 +102,15 @@ module Jekyll
         b_order = 0
 
         if !a['index'].nil?
-          a_order = a['index'].data['order'] || a['index'].data['date'] || heavy_weight
+          a_order = a['index'].data['order'] || a['index'].data['published_on'] || heavy_weight
         end
         if !b['index'].nil?
-          b_order = b['index'].data['order'] || b['index'].data['date'] || heavy_weight
+          b_order = b['index'].data['order'] || b['index'].data['published_on'] || heavy_weight
         end
 
         if a_order.is_a?(Integer) & b_order.is_a?(Integer)
             a_order <=> b_order
-        elsif a_order.is_a?(String) & b_order.is_a?(String)
+        elsif a_order.is_a?(Date) & b_order.is_a?(Date)
             a_order <=> b_order
         else
           0 <=> 0
