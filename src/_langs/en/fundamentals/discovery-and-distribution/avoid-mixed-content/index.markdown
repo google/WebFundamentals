@@ -1,11 +1,13 @@
 ---
 layout: section
 title: "Preventing mixed content"
-description: "What is mixed content, and why should you care about HTTP resources served over secure connections."
+description: "Learn about mixed content, and why you should care about HTTP resources served over secure connections."
+introduction: "HTTPS is important to protect both your site and your users from attack. Mixed content degrades the security and user experience of your HTTPS site. Learn about mixed content, and why you should care about HTTP resources served over secure connections."
 id: mixed-content
 collection: discovery-and-distribution
 authors:
   - petelepage
+  - johyphenel
 article:
   written_on: 2015-09-25
   updated_on: 2015-09-25

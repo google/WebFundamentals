@@ -73,8 +73,9 @@ Mac
     * `rvm install ruby-2.2.0`
     * `rvm --default use 2.2.0`
 1. Install [Pygments](http://pygments.org/)
-    * `easy_install pygments`
+    * `sudo easy_install pygments`
 1. Install [RubyGems](https://rubygems.org/) dependencies ([Jekyll](http://jekyllrb.com/) and [Kramdown](http://kramdown.gettalong.org/))
+    * `gem install bundler`
     * `rvm . do bundle install`
 1. Install the [Grunt CLI](http://gruntjs.com/)
     * `npm install -g grunt-cli`
