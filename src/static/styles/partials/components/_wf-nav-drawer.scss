@@ -42,6 +42,14 @@
   border-bottom: 1px solid $grey-border-color;
 }
 
+.wf-main-nav__list-level-2 {
+  padding-top: ($nav-drawer-vertical-padding / 2);
+}
+
+.wf-main-nav__list-level-3 {
+  padding-top: ($nav-drawer-vertical-padding / 2);
+}
+
 // Default color for text (Black)
 .wf-main-nav__list-level-1 > .wf-main-nav__item > .wf-main-nav__link,
 .wf-main-nav__list-level-3 > .wf-main-nav__item .wf-main-nav__link {
@@ -60,7 +68,7 @@
 
 // Less padding on the lower levels
 .wf-main-nav__list-level-2 .wf-main-nav__item, .wf-main-nav__list-level-3 .wf-main-nav__item {
-  padding: $nav-drawer-vertical-padding $nav-drawer-vertical-padding;
+  padding: ($nav-drawer-vertical-padding / 2) $nav-drawer-vertical-padding;
 }
 
 // Give none of the links underline styling
