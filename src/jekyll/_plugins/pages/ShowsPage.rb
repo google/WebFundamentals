@@ -41,8 +41,6 @@ module Jekyll
         self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
         self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
       elsif
-        #puts "@directories[0]: " + @directories[0]
-        #puts "@directories[1]: " + @directories[1]
         self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'rss.xml')
         self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'atom.xml')
       end
