@@ -13,7 +13,6 @@ article:
   updated_on: 2015-09-25
   order: 1
 priority: 0
-published: false
 ---
 
 {% comment %}
