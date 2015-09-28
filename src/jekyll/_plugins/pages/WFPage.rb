@@ -94,9 +94,11 @@ module Jekyll
 
       self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
       self.data['theme_color'] = '#03A9F4'
-      self.data['feed_name'] = 'Web - Google Developers'
-      self.data['feed_url'] = site.config['WFBaseUrl'] + '/fundamentals/feed.xml'
       self.data['translations'] = {}
+
+      self.data['feed_name'] = 'Web - Google Developers'
+      self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
+      self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
     end
 
     # This is called when the main generator has finished creating pages
