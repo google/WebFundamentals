@@ -22,23 +22,37 @@ udacity:
   image: images/rp-udacity.jpg
 ---
 
-<p class="intro">
-  Users of today’s web <a href="http://paul.kinlan.me/what-news-readers-want/">
-  expect that the pages they visit will be interactive and smooth</a> and
-  that’s where you need to increasingly focus your time and effort. Pages
-  should not only load quickly, but also run well; scrolling should be
-  stick-to-finger fast, and animations and interactions should be silky smooth.
-</p>
-
-<img src="images/intro/response.jpg" alt="User interacting with a website.">
-
-To write performant sites and apps you need to understand how HTML, JavaScript and CSS is handled by the browser, and ensure that the code you write (and the other 3rd party code you include) runs as efficiently as possible.
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <p>
+      Users of today’s web <a href="http://paul.kinlan.me/what-news-readers-want/">
+      expect that the pages they visit will be interactive and smooth</a> and
+      that’s where you need to increasingly focus your time and effort. Pages
+      should not only load quickly, but also run well; scrolling should be
+      stick-to-finger fast, and animations and interactions should be silky smooth.
+    </p>
+    <p>
+      To write performant sites and apps you need to understand how HTML, JavaScript and CSS is handled by the browser, and ensure that the code you write (and the other 3rd party code you include) runs as efficiently as possible.
+    </p>
+  </div>
+  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+</div>
 
 ## 60fps and Device Refresh Rates
 
-Most devices today refresh their screens **60 times a second**. If there’s an animation or transition running, or the user is scrolling the pages, the browser needs to match the device’s refresh rate and put up 1 new picture, or frame, for each of those screen refreshes.
-
-Each of those frames has a budget of just over 16ms (1 second / 60 = 16.66ms). In reality, however, the browser has housekeeping work to do, so all of your work needs to be completed inside **10ms**. When you fail to meet this budget the frame rate drops, and the content judders on screen. This is often referred to as **jank**, and it negatively impacts the user's experience.
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <p>
+      Most devices today refresh their screens <b>60 times a second</b>. If there’s an animation or transition running, or the user is scrolling the pages, the browser needs to match the device’s refresh rate and put up 1 new picture, or frame, for each of those screen refreshes.
+    </p>
+    <p>
+      Each of those frames has a budget of just over 16ms (1 second / 60 = 16.66ms). In reality, however, the browser has housekeeping work to do, so all of your work needs to be completed inside <b>10ms</b>. When you fail to meet this budget the frame rate drops, and the content judders on screen. This is often referred to as <b>jank</b>, and it negatively impacts the user's experience.
+    </p>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <img src="images/intro/response.jpg" alt="User interacting with a website.">
+  </div>
+</div>
 
 ## The pixel pipeline
 There are five major areas that you need to know about and be mindful of when you work. They are areas you have the most control over, and key points in the pixels-to-screen pipeline:
