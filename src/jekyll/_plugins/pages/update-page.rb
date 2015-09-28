@@ -32,8 +32,14 @@ module Jekyll
       self.data['drawerTitleText'] = 'Updates'
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
       self.data['theme_color'] = '#E91E63'
-      self.data['feed_name'] = 'Web Updates - Google Developers'
-      self.data['feed_url'] = site.config['WFBaseUrl'] + '/updates/feed.xml'
+
+      if @directories.count > 1
+        self.data['feed_name'] = 'Web Updates - Google Developers'
+        self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'rss.xml')
+        self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'atom.xml')
+      else
+        self.data['feed_name'] = 'Web Updates - Google Developers'
+      end
     end
   end
 end
