@@ -233,31 +233,47 @@ module Jekyll
       currentLevel = 0;
       rootSection = nil;
       otherSections = []
+      topLevelEntries = []
 
       # Pick out this pages rootSection and split out other sections
       site.data['_context']['subdirectories'].each { |subdirectory|
-        if subdirectory['id'] == @directories[currentLevel]
-          rootSection = subdirectory
-        else
-          otherSections << subdirectory
-        end
-      }
-
-      entry = getBetterBookEntry(rootSection, currentLevel, true)
-
-      topLevelEntries = [entry]
-
-      otherSections.each { |section|
-        if section['index'].nil?
+        if subdirectory['index'].nil?
           next
         end
-        entry = getBetterBookEntry(section, currentLevel)
+
+        entry = getBetterBookEntry(subdirectory, currentLevel)
         if entry.nil?
           next
         end
 
+        if subdirectory['id'] == @directories[currentLevel]
+          entry['isSelected'] = true
+        end
+
         topLevelEntries << entry
+
+        #if subdirectory['id'] == @directories[currentLevel]
+        #  rootSection = subdirectory
+        #else
+        #  otherSections << subdirectory
+        #end
       }
+
+      #entry = getBetterBookEntry(rootSection, currentLevel, true)
+
+      #topLevelEntries = [entry]
+
+      #otherSections.each { |section|
+      #  if section['index'].nil?
+      #    next
+      #  end
+      #  entry = getBetterBookEntry(section, currentLevel)
+      #  if entry.nil?
+      #    next
+      #  end
+      #
+      #  topLevelEntries << entry
+      #}
 
       self.data['contentnav'] = { "toc" => topLevelEntries }
 
