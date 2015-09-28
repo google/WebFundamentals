@@ -14,7 +14,7 @@
 
 module Jekyll
 
-  require File.expand_path('../../wf/WFFeedPage.rb', __FILE__)
+  require File.expand_path('../WFFeedPage.rb', __FILE__)
 
   class RootFeedPage < WFFeedPage
 

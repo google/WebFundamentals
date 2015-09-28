@@ -14,17 +14,28 @@
 
 module Jekyll
 
-  require File.expand_path('../../wf/WFFeedPage.rb', __FILE__)
+  require File.expand_path('../WFGenerator.rb', __FILE__)
 
-  class LayoutPage < LanguagePage
+  # Generate pagination for update pages
 
-    def initialize(site, langcode, relativeDirectory, filename)
-      super(site, File.join(site.config['WFStyleguideLocation'], relativeDirectory), filename + '.html', langcode)
+  class RootFeedGenerator < WFGenerator
+    priority :low
 
-      # This will read the liquid file and asign the page the appropriate content
-      self.read_yaml(site.config['layouts'], File.join(relativeDirectory, filename + '.liquid'))
+    def generate(site)
+      @contentSource = site.config['WFContentSource']
+      @numberOfResultsPerPage = 100
+
+      if site.pages.nil?
+        return
+      end
+
+      # generate feed
+      generateFeedPage(site, site.pages)
     end
 
+    def generateFeedPage(site, pages)
+      site.pages << RootFeedPage.new(site, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_RSS)
+    end
   end
 
 end

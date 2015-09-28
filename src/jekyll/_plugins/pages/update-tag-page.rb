@@ -14,13 +14,13 @@
 
 module Jekyll
 
-  require File.expand_path('../../wf/WFPage.rb', __FILE__)
+  require File.expand_path('../WFPage.rb', __FILE__)
 
   class UpdatesTagPage < UpdatePage
     def initialize(site, path, langcode, tag, updates)
       if path.nil?
         dir = File.join('updates', 'tags')
-      else 
+      else
         dir = File.join('updates', path, 'tags')
       end
       name = "#{tag}.html"
@@ -45,7 +45,7 @@ module Jekyll
     def initialize(site, path, langcode, tags)
       if path.nil?
         dir = File.join('updates', 'tags')
-      else 
+      else
         dir = File.join('updates', path, 'tags')
       end
       name = "index.html"
