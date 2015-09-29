@@ -25,7 +25,6 @@ comments:
 
 <p class="intro">
   The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience."
-
 </p>
 
 {% include shared/toc.liquid %}
@@ -57,7 +56,7 @@ screen readers and other assistive technologies.
 ## Enhance `img`'s with `srcset` for high DPI devices
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="mdl-cell mdl-cell--6-col">
     <p>
       The <code>srcset</code> attribute enhances the behavior of the 
       <code>img</code> element, making it easy to provide multiple image files 
@@ -69,7 +68,7 @@ screen readers and other assistive technologies.
       a 2x device when on a limited bandwidth network.
     </p>
   </div>
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="mdl-cell mdl-cell--6-col">
     {% ytvideo Pzc5Dly_jEM %}
   </div>
 </div>
@@ -105,7 +104,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 {% include shared/remember.liquid title="Important" list=page.notes.picture-support %}
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="mdl-cell mdl-cell--6-col">
     <p>
       The <code>picture</code> element should be used when an image source 
       exists in multiple densities, or when a responsive design dictates a 
@@ -115,7 +114,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
       depending on media queries or image format.
     </p>
   </div>
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="mdl-cell mdl-cell--6-col">
     {% ytvideo QINlm3vjnaY %}
   </div>
 </div>
