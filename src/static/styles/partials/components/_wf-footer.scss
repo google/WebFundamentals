@@ -55,6 +55,8 @@
 .wf-footer__list {
   list-style: none;
 
+  @include typo-body-1;
+
   padding: 0;
   margin: 0;
 
@@ -83,6 +85,7 @@
 .wf-footer__title {
   line-height: $base-line;
   margin-top: 0;
+  margin-bottom: $base-line / 2;
 }
 
 .wf-footer__title--link {
