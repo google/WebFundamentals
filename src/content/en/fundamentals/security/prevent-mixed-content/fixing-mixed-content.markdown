@@ -115,11 +115,11 @@ proceed to [step 2](#step-2).
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/puppy-http.png">
-    <figcaption>HTTP image loads without error.</figcaption>
+    <figcaption class="wf-figcaption-good">HTTP image loads without error.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/puppy-https.png">
-    <figcaption>HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!</figcaption>
+    <figcaption class="wf-figcaption-good">HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!</figcaption>
    </figure>
 </div>
 
@@ -129,11 +129,11 @@ If you see a certificate warning, or if the content can't be displayed over
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/https-not-available.png">
-    <figcaption>Resource not available over HTTPS.</figcaption>
+    <figcaption class="wf-figcaption-bad">Resource not available over HTTPS.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/https-cert-warning.png">
-    <figcaption>Certificate warning when attempting to view resource over HTTPS.</figcaption>
+    <figcaption class="wf-figcaption-bad">Certificate warning when attempting to view resource over HTTPS.</figcaption>
   </figure>
 </div>
 
