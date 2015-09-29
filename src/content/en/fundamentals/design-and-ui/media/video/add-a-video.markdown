@@ -140,11 +140,11 @@ Here's a side-by-side comparison of videos without and with a poster image
 &ndash; we've made the poster image grayscale to prove it's not the video:
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="mdl-cell mdl-cell--6-col">
     <img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png">
   </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="mdl-cell mdl-cell--6-col">
     <img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png">
   </div>
 </div>
