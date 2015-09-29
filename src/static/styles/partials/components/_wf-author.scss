@@ -4,7 +4,7 @@
 $author-img-height: $base-line * 1.5;
 
 .wf-author__container {
-  display: flex;
+  display: none;
 
   flex-direction: column;
 
@@ -59,4 +59,10 @@ $author-img-height: $base-line * 1.5;
   @include typo-caption;
 
   line-height: $author-img-height;
+}
+
+@media screen and (min-width: 450px) {
+  .wf-author__container {
+    display: flex;
+  }
 }

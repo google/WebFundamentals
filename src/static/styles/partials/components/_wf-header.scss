@@ -1,14 +1,30 @@
+@media screen and (max-width: 1024px) {
+  .wf-header__bottom-row {
+    padding: 0 $layout-header-desktop-indent 0 $layout-header-desktop-indent;
+  }
+}
+
+.wf-header-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  flex-shrink: initial;
+}
+
 .wf-header__bottom-row {
   height: $base-line * 4;
 }
 
 .wf-header__search-container {
+  width: $base-line * 2;
+  height: $base-line * 2;
   padding: 0;
-
 }
 
 .mdl-textfield .mdl-button.wf-header__search-btn {
   bottom: 0;
+  left: 0;
 }
 
 .wf-header__search-expanding-container {
