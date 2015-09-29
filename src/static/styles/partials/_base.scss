@@ -23,6 +23,51 @@ body {
   word-wrap: break-word;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $base-line;
+  margin-bottom: $base-line / 4;
+
+  // Why is this needed?
+  clear: both;
+}
+
+h1 {
+  @include typo-display-2;
+}
+
+h2 {
+  @include typo-display-1;
+}
+
+h3 {
+  @include typo-headline;
+}
+
+h4 {
+  @include typo-title;
+}
+
+h5 {
+  @include typo-subhead-2;
+}
+
+h6 {
+  @include typo-subhead($colorContrast: true);
+}
+
+p, ul, ol, dt {
+  @include typo-body-1;
+
+  // Bumps font up by 2 pixels
+  font-size: 16px;
+
+  margin-bottom: $base-line;
+}
+
+dt {
+  margin-bottom: 0em;
+}
+
 img, video {
   max-width: 100%;
   height: auto;
@@ -30,6 +75,7 @@ img, video {
 
 li {
   line-height: $base-line;
+  margin-bottom: $base-line / 2;
 }
 
 pre {
