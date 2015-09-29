@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Analyzing critical rendering path performance"
-description: "TODO"
+description: "Learn to identify and resolve critical rendering path performance bottlenecks."
 published_on: 2014-04-01
 updated_on: 2014-04-28
 order: 7

@@ -1,7 +1,6 @@
 ---
 layout: shared/narrow
 title: "Run the sample app"
-description: "TODO"
 notes:
   styling:
     - Styling will come later
