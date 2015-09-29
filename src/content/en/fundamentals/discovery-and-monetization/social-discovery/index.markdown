@@ -32,23 +32,23 @@ and feel more confident they'll like what they find when they have an early
 preview.
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="imgs/gplus-snippet-1.png" srcset="imgs/gplus-snippet-1.png 1x,
-       imgs/gplus-snippet-1-2x.png 2x" />
-      <figcaption>Without the proper mark up, only the page title is
-       included.</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
-       imgs/gplus-snippet-2-2x.png 2x" />
-      <figcaption>With the appropriate markup, the correct title, a short
-       description and an image are included. Adding these items can help
-       increase engagement.</figcaption>
-    </figure>
-  </div>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
+      imgs/gplus-snippet-2-2x.png 2x" />
+    <figcaption class="wf-figcaption-good">
+      With the appropriate markup, the correct title, a short
+      description and an image are included. Adding these items can help
+      increase engagement.
+    </figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="imgs/gplus-snippet-1.png" srcset="imgs/gplus-snippet-1.png 1x,
+      imgs/gplus-snippet-1-2x.png 2x" />
+    <figcaption class="wf-figcaption-bad">
+      Without the proper mark up, only the page title is
+      included.
+    </figcaption>
+  </figure>
 </div>
 
 When someone on a social network wants to share your website with his friends,
