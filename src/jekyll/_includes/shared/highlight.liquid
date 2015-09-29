@@ -15,25 +15,3 @@ TODO: Verify all strings are localized
   </ul>
   {% endif %}
 </div>
-
-{% comment %}
-<div class="wf-highlight{% if include.position %} wf-highlight--{{ include.position }}{% endif %}{% if include.type %} wf-highlight--{{ include.type }}{% endif %}">
-  <div class="wf-highlight__container">
-    <div class="wf-highlight__content">
-      <p class="wf-highlight__title"> {{ include.title }}</p>
-
-      {% if include.text %}
-        <p class="wf-highlight__text"> {{ include.text }} </p>
-      {% endif %}
-
-      {% if include.list %}
-        <ul class="wf-highlight__list">
-        {% for item in include.list %}
-          <li class="wf-highlight__list-item">{{ item }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
-  </div>
-</div>
-{% endcomment %}

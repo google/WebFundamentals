@@ -43,6 +43,37 @@ This publishes a table of contents for the current page
 
 {% include shared/toc.liquid %}
 
+## Takeaways
+
+The takeaway include is used to highlight important parts of a doc
+
+<pre>{% raw %}{% include shared/takeaway.liquid list=page.key-takeaways.example %}{% endraw %}</pre>
+
+{% include shared/takeaway.liquid list=page.key-takeaways.example %}
+
+You can define what is printed by adding varaibles to the YAML of the page like so:
+
+{% highlight text %}
+key-takeaways:
+  example:
+    - Always use a viewport.
+    - Always start with a narrow viewport first and scale out.
+    - Base your breakpoints off when you need to adapt the content.
+    - Create a high-level vision of your layout across major breakpoints.
+{% endhighlight %}
+
+## Related Guides
+
+<pre>{% raw %}{% include shared/related_guides.liquid list=page.related-guides.example %}{% endraw %}</pre>
+
+{% include shared/related_guides.liquid list=page.related-guides.example %}
+
+## Section Table of Contents
+
+<pre>{% raw %}{% include fundamentals/section_toc.liquid %}{% endraw %}</pre>
+
+{% include fundamentals/section_toc.liquid %}
+
 ## Highlight
 
 The highlight tag will simply run the code inside the tag through Pygments, a
@@ -76,28 +107,3 @@ if (navigator.onLine) {
 - css
 - http
 - bash
-
-## Takeaways
-
-The takeaway include is used to highlight important parts of a doc
-
-<pre>{% raw %}{% include shared/takeaway.liquid list=page.key-takeaways.example %}{% endraw %}</pre>
-
-{% include shared/takeaway.liquid list=page.key-takeaways.example %}
-
-You can define what is printed by adding varaibles to the YAML of the page like so:
-
-{% highlight text %}
-key-takeaways:
-  example:
-    - Always use a viewport.
-    - Always start with a narrow viewport first and scale out.
-    - Base your breakpoints off when you need to adapt the content.
-    - Create a high-level vision of your layout across major breakpoints.
-{% endhighlight %}
-
-## Related Guides
-
-<pre>{% raw %}{% include shared/related_guides.liquid list=page.related-guides.example %}{% endraw %}</pre>
-
-{% include shared/related_guides.liquid list=page.related-guides.example %}
