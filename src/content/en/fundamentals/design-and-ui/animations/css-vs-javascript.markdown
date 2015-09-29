@@ -33,9 +33,7 @@ Most basic animations can be created with either CSS or JavaScript, but the amou
 * **Use JavaScript when you need significant control over your animations.** The Web Animations API is the standards-based approach, available today in Chrome and Opera. This provides real objects, ideal for complex object-oriented applications. JavaScript is also useful when you need to stop, pause, slow-down or reverse.
 * **Use `requestAnimationFrame` directly when you want to orchestrate an entire scene by hand.** This is an advanced JavaScript approach, but can be useful if you're building a game or drawing to a HTML canvas.
 
-<div class="media media--video">
-  <iframe src="https://www.youtube.com/embed/WaNoqBAp8NI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
+{% ytvideo WaNoqBAp8NI %}
 
 Alternatively, if you're already using a JavaScript framework that includes animation functionality, such as via jQuery's [`.animate()`](http://api.jquery.com/animate/) method or [GreenSock's TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), then you may find it more convenient overall to stick with that for your animations.
 

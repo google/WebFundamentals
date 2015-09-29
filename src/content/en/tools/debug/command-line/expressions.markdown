@@ -49,7 +49,7 @@ If there's a single suggestion,
 
 Use the following shortcuts to select elements:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th>Shortcut</th>
