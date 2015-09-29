@@ -23,17 +23,7 @@ $article-nav-icon-size: $base-line;
   flex: 1;
 }
 
-.wf-article-nav__prev{
-  .wf-article-nav__row {
-    // This accounts for height of hidden
-    // subtitle
-    padding-top: $base-line;
-  }
-
-  .wf-article-nav__link {
-    text-align: left;
-    margin-left: auto;
-  }
+.wf-article-nav__prev, .wf-article-nav__next {
 
   .wf-article-nav__subtitle {
     display: none;
@@ -44,8 +34,22 @@ $article-nav-icon-size: $base-line;
   }
 }
 
+.wf-article-nav__prev {
+  .wf-article-nav__link {
+    text-align: left;
+    margin-left: auto;
+  }
+}
+
 .wf-article-nav__next {
-  flex: 3;
+  .wf-article-nav__link {
+    text-align: right;
+    margin-right: auto;
+  }
+}
+
+/**.wf-article-nav__next {
+  flex: 1;
 
   .wf-article-nav__link {
     text-align: right;
@@ -53,13 +57,18 @@ $article-nav-icon-size: $base-line;
   }
 
   .wf-article-nav__subtitle {
+    display: none;
     padding-right: $article-nav-icon-size + ($base-line / 2);
+  }
+
+  .wf-article-nav__link-title {
+    display: none;
   }
 
   .wf-article-nav__icon {
     padding-left: ($base-line / 2);
   }
-}
+}**/
 
 .wf-article-nav__link {
   display: block;
@@ -125,7 +134,7 @@ $article-nav-icon-size: $base-line;
     max-width: $max-content-width / 2;
   }
 
-  .wf-article-nav__prev{
+  .wf-article-nav__prev, .wf-article-nav__next {
     .wf-article-nav__row {
       padding-top: 0;
     }
