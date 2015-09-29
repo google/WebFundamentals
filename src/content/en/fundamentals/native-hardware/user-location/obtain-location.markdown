@@ -17,19 +17,19 @@ key-takeaways:
 ---
 
 <p class="intro">
-  The Geolocation API lets you find out where the user is, always with the user's consent. This functionality could be used as part of user queries, for example, to guide someone to a destination point. It could also be used for 'geo-tagging' some content the user has created, for example, to mark where a photo was taken.
+  The Geolocation API lets you find out where the user is, with the user's consent. 
+  The API is device-agnostic; it doesn't care how the browser determines
+  location, so long as clients can request and receive location data in a
+  standard way. The underlying mechanism might be via GPS, wifi, or simply
+  asking the user to enter their location manually. Since any of these lookups
+  is going to take some time, the API is asynchronous; you pass it a callback
+  method whenever you request a location.
 </p>
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.geo %}
 
-The API is device-agnostic; it doesn't care how the browser determines
-location, so long as clients can request and receive location data in a
-standard way. The underlying mechanism might be via GPS, wifi, or simply
-asking the user to enter their location manually. Since any of these lookups
-is going to take some time, the API is asynchronous; you pass it a callback
-method whenever you request a location.
 
 ## When to use Geolocation
 
