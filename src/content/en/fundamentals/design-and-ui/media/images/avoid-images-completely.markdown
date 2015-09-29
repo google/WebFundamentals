@@ -21,7 +21,7 @@ key-takeaways:
 
 {% include shared/takeaway.liquid list=page.key-takeaways.avoid-images %}
 
-{% include fundamentals/udacity_player.liquid title="Learn about including images and graphics without external files" videos="%5B%7B%22id%22%3A+%22xqXQ7nMpzIk%22%7D%2C+%7B%22id%22%3A%22UUJCCEVTe-Q%22%7D%2C+%7B%22id%22%3A+%22Wi8EpUqMnjc%22%7D%2C+%7B%22id%22%3A%22eMtcF7f9PUU%22%7D%2C+%7B%22id%22%3A%22eF_YtTvwDlM%22%7D%2C+%7B%22id%22%3A%22s0_LgpQ9z60%22%7D%2C+%7B%22id%22%3A%22FJ_Dq6FQVwg%22%7D%2C+%7B%22id%22%3A%22Ne-kAmJX9zM%22%7D%2C+%7B%22id%22%3A%22tbia1AIIoBs%22%7D%5D" %}
+
 
 ## Place text in markup, instead of embedded in images
 

@@ -223,7 +223,7 @@ details, and [study participants](/web/fundamentals/principles/research-study.ht
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="J. Crews website with expandable product image">
-  <figcaption>J. Crew's website with expandable product image.</figcaption>
+  <figcaption class="wf-figcaption-good">J. Crew's website with expandable product image.</figcaption>
 </figure>
 
 A good example of tappable, expandable images is provided by the J. Crew site.  
