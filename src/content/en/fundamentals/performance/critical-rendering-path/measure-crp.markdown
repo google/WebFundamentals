@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-description: "TODO"
+description: "Learn to measure the critical rendering path."
 title: "Measuring the critical rendering path with Navigation Timing"
 published_on: 2014-04-01
 updated_on: 2014-09-18

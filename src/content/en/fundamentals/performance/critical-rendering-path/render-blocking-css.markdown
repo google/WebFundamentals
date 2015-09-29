@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Render blocking CSS"
-description: "TODO"
+description: "By default CSS is treated as a render blocking resource, learn how to prevent it from blocking rendering."
 published_on: 2014-04-01
 updated_on: 2014-09-18
 order: 4

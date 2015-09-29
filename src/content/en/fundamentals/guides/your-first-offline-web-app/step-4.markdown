@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Build the starter app"
-description: "TODO"
+
 notes:
   styling:
     - Styling will come later
