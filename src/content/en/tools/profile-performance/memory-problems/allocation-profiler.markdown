@@ -42,9 +42,7 @@ The tool takes heap snapshots periodically throughout the recording (as frequent
 To begin using the allocation profiler:
 
 1. Make sure you have the latest [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html).
-
 2. Open the Developer Tools and click on the gear icon in the lower right.
-
 3. Now, open the Profiler panel, you should see a profile called "Record Heap Allocations"
 
 ![Record heap allocations profiler](imgs/record-heap.png)

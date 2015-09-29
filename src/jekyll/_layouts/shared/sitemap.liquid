@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in page.sitemap_pages %}
+  <url>
+    <loc>{{ page.canonical_url }}</loc>
+    <lastmod>{% if page.updated_on %}{{ page.updated_on }}{% else %}{{ page.published_on }}{% endif %}</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  {% endfor %}
+</urlset>

@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-pages-list
 title: "Critical rendering path"
-description: "TODO - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
+description: "Optimizing the critical rendering path by prioritizing the display of content that relates to the primary action the user wants to take on a page."
 published_on: 2014-04-01
 updated_on: 2014-04-28
 order: 1
@@ -16,16 +16,18 @@ udacity:
   image: images/crp-udacity.png
 ---
 
-<p class="intro">
-  Optimizing the critical rendering path is critical for improving performance
-  of our pages: our goal is to prioritize and display the content that relates
-  to the primary action the user wants to take on a page.
-</p>
-
-Delivering a fast web experience requires a lot of work by the browser. Most of
-this work is hidden from us as web developers: we write the markup, and a nice
-looking page comes out on the screen. But how exactly does the browser go from
-consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <p>{{page.description}}</p>
+    <p>
+      Delivering a fast web experience requires a lot of work by the browser. Most of
+      this work is hidden from us as web developers: we write the markup, and a nice
+      looking page comes out on the screen. But how exactly does the browser go from
+      consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?
+    </p>
+  </div>
+  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+</div>
 
 Optimizing for performance is all about understanding what happens in these
 intermediate steps between receiving the HTML, CSS, and JavaScript bytes and
@@ -42,3 +44,5 @@ updates is the same, just done in a continuous loop and ideally at 60 frames
 per second! However, let's not get ahead of ourselves just yet. First, let's
 take a quick, ground-up overview of how the browser goes about displaying a
 simple page.
+
+

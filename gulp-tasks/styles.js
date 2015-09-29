@@ -4,7 +4,6 @@ var gulp = require('gulp');
 var del = require('del');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
-var googleWebFonts = require('./custom-plugins/gulp-google-web-fonts');
 
 // Browser support for autoprefix
 var AUTOPREFIXER_BROWSERS = [
@@ -18,16 +17,6 @@ var AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10'
 ];
-
-gulp.task('inline-fonts', function() {
-  return gulp.src(GLOBAL.WF.src.styles + '/partials/_google-fonts.scss')
-    .pipe(googleWebFonts({
-      fontsurl: 'https://fonts.googleapis.com/css?family=Roboto',
-      replaceAll: true,
-      sassVariant: true
-    }))
-    .pipe(gulp.dest(GLOBAL.WF.src.styles + '/partials/'));
-});
 
 // This function is used by generate-dev-css and generate-prod-css
 function compileSassAutoprefix(genSourceMaps) {
@@ -66,7 +55,6 @@ gulp.task('generate-dev-css', function(cb) {
   runSequence(
     'styles:clean',
     [
-      'inline-fonts',
       'compile-dev-css',
     ],
     cb);
@@ -80,7 +68,6 @@ gulp.task('generate-prod-css', ['styles:clean'], function(cb) {
   runSequence(
     'styles:clean',
     [
-      'inline-fonts',
       'compile-prod-css',
     ],
     cb);

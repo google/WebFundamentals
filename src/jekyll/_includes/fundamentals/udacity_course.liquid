@@ -1,18 +1,4 @@
-{% comment %}
-Embeds a image, description and link to a specific Udacity course on the page.
-TODO: Apply and clean up styles
-TODO: Verify all strings are localized
-{% endcomment %}
-<div class="udacity-course">
-  <div>
-    <a href="https://www.udacity.com/course/{{ include.uid }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index">
-      <img src="{{include.image}}" alt="{{ include.title }}">
-    </a>
-  </div>
-  <div>
-    <h3>Udacity: {{include.title}}</h3>
-    <p>{{include.description}}</p>
-    <a href="https://www.udacity.com/course/{{ include.uid }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index" class="cta--primary">{{"view_course" | localize_string}}</a>
-  </div>
-</div>
+{% capture linkText %}{{"view_course" | localize_string}}{% endcapture %}
+{% capture linkUrl %}https://www.udacity.com/course/{{ include.uid }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index{% endcapture %}
 
+{% include shared/base_card.liquid title=include.title text=include.description linkHref=linkUrl linkText=linkText imgUrl=include.image %}

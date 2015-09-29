@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Active mixed content example</title>
+    <!-- // [START snippet1] -->
+    <!-- An insecure script file loaded on a secure page -->
+    <script src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.js"></script>
+  
+    <!-- An insecure stylesheet loaded on a secure page -->
+    <link href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/style.css" rel="stylesheet">
+
+    <style>
+      .insecure-background {
+        /* An insecure resources loaded from a style property on a secure page, this can   
+           happen in many places including, @font-face, cursor, background-image, and so on. */
+        background: url('http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg') no-repeat;
+      }
+    </style>
+    <!-- // [END snippet1] -->
+
+    <style>
+      .insecure-style-holder span {
+        color: #fff;
+      }
+      .insecure-background {
+        color: #000;
+        font-weight: bold;
+        background-position: left center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 140px;
+      }
+      iframe {
+        width: 400px;
+        height: 300px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div role="main">
+      <h1>
+        Active mixed content!
+      </h1>
+      <p>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/active-mixed-content.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/active-mixed-content.html">HTTPS</a>
+      </p>
+      <p>
+        Several examples of active mixed content. When viewed over HTTPS most browsers block this content and display errors in the JavaScript console.
+      </p>
+      <div class="insecure-style-holder">
+        <span style="ba">Insecure style loaded</span>
+      </div>
+      <div class="insecure-background">
+        Loading insecure background here...
+      </div>
+
+      <p>Loading insecure iframe...</p>
+      <!-- // [START snippet2] -->
+      <!-- An insecure iframed page loaded on a secure page -->
+      <iframe src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html"></iframe>
+      
+      <!-- Flash resources also qualify as active mixed content and pose a
+      serious security risk. Be sure to look for <object> tags with type set
+      to "application/x-shockwave-flash", and an http:// data attribute. -->
+      <!-- <object type="application/x-shockwave-flash" data="http://..."></object> -->
+
+      <script>
+        // An insecure resource loaded using XMLHttpRequest
+        var request = new XMLHttpRequest();
+        request.addEventListener('load', function() {
+          var jsonData = JSON.parse(request.responseText);
+          document.getElementById('output').innerHTML += '<br>' + jsonData.data;
+        });
+        request.open("GET", "http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-data.js", true);
+        request.send();
+      </script>
+      <!-- // [END snippet2] -->
+      <div id="output">Waiting for insecure script to run...</div>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>

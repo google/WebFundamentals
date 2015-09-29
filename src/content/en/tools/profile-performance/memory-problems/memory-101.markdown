@@ -80,7 +80,6 @@ Whatever is not reachable from the root gets GC.
 The heap is a network of interconnected objects. In the mathematical world, this structure is called a *graph* or memory graph. A graph is constructed from *nodes* connected by means of *edges*, both of which are given labels.
 
 * **Nodes** (*or objects*) are labelled using the name of the *constructor* function that was used to build them.
-
 * **Edges** are labelled using the names of *properties*.
 
 Learn [how to record a profile using the Heap Profiler](/web/tools/profile-performance/memory-problems/heap-snapshots).
@@ -127,13 +126,11 @@ They cannot reference other values and are always leafs or terminating nodes.
 **Numbers** can be stored as either:
 
 * an immediate 31-bit integer values called **small integers** (*SMIs*), or
-
 * heap objects, referred to as **heap numbers**. Heap numbers are used for storing values that do not fit into the SMI form, such as *doubles*, or when a value needs to be *boxed*, such as setting properties on it.
 
 **Strings** can be stored in either:
 
 * the **VM heap**, or
-
 * externally in the **renderer’s memory**. A *wrapper object* is created and used for accessing external storage where, for example, script sources and other content that is received from the Web is stored, rather than copied onto the VM heap.
 
 Memory for new JavaScript objects is allocated from a dedicated JavaScript heap (or **VM heap**). These objects are managed by V8's garbage collector and therefore, will stay alive as long as there is at least one strong reference to them.
@@ -149,7 +146,6 @@ For example, if you concatenate **a** and **b**, you get a string (a, b) which r
 A typical JavaScript object can be one of two array types used for storing:
 
 * named properties, and
-
 * numeric elements
 
 In cases where there is a very small number of properties, they can be stored internally in the JavaScript object itself.

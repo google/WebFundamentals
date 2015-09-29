@@ -1,7 +1,29 @@
+// MDL Table Overrides
 .mdl-data-table {
-  white-space: inherit;
+  // We want the text to wrap
+  white-space: normal;
+
+  // MDL defines no line height or margin
+  line-height: $base-line;
+  margin-bottom: $base-line;
 }
 
 .mdl-data-table td, .mdl-data-table th {
+  // MDL text-aligns right by default
   text-align: left;
+  line-height: $base-line * 0.75;
+
+  // Padding in MDL table is weird - some padding but it's consistent.
+  padding-bottom: $base-line / 2;
+  padding-top: $base-line / 2;
+}
+
+
+
+
+
+
+// TODO: Where is this applied @pbakaus?
+ul ul {
+  margin-bottom: 0;
 }

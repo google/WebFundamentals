@@ -263,6 +263,6 @@ JavaScript to only show invalid styling when the user has visited the field.
 {% include_code src=_code/order.html snippet=invalidstyle lang=css %}
 {% include_code src=_code/order.html snippet=initinputs lang=javascript %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
+{% include shared/remember.liquid title="Important" list=page.notes.show-all-errors %}
 
 

@@ -38,7 +38,7 @@ The majority of time users spend in your site isn't waiting for it to load,
 but waiting for it to respond while using it.
 Understand how users perceive performance delays:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
       <th>Delay</th>
       <th>User Reaction</th>
@@ -132,7 +132,7 @@ You don't have to load everything in under 1 second to produce the perception of
 
 To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline tool](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/timeline-tool?hl=en) to record user actions. Then check the recording times in the Timeline against these key rail metrics:
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
       <th>RAIL Step</th>
       <th>Key Metric</th>

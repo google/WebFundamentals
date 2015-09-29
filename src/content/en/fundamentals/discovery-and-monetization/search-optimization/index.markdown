@@ -9,4 +9,6 @@ updated_on: 2014-11-05
 order: 1
 ---
 
-TODO
+<p class="intro">
+  {{page.description}}
+</p>

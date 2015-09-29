@@ -8,12 +8,14 @@
 
 .wf-highlight-list__title {
   @include typo-subhead();
+  padding: 0;
   margin: 0;
   color: $text-grey-color;
 }
 
 .wf-highlight-list__list {
   margin: 0;
+  margin-top: 0.3em;
   padding-left: $base-line;
   padding-right: $base-line;
 
@@ -23,7 +25,9 @@
 .wf-highlight-list__list li {
   @include typo-title();
 
-  margin: ($base-line / 2) 0;
+  font-size: 16px;
+  margin-bottom: 0.3em;
+  line-height: 1.625;
 
   & > a {
     text-decoration: none;

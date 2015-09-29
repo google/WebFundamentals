@@ -17,8 +17,6 @@ key-takeaways:
 The fastest and best optimized resource is a resource not sent. Have you audited your resources recently? You should, and you should do so periodically to ensure that each resource is helping deliver a better user experience.
 </p>
 
-{% include shared/toc.liquid %}
-
 {% include shared/takeaway.liquid list=page.key-takeaways.eliminate-downloads %}
 
 The fastest and best optimized resource is a resource not sent. Of course, this may seem like an obvious statement, but in practice it is all too often overlooked: as a performance engineer, it is your job to always maintain a critical eye for any opportunity to eliminate unnecessary resources from your application. It’s a good practice to question, and periodically revisit, the implicit and explicit assumptions with your team. A few examples:
