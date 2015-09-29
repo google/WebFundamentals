@@ -14,9 +14,9 @@ $color-accent: unquote("rgb(#{$palette-light-blue-400})");
 
 // Disables the standard styles on h1 - h6 elements
 $target-elements-directly: false;
-// Bump up font size by 2px;
+// Bump up font size by 2px - needed to add !default to our instance
 $data-table-font-size: 15px;
-// Bump up font size by 3px;
+// Bump up font size by 3px - needed to add !default to our instance
 $data-table-header-font-size: 15px;
 // Bump up font size by 3px;
 $card-supporting-text-font-size: 16px;

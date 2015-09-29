@@ -518,8 +518,8 @@ $grid-cell-default-columns: $grid-phone-columns !default;
 
 /* DATA TABLE */
 
-$data-table-font-size: 13px;
-$data-table-header-font-size: 12px;
+$data-table-font-size: 13px !default;
+$data-table-header-font-size: 12px !default;
 
 $data-table-header-color: rgba(#000, 0.54);
 $data-table-divider-color: rgba(#000, 0.12);
