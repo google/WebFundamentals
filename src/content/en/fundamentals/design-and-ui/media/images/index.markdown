@@ -15,11 +15,9 @@ udacity:
   image: img/udacity-ri.jpg
 ---
 
-## Responsive images
-
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <p>
+    <p class="intro">
       Responsive web design means that not only can our layouts change based on device
       characteristics, but content as well.  For example, on high resolution (2x)
       displays, high resolution graphics are needed to ensure sharpness.  An image
