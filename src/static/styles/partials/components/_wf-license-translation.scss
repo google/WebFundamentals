@@ -1,0 +1,31 @@
+.wf-license-translation {
+  display: flex;
+
+  flex-direction: row;
+
+  margin-top: $base-line;
+  margin-bottom: $base-line;
+
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: ($base-line / 2);
+  padding-right: ($base-line / 2);
+
+  position: relative;
+
+  .wf-btn__small {
+    flex-shrink: 0;
+  }
+}
+
+.wf-cc-license {
+  @include typo-caption($colorContrast: true);
+
+  line-height: $base-line;
+  text-align: left;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}

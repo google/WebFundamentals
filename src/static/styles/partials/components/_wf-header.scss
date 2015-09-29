@@ -1,6 +1,12 @@
 @media screen and (max-width: 1024px) {
   .wf-header__bottom-row {
-    padding: 0 $layout-header-desktop-indent 0 $layout-header-desktop-indent;
+    padding-left: $layout-header-desktop-indent;
+  }
+}
+
+.wf-header__small-btn {
+  svg {
+    fill: white;
   }
 }
 

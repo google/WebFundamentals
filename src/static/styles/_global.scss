@@ -7,6 +7,7 @@
 @import "../third_party/material-design-lite/src/data-table/data-table";
 @import "../third_party/material-design-lite/src/textfield/textfield";
 @import "../third_party/material-design-lite/src/card/card";
+@import "../third_party/material-design-lite/src/menu/menu";
 
 // Leave these classes last
 @import "../third_party/material-design-lite/src/shadow/shadow";
@@ -17,8 +18,10 @@
 @import "partials/base";
 @import "partials/utils";
 @import "partials/syntax";
+@import "partials/components/wf-btn";
 @import "partials/components/wf-footer";
 @import "partials/components/wf-header";
+@import "partials/components/wf-license-translation";
 @import "partials/components/wf-author";
 @import "partials/components/wf-nav-drawer";
 @import "partials/components/wf-toc";
