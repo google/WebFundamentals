@@ -83,7 +83,7 @@ in [Speed Up JavaScript Execution](/web/tools/profile-performance/rendering-tool
 
 The following table describes some common JavaScript problems and potential solutions:
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
       <th>Problem</th>
       <th>Example</th>
@@ -146,7 +146,7 @@ If you're using CSS properties that trigger everything, consider switching to a 
 
 The following table describes some common style problems and potential solutions:
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
       <th>Problem</th>
       <th>Example</th>
@@ -192,7 +192,7 @@ Look for a pattern of multiple forced synchronous warnings:
 
 The following table describes some common layout problems and potential solutions:
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
       <th>Problem</th>
       <th>Example</th>
@@ -243,7 +243,7 @@ explains how to use Chrome DevTools to track paint issues.
 
 The following table describes some common paint and composite problems and potential solutions:
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
       <th>Problem</th>
       <th>Example</th>

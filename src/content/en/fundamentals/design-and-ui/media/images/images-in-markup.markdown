@@ -151,12 +151,6 @@ how large the browser window is.  For example, the table below shows which
 image the browser would choose:
 
 <table class="mdl-data-table mdl-js-data-table">
-  <colgroup>
-    <col span="1">
-    <col span="1">
-    <col span="1">
-    <col span="1">
-  </colgroup>
   <thead>
     <tr>
       <th data-th="Browser width">Browser width</th>
@@ -253,7 +247,7 @@ significantly.
 See example
 {% endlink_sample %}
 
-{% include shared/remember.liquid title="Important" list=page.remember.compressive %}
+{% include shared/remember.liquid title="Important" list=page.notes.compressive %}
 
 ### JavaScript image replacement
 
