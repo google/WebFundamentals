@@ -202,3 +202,20 @@ blockquote {
   border-left-width: $left-border-callout-width;
   font-size: 1.1em;
 }
+
+
+.wf-figcaption-good {
+  padding: ($base-line / 2) $base-line;
+  margin-bottom: $base-line;
+  border-top-color: #4caf50;
+  border-top-style: solid;
+  border-top-width: $left-border-callout-width * 2;
+}
+
+.wf-figcaption-bad {
+  padding: ($base-line / 2) $base-line;
+  margin-bottom: $base-line;
+  border-top-color: #F44336;
+  border-top-style: solid;
+  border-top-width: $left-border-callout-width * 2;
+}
