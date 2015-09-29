@@ -11,7 +11,7 @@ authors:
   - petelepage
 key-takeaways:
   tldr: 
-    -" Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it."
+    - "Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it."
     - "Always use responsive ad units; if smart sizing isn't enough, switch to advanced mode."
     - "Look for opportunities to integrate ads throughout the content to avoid ad blindness."
     - "Choose text styles that blend, compliment, or contrast your site."
