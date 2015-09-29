@@ -9,7 +9,7 @@ authors:
   - mattgaunt
 key-takeaways:
   add-states:
-    - "Make your site feel snappy and responsive&colon; change the UI for each state :hover, :active and :focus."
+    - "Make your site feel snappy and responsive&colon; change the UI for each state <code>:hover</code>, <code>:active</code> and <code>:focus</code>."
     - "Don’t override a browser’s default responses to touch and focus unless you are implementing your own UI changes."
     - "Disable text selection on elements users will touch, unless there’s a good reason why users might need to copy / select the text."
 notes:
@@ -22,6 +22,8 @@ notes:
 <p class="intro">
   Touchscreens are available on more and more devices, ranging from phones up to desktop screens. When your users choose to interact with your UI, your app should respond to their touch in intuitive and beautiful ways.
 </p>
+
+{% include shared/toc.liquid %}
 
 ## Add Touch States
 
