@@ -188,5 +188,8 @@ blockquote {
 }
 
 .intro {
-  font-size: 1.2em;
+  @include typo-title($usePreferred: false);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: $base-line * 2;
 }
