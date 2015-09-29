@@ -180,17 +180,17 @@ page.
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <h2 class="text-danger text-center">NO</h2>
+    <h2>YES</h2>
+{% highlight css %}div.fullWidth {
+  width: 100%;
+}{% endhighlight %}
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <h2>NO</h2>
 {% highlight css %}div.fullWidth {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
-}{% endhighlight %}
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
 }{% endhighlight %}
   </div>
 </div>

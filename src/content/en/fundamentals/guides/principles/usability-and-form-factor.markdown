@@ -13,15 +13,15 @@ Delight your mobile users with small things that enhance their experiences.
 
 ## 19. Optimize your entire site for mobile
 
-Use a [responsive layout](/web/fundamentals/design-and-ui/responsive/) that changes based on the size and capabilities of the user’s device. Study participants found sites with a mix of desktop and mobile-optimized pages even harder to use than desktop-only sites.
+Use a [responsive layout]({{site.fundamentals}}/design-and-ui/responsive/) that changes based on the size and capabilities of the user’s device. Study participants found sites with a mix of desktop and mobile-optimized pages even harder to use than desktop-only sites.
 
 ## 20. Don't make users pinch-to-zoom
 
-Users are comfortable with scrolling sites vertically, but not horizontally. Avoid large, fixed-width elements. Use [CSS media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries) to apply different stylings for different screens. Don’t create content that only displays well at a particular [viewport width](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport). Sites that force users to horizontally scroll fail the [Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/), which may negatively impact their search rankings.
+Users are comfortable with scrolling sites vertically, but not horizontally. Avoid large, fixed-width elements. Use [CSS media queries]({{site.fundamentals}}/design-and-ui/responsive/fundamentals/use-media-queries) to apply different stylings for different screens. Don’t create content that only displays well at a particular [viewport width]({{site.fundamentals}}/design-and-ui/responsive/fundamentals/set-the-viewport). Sites that force users to horizontally scroll fail the [Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/), which may negatively impact their search rankings.
 
 ## 21. Make product images expandable
 
-Retail customers expect sites to let them [view high resolution closeups](/web/fundamentals/design-and-ui/media/images/) of products. Study participants got frustrated when they weren’t able to see what they were buying.
+Retail customers expect sites to let them [view high resolution closeups]({{site.fundamentals}}/design-and-ui/media/images/) of products. Study participants got frustrated when they weren’t able to see what they were buying.
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
@@ -59,7 +59,7 @@ When study participants saw an option for a ‘full site’ (i.e. desktop site) 
 
 ## 25. Be clear why you need a user's location
 
-Users should always understand why you’re asking for their [location](/web/fundamentals/native-hardware/user-location/). Study participants trying to book a hotel in another city became confused when a travel site detected their location and offered hotels in their current city instead. Leave location fields blank by default, and let users choose to populate them through a clear call-to-action like “Find Near Me”.
+Users should always understand why you’re asking for their [location]({{site.fundamentals}}/native-hardware/user-location/). Study participants trying to book a hotel in another city became confused when a travel site detected their location and offered hotels in their current city instead. Leave location fields blank by default, and let users choose to populate them through a clear call-to-action like “Find Near Me”.
 
 
 <div class="mdl-grid">

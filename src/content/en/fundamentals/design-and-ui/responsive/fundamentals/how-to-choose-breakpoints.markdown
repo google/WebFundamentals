@@ -118,13 +118,15 @@ characters per line (about  8 to 10 words in English). Thus each time the width
 of a text block grows past about 10 words, a breakpoint should be considered.
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
+  <figure class="mdl-cell mdl-cell--4-col">
     <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
+    <figcaption>Before adding minor breakpoints.</figcaption>
+  </figure>
 
-  <div class="mdl-cell mdl-cell--6-col">
+  <figure class="mdl-cell mdl-cell--8-col">
     <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
+    <figcaption>After adding minor breakpoints.</figcaption>
+  </figure>
 </div>
 
 Let's take a deeper look at the above blog post example.  On smaller screens,

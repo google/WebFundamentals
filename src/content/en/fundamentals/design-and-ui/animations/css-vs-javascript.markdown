@@ -60,7 +60,7 @@ Below is some CSS that will move an element 100px in both the X & Y axes. It's d
 
 {% link_sample _code/box-move-simple.html %}See sample{% endlink_sample %}
 
-Besides the transition's duration there are options for the easing, which is essentially how the animation feels. You can get more on that in the [“The Basics of Easing”](the-basics-of-easing.html) guide.
+Besides the transition's duration there are options for the easing, which is essentially how the animation feels. You can get more on that in the [The Basics of Easing](the-basics-of-easing) guide.
 
 If, as in the above snippet, you create separate CSS classes to manage your animations, you can then use JavaScript to toggle each animation on and off:
 
@@ -83,7 +83,7 @@ function onTransitionEnd() {
 
 In addition to using CSS transitions, you can also use CSS animations, which will allow you to have much more control over individual animation keyframes, durations and iterations.
 
-{% include shared/remember.liquid title="Note" list=page.notes.keyframes %}
+{% include shared/remember.liquid list=page.notes.keyframes %}
 
 You  can, for example, animate the box in the same way with transitions, but have it animate without any user interactions like clicking, and with infinite repetitions. You can also change multiple properties at the same time:
 
