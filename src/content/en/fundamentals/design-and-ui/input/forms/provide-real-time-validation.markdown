@@ -34,11 +34,13 @@ comments:
   Real-time data validation doesn't just help to keep your data clean, but it also helps improve the user experience.  Modern browsers have several built-in tools to help provide real-time data validation and may prevent the user from submitting an invalid form.  Visual cues should be used to indicate whether a form has been completed properly.
 </p>
 
+{% include shared/toc.liquid %}
+
 {% include shared/takeaway.liquid list=page.key-takeaways.provide-real-time-validation %}
 
-### Use these attributes to validate input
+## Use these attributes to validate input
 
-#### The `pattern` attribute
+### The `pattern` attribute
 
 The `pattern` attribute specifies a [regular
 expression](http://en.wikipedia.org/wiki/Regular_expression) used to validate an
@@ -50,7 +52,7 @@ this:
 <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 {% endhighlight %}
 
-##### Common regular expression patterns
+#### Common regular expression patterns
 
 <table class="mdl-data-table mdl-js-data-table">
   <thead>
@@ -95,7 +97,7 @@ this:
   </tbody>
 </table>
 
-#### The `required` attribute
+### The `required` attribute
 
 If the `required` attribute is present, then the field must contain a value before
 the form can be submitted. For example, to make the zip code required, we'd
@@ -105,7 +107,7 @@ simply add the required attribute:
 <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 {% endhighlight %}
 
-#### The `min`, `max` and `step` attributes
+### The `min`, `max` and `step` attributes
 
 For numeric input types like number or range as well as date/time inputs, you
 can specify the minimum and maximum values, as well as how much they should each
@@ -117,7 +119,7 @@ of 0.5
 <input type="number" min="1" max="13" step="0.5" ...>
 {% endhighlight %}
 
-#### The `maxlength` attribute
+### The `maxlength` attribute
 
 The `maxlength` attribute can be used to specify the maximum length of an input or
 textbox and is useful when you want to limit the length of information that the
@@ -128,7 +130,7 @@ you can use the following.
 <input type="text" id="83filename" maxlength="12" ...>
 {% endhighlight %}
 
-#### The `minlength` attribute
+### The `minlength` attribute
 
 The `minlength` attribute can be used to specify the minimum length of an input or
 textbox and is useful when you want to specify a minimum length the user must
@@ -139,7 +141,7 @@ provide. For example, if you want to specify that a file name requires at least
 <input type="text" id="83filename" minlength="8" ...>
 {% endhighlight %}
 
-#### The `novalidate` attribute
+### The `novalidate` attribute
 
 In some cases, you may want to allow the user to submit the form even if it
 contains invalid input. To do this, add the `novalidate` attribute to the form
@@ -155,7 +157,7 @@ JavaScript APIs will still allow you to check if the form validates.
 
 {% include shared/remember.liquid title="Remember" list=page.notes.provide-real-time-validation %}
 
-### Use JavaScript for more complex real-time validation
+## Use JavaScript for more complex real-time validation
 
 When the built-in validation plus regular expressions aren't enough, you can use
 the [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
@@ -194,7 +196,7 @@ reason that an element is invalid:
   </tbody>
 </table>
 
-#### Set custom validation messages
+### Set custom validation messages
 
 If a field fails validation, use `setCustomValidity()` to mark the field invalid
 and explain why the field didn't validate.  For example, a sign up form might
@@ -204,7 +206,7 @@ response.  For example:
 
 {% include_code src=_code/order.html snippet=customvalidation lang=javascript %}
 
-#### Prevent form submission on invalid forms
+### Prevent form submission on invalid forms
 
 Because not all browsers will prevent the user from submitting the form if there
 is invalid data, you should catch the submit event, and use the `checkValidity()`
@@ -212,7 +214,7 @@ on the form element to determine if the form is valid.  For example:
 
 {% include_code src=_code/order.html snippet=preventsubmission lang=javascript %}
 
-### Show feedback in real-time
+## Show feedback in real-time
 
 It's helpful to provide a visual indication on each field that indicates whether
 the user has completed the form properly before they've submitted the form.
