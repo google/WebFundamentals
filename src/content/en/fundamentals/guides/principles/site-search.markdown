@@ -14,13 +14,13 @@ order: 2
 Users looking for information usually turn to search, so the search field should be one of the first things they see on your pages. Don’t hide the search box in a menu.
 
 <div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img src="">
-    <figcaption></figcaption>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/ss-search-good.jpg">
+    <figcaption class="wf-figcaption-good">Do: Make search visible</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img src="">
-    <figcaption></figcaption>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/ss-search-bad.jpg">
+    <figcaption class="wf-figcaption-bad">Don't: Hide search in overflow menus</figcaption>
   </figure>
 </div>
 
@@ -32,11 +32,11 @@ Users don’t scan through multiple pages of results to find what they’re look
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/ss-relevant-good.png" alt="Site with relevant search results">
-    <figcaption>Macy's returns only kids items.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: Macy's returns only kids items.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/ss-relevant-bad.png" alt="Search returning irrelevant results">
-    <figcaption>This site includes results for anything with the word kid in it.</figcaption>
+    <figcaption class="wf-figcaption-bad">Don't: Return results for anything with the word kid in it.</figcaption>
   </figure>
 </div>
 
@@ -45,13 +45,13 @@ Users don’t scan through multiple pages of results to find what they’re look
 Study participants rely on [filters](https://developers.google.com/custom-search/docs/structured_search) to find what they’re looking for, and abandon sites that do not have effective filters. Place filters above search results, and help users by displaying how many results will be returned when a specific filter is applied.
 
 <div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img src="">
-    <figcaption></figcaption>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/ss-filters-good.jpg">
+    <figcaption class="wf-figcaption-good">Do: Make it easy to filter</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img src="">
-    <figcaption></figcaption>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/ss-filters-bad.jpg">
+    <figcaption class="wf-figcaption-bad">Don't: Hide filter functionality.</figcaption>
   </figure>
 </div>
 
@@ -62,7 +62,7 @@ For sites with diverse customer segments, ask a few questions before presenting 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/ss-guide-good.png" srcset="images/ss-guide-good.png 1x, images/ss-guide-good-2x.png 2x" alt="Zappos guides users by asking them what they're looking for.">
-    <figcaption>Do: help users to find what they're looking for by guiding them in the right direction.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: help users to find what they're looking for by guiding them in the right direction.</figcaption>
   </figure>
 </div>
 
