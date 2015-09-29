@@ -12,7 +12,7 @@ notes:
   tree:
     - "Internally to the browser there is a render tree, which is created from the DOM, and is a representation of all the items that need to be drawn to the device’s screen. It contains all the visual information about the elements: colors, dimensions, location, etc. If an element has a style of display: none, however, it won’t be in the render tree. Equally if an element has a pseudo element (:after, :before) then those will not exist in the DOM, but will exist in the render tree."
   csstriggers:
-    - "Want a definitive list of which CSS properties trigger layout, paint, or composite? Check out <a href='http://csstriggers.com/''>CSS Triggers</a>."
+    - "Want a definitive list of which CSS properties trigger layout, paint, or composite? Check out <a href='http://csstriggers.com/'>CSS Triggers</a>."
 key-takeaways:
   - "Layout is normally scoped to the whole document."
   - "The number of DOM elements will affect performance; you should avoid triggering layout wherever possible."

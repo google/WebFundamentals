@@ -14,9 +14,11 @@ notes:
   - "Your users are counting on you to protect them when they visit your website. It is important to fix your mixed content issues to protect <b>all</b> your visitors, including those on older browsers."
 ---
 
-This guide introduces mixed content and the dangers it poses to your website and 
-users. To learn how you can fix mixed content issues, see our next guide on 
-[fixing mixed content](fixing-mixed-content).
+<p class="intro">
+  This guide introduces mixed content and the dangers it poses to your website and 
+  users. To learn how you can fix mixed content issues, see our next guide on 
+  <a href="fixing-mixed-content">fixing mixed content</a>.
+</p>
 
 {% include shared/toc.liquid %}
 
