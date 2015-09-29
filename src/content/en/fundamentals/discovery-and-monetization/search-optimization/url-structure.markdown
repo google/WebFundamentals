@@ -13,6 +13,7 @@ key-takeaways:
   - "Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites"
   - "Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs"
 ---
+
 <p class="intro">
   If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures.
 </p>
@@ -55,7 +56,7 @@ benefit of making your website responsive is:
 * Quicker page load without redirects
 * Single point of URL for search results
 
-<img src="imgs/responsive-2x.png" srcset="imgs/responsive.png 1x imgs/responsive-2x.png 2x" >
+<img src="imgs/responsive-2x.png" srcset="imgs/responsive.png 1x, imgs/responsive-2x.png 2x" >
 
 By making it responsive:
 
@@ -104,7 +105,7 @@ version URL with `href`.
 <link rel="canonical" href="http://www.example.com/">
 {% endhighlight %}
   
-<img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x imgs/different_url-2x.png 2x" >
+<img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x, imgs/different_url-2x.png 2x" >
 
 ## Use `Vary HTTP` header for device oriented serving site
 Serving different HTML based on device type can reduce unnecessary redirects,
@@ -134,7 +135,7 @@ Vary: User-Agent
 Content-Length: 5710
 {% endhighlight %}
 
-<img src="imgs/same_url-2x.png" srcset="imgs/same_url.png 1x imgs/same_url-2x.png 2x" >
+<img src="imgs/same_url-2x.png" srcset="imgs/same_url.png 1x, imgs/same_url-2x.png 2x" >
 
 By providing `Vary: User-Agent` header, search engines and proxies understand
 the transferred content may vary depending on user agent. This allows search
