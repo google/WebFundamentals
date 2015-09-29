@@ -17,7 +17,7 @@ Automatically advance to the next field when a user presses Return. In general, 
 
 ## 15. Choose the simplest input
 
-Use the most [appropriate input type](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type) for each scenario. Use elements like [`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist) to provide suggested values for a field.
+Use the most [appropriate input type]({{site.fundamentals}}/design-and-ui/input/forms/choose-the-best-input-type) for each scenario. Use elements like [`datalist`]({{site.fundamentals}}/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist) to provide suggested values for a field.
 
 ## 16. Provide visual calendar for date selection
 
@@ -43,5 +43,5 @@ Label inputs properly and validate input in real-time.
 
 ## 18. Design efficient forms
 
-Take advantage of [autofill](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs#use-metadata-to-enable-auto-complete) so that users can easily complete forms with pre-populated data. Pre-fill fields with information you already know. For example, when retrieving shipping and billing addresses, try to use [`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete) or enable users to copy their shipping address to their billing address (or vice versa). 
+Take advantage of [autofill]({{site.fundamentals}}/design-and-ui/input/forms/label-and-name-inputs#use-metadata-to-enable-auto-complete) so that users can easily complete forms with pre-populated data. Pre-fill fields with information you already know. For example, when retrieving shipping and billing addresses, try to use [`requestAutocomplete`]({{site.fundamentals}}/design-and-ui/input/forms/use-request-auto-complete) or enable users to copy their shipping address to their billing address (or vice versa). 
 
