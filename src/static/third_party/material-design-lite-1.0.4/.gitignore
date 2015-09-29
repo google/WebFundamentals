@@ -1,7 +1,0 @@
-node_modules
-.tmp
-gulp-cache
-.DS_Store
-docs/out
-.publish
-/dist

@@ -9,3 +9,16 @@ $color-primary: $palette-light-blue-500;
 
 //$color-primary-dark: $palette-indigo-700 !default;
 $color-accent: unquote("rgb(#{$palette-light-blue-400})");
+
+// Below are definitions to override behaviour in MDL
+
+// Disables the standard styles on h1 - h6 elements
+$target-elements-directly: false;
+// Bump up font size by 2px;
+$data-table-font-size: 15px;
+// Bump up font size by 3px;
+$data-table-header-font-size: 15px;
+// Bump up font size by 3px;
+$card-supporting-text-font-size: 16px;
+// Bump up line height by
+$card-supporting-text-line-height: 24px;
