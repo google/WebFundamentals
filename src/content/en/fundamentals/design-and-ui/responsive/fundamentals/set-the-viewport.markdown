@@ -34,8 +34,6 @@ notes:
   Pages optimized for a variety of devices must include a meta viewport element in the head of the document.  A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
 </p>
 
-{% include shared/toc.liquid %}
-
 {% include shared/takeaway.liquid list=page.key-takeaways.set-viewport %}
 
 To attempt to provide the best experience, mobile browsers will render

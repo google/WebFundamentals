@@ -181,7 +181,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither playbackRate ({% link_sample _code/scripted.html %}see demo{% endlink_sample %}) nor volume are supported on mobile.
+Neither `playbackRate` ({% link_sample _code/scripted.html %}see demo{% endlink_sample %}) nor `volume` are supported on mobile.
 
 ### Methods
 
@@ -210,7 +210,7 @@ Neither playbackRate ({% link_sample _code/scripted.html %}see demo{% endlink_sa
   </tbody>
 </table>
 
-On mobile (apart from Opera on Android) play() and pause() don't work unless
+On mobile (apart from Opera on Android) `play()` and `pause()` don't work unless
 called in response to user action, such as clicking a button: see the {% link_sample _code/scripted.html %}demo{% endlink_sample %}. (Likewise, playback can't be initiated for content such as embedded YouTube videos.)
 
 ### Events
