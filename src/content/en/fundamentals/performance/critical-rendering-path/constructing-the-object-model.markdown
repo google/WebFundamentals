@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-description: "TODO"
+description: "Learn how the browser constructs the DOM and CSSOM trees."
 title: "Constructing the Object Model"
 published_on: 2014-04-01
 updated_on: 2014-09-12

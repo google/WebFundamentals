@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Turn on Strict Transport Security and secure cookies"
-description: "TODO"
+description: "Lock in your HTTPS settings with HSTS"
 authors:
   - chrispalmer
   - mattgaunt
