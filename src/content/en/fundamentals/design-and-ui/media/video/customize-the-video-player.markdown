@@ -48,8 +48,14 @@ Safari on iPhone does a good job of switching between portrait and landscape
 orientation:
 
 <div class="mdl-grid">
-    <img class="mdl-cell mdl-cell--6--col" alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png">
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png">
+  <figure class="mdl-cell mdl-cell--4--col">
+    <img  alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png">
+    <figcaption>Screenshot of video playing in Safari on iPhone, portrait</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--8--col">
+    <img alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png">
+    <figcaption>Screenshot of video playing in Safari on iPhone, landscape</figcaption>
+  </figure>
 </div>
 
 Device orientation on an iPad and Chrome on Android can be problematic.
