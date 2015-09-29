@@ -193,3 +193,29 @@ kbd {
   box-shadow: 0 1px 0px rgba(0,0,0,0.2),0 0 0 2px #fff inset;
   border-radius: 3px;
 }
+
+blockquote {
+  padding: ($base-line / 2) $base-line;
+  margin-bottom: $base-line;
+  border-left-color: $color-accent;
+  border-left-style: solid;
+  border-left-width: $left-border-callout-width;
+  font-size: 1.1em;
+}
+
+
+.wf-figcaption-good {
+  padding: ($base-line / 2) $base-line;
+  margin-bottom: $base-line;
+  border-top-color: #4caf50;
+  border-top-style: solid;
+  border-top-width: $left-border-callout-width * 2;
+}
+
+.wf-figcaption-bad {
+  padding: ($base-line / 2) $base-line;
+  margin-bottom: $base-line;
+  border-top-color: #F44336;
+  border-top-style: solid;
+  border-top-width: $left-border-callout-width * 2;
+}
