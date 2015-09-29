@@ -358,8 +358,8 @@ $list-container-item-height: 70px;
 
 $layout-nav-link-font-size: 13px;
 
-$layout-drawer-narrow: 240px;
-$layout-drawer-wide: 456px;
+$layout-drawer-narrow: 240px !default;
+$layout-drawer-wide: 456px !default;
 $layout-drawer-width: $layout-drawer-narrow;
 
 $layout-header-icon-size: 32px;
