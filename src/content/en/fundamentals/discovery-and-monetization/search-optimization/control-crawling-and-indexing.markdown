@@ -14,9 +14,8 @@ key-takeaways:
 notes:
   crawlers:
     - "Many people confuses crawling and indexing. Prohibiting crawling doesn't mean the page won't show up in the search results. For example, when a third party website has a link to one of your webpages which is blocked from crawling, the page may still be listed in search results (In that case, the result won't have detailed description)."
-notes:
   robots:
-    - "You can absolutely do without robots.txt if no crawling control is required. Just keep in mind not to return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details."
+    - "<code>robots.txt</code> is only required <b>if</b> you want to control the way your site is crawled. Do not to return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details."
   x-robots-tag:
     - "If you disallow crawls using robots.txt,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your webpages by following links from other websites.</li><li>Search engines can't detect <code>noindex</code> because it can't crawl.</li></ul>"
   searchable:
@@ -45,7 +44,7 @@ Before learning how to control search results, understanding how search engines 
 
 "Indexing" is when a search engine stores a website's URL and any associated information to their database so it will be ready to be served as a search result.  
 
-{% include shared/remember.liquid title="Remember" list=page.notes.crawlers %}
+{% include shared/remember.liquid list=page.notes.crawlers %}
 
 ## Control search bots' crawling
 You can actually control how well-behaved crawlers access your webpage using a text file called robots.txt. (Not all crawlers necessarily respect robots.txt. Imagine that anyone can create their own stray crawlers.)  
@@ -53,7 +52,7 @@ You can actually control how well-behaved crawlers access your webpage using a t
 ### How to use robots.txt
 Robots.txt is a simple text file describing how you want search bots to crawl your site.
 
-Place robots.txt at the root directory of your website's host: If your site's host is [http://pages.example.com/](http://pages.example.com/), robots.txt file should be located at [http://pages.example.com/robots.txt](http://pages.example.com/robots.txt). If the domain has different schema, subdomains or other ports, they will be considered as different hosts and you should have robots.txt for each of their root directories.  
+Place `robots.txt` at the root directory of your website's host: If your site's host is `http://pages.example.com/`, then the `robots.txt` file should be located at `http://pages.example.com/robots.txt`. If the domain has different schema, subdomains or other ports, they will be considered as different hosts and you should have `robots.txt` for each of their root directories.  
 
 Here's a quick example:  
 

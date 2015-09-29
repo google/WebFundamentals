@@ -69,8 +69,6 @@ These recommendations are based on analyzing the performance of recommendations
 that have been recently implemented by other AdSense publishers and are only
 provided when there is a high confidence of increased performance.
 
-{% include shared/remember.liquid title="Learn more" text="Review <a href='https://support.google.com/adsense/answer/3006004'>about the scorecard</a> and the <a href='https://support.google.com/adsense/answer/1725006'>recommendation box</a> in AdSense help." %}
-
 ## Use performance reports
 
 Use the Google AdSense <b>[Performance reports](https://www.google.com/adsense/app#viewreports)</b> 
@@ -134,7 +132,6 @@ and check the *Customized help and performance suggestions* checkbox under
   <figcaption>Enable Customized help and performance suggestions emails.</figcaption>
 </figure>
 
-{% include shared/remember.liquid title="Learn more" text="Learn more about <a href='https://support.google.com/adsense/answer/160562'>performance reports</a> in AdSense help." %}
 
 ## Maximize bidding potential
 
