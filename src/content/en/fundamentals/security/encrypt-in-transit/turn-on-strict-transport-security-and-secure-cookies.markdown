@@ -14,11 +14,13 @@ key-takeaways:
   - "Ensure you always set the Secure flag on cookies."
 ---
 
+<p class="intro">
+At this point, you are ready to "lock in" the use of HTTPS. 
+</p>
+
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
-{% include shared/toc.liquid %}
-
-At this point, you are ready to "lock in" the use of HTTPS. First, use [Strict
+First, use [Strict
 Transport
 Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) to tell
 clients that they should always connect to your server via HTTPS, even when
@@ -35,15 +37,15 @@ site without HTTPS. Do not enable HSTS until you are certain that your site
 operation is robust enough to avoid ever deploying HTTPS with certificate
 validation errors.
 
-Turn on HTTP Strict Transport Security (HSTS) by setting the Strict-Transport-Security
+Turn on HTTP Strict Transport Security (HSTS) by setting the `Strict-Transport-Security`
 header. [OWASP's HSTS page has links to
 instructions](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
 for various server software.
 
 Most web servers offer a similar ability to add custom headers.
 
-**NOTE:** max-age is measured in seconds. You can start with low values and
-gradually increase the max-age as you become more comfortable operating an
+**NOTE:** `max-age` is measured in seconds. You can start with low values and
+gradually increase the `max-age` as you become more comfortable operating an
 HTTPS-only site.
 
 It is also important to make sure that clients never send cookies (such as for
