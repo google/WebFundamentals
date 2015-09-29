@@ -24,7 +24,7 @@ udacity:
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <p>
+    <p class="intro">
       Users of today’s web <a href="http://paul.kinlan.me/what-news-readers-want/">
       expect that the pages they visit will be interactive and smooth</a> and
       that’s where you need to increasingly focus your time and effort. Pages

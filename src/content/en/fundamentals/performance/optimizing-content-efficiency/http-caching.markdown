@@ -35,7 +35,7 @@ notes:
 
 Great news, every browser ships with an implementation of an HTTP cache! All we have to do is ensure that each server response provides correct HTTP header directives to instruct the browser on when and for how long the response can be cached by the browser.
 
-{% include shared/highlight.liquid list=page.notes.webview-cache %}
+{% include shared/remember.liquid list=page.notes.webview-cache %}
 
 <img src="images/http-request.png" class="center" alt="HTTP request">
 

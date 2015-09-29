@@ -20,8 +20,6 @@ key-takeaways:
   critical rendering path!
 </p>
 
-{% include shared/toc.liquid %}
-
 {% include shared/takeaway.liquid list=page.key-takeaways.measure-crp %}
 
 The foundation of every solid performance strategy is good measurement and instrumentation. Turns out, that is exactly what the Navigation Timing API provides.
@@ -52,6 +50,9 @@ The HTML specification dictates specific conditions for each and every event: wh
     * If there is no parser blocking JavaScript then `DOMContentLoaded` will fire immediately after `domInteractive`.
 * `domComplete` marks when the page and all of its subresources are ready.
 
+<!-- Span required to prevent rest of page from being indented.
+  https://github.com/google/WebFundamentals/issues/1873 -->
+<span></span>
 
 {% include_code src=_code/measure_crp.html snippet=full lang=html %}
 
