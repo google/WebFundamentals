@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Migration concerns"
-description: "TODO"
+description: "Covers the concerns developers may have about migrating to HTTPS"
 authors:
   - chrispalmer
   - mattgaunt

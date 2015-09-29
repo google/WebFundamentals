@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Provide great icons & tiles"
-description: "TODO"
+description: "Improve your sites recall with icons and tiles."
 published_on: 2014-09-22
 updated_on: 2015-09-21
 authors:

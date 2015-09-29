@@ -64,19 +64,15 @@ Make sure users understand why you’re asking for their location, and what
 the benefit to them will be.  Asking for it immediately on the homepage as 
 the site loads results in a poor user experience.
 
-<div class="clear g-wide--pull-1">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-      <figcaption>Asking for it immediately on the homepage as the site loads results in a poor user experience.</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption>Always request access to location on a user gesture.</figcaption>
-      </figure>
-  </div>
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
+    <figcaption class="wf-figcaption-good">Do: Always request access to location on a user gesture.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
+    <figcaption class="wf-figcaption-bad">Don't: Ask for it immediately on the homepage as the site loads, it results in a poor user experience.</figcaption>
+  </figure>
 </div>
 
 Instead you should give the user a clear call-to-action or an indication that
@@ -94,13 +90,19 @@ Boston.
 
 A better experience is to make sure users understands why you’re asking
 them for location. Add in a well known signifier that is common across
-devices, such as range finder.
+devices, such as range finder, or an explicit call to action such as 
+“Find Near Me.”
 
-<img src="images/indication.png">
-
-Or consider a very explicit call to action such as “Find Near Me.”
-
-<img src="images/nearme.png">
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/indication.png">
+    <figcaption>Use a range finder</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/nearme.png">
+    <figcaption>A specific call to action to find near me</figcaption>
+  </figure>
+</div>
 
 ## Gently nudge users to grant permission to their location
 
