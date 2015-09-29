@@ -1,0 +1,23 @@
+.wf-btn__small {
+  display: inline-block;
+
+  width: $base-line * 2;
+  height: $base-line * 2;
+
+  text-align: center;
+
+  svg {
+    width: $header-svg-icon-size;
+    height: $header-svg-icon-size;
+
+    padding-top: (($base-line * 2) - $header-svg-icon-size) / 2;
+
+    fill: $text-color-primary;
+  }
+}
+
+button.wf-btn__small {
+  svg {
+    padding-top: 0;
+  }
+}

@@ -2,16 +2,6 @@
   The greater > 1 is to account for English language.
 {% endcomment %}
 
-{% if page.translations.size > 1 %}
-
-<ul class="wf-translation-links">
-  {% for translatedPageMap in page.translations %}
-    <li class="wf-translation-link__item">
-      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPageMap[1].canonical_url }}">{{  translatedPageMap[1].langcode | lang_name }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
 {% if page.outOfDate %}
 <div class="wf-translation-warning">
   <p class="mdl-typography--caption wf-translation-warning__title">Out of Date!</p>
@@ -19,4 +9,16 @@
 </div>
 {% endif%}
 
-{% endif %}
+<button id="language-selection-menu"
+        class="mdl-button mdl-js-button mdl-button--icon wf-btn__small">
+  {% include svgs/language.svg %}
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+  for="language-selection-menu">
+  {% for translatedPageMap in page.translations %}
+    <li class="mdl-menu__item">
+      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPageMap[1].canonical_url }}">{{  translatedPageMap[1].langcode | lang_name }}</a>
+    </li>
+  {% endfor %}
+</ul>

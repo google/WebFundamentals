@@ -103,7 +103,7 @@ hr {
   margin: ($base-line * 1.5) 0;
 }
 
-.page-content, .wf-cc-license {
+.page-content {
   max-width: $max-content-width;
 
   margin-left: auto;
@@ -114,21 +114,6 @@ hr {
   margin-bottom: $base-line;
 
   padding: ($base-line * 2) ($base-line / 2) 0 ($base-line / 2);
-}
-
-.wf-cc-license {
-  text-align: left;
-  @include typo-caption($colorContrast: true);
-
-  margin-top: $base-line;
-  margin-bottom: $base-line;
-
-  padding-left: ($base-line / 2);
-  padding-right: ($base-line / 2);
-
-  a {
-    text-decoration: none;
-  }
 }
 
 figure > img {
@@ -142,24 +127,6 @@ figcaption {
     text-decoration: none;
     color: inherit;
   }
-}
-
-.wf-header__small-btn {
-    display: inline-block;
-
-    width: $base-line * 2;
-    height: $base-line * 2;
-
-    text-align: center;
-
-    svg {
-      width: $header-svg-icon-size;
-      height: $header-svg-icon-size;
-
-      padding-top: (($base-line * 2) - $header-svg-icon-size) / 2;
-
-      fill: white;
-    }
 }
 
 .wf-header__menu-btn {
