@@ -19,8 +19,6 @@ key-takeaways:
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
-{% include shared/toc.liquid %}
-
 But, a problem arises when you serve a page via HTTPS
 that includes HTTP resources: [mixed
 content](http://www.w3.org/TR/mixed-content/), browsers will warn the user that the full strength
@@ -103,6 +101,6 @@ party, such as a CDN, jquery.com, or the like, you have 2 options:
   trust a third party, which is always nice.
 
 Keep in mind also that you will need to change intra-site URLs in your
-stylesheets, JavaScript, redirect rules, &lt;link …&gt; tags, and CSP
+stylesheets, JavaScript, redirect rules, `<link …` tags, and CSP
 declarations as well — not just the HTML pages!
 

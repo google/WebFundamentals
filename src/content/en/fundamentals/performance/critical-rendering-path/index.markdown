@@ -18,7 +18,7 @@ udacity:
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <p>{{page.description}}</p>
+    <p class="intro">{{page.description}}</p>
     <p>
       Delivering a fast web experience requires a lot of work by the browser. Most of
       this work is hidden from us as web developers: we write the markup, and a nice

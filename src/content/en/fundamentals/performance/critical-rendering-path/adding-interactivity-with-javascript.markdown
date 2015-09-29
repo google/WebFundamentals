@@ -23,8 +23,6 @@ key-takeaways:
   rendering path to deliver optimal performance.
 </p>
 
-{% include shared/toc.liquid %}
-
 {% include shared/takeaway.liquid list=page.key-takeaways.adding-interactivity %}
 
 JavaScript is a dynamic language that runs in the browser and allows us to alter just about every aspect of how the page behaves: we can modify content on the page by adding or removing elements from the DOM tree, we can modify the CSSOM properties of each element, we can handle user input, and much more. To illustrate this in action, let's augment our previous "Hello World" example with a simple inline script:
