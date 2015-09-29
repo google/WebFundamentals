@@ -35,9 +35,11 @@ comments:
   Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs. Good forms provide semantic input types. Keys should change to match the user's input type; users pick a date in a calendar. Keep your user informed. Validation tools should tell the user what they need to do before submitting the form.
 </p>
 
+{% include shared/toc.liquid %}
+
 {% include shared/takeaway.liquid list=page.key-takeaways.label-and-name %}
 
-### The importance of labels
+## The importance of labels
 
 The `label` element provides direction to the user, telling them what
 information is needed in a form element.  Each `label` is associated with an
@@ -48,7 +50,7 @@ focus on the input element.
 
 {% include_code src=_code/order.html snippet=labels %}
 
-### Label sizing and placement
+## Label sizing and placement
 
 Labels and inputs should be large enough to be easy to press.  In portrait
 viewports, field labels should be above input elements, and beside them in
@@ -57,7 +59,7 @@ the same time.  Be careful with custom scroll handlers that may scroll input
 elements to the top of the page hiding the label, or labels placed below input
 elements may be covered by the virtual keyboard.
 
-### Use placeholders
+## Use placeholders
 
 The placeholder attribute provides a hint to the user about what's expected in
 the input, typically by displaying the value as light text until the the user
@@ -72,7 +74,7 @@ starts typing in the element.
 
 {% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
 
-### Use metadata to enable auto-complete
+## Use metadata to enable auto-complete
 
 Users appreciate when websites save them time by automatically filling common
 fields like names, email addresses and other frequently used fields, plus it
@@ -92,7 +94,7 @@ the users name, email address and phone number, you should use:
 {% include_code src=_code/order.html snippet=autocomplete %}
 
 
-### Recommended input `name` and `autocomplete` attribute values
+## Recommended input `name` and `autocomplete` attribute values
 
 `autocomplete` attribute values are part of the current [WHATWG HTML Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill). The most commonly used `autocomplete` attributes are shown below.
 
@@ -231,7 +233,7 @@ The `autocomplete` attributes can be accompanied with a section name, such as **
 
 {% include shared/remember.liquid title="Remember" list=page.remember.recommend-input %}
 
-### The `autofocus` attribute
+## The `autofocus` attribute
 
 On some forms, for example the Google home page where the only thing you want
 the user to do is fill out a particular field, you can add the `autofocus`
