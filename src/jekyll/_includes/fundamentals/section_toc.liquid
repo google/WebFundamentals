@@ -1,14 +1,12 @@
-<div class="wf-section-toc clear">
-  <div class="wf-section-toc__content-container clear">
-    <h3 class="wf-section-toc__title">{{"topics" | localize_string}}</h3>
-    <ol class="wf-section-toc__list">
+<div class="wf-border-container">
+  <div class="wf-border-container__content">
+    <h3 class="wf-highlight-list__title">{{"topics" | localize_string}}</h3>
+    <ol class="wf-highlight-list__list">
     {% for pageInSection in page.context.pages %}
-      <li class="wf-section-toc__list-item">
-        <p class="wf-section-toc__guide-title">
-          <a href="{{pageInSection.canonical_url | localize_link:pageInSection }}">
-            {{pageInSection.title}}
-          </a>
-        </p>
+      <li>
+        <a href="{{pageInSection.canonical_url | localize_link:pageInSection }}">
+          {{pageInSection.title}}
+        </a>
       </li>
     {% endfor %}
     </ol>
