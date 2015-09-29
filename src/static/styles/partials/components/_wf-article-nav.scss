@@ -48,28 +48,6 @@ $article-nav-icon-size: $base-line;
   }
 }
 
-/**.wf-article-nav__next {
-  flex: 1;
-
-  .wf-article-nav__link {
-    text-align: right;
-    margin-right: auto;
-  }
-
-  .wf-article-nav__subtitle {
-    display: none;
-    padding-right: $article-nav-icon-size + ($base-line / 2);
-  }
-
-  .wf-article-nav__link-title {
-    display: none;
-  }
-
-  .wf-article-nav__icon {
-    padding-left: ($base-line / 2);
-  }
-}**/
-
 .wf-article-nav__link {
   display: block;
 
