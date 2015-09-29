@@ -286,14 +286,6 @@
         }
       }
 
-      /**
-       * Prevents an event from triggering the default behaviour.
-       * @param  {Event} ev the event to eat.
-       */
-      var eatEvent = function(ev) {
-        ev.preventDefault();
-      };
-
       // Add drawer toggling button to our layout, if we have an openable drawer.
       if (this.drawer_) {
         var drawerButton = this.element_.querySelector('.' +
@@ -324,8 +316,6 @@
         // not be present.
         this.element_.classList.add(this.CssClasses_.HAS_DRAWER);
 
-        this.drawer_.addEventListener('mousewheel', eatEvent);
-
         // If we have a fixed header, add the button to the header rather than
         // the layout.
         if (this.element_.classList.contains(this.CssClasses_.FIXED_HEADER)) {
@@ -339,7 +329,6 @@
         this.element_.appendChild(obfuscator);
         obfuscator.addEventListener('click',
             this.drawerToggleHandler_.bind(this));
-        obfuscator.addEventListener('mousewheel', eatEvent);
       }
 
       // Initialize tabs, if any.
@@ -424,6 +413,19 @@
    * @param {MaterialLayout} layout The MaterialLayout object that owns the tab.
    */
   function MaterialLayoutTab(tab, tabs, panels, layout) {
+
+    /**
+     * Auxiliary method to programmatically select a tab in the UI.
+     */
+    function selectTab() {
+      var href = tab.href.split('#')[1];
+      var panel = layout.content_.querySelector('#' + href);
+      layout.resetTabState_(tabs);
+      layout.resetPanelState_(panels);
+      tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+      panel.classList.add(layout.CssClasses_.IS_ACTIVE);
+    }
+
     if (tab) {
       if (layout.tabBar_.classList.contains(
           layout.CssClasses_.JS_RIPPLE_EFFECT)) {
@@ -437,15 +439,13 @@
       }
 
       tab.addEventListener('click', function(e) {
-        e.preventDefault();
-        var href = tab.href.split('#')[1];
-        var panel = layout.content_.querySelector('#' + href);
-        layout.resetTabState_(tabs);
-        layout.resetPanelState_(panels);
-        tab.classList.add(layout.CssClasses_.IS_ACTIVE);
-        panel.classList.add(layout.CssClasses_.IS_ACTIVE);
+        if (tab.getAttribute('href').charAt(0) === '#') {
+          e.preventDefault();
+          selectTab();
+        }
       });
 
+      tab.show = selectTab;
     }
   }
 

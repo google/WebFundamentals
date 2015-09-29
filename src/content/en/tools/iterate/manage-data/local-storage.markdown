@@ -132,7 +132,7 @@ The table of cached resources includes the following properties for each resourc
 The Resources panel displays the current [status](http://www.whatwg.org/specs/web-apps/current-work/#dom-appcache-status) 
 of the application cache along with a colored status icon (green, yellow, or red). The following are the possible status values and their descriptions:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th>Status</th>

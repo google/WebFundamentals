@@ -59,7 +59,7 @@ you do the same.
 There are tools which have GUIs and may be a bit easier to get to grips with but
 will be less flexible.
 
-<table class="table-2 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />
@@ -127,7 +127,7 @@ makes the file size smaller, leading to faster downloads.
 
 For minification, use the following:
 
-<table class="table-3 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />
@@ -161,7 +161,7 @@ For minification, use the following:
 
 For concatentation, use the following:
 
-<table class="table-3 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />
@@ -200,7 +200,7 @@ image, for example, information about the camera used to take the photo.
 
 For optimizing images, you can use these modules.
 
-<table class="table-2 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />
@@ -225,7 +225,7 @@ It can often become a bit tedious to include all the vendor prefixes for the CSS
 you use. Use an auto-prefixer to automatically add the prefixes you need to
 include:
 
-<table class="table-2 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />
@@ -255,7 +255,7 @@ After using it once, you won't be able to live without it.
 
 Web Starter Kit uses browser-sync for Live Reload support.
 
-<table class="table-2 tc-heavyright">
+<table class="mdl-data-table tc-heavyright">
   <colgroup>
     <col span="1" />
     <col span="1" />

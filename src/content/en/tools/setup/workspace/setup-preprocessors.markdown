@@ -50,37 +50,39 @@ For each CSS file it produces, a CSS preprocessor generates a source map file (.
 
 Each CSS file contains an annotation that specifies the URL of its source map file, embedded in a special comment on the last line of the file:
 
-`/*# sourceMappingURL=<url> */`
+{% highlight css %}/*# sourceMappingURL=<url> */{% endhighlight %}
 
 For instance, given an Sass source file named **styles.scss**:
 
-`$textSize: 26px;
+{% highlight css %}$textSize: 26px;
 $fontColor: red;
 $bgColor: whitesmoke;
 h2 {
     font-size: $textSize;
     color: $fontColor;
     background: $bgColor;
-}`
+}
+{% endhighlight %}
 
 Sass generates a CSS file, **styles.css**, with the sourceMappingURL annotation:
 
-`h2 {
+{% highlight css %}h2 {
   font-size: 26px;
   color: red;
   background-color: whitesmoke;
 }
 /*# sourceMappingURL=styles.css.map */
-`
+{% endhighlight %}
 
 Below is an example source map file:
 
-`{
+{% highlight css %}{
   "version": "3",
   "mappings":"AAKA,EAAG;EACC,SAAS,EANF,IAAI;EAOX,KAAK"
   "sources": ["sass/styles.scss"],
   "file": "styles.css"
-}`
+}
+{% endhighlight %}
 
 ## Verify web server can serve Source Maps
 
@@ -90,7 +92,7 @@ Some web servers, like Google App Engine for example, require explicit configura
 
 If you don't want an extra comment in your file, use an HTTP header field on the minified JavaScript file to tell DevTools where to find the source map. This requires configuration or customization of your web server and is beyond the scope of this document.
 
-`X-SourceMap: /path/to/file.js.map`
+{% highlight css %}X-SourceMap: /path/to/file.js.map{% endhighlight %}
 
 Like the comment, this tells DevTools and other tools where to look for the source map associated with a JavaScript file. This header also gets around the issue of referencing Source Maps in languages that don't support single-line comments.
 
@@ -100,7 +102,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
 
 ### JavaScript
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th width="20%" data-th="Compiler">Compiler</th>
@@ -139,7 +141,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
 
 ### CSS
 
-<table class="table-3">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th width="20%" data-th="Compiler">Compiler</th>

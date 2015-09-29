@@ -25,6 +25,8 @@ module Jekyll
     def generate(site)
       organisePageTree(site.data['_context'])
 
+      generateFeeds(site)
+
       # This should run as the end of all generators and will give pages a
       # chance to do any final work needed
       site.pages.each { |page|
@@ -100,20 +102,54 @@ module Jekyll
         b_order = 0
 
         if !a['index'].nil?
-          a_order = a['index'].data['order'] || a['index'].data['date'] || heavy_weight
+          a_order = a['index'].data['order'] || a['index'].data['published_on'] || heavy_weight
         end
         if !b['index'].nil?
-          b_order = b['index'].data['order'] || b['index'].data['date'] || heavy_weight
+          b_order = b['index'].data['order'] || b['index'].data['published_on'] || heavy_weight
         end
 
         if a_order.is_a?(Integer) & b_order.is_a?(Integer)
             a_order <=> b_order
-        elsif a_order.is_a?(String) & b_order.is_a?(String)
+        elsif a_order.is_a?(Date) & b_order.is_a?(Date)
             a_order <=> b_order
         else
           0 <=> 0
         end
       end
+    end
+
+    def generateFeeds(site)
+      rootContext = site.data['_context']
+      sitemapPages = []
+
+      rootContext['subdirectories'].each { |subdirectory|
+        id = subdirectory['id']
+        pagesToInclude = getPages(subdirectory)
+
+        sitemapPages = sitemapPages + pagesToInclude
+
+        site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+        site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+      }
+
+      site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_ATOM)
+
+      site.pages << WFSitemapPage.new(site, sitemapPages)
+    end
+
+    def getPages(subdirectory)
+      array = []
+      array << subdirectory['index']
+      subdirectory['pages'].each { |page|
+        array << page
+      }
+
+      subdirectory['subdirectories'].each { |subdirectory|
+        array = array + getPages(subdirectory)
+      }
+
+      return array
     end
 
   end

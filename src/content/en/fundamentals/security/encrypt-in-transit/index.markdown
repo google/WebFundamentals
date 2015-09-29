@@ -12,5 +12,5 @@ translation_priority: 0
 
 ---
 <p class="intro">
-TODO
+  {{page.description}}
 </p>

@@ -39,7 +39,7 @@ including detailed timing data, HTTP request and response headers, cookies, WebS
 Reload the page to start recording, or simply wait for network activity to occur in your application.
 Each requested resource is added as a row to the Network table, which contains the columns listed below:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th data-th="Column">Column</th>
@@ -267,7 +267,7 @@ resource's HTTP request and response headers. You can also clear all cookies.
 
 The Cookies table contain the following columns:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th data-th="Column">Column</th>
@@ -346,7 +346,7 @@ The Cookies table contain the following columns:
 
 The Frames tab shows messages sent or received over a WebSocket connection. This tab is only visible when the selected resource initiated a WebSocket connection. The table contains the following columns:
 
-<table class="table-2">
+<table class="mdl-data-table">
   <thead>
     <tr>
       <th data-th="Column">Column</th>
@@ -435,7 +435,7 @@ dt.content-download:before {
 }
 </style>
 
-<dl class="table-2">
+<dl class="mdl-data-table">
   <dt class="stalled"><strong> Stalled/Blocking</strong></dt>
   <dd>
     Time the request spent waiting before it could be sent.

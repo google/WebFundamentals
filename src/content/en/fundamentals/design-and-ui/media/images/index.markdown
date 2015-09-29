@@ -15,18 +15,21 @@ udacity:
   image: img/udacity-ri.jpg
 ---
 
-<p class="intro">
-  A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
-</p>
+## Responsive images
 
-### Responsive images
-
-Responsive web design means that not only can our layouts change based on device
-characteristics, but content as well.  For example, on high resolution (2x)
-displays, high resolution graphics are needed to ensure sharpness.  An image
-that  is 50% width may work just fine when the browser is 800px wide, but will
-use too much real estate on a narrow phone, and still comes at the same
-bandwidth overhead when scaled down to fit on a smaller screen.
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <p>
+      Responsive web design means that not only can our layouts change based on device
+      characteristics, but content as well.  For example, on high resolution (2x)
+      displays, high resolution graphics are needed to ensure sharpness.  An image
+      that  is 50% width may work just fine when the browser is 800px wide, but will
+      use too much real estate on a narrow phone, and still comes at the same
+      bandwidth overhead when scaled down to fit on a smaller screen.
+    </p>
+  </div>
+  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+</div>
 
 ### Art direction
 
@@ -39,4 +42,4 @@ changing the image is usually referred to as art direction.  See
 [responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more
 examples.
 
-{% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+

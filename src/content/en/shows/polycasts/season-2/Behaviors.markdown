@@ -14,7 +14,7 @@ Behaviors unlock amazing potential by letting you mix functionality into your el
 ## Read More
 
 ###Demo source
-https://github.com/Polymer/polycasts/tree/master/ep21-behaviors/behaviors-demo
+<https://github.com/Polymer/polycasts/tree/master/ep21-behaviors/behaviors-demo>
 
 ###Behaviors guide
 <https://www.polymer-project.org/1.0/docs/devguide/behaviors.html>

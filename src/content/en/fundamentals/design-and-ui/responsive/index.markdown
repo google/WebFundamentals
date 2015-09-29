@@ -1,12 +1,20 @@
 ---
 layout: shared/narrow-subdirectories-list
-title: "Responsive"
-description: "TODO - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
+title: "Responsive layouts"
+description: "Create flexible, not fixed layouts that works on mobile, desktop or anything else with a screen."
 published_on: 2015-09-09
 updated_on: 2015-09-09
 translation_priority: 0
+udacity:
+  id: ud893
+  title: Responsive Web Design Fundamentals
+  description: "Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more."
+  image: fundamentals/imgs/udacity-rwd.png
 ---
 
-<p class="intro">
-  TODO - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock.
-</p>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    {{page.description}}
+  </div>
+  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+</div>
