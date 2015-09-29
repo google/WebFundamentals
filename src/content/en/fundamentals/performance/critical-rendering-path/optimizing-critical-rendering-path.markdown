@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-description: "TODO"
+description: "Learn the keys of optimizing the critical rendering path."
 title: "Optimizing the critical rendering path"
 published_on: 2014-04-01
 updated_on: 2014-04-28

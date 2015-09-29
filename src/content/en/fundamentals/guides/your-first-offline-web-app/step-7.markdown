@@ -1,7 +1,6 @@
 ---
 layout: shared/narrow
 title: "Intercept the web page requests"
-description: "TODO"
 notes:
   styling:
     - Styling will come later

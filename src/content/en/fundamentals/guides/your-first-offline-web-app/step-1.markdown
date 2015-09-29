@@ -1,7 +1,6 @@
 ---
 layout: shared/narrow
 title: "Get the sample code"
-description: "TODO"
 notes:
   styling:
     - Styling will come later

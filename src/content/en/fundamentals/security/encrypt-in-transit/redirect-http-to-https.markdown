@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Redirect HTTP to HTTPS"
-description: "TODO"
+description: "Set canonical links to your HTTPS content"
 authors:
   - chrispalmer
   - mattgaunt
