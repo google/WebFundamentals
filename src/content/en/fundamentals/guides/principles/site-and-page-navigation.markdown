@@ -14,17 +14,17 @@ Focus your mobile homepage on connecting users to the content they’re looking 
 
 ## 1. Keep calls to action front and center
 
-Make secondary tasks available through [menus](#TODO) or “below the fold” 
+Make secondary tasks available through [menus](/web/fundamentals/design-and-ui/responsive/) or “below the fold” 
 (the part of the webpage that can’t be seen without scrolling down).
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/hpnav-cta-good.png">
-    <figcaption>Do: make all of your users’ most common tasks easily available.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: make all of your users’ most common tasks easily available.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/hpnav-cta-bad.png">
-    <figcaption>Don’t: waste precious above-the-fold space with vague calls-to-action like “learn more”.</figcaption>
+    <figcaption class="wf-figcaption-bad">Don’t: waste precious above-the-fold space with vague calls-to-action like “learn more”.</figcaption>
   </figure>
 </div>
 
@@ -35,7 +35,7 @@ Mobile users don’t have the patience to scroll through a long list of options 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/hpnav-menus-good.png">
-    <figcaption>Do: keep menus short and sweet.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: keep menus short and sweet.</figcaption>
   </figure>
 </div>
 
@@ -46,21 +46,21 @@ Users expect to go back to the homepage when they tap the logo in the top-left o
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/hpnav-hp-good.png">
-    <figcaption>Do: make it easy to get back to the home page.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: make it easy to get back to the home page.</figcaption>
   </figure>
 </div>
 
 ## 4. Don't let promotions steal the show
 
-Large app install interstitials (e.g. full-page promotions that hide content and prompt users to install an app) annoy users and make it difficult to perform tasks. On top of annoying users, sites that use app install interstitials fail the [Google Mobile-Friendly Test](TODO), which may negatively impact their search rankings.
+Large app install interstitials (e.g. full-page promotions that hide content and prompt users to install an app) annoy users and make it difficult to perform tasks. On top of annoying users, sites that use app install interstitials fail the [Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/), which may negatively impact their search rankings.
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/hpnav-promo-good.png">
-    <figcaption>Do: Promotions should be easily dismissable and not distract from the experience.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: Promotions should be easily dismissable and not distract from the experience.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/hpnav-promo-bad.png">
-    <figcaption>Don’t: Interstitials (sometimes called door slams) often annoy users and make using the site a pain.</figcaption>
+    <figcaption class="wf-figcaption-bad">Don’t: Interstitials (sometimes called door slams) often annoy users and make using the site a pain.</figcaption>
   </figure>
 </div>

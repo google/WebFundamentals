@@ -9,7 +9,9 @@ updated_on: 2015-09-17
 order: 3
 ---
 
+<p class="intro">
 Understand your customer journeys and let users convert on their own terms. 
+</p>
 
 ## 9. Let users explore before they commit
 
@@ -19,11 +21,11 @@ Study participants were frustrated by sites that require upfront registrations t
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/cc-gates-good.png">
-    <figcaption>Do: allow users to browse the site without requiring sign in.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: allow users to browse the site without requiring sign in.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/cc-gates-bad.png">
-    <figcaption>Don't: placing login or registration too early in a site can be detrimental to conversion.</figcaption>
+    <figcaption class="wf-figcaption-bad">Don't: placing login or registration too early in a site can be detrimental to conversion.</figcaption>
   </figure>
 </div>
 
@@ -35,25 +37,25 @@ Study participants viewed guest checkouts as “convenient”, “simple”, “
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/cc-purchase-guest-good.png">
-    <figcaption>Do: allow users to purchase with a guest account.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: allow users to purchase with a guest account.</figcaption>
   </figure>
 </div>
 
 ## 11. Use existing information to maximize convenience
 
-Remember and [pre-fill preferences](#TODO) for registered users. Offer familiar, third-party checkout services for new users.
+Remember and [pre-fill preferences](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs) for registered users. Offer familiar, third-party checkout services for new users.
 
 ## 12. Use click-to-call buttons for complex tasks
 
-On devices with calling capabilities, [click-to-call links](#TODO) enable users to make a phone call by simply tapping a link. On most mobile devices the user receives a confirmation before the number is dialed, or a menu is presented asking the user how the number should be handled.
+On devices with calling capabilities, [click-to-call links](/web/fundamentals/native-hardware/click-to-call/) enable users to make a phone call by simply tapping a link. On most mobile devices the user receives a confirmation before the number is dialed, or a menu is presented asking the user how the number should be handled.
 
 ## 13. Make it easy to finish on another device
 
-Users frequently want to finish tasks on other devices. For instance, they might wish to view an item on a larger screen. Or they might get busy and need to finish later. Support these customer journeys by enabling users to [share items on social networks](#TODO), or by letting users email themselves links from directly within the site.
+Users frequently want to finish tasks on other devices. For instance, they might wish to view an item on a larger screen. Or they might get busy and need to finish later. Support these customer journeys by enabling users to [share items on social networks](/web/fundamentals/discovery-and-monetization/social-discovery/), or by letting users email themselves links from directly within the site.
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/cc-other-device-good.png">
-    <figcaption>Do: provide easy ways for users to continue browsing or shopping on another device.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: provide easy ways for users to continue browsing or shopping on another device.</figcaption>
   </figure>
 </div>
