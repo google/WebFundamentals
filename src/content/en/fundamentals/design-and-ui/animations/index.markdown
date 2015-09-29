@@ -13,15 +13,15 @@ key-takeaways:
     - Be careful which properties you animate; some are more expensive than others!
 authors:
   - paullewis
-
 ---
+
 <p class="intro">
-  Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?"
+  Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?
 </p>
 
-{% include shared/takeaway.liquid list=page.key-takeaways.code %}
-
 {% include shared/toc.liquid %}
+
+{% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
 ## Choose the right things to animate
 

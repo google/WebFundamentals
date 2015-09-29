@@ -14,7 +14,9 @@ udacity:
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    {{page.description}}
+    <p class="intro">
+      {{page.description}}
+    </p>
   </div>
   {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
 </div>
