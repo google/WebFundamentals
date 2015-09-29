@@ -37,7 +37,7 @@ related-guides:
 ---
 
 <p class="intro">
-  When it comes to keeping your users happy, size matters.
+  When it comes to keeping your users happy, file size is important.
 </p>
 
 {% include shared/toc.liquid %}
@@ -61,9 +61,15 @@ When video elements are too big for the viewport, they may overflow their
 container, making it impossible for the user to see the content or use
 the controls.
 
-<div class="clear">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="g-wide--2 g-wide--last g-medium--half g--last" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--4-col"> 
+    <img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
+    <figcaption>Android Chrome screenshot, portrait: unstyled video element overflows viewport</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--8-col">
+    <img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
+    <figcaption>Android Chrome screenshot, landscape: unstyled video element overflows viewport</figcaption>
+  </figure>
 </div>
 
 You can control video dimensions using JavaScript or CSS. JavaScript libraries

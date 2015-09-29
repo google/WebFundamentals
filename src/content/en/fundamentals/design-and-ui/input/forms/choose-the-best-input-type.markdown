@@ -35,9 +35,11 @@ comments:
   Streamline information entry by using the right input type. Users appreciate websites that automatically present number pads for entering phone numbers, or automatically advance fields as they entered them. Look for opportunities to eliminate wasted taps in your forms.
 </p>
 
+{% include shared/toc.liquid %}
+
 {% include shared/takeaway.liquid list=page.key-takeaways.choose-best-input-type %}
 
-### HTML5 input types
+## HTML5 input types
 
 HTML5 introduced a number of new input types. These new input types give hints
 to the browser about what type of keyboard layout to display for on-screen
@@ -166,7 +168,7 @@ type.
   </tbody>
 </table>
 
-### Offer suggestions during input with datalist
+## Offer suggestions during input with datalist
 
 The `datalist` element isn't an input type, but a list of suggested input values
 to associated with a form field. It lets the browser suggest autocomplete
