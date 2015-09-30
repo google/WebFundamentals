@@ -37,7 +37,7 @@ gulp.task('copy-appengine-config', ['gae:clean'], function() {
 gulp.task('spawn-gae-dev-command', function() {
   // Handle OS differences in executable name
   var gaeCommand = 'dev_appserver.py';
-  var params = ['--port', PORT_NUMBER, WF.build];
+  var params = ['--skip_sdk_update_check', '--port', PORT_NUMBER, WF.build];
 
   var stdioOption = SILENCE_OUTPUT ? 'ignore' : 'inherit';
 

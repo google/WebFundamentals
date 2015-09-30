@@ -25,7 +25,7 @@ module Jekyll
     alias superpath path
 
     attr_reader :raw_canonical_url, :canonical_url, :relative_url,
-      :directories, :context, :main_author, :nextPage, :previousPage, :outOfDate
+      :directories, :context, :nextPage, :previousPage, :outOfDate
 
     def initialize(site, relativeDir, filename, addtionalYamlKeys=[])
       @contentSource = site.config['WFContentSource']
@@ -300,31 +300,6 @@ module Jekyll
       bestPage
     end
 
-    # This method just gets the first author of authors and assigns
-    # them as the main author
-    def getMainAuthor()
-      author = {}
-      if not self.data['authors'].nil?
-        firstAuthor = self.data['authors'][0]
-        author = site.data['contributors'][firstAuthor]
-
-        # Check if the author is actually in the contributors list
-        if author.nil?
-          puts "WFPage.rb: Author '" + firstAuthor + "' isn't in the contributors list."
-          puts "WFPage.rb: Defined in: " + self.relative_path
-          puts ""
-        else
-          author['id'] = firstAuthor
-        end
-      end
-
-      if defined? author['twitter']
-        author['twitter'] = '@chromiumdev'
-      end
-
-      return author
-    end
-
     # This is overridden since Jekyll enforces content
     # to live inside the jekyll directory - we are living
     # outside of it.
@@ -449,10 +424,6 @@ module Jekyll
       return validObj
     end
 
-    def main_author
-      getMainAuthor()
-    end
-
     def nextPage
       getAppropriatePage(self.data['_nextPage'])
     end
@@ -486,7 +457,7 @@ module Jekyll
   # Returns <Hash>
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
     super(attrs + %w[ raw_canonical_url ] + %w[ canonical_url ] +
-      %w[ relative_url ] + %w[ context ] + %w[ main_author ] + %w[ nextPage ] +
+      %w[ relative_url ] + %w[ context ] + %w[ nextPage ] +
       %w[ previousPage ] + %w[ outOfDate ])
   end
   end

@@ -21,11 +21,6 @@ jbnicolai:
   email: me@jbnicolai.com
   description:
     en: "Open source contributor and software consultant"
-    de: "Joshua ist ein Pirat"
-    fr: "Joshua est un pirate"
-    la: "Joshua est pirata"
-    ru: "Dzhoshua yavlyayetsya piratom"
-    nl: "Joshua is een piraat"
 
 jakearchibald:
   name:
@@ -57,7 +52,8 @@ pbakaus:
   google: +PaulBakaus
   twitter: pbakaus
   email: pbakaus@google.com
-  description: "Open Web Developer Advocate at Google • Tools, Performance, Animation, UX"
+  description:
+    en: "Open Web Developer Advocate at Google • Tools, Performance, Animation, UX"
 
 ianbarber:
   name:
@@ -73,7 +69,8 @@ ianbarber:
   google: +ianbarber
   twitter: ianbarber
   email: ianbarber@google.com
-  description: "Ian is a DRE"
+  description:
+    en: "Ian is a DRE"
 
 ericbidelman:
   name:
@@ -102,7 +99,8 @@ beaufortfrancois:
     - author
   homepage: https://plus.google.com/+FrancoisBeaufort
   google: +FrancoisBeaufort
-  description: "Dives into Chromium source code"
+  description:
+    en: "Dives into Chromium source code"
 
 samchen:
   name:
@@ -118,7 +116,8 @@ samchen:
   google: +samchen
   twitter: chenxsan
   email: chenxsan@google.com
-  description: "Sam is a Front End Developer"
+  description:
+    en: "Sam is a Front End Developer"
 
 dalecurtis:
   name:
@@ -129,7 +128,8 @@ dalecurtis:
     unit:
   role:
     - author
-  description: "Dale."
+  description:
+    en: "Dale."
 
 alexdanilo:
   name:
@@ -175,7 +175,8 @@ cwdoh:
   google: +ChangwookDoh
   twitter: cwdoh
   email: changwook.doh@gmail.com
-  description: "Chang is a mobile and HTML5 technologist"
+  description:
+    en: "Chang is a mobile and HTML5 technologist"
 
 samdutton:
   name:
@@ -189,7 +190,8 @@ samdutton:
     - author
   google: +SamDutton
   email: dutton@google.com
-  description: "Sam is a Developer Advocate"
+  description:
+    en: "Sam is a Developer Advocate"
 
 dgash:
   name:
@@ -202,7 +204,8 @@ dgash:
   role:
     - author
   email: dgash@google.com
-  description: "Dave is a Tech Writer"
+  description:
+    en: "Dave is a Tech Writer"
 
 ewagasperowicz:
   name:
@@ -231,7 +234,8 @@ mattgaunt:
   homepage: http://blog.gauntface.com
   google: +MattGuant
   twitter: gauntface
-  description: "Matt is a Developer Advocate"
+  description:
+    en: "Matt is a Developer Advocate"
 
 
 ilyagrigorik:
@@ -247,7 +251,8 @@ ilyagrigorik:
   homepage: http://igvita.com
   google: +IlyaGrigorik
   twitter: igrigorik
-  description: "Ilya is a Developer Advocate and Web Perf Guru"
+  description:
+    en: "Ilya is a Developer Advocate and Web Perf Guru"
 
 umarhansa:
   name:
@@ -263,7 +268,8 @@ umarhansa:
   google: +UmarHansa
   twitter: umaar
   email: umar.hansa@gmail.com
-  description: "Umar is a front-end web developer"
+  description:
+    en: "Umar is a front-end web developer"
 
 paulirish:
   name:
@@ -292,7 +298,8 @@ megginkearney:
     - author
   google: 110573989653316535297
   email: mkearney@google.com
-  description: "Meggin is a Tech Writer"
+  description:
+    en: "Meggin is a Tech Writer"
 
 brendankenny:
   name:
@@ -323,7 +330,8 @@ paulkinlan:
   google: +PaulKinlan
   twitter: paul_kinlan
   email: paulkinlan@google.com
-  description: "Paul is a Developer Advocate"
+  description:
+    en: "Paul is a Developer Advocate"
 
 agektmr:
   name:
@@ -339,7 +347,8 @@ agektmr:
   google: +agektmr
   twitter: agektmr
   email: agektmr@google.com
-  description: "Eiji is a Developer Advocate"
+  description:
+    en: "Eiji is a Developer Advocate"
 
 ilmariheikkinen:
   name:
@@ -366,7 +375,8 @@ jeokrang:
   google: +jeokrang
   twitter:
   email: jeokrang@gmail.com
-  description: "Hunmin is a Web Front-End Developer"
+  description:
+    en: "Hunmin is a Web Front-End Developer"
 
 greenido:
   name:
@@ -383,7 +393,8 @@ greenido:
   google: +IdoGreen
   twitter: greenido
   email: idog@google.com
-  description: "Ido is a Developer Advocate and a runner"
+  description:
+    en: "Ido is a Developer Advocate and a runner"
 
 nurinamu:
   name:
@@ -399,7 +410,8 @@ nurinamu:
   google: +nurinamu
   twitter: nurinamu
   email: nurinamu@gmail.com
-  description: "Wonjae loves WebRTC and HHK"
+  description:
+    en: "Wonjae loves WebRTC and HHK"
 
 petelepage:
   name:
@@ -416,7 +428,8 @@ petelepage:
   google: +PeteLePage
   twitter: petele
   email: petele@google.com
-  description: "Pete is a Developer Advocate"
+  description:
+    en: "Pete is a Developer Advocate"
 
 paullewis:
   name:
@@ -431,7 +444,8 @@ paullewis:
   homepage: http://aerotwist.com/
   google: +PaulLewis
   twitter: aerotwist
-  description: "Paul is a Design and Perf Advocate"
+  description:
+    en: "Paul is a Design and Perf Advocate"
 
 heathermahan:
   name:
@@ -447,7 +461,8 @@ heathermahan:
   google: 108335678119817391642
   twitter: heatheramahan
   email: heatheramahan@gmail.com
-  description: "Heather Mahan is a developer."
+  description:
+    en: "Heather Mahan is a developer."
 
 mikemahemoff:
   name:
@@ -491,7 +506,8 @@ josephmedley:
   google: jmedley@google.com
   twitter:
   email:
-  description: "Technical Writer"
+  description:
+    en: "Technical Writer"
 
 jacquerie:
   name:
@@ -505,7 +521,8 @@ jacquerie:
   google: +JacopoNotarstefano
   twitter: Jaconotar
   email: jacopo.notarstefano@gmail.com
-  description: "Jacopo is a Full Stack Developer"
+  description:
+    en: "Jacopo is a Full Stack Developer"
 
 addyosmani:
   name:
@@ -529,7 +546,8 @@ chrispalmer:
   country: US
   role:
     - author
-  description: "Chris is a security engineer on the Chrome Security Team, focusing on secure usability."
+  description:
+    en: "Chris is a security engineer on the Chrome Security Team, focusing on secure usability."
 
 jasonpark:
   name:
@@ -541,7 +559,8 @@ jasonpark:
   google: +JasonPark0913
   twitter: hyunjO_on
   email: jpar225@gmail.com
-  description: "Jason is a Node.js Developer"
+  description:
+    en: "Jason is a Node.js Developer"
 
 jeffposnick:
   name:
@@ -632,7 +651,8 @@ samthorogood:
   google: +SamThorogood
   twitter: samthor
   email: thorogood@google.com
-  description: "Evangelises Chrome and the mobile web in the Developer Relations team at Google."
+  description:
+    en: "Evangelises Chrome and the mobile web in the Developer Relations team at Google."
 
 johyphenel:
   name:
@@ -694,7 +714,8 @@ tomwiltzius:
   google: 108335678119817391642
   twitter: heatheramahan
   email: heatheramahan@gmail.com
-  description: "Heather Mahan is a developer."
+  description:
+    en: "Heather Mahan is a developer."
 
 flaviocopes:
   name:
@@ -709,7 +730,8 @@ flaviocopes:
   homepage: http://flaviocopes.com
   twitter: flaviocopes
   email: copesc@gmail.com
-  description: "Flavio is a Full Stack Developer"
+  description:
+    en: "Flavio is a Full Stack Developer"
 
 龚振华:
   name:
@@ -724,7 +746,8 @@ flaviocopes:
   homepage: http://allmyverse.com
   google: 113525015220376733647
   email: simon.gong64@gmail.com
-  description: "Simon is a Full Stack Developer"
+  description:
+    en: "Simon is a Full Stack Developer"
 
 dalecurtis:
   name:
@@ -740,7 +763,8 @@ dalecurtis:
   twitter: DaleCurtis
   email: dalecurtis@google.com
   homepage: https://github.com/dalecurtis
-  description: "Dale is a Senior Software Engineer"
+  description:
+    en: "Dale is a Senior Software Engineer"
 
 sethladd:
   name:
@@ -766,4 +790,5 @@ kaycebasques:
   country: USA
   role:
     - author
-  description: "Kayce is a Tech Writer"
+  description:
+    en: "Kayce is a Tech Writer"
