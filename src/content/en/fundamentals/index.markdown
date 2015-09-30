@@ -15,7 +15,7 @@ translation_priority: 0
 </div>
 
 <div class="page-content mdl-grid">
-  {% include shared/base_card.liquid text="intro about how to get started" linkHref="guides/getting-started" linkText="Get Started" %}
+  {% include shared/base_card.liquid text="intro about how to get started" linkHref="getting-started" linkText="Get Started" %}
   {% include shared/base_card.liquid title="Simplify app installs" text="blah blah blah blah blah blah blah" linkHref="engage-and-retain/simplified-app-installs/" linkText="Learn more" %}
 </div>
 
