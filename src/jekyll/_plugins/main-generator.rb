@@ -60,6 +60,14 @@ module Jekyll
       contributorsFilepath = File.join(site.config['WFContributors'])
       contributesData = YAML.load_file(contributorsFilepath)
       contributesData = contributesData.each { |contributerKey, contributorObj|
+        # Check if contributor description exists and if so that it has en
+        # translation
+        if not contributorObj['description'].nil?
+          if contributorObj['description'][site.config['primary_lang']].nil?
+            puts "Error Yo."
+          end
+        end
+
         if File.exist?(site.config['WFStaticSource'] + '/imgs/contributors/' + contributerKey + '.jpg')
           contributorObj['imgUrl'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/imgs/contributors/' + contributerKey + '.jpg'
         else
