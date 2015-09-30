@@ -22,37 +22,36 @@ A completed version of this step is in the completed/step3 directory.
    code:<br>
    <br>
    {% highlight html %}
-   &lt;!DOCTYPE html&gt;&lt;html&gt;
-   &lt;head&gt;
-   &lt;title&gt;Push Notification codelab&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-   &lt;h1&gt;Push Notification codelab&lt;/h1&gt;
-   &lt;p&gt;This page must be accessed using HTTPS or via localhost.&lt;/p&gt;
-   &lt;script src="js/main.js"&gt;&lt;/script&gt;
-   &lt;/body&gt;
-   &lt;/html&gt;
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <title>Push Notification codelab</title>
+   </head>
+   <body>
+     <h1>Push Notification codelab</h1>
+     <p>This page must be accessed using HTTPS or via localhost.</p>
+     <script src="js/main.js"></script>
+   </body>
+   </html>
    {% endhighlight %}
-
+   <br>
    Open _index.html_ locally in Chrome from localhost: the URL should be something like _http://localhost/push-notifications/app/step1/index.html_.
 
 2. **Add a Service Worker**<br>
    <br>
-   In your app directory, create an empty file named _sw.js_. You'll add code
-   to this later.
-
-   Don't worry if you haven't used Service Workers before. You won't need to know much about them to complete this codelab.
-
-   Service Workers are worker scripts that run in the background to intercept network requests, handle push messages and perform other tasks. If you want to find out more, take a look at Introduction to Service Worker on HTML5 Rocks.
-
+   In your _app_ directory, create an empty file named _sw.js_. You'll add code
+   to this later.<br>
+   <br>
+   Don't worry if you haven't used Service Workers before. You won't need to know much about them to complete this codelab. Service Workers are worker scripts that run in the background to intercept network requests, handle push messages and perform other tasks. If you want to find out more, take a look at [Introduction to Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) on HTML5 Rocks.<br>
+   <br>
    When a push message is received, the browser can run a Service Worker in the background to handle push messages without requiring a web page to be open.
 
 3. **Register and install a Service Worker**<br>
    <br>
-   In this step you create the _main.js_ JavaScript referred to in
+   In this step you create the _main.js_ JavaScript file referred to in
    _index.html_. This in turn gives access to the Service Worker script.  In your _app_ directory, create a _js_ directory and add to it a file named
    _main.js_ with the following code:<br>
-
+   <br>
    {% highlight javascript %}
    if ('serviceWorker' in navigator) {
      console.log('Service Worker is supported');
@@ -64,8 +63,8 @@ A completed version of this step is in the completed/step3 directory.
      });
    }
    {% endhighlight %}
-
-   This code checks if Service Worker is supported by your browser, then registers and installs the Service Worker you created at _/sw.js_. — which doesn't do anything (yet!)
+   <br>
+   This code checks if Service Worker is supported by your browser, then registers and installs the Service Worker you created in _sw.js_ — which doesn't do anything (yet!)
 
 4. **Try it out from localhost**<br>
    <br>
@@ -79,14 +78,14 @@ A completed version of this step is in the completed/step3 directory.
 5. **Try out serviceworker-internals**<br>
    <br>
    The diagnostic page _chrome://serviceworker-internals_ is a good place to
-   check that your Service Workers are working:
-
+   check that your Service Workers are working:<br>
+   <br>
    <img src="images/image02.png" width="907" height="641" alt="chrome:serviceworker-internals diagnostic page open in Chrome" />
 
 6. **Add event listeners to your Service Worker**<br>
    <br>
    Add the following code to _sw.js_:<br>
-
+   <br>
    {% highlight javascript %}
    console.log('Started', self);
    self.addEventListener('install', function(event) {
@@ -101,7 +100,7 @@ A completed version of this step is in the completed/step3 directory.
      // TODO: Step 6
    });
    {% endhighlight %}
-
+   <br>
    In a Service Worker, `self` refers to the `ServiceWorkerGlobalScope` object: the Service Worker itself.
 
    **TOP TIP!**<br>

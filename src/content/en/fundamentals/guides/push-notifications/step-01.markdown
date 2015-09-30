@@ -24,6 +24,6 @@ You can either download all the sample code to your computer:
 $ git clone git@github.com:GoogleChrome/push-notifications.git
 {% endhighlight %}
 
-This will create a push-notifications directory containing completed code for each step.
+This will create a **_push-notifications_** directory containing completed code for each step.
 
-Create your own code in the directory named _app_. We'll refer to that throughout the codelab.
+Create your own code in the directory named **_app_**. We'll refer to that throughout the codelab.
