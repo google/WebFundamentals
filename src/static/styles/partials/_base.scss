@@ -108,11 +108,12 @@ hr {
 
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: $base-line;
+  
+  padding: 0 ($base-line);
 }
 
 main > .page-content {
-  margin-bottom: $base-line;
-
   padding: ($base-line) ($base-line) 0 ($base-line);
 
   & > h1 {

@@ -49,8 +49,6 @@ dd {
 
   // * -7 for the showcase title padding and -2 extra for page content container
   margin-top: -($base-line * 9);
-
-  padding-left: $base-line;
   box-sizing: border-box;
 }
 
@@ -66,6 +64,8 @@ dd {
     margin-right: initial;
     position: relative;
 
+    text-align: center;
+    padding-left: $base-line;
     margin-top: -($base-line * 9);
   }
 }
@@ -134,9 +134,11 @@ $colorLow: #cb4437;
 
 .wf-showcase__featured-casestudy {
   background-color: #f8f8f8;
-  padding-bottom: 1em;
+  padding-top: $base-line;
+  padding-bottom: $base-line;
 
   h4 {
+    margin-top: 0;
     margin-bottom: 4px;
     clear: none;
   }
