@@ -52,6 +52,11 @@ dd {
   box-sizing: border-box;
 }
 
+.wf-showcase__featured-showcase-img {
+  margin-top: $base-line;
+  margin-bottom: $base-line;
+}
+
 // The media query where the drawer pops open
 @media screen and (min-width: 840px) {
   .wf-showcase__title {

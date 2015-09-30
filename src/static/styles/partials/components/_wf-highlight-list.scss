@@ -30,6 +30,10 @@
   & a {
     text-decoration: none;
   }
+
+  & > a {
+    display: block;
+  }
 }
 
 .wf-highlight-list__subtitle {
