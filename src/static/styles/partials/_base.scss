@@ -110,10 +110,15 @@ hr {
   margin-right: auto;
 }
 
-.page-content {
+main > .page-content {
   margin-bottom: $base-line;
 
-  padding: ($base-line * 2) ($base-line / 2) 0 ($base-line / 2);
+  padding: ($base-line) ($base-line) 0 ($base-line);
+
+  & > h1 {
+    margin-top: 0;
+    margin-bottom: $base-line;
+  }
 }
 
 figure > img {
@@ -188,5 +193,8 @@ blockquote {
 }
 
 .intro {
-  font-size: 1.2em;
+  @include typo-subhead-2($usePreferred: false);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: $base-line * 2;
 }

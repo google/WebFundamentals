@@ -19,6 +19,14 @@
 <meta name="description" content="{{ page.html_head_description }}" />
 <meta itemprop="description" content="{{ page.html_head_description }}">
 
+<!-- Page Date Details -->
+{% if page.published_on %}
+<meta itemprop="datePublished" content="{{ page.published_on }}" />
+{% endif %}
+{% if page.updated_on and page.published_on != page.updated_on %}
+<meta itemprop="dateModified" content="{{ page.updated_on }}" />
+{% endif %}
+
 <!-- Translated Page -->
 {% for translated_page in page.translations %}
 <link rel="alternate" hreflang="{{translated_page[0]}}" href="{{translated_page[1].canonical_url}}" />
@@ -86,8 +94,6 @@
     </div>
     <!-- Bottom row, not visible on scroll -->
     <div class="mdl-layout__header-row wf-header__bottom-row">
-
-      {% include shared/author.liquid author=page.main_author linkauthor=true date=page.updated_on %}
 
       <div class="mdl-layout-spacer"></div>
 

@@ -36,7 +36,8 @@ To mark a phone number as a link, use the `tel:` scheme.  The syntax is
 simple:
 
 {% highlight html %}
-NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
+NIST Telephone Time-of-Day Service 
+<a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 {% endhighlight %}
 
 Results in:
@@ -58,9 +59,9 @@ Communicator.
 ## Use the international dialing format
 
 Always supply the phone number using the international dialing format: 
-the plus sign (+), country code, area code and number.  While not absolutely
+the plus sign (`+`), country code, area code and number.  While not absolutely
 necessary, it’s a good idea to separate each segment of the number with a
-hyphen (-) for easier reading and better auto-detection.
+hyphen (`-`) for easier reading and better auto-detection.
 
 Using a hyphenated international dialing format ensures that no matter where
 the user is calling from, whether a few hundred meters away or thousands

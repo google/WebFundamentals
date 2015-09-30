@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Migration concerns"
-description: "TODO"
+description: "Covers the concerns developers may have about migrating to HTTPS"
 authors:
   - chrispalmer
   - mattgaunt
@@ -11,7 +11,9 @@ order: 7
 translation_priority: 0
 ---
 
+<p class="intro">
 This section discusses concerns operators may have about migrating to HTTPS.
+</p>
 
 {% include shared/toc.liquid %}
 
@@ -48,8 +50,8 @@ HTTPS site to other HTTP sites. If that is a problem, there are several ways to
 solve it:
 
 * The other sites should migrate to HTTPS. Perhaps they might find this guide
-  useful! :) If referee sites can complete "Enable HTTPS On Your Servers" section of this guide, you can change
-  links in your site to theirs from http:// to https://, or you can use
+  useful! :) If referee sites can complete [Enable HTTPS On Your Servers](enable-https-on-your-servers) section of this guide, you can change
+  links in your site to theirs from `http://` to `https://`, or you can use
   protocol-relative links.
 * You can use the new [Referrer Policy
   standard](http://www.w3.org/TR/referrer-policy/#referrer-policy-delivery-meta)
@@ -58,19 +60,25 @@ solve it:
 Because search engines are migrating to HTTPS, you are likely see _more_ Referer
 headers when you migrate to HTTPS than you are now.
 
-<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Clients SHOULD NOT include a Referer header field in a (non-secure) HTTP request if the referring page was transferred with a secure protocol.<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">According to the HTTP RFC</a></p></blockquote>
+<blockquote>Clients <b>SHOULD NOT</b> include a Referer header field in a (non-secure) HTTP request if the referring page was transferred with a secure protocol.
+  <p>
+    <a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">According to the HTTP RFC</a>
+  </p>
+</blockquote>
 
 ## Ad Revenue
 
 Site operators that monetize their site by showing ads want to make sure that
 migrating to HTTPS does not reduce ad impressions. But, due to mixed content
-security concerns, an HTTP iframe will not work in an HTTPS page. There is a
+security concerns, an HTTP `iframe` will not work in an HTTPS page. There is a
 tricky collective action problem here: until advertisers publish over HTTPS,
 site operators cannot migrate to HTTPS without losing ad revenue; but until site
 operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 
 Advertisers should at least offer ad service via HTTPS (such as by completing
-the "Enable HTTPS On Your Servers" in this guide). Many already do. You should ask advertisers that do not
-serve HTTPS at all to at least start. You may wish to defer completing "Make Intra-Site URLs Relative" in
+the "Enable HTTPS On Your Servers" in this guide). Many already do. You 
+should ask advertisers that do not serve HTTPS at all to at least start. 
+You may wish to defer completing 
+[Make Intra-Site URLs Relative](make-intra-site-urls-relative) in
 this guide until enough advertisers interoperate properly.
 

@@ -7,6 +7,13 @@ feedName: Web Starter Kit Releases
 feedURL: https://github.com/google/web-starter-kit/releases.atom
 ---
 
+<style>
+.mdl-cell h3 {
+  height: 48px;
+  line-height: 24px;
+}
+</style>
+
 <div class="wf-subheading">
   <div class="page-content mdl-typography--text-center mdl-grid">
     <div class="mdl-cell mdl-cell--1-col"></div>

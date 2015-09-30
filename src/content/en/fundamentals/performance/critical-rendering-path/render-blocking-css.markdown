@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Render blocking CSS"
-description: "TODO"
+description: "By default CSS is treated as a render blocking resource, learn how to prevent it from blocking rendering."
 published_on: 2014-04-01
 updated_on: 2014-09-18
 order: 4
@@ -30,21 +30,19 @@ key-takeaways:
   possible, and use media types and queries to unblock rendering.
 </p>
 
-{% include shared/toc.liquid %}
-
 In the previous section we saw that the critical rendering path requires that we have both the DOM and the CSSOM to construct the render tree, which creates an important performance implication: **both HTML and CSS are render blocking resources.** The HTML is obvious, since without the DOM we would not have anything to render, but the CSS requirement may be less obvious. What would happen if we try to render a typical page without blocking rendering on CSS?
 
 {% include shared/takeaway.liquid list=page.key-takeaways.render-blocking-css %}
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <b>NYTimes with CSS</b>
+  <figure class="mdl-cell mdl-cell--6-col">
     <img class="center" src="images/nytimes-css-device.png" alt="NYTimes with CSS">
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <b>NYTimes without CSS (FOUC)</b>
+    <figcaption>The New York Times with CSS</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS">
-  </div>
+    <figcaption>The New York Times without CSS (FOUC)</figcaption>
+  </figure>
 </div>
 
 The above example, showing the NYTimes website with and without CSS, demonstrates why rendering is blocked until CSS is available - without CSS the page is effectively unusable. In fact, the experience on the right is often referred to as a "Flash of Unstyled Content" (FOUC). As a result, the browser will block rendering until it has both the DOM and the CSSOM.

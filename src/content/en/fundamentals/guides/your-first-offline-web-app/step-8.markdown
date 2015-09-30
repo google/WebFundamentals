@@ -1,7 +1,6 @@
 ---
 layout: shared/narrow
 title: "Congratulations"
-description: "TODO"
 notes:
   styling:
     - Styling will come later

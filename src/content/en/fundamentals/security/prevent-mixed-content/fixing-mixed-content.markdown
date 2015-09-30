@@ -115,11 +115,11 @@ proceed to [step 2](#step-2).
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/puppy-http.png">
-    <figcaption>HTTP image loads without error.</figcaption>
+    <figcaption class="wf-figcaption-good">HTTP image loads without error.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/puppy-https.png">
-    <figcaption>HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!</figcaption>
+    <figcaption class="wf-figcaption-good">HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!</figcaption>
    </figure>
 </div>
 
@@ -129,11 +129,11 @@ If you see a certificate warning, or if the content can't be displayed over
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/https-not-available.png">
-    <figcaption>Resource not available over HTTPS.</figcaption>
+    <figcaption class="wf-figcaption-bad">Resource not available over HTTPS.</figcaption>
   </figure>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="imgs/https-cert-warning.png">
-    <figcaption>Certificate warning when attempting to view resource over HTTPS.</figcaption>
+    <figcaption class="wf-figcaption-bad">Certificate warning when attempting to view resource over HTTPS.</figcaption>
   </figure>
 </div>
 
@@ -194,7 +194,7 @@ more information about other CSP directives at the following resources:
 * [Mozilla's intro to CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
 * [HTML5 Rocks' intro to CSP](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 * [CSP playground](http://www.cspplayground.com/)
-* [CSP version 2 spec](http://www.w3.org/TR/CSP2/)
+* [CSP spec](http://www.w3.org/TR/CSP/)
 
 <!-- Span required to prevent rest of page from being indented. 
 https://github.com/google/WebFundamentals/issues/1873 -->
