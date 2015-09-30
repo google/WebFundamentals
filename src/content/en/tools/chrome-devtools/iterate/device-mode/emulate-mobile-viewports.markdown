@@ -2,24 +2,16 @@
 rss: false
 layout: shared/narrow
 title: "Emulate Mobile Viewports"
-description: "Chrome DevTools device mode lets you mimic how your development site will look in production on a range of devices."
+description: "Chrome DevTools' Device Mode lets you mimic how your development site will look in production on a range of devices."
 authors:
   - megginkearney
 published_on: 2015-04-14
 updated_on: 2015-04-23
 order: 1
-related-guides:
-  device-emulators:
-    -
-      title: "Types of Device Emulators and Simulators"
-      href: tools/setup/device-testing/device-emulators
-      section:
-        title: "Types of Device Emulators and Simulators"
-        href: tools/setup/device-testing/device-emulators
 key-takeaways:
   device-mode:
-    - "Enable device mode and turn your viewport into a device emulator."
-    - "Test your site's responsiveness using the device mode's screen emulator."
+    - "Enable Device Mode and turn your viewport into a device emulator."
+    - "Test your site's responsiveness using the Device Mode's screen emulator."
     - "Save custom presets so you can easily access them later."
     - "Device mode isn't a replacement for real device testing. Be aware of its limitations."
 ---
@@ -54,7 +46,7 @@ Each preset automatically configures device emulation in the following ways:
 * Emulates mobile scrollbar overlays and meta viewport.
 * Autosizes (boosts) text for pages without a defined viewport.
 
-### Control device mode
+### Control Device Mode
 
 Use these set of actions to control device mode:
 
@@ -110,7 +102,7 @@ Device Mode offers a wide array of devices for emulation. You can add a custom d
 
 ## Limitations
 
-Although Chrome's device mode offers many powerful emulation tools, it does have some limitations. Currently known issues are described below.
+Although Device Mode powerful emulation, it does have limitations. These are the currently known issues:
 
 * **Device hardware**
   * GPU and CPU behavior are not emulated.
@@ -127,4 +119,4 @@ Although Chrome's device mode offers many powerful emulation tools, it does have
 * **AppCache**
   * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
-Despite these limitations, the device mode emulators are robust enough for most tasks. When you need to test on a real device, you can use the [remote debugging](/web/tools/setup/device-testing/remote-debugging) DevTools for additional insight.
+Despite these limitations, the Device Mode is robust enough for most tasks. When you need to test on a real device, you can use [Remote Debugging](/web/tools/chrome-devtools/debug/remote-debugging) for additional insight.

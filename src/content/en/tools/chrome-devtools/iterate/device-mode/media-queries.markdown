@@ -2,10 +2,10 @@
 rss: false
 layout: shared/narrow
 title: "Inspect CSS Media Queries"
-description: "Preview styles for targeted screen sizes using the Chrome DevTools media query inspector."
+description: "Preview styles for targeted screen sizes using Device Mode's Media Query Inspector."
 published_on: 2015-04-14
 updated_on: 2015-07-31
-order: 4
+order: 3
 authors:
   - megginkearney
 translation_priority: 0
@@ -19,7 +19,7 @@ notes:
     - "TBD."
 ---
 <p class="intro">
-  Preview styles for targeted screen sizes using the Chrome DevTools media query inspector.
+  Preview styles for targeted screen sizes using Device Mode's Media Query Inspector.
 </p>
 
 [Media queries](/web/fundamentals/layouts/rwd-fundamentals/use-media-queries)
@@ -35,13 +35,11 @@ based on the device dimensions.
 
 ## View media query inspector
 
-To view the media query inspector, click the **Media queries** ![media queries icon](imgs/icon-media-query.png){:.inline} icon in the upper left corner of the viewport. The DevTools detect media queries in your stylesheets and display them as colored bars in the top ruler.
+To view the media query inspector, click the **Media queries** ![media queries icon](imgs/icon-media-query.png){:.inline} icon in the upper left corner of the Device Mode. The DevTools detect media queries in your stylesheets and display them as colored bars in the top ruler.
 
 ![media query inspector](imgs/media-query-inspector-ruler.png)
 
-To avoid confusion and maximize media query views in device mode,
-turn off mobile emulation:
-click **Reset all overrides** ![reset all overrides](imgs/icon-reset-overrides.png){:.inline} icon and refresh the page.
+If you want to see how your media queries behave on your desktop site, click the **Reset all overrides** ![reset all overrides](imgs/icon-reset-overrides.png){:.inline} icon and refresh the page.
 
 Media queries are color-coded as follows:
 
