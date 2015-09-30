@@ -6,7 +6,7 @@ title: 'Using requestIdleCallback'
 date: 2015-08-27
 article:
   written_on: 2015-08-27
-  updated_on: 2015-08-27
+  updated_on: 2015-09-30
 authors:
 - paullewis
 collection: updates
@@ -16,7 +16,7 @@ type: news
 tags:
 - performance
 - update
-description: requestIdleCallback is new performance API for scheduling work when the user is idle.
+description: requestIdleCallback is new performance API for scheduling work when the browser is idle.
 featured-image: /web/updates/images/2015-08-27-using-requestidlecallback/featured.jpg
 permalink: /updates/2015/08/27/using-requestidlecallback.html
 ---
@@ -76,11 +76,11 @@ function myNonEssentialWork (deadline) {
 
 ## Guaranteeing your function is called
 
-What do you do if things are really busy? You might be concerned that your callback may never be called. Well, although `requestIdleCallback` resembles `requestAnimationFrame`, it also differs in that it takes a second parameter: **a timeout**. This timeout is an optional parameter which, if set, gives the browser a time in milliseconds by which it must execute the callback:
+What do you do if things are really busy? You might be concerned that your callback may never be called. Well, although `requestIdleCallback` resembles `requestAnimationFrame`, it also differs in that it takes an optional second parameter: an options object with **a timeout** property. This timeout, if set, gives the browser a time in milliseconds by which it must execute the callback:
 
 {% highlight javascript %}
 // Wait at most two seconds before processing events.
-requestIdleCallback(processPendingAnalyticsEvents, 2000);
+requestIdleCallback(processPendingAnalyticsEvents, { timeout: 2000 });
 {% endhighlight %}
 
 If your callback is executed because of the timeout firing you’ll notice two things:
@@ -143,7 +143,7 @@ function schedulePendingEvents() {
 
   if ('requestIdleCallback' in window) {
     // Wait at most two seconds before processing events.
-    requestIdleCallback(processPendingAnalyticsEvents, 2000);
+    requestIdleCallback(processPendingAnalyticsEvents, { timeout: 2000 });
   } else {
     processPendingAnalyticsEvents();
   }
@@ -257,7 +257,7 @@ All being well we will now see much less jank when appending items to the DOM. E
 ## FAQ
 
 * **Is there a polyfill?**
-    Sadly not. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free space at the end of the frame, so at best you have to make guesses. APIs like `setTimeout`, `setInterval`, or `setImmediate` can be used to schedule work, but they are not timed to avoid user interaction in the way that `requestIdleCallback` is.
+    Sadly not. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free time at the end of the frame, so at best you have to make guesses. APIs like `setTimeout`, `setInterval`, or `setImmediate` can be used to schedule work, but they are not timed to avoid user interaction in the way that `requestIdleCallback` is.
 * **What happens if I overrun the deadline?**
     If `timeRemaining()` returns zero, but you opt to run for longer, you can do so without fear of the browser halting your work. However, the browser gives you the deadline to try and ensure a smooth experience for your users, so unless there’s a very good reason, you should always adhere to the deadline.
 * **Is there maximum value that `timeRemaining()` will return?**
@@ -265,9 +265,9 @@ All being well we will now see much less jank when appending items to the DOM. E
 * **Is there any kind of work I shouldn’t do in a requestIdleCallback?**
     Ideally the work you do should be in small chunks (microtasks) that have relatively predictable characteristics. For example, changing the DOM in particular will have unpredictable execution times, since it will trigger style calculations, layout, painting, and compositing. As such you should only make DOM changes in a `requestAnimationFrame` callback as suggested above. Another thing to be wary of is resolving (or rejecting) Promises, as the callbacks will execute immediately after the idle callback has finished, even if there is no more time remaining.
 * **Will I always get a `requestIdleCallback` at the end of a frame?**
-    No, not always. The browser will schedule the callback whenever there is free time at the end of a frame, or in periods where the user is inactive. You shouldn’t expect the callback to be called per frame, and if you require it to run within a given timeframe you should make use of the timeout parameter.
+    No, not always. The browser will schedule the callback whenever there is free time at the end of a frame, or in periods where the user is inactive. You shouldn’t expect the callback to be called per frame, and if you require it to run within a given timeframe you should make use of the timeout.
 * **Can I have multiple `requestIdleCallback` callbacks?**
-    Yes, you can, very much as you can have multiple `requestAnimationFrame` callbacks. It’s worth remembering, though, that if your first callback uses up the time remaining during its callback then there will be no more time left for any other callbacks. The other callbacks will then have to wait until the browser is next idle before they can be run. Depending on the work you’re trying to get done, it may be better to have a single idle callback and divide the work in there. Alternatively you can make use of the timeout parameter to ensure that no callbacks get starved for time.
+    Yes, you can, very much as you can have multiple `requestAnimationFrame` callbacks. It’s worth remembering, though, that if your first callback uses up the time remaining during its callback then there will be no more time left for any other callbacks. The other callbacks will then have to wait until the browser is next idle before they can be run. Depending on the work you’re trying to get done, it may be better to have a single idle callback and divide the work in there. Alternatively you can make use of the timeout to ensure that no callbacks get starved for time.
 * **What happens if I set a new idle callback inside of another?**
     The new idle callback will be scheduled to run as soon as possible, starting from the _next_ frame (rather than the current one).
 
