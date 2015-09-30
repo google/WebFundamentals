@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow-pages-list
 title: "Using the Console"
 description: "The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time."
@@ -9,7 +8,6 @@ order: 2
 authors:
   - megginkearney
 translation_priority: 0
-panel: console
 ---
 
 <p class="intro">

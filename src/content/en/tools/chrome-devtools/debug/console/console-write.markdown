@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Diagnose and Log to Console"
 description: "Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage."

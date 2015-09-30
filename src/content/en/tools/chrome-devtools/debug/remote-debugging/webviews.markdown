@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow-pages-list
 title: "Remote Debugging WebViews"
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."

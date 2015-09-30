@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Map Preprocessed Code to Source Code"
 description: "Keep your client-side code readable and debuggable even after you've combined, minified or compiled it."

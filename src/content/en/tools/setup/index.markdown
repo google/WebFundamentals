@@ -1,7 +1,6 @@
 ---
 layout: shared/narrow-pages-list
 title: "Getting Started"
-rss: false
 description: "Set up your workspace to include a good editor, debugging, and build tools for the multi-device web."
 published_on: 2015-04-14
 updated_on: 2015-04-14

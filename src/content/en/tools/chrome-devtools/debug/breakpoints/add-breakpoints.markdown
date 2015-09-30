@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "How to set breakpoints"
 description: "Set breakpoints in Chrome DevTools to quickly and effectively debug problematic code."

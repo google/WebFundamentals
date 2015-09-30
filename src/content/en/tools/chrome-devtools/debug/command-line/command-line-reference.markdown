@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Command Line API Reference"
 description: "TODO"

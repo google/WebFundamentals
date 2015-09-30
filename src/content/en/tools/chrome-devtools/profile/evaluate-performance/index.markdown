@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow-pages-list
 title: "How to Look at Performance"
 description: "Focus on the user first. How users perceive delays far outweighs any performance guidelines."
@@ -9,7 +8,6 @@ order: 1
 authors:
   - megginkearney
 translation_priority: 0
-panel: timeline
 ---
 
 <p class="intro">

@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Console API Reference"
 description: "Write to the console, create JavaScript profiles, and start debugging sessions with the Console API."

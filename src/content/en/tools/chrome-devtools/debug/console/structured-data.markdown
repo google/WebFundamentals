@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Compare Similar Data Objects"
 description: "Compare similar data objects using the <code>table()<code> method."

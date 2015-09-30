@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Inspect CSS Media Queries"
 description: "Preview styles for targeted screen sizes using Device Mode's Media Query Inspector."

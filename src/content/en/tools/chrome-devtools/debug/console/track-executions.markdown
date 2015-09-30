@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Measure and count executions"
 description: "Take advantage of the Console API to measure execution times and count statement executions."

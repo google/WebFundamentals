@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow-pages-list
 title: "Interact from Command Line"
 description: "The console is a full-fledged terminal you can use to interact with your page during development."
@@ -9,7 +8,6 @@ order: 3
 authors:
   - josephmedley
 translation_priority: 0
-panel: console
 ---
 
 <p class="intro">

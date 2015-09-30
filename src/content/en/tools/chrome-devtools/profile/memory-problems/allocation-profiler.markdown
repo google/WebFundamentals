@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "How to Use the Allocation Profiler Tool"
 description: "Use the allocation profiler tool to find objects that aren't being properly garbage collected, and continue to retain memory."

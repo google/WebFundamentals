@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Analyze Runtime Performance"
 description: "Users expect pages to be interactive and smooth. Each stage in the pixel pipeline represents an opportunity to introduce 'jank'. Learn about the tools and strategies to identify and fix common problems that slow down runtime performance."
