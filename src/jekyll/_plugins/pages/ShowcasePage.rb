@@ -26,7 +26,6 @@ module Jekyll
       validKeys = ['tags', 'showcase', 'featured_image', 'subtitle']
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['drawerTitleText'] = 'Web Showcase'
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/showcases.css';
 
       self.data['feed_name'] = 'Google Web Showcase - Google Developers'

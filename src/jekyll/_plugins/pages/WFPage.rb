@@ -88,10 +88,6 @@ module Jekyll
       # Default we expect to be overriden
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/fundamentals.css';
 
-      # This could be given a better name - Used in navigation liquid
-      # displayed on mobile screens
-      self.data['drawerTitleText'] = self.data['title']
-
       self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
       self.data['theme_color'] = '#03A9F4'
       self.data['translations'] = {}
@@ -274,29 +270,7 @@ module Jekyll
         end
 
         topLevelEntries << entry
-
-        #if subdirectory['id'] == @directories[currentLevel]
-        #  rootSection = subdirectory
-        #else
-        #  otherSections << subdirectory
-        #end
       }
-
-      #entry = getBetterBookEntry(rootSection, currentLevel, true)
-
-      #topLevelEntries = [entry]
-
-      #otherSections.each { |section|
-      #  if section['index'].nil?
-      #    next
-      #  end
-      #  entry = getBetterBookEntry(section, currentLevel)
-      #  if entry.nil?
-      #    next
-      #  end
-      #
-      #  topLevelEntries << entry
-      #}
 
       self.data['contentnav'] = { "toc" => topLevelEntries }
 

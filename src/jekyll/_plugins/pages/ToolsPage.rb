@@ -27,8 +27,6 @@ module Jekyll
       validKeys = ['panel', 'panels']
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['drawerTitleText'] = 'Web Tools'
-
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/tools.css';
 
       self.data['feed_name'] = 'Google Web Tools - Google Developers'
