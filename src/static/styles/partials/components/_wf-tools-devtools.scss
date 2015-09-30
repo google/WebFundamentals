@@ -21,4 +21,37 @@
 
 }
 
+.wf-devtools-header {
+
+  .page-content:first-child {
+    padding-bottom: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1;
+    font-weight: 300;
+
+    img {
+      vertical-align: bottom;
+      width: 80px;
+      margin-right: 0.5em;
+    }
+
+  }
+
+  p.access {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin-top: 0;
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
 
