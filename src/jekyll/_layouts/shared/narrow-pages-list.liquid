@@ -2,11 +2,24 @@
 
 <div class="page-content">
 
-<h1>{{page.title}}</h1>
+  <h1>{{page.title}}</h1>
 
-{{ content }}
+  {{ content }}
 
-{% include fundamentals/section_toc.liquid %}
+  <div class="wf-border-container">
+    <div class="wf-border-container__content">
+      <h3 class="wf-highlight-list__title">{{"topics" | localize_string}}</h3>
+      <ol class="wf-highlight-list__list">
+      {% for pageInSection in page.context.pages %}
+        <li>
+          <a href="{{pageInSection.canonical_url | localize_link:pageInSection }}">
+            {{pageInSection.title}}
+          </a>
+        </li>
+      {% endfor %}
+      </ol>
+    </div>
+  </div>
 
 </div>
 
