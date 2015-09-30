@@ -12,20 +12,17 @@ notes:
 ---
 
 <p class="intro">
-  Use virtual devices in Chrome DevTools' Device Mode to build mobile-first web sites.
+  Use Chrome DevTools' Device Mode to build mobile-first, fully responsive web sites. Learn how to use it to simulate a wide range of devices and their capabilities.
 </p>
-
-Learn how to use the built-in Device Mode to iteratively build and preview your site across a wide range of simulated devices. The Device Mode will help you build a truly responsive layout, test sensory input like touch and geolocation and stress test under slow network conditions.
 
 ![Initial start for device mode](imgs/device-mode-initial-view.png)
 
-## Things you can do with Device Mode
+## In a nutshell
 
 * Emulate your site across [different screen sizes and resolutions](/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports), including Retina displays.
 * Responsively design by visualizing and [inspecting CSS media queries](/web/tools/chrome-devtools/iterate/device-mode/media-queries).
 * Evaluate your site's performance using the [network emulator](/web/tools/profile-performance/network-performance/network-conditions), without affecting traffic to other tabs.
-* Accurately [simulate device input](/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation.
-* Enhance your current debugging workflow by combining device mode with the existing DevTools.
+* Accurately [simulate device input](/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
 
 Some of this documentation might be ahead of the stable version of Chrome. Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a>.
 
