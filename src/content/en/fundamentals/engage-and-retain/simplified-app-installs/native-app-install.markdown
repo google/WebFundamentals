@@ -1,21 +1,67 @@
 ---
 layout: shared/narrow
-title: "Simplifying app installs"
-description: "native app install"
-published_on: 2015-09-21
-updated_on: 2015-09-21
+title: "Native app install banners"
+description: "Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user install your native app without leaving your site."
+published_on: 2014-12-17
+updated_on: 2015-09-30
 authors:
-  - petelepage
+  - mattgaunt
+  - paulkinlan
 translation_priority: 1
-key-takeaways:
-  todo:
-    - "Oh look, a TL;DR goes here"
-    - "And another TL;DR, whee!"
+order: 3
 ---
 
-<p class="intro">
-Native app install banner stuff
-</p>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <p class="intro">
+    Native App install banners are similar to Web app install banners, but
+    instead of adding to the home screen will let the user install your
+    native app without leaving your site.
+    </p>
+  </div>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/native-app-install-banner.gif" alt="Native app install banner">
+    <figcaption>Native app install banner flow</figcaption>
+  </figure>
+</div>
 
-{% include shared/takeaway.liquid list=page.key-takeaways.todo %}
+## Criteria to show the banner
 
+The criteria is similar to the Web App install banner except for the need of 
+a Service Worker. Your site must:
+
+* Have a [web app manifest](.) file with:
+  - a `short_name`
+  - a 144x144 png icon, your icon declartion's should include a mime type of `image/png`
+  - a `related_applications` object with information about the app
+* Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/)
+* Be visited by the user twice, over two separate days during the course
+  of two weeks.
+
+## Manifest requirements
+
+To integrate into any manifest, add a `related_applications` array with the 
+platforms of `play` (for Google Play) and the App Id.
+
+{% highlight javascript %}
+"related_applications": [
+  {
+  "platform": "play",
+  "id": "com.google.samples.apps.iosched"
+  }
+]
+{% endhighlight %}
+
+If just want to offer the user the ability to install your Android 
+application, and not show the web app install banner, then add
+`"prefer_related_applications": true`. For example:
+
+{% highlight javascript %}
+"prefer_related_applications": true,
+"related_applications": [
+  {
+  "platform": "play",
+  "id": "com.google.samples.apps.iosched"
+  }
+]
+{% endhighlight %}
