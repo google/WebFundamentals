@@ -16,7 +16,7 @@ new content.
 
 You'll also learn the basics of Service Workers.
 
-### What you'll learn
+## What you'll learn
 
 * Service Worker basics: installation and event handling
 * How to set up a Google Cloud Messaging (GCM) account
@@ -25,7 +25,7 @@ You'll also learn the basics of Service Workers.
 * Notification display
 * Notification click handling
 
-### What you'll need
+## What you'll need
 
 * Chrome 42 or above
 * A basic understanding of [git](http://git-scm.com/), and [Chrome DevTools](https://developer.chrome.com/devtools)
