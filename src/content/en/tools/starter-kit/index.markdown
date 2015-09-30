@@ -2,7 +2,7 @@
 layout: shared/wide
 description: "Web Starter Kit is boilerplate and tooling for multi-device development"
 title: Web Starter Kit
-order: 7
+order: 4
 feedName: Web Starter Kit Releases
 feedURL: https://github.com/google/web-starter-kit/releases.atom
 ---

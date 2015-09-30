@@ -1,8 +1,8 @@
 ---
 layout: shared/wide
 description: "The Chrome DevTools are Chrome's built-in authoring and debugging tool."
-title: Chrome DevTools
-order: 1
+title: "Chrome DevTools"
+order: 3
 ---
 
 
