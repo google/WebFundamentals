@@ -2,8 +2,8 @@
 layout: shared/narrow-pages-list
 title: "Your first offline web app"
 description: "Learn how to integrate service worker into an existing application and how to make it work offline"
-published_on: 2014-07-17
-updated_on: 2014-10-21
+published_on: 2015-09-30
+updated_on: 2015-09-30
 translation_priority: 1
 ---
 

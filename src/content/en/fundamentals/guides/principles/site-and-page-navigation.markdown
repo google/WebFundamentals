@@ -9,8 +9,11 @@ updated_on: 2015-09-17
 order: 1
 ---
 
+<p class="intro">
 Focus your mobile homepage on connecting users to the content they’re looking for.
+</p>
 
+{% include shared/toc.liquid %}
 
 ## 1. Keep calls to action front and center
 
