@@ -29,7 +29,6 @@ module Jekyll
       super(site, relative_dir, feedFilename, langcode)
       self.data = self.data ? self.data : {}
       self.data['feed_icon'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + 'favicon.ico'
-      self.data['feed_update'] = site.time.strftime("%Y-%m-%dT%H:%M:%SZ")
       maxNumberOfResults = 25
       feedPages = pages.reject { |page|
         reject = false
@@ -53,6 +52,8 @@ module Jekyll
 
         b_order <=> a_order
       end
+
+      self.data['feed_update'] = feedPages[0].data['updated_on'].strftime("%Y-%m-%dT%H:%M:%SZ")
 
       feedPages = feedPages[0..maxNumberOfResults]
 
