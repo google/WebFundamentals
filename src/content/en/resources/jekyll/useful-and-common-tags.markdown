@@ -5,11 +5,13 @@ description: "This is a list of tags that should be useful or are commonly used.
 order: 3
 key-takeaways:
   example:
-    - Always use a viewport.
-    - Always start with a narrow viewport first and scale out.
-    - Base your breakpoints off when you need to adapt the content.
-    - Create a high-level vision of your layout across major breakpoints.
-
+    - "Always use a viewport."
+    - "Always start with a narrow viewport first and scale out."
+    - "Base your breakpoints off when you need to adapt the content."
+    - "Create a high-level vision of your layout across major breakpoints."
+notes:
+  example:
+    - "Oh look, there's an example of a note here."
 related-guides:
   example:
     -
@@ -56,11 +58,35 @@ You can define what is printed by adding varaibles to the YAML of the page like 
 {% highlight text %}
 key-takeaways:
   example:
-    - Always use a viewport.
-    - Always start with a narrow viewport first and scale out.
-    - Base your breakpoints off when you need to adapt the content.
-    - Create a high-level vision of your layout across major breakpoints.
+    - "Always use a viewport."
+    - "Always start with a narrow viewport first and scale out."
+    - "Base your breakpoints off when you need to adapt the content."
+    - "Create a high-level vision of your layout across major breakpoints."
 {% endhighlight %}
+
+## Notes and Remembers
+
+<pre>{% raw %}{% include shared/remember.liquid list=page.notes.example %}{% endraw %}</pre>
+
+{% include shared/remember.liquid list=page.notes.example %}
+
+or
+
+<pre>{% raw %}{% include shared/note.liquid list=page.notes.example %}{% endraw %}</pre>
+
+{% include shared/note.liquid list=page.notes.example %}
+
+You can define what is printed by adding varaibles to the YAML of the page like so:
+
+{% highlight text %}
+notes:
+  example:
+    - "Always use a viewport."
+    - "Always start with a narrow viewport first and scale out."
+    - "Base your breakpoints off when you need to adapt the content."
+    - "Create a high-level vision of your layout across major breakpoints."
+{% endhighlight %}
+
 
 ## Related Guides
 
