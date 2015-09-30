@@ -16,7 +16,7 @@ authors:
 
 Pat yourself on the back. You built a web app that enables Push Notifications!
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 * **My Service Worker didn't update!**<br>
 Are you sure? Check the source tab in _chrome://serviceworker-internals_. If it
@@ -49,7 +49,7 @@ once for each Service Worker session.
 [As of Firefox
 42](https://groups.google.com/forum/#!topic/mozilla.dev.platform/BL6TrHN73dY) the Push API is turned on by default.
 
-### What we've covered
+## What we've covered
 
 * Install a Service Worker and handle events
 * Set up a Google Cloud Messaging (GCM) account
@@ -59,11 +59,11 @@ once for each Service Worker session.
 * Display notifications
 * Handle notification clicks
 
-### Next Steps
+## Next Steps
 
 * Service Worker codelab (if you haven't already done it!)
 
-### Learn More
+## Learn More
 
 * [Push Notifications on the Open
   Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en)

@@ -34,7 +34,9 @@ request that includes the following:
   client app. That's the last part of the subscription endpoint URL, and looks
   like this: <br>
   <br>
-  _APA91bHMaA-R0eZrPisZCGfwwd7z1EzL7P7Q7cyocVkxBU3nXWed1cQYCYvFglMHIJ40kn-jZENQ62UFgg5QnEcqwB5dFZ-AmNZjATO8QObGp0p1S6Rq2tcCuUibjnyaS0UF1gIM1mPeM25MdZdNVLG3dM6ZSfxV8itpihroEN5ANj9A26RU2Uw_
+  _APA91bHMaA-R0eZrPisZCGfwwd7z1EzL7P7Q7cyocVkxBU3nXWed1cQYCYvF
+  glMHIJ40kn-jZENQ62UFgg5QnEcqwB5dFZ-AmNZjATO8QObGp0p1S6Rq2tcCu
+  UibjnyaS0UF1gIM1mPeM25MdZdNVLG3dM6ZSfxV8itpihroEN5ANj9A26RU2Uw_
 
 For a production site or app, you would normally set up a service to interact
 with GCM from your server. (There is some sample code for doing just that in
@@ -50,35 +52,44 @@ If you haven't used cURL before, you may find the following helpful:
 
 The cURL command to send a request to GCM to issue a push message looks like
 this:
-
-_curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"**&lt;SUBSCRIPTION\_ID&gt;**\"]}"
+_curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"**&lt;SUBSCRIPTION\_ID&gt;**\"]}"_
 
  Let's see that in action...
 
- 1. From your terminal, run the cURL command below — but make sure to use your
-   own API key from Step 2 and the subscription ID from step 4: <br>
-   <br>
-   {% highlight bash %}
-   curl --header "Authorization: key=AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"APA91bE9DAy6\_p9bZ9I58rixOv-ya6PsNMi9Nh5VfV4lpXGw1wS6kxrkQbowwBu17ryjGO0ExDlp-S-mCiwKc5HmVNbyVfylhgwITXBYsmSszpK0LpCxr9Cc3RgxqZD7614SqDokwsc3vIEXkaT8OPIM-mnGMRYG1-hsarEU4coJWNjdFP16gWs\"]}"
-   {% endhighlight %}
+## 1. Make a request to GCM
 
-2. If it all worked out, you will see a response like this in your terminal:<br>
-   <br>
-   <img src="images/image16.png" width="890" height="551" alt="BASH terminal screenshot: successful response to cURL request to GCM to send a push message" /><br>
-   <br>
-   If there are authorisation errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
+From your terminal, run the cURL command below — but make sure to use your
+own API key from Step 2 and the subscription ID from step 4:
 
-3. Take a look at _chrome://serviceworker-internals_. You should see something
-   like this:<br>
-   <br>
-   <img src="images/image17.png" width="1547" height="492" alt="Chrome DevTools screenshot:  Push message received" /><br>
-   <br>
-   (If you want, you can try opening your app in Chrome Canary as well as Chrome and requesting a notification for two different endpoints. Make sure to put escaped quotes around each subscription ID.)
+{% highlight bash %}
+curl --header "Authorization: key=AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"APA91bE9DAy6\_p9bZ9I58rixOv-ya6PsNMi9Nh5VfV4lpXGw1wS6kxrkQbowwBu17ryjGO0ExDlp-S-mCiwKc5HmVNbyVfylhgwITXBYsmSszpK0LpCxr9Cc3RgxqZD7614SqDokwsc3vIEXkaT8OPIM-mnGMRYG1-hsarEU4coJWNjdFP16gWs\"]}"
+{% endhighlight %}
 
-4. Try closing or moving focus away from the browser tab that's running your
-   app. You should see a notification like this:<br>
-   <br>
-   <img src="images/image18.png" width="373" height="109" alt="Push notification screenshot: 'This site has been updated in the background'" />
+## 2. Check the response
+
+If it all worked out, you will see a response like this in your terminal:
+
+<img src="images/image16.png" width="890" height="551" alt="BASH terminal screenshot: successful response to cURL request to GCM to send a push message" />
+
+If there are authorisation errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
+
+## 3. Check diagnostics
+
+Take a look at _chrome://serviceworker-internals_. You should see something
+like this:
+
+<img src="images/image17.png" width="1547" height="492" alt="Chrome DevTools screenshot:  Push message received" />
+
+Try requesting a notification for two different endpoints by opening your app in Chrome Canary as well as Chrome.
+
+Make sure to put escaped quotes around each subscription ID.
+
+## 4. Try changing window focus
+
+Try closing or moving focus away from the browser tab that's running your
+app. You should see a notification like this:
+
+<img src="images/image18.png" width="373" height="109" alt="Push notification screenshot: 'This site has been updated in the background'" />
 
 **Important**: Each client that subscribes to push messaging will have its own subscription ID. If you're sending requests to GCM for notifications, remember to include subscription IDs for all the clients you want to send messages to! If you build each step of this codelab separately, each step will represent a different endpoint and therefore have a different subscription ID.
 

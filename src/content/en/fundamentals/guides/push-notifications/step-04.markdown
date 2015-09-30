@@ -24,47 +24,47 @@ For this step, you need to set up a project on the Google Developer Console.
 **There are lots of steps here, but don't be put off. It's really easy to set up a project!**
 
 
-1. **Create a project**<br>
-   <br>
-   From the [Google Developers Console](https://console.developers.google.com)
-   create a new project:<br>
-   <br>
-   <img src="images/image04.png" width="907" height="845" alt="Web page screenshot: setting up APIs and Auth for a project from the Google Developers Console" />
+## 1. Create a project
 
-2. **Select APIs for the project**<br>
-   <br>
-   From the **APIs &amp; auth** menu, select **APIs**:<br>
-   <br>
-   <img src="images/image05.png" width="907" height="845" alt="Web page screenshot: selecting APIs from the Google Developers Console" />
-   <br>
-   From the **API Library** list, select **Cloud Messaging for Android** (Cloud Messaging for Chrome is for [Chrome apps and extensions](https://developer.chrome.com/apps/about_apps)):<br>
-   <br>
-   <img src="images/image06.png" width="907" height="845" alt="Web page screenshot: selecting Cloud Messaging for Android API" /> If the API was added successfully you will see a page like this:<br>
-   <br>
-   <img src="images/image07.png" width="965" height="901" alt="Web page screenshot: Google Developers Console, Google Cloud Messaging for Android enabled" />
+From the [Google Developers Console](https://console.developers.google.com)
+create a new project:
 
-3. **Get credentials**<br>
-   <br>
-   From the **APIs &amp; auth** menu, select **Credentials**, click the **Add
-   credentials** dropdown button and select **API key**:<br>
-   <br>
-   <img src="images/image08.png" width="965" height="901" alt="Web page screenshot: add credentials from the Google Developers Console" />
-   <br>
-   Click the **Browser Key** button:<br>
-   <br>
-   <img src="images/image09.png" width="907" height="822" alt="Web page screenshot: click Browser key button to select new API key type in the Google Developers Console" /><br>
-   <br>
-   Leave the HTTP referrers field blank and click the **Create** button:<br>
-   <br>
-   <img src="images/image10.png" width="907" height="822" alt="Web page screenshot: click the Create button to create a browser API key from the Google Developers Console" /><br>
-   <br>
-   Get the **API key** — you'll need this in Step 5:<br>
-   <br>
-   <img src="images/image11.png" width="907" height="822" alt="Web page screenshot: get the API key for your project from the Google Developers Console" /><br>
-   <br>
-   From the Home page, get the **Project Number** — you'll also need this in Step 5:<br>
-   <br>
-   <img src="images/image12.png" width="965" height="901" alt="Web page screenshot: get the Project Number for your project from the Google Developers Console" />
+<img src="images/image04.png" width="907" height="845" alt="Web page screenshot: setting up APIs and Auth for a project from the Google Developers Console" />
+
+## 2. Select APIs for the project
+
+From the **APIs &amp; auth** menu, select **APIs**:
+
+<img src="images/image05.png" width="907" height="845" alt="Web page screenshot: selecting APIs from the Google Developers Console" />
+
+From the **API Library** list, select **Cloud Messaging for Android** (Cloud Messaging for Chrome is for [Chrome apps and extensions](https://developer.chrome.com/apps/about_apps)):
+
+<img src="images/image06.png" width="907" height="845" alt="Web page screenshot: selecting Cloud Messaging for Android API" /> If the API was added successfully you will see a page like this:
+
+<img src="images/image07.png" width="965" height="901" alt="Web page screenshot: Google Developers Console, Google Cloud Messaging for Android enabled" />
+
+## 3. Get credentials
+
+From the **APIs &amp; auth** menu, select **Credentials**, click the **Add
+credentials** dropdown button and select **API key**:
+
+<img src="images/image08.png" width="965" height="901" alt="Web page screenshot: add credentials from the Google Developers Console" />
+
+Click the **Browser Key** button:
+
+<img src="images/image09.png" width="907" height="822" alt="Web page screenshot: click Browser key button to select new API key type in the Google Developers Console" />
+
+Leave the HTTP referrers field blank and click the **Create** button:
+
+<img src="images/image10.png" width="907" height="822" alt="Web page screenshot: click the Create button to create a browser API key from the Google Developers Console" />
+
+Get the **API key** — you'll need this in Step 5:
+
+<img src="images/image11.png" width="907" height="822" alt="Web page screenshot: get the API key for your project from the Google Developers Console" />
+
+From the Home page, get the **Project Number** — you'll also need this in Step 5:
+
+<img src="images/image12.png" width="965" height="901" alt="Web page screenshot: get the Project Number for your project from the Google Developers Console" />
 
 Congratulations!
 
