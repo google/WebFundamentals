@@ -1,7 +1,7 @@
 ---
 layout: shared/wide
-description: "Web Developer Tools provides a set of instructions and tools to help you build your website."
-title: Tools
+description: "Set Up your development workflow and use Chrome DevTools to iterate, debug and profile your site."
+title: Developer Workflow
 translation_priority: 0
 ---
 

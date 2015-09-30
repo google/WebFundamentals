@@ -1,13 +1,13 @@
 ---
 rss: false
 layout: shared/narrow-pages-list
-title: "Debug WebView Content in Your Development Workspace"
+title: "Remote Debugging WebViews"
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 authors:
   - megginkearney
 published_on: 2015-04-14
 updated_on: 2015-07-30
-order: 1
+order: 3
 key-takeaways:
   webview:
     - "Enable WebView debugging in your native Android app; debug WebViews in Chrome DevTools."

@@ -5,7 +5,7 @@ title: "Debug with Breakpoints"
 description: "Chrome DevTools includes powerful breakpoint features that help you find and fix logic errors in your JavaScript code."
 published_on: 2015-04-14
 updated_on: 2015-04-14
-order: 1
+order: 2
 authors:
   - megginkearney
   - dgash
