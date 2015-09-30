@@ -9,8 +9,8 @@ description: "This section describes the most basic service worker possible. It
 service worker knowledge."
 authors:
 - josephMedley
-published_on: 2014-09-25
-updated_on: 2015-09-25
+published_on: 2015-10-01
+updated_on: 2015-10-01
 order: 4
 key-takeaways:
 tldr:   
@@ -18,7 +18,7 @@ tldr:
 - "dfdf"
 notes:
   promises:
-    - "*Promises* Notice the use of .then() at the end of the register() function. This is an example of an ECMAScript 2015 construct called a Promise. Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
+    - "*Promises* Notice the use of .then() at the end of the register() function. This is an example of an ECMAScript 2015 construct called a [Promise](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise). Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
   https-only:
     - "*HTTPS Only?*As we'll see later, service workers can do almost whatever they want to HTTP requests and responses. Since this would make them targets for man-in-the-middle attacks, they must be served over HTTPS.This doesn't mean you need HTTPS for development and testing. Service workers served over localhost will also work."
   sws-dont-control:
@@ -161,11 +161,11 @@ run you can do one of several things:
 * You can wait for the next user navigation. For this you can either wait for the 
 user to navigate to another page in the same service worker scope, or you can 
 ask the user to reload the client page.
-* Or, you can do what most implementations, including Chrome's samples, do. Add a 
-function called claim(), which allows the service worker to start serving to 
-client pages immediately. 
+* Or, you can do what most implementations, including [Chrome's samples](https://github.com/GoogleChrome/samples)
+, do. Add a function called claim(), which allows the service worker to start 
+serving to client pages immediately. 
 
-The claim() method also returns a Promise.
+The `claim()` method also returns a Promise.
 
 {% highlight javascript %}
 self.addEventListener('activate', function(activateEvent) {
