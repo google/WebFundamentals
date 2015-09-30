@@ -2,7 +2,7 @@
 layout: shared/wide
 description: "Polymer Starter Kit."
 title: "Polymer Starter Kit"
-order: 6
+order: 5
 feedName: Polymer Starter Kit Releases
 feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
 ---
