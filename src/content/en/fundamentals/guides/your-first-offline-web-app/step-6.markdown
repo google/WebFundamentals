@@ -1,20 +1,15 @@
 ---
 layout: shared/narrow
 title: "Install the site assets"
-notes:
-  styling:
-    - Styling will come later
-published_on: 2014-04-17
-updated_on: 2014-04-23
-translation_priority: 0
+published_on: 2015-09-30
+updated_on: 2015-09-30
+translation_priority: 1
 authors:
   - paulkinlan
 ---
 
-{% include shared/toc.liquid %}
-
 With the service worker registered, the first time a user hits the page an 
-"install" event will be triggered.  In this event you should Cache all the 
+"install" event will be triggered.  In this event you should cache all the 
 assets that are needed for your application.
 
 First add in the Cache Polyfill (it is already included in the repo). This 
@@ -45,7 +40,7 @@ self.addEventListener('install', function(e) {
 });
 {% endhighlight %}
 
-Now that the Cache is open, you need to populate it.  The cache object has a 
+Now that the cache is open, you need to populate it.  The cache object has a 
 method called addAll (via the polyfill). addAll will take a list of urls, 
 automatically fetch them from the server and add them to the cache.
 
@@ -68,7 +63,7 @@ self.addEventListener('install', function(e) {
 {% endhighlight %}
 
 If any one of these files is not present or fails to be fetched, then the entire 
-operation for addAll will also fail.  A good application will handle this case.
+operation for `addAll` will also fail.  A good application will handle this case.
 
 ### Frequently Asked Questions
 

@@ -1,17 +1,12 @@
 ---
 layout: shared/narrow
 title: "Intercept the web page requests"
-notes:
-  styling:
-    - Styling will come later
-published_on: 2014-04-17
-updated_on: 2014-04-23
-translation_priority: 0
+published_on: 2015-09-30
+updated_on: 2015-09-30
+translation_priority: 1
 authors:
   - paulkinlan
 ---
-
-{% include shared/toc.liquid %}
 
 One of the unique attributes of the service worker spec is the ability to 
 intercept every request made from the web page that the service worker controls 
