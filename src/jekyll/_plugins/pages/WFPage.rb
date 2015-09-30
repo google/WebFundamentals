@@ -145,6 +145,29 @@ module Jekyll
       if invalidKeys.length > 0
           handleInvalidKeys(invalidKeys)
       end
+
+      if (not self.data['authors'].nil?) and (self.data['authors'].length > 0)
+        self.data['authors'].each { |authorKey|
+          if site.data['contributors'][authorKey].nil?
+            puts "THROW ERROR <-------------------------------";
+            puts authorKey
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+            puts "Found invalid author '" + authorKey + "' in " + @langcode + '/' + self.relative_path
+            puts 'Please ensure this author is in the contributors.yaml'
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+            Jekyll.logger.error "Error: Invalid Author '" + authorKey + "' found in  " + @langcode + '/' + self.relative_path
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+
+            raise "Invalid author '" + authorKey + "' in YAML in " + @langcode + '/' + self.relative_path
+          end
+        }
+      end
     end
 
     # TODO: Change to throwing an error when we get closer to release
