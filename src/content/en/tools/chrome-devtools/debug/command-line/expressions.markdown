@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Evaluate Expressions"
 description: "Explore the state of any item on your page from the DevTools console."

@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Remote Debugging Devices"
 description: "Web content behaves differently on mobile than on desktop. Debug live content on your device from your development machine using remote debugging."

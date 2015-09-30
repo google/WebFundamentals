@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Navigating the Console"
 description: "Learn how to navigate the JavaScript Console UI within Chrome DevTools."

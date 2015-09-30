@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow-pages-list
 title: "Page Load Performance"
 description: "Test how your pages load in varying network conditions. Offer users the best possible experience despite network connectivity."
@@ -9,7 +8,6 @@ order: 3
 authors:
   - megginkearney
 translation_priority: 0
-panel: network
 ---
 
 <p class="intro">

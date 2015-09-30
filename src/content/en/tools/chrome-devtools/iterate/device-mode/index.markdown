@@ -1,12 +1,10 @@
 ---
-rss: false
 layout: shared/narrow-pages-list
 title: "Simulate Mobile Devices with Device Mode"
 description: "Use virtual devices in Chrome's Device Mode to build mobile-first web sites."
 published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 3
-panel: device mode
 notes:
   realworld: "Device Mode does a whole lot to give you an experience as close as possible compared to the real deal, but keep in mind that you'll still need to test on real devices to get the full picture (we can't yet emulate the performance characteristics of a real device)."
 ---

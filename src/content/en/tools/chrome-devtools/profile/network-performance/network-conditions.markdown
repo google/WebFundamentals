@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Optimize Performance Under Varying Network Conditions"
 description: "It’s easy to overlook the network conditions your users will face on mobile. Use tools to emulate different network conditions, fix up any load time issues and your users will thank you."

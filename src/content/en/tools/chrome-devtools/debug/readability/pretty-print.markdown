@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Make JavaScript Look Pretty"
 description: "Transform your JavaScript into a more readable form by clicking the Pretty Print icon in Chrome DevTools."

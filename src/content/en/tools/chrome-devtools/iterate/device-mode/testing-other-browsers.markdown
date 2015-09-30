@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Emulate beyond Chrome"
 description: "Your job doesn't end with ensuring your site runs great across Chrome and Android. Even though Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other browsers solutions for emulation."

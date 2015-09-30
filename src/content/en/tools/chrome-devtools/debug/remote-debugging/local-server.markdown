@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Remote Access to Your Local Site"
 description: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."

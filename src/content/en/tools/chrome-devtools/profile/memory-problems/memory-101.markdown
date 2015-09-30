@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Memory Terminology"
 description: "This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages."

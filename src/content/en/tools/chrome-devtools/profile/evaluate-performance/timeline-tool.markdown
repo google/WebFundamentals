@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "How to Use the Timeline Tool"
 description: "The Chrome DevTools Timeline tool lets you record and analyze all the activity in your application as it runs. It's the best place to start investigating perceived performance issues in your application."

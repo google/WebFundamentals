@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Edit the DOM"
 description: "The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates."

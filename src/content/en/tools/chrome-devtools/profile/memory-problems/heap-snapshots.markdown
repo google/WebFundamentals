@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "How to Record Heap Snapshots"
 description: "Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks."

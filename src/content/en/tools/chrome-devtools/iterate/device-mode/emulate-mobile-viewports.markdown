@@ -1,5 +1,4 @@
 ---
-rss: false
 layout: shared/narrow
 title: "Emulate Mobile Viewports"
 description: "Chrome DevTools' Device Mode lets you mimic how your development site will look in production on a range of devices."
