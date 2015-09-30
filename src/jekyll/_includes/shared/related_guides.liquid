@@ -6,12 +6,11 @@
     {% for listItem in include.list %}
       <li>
         {% if listItem.section %}
-          <a
-            class="wf-highlight-list__subtitle"
+          <p class="wf-highlight-list__subtitle"><a
             href="{{site.WFBaseUrl}}/{{listItem.section.href}}"
             title="{{listItem.section.title}}">
             {{listItem.section.title}}
-          </a>
+          </a></p>
         {% endif %}
 
         <a href="{{site.WFBaseUrl}}/{{listItem.href}}">
