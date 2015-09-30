@@ -105,9 +105,9 @@ A completed version of this step is in the completed/step3 directory.
 
    **TOP TIP!**<br>
    <br>
-   By default an old service worker will stay running until all tabs that use it are closed or unloaded. A new service worker will remain in the `waiting` state.
+   By default an old Service Worker will stay running until all tabs that use it are closed or unloaded. A new Service Worker will remain in the `waiting` state.
 
-   When `skipWaiting()` is called (as in the code above) the service worker will skip the waiting state and immediately activate.
+   When `skipWaiting()` is called (as in the code above) the Service Worker will skip the waiting state and immediately activate.
 
    Handy for debugging!
 
