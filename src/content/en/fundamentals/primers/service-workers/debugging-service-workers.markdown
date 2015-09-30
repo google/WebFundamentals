@@ -4,8 +4,8 @@ title: "Debugging service workers"
 description: "So far our service worker doesn't do very much. But it's enough that we can watch it working. That makes this a good time to talk a little about debugging."
 authors:
 - josephMedley
-published_on: 2014-09-25
-updated_on: 2015-09-25
+published_on: 2015-10-01
+updated_on: 2015-10-01
 order: 5
 key-takeaways:
 tldr:   
@@ -49,37 +49,36 @@ documentation]. The information here is for Chrome.
 Element" you'll see the DevTools window. Use this to debug clients just as you 
 would any other script. This isn't where you debug service workers.
 
-[Image Here]
+![the devtools window](images/devtools-window.png)
 
-*Chrome://inspect#service-Workers&mdash;Type this in the address bar of a new 
+*chrome://inspect#service-workers&mdash;Type this in the address bar of a new 
 tab. You'll see a list of active service workers. Notice the two links under 
 each entry. The 'terminate' link obviously terminates the service worker. If you 
 click the 'inspect' link you'll see that a second DevTools window opens showing 
 the service worker.
 
-[Image Here]
+![the chrome://inspect#service-workers page](images/inspect-service-workers.png)
 
-*Chrome://serviceworker-internals*&mdash;This url is also for a list of service 
+*chrome://serviceworker-internals*&mdash;This url is also for a list of service 
 workers, but a more detailed and feature rich one. As I said, the full 
 description of this page is over at [DevTools documentation]. 
 
-[Image Here]
+![the chrome://serviceworker-internals page](images/serviceworker-internals.png)
 
 ## Start Debugging
 
 If you've opened DevTools on sw-primer you might've noticed there are already 
 log entries for the install and activate. 
 
-[Image Here]
-
 So how do you debug those events?
 
 1. Go to `Chrome://serviceworker-internals` and check the box at the top of the 
    page, the one shown in the image below.
 
-   [Image]
+   ![the open DevTools box is checked](images/open-devtools.png)
 
-2. Press and hold down the refresh button. A menu appears.
+2. Go back to the tab containing sw-primer, then press and hold down the refresh 
+   button. A menu appears.
 
    [Image]
 
