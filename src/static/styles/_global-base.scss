@@ -26,3 +26,6 @@ $card-supporting-text-line-height: 24px;
 // We Need a bigger drawer
 // This ISNT supported by stock MDL - needed to add !default to our instance
 $layout-drawer-narrow: 280px;
+
+// We want all of header to be usable for search - needed to add !default to our instance
+$layout-header-mobile-baseline: ($base-line * 2);

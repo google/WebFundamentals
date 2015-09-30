@@ -34,8 +34,9 @@
 }
 
 .wf-header__search-container {
-  width: $base-line * 2;
-  height: $base-line * 2;
+  min-width: $base-line * 2;
+  max-width: calc(100% - 48px);
+  min-height: $base-line * 2;
   padding: 0;
 }
 
@@ -51,4 +52,6 @@
 
   flex-direction: row;
   align-items: center;
+
+  margin-left: $base-line * 2;
 }

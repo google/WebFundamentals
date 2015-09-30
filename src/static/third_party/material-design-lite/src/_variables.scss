@@ -374,7 +374,7 @@ $layout-header-desktop-row-height: 64px;
 $layout-desktop-header-height: $layout-header-desktop-row-height;
 
 $layout-header-desktop-baseline: 80px;
-$layout-header-mobile-baseline: 72px;
+$layout-header-mobile-baseline: 72px !default;
 $layout-header-mobile-indent: 16px;
 $layout-header-desktop-indent: 40px;
 
