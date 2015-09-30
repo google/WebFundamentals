@@ -19,7 +19,13 @@ jbnicolai:
   google: +JoshuaAppelman
   twitter: BoyNicolai
   email: me@jbnicolai.com
-  description: "Open source contributor and software consultant"
+  description:
+    en: "Open source contributor and software consultant"
+    de: "Joshua ist ein Pirat"
+    fr: "Joshua est un pirate"
+    la: "Joshua est pirata"
+    ru: "Dzhoshua yavlyayetsya piratom"
+    nl: "Joshua is een piraat"
 
 jakearchibald:
   name:
