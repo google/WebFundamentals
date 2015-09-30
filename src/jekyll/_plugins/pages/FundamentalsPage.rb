@@ -28,7 +28,6 @@ module Jekyll
       validKeys = ['udacity']
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['drawerTitleText'] = 'Web Fundamentals'
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/fundamentals.css';
 
       #self.data['feed_name'] = 'Web Fundamentals - Google Developers'
