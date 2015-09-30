@@ -193,9 +193,8 @@ blockquote {
 }
 
 .intro {
-  @include typo-title($usePreferred: false);
+  @include typo-subhead-2($usePreferred: false);
   font-weight: normal;
   margin-top: 0;
   margin-bottom: $base-line * 2;
-  line-height: $base-line;
 }
