@@ -194,7 +194,7 @@ more information about other CSP directives at the following resources:
 * [Mozilla's intro to CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
 * [HTML5 Rocks' intro to CSP](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 * [CSP playground](http://www.cspplayground.com/)
-* [CSP version 2 spec](http://www.w3.org/TR/CSP2/)
+* [CSP spec](http://www.w3.org/TR/CSP/)
 
 <!-- Span required to prevent rest of page from being indented. 
 https://github.com/google/WebFundamentals/issues/1873 -->
