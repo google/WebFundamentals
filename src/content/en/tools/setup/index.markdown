@@ -1,11 +1,17 @@
 ---
-rss: false
-layout: shared/narrow-subdirectories-list
+layout: shared/narrow-pages-list
 title: "Getting Started"
-description: "Setup your perfect development environment and use the right tools to bootstrap your first project."
-published_on: 2015-04-13
-updated_on: 2015-04-13
+rss: false
+description: "Set up your workspace to include a good editor, debugging, and build tools for the multi-device web."
+published_on: 2015-04-14
+updated_on: 2015-04-14
 order: 1
-translation_priority: 0
 ---
 
+<p class="intro">
+  Set up your workspace to include a good editor, debugging, and build tools for the multi-device web.
+</p>
+
+Time is a huge factor in staying productive. Your development environment is where you spend most of yours. Set yourself up for success by including a strong, extensible editor and powerful debugging & development tools.
+
+When you're done, continue to learn more about the [Chrome Developer Tools (DevTools)](/web/tools/setup/workspace/setup-devtools), Chrome's built-in tool that helps you develop, test, and debug your pages.
