@@ -78,5 +78,7 @@
   "written_on": "Written on",
   "@written_on": {"description": "Text - Date the content was first published (deprecated)"},
   "published_on": "Published on",
-  "@published_on": {"description": "Text - Date the content was first published"}
+  "@published_on": {"description": "Text - Date the content was first published"},
+  "note": "Note",
+  "@note": {"description": "Heading - a reminder for an important note"}
 }
