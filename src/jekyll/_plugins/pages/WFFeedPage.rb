@@ -53,7 +53,11 @@ module Jekyll
         b_order <=> a_order
       end
 
-      self.data['feed_update'] = feedPages[0].data['updated_on'].strftime("%Y-%m-%dT%H:%M:%SZ")
+      if feedPages.count > 0
+        self.data['feed_update'] = feedPages[0].data['updated_on'].strftime("%Y-%m-%dT%H:%M:%SZ")
+      else
+        self.data['feed_update'] = site.time.strftime("%Y-%m-%dT%H:%M:%SZ")
+      end
 
       feedPages = feedPages[0..maxNumberOfResults]
 
