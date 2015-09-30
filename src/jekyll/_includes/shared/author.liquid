@@ -3,7 +3,7 @@
   <h6 class="mdl-cell--12-col">{{"authors" | localize_string}}</h6>
   {% for authorKey in page.authors %}
     {% assign author = site.data["contributors"][authorKey] %}
-    <div class="wf-author__row mdl-cell mdl-cell--6-col">
+    <div class="wf-author__row mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <div class="wf-author__img-container">
       {% if author.imgUrl %}
         <img class="wf-author__profile-photo" src="{{author.imgUrl}}" alt="Profile photo of {{author.name.given}} {{author.name.family}}" />
