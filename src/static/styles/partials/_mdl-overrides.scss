@@ -1,5 +1,9 @@
 // MDL Table Overrides
 .mdl-data-table {
+  // Tables aren't responsive, block and overflow helps with this
+  display: block;
+  overflow: auto;
+
   // We want the text to wrap
   white-space: normal;
 

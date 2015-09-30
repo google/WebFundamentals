@@ -33,7 +33,6 @@ module Jekyll
       ]
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['drawerTitleText'] = 'Shows'
       self.data['theme_color'] = '#212121'
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/shows.css';

@@ -1,16 +1,12 @@
 ---
 layout: shared/narrow
 title: "Run the sample app"
-notes:
-  styling:
-    - Styling will come later
-published_on: 2014-04-17
-updated_on: 2014-04-23
-translation_priority: 0
+published_on: 2015-09-30
+updated_on: 2015-09-30
+translation_priority: 1
 authors:
   - paulkinlan
 ---
-{% include shared/toc.liquid %}
 
 First, let's see what the finished sample app looks like (hint, it is amazing). 
 With the code downloaded, the following instructions describe how to build and 
