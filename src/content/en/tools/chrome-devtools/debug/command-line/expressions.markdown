@@ -8,7 +8,7 @@ updated_on: 2015-05-12
 order: 1
 authors:
   - megginkearney
-  - josesphmedley
+  - josephmedley
 translation_priority: 0
 key-takeaways:
   command-line:
@@ -103,5 +103,3 @@ Use $0 - 4,
 to access these elements from within the console.
 Remember computers begin counting from 0;
 this means the latest item is $0 and the oldest item is $4.
-
-

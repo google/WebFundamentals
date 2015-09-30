@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-description: "TODO"
+description: "Learn to measure the critical rendering path."
 title: "Measuring the critical rendering path with Navigation Timing"
 published_on: 2014-04-01
 updated_on: 2014-09-18
@@ -19,8 +19,6 @@ key-takeaways:
   Timing API gives us all the necessary tools to measure each step of the 
   critical rendering path!
 </p>
-
-{% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.measure-crp %}
 
@@ -52,6 +50,9 @@ The HTML specification dictates specific conditions for each and every event: wh
     * If there is no parser blocking JavaScript then `DOMContentLoaded` will fire immediately after `domInteractive`.
 * `domComplete` marks when the page and all of its subresources are ready.
 
+<!-- Span required to prevent rest of page from being indented.
+  https://github.com/google/WebFundamentals/issues/1873 -->
+<span></span>
 
 {% include_code src=_code/measure_crp.html snippet=full lang=html %}
 

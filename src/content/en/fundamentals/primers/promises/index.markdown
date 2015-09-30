@@ -474,7 +474,11 @@ asyncThing1().then(function() {
 
 The flow above is very similar to normal JavaScript try/catch, errors that happen within a "try" go immediately to the "catch" block. Here's the above as a flowchart (because I love flowcharts):
 
-<img src="imgs/promise-flow.svg">
+
+<div style="position: relative; padding-top: 93%;">
+  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden" src="{{page.relative_url}}imgs/promise-flow.svg" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
 
 Follow the green lines for promises that fulfill, or the red for ones that reject.
 
@@ -593,8 +597,10 @@ catch (err) {
 document.querySelector('.spinner').style.display = 'none'
 {% endhighlight %}
 
-
-That works ([see example TODO](sync-example.html))! But it's sync and locks up the browser while things download. To make this work async we use "then" to make things happen one after another.
+{% link_sample _code/sync-example.html %}see example{% endlink_sample %}
+That works ({% link_sample _code/sync-example.html %}see example{% endlink_sample %})! 
+But it's sync and locks up the browser while things download. To make this 
+work async we use "then" to make things happen one after another.
 
 
 {% highlight javascript %}
@@ -705,11 +711,11 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-And there we have it ([see example TODO](async-example.html)), a fully async version of the sync version. But we can do better. At the moment our page is downloading like this:
+And there we have it ({% link_sample _code/async-example.html %}see example{% endlink_sample %}), a fully async version of the sync version. But we can do better. At the moment our page is downloading like this:
 
 
 <figure>
-  <img src="imgs/promise1.gif">
+  <img src="{{page.relative_url}}imgs/promise1.gif">
 </figure>
 
 Browsers are pretty good at downloading multiple things at once, so we're losing performance by downloading chapters one after the other. What we want to do is download them all at the same time, then process them when they've all arrived. Thankfully there's an API for this:
@@ -751,11 +757,11 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-Depending on connection, this can be seconds faster than loading one-by-one ([see example TODO](async-all-example.html)), and it's less code than our first try. The chapters can download in whatever order, but they appear on screen in the right order.
+Depending on connection, this can be seconds faster than loading one-by-one ({% link_sample _code/async-all-example.html %}see example{% endlink_sample %}), and it's less code than our first try. The chapters can download in whatever order, but they appear on screen in the right order.
 
 
 <figure>
-  <img src="imgs/promise2.gif">
+  <img src="{{page.relative_url}}imgs/promise2.gif">
 </figure>
 
 However, we can still improve perceived performance. When chapter one arrives we should add it to the page. This lets the user start reading before the rest of the chapters have arrived. When chapter three arrives, we wouldn't add it to the page because the user may not realise chapter two is missing. When chapter two arrives, we can add chapters two and three, etc etc.
@@ -793,11 +799,11 @@ getJSON('story.json').then(function(story) {
 {% endhighlight %}
 
 
-And there we go ([see example TODO](async-best-example.html)), the best of both! It takes the same amount of time to deliver all the content, but the user gets the first bit of content sooner.
+And there we go ({% link_sample _code/async-best-example.html %}see example{% endlink_sample %}), the best of both! It takes the same amount of time to deliver all the content, but the user gets the first bit of content sooner.
 
 
 <figure>
-  <img src="imgs/promise3.gif">
+  <img src="{{page.relative_url}}imgs/promise3.gif">
 </figure>
 
 In this trivial example, all of the chapters arrive around the same time, but the benefit of displaying one at a time will be exaggerated with more, larger chapters.
@@ -893,7 +899,7 @@ spawn(function *() {
 {% endhighlight %}
 
 
-This works exactly as before, but so much easier to read. This works in Chrome and Opera today ([see example TODO](async-generators-example.html)), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
+This works exactly as before, but so much easier to read. This works in Chrome and Opera today ({% link_sample _code/async-generators-example.html %}see example{% endlink_sample %}), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
 
 
 This throws together a lot of new ES6 stuff: promises, generators, let, for-of. When we yield a promise, the spawn helper waits for the promise to resolve and returns the final value. If the promise rejects, spawn causes our yield statement to throw an exception, which we can catch with normal JavaScript try/catch. Amazingly simple async coding!

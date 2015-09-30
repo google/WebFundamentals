@@ -20,8 +20,6 @@ key-takeaways:
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
 
-{% include shared/toc.liquid %}
-
 At this step, you must make a crucial operations decision:
 
 * dedicate a distinct IP address to each hostname your web server serves content

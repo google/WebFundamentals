@@ -11,11 +11,22 @@
 }
 
 .wf-header-title {
+  line-height: $layout-header-desktop-row-height;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 
   flex-shrink: initial;
+
+  opacity: 0;
+
+  transition: opacity 400ms;
+}
+
+.mdl-layout__header.is-compact {
+  .wf-header-title {
+    opacity: 1;
+  }
 }
 
 .wf-header__bottom-row {

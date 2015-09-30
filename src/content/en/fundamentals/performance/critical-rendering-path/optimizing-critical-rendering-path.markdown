@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-description: "TODO"
+description: "Learn the keys of optimizing the critical rendering path."
 title: "Optimizing the critical rendering path"
 published_on: 2014-04-01
 updated_on: 2014-04-28
@@ -11,13 +11,17 @@ authors:
   - ilyagrigorik
 ---
 
-{% include shared/toc.liquid %}
+<p class="intro">
+  In order to deliver the fastest possible time to first render, we need 
+  to optimize three variables:
 
-In order to deliver the fastest possible time to first render, we need to optimize three variables:
+  <ul>
+    <li>Minimize the number of critical resources.</li>
+    <li>Minimize the number of critical bytes.</li>
+    <li>Minimize the critical path length.</li>
+  </ul>
+</p>
 
-* **Minimize the number of critical resources.**
-* **Minimize the number of critical bytes.**
-* **Minimize the critical path length.**
 
 A critical resource is any resource that may block initial rendering of the page. The fewer of these resources there are on the page, the less work the browser has to do to get content on the screen, and the less contention there is for CPU and other resources.
 

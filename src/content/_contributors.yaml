@@ -749,3 +749,15 @@ sethladd:
   twitter: sethladd
   role:
     - author
+
+kaycebasques:
+  name:
+    given: Kayce
+    family: Basques
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  description: "Kayce is a Tech Writer"

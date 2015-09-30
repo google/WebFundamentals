@@ -1,7 +1,6 @@
 ---
 layout: shared/narrow
 title: "Install the site assets"
-description: "TODO"
 notes:
   styling:
     - Styling will come later
