@@ -9,6 +9,12 @@ updated_on: 2015-09-17
 order: 2
 ---
 
+<p class="intro">
+Help mobile users find what they’re looking for in a hurry.
+</p>
+
+{% include shared/toc.liquid %}
+
 ## 5. Make site search visible
 
 Users looking for information usually turn to search, so the search field should be one of the first things they see on your pages. Don’t hide the search box in a menu.

@@ -1,17 +1,12 @@
 ---
 layout: shared/narrow
 title: "Register a Service Worker on the site"
-notes:
-  styling:
-    - Styling will come later
-published_on: 2014-04-17
-updated_on: 2014-04-23
-translation_priority: 0
+published_on: 2015-09-30
+updated_on: 2015-09-30
+translation_priority: 1
 authors:
   - paulkinlan
 ---
-
-{% include shared/toc.liquid %}
 
 The first step to making our app work offline is to register a Service Worker.  
 This takes two simple steps:
@@ -19,14 +14,14 @@ This takes two simple steps:
 1. Create a javascript file that will be the Service Worker.
 1. Tell the browser to register the javascript file as the "Service Worker".
 
-First, create a blank file called sw.js and place it in the /app folder. (This 
+First, create a blank file called `sw.js` and place it in the `/app` folder. (This 
 folder is the root folder for the app).  You need to do this because the scope 
 of a Service Worker (the set of urls that the ServiceWorker will load for) is 
 defined by the directory where it resides. If it is not in the correct directory 
 then the ServiceWorker will not be able to make the app work offline (this means 
 you can't place it in a script directory.)
 
-Now open index.html in the /app folder and add the following code to the bottom.
+Now open `index.html` in the /app folder and add the following code to the bottom.
 
 {% highlight javascript %}
 <script>
@@ -41,7 +36,7 @@ if('serviceWorker' in navigator) {
 The above snippet checks to see if the browser supports Service Worker and if it 
 does it calls the register method and returns a Promise.  After the registration 
 is completed the browser will resolve the Promise and call the function in the 
-.then() clause. (Note: this happens asynchronously.)
+`.then()` clause. (Note: this happens asynchronously.)
 
 Start up a server on localhost and watch for any future changes to the site.
 
@@ -53,7 +48,7 @@ $ python -m SimpleHTTPServer 3000
 Open `chrome://serviceworker-internals/` in Chrome. This will show you a list of 
 all the registered service workers and will allow you to open up Chrome DevTools 
 and before a service worker is installed.  This is important if you want to 
-debug the "install" phase of a service worker.
+debug the `install` phase of a service worker.
 
 <img src="images/image02.png" width="624" height="350" />  
 Load the web app, open Chrome DevTools and if successful you will see "Service 
@@ -63,9 +58,9 @@ are on our way.
 
 <img src="images/image03.png" width="624" height="350" />
   
-  ### Frequently Asked Questions
+### Frequently Asked Questions
 
-* Why is the Service Worker in the root?  Why can't I place it in a "/scripts" 
+* Why is the Service Worker in the root?  Why can't I place it in a `/scripts` 
   directory?
     * For security reasons, a service worker can only control the pages that are 
       in the same directory level or below it.  This means that if you place the 

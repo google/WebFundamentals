@@ -1,17 +1,13 @@
 ---
 layout: shared/narrow
 title: "Get the sample code"
-notes:
-  styling:
-    - Styling will come later
-published_on: 2014-04-17
-updated_on: 2014-04-23
-translation_priority: 0
+published_on: 2015-09-30
+updated_on: 2015-09-30
+translation_priority: 1
 authors:
   - paulkinlan
 ---
 
-{% include shared/toc.liquid %}
 
 You can either download all the sample code to your computer... 
 

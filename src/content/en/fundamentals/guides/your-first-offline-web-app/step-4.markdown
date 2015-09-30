@@ -1,26 +1,24 @@
 ---
 layout: shared/narrow
 title: "Build the starter app"
-
-notes:
-  styling:
-    - Styling will come later
-published_on: 2014-04-17
-updated_on: 2014-04-23
-translation_priority: 0
+published_on: 2015-09-30
+updated_on: 2015-09-30
+translation_priority: 1
 authors:
   - paulkinlan
 ---
 
-{% include shared/toc.liquid %}
 
 Turn up your speakers to full volume. Click the horn and it should make a sound.  
-<img src="images/image01.png" width="624" height="382" />  
+
+<img src="images/image01.png"  />  
+
 Now kill the server (ctrl-c in the command line).  This simulates the network 
 going offline. Then reload the site. The page should fully reload and you should 
 be able to still use the horn.
 
-<img src="images/image01.png" width="624" height="382" />  
+<img src="images/image01.png" />  
+
 The reason why this works offline is the basis of this codelab: offline support 
 with service worker.
 
