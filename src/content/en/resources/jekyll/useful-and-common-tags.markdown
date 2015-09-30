@@ -94,12 +94,6 @@ notes:
 
 {% include shared/related_guides.liquid list=page.related-guides.example %}
 
-## Section Table of Contents
-
-<pre>{% raw %}{% include fundamentals/section_toc.liquid %}{% endraw %}</pre>
-
-{% include fundamentals/section_toc.liquid %}
-
 ## Highlight
 
 The highlight tag will simply run the code inside the tag through Pygments, a
