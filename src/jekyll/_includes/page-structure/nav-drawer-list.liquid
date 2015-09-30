@@ -12,7 +12,7 @@
 
     {% if tocItem.hasSubNav == true %}
       {% capture nextListLevel %}{{ listLevel | plus:1 }}{% endcapture %}
-      {% include shared/nav-drawer-list.liquid toc=tocItem.section level=nextListLevel  %}
+      {% include page-structure/nav-drawer-list.liquid toc=tocItem.section level=nextListLevel  %}
     {% endif %}
   </li>
 {% endfor %}
