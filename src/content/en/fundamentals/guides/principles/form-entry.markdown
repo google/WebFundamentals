@@ -9,7 +9,11 @@ updated_on: 2015-09-17
 order: 4
 ---
 
+<p class="intro">
 Provide a seamless, frictionless conversion experience with usable forms.
+</p>
+
+{% include shared/toc.liquid %}
 
 ## 14. Streamline information entry
 

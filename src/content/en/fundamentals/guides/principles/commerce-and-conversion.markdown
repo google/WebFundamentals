@@ -13,6 +13,8 @@ order: 3
 Understand your customer journeys and let users convert on their own terms. 
 </p>
 
+{% include shared/toc.liquid %}
+
 ## 9. Let users explore before they commit
 
 Study participants were frustrated by sites that require upfront registrations to view the site, especially when the brand was unfamiliar. Although customer information may be integral to your business, asking for it too early may result in fewer registrations.

@@ -9,7 +9,11 @@ updated_on: 2015-09-17
 order: 5
 ---
 
+<p class="intro">
 Delight your mobile users with small things that enhance their experiences.
+</p>
+
+{% include shared/toc.liquid %}
 
 ## 19. Optimize your entire site for mobile
 

@@ -39,7 +39,7 @@
   display: inline-block;
   width: 100%;
 
-  padding-top: 0;
+  padding-top: ($nav-drawer-vertical-padding * 2);
   padding-bottom: ($nav-drawer-vertical-padding * 2);
   //margin-bottom: ($nav-drawer-vertical-padding * 2);
   //border-bottom: 1px solid $grey-border-color;
