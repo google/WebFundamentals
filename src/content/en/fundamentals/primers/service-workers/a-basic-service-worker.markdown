@@ -8,21 +8,21 @@ description: "This section describes the most basic service worker possible. It
   comprehensive; It's intended to give you a basic foundation on which to build 
 service worker knowledge."
 authors:
-- josephMedley
+- josephmedley
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 4
 key-takeaways:
-tldr:   
-- "dfdf " 
-- "dfdf"
+  tldr:   
+  - "dfdf " 
+  - "dfdf"
 notes:
   promises:
-    - "*Promises* Notice the use of .then() at the end of the register() function. This is an example of an ECMAScript 2015 construct called a [Promise](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise). Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
+    - "<b>Promises</b>&mdash;Notice the use of .then() at the end of the register() function. This is an example of an ECMAScript 2015 construct called a <a href='https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise'>Promise</a>. Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
   https-only:
-    - "*HTTPS Only?*As we'll see later, service workers can do almost whatever they want to HTTP requests and responses. Since this would make them targets for man-in-the-middle attacks, they must be served over HTTPS.This doesn't mean you need HTTPS for development and testing. Service workers served over localhost will also work."
+    - "<b>HTTPS Only</b>&mdash;As we'll see later, service workers can do almost whatever they want to HTTP requests and responses. Since this would make them targets for man-in-the-middle attacks, they must be served over HTTPS.This doesn't mean you need HTTPS for development and testing. Service workers served over localhost will also work."
   sws-dont-control:
-    - *Service Workers Don't Take Control*If you look around the web, you'll find that many of the pages discussing service workers refer to the service worker as 'taking control' of a page. But as we saw earlier, a service workers can't do anything to its clients. That's why it may be better to think of the service worker as notifying the page that it's ready to proxy.
+    - "<b>Service Workers Don't Take Control</b>&mdash;If you look around the web, you'll find that many of the pages discussing service workers refer to the service worker as 'taking control' of a page. But as we saw earlier, a service workers can't do anything to its clients. That's why it may be more accurate to think of a service worker as ready to proxy."
 ---
 
 <p class="intro">
@@ -63,7 +63,7 @@ a separate JavaScript file.
 There's a little more that needs to be said about clients. Now let's talk about 
 the service worker itself.
 
-{% include shared/aside.liquid list=page.notes.promises %}
+{% include shared/remember.liquid title="Aside" list=page.notes.promises %}
 
 ## Where can the service worker play?
 
@@ -97,7 +97,7 @@ serve clients under example.com/buyers. It cannot serve clients under
 example.com/sellers. Similarly, a service worker with a scope of /sellers/ can 
 only serve clients under example.com/sellers.
 
-{% include shared/aside.liquid list=page.notes.https-only %}
+{% include shared/remember.liquid title="Aside" list=page.notes.https-only %}
 
 ## A service worker installs and activates
 
@@ -141,7 +141,7 @@ self.addEventListener('activate', function(activateEvent) {
 });
 {% endhighlight %}
 
-## the client waits
+## The client waits
 
 You might've noticed that both the install and activate events contain a call to 
 a function named waitUntil(). This method prevents clients from processing until 
@@ -152,7 +152,7 @@ Fortunately there is something that you will likely always want to do at this
 point.
 
 
-## the service worker starts immediately
+## The service worker starts immediately
 
 If a client page registered a service worker using the code we've seen so far, 
 you'd notice that the service worker doesn't run. To get the service worker to 
@@ -176,5 +176,5 @@ self.addEventListener('activate', function(activateEvent) {
 });
 {% endhighlight %}
 
-{% include shared/aside.liquid list=page.notes.sws-dont-control %}
+{% include shared/remember.liquid title="Aside" list=page.notes.sws-dont-control %}
 
