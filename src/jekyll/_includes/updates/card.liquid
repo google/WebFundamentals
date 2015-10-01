@@ -1,0 +1,23 @@
+<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone  wf-card">
+  <a style="background-image:url({{include.imgUrl}})" class="mdl-card__title" href="{{include.linkHref}}">
+    <div>
+      {% if include.title %}
+      <h2 class="mdl-card__title-text">{{include.title}}</h2>
+      {% endif %}
+    </div>
+  </a>
+  <div class="mdl-card__supporting-text">
+    <span>{{include.text}}</span>
+  </div>
+  <div class="mdl-card__actions mdl-card--border wf-update-card--actions">
+    <span class="wf-update-card--author">
+      {{include.author.name.given}} {{include.author.name.family}}
+    </span>
+    <span class="wf-update-card--date">
+      {{include.date | date: '%B %-d, %Y' }}
+    </span>
+  </div>
+  <div class="mdl-card__menu">
+
+  </div>
+</div>
