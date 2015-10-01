@@ -258,9 +258,14 @@ module Jekyll
           next
         end
 
-        # We force generation here since if you are at the top level of a section
-        # That normally isn't displayed, we want the nav to be generated regardless
-        entry = getBetterBookEntry(subdirectory, currentLevel, true)
+        # We force generation here since if you in a top level section
+        # we want the nav to be generated for that page, regardless of whether
+        # it's normally displayed or not
+        force = false
+        if @directories.count > 0 && @directories[0] == subdirectory['id']
+          force = true
+        end
+        entry = getBetterBookEntry(subdirectory, currentLevel, force)
         if entry.nil?
           next
         end
