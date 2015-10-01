@@ -58,7 +58,7 @@ feedURL: https://github.com/google/web-starter-kit/releases.atom
   <div class="mdl-grid mdl-typography--text-center">
     <div class="mdl-cell mdl-cell--4-col">
       <div class="icon">
-        {% include svgs-minified/responsive.svg %}
+        {% include svgs/responsive.svg %}
       </div>
       <h3 class="mdl-typography--title">Multi-device responsive boilerplate</h3>
       <p>A responsive boilerplate optimized for the multi-screen web, with a high PageSpeed Insights performance score.</p>
