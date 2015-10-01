@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "What are Service Workers"
+title: "Service Workers"
 description: "Service workers have been described as &ldquo;programmable network
   proxies&rdquo; and &ldquo;background workers&rdquo;. To be more specific, a 
   service worker is a script run by a browser in the background that proxies and 
@@ -11,23 +11,15 @@ order: 1
 translation_priority: 0
 authors:
   - josephmedley
-key-takeaways:
-  todo:
-    - "Oh look, a TL;DR goes here"
-    - "And another TL;DR, whee!"
 ---
 
 <p class="intro">
   Service workers have been described as &ldquo;programmable network
   proxies&rdquo; and &ldquo;background workers&rdquo;. To be more specific, a 
   service worker is a script run by a browser in the background that proxies and 
-  caches network interactions.
-</p>
+  caches network interactions.</p>
 
 Because a service worker is separate from the page that loaded it, it doesn't 
 need a web page or user interactions. A service worker terminates when it's not 
 being used and reactivates again when it's needed. A single service worker can 
 support more than one web page.
-
-{% include shared/takeaway.liquid list=page.key-takeaways.todo %}
-

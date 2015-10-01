@@ -7,14 +7,14 @@ caching in our service worker. Fetching allows us to intercept requests made by
 service worker clients and cache them so they're available when the network 
 connection is slow or unavailable."
 authors:
-- josephMedley
+- josephmedley
 published_on: 2014-09-25
 updated_on: 2015-09-25
 order: 6
 key-takeaways:
-tldr:   
-- "dfdf " 
-- "dfdf"
+  tldr:   
+  - "dfdf " 
+  - "dfdf"
 ---
 
 <p class="intro">

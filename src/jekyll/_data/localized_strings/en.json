@@ -1,6 +1,8 @@
 {
   "@@locale": "en_US",
   "@@last_modified": "2014-10-29T10:50-05:00",
+  "asides": "Aside",
+  "@asides": {"description": "Heading - Items important enough to know that don't fit in the text"},
   "authors": "Authors",
   "@authors": {"description": "Heading - List of authors for a specific article"},
   "careers": "Careers",

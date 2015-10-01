@@ -3,14 +3,14 @@ layout: shared/narrow
 title: "Debugging service workers"
 description: "So far our service worker doesn't do very much. But it's enough that we can watch it working. That makes this a good time to talk a little about debugging."
 authors:
-- josephMedley
+- josephmedley
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 5
 key-takeaways:
-tldr:   
-- "dfdf " 
-- "dfdf"
+  tldr:   
+  - "dfdf " 
+  - "dfdf"
 ---
 
 <p class="intro">
