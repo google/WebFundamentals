@@ -87,8 +87,25 @@ gulp.task('develop', function(cb) {
     cb);
 });
 
+gulp.task('develop:prod', function(cb) {
+  runSequence(
+    'clean',
+    [
+      'generate-prod-css',
+      'cp-images',
+      'cp-fonts',
+      'cp-scripts',
+    ],
+    'compile-jekyll:localhost',
+    'html',
+    'start-gae-dev-server',
+    'prod-watch-tasks',
+    cb);
+});
+
 gulp.task('build:staging', function(cb) {
   runSequence(
+    'clean',
     [
       'generate-prod-css',
       'cp-images',
@@ -97,19 +114,21 @@ gulp.task('build:staging', function(cb) {
       'copy-appengine-config'
     ],
     'compile-jekyll:staging',
+    'html',
     cb);
 });
 
 gulp.task('build', function(cb) {
   runSequence(
+    'clean',
     [
       'generate-prod-css',
       'cp-images',
       'cp-fonts',
-      'cp-scripts',
       'copy-appengine-config'
     ],
     'compile-jekyll:devsite',
+    'html',
     cb);
 });
 
