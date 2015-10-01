@@ -32,7 +32,7 @@ translation_priority: 0
     {% for pageInSection in page.context.subdirectories %}
     {% if pageInSection.index.published != false %}
     {% if pageInSection.id != 'guides' and pageInSection.id != 'primers' %}
-    {% capture icon %}svgs-minified/{{pageInSection.id}}.svg{% endcapture %}
+    {% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
       <div class="mdl-cell mdl-cell--4-col">
         <div class="icon">
           <a href="{{pageInSection.index.canonical_url | localize_link:pageInSection }}">
