@@ -24,7 +24,7 @@ module Jekyll
       'of instructions and tools to help you build your website.'
 
     def initialize(site, relativeDir, filename, langcode)
-      validKeys = ['panel', 'panels']
+      validKeys = []
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/tools.css';
