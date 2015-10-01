@@ -9,8 +9,7 @@ updated_on: 2015-10-01
 order: 5
 key-takeaways:
   tldr:   
-  - "dfdf " 
-  - "dfdf"
+  - "Debugging service workers requires a few different tools including two different DevTools windows." 
 ---
 
 <p class="intro">
@@ -18,6 +17,10 @@ key-takeaways:
   watch it working. That makes this a good time to talk a little about 
   debugging.
 </p>
+
+{% include shared/toc.liquid %}
+
+{% include shared/takeaway.liquid list=page.key-takeaways.tldr %}
 
 ## The sw-primer project
 
@@ -34,7 +37,7 @@ including one containing all of the code we've written so far. To set it up:
        $ cd sw-primer
        $ python -m SimpleHTTPServer
 
-3. Open Chrome and navigate to localhost:8000/basic-worker.html
+3. Open Chrome and navigate to `localhost:8000/basic-worker.html`.
 
 Congratulations! You now have a running service worker that you can use for the 
 rest of the debugging section.
@@ -42,16 +45,15 @@ rest of the debugging section.
 ## The Tools
 
 We'll cover a few basics here. There's much more information available in the 
-DevTools documentation for Chrome and in [some location in the Firefox 
-documentation]. The information here is for Chrome.
+DevTools documentation for Chrome. The information here is for Chrome.
 
-*DevTools Window*&mdash;If you right click on any web page and select "Inspect 
+**DevTools Window**&mdash;If you right click on any web page and select "Inspect 
 Element" you'll see the DevTools window. Use this to debug clients just as you 
 would any other script. This isn't where you debug service workers.
 
 ![the devtools window](images/devtools-window.png)
 
-*chrome://inspect#service-workers&mdash;Type this in the address bar of a new 
+**chrome://inspect#service-workers**&mdash;Type this in the address bar of a new 
 tab. You'll see a list of active service workers. Notice the two links under 
 each entry. The 'terminate' link obviously terminates the service worker. If you 
 click the 'inspect' link you'll see that a second DevTools window opens showing 
@@ -59,9 +61,9 @@ the service worker.
 
 ![the chrome://inspect#service-workers page](images/inspect-service-workers.png)
 
-*chrome://serviceworker-internals*&mdash;This url is also for a list of service 
+**chrome://serviceworker-internals**&mdash;This URL is also for a list of service 
 workers, but a more detailed and feature rich one. As I said, the full 
-description of this page is over at [DevTools documentation]. 
+description of this page is over at DevTools documentation. 
 
 ![the chrome://serviceworker-internals page](images/serviceworker-internals.png)
 
@@ -78,9 +80,9 @@ So how do you debug those events?
    ![the open DevTools box is checked](images/open-devtools.png)
 
 2. Go back to the tab containing sw-primer, then press and hold down the refresh 
-   button. A menu appears.
+   button. A menu appears. (You'll only see this menu if DevTools is open.)
 
-   [Image]
+   ![a reload menu appears](images/empty-cash-hard-reload.png)
 
 3. Click 'Empty cache and hard reload'.
 

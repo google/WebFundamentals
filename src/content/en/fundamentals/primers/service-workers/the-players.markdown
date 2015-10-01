@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow-pages-list
+layout: shared/narrow
 title: "The Players"
 description: "A basic Service Worker Implementation only has two players."
 published_on: 2015-10-01
@@ -15,12 +15,12 @@ authors:
 </p>
 
  
-*Clients**&mdash;These players install and use a service worker. Generally, they 
+**Clients**&mdash;These players install and use a service worker. Generally, they 
 are web pages. Though there are [other types of clients](https://developer.mozilla.org/en-US/docs/Web/API/Client)
 , this primer focuses on web page clients. The examples described in 
 [What do they Do?](what-do-they-do.markdown) are all web page clients.
 
-*Service Worker Script**&mdash;This player is a background script that acts as a 
+**Service Worker Script**&mdash;This player is a background script that acts as a 
 network proxy for one or more clients. Though its name implies activity, you can 
 almost think of a service worker as a passive player. It implements several 
 events, then sits around waiting for them to be fired. It can't even manipulate 

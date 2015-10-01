@@ -14,11 +14,14 @@ updated_on: 2015-10-01
 order: 4
 key-takeaways:
   tldr:   
-  - "dfdf " 
-  - "dfdf"
+  - "Call <code>register()</code> to install a service worker." 
+  - "Learn to use Promises before attempting service workers."
+  - "Service workers have a limited scope and requrie HTTPS."
+  - "The install process has two events: install and activate."
+  - "Use <code>claim()</code> to start proxying immediately."
 notes:
   promises:
-    - "<b>Promises</b>&mdash;Notice the use of .then() at the end of the register() function. This is an example of an ECMAScript 2015 construct called a <a href='https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise'>Promise</a>. Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
+    - "<b>Promises</b>&mdash;Notice the use of <code>.then()</code> at the end of the <code>register()</code> function. This is an example of an ECMAScript 2015 construct called a <a href='https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise'>Promise</a>. Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
   https-only:
     - "<b>HTTPS Only</b>&mdash;As we'll see later, service workers can do almost whatever they want to HTTP requests and responses. Since this would make them targets for man-in-the-middle attacks, they must be served over HTTPS.This doesn't mean you need HTTPS for development and testing. Service workers served over localhost will also work."
   sws-dont-control:
@@ -40,7 +43,7 @@ notes:
 ## A client registers a service worker
 
 To use a service worker, a client tells the browser to install it by calling 
-register(). Every page that needs the service worker must implement register(), 
+`register()`. Every page that needs the service worker must implement register(), 
 but only the first page to do so will trigger the download. The most basic 
 register implementation looks like this:
 
@@ -91,11 +94,11 @@ If I want to restrict the service worker to part of a site, I simply specify it
 in the scope. 
 
 For example, say that I had an auction site with different features for buyers 
-and sellers. The buyers section is at example.com/buyers and the sellers section 
-is at example.com/sellers. A service worker with a scope of /buyers/ it can only 
+and sellers. The buyers section is at `example.com/buyers` and the sellers section 
+is at `example.com/sellers`. A service worker with a scope of `/buyers/` it can only 
 serve clients under example.com/buyers. It cannot serve clients under 
-example.com/sellers. Similarly, a service worker with a scope of /sellers/ can 
-only serve clients under example.com/sellers.
+`example.com/sellers`. Similarly, a service worker with a scope of `/sellers/` can 
+only serve clients under `example.com/sellers`.
 
 {% include shared/remember.liquid title="Aside" list=page.notes.https-only %}
 
@@ -162,7 +165,7 @@ run you can do one of several things:
 user to navigate to another page in the same service worker scope, or you can 
 ask the user to reload the client page.
 * Or, you can do what most implementations, including [Chrome's samples](https://github.com/GoogleChrome/samples)
-, do. Add a function called claim(), which allows the service worker to start 
+, do. Add a function called `claim()`, which allows the service worker to start 
 serving to client pages immediately. 
 
 The `claim()` method also returns a Promise.
