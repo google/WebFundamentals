@@ -17,6 +17,7 @@ Change this to false if you want to see logs form app engine.
 **/
 
 var PORT_NUMBER = 7331;
+var SILENCE_OUTPUT = false;
 var GAE_SPAWNED_TASK = null;
 
 // These define the build locations
@@ -37,17 +38,26 @@ gulp.task('spawn-gae-dev-command', function(cb) {
   // Handle OS differences in executable name
   var gaeCommand = 'dev_appserver.py';
   var params = [
-    '--log_level',  'warning',
     '--skip_sdk_update_check',
     '--port', PORT_NUMBER, WF.build
   ];
 
+  var stdOutput = SILENCE_OUTPUT ? 'pipe' : process.stdout;
+  var stioOpts = [0, 1, 'pipe'];
+
   var stderrOutput = '';
-  GAE_SPAWNED_TASK = spawn(gaeCommand, params);
+  GAE_SPAWNED_TASK = spawn(gaeCommand, params,
+    {stdio: stioOpts});
+
+  console.log(GAE_SPAWNED_TASK.stdout);
+
+  // Add stderr listener
   GAE_SPAWNED_TASK.stderr.setEncoding('utf8');
   GAE_SPAWNED_TASK.stderr.on('data', function(data) {
     stderrOutput += data;
   });
+
+  // Check if App Engine closed cleanly or not.
   GAE_SPAWNED_TASK.on('close', function(code, signal) {
     if (stderrOutput.length > 0) {
       plugins.util.log(plugins.util.colors.red(stderrOutput));

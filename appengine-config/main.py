@@ -46,12 +46,16 @@ class AllPages(webapp2.RequestHandler):
         text = None
         for fileLocation in fileLocations:
           if os.path.isfile(fileLocation):
-            # Read the file and pass in the contents - avoids issues in the
+            # Read the file and pass in the contents - avoids issues if the
             # file contains {%%} <- this breaks pythons templating
             fileContents = open(fileLocation, 'r').read()
-            text = render("wrapper.tpl", {"content": fileContents, "lang": lang})
+            print path == 'googlea0fe1fb6abfd5fbc.html'
+            if path == 'googlea0fe1fb6abfd5fbc.html'
+                text = fileContents
+            else
+                text = render("wrapper.tpl", {"content": fileContents, "lang": lang})
             break
-        
+
         if text is None:
           text = "404 - Requested file not found."
           self.response.set_status(404)
