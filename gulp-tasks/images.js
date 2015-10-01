@@ -4,14 +4,23 @@ var gulp = require('gulp');
 var del = require('del');
 var plugins = require('gulp-load-plugins')();
 
-// TODO: MattGaunt Test and hook up to production
-gulp.task('minify-images', function() {
+gulp.task('minify-images', ['minify-images:jekyll'], function() {
   return gulp.src(GLOBAL.WF.src.imgs + '/**/*')
     .pipe(plugins.cache(plugins.imagemin({
       progressive: true,
       interlaced: true
     })))
     .pipe(gulp.dest(GLOBAL.WF.build.imgs));
+});
+
+gulp.task('minify-images:jekyll', function() {
+  return gulp.src(GLOBAL.WF.src.jekyll + '/_includes/svgs/**/*')
+    .pipe(plugins.imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{cleanupIDs: false}],
+    }))
+    .pipe(gulp.dest(GLOBAL.WF.src.jekyll + '/_includes/svgs-minified/'));
 });
 
 // This task moves content into the jekyll directory

@@ -92,7 +92,7 @@ gulp.task('develop:prod', function(cb) {
     'clean',
     [
       'generate-prod-css',
-      'cp-images',
+      'minify-images',
       'cp-fonts',
       'cp-scripts',
     ],
@@ -108,7 +108,7 @@ gulp.task('build:staging', function(cb) {
     'clean',
     [
       'generate-prod-css',
-      'cp-images',
+      'minify-images',
       'cp-fonts',
       'cp-scripts',
       'copy-appengine-config'
@@ -123,7 +123,7 @@ gulp.task('build', function(cb) {
     'clean',
     [
       'generate-prod-css',
-      'cp-images',
+      'minify-images',
       'cp-fonts',
       'copy-appengine-config'
     ],

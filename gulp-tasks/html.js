@@ -10,7 +10,9 @@ var using = require('gulp-using');
 gulp.task('html', function() {
   return gulp.src(GLOBAL.WF.build.root + '/**/*.html')
     // Minify any HTML
-    .pipe(minifyHTML())
+    .pipe(minifyHTML({
+      quotes: true
+    }))
     // Output files
     .pipe(gulp.dest(GLOBAL.WF.build.root + '/'));
 });
