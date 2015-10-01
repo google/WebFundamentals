@@ -54,8 +54,9 @@ gulp.task('spawn-gae-dev-command', function(cb) {
       throw new Error('An error occured with App Engine, please look ' +
         'through the logs to find the problem.');
     }
-    cb();
   });
+
+  cb();
 });
 
 gulp.task('pretty-print-gae-info', function() {
