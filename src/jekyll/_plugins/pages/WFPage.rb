@@ -145,8 +145,6 @@ module Jekyll
       if (not self.data['authors'].nil?) and (self.data['authors'].length > 0)
         self.data['authors'].each { |authorKey|
           if site.data['contributors'][authorKey].nil?
-            puts "THROW ERROR <-------------------------------";
-            puts authorKey
             puts ''
             puts '---------------------------------------------------------------'
             puts ''
