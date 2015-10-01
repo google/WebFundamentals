@@ -94,6 +94,15 @@ notes:
 
 {% include shared/related_guides.liquid list=page.related-guides.example %}
 
+{% comment %}
+// This should be enabled but needs a different css file that contains these styles
+## Subscribe List
+
+<pre>{% raw %}{% include shows/subscribe.liquid %}{% endraw %}</pre>
+
+{% include shows/subscribe.liquid %}
+{% endcomment %}
+
 ## Highlight
 
 The highlight tag will simply run the code inside the tag through Pygments, a
