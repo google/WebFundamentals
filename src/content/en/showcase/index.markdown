@@ -56,7 +56,7 @@ description: "Showcase is a page highlighting some of the great web apps availab
     </p>
     {% for pageInSection in list reversed %}
       {% capture imageURL %}{{pageInSection.context.id}}/{{pageInSection.featured_image}}{% endcapture %}
-      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=imageURL linkText="View" %}
+      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=imageURL linkText=pageInSection.title %}
     {% endfor %}
   </div>
 </div>
