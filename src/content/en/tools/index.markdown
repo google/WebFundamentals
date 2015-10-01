@@ -1,7 +1,7 @@
 ---
 layout: shared/wide
 description: "Set Up your development workflow and use Chrome DevTools to iterate, debug and profile your site."
-title: Developer Workflow
+title: "Tools"
 translation_priority: 0
 ---
 
