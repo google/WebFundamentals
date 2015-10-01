@@ -7,8 +7,11 @@ description: "Sites and apps we love, regardless of their mainstream success. Al
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Get inspired</h2>
-    <p>
+    <p class="mdl-typography--font-light">
       {{ page.description }}
+    </p>
+    <p class="mdl-typography--font-light">
+      Have an idea for a spotlight? <a href="https://services.google.com/fb/forms/webshowcase/">Let us know!</a>
     </p>
   </div>
 </div>
