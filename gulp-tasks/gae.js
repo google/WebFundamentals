@@ -17,7 +17,6 @@ Change this to false if you want to see logs form app engine.
 **/
 
 var PORT_NUMBER = 7331;
-var SILENCE_OUTPUT = true;
 var GAE_SPAWNED_TASK = null;
 
 // These define the build locations
@@ -34,14 +33,29 @@ gulp.task('copy-appengine-config', ['gae:clean'], function() {
     .pipe(plugins.copy(WF.build, {prefix: 1}));
 });
 
-gulp.task('spawn-gae-dev-command', function() {
+gulp.task('spawn-gae-dev-command', function(cb) {
   // Handle OS differences in executable name
   var gaeCommand = 'dev_appserver.py';
-  var params = ['--skip_sdk_update_check', '--port', PORT_NUMBER, WF.build];
+  var params = [
+    '--log_level',  'warning',
+    '--skip_sdk_update_check',
+    '--port', PORT_NUMBER, WF.build
+  ];
 
-  var stdioOption = SILENCE_OUTPUT ? 'ignore' : 'inherit';
-
-  GAE_SPAWNED_TASK = spawn(gaeCommand, params, {stdio: stdioOption});
+  var stderrOutput = '';
+  GAE_SPAWNED_TASK = spawn(gaeCommand, params);
+  GAE_SPAWNED_TASK.stderr.setEncoding('utf8');
+  GAE_SPAWNED_TASK.stderr.on('data', function(data) {
+    stderrOutput += data;
+  });
+  GAE_SPAWNED_TASK.on('close', function(code, signal) {
+    if (stderrOutput.length > 0) {
+      plugins.util.log(plugins.util.colors.red(stderrOutput));
+      throw new Error('An error occured with App Engine, please look ' +
+        'through the logs to find the problem.');
+    }
+    cb();
+  });
 });
 
 gulp.task('pretty-print-gae-info', function() {

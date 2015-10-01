@@ -6,14 +6,14 @@
       <div class="wf-shows-subscribe__icon">
         {% include svgs/youtube.svg %}
       </div>
-      <a href="https://www.youtube.com/user/chromedevelopers?sub_confirmation=1" target="_blank">Subscribe to Our Channel</a>
+      <a href="https://www.youtube.com/user/chromedevelopers?sub_confirmation=1" target="_blank">Subscribe</a>
     </div>
 
     <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button">
       <div class="wf-shows-subscribe__icon">
         {% include svgs/rss-icon.svg %}
       </div>
-      <a href="{{site.WFBaseUrl}}/shows/rss.xml" target="_blank">Follow our Shows Feed</a>
+      <a href="{{site.WFBaseUrl}}/shows/rss.xml" target="_blank">Shows</a>
     </div>
 
     {% if page.rss_feed_url %}
@@ -21,7 +21,7 @@
       <div class="wf-shows-subscribe__icon">
         {% include svgs/rss-icon.svg %}
       </div>
-      <a href="{{page.rss_feed_url}}" target="_blank">Follow the {{page.feed_name}} Feed</a>
+      <a href="{{page.rss_feed_url}}" target="_blank">{{page.feed_name}} Feed</a>
     </div>
     {% endif %}
   </div>
