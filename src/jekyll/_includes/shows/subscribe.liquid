@@ -5,14 +5,14 @@
     <div class="wf-highlight-list__list mdl-grid">
       <div class="wf-shows-subscribe__yt-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
         <div class="wf-shows-subscribe__icon">
-          {% include svgs/youtube.svg %}
+          {% include svgs-minified/youtube.svg %}
         </div>
         <a href="https://www.youtube.com/user/chromedevelopers?sub_confirmation=1" target="_blank">Subscribe</a>
       </div>
 
       <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
         <div class="wf-shows-subscribe__icon">
-          {% include svgs/rss-icon.svg %}
+          {% include svgs-minified/rss-icon.svg %}
         </div>
         <a href="{{site.WFBaseUrl}}/shows/rss.xml" target="_blank">Shows</a>
       </div>
@@ -20,7 +20,7 @@
       {% if page.rss_feed_url %}
       <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
         <div class="wf-shows-subscribe__icon">
-          {% include svgs/rss-icon.svg %}
+          {% include svgs-minified/rss-icon.svg %}
         </div>
         <a href="{{page.rss_feed_url}}" target="_blank">{{page.feed_name}}</a>
       </div>

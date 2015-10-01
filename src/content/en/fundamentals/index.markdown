@@ -9,9 +9,9 @@ translation_priority: 0
   <div class="page-content">
     <h2>Web<b>Fundamentals</b></h2>
     <p class="mdl-typography--font-thin">
-      Web<b>Fundamentals</b> is a comprehensive resource for best practices 
-      web development, designed to help you add the right the right features 
-      and experiences to your web project. If you’re new to web development 
+      Web<b>Fundamentals</b> is a comprehensive resource for best practices
+      web development, designed to help you add the right the right features
+      and experiences to your web project. If you’re new to web development
       or just looking to make your project better, we’ve got you covered.
     </p>
   </div>
@@ -26,13 +26,13 @@ translation_priority: 0
 <div class="page-content">
   <h3>Ready, set, code!</h3>
   <p>
-    Already have something in mind, then jump right in! 
+    Already have something in mind, then jump right in!
   </p>
   <div class="mdl-grid mdl-typography--text-center">
     {% for pageInSection in page.context.subdirectories %}
     {% if pageInSection.index.published != false %}
     {% if pageInSection.id != 'guides' and pageInSection.id != 'primers' %}
-    {% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
+    {% capture icon %}svgs-minified/{{pageInSection.id}}.svg{% endcapture %}
       <div class="mdl-cell mdl-cell--4-col">
         <div class="icon">
           <a href="{{pageInSection.index.canonical_url | localize_link:pageInSection }}">
