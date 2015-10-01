@@ -49,8 +49,6 @@ gulp.task('spawn-gae-dev-command', function(cb) {
   GAE_SPAWNED_TASK = spawn(gaeCommand, params,
     {stdio: stioOpts});
 
-  console.log(GAE_SPAWNED_TASK.stdout);
-
   // Add stderr listener
   GAE_SPAWNED_TASK.stderr.setEncoding('utf8');
   GAE_SPAWNED_TASK.stderr.on('data', function(data) {

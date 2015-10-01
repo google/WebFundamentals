@@ -49,10 +49,9 @@ class AllPages(webapp2.RequestHandler):
             # Read the file and pass in the contents - avoids issues if the
             # file contains {%%} <- this breaks pythons templating
             fileContents = open(fileLocation, 'r').read()
-            print path == 'googlea0fe1fb6abfd5fbc.html'
-            if path == 'googlea0fe1fb6abfd5fbc.html'
+            if path == 'googlea0fe1fb6abfd5fbc.html':
                 text = fileContents
-            else
+            else:
                 text = render("wrapper.tpl", {"content": fileContents, "lang": lang})
             break
 
