@@ -6,7 +6,9 @@ title: "Shows"
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Watch &amp; learn</h2>
-    <p>Learn about the latest and greatest from the Chrome team.</p>
+    <p class="mdl-typography--font-light">
+      Learn about the latest and greatest from the Chrome team.
+    </p>
   </div>
 </div>
 

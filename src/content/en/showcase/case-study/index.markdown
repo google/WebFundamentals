@@ -7,8 +7,11 @@ description: "Every so often, we talk with the engineering team behind a success
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Case studies</h2>
-    <p>
+    <p class="mdl-typography--font-light">
       {{ page.description }}
+    </p>
+    <p class="mdl-typography--font-light">
+      Have an idea for a case study? <a href="https://services.google.com/fb/forms/webshowcase/">Let us know!</a>
     </p>
   </div>
 </div>
