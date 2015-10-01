@@ -63,8 +63,21 @@ module Jekyll
         # Check if contributor description exists and if so that it has en
         # translation
         if not contributorObj['description'].nil?
-          if contributorObj['description'][site.config['primary_lang']].nil?
-            puts "Error Yo."
+          if (not contributorObj['description'].is_a?(Hash)) or (not contributorObj['description'].has_key?(site.config['primary_lang']))
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+            puts "Found invalid author description for '" + contributerKey + "' in " + contributorsFilepath
+            puts 'Please ensure this authors description has an ' + site.config['primary_lang'] + ' translation in the contributors.yaml'
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+            Jekyll.logger.error "Error: Invalid author description '" + contributerKey + "' found in " + contributorsFilepath + ". Please ensure there is a translated description for '" + site.config['primary_lang'] + "'"
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+
+            raise "Invalid author description for '" + contributerKey + "' in YAML in " + contributorsFilepath
           end
         end
 
