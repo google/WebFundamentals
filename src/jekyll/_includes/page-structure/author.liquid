@@ -8,7 +8,7 @@
       {% if author.imgUrl %}
         <img class="wf-author__profile-photo" src="{{author.imgUrl}}" alt="Profile photo of {{author.name.given}} {{author.name.family}}" />
       {% else %}
-        {% include svgs-minified/person.svg %}
+        {% include svgs/person.svg %}
       {% endif %}
       </div>
 
@@ -30,7 +30,7 @@
     {% if include.date %}
     <div class="wf-author__row">
       <div class="wf-author__time-icon">
-        {% include svgs-minified/time.svg %}
+        {% include svgs/time.svg %}
       </div>
       <time class="wf-author__date" datetime="{{ include.date | date: '%F' }}">{{ include.date | date: '%B %-d, %Y' }}</time>
     </div>
