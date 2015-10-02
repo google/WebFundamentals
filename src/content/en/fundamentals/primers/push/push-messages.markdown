@@ -9,10 +9,13 @@ updated_on: 2015-10-01
 order: 2
 key-takeaways:
   tldr: 
-  - "Look at the tl;dr"
+  - "https://github.com/google/WebFundamentals/issues/1990"
 ---
 
-<p class="intro">Push messages may consist of breaking news, site updates, or other information of interest to the user. The information is pushed from the server to a service worker before it is sent to the user as a notification.
+<p class="intro">
+  Push messages may consist of breaking news, site updates, or other 
+  information of interest to the user. The information is pushed from the 
+  server to a service worker before it is sent to the user as a notification.
 </p>
 
 {% include shared/toc.liquid %}
@@ -21,9 +24,18 @@ key-takeaways:
 
 ## Subscribe 
 
-To receive messages, users must allow your web site to push notificaton messages to them. This is a two-step process performed on the receiving device, comprising general enabling of push notifications and an explicit subscription request to a specific web site. Both of these conditions must be met for the user to receive push messages; that is, a status of either "disabled" or "enabled but not subscribed" prevents messages from being received.
+To receive messages, users must allow your web site to push notificaton 
+messages to them. This is a two-step process performed on the receiving 
+device, comprising of enabling of push notifications and an explicit 
+subscription request to a specific web site. Both of these conditions must 
+be met for the user to receive push messages; that is, a status of either 
+"disabled" or "enabled but not subscribed" prevents messages from 
+being received.
 
-Push messages are implemented via a service worker. When a push message is received, the browser can start up a service worker that runs in the background without a page being open. The service worker must be initialized and registered in order to process push messages. 
+Push messages are implemented via a [service worker](/web/fundamentals/primers/service-workers/).
+When a push message is received, the browser can start up a service worker 
+that runs in the background without a page being open. The service worker 
+must be initialized and registered in order to process push messages. 
 
 {% highlight javascript %}
 // Check that service workers are supported
@@ -35,16 +47,20 @@ if ('serviceWorker' in navigator) {
 }
 {% endhighlight %}
 
-Users expect a simple UI to enable or disable push messages for your site. This is typically accomplished via a UI element such as a button or toggle switch that enables or disables push messages and clearly indicates its state. For example:
+Users expect a simple UI to enable or disable push messages for your site. 
+This is typically accomplished via a UI element such as a button or toggle 
+switch that enables or disables push messages and clearly indicates its 
+state. For example:
 
 ![Push UX](images/pushux.png)
 
-When the user requests a subscription activation, your web page must subscribe them to your push service so they can receive messages from you.
+When the user requests a subscription activation, your web page must 
+subscribe the user to your push service so they can receive messages.
 
 {% highlight javascript %}
 function subscribe() {
   // Disable the button so it can't be changed while
-  // we process the permission request
+  //   we process the permission request
   var pushButton = document.querySelector('.js-push-button');
   pushButton.disabled = true;
 
@@ -84,7 +100,10 @@ function subscribe() {
 
 ## Unsubscribe
 
-Likewise, users can refuse push messages, either by unsubscribing to a specific site or by disabling push notifications completely. Your page has no control over their global enable/disable setting, but you can unsubscribe users when they request it.
+Likewise, users can refuse push messages, either by unsubscribing to a 
+specific site or by disabling push notifications completely. Your page has 
+no control over their global enable/disable setting, but you should 
+unsubscribe users when they request it.
 
 {% highlight javascript %}
 function unsubscribe() {  
@@ -133,6 +152,8 @@ function unsubscribe() {
 }
 {% endhighlight %}
 
-##Permissions
+## Permissions
 
-Like any native app, notifications require permission on the target device. The permission should be explicitly requested, and the reason for the request should be clear and specific. There is an [HTML5Rocks article on thePermissions API](http://updates.html5rocks.com/2015/04/permissions-api-for-the-web), and a [best practices document](../../engage-and-retain/push-notifications/).
+Like any native app, notifications require permission on the target device. 
+The permission should be explicitly requested, and the reason for the request 
+should be clear and specific. Be sure to review [HTML5Rocks article on the Permissions API](http://updates.html5rocks.com/2015/04/permissions-api-for-the-web), and the [best practices for push](../../engage-and-retain/push-notifications/).
