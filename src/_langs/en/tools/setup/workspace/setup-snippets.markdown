@@ -3,9 +3,9 @@ layout: tools-article
 title: "Set Up Snippets"
 rss: false
 seotitle: "Set Up Snippets in Chrome DevTools"
-description: "Use DevTools snippetst to save small scripts, bookmarklets, 
+description: "Use DevTools snippets to save small scripts, bookmarklets, 
 and utilities so that they're always available to you while debugging."
-introduction: "Use DevTools snippetst to save small scripts, bookmarklets, 
+introduction: "Use DevTools snippets to save small scripts, bookmarklets, 
 and utilities so that they're always available to you while debugging."
 authors:
   - kaycebasques
@@ -23,11 +23,24 @@ remember:
     - remember.canary
 ---
 
-<!-- https://goo.gl/TXuIZI -->
+<!-- https://developer.chrome.com/devtools/docs/authoring-development-workflow#snippets
+     http://www.briangrinstead.com/blog/devtools-snippets 
+     https://github.com/bgrins/devtools-snippets
+     http://bgrins.github.io/devtools-snippets/ 
+     https://github.com/paulirish/devtools-addons/wiki/Snippets -->
 
 {% wrap content %}
 
-first para
+<!-- who what where when why how -->
+
+Snippets are small scripts that you can author and execute within the 
+**Sources** panel of Chrome DevTools. They are saved to local storage, so
+you can access them from any page. If you have small utilities or debugging
+scripts which you find yourself using repeatedly on multiple pages,
+consider saving the scripts as snippets.
+
+Consider snippets as an alternative to
+[bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet).
 
 {% include modules/toc.liquid %}
 
