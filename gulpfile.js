@@ -77,7 +77,7 @@ gulp.task('develop', function(cb) {
     'clean',
     [
       'generate-dev-css',
-      'cp-images',
+      'minify-images',
       'cp-fonts',
       'cp-scripts',
     ],
