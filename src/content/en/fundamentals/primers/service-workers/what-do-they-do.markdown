@@ -15,15 +15,22 @@ order: 2
   demonstrate their use.
 </p>
 
-*Responsiveness*&mdash;What if you could build a web page that took voice 
+### Responsiveness
+
+What if you could build a web page that took voice 
 recordings? Google's sample app called [Voice Memos](https://voice-memos.appspot.com/) 
 does exactly that. For a web-based memo app a slow network would mean slow 
 playback. Voice Memos solves this by caching memos on the device. The code is 
 [available on GitHub](https://github.com/GoogleChrome/voice-memos).
 
-*Offline access*&mdash;The [Guitar Tuner app](https://guitar-tuner.appspot.com/) 
+### Offline access
+
+The [Guitar Tuner app](https://guitar-tuner.appspot.com/) 
 by Paul Lewis doesn't need a server to run, but how do you keep it on the 
 device? A service worker stores the app's resources so that reopening doesn't require 
 communicating with a server. The code is [available on GitHub](https://github.com/GoogleChrome/guitar-tuner). 
 
-*Engagement*&mdash;
+
+### Engagement
+
+{% comment %}https://github.com/google/WebFundamentals/issues/1985{% endcomment %}
