@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var plugins = require('gulp-load-plugins')();
-var runSequence = require('run-sequence');
+var runSequence = require('run-sequence').use(gulp);
 
 gulp.task('minify-images:content', function() {
   return gulp.src(GLOBAL.WF.build.jekyll + '/**/*.{png,jpeg,jpg,svg}')

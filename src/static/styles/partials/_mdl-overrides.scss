@@ -1,15 +1,48 @@
 // MDL Table Overrides
 .mdl-data-table {
-  // Tables aren't responsive, block and overflow helps with this
-  display: block;
-  overflow: auto;
-
   // We want the text to wrap
   white-space: normal;
 
   // MDL defines no line height or margin
   line-height: $base-line;
   margin-bottom: $base-line;
+}
+
+@media screen and (max-width: $grid-desktop-breakpoint) {
+  .mdl-data-table {
+    width: 100%;
+
+    thead, tfoot {
+      display: none;
+    }
+
+    tbody, tr, td {
+      display: block;
+    }
+
+    tbody tr {
+      height: auto;
+    }
+
+    tbody td {
+      height: auto;
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    td[data-th]:before {
+      content: attr(data-th);
+      float: left;
+
+      // Styles from th
+      text-overflow: ellipsis;
+      @include typo-body-2();
+      height: $data-table-row-height;
+      font-size: $data-table-header-font-size;
+      color: $data-table-header-color;
+    }
+
+  }
 }
 
 .mdl-data-table td, .mdl-data-table th {

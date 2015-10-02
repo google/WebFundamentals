@@ -5,6 +5,7 @@ var del = require('del');
 var spawn = require('child_process').spawn;
 var chalk = require('chalk');
 var plugins = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');
 
 /**
 
@@ -73,6 +74,8 @@ gulp.task('pretty-print-gae-info', function() {
   console.log('');
   console.log(chalk.dim('    Server is on: ') +
     chalk.white('http://localhost:') + chalk.blue(PORT_NUMBER));
+  console.log(chalk.dim('    BrowserSync is on: ') +
+    chalk.white('http://localhost:') + chalk.blue(7332));
   console.log('');
   console.log('---------------------------------');
   console.log('');
@@ -83,11 +86,12 @@ gulp.task('pretty-print-gae-info', function() {
 // defaults to '--lang all'.
 // 'all' builds for all languages specified in config.yml/langs_available + 'en'.
 // builds w/o multilang support if config.yml is missing langs_available.
-gulp.task('start-gae-dev-server', [
-  'copy-appengine-config',
-  'spawn-gae-dev-command',
-  'pretty-print-gae-info'
-]);
+gulp.task('start-gae-dev-server', ['copy-appengine-config'], function(cb) {
+  runSequence(
+    'spawn-gae-dev-command',
+    'pretty-print-gae-info',
+    cb);
+});
 
 gulp.task('gae:clean', del.bind(null,
   [
