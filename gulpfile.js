@@ -26,7 +26,7 @@ GLOBAL.WF = {
   },
   build: {
     root: 'build',
-    jekyll: 'build/jekyll',
+    jekyll: 'build/langs',
     imgs: 'build/imgs',
     styles: 'build/styles',
     fonts: 'build/fonts',
@@ -77,7 +77,7 @@ gulp.task('develop', function(cb) {
     'clean',
     [
       'generate-dev-css',
-      'minify-images',
+      'cp-images',
       'cp-fonts',
       'cp-scripts',
     ],
@@ -97,7 +97,10 @@ gulp.task('develop:prod', function(cb) {
       'cp-scripts',
     ],
     'compile-jekyll:localhost',
-    'html',
+    [
+      'html',
+      'minify-images:content'
+    ],
     'start-gae-dev-server',
     'prod-watch-tasks',
     cb);
@@ -114,7 +117,10 @@ gulp.task('build:staging', function(cb) {
       'copy-appengine-config'
     ],
     'compile-jekyll:staging',
-    'html',
+    [
+      'html',
+      'minify-images: content'
+    ],
     cb);
 });
 
@@ -128,7 +134,10 @@ gulp.task('build', function(cb) {
       'copy-appengine-config'
     ],
     'compile-jekyll:devsite',
-    'html',
+    [
+      'html',
+      'minify-images:content'
+    ],
     cb);
 });
 
