@@ -42,15 +42,20 @@
   color: $footer-text-color;
 }
 
-.wf-footer-section:first-child {
+
+.wf-footer-section:first-child,
+body[dir="rtl"] .wf-footer-section:last-child {
   padding-left: 0;
   padding-right: $base-line * 2;
 }
 
-.wf-footer-section:last-child {
+.wf-footer-section:last-child
+body[dir="rtl"] .wf-footer-section:first-child {
   padding-left: $base-line * 2;
   padding-right: 0;
 }
+
+
 
 .wf-footer__list {
   list-style: none;
@@ -73,6 +78,11 @@
 
 .wf-footer__list--primary {
   text-align: right;
+}
+
+body[dir="rtl"] .wf-footer__list--primary {
+  text-align: left;
+  padding-left: $base-line * 2;
 }
 
 .wf-footer__list--secondary {
