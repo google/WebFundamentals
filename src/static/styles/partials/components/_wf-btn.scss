@@ -14,14 +14,8 @@
     width: $header-svg-icon-size;
     height: $header-svg-icon-size;
 
-    padding-top: (($base-line * 2) - $header-svg-icon-size) / 2;
-
     fill: $text-color-primary;
-  }
-}
 
-button.wf-btn__small {
-  svg {
-    padding-top: 0;
+    vertical-align: initial;
   }
 }

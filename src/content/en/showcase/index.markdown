@@ -37,7 +37,7 @@ description: "Showcase is a page highlighting some of the great web apps availab
 <div class="wf-showcase__featured-casestudy">
   <div class="page-content">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet wf-showcase__device-img">
-      <img src="case-study/{{caseStudy.showcase.key_image}}" class="wf-showcase__featured-showcase-img" alt="">
+      <img src="{{site.WFBaseUrl}}/showcase/case-study/{{caseStudy.showcase.key_image}}" class="wf-showcase__featured-showcase-img" alt="">
     </div>
     <div>
       <h4>{{caseStudy.title}}</h4>
@@ -52,10 +52,10 @@ description: "Showcase is a page highlighting some of the great web apps availab
 <div class="page-content" style="clear:both">
   <div class="mdl-grid">
     <p class="mdl-cell mdl-cell--12-col">
-      
+
     </p>
     {% for pageInSection in list reversed %}
-      {% capture imageURL %}{{pageInSection.context.id}}/{{pageInSection.featured_image}}{% endcapture %}
+      {% capture imageURL %}{{site.WFBaseUrl}}/showcase/{{pageInSection.context.id}}/{{pageInSection.featured_image}}{% endcapture %}
       {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=imageURL linkText=pageInSection.title %}
     {% endfor %}
   </div>
