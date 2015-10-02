@@ -1,15 +1,17 @@
 ---
 layout: shared/narrow
 title: "Push messages"
-description: "ush messages may consist of breaking news, site updates, or other information of interest to the user. The information is pushed from the server to a service worker before it is sent to the user as a notification."
+description: "Push messages may consist of breaking news, site updates, or other information of interest to the user. The information is pushed from the server to a service worker before it is sent to the user as a notification."
 authors:
 - dgash
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 2
 key-takeaways:
-  tldr: 
-  - "https://github.com/google/WebFundamentals/issues/1990"
+  code:
+    - Users must first allow push messages as a global permissions setting.
+    - Users must also explicitly subscribe to your site to receive notifications.
+    - You can unsubscribe users at their request, regardless of their global notifications permissions.
 ---
 
 <p class="intro">
