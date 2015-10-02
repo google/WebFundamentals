@@ -8,10 +8,6 @@ order: 1
 authors:
   - josephmedley
 translation_priority: 1
-key-takeaways:
-  todo:
-    - "Oh look, a TL;DR goes here"
-    - "And another TL;DR, whee!"
 ---
 
 <p class="intro">
@@ -19,8 +15,6 @@ key-takeaways:
   native app would. Just like native notifications, some ways of using 
   them are better than others.
 </p>
-
-{% include shared/takeaway.liquid list=page.key-takeaways.todo %}
 
 In 2015, a [Google case study](#TODO) found 
 that when prompted to download and install the Google+ app 9% of users 
