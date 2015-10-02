@@ -25,22 +25,22 @@ notes:
 
 ## Overview
 
-This year’s [Google I/O 2015 web app](https://events.google.com/io2015/) was 
-written by Google’s Developer Relations team, based on designs by our friends 
-at [Instrument](http://www.instrument.com/), who wrote the nifty 
-[audio/visual experiment](http://www.instrument.com/news/google-io-2015). Our 
+This year’s [Google I/O 2015 web app](https://events.google.com/io2015/) was
+written by Google’s Developer Relations team, based on designs by our friends
+at [Instrument](http://www.instrument.com/), who wrote the nifty
+[audio/visual experiment](http://www.instrument.com/news/google-io-2015). Our
 team’s mission was to ensure that the I/O web app (which I’ll refer to by
 its codename, IOWA) showcased everything the modern web could do. A full
 offline-first experience was at the top of our list of must-have features.
 
 If you’ve read any of the other articles on this site recently, you’ve
 undoubtedly encountered [service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/),
-and you won’t be surprised to hear that IOWA’s offline support is heavily 
-reliant on them. Motivated by the real-world needs of IOWA, we developed two 
-libraries to handle two different offline use cases: 
-[`sw-precache`](https://github.com/GoogleChrome/sw-precache) to automate 
-precaching of static resources, and 
-[`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) to handle 
+and you won’t be surprised to hear that IOWA’s offline support is heavily
+reliant on them. Motivated by the real-world needs of IOWA, we developed two
+libraries to handle two different offline use cases:
+[`sw-precache`](https://github.com/GoogleChrome/sw-precache) to automate
+precaching of static resources, and
+[`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) to handle
 runtime caching and fallback strategies.
 
 The libraries complement each other nicely, and allowed us to implement a
@@ -59,8 +59,8 @@ requirements in mind.
 
 ### Build-time Integration
 
-`sw-precache` with IOWA’s [`gulp`](http://gulpjs.com/)-based build process, 
-and we rely on a series of [glob](https://github.com/isaacs/node-glob) patterns 
+`sw-precache` with IOWA’s [`gulp`](http://gulpjs.com/)-based build process,
+and we rely on a series of [glob](https://github.com/isaacs/node-glob) patterns
 to ensure that we generate a complete list of all the static resources IOWA uses.
 
 <figure>
@@ -78,18 +78,18 @@ staticFileGlobs: [
 <figcaption>Adapted from the <a href="https://github.com/GoogleChrome/ioweb2015/blob/master/gulp_scripts/service-worker.js">original source</a>.</figcaption>
 </figure>
 
-Alternative approaches, like hard coding a list of file names into an array, 
-and remembering to bump a cache version number each time any of those files 
-changes were far too error prone, especially given that we had 
-[multiple team members](https://events.google.com/io2015/humans.txt) checking 
-in code. No one wants to break offline support by leaving out a new file in a 
+Alternative approaches, like hard coding a list of file names into an array,
+and remembering to bump a cache version number each time any of those files
+changes were far too error prone, especially given that we had
+[multiple team members](https://events.google.com/io2015/humans.txt) checking
+in code. No one wants to break offline support by leaving out a new file in a
 manually maintained array! Build-time integration meant we could make
 changes to existing files and add new files without having those worries.
 
 ### Updating Cached Resources
 
 `sw-precache` generates a base [service worker script](https://events.google.com/io2015/service-worker.js)
-that includes a unique [MD5 hash](https://en.wikipedia.org/wiki/MD5) for each 
+that includes a unique [MD5 hash](https://en.wikipedia.org/wiki/MD5) for each
 resource that gets precached. Each time an existing resource changes,
 or a new resource is added, the service worker script is regenerated. This
 automatically triggers the [service worker update flow](http://www.html5rocks.com/en/tutorials/service-worker/introduction/#lifecycle),
@@ -144,7 +144,7 @@ response came back, we didn’t have to specifically version resources or expire
 entries.
 
 <figure>
-{% highlight javascript %}  
+{% highlight javascript %}
 toolbox.router.get('/experiment/(.+)', toolbox.networkFirst);
 {% endhighlight %}
 <figcaption>Adapted from the <a href="https://github.com/GoogleChrome/ioweb2015/blob/master/app/scripts/shed/experiment.js">original source</a>.</figcaption>
@@ -266,13 +266,13 @@ queued updates had been applied.
 
 ### Offline Google Analytics
 
-In a similar vein, we implemented a handler to queue any failed Google 
-Analytics requests and attempt to replay them later, when the network was 
-hopefully available. With this approach, being offline doesn’t mean sacrificing 
-the insights Google Analytics offers. We added the [`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt) 
+In a similar vein, we implemented a handler to queue any failed Google
+Analytics requests and attempt to replay them later, when the network was
+hopefully available. With this approach, being offline doesn’t mean sacrificing
+the insights Google Analytics offers. We added the [`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
 parameter to each queued request, set to the amount of time that had passed
 since the request was first attempted, to ensure that a proper event
-attribution time made it to the Google Analytics backend. Google Analytics 
+attribution time made it to the Google Analytics backend. Google Analytics
 [officially supports](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
 values for `qt` of up to only 4 hours, so we made a best-effort attempt to replay those
 requests as soon as possible, each time the service worker started up.
@@ -398,9 +398,9 @@ landing page associated with those notifications displayed the updated session
 details. Those landing pages were already being cached as part of the overall
 site, so they already worked offline, but we needed to make sure that the
 session details on that page were up to date, even when viewed offline. To do
-that, we modified previously cached session metadata with the updates that 
-triggered the push notification, and we stored the result in the cache. This 
-up-to-date info will be used the next time the session details page is opened, 
+that, we modified previously cached session metadata with the updates that
+triggered the push notification, and we stored the result in the cache. This
+up-to-date info will be used the next time the session details page is opened,
 whether that takes place online or offline.
 
 <figure>
@@ -446,12 +446,12 @@ Fortunately, we were able to take advantage of [service worker lifecycle events]
 to detect when new content was available after the page had already loaded.
 When an updated service worker is detected, we display a
 [toast message](https://www.google.com/design/spec/components/snackbars-toasts.html#snackbars-toasts-usage)
-to the user letting them know that they should reload their page to see the 
+to the user letting them know that they should reload their page to see the
 newest content.
 
 <figure>
 {% highlight javascript%}
-  <pre>if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+if (navigator.serviceWorker && navigator.serviceWorker.controller) {
   navigator.serviceWorker.controller.onstatechange = function(e) {
     if (e.target.state === 'redundant') {
       var tapHandler = function() {
@@ -473,21 +473,21 @@ newest content.
   <img src="images/service-workers-iowa/update-toast.png">
   <figcaption>The "latest content" toast.</figcaption>
 </figure>
-            
 
-### title: Make Sure Static Content is Static!
+
+### Make Sure Static Content is Static!
 
 `sw-precache` uses an MD5 hash of local files’ contents, and only fetches
 resources whose hash has changed. This means that resources are available on the page
 almost immediately, but it also means that once something is cached, it’s going to
 stay cached until it’s assigned a new hash in an updated service worker script.
 
-We [ran into an issue](https://github.com/GoogleChrome/ioweb2015/issues/1504) 
+We [ran into an issue](https://github.com/GoogleChrome/ioweb2015/issues/1504)
 with this behavior during I/O due to our backend needing to dynamically update
 the livestream YouTube video IDs for each day of the conference. Because the
 [underlying template file](https://github.com/GoogleChrome/ioweb2015/blob/d2ec7f1a86123483acd1d07fb2c7f84f2413b195/app/templates/layout_full.html#L385)
-was static and didn’t change, our service worker update flow wasn’t triggered, 
-and what was meant to be a dynamic response from the server with updating 
+was static and didn’t change, our service worker update flow wasn’t triggered,
+and what was meant to be a dynamic response from the server with updating
 YouTube videos ended up being the cached response for a number of users.
 
 You can avoid this type of issue by making sure your web application is
@@ -511,10 +511,10 @@ making use of a cache-first response strategy, make sure that you
 [do something similar](https://github.com/GoogleChrome/samples/blob/e4df12c8642381243b6c1710c41394d85b33d82f/service-worker/prefetch/service-worker.js#L56)
 in your own code!
 
-A cleaner solution to cache-busting would be to set the 
+A cleaner solution to cache-busting would be to set the
 [cache mode](https://fetch.spec.whatwg.org/#concept-request-cache-mode)
-of each `Request` used for precaching to `reload`, which will ensure that the 
-response comes from the network. However, as of this writing, the cache mode 
+of each `Request` used for precaching to `reload`, which will ensure that the
+response comes from the network. However, as of this writing, the cache mode
 option [isn’t supported](https://code.google.com/p/chromium/issues/detail?id=453190#c10)
 in Chrome.
 
@@ -556,9 +556,9 @@ self.addEventListener('message', function(event) {
 
 The service worker integration in the Google I/O Web App is likely the most
 complex, real-world usage that has been deployed to this point. We’re looking
-forward to the web developer community using the tools we created 
-[`sw-precache`](https://github.com/GoogleChrome/sw-precache) and 
-[`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) as well as the 
+forward to the web developer community using the tools we created
+[`sw-precache`](https://github.com/GoogleChrome/sw-precache) and
+[`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) as well as the
 techniques we’re describing to power your own web applications.
 Service workers are a [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
 that you can start using today, and when used as part of a properly structured
