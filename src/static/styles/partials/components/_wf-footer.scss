@@ -25,27 +25,11 @@
   color: $footer-text-color;
 }
 
-<<<<<<< HEAD
 .wf-footer-section:first-child {
   padding-bottom: $base-line;
   margin-bottom: $base-line;
   border-bottom: 1px solid #737373;
-=======
-
-.wf-footer-section:first-child,
-body[dir="rtl"] .wf-footer-section:last-child {
-  padding-left: 0;
-  padding-right: $base-line * 2;
 }
-
-.wf-footer-section:last-child
-body[dir="rtl"] .wf-footer-section:first-child {
-  padding-left: $base-line * 2;
-  padding-right: 0;
->>>>>>> e7c0ce9412c10833adaeba7e15af3d2f69eb8d5d
-}
-
-
 
 .wf-footer__list {
   list-style: none;
@@ -123,6 +107,13 @@ body[dir="rtl"] .wf-footer__list--primary {
     padding-right: 0;
 
     border-left: 1px solid #737373;
+  }
+
+  body[dir="rtl"] .wf-footer-section:last-child {
+    border-left: none;
+    border-right: 1px solid #737373;
+    padding-right: 0;
+    padding-right: $base-line * 2;
   }
 
   .wf-footer__list--primary {
