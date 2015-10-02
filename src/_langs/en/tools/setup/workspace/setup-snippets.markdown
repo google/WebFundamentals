@@ -3,8 +3,10 @@ layout: tools-article
 title: "Set Up Snippets"
 rss: false
 seotitle: "Set Up Snippets in Chrome DevTools"
-description: "description"
-introduction: "introduction"
+description: "Use DevTools snippetst to save small scripts, bookmarklets, 
+and utilities so that they're always available to you while debugging."
+introduction: "Use DevTools snippetst to save small scripts, bookmarklets, 
+and utilities so that they're always available to you while debugging."
 authors:
   - kaycebasques
 article:
