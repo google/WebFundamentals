@@ -130,3 +130,8 @@
 
   padding-right: $base-line * 0.5;
 }
+
+body[dir="rtl"] .wf-navdrawer__bottom-link-container img {
+  padding-right: 0;
+  padding-left: $base-line * 0.5;
+}
