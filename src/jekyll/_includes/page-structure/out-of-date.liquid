@@ -1,0 +1,6 @@
+{% if page.outOfDate %}
+<div class="wf-translation-warning">
+  <p class="mdl-typography--caption wf-translation-warning__title">Out of Date!</p>
+  <p class="mdl-typography--caption-color-contrast wf-translation-warning__description">This article's translation is out of date with the <a href="{{page.raw_canonical_url}}">original version</a>.</p>
+</div>
+{% endif%}
