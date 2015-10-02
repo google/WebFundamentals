@@ -109,7 +109,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: $base-line;
-  
+
   padding: 0 ($base-line);
 }
 
@@ -130,7 +130,6 @@ figcaption {
   color: $text-grey-color;
 
   a {
-    text-decoration: none;
     color: inherit;
   }
 }
