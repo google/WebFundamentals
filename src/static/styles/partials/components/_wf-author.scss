@@ -44,6 +44,12 @@ $author-img-height: $base-line * 1.5;
   }
 }
 
+body[dir="rtl"] .wf-author__info {
+  margin-left: 0;
+  margin-right: ($base-line / 2);
+}
+
+
 .wf-author__name {
   @include typo-title;
 
