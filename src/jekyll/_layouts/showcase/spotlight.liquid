@@ -232,7 +232,8 @@
   <div class="mdl-grid">
     <h3 class="wf-showcase__latest-title mdl-cell--12-col">Latest spotlights</h3>
 
-    {% for pageInSection in page.context.pages | limit:2 %}
+    {% assign pages = page.context.pages | reverse %}
+    {% for pageInSection in pages | limit:2 %}
       {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText="View" %}
     {% endfor %}
   </div>
