@@ -11,6 +11,7 @@
 @media screen and (max-width: $grid-desktop-breakpoint) {
   .mdl-data-table {
     width: 100%;
+    border: none;
 
     thead, tfoot {
       display: none;
@@ -22,12 +23,22 @@
 
     tbody tr {
       height: auto;
+
+      margin-bottom: $base-line;
+      border-left: 1px solid rgba(0, 0, 0, 0.12);
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
     }
 
     tbody td {
       height: auto;
       text-align: right;
       vertical-align: middle;
+      border-top: none;
+
+      // MDL Does larger padding on far left or right sides
+      padding-left: $base-line / 2 !important;
+      padding-right: $base-line / 2 !important;
     }
 
     td[data-th]:before {
@@ -37,7 +48,6 @@
       // Styles from th
       text-overflow: ellipsis;
       @include typo-body-2();
-      height: $data-table-row-height;
       font-size: $data-table-header-font-size;
       color: $data-table-header-color;
     }
