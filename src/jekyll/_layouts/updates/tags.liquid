@@ -1,14 +1,48 @@
 {% include page-structure/open-page.liquid %}
 
-{% include shared/work-in-progress.liquid %}
-
 <div class="page-content">
-  <div class="update-post__content-container">
-    <ul>
-      {% for tag in page.tags %}
-        <li><a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">{{tag}}</a></li>
-      {% endfor %}
-    </ul>
+
+  <h1>{{page.title}}</h1>
+
+{% assign firstThird = page.tags.size | divided_by: 3 %}
+{% assign middleThird = oneThird | plus:firstThird %}
+{% assign lastThird = middleThird | plus:firstThird %}
+
+
+  <div class="mdl-grid wf-updates-taglist">
+    <div class="mdl-cell mdl-cell--4-col">
+      <ul>
+        {% for tag in page.tags limit:firstThird %}
+          <li>
+            <a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">
+              #{{tag}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <ul>
+        {% for tag in page.tags offset:middleThird limit:firstThird %}
+          <li>
+            <a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">
+              #{{tag}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <ul>
+        {% for tag in page.tags limit offset:lastThird %}
+          <li>
+            <a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">
+              #{{tag}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
 {% include page-structure/close-page.liquid %}
