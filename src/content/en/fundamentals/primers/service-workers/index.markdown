@@ -1,21 +1,25 @@
 ---
-layout: shared/narrow
+layout: shared/narrow-pages-list
 title: "Service Workers"
-description: "service workers - Bacon ipsum dolor amet andouille shoulder chuck, prosciutto ball tip doner tail turkey. Alcatra chicken pork, turducken boudin beef ribs cupim pork loin biltong filet mignon strip steak. Landjaeger brisket chuck pork loin venison fatback biltong leberkas meatball, frankfurter andouille ground round sirloin porchetta. Turducken ribeye porchetta chuck strip steak leberkas sausage flank sirloin tail swine bacon pig ham hock."
-published_on: 2015-09-21
-updated_on: 2015-09-21
+description: "Service workers have been described as &ldquo;programmable network
+  proxies&rdquo; and &ldquo;background workers&rdquo;. To be more specific, a 
+  service worker is a script run by a browser in the background that proxies and 
+  caches network interactions."
+published_on: 2015-09-25
+updated_on: 2015-09-25
+order: 1
+translation_priority: 0
 authors:
-  - petelepage
-translation_priority: 1
-key-takeaways:
-  todo:
-    - "Oh look, a TL;DR goes here"
-    - "And another TL;DR, whee!"
+  - josephmedley
 ---
 
 <p class="intro">
-service workers
-</p>
+  Service workers have been described as &ldquo;programmable network
+  proxies&rdquo; and &ldquo;background workers&rdquo;. To be more specific, a 
+  service worker is a script run by a browser in the background that proxies and 
+  caches network interactions.</p>
 
-{% include shared/takeaway.liquid list=page.key-takeaways.todo %}
-
+Because a service worker is separate from the page that loaded it, it doesn't 
+need a web page or user interactions. A service worker terminates when it's not 
+being used and reactivates again when it's needed. A single service worker can 
+support more than one web page.
