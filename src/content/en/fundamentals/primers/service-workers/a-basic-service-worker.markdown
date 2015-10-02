@@ -1,14 +1,9 @@
 ---
 layout: shared/narrow
 title: "Setting up a basic service worker"
-description: "This section describes the most basic service worker possible. It 
-  shows you how a client gets, or registers, a service worker. It shows you how 
-  a service worker prepares to act as a proxy for its clients. Both subjects 
-  have more depth than is shown in this section. It's not intended to be 
-  comprehensive; It's intended to give you a basic foundation on which to build 
-service worker knowledge."
+description: "This section describes the most basic service worker possible. It shows you how a client gets, or registers, a service worker. It shows you how a service worker prepares to act as a proxy for its clients. Both subjects have more depth than is shown in this section. It's not intended to be comprehensive; It's intended to give you a basic foundation on which to build service worker knowledge."
 authors:
-- josephmedley
+  - josephmedley
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 4
@@ -34,7 +29,8 @@ notes:
   worker prepares to act as a proxy for its clients. Both subjects have more 
   depth than is shown in this section. It's not intended to be comprehensive; 
   It's intended to give you a basic foundation on which to build service worker 
-  knowledge.</p>
+  knowledge.
+</p>
 
 {% include shared/toc.liquid %}
 
@@ -43,48 +39,48 @@ notes:
 ## A client registers a service worker
 
 To use a service worker, a client tells the browser to install it by calling 
-`register()`. Every page that needs the service worker must implement register(), 
+`register()`. Every page that needs the service worker must implement `register()`, 
 but only the first page to do so will trigger the download. The most basic 
 register implementation looks like this:
 
 {% highlight javascript %}
-//Does the browser support service workers?
+// Does the browser support service workers?
 if ('serviceWorker' in navigator) {
   //Yes
   navigator.serviceWorker.register('/service-worker.js').then(function() {
     // Advanced actions we'll get to later.
   });
 } else {
-  //No, but this client should work anyway.
+  // No, but this client should work anyway.
 }
 {% endhighlight %}
 
-Generally you'll put this code at the end of a page's <body> element so that it 
+Generally you'll put this code at the end of a page's `<body>` element so that it 
 doesn't block page rendering. Do this with either an inline script or a link to 
 a separate JavaScript file.
 
 There's a little more that needs to be said about clients. Now let's talk about 
 the service worker itself.
 
-{% include shared/remember.liquid title="Aside" list=page.notes.promises %}
+{% include shared/note.liquid list=page.notes.promises %}
 
 ## Where can the service worker play?
 
 A client tells the service worker where it can operate. This is called the 
 service worker's scope, and it's the lowest level of your website where the the 
 service worker can be used. Let's look at the registration code again, but with 
-some changes to the register() parameters.
+some changes to the `register()` parameters.
 
 {% highlight javascript %}
-//Does the browser support service workers?
+// Does the browser support service workers?
 if ('serviceWorker' in navigator) {
-  //Yes
+  // Yes
   navigator.serviceWorker.register('service-worker.js', {scope: '/'})
     .then(function() {
     // Advanced actions we'll get to later.
   });
 } else {
-  //No, but this client should work anyway.
+  // No, but this client should work anyway.
 }
 {% endhighlight %}
 
@@ -100,15 +96,15 @@ serve clients under example.com/buyers. It cannot serve clients under
 `example.com/sellers`. Similarly, a service worker with a scope of `/sellers/` can 
 only serve clients under `example.com/sellers`.
 
-{% include shared/remember.liquid title="Aside" list=page.notes.https-only %}
+{% include shared/note.liquid list=page.notes.https-only %}
 
 ## A service worker installs and activates
 
 Let’s look at what happens during the installation of the service worker. To set 
 up a service worker, you need to implement two events:
 
-* install
-* activate
+* `install`
+* `activate`
 
 These events run one time for a service worker in a particular scope, no matter 
 how many clients use it.
@@ -123,7 +119,7 @@ generally handling other service workers in the same scope.
 {% highlight javascript %}
 self.addEventListener('install', function(installEvent) {
   installEvent.waitUntil(
-    //Prefetch resources and initialize data stores.
+    // Prefetch resources and initialize data stores.
   );
 });
 {% endhighlight %}
@@ -147,7 +143,7 @@ self.addEventListener('activate', function(activateEvent) {
 ## The client waits
 
 You might've noticed that both the install and activate events contain a call to 
-a function named waitUntil(). This method prevents clients from processing until 
+a function named `waitUntil()`. This method prevents clients from processing until 
 the event is complete. If it's not empty it must always take a Promise.
 
 But a Promise to what? Most examples are too complicated for a beginner lesson. 
@@ -164,8 +160,9 @@ run you can do one of several things:
 * You can wait for the next user navigation. For this you can either wait for the 
 user to navigate to another page in the same service worker scope, or you can 
 ask the user to reload the client page.
-* Or, you can do what most implementations, including [Chrome's samples](https://github.com/GoogleChrome/samples)
-, do. Add a function called `claim()`, which allows the service worker to start 
+* Or, you can do what most implementations,
+including [Chrome's samples](https://github.com/GoogleChrome/samples),
+do. Add a function called `claim()`, which allows the service worker to start 
 serving to client pages immediately. 
 
 The `claim()` method also returns a Promise.
