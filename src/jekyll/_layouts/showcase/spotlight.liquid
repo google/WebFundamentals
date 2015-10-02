@@ -57,7 +57,7 @@
   </div>
 
   <section class="wf-showcase__section-container">
-    <h3>TL;DR</h3>
+    <h3 id="tldr">TL;DR</h3>
 
     {{ page.description | markdownify }}
   </section>
@@ -183,18 +183,18 @@
 
   {% if showcase.sections %}
     {% for section in showcase.sections %}
-    <section class="wf-showcase__section-container">
-      <h3 id="{{ section.title | cgi_escape }}">{{section.title}}</h3>
-      {{ section.content | markdownify }}
-    </section>
-    {% if section.subsections %}
-      {% for subsection in section.subsections %}
       <section class="wf-showcase__section-container">
-        <h4 id="{{ subsection.title | cgi_escape }}">{{subsection.title}}</h3>
-        {{ subsection.content | markdownify }}
+        <h3 id="{{ section.title | slugify }}">{{section.title}}</h3>
+        {{ section.content | markdownify }}
       </section>
-      {% endfor %}
-    {% endif %}
+      {% if section.subsections %}
+        {% for subsection in section.subsections %}
+          <section class="wf-showcase__section-container">
+            <h4 id="{{ subsection.title | slugify }}">{{subsection.title}}</h3>
+            {{ subsection.content | markdownify }}
+          </section>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   {% endif %}
 
