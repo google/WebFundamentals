@@ -1,11 +1,18 @@
 {% include page-structure/open-page.liquid %}
+
 <div class="page-content">
-  <div class="update-post__content-container">
-    <ul>
-      {% for update in page.updates %}
-        <li><a href="{{site.WFBaseUrl}}{{update.url | canonicalize}}">{{update.title}}</a></li>
-      {% endfor %}
-    </ul>
+
+  <h1>{{page.title}}</h1>
+
+  <div class="mdl-grid">
+    {% assign updates = page.updates | sort: 'updated_on' %}
+    {% for article in updates reversed %}
+      {% assign authorKey = article.authors[0] %}
+      {% assign author = site.data["contributors"][authorKey] %}
+      {% include updates/card.liquid title=article.title text=article.description author=author date=article.updated_on imgUrl=article.featured_image linkHref=article.canonical_url %}
+    {% endfor %}
   </div>
+
 </div>
+
 {% include page-structure/close-page.liquid %}
