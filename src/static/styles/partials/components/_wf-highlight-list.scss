@@ -1,9 +1,16 @@
+
 .wf-highlight-list {
   padding: ($base-line / 2) $base-line;
   margin-bottom: $base-line;
 
   border-left-style: solid;
   border-left-width: $left-border-callout-width;
+}
+
+body[dir="rtl"] .wf-highlight-list {
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: $left-border-callout-width;
 }
 
 .wf-highlight-list__title {
@@ -46,5 +53,13 @@
 }
 
 .wf-highlight-list--learning {
-  border-left-color: $highlight-border-color;
+  border-color: $highlight-border-color;
+}
+
+.wf-highlight-list--remember {
+  border-color: $remember-border-color;
+}
+
+.wf-highlight-list--note {
+  border-color: $note-border-color;
 }
