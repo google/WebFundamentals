@@ -119,7 +119,7 @@ gulp.task('build:staging', function(cb) {
     'compile-jekyll:staging',
     [
       'html',
-      'minify-images: content'
+      'minify-images:content'
     ],
     cb);
 });

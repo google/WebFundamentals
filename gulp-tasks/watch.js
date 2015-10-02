@@ -7,10 +7,10 @@ var browserSync = require('browser-sync').create();
 require('gulp-watch');
 
 gulp.task('dev-watch-tasks', function() {
-  console.log('Starting up BrowserSync');
   browserSync.init({
+    port: 7332,
     proxy: 'localhost:7331',
-    logPrefix: 'GF',
+    logLevel: 'silent',
     // Prevent browser sync from display in page notifications
     notify: false,
     open: false
