@@ -16,6 +16,7 @@
   "homepage": "https://github.com/google/WebFundamentals",
   "devDependencies": {
     "babelify": "^6.3.0",
+    "browser-sync": "^2.9.8",
     "browserify": "^11.0.1",
     "del": "^1.2.0",
     "glob": "^5.0.14",
