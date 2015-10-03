@@ -572,10 +572,12 @@ jeffposnick:
   country: USA
   role:
     - author
-  homepage:
+  homepage: https://twitter.com/jeffposnick
   google: 117780118136555864520
   twitter: jeffposnick
   email: jeffy@google.com
+  description:
+    en: "Web DevRel @ Google"
 
 glenshires:
   name:
