@@ -14,7 +14,7 @@
 
       <div class="wf-author__info">
         <div class="wf-author__name">
-          {% if include.linkauthor and author.homepage %}<a href="{{author.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">{% endif %}
+          {% if include.linkauthor and author.homepage %}<a href="{{author.homepage}}" target="_blank" title="{{author.name.given}} {{author.name.family}}'s Homepage">{% endif %}
           {{author.name.given}} {{author.name.family}}
           {% if include.linkauthor %}</a>{% endif %}
         </div>
