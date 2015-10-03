@@ -26,6 +26,7 @@ $author-img-height: $base-line * 1.5;
 .wf-author__img-container, .wf-author__time-icon {
   width: $author-img-height;
   height: auto;
+  flex-shrink: 0;
 
   & > svg {
     fill: $text-color-primary;
