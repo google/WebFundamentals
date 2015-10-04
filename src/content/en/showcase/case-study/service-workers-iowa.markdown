@@ -552,6 +552,61 @@ self.addEventListener('message', function(event) {
   </figcaption>
 </figure>
 
+### Watch Out for Extra Query Parameters!
+
+When a service worker checks for a cached response, it uses a request URL as the key.
+By default, the request URL must exactly match the URL used to store the cached response, including
+any query parameters in the [search](https://developer.mozilla.org/en-US/docs/Web/API/URLUtils/search)
+portion of the URL.
+
+This ended up causing an issue for us during development, when we started using
+[URL parameters](https://support.google.com/analytics/answer/1033867) to keep track of where our
+traffic was coming from. For example, we [added](https://github.com/GoogleChrome/ioweb2015/blob/28113917b88436dd569c39fd5eef184b6aefdd1c/app/scripts/shed/push-notifications.js#L32)
+the `utm_source=notification` parameter to URLs that were opened when clicking on one of our
+notifications, and used `utm_source=web_app_manifest` in the [`start_url`](https://github.com/GoogleChrome/ioweb2015/blob/0bab714dbb08927f901420fc05b43b9f97f7ddc3/app/templates/manifest.json#L4)
+for our [web app manifest](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en).
+URLs which previously matched cached responses were coming up as misses when those parameters
+were appended.
+
+This is partially addressed by the [`ignoreSearch`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match#Parameters)
+option which can be used when calling `Cache.match()`. Unfortunately, Chrome [doesn't yet](https://developers.google.com/web/updates/2015/09/updates-to-cache-api#cache-query-options-coming-to-chrome-soon)
+support `ignoreSearch`, and even if it did, it's an all-or-nothing behavior. What we needed was a
+way to ignore _some_ URL query parameters while taking others that were meaningful into account.
+
+We ended up extending `sw-precache` to strip out some query parameters before checking for a cache
+match, and allow developers to customize which parameters are ignored via the
+[`ignoreUrlParametersMatching`](https://github.com/GoogleChrome/sw-precache#ignoreurlparametersmatching-arrayregex) option.
+Here's the underlying implementation:
+
+<figure>
+{% highlight javascript %}
+function stripIgnoredUrlParameters(originalUrl, ignoredRegexes) {
+  var url = new URL(originalUrl);
+
+  url.search = url.search.slice(1)
+    .split('&')
+    .map(function(kv) {
+      return kv.split('=');
+    })
+    .filter(function(kv) {
+      return ignoredRegexes.every(function(ignoredRegex) {
+        return !ignoredRegex.test(kv[0]);
+      });
+    })
+    .map(function(kv) {
+      return kv.join('=');
+    })
+    .join('&');
+
+  return url.toString();
+}
+{% endhighlight %}
+  <figcaption>
+    Adapted from the <a href="https://github.com/GoogleChrome/sw-precache/blob/22e5b4c32b76e486b5df5954f98c9ff0727d1755/lib/functions.js#L23">original source</a>.
+  </figcaption>
+</figure>
+
+
 ## What This Means for You
 
 The service worker integration in the Google I/O Web App is likely the most
