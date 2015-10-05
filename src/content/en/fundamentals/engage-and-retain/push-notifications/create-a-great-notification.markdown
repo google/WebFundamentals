@@ -68,5 +68,7 @@ multiple, similar notifications back to back.  For example, if a messaging app
 receives two messages back to back, instead of stacking the messages you might
 do something like this:
 
+![Combined notifications](images/combined-notifications.png)
+
 Notice that this message has also pluralized the text to make it clear that
 more than one update is available.
