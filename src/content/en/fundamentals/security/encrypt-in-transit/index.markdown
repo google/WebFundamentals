@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-pages-list
 title: "Encrypting data in transit"
-description: "Security is an important part of the web to protect users and moving forward TLS support will be required to use new and exciting APIs in the future."
+description: "Security is an important part of the web for both developers and users. Moving forward, Transport Layer Security (TLS) support will be required for most APIs."
 authors:
   - chrispalmer
   - mattgaunt
