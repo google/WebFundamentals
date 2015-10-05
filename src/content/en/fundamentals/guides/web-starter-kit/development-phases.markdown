@@ -10,10 +10,7 @@ authors:
 ---
 
 <p class="intro">
-During development, there are 3 particular commands that
-  you'll use on a regular basis: gulp serve, gulp and gulp serve:dist.
-  Let’s look at how each task helps you develop your site.
-</p>
+During development, there are three commands that you'll use regularly: `gulp serve`, `gulp`, and `gulp serve:dist`. Let’s look at how each one contributes to the development process.</p>
 
 {% include shared/toc.liquid %}
 
