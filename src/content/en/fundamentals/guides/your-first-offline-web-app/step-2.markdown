@@ -8,9 +8,7 @@ authors:
   - paulkinlan
 ---
 
-First, let's see what the finished sample app looks like (hint, it is amazing). 
-With the code downloaded, the following instructions describe how to build and 
-start testing the Airhorn app.
+First, let’s see what the finished sample app looks like. Follow these instructions to build and start testing the Airhorn app.
 
 Make sure you are on the correct (final) branch by checking out the master 
 branch.
