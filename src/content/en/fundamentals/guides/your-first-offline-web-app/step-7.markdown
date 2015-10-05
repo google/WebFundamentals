@@ -8,10 +8,7 @@ authors:
   - paulkinlan
 ---
 
-One of the unique attributes of the service worker spec is the ability to 
-intercept every request made from the web page that the service worker controls 
-and then decided what to do with this. This gives us the ability to load the 
-cached assets stored in the install phase from cache.
+One of the unique attributes of the service worker is the ability to intercept requests made from the web page that the service worker controls and decide what to do with them. This gives us the ability to load the assets that were cached in the install phase.
 
 The first step is to attach an event handler to the fetch event.  This event 
 will be triggered for every request that is made.
