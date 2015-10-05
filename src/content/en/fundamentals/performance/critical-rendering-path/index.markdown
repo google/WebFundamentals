@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-pages-list
 title: "Critical rendering path"
-description: "Optimizing the critical rendering path by prioritizing the display of content that relates to the primary action the user wants to take on a page."
+description: "Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action."
 published_on: 2014-04-01
 updated_on: 2014-04-28
 order: 1
