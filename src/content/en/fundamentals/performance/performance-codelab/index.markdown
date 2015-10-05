@@ -6,26 +6,47 @@ published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 3
 translation_priority: 1
+authors:
+  - megginkearney
 ---
 
-We have all seen apps whose displays tend to jump raggedly during animations, scrolling, or other user interaction. This visible inconsistency is a performance issue commonly called _jank_ or _judder_ and is an annoying distraction for users; it interrupts their flow of thought while using the app and it makes the app look less polished and professional.
+<p class="intro">
+We have all seen apps whose displays tend to jump raggedly during animations, 
+scrolling, or other user interaction. This visible inconsistency is a 
+performance issue commonly called <i>jank</i> or <i>judder</i> and is an 
+annoying distraction for users; it interrupts their flow of thought while 
+using the app and it makes the app look less polished and professional.
+</p>
 
-If the browser takes too long to make and display a frame, it gets skipped and you don't see the frame at all. Instead, you see the next one (or the one after that), and the object jumps across the gap instead of smoothly moving through it.
+If the browser takes too long to make and display a frame, it gets skipped 
+and you don't see the frame at all. Instead, you see the next one (or the one 
+after that), and the object jumps across the gap instead of smoothly moving 
+through it.
 
-The jank phenomenon can be avoided by ensuring that an app runs at a consistent sixty frames per second (60fps). Many factors contribute to an app's frame rate, and there are various ways to code JavaScript and CSS to reduce or eliminate jank and achieve the desired rate.
+The jank phenomenon can be avoided by ensuring that an app runs at a 
+consistent sixty frames per second (60fps). Many factors contribute to an 
+app's frame rate, and there are various ways to code JavaScript and CSS to 
+reduce or eliminate jank and achieve the desired rate.
 
-This codelab is about changing the way you approach app performance issues by helping you find and fix frame display bottlenecks that cause jank.
+This codelab is about changing the way you approach app performance issues 
+by helping you find and fix frame display bottlenecks that cause jank.
 
 ## What you'll learn in this codelab
 
-*   How to identify application code that causes display performance bottlenecks
-*   How to analyze and modify the code to reduce or eliminate the bottlenecks
+* How to identify application code that causes display performance bottlenecks
+* How to analyze and modify the code to reduce or eliminate the bottlenecks
 
-This codelab is a text-based version of part of the content covered in a Udacity course on app/web performance ([ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)). Rather than a transcription of the video course, this codelab is meant to be a lean, to-the-point treatment of jank identification and correction, using the course's original hands-on final project.
+This codelab is a text-based version of part of the content covered in a 
+Udacity course on app/web performance 
+([ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)).
+Rather than a transcription of the video course, this codelab is meant to be 
+a lean, to-the-point treatment of jank identification and correction, using 
+the course's original hands-on final project.
 
 ## What you should know before you start
 
-* _Critical rendering path_: You should understand the rendering pipeline and how JavaScript and CSS affect it. Learn more here: [https://developers.google.com/web/fundamentals/performance/critical-rendering-path/](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and here:  Udacity course on [Website Performance Optimization: The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884).
+* _Critical rendering path_: You should understand the rendering pipeline and 
+how JavaScript and CSS affect it. Learn more here: [https://developers.google.com/web/fundamentals/performance/critical-rendering-path/](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and here: Udacity course on [Website Performance Optimization: The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884).
 * _Frames and frame rate_: You should know how the browser constructs frames and why the 60fps rate is important for a smooth display. Learn more here: [https://developers.google.com/web/fundamentals/performance/rendering/](https://developers.google.com/web/fundamentals/performance/rendering/) and here: Udacity course on [Browser Rendering Optimization: Building 60 FPS Web Apps](https://www.udacity.com/course/browser-rendering-optimization--ud860).
 * _Application life cycle_: You should understand the Load, Idle, Animate, and Response parts of a running app and recognize the windows of opportunity that each part presents. Learn more here: [The RAIL Performance Model](https://developers.google.com/web/tools/profile-performance/evaluate-performance/rail).
 * _Chrome DevTools_: You should have a basic understanding of DevTools and how to use them to analyze a web app, especially the Timeline tool. Learn more here: [Analyze Runtime Performance](https://developers.google.com/web/tools/profile-performance/rendering-tools/analyze-runtime).
@@ -39,7 +60,10 @@ This codelab is a text-based version of part of the content covered in a Udacity
 
 Let's get familiar with jank by playing a game, "Jank Invaders" by Jake Archibald. It's designed to demonstrate problems with frame rates and performance. Here's a screen shot.
 
-![jankinvaders.png](images/image07.png)
+<figure>
+  <img src="images/image07.png" alt="TODO">
+  <figcaption>TODO</figcaption>
+</figure>
 
 In the game, spaceships move across the screen. The good guys move smoothly, while the bad guys ("spy ships") are janky. Your mission: identify and shoot down the ten janky spy ships among the smooth ones by clicking them as quickly as you can. [Here's the link to the game](https://www.google.com/url?q=http://jakearchibald.github.io/jank-invaders). Go ahead, have fun; come back when you're finished.
 
