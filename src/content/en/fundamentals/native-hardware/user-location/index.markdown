@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">
-  The Geolocation API lets you find out where the user is, always with the user's consent. This functionality could be used as part of user queries, e.g. to guide someone to a destination point. It could also be used for 'geo- tagging' some content the user has created, e.g. to mark where a photo was taken.
+  The Geolocation API lets you find out, with the user's consent, where the user is located. This functionality could be used as part of user queries; for example, to guide a user to a destination, or for geo-tagging user-created content, such as marking where a photo was taken.
 </p>
 
 The Geolocation API also lets you watch where the user is and keep tabs on them as
