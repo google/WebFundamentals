@@ -15,18 +15,15 @@ notes:
 <p class="intro">
   Another problem area for our news aggregator app is the basic action of 
   sliding stories in and out. Apart from scrolling, this is the app's most 
-  common user interaction feature.
+  common user interaction feature. Be sure to view the <a href="http://udacity.github.io/news-aggregator/">live site</a> on a mobile device, but it is problematic on all platforms.
 </p>
 
 As usual, begin by taking a Timeline recording of a story sliding in and out, 
 and examining the frame rate. The slide-in/out may actually range from a bit 
-janky to basically unusable on various devices. Be sure to view the 
-[live site](http://udacity.github.io/news-aggregator/) on a mobile device, 
-but it is problematic on all platforms.
+janky to basically unusable on various devices.
 
 <figure>
-  <img src="images/image05.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image05.png" alt="Forced synchronous layout on Recalculate Style">
 </figure>
 
 
