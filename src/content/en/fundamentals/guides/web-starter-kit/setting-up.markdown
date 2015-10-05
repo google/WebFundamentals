@@ -13,9 +13,7 @@ authors:
 ---
 
 <p class="intro">
-  Web Starter Kit relies on NodeJS, NPM, & Sass to work, once you've got these 
-  on your machine, you'll have everything you need to start using Web Starter 
-  Kit in your projects.
+  Web Starter Kit relies on NodeJS, NPM, and Sass to work. Once these are installed, you'll have everything you need to start using Web Starter Kit in your projects.
 </p>
 
 {% include shared/toc.liquid %}
