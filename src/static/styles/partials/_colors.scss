@@ -1,5 +1,14 @@
-$toc-border-color: #b2ebf2 !default;
-$highlight-border-color: #F06292 !default;
+// cyan 100
+$toc-border-color: unquote("rgb(#{$palette-cyan-200})") !default;
+
+// pink 300
+$highlight-border-color: unquote("rgb(#{$palette-pink-300})") !default;
+
+// blue gray 300 
+$note-border-color: unquote("rgb(#{$palette-blue-grey-300})") !default;
+
+// deep purple 300
+$remember-border-color: unquote("rgb(#{$palette-deep-purple-300})") !default;
 
 $footer-bg-color: #404040 !default;
 $footer-text-color: #e0e0e0 !default;

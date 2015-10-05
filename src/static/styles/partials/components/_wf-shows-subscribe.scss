@@ -1,4 +1,4 @@
-.wf-shows-subscribe {
+/**.wf-shows-subscribe {
   margin-top: $base-line;
   margin-bottom: $base-line;
 
@@ -22,12 +22,12 @@
 
     padding-left: $base-line;
   }
-}
+}**/
 
-.wf-shows-subscribe__title {
+/**.wf-shows-subscribe__title {
   @include typo-subhead();
   color: $text-grey-color;
-}
+}**/
 
 .wf-shows-subscribe__icon {
   width: $button-height;
@@ -47,12 +47,15 @@
   display: inline-flex;
 
   padding-left: 0;
+  padding-right: 0;
 
   margin-bottom: $base-line / 2;
 
   a {
+    flex: 1;
     text-decoration: none;
     color: $text-color-primary;
+    padding: 0 ($base-line / 2);
   }
 }
 

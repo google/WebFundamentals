@@ -26,6 +26,7 @@ $author-img-height: $base-line * 1.5;
 .wf-author__img-container, .wf-author__time-icon {
   width: $author-img-height;
   height: auto;
+  flex-shrink: 0;
 
   & > svg {
     fill: $text-color-primary;
@@ -43,6 +44,12 @@ $author-img-height: $base-line * 1.5;
     margin: 0;
   }
 }
+
+body[dir="rtl"] .wf-author__info {
+  margin-left: 0;
+  margin-right: ($base-line / 2);
+}
+
 
 .wf-author__name {
   @include typo-title;

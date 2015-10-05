@@ -1,0 +1,22 @@
+
+.wf-updates-taglist {
+  li {
+    list-style: none;
+    margin: 0;    
+  }
+
+  a {
+    padding: 8px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    border-radius: $button-border-radius;
+    will-change: box-shadow, transform;
+    transition: background-color 0.2s $animation-curve-default;
+    outline: none;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}

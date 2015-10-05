@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="page-content">
+<div class="page-content top-padding">
   <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet wf-showcase__device-img">
     <img src="{{showcase.key_image}}" class="spotlight-header__image" alt="">
   </div>
@@ -57,7 +57,7 @@
   </div>
 
   <section class="wf-showcase__section-container">
-    <h3>TL;DR</h3>
+    <h3 id="tldr">TL;DR</h3>
 
     {{ page.description | markdownify }}
   </section>
@@ -75,8 +75,10 @@
     <p>{{showcase.overview.description | markdownify }}</p>
 
     <dl>
+      {% if showcase.overview.audience %}
       <dt>Target audience</dt>
       <dd>{{showcase.overview.audience}}</dd>
+      {% endif %}
       {% if showcase.overview.features %}
       <dt>Features</dt>
       <dd>
@@ -181,10 +183,18 @@
 
   {% if showcase.sections %}
     {% for section in showcase.sections %}
-    <section class="wf-showcase__section-container">
-      <h3>{{section.title}}</h3>
-      {{ section.content || markdownify }}
-    </section>
+      <section class="wf-showcase__section-container">
+        <h3 id="{{ section.title | slugify }}">{{section.title}}</h3>
+        {{ section.content | markdownify }}
+      </section>
+      {% if section.subsections %}
+        {% for subsection in section.subsections %}
+          <section class="wf-showcase__section-container">
+            <h4 id="{{ subsection.title | slugify }}">{{subsection.title}}</h3>
+            {{ subsection.content | markdownify }}
+          </section>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   {% endif %}
 
@@ -222,7 +232,8 @@
   <div class="mdl-grid">
     <h3 class="wf-showcase__latest-title mdl-cell--12-col">Latest spotlights</h3>
 
-    {% for pageInSection in page.context.pages | limit:2 %}
+    {% assign pages = page.context.pages | reverse %}
+    {% for pageInSection in pages | limit:2 %}
       {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText="View" %}
     {% endfor %}
   </div>

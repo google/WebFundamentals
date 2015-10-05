@@ -7,8 +7,11 @@ description: "Every so often, we talk with the engineering team behind a success
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Case studies</h2>
-    <p>
+    <p class="mdl-typography--font-light">
       {{ page.description }}
+    </p>
+    <p class="mdl-typography--font-light">
+      Have an idea for a case study? <a href="https://services.google.com/fb/forms/webshowcase/">Let us know!</a>
     </p>
   </div>
 </div>
@@ -16,7 +19,7 @@ description: "Every so often, we talk with the engineering team behind a success
 <div class="page-content">
   <div class="mdl-grid">
     {% for pageInSection in page.context.pages reversed %}
-      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText="View" %}
+      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText=pageInSection.title %}
     {% endfor %}
   </div>
 </div>
