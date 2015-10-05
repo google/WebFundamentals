@@ -11,7 +11,7 @@ authors:
   - ilyagrigorik
 ---
 
-<p class="intro>
+<p class="intro">
 A critical resource is any resource that may block initial rendering of the page. The fewer of these resources there are on the page, the less work the browser has to do to get content on the screen, and the less contention there is for CPU and other resources.
 </p>
 
