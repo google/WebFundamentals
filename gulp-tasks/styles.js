@@ -19,7 +19,7 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 // This function is used by generate-dev-css and generate-prod-css
-function compileSassAutoprefix(genSourceMaps) {
+function compileSassAutoprefix(genSourceMaps, minify) {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
       // TODO: This seems to speed up ever so slighty - maybe move imports
@@ -33,18 +33,19 @@ function compileSassAutoprefix(genSourceMaps) {
       precision: 10
     })
     .on('error', plugins.sass.logError))
-    .pipe(plugins.autoprefixer(AUTOPREFIXER_BROWSERS));
+    .pipe(plugins.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(plugins.if(minify, plugins.csso()));
 }
 
 gulp.task('compile-dev-css', function() {
-  return compileSassAutoprefix(true)
+  return compileSassAutoprefix(true, false)
     .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest(GLOBAL.WF.build.styles))
     .pipe(plugins.size({title: 'compile-dev-css'}));
 });
 
 gulp.task('compile-prod-css', function() {
-  return compileSassAutoprefix(false)
+  return compileSassAutoprefix(false, true)
     .pipe(gulp.dest(GLOBAL.WF.build.styles))
     .pipe(plugins.size({title: 'compile-prod-css'}));
 });

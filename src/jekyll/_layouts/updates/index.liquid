@@ -3,7 +3,7 @@
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Be smarter, do more.</h2>
-    <p>
+    <p class="mdl-typography--font-light">
       Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and check out the latest features in DevTools.
     </p>
   </div>
@@ -12,7 +12,9 @@
 <div class="page-content">
   <div class="mdl-grid">
     {% for article in page.updates %}
-      {% include shared/base_card.liquid title=article.title text=article.description linkHref=article.canonical_url linkText="View" imgUrl=article.featured_image href=article.canonical_url %}
+      {% assign authorKey = article.authors[0] %}
+      {% assign author = site.data["contributors"][authorKey] %}
+      {% include updates/card.liquid title=article.title text=article.description author=author date=article.updated_on imgUrl=article.featured_image linkHref=article.canonical_url %}
     {% endfor %}
   </div>
 </div>

@@ -1,21 +1,25 @@
 ---
 layout: shared/narrow
 title: "Push notifications"
-description: "push"
-published_on: 2015-09-21
-updated_on: 2015-09-21
+description: "The push and notifications API's let you notify users the same way a native app would. Just like native notifications, some ways of using them are better than others."
+published_on: 2015-10-01
+updated_on: 2015-10-01
+order: 1
 authors:
-  - petelepage
+  - josephmedley
 translation_priority: 1
-key-takeaways:
-  todo:
-    - "Oh look, a TL;DR goes here"
-    - "And another TL;DR, whee!"
 ---
 
 <p class="intro">
-push
+  The push and notifications API's let you notify users the same way a 
+  native app would. Just like native notifications, some ways of using 
+  them are better than others.
 </p>
 
-{% include shared/takeaway.liquid list=page.key-takeaways.todo %}
+In 2015, a [Google case study](#TODO) found 
+that when prompted to download and install the Google+ app 9% of users 
+did so. That's an impressive click-through rate, or it would be if we 
+were talking about online ads. The same study found that 69% of users 
+both left the page that triggered the prompt and ignored the 
+invite to install Google+.
 

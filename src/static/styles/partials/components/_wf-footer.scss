@@ -3,7 +3,7 @@
 @import "../colors";
 
 .wf-footer {
-  padding: ($base-line * 2) ($base-line / 2);
+  padding: ($base-line * 2) ($base-line);
   background-color: $footer-bg-color;
 }
 
@@ -14,42 +14,21 @@
 
   position: relative;
 
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 
   margin: 0 auto;
 }
 
-.wf-footer__section-container::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: #737373;
-  position: absolute;
-  left: 50%;
-  top: 0;
-}
-
 .wf-footer-section {
-  width: 0;
-
-  flex: 1;
-
-  padding-left: $base-line * 2;
-  padding-right: $base-line * 2;
   margin: 0;
   color: $footer-text-color;
 }
 
 .wf-footer-section:first-child {
-  padding-left: 0;
-  padding-right: $base-line * 2;
-}
-
-.wf-footer-section:last-child {
-  padding-left: $base-line * 2;
-  padding-right: 0;
+  padding-bottom: $base-line;
+  margin-bottom: $base-line;
+  border-bottom: 1px solid #737373;
 }
 
 .wf-footer__list {
@@ -65,6 +44,10 @@
     padding-left: 0;
   }
 
+  & li:last-child {
+    margin-bottom: 0;
+  }
+
   a {
     color: $footer-text-color;
     text-decoration: none;
@@ -72,7 +55,12 @@
 }
 
 .wf-footer__list--primary {
-  text-align: right;
+  text-align: left;
+}
+
+body[dir="rtl"] .wf-footer__list--primary {
+  text-align: left;
+  padding-left: $base-line * 2;
 }
 
 .wf-footer__list--secondary {
@@ -93,5 +81,42 @@
 
   img {
     height: $base-line * 1.2;
+  }
+}
+
+@media screen and (min-width: $grid-tablet-breakpoint) {
+  .wf-footer__section-container {
+    flex-direction: row;
+  }
+
+  .wf-footer-section {
+    flex: 1;
+
+    padding-left: $base-line * 2;
+    padding-right: $base-line * 2;
+  }
+
+  .wf-footer-section:first-child {
+    padding-left: 0;
+    padding-right: $base-line * 2;
+    border-bottom: none;
+  }
+
+  .wf-footer-section:last-child {
+    padding-left: $base-line * 2;
+    padding-right: 0;
+
+    border-left: 1px solid #737373;
+  }
+
+  body[dir="rtl"] .wf-footer-section:last-child {
+    border-left: none;
+    border-right: 1px solid #737373;
+    padding-right: 0;
+    padding-right: $base-line * 2;
+  }
+
+  .wf-footer__list--primary {
+    text-align: right;
   }
 }

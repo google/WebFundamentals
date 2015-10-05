@@ -109,18 +109,22 @@ hr {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: $base-line;
-  
+
   padding: 0 ($base-line);
 }
 
-main > .page-content {
+.top-padding {
+  padding-top: ($base-line);
+}
+
+/**.page-main-content {
   padding: ($base-line) ($base-line) 0 ($base-line);
 
   & > h1 {
     margin-top: 0;
     margin-bottom: $base-line;
   }
-}
+}**/
 
 figure > img {
   margin-bottom: $base-line / 2;
@@ -130,7 +134,6 @@ figcaption {
   color: $text-grey-color;
 
   a {
-    text-decoration: none;
     color: inherit;
   }
 }
