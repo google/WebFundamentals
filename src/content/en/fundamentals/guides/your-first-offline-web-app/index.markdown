@@ -6,15 +6,15 @@ published_on: 2015-09-30
 updated_on: 2015-09-30
 translation_priority: 1
 ---
+In this codelab, you’ll learn how to integrate a service worker into an existing application to make it work offline.
 
 <img src="images/image00.png" width="624" height="409" />
 
-In this codelab, you'll learn how to integrate service worker into an existing
-application and how to make it work offline.  The application is called [Air
+The application is called [Air
 Horner](https://airhorner.com). It uses the Web Audio API to play and manipulate
-an airhorn sound, and it is probably one of the best air horner's on the market
+an airhorn sound, and it is probably one of the best air horn apps on the market
 today (according to the author of this codelab at least). It's a simple
-application but it will demonstrate Service Worker well.
+application but it will demonstrate the use of a service worker.
 
 A service worker is a script that is run by your browser in the background,
 separate from a web page, opening the door to features which don't need a web
