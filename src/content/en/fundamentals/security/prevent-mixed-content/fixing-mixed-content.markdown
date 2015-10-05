@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Fixing mixed content"
-description: "Learn how to find and fix mixed content, keeping your site secure."
+description: "Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process."
 published_on: 2015-09-28
 updated_on: 2015-09-28
 authors:
@@ -18,9 +18,7 @@ notes:
 ---
 
 <p class="intro">
-  Finding and fixing <b>mixed content</b> can be a time-consuming task; but it is an 
-  important task nonetheless. Thankfully, there are some tools available to help 
-  with this process.
+  Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 </p>
 
 This guide discusses tools and techniques to find and fix mixed content; for 
