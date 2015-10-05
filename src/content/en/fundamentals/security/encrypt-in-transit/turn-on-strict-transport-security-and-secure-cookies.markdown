@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Turn on Strict Transport Security and secure cookies"
-description: "Lock in your HTTPS settings with HSTS"
+description: "Strict Transport Security (STS) tells user agents they should always connect to your site via HTTPS. Coupling STS with secure cookies helps prevent accidental exposure of authentication and other site information."
 authors:
   - chrispalmer
   - mattgaunt
