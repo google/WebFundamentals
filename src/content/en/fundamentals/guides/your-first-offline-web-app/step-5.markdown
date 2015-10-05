@@ -8,7 +8,8 @@ authors:
   - paulkinlan
 ---
 
-The first step to making our app work offline is to register a Service Worker.  
+The first step to making the app work offline is to register a Service Worker, a script that allows background functionality without the need for an open web page or user interaction.
+
 This takes two simple steps:
 
 1. Create a javascript file that will be the Service Worker.
