@@ -2,13 +2,12 @@
 layout: shared/narrow
 title: "Congratulations"
 description: "You now have an app that runs at a smooth 60 fps."
-notes:
-  styling:
-    - Styling will come later
 published_on: 2015-09-28
 updated_on: 2015-09-28
 order: 7
-translation_priority: 0
+translation_priority: 1
+authors:
+  - megginkearney
 ---
 
 If you have followed along with the descriptions and explanations, and have made the recommended changes to the original project code, you should now have an app that runs at a smooth 60fps without any jank in its animations.
