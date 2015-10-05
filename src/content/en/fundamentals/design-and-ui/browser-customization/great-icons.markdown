@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Provide great icons & tiles"
-description: "Improve your sites recall with icons and tiles."
+description: "When a user visits your webpage, the browser tries to fetch an icon from the HTML. The icon may show up in many places, including the browser tab, recent app switch, the new (or recently visited) tab page, and more."
 published_on: 2014-09-22
 updated_on: 2015-09-21
 authors:
