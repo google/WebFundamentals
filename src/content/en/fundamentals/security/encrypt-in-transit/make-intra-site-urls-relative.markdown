@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Make intra-site URLs relative"
-description: "Now that you are serving your site on both HTTP and HTTPS, it should work as smoothly as possible regardless of protocol."
+description: "Now that you are serving your site on both HTTP and HTTPS, it needs to work as smoothly as possible, regardless of protocol. An important factor is using relative URLs for intra-site links."
 authors:
   - chrispalmer
   - mattgaunt
@@ -14,7 +14,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-  Now that you are serving your site on both HTTP and HTTPS, it needs to work as smoothly as possible regardless of protocol.
+  Now that you are serving your site on both HTTP and HTTPS, it needs to work as smoothly as possible, regardless of protocol. An important factor is using relative URLs for intra-site links.
 </p>
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}
