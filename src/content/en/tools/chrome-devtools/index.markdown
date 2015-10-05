@@ -15,13 +15,13 @@ order: 3
       <div class="mdl-cell mdl-cell--6-col">
         <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. Use the DevTools to iterate, debug and profile your site.</p>
         <div class="note">
-          Note: Develop on <a href="https://tools.google.com/dlpage/chromesxs">Chrome Canary</a> to access the latest DevTools.
+          <a href="https://tools.google.com/dlpage/chromesxs">Chrome Canary</a> always has the latest DevTools.
         </div>
       </div>
       <div class="mdl-cell mdl-cell--6-col">
         <ul>
           <li>Select <strong>More Tools > Developer Tools</strong> from the Chrome Menu.</li>
-          <li>Right-click on a page element and select Inspect Element.</li>
+          <li>Right-click on a page element and select Inspect</li>
           <li>Use <kbd class="kbd">Ctrl/Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
         </ul>
       </div>
@@ -44,13 +44,26 @@ order: 3
           <a href="#resources" class="mdl-tabs__tab">Resources</a>
           <a href="#devicemode" class="mdl-tabs__tab wf-devtools-tabdivider">Device Mode</a>
           <a href="#remotedebugging" class="mdl-tabs__tab">Remote Debugging</a>
+          <a href="#settings" class="mdl-tabs__tab">Settings</a>
+      </div>
+
+      <div class="mdl-tabs__panel" id="settings">
+        <img src="images/settings.png" alt="Device Mode">
+        <p>Learn how to customize the DevTools to suit your workflow.</p>
+        <ul>
+          
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">Keyboard shortcuts</a></li>
+          <li><a href="https://developer.chrome.com/devtools/docs/settings">Settings</a></li>
+        </ul>
       </div>
 
       <div class="mdl-tabs__panel" id="remotedebugging">
-        <img src="images/devicemode.png" alt="Device Mode">
+        <img src="images/remotedebugging.png" alt="Device Mode">
         <p>Remote Debugging allows you to remotely debug and screencast any device running Chrome on your Desktop.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging">Remote Debugging</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging">Remote Debugging Devices</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/local-server">Remote Access to Your Local Site</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/webviews">Remote Debugging WebViews</a></li>
         </ul>
       </div>
 
@@ -59,6 +72,9 @@ order: 3
         <p>Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/iterate/device-mode">Device Mode</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports">Emulate Mobile Viewports</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors">Emulate Device Input and Sensors</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/media-queries">Inspect CSS Media Queries</a></li>
         </ul>
       </div>
 
@@ -66,7 +82,9 @@ order: 3
         <img src="images/elements.png" alt="Elements Panel">
         <p>Use the Elements panel to iterate on the layout and design of your site by freely manipulating the DOM and CSS.</p>
         <ul>
-          <li><a href="/web/tools/iterate/inspect-styles/basics">Inspect the DOM</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/basics">Inspect and Tweak Your Pages: the Basics</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles">Edit Styles</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom">Edit the DOM</a></li>
         </ul>
       </div>
 
@@ -74,7 +92,8 @@ order: 3
         <img src="images/console.png" alt="Console Panel">
         <p>Use the Console to log diagnostic information during development or use it as a shell to interact with the JavaScript on the page.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/debug/console">Console</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/console">Using the Console</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/command-line">Interact from Command Line</a></li>
         </ul>
       </div>
 
@@ -83,6 +102,8 @@ order: 3
         <p>Debug your JavaScript using breakpoints in the Sources Panel or connect your local files via Workspaces to use DevTools live editor.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/debug/breakpoints">Debugging with Breakpoints</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/readability/">Debug Obfuscated Code</a></li>
+          <li><a href="/web/tools/setup/setup-workflow">Set Up Persistence with DevTools Workspaces</a></li>
         </ul>
       </div>
 
@@ -90,7 +111,8 @@ order: 3
         <img src="images/network.png" alt="Network Panel">
         <p>Use the Network panel to get insights into requested and downloaded resources and optimize your page load performance.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/profile/network-performance/">Page load performance</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/network-performance/resource-loading">Network Panel Basics</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/network-performance/network-conditions">Network Throttling</a></li>
         </ul>
       </div>
 
@@ -99,6 +121,8 @@ order: 3
         <p>Use the Timeline to improve the run time performance of your page by recording and exploring the various events that happen during the lifecycle of a site.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/profile/evaluate-performance/">How to look at performance</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime">Analyze runtime performance</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts">Diagnose Forced Synchronous Layouts</a></li>
         </ul>
       </div>
 
@@ -126,7 +150,7 @@ order: 3
 
   <div class="wf-devtools-alternate wf-secondaryheading">
     <div class="page-content">
-      <h2 class="mdl-typography--font-light">Specific Problem?</h2>
+      <h2 class="mdl-typography--font-light">Solutions for your Workflow</h2>
       <div class="mdl-grid">
       {% for subdirectory in page.context.subdirectories %}
         {% if subdirectory.subdirectories.size > 0 %}
