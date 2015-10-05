@@ -26,12 +26,11 @@ in and then click the story's `X` button to slide it out. As you saw in
 forced synchronous layout.
 
 <figure>
-  <img src="images/image09.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image09.png" alt="Forced synchronous layout still occurring in Timeline recording">
 </figure>
 
 In that exercise, we put the `animate` function calls into a 
-`requestAnimationFrame`; that certainly helped, but it didn't eliminate the 
+`requestAnimationFrame` which certainly helped but didn't eliminate the 
 problem entirely.
 
 Recall from our earlier discussion (and from your research at 
@@ -147,8 +146,7 @@ test it. Take another Timeline recording of sliding a story in and out, and
 have a look.
 
 <figure>
-  <img src="images/image06.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image06.png" alt="Timeline recording looks good">
 </figure>
 
 The app should perform much better; all the frames are now well below the 

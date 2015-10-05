@@ -12,33 +12,29 @@ notes:
   forcedsynclayout: "Forced synchronous layout occurs when the browser runs layout inside a script, and then does something that forces it to recalculate styles, thus requiring it to run layout again. This typically happens inside a loop, as seen in the code below, which iterates through an array of divs and resets their width properties, causing forced synchronous layout."
 ---
 <p class="intro">
-  During scrolling in the main screen, you'll notice that the story list 
-  judders. Also, you'll see that the individual story point indicators (the 
-  circled numbers) not only change values, but also change color. This 
-  exercise is about identifying these problems and deciding how to approach 
-  them.
+  During scrolling in the main screen of the <a href="http://udacity.github.io/news-aggregator">live site</a>, you'll notice that the story list judders. Also, you'll see that the individual story point indicators (the circled numbers) not only change values, but also change color. This exercise is about identifying these problems and deciding how to approach them.
 </p>
 
 Let's see what's really happening when we scroll the main screen, using the 
 Timeline. In DevTools, start a recording, scroll down the list a bit, and 
 then stop the recording.
 
-In the recording's results, you'll see that the frames are way over the 
+In the recording's results, notice that the frames are way over the 
 30fps line, not even close to hitting 60fps. In fact, the frames are so slow 
 that the 60fps line isn't even shown on the graph.
 
 <figure>
-  <img src="images/image03.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image03.png" alt="Slow frames in Timeline recording">
 </figure>
 
-Zoom in on a frame and you will see that after the scroll event is a
-function call, followed by many separate layout events, each with a 
-red warning triangle. 
+Zoom in on a frame and see that after the scroll event is a
+function call, followed by many separate layout events.
+Each separate layout event includes a red warning triangle.
+This is a sure sign that a
+<i>forced synchronous layout</i> is occurring.
 
 <figure>
-  <img src="images/image01.png" alt="TODO">
-  <figcaption>This is a sure sign that <i>forced synchronous layout</i> is occurring.</figcaption>
+  <img src="images/image01.png" alt="Forced synchronous layout">
 </figure>
 
 {% include shared/note.liquid list=page.notes.forcedsynclayout %}
@@ -50,8 +46,9 @@ divs.forEach(function(elem, index, arr) {
 })
 {% endhighlight %}
 
-There are many CSS properties that cause layout to happen; you can see a list 
-of properties and their pipeline effects at [CSS Triggers](http://csstriggers.com/).
+There are many CSS properties that cause layout to happen;
+see a list of properties and their pipeline effects at
+[CSS Triggers](http://csstriggers.com/).
 
 Look at the details of a layout event, and you can see that the forced 
 synchronous layout warning is being produced by the 
@@ -111,8 +108,7 @@ one style recalculation after the scroll, and that the frames are all well
 under the 60fps line, which is now shown on the graph.
 
 <figure>
-  <img src="images/image02.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image02.png" alt="Much better Timeline recording">
 </figure>
 
 The extra layouts and their forced synchronous layout warnings are gone, and 

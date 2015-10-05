@@ -16,8 +16,7 @@ authors:
 </p>
 
 <figure>
-  <img src="images/image08.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image08.png" alt="Hacker News app">
 </figure>
 
 This site uses the _Hacker News API_ to show recent stories and their scores. 
