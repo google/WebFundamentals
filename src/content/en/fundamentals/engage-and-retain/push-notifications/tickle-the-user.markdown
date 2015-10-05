@@ -22,7 +22,7 @@ translation_priority: 1
 For example, an email client might want to show a notification when an email
 comes in. It might be several minutes before the user acknowledges the
 notification. Meanwhile additional emails have appeared on the server. In that
-case, use fetch() inside the onnotificationclick event.
+case, use `fetch()` inside the `onnotificationclick` event.
 
 ## In the service worker
 
