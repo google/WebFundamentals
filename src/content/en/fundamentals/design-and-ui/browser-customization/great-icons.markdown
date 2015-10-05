@@ -13,10 +13,7 @@ notes:
 ---
 
 <p class="intro">
-When a user visits your webpage, the browser tries to fetch an icon from the 
-HTML of the page. That icon may show up on in many places, including the
-browser tab, recent app switch, the new (or recently visited) tab page or more.
-</p>
+When a user visits your webpage, the browser tries to fetch an icon from the HTML. The icon may show up in many places, including the browser tab, recent app switch, the new (or recently visited) tab page, and more.</p>
 
 Providing a high quality image will make your site more recognizable, making it
 easier for users to find your site. 
