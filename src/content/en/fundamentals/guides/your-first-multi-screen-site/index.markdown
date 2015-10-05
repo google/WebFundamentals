@@ -10,10 +10,10 @@ authors:
 ---
 
 <p class="intro">
-  Building multi-device experiences is not as hard as it sounds.
-  By following this guide, we will build an example product landing page for
-  our <a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web
-  Development course</a> that works well across all different device types.
+Creating multi-device experiences is not as hard as it might seem. 
+In this guide, we will build a product landing page for the 
+<a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web
+  Development course</a> that works well across different device types.
 </p>
 
 <img src="images/finaloutput-2x.jpg" alt="many devices showing the final project">
