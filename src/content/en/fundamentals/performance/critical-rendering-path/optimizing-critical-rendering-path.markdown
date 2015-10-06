@@ -3,7 +3,7 @@ layout: shared/narrow
 description: "Learn the key factors in optimizing the critical rendering path."
 title: "Optimizing the critical rendering path"
 published_on: 2014-04-01
-updated_on: 2014-04-28
+updated_on: 2015-10-06
 order: 8
 
 translation_priority: 0
