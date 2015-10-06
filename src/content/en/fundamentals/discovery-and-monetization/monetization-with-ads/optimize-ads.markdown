@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Optimize your ads"
 description: "Optimizing your site, and the ads that appear on it, can improve the quality of ads served and increase your earning potential."
 published_on: 2014-08-12
-updated_on: 2014-08-12
+updated_on: 2015-10-06
 order: 4
 translation_priority: 0
 authors:
