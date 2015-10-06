@@ -3,7 +3,7 @@ layout: shared/narrow-pages-list
 title: "Optimizing content efficiency"
 description: "The amount of data downloaded by apps continues to increase over time. To deliver great performance you must optimize data delivery as much as possible."
 published_on: 2014-04-01
-updated_on: 2014-04-29
+updated_on: 2015-10-06
 order: 0
 translation_priority: 0
 authors:
