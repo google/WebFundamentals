@@ -3,7 +3,7 @@ layout: shared/narrow-pages-list
 title: "Prevent mixed content"
 description: "Mixed content refers to a webpage where the initial HTML content is loaded over a secure HTTPS connection, but other resources are then loaded into the page over an insecure HTTP connection."
 published_on: 2015-09-25
-updated_on: 2015-09-25
+updated_on: 2015-10-06
 authors:
   - johyphenel
 translation_priority: 1
