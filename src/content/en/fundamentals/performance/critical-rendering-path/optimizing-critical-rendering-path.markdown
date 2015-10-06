@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow
-description: "Learn the keys of optimizing the critical rendering path."
+description: "Learn the key factors in optimizing the critical rendering path."
 title: "Optimizing the critical rendering path"
 published_on: 2014-04-01
-updated_on: 2014-04-28
+updated_on: 2015-10-06
 order: 8
 
 translation_priority: 0
@@ -12,6 +12,9 @@ authors:
 ---
 
 <p class="intro">
+A critical resource is any resource that may block initial rendering of the page. The fewer of these resources there are on the page, the less work the browser has to do to get content on the screen, and the less contention there is for CPU and other resources.
+</p>
+
   In order to deliver the fastest possible time to first render, we need 
   to optimize three variables:
 
@@ -20,10 +23,9 @@ authors:
     <li>Minimize the number of critical bytes.</li>
     <li>Minimize the critical path length.</li>
   </ul>
-</p>
 
 
-A critical resource is any resource that may block initial rendering of the page. The fewer of these resources there are on the page, the less work the browser has to do to get content on the screen, and the less contention there is for CPU and other resources.
+
 
 Similarly, the fewer critical bytes the browser has to download, the faster it can get to processing the content and get it visible on the screen. To reduce the number of bytes we can reduce the number of resources (eliminate them or make them non-critical), and also ensure that we minimize the transfer size by compressing and optimizing each resource.
 

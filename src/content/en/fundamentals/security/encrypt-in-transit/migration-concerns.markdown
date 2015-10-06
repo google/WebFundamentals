@@ -1,18 +1,18 @@
 ---
 layout: shared/narrow
 title: "Migration concerns"
-description: "Covers the concerns developers may have about migrating to HTTPS"
+description: "Many developers have legitimate concerns about migrating from HTTP to HTTPS. This guide discusses some concerns and provides links to additional resources."
 authors:
   - chrispalmer
   - mattgaunt
 published_on: 2015-03-27
-updated_on: 2015-03-27
+updated_on: 2015-10-06
 order: 7
 translation_priority: 0
 ---
 
 <p class="intro">
-This section discusses concerns operators may have about migrating to HTTPS.
+Many developers have legitimate concerns about migrating from HTTP to HTTPS. This guide discusses some concerns and provides links to additional resources.
 </p>
 
 {% include shared/toc.liquid %}

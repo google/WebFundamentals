@@ -1,11 +1,11 @@
 ---
 layout: shared/narrow
 title: "Instruct search engines how your multi-device page is structured"
-description: "If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures."
+description: "How your website appears in search results is an important aspect of multi-device site design. This guide helps you learn to optimize your website for search engines based on its URL structure."
 authors:
   - agektmr
 published_on: 2014-10-08
-updated_on: 2014-11-05
+updated_on: 2015-10-06
 order: 2
 key-takeaways:
   - "Determine the URL structure of your webpage"
@@ -15,8 +15,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-  If your website is targeting multi-devices, how it appears on search results is an important aspect of site design. This guide will help you learn how to optimize your website with search engines depending on its URL structures.
-</p>
+How your website appears in search results is an important aspect of multi-device site design. This guide helps you learn to optimize your website for search engines based on its URL structure.</p>
 
 {% include shared/toc.liquid %}
 

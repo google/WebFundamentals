@@ -1,12 +1,12 @@
 ---
 layout: shared/narrow
 title: "Intro to security terminology"
-description: "When migrating to HTTPS, one of the hurdles site operators face is conceptual: What, exactly, is going on? What does all the crypto terminology mean? In this section, we’ll give a very brief overview."
+description: "Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both."
 authors:
   - chrispalmer
   - mattgaunt
 published_on: 2015-03-27
-updated_on: 2015-03-27
+updated_on: 2015-10-06
 order: 1
 translation_priority: 0
 key-takeaways:
@@ -16,7 +16,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-  When migrating to HTTPS, one of the hurdles site operators face is conceptual: What, exactly, is going on? What does all the crypto terminology mean? In this section, we’ll give a very brief overview.
+  Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
 </p>
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}

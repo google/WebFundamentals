@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow-pages-list
 title: "Optimizing content efficiency"
-description: "The amount of data downloaded by each app continues to increase. To deliver great performance we need to optimize delivery of each and every byte!"
+description: "The amount of data downloaded by apps continues to increase over time. To deliver great performance you must optimize data delivery as much as possible."
 published_on: 2014-04-01
-updated_on: 2014-04-29
+updated_on: 2015-10-06
 order: 0
 translation_priority: 0
 authors:
@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">
-Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!
+Our web applications continue to grow in their scope, ambition, and functionality -- that's a good thing. However, the relentless march toward a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte!
 </p>
 
 What does a modern web application look like? [HTTP Archive](http://httparchive.org/) can help us answer this question. The project tracks how the web is built by periodically crawling the most popular sites (300,000+ from the Alexa Top 1M list) and recording and aggregating analytics on the number resources, content types, and other metadata for each individual destination.

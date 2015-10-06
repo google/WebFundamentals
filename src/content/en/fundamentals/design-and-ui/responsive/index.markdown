@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow-subdirectories-list
 title: "Responsive layouts"
-description: "Create flexible, not fixed layouts that works on mobile, desktop or anything else with a screen."
+description: "Create flexible, not fixed, layouts that work on mobile, desktop, or any other device."
 published_on: 2015-09-09
-updated_on: 2015-09-09
+updated_on: 2015-10-06
 translation_priority: 0
 udacity:
   id: ud893

@@ -2,18 +2,18 @@
 layout: shared/narrow
 title: "Test the app"
 published_on: 2015-09-30
-updated_on: 2015-09-30
+updated_on: 2015-10-06
 translation_priority: 1
 authors:
   - paulkinlan
 ---
 
 
-Turn up your speakers to full volume. Click the horn and it should make a sound.  
+Make sure your speakers are on, then click the horn; it should make a sound.
 
 <img src="images/image01.png" />
 
-Now kill the server (ctrl-c in the command line).  This simulates the network 
+Now kill the server (Ctrl-C in the command line).  This simulates the network 
 going offline. Then reload the site. The page should fully reload and you should 
 be able to still use the horn.
 

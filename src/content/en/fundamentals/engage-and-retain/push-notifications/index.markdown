@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow
 title: "Push notifications"
-description: "The push and notifications API's let you notify users the same way a native app would. Just like native notifications, some ways of using them are better than others."
+description: "Push messaging is a feature that lets you engage with users in the same way as a native app, by providing timely and customized content outside the context of the web page, such as breaking news, site updates, or other information of interest."
 published_on: 2015-10-01
-updated_on: 2015-10-01
+updated_on: 2015-10-06
 order: 1
 authors:
   - josephmedley
@@ -11,9 +11,7 @@ translation_priority: 1
 ---
 
 <p class="intro">
-  The push and notifications API's let you notify users the same way a 
-  native app would. Just like native notifications, some ways of using 
-  them are better than others.
+  Push messaging is a feature that lets you engage with users in the same way as a native app, by providing timely and customized content outside the context of the web page, such as breaking news, site updates, or other information of interest.
 </p>
 
 In 2015, a [Google case study](#TODO) found 
