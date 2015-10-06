@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "What is mixed content?"
 description: "This guide discusses the dangers mixed content poses to your website and users."
 published_on: 2015-09-25
-updated_on: 2015-09-25
+updated_on: 2015-10-06
 authors:
   - johyphenel
 translation_priority: 1
