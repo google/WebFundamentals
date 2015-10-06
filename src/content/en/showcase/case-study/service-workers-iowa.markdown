@@ -7,7 +7,7 @@ published_on: 2015-10-01
 updated_on: 2015-10-01
 authors:
   - jeffposnick
-featured_image: images/service-workers-iowa/card.png
+featured_image: images/service-workers-iowa/card.jpg
 showcase:
   key_image: images/service-workers-iowa/screenshot-portrait.png
   scores:
