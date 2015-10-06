@@ -3,7 +3,7 @@ layout: shared/narrow-pages-list
 title: "Your first multi-device site"
 description: "The web is accessible on a huge range of devices, from small-screen phones to big-screen televisions. Each device presents its own benefits and constraints. As a web developer, you are expected to support a full ranges of devices."
 published_on: 2014-01-01
-updated_on: 2014-01-06
+updated_on: 2015-10-06
 translation_priority: 0
 authors:
   - paulkinlan
