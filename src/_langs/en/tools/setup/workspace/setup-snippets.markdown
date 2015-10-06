@@ -18,10 +18,11 @@ article:
 collection: workspace
 takeaways:
     - Use snippets to run small scripts from any page.
-    - Run portions of snippets with the **Evalute in Console** feature.
-    - Map snippets to external files with Workspaces.
-    - Use snippets in tandem with popular features from the Sources panel,
-      like breakpoints.
+    - Run portions of snippets in the console with the "Evaluate in
+      Console" feature.
+    - Map snippets to external files with workspaces.
+    - Remember that popular features from the Sources panel, like
+      breakpoints, also work with snippets.
 ---
 
 {% wrap content %}
@@ -102,7 +103,7 @@ There are three ways to run a snippet.
 
 ![run snippet by clicking "run" button](imgs/run-snippet-2.png)
 
-* Type `Cmd` + `Enter` on Mac, or `Ctrl` + `Enter` on Windows. 
+* Type `Command` + `Enter` on Mac, or `Control` + `Enter` on Windows. 
 
 ### Evaluate in console
 
@@ -116,8 +117,9 @@ You can also evaluate a portion of a snippet in the DevTools console.
 
 In the video below, a portion of a snippet is highlighted, and then that
 portion is evaluated by right-clicking on the editor and selecting 
-**Evaluate in Console**. Only the statements that were highlighted are
-evaluated. The statements that were not highlighted are not evaluted.
+**Evaluate in Console**. You can see in the console that only the statements 
+that were highlighted are evaluated. The statements that were not highlighted 
+are not evaluted.
 
 {% animation animations/evaluate-in-console.mp4 %}
 
@@ -140,9 +142,9 @@ displayed) and click **Local modifications** to view this history.
 
 The history is displayed in a panel in the console area. The history shows:
 
-* A diff of the file changes
+* A diff of the file changes.
 
-* The time each change was made
+* The time each change was made.
 
 You can interact with the local modifications history in three ways:
 
@@ -160,11 +162,11 @@ You can interact with the local modifications history in three ways:
 ## Use breakpoints, keyboard shortcuts, and more
 
 Many of the features from the Sources panel, such as 
-[breakpoints](/web/tools/javascript/breakpoints/index)
-are also available for snippets.
+[breakpoints](/web/tools/javascript/breakpoints/index), are also available for 
+snippets.
 
 You can also use the 
-[keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts) 
-for the Sources panel when working with snippets.
+[keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts) for the 
+Sources panel when working with snippets.
 
 {% endwrap %}
