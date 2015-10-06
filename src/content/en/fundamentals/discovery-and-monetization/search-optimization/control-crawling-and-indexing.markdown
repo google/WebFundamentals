@@ -5,7 +5,7 @@ description: "Being listed properly on search engines is critical to delivering 
 authors:
   - agektmr
 published_on: 2014-12-15
-updated_on: 2014-12-15
+updated_on: 2015-10-06
 order: 3
 key-takeaways:
   - "No robots.txt, no robots meta tags required for fully accessible pages"
