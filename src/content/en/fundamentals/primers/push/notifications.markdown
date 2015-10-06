@@ -12,8 +12,8 @@ notes:
 ---
 
 <p class="intro">
-  The notification is the actual message that is sent to a user after he has 
-  enabled push messages and has subscribed to the site. Messages are often sent 
+  The notification is the actual message that is sent to a user after enabling
+  push messages and has subscribed to the site. Messages are often sent 
   via <a href="https://developer.android.com/google/gcm/index.html">Google 
   Cloud Messaging (GCM)</a>, a service that handles all aspects of message 
   queueing and delivery to client applications running on target devices, but 
