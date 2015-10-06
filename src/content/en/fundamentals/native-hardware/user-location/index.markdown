@@ -3,7 +3,7 @@ layout: shared/narrow-pages-list
 title: "User location"
 description: "Most browsers and devices have access to the user's geo-location. Learn how to work with the user's location in your site and apps."
 published_on: 2014-01-01
-updated_on: 2014-10-21
+updated_on: 2015-10-06
 order: 2
 translation_priority: 1
 authors:
