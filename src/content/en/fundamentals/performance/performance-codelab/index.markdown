@@ -11,11 +11,12 @@ authors:
 ---
 
 <p class="intro">
-We have all seen apps whose displays tend to jump raggedly during animations, 
-scrolling, or other user interaction. This visible inconsistency is a 
-performance issue commonly called <i>jank</i> or <i>judder</i> and is an 
-annoying distraction for users; it interrupts their flow of thought while 
-using the app and it makes the app look less polished and professional.
+Apps whose displays tend to jump raggedly during animations, 
+scrolling, or other user interaction suffer from a performance issue
+commonly called <i>jank</i> or <i>judder</i>.
+Jank is an annoying distraction for users;
+it interrupts the users' flow of thought and
+it makes the app look less polished and professional.
 </p>
 
 If the browser takes too long to make and display a frame, it gets skipped 
@@ -28,15 +29,16 @@ consistent sixty frames per second (60fps). Many factors contribute to an
 app's frame rate, and there are various ways to code JavaScript and CSS to 
 reduce or eliminate jank and achieve the desired rate.
 
-This codelab is about changing the way you approach app performance issues 
-by helping you find and fix frame display bottlenecks that cause jank.
-
 ## What you'll learn in this codelab
+
+This codelab is about changing the way you approach app performance issues
+by helping you find and fix frame display bottlenecks that cause jank.
+You will learn:
 
 * How to identify application code that causes display performance bottlenecks
 * How to analyze and modify the code to reduce or eliminate the bottlenecks
 
-This codelab is a text-based version of part of the content covered in a 
+The codelab is a text-based version of part of the content covered in a 
 Udacity course on app/web performance 
 ([ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)).
 Rather than a transcription of the video course, this codelab is meant to be 
@@ -54,15 +56,14 @@ how JavaScript and CSS affect it. Learn more here: [https://developers.google.co
 ## What you'll need in your development workspace
 
 * Google Chrome browser, DevTools
-* The sample code for the hands-on project (see next section)
+* The sample code for the hands-on project (see [About the project app](step-01))
 
 ## Jank/Judder
 
 Let's get familiar with jank by playing a game, "Jank Invaders" by Jake Archibald. It's designed to demonstrate problems with frame rates and performance. Here's a screen shot.
 
 <figure>
-  <img src="images/image07.png" alt="TODO">
-  <figcaption>TODO</figcaption>
+  <img src="images/image07.png" alt="Jank Invaders game">
 </figure>
 
 In the game, spaceships move across the screen. The good guys move smoothly, while the bad guys ("spy ships") are janky. Your mission: identify and shoot down the ten janky spy ships among the smooth ones by clicking them as quickly as you can. [Here's the link to the game](https://www.google.com/url?q=http://jakearchibald.github.io/jank-invaders). Go ahead, have fun; come back when you're finished.
