@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources."
 published_on: 2014-04-01
-updated_on: 2014-09-12
+updated_on: 2015-10-06
 order: 3
 translation_priority: 0
 authors:
