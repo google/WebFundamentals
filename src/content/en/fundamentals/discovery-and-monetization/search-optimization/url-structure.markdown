@@ -5,7 +5,7 @@ description: "How your website appears in search results is an important aspect 
 authors:
   - agektmr
 published_on: 2014-10-08
-updated_on: 2014-11-05
+updated_on: 2015-10-06
 order: 2
 key-takeaways:
   - "Determine the URL structure of your webpage"
