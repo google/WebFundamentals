@@ -36,9 +36,9 @@ all of the code we've written so far. To set it up:
    available. You could use Python, for example.
 
        $ cd sw-primer
-       $ python -m SimpleHTTPServer
+       $ python -m SimpleHTTPServer 8000
 
-3. Open Chrome and navigate to `http://localhost:8000/basic-worker.html`.
+3. Open Chrome and navigate to `http://localhost:8000`.
 
 Congratulations! You now have a running service worker that you can use for the 
 rest of the debugging section.
