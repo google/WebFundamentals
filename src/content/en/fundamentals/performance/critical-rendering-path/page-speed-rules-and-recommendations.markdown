@@ -3,7 +3,7 @@ layout: shared/narrow
 description: "This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why."
 title: "PageSpeed rules and recommendations"
 published_on: 2014-04-01
-updated_on: 2015-06-10
+updated_on: 2015-10-06
 order: 9
 translation_priority: 0
 authors:
