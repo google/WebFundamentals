@@ -17,23 +17,14 @@ article:
   order: 1
 collection: workspace
 takeaways:
-    - takeaway
-    - takeaway
-    - takeaway
+    - Use snippets to run small scripts from any page.
+    - Run portions of snippets with the **Evalute in Console** feature.
+    - Map snippets to external files with Workspaces.
+    - Use snippets in tandem with popular features from the Sources panel,
+      like breakpoints.
 ---
 
-<!-- how to handle local modifications content? 
-     https://developer.chrome.com/devtools/docs/authoring-development-workflow#local-modifications -->
-
-<!-- https://developer.chrome.com/devtools/docs/authoring-development-workflow#snippets
-     http://www.briangrinstead.com/blog/devtools-snippets 
-     https://github.com/bgrins/devtools-snippets
-     http://bgrins.github.io/devtools-snippets/ 
-     https://github.com/paulirish/devtools-addons/wiki/Snippets -->
-
 {% wrap content %}
-
-<!-- who what where when why how -->
 
 Snippets are small scripts that you can author and execute within the 
 **Sources** panel of Chrome DevTools. You can access and run them from 
@@ -143,10 +134,11 @@ external files using [workspaces](setup-workflow).
 DevTools maintains a revision history of all changes made to local 
 files. If you've edited a snippet and saved changes using DevTools, 
 you can right-click anywhere in the snippet editor (while the snippet is
-displayed) and click **Local modifications** to view this history.
+displayed) and click **Local modifications** to view this history. 
 
+![accessing local modification history](imgs/local-modifications.png)
 
-A **History** panel will occur in the console area, which shows:
+The history is displayed in a panel in the console area. The history shows:
 
 * A diff of the file changes
 
@@ -163,12 +155,16 @@ You can interact with the local modifications history in three ways:
 * Clicking the **Apply revision content** reverts the file back to the
   specified revision. The revision history is maintained.
 
+![viewing local modification history](imgs/local-modifications-history.png)
 
-## Use breakpoints, watch expressions, and more
+## Use breakpoints, keyboard shortcuts, and more
 
-Many of the features from the Sources panel, such as watch expressions
-and breakpoints, are also available for snippets.
+Many of the features from the Sources panel, such as 
+[breakpoints](/web/tools/javascript/breakpoints/index)
+are also available for snippets.
 
-* More on [breakpoints](/web/tools/javascript/breakpoints/index)
+You can also use the 
+[keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts) 
+for the Sources panel when working with snippets.
 
 {% endwrap %}
