@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Fixing mixed content"
 description: "Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process."
 published_on: 2015-09-28
-updated_on: 2015-09-28
+updated_on: 2015-10-06
 authors:
   - johyphenel
 translation_priority: 1
