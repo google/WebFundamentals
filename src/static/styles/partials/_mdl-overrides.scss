@@ -8,6 +8,11 @@
   margin-bottom: $base-line;
 }
 
+// From Git Issue https://github.com/google/WebFundamentals/issues/2022
+.mdl-layout__content {
+   will-change: transform;
+}
+
 @media screen and (max-width: $grid-desktop-breakpoint) {
   .mdl-data-table {
     width: 100%;
