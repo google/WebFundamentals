@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Development phases"
 description: "Every developer will go through various phases during the development of a project. Web Starter Kit makes you more productive and simplifies a range of tasks for each phase."
 published_on: 2014-04-17
-updated_on: 2014-10-21
+updated_on: 2015-10-06
 translation_priority: 1
 authors:
   - mattgaunt
