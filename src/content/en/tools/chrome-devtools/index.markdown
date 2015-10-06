@@ -5,119 +5,272 @@ title: "Chrome DevTools"
 order: 3
 ---
 
-<div class="wf-subheading wf-devtools-header">
-  <div class="page-content">
-      <h1><img src="images/chrome-devtools-logo.png" alt="">Chrome DevTools</h1>
-  </div>
-  <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. Use the DevTools to efficiently track down layout issues, set JavaScript breakpoints, and get insights for code optimization.</p>
-      <div class="note">
-        Note: Use <a href="https://tools.google.com/dlpage/chromesxs">Chrome Canary</a> for the latest DevTools.
+<div class="wf-devtools-wrapper">
+
+  <div class="wf-subheading wf-devtools-header">
+    <div class="page-content">
+        <h1><img src="images/chrome-devtools-logo.png" alt="Chrome DevTools Logo">Chrome DevTools</h1>
+    </div>
+    <div class="page-content mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col">
+        <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. Use the DevTools to iterate, debug and profile your site.</p>
+        <div class="note">
+          <a href="https://tools.google.com/dlpage/chromesxs">Chrome Canary</a> always has the latest DevTools.
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col">
+        <ul>
+          <li>Select <strong>More Tools &gt; Developer Tools</strong> from the Chrome Menu.</li>
+          <li>Right-click on a page element and select Inspect</li>
+          <li>Use <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
+        </ul>
       </div>
     </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <p class="access">To access the DevTools:</p>
-      <ul>
-        <li>Select <strong>Tools > Developer Tools</strong> from the Chrome Menu.</li>
-        <li>Right-click on any page element and select Inspect Element.</li>
-        <li>Use <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">I</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Opt</kbd>+<kbd class="kbd">I</kbd> on Mac) (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
-      </ul>
+  </div>
+
+  <div class="wf-devtools-panels">
+    
+    <h2 class="page-content mdl-typography--font-light">Discover the Panels</h2>
+
+    <div class="mdl-tabs mdl-js-tabs page-content">
+
+      <div class="mdl-tabs__tab-bar">
+          <a href="#elements" class="mdl-tabs__tab is-active">Elements</a>
+          <a href="#console" class="mdl-tabs__tab">Console</a>
+          <a href="#sources" class="mdl-tabs__tab">Sources</a>
+          <a href="#network" class="mdl-tabs__tab">Network</a>
+          <a href="#timeline" class="mdl-tabs__tab">Timeline</a>
+          <a href="#profiles" class="mdl-tabs__tab">Profiles</a>
+          <a href="#resources" class="mdl-tabs__tab">Resources</a>
+          <a href="#devicemode" class="mdl-tabs__tab wf-devtools-tabdivider">Device Mode</a>
+          <a href="#remotedebugging" class="mdl-tabs__tab">Remote Debugging</a>
+          <a href="#settings" class="mdl-tabs__tab">Settings</a>
+      </div>
+
+      <div class="mdl-tabs__panel" id="settings">
+        <img src="images/settings.png" alt="Device Mode">
+        <p>Learn how to customize the DevTools to suit your workflow.</p>
+        <ul>
+          
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">Keyboard shortcuts</a></li>
+          <li><a href="https://developer.chrome.com/devtools/docs/settings">Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="remotedebugging">
+        <img src="images/remotedebugging.png" alt="Remote Debugging">
+        <p>Remote Debugging allows you to remotely debug and screencast any device running Chrome on your Desktop.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging">Remote Debugging Devices</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/local-server">Remote Access to Your Local Site</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/webviews">Remote Debugging WebViews</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="devicemode">
+        <img src="images/devicemode.png" alt="Device Mode">
+        <p>Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode">Device Mode</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports">Emulate Mobile Viewports</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors">Emulate Device Input and Sensors</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/media-queries">Inspect CSS Media Queries</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel is-active" id="elements">
+        <img src="images/elements.png" alt="Elements Panel">
+        <p>Use the Elements panel to iterate on the layout and design of your site by freely manipulating the DOM and CSS.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/basics">Inspect and Tweak Your Pages: the Basics</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles">Edit Styles</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom">Edit the DOM</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="console">
+        <img src="images/console.png" alt="Console Panel">
+        <p>Use the Console to log diagnostic information during development or use it as a shell to interact with the JavaScript on the page.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/debug/console">Using the Console</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/command-line">Interact from Command Line</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="sources">
+        <img src="images/sources.png" alt="Sources Panel">
+        <p>Debug your JavaScript using breakpoints in the Sources Panel or connect your local files via Workspaces to use DevTools live editor.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/debug/breakpoints">Debugging with Breakpoints</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/readability/">Debug Obfuscated Code</a></li>
+          <li><a href="/web/tools/setup/setup-workflow">Set Up Persistence with DevTools Workspaces</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="network">
+        <img src="images/network.png" alt="Network Panel">
+        <p>Use the Network panel to get insights into requested and downloaded resources and optimize your page load performance.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/profile/network-performance/resource-loading">Network Panel Basics</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/network-performance/network-conditions">Network Throttling</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="timeline">
+        <img src="images/timeline.png" alt="Timeline Panel">
+        <p>Use the Timeline to improve the run time performance of your page by recording and exploring the various events that happen during the lifecycle of a site.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/profile/evaluate-performance/">How to look at performance</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime">Analyze runtime performance</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts">Diagnose Forced Synchronous Layouts</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="profiles">
+        <img src="images/profiles.png" alt="Profiles Panel">
+        <p>Use the Profiles panel if you need more information than the Timeline provide, for instance to track down memory leaks.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/js-execution">JavaScript CPU Profiler</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/memory-problems">Heap Profiler</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-tabs__panel" id="resources">
+        <img src="images/resources.png" alt="Resources Panel">
+        <p>Use the Resources panel to inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/iterate/manage-data">Manage data</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="wf-devtools-alternate wf-secondaryheading">
+    <div class="page-content">
+      <h2 class="mdl-typography--font-light">Solutions for your Workflow</h2>
+      <div class="mdl-grid">
+      {% for subdirectory in page.context.subdirectories %}
+        {% if subdirectory.subdirectories.size > 0 %}
+        <div class="mdl-cell mdl-cell--4-col wf-tools-guide">
+          <h3 class="wf-tools-guide__title"><a href="{{subdirectory.index.relative_url}}">{{subdirectory.index.title}}</a></h3>
+          <p class="wf-tools-guide__description">{{subdirectory.index.description}}</p>
+          {% if subdirectory.subdirectories %}
+              {% for sub in subdirectory.subdirectories %}
+                <p class="wf-tools-guide__section-link"><a href="{{sub.index.relative_url}}">{{sub.index.title}}</a></p>
+              {% endfor %}
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+      </div>
     </div>
   </div>
+
+
+
+  <div class="wf-devtools-alternate">
+    <div class="page-content">
+      <h2 class="mdl-typography--font-light">Hot Off the Press</h2>
+
+        <div class="android-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/teaser1.png" alt="Aggregated Details">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Aggregated Details</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Find out which third party scripts make your page slow.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/DevTools/2015/08/devtools-digest-aggregated-timeline-details#better-blame-perf-issues-aggregated-details-in-timeline">
+                   Find out now
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/teaser2.png" alt="Color Palettes">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Color Palettes</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Automatic, Material and custom color palettes in the color picker.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/DevTools/2015/08/devtools-digest-aggregated-timeline-details#automatic-material-and-custom-color-palettes">
+                   Explore the colors
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/teaser3.png" alt="New main menu">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">New main menu</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Streamlined, easier docking, settings and help access.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/DevTools/2015/08/devtools-digest-aggregated-timeline-details#new-dedicated-main-menu">
+                   Learn more
+                 </a>
+              </div>
+            </div>
+
+          </div>
+
+    </div>
+    
+  </div>
+
+  <div class="wf-devtools-alternate wf-secondaryheading">
+    <div class="page-content">
+      <h2 class="mdl-typography--font-light">Get Involved</h2>
+
+      <div class="mdl-grid wf-devtools-getinvolved">
+
+        <div class="mdl-cell--4-col mdl-cell">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://twitter.com/ChromeDevTools">Twitter</a></li>
+            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-devtools">StackOverflow</a></li>
+            <li><a href="https://plus.google.com/+GoogleChromeDevelopers">Google+</a></li>
+            <li><a href="https://www.youtube.com/user/ChromeDevelopers">YouTube</a></li>
+          </ul>
+        </div>
+
+        <div class="mdl-cell--4-col mdl-cell">
+          <h3>Contribute</h3>
+          <ul>
+            <li><a href="https://crbug.com/new">File a bug</a></li>
+            <li><a href="https://developer.chrome.com/devtools/docs/contributing">How to Contribute</a></li>
+          </ul>
+        </div>
+
+        <div class="mdl-cell--4-col mdl-cell">
+          <h3>Extend</h3>
+          <ul>
+            <li><a href="https://developer.chrome.com/devtools/docs/integrating">Integrating with DevTools and Chrome</a></li>
+            <li><a href="https://developer.chrome.com/extensions/devtools">DevTools Extensions API</a></li>
+            <li><a href="https://developer.chrome.com/devtools/docs/debugger-protocol">Debugger protocol</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+
 </div>
-
-
-## Elements panel: inspect DOM and styles
-
-The Elements panel lets you see everything in one DOM tree, and allows inspection and on-the-fly editing of DOM elements. Use the Elements panel to identify the <abbr title="HyperText Markup Language">HTML</abbr> snippet for some aspect of the page.
-
-[Read more about inspecting the DOM and styles »](/web/tools/iterate/inspect-styles/basics)
-
-## Network panel: monitor network performance
-
-The Network panel provides insights into resources that are requested and downloaded over the network in real time.
-Identify requests taking longer than expected to optimize your page.
-
-* [Page load performance](/web/tools/chrome-devtools/profile/network-performance/)
-
-## Sources panel: debug JavaScript with breakpoints
-
-The Sources panel lets you debug your JavaScript code using breakpoints. As the **complexity** of JavaScript applications increase, developers need powerful debugging tools to help quickly discover the cause of an issue and fix it efficiently.
-
-* [Debugging with Breakpoints](/web/tools/chrome-devtools/debug/breakpoints)
-
-## Timeline panel: record and analyze page activity
-
-The **Timeline** panel gives you a complete overview of where time is spent when loading and using your web app or page. All events, from loading resources to parsing JavaScript, calculating styles, and repainting are plotted on a timeline.
-
-* [How to look at performance](/web/tools/chrome-devtools/profile/evaluate-performance/)
-
-## Profiles panel: profile execution time and memory usage
-
-The Profiles panel lets you profile the execution time and memory usage of a web app or page. The provided profilers are:
-
-* The **CPU profiler** shows where execution time is spent in your page's JavaScript functions.
-* The **Heap profiler** shows memory distribution by your page's JavaScript objects and related DOM nodes.
-* The **JavaScript** profile shows where execution time is spent in your scripts.
-
-* [JavaScript Profiler](/web/tools/chrome-devtools/profile/rendering-tools/js-execution)
-* [Heap Profiler](/web/tools/chrome-devtools/profile/memory-problems)
-
-## Resources panel: inspect storage
-
-The **Resources** panel lets you inspect resources that are loaded in the inspected page including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and style sheets.
-
-* [Manage data](/web/tools/chrome-devtools/iterate/manage-data)
-
-## Console panel: interact with page
-
-The **Console** panel provides two primary functions: It logs diagnostic information in the development process and provides a shell prompt which can be used to interact with the document and DevTools.
-
-* [Console](/web/tools/chrome-devtools/debug/console)
-
-## Device Mode
-
-Device mode lets you can change the size of the display to simulate a variety of existing devices, or set it to a size of your own choosing.
-
-It also includes remote debugging to work with actual devices.
-
-* [Device Mode](/web/tools/chrome-devtools/iterate/device-mode)
-* [Remote Debugging](/web/tools/chrome-devtools/debug/remote-debugging)
-
-
-
-<div class="page-content mdl-grid">
-
-  <div class="mdl-cell--4-col mdl-cell wf-tools-panel">
-    <img src="/web/tools/chrome-devtools/images/console.jpg">
-    <h3>Settings &amp; commands</h3>
-    <p>Whee</p>
-    <ul>
-      <li><a href="/web/tools/javascript/command-line/command-line-reference">Command line API</a></li>
-      <li><a href="/web/tools/iterate/inspect-styles/shortcuts">Keyboard shortcuts</a></li>
-      <li><a href="https://developer.chrome.com/devtools/docs/settings">Settings</a></li>
-    </ul>
-  </div>
-
-  <div class="mdl-cell--4-col mdl-cell wf-tools-panel">
-    <img src="/web/tools/chrome-devtools/images/timeline.jpg">
-    <h3>Extending DevTools</h3>
-    <p>Whee</p>
-    <ul>
-      <li><a href="https://developer.chrome.com/devtools/docs/integrating">Integrating with DevTools and Chrome</a></li>
-      <li><a href="https://developer.chrome.com/extensions/devtools">DevTools Extensions API</a></li>
-      <li><a href="https://developer.chrome.com/devtools/docs/debugger-protocol">Remote deubgging protocol</a></li>
-    </ul>
-  </div>
-
-  <div class="mdl-cell--12-col mdl-cell">
-    <h4>Why are some docs on another site?</h4>
-    <p>While you'll get plenty of information of how to use DevTools here, our old home will stay around for a bit and provide you with info on how to extend DevTools.</p>
-  </div>
-</div>
-
-
-
 
 
