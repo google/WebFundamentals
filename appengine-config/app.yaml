@@ -16,6 +16,10 @@ handlers:
   static_files: robots.txt
   upload: robots.txt
 
+- url: /favicon.ico
+  static_files: langs/en/favicon.ico
+  upload: langs/en/favicon.ico
+
 - url: /web/imgs
   static_dir: imgs
   expiration: 1d
