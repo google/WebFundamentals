@@ -69,7 +69,7 @@ notes:
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed.
 published_on: 2014-04-17
-updated_on: 2014-04-23
+updated_on: 2015-10-06
 ---
 
 <p class="intro">
