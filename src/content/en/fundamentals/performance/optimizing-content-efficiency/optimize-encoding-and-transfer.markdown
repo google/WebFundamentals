@@ -1,8 +1,8 @@
 ---
 layout: shared/narrow
-title: "Optimizing encoding and transfer size of text-based assets"
+title: "Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources."
 published_on: 2014-04-01
-updated_on: 2014-09-12
+updated_on: 2015-10-06
 order: 3
 translation_priority: 0
 authors:
@@ -29,7 +29,7 @@ notes:
 ---
 
 <p class="intro">
-  Our web applications continue to grow in their scope, ambition, and functionality - that's a good thing. However, the relentless march towards a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte of data!
+  Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources.
 </p>
 
 {% include shared/toc.liquid %}

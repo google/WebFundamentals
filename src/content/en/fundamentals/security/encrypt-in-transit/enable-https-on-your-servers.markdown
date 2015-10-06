@@ -1,12 +1,12 @@
 ---
 layout: shared/narrow
 title: "Enable HTTPS on your servers"
-description: "You are ready for the all important step of enabling HTTPS on your servers."
+description: "Enabling HTTPS on your servers is a critical step in providing security for your webpages."
 authors:
   - chrispalmer
   - mattgaunt
 published_on: 2015-03-27
-updated_on: 2015-03-27
+updated_on: 2015-10-06
 order: 3
 translation_priority: 0
 key-takeaways:
@@ -15,7 +15,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-  You are ready for the all important step of enabling HTTPS on your servers.
+  Enabling HTTPS on your servers is a critical step in providing security for your webpages.
 </p>
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}

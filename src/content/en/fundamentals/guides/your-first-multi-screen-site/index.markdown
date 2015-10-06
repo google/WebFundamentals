@@ -1,19 +1,19 @@
 ---
 layout: shared/narrow-pages-list
 title: "Your first multi-device site"
-description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
+description: "The web is accessible on a huge range of devices, from small-screen phones to big-screen televisions. Each device presents its own benefits and constraints. As a web developer, you are expected to support a full ranges of devices."
 published_on: 2014-01-01
-updated_on: 2014-01-06
+updated_on: 2015-10-06
 translation_priority: 0
 authors:
   - paulkinlan
 ---
 
 <p class="intro">
-  Building multi-device experiences is not as hard as it sounds.
-  By following this guide, we will build an example product landing page for
-  our <a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web
-  Development course</a> that works well across all different device types.
+Creating multi-device experiences is not as hard as it might seem. 
+In this guide, we will build a product landing page for the 
+<a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web
+  Development course</a> that works well across different device types.
 </p>
 
 <img src="images/finaloutput-2x.jpg" alt="many devices showing the final project">

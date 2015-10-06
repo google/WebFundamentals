@@ -6,16 +6,14 @@ notes:
   nosudo: 
     - "If you see permission or access errors such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. Consult <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>this page</a> for a more robust solution."
 published_on: 2014-04-17
-updated_on: 2015-04-01
+updated_on: 2015-10-06
 translation_priority: 1
 authors:
   - mattgaunt
 ---
 
 <p class="intro">
-  Web Starter Kit relies on NodeJS, NPM, & Sass to work, once you've got these 
-  on your machine, you'll have everything you need to start using Web Starter 
-  Kit in your projects.
+  Web Starter Kit relies on NodeJS, NPM, and Sass to work. Once these are installed, you'll have everything you need to start using Web Starter Kit in your projects.
 </p>
 
 {% include shared/toc.liquid %}

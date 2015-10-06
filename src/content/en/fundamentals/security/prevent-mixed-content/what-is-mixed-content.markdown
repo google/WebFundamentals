@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow
-title: "Prevent mixed content"
-description: "Mixed content refers to a webpage where the initial HTML content is loaded securely over HTTPS and that content then loads follow-up resources over insecure HTTP."
+title: "What is mixed content?"
+description: "This guide discusses the dangers mixed content poses to your website and users."
 published_on: 2015-09-25
-updated_on: 2015-09-25
+updated_on: 2015-10-06
 authors:
   - johyphenel
 translation_priority: 1
@@ -15,9 +15,8 @@ notes:
 ---
 
 <p class="intro">
-  This guide introduces mixed content and the dangers it poses to your website and 
-  users. To learn how you can fix mixed content issues, see our next guide on 
-  <a href="fixing-mixed-content">fixing mixed content</a>.
+  This guide discusses the dangers mixed content poses to your website and 
+  users.
 </p>
 
 {% include shared/toc.liquid %}

@@ -1,16 +1,16 @@
 ---
 layout: shared/narrow
 title: "Redirect HTTP to HTTPS"
-description: "Set canonical links to your HTTPS content"
+description: "To tell search engines that HTTPS is the best way to access your site, put a canonical link in the head section of your pages."
 authors:
   - chrispalmer
   - mattgaunt
 published_on: 2015-03-27
-updated_on: 2015-03-27
+updated_on: 2015-10-06
 order: 5
 translation_priority: 0
 key-takeaways:
-  - "You need to put a canonical link in the head of your page to tell search engines https is the best way to get to your site."
+  - "You need to put a canonical link in the head of your page to tell search engines that HTTPS is the best way to get to your site."
 ---
 
 {% include shared/takeaway.liquid list=page.key-takeaways %}

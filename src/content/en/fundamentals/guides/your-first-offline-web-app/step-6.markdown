@@ -2,15 +2,13 @@
 layout: shared/narrow
 title: "Install the site assets"
 published_on: 2015-09-30
-updated_on: 2015-09-30
+updated_on: 2015-10-06
 translation_priority: 1
 authors:
   - paulkinlan
 ---
 
-With the service worker registered, the first time a user hits the page an 
-"install" event will be triggered.  In this event you should cache all the 
-assets that are needed for your application.
+With the service worker registered, an “install” event will be triggered the first time a user visits the page. In this event handler, you should cache all the assets that are needed for your application.
 
 First add in the Cache Polyfill (it is already included in the repo). This 
 polyfill is needed because the Cache API isn't yet fully implemented in all 

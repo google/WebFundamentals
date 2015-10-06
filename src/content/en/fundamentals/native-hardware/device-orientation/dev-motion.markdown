@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow
 title: "Device motion"
-description: "Device motion provides information about force of acceleration being applied to the device at a given moment, and the rate of rotation."
+description: "The device orientation event returns rotation data, which includes how much the device is leaning front-to-back, side-to-side, and, if the phone or laptop has a compass, the direction the device is facing."
 published_on: 2014-06-17
-updated_on: 2014-10-21
+updated_on: 2015-10-06
 order: 1
 authors:
   - petelepage
@@ -17,7 +17,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-  Device motion provides information about force of acceleration being applied to the device at a given moment, and the rate of rotation.
+  The device orientation event returns rotation data, which includes how much the device is leaning front-to-back, side-to-side, and, if the phone or laptop has a compass, the direction the device is facing.
 </p>
 
 {% include shared/toc.liquid %}

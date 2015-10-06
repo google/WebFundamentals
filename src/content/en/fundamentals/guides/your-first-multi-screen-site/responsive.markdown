@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Make it responsive"
-description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
+description: "The web is accessible on a huge range of devices, from small-screen phones to big-screen televisions. Each device presents its own benefits and constraints. As a web developer, you are expected to support a full ranges of devices."
 translation_priority: 0
 key-takeaways:
   make-responsive:
@@ -69,7 +69,7 @@ notes:
   not-all-at-once:
     - You don't have to move all the elements at once, you can make smaller adjustments if needed.
 published_on: 2014-04-17
-updated_on: 2014-04-23
+updated_on: 2015-10-06
 ---
 
 <p class="intro">

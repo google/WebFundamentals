@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow
 title: "Debounce your input handlers"
-description: "Input handlers as a potential cause of performance problems in your apps, as they can block frames completing, and can cause additional (and unnecessary) layout work."
+description: "Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work."
 published_on: 2015-03-20
-updated_on: 2015-03-20
+updated_on: 2015-10-06
 order: 7
 translation_priority: 0
 authors:
@@ -20,7 +20,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-Input handlers as a potential cause of performance problems in your apps, as they can block frames completing, and can cause additional (and unnecessary) layout work.
+Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work.
 </p>
 
 {% include shared/toc.liquid %}

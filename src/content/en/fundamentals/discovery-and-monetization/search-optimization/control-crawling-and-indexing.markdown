@@ -1,11 +1,11 @@
 ---
 layout: shared/narrow
 title: "Control crawling and indexing from search engines"
-description: "Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents."
+description: "Being listed properly on search engines is critical to delivering your website to the world, but poor configuration may cause unexpected content to be included in the results. Learn how crawlers work and how they index your website in order to avoid such problems."
 authors:
   - agektmr
 published_on: 2014-12-15
-updated_on: 2014-12-15
+updated_on: 2015-10-06
 order: 3
 key-takeaways:
   - "No robots.txt, no robots meta tags required for fully accessible pages"
@@ -24,7 +24,7 @@ notes:
 ---
 
 <p class="intro">
-  Being listed on search engines is inevitable in order to deliver your website content to the world. But incorrect configuration may cause unexpected portion of information to spread all over the web. Uderstand how crawlers work and how it indexes your website to keep away from accidents.
+  Being listed properly on search engines is critical to delivering your website to the world, but poor configuration may cause unexpected content to be included in the results. Learn how crawlers work and how they index your website in order to avoid such problems.
 </p>
 
 {% include shared/toc.liquid %}

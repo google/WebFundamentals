@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow-pages-list
 title: "Device orientation"
-description: "Device motion and orientation events provide access to the built in accelerometer, gyroscope and compass in mobile devices."
+description: "Device motion and orientation events provide access to the built in accelerometer, gyroscope, and compass in mobile devices."
 published_on: 2014-06-17
-updated_on: 2014-10-21
+updated_on: 2015-10-06
 order: 4
 authors:
   - petelepage
@@ -13,13 +13,10 @@ notes:
     - "Use <b>extreme</b> caution when deciding to use device motion or device orientation events.  Unfortunately not all browsers use the same coordinate system, and may report different values under identical situations."
 ---
 <p class="intro">
-  Device motion and orientation events provide access to the built in accelerometer, gyroscope and compass in mobile devices.
+  Device motion and orientation events provide access to the built in accelerometer, gyroscope, and compass in mobile devices.
 </p>
 
-These events can be used in for many purposes; for example in gaming to
-control the direction of character, or to determine how high a character
-should jump. When used with GeoLocation, it can create a more accurate
-turn-by-turn navigation system or provide information about where a store is.
+These events can be used for many purposes; in gaming, for example, to control the direction or action of a character. When used with geolocation, they can help create more accurate turn-by-turn navigation or provide information about a specific location.
 
 {% include shared/remember.liquid title="Warning" list=page.notes.not-stable %}
 

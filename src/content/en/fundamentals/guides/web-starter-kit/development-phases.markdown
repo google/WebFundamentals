@@ -3,17 +3,14 @@ layout: shared/narrow
 title: "Development phases"
 description: "Every developer will go through various phases during the development of a project. Web Starter Kit makes you more productive and simplifies a range of tasks for each phase."
 published_on: 2014-04-17
-updated_on: 2014-10-21
+updated_on: 2015-10-06
 translation_priority: 1
 authors:
   - mattgaunt
 ---
 
 <p class="intro">
-During development, there are 3 particular commands that
-  you'll use on a regular basis: gulp serve, gulp and gulp serve:dist.
-  Let’s look at how each task helps you develop your site.
-</p>
+During development, there are three commands that you'll use regularly: `gulp serve`, `gulp`, and `gulp serve:dist`. Let’s look at how each one contributes to the development process.</p>
 
 {% include shared/toc.liquid %}
 
