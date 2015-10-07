@@ -8,7 +8,7 @@ published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 2
 key-takeaways:
-  code:
+  tldr:
     - Users must first allow push messages as a global permissions setting.
     - Users must also explicitly subscribe to your site to receive notifications.
     - You can unsubscribe users at their request, regardless of their global notifications permissions.
