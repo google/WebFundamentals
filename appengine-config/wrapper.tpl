@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}" class="no-js no-touch">
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8" />
 
@@ -19,45 +19,45 @@
       This helper script checks if a G+ comment block should be loaded and loads it if needed.
     {% endcomment %}
     <script>
-    (function() {
+      (function() {
 
-      if(document.getElementById('gplus-comments')) {
+        var SlashWeb = {
 
-        var script = document.createElement('script');
-        script.onload = function() {
+          init: function() {
+            SlashWeb.initComments();
+          },
 
-          var commentElement = document.getElementById('gplus-comments');
-          var parentElement = document.getElementById("gplus-comment-container");
-          var parentComputedStyle = getComputedStyle(parentElement);
-          var parentInnerWidth = parentElement.offsetWidth - parseInt(parentComputedStyle.paddingRight, 10) - parseInt(parentComputedStyle.paddingLeft, 10);
+          initComments: function() {
+            var commentElem = document.getElementById('gplus-comments');
+            if (commentElem) {
 
-          gapi.comments.render(commentElement, {
-            href: commentElement.dataset.url,
-            width: parentInnerWidth,
-            first_party_property: 'BLOGGER',
-            view_type: 'FILTERED_POSTMOD'
-          });
+              var script = document.createElement('script');
+              script.onload = function() {
 
-          var counterElement = document.getElementById("gplus-comment-counter");
-          if (counterElement) {
-            var counterComputedStyle = getComputedStyle(counterElement);
+                var parentElem = document.getElementById('gplus-comment-container');
+                var parentCompStyle = getComputedStyle(parentElem);
+                var parentInnerWidth = parentElem.offsetWidth -
+                                       parseInt(parentCompStyle.paddingRight, 10) -
+                                       parseInt(parentCompStyle.paddingLeft, 10);
 
-            gapi.commentcount.render(counterElement, {
-              count_only: 'true',
-              href: commentElement.dataset.url,
-              'font-family': counterComputedStyle.fontFamily,
-              'font-size': counterComputedStyle.fontSize,
-              color: "#404040"
-            });
+                gapi.comments.render(commentElem, {
+                  href: commentElem.dataset.url,
+                  width: parentInnerWidth,
+                  first_party_property: 'BLOGGER',
+                  view_type: 'FILTERED_POSTMOD'
+                });
+
+              };
+              script.src = 'https://apis.google.com/js/plusone.js';
+              document.head.appendChild(script);
+            }
+
           }
-
         };
-        script.src = "https://apis.google.com/js/plusone.js";
-        document.head.appendChild(script);
 
-      }
+        SlashWeb.init();
 
-    })();
+      })();
     </script>
   </body>
 </html>
