@@ -20,7 +20,7 @@ translation_priority: 0
 </div>
 
 <div class="page-content mdl-grid wf-fundamentals-cta">
-  {% include shared/base_card.liquid title="Get started" text="Not sure where to start? Our getting started guides will walk you through some key things you need to know and help you figure out where to go next." linkHref="/web/fundamentals/guides/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/wsk-on-pixel-n5.jpg" %}
+  {% include shared/base_card.liquid title="Get started" text="Not sure where to start? Our getting started guides will walk you through some key things you need to know and help you figure out where to go next." linkHref="/web/fundamentals/getting-started/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/wsk-on-pixel-n5.jpg" %}
 
   {% include shared/base_card.liquid title="What's new:<br>App install banners" text="<b>App Install Banners</b> give you the ability to have your users quickly and seamlessly add your web app to their home screen, or install your native app, without ever leaving the browser." linkHref="engage-and-retain/simplified-app-installs/" linkText="Learn more" imgUrl="/web/fundamentals/imgs/app-install-banners-2.jpg" %}
 </div>
@@ -34,7 +34,7 @@ translation_priority: 0
     <div class="mdl-grid mdl-typography--text-center wf-fundamentals-areas">
       {% for pageInSection in page.context.subdirectories %}
       {% if pageInSection.index.published != false %}
-      {% if pageInSection.id != 'guides' and pageInSection.id != 'primers' %}
+      {% if pageInSection.id != 'getting-started' and pageInSection.id != 'primers' %}
       {% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
         <div class="mdl-cell mdl-cell--4-col">
           <div class="icon">
