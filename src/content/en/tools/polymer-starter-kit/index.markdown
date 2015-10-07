@@ -25,42 +25,59 @@ feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
 
 <div class="page-content">
   <div class="mdl-grid mdl-typography--text-center">
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-diamond"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/code.svg %}
+      </div>
       <h3 class="mdl-typography--title">Components for nearly any app, out of the box</h3>
       <p>Get started quickly with the complete set of the same paper and iron elements used by Google products.</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-cog"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/build-chain.svg %}
+      </div>
       <h3 class="mdl-typography--title">Complete build chain</h3>
       <p>Get started quickly with the complete set of the same paper and iron elements used by Google products.</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/testing.svg %}
+      </div>
       <h3 class="mdl-typography--title">Testing made easy</h3>
       <p>Test your app and all of its components using the built-in and pre-configured Web Component Tester.</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-user-input"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/theming.svg %}
+      </div>
       <h3 class="mdl-typography--title">Flexible app theming</h3>
       <p>Easily theme your entire application, including the built-in elements, using app-level Custom CSS Properties.</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-chevron-up"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/star.svg %}
+      </div>
       <h3 class="mdl-typography--title">Framework-free, or framework-compatible</h3>
       <p>Build your app out of elements, or wire in an external framework to handle business logic. It's up to you!</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-multi-device-layouts"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {% include svgs/responsive.svg %}
+      </div>
       <h3 class="mdl-typography--title">Responsive app layout boilerplate</h3>
       <p>Start off mobile-friendly with the included layout boilerplate.</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-lessons"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/live-reload.svg %}
+      </div>
       <h3 class="mdl-typography--title">Live Browser Reloading</h3>
       <p>Reload the browser in real-time anytime an edit is made, without the need for an extension.</p>
     </div>
-    <div class="mdl-cell mdl-cell--3-col">
-      <i class="icon icon-tick"></i>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="icon">
+        {%include svgs/tick.svg %}
+      </div>
       <h3 class="mdl-typography--title">Material design ready</h3>
       <p>Use the built-in paper elements to create a full material design-style app.</p>
     </div>
