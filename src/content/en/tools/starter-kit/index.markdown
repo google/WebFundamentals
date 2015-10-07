@@ -46,15 +46,6 @@ feedURL: https://github.com/google/web-starter-kit/releases.atom
     We hope that you tailor Web Starter Kit by deleting anything that you don't want or need. It's a starting point - nothing more.
   </p>
 
-  <div class="mdl-grid">
-    <figure class="mdl-cell mdl-cell--6-col">
-      <img src="../imgs/mobile.png">
-    </figure>
-    <figure class="mdl-cell mdl-cell--6-col">
-      <img src="../imgs/mobile.png">
-    </figure>
-  </div>
-
   <div class="mdl-grid mdl-typography--text-center">
     <div class="mdl-cell mdl-cell--4-col">
       <div class="icon">
