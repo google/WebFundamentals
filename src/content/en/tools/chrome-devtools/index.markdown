@@ -9,7 +9,7 @@ order: 3
 
   <div class="wf-subheading wf-devtools-header">
     <div class="page-content">
-        <h1><img src="images/chrome-devtools-logo.png" alt="Chrome DevTools Logo">Chrome DevTools</h1>
+        <h1><img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/chrome-devtools-logo.png" alt="Chrome DevTools Logo">Chrome DevTools</h1>
     </div>
     <div class="page-content mdl-grid">
       <div class="mdl-cell mdl-cell--6-col">
@@ -48,17 +48,16 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel" id="settings">
-        <img src="images/settings.png" alt="Device Mode">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/settings.png" alt="Device Mode">
         <p>Learn how to customize the DevTools to suit your workflow.</p>
         <ul>
-          
           <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">Keyboard shortcuts</a></li>
           <li><a href="https://developer.chrome.com/devtools/docs/settings">Settings</a></li>
         </ul>
       </div>
 
       <div class="mdl-tabs__panel" id="remotedebugging">
-        <img src="images/remotedebugging.png" alt="Remote Debugging">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/remotedebugging.png" alt="Remote Debugging">
         <p>Remote Debugging allows you to remotely debug and screencast any device running Chrome on your Desktop.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging">Remote Debugging Devices</a></li>
@@ -68,10 +67,10 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel" id="devicemode">
-        <img src="images/devicemode.png" alt="Device Mode">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/devicemode.png" alt="Device Mode">
         <p>Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/iterate/device-mode">Device Mode</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/">Device Mode</a></li>
           <li><a href="/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports">Emulate Mobile Viewports</a></li>
           <li><a href="/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors">Emulate Device Input and Sensors</a></li>
           <li><a href="/web/tools/chrome-devtools/iterate/device-mode/media-queries">Inspect CSS Media Queries</a></li>
@@ -79,7 +78,7 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel is-active" id="elements">
-        <img src="images/elements.png" alt="Elements Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/elements.png" alt="Elements Panel">
         <p>Use the Elements panel to iterate on the layout and design of your site by freely manipulating the DOM and CSS.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/basics">Inspect and Tweak Your Pages: the Basics</a></li>
@@ -89,26 +88,26 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel" id="console">
-        <img src="images/console.png" alt="Console Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/console.png" alt="Console Panel">
         <p>Use the Console to log diagnostic information during development or use it as a shell to interact with the JavaScript on the page.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/debug/console">Using the Console</a></li>
-          <li><a href="/web/tools/chrome-devtools/debug/command-line">Interact from Command Line</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/console/">Using the Console</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/command-line/">Interact from Command Line</a></li>
         </ul>
       </div>
 
       <div class="mdl-tabs__panel" id="sources">
-        <img src="images/sources.png" alt="Sources Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/sources.png" alt="Sources Panel">
         <p>Debug your JavaScript using breakpoints in the Sources Panel or connect your local files via Workspaces to use DevTools live editor.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/debug/breakpoints">Debugging with Breakpoints</a></li>
+          <li><a href="/web/tools/chrome-devtools/debug/breakpoints/">Debugging with Breakpoints</a></li>
           <li><a href="/web/tools/chrome-devtools/debug/readability/">Debug Obfuscated Code</a></li>
           <li><a href="/web/tools/setup/setup-workflow">Set Up Persistence with DevTools Workspaces</a></li>
         </ul>
       </div>
 
       <div class="mdl-tabs__panel" id="network">
-        <img src="images/network.png" alt="Network Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/network.png" alt="Network Panel">
         <p>Use the Network panel to get insights into requested and downloaded resources and optimize your page load performance.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/profile/network-performance/resource-loading">Network Panel Basics</a></li>
@@ -117,7 +116,7 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel" id="timeline">
-        <img src="images/timeline.png" alt="Timeline Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/timeline.png" alt="Timeline Panel">
         <p>Use the Timeline to improve the run time performance of your page by recording and exploring the various events that happen during the lifecycle of a site.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/profile/evaluate-performance/">How to look at performance</a></li>
@@ -127,7 +126,7 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel" id="profiles">
-        <img src="images/profiles.png" alt="Profiles Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/profiles.png" alt="Profiles Panel">
         <p>Use the Profiles panel if you need more information than the Timeline provide, for instance to track down memory leaks.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/js-execution">JavaScript CPU Profiler</a></li>
@@ -136,10 +135,10 @@ order: 3
       </div>
 
       <div class="mdl-tabs__panel" id="resources">
-        <img src="images/resources.png" alt="Resources Panel">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/resources.png" alt="Resources Panel">
         <p>Use the Resources panel to inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/iterate/manage-data">Manage data</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/manage-data/">Manage data</a></li>
         </ul>
       </div>
 
@@ -178,7 +177,7 @@ order: 3
         <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/teaser1.png" alt="Aggregated Details">
+                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser1.png" alt="Aggregated Details">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Aggregated Details</h4>
@@ -195,7 +194,7 @@ order: 3
 
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/teaser2.png" alt="Color Palettes">
+                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser2.png" alt="Color Palettes">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Color Palettes</h4>
@@ -212,7 +211,7 @@ order: 3
 
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/teaser3.png" alt="New main menu">
+                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser3.png" alt="New main menu">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">New main menu</h4>
@@ -243,7 +242,7 @@ order: 3
           <h3>Connect</h3>
           <ul>
             <li><a href="https://twitter.com/ChromeDevTools">Twitter</a></li>
-            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-devtools">StackOverflow</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/google-chrome-devtools">StackOverflow</a></li>
             <li><a href="https://plus.google.com/+GoogleChromeDevelopers">Google+</a></li>
             <li><a href="https://www.youtube.com/user/ChromeDevelopers">YouTube</a></li>
           </ul>
