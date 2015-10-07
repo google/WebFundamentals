@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}" class="no-js no-touch">
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8" />
 
