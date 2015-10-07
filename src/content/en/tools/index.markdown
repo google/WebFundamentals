@@ -21,27 +21,27 @@ translation_priority: 0
 
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6-col">
-      <a href="/web/tools/chrome-devtools"><img src="imgs/chrome-devtools.jpg"></a>
+      <a href="{{site.WFBaseUrl}}/tools/chrome-devtools/"><img src="{{site.WFBaseUrl}}/tools/imgs/chrome-devtools.jpg"></a>
       <h3 class="mdl-typography--title"><a href="/web/tools/chrome-devtools">Chrome Dev Tools</a></h3>
       <p>Our web authoring and debugging tools built into Google Chrome.</p>
     </div>
     <div class="mdl-cell mdl-cell--6-col">
-      <a href="/web/tools/starter-kit/"><img src="/web/tools/starter-kit/images/thumb.jpg"></a>
+      <a href="{{site.WFBaseUrl}}/tools/starter-kit/"><img src="{{site.WFBaseUrl}}/tools/starter-kit/images/thumb.jpg"></a>
       <h3 class="mdl-typography--title"><a href="/web/tools/starter-kit/">Web Starter Kit</a></h3>
       <p>Let us do the bootstrapping, and you focus on what you'd like to build.</p>
     </div>
     <div class="mdl-cell mdl-cell--6-col">
-      <a href="/web/tools/polymer-starter-kit/"><img src="/web/tools/polymer-starter-kit/thumb.jpg"></a>
+      <a href="{{site.WFBaseUrl}}/tools/polymer-starter-kit/"><img src="{{site.WFBaseUrl}}/tools/polymer-starter-kit/thumb.jpg"></a>
       <h3 class="mdl-typography--title"><a href="/web/tools/polymer-starter-kit/">Polymer Starter Kit</a></h3>
       <p>An opinionated starting point for building Polymer 1.0 web apps that work great across different devices.</p>
     </div>
     <div class="mdl-cell mdl-cell--6-col">
-      <a href="http://www.getmdl.io/"><img src="imgs/mdl-thumb.png"></a>
+      <a href="http://www.getmdl.io/"><img src="{{site.WFBaseUrl}}/tools/imgs/mdl-thumb.png"></a>
       <h3 class="mdl-typography--title"><a href="http://www.getmdl.io/">Material Design Lite</a></h3>
       <p>A light-weight implementation of Material Design, targeted at legacy browsers and static content sites.</p>
     </div>
     <div class="mdl-cell mdl-cell--6-col">
-      <a href="https://www.polymer-project.org"><img src="/web/tools/polymer-starter-kit/thumb_polymer.jpg"></a>
+      <a href="https://www.polymer-project.org"><img src="{{site.WFBaseUrl}}/tools/polymer-starter-kit/thumb_polymer.jpg"></a>
       <h3 class="mdl-typography--title"><a href="https://www.polymer-project.org">Polymer</a></h3>
       <p>Polymer makes it easier than ever to make fast, beautiful, and interoperable web components.</p>
     </div>

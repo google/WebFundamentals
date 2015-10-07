@@ -15,7 +15,7 @@ title: "Shows"
 <div class="page-content">
   <div class="mdl-grid">
     {% for subdirectory in page.context.subdirectories %}
-      {% capture image %}imgs/{{subdirectory.index.key_img}}{% endcapture %}
+      {% capture image %}{{site.WFBaseUrl}}/shows/imgs/{{subdirectory.index.key_img}}{% endcapture %}
       {% include shared/base_card.liquid imgUrl=image text=subdirectory.index.description linkHref=subdirectory.index.relative_url linkText=subdirectory.index.title %}
     {% endfor %}
   </div>
