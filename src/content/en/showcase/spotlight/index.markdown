@@ -19,7 +19,8 @@ description: "Sites and apps we love, regardless of their mainstream success. Al
 <div class="page-content">
   <div class="mdl-grid">
     {% for pageInSection in page.context.pages reversed %}
-      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText=pageInSection.title %}
+      {% capture featuredImage %}{{site.WFBaseUrl}}/showcase/spotlight/{{pageInSection.featured_image}}{% endcapture %}
+      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=featuredImage linkText=pageInSection.title %}
     {% endfor %}
   </div>
 </div>
