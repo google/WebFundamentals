@@ -146,7 +146,8 @@ figcaption {
 
   line-height: $base-line * 2;
   text-align: center;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
 
   & svg {
     width: $header-svg-icon-size;

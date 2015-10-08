@@ -64,7 +64,7 @@
 <!-- Uses a header that contracts as the page scrolls down. -->
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
+  <header class="mdl-layout__header">
     <div class="mdl-layout__drawer-button wf-header__menu-btn">
       {% include svgs/menu.svg %}
     </div>
@@ -87,12 +87,9 @@
           </div>
         </form>
       </div>
-
-      <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-header__small-btn" href="https://developers.google.com/">
-        {% include svgs/gds-logo-grey.svg %}
-      </a>
     </div>
     <!-- Bottom row, not visible on scroll -->
+    {% comment %}
     <div class="mdl-layout__header-row wf-header__bottom-row">
 
       <div class="mdl-layout-spacer"></div>
@@ -104,8 +101,10 @@
         <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-header__small-btn" href="https://plus.google.com/+GoogleChromeDevelopers">{% include svgs/gplus.svg %}</a>
       </nav>
     </div>
+    {% endcomment %}
   </header>
   <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title wf-nav-drawer__title"><img src="{{site.WFBaseUrl}}/imgs/developers-logo-no-brackets.svg" alt="Google Developers Logo" /></span>
     <nav class="mdl-navigation wf-nav-drawer__container">
       {% include page-structure/navigation.liquid %}
     </nav>

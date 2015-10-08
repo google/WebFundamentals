@@ -1,14 +1,3 @@
-@media screen and (max-width: 1024px) {
-  .wf-header__bottom-row {
-    padding-left: $layout-header-desktop-indent;
-  }
-}
-
-.wf-header__small-btn {
-  svg {
-    fill: white;
-  }
-}
 
 .wf-header-title {
   line-height: $layout-header-desktop-row-height;
@@ -18,19 +7,7 @@
 
   flex-shrink: initial;
 
-  opacity: 0;
-
   transition: opacity 400ms;
-}
-
-.mdl-layout__header.is-compact {
-  .wf-header-title {
-    opacity: 1;
-  }
-}
-
-.wf-header__bottom-row {
-  height: $base-line * 4;
 }
 
 .wf-header__search-container {
@@ -54,4 +31,10 @@
   align-items: center;
 
   margin-left: $base-line * 2;
+}
+
+.wf-header__small-btn {
+  svg {
+    fill: white;
+  }
 }
