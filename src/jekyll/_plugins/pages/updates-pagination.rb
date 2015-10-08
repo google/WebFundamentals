@@ -46,6 +46,7 @@ module Jekyll
       self.data['updates'] = pages.sort {|a,b| b.data['date'] <=> a.data['date'] }
       self.data['pagination_total'] = totalPaginationPages
       self.data['pagination_current'] = paginationIndex
+      self.data['theme_color'] = '#4527A0'
 
       #baseUrl = site.config['WFBaseUrl']
       #if paginationIndex > 0

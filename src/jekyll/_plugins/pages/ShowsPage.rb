@@ -33,7 +33,7 @@ module Jekyll
       ]
       super(site, relativeDir, filename, langcode, validKeys)
 
-      self.data['theme_color'] = '#212121'
+      self.data['theme_color'] = '#455A64'
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/shows.css';
 
