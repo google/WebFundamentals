@@ -25,9 +25,19 @@
       </ul>
     </div>
     <div class="wf-footer-section">
-      <h3 class="wf-footer__title"><a href="https://developers.google.com/" class="wf-footer__title--link">
-        <img id="developers-logo-footer" src="{{site.WFBaseUrl}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
-      </a></h3>
+      <header class="wf-footer__header">
+        <h3 class="wf-footer__title">
+          <a href="https://developers.google.com/" class="wf-footer__title--link">
+            <img id="developers-logo-footer" src="{{site.WFBaseUrl}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
+          </a>
+        </h3>
+        <div class="wf-footer_social-icons">
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-footer__small-btn" href="https://twitter.com/ChromiumDev">{% include svgs/twitter.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-footer__small-btn" href="https://www.youtube.com/user/ChromeDevelopers">{% include svgs/youtube.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-footer__small-btn" href="https://plus.google.com/+GoogleChromeDevelopers">{% include svgs/gplus.svg %}</a>
+        </div>
+      </header>
+
       <ul class="wf-footer__list wf-footer__list--secondary">
         <li><a href="http://www.google.com/">Google</a></li>
         <li><a href="http://developers.google.com/site-terms">{{"terms_of_service" | localize_string}}</a></li>

@@ -70,10 +70,21 @@ body[dir="rtl"] .wf-footer__list--primary {
   }
 }
 
+.wf-footer__header {
+  display: inline-block;
+}
+
 .wf-footer__title {
   line-height: $base-line;
   margin-top: 0;
   margin-bottom: $base-line / 2;
+}
+
+.wf-footer_social-icons {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .wf-footer__title--link {
@@ -81,6 +92,12 @@ body[dir="rtl"] .wf-footer__list--primary {
 
   img {
     height: $base-line * 1.2;
+  }
+}
+
+.wf-footer__small-btn {
+  svg {
+    fill: $footer-text-color;
   }
 }
 
