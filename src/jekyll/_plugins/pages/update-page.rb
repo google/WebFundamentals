@@ -30,7 +30,7 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/updates.css';
-      self.data['theme_color'] = '#E91E63'
+      self.data['theme_color'] = '#4527A0'
 
       if @directories.count > 1
         self.data['feed_name'] = 'Web Updates - Google Developers'

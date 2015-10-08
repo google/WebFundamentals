@@ -28,7 +28,7 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/tools.css';
-
+      self.data['theme_color'] = '#2196F3'
       self.data['feed_name'] = 'Google Web Tools - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/tools/feed.xml'
     end

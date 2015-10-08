@@ -89,7 +89,7 @@ module Jekyll
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/fundamentals.css';
 
       self.data['strippedDescription'] = Sanitize.fragment(self.data['description'])
-      self.data['theme_color'] = '#03A9F4'
+      self.data['theme_color'] = '#CFD8DC'
       self.data['translations'] = {}
 
       # The root of /web/ has an rss feed, this if accounts for that
