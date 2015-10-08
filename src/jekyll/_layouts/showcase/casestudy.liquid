@@ -181,8 +181,17 @@
     <h3 class="wf-showcase__latest-title mdl-cell--12-col">Latest case studies</h3>
 
     {% assign pages = page.context.pages | reverse %}
-    {% for pageInSection in pages | limit:2 %}
-      {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText="View" %}
+    {% assign count = 0 %}
+
+    {% for pageInSection in pages %}
+      {% if count >= 2 %}
+        {% break %}
+      {% endif %}
+
+      {% if pageInSection.canonical_url != page.canonical_url %}
+        {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText="View" %}
+        {% assign count = count | plus:1 %}
+      {% endif %}
     {% endfor %}
   </div>
 </div>
