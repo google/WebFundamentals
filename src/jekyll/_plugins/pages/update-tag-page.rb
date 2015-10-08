@@ -35,6 +35,7 @@ module Jekyll
       self.data['rss'] = false
       self.data['tag'] = tag
       self.data['updates'] = updates
+      self.data['theme_color'] = '#4527A0'
 
       self.read_yaml(File.join(site.source, '_layouts'), 'updates/tag.liquid')
     end

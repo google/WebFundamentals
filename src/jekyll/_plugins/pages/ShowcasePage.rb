@@ -27,7 +27,7 @@ module Jekyll
       super(site, relativeDir, filename, langcode, validKeys)
 
       self.data['html_css_file'] = site.config['WFBaseUrl'] + '/styles/showcases.css';
-
+      self.data['theme_color'] = '#2E7D32'
       self.data['feed_name'] = 'Google Web Showcase - Google Developers'
       self.data['feed_url'] = site.config['WFBaseUrl'] + '/showcase/feed.xml'
     end

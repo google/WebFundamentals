@@ -1,5 +1,9 @@
 @import "global-base";
 
+/* ** Note **
+ * If you change these colors, you must update the theme color in the
+ * src/jekyll/_plugins/pages/ToolsPage.rb generator to match.
+ */
 $color-primary: $palette-blue-500;
 $color-accent: unquote("rgb(#{$palette-blue-300})");
 
