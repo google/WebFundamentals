@@ -363,7 +363,7 @@ $layout-drawer-wide: 456px !default;
 $layout-drawer-width: $layout-drawer-narrow;
 
 $layout-header-icon-size: 32px;
-$layout-screen-size-threshold: 1024px;
+$layout-screen-size-threshold: 1024px !default;
 $layout-header-icon-margin: 24px;
 $layout-drawer-button-mobile-size: 32px;
 $layout-drawer-button-desktop-size: 48px;

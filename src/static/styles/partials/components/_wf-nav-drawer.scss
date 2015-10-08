@@ -1,5 +1,6 @@
 .mdl-layout__drawer > .wf-nav-drawer__title {
   padding-left: $nav-drawer-horizontal-padding;
+  padding-right: $nav-drawer-horizontal-padding;
 }
 
 .mdl-layout__drawer .mdl-navigation.wf-nav-drawer__container {
@@ -39,10 +40,8 @@
   display: inline-block;
   width: 100%;
 
-  padding-top: ($nav-drawer-vertical-padding * 2);
+  padding-top: 0;
   padding-bottom: ($nav-drawer-vertical-padding * 2);
-  //margin-bottom: ($nav-drawer-vertical-padding * 2);
-  //border-bottom: 1px solid $grey-border-color;
 }
 
 .wf-main-nav__list-level-2 {
@@ -101,6 +100,11 @@
   margin-bottom: ($nav-drawer-vertical-padding * 2);
   border-top: 1px solid $grey-border-color;
   border-bottom: 1px solid $grey-border-color;
+
+  &:first-child {
+    // -1 to account for the border
+    margin-top: -1px;
+  }
 }
 
 

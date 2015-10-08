@@ -7,7 +7,6 @@ translation_priority: 0
 
 <div class="wf-subheading wf-fundamentals-landing">
   <div class="page-content">
-    <!--<img src="/web/imgs/fundamentals.svg" alt="fundamentals logo" class="wf-fundamentals-logo">-->
     {% include svgs/fundamentals.svg %}
     <p class="mdl-typography--font-thin">
 

@@ -7,16 +7,23 @@ $color-accent: unquote("rgb(#{$palette-indigo-300})");
 @import "partials/components/wf-udacity-player";
 
 .wf-fundamentals-landing {
+  .page-content {
+    display: flex;
+    flex-direction: row;
+  }
 
   svg {
-    float: left;
     width: 6em;
     height: 6em;
     margin: 1em 1em 1em 0;
-    
+
     path {
       fill: #f8f8f8;
     }
+  }
+
+  p {
+    flex : 1;
   }
 }
 
