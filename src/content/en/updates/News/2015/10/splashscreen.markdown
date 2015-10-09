@@ -13,27 +13,30 @@ description: "Chrome 47 introduces a splash screen to web apps added to the home
 ---
 
 Over the past year we have focused on letting developers build sites and apps 
-that feel like they are installed on the user's system.  Service Worker for 
+that feel like they are installed on the user's system: [Service Worker](/web/fundamentals/primers/service-workers) for 
 letting you easily build offline first experiences and Add to Homescreen to give 
 your site the presence on the user's device.
 
-The home screen launch process is a great first step, however there was always a 
-tell that it wasn't a native-like experience: When you click on the homescreen 
+The home screen launch process on Android is a great first step, however there was always a 
+tell that this wasn't a native-like experience: When you click on the homescreen 
 icon the screen would go white until the document was ready to render its first 
 frame of the document.  This could take anywhere from 200ms of white up to, 
 well, it depends on how quickly you can draw something.  Some poorly designed 
 sites can take many seconds to get their first paint and we believe that the 
 splash screen increases the perceived performance of loading of your site. 
 
-In Chrome 46 we quietly introduced `background_color` that removes this and 
+In Chrome 46 on Android we quietly introduced `background_color` that removes this delay and 
 paints the screen with a solid colour until the browser is ready to paint 
-something from the document.  This was a good addition however, it still didn't 
+something from the web page. This was a good addition, yet it still didn't 
 look fully like an app.
 
-Now in Chrome 47 (Beta in October 2015) we are introducing the concept of a 
+Now in Chrome 47 on Android (Beta in October 2015) we are introducing the concept of a 
 "splash screen".  
 
-<img src="/web/updates/images/2015/10/splashscreen.gif" width="549" height="548" />
+<img src="/web/updates/images/2015/10/splashscreen.gif" style="max-width=100%" />
+
+Try it out on [Voice Memos](https://voice-memos.appspot.com/), 
+[Air Horner](https://airhorner.com) or [SVG OMG](https://jakearchibald.github.io/svgomg/).
 
 The splash screen is generated dynamically from information held in the Web App 
 Manifest and is a combination of the `name` and background\_color properties 
@@ -62,7 +65,8 @@ recommend **always** having 196px as the minimum sized icon and create 3 other
 versions at 256px, 384px and 512px.
 
 The following is a sample manifest (note: do not set the density field in the 
-icons array, it will cause you a whole heap of pain):
+icons array, it will cause you a whole heap of pain, well, unless you know what 
+you are doing):
 
 {% highlight javascript %}
 {  
@@ -91,31 +95,30 @@ icons array, it will cause you a whole heap of pain):
       "type": "image/png"  
     },  
   ],  
-  "background_color": "#512DA8",  
+  "background_color": "#FAFAFA",
+  "theme_color": "#512DA8", 
   "display": "standalone",  
   "orientation": "portrait"  
 }
 {% endhighlight %}
 
-Ensure that you have:
+Ensure that in your manifest you have:
 
 * A `name` - it will be displayed at the bottom of the screen
 * A `background_color`, and for the best effect have it match the background color 
   of your page so the transition on first paint is near seamless. 
-* High quality icons that will displayed in the center of the screen - ensure 
-  your icon is at least 4x dip.  It is recommended to have a 384px image.
+* An optional `theme_color` if you have them inside the your app already, this will
+  ensure a smooth transition when the splash screen is replaced by your app content.
+* High quality icons that will displayed in the center of the splash screen - ensure 
+  your icon is at least 196px.
 
 I think this is a great step in making sites and apps feel even more like they 
-are meant to be part of the users mobile.
+are meant to be part of the user's mobile device.
 
 ### FAQ
 
 * Will this work on Chrome for iOS or on Desktop?
     * No. It is only Android.
-* I see a `theme_color` bar at the top of the screen.  Can I remove it?
-    * Yes, remove `theme_color` from the manifest.  However I would recommend 
-      to keep it in as it simplifies and reduces the metadata across your entire 
-      site.
 * Will this splash screen appear when a user visits my site from a link?
     * No, this only shows when a user clicks the icon for your site on their 
       homescreen.
