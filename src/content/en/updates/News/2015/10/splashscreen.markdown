@@ -62,7 +62,9 @@ is the minimum image size we will display, which if you take the maximum density
 display currently supported (4x) then 48 \* 4 = 196px. This is lucky because we 
 need to 196px image for Add to Homescreen to work! Yay. Therefore, _I_ would 
 recommend **always** having 196px as the minimum sized icon and create 3 other 
-versions at 256px, 384px and 512px.
+versions at 256px, 384px and 512px.  However, if you want to ensure that the user
+is not downloading too much data for the splash screen, especially on a low density
+device then you can go lower and Chrome will try to fetch the most appropriate.
 
 The following is a sample manifest (note: do not set the density field in the 
 icons array, it will cause you a whole heap of pain, well, unless you know what 
