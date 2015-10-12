@@ -60,7 +60,7 @@ function startButton(event) {
   recognition.onresult = function(event) {
     var interim_transcript = '';
 
-    for (var i = event.resultIndex; i &lt; event.results.length; ++i) {
+    for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
         final_transcript += event.results[i][0].transcript;
       } else {
