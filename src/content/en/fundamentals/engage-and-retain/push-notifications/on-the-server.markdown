@@ -1,16 +1,15 @@
 ---
 layout: shared/narrow
-title: "On the server"
-description: "A service running on the server is responsible for taking the data provided in the push message and actually forwarding it to the user as a notification."
+title: "On the server: sending notifications"
+description: "A service running on a server is responsible for taking the data provided in the push message and actually forwarding it to the user as a notification."
 authors:
   - dgash
 published_on: 2015-10-01
 updated_on: 2015-10-01
-order: 4
+order: 7
 ---
 
 <p class="intro">
-  <b><a href="https://github.com/google/WebFundamentals/issues/1992">Issue #1992</a></b>
   A service running on the server is responsible for taking the 
   data provided in the push message and actually forwarding it to the user as a notification.
 </p>
