@@ -33,7 +33,7 @@ Project Number from Step 2:
 }
 {% endhighlight %}
 
-There are lots more useful options for web manifests, such as setting an app icon and enabling Add to homescreen on mobile.
+There are lots more useful options for web manifests, such as setting an app icon and enabling Add to home screen on mobile.
 
 Find out more from the Web Fundamentals article [Installable Web Apps](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en).
 

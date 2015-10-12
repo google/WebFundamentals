@@ -96,7 +96,7 @@ site in a browser, you can set the `display` type to `browser`.
 
 ## Add a splash screen
 
-When you launch your web app from the homescreen a number of things happen behind the
+When you launch your web app from the home screen a number of things happen behind the
 scenes:
 
 1. Chrome needs to launch.
@@ -118,7 +118,7 @@ Simply set the following in your manifest.
 "background_color": "#2196F3",
 {% endhighlight %}
 
-There will now be no white screen as your site is launched from the homescreen.
+There will now be no white screen as your site is launched from the home screen.
 
 A good suggested value for this property is the background color of the load page.  Using the 
 same colors as the background page will allow for a smooth looking transistion from this
@@ -146,7 +146,7 @@ The problem is, you have to define the theme color on every single page, and if
 you have a large site or legacy site, making a lot of site wide changes is not feasible.
 
 Add in a `theme_color` attribute to your manifest, and when the site is launched
-from the homescreen every page in the domain will automatically have the theme color
+from the home screen every page in the domain will automatically have the theme color
 applied.
 
 {% highlight json %}
