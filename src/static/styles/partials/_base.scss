@@ -202,5 +202,6 @@ blockquote {
   @include typo-subhead-2($usePreferred: false);
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: $base-line * 2;
+  margin-bottom: $base-line;
+  margin-top: $base-line * 2;
 }
