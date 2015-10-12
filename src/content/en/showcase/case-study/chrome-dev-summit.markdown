@@ -160,7 +160,7 @@ and look encourages interaction and hierarchy.
 [Github](https://github.com/googlechrome/devsummit) (**&gt; 200 stars**) to 
 serve as **boilerplate and inspiration to web developers**.
 * Incorporated the latest and greatest of the web platform: **service worker, 
-Web manifest and dynamic theme colors**. The net effect is something that feels 
+web manifest and dynamic theme colors**. The net effect is something that feels 
 really integrated with the platform when run on Android devices. If added to 
 the user’s home screen, it feels very much like an app they would use, and 
 that’s really cool.

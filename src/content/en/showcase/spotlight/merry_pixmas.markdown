@@ -22,7 +22,7 @@ showcase:
   developer: Jim Savage
   our_views:
     good: |
-      A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a Web manifest for a home screen experience that launches full screen.
+      A nice Christmas-themed demo that works well across desktop and mobile. It even comes with brand new theme color support, and a web manifest for a home screen experience that launches full screen.
 
     Pro tip: Shake your phone to make it snow!
     bad: |

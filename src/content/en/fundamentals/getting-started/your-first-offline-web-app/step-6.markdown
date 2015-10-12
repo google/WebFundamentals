@@ -27,7 +27,7 @@ self.addEventListener('install', function(e) {
 {% endhighlight %}
 
 Then in the Event handler function, open the caches object.  The caches object 
-will be used later in the code lab to make sure that for every request we can 
+will be used later in the codelab to make sure that for every request we can 
 return a saved version of the data.
 
 {% highlight javascript %}

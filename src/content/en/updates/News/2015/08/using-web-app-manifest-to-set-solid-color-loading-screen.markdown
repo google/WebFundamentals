@@ -8,7 +8,7 @@ authors:
 tags:
   - manifest
   - webapp
-description: "Improve your perceived loading performance for web apps launched from the homescreen."
+description: "Improve your perceived loading performance for web apps launched from the home screen."
 ---
 
 When you launch your web app from the home screen a number of things happen behind the
@@ -49,13 +49,13 @@ It is strongly suggested that you add the `background_color` in to your manifest
 <div class="clear"></div>
 
 To see this in action, visit <a href="https://airhorner.com">Airhorner &mdash; the worlds best airhorn</a> 
-and add it to your homescreen and then launch it. Or look at the <a href="https://airhorner.com/manifest.json">site's manifest</a>.
+and add it to your home screen and then launch it. Or look at the <a href="https://airhorner.com/manifest.json">site's manifest</a>.
 
 ### FAQ
 
-* **Does this apply if my site is not launched from the homescreen?** <br>
-  No. The user will only see this when they launch it from the homescreen.
+* **Does this apply if my site is not launched from the home screen?** <br>
+  No. The user will only see this when they launch it from the home screen.
 * **Will it ever apply to my entire site, say when they user is just browsing?** <br>
   Unlikely at the moment, to do that it would mean that the browser would have to download the manifest
   a lot more frequently and currently it is low priority asset. This is intended to be parsed when 
-  the user adds the site to the homescreen.
+  the user adds the site to the home screen.
