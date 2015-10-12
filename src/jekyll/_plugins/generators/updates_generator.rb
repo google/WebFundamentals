@@ -43,7 +43,7 @@ module Jekyll
       end
 
       # Generate the updates for root
-      generateSection(site, updateSection)
+      generateSection(site, updateSection, true)
 
       # Generate updates for subdirectories in the updates folder,
       # will skipp the tags folder automatically.
@@ -51,7 +51,7 @@ module Jekyll
         if subdirectory['id'] == 'tags'
           return;
         else
-          generateSection(site, subdirectory)
+          generateSection(site, subdirectory, false)
           generateFeed(site, subdirectory)
         end
       }
@@ -60,7 +60,7 @@ module Jekyll
 
     # Generates all pages for a section of the updates folder, including
     # index page, tags pages, and RSS feeds.
-    def generateSection(site, section)
+    def generateSection(site, section, generateTagPage)
       # Gets the current section
       path = section['id']
 
@@ -77,9 +77,11 @@ module Jekyll
       generatePaginationPages(site, path, section, pages)
 
       # generate tag pages
-      tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
-      section['subdirectories'] << tagsSection
-      generateTagPages(site, path, tagsSection, pages)
+      if generateTagPage
+        tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
+        section['subdirectories'] << tagsSection
+        generateTagPages(site, path, tagsSection, pages)
+      end
     end
 
     def generateFeed(site, subdirectory)
@@ -104,6 +106,14 @@ module Jekyll
         page
       }
 
+      title = nil
+      if path == 'news'
+        title = 'News'
+      elsif path == 'devtools'
+        title = 'DevTools'
+      end
+
+
       pages = pages.sort { |x,y| y["published_on"] <=> x["published_on"] }
       numberOfPages = calculatePages(pages, @numberOfResultsPerPage)
 
@@ -115,7 +125,7 @@ module Jekyll
 
         pagesToInclude = pages[startPageIndex..endPageIndex]
 
-        updatePage = UpdatesPaginationPage.new(site, path, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
+        updatePage = UpdatesPaginationPage.new(site, path, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages, title)
         updatePage.data['_context'] = updateSection
 
         site.pages << updatePage
