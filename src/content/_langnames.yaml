@@ -17,12 +17,12 @@ fa:
 fr:
   name: 'Français'
 
-he:
-  name: 'עִבְרִית'
-  rtl: true
-
 it:
   name: 'Italiano'
+
+iw:
+  name: 'עִבְרִית'
+  rtl: true
 
 ja:
   name: '日本語'
@@ -50,10 +50,3 @@ tr:
 
 'zh-tw':
   name: '中文（繁體）'
-
-
-
-
-
-
-
