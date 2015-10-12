@@ -201,7 +201,14 @@ blockquote {
 .intro {
   @include typo-subhead-2($usePreferred: false);
   font-weight: normal;
-  margin-top: 0;
   margin-bottom: $base-line;
   margin-top: $base-line * 2;
+}
+
+.mdl-cell > .intro {
+  margin-top: 0;
+}
+
+.page-content > .mdl-grid {
+  margin-top: $base-line * 1;
 }
