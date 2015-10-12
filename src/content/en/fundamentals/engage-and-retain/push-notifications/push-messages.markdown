@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Push messages"
+title: "Register for push messages"
 description: "Push messages may consist of breaking news, site updates, or other information of interest to the user. The information is pushed from the server to a service worker before it is sent to the user as a notification."
 authors:
 - dgash
@@ -153,9 +153,3 @@ function unsubscribe() {
   });  
 }
 {% endhighlight %}
-
-## Permissions
-
-Like any native app, notifications require permission on the target device. 
-The permission should be explicitly requested, and the reason for the request 
-should be clear and specific. Be sure to review [HTML5Rocks article on the Permissions API](http://updates.html5rocks.com/2015/04/permissions-api-for-the-web), and the [best practices for push](../../engage-and-retain/push-notifications/).

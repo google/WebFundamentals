@@ -4,7 +4,7 @@ title: "Asking permission for notifications"
 description: "There's more to getting a user's permission to send them notifications than throwing up a dialog box."
 published_on: 2015-10-01
 updated_on: 2015-10-01
-order: 2
+order: 3
 authors:
   - josephmedley
 translation_priority: 1
