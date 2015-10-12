@@ -1,12 +1,12 @@
 ---
 layout: shared/narrow
-title: "Notifications"
+title: "Display a notification"
 description: "The notification is the actual message that is sent to a user after he has enabled push messages and has subscribed to the site. Messages are often sent via Google Cloud Messaging (GCM), a service that handles all aspects of message queueing and delivery to client applications running on target devices, but there are other services that support push notifications."
 authors:
   - dgash
 published_on: 2015-10-01
 updated_on: 2015-10-01
-order: 3
+order: 4
 notes:
   sameorigin: "It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
 ---

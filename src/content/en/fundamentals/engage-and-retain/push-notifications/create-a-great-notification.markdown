@@ -1,24 +1,20 @@
 ---
 layout: shared/narrow
-title: "Create a great notification"
+title: "Tips for creating engaging notifications"
 description: ""
 published_on: 2015-10-02
 updated_on: 2015-10-02
-order: 4
+order: 6
 authors:
   - josephmedley
 translation_priority: 1
 ---
 
-<p class="intro">
-
-</p>
-
 ## Always use a title, description, and icon
 
 A notification takes a number of options. To be minimally user-friendly you
 should always include a title, description, and icon. Do so with options
-parameter of the showNotification() method. For example:
+parameter of the `showNotification()` method. For example:
 
 {% highlight javascript %} 
   self.addEventListener('push', function(event) {
@@ -44,14 +40,21 @@ parameter of the showNotification() method. For example:
 Make the title relevant to the context of the message and include something
 specific from the message.
 
-**BAD:** Notifcation from facebook.com
-
-**GOOD:** Paul Kinlan sent you a message
+<div class="mdl-grid" hidden>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="" alt="A good notification sent from Facebook">
+    <figcaption class="wf-figcaption-good">DO: Make the title relevant and specific.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="" alt="A bad notification that is not relevant or specific."> 
+    <figcaption class="wf-figcaption-bad">DON'T: Send generic, non-actionable text.</figcaption>
+  </figure>
+</div>
 
 ## Make the icon contextual
 
 Just as with titles, icons should convey something about the message. In the
-previous instance where 'Paul Kinlan sent you a message', you would use an
+previous instance where 'Paul Kinlan sent you a message', use an
 icon specific to messages rather than your app or site logo.
 
 ## Use vibration judiciously
