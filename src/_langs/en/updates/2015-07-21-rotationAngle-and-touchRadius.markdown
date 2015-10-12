@@ -10,7 +10,7 @@ type: news
 date: 2015-07-21
 
 title: "Using rotationAngle and touchRadius"
-description: "A small set changes have landed in Chrome 45 that will make it easier for developers to build better touch based apps"
+description: "A small set of changes have landed in Chrome 45 that will make it easier for developers to build better touch based apps"
 article:
   written_on: 2015-07-21
   updated_on: 2015-07-21
