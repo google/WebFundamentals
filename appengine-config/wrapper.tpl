@@ -13,8 +13,6 @@
 
     <!-- This is mdl version 1.0.5 -->
     <script src="/web/scripts/material-design-lite/dist/material.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,300,500,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
     {% comment %}
       This helper script checks if a G+ comment block should be loaded and loads it if needed.
     {% endcomment %}
