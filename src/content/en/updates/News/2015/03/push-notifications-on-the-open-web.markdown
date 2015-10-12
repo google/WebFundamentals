@@ -727,7 +727,7 @@ list item with the name "Worker pid:...." which has the URL of your service
 worker.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/service-worker-on-chrome-for-android.png" alt="Screenshot showing where service workers live in chrome inspect" />
+  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-04-push-on-the-open-web/service-worker-on-chrome-for-android.png" alt="Screenshot showing where service workers live in Chrome inspect" />
 </p>
 
 ## UX for Push Notifications
