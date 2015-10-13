@@ -25,10 +25,11 @@ playback. Voice Memos solves this by caching memos on the device. The code is
 
 ### Offline access
 
-The [Guitar Tuner app](https://guitar-tuner.appspot.com/) 
-by Paul Lewis doesn't need a server to run, but how do you keep it on the 
-device? A service worker stores the app's resources so that reopening doesn't require 
-communicating with a server. The code is [available on GitHub](https://github.com/GoogleChrome/guitar-tuner). 
+The [Guitar Tuner app](https://guitar-tuner.appspot.com/)  by Paul Lewis
+doesn't need a server to run. But how do you keep it on the  device? A service
+worker stores the app's resources so that reopening doesn't require
+communicating with a server. The code is also [available on
+GitHub](https://github.com/GoogleChrome/guitar-tuner).
 
 
 ### Engagement

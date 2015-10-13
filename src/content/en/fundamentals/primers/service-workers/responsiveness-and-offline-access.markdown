@@ -39,7 +39,8 @@ response with a call to `event.respondWith()`.
 
 {% highlight javascript %}
 self.addEventListener('fetch', function(fetchEvent) {
-  fetchEvent.respondWith(  // Always return a response object.
+  fetchEvent.respondWith(  
+    // Always return a response object or a promise resolving to a response object.
     // Look in the cache.
     caches.match(fetchEvent.request).then(function(response) {
       // Go to the network if it's not in the cache.
@@ -49,5 +50,7 @@ self.addEventListener('fetch', function(fetchEvent) {
 });
 {% endhighlight %}
 
-This code is still missing a few pieces. It doesn't show how data gets into the 
-cache, and it doesn't cache anything it requests. 
+This code is still missing a few pieces. It doesn't show how data gets into
+the  cache, and it doesn't cache anything it requests. For that, head over to
+Jake Archibald's [Offline Cookbook](https://jakearchibald.com/2014/offline-
+cookbook/) and keep reading.
