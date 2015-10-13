@@ -3,6 +3,8 @@ layout: updates/post
 title: "Predefined snippets"
 published_on: 2015-05-01
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "How to run predefined snippets of code on any web page."

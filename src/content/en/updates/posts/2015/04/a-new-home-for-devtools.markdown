@@ -5,6 +5,7 @@ updated_on: 2015-03-30
 authors:
   - pbakaus
 tags:
+  - devtools
   - news
   - outreach
 title: "A new home for DevTools"

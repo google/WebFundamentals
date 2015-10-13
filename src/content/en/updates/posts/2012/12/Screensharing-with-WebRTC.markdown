@@ -6,6 +6,7 @@ updated_on: 2012-12-24
 authors:
   - samdutton
 tags:
+  - news
   - getusermedia
   - screenshare
   - webrtc

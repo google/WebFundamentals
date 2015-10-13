@@ -3,6 +3,8 @@ layout: updates/post
 title: "Easy timeline recording"
 published_on: 2015-05-09
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Try undocking DevTools to a separate window so the record button is positioned closely to the portion of the page where you need to carry out an action"

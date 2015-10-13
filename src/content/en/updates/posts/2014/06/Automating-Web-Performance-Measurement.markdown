@@ -7,6 +7,7 @@ updated_on: 2014-06-06
 authors:
   - addyosmani
 tags:
+  - news
   - gulp
   - performance
   - pagespeed

@@ -7,6 +7,7 @@ updated_on: 2015-07-21
 authors:
   - samdutton
 tags:
+  - news
   - audio
   - video
   - Android

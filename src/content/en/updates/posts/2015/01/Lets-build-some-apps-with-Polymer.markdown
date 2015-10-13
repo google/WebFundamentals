@@ -7,6 +7,7 @@ updated_on: 2015-01-20
 authors:
   - robdodson
 tags:
+  - news
   - webcomponents
   - polymer
   - chromedevsummit

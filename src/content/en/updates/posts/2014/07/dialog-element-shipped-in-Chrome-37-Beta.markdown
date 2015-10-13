@@ -7,6 +7,7 @@ updated_on: 2014-07-24
 authors:
   - agektmr
 tags:
+  - news
   - dialog
   - semantics
 ---

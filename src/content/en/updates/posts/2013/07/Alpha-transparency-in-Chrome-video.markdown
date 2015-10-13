@@ -7,6 +7,7 @@ updated_on: 2013-07-26
 authors:
   - samdutton
 tags:
+  - news
   - video
   - webm
 ---

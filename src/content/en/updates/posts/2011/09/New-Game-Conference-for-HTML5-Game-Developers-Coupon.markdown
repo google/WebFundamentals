@@ -6,6 +6,7 @@ updated_on: 2011-09-29
 authors:
   - sethladd
 tags:
+  - news
   - games
 ---
 <p>

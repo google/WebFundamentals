@@ -6,6 +6,7 @@ updated_on: 2015-09-30
 authors:
   - paullewis
 tags:
+  - news
   - performance
   - update
 description: "<code>requestIdleCallback</code> is new performance API for scheduling work when the browser is idle."

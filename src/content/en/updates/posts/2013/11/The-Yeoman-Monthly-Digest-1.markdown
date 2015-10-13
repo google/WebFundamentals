@@ -7,6 +7,7 @@ updated_on: 2013-11-07
 authors:
   - addyosmani
 tags:
+  - news
   - frontend
   - tools
   - yeoman

@@ -3,6 +3,8 @@ layout: updates/post
 title: "Downloading resources in HTML5: a[download]"
 published_on: 2011-08-02
 updated_on: 2011-08-02
+tags:
+  - news
 authors:
   - ericbidelman
 ---

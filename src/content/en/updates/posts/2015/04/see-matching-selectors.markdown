@@ -3,6 +3,8 @@ layout: updates/post
 title: "See matching selectors"
 published_on: 2015-04-27
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "When you are viewing a selector in the Styles Pane, comma separated selector portions are colored differently depending on whether or not they match the selected DOM node."

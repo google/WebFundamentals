@@ -7,6 +7,7 @@ updated_on: 2015-03-12
 authors:
   - mattgaunt
 tags:
+  - news
   - pushmessaging
   - notifications
   - serviceworker

@@ -6,6 +6,7 @@ updated_on: 2015-07-24
 authors:
   - pbakaus
 tags:
+  - devtools
   - digest
   - update
 description: "Discover the new film strip functionality and more in this first of many DevTools Digest updates."

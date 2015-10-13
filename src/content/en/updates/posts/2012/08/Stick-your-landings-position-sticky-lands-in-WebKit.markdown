@@ -6,6 +6,7 @@ updated_on: 2012-08-30
 authors:
   - ericbidelman
 tags:
+  - news
   - performance
   - css
 ---

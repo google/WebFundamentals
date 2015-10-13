@@ -6,6 +6,7 @@ updated_on: 2011-12-08
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - mobile
   - performance
   - webgl

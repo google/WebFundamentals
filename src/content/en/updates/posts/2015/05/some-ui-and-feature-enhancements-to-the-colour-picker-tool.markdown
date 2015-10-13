@@ -4,6 +4,8 @@ published: false
 title: "Some UI and feature enhancements to the Colour Picker tool"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 featured_image: /web/updates/images/2015-05-19-some-ui-and-feature-enhancements-to-the-colour-picker-tool/colour-picker-upgrade.gif

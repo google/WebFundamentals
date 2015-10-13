@@ -6,6 +6,7 @@ updated_on: 2012-02-03
 authors:
   - ericbidelman
 tags:
+  - news
   - webaudio
   - multimedia
   - audio

@@ -7,6 +7,7 @@ updated_on: 2014-01-20
 authors:
   - addyosmani
 tags:
+  - news
   - frontend
   - polymer
   - webcomponents

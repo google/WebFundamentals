@@ -6,6 +6,7 @@ updated_on: 2013-03-22
 authors:
   - ericbidelman
 tags:
+  - news
   - dom
   - semantics
 ---

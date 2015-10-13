@@ -6,6 +6,7 @@ updated_on: 2012-01-07
 authors:
   - petelepage
 tags:
+  - news
   - video
   - multimedia
 ---

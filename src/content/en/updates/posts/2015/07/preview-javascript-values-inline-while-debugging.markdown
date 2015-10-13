@@ -4,6 +4,8 @@ layout: updates/post
 title: "Preview JavaScript values inline while debugging"
 published_on: 2015-07-07
 updated_on: 2015-07-07
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn how to preview the values of JavaScript variables in DevTools while debugging."

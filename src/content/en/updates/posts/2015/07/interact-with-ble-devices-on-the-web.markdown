@@ -8,6 +8,7 @@ updated_on: 2015-09-10
 authors:
   - beaufortfrancois
 tags:
+  - news
   - Bluetooth
   - IoT
   - WebBluetooth

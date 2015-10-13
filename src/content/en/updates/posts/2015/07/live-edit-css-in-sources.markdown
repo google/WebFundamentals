@@ -3,6 +3,8 @@ layout: updates/post
 title: Live-edit CSS in Sources
 published_on: 2015-07-24
 updated_on: 2015-07-24
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Did you know you can live edit CSS in Sources and have it update the page in real-time?"

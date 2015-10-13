@@ -7,6 +7,7 @@ updated_on: 2013-09-28
 authors:
   - paulirish
 tags:
+  - news
   - devtools
   - webfonts
   - tools

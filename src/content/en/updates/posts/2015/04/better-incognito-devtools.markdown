@@ -3,6 +3,8 @@ layout: updates/post
 title: "Better Incognito DevTools"
 published_on: 2015-04-24
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Some appearance preferences are now persisted through to incognito windows."

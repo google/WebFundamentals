@@ -7,6 +7,7 @@ updated_on: 2013-10-07
 authors:
   - paulirish
 tags:
+  - news
   - performance
   - layout
   - css

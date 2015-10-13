@@ -6,6 +6,7 @@ updated_on: 2011-08-05
 authors:
   - sethladd
 tags:
+  - news
   - offline
   - filesystem
 ---

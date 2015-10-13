@@ -7,6 +7,7 @@ updated_on: 2014-01-07
 authors:
   - ericbidelman
 tags:
+  - news
   - mobile
   - polymer
   - webcomponents

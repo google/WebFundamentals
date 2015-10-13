@@ -3,6 +3,8 @@ layout: updates/post
 title: "Reveal in Elements panel"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Reveal DOM nodes in the Elements panel from the Console."

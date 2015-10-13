@@ -6,6 +6,7 @@ updated_on: 2012-02-18
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - webgl
   - graphics
 ---

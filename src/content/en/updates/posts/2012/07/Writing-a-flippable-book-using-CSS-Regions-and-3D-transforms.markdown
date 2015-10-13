@@ -6,6 +6,7 @@ updated_on: 2012-07-04
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - regions
   - css
 ---

@@ -6,6 +6,7 @@ updated_on: 2012-11-16
 authors:
   - mikewest
 tags:
+  - news
   - contentsecuritypolicy
   - security
 ---

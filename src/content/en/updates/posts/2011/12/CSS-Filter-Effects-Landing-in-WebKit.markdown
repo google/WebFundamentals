@@ -6,6 +6,7 @@ updated_on: 2011-12-22
 authors:
   - ericbidelman
 tags:
+  - news
   - presentation
   - css
   - filters

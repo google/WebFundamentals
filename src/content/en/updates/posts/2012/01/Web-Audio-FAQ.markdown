@@ -6,6 +6,7 @@ updated_on: 2012-01-10
 authors:
   - borissmus
 tags:
+  - news
   - webaudio
   - multimedia
 ---

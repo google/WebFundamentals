@@ -6,6 +6,7 @@ updated_on: 2012-08-23
 authors:
   - ericbidelman
 tags:
+  - news
   - file
 ---
 Let's say you have a photo editing app and you'd like users to be able to drag in hundreds of photos and copy them into your app. Ok, what do you do?

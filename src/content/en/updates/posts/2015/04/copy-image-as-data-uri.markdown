@@ -3,6 +3,8 @@ layout: updates/post
 title: "Copy image as data URI"
 published_on: 2015-04-29
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Right click on an image preview within the Resources Panel to copy it as a Data URI (base 64 encoded)."

@@ -7,6 +7,7 @@ updated_on: 2015-03-12
 authors:
   - paulkinlan
 tags:
+  - news
   - addtohomescreen
   - webapp
   - install

@@ -7,6 +7,7 @@ updated_on: 2014-11-10
 authors:
   - paulkinlan
 tags:
+  - news
   - mobile
   - apps
   - frontend

@@ -6,6 +6,7 @@ updated_on: 2012-03-16
 authors:
   - sethladd
 tags:
+  - news
   - performance
   - javascript
 ---

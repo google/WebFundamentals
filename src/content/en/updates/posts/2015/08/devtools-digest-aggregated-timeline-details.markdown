@@ -6,6 +6,7 @@ updated_on: 2015-08-24
 authors:
   - pbakaus
 tags:
+  - devtools
   - digest
   - update
 description: "Find out which third-party scripts cause perf issues with the Aggregated Details in Timeline, how to choose consistent colors with the new color palette and much more."

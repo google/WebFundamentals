@@ -6,6 +6,7 @@ updated_on: 2011-10-28
 authors:
   - sethladd
 tags:
+  - news
   - offline
   - appcache
 ---

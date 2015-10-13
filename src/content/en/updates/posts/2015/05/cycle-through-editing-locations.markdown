@@ -3,6 +3,8 @@ layout: updates/post
 title: "Cycle through editing locations"
 published_on: 2015-05-04
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Your cursor position history is preserved in the Sources Panel, allowing you to cycle through previous editing locations with <kbd class='kbd'>Alt-</kbd> (backwards) or <kbd class='kbd'>Alt+</kbd> (forwards).\uFEFF"

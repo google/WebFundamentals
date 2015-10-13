@@ -3,6 +3,8 @@ layout: updates/post
 title: "Go to a line number at a specific column"
 published_on: 2015-05-08
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn how to jump to specific line numbers in the Sources panel."

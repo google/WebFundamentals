@@ -3,6 +3,8 @@ layout: updates/post
 title: "Quickly change CSS values"
 published_on: 2015-05-16
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Quickly change CSS values with the keyboard or mousewheel"
