@@ -5,6 +5,8 @@ published_on: 2012-02-08
 updated_on: 2012-02-08
 tags:
   - news
+  - registerprotocolhandler
+  - mailto
 authors:
   - paulirish
 ---

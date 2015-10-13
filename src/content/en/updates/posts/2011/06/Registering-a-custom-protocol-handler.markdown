@@ -5,6 +5,7 @@ published_on: 2011-06-30
 updated_on: 2011-06-30
 tags:
   - news
+  - registerprotocolhandler
 authors:
   - ericbidelman
 ---

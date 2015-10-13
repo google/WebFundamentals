@@ -1,5 +1,6 @@
 ---
 layout: shared/narrow
+published: false
 title: "The Players"
 description: "A basic Service Worker Implementation only has two players."
 published_on: 2015-10-01
