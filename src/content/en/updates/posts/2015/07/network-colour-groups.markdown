@@ -3,6 +3,8 @@ layout: updates/post
 title: Network colour groups
 published_on: 2015-07-08
 updated_on: 2015-07-08
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn about which colors match to which resource type to easy identify resources."

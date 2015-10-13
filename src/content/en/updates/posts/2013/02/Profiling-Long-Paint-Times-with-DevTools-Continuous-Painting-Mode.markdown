@@ -6,6 +6,7 @@ updated_on: 2013-02-19
 authors:
   - paulirish
 tags:
+  - news
   - performance
   - devtools
 ---

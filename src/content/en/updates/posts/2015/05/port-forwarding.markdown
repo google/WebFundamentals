@@ -6,6 +6,7 @@ updated_on: 2015-05-19
 authors:
   - umarhansa
 tags:
+  - devtools
   - mobile
 description: "DevTools port forwarding enables even localhost URLs to work on mobile."
 featured_image: /web/updates/images/2015-05-11-devtools-port-forwarding-allows-localhost-urls-to-work-on-mobile/port-forward.gif

@@ -7,6 +7,7 @@ updated_on: 2013-12-19
 authors:
   - alexdanilo
 tags:
+  - news
   - animations
   - css
 ---

@@ -7,6 +7,7 @@ updated_on: 2014-01-10
 authors:
   - sethladd
 tags:
+  - news
   - platforms
   - pnacl
   - dart

@@ -3,6 +3,8 @@ layout: updates/post
 title: "Quick-edit element tags"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "You can double click on the opening tag name of a node in the Elements Panel to edit it."

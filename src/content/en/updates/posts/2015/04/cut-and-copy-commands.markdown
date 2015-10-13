@@ -7,6 +7,7 @@ updated_on: 2015-04-15
 authors:
   - mattgaunt
 tags:
+  - news
   - cutandcopy
   - execCommand
 ---

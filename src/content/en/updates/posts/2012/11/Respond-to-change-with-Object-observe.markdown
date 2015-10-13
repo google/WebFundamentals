@@ -6,6 +6,7 @@ updated_on: 2012-11-28
 authors:
   - alexdanilo
 tags:
+  - news
   - javascript
 ---
 Lots of JavaScript frameworks using MVC or MDV need to respond to changes to the objects that model the state inside a web application. This capability is a fundamental part of a data-binding model.

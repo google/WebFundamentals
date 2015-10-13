@@ -3,6 +3,8 @@ layout: updates/post
 title: "Autocomplete for bracket notation"
 published_on: 2015-05-15
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Did you know you can autocomplete bracket notation in the Sources panel?"

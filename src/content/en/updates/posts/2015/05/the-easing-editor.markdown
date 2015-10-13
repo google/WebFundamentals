@@ -3,6 +3,8 @@ layout: updates/post
 title: "The easing editor"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Select an easing CSS property to get a visual animated preview for how it behaves."

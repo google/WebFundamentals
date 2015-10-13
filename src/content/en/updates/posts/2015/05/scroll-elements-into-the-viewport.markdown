@@ -3,6 +3,8 @@ layout: updates/post
 title: "Scroll elements into the viewport"
 published_on: 2015-05-13
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "If an element you're inspecting is out of view, here's how to bring it into the viewport."

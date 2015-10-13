@@ -3,6 +3,8 @@ layout: updates/post
 title: "Quickly monitor events from the Console Panel"
 published_on: 2015-04-26
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "You can log all the events dispatched to an object using the Command Line API method <strong>monitorEvents(object [, events])</strong>."

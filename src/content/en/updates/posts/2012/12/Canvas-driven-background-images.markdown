@@ -7,6 +7,7 @@ updated_on: 2012-12-12
 authors:
   - ericbidelman
 tags:
+  - news
   - canvas
   - css
   - graphics

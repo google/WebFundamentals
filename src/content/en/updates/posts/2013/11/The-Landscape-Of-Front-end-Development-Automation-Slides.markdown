@@ -7,6 +7,7 @@ updated_on: 2013-11-04
 authors:
   - addyosmani
 tags:
+  - news
   - frontend
   - productivity
   - tools

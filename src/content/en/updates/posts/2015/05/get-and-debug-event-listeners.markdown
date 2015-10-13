@@ -3,6 +3,8 @@ layout: updates/post
 title: "Get and debug event listeners"
 published_on: 2015-05-18
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Get and debug event listeners in DevTools with these console commands."

@@ -3,6 +3,8 @@ layout: updates/post
 title: "Triggering of pseudo classes"
 published_on: 2015-05-12
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn how to trigger pseudo classes such as :active to properly debug your CSS."

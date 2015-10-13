@@ -46,6 +46,7 @@ module Jekyll
 
     def organisePageTree(tree)
       tree['pages'] = tree['pages'].sort do |a, b|
+        puts a.data['title'] + ' // ' + b.data['title']
         a_order = a.data['order'] || a.data['published_on'] || 0
         b_order = b.data['order'] || b.data['published_on'] || 0
         a_order <=> b_order

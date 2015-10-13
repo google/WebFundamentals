@@ -6,6 +6,7 @@ updated_on: 2012-02-20
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - webaudio
   - webgl
   - multimedia

@@ -3,6 +3,8 @@ layout: updates/post
 title: "Who inspects the inspector?"
 published_on: 2015-07-13
 updated_on: 2015-07-13
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Did you know you can inspect your DevTools with DevTools?"

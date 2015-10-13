@@ -3,6 +3,8 @@ layout: updates/post
 title: Edit HTML in the Console Panel
 published_on: 2015-08-10
 updated_on: 2015-08-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "The DOM node context menu, which you may recognize from the elements panel, is also present in the console panel."

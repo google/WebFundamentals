@@ -3,6 +3,8 @@ layout: updates/post
 title: Improved DOM breadcrumbs
 published_on: 2015-07-24
 updated_on: 2015-07-24
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Did you know the Elements Panel has a <em>Breadcrumb trail</em>?"

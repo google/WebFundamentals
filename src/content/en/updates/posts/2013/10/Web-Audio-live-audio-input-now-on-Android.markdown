@@ -7,6 +7,7 @@ updated_on: 2013-10-15
 authors:
   - chriswilson
 tags:
+  - news
   - webaudio
   - input
   - android

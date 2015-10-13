@@ -3,6 +3,8 @@ layout: updates/post
 title: "The larger-than advanced Network Panel filter, and a few others"
 published_on: 2015-08-25
 updated_on: 2015-08-25
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Did you know that the filter in the Network panel supports a few nifty custom search labels?"

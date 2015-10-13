@@ -6,6 +6,7 @@ updated_on: 2011-07-06
 authors:
   - paulkinlan
 tags:
+  - news
   - webgl
   - cors
 ---

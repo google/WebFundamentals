@@ -7,6 +7,7 @@ updated_on: 2015-06-06
 authors:
   - greenido
 tags:
+  - news
   - forms
   - autofill
   - monetization

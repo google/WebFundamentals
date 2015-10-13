@@ -3,6 +3,8 @@ layout: updates/post
 title: "Simple keyboard tricks to use in the Styles Pane"
 published_on: 2015-08-24
 updated_on: 2015-08-24
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn how to effectively navigate the Styles Pane with a few useful keyboard tricks."

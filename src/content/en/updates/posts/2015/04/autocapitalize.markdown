@@ -7,6 +7,7 @@ updated_on: 2015-04-16
 authors:
   - paulkinlan
 tags:
+  - news
   - autocapitalize
   - mobile
 ---

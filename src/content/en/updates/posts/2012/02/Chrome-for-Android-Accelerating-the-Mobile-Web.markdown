@@ -6,6 +6,7 @@ updated_on: 2012-02-07
 authors:
   - borissmus
 tags:
+  - news
   - android
 ---
 You've probably already heard that Chrome for Android Beta launched today. This

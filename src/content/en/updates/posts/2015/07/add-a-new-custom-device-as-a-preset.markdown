@@ -3,6 +3,8 @@ layout: updates/post
 title: "Add a new custom device as a preset"
 published_on: 2015-07-22
 updated_on: 2015-07-22
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Do you frequently emulate devices of a certain dimension? In DevTools Device Mode, you can add new device presets."

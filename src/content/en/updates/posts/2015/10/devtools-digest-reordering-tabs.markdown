@@ -6,6 +6,7 @@ updated_on: 2015-10-05
 authors:
   - pbakaus
 tags:
+  - devtools
   - digest
   - update
 description: "Re-order DevTools tabs which ever way suits you best; see exactly where framework events were bound and block network requests to see which third party scripts slow you down."

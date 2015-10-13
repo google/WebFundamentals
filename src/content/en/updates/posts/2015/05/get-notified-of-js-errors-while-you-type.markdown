@@ -3,6 +3,8 @@ layout: updates/post
 title: "Get notified of JS errors while you type"
 published_on: 2015-05-10
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up."

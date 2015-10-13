@@ -6,6 +6,7 @@ updated_on: 2012-03-06
 authors:
   - alexdanilo
 tags:
+  - news
   - css
   - dom
 ---

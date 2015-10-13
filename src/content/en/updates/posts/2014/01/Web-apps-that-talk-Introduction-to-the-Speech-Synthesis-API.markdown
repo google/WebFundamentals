@@ -7,6 +7,7 @@ updated_on: 2014-01-14
 authors:
   - ericbidelman
 tags:
+  - news
   - multimedia
   - voice
   - webspeech

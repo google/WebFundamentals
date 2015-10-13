@@ -6,6 +6,7 @@ updated_on: 2011-10-07
 authors:
   - paulkinlan
 tags:
+  - news
   - webgl
   - canvas
 ---

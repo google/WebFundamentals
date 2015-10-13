@@ -6,6 +6,7 @@ updated_on: 2012-09-11
 authors:
   - tomwiltzius
 tags:
+  - news
   - stacking
   - css
 ---

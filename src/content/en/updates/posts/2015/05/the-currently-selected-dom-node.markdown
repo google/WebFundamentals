@@ -3,6 +3,8 @@ layout: updates/post
 title: "The currently selected DOM node"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn the quick console shortcut to get the currently selected DOM node."

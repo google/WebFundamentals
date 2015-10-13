@@ -6,6 +6,7 @@ updated_on: 2012-04-18
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - webrtc
 ---
 On March 24th, Google hosted the world's first WebRTC developer event, the WebRTC [Protothon](http://protothon.com). The hackathon brought together developers and designers from around the world, with browser engineers at hand to give assistance when needed.

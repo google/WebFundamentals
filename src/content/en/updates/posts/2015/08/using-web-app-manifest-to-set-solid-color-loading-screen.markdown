@@ -6,6 +6,7 @@ updated_on: 2015-08-28
 authors:
   - paulkinlan
 tags:
+  - news
   - manifest
   - webapp
 description: "Improve your perceived loading performance for web apps launched from the home screen."

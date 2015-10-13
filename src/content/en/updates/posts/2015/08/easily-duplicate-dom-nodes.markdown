@@ -3,6 +3,8 @@ layout: updates/post
 title: "Easily duplicate DOM nodes"
 published_on: 2015-08-10
 updated_on: 2015-08-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "You can easily change the DOM without having to edit the HTML as a giant string."

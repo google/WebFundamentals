@@ -6,6 +6,7 @@ updated_on: 2011-08-28
 authors:
   - paulkinlan
 tags:
+  - news
   - dom
 ---
 <p>If we want to insert content in a HTML document we have three ways to do it:</p>
