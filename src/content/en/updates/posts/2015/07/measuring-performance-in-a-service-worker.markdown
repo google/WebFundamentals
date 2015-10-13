@@ -7,6 +7,7 @@ updated_on: 2015-07-21
 authors:
   - paulkinlan
 tags:
+  - news
   - performance
   - serviceworker
 ---

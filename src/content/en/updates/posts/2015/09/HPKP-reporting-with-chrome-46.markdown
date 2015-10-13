@@ -6,6 +6,7 @@ updated_on: 2015-09-01
 authors:
   - emilystark
 tags:
+  - news
   - security
   - hpkp
 description: "Chrome 46 ships with a feature called HPKP reporting, which can help you roll out a stricter form of SSL for your site."

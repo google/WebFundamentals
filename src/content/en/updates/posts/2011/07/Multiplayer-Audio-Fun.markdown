@@ -6,6 +6,7 @@ updated_on: 2011-07-15
 authors:
   - paulkinlan
 tags:
+  - news
   - webaudio
   - websockets
   - connectivity

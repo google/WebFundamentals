@@ -3,6 +3,8 @@ layout: updates/post
 title: "Film strips in Network panel"
 published_on: 2015-05-12
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Visually navigate the network panel and view captured screenshots during page load"

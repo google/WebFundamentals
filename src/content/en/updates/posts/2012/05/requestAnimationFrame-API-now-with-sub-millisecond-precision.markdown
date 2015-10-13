@@ -6,6 +6,7 @@ updated_on: 2012-05-22
 authors:
   - paulirish
 tags:
+  - news
   - internals
   - performance
 ---

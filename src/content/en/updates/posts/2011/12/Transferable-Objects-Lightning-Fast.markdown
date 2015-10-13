@@ -6,6 +6,7 @@ updated_on: 2011-12-10
 authors:
   - ericbidelman
 tags:
+  - news
   - binary
   - performance
   - workers

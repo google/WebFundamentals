@@ -7,6 +7,7 @@ updated_on: 2015-07-17
 authors:
   - mattgaunt
 tags:
+  - news
   - push
   - notifications
   - data

@@ -6,6 +6,7 @@ updated_on: 2012-08-15
 authors:
   - agektmr
 tags:
+  - news
   - forms
   - datalist
 ---

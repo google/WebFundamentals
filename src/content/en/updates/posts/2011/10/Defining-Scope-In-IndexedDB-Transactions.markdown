@@ -6,6 +6,7 @@ updated_on: 2011-10-27
 authors:
   - greenido
 tags:
+  - news
   - indexeddb
   - offline
 ---

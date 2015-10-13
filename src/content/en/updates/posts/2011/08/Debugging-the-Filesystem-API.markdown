@@ -6,6 +6,7 @@ updated_on: 2011-08-18
 authors:
   - ericbidelman
 tags:
+  - news
   - storage
   - filesystem
 ---

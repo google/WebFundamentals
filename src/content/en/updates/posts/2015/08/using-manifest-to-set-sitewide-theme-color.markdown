@@ -6,6 +6,7 @@ updated_on: 2015-08-29
 authors:
   - paulkinlan
 tags:
+  - news
   - webapp
   - manifest
 description: "Set a theme-color in the manifest and have it available to all pages on your site when launched from the home screen."

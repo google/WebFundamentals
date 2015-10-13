@@ -7,6 +7,7 @@ updated_on: 2015-03-09
 authors:
   - ewagasperowicz
 tags:
+  - news
   - webcomponents
   - json-ld
 ---

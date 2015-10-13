@@ -6,6 +6,7 @@ updated_on: 2011-09-01
 authors:
   - ericbidelman
 tags:
+  - news
   - binary
   - workers
 ---

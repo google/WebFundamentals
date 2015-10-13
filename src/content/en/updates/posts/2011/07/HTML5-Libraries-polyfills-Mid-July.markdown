@@ -3,6 +3,8 @@ layout: updates/post
 title: "HTML5 Libraries/polyfills - Mid July"
 published_on: 2011-07-26
 updated_on: 2011-07-26
+tags:
+  - news
 authors:
   - ericbidelman
 ---

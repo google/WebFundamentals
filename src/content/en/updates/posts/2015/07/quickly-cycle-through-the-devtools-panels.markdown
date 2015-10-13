@@ -3,6 +3,8 @@ layout: updates/post
 title: "Quickly cycle through the DevTools panels"
 published_on: 2015-07-15
 updated_on: 2015-07-15
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "You can use <kbd class='kbd'>Cmd + ]</kbd> (or <kbd class='kbd'>Cmd + [</kbd>) to cycle through the panels in the DevTools."

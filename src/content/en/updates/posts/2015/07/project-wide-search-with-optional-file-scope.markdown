@@ -3,6 +3,8 @@ layout: updates/post
 title: "Project wide search with optional file scope"
 published_on: 2015-07-09
 updated_on: 2015-07-09
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn the secret commands to search like a pro in DevTools."

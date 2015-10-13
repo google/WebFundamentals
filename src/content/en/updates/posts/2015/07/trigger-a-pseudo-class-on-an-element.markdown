@@ -3,6 +3,8 @@ layout: updates/post
 title: "Trigger a pseudo class on an element"
 published_on: 2015-07-10
 updated_on: 2015-07-10
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Ever tried to debug CSS hover effects but failed keeping the mouse on the element? Here's how to do it."

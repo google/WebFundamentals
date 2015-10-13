@@ -6,6 +6,7 @@ updated_on: 2011-08-31
 authors:
   - agektmr
 tags:
+  - news
   - websockets
   - connectivity
 ---

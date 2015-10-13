@@ -3,6 +3,8 @@ layout: updates/post
 title: "Getting Gmail to handle all mailto: links with registerProtocolHandler"
 published_on: 2012-02-08
 updated_on: 2012-02-08
+tags:
+  - news
 authors:
   - paulirish
 ---

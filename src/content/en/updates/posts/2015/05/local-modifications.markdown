@@ -3,6 +3,8 @@ layout: updates/post
 title: "Local Modifications"
 published_on: 2015-05-05
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Local modifications lets you see what changes have been made (via DevTools) to certain source files."

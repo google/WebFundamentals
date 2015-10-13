@@ -6,6 +6,7 @@ updated_on: 2012-07-23
 authors:
   - agektmr
 tags:
+  - news
   - dnd
   - filesystem
 ---

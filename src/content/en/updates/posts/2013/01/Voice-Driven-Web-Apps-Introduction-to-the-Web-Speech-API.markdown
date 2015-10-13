@@ -6,6 +6,7 @@ updated_on: 2013-01-14
 authors:
   - glenshires
 tags:
+  - news
   - voice
   - multimedia
   - webspeech

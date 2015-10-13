@@ -7,6 +7,7 @@ updated_on: 2015-09-17
 authors:
   - samdutton
 tags:
+  - news
   - audio
   - video
   - media

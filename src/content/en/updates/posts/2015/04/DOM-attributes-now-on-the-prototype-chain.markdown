@@ -7,6 +7,7 @@ updated_on: 2015-04-14
 authors:
   - paulkinlan
 tags:
+  - news
   - dom
 ---
 

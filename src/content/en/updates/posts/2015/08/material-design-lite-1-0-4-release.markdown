@@ -7,8 +7,9 @@ updated_on: 2015-08-21
 authors:
   - addyosmani
 tags:
- - mdl
- - release
+  - news
+  - mdl
+  - release
 ---
 ![](/web/updates/images/2015-08-21-new-mdl-release/mdlsite.jpg)
 

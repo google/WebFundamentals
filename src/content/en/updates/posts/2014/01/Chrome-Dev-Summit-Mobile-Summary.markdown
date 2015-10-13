@@ -7,6 +7,7 @@ updated_on: 2014-01-06
 authors:
   - paulkinlan
 tags:
+  - news
   - ux
   - workflow
   - mobile

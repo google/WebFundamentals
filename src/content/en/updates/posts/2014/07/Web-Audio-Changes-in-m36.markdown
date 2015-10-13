@@ -7,6 +7,7 @@ updated_on: 2014-07-25
 authors:
   - chriswilson
 tags:
+  - news
   - webaudio
 ---
 Web Audio changes

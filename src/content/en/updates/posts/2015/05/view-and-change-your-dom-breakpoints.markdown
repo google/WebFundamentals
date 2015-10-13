@@ -3,6 +3,8 @@ layout: updates/post
 title: "View and change your DOM breakpoints"
 published_on: 2015-05-14
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "How to view and change your DOM breakpoints with the Breakpoints pane in DevTools."

@@ -7,6 +7,7 @@ updated_on: 2014-10-07
 authors:
   - jeffposnick
 tags:
+  - news
   - iterators
   - generators
   - es6

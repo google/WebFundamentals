@@ -3,6 +3,8 @@ layout: updates/post
 title: "Granular statement highlights"
 published_on: 2015-05-06
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "See the exact executed statement with granular highlighting."

@@ -6,6 +6,7 @@ updated_on: 2015-09-02
 authors:
   - paullewis
 tags:
+  - news
   - history
 featured_image: /web/updates/images/2015-09-02-history-api-scroll-restoration/featured.jpg
 description: "An update to the History API to prevent unsightly scroll jumping."

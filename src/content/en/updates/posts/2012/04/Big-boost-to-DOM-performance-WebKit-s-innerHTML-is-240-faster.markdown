@@ -6,6 +6,7 @@ updated_on: 2012-04-11
 authors:
   - samdutton
 tags:
+  - news
   - performance
   - dom
 ---

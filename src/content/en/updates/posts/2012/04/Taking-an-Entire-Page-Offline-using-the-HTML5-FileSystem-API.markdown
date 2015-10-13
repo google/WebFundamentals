@@ -6,6 +6,7 @@ updated_on: 2012-04-05
 authors:
   - ericbidelman
 tags:
+  - news
   - offline
   - filesystem
 ---

@@ -7,6 +7,7 @@ updated_on: 2014-01-09
 authors:
   - samdutton
 tags:
+  - news
   - owp
   - webrtc
   - blink

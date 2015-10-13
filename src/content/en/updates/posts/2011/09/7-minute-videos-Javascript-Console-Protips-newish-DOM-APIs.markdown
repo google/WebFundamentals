@@ -6,6 +6,7 @@ updated_on: 2011-09-28
 authors:
   - paulirish
 tags:
+  - news
   - devtools
 ---
 <p>I recently recorded some videos from the comfy red chair in our office. Probably some useful things here to learn.</p>

@@ -7,6 +7,7 @@ updated_on: 2014-02-17
 authors:
   - addyosmani
 tags:
+  - news
   - frontend
   - scaffolding
   - yeoman

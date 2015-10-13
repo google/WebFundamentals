@@ -7,6 +7,7 @@ updated_on: 2014-09-15
 authors:
   - mattgaunt
 tags:
+  - news
   - touchevent
 ---
 A [change landed](https://code.google.com/p/chromium/issues/detail?id=323935) in

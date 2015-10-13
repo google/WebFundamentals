@@ -3,6 +3,8 @@ layout: updates/post
 title: "Replay a network request in cURL"
 published_on: 2015-05-15
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn how to debug a network request from the command line."

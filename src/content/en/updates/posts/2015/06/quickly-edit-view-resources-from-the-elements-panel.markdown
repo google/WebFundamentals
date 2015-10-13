@@ -4,6 +4,8 @@ layout: updates/post
 title: "Quickly edit/view resources from the Elements panel"
 published_on: 2015-06-18
 updated_on: 2015-06-18
+tags:
+  - devtools
 authors:
   - umarhansa
 featured_image: /web/updates/images/2015-06-18-quickly-view-edit-css-or-javascript-resources-from-the-elements-panel/open-in-sources-from-elements.gif

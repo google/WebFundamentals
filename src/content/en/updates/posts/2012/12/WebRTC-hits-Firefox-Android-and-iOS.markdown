@@ -6,6 +6,7 @@ updated_on: 2012-12-10
 authors:
   - samdutton
 tags:
+  - news
   - video
   - webrtc
   - getusermedia

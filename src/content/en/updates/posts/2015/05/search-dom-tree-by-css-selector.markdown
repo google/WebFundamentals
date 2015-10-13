@@ -3,6 +3,8 @@ layout: updates/post
 title: "Search DOM tree by CSS selector"
 published_on: 2015-05-11
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "When browsing the DOM with the Elements panel, try searching for nodes via <kbd class=kbd>CMD/Ctrl+F</kbd> by their CSS selectors."

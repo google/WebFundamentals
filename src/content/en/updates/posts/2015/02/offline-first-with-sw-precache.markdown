@@ -7,6 +7,7 @@ updated_on: 2015-02-23
 authors:
   - jeffposnick
 tags:
+  - news
   - serviceworker
   - offline
   - cache

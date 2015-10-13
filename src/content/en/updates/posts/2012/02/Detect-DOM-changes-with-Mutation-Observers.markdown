@@ -7,6 +7,7 @@ updated_on: 2012-02-16
 authors:
   - paulkinlan
 tags:
+  - news
   - mutationobserver
   - dom
 ---

@@ -7,6 +7,7 @@ updated_on: 2015-08-20
 authors:
   - paulkinlan
 tags:
+  - news
   - poster
   - flash
   - performance

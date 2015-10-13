@@ -3,6 +3,8 @@ layout: updates/post
 title: "Alt + Click to expand all child nodes"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 featured_image: /web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif

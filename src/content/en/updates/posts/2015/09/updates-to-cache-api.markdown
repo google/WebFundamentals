@@ -6,6 +6,7 @@ updated_on: 2015-09-03
 authors:
   - jakearchibald
 tags:
+  - news
   - serviceworker
   - cache
 description: "Chrome 46 brings new methods to caches, as does Chrome 47, and probably 48. It never stops."

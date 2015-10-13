@@ -6,6 +6,7 @@ updated_on: 2011-10-27
 authors:
   - sethladd
 tags:
+  - news
   - halloween
 ---
 <p>A fun Halloween treat.</p>

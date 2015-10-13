@@ -6,6 +6,7 @@ updated_on: 2015-09-01
 authors:
   - ilyagrigorik
 tags:
+  - news
   - performance
   - clienthints
 description: "Image optimization is hard and automation is the key to success."

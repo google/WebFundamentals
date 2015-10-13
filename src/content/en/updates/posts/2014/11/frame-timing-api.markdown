@@ -7,6 +7,7 @@ updated_on: 2014-11-26
 authors:
   - paullewis
 tags:
+  - news
   - performance
   - testing
   - frontend

@@ -7,6 +7,7 @@ updated_on: 2015-05-07
 authors:
   - samdutton
 tags:
+  - news
   - video
   - flash
   - shaka-player
