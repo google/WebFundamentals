@@ -7,6 +7,7 @@ updated_on: 2013-12-13
 authors:
   - jakearchibald
 tags:
+  - news
   - mobile
   - performance
   - touchevent

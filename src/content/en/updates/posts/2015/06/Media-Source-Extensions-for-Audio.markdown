@@ -7,6 +7,7 @@ updated_on: 2015-06-22
 authors:
   - dalecurtis
 tags:
+  - news
   - audio
   - codec
   - MediaSourceExtensions

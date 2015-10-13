@@ -7,6 +7,7 @@ updated_on: 2014-03-20
 authors:
   - alexdanilo
 tags:
+  - news
   - layout
   - css
   - grids

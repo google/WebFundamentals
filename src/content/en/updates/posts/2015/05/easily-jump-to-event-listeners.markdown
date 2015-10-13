@@ -3,6 +3,8 @@ layout: updates/post
 title: "Easily jump to event listeners"
 published_on: 2015-05-07
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "Learn how to show the function definition of a registered event listener on any node."

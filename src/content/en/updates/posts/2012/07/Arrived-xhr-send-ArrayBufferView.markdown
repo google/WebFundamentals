@@ -6,6 +6,7 @@ updated_on: 2012-07-16
 authors:
   - ericbidelman
 tags:
+  - news
   - xhr2
   - binary
 ---

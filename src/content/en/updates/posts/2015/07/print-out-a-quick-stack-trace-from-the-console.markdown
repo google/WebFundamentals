@@ -3,6 +3,8 @@ layout: updates/post
 title: "Print out a quick stack trace from the Console"
 published_on: 2015-07-14
 updated_on: 2015-07-14
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "You can use console.trace() to get a quick and easy stack trace to better understand code execution flow."

@@ -6,6 +6,7 @@ updated_on: 2015-08-07
 authors:
   - pbakaus
 tags:
+  - devtools
   - announcement
 featured_image: /web/updates/images/2015-08-07-google-web-tools/featured.png
 description: "We've moved into our shiny new home at <a href='/web/tools/chrome-devtools'>developers.google.com/web/tools/chrome-devtools</a> and have great new tutorials and tips for you."

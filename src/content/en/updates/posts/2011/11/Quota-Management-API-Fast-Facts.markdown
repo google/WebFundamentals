@@ -6,6 +6,7 @@ updated_on: 2011-11-11
 authors:
   - agektmr
 tags:
+  - news
   - offline
   - quota
   - filesystem

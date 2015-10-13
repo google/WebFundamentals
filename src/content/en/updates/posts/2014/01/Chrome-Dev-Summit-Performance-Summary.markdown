@@ -7,6 +7,7 @@ updated_on: 2014-01-08
 authors:
   - paullewis
 tags:
+  - news
   - mobile
   - performance
 ---

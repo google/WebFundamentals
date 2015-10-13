@@ -3,6 +3,8 @@ layout: updates/post
 title: "Perform a column selection by by dragging"
 published_on: 2015-05-02
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "You can make a column selection in the Sources Panel editor by holding <kbd class='kbd'>Alt</kbd> while dragging the mouse."

@@ -7,6 +7,7 @@ updated_on: 2014-12-02
 authors:
   - paulkinlan
 tags:
+  - news
   - fundamentals
   - mobile
   - frontend

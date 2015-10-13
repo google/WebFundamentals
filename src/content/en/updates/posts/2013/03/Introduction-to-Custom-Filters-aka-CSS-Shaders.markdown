@@ -6,6 +6,7 @@ updated_on: 2013-03-25
 authors:
   - paullewis
 tags:
+  - news
   - webgl
   - shaders
   - css

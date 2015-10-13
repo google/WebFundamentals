@@ -7,6 +7,7 @@ updated_on: 2015-01-05
 authors:
   - paullewis
 tags:
+  - news
   - performance
   - chromedevsummit
   - frontend

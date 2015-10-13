@@ -7,6 +7,7 @@ updated_on: 2014-12-05
 authors:
   - samthorogood
 tags:
+  - news
   - animations
   - webanimations
 ---

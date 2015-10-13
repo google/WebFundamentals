@@ -6,6 +6,7 @@ updated_on: 2013-03-13
 authors:
   - ericbidelman
 tags:
+  - news
   - shadowdom
   - webcomponents
   - semantics

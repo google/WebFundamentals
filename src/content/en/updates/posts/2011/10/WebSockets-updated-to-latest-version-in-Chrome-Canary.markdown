@@ -6,6 +6,7 @@ updated_on: 2011-10-14
 authors:
   - ericbidelman
 tags:
+  - news
   - websockets
 ---
 The WebSocket API has been rev'd to the latest version (13) in Chrome Canary. The developer-facing changes are very small, but are incompatible with the older version.

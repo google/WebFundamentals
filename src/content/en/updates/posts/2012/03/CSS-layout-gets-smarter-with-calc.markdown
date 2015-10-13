@@ -6,6 +6,7 @@ updated_on: 2012-03-29
 authors:
   - alexdanilo
 tags:
+  - news
   - presentation
   - css
 ---

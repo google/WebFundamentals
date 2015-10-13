@@ -6,6 +6,7 @@ updated_on: 2012-09-19
 authors:
   - chriswilson
 tags:
+  - news
   - webaudio
   - multimedia
   - getusermedia

@@ -6,6 +6,7 @@ updated_on: 2012-06-20
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - css
 ---
 Yesterday at the office, we were coming up with strange and magical CSS tricks. Take this one for instance, it makes empty links very visible:

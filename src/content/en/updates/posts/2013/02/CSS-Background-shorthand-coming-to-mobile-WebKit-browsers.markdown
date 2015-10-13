@@ -6,6 +6,7 @@ updated_on: 2013-02-01
 authors:
   - petelepage
 tags:
+  - news
   - mobile
   - graphics
   - css

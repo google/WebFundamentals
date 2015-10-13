@@ -7,6 +7,7 @@ updated_on: 2014-07-01
 authors:
   - agektmr
 tags:
+  - news
   - indexeddb
   - blob
 ---

@@ -6,6 +6,7 @@ updated_on: 2012-04-23
 authors:
   - agektmr
 tags:
+  - news
   - datalist
   - forms
   - semantics

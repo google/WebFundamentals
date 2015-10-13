@@ -3,6 +3,8 @@ layout: updates/post
 title: "Shortcut to select the next occurrence"
 published_on: 2015-07-20
 updated_on: 2015-07-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "In the Sources Panel editor, you can select the next occurrence with <kbd class='kbd'>Cmd + D</kbd>."

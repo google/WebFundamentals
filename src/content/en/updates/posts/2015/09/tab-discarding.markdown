@@ -6,6 +6,7 @@ updated_on: 2015-09-01
 authors:
   - addyosmani
 tags:
+  - news
   - performance
   - update
 description: "Reducing Chrome's memory footprint is one of the team's top priorities this year."

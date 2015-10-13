@@ -3,6 +3,8 @@ layout: updates/post
 title: "Unfinished network requests"
 published_on: 2015-04-20
 updated_on: 2015-05-20
+tags:
+  - devtools
 authors:
   - umarhansa
 description: You can use the <code>Is:running</code> Advanced Network Filter to see unfinished network requests (e.g. running requests).

@@ -3,6 +3,8 @@ layout: updates/post
 title: "Use keyboard to navigate through callstack"
 published_on: 2015-05-19
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - umarhansa
 description: "How to set a breakpoint and navigate through the call stack with keyboard shortcuts."

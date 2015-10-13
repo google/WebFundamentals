@@ -6,6 +6,7 @@ updated_on: 2012-07-05
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - gpu
   - canvas
   - graphics

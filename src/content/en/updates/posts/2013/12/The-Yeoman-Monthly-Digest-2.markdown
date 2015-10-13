@@ -7,6 +7,7 @@ updated_on: 2013-12-26
 authors:
   - addyosmani
 tags:
+  - news
   - frontend
   - workflow
   - tools

@@ -7,6 +7,7 @@ updated_on: 2015-01-20
 authors:
   - addyosmani
 tags:
+  - news
   - es6
   - javascript
   - ecmascript

@@ -7,6 +7,7 @@ updated_on: 2012-06-15
 authors:
   - renatomangini
 tags:
+  - news
   - performance
   - arraybuffer
 ---

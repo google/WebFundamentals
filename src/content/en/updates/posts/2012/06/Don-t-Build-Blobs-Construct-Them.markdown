@@ -6,6 +6,7 @@ updated_on: 2012-06-11
 authors:
   - ericbidelman
 tags:
+  - news
   - file
 ---
 Here's a heads up to all you [BlobBuilder](https://developer.mozilla.org/en/DOM/BlobBuilder) fans...it's going bye bye!

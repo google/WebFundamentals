@@ -6,6 +6,7 @@ updated_on: 2011-06-29
 authors:
   - paulirish
 tags:
+  - news
   - canvas
   - css
 ---

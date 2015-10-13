@@ -6,6 +6,7 @@ updated_on: 2012-02-06
 authors:
   - ilmariheikkinen
 tags:
+  - news
   - pointerlock
   - fullscreen
   - games

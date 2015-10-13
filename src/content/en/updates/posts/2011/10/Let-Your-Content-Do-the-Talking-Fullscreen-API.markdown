@@ -7,6 +7,7 @@ updated_on: 2011-10-26
 authors:
   - ericbidelman
 tags:
+  - news
   - games
   - multimedia
   - fullscreen

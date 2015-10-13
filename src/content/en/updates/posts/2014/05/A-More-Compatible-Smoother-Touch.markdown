@@ -7,6 +7,7 @@ updated_on: 2014-05-21
 authors:
   - paulkinlan
 tags:
+  - news
   - mobile
   - touchevent
 ---

@@ -7,6 +7,7 @@ updated_on: 2014-11-07
 authors:
   - petelepage
 tags:
+  - news
   - mobile
   - frontend
 ---

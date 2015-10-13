@@ -6,6 +6,7 @@ updated_on: 2012-08-06
 authors:
   - agektmr
 tags:
+  - news
   - forms
 ---
 * This article is written by a Chrome software engineer [Kent Tamura](https://plus.google.com/104770450049736549185/about).

@@ -3,6 +3,8 @@ layout: updates/post
 title: "Hard reload"
 published_on: 2015-05-05
 updated_on: 2015-05-19
+tags:
+  - devtools
 authors:
   - pbakaus
 description: "With DevTools opened, click and hold the reload button to see more options."
