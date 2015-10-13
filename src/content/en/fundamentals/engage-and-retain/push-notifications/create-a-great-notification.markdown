@@ -40,16 +40,9 @@ parameter of the `showNotification()` method. For example:
 Make the title relevant to the context of the message and include something
 specific from the message.
 
-<div class="mdl-grid" hidden>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="" alt="A good notification sent from Facebook">
-    <figcaption class="wf-figcaption-good">DO: Make the title relevant and specific.</figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="" alt="A bad notification that is not relevant or specific."> 
-    <figcaption class="wf-figcaption-bad">DON'T: Send generic, non-actionable text.</figcaption>
-  </figure>
-</div>
+**BAD:** Notifcation from facebook.com
+
+**GOOD:** Paul Kinlan sent you a message
 
 ## Make the icon contextual
 

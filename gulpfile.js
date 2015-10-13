@@ -72,6 +72,9 @@ gulp.task('clean', del.bind(null,
     GLOBAL.WF.build.root
   ], {dot: true}));
 
+gulp.task('removeIndexPage', del.bind(null,
+  [GLOBAL.WF.build.jekyll + '/*/index.html']));
+
 gulp.task('develop', function(cb) {
   runSequence(
     'clean',
@@ -138,6 +141,7 @@ gulp.task('build', function(cb) {
       'html',
       'minify-images:content'
     ],
+    'removeIndexPage',
     cb);
 });
 
