@@ -1,5 +1,6 @@
 ---
 layout: shared/narrow
+published: false
 title: "Setting up a basic service worker"
 description: "This section describes the most basic service worker possible. It shows you how a client gets, or registers, a service worker. It shows you how a service worker prepares to act as a proxy for its clients. Both subjects have more depth than is shown in this section. It's not intended to be comprehensive; It's intended to give you a basic foundation on which to build service worker knowledge."
 authors:
