@@ -16,7 +16,7 @@ type: news
 tags:
 - serviceworker
 - cache
-description: Chrome 46 brings new methods to caches, as does Chrome 47, and probably 48. It never stops.
+description: Chrome 46 brought new methods to caches, as does Chrome 47, and probably 48. It never stops.
 permalink: /updates/2015/09/updates-to-cache-api.html
 ---
 
@@ -28,7 +28,7 @@ I can’t hear you! I said, are you ready to hear about the updates to Chrome’
 
 (you may only read on if you’ve jumped onto your chair and shouted “YEAHHH!”. Simultaneously pretending to swing a lasso is optional, but encouraged).
 
-## cache.addAll is coming to Chrome 46
+## cache.addAll arrived in Chrome 46
 
 Yes! That’s right! Cache! Dot add all! Chrome 46!
 
