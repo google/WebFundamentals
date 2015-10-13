@@ -190,7 +190,7 @@ module Jekyll
     # Force generation is used when you are in a section that isn't published
     # i.e. styleguide shouldn't be in the menu for fundamentals, but if you
     # are on /web/styleguide/ the menu should have styleguide at the top level
-    def getBetterBookEntry(section, currentLevel, forceGeneration = false)
+    def getBetterBookEntry(section, currentLevel, forceGeneration = false, isSelected = false)
       if section.nil?
         return nil
       end
@@ -207,7 +207,8 @@ module Jekyll
       entry = {
         "title" => indexPage['title'],
         "path" => indexPage.relative_url,
-        "currentPageInThisSection" => false
+        "currentPageInThisSection" => false,
+        "isSelected" => isSelected
       }
 
       if (@directories.size > currentLevel) && (section['id'] == @directories[currentLevel])
@@ -262,16 +263,16 @@ module Jekyll
         # we want the nav to be generated for that page, regardless of whether
         # it's normally displayed or not
         force = false
-        if @directories.count > 0 && @directories[0] == subdirectory['id']
-          force = true
+        isSelected = false
+        if subdirectory['id'] == @directories[currentLevel]
+          isSelected = true
+          if @directories.count > 0
+            force = true
+          end
         end
-        entry = getBetterBookEntry(subdirectory, currentLevel, force)
+        entry = getBetterBookEntry(subdirectory, currentLevel, force, isSelected)
         if entry.nil?
           next
-        end
-
-        if subdirectory['id'] == @directories[currentLevel]
-          entry['isSelected'] = true
         end
 
         topLevelEntries << entry
