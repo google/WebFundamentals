@@ -47,14 +47,15 @@ module Jekyll
 
       # Generate updates for subdirectories in the updates folder,
       # will skipp the tags folder automatically.
-      updateSection['subdirectories'].each { |subdirectory|
-        if subdirectory['id'] == 'tags'
-          return;
-        else
-          generateSection(site, subdirectory)
-          generateFeed(site, subdirectory)
-        end
-      }
+
+      #updateSection['subdirectories'].each { |subdirectory|
+      #  if subdirectory['id'] == 'tags'
+      #    return;
+      #  else
+      #    generateSection(site, subdirectory)
+      #    generateFeed(site, subdirectory)
+      #  end
+      #}
 
     end
 
@@ -63,6 +64,8 @@ module Jekyll
     def generateSection(site, section)
       # Gets the current section
       path = section['id']
+
+      puts 'GenerateSection: ' + path
 
       # Get the pages. It sets path to nil for root updates as we don't need
       # to add any additional path info.

@@ -342,6 +342,7 @@ module Jekyll
       base = Pathname.new dest
       relativePath = original_target.relative_path_from base
       path = File.join(base, @langcode, relativePath)
+
       path
     end
 
@@ -353,8 +354,12 @@ module Jekyll
       path
     end
 
+    def getJekyllsRelativeUrl()
+      self.url
+    end
+
     def getFilteredUrl()
-      fullUrl = site.config['WFBaseUrl'] + self.url
+      fullUrl = site.config['WFBaseUrl'] + getJekyllsRelativeUrl()
       fullUrl = fullUrl.sub('index.html', '')
       fullUrl = fullUrl.sub('.html', '')
 

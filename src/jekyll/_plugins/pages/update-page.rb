@@ -40,5 +40,6 @@ module Jekyll
         self.data['feed_name'] = 'Web Updates - Google Developers'
       end
     end
+
   end
 end
