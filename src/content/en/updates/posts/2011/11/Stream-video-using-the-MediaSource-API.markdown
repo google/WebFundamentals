@@ -5,6 +5,8 @@ published_on: 2011-11-15
 updated_on: 2011-11-15
 tags:
   - news
+  - mediasource
+  - media
 authors:
   - ericbidelman
 ---
