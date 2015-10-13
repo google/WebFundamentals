@@ -2,10 +2,8 @@
 
 <div class="page-content">
 
-  <h1>{{page.title}}</h1>
-
   <div class="mdl-grid">
-    {% assign updates = page.updates | sort: 'updated_on' %}
+    {% assign updates = page.updates | sort: 'published_on' %}
     {% for article in updates reversed %}
       {% assign authorKey = article.authors[0] %}
       {% assign author = site.data["contributors"][authorKey] %}
