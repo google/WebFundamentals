@@ -27,8 +27,18 @@ module Jekyll
 
     def getJekyllsRelativeUrl()
       urlParts = self.url.split(File::SEPARATOR)
-      # Drop 4 to account for the initial forward slash in self.url
-      urlParts = urlParts.drop(4)
+      foundYearValue = false
+      urlParts = urlParts.select { |urlPart|
+        select = false
+        if foundYearValue
+          select = true
+        elsif urlPart.match(/^\d+$/)
+          foundYearValue = true
+          select = true
+        end
+
+        select
+      }
       # To match self.url, add a forward slash
       newUrl = '/' + File.join('updates', urlParts)
       newUrl
@@ -43,7 +53,18 @@ module Jekyll
       relativePath = original_target.relative_path_from base
 
       fileDirectories = relativePath.dirname.to_s.split(File::SEPARATOR)
-      fileDirectories = fileDirectories.drop(3)
+      foundYearValue = false
+      fileDirectories = fileDirectories.select { |directory|
+        select = false
+        if foundYearValue
+          select = true
+        elsif directory.match(/^\d+$/)
+          foundYearValue = true
+          select = true
+        end
+
+        select
+      }
       relativePath = File.join('updates', fileDirectories, relativePath.basename)
 
       path = File.join(base, @langcode, relativePath)
