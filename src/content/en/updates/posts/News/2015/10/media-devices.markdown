@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "The navigator.mediaDevices() interface"
+title: "navigator.mediaDevices()"
 description: "The MediaDevices interface gives access to input and output devices available to the browser including cameras, microphones and speakers."
 published_on: 2015-10-13
 updated_on: 2015-10-13
@@ -30,11 +30,11 @@ by `navigator.mediaDevices()`.
 MediaDevices has two methods, both implemented in Chrome 47 on desktop and
 Android: `enumerateDevices()` and `getUserMedia()`.
 
-<img src="/web/updates/images/2015-10-13-media0devices/select-audio-output.jpg" width="882" height="1123" alt="Selecting an audio output device" />
+<img src="/web/updates/images/2015-10-13-media-devices/select-audio-output.jpg" width="882" height="1123" alt="Selecting an audio output device" />
 
 ### enumerateDevices()
 
-Returns a Promise giving access to an array of MediaDeviceInfo objects for
+Returns a Promise giving access to an array of `MediaDeviceInfo` objects for
 available devices.
 
 The method is similar to
@@ -109,7 +109,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 ### Flag waiving
 
 The `enumerateDevices()` method is 'flagless' in Chrome, whereas for
-`MediaDevices.getUserMedia()` you will still need to enable **Experimental Web
+`MediaDevices.getUserMedia()` you still need to enable **Experimental Web
 Platform features** in chrome://flags or use the following command line flag:
 
 {%highlight bash%}
@@ -120,10 +120,10 @@ More details about browser support below.
 
 ### The future
 
-The proposed `ondevicechange` event handler hasn't been implemented in any browser
-yet. This does what it says: the `devicechange` event is fired when the set of
+The proposed `ondevicechange` event handler does what it says: the `devicechange` event is fired when the set of
 available devices changes, and in a handler you can call `enumerateDevices()` to
-get the new list of devices.
+get the new list of devices. This hasn't been implemented in any browser
+yet.
 
 The [Screen Capture
 draft](http://w3c.github.io/mediacapture-screen-share/#example) is an extension
