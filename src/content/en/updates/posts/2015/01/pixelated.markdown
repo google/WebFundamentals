@@ -6,6 +6,9 @@ published_on: 2015-01-18
 updated_on: 2015-01-18
 tags:
   - news
+  - css
+  - pixelated
+  - image-rendering
 authors:
   - paulkinlan
 tags:
