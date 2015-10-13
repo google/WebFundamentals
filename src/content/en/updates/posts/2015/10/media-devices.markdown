@@ -7,6 +7,7 @@ updated_on: 2015-10-13
 authors:
   - samdutton
 tags:
+  - news
   - audio
   - video
   - media
@@ -30,7 +31,7 @@ by `navigator.mediaDevices()`.
 MediaDevices has two methods, both implemented in Chrome 47 on desktop and
 Android: `enumerateDevices()` and `getUserMedia()`.
 
-<img src="/web/updates/images/2015-10-13-media-devices/select-audio-output.jpg" width="882" height="1123" alt="Selecting an audio output device" />
+<img src="/web/updates/images/2015-10-13-media-devices/select-audio-output.jpg" alt="Selecting an audio output device" />
 
 ### enumerateDevices()
 
