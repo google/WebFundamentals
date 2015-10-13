@@ -6,6 +6,7 @@ updated_on: 2015-10-15
 authors:
   - paulkinlan
 tags:
+  - news
   - splashscreen
   - addtohomescreen
 featured_image: /web/updates/images/2015/10/splashscreen.png

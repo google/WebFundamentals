@@ -7,6 +7,7 @@ authors:
   - paulkinlan
 tags:
   - input
+  - news
 featured_image: /web/updates/images/2015/10/inputdevicecapabilities.png
 description: "A simpler method to rationalize your mouse and touch logic for when there is no PointerEvents"
 ---
