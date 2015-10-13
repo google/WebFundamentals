@@ -270,7 +270,7 @@ module Jekyll
       page = nil
       case rootFolderName
       when 'updates'
-        page = UpdatePage.new(site, relative_dir, file_name, langcode)
+        page = UpdatePostPage.new(site, relative_dir, file_name, langcode)
       when 'fundamentals'
         page = FundamentalsPage.new(site, relative_dir, file_name, langcode)
       when 'shows'
