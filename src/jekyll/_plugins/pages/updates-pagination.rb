@@ -18,13 +18,15 @@ module Jekyll
 
   class UpdatesPaginationPage < UpdatePage
 
-    def initialize(site, path, langcode, pages, paginationIndex, totalPaginationPages)
+    def initialize(site, path, langcode, pages, paginationIndex, totalPaginationPages, title = nil)
       if path.nil?
         dir = 'updates'
         title = 'Updates'
       else
         dir = File.join('updates', path)
-        title = path
+        if title.nil?
+          title = path
+        end
       end
       name = 'index.html'
 

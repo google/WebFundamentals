@@ -24,6 +24,8 @@ module Jekyll
     def generate(site)
       @contentSource = site.config['WFContentSource']
       @numberOfResultsPerPage = 10
+      @tags = []
+      @tagPageMapping = {}
       if @contentSource.nil?
         Jekyll.logger.info "WFContentSource is not defined - no language " +
           "pages to generate"
@@ -42,47 +44,81 @@ module Jekyll
         return;
       end
 
-      # Generate the updates for root
-      generateSection(site, updateSection)
+      createTagsForUpdates(getPages(site, ['updates']))
 
       # Generate updates for subdirectories in the updates folder,
       # will skipp the tags folder automatically.
 
-      #updateSection['subdirectories'].each { |subdirectory|
-      #  if subdirectory['id'] == 'tags'
-      #    return;
-      #  else
-      #    generateSection(site, subdirectory)
-      #    generateFeed(site, subdirectory)
-      #  end
-      #}
+      desiredTagPromotions = {
+        'news' => 'News',
+        'devtools' => 'DevTools'
+      }
 
-    end
+      desiredTagPromotions.each { |tagId, tagTitle|
+        pages = @tagPageMapping[tagId]
+        if pages.count == 0
+          msg = 'The promoted tag (' + tag['tagId'] + ') doesn\'t have any pages!'
+          throw new Error("Promoting Tag", msg);
+        end
 
-    # Generates all pages for a section of the updates folder, including
-    # index page, tags pages, and RSS feeds.
-    def generateSection(site, section)
-      # Gets the current section
-      path = section['id']
+        newSubsection = {'id' => tagId, "pages" => pages, "subdirectories" => []}
+        updateSection['subdirectories'] << newSubsection
+      }
 
-      puts 'GenerateSection: ' + path
-
-      # Get the pages. It sets path to nil for root updates as we don't need
-      # to add any additional path info.
-      if path == 'updates'
-        pages = getPages(site, ['updates'])
-        path = nil
-      else
-        pages = getPages(site, ['updates', path])
-      end
-
-      # generate main page
-      generatePaginationPages(site, path, section, pages)
+      # Generate the updates for root
+      pages = getPages(site, ['updates'])
+      generatePaginationPages(site, nil, updateSection, pages, nil)
 
       # generate tag pages
       tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
-      section['subdirectories'] << tagsSection
-      generateTagPages(site, path, tagsSection, pages)
+      updateSection['subdirectories'] << tagsSection
+      generateTagPages(site, nil, tagsSection, pages)
+
+      updateSection['subdirectories'].each { |subdirectory|
+        if ((subdirectory['id'] == 'tags') or  (subdirectory['id'] == 'posts'))
+          next;
+        end
+
+        pages = subdirectory['pages']
+        path = subdirectory['id']
+        generatePaginationPages(site, path, subdirectory, pages, desiredTagPromotions[subdirectory['id']])
+        generateFeed(site, subdirectory)
+      }
+
+    end
+
+    def createTagsForUpdates(pages)
+      # Iterate over every page and create an array of tags + pages that
+      # have those tags.
+      pages.each do |page|
+
+        # If there are no tags, skip this page
+        if page.data['tags'].nil?
+          next
+        end
+
+        page.data['tags'].each do |tag|
+          # Clean up the tag, strip whitespace and lower case it
+          tag = tag.downcase.strip
+
+          # Error on reserved words or if there is a space in the tag
+          if tag === 'index' || tag === 'index.html'
+            msg = 'Reserved tag name index[.html] (' + page.name + ')'
+            throw new PluginError("Create Tag Pages", msg);
+          end
+          if tag.index(' ') != nil
+            msg = 'Spaces not permitted in tags: ' + tag + ' (' + page.name + ')'
+            throw new PluginError("Create Tag Pages", msg);
+          end
+
+          @tagPageMapping[tag] ||= []
+          @tagPageMapping[tag] << page
+          @tags << tag
+        end
+      end
+
+      @tags.sort!
+      @tags.uniq!
     end
 
     def generateFeed(site, subdirectory)
@@ -93,7 +129,7 @@ module Jekyll
       site.pages << WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_ATOM)
     end
 
-    def generatePaginationPages(site, path, updateSection, pages)
+    def generatePaginationPages(site, path, updateSection, pages, title)
       # Filter out pages with dates only
       pages = pages.map { |page|
         requiredYamlFields = ['published_on']
@@ -118,7 +154,7 @@ module Jekyll
 
         pagesToInclude = pages[startPageIndex..endPageIndex]
 
-        updatePage = UpdatesPaginationPage.new(site, path, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages)
+        updatePage = UpdatesPaginationPage.new(site, path, site.data['curr_lang'], pagesToInclude, pageIndex, numberOfPages, title)
         updatePage.data['_context'] = updateSection
 
         site.pages << updatePage
@@ -131,55 +167,18 @@ module Jekyll
     end
 
     def generateTagPages(site, path, tagsSection, pages)
-      # dir = File.join(site.data['curr_lang'], 'updates', 'tags')
-      tags = []
-      tagPageMapping = {}
-
-      # Iterate over every page and create an array of tags + pages that
-      # have those tags.
-      pages.each do |page|
-
-        # If there are no tags, skip this page
-        if page.data['tags'].nil?
-          next
-        end
-
-        page.data['tags'].each do |tag|
-          # Clean up the tag, strip whitespace and lower case it
-          tag = tag.downcase.strip
-
-          # Error on reserved words or if there is a space in the tag
-          if tag === 'index' || tag === 'index.html'
-            msg = 'Reserved tag name index[.html] (' + page.name + ')'
-            throw new PluginError("Create Tag Pages", msg);
-          end
-          if tag.index(' ') != nil
-            msg = 'Spaces not permitted in tags: ' + tag + ' (' + page.name + ')'
-            throw new PluginError("Create Tag Pages", msg);
-          end
-
-          tagPageMapping[tag] ||= []
-          tagPageMapping[tag] << page
-          tags << tag
-        end
-      end
-
-      tags.sort!
-      tags.uniq!
-
-      tags.each do |tag|
-        tagPageMapping[tag].uniq!
-        tagPage = UpdatesTagPage.new(site, path, site.data['curr_lang'], tag, tagPageMapping[tag])
+      @tags.each do |tag|
+        @tagPageMapping[tag].uniq!
+        tagPage = UpdatesTagPage.new(site, path, site.data['curr_lang'], tag, @tagPageMapping[tag])
         tagPage.data['_context'] = tagsSection
         site.pages << tagPage
         tagsSection['pages'] << tagPage
       end
 
-      tagPage = UpdatesTagsPage.new(site, path, site.data['curr_lang'], tags)
+      tagPage = UpdatesTagsPage.new(site, path, site.data['curr_lang'], @tags)
       tagPage.data['_context'] = tagsSection
       site.pages << tagPage
       tagsSection['index'] = tagPage
-
     end
 
     def calculatePages(pages, numberOfResultsPerPage)
