@@ -1,5 +1,6 @@
 ---
 layout: shared/narrow
+published: false
 title: "Debugging service workers"
 description: "So far our service worker doesn't do very much. But it's enough that we can watch it working. That makes this a good time to talk a little about debugging."
 authors:

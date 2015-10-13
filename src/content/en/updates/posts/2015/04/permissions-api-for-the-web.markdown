@@ -6,6 +6,7 @@ published_on: 2015-04-05
 updated_on: 2015-05-08
 tags:
   - news
+  - permissions
 authors:
   - mattgaunt
 ---

@@ -6,6 +6,8 @@ published_on: 2014-10-02
 updated_on: 2014-10-02
 tags:
   - news
+  - beacon
+  - analytics
 authors:
   - ewagasperowicz
 ---
