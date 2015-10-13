@@ -61,7 +61,7 @@ module Jekyll
           throw new Error("Promoting Tag", msg);
         end
 
-        newSubsection = {'id' => tagId, "pages" => pages, "subdirectories" => []}
+        newSubsection = {'id' => tagId, "pages" => [], "subdirectories" => []}
         updateSection['subdirectories'] << newSubsection
       }
 
@@ -79,7 +79,7 @@ module Jekyll
           next;
         end
 
-        pages = subdirectory['pages']
+        pages = @tagPageMapping[subdirectory['id']]
         path = subdirectory['id']
         generatePaginationPages(site, path, subdirectory, pages, desiredTagPromotions[subdirectory['id']])
         generateFeed(site, subdirectory)
