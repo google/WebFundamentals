@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-pages-list
 title: "Service Workers"
-description: "Service workers have been described as &ldquo;programmable network proxies&rdquo; and &ldquo;background workers&rdquo;. To be more specific, a  service worker is a script run by a browser in the background that proxies and caches network interactions."
+description: "Service workers have been described as &ldquo;programmable network proxies&rdquo; and &ldquo;background workers&rdquo;. Neither is really accurate. A service worker is a script run by a browser in the background that lets a developer manage network interactions for one or more client pages."
 published_on: 2015-09-25
 updated_on: 2015-09-25
 order: 1
@@ -11,10 +11,7 @@ authors:
 ---
 
 <p class="intro">
-  Service workers have been described as &ldquo;programmable network
-  proxies&rdquo; and &ldquo;background workers&rdquo;. To be more specific, a 
-  service worker is a script run by a browser in the background that proxies and 
-  caches network interactions.
+  Service workers have been described as &ldquo;programmable network proxies&rdquo; and &ldquo;background workers&rdquo;. Neither is really accurate. A service worker is a script run by a browser in the background that lets a developer manage network interactions for one or more client pages.
 </p>
 
 Because a service worker is separate from the page that loaded it, it doesn't 
