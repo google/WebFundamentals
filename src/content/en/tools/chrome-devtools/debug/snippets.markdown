@@ -48,9 +48,7 @@ and delete snippets.
 
 1. [Open DevTools](setup-devtools#access-devtools) and go to the 
    **Sources** panel.
-
 1. Click the layout toggle in the top-left corner of DevTools.
-
 1. Click on the **Snippets** panel.
 
 The video below shows how to navigate to the snippets panel. The **Sources**
@@ -68,16 +66,12 @@ a snippet filename in the left panel makes DevTools display the
 snippet's source code in the right panel.
 
 1. Right-click inside the file list panel.
-
 1. Select **New** to create a new snippet file.
-
 1. Type in a filename for your snippet, or type `Enter` to use the
    automatically-generated default name.
-
 1. Enter your code in the right panel. After you enter your code, the 
    filename of the snippet is preceded by an asterisk (`*`). This means
    that the file has been modified but not yet saved.
-
 1. To save, right-click in the source code panel and select **Save**. Or,
    type `Command` + `S` on Mac, or `Control` + `S` on Windows. You should
    see the asterisk in front of the snippet filename disappear.
@@ -110,7 +104,6 @@ There are three ways to run a snippet.
 You can also evaluate a portion of a snippet in the DevTools Console. 
 
 1. Highlight the portion of code which you wish to run.
-
 1. Right-click anywhere in the editor and select **Evaluate in Console**.
    Or, use the keyboard shortcut `Control` + `Shift` + `E` for Windows, or
    `Command` + `Shift` + `E` for Mac.
@@ -143,17 +136,14 @@ displayed) and click **Local modifications** to view this history.
 The history is displayed in a panel in the Console area. The history shows:
 
 * A diff of the file changes.
-
 * The time each change was made.
 
 You can interact with the local modifications history in three ways:
 
 * Clicking the **revert** link reverts the file back to its original state,
   removing the revision history.
-
 * Clicking the **Apply original content** link reverts the file back to its
   original state, but maintains the revision history.
-
 * Clicking the **Apply revision content** reverts the file back to the
   specified revision. The revision history is maintained.
 
