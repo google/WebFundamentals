@@ -18,7 +18,7 @@ article:
 collection: workspace
 takeaways:
     - Use snippets to run small scripts from any page.
-    - Run portions of snippets in the console with the "Evaluate in
+    - Run portions of snippets in the Console with the "Evaluate in
       Console" feature.
     - Map snippets to external files with workspaces.
     - Remember that popular features from the Sources panel, like
@@ -105,9 +105,9 @@ There are three ways to run a snippet.
 
 * Type `Command` + `Enter` on Mac, or `Control` + `Enter` on Windows. 
 
-### Evaluate in console
+### Evaluate in Console
 
-You can also evaluate a portion of a snippet in the DevTools console. 
+You can also evaluate a portion of a snippet in the DevTools Console. 
 
 1. Highlight the portion of code which you wish to run.
 
@@ -117,7 +117,7 @@ You can also evaluate a portion of a snippet in the DevTools console.
 
 In the video below, a portion of a snippet is highlighted, and then that
 portion is evaluated by right-clicking on the editor and selecting 
-**Evaluate in Console**. You can see in the console that only the statements 
+**Evaluate in Console**. You can see in the Console that only the statements 
 that were highlighted are evaluated. The statements that were not highlighted 
 are not evaluted.
 
@@ -140,7 +140,7 @@ displayed) and click **Local modifications** to view this history.
 
 ![accessing local modification history](imgs/local-modifications.png)
 
-The history is displayed in a panel in the console area. The history shows:
+The history is displayed in a panel in the Console area. The history shows:
 
 * A diff of the file changes.
 
