@@ -27,6 +27,8 @@ module Jekyll
 
       generateFeeds(site)
 
+      
+
       # This should run as the end of all generators and will give pages a
       # chance to do any final work needed
       site.pages.each { |page|
@@ -42,6 +44,8 @@ module Jekyll
           translationPage.onBuildComplete()
         }
       }
+
+      generateSamples(site)
     end
 
     def organisePageTree(tree)
@@ -116,6 +120,38 @@ module Jekyll
           0 <=> 0
         end
       end
+    end
+
+    def generateSamples(site)
+      sampleDirectories = []
+
+      site.pages.each { |page|
+        if page.path.nil?
+          next
+        end
+
+        fileDir = File.dirname(page.path)
+        codeDir = File.join(fileDir, "_code")
+        if File.exist?(codeDir)
+          sampleDirectories << codeDir
+        end
+      }
+      sampleDirectories.uniq!
+
+      sampleDirectories.each do |codeDir|
+        Dir.glob(codeDir + "/*").each do |sampleFile|
+          sampleFile = sampleFile.sub(codeDir + '/', '')
+          if sampleFile =~ /\.html/
+            # site.pages << WFSamplePage.new(site, codeDir, sampleFile)
+          elsif sampleFile =~ /\.pxm/ || sampleFile =~ /\.psd/
+            # no op
+          else
+            # site.static_files << WFSampleAsset.new(site, codeDir, "", sampleFile)
+          end
+        end
+      end
+
+
     end
 
     def generateFeeds(site)
