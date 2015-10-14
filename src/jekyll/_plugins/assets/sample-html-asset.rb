@@ -21,13 +21,17 @@ module Jekyll
     @@header_full = nil
     @@footer = nil
 
+    # class_variables refers to looping over the variables in this class
+    # In this case, header, header_full, footer....
     class_variables.each do |class_var|
+      # Remove the '@@Symbol'
       name = class_var.to_s[2..-1].to_sym
 
       define_singleton_method name do |site|
         if class_variable_get(class_var).nil?
-          content = File.read(File.join(site.source,
-            "_includes/codesamples/sample_#{name}.html"))
+          templateFilePath = File.join(site.source,
+            "_includes/codesamples/sample_#{name}.html")
+          content = File.read(templateFilePath)
           class_variable_set(class_var,
             Liquid::Template.parse(content).render({
               "baseurl" => site.config["sample_link_base"]}))
@@ -60,16 +64,20 @@ module Jekyll
       contents.gsub!(/\/\* \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] \*\/\s*\n?/m, "\n")
       contents.gsub!(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches|
         tag = $1.downcase
+        substituteText = ""
         if (tag == "header")
-          Template.header(@site)
+          substituteText = Template.header(@site)
         elsif (tag == "header_full")
-          Template.header(@site) + Template.header_full(@site)
+          substituteText = Template.header(@site) + Template.header_full(@site)
         elsif (tag == "footer")
-          Template.footer(@site)
-        else
-          ""
+          substituteText = Template.footer(@site)
         end
+        substituteText
       }
+      if filePath == "/Users/mattgaunt/Projects/Code/WebFundamentals/src/content/en/fundamentals/design-and-ui/media/images/_code/breakpoints.html"
+        puts contents
+        puts '-------------------------------------------'
+      end
       Liquid::Template.parse(contents).render(@site.site_payload)
     end
 
@@ -78,21 +86,13 @@ module Jekyll
     end
 
     def write(dest)
-      if super(dest)
-        if (path =~ /\.css/ || path =~ /\.js/ )
-          path = destination(dest)
-          file = File.new(path, "r")
-          contents = file.read()
-          file.close
-          contents.gsub!(/\/\* \/\/ \[(?:(?:START)|(?:END)) [^\]]+\] \*\/\s*\n?/m, "\n")
-          file = File.new(path, "w")
-          file.write(contents)
-          file.close
-        end
-        true
-      else
-        false
-      end
+      dest_path = destination(dest)
+      dirname = File.dirname(dest_path)
+      FileUtils.mkdir_p(dirname) if !File.exist?(dirname)
+      file = File.new(dest_path, "w")
+      file.write(@contents)
+      file.close
+      true
     end
   end
 end
