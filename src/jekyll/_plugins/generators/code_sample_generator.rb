@@ -49,7 +49,7 @@ module Jekyll
         end
 
         relativeCodeDirectory = codeDirectory.sub(@contentSource, "").sub(@primaryLang+"/", "")
-        relativePlainDirectory = relativeCodeDirectory.sub("/_code", "").sub('/fundamentals', '')
+        relativePlainDirectory = relativeCodeDirectory.sub("/_code", "")
         filename = File.basename(sourcepath)
         outputDirectory = File.join(@destinationDirectory, relativePlainDirectory)
 

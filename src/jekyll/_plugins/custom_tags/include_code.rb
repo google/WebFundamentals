@@ -22,7 +22,7 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        url = File.join(context.registers[:site].config["sample_link_base"], page['dir'].sub('fundamentals/', ''), File.basename(@file)).strip
+        url = File.join(context.registers[:site].config["sample_link_base"], page['dir'], File.basename(@file)).strip
         out = super(context)
         "<a href=\"#{url}\">#{out}</a>"
     end
@@ -36,7 +36,7 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        url = File.join(context.registers[:site].config["sample_link_base"], page['dir'].sub('fundamentals/', ''), File.basename(@file)).strip
+        url = File.join(context.registers[:site].config["sample_link_base"], page['dir'], File.basename(@file)).strip
         out = super(context)
         "<a class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" href=\"#{url}\">#{out}</a>"
     end
@@ -172,7 +172,7 @@ module Jekyll
       page = context.environments.first["page"]
       site = context.registers[:site]
 
-      url = File.join(context.registers[:site].config["sample_link_base"], page['dir'].sub('fundamentals/', ''), File.basename(@file)).strip
+      url = File.join(context.registers[:site].config["sample_link_base"], page['dir'], File.basename(@file)).strip
 
       link_text = site.data["localized_strings"][page["langcode"]]["try_sample"]
       link_text = link_text ? link_text : site.data["localized_strings"]["en"]["try_sample"]
