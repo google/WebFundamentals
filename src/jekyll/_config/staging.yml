@@ -1,2 +1,4 @@
 WFAbsoluteUrl: "https://material-dot-web-central.appspot.com"
 WFGithubBranch: material-branch
+
+sample_link_base: "https://googlesamples.github.io/web-fundamentals/samples/"
