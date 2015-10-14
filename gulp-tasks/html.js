@@ -8,7 +8,10 @@ var using = require('gulp-using');
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', function() {
-  return gulp.src(GLOBAL.WF.build.root + '/**/*.html')
+  return gulp.src([
+    GLOBAL.WF.build.root + '/**/*.html',
+    '!' + GLOBAL.WF.build.jekyll + '/*/resources/samples/**/*.html',
+  ])
     // Minify any HTML
     .pipe(minifyHTML({
       quotes: true
