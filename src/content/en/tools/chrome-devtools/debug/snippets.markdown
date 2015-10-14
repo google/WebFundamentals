@@ -20,7 +20,7 @@ takeaways:
     - Use snippets to run small scripts from any page.
     - Run portions of snippets in the Console with the "Evaluate in
       Console" feature.
-    - Map snippets to external files with workspaces.
+    - Map snippets to external files with Workspaces.
     - Remember that popular features from the Sources panel, like
       breakpoints, also work with snippets.
 ---
@@ -123,13 +123,13 @@ are not evaluted.
 
 {% animation animations/evaluate-in-console.mp4 %}
 
-## Map snippets to external files via workspaces
+## Map snippets to external files via Workspaces
 
 By default, snippets are saved to DevTools local storage, which is not
 easy to access via external editors. If you wish to edit your snippets
 with external editors, or to use revision control systems like Git
 to track the history of your snippets, you can map your snippets to
-external files using [workspaces](setup-workflow).
+external files using [Workspaces](setup-workflow).
 
 ## View local modifications
 
