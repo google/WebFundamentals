@@ -20,11 +20,10 @@ key-takeaways:
       breakpoints, also work with snippets.
 ---
 
-
-Snippets are small scripts that you can author and execute within the 
-**Sources** panel of Chrome DevTools. You can access and run them from 
-any page. When you run a snippet, it executes from the
-context of the currently open page. 
+<p class="intro">Snippets are small scripts that you can author and execute 
+within the Sources panel of Chrome DevTools. You can access and run them 
+from any page. When you run a snippet, it executes from the context of the 
+currently open page.</p>
 
 If you have small utilities or debugging scripts which you find yourself 
 using repeatedly on multiple pages, consider saving the scripts as snippets. 
@@ -49,7 +48,7 @@ The video below shows how to navigate to the snippets panel. The **Sources**
 tab is clicked, then the layout toggle in the top-left corner is clicked, 
 then the **Snippets** panel is clicked.
 
-{% animation animations/access-snippets.mp4 %}
+{% animation /web/tools/chrome-devtools/debug/animations/access-snippets.mp4 %}
 
 ## Create snippets
 
@@ -76,7 +75,7 @@ the file `Script snippet #11`. The filename is changed to `hi.js`. A
 line of code is entered in the editor. The file is saved by right-clicking
 in the editor and selecting **Save**.
 
-{% animation animations/create-snippet.mp4 %}
+{% animation /web/tools/chrome-devtools/debug/animations/create-snippet.mp4 %}
 
 ## Run snippets
 
@@ -108,7 +107,7 @@ portion is evaluated by right-clicking on the editor and selecting
 that were highlighted are evaluated. The statements that were not highlighted 
 are not evaluted.
 
-{% animation animations/evaluate-in-console.mp4 %}
+{% animation /web/tools/chrome-devtools/debug/animations/evaluate-in-console.mp4 %}
 
 ## Map snippets to external files via Workspaces
 
