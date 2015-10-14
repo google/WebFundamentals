@@ -22,10 +22,7 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("_langs/#{page['langcode']}/", "").sub("fundamentals/", "")
-        String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
-        url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
+        url = File.join(context.registers[:site].config["sample_link_base"], page['dir'].sub('fundamentals/', ''), File.basename(@file)).strip
         out = super(context)
         "<a href=\"#{url}\">#{out}</a>"
     end
@@ -39,10 +36,7 @@ module Jekyll
 
     def render(context)
         page = context.environments.first["page"]
-        path = context.registers[:site].source;
-        relpath = File.dirname(page["path"]).sub("_langs/#{page['langcode']}/", "").sub("fundamentals/", "")
-        String filepath = Pathname.new(File.join(relpath, @file).sub("/_code", "")).cleanpath.to_s
-        url = File.join(context.registers[:site].config["sample_link_base"], filepath).strip
+        url = File.join(context.registers[:site].config["sample_link_base"], page['dir'].sub('fundamentals/', ''), File.basename(@file)).strip
         out = super(context)
         "<a class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" href=\"#{url}\">#{out}</a>"
     end
@@ -178,6 +172,8 @@ module Jekyll
       page = context.environments.first["page"]
       site = context.registers[:site]
 
+      url = File.join(context.registers[:site].config["sample_link_base"], page['dir'].sub('fundamentals/', ''), File.basename(@file)).strip
+
       link_text = site.data["localized_strings"][page["langcode"]]["try_sample"]
       link_text = link_text ? link_text : site.data["localized_strings"]["en"]["try_sample"]
       #TODO: Move the HTML snippet below into a liquid component so it can
@@ -188,7 +184,7 @@ module Jekyll
   <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
       #{highlighted_code.strip}
       <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="#{context.registers[:site].config["sample_link_base"]}#{relpath}">#{link_text}</a>
+        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="#{url}">#{link_text}</a>
       </p>
   </div>
 
