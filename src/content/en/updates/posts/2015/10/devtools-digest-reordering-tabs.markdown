@@ -1,8 +1,8 @@
 ---
 layout: updates/post
 title: "DevTools Digest: Tab reordering, framework event listeners and easier remote debugging"
-published_on: 2015-10-05
-updated_on: 2015-10-05
+published_on: 2015-10-15
+updated_on: 2015-10-15
 authors:
   - pbakaus
 tags:
