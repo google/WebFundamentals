@@ -118,7 +118,7 @@ are not evaluted.
 
 ## Map snippets to external files via Workspaces
 
-By default, snippets are saved to DevTools local storage, which is not
+By default, snippets are saved to DevTools' local storage, which is not
 easy to access via external editors. If you wish to edit your snippets
 with external editors, or to use revision control systems like Git
 to track the history of your snippets, you can map your snippets to
