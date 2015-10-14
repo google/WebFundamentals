@@ -67,7 +67,7 @@ snippet's source code in the right panel.
 
 1. Right-click inside the file list panel.
 1. Select **New** to create a new snippet file.
-1. Type in a filename for your snippet, or type `Enter` to use the
+1. Type in a filename for your snippet, or press `Enter` to use the
    automatically-generated default name.
 1. Enter your code in the right panel. After you enter your code, the 
    filename of the snippet is preceded by an asterisk (`*`). This means
@@ -97,7 +97,7 @@ There are three ways to run a snippet.
 
 ![run snippet by clicking "run" button](imgs/run-snippet-2.png)
 
-* Type `Command` + `Enter` on Mac, or `Control` + `Enter` on Windows. 
+* Press `Command` + `Enter` on Mac, or `Control` + `Enter` on Windows. 
 
 ### Evaluate in Console
 
