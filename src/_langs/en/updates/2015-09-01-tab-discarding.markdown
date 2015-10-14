@@ -106,7 +106,7 @@ OS, with a Linux implementation coming soon.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/graphic-2.jpg" alt="Pinned tabs are also taken into account when looking at whether to discard a tab" />
 
- ### Inspiration: Hey there, Great Suspender
+### Inspiration: Hey there, Great Suspender
 
 If tab discarding sounds familiar, it's because you've probably come across
 useful Chrome extensions that give you a slightly simpler version of this idea,
