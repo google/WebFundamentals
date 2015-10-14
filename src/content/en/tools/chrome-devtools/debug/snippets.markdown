@@ -1,22 +1,17 @@
 ---
-layout: tools-article
+layout: shared/narrow
 title: "Set Up Snippets"
-rss: false
-seotitle: "Set Up Snippets in Chrome DevTools"
 description: "Use DevTools snippets to save small scripts, bookmarklets, 
 and utilities so that they're always available to you while debugging in the
 browser."
-introduction: "Use DevTools snippets to save small scripts, bookmarklets, 
-and utilities so that they're always available to you while debugging in the
-browser."
+published_on: 2015-10-13
+updated_on: 2015-10-13
+order: 2
 authors:
   - kaycebasques
-article:
-  written_on: 2015-10-01
-  updated_on: 2015-10-01
-  order: 1
-collection: workspace
-takeaways:
+translation_priority: 0
+key-takeaways:
+  snippets:
     - Use snippets to run small scripts from any page.
     - Run portions of snippets in the Console with the "Evaluate in
       Console" feature.
@@ -25,7 +20,6 @@ takeaways:
       breakpoints, also work with snippets.
 ---
 
-{% wrap content %}
 
 Snippets are small scripts that you can author and execute within the 
 **Sources** panel of Chrome DevTools. You can access and run them from 
@@ -37,9 +31,9 @@ using repeatedly on multiple pages, consider saving the scripts as snippets.
 You can also use snippets as an alternative to 
 [bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet).
 
-{% include modules/toc.liquid %}
+{% include shared/toc.liquid %}
 
-{% include modules/takeaway.liquid list=page.takeaways %}
+{% include shared/takeaway.liquid list=page.key-takeaways.snippets %}
 
 ## Access snippets
 
@@ -91,11 +85,11 @@ There are three ways to run a snippet.
 * Right-click on the snippet filename (in the filename panel on the left) 
   and select **Run**.
 
-![run snippet by right-clicking on filename](imgs/run-snippet-1.png)
+![run snippet by right-clicking on filename](images/run-snippet-1.png)
 
 * Click the **Run** button, highlighted in red in the image below.
 
-![run snippet by clicking "run" button](imgs/run-snippet-2.png)
+![run snippet by clicking "run" button](images/run-snippet-2.png)
 
 * Press `Command` + `Enter` on Mac, or `Control` + `Enter` on Windows. 
 
@@ -131,7 +125,7 @@ files. If you've edited a snippet and saved changes using DevTools,
 you can right-click anywhere in the snippet editor (while the snippet is
 displayed) and click **Local modifications** to view this history. 
 
-![accessing local modification history](imgs/local-modifications.png)
+![accessing local modification history](images/local-modifications.png)
 
 The history is displayed in a panel in the Console area. The history shows:
 
@@ -147,7 +141,7 @@ You can interact with the local modifications history in three ways:
 * Clicking the **Apply revision content** reverts the file back to the
   specified revision. The revision history is maintained.
 
-![viewing local modification history](imgs/local-modifications-history.png)
+![viewing local modification history](images/local-modifications-history.png)
 
 ## Use breakpoints, keyboard shortcuts, and more
 
@@ -159,4 +153,3 @@ You can also use the
 [keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts) for the 
 Sources panel when working with snippets.
 
-{% endwrap %}
