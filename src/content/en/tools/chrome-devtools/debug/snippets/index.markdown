@@ -39,12 +39,11 @@ You can also use Snippets as an alternative to
 Use the Snippets panel in Chrome DevTools to create, modify, run, 
 and delete Snippets.
 
-1. [Open DevTools](setup-devtools#access-devtools) and go to the 
-   **Sources** panel.
+1. Open DevTools and go to the **Sources** panel.
 1. Click the layout toggle in the top-left corner of DevTools.
 1. Click on the **Snippets** panel.
 
-{% animation /web/tools/chrome-devtools/debug/animations/access-snippets.mp4 %}
+{% animation /web/tools/chrome-devtools/debug/snippets/animations/access-snippets.mp4 %}
 
 ## Create Snippets
 
@@ -65,7 +64,7 @@ snippet's source code in the right panel.
    type `Command` + `S` on Mac, or `Control` + `S` on Windows. You should
    see the asterisk in front of the snippet filename disappear.
 
-{% animation /web/tools/chrome-devtools/debug/animations/create-snippet.mp4 %}
+{% animation /web/tools/chrome-devtools/debug/snippets/animations/create-snippet.mp4 %}
 
 ## Run Snippets
 
@@ -74,11 +73,13 @@ There are three ways to run a snippet.
 * Right-click on the snippet filename (in the filename panel on the left) 
   and select **Run**.
 
-![run snippet by right-clicking on filename](images/run-snippet-1.png)
+![run snippet by right-clicking on 
+filename](/web/tools/chrome-devtools/debug/snippets/images/run-snippet-1.png)
 
 * Click the **Run** button, highlighted in red in the image below.
 
-![run snippet by clicking "run" button](images/run-snippet-2.png)
+![run snippet by clicking "run" 
+button](/web/tools/chrome-devtools/debug/snippets/images/run-snippet-2.png)
 
 * Press `Command` + `Enter` on Mac, or `Control` + `Enter` on Windows. 
 
@@ -92,7 +93,7 @@ You can also evaluate a portion of a snippet in the DevTools Console.
    Or, use the keyboard shortcut `Control` + `Shift` + `E` for Windows, or
    `Command` + `Shift` + `E` for Mac.
 
-{% animation /web/tools/chrome-devtools/debug/animations/evaluate-in-console.mp4 %}
+{% animation /web/tools/chrome-devtools/debug/snippets/animations/evaluate-in-console.mp4 %}
 
 ## Map Snippets to external files via Workspaces
 
@@ -100,7 +101,7 @@ By default, Snippets are saved to DevTools' local storage, which is not
 easy to access via external editors. If you wish to edit your Snippets
 with external editors, or to use revision control systems like Git
 to track the history of your Snippets, you can map your Snippets to
-external files using [Workspaces](setup-workflow).
+external files using [Workspaces](/web/tools/setup/setup-workflow).
 
 ## View local modifications
 
@@ -109,7 +110,8 @@ files. If you've edited a snippet and saved changes using DevTools,
 you can right-click anywhere in the snippet editor (while the snippet is
 displayed) and click **Local modifications** to view this history. 
 
-![accessing local modification history](images/local-modifications.png)
+![accessing local modification 
+history](/web/tools/chrome-devtools/debug/snippets/images/local-modifications.png)
 
 The history is displayed in a panel in the Console area. The history shows:
 
@@ -125,15 +127,16 @@ You can interact with the local modifications history in three ways:
 * Clicking the **Apply revision content** reverts the file back to the
   specified revision. The revision history is maintained.
 
-![viewing local modification history](images/local-modifications-history.png)
+![viewing local modification 
+history](/web/tools/chrome-devtools/debug/snippets/images/local-modifications-history.png)
 
 ## Use breakpoints, keyboard shortcuts, and more
 
 Many of the features from the Sources panel, such as 
-[breakpoints](/web/tools/javascript/breakpoints/index), are also available for 
+[breakpoints](/web/tools/chrome-devtools/debug/breakpoints), are also available for 
 Snippets.
 
 You can also use the 
-[keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts) for the 
+[keyboard shortcuts](/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts) for the 
 Sources panel when working with Snippets.
 
