@@ -11,17 +11,18 @@ order: 4
 key-takeaways:
   tldr:   
   - "Call <code>register()</code> to install a service worker." 
-  - "Learn to use Promises before attempting service workers."
+  - "Learn to use promises before attempting service workers."
   - "Service workers have a limited scope and requrie HTTPS."
   - "The install process has two events: install and activate."
-  - "Use <code>claim()</code> to start proxying immediately."
+  - "The user has to navigate before the service worker start proxying."
+  - "Call <code>waintUntil()</code> to keep a service worker out of its own way."
 notes:
   promises:
-    - "<b>Promises</b>&mdash;Notice the use of <code>.then()</code> at the end of the <code>register()</code> function. This is an example of an ECMAScript 2015 construct called a <a href='https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise'>Promise</a>. Service workers make heavy use of Promises. If you've never used Promises before, you should familiarize yourself with them before trying to implement a service worker."
+    - "<b>Promises</b>&mdash;Notice the use of <code>.then()</code> at the end of the <code>register()</code> function. This is an example of an ECMAScript 2015 construct called a <a href='http://www.html5rocks.com/en/tutorials/es6/promises/'>promise</a>. Service workers make heavy use of promises. If you've never used promises before, you should familiarize yourself with them before trying to implement a service worker."
   https-only:
-    - "<b>HTTPS Only</b>&mdash;As we'll see later, service workers can do almost whatever they want to HTTP requests and responses. Since this would make them targets for man-in-the-middle attacks, they must be served over HTTPS.This doesn't mean you need HTTPS for development and testing. Service workers served over localhost will also work."
+    - "<b>HTTPS Only</b>&mdash;Service workers can do almost whatever they want to HTTP requests and responses. Since this would make them targets for man-in-the-middle attacks, they must be served over HTTPS. This doesn't mean you need HTTPS for development and testing. Service workers served over localhost will also work."
   sws-dont-control:
-    - "<b>Service Workers Don't Take Control</b>&mdash;If you look around the web, you'll find that many of the pages discussing service workers refer to the service worker as 'taking control' of a page. But as we saw earlier, a service workers can't do anything to its clients. That's why it may be more accurate to think of a service worker as ready to proxy."
+    - "<b>Service Workers Don't Take Control</b>&mdash;If you look around the web, you'll find that many of the pages discussing service workers refer to the service worker as 'taking control' of a page. But as we saw earlier, a service workers can't change a page's DOM. That's why it may be more accurate to think of a service worker as ready to proxy."
 ---
 
 <p class="intro">
@@ -39,37 +40,34 @@ notes:
 
 ## A client registers a service worker
 
-To use a service worker, a client tells the browser to install it by calling 
-`register()`. Every page that needs the service worker must implement `register()`, 
-but only the first page to do so will trigger the download. The most basic 
-register implementation looks like this:
+To use a service worker, a client tells the browser to install it by calling
+`register()`. More than one page can implement `register()`. You can implement
+it in either an inline script or a separate JavaScript file. Only the first a
+browser encounters trigger the download. The most basic register implementation
+looks like this:
 
 {% highlight javascript %}
 // Does the browser support service workers?
 if ('serviceWorker' in navigator) {
-  //Yes
+  // Yes
   navigator.serviceWorker.register('/service-worker.js').then(function() {
-    // Advanced actions we'll get to later.
+    // Actions not covered by this primer.
   });
 } else {
   // No, but this client should work anyway.
-}
+};
 {% endhighlight %}
 
-Generally you'll put this code at the end of a page's `<body>` element so that it 
-doesn't block page rendering. Do this with either an inline script or a link to 
-a separate JavaScript file.
-
-There's a little more that needs to be said about clients. Now let's talk about 
+There's little more that needs to be said about clients. Now let's talk about 
 the service worker itself.
 
 {% include shared/note.liquid list=page.notes.promises %}
 
 ## Where can the service worker play?
 
-A client tells the service worker where it can operate. This is called the 
-service worker's scope, and it's the lowest level of your website where the the 
-service worker can be used. Let's look at the registration code again, but with 
+A client tells the service worker where it can operate. This is called the
+service worker's scope, and it's the lowest level of your website where the
+service worker can be used. Let's look at the registration code again, but with
 some changes to the `register()` parameters.
 
 {% highlight javascript %}
@@ -78,7 +76,7 @@ if ('serviceWorker' in navigator) {
   // Yes
   navigator.serviceWorker.register('service-worker.js', {scope: '/'})
     .then(function() {
-    // Advanced actions we'll get to later.
+    // Actions not covered by this primer.
   });
 } else {
   // No, but this client should work anyway.
@@ -87,15 +85,15 @@ if ('serviceWorker' in navigator) {
 
 This code is functionally identical to the example given in the last section. 
 Both examples specify that the scope of the service worker is the entire domain. 
-If I want to restrict the service worker to part of a site, I simply specify it 
+If you want to restrict the service worker to part of a site, simply specify it 
 in the scope. 
 
-For example, say that I had an auction site with different features for buyers 
-and sellers. The buyers section is at `example.com/buyers` and the sellers section 
-is at `example.com/sellers`. A service worker with a scope of `/buyers/` it can only 
-serve clients under example.com/buyers. It cannot serve clients under 
-`example.com/sellers`. Similarly, a service worker with a scope of `/sellers/` can 
-only serve clients under `example.com/sellers`.
+For example, say that you have an auction site with different features for
+buyers  and sellers. The buyers section is at `example.com/buyers` and the
+sellers section  is at `example.com/sellers`. A service worker with a scope of
+`/buyers` it can only  serve clients under `example.com/buyers`. It cannot serve
+clients under  `example.com/sellers`. Similarly, a service worker with a scope
+of `/sellers` can  only serve clients under `example.com/sellers`.
 
 {% include shared/note.liquid list=page.notes.https-only %}
 
@@ -112,10 +110,13 @@ how many clients use it.
 
 ### Install
 
-The install event is kicked off immediately after the script containing it is 
-downloaded. The possible uses for install include initializing caches, 
-prefetching data, handling old versions of the current service worker, or 
-generally handling other service workers in the same scope. 
+Use the install event to get everything this service worker needs to operate.
+This could include initializing caches,  prefetching data, handling old versions
+of the current service worker, or  handling other service workers in
+the same scope.
+
+The install event is kicked off immediately after the script containing it is
+downloaded.
 
 {% highlight javascript %}
 self.addEventListener('install', function(installEvent) {
@@ -127,55 +128,43 @@ self.addEventListener('install', function(installEvent) {
 
 ### Activate
 
-The activate event is generally more important to the update of a service worker 
-than the install of a service worker since it's where you'll clear data stores 
-created by earlier versions of your service worker. At this stage the only thing 
-to remember is that this event is not called when a terminated service worker is
-revived. 
+Use activate to clean up after a previous version of a service worker. This may
+include migrating data in ways that can't be done while the old service worker
+was active. This event is **not** called when a terminated service worker is
+revived.
 
 {% highlight javascript %}
 self.addEventListener('activate', function(activateEvent) {
   activateEvent.waitUntil(
-    // Advanced caching actions we'll get to later.
+    // Actions not covered by this primer.
   );
 });
 {% endhighlight %}
 
-## The client waits
+## The user navigates
 
-You might've noticed that both the install and activate events contain a call to 
-a function named `waitUntil()`. This method prevents clients from processing until 
-the event is complete. If it's not empty it must always take a Promise.
-
-But a Promise to what? Most examples are too complicated for a beginner lesson. 
-Fortunately there is something that you will likely always want to do at this 
-point.
-
-
-## The service worker starts immediately
-
-If a client page registered a service worker using the code we've seen so far, 
-you'd notice that the service worker doesn't run. To get the service worker to 
-run you can do one of several things: 
-
-* You can wait for the next user navigation. For this you can either wait for the 
-user to navigate to another page in the same service worker scope, or you can 
-ask the user to reload the client page.
-* Or, you can do what most implementations,
-including [Chrome's samples](https://github.com/GoogleChrome/samples),
-do. Add a function called `claim()`, which allows the service worker to start 
-serving to client pages immediately. 
-
-The `claim()` method also returns a Promise.
-
-{% highlight javascript %}
-self.addEventListener('activate', function(activateEvent) {
-  activateEvent.waitUntil(
-    // Advanced caching actions we'll get to later.
-    self.clients.claim() //Returns a Promise.
-  );
-});
-{% endhighlight %}
+Now that the service worker is installed, it's doing something for our page,
+right? No quite. For the service worker to start handling requests, the user
+needs to navigate. Either you can wait for the user to open another page in the
+same scope or you can ask the user to reload.
 
 {% include shared/remember.liquid title="Aside" list=page.notes.sws-dont-control %}
+
+## The waitUntil() method
+
+You might've noticed that both the install and activate events contain a method
+named `waitUntil()`. This method prevents server workers from getting in their
+own way. In the install event it delays firing of the activate event. In the
+activate event it delays other service worker events (though clients will behave
+as though the service worker doesn't exist until this method returns).This
+method must either be empty or take something that resolves to a promise.
+
+But a promise to what? Before answering, let's take a detour and talk about
+debugging.
+
+
+
+
+
+
 
