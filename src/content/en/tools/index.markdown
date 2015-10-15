@@ -12,7 +12,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col">
       <p>Discover our tools and kickstart your development.</p>
-      <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" href="/web/updates/DevTools/">What's new</a>
+      <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" href="/web/updates/devtools/">What's new</a>
     </div>
   </div>
 </div>

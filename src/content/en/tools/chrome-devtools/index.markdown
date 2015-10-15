@@ -186,7 +186,7 @@ order: 3
                 <span class="mdl-typography--font-light mdl-typography--subhead">Find out which third party scripts make your page slow.</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/DevTools/2015/08/devtools-digest-aggregated-timeline-details#better-blame-perf-issues-aggregated-details-in-timeline">
+                 <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2015/08/devtools-digest-aggregated-timeline-details#better-blame-perf-issues-aggregated-details-in-timeline">
                    Find out now
                  </a>
               </div>
@@ -203,7 +203,7 @@ order: 3
                 <span class="mdl-typography--font-light mdl-typography--subhead">Automatic, Material and custom color palettes in the color picker.</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/DevTools/2015/08/devtools-digest-aggregated-timeline-details#automatic-material-and-custom-color-palettes">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2015/08/devtools-digest-aggregated-timeline-details#automatic-material-and-custom-color-palettes">
                    Explore the colors
                  </a>
               </div>
@@ -220,7 +220,7 @@ order: 3
                 <span class="mdl-typography--font-light mdl-typography--subhead">Streamlined, easier docking, settings and help access.</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/DevTools/2015/08/devtools-digest-aggregated-timeline-details#new-dedicated-main-menu">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2015/08/devtools-digest-aggregated-timeline-details#new-dedicated-main-menu">
                    Learn more
                  </a>
               </div>
