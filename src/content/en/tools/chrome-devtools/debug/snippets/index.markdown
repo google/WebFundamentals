@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Using JavaScript Snippets"
-description: "Use DevTools snippets to save small scripts, bookmarklets, 
+description: "Use DevTools Snippets to save small scripts, bookmarklets, 
 and utilities so that they're always available to you while debugging in the
 browser."
 published_on: 2015-10-13
@@ -12,12 +12,12 @@ authors:
 translation_priority: 0
 key-takeaways:
   snippets:
-    - Use snippets to run small scripts from any page.
-    - Run portions of snippets in the Console with the "Evaluate in
+    - Use Snippets to run small scripts from any page.
+    - Run portions of Snippets in the Console with the "Evaluate in
       Console" feature.
-    - Map snippets to external files with Workspaces.
+    - Map Snippets to external files with Workspaces.
     - Remember that popular features from the Sources panel, like
-      breakpoints, also work with snippets.
+      breakpoints, also work with Snippets.
 ---
 
 <p class="intro">Snippets are small scripts that you can author and execute 
@@ -26,35 +26,35 @@ from any page. When you run a snippet, it executes from the context of the
 currently open page.</p>
 
 If you have small utilities or debugging scripts which you find yourself 
-using repeatedly on multiple pages, consider saving the scripts as snippets. 
-You can also use snippets as an alternative to 
+using repeatedly on multiple pages, consider saving the scripts as Snippets. 
+You can also use Snippets as an alternative to 
 [bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet).
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.snippets %}
 
-## Access snippets
+## Access Snippets
 
-Use the snippets panel in Chrome DevTools to create, modify, run, 
-and delete snippets.
+Use the Snippets panel in Chrome DevTools to create, modify, run, 
+and delete Snippets.
 
 1. [Open DevTools](setup-devtools#access-devtools) and go to the 
    **Sources** panel.
 1. Click the layout toggle in the top-left corner of DevTools.
 1. Click on the **Snippets** panel.
 
-The video below shows how to navigate to the snippets panel. The **Sources**
+The video below shows how to navigate to the Snippets panel. The **Sources**
 tab is clicked, then the layout toggle in the top-left corner is clicked, 
 then the **Snippets** panel is clicked.
 
 {% animation /web/tools/chrome-devtools/debug/animations/access-snippets.mp4 %}
 
-## Create snippets
+## Create Snippets
 
-The left side of the snippets panel displays the list of snippets available
+The left side of the Snippets panel displays the list of Snippets available
 on your machine. The right panel displays an editor which you can use to
-create and modify snippets. Once you have created snippets, clicking on
+create and modify Snippets. Once you have created Snippets, clicking on
 a snippet filename in the left panel makes DevTools display the 
 snippet's source code in the right panel.
 
@@ -77,7 +77,7 @@ in the editor and selecting **Save**.
 
 {% animation /web/tools/chrome-devtools/debug/animations/create-snippet.mp4 %}
 
-## Run snippets
+## Run Snippets
 
 There are three ways to run a snippet. 
 
@@ -109,12 +109,12 @@ are not evaluted.
 
 {% animation /web/tools/chrome-devtools/debug/animations/evaluate-in-console.mp4 %}
 
-## Map snippets to external files via Workspaces
+## Map Snippets to external files via Workspaces
 
-By default, snippets are saved to DevTools' local storage, which is not
-easy to access via external editors. If you wish to edit your snippets
+By default, Snippets are saved to DevTools' local storage, which is not
+easy to access via external editors. If you wish to edit your Snippets
 with external editors, or to use revision control systems like Git
-to track the history of your snippets, you can map your snippets to
+to track the history of your Snippets, you can map your Snippets to
 external files using [Workspaces](setup-workflow).
 
 ## View local modifications
@@ -146,9 +146,9 @@ You can interact with the local modifications history in three ways:
 
 Many of the features from the Sources panel, such as 
 [breakpoints](/web/tools/javascript/breakpoints/index), are also available for 
-snippets.
+Snippets.
 
 You can also use the 
 [keyboard shortcuts](/web/tools/iterate/inspect-styles/shortcuts) for the 
-Sources panel when working with snippets.
+Sources panel when working with Snippets.
 
