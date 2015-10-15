@@ -44,10 +44,6 @@ and delete Snippets.
 1. Click the layout toggle in the top-left corner of DevTools.
 1. Click on the **Snippets** panel.
 
-The video below shows how to navigate to the Snippets panel. The **Sources**
-tab is clicked, then the layout toggle in the top-left corner is clicked, 
-then the **Snippets** panel is clicked.
-
 {% animation /web/tools/chrome-devtools/debug/animations/access-snippets.mp4 %}
 
 ## Create Snippets
@@ -61,19 +57,13 @@ snippet's source code in the right panel.
 1. Right-click inside the file list panel.
 1. Select **New** to create a new snippet file.
 1. Type in a filename for your snippet, or press `Enter` to use the
-   automatically-generated default name.
+   automatically-generated default name (e.g. `Script snippet #1`).
 1. Enter your code in the right panel. After you enter your code, the 
    filename of the snippet is preceded by an asterisk (`*`). This means
    that the file has been modified but not yet saved.
 1. To save, right-click in the source code panel and select **Save**. Or,
    type `Command` + `S` on Mac, or `Control` + `S` on Windows. You should
    see the asterisk in front of the snippet filename disappear.
-
-In the video below, a snippet is created by right-clicking in the
-file list panel and selecting **New**. Chrome DevTools automatically names
-the file `Script snippet #11`. The filename is changed to `hi.js`. A 
-line of code is entered in the editor. The file is saved by right-clicking
-in the editor and selecting **Save**.
 
 {% animation /web/tools/chrome-devtools/debug/animations/create-snippet.mp4 %}
 
@@ -96,16 +86,11 @@ There are three ways to run a snippet.
 
 You can also evaluate a portion of a snippet in the DevTools Console. 
 
-1. Highlight the portion of code which you wish to run.
+1. Highlight the portion of code which you wish to run. Only this code
+   is evaluated.
 1. Right-click anywhere in the editor and select **Evaluate in Console**.
    Or, use the keyboard shortcut `Control` + `Shift` + `E` for Windows, or
    `Command` + `Shift` + `E` for Mac.
-
-In the video below, a portion of a snippet is highlighted, and then that
-portion is evaluated by right-clicking on the editor and selecting 
-**Evaluate in Console**. You can see in the Console that only the statements 
-that were highlighted are evaluated. The statements that were not highlighted 
-are not evaluted.
 
 {% animation /web/tools/chrome-devtools/debug/animations/evaluate-in-console.mp4 %}
 
