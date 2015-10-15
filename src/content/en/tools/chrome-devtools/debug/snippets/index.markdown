@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Set Up Snippets"
+title: "Using JavaScript Snippets"
 description: "Use DevTools snippets to save small scripts, bookmarklets, 
 and utilities so that they're always available to you while debugging in the
 browser."
