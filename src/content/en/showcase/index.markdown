@@ -31,7 +31,7 @@ description: "Showcase is a page highlighting some of the great web apps availab
 
 {% assign caseStudyDir = page.context.subdirectories[0] %}
 {% assign caseStudies = caseStudyDir.pages %}
-{% assign caseStudy = caseStudies[0] %}
+{% assign caseStudy = caseStudies[1] %}
 
 {% if caseStudy %}
 <div class="wf-showcase__featured-casestudy">
