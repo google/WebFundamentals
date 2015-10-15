@@ -35,7 +35,7 @@ SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_も参�
 
 TLS は主に HTTP/2 を可能にした結果、性能を
 向上できることがあります。 Chris Palmer は以下のプレセンテーションを行いました。[a talk on HTTPS and HTTP/2 performance at Chrome Dev
-Summit 2014]({{site.baseurl}}/shows/cds/2014/tls-all-the-things).
+Summit 2014]({{site.WFBaseUrl}}/shows/cds/2014/tls-all-the-things).
 
 ## リファラー ヘッダー
 

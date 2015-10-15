@@ -244,7 +244,7 @@ include:
 </table>
 
 **Note**  
-If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.baseurl}}/fundamentals/tools/setup/editor.html#autoprefixer) for
+If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.WFBaseUrl}}/fundamentals/tools/setup/editor.html#autoprefixer) for
 you.
 
 ### Never leave your text editor with live reloading

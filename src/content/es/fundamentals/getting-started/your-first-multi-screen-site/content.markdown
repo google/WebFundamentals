@@ -160,7 +160,7 @@ Es posible integrar vídeo en tu sitio siguiendo las recomendaciones siguientes:
 Los sitios sin imágenes pueden resultar aburridos. Hay dos tipos de imágenes:
 
 *  Imágenes de contenido: imágenes que se muestran junto al contenido del documento para presentar información adicional relacionada con el contenido.
-*  Imágenes con fines estéticos: imágenes que se usan para mejorar el aspecto del sitio; suelen ser imágenes de fondo, patrones y gradientes.  Trataremos este tema en el [artículo siguiente]({{site.baseurl}}{{page.article.next.url}}).
+*  Imágenes con fines estéticos: imágenes que se usan para mejorar el aspecto del sitio; suelen ser imágenes de fondo, patrones y gradientes.  Trataremos este tema en el [artículo siguiente]({{site.WFBaseUrl}}{{page.article.next.url}}).
 
 La sección de imágenes de nuestra página es una colección de imágenes de contenido.
 

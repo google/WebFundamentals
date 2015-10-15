@@ -33,7 +33,7 @@ Banners".  App Install Banners give you the ability to have your users quickly
 and seamlessly install your Web App as per the images below.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
+  <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" />
 </p>
 
 <span id="criteria">"This looks great, I want it on my site"</span> I hear you shout. "Please tell me how
@@ -139,7 +139,7 @@ This is a good tool for understanding how your users interact with your app inst
 A new powerful feature for native app developers also landed in Chrome 44 Beta.  Native App install banners are similar to Web app install banners, but instead of adding to the Home Screen will let the user inline install your native app.
 
 <p style="text-align: center;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
+  <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
 </p>
 
 The criteria is similar to the Web App install banner except for the need of a Serivce Worker:
