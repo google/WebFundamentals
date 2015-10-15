@@ -75,7 +75,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Wir erstellen eine Website, die auf Bildschirmen verschiedener Größe und verschiedenen Gerätetypen funktioniert. Im [vorherigen Artikel]({{site.baseurl}}{{page.article.previous.url}}) haben wir die Informationsarchitektur der Seite entworfen und eine Grundstruktur erstellt.
+Wir erstellen eine Website, die auf Bildschirmen verschiedener Größe und verschiedenen Gerätetypen funktioniert. Im [vorherigen Artikel]({{site.WFBaseUrl}}{{page.article.previous.url}}) haben wir die Informationsarchitektur der Seite entworfen und eine Grundstruktur erstellt.
 In diesem Leitfaden nehmen wir unsere Grundstruktur mit Inhalten und verwandeln diese in eine schöne Seite, die auf einer breiten Palette an Bildschirmgrößen responsiv ist.
 
 <div class="mdl-grid">

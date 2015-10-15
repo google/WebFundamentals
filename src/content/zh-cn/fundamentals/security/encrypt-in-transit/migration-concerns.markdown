@@ -32,7 +32,7 @@ SSL 和 TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_。
 
 在某些情况下，TLS 可以_提高_性能，主要是可以采用
 HTTP/2 所带来的结果。 Chris Palmer [在 Chrome 开发峰会 2014 上做过一个演讲，讨论 HTTPS 和 HTTP/2 的性能
-]({{site.baseurl}}/shows/cds/2014/tls-all-the-things)。
+]({{site.WFBaseUrl}}/shows/cds/2014/tls-all-the-things)。
 
 ## 引用站点标头
 
