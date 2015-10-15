@@ -266,4 +266,4 @@ All being well we will now see much less jank when appending items to the DOM. E
 ## Idle on!
 `requestIdleCallback` is an awesome way to make sure you can run your code, but without getting in the user’s way. It's simple to use, and very flexible. It's still early days, though, and the spec isn't fully settled, so any feedback you have is welcome.
 
-Switch it on in Chrome Canary, give it a spin for your projects, and let us know how you get on!
+Check it out in Chrome Canary, give it a spin for your projects, and let us know how you get on!
