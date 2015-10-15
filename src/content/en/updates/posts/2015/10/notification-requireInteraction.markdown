@@ -40,13 +40,29 @@ On Chrome for Android, because the notifications are minimized in the notificati
 `requireInteraction` option is ignored. 
 
 {% highlight javascript %} 
+navigator.serviceWorker.register('sw.js');
 
-var options = {
-  body: 'Try https://airhorner.com/#instant',
-  
-  requireInteraction: true
+function showNotifications() {
+  Notification.requestPermission(function(result) {
+    if (result === 'granted') {
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification('requireInteraction: true', {
+          body: 'Requires interaction',
+          icon: '../images/touch/chrome-touch-icon-192x192.png',
+          requireInteraction: true,
+          tag: 'require-interaction'
+        });
+
+        registration.showNotification('requireInteraction: false', {
+          body: 'Does not require interaction',
+          icon: '../images/touch/chrome-touch-icon-192x192.png',
+          requireInteraction: false,
+          tag: 'no-require-interaction'
+        });
+      });
+    }
+  });
 }
-
-var notification = new Notification('Paul is amaze', options);
-
 {% endhighlight %}
+
+[Try the demo](https://googlechrome.github.io/samples/notifications/requireInteraction.html).
