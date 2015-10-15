@@ -134,7 +134,7 @@ Platform features** in chrome://flags or use the following command line flag:
 Likewise for `setSinkId()`: enable **Experimental Web Platform features** or use a flag:
 
 {%highlight bash%}
---enable-blink-features=EnumerateDevices,AudioOutputDevices
+--enable-blink-features=AudioOutputDevices
 {%endhighlight %}
 
 More details about browser support below.
