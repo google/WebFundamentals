@@ -77,6 +77,20 @@ function gotDevices(deviceInfos) {
 }
 {%endhighlight%}
 
+The `setSinkId()` method is used to change the audio output destination for a video or audio element:
+
+{%highlight javascript%}
+element.setSinkId(sinkId)
+  .then(function() {
+    console.log('Audio output device attached: ' + sinkId);
+  })
+  .catch(function(error) {
+    // ...
+  });
+{%endhighlight %}
+
+This method sets the ID of the output device that should be used for audio from the element. Once `setSinkId()` has been called, you can get the ID of the output audio device for the element with `sinkId`.
+
 ### getUserMedia()
 
 This replaces `navigator.getUserMedia()`, but instead of using a callback, returns
@@ -114,7 +128,13 @@ The `enumerateDevices()` method is 'flagless' in Chrome, whereas for
 Platform features** in chrome://flags or use the following command line flag:
 
 {%highlight bash%}
-  --enable-blink-features=GetUserMedia
+--enable-blink-features=GetUserMedia
+{%endhighlight %}
+
+Likewise for `setSinkId()`: enable **Experimental Web Platform features** or use a flag:
+
+{%highlight bash%}
+--enable-blink-features=EnumerateDevices,AudioOutputDevices
 {%endhighlight %}
 
 More details about browser support below.
