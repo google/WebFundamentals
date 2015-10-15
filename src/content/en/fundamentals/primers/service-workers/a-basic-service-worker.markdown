@@ -74,7 +74,7 @@ some changes to the `register()` parameters.
 // Does the browser support service workers?
 if ('serviceWorker' in navigator) {
   // Yes
-  navigator.serviceWorker.register('service-worker.js', {scope: '/'})
+  navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
     .then(function() {
     // Actions not covered by this primer.
   });
