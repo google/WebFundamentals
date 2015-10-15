@@ -14,14 +14,14 @@
     </image>{% endif %}
     <atom:link href="{{ page.feed_id  | append: '/rss.xml'}}" rel="self" type="application/rss+xml" />
     {% for post in page.feed_pages %}
-    <item>{% assign fqPostUrl = site.WFAbsoluteUrl | append: site.WFBaseUrl | append: post.url | canonicalize %}
+    <item>
       <title>{{ post.title | xml_escape }}</title>
-      <pubDate>{% if post.article.updated_on %}{{ post.article.updated_on | date: "%a, %d %b %Y" }}{% else%}{{ post.article.published_on | date: "%a, %d %b %Y" }}{% endif %} 00:00:01 GMT</pubDate>
-      <link>{{ fqPostUrl }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</link>
-      <guid isPermaLink="true">{{ fqPostUrl }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</guid>
+      <pubDate>{% if post.article.updated_on %}{{ post.article.updated_on | date: "%a, %d %b %Y" }}{% else%}{{ post.published_on | date: "%a, %d %b %Y" }}{% endif %} 00:00:01 GMT</pubDate>
+      <link>{{ post.canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</link>
+      <guid isPermaLink="true">{{ post.canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</guid>
       <description>
         <![CDATA[
-          <img src="https://ga-beacon.appspot.com/UA-52746336-1/rss{{ post.url }}?pixel">
+          <img src="https://ga-beacon.appspot.com/UA-52746336-1/rss{{ post.canonical_url }}?pixel">
           {{ post.content }}
         ]]>
       </description>

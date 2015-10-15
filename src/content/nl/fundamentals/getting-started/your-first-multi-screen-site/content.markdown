@@ -159,7 +159,7 @@ Door de best practices te volgen kunt u video gemakkelijk in uw website integrer
 Websites zonder afbeeldingen kunnen saai zijn. Er zijn twee soorten afbeeldingen:
 
 *  Inhoudsafbeeldingen &mdash; afbeeldingen die in het document staan en worden gebruikt om extra informatie over de inhoud weer te geven.
-*  Stilistische afbeeldingen &mdash; afbeeldingen die worden gebruikt om de website mooier te maken. Dit zijn vaak achtergrondafbeeldingen, patronen en kleurovergangen. We bespreken dit in het [volgende artikel]({{site.baseurl}}{{page.article.next.url}}).
+*  Stilistische afbeeldingen &mdash; afbeeldingen die worden gebruikt om de website mooier te maken. Dit zijn vaak achtergrondafbeeldingen, patronen en kleurovergangen. We bespreken dit in het [volgende artikel]({{page.nextPage.relative_url}}).
 
 Het gedeelte Afbeeldingen in onze pagina is een verzameling van inhoudsafbeeldingen.
 

@@ -74,7 +74,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale]({{site.baseurl}}{{page.article.previous.url}}) baslikli makalede, sayfanin Bilgi Mimarisi'ni isledik ve bir temel yapi olusturduk.
+Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale]({{page.previousPage.relative_url}}) baslikli makalede, sayfanin Bilgi Mimarisi'ni isledik ve bir temel yapi olusturduk.
 Bu kilavuzda, içerikle temel yapimizi alip çok sayida ekran boyutuna duyarli güzel bir sayfaya dönüstürecegiz.
 
 <div class="mdl-grid">

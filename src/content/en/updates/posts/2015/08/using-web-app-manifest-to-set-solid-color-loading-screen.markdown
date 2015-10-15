@@ -44,7 +44,7 @@ splashscreen to the homepage.
 It is strongly suggested that you add the `background_color` in to your manifest.
 
 <p style="text-align: center;">
-  <img style="max-width: 50%; height: auto;" src="{{site.baseurl}}/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/background_color.gif" alt="background color = blue loading screen">
+  <img style="max-width: 50%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-08-28-using-web-app-manifest-to-set-solid-color-loading-screen/background_color.gif" alt="background color = blue loading screen">
 </p>
 
 <div class="clear"></div>

@@ -73,9 +73,9 @@ updated_on: 2015-10-06
 ---
 
 <p class="intro">
-  The web is accessible on a huge range of devices from small-screen phones 
-  through to huge-screen televisions. Each device presents its own unique 
-  benefits and also constraints. As a web developer, you are expected to 
+  The web is accessible on a huge range of devices from small-screen phones
+  through to huge-screen televisions. Each device presents its own unique
+  benefits and also constraints. As a web developer, you are expected to
   support all ranges of devices.
 </p>
 
@@ -83,7 +83,7 @@ updated_on: 2015-10-06
 
 We are building a site that works across multiple screen sizes and device
 types. In the [previous
-article]({{site.baseurl}}{{page.article.previous.url}}), we crafted the
+article]({{page.previousPage.relative_url}}), we crafted the
 Information Architecture of the page and created a basic structure.
 In this guide, we will take our basic structure with content and turn it into
 a beautiful page that is responsive across a large number of screen sizes.
@@ -383,4 +383,3 @@ If you follow these guidelines, you will be off to a good start:
 4.  Once you have your mobile experience, increase the width of the display
    until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
-

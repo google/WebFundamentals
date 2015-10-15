@@ -75,7 +75,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-我們正在打造適用於多種螢幕大小和裝置類型的網站。 在[previous article]({{site.baseurl}}{{page.article.previous.url}})中，我們已擬妥網頁的資訊架構並建立了基本架構。
+我們正在打造適用於多種螢幕大小和裝置類型的網站。 在[previous article]({{page.previousPage.relative_url}})中，我們已擬妥網頁的資訊架構並建立了基本架構。
 在這份指南中，我們將沿用包含內容的基本架構，著手將網頁改造為可依多數螢幕大小靈活調整的萬人迷。
 
 <div class="mdl-grid">

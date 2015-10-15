@@ -41,7 +41,7 @@ SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_.
 
 In some cases, TLS can _improve_ performance, mostly as a result of making
 HTTP/2 possible. Chris Palmer gave [a talk on HTTPS and HTTP/2 performance at Chrome Dev
-Summit 2014]({{site.baseurl}}/shows/cds/2014/tls-all-the-things).
+Summit 2014]({{site.WFBaseUrl}}/shows/cds/2014/tls-all-the-things).
 
 ## Referer Headers
 

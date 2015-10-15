@@ -12,7 +12,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col">
       <p>Discover our tools and kickstart your development.</p>
-      <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" href="/web/updates/DevTools/">What's new</a>
+      <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" href="/web/updates/devtools/">What's new</a>
     </div>
   </div>
 </div>
@@ -21,7 +21,7 @@ translation_priority: 0
 
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6-col">
-      <a href="{{site.WFBaseUrl}}/tools/chrome-devtools/"><img src="{{site.WFBaseUrl}}/tools/imgs/chrome-devtools.jpg"></a>
+      <a href="{{site.WFBaseUrl}}/tools/chrome-devtools/"><img src="{{site.WFBaseUrl}}/tools/imgs/chrome-devtools.png"></a>
       <h3 class="mdl-typography--title"><a href="/web/tools/chrome-devtools">Chrome DevTools</a></h3>
       <p>Our web authoring and debugging tools built into Google Chrome.</p>
     </div>
