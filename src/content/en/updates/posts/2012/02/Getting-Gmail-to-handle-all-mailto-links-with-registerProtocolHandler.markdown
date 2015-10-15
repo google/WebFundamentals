@@ -15,7 +15,7 @@ authors:
 Thanks to <code>navigator.registerProtocolHandler()</code> (<a href="http://updates.html5rocks.com/2011/06/Registering-a-custom-protocol-handler">which we've covered here before</a>) you can wire up Gmail as your default mail client for all <code>mailto:</code> links in Chrome  and Firefox.
 </p>
 
-<img alt="Screenshot of registerProtocolHandler prompt" src="{{site.baseurl}}/updates/images/2012-02-08-getting-gmail-to-handle-all-mailto-links-with-registerprotocolhandler/registerprotocolhandler-prompt.jpg" style="display:block; margin: 10px auto; border: 3px solid #999; box-shadow: 2px 2px 5px #ccc">
+<img alt="Screenshot of registerProtocolHandler prompt" src="{{site.WFBaseUrl}}/updates/images/2012-02-08-getting-gmail-to-handle-all-mailto-links-with-registerprotocolhandler/registerprotocolhandler-prompt.jpg" style="display:block; margin: 10px auto; border: 3px solid #999; box-shadow: 2px 2px 5px #ccc">
 
 Here's how: 
 

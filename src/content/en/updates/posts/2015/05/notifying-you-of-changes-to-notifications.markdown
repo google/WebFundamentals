@@ -85,7 +85,7 @@ notification with the latest message. With getNotifications(), you can
 a much better user experience.
 
 <p style="text-align: center; text-align: center; margin: 2em 0 2em 0;">
-  <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-05-24-notifying-you-of-notification-changes/notifications-all.png" alt="Example of grouping notifications together" width="601" height="262" />
+  <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-05-24-notifying-you-of-notification-changes/notifications-all.png" alt="Example of grouping notifications together" width="601" height="262" />
 </p>
 
 The code to do this is relatively simple. Inside your push event, call
