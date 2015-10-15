@@ -30,9 +30,13 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
 
 <div class="page-content">
   <h2>Ship your shell with <code>sw-precache</code></h2>
+  <p>
+    Add <code>sw-precache</code> to your build process and get always-up-to-date caching of your web
+    app's most important resources.
+  </p>
 
   <div class="mdl-grid mdl-typography--text-center">
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/design-and-ui.svg %}
       </div>
@@ -43,7 +47,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
       </p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/build-chain.svg %}
       </div>
@@ -56,18 +60,18 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
       </p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/live-reload.svg %}
       </div>
       <h3 class="mdl-typography--title">Stay Fresh</h3>
       <p>
-        Changes in your build update the service worker script. Users get updates without having to
-        manually version your content or caches.
+        Changes in your build update the service worker script. Users get updates, but you don't
+        have to manually version your content or caches.
       </p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/offline.svg %}
       </div>
@@ -75,15 +79,22 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
       <p>
         Your static resources are served
         <a href="https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network">cache-first</a>,
-        whether or not there's a network available.
+        quickly, whether or not there's a network available.
       </p>
     </div>
   </div>
 
   <h2>Dynamic caching with <code>sw-toolbox</code></h2>
+  <p>
+    <code>sw-toolbox</code> provides common
+    <a href="https://github.com/GoogleChrome/sw-toolbox#built-in-handlers">caching patterns</a>
+    and a
+    <a href="https://github.com/GoogleChrome/sw-toolbox#toolboxrouterheadurlpattern-handler-options">expressive approach</a>
+    to using those strategies for runtime requests.
+  </p>
 
   <div class="mdl-grid mdl-typography--text-center">
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/ic_image_black_48px.svg %}
       </div>
@@ -94,7 +105,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
       </p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/offline.svg %}
       </div>
@@ -105,7 +116,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
       </p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/ic_signal_cellular_connected_no_internet_4_bar_black_48px.svg %}
       </div>
@@ -116,7 +127,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
       </p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--6-col">
       <div class="icon">
         {%include svgs/ic_disc_full_black_48px.svg %}
       </div>
