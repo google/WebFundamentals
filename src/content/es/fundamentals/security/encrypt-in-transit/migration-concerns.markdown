@@ -33,7 +33,7 @@ Ristic.
 
 En algunos casos, la TLS puede mejorar el rendimiento, principalmente como resultado de lograr que se utilice
 HTTP/2. Chris Palmer dio [una charla sobre el rendimiento de HTTPS y HTTP/2 en la Cumbre de Desarrollo de Chrome 
-, en 2014]({{site.baseurl}}/shows/cds/2014/tls-all-the-things).
+, en 2014]({{site.WFBaseUrl}}/shows/cds/2014/tls-all-the-things).
 
 ## Encabezados de referencia
 

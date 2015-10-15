@@ -160,7 +160,7 @@ Orientieren Sie sich an den Best Practices, um Videos einfach in Ihre Website zu
 Websites ohne Bilder können etwas langweilig sein. Es gibt zwei Bildtypen:
 
 * Bilder zum Inhalt: Bilder, die sich im Text im Dokument befinden und dazu dienen, zusätzliche Informationen zum Inhalt zu vermitteln.
-* Stilistische Bilder: Bilder, die dazu dienen, das Erscheinungsbild zu verbessern. Solche Bilder sind häufig Hintergrundbilder, Muster und Farbverläufe. Weitere Informationen hierzu finden Sie im [nächsten Artikel]({{site.baseurl}}{{page.article.next.url}}).
+* Stilistische Bilder: Bilder, die dazu dienen, das Erscheinungsbild zu verbessern. Solche Bilder sind häufig Hintergrundbilder, Muster und Farbverläufe. Weitere Informationen hierzu finden Sie im [nächsten Artikel]({{site.WFBaseUrl}}{{page.article.next.url}}).
 
 Im Bildabschnitt unserer Seite befindet sich eine Anzahl an Bildern zum Inhalt.
 
