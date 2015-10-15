@@ -28,11 +28,17 @@ module AnimationWrapper
         raise ArgumentError, 'No argument provided from tag use.' +
           tag_name, caller
       end
-      @pathToVideo = variables[0].strip
+      @pathToVideo = variables[0]
+      @posterImage = variables[1]
       if @pathToVideo.nil?
         raise ArgumentError, 'No Video file provided from tag.' +
           tag_name, caller
       end
+      @pathToVideo = @pathToVideo.strip
+      if @posterImage.nil?
+        @posterImage = '/web/imgs/video-placeholder.gif'
+      end
+      @posterImage = @posterImage.strip
 
     end
 
@@ -45,8 +51,11 @@ module AnimationWrapper
       end
 
       out = "<p class='autoplay-animation-container'>"
-      out += '<video class="autoplay-animation" src="'
-      out += @pathToVideo + '" loop muted></video></p>'
+      out += '<video class="autoplay-animation" preload="none" '
+      out += 'loop muted controls '
+      out += 'poster="' + @posterImage + '" '
+      out += 'src= "' + @pathToVideo + '" '
+      out += '></video></p>'
     end
 
   end

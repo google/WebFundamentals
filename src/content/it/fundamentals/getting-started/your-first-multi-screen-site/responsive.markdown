@@ -74,7 +74,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Stiamo creando un sito adatto ai diversi formati dello schermo e tipi di dispositivo. Nell'[articolo precedente]({{site.baseurl}}{{page.article.previous.url}}) abbiamo assemblato la Information Architecture della pagina e creato una struttura di base.
+Stiamo creando un sito adatto ai diversi formati dello schermo e tipi di dispositivo. Nell'[articolo precedente]({{page.previousPage.relative_url}}) abbiamo assemblato la Information Architecture della pagina e creato una struttura di base.
 In questa guida trasformeremo la struttura di base in una pagina gradevole e reattiva con numerosi formati dello schermo.
 
 <div class="mdl-grid">

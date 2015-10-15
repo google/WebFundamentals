@@ -18,7 +18,7 @@ tags:
 {% ytvideo qRolXPWqCSo %} 
 
 <figure>
-<a href="https://www.google.com/intl/en/chrome/demos/speech.html"><img src="{{site.baseurl}}/updates/images/2013-01-14-voice-driven-web-apps-introduction-to-the-web-speech-api/web-speech-api-demo.jpg" alt="Web Speech API demo" class="demopreview" /></a>
+<a href="https://www.google.com/intl/en/chrome/demos/speech.html"><img src="{{site.WFBaseUrl}}/updates/images/2013-01-14-voice-driven-web-apps-introduction-to-the-web-speech-api/web-speech-api-demo.jpg" alt="Web Speech API demo" class="demopreview" /></a>
 <figcaption><p><a href="https://www.google.com/intl/en/chrome/demos/speech.html">DEMO</a> / <a href="https://github.com/GoogleChrome/webplatform-samples/tree/master/webspeechdemo">SOURCE</a></p></figcaption>
 </figure>
 

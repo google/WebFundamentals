@@ -5,7 +5,7 @@
     <a
       class="wf-article-nav__link"
       title="{{"previous_article" | localize_string}}"
-      href="{{site.WFBaseUrl}}{{ page.previousPage.url }}">
+      href="{{ page.previousPage.relative_url }}">
       <div class="wf-article-nav__link-text-container">
         <span class="wf-article-nav__subtitle">{{"previous" | localize_string}}</span>
         <div class="wf-article-nav__row">
@@ -21,7 +21,7 @@
     <a
       class="wf-article-nav__link"
       title="{{"next_article" | localize_string}}"
-      href="{{site.WFBaseUrl}}{{ page.nextPage.url }}">
+      href="{{ page.nextPage.relative_url }}">
       <div class="wf-article-nav__link-text-container">
         <span class="wf-article-nav__subtitle">{{"next" | localize_string}}</span>
         <div class="wf-article-nav__row">

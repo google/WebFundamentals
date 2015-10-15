@@ -32,7 +32,7 @@ Google 也發行一份指南，教導
 
 在某些情況下，TLS 可以 _改善_ 效能，
 這主要來自於它能實現 HTTP/2。 Chris Palmer [曾於 Chrome 開發者峰會 2014 討論了 HTTPS 和 HTTP/2 的效能] 
-({{site.baseurl}}/shows/cds/2014/tls-all-the-things)。
+({{site.WFBaseUrl}}/shows/cds/2014/tls-all-the-things)。
 
 ## 參照者標頭
 

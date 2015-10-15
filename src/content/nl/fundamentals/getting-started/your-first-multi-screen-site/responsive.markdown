@@ -74,7 +74,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-We bouwen een website die werkt op verschillende schermformaten en uiteenlopende apparaten. In het [vorige artikel]({{site.baseurl}}{{page.article.previous.url}}) vormden we de informatiearchitectuur van de pagina en maakten we een basisstructuur.
+We bouwen een website die werkt op verschillende schermformaten en uiteenlopende apparaten. In het [vorige artikel]({{page.previousPage.relative_url}}) vormden we de informatiearchitectuur van de pagina en maakten we een basisstructuur.
 In deze gids toveren we onze basisstructuur met inhoud om tot een mooie pagina die responsief is op een groot aantal schermformaten.
 
 <div class="mdl-grid">

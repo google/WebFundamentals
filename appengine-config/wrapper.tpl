@@ -12,7 +12,8 @@
     {% endautoescape %}
 
     <!-- This is mdl version 1.0.5 -->
-    <script src="/web/scripts/material-design-lite/dist/material.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <!--<script src="/web/scripts/material-design-lite/dist/material.js"></script>-->
     {% comment %}
       This helper script checks if a G+ comment block should be loaded and loads it if needed.
     {% endcomment %}

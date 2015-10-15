@@ -37,7 +37,7 @@ It contains two widgets: a map with a pin for every office and a dropdown with t
 
 <p style="text-align: center;">
   <a href="http://polymerlabs.github.io/structured-data-web-components/demo/combined-demo.html">
-    <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03-creating-semantic-sites/ui.png" alt="Web Components and JSON-LD demo page" />
+    <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03-creating-semantic-sites/ui.png" alt="Web Components and JSON-LD demo page" />
   </a>
 </p>
 
@@ -47,7 +47,7 @@ The best way to check how Google is reading and indexing this page is though the
 
 <p style="text-align: center;">
   <a href="https://developers.google.com/structured-data/testing-tool/?url=http://polymerlabs.github.io/structured-data-web-components/demo/combined-demo.html">
-    <img style="max-width: 100%; height: auto;" src="{{site.baseurl}}/updates/images/2015-03-03-creating-semantic-sites/tool.png" alt="Structured Data Testing Tool UI" />
+    <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03-creating-semantic-sites/tool.png" alt="Structured Data Testing Tool UI" />
   </a>
 </p>
 

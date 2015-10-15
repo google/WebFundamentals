@@ -74,7 +74,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Vamos a crear un sitio que funciona en varios tamaños de pantalla y tipos de dispositivo. En el [artículo anterior]({{site.baseurl}}{{page.article.previous.url}}), creamos la arquitectura de información de la página y creamos una estructura básica.
+Vamos a crear un sitio que funciona en varios tamaños de pantalla y tipos de dispositivo. En el [artículo anterior]({{page.previousPage.relative_url}}), creamos la arquitectura de información de la página y creamos una estructura básica.
 En esta guía, vamos a utilizar esa estructura básica con contenido y la vamos a convertir en una atractiva página que se adapte a un gran número de tamaños de pantalla.
 
 <div class="mdl-grid">

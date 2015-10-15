@@ -31,7 +31,7 @@ SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_도 참�
 
 경우에 따라 TLS는 성능을 _향상_시킬 수 있습니다. 이는 주로 HTTP/2가 실현
 가능해졌기 때문입니다. Chris Palmer는 [Chrome Dev Summit 2014에서 HTTPS 및 HTTP/2 성능
-에 관한 고찰]({{site.baseurl}}/shows/cds/2014/tls-all-the-things)을 발표했습니다.
+에 관한 고찰]({{site.WFBaseUrl}}/shows/cds/2014/tls-all-the-things)을 발표했습니다.
 
 ## 참조자 헤더
 

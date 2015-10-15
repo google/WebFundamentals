@@ -11,7 +11,7 @@
   for="language-selection-menu">
   {% for translatedPageMap in page.translations %}
     <li class="mdl-menu__item">
-      <a class="wf-translation-link__link" href="{{site.baseurl}}{{ translatedPageMap[1].canonical_url }}">{{  translatedPageMap[1].langcode | lang_name }}</a>
+      <a class="wf-translation-link__link" href="{{ translatedPageMap[1].canonical_url }}">{{  translatedPageMap[1].langcode | lang_name }}</a>
     </li>
   {% endfor %}
 </ul>
