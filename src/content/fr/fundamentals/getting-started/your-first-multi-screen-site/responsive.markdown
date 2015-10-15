@@ -75,7 +75,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Le site que nous développons sera compatible avec plusieurs types d'appareil et tailles d'écran. Dans l'[article précédent]({{site.WFBaseUrl}}{{page.article.previous.url}}), nous avons réalisé l'architecture d'information de la page et créé une structure de base.
+Le site que nous développons sera compatible avec plusieurs types d'appareil et tailles d'écran. Dans l'[article précédent]({{page.previousPage.relative_url}}), nous avons réalisé l'architecture d'information de la page et créé une structure de base.
 Dans ce guide, nous allons utiliser notre structure de base avec du contenu et la transformer en une superbe page capable de s'adapter à un large éventail de formats d'écran.
 
 <div class="mdl-grid">

@@ -159,7 +159,7 @@ En iyi uygulamalari izleyerek videoyu sitenize kolayca entegre edebilirsiniz:
 Resim bulunmayan siteler biraz sikici olabilir. Iki tür resim vardir:
 
 *  Içerik resimleri: Dokümanla ayni dogrultuda olan ve içerikle ilgili fazladan bilgileri aktarmak için kullanilan resimler.
-*  Biçimsel resimler: Sitenin daha iyi görünmesi için kullanilan resimler; bunlar genellikle arka plan resimleri, kaliplar ve renk geçisleri seklindedir.  Bu konuyu [sonraki makale]({{site.WFBaseUrl}}{{page.article.next.url}}) baslikli makalede ele alacagiz.
+*  Biçimsel resimler: Sitenin daha iyi görünmesi için kullanilan resimler; bunlar genellikle arka plan resimleri, kaliplar ve renk geçisleri seklindedir.  Bu konuyu [sonraki makale]({{page.nextPage.relative_url}}) baslikli makalede ele alacagiz.
 
 Sayfamizdaki Resimler bölümü, içerik resimlerinden olusan bir koleksiyondur.
 

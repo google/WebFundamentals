@@ -159,7 +159,7 @@ Ao seguir as práticas recomendadas, você conseguirá integrar vídeos ao seu s
 Os sites sem imagem geralmente são mais entediantes. Existem dois tipos de imagens:
 
 *  Imagens de conteúdo &mdash; são adicionadas de forma in-line ao documento e usadas para fornecer informações adicionais sobre o conteúdo.
-*  Imagens de estilo &mdash; em sua maioria, são posicionadas em segundo plano, com padrões e gradientes, e usadas para deixar o site mais atraente.  Essas imagens serão abordadas no [próximo artigo]({{site.WFBaseUrl}}{{page.article.next.url}}).
+*  Imagens de estilo &mdash; em sua maioria, são posicionadas em segundo plano, com padrões e gradientes, e usadas para deixar o site mais atraente.  Essas imagens serão abordadas no [próximo artigo]({{page.nextPage.relative_url}}).
 
 A seção `Imagens` da nossa página é um conjunto de imagens de conteúdo.
 

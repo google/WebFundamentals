@@ -75,7 +75,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Desenvolveremos um site que funcione em todos os tamanhos de tela e tipos de dispositivos. No [artigo anterior]({{site.WFBaseUrl}}{{page.article.previous.url}}), projetamos a arquitetura de informações da página e definimos a estrutura básica.
+Desenvolveremos um site que funcione em todos os tamanhos de tela e tipos de dispositivos. No [artigo anterior]({{page.previousPage.relative_url}}), projetamos a arquitetura de informações da página e definimos a estrutura básica.
 Neste guia, aproveitaremos a estrutura básica e o conteúdo e os transformaremos em uma página incrível que será responsiva em um grande número de tamanhos de tela.
 
 <div class="mdl-grid">

@@ -109,7 +109,7 @@
         {{"view_source" | localize_string}}
       </div>
     </a>
-    <a class="wf-navdrawer__bottom-link" href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.url| uri_escape }}" target="_blank">
+    <a class="wf-navdrawer__bottom-link" href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.relative_url | uri_escape }}" target="_blank">
       <div class="wf-navdrawer__bottom-link-container">
         <img src="{{ site.WFBaseUrl }}/imgs/feedback.svg" alt="feedback icon" />
         {{"submit_feedback" | localize_string}}

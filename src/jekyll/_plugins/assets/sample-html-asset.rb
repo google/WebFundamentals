@@ -74,10 +74,6 @@ module Jekyll
         end
         substituteText
       }
-      if filePath == "/Users/mattgaunt/Projects/Code/WebFundamentals/src/content/en/fundamentals/design-and-ui/media/images/_code/breakpoints.html"
-        puts contents
-        puts '-------------------------------------------'
-      end
       Liquid::Template.parse(contents).render(@site.site_payload)
     end
 

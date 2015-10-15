@@ -76,7 +76,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-我们正在创建一个多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节]({{site.WFBaseUrl}}{{page.article.previous.url}})，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
+我们正在创建一个多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节]({{page.previousPage.relative_url}})，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6--col">
