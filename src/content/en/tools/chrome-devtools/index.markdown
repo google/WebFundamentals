@@ -9,7 +9,7 @@ order: 3
 
   <div class="wf-subheading wf-devtools-header">
     <div class="page-content">
-        <h1><img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/chrome-devtools-logo.png" alt="Chrome DevTools Logo">Chrome DevTools</h1>
+        <h1><img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/chrome_devtools.svg" alt="Chrome DevTools Logo">Chrome DevTools</h1>
     </div>
     <div class="page-content mdl-grid">
       <div class="mdl-cell mdl-cell--6-col">
