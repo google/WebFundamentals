@@ -74,7 +74,7 @@ updated_on: 2014-04-23
 
 {% include shared/toc.liquid %}
 
-Tworzymy witrynę, która działa na ekranach o różnym rozmiarze i wielu rodzajach urządzeń. W [poprzednim artykule]({{site.WFBaseUrl}}{{page.article.previous.url}}) opracowaliśmy architekturę informacji na stronie i przygotowaliśmy podstawową strukturę.
+Tworzymy witrynę, która działa na ekranach o różnym rozmiarze i wielu rodzajach urządzeń. W [poprzednim artykule]({{page.previousPage.relative_url}}) opracowaliśmy architekturę informacji na stronie i przygotowaliśmy podstawową strukturę.
 W tym przewodniku przekształcimy naszą podstawową strukturę i treść w atrakcyjną stronę, która działa elastycznie na ekranach rozmaitej wielkości.
 
 <div class="mdl-grid">
