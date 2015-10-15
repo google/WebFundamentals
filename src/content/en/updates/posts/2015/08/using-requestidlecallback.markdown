@@ -17,7 +17,7 @@ Many sites and apps have a lot of scripts to execute. Your JavaScript often need
 
 ![Using requestIdleCallback to schedule non-essential work](/web/updates/images/2015-08-27-using-requestidlecallback/main.png)
 
-The good news is that there’s now an API that can help: **`requestIdleCallback`**. In the same way that adopting `requestAnimationFrame` allowed us to schedule animations properly and maximize our chances of hitting 60fps, `requestIdleCallback` will schedule work when there is free time at the end of a frame, or when the user is inactive. This means that there’s an opportunity to do your work without getting in the user’s way. It’s available in Chrome Canary (M46+) behind a flag (head over to chrome://flags/#enable-experimental-web-platform-features to enable it), so you can give it a whirl today! Do bear in mind, however, that this is an _experimental feature_, and the spec is still in flux, so things could change at any time.
+The good news is that there’s now an API that can help: **`requestIdleCallback`**. In the same way that adopting `requestAnimationFrame` allowed us to schedule animations properly and maximize our chances of hitting 60fps, `requestIdleCallback` will schedule work when there is free time at the end of a frame, or when the user is inactive. This means that there’s an opportunity to do your work without getting in the user’s way. It’s available as of Chrome 47, so you can give it a whirl today by using Chrome Canary! It is an _experimental feature_, and the spec is still in flux, so things could change in the future.
 
 ## Why should I use requestIdleCallback?
 
