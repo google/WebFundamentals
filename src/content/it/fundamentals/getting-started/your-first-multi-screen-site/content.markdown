@@ -158,7 +158,7 @@ Rispettando le best practice puoi integrare facilmente i video nel tuo sito:
 I siti privi di immagini sono poco attraenti. Esistono due tipi di immagini:
 
 * Immagini di contenuto, che vengono inserite nel documento per fornire con informazioni aggiuntive.
-* Immagini di stile, per abbellire l'aspetto del sito spesso attraverso immagini di sfondo, pattern e gradienti. Affronteremo questo argomento nel [prossimo articolo]({{site.WFBaseUrl}}{{page.article.next.url}}).
+* Immagini di stile, per abbellire l'aspetto del sito spesso attraverso immagini di sfondo, pattern e gradienti. Affronteremo questo argomento nel [prossimo articolo]({{page.nextPage.relative_url}}).
 
 La sezione Immagini della pagina è una raccolta di immagini di contenuto
 

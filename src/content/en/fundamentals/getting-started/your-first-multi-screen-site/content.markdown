@@ -245,4 +245,3 @@ You will notice that the page looks terrible right now; this is intentional.
 Content is the most important aspect of any site and we needed to make sure we
 had a good solid information architecture and density. This guide has given us
 an excellent base to build upon. We will style our content in the next guide.
-

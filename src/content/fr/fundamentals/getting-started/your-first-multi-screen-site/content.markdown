@@ -158,7 +158,7 @@ L'application des bonnes pratiques vous permet d'intégrer aisément du contenu 
 Un site sans images peut être pour le moins ennuyeux. Il existe deux types d'images :
 
 * Images de contenu : il s'agit d'images intégrées au document, utilisées pour véhiculer des informations supplémentaires sur le contenu.
-* Images stylistiques : images utilisées pour embellir le site. Il s'agit généralement d'images d'arrière-plan, de motifs et de dégradés. Ces images seront traitées dans l'[article suivant]({{site.WFBaseUrl}}{{page.article.next.url}}).
+* Images stylistiques : images utilisées pour embellir le site. Il s'agit généralement d'images d'arrière-plan, de motifs et de dégradés. Ces images seront traitées dans l'[article suivant]({{page.nextPage.relative_url}}).
 
 La section 'Images' de notre page est un ensemble d'images de contenu.
 

@@ -158,7 +158,7 @@ Aby bez problemów umieścić film na stronie, postępuj zgodnie ze sprawdzonymi
 Witryny pozbawione grafiki mogą trochę nudzić. Na stronach występują dwa typy obrazów:
 
 *  Obrazy treści &ndash; są częścią dokumentu i zawierają dodatkowe informacje związane z jego treścią.
-*  Obrazy stylistyczne &ndash; poprawiają wygląd strony. Należą do nich obrazy tła, wzory i gradienty. Omówimy je w [następnym artykule]({{site.WFBaseUrl}}{{page.article.next.url}}).
+*  Obrazy stylistyczne &ndash; poprawiają wygląd strony. Należą do nich obrazy tła, wzory i gradienty. Omówimy je w [następnym artykule]({{page.nextPage.relative_url}}).
 
 Sekcja z obrazami na naszej stronie to kolekcja obrazów treści.
 
