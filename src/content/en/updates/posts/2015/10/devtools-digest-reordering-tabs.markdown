@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "DevTools Digest: Tab reordering, framework event listeners and easier remote debugging"
+title: "DevTools Digest: Tab reordering, Console is #2 and framework event listeners"
 published_on: 2015-10-15
 updated_on: 2015-10-15
 authors:
@@ -9,7 +9,7 @@ tags:
   - devtools
   - digest
   - update
-description: "Re-order DevTools tabs which ever way suits you best; see exactly where framework events were bound and block network requests to see which third party scripts slow you down."
+description: "Re-order DevTools tabs which ever way suits you best and see exactly where framework events were bound."
 featured_image: /web/updates/images/2015-08-24-devtools-digest/featured.jpg
 ---
 
@@ -35,18 +35,6 @@ Events created by JS Frameworks such as jQuery have sometimes been a pain when w
 But with the new “Framework Listeners” option in the Event Listener tab, DevTools becomes aware of the framework wrapping portion and automatically resolves it. Now, events bound by frameworks look and behave exactly like their native counterparts, telling you where it was actually bound:
 
 ![Framework Listeners On](/web/updates/images/2015-10-05/listeners_on.png)
-
-## Blocked Requests to help you understand the impact of third party requests
-
-<img src="/web/updates/images/2015-10-05/blocked_requests_1.png" alt="New main menu" style="float: left;max-width: 230px;margin-right: 1em;margin-bottom: 1em;width: 40%;">You can now block network requests in the Network Panel by either right-clicking on a request and choose “Block Request URL” or choose “Block Request Domain” to block everything from that domain.
-
-Doing this will show open the “Request Blocking” tab in the drawer at the bottom of your DevTools to show you the things you’ve blocked. This tab allows you to unblock them again or add wildcard patterns via the “plus” icon.
-
-![Blocked Requests Panel](/web/updates/images/2015-10-05/blocked_requests_2.png)
-
-If you close the tab, don’t worry: You can always bring it back by clicking on the icon in the toolbar. To make sure you didn’t forget about requests you’ve previously blocked, we’ll also show them in the Console.
-
-![Blocked Requests in Console](/web/updates/images/2015-10-05/blocked_requests_3.png)
 
 ## The Best of the Rest
 
