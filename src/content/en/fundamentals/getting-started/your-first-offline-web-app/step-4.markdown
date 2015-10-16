@@ -4,6 +4,7 @@ title: "Build the starter app"
 published_on: 2015-09-30
 updated_on: 2015-09-30
 translation_priority: 1
+order: 4
 authors:
   - paulkinlan
 ---

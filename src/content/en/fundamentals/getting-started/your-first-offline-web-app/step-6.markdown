@@ -4,6 +4,7 @@ title: "Install the site assets"
 published_on: 2015-09-30
 updated_on: 2015-10-06
 translation_priority: 1
+order: 6
 authors:
   - paulkinlan
 ---
