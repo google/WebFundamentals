@@ -374,22 +374,12 @@ module Jekyll
     end
 
     def canonical_url
-      if @langcode == site.config['primary_lang']
-        fullUrl = raw_canonical_url()
-      else
-        fullUrl = raw_canonical_url() + "?hl=" + @langcode || site.config['primary_lang']
-      end
-
+      fullUrl = raw_canonical_url() + "?hl=" + @langcode || site.config['primary_lang']
       fullUrl
     end
 
     def relative_url
-      if @langcode == site.config['primary_lang']
-        relativeUrl = getFilteredUrl()
-      else
-        relativeUrl = getFilteredUrl() + "?hl=" + @langcode || site.config['primary_lang']
-      end
-
+      relativeUrl = getFilteredUrl() + "?hl=" + @langcode || site.config['primary_lang']
       relativeUrl
     end
 
