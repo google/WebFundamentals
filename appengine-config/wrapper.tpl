@@ -18,45 +18,29 @@
       This helper script checks if a G+ comment block should be loaded and loads it if needed.
     {% endcomment %}
     <script>
-      (function() {
 
-        var SlashWeb = {
+      function initComments() {
+        var commentElem = document.getElementById('gplus-comments');
+        var parentElem = document.getElementById('gplus-comment-container');
+        
+        gapi.comments.render(commentElem, {
+          href: commentElem.dataset.url,
+          width: parentElem.offsetWidth,
+          first_party_property: 'BLOGGER',
+          view_type: 'FILTERED_POSTMOD'
+        });
+      }
 
-          init: function() {
-            SlashWeb.initComments();
-          },
-
-          initComments: function() {
-            var commentElem = document.getElementById('gplus-comments');
-            if (commentElem) {
-
-              var script = document.createElement('script');
-              script.onload = function() {
-
-                var parentElem = document.getElementById('gplus-comment-container');
-                var parentCompStyle = getComputedStyle(parentElem);
-                var parentInnerWidth = parentElem.offsetWidth -
-                                       parseInt(parentCompStyle.paddingRight, 10) -
-                                       parseInt(parentCompStyle.paddingLeft, 10);
-
-                gapi.comments.render(commentElem, {
-                  href: commentElem.dataset.url,
-                  width: parentInnerWidth,
-                  first_party_property: 'BLOGGER',
-                  view_type: 'FILTERED_POSTMOD'
-                });
-
-              };
-              script.src = 'https://apis.google.com/js/plusone.js';
-              document.head.appendChild(script);
-            }
-
-          }
-        };
-
-        SlashWeb.init();
-
-      })();
+      window.addEventListener('load', function() {
+        if (document.getElementById('gplus-comments')) {
+          var script = document.createElement('script');
+          script.src = 'https://apis.google.com/js/plusone.js?onload=initComments';
+          script.defer = true;
+          document.head.appendChild(script);
+        }
+      });
     </script>
+
+
   </body>
 </html>
