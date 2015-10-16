@@ -17,8 +17,9 @@ tags:
 
 What if I told you websites could communicate with nearby Bluetooth devices
 in a secure and privacy-preserving way? This way, heart rate monitors, singing
-lightbulbs and [turtles](https://www.youtube.com/watch?v=1LV1Fk5ZXwA) could
-interact directly with a website.
+lightbulbs, [turtles](https://www.youtube.com/watch?v=1LV1Fk5ZXwA) and [flying
+grumpy cats](https://www.youtube.com/watch?v=tRMcMDIyIGQ) could interact
+directly with a website.
 
 ## Before we start
 
@@ -213,7 +214,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
-## Samples
+## Samples & Demos
 
 The samples below have been tested on Chrome OS M45 with the Web Bluetooth flag
 enabled. To enjoy these samples to their fullest, I recommend you install the [BLE Peripheral Simulator Android
@@ -224,6 +225,8 @@ Service.
 - Battery Level - [https://googlechrome.github.io/samples/web-bluetooth/battery-level.html](https://googlechrome.github.io/samples/web-bluetooth/battery-level.html)
 - Reset Energy - [https://googlechrome.github.io/samples/web-bluetooth/reset-energy.html](https://googlechrome.github.io/samples/web-bluetooth/reset-energy.html)
 - Device Info - [https://googlechrome.github.io/samples/web-bluetooth/device-info.html](https://googlechrome.github.io/samples/web-bluetooth/device-info.html)
+
+You can also find some Web Bluetooth Demos at [https://github.com/WebBluetoothCG/demos](https://github.com/WebBluetoothCG/demos).
 
 ## Dev Tips
 
