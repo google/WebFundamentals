@@ -373,23 +373,20 @@ module Jekyll
       site.config['WFAbsoluteUrl'] + getFilteredUrl()
     end
 
-    def canonical_url
-      if @langcode == site.config['primary_lang']
-        fullUrl = raw_canonical_url()
-      else
-        fullUrl = raw_canonical_url() + "?hl=" + @langcode || site.config['primary_lang']
-      end
+    # WARNING: This should be used with caution. It will force the user to
+    # visit the english version regardless of available translations
+    def primary_lang_canonical_url
+      fullUrl = raw_canonical_url() + "?hl=" + site.config['primary_lang']
+      fullUrl
+    end
 
+    def canonical_url
+      fullUrl = raw_canonical_url() + "?hl=" + @langcode || site.config['primary_lang']
       fullUrl
     end
 
     def relative_url
-      if @langcode == site.config['primary_lang']
-        relativeUrl = getFilteredUrl()
-      else
-        relativeUrl = getFilteredUrl() + "?hl=" + @langcode || site.config['primary_lang']
-      end
-
+      relativeUrl = getFilteredUrl() + "?hl=" + @langcode || site.config['primary_lang']
       relativeUrl
     end
 
@@ -468,7 +465,8 @@ module Jekyll
   # Returns <Hash>
   def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
     super(attrs + %w[ raw_canonical_url ] + %w[ canonical_url ] +
-      %w[ relative_url ] + %w[ context ] + %w[ nextPage ] +
+      %w[ relative_url ] + %w[ primary_lang_canonical_url ] +
+      %w[ context ] + %w[ nextPage ] +
       %w[ previousPage ] + %w[ outOfDate ])
   end
   end
