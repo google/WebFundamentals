@@ -19,7 +19,9 @@
   content: none;
 }
 
+// Display block to anchor fills height of the list item
 .wf-translation-link__link {
+  display: block;
   text-decoration: none;
 }
 
