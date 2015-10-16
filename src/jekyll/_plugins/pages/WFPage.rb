@@ -359,6 +359,10 @@ module Jekyll
       self.url
     end
 
+    # getFilteredUrl() returns a pages URL without the the index.html or html
+    # which isn't needed. No lang code returned.
+    #
+    # Output Example: /web/section/example
     def getFilteredUrl()
       fullUrl = site.config['WFBaseUrl'] + getJekyllsRelativeUrl()
       fullUrl = fullUrl.sub('index.html', '')
@@ -369,22 +373,34 @@ module Jekyll
 
     # WARNING: This is intended for use in the head of the document only
     # it doesn't include the hl
+    #
+    # Output Example: https://developers.google.com/web/section/example
     def raw_canonical_url
       site.config['WFAbsoluteUrl'] + getFilteredUrl()
     end
 
     # WARNING: This should be used with caution. It will force the user to
-    # visit the english version regardless of available translations
+    # visit the english version regardless of the available translations
+    #
+    # Output Example: https://developers.google.com/web/section/example?hl=en
     def primary_lang_canonical_url
       fullUrl = raw_canonical_url() + "?hl=" + site.config['primary_lang']
       fullUrl
     end
 
+    # The canonical_url can be used to reference a pages absolute url with the
+    # appropriate lang code
+    #
+    # Output Example: https://developers.google.com/web/section/example?hl=<lang>
     def canonical_url
       fullUrl = raw_canonical_url() + "?hl=" + @langcode || site.config['primary_lang']
       fullUrl
     end
 
+    # The relative_url can be used to reference a pages relative url with the
+    # appropriate lang code
+    #
+    # Output Example: /web/section/example?hl=<lang>
     def relative_url
       relativeUrl = getFilteredUrl() + "?hl=" + @langcode || site.config['primary_lang']
       relativeUrl
