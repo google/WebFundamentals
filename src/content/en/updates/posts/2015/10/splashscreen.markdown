@@ -40,7 +40,7 @@ Try it out on [Voice Memos](https://voice-memos.appspot.com/),
 [Air Horner](https://airhorner.com) or [SVG OMG](https://jakearchibald.github.io/svgomg/).
 
 The splash screen is generated dynamically from information held in the Web App 
-Manifest and is a combination of the `name` and background\_color properties 
+Manifest and is a combination of the `name` and `background_color` properties 
 from the manifest, and the icon in the `icons` array that is closest to 
 "128dp" for the device.
 
@@ -63,7 +63,7 @@ is the minimum image size we will display, which if you take the maximum density
 display currently supported (4x) then 48 \* 4 = 196px. This is lucky because we 
 need to 196px image for Add to Homescreen to work! Yay. Therefore, _I_ would 
 recommend **always** having 196px as the minimum sized icon and create 3 other 
-versions at 256px, 384px and 512px.  However, if you want to ensure that the user
+versions at 256px, 384px and 512px. However, if you want to ensure that the user
 is not downloading too much data for the splash screen, especially on a low density
 device then you can go lower and Chrome will try to fetch the most appropriate.
 
