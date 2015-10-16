@@ -13,93 +13,137 @@ title: "Web @ Google Developers"
   {% endif %}
 {% endfor %}
 
-<style>
-  .flex-container {
-    display: flex;
-  }
-  .flex-item {
-    width: 50%;
-  }
-  .flex-item_grid {
-    flex-wrap: wrap;
-  }
-
-</style>
-
-<div class="page-content">
-  <h2>What's new?</h2>
-  <div class="flex-container">
-    <div class="flex-item">
-      {% ytvideo X1F8GEiZf9o %}
+<div class="wf-subheading">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col wf-showcase__title">
+      <h2>Next Generation Web</h2>
+      <p class="mdl-typography--font-light">
+        The average user visits 100+ sites per month on the mobile web - how will you be discovered?
+      </p>
     </div>
-    <div class="flex-container flex-item flex-item_grid">
-      <div class="flex-item">recent update</div>
-      <div class="flex-item">recent showcase</div>
-      <div class="flex-item">recent video</div>
-      <div class="flex-item">recent update</div>
-    </div>
-  </div>
-</div>
-
-
-<div class="wf-secondaryheading">
-  <div class="page-content">
-    <h2>{{fundamentals.index.title}}</h2>
-    <p>
-      {{fundamentals.index.description}}
-    </p>
-    <div class="mdl-grid mdl-typography--text-center wf-fundamentals-areas">
-      {% for pageInSection in fundamentals.subdirectories %}
-      {% if pageInSection.index.published != false %}
-      {% if pageInSection.id != 'getting-started' and pageInSection.id != 'primers' %}
-      {% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
-        <div class="mdl-cell mdl-cell--4-col">
-          <div class="icon">
-            <a href="{{pageInSection.index.canonical_url }}">
-              {% include {{icon}} %}
-            </a>
-          </div>
-          <h3>
-            <a href="{{pageInSection.index.canonical_url }}">
-            {{pageInSection.index.title}}
-            </a>
-          </h3>
-          <p>{{pageInSection.index.description}}</p>
-        </div>
-      {% endif %}
-      {% endif %}
-      {% endfor %}
+    <div class="mdl-cell mdl-cell--6-col">
+      <img src="/web/imgs/landing-devices.png">
     </div>
   </div>
 </div>
 
 <div class="">
-  <div class="page-content">
-    <h2>{{tools.index.title}}</h2>
-    <p>
-      {{tools.index.description}}
-    </p>
-    <div class="mdl-grid mdl-typography--text-center wf-fundamentals-areas">
-      {% for pageInSection in tools.subdirectories %}
-      {% if pageInSection.index.published != false %}
-      {% if pageInSection.id != 'setup' %}
-      {% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
-        <div class="mdl-cell mdl-cell--6-col">
-          <div class="icon">
-            <a href="{{pageInSection.index.canonical_url }}">
-              {{icon}}
-            </a>
-          </div>
-          <h3>
-            <a href="{{pageInSection.index.canonical_url }}">
-            {{pageInSection.index.title}}
-            </a>
-          </h3>
-          <p>{{pageInSection.index.description}}</p>
-        </div>
-      {% endif %}
-      {% endif %}
-      {% endfor %}
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <h3>Web Fundamentals</h3>
+      <p>
+        Not sure where to start? Our getting started guides will walk you through the key things you need to know and help you figure out where to go next.
+      </p>
+      <a href="/web/fundamentals/getting-started/">Get started</a>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <img src="/web/imgs/dgc-web-w1x.jpg">
+    </div>
+  </div>
+</div>
+
+<style>
+  .tools-thumb {
+    width: 175px;
+  }
+</style>
+
+<div class="wf-secondaryheading">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <a href="#"><img class="tools-thumb" src="/web/tools/imgs/chrome-devtools.png"></a>
+      <a href="#"><img class="tools-thumb" src="/web/tools/starter-kit/images/thumb.jpg"></a>
+      <a href="#"><img class="tools-thumb" src="/web/tools/polymer-starter-kit/thumb.jpg"></a>
+      <a href="#"><img class="tools-thumb" src="/web/tools/imgs/mdl-thumb.png"></a>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <h3>Get Productive</h3>
+      <p>Discover our tools and kickstart your development</p>
+      <ul>
+        <li><a href="/web/tools/devtools/">Chrome Dev Tools</a></li>
+        <li><a href="/web/tools/devtools/">Web Starter Kit</a></li>
+        <li><a href="/web/tools/devtools/">Polymer Start Kit</a></li>
+        <li><a href="/web/tools/devtools/">Material Design Lite</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <h3>What's new?</h3>
+      <p>
+        Discover the latest API’s coming to the Web Platform, find out what the Chrome team are working on and check out the latest features in DevTools.
+      </p>
+      <ul>
+        <li><a href="#">Push notifications</a></li>
+        <li><a href="#">Add to home screen</a></li>
+        <li><a href="#">More updates</a></li>
+      </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <img src="/web/imgs/dgc-web-w1x.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="wf-secondaryheading">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <img src="https://placehold.it/350x225">
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <h3>Success stories</h3>
+      <p>
+        See how our partners, from publishing to ecommerce, drive discovery and re-engagement with a rich web experience. More traffic and users means more revenue for your business.
+      </p>
+      <a href="#">Showcase</a>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+      <h4>Performance</h4>
+      <img src="https://placehold.it/150x150">
+      <p>The rail performance model</p>
+      <a href="#">Learn more</a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <h4>Security</h4>
+      <img src="https://placehold.it/150x150">
+      <p>Keep your users safe with HTTPS</p>
+      <a href="#">Learn more</a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <h4>Shows</h4>
+      <img src="https://placehold.it/150x150">
+      <p>Google web engineers discuss how they build web apps</p>
+      <a href="#">Learn more</a>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+      <a href="#">
+        <img src="https://placehold.it/100x100">
+        <h5>Blog</h5>
+        <p>Find out the latest on Chrome</p>
+      </a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <a href="#">
+        <img src="https://placehold.it/100x100">
+        <h5>Goolge Webmasters</h5>
+        <p>Follow us for tips, Q&A and webinars</p>
+      </a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <a href="#">
+        <img src="https://placehold.it/100x100">
+        <h5>Videos</h5>
+        <p>Watch videos and talks</p>
+      </a>
     </div>
   </div>
 </div>
