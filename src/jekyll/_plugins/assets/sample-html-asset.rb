@@ -17,8 +17,8 @@ module Jekyll
   require 'sanitize'
 
   class Template
-    @@header = nil
-    @@header_full = nil
+    @@header_base = nil
+    @@header_styles = nil
     @@footer = nil
 
     # class_variables refers to looping over the variables in this class
@@ -65,10 +65,10 @@ module Jekyll
       contents.gsub!(/<!-- \/\/ \[TEMPLATE ([^\]]+)\] -->\s*\n/m) { |matches|
         tag = $1.downcase
         substituteText = ""
-        if (tag == "header")
-          substituteText = Template.header(@site)
+        if (tag == "header_base")
+          substituteText = Template.header_base(@site)
         elsif (tag == "header_full")
-          substituteText = Template.header(@site) + Template.header_full(@site)
+          substituteText = Template.header_base(@site) + Template.header_styles(@site)
         elsif (tag == "footer")
           substituteText = Template.footer(@site)
         end
