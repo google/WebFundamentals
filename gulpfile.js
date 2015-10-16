@@ -93,6 +93,7 @@ gulp.task('develop', function(cb) {
 gulp.task('develop:prod', function(cb) {
   runSequence(
     'clean',
+    'tests',
     [
       'generate-prod-css',
       'minify-images',
@@ -112,6 +113,7 @@ gulp.task('develop:prod', function(cb) {
 gulp.task('build:staging', function(cb) {
   runSequence(
     'clean',
+    'tests',
     [
       'generate-prod-css',
       'minify-images',
@@ -130,6 +132,7 @@ gulp.task('build:staging', function(cb) {
 gulp.task('build', function(cb) {
   runSequence(
     'clean',
+    'tests',
     [
       'generate-prod-css',
       'minify-images',

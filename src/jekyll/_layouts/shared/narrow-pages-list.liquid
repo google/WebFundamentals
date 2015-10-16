@@ -12,7 +12,7 @@
       <ol class="wf-highlight-list__list">
       {% for pageInSection in page.context.pages %}
         <li>
-          <a href="{{pageInSection.canonical_url | localize_link:pageInSection }}">
+          <a href="{{pageInSection.relative_url }}">
             {{pageInSection.title}}
           </a>
         </li>
