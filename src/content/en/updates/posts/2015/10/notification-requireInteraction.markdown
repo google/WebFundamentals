@@ -11,7 +11,7 @@ description: "Notifications on desktop will be automatically dismissed after a s
 featured_image: /web/updates/images/2015/10/notification.png
 ---
 
-We've learnt a lot since Notifications and Push Messaging landed in the Chrome.  One
+We've learnt a lot since Notifications and Push Messaging landed in the Chrome. One
 specific piece of feedback about Desktop class devices was that notifications
 would stay around and visible on the users screen until were actively dismissed by the user.
 
@@ -31,10 +31,11 @@ This might seem odd, but what it implies that unless told otherwise the notifica
 should be removed from view after a short period of time.
 
 Chrome 47 (beta in October 2015) now supports the `requireInteraction` option and unless explicitly 
-provided *and* to set to `true` will mean that all notifications on *desktop* will be dismissed after
-approximately 20 seconds. The interesting part though is that Chrome has recently just removed 
-the Notification Center from all desktop platforms, this means that minimsied notifications
-are considered to be dismissed and are not accessible in a call to `getNotifications` in a Service Worker.
+provided *and* set to `true`, this will mean that all notifications on *desktop* will be dismissed after
+approximately [20 seconds](http://crbug.com/530697#c9). The interesting part though is that Chrome has 
+recently just removed the Notification Center from all desktop platforms (but Chrome OS), this means that 
+minimized notifications are considered to be dismissed and are not accessible in a call to `getNotifications` 
+in a Service Worker.
 
 On Chrome for Android, because the notifications are minimized in the notifications tray area, the 
 `requireInteraction` option is ignored. 
