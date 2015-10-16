@@ -1,12 +1,13 @@
 'use strict';
 
 var gulp = require('gulp');
-var glob = require('glob');
+var globby = require('globby');
 var fs = require('fs');
 
 function testContents(filename, regularExpressions) {
   var fileContents = fs.readFileSync(filename);
   var errorCount = 0;
+
   for (var i = 0; i < regularExpressions.length; i++) {
     var match = regularExpressions[i].exec(fileContents);
     if (match !== null) {
@@ -20,6 +21,7 @@ function testContents(filename, regularExpressions) {
       errorCount++;
     }
   }
+
   if (errorCount > 0) {
     console.log();
     console.log('Were found in: ');
@@ -31,8 +33,8 @@ function testContents(filename, regularExpressions) {
   return errorCount;
 }
 
-function checkFiles(globPattern, jekyllRegexs) {
-  var files = glob.sync(globPattern);
+function checkFiles(globPatterns, jekyllRegexs) {
+  var files = globby.sync(globPatterns);
   var errorCount = 0;
   for (var i = 0; i < files.length; i++) {
     errorCount += testContents(files[i], jekyllRegexs);
@@ -41,9 +43,11 @@ function checkFiles(globPattern, jekyllRegexs) {
 }
 
 function checkJekyllIssues() {
+  // Double blackslash because we want the final regex to have '\.'
   var badJekyllStrings = [
-    '.url',
-    'localize_link'
+    '\\.url',
+    'localize_link',
+    '\\.article\\.'
   ];
 
   var jekyllRegexs = [];
@@ -55,17 +59,13 @@ function checkJekyllIssues() {
     jekyllRegexs.push(regex);
   }
 
-  var badStrings = [
-    'developers.google.com'
-  ];
-
-  for (i = 0; i < badStrings.length; i++) {
-    expression = badStrings[i];
-    regex = new RegExp(expression, 'g');
-    jekyllRegexs.push(regex);
-  }
-
-  var errorCount = checkFiles('src/content/**/**.{markdown,md,html}',
+  // We exclude the resources markdown file because it explains why not to use
+  // .url
+  var errorCount = checkFiles(
+    [
+      'src/content/**/**.{markdown,md,html}',
+      '!src/content/**/resources/jekyll/custom-jekyll-variables.markdown'
+    ],
     jekyllRegexs);
   errorCount += checkFiles('src/jekyll/_{includes,layouts}/**/**.liquid',
     jekyllRegexs);

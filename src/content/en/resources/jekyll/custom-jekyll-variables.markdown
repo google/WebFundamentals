@@ -111,7 +111,7 @@ Will output the following (Note: you may see 0, 1 or 2 snippets depending
 {{page.previousPage}}
 {% endhighlight %}
 
-# URLs
+# URLs (DO NOT USE .url)
 
 Jekyll provides the `page.url` variable, however this isn't useful for Web
 Fundamentals due to the structure of pages and docs.

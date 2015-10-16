@@ -37,12 +37,12 @@ translation_priority: 0
       {% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
         <div class="mdl-cell mdl-cell--4-col">
           <div class="icon">
-            <a href="{{pageInSection.index.canonical_url | localize_link:pageInSection }}">
+            <a href="{{pageInSection.index.canonical_url }}">
               {% include {{icon}} %}
             </a>
           </div>
           <h3>
-            <a href="{{pageInSection.index.canonical_url | localize_link:pageInSection }}">
+            <a href="{{pageInSection.index.canonical_url }}">
             {{pageInSection.index.title}}
             </a>
           </h3>

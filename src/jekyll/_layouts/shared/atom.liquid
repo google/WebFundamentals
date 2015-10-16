@@ -12,7 +12,7 @@
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <published>{{ post.published_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
-    {% if post.article.updated_on %}<updated>{{ post.article.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
+    {% if post.updated_on %}<updated>{{ post.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
     <link rel="alternate" type="text/html" href="{{ post.canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed" />
     <id>{{ post.canonical_url }}</id>
     <content type="html">
