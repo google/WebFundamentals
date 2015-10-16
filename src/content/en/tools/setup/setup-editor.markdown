@@ -78,7 +78,7 @@ Write CSS, ignoring vendor prefixes and when you want to add them, hit
 `ctrl+shift+p` and type `Autoprefix CSS`.
 
 [We cover how you can automate this in your build
-process]({{site.WFBaseUrl}}/tools/build/setup/setup-buildtools.html),
+process]({{site.WFBaseUrl}}/tools/setup/setup-buildtools.html),
 that way your CSS stays lean and you don't need to remember to hit
 `ctrl+shift+p`.
 
