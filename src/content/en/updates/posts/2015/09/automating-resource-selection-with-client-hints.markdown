@@ -252,7 +252,7 @@ provided client hints, and define its own processing logic.
 self.onfetch = function(event) {
   var req = event.request.clone();
   console.log("SW received request for: " + req.url)
-  for (entry of req.headers.entries()) { 
+  for (var entry of req.headers.entries()) { 
     console.log("\t" + entry[0] +": " + entry[1]) 
   }
   ...
