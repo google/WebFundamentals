@@ -119,6 +119,19 @@ samchen:
   description:
     en: "Sam is a Front End Developer"
 
+kenchris:
+  name:
+    given: Kenneth
+    family: Cristiansen
+  org:
+    name: Intel
+  country: Denmark
+  role:
+    - author
+  twitter: kennethrohde
+  desciption:
+    en: "Kenneth is an Engineer at Intel"
+
 dalecurtis:
   name:
     given: Dale
