@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "navigator.mediaDevices()"
+title: "Choose cameras, microphones &amp; speakers from your web app"
 description: "The MediaDevices interface gives access to input and output devices available to the browser including cameras, microphones and speakers."
 published_on: 2015-10-13
 updated_on: 2015-10-13
@@ -77,7 +77,7 @@ function gotDevices(deviceInfos) {
 }
 {%endhighlight%}
 
-The `setSinkId()` method is used to change the audio output destination for a video or audio element:
+Having retrieved the IDs of available devices with `enumerateDevices()`, you can use `setSinkId()` (defined in the [Audio Output Devices API](http://www.w3.org/TR/audio-output/#setsinkid)) to change the audio output destination for a video or audio element:
 
 {%highlight javascript%}
 element.setSinkId(sinkId)
@@ -89,7 +89,7 @@ element.setSinkId(sinkId)
   });
 {%endhighlight %}
 
-This method sets the ID of the output device that should be used for audio from the element. Once `setSinkId()` has been called, you can get the ID of the output audio device for the element with `sinkId`.
+This method sets the output device for audio from the element. Once `setSinkId()` has been called, you can get the ID of the current output audio device for the element with the `sinkId` property.
 
 ### getUserMedia()
 
@@ -159,8 +159,7 @@ stream. There is also a `MediaDevices` extension proposal for
 
 * [getUserMedia()](https://webrtc.github.io/samples/src/content/getusermedia/gum/)
 * enumerateDevices():
-    * [Select sources &
-      outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
+    * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
     * [Output device
       selection](https://webrtc.github.io/samples/src/content/devices/multi/)
 * [MediaDevices shim](https://webrtc.github.io/samples/src/js/adapter.js)
@@ -173,6 +172,7 @@ stream. There is also a `MediaDevices` extension proposal for
   status](https://www.chromestatus.com/features/4906859072847872)
 * Media Capture and Streams Editor's Draft:
   [MediaDevices](http://w3c.github.io/mediacapture-main/#mediadevices)
+* [Audio Output Devices API](http://www.w3.org/TR/audio-output)
 
 
 
