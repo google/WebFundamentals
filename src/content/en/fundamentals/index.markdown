@@ -10,8 +10,8 @@ translation_priority: 0
     {% include svgs/fundamentals.svg %}
     <p class="mdl-typography--font-thin">
 
-      Web<b>Fundamentals</b> is a comprehensive resource for best practices
-      web development, designed to help you add the right the right features
+      Web<b>Fundamentals</b> is a comprehensive resource for web development
+      best practices, designed to help you add the right features
       and experiences to your web project. If you’re new to web development
       or just looking to make your project better, we’ve got you covered.
     </p>
@@ -28,7 +28,7 @@ translation_priority: 0
   <div class="page-content">
     <h3>Ready, set, code!</h3>
     <p>
-      Already have something in mind, then jump right in!
+      Already have something in mind? Then jump right in!
     </p>
     <div class="mdl-grid mdl-typography--text-center wf-fundamentals-areas">
       {% for pageInSection in page.context.subdirectories %}
