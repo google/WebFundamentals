@@ -15,7 +15,7 @@ featured_image: /web/updates/images/2015-08-24-devtools-digest/featured.jpg
 
 <p class="intro">Re-order DevTools tabs which ever way suits you best; see exactly where framework events were bound and block network requests to see which third party scripts slow you down.</p>
 
-## Better Panel Navigation: Console on #2, Tab Reordering and Sexy Underlines
+## Better Panel Navigation: Console on #2, Tab Reordering and Nifty Underlines
 
 After investigating which areas of DevTools are used the most, it became clear that the full-screen Console panel didn’t deserve the last position in the main tab bar. As second-most used panel, *it’s now the second tab*. This especially matters on lower resolutions when we can’t show all tabs at once.
 
