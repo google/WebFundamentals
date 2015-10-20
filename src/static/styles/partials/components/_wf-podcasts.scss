@@ -1,0 +1,43 @@
+.wf-podcast {
+  .mdl-card__title {
+    height: 330px;
+  }
+}
+
+.wf-podcast__image-and-audio {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
+  .embedded-audio {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+.wf-podcast__podcast-content {
+  max-width: 450px;
+}
+
+.wf-podcast__content {
+
+  max-width: 764px;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@media (min-width: 650px) {
+
+  .wf-podcast__image-and-audio {
+    float: left;
+  }
+
+  .wf-podcast__podcast-content {
+    margin-left: 316px;
+  }
+
+}
