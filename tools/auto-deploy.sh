@@ -31,7 +31,8 @@ $SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
         --quiet
 $SDK_DIR/bin/gcloud config set project web-central
 
-# The gcloud API was updated and this reverts
+# The gcloud API was updated for app engine updates and this reverts back to the old SDK behaviour
+# We do this as the new behaviour doesn't work for our content :(
 $SDK_DIR/bin/gcloud config set app/use_appengine_api false
 
 $SDK_DIR/bin/gcloud --verbosity info preview app deploy --version material ./build/app.yaml
