@@ -24,10 +24,19 @@
       Previous Seasons &amp; Episodes
     </h6>
     {% for subdirectory in page.context.subdirectories reversed %}
+      {% comment %}
+        TODO(gauntface): find better solution for podcasts in shows.
+        See: https://github.com/google/WebFundamentals/issues/2182
+      {% endcomment %}
+      {% if subdirectory.index.layout == 'shows/podcast' %}
+        {% continue %}
+      {% endif %}
+
       <h4 class="mdl-cell mdl-cell--12-col wf-shows__title">
         {{subdirectory.index.title}}
       </h4>
       {% for showPage in subdirectory.pages reversed %}
+
         {% capture imgUrl %}https://img.youtube.com/vi/{{showPage.youtubeID}}/mqdefault.jpg {% endcapture %}
         {% include shows/card.liquid title=showPage.title text=showPage.description linkHref=showPage.relative_url linkText="Watch Now" imgUrl=imgUrl %}
       {% endfor %}

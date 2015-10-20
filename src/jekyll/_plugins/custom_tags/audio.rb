@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-module VideoWrapper
+module AudioWrapper
 
   # Renders a responsive iframe with a video embedded.
   #
   # Example usage:
   #
-  # {% ytvideo hy7IMGVUHps %}
+  # {% audio https://url-for.mp3 %}
   class Tag < Liquid::Tag
 
     def initialize(tag_name, arguments, tokens)
@@ -28,9 +28,9 @@ module VideoWrapper
         raise ArgumentError, 'No argument provided from tag use.' +
           tag_name, caller
       end
-      @videoId = variables[0].strip
-      if @videoId.nil?
-        raise ArgumentError, 'No Video ID provided from tag.' +
+      @audioUrl = variables[0].strip
+      if @audioUrl.nil?
+        raise ArgumentError, 'No Audio URL provided from tag.' +
           tag_name, caller
       end
 
@@ -42,24 +42,18 @@ module VideoWrapper
     end
 
     def render(context)
-      # If the video source is empty then this tag shouldn't be used
-      raise "Missing source for video tag" if @videoId.empty?
+      # If the audio source is empty then this tag shouldn't be used
+      raise "Missing source for audio tag" if @audioUrl.empty?
 
       # Expand this page variable to be its actual value.
-      if not context[@videoId].nil?
-        @videoId = context[@videoId]
-      end
-      iframeSrcUrl = 'https://www.youtube.com/embed/' + @videoId + '?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf';
-      @videoArguments.each do |argument|
-        iframeSrcUrl += '&amp;' + argument
+      if not context[@audioUrl].nil?
+        @audioUrl = context[@audioUrl]
       end
 
-      out = '<div class="embed">'
-      out += '<iframe src="' + iframeSrcUrl + '" frameborder="0" allowfullscreen=""></iframe>'
-      out += "</div>"
+      out = '<audio class="embedded-audio" src="' + @audioUrl +  '" controls preload="none"></audio>'
     end
 
   end
 end
 
-Liquid::Template.register_tag('ytvideo', VideoWrapper::Tag)
+Liquid::Template.register_tag('audio', AudioWrapper::Tag)
