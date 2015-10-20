@@ -50,7 +50,7 @@ module AudioWrapper
         @audioUrl = context[@audioUrl]
       end
 
-      out = '<audio class="embedded-audio" src="' + @audioUrl +  '" controls></audio>'
+      out = '<audio class="embedded-audio" src="' + @audioUrl +  '" controls preload="none"></audio>'
     end
 
   end
