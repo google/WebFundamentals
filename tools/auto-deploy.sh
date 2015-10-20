@@ -30,4 +30,8 @@ $SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
         --key-file tools/web-central-44673aab0806.json \
         --quiet
 $SDK_DIR/bin/gcloud config set project web-central
+
+# The gcloud API was updated and this reverts
+$SDK_DIR/bin/gcloud config set app/use_appengine_api false
+
 $SDK_DIR/bin/gcloud --verbosity info preview app deploy --version material ./build/app.yaml
