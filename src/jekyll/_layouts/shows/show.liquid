@@ -26,6 +26,7 @@
     {% for subdirectory in page.context.subdirectories reversed %}
       {% comment %}
         TODO(gauntface): find better solution for podcasts in shows.
+        See: https://github.com/google/WebFundamentals/issues/2182
       {% endcomment %}
       {% if subdirectory.index.layout == 'shows/podcast' %}
         {% continue %}
