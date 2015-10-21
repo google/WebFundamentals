@@ -76,22 +76,26 @@ documented in [Web Fundamentals](https://developers.google.com/web/fundamentals/
   <tbody>
     <tr>
       <td>
-        ccname<br>
-        cardnumber  
-        cvc  
-        ccmonth  
-        ccyear  
-        exp-date  
-        card-type
+        <ul>
+          <li>ccname</li>
+          <li>cardnumber</li>
+          <li>cvc</li>
+          <li>ccmonth</li>
+          <li>ccyear</li>
+          <li>exp-date</li>
+          <li>card-type</li>
+        </ul>
       </td>
       <td>
-        cc-name<br>
-        cc-number  
-        cc-csc  
-        cc-exp-month  
-        cc-exp-year  
-        cc-exp  
-        cc-type
+        <ul>
+          <li>cc-name</li>
+          <li>cc-number  </li>
+          <li>cc-csc  </li>
+          <li>cc-exp-month  </li>
+          <li>cc-exp-year  </li>
+          <li>cc-exp  </li>
+          <li>cc-type</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -116,10 +120,12 @@ documented in [Web Fundamentals](https://developers.google.com/web/fundamentals/
 <table class="mdl-data-table mdl-js-data-table">
 <tr>
 <td markdown="block">
-**name attribute**
+**name**
+**attribute**
 </td>
 <td markdown="block">
-**autocomplete attribute**
+**autocomplete**
+**attribute**
 </td>
 </tr>
 <tr>
@@ -148,10 +154,12 @@ family-name (last name)
 <table class="mdl-data-table mdl-js-data-table">
 <tr>
 <td markdown="block">
-**name attribute**
+**name** 
+**attribute**
 </td>
 <td markdown="block">
-**autocomplete attribute**
+**autocomplete** 
+**attribute**
 </td>
 </tr>
 <tr>
@@ -177,10 +185,12 @@ email
 <table class="mdl-data-table mdl-js-data-table">
 <tr>
 <td markdown="block">
-**name attribute**
+**name** 
+**attribute**
 </td>
 <td markdown="block">
-**autocomplete attribute**
+**autocomplete** 
+**attribute**
 </td>
 </tr>
 <tr>
