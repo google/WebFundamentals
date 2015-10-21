@@ -21,8 +21,6 @@ tags:
 
 <p>WebRTC has also now been implemented for desktop in Firefox Nightly and Aurora, and for iOS and Android via the <a href="https://labs.ericsson.com/apps/bowser" title="Ericsson Bowser browser">Ericsson Bowser browser</a>.</p>
 
-<img src="https://labs.ericsson.com/sites/default/files/front.png" title="The Ericsson Bowser browser running on iOS and Android" />
-
 <h2>DataChannel</h2>
 
 <p><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-datachannel" title="DataChannel section of HTML5 Rocks article">DataChannel</a> is a WebRTC API for high performance, low latency, peer-to-peer communication of arbritary data. The API is simple&mdash;similar to WebSocket&mdash;but communication occurs directly between browsers, so DataChannel can be much faster than WebSocket even if a relay (TURN) server is required (when 'hole punching' to cope with firewalls and NATs fails).</p>
@@ -33,7 +31,7 @@ tags:
 
 <p>Here's a screenshot of DataChannel running in Firefox:</p>
 
-<img src="http://simpl.info/images/Firefox_DataChannel_screenshot.png" title="Firefox DataChannel screenshot" />
+<img src="{{site.WFBaseUrl}}/updates/images/2012/12/webrtc-ff/Firefox_DataChannel_screenshot.png" title="Firefox DataChannel screenshot" />
 
 <p>This demo is at <a href="http://mozilla.github.com/webrtc-landing/data_test.html" title="Mozilla DataChannel example">http://mozilla.github.com/webrtc-landing/data_test.html</a>. Here's a code snippet:</p>
 

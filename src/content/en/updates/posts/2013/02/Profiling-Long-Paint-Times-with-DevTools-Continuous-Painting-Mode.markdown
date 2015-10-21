@@ -25,14 +25,14 @@ start tackling the problem. For our example, we'll use the demo page <a href="ht
 and down. Then you look at the vertical timelines, that show you what happened
 in each frame.<br>
 </p>
-<img width="900" src="http://i.imgur.com/iM0oKjk.png">
+<img width="900" src="{{site.WFBaseUrl}}/updates/images/2013/02/profiling-paints/iM0oKjk.png">
 <p>If you see that most time is spent painting (big green bars above 60fps), you
 need to take a closer look at why this is happening. To investigate your paints,
 use the <strong>Show paint rectangles</strong> setting of the Web Inspector (cog icon in the
 bottom right corner of the Web Inspector). This will show you the regions where
 Chrome paints.
 </p>
-<img width="900" src="http://i.imgur.com/5fa1nMd.png">
+<img width="900" src="{{site.WFBaseUrl}}/updates/images/2013/02/profiling-paints/5fa1nMd.png">
 <p>There are different reasons for Chrome to repaint areas of the page:
 </p>
 <ul>
@@ -101,7 +101,7 @@ all pages</strong> setting in <code>about:flags</code>.
 page repainting</strong> in the Web Inspector's settings (cog icon in the bottom right
 corner of the Web Inspector).
 </p>
-<img width="900" src="http://i.imgur.com/UYXJODj.png">
+<img width="900" src="{{site.WFBaseUrl}}/updates/images/2013/02/profiling-paints/UYXJODj.png">
 <p>The small display in the top right corner shows you the measured paint times in
 milliseconds. More specifically it shows:
 </p>
@@ -153,7 +153,7 @@ your page perform better.
 </ol>
 <p>The animation below shows toggling styles and its affect on paint time:
 </p>
-<p><img pagespeed_lazy_src="https://dl.dropbox.com/u/39519/temp/cssmoon-continuouspaint.gif" alt="continuouspaint screencast" src="//1-ps.googleusercontent.com/h/www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);" pagespeed_lazy_replaced_functions="1">
+<p><img alt="continuouspaint screencast" src="{{site.WFBaseUrl}}/updates/images/2013/02/profiling-paints/cssmoon-continuouspaint.gif" >
 </p>
 <p>This example demonstrates how turning either one of the CSS styles <code>box-shadow</code>
 or <code>border-radius</code> off, reduces the painting time by a big amount. Using both <code>box-shadow</code> and<code>border-radius</code> on an element leads to very expensive painting
@@ -181,10 +181,6 @@ general.
 
 
 <aside class="bio clearfix" style="border: 3px double #CCC; padding: 10px;">
-
-<img src="http://api.twitter.com/1/users/profile_image/egraether?size=normal" align=left style="margin: 0 10px 0 0; border: 1px solid gray; border-radius:2px">
-
-
 Eberhard Gräther is student of <a href="http://multimediatechnology.at/in-english/">MultiMediaTechnology</a> at <a href="http://www.fh-salzburg.ac.at/en/">Salzburg University of Applied Sciences</a>. He interned in the Chrome GPU team from 10/2012 to 03/2013 where he worked on rendering profiling tools. Follow him at  <a href="https://twitter.com/egraether">@egraether</a> or visit <a href="http://egraether.com">his site</a> to find graphics demos and web games he has built.
 </aside>
 
@@ -193,5 +189,4 @@ Eberhard Gräther is student of <a href="http://multimediatechnology.at/in-engli
 <p>
 Click below for a demo where Paul Irish uses continuous painting to identify a uniquely expensive paint operation.</p>
 
-{% ytvideo FY5iiuQRyEE?start=683&end=788 %} 
-
+{% ytvideo FY5iiuQRyEE?start=683&end=788 %}
